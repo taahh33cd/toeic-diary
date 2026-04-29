@@ -26,10 +26,16 @@ export default async function JournalLayout({
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) redirect("/auth/login?next=/journal");
 
-  const profile = await prisma.profile.findUnique({
-    where: { id: user.id },
-    select: { studentCode: true },
-  });
+  let profile: { studentCode: string | null } | null = null;
+  try {
+    profile = await prisma.profile.findUnique({
+      where: { id: user.id },
+      select: { studentCode: true },
+    });
+  } catch (err) {
+    console.error("[journal/layout] prisma error:", err);
+    throw err;
+  }
 
   if (!profile?.studentCode) redirect("/auth/onboarding-incomplete");
 
