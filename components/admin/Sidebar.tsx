@@ -91,7 +91,7 @@ export function Sidebar({ role = "teacher" }: SidebarProps) {
       {/* Bottom actions */}
       <div className="px-2 py-3 border-t border-white/10 space-y-1">
         <Link
-          href="/series"
+          href="/"
           className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors"
           style={{ color: "var(--sidebar-text, #A8B0CC)" }}
         >

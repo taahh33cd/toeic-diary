@@ -43,7 +43,7 @@ export default async function OnboardingIncompletePage() {
         </p>
         <div className="flex flex-col gap-2">
           <Link
-            href="/series"
+            href="/"
             className="btn btn-primary w-full justify-center"
             style={{ textAlign: "center" }}
           >

@@ -185,7 +185,7 @@ export function MobileNav({ role = "teacher" }: { role?: string }) {
         {/* Footer */}
         <div className="px-2 py-3 border-t border-white/10 space-y-1">
           <Link
-            href="/series"
+            href="/"
             className="flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
             style={{ color: "var(--sidebar-text, #A8B0CC)" }}
           >
