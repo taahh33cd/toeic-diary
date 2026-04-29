@@ -43,11 +43,11 @@ export default async function OnboardingIncompletePage() {
         </p>
         <div className="flex flex-col gap-2">
           <Link
-            href="/practice"
+            href="/series"
             className="btn btn-primary w-full justify-center"
             style={{ textAlign: "center" }}
           >
-            Tới /practice (luyện dictation)
+            🎧 Luyện Dictation
           </Link>
           <form action="/api/auth/signout" method="post">
             <button type="submit" className="btn btn-secondary w-full justify-center">
