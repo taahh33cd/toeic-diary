@@ -1,0 +1,40 @@
+{
+  "name": "mytoeicdiary — Anh Hiếu²",
+  "short_name": "Anh Hiếu²",
+  "description": "Nhật ký học TOEIC — điểm số, từ vựng, nhiệm vụ hàng ngày",
+  "start_url": "/journal",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fff8f0",
+  "theme_color": "#c4622d",
+  "lang": "vi",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [],
+  "categories": ["education"],
+  "shortcuts": [
+    {
+      "name": "Trang chủ",
+      "url": "/journal",
+      "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    },
+    {
+      "name": "Điểm số",
+      "url": "/journal/scores",
+      "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+    }
+  ]
+}

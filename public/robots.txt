@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /journal/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /invite/
+Allow: /
+
+Sitemap: https://mytoeicdiary.com/sitemap.xml

@@ -1,0 +1,6 @@
+When will your performance take place?
+(A) Next Tuesday.
+(B) No, I just checked.
+(C) We shopped there yesterday.
+
+Answer: A

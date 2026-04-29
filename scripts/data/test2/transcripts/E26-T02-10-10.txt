@@ -1,0 +1,6 @@
+Have you decided how much to charge for your concert tickets?
+(A) Yes—fifteen dollars each.
+(B) I've read about that.
+(C) A jazz band.
+
+Answer: A

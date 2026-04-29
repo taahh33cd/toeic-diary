@@ -1,0 +1,6 @@
+Should we join our department's book club?
+(A) An award-winning author.
+(B) The office supplies are in the storage room.
+(C) They could use a few more people.
+
+Answer: C

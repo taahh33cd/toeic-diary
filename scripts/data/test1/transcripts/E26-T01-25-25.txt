@@ -1,0 +1,6 @@
+Can't you update the database today?
+(A) I did it yesterday.
+(B) That's an interesting movie.
+(C) No, just me.
+
+Answer: A

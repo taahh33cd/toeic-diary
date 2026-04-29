@@ -1,0 +1,6 @@
+Where do you want to store the extra brochures?
+(A) The price lists for new products.
+(B) I think that's right.
+(C) There are none left.
+
+Answer: C

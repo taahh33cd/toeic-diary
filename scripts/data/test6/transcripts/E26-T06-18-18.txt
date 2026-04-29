@@ -1,0 +1,6 @@
+Should I order the parts online or over the phone?
+(A) Just half-thank you.
+(B) No, I've never been there.
+(C) By phone is best.
+
+Answer: C

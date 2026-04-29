@@ -1,0 +1,6 @@
+Would you like me to process your travel voucher?
+(A) I didn't know that.
+(B) A much larger convention center.
+(C) Yes, if you have time.
+
+Answer: C

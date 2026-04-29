@@ -1,0 +1,6 @@
+Your kitchen looks nice painted in this shade of yellow.
+(A) Twenty color copies, please.
+(B) Dinner will be ready in ten minutes.
+(C) Yes, it really brightens up the room.
+
+Answer: C

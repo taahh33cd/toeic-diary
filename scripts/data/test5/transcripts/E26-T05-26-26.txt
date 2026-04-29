@@ -1,0 +1,6 @@
+Would you like a copy of the article I mentioned?
+(A) No, I'm not.
+(B) Yes, I'd appreciate that.
+(C) A Thursday morning appointment.
+
+Answer: B

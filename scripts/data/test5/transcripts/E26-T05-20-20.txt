@@ -1,0 +1,6 @@
+Would you like some help installing that new software?
+(A) No, I'm sure we sent it out yesterday.
+(B) Thanks, but I know how to do it.
+(C) He can type very fast.
+
+Answer: B

@@ -1,0 +1,6 @@
+Will you let me know when the catering order arrives?
+(A) A reservation for two.
+(B) The front office.
+(C) Sure, I'll text you.
+
+Answer: C

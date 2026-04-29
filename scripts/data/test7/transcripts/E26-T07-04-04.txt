@@ -1,0 +1,4 @@
+(A) The woman is walking across the street.
+(B) The woman is repairing a bicycle.
+(C) The woman is wearing a helmet.
+(D) The woman is getting into a vehicle.

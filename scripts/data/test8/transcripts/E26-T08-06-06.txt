@@ -1,0 +1,4 @@
+(A) They're climbing some stairs.
+(B) They're sitting in a park.
+(C) They're raking some leaves.
+(D) They're planting some trees.

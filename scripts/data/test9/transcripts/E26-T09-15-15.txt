@@ -1,0 +1,6 @@
+Which bus stop is closest to the apartment building?
+(A) No, I don't have any coins.
+(B) The one on Eighth Street.
+(C) An extra bag for groceries.
+
+Answer: B

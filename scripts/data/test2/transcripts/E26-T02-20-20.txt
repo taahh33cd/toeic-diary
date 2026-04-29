@@ -1,0 +1,6 @@
+Which parking area should we use?
+(A) The fee is fifteen dollars.
+(B) About a twenty-minute delay.
+(C) The one by Smith's Pharmacy.
+
+Answer: C

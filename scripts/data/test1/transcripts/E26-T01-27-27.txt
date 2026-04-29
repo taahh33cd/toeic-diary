@@ -1,0 +1,6 @@
+Have all the new windows been installed?
+(A) Sure, I'll close the blinds.
+(B) The construction crew is almost finished.
+(C) This isn't the tallest ladder available.
+
+Answer: B

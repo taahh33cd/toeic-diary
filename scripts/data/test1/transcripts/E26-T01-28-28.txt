@@ -1,0 +1,6 @@
+Would you rather go to lunch now or at noon?
+(A) I'm taking a client to lunch.
+(B) On the corner of Fourth and Main.
+(C) The daily special is soup and a sandwich.
+
+Answer: A

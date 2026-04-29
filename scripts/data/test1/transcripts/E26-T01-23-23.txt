@@ -1,0 +1,6 @@
+How often do you charge this device?
+(A) Whenever the light turns red.
+(B) A wireless one.
+(C) At the hardware store.
+
+Answer: A

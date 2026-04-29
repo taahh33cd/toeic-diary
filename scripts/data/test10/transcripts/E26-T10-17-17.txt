@@ -1,0 +1,6 @@
+Don't you have the promotional materials with you?
+(A) Thanks, that's great news.
+(B) Yes, they're in my bag.
+(C) It's lightweight but durable.
+
+Answer: B

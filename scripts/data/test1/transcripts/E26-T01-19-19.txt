@@ -1,0 +1,6 @@
+Is your dental appointment next Tuesday?
+(A) You can borrow mine.
+(B) I'll have to check my calendar.
+(C) Yes, it was a good meeting.
+
+Answer: B

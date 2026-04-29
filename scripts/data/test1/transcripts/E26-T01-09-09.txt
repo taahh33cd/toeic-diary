@@ -1,0 +1,6 @@
+There's a nice park nearby, right?
+(A) Did you order paper for the copier?
+(B) Yes-it's next to Greendale Lake.
+(C) They're in the parking garage.
+
+Answer: B

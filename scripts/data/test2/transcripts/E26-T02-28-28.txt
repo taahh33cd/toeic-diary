@@ -1,0 +1,6 @@
+When will you finish updating the sales data?
+(A) I'm waiting for information from one more store.
+(B) In the top drawer.
+(C) Sales increased by five percent.
+
+Answer: A

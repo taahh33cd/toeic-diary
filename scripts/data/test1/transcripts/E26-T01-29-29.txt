@@ -1,0 +1,6 @@
+You're taking the training in the afternoon, aren't you?
+(A) The new head of the accounting department.
+(B) No, I take my coffee black.
+(C) Well, it depends on my schedule.
+
+Answer: C

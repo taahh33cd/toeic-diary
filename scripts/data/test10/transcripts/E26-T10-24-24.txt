@@ -1,0 +1,6 @@
+These train tickets are expensive.
+(A) Just a one-way ticket, please.
+(B) Did you complete the training?
+(C) Yes, it's an express train.
+
+Answer: C

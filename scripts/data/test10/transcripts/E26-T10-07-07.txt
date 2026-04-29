@@ -1,0 +1,6 @@
+Would you like me to order some more business cards for you?
+(A) Sure, that'd be great.
+(B) They'll be busy at that time.
+(C) No, it wasn't.
+
+Answer: A

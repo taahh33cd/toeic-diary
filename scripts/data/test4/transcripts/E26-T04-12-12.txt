@@ -1,0 +1,6 @@
+When does your manager usually come in?
+(A) Early in the morning.
+(B) No, I just left it there.
+(C) I haven't thanks.
+
+Answer: A

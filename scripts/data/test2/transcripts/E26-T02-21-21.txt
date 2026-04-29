@@ -1,0 +1,6 @@
+Let's take a taxi to the airport.
+(A) My seats are in section 21.
+(B) Sure, that will be the easiest.
+(C) The café is a few blocks away.
+
+Answer: B

@@ -1,0 +1,6 @@
+Why are you calling the clients?
+(A) A spreadsheet with their contact information.
+(B) Because they canceled their order.
+(C) I can walk you there.
+
+Answer: B

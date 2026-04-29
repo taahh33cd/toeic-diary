@@ -1,0 +1,6 @@
+I picked up some flowers for Tunji's retirement party.
+(A) No, pick any day.
+(B) That was thoughtful.
+(C) A delivery driver.
+
+Answer: B

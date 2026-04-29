@@ -1,0 +1,6 @@
+Would you like the report to be e-mailed or printed out?
+(A) An electric heater.
+(B) Page 25.
+(C) Either way is fine.
+
+Answer: C

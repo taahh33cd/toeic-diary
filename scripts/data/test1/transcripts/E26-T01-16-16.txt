@@ -1,0 +1,6 @@
+Would you be able to write the introduction for the workshop?
+(A) That was a great book.
+(B) OK, I'd be happy to.
+(C) He doesn't have any more.
+
+Answer: B

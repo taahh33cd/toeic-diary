@@ -1,0 +1,6 @@
+Have you always commuted by train?
+(A) The training starts at two o'clock.
+(B) I think the station is on Mulberry Avenue.
+(C) Yes, because I don't have a car.
+
+Answer: C

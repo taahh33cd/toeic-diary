@@ -1,0 +1,6 @@
+The new bottling machine's been installed, hasn't it?
+(A) We'll have two packs, please.
+(B) No, I didn't drive here.
+(C) We're expecting delivery this afternoon.
+
+Answer: C

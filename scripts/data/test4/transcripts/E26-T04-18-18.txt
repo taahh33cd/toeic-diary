@@ -1,0 +1,6 @@
+How often does the bus stop at this location?
+(A) I'll be visiting the office.
+(B) About every twenty minutes.
+(C) A city council meeting.
+
+Answer: B

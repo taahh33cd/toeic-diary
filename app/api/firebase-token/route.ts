@@ -1,0 +1,77 @@
+import { NextResponse, type NextRequest } from "next/server";
+import { createClient } from "@/lib/supabase/server";
+import { getAdminAuth } from "@/lib/firebase/admin";
+import { PrismaPg } from "@prisma/adapter-pg";
+import { PrismaClient } from "@prisma/client";
+import pg from "pg";
+
+/**
+ * POST /api/firebase-token
+ *
+ * Exchanges a valid Supabase session for a Firebase Custom Token.
+ * The Custom Token carries role + studentCode + teacherId as claims
+ * so Firebase Security Rules can check them later (Phase 4).
+ *
+ * Flow:
+ *   1. Verify Supabase session (cookie-based, server-side)
+ *   2. Fetch Profile from DB to get role/studentCode/teacherId
+ *   3. Create Firebase Custom Token (uid = Supabase user.id)
+ *   4. Return { token }
+ */
+
+// Lazy singleton pool — reused across requests in the same process
+let _pool: pg.Pool | null = null;
+function getPool() {
+  if (!_pool) {
+    _pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
+  }
+  return _pool;
+}
+
+function getPrisma() {
+  const adapter = new PrismaPg(getPool());
+  return new PrismaClient({ adapter });
+}
+
+export async function POST(req: NextRequest) {
+  try {
+    // 1. Verify Supabase session
+    const supabase = await createClient();
+    const {
+      data: { user },
+      error: authError,
+    } = await supabase.auth.getUser();
+
+    if (authError || !user) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    // 2. Fetch profile for claims
+    const prisma = getPrisma();
+    const profile = await prisma.profile.findUnique({
+      where: { id: user.id },
+      select: {
+        role: true,
+        studentCode: true,
+        teacherId: true,
+      },
+    });
+
+    // 3. Create Firebase Custom Token
+    const adminAuth = getAdminAuth();
+    const claims: Record<string, string | null> = {
+      role: profile?.role ?? "student",
+      studentCode: profile?.studentCode ?? null,
+      teacherId: profile?.teacherId ?? null,
+    };
+
+    // Firebase custom token uid must be Supabase user id
+    const firebaseToken = await adminAuth.createCustomToken(user.id, claims);
+
+    return NextResponse.json({ token: firebaseToken });
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : String(err);
+    console.error("[firebase-token]", message);
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
+}

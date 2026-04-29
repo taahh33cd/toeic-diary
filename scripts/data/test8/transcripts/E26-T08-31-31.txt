@@ -1,0 +1,6 @@
+The restaurant is finally getting a new stove.
+(A) The recipe requires a saucepan.
+(B) Can I have a salad for lunch?
+(C) I hope it arrives soon.
+
+Answer: C

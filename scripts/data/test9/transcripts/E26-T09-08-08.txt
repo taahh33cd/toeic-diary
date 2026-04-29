@@ -1,0 +1,6 @@
+Shouldn't we have submitted the expense report by now?
+(A) No, the deadline is tomorrow.
+(B) Yes, it is very expensive.
+(C) Did you check the batteries?
+
+Answer: A

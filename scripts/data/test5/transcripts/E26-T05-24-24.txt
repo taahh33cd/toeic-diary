@@ -1,0 +1,6 @@
+How did the company basketball team play last night?
+(A) Sure, I'll have a few.
+(B) How can I sign up?
+(C) The game was canceled.
+
+Answer: C

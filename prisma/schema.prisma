@@ -1,0 +1,266 @@
+// schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ─────────────────────────────────────
+// CONTENT MODELS
+// ─────────────────────────────────────
+
+model TestSeries {
+  id          String    @id @default(uuid())
+  name        String    // "ETS 2026"
+  slug        String    @unique // "ets-2026"
+  publisher   String    @default("ETS")
+  year        Int?
+  description String?
+  color       String    @default("from-indigo-500 to-purple-600")
+  icon        String    @default("📘")
+  orderIndex  Int       @map("order_index")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  testSets    TestSet[]
+
+  @@map("test_series")
+}
+
+model TestSet {
+  id         String     @id @default(uuid())
+  seriesId   String     @map("series_id")
+  series     TestSeries @relation(fields: [seriesId], references: [id])
+  name       String     // "ETS 2026 - Test 1"
+  year       Int        @default(2026)
+  slug       String     @unique // "ets-2026-test-1"
+  orderIndex Int        @map("order_index")
+  createdAt  DateTime   @default(now()) @map("created_at")
+  parts      Part[]
+
+  @@map("test_sets")
+}
+
+model Part {
+  id            String              @id @default(uuid())
+  testSetId     String              @map("test_set_id")
+  testSet       TestSet             @relation(fields: [testSetId], references: [id], onDelete: Cascade)
+  partNumber    Int                 @map("part_number") // 1, 2, 3, 4
+  title         String              // "Part 3 - Conversations"
+  description   String?
+  totalLessons  Int                 @map("total_lessons")
+  lessons       Lesson[]
+  levelProgress PartLevelProgress[]
+
+  @@unique([testSetId, partNumber])
+  @@map("parts")
+}
+
+model Lesson {
+  id             String            @id @default(uuid())
+  partId         String            @map("part_id")
+  part           Part              @relation(fields: [partId], references: [id], onDelete: Cascade)
+  title          String            // "Questions 71-73"
+  questionStart  Int?              @map("question_start")
+  questionEnd    Int?              @map("question_end")
+  transcriptFull String            @map("transcript_full") @db.Text
+  audioUrl       String            @map("audio_url")
+  audioDuration  Float             @map("audio_duration") // seconds
+  orderIndex     Int               @map("order_index")
+  correctOption  String?           @map("correct_option") // "A"/"B"/"C" — Part 2 only
+  explanation    String?           @db.Text               // AI explanation — Part 2 only
+  createdAt      DateTime          @default(now()) @map("created_at")
+  sentences      Sentence[]
+  blanks         Blank[]
+  progress       UserProgress[]
+  vocabulary     SavedVocabulary[]
+  aiFeedback     AiFeedback[]
+
+  @@map("lessons")
+}
+
+model Sentence {
+  id         String  @id @default(uuid())
+  lessonId   String  @map("lesson_id")
+  lesson     Lesson  @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  orderIndex Int     @map("order_index")
+  content    String  @db.Text
+  startTime  Float   @map("start_time") // seconds
+  endTime    Float   @map("end_time")   // seconds
+  speaker     String? // "W" | "M" | "Narrator"
+  optionLabel String? @map("option_label") // "A"/"B"/"C"/"D" — Part 1 & 2 options
+  blanks      Blank[]
+
+  @@index([lessonId, orderIndex])
+  @@map("sentences")
+}
+
+model Blank {
+  id         String   @id @default(uuid())
+  sentenceId String   @map("sentence_id")
+  sentence   Sentence @relation(fields: [sentenceId], references: [id], onDelete: Cascade)
+  lessonId   String   @map("lesson_id") // denormalized for fast query
+  lesson     Lesson   @relation(fields: [lessonId], references: [id])
+  answer     String   // correct keyword
+  position   Int      // word index in sentence (0-based)
+  hint       String?  // optional hint e.g. "n___" for "night"
+
+  @@index([lessonId])
+  @@map("blanks")
+}
+
+// ─────────────────────────────────────
+// USER MODELS (linked to Supabase Auth)
+// ─────────────────────────────────────
+
+model Profile {
+  // id mirrors auth.users.id from Supabase Auth
+  id            String              @id // UUID from Supabase Auth — NO @default
+  displayName   String?             @map("display_name")
+  avatarUrl     String?             @map("avatar_url")
+  toeicTarget   Int?                @map("toeic_target") // e.g. 750
+  currentStreak Int                 @default(0) @map("current_streak")
+  lastActive    DateTime?           @map("last_active")
+  createdAt     DateTime            @default(now()) @map("created_at")
+
+  // ── Journal/Admin platform ──
+  role           String    @default("student") @map("role") // "student" | "teacher" | "admin"
+  studentCode    String?   @unique @map("student_code")     // maps to Firebase students/{code}
+  teacherId      String?   @map("teacher_id")               // for students: assigned teacher Profile.id
+  invitedBy      String?   @map("invited_by")               // Profile.id of inviter
+  invitedAt      DateTime? @map("invited_at")
+  acceptedAt     DateTime? @map("accepted_at")
+
+  // ── Gamification ──
+  totalXp        Int       @default(0) @map("total_xp")
+  level          Int       @default(1) @map("level")
+  longestStreak  Int       @default(0) @map("longest_streak")
+  lastActiveDate DateTime? @map("last_active_date")
+
+  // ── Relations ──
+  progress        UserProgress[]
+  levelProgress   PartLevelProgress[]
+  vocabulary      SavedVocabulary[]
+  aiFeedback      AiFeedback[]
+  xpEvents        XpEvent[]
+  invitesSent     TeacherInvite[]
+  managedStudents Profile[] @relation("TeacherStudent")
+  teacher         Profile?  @relation("TeacherStudent", fields: [teacherId], references: [id])
+
+  @@map("profiles")
+}
+
+model TeacherInvite {
+  id          String    @id @default(cuid())
+  email       String
+  studentCode String?   @map("student_code") // teacher pre-fills if desired
+  teacherId   String    @map("teacher_id")
+  token       String    @unique
+  role        String    @default("student") // "student" | "teacher"
+  expiresAt   DateTime  @map("expires_at")
+  usedAt      DateTime? @map("used_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+
+  teacher     Profile   @relation(fields: [teacherId], references: [id])
+
+  @@index([token])
+  @@index([email])
+  @@map("teacher_invites")
+}
+
+model XpEvent {
+  id        String   @id @default(cuid())
+  userId    String   @map("user_id")
+  source    String   // "dictation_lesson" | "vocab_review" | "homework_submit" | "test_score" | "streak_bonus" | "login"
+  xp        Int
+  metadata  Json?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user      Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+  @@index([source])
+  @@map("xp_events")
+}
+
+model UserProgress {
+  id               String    @id @default(uuid())
+  userId           String    @map("user_id")
+  profile          Profile   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lessonId         String    @map("lesson_id")
+  lesson           Lesson    @relation(fields: [lessonId], references: [id])
+  level            Int       // 1-4
+  score            Int       @default(0)  // 0-100 (current attempt)
+  bestScore        Int       @default(0)  @map("best_score") // all-time best
+  status           String    @default("not_started") // "not_started" | "in_progress" | "completed"
+  userAnswer       String?   @map("user_answer") @db.Text // JSON for L1, text for L2-4
+  timeSpentSeconds Int?      @map("time_spent_seconds")
+  attempts         Int       @default(0)
+  completedAt      DateTime? @map("completed_at")
+  createdAt        DateTime  @default(now()) @map("created_at")
+  updatedAt        DateTime  @updatedAt @map("updated_at")
+
+  @@unique([userId, lessonId, level])
+  @@index([userId, level])
+  @@map("user_progress")
+}
+
+model PartLevelProgress {
+  id               String    @id @default(uuid())
+  userId           String    @map("user_id")
+  profile          Profile   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  partId           String    @map("part_id")
+  part             Part      @relation(fields: [partId], references: [id])
+  level            Int       // 1-4
+  lessonsCompleted Int       @default(0) @map("lessons_completed") // lessons with score >= 70
+  lessonsTotal     Int       @map("lessons_total")
+  isUnlocked       Boolean   @default(false) @map("is_unlocked")
+  unlockedAt       DateTime? @map("unlocked_at")
+
+  @@unique([userId, partId, level])
+  @@map("part_level_progress")
+}
+
+model SavedVocabulary {
+  id              String   @id @default(uuid())
+  userId          String   @map("user_id")
+  profile         Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lessonId        String?  @map("lesson_id")
+  lesson          Lesson?  @relation(fields: [lessonId], references: [id])
+  word            String
+  contextSentence String?  @map("context_sentence") @db.Text
+  meaningVi       String?  @map("meaning_vi")
+  isMastered      Boolean  @default(false) @map("is_mastered")
+  createdAt       DateTime @default(now()) @map("created_at")
+
+  @@unique([userId, word])
+  @@map("saved_vocabulary")
+}
+
+model PushSubscription {
+  id           String   @id @default(cuid())
+  userId       String   @map("user_id")
+  endpoint     String   @unique
+  subscription String   @db.Text // JSON of PushSubscriptionJSON
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  @@index([userId])
+  @@map("push_subscriptions")
+}
+
+model AiFeedback {
+  id            String   @id @default(uuid())
+  userId        String   @map("user_id")
+  profile       Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lessonId      String   @map("lesson_id")
+  lesson        Lesson   @relation(fields: [lessonId], references: [id])
+  level         Int      // 3 or 4
+  userSummary   String   @map("user_summary") @db.Text
+  accuracyScore Int      @map("accuracy_score") // 0-100
+  feedbackData  Json     @map("feedback_data") // Full structured AI response as JSONB
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  @@index([userId, lessonId, level])
+  @@map("ai_feedback")
+}

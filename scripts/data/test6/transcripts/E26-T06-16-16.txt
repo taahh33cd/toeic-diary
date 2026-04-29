@@ -1,0 +1,6 @@
+How many oil changes are scheduled for this afternoon?
+(A) A few replacement pieces.
+(B) Right now, there are five.
+(C) Can you change the channel?
+
+Answer: B

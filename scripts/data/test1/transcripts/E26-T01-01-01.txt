@@ -1,0 +1,4 @@
+(A) The woman is carrying a tray of food.
+(B) The woman is wearing a jacket.
+(C) The woman is tying up her hair.
+(D) The woman is removing her hat.

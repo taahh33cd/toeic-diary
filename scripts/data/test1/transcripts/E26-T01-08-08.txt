@@ -1,0 +1,6 @@
+When does the warehouse manager arrive?
+(A) Sure, no problem.
+(B) About twelve shipping boxes.
+(C) Not until this afternoon.
+
+Answer: C

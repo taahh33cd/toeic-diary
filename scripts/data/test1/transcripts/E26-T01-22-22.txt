@@ -1,0 +1,6 @@
+Do you sell your products online or in stores?
+(A) About twenty percent off.
+(B) A product demonstration.
+(C) Only online.
+
+Answer: C

@@ -1,0 +1,6 @@
+Are you going to the hardware store on Mill Street?
+(A) That store hasn't opened yet.
+(B) The blue package you sent me.
+(C) Some nails and a hammer.
+
+Answer: A

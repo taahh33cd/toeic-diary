@@ -1,0 +1,4 @@
+(A) Some people are standing next to a filing cabinet.
+(B) Some people are searching through a desk.
+(C) Some people are watching a presentation.
+(D) Some people are looking at a book.

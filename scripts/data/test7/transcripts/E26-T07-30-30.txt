@@ -1,0 +1,6 @@
+Your travel itinerary says you're going to Seattle, right?
+(A) But I'm going to London.
+(B) Turn left at the light, please.
+(C) An e-mail update.
+
+Answer: A

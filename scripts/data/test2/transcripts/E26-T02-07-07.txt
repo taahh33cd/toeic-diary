@@ -1,0 +1,6 @@
+Will you order the pasta or the chicken?
+(A) I'll have the pasta.
+(B) Yes, I studied Italian.
+(C) I think we should paint the kitchen.
+
+Answer: A

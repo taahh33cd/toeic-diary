@@ -1,0 +1,6 @@
+Our bookstore is having a sale today, isn't it?
+(A) Sure, you can use my printer.
+(B) I really enjoyed that book.
+(C) It's only a small discount.
+
+Answer: C

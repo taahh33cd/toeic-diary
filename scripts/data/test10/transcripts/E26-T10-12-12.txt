@@ -1,0 +1,6 @@
+When did this restaurant change its name?
+(A) Yes, it is well-known.
+(B) I'm not sure.
+(C) It's my favorite type of cuisine.
+
+Answer: B

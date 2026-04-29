@@ -1,0 +1,6 @@
+Where did you put the invoice from Stanson Incorporated?
+(A) No, not yet.
+(B) On your desk.
+(C) The post office is crowded today.
+
+Answer: B

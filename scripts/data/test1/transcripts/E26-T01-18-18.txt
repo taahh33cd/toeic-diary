@@ -1,0 +1,6 @@
+Which meeting room did you tell the interns to go to?
+(A) The Jefferson Room.
+(B) The meeting was fun, thanks.
+(C) Yes, it's a conference call.
+
+Answer: A

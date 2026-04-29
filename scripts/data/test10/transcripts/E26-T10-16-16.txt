@@ -1,0 +1,6 @@
+Are you planning to work at home tomorrow?
+(A) Yes, in the city directory.
+(B) Every day at three o'clock.
+(C) No, I'll be going into the office.
+
+Answer: C

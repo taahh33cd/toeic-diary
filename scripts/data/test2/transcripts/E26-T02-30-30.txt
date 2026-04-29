@@ -1,0 +1,6 @@
+Aren't we meeting with the clients this evening?
+(A) No, it's on the opposite side.
+(B) The television was fixed.
+(C) My flight to Japan leaves at six.
+
+Answer: C

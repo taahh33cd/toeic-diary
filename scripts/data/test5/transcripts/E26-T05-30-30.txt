@@ -1,0 +1,6 @@
+Should I bring some flowers or some food to the party?
+(A) He's right down the hall.
+(B) Don't you live next to a florist's shop?
+(C) A few more hours.
+
+Answer: B

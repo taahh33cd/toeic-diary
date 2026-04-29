@@ -1,0 +1,6 @@
+What's the price of this printer?
+(A) I don't work here.
+(B) It's on Washington Avenue.
+(C) Yes, I like it a lot.
+
+Answer: A

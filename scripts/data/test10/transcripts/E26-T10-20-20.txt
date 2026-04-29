@@ -1,0 +1,6 @@
+How many people are attending the orientation session?
+(A) There should be 21 people.
+(B) Maybe next week.
+(C) I can't see the screen.
+
+Answer: A

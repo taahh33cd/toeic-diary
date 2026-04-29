@@ -1,0 +1,6 @@
+What time can I pick up my glasses?
+(A) No, it's not very heavy.
+(B) About twenty meters.
+(C) We close at six o'clock.
+
+Answer: C
