@@ -33,8 +33,13 @@ export default async function JournalLayout({
       select: { studentCode: true },
     });
   } catch (err) {
-    console.error("[journal/layout] prisma error:", err);
-    throw err;
+    const msg = err instanceof Error ? err.message : String(err);
+    return (
+      <html><body style={{fontFamily:"monospace",padding:"2rem",background:"#1a1a2e",color:"#ff6b6b"}}>
+        <h2>DB Error (debug)</h2>
+        <pre style={{whiteSpace:"pre-wrap",wordBreak:"break-all"}}>{msg}</pre>
+      </body></html>
+    );
   }
 
   if (!profile?.studentCode) redirect("/auth/onboarding-incomplete");
