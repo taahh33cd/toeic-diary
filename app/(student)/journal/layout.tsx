@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
-import { PrismaClient } from "@prisma/client";
-import { PrismaPg } from "@prisma/adapter-pg";
-import pg from "pg";
 import { createClient } from "@/lib/supabase/server";
+import { prisma } from "@/lib/db/prisma";
 import { Brand } from "@/components/shared/Brand";
 import { NavSwitcher } from "@/components/shared/NavSwitcher";
 import { JournalTabBar } from "@/components/journal/TabBar";
@@ -19,23 +17,15 @@ export const metadata: Metadata = {
   description: "Theo dõi tiến trình TOEIC — điểm số, từ vựng, nhiệm vụ hàng ngày",
 };
 
-let _pool: pg.Pool | null = null;
-function getPool() {
-  if (!_pool) _pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
-  return _pool;
-}
-
 export default async function JournalLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  // ── proxy.ts đã chặn unauth; ở đây chỉ check studentCode ──
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) redirect("/auth/login?next=/journal");
 
-  const prisma = new PrismaClient({ adapter: new PrismaPg(getPool()) });
   const profile = await prisma.profile.findUnique({
     where: { id: user.id },
     select: { studentCode: true },
