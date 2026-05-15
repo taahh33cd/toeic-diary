@@ -1,0 +1,915 @@
+"use client";
+
+import { useState, useMemo, useCallback } from "react";
+import { useParams } from "next/navigation";
+import Link from "next/link";
+import {
+  ArrowLeft,
+  Plus,
+  Trash2,
+  ChevronDown,
+  ChevronUp,
+  Check,
+  X,
+  Pencil,
+  UserMinus,
+} from "lucide-react";
+import { useClass } from "@/hooks/firebase/useClasses";
+import { useAllStudents } from "@/hooks/firebase/useAllStudents";
+import { useClassAttendance } from "@/hooks/firebase/useClassAttendance";
+import {
+  updateClass,
+  pushClassHomework,
+  updateClassHomework,
+  deleteClassHomework,
+  setAttendance,
+  removeClassMember,
+} from "@/lib/firebase/helpers";
+import type {
+  SchoolClass,
+  Homework,
+  HwItem,
+  AttendanceStatus,
+  Student,
+} from "@/lib/firebase/types";
+
+// ─── Helpers ─────────────────────────────────────────────────────────────────
+
+function fmtDate(d: string) {
+  if (!d) return "";
+  const [y, m, day] = d.split("-");
+  return `${day}/${m}/${y}`;
+}
+
+function today() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function hwTaskCount(hw: Homework) {
+  return (
+    (hw.vocab?.length ?? 0) +
+    (hw.reading?.length ?? 0) +
+    (hw.listening?.length ?? 0) +
+    (hw.practice?.length ?? 0) +
+    (hw.other?.length ?? 0)
+  );
+}
+
+// ─── UI primitives ────────────────────────────────────────────────────────────
+
+function SectionCard({
+  title,
+  action,
+  children,
+}: {
+  title: string;
+  action?: React.ReactNode;
+  children: React.ReactNode;
+}) {
+  return (
+    <div
+      className="rounded-xl border"
+      style={{
+        background: "var(--bg-elevated)",
+        borderColor: "var(--border)",
+      }}
+    >
+      <div
+        className="flex items-center justify-between px-4 py-3 border-b"
+        style={{ borderColor: "var(--border)" }}
+      >
+        <h3
+          className="text-sm font-semibold"
+          style={{ color: "var(--text-primary)" }}
+        >
+          {title}
+        </h3>
+        {action}
+      </div>
+      <div className="p-4">{children}</div>
+    </div>
+  );
+}
+
+function Btn({
+  onClick,
+  variant = "ghost",
+  size = "sm",
+  children,
+  disabled,
+}: {
+  onClick?: () => void;
+  variant?: "ghost" | "primary" | "danger";
+  size?: "sm" | "xs";
+  children: React.ReactNode;
+  disabled?: boolean;
+}) {
+  const base =
+    "inline-flex items-center gap-1.5 font-medium rounded-lg transition-opacity disabled:opacity-40 cursor-pointer";
+  const sz = size === "xs" ? "px-2 py-1 text-xs" : "px-3 py-1.5 text-xs";
+  const col =
+    variant === "primary"
+      ? "text-white"
+      : variant === "danger"
+      ? ""
+      : "";
+  const style =
+    variant === "primary"
+      ? {
+          background: "var(--accent-primary)",
+          color: "white",
+        }
+      : variant === "danger"
+      ? {
+          background: "rgba(239,68,68,0.1)",
+          color: "rgb(239,68,68)",
+        }
+      : {
+          background: "var(--bg-primary)",
+          border: "1px solid var(--border)",
+          color: "var(--text-secondary)",
+        };
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={`${base} ${sz} ${col}`}
+      style={style}
+    >
+      {children}
+    </button>
+  );
+}
+
+function TextInput({
+  value,
+  onChange,
+  placeholder,
+  type = "text",
+}: {
+  value: string;
+  onChange: (v: string) => void;
+  placeholder?: string;
+  type?: string;
+}) {
+  return (
+    <input
+      type={type}
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
+      placeholder={placeholder}
+      className="w-full px-3 py-2 rounded-lg text-sm border outline-none"
+      style={{
+        background: "var(--bg-primary)",
+        borderColor: "var(--border)",
+        color: "var(--text-primary)",
+      }}
+    />
+  );
+}
+
+// ─── Attendance cycle ─────────────────────────────────────────────────────────
+
+const ATT_CYCLE: (AttendanceStatus | null)[] = [null, "present", "absent", "late"];
+
+function nextStatus(current: AttendanceStatus | undefined): AttendanceStatus | null {
+  const idx = ATT_CYCLE.indexOf(current ?? null);
+  return ATT_CYCLE[(idx + 1) % ATT_CYCLE.length];
+}
+
+function AttBadge({ status }: { status: AttendanceStatus | undefined }) {
+  if (!status)
+    return (
+      <span
+        className="w-8 h-8 rounded-lg flex items-center justify-center text-xs border"
+        style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
+      >
+        –
+      </span>
+    );
+  if (status === "present")
+    return (
+      <span className="w-8 h-8 rounded-lg flex items-center justify-center text-xs bg-green-500/10 text-green-600 font-bold">
+        ✓
+      </span>
+    );
+  if (status === "absent")
+    return (
+      <span className="w-8 h-8 rounded-lg flex items-center justify-center text-xs bg-red-500/10 text-red-500 font-bold">
+        ✗
+      </span>
+    );
+  return (
+    <span className="w-8 h-8 rounded-lg flex items-center justify-center text-xs bg-yellow-500/10 text-yellow-600 font-bold">
+      ~
+    </span>
+  );
+}
+
+// ─── Homework Modal ───────────────────────────────────────────────────────────
+
+type TaskDraft = { id: string; category: string; text: string; link: string };
+
+const CATEGORIES = [
+  { key: "vocab", label: "Từ vựng" },
+  { key: "listening", label: "Nghe" },
+  { key: "reading", label: "Đọc" },
+  { key: "practice", label: "Luyện đề" },
+  { key: "other", label: "Khác" },
+];
+
+type HwCatKey = "vocab" | "reading" | "listening" | "practice" | "other";
+
+function getCatItems(hw: Homework, key: HwCatKey): HwItem[] {
+  return hw[key] ?? [];
+}
+
+function hwToTasks(hw: Homework): TaskDraft[] {
+  const tasks: TaskDraft[] = [];
+  let i = 0;
+  for (const cat of CATEGORIES) {
+    const items = getCatItems(hw, cat.key as HwCatKey);
+    for (const item of items) {
+      tasks.push({ id: `t${i++}`, category: cat.key, text: item.text, link: item.link ?? "" });
+    }
+  }
+  return tasks;
+}
+
+function tasksToHw(id: string, date: string, endDate: string, tasks: TaskDraft[]): Homework {
+  const hw: Homework = { id, date, endDate: endDate || undefined };
+  for (const cat of CATEGORIES) {
+    const items = tasks
+      .filter((t) => t.category === cat.key && t.text.trim())
+      .map((t) => ({ text: t.text.trim(), ...(t.link.trim() ? { link: t.link.trim() } : {}) }));
+    if (items.length > 0) {
+      hw[cat.key as HwCatKey] = items;
+    }
+  }
+  return hw;
+}
+
+function HomeworkModal({
+  initial,
+  onSave,
+  onClose,
+}: {
+  initial?: Homework;
+  onSave: (hw: Homework) => Promise<void>;
+  onClose: () => void;
+}) {
+  const [date, setDate] = useState(initial?.date ?? today());
+  const [endDate, setEndDate] = useState(initial?.endDate ?? "");
+  const [tasks, setTasks] = useState<TaskDraft[]>(
+    initial ? hwToTasks(initial) : [{ id: "t0", category: "other", text: "", link: "" }]
+  );
+  const [saving, setSaving] = useState(false);
+
+  function addTask() {
+    setTasks((prev) => [
+      ...prev,
+      { id: `t${Date.now()}`, category: "other", text: "", link: "" },
+    ]);
+  }
+
+  function removeTask(id: string) {
+    setTasks((prev) => prev.filter((t) => t.id !== id));
+  }
+
+  function updateTask(id: string, field: keyof TaskDraft, value: string) {
+    setTasks((prev) =>
+      prev.map((t) => (t.id === id ? { ...t, [field]: value } : t))
+    );
+  }
+
+  async function handleSave() {
+    if (!date) return;
+    setSaving(true);
+    const hw = tasksToHw(initial?.id ?? `hw${Date.now()}`, date, endDate, tasks);
+    await onSave(hw);
+    setSaving(false);
+    onClose();
+  }
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      style={{ background: "rgba(0,0,0,0.5)" }}
+      onClick={(e) => e.target === e.currentTarget && onClose()}
+    >
+      <div
+        className="w-full max-w-lg rounded-2xl border shadow-xl overflow-hidden"
+        style={{ background: "var(--bg-elevated)", borderColor: "var(--border)" }}
+      >
+        <div
+          className="flex items-center justify-between px-5 py-4 border-b"
+          style={{ borderColor: "var(--border)" }}
+        >
+          <h3 className="font-semibold" style={{ color: "var(--text-primary)" }}>
+            {initial ? "Sửa BTVN lớp" : "Thêm BTVN lớp"}
+          </h3>
+          <button onClick={onClose} style={{ color: "var(--text-muted)" }}>
+            <X size={18} />
+          </button>
+        </div>
+
+        <div className="p-5 space-y-4 max-h-[70vh] overflow-y-auto">
+          <div className="grid grid-cols-2 gap-3">
+            <div>
+              <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>
+                Ngày giao
+              </label>
+              <TextInput type="date" value={date} onChange={setDate} />
+            </div>
+            <div>
+              <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>
+                Deadline (tuỳ chọn)
+              </label>
+              <TextInput type="date" value={endDate} onChange={setEndDate} />
+            </div>
+          </div>
+
+          <div className="space-y-2">
+            <div className="flex items-center justify-between">
+              <p className="text-xs font-medium" style={{ color: "var(--text-secondary)" }}>
+                Nội dung bài tập
+              </p>
+              <Btn onClick={addTask} size="xs">
+                <Plus size={12} /> Thêm task
+              </Btn>
+            </div>
+
+            {tasks.map((task) => (
+              <div key={task.id} className="flex gap-2 items-start">
+                <select
+                  value={task.category}
+                  onChange={(e) => updateTask(task.id, "category", e.target.value)}
+                  className="px-2 py-2 rounded-lg text-xs border outline-none shrink-0"
+                  style={{
+                    background: "var(--bg-primary)",
+                    borderColor: "var(--border)",
+                    color: "var(--text-secondary)",
+                  }}
+                >
+                  {CATEGORIES.map((c) => (
+                    <option key={c.key} value={c.key}>
+                      {c.label}
+                    </option>
+                  ))}
+                </select>
+                <div className="flex-1 space-y-1">
+                  <TextInput
+                    value={task.text}
+                    onChange={(v) => updateTask(task.id, "text", v)}
+                    placeholder="Nội dung..."
+                  />
+                  <TextInput
+                    value={task.link}
+                    onChange={(v) => updateTask(task.id, "link", v)}
+                    placeholder="Link (tuỳ chọn)"
+                  />
+                </div>
+                <button
+                  onClick={() => removeTask(task.id)}
+                  className="mt-2 shrink-0"
+                  style={{ color: "var(--text-muted)" }}
+                >
+                  <Trash2 size={14} />
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div
+          className="flex justify-end gap-2 px-5 py-4 border-t"
+          style={{ borderColor: "var(--border)" }}
+        >
+          <Btn onClick={onClose}>Huỷ</Btn>
+          <Btn onClick={handleSave} variant="primary" disabled={!date || saving}>
+            {saving ? "Đang lưu..." : "Lưu"}
+          </Btn>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── ClassInfoSection ─────────────────────────────────────────────────────────
+
+function ClassInfoSection({
+  cls,
+  classId,
+}: {
+  cls: SchoolClass;
+  classId: string;
+}) {
+  const [editing, setEditing] = useState(false);
+  const [name, setName] = useState(cls.name ?? "");
+  const [desc, setDesc] = useState(cls.desc ?? "");
+  const [saving, setSaving] = useState(false);
+
+  async function handleSave() {
+    setSaving(true);
+    await updateClass(classId, { name: name.trim(), desc: desc.trim() || undefined });
+    setSaving(false);
+    setEditing(false);
+  }
+
+  const DAYS_VI: Record<string, string> = {
+    Monday: "Thứ 2",
+    Tuesday: "Thứ 3",
+    Wednesday: "Thứ 4",
+    Thursday: "Thứ 5",
+    Friday: "Thứ 6",
+    Saturday: "Thứ 7",
+    Sunday: "CN",
+  };
+
+  return (
+    <SectionCard
+      title="📋 Thông tin lớp"
+      action={
+        editing ? (
+          <div className="flex gap-2">
+            <Btn onClick={() => setEditing(false)} size="xs">Huỷ</Btn>
+            <Btn onClick={handleSave} variant="primary" size="xs" disabled={saving}>
+              {saving ? "..." : <><Check size={12} /> Lưu</>}
+            </Btn>
+          </div>
+        ) : (
+          <Btn onClick={() => setEditing(true)} size="xs">
+            <Pencil size={12} /> Sửa
+          </Btn>
+        )
+      }
+    >
+      {editing ? (
+        <div className="space-y-3">
+          <div>
+            <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>
+              Tên lớp
+            </label>
+            <TextInput value={name} onChange={setName} placeholder="VD: TOEIC 600 K3" />
+          </div>
+          <div>
+            <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>
+              Mô tả
+            </label>
+            <TextInput value={desc} onChange={setDesc} placeholder="Mô tả ngắn..." />
+          </div>
+        </div>
+      ) : (
+        <div className="space-y-2">
+          <p className="text-sm font-medium" style={{ color: "var(--text-primary)" }}>
+            {cls.name}
+          </p>
+          {cls.desc && (
+            <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+              {cls.desc}
+            </p>
+          )}
+          {cls.weeklySchedule && cls.weeklySchedule.length > 0 && (
+            <div className="flex gap-2 flex-wrap pt-1">
+              {cls.weeklySchedule.map((s, i) => (
+                <span
+                  key={i}
+                  className="text-xs px-2 py-0.5 rounded-full"
+                  style={{
+                    background: "rgba(196,98,45,0.08)",
+                    color: "var(--accent-primary)",
+                  }}
+                >
+                  {DAYS_VI[s.day] ?? s.day} · {s.time}
+                  {s.room ? ` · ${s.room}` : ""}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+    </SectionCard>
+  );
+}
+
+// ─── StudentGridSection ───────────────────────────────────────────────────────
+
+function StudentGridSection({
+  cls,
+  classId,
+  allStudents,
+}: {
+  cls: SchoolClass;
+  classId: string;
+  allStudents: (Student & { id: string })[];
+}) {
+  const memberCodes = cls.members ?? [];
+
+  const members = useMemo(
+    () =>
+      memberCodes
+        .map((code) => allStudents.find((s) => s.id === code))
+        .filter(Boolean) as (Student & { id: string })[],
+    [memberCodes, allStudents]
+  );
+
+  async function handleRemove(code: string) {
+    if (!confirm("Xoá học viên này khỏi lớp?")) return;
+    await removeClassMember(classId, code);
+  }
+
+  return (
+    <SectionCard title={`👥 Học viên (${members.length})`}>
+      {members.length === 0 ? (
+        <p className="text-xs text-center py-4" style={{ color: "var(--text-muted)" }}>
+          Chưa có học viên
+        </p>
+      ) : (
+        <div className="grid grid-cols-1 gap-2">
+          {members.map((student) => (
+            <div
+              key={student.id}
+              className="flex items-center gap-3 p-2.5 rounded-lg border"
+              style={{
+                borderColor: "var(--border)",
+                background: "var(--bg-primary)",
+              }}
+            >
+              <Link
+                href={`/admin/students/${student.id}`}
+                className="flex-1 min-w-0"
+              >
+                <p
+                  className="text-sm font-medium truncate hover:underline"
+                  style={{ color: "var(--text-primary)" }}
+                >
+                  {student.name ?? student.id}
+                </p>
+                <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+                  Tuần {student.currentWeek ?? 0}
+                  {student.frozen ? " · 🧊 Đóng băng" : ""}
+                </p>
+              </Link>
+              <button
+                onClick={() => handleRemove(student.id)}
+                className="shrink-0 p-1 rounded"
+                style={{ color: "var(--text-muted)" }}
+                title="Xoá khỏi lớp"
+              >
+                <UserMinus size={14} />
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+    </SectionCard>
+  );
+}
+
+// ─── ClassHomeworkSection ─────────────────────────────────────────────────────
+
+function ClassHomeworkSection({
+  classId,
+  homework,
+}: {
+  classId: string;
+  homework: Homework[];
+}) {
+  const [modal, setModal] = useState<{ mode: "add" } | { mode: "edit"; hw: Homework } | null>(null);
+  const [expanded, setExpanded] = useState<string | null>(null);
+
+  const sorted = useMemo(
+    () => [...homework].sort((a, b) => b.date.localeCompare(a.date)),
+    [homework]
+  );
+
+  async function handleSave(hw: Homework) {
+    if (modal?.mode === "edit") {
+      await updateClassHomework(classId, hw.id, hw);
+    } else {
+      await pushClassHomework(classId, hw);
+    }
+  }
+
+  async function handleDelete(hwId: string) {
+    if (!confirm("Xoá BTVN này?")) return;
+    await deleteClassHomework(classId, hwId);
+  }
+
+  function renderItems(items: HwItem[] | undefined, catLabel: string) {
+    if (!items?.length) return null;
+    return (
+      <div>
+        <p className="text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>
+          {catLabel}
+        </p>
+        <ul className="space-y-1">
+          {items.map((item, i) => (
+            <li key={i} className="text-xs flex gap-1" style={{ color: "var(--text-primary)" }}>
+              <span style={{ color: "var(--text-muted)" }}>·</span>
+              {item.link ? (
+                <a href={item.link} target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">
+                  {item.text}
+                </a>
+              ) : (
+                item.text
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <SectionCard
+        title="📚 BTVN lớp"
+        action={
+          <Btn onClick={() => setModal({ mode: "add" })} size="xs" variant="primary">
+            <Plus size={12} /> Thêm
+          </Btn>
+        }
+      >
+        {sorted.length === 0 ? (
+          <p className="text-xs text-center py-4" style={{ color: "var(--text-muted)" }}>
+            Chưa có BTVN
+          </p>
+        ) : (
+          <div className="space-y-2">
+            {sorted.map((hw) => {
+              const isOpen = expanded === hw.id;
+              const count = hwTaskCount(hw);
+              return (
+                <div
+                  key={hw.id}
+                  className="rounded-lg border overflow-hidden"
+                  style={{ borderColor: "var(--border)" }}
+                >
+                  <div
+                    className="flex items-center justify-between px-3 py-2.5 cursor-pointer"
+                    style={{ background: "var(--bg-primary)" }}
+                    onClick={() => setExpanded(isOpen ? null : hw.id)}
+                  >
+                    <div>
+                      <p className="text-xs font-medium" style={{ color: "var(--text-primary)" }}>
+                        {fmtDate(hw.date)}
+                        {hw.endDate ? ` → ${fmtDate(hw.endDate)}` : ""}
+                      </p>
+                      <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+                        {count} task{count !== 1 ? "s" : ""}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={(e) => { e.stopPropagation(); setModal({ mode: "edit", hw }); }}
+                        style={{ color: "var(--text-muted)" }}
+                      >
+                        <Pencil size={13} />
+                      </button>
+                      <button
+                        onClick={(e) => { e.stopPropagation(); handleDelete(hw.id); }}
+                        style={{ color: "var(--text-muted)" }}
+                      >
+                        <Trash2 size={13} />
+                      </button>
+                      {isOpen ? (
+                        <ChevronUp size={14} style={{ color: "var(--text-muted)" }} />
+                      ) : (
+                        <ChevronDown size={14} style={{ color: "var(--text-muted)" }} />
+                      )}
+                    </div>
+                  </div>
+                  {isOpen && (
+                    <div
+                      className="px-3 py-3 space-y-2 border-t"
+                      style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}
+                    >
+                      {renderItems(hw.vocab, "Từ vựng")}
+                      {renderItems(hw.listening, "Nghe")}
+                      {renderItems(hw.reading, "Đọc")}
+                      {renderItems(hw.practice, "Luyện đề")}
+                      {renderItems(hw.other, "Khác")}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </SectionCard>
+
+      {modal && (
+        <HomeworkModal
+          initial={modal.mode === "edit" ? modal.hw : undefined}
+          onSave={handleSave}
+          onClose={() => setModal(null)}
+        />
+      )}
+    </>
+  );
+}
+
+// ─── AttendanceSection ────────────────────────────────────────────────────────
+
+function AttendanceSection({
+  classId,
+  cls,
+  allStudents,
+  attendance,
+}: {
+  classId: string;
+  cls: SchoolClass;
+  allStudents: (Student & { id: string })[];
+  attendance: Record<string, Record<string, AttendanceStatus>>;
+}) {
+  const [date, setDate] = useState(today());
+
+  const memberCodes = cls.members ?? [];
+  const members = useMemo(
+    () =>
+      memberCodes
+        .map((code) => allStudents.find((s) => s.id === code))
+        .filter(Boolean) as (Student & { id: string })[],
+    [memberCodes, allStudents]
+  );
+
+  const presentCount = useMemo(
+    () => members.filter((s) => attendance[s.id]?.[date] === "present").length,
+    [members, attendance, date]
+  );
+
+  async function handleToggle(studentCode: string) {
+    const current = attendance[studentCode]?.[date] as AttendanceStatus | undefined;
+    const next = nextStatus(current);
+    await setAttendance(studentCode, date, next);
+  }
+
+  return (
+    <SectionCard title="📅 Điểm danh">
+      <div className="space-y-3">
+        <div className="flex items-center gap-3">
+          <input
+            type="date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+            className="px-3 py-1.5 rounded-lg text-sm border outline-none"
+            style={{
+              background: "var(--bg-primary)",
+              borderColor: "var(--border)",
+              color: "var(--text-primary)",
+            }}
+          />
+          {members.length > 0 && (
+            <span className="text-xs" style={{ color: "var(--text-muted)" }}>
+              {presentCount}/{members.length} có mặt
+            </span>
+          )}
+        </div>
+
+        {members.length === 0 ? (
+          <p className="text-xs text-center py-4" style={{ color: "var(--text-muted)" }}>
+            Chưa có học viên
+          </p>
+        ) : (
+          <div className="space-y-1.5">
+            <div className="flex items-center gap-2 pb-1">
+              <div className="flex gap-3 text-xs" style={{ color: "var(--text-muted)" }}>
+                <span className="flex items-center gap-1">
+                  <span className="w-5 h-5 rounded bg-green-500/10 text-green-600 flex items-center justify-center text-xs font-bold">✓</span>
+                  Có mặt
+                </span>
+                <span className="flex items-center gap-1">
+                  <span className="w-5 h-5 rounded bg-red-500/10 text-red-500 flex items-center justify-center text-xs font-bold">✗</span>
+                  Vắng
+                </span>
+                <span className="flex items-center gap-1">
+                  <span className="w-5 h-5 rounded bg-yellow-500/10 text-yellow-600 flex items-center justify-center text-xs font-bold">~</span>
+                  Trễ
+                </span>
+              </div>
+            </div>
+            {members.map((student) => {
+              const status = attendance[student.id]?.[date] as AttendanceStatus | undefined;
+              return (
+                <div
+                  key={student.id}
+                  className="flex items-center justify-between gap-3 px-3 py-2 rounded-lg border"
+                  style={{
+                    borderColor: "var(--border)",
+                    background: "var(--bg-primary)",
+                  }}
+                >
+                  <p className="text-sm flex-1 truncate" style={{ color: "var(--text-primary)" }}>
+                    {student.name ?? student.id}
+                  </p>
+                  <button
+                    onClick={() => handleToggle(student.id)}
+                    className="shrink-0"
+                    title="Click để thay đổi"
+                  >
+                    <AttBadge status={status} />
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </SectionCard>
+  );
+}
+
+// ─── Main Page ────────────────────────────────────────────────────────────────
+
+export default function ClassDetailPage() {
+  const params = useParams();
+  const classId = params.id as string;
+
+  const { schoolClass, loading } = useClass(classId);
+  const { students: allStudents } = useAllStudents();
+  const memberCodes = schoolClass?.members ?? [];
+  const { attendance } = useClassAttendance(memberCodes);
+
+  if (loading) {
+    return (
+      <div className="space-y-3 animate-pulse">
+        {[...Array(4)].map((_, i) => (
+          <div
+            key={i}
+            className="h-24 rounded-xl"
+            style={{ background: "var(--border)" }}
+          />
+        ))}
+      </div>
+    );
+  }
+
+  if (!schoolClass) {
+    return (
+      <div className="text-center py-12">
+        <p className="text-lg font-medium" style={{ color: "var(--text-primary)" }}>
+          Không tìm thấy lớp học
+        </p>
+        <Link
+          href="/admin/classes"
+          className="text-sm mt-2 inline-block hover:underline"
+          style={{ color: "var(--accent-primary)" }}
+        >
+          ← Quay lại danh sách lớp
+        </Link>
+      </div>
+    );
+  }
+
+  const homework: Homework[] = Array.isArray(schoolClass.homework)
+    ? schoolClass.homework
+    : [];
+
+  return (
+    <div className="space-y-5">
+      {/* TopBar */}
+      <div className="flex items-center gap-3">
+        <Link
+          href="/admin/classes"
+          className="p-1.5 rounded-lg border hover:opacity-80 transition-opacity"
+          style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}
+        >
+          <ArrowLeft size={16} />
+        </Link>
+        <div className="flex-1 min-w-0">
+          <h1 className="text-lg font-bold truncate" style={{ color: "var(--text-primary)" }}>
+            {schoolClass.name}
+          </h1>
+          <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+            {(schoolClass.members ?? []).length} học viên
+          </p>
+        </div>
+      </div>
+
+      {/* 2-column layout */}
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-5">
+        {/* Left col */}
+        <div className="lg:col-span-2 space-y-5">
+          <ClassInfoSection cls={schoolClass} classId={classId} />
+          <StudentGridSection
+            cls={schoolClass}
+            classId={classId}
+            allStudents={allStudents as (Student & { id: string })[]}
+          />
+        </div>
+
+        {/* Right col */}
+        <div className="lg:col-span-3 space-y-5">
+          <ClassHomeworkSection classId={classId} homework={homework} />
+          <AttendanceSection
+            classId={classId}
+            cls={schoolClass}
+            allStudents={allStudents as (Student & { id: string })[]}
+            attendance={attendance as Record<string, Record<string, AttendanceStatus>>}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,9 @@
+.env
+.env.local
+.env.development
+.env.production
+
+# Large local-only directories
+.claude/
+scripts/data/
+node_modules/
