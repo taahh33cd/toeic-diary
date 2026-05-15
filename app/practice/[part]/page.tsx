@@ -49,16 +49,24 @@ export default async function PartPracticePage({
     .findUnique({ where: { id: user.id }, select: { displayName: true } })
     .catch(() => null);
 
-  // All lessons for this part with timestamps
+  // All lessons for this part with timestamps (exclude part2-practice sets)
   const lessons = await prisma.lesson.findMany({
     where: {
-      part: { partNumber: info.partNumber },
+      part: {
+        partNumber: info.partNumber,
+        testSet: { series: { slug: { not: "part2-practice" } } },
+      },
       sentences: { some: { startTime: { gt: 0 } } },
     },
     include: {
       part: {
         select: {
-          testSet: { select: { id: true, name: true, slug: true, orderIndex: true } },
+          testSet: {
+            select: {
+              id: true, name: true, slug: true, orderIndex: true,
+              series: { select: { id: true, name: true, slug: true, orderIndex: true } },
+            },
+          },
         },
       },
     },
@@ -67,6 +75,7 @@ export default async function PartPracticePage({
 
   lessons.sort(
     (a, b) =>
+      (a.part.testSet.series.orderIndex ?? 0) - (b.part.testSet.series.orderIndex ?? 0) ||
       (a.part.testSet.orderIndex ?? 0) - (b.part.testSet.orderIndex ?? 0) ||
       a.orderIndex - b.orderIndex
   );
@@ -170,22 +179,36 @@ export default async function PartPracticePage({
 
   // --- Default view: grouped overview ---
 
-  // Build testSet groups with aggregate progress
+  // Build series → testSet groups with aggregate progress
   type TestSetGroup = {
     id: string; name: string; slug: string; orderIndex: number;
     total: number; completed: number;
   };
+  type SeriesGroup = {
+    id: string; name: string; slug: string; orderIndex: number;
+    testSets: TestSetGroup[];
+  };
+  const seriesMap = new Map<string, SeriesGroup>();
   const testSetMap = new Map<string, TestSetGroup>();
+
   for (const lesson of lessons) {
     const ts = lesson.part.testSet;
+    const sr = ts.series;
+    if (!seriesMap.has(sr.id)) {
+      seriesMap.set(sr.id, { id: sr.id, name: sr.name, slug: sr.slug, orderIndex: sr.orderIndex ?? 0, testSets: [] });
+    }
     if (!testSetMap.has(ts.id)) {
-      testSetMap.set(ts.id, { id: ts.id, name: ts.name, slug: ts.slug, orderIndex: ts.orderIndex ?? 0, total: 0, completed: 0 });
+      const group: TestSetGroup = { id: ts.id, name: ts.name, slug: ts.slug, orderIndex: ts.orderIndex ?? 0, total: 0, completed: 0 };
+      testSetMap.set(ts.id, group);
+      seriesMap.get(sr.id)!.testSets.push(group);
     }
     const group = testSetMap.get(ts.id)!;
     group.total++;
     if ((progressMap[lesson.id] ?? -1) >= 70) group.completed++;
   }
-  const testSetGroups = [...testSetMap.values()].sort((a, b) => a.orderIndex - b.orderIndex);
+  const seriesGroups = [...seriesMap.values()]
+    .sort((a, b) => a.orderIndex - b.orderIndex)
+    .map((s) => ({ ...s, testSets: s.testSets.sort((a, b) => a.orderIndex - b.orderIndex) }));
 
   // Part 2: fetch practice series (loại câu hỏi)
   let practiceGroups: Array<{ id: string; name: string; slug: string; total: number; completed: number }> = [];
@@ -308,22 +331,28 @@ export default async function PartPracticePage({
           </section>
         )}
 
-        {/* Theo bộ đề */}
+        {/* Theo bộ đề — grouped by series */}
         <section>
-          <div className="mb-4 flex items-center justify-between">
+          <div className="mb-6">
             <h2 className="font-display font-bold text-xl text-[var(--text-primary)]">Theo bộ đề</h2>
-            <span className="text-sm text-[var(--text-muted)]">{testSetGroups.length} bộ</span>
           </div>
 
-          {testSetGroups.length === 0 ? (
+          {seriesGroups.length === 0 ? (
             <div className="rounded-2xl border py-20 flex flex-col items-center text-center border-[var(--border)] bg-[var(--bg-elevated)]">
               <div className="text-5xl mb-4">{info.icon}</div>
               <p className="text-base font-medium mb-1 text-[var(--text-primary)]">Chưa có bài luyện tập nào</p>
               <p className="text-sm max-w-xs text-[var(--text-muted)]">Nội dung đang được chuẩn bị. Quay lại sau nhé!</p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-              {testSetGroups.map((group, i) => {
+            <div className="flex flex-col gap-10">
+              {seriesGroups.map((series) => (
+                <div key={series.id}>
+                  <div className="mb-3 flex items-center justify-between">
+                    <h3 className="font-display font-semibold text-base text-[var(--text-secondary)]">{series.name}</h3>
+                    <span className="text-sm text-[var(--text-muted)]">{series.testSets.length} bộ</span>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                    {series.testSets.map((group, i) => {
                 const percent = group.total > 0 ? (group.completed / group.total) * 100 : 0;
                 return (
                   <Link
@@ -363,7 +392,10 @@ export default async function PartPracticePage({
                     </div>
                   </Link>
                 );
-              })}
+                    })}
+                  </div>
+                </div>
+              ))}
             </div>
           )}
         </section>
