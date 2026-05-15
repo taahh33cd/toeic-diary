@@ -9,6 +9,8 @@ import { MobileBottomNav } from "@/components/journal/MobileBottomNav";
 import { NotificationWatcher } from "@/components/shared/NotificationWatcher";
 import { InstallBanner } from "@/components/shared/InstallBanner";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: {
     default: "Nhật ký học tập",
