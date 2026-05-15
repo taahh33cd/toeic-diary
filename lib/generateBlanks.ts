@@ -78,3 +78,28 @@ export function generateBlanks(
     };
   });
 }
+
+interface BlankLike {
+  id: string;
+  position: number;
+  answer: string;
+  hint: string | null;
+}
+
+// Ensures each sentence has at least minBlanks, generating extras if needed.
+// Generated blank IDs are stable (derived from sentenceId + position).
+export function ensureMinBlanks<T extends { id: string; content: string; blanks: BlankLike[] }>(
+  sentences: T[],
+  minBlanks: number
+): T[] {
+  return sentences.map((s) => {
+    if (s.blanks.length >= minBlanks) return s;
+    const needed = minBlanks - s.blanks.length;
+    const takenPositions = new Set(s.blanks.map((b) => b.position));
+    const seed = s.id.split("").reduce((acc, c, i) => acc + c.charCodeAt(0) * (i + 1), 0);
+    const generated = generateBlanks(s.id, s.content, needed + 4, seed)
+      .filter((b) => !takenPositions.has(b.position))
+      .slice(0, needed);
+    return { ...s, blanks: [...s.blanks, ...generated] };
+  });
+}

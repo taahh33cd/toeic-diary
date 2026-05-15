@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { Flame, BookCheck, Star, ChevronRight } from "lucide-react";
+import { Flame, BookCheck, Star, ChevronRight, Headphones } from "lucide-react";
 
 export default async function HomePage() {
   const supabase = await createClient();
@@ -104,6 +104,42 @@ export default async function HomePage() {
               <StatChip icon={<BookCheck size={16} />} label={`${totalCompleted} bài hoàn thành`} color="bg-green-400/20 text-green-200" />
               <StatChip icon={<Star size={16} />} label={avgScore > 0 ? `Điểm TB: ${avgScore}` : "Bắt đầu luyện tập!"} color="bg-yellow-400/20 text-yellow-200" />
             </div>
+          </div>
+        </div>
+
+        {/* Luyện tập theo Part */}
+        <div className="mb-10">
+          <div className="mb-4 flex items-center gap-2">
+            <Headphones size={20} className="text-[var(--accent-primary)]" />
+            <h3 className="font-display font-bold text-xl text-[var(--text-primary)]">
+              Luyện tập theo Part
+            </h3>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {(
+              [
+                { part: 1, icon: "🖼️", name: "Photographs", desc: "6 câu / đề" },
+                { part: 2, icon: "💬", name: "Question-Response", desc: "25 câu / đề" },
+                { part: 3, icon: "🗣️", name: "Conversations", desc: "39 câu / đề" },
+                { part: 4, icon: "📢", name: "Talks", desc: "30 câu / đề" },
+              ] as const
+            ).map(({ part, icon, name, desc }) => (
+              <Link
+                key={part}
+                href={`/practice/part-${part}`}
+                className="card card-interactive p-4 flex flex-col gap-2 group"
+              >
+                <div className="text-2xl">{icon}</div>
+                <div>
+                  <div className="font-bold text-sm text-[var(--text-primary)]">Part {part}</div>
+                  <div className="text-xs text-[var(--text-secondary)] leading-tight">{name}</div>
+                  <div className="text-xs text-[var(--text-muted)]">{desc}</div>
+                </div>
+                <div className="flex items-center gap-1 mt-auto text-xs text-[var(--accent-primary)] font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                  Luyện tập <ChevronRight size={12} />
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
 

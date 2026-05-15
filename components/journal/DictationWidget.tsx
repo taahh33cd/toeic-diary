@@ -20,7 +20,7 @@ export async function DictationWidget() {
       <div className="flex items-baseline justify-between mb-3">
         <h2 className="text-base font-semibold tracking-tight">🎧 Luyện dictation</h2>
         <Link
-          href="/practice"
+          href="/"
           className="text-xs font-medium"
           style={{ color: "var(--accent-primary, #C4622D)" }}
         >

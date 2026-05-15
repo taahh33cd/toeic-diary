@@ -11,7 +11,7 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { href: "/series",  label: "Dictation",  emoji: "🎧" },
+  { href: "/",        label: "Dictation",  emoji: "🎧" },
   { href: "/journal", label: "Nhật ký",    emoji: "📖" },
   { href: "/admin",   label: "Quản lý",    emoji: "⚙️",  roles: ["teacher", "admin"] },
 ];

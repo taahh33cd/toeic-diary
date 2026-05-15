@@ -95,7 +95,12 @@
       "Bash(npx next *)",
       "Bash(vercel --version)",
       "Bash(git init *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git config *)",
+      "Bash(git commit *)",
+      "Bash(vercel --prod --yes)",
+      "Bash(node -e \"const p = require\\('./package.json'\\); console.log\\(JSON.stringify\\({scripts: p.scripts, prisma: p.prisma}, null, 2\\)\\)\")",
+      "PowerShell(Get-Content \"$env:APPDATA\\\\com.vercel.cli\\\\Data\\\\auth.json\" | ConvertFrom-Json | Select-Object -ExpandProperty token | ForEach-Object { $_.Substring\\(0, [Math]::Min\\(16, $_.Length\\)\\) + \"...\" })"
     ]
   }
 }

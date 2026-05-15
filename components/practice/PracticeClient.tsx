@@ -51,6 +51,7 @@ interface Props {
   lesson: LessonData;
   userId: string;
   progressByLevel: Record<number, LevelProgress>;
+  nextLessonUrl?: string | null;
 }
 
 // Part 1 & 2: Level 1 (2 blanks, DB) + Level 2 (full dictation)
@@ -69,7 +70,7 @@ const LEVEL_INFO_34 = [
 
 type ActiveLevel = 1 | 2 | 3 | 4;
 
-export function PracticeClient({ lesson, userId, progressByLevel }: Props) {
+export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl }: Props) {
   const isPart12 = lesson.partNumber === 1 || lesson.partNumber === 2;
   const LEVEL_INFO = isPart12 ? LEVEL_INFO_12 : LEVEL_INFO_34;
 
@@ -151,6 +152,7 @@ export function PracticeClient({ lesson, userId, progressByLevel }: Props) {
           correctOption={lesson.correctOption ?? null}
           explanation={lesson.explanation ?? null}
           startTime={startTime}
+          nextLessonUrl={nextLessonUrl}
           onScored={(s) => handleScored(1, s)}
         />
       )}
@@ -165,6 +167,7 @@ export function PracticeClient({ lesson, userId, progressByLevel }: Props) {
           explanation={lesson.explanation ?? null}
           startTime={startTime}
           dbLevel={2}
+          nextLessonUrl={nextLessonUrl}
           onScored={(s) => handleScored(2, s)}
         />
       )}

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PracticeClient } from "@/components/practice/PracticeClient";
+import { ensureMinBlanks } from "@/lib/generateBlanks";
 import { ChevronLeft } from "lucide-react";
 
 export default async function LessonPage({
@@ -47,6 +48,13 @@ export default async function LessonPage({
   });
   if (!testSet || lesson.part.testSetId !== testSet.id) notFound();
 
+  const nextLesson = await prisma.lesson.findFirst({
+    where: { partId: lesson.partId, orderIndex: { gt: lesson.orderIndex } },
+    orderBy: { orderIndex: "asc" },
+    select: { id: true },
+  });
+  const nextLessonUrl = nextLesson ? `/test/${slug}/${nextLesson.id}` : null;
+
   const progressRows = await prisma.userProgress.findMany({
     where: { userId: user.id, lessonId },
     select: { level: true, status: true, score: true, bestScore: true, attempts: true },
@@ -56,6 +64,26 @@ export default async function LessonPage({
   ) as Record<number, { status: string; score: number; bestScore: number; attempts: number }>;
 
   // Serialize for client
+  let sentences = lesson.sentences.map((s) => ({
+    id: s.id,
+    orderIndex: s.orderIndex,
+    content: s.content,
+    startTime: s.startTime,
+    endTime: s.endTime,
+    speaker: s.speaker,
+    optionLabel: s.optionLabel ?? null,
+    blanks: s.blanks.map((b) => ({
+      id: b.id,
+      position: b.position,
+      answer: b.answer,
+      hint: b.hint,
+    })),
+  }));
+
+  if (lesson.part.partNumber === 2) {
+    sentences = ensureMinBlanks(sentences, 2);
+  }
+
   const lessonData = {
     id: lesson.id,
     title: lesson.title,
@@ -67,21 +95,7 @@ export default async function LessonPage({
     partNumber: lesson.part.partNumber,
     correctOption: lesson.correctOption ?? null,
     explanation: lesson.explanation ?? null,
-    sentences: lesson.sentences.map((s) => ({
-      id: s.id,
-      orderIndex: s.orderIndex,
-      content: s.content,
-      startTime: s.startTime,
-      endTime: s.endTime,
-      speaker: s.speaker,
-      optionLabel: s.optionLabel ?? null,
-      blanks: s.blanks.map((b) => ({
-        id: b.id,
-        position: b.position,
-        answer: b.answer,
-        hint: b.hint,
-      })),
-    })),
+    sentences,
   };
 
   return (
@@ -118,6 +132,7 @@ export default async function LessonPage({
           lesson={lessonData}
           userId={user.id}
           progressByLevel={progressByLevel}
+          nextLessonUrl={nextLessonUrl}
         />
       </main>
 

@@ -21,10 +21,13 @@ export interface StudentModule {
   id: string;
   name: string;
   type: string;
-  status: "done" | "pending" | string;
+  status: "done" | "pending" | "current" | string;
+  week?: number;
+  weekName?: string;
 }
 
 export interface ScheduleItem {
+  id?: string;
   date: string;
   title: string;
   time?: string;
@@ -45,12 +48,46 @@ export interface ToeicScore {
   p7?: number;
 }
 
+export interface ErrorDetail {
+  content: string;
+  paraphrase?: string;
+  part?: string;
+  qNum?: string;
+  reviewed?: "yes" | "no";
+}
+
+export interface ListeningErrors {
+  distractor?: number;
+  miss_keyword?: number;
+  inference?: number;
+  no_read_q?: number;
+  paraphrase?: number;
+  graphic?: number;
+  new_word?: number;
+  speed?: number;
+  accent?: number;
+}
+
+export interface ReadingErrors {
+  vocabulary?: number;
+  grammar?: number;
+  text_logic?: number;
+  detail_error?: number;
+  inference_r?: number;
+  cross_ref?: number;
+  no_time?: number;
+}
+
 export interface ErrorLogEntry {
   date: string;
-  category: "Listening" | "Reading" | string;
-  errorType: string;
-  detail?: string;
-  testRef?: string;
+  testName?: string;
+  sessionType?: "full" | "part" | string;
+  savedAt?: string;
+  lsTotal?: number;
+  rdTotal?: number;
+  listening?: ListeningErrors;
+  reading?: ReadingErrors;
+  details?: ErrorDetail[];
 }
 
 export interface ParaphraseEntry {
@@ -76,22 +113,25 @@ export interface Student {
   schedule?: ScheduleItem[];
   errorLog?: Record<string, ErrorLogEntry>;
   paraphraseLog?: Record<string, ParaphraseEntry>;
-  // Added for new platform
   teacherId?: string;
+  courseType?: "group" | "per-session" | "package";
+  pricePerSession?: number;
+  totalFee?: number;
+  paidAmount?: number;
 }
 
 // ─── Vocab (path: vocab/{studentCode}/{wordId}) ───────────────────────────────
 
 export interface VocabWord {
-  id: string;         // key from Firebase (injected client-side)
+  id: string;
   word: string;
   part: number;       // 1–7
   addedDate: string;  // YYYY-MM-DD
   repCount: number;
   ipa?: string;
-  pos?: string;       // n / v / adj / adv / ...
+  pos?: string;
   def?: string;
-  vi?: string;        // Vietnamese translation
+  vi?: string;
   example?: string;
   audioUrl?: string;
   lastReview?: string;
@@ -101,10 +141,9 @@ export interface VocabWord {
 
 export interface DayLink {
   link: string;
-  submittedAt: string; // ISO
+  submittedAt: string;
 }
 
-// DayLinks map: hwId → DayLink
 export type DayLinksMap = Record<string, DayLink>;
 
 // ─── Submissions (path: submissions/{studentCode}/{key}) ─────────────────────
@@ -155,7 +194,7 @@ export interface Slot {
 // ─── Class (path: classes/{id}) ──────────────────────────────────────────────
 
 export interface ClassSession {
-  day: string;        // "Monday" | "Tuesday" | ...
+  day: string;
   time: string;
   room?: string;
 }
@@ -173,11 +212,9 @@ export interface SchoolClass {
 
 export type AttendanceStatus = "present" | "absent" | "late";
 
-// attendance[date] → status
 export type AttendanceMap = Record<string, AttendanceStatus>;
 
 // ─── Notification (path: notifications/{studentCode}/{timestamp}) ─────────────
-// Named FbNotification to avoid collision with browser built-in Notification API
 
 export interface FbNotification {
   type: string;

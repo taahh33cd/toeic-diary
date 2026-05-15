@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useClasses } from "@/hooks/firebase/useClasses";
 
 export default function ClassesPage() {
@@ -37,13 +38,15 @@ export default function ClassesPage() {
       ) : (
         <div className="space-y-3">
           {classes.map((cls) => (
-            <div
+            <Link
               key={cls.id}
-              className="rounded-xl p-4 border"
+              href={`/admin/classes/${cls.id}`}
+              className="block rounded-xl p-4 border hover:opacity-80 transition-opacity"
               style={{
                 background: "var(--bg-elevated)",
                 borderColor: "var(--border)",
                 boxShadow: "var(--shadow-sm)",
+                textDecoration: "none",
               }}
             >
               <div className="flex items-start justify-between gap-3">
@@ -77,7 +80,7 @@ export default function ClassesPage() {
                   )}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       )}

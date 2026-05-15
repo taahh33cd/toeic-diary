@@ -9,7 +9,12 @@ const globalForPrisma = globalThis as unknown as {
 function createPrismaClient() {
   const pool = new pg.Pool({
     connectionString: process.env.DATABASE_URL!,
-    max: 1, // limit connections per serverless instance
+    max: 5,                        // allow parallel server component queries
+    idleTimeoutMillis: 10_000,     // release stale connections on warm Lambda
+    connectionTimeoutMillis: 10_000,
+  });
+  pool.on("error", (err) => {
+    console.error("[pg pool error]", err.message);
   });
   const adapter = new PrismaPg(pool);
   return new PrismaClient({ adapter });

@@ -4,7 +4,6 @@ import {
   update,
   remove,
   get,
-  push,
 } from "firebase/database";
 import { firebaseDb } from "./client";
 import type {
@@ -19,6 +18,12 @@ import type {
   VocabWord,
   AttendanceStatus,
   FbNotification,
+  StudentModule,
+  ScheduleItem,
+  SchoolClass,
+  ErrorLogEntry,
+  ErrorDetail,
+  ParaphraseEntry,
 } from "./types";
 
 // ─── Students ────────────────────────────────────────────────────────────────
@@ -91,6 +96,31 @@ export async function pushHomework(
   const snap = await get(ref(firebaseDb, `students/${code}/homework`));
   const existing: Homework[] = snap.val() ?? [];
   await set(ref(firebaseDb, `students/${code}/homework`), [...existing, hw]);
+}
+
+export async function updateHomework(
+  code: string,
+  hwId: string,
+  hw: Homework
+): Promise<void> {
+  const snap = await get(ref(firebaseDb, `students/${code}/homework`));
+  const existing: Homework[] = snap.val() ?? [];
+  await set(
+    ref(firebaseDb, `students/${code}/homework`),
+    existing.map((h) => h.id === hwId ? hw : h)
+  );
+}
+
+export async function deleteHomework(
+  code: string,
+  hwId: string
+): Promise<void> {
+  const snap = await get(ref(firebaseDb, `students/${code}/homework`));
+  const existing: Homework[] = snap.val() ?? [];
+  await set(
+    ref(firebaseDb, `students/${code}/homework`),
+    existing.filter((h) => h.id !== hwId)
+  );
 }
 
 // ─── Day Links ───────────────────────────────────────────────────────────────
@@ -191,9 +221,13 @@ export async function setGoal(code: string, goal: Goal): Promise<void> {
 export async function setAttendance(
   code: string,
   date: string,
-  status: AttendanceStatus
+  status: AttendanceStatus | null
 ): Promise<void> {
-  await set(ref(firebaseDb, `attendance/${code}/${date}`), status);
+  if (status === null) {
+    await remove(ref(firebaseDb, `attendance/${code}/${date}`));
+  } else {
+    await set(ref(firebaseDb, `attendance/${code}/${date}`), status);
+  }
 }
 
 // ─── Notifications ────────────────────────────────────────────────────────────
@@ -215,4 +249,230 @@ export async function markNotificationRead(
   key: string
 ): Promise<void> {
   await set(ref(firebaseDb, `notifications/${code}/${key}/read`), true);
+}
+
+// ─── Comments ────────────────────────────────────────────────────────────────
+
+export async function pushComment(
+  code: string,
+  text: string
+): Promise<void> {
+  const now = Date.now();
+  const commentKey = `c${now}`;
+  const notifKey = `${now}_${Math.random().toString(36).slice(2, 5)}`;
+  await update(ref(firebaseDb), {
+    [`students/${code}/comments/${commentKey}`]: { text, ts: now },
+    [`notifications/${code}/${notifKey}`]: {
+      type: "comment",
+      title: "Thầy Hiếu đã nhận xét",
+      body: text.slice(0, 120),
+      read: false,
+      createdAt: new Date().toISOString(),
+    },
+  });
+}
+
+// ─── Modules ─────────────────────────────────────────────────────────────────
+
+export async function addModule(
+  code: string,
+  module: StudentModule
+): Promise<void> {
+  const snap = await get(ref(firebaseDb, `students/${code}/modules`));
+  const existing: StudentModule[] = snap.val() ?? [];
+  await set(ref(firebaseDb, `students/${code}/modules`), [...existing, module]);
+}
+
+export async function updateModuleStatus(
+  code: string,
+  moduleId: string,
+  status: string
+): Promise<void> {
+  const snap = await get(ref(firebaseDb, `students/${code}/modules`));
+  const existing: StudentModule[] = snap.val() ?? [];
+  const updated = existing.map((m) => m.id === moduleId ? { ...m, status } : m);
+  await set(ref(firebaseDb, `students/${code}/modules`), updated);
+}
+
+export async function deleteModule(
+  code: string,
+  moduleId: string
+): Promise<void> {
+  const snap = await get(ref(firebaseDb, `students/${code}/modules`));
+  const existing: StudentModule[] = snap.val() ?? [];
+  await set(
+    ref(firebaseDb, `students/${code}/modules`),
+    existing.filter((m) => m.id !== moduleId)
+  );
+}
+
+// ─── Schedule ────────────────────────────────────────────────────────────────
+
+export async function addScheduleItem(
+  code: string,
+  item: ScheduleItem
+): Promise<void> {
+  const snap = await get(ref(firebaseDb, `students/${code}/schedule`));
+  const existing: ScheduleItem[] = snap.val() ?? [];
+  const sorted = [...existing, item].sort((a, b) => a.date.localeCompare(b.date));
+  await set(ref(firebaseDb, `students/${code}/schedule`), sorted);
+}
+
+export async function deleteScheduleItem(
+  code: string,
+  itemId: string
+): Promise<void> {
+  const snap = await get(ref(firebaseDb, `students/${code}/schedule`));
+  const existing: ScheduleItem[] = snap.val() ?? [];
+  await set(
+    ref(firebaseDb, `students/${code}/schedule`),
+    existing.filter((s) => s.id !== itemId)
+  );
+}
+
+// ─── Classes ─────────────────────────────────────────────────────────────────
+
+export async function updateClass(
+  id: string,
+  partial: Partial<SchoolClass>
+): Promise<void> {
+  await update(ref(firebaseDb, `classes/${id}`), partial);
+}
+
+export async function pushClassHomework(
+  id: string,
+  hw: Homework
+): Promise<void> {
+  const snap = await get(ref(firebaseDb, `classes/${id}/homework`));
+  const existing: Homework[] = snap.val() ?? [];
+  await set(ref(firebaseDb, `classes/${id}/homework`), [...existing, hw]);
+}
+
+export async function updateClassHomework(
+  id: string,
+  hwId: string,
+  hw: Homework
+): Promise<void> {
+  const snap = await get(ref(firebaseDb, `classes/${id}/homework`));
+  const existing: Homework[] = snap.val() ?? [];
+  await set(
+    ref(firebaseDb, `classes/${id}/homework`),
+    existing.map((h) => h.id === hwId ? hw : h)
+  );
+}
+
+export async function deleteClassHomework(
+  id: string,
+  hwId: string
+): Promise<void> {
+  const snap = await get(ref(firebaseDb, `classes/${id}/homework`));
+  const existing: Homework[] = snap.val() ?? [];
+  await set(
+    ref(firebaseDb, `classes/${id}/homework`),
+    existing.filter((h) => h.id !== hwId)
+  );
+}
+
+export async function addClassMember(
+  id: string,
+  studentCode: string
+): Promise<void> {
+  const snap = await get(ref(firebaseDb, `classes/${id}/members`));
+  const existing: string[] = snap.val() ?? [];
+  if (!existing.includes(studentCode)) {
+    await set(ref(firebaseDb, `classes/${id}/members`), [...existing, studentCode]);
+  }
+}
+
+export async function removeClassMember(
+  id: string,
+  studentCode: string
+): Promise<void> {
+  const snap = await get(ref(firebaseDb, `classes/${id}/members`));
+  const existing: string[] = snap.val() ?? [];
+  await set(
+    ref(firebaseDb, `classes/${id}/members`),
+    existing.filter((c) => c !== studentCode)
+  );
+}
+
+// ─── Error Log (path: students/{code}/errorLog/{sessionKey}) ─────────────────
+
+export async function addErrorEntry(
+  code: string,
+  entry: Omit<ErrorLogEntry, "savedAt"> & { date?: string }
+): Promise<string> {
+  const key = `${Date.now()}`;
+  const { date: entryDate, ...rest } = entry;
+  const data: ErrorLogEntry = {
+    date: entryDate ?? new Date().toISOString().slice(0, 10),
+    savedAt: new Date().toISOString(),
+    ...rest,
+  };
+  await set(ref(firebaseDb, `students/${code}/errorLog/${key}`), data);
+  return key;
+}
+
+export async function deleteErrorEntry(
+  code: string,
+  key: string
+): Promise<void> {
+  await remove(ref(firebaseDb, `students/${code}/errorLog/${key}`));
+}
+
+export async function markDetailReviewed(
+  code: string,
+  sessionKey: string,
+  detailIndex: number
+): Promise<void> {
+  await set(
+    ref(firebaseDb, `students/${code}/errorLog/${sessionKey}/details/${detailIndex}/reviewed`),
+    "yes"
+  );
+}
+
+export async function updateErrorDetail(
+  code: string,
+  sessionKey: string,
+  detailIndex: number,
+  patch: Partial<ErrorDetail>
+): Promise<void> {
+  await update(
+    ref(firebaseDb, `students/${code}/errorLog/${sessionKey}/details/${detailIndex}`),
+    patch
+  );
+}
+
+// ─── Paraphrase Log (path: students/{code}/paraphraseLog/{key}) ──────────────
+
+export async function addParaphraseEntry(
+  code: string,
+  entry: Pick<ParaphraseEntry, "source" | "target" | "part">
+): Promise<string> {
+  const key = `pr${Date.now()}`;
+  const data: ParaphraseEntry = {
+    ...entry,
+    addedDate: new Date().toISOString().slice(0, 10),
+    repCount: 0,
+  };
+  await set(ref(firebaseDb, `students/${code}/paraphraseLog/${key}`), data);
+  return key;
+}
+
+export async function reviewParaphraseEntry(
+  code: string,
+  key: string,
+  repCount: number
+): Promise<void> {
+  await update(ref(firebaseDb, `students/${code}/paraphraseLog/${key}`), {
+    repCount: repCount + 1,
+    lastReview: new Date().toISOString().slice(0, 10),
+  });
+}
+
+export async function deleteParaphraseEntry(
+  code: string,
+  key: string
+): Promise<void> {
+  await remove(ref(firebaseDb, `students/${code}/paraphraseLog/${key}`));
 }

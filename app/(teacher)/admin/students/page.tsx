@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useAllStudents } from "@/hooks/firebase/useAllStudents";
 import { setStudentFrozen, setStudentNote } from "@/lib/firebase/helpers";
 
@@ -288,7 +289,8 @@ export default function StudentsPage() {
                   }}
                 >
                   <div className="flex items-start gap-3 flex-wrap">
-                    {/* Info */}
+                    {/* Info — click to open editor */}
+                    <Link href={`/admin/students/${student.id}`} className="flex-1 min-w-0 no-underline hover:opacity-80">
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>
@@ -369,6 +371,7 @@ export default function StudentsPage() {
                         </p>
                       ) : null}
                     </div>
+                    </Link>
 
                     {/* Actions */}
                     <div className="flex gap-2 flex-wrap shrink-0">

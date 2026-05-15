@@ -7,6 +7,8 @@ interface BrandProps {
   href?: string;
   /** Extra className on wrapper */
   className?: string;
+  /** Override the wordmark text (e.g. personalised journal title) */
+  label?: string;
 }
 
 const sizes = {
@@ -19,14 +21,14 @@ const sizes = {
  * Brand logo — "Anh Hiếu²"
  * Uses warm beige / terracotta palette that works on all 3 themes.
  */
-export function Brand({ size = "md", href = "/", className = "" }: BrandProps) {
+export function Brand({ size = "md", href = "/", className = "", label }: BrandProps) {
   const s = sizes[size];
 
   return (
     <Link
       href={href}
       className={`inline-flex items-center ${s.gap} no-underline group ${className}`}
-      aria-label="mytoeicdiary — Anh Hiếu²"
+      aria-label={label ?? "mytoeicdiary — Anh Hiếu²"}
     >
       {/* Icon badge */}
       <span
@@ -42,18 +44,27 @@ export function Brand({ size = "md", href = "/", className = "" }: BrandProps) {
       </span>
 
       {/* Word mark */}
-      <span
-        className={`${s.text} font-bold leading-none tracking-tight`}
-        style={{ color: "var(--text-primary, #2C1E0F)" }}
-      >
-        Anh Hiếu
-        <sup
-          className={`${s.sup} font-bold ml-0.5 align-super`}
-          style={{ color: "#C4622D" }}
+      {label ? (
+        <span
+          className={`${s.text} font-bold leading-none tracking-tight`}
+          style={{ color: "var(--text-primary, #2C1E0F)" }}
         >
-          ²
-        </sup>
-      </span>
+          {label}
+        </span>
+      ) : (
+        <span
+          className={`${s.text} font-bold leading-none tracking-tight`}
+          style={{ color: "var(--text-primary, #2C1E0F)" }}
+        >
+          Anh Hiếu
+          <sup
+            className={`${s.sup} font-bold ml-0.5 align-super`}
+            style={{ color: "#C4622D" }}
+          >
+            ²
+          </sup>
+        </span>
+      )}
     </Link>
   );
 }

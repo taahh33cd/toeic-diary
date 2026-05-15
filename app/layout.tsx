@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, JetBrains_Mono, Syne } from "next/font/google";
+import { DM_Sans, JetBrains_Mono, Syne, Lora, Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
 import { FirebaseBridgeProvider } from "@/components/shared/FirebaseBridgeProvider";
 import { ToastProvider } from "@/components/shared/Toast";
@@ -26,6 +26,23 @@ const syne = Syne({
   variable: "--font-syne",
   display: "swap",
   weight: ["400", "500", "600", "700", "800"],
+});
+
+// ── Journal fonts (warm beige theme — matches STUDENT.html) ──────────────────
+const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-lora",
+  display: "swap",
+  weight: ["400", "600", "700"],
+  style: ["normal", "italic"],
+});
+
+const beVietnamPro = Be_Vietnam_Pro({
+  subsets: ["latin", "vietnamese"],
+  variable: "--font-be-vietnam",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 // ── Metadata ──────────────────────────────────────
@@ -80,7 +97,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${dmSans.variable} ${jetbrainsMono.variable} ${syne.variable}`}
+        className={`${dmSans.variable} ${jetbrainsMono.variable} ${syne.variable} ${lora.variable} ${beVietnamPro.variable}`}
         suppressHydrationWarning
       >
         <FirebaseBridgeProvider />

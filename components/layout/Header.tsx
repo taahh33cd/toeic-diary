@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { BookOpen, Moon, Sun, LogOut, User, BarChart2 } from "lucide-react";
+import { BookOpen, Moon, Sun, LogOut, BarChart2, NotebookPen, Headphones } from "lucide-react";
 import { useUIStore } from "@/stores/uiStore";
 import { createClient } from "@/lib/supabase/client";
 import { cn } from "@/lib/utils/cn";
@@ -44,7 +44,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
   const handleSignOut = async () => {
     const supabase = createClient();
     await supabase.auth.signOut();
-    router.push("/login");
+    router.push("/auth/login");
     router.refresh();
   };
 
@@ -68,13 +68,21 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
 
         {/* Nav links */}
         <nav className={styles.nav}>
-          <Link href="/vocabulary" className={styles.navLink}>
+          <Link href="/practice" className={styles.navLink}>
+            <Headphones size={16} />
+            <span>Luyện tập theo Part</span>
+          </Link>
+          <Link href="/journal/vocab" className={styles.navLink}>
             <BookOpen size={16} />
             <span>Từ vựng</span>
           </Link>
           <Link href="/progress" className={styles.navLink}>
             <BarChart2 size={16} />
             <span>Tiến độ</span>
+          </Link>
+          <Link href="/journal" className={styles.navLink}>
+            <NotebookPen size={16} />
+            <span>Nhật ký</span>
           </Link>
         </nav>
 
@@ -112,6 +120,15 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
                   </div>
                   <div className={styles.dropdownDivider} role="separator" />
                   <Link
+                    href="/practice"
+                    className={styles.dropdownItem}
+                    role="menuitem"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <Headphones size={15} aria-hidden="true" />
+                    Luyện tập theo Part
+                  </Link>
+                  <Link
                     href="/progress"
                     className={styles.dropdownItem}
                     role="menuitem"
@@ -121,13 +138,22 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
                     Tiến độ học tập
                   </Link>
                   <Link
-                    href="/vocabulary"
+                    href="/journal/vocab"
                     className={styles.dropdownItem}
                     role="menuitem"
                     onClick={() => setMenuOpen(false)}
                   >
                     <BookOpen size={15} aria-hidden="true" />
                     Từ vựng đã lưu
+                  </Link>
+                  <Link
+                    href="/journal"
+                    className={styles.dropdownItem}
+                    role="menuitem"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <NotebookPen size={15} aria-hidden="true" />
+                    Nhật ký học tập
                   </Link>
                   <div className={styles.dropdownDivider} role="separator" />
                   <button

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { RotateCcw, SkipForward, Play, Pause, CheckCircle2, XCircle } from "lucide-react";
+import { RotateCcw, SkipForward, Play, Pause, CheckCircle2, XCircle, ArrowRight } from "lucide-react";
 import { saveProgress } from "@/app/actions/saveProgress";
 import { getTimeSpent } from "@/stores/practiceStore";
 import { Part2Result } from "./Part2Result";
@@ -32,6 +32,7 @@ interface Props {
   correctOption: string | null;
   explanation: string | null;
   startTime: number | null;
+  nextLessonUrl?: string | null;
   onScored: (score: number) => void;
 }
 
@@ -54,7 +55,7 @@ function fmt(s: number) {
   return `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
 }
 
-export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, onScored }: Props) {
+export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, nextLessonUrl, onScored }: Props) {
   const isPart2 = partNumber === 2;
   const blankSentences = sentences.filter((s) => s.blanks.length > 0);
 
@@ -199,6 +200,30 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
     audio.currentTime = seekTo;
     audio.play().catch(() => {});
     setIsPlaying(true);
+  }
+
+  // For standalone audio (endTime=0): handle auto-replay via onEnded event
+  function handleEnded() {
+    const audio = audioRef.current;
+    if (!audio || !activeSentence) return;
+    // Segments with endTime > 0 are handled by handleTimeUpdate; onEnded just cleans up
+    if (activeSentence.endTime > 0) {
+      setIsPlaying(false);
+      return;
+    }
+    if (activeSentence.blanks.length === 0) return;
+    const state = replayStateRef.current;
+    if (state.sentenceId !== activeSentence.id) return;
+    if (state.count < MAX_REPLAY - 1) {
+      state.count += 1;
+      setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: state.count }));
+      audio.currentTime = 0;
+      audio.play().catch(() => {});
+    } else {
+      state.count = MAX_REPLAY;
+      setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: MAX_REPLAY }));
+      setIsPlaying(false);
+    }
   }
 
   function handleSeek(e: React.MouseEvent<HTMLDivElement>) {
@@ -358,7 +383,12 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
               if (e.key === " ") e.preventDefault();
             }}
             disabled={submitted || isCorrect || bs?.confirmed}
-            placeholder={blank.hint ?? "___"}
+            placeholder={(() => {
+              // Recompute hint length from clean answer to exclude punctuation
+              const cleanAnswer = blank.answer.replace(/[^a-z0-9']/g, "");
+              const letter = blank.hint?.[0] ?? cleanAnswer[0] ?? "_";
+              return letter + "_".repeat(Math.max(1, cleanAnswer.length - 1));
+            })()}
             className={`
               h-11 px-2 text-xl text-center rounded-xl border-2 font-mono outline-none transition-all
               ${isCorrect ? "border-emerald-400 bg-emerald-500/10 text-emerald-400" : ""}
@@ -366,7 +396,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
               ${isWrong && bs?.confirmed ? "border-red-400/40 bg-red-500/5 text-red-400/60" : ""}
               ${!isCorrect && !isWrong ? "border-[var(--accent-primary)]/40 bg-[var(--bg-secondary)] text-[var(--text-primary)] focus:border-[var(--accent-primary)] focus:bg-[var(--bg-primary)]" : ""}
             `}
-            style={{ width: `${Math.max(5, (blank.hint ?? blank.answer).length + 3)}ch` }}
+            style={{ width: `${Math.max(5, blank.answer.replace(/[^a-z0-9']/g, "").length + 3)}ch` }}
           />
           {/* Show correct answer below on wrong */}
           {isWrong && !bs?.confirmed && (
@@ -411,6 +441,14 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
             </button>
           </div>
         )}
+        {nextLessonUrl && (
+          <button
+            onClick={() => { window.location.href = nextLessonUrl; }}
+            className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-medium bg-[var(--accent-primary)] text-white hover:opacity-90 transition-opacity mt-2"
+          >
+            Câu tiếp theo <ArrowRight size={15} />
+          </button>
+        )}
       </div>
     );
   }
@@ -430,7 +468,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
           onTimeUpdate={handleTimeUpdate}
           onPlay={() => setIsPlaying(true)}
           onPause={() => setIsPlaying(false)}
-          onEnded={() => setIsPlaying(false)}
+          onEnded={handleEnded}
         />
 
         {/* Play/Pause */}

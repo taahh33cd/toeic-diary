@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { RotateCcw, SkipForward, Play, Pause, Eye, CheckCircle2, XCircle } from "lucide-react";
+import { RotateCcw, SkipForward, Play, Pause, Eye, CheckCircle2, XCircle, ArrowRight } from "lucide-react";
 import { saveProgress } from "@/app/actions/saveProgress";
 import { getTimeSpent } from "@/stores/practiceStore";
 import { Part2Result } from "./Part2Result";
@@ -26,6 +26,7 @@ interface Props {
   explanation: string | null;
   startTime: number | null;
   dbLevel?: number; // DB level to save as (defaults to 3)
+  nextLessonUrl?: string | null;
   onScored: (score: number) => void;
 }
 
@@ -79,7 +80,7 @@ function countCorrectWords(wordResults: WordResult[]): number {
   return wordResults.filter((w) => w.correct).length;
 }
 
-export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, dbLevel = 3, onScored }: Props) {
+export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, dbLevel = 3, nextLessonUrl, onScored }: Props) {
   const isPart2 = partNumber === 2;
   const [activeIdx, setActiveIdx] = useState(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -363,6 +364,14 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
             <div className="flex items-center gap-2 text-orange-400 font-medium"><XCircle size={18} />Chưa đạt — cần luyện thêm</div>
             <button onClick={() => window.location.reload()} className="btn-secondary px-8 py-2 rounded-xl text-sm">Thử lại</button>
           </div>
+        )}
+        {nextLessonUrl && (
+          <button
+            onClick={() => { window.location.href = nextLessonUrl; }}
+            className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-medium bg-[var(--accent-primary)] text-white hover:opacity-90 transition-opacity mt-2"
+          >
+            Câu tiếp theo <ArrowRight size={15} />
+          </button>
         )}
       </div>
     );
