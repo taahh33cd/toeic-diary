@@ -1,0 +1,4 @@
+(A) A man is repairing a railing.
+(B) A man is climbing some stairs.
+(C) A man is carrying a ladder.
+(D) A man is looking up at a roof.

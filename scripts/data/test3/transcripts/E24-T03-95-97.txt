@@ -1,0 +1,4 @@
+Hi. This is Emily calling from Speedy Services. I'm picking you up from the central train station today. I see you selected a pickup location near the ticket windows, but there's heavy traffic on that street. Would it be possible to change your pickup location to right outside the station's grand concourse? It's the designated area for rideshare services. Please let me know if you agree with this change by responding to the prompt within the app. Thanks!
+95. Who most likely is the speaker?
+96. Where does the speaker want to meet?
+97. How can a change be confirmed?

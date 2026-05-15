@@ -1,0 +1,6 @@
+Are you applying for the manager position?
+(A) About sixteen more employees.
+(B) I'll check her schedule again.
+(C) Yes... I hope I get it.
+
+Answer: C

@@ -1,0 +1,6 @@
+What kind of view does your apartment have?
+(A) The kitchen lighting is wonderful.
+(B) I haven't signed the lease yet.
+(C) I completely agree with you on that point.
+
+Answer: B

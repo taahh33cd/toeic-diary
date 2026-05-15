@@ -1,0 +1,6 @@
+Would you ask Tae-Joon to help set up the product display?
+(A) Several kinds of headsets.
+(B) No, I can do it myself.
+(C) I can't see the bottom line of the chart.
+
+Answer: B

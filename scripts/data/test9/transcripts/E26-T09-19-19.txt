@@ -1,6 +1,0 @@
-Did you put the brochures in the lobby?
-(A) The conference center is on Walnut Avenue.
-(B) Do you have a reservation?
-(C) Yes, I left them at the front desk.
-
-Answer: C

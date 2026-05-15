@@ -1,0 +1,6 @@
+What did you do for Mr. Sugiyama's retirement party?
+(A) I helped decorate the room.
+(B) He's not tired.
+(C) Try the file cabinet.
+
+Answer: A

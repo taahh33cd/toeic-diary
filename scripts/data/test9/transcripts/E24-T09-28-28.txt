@@ -1,0 +1,6 @@
+Has Jacob come into the office today?
+(A) His briefcase is on his desk.
+(B) Yes, it is a nice office.
+(C) I can come in for just a minute.
+
+Answer: A

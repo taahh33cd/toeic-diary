@@ -1,6 +1,0 @@
-You already bought a new part for the sprinkler system, right?
-(A) Check the weather forecast.
-(B) Yes, I did that last week.
-(C) That flight departs soon.
-
-Answer: B

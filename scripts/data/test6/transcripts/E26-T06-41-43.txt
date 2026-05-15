@@ -1,8 +1,0 @@
-M1: Hello. I'm looking for a book that's listed in your library's catalog, but I can't find it on the shelves. Could you help me?
-W: Sorry, I'm helping another patron on the phone right now. Let me get one of my coworkers for you.
-M2: Hi. How can I help you?
-M1: I'm looking for a book about abstract art called Night Canvases.
-M2: Oh! We just received several copies of that, but they're still packed in the box. If you come back tomorrow, they'll be ready to borrow.
-41. Where most likely are the speakers?
-42. Why is the woman unable to help?
-43. Why is an item unavailable?

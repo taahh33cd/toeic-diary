@@ -1,0 +1,6 @@
+Is your car expensive to repair?
+(A) The largest model available.
+(B) Only a few more times.
+(C) It's been running perfectly since I bought it.
+
+Answer: C

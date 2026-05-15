@@ -1,0 +1,6 @@
+How many tickets do we need for tonight's concert?
+(A) The theater is on Johnson Avenue.
+(B) At seven thirty sharp.
+(C) I'll buy mine at the door.
+
+Answer: C

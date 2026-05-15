@@ -1,4 +1,0 @@
-(A) Some ships are moving under a bridge.
-(B) Some boats are docked near a shore.
-(C) A ferryboat is traveling through a marina.
-(D) There are buildings along the side of a street.

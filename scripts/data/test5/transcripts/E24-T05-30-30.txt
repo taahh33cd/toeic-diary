@@ -1,0 +1,6 @@
+Should we meet at the department store on Fifth Street or the one on Grover Lane?
+(A) Let's ask Patricia first.
+(B) No, I don't mind.
+(C) How much does it cost?
+
+Answer: A

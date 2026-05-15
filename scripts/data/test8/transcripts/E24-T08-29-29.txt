@@ -1,0 +1,6 @@
+How long will we have to wait for a taxi to arrive?
+(A) About twelve kilometers.
+(B) No, I don't think so.
+(C) Would you prefer to walk?
+
+Answer: C

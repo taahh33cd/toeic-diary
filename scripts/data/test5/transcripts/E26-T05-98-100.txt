@@ -1,4 +1,0 @@
-In today's meeting, we'll discuss where we are in our software development process for Universal Banking. In-depth user research will help us create a better online banking application. Sarai will start by telling us about her research into Universal Banking's target customers. What features do they need in a banking app, and how comfortable are they with technology? But before Sarai begins her presentation, let me remind you that as summer begins next week, so do summer hours. You'll be able to stop working at 2:00 o'clock on Friday afternoons, so we'll be moving our regular meeting to Friday mornings.
-98. What industry is the mobile app intended for?
-99. Look at the graphic. Which stage of market research will Sarai talk about?
-100. What will begin next Friday?

@@ -1,6 +1,0 @@
-Would you like me to check the price on that item?
-(A) A couple of bowls.
-(B) I hadn't noticed.
-(C) Yes, thank you.
-
-Answer: C

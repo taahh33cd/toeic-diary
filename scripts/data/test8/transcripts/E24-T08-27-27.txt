@@ -1,0 +1,6 @@
+Have you trained Hikaru to use the new microscope?
+(A) I have my own car.
+(B) That's enough, thanks.
+(C) I misplaced the instruction manual.
+
+Answer: C

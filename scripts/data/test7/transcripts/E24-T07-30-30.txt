@@ -1,0 +1,6 @@
+Wasn't there a parking lot on this street?
+(A) Yes, but it was torn down.
+(B) You can hang your keys on this hook.
+(C) My car has a flat tire.
+
+Answer: A

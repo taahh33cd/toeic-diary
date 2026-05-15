@@ -1,0 +1,6 @@
+Could you please look up the location on your phone?
+(A) Here's my phone number.
+(B) OK, one moment.
+(C) The weather is nice right now.
+
+Answer: B

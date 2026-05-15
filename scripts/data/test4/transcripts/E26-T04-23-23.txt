@@ -1,6 +1,0 @@
-Are you installing the new software on Monday or Tuesday?
-(A) Thanks, but they already have one.
-(B) I'll be out of the office all week.
-(C) It was an older model laptop.
-
-Answer: B

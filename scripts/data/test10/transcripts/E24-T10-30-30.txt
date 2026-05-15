@@ -1,0 +1,6 @@
+Are you going to send a report or give a presentation to our clients?
+(A) We enjoyed their talk.
+(B) I'll probably do both.
+(C) Twenty people attended.
+
+Answer: B

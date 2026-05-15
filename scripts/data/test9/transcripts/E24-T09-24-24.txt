@@ -1,0 +1,6 @@
+The taxi has finally arrived.
+(A) Oh, did it get stuck in traffic?
+(B) Thanks, but I already have some.
+(C) It's their final offer.
+
+Answer: A

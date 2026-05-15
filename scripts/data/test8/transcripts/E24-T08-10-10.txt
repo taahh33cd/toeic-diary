@@ -1,0 +1,6 @@
+What do you think I should take to the conference?
+(A) In the lobby.
+(B) Just your laptop.
+(C) A three o'clock shift.
+
+Answer: B

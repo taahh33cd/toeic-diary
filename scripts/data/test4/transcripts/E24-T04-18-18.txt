@@ -1,0 +1,6 @@
+Do you have this jacket in a larger size?
+(A) Oh, I'm not a sales associate.
+(B) I've read the information packet.
+(C) A very large uniform.
+
+Answer: A

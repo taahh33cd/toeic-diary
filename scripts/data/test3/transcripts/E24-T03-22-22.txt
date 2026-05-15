@@ -1,0 +1,6 @@
+Who will lead the new-employee training today?
+(A) We're using a recorded video.
+(B) Yes, right after lunch.
+(C) Classroom 124.
+
+Answer: A

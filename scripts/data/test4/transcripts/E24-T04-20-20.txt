@@ -1,0 +1,6 @@
+Should I bring anything to the meeting?
+(A) Probably in the conference room.
+(B) They were hired by our manager.
+(C) Do we have enough handouts?
+
+Answer: C

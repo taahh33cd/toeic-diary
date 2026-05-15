@@ -1,0 +1,6 @@
+Could you change my haircut appointment to Monday?
+(A) No, we're fully booked that day.
+(B) I'll open the window for some fresh air.
+(C) The grass needs to be mowed.
+
+Answer: A

@@ -1,0 +1,6 @@
+There's a nice place to rent on Mercer Street.
+(A) I just renewed my current lease.
+(B) It was a great show.
+(C) A standard rental application.
+
+Answer: A

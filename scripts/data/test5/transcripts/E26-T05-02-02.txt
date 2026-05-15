@@ -1,4 +1,0 @@
-(A) A worker is painting lines on the floor.
-(B) A worker is using a machine to move some boxes.
-(C) A worker is sealing some packages.
-(D) A worker is repairing a motor.

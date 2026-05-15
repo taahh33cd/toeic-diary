@@ -1,0 +1,6 @@
+What was the highlight of your visit to the city this weekend?
+(A) Definitely the art museum!
+(B) Sorry, I already have plans.
+(C) Yes, the guidebook was helpful.
+
+Answer: A

@@ -1,0 +1,4 @@
+(A) One of the workers is opening a display case.
+(B) One of the workers is tying a necktie.
+(C) The workers are behind a counter.
+(D) The workers are greeting some customers.

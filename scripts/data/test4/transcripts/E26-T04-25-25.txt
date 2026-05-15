@@ -1,6 +1,0 @@
-You're offering discounts to students, right?
-(A) No, that's not my wallet.
-(B) You'll need valid identification.
-(C) I'm doing inventory this weekend.
-
-Answer: B

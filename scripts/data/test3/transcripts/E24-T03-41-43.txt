@@ -1,0 +1,7 @@
+M-Cn: Excuse me. I'm trying to catch a train from this platform, but I've been waiting, and no train has arrived.
+W-Br: Oh, yes. Unfortunately, some tracks are being repaired, so no trains are departing from this platform.
+M-Cn: I see. I had no idea this was happening. And I'm upset that now I'm late for an appointment.
+W-Br: Well, they're providing free bus service to the next few stations. You can catch a shuttle bus from the south side of the station.
+41. Why is a train platform closed?
+42. What does the man say he is upset about?
+43. What will the man most likely do next?

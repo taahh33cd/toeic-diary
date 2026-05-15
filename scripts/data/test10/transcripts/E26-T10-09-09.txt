@@ -1,6 +1,0 @@
-Do you want to review the report together, or on your own?
-(A) No, I don't need any more copies.
-(B) I'd prefer to look it over myself.
-(C) A fifteen-page document.
-
-Answer: B

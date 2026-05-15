@@ -1,0 +1,6 @@
+Which airline are you planning on using?
+(A) The usual one.
+(B) A one-way ticket.
+(C) Yes, you can use mine.
+
+Answer: A

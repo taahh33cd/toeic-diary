@@ -1,0 +1,6 @@
+Was your new laptop expensive?
+(A) Do you have a new password?
+(B) I had a discount coupon.
+(C) On top of the cabinet.
+
+Answer: B

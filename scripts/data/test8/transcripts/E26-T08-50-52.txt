@@ -1,8 +1,0 @@
-W1: Hi, my name is Kelly Stewart. I really love your restaurant's outdoor dining area. I'd like to reserve the patio for a party of twenty-five next Thursday evening.
-W2: Hi, Ms. Stewart. I'm Sakura. Unfortunately, I believe another large group reserved the patio for Thursday. Let me quickly check with the manager. Manager Gomez? Do we have a group reservation for the patio this Thursday evening?
-M: Actually, that group changed their reservation to Wednesday.
-W1: Great! Is there a special menu for large groups?
-M: We offer a special menu for large groups that charges a flat rate per person. Let me go get that for you. Sakura, can you take down the customer's reservation details?
-50. What does Ms. Stewart like about a restaurant?
-51. What problem does Sakura mention?
-52. What will the man do next?

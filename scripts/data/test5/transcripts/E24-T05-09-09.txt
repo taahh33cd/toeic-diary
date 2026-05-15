@@ -1,0 +1,6 @@
+Do you prefer writing in the morning or the afternoon?
+(A) My publisher requested edits.
+(B) Thanks for providing a solution.
+(C) Mornings are usually better for me.
+
+Answer: C

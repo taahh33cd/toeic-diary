@@ -1,6 +1,0 @@
-Are you getting the same type of desk or a different one?
-(A) It's conveniently located.
-(B) I can pick it up for you.
-(C) The same type.
-
-Answer: C

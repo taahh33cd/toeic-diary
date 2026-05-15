@@ -1,0 +1,1569 @@
+{
+  "testName": "Câu hỏi đuôi – Câu trần thuật",
+  "testSlug": "part2-tag-statement",
+  "orderIndex": 0,
+  "examCode": "P2",
+  "testCode": "part2-tag-statement",
+  "lessons": [
+    {
+      "title": "Question 1",
+      "questionStart": 1,
+      "questionEnd": 1,
+      "part": 2,
+      "transcriptFull": "That jacket is too small, isn't it?\n(A) It's rather cold today.\n(B) Yes, it's a little tight.\n(C) Cash or credit?",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q01.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q01.mp3",
+      "audioDuration": 18.050625,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "That jacket is too small, isn't it?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "It's rather cold today.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Yes, it's a little tight.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Cash or credit?",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 2",
+      "questionStart": 2,
+      "questionEnd": 2,
+      "part": 2,
+      "transcriptFull": "You're going to the office picnic, aren't you?\n(A) Ms. Cho, the head of marketing.\n(B) Yes, I'll be there.\n(C) A large catering order.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q02.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q02.mp3",
+      "audioDuration": 19.2,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "You're going to the office picnic, aren't you?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Ms. Cho, the head of marketing.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Yes, I'll be there.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "A large catering order.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 3",
+      "questionStart": 3,
+      "questionEnd": 3,
+      "part": 2,
+      "transcriptFull": "The shoe sale lasts until Thursday, doesn't it?\n(A) I'll try them on.\n(B) Do you have the receipt?\n(C) No, it ends on Wednesday.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q03.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q03.mp3",
+      "audioDuration": 19.3045,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "The shoe sale lasts until Thursday, doesn't it?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I'll try them on.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Do you have the receipt?",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "No, it ends on Wednesday.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 4",
+      "questionStart": 4,
+      "questionEnd": 4,
+      "part": 2,
+      "transcriptFull": "You already signed the lease to your house, didn't you?\n(A) A dozen at least.\n(B) Yes, last week.\n(C) It's on Alder Street.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q04.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q04.mp3",
+      "audioDuration": 19.121625,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "You already signed the lease to your house, didn't you?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "A dozen at least.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Yes, last week.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "It's on Alder Street.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 5",
+      "questionStart": 5,
+      "questionEnd": 5,
+      "part": 2,
+      "transcriptFull": "We'll need umbrellas, won't we?\n(A) She stayed inside all day.\n(B) No, the weather's supposed to be nice.\n(C) It takes about two hours.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q05.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q05.mp3",
+      "audioDuration": 19.121625,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "We'll need umbrellas, won't we?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "She stayed inside all day.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "No, the weather's supposed to be nice.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "It takes about two hours.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 6",
+      "questionStart": 6,
+      "questionEnd": 6,
+      "part": 2,
+      "transcriptFull": "The Franklin Bridge isn't far from here, is it?\n(A) Probably around midnight.\n(B) Two should be plenty.\n(C) No, just a few kilometers away.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q06.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q06.mp3",
+      "audioDuration": 19.487375,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "The Franklin Bridge isn't far from here, is it?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Probably around midnight.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Two should be plenty.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "No, just a few kilometers away.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 7",
+      "questionStart": 7,
+      "questionEnd": 7,
+      "part": 2,
+      "transcriptFull": "This is your suitcase, right?\n(A) It looks like mine.\n(B) Just in case.\n(C) At the train station.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q07.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q07.mp3",
+      "audioDuration": 16.143688,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "This is your suitcase, right?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "It looks like mine.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Just in case.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "At the train station.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 8",
+      "questionStart": 8,
+      "questionEnd": 8,
+      "part": 2,
+      "transcriptFull": "Our parking permits are valid for two years, aren't they?\n(A) No, I came by car.\n(B) The park opened last year.\n(C) Yes, I just renewed mine.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q08.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q08.mp3",
+      "audioDuration": 20.74125,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Our parking permits are valid for two years, aren't they?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "No, I came by car.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "The park opened last year.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Yes, I just renewed mine.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 9",
+      "questionStart": 9,
+      "questionEnd": 9,
+      "part": 2,
+      "transcriptFull": "Flowers will be delivered for tonight's banquet, won't they?\n(A) No, the bank is closed.\n(B) Dinner for eight.\n(C) We'll drop them off by four o'clock.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q09.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q09.mp3",
+      "audioDuration": 20.74125,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Flowers will be delivered for tonight's banquet, won't they?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "No, the bank is closed.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Dinner for eight.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "We'll drop them off by four o'clock.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 10",
+      "questionStart": 10,
+      "questionEnd": 10,
+      "part": 2,
+      "transcriptFull": "You've already explained the task to the interns, haven't you?\n(A) No, could you do it?\n(B) Twenty-seven pages.\n(C) That's a good explanation.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q10.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q10.mp3",
+      "audioDuration": 19.696313,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "You've already explained the task to the interns, haven't you?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "No, could you do it?",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Twenty-seven pages.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "That's a good explanation.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 11",
+      "questionStart": 11,
+      "questionEnd": 11,
+      "part": 2,
+      "transcriptFull": "There were more people at the trade show this year, weren't there?\n(A) An additional session\n(B) No. I won’t be able to come.\n(C) Yes, it was a big success.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q11.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q11.mp3",
+      "audioDuration": 20.062063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "There were more people at the trade show this year, weren't there?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "An additional session",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "No. I won’t be able to come.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Yes, it was a big success.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 12",
+      "questionStart": 12,
+      "questionEnd": 12,
+      "part": 2,
+      "transcriptFull": "It's time for a break, isn't it?\n(A) Well, they're too fragile to ship.\n(B) Some afternoon appointments.\n(C) Let's finish up this proposal.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q12.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q12.mp3",
+      "audioDuration": 19.46125,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "It's time for a break, isn't it?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Well, they're too fragile to ship.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Some afternoon appointments.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Let's finish up this proposal.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 13",
+      "questionStart": 13,
+      "questionEnd": 13,
+      "part": 2,
+      "transcriptFull": "You didn't leave your mobile phone on the train, did you?\n(A) It's 555-0126.\n(B) A ticket to Amsterdam.\n(C) No, I have it right here.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q13.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q13.mp3",
+      "audioDuration": 21.185313,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "You didn't leave your mobile phone on the train, did you?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "It's 555-0126.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "A ticket to Amsterdam.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "No, I have it right here.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 14",
+      "questionStart": 14,
+      "questionEnd": 14,
+      "part": 2,
+      "transcriptFull": "The meeting's in Busan, isn't it?\n(A) It isn't a company live heard of.\n(B) Yes. I hope we can participate by phone.\n(C) The attendance sheet.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q14.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q14.mp3",
+      "audioDuration": 20.7935,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "The meeting's in Busan, isn't it?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "It isn't a company live heard of.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Yes. I hope we can participate by phone.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "The attendance sheet.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 15",
+      "questionStart": 15,
+      "questionEnd": 15,
+      "part": 2,
+      "transcriptFull": "We've met these clients before, haven't we?\n(A) Sure, I'd be happy to.\n(B) Actually, we shipped them already.\n(C) The manager is new, though.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q15.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q15.mp3",
+      "audioDuration": 20.271,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "We've met these clients before, haven't we?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Sure, I'd be happy to.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Actually, we shipped them already.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "The manager is new, though.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 16",
+      "questionStart": 16,
+      "questionEnd": 16,
+      "part": 2,
+      "transcriptFull": "Melissa gave the contract to her clients already, didn't she?\n(A) Please contact me.\n(B) Yes, she just did.\n(C) I'm almost ready.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q16.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q16.mp3",
+      "audioDuration": 20.871813,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Melissa gave the contract to her clients already, didn't she?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Please contact me.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Yes, she just did.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "I'm almost ready.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 17",
+      "questionStart": 17,
+      "questionEnd": 17,
+      "part": 2,
+      "transcriptFull": "This battery is rechargeable, right?\n(A) Three yellow cables.\n(B) Let me read the packaging.\n(C) No, In the left drawer.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q17.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q17.mp3",
+      "audioDuration": 18.625313,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "This battery is rechargeable, right?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Three yellow cables.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Let me read the packaging.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "No, In the left drawer.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 18",
+      "questionStart": 18,
+      "questionEnd": 18,
+      "part": 2,
+      "transcriptFull": "You went to the soccer match last week, didn't you?\n(A) These socks don't match.\n(B) A local sports writer.\n(C) I did. My favorite team won!",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q18.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q18.mp3",
+      "audioDuration": 21.70775,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "You went to the soccer match last week, didn't you?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "These socks don't match.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "A local sports writer.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "I did. My favorite team won!",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 19",
+      "questionStart": 19,
+      "questionEnd": 19,
+      "part": 2,
+      "transcriptFull": "We can have the replacement parts by Firday, right?\n(A) Put it on the lowest shelf.\n(B) Yes — but shipping costs more.\n(C) No, at the next traffic light.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q19.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q19.mp3",
+      "audioDuration": 21.733875,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "We can have the replacement parts by Firday, right?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Put it on the lowest shelf.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Yes — but shipping costs more.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "No, at the next traffic light.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 20",
+      "questionStart": 20,
+      "questionEnd": 20,
+      "part": 2,
+      "transcriptFull": "Takumi's going to the conference, isn't he?\n(A) How many were there?\n(B) It was nice, thanks.\n(C) Yes, he's leading a workshop.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q20.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q20.mp3",
+      "audioDuration": 22.282438,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Takumi's going to the conference, isn't he?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "How many were there?",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "It was nice, thanks.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Yes, he's leading a workshop.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 21",
+      "questionStart": 21,
+      "questionEnd": 21,
+      "part": 2,
+      "transcriptFull": "Let's end early today.\n(A) Only in the beginning.\n(B) That's a good idea.\n(C) I already sent it.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q21.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q21.mp3",
+      "audioDuration": 16.7445,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Let's end early today.",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Only in the beginning.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "That's a good idea.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "I already sent it.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 22",
+      "questionStart": 22,
+      "questionEnd": 22,
+      "part": 2,
+      "transcriptFull": "The personnel director can see you now.\n(A) OK, thank you.\n(B) Let's schedule a time.\n(C) I see your point.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q22.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q22.mp3",
+      "audioDuration": 18.07675,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "The personnel director can see you now.",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "OK, thank you.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Let's schedule a time.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "I see your point.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 23",
+      "questionStart": 23,
+      "questionEnd": 23,
+      "part": 2,
+      "transcriptFull": "We need to replace batteries in clock.\n(A) Yes, I locked it.\n(B) It was placed beside the door.\n(C) I did it last week.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q23.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q23.mp3",
+      "audioDuration": 19.382875,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "We need to replace batteries in clock.",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Yes, I locked it.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "It was placed beside the door.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "I did it last week.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 24",
+      "questionStart": 24,
+      "questionEnd": 24,
+      "part": 2,
+      "transcriptFull": "I heard that Route 4 is closed for construction.\n(A) Yes, until the twenty-fifth.\n(B) Every day on my way to work.\n(C) I can help you open it.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q24.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q24.mp3",
+      "audioDuration": 19.722438,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "I heard that Route 4 is closed for construction.",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Yes, until the twenty-fifth.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Every day on my way to work.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "I can help you open it.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 25",
+      "questionStart": 25,
+      "questionEnd": 25,
+      "part": 2,
+      "transcriptFull": "I don't seem to be able to find my glasses?\n(A) Have you looked on your desk?\n(B) I picked up my prescription yesterday.\n(C) We haven't seen the latest report.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q25.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q25.mp3",
+      "audioDuration": 20.976313,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "I don't seem to be able to find my glasses?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Have you looked on your desk?",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I picked up my prescription yesterday.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "We haven't seen the latest report.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 26",
+      "questionStart": 26,
+      "questionEnd": 26,
+      "part": 2,
+      "transcriptFull": "We bought the wrong kind of toner cartridge for the printer.\n(A) How many hours?\n(B) I can exchange it.\n(C) And in color, too.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q26.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q26.mp3",
+      "audioDuration": 19.017125,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "We bought the wrong kind of toner cartridge for the printer.",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "How many hours?",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I can exchange it.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "And in color, too.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 27",
+      "questionStart": 27,
+      "questionEnd": 27,
+      "part": 2,
+      "transcriptFull": "Mr. Yamada's laboratory is down the hall.\n(A) Ask Mr. Bryant.\n(B) Yes, he's quite tall.\n(C) Let's stop by and say hello.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q27.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q27.mp3",
+      "audioDuration": 19.35675,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Mr. Yamada's laboratory is down the hall.",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Ask Mr. Bryant.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Yes, he's quite tall.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Let's stop by and say hello.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 28",
+      "questionStart": 28,
+      "questionEnd": 28,
+      "part": 2,
+      "transcriptFull": "Let's meet in the hotel lobby at eight o'clock.\n(A) Yes, I have one.\n(B) A reservation for two nights.\n(C) See you then",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q28.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q28.mp3",
+      "audioDuration": 19.644063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Let's meet in the hotel lobby at eight o'clock.",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Yes, I have one.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "A reservation for two nights.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "See you then",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 29",
+      "questionStart": 29,
+      "questionEnd": 29,
+      "part": 2,
+      "transcriptFull": "You should try the new salad bar in the cafeteria.\n(A) That's after lunch.\n(B) I have, and it's great!\n(C) With lettuce and tomato.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q29.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q29.mp3",
+      "audioDuration": 19.173875,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "You should try the new salad bar in the cafeteria.",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "That's after lunch.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I have, and it's great!",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "With lettuce and tomato.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 30",
+      "questionStart": 30,
+      "questionEnd": 30,
+      "part": 2,
+      "transcriptFull": "The factory will be shut down for the January.\n(A) Just down the street.\n(B) The latest shipment.\n(C) Do you know why?",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q30.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Cau-hoi-duoi-Cau-tran-thuat/Q30.mp3",
+      "audioDuration": 18.755938,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "The factory will be shut down for the January.",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Just down the street.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "The latest shipment.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Do you know why?",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,0 @@
-Did we complete the inventory, or is there more to do?
-(A) OK, that'd be fine.
-(B) We're not quite finished.
-(C) About 1,000 dollars.
-
-Answer: B

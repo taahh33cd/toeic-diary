@@ -1,0 +1,4 @@
+(A) He's standing on a rug.
+(B) He's turning a doorknob.
+(C) He's climbing a ladder.
+(D) He's painting a wall.

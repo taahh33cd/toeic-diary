@@ -1,0 +1,6 @@
+What type of plant do you have in your office?
+(A) Whenever I sit at my desk.
+(B) Thanks-I just bought it.
+(C) One that doesn't require much water.
+
+Answer: C

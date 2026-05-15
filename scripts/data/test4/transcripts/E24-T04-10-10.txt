@@ -1,0 +1,6 @@
+Will Dr. Ivanova be late today?
+(A) No, you shouldn't have to wait long.
+(B) It's just under the desk.
+(C) Sure, I can do that for you.
+
+Answer: A

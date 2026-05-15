@@ -1,0 +1,6 @@
+Does the shop open on Sundays?
+(A) Yes, at one o'clock.
+(B) Because we drove.
+(C) I'd like to return this item, please.
+
+Answer: A

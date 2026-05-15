@@ -1,0 +1,6 @@
+Do you take exercise classes too, or just dance classes?
+(A) The instructor teaches in the mornings.
+(B) These shoes fit perfectly.
+(C) I only take dance.
+
+Answer: C

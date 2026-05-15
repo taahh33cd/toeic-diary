@@ -1,6 +1,0 @@
-The product launch was a success, wasn't it?
-(A) No, I haven't eaten yet.
-(B) Yes, we already have a lot of orders.
-(C) He'll meet you next week.
-
-Answer: B

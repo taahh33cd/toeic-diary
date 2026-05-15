@@ -1,0 +1,6 @@
+When's the dishwasher being repaired?
+(A) The technician came this morning.
+(B) I store the knives in a separate drawer.
+(C) The bread is in the pantry.
+
+Answer: A

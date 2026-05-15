@@ -1,0 +1,6 @@
+Which floor are you going to?
+(A) Could I have a copy of this?
+(B) The twenty-fifth floor.
+(C) That painting would look great over there.
+
+Answer: B

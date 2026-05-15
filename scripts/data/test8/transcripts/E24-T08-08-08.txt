@@ -1,0 +1,6 @@
+When is your doctor's appointment?
+(A) This afternoon.
+(B) That's a good point.
+(C) At a medical clinic.
+
+Answer: A

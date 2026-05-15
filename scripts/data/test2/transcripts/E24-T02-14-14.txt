@@ -1,0 +1,6 @@
+There was a sale at the furniture store.
+(A) No, it wasn't in storage.
+(B) Did you buy anything?
+(C) Some old receipts.
+
+Answer: B

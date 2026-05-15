@@ -1,0 +1,6 @@
+How would you like to pay for these shoes today?
+(A) With a store gift card.
+(B) I wear a size 38.
+(C) A friend recommended them.
+
+Answer: A

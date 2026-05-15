@@ -1,0 +1,6 @@
+Should I make the dinner reservation for Friday or Saturday?
+(A) The Beachside Bistro.
+(B) Saturday is better.
+(C) A large plate of pasta.
+
+Answer: B

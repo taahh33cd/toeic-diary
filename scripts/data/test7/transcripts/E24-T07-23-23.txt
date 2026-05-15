@@ -1,0 +1,6 @@
+Could you send me the sales report?
+(A) Items from last season are fifty percent off.
+(B) Of course, I'll do it right away.
+(C) Have you checked the weather forecast?
+
+Answer: B

@@ -1,0 +1,1569 @@
+{
+  "testName": "Who – What – Which",
+  "testSlug": "part2-who-what-which",
+  "orderIndex": 0,
+  "examCode": "P2",
+  "testCode": "part2-who-what-which",
+  "lessons": [
+    {
+      "title": "Question 1",
+      "questionStart": 1,
+      "questionEnd": 1,
+      "part": 2,
+      "transcriptFull": "Who's setting up the projector?\n(A) Ali from technical support.\n(B) Yes, it's been turned on.\n(C) With the orange cable",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q01.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q01.mp3",
+      "audioDuration": 17.449813,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Who's setting up the projector?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Ali from technical support.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Yes, it's been turned on.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "With the orange cable",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 2",
+      "questionStart": 2,
+      "questionEnd": 2,
+      "part": 2,
+      "transcriptFull": "Which hotel did you go to?\n(A) I can't remember the name.\n(B) Swimming and hiking.\n(C) The room has a view.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q02.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q02.mp3",
+      "audioDuration": 16.90125,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Which hotel did you go to?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I can't remember the name.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Swimming and hiking.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "The room has a view.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 3",
+      "questionStart": 3,
+      "questionEnd": 3,
+      "part": 2,
+      "transcriptFull": "What did you buy at the bookstore?\n(A) Just a gift card.\n(B) Yesterday afternoon.\n(C) It was never published.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q03.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q03.mp3",
+      "audioDuration": 16.404875,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "What did you buy at the bookstore?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Just a gift card.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Yesterday afternoon.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "It was never published.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 4",
+      "questionStart": 4,
+      "questionEnd": 4,
+      "part": 2,
+      "transcriptFull": "Who attended the trade show last year?\n(A) Nearly half past six\n(B) Sure, we can share a car.\n(C) The sales team.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q04.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q04.mp3",
+      "audioDuration": 17.92,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Who attended the trade show last year?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Nearly half past six",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Sure, we can share a car.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "The sales team.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 5",
+      "questionStart": 5,
+      "questionEnd": 5,
+      "part": 2,
+      "transcriptFull": "Who bought the tickets?\n(A) My assistant did.\n(B) That's too expensive.\n(C) Tomorrow's show.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q05.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q05.mp3",
+      "audioDuration": 18.573063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Who bought the tickets?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "My assistant did.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "That's too expensive.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Tomorrow's show.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 6",
+      "questionStart": 6,
+      "questionEnd": 6,
+      "part": 2,
+      "transcriptFull": "Which flight are you taking?\n(A) Sure, I'll take it.\n(B) No, are you?\n(C) The one at seven.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q06.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q06.mp3",
+      "audioDuration": 18.259563,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Which flight are you taking?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Sure, I'll take it.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "No, are you?",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "The one at seven.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 7",
+      "questionStart": 7,
+      "questionEnd": 7,
+      "part": 2,
+      "transcriptFull": "What time do you usually get to work?\n(A) Between eight-thirty and nine.\n(B) I usually take the train.\n(C) I was hired three months ago.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q07.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q07.mp3",
+      "audioDuration": 19.173875,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "What time do you usually get to work?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Between eight-thirty and nine.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I usually take the train.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "I was hired three months ago.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 8",
+      "questionStart": 8,
+      "questionEnd": 8,
+      "part": 2,
+      "transcriptFull": "Who supervises this production line?\n(A) A thousand bottles per hour.\n(B) Normally Mr. Patel does.\n(C) It'll be a long wait.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q08.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q08.mp3",
+      "audioDuration": 20.088188,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Who supervises this production line?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "A thousand bottles per hour.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Normally Mr. Patel does.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "It'll be a long wait.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 9",
+      "questionStart": 9,
+      "questionEnd": 9,
+      "part": 2,
+      "transcriptFull": "Which event is Marco planning?\n(A) The list of new staff.\n(B) The luncheon next Thursday.\n(C) When can I check it?",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q09.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q09.mp3",
+      "audioDuration": 19.800813,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Which event is Marco planning?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "The list of new staff.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "The luncheon next Thursday.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "When can I check it?",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 10",
+      "questionStart": 10,
+      "questionEnd": 10,
+      "part": 2,
+      "transcriptFull": "Which design proposal did the client prefer?\n(A) They described it well.\n(B) Because it's new.\n(C) She liked the first one.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q10.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q10.mp3",
+      "audioDuration": 20.63675,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Which design proposal did the client prefer?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "They described it well.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Because it's new.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "She liked the first one.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 11",
+      "questionStart": 11,
+      "questionEnd": 11,
+      "part": 2,
+      "transcriptFull": "Who are you going to hire for the position?\n(A) Our standards are higher.\n(B) At the end of the month.\n(C) I've decided on Mr. Smith.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q11.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q11.mp3",
+      "audioDuration": 20.062063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Who are you going to hire for the position?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Our standards are higher.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "At the end of the month.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "I've decided on Mr. Smith.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 12",
+      "questionStart": 12,
+      "questionEnd": 12,
+      "part": 2,
+      "transcriptFull": "Who's invited the lecturer tonight?\n(A) It's open to the public.\n(B) Yes, they were.\n(C) Conference room B.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q12.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q12.mp3",
+      "audioDuration": 20.062063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Who's invited the lecturer tonight?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "It's open to the public.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Yes, they were.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Conference room B.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 13",
+      "questionStart": 13,
+      "questionEnd": 13,
+      "part": 2,
+      "transcriptFull": "Who was the last person to review these files?\n(A) No, the first one.\n(B) The accountant.\n(C) At four o'clock.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q13.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q13.mp3",
+      "audioDuration": 20.062063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Who was the last person to review these files?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "No, the first one.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "The accountant.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "At four o'clock.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 14",
+      "questionStart": 14,
+      "questionEnd": 14,
+      "part": 2,
+      "transcriptFull": "What's the price of part number 136?\n(A) Let me check the pricing list.\n(B) A credit-card number.\n(C) In boxes of twenty-five.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q14.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q14.mp3",
+      "audioDuration": 21.6555,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "What's the price of part number 136?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Let me check the pricing list.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "A credit-card number.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "In boxes of twenty-five.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 15",
+      "questionStart": 15,
+      "questionEnd": 15,
+      "part": 2,
+      "transcriptFull": "What flight is he arriving on?\n(A) Flight 48.\n(B) Only an hour.\n(C) At the airport.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q15.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q15.mp3",
+      "audioDuration": 16.3265,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "What flight is he arriving on?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Flight 48.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Only an hour.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "At the airport.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 16",
+      "questionStart": 16,
+      "questionEnd": 16,
+      "part": 2,
+      "transcriptFull": "Who's meeting with Ms. Clark right now?\n(A) The accountant.\n(B) The meeting was rather short.\n(C) Yes, you're quite right.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q16.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q16.mp3",
+      "audioDuration": 19.226125,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Who's meeting with Ms. Clark right now?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "The accountant.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "The meeting was rather short.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Yes, you're quite right.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 17",
+      "questionStart": 17,
+      "questionEnd": 17,
+      "part": 2,
+      "transcriptFull": "Who will replace Mr. Fernandez when he retires?\n(A) I've never been there.\n(B) I heard that Maria Ortega will.\n(C) No, I'm not tired.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q17.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q17.mp3",
+      "audioDuration": 20.42775,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Who will replace Mr. Fernandez when he retires?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I've never been there.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I heard that Maria Ortega will.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "No, I'm not tired.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 18",
+      "questionStart": 18,
+      "questionEnd": 18,
+      "part": 2,
+      "transcriptFull": "What time is it?\n(A) Just a few minutes.\n(B) Almost five o'clock.\n(C) Yes, it is.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q18.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q18.mp3",
+      "audioDuration": 16.849,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "What time is it?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Just a few minutes.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Almost five o'clock.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Yes, it is.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 19",
+      "questionStart": 19,
+      "questionEnd": 19,
+      "part": 2,
+      "transcriptFull": "Who can I ask to revise our orientation materials?\n(A) I just realized that.\n(B) An earlier version.\n(C) Yoko has the time.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q19.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q19.mp3",
+      "audioDuration": 19.226125,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Who can I ask to revise our orientation materials?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I just realized that.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "An earlier version.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Yoko has the time.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 20",
+      "questionStart": 20,
+      "questionEnd": 20,
+      "part": 2,
+      "transcriptFull": "What's on the agenda for the staff meeting?\n(A) Next to the lobby.\n(B) Attendance was good.\n(C) It hasn't been finalized.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q20.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q20.mp3",
+      "audioDuration": 20.062063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "What's on the agenda for the staff meeting?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Next to the lobby.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Attendance was good.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "It hasn't been finalized.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 21",
+      "questionStart": 21,
+      "questionEnd": 21,
+      "part": 2,
+      "transcriptFull": "Who is Mr. Park meeting at the airport?\n(A) Inside the terminal.\n(B) They called a taxi.\n(C) A new client.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q21.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q21.mp3",
+      "audioDuration": 18.912625,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Who is Mr. Park meeting at the airport?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Inside the terminal.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "They called a taxi.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "A new client.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 22",
+      "questionStart": 22,
+      "questionEnd": 22,
+      "part": 2,
+      "transcriptFull": "Which of these notebooks is yours?\n(A) At the library.\n(B) The black one's mine.\n(C) Thanks, it is.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q22.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q22.mp3",
+      "audioDuration": 17.031813,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Which of these notebooks is yours?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "At the library.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "The black one's mine.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Thanks, it is.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 23",
+      "questionStart": 23,
+      "questionEnd": 23,
+      "part": 2,
+      "transcriptFull": "Who's been selected to lead the design team?\n(A) Sign here, please.\n(B) Will he read it?\n(C) Ms. Lee was chosen",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q23.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q23.mp3",
+      "audioDuration": 18.285688,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Who's been selected to lead the design team?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Sign here, please.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Will he read it?",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Ms. Lee was chosen",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 24",
+      "questionStart": 24,
+      "questionEnd": 24,
+      "part": 2,
+      "transcriptFull": "Who's retiring next month?\n(A) No, we're not tired.\n(B) I believe Caroline is.\n(C) It's due in four weeks.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q24.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q24.mp3",
+      "audioDuration": 18.468563,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Who's retiring next month?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "No, we're not tired.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I believe Caroline is.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "It's due in four weeks.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 25",
+      "questionStart": 25,
+      "questionEnd": 25,
+      "part": 2,
+      "transcriptFull": "Which paint color did you choose for the waiting room?\n(A) He didn't see the memo.\n(B) A shade of pale green.\n(C) I don't mind waiting.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q25.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q25.mp3",
+      "audioDuration": 18.390188,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Which paint color did you choose for the waiting room?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "He didn't see the memo.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "A shade of pale green.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "I don't mind waiting.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 26",
+      "questionStart": 26,
+      "questionEnd": 26,
+      "part": 2,
+      "transcriptFull": "What was the article about?\n(A) I didn't read it.\n(B) No, not recently.\n(C) That's about it.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q26.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q26.mp3",
+      "audioDuration": 16.37875,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "What was the article about?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I didn't read it.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "No, not recently.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "That's about it.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 27",
+      "questionStart": 27,
+      "questionEnd": 27,
+      "part": 2,
+      "transcriptFull": "Who was in your office this morning?\n(A) In the other building.\n(B) I have time tomorrow.\n(C) My manager, Mr. Lao",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q27.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q27.mp3",
+      "audioDuration": 16.927375,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Who was in your office this morning?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "In the other building.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I have time tomorrow.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "My manager, Mr. Lao",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 28",
+      "questionStart": 28,
+      "questionEnd": 28,
+      "part": 2,
+      "transcriptFull": "Who's leading the orientation?\n(A) He read it recently.\n(B) The human resources team.\n(C) Some training manuals.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q28.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q28.mp3",
+      "audioDuration": 17.136313,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Who's leading the orientation?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "He read it recently.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "The human resources team.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Some training manuals.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 29",
+      "questionStart": 29,
+      "questionEnd": 29,
+      "part": 2,
+      "transcriptFull": "What should I bring to the trade show?\n(A) Your business cards.\n(B) At the conference center.\n(C) Sorry, I have it.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q29.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q29.mp3",
+      "audioDuration": 17.214688,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "What should I bring to the trade show?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Your business cards.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "At the conference center.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Sorry, I have it.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 30",
+      "questionStart": 30,
+      "questionEnd": 30,
+      "part": 2,
+      "transcriptFull": "What kind of company does Mr. Perez manage?\n(A) For twenty years.\n(B) I can manage that.\n(C) An advertising agency.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q30.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Who-What-Which/Q30.mp3",
+      "audioDuration": 19.382875,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "What kind of company does Mr. Perez manage?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "For twenty years.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I can manage that.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "An advertising agency.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    }
+  ]
+}

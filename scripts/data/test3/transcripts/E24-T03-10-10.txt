@@ -1,0 +1,6 @@
+How much will the repairs cost?
+(A) I have two pairs of shoes.
+(B) Around 200 dollars.
+(C) The restaurant downtown.
+
+Answer: B

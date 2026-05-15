@@ -1,0 +1,1569 @@
+{
+  "testName": "Yes/No – Lựa chọn",
+  "testSlug": "part2-yes-no",
+  "orderIndex": 0,
+  "examCode": "P2",
+  "testCode": "part2-yes-no",
+  "lessons": [
+    {
+      "title": "Question 1",
+      "questionStart": 1,
+      "questionEnd": 1,
+      "part": 2,
+      "transcriptFull": "Do you know of a good doctor in this area?\n(A) On the way back.\n(B) Sure, I'll give you her phone number.\n(C) He'd prefer a corner office.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q01.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q01.mp3",
+      "audioDuration": 17.632625,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Do you know of a good doctor in this area?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "On the way back.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Sure, I'll give you her phone number.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "He'd prefer a corner office.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 2",
+      "questionStart": 2,
+      "questionEnd": 2,
+      "part": 2,
+      "transcriptFull": "Have you met with the event planner yet?\n(A) We're meeting tomorrow.\n(B) Fifty invitations.\n(C) That's a good plan.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q02.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q02.mp3",
+      "audioDuration": 17.554313,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Have you met with the event planner yet?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "We're meeting tomorrow.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Fifty invitations.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "That's a good plan.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 3",
+      "questionStart": 3,
+      "questionEnd": 3,
+      "part": 2,
+      "transcriptFull": "Does this mobile phone come with headphones?\n(A) Yes, it does.\n(B) Thanks, I'm fine.\n(C) About two days.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q03.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q03.mp3",
+      "audioDuration": 18.259563,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Does this mobile phone come with headphones?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Yes, it does.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Thanks, I'm fine.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "About two days.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 4",
+      "questionStart": 4,
+      "questionEnd": 4,
+      "part": 2,
+      "transcriptFull": "Did you watch the football match yesterday?\n(A) No, I missed it.\n(B) It's 4:45.\n(C) I've been training every day",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q04.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q04.mp3",
+      "audioDuration": 17.998375,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Did you watch the football match yesterday?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "No, I missed it.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "It's 4:45.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "I've been training every day",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 5",
+      "questionStart": 5,
+      "questionEnd": 5,
+      "part": 2,
+      "transcriptFull": "Did I already give you my business card?\n(A) No, Mr. Cho has a car.\n(B) Yes, I have it right here.\n(C) Business is good, thanks.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q05.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q05.mp3",
+      "audioDuration": 18.912625,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Did I already give you my business card?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "No, Mr. Cho has a car.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Yes, I have it right here.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Business is good, thanks.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 6",
+      "questionStart": 6,
+      "questionEnd": 6,
+      "part": 2,
+      "transcriptFull": "Have the landscapers finished the garden?\n(A) They need a couple more days.\n(B) Flowering trees and shrubs.\n(C) A security guard.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q06.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q06.mp3",
+      "audioDuration": 18.912625,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Have the landscapers finished the garden?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "They need a couple more days.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Flowering trees and shrubs.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "A security guard.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 7",
+      "questionStart": 7,
+      "questionEnd": 7,
+      "part": 2,
+      "transcriptFull": "Do you enjoy your job as a bank teller?\n(A) I'll tell her tomorrow.\n(B) A different account.\n(C) I like it a lot.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q07.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q07.mp3",
+      "audioDuration": 16.90125,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Do you enjoy your job as a bank teller?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I'll tell her tomorrow.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "A different account.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "I like it a lot.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 8",
+      "questionStart": 8,
+      "questionEnd": 8,
+      "part": 2,
+      "transcriptFull": "Did Mr. Lee approve the text for the brochure?\n(A) Yes, I can.\n(B) He hasn't seen it yet.\n(C) A few more copies.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q08.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q08.mp3",
+      "audioDuration": 17.632625,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Did Mr. Lee approve the text for the brochure?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Yes, I can.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "He hasn't seen it yet.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "A few more copies.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 9",
+      "questionStart": 9,
+      "questionEnd": 9,
+      "part": 2,
+      "transcriptFull": "Do you usually eat lunch in the company cafeteria?\n(A) No, I bring food from home.\n(B) I'll have my coffee with cream and sugar thanks.\n(C) It's for the company picnic.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q09.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q09.mp3",
+      "audioDuration": 21.368188,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Do you usually eat lunch in the company cafeteria?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "No, I bring food from home.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I'll have my coffee with cream and sugar thanks.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "It's for the company picnic.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 10",
+      "questionStart": 10,
+      "questionEnd": 10,
+      "part": 2,
+      "transcriptFull": "Have you completed the reimbursement form?\n(A) Yes, I've filled it out.\n(B) Travel expenses.\n(C) He's a former colleague",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q10.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q10.mp3",
+      "audioDuration": 20.062063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Have you completed the reimbursement form?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Yes, I've filled it out.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Travel expenses.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "He's a former colleague",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 11",
+      "questionStart": 11,
+      "questionEnd": 11,
+      "part": 2,
+      "transcriptFull": "Isn’t Ken going on vacation soon?\n(A) Sure, I'd like some.\n(B) On Monday, I think.\n(C) No, it's not too late.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q11.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q11.mp3",
+      "audioDuration": 17.998375,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Isn’t Ken going on vacation soon?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Sure, I'd like some.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "On Monday, I think.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "No, it's not too late.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 12",
+      "questionStart": 12,
+      "questionEnd": 12,
+      "part": 2,
+      "transcriptFull": "Shouldn't we order some more photocopier paper?\n(A) No, they're not.\n(B) Yes, we're running out.\n(C) A fair price.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q12.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q12.mp3",
+      "audioDuration": 18.651438,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Shouldn't we order some more photocopier paper?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "No, they're not.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Yes, we're running out.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "A fair price.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 13",
+      "questionStart": 13,
+      "questionEnd": 13,
+      "part": 2,
+      "transcriptFull": "Didn't you make a copy of the menu?\n(A) A reservation for four people.\n(B) No thanks, I already ordered something.\n(C) Yes, it's posted on the bulletin board.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q13.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q13.mp3",
+      "audioDuration": 19.905313,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Didn't you make a copy of the menu?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "A reservation for four people.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "No thanks, I already ordered something.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Yes, it's posted on the bulletin board.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 14",
+      "questionStart": 14,
+      "questionEnd": 14,
+      "part": 2,
+      "transcriptFull": "Don't you and Kirsten belong to the same gym?\n(A) Usually for an hour.\n(B) Yes, I always see her there.\n(C) The membership coordinator.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q14.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q14.mp3",
+      "audioDuration": 20.506125,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Don't you and Kirsten belong to the same gym?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Usually for an hour.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Yes, I always see her there.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "The membership coordinator.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 15",
+      "questionStart": 15,
+      "questionEnd": 15,
+      "part": 2,
+      "transcriptFull": "Aren't you going to see that action movie with Mei this weekend?\n(A) I bought several of them.\n(B) A newly remodeled theater.\n(C) Actually, we just saw it.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q15.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q15.mp3",
+      "audioDuration": 20.871813,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Aren't you going to see that action movie with Mei this weekend?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I bought several of them.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "A newly remodeled theater.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Actually, we just saw it.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 16",
+      "questionStart": 16,
+      "questionEnd": 16,
+      "part": 2,
+      "transcriptFull": "Haven't the new uniforms for the kitchen staff arrived?\n(A) I have them right here.\n(B) It's company policy.\n(C) I'll check the menu.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q16.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q16.mp3",
+      "audioDuration": 17.86775,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Haven't the new uniforms for the kitchen staff arrived?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I have them right here.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "It's company policy.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "I'll check the menu.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 17",
+      "questionStart": 17,
+      "questionEnd": 17,
+      "part": 2,
+      "transcriptFull": "Isn't the inspector supposed to come to the factory today?\n(A) Six new facilities.\n(B) Yes, he's on his way.\n(C) Every day last year.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q17.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q17.mp3",
+      "audioDuration": 18.964875,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Isn't the inspector supposed to come to the factory today?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Six new facilities.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Yes, he's on his way.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Every day last year.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 18",
+      "questionStart": 18,
+      "questionEnd": 18,
+      "part": 2,
+      "transcriptFull": "Didn't you have a dentist appointment yesterday?\n(A) I see your point.\n(B) I had to change it to next week.\n(C) It's on 12th Avenue.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q18.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q18.mp3",
+      "audioDuration": 18.703688,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Didn't you have a dentist appointment yesterday?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I see your point.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I had to change it to next week.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "It's on 12th Avenue.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 19",
+      "questionStart": 19,
+      "questionEnd": 19,
+      "part": 2,
+      "transcriptFull": "Our parking permits are valid for two years, aren't they?\n(A) No, I came by car.\n(B) The park opened last year.\n(C) Yes, I just renewed mine.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q19.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q19.mp3",
+      "audioDuration": 19.435125,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Our parking permits are valid for two years, aren't they?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "No, I came by car.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "The park opened last year.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Yes, I just renewed mine.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 20",
+      "questionStart": 20,
+      "questionEnd": 20,
+      "part": 2,
+      "transcriptFull": "Isn't there usually a calculator in the bottom drawer?\n(A) The folder on top of the pile.\n(B) I have time to work on the budget.\n(C) Yes, but Julio's using it at the moment.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q20.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q20.mp3",
+      "audioDuration": 21.969,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Isn't there usually a calculator in the bottom drawer?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "The folder on top of the pile.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I have time to work on the budget.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Yes, but Julio's using it at the moment.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 21",
+      "questionStart": 21,
+      "questionEnd": 21,
+      "part": 2,
+      "transcriptFull": "Are you a member of the gym or are you a guest?\n(A) Did she remember?\n(B) I'm just visiting.\n(C) I guessed right.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q21.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q21.mp3",
+      "audioDuration": 16.58775,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Are you a member of the gym or are you a guest?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Did she remember?",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I'm just visiting.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "I guessed right.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 22",
+      "questionStart": 22,
+      "questionEnd": 22,
+      "part": 2,
+      "transcriptFull": "Does our company recycle paper and plastic or just paper?\n(A) Trash is collected weekly.\n(B) We recycle both.\n(C) Ten plastic bottles.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q22.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q22.mp3",
+      "audioDuration": 20.21875,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Does our company recycle paper and plastic or just paper?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Trash is collected weekly.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "We recycle both.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Ten plastic bottles.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 23",
+      "questionStart": 23,
+      "questionEnd": 23,
+      "part": 2,
+      "transcriptFull": "Will the carpenters be working the first or second shift?\n(A) First would be better.\n(B) I'm sorry we were tired.\n(C) Making new window frames.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q23.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q23.mp3",
+      "audioDuration": 20.21875,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Will the carpenters be working the first or second shift?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "First would be better.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I'm sorry we were tired.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Making new window frames.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 24",
+      "questionStart": 24,
+      "questionEnd": 24,
+      "part": 2,
+      "transcriptFull": "Can I e-mail you my resume, or would you prefer hard copy?\n(A) I checked the mail already.\n(B) Just an e-mail will be fine.\n(C) No thanks, it's not very difficult.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q24.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q24.mp3",
+      "audioDuration": 22.77875,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Can I e-mail you my resume, or would you prefer hard copy?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I checked the mail already.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Just an e-mail will be fine.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "No thanks, it's not very difficult.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 25",
+      "questionStart": 25,
+      "questionEnd": 25,
+      "part": 2,
+      "transcriptFull": "Is the convention in New York or San Francisco this year?\n(A) They decided on Toronto instead.\n(B) For medical equipment.\n(C) It starts on September third.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q25.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q25.mp3",
+      "audioDuration": 20.062063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Is the convention in New York or San Francisco this year?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "They decided on Toronto instead.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "For medical equipment.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "It starts on September third.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 26",
+      "questionStart": 26,
+      "questionEnd": 26,
+      "part": 2,
+      "transcriptFull": "Should I hang the paintings on this wall or on that one?\n(A) I have some more paint here.\n(B) We're still deciding where to put them.\n(C) Some beautiful artwork.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q26.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q26.mp3",
+      "audioDuration": 20.062063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Should I hang the paintings on this wall or on that one?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I have some more paint here.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "We're still deciding where to put them.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Some beautiful artwork.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 27",
+      "questionStart": 27,
+      "questionEnd": 27,
+      "part": 2,
+      "transcriptFull": "Is the orientation session in this building or in the Carson Building?\n(A) Starting on Monday.\n(B) It's just upstairs.\n(C) For the new employees.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q27.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q27.mp3",
+      "audioDuration": 20.062063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Is the orientation session in this building or in the Carson Building?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Starting on Monday.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "It's just upstairs.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "For the new employees.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 28",
+      "questionStart": 28,
+      "questionEnd": 28,
+      "part": 2,
+      "transcriptFull": "Which flavor of ice cream would you prefer, vanilla or chocolate?\n(A) I'll refer him to you.\n(B) Some of each, if there's enough.\n(C) It's next to the café.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q28.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q28.mp3",
+      "audioDuration": 21.49875,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Which flavor of ice cream would you prefer, vanilla or chocolate?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I'll refer him to you.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Some of each, if there's enough.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "It's next to the café.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 29",
+      "questionStart": 29,
+      "questionEnd": 29,
+      "part": 2,
+      "transcriptFull": "Will the seminar be a full day or a half day?\n(A) I haven't received the schedule yet.\n(B) The third door on the left.\n(C) Why was it moved?",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q29.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q29.mp3",
+      "audioDuration": 19.670188,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Will the seminar be a full day or a half day?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I haven't received the schedule yet.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "The third door on the left.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Why was it moved?",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 30",
+      "questionStart": 30,
+      "questionEnd": 30,
+      "part": 2,
+      "transcriptFull": "Would you like a room on the first or one the upper floors?\n(A) It's just around the corner.\n(B) I like the floor plan.\n(C) Either one is fine.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q30.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Yes-No-Lua-chon/Q30.mp3",
+      "audioDuration": 23.170625,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Would you like a room on the first or one the upper floors?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "It's just around the corner.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I like the floor plan.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Either one is fine.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    }
+  ]
+}

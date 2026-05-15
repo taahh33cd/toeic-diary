@@ -1,0 +1,4 @@
+"I want to start by updating everyone on our latest project. As you know, to maintain our position as a leading shipping company, we need to constantly change to meet customer expectations. Since customers prefer to do most things online, we will be introducing a new delivery tracking service. By using a smartphone app, customers can see where their packages are in real-time. Of course, this implementation is a major project and will take place over the next year. So, starting next month, we will begin collaborating with developers from XKP Software to create this tracking service."
+83. According to the speaker, why are some changes necessary?
+84. What additional service does the company plan to provide?
+85. According to the speaker, what will begin next month?

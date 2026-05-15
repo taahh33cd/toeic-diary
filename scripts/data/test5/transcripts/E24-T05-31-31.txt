@@ -1,0 +1,6 @@
+Which band is playing at the club tonight?
+(A) There's always a comedy show on Thursday nights.
+(B) Yes, I've played the piano for many years.
+(C) Their number one hit.
+
+Answer: A

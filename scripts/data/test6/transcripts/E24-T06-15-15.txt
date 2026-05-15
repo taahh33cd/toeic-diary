@@ -1,0 +1,6 @@
+Did you want to sign up for a one-year magazine subscription?
+(A) How much will it cost?
+(B) Near the service center.
+(C) Akiko works at the front desk.
+
+Answer: A

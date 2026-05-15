@@ -1,6 +1,0 @@
-Would you like to attend our next company retreat?
-(A) I'm parked next to that tree.
-(B) Yes, I'd like that.
-(C) Just some grilled vegetables.
-
-Answer: B

@@ -1,0 +1,9 @@
+W-Am: Hello, you've reached Quick Phone Repair Service.
+M-Cn: Hi, I went online to schedule a repair for my mobile phone, but all appointments in your store were booked for today. Have you had any cancellations?
+W-Am: No, unfortunately not. What's the problem with your phone?
+M-Cn: The phone only lasts about an hour before it has to be recharged.
+W-Am: It sounds like you need a new battery. If you come to the store now, we can try to fit you in as a walk-in appointment. You may have to wait around for a bit.
+M-Cn: I don't mind waiting.
+41. What did the man try to do online?
+42. What does the man say is wrong with his mobile phone?
+43. What will the man most likely do next?

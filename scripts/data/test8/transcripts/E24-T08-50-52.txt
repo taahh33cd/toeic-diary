@@ -1,0 +1,8 @@
+M-Au: Good morning, Ms. Gomez. I wanted to update you on the travel plans for your meeting with Scarney Department Store.
+W-Am: Thanks for taking care of that. They're prospective clients, and I've been so busy sending them samples and preparing my presentation that I haven't given a thought to my reservations.
+M-Au: Happy to help. I've confirmed your plane reservation. Just remember, Vela Air only allows one free piece of carry-on luggage. Otherwise, there'll be an extra charge.
+W-Am: OK. Can you forward the plane ticket confirmation, please?
+M-Au: I'll e-mail you right now.
+50. Who is the woman scheduled to meet with?
+51. What does the man remind the woman about?
+52. What does the man agree to do?

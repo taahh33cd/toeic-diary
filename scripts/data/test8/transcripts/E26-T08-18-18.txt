@@ -1,6 +1,0 @@
-Should we take the client to Asako's Steakhouse?
-(A) He's a vegetarian.
-(B) I don't have any extra copies.
-(C) It was a very interesting report.
-
-Answer: A

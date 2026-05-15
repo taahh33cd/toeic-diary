@@ -1,0 +1,6 @@
+Would you like to take this vehicle for a test drive?
+(A) Because there's no parking available.
+(B) I heard a new model is coming out in March.
+(C) Only two doors.
+
+Answer: B

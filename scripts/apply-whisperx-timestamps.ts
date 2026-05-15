@@ -118,8 +118,8 @@ async function main() {
       await prisma.sentence.update({
         where: { id: sentence.id },
         data: {
-          startTime: ts.startTime,
-          endTime: ts.endTime,
+          startTime: Math.max(0, ts.startTime - 0.25),
+          endTime: ts.endTime + 0.4,
         },
       });
       sentenceUpdated++;

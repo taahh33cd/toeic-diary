@@ -1,0 +1,6 @@
+Which version of the contract do you have?
+(A) He's a general contractor.
+(B) On the second floor.
+(C) The final one.
+
+Answer: C

@@ -1,0 +1,6 @@
+Could you request a technician to repair the packaging machine?
+(A) Three years of technical school.
+(B) Sure, I'll do that.
+(C) The blue one with gold trim.
+
+Answer: B

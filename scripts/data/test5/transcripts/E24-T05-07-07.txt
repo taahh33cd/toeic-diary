@@ -1,0 +1,6 @@
+There's a meeting in the conference room soon, right?
+(A) Yes, it's for the whole department.
+(B) No, put it in the closet.
+(C) The rent is too high.
+
+Answer: A

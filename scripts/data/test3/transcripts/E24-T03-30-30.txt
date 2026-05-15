@@ -1,0 +1,6 @@
+Aren't you picking up the clients from the airport?
+(A) A product demonstration.
+(B) No, I believe Tomoko is doing that.
+(C) He prefers an aisle seat.
+
+Answer: B

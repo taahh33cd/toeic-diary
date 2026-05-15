@@ -1,0 +1,6 @@
+Are you joining the team for today's briefing?
+(A) My top client is in town.
+(B) Vittorio's Pizzeria.
+(C) I enjoyed that film.
+
+Answer: A

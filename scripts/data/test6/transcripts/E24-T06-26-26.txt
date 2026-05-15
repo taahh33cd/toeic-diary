@@ -1,0 +1,6 @@
+Should we meet to discuss our research project?
+(A) A publishing manual.
+(B) Put something on my calendar.
+(C) Alphabetical order is fine, I think.
+
+Answer: B

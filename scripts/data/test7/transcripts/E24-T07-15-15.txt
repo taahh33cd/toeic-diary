@@ -1,0 +1,6 @@
+My appointment is with Dr. Hamdi today, right?
+(A) Usually, it's an annual check-up.
+(B) No, the parking lot is not free.
+(C) Yes, the doctor will see you shortly.
+
+Answer: C

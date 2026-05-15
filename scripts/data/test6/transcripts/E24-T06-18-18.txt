@@ -1,0 +1,6 @@
+Would you like me to help you open a savings account?
+(A) I've already counted them.
+(B) That'd be great.
+(C) 50 euros each.
+
+Answer: B

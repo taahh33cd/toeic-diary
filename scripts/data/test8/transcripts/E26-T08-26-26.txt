@@ -1,6 +1,0 @@
-Can't you help me install this furniture?
-(A) Sure, if you can wait a minute.
-(B) It's not very comfortable.
-(C) That's a good sofa.
-
-Answer: A

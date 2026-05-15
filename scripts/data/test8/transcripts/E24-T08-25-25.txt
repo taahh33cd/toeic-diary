@@ -1,0 +1,6 @@
+Would it be cheaper to ship by express mail or overnight delivery?
+(A) Express mail is less expensive.
+(B) I'd like a large.
+(C) It's in the next shipment.
+
+Answer: A

@@ -1,0 +1,6 @@
+When did you place the order for the lumber?
+(A) Yes, it's a great place for hiking.
+(B) It's out of stock right now.
+(C) The warehouse on William Street.
+
+Answer: B

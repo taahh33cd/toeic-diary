@@ -1,0 +1,6 @@
+Does the manager want us to pick up the supplies or have them delivered?
+(A) She'll be here soon.
+(B) You dropped your pen.
+(C) You're right about that.
+
+Answer: A

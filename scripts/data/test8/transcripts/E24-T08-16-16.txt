@@ -1,0 +1,6 @@
+Should we move the employee lounge to the basement?
+(A) He attended the talk.
+(B) The reservation is for two people.
+(C) No, it's too dark down there.
+
+Answer: C

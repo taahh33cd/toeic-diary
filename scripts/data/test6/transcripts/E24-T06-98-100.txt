@@ -1,0 +1,4 @@
+Welcome to this bus tour of the Kensey Harbor. Unfortunately, one of the stops on our itinerary, the museum, is closed, and we won't be able to visit it. The museum had a water pipe burst overnight. It looks like repair and cleanup work will last this whole week. I apologize, since I know many of you were looking forward to seeing the museum's exhibit on local fish. To make up for this, we're providing complimentary meal vouchers so you can enjoy a free lunch, on us, when we get to the area around the cannery.
+98. Which stop has been canceled?
+99. Why has a stop been canceled?
+100. What will the listeners receive?

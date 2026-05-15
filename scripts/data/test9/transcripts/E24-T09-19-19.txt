@@ -1,0 +1,6 @@
+Should I pick up the food order for Ms. Santos?
+(A) Let's meet next week.
+(B) Yes, if you have the time.
+(C) I don't cook with vegetable oil.
+
+Answer: B

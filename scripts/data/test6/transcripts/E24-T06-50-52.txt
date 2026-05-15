@@ -1,0 +1,8 @@
+W-Br: Good morning. You've reached Accounts Payable.
+M-Cn: Hi. I'm calling from the editorial department. One of our freelance writers has not received payment yet, so I'm calling to inquire about it. Her contract number is 9356.
+W-Br: OK, let me check. Hmm. It looks like she should have been paid last week. But Adem handles those requests, and he was on vacation. He's just catching up today.
+M-Cn: Do you have an estimate of how long it will take to process the request?
+W-Br: I'm not sure, but I can speak to Adem.
+50. Why is the man calling?
+51. According to the woman, what caused a delay?
+52. What information will the woman most likely provide later?

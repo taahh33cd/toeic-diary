@@ -1,6 +1,0 @@
-Do the tickets go on sale this week or next?
-(A) The cafeteria downstairs.
-(B) They're already sold out.
-(C) Sure, no problem.
-
-Answer: B

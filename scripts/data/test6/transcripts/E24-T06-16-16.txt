@@ -1,0 +1,6 @@
+Does this pasta come with a side salad?
+(A) We do have a tablecloth.
+(B) No, I'm afraid not.
+(C) I like it too.
+
+Answer: B

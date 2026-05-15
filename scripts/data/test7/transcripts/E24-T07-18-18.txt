@@ -1,0 +1,6 @@
+Should I take the train or the bus to the airport?
+(A) The bus stop is five kilometers away.
+(B) There's enough for all of us.
+(C) No, I went to the training session.
+
+Answer: A

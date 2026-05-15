@@ -1,0 +1,1569 @@
+{
+  "testName": "Why – How",
+  "testSlug": "part2-why-how",
+  "orderIndex": 0,
+  "examCode": "P2",
+  "testCode": "part2-why-how",
+  "lessons": [
+    {
+      "title": "Question 1",
+      "questionStart": 1,
+      "questionEnd": 1,
+      "part": 2,
+      "transcriptFull": "How did your job interview go?\n(A) For production manager.\n(B) Fine, I think.\n(C) With Ms. Wilde.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q01.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q01.mp3",
+      "audioDuration": 17.580438,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "How did your job interview go?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "For production manager.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Fine, I think.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "With Ms. Wilde.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 2",
+      "questionStart": 2,
+      "questionEnd": 2,
+      "part": 2,
+      "transcriptFull": "Why are you looking at the furniture catalog?\n(A) A small armchair.\n(B) I'm ordering a new lamp.\n(C) In the mailbox.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q02.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q02.mp3",
+      "audioDuration": 18.729813,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Why are you looking at the furniture catalog?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "A small armchair.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I'm ordering a new lamp.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "In the mailbox.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 3",
+      "questionStart": 3,
+      "questionEnd": 3,
+      "part": 2,
+      "transcriptFull": "How did you hear about the job?\n(A) The volume is too low.\n(B) Yes, I believe he started last week.\n(C) It was advertised in the newspaper.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q03.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q03.mp3",
+      "audioDuration": 19.983688,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "How did you hear about the job?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "The volume is too low.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Yes, I believe he started last week.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "It was advertised in the newspaper.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 4",
+      "questionStart": 4,
+      "questionEnd": 4,
+      "part": 2,
+      "transcriptFull": "Why is the park so crowded today?\n(A) There's a free concert later.\n(B) A nearby parking area.\n(C) No, not too cloudy.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q04.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q04.mp3",
+      "audioDuration": 17.789375,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Why is the park so crowded today?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "There's a free concert later.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "A nearby parking area.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "No, not too cloudy.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 5",
+      "questionStart": 5,
+      "questionEnd": 5,
+      "part": 2,
+      "transcriptFull": "How many packages did your company ship last month?\n(A) No, I don't need any.\n(B) You can take the bus to the port.\n(C) About 5,000.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q05.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q05.mp3",
+      "audioDuration": 19.565688,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "How many packages did your company ship last month?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "No, I don't need any.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "You can take the bus to the port.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "About 5,000.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 6",
+      "questionStart": 6,
+      "questionEnd": 6,
+      "part": 2,
+      "transcriptFull": "Why was the price of this computer reduced?\n(A) Can I help you find something?\n(B) At least fifty dollars.\n(C) Because a newer model just came out.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q06.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q06.mp3",
+      "audioDuration": 18.416313,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Why was the price of this computer reduced?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Can I help you find something?",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "At least fifty dollars.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Because a newer model just came out.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 7",
+      "questionStart": 7,
+      "questionEnd": 7,
+      "part": 2,
+      "transcriptFull": "How often are tours of the gallery given?\n(A) At the front desk.\n(B) Sculptures and paintings.\n(C) Twice a day.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q07.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q07.mp3",
+      "audioDuration": 18.782063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "How often are tours of the gallery given?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "At the front desk.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Sculptures and paintings.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Twice a day.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 8",
+      "questionStart": 8,
+      "questionEnd": 8,
+      "part": 2,
+      "transcriptFull": "How is Marco getting to Shanghai?\n(A) He's flying there from New York.\n(B) Sure, I'll return the key.\n(C) Only for a few days.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q08.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q08.mp3",
+      "audioDuration": 21.524875,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "How is Marco getting to Shanghai?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "He's flying there from New York.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Sure, I'll return the key.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Only for a few days.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 9",
+      "questionStart": 9,
+      "questionEnd": 9,
+      "part": 2,
+      "transcriptFull": "Why are the new employees out of the office?\n(A) It's in the center of town.\n(B) Because they're at a training session.\n(C) No thanks, we have enough.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q09.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q09.mp3",
+      "audioDuration": 21.76,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Why are the new employees out of the office?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "It's in the center of town.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Because they're at a training session.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "No thanks, we have enough.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 10",
+      "questionStart": 10,
+      "questionEnd": 10,
+      "part": 2,
+      "transcriptFull": "How was your first week working at the radio station?\n(A) Could you turn the radio up?\n(B) On the morning news.\n(C) I really learned a lot.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q10.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q10.mp3",
+      "audioDuration": 21.76,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "How was your first week working at the radio station?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Could you turn the radio up?",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "On the morning news.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "I really learned a lot.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 11",
+      "questionStart": 11,
+      "questionEnd": 11,
+      "part": 2,
+      "transcriptFull": "How often do you travel for work?\n(A) I'll be back soon.\n(B) Those will be shipped on Tuesday.\n(C) Every couple of months.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q11.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q11.mp3",
+      "audioDuration": 17.136313,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "How often do you travel for work?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I'll be back soon.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Those will be shipped on Tuesday.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Every couple of months.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 12",
+      "questionStart": 12,
+      "questionEnd": 12,
+      "part": 2,
+      "transcriptFull": "Why did she leave the meeting so early?\n(A) By taxi\n(B) Didn't she tell you?\n(C) In half an hour.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q12.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q12.mp3",
+      "audioDuration": 15.6735,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Why did she leave the meeting so early?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "By taxi",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Didn't she tell you?",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "In half an hour.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 13",
+      "questionStart": 13,
+      "questionEnd": 13,
+      "part": 2,
+      "transcriptFull": "How did you find a local distributor?\n(A) I don't recall where it is.\n(B) I searched online.\n(C) On platform four.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q13.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q13.mp3",
+      "audioDuration": 18.599188,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "How did you find a local distributor?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I don't recall where it is.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I searched online.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "On platform four.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 14",
+      "questionStart": 14,
+      "questionEnd": 14,
+      "part": 2,
+      "transcriptFull": "Why is the restaurant closed today?\n(A) There's a private party.\n(B) Some water, please.\n(C) Not until Tuesday night.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q14.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q14.mp3",
+      "audioDuration": 17.240813,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Why is the restaurant closed today?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "There's a private party.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Some water, please.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Not until Tuesday night.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 15",
+      "questionStart": 15,
+      "questionEnd": 15,
+      "part": 2,
+      "transcriptFull": "How much does this watch cost?\n(A) Not very often these days.\n(B) It's quarter to eleven.\n(C) Is the price tag missing?",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q15.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q15.mp3",
+      "audioDuration": 19.853063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "How much does this watch cost?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Not very often these days.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "It's quarter to eleven.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Is the price tag missing?",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 16",
+      "questionStart": 16,
+      "questionEnd": 16,
+      "part": 2,
+      "transcriptFull": "Why is Ms. Jimenes in Moscow?\n(A) She's attending an economics forum.\n(B) It's a nonstop flight.\n(C) A few more months.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q16.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q16.mp3",
+      "audioDuration": 21.629375,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Why is Ms. Jimenes in Moscow?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "She's attending an economics forum.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "It's a nonstop flight.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "A few more months.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 17",
+      "questionStart": 17,
+      "questionEnd": 17,
+      "part": 2,
+      "transcriptFull": "How do I submit an invoice for this editing project?\n(A) Three hundred dollars.\n(B) Thanks, but only minor revisions.\n(C) Fax it to Mr. Sakda.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q17.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q17.mp3",
+      "audioDuration": 22.439188,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "How do I submit an invoice for this editing project?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Three hundred dollars.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Thanks, but only minor revisions.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Fax it to Mr. Sakda.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 18",
+      "questionStart": 18,
+      "questionEnd": 18,
+      "part": 2,
+      "transcriptFull": "Why didn't Jim accept the vice president position?\n(A) In his office.\n(B) Except for the night shift.\n(C) Because he wants to retire.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q18.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q18.mp3",
+      "audioDuration": 21.942875,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Why didn't Jim accept the vice president position?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "In his office.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Except for the night shift.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Because he wants to retire.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 19",
+      "questionStart": 19,
+      "questionEnd": 19,
+      "part": 2,
+      "transcriptFull": "How long will the morning training session last?\n(A) Almost every Monday.\n(B) Probably about an hour.\n(C) It was very informative.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q19.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q19.mp3",
+      "audioDuration": 20.271,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "How long will the morning training session last?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Almost every Monday.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Probably about an hour.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "It was very informative.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 20",
+      "questionStart": 20,
+      "questionEnd": 20,
+      "part": 2,
+      "transcriptFull": "Why did you come to the office early today?\n(A) Because I had to finish a report.\n(B) Usually at eight-thirty in the morning.\n(C) I'm sorry, but I can't.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q20.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q20.mp3",
+      "audioDuration": 23.275125,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Why did you come to the office early today?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Because I had to finish a report.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Usually at eight-thirty in the morning.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "I'm sorry, but I can't.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 21",
+      "questionStart": 21,
+      "questionEnd": 21,
+      "part": 2,
+      "transcriptFull": "How many clients will be visiting?\n(A) Yes, there are.\n(B) At two o'clock.\n(C) About a dozen.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q21.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q21.mp3",
+      "audioDuration": 18.860438,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "How many clients will be visiting?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Yes, there are.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "At two o'clock.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "About a dozen.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 22",
+      "questionStart": 22,
+      "questionEnd": 22,
+      "part": 2,
+      "transcriptFull": "Why did Yumi leave the seminar early?\n(A) Seven o'clock this morning.\n(B) Some are in Room 26.\n(C) She had a doctor's appointment.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q22.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q22.mp3",
+      "audioDuration": 20.062063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Why did Yumi leave the seminar early?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Seven o'clock this morning.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Some are in Room 26.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "She had a doctor's appointment.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 23",
+      "questionStart": 23,
+      "questionEnd": 23,
+      "part": 2,
+      "transcriptFull": "Why are our supplies so low?\n(A) I'm surprised to see you!\n(B) The bottom shelf.\n(C) The delivery's been delayed.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q23.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q23.mp3",
+      "audioDuration": 20.062063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Why are our supplies so low?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I'm surprised to see you!",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "The bottom shelf.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "The delivery's been delayed.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 24",
+      "questionStart": 24,
+      "questionEnd": 24,
+      "part": 2,
+      "transcriptFull": "Why don't we go out for some fresh air?\n(A) It is out of stock.\n(B) Yes, I'd like to take a break.\n(C) The chairs go over there.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q24.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q24.mp3",
+      "audioDuration": 21.4465,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Why don't we go out for some fresh air?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "It is out of stock.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Yes, I'd like to take a break.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "The chairs go over there.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 25",
+      "questionStart": 25,
+      "questionEnd": 25,
+      "part": 2,
+      "transcriptFull": "How was your stay at the hotel?\n(A) I'm sorry, I can't.\n(B) Near Fourth Avenue.\n(C) I enjoyed it.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q25.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q25.mp3",
+      "audioDuration": 20.1665,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "How was your stay at the hotel?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I'm sorry, I can't.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Near Fourth Avenue.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "I enjoyed it.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 26",
+      "questionStart": 26,
+      "questionEnd": 26,
+      "part": 2,
+      "transcriptFull": "Why did you get a new mobile phone?\n(A) In my briefcase.\n(B) I lost my old one.\n(C) Next September.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q26.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q26.mp3",
+      "audioDuration": 20.715125,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Why did you get a new mobile phone?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "In my briefcase.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I lost my old one.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Next September.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 27",
+      "questionStart": 27,
+      "questionEnd": 27,
+      "part": 2,
+      "transcriptFull": "Why's the shopping center so busy?\n(A) I have to buy food for dinner.\n(B) A new store opened there last week.\n(C) A business proposal.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q27.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q27.mp3",
+      "audioDuration": 21.629375,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Why's the shopping center so busy?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I have to buy food for dinner.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "A new store opened there last week.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "A business proposal.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 28",
+      "questionStart": 28,
+      "questionEnd": 28,
+      "part": 2,
+      "transcriptFull": "How much do the theater tickets cost?\n(A) Only sixteen dollars.\n(B) I'm sure they're not lost.\n(C) There's a concert at the theater.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q28.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q28.mp3",
+      "audioDuration": 21.4465,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "How much do the theater tickets cost?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Only sixteen dollars.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I'm sure they're not lost.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "There's a concert at the theater.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 29",
+      "questionStart": 29,
+      "questionEnd": 29,
+      "part": 2,
+      "transcriptFull": "How did you find out about that movie?\n(A) To the cinema.\n(B) We have a good view.\n(C) Marco mentioned it.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q29.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q29.mp3",
+      "audioDuration": 18.860438,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "How did you find out about that movie?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "To the cinema.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "We have a good view.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Marco mentioned it.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 30",
+      "questionStart": 30,
+      "questionEnd": 30,
+      "part": 2,
+      "transcriptFull": "Why has the train been delayed?\n(A) For about two hours.\n(B) Lay it over there.\n(C) They're repairing the tracks.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q30.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Why-How/Q30.mp3",
+      "audioDuration": 19.800813,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Why has the train been delayed?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "For about two hours.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Lay it over there.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "They're repairing the tracks.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    }
+  ]
+}

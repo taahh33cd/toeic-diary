@@ -1,0 +1,6 @@
+How was your morning client meeting?
+(A) It's great to meet you.
+(B) No, over in conference room two.
+(C) The contract is now officially signed.
+
+Answer: C

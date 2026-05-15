@@ -1,0 +1,4 @@
+(A) The man is holding a bucket of water.
+(B) The man is replacing a tire.
+(C) The man is watering a tree.
+(D) The man is scrubbing the front of a car.

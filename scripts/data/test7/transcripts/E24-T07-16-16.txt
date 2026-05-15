@@ -1,0 +1,6 @@
+Where should I store this shipment of paper?
+(A) The store closes at four o'clock.
+(B) By express mail.
+(C) Well, the supply room is full.
+
+Answer: C

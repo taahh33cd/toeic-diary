@@ -1,0 +1,6 @@
+Is the heating system working?
+(A) Yes, that's my Web site.
+(B) A five-kilometer run.
+(C) I just called maintenance.
+
+Answer: C

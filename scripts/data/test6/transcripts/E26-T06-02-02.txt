@@ -1,4 +1,0 @@
-(A) He's facing a machine.
-(B) He's lifting up a machine.
-(C) He's wiping down a machine.
-(D) He's repairing a machine with a tool.

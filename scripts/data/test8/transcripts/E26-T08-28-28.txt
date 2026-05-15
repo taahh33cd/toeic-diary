@@ -1,6 +1,0 @@
-What can I do for you, ma'am?
-(A) Tomorrow would be fine.
-(B) My key card doesn't work.
-(C) Thanks, I will.
-
-Answer: B

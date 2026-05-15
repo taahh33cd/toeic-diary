@@ -1,0 +1,6 @@
+Where do you plan to stay during your visit to the city?
+(A) I thought the building had twelve floors.
+(B) Oh, just to present at a conference.
+(C) At a friend's house.
+
+Answer: C

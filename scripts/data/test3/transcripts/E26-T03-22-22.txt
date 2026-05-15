@@ -1,6 +1,0 @@
-Shouldn't this package be returned?
-(A) Several packets of stamps from the post office.
-(B) Yes, it has to go back to the manufacturer.
-(C) Didn't she return from her trip last week?
-
-Answer: B

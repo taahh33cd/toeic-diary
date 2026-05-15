@@ -1,0 +1,8 @@
+M-Au: Thanks for meeting with us, Ms. Raj. We're excited to learn about the product your company has developed for factories like ours.
+W-Am: I'm happy to tell you about it. It's an application to monitor factory machines. It identifies problems in operations and generates a report about the efficiency of each machine.
+M-Cn: That sounds great! We have about 100 machine operators here. How much training would be involved?
+W-Am: About an hour's worth. We provide a video with step-by-step instructions.
+M-Au: Excellent. That's good to know.
+41. Why is the woman visiting?
+42. What did the woman's company design?
+43. What does the woman say her company can provide?

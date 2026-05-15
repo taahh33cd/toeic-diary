@@ -1,0 +1,6 @@
+Will the company's warehouse be built in the city or farther out?
+(A) It'll be in the city.
+(B) Yes, he's wearing a red sweater.
+(C) Two square kilometers.
+
+Answer: A

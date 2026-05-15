@@ -1,0 +1,6 @@
+How many employees work in your department?
+(A) I don't mind taking notes at the meeting.
+(B) A couple dozen, I think.
+(C) It's seven meters long.
+
+Answer: B

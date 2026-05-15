@@ -1,0 +1,6 @@
+Which days can you work, Thursday or Friday?
+(A) I have mandatory training on Friday.
+(B) Yes, it was a good show.
+(C) It’s a one-day schedule.
+
+Answer: A

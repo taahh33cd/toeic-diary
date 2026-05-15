@@ -1,6 +1,0 @@
-Are you taking the bus or a taxi to the client's office?
-(A) To pick up some coffee.
-(B) I brought my car today.
-(C) They weren't too expensive.
-
-Answer: B

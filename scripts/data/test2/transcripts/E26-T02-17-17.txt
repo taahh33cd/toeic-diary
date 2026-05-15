@@ -1,6 +1,0 @@
-The estimated price for this car insurance is higher than we expected.
-(A) We'll check to see if there's a cheaper rate.
-(B) There's another filling station nearby.
-(C) The parking garage on the corner.
-
-Answer: A

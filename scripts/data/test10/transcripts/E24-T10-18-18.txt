@@ -1,0 +1,6 @@
+Who can I talk to about scheduling a haircut?
+(A) Will you be available tomorrow afternoon?
+(B) Not too short on the sides, please.
+(C) Thanks, the scheduling software has been helpful!
+
+Answer: A

@@ -1,0 +1,6 @@
+Can I take another bottle of water?
+(A) If there are any left.
+(B) An old refrigerator.
+(C) No, the clock is fast.
+
+Answer: A

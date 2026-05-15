@@ -230,9 +230,13 @@ function parseFilename(filename: string): FileMeta | null {
 // --- Line helpers ------------------------------------------------------------
 
 function parseSpeakerLine(line: string): { speaker: string; text: string } | null {
-  const m = line.match(/^(W|M\d?|Narrator|Man|Woman):\s*(.+)$/i);
+  const m = line.match(/^(W(?:-\w+)?|M(?:\d+|-\w+)?|Narrator|Man|Woman):\s*(.+)$/i);
   if (!m) return null;
   return { speaker: m[1].toUpperCase(), text: m[2].trim() };
+}
+
+function stripSpeakerPrefix(line: string): string {
+  return line.replace(/^(?:W(?:-\w+)?|M(?:\d+|-\w+)?|Narrator|Man|Woman):\s*/i, "");
 }
 
 function parseNumberedLine(line: string): number | null {
@@ -347,11 +351,12 @@ function parsePart2Block(qNum: number, lines: string[], meta: FileMeta): LessonD
 
   for (const line of lines) {
     if (!line) continue;
-    const ans = parseAnswerLine(line);
+    const stripped = stripSpeakerPrefix(line);
+    const ans = parseAnswerLine(stripped);
     if (ans) { correctOption = ans; continue; }
-    const opt = parseOptionLine(line);
+    const opt = parseOptionLine(stripped);
     if (opt) { options.push(opt); continue; }
-    if (!questionText) questionText = line;
+    if (!questionText) questionText = stripped;
   }
 
   if (!questionText || options.length === 0) return null;
@@ -396,15 +401,9 @@ function parsePart2Block(qNum: number, lines: string[], meta: FileMeta): LessonD
 
 function parsePart34File(filePath: string, meta: FileMeta): LessonDef[] {
   const content = fs.readFileSync(filePath, "utf-8");
-  const rawSections = content.split(/\r?\n(\r?\n)+/);
-  const lessons: LessonDef[] = [];
-  for (const section of rawSections) {
-    const lines = section.split(/\r?\n/);
-    if (lines.every((l) => !l.trim())) continue;
-    const lesson = parsePart34Section(lines, meta);
-    if (lesson) lessons.push(lesson);
-  }
-  return lessons;
+  const lines = content.split(/\r?\n/);
+  const lesson = parsePart34Section(lines, meta);
+  return lesson ? [lesson] : [];
 }
 
 function parsePart34Section(lines: string[], meta: FileMeta): LessonDef | null {
@@ -420,7 +419,12 @@ function parsePart34Section(lines: string[], meta: FileMeta): LessonDef | null {
     if (qMatch) { questionNums.push(parseInt(qMatch[1], 10)); continue; }
 
     const s = parseSpeakerLine(line);
-    if (s) { spokenLines.push(s); continue; }
+    if (s) {
+      for (const sent of splitIntoSentences(s.text)) {
+        spokenLines.push({ speaker: s.speaker, text: sent });
+      }
+      continue;
+    }
 
     for (const sent of splitIntoSentences(line)) {
       spokenLines.push({ speaker: null, text: sent });
@@ -523,8 +527,10 @@ function main() {
   }
 
   const testNum = parseInt(testCode.replace(/\D/g, ""), 10) || 1;
-  const testName = `ETS 2026 Test ${testNum}`;
-  const testSlug = `ets-2026-test-${testNum}`;
+  const yearSuffix = examCode.match(/\d+/)?.[0] ?? "26";
+  const year = yearSuffix.length === 2 ? "20" + yearSuffix : yearSuffix;
+  const testName = `ETS ${year} Test ${testNum}`;
+  const testSlug = `ets-${year}-test-${testNum}`;
 
   console.log(`\nParsing ${testName} (${examCode}-${testCode})`);
   console.log(`Source: ${transcriptsDir}\n`);

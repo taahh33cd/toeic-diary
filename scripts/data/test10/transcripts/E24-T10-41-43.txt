@@ -1,0 +1,6 @@
+M: Welcome, Farida. Here is your ID badge. My name is Malik Al-Johani. I’m a senior engineer, and I’ll be serving as your mentor through the new employee onboarding process during your first 60 days at Tilmer Tech.
+W: I’m happy to be here. Your company is one of the top robotic vacuum manufacturers in the country. Since I just graduated from university, I’m excited to apply all that theory directly to this engineering job.
+M: Exactly! And now, we’ll head to our first activity of the day. Like every new engineer here, your task is to disassemble and reassemble our best-selling product. This is the first step in deepening your knowledge of how our products function.
+41. Who is the man?
+42. What kind of products does the company manufacture?
+43. What will the woman likely do next?

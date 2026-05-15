@@ -1,0 +1,4 @@
+(A) The man is reaching above a shelf.
+(B) The man is adjusting his glasses.
+(C) The man is paying for an item.
+(D) The man is trying on gloves.

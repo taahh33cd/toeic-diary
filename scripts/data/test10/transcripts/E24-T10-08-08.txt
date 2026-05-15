@@ -1,0 +1,6 @@
+Is your flight tomorrow or this afternoon?
+(A) In-flight snacks.
+(B) It's this afternoon.
+(C) At baggage claim.
+
+Answer: B

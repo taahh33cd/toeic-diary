@@ -1,0 +1,6 @@
+We should leave for our training course soon, shouldn't we?
+(A) We still have a few minutes.
+(B) There's a map on the wall.
+(C) Two sessions per day.
+
+Answer: A

@@ -1,0 +1,4 @@
+W: Hi, this is Emily from Speedy Services. I’ll be picking you up at Central Station today. You selected a location near the ticket office for pickup, but that street is currently experiencing heavy traffic. Would it be possible to change the pickup location to just outside the station's Grand Concourse? That is the designated area for ride-sharing services. If you agree to this change, please respond to the prompt in the app to let me know. Thank you!
+95. Who most likely is the speaker?
+96. Where does the speaker want to meet?
+97. How can a change be confirmed?

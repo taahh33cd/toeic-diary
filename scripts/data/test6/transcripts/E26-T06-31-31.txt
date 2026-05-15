@@ -1,6 +1,0 @@
-The engineering team would like to meet sometime today.
-(A) Yes, Mr. Tamura is from Kyoto.
-(B) Before or after the company-wide meeting?
-(C) That was a long baseball game.
-
-Answer: B

@@ -1,0 +1,6 @@
+You're taking a business class in the afternoon, aren't you?
+(A) Actually, it's in the morning.
+(B) That office is on the corner.
+(C) I have the train schedule here.
+
+Answer: A

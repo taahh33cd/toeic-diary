@@ -1,0 +1,6 @@
+Is the safety inspection scheduled for this month or next month?
+(A) I thought I saved the file.
+(B) The factory supervisor.
+(C) It's this Wednesday.
+
+Answer: C

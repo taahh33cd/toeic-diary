@@ -1,0 +1,6 @@
+Are you able to make a prototype soon?
+(A) Yes, my team is working on it.
+(B) I thought it was very innovative.
+(C) He's a good typist.
+
+Answer: A

@@ -1,0 +1,6 @@
+Could you ask the next patient to come in?
+(A) It's in the cabinet.
+(B) The waiting room is empty.
+(C) They're both studying nursing.
+
+Answer: B

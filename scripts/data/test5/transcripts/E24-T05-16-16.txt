@@ -1,0 +1,6 @@
+Are you taking a vacation once this project is over?
+(A) Yes—I'm planning a trip to Barcelona.
+(B) This is your second time, isn't it?
+(C) Blueprints for a high-rise building.
+
+Answer: A

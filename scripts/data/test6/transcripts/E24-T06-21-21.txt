@@ -1,0 +1,6 @@
+Are you traveling in business class or economy?
+(A) My flight was just canceled.
+(B) My focus is history.
+(C) London, then New York.
+
+Answer: A

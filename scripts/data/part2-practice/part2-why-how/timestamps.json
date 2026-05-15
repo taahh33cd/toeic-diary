@@ -1,0 +1,752 @@
+{
+  "Question 1": {
+    "audioDuration": 17.58,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 3.9,
+        "endTime": 5.44
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 7.56,
+        "endTime": 8.92
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 11.04,
+        "endTime": 12.0
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 14.02,
+        "endTime": 14.86
+      }
+    ]
+  },
+  "Question 2": {
+    "audioDuration": 18.73,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 3.48,
+        "endTime": 5.74
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 7.7,
+        "endTime": 9.08
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 11.24,
+        "endTime": 12.58
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 14.56,
+        "endTime": 15.18
+      }
+    ]
+  },
+  "Question 3": {
+    "audioDuration": 19.98,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 2.8,
+        "endTime": 4.94
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 6.84,
+        "endTime": 8.52
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 10.68,
+        "endTime": 12.88
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 15.04,
+        "endTime": 16.84
+      }
+    ]
+  },
+  "Question 4": {
+    "audioDuration": 17.79,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 2.26,
+        "endTime": 5.1
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 7.34,
+        "endTime": 8.54
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 10.66,
+        "endTime": 11.84
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 13.84,
+        "endTime": 14.88
+      }
+    ]
+  },
+  "Question 5": {
+    "audioDuration": 19.57,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 3.1,
+        "endTime": 5.66
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 7.68,
+        "endTime": 9.16
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 11.24,
+        "endTime": 12.84
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 14.98,
+        "endTime": 15.68
+      }
+    ]
+  },
+  "Question 6": {
+    "audioDuration": 18.42,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 2.16,
+        "endTime": 5.32
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 7.44,
+        "endTime": 8.58
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 10.74,
+        "endTime": 12.86
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 13.78,
+        "endTime": 15.38
+      }
+    ]
+  },
+  "Question 7": {
+    "audioDuration": 18.78,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 3.32,
+        "endTime": 6.0
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 8.02,
+        "endTime": 9.22
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 11.36,
+        "endTime": 12.7
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 14.98,
+        "endTime": 15.78
+      }
+    ]
+  },
+  "Question 8": {
+    "audioDuration": 21.52,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 5.68,
+        "endTime": 7.92
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 10.22,
+        "endTime": 11.84
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 13.86,
+        "endTime": 15.3
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 17.28,
+        "endTime": 18.2
+      }
+    ]
+  },
+  "Question 9": {
+    "audioDuration": 21.76,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 5.86,
+        "endTime": 8.04
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 10.28,
+        "endTime": 11.56
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 13.58,
+        "endTime": 15.12
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 17.18,
+        "endTime": 18.38
+      }
+    ]
+  },
+  "Question 10": {
+    "audioDuration": 21.76,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 2.78,
+        "endTime": 8.3
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 10.48,
+        "endTime": 11.78
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 13.8,
+        "endTime": 14.66
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 16.7,
+        "endTime": 17.76
+      }
+    ]
+  },
+  "Question 11": {
+    "audioDuration": 17.14,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 3.66,
+        "endTime": 5.34
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 7.46,
+        "endTime": 8.4
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 10.5,
+        "endTime": 11.86
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 14.08,
+        "endTime": 15.14
+      }
+    ]
+  },
+  "Question 12": {
+    "audioDuration": 15.67,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 2.96,
+        "endTime": 5.34
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 7.42,
+        "endTime": 8.06
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 10.18,
+        "endTime": 11.04
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 12.98,
+        "endTime": 13.74
+      }
+    ]
+  },
+  "Question 13": {
+    "audioDuration": 18.6,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 3.14,
+        "endTime": 4.94
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 7.04,
+        "endTime": 9.16
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 11.22,
+        "endTime": 12.28
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 14.42,
+        "endTime": 15.8
+      }
+    ]
+  },
+  "Question 14": {
+    "audioDuration": 17.24,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 3.32,
+        "endTime": 5.18
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 7.18,
+        "endTime": 8.44
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 10.48,
+        "endTime": 11.46
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 13.58,
+        "endTime": 14.9
+      }
+    ]
+  },
+  "Question 15": {
+    "audioDuration": 19.85,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 2.46,
+        "endTime": 6.84
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 8.8,
+        "endTime": 10.32
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 12.44,
+        "endTime": 13.4
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 15.44,
+        "endTime": 16.7
+      }
+    ]
+  },
+  "Question 16": {
+    "audioDuration": 21.63,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 4.92,
+        "endTime": 7.22
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 9.6,
+        "endTime": 11.36
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 13.48,
+        "endTime": 14.28
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 16.82,
+        "endTime": 17.72
+      }
+    ]
+  },
+  "Question 17": {
+    "audioDuration": 22.44,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 3.04,
+        "endTime": 8.12
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 9.14,
+        "endTime": 12.6
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 13.46,
+        "endTime": 15.36
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 17.54,
+        "endTime": 19.14
+      }
+    ]
+  },
+  "Question 18": {
+    "audioDuration": 21.94,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 5.76,
+        "endTime": 8.94
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 10.96,
+        "endTime": 11.76
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 13.96,
+        "endTime": 15.14
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 17.24,
+        "endTime": 18.62
+      }
+    ]
+  },
+  "Question 19": {
+    "audioDuration": 20.27,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 4.06,
+        "endTime": 7.26
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 9.38,
+        "endTime": 10.44
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 12.6,
+        "endTime": 13.78
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 15.84,
+        "endTime": 16.98
+      }
+    ]
+  },
+  "Question 20": {
+    "audioDuration": 23.28,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 5.94,
+        "endTime": 8.36
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 10.56,
+        "endTime": 12.28
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 14.86,
+        "endTime": 16.14
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 18.26,
+        "endTime": 19.7
+      }
+    ]
+  },
+  "Question 21": {
+    "audioDuration": 18.86,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 5.84,
+        "endTime": 8.18
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 10.02,
+        "endTime": 11.2
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 13.04,
+        "endTime": 13.56
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 15.82,
+        "endTime": 16.56
+      }
+    ]
+  },
+  "Question 22": {
+    "audioDuration": 20.06,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 4.52,
+        "endTime": 7.2
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 9.48,
+        "endTime": 10.3
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 11.24,
+        "endTime": 13.64
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 15.94,
+        "endTime": 17.16
+      }
+    ]
+  },
+  "Question 23": {
+    "audioDuration": 20.06,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 6.18,
+        "endTime": 8.48
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 10.42,
+        "endTime": 11.74
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 13.48,
+        "endTime": 14.26
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 16.36,
+        "endTime": 17.56
+      }
+    ]
+  },
+  "Question 24": {
+    "audioDuration": 21.45,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 6.06,
+        "endTime": 8.22
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 8.88,
+        "endTime": 10.92
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 12.86,
+        "endTime": 14.38
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 16.42,
+        "endTime": 17.6
+      }
+    ]
+  },
+  "Question 25": {
+    "audioDuration": 20.17,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 6.26,
+        "endTime": 8.54
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 10.5,
+        "endTime": 12.1
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 13.82,
+        "endTime": 14.84
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 17.0,
+        "endTime": 17.86
+      }
+    ]
+  },
+  "Question 26": {
+    "audioDuration": 20.72,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 6.02,
+        "endTime": 8.34
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 10.2,
+        "endTime": 11.28
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 13.3,
+        "endTime": 14.46
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 16.48,
+        "endTime": 17.34
+      }
+    ]
+  },
+  "Question 27": {
+    "audioDuration": 21.63,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 6.32,
+        "endTime": 7.9
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 9.76,
+        "endTime": 11.52
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 13.58,
+        "endTime": 15.42
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 17.38,
+        "endTime": 18.56
+      }
+    ]
+  },
+  "Question 28": {
+    "audioDuration": 21.45,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 5.6,
+        "endTime": 8.22
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 10.06,
+        "endTime": 12.72
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 13.48,
+        "endTime": 14.8
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 16.8,
+        "endTime": 18.18
+      }
+    ]
+  },
+  "Question 29": {
+    "audioDuration": 18.86,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 5.72,
+        "endTime": 7.92
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 9.72,
+        "endTime": 10.5
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 12.48,
+        "endTime": 13.46
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 15.6,
+        "endTime": 16.76
+      }
+    ]
+  },
+  "Question 30": {
+    "audioDuration": 19.8,
+    "sentences": [
+      {
+        "orderIndex": 0,
+        "startTime": 4.3,
+        "endTime": 5.96
+      },
+      {
+        "orderIndex": 1,
+        "startTime": 7.9,
+        "endTime": 9.06
+      },
+      {
+        "orderIndex": 2,
+        "startTime": 10.98,
+        "endTime": 11.8
+      },
+      {
+        "orderIndex": 3,
+        "startTime": 13.86,
+        "endTime": 15.06
+      }
+    ]
+  }
+}

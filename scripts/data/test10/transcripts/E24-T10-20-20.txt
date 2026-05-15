@@ -1,0 +1,6 @@
+Do you take your coffee with or without milk?
+(A) The coffee shop on Bayview Avenue.
+(B) I prefer drinking tea.
+(C) We'll need to place an order for paper.
+
+Answer: B

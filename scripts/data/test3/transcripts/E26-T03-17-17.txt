@@ -1,6 +1,0 @@
-Does this hallway lead to the lobby or to the courtyard?
-(A) My brother mentioned that.
-(B) How much does the box weigh?
-(C) To the lobby, I think.
-
-Answer: C

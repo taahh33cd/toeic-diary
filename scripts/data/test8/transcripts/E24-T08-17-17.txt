@@ -1,0 +1,6 @@
+You changed the color printer cartridge recently, didn't you?
+(A) Right, just a few days ago.
+(B) They're painting the walls blue.
+(C) A different password.
+
+Answer: A

@@ -1,0 +1,4 @@
+(A) The worker is carrying some plants.
+(B) The worker is reading a sign.
+(C) The worker is pushing a cart.
+(D) The worker is writing some notes.

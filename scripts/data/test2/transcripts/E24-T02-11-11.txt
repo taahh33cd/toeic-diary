@@ -1,0 +1,6 @@
+You went to the dentist this morning, didn't you?
+(A) Oh, I've already had breakfast.
+(B) Yes, for an annual checkup.
+(C) Let's take the bus.
+
+Answer: B

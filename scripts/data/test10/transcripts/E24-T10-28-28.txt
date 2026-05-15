@@ -1,0 +1,6 @@
+Are the blueberries ready to harvest?
+(A) I'll try the strawberry flavor.
+(B) We have a view of the beach.
+(C) It's not summertime yet.
+
+Answer: C

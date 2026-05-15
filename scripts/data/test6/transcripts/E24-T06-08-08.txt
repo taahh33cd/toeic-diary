@@ -1,0 +1,6 @@
+Can you tell me where the security office is?
+(A) Today's my first day here.
+(B) A photograph for the badge.
+(C) Because it's after lunch.
+
+Answer: A

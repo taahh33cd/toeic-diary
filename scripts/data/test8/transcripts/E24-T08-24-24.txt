@@ -1,0 +1,6 @@
+Is there a list of guests who have been invited?
+(A) Room 305 is being prepared for you.
+(B) The caterer has all the necessary information.
+(C) A banquet hall on Main Street.
+
+Answer: B

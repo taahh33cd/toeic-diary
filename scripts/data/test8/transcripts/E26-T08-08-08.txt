@@ -1,6 +1,0 @@
-Have you signed up for delivery updates?
-(A) I'm sorry-you can't park here.
-(B) Yes, I get alerts on my phone.
-(C) Where's the security desk?
-
-Answer: B

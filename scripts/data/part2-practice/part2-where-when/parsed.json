@@ -1,0 +1,1569 @@
+{
+  "testName": "Where – When",
+  "testSlug": "part2-where-when",
+  "orderIndex": 0,
+  "examCode": "P2",
+  "testCode": "part2-where-when",
+  "lessons": [
+    {
+      "title": "Question 1",
+      "questionStart": 1,
+      "questionEnd": 1,
+      "part": 2,
+      "transcriptFull": "When is Ms. Carney's flight arriving?\n(A) With a stop in Denver.\n(B) A window seat.\n(C) At 4:15 P.M.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q01.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q01.mp3",
+      "audioDuration": 18.729813,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "When is Ms. Carney's flight arriving?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "With a stop in Denver.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "A window seat.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "At 4:15 P.M.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 2",
+      "questionStart": 2,
+      "questionEnd": 2,
+      "part": 2,
+      "transcriptFull": "Where's the cafeteria?\n(A) On the lower level\n(B) No, it wasn't very good.\n(C) Soup and salad, please.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q02.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q02.mp3",
+      "audioDuration": 17.345313,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Where's the cafeteria?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "On the lower level",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "No, it wasn't very good.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Soup and salad, please.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 3",
+      "questionStart": 3,
+      "questionEnd": 3,
+      "part": 2,
+      "transcriptFull": "When does the community center open?\n(A) To add a new wing.\n(B) On May first.\n(C) It's on Main Street.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q03.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q03.mp3",
+      "audioDuration": 17.345313,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "When does the community center open?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "To add a new wing.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "On May first.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "It's on Main Street.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 4",
+      "questionStart": 4,
+      "questionEnd": 4,
+      "part": 2,
+      "transcriptFull": "Where does Hiroshi keep our company brochures?\n(A) No, it's locked.\n(B) In the top drawer.\n(C) Yes, I'm sure.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q04.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q04.mp3",
+      "audioDuration": 17.841625,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Where does Hiroshi keep our company brochures?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "No, it's locked.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "In the top drawer.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Yes, I'm sure.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 5",
+      "questionStart": 5,
+      "questionEnd": 5,
+      "part": 2,
+      "transcriptFull": "When will today's training session end?\n(A) At the central station.\n(B) Mr. Lowry trained us.\n(C) Around noon.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q05.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q05.mp3",
+      "audioDuration": 18.520813,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "When will today's training session end?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "At the central station.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Mr. Lowry trained us.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Around noon.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 6",
+      "questionStart": 6,
+      "questionEnd": 6,
+      "part": 2,
+      "transcriptFull": "Where did you get the flowers for the luncheon?\n(A) I'll have some, thanks.\n(B) They're from my garden.\n(C) In a couple of hours.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q06.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q06.mp3",
+      "audioDuration": 18.677563,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Where did you get the flowers for the luncheon?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I'll have some, thanks.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "They're from my garden.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "In a couple of hours.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 7",
+      "questionStart": 7,
+      "questionEnd": 7,
+      "part": 2,
+      "transcriptFull": "When will you finish editing the final draft of my article?\n(A) Yes, I think so.\n(B) At the publisher's.\n(C) By Friday evening.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q07.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q07.mp3",
+      "audioDuration": 18.337938,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "When will you finish editing the final draft of my article?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Yes, I think so.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "At the publisher's.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "By Friday evening.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 8",
+      "questionStart": 8,
+      "questionEnd": 8,
+      "part": 2,
+      "transcriptFull": "Where's the job fair taking place?\n(A) On the twenty-fifth.\n(B) Just a few employees.\n(C) At the convention center.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q08.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q08.mp3",
+      "audioDuration": 19.35675,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Where's the job fair taking place?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "On the twenty-fifth.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Just a few employees.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "At the convention center.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 9",
+      "questionStart": 9,
+      "questionEnd": 9,
+      "part": 2,
+      "transcriptFull": "When did you speak with Dr. Rolio?\n(A) He gave an interesting speech.\n(B) 0K, I'll call the clinic.\n(C) Actually I talked with his nurse.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q09.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q09.mp3",
+      "audioDuration": 20.062063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "When did you speak with Dr. Rolio?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "He gave an interesting speech.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "0K, I'll call the clinic.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Actually I talked with his nurse.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 10",
+      "questionStart": 10,
+      "questionEnd": 10,
+      "part": 2,
+      "transcriptFull": "Where did you buy that picture frame?\n(A) With my new camera.\n(B) A silver one. – what / which\n(C) I didn't buy it — it was a gift",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q10.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q10.mp3",
+      "audioDuration": 18.625313,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Where did you buy that picture frame?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "With my new camera.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "A silver one. – what / which",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "I didn't buy it — it was a gift",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 11",
+      "questionStart": 11,
+      "questionEnd": 11,
+      "part": 2,
+      "transcriptFull": "When will we be seated?\n(A) They'll arrive later.\n(B) At the table near the door.\n(C) Very soon.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q11.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q11.mp3",
+      "audioDuration": 16.822875,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "When will we be seated?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "They'll arrive later.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "At the table near the door.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Very soon.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 12",
+      "questionStart": 12,
+      "questionEnd": 12,
+      "part": 2,
+      "transcriptFull": "Where do you want me to send the catalog?\n(A) To my work address.\n(B) Today would be great.\n(C) The summer edition.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q12.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q12.mp3",
+      "audioDuration": 17.057938,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Where do you want me to send the catalog?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "To my work address.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Today would be great.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "The summer edition.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 13",
+      "questionStart": 13,
+      "questionEnd": 13,
+      "part": 2,
+      "transcriptFull": "When did I see you last?\n(A) No, at the cinema.\n(B) I think it was February.\n(C) You can go first.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q13.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q13.mp3",
+      "audioDuration": 16.431,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "When did I see you last?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "No, at the cinema.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I think it was February.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "You can go first.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 14",
+      "questionStart": 14,
+      "questionEnd": 14,
+      "part": 2,
+      "transcriptFull": "Where are Cindy Garza's medical records?\n(A) In the folder on top of my desk.\n(B) Yes, Dr. Deluca's patient.\n(C) For her next appointment.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q14.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q14.mp3",
+      "audioDuration": 18.834313,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Where are Cindy Garza's medical records?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "In the folder on top of my desk.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Yes, Dr. Deluca's patient.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "For her next appointment.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 15",
+      "questionStart": 15,
+      "questionEnd": 15,
+      "part": 2,
+      "transcriptFull": "When will Doctor Hunt be available?\n(A) She's busy all day, I'm afraid.\n(B) Just down the hall.\n(C) Because she's stuck in traffic.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q15.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q15.mp3",
+      "audioDuration": 20.1665,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "When will Doctor Hunt be available?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "She's busy all day, I'm afraid.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Just down the hall.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Because she's stuck in traffic.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 16",
+      "questionStart": 16,
+      "questionEnd": 16,
+      "part": 2,
+      "transcriptFull": "Where are the people from marketing?\n(A) They're in a meeting right now.\n(B) The reports are in my office.\n(C) Because the Internet isn't working.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q16.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q16.mp3",
+      "audioDuration": 20.48,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Where are the people from marketing?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "They're in a meeting right now.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "The reports are in my office.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Because the Internet isn't working.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 17",
+      "questionStart": 17,
+      "questionEnd": 17,
+      "part": 2,
+      "transcriptFull": "Where should I leave these design sketches?\n(A) Right there on the desk is fine.\n(B) By Thursday at the latest.\n(C) Mr. Jones approved it",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q17.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q17.mp3",
+      "audioDuration": 21.70775,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Where should I leave these design sketches?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Right there on the desk is fine.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "By Thursday at the latest.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Mr. Jones approved it",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 18",
+      "questionStart": 18,
+      "questionEnd": 18,
+      "part": 2,
+      "transcriptFull": "When is the best time to send out this press release?\n(A) First thing on Tuesday.\n(B) For a business magazine.\n(C) To get the most readers.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q18.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q18.mp3",
+      "audioDuration": 21.60325,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "When is the best time to send out this press release?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "First thing on Tuesday.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "For a business magazine.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "To get the most readers.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 19",
+      "questionStart": 19,
+      "questionEnd": 19,
+      "part": 2,
+      "transcriptFull": "Where are we meeting our clients for lunch?\n(A) They had to cancel.\n(B) About an account.\n(C) Today, at noon.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q19.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q19.mp3",
+      "audioDuration": 20.506125,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Where are we meeting our clients for lunch?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "They had to cancel.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "About an account.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Today, at noon.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 20",
+      "questionStart": 20,
+      "questionEnd": 20,
+      "part": 2,
+      "transcriptFull": "When's a convenient time to stop by your office?\n(A) Mornings are usually best.\n(B) It's up on the second floor.\n(C) We should get some of those.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q20.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q20.mp3",
+      "audioDuration": 22.02125,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "When's a convenient time to stop by your office?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Mornings are usually best.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "It's up on the second floor.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "We should get some of those.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 21",
+      "questionStart": 21,
+      "questionEnd": 21,
+      "part": 2,
+      "transcriptFull": "When did you join the company?\n(A) Yes, I'm enjoying it here.\n(B) Three years ago.\n(C) The Strauss Company.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q21.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q21.mp3",
+      "audioDuration": 20.74125,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "When did you join the company?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Yes, I'm enjoying it here.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Three years ago.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "The Strauss Company.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 22",
+      "questionStart": 22,
+      "questionEnd": 22,
+      "part": 2,
+      "transcriptFull": "Where are you staying in town?\n(A) Yes, often\n(B) At the Lakeside Hotel.\n(C) For a conference.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q22.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q22.mp3",
+      "audioDuration": 18.520813,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Where are you staying in town?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Yes, often",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "At the Lakeside Hotel.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "For a conference.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 23",
+      "questionStart": 23,
+      "questionEnd": 23,
+      "part": 2,
+      "transcriptFull": "Where can I get a copy of the weekly newsletter?\n(A) Every other week.\n(B) I read that, too.\n(C) On our Web site.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q23.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q23.mp3",
+      "audioDuration": 21.054688,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Where can I get a copy of the weekly newsletter?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Every other week.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I read that, too.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "On our Web site.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 24",
+      "questionStart": 24,
+      "questionEnd": 24,
+      "part": 2,
+      "transcriptFull": "When do you except the merger to be approved?\n(A) By the end of the month.\n(B) I expect so.\n(C) Yes, sales ought to improve.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q24.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q24.mp3",
+      "audioDuration": 20.062063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "When do you except the merger to be approved?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "By the end of the month.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "I expect so.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Yes, sales ought to improve.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 25",
+      "questionStart": 25,
+      "questionEnd": 25,
+      "part": 2,
+      "transcriptFull": "When should I have this paperwork ready?\n(A) As soon as possible.\n(B) At the print shop.\n(C) A billing form.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q25.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q25.mp3",
+      "audioDuration": 20.062063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "When should I have this paperwork ready?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "As soon as possible.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "At the print shop.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "A billing form.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 26",
+      "questionStart": 26,
+      "questionEnd": 26,
+      "part": 2,
+      "transcriptFull": "Where was Mr. Wagner yesterday?\n(A) The whole department.\n(B) No, that's tomorrow.\n(C) With a client.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q26.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q26.mp3",
+      "audioDuration": 19.278375,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Where was Mr. Wagner yesterday?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "The whole department.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "No, that's tomorrow.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "With a client.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 27",
+      "questionStart": 27,
+      "questionEnd": 27,
+      "part": 2,
+      "transcriptFull": "When is the Morrison Bridge going to be repaired?\n(A) A pair of them.\n(B) He was stuck in traffic.\n(C) Sometime next spring.",
+      "correctOption": "C",
+      "explanation": "",
+      "audioFiles": [
+        "Q27.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q27.mp3",
+      "audioDuration": 20.976313,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "When is the Morrison Bridge going to be repaired?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "A pair of them.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "He was stuck in traffic.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Sometime next spring.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 28",
+      "questionStart": 28,
+      "questionEnd": 28,
+      "part": 2,
+      "transcriptFull": "Where will the training session be held?\n(A) I'll check the e-mail Erika sent us.\n(B) Safety procedures.\n(C) Because of a schedule change.",
+      "correctOption": "A",
+      "explanation": "",
+      "audioFiles": [
+        "Q28.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q28.mp3",
+      "audioDuration": 22.047375,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Where will the training session be held?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "I'll check the e-mail Erika sent us.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Safety procedures.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "Because of a schedule change.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 29",
+      "questionStart": 29,
+      "questionEnd": 29,
+      "part": 2,
+      "transcriptFull": "When do you start work in the morning?\n(A) Yes, I do.\n(B) At eight o'clock.\n(C) She just started.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q29.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q29.mp3",
+      "audioDuration": 17.711,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "When do you start work in the morning?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "Yes, I do.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "At eight o'clock.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "She just started.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    },
+    {
+      "title": "Question 30",
+      "questionStart": 30,
+      "questionEnd": 30,
+      "part": 2,
+      "transcriptFull": "Where's the nearest supermarket?\n(A) He asked about marketing.\n(B) Just down the street.\n(C) No, there isn't.",
+      "correctOption": "B",
+      "explanation": "",
+      "audioFiles": [
+        "Q30.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/practice/part2/Where-When/Q30.mp3",
+      "audioDuration": 20.062063,
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "content": "Where's the nearest supermarket?",
+          "speaker": null,
+          "optionLabel": null,
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 1,
+          "content": "He asked about marketing.",
+          "speaker": null,
+          "optionLabel": "A",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 2,
+          "content": "Just down the street.",
+          "speaker": null,
+          "optionLabel": "B",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        },
+        {
+          "orderIndex": 3,
+          "content": "No, there isn't.",
+          "speaker": null,
+          "optionLabel": "C",
+          "startTime": 0,
+          "endTime": 0,
+          "blanks": []
+        }
+      ]
+    }
+  ]
+}

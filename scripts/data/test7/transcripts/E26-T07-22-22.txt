@@ -1,6 +1,0 @@
-Are you going out to eat, or did you bring your lunch from home?
-(A) Right next to my office.
-(B) That'll be five dollars, please.
-(C) It's in the microwave.
-
-Answer: C

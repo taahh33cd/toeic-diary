@@ -1,0 +1,4 @@
+Team, let's report on the test run of the DQY-5, our satellite internet system. As you know, the DQY-5 is a small satellite dish that can be used for internet access in remote areas. However, service interruptions are being reported when winter storms cover the satellite dish with snow. This means we need to focus on designing an internal system that can heat the satellite receiver and melt the snow to ensure the connection is not interrupted. Let's split into groups of three and start brainstorming technical solutions.
+83. What type of product has the team developed?
+84. What has caused a problem for some users?
+85. What will the listeners most likely do next?

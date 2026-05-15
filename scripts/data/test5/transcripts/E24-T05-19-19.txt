@@ -1,0 +1,6 @@
+Where's this shipment of parts being sent?
+(A) Around five thirty this evening.
+(B) To the assembly plant in Dublin.
+(C) Just half the order.
+
+Answer: B

@@ -202,19 +202,28 @@ async function importSentencesAndBlanks(
   lessonId: string,
   sentences: SentenceDef[],
 ): Promise<{ sentenceCount: number; blankCount: number }> {
-  // Delete existing sentences (cascades to blanks)
+  // Preserve existing timestamps before deleting
+  const existingTs = await prisma.sentence.findMany({
+    where: { lessonId },
+    select: { orderIndex: true, startTime: true, endTime: true },
+  });
+  const tsMap = new Map(existingTs.map((s) => [s.orderIndex, { startTime: s.startTime, endTime: s.endTime }]));
+
   await prisma.sentence.deleteMany({ where: { lessonId } });
 
   let blankCount = 0;
 
   for (const s of sentences) {
+    const existing = tsMap.get(s.orderIndex);
+    const startTime = s.startTime > 0 ? s.startTime : (existing?.startTime ?? 0);
+    const endTime = s.endTime > 0 ? s.endTime : (existing?.endTime ?? 0);
     const sentence = await prisma.sentence.create({
       data: {
         lessonId,
         orderIndex: s.orderIndex,
         content: s.content,
-        startTime: s.startTime,
-        endTime: s.endTime,
+        startTime,
+        endTime,
         speaker: s.speaker,
         optionLabel: s.optionLabel ?? null,
       },

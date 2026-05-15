@@ -1,6 +1,0 @@
-Will the bakery be open tomorrow?
-(A) No, it's closed until mid-August.
-(B) Have you checked the oven?
-(C) The pound cake is delicious.
-
-Answer: A

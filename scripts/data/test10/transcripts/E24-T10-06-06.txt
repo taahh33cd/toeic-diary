@@ -1,0 +1,4 @@
+(A) A worker is changing a lightbulb.
+(B) A worker is handing a box to a customer.
+(C) A worker is crouching down behind a counter.
+(D) A worker is cleaning a window.
