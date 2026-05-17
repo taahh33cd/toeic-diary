@@ -25,23 +25,23 @@ const L_PARTS = ["p1", "p2", "p3", "p4"] as const;
 const R_PARTS = ["p5", "p6", "p7"] as const;
 
 function getListening(s: ToeicScore): number | null {
-  const parts = L_PARTS.map((k) => (s as Record<string, unknown>)[k] as number | undefined);
+  const parts = L_PARTS.map((k) => (s as unknown as Record<string, unknown>)[k] as number | undefined);
   if (parts.some((v) => v !== undefined)) {
     return parts.reduce<number>((sum, v) => sum + (v ?? 0), 0);
   }
-  if ((s as Record<string, unknown>).l !== undefined) {
-    return (s as Record<string, unknown>).l as number;
+  if ((s as unknown as Record<string, unknown>).l !== undefined) {
+    return (s as unknown as Record<string, unknown>).l as number;
   }
   return null;
 }
 
 function getReading(s: ToeicScore): number | null {
-  const parts = R_PARTS.map((k) => (s as Record<string, unknown>)[k] as number | undefined);
+  const parts = R_PARTS.map((k) => (s as unknown as Record<string, unknown>)[k] as number | undefined);
   if (parts.some((v) => v !== undefined)) {
     return parts.reduce<number>((sum, v) => sum + (v ?? 0), 0);
   }
-  if ((s as Record<string, unknown>).r !== undefined) {
-    return (s as Record<string, unknown>).r as number;
+  if ((s as unknown as Record<string, unknown>).r !== undefined) {
+    return (s as unknown as Record<string, unknown>).r as number;
   }
   return null;
 }
@@ -290,8 +290,8 @@ function AddScoreForm({ studentCode }: { studentCode: string }) {
     try {
       const entry: ToeicScore = { score: l + r, date };
       if (testname.trim()) entry.testname = testname.trim();
-      (entry as Record<string, unknown>).l = l;
-      (entry as Record<string, unknown>).r = r;
+      (entry as unknown as Record<string, unknown>).l = l;
+      (entry as unknown as Record<string, unknown>).r = r;
       await pushStudentScore(studentCode, entry);
       setDate(new Date().toISOString().slice(0, 10));
       setListening("");
@@ -471,7 +471,7 @@ function ScoreRow({
           <td colSpan={5} className="px-4 py-3">
             <div className="flex flex-wrap gap-2 text-[11px]">
               {(["p1", "p2", "p3", "p4", "p5", "p6", "p7"] as const).map((k) => {
-                const v = (score as Record<string, unknown>)[k] as number | undefined;
+                const v = (score as unknown as Record<string, unknown>)[k] as number | undefined;
                 if (v === undefined) return null;
                 const isL = ["p1", "p2", "p3", "p4"].includes(k);
                 return (
