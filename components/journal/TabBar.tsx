@@ -4,17 +4,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const TABS = [
-  { href: "/journal",              label: "🏠 Tổng quan",    exact: true },
-  { href: "/journal/scores",       label: "🎯 Điểm số" },
-  { href: "/journal/error-log",    label: "📒 Nhật ký lỗi" },
-  { href: "/journal/vocab",        label: "📖 Từ vựng" },
-  { href: "/journal/missions",     label: "✅ Nhiệm vụ" },
-  { href: "/journal/booking",      label: "📅 Lịch học" },
-  { href: "/journal/achievements", label: "🏆 Thành tựu" },
-  { href: "/journal/settings",     label: "⚙️ Cài đặt" },
+  { href: "/journal",              icon: "🏠", label: "Home",       exact: true },
+  { href: "/journal/scores",       icon: "🎯", label: "Score" },
+  { href: "/journal/error-log",    icon: "📓", label: "Journal" },
+  { href: "/journal/vocab",        icon: "📖", label: "Vocabulary" },
+  { href: "/journal/missions",     icon: "✅", label: "Tasks" },
+  { href: "/journal/booking",      icon: "📅", label: "Schedule" },
+  { href: "/journal/settings",     icon: "⚙️", label: "Settings" },
 ];
 
-/** Desktop horizontal tab bar — matches STUDENT.html .tabs / .tab exactly */
 export function JournalTabBar() {
   const pathname = usePathname();
 
@@ -22,19 +20,13 @@ export function JournalTabBar() {
     <nav
       className="hidden md:block"
       style={{
-        background: "var(--bg-elevated)",     /* --paper: #FBF7F2 */
-        borderBottom: "2px solid var(--border)", /* #DDD0C0 */
-        boxShadow: "0 1px 4px rgba(44,30,15,.06)",
-        overflowX: "auto",
-        scrollbarWidth: "none",
-        WebkitOverflowScrolling: "touch",
-      } as React.CSSProperties}
+        background: "var(--bg-elevated)",
+        borderBottom: "1px solid var(--border)",
+        boxShadow: "0 1px 4px rgba(44,30,15,.05)",
+      }}
       aria-label="Journal navigation tabs"
     >
-      <div
-        className="flex"
-        style={{ maxWidth: "1060px", margin: "0 auto", padding: "0 1.8rem" }}
-      >
+      <div className="flex items-center gap-1 max-w-5xl mx-auto px-4 py-2">
         {TABS.map((tab) => {
           const active = tab.exact
             ? pathname === tab.href
@@ -44,29 +36,16 @@ export function JournalTabBar() {
               key={tab.href}
               href={tab.href}
               aria-current={active ? "page" : undefined}
+              className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm transition-all whitespace-nowrap"
               style={{
-                padding: ".85rem 1.2rem",
-                fontSize: ".8rem",
+                background: active ? "var(--bg-primary)" : "transparent",
+                color: active ? "var(--orange, #C4622D)" : "var(--text-muted, #9A8672)",
                 fontWeight: active ? 600 : 500,
-                color: active ? "var(--orange,#C4622D)" : "var(--text-muted,#9A8672)",
-                borderBottom: active
-                  ? "2px solid var(--orange,#C4622D)"
-                  : "2px solid transparent",
-                marginBottom: "-2px",
-                whiteSpace: "nowrap",
-                flexShrink: 0,
                 textDecoration: "none",
-                transition: "all .15s",
-                display: "block",
-              }}
-              onMouseEnter={(e) => {
-                if (!active) (e.currentTarget as HTMLAnchorElement).style.color = "var(--ink,#2C1E0F)";
-              }}
-              onMouseLeave={(e) => {
-                if (!active) (e.currentTarget as HTMLAnchorElement).style.color = "var(--text-muted,#9A8672)";
               }}
             >
-              {tab.label}
+              <span aria-hidden="true">{tab.icon}</span>
+              <span>{tab.label}</span>
             </Link>
           );
         })}

@@ -42,7 +42,7 @@ export default async function JournalDashboardPage() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       <DashboardClient xpStats={xpStats} />
       <Suspense fallback={<DictationWidgetSkeleton />}>
         <DictationWidget />
