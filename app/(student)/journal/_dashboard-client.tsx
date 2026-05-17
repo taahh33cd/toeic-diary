@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useProfile } from "@/hooks/useProfile";
 import { useStudent } from "@/hooks/firebase/useStudent";
 import { useHomework } from "@/hooks/firebase/useHomework";
+import { useLocale } from "@/hooks/useLocale";
 import { LiveIndicator } from "@/components/shared/LiveIndicator";
 import type { XpStats } from "./page";
 import type { ScheduleItem } from "@/lib/firebase/types";
@@ -63,10 +64,11 @@ function TeacherFeedback({
 }: {
   comments?: Record<string, { text: string; ts: number }>;
 }) {
+  const { t } = useLocale();
   if (!comments || !Object.keys(comments).length) {
     return (
       <p className="text-sm italic py-4" style={{ color: "var(--text-muted)" }}>
-        Chưa có nhận xét từ giáo viên.
+        {t("Chưa có nhận xét từ giáo viên.", "No feedback from teacher yet.")}
       </p>
     );
   }
@@ -90,6 +92,7 @@ function TeacherFeedback({
 // ─── Upcoming Schedule ────────────────────────────────────────────────────────
 
 function UpcomingSchedule({ schedule }: { schedule: ScheduleItem[] }) {
+  const { t } = useLocale();
   const td = today();
   const upcoming = schedule
     .filter((s) => s.date >= td)
@@ -99,7 +102,7 @@ function UpcomingSchedule({ schedule }: { schedule: ScheduleItem[] }) {
   if (!upcoming.length) {
     return (
       <p className="text-sm text-center py-4" style={{ color: "var(--text-muted)" }}>
-        Chưa có lịch học nào
+        {t("Chưa có lịch học nào", "No upcoming classes")}
       </p>
     );
   }
@@ -139,6 +142,7 @@ function UpcomingSchedule({ schedule }: { schedule: ScheduleItem[] }) {
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
 export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }) {
+  const { t } = useLocale();
   const { profile, loading: profileLoading } = useProfile();
   const { student, loading: studentLoading } = useStudent(profile?.studentCode);
   const { homework } = useHomework(profile?.studentCode);
@@ -242,7 +246,7 @@ export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }
         {/* Today's Agenda */}
         <BentoCard>
           <h2 className="font-semibold text-base mb-4" style={{ color: "var(--text-primary)" }}>
-            Today's Agenda
+            {t("Hôm nay cần làm", "Today's Agenda")}
           </h2>
           <div className="flex flex-wrap gap-2 mb-4">
             <Link
@@ -250,7 +254,7 @@ export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }
               className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-90"
               style={{ background: "var(--orange)" }}
             >
-              Start Practice
+              {t("Luyện tập", "Start Practice")}
             </Link>
             <Link
               href="/journal/vocab"
@@ -261,20 +265,20 @@ export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }
                 background: "transparent",
               }}
             >
-              Review Vocabulary
+              {t("Ôn từ vựng", "Review Vocabulary")}
             </Link>
           </div>
           <div className="grid grid-cols-3 gap-2">
-            <StatBox label="TOEIC Score" value={latestNum ?? "—"} />
-            <StatBox label="Completed Modules" value={doneCount} />
-            <StatBox label="Today's Tasks" value={todayTasks || "—"} />
+            <StatBox label={t("Điểm TOEIC", "TOEIC Score")} value={latestNum ?? "—"} />
+            <StatBox label={t("Học phần", "Modules Done")} value={doneCount} />
+            <StatBox label={t("Nhiệm vụ", "Tasks")} value={todayTasks || "—"} />
           </div>
         </BentoCard>
 
         {/* Teacher's Feedback */}
         <BentoCard>
           <h2 className="font-semibold text-base mb-4" style={{ color: "var(--text-primary)" }}>
-            Teacher's Feedback
+            {t("Nhận xét giáo viên", "Teacher's Feedback")}
           </h2>
           <TeacherFeedback
             comments={
@@ -286,7 +290,7 @@ export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }
         {/* Upcoming Schedule */}
         <BentoCard>
           <h2 className="font-semibold text-base mb-4" style={{ color: "var(--text-primary)" }}>
-            Upcoming Schedule
+            {t("Lịch sắp tới", "Upcoming Schedule")}
           </h2>
           <UpcomingSchedule schedule={schedule} />
         </BentoCard>

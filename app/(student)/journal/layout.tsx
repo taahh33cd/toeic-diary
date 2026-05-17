@@ -8,6 +8,7 @@ import { JournalTabBar } from "@/components/journal/TabBar";
 import { MobileBottomNav } from "@/components/journal/MobileBottomNav";
 import { NotificationWatcher } from "@/components/shared/NotificationWatcher";
 import { InstallBanner } from "@/components/shared/InstallBanner";
+import { LocaleProvider } from "@/hooks/useLocale";
 
 export const dynamic = "force-dynamic";
 
@@ -36,6 +37,7 @@ export default async function JournalLayout({
   if (!profile?.studentCode) redirect("/auth/onboarding-incomplete");
 
   return (
+    <LocaleProvider>
     <div
       className="theme-journal min-h-screen flex flex-col"
       style={{ background: "var(--bg-primary)", color: "var(--text-primary)" }}
@@ -83,5 +85,6 @@ export default async function JournalLayout({
       {/* Spacer for mobile nav */}
       <div className="md:hidden h-16" aria-hidden="true" />
     </div>
+    </LocaleProvider>
   );
 }

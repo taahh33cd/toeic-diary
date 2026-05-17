@@ -4,582 +4,127 @@ import { useState } from "react";
 import { useProfile } from "@/hooks/useProfile";
 import { useStudent } from "@/hooks/firebase/useStudent";
 import { useGoal } from "@/hooks/firebase/useGoal";
+import { useLocale } from "@/hooks/useLocale";
 import { pushStudentScore, deleteStudentScore, setGoal } from "@/lib/firebase/helpers";
 import type { ToeicScore } from "@/lib/firebase/types";
 
-const PART_MAX: Record<string, number> = {
-  p1: 6, p2: 25, p3: 39, p4: 30, p5: 30, p6: 16, p7: 54,
-};
-
-const PART_KEYS = ["p1", "p2", "p3", "p4", "p5", "p6", "p7"] as const;
-type PartKey = typeof PART_KEYS[number];
-
-const L_PARTS: PartKey[] = ["p1", "p2", "p3", "p4"];
-const R_PARTS: PartKey[] = ["p5", "p6", "p7"];
-
-function formatDeadline(deadline: string): string {
-  const [year, month] = deadline.split("-");
-  return `Trước tháng ${month}/${year}`;
-}
+// ─── Helpers ──────────────────────────────────────────────────────────────────
 
 function formatDate(dateStr: string): string {
   const [year, month, day] = dateStr.split("-");
   return `${day}/${month}/${year}`;
 }
 
-type PartInputs = Record<PartKey, string>;
-
-const emptyPartInputs = (): PartInputs =>
-  PART_KEYS.reduce((acc, k) => ({ ...acc, [k]: "" }), {} as PartInputs);
-
-interface GoalCardProps {
-  target: number;
-  deadline?: string;
-  latestScore: number | null;
-  onEditGoal: () => void;
+function formatDeadline(deadline: string, locale: "vi" | "en"): string {
+  const [year, month] = deadline.split("-");
+  return locale === "en" ? `Before ${month}/${year}` : `Trước tháng ${month}/${year}`;
 }
 
-function GoalCard({ target, deadline, latestScore, onEditGoal }: GoalCardProps) {
-  const achieved = latestScore !== null && latestScore >= target;
-  const gap = latestScore !== null ? target - latestScore : null;
+// Listening parts: p1-p4 (max 495), Reading parts: p5-p7 (max 495)
+const L_PARTS = ["p1", "p2", "p3", "p4"] as const;
+const R_PARTS = ["p5", "p6", "p7"] as const;
 
-  return (
-    <div
-      style={{
-        background: "var(--ink2)",
-        padding: "1.5rem",
-        display: "flex",
-        flexDirection: "column",
-        gap: "0.5rem",
-        minWidth: 0,
-      }}
-    >
-      <div style={{ color: "var(--text-muted)", fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.08em" }}>
-        Mục tiêu
+function getListening(s: ToeicScore): number | null {
+  const parts = L_PARTS.map((k) => (s as Record<string, unknown>)[k] as number | undefined);
+  if (parts.some((v) => v !== undefined)) {
+    return parts.reduce<number>((sum, v) => sum + (v ?? 0), 0);
+  }
+  if ((s as Record<string, unknown>).l !== undefined) {
+    return (s as Record<string, unknown>).l as number;
+  }
+  return null;
+}
+
+function getReading(s: ToeicScore): number | null {
+  const parts = R_PARTS.map((k) => (s as Record<string, unknown>)[k] as number | undefined);
+  if (parts.some((v) => v !== undefined)) {
+    return parts.reduce<number>((sum, v) => sum + (v ?? 0), 0);
+  }
+  if ((s as Record<string, unknown>).r !== undefined) {
+    return (s as Record<string, unknown>).r as number;
+  }
+  return null;
+}
+
+// ─── SVG Chart ────────────────────────────────────────────────────────────────
+
+function ScoreChart({ scores, noDataLabel }: { scores: ToeicScore[]; noDataLabel: string }) {
+  if (scores.length === 0) {
+    return (
+      <div className="flex items-center justify-center h-full min-h-[140px]">
+        <p className="text-sm" style={{ color: "var(--text-muted)" }}>{noDataLabel}</p>
       </div>
-      <div style={{ display: "flex", alignItems: "baseline", gap: "0.25rem" }}>
-        <span
-          style={{
-            fontFamily: "'Lora', Georgia, serif",
-            fontSize: "3rem",
-            fontWeight: 700,
-            lineHeight: 1,
-            color: "var(--orange)",
-          }}
-        >
-          {target}
-        </span>
-        <span style={{ color: "#9A8672", fontSize: "0.85rem" }}>/990 điểm TOEIC</span>
-      </div>
-      {deadline && (
-        <div style={{ color: "#9A8672", fontSize: "0.8rem" }}>{formatDeadline(deadline)}</div>
-      )}
-      {latestScore !== null && (
-        <div style={{ marginTop: "0.25rem" }}>
-          {achieved ? (
-            <span
-              style={{
-                color: "var(--sage)",
-                fontWeight: 600,
-                fontSize: "0.85rem",
-              }}
-            >
-              ✓ Đã đạt mục tiêu!
-            </span>
-          ) : (
-            <span style={{ color: "#9A8672", fontSize: "0.82rem" }}>
-              Còn thiếu{" "}
-              <span style={{ color: "var(--orange2)", fontWeight: 700 }}>{gap}</span>{" "}
-              điểm
-            </span>
-          )}
-        </div>
-      )}
-      <button
-        onClick={onEditGoal}
-        style={{
-          marginTop: "0.75rem",
-          background: "transparent",
-          border: "1px solid rgba(196,98,45,0.5)",
-          color: "var(--orange2)",
-          fontSize: "0.75rem",
-          padding: "0.35rem 0.75rem",
-          cursor: "pointer",
-          borderRadius: 0,
-          alignSelf: "flex-start",
-        }}
-      >
-        Chỉnh mục tiêu
-      </button>
-    </div>
-  );
-}
-
-interface StatsProps {
-  scores: ToeicScore[];
-  target: number | null;
-}
-
-function StatsPanel({ scores, target }: StatsProps) {
-  const best = scores.length ? Math.max(...scores.map((s) => s.score)) : null;
-  const avg = scores.length
-    ? Math.round(scores.reduce((sum, s) => sum + s.score, 0) / scores.length)
-    : null;
-  const lowest = scores.length ? Math.min(...scores.map((s) => s.score)) : null;
-  const latest = scores[0]?.score ?? null;
-  const prev = scores[1]?.score ?? null;
-  const delta = latest !== null && prev !== null ? latest - prev : null;
-  const achieved = target !== null && latest !== null && latest >= target;
-
-  const stats = [
-    { label: "Bài test", value: scores.length },
-    { label: "Cao nhất", value: best },
-    { label: "Trung bình", value: avg },
-    { label: "Thấp nhất", value: lowest },
-  ];
-
-  return (
-    <div
-      style={{
-        background: "var(--bg-elevated)",
-        border: "1px solid var(--border)",
-        padding: "1.25rem",
-        display: "flex",
-        flexDirection: "column",
-        gap: "1rem",
-        minWidth: 0,
-      }}
-    >
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
-          gap: "0",
-          border: "1px solid var(--border)",
-        }}
-      >
-        {stats.map((s, i) => (
-          <div
-            key={s.label}
-            style={{
-              textAlign: "center",
-              padding: "0.75rem 0.5rem",
-              borderRight: i < stats.length - 1 ? "1px solid var(--border)" : undefined,
-              background: i === 1 ? "rgba(196,98,45,0.04)" : undefined,
-            }}
-          >
-            <div
-              style={{
-                fontFamily: "'Lora', Georgia, serif",
-                fontSize: i === 0 ? "1.4rem" : "1.6rem",
-                fontWeight: 700,
-                color: i === 1 ? "var(--orange)" : "var(--text-primary)",
-                lineHeight: 1,
-              }}
-            >
-              {s.value ?? "—"}
-            </div>
-            <div style={{ color: "var(--text-muted)", fontSize: "0.68rem", marginTop: "0.3rem", textTransform: "uppercase", letterSpacing: "0.06em" }}>
-              {s.label}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {latest !== null && (
-        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flexWrap: "wrap" }}>
-          <span style={{ color: "var(--text-muted)", fontSize: "0.8rem" }}>
-            Gần nhất:{" "}
-            <span
-              style={{
-                fontFamily: "'Lora', Georgia, serif",
-                fontWeight: 700,
-                color: "var(--text-primary)",
-                fontSize: "1rem",
-              }}
-            >
-              {latest}
-            </span>
-          </span>
-          {delta !== null && (
-            <span
-              style={{
-                fontSize: "0.75rem",
-                fontWeight: 600,
-                color: delta > 0 ? "#2e7d32" : delta < 0 ? "#c62828" : "var(--text-muted)",
-              }}
-            >
-              {delta > 0 ? `+${delta}` : delta} so với lần trước
-            </span>
-          )}
-          {achieved && (
-            <span
-              style={{
-                background: "var(--sage)",
-                color: "#fff",
-                fontSize: "0.68rem",
-                fontWeight: 700,
-                padding: "0.2rem 0.5rem",
-                letterSpacing: "0.04em",
-              }}
-            >
-              ĐÃ ĐẠT MỤC TIÊU
-            </span>
-          )}
-        </div>
-      )}
-    </div>
-  );
-}
-
-interface AddScoreFormProps {
-  studentCode: string;
-  onSaved: () => void;
-}
-
-function AddScoreForm({ studentCode, onSaved }: AddScoreFormProps) {
-  const [open, setOpen] = useState(false);
-  const [saving, setSaving] = useState(false);
-  const [testname, setTestname] = useState("");
-  const [date, setDate] = useState(() => new Date().toISOString().slice(0, 10));
-  const [score, setScore] = useState("");
-  const [note, setNote] = useState("");
-  const [parts, setParts] = useState<PartInputs>(emptyPartInputs());
-
-  function setPart(key: PartKey, val: string) {
-    setParts((prev) => ({ ...prev, [key]: val }));
+    );
   }
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    const numScore = parseInt(score, 10);
-    if (!date || isNaN(numScore) || numScore < 10 || numScore > 990) return;
-    setSaving(true);
-    try {
-      const entry: ToeicScore = { score: numScore, date };
-      if (testname.trim()) entry.testname = testname.trim();
-      if (note.trim()) entry.note = note.trim();
-      for (const k of PART_KEYS) {
-        const v = parts[k];
-        if (v !== "") {
-          const n = parseInt(v, 10);
-          if (!isNaN(n)) (entry as unknown as Record<string, unknown>)[k] = n;
-        }
-      }
-      await pushStudentScore(studentCode, entry);
-      setTestname("");
-      setDate(new Date().toISOString().slice(0, 10));
-      setScore("");
-      setNote("");
-      setParts(emptyPartInputs());
-      setOpen(false);
-      onSaved();
-    } finally {
-      setSaving(false);
-    }
-  }
+  const sorted = [...scores].sort((a, b) => a.date.localeCompare(b.date));
+  const values = sorted.map((s) => s.score);
+  const maxV = Math.max(...values, 500);
+  const minV = Math.max(0, Math.min(...values) - 50);
+  const range = maxV - minV || 100;
 
-  const inputStyle: React.CSSProperties = {
-    width: "100%",
-    padding: "0.45rem 0.6rem",
-    border: "1px solid var(--border)",
-    background: "var(--bg-primary)",
-    color: "var(--text-primary)",
-    fontSize: "0.85rem",
-    borderRadius: 0,
-    outline: "none",
-    boxSizing: "border-box",
-  };
+  const W = 560;
+  const H = 150;
+  const PL = 10;
+  const PR = 10;
+  const PT = 16;
+  const PB = 28;
+  const cW = W - PL - PR;
+  const cH = H - PT - PB;
 
-  const labelStyle: React.CSSProperties = {
-    fontSize: "0.7rem",
-    color: "var(--text-muted)",
-    textTransform: "uppercase",
-    letterSpacing: "0.07em",
-    display: "block",
-    marginBottom: "0.25rem",
-  };
+  const pts = sorted.map((s, i) => ({
+    x: PL + (sorted.length > 1 ? (i / (sorted.length - 1)) * cW : cW / 2),
+    y: PT + (1 - (s.score - minV) / range) * cH,
+    score: s.score,
+    date: s.date,
+  }));
+
+  const linePath = pts.map((p, i) => `${i === 0 ? "M" : "L"} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(" ");
+  const areaPath = `${linePath} L ${pts[pts.length - 1].x.toFixed(1)} ${(PT + cH).toFixed(1)} L ${pts[0].x.toFixed(1)} ${(PT + cH).toFixed(1)} Z`;
 
   return (
-    <div style={{ border: "1px solid var(--border)", background: "var(--bg-elevated)" }}>
-      <button
-        onClick={() => setOpen((o) => !o)}
-        style={{
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "0.875rem 1rem",
-          background: "transparent",
-          border: "none",
-          cursor: "pointer",
-          color: "var(--text-primary)",
-          fontSize: "0.9rem",
-          fontWeight: 600,
-        }}
-      >
-        <span>+ Nhập điểm test mới</span>
-        <span style={{ color: "var(--text-muted)", fontSize: "0.8rem" }}>{open ? "▲" : "▼"}</span>
-      </button>
-
-      {open && (
-        <form
-          onSubmit={handleSubmit}
-          style={{ padding: "0 1rem 1rem", display: "flex", flexDirection: "column", gap: "0.875rem" }}
-        >
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
-            <div>
-              <label style={labelStyle}>Tên bài test</label>
-              <input
-                style={inputStyle}
-                value={testname}
-                onChange={(e) => setTestname(e.target.value)}
-                placeholder="VD: ETS 2024 Test 1"
-              />
-            </div>
-            <div>
-              <label style={labelStyle}>Ngày thi</label>
-              <input
-                type="date"
-                style={inputStyle}
-                value={date}
-                onChange={(e) => setDate(e.target.value)}
-                required
-              />
-            </div>
-          </div>
-
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
-            <div>
-              <label style={labelStyle}>Tổng điểm (10–990)</label>
-              <input
-                type="number"
-                min={10}
-                max={990}
-                style={inputStyle}
-                value={score}
-                onChange={(e) => setScore(e.target.value)}
-                placeholder="VD: 750"
-                required
-              />
-            </div>
-            <div>
-              <label style={labelStyle}>Ghi chú</label>
-              <input
-                style={inputStyle}
-                value={note}
-                onChange={(e) => setNote(e.target.value)}
-                placeholder="Nhận xét, cảm nhận..."
-              />
-            </div>
-          </div>
-
-          <div>
-            <div style={{ fontSize: "0.72rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.07em", marginBottom: "0.5rem" }}>
-              Điểm từng Part (tuỳ chọn)
-            </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "0.5rem" }}>
-              {PART_KEYS.map((k) => (
-                <div key={k}>
-                  <label style={{ ...labelStyle, color: L_PARTS.includes(k as PartKey) ? "#C4622D" : "#1E6FA8" }}>
-                    PART {k[1]} /{PART_MAX[k]}
-                  </label>
-                  <input
-                    type="number"
-                    min={0}
-                    max={PART_MAX[k]}
-                    style={inputStyle}
-                    value={parts[k]}
-                    onChange={(e) => setPart(k, e.target.value)}
-                    placeholder="—"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <button
-            type="submit"
-            disabled={saving}
-            style={{
-              background: saving ? "var(--border)" : "var(--orange)",
-              color: "#fff",
-              border: "none",
-              padding: "0.6rem 1.5rem",
-              fontWeight: 700,
-              fontSize: "0.85rem",
-              cursor: saving ? "not-allowed" : "pointer",
-              borderRadius: 0,
-              alignSelf: "flex-start",
-            }}
-          >
-            {saving ? "Đang lưu..." : "Lưu điểm"}
-          </button>
-        </form>
-      )}
-    </div>
+    <svg viewBox={`0 0 ${W} ${H}`} width="100%" style={{ overflow: "visible" }}>
+      <defs>
+        <linearGradient id="scoreGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#C4622D" stopOpacity="0.28" />
+          <stop offset="100%" stopColor="#C4622D" stopOpacity="0.03" />
+        </linearGradient>
+      </defs>
+      <path d={areaPath} fill="url(#scoreGrad)" />
+      <path d={linePath} fill="none" stroke="#C4622D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      {pts.map((p, i) => (
+        <circle key={i} cx={p.x} cy={p.y} r={4} fill="#C4622D" stroke="#FBF7F2" strokeWidth="1.5" />
+      ))}
+      {pts.map((p, i) => {
+        const [, m] = p.date.split("-");
+        return (
+          <text key={i} x={p.x} y={H - 6} textAnchor="middle" fontSize={10} fill="#9A8672">
+            {`Th${m}`}
+          </text>
+        );
+      })}
+    </svg>
   );
 }
 
-interface ScoreHistoryItemProps {
-  score: ToeicScore;
-  isNewest: boolean;
-  onDelete: () => void;
-}
+// ─── Goal Edit Form ───────────────────────────────────────────────────────────
 
-function ScoreHistoryItem({ score, isNewest, onDelete }: ScoreHistoryItemProps) {
-  const hasL = L_PARTS.some((k) => score[k] !== undefined);
-  const hasR = R_PARTS.some((k) => score[k] !== undefined);
-
-  return (
-    <div
-      style={{
-        background: "var(--bg-elevated)",
-        border: "1px solid var(--border)",
-        display: "flex",
-        flexDirection: "column",
-        gap: 0,
-      }}
-    >
-      <div style={{ display: "flex", alignItems: "stretch" }}>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: 80,
-            background: isNewest ? "rgba(196,98,45,0.07)" : "var(--bg-primary)",
-            borderRight: "1px solid var(--border)",
-            flexShrink: 0,
-            flexDirection: "column",
-            gap: "0.2rem",
-            padding: "0.75rem 0",
-          }}
-        >
-          <span
-            style={{
-              fontFamily: "'Lora', Georgia, serif",
-              fontSize: "2rem",
-              fontWeight: 700,
-              lineHeight: 1,
-              color: isNewest ? "var(--orange)" : "var(--text-primary)",
-            }}
-          >
-            {score.score}
-          </span>
-          {isNewest && (
-            <span
-              style={{
-                fontSize: "0.6rem",
-                fontWeight: 700,
-                color: "var(--orange)",
-                textTransform: "uppercase",
-                letterSpacing: "0.06em",
-              }}
-            >
-              Mới nhất
-            </span>
-          )}
-        </div>
-
-        <div style={{ flex: 1, padding: "0.75rem 1rem", minWidth: 0, display: "flex", flexDirection: "column", gap: "0.3rem" }}>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "0.5rem" }}>
-            <div style={{ minWidth: 0 }}>
-              {score.testname && (
-                <div
-                  style={{
-                    fontWeight: 600,
-                    fontSize: "0.88rem",
-                    color: "var(--text-primary)",
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  {score.testname}
-                </div>
-              )}
-              <div style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>
-                📅 {formatDate(score.date)}
-              </div>
-            </div>
-            <button
-              onClick={onDelete}
-              style={{
-                background: "transparent",
-                border: "1px solid rgba(198,40,40,0.3)",
-                color: "#c62828",
-                fontSize: "0.72rem",
-                padding: "0.25rem 0.55rem",
-                cursor: "pointer",
-                borderRadius: 0,
-                flexShrink: 0,
-              }}
-            >
-              Xoá
-            </button>
-          </div>
-
-          {(hasL || hasR) && (
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem", marginTop: "0.25rem" }}>
-              {L_PARTS.map((k) =>
-                score[k] !== undefined ? (
-                  <span
-                    key={k}
-                    style={{
-                      background: "rgba(196,98,45,0.12)",
-                      color: "#C4622D",
-                      border: "1px solid rgba(196,98,45,0.25)",
-                      fontSize: "0.68rem",
-                      fontWeight: 700,
-                      padding: "0.15rem 0.4rem",
-                    }}
-                  >
-                    P{k[1]}:{score[k]}
-                  </span>
-                ) : null
-              )}
-              {R_PARTS.map((k) =>
-                score[k] !== undefined ? (
-                  <span
-                    key={k}
-                    style={{
-                      background: "rgba(30,111,168,0.1)",
-                      color: "#1E6FA8",
-                      border: "1px solid rgba(30,111,168,0.22)",
-                      fontSize: "0.68rem",
-                      fontWeight: 700,
-                      padding: "0.15rem 0.4rem",
-                    }}
-                  >
-                    P{k[1]}:{score[k]}
-                  </span>
-                ) : null
-              )}
-            </div>
-          )}
-
-          {score.note && (
-            <div style={{ fontSize: "0.75rem", color: "var(--text-muted)", fontStyle: "italic" }}>
-              {score.note}
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-interface GoalEditFormProps {
+function GoalEditForm({
+  currentTarget,
+  currentDeadline,
+  studentCode,
+  studentId,
+  studentName,
+  onDone,
+}: {
   currentTarget: number;
   currentDeadline?: string;
   studentCode: string;
   studentId: string;
   studentName: string;
   onDone: () => void;
-}
-
-function GoalEditForm({ currentTarget, currentDeadline, studentCode, studentId, studentName, onDone }: GoalEditFormProps) {
+}) {
+  const { t } = useLocale();
   const [target, setTarget] = useState(String(currentTarget));
   const [deadline, setDeadline] = useState(currentDeadline ?? "");
   const [saving, setSaving] = useState(false);
@@ -603,86 +148,361 @@ function GoalEditForm({ currentTarget, currentDeadline, studentCode, studentId, 
     }
   }
 
-  const inputStyle: React.CSSProperties = {
+  const inp: React.CSSProperties = {
     padding: "0.4rem 0.6rem",
     border: "1px solid rgba(196,98,45,0.4)",
     background: "rgba(255,255,255,0.06)",
     color: "#fff",
     fontSize: "0.85rem",
-    borderRadius: 0,
+    borderRadius: "8px",
     outline: "none",
     width: "100%",
     boxSizing: "border-box",
   };
 
   return (
-    <form
-      onSubmit={handleSave}
-      style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginTop: "0.75rem" }}
-    >
+    <form onSubmit={handleSave} className="flex flex-col gap-3 mt-3">
       <div>
-        <label style={{ fontSize: "0.68rem", color: "#9A8672", textTransform: "uppercase", letterSpacing: "0.07em", display: "block", marginBottom: "0.25rem" }}>
-          Mục tiêu (10–990)
+        <label className="block text-[11px] uppercase tracking-wider mb-1" style={{ color: "#9A8672" }}>
+          {t("Mục tiêu (10–990)", "Target (10–990)")}
         </label>
-        <input
-          type="number"
-          min={10}
-          max={990}
-          value={target}
-          onChange={(e) => setTarget(e.target.value)}
-          style={inputStyle}
-          required
-        />
+        <input type="number" min={10} max={990} value={target} onChange={(e) => setTarget(e.target.value)} style={inp} required />
       </div>
       <div>
-        <label style={{ fontSize: "0.68rem", color: "#9A8672", textTransform: "uppercase", letterSpacing: "0.07em", display: "block", marginBottom: "0.25rem" }}>
-          Deadline (tháng/năm)
+        <label className="block text-[11px] uppercase tracking-wider mb-1" style={{ color: "#9A8672" }}>
+          {t("Deadline (tháng/năm)", "Deadline (month/year)")}
         </label>
         <input
           type="month"
           value={deadline.slice(0, 7)}
           onChange={(e) => setDeadline(e.target.value ? e.target.value + "-01" : "")}
-          style={inputStyle}
+          style={inp}
         />
       </div>
-      <div style={{ display: "flex", gap: "0.5rem" }}>
+      <div className="flex gap-2">
         <button
           type="submit"
           disabled={saving}
-          style={{
-            background: "var(--orange)",
-            color: "#fff",
-            border: "none",
-            padding: "0.45rem 1rem",
-            fontWeight: 700,
-            fontSize: "0.8rem",
-            cursor: saving ? "not-allowed" : "pointer",
-            borderRadius: 0,
-          }}
+          className="px-4 py-2 rounded-lg text-sm font-bold text-white transition-opacity"
+          style={{ background: saving ? "var(--border)" : "var(--orange)", cursor: saving ? "not-allowed" : "pointer" }}
         >
-          {saving ? "Đang lưu..." : "Lưu"}
+          {saving ? t("Đang lưu...", "Saving...") : t("Lưu", "Save")}
         </button>
         <button
           type="button"
           onClick={onDone}
-          style={{
-            background: "transparent",
-            color: "#9A8672",
-            border: "1px solid rgba(154,134,114,0.4)",
-            padding: "0.45rem 0.75rem",
-            fontSize: "0.8rem",
-            cursor: "pointer",
-            borderRadius: 0,
-          }}
+          className="px-4 py-2 rounded-lg text-sm"
+          style={{ background: "transparent", color: "#9A8672", border: "1px solid rgba(154,134,114,0.4)", cursor: "pointer" }}
         >
-          Huỷ
+          {t("Huỷ", "Cancel")}
         </button>
       </div>
     </form>
   );
 }
 
+// ─── Goal Card ────────────────────────────────────────────────────────────────
+
+function GoalCard({
+  target,
+  deadline,
+  latestScore,
+  locale,
+  onEdit,
+}: {
+  target: number;
+  deadline?: string;
+  latestScore: number | null;
+  locale: "vi" | "en";
+  onEdit: () => void;
+}) {
+  const { t } = useLocale();
+  const achieved = latestScore !== null && latestScore >= target;
+  const gap = latestScore !== null ? target - latestScore : null;
+
+  return (
+    <div className="flex flex-col gap-2 h-full">
+      <div className="text-[11px] font-bold uppercase tracking-widest" style={{ color: "#9A8672" }}>
+        {t("MỤC TIÊU", "GOAL")}
+      </div>
+      <div className="flex items-baseline gap-1.5">
+        <span className="leading-none font-bold" style={{ fontFamily: "'Lora', serif", fontSize: "3.5rem", color: "var(--orange)" }}>
+          {target}
+        </span>
+        <span className="text-sm" style={{ color: "#9A8672" }}>/990 {t("điểm TOEIC", "TOEIC")}</span>
+      </div>
+      {deadline && (
+        <div className="text-sm" style={{ color: "#9A8672" }}>
+          {formatDeadline(deadline, locale)}
+        </div>
+      )}
+      {latestScore !== null && (
+        <div className="text-sm mt-1">
+          {achieved ? (
+            <span className="font-semibold" style={{ color: "var(--sage)" }}>✓ {t("Đã đạt mục tiêu!", "Goal achieved!")}</span>
+          ) : (
+            <span style={{ color: "#9A8672" }}>
+              {t("Còn thiếu", "Still need")}{" "}
+              <span className="font-bold" style={{ color: "var(--orange2)" }}>{gap}</span>{" "}
+              {t("điểm", "pts")}
+            </span>
+          )}
+        </div>
+      )}
+      <button
+        onClick={onEdit}
+        className="mt-3 self-start px-4 py-1.5 rounded-lg text-sm font-medium transition-colors"
+        style={{
+          background: "transparent",
+          border: "1px solid rgba(196,98,45,0.5)",
+          color: "var(--orange2)",
+          cursor: "pointer",
+        }}
+      >
+        {t("Chỉnh mục tiêu", "Edit Goal")}
+      </button>
+    </div>
+  );
+}
+
+// ─── Add Score Form ───────────────────────────────────────────────────────────
+
+function AddScoreForm({ studentCode }: { studentCode: string }) {
+  const { t } = useLocale();
+  const [open, setOpen] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [date, setDate] = useState(() => new Date().toISOString().slice(0, 10));
+  const [listening, setListening] = useState("");
+  const [reading, setReading] = useState("");
+  const [testname, setTestname] = useState("");
+
+  const total =
+    listening && reading
+      ? (parseInt(listening, 10) || 0) + (parseInt(reading, 10) || 0)
+      : null;
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    const l = parseInt(listening, 10);
+    const r = parseInt(reading, 10);
+    if (!date || isNaN(l) || isNaN(r) || l < 0 || r < 0 || l > 495 || r > 495) return;
+    setSaving(true);
+    try {
+      const entry: ToeicScore = { score: l + r, date };
+      if (testname.trim()) entry.testname = testname.trim();
+      (entry as Record<string, unknown>).l = l;
+      (entry as Record<string, unknown>).r = r;
+      await pushStudentScore(studentCode, entry);
+      setDate(new Date().toISOString().slice(0, 10));
+      setListening("");
+      setReading("");
+      setTestname("");
+      setOpen(false);
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  const inp = "w-full px-3 py-2.5 rounded-lg text-sm outline-none transition-colors";
+  const inpStyle: React.CSSProperties = {
+    border: "1px solid var(--border)",
+    background: "var(--bg-primary)",
+    color: "var(--text-primary)",
+  };
+
+  return (
+    <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid var(--border)", background: "var(--bg-elevated)" }}>
+      <button
+        onClick={() => setOpen((o) => !o)}
+        className="w-full flex items-center justify-between px-5 py-4 text-sm font-semibold transition-colors"
+        style={{ background: "transparent", border: "none", cursor: "pointer", color: "var(--text-primary)" }}
+      >
+        <span>
+          <span style={{ color: "var(--orange)" }}>+</span> {t("Nhập điểm test mới", "Add New Test Score")}
+        </span>
+        <span style={{ color: "var(--text-muted)", fontSize: "0.7rem" }}>{open ? "▲" : "▼"}</span>
+      </button>
+
+      {open && (
+        <form onSubmit={handleSubmit} className="px-5 pb-5 flex flex-col gap-4">
+          <div className="grid grid-cols-4 gap-3 items-end">
+            <div>
+              <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
+                {t("Ngày thi", "Test Date")}
+              </label>
+              <input
+                type="date"
+                className={inp}
+                style={inpStyle}
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
+                {t("Điểm Nghe", "Listening")} <span style={{ color: "var(--text-muted)", fontWeight: 400 }}>(0–495)</span>
+              </label>
+              <input
+                type="number"
+                min={0}
+                max={495}
+                className={inp}
+                style={inpStyle}
+                value={listening}
+                onChange={(e) => setListening(e.target.value)}
+                placeholder="300"
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
+                {t("Điểm Đọc", "Reading")} <span style={{ color: "var(--text-muted)", fontWeight: 400 }}>(0–495)</span>
+              </label>
+              <input
+                type="number"
+                min={0}
+                max={495}
+                className={inp}
+                style={inpStyle}
+                value={reading}
+                onChange={(e) => setReading(e.target.value)}
+                placeholder="280"
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={saving}
+              className="py-2.5 rounded-lg text-sm font-bold text-white transition-opacity"
+              style={{ background: saving ? "var(--border)" : "var(--orange)", cursor: saving ? "not-allowed" : "pointer" }}
+            >
+              {saving ? t("Đang lưu...", "Saving...") : t("Lưu kết quả", "Save")}
+            </button>
+          </div>
+
+          {total !== null && (
+            <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+              {t("Tổng điểm", "Total")}: <span className="font-bold" style={{ color: "var(--orange)" }}>{total}</span>/990
+            </p>
+          )}
+
+          <div>
+            <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
+              {t("Tên bài test (tuỳ chọn)", "Test name (optional)")}
+            </label>
+            <input
+              className={`${inp} max-w-xs`}
+              style={inpStyle}
+              value={testname}
+              onChange={(e) => setTestname(e.target.value)}
+              placeholder="ETS 2024 Test 1"
+            />
+          </div>
+        </form>
+      )}
+    </div>
+  );
+}
+
+// ─── Score Row (table) ────────────────────────────────────────────────────────
+
+function ScoreRow({
+  score,
+  isNewest,
+  onDelete,
+  locale,
+}: {
+  score: ToeicScore;
+  isNewest: boolean;
+  onDelete: () => void;
+  locale: "vi" | "en";
+}) {
+  const { t } = useLocale();
+  const [expanded, setExpanded] = useState(false);
+  const l = getListening(score);
+  const r = getReading(score);
+
+  return (
+    <>
+      <tr
+        className="border-b transition-colors"
+        style={{ borderColor: "var(--border)", background: isNewest ? "rgba(196,98,45,0.04)" : "transparent" }}
+      >
+        <td className="py-3.5 px-4 text-sm" style={{ color: "var(--text-secondary)" }}>
+          {formatDate(score.date)}
+          {score.testname && (
+            <div className="text-[11px] mt-0.5 truncate max-w-[160px]" style={{ color: "var(--text-muted)" }}>
+              {score.testname}
+            </div>
+          )}
+        </td>
+        <td className="py-3.5 px-4 text-sm font-bold" style={{ fontFamily: "'Lora', serif", color: isNewest ? "var(--orange)" : "var(--text-primary)" }}>
+          {score.score}
+        </td>
+        <td className="py-3.5 px-4 text-sm" style={{ color: "var(--text-secondary)" }}>
+          {l ?? "—"}
+        </td>
+        <td className="py-3.5 px-4 text-sm" style={{ color: "var(--text-secondary)" }}>
+          {r ?? "—"}
+        </td>
+        <td className="py-3.5 px-4 text-right">
+          <div className="flex items-center justify-end gap-3">
+            <button
+              onClick={() => setExpanded((o) => !o)}
+              className="text-sm font-medium flex items-center gap-1 transition-opacity hover:opacity-80"
+              style={{ color: "var(--orange)", background: "none", border: "none", cursor: "pointer" }}
+            >
+              <span>📄</span>
+              <span>{t("Xem chi tiết", "View details")}</span>
+            </button>
+            <button
+              onClick={onDelete}
+              className="text-[11px] px-2 py-1 rounded transition-colors"
+              style={{ color: "#c62828", border: "1px solid rgba(198,40,40,0.3)", background: "none", cursor: "pointer" }}
+            >
+              {t("Xoá", "Del")}
+            </button>
+          </div>
+        </td>
+      </tr>
+      {expanded && (
+        <tr style={{ background: "rgba(196,98,45,0.03)", borderBottom: `1px solid var(--border)` }}>
+          <td colSpan={5} className="px-4 py-3">
+            <div className="flex flex-wrap gap-2 text-[11px]">
+              {(["p1", "p2", "p3", "p4", "p5", "p6", "p7"] as const).map((k) => {
+                const v = (score as Record<string, unknown>)[k] as number | undefined;
+                if (v === undefined) return null;
+                const isL = ["p1", "p2", "p3", "p4"].includes(k);
+                return (
+                  <span
+                    key={k}
+                    className="px-2 py-0.5 rounded font-bold"
+                    style={{
+                      background: isL ? "rgba(196,98,45,0.12)" : "rgba(30,111,168,0.1)",
+                      color: isL ? "#C4622D" : "#1E6FA8",
+                      border: isL ? "1px solid rgba(196,98,45,0.25)" : "1px solid rgba(30,111,168,0.22)",
+                    }}
+                  >
+                    P{k[1]}: {v}
+                  </span>
+                );
+              })}
+              {score.note && (
+                <span className="ml-2 italic" style={{ color: "var(--text-muted)" }}>{score.note}</span>
+              )}
+            </div>
+          </td>
+        </tr>
+      )}
+    </>
+  );
+}
+
+// ─── Main Page ────────────────────────────────────────────────────────────────
+
 export default function ScoresPage() {
+  const { t, locale } = useLocale();
   const { profile, loading: profileLoading } = useProfile();
   const studentCode = profile?.studentCode ?? null;
   const { student, loading: studentLoading } = useStudent(studentCode);
@@ -701,7 +521,7 @@ export default function ScoresPage() {
   async function handleDelete(displayIndex: number) {
     if (!studentCode) return;
     const scoreToDelete = sortedScores[displayIndex];
-    if (!window.confirm(`Xoá điểm ${scoreToDelete.score} (${formatDate(scoreToDelete.date)})?`)) return;
+    if (!window.confirm(`${t("Xoá điểm", "Delete score")} ${scoreToDelete.score} (${formatDate(scoreToDelete.date)})?`)) return;
     const originalScores: ToeicScore[] = student?.scores ? [...student.scores] : [];
     const originalIndex = originalScores.findIndex(
       (s) => s.date === scoreToDelete.date && s.score === scoreToDelete.score
@@ -717,26 +537,26 @@ export default function ScoresPage() {
 
   if (loading) {
     return (
-      <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-        {[...Array(3)].map((_, i) => (
-          <div
-            key={i}
-            className="animate-pulse"
-            style={{ height: i === 0 ? 160 : 80, background: "var(--border)" }}
-          />
-        ))}
+      <div className="space-y-4 animate-pulse">
+        <div className="h-8 w-48 rounded-xl" style={{ background: "var(--border)" }} />
+        <div className="grid grid-cols-2 gap-4">
+          <div className="h-52 rounded-2xl" style={{ background: "var(--border)" }} />
+          <div className="h-52 rounded-2xl" style={{ background: "var(--border)" }} />
+        </div>
+        <div className="h-16 rounded-2xl" style={{ background: "var(--border)" }} />
+        <div className="h-40 rounded-2xl" style={{ background: "var(--border)" }} />
       </div>
     );
   }
 
   if (!studentCode) {
     return (
-      <div>
-        <h1 style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "1rem" }}>
-          Điểm số TOEIC
+      <div className="space-y-3">
+        <h1 className="text-2xl font-bold" style={{ fontFamily: "'Lora', serif" }}>
+          {t("Điểm số TOEIC", "TOEIC Score")}
         </h1>
-        <p style={{ color: "var(--text-muted)", fontSize: "0.875rem" }}>
-          Chưa có mã học viên. Liên hệ giáo viên để được thêm vào hệ thống.
+        <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+          {t("Chưa có mã học viên. Liên hệ giáo viên để được thêm vào hệ thống.", "No student code. Contact your teacher to be added to the system.")}
         </p>
       </div>
     );
@@ -746,159 +566,137 @@ export default function ScoresPage() {
   const hasScores = sortedScores.length > 0;
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
-      <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between" }}>
-        <h1
-          style={{
-            fontFamily: "'Lora', Georgia, serif",
-            fontSize: "1.5rem",
-            fontWeight: 700,
-            color: "var(--text-primary)",
-            margin: 0,
-          }}
-        >
-          Điểm số TOEIC
+    <div className="space-y-4">
+      {/* Title */}
+      <div className="flex items-baseline justify-between">
+        <h1 className="text-2xl font-bold" style={{ fontFamily: "'Lora', serif", color: "var(--text-primary)" }}>
+          {t("Điểm số TOEIC", "TOEIC Score")}
         </h1>
         {hasScores && (
-          <span style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>
-            {sortedScores.length} lần thi
+          <span className="text-sm" style={{ color: "var(--text-muted)" }}>
+            {sortedScores.length} {t("lần thi", "tests")}
           </span>
         )}
       </div>
 
-      {hasGoal ? (
-        <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-          <div style={{ flex: "0 0 auto", width: "clamp(240px, 38%, 340px)" }}>
-            <div style={{ background: "var(--ink2)", padding: "1.5rem" }}>
-              {editingGoal ? (
-                <>
-                  <div style={{ color: "#9A8672", fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "0.5rem" }}>
-                    Chỉnh mục tiêu
-                  </div>
-                  <GoalEditForm
-                    currentTarget={goal.target}
-                    currentDeadline={goal.deadline}
-                    studentCode={studentCode}
-                    studentId={profile?.id ?? ""}
-                    studentName={profile?.displayName ?? ""}
-                    onDone={() => setEditingGoal(false)}
-                  />
-                </>
-              ) : (
-                <GoalCard
-                  target={goal.target}
-                  deadline={goal.deadline}
-                  latestScore={latestScore}
-                  onEditGoal={() => setEditingGoal(true)}
-                />
-              )}
-            </div>
-          </div>
-          <div style={{ flex: "1 1 260px" }}>
-            {hasScores ? (
-              <StatsPanel scores={sortedScores} target={goal.target} />
-            ) : (
-              <div
-                style={{
-                  background: "var(--bg-elevated)",
-                  border: "1px solid var(--border)",
-                  padding: "1.5rem",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  height: "100%",
-                  color: "var(--text-muted)",
-                  fontSize: "0.85rem",
-                }}
-              >
-                Chưa có điểm thi — hãy nhập bài test đầu tiên!
-              </div>
-            )}
-          </div>
-        </div>
-      ) : (
+      {/* Row 1: Goal card | Chart */}
+      <div className="grid grid-cols-2 gap-4">
+        {/* Goal card */}
         <div
-          style={{
-            background: "var(--ink2)",
-            padding: "1.5rem",
-            display: "flex",
-            flexDirection: "column",
-            gap: "0.75rem",
-          }}
+          className="rounded-2xl p-6"
+          style={{ background: "var(--ink2)" }}
         >
           {editingGoal ? (
             <>
-              <div style={{ color: "#9A8672", fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.08em" }}>
-                Đặt mục tiêu TOEIC
+              <div className="text-[11px] font-bold uppercase tracking-widest mb-2" style={{ color: "#9A8672" }}>
+                {t("Chỉnh mục tiêu", "Edit Goal")}
               </div>
               <GoalEditForm
-                currentTarget={500}
-                currentDeadline=""
+                currentTarget={hasGoal ? goal.target : 500}
+                currentDeadline={hasGoal ? goal.deadline : ""}
                 studentCode={studentCode}
                 studentId={profile?.id ?? ""}
                 studentName={profile?.displayName ?? ""}
                 onDone={() => setEditingGoal(false)}
               />
             </>
+          ) : hasGoal ? (
+            <GoalCard
+              target={goal.target}
+              deadline={goal.deadline}
+              latestScore={latestScore}
+              locale={locale}
+              onEdit={() => setEditingGoal(true)}
+            />
           ) : (
-            <>
-              <div style={{ color: "#9A8672", fontSize: "0.85rem" }}>Bạn chưa đặt mục tiêu điểm TOEIC.</div>
+            <div className="flex flex-col gap-3">
+              <p className="text-sm" style={{ color: "#9A8672" }}>
+                {t("Bạn chưa đặt mục tiêu điểm TOEIC.", "You haven't set a TOEIC goal yet.")}
+              </p>
               <button
                 onClick={() => setEditingGoal(true)}
-                style={{
-                  background: "var(--orange)",
-                  color: "#fff",
-                  border: "none",
-                  padding: "0.5rem 1.25rem",
-                  fontWeight: 700,
-                  fontSize: "0.82rem",
-                  cursor: "pointer",
-                  borderRadius: 0,
-                  alignSelf: "flex-start",
-                }}
+                className="self-start px-4 py-2 rounded-lg text-sm font-bold text-white"
+                style={{ background: "var(--orange)", border: "none", cursor: "pointer" }}
               >
-                Đặt mục tiêu ngay
+                {t("Đặt mục tiêu ngay", "Set a Goal")}
               </button>
-            </>
+            </div>
           )}
         </div>
-      )}
 
-      <AddScoreForm studentCode={studentCode} onSaved={() => {}} />
-
-      {hasScores && (
-        <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-          <div style={{ fontSize: "0.72rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "0.25rem" }}>
-            Lịch sử điểm thi
-          </div>
-          {sortedScores.map((s, i) => (
-            <ScoreHistoryItem
-              key={`${s.date}-${s.score}-${i}`}
-              score={s}
-              isNewest={i === 0}
-              onDelete={() => deleteKey === null && handleDelete(i)}
-            />
-          ))}
-        </div>
-      )}
-
-      {!hasScores && (
+        {/* Chart */}
         <div
-          style={{
-            background: "var(--bg-elevated)",
-            border: "1px solid var(--border)",
-            padding: "2.5rem 1.5rem",
-            textAlign: "center",
-          }}
+          className="rounded-2xl p-5"
+          style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)", boxShadow: "var(--shadow-sm)" }}
         >
-          <div style={{ fontWeight: 600, color: "var(--text-primary)", fontSize: "0.9rem", marginBottom: "0.4rem" }}>
-            Chưa có điểm thi nào
-          </div>
-          <div style={{ color: "var(--text-muted)", fontSize: "0.8rem" }}>
-            Dùng form bên trên để nhập kết quả bài test đầu tiên.
-          </div>
+          <h2 className="font-semibold text-base mb-3" style={{ color: "var(--text-primary)" }}>
+            {t("Phân tích điểm số", "Score Analysis")}
+          </h2>
+          <ScoreChart
+            scores={sortedScores}
+            noDataLabel={t("Chưa có dữ liệu", "No data yet")}
+          />
         </div>
-      )}
+      </div>
+
+      {/* Add score form */}
+      <AddScoreForm studentCode={studentCode} />
+
+      {/* History table */}
+      <div
+        className="rounded-2xl overflow-hidden"
+        style={{ border: "1px solid var(--border)", background: "var(--bg-elevated)", boxShadow: "var(--shadow-sm)" }}
+      >
+        <div className="px-5 py-4" style={{ borderBottom: "1px solid var(--border)" }}>
+          <h2 className="font-semibold text-base" style={{ color: "var(--text-primary)" }}>
+            {t("Lịch sử điểm", "Score History")}
+          </h2>
+        </div>
+
+        {!hasScores ? (
+          <div className="text-center py-10">
+            <p className="text-sm font-semibold" style={{ color: "var(--text-primary)" }}>
+              {t("Chưa có điểm thi nào", "No test scores yet")}
+            </p>
+            <p className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>
+              {t("Dùng form bên trên để nhập kết quả.", "Use the form above to add your first score.")}
+            </p>
+          </div>
+        ) : (
+          <table className="w-full">
+            <thead>
+              <tr style={{ borderBottom: "1px solid var(--border)", background: "var(--bg-primary)" }}>
+                {[
+                  t("Ngày thi", "Date"),
+                  t("Điểm Tổng", "Total"),
+                  t("Điểm Nghe", "Listening"),
+                  t("Điểm Đọc", "Reading"),
+                  "",
+                ].map((h, i) => (
+                  <th
+                    key={i}
+                    className={`px-4 py-3 text-left text-[11px] font-bold uppercase tracking-wider ${i === 4 ? "text-right" : ""}`}
+                    style={{ color: "var(--text-muted)" }}
+                  >
+                    {h}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {sortedScores.map((s, i) => (
+                <ScoreRow
+                  key={`${s.date}-${s.score}-${i}`}
+                  score={s}
+                  isNewest={i === 0}
+                  onDelete={() => deleteKey === null && handleDelete(i)}
+                  locale={locale}
+                />
+              ))}
+            </tbody>
+          </table>
+        )}
+      </div>
     </div>
   );
 }

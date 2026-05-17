@@ -2,19 +2,22 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { LanguageToggle } from "@/components/journal/LanguageToggle";
+import { useLocale } from "@/hooks/useLocale";
 
 const TABS = [
-  { href: "/journal",              icon: "🏠", label: "Home",       exact: true },
-  { href: "/journal/scores",       icon: "🎯", label: "Score" },
-  { href: "/journal/error-log",    icon: "📓", label: "Journal" },
-  { href: "/journal/vocab",        icon: "📖", label: "Vocabulary" },
-  { href: "/journal/missions",     icon: "✅", label: "Tasks" },
-  { href: "/journal/booking",      icon: "📅", label: "Schedule" },
-  { href: "/journal/settings",     icon: "⚙️", label: "Settings" },
+  { href: "/journal",              iconEn: "🏠", labelEn: "Home",       labelVi: "Tổng quan",   exact: true },
+  { href: "/journal/scores",       iconEn: "🎯", labelEn: "Score",      labelVi: "Điểm số" },
+  { href: "/journal/error-log",    iconEn: "📓", labelEn: "Journal",    labelVi: "Nhật ký lỗi" },
+  { href: "/journal/vocab",        iconEn: "📖", labelEn: "Vocabulary", labelVi: "Từ vựng" },
+  { href: "/journal/missions",     iconEn: "✅", labelEn: "Tasks",      labelVi: "Nhiệm vụ" },
+  { href: "/journal/booking",      iconEn: "📅", labelEn: "Schedule",   labelVi: "Lịch học" },
+  { href: "/journal/settings",     iconEn: "⚙️", labelEn: "Settings",   labelVi: "Cài đặt" },
 ];
 
 export function JournalTabBar() {
   const pathname = usePathname();
+  const { locale } = useLocale();
 
   return (
     <nav
@@ -31,6 +34,7 @@ export function JournalTabBar() {
           const active = tab.exact
             ? pathname === tab.href
             : pathname.startsWith(tab.href);
+          const label = locale === "en" ? tab.labelEn : tab.labelVi;
           return (
             <Link
               key={tab.href}
@@ -44,11 +48,17 @@ export function JournalTabBar() {
                 textDecoration: "none",
               }}
             >
-              <span aria-hidden="true">{tab.icon}</span>
-              <span>{tab.label}</span>
+              <span aria-hidden="true">{tab.iconEn}</span>
+              <span>{label}</span>
             </Link>
           );
         })}
+
+        {/* Spacer */}
+        <div className="flex-1" />
+
+        {/* Language toggle */}
+        <LanguageToggle />
       </div>
     </nav>
   );
