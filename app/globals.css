@@ -145,6 +145,15 @@
   --font-lora:         var(--font-lora, 'Lora', Georgia, serif);
   --font-be-vietnam:   var(--font-be-vietnam, 'Be Vietnam Pro', sans-serif);
 
+  /*
+   * Override global font stack with Be Vietnam Pro inside journal.
+   * Syne and DM Sans lack the Vietnamese subset → diacritics fall back
+   * to system-ui and look inconsistent. Be Vietnam Pro loads with
+   * subsets: ["latin","vietnamese"] so all tonal marks render correctly.
+   */
+  --font-sans:    var(--font-be-vietnam, 'Be Vietnam Pro', sans-serif);
+  --font-display: var(--font-be-vietnam, 'Be Vietnam Pro', sans-serif);
+
   /* ── Misc ── */
   --sidebar-w: 220px;
 }

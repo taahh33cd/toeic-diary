@@ -8,7 +8,7 @@ import { ServiceWorkerRegistrar } from "@/components/shared/ServiceWorkerRegistr
 
 // ── Fonts ──────────────────────────────────────
 const dmSans = DM_Sans({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: "--font-dm-sans",
   display: "swap",
   weight: ["300", "400", "500", "600"],
@@ -30,7 +30,7 @@ const syne = Syne({
 
 // ── Journal fonts (warm beige theme — matches STUDENT.html) ──────────────────
 const lora = Lora({
-  subsets: ["latin"],
+  subsets: ["latin", "vietnamese"],
   variable: "--font-lora",
   display: "swap",
   weight: ["400", "600", "700"],
