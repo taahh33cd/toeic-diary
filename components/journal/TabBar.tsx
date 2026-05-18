@@ -29,7 +29,7 @@ export function JournalTabBar() {
       }}
       aria-label="Journal navigation tabs"
     >
-      <div className="flex items-center gap-1 max-w-5xl mx-auto px-4 py-2">
+      <div className="flex items-center gap-1 max-w-[1400px] mx-auto px-6 py-2">
         {TABS.map((tab) => {
           const active = tab.exact
             ? pathname === tab.href

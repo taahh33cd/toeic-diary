@@ -59,7 +59,7 @@ export default async function JournalLayout({
           boxShadow: "var(--shadow-sm)",
         }}
       >
-        <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
+        <div className="max-w-[1400px] mx-auto px-6 h-14 flex items-center justify-between gap-4">
           <Brand size="sm" href="/journal" />
           <NavSwitcher orientation="horizontal" />
         </div>
@@ -69,7 +69,7 @@ export default async function JournalLayout({
       <JournalTabBar />
 
       {/* ── Page content ── */}
-      <main id="main-content" className="flex-1 max-w-5xl mx-auto w-full px-4 py-6">
+      <main id="main-content" className="flex-1 max-w-[1400px] mx-auto w-full px-6 py-6">
         {children}
       </main>
 
