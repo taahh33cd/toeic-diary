@@ -404,37 +404,46 @@ function WordCard({
   return (
     <div
       onClick={() => setExpanded((v) => !v)}
-      className="rounded-xl p-4 flex flex-col cursor-pointer transition-all duration-200"
+      className="rounded-xl p-4 flex flex-col cursor-pointer transition-all duration-200 overflow-hidden"
       style={{
         background: "var(--bg-primary)",
         border: `1px solid ${due && !isMastered ? "rgba(196,98,45,0.4)" : expanded ? "var(--orange)" : "rgba(196,98,45,0.12)"}`,
         transform: expanded ? "translateY(-2px)" : undefined,
         boxShadow: expanded ? "0 4px 12px rgba(196,98,45,0.12)" : undefined,
+        minWidth: 0,
       }}
     >
-      {/* Word + IPA */}
+      {/* Word */}
       <h4
         className="font-bold text-base leading-snug"
-        style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)" }}
+        style={{
+          fontFamily: "'Lora', Georgia, serif",
+          color: "var(--text-primary)",
+          wordBreak: "break-word",
+          overflowWrap: "break-word",
+        }}
       >
         {word.word}
-        {word.ipa && (
-          <span
-            className="font-normal text-xs italic ml-1.5"
-            style={{ color: "var(--text-muted)", fontFamily: "var(--font-jetbrains-mono, 'JetBrains Mono', monospace)" }}
-          >
-            /{word.ipa}/
-          </span>
-        )}
-        {word.pos && (
-          <span
-            className="font-sans font-semibold text-[10px] ml-1.5 not-italic"
-            style={{ color: POS_COLOR[word.pos] ?? "var(--text-muted)" }}
-          >
-            {word.pos}
-          </span>
-        )}
       </h4>
+
+      {/* IPA + POS on separate line */}
+      {(word.ipa || word.pos) && (
+        <p className="text-[11px] mt-0.5 truncate" style={{ color: "var(--text-muted)" }}>
+          {word.ipa && (
+            <span style={{ fontFamily: "var(--font-jetbrains-mono, 'JetBrains Mono', monospace)", fontStyle: "italic" }}>
+              /{word.ipa}/
+            </span>
+          )}
+          {word.pos && (
+            <span
+              className="font-semibold ml-1"
+              style={{ color: POS_COLOR[word.pos] ?? "var(--text-muted)", fontStyle: "normal" }}
+            >
+              {word.pos}
+            </span>
+          )}
+        </p>
+      )}
 
       {/* Vietnamese meaning */}
       <p className="text-sm mt-1 flex-grow" style={{ color: "var(--text-secondary)" }}>
