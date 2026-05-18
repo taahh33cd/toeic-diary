@@ -90,7 +90,7 @@ export default async function SeriesPage({ params }: { params: Promise<{ slug: s
     <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
-      <main className="flex-1 max-w-7xl mx-auto w-full px-4 md:px-6 py-8">
+      <main className="flex-1 max-w-[1400px] mx-auto w-full px-4 md:px-6 py-8">
 
         {/* Back */}
         <Link

@@ -105,7 +105,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
     <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
-      <main className="flex-1 max-w-5xl mx-auto w-full px-4 md:px-6 py-8">
+      <main className="flex-1 max-w-[1400px] mx-auto w-full px-4 md:px-6 py-8">
 
         {/* Back */}
         <Link

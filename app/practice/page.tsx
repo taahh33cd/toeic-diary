@@ -68,7 +68,7 @@ export default async function PracticePage() {
     <div className="min-h-screen flex flex-col" style={{ background: "var(--bg-primary)" }}>
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
-      <main className="flex-1 max-w-5xl mx-auto w-full px-4 py-10">
+      <main className="flex-1 max-w-[1400px] mx-auto w-full px-4 py-10">
         <div className="mb-8">
           <h1 className="text-2xl font-bold mb-1" style={{ color: "var(--text-primary)" }}>
             🎧 Luyện tập theo Part

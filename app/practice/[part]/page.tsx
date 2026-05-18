@@ -99,7 +99,7 @@ export default async function PartPracticePage({
     return (
       <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
         <Header userEmail={user.email} userDisplayName={profile?.displayName} />
-        <main className="flex-1 max-w-7xl mx-auto w-full px-4 md:px-6 py-8">
+        <main className="flex-1 max-w-[1400px] mx-auto w-full px-4 md:px-6 py-8">
           <Link
             href={`/practice/${part}`}
             className="inline-flex items-center gap-1.5 text-sm text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors mb-6"
@@ -250,7 +250,7 @@ export default async function PartPracticePage({
     <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
-      <main className="flex-1 max-w-7xl mx-auto w-full px-4 md:px-6 py-8">
+      <main className="flex-1 max-w-[1400px] mx-auto w-full px-4 md:px-6 py-8">
         <Link
           href="/practice"
           className="inline-flex items-center gap-1.5 text-sm text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors mb-6"

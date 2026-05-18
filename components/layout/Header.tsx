@@ -184,7 +184,7 @@ const styles = {
     supports-[backdrop-filter]:bg-[var(--bg-elevated)]/90
   `,
   inner: `
-    max-w-7xl mx-auto px-4 md:px-6
+    max-w-[1400px] mx-auto px-4 md:px-6
     h-14 flex items-center justify-between gap-4
   `,
   logo: `

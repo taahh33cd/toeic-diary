@@ -84,7 +84,7 @@ export default async function HomePage() {
     <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
-      <main className="flex-1 max-w-7xl mx-auto w-full px-4 md:px-6 py-8">
+      <main className="flex-1 max-w-[1400px] mx-auto w-full px-4 md:px-6 py-8">
 
         {/* Hero Banner */}
         <div className="relative rounded-[var(--radius-xl)] overflow-hidden mb-10 bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-700 p-6 md:p-8">
