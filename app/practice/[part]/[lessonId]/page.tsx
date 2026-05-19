@@ -105,27 +105,31 @@ export default async function PartLessonPage({
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
+    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#f8f9ff" }}>
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
-      <main className="flex-1 max-w-[1400px] mx-auto w-full px-4 md:px-6 py-8">
-        <nav className="flex items-center gap-1.5 text-sm text-[var(--text-muted)] mb-6 flex-wrap">
-          <Link href="/practice" className="hover:text-[var(--text-primary)] transition-colors">
+      <main style={{ flex: 1, maxWidth: 1120, margin: "0 auto", width: "100%", padding: "32px 24px" }}>
+        {/* Breadcrumb */}
+        <nav style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 14, color: "#3e4850", marginBottom: 24 }}>
+          <Link href="/practice" style={{ color: "#3e4850", textDecoration: "none" }}
+            className="hover:text-[#006591] transition-colors">
             Luyện tập
           </Link>
-          <span>/</span>
-          <Link href={`/practice/${part}`} className="hover:text-[var(--text-primary)] transition-colors">
+          <span style={{ color: "#bec8d2" }}>›</span>
+          <Link href={`/practice/${part}`} style={{ color: "#3e4850", textDecoration: "none" }}
+            className="hover:text-[#006591] transition-colors">
             {info.label}
           </Link>
-          <span>/</span>
-          <span className="text-[var(--text-primary)] font-medium">{lesson.title}</span>
+          <span style={{ color: "#bec8d2" }}>›</span>
+          <span style={{ color: "#006591", fontWeight: 600 }}>{lesson.title}</span>
         </nav>
 
-        <div className="mb-6">
-          <h1 className="font-display font-bold text-2xl text-[var(--text-primary)]">
+        {/* Title block */}
+        <div style={{ marginBottom: 40 }}>
+          <h1 style={{ fontSize: 30, fontWeight: 600, lineHeight: "38px", letterSpacing: "-0.01em", color: "#0b1c30", marginBottom: 4 }}>
             {lesson.title}
           </h1>
-          <p className="text-sm text-[var(--text-muted)] mt-1">
+          <p style={{ fontSize: 14, color: "#3e4850" }}>
             {lesson.part.testSet.name} · {info.label}
             {lesson.questionStart && lesson.questionEnd
               ? ` · Q${lesson.questionStart}–${lesson.questionEnd}`
