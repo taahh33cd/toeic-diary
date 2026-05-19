@@ -9,7 +9,15 @@ import {
   IconTasks, IconSchedule, IconSettings,
 } from "@/components/journal/Icons";
 
-const TABS = [
+type TabItem = {
+  href: string;
+  Icon: (props: { size?: number }) => React.ReactElement;
+  labelEn: string;
+  labelVi: string;
+  exact?: boolean;
+};
+
+const TABS: TabItem[] = [
   { href: "/journal",           Icon: IconHome,     labelEn: "Home",       labelVi: "Tổng quan",   exact: true },
   { href: "/journal/scores",    Icon: IconScore,    labelEn: "Score",      labelVi: "Điểm số" },
   { href: "/journal/error-log", Icon: IconJournal,  labelEn: "Journal",    labelVi: "Nhật ký lỗi" },
@@ -17,7 +25,7 @@ const TABS = [
   { href: "/journal/missions",  Icon: IconTasks,    labelEn: "Tasks",      labelVi: "Nhiệm vụ" },
   { href: "/journal/booking",   Icon: IconSchedule, labelEn: "Schedule",   labelVi: "Lịch học" },
   { href: "/journal/settings",  Icon: IconSettings, labelEn: "Settings",   labelVi: "Cài đặt" },
-] as const;
+];
 
 export function JournalTabBar() {
   const pathname = usePathname();
@@ -37,7 +45,7 @@ export function JournalTabBar() {
         {TABS.map((tab) => {
           const active = tab.exact
             ? pathname === tab.href
-            : pathname.startsWith(tab.href);
+            : pathname === tab.href || pathname.startsWith(tab.href + "/");
           const label = locale === "en" ? tab.labelEn : tab.labelVi;
           return (
             <Link

@@ -8,18 +8,20 @@ import {
   IconJournal, IconSchedule, IconSettings,
 } from "@/components/journal/Icons";
 
-const ITEMS = [
+type NavItem = { href: string; Icon: (p: { size?: number }) => React.ReactElement; label: string; exact?: boolean };
+
+const ITEMS: NavItem[] = [
   { href: "/journal",          Icon: IconHome,  label: "Trang chủ", exact: true },
   { href: "/journal/scores",   Icon: IconScore, label: "Điểm số" },
   { href: "/journal/missions", Icon: IconTasks, label: "Nhiệm vụ" },
   { href: "/journal/vocab",    Icon: IconVocab, label: "Từ vựng" },
-] as const;
+];
 
-const MODAL_ITEMS = [
+const MODAL_ITEMS: NavItem[] = [
   { href: "/journal/error-log",    Icon: IconJournal,  label: "Nhật ký lỗi" },
   { href: "/journal/booking",      Icon: IconSchedule, label: "Lịch học" },
   { href: "/journal/settings",     Icon: IconSettings, label: "Cài đặt" },
-] as const;
+];
 
 export function MobileBottomNav() {
   const pathname = usePathname();
@@ -50,7 +52,7 @@ export function MobileBottomNav() {
         aria-label="Mobile navigation"
       >
         {ITEMS.map((item) => {
-          const active = isActive(item.href, (item as { exact?: boolean }).exact);
+          const active = isActive(item.href, item.exact);
           return (
             <Link
               key={item.href}
