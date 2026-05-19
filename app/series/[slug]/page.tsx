@@ -4,21 +4,7 @@ import { redirect, notFound } from "next/navigation";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { ProgressRing } from "@/components/shared/ProgressRing";
-import { ChevronRight, ArrowLeft } from "lucide-react";
-
-const TEST_COLORS = [
-  { bg: "from-indigo-500 to-purple-600" },
-  { bg: "from-emerald-500 to-teal-600" },
-  { bg: "from-orange-500 to-amber-600" },
-  { bg: "from-rose-500 to-pink-600" },
-  { bg: "from-blue-500 to-cyan-600" },
-  { bg: "from-violet-500 to-purple-600" },
-  { bg: "from-green-500 to-emerald-600" },
-  { bg: "from-yellow-500 to-orange-600" },
-  { bg: "from-red-500 to-rose-600" },
-  { bg: "from-sky-500 to-blue-600" },
-];
+import { ArrowLeft, BookOpen, ChevronRight } from "lucide-react";
 
 const PART_ICONS: Record<number, string> = { 1: "🖼️", 2: "💬", 3: "🗣️", 4: "📢" };
 
@@ -46,7 +32,6 @@ export default async function SeriesPage({ params }: { params: Promise<{ slug: s
 
   if (!series) notFound();
 
-  // Progress per test set
   let testProgress: Record<string, { total: number; completed: number }> = {};
   let completedLessonIds = new Set<string>();
 
@@ -87,114 +72,100 @@ export default async function SeriesPage({ params }: { params: Promise<{ slug: s
   }).length;
 
   return (
-    <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
+    <div className="min-h-screen flex flex-col bg-[#f8f9ff]">
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
-      <main className="flex-1 max-w-[1400px] mx-auto w-full px-4 md:px-6 py-8">
+      <main className="flex-1 max-w-[1120px] mx-auto w-full px-4 md:px-6 py-10">
 
         {/* Back */}
         <Link
           href="/"
-          className="inline-flex items-center gap-1.5 text-sm text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors mb-6"
+          className="inline-flex items-center gap-1.5 text-sm text-[#6e7881] hover:text-[#0b1c30] transition-colors mb-8"
         >
           <ArrowLeft size={15} />
           Tất cả bộ đề
         </Link>
 
         {/* Series header */}
-        <div className={`relative rounded-[var(--radius-xl)] overflow-hidden mb-8 bg-gradient-to-br ${series.color} p-6 md:p-8`}>
-          <div className="absolute -right-12 -top-12 w-48 h-48 rounded-full bg-white/5" />
-          <div className="absolute -right-4 -bottom-8 w-32 h-32 rounded-full bg-white/5" />
-
-          <div className="relative">
-            <div className="text-4xl mb-3">{series.icon}</div>
-            <h1 className="font-display font-bold text-2xl md:text-3xl text-white mb-1">
-              {series.name}
-            </h1>
-            {series.description && (
-              <p className="text-white/70 text-sm md:text-base mb-4 max-w-lg">
-                {series.description}
-              </p>
-            )}
-            <div className="flex flex-wrap gap-3">
-              <span className="px-3 py-1.5 rounded-full text-sm font-medium bg-white/15 text-white">
-                {series.publisher}
-              </span>
-              {series.year && (
-                <span className="px-3 py-1.5 rounded-full text-sm font-medium bg-white/15 text-white">
-                  {series.year}
-                </span>
-              )}
-              <span className="px-3 py-1.5 rounded-full text-sm font-medium bg-white/15 text-white">
-                {completedTests}/{totalTests} đề hoàn thành
-              </span>
+        <div className="bg-white border border-[#bec8d2] rounded-xl p-6 md:p-8 mb-8"
+          style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.05)" }}>
+          <div className="flex flex-col md:flex-row md:items-center gap-4 mb-6">
+            <div className="w-14 h-14 rounded-xl bg-[#0ea5e9]/10 border border-[#0ea5e9]/20 flex items-center justify-center flex-shrink-0">
+              <BookOpen size={26} className="text-[#0ea5e9]" />
             </div>
+            <div className="flex-1">
+              <h1 className="text-2xl md:text-3xl font-bold text-[#0b1c30] leading-tight">
+                {series.name}
+              </h1>
+              {series.description && (
+                <p className="text-sm text-[#6e7881] mt-1">{series.description}</p>
+              )}
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-[#eff4ff] text-[#006591] border border-[#0ea5e9]/20">
+              {series.publisher}
+            </span>
+            {series.year && (
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-[#eff4ff] text-[#006591] border border-[#0ea5e9]/20">
+                {series.year}
+              </span>
+            )}
+            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-[#eff4ff] text-[#006591] border border-[#0ea5e9]/20">
+              {completedTests}/{totalTests} đề hoàn thành
+            </span>
           </div>
         </div>
 
         {/* Test sets grid */}
-        <div className="mb-4 flex items-center justify-between">
-          <h2 className="font-display font-bold text-xl text-[var(--text-primary)]">
-            Danh sách đề thi
-          </h2>
-          <span className="text-sm text-[var(--text-muted)]">{totalTests} đề</span>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-xl font-semibold text-[#0b1c30]">Danh sách đề thi</h2>
+          <span className="text-sm text-[#6e7881]">{totalTests} đề</span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 stagger-children">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {series.testSets.map((test, i) => {
             const prog = testProgress[test.id] ?? { total: 0, completed: 0 };
-            const percent = prog.total > 0 ? (prog.completed / prog.total) * 100 : 0;
-            const color = TEST_COLORS[i % TEST_COLORS.length];
+            const percent = prog.total > 0 ? Math.round((prog.completed / prog.total) * 100) : 0;
+            const isComplete = percent === 100 && prog.total > 0;
 
             return (
               <Link
                 key={test.id}
                 href={`/test/${test.slug}`}
-                className="card card-interactive p-5 flex flex-col gap-4 animate-slide-up group"
+                className="group bg-white border border-[#bec8d2] rounded-xl p-5 flex flex-col gap-4 transition-all hover:-translate-y-0.5"
+                style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.05)" }}
               >
+                {/* Top row */}
                 <div className="flex items-center gap-3">
-                  <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${color.bg} flex items-center justify-center flex-shrink-0`}>
-                    <span className="text-white font-display font-bold text-sm">{i + 1}</span>
+                  <div className="w-10 h-10 rounded-xl bg-[#0ea5e9]/10 border border-[#0ea5e9]/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-sm font-bold text-[#0ea5e9]">{i + 1}</span>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="font-display font-bold text-sm text-[var(--text-primary)] leading-tight">
+                    <div className="font-semibold text-sm text-[#0b1c30] leading-tight truncate">
                       {test.name}
                     </div>
-                    <div className="text-xs text-[var(--text-muted)] mt-0.5">
-                      {test.parts.length} Parts
+                    <div className="text-xs text-[#6e7881] mt-0.5">
+                      {test.parts.map((p) => PART_ICONS[p.partNumber]).join(" ")}
                     </div>
                   </div>
-                  <ChevronRight size={16} className="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] transition-colors flex-shrink-0" />
+                  <ChevronRight size={16} className="text-[#bec8d2] group-hover:text-[#0ea5e9] transition-colors flex-shrink-0" />
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <ProgressRing percent={percent} size={60} strokeWidth={5} />
-                  <div className="flex-1">
-                    <div className="text-xs text-[var(--text-secondary)] mb-1">
-                      {prog.completed}/{prog.total} bài ≥70
-                    </div>
-                    <div className="flex gap-1 flex-wrap">
-                      {test.parts.map((p) => (
-                        <span key={p.id} className="text-xs text-[var(--text-muted)]">
-                          {PART_ICONS[p.partNumber]}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
+                {/* Progress */}
                 <div>
-                  <div className="progress-bar" style={{ height: "4px" }}>
-                    <div className="progress-bar-fill" style={{ width: `${percent}%` }} />
+                  <div className="flex justify-between text-xs text-[#6e7881] mb-1.5">
+                    <span>{prog.completed}/{prog.total} bài ≥70</span>
+                    <span className={isComplete ? "text-emerald-600 font-semibold" : "font-medium text-[#006591]"}>
+                      {isComplete ? "✓ Hoàn thành" : percent === 0 ? "Bắt đầu →" : `${percent}%`}
+                    </span>
                   </div>
-                  <div className="mt-1.5 text-right">
-                    {percent === 0 ? (
-                      <span className="text-xs text-[var(--accent-primary)] font-medium">Bắt đầu →</span>
-                    ) : percent === 100 ? (
-                      <span className="text-xs text-[var(--accent-green)] font-medium">✅ Hoàn thành</span>
-                    ) : (
-                      <span className="text-xs text-[var(--text-muted)]">Đang học</span>
-                    )}
+                  <div className="w-full h-1.5 bg-[#e5eeff] rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-[#0ea5e9] rounded-full transition-all duration-700"
+                      style={{ width: `${percent}%` }}
+                    />
                   </div>
                 </div>
               </Link>
