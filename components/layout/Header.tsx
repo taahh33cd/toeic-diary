@@ -91,7 +91,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
           {/* Theme toggle */}
           <button
             onClick={toggleTheme}
-            className="btn btn-ghost btn-icon text-[#3e4850] hover:text-[#0b1c30] hover:bg-[#eff4ff]"
+            className="btn btn-ghost btn-icon text-white hover:text-white hover:bg-white/10"
             aria-label={theme === "dark" ? "Chuyển sang Light mode" : "Chuyển sang Dark mode"}
             title={theme === "dark" ? "Light mode" : "Dark mode"}
           >
@@ -178,8 +178,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
 const styles = {
   header: `
     sticky top-0 z-50 w-full
-    border-b border-[#bec8d2]
-    bg-[#ffffff]
+    bg-[#0ea5e9]
   `,
   inner: `
     max-w-[1400px] mx-auto px-4 md:px-6
@@ -187,26 +186,26 @@ const styles = {
   `,
   logo: `
     flex items-center gap-3 no-underline
-    hover:opacity-80 transition-opacity
+    hover:opacity-90 transition-opacity
     flex-shrink-0
   `,
   logoIcon: `
-    w-8 h-8 rounded-lg bg-[#0ea5e9]
-    flex items-center justify-center text-base
+    hidden
   `,
   logoTitle: `
-    font-display font-bold text-sm leading-tight text-[#0b1c30]
+    font-display font-bold text-base leading-tight text-white
   `,
   logoSub: `
-    text-[10px] text-[#6e7881] leading-tight
+    hidden
   `,
   nav: `
     hidden md:flex items-center gap-6
   `,
   navLink: `
-    flex items-center gap-1.5 px-0 py-1
-    text-sm text-[#3e4850]
-    hover:text-[#0ea5e9]
+    flex items-center gap-1.5 px-0 pb-1
+    text-sm text-white font-medium
+    border-b-2 border-transparent
+    hover:border-white
     transition-colors
   `,
   actions: `
@@ -214,14 +213,14 @@ const styles = {
   `,
   avatar: `
     w-8 h-8 rounded-full
-    bg-[#0ea5e9]
+    bg-white/20 border border-white/40
     text-white text-sm font-semibold
     flex items-center justify-center
-    cursor-pointer border-2 border-transparent
+    cursor-pointer
     transition-all
   `,
   avatarActive: `
-    border-[#0ea5e9] ring-2 ring-[#0ea5e9]/30
+    ring-2 ring-white/50
   `,
   userMenu: `
     relative
