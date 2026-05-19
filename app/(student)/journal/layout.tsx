@@ -54,9 +54,14 @@ export default async function JournalLayout({
       <header
         className="sticky top-0 z-40 border-b"
         style={{
-          background: "var(--bg-elevated)",
-          borderColor: "var(--border)",
+          background: "#3D2B1F",
+          borderColor: "#2A1F15",
           boxShadow: "var(--shadow-sm)",
+          ["--text-primary" as string]: "#FFFFFF",
+          ["--text-secondary" as string]: "rgba(255,255,255,0.72)",
+          ["--bg-secondary" as string]: "rgba(255,255,255,0.08)",
+          ["--accent-primary" as string]: "#FF7A3D",
+          ["--orange-faint" as string]: "rgba(255,122,61,0.18)",
         }}
       >
         <div className="max-w-[1400px] mx-auto px-6 h-14 flex items-center justify-between gap-4">

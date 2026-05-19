@@ -178,8 +178,8 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
 const styles = {
   header: `
     sticky top-0 z-50 w-full
-    border-b border-[#2A1F15]
-    bg-[#3D2B1F]
+    border-b border-violet-800/40
+    bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-700
   `,
   inner: `
     max-w-[1400px] mx-auto px-4 md:px-6
