@@ -91,7 +91,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
           {/* Theme toggle */}
           <button
             onClick={toggleTheme}
-            className="btn btn-ghost btn-icon text-[rgba(255,255,255,0.72)] hover:text-white hover:bg-[rgba(255,255,255,0.08)]"
+            className="btn btn-ghost btn-icon text-[#3e4850] hover:text-[#0b1c30] hover:bg-[#eff4ff]"
             aria-label={theme === "dark" ? "Chuyển sang Light mode" : "Chuyển sang Dark mode"}
             title={theme === "dark" ? "Light mode" : "Dark mode"}
           >
@@ -178,12 +178,12 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
 const styles = {
   header: `
     sticky top-0 z-50 w-full
-    border-b border-violet-800/40
-    bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-700
+    border-b border-[#bec8d2]
+    bg-[#ffffff]
   `,
   inner: `
     max-w-[1400px] mx-auto px-4 md:px-6
-    h-14 flex items-center justify-between gap-4
+    h-16 flex items-center justify-between gap-4
   `,
   logo: `
     flex items-center gap-3 no-underline
@@ -191,23 +191,22 @@ const styles = {
     flex-shrink-0
   `,
   logoIcon: `
-    w-8 h-8 rounded-lg bg-[#FF7A3D]
+    w-8 h-8 rounded-lg bg-[#0ea5e9]
     flex items-center justify-center text-base
   `,
   logoTitle: `
-    font-display font-bold text-sm leading-tight text-white
+    font-display font-bold text-sm leading-tight text-[#0b1c30]
   `,
   logoSub: `
-    text-[10px] text-[rgba(255,255,255,0.5)] leading-tight
+    text-[10px] text-[#6e7881] leading-tight
   `,
   nav: `
-    hidden md:flex items-center gap-1
+    hidden md:flex items-center gap-6
   `,
   navLink: `
-    flex items-center gap-1.5 px-3 py-1.5
-    text-sm text-[rgba(255,255,255,0.72)]
-    rounded-[var(--radius-md)]
-    hover:bg-[rgba(255,255,255,0.08)] hover:text-white
+    flex items-center gap-1.5 px-0 py-1
+    text-sm text-[#3e4850]
+    hover:text-[#0ea5e9]
     transition-colors
   `,
   actions: `
@@ -215,14 +214,14 @@ const styles = {
   `,
   avatar: `
     w-8 h-8 rounded-full
-    bg-[#FF7A3D]
+    bg-[#0ea5e9]
     text-white text-sm font-semibold
     flex items-center justify-center
     cursor-pointer border-2 border-transparent
     transition-all
   `,
   avatarActive: `
-    border-[#FF7A3D] ring-2 ring-[#FF7A3D]/30
+    border-[#0ea5e9] ring-2 ring-[#0ea5e9]/30
   `,
   userMenu: `
     relative
