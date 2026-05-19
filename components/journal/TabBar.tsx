@@ -4,16 +4,20 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LanguageToggle } from "@/components/journal/LanguageToggle";
 import { useLocale } from "@/hooks/useLocale";
+import {
+  IconHome, IconScore, IconJournal, IconVocab,
+  IconTasks, IconSchedule, IconSettings,
+} from "@/components/journal/Icons";
 
 const TABS = [
-  { href: "/journal",              iconEn: "🏠", labelEn: "Home",       labelVi: "Tổng quan",   exact: true },
-  { href: "/journal/scores",       iconEn: "🎯", labelEn: "Score",      labelVi: "Điểm số" },
-  { href: "/journal/error-log",    iconEn: "📓", labelEn: "Journal",    labelVi: "Nhật ký lỗi" },
-  { href: "/journal/vocab",        iconEn: "📖", labelEn: "Vocabulary", labelVi: "Từ vựng" },
-  { href: "/journal/missions",     iconEn: "✅", labelEn: "Tasks",      labelVi: "Nhiệm vụ" },
-  { href: "/journal/booking",      iconEn: "📅", labelEn: "Schedule",   labelVi: "Lịch học" },
-  { href: "/journal/settings",     iconEn: "⚙️", labelEn: "Settings",   labelVi: "Cài đặt" },
-];
+  { href: "/journal",           Icon: IconHome,     labelEn: "Home",       labelVi: "Tổng quan",   exact: true },
+  { href: "/journal/scores",    Icon: IconScore,    labelEn: "Score",      labelVi: "Điểm số" },
+  { href: "/journal/error-log", Icon: IconJournal,  labelEn: "Journal",    labelVi: "Nhật ký lỗi" },
+  { href: "/journal/vocab",     Icon: IconVocab,    labelEn: "Vocabulary", labelVi: "Từ vựng" },
+  { href: "/journal/missions",  Icon: IconTasks,    labelEn: "Tasks",      labelVi: "Nhiệm vụ" },
+  { href: "/journal/booking",   Icon: IconSchedule, labelEn: "Schedule",   labelVi: "Lịch học" },
+  { href: "/journal/settings",  Icon: IconSettings, labelEn: "Settings",   labelVi: "Cài đặt" },
+] as const;
 
 export function JournalTabBar() {
   const pathname = usePathname();
@@ -48,7 +52,7 @@ export function JournalTabBar() {
                 textDecoration: "none",
               }}
             >
-              <span aria-hidden="true">{tab.iconEn}</span>
+              <tab.Icon size={16} />
               <span>{label}</span>
             </Link>
           );

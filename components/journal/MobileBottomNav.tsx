@@ -3,19 +3,22 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import {
+  IconHome, IconScore, IconTasks, IconVocab,
+  IconJournal, IconSchedule, IconSettings,
+} from "@/components/journal/Icons";
 
 const ITEMS = [
-  { href: "/journal",          emoji: "🏠", label: "Trang chủ", exact: true },
-  { href: "/journal/scores",   emoji: "🎯", label: "Điểm số" },
-  { href: "/journal/missions", emoji: "✅", label: "Nhiệm vụ" },
-  { href: "/journal/vocab",    emoji: "📖", label: "Từ vựng" },
+  { href: "/journal",          Icon: IconHome,  label: "Trang chủ", exact: true },
+  { href: "/journal/scores",   Icon: IconScore, label: "Điểm số" },
+  { href: "/journal/missions", Icon: IconTasks, label: "Nhiệm vụ" },
+  { href: "/journal/vocab",    Icon: IconVocab, label: "Từ vựng" },
 ] as const;
 
 const MODAL_ITEMS = [
-  { href: "/journal/error-log",    emoji: "📒", label: "Nhật ký lỗi" },
-  { href: "/journal/booking",      emoji: "📅", label: "Lịch học" },
-  { href: "/journal/achievements", emoji: "🏆", label: "Thành tựu" },
-  { href: "/journal/settings",     emoji: "⚙️", label: "Cài đặt" },
+  { href: "/journal/error-log",    Icon: IconJournal,  label: "Nhật ký lỗi" },
+  { href: "/journal/booking",      Icon: IconSchedule, label: "Lịch học" },
+  { href: "/journal/settings",     Icon: IconSettings, label: "Cài đặt" },
 ] as const;
 
 export function MobileBottomNav() {
@@ -59,9 +62,7 @@ export function MobileBottomNav() {
               }}
               aria-current={active ? "page" : undefined}
             >
-              <span className="text-xl leading-none" aria-hidden="true">
-                {item.emoji}
-              </span>
+              <item.Icon size={22} />
               <span style={{ fontSize: "10px", fontWeight: active ? 600 : 400 }}>
                 {item.label}
               </span>
@@ -185,11 +186,10 @@ export function MobileBottomNav() {
                       padding: "1.1rem .5rem",
                       background: active ? "rgba(196,98,45,.07)" : "#FBF7F2",
                       textDecoration: "none",
+                      color: active ? "#C4622D" : "#9A8672",
                     }}
                   >
-                    <span style={{ fontSize: "1.5rem", lineHeight: 1 }} aria-hidden="true">
-                      {item.emoji}
-                    </span>
+                    <item.Icon size={26} />
                     <span
                       style={{
                         fontSize: ".72rem",
