@@ -4,21 +4,16 @@ import { redirect, notFound } from "next/navigation";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { ChevronLeft, ChevronRight, Clock, Trophy, Play, CheckCircle2, Circle } from "lucide-react";
+import { ChevronLeft, ChevronRight, Clock, Trophy, CheckCircle2, Circle } from "lucide-react";
 
-const PART_LABELS: Record<number, { label: string; icon: string; color: string }> = {
-  1: { label: "Part 1 \u2013 Photographs", icon: "📷", color: "from-rose-500 to-pink-600" },
-  2: { label: "Part 2 \u2013 Question-Response", icon: "💬", color: "from-amber-500 to-orange-600" },
-  3: { label: "Part 3 \u2013 Conversations", icon: "🗣️", color: "from-indigo-500 to-violet-600" },
-  4: { label: "Part 4 \u2013 Talks", icon: "📢", color: "from-emerald-500 to-teal-600" },
+const PART_LABELS: Record<number, { label: string; icon: string }> = {
+  1: { label: "Part 1 – Photographs", icon: "📷" },
+  2: { label: "Part 2 – Question-Response", icon: "💬" },
+  3: { label: "Part 3 – Conversations", icon: "🗣️" },
+  4: { label: "Part 4 – Talks", icon: "📢" },
 };
 
-const LEVEL_LABELS: Record<number, string> = {
-  1: "L1",
-  2: "L2",
-  3: "L3",
-  4: "L4",
-};
+const LEVEL_LABELS: Record<number, string> = { 1: "L1", 2: "L2", 3: "L3", 4: "L4" };
 
 function formatDuration(seconds: number) {
   if (!seconds || seconds === 0) return null;
@@ -29,11 +24,11 @@ function formatDuration(seconds: number) {
 
 function statusBadge(status: string, score: number) {
   if (status === "completed" && score >= 70)
-    return { label: "✓ Đạt", cls: "bg-[var(--accent-green)]/15 text-[var(--accent-green)]" };
+    return { label: "✓ Đạt", cls: "bg-emerald-50 text-emerald-700 border border-emerald-200" };
   if (status === "completed")
-    return { label: `${score}đ`, cls: "bg-orange-500/15 text-orange-400" };
+    return { label: `${score}đ`, cls: "bg-orange-50 text-orange-700 border border-orange-200" };
   if (status === "in_progress")
-    return { label: "Đang học", cls: "bg-yellow-500/15 text-yellow-400" };
+    return { label: "Đang học", cls: "bg-yellow-50 text-yellow-700 border border-yellow-200" };
   return null;
 }
 
@@ -68,7 +63,6 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
 
   if (!testSet) notFound();
 
-  // Fetch user progress for all lessons in this test
   const lessonIds = testSet.parts.flatMap((p) => p.lessons.map((l) => l.id));
   const progressRows = lessonIds.length
     ? await prisma.userProgress.findMany({
@@ -77,7 +71,6 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
       })
     : [];
 
-  // Map: lessonId → level → progress
   const progressMap = new Map<string, Map<number, { status: string; score: number; bestScore: number }>>();
   for (const row of progressRows) {
     if (!progressMap.has(row.lessonId)) progressMap.set(row.lessonId, new Map());
@@ -93,91 +86,123 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
     select: { displayName: true },
   });
 
-  // Stats
   const totalLessons = lessonIds.length;
   const completedLessons = new Set(
     progressRows.filter((p) => p.status === "completed" && p.score >= 70).map((p) => p.lessonId)
   ).size;
 
   const activeParts = testSet.parts.filter((p) => p.lessons.length > 0);
+  const overallPercent = totalLessons > 0 ? Math.round((completedLessons / totalLessons) * 100) : 0;
 
   return (
-    <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
+    <div className="min-h-screen flex flex-col bg-[#f8f9ff]">
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
-      <main className="flex-1 max-w-[1400px] mx-auto w-full px-4 md:px-6 py-8">
+      <main className="flex-1 max-w-[1120px] mx-auto w-full px-4 md:px-6 py-10">
 
         {/* Back */}
         <Link
           href="/"
-          className="inline-flex items-center gap-1.5 text-sm text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors mb-6"
+          className="inline-flex items-center gap-1.5 text-sm text-[#6e7881] hover:text-[#0b1c30] transition-colors mb-8"
         >
-          <ChevronLeft size={16} />
+          <ChevronLeft size={15} />
           Trang chủ
         </Link>
 
-        {/* Header banner */}
-        <div className="relative rounded-[var(--radius-xl)] overflow-hidden mb-8 bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-700 p-6 md:p-8">
-          <div className="absolute -right-10 -top-10 w-44 h-44 rounded-full bg-white/5" />
-          <div className="absolute right-16 bottom-0 w-24 h-24 rounded-full bg-white/5" />
-
-          <div className="relative">
-            <div className="text-indigo-300 text-sm font-medium mb-1 uppercase tracking-wider">
-              ETS {testSet.year}
+        {/* Header card */}
+        <div className="bg-white border border-[#bec8d2] rounded-xl p-6 md:p-8 mb-8"
+          style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.05)" }}>
+          <div className="flex flex-col md:flex-row md:items-start gap-4">
+            <div className="flex-1">
+              {testSet.year && (
+                <p className="text-xs font-semibold text-[#0ea5e9] uppercase tracking-wider mb-1">
+                  ETS {testSet.year}
+                </p>
+              )}
+              <h1 className="text-2xl md:text-3xl font-bold text-[#0b1c30] leading-tight mb-4">
+                {testSet.name}
+              </h1>
+              <div className="flex flex-wrap gap-2">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-[#eff4ff] text-[#006591] border border-[#0ea5e9]/20">
+                  <Trophy size={12} />
+                  {completedLessons}/{totalLessons} bài ≥70
+                </span>
+                <span className="px-3 py-1 rounded-full text-xs font-medium bg-[#eff4ff] text-[#006591] border border-[#0ea5e9]/20">
+                  {activeParts.length} Part
+                </span>
+              </div>
             </div>
-            <h1 className="font-display font-bold text-2xl md:text-3xl text-white mb-4">
-              {testSet.name}
-            </h1>
 
-            <div className="flex flex-wrap gap-3">
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-white/15 text-white">
-                <Trophy size={14} />
-                {completedLessons}/{totalLessons} bài đạt ≥70
-              </div>
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-white/15 text-white">
-                <Play size={14} />
-                {activeParts.length} Part
-              </div>
+            {/* Overall progress ring */}
+            <div className="flex flex-col items-center gap-1 flex-shrink-0">
+              <svg width="72" height="72" viewBox="0 0 72 72">
+                <circle cx="36" cy="36" r="30" fill="none" stroke="#e5eeff" strokeWidth="6" />
+                <circle
+                  cx="36" cy="36" r="30"
+                  fill="none"
+                  stroke="#0ea5e9"
+                  strokeWidth="6"
+                  strokeLinecap="round"
+                  strokeDasharray={`${2 * Math.PI * 30}`}
+                  strokeDashoffset={`${2 * Math.PI * 30 * (1 - overallPercent / 100)}`}
+                  transform="rotate(-90 36 36)"
+                />
+                <text x="36" y="40" textAnchor="middle" className="text-xs font-bold" fill="#0b1c30" fontSize="14" fontWeight="700">
+                  {overallPercent}%
+                </text>
+              </svg>
+              <span className="text-xs text-[#6e7881]">Tiến độ</span>
+            </div>
+          </div>
+
+          {/* Overall progress bar */}
+          <div className="mt-5">
+            <div className="w-full h-1.5 bg-[#e5eeff] rounded-full overflow-hidden">
+              <div
+                className="h-full bg-[#0ea5e9] rounded-full transition-all duration-700"
+                style={{ width: `${overallPercent}%` }}
+              />
             </div>
           </div>
         </div>
 
         {/* Parts + Lessons */}
-        <div className="space-y-10">
+        <div className="space-y-8">
           {activeParts.map((part) => {
             const meta = PART_LABELS[part.partNumber] ?? {
               label: `Part ${part.partNumber}`,
               icon: "📝",
-              color: "from-gray-500 to-gray-600",
             };
             const partCompleted = part.lessons.filter((l) => {
               const lp = progressMap.get(l.id);
               if (!lp) return false;
               return Array.from(lp.values()).some((p) => p.status === "completed" && p.score >= 70);
             }).length;
+            const partPercent = part.lessons.length > 0
+              ? Math.round((partCompleted / part.lessons.length) * 100)
+              : 0;
 
             return (
               <section key={part.id}>
                 {/* Part header */}
-                <div className="flex items-center gap-3 mb-4">
-                  <div className={`w-9 h-9 rounded-xl bg-gradient-to-br ${meta.color} flex items-center justify-center text-lg flex-shrink-0`}>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-9 h-9 rounded-xl bg-[#0ea5e9]/10 border border-[#0ea5e9]/20 flex items-center justify-center text-lg flex-shrink-0">
                     {meta.icon}
                   </div>
                   <div className="flex-1">
-                    <h2 className="font-display font-bold text-lg text-[var(--text-primary)]">
-                      {meta.label}
-                    </h2>
-                    <p className="text-xs text-[var(--text-muted)]">
+                    <h2 className="font-semibold text-base text-[#0b1c30]">{meta.label}</h2>
+                    <p className="text-xs text-[#6e7881]">
                       {partCompleted}/{part.lessons.length} bài hoàn thành
                     </p>
                   </div>
+                  <span className="text-sm font-semibold text-[#0ea5e9]">{partPercent}%</span>
                 </div>
 
-                {/* Progress bar */}
-                <div className="progress-bar mb-5" style={{ height: "3px" }}>
+                {/* Part progress bar */}
+                <div className="w-full h-1 bg-[#e5eeff] rounded-full overflow-hidden mb-4">
                   <div
-                    className="progress-bar-fill"
-                    style={{ width: `${part.lessons.length > 0 ? (partCompleted / part.lessons.length) * 100 : 0}%` }}
+                    className="h-full bg-[#0ea5e9] rounded-full transition-all duration-700"
+                    style={{ width: `${partPercent}%` }}
                   />
                 </div>
 
@@ -185,13 +210,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {part.lessons.map((lesson) => {
                     const lp = progressMap.get(lesson.id);
-                    // Best status across all levels
                     const levels = lp ? Array.from(lp.entries()) : [];
-                    const bestLevel = levels.reduce(
-                      (best, [lvl, p]) =>
-                        p.status === "completed" && p.bestScore >= 70 && lvl > best ? lvl : best,
-                      0
-                    );
                     const anyCompleted = levels.some(([, p]) => p.status === "completed" && p.score >= 70);
                     const anyStarted = levels.some(([, p]) => p.status !== "not_started");
                     const overallStatus = anyCompleted ? "completed" : anyStarted ? "in_progress" : "not_started";
@@ -203,16 +222,17 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
                       <Link
                         key={lesson.id}
                         href={`/test/${slug}/${lesson.id}`}
-                        className="card card-interactive p-4 flex flex-col gap-3 group animate-slide-up"
+                        className="group bg-white border border-[#bec8d2] rounded-xl p-4 flex flex-col gap-3 transition-all hover:-translate-y-0.5"
+                        style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.05)" }}
                       >
                         {/* Top row */}
                         <div className="flex items-start justify-between gap-2">
-                          <div>
-                            <div className="font-display font-bold text-sm text-[var(--text-primary)] leading-tight">
+                          <div className="flex-1 min-w-0">
+                            <div className="font-semibold text-sm text-[#0b1c30] leading-tight">
                               {lesson.title}
                             </div>
                             {lesson.questionStart && lesson.questionEnd && (
-                              <div className="text-xs text-[var(--text-muted)] mt-0.5">
+                              <div className="text-xs text-[#6e7881] mt-0.5">
                                 Questions {lesson.questionStart}–{lesson.questionEnd}
                               </div>
                             )}
@@ -225,14 +245,14 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
                             )}
                             <ChevronRight
                               size={15}
-                              className="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] transition-colors"
+                              className="text-[#bec8d2] group-hover:text-[#0ea5e9] transition-colors"
                             />
                           </div>
                         </div>
 
                         {/* Bottom row */}
                         <div className="flex items-center justify-between">
-                          {/* Level dots */}
+                          {/* Level badges */}
                           <div className="flex items-center gap-1.5">
                             {(part.partNumber <= 2 ? [1, 2] : [1, 2, 3, 4]).map((lvl) => {
                               const lv = lp?.get(lvl);
@@ -242,19 +262,15 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
                                 <div
                                   key={lvl}
                                   title={`Level ${lvl}`}
-                                  className={`flex items-center gap-0.5 text-xs font-medium px-1.5 py-0.5 rounded ${
+                                  className={`inline-flex items-center gap-0.5 text-xs font-medium px-1.5 py-0.5 rounded ${
                                     done
-                                      ? "bg-[var(--accent-green)]/15 text-[var(--accent-green)]"
+                                      ? "bg-emerald-50 text-emerald-700 border border-emerald-200"
                                       : started
-                                      ? "bg-yellow-500/15 text-yellow-400"
-                                      : "bg-[var(--bg-tertiary)] text-[var(--text-muted)]"
+                                      ? "bg-yellow-50 text-yellow-700 border border-yellow-200"
+                                      : "bg-[#eff4ff] text-[#6e7881] border border-[#bec8d2]"
                                   }`}
                                 >
-                                  {done ? (
-                                    <CheckCircle2 size={10} />
-                                  ) : (
-                                    <Circle size={10} />
-                                  )}
+                                  {done ? <CheckCircle2 size={10} /> : <Circle size={10} />}
                                   {LEVEL_LABELS[lvl]}
                                 </div>
                               );
@@ -262,7 +278,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
                           </div>
 
                           {duration && (
-                            <div className="flex items-center gap-1 text-xs text-[var(--text-muted)]">
+                            <div className="flex items-center gap-1 text-xs text-[#6e7881]">
                               <Clock size={11} />
                               {duration}
                             </div>
