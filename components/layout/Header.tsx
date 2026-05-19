@@ -61,7 +61,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
             <span>🎧</span>
           </div>
           <div>
-            <div className={styles.logoTitle}>Dictation Master</div>
+            <div className={styles.logoTitle}>{displayName}&apos;s TOEIC Diary</div>
             <div className={styles.logoSub}>TOEIC ETS 2026</div>
           </div>
         </Link>
@@ -91,7 +91,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
           {/* Theme toggle */}
           <button
             onClick={toggleTheme}
-            className="btn btn-ghost btn-icon"
+            className="btn btn-ghost btn-icon text-[rgba(255,255,255,0.72)] hover:text-white hover:bg-[rgba(255,255,255,0.08)]"
             aria-label={theme === "dark" ? "Chuyển sang Light mode" : "Chuyển sang Dark mode"}
             title={theme === "dark" ? "Light mode" : "Dark mode"}
           >
@@ -178,10 +178,8 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
 const styles = {
   header: `
     sticky top-0 z-50 w-full
-    border-b border-[var(--border)]
-    bg-[var(--bg-elevated)]
-    backdrop-blur-md
-    supports-[backdrop-filter]:bg-[var(--bg-elevated)]/90
+    border-b border-[#2A1F15]
+    bg-[#3D2B1F]
   `,
   inner: `
     max-w-[1400px] mx-auto px-4 md:px-6
@@ -193,23 +191,23 @@ const styles = {
     flex-shrink-0
   `,
   logoIcon: `
-    w-8 h-8 rounded-lg bg-[var(--accent-primary)]
+    w-8 h-8 rounded-lg bg-[#FF7A3D]
     flex items-center justify-center text-base
   `,
   logoTitle: `
-    font-display font-bold text-sm leading-tight text-[var(--text-primary)]
+    font-display font-bold text-sm leading-tight text-white
   `,
   logoSub: `
-    text-[10px] text-[var(--text-muted)] leading-tight
+    text-[10px] text-[rgba(255,255,255,0.5)] leading-tight
   `,
   nav: `
     hidden md:flex items-center gap-1
   `,
   navLink: `
     flex items-center gap-1.5 px-3 py-1.5
-    text-sm text-[var(--text-secondary)]
+    text-sm text-[rgba(255,255,255,0.72)]
     rounded-[var(--radius-md)]
-    hover:bg-[var(--bg-secondary)] hover:text-[var(--text-primary)]
+    hover:bg-[rgba(255,255,255,0.08)] hover:text-white
     transition-colors
   `,
   actions: `
@@ -217,14 +215,14 @@ const styles = {
   `,
   avatar: `
     w-8 h-8 rounded-full
-    bg-[var(--accent-primary)]
+    bg-[#FF7A3D]
     text-white text-sm font-semibold
     flex items-center justify-center
     cursor-pointer border-2 border-transparent
     transition-all
   `,
   avatarActive: `
-    border-[var(--accent-primary)] ring-2 ring-[var(--accent-primary)]/20
+    border-[#FF7A3D] ring-2 ring-[#FF7A3D]/30
   `,
   userMenu: `
     relative
