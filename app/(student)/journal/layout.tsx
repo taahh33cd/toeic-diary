@@ -31,7 +31,7 @@ export default async function JournalLayout({
 
   const profile = await prisma.profile.findUnique({
     where: { id: user.id },
-    select: { studentCode: true },
+    select: { studentCode: true, displayName: true },
   });
 
   if (!profile?.studentCode) redirect("/auth/onboarding-incomplete");
@@ -65,7 +65,11 @@ export default async function JournalLayout({
         }}
       >
         <div className="max-w-[1400px] mx-auto px-6 h-14 flex items-center justify-between gap-4">
-          <Brand size="sm" href="/journal" />
+          <Brand
+            size="sm"
+            href="/journal"
+            label={`${profile?.displayName ?? user.email?.split("@")[0] ?? "My"}'s TOEIC Diary`}
+          />
           <NavSwitcher orientation="horizontal" />
         </div>
       </header>
