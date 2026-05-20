@@ -41,9 +41,9 @@
   --shadow-glow: 0 0 24px rgba(99, 102, 241, 0.18);
 
   /* Font variables */
-  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-sans: var(--font-be-vietnam, 'Be Vietnam Pro', system-ui, sans-serif);
   --font-mono: 'JetBrains Mono', monospace;
-  --font-display: 'Syne', system-ui, sans-serif;
+  --font-display: var(--font-lora, 'Lora', Georgia, serif);
 
   /* Spacing scale (4px base) */
   --space-1: 4px;
