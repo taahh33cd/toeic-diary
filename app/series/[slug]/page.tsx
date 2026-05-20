@@ -4,9 +4,31 @@ import { redirect, notFound } from "next/navigation";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { ArrowLeft, BookOpen, ChevronRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
-const PART_ICONS: Record<number, string> = { 1: "🖼️", 2: "💬", 3: "🗣️", 4: "📢" };
+const CIRCUMFERENCE = 2 * Math.PI * 18; // r=18
+
+function CircleProgress({ percent }: { percent: number }) {
+  const offset = CIRCUMFERENCE * (1 - percent / 100);
+  return (
+    <div className="relative w-10 h-10 flex items-center justify-center flex-shrink-0">
+      <svg className="absolute w-full h-full -rotate-90" viewBox="0 0 40 40">
+        <circle cx="20" cy="20" r="18" fill="transparent" stroke="#e5eeff" strokeWidth="2.5" />
+        <circle
+          cx="20" cy="20" r="18"
+          fill="transparent"
+          stroke="#0ea5e9"
+          strokeWidth="2.5"
+          strokeDasharray={CIRCUMFERENCE}
+          strokeDashoffset={offset}
+          strokeLinecap="round"
+          className="transition-all duration-700"
+        />
+      </svg>
+      <span className="text-[10px] font-bold text-[#0ea5e9]">{percent}%</span>
+    </div>
+  );
+}
 
 export default async function SeriesPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -77,96 +99,119 @@ export default async function SeriesPage({ params }: { params: Promise<{ slug: s
 
       <main className="flex-1 max-w-[1120px] mx-auto w-full px-4 md:px-6 py-10">
 
-        {/* Back */}
+        {/* Hero */}
+        <section className="bg-[#0ea5e9] rounded-2xl p-8 md:p-10 mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="max-w-2xl">
+            <nav className="flex items-center gap-1 text-xs text-white/80 mb-3">
+              <Link href="/" className="hover:opacity-80 transition-opacity">Thư viện</Link>
+              <span className="text-white/60">›</span>
+              <span className="text-white/90">{series.name}</span>
+            </nav>
+            <h1 className="text-4xl font-bold text-white leading-tight mb-3">{series.name}</h1>
+            {series.description && (
+              <p className="text-white/90 text-base max-w-xl">{series.description}</p>
+            )}
+          </div>
+          <div className="flex gap-3 flex-shrink-0">
+            <div className="flex flex-col items-center px-5 py-3 rounded-xl border border-white/30 bg-white/10 min-w-[90px]">
+              <span className="text-2xl font-bold text-white">{totalTests}</span>
+              <span className="text-xs text-white/80 mt-0.5">Total Tests</span>
+            </div>
+            <div className="flex flex-col items-center px-5 py-3 rounded-xl border border-white/30 bg-white/10 min-w-[90px]">
+              <span className="text-2xl font-bold text-white">{completedTests}</span>
+              <span className="text-xs text-white/80 mt-0.5">Hoàn thành</span>
+            </div>
+          </div>
+        </section>
+
+        {/* Back link below hero */}
         <Link
           href="/"
-          className="inline-flex items-center gap-1.5 text-sm text-[#6e7881] hover:text-[#0b1c30] transition-colors mb-8"
+          className="inline-flex items-center gap-1 text-sm text-[#6e7881] hover:text-[#0b1c30] transition-colors mb-6"
         >
-          <ArrowLeft size={15} />
+          <ArrowLeft size={14} />
           Tất cả bộ đề
         </Link>
 
-        {/* Series header */}
-        <div className="bg-white border border-[#bec8d2] rounded-xl p-6 md:p-8 mb-8"
-          style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.05)" }}>
-          <div className="flex flex-col md:flex-row md:items-center gap-4 mb-6">
-            <div className="w-14 h-14 rounded-xl bg-[#0ea5e9]/10 border border-[#0ea5e9]/20 flex items-center justify-center flex-shrink-0">
-              <BookOpen size={26} className="text-[#0ea5e9]" />
-            </div>
-            <div className="flex-1">
-              <h1 className="text-2xl md:text-3xl font-bold text-[#0b1c30] leading-tight">
-                {series.name}
-              </h1>
-              {series.description && (
-                <p className="text-sm text-[#6e7881] mt-1">{series.description}</p>
-              )}
-            </div>
-          </div>
-
-          <div className="flex flex-wrap gap-2">
-            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-[#eff4ff] text-[#006591] border border-[#0ea5e9]/20">
-              {series.publisher}
-            </span>
-            {series.year && (
-              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-[#eff4ff] text-[#006591] border border-[#0ea5e9]/20">
-                {series.year}
-              </span>
-            )}
-            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-[#eff4ff] text-[#006591] border border-[#0ea5e9]/20">
-              {completedTests}/{totalTests} đề hoàn thành
-            </span>
-          </div>
-        </div>
-
-        {/* Test sets grid */}
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-[#0b1c30]">Danh sách đề thi</h2>
-          <span className="text-sm text-[#6e7881]">{totalTests} đề</span>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {series.testSets.map((test, i) => {
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {series.testSets.map((test) => {
             const prog = testProgress[test.id] ?? { total: 0, completed: 0 };
             const percent = prog.total > 0 ? Math.round((prog.completed / prog.total) * 100) : 0;
             const isComplete = percent === 100 && prog.total > 0;
+            const isStarted = prog.completed > 0;
+
+            const statusLabel = isComplete
+              ? "Hoàn thành"
+              : isStarted
+              ? `${prog.completed}/${prog.total} bài ≥70`
+              : "Chưa bắt đầu";
+
+            const statusColor = isComplete
+              ? "text-emerald-600"
+              : isStarted
+              ? "text-[#0ea5e9]"
+              : "text-[#6e7881] opacity-60";
+
+            const ctaLabel = isComplete ? "Ôn lại" : isStarted ? "Tiếp tục" : "Bắt đầu";
+            const ctaIcon = isStarted && !isComplete ? "play_arrow" : "arrow_forward";
+
+            const listeningParts = test.parts.filter((p) => p.partNumber <= 4);
+            const readingParts = test.parts.filter((p) => p.partNumber > 4);
 
             return (
               <Link
                 key={test.id}
                 href={`/test/${test.slug}`}
-                className="group bg-white border border-[#bec8d2] rounded-xl p-5 flex flex-col gap-4 transition-all hover:-translate-y-0.5"
+                className="group bg-white border border-[#bec8d2] border-t-2 border-t-[#0ea5e9] rounded-xl p-5 flex flex-col justify-between hover:shadow-sm transition-all"
                 style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.05)" }}
               >
-                {/* Top row */}
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#0ea5e9]/10 border border-[#0ea5e9]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="text-sm font-bold text-[#0ea5e9]">{i + 1}</span>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="font-semibold text-sm text-[#0b1c30] leading-tight truncate">
-                      {test.name}
+                <div>
+                  {/* Top row */}
+                  <div className="flex justify-between items-start mb-5">
+                    <div className="p-2.5 bg-[#0ea5e9]/10 rounded-lg text-[#0ea5e9]">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+                      </svg>
                     </div>
-                    <div className="text-xs text-[#6e7881] mt-0.5">
-                      {test.parts.map((p) => PART_ICONS[p.partNumber]).join(" ")}
-                    </div>
+                    <span className={`text-xs font-medium ${statusColor}`}>{statusLabel}</span>
                   </div>
-                  <ChevronRight size={16} className="text-[#bec8d2] group-hover:text-[#0ea5e9] transition-colors flex-shrink-0" />
+
+                  {/* Title */}
+                  <h3 className="text-base font-semibold text-[#0b1c30] mb-1">{test.name}</h3>
+                  <p className="text-xs text-[#6e7881] mb-4">
+                    {test.year && `ETS ${test.year} • `}200 Questions • 120 Mins
+                  </p>
+
+                  {/* Part chips */}
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    {listeningParts.length > 0 && (
+                      <div className="px-2.5 py-1 bg-[#e5eeff]/60 rounded text-[#576065] text-xs font-medium flex items-center gap-1">
+                        <span>🎧</span> Part 1–{listeningParts[listeningParts.length - 1].partNumber}
+                      </div>
+                    )}
+                    {readingParts.length > 0 && (
+                      <div className="px-2.5 py-1 bg-[#e5eeff]/60 rounded text-[#576065] text-xs font-medium flex items-center gap-1">
+                        <span>📖</span> Part 5–7
+                      </div>
+                    )}
+                  </div>
                 </div>
 
-                {/* Progress */}
-                <div>
-                  <div className="flex justify-between text-xs text-[#6e7881] mb-1.5">
-                    <span>{prog.completed}/{prog.total} bài ≥70</span>
-                    <span className={isComplete ? "text-emerald-600 font-semibold" : "font-medium text-[#006591]"}>
-                      {isComplete ? "✓ Hoàn thành" : percent === 0 ? "Bắt đầu →" : `${percent}%`}
+                {/* Footer */}
+                <div className="flex items-center justify-between pt-4 border-t border-[#bec8d2]">
+                  <div className="flex items-center gap-2.5">
+                    <CircleProgress percent={percent} />
+                    <span className="text-xs text-[#6e7881]">
+                      {isComplete ? "Hoàn thành" : isStarted ? "Đang học" : "Chưa học"}
                     </span>
                   </div>
-                  <div className="w-full h-1.5 bg-[#e5eeff] rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-[#0ea5e9] rounded-full transition-all duration-700"
-                      style={{ width: `${percent}%` }}
-                    />
-                  </div>
+                  <span className="flex items-center gap-1 text-sm font-bold text-[#0ea5e9] group-hover:gap-2 transition-all">
+                    {ctaLabel}
+                    <span className="text-base">
+                      {ctaIcon === "play_arrow" ? "▶" : "→"}
+                    </span>
+                  </span>
                 </div>
               </Link>
             );
