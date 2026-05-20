@@ -6,6 +6,15 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Flame, BookCheck, ChevronRight, Headphones, Image, MessageSquare, Users, Megaphone, BookOpen } from "lucide-react";
 
+const SOFT_DEPTH = "0 10px 30px -10px rgba(14,165,233,0.1), 0 4px 6px -2px rgba(14,165,233,0.05)";
+
+const PARTS = [
+  { part: 1, Icon: Image,         name: "Photographs",       desc: "6 câu / đề" },
+  { part: 2, Icon: MessageSquare, name: "Question-Response", desc: "25 câu / đề" },
+  { part: 3, Icon: Users,         name: "Conversations",     desc: "39 câu / đề" },
+  { part: 4, Icon: Megaphone,     name: "Talks",             desc: "30 câu / đề" },
+] as const;
+
 export default async function HomePage() {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
@@ -61,196 +70,151 @@ export default async function HomePage() {
   const displayName = profile?.displayName ?? user.email?.split("@")[0] ?? "bạn";
   const streak = profile?.currentStreak ?? 0;
 
-  const PARTS = [
-    { part: 1, Icon: Image,        name: "Photographs",       desc: "6 câu / đề" },
-    { part: 2, Icon: MessageSquare, name: "Question-Response", desc: "25 câu / đề" },
-    { part: 3, Icon: Users,        name: "Conversations",     desc: "39 câu / đề" },
-    { part: 4, Icon: Megaphone,    name: "Talks",             desc: "30 câu / đề" },
-  ] as const;
-
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#f8f9ff" }}>
+    <div className="min-h-screen flex flex-col bg-[#f8f9ff]">
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
-      <main
-        style={{ flex: 1, maxWidth: 1120, margin: "0 auto", width: "100%", padding: "40px 24px" }}
-      >
+      <main className="flex-1 max-w-[1120px] mx-auto w-full px-4 md:px-6 py-10">
+
         {/* Welcome */}
-        <section style={{ marginBottom: 40 }}>
+        <section className="mb-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
-              <h1 style={{ fontSize: 40, fontWeight: 700, lineHeight: "48px", letterSpacing: "-0.02em", color: "#0b1c30", marginBottom: 8 }}>
+              <h1 className="text-4xl font-bold text-[#0b1c30] leading-[48px] tracking-[-0.02em] mb-2">
                 Xin chào, {displayName}! 👋
               </h1>
-              <p style={{ fontSize: 18, lineHeight: "28px", color: "#3e4850", maxWidth: 520 }}>
+              <p className="text-lg text-[#3e4850] max-w-2xl leading-7">
                 Luyện nghe chủ động — phương pháp hiệu quả nhất để nâng cấp kỹ năng nghe TOEIC của bạn mỗi ngày.
               </p>
             </div>
             <div className="flex gap-3 flex-shrink-0">
-              <StatCard
-                icon={<Flame size={20} style={{ color: "#0ea5e9" }} />}
-                label="Ngày Streak"
-                value={`${streak} ngày`}
-              />
-              <StatCard
-                icon={<BookCheck size={20} style={{ color: "#0ea5e9" }} />}
-                label="Đã hoàn thành"
-                value={`${totalCompleted} bài`}
-              />
+              <div
+                className="bg-white px-6 py-3 rounded-xl border border-[#bec8d2]/30 flex items-center gap-3"
+                style={{ boxShadow: SOFT_DEPTH }}
+              >
+                <Flame size={22} className="text-[#0ea5e9]" style={{ fill: "rgba(14,165,233,0.15)" }} />
+                <div>
+                  <p className="text-xs font-semibold tracking-[0.05em] text-[#3e4850] uppercase">Ngày Streak</p>
+                  <p className="text-2xl font-bold text-[#0ea5e9] leading-8">{streak} ngày</p>
+                </div>
+              </div>
+              <div
+                className="bg-white px-6 py-3 rounded-xl border border-[#bec8d2]/30 flex items-center gap-3"
+                style={{ boxShadow: SOFT_DEPTH }}
+              >
+                <BookCheck size={22} className="text-[#565e74]" />
+                <div>
+                  <p className="text-xs font-semibold tracking-[0.05em] text-[#3e4850] uppercase">Đã hoàn thành</p>
+                  <p className="text-2xl font-bold text-[#565e74] leading-8">{totalCompleted} bài</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Luyện tập theo Part */}
-        <section style={{ marginBottom: 40 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 24 }}>
-            <Headphones size={20} style={{ color: "#0ea5e9" }} />
-            <h2 style={{ fontSize: 24, fontWeight: 600, lineHeight: "32px", color: "#0b1c30" }}>
-              Luyện tập theo Part
-            </h2>
+        {/* Parts */}
+        <section className="mb-10">
+          <div className="flex items-center gap-2 mb-6">
+            <Headphones size={20} className="text-[#0ea5e9]" />
+            <h2 className="text-2xl font-semibold text-[#0b1c30]">Luyện tập theo Part</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {PARTS.map(({ part, Icon, name, desc }) => (
               <Link
                 key={part}
                 href={`/practice/part-${part}`}
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-start",
-                  padding: 24,
-                  background: "#ffffff",
-                  border: "1px solid #bec8d2",
-                  borderRadius: 8,
-                  textDecoration: "none",
-                  transition: "box-shadow 0.2s, transform 0.2s",
-                }}
-                className="group hover:-translate-y-0.5"
+                className="group flex flex-col items-start p-6 bg-white border border-[#bec8d2] rounded-xl transition-all hover:-translate-y-0.5 text-left"
+                style={{ boxShadow: SOFT_DEPTH }}
               >
-                <div
-                  style={{
-                    width: 48,
-                    height: 48,
-                    borderRadius: 8,
-                    background: "rgba(14,165,233,0.1)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    marginBottom: 12,
-                  }}
-                >
-                  <Icon size={22} style={{ color: "#0ea5e9" }} />
+                <div className="w-12 h-12 rounded-xl bg-[#0ea5e9]/10 flex items-center justify-center mb-3">
+                  <Icon size={22} className="text-[#0ea5e9]" />
                 </div>
-                <p style={{ fontSize: 16, fontWeight: 700, color: "#0b1c30", marginBottom: 2 }}>Part {part}</p>
-                <p style={{ fontSize: 14, color: "#3e4850", marginBottom: 4 }}>{name}</p>
-                <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.05em", color: "#6e7881", textTransform: "uppercase" }}>
-                  {desc}
-                </p>
+                <p className="text-base font-bold text-[#0b1c30]">Part {part}</p>
+                <p className="text-sm text-[#3e4850]">{name}</p>
+                <p className="text-xs font-semibold tracking-[0.05em] text-[#6e7881] uppercase mt-2">{desc}</p>
               </Link>
             ))}
           </div>
         </section>
 
-        {/* Chọn bộ đề */}
+        {/* Series */}
         <section>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 24 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <BookOpen size={20} style={{ color: "#0ea5e9" }} />
-              <h2 style={{ fontSize: 24, fontWeight: 600, lineHeight: "32px", color: "#0b1c30" }}>
-                Chọn bộ đề
-              </h2>
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center gap-2">
+              <BookOpen size={20} className="text-[#0ea5e9]" />
+              <h2 className="text-2xl font-semibold text-[#0b1c30]">Chọn bộ đề</h2>
             </div>
-            <span style={{ fontSize: 14, color: "#6e7881" }}>{seriesList.length} bộ đề</span>
+            <span className="text-sm text-[#6e7881]">{seriesList.length} bộ đề</span>
           </div>
 
           {seriesList.length === 0 ? (
-            <EmptyState />
+            <div
+              className="bg-white border border-[#bec8d2] rounded-xl p-12 text-center"
+              style={{ boxShadow: SOFT_DEPTH }}
+            >
+              <div className="text-5xl mb-4">📭</div>
+              <h3 className="text-lg font-semibold text-[#0b1c30] mb-2">Chưa có bộ đề nào</h3>
+              <p className="text-sm text-[#3e4850]">Admin cần import nội dung để bắt đầu.</p>
+            </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {seriesList.map((series) => {
                 const prog = seriesProgress[series.id] ?? { total: 0, completed: 0 };
                 const percent = prog.total > 0 ? Math.round((prog.completed / prog.total) * 100) : 0;
                 const testCount = series.testSets.length;
+                const isComplete = percent === 100 && prog.total > 0;
+                const isStarted = prog.completed > 0;
 
                 return (
                   <Link
                     key={series.id}
                     href={`/series/${series.slug}`}
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      padding: 24,
-                      background: "#ffffff",
-                      border: "1px solid #bec8d2",
-                      borderRadius: 8,
-                      textDecoration: "none",
-                      transition: "box-shadow 0.2s, transform 0.2s",
-                    }}
-                    className="group hover:-translate-y-0.5"
+                    className="group flex flex-col p-6 bg-white border border-[#bec8d2] rounded-xl transition-all hover:-translate-y-0.5"
+                    style={{ boxShadow: SOFT_DEPTH }}
                   >
-                    {/* Card header */}
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 24 }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                        <div
-                          style={{
-                            width: 56,
-                            height: 56,
-                            borderRadius: 8,
-                            background: "rgba(14,165,233,0.1)",
-                            border: "1px solid rgba(14,165,233,0.2)",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            fontSize: 24,
-                            flexShrink: 0,
-                          }}
-                        >
-                          {series.icon}
+                    {/* Header */}
+                    <div className="flex justify-between items-start mb-6">
+                      <div className="flex items-center gap-3">
+                        <div className="w-14 h-14 rounded-xl bg-[#0ea5e9]/10 flex items-center justify-center border border-[#0ea5e9]/20 flex-shrink-0">
+                          <span className="text-2xl">{series.icon ?? "📚"}</span>
                         </div>
                         <div>
-                          <h3 style={{ fontSize: 18, fontWeight: 700, color: "#0b1c30", lineHeight: "24px" }}>
-                            {series.name}
-                          </h3>
-                          <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.05em", color: "#3e4850", textTransform: "uppercase", marginTop: 2 }}>
+                          <h3 className="text-lg font-bold text-[#0b1c30] leading-snug">{series.name}</h3>
+                          <p className="text-xs font-semibold tracking-[0.05em] text-[#3e4850] uppercase mt-0.5">
                             {series.publisher}{series.year ? ` · ${series.year}` : ""}
                           </p>
                         </div>
                       </div>
-                      <ChevronRight
-                        size={18}
-                        style={{ color: "#6e7881", flexShrink: 0, marginTop: 4, transition: "color 0.2s" }}
-                        className="group-hover:text-[#0ea5e9]"
-                      />
+                      <ChevronRight size={18} className="text-[#6e7881] group-hover:text-[#0ea5e9] transition-colors flex-shrink-0 mt-1" />
                     </div>
 
                     {/* Description */}
                     {series.description && (
-                      <p style={{ fontSize: 14, color: "#3e4850", lineHeight: "20px", marginBottom: 24 }}
-                        className="line-clamp-2">
-                        {series.description}
-                      </p>
+                      <p className="text-sm text-[#3e4850] leading-5 mb-6 line-clamp-2">{series.description}</p>
                     )}
 
                     {/* Progress */}
-                    <div style={{ marginTop: "auto" }}>
-                      <div style={{ display: "flex", justifyContent: "space-between", fontSize: 13, color: "#6e7881", fontWeight: 500, marginBottom: 8 }}>
+                    <div className="mt-auto">
+                      <div className="flex justify-between text-[13px] text-[#6e7881] font-medium mb-2">
                         <span>{testCount} đề thi</span>
                         <span>{prog.completed}/{prog.total} bài ≥70</span>
                       </div>
-                      <div style={{ width: "100%", height: 6, background: "#dce9ff", borderRadius: 9999, overflow: "hidden" }}>
-                        <div style={{ height: "100%", width: `${percent}%`, background: "#0ea5e9", borderRadius: 9999 }} />
+                      <div className="w-full h-1.5 bg-[#dce9ff] rounded-full overflow-hidden mb-2">
+                        <div
+                          className="h-full bg-[#0ea5e9] rounded-full transition-all duration-700"
+                          style={{ width: `${percent}%` }}
+                        />
                       </div>
-                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 8 }}>
-                        <span style={{ fontSize: 14, fontWeight: 700, color: "#0ea5e9" }}>{percent}%</span>
-                        {percent === 0 ? (
-                          <span style={{ fontSize: 14, fontWeight: 700, color: "#0ea5e9", display: "flex", alignItems: "center", gap: 4 }}
-                            className="group-hover:translate-x-0.5 transition-transform inline-flex">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm font-bold text-[#0ea5e9]">{percent}%</span>
+                        {isComplete ? (
+                          <span className="text-sm font-semibold text-emerald-600">✓ Hoàn thành</span>
+                        ) : isStarted ? (
+                          <span className="text-sm text-[#6e7881]">Đang học</span>
+                        ) : (
+                          <span className="text-sm font-bold text-[#0ea5e9] group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-1">
                             Bắt đầu →
                           </span>
-                        ) : percent === 100 ? (
-                          <span style={{ fontSize: 14, fontWeight: 600, color: "#16a34a" }}>✅ Hoàn thành</span>
-                        ) : (
-                          <span style={{ fontSize: 14, color: "#6e7881" }}>Đang học</span>
                         )}
                       </div>
                     </div>
@@ -263,49 +227,6 @@ export default async function HomePage() {
       </main>
 
       <Footer />
-    </div>
-  );
-}
-
-function StatCard({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
-  return (
-    <div
-      style={{
-        background: "#ffffff",
-        border: "1px solid rgba(190,200,210,0.3)",
-        borderRadius: 8,
-        padding: "12px 24px",
-        display: "flex",
-        alignItems: "center",
-        gap: 8,
-        boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
-      }}
-    >
-      {icon}
-      <div>
-        <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.05em", color: "#3e4850", textTransform: "uppercase" }}>
-          {label}
-        </p>
-        <p style={{ fontSize: 24, fontWeight: 600, lineHeight: "32px", color: "#0ea5e9" }}>{value}</p>
-      </div>
-    </div>
-  );
-}
-
-function EmptyState() {
-  return (
-    <div
-      style={{
-        background: "#ffffff",
-        border: "1px solid #bec8d2",
-        borderRadius: 8,
-        padding: 48,
-        textAlign: "center",
-      }}
-    >
-      <div style={{ fontSize: 48, marginBottom: 16 }}>📭</div>
-      <h3 style={{ fontSize: 18, fontWeight: 600, color: "#0b1c30", marginBottom: 8 }}>Chưa có bộ đề nào</h3>
-      <p style={{ fontSize: 14, color: "#3e4850" }}>Admin cần import nội dung để bắt đầu.</p>
     </div>
   );
 }
