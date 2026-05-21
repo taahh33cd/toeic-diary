@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useMemo } from "react";
-import { RotateCcw, SkipForward, Play, Pause, CheckCircle2, XCircle } from "lucide-react";
+import { RotateCcw, Play, Pause, CheckCircle2, XCircle } from "lucide-react";
 import { saveProgress } from "@/app/actions/saveProgress";
 import { getTimeSpent } from "@/stores/practiceStore";
 import { generateBlanks, GeneratedBlank } from "@/lib/generateBlanks";
@@ -28,12 +28,13 @@ type BlankStatus = "idle" | "correct" | "wrong";
 interface BlankState {
   value: string;
   status: BlankStatus;
-  confirmed: boolean;
+  hintCount: number;
 }
 
 const SPEEDS = [0.75, 1.0, 1.25, 1.5];
 const MAX_REPLAY = 5;
 const BLANK_COUNT = 5;
+const AUDIO_OFFSET = 0.2;
 
 function normalize(s: string) {
   return s.toLowerCase().trim().replace(/[^a-z0-9']/g, "");
@@ -43,11 +44,13 @@ function fmt(s: number) {
   return `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
 }
 
+function cleanAnswer(answer: string) {
+  return answer.replace(/[^a-z0-9']/g, "");
+}
+
 export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessionStart, onScored }: Props) {
-  // Stable seed per mount so blanks stay consistent during a session
   const seed = useMemo(() => Math.floor(Math.random() * 10000), []);
 
-  // Generate blanks for each sentence (runtime, not from DB)
   const sentencesWithBlanks = useMemo(() =>
     sentences.map((s) => ({
       ...s,
@@ -65,7 +68,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
     const init: Record<string, BlankState> = {};
     sentencesWithBlanks.forEach((s) =>
       s.blanks.forEach((b) => {
-        init[b.id] = { value: "", status: "idle", confirmed: false };
+        init[b.id] = { value: "", status: "idle", hintCount: 0 };
       })
     );
     return init;
@@ -90,6 +93,13 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
   const activeBlankIdx = blankSentences.findIndex((s) => s.id === activeSentence?.id);
   const replayCount = replayCounts[activeSentence?.id ?? ""] ?? 0;
 
+  function isBlankResolved(blank: GeneratedBlank): boolean {
+    const bs = blankStates[blank.id];
+    if (!bs) return false;
+    if (bs.status === "correct") return true;
+    return bs.status === "wrong" && bs.hintCount >= cleanAnswer(blank.answer).length;
+  }
+
   useEffect(() => {
     if (audioRef.current) audioRef.current.playbackRate = speed;
   }, [speed]);
@@ -101,8 +111,9 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
     replayStateRef.current = { sentenceId: activeSentence.id, count: 0 };
     setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: 0 }));
 
+    const seekTo = activeSentence.startTime > 0 ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET) : 0;
+
     const doSeekAndPlay = () => {
-      const seekTo = activeSentence.startTime > 0 ? activeSentence.startTime : 0;
       audio.currentTime = seekTo;
       audio.play().catch(() => {});
       setIsPlaying(true);
@@ -139,7 +150,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
       if (state.count < MAX_REPLAY - 1) {
         state.count += 1;
         setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: state.count }));
-        audio.currentTime = activeSentence.startTime > 0 ? activeSentence.startTime : 0;
+        audio.currentTime = activeSentence.startTime > 0 ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET) : 0;
         audio.play().catch(() => {});
       } else {
         state.count = MAX_REPLAY;
@@ -159,7 +170,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
   function handleReplay() {
     const audio = audioRef.current;
     if (!audio || !activeSentence) return;
-    const seekTo = activeSentence.startTime > 0 ? activeSentence.startTime : 0;
+    const seekTo = activeSentence.startTime > 0 ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET) : 0;
     replayStateRef.current = { sentenceId: activeSentence.id, count: 0 };
     setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: 0 }));
     audio.currentTime = seekTo;
@@ -184,9 +195,13 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
   function focusNextOrAdvance(currentBlankId: string) {
     if (!activeSentence) return;
     const idx = activeSentence.blanks.findIndex((b) => b.id === currentBlankId);
-    const nextBlank = activeSentence.blanks
-      .slice(idx + 1)
-      .find((b) => blankStates[b.id]?.status === "idle");
+
+    const blanksAfter = activeSentence.blanks.slice(idx + 1);
+    const blanksBefore = activeSentence.blanks.slice(0, idx);
+    const ordered = [...blanksAfter, ...blanksBefore];
+
+    const nextBlank = ordered.find((b) => !isBlankResolved(b));
+
     if (nextBlank) {
       inputRefs.current[nextBlank.id]?.focus();
     } else {
@@ -197,7 +212,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
   function handleInput(blankId: string, value: string) {
     setBlankStates((prev) => ({
       ...prev,
-      [blankId]: { ...prev[blankId], value, status: "idle", confirmed: false },
+      [blankId]: { ...prev[blankId], value, status: "idle" },
     }));
   }
 
@@ -205,20 +220,30 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
     const blankDef = activeSentence?.blanks.find((b) => b.id === blankId);
     if (!blankDef) return;
     const state = blankStates[blankId];
+    const ca = cleanAnswer(blankDef.answer);
 
-    if (state.status === "wrong" && !state.confirmed) {
-      setBlankStates((prev) => ({ ...prev, [blankId]: { ...prev[blankId], confirmed: true } }));
-      focusNextOrAdvance(blankId);
-      return;
-    }
-    if (state.status !== "idle") { focusNextOrAdvance(blankId); return; }
+    if (state.status === "correct") { focusNextOrAdvance(blankId); return; }
+    if (state.status === "wrong" && state.hintCount >= ca.length) { focusNextOrAdvance(blankId); return; }
 
     const correct = normalize(state.value) === normalize(blankDef.answer);
-    setBlankStates((prev) => ({
-      ...prev,
-      [blankId]: { ...prev[blankId], status: correct ? "correct" : "wrong", confirmed: correct },
-    }));
-    if (correct) focusNextOrAdvance(blankId);
+
+    if (correct) {
+      setBlankStates((prev) => ({
+        ...prev,
+        [blankId]: { ...prev[blankId], status: "correct" },
+      }));
+      focusNextOrAdvance(blankId);
+    } else {
+      const newHintCount = state.hintCount + 1;
+      const fullyRevealed = newHintCount >= ca.length;
+      setBlankStates((prev) => ({
+        ...prev,
+        [blankId]: { value: "", status: "wrong", hintCount: newHintCount },
+      }));
+      if (fullyRevealed) {
+        setTimeout(() => focusNextOrAdvance(blankId), 900);
+      }
+    }
   }
 
   async function handleSubmit() {
@@ -255,6 +280,12 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
       const bs = blankStates[blank.id];
       const isCorrect = bs?.status === "correct";
       const isWrong = bs?.status === "wrong";
+      const resolved = isBlankResolved(blank);
+      const ca = cleanAnswer(blank.answer);
+
+      const hintStr = bs?.hintCount > 0
+        ? ca.slice(0, bs.hintCount) + "*".repeat(Math.max(0, ca.length - bs.hintCount))
+        : null;
 
       return (
         <span key={i} className="inline-flex flex-col items-center mx-1 relative" style={{ verticalAlign: "bottom" }}>
@@ -271,20 +302,22 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
               if (e.key === "Enter") { e.preventDefault(); handleEnter(blank.id); }
               if (e.key === " ") e.preventDefault();
             }}
-            disabled={submitted || isCorrect || bs?.confirmed}
+            disabled={submitted || resolved}
             placeholder={blank.hint}
             className={`
               h-11 px-2 text-xl text-center rounded-xl border-2 font-mono outline-none transition-all
               ${isCorrect ? "border-emerald-400 bg-emerald-500/10 text-emerald-400" : ""}
-              ${isWrong && !bs?.confirmed ? "border-red-400 bg-red-500/10 text-red-400" : ""}
-              ${isWrong && bs?.confirmed ? "border-red-400/40 bg-red-500/5 text-red-400/60" : ""}
-              ${!isCorrect && !isWrong ? "border-[#006591]/40 bg-white text-[#0b1c30] focus:border-[#006591] focus:bg-white" : ""}
+              ${isWrong ? "border-red-400 bg-red-500/10 text-red-400" : ""}
+              ${resolved && !isCorrect ? "border-red-400/40 bg-red-500/5 text-red-400/60" : ""}
+              ${!isCorrect && !isWrong && !resolved ? "border-[#006591]/40 bg-white text-[#0b1c30] focus:border-[#006591] focus:bg-white" : ""}
             `}
-            style={{ width: `${Math.max(5, (blank.hint).length + 3)}ch` }}
+            style={{ width: `${Math.max(5, ca.length + 3)}ch` }}
           />
-          {isWrong && !bs?.confirmed && (
-            <span className="absolute -bottom-5 text-xs text-emerald-400 font-mono whitespace-nowrap">
-              {blank.answer}
+          {hintStr && (
+            <span className={`absolute -bottom-5 text-xs font-mono whitespace-nowrap tracking-wider ${
+              bs.hintCount >= ca.length ? "text-emerald-400" : "text-amber-400"
+            }`}>
+              {hintStr}
             </span>
           )}
         </span>
@@ -292,7 +325,6 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
     });
   }
 
-  // Score screen
   if (submitted && finalScore !== null) {
     const allBlanks = sentencesWithBlanks.flatMap((s) => s.blanks);
     const correctCount = allBlanks.filter((b) => blankStates[b.id]?.status === "correct").length;
@@ -342,6 +374,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
           <span style={{ fontSize: 12, fontWeight: 600, color: "#3e4850", fontFamily: "monospace", width: 36 }}>{fmt(audioCurrent)}</span>
           <div
             style={{ position: "relative", flex: 1, height: 6, background: "#bec8d2", borderRadius: 9999, cursor: "pointer" }}
+            onMouseDown={(e) => e.preventDefault()}
             onClick={handleSeek}
           >
             <div style={{ position: "absolute", top: 0, left: 0, height: "100%", width: `${audioDuration > 0 ? (audioCurrent / audioDuration) * 100 : 0}%`, background: "#006591", borderRadius: 9999, transition: "width 0.1s" }} />
@@ -350,6 +383,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
         </div>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <button
+            onMouseDown={(e) => e.preventDefault()}
             onClick={togglePlay}
             style={{ width: 48, height: 48, borderRadius: "50%", background: "#006591", color: "#ffffff", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 2px 8px rgba(0,101,145,0.2)", flexShrink: 0 }}
             className="active:scale-95 transition-transform"
@@ -360,6 +394,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
             {SPEEDS.map((s) => (
               <button
                 key={s}
+                onMouseDown={(e) => e.preventDefault()}
                 onClick={() => setSpeed(s)}
                 style={{ fontSize: 12, fontWeight: 600, fontFamily: "monospace", padding: "2px 8px", borderRadius: 4, border: "none", cursor: "pointer", background: speed === s ? "#006591" : "transparent", color: speed === s ? "#ffffff" : "#3e4850", transition: "all 0.15s" }}
               >
@@ -427,7 +462,11 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
       {!showSubmit && (
         <div className="flex items-center justify-between mt-6 pt-4 border-t border-[#bec8d2]">
           <div className="flex items-center gap-3">
-            <button onClick={handleReplay} className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#bec8d2] text-sm text-[#3e4850] hover:bg-[#eff4ff] transition-colors">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={handleReplay}
+              className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#bec8d2] text-sm text-[#3e4850] hover:bg-[#eff4ff] transition-colors"
+            >
               <RotateCcw size={13} />
               Replay
             </button>
@@ -437,9 +476,6 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
               ))}
             </div>
           </div>
-          <button onClick={advanceToNextBlankSentence} className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#bec8d2] text-sm text-[#3e4850] hover:bg-[#eff4ff] transition-colors">
-            Skip <SkipForward size={13} />
-          </button>
         </div>
       )}
     </div>
