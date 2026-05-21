@@ -63,7 +63,7 @@ export function AudioPlayer({ audioUrl }: { audioUrl: string }) {
   const pct = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
-    <div style={{ background: "#eff4ff", border: "1px solid #bec8d2", borderRadius: 16, padding: 24, marginBottom: 32 }}>
+    <div className="bg-white rounded-xl border border-[#bec8d2] p-6 mb-8 shadow-sm">
       <audio
         ref={audioRef}
         src={audioUrl}
@@ -80,12 +80,14 @@ export function AudioPlayer({ audioUrl }: { audioUrl: string }) {
 
       <div style={{ maxWidth: 720, margin: "0 auto" }}>
         {/* Seekbar row */}
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
-          <span style={{ fontSize: 12, fontWeight: 600, color: "#3e4850", fontFamily: "monospace", width: 36 }}>
-            {fmt(currentTime)}
-          </span>
-          <div style={{ position: "relative", flex: 1, height: 6, background: "#bec8d2", borderRadius: 9999, cursor: "pointer" }}>
-            <div style={{ position: "absolute", top: 0, left: 0, height: "100%", width: `${pct}%`, background: "#006591", borderRadius: 9999, transition: "width 0.1s" }} />
+        <div className="flex items-center gap-3 mb-5">
+          <span className="font-mono text-xs font-semibold text-[#3e4850] w-9">{fmt(currentTime)}</span>
+          <div className="relative flex-1 h-2 bg-[#d3e4fe] rounded-full cursor-pointer group">
+            <div className="absolute top-0 left-0 h-full bg-[#006591] rounded-full transition-[width] duration-100" style={{ width: `${pct}%` }} />
+            <div
+              className="absolute w-4 h-4 bg-[#006591] border-2 border-white rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+              style={{ top: "50%", left: `${pct}%`, transform: "translate(-50%, -50%)" }}
+            />
             <input
               type="range"
               min={0}
@@ -93,47 +95,33 @@ export function AudioPlayer({ audioUrl }: { audioUrl: string }) {
               step={0.1}
               value={currentTime}
               onChange={handleSeek}
-              style={{ position: "absolute", inset: 0, width: "100%", opacity: 0, cursor: "pointer", margin: 0 }}
+              className="absolute inset-0 w-full opacity-0 cursor-pointer"
             />
           </div>
-          <span style={{ fontSize: 12, fontWeight: 600, color: "#3e4850", fontFamily: "monospace", width: 36, textAlign: "right" }}>
+          <span className="font-mono text-xs font-semibold text-[#3e4850] w-9 text-right">
             {duration > 0 ? fmt(duration) : "--:--"}
           </span>
         </div>
 
         {/* Controls row */}
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          {/* Replay */}
+        <div className="flex items-center justify-between">
+          {/* Replay -5s */}
           <button
             onClick={handleReplay}
             title="Lùi 5 giây"
-            style={{ padding: 8, background: "none", border: "none", cursor: "pointer", color: "#3e4850", borderRadius: 8, transition: "color 0.2s" }}
-            className="hover:text-[#006591]"
+            className="p-2 text-[#3e4850] hover:text-[#006591] transition-colors rounded-lg"
           >
             <RotateCcw size={20} />
           </button>
 
-          {/* Play / Pause — center */}
+          {/* Play / Pause */}
           <button
             onClick={() => setIsPlaying(!isPlaying)}
             disabled={!isLoaded}
-            style={{
-              width: 56, height: 56,
-              borderRadius: "50%",
-              background: "#006591",
-              color: "#ffffff",
-              border: "none",
-              cursor: isLoaded ? "pointer" : "default",
-              display: "flex", alignItems: "center", justifyContent: "center",
-              opacity: isLoaded ? 1 : 0.4,
-              boxShadow: "0 4px 12px rgba(0,101,145,0.25)",
-              transition: "transform 0.1s",
-              flexShrink: 0,
-            }}
-            className="active:scale-95"
+            className="w-14 h-14 rounded-full bg-[#006591] text-white flex items-center justify-center shadow-lg shadow-[#006591]/25 hover:scale-105 active:scale-95 transition-transform disabled:opacity-40 disabled:cursor-default flex-shrink-0"
           >
             {isBuffering ? (
-              <span style={{ width: 20, height: 20, border: "2px solid rgba(255,255,255,0.4)", borderTopColor: "#fff", borderRadius: "50%", display: "inline-block", animation: "spin 0.8s linear infinite" }} />
+              <span className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin inline-block" />
             ) : isPlaying ? (
               <Pause size={24} />
             ) : (
@@ -142,18 +130,12 @@ export function AudioPlayer({ audioUrl }: { audioUrl: string }) {
           </button>
 
           {/* Speed controls */}
-          <div style={{ display: "flex", alignItems: "center", background: "#e5eeff", borderRadius: 9999, padding: "6px 12px", gap: 4, border: "1px solid rgba(190,200,210,0.3)" }}>
+          <div className="flex items-center bg-[#eff4ff] p-1 rounded-lg border border-[#bec8d2]/40">
             {[0.75, 1.0, 1.25, 1.5].map((s) => (
               <button
                 key={s}
                 onClick={() => setSpeed(s)}
-                style={{
-                  fontSize: 12, fontWeight: 600, fontFamily: "monospace",
-                  padding: "2px 8px", borderRadius: 4, border: "none", cursor: "pointer",
-                  background: speed === s ? "#006591" : "transparent",
-                  color: speed === s ? "#ffffff" : "#3e4850",
-                  transition: "all 0.15s",
-                }}
+                className={`px-3 py-1.5 text-xs font-mono font-semibold rounded transition-all ${speed === s ? "bg-[#006591] text-white shadow-sm" : "text-[#3e4850] hover:text-[#006591]"}`}
               >
                 {s}×
               </button>

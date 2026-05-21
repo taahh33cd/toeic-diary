@@ -380,37 +380,41 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
         : null;
 
       return (
-        <span key={i} className="inline-flex flex-col items-center mx-1 relative" style={{ verticalAlign: "bottom" }}>
-          <input
-            ref={(el) => { inputRefs.current[blank.id] = el; }}
-            type="text"
-            value={bs?.value ?? ""}
-            autoComplete="off"
-            autoCorrect="off"
-            autoCapitalize="off"
-            spellCheck={false}
-            onChange={(e) => handleInput(blank.id, e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") { e.preventDefault(); handleEnter(blank.id); }
-              if (e.key === " ") e.preventDefault();
-            }}
-            disabled={submitted || resolved}
-            placeholder={(() => {
-              const letter = blank.hint?.[0] ?? ca[0] ?? "_";
-              return letter + "_".repeat(Math.max(1, ca.length - 1));
-            })()}
-            className={`
-              h-11 px-2 text-xl text-center rounded-xl border-2 font-mono outline-none transition-all
-              ${isCorrect ? "border-emerald-400 bg-emerald-500/10 text-emerald-400" : ""}
-              ${isWrong ? "border-red-400 bg-red-500/10 text-red-400" : ""}
-              ${resolved && !isCorrect ? "border-red-400/40 bg-red-500/5 text-red-400/60" : ""}
-              ${!isCorrect && !isWrong && !resolved ? "border-[#006591]/40 bg-white text-[#0b1c30] focus:border-[#006591] focus:bg-white" : ""}
-            `}
-            style={{ width: `${Math.max(5, ca.length + 3)}ch` }}
-          />
-          {/* Progressive hint — shows once any wrong attempt is made */}
+        <span key={i} className="inline-flex flex-col items-center mx-1 relative pb-7" style={{ verticalAlign: "bottom" }}>
+          {/* Mobile visual cue: soft tint container around input */}
+          <span className="rounded-t bg-[#eff4ff]/70 px-2 pb-1">
+            <input
+              ref={(el) => { inputRefs.current[blank.id] = el; }}
+              type="text"
+              value={bs?.value ?? ""}
+              autoComplete="off"
+              autoCorrect="off"
+              autoCapitalize="off"
+              spellCheck={false}
+              onChange={(e) => handleInput(blank.id, e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") { e.preventDefault(); handleEnter(blank.id); }
+                if (e.key === " ") e.preventDefault();
+              }}
+              disabled={submitted || resolved}
+              placeholder={(() => {
+                const letter = blank.hint?.[0] ?? ca[0] ?? "_";
+                return letter + "_".repeat(Math.max(1, ca.length - 1));
+              })()}
+              className={`
+                bg-transparent border-b-2 text-3xl md:text-[40px] text-center font-medium outline-none transition-all
+                placeholder:text-[#cbdbf5]
+                ${isCorrect ? "border-emerald-400 text-emerald-500" : ""}
+                ${isWrong ? "border-red-400 text-red-400" : ""}
+                ${resolved && !isCorrect ? "border-red-300/50 text-red-400/60" : ""}
+                ${!isCorrect && !isWrong && !resolved ? "border-[#bec8d2] focus:border-[#006591] text-[#006591]" : ""}
+              `}
+              style={{ width: `${Math.max(4, ca.length)}ch` }}
+            />
+          </span>
+          {/* Progressive hint */}
           {hintStr && (
-            <span className={`absolute -bottom-5 text-xs font-mono whitespace-nowrap tracking-wider ${
+            <span className={`absolute bottom-0 text-xs font-mono whitespace-nowrap tracking-wider ${
               bs.hintCount >= ca.length ? "text-emerald-400" : "text-amber-400"
             }`}>
               {hintStr}
@@ -468,10 +472,10 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
   // ── Main render ───────────────────────────────────────────────────────────────
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col pb-32">
 
       {/* ── Audio bar ── */}
-      <div style={{ background: "#eff4ff", border: "1px solid #bec8d2", borderRadius: 12, padding: "16px 20px", marginBottom: 24 }}>
+      <div className="bg-white rounded-xl border border-[#bec8d2] p-6 mb-6 shadow-sm">
         <audio
           ref={audioRef}
           src={audioUrl}
@@ -482,33 +486,41 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
           onPause={() => setIsPlaying(false)}
           onEnded={handleEnded}
         />
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
-          <span style={{ fontSize: 12, fontWeight: 600, color: "#3e4850", fontFamily: "monospace", width: 36 }}>{fmt(audioCurrent)}</span>
-          <div
-            style={{ position: "relative", flex: 1, height: 6, background: "#bec8d2", borderRadius: 9999, cursor: "pointer" }}
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={handleSeek}
-          >
-            <div style={{ position: "absolute", top: 0, left: 0, height: "100%", width: `${audioDuration > 0 ? (audioCurrent / audioDuration) * 100 : 0}%`, background: "#006591", borderRadius: 9999, transition: "width 0.1s" }} />
-          </div>
-          <span style={{ fontSize: 12, fontWeight: 600, color: "#3e4850", fontFamily: "monospace", width: 36, textAlign: "right" }}>{audioDuration > 0 ? fmt(audioDuration) : "--:--"}</span>
-        </div>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <div className="flex flex-col md:flex-row items-center gap-6">
+          {/* Play button */}
           <button
             onMouseDown={(e) => e.preventDefault()}
             onClick={togglePlay}
-            style={{ width: 48, height: 48, borderRadius: "50%", background: "#006591", color: "#ffffff", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 2px 8px rgba(0,101,145,0.2)", flexShrink: 0 }}
-            className="active:scale-95 transition-transform"
+            className="w-16 h-16 rounded-full bg-[#006591] text-white flex items-center justify-center shadow-lg shadow-[#006591]/20 hover:scale-105 active:scale-95 transition-transform flex-shrink-0"
           >
-            {isPlaying ? <Pause size={20} /> : <Play size={20} style={{ marginLeft: 2 }} />}
+            {isPlaying ? <Pause size={24} /> : <Play size={24} style={{ marginLeft: 2 }} />}
           </button>
-          <div style={{ display: "flex", alignItems: "center", background: "#e5eeff", borderRadius: 9999, padding: "6px 12px", gap: 4, border: "1px solid rgba(190,200,210,0.3)" }}>
+          {/* Seekbar + timestamps */}
+          <div className="flex-grow w-full">
+            <div className="flex justify-between items-center mb-3">
+              <span className="font-mono text-xs font-semibold text-[#3e4850]">{fmt(audioCurrent)}</span>
+              <span className="font-mono text-xs font-semibold text-[#3e4850]">{audioDuration > 0 ? fmt(audioDuration) : "--:--"}</span>
+            </div>
+            <div
+              className="relative h-2 bg-[#d3e4fe] rounded-full cursor-pointer group"
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={handleSeek}
+            >
+              <div className="absolute top-0 left-0 h-full bg-[#006591] rounded-full transition-[width] duration-100" style={{ width: `${audioDuration > 0 ? (audioCurrent / audioDuration) * 100 : 0}%` }} />
+              <div
+                className="absolute w-4 h-4 bg-[#006591] border-2 border-white rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                style={{ top: "50%", left: `${audioDuration > 0 ? (audioCurrent / audioDuration) * 100 : 0}%`, transform: "translate(-50%, -50%)" }}
+              />
+            </div>
+          </div>
+          {/* Speed controls */}
+          <div className="flex items-center bg-[#eff4ff] p-1 rounded-lg border border-[#bec8d2]/40">
             {SPEEDS.map((s) => (
               <button
                 key={s}
                 onMouseDown={(e) => e.preventDefault()}
                 onClick={() => setSpeed(s)}
-                style={{ fontSize: 12, fontWeight: 600, fontFamily: "monospace", padding: "2px 8px", borderRadius: 4, border: "none", cursor: "pointer", background: speed === s ? "#006591" : "transparent", color: speed === s ? "#ffffff" : "#3e4850", transition: "all 0.15s" }}
+                className={`px-3 py-1.5 text-xs font-mono font-semibold rounded transition-all ${speed === s ? "bg-[#006591] text-white shadow-sm" : "text-[#3e4850] hover:text-[#006591]"}`}
               >
                 {s}×
               </button>
@@ -568,7 +580,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
               {activeSentence.speaker === "W" ? "Woman" : activeSentence.speaker === "M" ? "Man" : activeSentence.speaker}
             </div>
           )}
-          <div className="text-2xl md:text-3xl leading-loose font-medium flex flex-wrap justify-center items-end gap-x-1 gap-y-3 mb-4">
+          <div className="text-3xl md:text-[40px] leading-loose font-medium flex flex-wrap justify-center items-end gap-x-4 gap-y-10 mb-4">
             {activeSentence.blanks.length > 0
               ? renderWords(activeSentence)
               : <span className="text-[var(--text-primary)]">{activeSentence.content}</span>}
@@ -597,33 +609,29 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
         </div>
       )}
 
-      {/* ── Bottom controls ── */}
-      {(isPart2 ? (!part2AllDone || answerRevealed) : !showSubmit) && (
-        <div className="flex items-center justify-between mt-6 pt-4 border-t border-[#bec8d2]">
-          <div className="flex items-center gap-3">
+      {/* ── Floating bottom action bar ── */}
+      {!submitted && !showSubmit && !(isPart2 && part2AllDone && !answerRevealed) && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-4 z-40">
+          <div className="flex flex-col items-center gap-1.5">
             <button
               onMouseDown={(e) => e.preventDefault()}
               onClick={handleReplay}
-              className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#bec8d2] text-sm text-[#3e4850] hover:bg-[#eff4ff] transition-colors"
+              className="flex items-center gap-2 px-6 py-3 bg-white border border-[#bec8d2] rounded-full text-[#3e4850] hover:border-[#006591] hover:text-[#006591] transition-all shadow-sm text-sm font-medium"
             >
-              <RotateCcw size={13} />
+              <RotateCcw size={14} />
               Replay
             </button>
             <div className="flex gap-1">
               {Array.from({ length: MAX_REPLAY }).map((_, i) => (
-                <div key={i} className={`w-1.5 h-1.5 rounded-full transition-colors ${
-                  i < replayCount ? "bg-[#006591]" : "bg-[#dce9ff]"
-                }`} />
+                <div key={i} className={`w-1.5 h-1.5 rounded-full transition-colors ${i < replayCount ? "bg-[#006591]" : "bg-[#dce9ff]"}`} />
               ))}
             </div>
           </div>
-
           {isPart2 && answerRevealed ? (
             <button
               onMouseDown={(e) => e.preventDefault()}
               onClick={handleSubmit}
-              style={{ background: "#006591", color: "#fff", border: "none", cursor: "pointer", borderRadius: 9999, padding: "8px 24px", fontSize: 14, fontWeight: 700 }}
-              className="active:scale-95 transition-transform"
+              className="flex items-center gap-2 px-8 py-3 bg-[#006591] text-white rounded-full text-sm font-bold shadow-xl shadow-[#006591]/20 hover:opacity-90 active:scale-95 transition-all"
             >
               Nộp bài
             </button>

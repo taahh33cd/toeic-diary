@@ -65,9 +65,13 @@ export function Level4Practice({ lessonId, sentences, transcriptFull, startTime,
   const score = feedback?.accuracyScore ?? null;
 
   return (
-    <div>
-      <div className="card p-4 mb-4 bg-[var(--bg-secondary)] text-sm text-[var(--text-secondary)]">
-        🤖 Nghe xong, viết tóm tắt những gì bạn nghe được bằng tiếng Anh. AI sẽ đánh giá mức độ hiểu.
+    <div className="space-y-5">
+      {/* Instruction box — dashed border with icon */}
+      <div className="flex items-start gap-3 p-4 bg-[#e5eeff]/50 rounded-xl border border-dashed border-[#bec8d2]">
+        <Sparkles size={18} className="text-[#006591] mt-0.5 flex-shrink-0" />
+        <p className="text-sm text-[#3e4850] leading-relaxed">
+          Nghe xong, viết tóm tắt những gì bạn nghe được bằng tiếng Anh. AI sẽ đánh giá mức độ hiểu.
+        </p>
       </div>
 
       <textarea
@@ -75,8 +79,7 @@ export function Level4Practice({ lessonId, sentences, transcriptFull, startTime,
         onChange={(e) => setUserSummary(e.target.value)}
         disabled={!!feedback || loading}
         placeholder="Write a summary of what you heard..."
-        rows={6}
-        className="w-full p-4 rounded-xl border border-[var(--border-primary)] bg-[var(--bg-primary)] text-[var(--text-primary)] text-sm resize-none outline-none focus:border-[var(--accent-primary)] transition-colors disabled:opacity-60 mb-4"
+        className="w-full min-h-[320px] p-6 rounded-2xl border-2 border-[#bec8d2] bg-white text-[#0b1c30] text-base resize-none outline-none focus:border-[#006591] transition-colors disabled:opacity-60 shadow-sm"
       />
 
       {error && (
@@ -182,12 +185,12 @@ export function Level4Practice({ lessonId, sentences, transcriptFull, startTime,
         <button
           onClick={handleSubmit}
           disabled={loading || userSummary.trim().length < 10}
-          className="btn-primary w-full py-3 rounded-xl font-display font-bold text-base disabled:opacity-40 flex items-center justify-center gap-2"
+          className="w-full h-14 bg-[#006591] text-white rounded-xl flex items-center justify-center gap-2 text-base font-semibold shadow-lg shadow-[#006591]/20 hover:opacity-90 active:scale-[0.98] transition-all disabled:opacity-40 disabled:cursor-not-allowed"
         >
           {loading ? (
-            <><span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />AI đang phân tích...</>
+            <><span className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin" />AI đang phân tích...</>
           ) : (
-            <><Sparkles size={16} />Nhận AI Feedback</>
+            <><Sparkles size={18} />Nhận AI Feedback</>
           )}
         </button>
       )}

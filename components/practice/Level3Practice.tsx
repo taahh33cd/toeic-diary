@@ -342,18 +342,19 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
             : null;
 
           return (
-            <span key={i} className="inline-flex flex-col items-center gap-1">
-              <input
-                // Key includes hintCount so React recreates the input (clearing it) on each wrong attempt
-                key={`retry-${sentence.id}-${i}-${wr.hintCount}`}
-                ref={(el) => { retryInputRefs.current[i] = el; }}
-                type="text"
-                defaultValue=""
-                autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck={false}
-                onKeyDown={(e) => handleRetryKeyDown(e, sentence.id, i)}
-                className="h-10 px-2 text-lg text-center rounded-xl border-2 border-red-400/60 bg-red-500/10 text-red-300 font-mono outline-none focus:border-red-400 transition-all"
-                style={{ width: `${Math.max(4, wr.ref.length + 2)}ch` }}
-              />
+            <span key={i} className="inline-flex flex-col items-center gap-1 pb-1">
+              <span className="rounded-t bg-red-50/60 px-2 pb-1">
+                <input
+                  key={`retry-${sentence.id}-${i}-${wr.hintCount}`}
+                  ref={(el) => { retryInputRefs.current[i] = el; }}
+                  type="text"
+                  defaultValue=""
+                  autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck={false}
+                  onKeyDown={(e) => handleRetryKeyDown(e, sentence.id, i)}
+                  className="bg-transparent border-b-2 border-red-400/60 text-2xl md:text-3xl text-center text-red-400 font-medium outline-none focus:border-red-500 transition-all"
+                  style={{ width: `${Math.max(4, wr.ref.length)}ch` }}
+                />
+              </span>
               {hintStr ? (
                 <span className={`text-xs font-mono tracking-wider ${wr.hintCount >= wr.refNorm.length ? "text-emerald-400" : "text-amber-400"}`}>
                   {hintStr}
@@ -402,41 +403,46 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
   }
 
   return (
-    <div className="flex flex-col">
-      <div style={{ background: "#eff4ff", border: "1px solid #bec8d2", borderRadius: 12, padding: "16px 20px", marginBottom: 24 }}>
+    <div className="flex flex-col pb-32">
+      <div className="bg-white rounded-xl border border-[#bec8d2] p-6 mb-6 shadow-sm">
         <audio
           ref={audioRef} src={audioUrl} preload="auto"
           onLoadedMetadata={(e) => setAudioDuration((e.target as HTMLAudioElement).duration)}
           onTimeUpdate={handleTimeUpdate}
           onPlay={() => setIsPlaying(true)} onPause={() => setIsPlaying(false)} onEnded={() => setIsPlaying(false)}
         />
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
-          <span style={{ fontSize: 12, fontWeight: 600, color: "#3e4850", fontFamily: "monospace", width: 36 }}>{fmt(audioCurrent)}</span>
-          <div
-            style={{ position: "relative", flex: 1, height: 6, background: "#bec8d2", borderRadius: 9999, cursor: "pointer" }}
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={handleSeek}
-          >
-            <div style={{ position: "absolute", top: 0, left: 0, height: "100%", width: `${audioDuration > 0 ? (audioCurrent / audioDuration) * 100 : 0}%`, background: "#006591", borderRadius: 9999, transition: "width 0.1s" }} />
-          </div>
-          <span style={{ fontSize: 12, fontWeight: 600, color: "#3e4850", fontFamily: "monospace", width: 36, textAlign: "right" }}>{audioDuration > 0 ? fmt(audioDuration) : "--:--"}</span>
-        </div>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <div className="flex flex-col md:flex-row items-center gap-6">
           <button
             onMouseDown={(e) => e.preventDefault()}
             onClick={togglePlay}
-            style={{ width: 48, height: 48, borderRadius: "50%", background: "#006591", color: "#ffffff", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 2px 8px rgba(0,101,145,0.2)", flexShrink: 0 }}
-            className="active:scale-95 transition-transform"
+            className="w-16 h-16 rounded-full bg-[#006591] text-white flex items-center justify-center shadow-lg shadow-[#006591]/20 hover:scale-105 active:scale-95 transition-transform flex-shrink-0"
           >
-            {isPlaying ? <Pause size={20} /> : <Play size={20} style={{ marginLeft: 2 }} />}
+            {isPlaying ? <Pause size={24} /> : <Play size={24} style={{ marginLeft: 2 }} />}
           </button>
-          <div style={{ display: "flex", alignItems: "center", background: "#e5eeff", borderRadius: 9999, padding: "6px 12px", gap: 4, border: "1px solid rgba(190,200,210,0.3)" }}>
+          <div className="flex-grow w-full">
+            <div className="flex justify-between items-center mb-3">
+              <span className="font-mono text-xs font-semibold text-[#3e4850]">{fmt(audioCurrent)}</span>
+              <span className="font-mono text-xs font-semibold text-[#3e4850]">{audioDuration > 0 ? fmt(audioDuration) : "--:--"}</span>
+            </div>
+            <div
+              className="relative h-2 bg-[#d3e4fe] rounded-full cursor-pointer group"
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={handleSeek}
+            >
+              <div className="absolute top-0 left-0 h-full bg-[#006591] rounded-full transition-[width] duration-100" style={{ width: `${audioDuration > 0 ? (audioCurrent / audioDuration) * 100 : 0}%` }} />
+              <div
+                className="absolute w-4 h-4 bg-[#006591] border-2 border-white rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                style={{ top: "50%", left: `${audioDuration > 0 ? (audioCurrent / audioDuration) * 100 : 0}%`, transform: "translate(-50%, -50%)" }}
+              />
+            </div>
+          </div>
+          <div className="flex items-center bg-[#eff4ff] p-1 rounded-lg border border-[#bec8d2]/40">
             {SPEEDS.map((s) => (
               <button
                 key={s}
                 onMouseDown={(e) => e.preventDefault()}
                 onClick={() => setSpeed(s)}
-                style={{ fontSize: 12, fontWeight: 600, fontFamily: "monospace", padding: "2px 8px", borderRadius: 4, border: "none", cursor: "pointer", background: speed === s ? "#006591" : "transparent", color: speed === s ? "#ffffff" : "#3e4850", transition: "all 0.15s" }}
+                className={`px-3 py-1.5 text-xs font-mono font-semibold rounded transition-all ${speed === s ? "bg-[#006591] text-white shadow-sm" : "text-[#3e4850] hover:text-[#006591]"}`}
               >
                 {s}×
               </button>
@@ -489,16 +495,18 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
             {activeSentenceState.phase === "done" && <div className="text-2xl md:text-3xl font-medium text-emerald-400">{activeSentence.content}</div>}
           </div>
           {activeSentenceState.phase === "blank" && (
-            <div className="w-full max-w-lg">
-              <input
-                ref={mainInputRef} type="text" value={activeSentenceState.inputValue}
-                onChange={(e) => updateInput(activeSentence.id, e.target.value)}
-                onKeyDown={(e) => handleMainInputKeyDown(e, activeSentence.id)}
-                placeholder="Gõ những gì bạn nghe được..."
-                autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck={false}
-                className="w-full px-4 py-3 rounded-xl border-2 border-[#006591]/40 bg-white text-[#0b1c30] font-mono text-base outline-none focus:border-[#006591] transition-colors text-center"
-              />
-              <p className="text-xs text-[var(--text-muted)] mt-2">Nhấn Enter để kiểm tra</p>
+            <div className="w-full max-w-xl">
+              <div className="bg-white rounded-xl border-2 border-[#bec8d2] focus-within:border-[#006591] transition-colors shadow-sm">
+                <input
+                  ref={mainInputRef} type="text" value={activeSentenceState.inputValue}
+                  onChange={(e) => updateInput(activeSentence.id, e.target.value)}
+                  onKeyDown={(e) => handleMainInputKeyDown(e, activeSentence.id)}
+                  placeholder="Gõ những gì bạn nghe được..."
+                  autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck={false}
+                  className="w-full px-5 py-4 bg-transparent text-[#0b1c30] text-lg outline-none text-center"
+                />
+              </div>
+              <p className="text-xs text-[var(--text-muted)] mt-2 text-center">Nhấn Enter để kiểm tra</p>
             </div>
           )}
           {activeSentenceState.phase === "feedback" && (
@@ -525,15 +533,17 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
         </div>
       )}
 
-      {(isPart2 ? (!part2AllDone || answerRevealed) : !showSubmit) && (
-        <div className="flex items-center justify-between mt-6 pt-4 border-t border-[#bec8d2]">
-          <div className="flex items-center gap-3">
+      {/* Floating bottom action bar */}
+      {!submitted && !showSubmit && !(isPart2 && part2AllDone && !answerRevealed) && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-4 z-40">
+          <div className="flex flex-col items-center gap-1.5">
             <button
               onMouseDown={(e) => e.preventDefault()}
               onClick={handleReplay}
-              className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#bec8d2] text-sm text-[#3e4850] hover:bg-[#eff4ff] transition-colors"
+              className="flex items-center gap-2 px-6 py-3 bg-white border border-[#bec8d2] rounded-full text-[#3e4850] hover:border-[#006591] hover:text-[#006591] transition-all shadow-sm text-sm font-medium"
             >
-              <RotateCcw size={13} />Replay
+              <RotateCcw size={14} />
+              Replay
             </button>
             <div className="flex gap-1">
               {Array.from({ length: MAX_REPLAY }).map((_, i) => (
@@ -545,8 +555,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
             <button
               onMouseDown={(e) => e.preventDefault()}
               onClick={handleSubmit}
-              style={{ background: "#006591", color: "#fff", border: "none", cursor: "pointer", borderRadius: 9999, padding: "8px 24px", fontSize: 14, fontWeight: 700 }}
-              className="active:scale-95 transition-transform"
+              className="flex items-center gap-2 px-8 py-3 bg-[#006591] text-white rounded-full text-sm font-bold shadow-xl shadow-[#006591]/20 hover:opacity-90 active:scale-95 transition-all"
             >
               Nộp bài
             </button>
