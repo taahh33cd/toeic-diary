@@ -506,11 +506,16 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
                   className="w-full px-5 py-4 bg-transparent text-[#0b1c30] text-lg outline-none text-center"
                 />
               </div>
-              <p className="text-xs text-[var(--text-muted)] mt-2 text-center">Nhấn Enter để kiểm tra</p>
+              <p className="text-xs text-[#6e7881] mt-3 text-center select-none">
+                ⌨ Gõ toàn bộ câu · Enter để kiểm tra · Replay để nghe lại
+              </p>
             </div>
           )}
           {activeSentenceState.phase === "feedback" && (
-            <div className="flex items-center gap-3 mt-4">
+            <div className="flex flex-col items-center gap-3 mt-4">
+              <p className="text-xs text-[#6e7881] select-none">
+                ⌨ Gõ lại từng từ sai · Enter để xác nhận · Replay để nghe lại
+              </p>
               <button
                 onClick={() => showAnswer(activeSentence.id)}
                 className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm text-[#3e4850] hover:bg-[#eff4ff] transition-colors border border-[#bec8d2]"

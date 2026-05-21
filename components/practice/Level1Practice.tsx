@@ -585,11 +585,10 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
               ? renderWords(activeSentence)
               : <span className="text-[var(--text-primary)]">{activeSentence.content}</span>}
           </div>
-          {activeSentence.blanks.length === 0 && (
-            <p className="text-xs text-[var(--text-muted)] mt-2">Câu này không có blank — bấm Skip để tiếp tục</p>
-          )}
-          {activeSentence.blanks.length > 0 && !isPlaying && replayCount === 0 && (
-            <p className="text-xs text-[var(--text-muted)] mt-4 animate-pulse">↓ Bấm Replay để nghe câu này</p>
+          {activeSentence.blanks.length > 0 && (
+            <p className="text-xs text-[#6e7881] mt-6 select-none">
+              ⌨ Gõ vào ô trống · Enter để kiểm tra · Replay để nghe lại
+            </p>
           )}
         </div>
       )}

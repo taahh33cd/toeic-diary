@@ -74,13 +74,20 @@ export function Level4Practice({ lessonId, sentences, transcriptFull, startTime,
         </p>
       </div>
 
-      <textarea
-        value={userSummary}
-        onChange={(e) => setUserSummary(e.target.value)}
-        disabled={!!feedback || loading}
-        placeholder="Write a summary of what you heard..."
-        className="w-full min-h-[320px] p-6 rounded-2xl border-2 border-[#bec8d2] bg-white text-[#0b1c30] text-base resize-none outline-none focus:border-[#006591] transition-colors disabled:opacity-60 shadow-sm"
-      />
+      <div>
+        <textarea
+          value={userSummary}
+          onChange={(e) => setUserSummary(e.target.value)}
+          disabled={!!feedback || loading}
+          placeholder="Write a summary of what you heard..."
+          className="w-full min-h-[320px] p-6 rounded-2xl border-2 border-[#bec8d2] bg-white text-[#0b1c30] text-base resize-none outline-none focus:border-[#006591] transition-colors disabled:opacity-60 shadow-sm"
+        />
+        {!feedback && (
+          <p className="text-xs text-[#6e7881] mt-2 text-center select-none">
+            ⌨ Viết tóm tắt bằng tiếng Anh · bấm "Nhận AI Feedback" để gửi
+          </p>
+        )}
+      </div>
 
       {error && (
         <div className="card p-3 mb-4 border-red-400 text-red-400 text-sm" style={{ borderWidth: "1px" }}>
