@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { RotateCcw, SkipForward, Play, Pause, Eye, CheckCircle2, XCircle, ArrowRight } from "lucide-react";
+import { RotateCcw, Play, Pause, CheckCircle2, XCircle, ArrowRight } from "lucide-react";
 import { saveProgress } from "@/app/actions/saveProgress";
 import { getTimeSpent } from "@/stores/practiceStore";
 import { Part2Result } from "./Part2Result";
@@ -25,13 +25,14 @@ interface Props {
   correctOption: string | null;
   explanation: string | null;
   startTime: number | null;
-  dbLevel?: number; // DB level to save as (defaults to 3)
+  dbLevel?: number;
   nextLessonUrl?: string | null;
   onScored: (score: number) => void;
 }
 
 const SPEEDS = [0.75, 1.0, 1.25, 1.5];
 const MAX_REPLAY = 5;
+const AUDIO_OFFSET = 0.2;
 
 function normalizeWord(w: string) {
   return w.toLowerCase().replace(/[^a-z0-9']/g, "").trim();
@@ -46,6 +47,7 @@ interface WordResult {
   refNorm: string;
   correct: boolean;
   retryValue: string;
+  hintCount: number;
 }
 
 type SentencePhase = "blank" | "feedback" | "done" | "revealed";
@@ -63,16 +65,7 @@ function buildWordResults(refContent: string, userInput: string): WordResult[] {
     const refNorm = normalizeWord(ref);
     const userNorm = normalizeWord(userWords[i] ?? "");
     const correct = refNorm === userNorm && refNorm !== "";
-    return { ref, refNorm, correct, retryValue: correct ? ref : (userWords[i] ?? "") };
-  });
-}
-
-function recheckWordResults(prev: WordResult[], retryValues: string[]): WordResult[] {
-  return prev.map((wr, i) => {
-    if (wr.correct) return wr;
-    const userNorm = normalizeWord(retryValues[i] ?? "");
-    const correct = userNorm === wr.refNorm && userNorm !== "";
-    return { ...wr, correct, retryValue: retryValues[i] ?? "" };
+    return { ref, refNorm, correct, retryValue: correct ? ref : (userWords[i] ?? ""), hintCount: 0 };
   });
 }
 
@@ -122,8 +115,8 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     replayStateRef.current = { sentenceId: activeSentence.id, count: 0 };
     setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: 0 }));
 
+    const seekTo = activeSentence.startTime > 0 ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET) : 0;
     const doSeekAndPlay = () => {
-      const seekTo = activeSentence.startTime > 0 ? activeSentence.startTime : 0;
       audio.currentTime = seekTo;
       audio.play().catch(() => {});
       setIsPlaying(true);
@@ -155,7 +148,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
       if (state.count < MAX_REPLAY - 1) {
         state.count += 1;
         setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: state.count }));
-        audio.currentTime = activeSentence.startTime > 0 ? activeSentence.startTime : 0;
+        audio.currentTime = activeSentence.startTime > 0 ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET) : 0;
         audio.play().catch(() => {});
       } else {
         state.count = MAX_REPLAY;
@@ -175,7 +168,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
   function handleReplay() {
     const audio = audioRef.current;
     if (!audio || !activeSentence) return;
-    const seekTo = activeSentence.startTime > 0 ? activeSentence.startTime : 0;
+    const seekTo = activeSentence.startTime > 0 ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET) : 0;
     replayStateRef.current = { sentenceId: activeSentence.id, count: 0 };
     setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: 0 }));
     audio.currentTime = seekTo;
@@ -204,16 +197,6 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     }
   }
 
-  function handleSkip() {
-    if (activeSentence && activeSentenceState?.phase !== "done") {
-      setSentenceStates((prev) => ({
-        ...prev,
-        [activeSentence.id]: { ...prev[activeSentence.id], phase: "revealed", wordResults: buildWordResults(activeSentence.content, "") },
-      }));
-    }
-    advanceToNext();
-  }
-
   function updateInput(sentenceId: string, value: string) {
     setSentenceStates((prev) => ({ ...prev, [sentenceId]: { ...prev[sentenceId], inputValue: value } }));
   }
@@ -229,51 +212,76 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
       [sentenceId]: { ...prev[sentenceId], phase: allCorrect ? "done" : "feedback", wordResults: results },
     }));
     if (allCorrect) setTimeout(() => advanceToNext(), 500);
+    else {
+      const firstWrong = results.findIndex((w) => !w.correct);
+      if (firstWrong !== -1) setTimeout(() => retryInputRefs.current[firstWrong]?.focus(), 80);
+    }
   }
 
   function handleMainInputKeyDown(e: React.KeyboardEvent<HTMLInputElement>, sentenceId: string) {
     if (e.key === "Enter") { e.preventDefault(); submitSentence(sentenceId); }
   }
 
-  function recheckSentence(sentenceId: string) {
-    const state = sentenceStates[sentenceId];
-    if (!state || state.phase !== "feedback") return;
-    const retryValues = state.wordResults.map((_, i) =>
-      state.wordResults[i].correct ? state.wordResults[i].ref : (retryInputRefs.current[i]?.value ?? state.wordResults[i].retryValue)
-    );
-    const newResults = recheckWordResults(state.wordResults, retryValues);
-    const allCorrect = newResults.every((w) => w.correct);
-    const updatedResults = newResults.map((wr, i) => ({ ...wr, retryValue: retryValues[i] ?? wr.retryValue }));
-    setSentenceStates((prev) => ({
-      ...prev,
-      [sentenceId]: { ...prev[sentenceId], phase: allCorrect ? "done" : "feedback", wordResults: updatedResults },
-    }));
-    if (allCorrect) setTimeout(() => advanceToNext(), 500);
-    else {
-      const firstWrongIdx = updatedResults.findIndex((w) => !w.correct);
-      if (firstWrongIdx !== -1) setTimeout(() => retryInputRefs.current[firstWrongIdx]?.focus(), 50);
-    }
-  }
-
+  // Per-word Enter: check current word immediately, update state, move to next wrong
   function handleRetryKeyDown(e: React.KeyboardEvent<HTMLInputElement>, sentenceId: string, wordIdx: number) {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      const state = sentenceStates[sentenceId];
-      if (!state) return;
-      const wrongIndices = state.wordResults.map((w, i) => (!w.correct ? i : -1)).filter((i) => i !== -1);
-      const currentPos = wrongIndices.indexOf(wordIdx);
-      const nextIdx = wrongIndices[currentPos + 1];
-      if (nextIdx !== undefined) retryInputRefs.current[nextIdx]?.focus();
-      else recheckSentence(sentenceId);
+    if (e.key !== "Enter") return;
+    e.preventDefault();
+
+    const state = sentenceStates[sentenceId];
+    if (!state) return;
+    const wr = state.wordResults[wordIdx];
+    if (!wr || wr.correct) return;
+
+    const currentValue = retryInputRefs.current[wordIdx]?.value ?? "";
+    const isCorrect = normalizeWord(currentValue) === wr.refNorm && normalizeWord(currentValue) !== "";
+
+    if (isCorrect) {
+      const newResults = state.wordResults.map((w, i) =>
+        i === wordIdx ? { ...w, correct: true, retryValue: currentValue } : w
+      );
+      const allCorrect = newResults.every((w) => w.correct);
+      setSentenceStates((prev) => ({
+        ...prev,
+        [sentenceId]: { ...prev[sentenceId], phase: allCorrect ? "done" : "feedback", wordResults: newResults },
+      }));
+      if (allCorrect) {
+        setTimeout(() => advanceToNext(), 500);
+      } else {
+        // Focus first wrong after current, or wrap to beginning
+        const wrongAfter = newResults.findIndex((w, i) => !w.correct && i > wordIdx);
+        const wrongAny = newResults.findIndex((w, i) => !w.correct);
+        const focusIdx = wrongAfter !== -1 ? wrongAfter : wrongAny;
+        if (focusIdx !== -1) setTimeout(() => retryInputRefs.current[focusIdx]?.focus(), 50);
+      }
+    } else {
+      // Wrong: reveal one more hint letter
+      const newHintCount = wr.hintCount + 1;
+      const fullyRevealed = newHintCount >= wr.refNorm.length;
+      const newResults = state.wordResults.map((w, i) =>
+        i === wordIdx ? { ...w, hintCount: newHintCount, retryValue: "" } : w
+      );
+      setSentenceStates((prev) => ({
+        ...prev,
+        [sentenceId]: { ...prev[sentenceId], wordResults: newResults },
+      }));
+      if (fullyRevealed) {
+        // All letters revealed → move to next wrong word after delay
+        const wrongAfter = newResults.findIndex((w, i) => !w.correct && i > wordIdx);
+        const wrongAny = newResults.findIndex((w, i) => !w.correct && i !== wordIdx);
+        const focusIdx = wrongAfter !== -1 ? wrongAfter : wrongAny;
+        if (focusIdx !== -1) setTimeout(() => retryInputRefs.current[focusIdx]?.focus(), 900);
+      } else {
+        // Stay on current word: re-focus after re-render (key change clears input)
+        setTimeout(() => retryInputRefs.current[wordIdx]?.focus(), 50);
+      }
     }
   }
 
   function showAnswer(sentenceId: string) {
     const s = sentences.find((x) => x.id === sentenceId);
-    const state = sentenceStates[sentenceId];
-    if (!s || !state) return;
+    if (!s) return;
     const results = s.content.trim().split(/\s+/).map((ref) => ({
-      ref, refNorm: normalizeWord(ref), correct: false, retryValue: ref,
+      ref, refNorm: normalizeWord(ref), correct: false, retryValue: ref, hintCount: 0,
     }));
     setSentenceStates((prev) => ({ ...prev, [sentenceId]: { ...prev[sentenceId], phase: "revealed", wordResults: results } }));
   }
@@ -320,23 +328,39 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     const { wordResults } = state;
     if (!wordResults || wordResults.length === 0) return null;
     return (
-      <div className="flex flex-wrap justify-center items-end gap-x-2 gap-y-3">
+      <div className="flex flex-wrap justify-center items-end gap-x-2 gap-y-4">
         {wordResults.map((wr, i) => {
-          if (wr.correct) return <span key={i} className="text-2xl md:text-3xl font-medium text-emerald-400">{wr.ref}</span>;
-          if (revealed) return <span key={i} className="text-2xl md:text-3xl font-medium text-orange-400">{wr.ref}</span>;
+          if (wr.correct) {
+            return <span key={i} className="text-2xl md:text-3xl font-medium text-emerald-400">{wr.ref}</span>;
+          }
+          if (revealed) {
+            return <span key={i} className="text-2xl md:text-3xl font-medium text-orange-400">{wr.ref}</span>;
+          }
+
+          const hintStr = wr.hintCount > 0
+            ? wr.refNorm.slice(0, wr.hintCount) + "*".repeat(Math.max(0, wr.refNorm.length - wr.hintCount))
+            : null;
+
           return (
             <span key={i} className="inline-flex flex-col items-center gap-1">
               <input
-                key={`retry-${sentence.id}-${i}`}
+                // Key includes hintCount so React recreates the input (clearing it) on each wrong attempt
+                key={`retry-${sentence.id}-${i}-${wr.hintCount}`}
                 ref={(el) => { retryInputRefs.current[i] = el; }}
                 type="text"
-                defaultValue={wr.retryValue}
+                defaultValue=""
                 autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck={false}
                 onKeyDown={(e) => handleRetryKeyDown(e, sentence.id, i)}
                 className="h-10 px-2 text-lg text-center rounded-xl border-2 border-red-400/60 bg-red-500/10 text-red-300 font-mono outline-none focus:border-red-400 transition-all"
                 style={{ width: `${Math.max(4, wr.ref.length + 2)}ch` }}
               />
-              <span className="text-xs text-[var(--text-muted)] font-mono">{wr.ref.length} letters</span>
+              {hintStr ? (
+                <span className={`text-xs font-mono tracking-wider ${wr.hintCount >= wr.refNorm.length ? "text-emerald-400" : "text-amber-400"}`}>
+                  {hintStr}
+                </span>
+              ) : (
+                <span className="text-xs text-[var(--text-muted)] font-mono">{wr.ref.length} letters</span>
+              )}
             </span>
           );
         })}
@@ -358,7 +382,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
         <div className={`text-7xl font-display font-bold tabular-nums ${finalScore >= 70 ? "text-emerald-400" : "text-orange-400"}`}>{finalScore}</div>
         <div className="text-[var(--text-muted)] text-sm">{correctWords}/{totalWords} từ đúng</div>
         {finalScore >= 70 ? (
-          <div className="flex items-center gap-2 text-emerald-400 font-medium"><CheckCircle2 size={18} />Đạt — Level 3 hoàn thành!</div>
+          <div className="flex items-center gap-2 text-emerald-400 font-medium"><CheckCircle2 size={18} />Đạt — Level {dbLevel} hoàn thành!</div>
         ) : (
           <div className="flex flex-col items-center gap-3">
             <div className="flex items-center gap-2 text-orange-400 font-medium"><XCircle size={18} />Chưa đạt — cần luyện thêm</div>
@@ -390,6 +414,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
           <span style={{ fontSize: 12, fontWeight: 600, color: "#3e4850", fontFamily: "monospace", width: 36 }}>{fmt(audioCurrent)}</span>
           <div
             style={{ position: "relative", flex: 1, height: 6, background: "#bec8d2", borderRadius: 9999, cursor: "pointer" }}
+            onMouseDown={(e) => e.preventDefault()}
             onClick={handleSeek}
           >
             <div style={{ position: "absolute", top: 0, left: 0, height: "100%", width: `${audioDuration > 0 ? (audioCurrent / audioDuration) * 100 : 0}%`, background: "#006591", borderRadius: 9999, transition: "width 0.1s" }} />
@@ -398,6 +423,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
         </div>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <button
+            onMouseDown={(e) => e.preventDefault()}
             onClick={togglePlay}
             style={{ width: 48, height: 48, borderRadius: "50%", background: "#006591", color: "#ffffff", border: "none", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 2px 8px rgba(0,101,145,0.2)", flexShrink: 0 }}
             className="active:scale-95 transition-transform"
@@ -408,6 +434,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
             {SPEEDS.map((s) => (
               <button
                 key={s}
+                onMouseDown={(e) => e.preventDefault()}
                 onClick={() => setSpeed(s)}
                 style={{ fontSize: 12, fontWeight: 600, fontFamily: "monospace", padding: "2px 8px", borderRadius: 4, border: "none", cursor: "pointer", background: speed === s ? "#006591" : "transparent", color: speed === s ? "#ffffff" : "#3e4850", transition: "all 0.15s" }}
               >
@@ -476,9 +503,11 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
           )}
           {activeSentenceState.phase === "feedback" && (
             <div className="flex items-center gap-3 mt-4">
-              <button onClick={() => recheckSentence(activeSentence.id)} className="btn-primary px-5 py-2 rounded-xl text-sm font-bold">Kiểm tra lại</button>
-              <button onClick={() => showAnswer(activeSentence.id)} className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm text-[#3e4850] hover:bg-[#eff4ff] transition-colors border border-[#bec8d2]">
-                <Eye size={13} />Xem đáp án
+              <button
+                onClick={() => showAnswer(activeSentence.id)}
+                className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm text-[#3e4850] hover:bg-[#eff4ff] transition-colors border border-[#bec8d2]"
+              >
+                Xem đáp án
               </button>
             </div>
           )}
@@ -499,7 +528,11 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
       {(isPart2 ? (!part2AllDone || answerRevealed) : !showSubmit) && (
         <div className="flex items-center justify-between mt-6 pt-4 border-t border-[#bec8d2]">
           <div className="flex items-center gap-3">
-            <button onClick={handleReplay} className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#bec8d2] text-sm text-[#3e4850] hover:bg-[#eff4ff] transition-colors">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={handleReplay}
+              className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#bec8d2] text-sm text-[#3e4850] hover:bg-[#eff4ff] transition-colors"
+            >
               <RotateCcw size={13} />Replay
             </button>
             <div className="flex gap-1">
@@ -509,12 +542,15 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
             </div>
           </div>
           {isPart2 && answerRevealed ? (
-            <button onClick={handleSubmit} style={{ background: "#006591", color: "#fff", border: "none", cursor: "pointer", borderRadius: 9999, padding: "8px 24px", fontSize: 14, fontWeight: 700 }} className="active:scale-95 transition-transform">Nộp bài</button>
-          ) : (
-            <button onClick={handleSkip} className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-[#bec8d2] text-sm text-[#3e4850] hover:bg-[#eff4ff] transition-colors">
-              Skip <SkipForward size={13} />
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={handleSubmit}
+              style={{ background: "#006591", color: "#fff", border: "none", cursor: "pointer", borderRadius: 9999, padding: "8px 24px", fontSize: 14, fontWeight: 700 }}
+              className="active:scale-95 transition-transform"
+            >
+              Nộp bài
             </button>
-          )}
+          ) : null}
         </div>
       )}
     </div>

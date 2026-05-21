@@ -1,10 +1,11 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { RotateCcw, Play, Pause, CheckCircle2, XCircle, ArrowRight } from "lucide-react";
 import { saveProgress } from "@/app/actions/saveProgress";
 import { getTimeSpent } from "@/stores/practiceStore";
 import { Part2Result } from "./Part2Result";
+import { ensureMinBlanks } from "@/lib/generateBlanks";
 
 interface Blank {
   id: string;
@@ -62,15 +63,19 @@ function cleanAnswer(answer: string) {
 
 export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, nextLessonUrl, onScored }: Props) {
   const isPart2 = partNumber === 2;
-  const blankSentences = sentences.filter((s) => s.blanks.length > 0);
+
+  // Ensure every sentence has at least 2 blanks; generate runtime if DB blanks are missing
+  const processedSentences = useMemo(() => ensureMinBlanks(sentences, 2), []);
+
+  const blankSentences = processedSentences.filter((s) => s.blanks.length > 0);
 
   const [activeIdx, setActiveIdx] = useState(() =>
-    sentences.findIndex((s) => s.blanks.length > 0) ?? 0
+    processedSentences.findIndex((s) => s.blanks.length > 0) ?? 0
   );
 
   const [blankStates, setBlankStates] = useState<Record<string, BlankState>>(() => {
     const init: Record<string, BlankState> = {};
-    sentences.forEach((s) =>
+    processedSentences.forEach((s) =>
       s.blanks.forEach((b) => {
         init[b.id] = { value: "", status: "idle", hintCount: 0 };
       })
@@ -98,7 +103,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
 
   const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
 
-  const activeSentence = sentences[activeIdx];
+  const activeSentence = processedSentences[activeIdx];
   const activeBlankIdx = blankSentences.findIndex((s) => s.id === activeSentence?.id);
   const replayCount = replayCounts[activeSentence?.id ?? ""] ?? 0;
 
@@ -236,13 +241,13 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
 
     if (isPart2) {
       const nextIdx = activeIdx + 1;
-      if (nextIdx >= sentences.length) {
+      if (nextIdx >= processedSentences.length) {
         setPart2AllDone(true);
       } else {
         setActiveIdx(nextIdx);
       }
     } else {
-      const nextIdx = sentences.findIndex((s, i) => i > activeIdx && s.blanks.length > 0);
+      const nextIdx = processedSentences.findIndex((s, i) => i > activeIdx && s.blanks.length > 0);
       if (nextIdx === -1) {
         setShowSubmit(true);
       } else {
@@ -323,7 +328,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
   // ── Submit ───────────────────────────────────────────────────────────────────
 
   async function handleSubmit() {
-    const allBlanks = sentences.flatMap((s) => s.blanks);
+    const allBlanks = processedSentences.flatMap((s) => s.blanks);
     const correctCount = allBlanks.filter((b) => blankStates[b.id]?.status === "correct").length;
     let score = allBlanks.length > 0 ? Math.round((correctCount / allBlanks.length) * 100) : 0;
     if (isPart2 && correctOption) {
@@ -419,7 +424,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
   // ── Score screen ─────────────────────────────────────────────────────────────
 
   if (submitted && finalScore !== null) {
-    const allBlanks = sentences.flatMap((s) => s.blanks);
+    const allBlanks = processedSentences.flatMap((s) => s.blanks);
     const correctCount = allBlanks.filter((b) => blankStates[b.id]?.status === "correct").length;
     return (
       <div className="flex flex-col items-center gap-5 py-16">
