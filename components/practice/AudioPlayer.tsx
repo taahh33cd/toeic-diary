@@ -63,7 +63,7 @@ export function AudioPlayer({ audioUrl }: { audioUrl: string }) {
   const pct = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
-    <div className="bg-white rounded-xl border border-[#bec8d2] p-6 mb-8 shadow-sm">
+    <div className="bg-[var(--bg-elevated)] rounded-xl border border-[var(--border)] p-6 mb-8 shadow-sm">
       <audio
         ref={audioRef}
         src={audioUrl}
@@ -81,11 +81,11 @@ export function AudioPlayer({ audioUrl }: { audioUrl: string }) {
       <div style={{ maxWidth: 720, margin: "0 auto" }}>
         {/* Seekbar row */}
         <div className="flex items-center gap-3 mb-5">
-          <span className="font-mono text-xs font-semibold text-[#3e4850] w-9">{fmt(currentTime)}</span>
-          <div className="relative flex-1 h-2 bg-[#d3e4fe] rounded-full cursor-pointer group">
-            <div className="absolute top-0 left-0 h-full bg-[#006591] rounded-full transition-[width] duration-100" style={{ width: `${pct}%` }} />
+          <span className="font-mono text-xs font-semibold text-[var(--text-secondary)] w-9">{fmt(currentTime)}</span>
+          <div className="relative flex-1 h-2 bg-[var(--bg-secondary)] rounded-full cursor-pointer group">
+            <div className="absolute top-0 left-0 h-full bg-[var(--practice-accent)] rounded-full transition-[width] duration-100" style={{ width: `${pct}%` }} />
             <div
-              className="absolute w-4 h-4 bg-[#006591] border-2 border-white rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+              className="absolute w-4 h-4 bg-[var(--practice-accent)] border-2 border-white rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
               style={{ top: "50%", left: `${pct}%`, transform: "translate(-50%, -50%)" }}
             />
             <input
@@ -98,7 +98,7 @@ export function AudioPlayer({ audioUrl }: { audioUrl: string }) {
               className="absolute inset-0 w-full opacity-0 cursor-pointer"
             />
           </div>
-          <span className="font-mono text-xs font-semibold text-[#3e4850] w-9 text-right">
+          <span className="font-mono text-xs font-semibold text-[var(--text-secondary)] w-9 text-right">
             {duration > 0 ? fmt(duration) : "--:--"}
           </span>
         </div>
@@ -109,7 +109,7 @@ export function AudioPlayer({ audioUrl }: { audioUrl: string }) {
           <button
             onClick={handleReplay}
             title="Lùi 5 giây"
-            className="p-2 text-[#3e4850] hover:text-[#006591] transition-colors rounded-lg"
+            className="p-2 text-[var(--text-secondary)] hover:text-[var(--practice-accent)] transition-colors rounded-lg"
           >
             <RotateCcw size={20} />
           </button>
@@ -118,7 +118,7 @@ export function AudioPlayer({ audioUrl }: { audioUrl: string }) {
           <button
             onClick={() => setIsPlaying(!isPlaying)}
             disabled={!isLoaded}
-            className="w-14 h-14 rounded-full bg-[#006591] text-white flex items-center justify-center shadow-lg shadow-[#006591]/25 hover:scale-105 active:scale-95 transition-transform disabled:opacity-40 disabled:cursor-default flex-shrink-0"
+            className="w-14 h-14 rounded-full bg-[var(--practice-accent)] text-white flex items-center justify-center shadow-lg shadow-[var(--practice-accent)]/25 hover:scale-105 active:scale-95 transition-transform disabled:opacity-40 disabled:cursor-default flex-shrink-0"
           >
             {isBuffering ? (
               <span className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin inline-block" />
@@ -130,12 +130,12 @@ export function AudioPlayer({ audioUrl }: { audioUrl: string }) {
           </button>
 
           {/* Speed controls */}
-          <div className="flex items-center bg-[#eff4ff] p-1 rounded-lg border border-[#bec8d2]/40">
+          <div className="flex items-center bg-[var(--bg-secondary)] p-1 rounded-lg border border-[var(--border)]/40">
             {[0.75, 1.0, 1.25, 1.5].map((s) => (
               <button
                 key={s}
                 onClick={() => setSpeed(s)}
-                className={`px-3 py-1.5 text-xs font-mono font-semibold rounded transition-all ${speed === s ? "bg-[#006591] text-white shadow-sm" : "text-[#3e4850] hover:text-[#006591]"}`}
+                className={`px-3 py-1.5 text-xs font-mono font-semibold rounded transition-all ${speed === s ? "bg-[var(--practice-accent)] text-white shadow-sm" : "text-[var(--text-secondary)] hover:text-[var(--practice-accent)]"}`}
               >
                 {s}×
               </button>

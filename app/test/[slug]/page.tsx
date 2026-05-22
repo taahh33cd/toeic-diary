@@ -91,7 +91,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
     : "/";
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#f8f9ff]">
+    <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
       <main className="flex-1 max-w-[1120px] mx-auto w-full px-4 md:px-6 py-6">
@@ -100,7 +100,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
         <div className="mb-3">
           <Link
             href={backHref}
-            className="inline-flex items-center gap-0.5 text-sm text-[#006591] hover:underline transition-all"
+            className="inline-flex items-center gap-0.5 text-sm text-[var(--practice-accent)] hover:underline transition-all"
           >
             <ChevronLeft size={16} />
             Trang chủ
@@ -158,16 +158,16 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
                 {/* Part header */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-[#e5eeff] rounded-lg flex items-center justify-center text-2xl flex-shrink-0">
+                    <div className="w-12 h-12 bg-[var(--bg-secondary)] rounded-lg flex items-center justify-center text-2xl flex-shrink-0">
                       {meta.icon}
                     </div>
                     <div>
-                      <h3 className="text-base font-semibold text-[#0b1c30]">{meta.label}</h3>
-                      <p className="text-xs text-[#6e7881]">{partCompleted}/{part.lessons.length} bài hoàn thành</p>
+                      <h3 className="text-base font-semibold text-[var(--text-primary)]">{meta.label}</h3>
+                      <p className="text-xs text-[var(--text-muted)]">{partCompleted}/{part.lessons.length} bài hoàn thành</p>
                     </div>
                   </div>
                   {/* Progress separator line */}
-                  <div className="h-[2px] flex-grow mx-4 bg-[#bec8d2]/30 relative hidden md:block">
+                  <div className="h-[2px] flex-grow mx-4 bg-[var(--border)]/30 relative hidden md:block">
                     <div
                       className="absolute top-0 left-0 h-full bg-[#0ea5e9] transition-all duration-700"
                       style={{ width: `${partPercent}%` }}
@@ -187,13 +187,13 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
                       <Link
                         key={lesson.id}
                         href={`/test/${slug}/${lesson.id}`}
-                        className="group bg-white border border-[#bec8d2] rounded-lg p-3 flex items-center justify-between hover:border-[#0ea5e9] transition-all cursor-pointer"
+                        className="group bg-[var(--bg-elevated)] border border-[var(--border)] rounded-lg p-3 flex items-center justify-between hover:border-[#0ea5e9] transition-all cursor-pointer"
                         style={{ boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
                       >
                         <div className="flex flex-col gap-1 min-w-0">
                           {/* Title + badge */}
                           <div className="flex items-center gap-2">
-                            <span className="text-sm font-bold text-[#0b1c30] truncate">{lesson.title}</span>
+                            <span className="text-sm font-bold text-[var(--text-primary)] truncate">{lesson.title}</span>
                             {anyPassed && (
                               <span className="flex-shrink-0 bg-green-100 text-green-700 text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-0.5">
                                 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><polyline points="20 6 9 17 4 12"/></svg>
@@ -203,7 +203,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
                           </div>
                           {/* Question range */}
                           {lesson.questionStart && lesson.questionEnd && (
-                            <p className="text-xs text-[#6e7881]">
+                            <p className="text-xs text-[var(--text-muted)]">
                               Questions {lesson.questionStart}–{lesson.questionEnd}
                             </p>
                           )}
@@ -218,7 +218,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
                                   className={`text-[10px] border px-1.5 py-0.5 rounded font-bold ${
                                     done
                                       ? "border-[#0ea5e9] text-[#0ea5e9]"
-                                      : "border-[#bec8d2] text-[#6e7881] opacity-40"
+                                      : "border-[var(--border)] text-[var(--text-muted)] opacity-40"
                                   }`}
                                 >
                                   L{lvl}
@@ -230,7 +230,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
 
                         <div className="flex items-center gap-3 flex-shrink-0 ml-3">
                           {duration && (
-                            <div className="flex items-center gap-1 text-[#6e7881]">
+                            <div className="flex items-center gap-1 text-[var(--text-muted)]">
                               <Clock size={14} />
                               <span className="text-xs">{duration}</span>
                             </div>
@@ -238,7 +238,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
                           <svg
                             width="16" height="16" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-                            className="text-[#bec8d2] group-hover:text-[#0ea5e9] transition-colors"
+                            className="text-[var(--border)] group-hover:text-[#0ea5e9] transition-colors"
                           >
                             <polyline points="9 18 15 12 9 6"/>
                           </svg>

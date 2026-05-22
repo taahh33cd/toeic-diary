@@ -198,7 +198,7 @@ export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl 
                   transition: "all 0.2s",
                   width: "100%",
                 }}
-                className="hover:bg-[#eff4ff]"
+                className="hover:bg-[var(--bg-secondary)]"
               >
                 <div style={{ marginBottom: 16 }}>
                   <LevelIcon level={level} active={isActive} />

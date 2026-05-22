@@ -19,6 +19,7 @@
   --accent-red: #EF4444;
   --accent-yellow: #F59E0B;
   --accent-blue: #3B82F6;
+  --practice-accent: #006591;  /* audio player & practice UI accent */
 
   /* Text */
   --text-primary: #0F172A;
@@ -73,6 +74,7 @@
   --accent-red: #F87171;
   --accent-yellow: #FBBF24;
   --accent-blue: #60A5FA;
+  --practice-accent: #38bdf8;  /* lighter sky-400 for dark backgrounds */
 
   --text-primary: #F1F5F9;
   --text-secondary: #94A3B8;

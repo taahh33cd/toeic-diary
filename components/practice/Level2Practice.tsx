@@ -289,7 +289,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
 
       return (
         <span key={i} className="inline-flex flex-col items-center mx-1 relative pb-7" style={{ verticalAlign: "bottom" }}>
-          <span className="rounded-t bg-[#eff4ff]/70 px-2 pb-1">
+          <span className="rounded-t bg-[var(--bg-secondary)] px-2 pb-1">
             <input
               ref={(el) => { inputRefs.current[blank.id] = el; }}
               type="text"
@@ -307,11 +307,11 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
               placeholder={blank.hint}
               className={`
                 bg-transparent border-b-2 text-3xl md:text-[40px] text-center font-medium outline-none transition-all
-                placeholder:text-[#cbdbf5]
+                placeholder:text-[var(--text-muted)]
                 ${isCorrect ? "border-emerald-400 text-emerald-500" : ""}
                 ${isWrong ? "border-red-400 text-red-400" : ""}
                 ${resolved && !isCorrect ? "border-red-300/50 text-red-400/60" : ""}
-                ${!isCorrect && !isWrong && !resolved ? "border-[#bec8d2] focus:border-[#006591] text-[#006591]" : ""}
+                ${!isCorrect && !isWrong && !resolved ? "border-[var(--border)] focus:border-[var(--practice-accent)] text-[var(--practice-accent)]" : ""}
               `}
               style={{ width: `${Math.max(4, ca.length)}ch` }}
             />
@@ -362,7 +362,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
   return (
     <div className="flex flex-col pb-32">
       {/* Audio bar */}
-      <div className="bg-white rounded-xl border border-[#bec8d2] p-6 mb-6 shadow-sm">
+      <div className="bg-[var(--bg-elevated)] rounded-xl border border-[var(--border)] p-6 mb-6 shadow-sm">
         <audio
           ref={audioRef}
           src={audioUrl}
@@ -377,34 +377,34 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
           <button
             onMouseDown={(e) => e.preventDefault()}
             onClick={togglePlay}
-            className="w-16 h-16 rounded-full bg-[#006591] text-white flex items-center justify-center shadow-lg shadow-[#006591]/20 hover:scale-105 active:scale-95 transition-transform flex-shrink-0"
+            className="w-16 h-16 rounded-full bg-[var(--practice-accent)] text-white flex items-center justify-center shadow-lg shadow-[var(--practice-accent)]/20 hover:scale-105 active:scale-95 transition-transform flex-shrink-0"
           >
             {isPlaying ? <Pause size={24} /> : <Play size={24} style={{ marginLeft: 2 }} />}
           </button>
           <div className="flex-grow w-full">
             <div className="flex justify-between items-center mb-3">
-              <span className="font-mono text-xs font-semibold text-[#3e4850]">{fmt(audioCurrent)}</span>
-              <span className="font-mono text-xs font-semibold text-[#3e4850]">{audioDuration > 0 ? fmt(audioDuration) : "--:--"}</span>
+              <span className="font-mono text-xs font-semibold text-[var(--text-secondary)]">{fmt(audioCurrent)}</span>
+              <span className="font-mono text-xs font-semibold text-[var(--text-secondary)]">{audioDuration > 0 ? fmt(audioDuration) : "--:--"}</span>
             </div>
             <div
-              className="relative h-2 bg-[#d3e4fe] rounded-full cursor-pointer group"
+              className="relative h-2 bg-[var(--bg-secondary)] rounded-full cursor-pointer group"
               onMouseDown={(e) => e.preventDefault()}
               onClick={handleSeek}
             >
-              <div className="absolute top-0 left-0 h-full bg-[#006591] rounded-full transition-[width] duration-100" style={{ width: `${audioDuration > 0 ? (audioCurrent / audioDuration) * 100 : 0}%` }} />
+              <div className="absolute top-0 left-0 h-full bg-[var(--practice-accent)] rounded-full transition-[width] duration-100" style={{ width: `${audioDuration > 0 ? (audioCurrent / audioDuration) * 100 : 0}%` }} />
               <div
-                className="absolute w-4 h-4 bg-[#006591] border-2 border-white rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                className="absolute w-4 h-4 bg-[var(--practice-accent)] border-2 border-white rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
                 style={{ top: "50%", left: `${audioDuration > 0 ? (audioCurrent / audioDuration) * 100 : 0}%`, transform: "translate(-50%, -50%)" }}
               />
             </div>
           </div>
-          <div className="flex items-center bg-[#eff4ff] p-1 rounded-lg border border-[#bec8d2]/40">
+          <div className="flex items-center bg-[var(--bg-secondary)] p-1 rounded-lg border border-[var(--border)]/40">
             {SPEEDS.map((s) => (
               <button
                 key={s}
                 onMouseDown={(e) => e.preventDefault()}
                 onClick={() => setSpeed(s)}
-                className={`px-3 py-1.5 text-xs font-mono font-semibold rounded transition-all ${speed === s ? "bg-[#006591] text-white shadow-sm" : "text-[#3e4850] hover:text-[#006591]"}`}
+                className={`px-3 py-1.5 text-xs font-mono font-semibold rounded transition-all ${speed === s ? "bg-[var(--practice-accent)] text-white shadow-sm" : "text-[var(--text-secondary)] hover:text-[var(--practice-accent)]"}`}
               >
                 {s}×
               </button>
@@ -426,7 +426,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
             return (
               <div key={s.id} className={`rounded-full transition-all duration-300 ${
                 allCorrect ? "w-2 h-2 bg-emerald-400" : anyWrong ? "w-2 h-2 bg-orange-400"
-                : isActive ? "w-4 h-2 bg-[#006591]" : "w-2 h-2 bg-[#dce9ff]"
+                : isActive ? "w-4 h-2 bg-[var(--practice-accent)]" : "w-2 h-2 bg-[var(--bg-secondary)]"
               }`} />
             );
           })}
@@ -451,7 +451,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
               : <span className="text-[var(--text-primary)]">{activeSentence.content}</span>}
           </div>
           {activeSentence.blanks.length > 0 && (
-            <p className="text-xs text-[#6e7881] mt-6 select-none">
+            <p className="text-xs text-[var(--text-muted)] mt-6 select-none">
               ⌨ Gõ vào ô trống · Enter để kiểm tra · Replay để nghe lại
             </p>
           )}
@@ -475,14 +475,14 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
             <button
               onMouseDown={(e) => e.preventDefault()}
               onClick={handleReplay}
-              className="flex items-center gap-2 px-6 py-3 bg-white border border-[#bec8d2] rounded-full text-[#3e4850] hover:border-[#006591] hover:text-[#006591] transition-all shadow-sm text-sm font-medium"
+              className="flex items-center gap-2 px-6 py-3 bg-[var(--bg-elevated)] border border-[var(--border)] rounded-full text-[var(--text-secondary)] hover:border-[var(--practice-accent)] hover:text-[var(--practice-accent)] transition-all shadow-sm text-sm font-medium"
             >
               <RotateCcw size={14} />
               Replay
             </button>
             <div className="flex gap-1">
               {Array.from({ length: MAX_REPLAY }).map((_, i) => (
-                <div key={i} className={`w-1.5 h-1.5 rounded-full transition-colors ${i < replayCount ? "bg-[#006591]" : "bg-[#dce9ff]"}`} />
+                <div key={i} className={`w-1.5 h-1.5 rounded-full transition-colors ${i < replayCount ? "bg-[var(--practice-accent)]" : "bg-[var(--bg-secondary)]"}`} />
               ))}
             </div>
           </div>

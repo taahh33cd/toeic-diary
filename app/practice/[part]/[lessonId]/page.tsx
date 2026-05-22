@@ -112,12 +112,12 @@ export default async function PartLessonPage({
         {/* Breadcrumb */}
         <nav style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 14, color: "#3e4850", marginBottom: 24 }}>
           <Link href="/practice" style={{ color: "#3e4850", textDecoration: "none" }}
-            className="hover:text-[#006591] transition-colors">
+            className="hover:text-[var(--practice-accent)] transition-colors">
             Luyện tập
           </Link>
           <span style={{ color: "#bec8d2" }}>›</span>
           <Link href={`/practice/${part}`} style={{ color: "#3e4850", textDecoration: "none" }}
-            className="hover:text-[#006591] transition-colors">
+            className="hover:text-[var(--practice-accent)] transition-colors">
             {info.label}
           </Link>
           <span style={{ color: "#bec8d2" }}>›</span>

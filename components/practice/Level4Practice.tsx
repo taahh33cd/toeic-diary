@@ -67,9 +67,9 @@ export function Level4Practice({ lessonId, sentences, transcriptFull, startTime,
   return (
     <div className="space-y-5">
       {/* Instruction box — dashed border with icon */}
-      <div className="flex items-start gap-3 p-4 bg-[#e5eeff]/50 rounded-xl border border-dashed border-[#bec8d2]">
-        <Sparkles size={18} className="text-[#006591] mt-0.5 flex-shrink-0" />
-        <p className="text-sm text-[#3e4850] leading-relaxed">
+      <div className="flex items-start gap-3 p-4 bg-[var(--bg-secondary)] rounded-xl border border-dashed border-[var(--border)]">
+        <Sparkles size={18} className="text-[var(--practice-accent)] mt-0.5 flex-shrink-0" />
+        <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
           Nghe xong, viết tóm tắt những gì bạn nghe được bằng tiếng Anh. AI sẽ đánh giá mức độ hiểu.
         </p>
       </div>
@@ -80,10 +80,10 @@ export function Level4Practice({ lessonId, sentences, transcriptFull, startTime,
           onChange={(e) => setUserSummary(e.target.value)}
           disabled={!!feedback || loading}
           placeholder="Write a summary of what you heard..."
-          className="w-full min-h-[320px] p-6 rounded-2xl border-2 border-[#bec8d2] bg-white text-[#0b1c30] text-base resize-none outline-none focus:border-[#006591] transition-colors disabled:opacity-60 shadow-sm"
+          className="w-full min-h-[320px] p-6 rounded-2xl border-2 border-[var(--border)] bg-[var(--bg-elevated)] text-[var(--text-primary)] text-base resize-none outline-none focus:border-[var(--practice-accent)] transition-colors disabled:opacity-60 shadow-sm"
         />
         {!feedback && (
-          <p className="text-xs text-[#6e7881] mt-2 text-center select-none">
+          <p className="text-xs text-[var(--text-muted)] mt-2 text-center select-none">
             ⌨ Viết tóm tắt bằng tiếng Anh · bấm "Nhận AI Feedback" để gửi
           </p>
         )}
@@ -192,7 +192,7 @@ export function Level4Practice({ lessonId, sentences, transcriptFull, startTime,
         <button
           onClick={handleSubmit}
           disabled={loading || userSummary.trim().length < 10}
-          className="w-full h-14 bg-[#006591] text-white rounded-xl flex items-center justify-center gap-2 text-base font-semibold shadow-lg shadow-[#006591]/20 hover:opacity-90 active:scale-[0.98] transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+          className="w-full h-14 bg-[var(--practice-accent)] text-white rounded-xl flex items-center justify-center gap-2 text-base font-semibold shadow-lg shadow-[var(--practice-accent)]/20 hover:opacity-90 active:scale-[0.98] transition-all disabled:opacity-40 disabled:cursor-not-allowed"
         >
           {loading ? (
             <><span className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin" />AI đang phân tích...</>

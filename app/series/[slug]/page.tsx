@@ -13,7 +13,7 @@ function CircleProgress({ percent }: { percent: number }) {
   return (
     <div className="relative w-10 h-10 flex items-center justify-center flex-shrink-0">
       <svg className="absolute w-full h-full -rotate-90" viewBox="0 0 40 40">
-        <circle cx="20" cy="20" r="18" fill="transparent" stroke="#e5eeff" strokeWidth="2.5" />
+        <circle cx="20" cy="20" r="18" fill="transparent" stroke="var(--bg-secondary)" strokeWidth="2.5" />
         <circle
           cx="20" cy="20" r="18"
           fill="transparent"
@@ -94,7 +94,7 @@ export default async function SeriesPage({ params }: { params: Promise<{ slug: s
   }).length;
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#f8f9ff]">
+    <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
       <main className="flex-1 max-w-[1120px] mx-auto w-full px-4 md:px-6 py-10">
@@ -127,7 +127,7 @@ export default async function SeriesPage({ params }: { params: Promise<{ slug: s
         {/* Back link below hero */}
         <Link
           href="/"
-          className="inline-flex items-center gap-1 text-sm text-[#6e7881] hover:text-[#0b1c30] transition-colors mb-6"
+          className="inline-flex items-center gap-1 text-sm text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors mb-6"
         >
           <ArrowLeft size={14} />
           Tất cả bộ đề
@@ -151,7 +151,7 @@ export default async function SeriesPage({ params }: { params: Promise<{ slug: s
               ? "text-emerald-600"
               : isStarted
               ? "text-[#0ea5e9]"
-              : "text-[#6e7881] opacity-60";
+              : "text-[var(--text-muted)] opacity-60";
 
             const ctaLabel = isComplete ? "Ôn lại" : isStarted ? "Tiếp tục" : "Bắt đầu";
             const ctaIcon = isStarted && !isComplete ? "play_arrow" : "arrow_forward";
@@ -163,7 +163,7 @@ export default async function SeriesPage({ params }: { params: Promise<{ slug: s
               <Link
                 key={test.id}
                 href={`/test/${test.slug}`}
-                className="group bg-white border border-[#bec8d2] border-t-2 border-t-[#0ea5e9] rounded-xl p-5 flex flex-col justify-between hover:shadow-sm transition-all"
+                className="group bg-[var(--bg-elevated)] border border-[var(--border)] border-t-2 border-t-[#0ea5e9] rounded-xl p-5 flex flex-col justify-between hover:shadow-sm transition-all"
                 style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.05)" }}
               >
                 <div>
@@ -178,20 +178,20 @@ export default async function SeriesPage({ params }: { params: Promise<{ slug: s
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-base font-semibold text-[#0b1c30] mb-1">{test.name}</h3>
-                  <p className="text-xs text-[#6e7881] mb-4">
+                  <h3 className="text-base font-semibold text-[var(--text-primary)] mb-1">{test.name}</h3>
+                  <p className="text-xs text-[var(--text-muted)] mb-4">
                     {test.year && `ETS ${test.year} • `}200 Questions • 120 Mins
                   </p>
 
                   {/* Part chips */}
                   <div className="flex flex-wrap gap-2 mb-5">
                     {listeningParts.length > 0 && (
-                      <div className="px-2.5 py-1 bg-[#e5eeff]/60 rounded text-[#576065] text-xs font-medium flex items-center gap-1">
+                      <div className="px-2.5 py-1 bg-[var(--bg-secondary)]/60 rounded text-[var(--text-secondary)] text-xs font-medium flex items-center gap-1">
                         <span>🎧</span> Part 1–{listeningParts[listeningParts.length - 1].partNumber}
                       </div>
                     )}
                     {readingParts.length > 0 && (
-                      <div className="px-2.5 py-1 bg-[#e5eeff]/60 rounded text-[#576065] text-xs font-medium flex items-center gap-1">
+                      <div className="px-2.5 py-1 bg-[var(--bg-secondary)]/60 rounded text-[var(--text-secondary)] text-xs font-medium flex items-center gap-1">
                         <span>📖</span> Part 5–7
                       </div>
                     )}
@@ -199,10 +199,10 @@ export default async function SeriesPage({ params }: { params: Promise<{ slug: s
                 </div>
 
                 {/* Footer */}
-                <div className="flex items-center justify-between pt-4 border-t border-[#bec8d2]">
+                <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
                   <div className="flex items-center gap-2.5">
                     <CircleProgress percent={percent} />
-                    <span className="text-xs text-[#6e7881]">
+                    <span className="text-xs text-[var(--text-muted)]">
                       {isComplete ? "Hoàn thành" : isStarted ? "Đang học" : "Chưa học"}
                     </span>
                   </div>
