@@ -235,14 +235,11 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
       focusNextOrAdvance(blankId);
     } else {
       const newHintCount = state.hintCount + 1;
-      const fullyRevealed = newHintCount >= ca.length;
       setBlankStates((prev) => ({
         ...prev,
         [blankId]: { value: "", status: "wrong", hintCount: newHintCount },
       }));
-      if (fullyRevealed) {
-        setTimeout(() => focusNextOrAdvance(blankId), 900);
-      }
+      // No auto-advance when fully revealed — user must press Enter to proceed
     }
   }
 
@@ -303,7 +300,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
                 if (e.key === "Enter") { e.preventDefault(); handleEnter(blank.id); }
                 if (e.key === " ") e.preventDefault();
               }}
-              disabled={submitted || resolved}
+              disabled={submitted || bs?.status === "correct"}
               placeholder={blank.hint}
               className={`
                 bg-transparent border-b-2 text-3xl md:text-[40px] text-center font-medium outline-none transition-all

@@ -313,15 +313,12 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
       focusNextOrAdvance(blankId);
     } else {
       const newHintCount = state.hintCount + 1;
-      const fullyRevealed = newHintCount >= ca.length;
       setBlankStates((prev) => ({
         ...prev,
         [blankId]: { value: "", status: "wrong", hintCount: newHintCount },
       }));
-      if (fullyRevealed) {
-        // Full answer is now visible; auto-advance after delay
-        setTimeout(() => focusNextOrAdvance(blankId), 900);
-      }
+      // No auto-advance when fully revealed — user must press Enter to proceed
+      // (pressing Enter with hintCount >= ca.length is handled by the early return above)
     }
   }
 
@@ -396,7 +393,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
                 if (e.key === "Enter") { e.preventDefault(); handleEnter(blank.id); }
                 if (e.key === " ") e.preventDefault();
               }}
-              disabled={submitted || resolved}
+              disabled={submitted || bs?.status === "correct"}
               placeholder={(() => {
                 const letter = blank.hint?.[0] ?? ca[0] ?? "_";
                 return letter + "_".repeat(Math.max(1, ca.length - 1));

@@ -235,7 +235,8 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     const currentValue = retryInputRefs.current[wordIdx]?.value ?? "";
     const isCorrect = normalizeWord(currentValue) === wr.refNorm && normalizeWord(currentValue) !== "";
 
-    if (isCorrect) {
+    if (isCorrect && wr.hintCount < wr.refNorm.length) {
+      // Only credit as correct when hints have NOT fully revealed the word
       const newResults = state.wordResults.map((w, i) =>
         i === wordIdx ? { ...w, correct: true, retryValue: currentValue } : w
       );
@@ -247,12 +248,18 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
       if (allCorrect) {
         setTimeout(() => advanceToNext(), 500);
       } else {
-        // Focus first wrong after current, or wrap to beginning
         const wrongAfter = newResults.findIndex((w, i) => !w.correct && i > wordIdx);
         const wrongAny = newResults.findIndex((w, i) => !w.correct);
         const focusIdx = wrongAfter !== -1 ? wrongAfter : wrongAny;
         if (focusIdx !== -1) setTimeout(() => retryInputRefs.current[focusIdx]?.focus(), 50);
       }
+    } else if (isCorrect && wr.hintCount >= wr.refNorm.length) {
+      // Full reveal — user copied the hint; advance without crediting
+      const wrongAfter = state.wordResults.findIndex((w, i) => !w.correct && i > wordIdx);
+      const wrongAny = state.wordResults.findIndex((w, i) => !w.correct && i !== wordIdx);
+      const focusIdx = wrongAfter !== -1 ? wrongAfter : wrongAny;
+      if (focusIdx !== -1) setTimeout(() => retryInputRefs.current[focusIdx]?.focus(), 50);
+      // If no other wrong word, user must use "Xem đáp án" or the sentence stays in feedback
     } else {
       // Wrong: reveal one more hint letter
       const newHintCount = wr.hintCount + 1;
@@ -264,13 +271,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
         ...prev,
         [sentenceId]: { ...prev[sentenceId], wordResults: newResults },
       }));
-      if (fullyRevealed) {
-        // All letters revealed → move to next wrong word after delay
-        const wrongAfter = newResults.findIndex((w, i) => !w.correct && i > wordIdx);
-        const wrongAny = newResults.findIndex((w, i) => !w.correct && i !== wordIdx);
-        const focusIdx = wrongAfter !== -1 ? wrongAfter : wrongAny;
-        if (focusIdx !== -1) setTimeout(() => retryInputRefs.current[focusIdx]?.focus(), 900);
-      } else {
+      if (!fullyRevealed) {
         // Stay on current word: re-focus after re-render (key change clears input)
         setTimeout(() => retryInputRefs.current[wordIdx]?.focus(), 50);
       }
