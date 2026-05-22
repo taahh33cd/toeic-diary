@@ -251,6 +251,7 @@ export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl 
           startTime={startTime}
           dbLevel={2}
           nextLessonUrl={nextLessonUrl}
+          transcriptFull={lesson.transcriptFull}
           onScored={(s) => handleScored(2, s)}
         />
       )}
@@ -261,6 +262,7 @@ export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl 
           audioUrl={lesson.audioUrl}
           sentences={lesson.sentences}
           startTime={startTime}
+          transcriptFull={lesson.transcriptFull}
           onScored={(s) => handleScored(2, s)}
         />
       )}
@@ -274,6 +276,7 @@ export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl 
           correctOption={lesson.correctOption ?? null}
           explanation={lesson.explanation ?? null}
           startTime={startTime}
+          transcriptFull={lesson.transcriptFull}
           onScored={(s) => handleScored(3, s)}
         />
       )}
