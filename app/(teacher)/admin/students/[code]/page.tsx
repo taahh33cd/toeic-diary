@@ -630,7 +630,7 @@ function StudentLinkSection({ code }: { code: string }) {
   const [copied, setCopied] = useState(false);
   const url = typeof window !== "undefined"
     ? `${window.location.origin}/auth/login?auto=${code}`
-    : `https://toeic-dictation-master.vercel.app/auth/login?auto=${code}`;
+    : `https://toeic-dictation-diary.vercel.app/auth/login?auto=${code}`;
 
   async function handleCopy() {
     await navigator.clipboard.writeText(url);
