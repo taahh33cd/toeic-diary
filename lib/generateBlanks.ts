@@ -22,6 +22,17 @@ function scoreWord(word: string, pos: number, total: number): number {
   return score;
 }
 
+// Relaxed scoring used only when normal scoring finds no candidates (e.g. short sentences,
+// sentences with numbers/abbreviations). Accepts any word with ≥1 alphabetic character,
+// prefers clean whole words (high alpha ratio) over abbreviations/mixed tokens.
+function scoreWordRelaxed(word: string): number {
+  const w = word.toLowerCase().replace(/[^a-z]/g, "");
+  if (w.length === 0) return -1; // pure number / symbol — skip
+  // Score = letter count + bonus when word is mostly alphabetic (clean word)
+  const alphaRatio = w.length / word.replace(/\s/g, "").length;
+  return w.length + (alphaRatio >= 0.8 ? 10 : 0);
+}
+
 export interface GeneratedBlank {
   id: string;
   position: number;
@@ -43,10 +54,19 @@ export function generateBlanks(
   const words = content.trim().split(/\s+/);
   const total = words.length;
 
-  const candidates: { pos: number; score: number }[] = [];
+  let candidates: { pos: number; score: number }[] = [];
   for (let i = 0; i < total; i++) {
     const s = scoreWord(words[i], i, total);
     if (s >= 0) candidates.push({ pos: i, score: s });
+  }
+
+  // Fallback for short/numeric sentences: use relaxed scoring so at least the
+  // cleanest alphabetic words (e.g. "At" in "At 4:15 P.M.") get picked.
+  if (candidates.length === 0) {
+    for (let i = 0; i < total; i++) {
+      const s = scoreWordRelaxed(words[i]);
+      if (s >= 0) candidates.push({ pos: i, score: s });
+    }
   }
 
   if (candidates.length === 0) return [];
