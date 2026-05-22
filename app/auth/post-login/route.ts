@@ -12,6 +12,6 @@ export async function GET(request: NextRequest) {
   }
 
   const role = (user.app_metadata?.role as string | undefined) ?? "student";
-  const target = role === "teacher" || role === "admin" ? "/admin" : "/journal";
+  const target = role === "teacher" || role === "admin" ? "/admin" : "/";
   return NextResponse.redirect(new URL(target, request.url));
 }
