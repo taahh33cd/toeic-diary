@@ -235,6 +235,7 @@ export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl 
           explanation={lesson.explanation ?? null}
           startTime={startTime}
           nextLessonUrl={nextLessonUrl}
+          transcriptFull={lesson.transcriptFull}
           onScored={(s) => handleScored(1, s)}
         />
       )}
