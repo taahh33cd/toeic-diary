@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useRef, useEffect, useMemo } from "react";
-import { RotateCcw, Play, Pause, CheckCircle2, XCircle, ArrowRight } from "lucide-react";
+import { RotateCcw, Play, Pause, CheckCircle2, XCircle, ArrowRight, BookOpen } from "lucide-react";
 import { saveProgress } from "@/app/actions/saveProgress";
 import { getTimeSpent } from "@/stores/practiceStore";
 import { Part2Result } from "./Part2Result";
 import { ensureMinBlanks } from "@/lib/generateBlanks";
+import { TranscriptVocabModal, type VocabItem } from "./TranscriptVocabModal";
 
 interface Blank {
   id: string;
@@ -34,6 +35,7 @@ interface Props {
   explanation: string | null;
   startTime: number | null;
   nextLessonUrl?: string | null;
+  transcriptFull: string;
   onScored: (score: number) => void;
 }
 
@@ -61,7 +63,7 @@ function cleanAnswer(answer: string) {
   return answer.replace(/[^a-z0-9']/g, "");
 }
 
-export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, nextLessonUrl, onScored }: Props) {
+export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, nextLessonUrl, transcriptFull, onScored }: Props) {
   const isPart2 = partNumber === 2;
 
   // Ensure every sentence has at least 2 blanks; generate runtime if DB blanks are missing
@@ -100,6 +102,9 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [answerRevealed, setAnswerRevealed] = useState(false);
   const [part2AllDone, setPart2AllDone] = useState(false);
+
+  const [showModal, setShowModal] = useState(false);
+  const [vocabItems, setVocabItems] = useState<VocabItem[] | null>(null);
 
   const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
 
@@ -324,6 +329,20 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
 
   // ── Submit ───────────────────────────────────────────────────────────────────
 
+  async function fetchVocab() {
+    try {
+      const res = await fetch("/api/ai/extract-vocabulary", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ transcript: transcriptFull }),
+      });
+      const data = await res.json();
+      setVocabItems(data.items ?? []);
+    } catch {
+      setVocabItems([]);
+    }
+  }
+
   async function handleSubmit() {
     const allBlanks = processedSentences.flatMap((s) => s.blanks);
     const correctCount = allBlanks.filter((b) => blankStates[b.id]?.status === "correct").length;
@@ -335,9 +354,11 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
 
     setFinalScore(score);
     setSubmitted(true);
+    setShowModal(true);
     onScored(score);
 
-    await saveProgress({
+    // Fire in parallel — don't block UI
+    void saveProgress({
       lessonId,
       level: 1,
       score,
@@ -347,6 +368,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
       ),
       timeSpentSeconds: getTimeSpent(sessionStart),
     });
+    void fetchVocab();
   }
 
   // ── Sentence renderer ────────────────────────────────────────────────────────
@@ -428,41 +450,57 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
     const allBlanks = processedSentences.flatMap((s) => s.blanks);
     const correctCount = allBlanks.filter((b) => blankStates[b.id]?.status === "correct").length;
     return (
-      <div className="flex flex-col items-center gap-5 py-16">
-        <div className={`text-7xl font-display font-bold tabular-nums ${finalScore >= 70 ? "text-emerald-400" : "text-orange-400"}`}>
-          {finalScore}
-        </div>
-        <div className="text-[var(--text-muted)] text-sm">
-          {correctCount}/{allBlanks.length} blank đúng
-        </div>
-        {finalScore >= 70 ? (
-          <div className="flex items-center gap-2 text-emerald-400 font-medium">
-            <CheckCircle2 size={18} />
-            Đạt — Level 1 hoàn thành!
+      <>
+        <div className="flex flex-col items-center gap-5 py-16">
+          <div className={`text-7xl font-display font-bold tabular-nums ${finalScore >= 70 ? "text-emerald-400" : "text-orange-400"}`}>
+            {finalScore}
           </div>
-        ) : (
-          <div className="flex flex-col items-center gap-3">
-            <div className="flex items-center gap-2 text-orange-400 font-medium">
-              <XCircle size={18} />
-              Chưa đạt — cần luyện thêm
+          <div className="text-[var(--text-muted)] text-sm">
+            {correctCount}/{allBlanks.length} blank đúng
+          </div>
+          {finalScore >= 70 ? (
+            <div className="flex items-center gap-2 text-emerald-400 font-medium">
+              <CheckCircle2 size={18} />
+              Đạt — Level 1 hoàn thành!
             </div>
-            <button
-              onClick={() => window.location.reload()}
-              className="btn-secondary px-8 py-2 rounded-xl text-sm"
-            >
-              Thử lại
-            </button>
-          </div>
-        )}
-        {nextLessonUrl && (
+          ) : (
+            <div className="flex flex-col items-center gap-3">
+              <div className="flex items-center gap-2 text-orange-400 font-medium">
+                <XCircle size={18} />
+                Chưa đạt — cần luyện thêm
+              </div>
+              <button
+                onClick={() => window.location.reload()}
+                className="btn-secondary px-8 py-2 rounded-xl text-sm"
+              >
+                Thử lại
+              </button>
+            </div>
+          )}
           <button
-            onClick={() => { window.location.href = nextLessonUrl; }}
-            className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-medium bg-[var(--accent-primary)] text-white hover:opacity-90 transition-opacity mt-2"
+            onClick={() => setShowModal(true)}
+            className="flex items-center gap-2 px-5 py-2 rounded-xl text-sm border border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--practice-accent)] hover:text-[var(--practice-accent)] transition-all"
           >
-            Câu tiếp theo <ArrowRight size={15} />
+            <BookOpen size={14} />
+            Xem transcript &amp; từ vựng
           </button>
+          {nextLessonUrl && (
+            <button
+              onClick={() => { window.location.href = nextLessonUrl; }}
+              className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-medium bg-[var(--accent-primary)] text-white hover:opacity-90 transition-opacity"
+            >
+              Câu tiếp theo <ArrowRight size={15} />
+            </button>
+          )}
+        </div>
+        {showModal && (
+          <TranscriptVocabModal
+            transcript={transcriptFull}
+            vocabItems={vocabItems}
+            onClose={() => setShowModal(false)}
+          />
         )}
-      </div>
+      </>
     );
   }
 

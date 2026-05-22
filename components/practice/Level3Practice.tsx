@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { RotateCcw, Play, Pause, CheckCircle2, XCircle, ArrowRight } from "lucide-react";
+import { RotateCcw, Play, Pause, CheckCircle2, XCircle, ArrowRight, BookOpen } from "lucide-react";
 import { saveProgress } from "@/app/actions/saveProgress";
 import { getTimeSpent } from "@/stores/practiceStore";
 import { Part2Result } from "./Part2Result";
+import { TranscriptVocabModal, type VocabItem } from "./TranscriptVocabModal";
 
 interface Sentence {
   id: string;
@@ -27,6 +28,7 @@ interface Props {
   startTime: number | null;
   dbLevel?: number;
   nextLessonUrl?: string | null;
+  transcriptFull: string;
   onScored: (score: number) => void;
 }
 
@@ -73,7 +75,7 @@ function countCorrectWords(wordResults: WordResult[]): number {
   return wordResults.filter((w) => w.correct).length;
 }
 
-export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, dbLevel = 3, nextLessonUrl, onScored }: Props) {
+export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, dbLevel = 3, nextLessonUrl, transcriptFull, onScored }: Props) {
   const isPart2 = partNumber === 2;
   const [activeIdx, setActiveIdx] = useState(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -100,6 +102,9 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
   const [showSubmit, setShowSubmit] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [finalScore, setFinalScore] = useState<number | null>(null);
+
+  const [showModal, setShowModal] = useState(false);
+  const [vocabItems, setVocabItems] = useState<VocabItem[] | null>(null);
 
   const activeSentence = sentences[activeIdx];
   const replayCount = replayCounts[activeSentence?.id ?? ""] ?? 0;
@@ -287,6 +292,20 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     setSentenceStates((prev) => ({ ...prev, [sentenceId]: { ...prev[sentenceId], phase: "revealed", wordResults: results } }));
   }
 
+  async function fetchVocab() {
+    try {
+      const res = await fetch("/api/ai/extract-vocabulary", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ transcript: transcriptFull }),
+      });
+      const data = await res.json();
+      setVocabItems(data.items ?? []);
+    } catch {
+      setVocabItems([]);
+    }
+  }
+
   async function handleSubmit() {
     let totalWords = 0;
     let correctWords = 0;
@@ -303,8 +322,9 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     }
     setFinalScore(score);
     setSubmitted(true);
+    setShowModal(true);
     onScored(score);
-    await saveProgress({
+    void saveProgress({
       lessonId,
       level: dbLevel,
       score,
@@ -312,6 +332,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
       userAnswer: JSON.stringify(sentences.map((s) => ({ id: s.id, words: sentenceStates[s.id]?.wordResults?.map((w) => w.retryValue) ?? [] }))),
       timeSpentSeconds: getTimeSpent(sessionStart),
     });
+    void fetchVocab();
   }
 
   function renderBlankPlaceholder(sentence: Sentence) {
@@ -380,26 +401,42 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
       if (state?.wordResults?.length > 0) correctWords += countCorrectWords(state.wordResults);
     });
     return (
-      <div className="flex flex-col items-center gap-5 py-16">
-        <div className={`text-7xl font-display font-bold tabular-nums ${finalScore >= 70 ? "text-emerald-400" : "text-orange-400"}`}>{finalScore}</div>
-        <div className="text-[var(--text-muted)] text-sm">{correctWords}/{totalWords} từ đúng</div>
-        {finalScore >= 70 ? (
-          <div className="flex items-center gap-2 text-emerald-400 font-medium"><CheckCircle2 size={18} />Đạt — Level {dbLevel} hoàn thành!</div>
-        ) : (
-          <div className="flex flex-col items-center gap-3">
-            <div className="flex items-center gap-2 text-orange-400 font-medium"><XCircle size={18} />Chưa đạt — cần luyện thêm</div>
-            <button onClick={() => window.location.reload()} className="btn-secondary px-8 py-2 rounded-xl text-sm">Thử lại</button>
-          </div>
-        )}
-        {nextLessonUrl && (
+      <>
+        <div className="flex flex-col items-center gap-5 py-16">
+          <div className={`text-7xl font-display font-bold tabular-nums ${finalScore >= 70 ? "text-emerald-400" : "text-orange-400"}`}>{finalScore}</div>
+          <div className="text-[var(--text-muted)] text-sm">{correctWords}/{totalWords} từ đúng</div>
+          {finalScore >= 70 ? (
+            <div className="flex items-center gap-2 text-emerald-400 font-medium"><CheckCircle2 size={18} />Đạt — Level {dbLevel} hoàn thành!</div>
+          ) : (
+            <div className="flex flex-col items-center gap-3">
+              <div className="flex items-center gap-2 text-orange-400 font-medium"><XCircle size={18} />Chưa đạt — cần luyện thêm</div>
+              <button onClick={() => window.location.reload()} className="btn-secondary px-8 py-2 rounded-xl text-sm">Thử lại</button>
+            </div>
+          )}
           <button
-            onClick={() => { window.location.href = nextLessonUrl; }}
-            className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-medium bg-[var(--accent-primary)] text-white hover:opacity-90 transition-opacity mt-2"
+            onClick={() => setShowModal(true)}
+            className="flex items-center gap-2 px-5 py-2 rounded-xl text-sm border border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--practice-accent)] hover:text-[var(--practice-accent)] transition-all"
           >
-            Câu tiếp theo <ArrowRight size={15} />
+            <BookOpen size={14} />
+            Xem transcript &amp; từ vựng
           </button>
+          {nextLessonUrl && (
+            <button
+              onClick={() => { window.location.href = nextLessonUrl; }}
+              className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-medium bg-[var(--accent-primary)] text-white hover:opacity-90 transition-opacity"
+            >
+              Câu tiếp theo <ArrowRight size={15} />
+            </button>
+          )}
+        </div>
+        {showModal && (
+          <TranscriptVocabModal
+            transcript={transcriptFull}
+            vocabItems={vocabItems}
+            onClose={() => setShowModal(false)}
+          />
         )}
-      </div>
+      </>
     );
   }
 
