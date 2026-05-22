@@ -36,6 +36,7 @@ interface Props {
   startTime: number | null;
   nextLessonUrl?: string | null;
   transcriptFull: string;
+  precomputedVocab?: VocabItem[] | null;
   onScored: (score: number) => void;
 }
 
@@ -63,7 +64,7 @@ function cleanAnswer(answer: string) {
   return answer.replace(/[^a-z0-9']/g, "");
 }
 
-export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, nextLessonUrl, transcriptFull, onScored }: Props) {
+export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, nextLessonUrl, transcriptFull, precomputedVocab, onScored }: Props) {
   const isPart2 = partNumber === 2;
 
   // Ensure every sentence has at least 2 blanks; generate runtime if DB blanks are missing
@@ -104,7 +105,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
   const [part2AllDone, setPart2AllDone] = useState(false);
 
   const [showModal, setShowModal] = useState(false);
-  const [vocabItems, setVocabItems] = useState<VocabItem[] | null>(null);
+  const [vocabItems, setVocabItems] = useState<VocabItem[] | null>(precomputedVocab ?? null);
 
   const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
 
@@ -357,7 +358,6 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
     setShowModal(true);
     onScored(score);
 
-    // Fire in parallel — don't block UI
     void saveProgress({
       lessonId,
       level: 1,
@@ -368,7 +368,8 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
       ),
       timeSpentSeconds: getTimeSpent(sessionStart),
     });
-    void fetchVocab();
+    // Only call API if no precomputed vocab available
+    if (!precomputedVocab) void fetchVocab();
   }
 
   // ── Sentence renderer ────────────────────────────────────────────────────────

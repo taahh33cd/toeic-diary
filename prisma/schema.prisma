@@ -70,6 +70,7 @@ model Lesson {
   orderIndex     Int               @map("order_index")
   correctOption  String?           @map("correct_option") // "A"/"B"/"C" — Part 2 only
   explanation    String?           @db.Text               // AI explanation — Part 2 only
+  keyVocabulary  Json?             @map("key_vocabulary") // pre-generated vocab items
   createdAt      DateTime          @default(now()) @map("created_at")
   sentences      Sentence[]
   blanks         Blank[]
