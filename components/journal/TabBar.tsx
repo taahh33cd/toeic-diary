@@ -24,7 +24,7 @@ const TABS: TabItem[] = [
   { href: "/journal/error-log", Icon: IconJournal,  labelEn: "Journal",    labelVi: "Nhật ký lỗi" },
   { href: "/journal/vocab",     Icon: IconVocab,    labelEn: "Vocabulary", labelVi: "Từ vựng" },
   { href: "/journal/missions",  Icon: IconTasks,    labelEn: "Tasks",      labelVi: "Nhiệm vụ" },
-  { href: "/journal/booking",   Icon: IconSchedule, labelEn: "Schedule",   labelVi: "Lịch học" },
+  { href: "/journal/schedule",  Icon: IconSchedule, labelEn: "Schedule",   labelVi: "Lịch học" },
   { href: "/journal/settings",  Icon: IconSettings, labelEn: "Settings",   labelVi: "Cài đặt" },
 ];
 

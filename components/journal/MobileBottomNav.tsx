@@ -19,8 +19,8 @@ const ITEMS: NavItem[] = [
 
 const MODAL_ITEMS: NavItem[] = [
   { href: "/journal/progress",     Icon: IconProgress, label: "Tiến độ" },
+  { href: "/journal/schedule",     Icon: IconSchedule, label: "Lịch học" },
   { href: "/journal/error-log",    Icon: IconJournal,  label: "Nhật ký lỗi" },
-  { href: "/journal/booking",      Icon: IconSchedule, label: "Lịch học" },
   { href: "/journal/settings",     Icon: IconSettings, label: "Cài đặt" },
 ];
 
