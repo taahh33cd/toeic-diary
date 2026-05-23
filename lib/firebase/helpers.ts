@@ -152,6 +152,16 @@ export async function removeSubmission(
   await remove(ref(firebaseDb, `submissions/${code}/${key}`));
 }
 
+// ─── Progress (path: progress/{code}/{date}) ──────────────────────────────────
+
+export async function saveProgress(
+  code: string,
+  date: string,
+  data: { done: number; total: number; updatedAt: string }
+): Promise<void> {
+  await set(ref(firebaseDb, `progress/${code}/${date}`), data);
+}
+
 // ─── Vocab ───────────────────────────────────────────────────────────────────
 
 export async function saveVocabWord(

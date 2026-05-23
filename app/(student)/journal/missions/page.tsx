@@ -5,7 +5,7 @@ import { useProfile } from "@/hooks/useProfile";
 import { useHomework } from "@/hooks/firebase/useHomework";
 import { useGoal } from "@/hooks/firebase/useGoal";
 import { useSubmissions } from "@/hooks/firebase/useSubmissions";
-import { saveSubmission } from "@/lib/firebase/helpers";
+import { saveSubmission, saveProgress } from "@/lib/firebase/helpers";
 import { awardXp } from "@/lib/xp-client";
 import type { Homework } from "@/lib/firebase/types";
 
@@ -70,11 +70,60 @@ function ProgressRing({
 
 // ─── Homework card ────────────────────────────────────────────────────────────
 
+// ─── G11: Congrats Popup ─────────────────────────────────────────────────────
+
+function CongratsPopup({ onClose }: { onClose: () => void }) {
+  return (
+    <div
+      style={{
+        position: "fixed", inset: 0, zIndex: 200,
+        background: "rgba(44,30,15,.6)",
+        display: "flex", alignItems: "center", justifyContent: "center",
+      }}
+      onClick={onClose}
+    >
+      <div
+        style={{
+          background: "#FBF7F2",
+          width: "calc(100vw - 3rem)",
+          maxWidth: 340,
+          padding: "2rem 1.5rem",
+          textAlign: "center",
+          boxShadow: "0 12px 40px rgba(44,30,15,.2)",
+        }}
+        onClick={e => e.stopPropagation()}
+      >
+        <div style={{ fontSize: "2.8rem", marginBottom: ".5rem" }}>🎉</div>
+        <div style={{ fontSize: "1.3rem", fontWeight: 700, color: "#2C1E0F", marginBottom: ".4rem" }}>
+          Hoàn thành!
+        </div>
+        <p style={{ fontSize: ".85rem", color: "#9A8672", marginBottom: "1.25rem" }}>
+          Bạn đã hoàn thành 100% nhiệm vụ ngày hôm nay. Tuyệt vời! 💪
+        </p>
+        <button
+          onClick={onClose}
+          style={{
+            background: "#C4622D", color: "#fff",
+            border: "none", padding: ".65rem 2rem",
+            fontWeight: 700, fontSize: ".9rem",
+            cursor: "pointer",
+          }}
+        >
+          Đóng
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// ─── Homework card ────────────────────────────────────────────────────────────
+
 function HwCard({
-  hw, isCurrent, studentCode, submitted, submittedUrl,
+  hw, isCurrent, studentCode, submitted, submittedUrl, onDone,
 }: {
   hw: Homework; isCurrent: boolean; studentCode: string;
   submitted: boolean; submittedUrl?: string;
+  onDone?: () => void;
 }) {
   const [open, setOpen] = useState(isCurrent);
   const [submitting, setSubmitting] = useState(false);
@@ -122,8 +171,15 @@ function HwCard({
         url: url.trim() || undefined,
         updatedAt: new Date().toISOString(),
       });
+      // G10: Sync progress node
+      await saveProgress(studentCode, hw.date, {
+        done: totalItems,
+        total: totalItems,
+        updatedAt: new Date().toISOString().slice(0, 10),
+      });
       await awardXp("homework_submit", { hwDate: hw.date });
       setDone(true);
+      onDone?.(); // G11: trigger congrats popup
     } finally {
       setSubmitting(false);
     }
@@ -425,6 +481,7 @@ export default function MissionsPage() {
   const { homework, loading: hwLoading } = useHomework(profile?.studentCode);
   const { goal, loading: goalLoading } = useGoal(profile?.studentCode);
   const { submissions, loading: subLoading } = useSubmissions(profile?.studentCode);
+  const [showCongrats, setShowCongrats] = useState(false); // G11
 
   const loading = profileLoading || hwLoading || goalLoading || subLoading;
 
@@ -491,6 +548,9 @@ export default function MissionsPage() {
         </div>
       )}
 
+      {/* G11: Congrats popup */}
+      {showCongrats && <CongratsPopup onClose={() => setShowCongrats(false)} />}
+
       {/* Homework list */}
       {!profile?.studentCode ? (
         <p style={{ fontSize: ".85rem", color: "#9A8672" }}>Chưa có mã học viên.</p>
@@ -515,6 +575,7 @@ export default function MissionsPage() {
               studentCode={profile.studentCode!}
               submitted={!!submissions[hw.date]?.ticked}
               submittedUrl={submissions[hw.date]?.url}
+              onDone={() => setShowCongrats(true)}
             />
           ))}
         </div>
