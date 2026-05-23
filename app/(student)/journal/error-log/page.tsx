@@ -44,6 +44,26 @@ const PARTS_NUM = [1, 2, 3, 4, 5, 6, 7];
 
 function today() { return new Date().toISOString().slice(0, 10); }
 
+function localToday() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+}
+
+function addDaysStr(dateStr: string, n: number): string {
+  const [y, m, d] = dateStr.split("-").map(Number);
+  const dt = new Date(y, m - 1, d);
+  dt.setDate(dt.getDate() + n);
+  return `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,"0")}-${String(dt.getDate()).padStart(2,"0")}`;
+}
+
+const PARA_SRS = [1, 3, 7, 14, 30];
+
+function isParaDue(e: ParaphraseEntry, td: string): boolean {
+  if (!e.lastReview) return true;
+  const interval = PARA_SRS[Math.min(e.repCount, PARA_SRS.length - 1)];
+  return addDaysStr(e.lastReview, interval) <= td;
+}
+
 function fmtDate(d: string) {
   if (!d) return "";
   return new Date(d + "T00:00:00").toLocaleDateString("vi-VN", {
@@ -746,6 +766,279 @@ function AddParaphraseForm({ studentCode }: { studentCode: string }) {
   );
 }
 
+// ─── E12: Paraphrase Flashcard Modal ──────────────────────────────────────────
+
+function ParaFlashcardModal({
+  entries,
+  studentCode,
+  onClose,
+}: {
+  entries: [string, ParaphraseEntry][];
+  studentCode: string;
+  onClose: () => void;
+}) {
+  const [idx, setIdx] = useState(0);
+  const [flipped, setFlipped] = useState(false);
+  const [knewCount, setKnewCount] = useState(0);
+  const [done, setDone] = useState(false);
+  const [saving, setSaving] = useState(false);
+
+  const total = entries.length;
+  const current = entries[idx];
+
+  async function handleKnew() {
+    if (saving || !current) return;
+    setSaving(true);
+    try {
+      await reviewParaphraseEntry(studentCode, current[0], current[1].repCount);
+      setKnewCount(k => k + 1);
+    } finally {
+      setSaving(false);
+    }
+    next();
+  }
+
+  function handleDidntKnow() {
+    next();
+  }
+
+  function next() {
+    if (idx + 1 >= total) {
+      setDone(true);
+    } else {
+      setIdx(i => i + 1);
+      setFlipped(false);
+    }
+  }
+
+  // Trap scroll behind modal
+  if (done) {
+    return (
+      <div
+        style={{
+          position: "fixed", inset: 0, zIndex: 200,
+          background: "rgba(44,30,15,.65)",
+          display: "flex", alignItems: "center", justifyContent: "center",
+        }}
+        onClick={onClose}
+      >
+        <div
+          style={{
+            background: "var(--bg-elevated,#FBF7F2)",
+            padding: "2rem 2rem 1.5rem",
+            width: "calc(100vw - 3rem)",
+            maxWidth: 400,
+            textAlign: "center",
+            boxShadow: "0 12px 40px rgba(44,30,15,.25)",
+          }}
+          onClick={e => e.stopPropagation()}
+        >
+          <div style={{ fontSize: "2.5rem", marginBottom: ".5rem" }}>🎉</div>
+          <div style={{ fontSize: "1.2rem", fontWeight: 700, color: "#2C1E0F", marginBottom: ".3rem" }}>
+            Xong rồi!
+          </div>
+          <div style={{ fontSize: ".85rem", color: "#9A8672", marginBottom: "1.25rem" }}>
+            Biết <strong style={{ color: "#4A7C59" }}>{knewCount}</strong> / {total} paraphrase
+          </div>
+          <button
+            onClick={onClose}
+            style={{
+              background: "#C4622D", color: "#fff",
+              border: "none", padding: ".6rem 1.6rem",
+              fontWeight: 600, fontSize: ".85rem",
+              cursor: "pointer",
+            }}
+          >
+            Đóng
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (!current) return null;
+  const [, entry] = current;
+
+  return (
+    <div
+      style={{
+        position: "fixed", inset: 0, zIndex: 200,
+        background: "rgba(44,30,15,.65)",
+        display: "flex", alignItems: "center", justifyContent: "center",
+      }}
+      onClick={onClose}
+    >
+      <div
+        style={{
+          background: "var(--bg-elevated,#FBF7F2)",
+          width: "calc(100vw - 2rem)",
+          maxWidth: 440,
+          boxShadow: "0 12px 40px rgba(44,30,15,.25)",
+          display: "flex",
+          flexDirection: "column",
+        }}
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: ".65rem 1rem",
+            borderBottom: "1px solid var(--border,#DDD0BC)",
+          }}
+        >
+          <span style={{ fontSize: ".68rem", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", color: "#9A8672" }}>
+            Paraphrase Flashcard
+          </span>
+          <span style={{ fontSize: ".75rem", color: "#9A8672", fontFamily: "'JetBrains Mono', monospace" }}>
+            {idx + 1}/{total}
+          </span>
+          <button
+            onClick={onClose}
+            style={{
+              background: "none", border: "1px solid var(--border,#DDD0BC)",
+              color: "#9A8672", width: 24, height: 24,
+              display: "flex", alignItems: "center", justifyContent: "center",
+              fontSize: ".9rem", cursor: "pointer", lineHeight: 1,
+            }}
+            aria-label="Đóng"
+          >×</button>
+        </div>
+
+        {/* Progress bar */}
+        <div style={{ height: 3, background: "rgba(0,0,0,0.06)" }}>
+          <div style={{
+            height: "100%",
+            width: `${((idx) / total) * 100}%`,
+            background: "#C4622D",
+            transition: "width .3s ease",
+          }} />
+        </div>
+
+        {/* Card area */}
+        <div style={{ padding: "1.5rem 1.25rem", minHeight: 180 }}>
+          {/* Part tag */}
+          <div style={{ marginBottom: ".75rem" }}>
+            <span style={{
+              fontSize: ".6rem", fontWeight: 700, letterSpacing: ".1em",
+              textTransform: "uppercase",
+              padding: ".15rem .5rem",
+              background: "rgba(196,98,45,.1)", color: "#C4622D",
+            }}>
+              Part {entry.part}
+            </span>
+          </div>
+
+          {/* Front: source */}
+          <div
+            style={{
+              fontSize: ".95rem",
+              fontWeight: 600,
+              color: "#2C1E0F",
+              lineHeight: 1.5,
+              marginBottom: "1rem",
+            }}
+          >
+            {entry.source}
+          </div>
+
+          {/* Back: target (revealed on click or button) */}
+          {flipped ? (
+            <div
+              style={{
+                background: "rgba(196,98,45,.07)",
+                border: "1px solid rgba(196,98,45,.2)",
+                padding: ".75rem 1rem",
+                borderRadius: 2,
+                fontSize: ".9rem",
+                color: "#C4622D",
+                fontWeight: 600,
+                lineHeight: 1.5,
+              }}
+            >
+              → {entry.target}
+            </div>
+          ) : (
+            <button
+              onClick={() => setFlipped(true)}
+              style={{
+                background: "var(--bg-primary,#F5EFE6)",
+                border: "1px solid var(--border,#DDD0BC)",
+                color: "#9A8672",
+                padding: ".6rem 1.1rem",
+                fontSize: ".8rem",
+                cursor: "pointer",
+                width: "100%",
+                fontWeight: 500,
+              }}
+            >
+              Lật thẻ để xem đáp án
+            </button>
+          )}
+        </div>
+
+        {/* Action buttons */}
+        <div
+          style={{
+            display: "flex",
+            gap: ".75rem",
+            padding: ".85rem 1.25rem 1.1rem",
+            borderTop: "1px solid var(--border,#DDD0BC)",
+          }}
+        >
+          {flipped ? (
+            <>
+              <button
+                onClick={handleDidntKnow}
+                style={{
+                  flex: 1, padding: ".65rem",
+                  border: "1px solid rgba(176,58,42,.3)",
+                  background: "rgba(176,58,42,.07)",
+                  color: "#B03A2A",
+                  fontWeight: 600, fontSize: ".85rem",
+                  cursor: "pointer",
+                }}
+              >
+                ✗ Không biết
+              </button>
+              <button
+                onClick={handleKnew}
+                disabled={saving}
+                style={{
+                  flex: 1, padding: ".65rem",
+                  border: "none",
+                  background: saving ? "#9A8672" : "#4A7C59",
+                  color: "#fff",
+                  fontWeight: 600, fontSize: ".85rem",
+                  cursor: saving ? "not-allowed" : "pointer",
+                }}
+              >
+                ✓ Biết
+              </button>
+            </>
+          ) : (
+            <button
+              onClick={handleDidntKnow}
+              style={{
+                flex: 1, padding: ".65rem",
+                border: "1px solid var(--border,#DDD0BC)",
+                background: "none",
+                color: "#9A8672",
+                fontWeight: 500, fontSize: ".85rem",
+                cursor: "pointer",
+              }}
+            >
+              Bỏ qua
+            </button>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ParaphraseCard({ entryKey, entry, studentCode }: { entryKey: string; entry: ParaphraseEntry; studentCode: string }) {
   const [revealed, setRevealed] = useState(false);
 
@@ -797,6 +1090,10 @@ function ParaphraseCard({ entryKey, entry, studentCode }: { entryKey: string; en
 
 function ParaphraseTab({ studentCode, entries }: { studentCode: string; entries: [string, ParaphraseEntry][] }) {
   const [filterPart, setFilterPart] = useState(0);
+  const [flashcardOpen, setFlashcardOpen] = useState(false);
+
+  const td = localToday();
+  const dueEntries = entries.filter(([, e]) => isParaDue(e, td));
 
   const sorted = useMemo(() => (
     [...entries]
@@ -816,23 +1113,55 @@ function ParaphraseTab({ studentCode, entries }: { studentCode: string; entries:
   return (
     <div className="space-y-4">
       {/* Stats strip */}
-      <div className="grid grid-cols-2" style={{ border: "1px solid var(--border)" }}>
+      <div className="grid grid-cols-3" style={{ border: "1px solid var(--border)" }}>
         {[
           { label: "Tổng paraphrase", value: entries.length, color: "var(--accent-primary)" },
+          { label: "Đến hạn ôn", value: dueEntries.length, color: dueEntries.length > 0 ? "#B03A2A" : "var(--text-primary)" },
           { label: "Chưa ôn lần nào", value: entries.filter(([, e]) => !e.lastReview).length, color: "var(--text-primary)" },
         ].map((s, i) => (
           <div
             key={s.label}
             className="py-3 text-center"
-            style={{ background: "var(--bg-elevated)", borderRight: i === 0 ? "1px solid var(--border)" : undefined }}
+            style={{ background: "var(--bg-elevated)", borderRight: i < 2 ? "1px solid var(--border)" : undefined }}
           >
-            <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: s.color, lineHeight: 1 }}>
+            <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: s.color, lineHeight: 1 }}>
               {s.value}
             </p>
-            <span className="journal-lbl" style={{ marginBottom: 0 }}>{s.label}</span>
+            <span className="journal-lbl" style={{ marginBottom: 0, fontSize: ".6rem" }}>{s.label}</span>
           </div>
         ))}
       </div>
+
+      {/* E12: Flashcard button */}
+      {dueEntries.length > 0 && (
+        <button
+          onClick={() => setFlashcardOpen(true)}
+          style={{
+            width: "100%",
+            padding: ".7rem",
+            background: "#C4622D",
+            border: "none",
+            color: "#fff",
+            fontWeight: 600,
+            fontSize: ".85rem",
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: ".5rem",
+          }}
+        >
+          🃏 Luyện Flashcard — {dueEntries.length} thẻ đến hạn
+        </button>
+      )}
+
+      {flashcardOpen && (
+        <ParaFlashcardModal
+          entries={dueEntries}
+          studentCode={studentCode}
+          onClose={() => setFlashcardOpen(false)}
+        />
+      )}
 
       <AddParaphraseForm studentCode={studentCode} />
 
@@ -898,6 +1227,11 @@ export default function ErrorLogPage() {
     [student?.paraphraseLog]
   );
 
+  const dueParaCount = useMemo(() => {
+    const td = localToday();
+    return paraphraseEntries.filter(([, e]) => isParaDue(e, td)).length;
+  }, [paraphraseEntries]);
+
   if (loading) {
     return (
       <div className="space-y-3 animate-pulse">
@@ -917,9 +1251,9 @@ export default function ErrorLogPage() {
   }
 
   const tabs = [
-    { key: "log" as const, label: `Nhập log${sessionEntries.length > 0 ? ` (${sessionEntries.length})` : ""}` },
-    { key: "dashboard" as const, label: "Dashboard" },
-    { key: "paraphrase" as const, label: `Paraphrase${paraphraseEntries.length > 0 ? ` (${paraphraseEntries.length})` : ""}` },
+    { key: "log" as const, label: `Nhập log${sessionEntries.length > 0 ? ` (${sessionEntries.length})` : ""}`, badge: 0 },
+    { key: "dashboard" as const, label: "Dashboard", badge: 0 },
+    { key: "paraphrase" as const, label: `Paraphrase${paraphraseEntries.length > 0 ? ` (${paraphraseEntries.length})` : ""}`, badge: dueParaCount },
   ];
 
   return (
@@ -942,9 +1276,32 @@ export default function ErrorLogPage() {
               marginBottom: -1,
               transition: "color 0.15s, border-color 0.15s",
               whiteSpace: "nowrap",
+              display: "flex",
+              alignItems: "center",
+              gap: ".35rem",
             }}
           >
             {t.label}
+            {t.badge > 0 && (
+              <span
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  minWidth: 16,
+                  height: 16,
+                  borderRadius: 99,
+                  background: "#B03A2A",
+                  color: "#fff",
+                  fontSize: ".55rem",
+                  fontWeight: 700,
+                  lineHeight: 1,
+                  padding: "0 .3rem",
+                }}
+              >
+                {t.badge}
+              </span>
+            )}
           </button>
         ))}
       </div>
