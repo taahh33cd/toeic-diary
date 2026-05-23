@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { LanguageToggle } from "@/components/journal/LanguageToggle";
 import { useLocale } from "@/hooks/useLocale";
 import {
-  IconHome, IconScore, IconJournal, IconVocab,
+  IconHome, IconProgress, IconScore, IconJournal, IconVocab,
   IconTasks, IconSchedule, IconSettings,
 } from "@/components/journal/Icons";
 
@@ -19,6 +19,7 @@ type TabItem = {
 
 const TABS: TabItem[] = [
   { href: "/journal",           Icon: IconHome,     labelEn: "Home",       labelVi: "Tổng quan",   exact: true },
+  { href: "/journal/progress",  Icon: IconProgress, labelEn: "Progress",   labelVi: "Tiến độ" },
   { href: "/journal/scores",    Icon: IconScore,    labelEn: "Score",      labelVi: "Điểm số" },
   { href: "/journal/error-log", Icon: IconJournal,  labelEn: "Journal",    labelVi: "Nhật ký lỗi" },
   { href: "/journal/vocab",     Icon: IconVocab,    labelEn: "Vocabulary", labelVi: "Từ vựng" },

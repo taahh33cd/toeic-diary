@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import {
-  IconHome, IconScore, IconTasks, IconVocab,
+  IconHome, IconProgress, IconScore, IconTasks, IconVocab,
   IconJournal, IconSchedule, IconSettings,
 } from "@/components/journal/Icons";
 
@@ -18,6 +18,7 @@ const ITEMS: NavItem[] = [
 ];
 
 const MODAL_ITEMS: NavItem[] = [
+  { href: "/journal/progress",     Icon: IconProgress, label: "Tiến độ" },
   { href: "/journal/error-log",    Icon: IconJournal,  label: "Nhật ký lỗi" },
   { href: "/journal/booking",      Icon: IconSchedule, label: "Lịch học" },
   { href: "/journal/settings",     Icon: IconSettings, label: "Cài đặt" },
