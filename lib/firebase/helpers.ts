@@ -28,6 +28,19 @@ import type {
 
 // ─── Students ────────────────────────────────────────────────────────────────
 
+export async function createStudent(
+  code: string,
+  data: { name: string; currentWeek: number; courseType?: Student["courseType"]; pricePerSession?: number }
+): Promise<void> {
+  await set(ref(firebaseDb, `students/${code}`), {
+    id: code,
+    name: data.name,
+    currentWeek: data.currentWeek,
+    ...(data.courseType ? { courseType: data.courseType } : {}),
+    ...(data.pricePerSession != null ? { pricePerSession: data.pricePerSession } : {}),
+  });
+}
+
 export async function updateStudent(
   code: string,
   partial: Partial<Student>
