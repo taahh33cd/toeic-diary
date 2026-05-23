@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import {
   IconHome, IconProgress, IconScore, IconTasks, IconVocab,
-  IconJournal, IconSchedule, IconSettings,
+  IconJournal, IconSchedule, IconFee, IconSettings,
 } from "@/components/journal/Icons";
 
 type NavItem = { href: string; Icon: (p: { size?: number }) => React.ReactElement; label: string; exact?: boolean };
@@ -20,8 +20,8 @@ const ITEMS: NavItem[] = [
 const MODAL_ITEMS: NavItem[] = [
   { href: "/journal/progress",     Icon: IconProgress, label: "Tiến độ" },
   { href: "/journal/schedule",     Icon: IconSchedule, label: "Lịch học" },
+  { href: "/journal/fee",          Icon: IconFee,      label: "Học phí" },
   { href: "/journal/error-log",    Icon: IconJournal,  label: "Nhật ký lỗi" },
-  { href: "/journal/settings",     Icon: IconSettings, label: "Cài đặt" },
 ];
 
 export function MobileBottomNav() {

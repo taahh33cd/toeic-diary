@@ -6,7 +6,7 @@ import { LanguageToggle } from "@/components/journal/LanguageToggle";
 import { useLocale } from "@/hooks/useLocale";
 import {
   IconHome, IconProgress, IconScore, IconJournal, IconVocab,
-  IconTasks, IconSchedule, IconSettings,
+  IconTasks, IconSchedule, IconFee, IconSettings,
 } from "@/components/journal/Icons";
 
 type TabItem = {
@@ -25,6 +25,7 @@ const TABS: TabItem[] = [
   { href: "/journal/vocab",     Icon: IconVocab,    labelEn: "Vocabulary", labelVi: "Từ vựng" },
   { href: "/journal/missions",  Icon: IconTasks,    labelEn: "Tasks",      labelVi: "Nhiệm vụ" },
   { href: "/journal/schedule",  Icon: IconSchedule, labelEn: "Schedule",   labelVi: "Lịch học" },
+  { href: "/journal/fee",       Icon: IconFee,      labelEn: "Fees",       labelVi: "Học phí" },
   { href: "/journal/settings",  Icon: IconSettings, labelEn: "Settings",   labelVi: "Cài đặt" },
 ];
 
