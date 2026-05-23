@@ -35,6 +35,26 @@ function isWordDue(word: VocabWord, todayStr: string): boolean {
   return getNextDue(word.lastReview, word.repCount ?? 0) <= today;
 }
 
+// ─── TTS / Audio helper ───────────────────────────────────────────────────────
+
+function playWord(word: string, audioUrl?: string) {
+  if (audioUrl) {
+    const audio = new Audio(audioUrl);
+    audio.play().catch(() => playWebSpeech(word));
+    return;
+  }
+  playWebSpeech(word);
+}
+
+function playWebSpeech(word: string) {
+  if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+  const utt = new SpeechSynthesisUtterance(word);
+  utt.lang = "en-US";
+  utt.rate = 0.85;
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(utt);
+}
+
 // ─── Quick Add Bar ────────────────────────────────────────────────────────────
 
 function QuickAddBar({ studentCode }: { studentCode: string }) {
@@ -43,6 +63,7 @@ function QuickAddBar({ studentCode }: { studentCode: string }) {
   const [word, setWord] = useState("");
   const [vi, setVi] = useState("");
   const [saving, setSaving] = useState(false);
+  const [looking, setLooking] = useState(false);
   const [showAdvanced, setShowAdvanced] = useState(false);
   // Advanced fields
   const [ipa, setIpa] = useState("");
@@ -50,9 +71,65 @@ function QuickAddBar({ studentCode }: { studentCode: string }) {
   const [def, setDef] = useState("");
   const [example, setExample] = useState("");
   const [part, setPart] = useState<number | "">(5);
+  const [audioUrl, setAudioUrl] = useState("");
 
   function reset() {
-    setWord(""); setVi(""); setIpa(""); setPos(""); setDef(""); setExample(""); setPart(5);
+    setWord(""); setVi(""); setIpa(""); setPos(""); setDef(""); setExample(""); setPart(5); setAudioUrl("");
+  }
+
+  // F1-F2: Auto-lookup via Free Dictionary API + MyMemory
+  async function handleLookup() {
+    const w = word.trim();
+    if (!w || looking) return;
+    setLooking(true);
+    setShowAdvanced(true);
+    try {
+      const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(w)}`);
+      if (res.ok) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const data: any[] = await res.json();
+        const entry = data[0] ?? {};
+        const meanings = entry.meanings ?? [];
+        const m0 = meanings[0] ?? {};
+        const def0 = m0.definitions?.[0] ?? {};
+        const rawPos: string = m0.partOfSpeech ?? "";
+        // Map pos to our allowed values
+        const posMap: Record<string, "n" | "v" | "adj" | "adv"> = {
+          noun: "n", verb: "v", adjective: "adj", adverb: "adv",
+        };
+
+        setIpa(entry.phonetic ?? entry.phonetics?.find((p: { text?: string }) => p.text)?.text ?? "");
+        setPos(posMap[rawPos] ?? "");
+        setDef(def0.definition ?? "");
+        setExample(def0.example ?? "");
+        const url: string = entry.phonetics?.find((p: { audio?: string }) => p.audio)?.audio ?? "";
+        setAudioUrl(url);
+
+        // F2: Vietnamese translation via MyMemory
+        const defText: string = def0.definition ?? "";
+        if (defText) {
+          try {
+            const viRes = await fetch(
+              `https://api.mymemory.translated.net/get?q=${encodeURIComponent(defText)}&langpair=en|vi`
+            );
+            if (viRes.ok) {
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              const viData: any = await viRes.json();
+              const translated: string = viData?.responseData?.translatedText ?? "";
+              if (translated && translated.toLowerCase() !== defText.toLowerCase()) {
+                setVi(translated);
+              }
+            }
+          } catch {
+            // ignore translation errors
+          }
+        }
+      }
+    } catch {
+      // silently fail — user can still fill manually
+    } finally {
+      setLooking(false);
+    }
   }
 
   async function handleSave(e: React.FormEvent) {
@@ -85,13 +162,15 @@ function QuickAddBar({ studentCode }: { studentCode: string }) {
       style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)" }}
     >
       <form onSubmit={handleSave}>
-        <div className="flex gap-3 items-center">
-          <div className="flex-1 flex gap-3">
+        <div className="flex gap-2 items-center flex-wrap">
+          {/* Word input + lookup button */}
+          <div className="flex gap-2 flex-1 min-w-0" style={{ minWidth: 220 }}>
             <input
               type="text"
               placeholder={t("Nhập từ mới…", "New word…")}
               value={word}
               onChange={(e) => setWord(e.target.value)}
+              onKeyDown={(e) => { if (e.key === "Enter" && word.trim()) { e.preventDefault(); handleLookup(); } }}
               className="flex-1 rounded-lg px-4 py-2 text-sm outline-none focus:ring-2"
               style={{
                 background: "var(--bg-primary)",
@@ -101,24 +180,60 @@ function QuickAddBar({ studentCode }: { studentCode: string }) {
                 "--tw-ring-color": "var(--orange)",
               }}
             />
-            <input
-              type="text"
-              placeholder={t("Nghĩa của từ…", "Meaning…")}
-              value={vi}
-              onChange={(e) => setVi(e.target.value)}
-              className="flex-1 rounded-lg px-4 py-2 text-sm outline-none focus:ring-2"
+            {/* F3: play audio after lookup */}
+            {(word.trim() || audioUrl) && (
+              <button
+                type="button"
+                onClick={() => playWord(word.trim(), audioUrl || undefined)}
+                title="Phát âm"
+                className="rounded-lg px-2 py-2 text-sm transition-colors"
+                style={{
+                  background: "var(--bg-primary)",
+                  border: "1px solid var(--border)",
+                  color: "var(--text-muted)",
+                  cursor: "pointer",
+                  flexShrink: 0,
+                }}
+              >
+                🔊
+              </button>
+            )}
+            {/* F1-F2: auto-lookup button */}
+            <button
+              type="button"
+              onClick={handleLookup}
+              disabled={looking || !word.trim()}
+              className="rounded-lg px-3 py-2 text-xs font-semibold whitespace-nowrap transition-opacity disabled:opacity-40"
               style={{
-                background: "var(--bg-primary)",
-                border: "1px solid var(--border)",
-                color: "var(--text-primary)",
+                background: "rgba(196,98,45,0.1)",
+                border: "1px solid rgba(196,98,45,0.25)",
+                color: "#C4622D",
+                cursor: "pointer",
+                flexShrink: 0,
               }}
-            />
+            >
+              {looking ? "…" : t("Tra nghĩa", "Look up")}
+            </button>
           </div>
+          {/* VI meaning input */}
+          <input
+            type="text"
+            placeholder={t("Nghĩa tiếng Việt…", "Meaning (VI)…")}
+            value={vi}
+            onChange={(e) => setVi(e.target.value)}
+            className="rounded-lg px-4 py-2 text-sm outline-none"
+            style={{
+              flex: "1 1 160px",
+              background: "var(--bg-primary)",
+              border: "1px solid var(--border)",
+              color: "var(--text-primary)",
+            }}
+          />
           <button
             type="submit"
             disabled={saving || !word.trim()}
             className="px-5 py-2 rounded-lg text-sm font-bold text-white transition-opacity hover:opacity-90 disabled:opacity-50 flex items-center gap-1 whitespace-nowrap"
-            style={{ background: "var(--orange)" }}
+            style={{ background: "var(--orange)", flexShrink: 0 }}
           >
             <span>+</span> {t("Thêm từ", "Add Word")}
           </button>
@@ -130,6 +245,7 @@ function QuickAddBar({ studentCode }: { studentCode: string }) {
               color: showAdvanced ? "var(--orange)" : "var(--text-muted)",
               border: "1px solid var(--border)",
               background: showAdvanced ? "rgba(196,98,45,0.08)" : "var(--bg-primary)",
+              flexShrink: 0,
             }}
           >
             {showAdvanced ? t("Thu lại", "Collapse") : t("Nâng cao", "Advanced")}
@@ -211,14 +327,18 @@ function QuickAddBar({ studentCode }: { studentCode: string }) {
 
 // ─── Flashcard Modal ──────────────────────────────────────────────────────────
 
+type FlashcardMode = "word_to_meaning" | "meaning_to_word";
+
 function FlashcardModal({
   words,
   studentCode,
   onClose,
+  mode = "word_to_meaning",
 }: {
   words: VocabWord[];
   studentCode: string;
   onClose: () => void;
+  mode?: FlashcardMode;
 }) {
   const { t } = useLocale();
   const [idx, setIdx] = useState(0);
@@ -302,28 +422,60 @@ function FlashcardModal({
           </div>
         ) : (
           <div className="p-6 space-y-4">
+            {/* Card front */}
             <div
               className="text-center p-6 rounded-lg"
               style={{ background: "var(--bg-primary)", border: "1px solid var(--border)", minHeight: 120 }}
             >
-              <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.75rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: 4 }}>
-                {card.word}
-              </p>
-              {card.ipa && (
-                <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.85rem", color: "var(--text-muted)" }}>
-                  /{card.ipa}/
-                </p>
-              )}
-              {card.pos && (
-                <span className="text-xs font-semibold" style={{ color: POS_COLOR[card.pos] ?? "var(--text-muted)" }}>
-                  {card.pos}
-                </span>
+              {mode === "meaning_to_word" ? (
+                /* F16: front = meaning/definition */
+                <>
+                  {card.part && (
+                    <span className="text-xs font-bold uppercase tracking-wider" style={{ color: "var(--text-muted)" }}>
+                      Part {card.part}
+                    </span>
+                  )}
+                  {card.vi && (
+                    <p style={{ fontSize: "1.1rem", fontWeight: 600, color: "var(--text-primary)", marginTop: 8 }}>
+                      {card.vi}
+                    </p>
+                  )}
+                  {card.def && (
+                    <p className="text-xs mt-2 italic" style={{ color: "var(--text-muted)" }}>
+                      {card.def}
+                    </p>
+                  )}
+                </>
+              ) : (
+                /* Default: front = word */
+                <>
+                  <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.75rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: 4 }}>
+                    {card.word}
+                  </p>
+                  {card.ipa && (
+                    <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.85rem", color: "var(--text-muted)" }}>
+                      /{card.ipa}/
+                    </p>
+                  )}
+                  {card.pos && (
+                    <span className="text-xs font-semibold" style={{ color: POS_COLOR[card.pos] ?? "var(--text-muted)" }}>
+                      {card.pos}
+                    </span>
+                  )}
+                  {/* F7: play audio in flashcard */}
+                  <button
+                    onClick={() => playWord(card.word, card.audioUrl)}
+                    style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-muted)", fontSize: "1.1rem", marginTop: 6, display: "block", marginInline: "auto" }}
+                    title="Phát âm"
+                  >🔊</button>
+                </>
               )}
             </div>
 
+            {/* Card reveal / actions */}
             {!revealed ? (
               <button onClick={() => setRevealed(true)} className="w-full journal-btn-outline" style={{ padding: "10px 16px" }}>
-                {t("Xem nghĩa", "Reveal")}
+                {mode === "meaning_to_word" ? t("Xem từ", "Reveal word") : t("Xem nghĩa", "Reveal meaning")}
               </button>
             ) : (
               <div className="space-y-3">
@@ -331,9 +483,22 @@ function FlashcardModal({
                   className="p-4 text-center rounded-lg"
                   style={{ background: "rgba(196,98,45,0.05)", border: "1px solid rgba(196,98,45,0.2)" }}
                 >
-                  {card.vi && <p className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>{card.vi}</p>}
-                  {card.def && <p className="text-xs mt-1" style={{ color: "var(--text-secondary)" }}>{card.def}</p>}
-                  {card.example && <p className="text-xs mt-1 italic" style={{ color: "var(--text-muted)" }}>"{card.example}"</p>}
+                  {mode === "meaning_to_word" ? (
+                    /* F16: back = word + IPA */
+                    <>
+                      <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "var(--text-primary)" }}>
+                        {card.word}
+                      </p>
+                      {card.ipa && <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.8rem", color: "var(--text-muted)" }}>/{card.ipa}/</p>}
+                    </>
+                  ) : (
+                    /* Default: back = meaning */
+                    <>
+                      {card.vi && <p className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>{card.vi}</p>}
+                      {card.def && <p className="text-xs mt-1" style={{ color: "var(--text-secondary)" }}>{card.def}</p>}
+                      {card.example && <p className="text-xs mt-1 italic" style={{ color: "var(--text-muted)" }}>"{card.example}"</p>}
+                    </>
+                  )}
                 </div>
                 <div className="flex gap-2">
                   <button onClick={handleSkip} className="flex-1 journal-btn-outline" style={{ padding: "10px 16px" }}>
@@ -501,7 +666,23 @@ function WordCard({
           <p style={{ color: "var(--text-muted)" }}>
             ×{repCount}/{MASTERY_THRESHOLD} · {word.addedDate}{lastReview ? ` · ${t("Ôn:", "Reviewed:")} ${lastReview}` : ""}
           </p>
-          <div className="flex gap-2 pt-1">
+          <div className="flex gap-2 pt-1 flex-wrap">
+            {/* F7: play pronunciation */}
+            <button
+              onClick={(e) => { e.stopPropagation(); playWord(word.word, word.audioUrl); }}
+              title="Phát âm"
+              className="text-[11px]"
+              style={{
+                background: "none",
+                border: "1px solid var(--border)",
+                cursor: "pointer",
+                color: "var(--text-muted)",
+                padding: "4px 8px",
+                borderRadius: 6,
+              }}
+            >
+              🔊
+            </button>
             {!due && !isMastered && (
               <button
                 onClick={handleReview}
@@ -691,7 +872,7 @@ export default function VocabPage() {
   const [search, setSearch] = useState("");
   const [filterPart, setFilterPart] = useState<number | null>(null);
   const [filterDue, setFilterDue] = useState(false);
-  const [showFlashcard, setShowFlashcard] = useState(false);
+  const [flashcardMode, setFlashcardMode] = useState<{ mode: FlashcardMode; words: VocabWord[] } | null>(null);
 
   const todayStr = new Date().toISOString().slice(0, 10);
   const loading = profileLoading || vocabLoading;
@@ -762,46 +943,122 @@ export default function VocabPage() {
       {/* ── Main content ── */}
       <div className="flex-1 min-w-0 space-y-5">
 
-        {/* Study Status Banner */}
-        {dueWords.length > 0 ? (
+        {/* F11: SRS Status Banner */}
+        {dueWords.length > 0 && (
           <section
-            className="rounded-xl p-6 flex justify-between items-center"
+            className="rounded-xl p-4 flex items-center justify-between gap-3"
             style={{ background: "var(--orange)" }}
           >
-            <div>
-              <h2 className="text-2xl font-bold text-white mb-1.5">
-                {t("Trạng thái học", "Study Status")}
-              </h2>
-              <p className="flex items-center gap-2 text-sm text-white" style={{ opacity: 0.95 }}>
-                <span className="px-1.5 py-0.5 rounded text-base" style={{ background: "rgba(255,255,255,0.2)" }}>⚠️</span>
+            <div className="flex items-center gap-2">
+              <span className="text-lg">⚠️</span>
+              <p className="text-sm font-bold text-white">
                 {t(`${dueWords.length} từ đến hạn ôn tập hôm nay!`, `${dueWords.length} words due for review today!`)}
               </p>
             </div>
             <button
-              onClick={() => setShowFlashcard(true)}
-              className="px-7 py-3 rounded-xl font-bold text-sm transition-colors hover:bg-orange-50"
-              style={{ background: "white", color: "var(--orange)" }}
+              onClick={() => setFlashcardMode({ mode: "word_to_meaning", words: dueWords })}
+              className="px-4 py-2 rounded-lg font-bold text-sm whitespace-nowrap transition-colors hover:bg-orange-50"
+              style={{ background: "white", color: "var(--orange)", flexShrink: 0 }}
             >
-              {t("Luyện Flashcard", "Flashcard Practice")}
+              {t("Ôn ngay", "Review now")}
             </button>
           </section>
-        ) : words.length > 0 ? (
-          <section
-            className="rounded-xl p-4 flex items-center justify-between"
-            style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)" }}
-          >
-            <p className="text-sm font-medium" style={{ color: "var(--text-secondary)" }}>
-              {t("Không có từ nào đến hạn hôm nay 🎉", "No words due today 🎉")}
+        )}
+
+        {/* F12: 4-mode Flashcard Picker */}
+        {words.length > 0 && (
+          <section style={{ border: "1px solid var(--border)", background: "var(--bg-elevated)" }} className="rounded-xl p-4">
+            <p className="text-xs font-bold uppercase tracking-wider mb-3" style={{ color: "var(--text-muted)" }}>
+              {t("Chế độ luyện Flashcard", "Flashcard Modes")}
             </p>
-            <button
-              onClick={() => setShowFlashcard(true)}
-              className="journal-btn-outline text-sm"
-              style={{ padding: "6px 14px" }}
-            >
-              {t(`Flashcard tất cả (${words.length})`, `All flashcards (${words.length})`)}
-            </button>
+            <div className="grid grid-cols-2 gap-2">
+              {/* Mode 1: SRS due */}
+              <button
+                onClick={() => setFlashcardMode({ mode: "word_to_meaning", words: dueWords })}
+                disabled={dueWords.length === 0}
+                style={{
+                  padding: ".75rem",
+                  border: `1px solid ${dueWords.length > 0 ? "rgba(196,98,45,.35)" : "var(--border)"}`,
+                  background: dueWords.length > 0 ? "rgba(196,98,45,.06)" : "var(--bg-primary)",
+                  borderRadius: 8,
+                  textAlign: "left",
+                  cursor: dueWords.length > 0 ? "pointer" : "not-allowed",
+                  opacity: dueWords.length > 0 ? 1 : 0.5,
+                }}
+              >
+                <div style={{ fontSize: ".8rem", fontWeight: 700, color: "#C4622D", marginBottom: ".2rem" }}>
+                  ① {t("Đến hạn ôn hôm nay", "Due today")}
+                </div>
+                <div style={{ fontSize: ".68rem", color: "#9A8672" }}>
+                  {dueWords.length > 0 ? `${dueWords.length} ${t("từ", "words")}` : t("Không có từ đến hạn", "No due words")}
+                </div>
+              </button>
+
+              {/* Mode 2: All words */}
+              <button
+                onClick={() => setFlashcardMode({ mode: "word_to_meaning", words })}
+                style={{
+                  padding: ".75rem",
+                  border: "1px solid var(--border)",
+                  background: "var(--bg-primary)",
+                  borderRadius: 8,
+                  textAlign: "left",
+                  cursor: "pointer",
+                }}
+              >
+                <div style={{ fontSize: ".8rem", fontWeight: 700, color: "#2C1E0F", marginBottom: ".2rem" }}>
+                  ② {t("Tất cả từ vựng", "All words")}
+                </div>
+                <div style={{ fontSize: ".68rem", color: "#9A8672" }}>
+                  {words.length} {t("từ", "words")} · từ → nghĩa
+                </div>
+              </button>
+
+              {/* Mode 3: Listen-write (locked until TTS Cloud Function) */}
+              <button
+                disabled
+                style={{
+                  padding: ".75rem",
+                  border: "1px dashed var(--border)",
+                  background: "var(--bg-primary)",
+                  borderRadius: 8,
+                  textAlign: "left",
+                  cursor: "not-allowed",
+                  opacity: 0.45,
+                }}
+              >
+                <div style={{ fontSize: ".8rem", fontWeight: 700, color: "#2C1E0F", marginBottom: ".2rem" }}>
+                  ③ {t("Nghe–viết (P1–4)", "Listen & type (P1–4)")}
+                </div>
+                <div style={{ fontSize: ".68rem", color: "#9A8672" }}>
+                  {t("Cần TTS — sắp ra mắt", "Needs TTS — coming soon")}
+                </div>
+              </button>
+
+              {/* Mode 4: Meaning to word (F16) */}
+              <button
+                onClick={() => setFlashcardMode({ mode: "meaning_to_word", words: words.filter(w => (w.part ?? 0) >= 5) })}
+                disabled={words.filter(w => (w.part ?? 0) >= 5).length === 0}
+                style={{
+                  padding: ".75rem",
+                  border: "1px solid var(--border)",
+                  background: "var(--bg-primary)",
+                  borderRadius: 8,
+                  textAlign: "left",
+                  cursor: words.filter(w => (w.part ?? 0) >= 5).length > 0 ? "pointer" : "not-allowed",
+                  opacity: words.filter(w => (w.part ?? 0) >= 5).length > 0 ? 1 : 0.5,
+                }}
+              >
+                <div style={{ fontSize: ".8rem", fontWeight: 700, color: "#2C1E0F", marginBottom: ".2rem" }}>
+                  ④ {t("Nghĩa → từ (P5–7)", "Meaning → word (P5–7)")}
+                </div>
+                <div style={{ fontSize: ".68rem", color: "#9A8672" }}>
+                  {words.filter(w => (w.part ?? 0) >= 5).length} {t("từ", "words")}
+                </div>
+              </button>
+            </div>
           </section>
-        ) : null}
+        )}
 
         {/* Quick Add Bar */}
         <QuickAddBar studentCode={profile.studentCode} />
@@ -893,12 +1150,13 @@ export default function VocabPage() {
       {/* ── Sidebar ── */}
       <DifficultWordsSidebar words={words} />
 
-      {/* Flashcard modal */}
-      {showFlashcard && (
+      {/* F12/F16: Flashcard modal (multi-mode) */}
+      {flashcardMode && (
         <FlashcardModal
-          words={dueWords.length > 0 ? dueWords : words}
+          words={flashcardMode.words}
           studentCode={profile.studentCode}
-          onClose={() => setShowFlashcard(false)}
+          onClose={() => setFlashcardMode(null)}
+          mode={flashcardMode.mode}
         />
       )}
     </div>
