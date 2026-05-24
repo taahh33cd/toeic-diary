@@ -14,7 +14,7 @@ function urlBase64ToUint8Array(base64String: string): Uint8Array<ArrayBuffer> {
   return output;
 }
 
-export function usePushSubscription() {
+export function usePushSubscription({ studentCode }: { studentCode?: string } = {}) {
   const [state, setState] = useState<PushState>("loading");
   const [error, setError] = useState<string | null>(null);
 
@@ -57,7 +57,7 @@ export function usePushSubscription() {
       await fetch("/api/push/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(sub.toJSON()),
+        body: JSON.stringify({ ...sub.toJSON(), studentCode }),
       });
 
       setState("subscribed");

@@ -37,12 +37,32 @@ function isWordDue(word: VocabWord, todayStr: string): boolean {
 
 // ─── TTS / Audio helper ───────────────────────────────────────────────────────
 
-function playWord(word: string, audioUrl?: string) {
+async function playWord(word: string, audioUrl?: string) {
+  // 1. Prefer audioUrl from dictionary lookup (free, no API key needed)
   if (audioUrl) {
     const audio = new Audio(audioUrl);
     audio.play().catch(() => playWebSpeech(word));
     return;
   }
+  // 2. Try Google TTS via our API route (high quality, 0.85x speed)
+  try {
+    const res = await fetch("/api/tts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: word }),
+    });
+    if (res.ok) {
+      const { audioContent } = (await res.json()) as { audioContent?: string };
+      if (audioContent) {
+        const audio = new Audio(`data:audio/mp3;base64,${audioContent}`);
+        await audio.play();
+        return;
+      }
+    }
+  } catch {
+    // fall through
+  }
+  // 3. Fallback: browser Web Speech API
   playWebSpeech(word);
 }
 

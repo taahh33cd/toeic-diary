@@ -1,6 +1,7 @@
 "use client";
 
 import { usePushSubscription } from "@/hooks/usePushSubscription";
+import { useProfile } from "@/hooks/useProfile";
 
 const LABEL: Record<string, string> = {
   loading: "Đang kiểm tra…",
@@ -19,8 +20,12 @@ const DESCRIPTION: Record<string, string> = {
   loading: "",
 };
 
-export function PushSubscribeCard() {
-  const { state, error, subscribe, unsubscribe } = usePushSubscription();
+interface PushSubscribeCardProps {
+  studentCode?: string;
+}
+
+export function PushSubscribeCard({ studentCode }: PushSubscribeCardProps = {}) {
+  const { state, error, subscribe, unsubscribe } = usePushSubscription({ studentCode });
 
   const isDisabled = state === "loading" || state === "unsupported" || state === "denied";
 
@@ -79,4 +84,13 @@ export function PushSubscribeCard() {
       </p>
     </div>
   );
+}
+
+/**
+ * Wrapper for student pages — automatically reads studentCode from profile
+ * and passes it to PushSubscribeCard so Cloud Functions can correlate subscriptions.
+ */
+export function StudentPushSubscribeCard() {
+  const { profile } = useProfile();
+  return <PushSubscribeCard studentCode={profile?.studentCode ?? undefined} />;
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PushSubscribeCard } from "./_push-subscribe";
+import { StudentPushSubscribeCard } from "./_push-subscribe";
 
 export const metadata: Metadata = { title: "Cài đặt" };
 
@@ -15,7 +15,7 @@ export default function SettingsPage() {
         </p>
       </div>
 
-      <PushSubscribeCard />
+      <StudentPushSubscribeCard />
     </div>
   );
 }
