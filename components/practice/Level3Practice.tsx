@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { RotateCcw, Play, Pause, CheckCircle2, XCircle, ArrowRight, BookOpen } from "lucide-react";
+import { RotateCcw, Play, Pause } from "lucide-react";
 import { saveProgress } from "@/app/actions/saveProgress";
 import { getTimeSpent } from "@/stores/practiceStore";
 import { Part2Result } from "./Part2Result";
-import { TranscriptVocabModal, type VocabItem } from "./TranscriptVocabModal";
+import { type VocabItem } from "./TranscriptVocabModal";
+import { PostSubmitView } from "./PostSubmitView";
 
 interface Sentence {
   id: string;
@@ -104,7 +105,6 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
   const [submitted, setSubmitted] = useState(false);
   const [finalScore, setFinalScore] = useState<number | null>(null);
 
-  const [showModal, setShowModal] = useState(false);
   const [vocabItems, setVocabItems] = useState<VocabItem[] | null>(precomputedVocab ?? null);
 
   const activeSentence = sentences[activeIdx];
@@ -323,7 +323,6 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     }
     setFinalScore(score);
     setSubmitted(true);
-    setShowModal(true);
     onScored(score);
     void saveProgress({
       lessonId,
@@ -402,42 +401,16 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
       if (state?.wordResults?.length > 0) correctWords += countCorrectWords(state.wordResults);
     });
     return (
-      <>
-        <div className="flex flex-col items-center gap-5 py-16">
-          <div className={`text-7xl font-display font-bold tabular-nums ${finalScore >= 70 ? "text-emerald-400" : "text-orange-400"}`}>{finalScore}</div>
-          <div className="text-[var(--text-muted)] text-sm">{correctWords}/{totalWords} từ đúng</div>
-          {finalScore >= 70 ? (
-            <div className="flex items-center gap-2 text-emerald-400 font-medium"><CheckCircle2 size={18} />Đạt — Level {dbLevel} hoàn thành!</div>
-          ) : (
-            <div className="flex flex-col items-center gap-3">
-              <div className="flex items-center gap-2 text-orange-400 font-medium"><XCircle size={18} />Chưa đạt — cần luyện thêm</div>
-              <button onClick={() => window.location.reload()} className="btn-secondary px-8 py-2 rounded-xl text-sm">Thử lại</button>
-            </div>
-          )}
-          <button
-            onClick={() => setShowModal(true)}
-            className="flex items-center gap-2 px-5 py-2 rounded-xl text-sm border border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--practice-accent)] hover:text-[var(--practice-accent)] transition-all"
-          >
-            <BookOpen size={14} />
-            Xem transcript &amp; từ vựng
-          </button>
-          {nextLessonUrl && (
-            <button
-              onClick={() => { window.location.href = nextLessonUrl; }}
-              className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-medium bg-[var(--accent-primary)] text-white hover:opacity-90 transition-opacity"
-            >
-              Câu tiếp theo <ArrowRight size={15} />
-            </button>
-          )}
-        </div>
-        {showModal && (
-          <TranscriptVocabModal
-            transcript={transcriptFull}
-            vocabItems={vocabItems}
-            onClose={() => setShowModal(false)}
-          />
-        )}
-      </>
+      <PostSubmitView
+        score={finalScore}
+        levelLabel={`Level ${dbLevel}`}
+        detail={`${correctWords}/${totalWords} từ đúng`}
+        audioUrl={audioUrl}
+        transcriptFull={transcriptFull}
+        vocabItems={vocabItems}
+        nextLessonUrl={nextLessonUrl}
+        onRetry={() => window.location.reload()}
+      />
     );
   }
 

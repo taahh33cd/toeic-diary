@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useRef, useEffect, useMemo } from "react";
-import { RotateCcw, Play, Pause, CheckCircle2, XCircle, BookOpen } from "lucide-react";
+import { RotateCcw, Play, Pause } from "lucide-react";
 import { saveProgress } from "@/app/actions/saveProgress";
 import { getTimeSpent } from "@/stores/practiceStore";
 import { generateBlanks, GeneratedBlank } from "@/lib/generateBlanks";
-import { TranscriptVocabModal, type VocabItem } from "./TranscriptVocabModal";
+import { type VocabItem } from "./TranscriptVocabModal";
+import { PostSubmitView } from "./PostSubmitView";
 
 interface Sentence {
   id: string;
@@ -90,7 +91,6 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
   const [submitted, setSubmitted] = useState(false);
   const [finalScore, setFinalScore] = useState<number | null>(null);
 
-  const [showModal, setShowModal] = useState(false);
   const [vocabItems, setVocabItems] = useState<VocabItem[] | null>(precomputedVocab ?? null);
 
   const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
@@ -270,7 +270,6 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
 
     setFinalScore(score);
     setSubmitted(true);
-    setShowModal(true);
     onScored(score);
 
     void saveProgress({
@@ -351,46 +350,15 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
     const allBlanks = sentencesWithBlanks.flatMap((s) => s.blanks);
     const correctCount = allBlanks.filter((b) => blankStates[b.id]?.status === "correct").length;
     return (
-      <>
-        <div className="flex flex-col items-center gap-5 py-16">
-          <div className={`text-7xl font-display font-bold tabular-nums ${finalScore >= 70 ? "text-emerald-400" : "text-orange-400"}`}>
-            {finalScore}
-          </div>
-          <div className="text-[var(--text-muted)] text-sm">
-            {correctCount}/{allBlanks.length} blank đúng
-          </div>
-          {finalScore >= 70 ? (
-            <div className="flex items-center gap-2 text-emerald-400 font-medium">
-              <CheckCircle2 size={18} />
-              Đạt — Level 2 hoàn thành!
-            </div>
-          ) : (
-            <div className="flex flex-col items-center gap-3">
-              <div className="flex items-center gap-2 text-orange-400 font-medium">
-                <XCircle size={18} />
-                Chưa đạt — cần luyện thêm
-              </div>
-              <button onClick={() => window.location.reload()} className="btn-secondary px-8 py-2 rounded-xl text-sm">
-                Thử lại
-              </button>
-            </div>
-          )}
-          <button
-            onClick={() => setShowModal(true)}
-            className="flex items-center gap-2 px-5 py-2 rounded-xl text-sm border border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--practice-accent)] hover:text-[var(--practice-accent)] transition-all"
-          >
-            <BookOpen size={14} />
-            Xem transcript &amp; từ vựng
-          </button>
-        </div>
-        {showModal && (
-          <TranscriptVocabModal
-            transcript={transcriptFull}
-            vocabItems={vocabItems}
-            onClose={() => setShowModal(false)}
-          />
-        )}
-      </>
+      <PostSubmitView
+        score={finalScore}
+        levelLabel="Level 2"
+        detail={`${correctCount}/${allBlanks.length} blank đúng`}
+        audioUrl={audioUrl}
+        transcriptFull={transcriptFull}
+        vocabItems={vocabItems}
+        onRetry={() => window.location.reload()}
+      />
     );
   }
 
