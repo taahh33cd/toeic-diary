@@ -1,7 +1,9 @@
 "use client";
 
-import { useState, useMemo, useCallback } from "react";
-import { useParams } from "next/navigation";
+import { useState, useMemo, useCallback, useEffect } from "react";
+import { get, ref as dbRef } from "firebase/database";
+import { firebaseDb } from "@/lib/firebase/client";
+import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -19,11 +21,15 @@ import { useAllStudents } from "@/hooks/firebase/useAllStudents";
 import { useClassAttendance } from "@/hooks/firebase/useClassAttendance";
 import {
   updateClass,
+  deleteClass,
   pushClassHomework,
   updateClassHomework,
   deleteClassHomework,
   setAttendance,
   removeClassMember,
+  pushHomework,
+  updateHomework,
+  deleteHomework,
 } from "@/lib/firebase/helpers";
 import type {
   SchoolClass,
@@ -571,29 +577,39 @@ function StudentGridSection({
 function ClassHomeworkSection({
   classId,
   homework,
+  memberCodes,
 }: {
   classId: string;
   homework: Homework[];
+  memberCodes: string[];
 }) {
   const [modal, setModal] = useState<{ mode: "add" } | { mode: "edit"; hw: Homework } | null>(null);
   const [expanded, setExpanded] = useState<string | null>(null);
+  const [propagating, setPropagating] = useState(false);
 
   const sorted = useMemo(
     () => [...homework].sort((a, b) => b.date.localeCompare(a.date)),
     [homework]
   );
 
+  // M7: Save HW to class + propagate to all member students
   async function handleSave(hw: Homework) {
+    setPropagating(true);
     if (modal?.mode === "edit") {
       await updateClassHomework(classId, hw.id, hw);
+      await Promise.all(memberCodes.map((code) => updateHomework(code, hw.id, hw)));
     } else {
       await pushClassHomework(classId, hw);
+      await Promise.all(memberCodes.map((code) => pushHomework(code, hw)));
     }
+    setPropagating(false);
   }
 
+  // M7: Delete from class + propagate to all member students
   async function handleDelete(hwId: string) {
-    if (!confirm("Xoá BTVN này?")) return;
+    if (!confirm("Xoá BTVN này? Sẽ xoá ở cả lớp lẫn từng học viên.")) return;
     await deleteClassHomework(classId, hwId);
+    await Promise.all(memberCodes.map((code) => deleteHomework(code, hwId)));
   }
 
   function renderItems(items: HwItem[] | undefined, catLabel: string) {
@@ -626,9 +642,12 @@ function ClassHomeworkSection({
       <SectionCard
         title="📚 BTVN lớp"
         action={
-          <Btn onClick={() => setModal({ mode: "add" })} size="xs" variant="primary">
-            <Plus size={12} /> Thêm
-          </Btn>
+          <div className="flex items-center gap-2">
+            {propagating && <span className="text-xs" style={{ color: "var(--text-muted)" }}>Đang sync…</span>}
+            <Btn onClick={() => setModal({ mode: "add" })} size="xs" variant="primary" disabled={propagating}>
+              <Plus size={12} /> Thêm
+            </Btn>
+          </div>
         }
       >
         {sorted.length === 0 ? (
@@ -707,6 +726,123 @@ function ClassHomeworkSection({
         />
       )}
     </>
+  );
+}
+
+// ─── ProgressGridSection (M8) ────────────────────────────────────────────────
+
+function ProgressGridSection({
+  homework,
+  memberCodes,
+  allStudents,
+}: {
+  homework: Homework[];
+  memberCodes: string[];
+  allStudents: (Student & { id: string })[];
+}) {
+  const [dayLinksMap, setDayLinksMap] = useState<Record<string, Record<string, boolean>>>({});
+  const [loadingGrid, setLoadingGrid] = useState(true);
+
+  const sorted = useMemo(
+    () => [...homework].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 10),
+    [homework]
+  );
+
+  const members = useMemo(
+    () => memberCodes.map((c) => allStudents.find((s) => s.id === c)).filter(Boolean) as (Student & { id: string })[],
+    [memberCodes, allStudents]
+  );
+
+  useEffect(() => {
+    if (memberCodes.length === 0 || sorted.length === 0) { setLoadingGrid(false); return; }
+    let cancelled = false;
+    setLoadingGrid(true);
+    Promise.all(
+      memberCodes.map(async (code) => {
+        const snap = await get(dbRef(firebaseDb, `daylinks/${code}`));
+        const data = snap.val() as Record<string, unknown> | null;
+        return { code, data };
+      })
+    ).then((results) => {
+      if (cancelled) return;
+      const map: Record<string, Record<string, boolean>> = {};
+      for (const { code, data } of results) {
+        map[code] = {};
+        for (const hw of sorted) {
+          map[code][hw.id] = !!(data && data[hw.id]);
+        }
+      }
+      setDayLinksMap(map);
+      setLoadingGrid(false);
+    });
+    return () => { cancelled = true; };
+  }, [memberCodes, sorted]);
+
+  if (sorted.length === 0 || members.length === 0) return null;
+
+  return (
+    <SectionCard title="📊 Tiến độ BTVN">
+      {loadingGrid ? (
+        <p className="text-xs text-center py-4" style={{ color: "var(--text-muted)" }}>Đang tải…</p>
+      ) : (
+        <div style={{ overflowX: "auto" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: ".72rem" }}>
+            <thead>
+              <tr>
+                <th style={{ textAlign: "left", padding: ".4rem .5rem", color: "var(--text-muted)", fontWeight: 600, minWidth: 90, borderBottom: "1px solid var(--border)" }}>
+                  Học viên
+                </th>
+                {sorted.map((hw) => (
+                  <th key={hw.id} style={{ textAlign: "center", padding: ".4rem .4rem", color: "var(--text-muted)", fontWeight: 600, whiteSpace: "nowrap", borderBottom: "1px solid var(--border)" }}>
+                    {fmtDate(hw.date)}{hw.endDate ? `→${fmtDate(hw.endDate)}` : ""}
+                  </th>
+                ))}
+                <th style={{ textAlign: "center", padding: ".4rem .4rem", color: "var(--text-muted)", fontWeight: 600, borderBottom: "1px solid var(--border)" }}>
+                  %
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {members.map((student) => {
+                const submitted = sorted.map((hw) => !!dayLinksMap[student.id]?.[hw.id]);
+                const doneCount = submitted.filter(Boolean).length;
+                const pct = sorted.length > 0 ? Math.round((doneCount / sorted.length) * 100) : 0;
+                return (
+                  <tr key={student.id}>
+                    <td style={{ padding: ".4rem .5rem", color: "var(--text-primary)", fontWeight: 500, borderBottom: "1px solid var(--border)" }}>
+                      <Link href={`/admin/students/${student.id}`} className="hover:underline">
+                        {student.name ?? student.id}
+                      </Link>
+                    </td>
+                    {submitted.map((done, i) => (
+                      <td key={i} style={{ textAlign: "center", padding: ".4rem", borderBottom: "1px solid var(--border)" }}>
+                        {done ? (
+                          <span style={{ color: "rgb(5,150,105)", fontWeight: 700 }}>✓</span>
+                        ) : (
+                          <span style={{ color: "var(--border)" }}>·</span>
+                        )}
+                      </td>
+                    ))}
+                    <td style={{ textAlign: "center", padding: ".4rem", borderBottom: "1px solid var(--border)" }}>
+                      <span style={{
+                        fontSize: ".68rem",
+                        fontWeight: 700,
+                        color: pct >= 80 ? "rgb(5,150,105)" : pct >= 50 ? "rgb(234,179,8)" : "rgb(220,38,38)",
+                      }}>
+                        {pct}%
+                      </span>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          {sorted.length >= 10 && (
+            <p className="text-[10px] mt-1.5" style={{ color: "var(--text-muted)" }}>Hiển thị 10 BTVN gần nhất</p>
+          )}
+        </div>
+      )}
+    </SectionCard>
   );
 }
 
@@ -825,11 +961,21 @@ function AttendanceSection({
 export default function ClassDetailPage() {
   const params = useParams();
   const classId = params.id as string;
+  const router = useRouter();
 
   const { schoolClass, loading } = useClass(classId);
   const { students: allStudents } = useAllStudents();
   const memberCodes = schoolClass?.members ?? [];
   const { attendance } = useClassAttendance(memberCodes);
+
+  const [deletingClass, setDeletingClass] = useState(false);
+
+  async function handleDeleteClass() {
+    if (!confirm(`Xoá lớp "${schoolClass?.name}"?\nHành động này không thể hoàn tác.`)) return;
+    setDeletingClass(true);
+    await deleteClass(classId);
+    router.push("/admin/classes");
+  }
 
   if (loading) {
     return (
@@ -869,7 +1015,7 @@ export default function ClassDetailPage() {
   return (
     <div className="space-y-5">
       {/* TopBar */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 flex-wrap">
         <Link
           href="/admin/classes"
           className="p-1.5 rounded-lg border hover:opacity-80 transition-opacity"
@@ -885,6 +1031,15 @@ export default function ClassDetailPage() {
             {(schoolClass.members ?? []).length} học viên
           </p>
         </div>
+        {/* M3: Delete class */}
+        <button
+          onClick={handleDeleteClass}
+          disabled={deletingClass}
+          className="flex items-center gap-1.5 text-sm px-3 py-2 rounded-xl font-semibold border disabled:opacity-60"
+          style={{ borderColor: "rgba(239,68,68,0.4)", color: "rgb(220,38,38)", background: "rgba(239,68,68,0.06)" }}
+        >
+          <Trash2 size={14} /> Xoá lớp
+        </button>
       </div>
 
       {/* 2-column layout */}
@@ -901,7 +1056,12 @@ export default function ClassDetailPage() {
 
         {/* Right col */}
         <div className="lg:col-span-3 space-y-5">
-          <ClassHomeworkSection classId={classId} homework={homework} />
+          <ClassHomeworkSection classId={classId} homework={homework} memberCodes={memberCodes} />
+          <ProgressGridSection
+            homework={homework}
+            memberCodes={memberCodes}
+            allStudents={allStudents as (Student & { id: string })[]}
+          />
           <AttendanceSection
             classId={classId}
             cls={schoolClass}

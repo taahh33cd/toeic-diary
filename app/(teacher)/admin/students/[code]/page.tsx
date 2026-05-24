@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
-import { useParams } from "next/navigation";
+import { useState, useEffect, useCallback, useRef } from "react";
+import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Copy, Check, Plus, Trash2, ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
 import { useStudent } from "@/hooks/firebase/useStudent";
@@ -10,6 +10,7 @@ import { useSubmissions } from "@/hooks/firebase/useSubmissions";
 import { useDayLinks } from "@/hooks/firebase/useDayLinks";
 import {
   updateStudent,
+  deleteStudent,
   setStudentFrozen,
   pushComment,
   sendNotification,
@@ -102,7 +103,11 @@ function Input({ value, onChange, type = "text", placeholder = "" }: {
 
 // ─── 1. BasicInfo ─────────────────────────────────────────────────────────────
 
-function BasicInfoSection({ student, code }: { student: Student; code: string }) {
+function BasicInfoSection({ student, code, saveRef }: {
+  student: Student;
+  code: string;
+  saveRef?: React.MutableRefObject<(() => Promise<void>) | null>;
+}) {
   const [name, setName] = useState(student.name ?? "");
   const [week, setWeek] = useState(String(student.currentWeek ?? 1));
   const [courseType, setCourseType] = useState<"group" | "per-session" | "package">(student.courseType ?? "per-session");
@@ -126,6 +131,12 @@ function BasicInfoSection({ student, code }: { student: Student; code: string })
     setSaved(true);
     setTimeout(() => setSaved(false), 2000);
   }
+
+  // L14: expose save fn to parent via ref
+  useEffect(() => {
+    if (saveRef) saveRef.current = handleSave;
+  });
+
 
   return (
     <SectionCard
@@ -506,9 +517,12 @@ function ToeicScoresSection({ student, code }: { student: Student; code: string 
   );
 }
 
-// ─── 6. Error Log Summary (read-only) ─────────────────────────────────────────
+// ─── 6. Error Log Viewer (L11) ────────────────────────────────────────────────
 
-function ErrorLogSummarySection({ student }: { student: Student }) {
+function ErrorLogSection({ student }: { student: Student }) {
+  const [showSessions, setShowSessions] = useState(false);
+  const [expandedSession, setExpandedSession] = useState<string | null>(null);
+
   const errorLog = student.errorLog;
   if (!errorLog || Object.keys(errorLog).length === 0) {
     return (
@@ -518,11 +532,13 @@ function ErrorLogSummarySection({ student }: { student: Student }) {
     );
   }
 
-  const sessions = Object.values(errorLog);
+  const sessions = Object.entries(errorLog)
+    .map(([key, e]) => ({ key, ...e }))
+    .sort((a, b) => (b.date ?? b.key).localeCompare(a.date ?? a.key));
+
   const totalLs = sessions.reduce((s, e) => s + (e.lsTotal ?? 0), 0);
   const totalRd = sessions.reduce((s, e) => s + (e.rdTotal ?? 0), 0);
 
-  // Aggregate LS/RD error type counts across all sessions
   const lsCount: Record<string, number> = {};
   const rdCount: Record<string, number> = {};
   sessions.forEach((e) => {
@@ -535,8 +551,20 @@ function ErrorLogSummarySection({ student }: { student: Student }) {
   const maxVal = Math.max(...[...top3Ls, ...top3Rd].map(([, v]) => v), 1);
 
   return (
-    <SectionCard title="📒 Nhật ký lỗi">
+    <SectionCard
+      title="📒 Nhật ký lỗi"
+      action={
+        <button
+          onClick={() => setShowSessions((v) => !v)}
+          className="text-xs px-2.5 py-1 rounded-lg"
+          style={{ background: "var(--border)", color: "var(--text-secondary)" }}
+        >
+          {showSessions ? "Ẩn buổi" : `${sessions.length} buổi →`}
+        </button>
+      }
+    >
       <div className="space-y-4">
+        {/* Summary stats */}
         <div className="grid grid-cols-3 gap-2 text-center">
           {[
             { label: "Buổi log", val: sessions.length },
@@ -549,6 +577,8 @@ function ErrorLogSummarySection({ student }: { student: Student }) {
             </div>
           ))}
         </div>
+
+        {/* Top error types chart */}
         <div className="grid grid-cols-2 gap-4">
           {[{ title: "Top lỗi Listening", data: top3Ls, color: "#3b82f6" }, { title: "Top lỗi Reading", data: top3Rd, color: "#f59e0b" }].map(({ title, data, color }) => (
             <div key={title}>
@@ -569,6 +599,76 @@ function ErrorLogSummarySection({ student }: { student: Student }) {
             </div>
           ))}
         </div>
+
+        {/* L11: Session list */}
+        {showSessions && (
+          <div className="space-y-1.5 pt-1 border-t" style={{ borderColor: "var(--border)" }}>
+            <p className="text-xs font-medium mb-2" style={{ color: "var(--text-secondary)" }}>Chi tiết từng buổi</p>
+            {sessions.map((s) => {
+              const isOpen = expandedSession === s.key;
+              const dateLabel = s.date ? fmtDate(s.date) : s.key;
+              return (
+                <div key={s.key} className="rounded-lg border overflow-hidden" style={{ borderColor: "var(--border)" }}>
+                  <div
+                    className="flex items-center gap-3 px-3 py-2 cursor-pointer"
+                    style={{ background: "var(--bg-primary)" }}
+                    onClick={() => setExpandedSession(isOpen ? null : s.key)}
+                  >
+                    <span className="text-xs font-medium flex-1" style={{ color: "var(--text-primary)" }}>{dateLabel}</span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded" style={{ background: "rgba(59,130,246,0.1)", color: "#3b82f6" }}>
+                      LS: {s.lsTotal ?? 0}
+                    </span>
+                    <span className="text-[10px] px-1.5 py-0.5 rounded" style={{ background: "rgba(245,158,11,0.1)", color: "#f59e0b" }}>
+                      RD: {s.rdTotal ?? 0}
+                    </span>
+                    {isOpen ? <ChevronUp size={12} style={{ color: "var(--text-muted)" }} /> : <ChevronDown size={12} style={{ color: "var(--text-muted)" }} />}
+                  </div>
+                  {isOpen && (
+                    <div className="px-3 pb-3 pt-2 border-t space-y-2" style={{ borderColor: "var(--border)" }}>
+                      {s.testName && (
+                        <p className="text-xs italic" style={{ color: "var(--text-muted)" }}>{s.testName}{s.sessionType ? ` · ${s.sessionType}` : ""}</p>
+                      )}
+                      <div className="grid grid-cols-2 gap-3">
+                        {[
+                          { title: "Listening", data: s.listening, color: "#3b82f6" },
+                          { title: "Reading", data: s.reading, color: "#f59e0b" },
+                        ].map(({ title, data, color }) => (
+                          data && Object.keys(data).length > 0 ? (
+                            <div key={title}>
+                              <p className="text-[10px] font-semibold mb-1" style={{ color }}>{title}</p>
+                              {Object.entries(data as Record<string, number>)
+                                .filter(([, v]) => v > 0)
+                                .sort(([, a], [, b]) => b - a)
+                                .map(([type, count]) => (
+                                  <div key={type} className="flex justify-between text-[10px] mb-0.5">
+                                    <span style={{ color: "var(--text-secondary)" }}>{type}</span>
+                                    <span className="font-bold" style={{ color }}>{count}</span>
+                                  </div>
+                                ))
+                              }
+                            </div>
+                          ) : null
+                        ))}
+                      </div>
+                      {s.details && s.details.length > 0 && (
+                        <div className="pt-1">
+                          <p className="text-[10px] font-semibold mb-1" style={{ color: "var(--text-secondary)" }}>Chi tiết câu sai</p>
+                          {s.details.slice(0, 5).map((d, i) => (
+                            <div key={i} className="text-[10px] flex gap-1 mb-0.5">
+                              {d.qNum && <span style={{ color: "var(--text-muted)" }}>#{d.qNum}</span>}
+                              {d.content && <span style={{ color: "var(--text-primary)" }} className="truncate">{d.content}</span>}
+                              {d.reviewed === "yes" && <span style={{ color: "rgb(5,150,105)" }}>✓</span>}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
     </SectionCard>
   );
@@ -1196,18 +1296,39 @@ function PersonalScheduleSection({ student, code }: { student: Student; code: st
 export default function StudentEditorPage() {
   const params = useParams();
   const code = params?.code as string;
+  const router = useRouter();
 
   const { student, loading } = useStudent(code);
   const { homework } = useHomework(code);
   const { dayLinks } = useDayLinks(code);
 
   const [freezing, setFreezing] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+  const [batchSaving, setBatchSaving] = useState(false);
+  const [batchSaved, setBatchSaved] = useState(false);
+  const basicInfoSaveRef = useRef<(() => Promise<void>) | null>(null);
 
   async function handleToggleFreeze() {
     if (!student) return;
     setFreezing(true);
     await setStudentFrozen(code, !student.frozen);
     setFreezing(false);
+  }
+
+  async function handleBatchSave() {
+    setBatchSaving(true);
+    if (basicInfoSaveRef.current) await basicInfoSaveRef.current();
+    setBatchSaving(false);
+    setBatchSaved(true);
+    setTimeout(() => setBatchSaved(false), 2000);
+  }
+
+  async function handleDelete() {
+    if (!confirm(`Xoá học viên "${student?.name ?? code}"?\nHành động này không thể hoàn tác.`)) return;
+    if (!confirm("Xác nhận lần 2: Xoá vĩnh viễn toàn bộ dữ liệu học viên này?")) return;
+    setDeleting(true);
+    await deleteStudent(code);
+    router.push("/admin/students");
   }
 
   if (loading) {
@@ -1266,18 +1387,41 @@ export default function StudentEditorPage() {
         >
           {student.frozen ? "✓ Bỏ đóng băng" : "❄️ Đóng băng"}
         </button>
+        {/* L14: Batch save */}
+        <button
+          onClick={handleBatchSave}
+          disabled={batchSaving}
+          className="text-sm px-4 py-2 rounded-xl font-semibold disabled:opacity-60"
+          style={batchSaved ? {
+            background: "rgba(16,185,129,0.12)", color: "rgb(5,150,105)",
+          } : {
+            background: "var(--accent-primary)", color: "#fff",
+          }}
+        >
+          {batchSaving ? "Đang lưu..." : batchSaved ? "✓ Đã lưu" : "Lưu tất cả"}
+        </button>
+        {/* L3: Delete student */}
+        <button
+          onClick={handleDelete}
+          disabled={deleting}
+          className="text-sm px-3 py-2 rounded-xl font-semibold border disabled:opacity-60"
+          style={{ borderColor: "rgba(239,68,68,0.4)", color: "rgb(220,38,38)", background: "rgba(239,68,68,0.06)" }}
+          title="Xoá học viên"
+        >
+          <Trash2 size={15} />
+        </button>
       </div>
 
       {/* 2-col layout */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
         {/* Left column (2/3 width) */}
         <div className="lg:col-span-2 space-y-5">
-          <BasicInfoSection student={student} code={code} />
+          <BasicInfoSection student={student} code={code} saveRef={basicInfoSaveRef} />
           <InternalNoteSection student={student} code={code} />
           <CommentsSection student={student} code={code} />
           <SendNotifSection student={student} code={code} />
           <ToeicScoresSection student={student} code={code} />
-          <ErrorLogSummarySection student={student} />
+          <ErrorLogSection student={student} />
           <HomeworkProgressSection homework={homework} dayLinks={dayLinks} />
         </div>
 

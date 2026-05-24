@@ -41,6 +41,10 @@ export async function createStudent(
   });
 }
 
+export async function deleteStudent(code: string): Promise<void> {
+  await remove(ref(firebaseDb, `students/${code}`));
+}
+
 export async function updateStudent(
   code: string,
   partial: Partial<Student>
@@ -354,6 +358,10 @@ export async function deleteScheduleItem(
 }
 
 // ─── Classes ─────────────────────────────────────────────────────────────────
+
+export async function deleteClass(id: string): Promise<void> {
+  await remove(ref(firebaseDb, `classes/${id}`));
+}
 
 export async function updateClass(
   id: string,
