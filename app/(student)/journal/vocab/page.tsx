@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useProfile } from "@/hooks/useProfile";
 import { useVocab } from "@/hooks/firebase/useVocab";
 import { saveVocabWord, updateVocabWord, deleteVocabWord } from "@/lib/firebase/helpers";
@@ -537,6 +537,155 @@ function FlashcardModal({
   );
 }
 
+// ─── F15: Listen-Write Modal ─────────────────────────────────────────────────
+
+function ListenWriteModal({
+  words,
+  studentCode,
+  onClose,
+}: {
+  words: VocabWord[];
+  studentCode: string;
+  onClose: () => void;
+}) {
+  const { t } = useLocale();
+  const [idx, setIdx] = useState(0);
+  const [input, setInput] = useState("");
+  const [result, setResult] = useState<"correct" | "wrong" | null>(null);
+  const [done, setDone] = useState(false);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [playing, setPlaying] = useState(false);
+
+  const card = words[idx];
+
+  async function handlePlay() {
+    if (playing) return;
+    setPlaying(true);
+    await playWord(card.word, card.audioUrl).catch(() => {});
+    setPlaying(false);
+  }
+
+  // Auto-play when card changes
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => { handlePlay(); }, [idx]);
+
+  function advance() {
+    if (idx + 1 >= words.length) {
+      setDone(true);
+    } else {
+      setIdx((i) => i + 1);
+      setInput("");
+      setResult(null);
+      // Auto-play next word after a tiny delay
+      setTimeout(() => handlePlay(), 300);
+    }
+  }
+
+  async function handleCheck() {
+    if (!input.trim()) return;
+    const isCorrect = input.trim().toLowerCase() === card.word.toLowerCase();
+    setResult(isCorrect ? "correct" : "wrong");
+    if (isCorrect) {
+      setCorrectCount((c) => c + 1);
+      const newCount = (card.repCount ?? 0) + 1;
+      const today = new Date().toISOString().slice(0, 10);
+      await updateVocabWord(studentCode, card.id, { repCount: newCount, lastReview: today });
+      await awardXp("vocab_review", { wordId: card.id });
+    }
+  }
+
+  return (
+    <div
+      style={{ position: "fixed", inset: 0, zIndex: 50, background: "rgba(0,0,0,0.5)", display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }}
+      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
+    >
+      <div className="rounded-xl overflow-hidden" style={{ width: "100%", maxWidth: 420, background: "var(--bg-elevated)", border: "1px solid var(--border)" }}>
+        {/* Header */}
+        <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: "1px solid var(--border)", background: "var(--bg-primary)" }}>
+          <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--text-muted)" }}>
+            🎧 {t("Nghe–viết", "Listen & type")} {done ? words.length : idx + 1}/{words.length}
+          </span>
+          <button onClick={onClose} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-muted)", fontSize: "1rem" }}>✕</button>
+        </div>
+
+        {done ? (
+          <div className="p-8 text-center">
+            <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "var(--accent-green)", marginBottom: 8 }}>
+              {t("Xong! 🎉", "Done! 🎉")}
+            </p>
+            <p className="text-sm" style={{ color: "var(--text-muted)", marginBottom: 20 }}>
+              {t(`Đúng ${correctCount}/${words.length} từ.`, `Correct ${correctCount}/${words.length} words.`)}
+            </p>
+            <button onClick={onClose} className="journal-btn-primary" style={{ padding: "10px 24px" }}>{t("Đóng", "Close")}</button>
+          </div>
+        ) : (
+          <div className="p-6 space-y-4">
+            {/* Play area */}
+            <div className="text-center p-6 rounded-lg" style={{ background: "var(--bg-primary)", border: "1px solid var(--border)", minHeight: 100 }}>
+              <button
+                onClick={handlePlay}
+                disabled={playing}
+                className="w-14 h-14 rounded-full flex items-center justify-center mx-auto text-2xl transition-all"
+                style={{ background: playing ? "var(--border)" : "var(--orange)", color: "white", border: "none", cursor: playing ? "default" : "pointer" }}
+                title={t("Phát âm", "Play")}
+              >
+                {playing ? "⏳" : "🔊"}
+              </button>
+              {card.part && (
+                <p className="text-xs mt-3 font-semibold" style={{ color: "var(--text-muted)" }}>Part {card.part}</p>
+              )}
+              {result && (
+                <div className="mt-3">
+                  <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: result === "correct" ? "var(--accent-green)" : "#e05c5c" }}>
+                    {card.word}
+                  </p>
+                  {card.ipa && <p className="text-xs" style={{ color: "var(--text-muted)", fontFamily: "monospace" }}>/{card.ipa}/</p>}
+                </div>
+              )}
+            </div>
+
+            {/* Input */}
+            {!result ? (
+              <div className="space-y-2">
+                <input
+                  type="text"
+                  autoFocus
+                  placeholder={t("Gõ từ bạn vừa nghe…", "Type the word you heard…")}
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={(e) => { if (e.key === "Enter") handleCheck(); }}
+                  className="w-full rounded-lg px-4 py-3 text-sm outline-none"
+                  style={{ background: "var(--bg-primary)", border: "1px solid var(--border)", color: "var(--text-primary)" }}
+                />
+                <button
+                  onClick={handleCheck}
+                  disabled={!input.trim()}
+                  className="w-full journal-btn-primary disabled:opacity-50"
+                  style={{ padding: "10px 16px" }}
+                >
+                  {t("Kiểm tra", "Check")}
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-3">
+                <div className="p-3 rounded-lg text-center" style={{ background: result === "correct" ? "rgba(74,124,89,0.1)" : "rgba(224,92,92,0.1)", border: `1px solid ${result === "correct" ? "rgba(74,124,89,0.3)" : "rgba(224,92,92,0.3)"}` }}>
+                  <p className="text-sm font-semibold" style={{ color: result === "correct" ? "var(--accent-green)" : "#e05c5c" }}>
+                    {result === "correct" ? t("✓ Đúng! +2 XP", "✓ Correct! +2 XP") : t(`✗ Sai — đáp án: "${card.word}"`, `✗ Wrong — answer: "${card.word}"`)}
+                  </p>
+                  {card.vi && <p className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>{card.vi}</p>}
+                </div>
+                <button onClick={advance} className="w-full journal-btn-primary" style={{ padding: "10px 16px" }}>
+                  {idx + 1 >= words.length ? t("Xem kết quả", "See results") : t("Tiếp theo →", "Next →")}
+                </button>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 // ─── Word Card (Bento style) ──────────────────────────────────────────────────
 
 function WordCard({
@@ -893,6 +1042,7 @@ export default function VocabPage() {
   const [filterPart, setFilterPart] = useState<number | null>(null);
   const [filterDue, setFilterDue] = useState(false);
   const [flashcardMode, setFlashcardMode] = useState<{ mode: FlashcardMode; words: VocabWord[] } | null>(null);
+  const [listenWriteWords, setListenWriteWords] = useState<VocabWord[] | null>(null); // F15
 
   const todayStr = new Date().toISOString().slice(0, 10);
   const loading = profileLoading || vocabLoading;
@@ -1034,26 +1184,32 @@ export default function VocabPage() {
                 </div>
               </button>
 
-              {/* Mode 3: Listen-write (locked until TTS Cloud Function) */}
-              <button
-                disabled
-                style={{
-                  padding: ".75rem",
-                  border: "1px dashed var(--border)",
-                  background: "var(--bg-primary)",
-                  borderRadius: 8,
-                  textAlign: "left",
-                  cursor: "not-allowed",
-                  opacity: 0.45,
-                }}
-              >
-                <div style={{ fontSize: ".8rem", fontWeight: 700, color: "#2C1E0F", marginBottom: ".2rem" }}>
-                  ③ {t("Nghe–viết (P1–4)", "Listen & type (P1–4)")}
-                </div>
-                <div style={{ fontSize: ".68rem", color: "#9A8672" }}>
-                  {t("Cần TTS — sắp ra mắt", "Needs TTS — coming soon")}
-                </div>
-              </button>
+              {/* Mode 3: F15 Listen-write (Parts 1–4, enabled via /api/tts) */}
+              {(() => {
+                const p14 = words.filter((w) => (w.part ?? 0) >= 1 && (w.part ?? 0) <= 4);
+                return (
+                  <button
+                    onClick={() => setListenWriteWords(p14)}
+                    disabled={p14.length === 0}
+                    style={{
+                      padding: ".75rem",
+                      border: `1px solid ${p14.length > 0 ? "rgba(40,96,168,.35)" : "var(--border)"}`,
+                      background: p14.length > 0 ? "rgba(40,96,168,.06)" : "var(--bg-primary)",
+                      borderRadius: 8,
+                      textAlign: "left",
+                      cursor: p14.length > 0 ? "pointer" : "not-allowed",
+                      opacity: p14.length > 0 ? 1 : 0.5,
+                    }}
+                  >
+                    <div style={{ fontSize: ".8rem", fontWeight: 700, color: "#2860A8", marginBottom: ".2rem" }}>
+                      ③ {t("Nghe–viết (P1–4)", "Listen & type (P1–4)")}
+                    </div>
+                    <div style={{ fontSize: ".68rem", color: "#9A8672" }}>
+                      {p14.length > 0 ? `${p14.length} ${t("từ", "words")}` : t("Chưa có từ Part 1–4", "No Part 1–4 words")}
+                    </div>
+                  </button>
+                );
+              })()}
 
               {/* Mode 4: Meaning to word (F16) */}
               <button
@@ -1177,6 +1333,15 @@ export default function VocabPage() {
           studentCode={profile.studentCode}
           onClose={() => setFlashcardMode(null)}
           mode={flashcardMode.mode}
+        />
+      )}
+
+      {/* F15: Listen-write modal */}
+      {listenWriteWords && (
+        <ListenWriteModal
+          words={listenWriteWords}
+          studentCode={profile.studentCode}
+          onClose={() => setListenWriteWords(null)}
         />
       )}
     </div>
