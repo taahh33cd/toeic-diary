@@ -5,14 +5,14 @@ import { onSchedule } from "firebase-functions/v2/scheduler";
 import * as webpush from "web-push";
 
 // ── Firebase Admin init ───────────────────────────────────────────────────────
-// Cloud Functions automatically initialise with Application Default Credentials.
-initializeApp();
-
-const DB_URL =
-  "https://quanlyhocvien-b1796-default-rtdb.asia-southeast1.firebasedatabase.app";
+// Pass databaseURL explicitly so getDatabase() connects to the correct RTDB instance.
+initializeApp({
+  databaseURL:
+    "https://quanlyhocvien-b1796-default-rtdb.asia-southeast1.firebasedatabase.app",
+});
 
 function db() {
-  return getDatabase(undefined, DB_URL);
+  return getDatabase();
 }
 
 // ── VAPID setup helper ────────────────────────────────────────────────────────
@@ -70,6 +70,7 @@ export const onNewStudentNotification = onValueCreated(
     ref: "/notifications/{studentCode}/{notifId}",
     instance: "quanlyhocvien-b1796-default-rtdb",
     region: "asia-southeast1",
+    secrets: ["VAPID_SUBJECT", "VAPID_PUBLIC_KEY", "VAPID_PRIVATE_KEY"],
   },
   async (event) => {
     const { studentCode } = event.params;
@@ -119,6 +120,7 @@ export const dailyStudyReminder = onSchedule(
     schedule: "0 13 * * *", // 13:00 UTC = 20:00 ICT (UTC+7)
     timeZone: "Asia/Ho_Chi_Minh",
     region: "asia-southeast1",
+    secrets: ["VAPID_SUBJECT", "VAPID_PUBLIC_KEY", "VAPID_PRIVATE_KEY"],
   },
   async () => {
     setupVapid();
