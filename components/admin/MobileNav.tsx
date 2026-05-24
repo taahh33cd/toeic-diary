@@ -19,6 +19,7 @@ const NAV = [
   { href: "/admin/bookings",   emoji: "📅", label: "Lịch hẹn" },
   { href: "/admin/slots",      emoji: "⏰", label: "Khung giờ" },
   { href: "/admin/attendance", emoji: "✅", label: "Điểm danh" },
+  { href: "/admin/settings",   emoji: "⚙️", label: "Cài đặt" },
 ];
 
 /**
