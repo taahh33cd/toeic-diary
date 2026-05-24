@@ -162,49 +162,86 @@
 }
 
 /* ─────────────────────────────────────────────────────────
-   THEME: ADMIN (light / gold — Teacher Panel)
+   THEME: ADMIN — Silk & Alexandria
    Apply class "theme-admin" on the section wrapper div.
 ───────────────────────────────────────────────────────── */
 .theme-admin {
   /* Backgrounds */
-  --bg-primary:   #F0F2F7;
-  --bg-secondary: #E4E8F2;
-  --bg-elevated:  #FFFFFF;
-  --bg-card:      #FFFFFF;
+  --bg-primary:   #f9f9ff;
+  --bg-secondary: #f3f3fa;
+  --bg-elevated:  #ffffff;
+  --bg-card:      #ffffff;
 
   /* Sidebar */
-  --sidebar-bg:   #1E2235;
-  --sidebar-text: #A8B0CC;
-  --sidebar-active-bg:   #2D3450;
-  --sidebar-active-text: #FFFFFF;
+  --sidebar-bg:          #1a1c20;
+  --sidebar-text:        #777585;
+  --sidebar-active-bg:   rgba(68, 65, 196, 0.15);
+  --sidebar-active-text: #f1eeff;
+  --sidebar-w:           280px;
 
-  /* Gold accent */
-  --gold:       #B07D1A;
-  --gold-light: #F5E8C0;
-  --gold-hover: #9A6C14;
+  /* Primary (deep lavender) */
+  --admin-primary:           #4441c4;
+  --admin-primary-hover:     #3530b6;
+  --admin-primary-container: #5d5cde;
+  --admin-on-primary:        #ffffff;
+  --admin-primary-fixed:     #e2dfff;
 
   /* Text */
-  --text-primary:   #1A2035;
-  --text-secondary: #4A5375;
-  --text-muted:     #8A93B4;
+  --text-primary:   #1a1c20;
+  --text-secondary: #464554;
+  --text-muted:     #777585;
 
-  /* Accent (override) */
-  --accent-primary:       #B07D1A;
-  --accent-primary-hover: #9A6C14;
+  /* Accent (maps to primary for shared components) */
+  --accent-primary:       #4441c4;
+  --accent-primary-hover: #3530b6;
   --accent-green:         #1A7A4A;
-  --accent-red:           #C0392B;
+  --accent-red:           #ba1a1a;
 
   /* Borders */
-  --border:       #D8DCE8;
-  --border-focus: #B07D1A;
+  --border:       #c7c4d6;
+  --border-focus: #4441c4;
 
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(26, 32, 53, 0.06);
-  --shadow-md: 0 4px 12px rgba(26, 32, 53, 0.08);
-  --shadow-lg: 0 12px 32px rgba(26, 32, 53, 0.10);
+  --shadow-sm: 0 10px 30px -10px rgba(68, 65, 196, 0.1), inset 0 1px 0 0 white;
+  --shadow-md: 0 4px 12px rgba(68, 65, 196, 0.15);
+  --shadow-lg: 0 12px 32px rgba(68, 65, 196, 0.12);
 
-  /* Misc */
-  --sidebar-w: 240px;
+  /* Typography */
+  --font-admin-serif: var(--font-noto-serif), "Noto Serif", Georgia, serif;
+  --font-admin-sans:  var(--font-plus-jakarta), "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+/* ── Silk utility classes ────────────────────── */
+.silk-card {
+  background: linear-gradient(135deg, #ffffff 0%, #fdfdff 100%);
+  box-shadow: 0 10px 30px -10px rgba(68, 65, 196, 0.1), inset 0 1px 0 0 white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.silk-card:active {
+  transform: scale(0.98);
+  box-shadow: 0 5px 15px -5px rgba(68, 65, 196, 0.05);
+}
+.silk-button {
+  background: linear-gradient(to bottom, #5d5cde, #4441c4);
+  box-shadow: 0 4px 12px rgba(68, 65, 196, 0.3);
+}
+.silk-inset {
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
 }
 
 /* ─────────────────────────────────────────────────────────

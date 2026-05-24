@@ -7,7 +7,6 @@ import { useBookings } from "@/hooks/firebase/useBookings";
 import { useClasses } from "@/hooks/firebase/useClasses";
 import { useClassAttendance } from "@/hooks/firebase/useClassAttendance";
 import { setAttendance, createStudent } from "@/lib/firebase/helpers";
-import { LiveIndicator } from "@/components/shared/LiveIndicator";
 import type { SchoolClass, AttendanceStatus, Student } from "@/lib/firebase/types";
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -22,45 +21,28 @@ function todayStr() {
   return new Date().toISOString().slice(0, 10);
 }
 
-// ─── StatCard ─────────────────────────────────────────────────────────────────
+const COURSE_BADGE: Record<string, { label: string; bg: string; color: string }> = {
+  group:       { label: "LỚP NHÓM",  bg: "#e4e0ef",   color: "#555460" },
+  "per-session": { label: "1-1 BUỔI",  bg: "#dae2f8",   color: "#3f4758" },
+  per_session: { label: "1-1 BUỔI",  bg: "#dae2f8",   color: "#3f4758" },
+  package:     { label: "TRỌN GÓI",  bg: "#1a1c20",   color: "#f1eeff" },
+};
 
-function StatCard({
-  emoji, value, label, href, accent = false,
-}: {
-  emoji: string; value: string | number; label: string; href?: string; accent?: boolean;
-}) {
-  const inner = (
-    <div
-      className="rounded-xl p-4 border h-full"
-      style={{ background: "var(--bg-elevated)", borderColor: "var(--border)", boxShadow: "var(--shadow-sm)" }}
-    >
-      <div className="text-xl mb-1.5">{emoji}</div>
-      <div className="text-2xl font-bold" style={{ color: accent ? "var(--accent-primary)" : "var(--text-primary)" }}>
-        {value}
-      </div>
-      <div className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>{label}</div>
-    </div>
-  );
-  return href ? (
-    <Link href={href} className="block hover:opacity-90 transition-opacity">{inner}</Link>
-  ) : inner;
-}
-
-// ─── AttBadge (inline) ────────────────────────────────────────────────────────
+// ─── AttBadge ─────────────────────────────────────────────────────────────────
 
 function AttBadge({ status }: { status: AttendanceStatus | undefined }) {
+  const base = "w-7 h-7 rounded flex items-center justify-center text-xs font-bold transition-colors";
   if (!status) return (
-    <span className="w-7 h-7 rounded flex items-center justify-center text-xs border"
-      style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>–</span>
+    <span className={base} style={{ border: "1px solid #c7c4d6", color: "#777585" }}>–</span>
   );
   if (status === "present") return (
-    <span className="w-7 h-7 rounded flex items-center justify-center text-xs font-bold bg-green-500/10 text-green-600">✓</span>
+    <span className={base} style={{ background: "rgba(22,163,74,0.1)", color: "rgb(22,163,74)" }}>✓</span>
   );
   if (status === "absent") return (
-    <span className="w-7 h-7 rounded flex items-center justify-center text-xs font-bold bg-red-500/10 text-red-500">✗</span>
+    <span className={base} style={{ background: "rgba(186,26,26,0.1)", color: "#ba1a1a" }}>✗</span>
   );
   return (
-    <span className="w-7 h-7 rounded flex items-center justify-center text-xs font-bold bg-yellow-500/10 text-yellow-600">~</span>
+    <span className={base} style={{ background: "rgba(202,138,4,0.1)", color: "rgb(161,110,0)" }}>~</span>
   );
 }
 
@@ -96,38 +78,39 @@ function TodayClassPanel({
   const sessions = cls.weeklySchedule?.filter((s) => s.day === DAYS_EN[new Date().getDay()]) ?? [];
 
   return (
-    <div className="rounded-xl border overflow-hidden"
-      style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}>
-      {/* Header */}
-      <div className="flex items-center justify-between px-4 py-3 border-b"
-        style={{ borderColor: "var(--border)" }}>
+    <div className="silk-card rounded-xl overflow-hidden">
+      <div
+        className="flex items-center justify-between px-5 py-3.5 border-b"
+        style={{ borderColor: "rgba(199,196,214,0.3)" }}
+      >
         <div>
           <p className="text-sm font-semibold" style={{ color: "var(--text-primary)" }}>{cls.name}</p>
-          <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+          <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
             {sessions.map((s) => `${s.time}${s.room ? ` · ${s.room}` : ""}`).join(" / ")}
           </p>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="text-xs px-2 py-0.5 rounded-full"
-            style={{ background: "rgba(196,98,45,0.08)", color: "var(--accent-primary)" }}>
+        <div className="flex items-center gap-3">
+          <span
+            className="text-xs px-2.5 py-1 rounded-full font-semibold"
+            style={{ background: "rgba(68,65,196,0.08)", color: "#4441c4" }}
+          >
             {presentCount}/{members.length} có mặt
           </span>
           <Link href={`/admin/classes/${cls.id}`}
-            className="text-xs hover:underline" style={{ color: "var(--text-muted)" }}>
+            className="text-xs font-medium transition-colors hover:text-[#4441c4]"
+            style={{ color: "var(--text-muted)" }}>
             Chi tiết →
           </Link>
         </div>
       </div>
-
-      {/* Student rows */}
       {members.length === 0 ? (
-        <p className="text-xs text-center py-3" style={{ color: "var(--text-muted)" }}>Chưa có học viên</p>
+        <p className="text-xs text-center py-4" style={{ color: "var(--text-muted)" }}>Chưa có học viên</p>
       ) : (
-        <div className="divide-y" style={{ borderColor: "var(--border)" }}>
+        <div className="divide-y" style={{ borderColor: "rgba(199,196,214,0.2)" }}>
           {members.map((student) => {
             const status = attendance[student.id]?.[date] as AttendanceStatus | undefined;
             return (
-              <div key={student.id} className="flex items-center justify-between px-4 py-2">
+              <div key={student.id} className="flex items-center justify-between px-5 py-2.5">
                 <p className="text-sm" style={{ color: "var(--text-primary)" }}>
                   {student.name ?? student.id}
                 </p>
@@ -145,65 +128,58 @@ function TodayClassPanel({
 
 // ─── Student Mini Card ────────────────────────────────────────────────────────
 
-const COURSE_LABELS: Record<string, string> = {
-  group: "Lớp nhóm",
-  "per-session": "1-1 buổi",
-  "per_session": "1-1 buổi",
-  package: "Trọn gói",
-};
-
 function StudentMiniCard({ student }: { student: Student & { id: string } }) {
   const latestScore = student.scores
     ? [...student.scores].sort((a, b) => b.date.localeCompare(a.date))[0]
     : null;
 
-  const courseLabel = student.courseType ? COURSE_LABELS[student.courseType] : null;
+  const badge = student.courseType ? COURSE_BADGE[student.courseType] : null;
 
   return (
     <Link
       href={`/admin/students/${student.id}`}
-      className="block rounded-xl border p-3 hover:opacity-80 transition-opacity"
-      style={{ background: "var(--bg-elevated)", borderColor: "var(--border)", boxShadow: "var(--shadow-sm)" }}
+      className="silk-card block p-5 rounded-xl hover:scale-[1.02] transition-all cursor-pointer group"
     >
-      <div className="flex items-start justify-between gap-2 mb-1.5">
-        <p className="text-sm font-medium truncate flex-1" style={{ color: "var(--text-primary)" }}>
-          {student.name ?? student.id}
-        </p>
-        {student.frozen && (
-          <span className="text-xs px-1.5 py-0.5 rounded shrink-0"
-            style={{ background: "rgba(99,179,237,0.12)", color: "rgb(56,139,180)", fontWeight: 600 }}>
-            🧊 Đóng băng
-          </span>
-        )}
-      </div>
-      {/* K3: courseType badge */}
-      {courseLabel && (
-        <span className="text-xs px-1.5 py-0.5 rounded"
-          style={{
-            background: "rgba(196,98,45,0.08)",
-            color: "var(--accent-primary)",
-            fontWeight: 500,
-            display: "inline-block",
-            marginBottom: ".35rem",
-          }}>
-          {courseLabel}
+      <div className="flex justify-between items-start mb-3">
+        <div className="flex-1 min-w-0">
+          <h4
+            className="text-[17px] font-medium truncate group-hover:text-[#4441c4] transition-colors"
+            style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}
+          >
+            {student.name ?? student.id}
+          </h4>
+          {badge && (
+            <span
+              className="inline-block mt-1.5 px-2 py-0.5 text-[10px] font-bold rounded"
+              style={{ background: badge.bg, color: badge.color, letterSpacing: "0.04em" }}
+            >
+              {badge.label}
+            </span>
+          )}
+          {student.frozen && (
+            <span
+              className="inline-block mt-1.5 ml-1.5 px-2 py-0.5 text-[10px] font-bold rounded"
+              style={{ background: "#dae2f8", color: "#3f4758", letterSpacing: "0.04em" }}
+            >
+              ĐÓNG BĂNG
+            </span>
+          )}
+        </div>
+        <span
+          className="text-2xl font-bold opacity-30 ml-2 shrink-0"
+          style={{ color: "var(--text-primary)", fontFamily: "var(--font-admin-serif)" }}
+        >
+          {latestScore?.score ?? "—"}
         </span>
-      )}
-      <div className="flex items-center justify-between">
-        <span className="text-xs" style={{ color: "var(--text-muted)" }}>
-          Tuần {student.currentWeek ?? 0}
-        </span>
-        {latestScore && (
-          <span className="text-xs font-semibold" style={{ color: "var(--accent-primary)" }}>
-            {latestScore.score}
-          </span>
-        )}
       </div>
+      <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+        Tuần {student.currentWeek ?? 0}
+      </p>
     </Link>
   );
 }
 
-// ─── Add Student Modal (K7) ───────────────────────────────────────────────────
+// ─── Add Student Modal ────────────────────────────────────────────────────────
 
 function AddStudentModal({ onClose }: { onClose: () => void }) {
   const [name, setName] = useState("");
@@ -233,106 +209,71 @@ function AddStudentModal({ onClose }: { onClose: () => void }) {
     }
   }
 
+  const inputStyle: React.CSSProperties = {
+    width: "100%",
+    padding: ".5rem .75rem",
+    border: "1px solid #c7c4d6",
+    borderRadius: 8,
+    fontSize: ".85rem",
+    background: "#f9f9ff",
+    color: "#1a1c20",
+    fontFamily: "var(--font-admin-sans)",
+    boxShadow: "inset 0 2px 4px rgba(0,0,0,0.04)",
+    outline: "none",
+  };
+
   return (
     <div
-      style={{
-        position: "fixed", inset: 0, zIndex: 50,
-        background: "rgba(44,30,15,.55)",
-        display: "flex", alignItems: "center", justifyContent: "center",
-      }}
+      style={{ position: "fixed", inset: 0, zIndex: 50, background: "rgba(26,28,32,.6)", display: "flex", alignItems: "center", justifyContent: "center" }}
       onClick={onClose}
     >
       <div
-        style={{
-          background: "var(--bg-elevated)",
-          border: "1px solid var(--border)",
-          borderRadius: 16,
-          padding: "1.5rem",
-          width: "calc(100vw - 2rem)",
-          maxWidth: 400,
-          boxShadow: "0 8px 32px rgba(44,30,15,.2)",
-        }}
+        className="silk-card"
+        style={{ borderRadius: 20, padding: "1.75rem", width: "calc(100vw - 2rem)", maxWidth: 420 }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1.2rem" }}>
-          <h2 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)", margin: 0 }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1.25rem" }}>
+          <h2 style={{ fontSize: "1.1rem", fontWeight: 600, color: "#1a1c20", margin: 0, fontFamily: "var(--font-admin-serif)" }}>
             Thêm học viên mới
           </h2>
-          <button onClick={onClose} style={{ background: "none", border: "none", cursor: "pointer", fontSize: "1.2rem", color: "var(--text-muted)", lineHeight: 1 }}>×</button>
+          <button onClick={onClose} style={{ background: "none", border: "none", cursor: "pointer", fontSize: "1.3rem", color: "#777585", lineHeight: 1 }}>×</button>
         </div>
 
         <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: ".85rem" }}>
           <label style={{ display: "flex", flexDirection: "column", gap: ".3rem" }}>
-            <span style={{ fontSize: ".75rem", fontWeight: 600, color: "var(--text-secondary)" }}>Họ tên *</span>
-            <input
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Nguyễn Văn A"
-              style={{ padding: ".5rem .75rem", border: "1px solid var(--border)", borderRadius: 8, fontSize: ".85rem", background: "var(--bg-primary)", color: "var(--text-primary)" }}
-            />
+            <span style={{ fontSize: ".75rem", fontWeight: 600, color: "#464554", letterSpacing: "0.04em" }}>HỌ TÊN *</span>
+            <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Nguyễn Văn A" style={inputStyle} />
           </label>
-
           <label style={{ display: "flex", flexDirection: "column", gap: ".3rem" }}>
-            <span style={{ fontSize: ".75rem", fontWeight: 600, color: "var(--text-secondary)" }}>Mã học viên * <span style={{ fontWeight: 400, color: "var(--text-muted)" }}>(dùng làm ID trong Firebase)</span></span>
-            <input
-              value={code}
-              onChange={(e) => setCode(e.target.value.replace(/\s/g, ""))}
-              placeholder="hv001"
-              style={{ padding: ".5rem .75rem", border: "1px solid var(--border)", borderRadius: 8, fontSize: ".85rem", background: "var(--bg-primary)", color: "var(--text-primary)", fontFamily: "monospace" }}
-            />
+            <span style={{ fontSize: ".75rem", fontWeight: 600, color: "#464554", letterSpacing: "0.04em" }}>MÃ HỌC VIÊN *</span>
+            <input value={code} onChange={(e) => setCode(e.target.value.replace(/\s/g, ""))} placeholder="hv001" style={{ ...inputStyle, fontFamily: "monospace" }} />
           </label>
-
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: ".75rem" }}>
             <label style={{ display: "flex", flexDirection: "column", gap: ".3rem" }}>
-              <span style={{ fontSize: ".75rem", fontWeight: 600, color: "var(--text-secondary)" }}>Tuần hiện tại</span>
-              <input
-                type="number" min={1} value={week}
-                onChange={(e) => setWeek(Number(e.target.value))}
-                style={{ padding: ".5rem .75rem", border: "1px solid var(--border)", borderRadius: 8, fontSize: ".85rem", background: "var(--bg-primary)", color: "var(--text-primary)" }}
-              />
+              <span style={{ fontSize: ".75rem", fontWeight: 600, color: "#464554", letterSpacing: "0.04em" }}>TUẦN</span>
+              <input type="number" min={1} value={week} onChange={(e) => setWeek(Number(e.target.value))} style={inputStyle} />
             </label>
             <label style={{ display: "flex", flexDirection: "column", gap: ".3rem" }}>
-              <span style={{ fontSize: ".75rem", fontWeight: 600, color: "var(--text-secondary)" }}>Giá / buổi (đ)</span>
-              <input
-                type="number" min={0} value={price}
-                onChange={(e) => setPrice(e.target.value)}
-                placeholder="0"
-                style={{ padding: ".5rem .75rem", border: "1px solid var(--border)", borderRadius: 8, fontSize: ".85rem", background: "var(--bg-primary)", color: "var(--text-primary)" }}
-              />
+              <span style={{ fontSize: ".75rem", fontWeight: 600, color: "#464554", letterSpacing: "0.04em" }}>GIÁ / BUỔI (đ)</span>
+              <input type="number" min={0} value={price} onChange={(e) => setPrice(e.target.value)} placeholder="0" style={inputStyle} />
             </label>
           </div>
-
           <label style={{ display: "flex", flexDirection: "column", gap: ".3rem" }}>
-            <span style={{ fontSize: ".75rem", fontWeight: 600, color: "var(--text-secondary)" }}>Loại khoá học</span>
-            <select
-              value={courseType}
-              onChange={(e) => setCourseType(e.target.value as Student["courseType"])}
-              style={{ padding: ".5rem .75rem", border: "1px solid var(--border)", borderRadius: 8, fontSize: ".85rem", background: "var(--bg-primary)", color: "var(--text-primary)" }}
-            >
+            <span style={{ fontSize: ".75rem", fontWeight: 600, color: "#464554", letterSpacing: "0.04em" }}>LOẠI KHOÁ HỌC</span>
+            <select value={courseType} onChange={(e) => setCourseType(e.target.value as Student["courseType"])} style={inputStyle}>
               <option value="per-session">1-1 buổi lẻ</option>
               <option value="group">Lớp nhóm</option>
               <option value="package">Trọn gói</option>
             </select>
           </label>
-
-          {err && <p style={{ fontSize: ".78rem", color: "#C4622D", margin: 0 }}>{err}</p>}
-
+          {err && <p style={{ fontSize: ".78rem", color: "#ba1a1a", margin: 0 }}>{err}</p>}
           <button
             type="submit"
             disabled={saving}
-            style={{
-              padding: ".6rem 1rem",
-              background: "var(--accent-primary, #C4622D)",
-              color: "#fff",
-              border: "none",
-              borderRadius: 8,
-              fontWeight: 600,
-              fontSize: ".85rem",
-              cursor: saving ? "not-allowed" : "pointer",
-              opacity: saving ? .7 : 1,
-            }}
+            className="silk-button"
+            style={{ padding: ".65rem 1rem", color: "#fff", border: "none", borderRadius: 10, fontWeight: 600, fontSize: ".85rem", cursor: saving ? "not-allowed" : "pointer", opacity: saving ? .7 : 1, letterSpacing: "0.04em" }}
           >
-            {saving ? "Đang lưu…" : "Thêm học viên"}
+            {saving ? "Đang lưu…" : "THÊM HỌC VIÊN"}
           </button>
         </form>
       </div>
@@ -347,13 +288,12 @@ export default function AdminDashboardClient() {
   const { bookings, loading: bookingsLoading } = useBookings();
   const { classes, loading: classesLoading } = useClasses();
 
-  const [search, setSearch] = useState(""); // K6
-  const [addOpen, setAddOpen] = useState(false); // K7
+  const [search, setSearch] = useState("");
+  const [addOpen, setAddOpen] = useState(false);
 
   const todayDayName = DAYS_EN[new Date().getDay()];
   const date = todayStr();
 
-  // Stats
   const activeStudents = students.filter((s) => !s.frozen);
   const frozenCount = students.filter((s) => s.frozen).length;
   const pendingCount = bookings.filter((b) => b.status === "pending").length;
@@ -370,13 +310,11 @@ export default function AdminDashboardClient() {
     return best;
   }, null);
 
-  // Today's classes
   const todayClasses = useMemo(
     () => classes.filter((cls) => cls.weeklySchedule?.some((s) => s.day === todayDayName)),
     [classes, todayDayName]
   );
 
-  // Students sorted for cards (active first, by week desc)
   const sortedActive = useMemo(() => {
     const q = search.trim().toLowerCase();
     const filtered = q
@@ -390,69 +328,105 @@ export default function AdminDashboardClient() {
   const loading = studentsLoading || bookingsLoading || classesLoading;
 
   return (
-    <div className="space-y-6">
-      {/* Greeting */}
-      <div className="flex items-center justify-between gap-3 flex-wrap">
-        <div>
-          <h1 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>Dashboard</h1>
-          <p className="mt-0.5 text-sm" style={{ color: "var(--text-secondary)" }}>
-            Chào mừng trở lại, thầy Hiếu! · {new Date().toLocaleDateString("vi-VN", { weekday: "long", day: "numeric", month: "numeric" })}
-          </p>
-        </div>
-        <LiveIndicator />
+    <div className="space-y-8" style={{ fontFamily: "var(--font-admin-sans)" }}>
+
+      {/* Page title */}
+      <div>
+        <h1
+          className="text-4xl font-bold"
+          style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)", letterSpacing: "-0.01em" }}
+        >
+          Dashboard
+        </h1>
       </div>
 
-      {/* Stat cards */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <StatCard emoji="👥" value={loading ? "..." : activeStudents.length}
-          label="Đang học" href="/admin/students" accent />
-        <StatCard emoji="🏫" value={loading ? "..." : classes.length}
-          label="Lớp học" href="/admin/classes" />
-        <StatCard emoji="📅" value={loading ? "..." : pendingCount || "0"}
-          label={pendingCount > 0 ? "Lịch chờ ⚠️" : "Pending bookings"}
-          href="/admin/bookings" accent={pendingCount > 0} />
-        <StatCard emoji="🎯" value={loading ? "..." : (avgScore ?? "—")}
-          label="Điểm TB" href="/admin/progress" />
+      {/* ── Stat cards ── */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+        {[
+          { icon: "group",          value: loading ? "…" : activeStudents.length, label: "Đang học",        num: "01", href: "/admin/students",  color: "#4441c4" },
+          { icon: "school",         value: loading ? "…" : classes.length,        label: "Lớp học",         num: "02", href: "/admin/classes",   color: "#565e71" },
+          { icon: "event_available",value: loading ? "…" : (pendingCount || "0"), label: "Pending bookings",num: "03", href: "/admin/bookings",  color: "#555460" },
+          { icon: "track_changes",  value: loading ? "…" : (avgScore ?? "—"),     label: "Điểm TB",         num: "04", href: "/admin/progress",  color: "#ba1a1a" },
+        ].map((item) => (
+          <Link key={item.href} href={item.href} className="block">
+            <div className="silk-card p-5 rounded-2xl flex flex-col justify-between h-[130px] hover:scale-[1.02] transition-all">
+              <div className="flex justify-between items-start">
+                <span
+                  className="material-symbols-outlined text-[22px] p-2 rounded-xl"
+                  style={{ color: item.color, background: `${item.color}10`, fontVariationSettings: "'wght' 300" }}
+                >
+                  {item.icon}
+                </span>
+                <span className="text-xs font-bold opacity-30" style={{ color: "var(--text-primary)" }}>{item.num}</span>
+              </div>
+              <div>
+                <h3
+                  className="text-4xl font-bold leading-none"
+                  style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}
+                >
+                  {item.value}
+                </h3>
+                <p className="text-xs mt-1 font-semibold tracking-wider opacity-60" style={{ color: "var(--text-secondary)" }}>
+                  {item.label}
+                </p>
+              </div>
+            </div>
+          </Link>
+        ))}
       </div>
 
-      {/* Best student + frozen alert */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      {/* ── Highlights row ── */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
         {bestEntry && (
-          <div className="rounded-xl p-4 border flex items-center gap-4"
-            style={{ background: "rgba(176,125,26,0.06)", borderColor: "rgba(176,125,26,0.25)" }}>
-            <span className="text-3xl">🏆</span>
+          <div className="silk-card col-span-2 p-7 rounded-2xl flex items-center gap-7 border-l-[6px] border-[#4441c4]">
+            <div className="p-5 rounded-full" style={{ background: "rgba(68,65,196,0.06)" }}>
+              <span className="material-symbols-outlined text-5xl" style={{ color: "#4441c4", fontVariationSettings: "'FILL' 1" }}>
+                emoji_events
+              </span>
+            </div>
             <div>
-              <p className="text-xs font-medium mb-0.5" style={{ color: "var(--accent-primary)" }}>
-                Điểm cao nhất
-              </p>
-              <p className="font-semibold" style={{ color: "var(--text-primary)" }}>{bestEntry.name}</p>
-              <p className="text-sm" style={{ color: "var(--text-secondary)" }}>{bestEntry.score} điểm TOEIC</p>
+              <span className="text-xs font-bold tracking-widest uppercase" style={{ color: "#4441c4" }}>Điểm cao nhất</span>
+              <h3
+                className="text-xl font-semibold mt-1 mb-0.5"
+                style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}
+              >
+                {bestEntry.name}
+              </h3>
+              <p className="text-sm italic" style={{ color: "rgba(68,65,196,0.7)" }}>{bestEntry.score} điểm TOEIC</p>
             </div>
           </div>
         )}
+
         {frozenCount > 0 && (
-          <Link href="/admin/students"
-            className="rounded-xl p-4 border flex items-center gap-4 hover:opacity-80 transition-opacity"
-            style={{ background: "rgba(99,179,237,0.06)", borderColor: "rgba(99,179,237,0.25)" }}>
-            <span className="text-3xl">🧊</span>
-            <div>
-              <p className="text-xs font-medium mb-0.5" style={{ color: "rgb(56,139,180)" }}>
-                Đóng băng
-              </p>
-              <p className="font-semibold" style={{ color: "var(--text-primary)" }}>
-                {frozenCount} học viên
-              </p>
-              <p className="text-sm" style={{ color: "var(--text-secondary)" }}>Đang tạm dừng học</p>
+          <Link href="/admin/students" className="block">
+            <div className="silk-card p-7 rounded-2xl flex items-center gap-5 hover:scale-[1.02] transition-all h-full">
+              <div className="p-4 rounded-2xl" style={{ background: "rgba(218,226,248,0.4)" }}>
+                <span className="material-symbols-outlined text-4xl" style={{ color: "#565e71" }}>ac_unit</span>
+              </div>
+              <div>
+                <span className="text-xs font-bold tracking-widest uppercase" style={{ color: "#565e71" }}>Đóng băng</span>
+                <h3 className="text-lg font-medium mt-1" style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}>
+                  {frozenCount} học viên
+                </h3>
+                <p className="text-xs mt-0.5 opacity-60" style={{ color: "var(--text-secondary)" }}>Đang tạm dừng học</p>
+              </div>
             </div>
           </Link>
         )}
       </div>
 
-      {/* Today's classes (attendance embedded) */}
+      {/* ── Today's classes ── */}
       {!loading && todayClasses.length > 0 && (
-        <div>
-          <h2 className="text-sm font-semibold mb-3" style={{ color: "var(--text-secondary)" }}>
-            📅 Lớp học hôm nay · {DAYS_VI[todayDayName]}
+        <div className="space-y-4">
+          <h2
+            className="flex items-center gap-2 text-xl font-semibold"
+            style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}
+          >
+            <span className="material-symbols-outlined text-[20px]" style={{ color: "var(--text-muted)", fontVariationSettings: "'wght' 300" }}>
+              today
+            </span>
+            Lớp học hôm nay
+            <span className="text-sm font-normal opacity-50">· {DAYS_VI[todayDayName]}</span>
           </h2>
           <div className="space-y-3">
             {todayClasses.map((cls) => (
@@ -467,55 +441,61 @@ export default function AdminDashboardClient() {
         </div>
       )}
 
-      {/* Student cards grid */}
+      {/* ── Student cards grid ── */}
       {!loading && (
-        <div>
-          {/* K6: search + K7: add button */}
-          <div className="flex items-center gap-2 mb-3 flex-wrap">
-            <h2 className="text-sm font-semibold" style={{ color: "var(--text-secondary)" }}>
-              👥 Học viên đang học ({activeStudents.length})
-            </h2>
-            <div className="flex-1 min-w-[140px]">
-              <input
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                placeholder="Tìm tên / mã…"
-                style={{
-                  width: "100%",
-                  padding: ".35rem .65rem",
-                  border: "1px solid var(--border)",
-                  borderRadius: 8,
-                  fontSize: ".8rem",
-                  background: "var(--bg-primary)",
-                  color: "var(--text-primary)",
-                }}
-              />
-            </div>
-            <button
-              onClick={() => setAddOpen(true)}
-              style={{
-                padding: ".35rem .85rem",
-                background: "var(--accent-primary, #C4622D)",
-                color: "#fff",
-                border: "none",
-                borderRadius: 8,
-                fontWeight: 600,
-                fontSize: ".8rem",
-                cursor: "pointer",
-                whiteSpace: "nowrap",
-              }}
+        <div className="space-y-5">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <h2
+              className="flex items-center gap-2 text-xl font-semibold"
+              style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}
             >
-              + Thêm
-            </button>
-            <Link href="/admin/students" className="text-xs hover:underline"
-              style={{ color: "var(--accent-primary)" }}>
-              Xem tất cả →
-            </Link>
+              <span className="material-symbols-outlined text-[20px]" style={{ color: "var(--text-muted)", fontVariationSettings: "'wght' 300" }}>
+                person_search
+              </span>
+              Học viên đang học
+              <span className="text-sm font-normal opacity-40">({activeStudents.length})</span>
+            </h2>
+
+            <div className="flex items-center gap-2 flex-1 md:max-w-sm">
+              <div className="relative flex-1">
+                <input
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  placeholder="Tìm tên / mã..."
+                  className="silk-inset"
+                  style={{
+                    width: "100%",
+                    padding: ".6rem 1rem .6rem 2.5rem",
+                    border: "none",
+                    borderRadius: 12,
+                    fontSize: ".85rem",
+                    background: "#ffffff",
+                    color: "#1a1c20",
+                    fontFamily: "var(--font-admin-sans)",
+                    outline: "none",
+                  }}
+                />
+                <span
+                  className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] pointer-events-none"
+                  style={{ color: "#777585", fontVariationSettings: "'wght' 300" }}
+                >
+                  search
+                </span>
+              </div>
+              <button
+                onClick={() => setAddOpen(true)}
+                className="silk-button flex items-center gap-1.5 px-4 py-2.5 text-white rounded-xl hover:opacity-90 active:scale-95 transition-all"
+                style={{ fontSize: ".82rem", fontWeight: 700, letterSpacing: "0.04em", whiteSpace: "nowrap" }}
+              >
+                <span className="material-symbols-outlined text-[16px]">add</span>
+                Thêm
+              </button>
+            </div>
           </div>
 
           {sortedActive.length > 0 ? (
             <>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
                 {sortedActive.slice(0, 12).map((student) => (
                   <StudentMiniCard
                     key={student.id}
@@ -524,15 +504,19 @@ export default function AdminDashboardClient() {
                 ))}
               </div>
               {sortedActive.length > 12 && (
-                <Link href="/admin/students"
-                  className="mt-3 block text-center text-xs py-2 rounded-lg border hover:opacity-80"
-                  style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
-                  Xem thêm {sortedActive.length - 12} học viên
-                </Link>
+                <div className="text-center pt-2">
+                  <Link
+                    href="/admin/students"
+                    className="text-sm font-semibold transition-colors hover:underline decoration-2 underline-offset-4"
+                    style={{ color: "#4441c4" }}
+                  >
+                    Xem tất cả học viên →
+                  </Link>
+                </div>
               )}
             </>
           ) : (
-            <p className="text-xs py-4 text-center" style={{ color: "var(--text-muted)" }}>
+            <p className="text-sm py-8 text-center" style={{ color: "var(--text-muted)" }}>
               {search ? "Không tìm thấy học viên." : "Chưa có học viên nào."}
             </p>
           )}
@@ -541,45 +525,59 @@ export default function AdminDashboardClient() {
 
       {addOpen && <AddStudentModal onClose={() => setAddOpen(false)} />}
 
-      {/* Quick links */}
-      <div>
-        <h2 className="text-sm font-semibold mb-3" style={{ color: "var(--text-secondary)" }}>
+      {/* ── Quick access ── */}
+      <div className="space-y-5">
+        <h2
+          className="flex items-center gap-2 text-xl font-semibold"
+          style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}
+        >
+          <span className="material-symbols-outlined text-[20px]" style={{ color: "var(--text-muted)", fontVariationSettings: "'wght' 300" }}>bolt</span>
           Truy cập nhanh
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
           {[
-            { href: "/admin/homework",   emoji: "📝", label: "Giao bài tập" },
-            { href: "/admin/scores",     emoji: "🎯", label: "Nhập điểm"    },
-            { href: "/admin/slots",      emoji: "⏰", label: "Tạo khung giờ" },
-            { href: "/admin/attendance", emoji: "✅", label: "Điểm danh"    },
+            { href: "/admin/homework",   icon: "assignment_add", label: "Giao bài tập", bg: "rgba(68,65,196,0.05)",  iconColor: "#4441c4" },
+            { href: "/admin/scores",     icon: "track_changes",  label: "Nhập điểm",    bg: "rgba(86,94,113,0.08)", iconColor: "#565e71", filled: true },
+            { href: "/admin/slots",      icon: "alarm_add",      label: "Tạo khung giờ",bg: "rgba(85,84,96,0.08)",  iconColor: "#555460" },
+            { href: "/admin/attendance", icon: "check_box",      label: "Điểm danh",    bg: "rgba(22,163,74,0.06)", iconColor: "rgb(22,163,74)", filled: true },
           ].map((item) => (
-            <Link key={item.href} href={item.href}
-              className="flex flex-col items-center gap-2 p-4 rounded-xl border text-center transition-all hover:opacity-80"
-              style={{ background: "var(--bg-elevated)", borderColor: "var(--border)", boxShadow: "var(--shadow-sm)" }}>
-              <span className="text-2xl">{item.emoji}</span>
-              <span className="text-xs font-medium" style={{ color: "var(--text-secondary)" }}>{item.label}</span>
+            <Link key={item.href} href={item.href} className="block">
+              <div className="silk-card p-7 rounded-2xl flex flex-col items-center justify-center gap-4 hover:bg-[#f3f3fa] transition-all cursor-pointer">
+                <div className="p-4 rounded-2xl" style={{ background: item.bg }}>
+                  <span
+                    className="material-symbols-outlined text-4xl"
+                    style={{ color: item.iconColor, fontVariationSettings: item.filled ? "'FILL' 1, 'wght' 300" : "'wght' 300" }}
+                  >
+                    {item.icon}
+                  </span>
+                </div>
+                <span className="text-xs font-semibold tracking-wider" style={{ color: "var(--text-primary)" }}>
+                  {item.label}
+                </span>
+              </div>
             </Link>
           ))}
         </div>
       </div>
 
-      {/* Pending bookings preview */}
+      {/* ── Pending bookings ── */}
       {pendingCount > 0 && (
-        <div className="rounded-xl p-4 border"
-          style={{ background: "rgba(245,158,11,0.06)", borderColor: "rgba(245,158,11,0.3)" }}>
-          <div className="flex items-center justify-between mb-2">
-            <p className="text-sm font-semibold" style={{ color: "rgb(180,120,0)" }}>
-              ⚠️ {pendingCount} lịch hẹn cần xử lý
+        <div
+          className="rounded-2xl p-5 border"
+          style={{ background: "rgba(245,158,11,0.05)", borderColor: "rgba(245,158,11,0.25)" }}
+        >
+          <div className="flex items-center justify-between mb-3">
+            <p className="text-sm font-semibold flex items-center gap-2" style={{ color: "rgb(161,110,0)" }}>
+              <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>warning</span>
+              {pendingCount} lịch hẹn cần xử lý
             </p>
-            <Link href="/admin/bookings" className="text-xs font-medium"
-              style={{ color: "var(--accent-primary)" }}>
+            <Link href="/admin/bookings" className="text-xs font-semibold hover:underline" style={{ color: "#4441c4" }}>
               Xem tất cả →
             </Link>
           </div>
           <div className="space-y-2">
             {bookings.filter((b) => b.status === "pending").slice(0, 3).map((b) => (
-              <div key={b.id} className="flex items-center justify-between text-sm"
-                style={{ color: "var(--text-secondary)" }}>
+              <div key={b.id} className="flex items-center justify-between text-sm" style={{ color: "var(--text-secondary)" }}>
                 <span>{b.studentName}</span>
                 <span style={{ color: "var(--text-muted)" }}>
                   {new Date(b.date).toLocaleDateString("vi-VN")} · {b.time}
@@ -589,6 +587,37 @@ export default function AdminDashboardClient() {
           </div>
         </div>
       )}
+
+      {/* ── CTA banner ── */}
+      <div
+        className="relative overflow-hidden rounded-3xl p-10 text-white silk-card"
+        style={{ background: "#1a1c20" }}
+      >
+        <div className="relative z-10 md:w-2/3">
+          <h3
+            className="text-2xl font-semibold mb-3"
+            style={{ fontFamily: "var(--font-admin-serif)" }}
+          >
+            Sẵn sàng cho khóa học mới?
+          </h3>
+          <p className="text-sm mb-7 opacity-60 max-w-md leading-relaxed">
+            Phân tích dữ liệu học tập và tối ưu hóa giáo án của bạn chỉ trong vài bước đơn giản.
+          </p>
+          <Link
+            href="/admin/students"
+            className="inline-block px-6 py-2.5 bg-white text-[#1a1c20] text-sm font-bold rounded-xl hover:scale-105 transition-transform"
+            style={{ letterSpacing: "0.04em" }}
+          >
+            KHÁM PHÁ NGAY
+          </Link>
+        </div>
+        <div className="absolute right-6 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
+          <span className="material-symbols-outlined" style={{ fontSize: "10rem", fontVariationSettings: "'FILL' 1" }}>
+            auto_awesome
+          </span>
+        </div>
+      </div>
+
     </div>
   );
 }

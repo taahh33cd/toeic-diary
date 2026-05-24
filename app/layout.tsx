@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, JetBrains_Mono, Syne, Lora, Be_Vietnam_Pro } from "next/font/google";
+import { DM_Sans, JetBrains_Mono, Syne, Lora, Be_Vietnam_Pro, Noto_Serif, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { FirebaseBridgeProvider } from "@/components/shared/FirebaseBridgeProvider";
 import { ToastProvider } from "@/components/shared/Toast";
@@ -45,6 +45,21 @@ const beVietnamPro = Be_Vietnam_Pro({
   style: ["normal", "italic"],
 });
 
+// ── Admin "Silk & Alexandria" fonts ─────────────────────
+const notoSerif = Noto_Serif({
+  subsets: ["latin", "vietnamese"],
+  variable: "--font-noto-serif",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-plus-jakarta",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
 // ── Metadata ──────────────────────────────────────
 export const metadata: Metadata = {
   title: {
@@ -80,6 +95,7 @@ export default function RootLayout({
       // sẽ add class "dark" trước khi React hydrate
     >
       <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />
         {/* Theme init script — chạy TRƯỚC khi React render để tránh flash */}
         <script
           dangerouslySetInnerHTML={{
@@ -99,7 +115,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${dmSans.variable} ${jetbrainsMono.variable} ${syne.variable} ${lora.variable} ${beVietnamPro.variable}`}
+        className={`${dmSans.variable} ${jetbrainsMono.variable} ${syne.variable} ${lora.variable} ${beVietnamPro.variable} ${notoSerif.variable} ${plusJakarta.variable}`}
         suppressHydrationWarning
       >
         <FirebaseBridgeProvider />

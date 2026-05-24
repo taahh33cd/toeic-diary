@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Sidebar } from "@/components/admin/Sidebar";
 import { MobileNav } from "@/components/admin/MobileNav";
+import { AdminTopBar } from "@/components/admin/AdminTopBar";
 
 export const metadata: Metadata = {
   title: {
@@ -18,7 +19,11 @@ export default function AdminLayout({
   return (
     <div
       className="theme-admin min-h-screen flex"
-      style={{ background: "var(--bg-primary)", color: "var(--text-primary)" }}
+      style={{
+        background: "var(--bg-primary)",
+        color: "var(--text-primary)",
+        fontFamily: "var(--font-admin-sans)",
+      }}
     >
       {/* ── Skip to main content ── */}
       <a
@@ -27,17 +32,23 @@ export default function AdminLayout({
       >
         Chuyển đến nội dung chính
       </a>
+
       {/* ── Sidebar (desktop) ── */}
       <Sidebar role="admin" />
 
       {/* ── Main content ── */}
-      <div className="flex-1 flex flex-col min-w-0">
+      <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         {/* Mobile top bar + drawer */}
         <MobileNav role="admin" />
 
+        {/* Desktop sticky top bar */}
+        <AdminTopBar />
+
         {/* Page content */}
-        <main id="main-content" className="flex-1 p-4 md:p-6 overflow-auto">
-          {children}
+        <main id="main-content" className="flex-1 overflow-auto">
+          <div className="p-6 md:p-8 max-w-[1400px] mx-auto">
+            {children}
+          </div>
         </main>
       </div>
     </div>
