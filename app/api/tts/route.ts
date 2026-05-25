@@ -1,17 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 
 /**
- * Q1 — ElevenLabs Text-to-Speech
+ * TTS — Google Cloud Text-to-Speech Neural2-F
  * POST /api/tts  { text: string }
  * Returns { audioContent: string } — base64-encoded MP3
  *
- * Requires env var: ELEVENLABS_API_KEY
- * Voice: Rachel (21m00Tcm4TlvDq8ikWAM) — clear American English, tự nhiên
- * Model: eleven_turbo_v2_5 — nhanh, phù hợp từ đơn lẻ
+ * Requires env var: GOOGLE_TTS_KEY
+ * Voice: en-US-Neural2-F — clear American English female
  */
 
-const VOICE_ID = "21m00Tcm4TlvDq8ikWAM"; // Rachel — American English
-const MODEL_ID = "eleven_turbo_v2_5";
+const TTS_URL = "https://texttospeech.googleapis.com/v1/text:synthesize";
 
 export async function POST(request: NextRequest) {
   const { text } = (await request.json().catch(() => ({}))) as { text?: string };
@@ -20,43 +18,30 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "text required" }, { status: 400 });
   }
 
-  const apiKey = process.env.ELEVENLABS_API_KEY;
+  const apiKey = process.env.GOOGLE_TTS_KEY;
   if (!apiKey) {
     // Graceful degradation — client sẽ fallback về Web Speech API
     return NextResponse.json({ error: "TTS not configured" }, { status: 503 });
   }
 
-  const res = await fetch(
-    `https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`,
-    {
-      method: "POST",
-      headers: {
-        "xi-api-key": apiKey,
-        "Content-Type": "application/json",
-        Accept: "audio/mpeg",
-      },
-      body: JSON.stringify({
-        text: text.trim(),
-        model_id: MODEL_ID,
-        voice_settings: {
-          stability: 0.5,
-          similarity_boost: 0.75,
-          style: 0,
-          use_speaker_boost: true,
-        },
-      }),
-    }
-  );
+  const res = await fetch(`${TTS_URL}?key=${apiKey}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      input: { text: text.trim() },
+      voice: { languageCode: "en-US", name: "en-US-Neural2-F" },
+      audioConfig: { audioEncoding: "MP3" },
+    }),
+  });
 
   if (!res.ok) {
     const errText = await res.text().catch(() => "");
-    console.error("[/api/tts] ElevenLabs error:", res.status, errText);
+    console.error("[/api/tts] Google TTS error:", res.status, errText);
     return NextResponse.json({ error: "TTS upstream error" }, { status: 502 });
   }
 
-  // Convert binary MP3 → base64 (giữ nguyên interface với client)
-  const arrayBuffer = await res.arrayBuffer();
-  const base64 = Buffer.from(arrayBuffer).toString("base64");
+  // Google TTS trả về { audioContent: base64 } trực tiếp
+  const { audioContent } = await res.json();
 
-  return NextResponse.json({ audioContent: base64 });
+  return NextResponse.json({ audioContent });
 }
