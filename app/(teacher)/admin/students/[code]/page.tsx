@@ -906,12 +906,19 @@ function ModulesSection({ student, code }: { student: Student; code: string }) {
 
 // ─── 10. Personal Homework ────────────────────────────────────────────────────
 
-const HW_SECTIONS: { key: keyof Omit<Homework, "id" | "date" | "endDate">; label: string; emoji: string }[] = [
-  { key: "vocab", label: "Từ vựng", emoji: "📖" },
-  { key: "listening", label: "Nghe", emoji: "🎧" },
-  { key: "reading", label: "Đọc", emoji: "📄" },
-  { key: "practice", label: "Luyện tập", emoji: "✏️" },
-  { key: "other", label: "Khác", emoji: "📌" },
+const HW_SECTIONS: {
+  key: keyof Omit<Homework, "id" | "date" | "endDate">;
+  label: string;
+  emoji: string;
+  color: string;
+  hint?: string;
+}[] = [
+  { key: "vocab",    label: "Từ vựng",      emoji: "📖", color: "#3B82F6" },
+  { key: "reading",  label: "Đọc",          emoji: "📄", color: "#10B981" },
+  { key: "listening",label: "Nghe",         emoji: "🎧", color: "#F97316" },
+  { key: "other",    label: "Khác",         emoji: "📌", color: "#8B5CF6" },
+  { key: "practice", label: "Đề luyện thi", emoji: "✏️", color: "#EF4444",
+    hint: "Học viên mở đề → làm → nộp link → nhập điểm ở Tab Điểm số" },
 ];
 
 type HwSectionKey = keyof Omit<Homework, "id" | "date" | "endDate">;
@@ -919,7 +926,6 @@ type HwSectionKey = keyof Omit<Homework, "id" | "date" | "endDate">;
 interface HwFormState {
   date: string;
   endDate: string;
-  label: string;
   sections: Record<HwSectionKey, HwItem[]>;
 }
 
@@ -927,9 +933,87 @@ function emptyHwForm(): HwFormState {
   return {
     date: today(),
     endDate: "",
-    label: "",
     sections: { vocab: [], listening: [], reading: [], practice: [], other: [] },
   };
+}
+
+// ─── Rich-text toolbar input ──────────────────────────────────────────────────
+
+function RichTextInput({ value, onChange, placeholder }: {
+  value: string;
+  onChange: (v: string) => void;
+  placeholder?: string;
+}) {
+  const ref = useRef<HTMLTextAreaElement>(null);
+
+  function wrap(tag: string) {
+    const el = ref.current;
+    if (!el) return;
+    const s = el.selectionStart, e = el.selectionEnd;
+    const sel = el.value.slice(s, e);
+    const newVal = el.value.slice(0, s) + `<${tag}>${sel}</${tag}>` + el.value.slice(e);
+    onChange(newVal);
+    setTimeout(() => {
+      el.focus();
+      const cur = s + `<${tag}>`.length + sel.length;
+      el.setSelectionRange(cur, cur);
+    }, 0);
+  }
+
+  return (
+    <div style={{ border: "1px solid var(--border)", borderRadius: 8, overflow: "hidden" }}>
+      <div className="flex gap-1 px-2 py-1" style={{ background: "var(--bg-elevated)", borderBottom: "1px solid var(--border)" }}>
+        {[
+          { tag: "b",    label: "B",  s: { fontWeight: 700 } },
+          { tag: "i",    label: "I",  s: { fontStyle: "italic" } },
+          { tag: "u",    label: "U",  s: { textDecoration: "underline" } },
+          { tag: "mark", label: "HL", s: { background: "#fef08a", color: "#000", padding: "0 2px" } },
+        ].map(({ tag, label, s }) => (
+          <button
+            key={tag}
+            type="button"
+            onMouseDown={(e) => { e.preventDefault(); wrap(tag); }}
+            className="text-[11px] px-1.5 py-0.5 rounded font-semibold"
+            style={{ border: "1px solid var(--border)", background: "var(--bg-primary)", cursor: "pointer", color: "var(--text-primary)", ...s }}
+          >{label}</button>
+        ))}
+        <span className="text-[10px] self-center ml-1" style={{ color: "var(--text-muted)" }}>Bôi đen → format</span>
+      </div>
+      <textarea
+        ref={ref}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder}
+        rows={2}
+        className="w-full px-3 py-2 text-xs outline-none resize-none"
+        style={{ background: "var(--bg-primary)", color: "var(--text-primary)" }}
+      />
+    </div>
+  );
+}
+
+// ─── Homework progress helper ─────────────────────────────────────────────────
+
+const HW_KEYS = ["vocab", "listening", "reading", "practice", "other"] as const;
+
+function calcHwProgress(
+  hw: Homework,
+  submissions: Record<string, { ticked?: boolean; url?: string }>,
+  dayLinks: Record<string, { link?: string }>,
+) {
+  let total = 0;
+  for (const k of HW_KEYS) total += hw[k]?.length ?? 0;
+  if (total === 0) return { done: 0, total: 0 };
+  if (dayLinks[hw.id]?.link) return { done: total, total };
+  let done = 0;
+  for (const k of HW_KEYS) {
+    const items = hw[k] ?? [];
+    for (let i = 0; i < items.length; i++) {
+      const sub = submissions[`${hw.id}_${k}_${i}`];
+      if (sub?.ticked || sub?.url) done++;
+    }
+  }
+  return { done, total };
 }
 
 function HwModal({ initial, onSave, onClose }: {
@@ -941,9 +1025,9 @@ function HwModal({ initial, onSave, onClose }: {
   const [saving, setSaving] = useState(false);
 
   function addItem(sec: HwSectionKey) {
-    setForm((f) => ({ ...f, sections: { ...f.sections, [sec]: [...f.sections[sec], { text: "", link: "" }] } }));
+    setForm((f) => ({ ...f, sections: { ...f.sections, [sec]: [...f.sections[sec], { text: "", link: "", desc: "" }] } }));
   }
-  function updateItem(sec: HwSectionKey, idx: number, field: "text" | "link", val: string) {
+  function updateItem(sec: HwSectionKey, idx: number, field: "text" | "link" | "desc", val: string) {
     setForm((f) => {
       const items = [...f.sections[sec]];
       items[idx] = { ...items[idx], [field]: val };
@@ -964,42 +1048,83 @@ function HwModal({ initial, onSave, onClose }: {
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center p-4 overflow-y-auto" style={{ background: "rgba(0,0,0,0.5)" }}>
       <div className="w-full max-w-lg my-8 rounded-2xl" style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)" }}>
+        {/* Header */}
         <div className="flex items-center justify-between px-5 py-4 border-b" style={{ borderColor: "var(--border)" }}>
-          <h3 className="font-bold" style={{ color: "var(--text-primary)" }}>📋 Bài tập về nhà</h3>
+          <h3 className="font-bold" style={{ color: "var(--accent-primary)" }}>📋 Thêm BTVN</h3>
           <button onClick={onClose} className="text-xl" style={{ color: "var(--text-muted)" }}>×</button>
         </div>
+
         <div className="p-5 space-y-4">
-          <InputRow label="TÊN / LABEL BÀI TẬP">
-            <Input value={form.label} onChange={(v) => setForm((f) => ({ ...f, label: v }))} placeholder="TOEIC PART 1_BCBT 15-28" />
-          </InputRow>
+          {/* Dates */}
           <div className="grid grid-cols-2 gap-3">
             <InputRow label="NGÀY BẮT ĐẦU">
               <Input value={form.date} onChange={(v) => setForm((f) => ({ ...f, date: v }))} type="date" />
             </InputRow>
-            <InputRow label="NGÀY KẾT THÚC (TUỲ CHỌN)">
+            <InputRow label="NGÀY KẾT THÚC (để trống = 1 ngày)">
               <Input value={form.endDate} onChange={(v) => setForm((f) => ({ ...f, endDate: v }))} type="date" />
             </InputRow>
           </div>
 
-          {HW_SECTIONS.map(({ key, label, emoji }) => (
+          {/* Sections */}
+          {HW_SECTIONS.map(({ key, label, emoji, color, hint }) => (
             <div key={key}>
-              <div className="flex items-center justify-between mb-1.5">
-                <span className="text-xs font-semibold" style={{ color: "var(--text-secondary)" }}>{emoji} {label}</span>
-                <button onClick={() => addItem(key)} className="text-xs px-2 py-0.5 rounded-lg flex items-center gap-1" style={{ color: "var(--accent-primary)", background: "rgba(196,98,45,0.08)" }}>
+              {/* Section header */}
+              <div className="flex items-center justify-between mb-2 pb-1.5 border-b" style={{ borderColor: "var(--border)" }}>
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full shrink-0" style={{ background: color }} />
+                  <span className="text-xs font-bold uppercase tracking-wider" style={{ color }}>{emoji} {label.toUpperCase()}</span>
+                </div>
+                <button
+                  onClick={() => addItem(key)}
+                  className="text-xs px-2 py-0.5 rounded-lg flex items-center gap-1"
+                  style={{ color: "var(--accent-primary)", background: "rgba(196,98,45,0.08)" }}
+                >
                   <Plus size={10} /> Thêm mục
                 </button>
               </div>
+
+              {hint && (
+                <p className="text-[10px] mb-2 px-2 py-1 rounded" style={{ color: color, background: `${color}12` }}>
+                  {hint}
+                </p>
+              )}
+
               {form.sections[key].length === 0 ? (
-                <p className="text-xs" style={{ color: "var(--text-muted)" }}>Chưa có mục nào</p>
+                <button
+                  onClick={() => addItem(key)}
+                  className="w-full text-xs py-1.5 rounded-lg border-dashed border"
+                  style={{ borderColor: "var(--border)", color: "var(--text-muted)", background: "transparent" }}
+                >
+                  + Thêm mục
+                </button>
               ) : (
-                <div className="space-y-1.5">
+                <div className="space-y-3">
                   {form.sections[key].map((item, idx) => (
                     <div key={idx} className="flex gap-2 items-start">
-                      <div className="flex-1 space-y-1">
-                        <input value={item.text} onChange={(e) => updateItem(key, idx, "text", e.target.value)} placeholder="Tên mục..." className="w-full px-2 py-1.5 text-xs rounded-lg border outline-none" style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }} />
-                        <input value={item.link ?? ""} onChange={(e) => updateItem(key, idx, "link", e.target.value)} placeholder="Link (tuỳ chọn)..." className="w-full px-2 py-1.5 text-xs rounded-lg border outline-none" style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }} />
+                      <div className="flex-1 space-y-1.5">
+                        <RichTextInput
+                          value={item.text}
+                          onChange={(v) => updateItem(key, idx, "text", v)}
+                          placeholder="Nội dung bài tập..."
+                        />
+                        <input
+                          value={item.link ?? ""}
+                          onChange={(e) => updateItem(key, idx, "link", e.target.value)}
+                          placeholder="Link (paste vào đây)"
+                          className="w-full px-2 py-1.5 text-xs rounded-lg border outline-none"
+                          style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }}
+                        />
+                        <input
+                          value={item.desc ?? ""}
+                          onChange={(e) => updateItem(key, idx, "desc", e.target.value)}
+                          placeholder="+ Mô tả (tuỳ chọn)"
+                          className="w-full px-2 py-1.5 text-xs rounded-lg border outline-none"
+                          style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-muted)" }}
+                        />
                       </div>
-                      <button onClick={() => removeItem(key, idx)} className="mt-1 p-1 hover:opacity-70" style={{ color: "rgb(239,68,68)" }}><Trash2 size={12} /></button>
+                      <button onClick={() => removeItem(key, idx)} className="mt-1 p-1 hover:opacity-70 shrink-0" style={{ color: "rgb(239,68,68)" }}>
+                        <Trash2 size={12} />
+                      </button>
                     </div>
                   ))}
                 </div>
@@ -1007,10 +1132,11 @@ function HwModal({ initial, onSave, onClose }: {
             </div>
           ))}
         </div>
+
         <div className="flex gap-2 justify-end px-5 py-4 border-t" style={{ borderColor: "var(--border)" }}>
           <button onClick={onClose} className="px-4 py-2 rounded-xl text-sm border" style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}>Hủy</button>
           <button onClick={handleSave} disabled={saving || !form.date} className="px-4 py-2 rounded-xl text-sm font-semibold disabled:opacity-50" style={{ background: "var(--accent-primary)", color: "#fff" }}>
-            {saving ? "Đang lưu..." : "Lưu bài tập"}
+            {saving ? "Đang lưu..." : "💾 Lưu BTVN"}
           </button>
         </div>
       </div>
@@ -1018,26 +1144,42 @@ function HwModal({ initial, onSave, onClose }: {
   );
 }
 
-function PersonalHWSection({ homework, code }: { homework: Homework[]; code: string }) {
-  const [filter, setFilter] = useState<"all" | "active" | "expired">("all");
+function PersonalHWSection({
+  homework,
+  code,
+  submissions,
+  dayLinks,
+}: {
+  homework: Homework[];
+  code: string;
+  submissions: Record<string, { ticked?: boolean; url?: string; updatedAt?: string }>;
+  dayLinks: Record<string, { link?: string }>;
+}) {
+  const [filter, setFilter] = useState<"active" | "all" | "done" | "expired">("all");
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
   const [modal, setModal] = useState<{ mode: "add" | "edit"; initial: HwFormState; editId?: string } | null>(null);
   const [deleting, setDeleting] = useState<string | null>(null);
 
   const todayStr = today();
 
-  const filtered = homework.filter((hw) => {
-    if (filter === "all") return true;
-    const end = hw.endDate ?? hw.date;
-    if (filter === "active") return end >= todayStr;
-    return end < todayStr;
-  });
+  function isDone(hw: Homework) {
+    const { done, total } = calcHwProgress(hw, submissions, dayLinks);
+    return total > 0 && done === total;
+  }
 
   const counts = {
-    all: homework.length,
-    active: homework.filter((hw) => (hw.endDate ?? hw.date) >= todayStr).length,
+    all:     homework.length,
+    active:  homework.filter((hw) => (hw.endDate ?? hw.date) >= todayStr).length,
+    done:    homework.filter(isDone).length,
     expired: homework.filter((hw) => (hw.endDate ?? hw.date) < todayStr).length,
   };
+
+  const filtered = homework.filter((hw) => {
+    if (filter === "all")     return true;
+    if (filter === "active")  return (hw.endDate ?? hw.date) >= todayStr;
+    if (filter === "done")    return isDone(hw);
+    return (hw.endDate ?? hw.date) < todayStr;
+  });
 
   function toggle(id: string) {
     setExpanded((s) => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; });
@@ -1045,8 +1187,10 @@ function PersonalHWSection({ homework, code }: { homework: Homework[]; code: str
 
   function formFromHw(hw: Homework): HwFormState {
     const sections: Record<HwSectionKey, HwItem[]> = { vocab: [], listening: [], reading: [], practice: [], other: [] };
-    HW_SECTIONS.forEach(({ key }) => { sections[key] = (hw[key] ?? []).map((i) => ({ text: i.text, link: i.link ?? "" })); });
-    return { date: hw.date, endDate: hw.endDate ?? "", label: "", sections };
+    HW_SECTIONS.forEach(({ key }) => {
+      sections[key] = (hw[key] ?? []).map((i) => ({ text: i.text, link: i.link ?? "", desc: i.desc ?? "" }));
+    });
+    return { date: hw.date, endDate: hw.endDate ?? "", sections };
   }
 
   async function handleSaveHw(form: HwFormState, editId?: string) {
@@ -1057,11 +1201,14 @@ function PersonalHWSection({ homework, code }: { homework: Homework[]; code: str
     } as Homework;
     HW_SECTIONS.forEach(({ key }) => {
       const items = form.sections[key].filter((i) => i.text.trim());
-      if (items.length > 0) hwBase[key] = items.map((i) => ({ text: i.text, ...(i.link ? { link: i.link } : {}) }));
+      if (items.length > 0) hwBase[key] = items.map((i) => ({
+        text: i.text,
+        ...(i.link ? { link: i.link } : {}),
+        ...(i.desc ? { desc: i.desc } : {}),
+      }));
     });
-    const hw = hwBase;
-    if (editId) await updateHomework(code, editId, hw);
-    else await pushHomework(code, hw);
+    if (editId) await updateHomework(code, editId, hwBase);
+    else await pushHomework(code, hwBase);
     setModal(null);
   }
 
@@ -1071,6 +1218,13 @@ function PersonalHWSection({ homework, code }: { homework: Homework[]; code: str
     await deleteHomework(code, hwId);
     setDeleting(null);
   }
+
+  const FILTER_TABS: { key: typeof filter; label: string }[] = [
+    { key: "active",  label: `Đang học ${counts.active}` },
+    { key: "all",     label: `Tất cả ${counts.all}` },
+    { key: "done",    label: `✓ Hoàn thành ${counts.done}` },
+    { key: "expired", label: `⏰ Hết hạn ${counts.expired}` },
+  ];
 
   return (
     <>
@@ -1096,18 +1250,18 @@ function PersonalHWSection({ homework, code }: { homework: Homework[]; code: str
       >
         <div className="space-y-3">
           {/* Filter tabs */}
-          <div className="flex gap-1">
-            {(["all", "active", "expired"] as const).map((f) => (
+          <div className="flex flex-wrap gap-1">
+            {FILTER_TABS.map(({ key, label }) => (
               <button
-                key={f}
-                onClick={() => setFilter(f)}
+                key={key}
+                onClick={() => setFilter(key)}
                 className="text-xs px-2.5 py-1 rounded-lg font-medium"
                 style={{
-                  background: filter === f ? "var(--accent-primary)" : "var(--border)",
-                  color: filter === f ? "#fff" : "var(--text-secondary)",
+                  background: filter === key ? "var(--accent-primary)" : "var(--border)",
+                  color: filter === key ? "#fff" : "var(--text-secondary)",
                 }}
               >
-                {f === "all" ? "Tất cả" : f === "active" ? "Đang học" : "Hết hạn"} {counts[f]}
+                {label}
               </button>
             ))}
           </div>
@@ -1120,68 +1274,138 @@ function PersonalHWSection({ homework, code }: { homework: Homework[]; code: str
 
           {filtered.map((hw) => {
             const isExp = (hw.endDate ?? hw.date) < todayStr;
-            const allItems = HW_SECTIONS.flatMap(({ key }) => hw[key] ?? []);
-            const label = hw.endDate ? `${fmtDate(hw.date)} → ${fmtDate(hw.endDate)}` : fmtDate(hw.date);
+            const { done, total } = calcHwProgress(hw, submissions, dayLinks);
+            const isCompleted = total > 0 && done === total;
+            const dayLink = dayLinks[hw.id]?.link;
+            const dateLabel = hw.endDate ? `${fmtDate(hw.date)} → ${fmtDate(hw.endDate)}` : fmtDate(hw.date);
             const isOpen = expanded.has(hw.id);
 
             return (
-              <div key={hw.id} className="rounded-xl border" style={{ borderColor: "var(--border)" }}>
+              <div key={hw.id} className="rounded-xl border overflow-hidden" style={{ borderColor: "var(--border)" }}>
+                {/* Row header */}
                 <div
                   className="flex items-center gap-2 px-3 py-2.5 cursor-pointer"
                   onClick={() => toggle(hw.id)}
-                  style={{ background: "var(--bg-primary)", borderRadius: isOpen ? "0.75rem 0.75rem 0 0" : "0.75rem" }}
+                  style={{ background: "var(--bg-primary)" }}
                 >
-                  <span className="text-xs font-medium flex-1" style={{ color: "var(--text-primary)" }}>
-                    {label}
-                  </span>
-                  <span
-                    className="text-[10px] px-1.5 py-0.5 rounded-full"
-                    style={{
-                      background: isExp ? "rgba(239,68,68,0.1)" : "rgba(16,185,129,0.1)",
-                      color: isExp ? "rgb(220,38,38)" : "rgb(5,150,105)",
-                    }}
-                  >
-                    {isExp ? "Hết hạn" : "Đang học"}
-                  </span>
-                  <span className="text-xs" style={{ color: "var(--text-muted)" }}>{allItems.length} mục</span>
+                  <div className="flex-1 min-w-0">
+                    <span className="text-xs font-medium" style={{ color: "var(--text-primary)" }}>{dateLabel}</span>
+                  </div>
+
+                  {/* Status badge */}
+                  {isCompleted ? (
+                    <span className="text-[10px] px-1.5 py-0.5 rounded-full font-semibold shrink-0"
+                      style={{ background: "rgba(16,185,129,0.12)", color: "rgb(5,150,105)" }}>
+                      ✓ Hoàn thành
+                    </span>
+                  ) : isExp ? (
+                    <span className="text-[10px] px-1.5 py-0.5 rounded-full shrink-0"
+                      style={{ background: "rgba(239,68,68,0.1)", color: "rgb(220,38,38)" }}>
+                      Hết hạn
+                    </span>
+                  ) : (
+                    <span className="text-[10px] px-1.5 py-0.5 rounded-full shrink-0"
+                      style={{ background: "rgba(16,185,129,0.1)", color: "rgb(5,150,105)" }}>
+                      Đang học
+                    </span>
+                  )}
+
+                  {/* Progress count */}
+                  {total > 0 && (
+                    <span className="text-[10px] font-semibold shrink-0"
+                      style={{ color: done === total ? "rgb(5,150,105)" : "var(--text-muted)" }}>
+                      {done}/{total} đã nộp
+                    </span>
+                  )}
+
                   <button
                     onClick={(e) => { e.stopPropagation(); setModal({ mode: "edit", initial: formFromHw(hw), editId: hw.id }); }}
-                    className="p-1 hover:opacity-70"
-                    style={{ color: "var(--text-muted)" }}
-                  >✏️</button>
+                    className="p-1 hover:opacity-70 shrink-0" style={{ color: "var(--text-muted)" }}
+                  >
+                    <ChevronDown size={12} style={{ display: "none" }} />✏️
+                  </button>
                   <button
                     onClick={(e) => { e.stopPropagation(); handleDelete(hw.id); }}
                     disabled={deleting === hw.id}
-                    className="p-1 hover:opacity-70 disabled:opacity-40"
+                    className="p-1 hover:opacity-70 disabled:opacity-40 shrink-0"
                     style={{ color: "rgb(239,68,68)" }}
                   ><Trash2 size={12} /></button>
-                  {isOpen ? <ChevronUp size={14} style={{ color: "var(--text-muted)" }} /> : <ChevronDown size={14} style={{ color: "var(--text-muted)" }} />}
+                  {isOpen
+                    ? <ChevronUp size={14} className="shrink-0" style={{ color: "var(--text-muted)" }} />
+                    : <ChevronDown size={14} className="shrink-0" style={{ color: "var(--text-muted)" }} />}
                 </div>
 
+                {/* Expanded detail */}
                 {isOpen && (
-                  <div className="px-3 pb-3 pt-2 border-t space-y-2" style={{ borderColor: "var(--border)" }}>
-                    {HW_SECTIONS.map(({ key, emoji, label: secLabel }) => {
-                      const items = hw[key] ?? [];
-                      if (items.length === 0) return null;
-                      return (
-                        <div key={key}>
-                          <p className="text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>{emoji} {secLabel}</p>
-                          {items.map((item, idx) => (
-                            <div key={idx} className="flex items-start gap-2 ml-3">
-                              <span className="text-xs" style={{ color: "var(--text-muted)" }}>•</span>
-                              <span className="text-xs" style={{ color: "var(--text-primary)" }}>
-                                {item.text}
-                                {item.link && (
-                                  <a href={item.link} target="_blank" rel="noopener noreferrer" className="ml-1 inline-flex items-center gap-0.5" style={{ color: "var(--accent-primary)" }}>
-                                    <ExternalLink size={10} />
-                                  </a>
-                                )}
-                              </span>
+                  <div className="border-t" style={{ borderColor: "var(--border)" }}>
+                    {/* Day link row */}
+                    <div className="flex items-center gap-2 px-3 py-2 border-b text-xs"
+                      style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}>
+                      <span className="font-semibold" style={{ color: "var(--text-secondary)" }}>🔗 LINK TỔNG HỢP:</span>
+                      {dayLink ? (
+                        <a href={dayLink} target="_blank" rel="noopener noreferrer"
+                          className="truncate flex-1" style={{ color: "var(--accent-primary)" }}>
+                          {dayLink}
+                        </a>
+                      ) : (
+                        <span style={{ color: "var(--text-muted)" }}>Chưa nộp</span>
+                      )}
+                    </div>
+
+                    {/* Per-section items */}
+                    <div className="px-3 py-3 space-y-3">
+                      {HW_SECTIONS.map(({ key, label: secLabel, color }) => {
+                        const items = hw[key] ?? [];
+                        if (items.length === 0) return null;
+                        return (
+                          <div key={key}>
+                            <p className="text-[10px] font-bold uppercase tracking-wider mb-1.5"
+                              style={{ color }}>
+                              {secLabel}
+                            </p>
+                            <div className="space-y-1.5">
+                              {items.map((item, idx) => {
+                                const subKey = `${hw.id}_${key}_${idx}`;
+                                const sub = submissions[subKey];
+                                const subDone = !!(sub?.ticked || sub?.url);
+                                const subTime = sub?.updatedAt
+                                  ? new Date(sub.updatedAt).toLocaleString("vi-VN", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" })
+                                  : null;
+                                return (
+                                  <div key={idx} className="flex items-start gap-2 py-1.5 px-2 rounded-lg"
+                                    style={{ background: subDone ? "rgba(16,185,129,0.04)" : "var(--bg-primary)", border: "1px solid var(--border)" }}>
+                                    <div className="flex-1 min-w-0">
+                                      <span
+                                        className="text-xs"
+                                        style={{ color: "var(--text-primary)" }}
+                                        dangerouslySetInnerHTML={{ __html: item.text }}
+                                      />
+                                      {item.link && (
+                                        <a href={item.link} target="_blank" rel="noopener noreferrer"
+                                          className="ml-2 inline-flex items-center gap-0.5 text-[10px] px-1.5 py-0.5 rounded"
+                                          style={{ background: "rgba(196,98,45,0.1)", color: "var(--accent-primary)" }}>
+                                          Bài tập <ExternalLink size={9} />
+                                        </a>
+                                      )}
+                                      {item.desc && (
+                                        <p className="text-[10px] mt-0.5" style={{ color: "var(--text-muted)" }}>{item.desc}</p>
+                                      )}
+                                    </div>
+                                    {subDone ? (
+                                      <span className="text-[10px] shrink-0 font-semibold" style={{ color: "rgb(5,150,105)" }}>
+                                        ✓ Đã hoàn thành{subTime ? ` · ${subTime}` : ""}
+                                      </span>
+                                    ) : (
+                                      <span className="text-[10px] shrink-0" style={{ color: "var(--text-muted)" }}>—</span>
+                                    )}
+                                  </div>
+                                );
+                              })}
                             </div>
-                          ))}
-                        </div>
-                      );
-                    })}
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 )}
               </div>
@@ -1301,6 +1525,7 @@ export default function StudentEditorPage() {
   const { student, loading } = useStudent(code);
   const { homework } = useHomework(code);
   const { dayLinks } = useDayLinks(code);
+  const { submissions } = useSubmissions(code);
 
   const [freezing, setFreezing] = useState(false);
   const [deleting, setDeleting] = useState(false);
@@ -1422,14 +1647,18 @@ export default function StudentEditorPage() {
           <SendNotifSection student={student} code={code} />
           <ToeicScoresSection student={student} code={code} />
           <ErrorLogSection student={student} />
-          <HomeworkProgressSection homework={homework} dayLinks={dayLinks} />
+          <PersonalHWSection
+            homework={homework}
+            code={code}
+            submissions={submissions}
+            dayLinks={dayLinks}
+          />
         </div>
 
         {/* Right column (1/3 width) */}
         <div className="space-y-5">
           <StudentLinkSection code={code} />
           <ModulesSection student={student} code={code} />
-          <PersonalHWSection homework={homework} code={code} />
           <PersonalScheduleSection student={student} code={code} />
         </div>
       </div>

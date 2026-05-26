@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useCallback, useEffect } from "react";
+import { useState, useMemo, useCallback, useEffect, useRef } from "react";
 import { get, ref as dbRef } from "firebase/database";
 import { firebaseDb } from "@/lib/firebase/client";
 import { useParams, useRouter } from "next/navigation";
@@ -214,45 +214,73 @@ function AttBadge({ status }: { status: AttendanceStatus | undefined }) {
 
 // ─── Homework Modal ───────────────────────────────────────────────────────────
 
-type TaskDraft = { id: string; category: string; text: string; link: string };
-
-const CATEGORIES = [
-  { key: "vocab", label: "Từ vựng" },
-  { key: "listening", label: "Nghe" },
-  { key: "reading", label: "Đọc" },
-  { key: "practice", label: "Luyện đề" },
-  { key: "other", label: "Khác" },
-];
-
 type HwCatKey = "vocab" | "reading" | "listening" | "practice" | "other";
 
-function getCatItems(hw: Homework, key: HwCatKey): HwItem[] {
-  return hw[key] ?? [];
+const HW_CATS: { key: HwCatKey; label: string; color: string; hint?: string }[] = [
+  { key: "vocab",    label: "Từ vựng",      color: "#3B82F6" },
+  { key: "reading",  label: "Đọc",          color: "#10B981" },
+  { key: "listening",label: "Nghe",         color: "#F97316" },
+  { key: "other",    label: "Khác",         color: "#8B5CF6" },
+  { key: "practice", label: "Đề luyện thi", color: "#EF4444",
+    hint: "Học viên mở đề → làm → nộp link → nhập điểm ở Tab Điểm số" },
+];
+
+type HwItemDraft = { text: string; link: string; desc: string };
+type HwSections = Record<HwCatKey, HwItemDraft[]>;
+
+function emptyHwSections(): HwSections {
+  return { vocab: [], reading: [], listening: [], practice: [], other: [] };
 }
 
-function hwToTasks(hw: Homework): TaskDraft[] {
-  const tasks: TaskDraft[] = [];
-  let i = 0;
-  for (const cat of CATEGORIES) {
-    const items = getCatItems(hw, cat.key as HwCatKey);
-    for (const item of items) {
-      tasks.push({ id: `t${i++}`, category: cat.key, text: item.text, link: item.link ?? "" });
-    }
+function hwToSections(hw: Homework): HwSections {
+  const s = emptyHwSections();
+  for (const cat of HW_CATS) {
+    s[cat.key] = (hw[cat.key] ?? []).map((i) => ({ text: i.text, link: i.link ?? "", desc: i.desc ?? "" }));
   }
-  return tasks;
+  return s;
 }
 
-function tasksToHw(id: string, date: string, endDate: string, tasks: TaskDraft[]): Homework {
+function sectionsToHw(id: string, date: string, endDate: string, sections: HwSections): Homework {
   const hw: Homework = { id, date, endDate: endDate || undefined };
-  for (const cat of CATEGORIES) {
-    const items = tasks
-      .filter((t) => t.category === cat.key && t.text.trim())
-      .map((t) => ({ text: t.text.trim(), ...(t.link.trim() ? { link: t.link.trim() } : {}) }));
-    if (items.length > 0) {
-      hw[cat.key as HwCatKey] = items;
-    }
+  for (const cat of HW_CATS) {
+    const items = sections[cat.key]
+      .filter((i) => i.text.trim())
+      .map((i) => ({
+        text: i.text.trim(),
+        ...(i.link.trim() ? { link: i.link.trim() } : {}),
+        ...(i.desc.trim() ? { desc: i.desc.trim() } : {}),
+      }));
+    if (items.length > 0) hw[cat.key] = items;
   }
   return hw;
+}
+
+function RichText({ value, onChange, placeholder }: { value: string; onChange: (v: string) => void; placeholder?: string }) {
+  const ref = useRef<HTMLTextAreaElement>(null);
+  function wrap(tag: string) {
+    const el = ref.current; if (!el) return;
+    const s = el.selectionStart, e = el.selectionEnd;
+    const sel = el.value.slice(s, e);
+    onChange(el.value.slice(0, s) + `<${tag}>${sel}</${tag}>` + el.value.slice(e));
+    setTimeout(() => { el.focus(); const c = s + `<${tag}>`.length + sel.length; el.setSelectionRange(c, c); }, 0);
+  }
+  return (
+    <div style={{ border: "1px solid var(--border)", borderRadius: 8, overflow: "hidden" }}>
+      <div className="flex gap-1 px-2 py-1" style={{ background: "var(--bg-elevated)", borderBottom: "1px solid var(--border)" }}>
+        {[["b","B"],["i","I"],["u","U"],["mark","HL"]].map(([tag, label]) => (
+          <button key={tag} type="button" onMouseDown={(e) => { e.preventDefault(); wrap(tag); }}
+            className="text-[11px] px-1.5 py-0.5 rounded font-semibold"
+            style={{ border: "1px solid var(--border)", background: "var(--bg-primary)", cursor: "pointer", color: "var(--text-primary)" }}>
+            {label}
+          </button>
+        ))}
+        <span className="text-[10px] self-center ml-1" style={{ color: "var(--text-muted)" }}>Bôi đen → format</span>
+      </div>
+      <textarea ref={ref} value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder}
+        rows={2} className="w-full px-3 py-2 text-xs outline-none resize-none"
+        style={{ background: "var(--bg-primary)", color: "var(--text-primary)" }} />
+    </div>
+  );
 }
 
 function HomeworkModal({
@@ -266,134 +294,91 @@ function HomeworkModal({
 }) {
   const [date, setDate] = useState(initial?.date ?? today());
   const [endDate, setEndDate] = useState(initial?.endDate ?? "");
-  const [tasks, setTasks] = useState<TaskDraft[]>(
-    initial ? hwToTasks(initial) : [{ id: "t0", category: "other", text: "", link: "" }]
-  );
+  const [sections, setSections] = useState<HwSections>(initial ? hwToSections(initial) : emptyHwSections());
   const [saving, setSaving] = useState(false);
 
-  function addTask() {
-    setTasks((prev) => [
-      ...prev,
-      { id: `t${Date.now()}`, category: "other", text: "", link: "" },
-    ]);
+  function addItem(key: HwCatKey) {
+    setSections((s) => ({ ...s, [key]: [...s[key], { text: "", link: "", desc: "" }] }));
   }
-
-  function removeTask(id: string) {
-    setTasks((prev) => prev.filter((t) => t.id !== id));
+  function updateItem(key: HwCatKey, idx: number, field: keyof HwItemDraft, val: string) {
+    setSections((s) => { const items = [...s[key]]; items[idx] = { ...items[idx], [field]: val }; return { ...s, [key]: items }; });
   }
-
-  function updateTask(id: string, field: keyof TaskDraft, value: string) {
-    setTasks((prev) =>
-      prev.map((t) => (t.id === id ? { ...t, [field]: value } : t))
-    );
+  function removeItem(key: HwCatKey, idx: number) {
+    setSections((s) => ({ ...s, [key]: s[key].filter((_, i) => i !== idx) }));
   }
 
   async function handleSave() {
     if (!date) return;
     setSaving(true);
-    const hw = tasksToHw(initial?.id ?? `hw${Date.now()}`, date, endDate, tasks);
-    await onSave(hw);
+    await onSave(sectionsToHw(initial?.id ?? `hw${Date.now()}`, date, endDate, sections));
     setSaving(false);
     onClose();
   }
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+    <div className="fixed inset-0 z-50 flex items-start justify-center p-4 overflow-y-auto"
       style={{ background: "rgba(0,0,0,0.5)" }}
-      onClick={(e) => e.target === e.currentTarget && onClose()}
-    >
-      <div
-        className="w-full max-w-lg rounded-2xl border shadow-xl overflow-hidden"
-        style={{ background: "var(--bg-elevated)", borderColor: "var(--border)" }}
-      >
-        <div
-          className="flex items-center justify-between px-5 py-4 border-b"
-          style={{ borderColor: "var(--border)" }}
-        >
-          <h3 className="font-semibold" style={{ color: "var(--text-primary)" }}>
+      onClick={(e) => e.target === e.currentTarget && onClose()}>
+      <div className="w-full max-w-lg my-8 rounded-2xl border shadow-xl overflow-hidden"
+        style={{ background: "var(--bg-elevated)", borderColor: "var(--border)" }}>
+        <div className="flex items-center justify-between px-5 py-4 border-b" style={{ borderColor: "var(--border)" }}>
+          <h3 className="font-bold" style={{ color: "var(--accent-primary)" }}>
             {initial ? "Sửa BTVN lớp" : "Thêm BTVN lớp"}
           </h3>
-          <button onClick={onClose} style={{ color: "var(--text-muted)" }}>
-            <X size={18} />
-          </button>
+          <button onClick={onClose} style={{ color: "var(--text-muted)" }}><X size={18} /></button>
         </div>
 
         <div className="p-5 space-y-4 max-h-[70vh] overflow-y-auto">
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>
-                Ngày giao
-              </label>
+              <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>NGÀY BẮT ĐẦU</label>
               <TextInput type="date" value={date} onChange={setDate} />
             </div>
             <div>
-              <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>
-                Deadline (tuỳ chọn)
-              </label>
+              <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>NGÀY KẾT THÚC (để trống = 1 ngày)</label>
               <TextInput type="date" value={endDate} onChange={setEndDate} />
             </div>
           </div>
 
-          <div className="space-y-2">
-            <div className="flex items-center justify-between">
-              <p className="text-xs font-medium" style={{ color: "var(--text-secondary)" }}>
-                Nội dung bài tập
-              </p>
-              <Btn onClick={addTask} size="xs">
-                <Plus size={12} /> Thêm task
-              </Btn>
-            </div>
-
-            {tasks.map((task) => (
-              <div key={task.id} className="flex gap-2 items-start">
-                <select
-                  value={task.category}
-                  onChange={(e) => updateTask(task.id, "category", e.target.value)}
-                  className="px-2 py-2 rounded-lg text-xs border outline-none shrink-0"
-                  style={{
-                    background: "var(--bg-primary)",
-                    borderColor: "var(--border)",
-                    color: "var(--text-secondary)",
-                  }}
-                >
-                  {CATEGORIES.map((c) => (
-                    <option key={c.key} value={c.key}>
-                      {c.label}
-                    </option>
-                  ))}
-                </select>
-                <div className="flex-1 space-y-1">
-                  <TextInput
-                    value={task.text}
-                    onChange={(v) => updateTask(task.id, "text", v)}
-                    placeholder="Nội dung..."
-                  />
-                  <TextInput
-                    value={task.link}
-                    onChange={(v) => updateTask(task.id, "link", v)}
-                    placeholder="Link (tuỳ chọn)"
-                  />
+          {HW_CATS.map(({ key, label, color, hint }) => (
+            <div key={key}>
+              <div className="flex items-center justify-between mb-2 pb-1.5 border-b" style={{ borderColor: "var(--border)" }}>
+                <div className="flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full shrink-0" style={{ background: color }} />
+                  <span className="text-xs font-bold uppercase tracking-wider" style={{ color }}>{label}</span>
                 </div>
-                <button
-                  onClick={() => removeTask(task.id)}
-                  className="mt-2 shrink-0"
-                  style={{ color: "var(--text-muted)" }}
-                >
-                  <Trash2 size={14} />
-                </button>
+                <Btn onClick={() => addItem(key)} size="xs"><Plus size={10} /> Thêm mục</Btn>
               </div>
-            ))}
-          </div>
+              {hint && <p className="text-[10px] mb-2 px-2 py-1 rounded" style={{ color, background: `${color}12` }}>{hint}</p>}
+              {sections[key].length === 0 ? (
+                <button onClick={() => addItem(key)} className="w-full text-xs py-1.5 rounded-lg border-dashed border"
+                  style={{ borderColor: "var(--border)", color: "var(--text-muted)", background: "transparent" }}>
+                  + Thêm mục
+                </button>
+              ) : (
+                <div className="space-y-3">
+                  {sections[key].map((item, idx) => (
+                    <div key={idx} className="flex gap-2 items-start">
+                      <div className="flex-1 space-y-1.5">
+                        <RichText value={item.text} onChange={(v) => updateItem(key, idx, "text", v)} placeholder="Nội dung bài tập..." />
+                        <TextInput value={item.link} onChange={(v) => updateItem(key, idx, "link", v)} placeholder="Link (paste vào đây)" />
+                        <TextInput value={item.desc} onChange={(v) => updateItem(key, idx, "desc", v)} placeholder="+ Mô tả (tuỳ chọn)" />
+                      </div>
+                      <button onClick={() => removeItem(key, idx)} className="mt-1 shrink-0" style={{ color: "rgb(239,68,68)" }}>
+                        <Trash2 size={14} />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
 
-        <div
-          className="flex justify-end gap-2 px-5 py-4 border-t"
-          style={{ borderColor: "var(--border)" }}
-        >
+        <div className="flex justify-end gap-2 px-5 py-4 border-t" style={{ borderColor: "var(--border)" }}>
           <Btn onClick={onClose}>Huỷ</Btn>
           <Btn onClick={handleSave} variant="primary" disabled={!date || saving}>
-            {saving ? "Đang lưu..." : "Lưu"}
+            {saving ? "Đang lưu..." : "💾 Lưu BTVN"}
           </Btn>
         </div>
       </div>
