@@ -91,6 +91,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
   const [finalScore, setFinalScore] = useState<number | null>(null);
 
   const [vocabItems, setVocabItems] = useState<VocabItem[] | null>(null);
+  const vocabFetchStartedRef = useRef(false);
 
   const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
 
@@ -248,6 +249,16 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
     }
   }
 
+  useEffect(() => {
+    if (showSubmit) triggerFetchVocab();
+  }, [showSubmit]);
+
+  function triggerFetchVocab() {
+    if (vocabFetchStartedRef.current) return;
+    vocabFetchStartedRef.current = true;
+    void fetchVocab();
+  }
+
   async function fetchVocab() {
     try {
       const res = await fetch("/api/ai/extract-vocabulary", {
@@ -281,7 +292,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
       ),
       timeSpentSeconds: getTimeSpent(sessionStart),
     });
-    void fetchVocab();
+    triggerFetchVocab(); // fallback nếu useEffect chưa kịp trigger
   }
 
   function renderWords(sentence: typeof sentencesWithBlanks[0]) {

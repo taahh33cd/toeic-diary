@@ -105,6 +105,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
   const [finalScore, setFinalScore] = useState<number | null>(null);
 
   const [vocabItems, setVocabItems] = useState<VocabItem[] | null>(null);
+  const vocabFetchStartedRef = useRef(false);
 
   const activeSentence = sentences[activeIdx];
   const replayCount = replayCounts[activeSentence?.id ?? ""] ?? 0;
@@ -292,6 +293,16 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     setSentenceStates((prev) => ({ ...prev, [sentenceId]: { ...prev[sentenceId], phase: "revealed", wordResults: results } }));
   }
 
+  useEffect(() => {
+    if (showSubmit || (isPart2 && part2AllDone)) triggerFetchVocab();
+  }, [showSubmit, part2AllDone]);
+
+  function triggerFetchVocab() {
+    if (vocabFetchStartedRef.current) return;
+    vocabFetchStartedRef.current = true;
+    void fetchVocab();
+  }
+
   async function fetchVocab() {
     try {
       const res = await fetch("/api/ai/extract-vocabulary", {
@@ -331,7 +342,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
       userAnswer: JSON.stringify(sentences.map((s) => ({ id: s.id, words: sentenceStates[s.id]?.wordResults?.map((w) => w.retryValue) ?? [] }))),
       timeSpentSeconds: getTimeSpent(sessionStart),
     });
-    void fetchVocab();
+    triggerFetchVocab(); // fallback nếu useEffect chưa kịp trigger
   }
 
   function renderBlankPlaceholder(sentence: Sentence) {

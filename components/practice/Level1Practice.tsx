@@ -105,6 +105,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
   const [part2AllDone, setPart2AllDone] = useState(false);
 
   const [vocabItems, setVocabItems] = useState<VocabItem[] | null>(null);
+  const vocabFetchStartedRef = useRef(false);
 
   const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
 
@@ -327,6 +328,18 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
     }
   }
 
+  // ── Vocab prefetch ───────────────────────────────────────────────────────────
+
+  useEffect(() => {
+    if (showSubmit || (isPart2 && part2AllDone)) triggerFetchVocab();
+  }, [showSubmit, part2AllDone]);
+
+  function triggerFetchVocab() {
+    if (vocabFetchStartedRef.current) return;
+    vocabFetchStartedRef.current = true;
+    void fetchVocab();
+  }
+
   // ── Submit ───────────────────────────────────────────────────────────────────
 
   async function fetchVocab() {
@@ -366,7 +379,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
       ),
       timeSpentSeconds: getTimeSpent(sessionStart),
     });
-    void fetchVocab();
+    triggerFetchVocab(); // fallback nếu useEffect chưa kịp trigger
   }
 
   // ── Sentence renderer ────────────────────────────────────────────────────────
