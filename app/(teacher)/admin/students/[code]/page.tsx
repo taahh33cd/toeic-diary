@@ -907,7 +907,7 @@ function ModulesSection({ student, code }: { student: Student; code: string }) {
 // ─── 10. Personal Homework ────────────────────────────────────────────────────
 
 const HW_SECTIONS: {
-  key: keyof Omit<Homework, "id" | "date" | "endDate">;
+  key: keyof Omit<Homework, "id" | "date" | "endDate" | "title">;
   label: string;
   emoji: string;
   color: string;
@@ -921,11 +921,12 @@ const HW_SECTIONS: {
     hint: "Học viên mở đề → làm → nộp link → nhập điểm ở Tab Điểm số" },
 ];
 
-type HwSectionKey = keyof Omit<Homework, "id" | "date" | "endDate">;
+type HwSectionKey = keyof Omit<Homework, "id" | "date" | "endDate" | "title">;
 
 interface HwFormState {
   date: string;
   endDate: string;
+  title: string;
   sections: Record<HwSectionKey, HwItem[]>;
 }
 
@@ -933,6 +934,7 @@ function emptyHwForm(): HwFormState {
   return {
     date: today(),
     endDate: "",
+    title: "",
     sections: { vocab: [], listening: [], reading: [], practice: [], other: [] },
   };
 }
@@ -1016,6 +1018,59 @@ function calcHwProgress(
   return { done, total };
 }
 
+// Per-item component to keep desc-toggle state local
+function HwItemRow({ item, onUpdate, onRemove }: {
+  item: HwItem;
+  onUpdate: (field: "text" | "link" | "desc", val: string) => void;
+  onRemove: () => void;
+}) {
+  const [showDesc, setShowDesc] = useState(!!(item.desc));
+  return (
+    <div className="space-y-1.5 rounded-lg p-2" style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}>
+      {/* Row 1: text + link + +Mô tả + X */}
+      <div className="flex gap-2 items-center">
+        <input
+          value={item.text}
+          onChange={(e) => onUpdate("text", e.target.value)}
+          placeholder="Nội dung bài tập..."
+          className="flex-1 min-w-0 px-2 py-1.5 text-xs rounded-lg border outline-none"
+          style={{ background: "var(--bg-elevated)", borderColor: "var(--border)", color: "var(--text-primary)" }}
+        />
+        <input
+          value={item.link ?? ""}
+          onChange={(e) => onUpdate("link", e.target.value)}
+          placeholder="Link (paste vào đây)"
+          className="w-44 px-2 py-1.5 text-xs rounded-lg border outline-none shrink-0"
+          style={{ background: "var(--bg-elevated)", borderColor: "var(--border)", color: "var(--text-primary)" }}
+        />
+        <button
+          type="button"
+          onClick={() => setShowDesc((v) => !v)}
+          className="text-[10px] px-2 py-1.5 rounded-lg border shrink-0 whitespace-nowrap"
+          style={{
+            borderColor: showDesc ? "var(--accent-primary)" : "var(--border)",
+            color: showDesc ? "var(--accent-primary)" : "var(--text-muted)",
+            background: showDesc ? "rgba(196,98,45,0.08)" : "transparent",
+          }}
+        >
+          {showDesc ? "✓ Mô tả" : "+ Mô tả"}
+        </button>
+        <button type="button" onClick={onRemove} className="p-1 shrink-0 hover:opacity-70" style={{ color: "rgb(239,68,68)" }}>
+          <Trash2 size={12} />
+        </button>
+      </div>
+      {/* Row 2: rich text desc (toggleable) */}
+      {showDesc && (
+        <RichTextInput
+          value={item.desc ?? ""}
+          onChange={(v) => onUpdate("desc", v)}
+          placeholder="Mô tả chi tiết (hỗ trợ B/I/U/HL)..."
+        />
+      )}
+    </div>
+  );
+}
+
 function HwModal({ initial, onSave, onClose }: {
   initial: HwFormState;
   onSave: (form: HwFormState) => Promise<void>;
@@ -1047,7 +1102,7 @@ function HwModal({ initial, onSave, onClose }: {
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center p-4 overflow-y-auto" style={{ background: "rgba(0,0,0,0.5)" }}>
-      <div className="w-full max-w-lg my-8 rounded-2xl" style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)" }}>
+      <div className="w-full max-w-2xl my-8 rounded-2xl" style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)" }}>
         {/* Header */}
         <div className="flex items-center justify-between px-5 py-4 border-b" style={{ borderColor: "var(--border)" }}>
           <h3 className="font-bold" style={{ color: "var(--accent-primary)" }}>📋 Thêm BTVN</h3>
@@ -1055,20 +1110,22 @@ function HwModal({ initial, onSave, onClose }: {
         </div>
 
         <div className="p-5 space-y-4">
-          {/* Dates */}
-          <div className="grid grid-cols-2 gap-3">
+          {/* Dates + Title */}
+          <div className="grid grid-cols-3 gap-3">
             <InputRow label="NGÀY BẮT ĐẦU">
               <Input value={form.date} onChange={(v) => setForm((f) => ({ ...f, date: v }))} type="date" />
             </InputRow>
             <InputRow label="NGÀY KẾT THÚC (để trống = 1 ngày)">
               <Input value={form.endDate} onChange={(v) => setForm((f) => ({ ...f, endDate: v }))} type="date" />
             </InputRow>
+            <InputRow label="TIÊU ĐỀ (TUỲ CHỌN)">
+              <Input value={form.title} onChange={(v) => setForm((f) => ({ ...f, title: v }))} placeholder="VD: Ngày 24/3 – 26/3" />
+            </InputRow>
           </div>
 
           {/* Sections */}
           {HW_SECTIONS.map(({ key, label, emoji, color, hint }) => (
             <div key={key}>
-              {/* Section header */}
               <div className="flex items-center justify-between mb-2 pb-1.5 border-b" style={{ borderColor: "var(--border)" }}>
                 <div className="flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full shrink-0" style={{ background: color }} />
@@ -1084,9 +1141,7 @@ function HwModal({ initial, onSave, onClose }: {
               </div>
 
               {hint && (
-                <p className="text-[10px] mb-2 px-2 py-1 rounded" style={{ color: color, background: `${color}12` }}>
-                  {hint}
-                </p>
+                <p className="text-[10px] mb-2 px-2 py-1 rounded" style={{ color, background: `${color}12` }}>{hint}</p>
               )}
 
               {form.sections[key].length === 0 ? (
@@ -1098,34 +1153,14 @@ function HwModal({ initial, onSave, onClose }: {
                   + Thêm mục
                 </button>
               ) : (
-                <div className="space-y-3">
+                <div className="space-y-2">
                   {form.sections[key].map((item, idx) => (
-                    <div key={idx} className="flex gap-2 items-start">
-                      <div className="flex-1 space-y-1.5">
-                        <RichTextInput
-                          value={item.text}
-                          onChange={(v) => updateItem(key, idx, "text", v)}
-                          placeholder="Nội dung bài tập..."
-                        />
-                        <input
-                          value={item.link ?? ""}
-                          onChange={(e) => updateItem(key, idx, "link", e.target.value)}
-                          placeholder="Link (paste vào đây)"
-                          className="w-full px-2 py-1.5 text-xs rounded-lg border outline-none"
-                          style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }}
-                        />
-                        <input
-                          value={item.desc ?? ""}
-                          onChange={(e) => updateItem(key, idx, "desc", e.target.value)}
-                          placeholder="+ Mô tả (tuỳ chọn)"
-                          className="w-full px-2 py-1.5 text-xs rounded-lg border outline-none"
-                          style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-muted)" }}
-                        />
-                      </div>
-                      <button onClick={() => removeItem(key, idx)} className="mt-1 p-1 hover:opacity-70 shrink-0" style={{ color: "rgb(239,68,68)" }}>
-                        <Trash2 size={12} />
-                      </button>
-                    </div>
+                    <HwItemRow
+                      key={idx}
+                      item={item}
+                      onUpdate={(field, val) => updateItem(key, idx, field, val)}
+                      onRemove={() => removeItem(key, idx)}
+                    />
                   ))}
                 </div>
               )}
@@ -1190,7 +1225,7 @@ function PersonalHWSection({
     HW_SECTIONS.forEach(({ key }) => {
       sections[key] = (hw[key] ?? []).map((i) => ({ text: i.text, link: i.link ?? "", desc: i.desc ?? "" }));
     });
-    return { date: hw.date, endDate: hw.endDate ?? "", sections };
+    return { date: hw.date, endDate: hw.endDate ?? "", title: hw.title ?? "", sections };
   }
 
   async function handleSaveHw(form: HwFormState, editId?: string) {
@@ -1198,6 +1233,7 @@ function PersonalHWSection({
       id: editId ?? `hw${Date.now()}`,
       date: form.date,
       endDate: form.endDate || undefined,
+      ...(form.title.trim() ? { title: form.title.trim() } : {}),
     } as Homework;
     HW_SECTIONS.forEach(({ key }) => {
       const items = form.sections[key].filter((i) => i.text.trim());
@@ -1289,7 +1325,10 @@ function PersonalHWSection({
                   style={{ background: "var(--bg-primary)" }}
                 >
                   <div className="flex-1 min-w-0">
-                    <span className="text-xs font-medium" style={{ color: "var(--text-primary)" }}>{dateLabel}</span>
+                    {hw.title && (
+                      <p className="text-xs font-semibold leading-tight" style={{ color: "var(--text-primary)" }}>{hw.title}</p>
+                    )}
+                    <span className="text-xs" style={{ color: hw.title ? "var(--text-muted)" : "var(--text-primary)" }}>{dateLabel}</span>
                   </div>
 
                   {/* Status badge */}
@@ -1378,8 +1417,7 @@ function PersonalHWSection({
                                       <span
                                         className="text-xs"
                                         style={{ color: "var(--text-primary)" }}
-                                        dangerouslySetInnerHTML={{ __html: item.text }}
-                                      />
+                                      >{item.text}</span>
                                       {item.link && (
                                         <a href={item.link} target="_blank" rel="noopener noreferrer"
                                           className="ml-2 inline-flex items-center gap-0.5 text-[10px] px-1.5 py-0.5 rounded"
@@ -1388,7 +1426,8 @@ function PersonalHWSection({
                                         </a>
                                       )}
                                       {item.desc && (
-                                        <p className="text-[10px] mt-0.5" style={{ color: "var(--text-muted)" }}>{item.desc}</p>
+                                        <p className="text-[10px] mt-0.5" style={{ color: "var(--text-muted)" }}
+                                          dangerouslySetInnerHTML={{ __html: item.desc }} />
                                       )}
                                     </div>
                                     {subDone ? (

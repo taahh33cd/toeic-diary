@@ -240,8 +240,13 @@ function hwToSections(hw: Homework): HwSections {
   return s;
 }
 
-function sectionsToHw(id: string, date: string, endDate: string, sections: HwSections): Homework {
-  const hw: Homework = { id, date, endDate: endDate || undefined };
+function sectionsToHw(id: string, date: string, endDate: string, sections: HwSections, title?: string): Homework {
+  const hw: Homework = {
+    id,
+    date,
+    endDate: endDate || undefined,
+    ...(title?.trim() ? { title: title.trim() } : {}),
+  };
   for (const cat of HW_CATS) {
     const items = sections[cat.key]
       .filter((i) => i.text.trim())
@@ -294,6 +299,7 @@ function HomeworkModal({
 }) {
   const [date, setDate] = useState(initial?.date ?? today());
   const [endDate, setEndDate] = useState(initial?.endDate ?? "");
+  const [title, setTitle] = useState(initial?.title ?? "");
   const [sections, setSections] = useState<HwSections>(initial ? hwToSections(initial) : emptyHwSections());
   const [saving, setSaving] = useState(false);
 
@@ -310,7 +316,7 @@ function HomeworkModal({
   async function handleSave() {
     if (!date) return;
     setSaving(true);
-    await onSave(sectionsToHw(initial?.id ?? `hw${Date.now()}`, date, endDate, sections));
+    await onSave(sectionsToHw(initial?.id ?? `hw${Date.now()}`, date, endDate, sections, title));
     setSaving(false);
     onClose();
   }
@@ -319,7 +325,7 @@ function HomeworkModal({
     <div className="fixed inset-0 z-50 flex items-start justify-center p-4 overflow-y-auto"
       style={{ background: "rgba(0,0,0,0.5)" }}
       onClick={(e) => e.target === e.currentTarget && onClose()}>
-      <div className="w-full max-w-lg my-8 rounded-2xl border shadow-xl overflow-hidden"
+      <div className="w-full max-w-2xl my-8 rounded-2xl border shadow-xl overflow-hidden"
         style={{ background: "var(--bg-elevated)", borderColor: "var(--border)" }}>
         <div className="flex items-center justify-between px-5 py-4 border-b" style={{ borderColor: "var(--border)" }}>
           <h3 className="font-bold" style={{ color: "var(--accent-primary)" }}>
@@ -329,7 +335,7 @@ function HomeworkModal({
         </div>
 
         <div className="p-5 space-y-4 max-h-[70vh] overflow-y-auto">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-3 gap-3">
             <div>
               <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>NGÀY BẮT ĐẦU</label>
               <TextInput type="date" value={date} onChange={setDate} />
@@ -337,6 +343,10 @@ function HomeworkModal({
             <div>
               <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>NGÀY KẾT THÚC (để trống = 1 ngày)</label>
               <TextInput type="date" value={endDate} onChange={setEndDate} />
+            </div>
+            <div>
+              <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>TIÊU ĐỀ (TUỲ CHỌN)</label>
+              <TextInput value={title} onChange={setTitle} placeholder="VD: Ngày 24/3 – 26/3" />
             </div>
           </div>
 
@@ -606,14 +616,20 @@ function ClassHomeworkSection({
         </p>
         <ul className="space-y-1">
           {items.map((item, i) => (
-            <li key={i} className="text-xs flex gap-1" style={{ color: "var(--text-primary)" }}>
-              <span style={{ color: "var(--text-muted)" }}>·</span>
-              {item.link ? (
-                <a href={item.link} target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">
-                  {item.text}
-                </a>
-              ) : (
-                item.text
+            <li key={i} className="text-xs" style={{ color: "var(--text-primary)" }}>
+              <div className="flex gap-1">
+                <span style={{ color: "var(--text-muted)" }}>·</span>
+                {item.link ? (
+                  <a href={item.link} target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">
+                    {item.text}
+                  </a>
+                ) : (
+                  item.text
+                )}
+              </div>
+              {item.desc && (
+                <p className="ml-3 text-[10px] mt-0.5" style={{ color: "var(--text-muted)" }}
+                  dangerouslySetInnerHTML={{ __html: item.desc }} />
               )}
             </li>
           ))}
@@ -656,9 +672,13 @@ function ClassHomeworkSection({
                     onClick={() => setExpanded(isOpen ? null : hw.id)}
                   >
                     <div>
-                      <p className="text-xs font-medium" style={{ color: "var(--text-primary)" }}>
-                        {fmtDate(hw.date)}
-                        {hw.endDate ? ` → ${fmtDate(hw.endDate)}` : ""}
+                      {hw.title && (
+                        <p className="text-xs font-semibold leading-tight" style={{ color: "var(--text-primary)" }}>
+                          {hw.title}
+                        </p>
+                      )}
+                      <p className="text-xs" style={{ color: hw.title ? "var(--text-muted)" : "var(--text-primary)" }}>
+                        {fmtDate(hw.date)}{hw.endDate ? ` → ${fmtDate(hw.endDate)}` : ""}
                       </p>
                       <p className="text-xs" style={{ color: "var(--text-muted)" }}>
                         {count} task{count !== 1 ? "s" : ""}
