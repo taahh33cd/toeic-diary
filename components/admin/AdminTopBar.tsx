@@ -18,6 +18,7 @@ export function AdminTopBar() {
         backdropFilter: "blur(12px)",
         WebkitBackdropFilter: "blur(12px)",
         borderColor: "rgba(199,196,214,0.3)",
+        viewTransitionName: "admin-topbar",
       }}
     >
       <p

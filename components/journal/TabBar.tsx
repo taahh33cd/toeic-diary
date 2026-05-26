@@ -40,6 +40,7 @@ export function JournalTabBar() {
         background: "var(--bg-elevated)",
         borderBottom: "1px solid var(--border)",
         boxShadow: "0 1px 4px rgba(44,30,15,.05)",
+        viewTransitionName: "journal-tabbar",
       }}
       aria-label="Journal navigation tabs"
     >

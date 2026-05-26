@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
+import { ViewTransition } from "react";
 import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { Brand } from "@/components/shared/Brand";
@@ -57,6 +58,7 @@ export default async function JournalLayout({
           background: "#3D2B1F",
           borderColor: "#2A1F15",
           boxShadow: "var(--shadow-sm)",
+          viewTransitionName: "journal-header",
           ["--text-primary" as string]: "#FFFFFF",
           ["--text-secondary" as string]: "rgba(255,255,255,0.72)",
           ["--bg-secondary" as string]: "rgba(255,255,255,0.08)",
@@ -79,7 +81,9 @@ export default async function JournalLayout({
 
       {/* ── Page content ── */}
       <main id="main-content" className="flex-1 max-w-[1400px] mx-auto w-full px-6 py-6">
-        {children}
+        <ViewTransition enter="journal-page" exit="journal-page">
+          {children}
+        </ViewTransition>
       </main>
 
       {/* ── Realtime notification watcher ── */}

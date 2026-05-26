@@ -1178,6 +1178,156 @@ a[aria-disabled="true"] {
   color: #3E7A52;
 }
 
+/* ═══════════════════════════════════════════════════════════
+   PAGE TRANSITIONS — View Transitions API
+   Enabled via experimental.viewTransition in next.config.ts.
+   Layouts wrap <main> in <ViewTransition enter="…" exit="…">.
+   Chrome anchors (header/sidebar) get view-transition-name and
+   are suppressed so they never slide.
+═══════════════════════════════════════════════════════════ */
+
+/* ── Timing variables ───────────────────────────────────── */
+:root {
+  --vt-exit:  150ms;
+  --vt-enter: 220ms;
+}
+
+/* ── Journal pages — fade + subtle slide-up ─────────────── */
+::view-transition-old(.journal-page) {
+  animation:
+    var(--vt-exit) ease-in     both vt-fade-out,
+    var(--vt-exit) ease-in     both vt-slide-up-out;
+}
+::view-transition-new(.journal-page) {
+  animation:
+    var(--vt-enter) ease-out   var(--vt-exit) both vt-fade-in,
+    var(--vt-enter) ease-out   var(--vt-exit) both vt-slide-up-in;
+}
+
+/* ── Admin pages — clean crossfade only ─────────────────── */
+::view-transition-old(.admin-page) {
+  animation: var(--vt-exit) ease-in both vt-fade-out;
+}
+::view-transition-new(.admin-page) {
+  animation: var(--vt-enter) ease-out var(--vt-exit) both vt-fade-in;
+}
+
+/* ── Anchor: journal header — stays fixed ───────────────── */
+::view-transition-group(journal-header) { animation: none; z-index: 100; }
+::view-transition-old(journal-header)   { display: none; }
+::view-transition-new(journal-header)   { animation: none; }
+
+/* ── Anchor: journal tab bar — stays fixed ──────────────── */
+::view-transition-group(journal-tabbar) { animation: none; z-index: 90; }
+::view-transition-old(journal-tabbar)   { display: none; }
+::view-transition-new(journal-tabbar)   { animation: none; }
+
+/* ── Anchor: admin sidebar — stays fixed ────────────────── */
+::view-transition-group(admin-sidebar) { animation: none; z-index: 100; }
+::view-transition-old(admin-sidebar)   { display: none; }
+::view-transition-new(admin-sidebar)   { animation: none; }
+
+/* ── Anchor: admin top bar — stays fixed ────────────────── */
+::view-transition-group(admin-topbar) { animation: none; z-index: 90; }
+::view-transition-old(admin-topbar)   { display: none; }
+::view-transition-new(admin-topbar)   { animation: none; }
+
+/* ── Keyframes ──────────────────────────────────────────── */
+@keyframes vt-fade-out   { from { opacity: 1; } to { opacity: 0; } }
+@keyframes vt-fade-in    { from { opacity: 0; } to { opacity: 1; } }
+@keyframes vt-slide-up-out { from { translate: 0 0; } to { translate: 0 -6px; } }
+@keyframes vt-slide-up-in  { from { translate: 0 10px; } to { translate: 0 0; } }
+
+/* ── Respect reduced motion ─────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay:    0s !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   HOVER ANIMATIONS
+   Subtle & Professional — lift, glow, icon nudge.
+   Uses !important only on hover overrides so inline styles
+   on active/interactive states are preserved.
+═══════════════════════════════════════════════════════════ */
+
+/* ── Journal tab bar links (inactive) ───────────────────── */
+.theme-journal nav a:not([aria-current="page"]):hover {
+  color:      var(--orange, #C4622D) !important;
+  background: rgba(196, 98, 45, 0.06) !important;
+  transform:  translateY(-1px);
+}
+
+/* ── Admin sidebar links (inactive) ─────────────────────── */
+.theme-admin aside nav a:not([aria-current="page"]):hover {
+  background: rgba(68, 65, 196, 0.12) !important;
+  color:      #c2c1ff !important;
+}
+.theme-admin aside nav a:not([aria-current="page"]):hover .material-symbols-outlined {
+  color: #c2c1ff !important;
+}
+
+/* ── Button — trailing icon nudge on hover ──────────────── */
+/* Any SVG or icon-font span LAST child inside a hovered btn */
+.btn:hover:not([disabled]) > svg:last-child,
+.btn:hover:not([disabled]) > span.material-symbols-outlined:last-child,
+.journal-btn-primary:hover:not([disabled]) > svg:last-child,
+.journal-btn-outline:hover:not([disabled]) > svg:last-child {
+  transform: translateX(3px);
+}
+
+/* ── Journal stat cards ─────────────────────────────────── */
+.journal-stat {
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.journal-stat:hover {
+  background:  var(--bg-primary, #F5EFE6);
+  transform:   translateY(-2px);
+  box-shadow:  0 4px 12px rgba(44, 30, 15, 0.07);
+}
+
+/* ── Journal history pips ───────────────────────────────── */
+.journal-h-pip {
+  transition: all 0.12s ease;
+}
+.journal-h-pip:hover {
+  border-color: var(--orange, #C4622D);
+  color:        var(--orange, #C4622D);
+  background:   rgba(196, 98, 45, 0.08);
+  transform:    translateY(-1px);
+}
+
+/* ── Journal score section hover lift ───────────────────── */
+.journal-score-big .n {
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+.journal-section:hover .journal-score-big .n {
+  transform: scale(1.03);
+}
+
+/* ── Journal schedule rows ──────────────────────────────── */
+.journal-sched-row {
+  transition: background 0.12s ease, border-color 0.12s ease, transform 0.12s ease;
+}
+.journal-sched-row:hover {
+  border-color: rgba(196, 98, 45, 0.3);
+  background:   rgba(196, 98, 45, 0.04);
+  transform:    translateX(2px);
+}
+
+/* ── Journal note block hover ───────────────────────────── */
+.journal-note-block {
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+.journal-note-block:hover {
+  background:  rgba(196, 98, 45, 0.08);
+  box-shadow:  0 2px 8px rgba(44, 30, 15, 0.06);
+}
+
 /* ─────────────────────────────────────────────────────────
    JOURNAL THEME — SHARP CORNER OVERRIDES
    All Tailwind rounded-* classes become square inside

@@ -7,6 +7,11 @@ const withBundleAnalyzer = withBundleAnalyzerFactory({
 });
 
 const nextConfig: NextConfig = {
+  // ── View Transitions (React 19.3 canary bundled by Next 16) ──────────
+  experimental: {
+    viewTransition: true,
+  },
+
   // ── Compression ───────────────────────────────────────────────────────
   compress: true,
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ViewTransition } from "react";
 import { Sidebar } from "@/components/admin/Sidebar";
 import { MobileNav } from "@/components/admin/MobileNav";
 import { AdminTopBar } from "@/components/admin/AdminTopBar";
@@ -47,7 +48,9 @@ export default function AdminLayout({
         {/* Page content */}
         <main id="main-content" className="flex-1 overflow-auto">
           <div className="p-6 md:p-8 max-w-[1400px] mx-auto">
-            {children}
+            <ViewTransition enter="admin-page" exit="admin-page">
+              {children}
+            </ViewTransition>
           </div>
         </main>
       </div>

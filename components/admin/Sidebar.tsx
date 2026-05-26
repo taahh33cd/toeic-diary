@@ -40,6 +40,7 @@ export function Sidebar({ role = "teacher" }: SidebarProps) {
         background: "var(--sidebar-bg, #1a1c20)",
         borderRight: "1px solid rgba(255,255,255,0.05)",
         fontFamily: "var(--font-admin-sans)",
+        viewTransitionName: "admin-sidebar",
       }}
     >
       {/* Brand */}
