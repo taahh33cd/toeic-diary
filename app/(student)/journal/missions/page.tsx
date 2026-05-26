@@ -5,7 +5,8 @@ import { useProfile } from "@/hooks/useProfile";
 import { useHomework } from "@/hooks/firebase/useHomework";
 import { useGoal } from "@/hooks/firebase/useGoal";
 import { useSubmissions } from "@/hooks/firebase/useSubmissions";
-import { saveSubmission, removeSubmission, saveProgress } from "@/lib/firebase/helpers";
+import { useDayLinks } from "@/hooks/firebase/useDayLinks";
+import { saveSubmission, removeSubmission, saveProgress, saveDayLink } from "@/lib/firebase/helpers";
 import { awardXp } from "@/lib/xp-client";
 import type { Homework } from "@/lib/firebase/types";
 
@@ -17,12 +18,12 @@ function today() { return new Date().toISOString().slice(0, 10); }
 
 const SECTIONS = ["vocab", "listening", "reading", "practice", "other"] as const;
 
-const SEC_META: Record<string, { label: string; bg: string; color: string; cls: string }> = {
-  vocab:     { label: "Từ vựng",    bg: "rgba(196,98,45,.12)",  color: "#C4622D", cls: "vocab" },
-  listening: { label: "Nghe",       bg: "rgba(40,96,168,.12)",  color: "#2860A8", cls: "listening" },
-  reading:   { label: "Đọc",        bg: "rgba(62,122,82,.12)",  color: "#3E7A52", cls: "reading" },
-  practice:  { label: "Đề luyện thi", bg: "rgba(26,62,128,.10)", color: "#1A3E80", cls: "practice" },
-  other:     { label: "Khác",       bg: "rgba(160,112,64,.12)", color: "#A07040", cls: "other" },
+const SEC_META: Record<string, { label: string; bg: string; color: string; emoji: string }> = {
+  vocab:     { label: "Từ vựng",      bg: "rgba(196,98,45,.1)",  color: "#C4622D", emoji: "📖" },
+  listening: { label: "Nghe",         bg: "rgba(40,96,168,.1)",  color: "#2860A8", emoji: "🎧" },
+  reading:   { label: "Đọc",          bg: "rgba(62,122,82,.1)",  color: "#3E7A52", emoji: "📄" },
+  practice:  { label: "Đề luyện thi", bg: "rgba(26,62,128,.08)", color: "#1A3E80", emoji: "✏️" },
+  other:     { label: "Khác",         bg: "rgba(160,112,64,.1)", color: "#A07040", emoji: "⭐" },
 };
 
 // ─── Progress ring ────────────────────────────────────────────────────────────
@@ -107,17 +108,18 @@ function CongratsPopup({ onClose }: { onClose: () => void }) {
 // ─── Homework card ────────────────────────────────────────────────────────────
 
 function HwCard({
-  hw, isCurrent, studentCode, submitted, submittedUrl, onDone, allSubmissions,
+  hw, isCurrent, studentCode, submitted, submittedUrl, dayLinkUrl, onDone, allSubmissions,
 }: {
   hw: Homework; isCurrent: boolean; studentCode: string;
-  submitted: boolean; submittedUrl?: string;
+  submitted: boolean; submittedUrl?: string; dayLinkUrl?: string;
   onDone?: () => void;
   allSubmissions: Record<string, { ticked?: boolean }>;
 }) {
   const [open, setOpen] = useState(isCurrent);
   const [submitting, setSubmitting] = useState(false);
-  const [url, setUrl] = useState(submittedUrl ?? "");
+  const [url, setUrl] = useState(dayLinkUrl ?? submittedUrl ?? "");
   const [done, setDone] = useState(submitted);
+  const [showDescMap, setShowDescMap] = useState<Record<string, boolean>>({});
   // Per-item check state — initialized from Firebase, persisted on toggle
   const [checked, setChecked] = useState<Record<string, boolean>>(() => {
     const init: Record<string, boolean> = {};
@@ -164,11 +166,14 @@ function HwCard({
     if (submitting || done) return;
     setSubmitting(true);
     try {
+      const trimmedUrl = url.trim();
       await saveSubmission(studentCode, hw.date, {
         ticked: true,
-        url: url.trim() || undefined,
+        url: trimmedUrl || undefined,
         updatedAt: new Date().toISOString(),
       });
+      // Sync link to daylinks so admin sees LINK TỔNG HỢP
+      if (trimmedUrl) await saveDayLink(studentCode, hw.id, trimmedUrl);
       // G10: Sync progress node
       await saveProgress(studentCode, hw.date, {
         done: totalItems,
@@ -309,44 +314,103 @@ function HwCard({
       {/* ── Body ── */}
       {open && (
         <div style={{ padding: ".9rem 1.1rem 1.1rem" }}>
-          {/* Submission link zone */}
-          {done && submittedUrl ? (
+
+          {/* ── Submit form at TOP (if not done) ── */}
+          {!done && (
+            <form
+              onSubmit={handleSubmit}
+              style={{
+                marginBottom: ".9rem",
+                border: "1px solid var(--border,#DDD0BC)",
+                background: "var(--bg-primary,#F5EFE6)",
+              }}
+            >
+              <div style={{
+                padding: ".4rem .75rem",
+                borderBottom: "1px solid var(--border,#DDD0BC)",
+                fontSize: ".6rem", fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase",
+                color: "#9A8672", display: "flex", alignItems: "center", gap: ".4rem",
+              }}>
+                📎 NỘP LINK DRIVE TỔNG HỢP
+              </div>
+              <div style={{ display: "flex", alignItems: "center", gap: ".65rem", flexWrap: "wrap", padding: ".5rem .75rem" }}>
+                <input
+                  type="url"
+                  placeholder="Paste link Google Drive tổng hợp..."
+                  value={url}
+                  onChange={e => setUrl(e.target.value)}
+                  onClick={e => e.stopPropagation()}
+                  style={{
+                    flex: 1, minWidth: 160,
+                    padding: ".4rem .7rem",
+                    border: "1px solid var(--border,#DDD0BC)",
+                    background: "var(--bg-elevated,#FBF7F2)",
+                    color: "var(--text-primary,#2C1E0F)",
+                    fontSize: ".82rem",
+                    outline: "none",
+                  }}
+                  aria-label="Link bài làm"
+                />
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  style={{
+                    flexShrink: 0,
+                    padding: ".42rem 1.1rem",
+                    background: "#C4622D", color: "#fff", border: "none",
+                    fontSize: ".8rem", fontWeight: 700,
+                    cursor: submitting ? "not-allowed" : "pointer",
+                    opacity: submitting ? 0.6 : 1,
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {submitting ? "Đang nộp…" : "Nộp →"}
+                </button>
+              </div>
+            </form>
+          )}
+
+          {/* ── Link tổng hợp (if done) ── */}
+          {done && (dayLinkUrl || submittedUrl) && (
             <div style={{
-              padding: ".6rem .9rem", marginBottom: ".9rem",
-              background: "rgba(74,124,89,.06)",
-              border: "1px solid rgba(74,124,89,.2)",
+              padding: ".5rem .75rem", marginBottom: ".9rem",
+              background: "rgba(74,124,89,.06)", border: "1px solid rgba(74,124,89,.2)",
               display: "flex", alignItems: "center", gap: ".6rem", flexWrap: "wrap",
             }}>
-              <span style={{ fontSize: ".62rem", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", color: "#4A7C59" }}>
-                Link tổng hợp:
+              <span style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", color: "#4A7C59", flexShrink: 0 }}>
+                🔗 LINK TỔNG HỢP:
               </span>
-              <a href={submittedUrl} target="_blank" rel="noopener noreferrer"
-                style={{ fontSize: ".8rem", color: "#4A7C59", textDecoration: "underline", flex: 1, minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-                {submittedUrl}
+              <a
+                href={dayLinkUrl ?? submittedUrl}
+                target="_blank" rel="noopener noreferrer"
+                style={{ fontSize: ".8rem", color: "#4A7C59", textDecoration: "underline", flex: 1, minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}
+              >
+                {dayLinkUrl ?? submittedUrl}
               </a>
             </div>
-          ) : null}
+          )}
 
-          {/* Section groups */}
+          {/* ── Section groups ── */}
           {sections.length === 0 ? (
             <p style={{ fontSize: ".83rem", color: "#9A8672", fontStyle: "italic" }}>Không có bài tập.</p>
           ) : (
-            <div style={{ display: "flex", flexDirection: "column", gap: ".9rem" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: ".85rem" }}>
               {sections.map(sec => {
                 const meta = SEC_META[sec];
                 const items = hw[sec] ?? [];
                 const isPractice = sec === "practice";
                 return (
                   <div key={sec}>
-                    {/* Section header */}
+                    {/* Section header — full-width colored bar */}
                     <div style={{
-                      display: "inline-flex", alignItems: "center", gap: ".4rem",
-                      padding: ".2rem .6rem", marginBottom: ".55rem",
-                      background: meta.bg, color: meta.color,
-                      fontSize: ".63rem", fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase",
-                      ...(isPractice ? { border: "1px solid rgba(26,62,128,.2)" } : {}),
+                      display: "flex", alignItems: "center", gap: ".45rem",
+                      padding: ".3rem .75rem", marginBottom: ".5rem",
+                      background: meta.bg, borderLeft: `3px solid ${meta.color}`,
                     }}>
-                      {meta.label}
+                      <span style={{ fontSize: ".85rem" }}>{meta.emoji}</span>
+                      <span style={{ fontSize: ".63rem", fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: meta.color }}>
+                        {meta.label}
+                      </span>
                     </div>
 
                     {/* Items */}
@@ -354,74 +418,99 @@ function HwCard({
                       {items.map((item, i) => {
                         const key = `${sec}-${i}`;
                         const isChecked = checked[key] ?? false;
+                        const descKey = `${key}-desc`;
+                        const showDesc = showDescMap[descKey] ?? false;
                         return (
                           <div
                             key={key}
                             style={{
-                              display: "flex", alignItems: "flex-start", gap: ".75rem",
-                              padding: ".5rem .75rem",
                               border: isChecked
                                 ? "1px solid rgba(74,124,89,.4)"
                                 : isPractice ? "1px solid #c5d0ee" : "1px solid var(--border,#DDD0BC)",
                               background: isChecked
                                 ? "rgba(74,124,89,.06)"
                                 : isPractice ? "#f0f4ff" : "var(--bg-primary,#F5EFE6)",
-                              opacity: isChecked ? 0.78 : 1,
-                              cursor: "pointer",
                               transition: "all .15s",
                             }}
-                            onClick={() => toggleItem(sec, i)}
                           >
-                            {/* Checkbox */}
-                            <div style={{
-                              flexShrink: 0, width: 16, height: 16, marginTop: 2,
-                              border: isChecked ? "none" : "1.5px solid #9A8672",
-                              background: isChecked ? "#4A7C59" : "transparent",
-                              display: "flex", alignItems: "center", justifyContent: "center",
-                            }}>
-                              {isChecked && <span style={{ color: "#fff", fontSize: ".6rem", fontWeight: 700 }}>✓</span>}
-                            </div>
-
-                            {/* Content */}
-                            <div style={{ flex: 1, minWidth: 0 }} onClick={e => e.stopPropagation()}>
+                            {/* Main row */}
+                            <div
+                              style={{
+                                display: "flex", alignItems: "center", gap: ".75rem",
+                                padding: ".5rem .75rem",
+                                cursor: "pointer",
+                                opacity: isChecked ? 0.78 : 1,
+                              }}
+                              onClick={() => toggleItem(sec, i)}
+                            >
+                              {/* Checkbox */}
                               <div style={{
-                                fontSize: ".86rem", fontWeight: 500,
+                                flexShrink: 0, width: 16, height: 16,
+                                border: isChecked ? "none" : "1.5px solid #9A8672",
+                                background: isChecked ? "#4A7C59" : "transparent",
+                                display: "flex", alignItems: "center", justifyContent: "center",
+                              }}>
+                                {isChecked && <span style={{ color: "#fff", fontSize: ".6rem", fontWeight: 700 }}>✓</span>}
+                              </div>
+
+                              {/* Text */}
+                              <span style={{
+                                flex: 1, fontSize: ".86rem", fontWeight: 500,
                                 textDecoration: isChecked ? "line-through" : "none",
                                 color: isChecked ? "#9A8672" : "var(--text-primary,#2C1E0F)",
                                 transition: "all .2s",
                               }}>
                                 {item.text}
-                              </div>
+                              </span>
+
+                              {/* Link button */}
+                              {item.link && (
+                                <a
+                                  href={item.link} target="_blank" rel="noopener noreferrer"
+                                  onClick={e => e.stopPropagation()}
+                                  style={{
+                                    flexShrink: 0, fontSize: ".72rem", fontWeight: 600,
+                                    padding: ".2rem .65rem",
+                                    background: "var(--orange,#C4622D)", color: "#fff",
+                                    textDecoration: "none", whiteSpace: "nowrap",
+                                    opacity: isChecked ? 0.4 : 1,
+                                    pointerEvents: isChecked ? "none" : "auto",
+                                  }}
+                                >
+                                  {isPractice ? "Mở đề ↗" : "Nghe ngay ↗"}
+                                </a>
+                              )}
+
+                              {/* Desc toggle button */}
                               {item.desc && (
-                                <div
-                                  style={{ fontSize: ".72rem", color: "#9A8672", marginTop: ".2rem", fontStyle: "italic" }}
-                                  dangerouslySetInnerHTML={{ __html: item.desc }}
-                                />
+                                <button
+                                  type="button"
+                                  onClick={e => { e.stopPropagation(); setShowDescMap(prev => ({ ...prev, [descKey]: !prev[descKey] })); }}
+                                  style={{
+                                    flexShrink: 0, fontSize: ".68rem", fontWeight: 600,
+                                    padding: ".2rem .55rem",
+                                    border: `1px solid ${showDesc ? meta.color : "var(--border,#DDD0BC)"}`,
+                                    background: showDesc ? meta.bg : "transparent",
+                                    color: showDesc ? meta.color : "#9A8672",
+                                    cursor: "pointer", whiteSpace: "nowrap",
+                                  }}
+                                >
+                                  {showDesc ? "Ẩn hướng dẫn" : "Xem hướng dẫn"}
+                                </button>
                               )}
                             </div>
 
-                            {/* Link button */}
-                            {item.link && (
-                              <a
-                                href={item.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={e => e.stopPropagation()}
+                            {/* Desc expanded */}
+                            {item.desc && showDesc && (
+                              <div
                                 style={{
-                                  flexShrink: 0,
-                                  fontSize: ".7rem", fontWeight: 600,
-                                  padding: ".22rem .65rem",
-                                  background: "var(--orange,#C4622D)",
-                                  color: "#fff",
-                                  textDecoration: "none",
-                                  whiteSpace: "nowrap",
-                                  opacity: isChecked ? 0.45 : 1,
-                                  pointerEvents: isChecked ? "none" : "auto",
-                                  transition: "background .15s",
+                                  padding: ".5rem .75rem .6rem 2.5rem",
+                                  borderTop: `1px solid ${meta.bg}`,
+                                  fontSize: ".78rem", color: "#6B4C30", lineHeight: 1.6,
+                                  background: meta.bg,
                                 }}
-                              >
-                                {isPractice ? "Mở đề ↗" : "Mở bài ↗"}
-                              </a>
+                                dangerouslySetInnerHTML={{ __html: item.desc }}
+                              />
                             )}
                           </div>
                         );
@@ -431,58 +520,6 @@ function HwCard({
                 );
               })}
             </div>
-          )}
-
-          {/* Submit zone */}
-          {!done && (
-            <form
-              onSubmit={handleSubmit}
-              style={{
-                marginTop: "1rem",
-                padding: ".75rem .9rem",
-                background: "var(--bg-primary,#F5EFE6)",
-                border: "1px solid var(--border,#DDD0BC)",
-                display: "flex", alignItems: "center", gap: ".65rem", flexWrap: "wrap",
-              }}
-            >
-              <input
-                type="url"
-                placeholder="Link bài làm (Drive, Notion…)"
-                value={url}
-                onChange={e => setUrl(e.target.value)}
-                onClick={e => e.stopPropagation()}
-                style={{
-                  flex: 1, minWidth: 160,
-                  padding: ".45rem .75rem",
-                  border: "1px solid var(--border,#DDD0BC)",
-                  background: "var(--bg-elevated,#FBF7F2)",
-                  color: "var(--text-primary,#2C1E0F)",
-                  fontSize: ".82rem",
-                  outline: "none",
-                  fontFamily: "'Be Vietnam Pro', sans-serif",
-                }}
-                aria-label="Link bài làm"
-              />
-              <button
-                type="submit"
-                disabled={submitting}
-                style={{
-                  flexShrink: 0,
-                  padding: ".45rem 1.1rem",
-                  background: "#C4622D",
-                  color: "#fff",
-                  border: "none",
-                  fontSize: ".8rem",
-                  fontWeight: 700,
-                  cursor: submitting ? "not-allowed" : "pointer",
-                  opacity: submitting ? 0.6 : 1,
-                  transition: "background .15s",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                {submitting ? "Đang nộp…" : "✓ Nộp bài  +30 XP"}
-              </button>
-            </form>
           )}
         </div>
       )}
@@ -497,6 +534,7 @@ export default function MissionsPage() {
   const { homework, loading: hwLoading } = useHomework(profile?.studentCode);
   const { goal, loading: goalLoading } = useGoal(profile?.studentCode);
   const { submissions, loading: subLoading } = useSubmissions(profile?.studentCode);
+  const { dayLinks } = useDayLinks(profile?.studentCode);
   const [showCongrats, setShowCongrats] = useState(false); // G11
 
   const loading = profileLoading || hwLoading || goalLoading || subLoading;
@@ -591,6 +629,7 @@ export default function MissionsPage() {
               studentCode={profile.studentCode!}
               submitted={!!submissions[hw.date]?.ticked}
               submittedUrl={submissions[hw.date]?.url}
+              dayLinkUrl={(dayLinks as Record<string, { link?: string }>)[hw.id]?.link}
               onDone={() => setShowCongrats(true)}
               allSubmissions={submissions}
             />

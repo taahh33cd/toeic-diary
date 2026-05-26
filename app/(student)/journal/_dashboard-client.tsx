@@ -773,83 +773,117 @@ function OverdueBanner({ count }: { count: number }) {
 function DailyDigestPopup({
   overdueCount,
   vocabDueCount,
-  paraDueCount,
+  name,
 }: {
   overdueCount: number;
   vocabDueCount: number;
-  paraDueCount: number;
+  name: string;
 }) {
-  const today = localToday();
-  const key = `digest_shown_${today}`;
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const total = overdueCount + vocabDueCount + paraDueCount;
-    if (total === 0) return;
-    if (!localStorage.getItem(key)) {
-      setOpen(true);
-    }
-  }, [key, overdueCount, vocabDueCount, paraDueCount]);
+    if (overdueCount + vocabDueCount > 0) setOpen(true);
+  }, [overdueCount, vocabDueCount]);
 
-  function close() {
-    localStorage.setItem(key, "1");
-    setOpen(false);
-  }
+  function close() { setOpen(false); }
 
   if (!open) return null;
 
   const items = [
-    overdueCount > 0 && { emoji: "⏰", label: `${overdueCount} bài quá hạn`, href: "/journal/missions" },
-    vocabDueCount > 0 && { emoji: "📖", label: `${vocabDueCount} từ cần ôn hôm nay`, href: "/journal/vocab" },
-    paraDueCount > 0 && { emoji: "🔄", label: `${paraDueCount} paraphrase đến hạn`, href: "/journal/error-log" },
-  ].filter(Boolean) as { emoji: string; label: string; href: string }[];
+    overdueCount > 0 && {
+      icon: "📌",
+      label: `${overdueCount} nhiệm vụ quá hạn`,
+      sub: `Từ ${overdueCount} buổi chưa hoàn thành`,
+      href: "/journal/missions",
+      btn: "Xem →",
+    },
+    vocabDueCount > 0 && {
+      icon: "📖",
+      label: `${vocabDueCount} từ vựng đến hạn ôn`,
+      sub: "Ôn ngay để nhớ lâu hơn",
+      href: "/journal/vocab",
+      btn: "Ôn →",
+    },
+  ].filter(Boolean) as { icon: string; label: string; sub: string; href: string; btn: string }[];
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ background: "rgba(0,0,0,0.45)" }}
+      style={{
+        position: "fixed", inset: 0, zIndex: 200,
+        background: "rgba(0,0,0,0.55)",
+        display: "flex", alignItems: "center", justifyContent: "center", padding: "1rem",
+      }}
       onClick={close}
     >
       <div
-        className="w-full max-w-sm rounded-2xl overflow-hidden shadow-2xl"
-        style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)" }}
+        style={{
+          width: "100%", maxWidth: 380,
+          background: "#2C1E0F",
+          boxShadow: "0 20px 60px rgba(0,0,0,.6)",
+        }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="px-5 py-4" style={{ background: INK }}>
-          <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: "rgba(255,255,255,0.5)" }}>
-            Daily Digest · {new Date().toLocaleDateString("vi-VN", { day: "numeric", month: "long" })}
-          </p>
-          <p className="text-lg font-bold text-white" style={{ fontFamily: "'Lora', Georgia, serif" }}>
-            Việc cần làm hôm nay ☀️
+        <div style={{ padding: "1.5rem 1.5rem 1rem", textAlign: "center" }}>
+          <div style={{ fontSize: "2rem", marginBottom: ".5rem" }}>☀️</div>
+          <p style={{
+            fontFamily: "'Lora', Georgia, serif",
+            fontSize: "1.05rem", fontWeight: 700,
+            color: "#C4622D", lineHeight: 1.4, margin: 0,
+          }}>
+            Chào {name}~ Cùng ôn tập một chút nhé! 💪
           </p>
         </div>
 
         {/* Items */}
-        <div className="p-4 space-y-2">
-          {items.map(({ emoji, label, href }) => (
-            <Link
+        <div style={{ padding: "0 1rem 1rem", display: "flex", flexDirection: "column", gap: ".6rem" }}>
+          {items.map(({ icon, label, sub, href, btn }) => (
+            <div
               key={href}
-              href={href}
-              onClick={close}
-              className="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors hover:opacity-80"
-              style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}
+              style={{
+                background: "rgba(255,255,255,.06)",
+                border: "1px solid rgba(255,255,255,.1)",
+                display: "flex", alignItems: "center", gap: ".9rem",
+                padding: ".75rem 1rem",
+              }}
             >
-              <span className="text-xl shrink-0">{emoji}</span>
-              <span className="text-sm font-medium" style={{ color: "var(--text-primary)" }}>{label}</span>
-              <span className="ml-auto" style={{ color: "var(--orange)" }}>→</span>
-            </Link>
+              <span style={{ fontSize: "1.2rem", flexShrink: 0 }}>{icon}</span>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <p style={{ fontSize: ".85rem", fontWeight: 700, color: "#fff", margin: 0 }}>{label}</p>
+                <p style={{ fontSize: ".72rem", color: "rgba(255,255,255,.5)", margin: 0 }}>{sub}</p>
+              </div>
+              <Link
+                href={href}
+                onClick={close}
+                style={{
+                  flexShrink: 0,
+                  padding: ".35rem .9rem",
+                  background: "#C4622D", color: "#fff",
+                  fontSize: ".78rem", fontWeight: 700,
+                  textDecoration: "none",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {btn}
+              </Link>
+            </div>
           ))}
         </div>
 
         {/* Footer */}
-        <div className="px-4 pb-4">
+        <div style={{ padding: "0 1rem 1.25rem" }}>
           <button
             onClick={close}
-            className="w-full py-2.5 rounded-xl text-sm font-bold"
-            style={{ background: "var(--border)", color: "var(--text-secondary)", border: "none", cursor: "pointer" }}
+            style={{
+              width: "100%", padding: ".65rem",
+              background: "rgba(255,255,255,.08)",
+              border: "1px solid rgba(255,255,255,.12)",
+              color: "rgba(255,255,255,.6)",
+              fontSize: ".85rem", fontWeight: 600,
+              cursor: "pointer",
+            }}
           >
-            Đã hiểu, bắt đầu thôi!
+            Để sau
           </button>
         </div>
       </div>
@@ -982,7 +1016,7 @@ export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }
       <DailyDigestPopup
         overdueCount={overdueCount}
         vocabDueCount={vocabDueCount}
-        paraDueCount={paraDueCount}
+        name={name}
       />
 
       <div className="grid grid-cols-12 gap-5">
