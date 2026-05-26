@@ -15,6 +15,29 @@ import type { Homework } from "@/lib/firebase/types";
 
 function today() { return new Date().toISOString().slice(0, 10); }
 
+/** Same logic as calcProgress on /journal/progress page */
+function calcHwIsDone(
+  hw: import("@/lib/firebase/types").Homework,
+  submissions: Record<string, { ticked?: boolean; url?: string }>,
+  dayLinks: Record<string, { link?: string }>
+): boolean {
+  let total = 0;
+  for (const sec of (["vocab", "listening", "reading", "practice", "other"] as const)) {
+    total += hw[sec]?.length ?? 0;
+  }
+  if (total === 0) return false;
+  if (dayLinks[hw.id]?.link) return true;
+  let done = 0;
+  for (const sec of (["vocab", "listening", "reading", "practice", "other"] as const)) {
+    const items = hw[sec] ?? [];
+    for (let i = 0; i < items.length; i++) {
+      const sub = submissions[`${hw.id}_${sec}_${i}`];
+      if (sub?.ticked || sub?.url) done++;
+    }
+  }
+  return done === total;
+}
+
 // ─── Section config ───────────────────────────────────────────────────────────
 
 const SECTIONS = ["vocab", "listening", "reading", "practice", "other"] as const;
@@ -632,6 +655,16 @@ export default function MissionsPage() {
     hw => hw.date <= td && (!hw.endDate || hw.endDate >= td)
   ) ?? homework[0];
 
+  // ── Summary stats (mirrors /journal/progress logic) ───────────────────
+  const dlMap = dayLinks as Record<string, { link?: string }>;
+  const hwTotal    = homework.length;
+  const hwDone     = homework.filter(hw => calcHwIsDone(hw, submissions, dlMap)).length;
+  const hwOverdue  = homework.filter(hw => {
+    const deadline = hw.endDate ?? hw.date;
+    return deadline < td && !calcHwIsDone(hw, submissions, dlMap);
+  }).length;
+  const hwRemaining = Math.max(0, hwTotal - hwDone - hwOverdue);
+
   return (
     <div>
       {/* Page header */}
@@ -670,6 +703,37 @@ export default function MissionsPage() {
               </div>
             </div>
           )}
+        </div>
+      )}
+
+      {/* ── Progress summary chips ── */}
+      {hwTotal > 0 && (
+        <div style={{
+          display: "flex",
+          alignItems: "center",
+          gap: ".4rem",
+          flexWrap: "wrap",
+          padding: ".55rem .85rem",
+          background: "var(--bg-elevated,#FBF7F2)",
+          border: "1px solid var(--border,#DDD0BC)",
+          marginBottom: "1.25rem",
+          fontSize: ".75rem",
+        }}>
+          <span style={{ fontWeight: 700, color: "#2C1E0F" }}>{hwTotal}</span>
+          <span style={{ color: "#9A8672" }}>BTVN</span>
+          <span style={{ color: "var(--border,#DDD0BC)", userSelect: "none" }}>·</span>
+          <span style={{ fontWeight: 700, color: "#4A7C59" }}>{hwDone}</span>
+          <span style={{ color: "#9A8672" }}>hoàn thành</span>
+          {hwOverdue > 0 && (<>
+            <span style={{ color: "var(--border,#DDD0BC)", userSelect: "none" }}>·</span>
+            <span style={{ fontWeight: 700, color: "#B03A2A" }}>{hwOverdue}</span>
+            <span style={{ color: "#9A8672" }}>quá hạn</span>
+          </>)}
+          {hwRemaining > 0 && (<>
+            <span style={{ color: "var(--border,#DDD0BC)", userSelect: "none" }}>·</span>
+            <span style={{ fontWeight: 700, color: "#9A8672" }}>{hwRemaining}</span>
+            <span style={{ color: "#9A8672" }}>còn lại</span>
+          </>)}
         </div>
       )}
 
