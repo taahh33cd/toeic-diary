@@ -206,9 +206,10 @@
   --shadow-md: 0 4px 12px rgba(68, 65, 196, 0.15);
   --shadow-lg: 0 12px 32px rgba(68, 65, 196, 0.12);
 
-  /* Typography */
+  /* Typography — Be Vietnam Pro for Vietnamese diacritics */
   --font-admin-serif: var(--font-noto-serif), "Noto Serif", Georgia, serif;
-  --font-admin-sans:  var(--font-plus-jakarta), "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-admin-sans:  var(--font-be-vietnam), "Be Vietnam Pro", system-ui, sans-serif;
+  --font-sans:        var(--font-be-vietnam), "Be Vietnam Pro", system-ui, sans-serif;
 }
 
 /* ── Silk utility classes ────────────────────── */

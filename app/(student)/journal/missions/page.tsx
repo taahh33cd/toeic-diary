@@ -5,23 +5,11 @@ import { useProfile } from "@/hooks/useProfile";
 import { useHomework } from "@/hooks/firebase/useHomework";
 import { useGoal } from "@/hooks/firebase/useGoal";
 import { useSubmissions } from "@/hooks/firebase/useSubmissions";
-import { saveSubmission, saveProgress } from "@/lib/firebase/helpers";
+import { saveSubmission, removeSubmission, saveProgress } from "@/lib/firebase/helpers";
 import { awardXp } from "@/lib/xp-client";
 import type { Homework } from "@/lib/firebase/types";
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
-
-function stripHtml(html: string): string {
-  return html
-    .replace(/<[^>]*>/g, " ")
-    .replace(/&nbsp;/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&quot;/g, '"')
-    .replace(/\s+/g, " ")
-    .trim();
-}
 
 function today() { return new Date().toISOString().slice(0, 10); }
 
@@ -119,18 +107,28 @@ function CongratsPopup({ onClose }: { onClose: () => void }) {
 // ─── Homework card ────────────────────────────────────────────────────────────
 
 function HwCard({
-  hw, isCurrent, studentCode, submitted, submittedUrl, onDone,
+  hw, isCurrent, studentCode, submitted, submittedUrl, onDone, allSubmissions,
 }: {
   hw: Homework; isCurrent: boolean; studentCode: string;
   submitted: boolean; submittedUrl?: string;
   onDone?: () => void;
+  allSubmissions: Record<string, { ticked?: boolean }>;
 }) {
   const [open, setOpen] = useState(isCurrent);
   const [submitting, setSubmitting] = useState(false);
   const [url, setUrl] = useState(submittedUrl ?? "");
   const [done, setDone] = useState(submitted);
-  // Local per-item check state (UX only, not persisted)
-  const [checked, setChecked] = useState<Record<string, boolean>>({});
+  // Per-item check state — initialized from Firebase, persisted on toggle
+  const [checked, setChecked] = useState<Record<string, boolean>>(() => {
+    const init: Record<string, boolean> = {};
+    for (const sec of SECTIONS) {
+      const items = hw[sec] ?? [];
+      items.forEach((_, i) => {
+        if (allSubmissions[`${hw.id}_${sec}_${i}`]?.ticked) init[`${sec}-${i}`] = true;
+      });
+    }
+    return init;
+  });
 
   const startDate = new Date(hw.date + "T00:00:00");
   const endDate   = hw.endDate ? new Date(hw.endDate + "T00:00:00") : null;
@@ -185,8 +183,16 @@ function HwCard({
     }
   }
 
-  function toggleItem(key: string) {
-    setChecked(prev => ({ ...prev, [key]: !prev[key] }));
+  function toggleItem(sec: typeof SECTIONS[number], i: number) {
+    const key = `${sec}-${i}`;
+    const fbKey = `${hw.id}_${sec}_${i}`;
+    const newVal = !checked[key];
+    setChecked(prev => ({ ...prev, [key]: newVal }));
+    if (newVal) {
+      saveSubmission(studentCode, fbKey, { ticked: true, updatedAt: new Date().toISOString() });
+    } else {
+      removeSubmission(studentCode, fbKey);
+    }
   }
 
   return (
@@ -236,9 +242,22 @@ function HwCard({
 
         {/* Content */}
         <div style={{ flex: 1, minWidth: 0 }}>
+          {hw.title && (
+            <div style={{
+              fontSize: ".92rem", fontWeight: 700,
+              color: statusColors.label,
+              whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis",
+              marginBottom: ".1rem",
+            }}>
+              {hw.title}
+            </div>
+          )}
           <div style={{
-            fontSize: ".92rem", fontWeight: 600,
-            color: statusColors.label,
+            fontSize: hw.title ? ".76rem" : ".92rem",
+            fontWeight: hw.title ? 400 : 600,
+            color: hw.title
+              ? (isCurrent && !isDone ? "rgba(255,255,255,.55)" : "#9A8672")
+              : statusColors.label,
             whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis",
             marginBottom: ".2rem",
           }}>
@@ -335,7 +354,6 @@ function HwCard({
                       {items.map((item, i) => {
                         const key = `${sec}-${i}`;
                         const isChecked = checked[key] ?? false;
-                        const descClean = item.desc ? stripHtml(item.desc) : "";
                         return (
                           <div
                             key={key}
@@ -352,7 +370,7 @@ function HwCard({
                               cursor: "pointer",
                               transition: "all .15s",
                             }}
-                            onClick={() => toggleItem(key)}
+                            onClick={() => toggleItem(sec, i)}
                           >
                             {/* Checkbox */}
                             <div style={{
@@ -374,13 +392,11 @@ function HwCard({
                               }}>
                                 {item.text}
                               </div>
-                              {descClean && (
-                                <div style={{
-                                  fontSize: ".72rem", color: "#9A8672",
-                                  marginTop: ".2rem", fontStyle: "italic",
-                                }}>
-                                  {descClean}
-                                </div>
+                              {item.desc && (
+                                <div
+                                  style={{ fontSize: ".72rem", color: "#9A8672", marginTop: ".2rem", fontStyle: "italic" }}
+                                  dangerouslySetInnerHTML={{ __html: item.desc }}
+                                />
                               )}
                             </div>
 
@@ -576,6 +592,7 @@ export default function MissionsPage() {
               submitted={!!submissions[hw.date]?.ticked}
               submittedUrl={submissions[hw.date]?.url}
               onDone={() => setShowCongrats(true)}
+              allSubmissions={submissions}
             />
           ))}
         </div>
