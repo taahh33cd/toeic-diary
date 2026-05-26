@@ -704,6 +704,208 @@ h1, h2, h3 {
   animation: slideUp 0.35s ease-out both;
 }
 
+/* ═══════════════════════════════════════════════════════════
+   INTERACTION DESIGN LAYER
+   Micro-interactions · Navigation · Form UX · Accessibility
+   ▸ CSS only — zero logic changes
+   ▸ Low-specificity base rules; theme/utility rules override
+═══════════════════════════════════════════════════════════ */
+
+/* ── 1. Transition baseline ─────────────────────────────────
+   Gives every interactive element a smooth foundation.
+   Existing specific `transition:` rules take precedence via
+   cascade (class selectors beat element selectors).
+────────────────────────────────────────────────────────── */
+button, a, select,
+input:not([type="range"]),
+textarea {
+  transition:
+    background-color  0.15s ease,
+    color             0.15s ease,
+    border-color      0.15s ease,
+    box-shadow        0.15s ease,
+    opacity           0.15s ease,
+    transform         0.12s ease,
+    outline-offset    0.12s ease;
+}
+
+/* ── 2. Universal button press (active) feedback ────────────
+   Catches ALL <button> elements — inline-styled ones in
+   journal / missions / admin that don't use a .btn class.
+────────────────────────────────────────────────────────── */
+button:not([disabled]):active {
+  transform: scale(0.96);
+  opacity: 0.92;
+}
+
+/* .btn variants already set translateY on hover — reset it */
+.btn:not([disabled]):active {
+  transform: translateY(0) scale(0.97) !important;
+  opacity: 0.92;
+}
+
+/* Journal custom buttons */
+.journal-btn-primary:not([disabled]):active,
+.journal-btn-outline:not([disabled]):active {
+  transform: scale(0.97);
+}
+.journal-btn-outline:not([disabled]):active {
+  background: rgba(196, 98, 45, 0.08);
+}
+
+/* ── 3. Disabled elements ───────────────────────────────────
+   `.btn:disabled` already covers utility buttons.
+   These catch bare / inline-styled controls.
+────────────────────────────────────────────────────────── */
+button[disabled],
+input[disabled],
+select[disabled],
+textarea[disabled] {
+  cursor: not-allowed !important;
+  opacity: 0.5;
+}
+
+[role="button"][aria-disabled="true"],
+a[aria-disabled="true"] {
+  cursor: not-allowed !important;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ── 4. Pointer cursor on semantic interactive roles ───────── */
+[role="button"], [role="tab"], [role="checkbox"],
+[role="menuitem"], [role="option"], summary {
+  cursor: pointer;
+}
+
+/* ── 5. Focus-visible glow — Journal theme ──────────────────
+   Warm terracotta ring overtop the base outline rule.
+────────────────────────────────────────────────────────── */
+.theme-journal :focus-visible {
+  outline: 2px solid var(--orange, #C4622D);
+  outline-offset: 2px;
+  border-radius: 2px;
+  box-shadow: 0 0 0 4px rgba(196, 98, 45, 0.15);
+}
+
+/* ── 6. Focus-visible glow — Admin theme ────────────────────
+   Lavender ring for the silk/Alexandria admin design.
+────────────────────────────────────────────────────────── */
+.theme-admin :focus-visible {
+  outline: 2px solid var(--admin-primary, #4441c4);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm, 6px);
+  box-shadow: 0 0 0 4px rgba(68, 65, 196, 0.12);
+}
+
+/* ── 7. Input / select / textarea focus glow ────────────────
+   Catches inline-styled form controls that bypass .input
+   and .journal-input utility classes.
+────────────────────────────────────────────────────────── */
+.theme-journal input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus,
+.theme-journal textarea:focus,
+.theme-journal select:focus {
+  outline: none;
+  border-color: var(--orange, #C4622D) !important;
+  box-shadow: 0 0 0 3px rgba(196, 98, 45, 0.12),
+              inset 0 -1px 0 var(--orange, #C4622D) !important;
+}
+
+.theme-admin input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus,
+.theme-admin textarea:focus,
+.theme-admin select:focus {
+  outline: none;
+  border-color: var(--admin-primary, #4441c4) !important;
+  box-shadow: 0 0 0 3px rgba(68, 65, 196, 0.10) !important;
+}
+
+/* ── 8. Checkbox / radio accent color ───────────────────── */
+.theme-journal input[type="checkbox"],
+.theme-journal input[type="radio"] {
+  cursor: pointer;
+  accent-color: var(--orange, #C4622D);
+}
+.theme-admin input[type="checkbox"],
+.theme-admin input[type="radio"] {
+  cursor: pointer;
+  accent-color: var(--admin-primary, #4441c4);
+}
+
+/* ── 9. Topbar nav — subtle hover bg fill ──────────────────
+   The active state box-shadow is already defined;
+   this adds a gentle hover state for inactive links.
+────────────────────────────────────────────────────────── */
+.topbar-nav-link:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ── 10. Admin table row hover ──────────────────────────────
+   Subtle lavender tint on hover for data tables.
+────────────────────────────────────────────────────────── */
+.theme-admin table tbody tr {
+  transition: background-color 0.12s ease;
+}
+.theme-admin table tbody tr:hover {
+  background-color: rgba(68, 65, 196, 0.04);
+}
+
+/* ── 11. Silk card hover lift ───────────────────────────────
+   Admin cards get a 1px upward lift on hover.
+   Active press already defined via .silk-card:active.
+────────────────────────────────────────────────────────── */
+.silk-card:hover:not(:active) {
+  box-shadow: 0 14px 36px -8px rgba(68, 65, 196, 0.14),
+              inset 0 1px 0 0 white;
+  transform: translateY(-1px);
+}
+
+/* ── 12. Journal section card hover ─────────────────────── */
+.journal-section {
+  transition: box-shadow 0.2s ease;
+}
+.journal-section:hover {
+  box-shadow: 0 2px 8px rgba(44, 30, 15, 0.08);
+}
+
+/* ── 13. Bare link hover — content areas ────────────────── */
+/* Unclassed <a> tags inside journal/admin body content */
+.theme-journal a:not([class]):hover {
+  color: var(--orange-hover, #B05525);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.theme-admin a:not([class]):hover {
+  color: var(--admin-primary-hover, #3530b6);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── 14. Utility: success pulse ─────────────────────────────
+   Add class "success-pulse" via JS after successful submit.
+────────────────────────────────────────────────────────── */
+@keyframes successPulse {
+  0%   { box-shadow: 0 0 0 0   rgba(74, 124, 89, 0.5); }
+  60%  { box-shadow: 0 0 0 10px rgba(74, 124, 89, 0);   }
+  100% { box-shadow: 0 0 0 0   rgba(74, 124, 89, 0);   }
+}
+.success-pulse {
+  animation: successPulse 0.55s ease-out both;
+}
+
+/* ── 15. Utility: error shake ───────────────────────────────
+   Add class "error-shake" via JS on validation failure.
+────────────────────────────────────────────────────────── */
+@keyframes errorShake {
+  0%, 100% { transform: translateX(0); }
+  20%      { transform: translateX(-6px); }
+  40%      { transform: translateX(5px); }
+  60%      { transform: translateX(-4px); }
+  80%      { transform: translateX(3px); }
+}
+.error-shake {
+  animation: errorShake 0.4s ease-out both;
+}
+
 /* ─────────────────────────────────────────────────────────
    RESPONSIVE UTILITIES
 ───────────────────────────────────────────────────────── */
