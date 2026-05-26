@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useProfile } from "@/hooks/useProfile";
 import { useHomework } from "@/hooks/firebase/useHomework";
 import { useGoal } from "@/hooks/firebase/useGoal";
@@ -31,6 +32,19 @@ const SEC_META: Record<string, { label: string; bg: string; color: string; emoji
 function ProgressRing({
   pct, done, color,
 }: { pct: number; done: boolean; color: string }) {
+  // Animate from 0 on first mount; then follow live changes immediately
+  const [displayed, setDisplayed] = useState(0);
+  const isFirst = useRef(true);
+
+  useEffect(() => {
+    if (isFirst.current) {
+      isFirst.current = false;
+      const id = setTimeout(() => setDisplayed(done ? 100 : pct), 60);
+      return () => clearTimeout(id);
+    }
+    setDisplayed(done ? 100 : pct);
+  }, [pct, done]);
+
   const r = 18, circ = 2 * Math.PI * r;
   return (
     <div style={{ flexShrink: 0, position: "relative", width: 44, height: 44 }}>
@@ -40,8 +54,8 @@ function ProgressRing({
           cx="22" cy="22" r={r} fill="none"
           stroke={color} strokeWidth="3"
           strokeDasharray={circ}
-          strokeDashoffset={circ - (circ * pct) / 100}
-          style={{ transition: "stroke-dashoffset 0.6s ease" }}
+          strokeDashoffset={circ - (circ * displayed) / 100}
+          style={{ transition: "stroke-dashoffset 0.65s ease" }}
         />
       </svg>
       <div style={{
@@ -51,7 +65,7 @@ function ProgressRing({
         fontWeight: 700,
         color,
       }}>
-        {done ? "✓" : `${Math.round(pct)}%`}
+        {done ? "✓" : `${Math.round(displayed)}%`}
       </div>
     </div>
   );
@@ -63,7 +77,11 @@ function ProgressRing({
 
 function CongratsPopup({ onClose }: { onClose: () => void }) {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
       style={{
         position: "fixed", inset: 0, zIndex: 200,
         background: "rgba(44,30,15,.6)",
@@ -71,7 +89,11 @@ function CongratsPopup({ onClose }: { onClose: () => void }) {
       }}
       onClick={onClose}
     >
-      <div
+      <motion.div
+        initial={{ scale: 0.82, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.82, opacity: 0 }}
+        transition={{ type: "spring", stiffness: 320, damping: 26 }}
         style={{
           background: "#FBF7F2",
           width: "calc(100vw - 3rem)",
@@ -82,7 +104,14 @@ function CongratsPopup({ onClose }: { onClose: () => void }) {
         }}
         onClick={e => e.stopPropagation()}
       >
-        <div style={{ fontSize: "2.8rem", marginBottom: ".5rem" }}>🎉</div>
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ type: "spring", stiffness: 400, damping: 18, delay: 0.1 }}
+          style={{ fontSize: "2.8rem", marginBottom: ".5rem" }}
+        >
+          🎉
+        </motion.div>
         <div style={{ fontSize: "1.3rem", fontWeight: 700, color: "#2C1E0F", marginBottom: ".4rem" }}>
           Hoàn thành!
         </div>
@@ -100,8 +129,8 @@ function CongratsPopup({ onClose }: { onClose: () => void }) {
         >
           Đóng
         </button>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 
@@ -312,7 +341,16 @@ function HwCard({
       </div>
 
       {/* ── Body ── */}
+      <AnimatePresence initial={false}>
       {open && (
+        <motion.div
+          key="body"
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
+          style={{ overflow: "hidden" }}
+        >
         <div style={{ padding: ".9rem 1.1rem 1.1rem" }}>
 
           {/* ── Submit form at TOP (if not done) ── */}
@@ -444,14 +482,31 @@ function HwCard({
                               onClick={() => toggleItem(sec, i)}
                             >
                               {/* Checkbox */}
-                              <div style={{
-                                flexShrink: 0, width: 16, height: 16,
-                                border: isChecked ? "none" : "1.5px solid #9A8672",
-                                background: isChecked ? "#4A7C59" : "transparent",
-                                display: "flex", alignItems: "center", justifyContent: "center",
-                              }}>
-                                {isChecked && <span style={{ color: "#fff", fontSize: ".6rem", fontWeight: 700 }}>✓</span>}
-                              </div>
+                              <motion.div
+                                style={{
+                                  flexShrink: 0, width: 16, height: 16,
+                                  border: isChecked ? "none" : "1.5px solid #9A8672",
+                                  background: isChecked ? "#4A7C59" : "transparent",
+                                  display: "flex", alignItems: "center", justifyContent: "center",
+                                }}
+                                animate={isChecked ? { scale: [0.8, 1.15, 1] } : { scale: 1 }}
+                                transition={{ duration: 0.2, times: [0, 0.5, 1] }}
+                              >
+                                {isChecked && (
+                                  <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                                    <motion.path
+                                      d="M1 4L3.5 6.5L9 1"
+                                      stroke="white"
+                                      strokeWidth="1.5"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      initial={{ pathLength: 0 }}
+                                      animate={{ pathLength: 1 }}
+                                      transition={{ duration: 0.15, ease: "easeOut" }}
+                                    />
+                                  </svg>
+                                )}
+                              </motion.div>
 
                               {/* Text */}
                               <span style={{
@@ -501,17 +556,28 @@ function HwCard({
                             </div>
 
                             {/* Desc expanded */}
-                            {item.desc && showDesc && (
-                              <div
-                                style={{
-                                  padding: ".5rem .75rem .6rem 2.5rem",
-                                  borderTop: `1px solid ${meta.bg}`,
-                                  fontSize: ".78rem", color: "#6B4C30", lineHeight: 1.6,
-                                  background: meta.bg,
-                                }}
-                                dangerouslySetInnerHTML={{ __html: item.desc }}
-                              />
-                            )}
+                            <AnimatePresence initial={false}>
+                              {item.desc && showDesc && (
+                                <motion.div
+                                  key="desc"
+                                  initial={{ height: 0, opacity: 0 }}
+                                  animate={{ height: "auto", opacity: 1 }}
+                                  exit={{ height: 0, opacity: 0 }}
+                                  transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
+                                  style={{ overflow: "hidden" }}
+                                >
+                                  <div
+                                    style={{
+                                      padding: ".5rem .75rem .6rem 2.5rem",
+                                      borderTop: `1px solid ${meta.bg}`,
+                                      fontSize: ".78rem", color: "#6B4C30", lineHeight: 1.6,
+                                      background: meta.bg,
+                                    }}
+                                    dangerouslySetInnerHTML={{ __html: item.desc }}
+                                  />
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
                           </div>
                         );
                       })}
@@ -522,7 +588,9 @@ function HwCard({
             </div>
           )}
         </div>
+        </motion.div>
       )}
+      </AnimatePresence>
     </div>
   );
 }
@@ -603,7 +671,9 @@ export default function MissionsPage() {
       )}
 
       {/* G11: Congrats popup */}
-      {showCongrats && <CongratsPopup onClose={() => setShowCongrats(false)} />}
+      <AnimatePresence>
+        {showCongrats && <CongratsPopup onClose={() => setShowCongrats(false)} />}
+      </AnimatePresence>
 
       {/* Homework list */}
       {!profile?.studentCode ? (
@@ -620,21 +690,32 @@ export default function MissionsPage() {
           </p>
         </div>
       ) : (
-        <div>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{ visible: { transition: { staggerChildren: 0.06 } } }}
+        >
           {homework.map((hw, i) => (
-            <HwCard
+            <motion.div
               key={`${hw.date}-${i}`}
-              hw={hw}
-              isCurrent={hw === currentHw}
-              studentCode={profile.studentCode!}
-              submitted={!!submissions[hw.date]?.ticked}
-              submittedUrl={submissions[hw.date]?.url}
-              dayLinkUrl={(dayLinks as Record<string, { link?: string }>)[hw.id]?.link}
-              onDone={() => setShowCongrats(true)}
-              allSubmissions={submissions}
-            />
+              variants={{
+                hidden:  { opacity: 0, y: 12 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] } },
+              }}
+            >
+              <HwCard
+                hw={hw}
+                isCurrent={hw === currentHw}
+                studentCode={profile.studentCode!}
+                submitted={!!submissions[hw.date]?.ticked}
+                submittedUrl={submissions[hw.date]?.url}
+                dayLinkUrl={(dayLinks as Record<string, { link?: string }>)[hw.id]?.link}
+                onDone={() => setShowCongrats(true)}
+                allSubmissions={submissions}
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       )}
     </div>
   );
