@@ -95,7 +95,6 @@ export default async function LessonPage({
     partNumber: lesson.part.partNumber,
     correctOption: lesson.correctOption ?? null,
     explanation: lesson.explanation ?? null,
-    keyVocabulary: lesson.keyVocabulary as import("@/components/practice/TranscriptVocabModal").VocabItem[] | null,
     sentences,
   };
 

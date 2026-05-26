@@ -37,7 +37,6 @@ interface Props {
   startTime: number | null;
   nextLessonUrl?: string | null;
   transcriptFull: string;
-  precomputedVocab?: VocabItem[] | null;
   onScored: (score: number) => void;
 }
 
@@ -65,7 +64,7 @@ function cleanAnswer(answer: string) {
   return answer.replace(/[^a-z0-9']/g, "");
 }
 
-export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, nextLessonUrl, transcriptFull, precomputedVocab, onScored }: Props) {
+export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, nextLessonUrl, transcriptFull, onScored }: Props) {
   const isPart2 = partNumber === 2;
 
   // Ensure every sentence has at least 2 blanks; generate runtime if DB blanks are missing
@@ -105,7 +104,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
   const [answerRevealed, setAnswerRevealed] = useState(false);
   const [part2AllDone, setPart2AllDone] = useState(false);
 
-  const [vocabItems, setVocabItems] = useState<VocabItem[] | null>(precomputedVocab ?? null);
+  const [vocabItems, setVocabItems] = useState<VocabItem[] | null>(null);
 
   const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
 
@@ -367,8 +366,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
       ),
       timeSpentSeconds: getTimeSpent(sessionStart),
     });
-    // Only call API if no precomputed vocab available
-    if (!precomputedVocab) void fetchVocab();
+    void fetchVocab();
   }
 
   // ── Sentence renderer ────────────────────────────────────────────────────────

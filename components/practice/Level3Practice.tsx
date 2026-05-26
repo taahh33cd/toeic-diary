@@ -30,7 +30,6 @@ interface Props {
   dbLevel?: number;
   nextLessonUrl?: string | null;
   transcriptFull: string;
-  precomputedVocab?: VocabItem[] | null;
   onScored: (score: number) => void;
 }
 
@@ -77,7 +76,7 @@ function countCorrectWords(wordResults: WordResult[]): number {
   return wordResults.filter((w) => w.correct).length;
 }
 
-export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, dbLevel = 3, nextLessonUrl, transcriptFull, precomputedVocab, onScored }: Props) {
+export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, dbLevel = 3, nextLessonUrl, transcriptFull, onScored }: Props) {
   const isPart2 = partNumber === 2;
   const [activeIdx, setActiveIdx] = useState(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -105,7 +104,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
   const [submitted, setSubmitted] = useState(false);
   const [finalScore, setFinalScore] = useState<number | null>(null);
 
-  const [vocabItems, setVocabItems] = useState<VocabItem[] | null>(precomputedVocab ?? null);
+  const [vocabItems, setVocabItems] = useState<VocabItem[] | null>(null);
 
   const activeSentence = sentences[activeIdx];
   const replayCount = replayCounts[activeSentence?.id ?? ""] ?? 0;
@@ -332,7 +331,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
       userAnswer: JSON.stringify(sentences.map((s) => ({ id: s.id, words: sentenceStates[s.id]?.wordResults?.map((w) => w.retryValue) ?? [] }))),
       timeSpentSeconds: getTimeSpent(sessionStart),
     });
-    if (!precomputedVocab) void fetchVocab();
+    void fetchVocab();
   }
 
   function renderBlankPlaceholder(sentence: Sentence) {

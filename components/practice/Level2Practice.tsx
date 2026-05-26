@@ -23,7 +23,6 @@ interface Props {
   sentences: Sentence[];
   startTime: number | null;
   transcriptFull: string;
-  precomputedVocab?: VocabItem[] | null;
   onScored: (score: number) => void;
 }
 
@@ -52,7 +51,7 @@ function cleanAnswer(answer: string) {
   return answer.replace(/[^a-z0-9']/g, "");
 }
 
-export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessionStart, transcriptFull, precomputedVocab, onScored }: Props) {
+export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessionStart, transcriptFull, onScored }: Props) {
   const seed = useMemo(() => Math.floor(Math.random() * 10000), []);
 
   const sentencesWithBlanks = useMemo(() =>
@@ -91,7 +90,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
   const [submitted, setSubmitted] = useState(false);
   const [finalScore, setFinalScore] = useState<number | null>(null);
 
-  const [vocabItems, setVocabItems] = useState<VocabItem[] | null>(precomputedVocab ?? null);
+  const [vocabItems, setVocabItems] = useState<VocabItem[] | null>(null);
 
   const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
 
@@ -282,7 +281,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
       ),
       timeSpentSeconds: getTimeSpent(sessionStart),
     });
-    if (!precomputedVocab) void fetchVocab();
+    void fetchVocab();
   }
 
   function renderWords(sentence: typeof sentencesWithBlanks[0]) {

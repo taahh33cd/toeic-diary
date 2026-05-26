@@ -8,7 +8,6 @@ import { Level3Practice } from "./Level3Practice";
 import { Level4Practice } from "./Level4Practice";
 import { PenLine, FileText, Sparkles, CheckCircle2 } from "lucide-react";
 import { usePracticeStore } from "@/stores/practiceStore";
-import type { VocabItem } from "./TranscriptVocabModal";
 
 interface Blank {
   id: string;
@@ -38,7 +37,6 @@ interface LessonData {
   partNumber: number;
   correctOption: string | null;
   explanation: string | null;
-  keyVocabulary: VocabItem[] | null;
   sentences: Sentence[];
 }
 
@@ -238,7 +236,6 @@ export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl 
           startTime={startTime}
           nextLessonUrl={nextLessonUrl}
           transcriptFull={lesson.transcriptFull}
-          precomputedVocab={lesson.keyVocabulary}
           onScored={(s) => handleScored(1, s)}
         />
       )}
@@ -255,7 +252,6 @@ export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl 
           dbLevel={2}
           nextLessonUrl={nextLessonUrl}
           transcriptFull={lesson.transcriptFull}
-          precomputedVocab={lesson.keyVocabulary}
           onScored={(s) => handleScored(2, s)}
         />
       )}
@@ -267,7 +263,6 @@ export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl 
           sentences={lesson.sentences}
           startTime={startTime}
           transcriptFull={lesson.transcriptFull}
-          precomputedVocab={lesson.keyVocabulary}
           onScored={(s) => handleScored(2, s)}
         />
       )}
@@ -282,7 +277,6 @@ export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl 
           explanation={lesson.explanation ?? null}
           startTime={startTime}
           transcriptFull={lesson.transcriptFull}
-          precomputedVocab={lesson.keyVocabulary}
           onScored={(s) => handleScored(3, s)}
         />
       )}
