@@ -19,6 +19,14 @@ function today() { return new Date().toISOString().slice(0, 10); }
 
 const SECTIONS = ["vocab", "listening", "reading", "practice", "other"] as const;
 
+const LINK_LABEL: Record<string, string> = {
+  listening: "Nghe ngay ↗",
+  practice:  "Mở đề ↗",
+  reading:   "Đọc ngay ↗",
+  vocab:     "Xem ngay ↗",
+  other:     "Mở link ↗",
+};
+
 const SEC_META: Record<string, { label: string; bg: string; color: string; emoji: string }> = {
   vocab:     { label: "Từ vựng",      bg: "rgba(196,98,45,.1)",  color: "#C4622D", emoji: "📖" },
   listening: { label: "Nghe",         bg: "rgba(40,96,168,.1)",  color: "#2860A8", emoji: "🎧" },
@@ -165,15 +173,17 @@ function HwCard({
   const endDate   = hw.endDate ? new Date(hw.endDate + "T00:00:00") : null;
   const td        = today();
 
-  // Card status
-  const isOverdue = !done && hw.date < td && (!hw.endDate || hw.endDate < td);
-  const isFuture  = hw.date > td;
-  const isDone    = done;
-
-  // Section items count
+  // Section items count (computed before isDone since isDone depends on checkedCount)
   const sections = SECTIONS.filter(s => (hw[s]?.length ?? 0) > 0);
   const totalItems = sections.reduce((sum, s) => sum + (hw[s]?.length ?? 0), 0);
   const checkedCount = Object.values(checked).filter(Boolean).length;
+
+  // Card status
+  // isDone: official submission (Nộp button) OR every item ticked
+  const allItemsChecked = totalItems > 0 && checkedCount === totalItems;
+  const isDone    = done || allItemsChecked;
+  const isOverdue = !isDone && hw.date < td && (!hw.endDate || hw.endDate < td);
+  const isFuture  = hw.date > td;
   const ringPct = totalItems > 0 ? (checkedCount / totalItems) * 100 : 0;
 
   // Status class → colors
@@ -532,7 +542,7 @@ function HwCard({
                                     pointerEvents: isChecked ? "none" : "auto",
                                   }}
                                 >
-                                  {isPractice ? "Mở đề ↗" : "Nghe ngay ↗"}
+                                  {LINK_LABEL[sec] ?? "Mở link ↗"}
                                 </a>
                               )}
 
@@ -622,12 +632,10 @@ export default function MissionsPage() {
     hw => hw.date <= td && (!hw.endDate || hw.endDate >= td)
   ) ?? homework[0];
 
-  const submittedCount = Object.values(submissions).filter(s => s.ticked).length;
-
   return (
     <div>
       {/* Page header */}
-      <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: "1.25rem" }}>
+      <div style={{ marginBottom: "1.25rem" }}>
         <h1 style={{
           fontFamily: "'Lora', Georgia, serif",
           fontSize: "1.25rem", fontWeight: 700,
@@ -635,11 +643,6 @@ export default function MissionsPage() {
         }}>
           Nhiệm vụ & Bài tập
         </h1>
-        {homework.length > 0 && (
-          <span style={{ fontSize: ".75rem", color: "#9A8672" }}>
-            {submittedCount}/{homework.length} đã nộp
-          </span>
-        )}
       </div>
 
       {/* Goal banner */}
