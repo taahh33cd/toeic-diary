@@ -116,6 +116,7 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
     };
     let dictPos = "";
     let dictDef = "";
+    let fetchedAudioUrl = "";
 
     try {
       const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(w)}`);
@@ -131,7 +132,8 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
         setPos(dictPos as "n" | "v" | "adj" | "adv" | "");
         dictDef = def0.definition ?? "";
         setDef(dictDef);
-        setAudioUrl(entry.phonetics?.find((p: { audio?: string }) => p.audio)?.audio ?? "");
+        fetchedAudioUrl = entry.phonetics?.find((p: { audio?: string }) => p.audio)?.audio ?? "";
+        setAudioUrl(fetchedAudioUrl);
       }
     } catch { /* continue */ }
 
@@ -149,6 +151,7 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
     } catch { /* silently fail */ }
 
     setPhase("preview");
+    playWord(w, fetchedAudioUrl);
   }
 
   async function handleSave() {
