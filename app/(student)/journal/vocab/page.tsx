@@ -97,12 +97,20 @@ function QuickAddBar({ studentCode }: { studentCode: string }) {
     setWord(""); setVi(""); setIpa(""); setPos(""); setDef(""); setExample(""); setPart(5); setAudioUrl("");
   }
 
-  // F1-F2: Auto-lookup via Free Dictionary API + MyMemory
+  // Auto-lookup: Free Dictionary API (IPA/pos/audio) + Gemini (Vietnamese meaning)
   async function handleLookup() {
     const w = word.trim();
     if (!w || looking) return;
     setLooking(true);
     setShowAdvanced(true);
+
+    const posMap: Record<string, "n" | "v" | "adj" | "adv"> = {
+      noun: "n", verb: "v", adjective: "adj", adverb: "adv",
+    };
+
+    let dictPos = "";
+    let dictDef = "";
+
     try {
       const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(w)}`);
       if (res.ok) {
@@ -113,43 +121,36 @@ function QuickAddBar({ studentCode }: { studentCode: string }) {
         const m0 = meanings[0] ?? {};
         const def0 = m0.definitions?.[0] ?? {};
         const rawPos: string = m0.partOfSpeech ?? "";
-        // Map pos to our allowed values
-        const posMap: Record<string, "n" | "v" | "adj" | "adv"> = {
-          noun: "n", verb: "v", adjective: "adj", adverb: "adv",
-        };
 
         setIpa(entry.phonetic ?? entry.phonetics?.find((p: { text?: string }) => p.text)?.text ?? "");
-        setPos(posMap[rawPos] ?? "");
-        setDef(def0.definition ?? "");
-        setExample(def0.example ?? "");
+        dictPos = posMap[rawPos] ?? "";
+        setPos(dictPos as "n" | "v" | "adj" | "adv" | "");
+        dictDef = def0.definition ?? "";
+        setDef(dictDef);
         const url: string = entry.phonetics?.find((p: { audio?: string }) => p.audio)?.audio ?? "";
         setAudioUrl(url);
-
-        // F2: Vietnamese translation via MyMemory
-        const defText: string = def0.definition ?? "";
-        if (defText) {
-          try {
-            const viRes = await fetch(
-              `https://api.mymemory.translated.net/get?q=${encodeURIComponent(defText)}&langpair=en|vi`
-            );
-            if (viRes.ok) {
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              const viData: any = await viRes.json();
-              const translated: string = viData?.responseData?.translatedText ?? "";
-              if (translated && translated.toLowerCase() !== defText.toLowerCase()) {
-                setVi(translated);
-              }
-            }
-          } catch {
-            // ignore translation errors
-          }
-        }
       }
     } catch {
-      // silently fail — user can still fill manually
-    } finally {
-      setLooking(false);
+      // silently fail — continue to Gemini step anyway
     }
+
+    // Vietnamese meaning via Gemini (TOEIC-aware, 2-5 từ)
+    try {
+      const aiRes = await fetch("/api/ai/word-meaning", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ word: w, pos: dictPos, definition: dictDef }),
+      });
+      if (aiRes.ok) {
+        const { vi: viMeaning, example: aiExample } = await aiRes.json() as { vi?: string; example?: string };
+        if (viMeaning) setVi(viMeaning);
+        if (aiExample && !example) setExample(aiExample);
+      }
+    } catch {
+      // silently fail — user can fill manually
+    }
+
+    setLooking(false);
   }
 
   async function handleSave(e: React.FormEvent) {
