@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { useBookings } from "@/hooks/firebase/useBookings";
-import { updateBookingStatus } from "@/lib/firebase/helpers";
+import { updateBookingStatus, updateBookingNote } from "@/lib/firebase/helpers";
 import type { Booking, BookingStatus } from "@/lib/firebase/types";
+
+const SUGGEST_HOURS = Array.from({ length: 14 }, (_, i) => `${String(i + 8).padStart(2, "0")}:00`);
 
 const STATUS_CONFIG: Record<
   BookingStatus,
@@ -23,6 +25,12 @@ const FILTER_TABS: { key: BookingStatus | "all"; label: string }[] = [
 
 function BookingRow({ booking }: { booking: Booking }) {
   const [loading, setLoading] = useState<BookingStatus | null>(null);
+  const [suggesting, setSuggesting] = useState(false);
+  const [suggestDate, setSuggestDate] = useState("");
+  const [suggestTime, setSuggestTime] = useState(SUGGEST_HOURS[2]);
+  const [suggestMsg, setSuggestMsg] = useState("");
+  const [savingNote, setSavingNote] = useState(false);
+
   const cfg = STATUS_CONFIG[booking.status];
 
   const date = new Date(booking.date).toLocaleDateString("vi-VN", {
@@ -37,6 +45,24 @@ function BookingRow({ booking }: { booking: Booking }) {
     await updateBookingStatus(booking.id, status);
     setLoading(null);
   }
+
+  async function handleSuggest() {
+    if (!suggestDate) return;
+    setSavingNote(true);
+    const parts = [
+      `📅 GV gợi ý: ${suggestDate} lúc ${suggestTime}`,
+      suggestMsg.trim() ? `— ${suggestMsg.trim()}` : "",
+    ].filter(Boolean).join(" ");
+    await updateBookingNote(booking.id, parts);
+    setSuggesting(false);
+    setSuggestMsg("");
+    setSavingNote(false);
+  }
+
+  const todayStr = (() => {
+    const n = new Date();
+    return `${n.getFullYear()}-${String(n.getMonth() + 1).padStart(2, "0")}-${String(n.getDate()).padStart(2, "0")}`;
+  })();
 
   return (
     <div
@@ -71,7 +97,7 @@ function BookingRow({ booking }: { booking: Booking }) {
         </div>
 
         {booking.status === "pending" && (
-          <div className="flex gap-2 shrink-0">
+          <div className="flex gap-2 shrink-0 flex-wrap">
             <button
               onClick={() => handle("approved")}
               disabled={!!loading}
@@ -98,6 +124,19 @@ function BookingRow({ booking }: { booking: Booking }) {
             >
               {loading === "declined" ? "..." : "✗ Từ chối"}
             </button>
+            <button
+              onClick={() => setSuggesting((v) => !v)}
+              disabled={!!loading}
+              className="text-xs font-semibold px-3 py-1.5 min-h-[44px] rounded-lg transition-opacity"
+              style={{
+                background: "rgba(99,102,241,0.08)",
+                color: "rgb(99,102,241)",
+                border: "1px solid rgba(99,102,241,0.25)",
+                opacity: loading ? 0.5 : 1,
+              }}
+            >
+              💡 Gợi ý lịch khác
+            </button>
           </div>
         )}
 
@@ -111,6 +150,78 @@ function BookingRow({ booking }: { booking: Booking }) {
           </button>
         )}
       </div>
+
+      {suggesting && (
+        <div
+          className="mt-3 pt-3 flex flex-col gap-2"
+          style={{ borderTop: "1px solid rgba(99,102,241,0.2)" }}
+        >
+          <p className="text-xs font-semibold" style={{ color: "rgb(99,102,241)" }}>
+            💡 Gợi ý lịch học thay thế
+          </p>
+          <div className="flex gap-2 flex-wrap">
+            <input
+              type="date"
+              value={suggestDate}
+              min={todayStr}
+              onChange={(e) => setSuggestDate(e.target.value)}
+              className="text-sm rounded-lg px-2 py-1.5 border flex-1 min-w-[130px]"
+              style={{
+                background: "var(--bg-card)",
+                borderColor: "var(--border)",
+                color: "var(--text-primary)",
+              }}
+            />
+            <select
+              value={suggestTime}
+              onChange={(e) => setSuggestTime(e.target.value)}
+              className="text-sm rounded-lg px-2 py-1.5 border"
+              style={{
+                background: "var(--bg-card)",
+                borderColor: "var(--border)",
+                color: "var(--text-primary)",
+              }}
+            >
+              {SUGGEST_HOURS.map((h) => (
+                <option key={h} value={h}>{h}</option>
+              ))}
+            </select>
+          </div>
+          <input
+            type="text"
+            value={suggestMsg}
+            onChange={(e) => setSuggestMsg(e.target.value)}
+            placeholder="Ghi chú thêm (tuỳ chọn)"
+            className="text-sm rounded-lg px-2 py-1.5 border w-full"
+            style={{
+              background: "var(--bg-card)",
+              borderColor: "var(--border)",
+              color: "var(--text-primary)",
+            }}
+          />
+          <div className="flex gap-2">
+            <button
+              onClick={handleSuggest}
+              disabled={!suggestDate || savingNote}
+              className="text-xs font-semibold px-3 py-1.5 rounded-lg"
+              style={{
+                background: suggestDate ? "rgb(99,102,241)" : "var(--border)",
+                color: suggestDate ? "#fff" : "var(--text-muted)",
+                opacity: savingNote ? 0.6 : 1,
+              }}
+            >
+              {savingNote ? "Đang gửi..." : "Gửi gợi ý"}
+            </button>
+            <button
+              onClick={() => setSuggesting(false)}
+              className="text-xs px-3 py-1.5 rounded-lg border"
+              style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
+            >
+              Huỷ
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

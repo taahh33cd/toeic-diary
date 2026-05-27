@@ -463,12 +463,19 @@ function ScheduleTile({ schedule }: { schedule: ScheduleItem[] }) {
 
   return (
     <Tile className="col-span-12 md:col-span-6">
-      <div className="flex items-center gap-2 mb-4">
-        <span className="text-lg" style={{ color: "var(--orange)" }}>📅</span>
-        <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif" }}>
+      <div className="flex items-center justify-between mb-4">
+        <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)" }}>
           {t("Lịch trình sắp tới", "Upcoming Schedule")}
         </p>
+        <Link
+          href="/journal/schedule"
+          className="text-xs font-medium hover:opacity-70 transition-opacity"
+          style={{ color: "var(--orange)" }}
+        >
+          {t("Xem tất cả →", "See all →")}
+        </Link>
       </div>
+
       {upcoming.length === 0 ? (
         <div className="flex flex-col items-center justify-center h-20 text-center">
           <span className="text-3xl mb-2 opacity-20">📆</span>
@@ -477,39 +484,76 @@ function ScheduleTile({ schedule }: { schedule: ScheduleItem[] }) {
           </p>
         </div>
       ) : (
-        <div className="space-y-2.5">
-          {upcoming.map((sc, i) => {
-            const d = new Date(sc.date + "T00:00:00");
-            return (
-              <div key={i} className="flex items-center gap-3">
-                <div
-                  className="w-9 h-9 rounded-lg flex flex-col items-center justify-center shrink-0"
-                  style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}
-                >
-                  <span className="text-xs font-bold leading-none" style={{ color: INK }}>{d.getDate()}</span>
-                  <span className="text-[9px]" style={{ color: "var(--text-muted)" }}>
-                    {d.toLocaleDateString("vi-VN", { month: "short" }).replace("thg ", "T")}
-                  </span>
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium truncate">{sc.title}</p>
-                  {sc.time && (
-                    <p className="text-xs" style={{ color: "var(--text-muted)" }}>
-                      {sc.date === td ? t("Hôm nay", "Today") : d.toLocaleDateString("vi-VN", { weekday: "short" })} · {sc.time}
+        <div className="relative pl-5">
+          {/* vertical line */}
+          <div
+            className="absolute left-[7px] top-2 bottom-2 w-px"
+            style={{ background: "var(--border)" }}
+          />
+          <div className="space-y-4">
+            {upcoming.map((sc, i) => {
+              const d = new Date(sc.date + "T00:00:00");
+              const isToday = sc.date === td;
+              const weekday = isToday
+                ? t("Hôm nay", "Today")
+                : d.toLocaleDateString("vi-VN", { weekday: "long" });
+              const monthShort = d.toLocaleDateString("vi-VN", { month: "short" })
+                .replace("thg ", "Th");
+
+              return (
+                <div key={i} className="relative flex items-start gap-3">
+                  {/* dot */}
+                  <div
+                    className="absolute -left-5 top-1 w-3.5 h-3.5 rounded-full border-2 shrink-0"
+                    style={{
+                      background: isToday ? "var(--orange)" : "var(--bg-elevated)",
+                      borderColor: "var(--orange)",
+                    }}
+                  />
+                  {/* date badge */}
+                  <div
+                    className="flex flex-col items-center justify-center rounded-xl shrink-0 w-10 pt-0.5 pb-1"
+                    style={{
+                      background: isToday ? "rgba(196,98,45,0.12)" : "var(--bg-primary)",
+                      border: `1px solid ${isToday ? "rgba(196,98,45,0.3)" : "var(--border)"}`,
+                    }}
+                  >
+                    <span
+                      className="text-xl font-bold leading-none"
+                      style={{ color: isToday ? "var(--orange)" : "var(--text-primary)" }}
+                    >
+                      {d.getDate()}
+                    </span>
+                    <span className="text-[9px] font-medium mt-0.5" style={{ color: "var(--text-muted)" }}>
+                      {monthShort}
+                    </span>
+                  </div>
+                  {/* info */}
+                  <div className="flex-1 min-w-0 pt-0.5">
+                    <p className="text-sm font-semibold leading-tight truncate" style={{ color: "var(--text-primary)" }}>
+                      {sc.title}
                     </p>
-                  )}
+                    <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
+                      {weekday}{sc.time ? ` · 🕐 ${sc.time}` : ""}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       )}
+
       <Link
-        href="/journal/booking"
-        className="w-full mt-4 text-center text-xs font-bold flex items-center justify-center gap-1 hover:opacity-70 transition-opacity"
-        style={{ color: "var(--orange)" }}
+        href="/journal/schedule?tab=booking"
+        className="w-full mt-4 text-center text-xs font-bold flex items-center justify-center gap-1 py-2 rounded-lg hover:opacity-80 transition-opacity"
+        style={{
+          background: "rgba(196,98,45,0.08)",
+          color: "var(--orange)",
+          border: "1px solid rgba(196,98,45,0.2)",
+        }}
       >
-        {t("Đặt lịch mới", "Book a class")} <span>+</span>
+        {t("+ Đặt lịch mới", "+ Book a class")}
       </Link>
     </Tile>
   );

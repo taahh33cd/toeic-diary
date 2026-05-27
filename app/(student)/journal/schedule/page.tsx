@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { useProfile } from "@/hooks/useProfile";
 import { useStudent } from "@/hooks/firebase/useStudent";
 import { useClasses } from "@/hooks/firebase/useClasses";
@@ -290,10 +291,148 @@ function SlotCard({
   );
 }
 
+// ─── Request Form ─────────────────────────────────────────────────────────────
+
+const HOURS = Array.from({ length: 14 }, (_, i) => {
+  const h = i + 8;
+  return `${String(h).padStart(2, "0")}:00`;
+}); // "08:00" … "21:00"
+
+function RequestForm({ onSubmit }: { onSubmit: (date: string, time: string, topic: string) => Promise<void> }) {
+  const today = localToday();
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
+  const [topic, setTopic] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [done, setDone] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!date || !time) return;
+    setLoading(true);
+    try {
+      await onSubmit(date, time, topic);
+      setDone(true);
+      setDate(""); setTime(""); setTopic("");
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  if (done) {
+    return (
+      <div
+        style={{
+          padding: "1.2rem 1rem",
+          background: "rgba(16,185,129,0.07)",
+          border: "1px solid rgba(16,185,129,0.3)",
+          textAlign: "center",
+        }}
+      >
+        <p style={{ fontSize: ".85rem", fontWeight: 700, color: "rgb(5,150,105)", margin: 0 }}>
+          ✓ Đã gửi yêu cầu! Giáo viên sẽ xác nhận sớm.
+        </p>
+        <button
+          onClick={() => setDone(false)}
+          style={{ marginTop: ".6rem", fontSize: ".72rem", color: "#9A8672", background: "none", border: "none", cursor: "pointer" }}
+        >
+          Gửi yêu cầu khác
+        </button>
+      </div>
+    );
+  }
+
+  const inputStyle: React.CSSProperties = {
+    width: "100%",
+    padding: ".55rem .75rem",
+    fontSize: ".82rem",
+    border: "1px solid var(--border,#DDD0BC)",
+    background: "var(--bg-primary,#F5EFE6)",
+    color: "#2C1E0F",
+    outline: "none",
+    borderRadius: 4,
+  };
+
+  return (
+    <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: ".75rem" }}>
+      {/* Date */}
+      <div>
+        <label style={{ display: "block", fontSize: ".68rem", fontWeight: 700, color: "#9A8672", marginBottom: ".3rem", letterSpacing: ".06em", textTransform: "uppercase" }}>
+          Ngày học *
+        </label>
+        <input
+          type="date"
+          min={today}
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+          required
+          style={inputStyle}
+        />
+      </div>
+
+      {/* Time */}
+      <div>
+        <label style={{ display: "block", fontSize: ".68rem", fontWeight: 700, color: "#9A8672", marginBottom: ".3rem", letterSpacing: ".06em", textTransform: "uppercase" }}>
+          Giờ học *
+        </label>
+        <select
+          value={time}
+          onChange={(e) => setTime(e.target.value)}
+          required
+          style={{ ...inputStyle, cursor: "pointer" }}
+        >
+          <option value="">-- Chọn giờ --</option>
+          {HOURS.map((h) => <option key={h} value={h}>{h}</option>)}
+        </select>
+      </div>
+
+      {/* Topic */}
+      <div>
+        <label style={{ display: "block", fontSize: ".68rem", fontWeight: 700, color: "#9A8672", marginBottom: ".3rem", letterSpacing: ".06em", textTransform: "uppercase" }}>
+          Nội dung muốn học
+        </label>
+        <textarea
+          value={topic}
+          onChange={(e) => setTopic(e.target.value)}
+          placeholder="Ví dụ: Luyện listening Part 3, Từ vựng chủ đề công nghệ…"
+          rows={3}
+          style={{ ...inputStyle, resize: "vertical", fontFamily: "inherit" }}
+        />
+      </div>
+
+      <button
+        type="submit"
+        disabled={loading || !date || !time}
+        style={{
+          padding: ".65rem 1rem",
+          background: !date || !time ? "var(--border,#DDD0BC)" : "#C4622D",
+          color: !date || !time ? "#9A8672" : "#fff",
+          border: "none",
+          borderRadius: 4,
+          fontSize: ".82rem",
+          fontWeight: 700,
+          cursor: !date || !time ? "not-allowed" : "pointer",
+          opacity: loading ? 0.6 : 1,
+          transition: "all .15s",
+        }}
+      >
+        {loading ? "Đang gửi…" : "Gửi yêu cầu đặt lịch →"}
+      </button>
+    </form>
+  );
+}
+
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function SchedulePage() {
-  const [activeTab, setActiveTab] = useState<"schedule" | "booking">("schedule");
+  const searchParams = useSearchParams();
+  const [activeTab, setActiveTab] = useState<"schedule" | "booking">(
+    searchParams.get("tab") === "booking" ? "booking" : "schedule"
+  );
+
+  useEffect(() => {
+    if (searchParams.get("tab") === "booking") setActiveTab("booking");
+  }, [searchParams]);
 
   const { profile } = useProfile();
   const { student, loading: stuLoading } = useStudent(profile?.studentCode);
@@ -362,6 +501,20 @@ export default function SchedulePage() {
       date: slot.date,
       time: slot.time,
       note: note || undefined,
+      status: "pending",
+      createdAt: new Date().toISOString(),
+    });
+  }
+
+  async function handleRequestBooking(date: string, time: string, topic: string) {
+    if (!profile) return;
+    await createBooking({
+      studentId: profile.id,
+      studentName: profile.displayName ?? "Học viên",
+      slotId: "",
+      date,
+      time,
+      note: topic || undefined,
       status: "pending",
       createdAt: new Date().toISOString(),
     });
@@ -520,6 +673,31 @@ export default function SchedulePage() {
                     />
                   ))
                 )}
+              </section>
+
+              {/* Đề xuất lịch học */}
+              <section style={{ marginTop: "1.5rem" }}>
+                <div
+                  style={{
+                    fontSize: ".65rem", fontWeight: 700, letterSpacing: ".1em",
+                    textTransform: "uppercase", color: "#9A8672",
+                    marginBottom: ".55rem", display: "flex", alignItems: "center", gap: ".5rem",
+                  }}
+                >
+                  Đề xuất lịch học
+                  <span style={{ fontSize: ".6rem", fontWeight: 500, textTransform: "none", color: "#B8A898", letterSpacing: 0 }}>
+                    — không có slot phù hợp? Gửi yêu cầu riêng
+                  </span>
+                </div>
+                <div
+                  style={{
+                    padding: "1rem",
+                    background: "var(--bg-elevated,#FBF7F2)",
+                    border: "1px solid var(--border,#DDD0BC)",
+                  }}
+                >
+                  <RequestForm onSubmit={handleRequestBooking} />
+                </div>
               </section>
             </>
           )}
