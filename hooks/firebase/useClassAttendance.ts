@@ -3,14 +3,22 @@
 import { ref } from "firebase/database";
 import { useObjectVal } from "react-firebase-hooks/database";
 import { firebaseDb } from "@/lib/firebase/client";
-import type { AttendanceMap } from "@/lib/firebase/types";
+import type { AttendanceMap, AttendanceStatus } from "@/lib/firebase/types";
 import { useMemo } from "react";
 
-type AllAttendance = Record<string, AttendanceMap>;
+type RawAttendanceValue = AttendanceStatus | { markedAt?: string; status: AttendanceStatus };
 
-/** Reads attendance for all class members in one subscription. */
+function normalizeStatus(val: unknown): AttendanceStatus | undefined {
+  if (typeof val === "string") return val as AttendanceStatus;
+  if (val && typeof val === "object" && "status" in val) {
+    return (val as { status: AttendanceStatus }).status;
+  }
+  return undefined;
+}
+
+/** Reads attendance for all class members in one subscription. Normalizes both plain-string and {markedAt,status} formats. */
 export function useClassAttendance(memberCodes: string[]) {
-  const [raw, loading, error] = useObjectVal<AllAttendance>(
+  const [raw, loading, error] = useObjectVal<Record<string, Record<string, RawAttendanceValue>>>(
     memberCodes.length > 0 ? ref(firebaseDb, "attendance") : null
   );
 
@@ -20,7 +28,14 @@ export function useClassAttendance(memberCodes: string[]) {
     if (!raw) return {} as Record<string, AttendanceMap>;
     const result: Record<string, AttendanceMap> = {};
     for (const code of memberCodes) {
-      result[code] = (raw[code] as AttendanceMap) ?? {};
+      const studentRaw = raw[code];
+      if (!studentRaw) { result[code] = {}; continue; }
+      const normalized: AttendanceMap = {};
+      for (const [date, val] of Object.entries(studentRaw)) {
+        const status = normalizeStatus(val);
+        if (status) normalized[date] = status;
+      }
+      result[code] = normalized;
     }
     return result;
     // eslint-disable-next-line react-hooks/exhaustive-deps
