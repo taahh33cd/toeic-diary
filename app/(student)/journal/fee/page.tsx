@@ -85,6 +85,8 @@ function courseTypeLabel(ct: string | undefined): string {
   return "📚 Theo buổi";
 }
 
+const QR_URL = "https://img.vietqr.io/image/TCB-7313779966-qr_only.png";
+
 // ─── QR Lightbox ─────────────────────────────────────────────────────────────
 
 function QRLightbox({ onClose }: { onClose: () => void }) {
@@ -102,7 +104,7 @@ function QRLightbox({ onClose }: { onClose: () => void }) {
         onClick={e => e.stopPropagation()}
       >
         <img
-          src="/qr-payment.png"
+          src={QR_URL}
           alt="QR chuyển khoản"
           style={{ width: "100%", maxWidth: 260, display: "block", margin: "0 auto" }}
         />
@@ -351,20 +353,10 @@ function ReceiptModal({
                   title="Click để phóng to"
                 >
                   <img
-                    src="/qr-payment.png"
+                    src={QR_URL}
                     alt="QR chuyển khoản"
                     style={{ width: 100, height: 100, display: "block", border: "1px solid #EEE6DC", borderRadius: 4 }}
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = "none";
-                      (e.target as HTMLImageElement).nextElementSibling!.setAttribute("style", "display:flex");
-                    }}
                   />
-                  <div style={{
-                    display: "none", width: 100, height: 100,
-                    alignItems: "center", justifyContent: "center",
-                    background: "#EEE6DC", border: "1px solid #DDD0BC", borderRadius: 4,
-                    fontSize: "2rem",
-                  }}>📱</div>
                 </div>
                 <div style={{ fontSize: ".58rem", color: "#9A8672", textAlign: "center", marginTop: 4, fontStyle: "italic" }}>
                   Click để phóng to
