@@ -17,31 +17,34 @@ export async function POST(req: NextRequest) {
 
 Word: "${word.trim()}"${posHint}${defHint}
 
-Rules:
-- Return ONLY a valid JSON object, no explanation
-- "vi": 2-5 words in Vietnamese that best capture the meaning (flashcard style, e.g. "đàm phán, thương lượng")
-- "example": one short, natural English example sentence (10-15 words) using the word in a TOEIC business/everyday context
-- Use the part of speech and definition hint to disambiguate if the word has multiple meanings
-- "vi" must be in Vietnamese
+Respond with ONLY a JSON object in this exact format (no extra text, no markdown):
+{"vi":"2-5 từ tiếng Việt ngắn gọn","example":"one short TOEIC English sentence using the word"}
 
-{"vi":"...","example":"..."}`;
+Example output for "negotiate":
+{"vi":"đàm phán, thương lượng","example":"The sales team negotiated a new contract with the client."}`;
 
     const response = await ai.models.generateContent({
       model: "gemini-2.5-flash-lite",
       contents: prompt,
-      config: { responseMimeType: "application/json" },
     });
 
-    const text = response.text ?? "{}";
-    const match = text.match(/\{[\s\S]*\}/);
-    if (!match) return NextResponse.json({ vi: "", example: "" });
+    const text = (response.text ?? "").trim();
+    // Strip markdown code fences if present
+    const cleaned = text.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/i, "").trim();
+    const match = cleaned.match(/\{[\s\S]*\}/);
+
+    if (!match) {
+      console.error("[word-meaning] No JSON in response:", text.slice(0, 200));
+      return NextResponse.json({ vi: "", example: "" });
+    }
 
     const parsed = JSON.parse(match[0]) as { vi?: string; example?: string };
     return NextResponse.json({
       vi: typeof parsed.vi === "string" ? parsed.vi : "",
       example: typeof parsed.example === "string" ? parsed.example : "",
     });
-  } catch {
+  } catch (err) {
+    console.error("[word-meaning] Error:", err);
     return NextResponse.json({ vi: "", example: "" }, { status: 500 });
   }
 }
