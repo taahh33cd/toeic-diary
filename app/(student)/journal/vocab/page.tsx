@@ -180,12 +180,18 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
   const showCard = phase === "loading" || phase === "preview" || phase === "saving" || phase === "saved";
 
   return (
-    <section style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 12 }}>
+    <section style={{ background: "linear-gradient(160deg, #1c1006 0%, #2d1909 55%, #3a2010 100%)", border: "1.5px solid rgba(196,98,45,0.35)", borderRadius: 16, overflow: "hidden" }}>
+      <style>{`.vocab-add-input::placeholder { color: rgba(245,232,215,0.32); }`}</style>
+      {/* Header label */}
+      <div style={{ padding: "14px 18px 2px", display: "flex", alignItems: "center", gap: 6 }}>
+        <span style={{ fontSize: ".68rem", fontWeight: 800, letterSpacing: ".12em", textTransform: "uppercase", color: "rgba(210,120,50,0.9)" }}>✦ Thêm từ vựng mới</span>
+      </div>
       {/* Search input */}
-      <div style={{ padding: "12px 14px", display: "flex", alignItems: "center", gap: 10 }}>
-        <span style={{ fontSize: "1.1rem", opacity: 0.5, flexShrink: 0 }}>🔍</span>
+      <div style={{ padding: "8px 18px 16px", display: "flex", alignItems: "center", gap: 12 }}>
+        <span style={{ fontSize: "1.3rem", flexShrink: 0, filter: "sepia(1) saturate(2) brightness(1.1)" }}>🔍</span>
         <input
           ref={inputRef}
+          className="vocab-add-input"
           type="text"
           placeholder={t("Nhập từ tiếng Anh… (↵ Enter để tra nghĩa)", "Type a word… (↵ Enter to look up)")}
           value={word}
@@ -203,9 +209,9 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
             background: "none",
             border: "none",
             outline: "none",
-            fontSize: "1rem",
+            fontSize: "1.1rem",
             fontWeight: 600,
-            color: "var(--text-primary)",
+            color: "#f0e2cc",
             fontFamily: "'Lora', Georgia, serif",
           }}
           autoComplete="off"
@@ -215,7 +221,7 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
           <button
             type="button"
             onClick={reset}
-            style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-muted)", fontSize: ".9rem", flexShrink: 0, padding: 2 }}
+            style={{ background: "none", border: "none", cursor: "pointer", color: "rgba(245,232,215,0.45)", fontSize: ".9rem", flexShrink: 0, padding: 2 }}
             title="Xoá"
           >✕</button>
         )}
@@ -223,7 +229,7 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
 
       {/* Hint text when empty */}
       {!word && phase === "search" && (
-        <div style={{ padding: "0 14px 12px 42px", fontSize: ".72rem", color: "var(--text-muted)" }}>
+        <div style={{ padding: "0 18px 16px 50px", fontSize: ".72rem", color: "rgba(245,232,215,0.38)" }}>
           {t("Nhập từ và nhấn Enter → nghĩa tiếng Việt được tra tự động", "Type a word and press Enter → Vietnamese meaning auto-filled")}
         </div>
       )}
@@ -231,7 +237,7 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
       {/* Preview / loading card */}
       {showCard && (
         <div style={{
-          margin: "0 10px 10px",
+          margin: "0 12px 12px",
           borderRadius: 10,
           overflow: "hidden",
           border: phase === "saved"
@@ -1276,6 +1282,9 @@ export default function VocabPage() {
       {/* ── Main content ── */}
       <div className="flex-1 min-w-0 space-y-5">
 
+        {/* Quick Add Bar */}
+        <QuickAddBar studentCode={profile.studentCode} />
+
         {/* F11: SRS Status Banner */}
         {dueWords.length > 0 && (
           <section
@@ -1398,9 +1407,6 @@ export default function VocabPage() {
             </div>
           </section>
         )}
-
-        {/* Quick Add Bar */}
-        <QuickAddBar studentCode={profile.studentCode} />
 
         {words.length > 0 && (
           <>
