@@ -304,7 +304,13 @@ function TasksTile({
   const isDone = submittedDate;
 
   return (
-    <Tile className="col-span-12 md:col-span-6">
+    <Tile
+      className="col-span-12 md:col-span-6"
+      style={{
+        background: "rgba(196,98,45,0.07)",
+        borderTop: "3px solid var(--orange)",
+      }}
+    >
       <div className="flex justify-between items-start mb-3">
         <div>
           <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif" }}>
