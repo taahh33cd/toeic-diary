@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { useProfile } from "@/hooks/useProfile";
 import { useVocab } from "@/hooks/firebase/useVocab";
 import { saveVocabWord, updateVocabWord, deleteVocabWord } from "@/lib/firebase/helpers";
@@ -77,37 +77,43 @@ function playWebSpeech(word: string) {
 
 // ─── Quick Add Bar ────────────────────────────────────────────────────────────
 
-function QuickAddBar({ studentCode }: { studentCode: string }) {
+type AddPhase = "search" | "loading" | "preview" | "saving" | "saved";
+
+const POS_LABELS: Record<string, string> = { n: "noun", v: "verb", adj: "adj", adv: "adv" };
+
+function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: (word: string) => void }) {
   const { t } = useLocale();
   const today = new Date().toISOString().slice(0, 10);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const [phase, setPhase] = useState<AddPhase>("search");
   const [word, setWord] = useState("");
   const [vi, setVi] = useState("");
-  const [saving, setSaving] = useState(false);
-  const [looking, setLooking] = useState(false);
-  const [showAdvanced, setShowAdvanced] = useState(false);
-  // Advanced fields
   const [ipa, setIpa] = useState("");
   const [pos, setPos] = useState<"n" | "v" | "adj" | "adv" | "">("");
   const [def, setDef] = useState("");
   const [example, setExample] = useState("");
-  const [part, setPart] = useState<number | "">(5);
+  const [part, setPart] = useState<number>(5);
   const [audioUrl, setAudioUrl] = useState("");
+  const [editingVi, setEditingVi] = useState(false);
+  const [showDetails, setShowDetails] = useState(false);
 
   function reset() {
-    setWord(""); setVi(""); setIpa(""); setPos(""); setDef(""); setExample(""); setPart(5); setAudioUrl("");
+    setPhase("search");
+    setWord(""); setVi(""); setIpa(""); setPos(""); setDef("");
+    setExample(""); setPart(5); setAudioUrl("");
+    setEditingVi(false); setShowDetails(false);
+    setTimeout(() => inputRef.current?.focus(), 50);
   }
 
-  // Auto-lookup: Free Dictionary API (IPA/pos/audio) + Gemini (Vietnamese meaning)
   async function handleLookup() {
     const w = word.trim();
-    if (!w || looking) return;
-    setLooking(true);
-    setShowAdvanced(true);
+    if (!w || phase === "loading") return;
+    setPhase("loading");
 
     const posMap: Record<string, "n" | "v" | "adj" | "adv"> = {
       noun: "n", verb: "v", adjective: "adj", adverb: "adv",
     };
-
     let dictPos = "";
     let dictDef = "";
 
@@ -117,24 +123,18 @@ function QuickAddBar({ studentCode }: { studentCode: string }) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const data: any[] = await res.json();
         const entry = data[0] ?? {};
-        const meanings = entry.meanings ?? [];
-        const m0 = meanings[0] ?? {};
+        const m0 = entry.meanings?.[0] ?? {};
         const def0 = m0.definitions?.[0] ?? {};
         const rawPos: string = m0.partOfSpeech ?? "";
-
         setIpa(entry.phonetic ?? entry.phonetics?.find((p: { text?: string }) => p.text)?.text ?? "");
         dictPos = posMap[rawPos] ?? "";
         setPos(dictPos as "n" | "v" | "adj" | "adv" | "");
         dictDef = def0.definition ?? "";
         setDef(dictDef);
-        const url: string = entry.phonetics?.find((p: { audio?: string }) => p.audio)?.audio ?? "";
-        setAudioUrl(url);
+        setAudioUrl(entry.phonetics?.find((p: { audio?: string }) => p.audio)?.audio ?? "");
       }
-    } catch {
-      // silently fail — continue to Gemini step anyway
-    }
+    } catch { /* continue */ }
 
-    // Vietnamese meaning via Gemini (TOEIC-aware, 2-5 từ)
     try {
       const aiRes = await fetch("/api/ai/word-meaning", {
         method: "POST",
@@ -144,19 +144,16 @@ function QuickAddBar({ studentCode }: { studentCode: string }) {
       if (aiRes.ok) {
         const { vi: viMeaning, example: aiExample } = await aiRes.json() as { vi?: string; example?: string };
         if (viMeaning) setVi(viMeaning);
-        if (aiExample && !example) setExample(aiExample);
+        if (aiExample) setExample(aiExample);
       }
-    } catch {
-      // silently fail — user can fill manually
-    }
+    } catch { /* silently fail */ }
 
-    setLooking(false);
+    setPhase("preview");
   }
 
-  async function handleSave(e: React.FormEvent) {
-    e.preventDefault();
-    if (!word.trim()) return;
-    setSaving(true);
+  async function handleSave() {
+    if (!word.trim() || phase === "saving") return;
+    setPhase("saving");
     try {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       await saveVocabWord(studentCode, {
@@ -166,182 +163,347 @@ function QuickAddBar({ studentCode }: { studentCode: string }) {
         pos: pos || undefined,
         def: def.trim() || undefined,
         example: example.trim() || undefined,
-        part: part !== "" ? part : undefined,
+        part,
         addedDate: today,
         repCount: 0,
       } as any);
-      reset();
-      setShowAdvanced(false);
-    } finally {
-      setSaving(false);
+      const savedWord = word.trim();
+      setPhase("saved");
+      onSaved?.(savedWord);
+      setTimeout(() => reset(), 1800);
+    } catch {
+      setPhase("preview");
     }
   }
 
+  const isLoading = phase === "loading";
+  const showCard = phase === "loading" || phase === "preview" || phase === "saving" || phase === "saved";
+
   return (
-    <section
-      className="rounded-xl p-4"
-      style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)" }}
-    >
-      <form onSubmit={handleSave}>
-        <div className="flex gap-2 items-center flex-wrap">
-          {/* Word input + lookup button */}
-          <div className="flex gap-2 flex-1 min-w-0" style={{ minWidth: 220 }}>
-            <input
-              type="text"
-              placeholder={t("Nhập từ mới…", "New word…")}
-              value={word}
-              onChange={(e) => setWord(e.target.value)}
-              onKeyDown={(e) => { if (e.key === "Enter" && word.trim()) { e.preventDefault(); handleLookup(); } }}
-              className="flex-1 rounded-lg px-4 py-2 text-sm outline-none focus:ring-2"
-              style={{
-                background: "var(--bg-primary)",
-                border: "1px solid var(--border)",
-                color: "var(--text-primary)",
-                // @ts-ignore
-                "--tw-ring-color": "var(--orange)",
-              }}
-            />
-            {/* F3: play audio after lookup */}
-            {(word.trim() || audioUrl) && (
-              <button
-                type="button"
-                onClick={() => playWord(word.trim(), audioUrl || undefined)}
-                title="Phát âm"
-                className="rounded-lg px-2 py-2 text-sm transition-colors"
-                style={{
-                  background: "var(--bg-primary)",
-                  border: "1px solid var(--border)",
-                  color: "var(--text-muted)",
-                  cursor: "pointer",
-                  flexShrink: 0,
-                }}
-              >
-                🔊
-              </button>
-            )}
-            {/* F1-F2: auto-lookup button */}
-            <button
-              type="button"
-              onClick={handleLookup}
-              disabled={looking || !word.trim()}
-              className="rounded-lg px-3 py-2 text-xs font-semibold whitespace-nowrap transition-opacity disabled:opacity-40"
-              style={{
-                background: "rgba(196,98,45,0.1)",
-                border: "1px solid rgba(196,98,45,0.25)",
-                color: "#C4622D",
-                cursor: "pointer",
-                flexShrink: 0,
-              }}
-            >
-              {looking ? "…" : t("Tra nghĩa", "Look up")}
-            </button>
-          </div>
-          {/* VI meaning input */}
-          <input
-            type="text"
-            placeholder={t("Nghĩa tiếng Việt…", "Meaning (VI)…")}
-            value={vi}
-            onChange={(e) => setVi(e.target.value)}
-            className="rounded-lg px-4 py-2 text-sm outline-none"
-            style={{
-              flex: "1 1 160px",
-              background: "var(--bg-primary)",
-              border: "1px solid var(--border)",
-              color: "var(--text-primary)",
-            }}
-          />
-          <button
-            type="submit"
-            disabled={saving || !word.trim()}
-            className="px-5 py-2 rounded-lg text-sm font-bold text-white transition-opacity hover:opacity-90 disabled:opacity-50 flex items-center gap-1 whitespace-nowrap"
-            style={{ background: "var(--orange)", flexShrink: 0 }}
-          >
-            <span>+</span> {t("Thêm từ", "Add Word")}
-          </button>
+    <section style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 12 }}>
+      {/* Search input */}
+      <div style={{ padding: "12px 14px", display: "flex", alignItems: "center", gap: 10 }}>
+        <span style={{ fontSize: "1.1rem", opacity: 0.5, flexShrink: 0 }}>🔍</span>
+        <input
+          ref={inputRef}
+          type="text"
+          placeholder={t("Nhập từ tiếng Anh… (↵ Enter để tra nghĩa)", "Type a word… (↵ Enter to look up)")}
+          value={word}
+          onChange={(e) => { setWord(e.target.value); if (phase !== "search") setPhase("search"); }}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              if (phase === "preview") handleSave();
+              else if (word.trim()) handleLookup();
+            }
+            if (e.key === "Escape") reset();
+          }}
+          style={{
+            flex: 1,
+            background: "none",
+            border: "none",
+            outline: "none",
+            fontSize: "1rem",
+            fontWeight: 600,
+            color: "var(--text-primary)",
+            fontFamily: "'Lora', Georgia, serif",
+          }}
+          autoComplete="off"
+          spellCheck={false}
+        />
+        {word && (
           <button
             type="button"
-            onClick={() => setShowAdvanced((v) => !v)}
-            className="text-xs px-3 py-2 rounded-lg transition-colors"
-            style={{
-              color: showAdvanced ? "var(--orange)" : "var(--text-muted)",
-              border: "1px solid var(--border)",
-              background: showAdvanced ? "rgba(196,98,45,0.08)" : "var(--bg-primary)",
-              flexShrink: 0,
-            }}
-          >
-            {showAdvanced ? t("Thu lại", "Collapse") : t("Nâng cao", "Advanced")}
-          </button>
-        </div>
-
-        {showAdvanced && (
-          <div className="grid grid-cols-2 gap-3 mt-3 pt-3" style={{ borderTop: "1px solid var(--border)" }}>
-            <div className="grid grid-cols-2 gap-3">
-              <div>
-                <label className="journal-lbl">IPA</label>
-                <input
-                  type="text"
-                  placeholder="əˈkɒmplɪʃ"
-                  value={ipa}
-                  onChange={(e) => setIpa(e.target.value)}
-                  className="journal-input"
-                  style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)", fontFamily: "'JetBrains Mono', monospace" }}
-                />
-              </div>
-              <div>
-                <label className="journal-lbl">{t("Từ loại", "Part of Speech")}</label>
-                <select
-                  value={pos}
-                  onChange={(e) => setPos(e.target.value as typeof pos)}
-                  className="journal-input"
-                  style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }}
-                >
-                  <option value="">—</option>
-                  <option value="n">n</option>
-                  <option value="v">v</option>
-                  <option value="adj">adj</option>
-                  <option value="adv">adv</option>
-                </select>
-              </div>
-            </div>
-            <div>
-              <label className="journal-lbl">{t("Định nghĩa (EN)", "Definition (EN)")}</label>
-              <input
-                type="text"
-                placeholder="to succeed in doing sth difficult"
-                value={def}
-                onChange={(e) => setDef(e.target.value)}
-                className="journal-input"
-                style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }}
-              />
-            </div>
-            <div>
-              <label className="journal-lbl">{t("Ví dụ", "Example")}</label>
-              <input
-                type="text"
-                placeholder="She accomplished the task in record time."
-                value={example}
-                onChange={(e) => setExample(e.target.value)}
-                className="journal-input"
-                style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }}
-              />
-            </div>
-            <div>
-              <label className="journal-lbl">Part</label>
-              <select
-                value={part}
-                onChange={(e) => setPart(e.target.value ? Number(e.target.value) : "")}
-                className="journal-input"
-                style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }}
-              >
-                <option value="">—</option>
-                {[1, 2, 3, 4, 5, 6, 7].map((p) => (
-                  <option key={p} value={p}>Part {p}</option>
-                ))}
-              </select>
-            </div>
-          </div>
+            onClick={reset}
+            style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-muted)", fontSize: ".9rem", flexShrink: 0, padding: 2 }}
+            title="Xoá"
+          >✕</button>
         )}
-      </form>
+      </div>
+
+      {/* Hint text when empty */}
+      {!word && phase === "search" && (
+        <div style={{ padding: "0 14px 12px 42px", fontSize: ".72rem", color: "var(--text-muted)" }}>
+          {t("Nhập từ và nhấn Enter → nghĩa tiếng Việt được tra tự động", "Type a word and press Enter → Vietnamese meaning auto-filled")}
+        </div>
+      )}
+
+      {/* Preview / loading card */}
+      {showCard && (
+        <div style={{
+          margin: "0 10px 10px",
+          borderRadius: 10,
+          overflow: "hidden",
+          border: phase === "saved"
+            ? "1.5px solid rgba(74,124,89,.4)"
+            : "1px solid var(--border)",
+          background: phase === "saved"
+            ? "rgba(74,124,89,.06)"
+            : "var(--bg-primary)",
+          transition: "all .25s",
+        }}>
+
+          {phase === "saved" ? (
+            /* ── Saved state ── */
+            <div style={{ padding: "14px 16px", display: "flex", alignItems: "center", gap: 10 }}>
+              <span style={{ fontSize: "1.4rem" }}>✅</span>
+              <div>
+                <div style={{ fontWeight: 700, fontSize: ".95rem", color: "rgba(74,124,89,1)" }}>
+                  {t(`Đã lưu "${word}"`, `Saved "${word}"`)}
+                </div>
+                {vi && <div style={{ fontSize: ".78rem", color: "var(--text-muted)", marginTop: 2 }}>{vi}</div>}
+              </div>
+            </div>
+          ) : (
+            /* ── Loading / Preview state ── */
+            <div style={{ padding: "14px 16px" }}>
+              {/* Word header */}
+              <div style={{ display: "flex", alignItems: "baseline", gap: 8, marginBottom: 8, flexWrap: "wrap" }}>
+                <span style={{
+                  fontFamily: "'Lora', Georgia, serif",
+                  fontSize: "1.25rem",
+                  fontWeight: 700,
+                  color: "var(--text-primary)",
+                }}>
+                  {word}
+                </span>
+                {pos && !isLoading && (
+                  <span style={{
+                    fontSize: ".65rem", fontWeight: 700, padding: "2px 7px",
+                    borderRadius: 99, textTransform: "uppercase", letterSpacing: ".06em",
+                    background: POS_COLOR[pos] ? `${POS_COLOR[pos]}22` : "var(--border)",
+                    color: POS_COLOR[pos] ?? "var(--text-muted)",
+                    border: `1px solid ${POS_COLOR[pos] ? `${POS_COLOR[pos]}44` : "var(--border)"}`,
+                  }}>
+                    {POS_LABELS[pos] ?? pos}
+                  </span>
+                )}
+                {ipa && !isLoading && (
+                  <span style={{ fontSize: ".78rem", color: "var(--text-muted)", fontFamily: "'JetBrains Mono', monospace" }}>
+                    {ipa}
+                  </span>
+                )}
+                {!isLoading && (
+                  <button
+                    type="button"
+                    onClick={() => playWord(word.trim(), audioUrl || undefined)}
+                    style={{ background: "none", border: "none", cursor: "pointer", fontSize: ".85rem", padding: 2, color: "var(--text-muted)", marginLeft: 2 }}
+                    title="Phát âm"
+                  >🔊</button>
+                )}
+                {isLoading && (
+                  <span style={{ fontSize: ".72rem", color: "var(--text-muted)", fontStyle: "italic" }}>
+                    {t("Đang tra…", "Looking up…")}
+                  </span>
+                )}
+              </div>
+
+              {/* Vietnamese meaning — inline editable */}
+              <div style={{ marginBottom: 8 }}>
+                {editingVi ? (
+                  <input
+                    autoFocus
+                    type="text"
+                    value={vi}
+                    onChange={(e) => setVi(e.target.value)}
+                    onBlur={() => setEditingVi(false)}
+                    onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); setEditingVi(false); handleSave(); } if (e.key === "Escape") setEditingVi(false); }}
+                    placeholder={t("Nghĩa tiếng Việt…", "Vietnamese meaning…")}
+                    style={{
+                      width: "100%",
+                      background: "var(--bg-elevated)",
+                      border: "1.5px solid var(--orange)",
+                      borderRadius: 8,
+                      padding: "6px 10px",
+                      fontSize: ".88rem",
+                      fontWeight: 600,
+                      color: "var(--text-primary)",
+                      outline: "none",
+                    }}
+                  />
+                ) : (
+                  <div
+                    onClick={() => !isLoading && setEditingVi(true)}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 6,
+                      cursor: isLoading ? "default" : "text",
+                      padding: "6px 10px",
+                      borderRadius: 8,
+                      background: "rgba(196,98,45,.07)",
+                      border: "1px dashed rgba(196,98,45,.25)",
+                      minHeight: 34,
+                    }}
+                  >
+                    {isLoading ? (
+                      <span style={{ fontSize: ".78rem", color: "var(--text-muted)", fontStyle: "italic" }}>
+                        ✨ {t("Đang tạo nghĩa tiếng Việt…", "Generating Vietnamese meaning…")}
+                      </span>
+                    ) : vi ? (
+                      <>
+                        <span style={{ flex: 1, fontSize: ".9rem", fontWeight: 700, color: "var(--orange)" }}>{vi}</span>
+                        <span style={{ fontSize: ".65rem", color: "var(--text-muted)" }}>{t("nhấn để sửa", "click to edit")}</span>
+                      </>
+                    ) : (
+                      <span style={{ fontSize: ".78rem", color: "var(--text-muted)", fontStyle: "italic" }}>
+                        {t("+ Thêm nghĩa tiếng Việt…", "+ Add Vietnamese meaning…")}
+                      </span>
+                    )}
+                  </div>
+                )}
+              </div>
+
+              {/* Example sentence */}
+              {example && !isLoading && (
+                <div style={{
+                  fontSize: ".75rem",
+                  color: "var(--text-muted)",
+                  fontStyle: "italic",
+                  padding: "4px 10px",
+                  marginBottom: 10,
+                  borderLeft: "2px solid var(--border)",
+                }}>
+                  "{example}"
+                </div>
+              )}
+
+              {/* Part pills + details toggle */}
+              {!isLoading && (
+                <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap", marginBottom: 12 }}>
+                  <span style={{ fontSize: ".65rem", color: "var(--text-muted)", fontWeight: 600, textTransform: "uppercase", letterSpacing: ".06em" }}>
+                    Part:
+                  </span>
+                  {[1,2,3,4,5,6,7].map((p) => (
+                    <button
+                      key={p}
+                      type="button"
+                      onClick={() => setPart(p)}
+                      style={{
+                        width: 26, height: 26,
+                        borderRadius: 6,
+                        fontSize: ".72rem",
+                        fontWeight: part === p ? 700 : 500,
+                        border: part === p ? "1.5px solid var(--orange)" : "1px solid var(--border)",
+                        background: part === p ? "rgba(196,98,45,.12)" : "var(--bg-elevated)",
+                        color: part === p ? "var(--orange)" : "var(--text-muted)",
+                        cursor: "pointer",
+                        transition: "all .15s",
+                      }}
+                    >
+                      {p}
+                    </button>
+                  ))}
+                  <button
+                    type="button"
+                    onClick={() => setShowDetails((v) => !v)}
+                    style={{
+                      marginLeft: "auto",
+                      fontSize: ".65rem",
+                      color: "var(--text-muted)",
+                      background: "none",
+                      border: "none",
+                      cursor: "pointer",
+                      padding: "2px 6px",
+                      textDecoration: "underline",
+                    }}
+                  >
+                    {showDetails ? t("Thu gọn ▲", "Less ▲") : t("IPA / Định nghĩa ▼", "IPA / Definition ▼")}
+                  </button>
+                </div>
+              )}
+
+              {/* Collapsible details */}
+              {showDetails && !isLoading && (
+                <div style={{
+                  display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8,
+                  padding: "10px 0",
+                  borderTop: "1px solid var(--border)",
+                  marginBottom: 10,
+                }}>
+                  <div>
+                    <div style={{ fontSize: ".6rem", fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 3 }}>IPA</div>
+                    <input
+                      type="text"
+                      value={ipa}
+                      onChange={(e) => setIpa(e.target.value)}
+                      placeholder="/ɪˈɡzæmpəl/"
+                      style={{ width: "100%", background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 6, padding: "5px 8px", fontSize: ".78rem", color: "var(--text-primary)", fontFamily: "'JetBrains Mono', monospace", outline: "none" }}
+                    />
+                  </div>
+                  <div>
+                    <div style={{ fontSize: ".6rem", fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 3 }}>{t("Từ loại", "POS")}</div>
+                    <select
+                      value={pos}
+                      onChange={(e) => setPos(e.target.value as typeof pos)}
+                      style={{ width: "100%", background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 6, padding: "5px 8px", fontSize: ".78rem", color: "var(--text-primary)", outline: "none" }}
+                    >
+                      <option value="">—</option>
+                      <option value="n">noun</option>
+                      <option value="v">verb</option>
+                      <option value="adj">adjective</option>
+                      <option value="adv">adverb</option>
+                    </select>
+                  </div>
+                  <div style={{ gridColumn: "span 2" }}>
+                    <div style={{ fontSize: ".6rem", fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 3 }}>{t("Ví dụ", "Example")}</div>
+                    <input
+                      type="text"
+                      value={example}
+                      onChange={(e) => setExample(e.target.value)}
+                      placeholder="She accomplished the task in record time."
+                      style={{ width: "100%", background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 6, padding: "5px 8px", fontSize: ".78rem", color: "var(--text-primary)", outline: "none" }}
+                    />
+                  </div>
+                </div>
+              )}
+
+              {/* Action buttons */}
+              {!isLoading && (
+                <div style={{ display: "flex", gap: 8 }}>
+                  <button
+                    type="button"
+                    onClick={handleSave}
+                    disabled={phase === "saving"}
+                    style={{
+                      flex: 1,
+                      padding: "9px 16px",
+                      borderRadius: 8,
+                      background: "var(--orange)",
+                      color: "#fff",
+                      fontWeight: 700,
+                      fontSize: ".88rem",
+                      border: "none",
+                      cursor: phase === "saving" ? "default" : "pointer",
+                      opacity: phase === "saving" ? 0.7 : 1,
+                      transition: "opacity .15s",
+                    }}
+                  >
+                    {phase === "saving"
+                      ? t("Đang lưu…", "Saving…")
+                      : t("✓ Lưu từ này  ↵", "✓ Save word  ↵")}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={reset}
+                    style={{
+                      padding: "9px 14px",
+                      borderRadius: 8,
+                      background: "none",
+                      border: "1px solid var(--border)",
+                      color: "var(--text-muted)",
+                      fontSize: ".82rem",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {t("Tìm từ khác", "Search again")}
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      )}
     </section>
   );
 }
