@@ -180,18 +180,16 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
   const showCard = phase === "loading" || phase === "preview" || phase === "saving" || phase === "saved";
 
   return (
-    <section style={{ background: "linear-gradient(160deg, #1c1006 0%, #2d1909 55%, #3a2010 100%)", border: "1.5px solid rgba(196,98,45,0.35)", borderRadius: 16, overflow: "hidden" }}>
-      <style>{`.vocab-add-input::placeholder { color: rgba(245,232,215,0.32); }`}</style>
+    <section style={{ background: "linear-gradient(160deg, #fdf8f2 0%, #f5ecdc 100%)", border: "1.5px solid rgba(196,98,45,0.35)", borderRadius: 16, overflow: "hidden" }}>
       {/* Header label */}
       <div style={{ padding: "14px 18px 2px", display: "flex", alignItems: "center", gap: 6 }}>
-        <span style={{ fontSize: ".68rem", fontWeight: 800, letterSpacing: ".12em", textTransform: "uppercase", color: "rgba(210,120,50,0.9)" }}>✦ Thêm từ vựng mới</span>
+        <span style={{ fontSize: ".68rem", fontWeight: 800, letterSpacing: ".12em", textTransform: "uppercase", color: "rgba(196,98,45,0.85)" }}>✦ Thêm từ vựng mới</span>
       </div>
       {/* Search input */}
       <div style={{ padding: "8px 18px 16px", display: "flex", alignItems: "center", gap: 12 }}>
-        <span style={{ fontSize: "1.3rem", flexShrink: 0, filter: "sepia(1) saturate(2) brightness(1.1)" }}>🔍</span>
+        <span style={{ fontSize: "1.3rem", flexShrink: 0 }}>🔍</span>
         <input
           ref={inputRef}
-          className="vocab-add-input"
           type="text"
           placeholder={t("Nhập từ tiếng Anh… (↵ Enter để tra nghĩa)", "Type a word… (↵ Enter to look up)")}
           value={word}
@@ -211,7 +209,7 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
             outline: "none",
             fontSize: "1.1rem",
             fontWeight: 600,
-            color: "#f0e2cc",
+            color: "var(--text-primary)",
             fontFamily: "'Lora', Georgia, serif",
           }}
           autoComplete="off"
@@ -221,7 +219,7 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
           <button
             type="button"
             onClick={reset}
-            style={{ background: "none", border: "none", cursor: "pointer", color: "rgba(245,232,215,0.45)", fontSize: ".9rem", flexShrink: 0, padding: 2 }}
+            style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-muted)", fontSize: ".9rem", flexShrink: 0, padding: 2 }}
             title="Xoá"
           >✕</button>
         )}
@@ -229,7 +227,7 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
 
       {/* Hint text when empty */}
       {!word && phase === "search" && (
-        <div style={{ padding: "0 18px 16px 50px", fontSize: ".72rem", color: "rgba(245,232,215,0.38)" }}>
+        <div style={{ padding: "0 18px 16px 50px", fontSize: ".72rem", color: "var(--text-muted)" }}>
           {t("Nhập từ và nhấn Enter → nghĩa tiếng Việt được tra tự động", "Type a word and press Enter → Vietnamese meaning auto-filled")}
         </div>
       )}
@@ -511,6 +509,189 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
         </div>
       )}
     </section>
+  );
+}
+
+// ─── Inline Flashcard ────────────────────────────────────────────────────────
+
+function InlineFlashcard({
+  words,
+  idx,
+  setIdx,
+  flipped,
+  setFlipped,
+  todayStr,
+}: {
+  words: VocabWord[];
+  idx: number;
+  setIdx: (i: number) => void;
+  flipped: boolean;
+  setFlipped: (f: boolean) => void;
+  todayStr: string;
+}) {
+  const { t } = useLocale();
+  const word = words[Math.min(idx, words.length - 1)];
+  if (!word) return null;
+  const isDue = isWordDue(word, todayStr) && (word.repCount ?? 0) < MASTERY_THRESHOLD;
+
+  function prev(e: React.MouseEvent) { e.stopPropagation(); setIdx((idx - 1 + words.length) % words.length); setFlipped(false); }
+  function next(e: React.MouseEvent) { e.stopPropagation(); setIdx((idx + 1) % words.length); setFlipped(false); }
+
+  return (
+    <div>
+      <style>{`
+        .fc-inner{transition:transform .45s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d;position:relative;}
+        .fc-inner.flipped{transform:rotateY(180deg);}
+        .fc-face{backface-visibility:hidden;-webkit-backface-visibility:hidden;}
+        .fc-back{transform:rotateY(180deg);}
+      `}</style>
+      <div style={{ perspective: 1000, cursor: "pointer", userSelect: "none" }} onClick={() => setFlipped(!flipped)}>
+        <div className={`fc-inner${flipped ? " flipped" : ""}`} style={{ height: 220, position: "relative" }}>
+          {/* Front */}
+          <div className="fc-face" style={{
+            position: "absolute", inset: 0,
+            background: "linear-gradient(135deg, #2C1E0F 0%, #3D2A16 100%)",
+            borderRadius: 14, display: "flex", flexDirection: "column",
+            alignItems: "center", justifyContent: "center", padding: "24px 32px", gap: 8,
+          }}>
+            {isDue && (
+              <span style={{ position: "absolute", top: 12, right: 14, fontSize: ".6rem", fontWeight: 800, letterSpacing: ".08em", textTransform: "uppercase", background: "rgba(196,98,45,0.9)", color: "#fff", padding: "2px 8px", borderRadius: 99 }}>
+                ĐẾN HẠN
+              </span>
+            )}
+            {word.part && (
+              <span style={{ fontSize: ".6rem", fontWeight: 700, color: "rgba(240,226,204,0.45)", letterSpacing: ".1em", textTransform: "uppercase" }}>PART {word.part}</span>
+            )}
+            <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "2.2rem", fontWeight: 700, color: "#f0e2cc", textAlign: "center", lineHeight: 1.2 }}>{word.word}</p>
+            {word.ipa && <p style={{ fontFamily: "monospace", fontSize: ".88rem", color: "rgba(240,226,204,0.5)" }}>/{word.ipa}/</p>}
+            <p style={{ fontSize: ".68rem", color: "rgba(240,226,204,0.3)", marginTop: 12 }}>{t("Nhấn để xem nghĩa →", "Tap to reveal →")}</p>
+          </div>
+          {/* Back */}
+          <div className="fc-face fc-back" style={{
+            position: "absolute", inset: 0,
+            background: "linear-gradient(135deg, #fdf8f2 0%, #f5ecdc 100%)",
+            borderRadius: 14, display: "flex", flexDirection: "column",
+            alignItems: "center", justifyContent: "center", padding: "24px 32px", gap: 10,
+            border: "1.5px solid rgba(196,98,45,0.2)",
+          }}>
+            <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.6rem", fontWeight: 700, color: "#2C1E0F", textAlign: "center" }}>
+              {word.vi || <span style={{ color: "var(--text-muted)", fontStyle: "italic" }}>—</span>}
+            </p>
+            {word.pos && (
+              <span style={{ fontSize: ".65rem", fontWeight: 700, padding: "2px 8px", borderRadius: 99, background: POS_COLOR[word.pos] ? `${POS_COLOR[word.pos]}22` : "var(--border)", color: POS_COLOR[word.pos] ?? "var(--text-muted)", border: `1px solid ${POS_COLOR[word.pos] ? `${POS_COLOR[word.pos]}44` : "var(--border)"}` }}>
+                {POS_LABELS[word.pos] ?? word.pos}
+              </span>
+            )}
+            {word.example && (
+              <p style={{ fontSize: ".78rem", color: "var(--text-muted)", fontStyle: "italic", textAlign: "center", paddingTop: 10, borderTop: "1px solid rgba(196,98,45,0.15)", maxWidth: "90%" }}>
+                &ldquo;{word.example}&rdquo;
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+      {/* Navigation */}
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, marginTop: 12 }}>
+        <button onClick={prev} style={{ background: "none", border: "1px solid var(--border)", borderRadius: 8, padding: "5px 16px", cursor: "pointer", color: "var(--text-muted)", fontSize: ".9rem" }}>◀</button>
+        <span style={{ fontSize: ".75rem", fontWeight: 600, color: "var(--text-muted)", minWidth: 64, textAlign: "center" }}>{idx + 1} / {words.length}</span>
+        <button onClick={next} style={{ background: "none", border: "1px solid var(--border)", borderRadius: 8, padding: "5px 16px", cursor: "pointer", color: "var(--text-muted)", fontSize: ".9rem" }}>▶</button>
+      </div>
+    </div>
+  );
+}
+
+// ─── Word List Row ────────────────────────────────────────────────────────────
+
+function WordListRow({ word, studentCode, todayStr }: { word: VocabWord; studentCode: string; todayStr: string }) {
+  const { t } = useLocale();
+  const [reviewing, setReviewing] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+
+  const due = isWordDue(word, todayStr) && (word.repCount ?? 0) < MASTERY_THRESHOLD;
+  const isMastered = (word.repCount ?? 0) >= MASTERY_THRESHOLD;
+
+  async function handleReview(e: React.MouseEvent) {
+    e.stopPropagation();
+    if (reviewing) return;
+    setReviewing(true);
+    const newCount = (word.repCount ?? 0) + 1;
+    await updateVocabWord(studentCode, word.id, { repCount: newCount, lastReview: todayStr });
+    await awardXp("vocab_review", { wordId: word.id });
+    if (newCount >= MASTERY_THRESHOLD && (word.repCount ?? 0) < MASTERY_THRESHOLD) {
+      await awardXp("vocab_master", { wordId: word.id });
+    }
+    setReviewing(false);
+  }
+
+  async function handleDelete(e: React.MouseEvent) {
+    e.stopPropagation();
+    if (!window.confirm(`Xoá từ "${word.word}"?`)) return;
+    setDeleting(true);
+    await deleteVocabWord(studentCode, word.id);
+  }
+
+  if (deleting) return null;
+
+  return (
+    <>
+      <div
+        onClick={() => setExpanded((v) => !v)}
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr auto",
+          alignItems: "center",
+          gap: 12,
+          padding: "11px 16px",
+          borderBottom: "1px solid var(--border)",
+          borderLeft: due ? "3px solid var(--orange)" : isMastered ? "3px solid var(--accent-green)" : "3px solid transparent",
+          background: expanded ? "var(--bg-elevated)" : "transparent",
+          cursor: "pointer",
+          transition: "background .12s",
+        }}
+      >
+        {/* Word + IPA */}
+        <div>
+          <p style={{ fontFamily: "'Lora', Georgia, serif", fontWeight: 700, fontSize: ".95rem", color: "var(--text-primary)" }}>{word.word}</p>
+          {word.ipa && <p style={{ fontFamily: "monospace", fontSize: ".68rem", color: "var(--text-muted)", marginTop: 1 }}>/{word.ipa}/</p>}
+        </div>
+        {/* Vietnamese + pos */}
+        <div>
+          <p style={{ fontSize: ".85rem", color: "var(--text-secondary)" }}>{word.vi || <span style={{ fontStyle: "italic", color: "var(--text-muted)" }}>—</span>}</p>
+          {word.pos && <span style={{ fontSize: ".62rem", fontWeight: 700, color: POS_COLOR[word.pos] ?? "var(--text-muted)" }}>{word.pos}</span>}
+        </div>
+        {/* Badges + action */}
+        <div style={{ display: "flex", gap: 8, alignItems: "center", flexShrink: 0 }}>
+          {word.part && (
+            <span style={{ fontSize: ".62rem", fontWeight: 700, padding: "2px 7px", borderRadius: 4, background: "rgba(196,98,45,0.1)", color: "var(--orange)" }}>P{word.part}</span>
+          )}
+          {isMastered ? (
+            <span style={{ fontSize: ".62rem", fontWeight: 700, padding: "2px 7px", borderRadius: 4, background: "rgba(74,124,89,0.12)", color: "var(--accent-green)" }}>✓ {t("Thành thạo", "Mastered")}</span>
+          ) : due ? (
+            <button
+              onClick={handleReview}
+              disabled={reviewing}
+              style={{ fontSize: ".72rem", fontWeight: 700, padding: "4px 12px", borderRadius: 6, background: "var(--orange)", color: "#fff", border: "none", cursor: reviewing ? "default" : "pointer", opacity: reviewing ? 0.6 : 1 }}
+            >
+              {reviewing ? "…" : t("Ôn ngay", "Review")}
+            </button>
+          ) : (
+            <span style={{ fontSize: ".62rem", color: "var(--text-muted)" }}>×{word.repCount ?? 0}/{MASTERY_THRESHOLD}</span>
+          )}
+        </div>
+      </div>
+      {expanded && (
+        <div style={{ padding: "10px 16px 12px 20px", background: "var(--bg-elevated)", borderBottom: "1px solid var(--border)" }} onClick={(e) => e.stopPropagation()}>
+          {word.def && <p style={{ fontSize: ".78rem", color: "var(--text-secondary)", marginBottom: 4 }}>{word.def}</p>}
+          {word.example && <p style={{ fontSize: ".75rem", fontStyle: "italic", color: "var(--text-muted)", borderLeft: "2px solid var(--border)", paddingLeft: 8 }}>&ldquo;{word.example}&rdquo;</p>}
+          <p style={{ fontSize: ".68rem", color: "var(--text-muted)", marginTop: 6 }}>×{word.repCount ?? 0}/{MASTERY_THRESHOLD} · {word.addedDate}</p>
+          <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
+            <button onClick={(e) => { e.stopPropagation(); playWord(word.word, word.audioUrl); }} style={{ fontSize: ".72rem", background: "none", border: "1px solid var(--border)", borderRadius: 6, padding: "3px 10px", cursor: "pointer", color: "var(--text-muted)" }}>🔊 {t("Phát âm", "Play")}</button>
+            <button onClick={handleDelete} style={{ fontSize: ".72rem", background: "none", border: "1px solid rgba(224,92,92,0.4)", borderRadius: 6, padding: "3px 10px", cursor: "pointer", color: "#e05c5c" }}>{t("Xoá", "Delete")}</button>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
@@ -1208,10 +1389,12 @@ export default function VocabPage() {
   const { profile, loading: profileLoading } = useProfile();
   const { words, loading: vocabLoading } = useVocab(profile?.studentCode);
   const [search, setSearch] = useState("");
-  const [filterPart, setFilterPart] = useState<number | null>(null);
+  const [selectedPart, setSelectedPart] = useState<number | null>(null);
   const [filterDue, setFilterDue] = useState(false);
   const [flashcardMode, setFlashcardMode] = useState<{ mode: FlashcardMode; words: VocabWord[] } | null>(null);
-  const [listenWriteWords, setListenWriteWords] = useState<VocabWord[] | null>(null); // F15
+  const [listenWriteWords, setListenWriteWords] = useState<VocabWord[] | null>(null);
+  const [inlineIdx, setInlineIdx] = useState(0);
+  const [inlineFlipped, setInlineFlipped] = useState(false);
 
   const todayStr = new Date().toISOString().slice(0, 10);
   const loading = profileLoading || vocabLoading;
@@ -1228,23 +1411,41 @@ export default function VocabPage() {
           !search ||
           w.word.toLowerCase().includes(search.toLowerCase()) ||
           (w.vi ?? "").toLowerCase().includes(search.toLowerCase());
-        const matchPart = filterPart === null || w.part === filterPart;
+        const matchPart = selectedPart === null || w.part === selectedPart;
         const matchDue = !filterDue || isWordDue(w, todayStr);
         return matchSearch && matchPart && matchDue;
       }),
-    [words, search, filterPart, filterDue, todayStr]
+    [words, search, selectedPart, filterDue, todayStr]
   );
 
-  const grouped = useMemo(() => {
+  // Words for inline flashcard: current part, due words first
+  const inlineWords = useMemo(() => {
+    const base = selectedPart === null ? words : words.filter((w) => w.part === selectedPart);
+    const due = base.filter((w) => isWordDue(w, todayStr) && (w.repCount ?? 0) < MASTERY_THRESHOLD);
+    const rest = base.filter((w) => !isWordDue(w, todayStr) || (w.repCount ?? 0) >= MASTERY_THRESHOLD);
+    return [...due, ...rest];
+  }, [words, selectedPart, todayStr]);
+
+  // Word list: due first, then grouped by part (when all) or flat (when specific part)
+  const filteredDue = useMemo(
+    () => filtered.filter((w) => isWordDue(w, todayStr) && (w.repCount ?? 0) < MASTERY_THRESHOLD),
+    [filtered, todayStr]
+  );
+  const filteredNotDue = useMemo(
+    () => filtered.filter((w) => !isWordDue(w, todayStr) || (w.repCount ?? 0) >= MASTERY_THRESHOLD),
+    [filtered, todayStr]
+  );
+  const groupedNotDue = useMemo(() => {
+    if (selectedPart !== null) return [];
     const groups: Record<string, VocabWord[]> = {};
-    for (const w of filtered) {
+    for (const w of filteredNotDue) {
       const key = w.part ? `Part ${w.part}` : "Khác";
       if (!groups[key]) groups[key] = [];
       groups[key].push(w);
     }
     const order = [1, 2, 3, 4, 5, 6, 7].map((n) => `Part ${n}`).concat(["Khác"]);
     return order.filter((k) => groups[k]).map((k) => ({ label: k, words: groups[k] }));
-  }, [filtered]);
+  }, [filteredNotDue, selectedPart]);
 
   if (loading) {
     return (
@@ -1410,42 +1611,60 @@ export default function VocabPage() {
 
         {words.length > 0 && (
           <>
-            {/* Search + Filter */}
-            <section className="flex gap-3">
-              <div className="relative flex-1">
-                <input
-                  type="search"
-                  placeholder={t("Tìm từ…", "Search words…")}
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  className="w-full rounded-xl px-4 py-2.5 text-sm outline-none"
-                  style={{
-                    background: "var(--bg-elevated)",
-                    border: "1px solid var(--border)",
-                    color: "var(--text-primary)",
-                  }}
-                />
-              </div>
-              <select
-                value={filterPart ?? ""}
-                onChange={(e) => setFilterPart(e.target.value ? Number(e.target.value) : null)}
-                className="rounded-xl px-4 py-2.5 text-sm outline-none"
+            {/* Part selector pills */}
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+              <button
+                onClick={() => { setSelectedPart(null); setInlineIdx(0); setInlineFlipped(false); }}
                 style={{
-                  background: "var(--bg-elevated)",
-                  border: "1px solid var(--border)",
-                  color: "var(--text-primary)",
+                  fontSize: ".78rem", fontWeight: 700, padding: "6px 14px", borderRadius: 99, cursor: "pointer", transition: "all .15s",
+                  background: selectedPart === null ? "var(--orange)" : "var(--bg-elevated)",
+                  color: selectedPart === null ? "#fff" : "var(--text-muted)",
+                  border: selectedPart === null ? "1px solid var(--orange)" : "1px solid var(--border)",
                 }}
-                aria-label="Lọc theo Part"
               >
-                <option value="">{t("Tất cả", "All Parts")}</option>
-                {[1, 2, 3, 4, 5, 6, 7].map((p) => (
-                  <option key={p} value={p}>Part {p}</option>
-                ))}
-              </select>
+                {t("Tất cả", "All")} · {words.length}
+              </button>
+              {[1, 2, 3, 4, 5, 6, 7].filter((p) => words.some((w) => w.part === p)).map((p) => (
+                <button
+                  key={p}
+                  onClick={() => { setSelectedPart(p); setInlineIdx(0); setInlineFlipped(false); }}
+                  style={{
+                    fontSize: ".78rem", fontWeight: 700, padding: "6px 14px", borderRadius: 99, cursor: "pointer", transition: "all .15s",
+                    background: selectedPart === p ? "var(--orange)" : "var(--bg-elevated)",
+                    color: selectedPart === p ? "#fff" : "var(--text-muted)",
+                    border: selectedPart === p ? "1px solid var(--orange)" : "1px solid var(--border)",
+                  }}
+                >
+                  P{p} · {words.filter((w) => w.part === p).length}
+                </button>
+              ))}
+            </div>
+
+            {/* Inline Flashcard */}
+            {inlineWords.length > 0 && (
+              <InlineFlashcard
+                words={inlineWords}
+                idx={inlineIdx}
+                setIdx={setInlineIdx}
+                flipped={inlineFlipped}
+                setFlipped={setInlineFlipped}
+                todayStr={todayStr}
+              />
+            )}
+
+            {/* Search bar */}
+            <section style={{ display: "flex", gap: 10, alignItems: "center" }}>
+              <input
+                type="search"
+                placeholder={t("Tìm từ trong danh sách…", "Search words…")}
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                style={{ flex: 1, borderRadius: 10, padding: "8px 14px", fontSize: ".85rem", outline: "none", background: "var(--bg-elevated)", border: "1px solid var(--border)", color: "var(--text-primary)" }}
+              />
               <button
                 onClick={() => setFilterDue((v) => !v)}
-                className="px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors"
                 style={{
+                  fontSize: ".78rem", fontWeight: 700, padding: "8px 16px", borderRadius: 10, cursor: "pointer", whiteSpace: "nowrap",
                   background: filterDue ? "var(--orange)" : "var(--bg-elevated)",
                   color: filterDue ? "white" : "var(--text-muted)",
                   border: filterDue ? "1px solid var(--orange)" : "1px solid var(--border)",
@@ -1455,22 +1674,41 @@ export default function VocabPage() {
               </button>
             </section>
 
-            {/* Vocab Bento Grid */}
+            {/* Word list */}
             {filtered.length === 0 ? (
-              <p className="text-sm text-center py-12" style={{ color: "var(--text-muted)" }}>
+              <p style={{ fontSize: ".85rem", textAlign: "center", padding: "40px 0", color: "var(--text-muted)" }}>
                 {t("Không tìm thấy từ nào.", "No words found.")}
               </p>
             ) : (
-              <div className="grid grid-cols-2 gap-5">
-                {grouped.map(({ label, words: groupWords }) => (
-                  <PartBentoCard
-                    key={label}
-                    label={label}
-                    words={groupWords}
-                    studentCode={profile.studentCode!}
-                    todayStr={todayStr}
-                  />
-                ))}
+              <div style={{ background: "var(--bg-elevated)", borderRadius: 12, border: "1px solid var(--border)", overflow: "hidden" }}>
+                {/* Due section */}
+                {filteredDue.length > 0 && (
+                  <>
+                    <div style={{ padding: "8px 16px", background: "rgba(196,98,45,0.06)", borderBottom: "1px solid var(--border)", display: "flex", alignItems: "center", gap: 8 }}>
+                      <span style={{ fontSize: ".62rem", fontWeight: 800, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--orange)" }}>⏰ {t("Đến hạn ôn", "Due for review")} · {filteredDue.length}</span>
+                    </div>
+                    {filteredDue.map((w) => (
+                      <WordListRow key={w.id} word={w} studentCode={profile.studentCode!} todayStr={todayStr} />
+                    ))}
+                  </>
+                )}
+                {/* Remaining: flat list (specific part) or grouped (all parts) */}
+                {selectedPart !== null ? (
+                  filteredNotDue.map((w) => (
+                    <WordListRow key={w.id} word={w} studentCode={profile.studentCode!} todayStr={todayStr} />
+                  ))
+                ) : (
+                  groupedNotDue.map(({ label, words: gWords }) => (
+                    <div key={label}>
+                      <div style={{ padding: "8px 16px", background: "var(--bg-primary)", borderTop: filteredDue.length > 0 ? "1px solid var(--border)" : undefined, borderBottom: "1px solid var(--border)" }}>
+                        <span style={{ fontSize: ".62rem", fontWeight: 800, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--text-muted)" }}>{label} · {gWords.length}</span>
+                      </div>
+                      {gWords.map((w) => (
+                        <WordListRow key={w.id} word={w} studentCode={profile.studentCode!} todayStr={todayStr} />
+                      ))}
+                    </div>
+                  ))
+                )}
               </div>
             )}
           </>
