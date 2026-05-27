@@ -8,6 +8,7 @@ import { useHomework } from "@/hooks/firebase/useHomework";
 import { useGoal } from "@/hooks/firebase/useGoal";
 import { useSubmissions } from "@/hooks/firebase/useSubmissions";
 import { useVocab } from "@/hooks/firebase/useVocab";
+import { useClasses } from "@/hooks/firebase/useClasses";
 import { useLocale } from "@/hooks/useLocale";
 import { LiveIndicator } from "@/components/shared/LiveIndicator";
 import type { XpStats } from "./page";
@@ -74,6 +75,26 @@ function getWeekDays(): string[] {
 const WEEK_LABELS = ["T2", "T3", "T4", "T5", "T6", "T7", "CN"];
 const HW_SECTIONS = ["vocab", "listening", "reading", "practice", "other"] as const;
 const INK = "#3D2B1F";
+
+/** Generate upcoming class sessions from weeklySchedule for the tile */
+function generateWeeklyDatesForTile(
+  day: string, time: string, className: string, classId: string, fromDate: string, count = 4
+): ScheduleItem[] {
+  const dayNum = parseInt(day, 10);
+  if (isNaN(dayNum) || dayNum < 0 || dayNum > 6) return [];
+  const [fy, fm, fd] = fromDate.split("-").map(Number);
+  let cur = new Date(fy, fm - 1, fd);
+  cur.setDate(cur.getDate() + (dayNum - cur.getDay() + 7) % 7);
+  const results: ScheduleItem[] = [];
+  for (let i = 0; i < count; i++) {
+    const y = cur.getFullYear();
+    const m = String(cur.getMonth() + 1).padStart(2, "0");
+    const d = String(cur.getDate()).padStart(2, "0");
+    results.push({ id: `cls_${classId}_${y}-${m}-${d}`, date: `${y}-${m}-${d}`, time, title: `📚 ${className}` });
+    cur.setDate(cur.getDate() + 7);
+  }
+  return results;
+}
 
 // ─── Shared tile wrapper ───────────────────────────────────────────────────────
 
@@ -785,6 +806,7 @@ export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }
   const { goal } = useGoal(profile?.studentCode);
   const { submissions } = useSubmissions(profile?.studentCode);
   const { words } = useVocab(profile?.studentCode);
+  const { classes } = useClasses();
 
   const loading = profileLoading || studentLoading;
 
@@ -804,7 +826,21 @@ export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }
 
   const td = localToday();
   const scores = student?.scores ?? [];
-  const schedule: ScheduleItem[] = Array.isArray(student?.schedule) ? student!.schedule : [];
+  const personalSchedule: ScheduleItem[] = Array.isArray(student?.schedule) ? student!.schedule : [];
+
+  // Merge personal + class weeklySchedule (same logic as /schedule page)
+  const mergedSchedule = useMemo<ScheduleItem[]>(() => {
+    const results: ScheduleItem[] = [...personalSchedule];
+    if (profile?.studentCode) {
+      for (const cls of classes) {
+        if (!cls.members?.includes(profile.studentCode)) continue;
+        for (const slot of cls.weeklySchedule ?? []) {
+          results.push(...generateWeeklyDatesForTile(slot.day, slot.time, cls.name, cls.id, td, 4));
+        }
+      }
+    }
+    return results.sort((a, b) => a.date.localeCompare(b.date));
+  }, [personalSchedule, classes, profile?.studentCode, td]);
 
   // Today's homework (active: date <= today <= endDate)
   const todayHw = homework.find((hw) => hw.date <= td && (!hw.endDate || hw.endDate >= td)) ?? homework[0] ?? null;
@@ -869,7 +905,7 @@ export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }
         <TasksTile homework={hwSections} submittedDate={todaySubmitted} />
 
         {/* Row 3: Schedule | Feedback */}
-        <ScheduleTile schedule={schedule} />
+        <ScheduleTile schedule={mergedSchedule} />
         <FeedbackTile comments={student?.comments as Record<string, { text: string; ts: number }> | undefined} />
 
         {/* Row 4: Dictation Progress (full width) */}
