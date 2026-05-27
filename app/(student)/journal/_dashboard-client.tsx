@@ -829,18 +829,17 @@ export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }
   const personalSchedule: ScheduleItem[] = Array.isArray(student?.schedule) ? student!.schedule : [];
 
   // Merge personal + class weeklySchedule (same logic as /schedule page)
-  const mergedSchedule = useMemo<ScheduleItem[]>(() => {
+  // Plain computation — useMemo not used here because this code runs after early returns
+  const mergedSchedule: ScheduleItem[] = (() => {
     const results: ScheduleItem[] = [...personalSchedule];
-    if (profile?.studentCode) {
-      for (const cls of classes) {
-        if (!cls.members?.includes(profile.studentCode)) continue;
-        for (const slot of cls.weeklySchedule ?? []) {
-          results.push(...generateWeeklyDatesForTile(slot.day, slot.time, cls.name, cls.id, td, 4));
-        }
+    for (const cls of classes) {
+      if (!cls.members?.includes(profile.studentCode)) continue;
+      for (const slot of cls.weeklySchedule ?? []) {
+        results.push(...generateWeeklyDatesForTile(slot.day, slot.time, cls.name, cls.id, td, 4));
       }
     }
     return results.sort((a, b) => a.date.localeCompare(b.date));
-  }, [personalSchedule, classes, profile?.studentCode, td]);
+  })();
 
   // Today's homework (active: date <= today <= endDate)
   const todayHw = homework.find((hw) => hw.date <= td && (!hw.endDate || hw.endDate >= td)) ?? homework[0] ?? null;
