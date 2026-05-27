@@ -11,7 +11,7 @@ import { useVocab } from "@/hooks/firebase/useVocab";
 import { useLocale } from "@/hooks/useLocale";
 import { LiveIndicator } from "@/components/shared/LiveIndicator";
 import type { XpStats } from "./page";
-import type { ScheduleItem, Goal, ParaphraseEntry, VocabWord } from "@/lib/firebase/types";
+import type { ScheduleItem, Goal, VocabWord } from "@/lib/firebase/types";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -34,16 +34,7 @@ function localToday() {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
 
-const PARA_SRS = [1, 3, 7, 14, 30];
 const VOCAB_SRS = [0, 1, 3, 7, 14, 30, 60];
-
-function isParaphraseDue(e: ParaphraseEntry, today: string) {
-  if (!e.lastReview) return true;
-  const interval = PARA_SRS[Math.min(e.repCount ?? 0, PARA_SRS.length - 1)];
-  const due = new Date(e.lastReview + "T00:00:00");
-  due.setDate(due.getDate() + interval);
-  return due <= new Date(today + "T00:00:00");
-}
 
 function isVocabDue(w: VocabWord, today: string) {
   if (!w.lastReview) return true;
@@ -189,7 +180,7 @@ function ScoreTile({ scores, goal }: { scores: { score: number; date: string }[]
   const pips = sorted.slice(0, 8).reverse();
 
   return (
-    <Tile className="col-span-12 md:col-span-4">
+    <Tile className="col-span-12 md:col-span-6">
       <div className="flex justify-between items-start mb-3">
         <div>
           <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif" }}>
@@ -285,51 +276,6 @@ function ScoreTile({ scores, goal }: { scores: { score: number; date: string }[]
   );
 }
 
-// ─── Module tile ──────────────────────────────────────────────────────────────
-
-function ModuleTile({ modules }: { modules: { status: string }[] }) {
-  const { t } = useLocale();
-  const done = modules.filter((m) => m.status === "done").length;
-  const total = modules.length;
-  const pct = total > 0 ? Math.round((done / total) * 100) : 5;
-
-  return (
-    <Tile className="col-span-12 md:col-span-4">
-      <div className="flex justify-between items-start">
-        <div>
-          <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif" }}>
-            {t("Module hoàn thành", "Modules Done")}
-          </p>
-          <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
-            {t("Tiến độ khóa học", "Course progress")}
-          </p>
-        </div>
-        <span className="text-2xl">🎓</span>
-      </div>
-      <div className="mt-4">
-        <span
-          className="text-5xl font-bold leading-none"
-          style={{ fontFamily: "'Lora', Georgia, serif", color: INK }}
-        >
-          {done}
-        </span>
-        {total > 0 && (
-          <span className="text-sm ml-1" style={{ color: "var(--text-muted)" }}>/ {total}</span>
-        )}
-        <div
-          className="w-full h-2 rounded-full mt-3 overflow-hidden"
-          style={{ background: "var(--border)" }}
-        >
-          <div
-            className="h-full rounded-full"
-            style={{ width: `${Math.max(pct, 3)}%`, background: "var(--orange)" }}
-          />
-        </div>
-      </div>
-    </Tile>
-  );
-}
-
 // ─── Tasks tile ───────────────────────────────────────────────────────────────
 
 const SEC_LABELS: Record<string, string> = {
@@ -344,18 +290,21 @@ function TasksTile({
   submittedDate: boolean;
 }) {
   const { t } = useLocale();
+  type HwItem = { title?: string };
 
-  const sections = homework
-    ? HW_SECTIONS.filter((s) => (homework[s] as unknown[])?.length > 0).map((s) => ({
-        key: s,
-        count: (homework[s] as unknown[]).length,
-      }))
+  const allItems: { section: string; title: string }[] = homework
+    ? HW_SECTIONS.flatMap((s) =>
+        ((homework[s] as HwItem[]) ?? []).map((item, i) => ({
+          section: s,
+          title: item?.title ?? `${SEC_LABELS[s] ?? s} ${i + 1}`,
+        }))
+      )
     : [];
-  const total = sections.reduce((sum, s) => sum + s.count, 0);
+
   const isDone = submittedDate;
 
   return (
-    <Tile className="col-span-12 md:col-span-4">
+    <Tile className="col-span-12 md:col-span-6">
       <div className="flex justify-between items-start mb-3">
         <div>
           <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif" }}>
@@ -368,63 +317,70 @@ function TasksTile({
         <span className="text-2xl">📋</span>
       </div>
 
-      {total === 0 ? (
+      {allItems.length === 0 ? (
         <p className="text-sm" style={{ color: "var(--text-muted)" }}>
           {t("Không có bài tập hôm nay", "No assignments today")}
         </p>
       ) : isDone ? (
-        <p className="text-sm font-semibold" style={{ color: "#16a34a" }}>
-          ✓ {t("Đã hoàn thành", "Completed")}
-        </p>
+        <div>
+          <p className="text-sm font-semibold mb-3" style={{ color: "#16a34a" }}>
+            ✓ {t("Đã hoàn thành hết nhiệm vụ", "All tasks completed")}
+          </p>
+          <div className="space-y-1">
+            {allItems.map(({ section, title }, i) => (
+              <div key={i} className="flex items-center gap-2 py-0.5 opacity-50">
+                <span
+                  className="text-[10px] px-1.5 py-0.5 rounded shrink-0"
+                  style={{ background: "rgba(22,163,74,0.1)", color: "#16a34a" }}
+                >
+                  {SEC_LABELS[section]}
+                </span>
+                <span className="text-xs truncate" style={{ color: "var(--text-secondary)" }}>
+                  {title}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
       ) : (
-        /* B11: section breakdown */
-        <div className="space-y-1.5">
-          {sections.map(({ key, count }) => (
-            <div key={key} className="flex items-center justify-between">
-              <span className="text-xs" style={{ color: "var(--text-secondary)" }}>
-                {SEC_LABELS[key] ?? key}
-              </span>
+        <div className="space-y-1">
+          {allItems.map(({ section, title }, i) => (
+            <div key={i} className="flex items-center gap-2 py-0.5">
               <span
-                className="text-xs font-bold px-1.5 py-0.5 rounded"
+                className="text-[10px] px-1.5 py-0.5 rounded shrink-0"
                 style={{ background: "rgba(196,98,45,0.1)", color: "var(--orange)" }}
               >
-                {count}
+                {SEC_LABELS[section]}
+              </span>
+              <span className="text-xs truncate" style={{ color: "var(--text-secondary)" }}>
+                {title}
               </span>
             </div>
           ))}
-          <div className="pt-1 flex items-center gap-1 text-xs" style={{ color: "var(--orange)", borderTop: "1px solid var(--border)" }}>
+          <div
+            className="pt-1.5 mt-0.5 flex items-center gap-1 text-xs"
+            style={{ color: "var(--orange)", borderTop: "1px solid var(--border)" }}
+          >
             <span>⚠</span>
-            <span>{t(`${total} nhiệm vụ chờ`, `${total} tasks pending`)}</span>
+            <span>{t(`${allItems.length} nhiệm vụ chờ`, `${allItems.length} tasks pending`)}</span>
           </div>
         </div>
       )}
-    </Tile>
-  );
-}
 
-// ─── Actions tile ─────────────────────────────────────────────────────────────
-
-function ActionsTile() {
-  const { t } = useLocale();
-  return (
-    <Tile className="col-span-12 md:col-span-4 flex flex-col gap-4">
-      <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif", color: INK }}>
-        {t("Hành động hôm nay", "Today's Actions")}
-      </p>
-      <Link
-        href="/"
-        className="w-full flex items-center justify-center gap-2 py-3.5 rounded-lg font-semibold text-sm text-white transition-all hover:brightness-110 active:scale-[0.98]"
-        style={{ background: "var(--orange)" }}
-      >
-        <span>▶</span> {t("Bắt đầu luyện tập", "Start Practice")}
-      </Link>
-      <Link
-        href="/journal/vocab"
-        className="w-full flex items-center justify-center gap-2 py-3.5 rounded-lg font-semibold text-sm transition-all hover:opacity-80 active:scale-[0.98]"
-        style={{ background: "transparent", border: `1px solid ${INK}`, color: INK }}
-      >
-        <span>📖</span> {t("Ôn tập từ vựng", "Review Vocabulary")}
-      </Link>
+      {allItems.length > 0 && (
+        <Link
+          href="/journal/missions"
+          className="w-full mt-4 flex items-center justify-center gap-2 py-2.5 rounded-lg font-semibold text-sm transition-all hover:brightness-110 active:scale-[0.98]"
+          style={{
+            background: isDone ? "var(--bg-primary)" : "var(--orange)",
+            border: isDone ? "1px solid var(--border)" : "none",
+            color: isDone ? "var(--text-muted)" : "white",
+            textDecoration: "none",
+          }}
+        >
+          {isDone ? t("Xem lại →", "Review →") : t("Làm ngay →", "Start now →")}
+        </Link>
+      )}
     </Tile>
   );
 }
@@ -439,7 +395,7 @@ function FeedbackTile({ comments }: { comments?: Record<string, { text: string; 
   }, [comments]);
 
   return (
-    <Tile className="col-span-12 md:col-span-4" accentLeft>
+    <Tile className="col-span-12 md:col-span-6" accentLeft>
       <div className="flex items-center gap-2 mb-4">
         <span className="text-lg" style={{ color: "var(--orange)" }}>💬</span>
         <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif" }}>
@@ -476,10 +432,10 @@ function ScheduleTile({ schedule }: { schedule: ScheduleItem[] }) {
   const upcoming = schedule
     .filter((s) => s.date >= td)
     .sort((a, b) => a.date.localeCompare(b.date))
-    .slice(0, 3);
+    .slice(0, 2);
 
   return (
-    <Tile className="col-span-12 md:col-span-4">
+    <Tile className="col-span-12 md:col-span-6">
       <div className="flex items-center gap-2 mb-4">
         <span className="text-lg" style={{ color: "var(--orange)" }}>📅</span>
         <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif" }}>
@@ -557,7 +513,7 @@ function DictationProgressTile({
   const totalSessions = counts.reduce((a, b) => a + b, 0);
 
   return (
-    <Tile className="col-span-12 md:col-span-8">
+    <Tile className="col-span-12">
       <div className="flex justify-between items-center mb-6">
         <div className="flex items-center gap-2">
           <span className="text-lg" style={{ color: "var(--orange)" }}>🔥</span>
@@ -630,98 +586,6 @@ function DictationProgressTile({
             {xpStats?.level ?? 1}
           </p>
         </div>
-      </div>
-    </Tile>
-  );
-}
-
-// ─── Daily Quest ──────────────────────────────────────────────────────────────
-
-function DailyQuestTile({
-  homework,
-  xpStats,
-}: {
-  homework: Record<string, unknown[]> | null;
-  xpStats: XpStats | null;
-}) {
-  const { t } = useLocale();
-
-  const totalTasks = homework
-    ? HW_SECTIONS.reduce((s, sec) => s + ((homework[sec] as unknown[])?.length ?? 0), 0)
-    : 0;
-
-  const xpPct = xpStats?.xpPct ?? 0;
-  const xpCurrent = xpStats?.xpCurrent ?? 0;
-  const xpNext = xpStats?.xpNext ?? 100;
-
-  const questSection = homework
-    ? (["listening", "reading", "practice", "vocab", "other"] as const).find(
-        (sec) => ((homework[sec] as unknown[])?.length ?? 0) > 0
-      )
-    : null;
-
-  const sectionLabel: Record<string, string> = {
-    listening: t("bài listening", "listening tasks"),
-    reading: t("bài reading", "reading tasks"),
-    practice: t("bài luyện tập", "practice tasks"),
-    vocab: t("từ vựng", "vocab tasks"),
-    other: t("nhiệm vụ", "tasks"),
-  };
-
-  return (
-    <Tile className="col-span-12 md:col-span-4" dark>
-      <div className="flex items-center gap-2 mb-4">
-        <span className="text-lg">🏆</span>
-        <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif", color: "white" }}>
-          {t("Daily Quest", "Daily Quest")}
-        </p>
-      </div>
-
-      <p className="text-sm mb-5" style={{ color: "rgba(255,255,255,0.65)" }}>
-        {totalTasks === 0
-          ? t("Hoàn thành bài luyện dictation hôm nay", "Complete today's dictation practice")
-          : t(
-              `Hoàn thành ${totalTasks} ${questSection ? sectionLabel[questSection] : "nhiệm vụ"}`,
-              `Complete ${totalTasks} ${questSection ? sectionLabel[questSection] : "tasks"}`
-            )}
-      </p>
-
-      {/* XP progress bar */}
-      <div>
-        <div className="flex items-center justify-between mb-2">
-          <span
-            className="text-xs font-bold px-2 py-0.5 rounded-full uppercase"
-            style={{ background: "rgba(255,255,255,0.08)", color: "var(--orange)" }}
-          >
-            {t("Đang tiến hành", "In Progress")}
-          </span>
-          <span className="text-xs font-bold" style={{ color: "var(--orange)" }}>
-            {xpCurrent} / {xpNext} XP
-          </span>
-        </div>
-        <div
-          className="w-full h-2 rounded-full overflow-hidden"
-          style={{ background: "rgba(255,255,255,0.1)" }}
-        >
-          <div
-            className="h-full rounded-full"
-            style={{ width: `${Math.max(xpPct, 2)}%`, background: "var(--orange)" }}
-          />
-        </div>
-      </div>
-
-      <div className="flex items-center justify-between mt-5">
-        <div className="flex items-center gap-1.5">
-          <span style={{ color: "var(--orange)" }}>⚡</span>
-          <span className="text-sm font-medium" style={{ color: "rgba(255,255,255,0.8)" }}>+500 XP</span>
-        </div>
-        <Link
-          href="/journal/missions"
-          className="text-xs font-bold hover:underline"
-          style={{ color: "var(--orange)" }}
-        >
-          {t("Xem tất cả", "View All")}
-        </Link>
       </div>
     </Tile>
   );
@@ -891,68 +755,17 @@ function DailyDigestPopup({
   );
 }
 
-// ─── Next Step banner ─────────────────────────────────────────────────────────
-
-function NextStepBanner({
-  modules,
-}: {
-  modules: { id: string; name: string; status: string; type: string }[];
-}) {
-  const { t } = useLocale();
-  const nextModule = modules.find((m) => m.status !== "done");
-
-  return (
-    <Link
-      href="/"
-      className="col-span-12 rounded-xl p-5 flex items-center justify-between group transition-colors hover:bg-[var(--bg-primary)]"
-      style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)" }}
-    >
-      <div className="flex items-center gap-4">
-        <div
-          className="p-3 rounded-full shrink-0"
-          style={{ background: "rgba(196,98,45,0.1)" }}
-        >
-          <span className="text-xl">🚀</span>
-        </div>
-        <div>
-          <p className="font-bold text-sm" style={{ color: "var(--text-primary)" }}>
-            {nextModule
-              ? t(`Tiếp theo: ${nextModule.name}`, `Next up: ${nextModule.name}`)
-              : t("Bắt đầu hành trình luyện TOEIC", "Begin your TOEIC practice journey")}
-          </p>
-          <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
-            {t(
-              "Làm quen với cấu trúc đề thi mới nhất · chỉ 5 phút",
-              "Get familiar with the latest test format · only 5 minutes"
-            )}
-          </p>
-        </div>
-      </div>
-      <span
-        className="text-xl transition-transform group-hover:translate-x-1 shrink-0"
-        style={{ color: "var(--orange)" }}
-      >
-        →
-      </span>
-    </Link>
-  );
-}
-
 // ─── Loading skeleton ─────────────────────────────────────────────────────────
 
 function LoadingSkeleton() {
   return (
     <div className="grid grid-cols-12 gap-5 animate-pulse">
       <div className="col-span-12 h-32 rounded-xl" style={{ background: INK, opacity: 0.35 }} />
-      {[1, 2, 3].map((i) => (
-        <div key={i} className="col-span-4 h-32 rounded-xl" style={{ background: "var(--bg-elevated)" }} />
-      ))}
-      {[1, 2, 3].map((i) => (
-        <div key={i} className="col-span-4 h-40 rounded-xl" style={{ background: "var(--bg-elevated)" }} />
-      ))}
-      <div className="col-span-8 h-52 rounded-xl" style={{ background: "var(--bg-elevated)" }} />
-      <div className="col-span-4 h-52 rounded-xl" style={{ background: INK, opacity: 0.35 }} />
-      <div className="col-span-12 h-16 rounded-xl" style={{ background: "var(--bg-elevated)" }} />
+      <div className="col-span-6 h-40 rounded-xl" style={{ background: "var(--bg-elevated)" }} />
+      <div className="col-span-6 h-40 rounded-xl" style={{ background: "var(--bg-elevated)" }} />
+      <div className="col-span-6 h-40 rounded-xl" style={{ background: "var(--bg-elevated)" }} />
+      <div className="col-span-6 h-40 rounded-xl" style={{ background: "var(--bg-elevated)" }} />
+      <div className="col-span-12 h-52 rounded-xl" style={{ background: "var(--bg-elevated)" }} />
     </div>
   );
 }
@@ -985,7 +798,6 @@ export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }
 
   const td = localToday();
   const scores = student?.scores ?? [];
-  const modules = (student?.modules ?? []) as { id: string; name: string; status: string; type: string }[];
   const schedule: ScheduleItem[] = Array.isArray(student?.schedule) ? student!.schedule : [];
 
   // Today's homework (active: date <= today <= endDate)
@@ -1002,10 +814,8 @@ export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }
     return !submissions[hw.date]?.ticked;
   }).length;
 
-  // B14: vocab + paraphrase SRS due
+  // B14: vocab SRS due
   const vocabDueCount = words.filter((w) => isVocabDue(w, td)).length;
-  const paraLog = (student?.paraphraseLog ?? {}) as Record<string, ParaphraseEntry>;
-  const paraDueCount = Object.values(paraLog).filter((e) => isParaphraseDue(e, td)).length;
 
   // B11: today's hw is submitted if there's a ticked submission for its date
   const todaySubmitted = todayHw ? (submissions[todayHw.date]?.ticked ?? false) : false;
@@ -1048,22 +858,16 @@ export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }
         {/* Row 1: Header (B1, B2) */}
         <HeaderTile name={name} xpStats={xpStats} currentWeek={student?.currentWeek} />
 
-        {/* Row 2: Stats (B3, B4, B5 + B6–B9 in ScoreTile) */}
+        {/* Row 2: Score | Tasks */}
         <ScoreTile scores={scores} goal={goal} />
-        <ModuleTile modules={modules} />
         <TasksTile homework={hwSections} submittedDate={todaySubmitted} />
 
-        {/* Row 3: Actions | Feedback | Schedule */}
-        <ActionsTile />
-        <FeedbackTile comments={student?.comments as Record<string, { text: string; ts: number }> | undefined} />
+        {/* Row 3: Schedule | Feedback */}
         <ScheduleTile schedule={schedule} />
+        <FeedbackTile comments={student?.comments as Record<string, { text: string; ts: number }> | undefined} />
 
-        {/* Row 4: Dictation Progress | Daily Quest */}
+        {/* Row 4: Dictation Progress (full width) */}
         <DictationProgressTile errorLog={errorLog} xpStats={xpStats} />
-        <DailyQuestTile homework={hwSections} xpStats={xpStats} />
-
-        {/* Row 5: Next Step */}
-        <NextStepBanner modules={modules} />
       </div>
     </>
   );
