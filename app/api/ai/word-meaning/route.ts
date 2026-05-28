@@ -24,7 +24,7 @@ Example output for "negotiate":
 {"vi":"đàm phán, thương lượng","example":"The sales team negotiated a new contract with the client."}`;
 
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+      model: "gemini-2.5-flash-lite",
       contents: prompt,
     });
 
