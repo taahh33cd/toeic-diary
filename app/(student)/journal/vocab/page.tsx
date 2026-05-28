@@ -97,12 +97,13 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
   const [audioUrl, setAudioUrl] = useState("");
   const [editingVi, setEditingVi] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
+  const [viLoading, setViLoading] = useState(false);
 
   function reset() {
     setPhase("search");
     setWord(""); setVi(""); setIpa(""); setPos(""); setDef("");
     setExample(""); setPart(5); setAudioUrl("");
-    setEditingVi(false); setShowDetails(false);
+    setEditingVi(false); setShowDetails(false); setViLoading(false);
     setTimeout(() => inputRef.current?.focus(), 50);
   }
 
@@ -137,6 +138,12 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
       }
     } catch { /* continue */ }
 
+    // Show card immediately after dictionary — don't wait for Gemini
+    setPhase("preview");
+    setViLoading(true);
+    playWord(w, fetchedAudioUrl);
+
+    // Gemini runs in background, updates vi when ready
     try {
       const aiRes = await fetch("/api/ai/word-meaning", {
         method: "POST",
@@ -150,8 +157,7 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
       }
     } catch { /* silently fail */ }
 
-    setPhase("preview");
-    playWord(w, fetchedAudioUrl);
+    setViLoading(false);
   }
 
   async function handleSave() {
@@ -343,7 +349,7 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
                       minHeight: 34,
                     }}
                   >
-                    {isLoading ? (
+                    {viLoading ? (
                       <span style={{ fontSize: ".78rem", color: "var(--text-muted)", fontStyle: "italic" }}>
                         ✨ {t("Đang tạo nghĩa tiếng Việt…", "Generating Vietnamese meaning…")}
                       </span>
