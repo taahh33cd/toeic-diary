@@ -202,6 +202,30 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
 
   return (
     <div style={{ maxWidth: 860, margin: "0 auto", paddingBottom: "3rem", fontFamily: "var(--font-sans)" }}>
+      <style>{`
+        @keyframes grammar-radio-pop {
+          0%   { transform: scale(0); opacity: 0; }
+          55%  { transform: scale(1.5); }
+          78%  { transform: scale(0.85); }
+          100% { transform: scale(1); opacity: 1; }
+        }
+        @keyframes grammar-option-ripple {
+          0%   { box-shadow: 0 0 0 0 rgba(1,62,55,0.22); }
+          70%  { box-shadow: 0 0 0 8px rgba(1,62,55,0); }
+          100% { box-shadow: 0 0 0 0 rgba(1,62,55,0); }
+        }
+        .grammar-option-btn {
+          transition: border-color 0.13s ease, background 0.13s ease, transform 0.08s ease;
+        }
+        .grammar-option-btn:hover { filter: brightness(0.97); }
+        .grammar-option-btn:active { transform: scale(0.983) !important; }
+        .grammar-option-selected {
+          animation: grammar-option-ripple 0.4s ease both;
+        }
+        .grammar-radio-dot {
+          animation: grammar-radio-pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+        }
+      `}</style>
 
       {/* ── CBT Header strip ── */}
       <div
@@ -319,8 +343,9 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
             const selected = answers[q.id] === key;
             return (
               <button
-                key={key}
+                key={`${key}-${selected ? "on" : "off"}`}
                 onClick={() => setAnswers((prev) => ({ ...prev, [q.id]: key }))}
+                className={`grammar-option-btn${selected ? " grammar-option-selected" : ""}`}
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -331,7 +356,6 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
                   background: selected ? "rgba(1,62,55,0.05)" : "#fafdfb",
                   cursor: "pointer",
                   textAlign: "left",
-                  transition: "border-color 0.1s, background 0.1s",
                   fontFamily: "var(--font-sans)",
                 }}
               >
@@ -347,11 +371,11 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
                     alignItems: "center",
                     justifyContent: "center",
                     flexShrink: 0,
-                    transition: "all 0.1s",
+                    transition: "border-color 0.13s, background 0.13s",
                   }}
                 >
                   {selected && (
-                    <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#ffefb3" }} />
+                    <span className="grammar-radio-dot" style={{ width: 6, height: 6, borderRadius: "50%", background: "#ffefb3", display: "block" }} />
                   )}
                 </span>
                 {/* Letter */}
@@ -363,6 +387,7 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
                     width: 18,
                     flexShrink: 0,
                     fontFamily: "var(--font-sans)",
+                    transition: "color 0.13s",
                   }}
                 >
                   {key}
@@ -374,6 +399,7 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
                     color: selected ? "#013e37" : "#0a1f1c",
                     fontWeight: selected ? 500 : 400,
                     fontFamily: "var(--font-sans)",
+                    transition: "color 0.13s",
                   }}
                 >
                   {q.options[key]}
@@ -554,8 +580,8 @@ function ExplanationModal({
             className="font-medium leading-relaxed"
             style={{
               color: "var(--text-primary)",
-              fontFamily: "var(--font-mono)",
-              fontSize: "0.9rem",
+              fontFamily: "var(--font-sans)",
+              fontSize: "0.92rem",
             }}
           >
             {q.question}
@@ -647,19 +673,27 @@ function ExplanationModal({
               <div className="section-label mb-2 flex items-center gap-1">
                 <BookOpen size={11} /> Từ vựng
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.45rem" }}>
                 {q.core_vocabulary.map((v, i) => (
-                  <span
+                  <div
                     key={i}
-                    className="badge badge-muted text-xs"
-                    style={{ fontFamily: "var(--font-mono)" }}
+                    style={{
+                      display: "flex",
+                      alignItems: "baseline",
+                      gap: "0.5rem",
+                      fontSize: "0.82rem",
+                      fontFamily: "var(--font-sans)",
+                    }}
                   >
-                    <strong>{v.word}</strong>{" "}
-                    <span style={{ color: "var(--text-muted)", fontStyle: "italic" }}>
+                    <span style={{ fontWeight: 700, color: "var(--text-primary)", minWidth: 80 }}>
+                      {v.word}
+                    </span>
+                    <span style={{ color: "var(--text-muted)", fontStyle: "italic", fontSize: "0.75rem" }}>
                       {v.type}
-                    </span>{" "}
-                    — {v.meaning}
-                  </span>
+                    </span>
+                    <span style={{ color: "var(--text-muted)", fontSize: "0.75rem" }}>—</span>
+                    <span style={{ color: "var(--text-secondary)" }}>{v.meaning}</span>
+                  </div>
                 ))}
               </div>
             </div>

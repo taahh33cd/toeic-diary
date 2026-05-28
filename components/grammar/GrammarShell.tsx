@@ -81,7 +81,7 @@ export function GrammarShell({ children, displayName }: GrammarShellProps) {
               flexShrink: 0,
             }}
           >
-            {displayName ? `${displayName}'s TOEIC Grammar` : "TOEIC Grammar"}
+            {displayName ? `${displayName} TOEIC Grammar Diary` : "TOEIC Grammar Diary"}
           </Link>
 
           {/* Desktop nav */}
