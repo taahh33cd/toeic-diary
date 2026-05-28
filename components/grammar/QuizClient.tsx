@@ -201,7 +201,7 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
   if (!q) return null;
 
   return (
-    <div style={{ padding: "1.5rem 2rem 3rem", maxWidth: 740 }}>
+    <div style={{ padding: "1.5rem 2rem 3rem", maxWidth: 740, margin: "0 auto" }}>
       {/* Top bar */}
       <div
         style={{

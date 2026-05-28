@@ -61,7 +61,7 @@ export default async function GrammarPage() {
   const totalCorrect = correctSet.size;
 
   return (
-    <div style={{ padding: "2rem 2rem 3rem", maxWidth: 860 }}>
+    <div style={{ padding: "2rem 2rem 3rem", maxWidth: 860, margin: "0 auto" }}>
 
       {/* Page heading */}
       <div style={{ marginBottom: "2rem" }}>

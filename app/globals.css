@@ -162,48 +162,50 @@
 }
 
 /* ─────────────────────────────────────────────────────────
-   THEME: GRAMMAR — Navy & Sky
+   THEME: GRAMMAR — Alexandria Editorial (white / blue)
    Apply class "theme-grammar" on the section wrapper div.
 ───────────────────────────────────────────────────────── */
 .theme-grammar {
-  /* Content area */
-  --bg-primary:   #EDF1F8;
-  --bg-secondary: #E2E9F4;
-  --bg-elevated:  #FFFFFF;
+  /* Surfaces — tonal layering, no hard borders */
+  --bg-primary:   #faf9fa;
+  --bg-secondary: #f5f3f4;
+  --bg-elevated:  #ffffff;
+  --bg-container: #efedee;
 
-  /* Sidebar */
-  --grammar-sidebar-bg:          #152040;
-  --grammar-sidebar-topbar-bg:   #1A2B50;
-  --grammar-sidebar-border:      rgba(255,255,255,0.06);
-  --grammar-sidebar-text:        rgba(180,205,240,0.5);
-  --grammar-sidebar-text-hover:  rgba(220,235,255,0.85);
-  --grammar-sidebar-active-bg:   rgba(74,158,255,0.13);
-  --grammar-sidebar-active-text: #E8F0FE;
-  --grammar-sidebar-w:           240px;
+  /* Topbar — glass */
+  --grammar-topbar-bg:     rgba(255,255,255,0.88);
+  --grammar-topbar-border: rgba(195,198,213,0.22);
 
-  /* Accent */
-  --accent-primary:       #4A9EFF;
-  --accent-primary-hover: #2B84F0;
-  --accent-green:         #34D399;
-  --accent-red:           #F87171;
-  --accent-yellow:        #FBBF24;
-  --accent-blue:          #60A5FA;
+  /* Accent — Alexandria blue */
+  --accent-primary:       #094cb2;
+  --accent-primary-hover: #2259bf;
+  --accent-primary-bg:    rgba(9,76,178,0.08);
+  --accent-green:         #1a8754;
+  --accent-red:           #c0392b;
+  --accent-yellow:        #856404;
+  --accent-blue:          #1d4ed8;
 
   /* Text */
-  --text-primary:   #0F1B2D;
-  --text-secondary: #2D4A6A;
-  --text-muted:     #5C7A99;
+  --text-primary:   #1b1c1d;
+  --text-secondary: #434653;
+  --text-muted:     #737784;
 
-  /* Borders */
-  --border:       #C4D4E8;
-  --border-focus: #4A9EFF;
+  /* Borders — ghost only */
+  --border:       rgba(195,198,213,0.35);
+  --border-focus: #094cb2;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(21,32,64,0.07), 0 1px 2px rgba(21,32,64,0.04);
-  --shadow-md: 0 4px 12px rgba(21,32,64,0.10), 0 2px 6px rgba(21,32,64,0.05);
-  --shadow-lg: 0 12px 32px rgba(21,32,64,0.13);
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
 
-  /* Typography — Be Vietnam Pro (same as rest of site) */
+  /* Shadows — diffused, editorial */
+  --shadow-sm: 0 1px 4px rgba(27,28,29,0.06);
+  --shadow-md: 0 4px 24px rgba(27,28,29,0.07), 0 1px 4px rgba(27,28,29,0.04);
+  --shadow-lg: 0 12px 40px rgba(27,28,29,0.09), 0 4px 12px rgba(27,28,29,0.04);
+
+  /* Typography — Be Vietnam Pro */
   --font-sans:    var(--font-be-vietnam, 'Be Vietnam Pro', system-ui, sans-serif);
   --font-display: var(--font-be-vietnam, 'Be Vietnam Pro', system-ui, sans-serif);
 }
