@@ -148,6 +148,7 @@ model Profile {
   invitesSent     TeacherInvite[]
   managedStudents Profile[] @relation("TeacherStudent")
   teacher         Profile?  @relation("TeacherStudent", fields: [teacherId], references: [id])
+  grammarAttempts GrammarAttempt[]
 
   @@map("profiles")
 }
@@ -248,6 +249,22 @@ model PushSubscription {
 
   @@index([userId])
   @@map("push_subscriptions")
+}
+
+model GrammarAttempt {
+  id         String   @id @default(uuid())
+  userId     String   @map("user_id")
+  questionId String   @map("question_id")
+  topicSlug  String   @map("topic_slug")
+  isCorrect  Boolean  @map("is_correct")
+  userAnswer String   @map("user_answer")
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  profile    Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, questionId])
+  @@index([userId, topicSlug])
+  @@map("grammar_attempts")
 }
 
 model AiFeedback {

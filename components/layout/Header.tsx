@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { BookOpen, Moon, Sun, LogOut, BarChart2, NotebookPen, Headphones } from "lucide-react";
+import { BookOpen, Moon, Sun, LogOut, BarChart2, NotebookPen, Headphones, GraduationCap } from "lucide-react";
 import { useUIStore } from "@/stores/uiStore";
 import { createClient } from "@/lib/supabase/client";
 import { cn } from "@/lib/utils/cn";
@@ -80,6 +80,10 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
             <BarChart2 size={16} />
             <span>Tiến độ</span>
           </Link>
+          <Link href="/grammar" className={styles.navLink}>
+            <GraduationCap size={16} />
+            <span>Ngữ pháp</span>
+          </Link>
           <Link href="/journal" className={styles.navLink}>
             <NotebookPen size={16} />
             <span>Nhật ký</span>
@@ -145,6 +149,15 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
                   >
                     <BookOpen size={15} aria-hidden="true" />
                     Từ vựng đã lưu
+                  </Link>
+                  <Link
+                    href="/grammar"
+                    className={styles.dropdownItem}
+                    role="menuitem"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <GraduationCap size={15} aria-hidden="true" />
+                    Luyện ngữ pháp
                   </Link>
                   <Link
                     href="/journal"
