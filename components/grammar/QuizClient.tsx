@@ -6,7 +6,6 @@ import {
   ChevronLeft,
   ChevronRight,
   Clock,
-  ArrowLeft,
   CheckCircle2,
   XCircle,
   RotateCcw,
@@ -201,168 +200,164 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
   if (!q) return null;
 
   return (
-    <div className="max-w-[960px] mx-auto px-4 py-6">
+    <div style={{ padding: "1.5rem 2rem 3rem", maxWidth: 740 }}>
       {/* Top bar */}
-      <div className="flex items-center justify-between mb-5">
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          marginBottom: "1.25rem",
+        }}
+      >
         <div>
-          <Link
-            href="/grammar"
-            className="inline-flex items-center gap-1 text-xs mb-1 hover:underline"
-            style={{ color: "var(--text-muted)" }}
-          >
-            <ArrowLeft size={12} /> Ngữ pháp
-          </Link>
-          <h2 className="text-base font-bold" style={{ color: "var(--text-primary)" }}>
+          <h2 style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-primary)" }}>
             {topicName} — {isMiniQuiz ? "Ôn câu sai" : `Test ${testNumber}`}
           </h2>
         </div>
-        <div className="flex items-center gap-3">
+        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
           <span
-            className="flex items-center gap-1 text-sm font-mono"
-            style={{ color: "var(--text-muted)" }}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.3rem",
+              fontSize: "0.82rem",
+              fontFamily: "var(--font-mono)",
+              color: "var(--text-muted)",
+            }}
           >
             <Clock size={13} />
             {formatTime(elapsed)}
           </span>
-          <span className="badge badge-muted text-xs">
+          <span className="badge badge-muted" style={{ fontSize: "0.72rem" }}>
             {answeredCount}/{activeQs.length}
           </span>
         </div>
       </div>
 
-      <div className="flex gap-5">
-        {/* Sidebar grid — desktop */}
-        <aside className="hidden md:flex flex-col gap-3 w-[190px] shrink-0">
-          <div className="card p-3 sticky top-20">
-            <div className="section-label mb-3">Câu hỏi</div>
-            <div className="grid grid-cols-5 gap-1">
-              {activeQs.map((qu, i) => {
-                const answered = !!answers[qu.id];
-                const active = i === currentIdx;
-                return (
-                  <button
-                    key={qu.id}
-                    onClick={() => setCurrentIdx(i)}
-                    className="w-8 h-8 text-xs font-medium rounded-md transition-all"
-                    style={{
-                      background: active
-                        ? "var(--accent-primary)"
-                        : answered
-                        ? "rgba(99,102,241,0.15)"
-                        : "var(--bg-secondary)",
-                      color: active ? "#fff" : "var(--text-secondary)",
-                      border: active ? "none" : "1px solid var(--border)",
-                    }}
-                  >
-                    {i + 1}
-                  </button>
-                );
-              })}
-            </div>
-            <div
-              className="mt-4 pt-3"
-              style={{ borderTop: "1px solid var(--border)" }}
-            >
-              <button
-                className="btn btn-primary w-full text-sm"
-                onClick={submit}
-                disabled={saving}
-              >
-                {saving ? "Đang lưu…" : "Nộp bài"}
-              </button>
-            </div>
-          </div>
-        </aside>
-
-        {/* Question card */}
-        <div className="flex-1 min-w-0">
-          <div className="card p-6 mb-4">
-            <div className="text-xs font-semibold mb-4" style={{ color: "var(--text-muted)" }}>
-              Câu {currentIdx + 1} / {activeQs.length}
-              {q.grammar_type && (
-                <span
-                  className="ml-2 badge badge-primary"
-                  style={{ fontSize: "0.65rem" }}
-                >
-                  {q.grammar_type}
-                </span>
-              )}
-            </div>
-
-            <p
-              className="text-base font-medium leading-relaxed mb-6"
-              style={{ color: "var(--text-primary)", fontFamily: "var(--font-mono)" }}
-            >
-              {q.question}
-            </p>
-
-            <div className="flex flex-col gap-2">
-              {(["A", "B", "C", "D"] as const).map((key) => {
-                const selected = answers[q.id] === key;
-                return (
-                  <button
-                    key={key}
-                    onClick={() =>
-                      setAnswers((prev) => ({ ...prev, [q.id]: key }))
-                    }
-                    className="text-left px-4 py-3 rounded-xl border transition-all"
-                    style={{
-                      background: selected
-                        ? "rgba(99,102,241,0.08)"
-                        : "var(--bg-elevated)",
-                      borderColor: selected
-                        ? "var(--accent-primary)"
-                        : "var(--border)",
-                      color: "var(--text-primary)",
-                    }}
-                  >
-                    <span
-                      className="font-bold mr-2"
-                      style={{
-                        color: selected
-                          ? "var(--accent-primary)"
-                          : "var(--text-muted)",
-                      }}
-                    >
-                      ({key})
-                    </span>
-                    {q.options[key]}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Navigation */}
-          <div className="flex items-center justify-between">
+      {/* Compact question grid strip */}
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "0.35rem",
+          marginBottom: "1.25rem",
+          padding: "0.65rem 0.75rem",
+          background: "var(--bg-elevated)",
+          border: "1px solid var(--border)",
+          borderRadius: "var(--radius-md)",
+        }}
+      >
+        {activeQs.map((qu, i) => {
+          const answered = !!answers[qu.id];
+          const active = i === currentIdx;
+          return (
             <button
-              className="btn btn-secondary"
-              onClick={() => setCurrentIdx((i) => Math.max(0, i - 1))}
-              disabled={currentIdx === 0}
+              key={qu.id}
+              onClick={() => setCurrentIdx(i)}
+              style={{
+                width: 30,
+                height: 30,
+                fontSize: "0.7rem",
+                fontWeight: 600,
+                borderRadius: "var(--radius-sm)",
+                border: active ? "none" : "1px solid var(--border)",
+                background: active
+                  ? "var(--accent-primary)"
+                  : answered
+                  ? "rgba(74,158,255,0.15)"
+                  : "var(--bg-secondary)",
+                color: active ? "#fff" : answered ? "var(--accent-primary)" : "var(--text-muted)",
+                cursor: "pointer",
+                transition: "all 0.1s",
+              }}
             >
-              <ChevronLeft size={16} /> Câu trước
+              {i + 1}
             </button>
+          );
+        })}
+      </div>
 
-            {/* Mobile submit */}
-            <button
-              className="btn btn-primary md:hidden"
-              onClick={submit}
-              disabled={saving}
-            >
-              {saving ? "Đang lưu…" : "Nộp bài"}
-            </button>
-
-            <button
-              className="btn btn-secondary"
-              onClick={() =>
-                setCurrentIdx((i) => Math.min(activeQs.length - 1, i + 1))
-              }
-              disabled={currentIdx === activeQs.length - 1}
-            >
-              Câu sau <ChevronRight size={16} />
-            </button>
-          </div>
+      {/* Question card */}
+      <div className="card p-6 mb-4">
+        <div style={{ fontSize: "0.72rem", fontWeight: 600, marginBottom: "1rem", color: "var(--text-muted)" }}>
+          Câu {currentIdx + 1} / {activeQs.length}
+          {q.grammar_type && (
+            <span className="ml-2 badge badge-primary" style={{ fontSize: "0.65rem" }}>
+              {q.grammar_type}
+            </span>
+          )}
         </div>
+
+        <p
+          style={{
+            fontSize: "0.95rem",
+            fontWeight: 500,
+            lineHeight: 1.7,
+            marginBottom: "1.5rem",
+            color: "var(--text-primary)",
+            fontFamily: "var(--font-mono)",
+          }}
+        >
+          {q.question}
+        </p>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+          {(["A", "B", "C", "D"] as const).map((key) => {
+            const selected = answers[q.id] === key;
+            return (
+              <button
+                key={key}
+                onClick={() => setAnswers((prev) => ({ ...prev, [q.id]: key }))}
+                style={{
+                  textAlign: "left",
+                  padding: "0.75rem 1rem",
+                  borderRadius: "var(--radius-md)",
+                  border: `1px solid ${selected ? "var(--accent-primary)" : "var(--border)"}`,
+                  background: selected ? "rgba(74,158,255,0.08)" : "var(--bg-elevated)",
+                  color: "var(--text-primary)",
+                  cursor: "pointer",
+                  transition: "border-color 0.12s, background 0.12s",
+                  fontSize: "0.88rem",
+                }}
+              >
+                <span
+                  style={{
+                    fontWeight: 700,
+                    marginRight: "0.5rem",
+                    color: selected ? "var(--accent-primary)" : "var(--text-muted)",
+                  }}
+                >
+                  ({key})
+                </span>
+                {q.options[key]}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Navigation */}
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <button
+          className="btn btn-secondary"
+          onClick={() => setCurrentIdx((i) => Math.max(0, i - 1))}
+          disabled={currentIdx === 0}
+        >
+          <ChevronLeft size={15} /> Câu trước
+        </button>
+
+        <button className="btn btn-primary" onClick={submit} disabled={saving}>
+          {saving ? "Đang lưu…" : "Nộp bài"}
+        </button>
+
+        <button
+          className="btn btn-secondary"
+          onClick={() => setCurrentIdx((i) => Math.min(activeQs.length - 1, i + 1))}
+          disabled={currentIdx === activeQs.length - 1}
+        >
+          Câu sau <ChevronRight size={15} />
+        </button>
       </div>
     </div>
   );

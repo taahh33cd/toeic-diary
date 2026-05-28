@@ -1,8 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
-import { prisma } from "@/lib/db/prisma";
 import { redirect, notFound } from "next/navigation";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { TOPICS, getTestSlice } from "@/lib/grammar/topics";
 import { grammarQuestions } from "@/lib/grammar/questions";
 import { QuizClient } from "@/components/grammar/QuizClient";
@@ -49,25 +46,13 @@ export default async function GrammarTestPage({
   );
   if (testQuestions.length === 0) notFound();
 
-  const profile = await prisma.profile
-    .findUnique({ where: { id: user.id }, select: { displayName: true } })
-    .catch(() => null);
-
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: "var(--bg-primary)" }}>
-      <Header userEmail={user.email} userDisplayName={profile?.displayName} />
-
-      <main className="flex-1 py-6">
-        <QuizClient
-          questions={testQuestions}
-          topicSlug={topic}
-          topicName={topicConfig.name}
-          testIndex={testIndex}
-          testNumber={testNumber}
-        />
-      </main>
-
-      <Footer />
-    </div>
+    <QuizClient
+      questions={testQuestions}
+      topicSlug={topic}
+      topicName={topicConfig.name}
+      testIndex={testIndex}
+      testNumber={testNumber}
+    />
   );
 }

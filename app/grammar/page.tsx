@@ -1,21 +1,14 @@
 import type { Metadata } from "next";
 import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
-import { redirect } from "next/navigation";
 import Link from "next/link";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { TOPICS } from "@/lib/grammar/topics";
 import { grammarQuestions } from "@/lib/grammar/questions";
-import { ChevronRight, BookOpen } from "lucide-react";
+import { ChevronRight, BookMarked } from "lucide-react";
 
 export const metadata: Metadata = { title: "Ngữ pháp" };
 
-// Pre-compute topic+test stats server-side so no client JS needed
-function buildTopicStats(
-  correctSet: Set<string>,
-  seenSet: Set<string>
-) {
+function buildTopicStats(correctSet: Set<string>, seenSet: Set<string>) {
   return TOPICS.map((topic) => {
     const topicQs = grammarQuestions.filter((q) => q.grammar_type === topic.id);
     const tests: {
@@ -54,188 +47,327 @@ export default async function GrammarPage() {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user) redirect("/auth/login?next=/grammar");
+  if (!user) return null; // layout handles redirect
 
-  const [profile, attempts] = await Promise.all([
-    prisma.profile
-      .findUnique({ where: { id: user.id }, select: { displayName: true } })
-      .catch(() => null),
-    prisma.grammarAttempt
-      .findMany({ where: { userId: user.id }, select: { questionId: true, isCorrect: true } })
-      .catch(() => []),
-  ]);
+  const attempts = await prisma.grammarAttempt
+    .findMany({ where: { userId: user.id }, select: { questionId: true, isCorrect: true } })
+    .catch(() => []);
 
-  // Build sets for quick lookup
   const seenSet = new Set(attempts.map((a) => a.questionId));
-  const correctSet = new Set(
-    attempts.filter((a) => a.isCorrect).map((a) => a.questionId)
-  );
+  const correctSet = new Set(attempts.filter((a) => a.isCorrect).map((a) => a.questionId));
 
   const topicStats = buildTopicStats(correctSet, seenSet);
   const totalQs = grammarQuestions.length;
   const totalCorrect = correctSet.size;
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: "var(--bg-primary)" }}>
-      <Header userEmail={user.email} userDisplayName={profile?.displayName} />
+    <div style={{ padding: "2rem 2rem 3rem", maxWidth: 860 }}>
 
-      <main className="flex-1 max-w-[900px] mx-auto w-full px-4 py-10">
-        {/* Page heading */}
-        <div className="mb-8 flex items-start justify-between gap-4 flex-wrap">
-          <div>
-            <h1
-              className="text-2xl font-bold mb-1"
-              style={{ color: "var(--text-primary)" }}
-            >
-              📝 Luyện ngữ pháp
-            </h1>
-            <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-              Trắc nghiệm ngữ pháp TOEIC — 11 chủ đề, {grammarQuestions.length.toLocaleString()} câu hỏi
-            </p>
-          </div>
-          <div className="flex items-center gap-3">
-            {seenSet.size > 0 && (
-              <span className="badge badge-primary text-xs">
-                {totalCorrect}/{totalQs} đúng
-              </span>
-            )}
-            <Link href="/grammar/review" className="btn btn-secondary btn-sm">
-              <BookOpen size={14} /> Ngân hàng câu sai
-            </Link>
-          </div>
-        </div>
+      {/* Page heading */}
+      <div style={{ marginBottom: "2rem" }}>
+        <h1
+          style={{
+            fontSize: "1.35rem",
+            fontWeight: 700,
+            color: "var(--text-primary)",
+            letterSpacing: "-0.02em",
+            marginBottom: "0.35rem",
+          }}
+        >
+          Tổng quan
+        </h1>
+        <p style={{ fontSize: "0.82rem", color: "var(--text-muted)" }}>
+          {totalQs.toLocaleString()} câu hỏi · 11 chủ đề ngữ pháp TOEIC
+        </p>
 
-        {/* Topic accordion (details/summary — no JS needed) */}
-        <div className="flex flex-col gap-3">
-          {topicStats.map(({ topic, tests, totalQs: tQs, topicCorrect }) => {
-            const pct = tQs > 0 ? Math.round((topicCorrect / tQs) * 100) : 0;
-            const hasProgress = topicCorrect > 0;
-            const scoreColor =
-              pct >= 80
-                ? "var(--accent-green)"
-                : pct >= 50
-                ? "var(--accent-yellow)"
-                : "var(--accent-red)";
-
-            return (
-              <details
-                key={topic.slug}
-                className="card overflow-hidden group"
-                style={{ borderColor: "var(--border)" }}
+        {/* Stats strip */}
+        {seenSet.size > 0 && (
+          <div
+            style={{
+              marginTop: "1rem",
+              display: "flex",
+              alignItems: "center",
+              gap: "1.5rem",
+              padding: "0.75rem 1rem",
+              background: "var(--bg-elevated)",
+              borderRadius: "var(--radius-md)",
+              border: "1px solid var(--border)",
+              boxShadow: "var(--shadow-sm)",
+            }}
+          >
+            <div>
+              <div
+                style={{
+                  fontSize: "1.4rem",
+                  fontWeight: 700,
+                  color: "var(--accent-primary)",
+                  lineHeight: 1,
+                }}
               >
-                <summary
-                  className="flex items-center gap-3 px-5 py-4 cursor-pointer select-none list-none"
-                  style={{ color: "var(--text-primary)" }}
-                >
-                  <span className="text-xl shrink-0">{topic.emoji}</span>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <span className="font-semibold text-sm">{topic.name}</span>
-                      <span
-                        className="badge badge-muted text-xs"
-                        style={{ fontSize: "0.65rem" }}
-                      >
-                        {tests.length} đề · {tQs} câu
-                      </span>
-                    </div>
+                {Math.round((totalCorrect / totalQs) * 100)}%
+              </div>
+              <div style={{ fontSize: "0.65rem", color: "var(--text-muted)", marginTop: 2 }}>
+                TỔNG ĐÚNG
+              </div>
+            </div>
+            <div
+              style={{
+                width: 1,
+                height: 32,
+                background: "var(--border)",
+              }}
+            />
+            <div>
+              <div
+                style={{
+                  fontSize: "1rem",
+                  fontWeight: 600,
+                  color: "var(--text-primary)",
+                  lineHeight: 1,
+                }}
+              >
+                {totalCorrect.toLocaleString()}
+                <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", fontWeight: 400 }}>
+                  /{totalQs.toLocaleString()}
+                </span>
+              </div>
+              <div style={{ fontSize: "0.65rem", color: "var(--text-muted)", marginTop: 2 }}>
+                CÂU ĐÃ ĐÚNG
+              </div>
+            </div>
+            <div style={{ marginLeft: "auto" }}>
+              <Link
+                href="/grammar/review"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.35rem",
+                  fontSize: "0.75rem",
+                  color: "var(--accent-primary)",
+                  textDecoration: "none",
+                  fontWeight: 500,
+                }}
+              >
+                <BookMarked size={13} />
+                Ngân hàng câu sai
+              </Link>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Topic list */}
+      <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+        {topicStats.map(({ topic, tests, totalQs: tQs, topicCorrect }) => {
+          const pct = tQs > 0 ? Math.round((topicCorrect / tQs) * 100) : 0;
+          const hasProgress = topicCorrect > 0;
+          const scoreColor =
+            pct >= 80
+              ? "var(--accent-green)"
+              : pct >= 50
+              ? "var(--accent-yellow)"
+              : "var(--accent-red)";
+
+          return (
+            <details
+              key={topic.slug}
+              id={topic.slug}
+              style={{
+                background: "var(--bg-elevated)",
+                border: "1px solid var(--border)",
+                borderRadius: "var(--radius-md)",
+                boxShadow: "var(--shadow-sm)",
+                overflow: "hidden",
+              }}
+            >
+              <summary
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.75rem",
+                  padding: "0.85rem 1rem",
+                  cursor: "pointer",
+                  listStyle: "none",
+                  userSelect: "none",
+                }}
+              >
+                {/* Color dot */}
+                <span
+                  style={{
+                    width: 8,
+                    height: 8,
+                    borderRadius: "50%",
+                    background: topic.color,
+                    flexShrink: 0,
+                  }}
+                />
+
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "0.6rem",
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontSize: "0.88rem",
+                        fontWeight: 600,
+                        color: "var(--text-primary)",
+                      }}
+                    >
+                      {topic.name}
+                    </span>
+                    <span
+                      style={{
+                        fontSize: "0.65rem",
+                        fontWeight: 600,
+                        color: "var(--text-muted)",
+                        background: "var(--bg-secondary)",
+                        padding: "2px 7px",
+                        borderRadius: 999,
+                      }}
+                    >
+                      {tests.length} đề · {tQs} câu
+                    </span>
                     {hasProgress && (
-                      <div className="mt-1.5 flex items-center gap-2">
-                        <div
-                          className="h-1.5 rounded-full flex-1 max-w-[160px]"
-                          style={{ background: "var(--bg-secondary)" }}
-                        >
-                          <div
-                            className="h-full rounded-full transition-all"
-                            style={{ width: `${pct}%`, background: scoreColor }}
-                          />
-                        </div>
-                        <span className="text-xs font-medium" style={{ color: scoreColor }}>
-                          {pct}%
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                  <ChevronRight
-                    size={16}
-                    className="shrink-0 transition-transform group-open:rotate-90"
-                    style={{ color: "var(--text-muted)" }}
-                  />
-                </summary>
-
-                {/* Test list */}
-                <div
-                  className="px-5 pb-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2"
-                  style={{ borderTop: "1px solid var(--border)" }}
-                >
-                  {tests.map((t) => {
-                    const tPct =
-                      t.size > 0 ? Math.round((t.correctCount / t.size) * 100) : 0;
-                    const status: "done-hi" | "done-lo" | "untouched" =
-                      t.done && tPct >= 80
-                        ? "done-hi"
-                        : t.done
-                        ? "done-lo"
-                        : "untouched";
-
-                    return (
-                      <Link
-                        key={t.testNumber}
-                        href={`/grammar/${topic.slug}/${t.testNumber}`}
-                        className="group/btn flex items-center justify-between px-3 py-2.5 rounded-lg border transition-all hover:border-[var(--accent-primary)] hover:shadow-sm"
+                      <span
                         style={{
-                          background:
-                            status === "done-hi"
-                              ? "rgba(16,185,129,0.07)"
-                              : status === "done-lo"
-                              ? "rgba(245,158,11,0.07)"
-                              : "var(--bg-secondary)",
-                          borderColor:
-                            status === "done-hi"
-                              ? "rgba(16,185,129,0.3)"
-                              : status === "done-lo"
-                              ? "rgba(245,158,11,0.3)"
-                              : "var(--border)",
+                          fontSize: "0.65rem",
+                          fontWeight: 700,
+                          color: scoreColor,
                         }}
                       >
-                        <span className="text-sm font-medium" style={{ color: "var(--text-primary)" }}>
-                          Test {t.testNumber}
-                          <span
-                            className="ml-1 text-xs"
-                            style={{ color: "var(--text-muted)" }}
-                          >
-                            ({t.size} câu)
-                          </span>
-                        </span>
-                        {t.done ? (
-                          <span
-                            className="text-xs font-bold"
-                            style={{
-                              color:
-                                tPct >= 80
-                                  ? "var(--accent-green)"
-                                  : "var(--accent-yellow)",
-                            }}
-                          >
-                            {tPct}%
-                          </span>
-                        ) : (
-                          <ChevronRight
-                            size={13}
-                            className="opacity-0 group-hover/btn:opacity-100 transition-opacity"
-                            style={{ color: "var(--accent-primary)" }}
-                          />
-                        )}
-                      </Link>
-                    );
-                  })}
-                </div>
-              </details>
-            );
-          })}
-        </div>
-      </main>
+                        {pct}%
+                      </span>
+                    )}
+                  </div>
 
-      <Footer />
+                  {hasProgress && (
+                    <div
+                      style={{
+                        marginTop: 6,
+                        height: 3,
+                        background: "var(--bg-secondary)",
+                        borderRadius: 999,
+                        maxWidth: 200,
+                        overflow: "hidden",
+                      }}
+                    >
+                      <div
+                        style={{
+                          height: "100%",
+                          width: `${pct}%`,
+                          background: scoreColor,
+                          borderRadius: 999,
+                          transition: "width 0.6s ease",
+                        }}
+                      />
+                    </div>
+                  )}
+                </div>
+
+                <ChevronRight
+                  size={15}
+                  style={{
+                    color: "var(--text-muted)",
+                    flexShrink: 0,
+                    transition: "transform 0.2s ease",
+                  }}
+                  className="group-open:rotate-90"
+                />
+              </summary>
+
+              {/* Test grid */}
+              <div
+                style={{
+                  padding: "0.65rem 1rem 0.85rem",
+                  borderTop: "1px solid var(--border)",
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))",
+                  gap: "0.5rem",
+                }}
+              >
+                {tests.map((t) => {
+                  const tPct =
+                    t.size > 0 ? Math.round((t.correctCount / t.size) * 100) : 0;
+                  const status =
+                    t.done && tPct >= 80
+                      ? "hi"
+                      : t.done
+                      ? "lo"
+                      : "untouched";
+
+                  return (
+                    <Link
+                      key={t.testNumber}
+                      href={`/grammar/${topic.slug}/${t.testNumber}`}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        padding: "0.5rem 0.7rem",
+                        borderRadius: "var(--radius-sm)",
+                        border: `1px solid ${
+                          status === "hi"
+                            ? "rgba(52,211,153,0.3)"
+                            : status === "lo"
+                            ? "rgba(251,191,36,0.3)"
+                            : "var(--border)"
+                        }`,
+                        background:
+                          status === "hi"
+                            ? "rgba(52,211,153,0.07)"
+                            : status === "lo"
+                            ? "rgba(251,191,36,0.07)"
+                            : "var(--bg-secondary)",
+                        textDecoration: "none",
+                        transition: "border-color 0.12s, box-shadow 0.12s",
+                      }}
+                    >
+                      <span
+                        style={{
+                          fontSize: "0.78rem",
+                          fontWeight: 500,
+                          color: "var(--text-primary)",
+                        }}
+                      >
+                        Test {t.testNumber}
+                        <span
+                          style={{ fontSize: "0.65rem", color: "var(--text-muted)", marginLeft: 4 }}
+                        >
+                          ({t.size})
+                        </span>
+                      </span>
+                      {t.done ? (
+                        <span
+                          style={{
+                            fontSize: "0.72rem",
+                            fontWeight: 700,
+                            color:
+                              tPct >= 80
+                                ? "var(--accent-green)"
+                                : "var(--accent-yellow)",
+                          }}
+                        >
+                          {tPct}%
+                        </span>
+                      ) : (
+                        <ChevronRight
+                          size={12}
+                          style={{ color: "var(--text-muted)", opacity: 0.5 }}
+                        />
+                      )}
+                    </Link>
+                  );
+                })}
+              </div>
+            </details>
+          );
+        })}
+      </div>
     </div>
   );
 }

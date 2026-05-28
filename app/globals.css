@@ -162,6 +162,53 @@
 }
 
 /* ─────────────────────────────────────────────────────────
+   THEME: GRAMMAR — Navy & Sky
+   Apply class "theme-grammar" on the section wrapper div.
+───────────────────────────────────────────────────────── */
+.theme-grammar {
+  /* Content area */
+  --bg-primary:   #EDF1F8;
+  --bg-secondary: #E2E9F4;
+  --bg-elevated:  #FFFFFF;
+
+  /* Sidebar */
+  --grammar-sidebar-bg:          #152040;
+  --grammar-sidebar-topbar-bg:   #1A2B50;
+  --grammar-sidebar-border:      rgba(255,255,255,0.06);
+  --grammar-sidebar-text:        rgba(180,205,240,0.5);
+  --grammar-sidebar-text-hover:  rgba(220,235,255,0.85);
+  --grammar-sidebar-active-bg:   rgba(74,158,255,0.13);
+  --grammar-sidebar-active-text: #E8F0FE;
+  --grammar-sidebar-w:           240px;
+
+  /* Accent */
+  --accent-primary:       #4A9EFF;
+  --accent-primary-hover: #2B84F0;
+  --accent-green:         #34D399;
+  --accent-red:           #F87171;
+  --accent-yellow:        #FBBF24;
+  --accent-blue:          #60A5FA;
+
+  /* Text */
+  --text-primary:   #0F1B2D;
+  --text-secondary: #2D4A6A;
+  --text-muted:     #5C7A99;
+
+  /* Borders */
+  --border:       #C4D4E8;
+  --border-focus: #4A9EFF;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(21,32,64,0.07), 0 1px 2px rgba(21,32,64,0.04);
+  --shadow-md: 0 4px 12px rgba(21,32,64,0.10), 0 2px 6px rgba(21,32,64,0.05);
+  --shadow-lg: 0 12px 32px rgba(21,32,64,0.13);
+
+  /* Typography — Be Vietnam Pro (same as rest of site) */
+  --font-sans:    var(--font-be-vietnam, 'Be Vietnam Pro', system-ui, sans-serif);
+  --font-display: var(--font-be-vietnam, 'Be Vietnam Pro', system-ui, sans-serif);
+}
+
+/* ─────────────────────────────────────────────────────────
    THEME: ADMIN — Silk & Alexandria
    Apply class "theme-admin" on the section wrapper div.
 ───────────────────────────────────────────────────────── */

@@ -3,8 +3,6 @@ import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { TOPICS } from "@/lib/grammar/topics";
 import { grammarQuestions } from "@/lib/grammar/questions";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
@@ -18,17 +16,12 @@ export default async function GrammarReviewPage() {
   } = await supabase.auth.getUser();
   if (!user) redirect("/auth/login?next=/grammar/review");
 
-  const [profile, attempts] = await Promise.all([
-    prisma.profile
-      .findUnique({ where: { id: user.id }, select: { displayName: true } })
-      .catch(() => null),
-    prisma.grammarAttempt
-      .findMany({
-        where: { userId: user.id },
-        select: { questionId: true, isCorrect: true, topicSlug: true, userAnswer: true },
-      })
-      .catch(() => []),
-  ]);
+  const attempts = await prisma.grammarAttempt
+    .findMany({
+      where: { userId: user.id },
+      select: { questionId: true, isCorrect: true, topicSlug: true, userAnswer: true },
+    })
+    .catch(() => []);
 
   // Find questions user has never answered correctly
   const everCorrect = new Set<string>();
@@ -46,21 +39,17 @@ export default async function GrammarReviewPage() {
 
   if (wrongIds.length === 0) {
     return (
-      <div className="min-h-screen flex flex-col" style={{ background: "var(--bg-primary)" }}>
-        <Header userEmail={user.email} userDisplayName={profile?.displayName} />
-        <main className="flex-1 max-w-[700px] mx-auto px-4 py-16 text-center">
-          <CheckCircle2 size={48} className="mx-auto mb-4" style={{ color: "var(--accent-green)" }} />
-          <h2 className="text-xl font-bold mb-2" style={{ color: "var(--text-primary)" }}>
-            Chưa có câu sai nào!
-          </h2>
-          <p className="text-sm mb-6" style={{ color: "var(--text-muted)" }}>
-            Làm thêm bài để xây dựng ngân hàng câu cần ôn lại.
-          </p>
-          <Link href="/grammar" className="btn btn-primary">
-            <ArrowLeft size={15} /> Về danh sách đề
-          </Link>
-        </main>
-        <Footer />
+      <div style={{ padding: "4rem 2rem", maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
+        <CheckCircle2 size={48} style={{ color: "var(--accent-green)", margin: "0 auto 1rem" }} />
+        <h2 style={{ fontSize: "1.1rem", fontWeight: 700, marginBottom: "0.5rem", color: "var(--text-primary)" }}>
+          Chưa có câu sai nào!
+        </h2>
+        <p style={{ fontSize: "0.85rem", marginBottom: "1.5rem", color: "var(--text-muted)" }}>
+          Làm thêm bài để xây dựng ngân hàng câu cần ôn lại.
+        </p>
+        <Link href="/grammar" className="btn btn-primary">
+          <ArrowLeft size={15} /> Về danh sách đề
+        </Link>
       </div>
     );
   }
@@ -77,42 +66,28 @@ export default async function GrammarReviewPage() {
   }).filter((t) => t.qs.length > 0);
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: "var(--bg-primary)" }}>
-      <Header userEmail={user.email} userDisplayName={profile?.displayName} />
+    <div style={{ padding: "2rem 2rem 3rem", maxWidth: 900 }}>
+      <div style={{ marginBottom: "2rem" }}>
+        <h1 style={{ fontSize: "1.35rem", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.02em", marginBottom: "0.25rem" }}>
+          Ngân hàng câu sai
+        </h1>
+        <p style={{ fontSize: "0.82rem", color: "var(--text-muted)" }}>
+          {wrongIds.length} câu chưa trả lời đúng lần nào
+        </p>
+      </div>
 
-      <main className="flex-1 max-w-[900px] mx-auto w-full px-4 py-10">
-        <div className="mb-8 flex items-center gap-4">
-          <Link
-            href="/grammar"
-            className="btn btn-secondary btn-sm"
-          >
-            <ArrowLeft size={14} /> Về danh sách đề
-          </Link>
-          <div>
-            <h1
-              className="text-2xl font-bold"
-              style={{ color: "var(--text-primary)" }}
-            >
-              Ngân hàng câu sai
-            </h1>
-            <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-              {wrongIds.length} câu chưa trả lời đúng lần nào
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-col gap-6">
-          {byTopic.map(({ topic, qs }) => (
-            <section key={topic.slug}>
-              <div className="flex items-center gap-2 mb-3">
-                <span>{topic.emoji}</span>
-                <h2 className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>
-                  {topic.name}
-                </h2>
-                <span className="badge badge-red" style={{ fontSize: "0.65rem" }}>
-                  {qs.length} câu
-                </span>
-              </div>
+      <div className="flex flex-col gap-6">
+        {byTopic.map(({ topic, qs }) => (
+          <section key={topic.slug}>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
+              <span style={{ width: 8, height: 8, borderRadius: "50%", background: topic.color, flexShrink: 0, display: "inline-block" }} />
+              <h2 style={{ fontWeight: 600, fontSize: "0.88rem", color: "var(--text-primary)" }}>
+                {topic.name}
+              </h2>
+              <span className="badge badge-red" style={{ fontSize: "0.65rem" }}>
+                {qs.length} câu
+              </span>
+            </div>
 
               <div className="flex flex-col gap-3">
                 {qs.map(({ q, userAnswer }) => (
@@ -185,12 +160,9 @@ export default async function GrammarReviewPage() {
                   </div>
                 ))}
               </div>
-            </section>
-          ))}
-        </div>
-      </main>
-
-      <Footer />
+          </section>
+        ))}
+      </div>
     </div>
   );
 }
