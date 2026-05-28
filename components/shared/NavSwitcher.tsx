@@ -12,7 +12,7 @@ interface NavItem {
 
 const NAV_ITEMS: NavItem[] = [
   { href: "/",        label: "Dictation",  emoji: "🎧" },
-  { href: "/journal", label: "Nhật ký",    emoji: "📖" },
+  { href: "/grammar", label: "Grammar",    emoji: "🎓" },
   { href: "/admin",   label: "Quản lý",    emoji: "⚙️",  roles: ["teacher", "admin"] },
 ];
 
