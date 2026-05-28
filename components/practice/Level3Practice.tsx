@@ -104,7 +104,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
   const [submitted, setSubmitted] = useState(false);
   const [finalScore, setFinalScore] = useState<number | null>(null);
 
-  const [vocabItems, setVocabItems] = useState<VocabItem[] | null>(null);
+  const [vocabItems, setVocabItems] = useState<VocabItem[] | null | "error">(null);
   const vocabFetchStartedRef = useRef(false);
 
   const activeSentence = sentences[activeIdx];
@@ -303,6 +303,12 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     void fetchVocab();
   }
 
+  function retryVocab() {
+    vocabFetchStartedRef.current = false;
+    setVocabItems(null);
+    triggerFetchVocab();
+  }
+
   async function fetchVocab() {
     try {
       const res = await fetch("/api/ai/extract-vocabulary", {
@@ -310,10 +316,11 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ transcript: transcriptFull }),
       });
+      if (!res.ok) { setVocabItems("error"); return; }
       const data = await res.json();
-      setVocabItems(data.items ?? []);
+      setVocabItems(Array.isArray(data.items) && data.items.length > 0 ? data.items : data.items?.length === 0 ? [] : "error");
     } catch {
-      setVocabItems([]);
+      setVocabItems("error");
     }
   }
 
@@ -420,6 +427,7 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
         vocabItems={vocabItems}
         nextLessonUrl={nextLessonUrl}
         onRetry={() => window.location.reload()}
+        onRetryVocab={retryVocab}
       />
     );
   }

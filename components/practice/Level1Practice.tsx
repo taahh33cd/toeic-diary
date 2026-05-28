@@ -104,7 +104,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
   const [answerRevealed, setAnswerRevealed] = useState(false);
   const [part2AllDone, setPart2AllDone] = useState(false);
 
-  const [vocabItems, setVocabItems] = useState<VocabItem[] | null>(null);
+  const [vocabItems, setVocabItems] = useState<VocabItem[] | null | "error">(null);
   const vocabFetchStartedRef = useRef(false);
 
   const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
@@ -340,6 +340,12 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
     void fetchVocab();
   }
 
+  function retryVocab() {
+    vocabFetchStartedRef.current = false;
+    setVocabItems(null);
+    triggerFetchVocab();
+  }
+
   // ── Submit ───────────────────────────────────────────────────────────────────
 
   async function fetchVocab() {
@@ -349,10 +355,11 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ transcript: transcriptFull }),
       });
+      if (!res.ok) { setVocabItems("error"); return; }
       const data = await res.json();
-      setVocabItems(data.items ?? []);
+      setVocabItems(Array.isArray(data.items) && data.items.length > 0 ? data.items : data.items?.length === 0 ? [] : "error");
     } catch {
-      setVocabItems([]);
+      setVocabItems("error");
     }
   }
 
@@ -470,6 +477,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
         vocabItems={vocabItems}
         nextLessonUrl={nextLessonUrl}
         onRetry={() => window.location.reload()}
+        onRetryVocab={retryVocab}
       />
     );
   }

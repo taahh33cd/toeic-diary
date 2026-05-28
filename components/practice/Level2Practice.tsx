@@ -90,7 +90,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
   const [submitted, setSubmitted] = useState(false);
   const [finalScore, setFinalScore] = useState<number | null>(null);
 
-  const [vocabItems, setVocabItems] = useState<VocabItem[] | null>(null);
+  const [vocabItems, setVocabItems] = useState<VocabItem[] | null | "error">(null);
   const vocabFetchStartedRef = useRef(false);
 
   const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
@@ -259,6 +259,12 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
     void fetchVocab();
   }
 
+  function retryVocab() {
+    vocabFetchStartedRef.current = false;
+    setVocabItems(null);
+    triggerFetchVocab();
+  }
+
   async function fetchVocab() {
     try {
       const res = await fetch("/api/ai/extract-vocabulary", {
@@ -266,10 +272,11 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ transcript: transcriptFull }),
       });
+      if (!res.ok) { setVocabItems("error"); return; }
       const data = await res.json();
-      setVocabItems(data.items ?? []);
+      setVocabItems(Array.isArray(data.items) && data.items.length > 0 ? data.items : data.items?.length === 0 ? [] : "error");
     } catch {
-      setVocabItems([]);
+      setVocabItems("error");
     }
   }
 
@@ -368,6 +375,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
         transcriptFull={transcriptFull}
         vocabItems={vocabItems}
         onRetry={() => window.location.reload()}
+        onRetryVocab={retryVocab}
       />
     );
   }
