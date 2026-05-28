@@ -196,114 +196,125 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
     );
   }
 
-  // ── Quiz screen ────────────────────────────────────────────────────
+  // ── Quiz screen — TOEIC CBT style ─────────────────────────────────
   const q = activeQs[currentIdx];
   if (!q) return null;
 
   return (
-    <div style={{ padding: "1.5rem 2rem 3rem", maxWidth: 740, margin: "0 auto" }}>
-      {/* Top bar */}
+    <div style={{ maxWidth: 860, margin: "0 auto", paddingBottom: "3rem", fontFamily: "var(--font-sans)" }}>
+
+      {/* ── CBT Header strip ── */}
       <div
         style={{
+          background: "#013e37",
+          padding: "0 1.5rem",
+          height: 52,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          marginBottom: "1.25rem",
+          gap: "1rem",
         }}
       >
-        <div>
-          <h2 style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-primary)" }}>
-            {topicName} — {isMiniQuiz ? "Ôn câu sai" : `Test ${testNumber}`}
-          </h2>
-        </div>
-        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+        <span style={{ fontSize: "0.8rem", fontWeight: 600, color: "#ffefb3", whiteSpace: "nowrap" }}>
+          Part 5 &nbsp;·&nbsp; {isMiniQuiz ? "Ôn câu sai" : `${topicName} — Test ${testNumber}`}
+        </span>
+        <div style={{ display: "flex", alignItems: "center", gap: "1.25rem" }}>
+          <span style={{ fontSize: "0.78rem", color: "rgba(255,239,179,0.75)", whiteSpace: "nowrap" }}>
+            {answeredCount} / {activeQs.length} đã trả lời
+          </span>
           <span
             style={{
               display: "inline-flex",
               alignItems: "center",
               gap: "0.3rem",
-              fontSize: "0.82rem",
-              fontFamily: "var(--font-mono)",
-              color: "var(--text-muted)",
+              fontSize: "0.85rem",
+              fontWeight: 600,
+              color: "#ffefb3",
+              letterSpacing: "0.02em",
             }}
           >
             <Clock size={13} />
             {formatTime(elapsed)}
           </span>
-          <span className="badge badge-muted" style={{ fontSize: "0.72rem" }}>
-            {answeredCount}/{activeQs.length}
-          </span>
+          <button
+            onClick={submit}
+            disabled={saving}
+            style={{
+              padding: "0.35rem 1rem",
+              borderRadius: 4,
+              border: "1.5px solid rgba(255,239,179,0.5)",
+              background: "transparent",
+              color: "#ffefb3",
+              fontSize: "0.78rem",
+              fontWeight: 600,
+              cursor: saving ? "not-allowed" : "pointer",
+              opacity: saving ? 0.6 : 1,
+              whiteSpace: "nowrap",
+              fontFamily: "var(--font-sans)",
+            }}
+          >
+            {saving ? "Đang lưu…" : "Nộp bài"}
+          </button>
         </div>
       </div>
 
-      {/* Compact question grid strip */}
+      {/* ── Directions bar ── */}
       <div
         style={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: "0.35rem",
-          marginBottom: "1.25rem",
-          padding: "0.65rem 0.75rem",
-          background: "var(--bg-elevated)",
-          border: "1px solid var(--border)",
-          borderRadius: "var(--radius-md)",
+          background: "#e4ede8",
+          padding: "0.55rem 1.5rem",
+          borderBottom: "1px solid #c8ddd8",
         }}
       >
-        {activeQs.map((qu, i) => {
-          const answered = !!answers[qu.id];
-          const active = i === currentIdx;
-          return (
-            <button
-              key={qu.id}
-              onClick={() => setCurrentIdx(i)}
-              style={{
-                width: 30,
-                height: 30,
-                fontSize: "0.7rem",
-                fontWeight: 600,
-                borderRadius: "var(--radius-sm)",
-                border: active ? "none" : "1px solid var(--border)",
-                background: active
-                  ? "var(--accent-primary)"
-                  : answered
-                  ? "rgba(74,158,255,0.15)"
-                  : "var(--bg-secondary)",
-                color: active ? "#fff" : answered ? "var(--accent-primary)" : "var(--text-muted)",
-                cursor: "pointer",
-                transition: "all 0.1s",
-              }}
-            >
-              {i + 1}
-            </button>
-          );
-        })}
+        <span style={{ fontSize: "0.72rem", fontWeight: 600, color: "#2e5049", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+          Directions:
+        </span>
+        <span style={{ fontSize: "0.72rem", color: "#5e7e79", marginLeft: "0.4rem" }}>
+          A word or phrase is missing in each of the sentences below. Select the best answer to complete the sentence.
+        </span>
       </div>
 
-      {/* Question card */}
-      <div className="card p-6 mb-4">
-        <div style={{ fontSize: "0.72rem", fontWeight: 600, marginBottom: "1rem", color: "var(--text-muted)" }}>
-          Câu {currentIdx + 1} / {activeQs.length}
+      {/* ── Question area ── */}
+      <div style={{ background: "#ffffff", padding: "2rem 2.5rem 2.5rem" }}>
+        {/* Question number + grammar tag */}
+        <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", marginBottom: "1.25rem" }}>
+          <span style={{ fontSize: "1.5rem", fontWeight: 800, color: "#013e37", lineHeight: 1 }}>
+            {currentIdx + 1}.
+          </span>
           {q.grammar_type && (
-            <span className="ml-2 badge badge-primary" style={{ fontSize: "0.65rem" }}>
+            <span
+              style={{
+                fontSize: "0.62rem",
+                fontWeight: 700,
+                textTransform: "uppercase",
+                letterSpacing: "0.08em",
+                color: "#013e37",
+                background: "rgba(1,62,55,0.08)",
+                padding: "2px 8px",
+                borderRadius: 99,
+              }}
+            >
               {q.grammar_type}
             </span>
           )}
         </div>
 
+        {/* Question sentence */}
         <p
           style={{
-            fontSize: "0.95rem",
-            fontWeight: 500,
-            lineHeight: 1.7,
-            marginBottom: "1.5rem",
-            color: "var(--text-primary)",
-            fontFamily: "var(--font-mono)",
+            fontSize: "1.05rem",
+            lineHeight: 1.85,
+            color: "#0a1f1c",
+            marginBottom: "2rem",
+            fontFamily: "var(--font-sans)",
+            fontWeight: 400,
           }}
         >
           {q.question}
         </p>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+        {/* Answer options */}
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
           {(["A", "B", "C", "D"] as const).map((key) => {
             const selected = answers[q.id] === key;
             return (
@@ -311,53 +322,163 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
                 key={key}
                 onClick={() => setAnswers((prev) => ({ ...prev, [q.id]: key }))}
                 style={{
-                  textAlign: "left",
-                  padding: "0.75rem 1rem",
-                  borderRadius: "var(--radius-md)",
-                  border: `1px solid ${selected ? "var(--accent-primary)" : "var(--border)"}`,
-                  background: selected ? "rgba(74,158,255,0.08)" : "var(--bg-elevated)",
-                  color: "var(--text-primary)",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.9rem",
+                  padding: "0.8rem 1.1rem",
+                  borderRadius: 6,
+                  border: selected ? "2px solid #013e37" : "1.5px solid #c8ddd8",
+                  background: selected ? "rgba(1,62,55,0.05)" : "#fafdfb",
                   cursor: "pointer",
-                  transition: "border-color 0.12s, background 0.12s",
-                  fontSize: "0.88rem",
+                  textAlign: "left",
+                  transition: "border-color 0.1s, background 0.1s",
+                  fontFamily: "var(--font-sans)",
                 }}
               >
+                {/* Radio circle */}
                 <span
                   style={{
-                    fontWeight: 700,
-                    marginRight: "0.5rem",
-                    color: selected ? "var(--accent-primary)" : "var(--text-muted)",
+                    width: 18,
+                    height: 18,
+                    borderRadius: "50%",
+                    border: selected ? "2px solid #013e37" : "2px solid #9cbdb8",
+                    background: selected ? "#013e37" : "transparent",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                    transition: "all 0.1s",
                   }}
                 >
-                  ({key})
+                  {selected && (
+                    <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#ffefb3" }} />
+                  )}
                 </span>
-                {q.options[key]}
+                {/* Letter */}
+                <span
+                  style={{
+                    fontSize: "0.85rem",
+                    fontWeight: 700,
+                    color: selected ? "#013e37" : "#5e7e79",
+                    width: 18,
+                    flexShrink: 0,
+                    fontFamily: "var(--font-sans)",
+                  }}
+                >
+                  {key}
+                </span>
+                {/* Option text */}
+                <span
+                  style={{
+                    fontSize: "0.93rem",
+                    color: selected ? "#013e37" : "#0a1f1c",
+                    fontWeight: selected ? 500 : 400,
+                    fontFamily: "var(--font-sans)",
+                  }}
+                >
+                  {q.options[key]}
+                </span>
               </button>
             );
           })}
         </div>
       </div>
 
-      {/* Navigation */}
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+      {/* ── Bottom bar: navigator + prev/next ── */}
+      <div
+        style={{
+          background: "#e4ede8",
+          borderTop: "1px solid #c8ddd8",
+          padding: "0.75rem 1.5rem",
+          display: "flex",
+          alignItems: "center",
+          gap: "1rem",
+        }}
+      >
+        {/* Prev */}
         <button
-          className="btn btn-secondary"
           onClick={() => setCurrentIdx((i) => Math.max(0, i - 1))}
           disabled={currentIdx === 0}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "0.25rem",
+            padding: "0.45rem 0.9rem",
+            borderRadius: 4,
+            border: "1.5px solid #9cbdb8",
+            background: "transparent",
+            color: currentIdx === 0 ? "#9cbdb8" : "#013e37",
+            fontSize: "0.78rem",
+            fontWeight: 600,
+            cursor: currentIdx === 0 ? "not-allowed" : "pointer",
+            whiteSpace: "nowrap",
+            flexShrink: 0,
+            fontFamily: "var(--font-sans)",
+          }}
         >
-          <ChevronLeft size={15} /> Câu trước
+          <ChevronLeft size={14} /> Câu trước
         </button>
 
-        <button className="btn btn-primary" onClick={submit} disabled={saving}>
-          {saving ? "Đang lưu…" : "Nộp bài"}
-        </button>
+        {/* Question number grid */}
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "0.25rem",
+            flex: 1,
+            justifyContent: "center",
+          }}
+        >
+          {activeQs.map((qu, i) => {
+            const answered = !!answers[qu.id];
+            const active = i === currentIdx;
+            return (
+              <button
+                key={qu.id}
+                onClick={() => setCurrentIdx(i)}
+                title={`Câu ${i + 1}`}
+                style={{
+                  width: 26,
+                  height: 26,
+                  fontSize: "0.65rem",
+                  fontWeight: 700,
+                  borderRadius: 3,
+                  border: "none",
+                  background: active ? "#013e37" : answered ? "#5a9e90" : "#c8ddd8",
+                  color: active ? "#ffefb3" : answered ? "#ffffff" : "#5e7e79",
+                  cursor: "pointer",
+                  transition: "all 0.1s",
+                  fontFamily: "var(--font-sans)",
+                }}
+              >
+                {i + 1}
+              </button>
+            );
+          })}
+        </div>
 
+        {/* Next */}
         <button
-          className="btn btn-secondary"
           onClick={() => setCurrentIdx((i) => Math.min(activeQs.length - 1, i + 1))}
           disabled={currentIdx === activeQs.length - 1}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "0.25rem",
+            padding: "0.45rem 0.9rem",
+            borderRadius: 4,
+            border: "1.5px solid #9cbdb8",
+            background: "transparent",
+            color: currentIdx === activeQs.length - 1 ? "#9cbdb8" : "#013e37",
+            fontSize: "0.78rem",
+            fontWeight: 600,
+            cursor: currentIdx === activeQs.length - 1 ? "not-allowed" : "pointer",
+            whiteSpace: "nowrap",
+            flexShrink: 0,
+            fontFamily: "var(--font-sans)",
+          }}
         >
-          Câu sau <ChevronRight size={15} />
+          Câu sau <ChevronRight size={14} />
         </button>
       </div>
     </div>

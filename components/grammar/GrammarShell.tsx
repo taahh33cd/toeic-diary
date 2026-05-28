@@ -41,7 +41,7 @@ interface GrammarShellProps {
   displayName?: string | null;
 }
 
-export function GrammarShell({ children }: GrammarShellProps) {
+export function GrammarShell({ children, displayName }: GrammarShellProps) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -81,7 +81,7 @@ export function GrammarShell({ children }: GrammarShellProps) {
               flexShrink: 0,
             }}
           >
-            Ngữ pháp TOEIC
+            {displayName ? `${displayName}'s TOEIC Grammar` : "TOEIC Grammar"}
           </Link>
 
           {/* Desktop nav */}
