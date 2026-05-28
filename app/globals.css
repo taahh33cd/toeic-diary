@@ -166,33 +166,29 @@
    Apply class "theme-grammar" on the section wrapper div.
 ───────────────────────────────────────────────────────── */
 .theme-grammar {
-  /* Surfaces — tonal layering, no hard borders */
-  --bg-primary:   #faf9fa;
-  --bg-secondary: #f5f3f4;
+  /* Surfaces — sage green tonal layering */
+  --bg-primary:   #f0f5f2;
+  --bg-secondary: #e4ede8;
   --bg-elevated:  #ffffff;
-  --bg-container: #efedee;
+  --bg-container: #d8e6de;
 
-  /* Topbar — glass */
-  --grammar-topbar-bg:     rgba(255,255,255,0.88);
-  --grammar-topbar-border: rgba(195,198,213,0.22);
-
-  /* Accent — Alexandria blue */
-  --accent-primary:       #094cb2;
-  --accent-primary-hover: #2259bf;
-  --accent-primary-bg:    rgba(9,76,178,0.08);
-  --accent-green:         #1a8754;
-  --accent-red:           #c0392b;
-  --accent-yellow:        #856404;
+  /* Accent — forest green */
+  --accent-primary:       #013e37;
+  --accent-primary-hover: #025047;
+  --accent-primary-bg:    rgba(1,62,55,0.08);
+  --accent-green:         #1a6b4a;
+  --accent-red:           #b83232;
+  --accent-yellow:        #7a5c00;
   --accent-blue:          #1d4ed8;
 
   /* Text */
-  --text-primary:   #1b1c1d;
-  --text-secondary: #434653;
-  --text-muted:     #737784;
+  --text-primary:   #0a1f1c;
+  --text-secondary: #2e5049;
+  --text-muted:     #5e7e79;
 
-  /* Borders — ghost only */
-  --border:       rgba(195,198,213,0.35);
-  --border-focus: #094cb2;
+  /* Borders */
+  --border:       rgba(1,62,55,0.14);
+  --border-focus: #013e37;
 
   /* Radius */
   --radius-sm: 4px;
@@ -200,10 +196,10 @@
   --radius-lg: 12px;
   --radius-xl: 16px;
 
-  /* Shadows — diffused, editorial */
-  --shadow-sm: 0 1px 4px rgba(27,28,29,0.06);
-  --shadow-md: 0 4px 24px rgba(27,28,29,0.07), 0 1px 4px rgba(27,28,29,0.04);
-  --shadow-lg: 0 12px 40px rgba(27,28,29,0.09), 0 4px 12px rgba(27,28,29,0.04);
+  /* Shadows */
+  --shadow-sm: 0 1px 4px rgba(1,30,26,0.07);
+  --shadow-md: 0 4px 24px rgba(1,30,26,0.08), 0 1px 4px rgba(1,30,26,0.05);
+  --shadow-lg: 0 12px 40px rgba(1,30,26,0.10), 0 4px 12px rgba(1,30,26,0.05);
 
   /* Typography — Be Vietnam Pro */
   --font-sans:    var(--font-be-vietnam, 'Be Vietnam Pro', system-ui, sans-serif);

@@ -15,7 +15,10 @@ import {
 } from "lucide-react";
 
 const TOPBAR_H = 64;
-const BG = "#0ea5e9";
+const BG = "#013e37";
+const TEXT_ACTIVE   = "#ffefb3";
+const TEXT_INACTIVE = "rgba(255,239,179,0.65)";
+const TEXT_EXTERNAL = "rgba(255,239,179,0.48)";
 
 const NAV_INTERNAL = [
   { href: "/grammar",          label: "Tổng quan", icon: LayoutGrid, exact: true },
@@ -71,7 +74,7 @@ export function GrammarShell({ children }: GrammarShellProps) {
             style={{
               fontSize: "1rem",
               fontWeight: 700,
-              color: "#ffffff",
+              color: TEXT_ACTIVE,
               textDecoration: "none",
               letterSpacing: "-0.01em",
               whiteSpace: "nowrap",
@@ -100,17 +103,17 @@ export function GrammarShell({ children }: GrammarShellProps) {
                     paddingBottom: "1px",
                     fontSize: "0.875rem",
                     fontWeight: 500,
-                    color: on ? "#ffffff" : "rgba(255,255,255,0.75)",
+                    color: on ? TEXT_ACTIVE : TEXT_INACTIVE,
                     textDecoration: "none",
                     whiteSpace: "nowrap",
-                    borderBottom: on ? "2px solid #ffffff" : "2px solid transparent",
+                    borderBottom: on ? `2px solid ${TEXT_ACTIVE}` : "2px solid transparent",
                     transition: "color 0.15s, border-color 0.15s",
                   }}
                   onMouseEnter={(e) => {
-                    if (!on) (e.currentTarget as HTMLAnchorElement).style.color = "#ffffff";
+                    if (!on) (e.currentTarget as HTMLAnchorElement).style.color = TEXT_ACTIVE;
                   }}
                   onMouseLeave={(e) => {
-                    if (!on) (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.75)";
+                    if (!on) (e.currentTarget as HTMLAnchorElement).style.color = TEXT_INACTIVE;
                   }}
                 >
                   <Icon size={15} style={{ flexShrink: 0 }} />
@@ -120,7 +123,7 @@ export function GrammarShell({ children }: GrammarShellProps) {
             })}
 
             {/* Divider */}
-            <div style={{ width: 1, height: 20, background: "rgba(255,255,255,0.25)", margin: "auto 0.65rem" }} />
+            <div style={{ width: 1, height: 20, background: "rgba(255,239,179,0.2)", margin: "auto 0.65rem" }} />
 
             {NAV_EXTERNAL.map(({ href, label, icon: Icon }) => (
               <Link
@@ -134,18 +137,18 @@ export function GrammarShell({ children }: GrammarShellProps) {
                   paddingBottom: "1px",
                   fontSize: "0.875rem",
                   fontWeight: 500,
-                  color: "rgba(255,255,255,0.6)",
+                  color: TEXT_EXTERNAL,
                   textDecoration: "none",
                   whiteSpace: "nowrap",
                   borderBottom: "2px solid transparent",
                   transition: "color 0.15s, border-color 0.15s",
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.color = "#ffffff";
-                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "#ffffff";
+                  (e.currentTarget as HTMLAnchorElement).style.color = TEXT_ACTIVE;
+                  (e.currentTarget as HTMLAnchorElement).style.borderColor = TEXT_ACTIVE;
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.6)";
+                  (e.currentTarget as HTMLAnchorElement).style.color = TEXT_EXTERNAL;
                   (e.currentTarget as HTMLAnchorElement).style.borderColor = "transparent";
                 }}
               >
@@ -164,7 +167,7 @@ export function GrammarShell({ children }: GrammarShellProps) {
               background: "none",
               border: "none",
               cursor: "pointer",
-              color: "#ffffff",
+              color: TEXT_ACTIVE,
               padding: "6px",
               display: "flex",
               alignItems: "center",
@@ -191,7 +194,7 @@ export function GrammarShell({ children }: GrammarShellProps) {
               right: 0,
               zIndex: 45,
               background: BG,
-              borderTop: "1px solid rgba(255,255,255,0.15)",
+              borderTop: "1px solid rgba(255,239,179,0.15)",
               padding: "0.5rem 1rem 0.75rem",
               display: "flex",
               flexDirection: "column",
@@ -213,8 +216,8 @@ export function GrammarShell({ children }: GrammarShellProps) {
                     borderRadius: "var(--radius-md)",
                     fontSize: "0.875rem",
                     fontWeight: on ? 600 : 500,
-                    color: on ? "#ffffff" : "rgba(255,255,255,0.75)",
-                    background: on ? "rgba(255,255,255,0.15)" : "transparent",
+                    color: on ? TEXT_ACTIVE : TEXT_INACTIVE,
+                    background: on ? "rgba(255,239,179,0.12)" : "transparent",
                     textDecoration: "none",
                   }}
                 >
@@ -223,7 +226,7 @@ export function GrammarShell({ children }: GrammarShellProps) {
                 </Link>
               );
             })}
-            <div style={{ height: 1, background: "rgba(255,255,255,0.15)", margin: "0.3rem 0" }} />
+            <div style={{ height: 1, background: "rgba(255,239,179,0.15)", margin: "0.3rem 0" }} />
             {NAV_EXTERNAL.map(({ href, label, icon: Icon }) => (
               <Link
                 key={href}
@@ -236,7 +239,7 @@ export function GrammarShell({ children }: GrammarShellProps) {
                   padding: "0.65rem 0.85rem",
                   borderRadius: "var(--radius-md)",
                   fontSize: "0.875rem",
-                  color: "rgba(255,255,255,0.6)",
+                  color: TEXT_EXTERNAL,
                   textDecoration: "none",
                 }}
               >
