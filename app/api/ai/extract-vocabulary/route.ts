@@ -32,8 +32,13 @@ Rules:
 Return ONLY a valid JSON array, no explanation:
 [{"word":"...","ipa":"...","partOfSpeech":"...","meaning":"...","example":"..."}]`;
 
+    if (!process.env.GEMINI_API_KEY) {
+      console.error("[extract-vocabulary] GEMINI_API_KEY is not set");
+      return NextResponse.json({ error: "API key not configured" }, { status: 500 });
+    }
+
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash-lite",
+      model: "gemini-2.0-flash",
       contents: prompt,
       config: { responseMimeType: "application/json" },
     });
@@ -61,7 +66,8 @@ Return ONLY a valid JSON array, no explanation:
       .slice(0, 8);
 
     return NextResponse.json({ items });
-  } catch {
+  } catch (err) {
+    console.error("[extract-vocabulary] Gemini error:", err);
     return NextResponse.json({ error: "Vocabulary extraction failed" }, { status: 500 });
   }
 }
