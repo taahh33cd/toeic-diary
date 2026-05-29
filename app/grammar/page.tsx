@@ -310,7 +310,7 @@ export default async function GrammarPage() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(480px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fill, minmax(min(480px, 100%), 1fr))",
           gap: "0.75rem",
           alignItems: "start",
         }}
