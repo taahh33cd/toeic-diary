@@ -42,6 +42,22 @@ function buildTopicStats(correctSet: Set<string>, seenSet: Set<string>) {
   });
 }
 
+function calcStreak(dates: string[]): number {
+  if (dates.length === 0) return 0;
+  const today = new Date().toISOString().slice(0, 10);
+  const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+  if (dates[0] !== today && dates[0] !== yesterday) return 0;
+  let streak = 0;
+  const cursor = new Date(dates[0] + "T00:00:00Z");
+  for (const d of dates) {
+    if (d === cursor.toISOString().slice(0, 10)) {
+      streak++;
+      cursor.setUTCDate(cursor.getUTCDate() - 1);
+    } else break;
+  }
+  return streak;
+}
+
 export default async function GrammarPage() {
   const supabase = await createClient();
   const {
@@ -49,19 +65,140 @@ export default async function GrammarPage() {
   } = await supabase.auth.getUser();
   if (!user) return null; // layout handles redirect
 
-  const attempts = await prisma.grammarAttempt
-    .findMany({ where: { userId: user.id }, select: { questionId: true, isCorrect: true } })
-    .catch(() => []);
+  const [profile, attempts] = await Promise.all([
+    prisma.profile
+      .findUnique({ where: { id: user.id }, select: { displayName: true } })
+      .catch(() => null),
+    prisma.grammarAttempt
+      .findMany({
+        where: { userId: user.id },
+        select: { questionId: true, isCorrect: true, createdAt: true },
+      })
+      .catch(() => []),
+  ]);
 
   const seenSet = new Set(attempts.map((a) => a.questionId));
   const correctSet = new Set(attempts.filter((a) => a.isCorrect).map((a) => a.questionId));
+
+  // Streak
+  const dateSet = new Set(attempts.map((a) => a.createdAt.toISOString().slice(0, 10)));
+  const sortedDates = [...dateSet].sort().reverse();
+  const streak = calcStreak(sortedDates);
 
   const topicStats = buildTopicStats(correctSet, seenSet);
   const totalQs = grammarQuestions.length;
   const totalCorrect = correctSet.size;
 
+  // Completed tests = tests where every question has been seen
+  const completedTests = topicStats.reduce(
+    (sum, { tests }) => sum + tests.filter((t) => t.done).length,
+    0
+  );
+
+  const displayName =
+    profile?.displayName ?? user.email?.split("@")[0] ?? "bạn";
+
   return (
     <div style={{ padding: "2rem 2rem 3rem", maxWidth: 860, margin: "0 auto" }}>
+
+      {/* Welcome banner */}
+      <div
+        style={{
+          marginBottom: "1.75rem",
+          padding: "1.25rem 1.5rem",
+          background: "var(--accent-primary)",
+          borderRadius: "var(--radius-lg)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: "1rem",
+          flexWrap: "wrap",
+        }}
+      >
+        <div>
+          <p
+            style={{
+              fontSize: "0.72rem",
+              fontWeight: 600,
+              color: "rgba(255,239,179,0.6)",
+              letterSpacing: "0.06em",
+              textTransform: "uppercase",
+              marginBottom: "0.25rem",
+            }}
+          >
+            Xin chào
+          </p>
+          <p
+            style={{
+              fontSize: "1.25rem",
+              fontWeight: 700,
+              color: "#ffefb3",
+              letterSpacing: "-0.02em",
+              lineHeight: 1.2,
+            }}
+          >
+            {displayName}
+          </p>
+        </div>
+
+        <div style={{ display: "flex", gap: "1.5rem" }}>
+          {/* Streak */}
+          <div style={{ textAlign: "center" }}>
+            <div
+              style={{
+                fontSize: "1.75rem",
+                fontWeight: 800,
+                color: "#ffefb3",
+                lineHeight: 1,
+              }}
+            >
+              {streak}
+            </div>
+            <div
+              style={{
+                fontSize: "0.6rem",
+                fontWeight: 600,
+                color: "rgba(255,239,179,0.6)",
+                letterSpacing: "0.06em",
+                textTransform: "uppercase",
+                marginTop: "0.25rem",
+              }}
+            >
+              NGÀY STREAK
+            </div>
+          </div>
+
+          <div
+            style={{ width: 1, background: "rgba(255,239,179,0.2)", alignSelf: "stretch" }}
+          />
+
+          {/* Completed tests */}
+          <div style={{ textAlign: "center" }}>
+            <div
+              style={{
+                fontSize: "1.75rem",
+                fontWeight: 800,
+                color: "#ffefb3",
+                lineHeight: 1,
+              }}
+            >
+              {completedTests}
+            </div>
+            <div
+              style={{
+                fontSize: "0.6rem",
+                fontWeight: 600,
+                color: "rgba(255,239,179,0.6)",
+                letterSpacing: "0.06em",
+                textTransform: "uppercase",
+                marginTop: "0.25rem",
+              }}
+            >
+              ĐÃ HOÀN THÀNH
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Page heading */}
       <div style={{ marginBottom: "2rem" }}>
