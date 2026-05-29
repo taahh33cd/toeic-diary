@@ -10,6 +10,7 @@ import { MobileBottomNav } from "@/components/journal/MobileBottomNav";
 import { NotificationWatcher } from "@/components/shared/NotificationWatcher";
 import { InstallBanner } from "@/components/shared/InstallBanner";
 import { LocaleProvider } from "@/hooks/useLocale";
+import { JournalThemeWrapper } from "@/components/journal/ThemeProvider";
 
 export const dynamic = "force-dynamic";
 
@@ -39,7 +40,7 @@ export default async function JournalLayout({
 
   return (
     <LocaleProvider>
-    <div
+    <JournalThemeWrapper
       className="theme-journal min-h-screen flex flex-col"
       style={{ background: "var(--bg-primary)", color: "var(--text-primary)" }}
     >
@@ -55,8 +56,8 @@ export default async function JournalLayout({
       <header
         className="sticky top-0 z-40 border-b"
         style={{
-          background: "#3D2B1F",
-          borderColor: "#2A1F15",
+          background: "var(--journal-header-bg, #3D2B1F)",
+          borderColor: "var(--journal-header-border, #2A1F15)",
           boxShadow: "var(--shadow-sm)",
           viewTransitionName: "journal-header",
           ["--text-primary" as string]: "#FFFFFF",
@@ -97,7 +98,7 @@ export default async function JournalLayout({
 
       {/* Spacer for mobile nav */}
       <div className="md:hidden h-16" aria-hidden="true" />
-    </div>
+    </JournalThemeWrapper>
     </LocaleProvider>
   );
 }

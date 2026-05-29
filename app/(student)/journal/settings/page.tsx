@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { StudentPushSubscribeCard } from "./_push-subscribe";
+import { JournalThemePicker } from "@/components/journal/ThemePicker";
 
 export const metadata: Metadata = { title: "Cài đặt" };
 
 export default function SettingsPage() {
   return (
-    <div className="space-y-6 max-w-xl">
+    <div className="space-y-8 max-w-xl">
       <div>
         <h1 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>
           Cài đặt
@@ -14,6 +15,8 @@ export default function SettingsPage() {
           Tuỳ chỉnh trải nghiệm học tập của bạn.
         </p>
       </div>
+
+      <JournalThemePicker />
 
       <StudentPushSubscribeCard />
     </div>

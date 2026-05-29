@@ -95,6 +95,88 @@
 }
 
 /* ─────────────────────────────────────────────────────────
+   JOURNAL THEMES
+   Applied via .theme-journal[data-journal-theme="X"]
+   Default (warm) is the base .theme-journal class.
+───────────────────────────────────────────────────────── */
+
+/* Warm (default) — beige / terracotta */
+.theme-journal {
+  --bg-primary:   #F5EFE6;
+  --bg-secondary: #EDE4D7;
+  --bg-elevated:  #FBF7F2;
+  --bg-card:      #FFFFFF;
+  --text-primary:   #2C1E0F;
+  --text-secondary: #6B4F3A;
+  --text-muted:     #A08060;
+  --accent-primary:       #C4622D;
+  --accent-primary-hover: #A84E22;
+  --border:       #D9C8B4;
+  --border-focus: #C4622D;
+  --shadow-sm: 0 1px 3px rgba(44, 30, 15, 0.08);
+  --shadow-md: 0 4px 12px rgba(44, 30, 15, 0.10);
+  --journal-header-bg:     #3D2B1F;
+  --journal-header-border: #2A1F15;
+}
+
+/* Dark — midnight journal */
+.theme-journal[data-journal-theme="dark"] {
+  --bg-primary:   #141010;
+  --bg-secondary: #1C1614;
+  --bg-elevated:  #231E1C;
+  --bg-card:      #2A2320;
+  --text-primary:   #EDE4D7;
+  --text-secondary: #A8927A;
+  --text-muted:     #6B5040;
+  --accent-primary:       #E8895C;
+  --accent-primary-hover: #FF7A3D;
+  --border:       #332820;
+  --border-focus: #E8895C;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --journal-header-bg:     #0E0B09;
+  --journal-header-border: #1C1614;
+}
+
+/* Forest — green / sage */
+.theme-journal[data-journal-theme="forest"] {
+  --bg-primary:   #EEF2EC;
+  --bg-secondary: #E1E9DF;
+  --bg-elevated:  #F5F8F4;
+  --bg-card:      #FFFFFF;
+  --text-primary:   #1A2F1A;
+  --text-secondary: #456045;
+  --text-muted:     #7A9B7A;
+  --accent-primary:       #3A7D44;
+  --accent-primary-hover: #2D6235;
+  --border:       #C4D4C0;
+  --border-focus: #3A7D44;
+  --shadow-sm: 0 1px 3px rgba(26, 47, 26, 0.08);
+  --shadow-md: 0 4px 12px rgba(26, 47, 26, 0.10);
+  --journal-header-bg:     #1A3320;
+  --journal-header-border: #122616;
+}
+
+/* Ocean — blue / teal */
+.theme-journal[data-journal-theme="ocean"] {
+  --bg-primary:   #EBF2F8;
+  --bg-secondary: #DCE9F4;
+  --bg-elevated:  #F4F9FD;
+  --bg-card:      #FFFFFF;
+  --text-primary:   #0D2233;
+  --text-secondary: #2E5A7A;
+  --text-muted:     #6A9AB8;
+  --accent-primary:       #1B6CA8;
+  --accent-primary-hover: #145490;
+  --border:       #B8D4E8;
+  --border-focus: #1B6CA8;
+  --shadow-sm: 0 1px 3px rgba(13, 34, 51, 0.08);
+  --shadow-md: 0 4px 12px rgba(13, 34, 51, 0.10);
+  --journal-header-bg:     #0D2233;
+  --journal-header-border: #091827;
+}
+
+/* ─────────────────────────────────────────────────────────
    BASE RESET & GLOBAL STYLES
 ───────────────────────────────────────────────────────── */
 *, *::before, *::after {
