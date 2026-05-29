@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 
-export type JournalTheme = "warm" | "dark" | "forest" | "ocean";
+export type JournalTheme = "warm" | "dark" | "forest" | "ocean" | "rose" | "lavender" | "butter" | "mint";
 
 interface ThemeContextValue {
   theme: JournalTheme;
@@ -20,10 +20,12 @@ export function useJournalTheme() {
 
 const STORAGE_KEY = "journal-theme";
 
+const VALID_THEMES = new Set<string>(["warm","dark","forest","ocean","rose","lavender","butter","mint"]);
+
 function readStored(): JournalTheme {
   if (typeof window === "undefined") return "warm";
   const v = localStorage.getItem(STORAGE_KEY);
-  if (v === "dark" || v === "forest" || v === "ocean") return v;
+  if (v && VALID_THEMES.has(v)) return v as JournalTheme;
   return "warm";
 }
 
@@ -117,6 +119,100 @@ const THEME_VARS: Record<JournalTheme, Vars> = {
     "--ink2":                 "#142D40",
     "--journal-header-bg":    "#0D2233",
     "--journal-header-border":"#091827",
+  },
+
+  // ── Pastel themes ──────────────────────────────────────────────────────────
+
+  rose: {
+    "--bg-primary":           "#FDF0F3",
+    "--bg-secondary":         "#FAE3E9",
+    "--bg-elevated":          "#FEF7F9",
+    "--bg-card":              "#FFFFFF",
+    "--text-primary":         "#3D1520",
+    "--text-secondary":       "#7A3040",
+    "--text-muted":           "#B07888",
+    "--accent-primary":       "#C2364F",
+    "--accent-primary-hover": "#A02A40",
+    "--border":               "#F0C8D0",
+    "--border-focus":         "#C2364F",
+    "--shadow-sm":            "0 1px 3px rgba(61,21,32,.08)",
+    "--shadow-md":            "0 4px 12px rgba(61,21,32,.10)",
+    "--orange":               "#C2364F",
+    "--orange2":              "#E05570",
+    "--accent-faint":         "rgba(194,54,79,.07)",
+    "--journal-ink":          "#6B2035",
+    "--ink2":                 "#7E2A42",
+    "--journal-header-bg":    "#6B2035",
+    "--journal-header-border":"#501828",
+  },
+
+  lavender: {
+    "--bg-primary":           "#F3EFFE",
+    "--bg-secondary":         "#E8E0FB",
+    "--bg-elevated":          "#F9F7FF",
+    "--bg-card":              "#FFFFFF",
+    "--text-primary":         "#2A1A4A",
+    "--text-secondary":       "#5A3A80",
+    "--text-muted":           "#9070B0",
+    "--accent-primary":       "#7B4FC9",
+    "--accent-primary-hover": "#6238AA",
+    "--border":               "#D4C8F0",
+    "--border-focus":         "#7B4FC9",
+    "--shadow-sm":            "0 1px 3px rgba(42,26,74,.08)",
+    "--shadow-md":            "0 4px 12px rgba(42,26,74,.10)",
+    "--orange":               "#7B4FC9",
+    "--orange2":              "#9968E0",
+    "--accent-faint":         "rgba(123,79,201,.07)",
+    "--journal-ink":          "#3A2060",
+    "--ink2":                 "#4A2870",
+    "--journal-header-bg":    "#3A2060",
+    "--journal-header-border":"#2A1648",
+  },
+
+  butter: {
+    "--bg-primary":           "#FDF8E3",
+    "--bg-secondary":         "#FAF0CC",
+    "--bg-elevated":          "#FEFCF2",
+    "--bg-card":              "#FFFFFF",
+    "--text-primary":         "#3A2A00",
+    "--text-secondary":       "#7A5800",
+    "--text-muted":           "#B08A30",
+    "--accent-primary":       "#C47C00",
+    "--accent-primary-hover": "#A06200",
+    "--border":               "#ECD898",
+    "--border-focus":         "#C47C00",
+    "--shadow-sm":            "0 1px 3px rgba(58,42,0,.08)",
+    "--shadow-md":            "0 4px 12px rgba(58,42,0,.10)",
+    "--orange":               "#C47C00",
+    "--orange2":              "#E09A10",
+    "--accent-faint":         "rgba(196,124,0,.07)",
+    "--journal-ink":          "#5A3A00",
+    "--ink2":                 "#6A4800",
+    "--journal-header-bg":    "#5A3A00",
+    "--journal-header-border":"#402800",
+  },
+
+  mint: {
+    "--bg-primary":           "#EDFAF6",
+    "--bg-secondary":         "#D8F4EC",
+    "--bg-elevated":          "#F5FDFB",
+    "--bg-card":              "#FFFFFF",
+    "--text-primary":         "#0D3028",
+    "--text-secondary":       "#2A6A56",
+    "--text-muted":           "#5A9A88",
+    "--accent-primary":       "#1A8C6A",
+    "--accent-primary-hover": "#137055",
+    "--border":               "#B0DDD0",
+    "--border-focus":         "#1A8C6A",
+    "--shadow-sm":            "0 1px 3px rgba(13,48,40,.08)",
+    "--shadow-md":            "0 4px 12px rgba(13,48,40,.10)",
+    "--orange":               "#1A8C6A",
+    "--orange2":              "#28AA82",
+    "--accent-faint":         "rgba(26,140,106,.07)",
+    "--journal-ink":          "#0D4535",
+    "--ink2":                 "#155545",
+    "--journal-header-bg":    "#0D4535",
+    "--journal-header-border":"#083328",
   },
 };
 
