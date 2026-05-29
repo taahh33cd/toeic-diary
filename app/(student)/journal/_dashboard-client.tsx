@@ -74,7 +74,7 @@ function getWeekDays(): string[] {
 
 const WEEK_LABELS = ["T2", "T3", "T4", "T5", "T6", "T7", "CN"];
 const HW_SECTIONS = ["vocab", "listening", "reading", "practice", "other"] as const;
-const INK = "#3D2B1F";
+const INK = "var(--journal-ink, #3D2B1F)";
 
 /** Generate upcoming class sessions from weeklySchedule for the tile */
 function generateWeeklyDatesForTile(

@@ -106,7 +106,7 @@ export function MobileBottomNav() {
       {modalOpen && (
         <div
           className="md:hidden fixed inset-0 z-50 flex items-center justify-center"
-          style={{ background: "rgba(44,30,15,.55)" }}
+          style={{ background: "rgba(0,0,0,.55)" }}
           onClick={() => setModalOpen(false)}
           role="dialog"
           aria-modal="true"
@@ -114,10 +114,10 @@ export function MobileBottomNav() {
         >
           <div
             style={{
-              background: "#FBF7F2",
+              background: "var(--bg-elevated)",
               width: "calc(100vw - 3rem)",
               maxWidth: 300,
-              boxShadow: "0 8px 32px rgba(44,30,15,.2)",
+              boxShadow: "var(--shadow-md)",
             }}
             onClick={(e) => e.stopPropagation()}
           >
@@ -128,7 +128,7 @@ export function MobileBottomNav() {
                 alignItems: "center",
                 justifyContent: "space-between",
                 padding: ".75rem 1rem",
-                borderBottom: "1px solid #EDE4D6",
+                borderBottom: "1px solid var(--border)",
               }}
             >
               <span
@@ -137,7 +137,7 @@ export function MobileBottomNav() {
                   fontWeight: 700,
                   letterSpacing: ".1em",
                   textTransform: "uppercase",
-                  color: "#9A8672",
+                  color: "var(--text-muted)",
                 }}
               >
                 Thêm
@@ -147,8 +147,8 @@ export function MobileBottomNav() {
                 aria-label="Đóng"
                 style={{
                   background: "none",
-                  border: "1px solid #DDD0C0",
-                  color: "#9A8672",
+                  border: "1px solid var(--border)",
+                  color: "var(--text-muted)",
                   width: 24,
                   height: 24,
                   display: "flex",
@@ -170,7 +170,7 @@ export function MobileBottomNav() {
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr",
                 gap: 1,
-                background: "#DDD0C0",
+                background: "var(--border)",
               }}
             >
               {MODAL_ITEMS.map((item) => {
@@ -186,9 +186,9 @@ export function MobileBottomNav() {
                       justifyContent: "center",
                       gap: ".4rem",
                       padding: "1.1rem .5rem",
-                      background: active ? "rgba(196,98,45,.07)" : "#FBF7F2",
+                      background: active ? "var(--accent-faint)" : "var(--bg-elevated)",
                       textDecoration: "none",
-                      color: active ? "#C4622D" : "#9A8672",
+                      color: active ? "var(--accent-primary)" : "var(--text-muted)",
                     }}
                   >
                     <item.Icon size={26} />
@@ -196,7 +196,7 @@ export function MobileBottomNav() {
                       style={{
                         fontSize: ".72rem",
                         fontWeight: active ? 600 : 500,
-                        color: active ? "#C4622D" : "#5C3D1E",
+                        color: active ? "var(--accent-primary)" : "var(--text-secondary)",
                         textAlign: "center",
                       }}
                     >
@@ -208,7 +208,7 @@ export function MobileBottomNav() {
             </div>
 
             {/* Dictation link */}
-            <div style={{ borderTop: "1px solid #EDE4D6" }}>
+            <div style={{ borderTop: "1px solid var(--border)" }}>
               <Link
                 href="/"
                 style={{
@@ -217,7 +217,7 @@ export function MobileBottomNav() {
                   gap: ".5rem",
                   padding: ".65rem 1rem",
                   fontSize: ".78rem",
-                  color: "#9A8672",
+                  color: "var(--text-muted)",
                   textDecoration: "none",
                 }}
               >

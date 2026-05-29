@@ -117,6 +117,9 @@
   --shadow-md: 0 4px 12px rgba(44, 30, 15, 0.10);
   --journal-header-bg:     #3D2B1F;
   --journal-header-border: #2A1F15;
+  --orange:        #C4622D;
+  --accent-faint:  rgba(196,98,45,.07);
+  --journal-ink:   #3D2B1F;
 }
 
 /* Dark — midnight journal */
@@ -136,6 +139,9 @@
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
   --journal-header-bg:     #0E0B09;
   --journal-header-border: #1C1614;
+  --orange:        #E8895C;
+  --accent-faint:  rgba(232,137,92,.09);
+  --journal-ink:   #1C1614;
 }
 
 /* Forest — green / sage */
@@ -155,6 +161,9 @@
   --shadow-md: 0 4px 12px rgba(26, 47, 26, 0.10);
   --journal-header-bg:     #1A3320;
   --journal-header-border: #122616;
+  --orange:        #3A7D44;
+  --accent-faint:  rgba(58,125,68,.07);
+  --journal-ink:   #1A3320;
 }
 
 /* Ocean — blue / teal */
@@ -174,6 +183,9 @@
   --shadow-md: 0 4px 12px rgba(13, 34, 51, 0.10);
   --journal-header-bg:     #0D2233;
   --journal-header-border: #091827;
+  --orange:        #1B6CA8;
+  --accent-faint:  rgba(27,108,168,.07);
+  --journal-ink:   #0D2233;
 }
 
 /* ─────────────────────────────────────────────────────────
