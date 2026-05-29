@@ -1300,7 +1300,7 @@ function DifficultWordsSidebar({ words }: { words: VocabWord[] }) {
   );
 
   return (
-    <aside className="w-80 shrink-0">
+    <aside className="w-full md:w-80 md:shrink-0">
       <div
         className="rounded-xl p-6 sticky top-6"
         style={{
@@ -1458,7 +1458,7 @@ export default function VocabPage() {
 
   if (loading) {
     return (
-      <div className="flex gap-6">
+      <div className="flex flex-col md:flex-row gap-6">
         <div className="flex-1 space-y-4 animate-pulse">
           <div className="h-24 rounded-xl" style={{ background: "var(--orange)", opacity: 0.3 }} />
           <div className="h-14 rounded-xl" style={{ background: "var(--bg-elevated)" }} />
@@ -1468,7 +1468,7 @@ export default function VocabPage() {
             ))}
           </div>
         </div>
-        <div className="w-80 shrink-0">
+        <div className="w-full md:w-80 md:shrink-0">
           <div className="h-64 rounded-xl animate-pulse" style={{ background: "var(--bg-elevated)" }} />
         </div>
       </div>
@@ -1488,7 +1488,7 @@ export default function VocabPage() {
   }
 
   return (
-    <div className="flex gap-6 items-start">
+    <div className="flex flex-col md:flex-row gap-6 items-start">
       {/* ── Main content ── */}
       <div className="flex-1 min-w-0 space-y-5">
 
