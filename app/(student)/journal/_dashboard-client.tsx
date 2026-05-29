@@ -753,7 +753,7 @@ function DailyDigestPopup({
       <div
         style={{
           width: "100%", maxWidth: 380,
-          background: "#2C1E0F",
+          background: "var(--journal-ink)",
           boxShadow: "0 20px 60px rgba(0,0,0,.6)",
         }}
         onClick={(e) => e.stopPropagation()}
@@ -764,7 +764,7 @@ function DailyDigestPopup({
           <p style={{
             fontFamily: "'Lora', Georgia, serif",
             fontSize: "1.05rem", fontWeight: 700,
-            color: "#C4622D", lineHeight: 1.4, margin: 0,
+            color: "var(--orange2)", lineHeight: 1.4, margin: 0,
           }}>
             Chào {name}~ Cùng ôn tập một chút nhé! 💪
           </p>
@@ -793,7 +793,7 @@ function DailyDigestPopup({
                 style={{
                   flexShrink: 0,
                   padding: ".35rem .9rem",
-                  background: "#C4622D", color: "#fff",
+                  background: "var(--accent-primary)", color: "#fff",
                   fontSize: ".78rem", fontWeight: 700,
                   textDecoration: "none",
                   whiteSpace: "nowrap",

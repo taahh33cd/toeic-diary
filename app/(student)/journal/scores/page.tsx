@@ -86,19 +86,19 @@ function ScoreChart({ scores, noDataLabel }: { scores: ToeicScore[]; noDataLabel
     <svg viewBox={`0 0 ${W} ${H}`} width="100%" style={{ overflow: "visible" }}>
       <defs>
         <linearGradient id="scoreGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#C4622D" stopOpacity="0.28" />
-          <stop offset="100%" stopColor="#C4622D" stopOpacity="0.03" />
+          <stop offset="0%" style={{ stopColor: "var(--accent-primary)", stopOpacity: 0.28 }} />
+          <stop offset="100%" style={{ stopColor: "var(--accent-primary)", stopOpacity: 0.03 }} />
         </linearGradient>
       </defs>
       <path d={areaPath} fill="url(#scoreGrad)" />
-      <path d={linePath} fill="none" stroke="#C4622D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d={linePath} fill="none" style={{ stroke: "var(--accent-primary)" }} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       {pts.map((p, i) => (
-        <circle key={i} cx={p.x} cy={p.y} r={4} fill="#C4622D" stroke="#FBF7F2" strokeWidth="1.5" />
+        <circle key={i} cx={p.x} cy={p.y} r={4} style={{ fill: "var(--accent-primary)", stroke: "var(--bg-elevated)" }} strokeWidth="1.5" />
       ))}
       {pts.map((p, i) => {
         const [, m] = p.date.split("-");
         return (
-          <text key={i} x={p.x} y={H - 6} textAnchor="middle" fontSize={10} fill="#9A8672">
+          <text key={i} x={p.x} y={H - 6} textAnchor="middle" fontSize={10} style={{ fill: "var(--text-muted)" }}>
             {`Th${m}`}
           </text>
         );
@@ -150,7 +150,7 @@ function GoalEditForm({
 
   const inp: React.CSSProperties = {
     padding: "0.4rem 0.6rem",
-    border: "1px solid rgba(196,98,45,0.4)",
+    border: "1px solid var(--border-focus)",
     background: "rgba(255,255,255,0.06)",
     color: "#fff",
     fontSize: "0.85rem",
@@ -222,17 +222,17 @@ function GoalCard({
 
   return (
     <div className="flex flex-col gap-2 h-full">
-      <div className="text-[11px] font-bold uppercase tracking-widest" style={{ color: "#9A8672" }}>
+      <div className="text-[11px] font-bold uppercase tracking-widest" style={{ color: "var(--text-muted)" }}>
         {t("MỤC TIÊU", "GOAL")}
       </div>
       <div className="flex items-baseline gap-1.5">
         <span className="leading-none font-bold" style={{ fontFamily: "'Lora', serif", fontSize: "3.5rem", color: "var(--orange)" }}>
           {target}
         </span>
-        <span className="text-sm" style={{ color: "#9A8672" }}>/990 {t("điểm TOEIC", "TOEIC")}</span>
+        <span className="text-sm" style={{ color: "var(--text-muted)" }}>/990 {t("điểm TOEIC", "TOEIC")}</span>
       </div>
       {deadline && (
-        <div className="text-sm" style={{ color: "#9A8672" }}>
+        <div className="text-sm" style={{ color: "var(--text-muted)" }}>
           {formatDeadline(deadline, locale)}
         </div>
       )}
@@ -241,7 +241,7 @@ function GoalCard({
           {achieved ? (
             <span className="font-semibold" style={{ color: "var(--sage)" }}>✓ {t("Đã đạt mục tiêu!", "Goal achieved!")}</span>
           ) : (
-            <span style={{ color: "#9A8672" }}>
+            <span style={{ color: "var(--text-muted)" }}>
               {t("Còn thiếu", "Still need")}{" "}
               <span className="font-bold" style={{ color: "var(--orange2)" }}>{gap}</span>{" "}
               {t("điểm", "pts")}
@@ -254,7 +254,7 @@ function GoalCard({
         className="mt-3 self-start px-4 py-1.5 rounded-lg text-sm font-medium transition-colors"
         style={{
           background: "transparent",
-          border: "1px solid rgba(196,98,45,0.5)",
+          border: "1px solid var(--border-focus)",
           color: "var(--orange2)",
           cursor: "pointer",
         }}
@@ -315,7 +315,7 @@ function AddScoreForm({ studentCode }: { studentCode: string }) {
       <button
         onClick={() => setOpen((o) => !o)}
         className="w-full flex items-center justify-between px-5 py-4 text-sm font-semibold transition-colors"
-        style={{ background: "transparent", border: "none", cursor: "pointer", color: "var(--text-primary)" }}
+        style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-primary)" }}
       >
         <span>
           <span style={{ color: "var(--orange)" }}>+</span> {t("Nhập điểm test mới", "Add New Test Score")}
@@ -427,7 +427,7 @@ function ScoreRow({
     <>
       <tr
         className="border-b transition-colors"
-        style={{ borderColor: "var(--border)", background: isNewest ? "rgba(196,98,45,0.04)" : "transparent" }}
+        style={{ borderColor: "var(--border)", background: isNewest ? "var(--accent-faint)" : "transparent" }}
       >
         <td className="py-3.5 px-4 text-sm" style={{ color: "var(--text-secondary)" }}>
           {formatDate(score.date)}
@@ -479,9 +479,9 @@ function ScoreRow({
                     key={k}
                     className="px-2 py-0.5 rounded font-bold"
                     style={{
-                      background: isL ? "rgba(196,98,45,0.12)" : "rgba(30,111,168,0.1)",
-                      color: isL ? "#C4622D" : "#1E6FA8",
-                      border: isL ? "1px solid rgba(196,98,45,0.25)" : "1px solid rgba(30,111,168,0.22)",
+                      background: isL ? "var(--accent-faint)" : "rgba(30,111,168,0.1)",
+                      color: isL ? "var(--accent-primary)" : "#1E6FA8",
+                      border: isL ? "1px solid var(--border-focus)" : "1px solid rgba(30,111,168,0.22)",
                     }}
                   >
                     P{k[1]}: {v}
@@ -584,7 +584,7 @@ export default function ScoresPage() {
         {/* Goal card */}
         <div
           className="rounded-2xl p-6"
-          style={{ background: "var(--ink2)" }}
+          style={{ background: "var(--ink2, var(--journal-ink))" }}
         >
           {editingGoal ? (
             <>
@@ -610,7 +610,7 @@ export default function ScoresPage() {
             />
           ) : (
             <div className="flex flex-col gap-3">
-              <p className="text-sm" style={{ color: "#9A8672" }}>
+              <p className="text-sm" style={{ color: "var(--text-muted)" }}>
                 {t("Bạn chưa đặt mục tiêu điểm TOEIC.", "You haven't set a TOEIC goal yet.")}
               </p>
               <button
