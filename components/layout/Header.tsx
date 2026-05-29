@@ -217,7 +217,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
         top: 64,
         background: "#0ea5e9",
         borderBottom: "1px solid rgba(255,255,255,0.15)",
-        transform: mobileNavOpen ? "translateY(0)" : "translateY(-110%)",
+        transform: mobileNavOpen ? "translateY(0)" : "translateY(calc(-100% - 64px))",
         boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
       }}
       aria-label="Mobile navigation"
