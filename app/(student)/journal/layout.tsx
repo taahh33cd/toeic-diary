@@ -42,7 +42,6 @@ export default async function JournalLayout({
     <LocaleProvider>
     <JournalThemeWrapper
       className="theme-journal min-h-screen flex flex-col"
-      style={{ background: "var(--bg-primary)", color: "var(--text-primary)" }}
     >
       {/* ── Skip to main content ── */}
       <a
