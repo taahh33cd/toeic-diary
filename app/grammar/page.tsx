@@ -4,7 +4,7 @@ import { prisma } from "@/lib/db/prisma";
 import Link from "next/link";
 import { TOPICS } from "@/lib/grammar/topics";
 import { grammarQuestions } from "@/lib/grammar/questions";
-import { ChevronRight, BookMarked } from "lucide-react";
+import { ChevronRight, BookMarked, Flame, BookCheck } from "lucide-react";
 
 export const metadata: Metadata = { title: "Ngữ pháp" };
 
@@ -101,104 +101,117 @@ export default async function GrammarPage() {
   return (
     <div style={{ padding: "2rem 2rem 3rem", maxWidth: 860, margin: "0 auto" }}>
 
-      {/* Welcome banner */}
-      <div
-        style={{
-          marginBottom: "1.75rem",
-          padding: "1.25rem 1.5rem",
-          background: "var(--accent-primary)",
-          borderRadius: "var(--radius-lg)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: "1rem",
-          flexWrap: "wrap",
-        }}
-      >
-        <div>
-          <p
-            style={{
-              fontSize: "0.72rem",
-              fontWeight: 600,
-              color: "rgba(255,239,179,0.6)",
-              letterSpacing: "0.06em",
-              textTransform: "uppercase",
-              marginBottom: "0.25rem",
-            }}
-          >
-            Xin chào
-          </p>
-          <p
-            style={{
-              fontSize: "1.25rem",
-              fontWeight: 700,
-              color: "#ffefb3",
-              letterSpacing: "-0.02em",
-              lineHeight: 1.2,
-            }}
-          >
-            {displayName}
-          </p>
-        </div>
-
-        <div style={{ display: "flex", gap: "1.5rem" }}>
-          {/* Streak */}
-          <div style={{ textAlign: "center" }}>
-            <div
+      {/* Welcome */}
+      <section style={{ marginBottom: "2rem" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "flex-end",
+            justifyContent: "space-between",
+            gap: "1.5rem",
+            flexWrap: "wrap",
+          }}
+        >
+          <div>
+            <h1
               style={{
-                fontSize: "1.75rem",
-                fontWeight: 800,
-                color: "#ffefb3",
-                lineHeight: 1,
+                fontSize: "2rem",
+                fontWeight: 700,
+                color: "var(--text-primary)",
+                letterSpacing: "-0.02em",
+                lineHeight: "1.2",
+                marginBottom: "0.4rem",
               }}
             >
-              {streak}
-            </div>
-            <div
-              style={{
-                fontSize: "0.6rem",
-                fontWeight: 600,
-                color: "rgba(255,239,179,0.6)",
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                marginTop: "0.25rem",
-              }}
-            >
-              NGÀY STREAK
-            </div>
+              Xin chào, {displayName}! 👋
+            </h1>
+            <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
+              Luyện ngữ pháp mỗi ngày — nền tảng vững chắc cho điểm TOEIC của bạn.
+            </p>
           </div>
 
-          <div
-            style={{ width: 1, background: "rgba(255,239,179,0.2)", alignSelf: "stretch" }}
-          />
-
-          {/* Completed tests */}
-          <div style={{ textAlign: "center" }}>
+          <div style={{ display: "flex", gap: "0.75rem", flexShrink: 0 }}>
+            {/* Streak card */}
             <div
               style={{
-                fontSize: "1.75rem",
-                fontWeight: 800,
-                color: "#ffefb3",
-                lineHeight: 1,
+                background: "var(--bg-elevated)",
+                border: "1px solid var(--border)",
+                borderRadius: "var(--radius-lg)",
+                padding: "0.75rem 1.25rem",
+                display: "flex",
+                alignItems: "center",
+                gap: "0.65rem",
+                boxShadow: "var(--shadow-sm)",
               }}
             >
-              {completedTests}
+              <Flame size={20} style={{ color: "var(--accent-primary)", flexShrink: 0 }} />
+              <div>
+                <p
+                  style={{
+                    fontSize: "0.6rem",
+                    fontWeight: 600,
+                    letterSpacing: "0.06em",
+                    textTransform: "uppercase",
+                    color: "var(--text-muted)",
+                  }}
+                >
+                  Ngày Streak
+                </p>
+                <p
+                  style={{
+                    fontSize: "1.4rem",
+                    fontWeight: 700,
+                    color: "var(--accent-primary)",
+                    lineHeight: 1.2,
+                  }}
+                >
+                  {streak} ngày
+                </p>
+              </div>
             </div>
+
+            {/* Completed card */}
             <div
               style={{
-                fontSize: "0.6rem",
-                fontWeight: 600,
-                color: "rgba(255,239,179,0.6)",
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                marginTop: "0.25rem",
+                background: "var(--bg-elevated)",
+                border: "1px solid var(--border)",
+                borderRadius: "var(--radius-lg)",
+                padding: "0.75rem 1.25rem",
+                display: "flex",
+                alignItems: "center",
+                gap: "0.65rem",
+                boxShadow: "var(--shadow-sm)",
               }}
             >
-              ĐÃ HOÀN THÀNH
+              <BookCheck size={20} style={{ color: "var(--text-muted)", flexShrink: 0 }} />
+              <div>
+                <p
+                  style={{
+                    fontSize: "0.6rem",
+                    fontWeight: 600,
+                    letterSpacing: "0.06em",
+                    textTransform: "uppercase",
+                    color: "var(--text-muted)",
+                  }}
+                >
+                  Đã hoàn thành
+                </p>
+                <p
+                  style={{
+                    fontSize: "1.4rem",
+                    fontWeight: 700,
+                    color: "var(--text-muted)",
+                    lineHeight: 1.2,
+                  }}
+                >
+                  {completedTests} bài
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Page heading */}
       <div style={{ marginBottom: "2rem" }}>
