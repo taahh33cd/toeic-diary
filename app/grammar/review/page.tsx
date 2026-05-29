@@ -66,7 +66,7 @@ export default async function GrammarReviewPage() {
   }).filter((t) => t.qs.length > 0);
 
   return (
-    <div style={{ padding: "2rem 2rem 3rem", maxWidth: 900, margin: "0 auto" }}>
+    <div style={{ padding: "2rem 2rem 3rem", maxWidth: 1200, margin: "0 auto" }}>
       <div style={{ marginBottom: "2rem" }}>
         <h1 style={{ fontSize: "1.35rem", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.02em", marginBottom: "0.25rem" }}>
           Ngân hàng câu sai

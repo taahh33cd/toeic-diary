@@ -99,7 +99,7 @@ export default async function GrammarPage() {
     profile?.displayName ?? user.email?.split("@")[0] ?? "bạn";
 
   return (
-    <div style={{ padding: "2rem 2rem 3rem", maxWidth: 860, margin: "0 auto" }}>
+    <div style={{ padding: "2rem 2rem 3rem", maxWidth: 1200, margin: "0 auto" }}>
 
       {/* Welcome */}
       <section style={{ marginBottom: "2rem" }}>
@@ -307,7 +307,14 @@ export default async function GrammarPage() {
       </div>
 
       {/* Topic list */}
-      <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, minmax(480px, 1fr))",
+          gap: "0.75rem",
+          alignItems: "start",
+        }}
+      >
         {topicStats.map(({ topic, tests, totalQs: tQs, topicCorrect }) => {
           const pct = tQs > 0 ? Math.round((topicCorrect / tQs) * 100) : 0;
           const hasProgress = topicCorrect > 0;

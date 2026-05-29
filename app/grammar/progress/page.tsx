@@ -93,7 +93,7 @@ export default async function GrammarProgressPage() {
   }
 
   return (
-    <div style={{ padding: "2rem 2rem 4rem", maxWidth: 860, margin: "0 auto" }}>
+    <div style={{ padding: "2rem 2rem 4rem", maxWidth: 1200, margin: "0 auto" }}>
       {/* Heading */}
       <div style={{ marginBottom: "2rem" }}>
         <h1 style={{ fontSize: "1.35rem", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.02em", marginBottom: "0.25rem" }}>
