@@ -99,7 +99,7 @@ export default async function GrammarPage() {
     profile?.displayName ?? user.email?.split("@")[0] ?? "bạn";
 
   return (
-    <div style={{ padding: "2rem 2rem 3rem", maxWidth: 1200, margin: "0 auto" }}>
+    <div style={{ padding: "clamp(1rem, 4vw, 2rem) clamp(1rem, 4vw, 2rem) 3rem", maxWidth: 1200, margin: "0 auto" }}>
 
       {/* Welcome */}
       <section style={{ marginBottom: "2rem" }}>
@@ -131,7 +131,7 @@ export default async function GrammarPage() {
             </p>
           </div>
 
-          <div style={{ display: "flex", gap: "0.75rem", flexShrink: 0 }}>
+          <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
             {/* Streak card */}
             <div
               style={{

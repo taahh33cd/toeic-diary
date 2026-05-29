@@ -70,7 +70,7 @@ export function NavSwitcher({
           <Link
             key={item.href}
             href={item.href}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+            className={`flex items-center gap-1.5 px-2 py-1.5 md:px-3 rounded-lg text-sm font-medium transition-colors ${
               active
                 ? "bg-[var(--orange-faint,rgba(196,98,45,0.1))] text-[var(--accent-primary)]"
                 : "text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-secondary)]"
@@ -78,7 +78,7 @@ export function NavSwitcher({
             aria-current={active ? "page" : undefined}
           >
             <span aria-hidden="true">{item.emoji}</span>
-            {item.label}
+            <span className="hidden sm:inline">{item.label}</span>
           </Link>
         );
       })}

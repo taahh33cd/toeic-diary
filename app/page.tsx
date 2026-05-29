@@ -74,20 +74,20 @@ export default async function HomePage() {
     <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
-      <main className="flex-1 max-w-[1120px] mx-auto w-full px-4 md:px-6 py-10">
+      <main className="flex-1 max-w-[1120px] mx-auto w-full px-4 md:px-6 py-6 md:py-10">
 
         {/* Welcome */}
         <section className="mb-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 md:gap-6">
             <div>
-              <h1 className="text-4xl font-bold text-[var(--text-primary)] leading-[48px] tracking-[-0.02em] mb-2">
+              <h1 className="text-2xl md:text-4xl font-bold text-[var(--text-primary)] leading-tight md:leading-[48px] tracking-[-0.02em] mb-2">
                 Xin chào, {displayName}! 👋
               </h1>
-              <p className="text-lg text-[var(--text-secondary)] max-w-2xl leading-7">
+              <p className="text-base md:text-lg text-[var(--text-secondary)] max-w-2xl leading-6 md:leading-7">
                 Luyện nghe chủ động — phương pháp hiệu quả nhất để nâng cấp kỹ năng nghe TOEIC của bạn mỗi ngày.
               </p>
             </div>
-            <div className="flex gap-3 flex-shrink-0">
+            <div className="flex flex-wrap gap-3 shrink-0">
               <div
                 className="bg-[var(--bg-elevated)] px-6 py-3 rounded-xl border border-[var(--border)] flex items-center gap-3"
                 style={{ boxShadow: SOFT_DEPTH }}

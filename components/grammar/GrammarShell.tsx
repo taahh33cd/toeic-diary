@@ -64,8 +64,8 @@ export function GrammarShell({ children, displayName }: GrammarShellProps) {
             height: TOPBAR_H,
             display: "flex",
             alignItems: "center",
-            paddingInline: "1.5rem",
-            gap: "2rem",
+            paddingInline: "clamp(1rem, 4vw, 1.5rem)",
+            gap: "1.5rem",
           }}
         >
           {/* Brand */}

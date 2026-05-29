@@ -66,7 +66,7 @@ export default async function JournalLayout({
           ["--orange-faint" as string]: "rgba(255,122,61,0.18)",
         }}
       >
-        <div className="max-w-[1400px] mx-auto px-6 h-14 flex items-center justify-between gap-4">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-4">
           <Brand
             size="sm"
             href="/journal"
@@ -80,7 +80,7 @@ export default async function JournalLayout({
       <JournalTabBar />
 
       {/* ── Page content ── */}
-      <main id="main-content" className="flex-1 max-w-[1400px] mx-auto w-full px-6 py-6">
+      <main id="main-content" className="flex-1 max-w-[1400px] mx-auto w-full px-4 md:px-6 py-4 md:py-6">
         <ViewTransition enter="journal-page" exit="journal-page">
           {children}
         </ViewTransition>

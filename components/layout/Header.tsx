@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { BookOpen, Moon, Sun, LogOut, BarChart2, NotebookPen, Headphones, GraduationCap } from "lucide-react";
+import { useRouter, usePathname } from "next/navigation";
+import { BookOpen, Moon, Sun, LogOut, BarChart2, NotebookPen, Headphones, GraduationCap, Menu, X } from "lucide-react";
 import { useUIStore } from "@/stores/uiStore";
 import { createClient } from "@/lib/supabase/client";
 import { cn } from "@/lib/utils/cn";
@@ -16,9 +16,14 @@ interface HeaderProps {
 export function Header({ userEmail, userDisplayName }: HeaderProps) {
   const { theme, toggleTheme } = useUIStore();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const avatarRef = useRef<HTMLButtonElement>(null);
   const router = useRouter();
+  const pathname = usePathname();
+
+  // Close mobile nav on route change
+  useEffect(() => { setMobileNavOpen(false); }, [pathname]);
 
   // Close menu on outside click or Escape
   useEffect(() => {
@@ -28,9 +33,9 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
       }
     }
     function handleKeyDown(e: KeyboardEvent) {
-      if (e.key === "Escape" && menuOpen) {
-        setMenuOpen(false);
-        avatarRef.current?.focus();
+      if (e.key === "Escape") {
+        if (menuOpen) { setMenuOpen(false); avatarRef.current?.focus(); }
+        if (mobileNavOpen) setMobileNavOpen(false);
       }
     }
     document.addEventListener("mousedown", handleClick);
@@ -39,7 +44,13 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
       document.removeEventListener("mousedown", handleClick);
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [menuOpen]);
+  }, [menuOpen, mobileNavOpen]);
+
+  // Lock body scroll when mobile nav is open
+  useEffect(() => {
+    document.body.style.overflow = mobileNavOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileNavOpen]);
 
   const handleSignOut = async () => {
     const supabase = createClient();
@@ -52,7 +63,16 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
   const initial = userDisplayName?.[0]?.toUpperCase() ?? userEmail?.[0]?.toUpperCase() ?? "U";
   const displayName = userDisplayName ?? userEmail?.split("@")[0] ?? "User";
 
+  const NAV_LINKS = [
+    { href: "/practice",      icon: <Headphones size={16} />,    label: "Luyện tập theo Part" },
+    { href: "/journal/vocab", icon: <BookOpen size={16} />,      label: "Từ vựng" },
+    { href: "/progress",      icon: <BarChart2 size={16} />,     label: "Tiến độ" },
+    { href: "/grammar",       icon: <GraduationCap size={16} />, label: "Ngữ pháp" },
+    { href: "/journal",       icon: <NotebookPen size={16} />,   label: "Nhật ký" },
+  ];
+
   return (
+    <>
     <header className={styles.header}>
       <div className={styles.inner}>
         {/* Logo */}
@@ -60,38 +80,33 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
           <div className={styles.logoIcon}>
             <span>🎧</span>
           </div>
-          <div>
-            <div className={styles.logoTitle}>{displayName}&apos;s TOEIC Dictation Diary</div>
+          <div className="min-w-0">
+            <div className={styles.logoTitle}>{displayName}&apos;s TOEIC Diary</div>
             <div className={styles.logoSub}>TOEIC ETS 2026</div>
           </div>
         </Link>
 
-        {/* Nav links */}
+        {/* Desktop nav links */}
         <nav className={styles.nav}>
-          <Link href="/practice" className={styles.navLink}>
-            <Headphones size={16} />
-            <span>Luyện tập theo Part</span>
-          </Link>
-          <Link href="/journal/vocab" className={styles.navLink}>
-            <BookOpen size={16} />
-            <span>Từ vựng</span>
-          </Link>
-          <Link href="/progress" className={styles.navLink}>
-            <BarChart2 size={16} />
-            <span>Tiến độ</span>
-          </Link>
-          <Link href="/grammar" className={styles.navLink}>
-            <GraduationCap size={16} />
-            <span>Ngữ pháp</span>
-          </Link>
-          <Link href="/journal" className={styles.navLink}>
-            <NotebookPen size={16} />
-            <span>Nhật ký</span>
-          </Link>
+          {NAV_LINKS.map(({ href, icon, label }) => (
+            <Link key={href} href={href} className={styles.navLink}>
+              {icon}
+              <span>{label}</span>
+            </Link>
+          ))}
         </nav>
 
         {/* Right side actions */}
         <div className={styles.actions}>
+          {/* Mobile hamburger */}
+          <button
+            className="md:hidden btn btn-ghost btn-icon text-white hover:bg-white/10"
+            onClick={() => setMobileNavOpen((v) => !v)}
+            aria-label={mobileNavOpen ? "Đóng menu" : "Mở menu"}
+            aria-expanded={mobileNavOpen}
+          >
+            {mobileNavOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
           {/* Theme toggle */}
           <button
             onClick={toggleTheme}
@@ -184,6 +199,65 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
         </div>
       </div>
     </header>
+
+    {/* Mobile nav overlay */}
+    {mobileNavOpen && (
+      <div
+        className="md:hidden fixed inset-0 z-40"
+        style={{ background: "rgba(0,0,0,0.3)" }}
+        onClick={() => setMobileNavOpen(false)}
+        aria-hidden="true"
+      />
+    )}
+
+    {/* Mobile nav drawer */}
+    <nav
+      className="md:hidden fixed left-0 right-0 z-50 transition-transform duration-200"
+      style={{
+        top: 64,
+        background: "#0ea5e9",
+        borderBottom: "1px solid rgba(255,255,255,0.15)",
+        transform: mobileNavOpen ? "translateY(0)" : "translateY(-110%)",
+        boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
+      }}
+      aria-label="Mobile navigation"
+      aria-hidden={!mobileNavOpen}
+    >
+      <div className="px-4 py-3 flex flex-col gap-1">
+        {NAV_LINKS.map(({ href, icon, label }) => {
+          const active = pathname === href || pathname.startsWith(href + "/");
+          return (
+            <Link
+              key={href}
+              href={href}
+              onClick={() => setMobileNavOpen(false)}
+              className="flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-white transition-colors"
+              style={{
+                background: active ? "rgba(255,255,255,0.2)" : "transparent",
+                textDecoration: "none",
+              }}
+            >
+              {icon}
+              {label}
+            </Link>
+          );
+        })}
+
+        {userEmail && (
+          <>
+            <div className="h-px bg-white/20 my-1" />
+            <button
+              onClick={() => { setMobileNavOpen(false); handleSignOut(); }}
+              className="flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-white/80 w-full text-left"
+            >
+              <LogOut size={16} />
+              Đăng xuất
+            </button>
+          </>
+        )}
+      </div>
+    </nav>
+    </>
   );
 }
 
