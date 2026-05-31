@@ -180,10 +180,10 @@ export function CourseCards() {
                 onMouseEnter={() => setHoveredId(course.id)}
                 onMouseLeave={() => setHoveredId(null)}
                 style={{
-                  background: `${GRAIN_BG}, #FFFBF2`,
+                  background: `${GRAIN_BG}, #FDF7F9`,
                   backgroundBlendMode: "multiply",
-                  border: `1.5px solid ${isHovered ? "#C4880D88" : "#D4AA5088"}`,
-                  borderTop: `3px solid ${isHovered ? "#C4880D" : "#C4880D88"}`,
+                  border: `1.5px solid ${isHovered ? "#8B5A6B88" : "#C49AAA88"}`,
+                  borderTop: `3px solid ${isHovered ? "#8B5A6B" : "#8B5A6B88"}`,
                   borderRadius: 12,
                   padding: "1.75rem 2rem",
                   display: "grid",
@@ -194,14 +194,14 @@ export function CourseCards() {
                   transform: isVisible ? (isHovered ? "translateY(-5px)" : "translateY(0)") : "translateY(28px)",
                   transition: "opacity 0.5s ease, transform 0.5s ease, box-shadow 0.25s ease, border-color 0.25s ease",
                   boxShadow: isHovered
-                    ? "0 14px 40px rgba(196,136,13,0.18)"
+                    ? "0 14px 40px rgba(139,90,107,0.18)"
                     : "0 2px 12px rgba(61,43,31,0.07)",
                 }}
               >
                 {/* Left: info */}
                 <div>
                   <div style={{ marginBottom: "0.9rem" }}>
-                    <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8B5E0A", background: "#FEF3C7", border: "1px dashed #D4AA5090", padding: "3px 9px", borderRadius: 3 }}>
+                    <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8B5A6B", background: "#F7EFF2", border: "1px dashed #C49AAA90", padding: "3px 9px", borderRadius: 3 }}>
                       {course.badge}
                     </span>
                   </div>
@@ -212,7 +212,7 @@ export function CourseCards() {
 
                   {/* Coffee note */}
                   {course.coffeeNote && (
-                    <p style={{ fontSize: "0.82rem", color: "#7A4F0A", background: "#FEF3C7", border: "1px dashed #D4AA5090", borderRadius: 7, padding: "8px 12px", lineHeight: 1.6, marginBottom: "1rem", fontStyle: "italic" }}>
+                    <p style={{ fontSize: "0.82rem", color: "#6B3A4A", background: "#F7EFF2", border: "1px dashed #C49AAA90", borderRadius: 7, padding: "8px 12px", lineHeight: 1.6, marginBottom: "1rem", fontStyle: "italic" }}>
                       {course.coffeeNote}
                     </p>
                   )}
@@ -220,7 +220,7 @@ export function CourseCards() {
                   <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "6px 16px" }}>
                     {course.features.map((f) => (
                       <li key={f} style={{ display: "flex", alignItems: "flex-start", gap: 7, fontSize: "0.8rem", color: SEPIA, lineHeight: 1.5 }}>
-                        <span style={{ color: "#C4880D", flexShrink: 0, fontWeight: 700 }}>✓</span>{f}
+                        <span style={{ color: "#8B5A6B", flexShrink: 0, fontWeight: 700 }}>✓</span>{f}
                       </li>
                     ))}
                   </ul>
@@ -228,13 +228,13 @@ export function CourseCards() {
 
                 {/* Right: price + CTA */}
                 <div style={{ minWidth: 180, display: "flex", flexDirection: "column", alignItems: "center", gap: "0.875rem" }}>
-                  <div style={{ background: `${GRAIN_BG}, #FEF3C7`, backgroundBlendMode: "multiply", border: "1px dashed #D4AA5090", borderRadius: 8, padding: "0.9rem 1.25rem", textAlign: "center", width: "100%" }}>
+                  <div style={{ background: `${GRAIN_BG}, #F7EFF2`, backgroundBlendMode: "multiply", border: "1px dashed #C49AAA90", borderRadius: 8, padding: "0.9rem 1.25rem", textAlign: "center", width: "100%" }}>
                     <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: 5 }}>
-                      <span style={{ fontFamily: SERIF, fontSize: "1.6rem", fontWeight: 700, color: isHovered ? "#9A4E00" : "#C4880D", transition: "color 0.25s", animation: isVisible ? "course-price-pop 0.5s ease 0s both" : "none", display: "inline-block" }}>
+                      <span style={{ fontFamily: SERIF, fontSize: "1.6rem", fontWeight: 700, color: isHovered ? "#6B3A4A" : "#8B5A6B", transition: "color 0.25s", animation: isVisible ? "course-price-pop 0.5s ease 0s both" : "none", display: "inline-block" }}>
                         {course.price}
                       </span>
                     </div>
-                    <p style={{ fontSize: "0.72rem", color: "#8B5E0A", marginTop: 3 }}>{course.priceUnit}</p>
+                    <p style={{ fontSize: "0.72rem", color: "#8B5A6B", marginTop: 3 }}>{course.priceUnit}</p>
                     <p style={{ fontSize: "0.66rem", color: MUTED, marginTop: 4 }}>{course.priceNote}</p>
                   </div>
                   <button
@@ -244,13 +244,13 @@ export function CourseCards() {
                     onMouseLeave={() => setActiveBtn(null)}
                     style={{
                       width: "100%", padding: "11px 16px", borderRadius: 8,
-                      background: isHovered ? "#C4880D" : "transparent",
-                      color: isHovered ? "#fff" : "#C4880D",
-                      border: "2px solid #C4880D",
+                      background: isHovered ? "#8B5A6B" : "transparent",
+                      color: isHovered ? "#fff" : "#8B5A6B",
+                      border: "2px solid #8B5A6B",
                       fontWeight: 700, fontSize: "0.87rem", cursor: "pointer",
                       transform: activeBtn === course.id ? "scale(0.97)" : (isHovered ? "scale(1.015)" : "scale(1)"),
                       transition: "background 0.2s, color 0.2s, transform 0.12s ease",
-                      boxShadow: isHovered ? "0 4px 14px rgba(196,136,13,0.3)" : "none",
+                      boxShadow: isHovered ? "0 4px 14px rgba(139,90,107,0.3)" : "none",
                     }}
                   >
                     Mở khoá ngay ☕ →
