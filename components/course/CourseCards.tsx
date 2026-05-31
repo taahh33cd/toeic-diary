@@ -47,9 +47,29 @@ type Course = {
   features: string[];
   ideal: string;
   waitNote?: string;
+  coffeeNote?: string;
 };
 
 const COURSES: Course[] = [
+  {
+    id: 0,
+    badge: "☕ Tự luyện",
+    title: "Khoá 0 — Tự luyện trên website",
+    subtitle: "Mở khoá một lần · Dùng mãi mãi",
+    price: "49.000đ",
+    priceUnit: "trọn đời",
+    priceNote: "Thanh toán 1 lần · Không phí gia hạn",
+    duration: "Không giới hạn thời gian",
+    schedule: "Tự do 100%",
+    features: [
+      "Truy cập toàn bộ bộ đề ETS (khoá)",
+      "Mở khoá toàn bộ bài luyện nghe Part 1–4",
+      "Luyện ngữ pháp & đọc hiểu không giới hạn",
+      "Không cần giáo viên · Tự học theo tốc độ của bạn",
+    ],
+    ideal: "Bạn muốn tự học hoàn toàn, không cần giáo viên",
+    coffeeNote: "Bằng giá một ly cà phê sữa ☕ — đổi lấy quyền luyện tập không giới hạn trên toàn bộ website",
+  },
   {
     id: 1,
     badge: "1-1 · Cá nhân",
@@ -74,7 +94,7 @@ const COURSES: Course[] = [
     featured: true,
     title: "Khoá 2 — Tự luyện có HD",
     subtitle: "Không lên lớp · Đồng hành đến khi thi",
-    price: "1.000.000đ",
+    price: "999.000đ",
     priceUnit: "trọn gói",
     priceNote: "Đóng 1 lần · Hỗ trợ không giới hạn đến ngày thi",
     duration: "Đến khi đạt 5 đề ≥ mục tiêu",
@@ -147,8 +167,117 @@ export function CourseCards() {
       {/* Keyframe injection */}
       <style dangerouslySetInnerHTML={{ __html: ANIM_CSS }} />
 
-      {/* Cards grid */}
-      <section style={{ background: BEIGE, padding: "3rem clamp(1rem,4vw,2rem) 4rem" }}>
+      {/* ── Khoá 0 — entry tier ── */}
+      <section style={{ background: BEIGE, padding: "3rem clamp(1rem,4vw,2rem) 0" }}>
+        <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+          {(() => {
+            const course = COURSES[0]; // Khoá 0
+            const isHovered  = hoveredId === course.id;
+            const isVisible  = visibleIds.has(course.id);
+            return (
+              <div
+                ref={(el) => { cardRefs.current[0] = el; }}
+                onMouseEnter={() => setHoveredId(course.id)}
+                onMouseLeave={() => setHoveredId(null)}
+                style={{
+                  background: `${GRAIN_BG}, #FFFBF2`,
+                  backgroundBlendMode: "multiply",
+                  border: `1.5px solid ${isHovered ? "#C4880D88" : "#D4AA5088"}`,
+                  borderTop: `3px solid ${isHovered ? "#C4880D" : "#C4880D88"}`,
+                  borderRadius: 12,
+                  padding: "1.75rem 2rem",
+                  display: "grid",
+                  gridTemplateColumns: "1fr auto",
+                  gap: "1.5rem 2.5rem",
+                  alignItems: "start",
+                  opacity:   isVisible ? 1 : 0,
+                  transform: isVisible ? (isHovered ? "translateY(-5px)" : "translateY(0)") : "translateY(28px)",
+                  transition: "opacity 0.5s ease, transform 0.5s ease, box-shadow 0.25s ease, border-color 0.25s ease",
+                  boxShadow: isHovered
+                    ? "0 14px 40px rgba(196,136,13,0.18)"
+                    : "0 2px 12px rgba(61,43,31,0.07)",
+                }}
+              >
+                {/* Left: info */}
+                <div>
+                  <div style={{ marginBottom: "0.9rem" }}>
+                    <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8B5E0A", background: "#FEF3C7", border: "1px dashed #D4AA5090", padding: "3px 9px", borderRadius: 3 }}>
+                      {course.badge}
+                    </span>
+                  </div>
+                  <h3 style={{ fontFamily: SERIF, fontSize: "1.2rem", fontWeight: 700, color: INK, marginBottom: "0.25rem", lineHeight: 1.3 }}>
+                    {course.title}
+                  </h3>
+                  <p style={{ fontSize: "0.76rem", color: MUTED, marginBottom: "1rem" }}>{course.subtitle}</p>
+
+                  {/* Coffee note */}
+                  {course.coffeeNote && (
+                    <p style={{ fontSize: "0.82rem", color: "#7A4F0A", background: "#FEF3C7", border: "1px dashed #D4AA5090", borderRadius: 7, padding: "8px 12px", lineHeight: 1.6, marginBottom: "1rem", fontStyle: "italic" }}>
+                      {course.coffeeNote}
+                    </p>
+                  )}
+
+                  <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "6px 16px" }}>
+                    {course.features.map((f) => (
+                      <li key={f} style={{ display: "flex", alignItems: "flex-start", gap: 7, fontSize: "0.8rem", color: SEPIA, lineHeight: 1.5 }}>
+                        <span style={{ color: "#C4880D", flexShrink: 0, fontWeight: 700 }}>✓</span>{f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Right: price + CTA */}
+                <div style={{ minWidth: 180, display: "flex", flexDirection: "column", alignItems: "center", gap: "0.875rem" }}>
+                  <div style={{ background: `${GRAIN_BG}, #FEF3C7`, backgroundBlendMode: "multiply", border: "1px dashed #D4AA5090", borderRadius: 8, padding: "0.9rem 1.25rem", textAlign: "center", width: "100%" }}>
+                    <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: 5 }}>
+                      <span style={{ fontFamily: SERIF, fontSize: "1.6rem", fontWeight: 700, color: isHovered ? "#9A4E00" : "#C4880D", transition: "color 0.25s", animation: isVisible ? "course-price-pop 0.5s ease 0s both" : "none", display: "inline-block" }}>
+                        {course.price}
+                      </span>
+                    </div>
+                    <p style={{ fontSize: "0.72rem", color: "#8B5E0A", marginTop: 3 }}>{course.priceUnit}</p>
+                    <p style={{ fontSize: "0.66rem", color: MUTED, marginTop: 4 }}>{course.priceNote}</p>
+                  </div>
+                  <button
+                    onClick={() => { setActiveBtn(course.id); setModalCourse(course); }}
+                    onMouseDown={() => setActiveBtn(course.id)}
+                    onMouseUp={()   => setActiveBtn(null)}
+                    onMouseLeave={() => setActiveBtn(null)}
+                    style={{
+                      width: "100%", padding: "11px 16px", borderRadius: 8,
+                      background: isHovered ? "#C4880D" : "transparent",
+                      color: isHovered ? "#fff" : "#C4880D",
+                      border: "2px solid #C4880D",
+                      fontWeight: 700, fontSize: "0.87rem", cursor: "pointer",
+                      transform: activeBtn === course.id ? "scale(0.97)" : (isHovered ? "scale(1.015)" : "scale(1)"),
+                      transition: "background 0.2s, color 0.2s, transform 0.12s ease",
+                      boxShadow: isHovered ? "0 4px 14px rgba(196,136,13,0.3)" : "none",
+                    }}
+                  >
+                    Mở khoá ngay ☕ →
+                  </button>
+                  <p style={{ fontSize: "0.68rem", color: MUTED, textAlign: "center", lineHeight: 1.5 }}>
+                    💡 {course.ideal}
+                  </p>
+                </div>
+              </div>
+            );
+          })()}
+        </div>
+      </section>
+
+      {/* ── Divider ── */}
+      <div style={{ background: BEIGE, padding: "2.25rem clamp(1rem,4vw,2rem) 0" }}>
+        <div style={{ maxWidth: 480, margin: "0 auto", display: "flex", alignItems: "center", gap: "1rem" }}>
+          <div style={{ flex: 1, height: 1, background: BORDER }} />
+          <span style={{ fontSize: "0.6rem", letterSpacing: "0.18em", color: MUTED, textTransform: "uppercase", whiteSpace: "nowrap" }}>
+            ✦ Khoá học có giáo viên đồng hành ✦
+          </span>
+          <div style={{ flex: 1, height: 1, background: BORDER }} />
+        </div>
+      </div>
+
+      {/* ── Coaching cards (Khoá 1, 2, 3) ── */}
+      <section style={{ background: BEIGE, padding: "2rem clamp(1rem,4vw,2rem) 4rem" }}>
         <div
           style={{
             maxWidth: 1120, margin: "0 auto",
@@ -157,7 +286,8 @@ export function CourseCards() {
             gap: "1.5rem",
           }}
         >
-          {COURSES.map((course, index) => {
+          {COURSES.slice(1).map((course, index) => {
+            const refIndex   = index + 1; // offset for cardRefs (0 = Khoá 0)
             const isHovered  = hoveredId === course.id;
             const isVisible  = visibleIds.has(course.id);
             const delay      = `${index * 0.13}s`;
@@ -165,7 +295,7 @@ export function CourseCards() {
             return (
               <div
                 key={course.id}
-                ref={(el) => { cardRefs.current[index] = el; }}
+                ref={(el) => { cardRefs.current[refIndex] = el; }}
                 onMouseEnter={() => setHoveredId(course.id)}
                 onMouseLeave={() => setHoveredId(null)}
                 style={{
