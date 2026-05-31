@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { Moon, Sun, X } from "lucide-react";
 import { useUIStore } from "@/stores/uiStore";
 import { useState } from "react";
@@ -10,75 +9,101 @@ const NAV = [
   { label: "Dictation",  href: "/dictation" },
   { label: "Grammar",    href: "/grammar" },
   { label: "Reading",    href: "/reading-practice" },
-  { label: "Luyện đề",  href: "/practice", soon: false },
+  { label: "Luyện đề",  href: "/practice" },
 ];
+
+const INK   = "#3D2B1F";
+const TERRA = "#C4622D";
 
 export function LandingHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
   const { theme, toggleTheme } = useUIStore();
-  const router = useRouter();
   const [modal, setModal] = useState(false);
 
-  function handleNavClick(href: string, e: React.MouseEvent) {
-    if (isLoggedIn) return; // allow normal navigation
+  function handleNavClick(e: React.MouseEvent) {
+    if (isLoggedIn) return;
     e.preventDefault();
     setModal(true);
   }
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full bg-[#4DA8DA]">
-        <div className="max-w-[1400px] mx-auto px-4 md:px-6 h-16 flex items-center justify-between gap-4">
+      <header
+        style={{
+          position: "sticky", top: 0, zIndex: 50, width: "100%",
+          background: INK,
+          borderBottom: `2px solid ${TERRA}55`,
+        }}
+      >
+        <div
+          style={{
+            maxWidth: 1400, margin: "0 auto", padding: "0 1.5rem",
+            height: 64, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16,
+          }}
+        >
           {/* Logo */}
-          <Link href="/home" className="flex items-center gap-2 no-underline hover:opacity-90 transition-opacity">
-            <span className="font-bold text-base text-white leading-tight">TOEIC Diary</span>
+          <Link href="/home" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
+            <div>
+              <div style={{ fontFamily: "var(--font-display,'Lora',Georgia,serif)", fontWeight: 700, fontSize: "0.93rem", color: "#FFFDF6", lineHeight: 1.2 }}>
+                TOEIC Diary
+              </div>
+              <div style={{ fontSize: "0.58rem", color: "rgba(255,253,246,0.42)", letterSpacing: "0.13em", textTransform: "uppercase" }}>
+                Dictation · Grammar · Reading
+              </div>
+            </div>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex" style={{ display: "flex", alignItems: "center", gap: 28 }}>
             {NAV.map(({ label, href }) => (
               <a
                 key={href}
                 href={href}
-                onClick={(e) => handleNavClick(href, e)}
-                className="text-sm text-white font-medium pb-1 border-b-2 border-transparent hover:border-[#FFD66B] transition-colors cursor-pointer"
-                style={{ textDecoration: "none" }}
+                onClick={handleNavClick}
+                style={{
+                  fontSize: "0.84rem", color: "rgba(255,253,246,0.8)", fontWeight: 500,
+                  textDecoration: "none", paddingBottom: 3,
+                  borderBottom: "2px solid transparent", transition: "border-color 0.15s, color 0.15s",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderBottomColor = TERRA;
+                  e.currentTarget.style.color = "#FFFDF6";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderBottomColor = "transparent";
+                  e.currentTarget.style.color = "rgba(255,253,246,0.8)";
+                }}
               >
                 {label}
               </a>
             ))}
           </nav>
 
-          {/* Right actions */}
-          <div className="flex items-center gap-2">
+          {/* Right */}
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <button
               onClick={toggleTheme}
-              className="btn btn-ghost btn-icon text-white hover:text-white hover:bg-white/10"
+              style={{ background: "none", border: "none", cursor: "pointer", color: "rgba(255,253,246,0.6)", padding: 6, borderRadius: 6, display: "flex" }}
               aria-label="Đổi theme"
             >
-              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+              {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
             </button>
 
             {isLoggedIn ? (
               <Link
                 href="/dictation"
-                className="hidden md:inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg bg-white text-[#4DA8DA] text-sm font-semibold hover:bg-[#FFD66B] transition-colors"
-                style={{ textDecoration: "none" }}
+                className="hidden md:inline-flex"
+                style={{ padding: "6px 16px", borderRadius: 8, background: TERRA, color: "#fff", fontSize: "0.82rem", fontWeight: 700, textDecoration: "none" }}
               >
                 Vào học →
               </Link>
             ) : (
-              <div className="hidden md:flex items-center gap-2">
-                <Link
-                  href="/auth/login"
-                  className="text-sm text-white font-medium hover:text-[#FFD66B] transition-colors"
-                  style={{ textDecoration: "none" }}
-                >
+              <div className="hidden md:flex" style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <Link href="/auth/login" style={{ fontSize: "0.82rem", color: "rgba(255,253,246,0.75)", textDecoration: "none", fontWeight: 500 }}>
                   Đăng nhập
                 </Link>
                 <Link
                   href="/auth/register"
-                  className="px-4 py-1.5 rounded-lg bg-white text-[#4DA8DA] text-sm font-semibold hover:bg-[#FFD66B] transition-colors"
-                  style={{ textDecoration: "none" }}
+                  style={{ padding: "6px 16px", borderRadius: 8, background: TERRA, color: "#fff", fontSize: "0.82rem", fontWeight: 700, textDecoration: "none" }}
                 >
                   Đăng ký miễn phí
                 </Link>
@@ -91,45 +116,53 @@ export function LandingHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
       {/* Auth modal */}
       {modal && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center"
-          style={{ background: "rgba(0,0,0,0.45)" }}
+          style={{ position: "fixed", inset: 0, zIndex: 60, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(61,43,31,0.6)" }}
           onClick={() => setModal(false)}
         >
           <div
-            className="relative bg-[var(--bg-elevated)] border border-[var(--border)] rounded-2xl shadow-2xl p-8 w-full max-w-sm mx-4"
+            style={{
+              position: "relative", background: "#FFFDF6",
+              border: `2px solid ${TERRA}45`, borderRadius: 18,
+              boxShadow: `0 24px 64px rgba(61,43,31,0.35)`,
+              padding: "2rem 2rem 1.75rem", width: "100%", maxWidth: 360, margin: "0 1rem",
+            }}
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setModal(false)}
-              className="absolute top-4 right-4 text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
+              style={{ position: "absolute", top: 14, right: 14, background: "none", border: "none", cursor: "pointer", color: "#9A8672" }}
               aria-label="Đóng"
             >
-              <X size={18} />
+              <X size={17} />
             </button>
 
-            <div className="text-3xl mb-3 text-center">🎧</div>
-            <h2 className="text-lg font-bold text-center text-[var(--text-primary)] mb-1">
-              Bạn cần đăng nhập
-            </h2>
-            <p className="text-sm text-center text-[var(--text-secondary)] mb-6">
-              Tạo tài khoản miễn phí để truy cập đầy đủ tính năng.
-            </p>
+            <div style={{ textAlign: "center", marginBottom: "1rem" }}>
+              <div style={{ fontSize: "2rem", marginBottom: 8 }}>🎧</div>
+              <h2 style={{ fontFamily: "var(--font-display,'Lora',Georgia,serif)", fontSize: "1.1rem", fontWeight: 700, color: INK, margin: "0 0 6px" }}>
+                Bạn cần đăng nhập
+              </h2>
+              <p style={{ fontSize: "0.82rem", color: "#6B4C2A", lineHeight: 1.6, margin: 0 }}>
+                Tạo tài khoản miễn phí để truy cập đầy đủ tính năng.
+              </p>
+            </div>
 
-            <div className="flex flex-col gap-3">
+            <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: "1.25rem" }}>
               <Link
                 href="/auth/register"
-                className="w-full text-center px-4 py-3 rounded-xl bg-[#4DA8DA] text-white font-semibold text-sm hover:bg-[#3b96c8] transition-colors"
-                style={{ textDecoration: "none" }}
+                style={{ display: "block", textAlign: "center", padding: "11px 16px", borderRadius: 10, background: TERRA, color: "#fff", fontWeight: 700, fontSize: "0.87rem", textDecoration: "none" }}
               >
                 Đăng ký miễn phí
               </Link>
               <Link
                 href="/auth/login"
-                className="w-full text-center px-4 py-3 rounded-xl border border-[var(--border)] text-[var(--text-primary)] font-medium text-sm hover:bg-[var(--bg-secondary)] transition-colors"
-                style={{ textDecoration: "none" }}
+                style={{ display: "block", textAlign: "center", padding: "10px 16px", borderRadius: 10, border: `1.5px solid ${TERRA}55`, color: INK, fontWeight: 500, fontSize: "0.84rem", textDecoration: "none" }}
               >
                 Đã có tài khoản? Đăng nhập
               </Link>
+            </div>
+
+            <div style={{ textAlign: "center", marginTop: "1.25rem", fontSize: "0.6rem", letterSpacing: "0.15em", color: `${TERRA}60`, textTransform: "uppercase" }}>
+              ── ✦ TOEIC DICTATION DIARY ✦ ──
             </div>
           </div>
         </div>
