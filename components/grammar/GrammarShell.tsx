@@ -24,12 +24,12 @@ const NAV_INTERNAL = [
   { href: "/grammar",          label: "Tổng quan", icon: LayoutGrid, exact: true },
   { href: "/grammar/progress", label: "Tiến độ",   icon: BarChart2 },
   { href: "/grammar/review",   label: "Câu sai",   icon: BookX },
+  { href: "/journal",          label: "Nhật ký",   icon: NotebookPen },
 ];
 
 const NAV_EXTERNAL = [
-  { href: "/journal/vocab", label: "Từ vựng",  icon: BookOpen },
-  { href: "/journal",       label: "Nhật ký",  icon: NotebookPen },
-  { href: "/",              label: "Dictation", icon: Headphones },
+  { href: "/",                 label: "Dictation", icon: Headphones },
+  { href: "/reading-practice", label: "Reading",   icon: BookOpen },
 ];
 
 function isActive(pathname: string, href: string, exact?: boolean) {
