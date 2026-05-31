@@ -5,6 +5,7 @@ import { X } from "lucide-react";
 import { useState } from "react";
 
 const NAV = [
+  { label: "Home",       href: "/home",               auth: false },
   { label: "Dictation",  href: "/dictation",          auth: true  },
   { label: "Grammar",    href: "/grammar",             auth: true  },
   { label: "Reading",    href: "/reading-practice",    auth: true  },
