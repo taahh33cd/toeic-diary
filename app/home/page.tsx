@@ -183,6 +183,14 @@ export default async function HomePage() {
               Đã có tài khoản
             </Link>
           </div>
+          <div style={{ marginTop: "1.25rem" }}>
+            <Link
+              href="/course"
+              style={{ fontSize: "0.84rem", color: TERRA, fontWeight: 600, textDecoration: "none" }}
+            >
+              🎓 Muốn học có giáo viên? Xem khoá học →
+            </Link>
+          </div>
         </section>
 
         {/* ── Ornament ──────────────────────────────────────────────────────── */}
@@ -415,6 +423,12 @@ export default async function HomePage() {
                 Vào học ngay
               </Link>
             )}
+            <Link
+              href="/course"
+              style={{ padding: "11px 24px", borderRadius: 8, border: `1.5px solid ${CREAM}40`, color: `${CREAM}cc`, fontWeight: 500, fontSize: "0.88rem", textDecoration: "none" }}
+            >
+              🎓 Xem khoá học có HD
+            </Link>
           </div>
         </section>
 

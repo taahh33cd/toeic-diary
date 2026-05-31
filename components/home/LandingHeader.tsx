@@ -5,10 +5,11 @@ import { X } from "lucide-react";
 import { useState } from "react";
 
 const NAV = [
-  { label: "Dictation",  href: "/dictation" },
-  { label: "Grammar",    href: "/grammar" },
-  { label: "Reading",    href: "/reading-practice" },
-  { label: "Luyện đề",  href: "/practice" },
+  { label: "Dictation",  href: "/dictation",          auth: true  },
+  { label: "Grammar",    href: "/grammar",             auth: true  },
+  { label: "Reading",    href: "/reading-practice",    auth: true  },
+  { label: "Luyện đề",  href: "/practice",            auth: true  },
+  { label: "Khoá học",  href: "/course",              auth: false },
 ];
 
 const INK   = "#3D2B1F";
@@ -17,8 +18,8 @@ const TERRA = "#C4622D";
 export function LandingHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
   const [modal, setModal] = useState(false);
 
-  function handleNavClick(e: React.MouseEvent) {
-    if (isLoggedIn) return;
+  function handleNavClick(e: React.MouseEvent, requireAuth: boolean) {
+    if (!requireAuth || isLoggedIn) return;
     e.preventDefault();
     setModal(true);
   }
@@ -52,11 +53,11 @@ export function LandingHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex" style={{ display: "flex", alignItems: "center", gap: 28 }}>
-            {NAV.map(({ label, href }) => (
+            {NAV.map(({ label, href, auth }) => (
               <a
                 key={href}
                 href={href}
-                onClick={handleNavClick}
+                onClick={(e) => handleNavClick(e, auth)}
                 style={{
                   fontSize: "0.84rem", color: "rgba(255,253,246,0.8)", fontWeight: 500,
                   textDecoration: "none", paddingBottom: 3,
