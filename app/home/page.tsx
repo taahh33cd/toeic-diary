@@ -116,20 +116,15 @@ export default async function HomePage() {
   const { data: { user } } = await supabase.auth.getUser();
   const isLoggedIn = !!user;
 
-  let seriesList: { id: string; name: string; publisher: string | null; year: number | null; icon: string | null; description: string | null }[] = [];
   let lessonCount = 0;
+  let seriesCount = 0;
 
   try {
-    [seriesList, lessonCount] = await Promise.all([
-      prisma.testSeries.findMany({
-        orderBy: { orderIndex: "asc" },
-        select: { id: true, name: true, publisher: true, year: true, icon: true, description: true },
-      }),
+    [lessonCount, seriesCount] = await Promise.all([
       prisma.lesson.count(),
+      prisma.testSeries.count(),
     ]);
   } catch { /* silently continue */ }
-
-  const seriesCount = seriesList.length;
 
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: CREAM, color: INK }}>
@@ -337,56 +332,6 @@ export default async function HomePage() {
         </section>
 
         {/* ── Series ────────────────────────────────────────────────────────── */}
-        {seriesList.length > 0 && (
-          <>
-            <div style={{ padding: "2rem 0", background: CREAM, borderTop: `1px solid ${BORDER}` }}>
-              <Ornament label="✦ BỘ ĐỀ HIỆN CÓ ✦" />
-            </div>
-
-            <section style={{ background: CREAM, padding: "0 clamp(1rem,4vw,2rem) 4rem" }}>
-              <div style={{ maxWidth: 1120, margin: "0 auto" }}>
-                <div style={{ textAlign: "center", marginBottom: "2rem" }}>
-                  <h2 style={{ fontFamily: SERIF, fontSize: "clamp(1.3rem,3vw,1.7rem)", fontWeight: 700, color: INK, marginBottom: "0.4rem" }}>
-                    Bộ đề hiện có
-                  </h2>
-                  <p style={{ fontSize: "0.84rem", color: SEPIA }}>Nội dung chuẩn ETS, cập nhật thường xuyên.</p>
-                </div>
-
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(min(280px,100%),1fr))", gap: "1rem" }}>
-                  {seriesList.map((series) => (
-                    <div
-                      key={series.id}
-                      style={{
-                        background: `${GRAIN_BG}, ${BEIGE}`,
-                        backgroundBlendMode: "multiply",
-                        border: `1.5px solid ${BORDER}`,
-                        borderRadius: 10, padding: "1.25rem",
-                        boxShadow: `0 2px 8px rgba(61,43,31,0.05)`,
-                      }}
-                    >
-                      <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: "0.75rem" }}>
-                        <div style={{ width: 44, height: 44, borderRadius: 8, background: "#FAE8DB", border: `1.5px dashed ${TERRA}50`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.4rem", flexShrink: 0 }}>
-                          {series.icon ?? "📚"}
-                        </div>
-                        <div>
-                          <div style={{ fontFamily: SERIF, fontWeight: 700, fontSize: "0.95rem", color: INK }}>{series.name}</div>
-                          <div style={{ fontSize: "0.68rem", color: MUTED, marginTop: 2 }}>
-                            {series.publisher}{series.year ? ` · ${series.year}` : ""}
-                          </div>
-                        </div>
-                      </div>
-                      {series.description && (
-                        <p style={{ fontSize: "0.8rem", color: SEPIA, lineHeight: 1.6, overflow: "hidden", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" }}>
-                          {series.description}
-                        </p>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
-          </>
-        )}
 
         {/* ── Student Certificates ──────────────────────────────────────────── */}
         <div style={{ padding: "2rem 0", background: BEIGE, borderTop: `1px solid ${BORDER}` }}>
