@@ -101,134 +101,59 @@ export default async function GrammarPage() {
   return (
     <div style={{ padding: "clamp(1rem, 4vw, 2rem) clamp(1rem, 4vw, 2rem) 3rem", maxWidth: 1200, margin: "0 auto" }}>
 
-      {/* Welcome */}
-      <section style={{ marginBottom: "2rem" }}>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "flex-end",
-            justifyContent: "space-between",
-            gap: "1.5rem",
-            flexWrap: "wrap",
-          }}
-        >
-          <div>
-            <h1
-              style={{
-                fontSize: "2rem",
-                fontWeight: 700,
-                color: "var(--text-primary)",
-                letterSpacing: "-0.02em",
-                lineHeight: "1.2",
-                marginBottom: "0.4rem",
-              }}
-            >
-              Xin chào, {displayName}! 👋
-            </h1>
-            <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
-              Luyện ngữ pháp mỗi ngày — nền tảng vững chắc cho điểm TOEIC của bạn.
-            </p>
+      {/* Hero banner — tropical retro green */}
+      <section
+        style={{
+          background: "#4DA86A",
+          borderRadius: "var(--radius-xl)",
+          padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 4vw, 2.5rem)",
+          marginBottom: "1.5rem",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "flex-end",
+          justifyContent: "space-between",
+          gap: "1.5rem",
+          flexWrap: "wrap",
+        }}
+      >
+        <div>
+          <p style={{ fontSize: "0.72rem", color: "rgba(255,255,255,0.75)", marginBottom: "0.5rem", letterSpacing: "0.05em", textTransform: "uppercase", fontWeight: 600 }}>
+            Ngữ pháp TOEIC
+          </p>
+          <h1 style={{ fontSize: "clamp(1.6rem, 4vw, 2.2rem)", fontWeight: 700, color: "#fff", letterSpacing: "-0.02em", lineHeight: 1.2, marginBottom: "0.4rem" }}>
+            Xin chào, {displayName}! 👋
+          </h1>
+          <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.85)", lineHeight: 1.6 }}>
+            Luyện ngữ pháp mỗi ngày — nền tảng vững chắc cho điểm TOEIC.
+          </p>
+        </div>
+
+        <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", flexShrink: 0 }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "0.75rem 1.25rem", borderRadius: "var(--radius-lg)", border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.12)", minWidth: 90 }}>
+            <Flame size={18} style={{ color: "#FFD66B", marginBottom: "0.2rem" }} />
+            <span style={{ fontSize: "1.5rem", fontWeight: 700, color: "#fff", lineHeight: 1 }}>{streak}</span>
+            <span style={{ fontSize: "0.65rem", color: "rgba(255,255,255,0.8)", marginTop: "0.2rem" }}>Ngày streak</span>
           </div>
-
-          <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-            {/* Streak card */}
-            <div
-              style={{
-                background: "var(--bg-elevated)",
-                border: "1px solid var(--border)",
-                borderRadius: "var(--radius-lg)",
-                padding: "0.75rem 1.25rem",
-                display: "flex",
-                alignItems: "center",
-                gap: "0.65rem",
-                boxShadow: "var(--shadow-sm)",
-              }}
-            >
-              <Flame size={20} style={{ color: "var(--accent-primary)", flexShrink: 0 }} />
-              <div>
-                <p
-                  style={{
-                    fontSize: "0.6rem",
-                    fontWeight: 600,
-                    letterSpacing: "0.06em",
-                    textTransform: "uppercase",
-                    color: "var(--text-muted)",
-                  }}
-                >
-                  Ngày Streak
-                </p>
-                <p
-                  style={{
-                    fontSize: "1.4rem",
-                    fontWeight: 700,
-                    color: "var(--accent-primary)",
-                    lineHeight: 1.2,
-                  }}
-                >
-                  {streak} ngày
-                </p>
-              </div>
-            </div>
-
-            {/* Completed card */}
-            <div
-              style={{
-                background: "var(--bg-elevated)",
-                border: "1px solid var(--border)",
-                borderRadius: "var(--radius-lg)",
-                padding: "0.75rem 1.25rem",
-                display: "flex",
-                alignItems: "center",
-                gap: "0.65rem",
-                boxShadow: "var(--shadow-sm)",
-              }}
-            >
-              <BookCheck size={20} style={{ color: "var(--text-muted)", flexShrink: 0 }} />
-              <div>
-                <p
-                  style={{
-                    fontSize: "0.6rem",
-                    fontWeight: 600,
-                    letterSpacing: "0.06em",
-                    textTransform: "uppercase",
-                    color: "var(--text-muted)",
-                  }}
-                >
-                  Đã hoàn thành
-                </p>
-                <p
-                  style={{
-                    fontSize: "1.4rem",
-                    fontWeight: 700,
-                    color: "var(--text-muted)",
-                    lineHeight: 1.2,
-                  }}
-                >
-                  {completedTests} bài
-                </p>
-              </div>
-            </div>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "0.75rem 1.25rem", borderRadius: "var(--radius-lg)", border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.12)", minWidth: 90 }}>
+            <BookCheck size={18} style={{ color: "#FFD66B", marginBottom: "0.2rem" }} />
+            <span style={{ fontSize: "1.5rem", fontWeight: 700, color: "#fff", lineHeight: 1 }}>{completedTests}</span>
+            <span style={{ fontSize: "0.65rem", color: "rgba(255,255,255,0.8)", marginTop: "0.2rem" }}>Bài hoàn thành</span>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "0.75rem 1.25rem", borderRadius: "var(--radius-lg)", border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.12)", minWidth: 90 }}>
+            <span style={{ fontSize: "1.5rem", fontWeight: 700, color: "#fff", lineHeight: 1 }}>{totalQs.toLocaleString()}</span>
+            <span style={{ fontSize: "0.65rem", color: "rgba(255,255,255,0.8)", marginTop: "0.4rem" }}>Câu hỏi</span>
           </div>
         </div>
       </section>
 
       {/* Page heading */}
-      <div style={{ marginBottom: "2rem" }}>
-        <h1
-          style={{
-            fontSize: "1.35rem",
-            fontWeight: 700,
-            color: "var(--text-primary)",
-            letterSpacing: "-0.02em",
-            marginBottom: "0.35rem",
-          }}
-        >
-          Tổng quan
-        </h1>
-        <p style={{ fontSize: "0.82rem", color: "var(--text-muted)" }}>
-          {totalQs.toLocaleString()} câu hỏi · 11 chủ đề ngữ pháp TOEIC
-        </p>
+      <div style={{ marginBottom: "1.5rem" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.35rem" }}>
+          <h2 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.01em" }}>
+            Tổng quan chủ đề
+          </h2>
+          <span style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>11 chủ đề</span>
+        </div>
 
         {/* Stats strip */}
         {seenSet.size > 0 && (
@@ -332,6 +257,7 @@ export default async function GrammarPage() {
               style={{
                 background: "var(--bg-elevated)",
                 border: "1px solid var(--border)",
+                borderTop: "2px solid #4DA86A",
                 borderRadius: "var(--radius-md)",
                 boxShadow: "var(--shadow-sm)",
                 overflow: "hidden",

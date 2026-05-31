@@ -210,9 +210,9 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
           100% { transform: scale(1); opacity: 1; }
         }
         @keyframes grammar-option-ripple {
-          0%   { box-shadow: 0 0 0 0 rgba(1,62,55,0.22); }
-          70%  { box-shadow: 0 0 0 8px rgba(1,62,55,0); }
-          100% { box-shadow: 0 0 0 0 rgba(1,62,55,0); }
+          0%   { box-shadow: 0 0 0 0 rgba(77,168,106,0.22); }
+          70%  { box-shadow: 0 0 0 8px rgba(77,168,106,0); }
+          100% { box-shadow: 0 0 0 0 rgba(77,168,106,0); }
         }
         .grammar-option-btn {
           transition: border-color 0.13s ease, background 0.13s ease, transform 0.08s ease;
@@ -230,7 +230,7 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
       {/* ── CBT Header strip ── */}
       <div
         style={{
-          background: "#013e37",
+          background: "#4DA86A",
           padding: "0 1.5rem",
           height: 52,
           display: "flex",
@@ -239,7 +239,7 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
           gap: "1rem",
         }}
       >
-        <span style={{ fontSize: "0.8rem", fontWeight: 600, color: "#ffefb3", whiteSpace: "nowrap" }}>
+        <span style={{ fontSize: "0.8rem", fontWeight: 600, color: "#FFD66B", whiteSpace: "nowrap" }}>
           Part 5 &nbsp;·&nbsp; {isMiniQuiz ? "Ôn câu sai" : `${topicName} — Test ${testNumber}`}
         </span>
         <div style={{ display: "flex", alignItems: "center", gap: "1.25rem" }}>
@@ -253,7 +253,7 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
               gap: "0.3rem",
               fontSize: "0.85rem",
               fontWeight: 600,
-              color: "#ffefb3",
+              color: "#FFD66B",
               letterSpacing: "0.02em",
             }}
           >
@@ -268,7 +268,7 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
               borderRadius: 4,
               border: "1.5px solid rgba(255,239,179,0.5)",
               background: "transparent",
-              color: "#ffefb3",
+              color: "#FFD66B",
               fontSize: "0.78rem",
               fontWeight: 600,
               cursor: saving ? "not-allowed" : "pointer",
@@ -287,13 +287,13 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
         style={{
           background: "#e4ede8",
           padding: "0.55rem 1.5rem",
-          borderBottom: "1px solid #c8ddd8",
+          borderBottom: "1px solid #B8E6C8",
         }}
       >
         <span style={{ fontSize: "0.72rem", fontWeight: 600, color: "#2e5049", textTransform: "uppercase", letterSpacing: "0.06em" }}>
           Directions:
         </span>
-        <span style={{ fontSize: "0.72rem", color: "#5e7e79", marginLeft: "0.4rem" }}>
+        <span style={{ fontSize: "0.72rem", color: "#5A8A6A", marginLeft: "0.4rem" }}>
           A word or phrase is missing in each of the sentences below. Select the best answer to complete the sentence.
         </span>
       </div>
@@ -302,7 +302,7 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
       <div style={{ background: "#ffffff", padding: "2rem 2.5rem 2.5rem" }}>
         {/* Question number + grammar tag */}
         <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", marginBottom: "1.25rem" }}>
-          <span style={{ fontSize: "1.5rem", fontWeight: 800, color: "#013e37", lineHeight: 1 }}>
+          <span style={{ fontSize: "1.5rem", fontWeight: 800, color: "#4DA86A", lineHeight: 1 }}>
             {currentIdx + 1}.
           </span>
           {q.grammar_type && (
@@ -312,8 +312,8 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
                 fontWeight: 700,
                 textTransform: "uppercase",
                 letterSpacing: "0.08em",
-                color: "#013e37",
-                background: "rgba(1,62,55,0.08)",
+                color: "#4DA86A",
+                background: "rgba(77,168,106,0.08)",
                 padding: "2px 8px",
                 borderRadius: 99,
               }}
@@ -328,7 +328,7 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
           style={{
             fontSize: "1.05rem",
             lineHeight: 1.85,
-            color: "#0a1f1c",
+            color: "#1A3D28",
             marginBottom: "2rem",
             fontFamily: "var(--font-sans)",
             fontWeight: 400,
@@ -352,8 +352,8 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
                   gap: "0.9rem",
                   padding: "0.8rem 1.1rem",
                   borderRadius: 6,
-                  border: selected ? "2px solid #013e37" : "1.5px solid #c8ddd8",
-                  background: selected ? "rgba(1,62,55,0.05)" : "#fafdfb",
+                  border: selected ? "2px solid #4DA86A" : "1.5px solid #B8E6C8",
+                  background: selected ? "rgba(77,168,106,0.05)" : "#FAFFF8",
                   cursor: "pointer",
                   textAlign: "left",
                   fontFamily: "var(--font-sans)",
@@ -365,8 +365,8 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
                     width: 18,
                     height: 18,
                     borderRadius: "50%",
-                    border: selected ? "2px solid #013e37" : "2px solid #9cbdb8",
-                    background: selected ? "#013e37" : "transparent",
+                    border: selected ? "2px solid #4DA86A" : "2px solid #8AC89A",
+                    background: selected ? "#4DA86A" : "transparent",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -375,7 +375,7 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
                   }}
                 >
                   {selected && (
-                    <span className="grammar-radio-dot" style={{ width: 6, height: 6, borderRadius: "50%", background: "#ffefb3", display: "block" }} />
+                    <span className="grammar-radio-dot" style={{ width: 6, height: 6, borderRadius: "50%", background: "#FFD66B", display: "block" }} />
                   )}
                 </span>
                 {/* Letter */}
@@ -383,7 +383,7 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
                   style={{
                     fontSize: "0.85rem",
                     fontWeight: 700,
-                    color: selected ? "#013e37" : "#5e7e79",
+                    color: selected ? "#4DA86A" : "#5A8A6A",
                     width: 18,
                     flexShrink: 0,
                     fontFamily: "var(--font-sans)",
@@ -396,7 +396,7 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
                 <span
                   style={{
                     fontSize: "0.93rem",
-                    color: selected ? "#013e37" : "#0a1f1c",
+                    color: selected ? "#4DA86A" : "#1A3D28",
                     fontWeight: selected ? 500 : 400,
                     fontFamily: "var(--font-sans)",
                     transition: "color 0.13s",
@@ -414,7 +414,7 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
       <div
         style={{
           background: "#e4ede8",
-          borderTop: "1px solid #c8ddd8",
+          borderTop: "1px solid #B8E6C8",
           padding: "0.75rem 1.5rem",
           display: "flex",
           alignItems: "center",
@@ -431,9 +431,9 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
             gap: "0.25rem",
             padding: "0.45rem 0.9rem",
             borderRadius: 4,
-            border: "1.5px solid #9cbdb8",
+            border: "1.5px solid #8AC89A",
             background: "transparent",
-            color: currentIdx === 0 ? "#9cbdb8" : "#013e37",
+            color: currentIdx === 0 ? "#8AC89A" : "#4DA86A",
             fontSize: "0.78rem",
             fontWeight: 600,
             cursor: currentIdx === 0 ? "not-allowed" : "pointer",
@@ -470,8 +470,8 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
                   fontWeight: 700,
                   borderRadius: 3,
                   border: "none",
-                  background: active ? "#013e37" : answered ? "#5a9e90" : "#c8ddd8",
-                  color: active ? "#ffefb3" : answered ? "#ffffff" : "#5e7e79",
+                  background: active ? "#4DA86A" : answered ? "#3A8F55" : "#B8E6C8",
+                  color: active ? "#FFD66B" : answered ? "#ffffff" : "#5A8A6A",
                   cursor: "pointer",
                   transition: "all 0.1s",
                   fontFamily: "var(--font-sans)",
@@ -493,9 +493,9 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
             gap: "0.25rem",
             padding: "0.45rem 0.9rem",
             borderRadius: 4,
-            border: "1.5px solid #9cbdb8",
+            border: "1.5px solid #8AC89A",
             background: "transparent",
-            color: currentIdx === activeQs.length - 1 ? "#9cbdb8" : "#013e37",
+            color: currentIdx === activeQs.length - 1 ? "#8AC89A" : "#4DA86A",
             fontSize: "0.78rem",
             fontWeight: 600,
             cursor: currentIdx === activeQs.length - 1 ? "not-allowed" : "pointer",

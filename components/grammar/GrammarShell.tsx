@@ -15,10 +15,10 @@ import {
 } from "lucide-react";
 
 const TOPBAR_H = 64;
-const BG = "#013e37";
-const TEXT_ACTIVE   = "#ffefb3";
-const TEXT_INACTIVE = "rgba(255,239,179,0.65)";
-const TEXT_EXTERNAL = "rgba(255,239,179,0.48)";
+const BG = "#1A4D35";           /* dark tropical green */
+const TEXT_ACTIVE   = "#FFD66B"; /* gold — retro contrast */
+const TEXT_INACTIVE = "rgba(255,214,107,0.65)";
+const TEXT_EXTERNAL = "rgba(255,214,107,0.45)";
 
 const NAV_INTERNAL = [
   { href: "/grammar",          label: "Tổng quan", icon: LayoutGrid, exact: true },
