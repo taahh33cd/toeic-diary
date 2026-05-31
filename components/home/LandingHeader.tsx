@@ -1,8 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Moon, Sun, X } from "lucide-react";
-import { useUIStore } from "@/stores/uiStore";
+import { X } from "lucide-react";
 import { useState } from "react";
 
 const NAV = [
@@ -16,7 +15,6 @@ const INK   = "#3D2B1F";
 const TERRA = "#C4622D";
 
 export function LandingHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
-  const { theme, toggleTheme } = useUIStore();
   const [modal, setModal] = useState(false);
 
   function handleNavClick(e: React.MouseEvent) {
@@ -80,14 +78,6 @@ export function LandingHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
 
           {/* Right */}
           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <button
-              onClick={toggleTheme}
-              style={{ background: "none", border: "none", cursor: "pointer", color: "rgba(255,253,246,0.6)", padding: 6, borderRadius: 6, display: "flex" }}
-              aria-label="Đổi theme"
-            >
-              {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
-            </button>
-
             {isLoggedIn ? (
               <Link
                 href="/dictation"
