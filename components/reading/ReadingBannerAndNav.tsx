@@ -1,23 +1,57 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import {
+  Menu,
+  X,
+  LayoutGrid,
+  BarChart2,
+  NotebookPen,
+  Headphones,
+  GraduationCap,
+  BookOpen,
+} from "lucide-react";
 
-const LEFT_TABS = [
-  { href: "/reading-practice",          label: "Tổng quan", exact: true  },
-  { href: "/reading-practice/progress", label: "Tiến độ",   exact: false },
-  { href: "/journal",                   label: "Nhật ký",   exact: false },
+const TOPBAR_H    = 64;
+const BG          = "#6B4C2A";
+const TEXT_ACTIVE   = "#FFFDF6";
+const TEXT_INACTIVE = "rgba(255,253,246,0.58)";
+const TEXT_EXTERNAL = "rgba(255,253,246,0.40)";
+
+const NAV_INTERNAL = [
+  { href: "/reading-practice",          label: "Tổng quan", icon: LayoutGrid,   exact: true  },
+  { href: "/reading-practice/progress", label: "Tiến độ",   icon: BarChart2,    exact: false },
+  { href: "/journal",                   label: "Nhật ký",   icon: NotebookPen,  exact: false },
 ];
 
-const RIGHT_TABS = [
-  { href: "/",        label: "Dictation" },
-  { href: "/grammar", label: "Ngữ pháp"  },
+const NAV_EXTERNAL = [
+  { href: "/",        label: "Dictation", icon: Headphones    },
+  { href: "/grammar", label: "Ngữ pháp",  icon: GraduationCap },
 ];
+
+function isActive(pathname: string, href: string, exact?: boolean) {
+  if (exact) return pathname === href;
+  // Only match /reading-practice sub-paths, not /journal etc.
+  if (href.startsWith("/reading-practice")) return pathname.startsWith(href);
+  return pathname === href;
+}
 
 export function ReadingBannerAndNav({ displayName }: { displayName: string }) {
-  const pathname = usePathname();
+  const pathname  = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  // Hide on the actual practice page: /reading-practice/[type]/[id]
+  // Close mobile menu on route change
+  useEffect(() => { setMenuOpen(false); }, [pathname]);
+
+  // Lock body scroll when mobile nav open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
+
+  // Hide on actual practice page: /reading-practice/[type]/[id]
   const afterRoot = pathname.replace(/^\/reading-practice/, "");
   const segments  = afterRoot.split("/").filter(Boolean);
   if (segments.length >= 2) return null;
@@ -25,61 +59,75 @@ export function ReadingBannerAndNav({ displayName }: { displayName: string }) {
   return (
     <header
       style={{
-        background: "#6B4C2A",
-        color: "#FFFDF6",
-        flexShrink: 0,
+        position: "sticky",
+        top: 0,
+        zIndex: 50,
+        background: BG,
         boxShadow: "0 1px 0 rgba(0,0,0,0.15)",
       }}
     >
       <div
         style={{
-          maxWidth: 1200,
+          maxWidth: 1400,
           margin: "0 auto",
-          padding: "0 20px",
-          height: 56,
+          height: TOPBAR_H,
           display: "flex",
           alignItems: "center",
-          gap: 24,
+          paddingInline: "clamp(1rem, 4vw, 1.5rem)",
+          gap: "1.5rem",
         }}
       >
-        {/* Section title */}
+        {/* Brand */}
         <Link
           href="/reading-practice"
           style={{
-            fontFamily: "var(--font-reading-display)",
+            fontSize: "1rem",
             fontWeight: 700,
-            fontSize: "0.92rem",
-            color: "#FFFDF6",
+            color: TEXT_ACTIVE,
             textDecoration: "none",
+            letterSpacing: "-0.01em",
+            whiteSpace: "nowrap",
             flexShrink: 0,
-            letterSpacing: "0.01em",
+            fontFamily: "var(--font-reading-display)",
           }}
         >
-          {displayName}&apos;s TOEIC Reading Diary
+          {displayName ? `${displayName}'s TOEIC Reading Diary` : "TOEIC Reading Diary"}
         </Link>
 
-        {/* Nav tabs */}
-        <nav style={{ display: "flex", alignItems: "center", flex: 1 }}>
-          {LEFT_TABS.map(({ href, label, exact }) => {
-            const active = exact ? pathname === href : pathname.startsWith(href);
+        {/* Desktop nav */}
+        <nav
+          className="hidden md:flex"
+          style={{ flex: 1, alignItems: "stretch", gap: 0 }}
+        >
+          {NAV_INTERNAL.map(({ href, label, icon: Icon, exact }) => {
+            const on = isActive(pathname, href, exact);
             return (
               <Link
                 key={href}
                 href={href}
                 style={{
-                  padding: "0 14px",
-                  height: 56,
-                  display: "inline-flex",
+                  display: "flex",
                   alignItems: "center",
-                  fontSize: "0.87rem",
-                  fontWeight: active ? 600 : 400,
-                  color: active ? "#FFFDF6" : "rgba(255,253,246,0.60)",
+                  gap: "0.35rem",
+                  padding: "0 0.85rem",
+                  paddingBottom: "1px",
+                  height: TOPBAR_H,
+                  fontSize: "0.875rem",
+                  fontWeight: 500,
+                  color: on ? TEXT_ACTIVE : TEXT_INACTIVE,
                   textDecoration: "none",
-                  borderBottom: `2px solid ${active ? "#FAF6E9" : "transparent"}`,
+                  whiteSpace: "nowrap",
+                  borderBottom: on ? `2px solid ${TEXT_ACTIVE}` : "2px solid transparent",
                   transition: "color 0.15s, border-color 0.15s",
-                  letterSpacing: "0.01em",
+                }}
+                onMouseEnter={(e) => {
+                  if (!on) (e.currentTarget as HTMLAnchorElement).style.color = TEXT_ACTIVE;
+                }}
+                onMouseLeave={(e) => {
+                  if (!on) (e.currentTarget as HTMLAnchorElement).style.color = TEXT_INACTIVE;
                 }}
               >
+                <Icon size={15} style={{ flexShrink: 0 }} />
                 {label}
               </Link>
             );
@@ -89,34 +137,150 @@ export function ReadingBannerAndNav({ displayName }: { displayName: string }) {
           <div
             style={{
               width: 1,
-              height: 18,
-              background: "rgba(255,253,246,0.28)",
-              margin: "0 6px",
+              height: 20,
+              background: "rgba(255,253,246,0.22)",
+              margin: "auto 0.65rem",
             }}
           />
 
-          {RIGHT_TABS.map(({ href, label }) => (
+          {NAV_EXTERNAL.map(({ href, label, icon: Icon }) => (
             <Link
               key={href}
               href={href}
               style={{
-                padding: "0 14px",
-                height: 56,
-                display: "inline-flex",
+                display: "flex",
                 alignItems: "center",
-                fontSize: "0.87rem",
-                fontWeight: 400,
-                color: "rgba(255,253,246,0.50)",
+                gap: "0.35rem",
+                padding: "0 0.85rem",
+                paddingBottom: "1px",
+                height: TOPBAR_H,
+                fontSize: "0.875rem",
+                fontWeight: 500,
+                color: TEXT_EXTERNAL,
                 textDecoration: "none",
+                whiteSpace: "nowrap",
                 borderBottom: "2px solid transparent",
-                transition: "color 0.15s",
+                transition: "color 0.15s, border-color 0.15s",
+              }}
+              onMouseEnter={(e) => {
+                const el = e.currentTarget as HTMLAnchorElement;
+                el.style.color = TEXT_ACTIVE;
+                el.style.borderBottomColor = TEXT_ACTIVE;
+              }}
+              onMouseLeave={(e) => {
+                const el = e.currentTarget as HTMLAnchorElement;
+                el.style.color = TEXT_EXTERNAL;
+                el.style.borderBottomColor = "transparent";
               }}
             >
+              <Icon size={15} style={{ flexShrink: 0 }} />
               {label}
             </Link>
           ))}
         </nav>
+
+        {/* Mobile hamburger */}
+        <button
+          className="md:hidden"
+          onClick={() => setMenuOpen((v) => !v)}
+          style={{
+            marginLeft: "auto",
+            background: "none",
+            border: "none",
+            cursor: "pointer",
+            color: TEXT_ACTIVE,
+            padding: "6px",
+            display: "flex",
+            alignItems: "center",
+          }}
+          aria-label={menuOpen ? "Đóng menu" : "Mở menu"}
+        >
+          {menuOpen ? <X size={20} /> : <Menu size={20} />}
+        </button>
       </div>
+
+      {/* Mobile overlay */}
+      {menuOpen && (
+        <>
+          <div
+            style={{
+              position: "fixed",
+              inset: 0,
+              zIndex: 40,
+              background: "rgba(0,0,0,0.25)",
+            }}
+            onClick={() => setMenuOpen(false)}
+          />
+          <nav
+            style={{
+              position: "fixed",
+              top: TOPBAR_H,
+              left: 0,
+              right: 0,
+              zIndex: 45,
+              background: BG,
+              borderTop: "1px solid rgba(255,253,246,0.15)",
+              padding: "0.5rem 1rem 0.75rem",
+              display: "flex",
+              flexDirection: "column",
+              gap: "2px",
+            }}
+          >
+            {NAV_INTERNAL.map(({ href, label, icon: Icon, exact }) => {
+              const on = isActive(pathname, href, exact);
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setMenuOpen(false)}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.55rem",
+                    padding: "0.65rem 0.85rem",
+                    borderRadius: 6,
+                    fontSize: "0.875rem",
+                    fontWeight: on ? 600 : 500,
+                    color: on ? TEXT_ACTIVE : TEXT_INACTIVE,
+                    background: on ? "rgba(255,253,246,0.10)" : "transparent",
+                    textDecoration: "none",
+                  }}
+                >
+                  <Icon size={15} />
+                  {label}
+                </Link>
+              );
+            })}
+            <div
+              style={{
+                height: 1,
+                background: "rgba(255,253,246,0.15)",
+                margin: "0.3rem 0",
+              }}
+            />
+            {NAV_EXTERNAL.map(({ href, label, icon: Icon }) => (
+              <Link
+                key={href}
+                href={href}
+                onClick={() => setMenuOpen(false)}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.55rem",
+                  padding: "0.65rem 0.85rem",
+                  borderRadius: 6,
+                  fontSize: "0.875rem",
+                  color: TEXT_EXTERNAL,
+                  textDecoration: "none",
+                }}
+              >
+                <Icon size={15} />
+                {label}
+              </Link>
+            ))}
+          </nav>
+        </>
+      )}
     </header>
   );
 }

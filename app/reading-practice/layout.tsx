@@ -27,26 +27,10 @@ export default async function ReadingPracticeLayout({
   return (
     <div
       className="theme-reading"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        height: "100dvh",
-        overflow: "hidden",
-      }}
+      style={{ minHeight: "100vh", background: "var(--bg-primary)" }}
     >
       <ReadingBannerAndNav displayName={displayName} />
-
-      <div
-        style={{
-          flex: 1,
-          display: "flex",
-          flexDirection: "column",
-          overflowY: "auto",
-          minHeight: 0,
-        }}
-      >
-        {children}
-      </div>
+      {children}
     </div>
   );
 }
