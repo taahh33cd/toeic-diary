@@ -33,7 +33,7 @@ export default async function JournalLayout({
 
   const profile = await prisma.profile.findUnique({
     where: { id: user.id },
-    select: { studentCode: true, displayName: true },
+    select: { studentCode: true, displayName: true, journalTheme: true },
   });
 
   if (!profile?.studentCode) redirect("/auth/onboarding-incomplete");
@@ -42,6 +42,7 @@ export default async function JournalLayout({
     <LocaleProvider>
     <JournalThemeWrapper
       className="theme-journal min-h-screen flex flex-col"
+      initialTheme={profile.journalTheme ?? undefined}
     >
       {/* ── Skip to main content ── */}
       <a

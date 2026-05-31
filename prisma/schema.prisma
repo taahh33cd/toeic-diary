@@ -133,6 +133,9 @@ model Profile {
   invitedAt      DateTime? @map("invited_at")
   acceptedAt     DateTime? @map("accepted_at")
 
+  // ── Preferences ──
+  journalTheme   String?   @map("journal_theme")
+
   // ── Gamification ──
   totalXp        Int       @default(0) @map("total_xp")
   level          Int       @default(1) @map("level")

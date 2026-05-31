@@ -20,13 +20,24 @@ export function useJournalTheme() {
 
 const STORAGE_KEY = "journal-theme";
 
-const VALID_THEMES = new Set<string>(["warm","dark","forest","ocean","rose","lavender","butter","mint"]);
+export const VALID_THEMES = new Set<string>(["warm","dark","forest","ocean","rose","lavender","butter","mint"]);
 
-function readStored(): JournalTheme {
-  if (typeof window === "undefined") return "warm";
+function readLocalCache(): JournalTheme | null {
+  if (typeof window === "undefined") return null;
   const v = localStorage.getItem(STORAGE_KEY);
   if (v && VALID_THEMES.has(v)) return v as JournalTheme;
-  return "warm";
+  return null;
+}
+
+async function persistTheme(theme: JournalTheme) {
+  // Optimistic local cache — always fast
+  localStorage.setItem(STORAGE_KEY, theme);
+  // Persist to account — fire-and-forget
+  await fetch("/api/journal/theme", {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ theme }),
+  });
 }
 
 type Vars = Record<string, string>;
@@ -219,19 +230,38 @@ const THEME_VARS: Record<JournalTheme, Vars> = {
 export function JournalThemeWrapper({
   children,
   className,
+  initialTheme,
 }: {
   children: React.ReactNode;
   className?: string;
+  initialTheme?: string;
 }) {
-  const [theme, setThemeState] = useState<JournalTheme>("warm");
+  // Server provides the DB value; fall back to local cache, then "warm"
+  const serverTheme = (initialTheme && VALID_THEMES.has(initialTheme))
+    ? initialTheme as JournalTheme
+    : null;
+
+  const [theme, setThemeState] = useState<JournalTheme>(serverTheme ?? "warm");
 
   useEffect(() => {
-    setThemeState(readStored());
+    if (serverTheme) {
+      // Server has a value — sync local cache silently
+      localStorage.setItem(STORAGE_KEY, serverTheme);
+    } else {
+      // DB not set yet — check if user had a preference in localStorage
+      // and migrate it to the DB
+      const cached = readLocalCache();
+      if (cached && cached !== "warm") {
+        setThemeState(cached);
+        persistTheme(cached); // migrate to DB
+      }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function setTheme(t: JournalTheme) {
     setThemeState(t);
-    localStorage.setItem(STORAGE_KEY, t);
+    persistTheme(t);
   }
 
   const vars = THEME_VARS[theme];
