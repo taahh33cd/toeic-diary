@@ -161,16 +161,6 @@ export default function RegisterPage() {
       <div style={card}>
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: "2rem" }}>
-          <div style={{
-            width: 50, height: 50,
-            background: "#FAE8DB",
-            border: `1.5px dashed ${TERRA}70`,
-            display: "flex", alignItems: "center", justifyContent: "center",
-            margin: "0 auto 1rem",
-            fontSize: "1.4rem",
-          }}>
-            🎧
-          </div>
           <h1 style={{ fontFamily: SERIF, fontSize: "1.5rem", fontWeight: 700, color: INK, margin: 0, letterSpacing: "-0.01em" }}>
             Tạo tài khoản
           </h1>
