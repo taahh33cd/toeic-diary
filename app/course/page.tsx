@@ -69,7 +69,7 @@ export default async function CoursePage() {
               lineHeight: 1.8,
             }}
           >
-            3 hình thức học khác nhau — từ 1-1 cá nhân đến tự luyện linh hoạt.
+            4 hình thức học — tự luyện online, 1-1 cá nhân, tự học có hướng dẫn, và nhóm nhỏ offline.
             <br />
             Chọn cái phù hợp với lịch và mục tiêu của bạn.
           </p>
