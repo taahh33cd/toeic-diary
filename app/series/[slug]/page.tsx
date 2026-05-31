@@ -17,7 +17,7 @@ function CircleProgress({ percent }: { percent: number }) {
         <circle
           cx="20" cy="20" r="18"
           fill="transparent"
-          stroke="#0ea5e9"
+          stroke="#4DA8DA"
           strokeWidth="2.5"
           strokeDasharray={CIRCUMFERENCE}
           strokeDashoffset={offset}
@@ -25,7 +25,7 @@ function CircleProgress({ percent }: { percent: number }) {
           className="transition-all duration-700"
         />
       </svg>
-      <span className="text-[10px] font-bold text-[#0ea5e9]">{percent}%</span>
+      <span className="text-[10px] font-bold text-[#4DA8DA]">{percent}%</span>
     </div>
   );
 }
@@ -100,7 +100,7 @@ export default async function SeriesPage({ params }: { params: Promise<{ slug: s
       <main className="flex-1 max-w-[1120px] mx-auto w-full px-4 md:px-6 py-10">
 
         {/* Hero */}
-        <section className="bg-[#0ea5e9] rounded-2xl p-8 md:p-10 mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <section className="bg-[#4DA8DA] rounded-2xl p-8 md:p-10 mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-2xl">
             <nav className="flex items-center gap-1 text-xs text-white/80 mb-3">
               <Link href="/" className="hover:opacity-80 transition-opacity">Thư viện</Link>
@@ -150,7 +150,7 @@ export default async function SeriesPage({ params }: { params: Promise<{ slug: s
             const statusColor = isComplete
               ? "text-emerald-600"
               : isStarted
-              ? "text-[#0ea5e9]"
+              ? "text-[#4DA8DA]"
               : "text-[var(--text-muted)] opacity-60";
 
             const ctaLabel = isComplete ? "Ôn lại" : isStarted ? "Tiếp tục" : "Bắt đầu";
@@ -163,13 +163,13 @@ export default async function SeriesPage({ params }: { params: Promise<{ slug: s
               <Link
                 key={test.id}
                 href={`/test/${test.slug}`}
-                className="group bg-[var(--bg-elevated)] border border-[var(--border)] border-t-2 border-t-[#0ea5e9] rounded-xl p-5 flex flex-col justify-between hover:shadow-sm transition-all"
+                className="group bg-[var(--bg-elevated)] border border-[var(--border)] border-t-2 border-t-[#4DA8DA] rounded-xl p-5 flex flex-col justify-between hover:shadow-sm transition-all"
                 style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.05)" }}
               >
                 <div>
                   {/* Top row */}
                   <div className="flex justify-between items-start mb-5">
-                    <div className="p-2.5 bg-[#0ea5e9]/10 rounded-lg text-[#0ea5e9]">
+                    <div className="p-2.5 bg-[#4DA8DA]/10 rounded-lg text-[#4DA8DA]">
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
                       </svg>
@@ -206,7 +206,7 @@ export default async function SeriesPage({ params }: { params: Promise<{ slug: s
                       {isComplete ? "Hoàn thành" : isStarted ? "Đang học" : "Chưa học"}
                     </span>
                   </div>
-                  <span className="flex items-center gap-1 text-sm font-bold text-[#0ea5e9] group-hover:gap-2 transition-all">
+                  <span className="flex items-center gap-1 text-sm font-bold text-[#4DA8DA] group-hover:gap-2 transition-all">
                     {ctaLabel}
                     <span className="text-base">
                       {ctaIcon === "play_arrow" ? "▶" : "→"}

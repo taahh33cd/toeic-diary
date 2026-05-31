@@ -5,30 +5,33 @@
 
 /* ─────────────────────────────────────────────────────────
    DESIGN TOKENS — LIGHT MODE (default)
+   Palette: Sky blue #4DA8DA · Teal #80D8C3 · Gold #FFD66B
 ───────────────────────────────────────────────────────── */
 :root {
   /* Backgrounds */
-  --bg-primary: #FFFFFF;    /* trắng — nền trang */
-  --bg-secondary: #FFF7C5;  /* vàng nhạt — nền xen kẽ / hover */
-  --bg-elevated: #C1EBE9;   /* mint — card / section nổi */
+  --bg-primary: #FFFFFF;      /* trắng — nền trang */
+  --bg-secondary: #FFFBEE;    /* cream ấm — hover / alternate (harmonizes với #FFD66B) */
+  --bg-elevated: #F0FCFA;     /* teal cực nhạt — card / panel (harmonizes với #80D8C3) */
 
   /* Accent colors */
-  --accent-primary: #F4AE52;       /* amber — button CTA, active */
-  --accent-primary-hover: #D48E2A;
-  --accent-green: #10B981;
-  --accent-red: #EF4444;
-  --accent-yellow: #F59E0B;
-  --accent-blue: #3B82F6;
-  --practice-accent: #F4AE52;  /* audio player & practice UI accent */
+  --accent-primary: #4DA8DA;       /* sky blue — button, link, icon chủ đạo */
+  --accent-primary-hover: #3590C2;
+  --accent-teal: #80D8C3;          /* teal mint — progress, secondary accent */
+  --accent-gold: #FFD66B;          /* golden — badge, highlight, active */
+  --accent-green: #2EB87A;         /* functional green */
+  --accent-red: #FF6B6B;           /* coral-red — retro-friendly error color */
+  --accent-yellow: #FFD66B;
+  --accent-blue: #4DA8DA;
+  --practice-accent: #4DA8DA;
 
   /* Text */
-  --text-primary: #4F252E;    /* burgundy đậm */
-  --text-secondary: #7A4550;  /* burgundy vừa */
-  --text-muted: #A87880;      /* burgundy nhạt */
+  --text-primary: #1A3040;    /* dark navy */
+  --text-secondary: #3D6070;
+  --text-muted: #7FA3B5;
 
   /* Borders */
-  --border: #9ED4D2;          /* mint border */
-  --border-focus: #F4AE52;    /* amber focus ring */
+  --border: #B8E4F5;          /* light sky blue */
+  --border-focus: #4DA8DA;
 
   /* Radius */
   --radius-sm: 6px;
@@ -37,10 +40,10 @@
   --radius-xl: 20px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(79, 37, 46, 0.06), 0 1px 2px rgba(79, 37, 46, 0.04);
-  --shadow-md: 0 4px 12px rgba(79, 37, 46, 0.08), 0 2px 6px rgba(79, 37, 46, 0.04);
-  --shadow-lg: 0 12px 32px rgba(79, 37, 46, 0.10), 0 4px 12px rgba(79, 37, 46, 0.05);
-  --shadow-glow: 0 0 24px rgba(244, 174, 82, 0.22);
+  --shadow-sm: 0 1px 3px rgba(26, 48, 64, 0.06), 0 1px 2px rgba(26, 48, 64, 0.04);
+  --shadow-md: 0 4px 12px rgba(26, 48, 64, 0.08), 0 2px 6px rgba(26, 48, 64, 0.04);
+  --shadow-lg: 0 12px 32px rgba(26, 48, 64, 0.10), 0 4px 12px rgba(26, 48, 64, 0.05);
+  --shadow-glow: 0 0 24px rgba(77, 168, 218, 0.22);
 
   /* Font variables */
   --font-sans: var(--font-be-vietnam, 'Be Vietnam Pro', system-ui, sans-serif);
@@ -64,30 +67,31 @@
    DESIGN TOKENS — DARK MODE
 ───────────────────────────────────────────────────────── */
 .dark {
-  /* Backgrounds — phiên bản tối của mint & vàng */
-  --bg-primary: #0E2A28;    /* mint rất đậm */
-  --bg-secondary: #27220D;  /* vàng-amber rất đậm */
-  --bg-elevated: #163432;   /* dark elevated */
+  --bg-primary: #0C1B26;      /* dark navy */
+  --bg-secondary: #0D2820;    /* dark teal */
+  --bg-elevated: #122332;     /* dark elevated */
 
-  --accent-primary: #F4AE52;       /* amber giữ nguyên — dễ đọc trên dark */
-  --accent-primary-hover: #F7C070;
+  --accent-primary: #5BB5E3;       /* slightly brighter sky for dark bg */
+  --accent-primary-hover: #4DA8DA;
+  --accent-teal: #6ECFBA;
+  --accent-gold: #FFD66B;
   --accent-green: #34D399;
-  --accent-red: #F87171;
-  --accent-yellow: #FBBF24;
-  --accent-blue: #60A5FA;
-  --practice-accent: #F4AE52;
+  --accent-red: #FF8A8A;
+  --accent-yellow: #FFD66B;
+  --accent-blue: #5BB5E3;
+  --practice-accent: #5BB5E3;
 
-  --text-primary: #F5EDEA;    /* trắng ấm */
-  --text-secondary: #C8A8AD;  /* hồng nhạt */
-  --text-muted: #7A6065;
+  --text-primary: #E8F4FA;
+  --text-secondary: #9DC5D8;
+  --text-muted: #4F7A8A;
 
-  --border: #1D3E3C;          /* dark mint border */
-  --border-focus: #F4AE52;
+  --border: #1A3A4A;
+  --border-focus: #4DA8DA;
 
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.45);
   --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);
-  --shadow-glow: 0 0 24px rgba(244, 174, 82, 0.2);
+  --shadow-glow: 0 0 24px rgba(77, 168, 218, 0.2);
 }
 
 /* ─────────────────────────────────────────────────────────
@@ -440,13 +444,13 @@ h1, h2, h3 {
   .btn-primary {
     background: var(--accent-primary);
     color: #fff;
-    box-shadow: 0 2px 8px rgba(244, 174, 82, 0.3);
+    box-shadow: 0 2px 8px rgba(77, 168, 218, 0.3);
   }
 
   .btn-primary:hover:not(:disabled) {
     background: var(--accent-primary-hover);
     transform: translateY(-1px);
-    box-shadow: 0 4px 16px rgba(244, 174, 82, 0.4);
+    box-shadow: 0 4px 16px rgba(77, 168, 218, 0.4);
   }
 
   .btn-secondary {
@@ -513,7 +517,7 @@ h1, h2, h3 {
 
   .input:focus {
     border-color: var(--border-focus);
-    box-shadow: 0 0 0 3px rgba(244, 174, 82, 0.18);
+    box-shadow: 0 0 0 3px rgba(77, 168, 218, 0.18);
   }
 
   .input::placeholder {
@@ -541,7 +545,7 @@ h1, h2, h3 {
   }
 
   .badge-primary {
-    background: rgba(244, 174, 82, 0.15);
+    background: rgba(77, 168, 218, 0.12);
     color: var(--accent-primary);
   }
 
@@ -577,7 +581,7 @@ h1, h2, h3 {
   .progress-bar-fill {
     height: 100%;
     border-radius: 999px;
-    background: linear-gradient(90deg, var(--accent-primary), #D48E2A);
+    background: linear-gradient(90deg, var(--accent-primary), #3590C2);
     transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -640,8 +644,8 @@ h1, h2, h3 {
 }
 
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 20px rgba(244, 174, 82, 0.12); }
-  50% { box-shadow: 0 0 30px rgba(244, 174, 82, 0.35); }
+  0%, 100% { box-shadow: 0 0 20px rgba(77, 168, 218, 0.10); }
+  50% { box-shadow: 0 0 30px rgba(77, 168, 218, 0.35); }
 }
 
 .animate-fade-in { animation: fadeIn 0.3s ease-out both; }
@@ -688,7 +692,7 @@ h1, h2, h3 {
 }
 
 .diff-extra {
-  background: rgba(244, 174, 82, 0.12);
+  background: rgba(77, 168, 218, 0.10);
   color: var(--accent-primary);
   border-radius: 3px;
   padding: 1px 3px;
@@ -725,7 +729,7 @@ h1, h2, h3 {
   border-radius: 50%;
   background: var(--accent-primary);
   cursor: pointer;
-  box-shadow: 0 0 0 3px rgba(244, 174, 82, 0.25);
+  box-shadow: 0 0 0 3px rgba(77, 168, 218, 0.25);
   transition: transform 0.1s ease;
 }
 
@@ -742,7 +746,7 @@ h1, h2, h3 {
   padding: 2px 10px;
   border: none;
   border-bottom: 2px solid var(--accent-primary);
-  background: rgba(244, 174, 82, 0.08);
+  background: rgba(77, 168, 218, 0.08);
   color: var(--text-primary);
   font-family: var(--font-mono);
   font-size: 0.9rem;

@@ -108,7 +108,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
         </div>
 
         {/* Hero */}
-        <section className="bg-[#0ea5e9] rounded-xl text-white relative overflow-hidden mb-8 p-4 md:p-6">
+        <section className="bg-[#4DA8DA] rounded-xl text-white relative overflow-hidden mb-8 p-4 md:p-6">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 flex items-center justify-center bg-white/20 rounded-lg flex-shrink-0">
@@ -169,7 +169,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
                   {/* Progress separator line */}
                   <div className="h-[2px] flex-grow mx-4 bg-[var(--border)]/30 relative hidden md:block">
                     <div
-                      className="absolute top-0 left-0 h-full bg-[#0ea5e9] transition-all duration-700"
+                      className="absolute top-0 left-0 h-full bg-[#4DA8DA] transition-all duration-700"
                       style={{ width: `${partPercent}%` }}
                     />
                   </div>
@@ -187,7 +187,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
                       <Link
                         key={lesson.id}
                         href={`/test/${slug}/${lesson.id}`}
-                        className="group bg-[var(--bg-elevated)] border border-[var(--border)] rounded-lg p-3 flex items-center justify-between hover:border-[#0ea5e9] transition-all cursor-pointer"
+                        className="group bg-[var(--bg-elevated)] border border-[var(--border)] rounded-lg p-3 flex items-center justify-between hover:border-[#4DA8DA] transition-all cursor-pointer"
                         style={{ boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
                       >
                         <div className="flex flex-col gap-1 min-w-0">
@@ -217,7 +217,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
                                   key={lvl}
                                   className={`text-[10px] border px-1.5 py-0.5 rounded font-bold ${
                                     done
-                                      ? "border-[#0ea5e9] text-[#0ea5e9]"
+                                      ? "border-[#4DA8DA] text-[#4DA8DA]"
                                       : "border-[var(--border)] text-[var(--text-muted)] opacity-40"
                                   }`}
                                 >
@@ -238,7 +238,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
                           <svg
                             width="16" height="16" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-                            className="text-[var(--border)] group-hover:text-[#0ea5e9] transition-colors"
+                            className="text-[var(--border)] group-hover:text-[#4DA8DA] transition-colors"
                           >
                             <polyline points="9 18 15 12 9 6"/>
                           </svg>

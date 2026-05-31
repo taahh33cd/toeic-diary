@@ -216,7 +216,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
       className="md:hidden fixed left-0 right-0 z-50 transition-transform duration-200"
       style={{
         top: 64,
-        background: "#4F252E",
+        background: "#4DA8DA",
         borderBottom: "1px solid rgba(255,255,255,0.15)",
         transform: mobileNavOpen ? "translateY(0)" : "translateY(calc(-100% - 64px))",
         boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
@@ -234,7 +234,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
               onClick={() => setMobileNavOpen(false)}
               className="flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-white transition-colors"
               style={{
-                background: active ? "rgba(244,174,82,0.2)" : "transparent",
+                background: active ? "rgba(255,214,107,0.25)" : "transparent",
                 textDecoration: "none",
               }}
             >
@@ -266,7 +266,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
 const styles = {
   header: `
     sticky top-0 z-50 w-full
-    bg-[#4F252E]
+    bg-[#4DA8DA]
   `,
   inner: `
     max-w-[1400px] mx-auto px-4 md:px-6
@@ -293,7 +293,7 @@ const styles = {
     flex items-center gap-1.5 px-0 pb-1
     text-sm text-white font-medium
     border-b-2 border-transparent
-    hover:border-[#F4AE52]
+    hover:border-[#FFD66B]
     transition-colors
   `,
   actions: `

@@ -92,10 +92,10 @@ export default async function HomePage() {
                 className="bg-[var(--bg-elevated)] px-6 py-3 rounded-xl border border-[var(--border)] flex items-center gap-3"
                 style={{ boxShadow: SOFT_DEPTH }}
               >
-                <Flame size={22} className="text-[#0ea5e9]" style={{ fill: "rgba(14,165,233,0.15)" }} />
+                <Flame size={22} className="text-[#4DA8DA]" style={{ fill: "rgba(77,168,218,0.15)" }} />
                 <div>
                   <p className="text-xs font-semibold tracking-[0.05em] text-[var(--text-secondary)] uppercase">Ngày Streak</p>
-                  <p className="text-2xl font-bold text-[#0ea5e9] leading-8">{streak} ngày</p>
+                  <p className="text-2xl font-bold text-[#4DA8DA] leading-8">{streak} ngày</p>
                 </div>
               </div>
               <div
@@ -115,7 +115,7 @@ export default async function HomePage() {
         {/* Parts */}
         <section className="mb-10">
           <div className="flex items-center gap-2 mb-6">
-            <Headphones size={20} className="text-[#0ea5e9]" />
+            <Headphones size={20} className="text-[#4DA8DA]" />
             <h2 className="text-2xl font-semibold text-[var(--text-primary)]">Luyện tập theo Part</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -126,8 +126,8 @@ export default async function HomePage() {
                 className="group flex flex-col items-start p-6 bg-[var(--bg-elevated)] border border-[var(--border)] rounded-xl transition-all hover:-translate-y-0.5 text-left"
                 style={{ boxShadow: SOFT_DEPTH }}
               >
-                <div className="w-12 h-12 rounded-xl bg-[#0ea5e9]/10 flex items-center justify-center mb-3">
-                  <Icon size={22} className="text-[#0ea5e9]" />
+                <div className="w-12 h-12 rounded-xl bg-[#4DA8DA]/10 flex items-center justify-center mb-3">
+                  <Icon size={22} className="text-[#4DA8DA]" />
                 </div>
                 <p className="text-base font-bold text-[var(--text-primary)]">Part {part}</p>
                 <p className="text-sm text-[var(--text-secondary)]">{name}</p>
@@ -141,7 +141,7 @@ export default async function HomePage() {
         <section>
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-2">
-              <BookOpen size={20} className="text-[#0ea5e9]" />
+              <BookOpen size={20} className="text-[#4DA8DA]" />
               <h2 className="text-2xl font-semibold text-[var(--text-primary)]">Chọn bộ đề</h2>
             </div>
             <span className="text-sm text-[var(--text-muted)]">{seriesList.length} bộ đề</span>
@@ -175,7 +175,7 @@ export default async function HomePage() {
                     {/* Header */}
                     <div className="flex justify-between items-start mb-6">
                       <div className="flex items-center gap-3">
-                        <div className="w-14 h-14 rounded-xl bg-[#0ea5e9]/10 flex items-center justify-center border border-[#0ea5e9]/20 flex-shrink-0">
+                        <div className="w-14 h-14 rounded-xl bg-[#4DA8DA]/10 flex items-center justify-center border border-[#4DA8DA]/20 flex-shrink-0">
                           <span className="text-2xl">{series.icon ?? "📚"}</span>
                         </div>
                         <div>
@@ -185,7 +185,7 @@ export default async function HomePage() {
                           </p>
                         </div>
                       </div>
-                      <ChevronRight size={18} className="text-[var(--text-muted)] group-hover:text-[#0ea5e9] transition-colors flex-shrink-0 mt-1" />
+                      <ChevronRight size={18} className="text-[var(--text-muted)] group-hover:text-[#4DA8DA] transition-colors flex-shrink-0 mt-1" />
                     </div>
 
                     {/* Description */}
@@ -201,18 +201,18 @@ export default async function HomePage() {
                       </div>
                       <div className="w-full h-1.5 bg-[var(--bg-secondary)] rounded-full overflow-hidden mb-2">
                         <div
-                          className="h-full bg-[#0ea5e9] rounded-full transition-all duration-700"
+                          className="h-full bg-[#4DA8DA] rounded-full transition-all duration-700"
                           style={{ width: `${percent}%` }}
                         />
                       </div>
                       <div className="flex justify-between items-center">
-                        <span className="text-sm font-bold text-[#0ea5e9]">{percent}%</span>
+                        <span className="text-sm font-bold text-[#4DA8DA]">{percent}%</span>
                         {isComplete ? (
                           <span className="text-sm font-semibold text-emerald-600">✓ Hoàn thành</span>
                         ) : isStarted ? (
                           <span className="text-sm text-[var(--text-muted)]">Đang học</span>
                         ) : (
-                          <span className="text-sm font-bold text-[#0ea5e9] group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-1">
+                          <span className="text-sm font-bold text-[#4DA8DA] group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-1">
                             Bắt đầu →
                           </span>
                         )}
