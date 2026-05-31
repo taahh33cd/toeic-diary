@@ -4,30 +4,55 @@ import { redirect, notFound } from "next/navigation";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { ProgressRing } from "@/components/shared/ProgressRing";
-import { ArrowLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 const PART_INFO: Record<string, {
-  icon: string; label: string; sub: string; partNumber: number; gradient: string;
+  icon: string; label: string; sub: string; partNumber: number;
 }> = {
-  "part-1": { icon: "📷", label: "Part 1", sub: "Photographs",       partNumber: 1, gradient: "from-rose-500 to-pink-600"     },
-  "part-2": { icon: "💬", label: "Part 2", sub: "Question–Response", partNumber: 2, gradient: "from-orange-500 to-amber-600"  },
-  "part-3": { icon: "🗣️", label: "Part 3", sub: "Conversations",     partNumber: 3, gradient: "from-indigo-500 to-violet-600" },
-  "part-4": { icon: "📢", label: "Part 4", sub: "Talks",             partNumber: 4, gradient: "from-emerald-500 to-teal-600"  },
+  "part-1": { icon: "📷", label: "Part 1", sub: "Photographs",       partNumber: 1 },
+  "part-2": { icon: "💬", label: "Part 2", sub: "Question–Response", partNumber: 2 },
+  "part-3": { icon: "🗣️", label: "Part 3", sub: "Conversations",     partNumber: 3 },
+  "part-4": { icon: "📢", label: "Part 4", sub: "Talks",             partNumber: 4 },
 };
 
-const CARD_COLORS = [
-  "from-indigo-500 to-purple-600",
-  "from-emerald-500 to-teal-600",
-  "from-orange-500 to-amber-600",
-  "from-rose-500 to-pink-600",
-  "from-blue-500 to-cyan-600",
-  "from-violet-500 to-purple-600",
-  "from-green-500 to-emerald-600",
-  "from-yellow-500 to-orange-600",
-  "from-red-500 to-rose-600",
-  "from-sky-500 to-blue-600",
-];
+// ── Shared UI helpers ─────────────────────────────────────────────────────────
+
+const CIRCUMFERENCE = 2 * Math.PI * 18;
+
+function CircleProgress({ percent }: { percent: number }) {
+  const offset = CIRCUMFERENCE * (1 - percent / 100);
+  return (
+    <div className="relative w-10 h-10 flex items-center justify-center flex-shrink-0">
+      <svg className="absolute w-full h-full -rotate-90" viewBox="0 0 40 40">
+        <circle cx="20" cy="20" r="18" fill="transparent" stroke="var(--bg-secondary)" strokeWidth="2.5" />
+        <circle
+          cx="20" cy="20" r="18"
+          fill="transparent"
+          stroke="#4DA8DA"
+          strokeWidth="2.5"
+          strokeDasharray={CIRCUMFERENCE}
+          strokeDashoffset={offset}
+          strokeLinecap="round"
+          className="transition-all duration-700"
+        />
+      </svg>
+      <span className="text-[10px] font-bold text-[#4DA8DA]">{percent}%</span>
+    </div>
+  );
+}
+
+function FileIcon() {
+  return (
+    <div className="p-2.5 bg-[#4DA8DA]/10 rounded-lg text-[#4DA8DA] flex-shrink-0">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+      </svg>
+    </div>
+  );
+}
+
+// ── Page ─────────────────────────────────────────────────────────────────────
 
 export default async function PartPracticePage({
   params,
@@ -91,95 +116,115 @@ export default async function PartPracticePage({
   const progressMap = Object.fromEntries(progress.map((p) => [p.lessonId, p.bestScore]));
   const completedCount = progress.filter((p) => p.bestScore >= 70).length;
 
-  // --- Filtered view: show lessons for a specific test set ---
+  // ── Filtered view: lessons for a specific test set ────────────────────────
   if (selectedSet) {
     const filteredLessons = lessons.filter((l) => l.part.testSet.slug === selectedSet);
     const setName = filteredLessons[0]?.part.testSet.name ?? selectedSet;
+    const doneCount = filteredLessons.filter((l) => (progressMap[l.id] ?? -1) >= 70).length;
 
     return (
       <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
         <Header userEmail={user.email} userDisplayName={profile?.displayName} />
-        <main className="flex-1 max-w-[1400px] mx-auto w-full px-4 md:px-6 py-8">
+
+        <main className="flex-1 max-w-[1120px] mx-auto w-full px-4 md:px-6 py-10">
+
+          {/* Hero — matches series page */}
+          <section className="bg-[#4DA8DA] rounded-2xl p-8 md:p-10 mb-6 flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div className="max-w-2xl">
+              <nav className="flex items-center gap-1 text-xs text-white/80 mb-3">
+                <Link href="/practice" className="hover:opacity-80 transition-opacity">Luyện tập</Link>
+                <span className="text-white/60">›</span>
+                <Link href={`/practice/${part}`} className="hover:opacity-80 transition-opacity">{info.label}</Link>
+                <span className="text-white/60">›</span>
+                <span className="text-white/90">{setName}</span>
+              </nav>
+              <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-2">{setName}</h1>
+              <p className="text-white/80 text-sm">{info.icon} {info.label} — {info.sub}</p>
+            </div>
+            <div className="flex gap-3 flex-shrink-0">
+              <div className="flex flex-col items-center px-5 py-3 rounded-xl border border-white/30 bg-white/10 min-w-[90px]">
+                <span className="text-2xl font-bold text-white">{filteredLessons.length}</span>
+                <span className="text-xs text-white/80 mt-0.5">Tổng bài</span>
+              </div>
+              <div className="flex flex-col items-center px-5 py-3 rounded-xl border border-white/30 bg-white/10 min-w-[90px]">
+                <span className="text-2xl font-bold text-white">{doneCount}</span>
+                <span className="text-xs text-white/80 mt-0.5">Hoàn thành</span>
+              </div>
+            </div>
+          </section>
+
           <Link
             href={`/practice/${part}`}
-            className="inline-flex items-center gap-1.5 text-sm text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors mb-6"
+            className="inline-flex items-center gap-1.5 text-sm text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors mb-8"
           >
-            <ArrowLeft size={15} />
+            <ArrowLeft size={14} />
             {info.label} — Tất cả bộ đề
           </Link>
 
-          <div className={`relative rounded-[var(--radius-xl)] overflow-hidden mb-8 bg-gradient-to-br ${info.gradient} p-6 md:p-8`}>
-            <div className="absolute -right-12 -top-12 w-48 h-48 rounded-full bg-white/5" />
-            <div className="absolute -right-4 -bottom-8 w-32 h-32 rounded-full bg-white/5" />
-            <div className="relative">
-              <div className="text-4xl mb-3">{info.icon}</div>
-              <h1 className="font-display font-bold text-2xl md:text-3xl text-white mb-1">{setName}</h1>
-              <div className="flex flex-wrap gap-3 mt-3">
-                <span className="px-3 py-1.5 rounded-full text-sm font-medium bg-white/15 text-white">
-                  {filteredLessons.filter((l) => (progressMap[l.id] ?? 0) >= 70).length}/{filteredLessons.length} bài ≥70
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="mb-4 flex items-center justify-between">
-            <h2 className="font-display font-bold text-xl text-[var(--text-primary)]">Danh sách bài luyện tập</h2>
-            <span className="text-sm text-[var(--text-muted)]">{filteredLessons.length} bài</span>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {filteredLessons.map((lesson, i) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {filteredLessons.map((lesson) => {
               const bestScore = progressMap[lesson.id];
               const done = bestScore !== undefined && bestScore >= 70;
-              const percent = bestScore !== undefined ? Math.min(bestScore, 100) : 0;
+              const started = bestScore !== undefined;
+              const percent = started ? Math.min(bestScore!, 100) : 0;
+
+              const statusLabel = done
+                ? "Hoàn thành"
+                : started
+                ? `${bestScore}/100 điểm`
+                : "Chưa bắt đầu";
+              const statusColor = done
+                ? "text-emerald-600"
+                : started
+                ? "text-[#4DA8DA]"
+                : "text-[var(--text-muted)] opacity-60";
+              const ctaLabel = done ? "Ôn lại" : started ? "Tiếp tục" : "Bắt đầu";
+
               return (
                 <Link
                   key={lesson.id}
                   href={`/practice/${part}/${lesson.id}`}
-                  className="card card-interactive p-5 flex flex-col gap-4 group"
+                  className="group bg-[var(--bg-elevated)] border border-[var(--border)] border-t-2 border-t-[#4DA8DA] rounded-xl p-5 flex flex-col justify-between hover:shadow-md transition-all"
+                  style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.05)" }}
                 >
-                  <div className="flex items-center gap-3">
-                    <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${CARD_COLORS[i % CARD_COLORS.length]} flex items-center justify-center flex-shrink-0`}>
-                      <span className="text-white font-display font-bold text-sm">{lesson.questionStart ?? i + 1}</span>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="font-display font-bold text-sm text-[var(--text-primary)] leading-tight truncate">{lesson.title}</div>
-                    </div>
-                    <ChevronRight size={16} className="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] transition-colors flex-shrink-0" />
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <ProgressRing percent={percent} size={60} strokeWidth={5} color={done ? "var(--accent-green)" : "var(--accent-primary)"} />
-                    <div className="flex-1 text-xs text-[var(--text-secondary)]">
-                      {bestScore !== undefined ? `Điểm: ${bestScore}/100` : "Chưa làm"}
-                    </div>
-                  </div>
                   <div>
-                    <div className="progress-bar" style={{ height: "4px" }}>
-                      <div className="progress-bar-fill" style={{ width: `${percent}%` }} />
+                    <div className="flex justify-between items-start mb-5">
+                      <FileIcon />
+                      <span className={`text-xs font-medium ${statusColor}`}>{statusLabel}</span>
                     </div>
-                    <div className="mt-1.5 text-right text-xs font-medium">
-                      {bestScore === undefined ? (
-                        <span className="text-[var(--accent-primary)]">Bắt đầu →</span>
-                      ) : done ? (
-                        <span className="text-[var(--accent-green)]">✅ Hoàn thành</span>
-                      ) : (
-                        <span className="text-[var(--text-muted)]">Đang học</span>
-                      )}
+                    <h3 className="text-base font-semibold text-[var(--text-primary)] mb-1 leading-snug">{lesson.title}</h3>
+                    <p className="text-xs text-[var(--text-muted)] mb-4">{info.label} — {info.sub}</p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <div className="px-2.5 py-1 bg-[var(--bg-secondary)]/60 rounded text-[var(--text-secondary)] text-xs font-medium flex items-center gap-1">
+                        <span>🎧</span> {info.label}
+                      </div>
                     </div>
+                  </div>
+                  <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
+                    <div className="flex items-center gap-2.5">
+                      <CircleProgress percent={percent} />
+                      <span className="text-xs text-[var(--text-muted)]">
+                        {done ? "Hoàn thành" : started ? "Đang học" : "Chưa học"}
+                      </span>
+                    </div>
+                    <span className="flex items-center gap-1 text-sm font-bold text-[#4DA8DA] group-hover:gap-2 transition-all">
+                      {ctaLabel}
+                      <span className="text-base">{started && !done ? "▶" : "→"}</span>
+                    </span>
                   </div>
                 </Link>
               );
             })}
           </div>
         </main>
+
         <Footer />
       </div>
     );
   }
 
-  // --- Default view: grouped overview ---
+  // ── Default view: grouped overview ────────────────────────────────────────
 
-  // Build series → testSet groups with aggregate progress
   type TestSetGroup = {
     id: string; name: string; slug: string; orderIndex: number;
     total: number; completed: number;
@@ -246,87 +291,112 @@ export default async function PartPracticePage({
     }
   }
 
+  // ── Render ────────────────────────────────────────────────────────────────
+
+  function TestSetCard({ group, href }: { group: { id: string; name: string; slug: string; total: number; completed: number }; href: string }) {
+    const percent = group.total > 0 ? Math.round((group.completed / group.total) * 100) : 0;
+    const isComplete = percent === 100 && group.total > 0;
+    const isStarted = group.completed > 0;
+
+    const statusLabel = isComplete
+      ? "Hoàn thành"
+      : isStarted
+      ? `${group.completed}/${group.total} bài ≥70`
+      : "Chưa bắt đầu";
+    const statusColor = isComplete
+      ? "text-emerald-600"
+      : isStarted
+      ? "text-[#4DA8DA]"
+      : "text-[var(--text-muted)] opacity-60";
+    const ctaLabel = isComplete ? "Ôn lại" : isStarted ? "Tiếp tục" : "Bắt đầu";
+
+    return (
+      <Link
+        href={href}
+        className="group bg-[var(--bg-elevated)] border border-[var(--border)] border-t-2 border-t-[#4DA8DA] rounded-xl p-5 flex flex-col justify-between hover:shadow-md transition-all"
+        style={{ boxShadow: "0 2px 4px rgba(0,0,0,0.05)" }}
+      >
+        <div>
+          <div className="flex justify-between items-start mb-5">
+            <FileIcon />
+            <span className={`text-xs font-medium ${statusColor}`}>{statusLabel}</span>
+          </div>
+          <h3 className="text-base font-semibold text-[var(--text-primary)] mb-1">{group.name}</h3>
+          <p className="text-xs text-[var(--text-muted)] mb-4">{group.total} bài luyện tập</p>
+          <div className="flex flex-wrap gap-2 mb-5">
+            <div className="px-2.5 py-1 bg-[var(--bg-secondary)]/60 rounded text-[var(--text-secondary)] text-xs font-medium flex items-center gap-1">
+              <span>🎧</span> {info.label}
+            </div>
+          </div>
+        </div>
+        <div className="flex items-center justify-between pt-4 border-t border-[var(--border)]">
+          <div className="flex items-center gap-2.5">
+            <CircleProgress percent={percent} />
+            <span className="text-xs text-[var(--text-muted)]">
+              {isComplete ? "Hoàn thành" : isStarted ? "Đang học" : "Chưa học"}
+            </span>
+          </div>
+          <span className="flex items-center gap-1 text-sm font-bold text-[#4DA8DA] group-hover:gap-2 transition-all">
+            {ctaLabel}
+            <span className="text-base">{isStarted && !isComplete ? "▶" : "→"}</span>
+          </span>
+        </div>
+      </Link>
+    );
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
-      <main className="flex-1 max-w-[1400px] mx-auto w-full px-4 md:px-6 py-8">
+      <main className="flex-1 max-w-[1120px] mx-auto w-full px-4 md:px-6 py-10">
+
+        {/* Hero banner — matches series page style */}
+        <section className="bg-[#4DA8DA] rounded-2xl p-8 md:p-10 mb-6 flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="max-w-2xl">
+            <nav className="flex items-center gap-1 text-xs text-white/80 mb-3">
+              <Link href="/practice" className="hover:opacity-80 transition-opacity">Luyện tập theo Part</Link>
+              <span className="text-white/60">›</span>
+              <span className="text-white/90">{info.label} — {info.sub}</span>
+            </nav>
+            <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-2">
+              {info.label} — {info.sub}
+            </h1>
+            <p className="text-white/80 text-sm">{info.icon} Luyện tập nghe theo từng bộ đề</p>
+          </div>
+          <div className="flex gap-3 flex-shrink-0">
+            <div className="flex flex-col items-center px-5 py-3 rounded-xl border border-white/30 bg-white/10 min-w-[90px]">
+              <span className="text-2xl font-bold text-white">{lessons.length}</span>
+              <span className="text-xs text-white/80 mt-0.5">Tổng bài</span>
+            </div>
+            <div className="flex flex-col items-center px-5 py-3 rounded-xl border border-white/30 bg-white/10 min-w-[90px]">
+              <span className="text-2xl font-bold text-white">{completedCount}</span>
+              <span className="text-xs text-white/80 mt-0.5">Hoàn thành</span>
+            </div>
+          </div>
+        </section>
+
         <Link
           href="/practice"
-          className="inline-flex items-center gap-1.5 text-sm text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors mb-6"
+          className="inline-flex items-center gap-1.5 text-sm text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors mb-8"
         >
-          <ArrowLeft size={15} />
+          <ArrowLeft size={14} />
           Luyện tập theo Part
         </Link>
 
-        {/* Header banner */}
-        <div className={`relative rounded-[var(--radius-xl)] overflow-hidden mb-8 bg-gradient-to-br ${info.gradient} p-6 md:p-8`}>
-          <div className="absolute -right-12 -top-12 w-48 h-48 rounded-full bg-white/5" />
-          <div className="absolute -right-4 -bottom-8 w-32 h-32 rounded-full bg-white/5" />
-          <div className="relative">
-            <div className="text-4xl mb-3">{info.icon}</div>
-            <h1 className="font-display font-bold text-2xl md:text-3xl text-white mb-1">
-              {info.label} — {info.sub}
-            </h1>
-            <div className="flex flex-wrap gap-3 mt-3">
-              <span className="px-3 py-1.5 rounded-full text-sm font-medium bg-white/15 text-white">
-                {completedCount}/{lessons.length} bài hoàn thành (Level 1 ≥70)
-              </span>
-            </div>
-          </div>
-        </div>
-
         {/* Part 2: Theo loại câu hỏi */}
         {practiceGroups.length > 0 && (
-          <section className="mb-10">
-            <div className="mb-4 flex items-center justify-between">
+          <section className="mb-12">
+            <div className="mb-5 flex items-center justify-between">
               <h2 className="font-display font-bold text-xl text-[var(--text-primary)]">Theo loại câu hỏi</h2>
-              <Link href="/series/part2-practice" className="text-sm text-[var(--accent-primary)] hover:underline">
+              <Link href="/series/part2-practice" className="text-sm text-[#4DA8DA] hover:underline">
                 Xem tất cả →
               </Link>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-              {practiceGroups.map((group, i) => {
-                const percent = group.total > 0 ? (group.completed / group.total) * 100 : 0;
-                return (
-                  <Link
-                    key={group.id}
-                    href={`/test/${group.slug}`}
-                    className="card card-interactive p-5 flex flex-col gap-4 group"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${CARD_COLORS[i % CARD_COLORS.length]} flex items-center justify-center flex-shrink-0`}>
-                        <span className="text-white font-display font-bold text-sm">{i + 1}</span>
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="font-display font-bold text-sm text-[var(--text-primary)] leading-tight">{group.name}</div>
-                        <div className="text-xs text-[var(--text-muted)] mt-0.5">{group.total} bài</div>
-                      </div>
-                      <ChevronRight size={16} className="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] transition-colors flex-shrink-0" />
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <ProgressRing percent={percent} size={60} strokeWidth={5} color={percent === 100 ? "var(--accent-green)" : "var(--accent-primary)"} />
-                      <div className="flex-1 text-xs text-[var(--text-secondary)]">
-                        {group.completed}/{group.total} bài ≥70
-                      </div>
-                    </div>
-                    <div>
-                      <div className="progress-bar" style={{ height: "4px" }}>
-                        <div className="progress-bar-fill" style={{ width: `${percent}%` }} />
-                      </div>
-                      <div className="mt-1.5 text-right text-xs font-medium">
-                        {percent === 0 ? (
-                          <span className="text-[var(--accent-primary)]">Bắt đầu →</span>
-                        ) : percent === 100 ? (
-                          <span className="text-[var(--accent-green)]">✅ Hoàn thành</span>
-                        ) : (
-                          <span className="text-[var(--text-muted)]">Đang học</span>
-                        )}
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {practiceGroups.map((group) => (
+                <TestSetCard key={group.id} group={group} href={`/test/${group.slug}`} />
+              ))}
             </div>
           </section>
         )}
@@ -347,52 +417,14 @@ export default async function PartPracticePage({
             <div className="flex flex-col gap-10">
               {seriesGroups.map((series) => (
                 <div key={series.id}>
-                  <div className="mb-3 flex items-center justify-between">
+                  <div className="mb-4 flex items-center justify-between">
                     <h3 className="font-display font-semibold text-base text-[var(--text-secondary)]">{series.name}</h3>
                     <span className="text-sm text-[var(--text-muted)]">{series.testSets.length} bộ</span>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                    {series.testSets.map((group, i) => {
-                const percent = group.total > 0 ? (group.completed / group.total) * 100 : 0;
-                return (
-                  <Link
-                    key={group.id}
-                    href={`/practice/${part}?set=${group.slug}`}
-                    className="card card-interactive p-5 flex flex-col gap-4 group"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${CARD_COLORS[i % CARD_COLORS.length]} flex items-center justify-center flex-shrink-0`}>
-                        <span className="text-white font-display font-bold text-sm">{i + 1}</span>
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="font-display font-bold text-sm text-[var(--text-primary)] leading-tight">{group.name}</div>
-                        <div className="text-xs text-[var(--text-muted)] mt-0.5">{group.total} bài</div>
-                      </div>
-                      <ChevronRight size={16} className="text-[var(--text-muted)] group-hover:text-[var(--accent-primary)] transition-colors flex-shrink-0" />
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <ProgressRing percent={percent} size={60} strokeWidth={5} color={percent === 100 ? "var(--accent-green)" : "var(--accent-primary)"} />
-                      <div className="flex-1 text-xs text-[var(--text-secondary)]">
-                        {group.completed}/{group.total} bài ≥70
-                      </div>
-                    </div>
-                    <div>
-                      <div className="progress-bar" style={{ height: "4px" }}>
-                        <div className="progress-bar-fill" style={{ width: `${percent}%` }} />
-                      </div>
-                      <div className="mt-1.5 text-right text-xs font-medium">
-                        {percent === 0 ? (
-                          <span className="text-[var(--accent-primary)]">Bắt đầu →</span>
-                        ) : percent === 100 ? (
-                          <span className="text-[var(--accent-green)]">✅ Hoàn thành</span>
-                        ) : (
-                          <span className="text-[var(--text-muted)]">Đang học</span>
-                        )}
-                      </div>
-                    </div>
-                  </Link>
-                );
-                    })}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    {series.testSets.map((group) => (
+                      <TestSetCard key={group.id} group={group} href={`/practice/${part}?set=${group.slug}`} />
+                    ))}
                   </div>
                 </div>
               ))}
