@@ -139,7 +139,7 @@ export default async function GrammarPage() {
             <span style={{ fontSize: "1.5rem", fontWeight: 700, color: "#fff", lineHeight: 1 }}>{completedTests}</span>
             <span style={{ fontSize: "0.65rem", color: "rgba(255,255,255,0.8)", marginTop: "0.2rem" }}>Bài hoàn thành</span>
           </div>
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "0.75rem 1.25rem", borderRadius: "var(--radius-lg)", border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.12)", minWidth: 90 }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "0.75rem 1.25rem", borderRadius: "var(--radius-lg)", border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.12)", minWidth: 90 }}>
             <span style={{ fontSize: "1.5rem", fontWeight: 700, color: "#fff", lineHeight: 1 }}>{totalQs.toLocaleString()}</span>
             <span style={{ fontSize: "0.65rem", color: "rgba(255,255,255,0.8)", marginTop: "0.4rem" }}>Câu hỏi</span>
           </div>
