@@ -25,6 +25,7 @@ export function PracticeClient({ passage }: { passage: Passage }) {
   const [submitted, setSubmitted] = useState(false);
   const [activeQ, setActiveQ] = useState(0);
   const [saving, setSaving] = useState(false);
+  const [fontSize, setFontSize] = useState(14); // px
 
   const total = passage.questions.length;
 
@@ -120,6 +121,27 @@ export function PracticeClient({ passage }: { passage: Passage }) {
           </span>
         </div>
 
+        {/* Font size controls */}
+        <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+          <button
+            onClick={() => setFontSize((s) => Math.max(11, s - 1))}
+            title="Giảm cỡ chữ"
+            style={fontBtnStyle}
+          >
+            A−
+          </button>
+          <span style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.75rem", minWidth: 28, textAlign: "center" }}>
+            {fontSize}
+          </span>
+          <button
+            onClick={() => setFontSize((s) => Math.min(22, s + 1))}
+            title="Tăng cỡ chữ"
+            style={fontBtnStyle}
+          >
+            A+
+          </button>
+        </div>
+
         {!submitted ? (
           <button
             onClick={handleSubmit}
@@ -184,7 +206,7 @@ export function PracticeClient({ passage }: { passage: Passage }) {
                 borderRadius: 5,
                 boxShadow: "inset 0 0 5px rgba(0,0,0,0.05)",
                 lineHeight: 1.7,
-                fontSize: "0.92rem",
+                fontSize: fontSize,
               }}
               dangerouslySetInnerHTML={{ __html: html }}
             />
@@ -198,6 +220,7 @@ export function PracticeClient({ passage }: { passage: Passage }) {
             padding: "20px",
             overflowY: "auto",
             background: "#fafafa",
+            fontSize: fontSize,
           }}
         >
           {passage.questions.map((q, qi) => (
@@ -406,4 +429,16 @@ const navBtnStyle: React.CSSProperties = {
   borderRadius: 4,
   fontWeight: "bold",
   fontSize: "0.85rem",
+};
+
+const fontBtnStyle: React.CSSProperties = {
+  background: "rgba(255,255,255,0.15)",
+  border: "1px solid rgba(255,255,255,0.3)",
+  color: "white",
+  padding: "3px 9px",
+  borderRadius: 4,
+  cursor: "pointer",
+  fontSize: "0.8rem",
+  fontWeight: 600,
+  lineHeight: 1.4,
 };
