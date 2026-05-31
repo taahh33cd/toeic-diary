@@ -205,6 +205,20 @@ export async function deleteVocabWord(
   await remove(ref(firebaseDb, `vocab/${code}/${id}`));
 }
 
+/** Save forgotten word IDs from a study session (overwrites previous session). */
+export async function saveForgottenWords(code: string, wordIds: string[]): Promise<void> {
+  const map: Record<string, true> = {};
+  for (const id of wordIds) map[id] = true;
+  await set(ref(firebaseDb, `vocab_forgotten/${code}`), wordIds.length > 0 ? map : null);
+}
+
+/** Load forgotten word IDs from the previous session. */
+export async function loadForgottenWords(code: string): Promise<string[]> {
+  const snap = await get(ref(firebaseDb, `vocab_forgotten/${code}`));
+  const val = snap.val() as Record<string, true> | null;
+  return val ? Object.keys(val) : [];
+}
+
 // ─── Bookings ─────────────────────────────────────────────────────────────────
 
 export async function createBooking(
@@ -220,6 +234,13 @@ export async function updateBookingStatus(
   status: Booking["status"]
 ): Promise<void> {
   await set(ref(firebaseDb, `bookings/${id}/status`), status);
+}
+
+export async function updateBookingNote(
+  id: string,
+  note: string
+): Promise<void> {
+  await update(ref(firebaseDb, `bookings/${id}`), { note });
 }
 
 // ─── Slots ───────────────────────────────────────────────────────────────────

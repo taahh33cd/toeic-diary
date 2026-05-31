@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import { useProfile } from "@/hooks/useProfile";
 import { useVocab } from "@/hooks/firebase/useVocab";
-import { saveVocabWord, updateVocabWord, deleteVocabWord } from "@/lib/firebase/helpers";
+import { saveVocabWord, updateVocabWord, deleteVocabWord, saveForgottenWords, loadForgottenWords } from "@/lib/firebase/helpers";
 import { awardXp } from "@/lib/xp-client";
 import { useLocale } from "@/hooks/useLocale";
 import type { VocabWord } from "@/lib/firebase/types";
@@ -648,7 +648,7 @@ function WordListRow({ word, studentCode, todayStr }: { word: VocabWord; student
         onClick={() => setExpanded((v) => !v)}
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr auto",
+          gridTemplateColumns: "1fr 1fr auto auto",
           alignItems: "center",
           gap: 12,
           padding: "11px 16px",
@@ -704,12 +704,325 @@ function WordListRow({ word, studentCode, todayStr }: { word: VocabWord; student
   );
 }
 
+// ─── Confetti ────────────────────────────────────────────────────────────────
+
+function Confetti() {
+  const pieces = useMemo(() =>
+    Array.from({ length: 36 }, (_, i) => ({
+      key: i,
+      color: ["#C4622D","#4A7C59","#3B82F6","#F59E0B","#8B5CF6","#EC4899"][i % 6],
+      left: `${(i / 36) * 100 + (Math.sin(i) * 5)}%`,
+      delay: `${(i % 6) * 0.08}s`,
+      dur: `${0.7 + (i % 4) * 0.15}s`,
+      size: `${6 + (i % 3) * 4}px`,
+      round: i % 3 !== 0,
+    })),
+  []);
+  return (
+    <div style={{ position: "absolute", inset: 0, overflow: "hidden", pointerEvents: "none", zIndex: 1 }}>
+      <style>{`@keyframes cfall{0%{transform:translateY(-10px) rotate(0deg);opacity:1}100%{transform:translateY(260px) rotate(480deg);opacity:0}}`}</style>
+      {pieces.map(p => (
+        <div key={p.key} style={{ position: "absolute", top: 0, left: p.left, width: p.size, height: p.size, background: p.color, borderRadius: p.round ? "50%" : 3, animation: `cfall ${p.dur} ${p.delay} ease-in forwards` }} />
+      ))}
+    </div>
+  );
+}
+
+// ─── Flashcard Launcher (bottom sheet) ───────────────────────────────────────
+
+function FlashcardLauncher({
+  words,
+  dueWords,
+  studentCode,
+  onLaunchFlashcard,
+  onLaunchWrite,
+  onClose,
+}: {
+  words: VocabWord[];
+  dueWords: VocabWord[];
+  studentCode: string;
+  onLaunchFlashcard: (mode: FlashcardMode, words: VocabWord[]) => void;
+  onLaunchWrite: (words: VocabWord[]) => void;
+  onClose: () => void;
+}) {
+  const { t } = useLocale();
+  const [partOpen, setPartOpen] = useState(false);
+  const [loadingForgotten, setLoadingForgotten] = useState(false);
+
+  const availableParts = [1,2,3,4,5,6,7].filter(p => words.some(w => w.part === p));
+
+  async function handleForgotten() {
+    setLoadingForgotten(true);
+    try {
+      const ids = await loadForgottenWords(studentCode);
+      const forgotten = words.filter(w => ids.includes(w.id));
+      if (forgotten.length === 0) {
+        alert(t("Chưa có từ nào bị đánh ✗ trong phiên trước.", "No forgotten words from last session."));
+      } else {
+        onLaunchFlashcard("word_to_meaning", forgotten);
+      }
+    } catch { /* ignore */ }
+    setLoadingForgotten(false);
+  }
+
+  function shuffle(arr: VocabWord[]) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  const btnBase: React.CSSProperties = {
+    padding: "12px 14px", borderRadius: 12, textAlign: "left", cursor: "pointer",
+    border: "1px solid var(--border)", background: "var(--bg-primary)",
+    transition: "all .12s", display: "flex", flexDirection: "column", gap: 4,
+  };
+
+  return (
+    <div
+      style={{ position: "fixed", inset: 0, zIndex: 60, background: "rgba(0,0,0,0.45)", display: "flex", flexDirection: "column", justifyContent: "flex-end" }}
+      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
+    >
+      <div style={{ background: "var(--bg-elevated)", borderRadius: "20px 20px 0 0", padding: "24px 20px 32px", maxHeight: "85vh", overflowY: "auto" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
+          <h3 style={{ fontFamily: "'Lora', serif", fontWeight: 700, fontSize: "1.1rem", color: "var(--text-primary)", margin: 0 }}>
+            🃏 {t("Chọn chế độ luyện", "Select practice mode")}
+          </h3>
+          <button onClick={onClose} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-muted)", fontSize: "1.1rem" }}>✕</button>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+          {/* 1. Đến hạn */}
+          <button onClick={() => onLaunchFlashcard("word_to_meaning", dueWords)} disabled={dueWords.length === 0}
+            style={{ ...btnBase, opacity: dueWords.length === 0 ? 0.45 : 1, cursor: dueWords.length === 0 ? "not-allowed" : "pointer", borderColor: dueWords.length > 0 ? "rgba(196,98,45,0.4)" : undefined, background: dueWords.length > 0 ? "rgba(196,98,45,0.05)" : undefined }}>
+            <span style={{ fontSize: "1.2rem" }}>🔴</span>
+            <span style={{ fontSize: ".82rem", fontWeight: 700, color: "var(--text-primary)" }}>{t("Đến hạn hôm nay", "Due today")}</span>
+            <span style={{ fontSize: ".68rem", color: "var(--text-muted)" }}>{dueWords.length} {t("từ · SRS tối ưu", "words · SRS optimized")}</span>
+          </button>
+
+          {/* 2. Toàn bộ */}
+          <button onClick={() => onLaunchFlashcard("word_to_meaning", words)} disabled={words.length === 0}
+            style={{ ...btnBase, opacity: words.length === 0 ? 0.45 : 1 }}>
+            <span style={{ fontSize: "1.2rem" }}>📚</span>
+            <span style={{ fontSize: ".82rem", fontWeight: 700, color: "var(--text-primary)" }}>{t("Toàn bộ từ vựng", "All vocabulary")}</span>
+            <span style={{ fontSize: ".68rem", color: "var(--text-muted)" }}>{words.length} {t("từ · theo thứ tự", "words · in order")}</span>
+          </button>
+
+          {/* 3. Theo Part */}
+          <button onClick={() => setPartOpen(v => !v)} disabled={availableParts.length === 0}
+            style={{ ...btnBase, opacity: availableParts.length === 0 ? 0.45 : 1, borderColor: partOpen ? "var(--orange)" : undefined }}>
+            <span style={{ fontSize: "1.2rem" }}>🎯</span>
+            <span style={{ fontSize: ".82rem", fontWeight: 700, color: "var(--text-primary)" }}>{t("Theo Part", "By Part")}</span>
+            <span style={{ fontSize: ".68rem", color: "var(--text-muted)" }}>{t("Chọn Part cụ thể ▾", "Select a part ▾")}</span>
+          </button>
+
+          {/* 4. Ngẫu nhiên */}
+          <button onClick={() => onLaunchFlashcard("word_to_meaning", shuffle(words))} disabled={words.length === 0}
+            style={{ ...btnBase, opacity: words.length === 0 ? 0.45 : 1 }}>
+            <span style={{ fontSize: "1.2rem" }}>🎲</span>
+            <span style={{ fontSize: ".82rem", fontWeight: 700, color: "var(--text-primary)" }}>{t("Ngẫu nhiên", "Random")}</span>
+            <span style={{ fontSize: ".68rem", color: "var(--text-muted)" }}>{t("Xáo toàn bộ từ", "Shuffle all words")}</span>
+          </button>
+
+          {/* 5. Luyện viết */}
+          <button onClick={() => onLaunchWrite(words)} disabled={words.length === 0}
+            style={{ ...btnBase, opacity: words.length === 0 ? 0.45 : 1 }}>
+            <span style={{ fontSize: "1.2rem" }}>📝</span>
+            <span style={{ fontSize: ".82rem", fontWeight: 700, color: "var(--text-primary)" }}>{t("Luyện viết", "Write practice")}</span>
+            <span style={{ fontSize: ".68rem", color: "var(--text-muted)" }}>{t("Nhìn nghĩa → gõ từ tiếng Anh", "See meaning → type English")}</span>
+          </button>
+
+          {/* 6. Chưa nhớ lần trước */}
+          <button onClick={handleForgotten} disabled={loadingForgotten}
+            style={{ ...btnBase, opacity: loadingForgotten ? 0.6 : 1 }}>
+            <span style={{ fontSize: "1.2rem" }}>⭐</span>
+            <span style={{ fontSize: ".82rem", fontWeight: 700, color: "var(--text-primary)" }}>{t("Chưa nhớ lần trước", "Previously forgotten")}</span>
+            <span style={{ fontSize: ".68rem", color: "var(--text-muted)" }}>{loadingForgotten ? t("Đang tải…", "Loading…") : t("Từ bị ✗ session trước", "Words marked ✗ last session")}</span>
+          </button>
+        </div>
+
+        {/* Part sub-selector */}
+        {partOpen && (
+          <div style={{ marginTop: 12, padding: "14px 16px", background: "var(--bg-primary)", borderRadius: 12, border: "1px solid var(--border)" }}>
+            <p style={{ fontSize: ".65rem", fontWeight: 800, color: "var(--text-muted)", letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 10 }}>
+              {t("Chọn Part", "Select Part")}
+            </p>
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+              {availableParts.map(p => (
+                <button key={p}
+                  onClick={() => onLaunchFlashcard("word_to_meaning", words.filter(w => w.part === p))}
+                  style={{ fontSize: ".78rem", fontWeight: 700, padding: "7px 16px", borderRadius: 99, background: "var(--orange)", color: "#fff", border: "none", cursor: "pointer" }}>
+                  Part {p} · {words.filter(w => w.part === p).length}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ─── Write Modal (mode 5: nhìn nghĩa → gõ từ) ────────────────────────────────
+
+function WriteModal({
+  words,
+  studentCode,
+  onClose,
+}: {
+  words: VocabWord[];
+  studentCode: string;
+  onClose: () => void;
+}) {
+  const { t } = useLocale();
+  const todayStr = new Date().toISOString().slice(0, 10);
+  const [idx, setIdx] = useState(0);
+  const [input, setInput] = useState("");
+  const [attempts, setAttempts] = useState(0);
+  const [result, setResult] = useState<"correct" | "wrong" | "revealed" | null>(null);
+  const [done, setDone] = useState(false);
+  const [correctCount, setCorrectCount] = useState(0);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const MAX_ATTEMPTS = 3;
+
+  const card = words[idx];
+
+  useEffect(() => {
+    if (!result) setTimeout(() => inputRef.current?.focus(), 50);
+  }, [idx, result]);
+
+  function advance() {
+    if (idx + 1 >= words.length) { setDone(true); return; }
+    setIdx(i => i + 1);
+    setInput(""); setAttempts(0); setResult(null);
+  }
+
+  async function handleCheck() {
+    if (!input.trim() || result) return;
+    const correct = input.trim().toLowerCase() === card.word.toLowerCase();
+    if (correct) {
+      setResult("correct");
+      setCorrectCount(c => c + 1);
+      const newCount = (card.repCount ?? 0) + 1;
+      await updateVocabWord(studentCode, card.id, { repCount: newCount, lastReview: todayStr });
+      await awardXp("vocab_review", { wordId: card.id });
+      setTimeout(() => advance(), 900);
+    } else {
+      const next = attempts + 1;
+      setAttempts(next);
+      if (next >= MAX_ATTEMPTS) {
+        setResult("revealed");
+      } else {
+        setResult("wrong");
+        setInput("");
+        setTimeout(() => { setResult(null); inputRef.current?.focus(); }, 700);
+      }
+    }
+  }
+
+  return (
+    <div style={{ position: "fixed", inset: 0, zIndex: 50, background: "rgba(0,0,0,0.5)", display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }}
+      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}>
+      <div style={{ width: "100%", maxWidth: 440, background: "var(--bg-elevated)", borderRadius: 16, overflow: "hidden", border: "1px solid var(--border)" }}>
+        {/* Header */}
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px 16px", borderBottom: "1px solid var(--border)", background: "var(--bg-primary)" }}>
+          <span style={{ fontSize: ".75rem", fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: ".08em" }}>
+            📝 {t("Luyện viết", "Write practice")} {done ? words.length : idx + 1}/{words.length}
+          </span>
+          <button onClick={onClose} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-muted)", fontSize: "1rem" }}>✕</button>
+        </div>
+        {/* Progress bar */}
+        <div style={{ height: 3, background: "var(--border)" }}>
+          <div style={{ height: 3, background: "var(--orange)", width: `${((done ? words.length : idx) / words.length) * 100}%`, transition: "width .3s" }} />
+        </div>
+
+        {done ? (
+          <div style={{ padding: 32, textAlign: "center", position: "relative" }}>
+            <Confetti />
+            <p style={{ fontFamily: "'Lora', serif", fontSize: "1.6rem", fontWeight: 700, color: "var(--accent-green)", marginBottom: 8, position: "relative", zIndex: 2 }}>🏆 {t("Hoàn thành!", "Done!")}</p>
+            <p style={{ fontSize: ".9rem", color: "var(--text-muted)", marginBottom: 20, position: "relative", zIndex: 2 }}>
+              {t(`Đúng ${correctCount}/${words.length} từ.`, `Correct ${correctCount}/${words.length} words.`)}
+            </p>
+            <button onClick={onClose} style={{ padding: "10px 28px", borderRadius: 10, background: "var(--orange)", color: "#fff", fontWeight: 700, border: "none", cursor: "pointer", position: "relative", zIndex: 2 }}>
+              {t("Đóng", "Close")}
+            </button>
+          </div>
+        ) : (
+          <div style={{ padding: 24 }}>
+            {/* Clue: meaning + IPA + example */}
+            <div style={{ background: "var(--bg-primary)", borderRadius: 12, padding: "18px 20px", marginBottom: 20, border: "1px solid var(--border)", textAlign: "center" }}>
+              {card.part && <p style={{ fontSize: ".62rem", fontWeight: 700, color: "var(--text-muted)", letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 6 }}>PART {card.part}</p>}
+              <p style={{ fontSize: "1.2rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: 4 }}>{card.vi || "—"}</p>
+              {card.ipa && <p style={{ fontFamily: "monospace", fontSize: ".82rem", color: "var(--text-muted)", marginBottom: 4 }}>/{card.ipa}/</p>}
+              {card.example && <p style={{ fontSize: ".75rem", fontStyle: "italic", color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 8, marginTop: 8 }}>&ldquo;{card.example}&rdquo;</p>}
+            </div>
+
+            {/* Attempt indicators */}
+            <div style={{ display: "flex", gap: 6, marginBottom: 12, justifyContent: "center" }}>
+              {Array.from({ length: MAX_ATTEMPTS }).map((_, i) => (
+                <div key={i} style={{ width: 8, height: 8, borderRadius: "50%", background: i < attempts ? "#e05c5c" : "var(--border)" }} />
+              ))}
+            </div>
+
+            {/* Revealed answer */}
+            {result === "revealed" ? (
+              <div style={{ textAlign: "center" }}>
+                <p style={{ fontSize: ".8rem", color: "var(--text-muted)", marginBottom: 8 }}>{t("Đáp án:", "Answer:")}</p>
+                <p style={{ fontFamily: "'Lora', serif", fontSize: "1.6rem", fontWeight: 700, color: "#e05c5c", marginBottom: 16 }}>{card.word}</p>
+                {card.ipa && <p style={{ fontFamily: "monospace", fontSize: ".82rem", color: "var(--text-muted)", marginBottom: 16 }}>/{card.ipa}/</p>}
+                <button onClick={advance} style={{ padding: "9px 24px", borderRadius: 10, background: "var(--orange)", color: "#fff", fontWeight: 700, border: "none", cursor: "pointer" }}>
+                  {t("Từ tiếp theo →", "Next word →")}
+                </button>
+              </div>
+            ) : (
+              <>
+                <div style={{ position: "relative" }}>
+                  <input
+                    ref={inputRef}
+                    autoFocus
+                    type="text"
+                    value={input}
+                    onChange={(e) => { setInput(e.target.value); if (result === "wrong") setResult(null); }}
+                    onKeyDown={(e) => { if (e.key === "Enter") handleCheck(); }}
+                    placeholder={t("Gõ từ tiếng Anh…", "Type the English word…")}
+                    style={{
+                      width: "100%", padding: "12px 16px", borderRadius: 10, fontSize: "1rem",
+                      fontFamily: "'Lora', serif", fontWeight: 600, outline: "none",
+                      border: result === "correct" ? "2px solid var(--accent-green)" : result === "wrong" ? "2px solid #e05c5c" : "1.5px solid var(--border)",
+                      background: result === "correct" ? "rgba(74,124,89,0.06)" : result === "wrong" ? "rgba(224,92,92,0.06)" : "var(--bg-primary)",
+                      color: "var(--text-primary)",
+                      transition: "all .15s",
+                      boxSizing: "border-box",
+                    }}
+                  />
+                  {result === "correct" && <span style={{ position: "absolute", right: 14, top: "50%", transform: "translateY(-50%)", fontSize: "1.2rem" }}>✅</span>}
+                  {result === "wrong" && <span style={{ position: "absolute", right: 14, top: "50%", transform: "translateY(-50%)", fontSize: "1.2rem" }}>❌</span>}
+                </div>
+                {result === "wrong" && (
+                  <p style={{ fontSize: ".75rem", color: "#e05c5c", textAlign: "center", marginTop: 8 }}>
+                    {t(`Sai rồi! Còn ${MAX_ATTEMPTS - attempts} lần thử.`, `Wrong! ${MAX_ATTEMPTS - attempts} attempt(s) left.`)}
+                  </p>
+                )}
+                <button onClick={handleCheck} style={{ marginTop: 12, width: "100%", padding: "10px", borderRadius: 10, background: "var(--orange)", color: "#fff", fontWeight: 700, border: "none", cursor: "pointer", fontSize: ".9rem" }}>
+                  {t("Kiểm tra ↵", "Check ↵")}
+                </button>
+              </>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 // ─── Flashcard Modal ──────────────────────────────────────────────────────────
 
 type FlashcardMode = "word_to_meaning" | "meaning_to_word";
 
 function FlashcardModal({
-  words,
+  words: initialWords,
   studentCode,
   onClose,
   mode = "word_to_meaning",
@@ -720,14 +1033,40 @@ function FlashcardModal({
   mode?: FlashcardMode;
 }) {
   const { t } = useLocale();
+  // currentWords may change if user relaunches with forgotten-only set
+  const [currentWords, setCurrentWords] = useState(initialWords);
   const [idx, setIdx] = useState(0);
-  const [revealed, setRevealed] = useState(false);
+  const [flipped, setFlipped] = useState(false);
   const [done, setDone] = useState(false);
   const [saving, setSaving] = useState(false);
+  // Use ref for forgotten IDs to avoid stale-closure issues in async handlers
+  const forgottenRef = useRef<Set<string>>(new Set());
+  const [forgottenSize, setForgottenSize] = useState(0);
 
-  const card = words[idx];
+  const card = currentWords[idx];
+  const progress = done ? 100 : (idx / currentWords.length) * 100;
+
+  function markForgotten(id: string) {
+    forgottenRef.current.add(id);
+    setForgottenSize(forgottenRef.current.size);
+  }
+  function unmarkForgotten(id: string) {
+    forgottenRef.current.delete(id);
+    setForgottenSize(forgottenRef.current.size);
+  }
+
+  function advance(nextIdx: number) {
+    if (nextIdx >= currentWords.length) {
+      saveForgottenWords(studentCode, [...forgottenRef.current]);
+      setDone(true);
+    } else {
+      setIdx(nextIdx);
+      setFlipped(false);
+    }
+  }
 
   async function handleKnow() {
+    if (saving || !flipped) return;
     setSaving(true);
     const newCount = (card.repCount ?? 0) + 1;
     const today = new Date().toISOString().slice(0, 10);
@@ -736,158 +1075,158 @@ function FlashcardModal({
     if (newCount >= MASTERY_THRESHOLD && (card.repCount ?? 0) < MASTERY_THRESHOLD) {
       await awardXp("vocab_master", { wordId: card.id });
     }
+    unmarkForgotten(card.id);
     setSaving(false);
-    if (idx + 1 >= words.length) {
-      setDone(true);
-    } else {
-      setIdx((i) => i + 1);
-      setRevealed(false);
-    }
+    advance(idx + 1);
   }
 
-  function handleSkip() {
-    if (idx + 1 >= words.length) {
-      setDone(true);
-    } else {
-      setIdx((i) => i + 1);
-      setRevealed(false);
-    }
+  async function handleForgot() {
+    if (saving || !flipped) return;
+    setSaving(true);
+    await updateVocabWord(studentCode, card.id, { repCount: 0 });
+    markForgotten(card.id);
+    setSaving(false);
+    advance(idx + 1);
+  }
+
+  function handleRelaunch() {
+    const forgotten = currentWords.filter(w => forgottenRef.current.has(w.id));
+    forgottenRef.current = new Set();
+    setForgottenSize(0);
+    setCurrentWords(forgotten);
+    setIdx(0);
+    setFlipped(false);
+    setDone(false);
   }
 
   return (
     <div
-      style={{
-        position: "fixed", inset: 0, zIndex: 50,
-        background: "rgba(0,0,0,0.5)",
-        display: "flex", alignItems: "center", justifyContent: "center",
-        padding: 16,
-      }}
+      style={{ position: "fixed", inset: 0, zIndex: 50, background: "rgba(0,0,0,0.5)", display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }}
       onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
     >
-      <div
-        className="rounded-xl overflow-hidden"
-        style={{
-          width: "100%", maxWidth: 420,
-          background: "var(--bg-elevated)",
-          border: "1px solid var(--border)",
-        }}
-      >
-        <div
-          className="flex items-center justify-between px-4 py-3"
-          style={{ borderBottom: "1px solid var(--border)", background: "var(--bg-primary)" }}
-        >
-          <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--text-muted)" }}>
-            Flashcard {done ? words.length : idx + 1} / {words.length}
+      <div style={{ width: "100%", maxWidth: 440, background: "var(--bg-elevated)", borderRadius: 16, overflow: "hidden", border: "1px solid var(--border)" }}>
+        {/* Header */}
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px 16px", borderBottom: "1px solid var(--border)", background: "var(--bg-primary)" }}>
+          <span style={{ fontSize: ".75rem", fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: ".08em" }}>
+            🃏 Flashcard {done ? currentWords.length : idx + 1}/{currentWords.length}
           </span>
-          <button
-            onClick={onClose}
-            style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-muted)", fontSize: "1rem" }}
-          >
-            ✕
-          </button>
+          <button onClick={onClose} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-muted)", fontSize: "1rem" }}>✕</button>
+        </div>
+        {/* Progress bar */}
+        <div style={{ height: 3, background: "var(--border)" }}>
+          <div style={{ height: 3, background: "var(--orange)", width: `${progress}%`, transition: "width .3s" }} />
         </div>
 
         {done ? (
-          <div className="p-8 text-center">
-            <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "var(--accent-green)", marginBottom: 8 }}>
-              {t("Xong! 🎉", "Done! 🎉")}
+          <div style={{ padding: 32, textAlign: "center", position: "relative" }}>
+            <Confetti />
+            <p style={{ fontFamily: "'Lora', serif", fontSize: "1.6rem", fontWeight: 700, color: "var(--accent-green)", marginBottom: 8, position: "relative", zIndex: 2 }}>
+              🏆 {t("Hoàn thành!", "Done!")}
             </p>
-            <p className="text-sm" style={{ color: "var(--text-muted)", marginBottom: 20 }}>
-              {t(`Đã ôn ${words.length} từ.`, `Reviewed ${words.length} words.`)}
+            {forgottenSize > 0 && (
+              <p style={{ fontSize: ".88rem", color: "#e05c5c", marginBottom: 6, position: "relative", zIndex: 2 }}>
+                ✗ {t(`Chưa nhớ: ${forgottenSize} từ`, `Forgot: ${forgottenSize} words`)}
+              </p>
+            )}
+            <p style={{ fontSize: ".82rem", color: "var(--text-muted)", marginBottom: 20, position: "relative", zIndex: 2 }}>
+              {t(`Đã ôn ${currentWords.length} từ.`, `Reviewed ${currentWords.length} words.`)}
             </p>
-            <button onClick={onClose} className="journal-btn-primary" style={{ padding: "10px 24px" }}>
-              {t("Đóng", "Close")}
-            </button>
+            <div style={{ display: "flex", gap: 10, justifyContent: "center", position: "relative", zIndex: 2, flexWrap: "wrap" }}>
+              {forgottenSize > 0 && (
+                <button onClick={handleRelaunch} style={{ padding: "10px 20px", borderRadius: 10, background: "#e05c5c", color: "#fff", fontWeight: 700, border: "none", cursor: "pointer", fontSize: ".88rem" }}>
+                  🔁 {t("Ôn lại chưa nhớ", "Review forgotten")}
+                </button>
+              )}
+              <button onClick={onClose} style={{ padding: "10px 20px", borderRadius: 10, background: "var(--orange)", color: "#fff", fontWeight: 700, border: "none", cursor: "pointer" }}>
+                {t("Đóng", "Close")}
+              </button>
+            </div>
           </div>
         ) : (
-          <div className="p-6 space-y-4">
-            {/* Card front */}
-            <div
-              className="text-center p-6 rounded-lg"
-              style={{ background: "var(--bg-primary)", border: "1px solid var(--border)", minHeight: 120 }}
-            >
-              {mode === "meaning_to_word" ? (
-                /* F16: front = meaning/definition */
-                <>
-                  {card.part && (
-                    <span className="text-xs font-bold uppercase tracking-wider" style={{ color: "var(--text-muted)" }}>
-                      Part {card.part}
-                    </span>
-                  )}
-                  {card.vi && (
-                    <p style={{ fontSize: "1.1rem", fontWeight: 600, color: "var(--text-primary)", marginTop: 8 }}>
-                      {card.vi}
-                    </p>
-                  )}
-                  {card.def && (
-                    <p className="text-xs mt-2 italic" style={{ color: "var(--text-muted)" }}>
-                      {card.def}
-                    </p>
-                  )}
-                </>
-              ) : (
-                /* Default: front = word */
-                <>
-                  <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.75rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: 4 }}>
-                    {card.word}
-                  </p>
-                  {card.ipa && (
-                    <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.85rem", color: "var(--text-muted)" }}>
-                      /{card.ipa}/
-                    </p>
-                  )}
-                  {card.pos && (
-                    <span className="text-xs font-semibold" style={{ color: POS_COLOR[card.pos] ?? "var(--text-muted)" }}>
-                      {card.pos}
-                    </span>
-                  )}
-                  {/* F7: play audio in flashcard */}
-                  <button
-                    onClick={() => playWord(card.word, card.audioUrl)}
-                    style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-muted)", fontSize: "1.1rem", marginTop: 6, display: "block", marginInline: "auto" }}
-                    title="Phát âm"
-                  >🔊</button>
-                </>
-              )}
-            </div>
-
-            {/* Card reveal / actions */}
-            {!revealed ? (
-              <button onClick={() => setRevealed(true)} className="w-full journal-btn-outline" style={{ padding: "10px 16px" }}>
-                {mode === "meaning_to_word" ? t("Xem từ", "Reveal word") : t("Xem nghĩa", "Reveal meaning")}
-              </button>
-            ) : (
-              <div className="space-y-3">
-                <div
-                  className="p-4 text-center rounded-lg"
-                  style={{ background: "rgba(196,98,45,0.05)", border: "1px solid rgba(196,98,45,0.2)" }}
-                >
+          <div style={{ padding: 24 }}>
+            {/* 3D Flip Card */}
+            <style>{`
+              .fcm-inner{transition:transform .45s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d;position:relative;}
+              .fcm-inner.flipped{transform:rotateY(180deg);}
+              .fcm-face{backface-visibility:hidden;-webkit-backface-visibility:hidden;}
+              .fcm-back{transform:rotateY(180deg);}
+            `}</style>
+            <div style={{ perspective: 1000, cursor: "pointer", userSelect: "none", marginBottom: 20 }} onClick={() => setFlipped(f => !f)}>
+              <div className={`fcm-inner${flipped ? " flipped" : ""}`} style={{ height: 200, position: "relative" }}>
+                {/* Front */}
+                <div className="fcm-face" style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, #2C1E0F 0%, #3D2A16 100%)", borderRadius: 12, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "20px 28px", gap: 6 }}>
                   {mode === "meaning_to_word" ? (
-                    /* F16: back = word + IPA */
                     <>
-                      <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "var(--text-primary)" }}>
-                        {card.word}
-                      </p>
-                      {card.ipa && <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.8rem", color: "var(--text-muted)" }}>/{card.ipa}/</p>}
+                      {card.part && <span style={{ fontSize: ".6rem", fontWeight: 700, color: "rgba(240,226,204,0.45)", letterSpacing: ".1em", textTransform: "uppercase" }}>PART {card.part}</span>}
+                      <p style={{ fontSize: "1.1rem", fontWeight: 700, color: "#f0e2cc", textAlign: "center", lineHeight: 1.4 }}>{card.vi || "—"}</p>
+                      {card.def && <p style={{ fontSize: ".72rem", color: "rgba(240,226,204,0.45)", fontStyle: "italic", textAlign: "center" }}>{card.def}</p>}
                     </>
                   ) : (
-                    /* Default: back = meaning */
                     <>
-                      {card.vi && <p className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>{card.vi}</p>}
-                      {card.def && <p className="text-xs mt-1" style={{ color: "var(--text-secondary)" }}>{card.def}</p>}
-                      {card.example && <p className="text-xs mt-1 italic" style={{ color: "var(--text-muted)" }}>"{card.example}"</p>}
+                      {card.part && <span style={{ fontSize: ".6rem", fontWeight: 700, color: "rgba(240,226,204,0.45)", letterSpacing: ".1em", textTransform: "uppercase" }}>PART {card.part}</span>}
+                      <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "2rem", fontWeight: 700, color: "#f0e2cc", textAlign: "center", lineHeight: 1.2 }}>{card.word}</p>
+                      {card.ipa && <p style={{ fontFamily: "monospace", fontSize: ".85rem", color: "rgba(240,226,204,0.5)" }}>/{card.ipa}/</p>}
+                      <button onClick={(e) => { e.stopPropagation(); playWord(card.word, card.audioUrl); }} style={{ background: "none", border: "none", cursor: "pointer", color: "rgba(240,226,204,0.55)", fontSize: "1rem", marginTop: 4 }}>🔊</button>
+                    </>
+                  )}
+                  <p style={{ fontSize: ".62rem", color: "rgba(240,226,204,0.28)", marginTop: 8 }}>{t("Nhấn để xem →", "Tap to reveal →")}</p>
+                </div>
+                {/* Back */}
+                <div className="fcm-face fcm-back" style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, #fdf8f2 0%, #f5ecdc 100%)", borderRadius: 12, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "20px 28px", gap: 8, border: "1.5px solid rgba(196,98,45,0.2)" }}>
+                  {mode === "meaning_to_word" ? (
+                    <>
+                      <p style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.8rem", fontWeight: 700, color: "#2C1E0F", textAlign: "center" }}>{card.word}</p>
+                      {card.ipa && <p style={{ fontFamily: "monospace", fontSize: ".82rem", color: "var(--text-muted)" }}>/{card.ipa}/</p>}
+                      <button onClick={(e) => { e.stopPropagation(); playWord(card.word, card.audioUrl); }} style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-muted)", fontSize: "1rem" }}>🔊</button>
+                    </>
+                  ) : (
+                    <>
+                      <p style={{ fontSize: "1.15rem", fontWeight: 700, color: "#2C1E0F", textAlign: "center", lineHeight: 1.4 }}>{card.vi || "—"}</p>
+                      {card.pos && <span style={{ fontSize: ".65rem", fontWeight: 700, padding: "2px 8px", borderRadius: 99, background: POS_COLOR[card.pos] ? `${POS_COLOR[card.pos]}22` : "var(--border)", color: POS_COLOR[card.pos] ?? "var(--text-muted)", border: `1px solid ${POS_COLOR[card.pos] ? `${POS_COLOR[card.pos]}44` : "var(--border)"}` }}>{POS_LABELS[card.pos] ?? card.pos}</span>}
+                      {card.example && <p style={{ fontSize: ".72rem", color: "var(--text-muted)", fontStyle: "italic", textAlign: "center", paddingTop: 8, borderTop: "1px solid rgba(196,98,45,0.15)", maxWidth: "90%" }}>&ldquo;{card.example}&rdquo;</p>}
                     </>
                   )}
                 </div>
-                <div className="flex gap-2">
-                  <button onClick={handleSkip} className="flex-1 journal-btn-outline" style={{ padding: "10px 16px" }}>
-                    {t("Bỏ qua", "Skip")}
-                  </button>
-                  <button onClick={handleKnow} disabled={saving} className="flex-1 journal-btn-primary" style={{ padding: "10px 16px" }}>
-                    {saving ? "…" : t("Biết rồi +2 XP", "Got it +2 XP")}
-                  </button>
-                </div>
               </div>
+            </div>
+
+            {/* ✗ / ✓ action buttons — enabled only after flip */}
+            <div style={{ display: "flex", gap: 10 }}>
+              <button
+                onClick={handleForgot}
+                disabled={saving || !flipped}
+                style={{
+                  flex: 1, padding: "11px 16px", borderRadius: 10, fontWeight: 700, fontSize: ".88rem",
+                  background: flipped ? "rgba(224,92,92,0.1)" : "var(--bg-primary)",
+                  border: `1.5px solid ${flipped ? "#e05c5c" : "var(--border)"}`,
+                  color: flipped ? "#e05c5c" : "var(--text-muted)",
+                  cursor: flipped && !saving ? "pointer" : "default",
+                  opacity: flipped ? 1 : 0.4,
+                  transition: "all .2s",
+                }}
+              >
+                ✗ {t("Chưa nhớ", "Forgot")}
+              </button>
+              <button
+                onClick={handleKnow}
+                disabled={saving || !flipped}
+                style={{
+                  flex: 1, padding: "11px 16px", borderRadius: 10, fontWeight: 700, fontSize: ".88rem",
+                  background: flipped ? "rgba(74,124,89,0.1)" : "var(--bg-primary)",
+                  border: `1.5px solid ${flipped ? "var(--accent-green)" : "var(--border)"}`,
+                  color: flipped ? "var(--accent-green)" : "var(--text-muted)",
+                  cursor: flipped && !saving ? "pointer" : "default",
+                  opacity: flipped ? 1 : 0.4,
+                  transition: "all .2s",
+                }}
+              >
+                {saving ? "…" : `✓ ${t("Nhớ rồi", "Got it")}`}
+              </button>
+            </div>
+            {!flipped && (
+              <p style={{ textAlign: "center", fontSize: ".7rem", color: "var(--text-muted)", marginTop: 8 }}>
+                {t("Lật thẻ để đánh giá", "Flip card to rate")}
+              </p>
             )}
           </div>
         )}
@@ -1402,6 +1741,8 @@ export default function VocabPage() {
   const [filterDue, setFilterDue] = useState(false);
   const [flashcardMode, setFlashcardMode] = useState<{ mode: FlashcardMode; words: VocabWord[] } | null>(null);
   const [listenWriteWords, setListenWriteWords] = useState<VocabWord[] | null>(null);
+  const [showLauncher, setShowLauncher] = useState(false);
+  const [writeWords, setWriteWords] = useState<VocabWord[] | null>(null);
   const [inlineIdx, setInlineIdx] = useState(0);
   const [inlineFlipped, setInlineFlipped] = useState(false);
 
@@ -1517,105 +1858,29 @@ export default function VocabPage() {
           </section>
         )}
 
-        {/* F12: 4-mode Flashcard Picker */}
+        {/* Flashcard launcher button */}
         {words.length > 0 && (
-          <section style={{ border: "1px solid var(--border)", background: "var(--bg-elevated)" }} className="rounded-xl p-4">
-            <p className="text-xs font-bold uppercase tracking-wider mb-3" style={{ color: "var(--text-muted)" }}>
-              {t("Chế độ luyện Flashcard", "Flashcard Modes")}
-            </p>
-            <div className="grid grid-cols-2 gap-2">
-              {/* Mode 1: SRS due */}
-              <button
-                onClick={() => setFlashcardMode({ mode: "word_to_meaning", words: dueWords })}
-                disabled={dueWords.length === 0}
-                style={{
-                  padding: ".75rem",
-                  border: `1px solid ${dueWords.length > 0 ? "rgba(196,98,45,.35)" : "var(--border)"}`,
-                  background: dueWords.length > 0 ? "rgba(196,98,45,.06)" : "var(--bg-primary)",
-                  borderRadius: 8,
-                  textAlign: "left",
-                  cursor: dueWords.length > 0 ? "pointer" : "not-allowed",
-                  opacity: dueWords.length > 0 ? 1 : 0.5,
-                }}
-              >
-                <div style={{ fontSize: ".8rem", fontWeight: 700, color: "#C4622D", marginBottom: ".2rem" }}>
-                  ① {t("Đến hạn ôn hôm nay", "Due today")}
-                </div>
-                <div style={{ fontSize: ".68rem", color: "#9A8672" }}>
-                  {dueWords.length > 0 ? `${dueWords.length} ${t("từ", "words")}` : t("Không có từ đến hạn", "No due words")}
-                </div>
-              </button>
-
-              {/* Mode 2: All words */}
-              <button
-                onClick={() => setFlashcardMode({ mode: "word_to_meaning", words })}
-                style={{
-                  padding: ".75rem",
-                  border: "1px solid var(--border)",
-                  background: "var(--bg-primary)",
-                  borderRadius: 8,
-                  textAlign: "left",
-                  cursor: "pointer",
-                }}
-              >
-                <div style={{ fontSize: ".8rem", fontWeight: 700, color: "#2C1E0F", marginBottom: ".2rem" }}>
-                  ② {t("Tất cả từ vựng", "All words")}
-                </div>
-                <div style={{ fontSize: ".68rem", color: "#9A8672" }}>
-                  {words.length} {t("từ", "words")} · từ → nghĩa
-                </div>
-              </button>
-
-              {/* Mode 3: F15 Listen-write (Parts 1–4, enabled via /api/tts) */}
-              {(() => {
-                const p14 = words.filter((w) => (w.part ?? 0) >= 1 && (w.part ?? 0) <= 4);
-                return (
-                  <button
-                    onClick={() => setListenWriteWords(p14)}
-                    disabled={p14.length === 0}
-                    style={{
-                      padding: ".75rem",
-                      border: `1px solid ${p14.length > 0 ? "rgba(40,96,168,.35)" : "var(--border)"}`,
-                      background: p14.length > 0 ? "rgba(40,96,168,.06)" : "var(--bg-primary)",
-                      borderRadius: 8,
-                      textAlign: "left",
-                      cursor: p14.length > 0 ? "pointer" : "not-allowed",
-                      opacity: p14.length > 0 ? 1 : 0.5,
-                    }}
-                  >
-                    <div style={{ fontSize: ".8rem", fontWeight: 700, color: "#2860A8", marginBottom: ".2rem" }}>
-                      ③ {t("Nghe–viết (P1–4)", "Listen & type (P1–4)")}
-                    </div>
-                    <div style={{ fontSize: ".68rem", color: "#9A8672" }}>
-                      {p14.length > 0 ? `${p14.length} ${t("từ", "words")}` : t("Chưa có từ Part 1–4", "No Part 1–4 words")}
-                    </div>
-                  </button>
-                );
-              })()}
-
-              {/* Mode 4: Meaning to word (F16) */}
-              <button
-                onClick={() => setFlashcardMode({ mode: "meaning_to_word", words: words.filter(w => (w.part ?? 0) >= 5) })}
-                disabled={words.filter(w => (w.part ?? 0) >= 5).length === 0}
-                style={{
-                  padding: ".75rem",
-                  border: "1px solid var(--border)",
-                  background: "var(--bg-primary)",
-                  borderRadius: 8,
-                  textAlign: "left",
-                  cursor: words.filter(w => (w.part ?? 0) >= 5).length > 0 ? "pointer" : "not-allowed",
-                  opacity: words.filter(w => (w.part ?? 0) >= 5).length > 0 ? 1 : 0.5,
-                }}
-              >
-                <div style={{ fontSize: ".8rem", fontWeight: 700, color: "#2C1E0F", marginBottom: ".2rem" }}>
-                  ④ {t("Nghĩa → từ (P5–7)", "Meaning → word (P5–7)")}
-                </div>
-                <div style={{ fontSize: ".68rem", color: "#9A8672" }}>
-                  {words.filter(w => (w.part ?? 0) >= 5).length} {t("từ", "words")}
-                </div>
-              </button>
-            </div>
-          </section>
+          <button
+            onClick={() => setShowLauncher(true)}
+            style={{
+              width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between",
+              padding: "13px 18px", borderRadius: 12, cursor: "pointer",
+              background: "var(--bg-elevated)", border: "1.5px solid rgba(196,98,45,0.3)",
+              transition: "all .15s",
+            }}
+          >
+            <span style={{ fontWeight: 700, fontSize: ".9rem", color: "var(--text-primary)", display: "flex", alignItems: "center", gap: 8 }}>
+              🃏 {t("Luyện Flashcard", "Flashcard practice")}
+            </span>
+            <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              {dueWords.length > 0 && (
+                <span style={{ fontSize: ".7rem", fontWeight: 800, padding: "2px 9px", borderRadius: 99, background: "var(--orange)", color: "#fff" }}>
+                  {dueWords.length} {t("đến hạn", "due")}
+                </span>
+              )}
+              <span style={{ fontSize: ".8rem", color: "var(--text-muted)" }}>▾</span>
+            </span>
+          </button>
         )}
 
         {words.length > 0 && (
@@ -1742,7 +2007,19 @@ export default function VocabPage() {
       {/* ── Sidebar ── */}
       <DifficultWordsSidebar words={words} />
 
-      {/* F12/F16: Flashcard modal (multi-mode) */}
+      {/* Flashcard launcher bottom sheet */}
+      {showLauncher && (
+        <FlashcardLauncher
+          words={words}
+          dueWords={dueWords}
+          studentCode={profile.studentCode}
+          onLaunchFlashcard={(mode, ws) => { setFlashcardMode({ mode, words: ws }); setShowLauncher(false); }}
+          onLaunchWrite={(ws) => { setWriteWords(ws); setShowLauncher(false); }}
+          onClose={() => setShowLauncher(false)}
+        />
+      )}
+
+      {/* Flashcard modal (multi-mode) */}
       {flashcardMode && (
         <FlashcardModal
           words={flashcardMode.words}
@@ -1752,7 +2029,16 @@ export default function VocabPage() {
         />
       )}
 
-      {/* F15: Listen-write modal */}
+      {/* Write practice modal */}
+      {writeWords && (
+        <WriteModal
+          words={writeWords}
+          studentCode={profile.studentCode}
+          onClose={() => setWriteWords(null)}
+        />
+      )}
+
+      {/* Listen-write modal */}
       {listenWriteWords && (
         <ListenWriteModal
           words={listenWriteWords}
