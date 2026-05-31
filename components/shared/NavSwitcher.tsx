@@ -7,11 +7,12 @@ interface NavItem {
   href: string;
   label: string;
   emoji: string;
-  roles?: string[]; // undefined = all roles
+  exact?: boolean;
+  roles?: string[];
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { href: "/",                 label: "Dictation", emoji: "🎧" },
+  { href: "/",                 label: "Dictation", emoji: "🎧", exact: true },
   { href: "/grammar",          label: "Grammar",   emoji: "🎓" },
   { href: "/reading-practice", label: "Reading",   emoji: "📖" },
   { href: "/admin",            label: "Quản lý",   emoji: "⚙️", roles: ["teacher", "admin"] },
@@ -66,7 +67,7 @@ export function NavSwitcher({
       aria-label="Main navigation"
     >
       {items.map((item) => {
-        const active = pathname.startsWith(item.href);
+        const active = item.exact ? pathname === item.href : pathname.startsWith(item.href);
         return (
           <Link
             key={item.href}

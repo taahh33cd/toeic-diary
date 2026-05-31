@@ -67,13 +67,15 @@ export default async function JournalLayout({
           ["--orange-faint" as string]: "rgba(255,122,61,0.18)",
         }}
       >
-        <div className="max-w-[1400px] mx-auto px-4 md:px-6 h-14 flex items-center justify-between gap-4">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-6 h-14 flex items-center relative">
           <Brand
             size="sm"
             href="/journal"
             label={`${profile?.displayName ?? user.email?.split("@")[0] ?? "My"}'s TOEIC Diary`}
           />
-          <NavSwitcher orientation="horizontal" />
+          <div className="absolute left-1/2 -translate-x-1/2">
+            <NavSwitcher orientation="horizontal" />
+          </div>
         </div>
       </header>
 
