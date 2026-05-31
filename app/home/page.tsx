@@ -105,9 +105,9 @@ const LISTENING_PARTS = [
 ];
 
 const CERTS = [
-  { img: "/certificates/cert-935.jpg", name: "Nguyễn Đức Lân",  score: 935, listening: 485, reading: 450, date: "09/2024", rotate: "-2.5deg"  },
-  { img: "/certificates/cert-715.png", name: "Đào Duy Thành",   score: 715, listening: 445, reading: 270, date: "11/2024", rotate:  "1.5deg"  },
-  { img: "/certificates/cert-760.png", name: "Vũ Minh Thuận",   score: 760, listening: 410, reading: 350, date: "03/2025", rotate:  "-1deg"   },
+  { img: "/certificates/cert-935.jpg", name: "Nguyễn Đức Lân",  score: 935, listening: 485, reading: 450, date: "09/2024", rotate: "-2.5deg", portrait: true  },
+  { img: "/certificates/cert-715.png", name: "Đào Duy Thành",   score: 715, listening: 445, reading: 270, date: "11/2024", rotate:  "1.5deg", portrait: false },
+  { img: "/certificates/cert-760.png", name: "Vũ Minh Thuận",   score: 760, listening: 410, reading: 350, date: "03/2025", rotate:  "-1deg",  portrait: false },
 ];
 
 // ── Page ──────────────────────────────────────────────────────────────────────
@@ -405,14 +405,14 @@ export default async function HomePage() {
             </div>
 
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(300px,100%), 1fr))", gap: "2rem" }}>
-              {CERTS.map(({ img, name, score, listening, reading, date, rotate }) => (
+              {CERTS.map(({ img, name, score, listening, reading, date, rotate, portrait }) => (
                 <div
                   key={name}
                   style={{
                     display: "flex", flexDirection: "column", alignItems: "center", gap: "1rem",
                   }}
                 >
-                  {/* Certificate image with rotation */}
+                  {/* Certificate image — portrait images rotated -90° inside a landscape container */}
                   <div
                     style={{
                       width: "100%",
@@ -422,10 +422,25 @@ export default async function HomePage() {
                       overflow: "hidden",
                       border: `3px solid #fff`,
                       transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                      // portrait: lock to landscape aspect ratio, img rotated inside
+                      ...(portrait ? { position: "relative", aspectRatio: "1.5 / 1" } : {}),
                     }}
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={img} alt={`Chứng chỉ TOEIC của ${name}`} style={{ width: "100%", display: "block" }} />
+                    <img
+                      src={img}
+                      alt={`Chứng chỉ TOEIC của ${name}`}
+                      style={portrait ? {
+                        position: "absolute",
+                        height: "155%",   // fills landscape container after -90° rotation
+                        width: "auto",
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%, -50%) rotate(-90deg)",
+                      } : {
+                        width: "100%", display: "block",
+                      }}
+                    />
                   </div>
 
                   {/* Info card */}
