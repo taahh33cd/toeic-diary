@@ -19,7 +19,15 @@ type Passage = {
   questions: Question[];
 };
 
-export function PracticeClient({ passage }: { passage: Passage }) {
+export function PracticeClient({
+  passage,
+  nextHref,
+  backHref,
+}: {
+  passage: Passage;
+  nextHref: string | null;
+  backHref: string;
+}) {
   const router = useRouter();
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [submitted, setSubmitted] = useState(false);
@@ -103,7 +111,7 @@ export function PracticeClient({ passage }: { passage: Passage }) {
       >
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
           <button
-            onClick={() => router.push(`/reading-practice/${passage.type}`)}
+            onClick={() => router.push(backHref)}
             style={{
               background: "rgba(255,255,255,0.15)",
               border: "none",
@@ -356,19 +364,12 @@ export function PracticeClient({ passage }: { passage: Passage }) {
         }}
       >
         <div style={{ display: "flex", gap: 8 }}>
-          <button
-            onClick={() => router.push(`/reading-practice/${passage.type}`)}
-            style={navBtnStyle}
-          >
+          <button onClick={() => router.push(backHref)} style={navBtnStyle}>
             ← Danh sách
           </button>
           {submitted && (
             <button
-              onClick={() => {
-                setAnswers({});
-                setSubmitted(false);
-                setActiveQ(0);
-              }}
+              onClick={() => { setAnswers({}); setSubmitted(false); setActiveQ(0); }}
               style={{ ...navBtnStyle, color: "#0056b3", borderColor: "#0056b3" }}
             >
               Làm lại
@@ -412,9 +413,33 @@ export function PracticeClient({ passage }: { passage: Passage }) {
           })}
         </div>
 
-        <div style={{ fontSize: "0.8rem", color: "#666" }}>
-          {Object.keys(answers).length}/{total} đã chọn
-        </div>
+        {submitted ? (
+          nextHref ? (
+            <button
+              onClick={() => router.push(nextHref)}
+              style={{
+                background: "#0056b3",
+                color: "white",
+                border: "none",
+                padding: "8px 20px",
+                borderRadius: 5,
+                fontWeight: "bold",
+                fontSize: "0.9rem",
+                cursor: "pointer",
+              }}
+            >
+              Bài tiếp theo →
+            </button>
+          ) : (
+            <span style={{ fontSize: "0.85rem", fontWeight: 600, color: "#28a745" }}>
+              Hoàn thành! 🎉
+            </span>
+          )
+        ) : (
+          <div style={{ fontSize: "0.8rem", color: "#666" }}>
+            {Object.keys(answers).length}/{total} đã chọn
+          </div>
+        )}
       </footer>
     </div>
   );

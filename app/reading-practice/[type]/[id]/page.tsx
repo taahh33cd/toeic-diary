@@ -4,10 +4,13 @@ import { PracticeClient } from "./PracticeClient";
 
 export default async function PracticePage({
   params,
+  searchParams,
 }: {
   params: Promise<{ type: string; id: string }>;
+  searchParams: Promise<{ cat?: string }>;
 }) {
   const { type, id } = await params;
+  const { cat } = await searchParams;
 
   const passage = await prisma.readingPassage.findUnique({
     where: { id },
@@ -15,6 +18,23 @@ export default async function PracticePage({
   });
 
   if (!passage || passage.type !== type) notFound();
+
+  // Find next passage in the same session (same type + same category if cat provided)
+  const nextPassage = await prisma.readingPassage.findFirst({
+    where: {
+      type,
+      orderIndex: { gt: passage.orderIndex },
+      ...(cat && cat !== "all" ? { category: cat } : {}),
+    },
+    orderBy: { orderIndex: "asc" },
+    select: { id: true },
+  });
+
+  const nextHref = nextPassage
+    ? `/reading-practice/${type}/${nextPassage.id}${cat ? `?cat=${encodeURIComponent(cat)}` : ""}`
+    : null;
+
+  const backHref = `/reading-practice/${type}`;
 
   return (
     <PracticeClient
@@ -31,6 +51,8 @@ export default async function PracticePage({
           explanation: q.explanation,
         })),
       }}
+      nextHref={nextHref}
+      backHref={backHref}
     />
   );
 }
