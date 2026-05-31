@@ -1,5 +1,5 @@
-{
-  "testName": "ETS 2024 Test 7",
+﻿{
+  "testName": "EST 2024 Test 7",
   "testSlug": "ets-2024-test-7",
   "orderIndex": 7,
   "examCode": "E24",
@@ -369,7 +369,7 @@
       "questionStart": 5,
       "questionEnd": 5,
       "part": 1,
-      "transcriptFull": "(A) Some balconies are decorated with banners.\n(B) Some signs have been posted in front of a building.\n(C) A café has been set up on a street corner.\n(D) A tour group is standing outside a building.",
+      "transcriptFull": "(A) Some balconies are decorated with banners.\n(B) Some signs have been posted in front of a building.\n(C) A cafÃ© has been set up on a street corner.\n(D) A tour group is standing outside a building.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -414,7 +414,7 @@
         {
           "orderIndex": 2,
           "speaker": null,
-          "content": "A café has been set up on a street corner.",
+          "content": "A cafÃ© has been set up on a street corner.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": "C",
@@ -794,7 +794,7 @@
       "questionStart": 10,
       "questionEnd": 10,
       "part": 2,
-      "transcriptFull": "How should I set up this projector?\n(A) The storage area downstairs.\n(B) A new project code.\n(C) There’s a manual in the drawer.",
+      "transcriptFull": "How should I set up this projector?\n(A) The storage area downstairs.\n(B) A new project code.\n(C) Thereâ€™s a manual in the drawer.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -843,7 +843,7 @@
         {
           "orderIndex": 3,
           "speaker": null,
-          "content": "There’s a manual in the drawer.",
+          "content": "Thereâ€™s a manual in the drawer.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": "C",
@@ -869,7 +869,7 @@
       "questionStart": 11,
       "questionEnd": 11,
       "part": 2,
-      "transcriptFull": "Who has already received the promotion notice?\n(A) I received it yesterday.\n(B) It’s an invitation to the party.\n(C) Polina gave a speech.",
+      "transcriptFull": "Who has already received the promotion notice?\n(A) I received it yesterday.\n(B) Itâ€™s an invitation to the party.\n(C) Polina gave a speech.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -909,7 +909,7 @@
         {
           "orderIndex": 2,
           "speaker": null,
-          "content": "It’s an invitation to the party.",
+          "content": "Itâ€™s an invitation to the party.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": "B",
@@ -1577,7 +1577,7 @@
       "questionStart": 19,
       "questionEnd": 19,
       "part": 2,
-      "transcriptFull": "How long does the online course take?\n(A) It finishes in a few hours.\n(B) It’s forty dollars a month.\n(C) I’ll go with the blue jacket.",
+      "transcriptFull": "How long does the online course take?\n(A) It finishes in a few hours.\n(B) Itâ€™s forty dollars a month.\n(C) Iâ€™ll go with the blue jacket.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -1617,7 +1617,7 @@
         {
           "orderIndex": 2,
           "speaker": null,
-          "content": "It’s forty dollars a month.",
+          "content": "Itâ€™s forty dollars a month.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": "B",
@@ -1637,7 +1637,7 @@
         {
           "orderIndex": 3,
           "speaker": null,
-          "content": "I’ll go with the blue jacket.",
+          "content": "Iâ€™ll go with the blue jacket.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": "C",
@@ -1749,7 +1749,7 @@
       "questionStart": 21,
       "questionEnd": 21,
       "part": 2,
-      "transcriptFull": "When can I pick up the tickets for the performance?\n(A) You should be able to get them by the end of the week.\n(B) He’s a famous director.\n(C) It’s twenty-five euros.",
+      "transcriptFull": "When can I pick up the tickets for the performance?\n(A) You should be able to get them by the end of the week.\n(B) Heâ€™s a famous director.\n(C) Itâ€™s twenty-five euros.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -1789,7 +1789,7 @@
         {
           "orderIndex": 2,
           "speaker": null,
-          "content": "He’s a famous director.",
+          "content": "Heâ€™s a famous director.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": "B",
@@ -1804,7 +1804,7 @@
         {
           "orderIndex": 3,
           "speaker": null,
-          "content": "It’s twenty-five euros.",
+          "content": "Itâ€™s twenty-five euros.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": "C",
@@ -2355,7 +2355,7 @@
       "questionStart": 28,
       "questionEnd": 28,
       "part": 2,
-      "transcriptFull": "When will the testing for the new mobile app be finished?\n(A) No, it’s just an old laptop model.\n(B) It's almost done.\n(C) About a two-hour drive from here.",
+      "transcriptFull": "When will the testing for the new mobile app be finished?\n(A) No, itâ€™s just an old laptop model.\n(B) It's almost done.\n(C) About a two-hour drive from here.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -2380,7 +2380,7 @@
         {
           "orderIndex": 1,
           "speaker": null,
-          "content": "No, it’s just an old laptop model.",
+          "content": "No, itâ€™s just an old laptop model.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": "A",
@@ -2608,7 +2608,7 @@
       "questionStart": 31,
       "questionEnd": 31,
       "part": 2,
-      "transcriptFull": "Which days can you work, Thursday or Friday?\n(A) I have mandatory training on Friday.\n(B) Yes, it was a good show.\n(C) It’s a one-day schedule.",
+      "transcriptFull": "Which days can you work, Thursday or Friday?\n(A) I have mandatory training on Friday.\n(B) Yes, it was a good show.\n(C) Itâ€™s a one-day schedule.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -2657,7 +2657,7 @@
         {
           "orderIndex": 3,
           "speaker": null,
-          "content": "It’s a one-day schedule.",
+          "content": "Itâ€™s a one-day schedule.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": "C",
@@ -2684,7 +2684,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 32–34",
+      "title": "Questions 32â€“34",
       "questionStart": 32,
       "questionEnd": 34,
       "part": 3,
@@ -2876,7 +2876,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 35–37",
+      "title": "Questions 35â€“37",
       "questionStart": 35,
       "questionEnd": 37,
       "part": 3,
@@ -3029,11 +3029,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 38–40",
+      "title": "Questions 38â€“40",
       "questionStart": 38,
       "questionEnd": 40,
       "part": 3,
-      "transcriptFull": "M-CN: Hi, everybody.\nM-CN: Are we ready for the sales meeting this morning?\nW-BR: Yes, I've finished putting together my presentation.\nM-AU: The meeting's in the conference room, right?\nM-CN: No—there's been a last-minute change.\nM-CN: The conference room is being used by the IT department all day to interview job candidates.\nW-BR: Oh no!\nW-BR: My presentation requires the use of a television.\nM-CN: Don't worry.\nM-CN: We're meeting in the boardroom.\nM-CN: There's a smart TV there.\nM-AU: Is that room large enough for our team?\nM-CN: Yes, we won't have a problem.",
+      "transcriptFull": "M-CN: Hi, everybody.\nM-CN: Are we ready for the sales meeting this morning?\nW-BR: Yes, I've finished putting together my presentation.\nM-AU: The meeting's in the conference room, right?\nM-CN: Noâ€”there's been a last-minute change.\nM-CN: The conference room is being used by the IT department all day to interview job candidates.\nW-BR: Oh no!\nW-BR: My presentation requires the use of a television.\nM-CN: Don't worry.\nM-CN: We're meeting in the boardroom.\nM-CN: There's a smart TV there.\nM-AU: Is that room large enough for our team?\nM-CN: Yes, we won't have a problem.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -3107,7 +3107,7 @@
         {
           "orderIndex": 4,
           "speaker": "M-CN",
-          "content": "No—there's been a last-minute change.",
+          "content": "Noâ€”there's been a last-minute change.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3252,11 +3252,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 41–43",
+      "title": "Questions 41â€“43",
       "questionStart": 41,
       "questionEnd": 43,
       "part": 3,
-      "transcriptFull": "M-CN: Did you see the road construction sign at the corner?\nM-CN: All traffic is being directed away from our street—no one can come this way!\nW-AM: I know!\nW-AM: How will customers visit our store to make copies and pick up photo prints?\nM-CN: I'm afraid they'll have to park on another street.\nM-CN: They can still access the store on foot.\nW-AM: OK.\nW-AM: I'll update our social media page to direct our customers.",
+      "transcriptFull": "M-CN: Did you see the road construction sign at the corner?\nM-CN: All traffic is being directed away from our streetâ€”no one can come this way!\nW-AM: I know!\nW-AM: How will customers visit our store to make copies and pick up photo prints?\nM-CN: I'm afraid they'll have to park on another street.\nM-CN: They can still access the store on foot.\nW-AM: OK.\nW-AM: I'll update our social media page to direct our customers.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -3281,7 +3281,7 @@
         {
           "orderIndex": 1,
           "speaker": "M-CN",
-          "content": "All traffic is being directed away from our street—no one can come this way!",
+          "content": "All traffic is being directed away from our streetâ€”no one can come this way!",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3406,7 +3406,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 44–46",
+      "title": "Questions 44â€“46",
       "questionStart": 44,
       "questionEnd": 46,
       "part": 3,
@@ -3555,7 +3555,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 47–49",
+      "title": "Questions 47â€“49",
       "questionStart": 47,
       "questionEnd": 49,
       "part": 3,
@@ -3730,7 +3730,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 50–52",
+      "title": "Questions 50â€“52",
       "questionStart": 50,
       "questionEnd": 52,
       "part": 3,
@@ -3934,11 +3934,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 53–55",
+      "title": "Questions 53â€“55",
       "questionStart": 53,
       "questionEnd": 55,
       "part": 3,
-      "transcriptFull": "W-BR: Wow.\nW-BR: I didn't expect this restaurant to be so popular—look at all the people waiting to be seated.\nW-AM: I know.\nW-AM: It's brand-new—I didn't think anyone knew about it yet.\nW-AM: Looks like we won't be able to get a table for a while.\nW-BR: Well, we don't have much time.\nW-BR: We need to drive back to the office to train our interns at one o'clock.\nW-BR: Should we go somewhere else?\nW-AM: Let's see if they offer takeout—we can just order something to go.\nW-BR: Good idea.\nW-BR: I'm looking forward to trying the spicy noodles!",
+      "transcriptFull": "W-BR: Wow.\nW-BR: I didn't expect this restaurant to be so popularâ€”look at all the people waiting to be seated.\nW-AM: I know.\nW-AM: It's brand-newâ€”I didn't think anyone knew about it yet.\nW-AM: Looks like we won't be able to get a table for a while.\nW-BR: Well, we don't have much time.\nW-BR: We need to drive back to the office to train our interns at one o'clock.\nW-BR: Should we go somewhere else?\nW-AM: Let's see if they offer takeoutâ€”we can just order something to go.\nW-BR: Good idea.\nW-BR: I'm looking forward to trying the spicy noodles!",
       "sentences": [
         {
           "orderIndex": 0,
@@ -3952,7 +3952,7 @@
         {
           "orderIndex": 1,
           "speaker": "W-BR",
-          "content": "I didn't expect this restaurant to be so popular—look at all the people waiting to be seated.",
+          "content": "I didn't expect this restaurant to be so popularâ€”look at all the people waiting to be seated.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3981,7 +3981,7 @@
         {
           "orderIndex": 3,
           "speaker": "W-AM",
-          "content": "It's brand-new—I didn't think anyone knew about it yet.",
+          "content": "It's brand-newâ€”I didn't think anyone knew about it yet.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4071,7 +4071,7 @@
         {
           "orderIndex": 8,
           "speaker": "W-AM",
-          "content": "Let's see if they offer takeout—we can just order something to go.",
+          "content": "Let's see if they offer takeoutâ€”we can just order something to go.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4127,7 +4127,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 56–58",
+      "title": "Questions 56â€“58",
       "questionStart": 56,
       "questionEnd": 58,
       "part": 3,
@@ -4296,7 +4296,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 59–61",
+      "title": "Questions 59â€“61",
       "questionStart": 59,
       "questionEnd": 61,
       "part": 3,
@@ -4485,7 +4485,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 62–64",
+      "title": "Questions 62â€“64",
       "questionStart": 62,
       "questionEnd": 64,
       "part": 3,
@@ -4699,11 +4699,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 65–67",
+      "title": "Questions 65â€“67",
       "questionStart": 65,
       "questionEnd": 67,
       "part": 3,
-      "transcriptFull": "W-BR: Adam, our Kyoto office just called.\nW-BR: Our investors want me to present a project update there as soon as possible.\nW-BR: Can you get me on the first flight to Kyoto tomorrow morning?\nM-CN: Let me check.\nM-CN: Per company policy, we can only use Blue Jet airlines for international travel—and unfortunately, that flight's not the first one out tomorrow.\nW-BR: That will have to do, thanks.\nW-BR: And I'll need a ride to the airport too.\nW-BR: Can you arrange that?\nM-CN: Sure thing.\nM-CN: I'll finalize the reservations and e-mail you the details.",
+      "transcriptFull": "W-BR: Adam, our Kyoto office just called.\nW-BR: Our investors want me to present a project update there as soon as possible.\nW-BR: Can you get me on the first flight to Kyoto tomorrow morning?\nM-CN: Let me check.\nM-CN: Per company policy, we can only use Blue Jet airlines for international travelâ€”and unfortunately, that flight's not the first one out tomorrow.\nW-BR: That will have to do, thanks.\nW-BR: And I'll need a ride to the airport too.\nW-BR: Can you arrange that?\nM-CN: Sure thing.\nM-CN: I'll finalize the reservations and e-mail you the details.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -4772,7 +4772,7 @@
         {
           "orderIndex": 4,
           "speaker": "M-CN",
-          "content": "Per company policy, we can only use Blue Jet airlines for international travel—and unfortunately, that flight's not the first one out tomorrow.",
+          "content": "Per company policy, we can only use Blue Jet airlines for international travelâ€”and unfortunately, that flight's not the first one out tomorrow.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4872,7 +4872,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 68–70",
+      "title": "Questions 68â€“70",
       "questionStart": 68,
       "questionEnd": 70,
       "part": 3,
@@ -5067,7 +5067,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 71–73",
+      "title": "Questions 71â€“73",
       "questionStart": 71,
       "questionEnd": 73,
       "part": 4,
@@ -5158,7 +5158,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 74–76",
+      "title": "Questions 74â€“76",
       "questionStart": 74,
       "questionEnd": 76,
       "part": 4,
@@ -5309,11 +5309,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 77–79",
+      "title": "Questions 77â€“79",
       "questionStart": 77,
       "questionEnd": 79,
       "part": 4,
-      "transcriptFull": "My name is Raul Phillips.\nI know it’s short notice, but I am a patient at your clinic and would like to see a doctor today.\nI ran in a local half-marathon yesterday, and well, I didn't feel any pain at the time, but I think I sprained my ankle during the race.\nIt has been hurting since after the race, and I might need an X-ray.\nI will be conducting some job interviews this morning, so I might not be able to answer the phone, but please leave a message.",
+      "transcriptFull": "My name is Raul Phillips.\nI know itâ€™s short notice, but I am a patient at your clinic and would like to see a doctor today.\nI ran in a local half-marathon yesterday, and well, I didn't feel any pain at the time, but I think I sprained my ankle during the race.\nIt has been hurting since after the race, and I might need an X-ray.\nI will be conducting some job interviews this morning, so I might not be able to answer the phone, but please leave a message.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -5333,7 +5333,7 @@
         {
           "orderIndex": 1,
           "speaker": null,
-          "content": "I know it’s short notice, but I am a patient at your clinic and would like to see a doctor today.",
+          "content": "I know itâ€™s short notice, but I am a patient at your clinic and would like to see a doctor today.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5420,11 +5420,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 80–82",
+      "title": "Questions 80â€“82",
       "questionStart": 80,
       "questionEnd": 82,
       "part": 4,
-      "transcriptFull": "This is Giovanni from Salazar Market.\nWe are looking forward to selling your breakfast cereal in our store.\nOur customers have been asking for your brand for several months now.\nI will send you a contract via e-mail later today.\nYou can sign it and send it back to me when it’s convenient for you.\nIt states that we will display your cereals on an end-cap at the end of an aisle, as you requested.\nYou should make sure we have enough boxes in the store to create a nice display and keep the shelves well-stocked for you.",
+      "transcriptFull": "This is Giovanni from Salazar Market.\nWe are looking forward to selling your breakfast cereal in our store.\nOur customers have been asking for your brand for several months now.\nI will send you a contract via e-mail later today.\nYou can sign it and send it back to me when itâ€™s convenient for you.\nIt states that we will display your cereals on an end-cap at the end of an aisle, as you requested.\nYou should make sure we have enough boxes in the store to create a nice display and keep the shelves well-stocked for you.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -5504,7 +5504,7 @@
         {
           "orderIndex": 4,
           "speaker": null,
-          "content": "You can sign it and send it back to me when it’s convenient for you.",
+          "content": "You can sign it and send it back to me when itâ€™s convenient for you.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5571,7 +5571,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 83–85",
+      "title": "Questions 83â€“85",
       "questionStart": 83,
       "questionEnd": 85,
       "part": 4,
@@ -5687,11 +5687,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 86–88",
+      "title": "Questions 86â€“88",
       "questionStart": 86,
       "questionEnd": 88,
       "part": 4,
-      "transcriptFull": "Thank you for coming to the community orchestra performance tonight.\nM.\nUnfortunately, some of the microphones aren't working.\nWhile our sound technicians fix the problem, I’d like to tell you about an opportunity to support the theater.\nYou may have noticed that all of our ushers are volunteers, and we are always looking for more.\nUshers take tickets, help guests find their seats, and can then, of course, enjoy the concert for free.\nIf you are interested, check page four of your program booklet for more details.",
+      "transcriptFull": "Thank you for coming to the community orchestra performance tonight.\nM.\nUnfortunately, some of the microphones aren't working.\nWhile our sound technicians fix the problem, Iâ€™d like to tell you about an opportunity to support the theater.\nYou may have noticed that all of our ushers are volunteers, and we are always looking for more.\nUshers take tickets, help guests find their seats, and can then, of course, enjoy the concert for free.\nIf you are interested, check page four of your program booklet for more details.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -5745,7 +5745,7 @@
         {
           "orderIndex": 3,
           "speaker": null,
-          "content": "While our sound technicians fix the problem, I’d like to tell you about an opportunity to support the theater.",
+          "content": "While our sound technicians fix the problem, Iâ€™d like to tell you about an opportunity to support the theater.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5832,7 +5832,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 89–91",
+      "title": "Questions 89â€“91",
       "questionStart": 89,
       "questionEnd": 91,
       "part": 4,
@@ -5932,16 +5932,16 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 92–94",
+      "title": "Questions 92â€“94",
       "questionStart": 92,
       "questionEnd": 94,
       "part": 4,
-      "transcriptFull": "In this online session, I’d like to discuss how small businesses, like the ones represented here today, can be more energy-efficient.\nWhat is your company doing to reduce its carbon footprint?\nThere is a lot of combined knowledge in this meeting.\nLet’s use it.\nPlease send your questions and comments in the chat.\nBy the way, this session is being recorded so that it will be available to all participants after the meeting.",
+      "transcriptFull": "In this online session, Iâ€™d like to discuss how small businesses, like the ones represented here today, can be more energy-efficient.\nWhat is your company doing to reduce its carbon footprint?\nThere is a lot of combined knowledge in this meeting.\nLetâ€™s use it.\nPlease send your questions and comments in the chat.\nBy the way, this session is being recorded so that it will be available to all participants after the meeting.",
       "sentences": [
         {
           "orderIndex": 0,
           "speaker": null,
-          "content": "In this online session, I’d like to discuss how small businesses, like the ones represented here today, can be more energy-efficient.",
+          "content": "In this online session, Iâ€™d like to discuss how small businesses, like the ones represented here today, can be more energy-efficient.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -6001,7 +6001,7 @@
         {
           "orderIndex": 3,
           "speaker": null,
-          "content": "Let’s use it.",
+          "content": "Letâ€™s use it.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -6057,11 +6057,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 95–97",
+      "title": "Questions 95â€“97",
       "questionStart": 95,
       "questionEnd": 97,
       "part": 4,
-      "transcriptFull": "Thanks for coming to this weekly briefing.\nAs you know, Joe's Trucking Company takes safety very seriously, and I'm glad all of our drivers can participate today.\nYasushi, you have been assigned to the car carrier, so please be sure to follow the safety checklist, especially the part about securely fastening all tie-downs.\nJunko, I'm concerned that the lumber you are transporting is classified as oversized.\nI think the company will need to obtain a permit for you—we'll talk about that after the meeting.",
+      "transcriptFull": "Thanks for coming to this weekly briefing.\nAs you know, Joe's Trucking Company takes safety very seriously, and I'm glad all of our drivers can participate today.\nYasushi, you have been assigned to the car carrier, so please be sure to follow the safety checklist, especially the part about securely fastening all tie-downs.\nJunko, I'm concerned that the lumber you are transporting is classified as oversized.\nI think the company will need to obtain a permit for youâ€”we'll talk about that after the meeting.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -6146,7 +6146,7 @@
         {
           "orderIndex": 4,
           "speaker": null,
-          "content": "I think the company will need to obtain a permit for you—we'll talk about that after the meeting.",
+          "content": "I think the company will need to obtain a permit for youâ€”we'll talk about that after the meeting.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -6173,7 +6173,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 98–100",
+      "title": "Questions 98â€“100",
       "questionStart": 98,
       "questionEnd": 100,
       "part": 4,

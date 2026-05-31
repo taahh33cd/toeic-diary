@@ -68,16 +68,16 @@ async function upsertTestSet(
     return existing.id;
   }
 
-  // Find or create the ETS 2026 series (default series for existing import pipeline)
+  // Find or create the EST 2026 series (default series for existing import pipeline)
   let series = await prisma.testSeries.findUnique({ where: { slug: "ets-2026" } });
   if (!series) {
     series = await prisma.testSeries.create({
       data: {
-        name: "ETS 2026",
+        name: "EST 2026",
         slug: "ets-2026",
-        publisher: "ETS",
+        publisher: "EST",
         year: 2026,
-        description: "Bộ đề TOEIC ETS 2026 — 10 đề thi thử chuẩn format",
+        description: "Bộ đề TOEIC EST 2026 — 10 đề thi thử chuẩn format",
         color: "from-indigo-500 to-purple-600",
         icon: "📘",
         orderIndex: 1,

@@ -418,7 +418,7 @@ function ToeicScoresSection({ student, code }: { student: Student; code: string 
           <div className="rounded-xl p-4 space-y-3" style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}>
             <div className="grid grid-cols-2 gap-2">
               <InputRow label="TÊN ĐỀ THI">
-                <Input value={form.testname} onChange={(v) => setForm((f) => ({ ...f, testname: v }))} placeholder="ETS 2026 Test 1" />
+                <Input value={form.testname} onChange={(v) => setForm((f) => ({ ...f, testname: v }))} placeholder="EST 2026 Test 1" />
               </InputRow>
               <InputRow label="NGÀY THI">
                 <Input value={form.date} onChange={(v) => setForm((f) => ({ ...f, date: v }))} type="date" />

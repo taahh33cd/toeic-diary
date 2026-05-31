@@ -240,7 +240,7 @@ function AddSessionForm({ studentCode }: { studentCode: string }) {
         </div>
         <div>
           <label className="journal-lbl">Tên đề</label>
-          <input type="text" placeholder="ETS2024 Test 10 / Part 4 Test 5…" value={testName}
+          <input type="text" placeholder="EST2024 Test 10 / Part 4 Test 5…" value={testName}
             onChange={e => setTestName(e.target.value)} className="journal-input" style={inputSt} />
         </div>
       </div>

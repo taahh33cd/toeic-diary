@@ -118,7 +118,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
               </div>
               <div>
                 {testSet.year && (
-                  <span className="text-xs font-semibold text-white/80 uppercase tracking-wider">ETS {testSet.year}</span>
+                  <span className="text-xs font-semibold text-white/80 uppercase tracking-wider">EST {testSet.year}</span>
                 )}
                 <h2 className="text-2xl font-bold text-white leading-tight">{testSet.name}</h2>
               </div>

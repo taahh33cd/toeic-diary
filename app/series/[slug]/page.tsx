@@ -180,7 +180,7 @@ export default async function SeriesPage({ params }: { params: Promise<{ slug: s
                   {/* Title */}
                   <h3 className="text-base font-semibold text-[var(--text-primary)] mb-1">{test.name}</h3>
                   <p className="text-xs text-[var(--text-muted)] mb-4">
-                    {test.year && `ETS ${test.year} • `}200 Questions • 120 Mins
+                    {test.year && `EST ${test.year} • `}200 Questions • 120 Mins
                   </p>
 
                   {/* Part chips */}

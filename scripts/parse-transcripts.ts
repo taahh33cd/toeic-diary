@@ -529,7 +529,7 @@ function main() {
   const testNum = parseInt(testCode.replace(/\D/g, ""), 10) || 1;
   const yearSuffix = examCode.match(/\d+/)?.[0] ?? "26";
   const year = yearSuffix.length === 2 ? "20" + yearSuffix : yearSuffix;
-  const testName = `ETS ${year} Test ${testNum}`;
+  const testName = `EST ${year} Test ${testNum}`;
   const testSlug = `ets-${year}-test-${testNum}`;
 
   console.log(`\nParsing ${testName} (${examCode}-${testCode})`);

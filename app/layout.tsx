@@ -67,8 +67,8 @@ export const metadata: Metadata = {
     template: "%s | TOEIC Dictation Master",
   },
   description:
-    "Luyện nghe chép chính tả TOEIC chuyên sâu — 3 levels, AI feedback, bộ đề ETS 2026",
-  keywords: ["TOEIC", "dictation", "luyện nghe", "ETS 2026", "listening"],
+    "Luyện nghe chép chính tả TOEIC chuyên sâu — 3 levels, AI feedback, bộ đề EST 2026",
+  keywords: ["TOEIC", "dictation", "luyện nghe", "EST 2026", "listening"],
   robots: { index: true, follow: true },
   manifest: "/manifest.json",
   icons: {

@@ -396,7 +396,7 @@ function AddScoreForm({ studentCode }: { studentCode: string }) {
               style={inpStyle}
               value={testname}
               onChange={(e) => setTestname(e.target.value)}
-              placeholder="ETS 2024 Test 1"
+              placeholder="EST 2024 Test 1"
             />
           </div>
         </form>

@@ -86,7 +86,7 @@ function StudentScores({ code }: { code: string }) {
             <label className="text-xs mb-1 block" style={{ color: "var(--text-muted)" }}>Tên đề thi</label>
             <input
               type="text"
-              placeholder="ETS 2024 Test 1"
+              placeholder="EST 2024 Test 1"
               value={form.testname}
               onChange={(e) => setForm((f) => ({ ...f, testname: e.target.value }))}
               className="w-full px-3 py-2 rounded-lg text-sm border outline-none"

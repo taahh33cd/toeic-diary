@@ -1,5 +1,5 @@
-{
-  "testName": "ETS 2024 Test 6",
+﻿{
+  "testName": "EST 2024 Test 6",
   "testSlug": "ets-2024-test-6",
   "orderIndex": 6,
   "examCode": "E24",
@@ -722,7 +722,7 @@
       "questionStart": 9,
       "questionEnd": 9,
       "part": 2,
-      "transcriptFull": "What's the best way to contact you?\n(A) On my mobile phone.\n(B) No, I have to wear glasses.\n(C) This résumé is better.",
+      "transcriptFull": "What's the best way to contact you?\n(A) On my mobile phone.\n(B) No, I have to wear glasses.\n(C) This rÃ©sumÃ© is better.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -777,7 +777,7 @@
         {
           "orderIndex": 3,
           "speaker": null,
-          "content": "This résumé is better.",
+          "content": "This rÃ©sumÃ© is better.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": "C",
@@ -2638,11 +2638,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 32–34",
+      "title": "Questions 32â€“34",
       "questionStart": 32,
       "questionEnd": 34,
       "part": 3,
-      "transcriptFull": "M-CN: The renovations we're planning for the theater are long overdue.\nW-BR: I'm glad we have time between productions so we can get the work done.\nM-CN: I agree—and even though it's great that our latest musical production has had such a successful run, we can all use the break.\nW-BR: Plus, it gives us time to focus on next month's fund-raiser.\nM-CN: Hopefully we'll raise enough money at that event to replace the old lighting system too.",
+      "transcriptFull": "M-CN: The renovations we're planning for the theater are long overdue.\nW-BR: I'm glad we have time between productions so we can get the work done.\nM-CN: I agreeâ€”and even though it's great that our latest musical production has had such a successful run, we can all use the break.\nW-BR: Plus, it gives us time to focus on next month's fund-raiser.\nM-CN: Hopefully we'll raise enough money at that event to replace the old lighting system too.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -2687,7 +2687,7 @@
         {
           "orderIndex": 2,
           "speaker": "M-CN",
-          "content": "I agree—and even though it's great that our latest musical production has had such a successful run, we can all use the break.",
+          "content": "I agreeâ€”and even though it's great that our latest musical production has had such a successful run, we can all use the break.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -2754,7 +2754,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 35–37",
+      "title": "Questions 35â€“37",
       "questionStart": 35,
       "questionEnd": 37,
       "part": 3,
@@ -2992,7 +2992,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 38–40",
+      "title": "Questions 38â€“40",
       "questionStart": 38,
       "questionEnd": 40,
       "part": 3,
@@ -3145,7 +3145,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 41–43",
+      "title": "Questions 41â€“43",
       "questionStart": 41,
       "questionEnd": 43,
       "part": 3,
@@ -3330,7 +3330,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 44–46",
+      "title": "Questions 44â€“46",
       "questionStart": 44,
       "questionEnd": 46,
       "part": 3,
@@ -3470,7 +3470,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 47–49",
+      "title": "Questions 47â€“49",
       "questionStart": 47,
       "questionEnd": 49,
       "part": 3,
@@ -3656,7 +3656,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 50–52",
+      "title": "Questions 50â€“52",
       "questionStart": 50,
       "questionEnd": 52,
       "part": 3,
@@ -3873,7 +3873,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 53–55",
+      "title": "Questions 53â€“55",
       "questionStart": 53,
       "questionEnd": 55,
       "part": 3,
@@ -4068,7 +4068,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 56–58",
+      "title": "Questions 56â€“58",
       "questionStart": 56,
       "questionEnd": 58,
       "part": 3,
@@ -4206,11 +4206,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 59–61",
+      "title": "Questions 59â€“61",
       "questionStart": 59,
       "questionEnd": 61,
       "part": 3,
-      "transcriptFull": "M-AU: Kriti and Melissa, I reviewed the results of the soil tests yesterday, and most of the sports fields we manage have healthy soil.\nM-AU: But unfortunately, the baseball field on Smith Drive has elevated levels of potassium.\nW-AM: The grass on that field is so brown and weedy.\nW-AM: Now we know why.\nW-BR: We'll need to order some special fertilizer to put on it.\nW-BR: Do you think we need approval to do that?\nM-AU: Yes—since it's an unforeseen expense, it has to be approved by the acquisitions department.\nM-AU: Melissa, do you have time to prepare a cost estimate?\nW-BR: Sure.\nW-BR: It won't take long.\nW-BR: I'll send it by lunchtime, and I'll cc you both on the e-mail.",
+      "transcriptFull": "M-AU: Kriti and Melissa, I reviewed the results of the soil tests yesterday, and most of the sports fields we manage have healthy soil.\nM-AU: But unfortunately, the baseball field on Smith Drive has elevated levels of potassium.\nW-AM: The grass on that field is so brown and weedy.\nW-AM: Now we know why.\nW-BR: We'll need to order some special fertilizer to put on it.\nW-BR: Do you think we need approval to do that?\nM-AU: Yesâ€”since it's an unforeseen expense, it has to be approved by the acquisitions department.\nM-AU: Melissa, do you have time to prepare a cost estimate?\nW-BR: Sure.\nW-BR: It won't take long.\nW-BR: I'll send it by lunchtime, and I'll cc you both on the e-mail.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -4319,7 +4319,7 @@
         {
           "orderIndex": 6,
           "speaker": "M-AU",
-          "content": "Yes—since it's an unforeseen expense, it has to be approved by the acquisitions department.",
+          "content": "Yesâ€”since it's an unforeseen expense, it has to be approved by the acquisitions department.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4410,7 +4410,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 62–64",
+      "title": "Questions 62â€“64",
       "questionStart": 62,
       "questionEnd": 64,
       "part": 3,
@@ -4564,7 +4564,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 65–67",
+      "title": "Questions 65â€“67",
       "questionStart": 65,
       "questionEnd": 67,
       "part": 3,
@@ -4776,7 +4776,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 68–70",
+      "title": "Questions 68â€“70",
       "questionStart": 68,
       "questionEnd": 70,
       "part": 3,
@@ -4925,16 +4925,16 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 71–73",
+      "title": "Questions 71â€“73",
       "questionStart": 71,
       "questionEnd": 73,
       "part": 4,
-      "transcriptFull": "Hi, everyone—big news.\nOur clinic is getting a check-in kiosk.\nWhat this means is that patients will be able to check themselves in to their medical appointments by clicking through some buttons in the kiosk.\nYou will no longer have to do it for them.\nI know all of you have been very busy answering phones, scheduling appointments, and checking patients in, so hopefully, this helps to make your work easier.\nWe'll have a very short training session next Tuesday on how the check-in kiosk works.",
+      "transcriptFull": "Hi, everyoneâ€”big news.\nOur clinic is getting a check-in kiosk.\nWhat this means is that patients will be able to check themselves in to their medical appointments by clicking through some buttons in the kiosk.\nYou will no longer have to do it for them.\nI know all of you have been very busy answering phones, scheduling appointments, and checking patients in, so hopefully, this helps to make your work easier.\nWe'll have a very short training session next Tuesday on how the check-in kiosk works.",
       "sentences": [
         {
           "orderIndex": 0,
           "speaker": null,
-          "content": "Hi, everyone—big news.",
+          "content": "Hi, everyoneâ€”big news.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5051,7 +5051,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 74–76",
+      "title": "Questions 74â€“76",
       "questionStart": 74,
       "questionEnd": 76,
       "part": 4,
@@ -5167,7 +5167,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 77–79",
+      "title": "Questions 77â€“79",
       "questionStart": 77,
       "questionEnd": 79,
       "part": 4,
@@ -5301,7 +5301,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 80–82",
+      "title": "Questions 80â€“82",
       "questionStart": 80,
       "questionEnd": 82,
       "part": 4,
@@ -5457,11 +5457,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 83–85",
+      "title": "Questions 83â€“85",
       "questionStart": 83,
       "questionEnd": 85,
       "part": 4,
-      "transcriptFull": "Hi.\nThis is So-Jin—in Apartment 2A.\nI just moved into the complex last month.\nI'm calling about a problem with my kitchen sink.\nThe drain is completely clogged, so the water won't go down.\nI've tried a few different drain cleaning products, but they didn't help.\nI think I've done all I can do.\nI'm at work now, but I'll be home this afternoon.\nCould you call me back, so we can arrange a time to meet there?\nThanks.",
+      "transcriptFull": "Hi.\nThis is So-Jinâ€”in Apartment 2A.\nI just moved into the complex last month.\nI'm calling about a problem with my kitchen sink.\nThe drain is completely clogged, so the water won't go down.\nI've tried a few different drain cleaning products, but they didn't help.\nI think I've done all I can do.\nI'm at work now, but I'll be home this afternoon.\nCould you call me back, so we can arrange a time to meet there?\nThanks.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -5475,7 +5475,7 @@
         {
           "orderIndex": 1,
           "speaker": null,
-          "content": "This is So-Jin—in Apartment 2A.",
+          "content": "This is So-Jinâ€”in Apartment 2A.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5640,7 +5640,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 86–88",
+      "title": "Questions 86â€“88",
       "questionStart": 86,
       "questionEnd": 88,
       "part": 4,
@@ -5796,7 +5796,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 89–91",
+      "title": "Questions 89â€“91",
       "questionStart": 89,
       "questionEnd": 91,
       "part": 4,
@@ -5972,7 +5972,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 92–94",
+      "title": "Questions 92â€“94",
       "questionStart": 92,
       "questionEnd": 94,
       "part": 4,
@@ -6143,7 +6143,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 95–97",
+      "title": "Questions 95â€“97",
       "questionStart": 95,
       "questionEnd": 97,
       "part": 4,
@@ -6323,7 +6323,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 98–100",
+      "title": "Questions 98â€“100",
       "questionStart": 98,
       "questionEnd": 100,
       "part": 4,

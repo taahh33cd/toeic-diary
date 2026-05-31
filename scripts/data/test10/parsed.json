@@ -1,5 +1,5 @@
-{
-  "testName": "ETS 2024 Test 10",
+﻿{
+  "testName": "EST 2024 Test 10",
   "testSlug": "ets-2024-test-10",
   "orderIndex": 10,
   "examCode": "E24",
@@ -2018,12 +2018,12 @@
       "questionStart": 25,
       "questionEnd": 25,
       "part": 2,
-      "transcriptFull": "Why isn't Ms. Pérez here yet?\n(A) No, I can't hear anything.\n(B) Company headquarters.\n(C) Because she's meeting with her manager.",
+      "transcriptFull": "Why isn't Ms. PÃ©rez here yet?\n(A) No, I can't hear anything.\n(B) Company headquarters.\n(C) Because she's meeting with her manager.",
       "sentences": [
         {
           "orderIndex": 0,
           "speaker": null,
-          "content": "Why isn't Ms. Pérez here yet?",
+          "content": "Why isn't Ms. PÃ©rez here yet?",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -2572,11 +2572,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 32–34",
+      "title": "Questions 32â€“34",
       "questionStart": 32,
       "questionEnd": 34,
       "part": 3,
-      "transcriptFull": "M: Welcome to Firelamp Bistro.\nM: How many for dinner?\nW: Five, but unfortunately I forgot to make a reservation.\nM: That’s no problem.\nM: However, I should inform you that we are closing earlier than usual tonight for a private event.\nM: While you wait, if you'd like to sit at the outdoor seating on the patio, I’ll send a server over so you can start with drinks and appetizers.\nM: We will seat you as soon as possible.\nW: That works for us.\nW: Thank you.\nW: And if possible, we’d like to sit in a quiet area of the restaurant.\nW: We have some business to discuss.",
+      "transcriptFull": "M: Welcome to Firelamp Bistro.\nM: How many for dinner?\nW: Five, but unfortunately I forgot to make a reservation.\nM: Thatâ€™s no problem.\nM: However, I should inform you that we are closing earlier than usual tonight for a private event.\nM: While you wait, if you'd like to sit at the outdoor seating on the patio, Iâ€™ll send a server over so you can start with drinks and appetizers.\nM: We will seat you as soon as possible.\nW: That works for us.\nW: Thank you.\nW: And if possible, weâ€™d like to sit in a quiet area of the restaurant.\nW: We have some business to discuss.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -2619,7 +2619,7 @@
         {
           "orderIndex": 3,
           "speaker": "M",
-          "content": "That’s no problem.",
+          "content": "Thatâ€™s no problem.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -2648,7 +2648,7 @@
         {
           "orderIndex": 5,
           "speaker": "M",
-          "content": "While you wait, if you'd like to sit at the outdoor seating on the patio, I’ll send a server over so you can start with drinks and appetizers.",
+          "content": "While you wait, if you'd like to sit at the outdoor seating on the patio, Iâ€™ll send a server over so you can start with drinks and appetizers.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -2712,7 +2712,7 @@
         {
           "orderIndex": 9,
           "speaker": "W",
-          "content": "And if possible, we’d like to sit in a quiet area of the restaurant.",
+          "content": "And if possible, weâ€™d like to sit in a quiet area of the restaurant.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -2759,11 +2759,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 35–37",
+      "title": "Questions 35â€“37",
       "questionStart": 35,
       "questionEnd": 37,
       "part": 3,
-      "transcriptFull": "W1: Hello, Suresh.\nOffice World Inc.\nis very pleased with this collaboration with your company.\nYour signature office product line is wonderful, and I believe it will sell very well.\nWe look forward to partnering with you.\nM: Thank you.\nM: I am also looking forward to a successful business partnership.\nM: Additionally, I take pride in the fact that all my products are made from recycled materials.\nM: I want to promote environmental responsibility.\nW1: I'm impressed!\nOh, and this is Vedika, who is here with her camera equipment.\nW2: Hi.\nI’m here to take promotional photos.\nSuresh, I’d like to take a few shots of you with your products.\nWe’re planning to post them online.",
+      "transcriptFull": "W1: Hello, Suresh.\nOffice World Inc.\nis very pleased with this collaboration with your company.\nYour signature office product line is wonderful, and I believe it will sell very well.\nWe look forward to partnering with you.\nM: Thank you.\nM: I am also looking forward to a successful business partnership.\nM: Additionally, I take pride in the fact that all my products are made from recycled materials.\nM: I want to promote environmental responsibility.\nW1: I'm impressed!\nOh, and this is Vedika, who is here with her camera equipment.\nW2: Hi.\nIâ€™m here to take promotional photos.\nSuresh, Iâ€™d like to take a few shots of you with your products.\nWeâ€™re planning to post them online.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -2948,7 +2948,7 @@
         {
           "orderIndex": 12,
           "speaker": null,
-          "content": "I’m here to take promotional photos.",
+          "content": "Iâ€™m here to take promotional photos.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -2963,7 +2963,7 @@
         {
           "orderIndex": 13,
           "speaker": null,
-          "content": "Suresh, I’d like to take a few shots of you with your products.",
+          "content": "Suresh, Iâ€™d like to take a few shots of you with your products.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -2978,7 +2978,7 @@
         {
           "orderIndex": 14,
           "speaker": null,
-          "content": "We’re planning to post them online.",
+          "content": "Weâ€™re planning to post them online.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3005,11 +3005,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 38–40",
+      "title": "Questions 38â€“40",
       "questionStart": 38,
       "questionEnd": 40,
       "part": 3,
-      "transcriptFull": "M: Hi, Liron.\nM: Thanks for meeting with me.\nM: I’d like to review the advertising strategy for our bike shop during the annual charity bicycle race.\nW: Well, just like last year, as part of the event sponsorship, we plan to print the company name on the banners.\nM: That sounds good.\nM: But this year, to show how much we care about the community, I’d also like to donate a top-of-the-line bicycle to the winner of the race.\nW: That’s a good idea, but simply sponsoring the race is already quite expensive.\nW: I’m concerned about the additional cost of donating the bicycle.",
+      "transcriptFull": "M: Hi, Liron.\nM: Thanks for meeting with me.\nM: Iâ€™d like to review the advertising strategy for our bike shop during the annual charity bicycle race.\nW: Well, just like last year, as part of the event sponsorship, we plan to print the company name on the banners.\nM: That sounds good.\nM: But this year, to show how much we care about the community, Iâ€™d also like to donate a top-of-the-line bicycle to the winner of the race.\nW: Thatâ€™s a good idea, but simply sponsoring the race is already quite expensive.\nW: Iâ€™m concerned about the additional cost of donating the bicycle.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -3038,7 +3038,7 @@
         {
           "orderIndex": 2,
           "speaker": "M",
-          "content": "I’d like to review the advertising strategy for our bike shop during the annual charity bicycle race.",
+          "content": "Iâ€™d like to review the advertising strategy for our bike shop during the annual charity bicycle race.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3093,7 +3093,7 @@
         {
           "orderIndex": 5,
           "speaker": "M",
-          "content": "But this year, to show how much we care about the community, I’d also like to donate a top-of-the-line bicycle to the winner of the race.",
+          "content": "But this year, to show how much we care about the community, Iâ€™d also like to donate a top-of-the-line bicycle to the winner of the race.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3113,7 +3113,7 @@
         {
           "orderIndex": 6,
           "speaker": "W",
-          "content": "That’s a good idea, but simply sponsoring the race is already quite expensive.",
+          "content": "Thatâ€™s a good idea, but simply sponsoring the race is already quite expensive.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3133,7 +3133,7 @@
         {
           "orderIndex": 7,
           "speaker": "W",
-          "content": "I’m concerned about the additional cost of donating the bicycle.",
+          "content": "Iâ€™m concerned about the additional cost of donating the bicycle.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3160,11 +3160,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 41–43",
+      "title": "Questions 41â€“43",
       "questionStart": 41,
       "questionEnd": 43,
       "part": 3,
-      "transcriptFull": "M: Welcome, Farida.\nM: Here is your ID badge.\nM: My name is Malik Al-Johani.\nM: I’m a senior engineer, and I’ll be serving as your mentor through the new employee onboarding process during your first 60 days at Tilmer Tech.\nW: I’m happy to be here.\nW: Your company is one of the top robotic vacuum manufacturers in the country.\nW: Since I just graduated from university, I’m excited to apply all that theory directly to this engineering job.\nM: Exactly!\nM: And now, we’ll head to our first activity of the day.\nM: Like every new engineer here, your task is to disassemble and reassemble our best-selling product.\nM: This is the first step in deepening your knowledge of how our products function.",
+      "transcriptFull": "M: Welcome, Farida.\nM: Here is your ID badge.\nM: My name is Malik Al-Johani.\nM: Iâ€™m a senior engineer, and Iâ€™ll be serving as your mentor through the new employee onboarding process during your first 60 days at Tilmer Tech.\nW: Iâ€™m happy to be here.\nW: Your company is one of the top robotic vacuum manufacturers in the country.\nW: Since I just graduated from university, Iâ€™m excited to apply all that theory directly to this engineering job.\nM: Exactly!\nM: And now, weâ€™ll head to our first activity of the day.\nM: Like every new engineer here, your task is to disassemble and reassemble our best-selling product.\nM: This is the first step in deepening your knowledge of how our products function.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -3202,7 +3202,7 @@
         {
           "orderIndex": 3,
           "speaker": "M",
-          "content": "I’m a senior engineer, and I’ll be serving as your mentor through the new employee onboarding process during your first 60 days at Tilmer Tech.",
+          "content": "Iâ€™m a senior engineer, and Iâ€™ll be serving as your mentor through the new employee onboarding process during your first 60 days at Tilmer Tech.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3222,7 +3222,7 @@
         {
           "orderIndex": 4,
           "speaker": "W",
-          "content": "I’m happy to be here.",
+          "content": "Iâ€™m happy to be here.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3257,7 +3257,7 @@
         {
           "orderIndex": 6,
           "speaker": "W",
-          "content": "Since I just graduated from university, I’m excited to apply all that theory directly to this engineering job.",
+          "content": "Since I just graduated from university, Iâ€™m excited to apply all that theory directly to this engineering job.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3286,7 +3286,7 @@
         {
           "orderIndex": 8,
           "speaker": "M",
-          "content": "And now, we’ll head to our first activity of the day.",
+          "content": "And now, weâ€™ll head to our first activity of the day.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3353,11 +3353,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 44–46",
+      "title": "Questions 44â€“46",
       "questionStart": 44,
       "questionEnd": 46,
       "part": 3,
-      "transcriptFull": "M: Hey, Jyoti.\nM: I can’t believe it.\nM: I told you I won tickets to my favorite basketball team's championship this weekend, right?\nM: Well, I can't go anymore.\nW: Why?\nW: What happened?\nW: You seem really disappointed.\nM: One of our clients requested an urgent order.\nM: I need to perform quality inspections on all products so they can be shipped by Monday morning.\nW: Well, I’m free this weekend.\nW: How about I take over for you?\nW: You just need to tell your supervisor that I can do the quality inspections.\nW: You can just help me out next weekend.",
+      "transcriptFull": "M: Hey, Jyoti.\nM: I canâ€™t believe it.\nM: I told you I won tickets to my favorite basketball team's championship this weekend, right?\nM: Well, I can't go anymore.\nW: Why?\nW: What happened?\nW: You seem really disappointed.\nM: One of our clients requested an urgent order.\nM: I need to perform quality inspections on all products so they can be shipped by Monday morning.\nW: Well, Iâ€™m free this weekend.\nW: How about I take over for you?\nW: You just need to tell your supervisor that I can do the quality inspections.\nW: You can just help me out next weekend.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -3371,7 +3371,7 @@
         {
           "orderIndex": 1,
           "speaker": "M",
-          "content": "I can’t believe it.",
+          "content": "I canâ€™t believe it.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3499,7 +3499,7 @@
         {
           "orderIndex": 9,
           "speaker": "W",
-          "content": "Well, I’m free this weekend.",
+          "content": "Well, Iâ€™m free this weekend.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3570,11 +3570,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 47–49",
+      "title": "Questions 47â€“49",
       "questionStart": 47,
       "questionEnd": 49,
       "part": 3,
-      "transcriptFull": "W: I heard you found a suitable candidate to give the keynote speech at our conference.\nM: Yes, Dr.\nM: Murad Jebreen.\nM: He is an expert in sports medicine and developed a new surgical technique for athletes with knee injuries.\nM: Actually, his new book on this topic will be published at the end of this month.\nW: Oh, yes.\nW: I’ve heard of him.\nW: I wonder if we have enough funds to give a copy to everyone attending the conference.\nM: I’ll check the budget.",
+      "transcriptFull": "W: I heard you found a suitable candidate to give the keynote speech at our conference.\nM: Yes, Dr.\nM: Murad Jebreen.\nM: He is an expert in sports medicine and developed a new surgical technique for athletes with knee injuries.\nM: Actually, his new book on this topic will be published at the end of this month.\nW: Oh, yes.\nW: Iâ€™ve heard of him.\nW: I wonder if we have enough funds to give a copy to everyone attending the conference.\nM: Iâ€™ll check the budget.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -3666,7 +3666,7 @@
         {
           "orderIndex": 6,
           "speaker": "W",
-          "content": "I’ve heard of him.",
+          "content": "Iâ€™ve heard of him.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3701,7 +3701,7 @@
         {
           "orderIndex": 8,
           "speaker": "M",
-          "content": "I’ll check the budget.",
+          "content": "Iâ€™ll check the budget.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3723,11 +3723,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 50–52",
+      "title": "Questions 50â€“52",
       "questionStart": 50,
       "questionEnd": 52,
       "part": 3,
-      "transcriptFull": "W: Hello.\nW: I’m calling about your advertisement.\nW: I currently rent a space downtown for building and repairing furniture, but the owner sold the building and I have to move out by the end of the month.\nM: I see.\nM: My space is quite large, enough to fit two cars or a work truck.\nM: Also, if it helps, there is a loading dock in the back for loading large containers.\nW: That’s ideal.\nW: I build large items, so a loading dock would make pickups and deliveries much easier.\nM: Can you come and see it this afternoon?\nM: The electricity isn't connected right now, but I can call today to have it turned on.",
+      "transcriptFull": "W: Hello.\nW: Iâ€™m calling about your advertisement.\nW: I currently rent a space downtown for building and repairing furniture, but the owner sold the building and I have to move out by the end of the month.\nM: I see.\nM: My space is quite large, enough to fit two cars or a work truck.\nM: Also, if it helps, there is a loading dock in the back for loading large containers.\nW: Thatâ€™s ideal.\nW: I build large items, so a loading dock would make pickups and deliveries much easier.\nM: Can you come and see it this afternoon?\nM: The electricity isn't connected right now, but I can call today to have it turned on.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -3741,7 +3741,7 @@
         {
           "orderIndex": 1,
           "speaker": "W",
-          "content": "I’m calling about your advertisement.",
+          "content": "Iâ€™m calling about your advertisement.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3825,7 +3825,7 @@
         {
           "orderIndex": 6,
           "speaker": "W",
-          "content": "That’s ideal.",
+          "content": "Thatâ€™s ideal.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3890,16 +3890,16 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 53–55",
+      "title": "Questions 53â€“55",
       "questionStart": 53,
       "questionEnd": 55,
       "part": 3,
-      "transcriptFull": "W: Wasim, I know it’s last minute, but is there any possibility we can add another section to the workbook for tomorrow’s seminar?\nM: Oh.\nM: The workbooks have already been printed.\nW: I see.\nW: I just found out that the company added a new policy regarding work with clients that needs to be included.\nM: Well, how about we add an insert (a separate sheet) to each copy of the workbook before we hand them out?\nM: That way, everyone will be notified of the changes.",
+      "transcriptFull": "W: Wasim, I know itâ€™s last minute, but is there any possibility we can add another section to the workbook for tomorrowâ€™s seminar?\nM: Oh.\nM: The workbooks have already been printed.\nW: I see.\nW: I just found out that the company added a new policy regarding work with clients that needs to be included.\nM: Well, how about we add an insert (a separate sheet) to each copy of the workbook before we hand them out?\nM: That way, everyone will be notified of the changes.",
       "sentences": [
         {
           "orderIndex": 0,
           "speaker": "W",
-          "content": "Wasim, I know it’s last minute, but is there any possibility we can add another section to the workbook for tomorrow’s seminar?",
+          "content": "Wasim, I know itâ€™s last minute, but is there any possibility we can add another section to the workbook for tomorrowâ€™s seminar?",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4024,11 +4024,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 56–58",
+      "title": "Questions 56â€“58",
       "questionStart": 56,
       "questionEnd": 58,
       "part": 3,
-      "transcriptFull": "M: Hello, Astrid.\nM: Thanks for meeting with me.\nW: Of course.\nW: I have an open-door policy for all employees here at the factory.\nM: So, I’d like to talk about changing my work schedule to the day shift.\nW: I see.\nW: I've been getting a lot of those requests lately.\nM: I understand.\nM: But please remember that I have been working the night shift for over ten years.\nW: That’s true.\nW: Let me look into it.\nW: I’ll check the schedule and see what I can do.\nW: I can’t make any promises, though.",
+      "transcriptFull": "M: Hello, Astrid.\nM: Thanks for meeting with me.\nW: Of course.\nW: I have an open-door policy for all employees here at the factory.\nM: So, Iâ€™d like to talk about changing my work schedule to the day shift.\nW: I see.\nW: I've been getting a lot of those requests lately.\nM: I understand.\nM: But please remember that I have been working the night shift for over ten years.\nW: Thatâ€™s true.\nW: Let me look into it.\nW: Iâ€™ll check the schedule and see what I can do.\nW: I canâ€™t make any promises, though.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -4086,7 +4086,7 @@
         {
           "orderIndex": 4,
           "speaker": "M",
-          "content": "So, I’d like to talk about changing my work schedule to the day shift.",
+          "content": "So, Iâ€™d like to talk about changing my work schedule to the day shift.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4164,7 +4164,7 @@
         {
           "orderIndex": 9,
           "speaker": "W",
-          "content": "That’s true.",
+          "content": "Thatâ€™s true.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4182,7 +4182,7 @@
         {
           "orderIndex": 11,
           "speaker": "W",
-          "content": "I’ll check the schedule and see what I can do.",
+          "content": "Iâ€™ll check the schedule and see what I can do.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4202,7 +4202,7 @@
         {
           "orderIndex": 12,
           "speaker": "W",
-          "content": "I can’t make any promises, though.",
+          "content": "I canâ€™t make any promises, though.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4229,11 +4229,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 59–61",
+      "title": "Questions 59â€“61",
       "questionStart": 59,
       "questionEnd": 61,
       "part": 3,
-      "transcriptFull": "W: I have some bad news.\nW: I got a text message from Ife.\nW: Her car won't start; it seems the battery is dead.\nW: She won't make it in time to lead her tour group.\nM1: Oh no.\nM1: Hmm, I’m scheduled to lead a tour of the harbor this morning.\nW: Rajeev, you’re free.\nW: I know you’re technically still in training, but I think you can handle it.\nM2: Hmm.\nM2: It’s the historic warehouse district, right?\nM2: I’m a little nervous about that one.\nM1: You did a great job shadowing me on that tour last week.\nM1: You were even answering questions from the group.",
+      "transcriptFull": "W: I have some bad news.\nW: I got a text message from Ife.\nW: Her car won't start; it seems the battery is dead.\nW: She won't make it in time to lead her tour group.\nM1: Oh no.\nM1: Hmm, Iâ€™m scheduled to lead a tour of the harbor this morning.\nW: Rajeev, youâ€™re free.\nW: I know youâ€™re technically still in training, but I think you can handle it.\nM2: Hmm.\nM2: Itâ€™s the historic warehouse district, right?\nM2: Iâ€™m a little nervous about that one.\nM1: You did a great job shadowing me on that tour last week.\nM1: You were even answering questions from the group.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -4316,7 +4316,7 @@
         {
           "orderIndex": 5,
           "speaker": "M1",
-          "content": "Hmm, I’m scheduled to lead a tour of the harbor this morning.",
+          "content": "Hmm, Iâ€™m scheduled to lead a tour of the harbor this morning.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4336,7 +4336,7 @@
         {
           "orderIndex": 6,
           "speaker": "W",
-          "content": "Rajeev, you’re free.",
+          "content": "Rajeev, youâ€™re free.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4351,7 +4351,7 @@
         {
           "orderIndex": 7,
           "speaker": "W",
-          "content": "I know you’re technically still in training, but I think you can handle it.",
+          "content": "I know youâ€™re technically still in training, but I think you can handle it.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4380,7 +4380,7 @@
         {
           "orderIndex": 9,
           "speaker": "M2",
-          "content": "It’s the historic warehouse district, right?",
+          "content": "Itâ€™s the historic warehouse district, right?",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4400,7 +4400,7 @@
         {
           "orderIndex": 10,
           "speaker": "M2",
-          "content": "I’m a little nervous about that one.",
+          "content": "Iâ€™m a little nervous about that one.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4462,16 +4462,16 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 62–64",
+      "title": "Questions 62â€“64",
       "questionStart": 62,
       "questionEnd": 64,
       "part": 3,
-      "transcriptFull": "M: I need to check with the project manager about today’s construction schedule.\nW: I already did.\nW: I just came from his office.\nW: He said they will be closing multiple lanes to create a safe work zone.\nM: I see.\nM: Which lanes are they closing?\nW: All of them except for the passing lane.\nM: Wow, this closure is really going to affect the morning commute.\nW: Exactly.\nW: I’m going to request additional personnel to manage the traffic flow.",
+      "transcriptFull": "M: I need to check with the project manager about todayâ€™s construction schedule.\nW: I already did.\nW: I just came from his office.\nW: He said they will be closing multiple lanes to create a safe work zone.\nM: I see.\nM: Which lanes are they closing?\nW: All of them except for the passing lane.\nM: Wow, this closure is really going to affect the morning commute.\nW: Exactly.\nW: Iâ€™m going to request additional personnel to manage the traffic flow.",
       "sentences": [
         {
           "orderIndex": 0,
           "speaker": "M",
-          "content": "I need to check with the project manager about today’s construction schedule.",
+          "content": "I need to check with the project manager about todayâ€™s construction schedule.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4608,7 +4608,7 @@
         {
           "orderIndex": 9,
           "speaker": "W",
-          "content": "I’m going to request additional personnel to manage the traffic flow.",
+          "content": "Iâ€™m going to request additional personnel to manage the traffic flow.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4635,16 +4635,16 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 65–67",
+      "title": "Questions 65â€“67",
       "questionStart": 65,
       "questionEnd": 67,
       "part": 3,
-      "transcriptFull": "M: Let’s start planning the annual employee retreat.\nW: Yes.\nW: I think we should hold it outdoors.\nW: Since we’re at our desks all day, I think spending time in the sun would be really wonderful.\nM: I agree.\nM: There’s a place called Oliver’s Orchard where you can pick your own fruit.\nM: We could hold the event there.\nW: That’s a great idea.\nW: The retreat is in June.\nW: Are they open then?\nM: According to the website, they are.\nW: Perfect.\nW: I’ll call the orchard to make a reservation for our group.",
+      "transcriptFull": "M: Letâ€™s start planning the annual employee retreat.\nW: Yes.\nW: I think we should hold it outdoors.\nW: Since weâ€™re at our desks all day, I think spending time in the sun would be really wonderful.\nM: I agree.\nM: Thereâ€™s a place called Oliverâ€™s Orchard where you can pick your own fruit.\nM: We could hold the event there.\nW: Thatâ€™s a great idea.\nW: The retreat is in June.\nW: Are they open then?\nM: According to the website, they are.\nW: Perfect.\nW: Iâ€™ll call the orchard to make a reservation for our group.",
       "sentences": [
         {
           "orderIndex": 0,
           "speaker": "M",
-          "content": "Let’s start planning the annual employee retreat.",
+          "content": "Letâ€™s start planning the annual employee retreat.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4688,7 +4688,7 @@
         {
           "orderIndex": 3,
           "speaker": "W",
-          "content": "Since we’re at our desks all day, I think spending time in the sun would be really wonderful.",
+          "content": "Since weâ€™re at our desks all day, I think spending time in the sun would be really wonderful.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4723,7 +4723,7 @@
         {
           "orderIndex": 5,
           "speaker": "M",
-          "content": "There’s a place called Oliver’s Orchard where you can pick your own fruit.",
+          "content": "Thereâ€™s a place called Oliverâ€™s Orchard where you can pick your own fruit.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4763,7 +4763,7 @@
         {
           "orderIndex": 7,
           "speaker": "W",
-          "content": "That’s a great idea.",
+          "content": "Thatâ€™s a great idea.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4826,7 +4826,7 @@
         {
           "orderIndex": 12,
           "speaker": "W",
-          "content": "I’ll call the orchard to make a reservation for our group.",
+          "content": "Iâ€™ll call the orchard to make a reservation for our group.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4853,11 +4853,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 68–70",
+      "title": "Questions 68â€“70",
       "questionStart": 68,
       "questionEnd": 70,
       "part": 3,
-      "transcriptFull": "M: Hello.\nM: I’m looking for an apartment and saw your advertisement.\nM: Do you have any two-bedroom apartments available in May?\nW: Yes.\nW: Actually, construction on a new complex was just completed.\nM: Does that complex have a lot of outdoor space?\nM: I’d like an area for entertaining guests outdoors.\nW: Yes, there is a lot of green space.\nW: The building in the back corner, furthest from the office, has the most space and plenty of shade.\nM: I’m interested in that one.\nW: And for an additional $80 per month, you can secure a designated parking space right in front of your unit.",
+      "transcriptFull": "M: Hello.\nM: Iâ€™m looking for an apartment and saw your advertisement.\nM: Do you have any two-bedroom apartments available in May?\nW: Yes.\nW: Actually, construction on a new complex was just completed.\nM: Does that complex have a lot of outdoor space?\nM: Iâ€™d like an area for entertaining guests outdoors.\nW: Yes, there is a lot of green space.\nW: The building in the back corner, furthest from the office, has the most space and plenty of shade.\nM: Iâ€™m interested in that one.\nW: And for an additional $80 per month, you can secure a designated parking space right in front of your unit.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -4871,7 +4871,7 @@
         {
           "orderIndex": 1,
           "speaker": "M",
-          "content": "I’m looking for an apartment and saw your advertisement.",
+          "content": "Iâ€™m looking for an apartment and saw your advertisement.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4960,7 +4960,7 @@
         {
           "orderIndex": 6,
           "speaker": "M",
-          "content": "I’d like an area for entertaining guests outdoors.",
+          "content": "Iâ€™d like an area for entertaining guests outdoors.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5015,7 +5015,7 @@
         {
           "orderIndex": 9,
           "speaker": "M",
-          "content": "I’m interested in that one.",
+          "content": "Iâ€™m interested in that one.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5057,7 +5057,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 71–73",
+      "title": "Questions 71â€“73",
       "questionStart": 71,
       "questionEnd": 73,
       "part": 4,
@@ -5133,7 +5133,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 74–76",
+      "title": "Questions 74â€“76",
       "questionStart": 74,
       "questionEnd": 76,
       "part": 4,
@@ -5209,7 +5209,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 77–79",
+      "title": "Questions 77â€“79",
       "questionStart": 77,
       "questionEnd": 79,
       "part": 4,
@@ -5309,7 +5309,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 80–82",
+      "title": "Questions 80â€“82",
       "questionStart": 80,
       "questionEnd": 82,
       "part": 4,
@@ -5385,11 +5385,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 83–85",
+      "title": "Questions 83â€“85",
       "questionStart": 83,
       "questionEnd": 85,
       "part": 4,
-      "transcriptFull": "This call is regarding the television advertising project for the Dearborn Hotel.\nThe client is very satisfied with how Andrew handled the project’s needs.\nThis was Andrew’s first client.\nThe speaker requests that the latest copy of the project timeline be sent over.",
+      "transcriptFull": "This call is regarding the television advertising project for the Dearborn Hotel.\nThe client is very satisfied with how Andrew handled the projectâ€™s needs.\nThis was Andrewâ€™s first client.\nThe speaker requests that the latest copy of the project timeline be sent over.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -5414,7 +5414,7 @@
         {
           "orderIndex": 1,
           "speaker": null,
-          "content": "The client is very satisfied with how Andrew handled the project’s needs.",
+          "content": "The client is very satisfied with how Andrew handled the projectâ€™s needs.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5434,7 +5434,7 @@
         {
           "orderIndex": 2,
           "speaker": null,
-          "content": "This was Andrew’s first client.",
+          "content": "This was Andrewâ€™s first client.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5476,7 +5476,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 86–88",
+      "title": "Questions 86â€“88",
       "questionStart": 86,
       "questionEnd": 88,
       "part": 4,
@@ -5552,7 +5552,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 89–91",
+      "title": "Questions 89â€“91",
       "questionStart": 89,
       "questionEnd": 91,
       "part": 4,
@@ -5628,7 +5628,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 92–94",
+      "title": "Questions 92â€“94",
       "questionStart": 92,
       "questionEnd": 94,
       "part": 4,
@@ -5684,7 +5684,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 95–97",
+      "title": "Questions 95â€“97",
       "questionStart": 95,
       "questionEnd": 97,
       "part": 4,
@@ -5760,7 +5760,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 98–100",
+      "title": "Questions 98â€“100",
       "questionStart": 98,
       "questionEnd": 100,
       "part": 4,

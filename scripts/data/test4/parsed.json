@@ -1,5 +1,5 @@
-{
-  "testName": "ETS 2024 Test 4",
+﻿{
+  "testName": "EST 2024 Test 4",
   "testSlug": "ets-2024-test-4",
   "orderIndex": 4,
   "examCode": "E24",
@@ -2075,7 +2075,7 @@
       "questionStart": 26,
       "questionEnd": 26,
       "part": 2,
-      "transcriptFull": "When are they going to decide who to hire?\n(A) A much higher salary.\n(B) A lot of good résumés have come in.\n(C) In the building across the street.",
+      "transcriptFull": "When are they going to decide who to hire?\n(A) A much higher salary.\n(B) A lot of good rÃ©sumÃ©s have come in.\n(C) In the building across the street.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -2115,7 +2115,7 @@
         {
           "orderIndex": 2,
           "speaker": null,
-          "content": "A lot of good résumés have come in.",
+          "content": "A lot of good rÃ©sumÃ©s have come in.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": "B",
@@ -2553,11 +2553,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 32–34",
+      "title": "Questions 32â€“34",
       "questionStart": 32,
       "questionEnd": 34,
       "part": 3,
-      "transcriptFull": "WOMAN: Excuse me, but wasn't the ferry to Osaka supposed to leave at ten o'clock?\nMAN: Yes, but the port authority has suspended all marine traffic due to rough water.\nWOMAN: I see.\nWOMAN: Does that mean ferries are canceled all day?\nMAN: This storm is expected to pass in about three hours.\nMAN: But operations should return to normal after that.\nMAN: Your ticket will be good until midnight.\nWOMAN: OK.\nWOMAN: Then I guess I'll grab some lunch nearby.\nMAN: I highly recommend Mary's Café for sandwiches and soup.",
+      "transcriptFull": "WOMAN: Excuse me, but wasn't the ferry to Osaka supposed to leave at ten o'clock?\nMAN: Yes, but the port authority has suspended all marine traffic due to rough water.\nWOMAN: I see.\nWOMAN: Does that mean ferries are canceled all day?\nMAN: This storm is expected to pass in about three hours.\nMAN: But operations should return to normal after that.\nMAN: Your ticket will be good until midnight.\nWOMAN: OK.\nWOMAN: Then I guess I'll grab some lunch nearby.\nMAN: I highly recommend Mary's CafÃ© for sandwiches and soup.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -2715,7 +2715,7 @@
         {
           "orderIndex": 9,
           "speaker": "MAN",
-          "content": "I highly recommend Mary's Café for sandwiches and soup.",
+          "content": "I highly recommend Mary's CafÃ© for sandwiches and soup.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -2742,7 +2742,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 35–37",
+      "title": "Questions 35â€“37",
       "questionStart": 35,
       "questionEnd": 37,
       "part": 3,
@@ -2880,7 +2880,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 38–40",
+      "title": "Questions 38â€“40",
       "questionStart": 38,
       "questionEnd": 40,
       "part": 3,
@@ -3065,7 +3065,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 41–43",
+      "title": "Questions 41â€“43",
       "questionStart": 41,
       "questionEnd": 43,
       "part": 3,
@@ -3315,7 +3315,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 44–46",
+      "title": "Questions 44â€“46",
       "questionStart": 44,
       "questionEnd": 46,
       "part": 3,
@@ -3512,7 +3512,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 47–49",
+      "title": "Questions 47â€“49",
       "questionStart": 47,
       "questionEnd": 49,
       "part": 3,
@@ -3715,7 +3715,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 50–52",
+      "title": "Questions 50â€“52",
       "questionStart": 50,
       "questionEnd": 52,
       "part": 3,
@@ -4002,7 +4002,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 53–55",
+      "title": "Questions 53â€“55",
       "questionStart": 53,
       "questionEnd": 55,
       "part": 3,
@@ -4243,7 +4243,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 56–58",
+      "title": "Questions 56â€“58",
       "questionStart": 56,
       "questionEnd": 58,
       "part": 3,
@@ -4454,7 +4454,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 59–61",
+      "title": "Questions 59â€“61",
       "questionStart": 59,
       "questionEnd": 61,
       "part": 3,
@@ -4615,7 +4615,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 62–64",
+      "title": "Questions 62â€“64",
       "questionStart": 62,
       "questionEnd": 64,
       "part": 3,
@@ -4840,7 +4840,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 65–67",
+      "title": "Questions 65â€“67",
       "questionStart": 65,
       "questionEnd": 67,
       "part": 3,
@@ -5098,7 +5098,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 68–70",
+      "title": "Questions 68â€“70",
       "questionStart": 68,
       "questionEnd": 70,
       "part": 3,
@@ -5314,7 +5314,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 71–73",
+      "title": "Questions 71â€“73",
       "questionStart": 71,
       "questionEnd": 73,
       "part": 4,
@@ -5419,11 +5419,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 74–76",
+      "title": "Questions 74â€“76",
       "questionStart": 74,
       "questionEnd": 76,
       "part": 4,
-      "transcriptFull": "\"This weekend, we will be installing new security software on our internal servers.\nThis is a bit more complex than a routine update—we need an extra layer of protection for our customers' personal data.\nTherefore, we are all being asked to help prepare for this event.\nBefore leaving the office on Friday, we need to shut down our computers to allow the software patch to work.",
+      "transcriptFull": "\"This weekend, we will be installing new security software on our internal servers.\nThis is a bit more complex than a routine updateâ€”we need an extra layer of protection for our customers' personal data.\nTherefore, we are all being asked to help prepare for this event.\nBefore leaving the office on Friday, we need to shut down our computers to allow the software patch to work.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -5448,7 +5448,7 @@
         {
           "orderIndex": 1,
           "speaker": null,
-          "content": "This is a bit more complex than a routine update—we need an extra layer of protection for our customers' personal data.",
+          "content": "This is a bit more complex than a routine updateâ€”we need an extra layer of protection for our customers' personal data.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5515,16 +5515,16 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 77–79",
+      "title": "Questions 77â€“79",
       "questionStart": 77,
       "questionEnd": 79,
       "part": 4,
-      "transcriptFull": "\"I’d like to remind everyone that starting Monday, the main entrance to the office building will be inaccessible while the road is being widened and repaved.\nThis also means our regular parking lot will be unavailable.\nBut don't worry—there are plenty of spaces in the parking garage next to the Jay Building.\nFor your convenience, the company will provide a van service running every 15 minutes until the project is complete.\nM.",
+      "transcriptFull": "\"Iâ€™d like to remind everyone that starting Monday, the main entrance to the office building will be inaccessible while the road is being widened and repaved.\nThis also means our regular parking lot will be unavailable.\nBut don't worryâ€”there are plenty of spaces in the parking garage next to the Jay Building.\nFor your convenience, the company will provide a van service running every 15 minutes until the project is complete.\nM.",
       "sentences": [
         {
           "orderIndex": 0,
           "speaker": null,
-          "content": "\"I’d like to remind everyone that starting Monday, the main entrance to the office building will be inaccessible while the road is being widened and repaved.",
+          "content": "\"Iâ€™d like to remind everyone that starting Monday, the main entrance to the office building will be inaccessible while the road is being widened and repaved.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5564,7 +5564,7 @@
         {
           "orderIndex": 2,
           "speaker": null,
-          "content": "But don't worry—there are plenty of spaces in the parking garage next to the Jay Building.",
+          "content": "But don't worryâ€”there are plenty of spaces in the parking garage next to the Jay Building.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5620,11 +5620,11 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 80–82",
+      "title": "Questions 80â€“82",
       "questionStart": 80,
       "questionEnd": 82,
       "part": 4,
-      "transcriptFull": "\"Hi Asako.\nI'm calling to follow up on your request for me to book a hotel for the clients visiting from India next month.\nYou wanted to stay at Maple Lodge, but they are fully booked that week.\nSo, I’ve looked into other hotels in the area and found one on Jefferson Avenue.\nIt's a bit far from our office, but it seems like a good place.\nThey also offer a free shuttle service that can transport our guests back and forth between the hotel and the office.",
+      "transcriptFull": "\"Hi Asako.\nI'm calling to follow up on your request for me to book a hotel for the clients visiting from India next month.\nYou wanted to stay at Maple Lodge, but they are fully booked that week.\nSo, Iâ€™ve looked into other hotels in the area and found one on Jefferson Avenue.\nIt's a bit far from our office, but it seems like a good place.\nThey also offer a free shuttle service that can transport our guests back and forth between the hotel and the office.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -5678,7 +5678,7 @@
         {
           "orderIndex": 3,
           "speaker": null,
-          "content": "So, I’ve looked into other hotels in the area and found one on Jefferson Avenue.",
+          "content": "So, Iâ€™ve looked into other hotels in the area and found one on Jefferson Avenue.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5745,7 +5745,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 83–85",
+      "title": "Questions 83â€“85",
       "questionStart": 83,
       "questionEnd": 85,
       "part": 4,
@@ -5861,7 +5861,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 86–88",
+      "title": "Questions 86â€“88",
       "questionStart": 86,
       "questionEnd": 88,
       "part": 4,
@@ -5977,7 +5977,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 89–91",
+      "title": "Questions 89â€“91",
       "questionStart": 89,
       "questionEnd": 91,
       "part": 4,
@@ -6073,7 +6073,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 92–94",
+      "title": "Questions 92â€“94",
       "questionStart": 92,
       "questionEnd": 94,
       "part": 4,
@@ -6169,7 +6169,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 95–97",
+      "title": "Questions 95â€“97",
       "questionStart": 95,
       "questionEnd": 97,
       "part": 4,
@@ -6245,7 +6245,7 @@
       "audioDuration": 0
     },
     {
-      "title": "Questions 98–100",
+      "title": "Questions 98â€“100",
       "questionStart": 98,
       "questionEnd": 100,
       "part": 4,
