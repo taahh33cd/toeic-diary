@@ -30,7 +30,6 @@ export function LandingHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
         <div className="max-w-[1400px] mx-auto px-4 md:px-6 h-16 flex items-center justify-between gap-4">
           {/* Logo */}
           <Link href="/home" className="flex items-center gap-2 no-underline hover:opacity-90 transition-opacity">
-            <span className="text-xl">🎧</span>
             <span className="font-bold text-base text-white leading-tight">TOEIC Diary</span>
           </Link>
 
