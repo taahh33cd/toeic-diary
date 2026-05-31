@@ -11,9 +11,10 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { href: "/",        label: "Dictation",  emoji: "🎧" },
-  { href: "/grammar", label: "Grammar",    emoji: "🎓" },
-  { href: "/admin",   label: "Quản lý",    emoji: "⚙️",  roles: ["teacher", "admin"] },
+  { href: "/",                 label: "Dictation", emoji: "🎧" },
+  { href: "/grammar",          label: "Grammar",   emoji: "🎓" },
+  { href: "/reading-practice", label: "Reading",   emoji: "📖" },
+  { href: "/admin",            label: "Quản lý",   emoji: "⚙️", roles: ["teacher", "admin"] },
 ];
 
 interface NavSwitcherProps {
