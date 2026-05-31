@@ -1,11 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { X, MessageCircle } from "lucide-react";
 
-// TODO: Thay bằng link thật của bạn
-const ZALO_LINK = "https://zalo.me/YOUR_ZALO";
-const FB_LINK   = "https://www.facebook.com/YOUR_FB";
+const ZALO_LINK = "https://zalo.me/0789066326";
+const FB_LINK   = "https://www.facebook.com/hieu.hieu.211400/";
 
 const CREAM  = "#FFFDF6";
 const BEIGE  = "#F5EFE6";
@@ -16,6 +15,23 @@ const MUTED  = "#9A8672";
 const BORDER = "#D9C9B8";
 const SERIF  = "var(--font-display,'Lora',Georgia,serif)";
 const GRAIN_BG = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.048'/%3E%3C/svg%3E")`;
+
+// CSS keyframes injected once
+const ANIM_CSS = `
+@keyframes course-shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes course-price-pop {
+  0%   { transform: scale(1);    }
+  40%  { transform: scale(1.06); }
+  100% { transform: scale(1);    }
+}
+@keyframes course-modal-in {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to   { opacity: 1; transform: scale(1)    translateY(0);    }
+}
+`;
 
 type Course = {
   id: number;
@@ -93,10 +109,44 @@ const COURSES: Course[] = [
 ];
 
 export function CourseCards() {
-  const [modalCourse, setModalCourse] = useState<Course | null>(null);
+  const [modalCourse, setModalCourse]   = useState<Course | null>(null);
+  const [hoveredId,   setHoveredId]     = useState<number | null>(null);
+  const [activeBtn,   setActiveBtn]     = useState<number | null>(null);
+  const [visibleIds,  setVisibleIds]    = useState<Set<number>>(new Set());
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  // Scroll-in: observe each card, fire once when 15% visible
+  useEffect(() => {
+    const observers = cardRefs.current.map((el, i) => {
+      if (!el) return null;
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setVisibleIds((prev) => new Set([...prev, COURSES[i].id]));
+            obs.disconnect();
+          }
+        },
+        { threshold: 0.15 },
+      );
+      obs.observe(el);
+      return obs;
+    });
+    return () => observers.forEach((o) => o?.disconnect());
+  }, []);
+
+  // Close modal on Escape
+  useEffect(() => {
+    if (!modalCourse) return;
+    const handler = (e: KeyboardEvent) => { if (e.key === "Escape") setModalCourse(null); };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [modalCourse]);
 
   return (
     <>
+      {/* Keyframe injection */}
+      <style dangerouslySetInnerHTML={{ __html: ANIM_CSS }} />
+
       {/* Cards grid */}
       <section style={{ background: BEIGE, padding: "3rem clamp(1rem,4vw,2rem) 4rem" }}>
         <div
@@ -107,166 +157,186 @@ export function CourseCards() {
             gap: "1.5rem",
           }}
         >
-          {COURSES.map((course) => (
-            <div
-              key={course.id}
-              style={{
-                background: `${GRAIN_BG}, ${CREAM}`,
-                backgroundBlendMode: "multiply",
-                border: course.featured ? `2px solid ${TERRA}` : `1.5px solid ${BORDER}`,
-                borderTop: `3px solid ${course.featured ? TERRA : BORDER}`,
-                borderRadius: 12,
-                padding: "1.75rem",
-                display: "flex",
-                flexDirection: "column",
-                boxShadow: course.featured
-                  ? `0 8px 32px rgba(196,98,45,0.15)`
-                  : `0 2px 12px rgba(61,43,31,0.06)`,
-              }}
-            >
-              {/* Badge */}
-              <div style={{ marginBottom: "1.25rem" }}>
-                <span
+          {COURSES.map((course, index) => {
+            const isHovered  = hoveredId === course.id;
+            const isVisible  = visibleIds.has(course.id);
+            const delay      = `${index * 0.13}s`;
+
+            return (
+              <div
+                key={course.id}
+                ref={(el) => { cardRefs.current[index] = el; }}
+                onMouseEnter={() => setHoveredId(course.id)}
+                onMouseLeave={() => setHoveredId(null)}
+                style={{
+                  background: `${GRAIN_BG}, ${CREAM}`,
+                  backgroundBlendMode: "multiply",
+                  border: course.featured
+                    ? `2px solid ${isHovered ? TERRA : TERRA}`
+                    : `1.5px solid ${isHovered ? `${TERRA}88` : BORDER}`,
+                  borderTop: `3px solid ${course.featured ? TERRA : isHovered ? `${TERRA}88` : BORDER}`,
+                  borderRadius: 12,
+                  padding: "1.75rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  cursor: "default",
+                  // Entrance animation
+                  opacity:   isVisible ? 1 : 0,
+                  transform: isVisible
+                    ? (isHovered ? "translateY(-7px)" : "translateY(0)")
+                    : "translateY(32px)",
+                  transition: [
+                    `opacity 0.55s ease ${delay}`,
+                    `transform 0.55s ease ${delay}`,
+                    "box-shadow 0.25s ease",
+                    "border-color 0.25s ease",
+                  ].join(", "),
+                  boxShadow: isHovered
+                    ? (course.featured
+                        ? `0 18px 52px rgba(196,98,45,0.28)`
+                        : `0 14px 36px rgba(61,43,31,0.13)`)
+                    : (course.featured
+                        ? `0 8px 32px rgba(196,98,45,0.15)`
+                        : `0 2px 12px rgba(61,43,31,0.06)`),
+                }}
+              >
+                {/* Badge */}
+                <div style={{ marginBottom: "1.25rem" }}>
+                  <span
+                    style={{
+                      fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.14em",
+                      textTransform: "uppercase",
+                      color:      course.featured ? "#fff" : TERRA,
+                      background: course.featured ? TERRA : "#FAE8DB",
+                      border:     course.featured ? "none" : `1px dashed ${TERRA}60`,
+                      padding: "3px 9px", borderRadius: 3,
+                    }}
+                  >
+                    {course.badge}
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h3
                   style={{
-                    fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.14em",
-                    textTransform: "uppercase",
-                    color: course.featured ? "#fff" : TERRA,
-                    background: course.featured ? TERRA : "#FAE8DB",
-                    border: course.featured ? "none" : `1px dashed ${TERRA}60`,
-                    padding: "3px 9px", borderRadius: 3,
+                    fontFamily: SERIF, fontSize: "1.15rem", fontWeight: 700,
+                    color: INK, marginBottom: "0.3rem", lineHeight: 1.3,
+                    transition: "color 0.2s",
                   }}
                 >
-                  {course.badge}
-                </span>
-              </div>
+                  {course.title}
+                </h3>
+                <p style={{ fontSize: "0.76rem", color: MUTED, marginBottom: "1.5rem" }}>{course.subtitle}</p>
 
-              {/* Title */}
-              <h3 style={{ fontFamily: SERIF, fontSize: "1.15rem", fontWeight: 700, color: INK, marginBottom: "0.3rem", lineHeight: 1.3 }}>
-                {course.title}
-              </h3>
-              <p style={{ fontSize: "0.76rem", color: MUTED, marginBottom: "1.5rem" }}>{course.subtitle}</p>
-
-              {/* Price block */}
-              <div
-                style={{
-                  background: `${GRAIN_BG}, #FAE8DB`,
-                  backgroundBlendMode: "multiply",
-                  border: `1px dashed ${TERRA}50`,
-                  borderRadius: 8,
-                  padding: "0.9rem 1.1rem",
-                  marginBottom: "1.5rem",
-                }}
-              >
-                <div style={{ display: "flex", alignItems: "baseline", gap: 6, flexWrap: "wrap" }}>
-                  <span style={{ fontFamily: SERIF, fontSize: "1.5rem", fontWeight: 700, color: TERRA, lineHeight: 1 }}>
-                    {course.price}
-                  </span>
-                  <span style={{ fontSize: "0.76rem", color: SEPIA }}>{course.priceUnit}</span>
-                </div>
-                <p style={{ fontSize: "0.68rem", color: MUTED, marginTop: 5, lineHeight: 1.5 }}>{course.priceNote}</p>
-              </div>
-
-              {/* Schedule info */}
-              <div style={{ display: "flex", gap: 16, marginBottom: "1.25rem", flexWrap: "wrap" }}>
-                <span style={{ fontSize: "0.75rem", color: SEPIA }}>
-                  <span style={{ color: TERRA }}>📅 </span>{course.duration}
-                </span>
-                <span style={{ fontSize: "0.75rem", color: SEPIA }}>
-                  <span style={{ color: TERRA }}>⏰ </span>{course.schedule}
-                </span>
-              </div>
-
-              {/* Features list */}
-              <ul style={{ listStyle: "none", margin: "0 0 1.25rem", padding: 0, display: "flex", flexDirection: "column", gap: 8, flex: 1 }}>
-                {course.features.map((f) => (
-                  <li key={f} style={{ display: "flex", alignItems: "flex-start", gap: 8, fontSize: "0.81rem", color: SEPIA, lineHeight: 1.5 }}>
-                    <span style={{ color: TERRA, flexShrink: 0, fontWeight: 700 }}>✓</span>
-                    {f}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Ideal for */}
-              <p
-                style={{
-                  fontSize: "0.74rem", color: MUTED, fontStyle: "italic",
-                  marginBottom: "1.25rem", paddingTop: "0.75rem",
-                  borderTop: `1px solid ${BORDER}`,
-                  lineHeight: 1.5,
-                }}
-              >
-                💡 Phù hợp: {course.ideal}
-              </p>
-
-              {/* Waiting note */}
-              {course.waitNote && (
+                {/* Price block */}
                 <div
                   style={{
-                    fontSize: "0.71rem", color: "#7a5200", background: "#FFF3CD",
-                    border: "1px solid #F0C040", borderRadius: 6,
-                    padding: "6px 10px", marginBottom: "1rem", lineHeight: 1.5,
+                    background: `${GRAIN_BG}, #FAE8DB`,
+                    backgroundBlendMode: "multiply",
+                    border: `1px dashed ${TERRA}50`,
+                    borderRadius: 8,
+                    padding: "0.9rem 1.1rem",
+                    marginBottom: "1.5rem",
+                    transition: "background 0.2s",
                   }}
                 >
-                  ⏳ {course.waitNote}
+                  <div style={{ display: "flex", alignItems: "baseline", gap: 6, flexWrap: "wrap" }}>
+                    <span
+                      style={{
+                        fontFamily: SERIF, fontSize: "1.5rem", fontWeight: 700,
+                        color: isHovered ? "#a83820" : TERRA,
+                        lineHeight: 1,
+                        transition: "color 0.25s ease",
+                        // Price pop when card becomes visible
+                        animation: isVisible ? `course-price-pop 0.5s ease ${delay} both` : "none",
+                        display: "inline-block",
+                      }}
+                    >
+                      {course.price}
+                    </span>
+                    <span style={{ fontSize: "0.76rem", color: SEPIA }}>{course.priceUnit}</span>
+                  </div>
+                  <p style={{ fontSize: "0.68rem", color: MUTED, marginTop: 5, lineHeight: 1.5 }}>
+                    {course.priceNote}
+                  </p>
                 </div>
-              )}
 
-              {/* CTA */}
-              <button
-                onClick={() => setModalCourse(course)}
-                style={{
-                  width: "100%",
-                  padding: "11px 16px",
-                  borderRadius: 8,
-                  background: course.featured ? TERRA : "transparent",
-                  color: course.featured ? "#fff" : TERRA,
-                  border: `2px solid ${TERRA}`,
-                  fontWeight: 700,
-                  fontSize: "0.87rem",
-                  cursor: "pointer",
-                  letterSpacing: "0.01em",
-                }}
-              >
-                Đăng ký khoá này →
-              </button>
-            </div>
-          ))}
+                {/* Schedule */}
+                <div style={{ display: "flex", gap: 16, marginBottom: "1.25rem", flexWrap: "wrap" }}>
+                  <span style={{ fontSize: "0.75rem", color: SEPIA }}>
+                    <span style={{ color: TERRA }}>📅 </span>{course.duration}
+                  </span>
+                  <span style={{ fontSize: "0.75rem", color: SEPIA }}>
+                    <span style={{ color: TERRA }}>⏰ </span>{course.schedule}
+                  </span>
+                </div>
+
+                {/* Features */}
+                <ul style={{ listStyle: "none", margin: "0 0 1.25rem", padding: 0, display: "flex", flexDirection: "column", gap: 8, flex: 1 }}>
+                  {course.features.map((f) => (
+                    <li key={f} style={{ display: "flex", alignItems: "flex-start", gap: 8, fontSize: "0.81rem", color: SEPIA, lineHeight: 1.5 }}>
+                      <span style={{ color: TERRA, flexShrink: 0, fontWeight: 700 }}>✓</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Ideal */}
+                <p style={{ fontSize: "0.74rem", color: MUTED, fontStyle: "italic", marginBottom: "1.25rem", paddingTop: "0.75rem", borderTop: `1px solid ${BORDER}`, lineHeight: 1.5 }}>
+                  💡 Phù hợp: {course.ideal}
+                </p>
+
+                {/* Wait note */}
+                {course.waitNote && (
+                  <div style={{ fontSize: "0.71rem", color: "#7a5200", background: "#FFF3CD", border: "1px solid #F0C040", borderRadius: 6, padding: "6px 10px", marginBottom: "1rem", lineHeight: 1.5 }}>
+                    ⏳ {course.waitNote}
+                  </div>
+                )}
+
+                {/* CTA button */}
+                <button
+                  onClick={() => { setActiveBtn(course.id); setModalCourse(course); }}
+                  onMouseDown={() => setActiveBtn(course.id)}
+                  onMouseUp={()   => setActiveBtn(null)}
+                  onMouseLeave={() => setActiveBtn(null)}
+                  style={{
+                    width: "100%",
+                    padding: "11px 16px",
+                    borderRadius: 8,
+                    border: `2px solid ${TERRA}`,
+                    fontWeight: 700,
+                    fontSize: "0.87rem",
+                    cursor: "pointer",
+                    letterSpacing: "0.01em",
+                    // Featured: shimmer sweep; others: fill on hover
+                    background: course.featured
+                      ? `linear-gradient(90deg, ${TERRA} 0%, #e07040 40%, ${TERRA} 80%)`
+                      : (isHovered ? TERRA : "transparent"),
+                    backgroundSize: course.featured ? "200% auto" : "auto",
+                    animation: course.featured ? "course-shimmer 2.8s linear infinite" : "none",
+                    color: course.featured ? "#fff" : (isHovered ? "#fff" : TERRA),
+                    transform: activeBtn === course.id ? "scale(0.97)" : (isHovered ? "scale(1.015)" : "scale(1)"),
+                    transition: "background-color 0.2s, color 0.2s, transform 0.12s ease, box-shadow 0.2s",
+                    boxShadow: isHovered && !course.featured ? `0 4px 14px ${TERRA}35` : "none",
+                  }}
+                >
+                  Đăng ký khoá này →
+                </button>
+              </div>
+            );
+          })}
         </div>
       </section>
 
-      {/* Shared benefits strip */}
-      <section
-        style={{
-          background: CREAM,
-          borderTop: `1px solid ${BORDER}`,
-          padding: "2.5rem clamp(1rem,4vw,2rem)",
-        }}
-      >
+      {/* Shared benefits */}
+      <section style={{ background: CREAM, borderTop: `1px solid ${BORDER}`, padding: "2.5rem clamp(1rem,4vw,2rem)" }}>
         <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
-          <p
-            style={{
-              fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.18em",
-              textTransform: "uppercase", color: TERRA, marginBottom: "1.1rem",
-            }}
-          >
+          <p style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.18em", textTransform: "uppercase", color: TERRA, marginBottom: "1.1rem" }}>
             ── ✦ Tất cả khoá học đều bao gồm ✦ ──
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "0.875rem" }}>
-            {[
-              "🎧 Truy cập website Dictation miễn phí",
-              "📦 Ship sách tận nhà miễn phí",
-            ].map((b) => (
-              <div
-                key={b}
-                style={{
-                  display: "flex", alignItems: "center", gap: 8,
-                  padding: "9px 18px",
-                  background: "#FAE8DB",
-                  border: `1px dashed ${TERRA}55`,
-                  borderRadius: 6,
-                  fontSize: "0.84rem", color: SEPIA, fontWeight: 500,
-                }}
-              >
+            {["🎧 Truy cập website Dictation miễn phí", "📦 Ship sách tận nhà miễn phí"].map((b) => (
+              <div key={b} style={{ display: "flex", alignItems: "center", gap: 8, padding: "9px 18px", background: "#FAE8DB", border: `1px dashed ${TERRA}55`, borderRadius: 6, fontSize: "0.84rem", color: SEPIA, fontWeight: 500 }}>
                 {b}
               </div>
             ))}
@@ -277,22 +347,16 @@ export function CourseCards() {
       {/* Contact modal */}
       {modalCourse && (
         <div
-          style={{
-            position: "fixed", inset: 0, zIndex: 60,
-            display: "flex", alignItems: "center", justifyContent: "center",
-            background: "rgba(61,43,31,0.6)",
-          }}
+          style={{ position: "fixed", inset: 0, zIndex: 60, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(61,43,31,0.6)" }}
           onClick={() => setModalCourse(null)}
         >
           <div
             style={{
-              position: "relative",
-              background: CREAM,
-              border: `2px solid ${TERRA}45`,
-              borderRadius: 18,
+              position: "relative", background: CREAM,
+              border: `2px solid ${TERRA}45`, borderRadius: 18,
               boxShadow: `0 24px 64px rgba(61,43,31,0.35)`,
-              padding: "2rem 2rem 1.75rem",
-              width: "100%", maxWidth: 370, margin: "0 1rem",
+              padding: "2rem 2rem 1.75rem", width: "100%", maxWidth: 370, margin: "0 1rem",
+              animation: "course-modal-in 0.28s ease both",
             }}
             onClick={(e) => e.stopPropagation()}
           >
@@ -319,12 +383,9 @@ export function CourseCards() {
                 href={ZALO_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{
-                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                  padding: "11px 16px", borderRadius: 10,
-                  background: "#0068FF", color: "#fff",
-                  fontWeight: 700, fontSize: "0.87rem", textDecoration: "none",
-                }}
+                style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "11px 16px", borderRadius: 10, background: "#0068FF", color: "#fff", fontWeight: 700, fontSize: "0.87rem", textDecoration: "none", transition: "opacity 0.15s" }}
+                onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.88")}
+                onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
               >
                 <MessageCircle size={17} />
                 Nhắn Zalo
@@ -333,12 +394,9 @@ export function CourseCards() {
                 href={FB_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{
-                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                  padding: "10px 16px", borderRadius: 10,
-                  border: `1.5px solid ${TERRA}55`, color: INK,
-                  fontWeight: 500, fontSize: "0.84rem", textDecoration: "none",
-                }}
+                style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "10px 16px", borderRadius: 10, border: `1.5px solid ${TERRA}55`, color: INK, fontWeight: 500, fontSize: "0.84rem", textDecoration: "none", transition: "background 0.15s" }}
+                onMouseEnter={(e) => (e.currentTarget.style.background = "#FAE8DB")}
+                onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
               >
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="#1877F2" style={{ flexShrink: 0 }}>
                   <path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.795-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z" />
