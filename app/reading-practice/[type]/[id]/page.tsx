@@ -41,6 +41,7 @@ export default async function PracticePage({
       passage={{
         id: passage.id,
         type: passage.type,
+        category: passage.category,
         orderIndex: passage.orderIndex,
         texts: passage.texts as string[],
         questions: passage.questions.map((q) => ({
