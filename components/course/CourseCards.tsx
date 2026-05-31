@@ -16,7 +16,7 @@ const BORDER = "#D9C9B8";
 const SERIF  = "var(--font-display,'Lora',Georgia,serif)";
 const GRAIN_BG = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.048'/%3E%3C/svg%3E")`;
 
-// CSS keyframes injected once
+// CSS keyframes + responsive overrides injected once
 const ANIM_CSS = `
 @keyframes course-shimmer {
   0%   { background-position: -200% center; }
@@ -30,6 +30,15 @@ const ANIM_CSS = `
 @keyframes course-modal-in {
   from { opacity: 0; transform: scale(0.95) translateY(10px); }
   to   { opacity: 1; transform: scale(1)    translateY(0);    }
+}
+@media (max-width: 600px) {
+  .course0-card {
+    grid-template-columns: 1fr !important;
+  }
+  .course0-right {
+    min-width: unset !important;
+    width: 100% !important;
+  }
 }
 `;
 
@@ -177,6 +186,7 @@ export function CourseCards() {
             return (
               <div
                 ref={(el) => { cardRefs.current[0] = el; }}
+                className="course0-card"
                 onMouseEnter={() => setHoveredId(course.id)}
                 onMouseLeave={() => setHoveredId(null)}
                 style={{
@@ -185,10 +195,10 @@ export function CourseCards() {
                   border: `1.5px solid ${isHovered ? "#C4622D88" : "#C4622D55"}`,
                   borderTop: `3px solid ${isHovered ? "#C4622D" : "#C4622D88"}`,
                   borderRadius: 12,
-                  padding: "1.75rem 2rem",
+                  padding: "1.5rem",
                   display: "grid",
-                  gridTemplateColumns: "1fr auto",
-                  gap: "1.5rem 2.5rem",
+                  gridTemplateColumns: "minmax(0,1fr) auto",
+                  gap: "1.25rem 2rem",
                   alignItems: "start",
                   opacity:   isVisible ? 1 : 0,
                   transform: isVisible ? (isHovered ? "translateY(-5px)" : "translateY(0)") : "translateY(28px)",
@@ -227,7 +237,7 @@ export function CourseCards() {
                 </div>
 
                 {/* Right: price + CTA */}
-                <div style={{ minWidth: 180, display: "flex", flexDirection: "column", alignItems: "center", gap: "0.875rem" }}>
+                <div className="course0-right" style={{ minWidth: 180, display: "flex", flexDirection: "column", alignItems: "center", gap: "0.875rem" }}>
                   <div style={{ background: `${GRAIN_BG}, #FAE8DB`, backgroundBlendMode: "multiply", border: "1px dashed #C4622D60", borderRadius: 8, padding: "0.9rem 1.25rem", textAlign: "center", width: "100%" }}>
                     <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: 5 }}>
                       <span style={{ fontFamily: SERIF, fontSize: "1.6rem", fontWeight: 700, color: isHovered ? "#a8421a" : "#C4622D", transition: "color 0.25s", animation: isVisible ? "course-price-pop 0.5s ease 0s both" : "none", display: "inline-block" }}>

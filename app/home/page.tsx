@@ -143,15 +143,15 @@ export default async function HomePage() {
           }}
         >
           {/* Tag */}
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "4px 14px", border: `1.5px solid ${TERRA}55`, borderRadius: 4, marginBottom: "1.75rem", background: "#FAE8DB" }}>
-            <span style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: TERRA }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "4px 12px", border: `1.5px solid ${TERRA}55`, borderRadius: 4, marginBottom: "1.5rem", background: "#FAE8DB", maxWidth: "90vw" }}>
+            <span style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: TERRA, lineHeight: 1.5 }}>
               ETS 2024 · ETS 2026 · TOEIC Listening · Grammar · Reading
             </span>
           </div>
 
           <h1
             style={{
-              fontFamily: SERIF, fontSize: "clamp(2rem,6vw,3.25rem)", fontWeight: 700,
+              fontFamily: SERIF, fontSize: "clamp(1.75rem,6vw,3.25rem)", fontWeight: 700,
               color: INK, lineHeight: 1.2, letterSpacing: "-0.01em",
               marginBottom: "1rem", maxWidth: 640, marginLeft: "auto", marginRight: "auto",
             }}
@@ -159,35 +159,33 @@ export default async function HomePage() {
             Luyện TOEIC hiệu quả<br />mỗi ngày — không cần giáo viên
           </h1>
 
-          <p style={{ fontSize: "clamp(0.9rem,2vw,1.05rem)", color: SEPIA, maxWidth: 500, margin: "0 auto 2.25rem", lineHeight: 1.75 }}>
+          <p style={{ fontSize: "clamp(0.88rem,2vw,1.05rem)", color: SEPIA, maxWidth: 500, margin: "0 auto 2rem", lineHeight: 1.75, padding: "0 0.5rem" }}>
             Dictation chủ động, ngữ pháp có tracking, đọc hiểu theo dạng bài thực tế.
             Tất cả trong một ứng dụng. Hoàn toàn miễn phí.
           </p>
 
-          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: 12 }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, width: "100%", maxWidth: 320, margin: "0 auto" }}>
             <Link
               href="/auth/register"
               style={{
-                padding: "12px 28px", borderRadius: 8,
+                display: "block", width: "100%", textAlign: "center",
+                padding: "13px 28px", borderRadius: 8,
                 background: TERRA, color: "#fff",
                 fontWeight: 700, fontSize: "0.9rem", textDecoration: "none",
                 boxShadow: `0 4px 16px ${TERRA}45`,
-                transition: "background 0.15s",
               }}
             >
               Bắt đầu học miễn phí →
             </Link>
             <Link
               href="/auth/login"
-              style={{ padding: "11px 24px", borderRadius: 8, border: `1.5px solid ${SEPIA}60`, color: SEPIA, fontWeight: 500, fontSize: "0.88rem", textDecoration: "none" }}
+              style={{ display: "block", width: "100%", textAlign: "center", padding: "11px 24px", borderRadius: 8, border: `1.5px solid ${SEPIA}60`, color: SEPIA, fontWeight: 500, fontSize: "0.88rem", textDecoration: "none" }}
             >
               Đã có tài khoản
             </Link>
-          </div>
-          <div style={{ marginTop: "1.25rem" }}>
             <Link
               href="/course"
-              style={{ fontSize: "0.84rem", color: TERRA, fontWeight: 600, textDecoration: "none" }}
+              style={{ fontSize: "0.84rem", color: TERRA, fontWeight: 600, textDecoration: "none", paddingTop: 4 }}
             >
               🎓 Muốn học có giáo viên? Xem khoá học →
             </Link>
