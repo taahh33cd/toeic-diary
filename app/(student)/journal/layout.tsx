@@ -6,6 +6,7 @@ import { prisma } from "@/lib/db/prisma";
 import { Brand } from "@/components/shared/Brand";
 import { NavSwitcher } from "@/components/shared/NavSwitcher";
 import { JournalTabBar } from "@/components/journal/TabBar";
+import { JournalMobileNav } from "@/components/journal/MobileNav";
 import { MobileBottomNav } from "@/components/journal/MobileBottomNav";
 import { NotificationWatcher } from "@/components/shared/NotificationWatcher";
 import { InstallBanner } from "@/components/shared/InstallBanner";
@@ -73,8 +74,15 @@ export default async function JournalLayout({
             href="/journal"
             label={`${profile?.displayName ?? user.email?.split("@")[0] ?? "My"}'s TOEIC Diary`}
           />
-          <div className="absolute left-1/2 -translate-x-1/2">
+
+          {/* Desktop: nav centered */}
+          <div className="hidden md:block absolute left-1/2 -translate-x-1/2">
             <NavSwitcher orientation="horizontal" />
+          </div>
+
+          {/* Mobile: hamburger dropdown on the right */}
+          <div className="md:hidden ml-auto">
+            <JournalMobileNav />
           </div>
         </div>
       </header>
