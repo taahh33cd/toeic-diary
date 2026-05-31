@@ -21,6 +21,7 @@ const MODAL_ITEMS: NavItem[] = [
   { href: "/journal/schedule",     Icon: IconSchedule, label: "Lịch học" },
   { href: "/journal/fee",          Icon: IconFee,      label: "Học phí" },
   { href: "/journal/error-log",    Icon: IconJournal,  label: "Nhật ký lỗi" },
+  { href: "/journal/settings",     Icon: IconSettings, label: "Cài đặt" },
 ];
 
 export function MobileBottomNav() {
