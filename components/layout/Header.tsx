@@ -81,7 +81,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
             <span>🎧</span>
           </div>
           <div className="min-w-0">
-            <div className={styles.logoTitle}>{displayName}&apos;s TOEIC Diary</div>
+            <div className={styles.logoTitle}>{displayName}&apos;s TOEIC Dictation Diary</div>
             <div className={styles.logoSub}>TOEIC ETS 2026</div>
           </div>
         </Link>
