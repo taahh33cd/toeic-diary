@@ -104,6 +104,12 @@ const LISTENING_PARTS = [
   { part: 4, Icon: Megaphone,     name: "Talks",             color: "#2a7a5a" },
 ];
 
+const CERTS = [
+  { img: "/certificates/cert-935.jpg", name: "Nguyễn Đức Lân",  score: 935, listening: 485, reading: 450, date: "09/2024", rotate: "-2.5deg"  },
+  { img: "/certificates/cert-715.png", name: "Đào Duy Thành",   score: 715, listening: 445, reading: 270, date: "11/2024", rotate:  "1.5deg"  },
+  { img: "/certificates/cert-760.png", name: "Vũ Minh Thuận",   score: 760, listening: 410, reading: 350, date: "03/2025", rotate:  "-1deg"   },
+];
+
 // ── Page ──────────────────────────────────────────────────────────────────────
 export default async function HomePage() {
   const supabase = await createClient();
@@ -381,6 +387,85 @@ export default async function HomePage() {
             </section>
           </>
         )}
+
+        {/* ── Student Certificates ──────────────────────────────────────────── */}
+        <div style={{ padding: "2rem 0", background: BEIGE, borderTop: `1px solid ${BORDER}` }}>
+          <Ornament label="✦ KẾT QUẢ THỰC TẾ CỦA HỌC VIÊN ✦" />
+        </div>
+
+        <section style={{ background: BEIGE, padding: "0 clamp(1rem,4vw,2rem) 4rem" }}>
+          <div style={{ maxWidth: 1120, margin: "0 auto" }}>
+            <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+              <h2 style={{ fontFamily: SERIF, fontSize: "clamp(1.3rem,3vw,1.7rem)", fontWeight: 700, color: INK, marginBottom: "0.5rem" }}>
+                Học viên đã đạt được
+              </h2>
+              <p style={{ fontSize: "0.86rem", color: SEPIA, maxWidth: 420, margin: "0 auto" }}>
+                Chứng chỉ thực tế từ kỳ thi TOEIC chính thức ETS.
+              </p>
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(300px,100%), 1fr))", gap: "2rem" }}>
+              {CERTS.map(({ img, name, score, listening, reading, date, rotate }) => (
+                <div
+                  key={name}
+                  style={{
+                    display: "flex", flexDirection: "column", alignItems: "center", gap: "1rem",
+                  }}
+                >
+                  {/* Certificate image with rotation */}
+                  <div
+                    style={{
+                      width: "100%",
+                      transform: `rotate(${rotate})`,
+                      borderRadius: 8,
+                      boxShadow: "0 6px 24px rgba(61,43,31,0.18), 0 2px 6px rgba(61,43,31,0.1)",
+                      overflow: "hidden",
+                      border: `3px solid #fff`,
+                      transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    }}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={img} alt={`Chứng chỉ TOEIC của ${name}`} style={{ width: "100%", display: "block" }} />
+                  </div>
+
+                  {/* Info card */}
+                  <div
+                    style={{
+                      background: `${GRAIN_BG}, ${CREAM}`,
+                      backgroundBlendMode: "multiply",
+                      border: `1.5px solid ${BORDER}`,
+                      borderTop: `3px solid ${TERRA}`,
+                      borderRadius: 10,
+                      padding: "1rem 1.25rem",
+                      width: "100%",
+                      boxShadow: "0 2px 8px rgba(61,43,31,0.06)",
+                    }}
+                  >
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.6rem" }}>
+                      <span style={{ fontFamily: SERIF, fontWeight: 700, fontSize: "0.95rem", color: INK }}>{name}</span>
+                      <span style={{ fontSize: "0.65rem", color: MUTED }}>{date}</span>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", flexWrap: "wrap" }}>
+                      <span
+                        style={{
+                          fontFamily: SERIF, fontSize: "1.5rem", fontWeight: 700, color: TERRA,
+                          background: "#FAE8DB", border: `1px dashed ${TERRA}55`,
+                          borderRadius: 6, padding: "2px 10px", lineHeight: 1.4,
+                        }}
+                      >
+                        {score}
+                      </span>
+                      <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                        <span style={{ fontSize: "0.7rem", color: SEPIA }}>🎧 Nghe: <strong>{listening}</strong></span>
+                        <span style={{ fontSize: "0.7rem", color: SEPIA }}>📖 Đọc: <strong>{reading}</strong></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* ── Final CTA ─────────────────────────────────────────────────────── */}
         <section
