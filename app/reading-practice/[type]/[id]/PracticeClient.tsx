@@ -95,6 +95,30 @@ export function PracticeClient({
         color: "#333",
       }}
     >
+      {/* Mobile portrait hint */}
+      <style>{`
+        @media (max-width: 768px) and (orientation: portrait) {
+          .rotate-hint { display: flex !important; }
+        }
+      `}</style>
+      <div
+        className="rotate-hint"
+        style={{
+          display: "none",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: 8,
+          background: "#fff3cd",
+          color: "#856404",
+          fontSize: "0.8rem",
+          padding: "6px 12px",
+          borderBottom: "1px solid #ffeeba",
+          flexShrink: 0,
+        }}
+      >
+        📱 Xoay ngang màn hình để làm bài đọc tốt hơn
+      </div>
+
       {/* Header */}
       <header
         style={{
