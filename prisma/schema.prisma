@@ -152,6 +152,7 @@ model Profile {
   managedStudents Profile[] @relation("TeacherStudent")
   teacher         Profile?  @relation("TeacherStudent", fields: [teacherId], references: [id])
   grammarAttempts GrammarAttempt[]
+  readingAttempts ReadingAttempt[]
 
   @@map("profiles")
 }
@@ -284,4 +285,56 @@ model AiFeedback {
 
   @@index([userId, lessonId, level])
   @@map("ai_feedback")
+}
+
+// ─────────────────────────────────────
+// READING PRACTICE (Part 7)
+// ─────────────────────────────────────
+
+model ReadingPassage {
+  id         String            @id @default(uuid())
+  type       String            // "single" | "double" | "triple"
+  category   String?           // "A. E-MAIL - LETTER" etc. — only for single
+  texts      Json              // String[] of HTML passage content
+  orderIndex Int               @map("order_index")
+  createdAt  DateTime          @default(now()) @map("created_at")
+
+  questions  ReadingQuestion[]
+  attempts   ReadingAttempt[]
+
+  @@index([type])
+  @@map("reading_passages")
+}
+
+model ReadingQuestion {
+  id         String         @id @default(uuid())
+  passageId  String         @map("passage_id")
+  passage    ReadingPassage @relation(fields: [passageId], references: [id], onDelete: Cascade)
+  orderIndex Int            @map("order_index")
+  text       String         @db.Text
+  optionA    String         @map("option_a")
+  optionB    String         @map("option_b")
+  optionC    String         @map("option_c")
+  optionD    String         @map("option_d")
+  correct    String         // "A" | "B" | "C" | "D"
+  explanation String        @db.Text
+
+  @@index([passageId, orderIndex])
+  @@map("reading_questions")
+}
+
+model ReadingAttempt {
+  id          String         @id @default(uuid())
+  userId      String         @map("user_id")
+  profile     Profile        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  passageId   String         @map("passage_id")
+  passage     ReadingPassage @relation(fields: [passageId], references: [id])
+  score       Int            // 0-100
+  answers     Json           // { "q0": "A", "q1": "C", ... }
+  completedAt DateTime       @default(now()) @map("completed_at")
+  createdAt   DateTime       @default(now()) @map("created_at")
+
+  @@index([userId, passageId])
+  @@index([userId])
+  @@map("reading_attempts")
 }

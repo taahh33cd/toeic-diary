@@ -5,6 +5,8 @@ import { prisma } from "@/lib/db/prisma";
 const VALID_THEMES = new Set([
   "warm", "dark", "forest", "ocean",
   "rose", "lavender", "butter", "mint",
+  "peach", "sakura", "honey", "mauve", "wheat",
+  "sky", "periwinkle", "seafoam", "slate", "violet",
 ]);
 
 export async function PATCH(request: NextRequest) {
