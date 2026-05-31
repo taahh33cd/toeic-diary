@@ -204,6 +204,31 @@
   --font-reading-display: var(--font-lora, 'Lora', Georgia, 'Times New Roman', serif);
 }
 
+/* Reading-theme interactive utilities */
+.theme-reading .r-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  will-change: transform;
+}
+.theme-reading .r-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.theme-reading .r-row {
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.theme-reading .r-row:hover {
+  background: var(--bg-elevated) !important;
+}
+
+.theme-reading .r-arrow {
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+.theme-reading .r-row:hover .r-arrow {
+  transform: translateX(3px);
+}
+
 /* ─────────────────────────────────────────────────────────
    THEME: GRAMMAR — Tropical Retro (white / green / gold)
    Apply class "theme-grammar" on the section wrapper div.

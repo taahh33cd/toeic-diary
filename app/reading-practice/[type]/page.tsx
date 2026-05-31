@@ -70,6 +70,7 @@ export default async function ReadingTypeListPage({
 
   return (
     <div
+      className="page-enter"
       style={{
         minHeight: "100vh",
         background: "var(--bg-primary)",
@@ -174,6 +175,7 @@ export default async function ReadingTypeListPage({
                 )}
 
                 <div
+                  className="stagger-children"
                   style={{
                     display: "grid",
                     gridTemplateColumns: "repeat(auto-fill, minmax(min(160px, 100%), 1fr))",
@@ -193,6 +195,7 @@ export default async function ReadingTypeListPage({
                       <Link
                         key={p.id}
                         href={`/reading-practice/${type}/${p.id}?cat=${catParam}`}
+                        className="r-card"
                         style={{
                           display: "flex",
                           alignItems: "center",

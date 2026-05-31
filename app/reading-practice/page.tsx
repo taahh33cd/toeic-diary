@@ -91,6 +91,7 @@ export default async function ReadingPracticePage() {
 
   return (
     <div
+      className="page-enter"
       style={{
         minHeight: "100%",
         background: "var(--bg-primary)",
@@ -103,6 +104,7 @@ export default async function ReadingPracticePage() {
     >
       {/* Welcome card */}
       <div
+        className="animate-slide-up"
         style={{
           width: "100%",
           background: "#6B4C2A",
@@ -230,6 +232,7 @@ export default async function ReadingPracticePage() {
 
       {/* Type cards */}
       <div
+        className="stagger-children animate-slide-up"
         style={{
           width: "100%",
           display: "flex",
@@ -250,6 +253,7 @@ export default async function ReadingPracticePage() {
             <Link
               key={type}
               href={`/reading-practice/${type}`}
+              className="r-row"
               style={{
                 display: "flex",
                 alignItems: "flex-start",
@@ -260,7 +264,6 @@ export default async function ReadingPracticePage() {
                 textDecoration: "none",
                 borderBottom:
                   idx < TYPES.length - 1 ? "1px solid var(--border)" : "none",
-                transition: "background 0.15s",
               }}
             >
               {/* Roman numeral */}
@@ -374,7 +377,7 @@ export default async function ReadingPracticePage() {
                 >
                   {total} bài
                 </span>
-                <span style={{ fontSize: "0.8rem", color: "var(--accent-primary)" }}>
+                <span className="r-arrow" style={{ fontSize: "0.8rem", color: "var(--accent-primary)" }}>
                   →
                 </span>
               </div>
