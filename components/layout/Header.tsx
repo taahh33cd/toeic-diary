@@ -65,11 +65,10 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
 
   const NAV_LINKS = [
     { href: "/practice",          icon: <Headphones size={16} />,    label: "Luyện tập theo Part" },
-    { href: "/reading-practice",  icon: <BookOpen size={16} />,      label: "Reading Part 7" },
-    { href: "/journal/vocab",     icon: <BookOpen size={16} />,      label: "Từ vựng" },
     { href: "/progress",          icon: <BarChart2 size={16} />,     label: "Tiến độ" },
-    { href: "/grammar",           icon: <GraduationCap size={16} />, label: "Ngữ pháp" },
     { href: "/journal",           icon: <NotebookPen size={16} />,   label: "Nhật ký" },
+    { href: "/grammar",           icon: <GraduationCap size={16} />, label: "Ngữ pháp" },
+    { href: "/reading-practice",  icon: <BookOpen size={16} />,      label: "Reading" },
   ];
 
   return (
