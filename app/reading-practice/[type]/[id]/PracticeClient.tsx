@@ -93,7 +93,8 @@ export function PracticeClient({
   return (
     <div
       style={{
-        height: "100dvh",
+        flex: 1,
+        minHeight: 0,
         display: "flex",
         flexDirection: "column",
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
