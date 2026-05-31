@@ -7,28 +7,28 @@
    DESIGN TOKENS — LIGHT MODE (default)
 ───────────────────────────────────────────────────────── */
 :root {
-  /* Backgrounds */
-  --bg-primary: #F8F9FC;
-  --bg-secondary: #EFF1F8;
-  --bg-elevated: #FFFFFF;
+  /* Backgrounds — mint (#C1EBE9) xen kẽ vàng (#FFF7C5) */
+  --bg-primary: #C1EBE9;    /* mint — nền trang */
+  --bg-secondary: #FFF7C5;  /* vàng nhạt — nền xen kẽ / hover */
+  --bg-elevated: #FFFFFF;   /* trắng — card nổi */
 
   /* Accent colors */
-  --accent-primary: #6366F1;       /* Indigo — chủ đạo */
-  --accent-primary-hover: #4F46E5;
+  --accent-primary: #F4AE52;       /* amber — button CTA, active */
+  --accent-primary-hover: #D48E2A;
   --accent-green: #10B981;
   --accent-red: #EF4444;
   --accent-yellow: #F59E0B;
   --accent-blue: #3B82F6;
-  --practice-accent: #006591;  /* audio player & practice UI accent */
+  --practice-accent: #F4AE52;  /* audio player & practice UI accent */
 
   /* Text */
-  --text-primary: #0F172A;
-  --text-secondary: #475569;
-  --text-muted: #94A3B8;
+  --text-primary: #4F252E;    /* burgundy đậm */
+  --text-secondary: #7A4550;  /* burgundy vừa */
+  --text-muted: #A87880;      /* burgundy nhạt */
 
   /* Borders */
-  --border: #E2E8F0;
-  --border-focus: #6366F1;
+  --border: #9ED4D2;          /* mint border */
+  --border-focus: #F4AE52;    /* amber focus ring */
 
   /* Radius */
   --radius-sm: 6px;
@@ -37,10 +37,10 @@
   --radius-xl: 20px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
-  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.10), 0 4px 12px rgba(0, 0, 0, 0.05);
-  --shadow-glow: 0 0 24px rgba(99, 102, 241, 0.18);
+  --shadow-sm: 0 1px 3px rgba(79, 37, 46, 0.06), 0 1px 2px rgba(79, 37, 46, 0.04);
+  --shadow-md: 0 4px 12px rgba(79, 37, 46, 0.08), 0 2px 6px rgba(79, 37, 46, 0.04);
+  --shadow-lg: 0 12px 32px rgba(79, 37, 46, 0.10), 0 4px 12px rgba(79, 37, 46, 0.05);
+  --shadow-glow: 0 0 24px rgba(244, 174, 82, 0.22);
 
   /* Font variables */
   --font-sans: var(--font-be-vietnam, 'Be Vietnam Pro', system-ui, sans-serif);
@@ -64,29 +64,30 @@
    DESIGN TOKENS — DARK MODE
 ───────────────────────────────────────────────────────── */
 .dark {
-  --bg-primary: #0C0E1A;
-  --bg-secondary: #131629;
-  --bg-elevated: #1A1D2E;
+  /* Backgrounds — phiên bản tối của mint & vàng */
+  --bg-primary: #0E2A28;    /* mint rất đậm */
+  --bg-secondary: #27220D;  /* vàng-amber rất đậm */
+  --bg-elevated: #163432;   /* dark elevated */
 
-  --accent-primary: #818CF8;
-  --accent-primary-hover: #A5B4FC;
+  --accent-primary: #F4AE52;       /* amber giữ nguyên — dễ đọc trên dark */
+  --accent-primary-hover: #F7C070;
   --accent-green: #34D399;
   --accent-red: #F87171;
   --accent-yellow: #FBBF24;
   --accent-blue: #60A5FA;
-  --practice-accent: #38bdf8;  /* lighter sky-400 for dark backgrounds */
+  --practice-accent: #F4AE52;
 
-  --text-primary: #F1F5F9;
-  --text-secondary: #94A3B8;
-  --text-muted: #475569;
+  --text-primary: #F5EDEA;    /* trắng ấm */
+  --text-secondary: #C8A8AD;  /* hồng nhạt */
+  --text-muted: #7A6065;
 
-  --border: #1E2235;
-  --border-focus: #818CF8;
+  --border: #1D3E3C;          /* dark mint border */
+  --border-focus: #F4AE52;
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 24px rgba(129, 140, 248, 0.2);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);
+  --shadow-glow: 0 0 24px rgba(244, 174, 82, 0.2);
 }
 
 /* ─────────────────────────────────────────────────────────
@@ -412,13 +413,13 @@ h1, h2, h3 {
   .btn-primary {
     background: var(--accent-primary);
     color: #fff;
-    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 2px 8px rgba(244, 174, 82, 0.3);
   }
 
   .btn-primary:hover:not(:disabled) {
     background: var(--accent-primary-hover);
     transform: translateY(-1px);
-    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 4px 16px rgba(244, 174, 82, 0.4);
   }
 
   .btn-secondary {
@@ -485,7 +486,7 @@ h1, h2, h3 {
 
   .input:focus {
     border-color: var(--border-focus);
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+    box-shadow: 0 0 0 3px rgba(244, 174, 82, 0.18);
   }
 
   .input::placeholder {
@@ -513,7 +514,7 @@ h1, h2, h3 {
   }
 
   .badge-primary {
-    background: rgba(99, 102, 241, 0.12);
+    background: rgba(244, 174, 82, 0.15);
     color: var(--accent-primary);
   }
 
@@ -549,7 +550,7 @@ h1, h2, h3 {
   .progress-bar-fill {
     height: 100%;
     border-radius: 999px;
-    background: linear-gradient(90deg, var(--accent-primary), #8B5CF6);
+    background: linear-gradient(90deg, var(--accent-primary), #D48E2A);
     transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -612,8 +613,8 @@ h1, h2, h3 {
 }
 
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.1); }
-  50% { box-shadow: 0 0 30px rgba(99, 102, 241, 0.3); }
+  0%, 100% { box-shadow: 0 0 20px rgba(244, 174, 82, 0.12); }
+  50% { box-shadow: 0 0 30px rgba(244, 174, 82, 0.35); }
 }
 
 .animate-fade-in { animation: fadeIn 0.3s ease-out both; }
@@ -660,7 +661,7 @@ h1, h2, h3 {
 }
 
 .diff-extra {
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(244, 174, 82, 0.12);
   color: var(--accent-primary);
   border-radius: 3px;
   padding: 1px 3px;
@@ -697,7 +698,7 @@ h1, h2, h3 {
   border-radius: 50%;
   background: var(--accent-primary);
   cursor: pointer;
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  box-shadow: 0 0 0 3px rgba(244, 174, 82, 0.25);
   transition: transform 0.1s ease;
 }
 
@@ -714,7 +715,7 @@ h1, h2, h3 {
   padding: 2px 10px;
   border: none;
   border-bottom: 2px solid var(--accent-primary);
-  background: rgba(99, 102, 241, 0.06);
+  background: rgba(244, 174, 82, 0.08);
   color: var(--text-primary);
   font-family: var(--font-mono);
   font-size: 0.9rem;
