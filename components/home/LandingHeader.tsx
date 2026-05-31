@@ -31,7 +31,7 @@ export function LandingHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
           {/* Logo */}
           <Link href="/home" className="flex items-center gap-2 no-underline hover:opacity-90 transition-opacity">
             <span className="text-xl">🎧</span>
-            <span className="font-bold text-base text-white leading-tight">TOEIC Dictation Diary</span>
+            <span className="font-bold text-base text-white leading-tight">TOEIC Diary</span>
           </Link>
 
           {/* Desktop nav */}

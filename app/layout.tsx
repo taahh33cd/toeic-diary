@@ -63,8 +63,8 @@ const plusJakarta = Plus_Jakarta_Sans({
 // ── Metadata ──────────────────────────────────────
 export const metadata: Metadata = {
   title: {
-    default: "TOEIC Dictation Master",
-    template: "%s | TOEIC Dictation Master",
+    default: "TOEIC Diary",
+    template: "%s | TOEIC Diary",
   },
   description:
     "Luyện nghe chép chính tả TOEIC chuyên sâu — 3 levels, AI feedback, bộ đề EST 2026",
