@@ -103,7 +103,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
         <div className={styles.actions}>
           {/* Mobile hamburger */}
           <button
-            className="md:hidden btn btn-ghost btn-icon text-white hover:bg-white/10"
+            className="lg:hidden btn btn-ghost btn-icon text-white hover:bg-white/10"
             onClick={() => setMobileNavOpen((v) => !v)}
             aria-label={mobileNavOpen ? "Đóng menu" : "Mở menu"}
             aria-expanded={mobileNavOpen}
@@ -206,7 +206,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
     {/* Mobile nav overlay */}
     {mobileNavOpen && (
       <div
-        className="md:hidden fixed inset-0 z-40"
+        className="lg:hidden fixed inset-0 z-40"
         style={{ background: "rgba(0,0,0,0.3)" }}
         onClick={() => setMobileNavOpen(false)}
         aria-hidden="true"
@@ -215,7 +215,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
 
     {/* Mobile nav drawer */}
     <nav
-      className="md:hidden fixed left-0 right-0 z-50 transition-transform duration-200"
+      className="lg:hidden fixed left-0 right-0 z-50 transition-transform duration-200"
       style={{
         top: 64,
         background: "#4DA8DA",
@@ -283,13 +283,13 @@ const styles = {
     hidden
   `,
   logoTitle: `
-    font-display font-bold text-base leading-tight text-white
+    font-display font-bold text-base leading-tight text-white truncate
   `,
   logoSub: `
     hidden
   `,
   nav: `
-    hidden md:flex items-center gap-6
+    hidden lg:flex items-center gap-6
   `,
   navDivider: `
     w-px h-4 bg-white/30 flex-shrink-0
