@@ -55,7 +55,7 @@ export function ReadingBannerAndNav({ displayName }: { displayName: string }) {
             letterSpacing: "0.01em",
           }}
         >
-          {displayName}&apos;s Reading Diary
+          {displayName}&apos;s TOEIC Reading Diary
         </Link>
 
         {/* Nav tabs */}

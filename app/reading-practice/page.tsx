@@ -94,26 +94,26 @@ export default async function ReadingPracticePage() {
       style={{
         minHeight: "100%",
         background: "var(--bg-primary)",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 4vw, 2rem)",
+        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
+        maxWidth: 1100,
+        margin: "0 auto",
+        width: "100%",
+        boxSizing: "border-box",
       }}
     >
       {/* Welcome card */}
       <div
         style={{
           width: "100%",
-          maxWidth: 640,
           background: "#6B4C2A",
           borderRadius: 14,
-          padding: "20px 24px",
+          padding: "24px 32px",
           marginBottom: "2.5rem",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
           flexWrap: "wrap",
-          gap: 16,
+          gap: 20,
           boxShadow: "0 4px 16px rgba(107,76,42,0.18)",
         }}
       >
@@ -133,7 +133,7 @@ export default async function ReadingPracticePage() {
           <h2
             style={{
               fontFamily: "var(--font-reading-display)",
-              fontSize: "clamp(1.2rem, 3vw, 1.55rem)",
+              fontSize: "clamp(1.4rem, 3vw, 1.9rem)",
               fontWeight: 700,
               color: "#FFFDF6",
               margin: "0 0 4px",
@@ -145,7 +145,7 @@ export default async function ReadingPracticePage() {
           <p
             style={{
               margin: 0,
-              fontSize: "0.82rem",
+              fontSize: "0.85rem",
               color: "rgba(255,253,246,0.68)",
               lineHeight: 1.5,
             }}
@@ -154,43 +154,44 @@ export default async function ReadingPracticePage() {
           </p>
         </div>
 
-        {/* Right: stats */}
-        <div style={{ display: "flex", gap: 8, flexShrink: 0 }}>
+        {/* Right: stats — horizontal chips like dictation homepage */}
+        <div style={{ display: "flex", gap: 12, flexShrink: 0, flexWrap: "wrap" }}>
           {[
-            { label: "Ngày streak",    value: streak,         icon: "🔥" },
-            { label: "Bài hoàn thành", value: completedCount, icon: "✓"  },
-            { label: "Tổng bài",       value: totalAll,       icon: null  },
+            { label: "NGÀY STREAK",    value: `${streak} ngày`,              icon: "🔥" },
+            { label: "BÀI HOÀN THÀNH", value: `${completedCount} bài`,       icon: null },
+            { label: "TỔNG BÀI",       value: `${totalAll.toLocaleString()}`, icon: null },
           ].map(({ label, value, icon }) => (
             <div
               key={label}
               style={{
-                background: "rgba(255,253,246,0.12)",
-                border: "1px solid rgba(255,253,246,0.18)",
-                borderRadius: 8,
-                padding: "10px 14px",
+                background: "rgba(255,253,246,0.13)",
+                border: "1px solid rgba(255,253,246,0.2)",
+                borderRadius: 10,
+                padding: "14px 22px",
                 textAlign: "center",
-                minWidth: 72,
+                minWidth: 110,
               }}
             >
               {icon && (
-                <div style={{ fontSize: "0.9rem", marginBottom: 2 }}>{icon}</div>
+                <div style={{ fontSize: "1rem", marginBottom: 4 }}>{icon}</div>
               )}
               <div
                 style={{
-                  fontSize: "1.3rem",
+                  fontSize: "1.5rem",
                   fontWeight: 700,
                   color: "#FFFDF6",
                   lineHeight: 1,
+                  marginBottom: 5,
                 }}
               >
-                {value.toLocaleString()}
+                {value}
               </div>
               <div
                 style={{
-                  fontSize: "0.62rem",
-                  color: "rgba(255,253,246,0.62)",
-                  marginTop: 4,
-                  lineHeight: 1.3,
+                  fontSize: "0.6rem",
+                  letterSpacing: "0.08em",
+                  color: "rgba(255,253,246,0.55)",
+                  textTransform: "uppercase",
                 }}
               >
                 {label}
@@ -201,7 +202,7 @@ export default async function ReadingPracticePage() {
       </div>
 
       {/* Decorative top rule */}
-      <div style={{ width: "100%", maxWidth: 640, marginBottom: "2rem" }}>
+      <div style={{ width: "100%", marginBottom: "2rem" }}>
         <div
           style={{
             display: "flex",
@@ -228,7 +229,6 @@ export default async function ReadingPracticePage() {
       <div
         style={{
           width: "100%",
-          maxWidth: 640,
           display: "flex",
           flexDirection: "column",
           gap: "1px",
@@ -381,7 +381,7 @@ export default async function ReadingPracticePage() {
       </div>
 
       {/* Bottom rule */}
-      <div style={{ width: "100%", maxWidth: 640, marginTop: "3rem" }}>
+      <div style={{ width: "100%", marginTop: "3rem" }}>
         <div style={{ height: 1, background: "var(--border)" }} />
         <p
           style={{
