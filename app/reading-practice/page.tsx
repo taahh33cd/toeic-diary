@@ -168,8 +168,11 @@ export default async function ReadingPracticePage() {
                 border: "1px solid rgba(255,253,246,0.2)",
                 borderRadius: 10,
                 padding: "14px 22px",
-                textAlign: "center",
                 minWidth: 110,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
               {icon && (
