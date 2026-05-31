@@ -66,7 +66,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
   const NAV_LINKS = [
     { href: "/practice",          icon: <Headphones size={16} />,    label: "Luyện tập theo Part" },
     { href: "/progress",          icon: <BarChart2 size={16} />,     label: "Tiến độ" },
-    { href: "/journal",           icon: <NotebookPen size={16} />,   label: "Nhật ký" },
+    { href: "/journal",           icon: <NotebookPen size={16} />,   label: "Nhật ký", divider: true },
     { href: "/grammar",           icon: <GraduationCap size={16} />, label: "Ngữ pháp" },
     { href: "/reading-practice",  icon: <BookOpen size={16} />,      label: "Reading" },
   ];
@@ -88,11 +88,14 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
 
         {/* Desktop nav links */}
         <nav className={styles.nav}>
-          {NAV_LINKS.map(({ href, icon, label }) => (
-            <Link key={href} href={href} className={styles.navLink}>
-              {icon}
-              <span>{label}</span>
-            </Link>
+          {NAV_LINKS.map(({ href, icon, label, divider }) => (
+            <>
+              <Link key={href} href={href} className={styles.navLink}>
+                {icon}
+                <span>{label}</span>
+              </Link>
+              {divider && <div key={`${href}-div`} className={styles.navDivider} />}
+            </>
           ))}
         </nav>
 
@@ -287,6 +290,9 @@ const styles = {
   `,
   nav: `
     hidden md:flex items-center gap-6
+  `,
+  navDivider: `
+    w-px h-4 bg-white/30 flex-shrink-0
   `,
   navLink: `
     flex items-center gap-1.5 px-0 pb-1
