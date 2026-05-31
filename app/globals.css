@@ -7,10 +7,10 @@
    DESIGN TOKENS — LIGHT MODE (default)
 ───────────────────────────────────────────────────────── */
 :root {
-  /* Backgrounds — mint (#C1EBE9) xen kẽ vàng (#FFF7C5) */
-  --bg-primary: #C1EBE9;    /* mint — nền trang */
+  /* Backgrounds */
+  --bg-primary: #FFFFFF;    /* trắng — nền trang */
   --bg-secondary: #FFF7C5;  /* vàng nhạt — nền xen kẽ / hover */
-  --bg-elevated: #FFFFFF;   /* trắng — card nổi */
+  --bg-elevated: #C1EBE9;   /* mint — card / section nổi */
 
   /* Accent colors */
   --accent-primary: #F4AE52;       /* amber — button CTA, active */
@@ -160,6 +160,33 @@
 
   /* ── Misc ── */
   --sidebar-w: 220px;
+}
+
+/* ─────────────────────────────────────────────────────────
+   THEME: READING PRACTICE — Neutral clean (white / blue)
+   Apply class "theme-reading" on the section wrapper div.
+   Isolates reading-practice from the global mint/amber palette.
+───────────────────────────────────────────────────────── */
+.theme-reading {
+  --bg-primary:   #F8FAFC;
+  --bg-secondary: #EFF4FF;
+  --bg-elevated:  #FFFFFF;
+
+  --accent-primary:       #3B82F6;
+  --accent-primary-hover: #2563EB;
+  --practice-accent:      #3B82F6;
+
+  --text-primary:   #0F172A;
+  --text-secondary: #475569;
+  --text-muted:     #94A3B8;
+
+  --border:       #E2E8F0;
+  --border-focus: #3B82F6;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.10), 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-glow: 0 0 24px rgba(59, 130, 246, 0.18);
 }
 
 /* ─────────────────────────────────────────────────────────

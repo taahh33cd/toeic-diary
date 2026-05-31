@@ -14,5 +14,5 @@ export default async function ReadingPracticeLayout({
   } = await supabase.auth.getUser();
   if (!user) redirect("/auth/login?next=/reading-practice");
 
-  return <>{children}</>;
+  return <div className="theme-reading">{children}</div>;
 }
