@@ -113,9 +113,9 @@ export default async function ReadingPracticePage() {
           marginBottom: "2.5rem",
           display: "flex",
           justifyContent: "space-between",
-          alignItems: "center",
+          alignItems: "flex-start",
           flexWrap: "wrap",
-          gap: 20,
+          gap: 16,
           boxShadow: "0 4px 16px rgba(107,76,42,0.18)",
         }}
       >
@@ -157,7 +157,7 @@ export default async function ReadingPracticePage() {
         </div>
 
         {/* Right: stats — horizontal chips like dictation homepage */}
-        <div style={{ display: "flex", gap: 12, flexShrink: 0, flexWrap: "wrap" }}>
+        <div style={{ display: "flex", gap: 12, flexWrap: "wrap", width: "100%" }}>
           {[
             { label: "NGÀY STREAK",    value: `${streak} ngày`,              icon: "🔥" },
             { label: "BÀI HOÀN THÀNH", value: `${completedCount} bài`,       icon: null },
@@ -169,8 +169,9 @@ export default async function ReadingPracticePage() {
                 background: "rgba(255,253,246,0.13)",
                 border: "1px solid rgba(255,253,246,0.2)",
                 borderRadius: 10,
-                padding: "14px 22px",
-                minWidth: 110,
+                padding: "12px 16px",
+                flex: "1 1 80px",
+                minWidth: 0,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",

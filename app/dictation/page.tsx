@@ -87,9 +87,9 @@ export default async function DictationPage() {
                 Luyện nghe chủ động — phương pháp hiệu quả nhất để nâng cấp kỹ năng nghe TOEIC của bạn mỗi ngày.
               </p>
             </div>
-            <div className="flex flex-wrap gap-3 shrink-0">
+            <div className="flex flex-wrap gap-3">
               <div
-                className="bg-[var(--bg-elevated)] px-6 py-3 rounded-xl border border-[var(--border)] flex items-center gap-3"
+                className="flex-1 min-w-[140px] bg-[var(--bg-elevated)] px-4 py-3 rounded-xl border border-[var(--border)] flex items-center gap-3"
                 style={{ boxShadow: SOFT_DEPTH }}
               >
                 <Flame size={22} className="text-[#4DA8DA]" style={{ fill: "rgba(77,168,218,0.15)" }} />
@@ -99,7 +99,7 @@ export default async function DictationPage() {
                 </div>
               </div>
               <div
-                className="bg-[var(--bg-elevated)] px-6 py-3 rounded-xl border border-[var(--border)] flex items-center gap-3"
+                className="flex-1 min-w-[140px] bg-[var(--bg-elevated)] px-4 py-3 rounded-xl border border-[var(--border)] flex items-center gap-3"
                 style={{ boxShadow: SOFT_DEPTH }}
               >
                 <BookCheck size={22} className="text-[var(--text-muted)]" />

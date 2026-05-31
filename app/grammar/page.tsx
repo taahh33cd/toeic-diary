@@ -109,11 +109,8 @@ export default async function GrammarPage() {
           padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 4vw, 2.5rem)",
           marginBottom: "1.5rem",
           display: "flex",
-          flexDirection: "row",
-          alignItems: "flex-end",
-          justifyContent: "space-between",
-          gap: "1.5rem",
-          flexWrap: "wrap",
+          flexDirection: "column",
+          gap: "1rem",
         }}
       >
         <div>
@@ -128,18 +125,18 @@ export default async function GrammarPage() {
           </p>
         </div>
 
-        <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", flexShrink: 0 }}>
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "0.75rem 1.25rem", borderRadius: "var(--radius-lg)", border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.12)", minWidth: 90 }}>
+        <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "0.75rem 1rem", borderRadius: "var(--radius-lg)", border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.12)", flex: "1 1 70px", minWidth: 0 }}>
             <Flame size={18} style={{ color: "#FFD66B", marginBottom: "0.2rem" }} />
             <span style={{ fontSize: "1.5rem", fontWeight: 700, color: "#fff", lineHeight: 1 }}>{streak}</span>
             <span style={{ fontSize: "0.65rem", color: "rgba(255,255,255,0.8)", marginTop: "0.2rem" }}>Ngày streak</span>
           </div>
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "0.75rem 1.25rem", borderRadius: "var(--radius-lg)", border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.12)", minWidth: 90 }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "0.75rem 1rem", borderRadius: "var(--radius-lg)", border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.12)", flex: "1 1 70px", minWidth: 0 }}>
             <BookCheck size={18} style={{ color: "#FFD66B", marginBottom: "0.2rem" }} />
             <span style={{ fontSize: "1.5rem", fontWeight: 700, color: "#fff", lineHeight: 1 }}>{completedTests}</span>
             <span style={{ fontSize: "0.65rem", color: "rgba(255,255,255,0.8)", marginTop: "0.2rem" }}>Bài hoàn thành</span>
           </div>
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "0.75rem 1.25rem", borderRadius: "var(--radius-lg)", border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.12)", minWidth: 90 }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "0.75rem 1rem", borderRadius: "var(--radius-lg)", border: "1px solid rgba(255,255,255,0.3)", background: "rgba(255,255,255,0.12)", flex: "1 1 70px", minWidth: 0 }}>
             <span style={{ fontSize: "1.5rem", fontWeight: 700, color: "#fff", lineHeight: 1 }}>{totalQs.toLocaleString()}</span>
             <span style={{ fontSize: "0.65rem", color: "rgba(255,255,255,0.8)", marginTop: "0.4rem" }}>Câu hỏi</span>
           </div>
