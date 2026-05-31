@@ -4,29 +4,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const LEFT_TABS = [
-  { href: "/reading-practice",          label: "Tổng quan", exact: true },
+  { href: "/reading-practice",          label: "Tổng quan", exact: true  },
   { href: "/reading-practice/progress", label: "Tiến độ",   exact: false },
   { href: "/journal",                   label: "Nhật ký",   exact: false },
 ];
 
 const RIGHT_TABS = [
-  { href: "/practice", label: "Dictation" },
-  { href: "/grammar",  label: "Ngữ pháp" },
+  { href: "/",        label: "Dictation" },
+  { href: "/grammar", label: "Ngữ pháp"  },
 ];
 
-type Props = {
-  displayName: string;
-  streak: number;
-  completedCount: number;
-  totalPassages: number;
-};
-
-export function ReadingBannerAndNav({
-  displayName,
-  streak,
-  completedCount,
-  totalPassages,
-}: Props) {
+export function ReadingBannerAndNav({ displayName }: { displayName: string }) {
   const pathname = usePathname();
 
   // Hide on the actual practice page: /reading-practice/[type]/[id]
@@ -34,99 +22,44 @@ export function ReadingBannerAndNav({
   const segments  = afterRoot.split("/").filter(Boolean);
   if (segments.length >= 2) return null;
 
-  const STATS = [
-    { label: "Ngày streak",     value: streak,         icon: "🔥" },
-    { label: "Bài hoàn thành",  value: completedCount, icon: "✓"  },
-    { label: "Tổng bài",        value: totalPassages,  icon: null  },
-  ];
-
   return (
-    <div
+    <header
       style={{
         background: "#6B4C2A",
         color: "#FFFDF6",
         flexShrink: 0,
+        boxShadow: "0 1px 0 rgba(0,0,0,0.15)",
       }}
     >
       <div
         style={{
-          maxWidth: 1100,
+          maxWidth: 1200,
           margin: "0 auto",
-          padding: "20px 24px 0",
+          padding: "0 20px",
+          height: 56,
+          display: "flex",
+          alignItems: "center",
+          gap: 24,
         }}
       >
-        {/* Welcome row */}
-        <div
+        {/* Section title */}
+        <Link
+          href="/reading-practice"
           style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-start",
-            flexWrap: "wrap",
-            gap: 16,
-            marginBottom: 20,
+            fontFamily: "var(--font-reading-display)",
+            fontWeight: 700,
+            fontSize: "0.92rem",
+            color: "#FFFDF6",
+            textDecoration: "none",
+            flexShrink: 0,
+            letterSpacing: "0.01em",
           }}
         >
-          {/* Left: greeting */}
-          <div>
-            <p
-              style={{
-                margin: "0 0 6px",
-                fontSize: "0.68rem",
-                letterSpacing: "0.14em",
-                textTransform: "uppercase",
-                opacity: 0.62,
-              }}
-            >
-              READING PRACTICE · TOEIC PART 7
-            </p>
-            <h2
-              style={{
-                fontFamily: "var(--font-reading-display)",
-                fontSize: "clamp(1.25rem, 3vw, 1.65rem)",
-                fontWeight: 700,
-                margin: "0 0 4px",
-                lineHeight: 1.25,
-              }}
-            >
-              Xin chào, {displayName}!
-            </h2>
-            <p style={{ margin: 0, fontSize: "0.82rem", opacity: 0.7, lineHeight: 1.5 }}>
-              Luyện đọc hiểu mỗi ngày — nền tảng vững chắc cho điểm TOEIC.
-            </p>
-          </div>
-
-          {/* Right: stats */}
-          <div style={{ display: "flex", gap: 8, flexShrink: 0 }}>
-            {STATS.map(({ label, value, icon }) => (
-              <div
-                key={label}
-                style={{
-                  background: "rgba(255,253,246,0.11)",
-                  border: "1px solid rgba(255,253,246,0.18)",
-                  borderRadius: 8,
-                  padding: "10px 16px",
-                  textAlign: "center",
-                  minWidth: 78,
-                }}
-              >
-                {icon && (
-                  <div style={{ fontSize: "0.95rem", marginBottom: 2, opacity: 0.85 }}>
-                    {icon}
-                  </div>
-                )}
-                <div style={{ fontSize: "1.35rem", fontWeight: 700, lineHeight: 1 }}>
-                  {value.toLocaleString()}
-                </div>
-                <div style={{ fontSize: "0.63rem", opacity: 0.68, marginTop: 4, lineHeight: 1.3 }}>
-                  {label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+          {displayName}&apos;s Reading Diary
+        </Link>
 
         {/* Nav tabs */}
-        <nav style={{ display: "flex", alignItems: "center" }}>
+        <nav style={{ display: "flex", alignItems: "center", flex: 1 }}>
           {LEFT_TABS.map(({ href, label, exact }) => {
             const active = exact ? pathname === href : pathname.startsWith(href);
             return (
@@ -134,12 +67,15 @@ export function ReadingBannerAndNav({
                 key={href}
                 href={href}
                 style={{
-                  padding: "10px 16px",
+                  padding: "0 14px",
+                  height: 56,
+                  display: "inline-flex",
+                  alignItems: "center",
                   fontSize: "0.87rem",
                   fontWeight: active ? 600 : 400,
-                  color: active ? "#FFFDF6" : "rgba(255,253,246,0.58)",
+                  color: active ? "#FFFDF6" : "rgba(255,253,246,0.60)",
                   textDecoration: "none",
-                  borderBottom: `2px solid ${active ? "#FFFDF6" : "transparent"}`,
+                  borderBottom: `2px solid ${active ? "#FAF6E9" : "transparent"}`,
                   transition: "color 0.15s, border-color 0.15s",
                   letterSpacing: "0.01em",
                 }}
@@ -155,7 +91,7 @@ export function ReadingBannerAndNav({
               width: 1,
               height: 18,
               background: "rgba(255,253,246,0.28)",
-              margin: "0 8px",
+              margin: "0 6px",
             }}
           />
 
@@ -164,10 +100,13 @@ export function ReadingBannerAndNav({
               key={href}
               href={href}
               style={{
-                padding: "10px 16px",
+                padding: "0 14px",
+                height: 56,
+                display: "inline-flex",
+                alignItems: "center",
                 fontSize: "0.87rem",
                 fontWeight: 400,
-                color: "rgba(255,253,246,0.52)",
+                color: "rgba(255,253,246,0.50)",
                 textDecoration: "none",
                 borderBottom: "2px solid transparent",
                 transition: "color 0.15s",
@@ -178,6 +117,6 @@ export function ReadingBannerAndNav({
           ))}
         </nav>
       </div>
-    </div>
+    </header>
   );
 }

@@ -31,19 +31,43 @@ const TYPES = [
 
 export default async function ReadingPracticePage() {
   const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  const counts = await prisma.readingPassage
-    .groupBy({ by: ["type"], _count: { id: true } })
-    .catch(() => []);
+  const [profile, counts, attempted, allAttempts] = await Promise.all([
+    user
+      ? prisma.profile.findUnique({
+          where: { id: user.id },
+          select: { displayName: true },
+        })
+      : Promise.resolve(null),
+    prisma.readingPassage
+      .groupBy({ by: ["type"], _count: { id: true } })
+      .catch(() => []),
+    user
+      ? prisma.readingAttempt
+          .findMany({
+            where: { userId: user.id },
+            select: { passageId: true },
+            distinct: ["passageId"],
+          })
+          .catch(() => [])
+      : Promise.resolve([]),
+    user
+      ? prisma.readingAttempt
+          .findMany({
+            where: { userId: user.id },
+            select: { completedAt: true },
+            orderBy: { completedAt: "desc" },
+          })
+          .catch(() => [])
+      : Promise.resolve([]),
+  ]);
+
   const countMap = Object.fromEntries(counts.map((c) => [c.type, c._count.id]));
-
-  const attempted = user
-    ? await prisma.readingAttempt
-        .findMany({ where: { userId: user.id }, select: { passageId: true }, distinct: ["passageId"] })
-        .catch(() => [])
-    : [];
-  const doneIds = new Set(attempted.map((a) => a.passageId));
+  const doneIds  = new Set(attempted.map((a) => a.passageId));
+  const totalAll = Object.values(countMap).reduce((a, b) => a + b, 0);
 
   const doneByType = user
     ? await prisma.readingAttempt
@@ -60,60 +84,144 @@ export default async function ReadingPracticePage() {
     doneCountByType[t] = (doneCountByType[t] ?? 0) + 1;
   }
 
+  const displayName =
+    profile?.displayName ?? user?.email?.split("@")[0] ?? "bạn";
+  const completedCount = doneIds.size;
+  const streak = calcReadingStreak(allAttempts.map((a) => a.completedAt));
+
   return (
     <div
       style={{
-        minHeight: "100vh",
+        minHeight: "100%",
         background: "var(--bg-primary)",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        padding: "clamp(2.5rem, 6vw, 5rem) clamp(1rem, 4vw, 2rem)",
+        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 4vw, 2rem)",
       }}
     >
+      {/* Welcome card */}
+      <div
+        style={{
+          width: "100%",
+          maxWidth: 640,
+          background: "#6B4C2A",
+          borderRadius: 14,
+          padding: "20px 24px",
+          marginBottom: "2.5rem",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexWrap: "wrap",
+          gap: 16,
+          boxShadow: "0 4px 16px rgba(107,76,42,0.18)",
+        }}
+      >
+        {/* Left: greeting */}
+        <div>
+          <p
+            style={{
+              margin: "0 0 6px",
+              fontSize: "0.68rem",
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+              color: "rgba(255,253,246,0.60)",
+            }}
+          >
+            READING PRACTICE · TOEIC PART 7
+          </p>
+          <h2
+            style={{
+              fontFamily: "var(--font-reading-display)",
+              fontSize: "clamp(1.2rem, 3vw, 1.55rem)",
+              fontWeight: 700,
+              color: "#FFFDF6",
+              margin: "0 0 4px",
+              lineHeight: 1.25,
+            }}
+          >
+            Xin chào, {displayName}! 👋
+          </h2>
+          <p
+            style={{
+              margin: 0,
+              fontSize: "0.82rem",
+              color: "rgba(255,253,246,0.68)",
+              lineHeight: 1.5,
+            }}
+          >
+            Luyện đọc hiểu mỗi ngày — nền tảng vững chắc cho điểm TOEIC.
+          </p>
+        </div>
+
+        {/* Right: stats */}
+        <div style={{ display: "flex", gap: 8, flexShrink: 0 }}>
+          {[
+            { label: "Ngày streak",    value: streak,         icon: "🔥" },
+            { label: "Bài hoàn thành", value: completedCount, icon: "✓"  },
+            { label: "Tổng bài",       value: totalAll,       icon: null  },
+          ].map(({ label, value, icon }) => (
+            <div
+              key={label}
+              style={{
+                background: "rgba(255,253,246,0.12)",
+                border: "1px solid rgba(255,253,246,0.18)",
+                borderRadius: 8,
+                padding: "10px 14px",
+                textAlign: "center",
+                minWidth: 72,
+              }}
+            >
+              {icon && (
+                <div style={{ fontSize: "0.9rem", marginBottom: 2 }}>{icon}</div>
+              )}
+              <div
+                style={{
+                  fontSize: "1.3rem",
+                  fontWeight: 700,
+                  color: "#FFFDF6",
+                  lineHeight: 1,
+                }}
+              >
+                {value.toLocaleString()}
+              </div>
+              <div
+                style={{
+                  fontSize: "0.62rem",
+                  color: "rgba(255,253,246,0.62)",
+                  marginTop: 4,
+                  lineHeight: 1.3,
+                }}
+              >
+                {label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Decorative top rule */}
-      <div style={{ width: "100%", maxWidth: 640, marginBottom: "2.5rem" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", color: "var(--text-muted)" }}>
+      <div style={{ width: "100%", maxWidth: 640, marginBottom: "2rem" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "0.75rem",
+            color: "var(--text-muted)",
+          }}
+        >
           <div style={{ flex: 1, height: 1, background: "var(--border)" }} />
-          <span style={{ fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase" }}>
+          <span
+            style={{
+              fontSize: "0.7rem",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+            }}
+          >
             TOEIC Part 7
           </span>
           <div style={{ flex: 1, height: 1, background: "var(--border)" }} />
         </div>
-      </div>
-
-      {/* Title block */}
-      <div style={{ textAlign: "center", marginBottom: "3.5rem", maxWidth: 560 }}>
-        <h1
-          style={{
-            fontFamily: "var(--font-reading-display)",
-            fontSize: "clamp(2rem, 5vw, 2.8rem)",
-            fontWeight: 700,
-            color: "var(--text-primary)",
-            letterSpacing: "-0.01em",
-            lineHeight: 1.2,
-            marginBottom: "0.75rem",
-          }}
-        >
-          Reading Practice
-        </h1>
-        <p
-          style={{
-            fontSize: "0.9rem",
-            color: "var(--text-muted)",
-            lineHeight: 1.7,
-            maxWidth: 420,
-            margin: "0 auto",
-          }}
-        >
-          Luyện đọc hiểu theo từng dạng bài — từ đoạn đơn đến ba đoạn liên kết.
-        </p>
-
-        {doneIds.size > 0 && (
-          <p style={{ marginTop: "0.75rem", fontSize: "0.8rem", color: "var(--accent-primary)", fontWeight: 500 }}>
-            {doneIds.size} / {Object.values(countMap).reduce((a, b) => a + b, 0)} bài đã hoàn thành
-          </p>
-        )}
       </div>
 
       {/* Type cards */}
@@ -132,8 +240,8 @@ export default async function ReadingPracticePage() {
       >
         {TYPES.map(({ type, roman, label, sub, desc }, idx) => {
           const total = countMap[type] ?? 0;
-          const done = doneCountByType[type] ?? 0;
-          const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+          const done  = doneCountByType[type] ?? 0;
+          const pct   = total > 0 ? Math.round((done / total) * 100) : 0;
 
           return (
             <Link
@@ -144,9 +252,11 @@ export default async function ReadingPracticePage() {
                 alignItems: "flex-start",
                 gap: "1.25rem",
                 padding: "1.4rem 1.6rem",
-                background: idx % 2 === 0 ? "var(--bg-primary)" : "var(--bg-secondary)",
+                background:
+                  idx % 2 === 0 ? "var(--bg-primary)" : "var(--bg-secondary)",
                 textDecoration: "none",
-                borderBottom: idx < TYPES.length - 1 ? "1px solid var(--border)" : "none",
+                borderBottom:
+                  idx < TYPES.length - 1 ? "1px solid var(--border)" : "none",
                 transition: "background 0.15s",
               }}
             >
@@ -168,7 +278,14 @@ export default async function ReadingPracticePage() {
 
               {/* Content */}
               <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "0.2rem" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "baseline",
+                    gap: "0.5rem",
+                    marginBottom: "0.2rem",
+                  }}
+                >
                   <span
                     style={{
                       fontFamily: "var(--font-reading-display)",
@@ -179,17 +296,40 @@ export default async function ReadingPracticePage() {
                   >
                     {label}
                   </span>
-                  <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", fontStyle: "italic" }}>
+                  <span
+                    style={{
+                      fontSize: "0.75rem",
+                      color: "var(--text-muted)",
+                      fontStyle: "italic",
+                    }}
+                  >
                     {sub}
                   </span>
                 </div>
-                <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", lineHeight: 1.6, marginBottom: done > 0 ? "0.6rem" : 0 }}>
+                <p
+                  style={{
+                    fontSize: "0.82rem",
+                    color: "var(--text-secondary)",
+                    lineHeight: 1.6,
+                    marginBottom: done > 0 ? "0.6rem" : 0,
+                  }}
+                >
                   {desc}
                 </p>
 
                 {done > 0 && (
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
-                    <div style={{ flex: 1, maxWidth: 140, height: 3, background: "var(--border)", borderRadius: 999 }}>
+                  <div
+                    style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}
+                  >
+                    <div
+                      style={{
+                        flex: 1,
+                        maxWidth: 140,
+                        height: 3,
+                        background: "var(--border)",
+                        borderRadius: 999,
+                      }}
+                    >
                       <div
                         style={{
                           height: "100%",
@@ -199,7 +339,9 @@ export default async function ReadingPracticePage() {
                         }}
                       />
                     </div>
-                    <span style={{ fontSize: "0.7rem", color: "var(--text-muted)" }}>
+                    <span
+                      style={{ fontSize: "0.7rem", color: "var(--text-muted)" }}
+                    >
                       {done}/{total}
                     </span>
                   </div>
@@ -207,7 +349,15 @@ export default async function ReadingPracticePage() {
               </div>
 
               {/* Count badge + arrow */}
-              <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "0.4rem", flexShrink: 0 }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-end",
+                  gap: "0.4rem",
+                  flexShrink: 0,
+                }}
+              >
                 <span
                   style={{
                     fontSize: "0.7rem",
@@ -221,7 +371,9 @@ export default async function ReadingPracticePage() {
                 >
                   {total} bài
                 </span>
-                <span style={{ fontSize: "0.8rem", color: "var(--accent-primary)" }}>→</span>
+                <span style={{ fontSize: "0.8rem", color: "var(--accent-primary)" }}>
+                  →
+                </span>
               </div>
             </Link>
           );
@@ -231,10 +383,36 @@ export default async function ReadingPracticePage() {
       {/* Bottom rule */}
       <div style={{ width: "100%", maxWidth: 640, marginTop: "3rem" }}>
         <div style={{ height: 1, background: "var(--border)" }} />
-        <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.08em" }}>
+        <p
+          style={{
+            marginTop: "0.75rem",
+            textAlign: "center",
+            fontSize: "0.7rem",
+            color: "var(--text-muted)",
+            letterSpacing: "0.08em",
+          }}
+        >
           TOEIC DICTATION DIARY
         </p>
       </div>
     </div>
   );
+}
+
+function calcReadingStreak(dates: Date[]): number {
+  if (dates.length === 0) return 0;
+  const daySet = new Set(dates.map((d) => d.toISOString().slice(0, 10)));
+  const days   = Array.from(daySet).sort().reverse();
+  const today     = new Date().toISOString().slice(0, 10);
+  const yesterday = new Date(Date.now() - 86_400_000).toISOString().slice(0, 10);
+  if (days[0] !== today && days[0] !== yesterday) return 0;
+  let streak = 1;
+  for (let i = 1; i < days.length; i++) {
+    const diff = Math.round(
+      (new Date(days[i - 1]).getTime() - new Date(days[i]).getTime()) / 86_400_000
+    );
+    if (diff === 1) streak++;
+    else break;
+  }
+  return streak;
 }
