@@ -277,7 +277,7 @@ const styles = {
   logo: `
     flex items-center gap-3 no-underline
     hover:opacity-90 transition-opacity
-    flex-shrink-0
+    min-w-0
   `,
   logoIcon: `
     hidden
@@ -302,7 +302,7 @@ const styles = {
     transition-colors
   `,
   actions: `
-    flex items-center gap-2
+    flex items-center gap-2 flex-shrink-0
   `,
   avatar: `
     w-8 h-8 rounded-full
