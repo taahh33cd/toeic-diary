@@ -91,8 +91,8 @@ export function PracticeClient({
         display: "flex",
         flexDirection: "column",
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-        background: "#f4f6f9",
-        color: "#333",
+        background: "#FFFDF6",
+        color: "#2C1810",
       }}
     >
       {/* Mobile portrait hint */}
@@ -108,27 +108,28 @@ export function PracticeClient({
           alignItems: "center",
           justifyContent: "center",
           gap: 8,
-          background: "#fff3cd",
-          color: "#856404",
-          fontSize: "0.8rem",
-          padding: "6px 12px",
-          borderBottom: "1px solid #ffeeba",
+          background: "#F5EDD8",
+          color: "#6B4C2A",
+          fontSize: "0.78rem",
+          padding: "5px 12px",
+          borderBottom: "1px solid #D4C5A9",
           flexShrink: 0,
+          letterSpacing: "0.02em",
         }}
       >
-        📱 Xoay ngang màn hình để làm bài đọc tốt hơn
+        Xoay ngang màn hình để làm bài đọc tốt hơn
       </div>
 
       {/* Header */}
       <header
         style={{
-          background: "#0056b3",
-          color: "white",
+          background: "#6B4C2A",
+          color: "#FFFDF6",
           padding: "12px 20px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          boxShadow: "0 2px 5px rgba(0,0,0,0.15)",
+          boxShadow: "0 2px 8px rgba(44,24,16,0.18)",
           zIndex: 10,
           flexShrink: 0,
         }}
@@ -137,18 +138,18 @@ export function PracticeClient({
           <button
             onClick={() => router.push(backHref)}
             style={{
-              background: "rgba(255,255,255,0.15)",
-              border: "none",
-              color: "white",
+              background: "rgba(255,253,246,0.15)",
+              border: "1px solid rgba(255,253,246,0.25)",
+              color: "#FFFDF6",
               padding: "5px 12px",
-              borderRadius: 4,
+              borderRadius: 3,
               cursor: "pointer",
               fontSize: "0.85rem",
             }}
           >
             ←
           </button>
-          <span style={{ fontWeight: 700, fontSize: "1rem" }}>
+          <span style={{ fontWeight: 700, fontSize: "0.95rem", fontFamily: "var(--font-reading-display)", letterSpacing: "0.01em" }}>
             {typeLabel[passage.type] ?? "Reading"} · Bài {passage.orderIndex}
           </span>
         </div>
@@ -179,15 +180,15 @@ export function PracticeClient({
             onClick={handleSubmit}
             disabled={Object.keys(answers).length === 0}
             style={{
-              background: "#28a745",
-              color: "white",
+              background: Object.keys(answers).length === 0 ? "rgba(255,253,246,0.2)" : "#FAF6E9",
+              color: Object.keys(answers).length === 0 ? "rgba(255,253,246,0.45)" : "#6B4C2A",
               border: "none",
-              padding: "8px 20px",
-              fontSize: "0.95rem",
+              padding: "7px 20px",
+              fontSize: "0.88rem",
               cursor: Object.keys(answers).length === 0 ? "not-allowed" : "pointer",
-              borderRadius: 5,
-              fontWeight: "bold",
-              opacity: Object.keys(answers).length === 0 ? 0.6 : 1,
+              borderRadius: 3,
+              fontWeight: 700,
+              letterSpacing: "0.04em",
             }}
           >
             Nộp bài
@@ -195,12 +196,14 @@ export function PracticeClient({
         ) : (
           <div
             style={{
-              background: score! >= 80 ? "#28a745" : score! >= 50 ? "#ffc107" : "#dc3545",
-              color: score! >= 50 ? "white" : "white",
-              padding: "6px 18px",
-              borderRadius: 5,
-              fontWeight: "bold",
-              fontSize: "1rem",
+              background: "rgba(255,253,246,0.15)",
+              border: "1px solid rgba(255,253,246,0.3)",
+              color: "#FFFDF6",
+              padding: "5px 14px",
+              borderRadius: 3,
+              fontWeight: 700,
+              fontSize: "0.88rem",
+              letterSpacing: "0.02em",
             }}
           >
             {correctCount}/{total} · {score}%
@@ -221,24 +224,24 @@ export function PracticeClient({
         <div
           style={{
             flex: 1,
-            background: "#fff",
+            background: "#FFFDF6",
             padding: "20px",
             overflowY: "auto",
-            borderRight: "2px solid #ddd",
+            borderRight: "1px solid #D4C5A9",
           }}
         >
           {passage.texts.map((html, i) => (
             <div
               key={i}
               style={{
-                background: "#fdfdfd",
-                border: "1px solid #ccc",
-                padding: "15px",
-                marginBottom: i < passage.texts.length - 1 ? 16 : 0,
-                borderRadius: 5,
-                boxShadow: "inset 0 0 5px rgba(0,0,0,0.05)",
-                lineHeight: 1.7,
+                background: "#FAF6E9",
+                border: "1px solid #D4C5A9",
+                padding: "16px 18px",
+                marginBottom: i < passage.texts.length - 1 ? 14 : 0,
+                borderRadius: 4,
+                lineHeight: 1.75,
                 fontSize: fontSize,
+                color: "#2C1810",
               }}
               dangerouslySetInnerHTML={{ __html: html }}
             />
@@ -251,7 +254,7 @@ export function PracticeClient({
             flex: 1,
             padding: "20px",
             overflowY: "auto",
-            background: "#fafafa",
+            background: "#FAF6E9",
             fontSize: fontSize,
           }}
         >
@@ -260,15 +263,15 @@ export function PracticeClient({
               key={q.id}
               id={`q-${qi}`}
               style={{
-                background: "#fff",
+                background: "#FFFDF6",
                 padding: "15px",
-                marginBottom: 15,
-                borderRadius: 8,
-                border: `1px solid ${activeQ === qi && !submitted ? "#0056b3" : "#e0e0e0"}`,
+                marginBottom: 12,
+                borderRadius: 4,
+                border: `1px solid ${activeQ === qi && !submitted ? "#6B4C2A" : "#D4C5A9"}`,
                 boxShadow:
                   activeQ === qi && !submitted
-                    ? "0 0 8px rgba(0,86,179,0.2)"
-                    : "0 2px 4px rgba(0,0,0,0.02)",
+                    ? "0 0 0 2px rgba(107,76,42,0.12)"
+                    : "0 1px 3px rgba(44,24,16,0.04)",
                 transition: "0.2s",
               }}
             >
@@ -284,8 +287,8 @@ export function PracticeClient({
               >
                 <span
                   style={{
-                    background: "#0056b3",
-                    color: "white",
+                    background: "#6B4C2A",
+                    color: "#FFFDF6",
                     borderRadius: "50%",
                     width: 22,
                     height: 22,
@@ -310,10 +313,10 @@ export function PracticeClient({
                 let border = "#ccc";
                 let color = "#333";
                 if (submitted) {
-                  if (isCorrect) { bg = "#d4edda"; border = "#28a745"; color = "#155724"; }
-                  else if (selected && !isCorrect) { bg = "#f8d7da"; border = "#dc3545"; color = "#721c24"; }
+                  if (isCorrect) { bg = "#E8F0E4"; border = "#4A7C59"; color = "#2D4F38"; }
+                  else if (selected && !isCorrect) { bg = "#F2DFD7"; border = "#9B3A3A"; color = "#6B2020"; }
                 } else if (selected) {
-                  bg = "#e3f2fd"; border = "#0056b3";
+                  bg = "#F5EDD8"; border = "#6B4C2A";
                 }
 
                 return (
@@ -341,7 +344,7 @@ export function PracticeClient({
                       style={{
                         fontWeight: 700,
                         minWidth: 18,
-                        color: submitted && isCorrect ? "#155724" : "#0056b3",
+                        color: submitted && isCorrect ? "#2D4F38" : "#6B4C2A",
                       }}
                     >
                       {opt}.
@@ -357,12 +360,12 @@ export function PracticeClient({
                   style={{
                     marginTop: 10,
                     padding: "10px 12px",
-                    background: "#fff3cd",
-                    color: "#856404",
-                    borderLeft: "4px solid #ffeeba",
+                    background: "#F5EDD8",
+                    color: "#5C3D20",
+                    borderLeft: "3px solid #D4C5A9",
                     fontSize: "0.875rem",
                     lineHeight: 1.6,
-                    borderRadius: "0 4px 4px 0",
+                    borderRadius: "0 3px 3px 0",
                   }}
                   dangerouslySetInnerHTML={{ __html: "💡 " + q.explanation }}
                 />
@@ -375,9 +378,9 @@ export function PracticeClient({
       {/* Footer */}
       <footer
         style={{
-          background: "#fff",
+          background: "#FFFDF6",
           padding: "10px 20px",
-          borderTop: "1px solid #ddd",
+          borderTop: "1px solid #D4C5A9",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -394,7 +397,7 @@ export function PracticeClient({
           {submitted && (
             <button
               onClick={() => { setAnswers({}); setSubmitted(false); setActiveQ(0); }}
-              style={{ ...navBtnStyle, color: "#0056b3", borderColor: "#0056b3" }}
+              style={{ ...navBtnStyle, color: "#52391F", borderColor: "#6B4C2A" }}
             >
               Làm lại
             </button>
@@ -415,19 +418,19 @@ export function PracticeClient({
                   document.getElementById(`q-${qi}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
                 }}
                 style={{
-                  width: 30,
-                  height: 30,
+                  width: 28,
+                  height: 28,
                   borderRadius: "50%",
-                  border: `1px solid ${isCorrect ? "#28a745" : isWrong ? "#dc3545" : answered ? "#0056b3" : "#ccc"}`,
-                  background: isCorrect ? "#28a745" : isWrong ? "#dc3545" : answered ? "#0056b3" : "white",
-                  color: answered || isCorrect || isWrong ? "white" : "#333",
+                  border: `1px solid ${isCorrect ? "#4A7C59" : isWrong ? "#9B3A3A" : answered ? "#6B4C2A" : "#D4C5A9"}`,
+                  background: isCorrect ? "#4A7C59" : isWrong ? "#9B3A3A" : answered ? "#6B4C2A" : "#FFFDF6",
+                  color: answered || isCorrect || isWrong ? "#FFFDF6" : "#9B7D5A",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                   fontSize: "0.8rem",
                   cursor: "pointer",
                   fontWeight: activeQ === qi ? 700 : 400,
-                  outline: activeQ === qi ? "2px solid #0056b3" : "none",
+                  outline: activeQ === qi ? "2px solid #6B4C2A" : "none",
                   outlineOffset: 2,
                 }}
               >
@@ -442,25 +445,26 @@ export function PracticeClient({
             <button
               onClick={() => router.push(nextHref)}
               style={{
-                background: "#0056b3",
-                color: "white",
+                background: "#6B4C2A",
+                color: "#FFFDF6",
                 border: "none",
                 padding: "8px 20px",
-                borderRadius: 5,
+                borderRadius: 3,
                 fontWeight: "bold",
                 fontSize: "0.9rem",
                 cursor: "pointer",
+                letterSpacing: "0.03em",
               }}
             >
               Bài tiếp theo →
             </button>
           ) : (
-            <span style={{ fontSize: "0.85rem", fontWeight: 600, color: "#28a745" }}>
-              Hoàn thành! 🎉
+            <span style={{ fontSize: "0.85rem", fontWeight: 600, color: "#4A7C59" }}>
+              Hoàn thành!
             </span>
           )
         ) : (
-          <div style={{ fontSize: "0.8rem", color: "#666" }}>
+          <div style={{ fontSize: "0.8rem", color: "#9B7D5A" }}>
             {Object.keys(answers).length}/{total} đã chọn
           </div>
         )}
@@ -471,21 +475,21 @@ export function PracticeClient({
 
 const navBtnStyle: React.CSSProperties = {
   padding: "7px 14px",
-  border: "1px solid #ccc",
-  background: "white",
-  color: "#555",
+  border: "1px solid #D4C5A9",
+  background: "#FFFDF6",
+  color: "#6B4C2A",
   cursor: "pointer",
-  borderRadius: 4,
+  borderRadius: 3,
   fontWeight: "bold",
   fontSize: "0.85rem",
 };
 
 const fontBtnStyle: React.CSSProperties = {
-  background: "rgba(255,255,255,0.15)",
-  border: "1px solid rgba(255,255,255,0.3)",
-  color: "white",
+  background: "rgba(255,253,246,0.15)",
+  border: "1px solid rgba(255,253,246,0.3)",
+  color: "#FFFDF6",
   padding: "3px 9px",
-  borderRadius: 4,
+  borderRadius: 3,
   cursor: "pointer",
   fontSize: "0.8rem",
   fontWeight: 600,

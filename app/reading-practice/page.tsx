@@ -3,37 +3,31 @@ import Link from "next/link";
 import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
 
-export const metadata: Metadata = { title: "Reading Practice - Part 7" };
+export const metadata: Metadata = { title: "Reading Practice" };
 
-const TYPE_CONFIG = [
+const TYPES = [
   {
     type: "single",
+    roman: "I",
     label: "Đoạn đơn",
-    labelEn: "Single Passage",
-    desc: "1 đoạn văn · 2–4 câu hỏi",
-    color: "#0056b3",
-    bg: "#e3f2fd",
-    icon: "📄",
+    sub: "Single Passage",
+    desc: "Một đoạn văn ngắn, 2–4 câu hỏi. Luyện kỹ năng đọc nhanh và xác định thông tin.",
   },
   {
     type: "double",
+    roman: "II",
     label: "Đoạn đôi",
-    labelEn: "Double Passage",
-    desc: "2 đoạn văn liên quan · 5 câu hỏi",
-    color: "#1a6b2a",
-    bg: "#e8f5e9",
-    icon: "📑",
+    sub: "Double Passage",
+    desc: "Hai đoạn văn liên quan, 5 câu hỏi. Yêu cầu đối chiếu thông tin giữa hai nguồn.",
   },
   {
     type: "triple",
+    roman: "III",
     label: "Đoạn ba",
-    labelEn: "Triple Passage",
-    desc: "3 đoạn văn liên quan · 5 câu hỏi",
-    color: "#6a1b9a",
-    bg: "#f3e5f5",
-    icon: "📚",
+    sub: "Triple Passage",
+    desc: "Ba đoạn văn liên quan, 5 câu hỏi. Dạng khó nhất — yêu cầu tổng hợp thông tin.",
   },
-];
+] as const;
 
 export default async function ReadingPracticePage() {
   const supabase = await createClient();
@@ -42,141 +36,204 @@ export default async function ReadingPracticePage() {
   const counts = await prisma.readingPassage
     .groupBy({ by: ["type"], _count: { id: true } })
     .catch(() => []);
-
   const countMap = Object.fromEntries(counts.map((c) => [c.type, c._count.id]));
 
   const attempted = user
     ? await prisma.readingAttempt
-        .groupBy({ by: ["passageId"], where: { userId: user.id } })
+        .findMany({ where: { userId: user.id }, select: { passageId: true }, distinct: ["passageId"] })
         .catch(() => [])
     : [];
+  const doneIds = new Set(attempted.map((a) => a.passageId));
 
-  const attemptedIds = new Set(attempted.map((a) => a.passageId));
-
-  // Count attempted per type by joining (simplified: just show total attempted)
-  const attemptedCount = attemptedIds.size;
+  const doneByType = user
+    ? await prisma.readingAttempt
+        .findMany({
+          where: { userId: user.id },
+          select: { passage: { select: { type: true } } },
+          distinct: ["passageId"],
+        })
+        .catch(() => [])
+    : [];
+  const doneCountByType: Record<string, number> = {};
+  for (const a of doneByType) {
+    const t = a.passage.type;
+    doneCountByType[t] = (doneCountByType[t] ?? 0) + 1;
+  }
 
   return (
     <div
       style={{
         minHeight: "100vh",
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 2rem)",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: "clamp(2.5rem, 6vw, 5rem) clamp(1rem, 4vw, 2rem)",
       }}
     >
-      <div style={{ maxWidth: 860, margin: "0 auto" }}>
-        {/* Header */}
-        <div style={{ marginBottom: "2.5rem" }}>
-          <Link
-            href="/"
-            style={{
-              fontSize: "0.8rem",
-              color: "var(--text-muted)",
-              textDecoration: "none",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "0.3rem",
-              marginBottom: "1.25rem",
-            }}
-          >
-            ← Trang chủ
-          </Link>
-          <h1
-            style={{
-              fontSize: "clamp(1.6rem, 4vw, 2.2rem)",
-              fontWeight: 700,
-              color: "var(--text-primary)",
-              letterSpacing: "-0.02em",
-              marginBottom: "0.5rem",
-            }}
-          >
-            Reading Practice
-          </h1>
-          <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)" }}>
-            Luyện đọc hiểu TOEIC Part 7 — {Object.values(countMap).reduce((a, b) => a + b, 0)} bài · {attemptedCount} bài đã làm
-          </p>
+      {/* Decorative top rule */}
+      <div style={{ width: "100%", maxWidth: 640, marginBottom: "2.5rem" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", color: "var(--text-muted)" }}>
+          <div style={{ flex: 1, height: 1, background: "var(--border)" }} />
+          <span style={{ fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase" }}>
+            TOEIC Part 7
+          </span>
+          <div style={{ flex: 1, height: 1, background: "var(--border)" }} />
         </div>
+      </div>
 
-        {/* Type cards */}
-        <div
+      {/* Title block */}
+      <div style={{ textAlign: "center", marginBottom: "3.5rem", maxWidth: 560 }}>
+        <h1
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(min(260px, 100%), 1fr))",
-            gap: "1rem",
+            fontFamily: "var(--font-reading-display)",
+            fontSize: "clamp(2rem, 5vw, 2.8rem)",
+            fontWeight: 700,
+            color: "var(--text-primary)",
+            letterSpacing: "-0.01em",
+            lineHeight: 1.2,
+            marginBottom: "0.75rem",
           }}
         >
-          {TYPE_CONFIG.map(({ type, label, labelEn, desc, color, bg, icon }) => {
-            const total = countMap[type] ?? 0;
-            return (
-              <Link
-                key={type}
-                href={`/reading-practice/${type}`}
+          Reading Practice
+        </h1>
+        <p
+          style={{
+            fontSize: "0.9rem",
+            color: "var(--text-muted)",
+            lineHeight: 1.7,
+            maxWidth: 420,
+            margin: "0 auto",
+          }}
+        >
+          Luyện đọc hiểu theo từng dạng bài — từ đoạn đơn đến ba đoạn liên kết.
+        </p>
+
+        {doneIds.size > 0 && (
+          <p style={{ marginTop: "0.75rem", fontSize: "0.8rem", color: "var(--accent-primary)", fontWeight: 500 }}>
+            {doneIds.size} / {Object.values(countMap).reduce((a, b) => a + b, 0)} bài đã hoàn thành
+          </p>
+        )}
+      </div>
+
+      {/* Type cards */}
+      <div
+        style={{
+          width: "100%",
+          maxWidth: 640,
+          display: "flex",
+          flexDirection: "column",
+          gap: "1px",
+          border: "1px solid var(--border)",
+          borderRadius: "var(--radius-lg)",
+          overflow: "hidden",
+          boxShadow: "var(--shadow-md)",
+        }}
+      >
+        {TYPES.map(({ type, roman, label, sub, desc }, idx) => {
+          const total = countMap[type] ?? 0;
+          const done = doneCountByType[type] ?? 0;
+          const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+
+          return (
+            <Link
+              key={type}
+              href={`/reading-practice/${type}`}
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                gap: "1.25rem",
+                padding: "1.4rem 1.6rem",
+                background: idx % 2 === 0 ? "var(--bg-primary)" : "var(--bg-secondary)",
+                textDecoration: "none",
+                borderBottom: idx < TYPES.length - 1 ? "1px solid var(--border)" : "none",
+                transition: "background 0.15s",
+              }}
+            >
+              {/* Roman numeral */}
+              <div
                 style={{
-                  display: "block",
-                  background: "var(--bg-elevated)",
-                  border: "1px solid var(--border)",
-                  borderRadius: "var(--radius-lg)",
-                  padding: "1.5rem",
-                  textDecoration: "none",
-                  boxShadow: "var(--shadow-sm)",
-                  transition: "box-shadow 0.15s, transform 0.15s",
+                  fontFamily: "var(--font-reading-display)",
+                  fontSize: "1.5rem",
+                  fontWeight: 700,
+                  color: "var(--border)",
+                  lineHeight: 1,
+                  minWidth: 28,
+                  paddingTop: 2,
+                  userSelect: "none",
                 }}
               >
-                <div
-                  style={{
-                    width: 48,
-                    height: 48,
-                    borderRadius: 12,
-                    background: bg,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: "1.6rem",
-                    marginBottom: "1rem",
-                  }}
-                >
-                  {icon}
+                {roman}
+              </div>
+
+              {/* Content */}
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "0.2rem" }}>
+                  <span
+                    style={{
+                      fontFamily: "var(--font-reading-display)",
+                      fontSize: "1.05rem",
+                      fontWeight: 700,
+                      color: "var(--text-primary)",
+                    }}
+                  >
+                    {label}
+                  </span>
+                  <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", fontStyle: "italic" }}>
+                    {sub}
+                  </span>
                 </div>
-                <div
-                  style={{
-                    fontSize: "1.1rem",
-                    fontWeight: 700,
-                    color: "var(--text-primary)",
-                    marginBottom: "0.2rem",
-                  }}
-                >
-                  {label}
-                </div>
-                <div
-                  style={{
-                    fontSize: "0.75rem",
-                    color: "var(--text-muted)",
-                    marginBottom: "0.75rem",
-                    fontStyle: "italic",
-                  }}
-                >
-                  {labelEn}
-                </div>
-                <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "1rem" }}>
+                <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", lineHeight: 1.6, marginBottom: done > 0 ? "0.6rem" : 0 }}>
                   {desc}
-                </div>
-                <div
+                </p>
+
+                {done > 0 && (
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
+                    <div style={{ flex: 1, maxWidth: 140, height: 3, background: "var(--border)", borderRadius: 999 }}>
+                      <div
+                        style={{
+                          height: "100%",
+                          width: `${pct}%`,
+                          background: "var(--accent-primary)",
+                          borderRadius: 999,
+                        }}
+                      />
+                    </div>
+                    <span style={{ fontSize: "0.7rem", color: "var(--text-muted)" }}>
+                      {done}/{total}
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              {/* Count badge + arrow */}
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "0.4rem", flexShrink: 0 }}>
+                <span
                   style={{
-                    display: "inline-block",
-                    fontSize: "0.75rem",
-                    fontWeight: 600,
-                    color,
-                    background: bg,
-                    padding: "3px 10px",
-                    borderRadius: 999,
+                    fontSize: "0.7rem",
+                    color: "var(--text-muted)",
+                    background: "var(--bg-elevated)",
+                    border: "1px solid var(--border)",
+                    padding: "2px 8px",
+                    borderRadius: 3,
+                    letterSpacing: "0.03em",
                   }}
                 >
                   {total} bài
-                </div>
-              </Link>
-            );
-          })}
-        </div>
+                </span>
+                <span style={{ fontSize: "0.8rem", color: "var(--accent-primary)" }}>→</span>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+
+      {/* Bottom rule */}
+      <div style={{ width: "100%", maxWidth: 640, marginTop: "3rem" }}>
+        <div style={{ height: 1, background: "var(--border)" }} />
+        <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.08em" }}>
+          TOEIC DICTATION DIARY
+        </p>
       </div>
     </div>
   );

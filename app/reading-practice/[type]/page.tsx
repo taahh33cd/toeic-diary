@@ -7,16 +7,10 @@ import { createClient } from "@/lib/supabase/server";
 const VALID_TYPES = ["single", "double", "triple"] as const;
 type PassageType = (typeof VALID_TYPES)[number];
 
-const TYPE_LABEL: Record<PassageType, string> = {
-  single: "Đoạn đơn",
-  double: "Đoạn đôi",
-  triple: "Đoạn ba",
-};
-
-const TYPE_COLOR: Record<PassageType, string> = {
-  single: "#0056b3",
-  double: "#1a6b2a",
-  triple: "#6a1b9a",
+const TYPE_META: Record<PassageType, { label: string; roman: string; sub: string }> = {
+  single: { label: "Đoạn đơn", roman: "I",   sub: "Single Passage" },
+  double: { label: "Đoạn đôi", roman: "II",  sub: "Double Passage" },
+  triple: { label: "Đoạn ba",  roman: "III", sub: "Triple Passage" },
 };
 
 export async function generateMetadata({
@@ -25,8 +19,8 @@ export async function generateMetadata({
   params: Promise<{ type: string }>;
 }): Promise<Metadata> {
   const { type } = await params;
-  const label = TYPE_LABEL[type as PassageType] ?? "Reading";
-  return { title: `${label} — Reading Practice` };
+  const meta = TYPE_META[type as PassageType];
+  return { title: meta ? `${meta.label} — Reading Practice` : "Reading Practice" };
 }
 
 export default async function ReadingTypeListPage({
@@ -66,92 +60,134 @@ export default async function ReadingTypeListPage({
     }
   }
 
-  const label = TYPE_LABEL[type as PassageType];
-  const color = TYPE_COLOR[type as PassageType];
-
+  const meta = TYPE_META[type as PassageType];
   const grouped =
     type === "single"
       ? groupByCategory(passages)
       : [{ category: null, items: passages }];
+
+  const totalDone = Object.keys(bestScore).length;
 
   return (
     <div
       style={{
         minHeight: "100vh",
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 2rem)",
+        padding: "clamp(2rem, 5vw, 3.5rem) clamp(1rem, 4vw, 2rem)",
       }}
     >
-      <div style={{ maxWidth: 900, margin: "0 auto" }}>
+      <div style={{ maxWidth: 760, margin: "0 auto" }}>
+
+        {/* Back */}
         <Link
           href="/reading-practice"
           style={{
-            fontSize: "0.8rem",
-            color: "var(--text-muted)",
-            textDecoration: "none",
             display: "inline-flex",
             alignItems: "center",
-            gap: "0.3rem",
-            marginBottom: "1.25rem",
+            gap: "0.4rem",
+            fontSize: "0.78rem",
+            color: "var(--text-muted)",
+            textDecoration: "none",
+            letterSpacing: "0.04em",
+            marginBottom: "2rem",
           }}
         >
           ← Reading Practice
         </Link>
 
-        <h1
-          style={{
-            fontSize: "clamp(1.4rem, 3vw, 1.9rem)",
-            fontWeight: 700,
-            color: "var(--text-primary)",
-            letterSpacing: "-0.02em",
-            marginBottom: "0.4rem",
-          }}
-        >
-          {label}
-        </h1>
-        <p style={{ fontSize: "0.875rem", color: "var(--text-muted)", marginBottom: "2rem" }}>
-          {passages.length} bài · {Object.keys(bestScore).length} bài đã làm
-        </p>
+        {/* Header */}
+        <div style={{ marginBottom: "2.5rem" }}>
+          <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", marginBottom: "0.3rem" }}>
+            <span
+              style={{
+                fontFamily: "var(--font-reading-display)",
+                fontSize: "0.9rem",
+                color: "var(--border)",
+                fontWeight: 700,
+              }}
+            >
+              {meta.roman}
+            </span>
+            <h1
+              style={{
+                fontFamily: "var(--font-reading-display)",
+                fontSize: "clamp(1.5rem, 3vw, 2rem)",
+                fontWeight: 700,
+                color: "var(--text-primary)",
+                letterSpacing: "-0.01em",
+              }}
+            >
+              {meta.label}
+            </h1>
+            <span style={{ fontSize: "0.8rem", color: "var(--text-muted)", fontStyle: "italic" }}>
+              {meta.sub}
+            </span>
+          </div>
+          <p style={{ fontSize: "0.82rem", color: "var(--text-muted)" }}>
+            {passages.length} bài &nbsp;·&nbsp; {totalDone} đã hoàn thành
+          </p>
+          {totalDone > 0 && (
+            <div style={{ marginTop: "0.6rem", height: 3, maxWidth: 200, background: "var(--border)", borderRadius: 999 }}>
+              <div
+                style={{
+                  height: "100%",
+                  width: `${Math.round((totalDone / passages.length) * 100)}%`,
+                  background: "var(--accent-primary)",
+                  borderRadius: 999,
+                }}
+              />
+            </div>
+          )}
+        </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+        {/* Divider */}
+        <div style={{ height: 1, background: "var(--border)", marginBottom: "2rem" }} />
+
+        {/* Grouped list */}
+        <div style={{ display: "flex", flexDirection: "column", gap: "2.5rem" }}>
           {grouped.map(({ category, items }) => {
             const catParam = category ? encodeURIComponent(category) : "all";
+            const catDone = items.filter((p) => bestScore[p.id] != null).length;
+
             return (
               <div key={category ?? "all"}>
                 {category && (
-                  <h2
-                    style={{
-                      fontSize: "0.8rem",
-                      fontWeight: 700,
-                      letterSpacing: "0.07em",
-                      textTransform: "uppercase",
-                      color: "var(--text-muted)",
-                      marginBottom: "0.6rem",
-                      borderLeft: `3px solid ${color}`,
-                      paddingLeft: "0.6rem",
-                    }}
-                  >
-                    {category}
-                  </h2>
+                  <div style={{ marginBottom: "0.8rem" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
+                      <span
+                        style={{
+                          fontSize: "0.68rem",
+                          fontWeight: 700,
+                          letterSpacing: "0.12em",
+                          textTransform: "uppercase",
+                          color: "var(--accent-primary)",
+                        }}
+                      >
+                        {category}
+                      </span>
+                      <div style={{ flex: 1, height: 1, background: "var(--border)" }} />
+                      <span style={{ fontSize: "0.68rem", color: "var(--text-muted)" }}>
+                        {catDone}/{items.length}
+                      </span>
+                    </div>
+                  </div>
                 )}
+
                 <div
                   style={{
                     display: "grid",
-                    gridTemplateColumns: "repeat(auto-fill, minmax(min(200px, 100%), 1fr))",
-                    gap: "0.6rem",
+                    gridTemplateColumns: "repeat(auto-fill, minmax(min(160px, 100%), 1fr))",
+                    gap: "0.5rem",
                   }}
                 >
-                  {items.map((p) => {
+                  {items.map((p, idx) => {
                     const score = bestScore[p.id];
                     const done = score != null;
                     const scoreColor =
-                      score == null
-                        ? "var(--text-muted)"
-                        : score >= 80
-                        ? "var(--accent-green)"
-                        : score >= 50
-                        ? "var(--accent-yellow)"
-                        : "var(--accent-red)";
+                      score == null ? "var(--text-muted)"
+                      : score >= 80 ? "var(--accent-green)"
+                      : score >= 50 ? "var(--accent-yellow)"
+                      : "var(--accent-red)";
 
                     return (
                       <Link
@@ -161,28 +197,35 @@ export default async function ReadingTypeListPage({
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "space-between",
-                          padding: "0.65rem 0.9rem",
-                          background: done ? "var(--bg-elevated)" : "var(--bg-secondary)",
-                          border: `1px solid ${done ? color + "33" : "var(--border)"}`,
+                          padding: "0.6rem 0.85rem",
+                          background: done ? "var(--bg-secondary)" : "var(--bg-primary)",
+                          border: `1px solid ${done ? "var(--accent-primary)" : "var(--border)"}`,
                           borderRadius: "var(--radius-md)",
                           textDecoration: "none",
-                          transition: "box-shadow 0.12s",
+                          opacity: 1,
                         }}
                       >
                         <div>
-                          <div style={{ fontSize: "0.82rem", fontWeight: 600, color: "var(--text-primary)" }}>
+                          <div
+                            style={{
+                              fontSize: "0.8rem",
+                              fontWeight: 600,
+                              color: "var(--text-primary)",
+                              marginBottom: "0.1rem",
+                            }}
+                          >
                             Bài {p.orderIndex}
                           </div>
-                          <div style={{ fontSize: "0.7rem", color: "var(--text-muted)" }}>
+                          <div style={{ fontSize: "0.68rem", color: "var(--text-muted)" }}>
                             {p._count.questions} câu
                           </div>
                         </div>
                         {done ? (
-                          <span style={{ fontSize: "0.8rem", fontWeight: 700, color: scoreColor }}>
+                          <span style={{ fontSize: "0.75rem", fontWeight: 700, color: scoreColor }}>
                             {score}%
                           </span>
                         ) : (
-                          <span style={{ fontSize: "0.7rem", color: "var(--text-muted)" }}>→</span>
+                          <span style={{ fontSize: "0.7rem", color: "var(--border)" }}>→</span>
                         )}
                       </Link>
                     );

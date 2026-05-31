@@ -167,30 +167,41 @@
 }
 
 /* ─────────────────────────────────────────────────────────
-   THEME: READING PRACTICE — Neutral clean (white / blue)
+   THEME: READING PRACTICE — Retro Library (cream / sepia)
    Apply class "theme-reading" on the section wrapper div.
-   Isolates reading-practice from the global mint/amber palette.
+   Palette: #FFFDF6 · #FAF6E9 · Sepia #6B4C2A
 ───────────────────────────────────────────────────────── */
 .theme-reading {
-  --bg-primary:   #F8FAFC;
-  --bg-secondary: #EFF4FF;
-  --bg-elevated:  #FFFFFF;
+  --bg-primary:   #FFFDF6;   /* warm cream — page bg */
+  --bg-secondary: #FAF6E9;   /* parchment — card / alternate row */
+  --bg-elevated:  #F5EDD8;   /* deeper parchment — hover / active */
 
-  --accent-primary:       #3B82F6;
-  --accent-primary-hover: #2563EB;
-  --practice-accent:      #3B82F6;
+  --accent-primary:       #6B4C2A;   /* sepia brown */
+  --accent-primary-hover: #52391F;
+  --practice-accent:      #6B4C2A;
 
-  --text-primary:   #0F172A;
-  --text-secondary: #475569;
-  --text-muted:     #94A3B8;
+  --accent-green:  #4A7C59;   /* muted forest green — correct */
+  --accent-red:    #9B3A3A;   /* muted brick red — incorrect */
+  --accent-yellow: #C8922A;   /* warm amber */
 
-  --border:       #E2E8F0;
-  --border-focus: #3B82F6;
+  --text-primary:   #2C1810;   /* dark sepia */
+  --text-secondary: #5C3D20;
+  --text-muted:     #9B7D5A;
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
-  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.10), 0 4px 12px rgba(0, 0, 0, 0.05);
-  --shadow-glow: 0 0 24px rgba(59, 130, 246, 0.18);
+  --border:       #D4C5A9;   /* parchment border */
+  --border-focus: #6B4C2A;
+
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+
+  --shadow-sm: 0 1px 3px rgba(107,76,42,0.08), 0 1px 2px rgba(107,76,42,0.05);
+  --shadow-md: 0 4px 12px rgba(107,76,42,0.10), 0 2px 6px rgba(107,76,42,0.06);
+  --shadow-lg: 0 8px 24px rgba(107,76,42,0.12), 0 4px 10px rgba(107,76,42,0.07);
+
+  /* Serif display font for headings */
+  --font-reading-display: var(--font-lora, 'Lora', Georgia, 'Times New Roman', serif);
 }
 
 /* ─────────────────────────────────────────────────────────
