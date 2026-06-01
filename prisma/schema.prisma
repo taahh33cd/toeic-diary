@@ -136,6 +136,9 @@ model Profile {
   // ── Preferences ──
   journalTheme   String?   @map("journal_theme")
 
+  // ── Course access ──
+  enrolledCourses  Int[]  @default([]) @map("enrolled_courses") // courses 0-3 the user is enrolled in
+
   // ── Gamification ──
   totalXp        Int       @default(0) @map("total_xp")
   level          Int       @default(1) @map("level")

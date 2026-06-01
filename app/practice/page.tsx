@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ChevronRight } from "lucide-react";
+import { canAccessContent } from "@/lib/access";
+import { ContentLockModal } from "@/components/shared/ContentLockModal";
 
 const PARTS = [
   {
@@ -61,11 +63,14 @@ export default async function PracticePage() {
   if (!user) redirect("/auth/login?next=/practice");
 
   const profile = await prisma.profile
-    .findUnique({ where: { id: user.id }, select: { displayName: true } })
+    .findUnique({ where: { id: user.id }, select: { displayName: true, role: true, studentCode: true, enrolledCourses: true } })
     .catch(() => null);
+
+  const locked = !canAccessContent(profile);
 
   return (
     <div className="min-h-screen flex flex-col" style={{ background: "var(--bg-primary)" }}>
+      {locked && <ContentLockModal />}
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
       <main className="flex-1 max-w-[1400px] mx-auto w-full px-4 py-10">

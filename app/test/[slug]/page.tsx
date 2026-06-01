@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ChevronLeft, Clock } from "lucide-react";
+import { canAccessContent } from "@/lib/access";
+import { ContentLockModal } from "@/components/shared/ContentLockModal";
 
 const PART_META: Record<number, { label: string; icon: string }> = {
   1: { label: "Part 1 - Photographs", icon: "🖼️" },
@@ -51,6 +53,8 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
 
   if (!testSet) notFound();
 
+  const locked = !canAccessContent(profile);
+
   const lessonIds = testSet.parts.flatMap((p) => p.lessons.map((l) => l.id));
   const progressRows = lessonIds.length
     ? await prisma.userProgress.findMany({
@@ -71,7 +75,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
 
   const profile = await prisma.profile.findUnique({
     where: { id: user.id },
-    select: { displayName: true },
+    select: { displayName: true, role: true, studentCode: true, enrolledCourses: true },
   });
 
   const totalLessons = lessonIds.length;
@@ -92,6 +96,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
 
   return (
     <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
+      {locked && <ContentLockModal />}
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
       <main className="flex-1 max-w-[1120px] mx-auto w-full px-4 md:px-6 py-6">

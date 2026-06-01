@@ -7,6 +7,8 @@ import { Footer } from "@/components/layout/Footer";
 import { PracticeClient } from "@/components/practice/PracticeClient";
 import { ensureMinBlanks } from "@/lib/generateBlanks";
 import { ChevronLeft } from "lucide-react";
+import { canAccessContent } from "@/lib/access";
+import { ContentLockModal } from "@/components/shared/ContentLockModal";
 
 export default async function LessonPage({
   params,
@@ -35,7 +37,7 @@ export default async function LessonPage({
     }),
     prisma.profile.findUnique({
       where: { id: user.id },
-      select: { displayName: true },
+      select: { displayName: true, role: true, studentCode: true, enrolledCourses: true },
     }),
   ]);
 
@@ -98,8 +100,11 @@ export default async function LessonPage({
     sentences,
   };
 
+  const locked = !canAccessContent(profile);
+
   return (
     <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
+      {locked && <ContentLockModal />}
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
       <main className="flex-1 max-w-[1400px] mx-auto w-full px-4 md:px-6 py-8">
