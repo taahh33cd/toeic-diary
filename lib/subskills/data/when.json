@@ -1,0 +1,96 @@
+{
+  "part": "part2",
+  "questionWord": "when",
+  "label": "WHEN",
+  "labelVi": "Câu hỏi WHEN",
+  "passThreshold": 80,
+  "intro": "WHEN hỏi về thời gian xảy ra hành động hoặc sự kiện. Đáp án đúng nêu một thời điểm, ngày, tháng, thứ, hoặc khoảng thời gian cụ thể.",
+  "exercises": [
+    {
+      "kind": "wordbank",
+      "title": "Bài 1 — Dịch câu hỏi (kéo–thả)",
+      "instruction": "Sắp xếp các mảnh để tạo bản dịch tiếng Việt đúng cho câu hỏi.",
+      "items": [
+        { "prompt": "When is the company picnic?", "chunks": ["Buổi dã ngoại", "của công ty", "diễn ra khi nào"] },
+        { "prompt": "When did the manager approve the budget?", "chunks": ["Quản lý", "đã phê duyệt ngân sách", "khi nào"] },
+        { "prompt": "When will the app be launched?", "chunks": ["Ứng dụng", "sẽ được ra mắt", "khi nào"] },
+        { "prompt": "When does the event begin?", "chunks": ["Sự kiện", "bắt đầu", "khi nào"] },
+        { "prompt": "When did the team arrive at the venue?", "chunks": ["Đội ngũ", "đã đến địa điểm", "khi nào"] },
+        { "prompt": "When will the sales report be published?", "chunks": ["Báo cáo bán hàng", "sẽ được công bố", "khi nào"] },
+        { "prompt": "When does the shop close on weekdays?", "chunks": ["Cửa hàng", "đóng cửa vào ngày thường", "khi nào"] },
+        { "prompt": "When did you last meet the client?", "chunks": ["Bạn", "đã gặp khách hàng lần cuối", "khi nào"] },
+        { "prompt": "When will the training session take place?", "chunks": ["Buổi đào tạo", "sẽ diễn ra", "khi nào"] },
+        { "prompt": "When does the train to Paris leave?", "chunks": ["Chuyến tàu đến Paris", "khởi hành", "khi nào"] },
+        { "prompt": "When did the company announce the merger?", "chunks": ["Công ty", "đã thông báo vụ sáp nhập", "khi nào"] },
+        { "prompt": "When will the conference be scheduled?", "chunks": ["Hội nghị", "sẽ được lên lịch", "khi nào"] },
+        { "prompt": "When does the library reopen?", "chunks": ["Thư viện", "mở cửa lại", "khi nào"] },
+        { "prompt": "When did you send the invoice?", "chunks": ["Bạn", "đã gửi hóa đơn", "khi nào"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ còn thiếu",
+      "instruction": "Điền từ còn thiếu vào ô trống để hoàn thành câu hỏi dựa trên nghĩa tiếng Việt.",
+      "items": [
+        { "template": "{0} is the next {1} {2}?", "hint": "Cuộc họp ban lãnh đạo tiếp theo diễn ra khi nào?", "blanks": [["when"], ["board", "management"], ["meeting"]] },
+        { "template": "{0} did the team {1} the proposal?", "hint": "Đội ngũ đã nộp đề xuất khi nào?", "blanks": [["when"], ["submit", "send"]] },
+        { "template": "{0} will the new {1} go live?", "hint": "Hệ thống mới sẽ hoạt động khi nào?", "blanks": [["when"], ["system"]] },
+        { "template": "{0} does the {1} start?", "hint": "Hội thảo bắt đầu khi nào?", "blanks": [["when"], ["workshop", "seminar"]] },
+        { "template": "{0} did the {1} visit the {2}?", "hint": "Khách hàng đã đến văn phòng khi nào?", "blanks": [["when"], ["client", "customer"], ["office"]] },
+        { "template": "{0} will the {1} report be released?", "hint": "Báo cáo thường niên sẽ được phát hành khi nào?", "blanks": [["when"], ["annual"]] },
+        { "template": "{0} does the store {1} on holidays?", "hint": "Cửa hàng mở cửa vào ngày lễ khi nào?", "blanks": [["when"], ["open"]] },
+        { "template": "{0} did you last {1} the software?", "hint": "Bạn đã cập nhật phần mềm lần cuối khi nào?", "blanks": [["when"], ["update"]] },
+        { "template": "{0} will the team-building {1} happen?", "hint": "Sự kiện gắn kết đội nhóm diễn ra khi nào?", "blanks": [["when"], ["event", "activity"]] },
+        { "template": "{0} does the {1} to London {2}?", "hint": "Chuyến bay đến London khởi hành khi nào?", "blanks": [["when"], ["flight"], ["depart", "leave"]] },
+        { "template": "{0} did the supplier {1} the goods?", "hint": "Nhà cung cấp đã giao hàng khi nào?", "blanks": [["when"], ["deliver"]] },
+        { "template": "{0} will the {1} be held?", "hint": "Hội thảo sẽ được tổ chức khi nào?", "blanks": [["when"], ["seminar", "workshop", "conference"]] },
+        { "template": "{0} does the office {1} after the break?", "hint": "Văn phòng mở cửa lại sau kỳ nghỉ khi nào?", "blanks": [["when"], ["reopen", "open"]] },
+        { "template": "{0} will the {1} be {2}?", "hint": "Cuộc phỏng vấn sẽ được lên lịch khi nào?", "blanks": [["when"], ["interview"], ["scheduled"]] }
+      ]
+    },
+    {
+      "kind": "keyword",
+      "title": "Bài 3 — Ghi lại từ khóa",
+      "instruction": "Gõ các từ khóa quan trọng trong câu hỏi (bao gồm cả từ để hỏi), cách nhau bằng dấu phẩy.",
+      "items": [
+        { "prompt": "When is the team meeting scheduled?", "minRequired": 2, "keywords": [["when"], ["team"], ["meeting"], ["scheduled"]] },
+        { "prompt": "When did the client sign the contract?", "minRequired": 2, "keywords": [["when"], ["client"], ["sign", "signed"], ["contract"]] },
+        { "prompt": "When will the product launch happen?", "minRequired": 2, "keywords": [["when"], ["product"], ["launch"]] },
+        { "prompt": "When does the workshop start?", "minRequired": 2, "keywords": [["when"], ["workshop"], ["start"]] },
+        { "prompt": "When did the staff complete the training?", "minRequired": 2, "keywords": [["when"], ["staff"], ["complete", "completed"], ["training"]] },
+        { "prompt": "When will the financial report be ready?", "minRequired": 2, "keywords": [["when"], ["financial"], ["report"], ["ready"]] },
+        { "prompt": "When does the office open on Saturdays?", "minRequired": 2, "keywords": [["when"], ["office"], ["open"], ["saturdays", "saturday"]] },
+        { "prompt": "When did you last contact the supplier?", "minRequired": 2, "keywords": [["when"], ["contact", "contacted"], ["supplier"]] },
+        { "prompt": "When will the event be organized?", "minRequired": 2, "keywords": [["when"], ["event"], ["organized", "organize"]] },
+        { "prompt": "When does the flight to Tokyo depart?", "minRequired": 2, "keywords": [["when"], ["flight"], ["tokyo"], ["depart"]] },
+        { "prompt": "When did the manager review the proposal?", "minRequired": 2, "keywords": [["when"], ["manager"], ["review", "reviewed"], ["proposal"]] },
+        { "prompt": "When will the seminar take place?", "minRequired": 2, "keywords": [["when"], ["seminar"], ["take place"]] },
+        { "prompt": "When does the store reopen after renovation?", "minRequired": 2, "keywords": [["when"], ["store"], ["reopen"], ["renovation"]] },
+        { "prompt": "When did you receive the feedback?", "minRequired": 2, "keywords": [["when"], ["receive", "received"], ["feedback"]] }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn câu trả lời & dịch sang tiếng Anh",
+      "instruction": "Chọn đáp án phù hợp nhất cho câu hỏi WHEN, sau đó kéo–thả các mảnh để dịch đáp án đúng sang tiếng Anh.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        { "prompt": "When is the company picnic?", "options": ["Tại công viên.", "Chủ nhật này.", "Ban tổ chức."], "correct": 1, "explanation": "B nêu thời điểm cụ thể — phù hợp WHEN. A trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["This", "Sunday"] },
+        { "prompt": "When did the manager approve the budget?", "options": ["Thứ Tư vừa rồi.", "Trong phòng họp.", "Đội tài chính."], "correct": 0, "explanation": "A nêu thời điểm phê duyệt — phù hợp WHEN. B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Last", "Wednesday"] },
+        { "prompt": "When will the app be launched?", "options": ["Trên điện thoại.", "Đội IT.", "Tháng Tám."], "correct": 2, "explanation": "C nêu thời điểm ra mắt — phù hợp WHEN. A trả lời cho WHERE, B trả lời cho WHO.", "answerChunks": ["In", "August"] },
+        { "prompt": "When does the event begin?", "options": ["Tại hội trường.", "Ban tổ chức.", "2 giờ chiều."], "correct": 2, "explanation": "C nêu giờ bắt đầu — phù hợp WHEN. A trả lời cho WHERE, B trả lời cho WHO.", "answerChunks": ["At", "2", "PM"] },
+        { "prompt": "When did the team arrive at the venue?", "options": ["Sáng nay.", "Tại khách sạn.", "Đội quản lý."], "correct": 0, "explanation": "A nêu thời điểm đến — phù hợp WHEN. B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["This", "morning"] },
+        { "prompt": "When will the sales report be published?", "options": ["Trên hệ thống.", "Cuối tháng.", "Đội bán hàng."], "correct": 1, "explanation": "B nêu thời điểm công bố — phù hợp WHEN. A trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["At", "the", "end", "of", "the", "month"] },
+        { "prompt": "When does the shop close on weekdays?", "options": ["Trong trung tâm.", "Nhân viên bán hàng.", "9 giờ tối."], "correct": 2, "explanation": "C nêu giờ đóng cửa — phù hợp WHEN. A trả lời cho WHERE, B trả lời cho WHO.", "answerChunks": ["At", "9", "PM"] },
+        { "prompt": "When did you last meet the client?", "options": ["Tuần trước.", "Qua video call.", "Bộ phận bán hàng."], "correct": 0, "explanation": "A nêu thời điểm gặp gỡ — phù hợp WHEN. B trả lời cho HOW, C trả lời cho WHO.", "answerChunks": ["Last", "week"] },
+        { "prompt": "When will the training session take place?", "options": ["Trong phòng đào tạo.", "Thứ Ba tới.", "Người hướng dẫn."], "correct": 1, "explanation": "B nêu ngày diễn ra — phù hợp WHEN. A trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Next", "Tuesday"] },
+        { "prompt": "When does the train to Paris leave?", "options": ["Tại nhà ga.", "Nhân viên soát vé.", "7 giờ tối."], "correct": 2, "explanation": "C nêu giờ khởi hành — phù hợp WHEN. A trả lời cho WHERE, B trả lời cho WHO.", "answerChunks": ["At", "7", "PM"] },
+        { "prompt": "When did the company announce the merger?", "options": ["Tháng trước.", "Trên trang web.", "Ban lãnh đạo."], "correct": 0, "explanation": "A nêu thời điểm thông báo — phù hợp WHEN. B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Last", "month"] },
+        { "prompt": "When will the conference be scheduled?", "options": ["Tại trung tâm.", "Tháng Mười.", "Ban tổ chức."], "correct": 1, "explanation": "B nêu thời điểm hội nghị — phù hợp WHEN. A trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["In", "October"] },
+        { "prompt": "When does the library reopen?", "options": ["Nhân viên thư viện.", "Trong trường.", "Sau kỳ nghỉ."], "correct": 2, "explanation": "C nêu thời điểm mở cửa lại — phù hợp WHEN. A trả lời cho WHO, B trả lời cho WHERE.", "answerChunks": ["After", "the", "holiday"] },
+        { "prompt": "When did you send the invoice?", "options": ["Hôm qua.", "Qua email.", "Đội kế toán."], "correct": 0, "explanation": "A nêu thời điểm gửi — phù hợp WHEN. B trả lời cho HOW, C trả lời cho WHO.", "answerChunks": ["Yesterday"] }
+      ]
+    }
+  ]
+}

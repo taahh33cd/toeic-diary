@@ -1,0 +1,96 @@
+{
+  "part": "part2",
+  "questionWord": "how",
+  "label": "HOW",
+  "labelVi": "Câu hỏi HOW",
+  "passThreshold": 80,
+  "intro": "HOW hỏi về cách thức, phương pháp hoặc trạng thái. Đáp án đúng mô tả cách thực hiện hành động (bằng cách nào, qua phương tiện gì...).",
+  "exercises": [
+    {
+      "kind": "wordbank",
+      "title": "Bài 1 — Dịch câu hỏi (kéo–thả)",
+      "instruction": "Sắp xếp các mảnh để tạo bản dịch tiếng Việt đúng cho câu hỏi.",
+      "items": [
+        { "prompt": "How do I get to the airport?", "chunks": ["Làm thế nào", "để tôi", "đến sân bay"] },
+        { "prompt": "How can we fix the issue?", "chunks": ["Làm thế nào", "chúng ta có thể", "khắc phục vấn đề"] },
+        { "prompt": "How did you complete the task?", "chunks": ["Làm thế nào", "bạn đã hoàn thành", "nhiệm vụ"] },
+        { "prompt": "How does the new printer work?", "chunks": ["Máy in mới", "hoạt động", "như thế nào"] },
+        { "prompt": "How can I reach the manager?", "chunks": ["Làm thế nào", "tôi có thể liên lạc", "với quản lý"] },
+        { "prompt": "How did they win the contract?", "chunks": ["Làm thế nào", "họ đã giành được", "hợp đồng"] },
+        { "prompt": "How do we order supplies?", "chunks": ["Làm thế nào", "để chúng ta", "đặt nguồn cung"] },
+        { "prompt": "How can we save time?", "chunks": ["Làm thế nào", "chúng ta có thể", "tiết kiệm thời gian"] },
+        { "prompt": "How does the tool function?", "chunks": ["Công cụ này", "hoạt động", "như thế nào"] },
+        { "prompt": "How did you study for the test?", "chunks": ["Làm thế nào", "bạn đã ôn tập", "cho bài kiểm tra"] },
+        { "prompt": "How can I update my profile?", "chunks": ["Làm thế nào", "tôi có thể", "cập nhật hồ sơ của mình"] },
+        { "prompt": "How do we set up the device?", "chunks": ["Làm thế nào", "để chúng ta", "thiết lập thiết bị"] },
+        { "prompt": "How did they market the campaign?", "chunks": ["Làm thế nào", "họ đã quảng bá", "chiến dịch"] },
+        { "prompt": "How can we improve teamwork?", "chunks": ["Làm thế nào", "chúng ta có thể", "cải thiện tinh thần đội nhóm"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ còn thiếu",
+      "instruction": "Điền từ còn thiếu vào ô trống để hoàn thành câu hỏi dựa trên nghĩa tiếng Việt.",
+      "items": [
+        { "template": "{0} do I get to the {1}?", "hint": "Làm thế nào để tôi đến ga?", "blanks": [["how"], ["station"]] },
+        { "template": "{0} can we {1} the {2}?", "hint": "Làm thế nào để chúng ta cải thiện quy trình?", "blanks": [["how"], ["improve"], ["process"]] },
+        { "template": "{0} did you solve the {1}?", "hint": "Làm thế nào bạn giải quyết vấn đề?", "blanks": [["how"], ["problem", "issue"]] },
+        { "template": "{0} does the new {1} {2}?", "hint": "Hệ thống mới hoạt động như thế nào?", "blanks": [["how"], ["system"], ["work", "function"]] },
+        { "template": "{0} can I {1} the support team?", "hint": "Làm thế nào để tôi liên lạc với đội hỗ trợ?", "blanks": [["how"], ["contact", "reach"]] },
+        { "template": "{0} did they {1} so {2}?", "hint": "Làm thế nào họ hoàn thành nhanh như vậy?", "blanks": [["how"], ["finish", "complete"], ["fast", "quickly"]] },
+        { "template": "{0} do we {1} the tickets?", "hint": "Làm thế nào để chúng ta đặt vé?", "blanks": [["how"], ["book", "reserve"]] },
+        { "template": "{0} can we reduce {1}?", "hint": "Làm thế nào để chúng ta giảm chi phí?", "blanks": [["how"], ["costs", "expenses"]] },
+        { "template": "{0} does the {1} function?", "hint": "Ứng dụng hoạt động như thế nào?", "blanks": [["how"], ["app", "application"]] },
+        { "template": "{0} did you {1} for the exam?", "hint": "Làm thế nào bạn chuẩn bị cho kỳ thi?", "blanks": [["how"], ["prepare", "study"]] },
+        { "template": "{0} can I reset my {1}?", "hint": "Làm thế nào để tôi đặt lại mật khẩu?", "blanks": [["how"], ["password"]] },
+        { "template": "{0} do we {1} the software?", "hint": "Làm thế nào để chúng ta cài đặt phần mềm?", "blanks": [["how"], ["install"]] },
+        { "template": "{0} did they {1} the product?", "hint": "Làm thế nào họ quảng bá sản phẩm?", "blanks": [["how"], ["market", "promote"]] },
+        { "template": "{0} can we {1} the team?", "hint": "Làm thế nào để chúng ta tạo động lực cho đội nhóm?", "blanks": [["how"], ["motivate"]] }
+      ]
+    },
+    {
+      "kind": "keyword",
+      "title": "Bài 3 — Ghi lại từ khóa",
+      "instruction": "Gõ các từ khóa quan trọng trong câu hỏi (bao gồm cả từ để hỏi), cách nhau bằng dấu phẩy.",
+      "items": [
+        { "prompt": "How do I reach the hotel?", "minRequired": 2, "keywords": [["how"], ["reach"], ["hotel"]] },
+        { "prompt": "How can we solve the problem?", "minRequired": 2, "keywords": [["how"], ["solve"], ["problem"]] },
+        { "prompt": "How did you finish the report?", "minRequired": 2, "keywords": [["how"], ["finish", "finished"], ["report"]] },
+        { "prompt": "How does the device work?", "minRequired": 2, "keywords": [["how"], ["device"], ["work"]] },
+        { "prompt": "How can I call the team?", "minRequired": 2, "keywords": [["how"], ["call", "contact"], ["team"]] },
+        { "prompt": "How did they succeed so fast?", "minRequired": 2, "keywords": [["how"], ["succeed"], ["fast", "quickly"]] },
+        { "prompt": "How do we reserve a seat?", "minRequired": 2, "keywords": [["how"], ["reserve", "book"], ["seat"]] },
+        { "prompt": "How can we cut expenses?", "minRequired": 2, "keywords": [["how"], ["cut", "reduce"], ["expenses", "costs"]] },
+        { "prompt": "How does the program run?", "minRequired": 2, "keywords": [["how"], ["program"], ["run", "work"]] },
+        { "prompt": "How did you train for the event?", "minRequired": 2, "keywords": [["how"], ["train", "trained"], ["event"]] },
+        { "prompt": "How can I change my settings?", "minRequired": 2, "keywords": [["how"], ["change"], ["settings"]] },
+        { "prompt": "How do we activate the account?", "minRequired": 2, "keywords": [["how"], ["activate"], ["account"]] },
+        { "prompt": "How did they launch the product?", "minRequired": 2, "keywords": [["how"], ["launch", "launched"], ["product"]] },
+        { "prompt": "How can we boost productivity?", "minRequired": 2, "keywords": [["how"], ["boost", "improve"], ["productivity"]] }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn câu trả lời & dịch sang tiếng Anh",
+      "instruction": "Chọn đáp án phù hợp nhất cho câu hỏi HOW, sau đó kéo–thả các mảnh để dịch đáp án đúng sang tiếng Anh.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        { "prompt": "How do I get to the airport?", "options": ["Sáng nay.", "Đi taxi.", "Tại khách sạn."], "correct": 1, "explanation": "B nêu phương tiện/cách đi — phù hợp HOW. A trả lời cho WHEN, C trả lời cho WHERE.", "answerChunks": ["Take", "a", "taxi"] },
+        { "prompt": "How can we fix the issue?", "options": ["Liên hệ đội IT.", "Hôm qua.", "Trên máy chủ."], "correct": 0, "explanation": "A nêu cách thức giải quyết — phù hợp HOW. B trả lời cho WHEN, C trả lời cho WHERE.", "answerChunks": ["Contact", "the", "IT", "team"] },
+        { "prompt": "How did you complete the task?", "options": ["Tuần trước.", "Trong văn phòng.", "Làm việc nhóm."], "correct": 2, "explanation": "C nêu cách thức hoàn thành — phù hợp HOW. A trả lời cho WHEN, B trả lời cho WHERE.", "answerChunks": ["By", "working", "as", "a", "team"] },
+        { "prompt": "How does the new printer work?", "options": ["Kết nối qua USB.", "Trong phòng in.", "Kỹ thuật viên."], "correct": 0, "explanation": "A nêu cách thức hoạt động — phù hợp HOW. B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["It", "connects", "via", "USB"] },
+        { "prompt": "How can I reach the manager?", "options": ["Qua email.", "Lúc 2 giờ chiều.", "Tại văn phòng."], "correct": 0, "explanation": "A nêu cách liên lạc — phù hợp HOW. B trả lời cho WHEN, C trả lời cho WHERE.", "answerChunks": ["By", "email"] },
+        { "prompt": "How did they win the contract?", "options": ["Tháng trước.", "Đưa ra giá thấp.", "Với khách hàng."], "correct": 1, "explanation": "B nêu cách thức giành hợp đồng — phù hợp HOW. A trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["By", "offering", "a", "lower", "price"] },
+        { "prompt": "How do we order supplies?", "options": ["Nhân viên kho.", "Vào thứ Hai.", "Trên hệ thống."], "correct": 2, "explanation": "C nêu cách đặt hàng — phù hợp HOW. A trả lời cho WHO, B trả lời cho WHEN.", "answerChunks": ["Through", "the", "system"] },
+        { "prompt": "How can we save time?", "options": ["Tự động hóa công việc.", "Trong dự án.", "Đội quản lý."], "correct": 0, "explanation": "A nêu cách tiết kiệm thời gian — phù hợp HOW. B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["By", "automating", "tasks"] },
+        { "prompt": "How does the tool function?", "options": ["Trong hộp.", "Nhân viên kỹ thuật.", "Sử dụng pin."], "correct": 2, "explanation": "C nêu cách hoạt động — phù hợp HOW. A trả lời cho WHERE, B trả lời cho WHO.", "answerChunks": ["It", "runs", "on", "batteries"] },
+        { "prompt": "How did you study for the test?", "options": ["Tuần trước.", "Ôn tập nhóm.", "Tại thư viện."], "correct": 1, "explanation": "B nêu phương pháp ôn tập — phù hợp HOW. A trả lời cho WHEN, C trả lời cho WHERE.", "answerChunks": ["By", "studying", "in", "a", "group"] },
+        { "prompt": "How can I update my profile?", "options": ["Truy cập cài đặt.", "Sáng nay.", "Trên ứng dụng."], "correct": 0, "explanation": "A nêu cách thực hiện — phù hợp HOW. B trả lời cho WHEN, C trả lời cho WHERE.", "answerChunks": ["Go", "to", "settings"] },
+        { "prompt": "How do we set up the device?", "options": ["Trong phòng IT.", "Làm theo hướng dẫn.", "Kỹ thuật viên."], "correct": 1, "explanation": "B nêu cách thiết lập — phù hợp HOW. A trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Follow", "the", "instructions"] },
+        { "prompt": "How did they market the campaign?", "options": ["Tháng trước.", "Đội tiếp thị.", "Qua mạng xã hội."], "correct": 2, "explanation": "C nêu kênh quảng bá — phù hợp HOW. A trả lời cho WHEN, B trả lời cho WHO.", "answerChunks": ["Through", "social", "media"] },
+        { "prompt": "How can we improve teamwork?", "options": ["Tổ chức họp nhóm.", "Trong văn phòng.", "Đội quản lý."], "correct": 0, "explanation": "A nêu cách cải thiện — phù hợp HOW. B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["By", "holding", "team", "meetings"] }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "part": "part2",
+  "questionWord": "tag",
+  "label": "CÂU HỎI ĐUÔI",
+  "labelVi": "Câu hỏi đuôi (Tag questions)",
+  "passThreshold": 80,
+  "intro": "Câu hỏi đuôi có dạng: mệnh đề khẳng định + đuôi phủ định (aren't you? / didn't she?...) hoặc ngược lại. Đáp án đúng luôn xác nhận hoặc phủ nhận nội dung mệnh đề chính (Yes/No) — không trả lời bằng thời gian, địa điểm, hay người.",
+  "exercises": [
+    {
+      "kind": "wordbank",
+      "title": "Bài 1 — Dịch câu hỏi (kéo–thả)",
+      "instruction": "Sắp xếp các mảnh để tạo bản dịch tiếng Việt đúng cho câu hỏi.",
+      "items": [
+        { "prompt": "You're attending the seminar, aren't you?", "chunks": ["Bạn", "sẽ tham dự hội thảo", "đúng không"] },
+        { "prompt": "The shop is open today, isn't it?", "chunks": ["Cửa hàng", "mở cửa hôm nay", "đúng không"] },
+        { "prompt": "He completed the project, didn't he?", "chunks": ["Anh ấy", "đã hoàn thành dự án", "đúng không"] },
+        { "prompt": "They will join the team, won't they?", "chunks": ["Họ", "sẽ tham gia đội", "đúng không"] },
+        { "prompt": "You've reserved the room, haven't you?", "chunks": ["Bạn", "đã đặt phòng", "đúng không"] },
+        { "prompt": "The client is satisfied, isn't he?", "chunks": ["Khách hàng", "hài lòng", "đúng không"] },
+        { "prompt": "We need to update the app, don't we?", "chunks": ["Chúng ta", "cần cập nhật ứng dụng", "đúng không"] },
+        { "prompt": "The meeting starts at 10, doesn't it?", "chunks": ["Cuộc họp", "bắt đầu lúc 10 giờ", "đúng không"] },
+        { "prompt": "She's arriving late, isn't she?", "chunks": ["Cô ấy", "sẽ đến muộn", "đúng không"] },
+        { "prompt": "You saw the announcement, didn't you?", "chunks": ["Bạn", "đã thấy thông báo", "đúng không"] },
+        { "prompt": "The staff is prepared, aren't they?", "chunks": ["Nhân viên", "đã chuẩn bị sẵn sàng", "đúng không"] },
+        { "prompt": "The app is working now, isn't it?", "chunks": ["Ứng dụng", "đang hoạt động rồi", "đúng không"] },
+        { "prompt": "We can start early, can't we?", "chunks": ["Chúng ta", "có thể bắt đầu sớm", "đúng không"] },
+        { "prompt": "He approved the budget, didn't he?", "chunks": ["Anh ấy", "đã phê duyệt ngân sách", "đúng không"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền đuôi câu hỏi",
+      "instruction": "Điền đuôi câu hỏi (tag) còn thiếu để hoàn thành câu. Chú ý: đuôi phải đúng thì và chủ ngữ, đảo chiều khẳng định/phủ định.",
+      "items": [
+        { "template": "You're coming to the meeting, {0} you?", "hint": "Bạn đến cuộc họp, đúng không?", "blanks": [["aren't"]] },
+        { "template": "The office is open on weekends, {0} it?", "hint": "Văn phòng mở cửa cuối tuần, đúng không?", "blanks": [["isn't"]] },
+        { "template": "She finished the report, {0} she?", "hint": "Cô ấy đã hoàn thành báo cáo, đúng không?", "blanks": [["didn't"]] },
+        { "template": "They will attend the conference, {0} they?", "hint": "Họ sẽ tham dự hội nghị, đúng không?", "blanks": [["won't"]] },
+        { "template": "You've booked the tickets, {0} you?", "hint": "Bạn đã đặt vé, đúng không?", "blanks": [["haven't"]] },
+        { "template": "The manager is in the office, {0} he?", "hint": "Quản lý đang ở văn phòng, đúng không?", "blanks": [["isn't"]] },
+        { "template": "We need to submit the form, {0} we?", "hint": "Chúng ta cần nộp mẫu, đúng không?", "blanks": [["don't"]] },
+        { "template": "The event starts at 9, {0} it?", "hint": "Sự kiện bắt đầu lúc 9 giờ, đúng không?", "blanks": [["doesn't"]] },
+        { "template": "She's working late today, {0} she?", "hint": "Cô ấy làm việc muộn hôm nay, đúng không?", "blanks": [["isn't"]] },
+        { "template": "You received the email, {0} you?", "hint": "Bạn đã nhận email, đúng không?", "blanks": [["didn't"]] },
+        { "template": "The team is ready, {0} they?", "hint": "Đội ngũ đã sẵn sàng, đúng không?", "blanks": [["aren't"]] },
+        { "template": "The system is working fine, {0} it?", "hint": "Hệ thống hoạt động tốt, đúng không?", "blanks": [["isn't"]] },
+        { "template": "We can leave early, {0} we?", "hint": "Chúng ta có thể rời sớm, đúng không?", "blanks": [["can't"]] },
+        { "template": "He approved the budget, {0} he?", "hint": "Anh ấy đã phê duyệt ngân sách, đúng không?", "blanks": [["didn't"]] }
+      ]
+    },
+    {
+      "kind": "keyword",
+      "title": "Bài 3 — Ghi lại từ khóa",
+      "instruction": "Gõ các từ khóa quan trọng trong câu (bao gồm đuôi câu hỏi), cách nhau bằng dấu phẩy.",
+      "items": [
+        { "prompt": "You're joining the event, aren't you?", "minRequired": 2, "keywords": [["aren't"], ["joining", "join"], ["event"]] },
+        { "prompt": "The store is closed today, isn't it?", "minRequired": 2, "keywords": [["isn't"], ["store"], ["closed", "close"]] },
+        { "prompt": "She submitted the form, didn't she?", "minRequired": 2, "keywords": [["didn't"], ["submitted", "submit"], ["form"]] },
+        { "prompt": "They will arrive on time, won't they?", "minRequired": 2, "keywords": [["won't"], ["arrive"], ["time"]] },
+        { "prompt": "You've confirmed the booking, haven't you?", "minRequired": 2, "keywords": [["haven't"], ["confirmed", "confirm"], ["booking"]] },
+        { "prompt": "The manager is absent, isn't he?", "minRequired": 2, "keywords": [["isn't"], ["manager"], ["absent"]] },
+        { "prompt": "We need to revise the schedule, don't we?", "minRequired": 2, "keywords": [["don't"], ["revise"], ["schedule"]] },
+        { "prompt": "The seminar starts at 11, doesn't it?", "minRequired": 2, "keywords": [["doesn't"], ["seminar"], ["starts", "start"]] },
+        { "prompt": "She's leaving early, isn't she?", "minRequired": 2, "keywords": [["isn't"], ["leaving", "leave"], ["early"]] },
+        { "prompt": "You read the email, didn't you?", "minRequired": 2, "keywords": [["didn't"], ["read"], ["email"]] },
+        { "prompt": "The team is working late, aren't they?", "minRequired": 2, "keywords": [["aren't"], ["team"], ["working", "work"], ["late"]] },
+        { "prompt": "The system is updated, isn't it?", "minRequired": 2, "keywords": [["isn't"], ["system"], ["updated", "update"]] },
+        { "prompt": "We can finish early, can't we?", "minRequired": 2, "keywords": [["can't"], ["finish"], ["early"]] },
+        { "prompt": "He signed the agreement, didn't he?", "minRequired": 2, "keywords": [["didn't"], ["signed", "sign"], ["agreement"]] }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn câu trả lời & dịch sang tiếng Anh",
+      "instruction": "Chọn đáp án xác nhận/phủ nhận đúng cho câu hỏi đuôi, sau đó dịch sang tiếng Anh.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        { "prompt": "You're attending the seminar, aren't you?", "options": ["Tại hội trường.", "Ban tổ chức.", "Có, tôi tham dự."], "correct": 2, "explanation": "C xác nhận/phủ nhận trực tiếp — phù hợp câu hỏi đuôi. A trả lời cho WHERE, B trả lời cho WHO.", "answerChunks": ["Yes,", "I", "am"] },
+        { "prompt": "The shop is open today, isn't it?", "options": ["Có, mở cửa.", "Trong trung tâm.", "Nhân viên bán hàng."], "correct": 0, "explanation": "A xác nhận nội dung mệnh đề — phù hợp câu hỏi đuôi. B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Yes,", "it", "is"] },
+        { "prompt": "He completed the project, didn't he?", "options": ["Tuần trước.", "Có, anh ấy hoàn thành.", "Trong văn phòng."], "correct": 1, "explanation": "B xác nhận hành động — phù hợp câu hỏi đuôi. A trả lời cho WHEN, C trả lời cho WHERE.", "answerChunks": ["Yes,", "he", "did"] },
+        { "prompt": "They will join the team, won't they?", "options": ["Vào thứ Hai.", "Quản lý đội.", "Có, họ sẽ tham gia."], "correct": 2, "explanation": "C xác nhận kế hoạch tương lai — phù hợp câu hỏi đuôi. A trả lời cho WHEN, B trả lời cho WHO.", "answerChunks": ["Yes,", "they", "will"] },
+        { "prompt": "You've reserved the room, haven't you?", "options": ["Có, tôi đã đặt.", "Sáng nay.", "Qua điện thoại."], "correct": 0, "explanation": "A xác nhận hành động đã làm — phù hợp câu hỏi đuôi. B trả lời cho WHEN, C trả lời cho HOW.", "answerChunks": ["Yes,", "I", "have"] },
+        { "prompt": "The client is satisfied, isn't he?", "options": ["Qua email.", "Có, anh ấy hài lòng.", "Bộ phận bán hàng."], "correct": 1, "explanation": "B xác nhận trạng thái — phù hợp câu hỏi đuôi. A trả lời cho HOW, C trả lời cho WHO.", "answerChunks": ["Yes,", "he", "is"] },
+        { "prompt": "We need to update the app, don't we?", "options": ["Trên điện thoại.", "Đội IT.", "Có, cần cập nhật."], "correct": 2, "explanation": "C xác nhận sự cần thiết — phù hợp câu hỏi đuôi. A trả lời cho WHERE, B trả lời cho WHO.", "answerChunks": ["Yes,", "we", "do"] },
+        { "prompt": "The meeting starts at 10, doesn't it?", "options": ["Có, đúng vậy.", "Trong phòng họp.", "Quản lý."], "correct": 0, "explanation": "A xác nhận thông tin — phù hợp câu hỏi đuôi. B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Yes,", "it", "does"] },
+        { "prompt": "She's arriving late, isn't she?", "options": ["Tại văn phòng.", "Có, cô ấy đến muộn.", "Sáng nay."], "correct": 1, "explanation": "B xác nhận trạng thái — phù hợp câu hỏi đuôi. A trả lời cho WHERE, C trả lời cho WHEN.", "answerChunks": ["Yes,", "she", "is"] },
+        { "prompt": "You saw the announcement, didn't you?", "options": ["Trên bảng tin.", "Từ đồng nghiệp.", "Có, tôi đã thấy."], "correct": 2, "explanation": "C xác nhận hành động — phù hợp câu hỏi đuôi. A trả lời cho WHERE, B trả lời cho WHO.", "answerChunks": ["Yes,", "I", "did"] },
+        { "prompt": "The staff is prepared, aren't they?", "options": ["Có, họ sẵn sàng.", "Trong văn phòng.", "Đội nhân sự."], "correct": 0, "explanation": "A xác nhận trạng thái — phù hợp câu hỏi đuôi. B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Yes,", "they", "are"] },
+        { "prompt": "The app is working now, isn't it?", "options": ["Trên điện thoại.", "Có, đang hoạt động.", "Đội IT."], "correct": 1, "explanation": "B xác nhận trạng thái — phù hợp câu hỏi đuôi. A trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Yes,", "it", "is"] },
+        { "prompt": "We can start early, can't we?", "options": ["Vào thứ Hai.", "Quản lý lịch trình.", "Có, chúng ta có thể."], "correct": 2, "explanation": "C xác nhận khả năng — phù hợp câu hỏi đuôi. A trả lời cho WHEN, B trả lời cho WHO.", "answerChunks": ["Yes,", "we", "can"] },
+        { "prompt": "He approved the budget, didn't he?", "options": ["Có, anh ấy phê duyệt.", "Hôm qua.", "Đội tài chính."], "correct": 0, "explanation": "A xác nhận hành động — phù hợp câu hỏi đuôi. B trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["Yes,", "he", "did"] }
+      ]
+    }
+  ]
+}

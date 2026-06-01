@@ -77,16 +77,16 @@ export type SubskillSet = {
 // Data — import JSON files directly
 // ─────────────────────────────────────
 
-import whoData   from "@/scripts/data/subskills/part2/who.json";
-import whatData  from "@/scripts/data/subskills/part2/what.json";
-import whichData from "@/scripts/data/subskills/part2/which.json";
-import whereData from "@/scripts/data/subskills/part2/where.json";
-import whenData  from "@/scripts/data/subskills/part2/when.json";
-import whyData   from "@/scripts/data/subskills/part2/why.json";
-import howData   from "@/scripts/data/subskills/part2/how.json";
-import yesNoData from "@/scripts/data/subskills/part2/yes-no.json";
-import tagData   from "@/scripts/data/subskills/part2/tag.json";
-import choiceData from "@/scripts/data/subskills/part2/choice.json";
+import whoData   from "@/lib/subskills/data/who.json";
+import whatData  from "@/lib/subskills/data/what.json";
+import whichData from "@/lib/subskills/data/which.json";
+import whereData from "@/lib/subskills/data/where.json";
+import whenData  from "@/lib/subskills/data/when.json";
+import whyData   from "@/lib/subskills/data/why.json";
+import howData   from "@/lib/subskills/data/how.json";
+import yesNoData from "@/lib/subskills/data/yes-no.json";
+import tagData   from "@/lib/subskills/data/tag.json";
+import choiceData from "@/lib/subskills/data/choice.json";
 
 export const PART2_SETS: SubskillSet[] = [
   whoData,

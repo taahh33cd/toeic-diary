@@ -1,0 +1,96 @@
+{
+  "part": "part2",
+  "questionWord": "where",
+  "label": "WHERE",
+  "labelVi": "Câu hỏi WHERE",
+  "passThreshold": 80,
+  "intro": "WHERE hỏi về địa điểm xảy ra hành động hoặc sự kiện. Đáp án đúng nêu một nơi chốn, vị trí cụ thể.",
+  "exercises": [
+    {
+      "kind": "wordbank",
+      "title": "Bài 1 — Dịch câu hỏi (kéo–thả)",
+      "instruction": "Sắp xếp các mảnh để tạo bản dịch tiếng Việt đúng cho câu hỏi.",
+      "items": [
+        { "prompt": "Where is the presentation being held?", "chunks": ["Buổi thuyết trình", "đang được tổ chức", "ở đâu"] },
+        { "prompt": "Where did you leave the keys?", "chunks": ["Bạn", "đã để chìa khóa", "ở đâu"] },
+        { "prompt": "Where can I submit the report?", "chunks": ["Tôi có thể", "nộp báo cáo", "ở đâu"] },
+        { "prompt": "Where is the training room located?", "chunks": ["Phòng đào tạo", "nằm ở", "đâu"] },
+        { "prompt": "Where did you find this information?", "chunks": ["Bạn", "đã tìm thấy thông tin này", "ở đâu"] },
+        { "prompt": "Where are the products displayed?", "chunks": ["Các sản phẩm", "được trưng bày", "ở đâu"] },
+        { "prompt": "Where is the nearest coffee shop?", "chunks": ["Quán cà phê", "gần nhất", "ở đâu"] },
+        { "prompt": "Where did they organize the event?", "chunks": ["Họ", "đã tổ chức sự kiện", "ở đâu"] },
+        { "prompt": "Where is the new office situated?", "chunks": ["Văn phòng mới", "nằm ở", "đâu"] },
+        { "prompt": "Where can we pick up the tickets?", "chunks": ["Chúng ta có thể", "lấy vé", "ở đâu"] },
+        { "prompt": "Where are the tools stored?", "chunks": ["Các dụng cụ", "được cất giữ", "ở đâu"] },
+        { "prompt": "Where did you hear the news?", "chunks": ["Bạn", "đã nghe tin tức", "ở đâu"] },
+        { "prompt": "Where is the workshop happening?", "chunks": ["Hội thảo", "đang diễn ra", "ở đâu"] },
+        { "prompt": "Where can I collect my badge?", "chunks": ["Tôi có thể", "nhận thẻ đeo", "ở đâu"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ còn thiếu",
+      "instruction": "Điền từ còn thiếu vào ô trống để hoàn thành câu hỏi dựa trên nghĩa tiếng Việt.",
+      "items": [
+        { "template": "{0} is the {1} being held?", "hint": "Cuộc họp được tổ chức ở đâu?", "blanks": [["where"], ["meeting"]] },
+        { "template": "{0} did you {1} the car?", "hint": "Bạn đã đỗ xe ở đâu?", "blanks": [["where"], ["park"]] },
+        { "template": "{0} can I {1} the manager's office?", "hint": "Tôi có thể tìm văn phòng của quản lý ở đâu?", "blanks": [["where"], ["find", "locate"]] },
+        { "template": "{0} is the {1} venue located?", "hint": "Địa điểm hội nghị nằm ở đâu?", "blanks": [["where"], ["conference", "meeting"]] },
+        { "template": "{0} did you {1} this book?", "hint": "Bạn đã mua cuốn sách này ở đâu?", "blanks": [["where"], ["buy", "purchase", "get"]] },
+        { "template": "{0} are the {1} stored?", "hint": "Các tệp được lưu trữ ở đâu?", "blanks": [["where"], ["files", "documents", "records"]] },
+        { "template": "{0} is the nearest {1} {2}?", "hint": "Trạm xe buýt gần nhất ở đâu?", "blanks": [["where"], ["bus"], ["stop", "station"]] },
+        { "template": "{0} did they hold the {1} session?", "hint": "Họ tổ chức buổi đào tạo ở đâu?", "blanks": [["where"], ["training"]] },
+        { "template": "{0} is the new {1} opening?", "hint": "Chi nhánh mới mở ở đâu?", "blanks": [["where"], ["branch"]] },
+        { "template": "{0} can we meet the {1}?", "hint": "Chúng ta có thể gặp khách hàng ở đâu?", "blanks": [["where"], ["client", "customer"]] },
+        { "template": "{0} are the {1} kept?", "hint": "Nguồn cung cấp được giữ ở đâu?", "blanks": [["where"], ["supplies", "supply"]] },
+        { "template": "{0} did you {1} the announcement?", "hint": "Bạn đã thấy thông báo ở đâu?", "blanks": [["where"], ["see", "find", "spot"]] },
+        { "template": "{0} is the {1} taking place?", "hint": "Hội thảo diễn ra ở đâu?", "blanks": [["where"], ["workshop", "seminar"]] },
+        { "template": "{0} can I drop off the {1}?", "hint": "Tôi có thể gửi gói hàng ở đâu?", "blanks": [["where"], ["package", "parcel"]] }
+      ]
+    },
+    {
+      "kind": "keyword",
+      "title": "Bài 3 — Ghi lại từ khóa",
+      "instruction": "Gõ các từ khóa quan trọng trong câu hỏi (bao gồm cả từ để hỏi), cách nhau bằng dấu phẩy.",
+      "items": [
+        { "prompt": "Where is the team meeting today?", "minRequired": 2, "keywords": [["where"], ["team"], ["meeting"]] },
+        { "prompt": "Where did you store the equipment?", "minRequired": 2, "keywords": [["where"], ["store", "stored"], ["equipment"]] },
+        { "prompt": "Where can I find the reception desk?", "minRequired": 2, "keywords": [["where"], ["find"], ["reception"], ["desk"]] },
+        { "prompt": "Where is the event hall located?", "minRequired": 2, "keywords": [["where"], ["event"], ["hall"], ["located"]] },
+        { "prompt": "Where did you purchase the materials?", "minRequired": 2, "keywords": [["where"], ["purchase", "buy"], ["materials"]] },
+        { "prompt": "Where are the records kept?", "minRequired": 2, "keywords": [["where"], ["records"], ["kept", "keep"]] },
+        { "prompt": "Where is the closest parking lot?", "minRequired": 2, "keywords": [["where"], ["closest", "nearest"], ["parking"]] },
+        { "prompt": "Where did they host the party?", "minRequired": 2, "keywords": [["where"], ["host", "hosted"], ["party"]] },
+        { "prompt": "Where is the new store opening?", "minRequired": 2, "keywords": [["where"], ["store"], ["opening", "open"]] },
+        { "prompt": "Where can we meet the team?", "minRequired": 2, "keywords": [["where"], ["meet"], ["team"]] },
+        { "prompt": "Where are the documents stored?", "minRequired": 2, "keywords": [["where"], ["documents"], ["stored", "store"]] },
+        { "prompt": "Where did you see the poster?", "minRequired": 2, "keywords": [["where"], ["see", "saw"], ["poster"]] },
+        { "prompt": "Where is the exhibition taking place?", "minRequired": 2, "keywords": [["where"], ["exhibition"], ["taking place"]] },
+        { "prompt": "Where can I return the item?", "minRequired": 2, "keywords": [["where"], ["return"], ["item"]] }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn câu trả lời & dịch sang tiếng Anh",
+      "instruction": "Chọn đáp án phù hợp nhất cho câu hỏi WHERE, sau đó kéo–thả các mảnh để dịch đáp án đúng sang tiếng Anh.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        { "prompt": "Where is the presentation being held?", "options": ["Vào lúc 3 giờ chiều.", "Trong phòng hội nghị.", "Người quản lý."], "correct": 1, "explanation": "B nêu địa điểm cụ thể — phù hợp WHERE. A trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["In", "the", "conference", "room"] },
+        { "prompt": "Where did you leave the keys?", "options": ["Hôm qua.", "Trên bàn làm việc.", "Nhân viên lễ tân."], "correct": 1, "explanation": "B nêu vị trí để chìa khóa — phù hợp WHERE. A trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["On", "the", "desk"] },
+        { "prompt": "Where can I submit the report?", "options": ["Ở phòng nhân sự.", "Vào thứ Sáu.", "Qua email."], "correct": 0, "explanation": "A nêu địa điểm nộp báo cáo — phù hợp WHERE. B trả lời cho WHEN, C trả lời cho HOW.", "answerChunks": ["At", "the", "HR", "office"] },
+        { "prompt": "Where is the training room located?", "options": ["Lúc 9 giờ sáng.", "Người hướng dẫn.", "Tầng 5."], "correct": 2, "explanation": "C nêu vị trí tầng — phù hợp WHERE. A trả lời cho WHEN, B trả lời cho WHO.", "answerChunks": ["On", "the", "fifth", "floor"] },
+        { "prompt": "Where did you find this information?", "options": ["Trên trang web.", "Tuần trước.", "Từ quản lý."], "correct": 0, "explanation": "A nêu nguồn/địa điểm tìm thấy — phù hợp WHERE. B trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["On", "the", "website"] },
+        { "prompt": "Where are the products displayed?", "options": ["Nhân viên bán hàng.", "Ở gian hàng chính.", "Trong hội chợ."], "correct": 1, "explanation": "B nêu vị trí trưng bày — phù hợp WHERE. A trả lời cho WHO, C cũng là địa điểm nhưng B là đáp án mẫu.", "answerChunks": ["At", "the", "main", "booth"] },
+        { "prompt": "Where is the nearest coffee shop?", "options": ["Gần góc đường.", "Mở cửa lúc 8 giờ.", "Nhân viên phục vụ."], "correct": 0, "explanation": "A nêu vị trí quán cà phê — phù hợp WHERE. B trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["Near", "the", "corner"] },
+        { "prompt": "Where did they organize the event?", "options": ["Tại khách sạn Hilton.", "Vào thứ Bảy.", "Ban tổ chức."], "correct": 0, "explanation": "A nêu địa điểm tổ chức — phù hợp WHERE. B trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["At", "the", "Hilton", "hotel"] },
+        { "prompt": "Where is the new office situated?", "options": ["Mở cửa vào tháng tới.", "Ở trung tâm thành phố.", "Đội quản lý."], "correct": 1, "explanation": "B nêu vị trí văn phòng — phù hợp WHERE. A trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["In", "the", "city", "center"] },
+        { "prompt": "Where can we pick up the tickets?", "options": ["Vào buổi tối.", "Nhân viên sự kiện.", "Tại quầy lễ tân."], "correct": 2, "explanation": "C nêu nơi lấy vé — phù hợp WHERE. A trả lời cho WHEN, B trả lời cho WHO.", "answerChunks": ["At", "the", "reception", "desk"] },
+        { "prompt": "Where are the tools stored?", "options": ["Trong kho.", "Từ tuần trước.", "Nhân viên kỹ thuật."], "correct": 0, "explanation": "A nêu nơi cất giữ — phù hợp WHERE. B trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["In", "the", "storage", "room"] },
+        { "prompt": "Where did you hear the news?", "options": ["Sáng nay.", "Trên radio.", "Từ đồng nghiệp."], "correct": 1, "explanation": "B nêu nguồn/nơi nghe tin — phù hợp WHERE. A trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["On", "the", "radio"] },
+        { "prompt": "Where is the workshop happening?", "options": ["Vào thứ Tư.", "Người tổ chức.", "Ở trung tâm đào tạo."], "correct": 2, "explanation": "C nêu địa điểm hội thảo — phù hợp WHERE. A trả lời cho WHEN, B trả lời cho WHO.", "answerChunks": ["At", "the", "training", "center"] },
+        { "prompt": "Where can I collect my badge?", "options": ["Tại bàn đăng ký.", "Vào buổi trưa.", "Nhân viên sự kiện."], "correct": 0, "explanation": "A nêu nơi nhận thẻ — phù hợp WHERE. B trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["At", "the", "registration", "desk"] }
+      ]
+    }
+  ]
+}

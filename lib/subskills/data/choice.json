@@ -1,0 +1,96 @@
+{
+  "part": "part2",
+  "questionWord": "choice",
+  "label": "CÂU HỎI LỰA CHỌN",
+  "labelVi": "Câu hỏi lựa chọn (Alternative questions)",
+  "passThreshold": 80,
+  "intro": "Câu hỏi lựa chọn chứa từ 'or' (hoặc), đưa ra hai phương án cụ thể. Đáp án đúng phải chọn MỘT TRONG HAI phương án được nêu — không trả lời bằng Yes/No, thời gian, hay địa điểm không liên quan.",
+  "exercises": [
+    {
+      "kind": "wordbank",
+      "title": "Bài 1 — Dịch câu hỏi (kéo–thả)",
+      "instruction": "Sắp xếp các mảnh để tạo bản dịch tiếng Việt đúng cho câu hỏi.",
+      "items": [
+        { "prompt": "Do you want coffee or juice?", "chunks": ["Bạn muốn", "cà phê hay", "nước ép"] },
+        { "prompt": "Should we leave in the morning or evening?", "chunks": ["Chúng ta nên", "rời đi vào buổi sáng", "hay buổi tối"] },
+        { "prompt": "Would you prefer to travel by car or bus?", "chunks": ["Bạn muốn đi", "bằng xe hơi", "hay xe buýt"] },
+        { "prompt": "Is the seminar in Hall 1 or Hall 2?", "chunks": ["Buổi hội thảo", "ở Hội trường 1", "hay Hội trường 2"] },
+        { "prompt": "Do you want to pay by check or cash?", "chunks": ["Bạn muốn thanh toán", "bằng séc", "hay tiền mặt"] },
+        { "prompt": "Should we plan the meeting for Friday or Saturday?", "chunks": ["Chúng ta nên lên lịch", "cuộc họp vào thứ Sáu", "hay thứ Bảy"] },
+        { "prompt": "Would you like a front seat or back seat?", "chunks": ["Bạn muốn", "ghế hàng trước", "hay hàng sau"] },
+        { "prompt": "Is the delivery by truck or van?", "chunks": ["Hàng được giao", "bằng xe tải", "hay xe van"] },
+        { "prompt": "Do you want to finish now or later?", "chunks": ["Bạn muốn", "hoàn thành bây giờ", "hay sau"] },
+        { "prompt": "Should we use the new app or the old app?", "chunks": ["Chúng ta nên dùng", "ứng dụng mới", "hay ứng dụng cũ"] },
+        { "prompt": "Would you like to dine indoors or outdoors?", "chunks": ["Bạn muốn ăn", "trong nhà", "hay ngoài trời"] },
+        { "prompt": "Is the dress code formal or informal?", "chunks": ["Quy định trang phục", "là trang trọng", "hay thông thường"] },
+        { "prompt": "Do you prefer working remotely or in the office?", "chunks": ["Bạn thích làm việc", "từ xa", "hay tại văn phòng"] },
+        { "prompt": "Should we email the client today or tomorrow?", "chunks": ["Chúng ta nên gửi email", "cho khách hàng hôm nay", "hay ngày mai"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ còn thiếu",
+      "instruction": "Điền từ còn thiếu vào ô trống để hoàn thành câu hỏi lựa chọn. Lưu ý: một ô thường là 'or'.",
+      "items": [
+        { "template": "Do you prefer tea {0} coffee?", "hint": "Bạn thích trà hay cà phê?", "blanks": [["or"]] },
+        { "template": "Should we {0} in the morning {1} afternoon?", "hint": "Chúng ta nên gặp vào buổi sáng hay buổi chiều?", "blanks": [["meet"], ["or"]] },
+        { "template": "Would you like to {0} by train {1} plane?", "hint": "Bạn muốn đi bằng tàu hỏa hay máy bay?", "blanks": [["travel", "go"], ["or"]] },
+        { "template": "Is the meeting in Room A {0} Room B?", "hint": "Cuộc họp ở Phòng A hay Phòng B?", "blanks": [["or"]] },
+        { "template": "Do you want to {0} by cash {1} card?", "hint": "Bạn muốn thanh toán bằng tiền mặt hay thẻ?", "blanks": [["pay"], ["or"]] },
+        { "template": "Should we {0} the event for Monday {1} Tuesday?", "hint": "Chúng ta nên lên lịch sự kiện vào thứ Hai hay thứ Ba?", "blanks": [["schedule", "plan"], ["or"]] },
+        { "template": "Would you prefer a window seat {0} aisle seat?", "hint": "Bạn thích ghế gần cửa sổ hay ghế gần lối đi?", "blanks": [["or"]] },
+        { "template": "Is the {0} being sent by air {1} sea?", "hint": "Gói hàng được gửi bằng đường hàng không hay đường biển?", "blanks": [["package", "parcel"], ["or"]] },
+        { "template": "Do you want to {0} now {1} later?", "hint": "Bạn muốn bắt đầu bây giờ hay sau?", "blanks": [["start", "begin"], ["or"]] },
+        { "template": "Should we {0} the old system {1} the new system?", "hint": "Chúng ta nên dùng hệ thống cũ hay hệ thống mới?", "blanks": [["use"], ["or"]] },
+        { "template": "Would you like to {0} at home {1} at a restaurant?", "hint": "Bạn muốn ăn ở nhà hay ở nhà hàng?", "blanks": [["eat", "dine"], ["or"]] },
+        { "template": "Is the {0} formal {1} casual?", "hint": "Sự kiện trang trọng hay thoải mái?", "blanks": [["event"], ["or"]] },
+        { "template": "Do you {0} working alone {1} in a team?", "hint": "Bạn thích làm việc một mình hay theo nhóm?", "blanks": [["prefer", "like"], ["or"]] },
+        { "template": "Should we {0} the client now {1} tomorrow?", "hint": "Chúng ta nên gọi khách hàng bây giờ hay ngày mai?", "blanks": [["call", "contact"], ["or"]] }
+      ]
+    },
+    {
+      "kind": "keyword",
+      "title": "Bài 3 — Ghi lại từ khóa",
+      "instruction": "Gõ các từ khóa quan trọng trong câu hỏi lựa chọn (bao gồm 'or' và hai lựa chọn), cách nhau bằng dấu phẩy.",
+      "items": [
+        { "prompt": "Do you prefer tea or water?", "minRequired": 2, "keywords": [["or"], ["tea"], ["water"]] },
+        { "prompt": "Should we meet on Monday or Wednesday?", "minRequired": 2, "keywords": [["or"], ["monday"], ["wednesday"]] },
+        { "prompt": "Would you prefer to travel by plane or train?", "minRequired": 2, "keywords": [["or"], ["plane"], ["train"]] },
+        { "prompt": "Is the meeting in Room 5 or Room 6?", "minRequired": 2, "keywords": [["or"], ["room 5", "room5"], ["room 6", "room6"]] },
+        { "prompt": "Do you want to pay by card or cash?", "minRequired": 2, "keywords": [["or"], ["card"], ["cash"]] },
+        { "prompt": "Should we schedule the event for March or April?", "minRequired": 2, "keywords": [["or"], ["march"], ["april"]] },
+        { "prompt": "Would you like a corner seat or middle seat?", "minRequired": 2, "keywords": [["or"], ["corner"], ["middle"]] },
+        { "prompt": "Is the shipment by air or ground?", "minRequired": 2, "keywords": [["or"], ["air"], ["ground"]] },
+        { "prompt": "Do you want to start early or late?", "minRequired": 2, "keywords": [["or"], ["early"], ["late"]] },
+        { "prompt": "Should we use the old plan or the new plan?", "minRequired": 2, "keywords": [["or"], ["old"], ["new"]] },
+        { "prompt": "Would you like to eat at a café or a restaurant?", "minRequired": 2, "keywords": [["or"], ["café", "cafe"], ["restaurant"]] },
+        { "prompt": "Is the event casual or formal?", "minRequired": 2, "keywords": [["or"], ["casual"], ["formal"]] },
+        { "prompt": "Do you prefer working in a team or alone?", "minRequired": 2, "keywords": [["or"], ["team"], ["alone"]] },
+        { "prompt": "Should we call the supplier today or tomorrow?", "minRequired": 2, "keywords": [["or"], ["today"], ["tomorrow"]] }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn câu trả lời & dịch sang tiếng Anh",
+      "instruction": "Chọn đáp án đúng cho câu hỏi lựa chọn (phải là một trong hai phương án được nêu), sau đó dịch sang tiếng Anh.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        { "prompt": "Do you want coffee or juice?", "options": ["Sáng nay.", "Tôi muốn cà phê.", "Trong bếp."], "correct": 1, "explanation": "B chọn một trong hai lựa chọn được đưa ra — phù hợp câu hỏi lựa chọn. A trả lời cho WHEN, C trả lời cho WHERE.", "answerChunks": ["Coffee,", "please"] },
+        { "prompt": "Should we leave in the morning or evening?", "options": ["Buổi sáng.", "Tại sân bay.", "Phi hành đoàn."], "correct": 0, "explanation": "A chọn một trong hai thời điểm — phù hợp câu hỏi lựa chọn. B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["In", "the", "morning"] },
+        { "prompt": "Would you prefer to travel by car or bus?", "options": ["Tài xế.", "Đến Hà Nội.", "Xe hơi."], "correct": 2, "explanation": "C chọn phương tiện cụ thể — phù hợp câu hỏi lựa chọn. A trả lời cho WHO, B trả lời cho WHERE.", "answerChunks": ["By", "car"] },
+        { "prompt": "Is the seminar in Hall 1 or Hall 2?", "options": ["Vào thứ Tư.", "Hội trường 1.", "Ban tổ chức."], "correct": 1, "explanation": "B chọn một trong hai hội trường — phù hợp câu hỏi lựa chọn. A trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["In", "Hall", "1"] },
+        { "prompt": "Do you want to pay by check or cash?", "options": ["Tiền mặt.", "Tại quầy.", "Nhân viên bán hàng."], "correct": 0, "explanation": "A chọn phương thức thanh toán — phù hợp câu hỏi lựa chọn. B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Cash,", "please"] },
+        { "prompt": "Should we plan the meeting for Friday or Saturday?", "options": ["Trong phòng họp.", "Thứ Sáu.", "Quản lý."], "correct": 1, "explanation": "B chọn một trong hai ngày — phù hợp câu hỏi lựa chọn. A trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Friday", "works"] },
+        { "prompt": "Would you like a front seat or back seat?", "options": ["Trên xe buýt.", "Tài xế.", "Ghế trước."], "correct": 2, "explanation": "C chọn một trong hai vị trí ghế — phù hợp câu hỏi lựa chọn. A trả lời cho WHERE, B trả lời cho WHO.", "answerChunks": ["A", "front", "seat,", "please"] },
+        { "prompt": "Is the delivery by truck or van?", "options": ["Xe tải.", "Đến Đà Nẵng.", "Nhân viên giao hàng."], "correct": 0, "explanation": "A chọn phương tiện vận chuyển — phù hợp câu hỏi lựa chọn. B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["By", "truck"] },
+        { "prompt": "Do you want to finish now or later?", "options": ["Trong văn phòng.", "Bây giờ.", "Đội dự án."], "correct": 1, "explanation": "B chọn một trong hai thời điểm — phù hợp câu hỏi lựa chọn. A trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Now,", "please"] },
+        { "prompt": "Should we use the new app or the old app?", "options": ["Đội IT.", "Trên điện thoại.", "Ứng dụng mới."], "correct": 2, "explanation": "C chọn một trong hai phương án — phù hợp câu hỏi lựa chọn. A trả lời cho WHO, B trả lời cho WHERE.", "answerChunks": ["The", "new", "app"] },
+        { "prompt": "Would you like to dine indoors or outdoors?", "options": ["Ăn ngoài trời.", "Vào buổi tối.", "Nhân viên phục vụ."], "correct": 0, "explanation": "A chọn một trong hai lựa chọn ăn uống — phù hợp câu hỏi lựa chọn. B trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["Outdoors,", "please"] },
+        { "prompt": "Is the dress code formal or informal?", "options": ["Vào thứ Sáu.", "Trang trọng.", "Ban tổ chức."], "correct": 1, "explanation": "B chọn một trong hai loại trang phục — phù hợp câu hỏi lựa chọn. A trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["It's", "formal"] },
+        { "prompt": "Do you prefer working remotely or in the office?", "options": ["Tại nhà.", "Đội quản lý.", "Làm việc tại văn phòng."], "correct": 2, "explanation": "C chọn một trong hai nơi làm việc — phù hợp câu hỏi lựa chọn. A trả lời cho WHERE (ngoài lựa chọn), B trả lời cho WHO.", "answerChunks": ["In", "the", "office"] },
+        { "prompt": "Should we email the client today or tomorrow?", "options": ["Ngày mai.", "Qua điện thoại.", "Bộ phận bán hàng."], "correct": 0, "explanation": "A chọn một trong hai thời điểm — phù hợp câu hỏi lựa chọn. B trả lời cho HOW, C trả lời cho WHO.", "answerChunks": ["Tomorrow"] }
+      ]
+    }
+  ]
+}
