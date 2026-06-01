@@ -12,6 +12,7 @@ import {
   BookOpen,
   NotebookPen,
   Headphones,
+  Home,
 } from "lucide-react";
 
 const TOPBAR_H = 64;
@@ -89,6 +90,33 @@ export function GrammarShell({ children, displayName }: GrammarShellProps) {
             className="hidden md:flex"
             style={{ flex: 1, alignItems: "stretch", gap: 0 }}
           >
+            {/* Home icon-only */}
+            <Link
+              href="/home"
+              title="Trang chủ"
+              aria-label="Trang chủ"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                padding: "0 0.85rem",
+                paddingBottom: "1px",
+                color: TEXT_INACTIVE,
+                textDecoration: "none",
+                borderBottom: "2px solid transparent",
+                transition: "color 0.15s, border-color 0.15s",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLAnchorElement).style.color = TEXT_ACTIVE;
+                (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = TEXT_ACTIVE;
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLAnchorElement).style.color = TEXT_INACTIVE;
+                (e.currentTarget as HTMLAnchorElement).style.borderBottomColor = "transparent";
+              }}
+            >
+              <Home size={15} style={{ flexShrink: 0 }} />
+            </Link>
+            <div style={{ width: 1, height: 20, background: "rgba(255,239,179,0.2)", margin: "auto 0.25rem" }} />
             {NAV_INTERNAL.map(({ href, label, icon: Icon, exact }) => {
               const on = isActive(pathname, href, exact);
               return (
@@ -201,6 +229,26 @@ export function GrammarShell({ children, displayName }: GrammarShellProps) {
               gap: "2px",
             }}
           >
+            {/* Home */}
+            <Link
+              href="/home"
+              onClick={() => setMenuOpen(false)}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.55rem",
+                padding: "0.65rem 0.85rem",
+                borderRadius: "var(--radius-md)",
+                fontSize: "0.875rem",
+                fontWeight: 500,
+                color: TEXT_INACTIVE,
+                background: "transparent",
+                textDecoration: "none",
+              }}
+            >
+              <Home size={15} />
+              Trang chủ
+            </Link>
             {NAV_INTERNAL.map(({ href, label, icon: Icon, exact }) => {
               const on = isActive(pathname, href, exact);
               return (
