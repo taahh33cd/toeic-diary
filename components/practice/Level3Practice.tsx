@@ -34,7 +34,7 @@ interface Props {
 }
 
 const SPEEDS = [0.75, 1.0, 1.25, 1.5];
-const MAX_REPLAY = 5;
+const MAX_REPLAY = 20;
 const AUDIO_OFFSET = 0.2;
 
 function normalizeWord(w: string) {

@@ -49,7 +49,7 @@ interface BlankState {
 }
 
 const SPEEDS = [0.75, 1.0, 1.25, 1.5];
-const MAX_REPLAY = 5;
+const MAX_REPLAY = 20;
 const AUDIO_OFFSET = 0.2; // seconds to subtract from startTime to avoid cutting first word
 
 function normalize(s: string) {
