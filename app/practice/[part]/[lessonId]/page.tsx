@@ -6,8 +6,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PracticeClient } from "@/components/practice/PracticeClient";
 import { ensureMinBlanks } from "@/lib/generateBlanks";
-import { canAccessContent } from "@/lib/access";
-import { ContentLockModal } from "@/components/shared/ContentLockModal";
+import { isUsageExempt } from "@/lib/access";
+import { UsageGate } from "@/components/shared/UsageGate";
 
 const PART_INFO: Record<string, { label: string; partNumber: number }> = {
   "part-1": { label: "Part 1", partNumber: 1 },
@@ -47,7 +47,7 @@ export default async function PartLessonPage({
       },
     }),
     prisma.profile
-      .findUnique({ where: { id: user.id }, select: { displayName: true, role: true, studentCode: true, enrolledCourses: true } })
+      .findUnique({ where: { id: user.id }, select: { displayName: true, role: true, studentCode: true, enrolledCourses: true, freeUsageSeconds: true } })
       .catch(() => null),
   ]);
 
@@ -106,11 +106,9 @@ export default async function PartLessonPage({
     sentences,
   };
 
-  const locked = !canAccessContent(profile);
-
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "#f8f9ff" }}>
-      {locked && <ContentLockModal />}
+      <UsageGate initialSeconds={profile?.freeUsageSeconds ?? 0} isExempt={isUsageExempt(profile)} />
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
       <main style={{ flex: 1, maxWidth: 1120, margin: "0 auto", width: "100%", padding: "32px 24px" }}>

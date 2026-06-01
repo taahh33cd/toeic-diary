@@ -5,8 +5,8 @@ import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Flame, BookCheck, ChevronRight, Headphones, Image, MessageSquare, Users, Megaphone, BookOpen } from "lucide-react";
-import { canAccessContent } from "@/lib/access";
-import { ContentLockModal } from "@/components/shared/ContentLockModal";
+import { isUsageExempt } from "@/lib/access";
+import { UsageGate } from "@/components/shared/UsageGate";
 
 const SOFT_DEPTH = "0 10px 30px -10px rgba(14,165,233,0.1), 0 4px 6px -2px rgba(14,165,233,0.05)";
 
@@ -31,7 +31,7 @@ export default async function DictationPage() {
     const [profileData, seriesData, progressCounts] = await Promise.all([
       prisma.profile.findUnique({
         where: { id: user.id },
-        select: { displayName: true, currentStreak: true, role: true, studentCode: true, enrolledCourses: true },
+        select: { displayName: true, currentStreak: true, role: true, studentCode: true, enrolledCourses: true, freeUsageSeconds: true },
       }),
       prisma.testSeries.findMany({
         orderBy: { orderIndex: "asc" },
@@ -72,11 +72,9 @@ export default async function DictationPage() {
   const displayName = profile?.displayName ?? user.email?.split("@")[0] ?? "bạn";
   const streak = profile?.currentStreak ?? 0;
 
-  const locked = !canAccessContent(profile);
-
   return (
     <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
-      {locked && <ContentLockModal />}
+      <UsageGate initialSeconds={profile?.freeUsageSeconds ?? 0} isExempt={isUsageExempt(profile)} />
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
       <main className="flex-1 max-w-[1120px] mx-auto w-full px-4 md:px-6 py-6 md:py-10">

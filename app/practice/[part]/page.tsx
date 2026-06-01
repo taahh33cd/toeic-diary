@@ -5,8 +5,8 @@ import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ArrowLeft } from "lucide-react";
-import { canAccessContent } from "@/lib/access";
-import { ContentLockModal } from "@/components/shared/ContentLockModal";
+import { isUsageExempt } from "@/lib/access";
+import { UsageGate } from "@/components/shared/UsageGate";
 
 const PART_INFO: Record<string, {
   icon: string; label: string; sub: string; partNumber: number;
@@ -73,10 +73,8 @@ export default async function PartPracticePage({
   if (!user) redirect(`/auth/login?next=/practice/${part}`);
 
   const profile = await prisma.profile
-    .findUnique({ where: { id: user.id }, select: { displayName: true, role: true, studentCode: true, enrolledCourses: true } })
+    .findUnique({ where: { id: user.id }, select: { displayName: true, role: true, studentCode: true, enrolledCourses: true, freeUsageSeconds: true } })
     .catch(() => null);
-
-  const locked = !canAccessContent(profile);
 
   // All lessons for this part with timestamps (exclude part2-practice sets)
   const lessons = await prisma.lesson.findMany({
@@ -128,6 +126,7 @@ export default async function PartPracticePage({
 
     return (
       <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
+        <UsageGate initialSeconds={profile?.freeUsageSeconds ?? 0} isExempt={isUsageExempt(profile)} />
         <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
         <main className="flex-1 max-w-[1120px] mx-auto w-full px-4 md:px-6 py-10">
@@ -351,7 +350,7 @@ export default async function PartPracticePage({
 
   return (
     <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
-      {locked && <ContentLockModal />}
+      <UsageGate initialSeconds={profile?.freeUsageSeconds ?? 0} isExempt={isUsageExempt(profile)} />
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
       <main className="flex-1 max-w-[1120px] mx-auto w-full px-4 md:px-6 py-10">

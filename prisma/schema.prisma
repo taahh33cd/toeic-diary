@@ -139,6 +139,9 @@ model Profile {
   // ── Course access ──
   enrolledCourses  Int[]  @default([]) @map("enrolled_courses") // courses 0-3 the user is enrolled in
 
+  // ── Freemium usage ──
+  freeUsageSeconds Int @default(0) @map("free_usage_seconds") // cumulative usage for free-tier users (limit: 7200 = 120 min)
+
   // ── Gamification ──
   totalXp        Int       @default(0) @map("total_xp")
   level          Int       @default(1) @map("level")

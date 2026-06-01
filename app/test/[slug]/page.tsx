@@ -5,8 +5,8 @@ import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ChevronLeft, Clock } from "lucide-react";
-import { canAccessContent } from "@/lib/access";
-import { ContentLockModal } from "@/components/shared/ContentLockModal";
+import { isUsageExempt } from "@/lib/access";
+import { UsageGate } from "@/components/shared/UsageGate";
 
 const PART_META: Record<number, { label: string; icon: string }> = {
   1: { label: "Part 1 - Photographs", icon: "🖼️" },
@@ -73,10 +73,8 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
 
   const profile = await prisma.profile.findUnique({
     where: { id: user.id },
-    select: { displayName: true, role: true, studentCode: true, enrolledCourses: true },
+    select: { displayName: true, role: true, studentCode: true, enrolledCourses: true, freeUsageSeconds: true },
   });
-
-  const locked = !canAccessContent(profile);
 
   const totalLessons = lessonIds.length;
   const completedLessons = new Set(
@@ -96,7 +94,7 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
 
   return (
     <div className="min-h-screen flex flex-col bg-[var(--bg-primary)]">
-      {locked && <ContentLockModal />}
+      <UsageGate initialSeconds={profile?.freeUsageSeconds ?? 0} isExempt={isUsageExempt(profile)} />
       <Header userEmail={user.email} userDisplayName={profile?.displayName} />
 
       <main className="flex-1 max-w-[1120px] mx-auto w-full px-4 md:px-6 py-6">
