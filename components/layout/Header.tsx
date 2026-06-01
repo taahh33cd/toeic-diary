@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import { BookOpen, Moon, Sun, LogOut, BarChart2, NotebookPen, Headphones, GraduationCap, Menu, X } from "lucide-react";
+import { BookOpen, Moon, Sun, LogOut, BarChart2, NotebookPen, Headphones, GraduationCap, Menu, X, Home } from "lucide-react";
 import { useUIStore } from "@/stores/uiStore";
 import { createClient } from "@/lib/supabase/client";
 import { cn } from "@/lib/utils/cn";
@@ -88,6 +88,16 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
 
         {/* Desktop nav links */}
         <nav className={styles.nav}>
+          {/* Home icon-only button */}
+          <Link
+            href="/home"
+            className={styles.navLink}
+            title="Trang chủ"
+            aria-label="Trang chủ"
+          >
+            <Home size={16} />
+          </Link>
+          <div className={styles.navDivider} />
           {NAV_LINKS.map(({ href, icon, label, divider }) => (
             <>
               <Link key={href} href={href} className={styles.navLink}>
@@ -227,6 +237,19 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
       aria-hidden={!mobileNavOpen}
     >
       <div className="px-4 py-3 flex flex-col gap-1">
+        {/* Home */}
+        <Link
+          href="/home"
+          onClick={() => setMobileNavOpen(false)}
+          className="flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-white transition-colors"
+          style={{
+            background: pathname === "/home" ? "rgba(255,214,107,0.25)" : "transparent",
+            textDecoration: "none",
+          }}
+        >
+          <Home size={16} />
+          Trang chủ
+        </Link>
         {NAV_LINKS.map(({ href, icon, label }) => {
           const active = pathname === href || pathname.startsWith(href + "/");
           return (
