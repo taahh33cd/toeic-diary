@@ -1,0 +1,96 @@
+{
+  "part": "part2",
+  "questionWord": "yes-no",
+  "label": "YES/NO",
+  "labelVi": "Câu hỏi Yes/No",
+  "passThreshold": 80,
+  "intro": "Câu hỏi Yes/No bắt đầu bằng trợ động từ (Do/Does/Is/Are/Has/Did/Will...). Đáp án đúng luôn ở dạng xác nhận hoặc phủ nhận (Yes, ... / No, ...) — không trả lời bằng thời gian, địa điểm, hay người.",
+  "exercises": [
+    {
+      "kind": "wordbank",
+      "title": "Bài 1 — Dịch câu hỏi (kéo–thả)",
+      "instruction": "Sắp xếp các mảnh để tạo bản dịch tiếng Việt đúng cho câu hỏi.",
+      "items": [
+        { "prompt": "Did you submit the proposal?", "chunks": ["Bạn", "đã nộp", "đề xuất chưa"] },
+        { "prompt": "Is the team available today?", "chunks": ["Đội ngũ", "có rảnh", "hôm nay không"] },
+        { "prompt": "Do we need to sign the contract?", "chunks": ["Chúng ta", "có cần ký", "hợp đồng không"] },
+        { "prompt": "Has the client approved the design?", "chunks": ["Khách hàng", "đã phê duyệt", "thiết kế chưa"] },
+        { "prompt": "Did you read the report?", "chunks": ["Bạn", "đã đọc", "báo cáo chưa"] },
+        { "prompt": "Is the manager ready for the meeting?", "chunks": ["Quản lý", "đã sẵn sàng", "cho cuộc họp chưa"] },
+        { "prompt": "Has the shipment been sent?", "chunks": ["Lô hàng", "đã được gửi", "chưa"] },
+        { "prompt": "Do we need more staff?", "chunks": ["Chúng ta", "có cần", "thêm nhân viên không"] },
+        { "prompt": "Are you attending the seminar?", "chunks": ["Bạn", "có tham dự", "hội thảo không"] },
+        { "prompt": "Is the app updated?", "chunks": ["Ứng dụng", "đã được", "cập nhật chưa"] },
+        { "prompt": "Does the store open on Sundays?", "chunks": ["Cửa hàng", "có mở cửa", "vào Chủ nhật không"] },
+        { "prompt": "Did you reserve the room?", "chunks": ["Bạn", "đã đặt phòng", "chưa"] },
+        { "prompt": "Is the project still ongoing?", "chunks": ["Dự án", "vẫn đang", "tiếp tục không"] },
+        { "prompt": "Do we need to change the schedule?", "chunks": ["Chúng ta", "có cần", "thay đổi lịch trình không"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ còn thiếu",
+      "instruction": "Điền từ còn thiếu vào ô trống để hoàn thành câu hỏi dựa trên nghĩa tiếng Việt.",
+      "items": [
+        { "template": "{0} you {1} the {2}?", "hint": "Bạn đã hoàn thành báo cáo chưa?", "blanks": [["have", "did"], ["finished", "completed", "submitted"], ["report"]] },
+        { "template": "{0} the manager {1} now?", "hint": "Quản lý có rảnh bây giờ không?", "blanks": [["is"], ["available", "free"]] },
+        { "template": "{0} we need to {1} the meeting?", "hint": "Chúng ta có cần tham dự cuộc họp không?", "blanks": [["do"], ["attend"]] },
+        { "template": "{0} the client {1} to the {2}?", "hint": "Khách hàng có đồng ý với các điều khoản không?", "blanks": [["did", "has"], ["agree", "agreed"], ["terms"]] },
+        { "template": "{0} you {1} the email?", "hint": "Bạn đã nhận được email chưa?", "blanks": [["did", "have"], ["receive", "received", "get"]] },
+        { "template": "{0} the team ready for the {1}?", "hint": "Đội ngũ đã sẵn sàng cho bài thuyết trình chưa?", "blanks": [["is"], ["presentation"]] },
+        { "template": "{0} the {1} arrived yet?", "hint": "Gói hàng đã đến chưa?", "blanks": [["has"], ["package", "parcel"]] },
+        { "template": "{0} we {1} more supplies?", "hint": "Chúng ta có cần thêm nguồn cung không?", "blanks": [["do"], ["need"]] },
+        { "template": "{0} you working {1} today?", "hint": "Bạn có làm việc muộn hôm nay không?", "blanks": [["are"], ["late", "overtime"]] },
+        { "template": "{0} the {1} updated?", "hint": "Hệ thống đã được cập nhật chưa?", "blanks": [["is"], ["system"]] },
+        { "template": "{0} the office open on {1}?", "hint": "Văn phòng có mở cửa vào cuối tuần không?", "blanks": [["is"], ["weekends", "weekends"]] },
+        { "template": "{0} you {1} the tickets?", "hint": "Bạn đã đặt vé chưa?", "blanks": [["have", "did"], ["booked", "reserved", "book"]] },
+        { "template": "{0} the {1} still happening?", "hint": "Sự kiện vẫn diễn ra chứ?", "blanks": [["is"], ["event"]] },
+        { "template": "{0} we need to {1} the plan?", "hint": "Chúng ta có cần sửa lại kế hoạch không?", "blanks": [["do"], ["revise", "change", "update"]] }
+      ]
+    },
+    {
+      "kind": "keyword",
+      "title": "Bài 3 — Ghi lại từ khóa",
+      "instruction": "Gõ các từ khóa quan trọng trong câu hỏi (bao gồm trợ động từ đứng đầu), cách nhau bằng dấu phẩy.",
+      "items": [
+        { "prompt": "Did you complete the task?", "minRequired": 2, "keywords": [["did"], ["complete", "completed"], ["task"]] },
+        { "prompt": "Is the office open today?", "minRequired": 2, "keywords": [["is"], ["office"], ["open"]] },
+        { "prompt": "Do we need to attend the seminar?", "minRequired": 2, "keywords": [["do"], ["attend"], ["seminar"]] },
+        { "prompt": "Has the team finished the project?", "minRequired": 2, "keywords": [["has"], ["team"], ["finished", "finish"], ["project"]] },
+        { "prompt": "Did you send the email?", "minRequired": 2, "keywords": [["did"], ["send", "sent"], ["email"]] },
+        { "prompt": "Is the client satisfied with the product?", "minRequired": 2, "keywords": [["is"], ["client"], ["satisfied"], ["product"]] },
+        { "prompt": "Has the order been delivered?", "minRequired": 2, "keywords": [["has"], ["order"], ["delivered", "deliver"]] },
+        { "prompt": "Do we need more resources?", "minRequired": 2, "keywords": [["do"], ["need"], ["resources"]] },
+        { "prompt": "Are you joining the meeting?", "minRequired": 2, "keywords": [["are"], ["joining", "join"], ["meeting"]] },
+        { "prompt": "Is the system working?", "minRequired": 2, "keywords": [["is"], ["system"], ["working", "work"]] },
+        { "prompt": "Does the shop close early?", "minRequired": 2, "keywords": [["does"], ["shop"], ["close"], ["early"]] },
+        { "prompt": "Did you confirm the booking?", "minRequired": 2, "keywords": [["did"], ["confirm", "confirmed"], ["booking"]] },
+        { "prompt": "Is the event canceled?", "minRequired": 2, "keywords": [["is"], ["event"], ["canceled", "cancelled"]] },
+        { "prompt": "Do we need to update the app?", "minRequired": 2, "keywords": [["do"], ["update"], ["app"]] }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn câu trả lời & dịch sang tiếng Anh",
+      "instruction": "Chọn đáp án đúng cho câu hỏi Yes/No (đáp án phải ở dạng xác nhận hoặc phủ nhận), sau đó dịch sang tiếng Anh.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        { "prompt": "Did you submit the proposal?", "options": ["Tuần trước.", "Có, tôi đã nộp.", "Trong văn phòng."], "correct": 1, "explanation": "B trả lời Yes/No trực tiếp — phù hợp câu hỏi Yes/No. A trả lời cho WHEN, C trả lời cho WHERE.", "answerChunks": ["Yes,", "I", "did"] },
+        { "prompt": "Is the team available today?", "options": ["Tại phòng họp.", "Quản lý đội.", "Có, sẵn sàng."], "correct": 2, "explanation": "C trả lời Yes/No — phù hợp câu hỏi Yes/No. A trả lời cho WHERE, B trả lời cho WHO.", "answerChunks": ["Yes,", "we", "are"] },
+        { "prompt": "Do we need to sign the contract?", "options": ["Có, cần ký.", "Qua email.", "Đội pháp lý."], "correct": 0, "explanation": "A trả lời Yes/No — phù hợp câu hỏi Yes/No. B trả lời cho HOW, C trả lời cho WHO.", "answerChunks": ["Yes,", "we", "do"] },
+        { "prompt": "Has the client approved the design?", "options": ["Hôm qua.", "Trên hệ thống.", "Có, đã phê duyệt."], "correct": 2, "explanation": "C trả lời Yes/No — phù hợp câu hỏi Yes/No. A trả lời cho WHEN, B trả lời cho WHERE.", "answerChunks": ["Yes,", "they", "have"] },
+        { "prompt": "Did you read the report?", "options": ["Có, tôi đã đọc.", "Sáng nay.", "Từ quản lý."], "correct": 0, "explanation": "A trả lời Yes/No — phù hợp câu hỏi Yes/No. B trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["Yes,", "I", "did"] },
+        { "prompt": "Is the manager ready for the meeting?", "options": ["Trong phòng họp.", "Có, sẵn sàng.", "Vào lúc 10 giờ."], "correct": 1, "explanation": "B trả lời Yes/No — phù hợp câu hỏi Yes/No. A trả lời cho WHERE, C trả lời cho WHEN.", "answerChunks": ["Yes,", "she", "is"] },
+        { "prompt": "Has the shipment been sent?", "options": ["Nhân viên giao hàng.", "Từ kho.", "Có, đã gửi."], "correct": 2, "explanation": "C trả lời Yes/No — phù hợp câu hỏi Yes/No. A trả lời cho WHO, B trả lời cho WHERE.", "answerChunks": ["Yes,", "it", "has"] },
+        { "prompt": "Do we need more staff?", "options": ["Có, cần thêm.", "Trong dự án.", "Đội nhân sự."], "correct": 0, "explanation": "A trả lời Yes/No — phù hợp câu hỏi Yes/No. B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Yes,", "we", "do"] },
+        { "prompt": "Are you attending the seminar?", "options": ["Tại hội trường.", "Có, tôi tham dự.", "Ban tổ chức."], "correct": 1, "explanation": "B trả lời Yes/No — phù hợp câu hỏi Yes/No. A trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Yes,", "I", "am"] },
+        { "prompt": "Is the app updated?", "options": ["Trên điện thoại.", "Đội IT.", "Có, đã cập nhật."], "correct": 2, "explanation": "C trả lời Yes/No — phù hợp câu hỏi Yes/No. A trả lời cho WHERE, B trả lời cho WHO.", "answerChunks": ["Yes,", "it", "is"] },
+        { "prompt": "Does the store open on Sundays?", "options": ["Có, mở cửa.", "Trong trung tâm.", "Nhân viên bán hàng."], "correct": 0, "explanation": "A trả lời Yes/No — phù hợp câu hỏi Yes/No. B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Yes,", "it", "does"] },
+        { "prompt": "Did you reserve the room?", "options": ["Sáng nay.", "Có, tôi đã đặt.", "Qua điện thoại."], "correct": 1, "explanation": "B trả lời Yes/No — phù hợp câu hỏi Yes/No. A trả lời cho WHEN, C trả lời cho HOW.", "answerChunks": ["Yes,", "I", "did"] },
+        { "prompt": "Is the project still ongoing?", "options": ["Trong văn phòng.", "Đội dự án.", "Có, vẫn tiếp tục."], "correct": 2, "explanation": "C trả lời Yes/No — phù hợp câu hỏi Yes/No. A trả lời cho WHERE, B trả lời cho WHO.", "answerChunks": ["Yes,", "it", "is"] },
+        { "prompt": "Do we need to change the schedule?", "options": ["Có, cần thay đổi.", "Vào thứ Hai.", "Quản lý lịch trình."], "correct": 0, "explanation": "A trả lời Yes/No — phù hợp câu hỏi Yes/No. B trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["Yes,", "we", "do"] }
+      ]
+    }
+  ]
+}

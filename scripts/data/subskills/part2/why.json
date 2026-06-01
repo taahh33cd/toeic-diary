@@ -1,0 +1,96 @@
+{
+  "part": "part2",
+  "questionWord": "why",
+  "label": "WHY",
+  "labelVi": "Câu hỏi WHY",
+  "passThreshold": 80,
+  "intro": "WHY hỏi về lý do hoặc nguyên nhân. Đáp án đúng thường bắt đầu bằng 'Because / Due to / To...' hoặc nêu nguyên nhân rõ ràng.",
+  "exercises": [
+    {
+      "kind": "wordbank",
+      "title": "Bài 1 — Dịch câu hỏi (kéo–thả)",
+      "instruction": "Sắp xếp các mảnh để tạo bản dịch tiếng Việt đúng cho câu hỏi.",
+      "items": [
+        { "prompt": "Why was the flight delayed?", "chunks": ["Tại sao", "chuyến bay", "bị trễ"] },
+        { "prompt": "Why did the team fail the project?", "chunks": ["Tại sao", "đội ngũ", "thất bại trong dự án"] },
+        { "prompt": "Why are we updating the software?", "chunks": ["Tại sao", "chúng ta", "đang cập nhật phần mềm"] },
+        { "prompt": "Why was the budget reduced?", "chunks": ["Tại sao", "ngân sách", "bị cắt giảm"] },
+        { "prompt": "Why did they cancel the order?", "chunks": ["Tại sao", "họ", "hủy đơn hàng"] },
+        { "prompt": "Why is the store closing tomorrow?", "chunks": ["Tại sao", "cửa hàng", "đóng cửa vào ngày mai"] },
+        { "prompt": "Why did you decline the offer?", "chunks": ["Tại sao", "bạn", "từ chối đề nghị"] },
+        { "prompt": "Why are the workers protesting?", "chunks": ["Tại sao", "công nhân", "đang đình công"] },
+        { "prompt": "Why was the seminar rescheduled?", "chunks": ["Tại sao", "buổi hội thảo", "bị đổi lịch"] },
+        { "prompt": "Why did the machine stop working?", "chunks": ["Tại sao", "máy móc", "ngừng hoạt động"] },
+        { "prompt": "Why are we switching suppliers?", "chunks": ["Tại sao", "chúng ta", "đang đổi nhà cung cấp"] },
+        { "prompt": "Why did the customer leave?", "chunks": ["Tại sao", "khách hàng", "đã rời đi"] },
+        { "prompt": "Why is the delivery delayed?", "chunks": ["Tại sao", "việc giao hàng", "bị trễ"] },
+        { "prompt": "Why did they revise the plan?", "chunks": ["Tại sao", "họ", "đã sửa lại kế hoạch"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ còn thiếu",
+      "instruction": "Điền từ còn thiếu vào ô trống để hoàn thành câu hỏi dựa trên nghĩa tiếng Việt.",
+      "items": [
+        { "template": "{0} was the meeting {1}?", "hint": "Tại sao cuộc họp bị hủy?", "blanks": [["why"], ["canceled", "cancelled"]] },
+        { "template": "{0} did the price {1}?", "hint": "Tại sao giá tăng?", "blanks": [["why"], ["increase", "go up", "rise"]] },
+        { "template": "{0} are we changing the {1}?", "hint": "Tại sao chúng ta thay đổi lịch trình?", "blanks": [["why"], ["schedule"]] },
+        { "template": "{0} was the project {1}?", "hint": "Tại sao dự án bị trì hoãn?", "blanks": [["why"], ["delayed", "postponed"]] },
+        { "template": "{0} did they reject the {1}?", "hint": "Tại sao họ từ chối đề xuất?", "blanks": [["why"], ["proposal", "offer"]] },
+        { "template": "{0} is the office {1} {2}?", "hint": "Tại sao văn phòng đóng cửa sớm?", "blanks": [["why"], ["closing", "closed"], ["early"]] },
+        { "template": "{0} did you miss the {1}?", "hint": "Tại sao bạn bỏ lỡ hạn chót?", "blanks": [["why"], ["deadline"]] },
+        { "template": "{0} are the {1} on strike?", "hint": "Tại sao nhân viên đình công?", "blanks": [["why"], ["employees", "staff", "workers"]] },
+        { "template": "{0} was the {1} postponed?", "hint": "Tại sao sự kiện bị hoãn?", "blanks": [["why"], ["event"]] },
+        { "template": "{0} did the {1} crash?", "hint": "Tại sao hệ thống bị sập?", "blanks": [["why"], ["system"]] },
+        { "template": "{0} are we {1} more staff?", "hint": "Tại sao chúng ta tuyển thêm nhân viên?", "blanks": [["why"], ["hiring", "recruiting"]] },
+        { "template": "{0} did the client {1}?", "hint": "Tại sao khách hàng phàn nàn?", "blanks": [["why"], ["complain", "leave"]] },
+        { "template": "{0} is the shipment {1}?", "hint": "Tại sao lô hàng bị trễ?", "blanks": [["why"], ["delayed", "late"]] },
+        { "template": "{0} did they {1} the {2}?", "hint": "Tại sao họ thay đổi chính sách?", "blanks": [["why"], ["change", "update"], ["policy", "policies"]] }
+      ]
+    },
+    {
+      "kind": "keyword",
+      "title": "Bài 3 — Ghi lại từ khóa",
+      "instruction": "Gõ các từ khóa quan trọng trong câu hỏi (bao gồm cả từ để hỏi), cách nhau bằng dấu phẩy.",
+      "items": [
+        { "prompt": "Why was the event canceled?", "minRequired": 2, "keywords": [["why"], ["event"], ["canceled", "cancelled"]] },
+        { "prompt": "Why did the price go up?", "minRequired": 2, "keywords": [["why"], ["price"], ["go up", "increase", "rise"]] },
+        { "prompt": "Why are we revising the contract?", "minRequired": 2, "keywords": [["why"], ["revising", "revise"], ["contract"]] },
+        { "prompt": "Why was the launch delayed?", "minRequired": 2, "keywords": [["why"], ["launch"], ["delayed", "delay"]] },
+        { "prompt": "Why did they refuse the deal?", "minRequired": 2, "keywords": [["why"], ["refuse", "refused"], ["deal"]] },
+        { "prompt": "Why is the shop closing early?", "minRequired": 2, "keywords": [["why"], ["shop"], ["closing", "close"], ["early"]] },
+        { "prompt": "Why did you miss the meeting?", "minRequired": 2, "keywords": [["why"], ["miss", "missed"], ["meeting"]] },
+        { "prompt": "Why are the staff unhappy?", "minRequired": 2, "keywords": [["why"], ["staff"], ["unhappy"]] },
+        { "prompt": "Why was the workshop postponed?", "minRequired": 2, "keywords": [["why"], ["workshop"], ["postponed", "postpone"]] },
+        { "prompt": "Why did the server fail?", "minRequired": 2, "keywords": [["why"], ["server"], ["fail", "failed"]] },
+        { "prompt": "Why are we expanding the team?", "minRequired": 2, "keywords": [["why"], ["expanding", "expand"], ["team"]] },
+        { "prompt": "Why did the client cancel?", "minRequired": 2, "keywords": [["why"], ["client"], ["cancel", "canceled"]] },
+        { "prompt": "Why is the shipment delayed?", "minRequired": 2, "keywords": [["why"], ["shipment"], ["delayed", "delay"]] },
+        { "prompt": "Why did they update the rules?", "minRequired": 2, "keywords": [["why"], ["update", "updated"], ["rules"]] }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn câu trả lời & dịch sang tiếng Anh",
+      "instruction": "Chọn đáp án phù hợp nhất cho câu hỏi WHY, sau đó kéo–thả các mảnh để dịch đáp án đúng sang tiếng Anh.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        { "prompt": "Why was the flight delayed?", "options": ["Tại sân bay.", "Do thời tiết xấu.", "Phi công."], "correct": 1, "explanation": "B nêu lý do — phù hợp WHY. A trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Due", "to", "bad", "weather"] },
+        { "prompt": "Why did the team fail the project?", "options": ["Thiếu nguồn lực.", "Tuần trước.", "Trong phòng họp."], "correct": 0, "explanation": "A nêu nguyên nhân — phù hợp WHY. B trả lời cho WHEN, C trả lời cho WHERE.", "answerChunks": ["Lack", "of", "resources"] },
+        { "prompt": "Why are we updating the software?", "options": ["Đội IT.", "Trên máy chủ.", "Để cải thiện hiệu suất."], "correct": 2, "explanation": "C nêu mục đích/lý do — phù hợp WHY. A trả lời cho WHO, B trả lời cho WHERE.", "answerChunks": ["To", "improve", "performance"] },
+        { "prompt": "Why was the budget reduced?", "options": ["Do chi phí cao.", "Tháng trước.", "Đội tài chính."], "correct": 0, "explanation": "A nêu lý do — phù hợp WHY. B trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["Due", "to", "high", "costs"] },
+        { "prompt": "Why did they cancel the order?", "options": ["Qua email.", "Nhà cung cấp.", "Vì lỗi sản phẩm."], "correct": 2, "explanation": "C nêu lý do hủy đơn — phù hợp WHY. A trả lời cho HOW, B trả lời cho WHO.", "answerChunks": ["Because", "of", "a", "product", "defect"] },
+        { "prompt": "Why is the store closing tomorrow?", "options": ["Nhân viên bán hàng.", "Để sửa chữa.", "Trong trung tâm."], "correct": 1, "explanation": "B nêu lý do đóng cửa — phù hợp WHY. A trả lời cho WHO, C trả lời cho WHERE.", "answerChunks": ["For", "repairs"] },
+        { "prompt": "Why did you decline the offer?", "options": ["Hôm qua.", "Qua điện thoại.", "Không phù hợp."], "correct": 2, "explanation": "C nêu lý do từ chối — phù hợp WHY. A trả lời cho WHEN, B trả lời cho HOW.", "answerChunks": ["It", "was", "not", "a", "good", "fit"] },
+        { "prompt": "Why are the workers protesting?", "options": ["Yêu cầu lương cao hơn.", "Tại nhà máy.", "Quản lý nhà máy."], "correct": 0, "explanation": "A nêu lý do đình công — phù hợp WHY. B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["They", "want", "higher", "wages"] },
+        { "prompt": "Why was the seminar rescheduled?", "options": ["Tại hội trường.", "Do lịch trình bận.", "Ban tổ chức."], "correct": 1, "explanation": "B nêu lý do đổi lịch — phù hợp WHY. A trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Due", "to", "scheduling", "conflicts"] },
+        { "prompt": "Why did the machine stop working?", "options": ["Trong xưởng.", "Kỹ thuật viên.", "Vì mất điện."], "correct": 2, "explanation": "C nêu nguyên nhân hỏng máy — phù hợp WHY. A trả lời cho WHERE, B trả lời cho WHO.", "answerChunks": ["Because", "of", "a", "power", "outage"] },
+        { "prompt": "Why are we switching suppliers?", "options": ["Để giảm chi phí.", "Nhà cung cấp cũ.", "Tháng tới."], "correct": 0, "explanation": "A nêu lý do đổi nhà cung cấp — phù hợp WHY. B trả lời cho WHO, C trả lời cho WHEN.", "answerChunks": ["To", "reduce", "costs"] },
+        { "prompt": "Why did the customer leave?", "options": ["Hôm qua.", "Dịch vụ kém.", "Tại cửa hàng."], "correct": 1, "explanation": "B nêu lý do khách hàng rời đi — phù hợp WHY. A trả lời cho WHEN, C trả lời cho WHERE.", "answerChunks": ["Poor", "service"] },
+        { "prompt": "Why is the delivery delayed?", "options": ["Nhân viên giao hàng.", "Đến Hà Nội.", "Do tắc đường."], "correct": 2, "explanation": "C nêu nguyên nhân trễ giao — phù hợp WHY. A trả lời cho WHO, B trả lời cho WHERE.", "answerChunks": ["Due", "to", "traffic"] },
+        { "prompt": "Why did they revise the plan?", "options": ["Để hiệu quả hơn.", "Tuần trước.", "Đội dự án."], "correct": 0, "explanation": "A nêu mục đích sửa kế hoạch — phù hợp WHY. B trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["To", "be", "more", "efficient"] }
+      ]
+    }
+  ]
+}

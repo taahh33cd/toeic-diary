@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import { BookOpen, Moon, Sun, LogOut, BarChart2, NotebookPen, Headphones, GraduationCap, Menu, X, Home } from "lucide-react";
+import { BookOpen, Moon, Sun, LogOut, BarChart2, NotebookPen, Headphones, GraduationCap, Menu, X, Home, Puzzle } from "lucide-react";
 import { useUIStore } from "@/stores/uiStore";
 import { createClient } from "@/lib/supabase/client";
 import { cn } from "@/lib/utils/cn";
@@ -69,6 +69,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
     { href: "/journal",           icon: <NotebookPen size={16} />,   label: "Nhật ký", divider: true },
     { href: "/grammar",           icon: <GraduationCap size={16} />, label: "Ngữ pháp" },
     { href: "/reading-practice",  icon: <BookOpen size={16} />,      label: "Reading" },
+    { href: "/subskills",         icon: <Puzzle size={16} />,        label: "Subskills" },
   ];
 
   return (
@@ -186,6 +187,15 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
                   >
                     <GraduationCap size={15} aria-hidden="true" />
                     Luyện ngữ pháp
+                  </Link>
+                  <Link
+                    href="/subskills"
+                    className={styles.dropdownItem}
+                    role="menuitem"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    <Puzzle size={15} aria-hidden="true" />
+                    Subskills Part 2
                   </Link>
                   <Link
                     href="/journal"

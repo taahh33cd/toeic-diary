@@ -1,0 +1,96 @@
+{
+  "part": "part2",
+  "questionWord": "which",
+  "label": "WHICH",
+  "labelVi": "Câu hỏi WHICH",
+  "passThreshold": 80,
+  "intro": "WHICH hỏi để lựa chọn giữa các đối tượng cụ thể. Đáp án đúng xác định rõ một lựa chọn trong số các phương án đã biết.",
+  "exercises": [
+    {
+      "kind": "wordbank",
+      "title": "Bài 1 — Dịch câu hỏi (kéo–thả)",
+      "instruction": "Sắp xếp các mảnh để tạo bản dịch tiếng Việt đúng cho câu hỏi.",
+      "items": [
+        { "prompt": "Which train goes to the city center?", "chunks": ["Chuyến tàu nào", "đi đến", "trung tâm thành phố"] },
+        { "prompt": "Which proposal did the board approve?", "chunks": ["Đề xuất nào", "ban lãnh đạo", "đã phê duyệt"] },
+        { "prompt": "Which laptop is best for gaming?", "chunks": ["Laptop nào", "phù hợp nhất", "để chơi game"] },
+        { "prompt": "Which vendor supplies the materials?", "chunks": ["Nhà cung cấp nào", "cung cấp", "nguyên vật liệu"] },
+        { "prompt": "Which seat is assigned to you?", "chunks": ["Ghế nào", "được phân công", "cho bạn"] },
+        { "prompt": "Which app do you use for scheduling?", "chunks": ["Ứng dụng nào", "bạn dùng", "để lên lịch"] },
+        { "prompt": "Which project needs more funding?", "chunks": ["Dự án nào", "cần thêm", "ngân sách"] },
+        { "prompt": "Which employee received the bonus?", "chunks": ["Nhân viên nào", "đã nhận được", "tiền thưởng"] },
+        { "prompt": "Which car model is the most reliable?", "chunks": ["Mẫu xe nào", "đáng tin cậy", "nhất"] },
+        { "prompt": "Which presentation was the most effective?", "chunks": ["Bài thuyết trình nào", "hiệu quả", "nhất"] },
+        { "prompt": "Which brand do customers prefer?", "chunks": ["Thương hiệu nào", "khách hàng", "ưa thích"] },
+        { "prompt": "Which package includes free shipping?", "chunks": ["Gói hàng nào", "bao gồm", "miễn phí vận chuyển"] },
+        { "prompt": "Which team is leading the competition?", "chunks": ["Đội nào", "đang dẫn đầu", "cuộc thi"] },
+        { "prompt": "Which flight has the earliest departure?", "chunks": ["Chuyến bay nào", "khởi hành", "sớm nhất"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ còn thiếu",
+      "instruction": "Điền từ còn thiếu vào ô trống để hoàn thành câu hỏi dựa trên nghĩa tiếng Việt.",
+      "items": [
+        { "template": "{0} department is {1} for hiring?", "hint": "Phòng ban nào chịu trách nhiệm tuyển dụng?", "blanks": [["which"], ["responsible"]] },
+        { "template": "{0} option did the {1} choose?", "hint": "Khách hàng đã chọn lựa chọn nào?", "blanks": [["which"], ["client", "customer"]] },
+        { "template": "{0} {1} goes to Paris?", "hint": "Chuyến bay nào đi Paris?", "blanks": [["which"], ["flight"]] },
+        { "template": "{0} team won the {1}?", "hint": "Đội nào giành được giải thưởng?", "blanks": [["which"], ["award", "prize"]] },
+        { "template": "{0} room is reserved for the {1}?", "hint": "Phòng nào được đặt cho cuộc họp?", "blanks": [["which"], ["meeting"]] },
+        { "template": "{0} {1} do you prefer for the design?", "hint": "Bạn thích màu nào cho thiết kế?", "blanks": [["which"], ["color", "colour"]] },
+        { "template": "{0} supplier offers the best {1}?", "hint": "Nhà cung cấp nào có giá tốt nhất?", "blanks": [["which"], ["price", "deal"]] },
+        { "template": "{0} {1} performed the best?", "hint": "Ứng viên nào thể hiện tốt nhất?", "blanks": [["which"], ["candidate"]] },
+        { "template": "{0} {1} is more efficient?", "hint": "Phương pháp nào hiệu quả hơn?", "blanks": [["which"], ["method", "approach"]] },
+        { "template": "{0} {1} did they book for the conference?", "hint": "Họ đặt khách sạn nào cho hội nghị?", "blanks": [["which"], ["hotel"]] },
+        { "template": "{0} bus stops near the {1}?", "hint": "Xe buýt nào dừng gần văn phòng?", "blanks": [["which"], ["office"]] },
+        { "template": "{0} {1} do we need to install?", "hint": "Chúng ta cần cài đặt phần mềm nào?", "blanks": [["which"], ["software"]] },
+        { "template": "{0} {1} is more comfortable?", "hint": "Ghế nào thoải mái hơn?", "blanks": [["which"], ["seat", "chair"]] },
+        { "template": "{0} route is the fastest to the {1}?", "hint": "Đường nào đến sân bay nhanh nhất?", "blanks": [["which"], ["airport"]] }
+      ]
+    },
+    {
+      "kind": "keyword",
+      "title": "Bài 3 — Ghi lại từ khóa",
+      "instruction": "Gõ các từ khóa quan trọng trong câu hỏi (bao gồm cả từ để hỏi), cách nhau bằng dấu phẩy.",
+      "items": [
+        { "prompt": "Which platform is best for marketing?", "minRequired": 2, "keywords": [["which"], ["platform"], ["marketing"]] },
+        { "prompt": "Which document needs to be signed?", "minRequired": 2, "keywords": [["which"], ["document"], ["signed", "sign"]] },
+        { "prompt": "Which gate is for international flights?", "minRequired": 2, "keywords": [["which"], ["gate"], ["international"], ["flights", "flight"]] },
+        { "prompt": "Which department handles payroll?", "minRequired": 2, "keywords": [["which"], ["department"], ["payroll"]] },
+        { "prompt": "Which shirt matches the suit?", "minRequired": 2, "keywords": [["which"], ["shirt"], ["matches", "match"], ["suit"]] },
+        { "prompt": "Which strategy worked last quarter?", "minRequired": 2, "keywords": [["which"], ["strategy"], ["quarter"]] },
+        { "prompt": "Which item is on sale?", "minRequired": 2, "keywords": [["which"], ["item"], ["sale"]] },
+        { "prompt": "Which intern completed the task?", "minRequired": 2, "keywords": [["which"], ["intern"], ["completed", "complete"], ["task"]] },
+        { "prompt": "Which course is required for the job?", "minRequired": 2, "keywords": [["which"], ["course"], ["required", "require"], ["job"]] },
+        { "prompt": "Which machine is out of order?", "minRequired": 2, "keywords": [["which"], ["machine"], ["order"]] },
+        { "prompt": "Which flight offers meals?", "minRequired": 2, "keywords": [["which"], ["flight"], ["meals", "meal"]] },
+        { "prompt": "Which store has the best discounts?", "minRequired": 2, "keywords": [["which"], ["store"], ["discounts", "discount"]] },
+        { "prompt": "Which speaker gave the keynote?", "minRequired": 2, "keywords": [["which"], ["speaker"], ["keynote"]] },
+        { "prompt": "Which plan suits the budget?", "minRequired": 2, "keywords": [["which"], ["plan"], ["budget"]] }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn câu trả lời & dịch sang tiếng Anh",
+      "instruction": "Chọn đáp án phù hợp nhất cho câu hỏi WHICH, sau đó kéo–thả các mảnh để dịch đáp án đúng sang tiếng Anh.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        { "prompt": "Which train goes to the station?", "options": ["Hướng bắc.", "Chuyến 8 giờ sáng.", "Nhân viên soát vé."], "correct": 1, "explanation": "B xác định một chuyến tàu cụ thể — phù hợp WHICH. A trả lời cho WHERE (hướng đi), C trả lời cho WHO.", "answerChunks": ["The", "8", "AM", "train"] },
+        { "prompt": "Which proposal was selected?", "options": ["Do ban lãnh đạo.", "Tuần trước.", "Lựa chọn thứ hai."], "correct": 2, "explanation": "C xác định đề xuất cụ thể — phù hợp WHICH. A trả lời cho WHO, B trả lời cho WHEN.", "answerChunks": ["The", "second", "option"] },
+        { "prompt": "Which laptop is on sale?", "options": ["Cái màu đen.", "Trong cửa hàng.", "Quản lý."], "correct": 0, "explanation": "A xác định chiếc laptop cụ thể — phù hợp WHICH. B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["The", "black", "one"] },
+        { "prompt": "Which vendor delivers fastest?", "options": ["Bằng xe tải.", "Hôm qua.", "Nhà cung cấp A."], "correct": 2, "explanation": "C xác định nhà cung cấp cụ thể — phù hợp WHICH. A trả lời cho HOW, B trả lời cho WHEN.", "answerChunks": ["Supplier", "A"] },
+        { "prompt": "Which seat is yours?", "options": ["Ghế 12B.", "Trên máy bay.", "Hành khách."], "correct": 0, "explanation": "A xác định ghế cụ thể — phù hợp WHICH. B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Seat", "12B"] },
+        { "prompt": "Which app is for communication?", "options": ["Trên điện thoại.", "Ứng dụng mới.", "Đội IT."], "correct": 1, "explanation": "B xác định ứng dụng cụ thể — phù hợp WHICH. A trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["The", "new", "app"] },
+        { "prompt": "Which project needs approval?", "options": ["Do giám đốc điều hành.", "Tháng tới.", "Dự án mở rộng."], "correct": 2, "explanation": "C xác định dự án cụ thể — phù hợp WHICH. A trả lời cho WHO, B trả lời cho WHEN.", "answerChunks": ["The", "expansion", "project"] },
+        { "prompt": "Which employee got promoted?", "options": ["John được thăng chức.", "Tuần trước.", "Trong phòng nhân sự."], "correct": 0, "explanation": "A xác định nhân viên cụ thể — phù hợp WHICH. B trả lời cho WHEN, C trả lời cho WHERE.", "answerChunks": ["John", "got", "promoted"] },
+        { "prompt": "Which car is the cheapest?", "options": ["Tại đại lý.", "Mẫu màu đỏ.", "Nhân viên bán hàng."], "correct": 1, "explanation": "B xác định mẫu xe cụ thể — phù hợp WHICH. A trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["The", "red", "model"] },
+        { "prompt": "Which presentation was the best?", "options": ["Vào buổi sáng.", "Đội ngũ.", "Bài cuối cùng."], "correct": 2, "explanation": "C xác định bài thuyết trình cụ thể — phù hợp WHICH. A trả lời cho WHEN, B trả lời cho WHO.", "answerChunks": ["The", "last", "one"] },
+        { "prompt": "Which brand is the most popular?", "options": ["Thương hiệu X.", "Trên khảo sát.", "Năm ngoái."], "correct": 0, "explanation": "A xác định thương hiệu cụ thể — phù hợp WHICH. B trả lời cho WHERE, C trả lời cho WHEN.", "answerChunks": ["Brand", "X"] },
+        { "prompt": "Which package includes insurance?", "options": ["Tại quầy.", "Gói cao cấp.", "Đại lý."], "correct": 1, "explanation": "B xác định gói dịch vụ cụ thể — phù hợp WHICH. A trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["The", "premium", "package"] },
+        { "prompt": "Which team won the match?", "options": ["Hôm qua.", "Tại sân vận động.", "Đội Xanh."], "correct": 2, "explanation": "C xác định đội cụ thể — phù hợp WHICH. A trả lời cho WHEN, B trả lời cho WHERE.", "answerChunks": ["The", "Blue", "team"] },
+        { "prompt": "Which flight departs first?", "options": ["Chuyến bay 101.", "Đến London.", "Phi công."], "correct": 0, "explanation": "A xác định chuyến bay cụ thể — phù hợp WHICH. B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Flight", "101"] }
+      ]
+    }
+  ]
+}

@@ -16,6 +16,7 @@ const NAV_ITEMS: NavItem[] = [
   { href: "/",                 label: "Dictation", emoji: "🎧", exact: true },
   { href: "/grammar",          label: "Grammar",   emoji: "🎓" },
   { href: "/reading-practice", label: "Reading",   emoji: "📖" },
+  { href: "/subskills",        label: "Subskills", emoji: "🧩" },
   { href: "/admin",            label: "Quản lý",   emoji: "⚙️", roles: ["teacher", "admin"] },
 ];
 

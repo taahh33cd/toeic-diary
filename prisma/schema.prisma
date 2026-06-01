@@ -157,8 +157,9 @@ model Profile {
   invitesSent     TeacherInvite[]
   managedStudents Profile[] @relation("TeacherStudent")
   teacher         Profile?  @relation("TeacherStudent", fields: [teacherId], references: [id])
-  grammarAttempts GrammarAttempt[]
-  readingAttempts ReadingAttempt[]
+  grammarAttempts  GrammarAttempt[]
+  readingAttempts  ReadingAttempt[]
+  subskillAttempts SubskillAttempt[]
 
   @@map("profiles")
 }
@@ -327,6 +328,27 @@ model ReadingQuestion {
 
   @@index([passageId, orderIndex])
   @@map("reading_questions")
+}
+
+// ─────────────────────────────────────
+// SUBSKILLS (Part 2 sub-skill exercises)
+// ─────────────────────────────────────
+
+model SubskillAttempt {
+  id            String   @id @default(uuid())
+  userId        String   @map("user_id")
+  profile       Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  part          String   // "part2"
+  questionWord  String   @map("question_word") // "who" | "what" | "when" | ...
+  exerciseIndex Int      @map("exercise_index") // 0-3  (Bài 1-4)
+  score         Int      // 0-100
+  passed        Boolean  // score >= passThreshold (80)
+  completedAt   DateTime @default(now()) @map("completed_at")
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  @@index([userId, part, questionWord])
+  @@index([userId])
+  @@map("subskill_attempts")
 }
 
 model ReadingAttempt {

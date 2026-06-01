@@ -1,0 +1,96 @@
+{
+  "part": "part2",
+  "questionWord": "who",
+  "label": "WHO",
+  "labelVi": "Câu hỏi WHO",
+  "passThreshold": 80,
+  "intro": "WHO hỏi về chủ ngữ (người) thực hiện hành động. Khi nghe câu hỏi WHO, đáp án đúng thường nêu tên một người, chức danh hoặc bộ phận.",
+  "exercises": [
+    {
+      "kind": "wordbank",
+      "title": "Bài 1 — Dịch câu hỏi (kéo–thả)",
+      "instruction": "Sắp xếp các mảnh để tạo bản dịch tiếng Việt đúng cho câu hỏi.",
+      "items": [
+        { "prompt": "Who is responsible for the report?", "chunks": ["Ai", "chịu trách nhiệm", "cho bản báo cáo"] },
+        { "prompt": "Who organized the meeting?", "chunks": ["Ai", "đã tổ chức", "cuộc họp"] },
+        { "prompt": "Who will present the project?", "chunks": ["Ai", "sẽ trình bày", "dự án"] },
+        { "prompt": "Who called the client?", "chunks": ["Ai", "đã gọi", "cho khách hàng"] },
+        { "prompt": "Who manages the team?", "chunks": ["Ai", "quản lý", "nhóm"] },
+        { "prompt": "Who wrote the email?", "chunks": ["Ai", "đã viết", "email"] },
+        { "prompt": "Who attended the conference?", "chunks": ["Ai", "đã tham dự", "hội nghị"] },
+        { "prompt": "Who approved the budget?", "chunks": ["Ai", "đã phê duyệt", "ngân sách"] },
+        { "prompt": "Who handles customer complaints?", "chunks": ["Ai", "xử lý", "khiếu nại của khách hàng"] },
+        { "prompt": "Who designed the new website?", "chunks": ["Ai", "đã thiết kế", "trang web mới"] },
+        { "prompt": "Who contacted the supplier?", "chunks": ["Ai", "đã liên hệ", "với nhà cung cấp"] },
+        { "prompt": "Who leads the marketing campaign?", "chunks": ["Ai", "dẫn dắt", "chiến dịch tiếp thị"] },
+        { "prompt": "Who interviewed the candidate?", "chunks": ["Ai", "đã phỏng vấn", "ứng viên"] },
+        { "prompt": "Who signed the contract?", "chunks": ["Ai", "đã ký", "hợp đồng"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ còn thiếu",
+      "instruction": "Điền từ còn thiếu vào ô trống để hoàn thành câu hỏi dựa trên nghĩa tiếng Việt.",
+      "items": [
+        { "template": "{0} is in charge of the {1}?", "hint": "Ai phụ trách dự án?", "blanks": [["who"], ["project"]] },
+        { "template": "{0} scheduled the {1} session?", "hint": "Ai lên lịch cho buổi đào tạo?", "blanks": [["who"], ["training"]] },
+        { "template": "{0} delivered the {1} yesterday?", "hint": "Ai giao gói hàng hôm qua?", "blanks": [["who"], ["package", "parcel"]] },
+        { "template": "{0} will {1} at the event?", "hint": "Ai sẽ phát biểu tại sự kiện?", "blanks": [["who"], ["speak", "present"]] },
+        { "template": "{0} updated the {1} website?", "hint": "Ai cập nhật trang web công ty?", "blanks": [["who"], ["company"]] },
+        { "template": "{0} booked the {1} room?", "hint": "Ai đặt phòng hội nghị?", "blanks": [["who"], ["conference", "meeting"]] },
+        { "template": "{0} {1} the invitation email?", "hint": "Ai đã gửi email mời?", "blanks": [["who"], ["sent"]] },
+        { "template": "{0} is responsible for {1} control?", "hint": "Ai chịu trách nhiệm kiểm soát chất lượng?", "blanks": [["who"], ["quality"]] },
+        { "template": "{0} trained the new {1}?", "hint": "Ai đào tạo nhân viên mới?", "blanks": [["who"], ["employee", "employees", "staff", "hire", "hires"]] },
+        { "template": "{0} reviewed the financial {1}?", "hint": "Ai xem xét báo cáo tài chính?", "blanks": [["who"], ["report", "reports", "statement", "statements"]] },
+        { "template": "{0} arranged the client {1}?", "hint": "Ai sắp xếp cuộc gặp với khách hàng?", "blanks": [["who"], ["meeting", "meetings", "appointment"]] },
+        { "template": "{0} created the marketing {1}?", "hint": "Ai tạo kế hoạch quảng bá?", "blanks": [["who"], ["plan", "plans", "strategy"]] },
+        { "template": "{0} approved the new {1}?", "hint": "Ai phê duyệt chính sách mới?", "blanks": [["who"], ["policy", "policies"]] },
+        { "template": "{0} {1} the IT support team?", "hint": "Ai đã liên lạc với đội hỗ trợ IT?", "blanks": [["who"], ["contacted", "called"]] }
+      ]
+    },
+    {
+      "kind": "keyword",
+      "title": "Bài 3 — Ghi lại từ khóa",
+      "instruction": "Gõ các từ khóa quan trọng trong câu hỏi (bao gồm cả từ để hỏi), cách nhau bằng dấu phẩy.",
+      "items": [
+        { "prompt": "Who is supervising the interns?", "minRequired": 2, "keywords": [["who"], ["supervising", "supervise"], ["interns", "intern"]] },
+        { "prompt": "Who developed the software update?", "minRequired": 2, "keywords": [["who"], ["developed", "develop"], ["software"], ["update"]] },
+        { "prompt": "Who called the emergency meeting?", "minRequired": 2, "keywords": [["who"], ["called", "call"], ["emergency"], ["meeting"]] },
+        { "prompt": "Who is hosting the company party?", "minRequired": 2, "keywords": [["who"], ["hosting", "host"], ["company"], ["party"]] },
+        { "prompt": "Who checked the inventory list?", "minRequired": 2, "keywords": [["who"], ["checked", "check"], ["inventory"], ["list"]] },
+        { "prompt": "Who is managing the budget?", "minRequired": 2, "keywords": [["who"], ["managing", "manage"], ["budget"]] },
+        { "prompt": "Who delivered the keynote speech?", "minRequired": 2, "keywords": [["who"], ["delivered", "deliver"], ["keynote"], ["speech"]] },
+        { "prompt": "Who is coordinating the event schedule?", "minRequired": 2, "keywords": [["who"], ["coordinating", "coordinate"], ["event"], ["schedule"]] },
+        { "prompt": "Who approved the travel expenses?", "minRequired": 2, "keywords": [["who"], ["approved", "approve"], ["travel"], ["expenses", "expense"]] },
+        { "prompt": "Who wrote the press release?", "minRequired": 2, "keywords": [["who"], ["wrote", "write"], ["press"], ["release"]] },
+        { "prompt": "Who is training the sales staff?", "minRequired": 2, "keywords": [["who"], ["training", "train"], ["sales"], ["staff"]] },
+        { "prompt": "Who negotiated the deal with the client?", "minRequired": 2, "keywords": [["who"], ["negotiated", "negotiate"], ["deal"], ["client"]] },
+        { "prompt": "Who updated the employee handbook?", "minRequired": 2, "keywords": [["who"], ["updated", "update"], ["employee"], ["handbook"]] },
+        { "prompt": "Who is responsible for data security?", "minRequired": 2, "keywords": [["who"], ["responsible"], ["data"], ["security"]] }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn câu trả lời & dịch sang tiếng Anh",
+      "instruction": "Chọn đáp án phù hợp nhất cho câu hỏi WHO, sau đó kéo–thả các mảnh để dịch đáp án đúng sang tiếng Anh.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        { "prompt": "Who is managing the new campaign?", "options": ["Bắt đầu vào ngày mai.", "Giám đốc tiếp thị.", "Trong văn phòng chính."], "correct": 1, "explanation": "Đáp án B nêu một chức danh (người) — phù hợp câu hỏi WHO. A trả lời cho câu hỏi When, C trả lời cho câu hỏi Where.", "answerChunks": ["The", "marketing", "manager"] },
+        { "prompt": "Who wrote the annual summary?", "options": ["Tháng trước.", "Trên máy chủ.", "Đội tài chính."], "correct": 2, "explanation": "Đáp án C nêu một bộ phận (người) — phù hợp câu hỏi WHO. A trả lời cho câu hỏi When, B trả lời cho câu hỏi Where.", "answerChunks": ["The", "finance", "team"] },
+        { "prompt": "Who is presenting at the workshop?", "options": ["Cô ấy trình bày.", "Lúc 10 giờ sáng.", "Trong phòng 3."], "correct": 0, "explanation": "Đáp án A nêu một người (cô ấy) — phù hợp câu hỏi WHO. B trả lời cho câu hỏi When, C trả lời cho câu hỏi Where.", "answerChunks": ["She", "is", "presenting"] },
+        { "prompt": "Who fixed the air conditioner?", "options": ["Hôm qua.", "Trong phòng nghỉ.", "Kỹ thuật viên."], "correct": 2, "explanation": "Đáp án C nêu một người (kỹ thuật viên) — phù hợp câu hỏi WHO. A trả lời cho câu hỏi When, B trả lời cho câu hỏi Where.", "answerChunks": ["The", "technician"] },
+        { "prompt": "Who ordered the new equipment?", "options": ["Quản lý vận hành.", "Tuần trước.", "Từ nhà cung cấp."], "correct": 0, "explanation": "Đáp án A nêu một chức danh (người) — phù hợp câu hỏi WHO. B trả lời cho câu hỏi When, C trả lời cho câu hỏi Where (nguồn gốc).", "answerChunks": ["The", "operations", "manager"] },
+        { "prompt": "Who is leading the training session?", "options": ["Sáng mai.", "Quản lý nhân sự.", "Trong phòng đào tạo."], "correct": 1, "explanation": "Đáp án B nêu một chức danh (người) — phù hợp câu hỏi WHO. A trả lời cho câu hỏi When, C trả lời cho câu hỏi Where.", "answerChunks": ["The", "HR", "manager"] },
+        { "prompt": "Who designed the company logo?", "options": ["Năm ngoái.", "Cho trang web.", "Nhà thiết kế tự do."], "correct": 2, "explanation": "Đáp án C nêu một người — phù hợp câu hỏi WHO. A trả lời cho câu hỏi When, B trả lời cho câu hỏi Why (mục đích).", "answerChunks": ["A", "freelance", "designer"] },
+        { "prompt": "Who submitted the project plan?", "options": ["Điều phối viên dự án.", "Hai ngày trước.", "Cho ban lãnh đạo."], "correct": 0, "explanation": "Đáp án A nêu một chức danh (người) — phù hợp câu hỏi WHO. B trả lời cho câu hỏi When, C trả lời cho câu hỏi To whom (nơi nhận).", "answerChunks": ["The", "project", "coordinator"] },
+        { "prompt": "Who is handling the event logistics?", "options": ["Thứ Sáu tới.", "Nhóm tổ chức sự kiện.", "Tại địa điểm."], "correct": 1, "explanation": "Đáp án B nêu một nhóm (người) — phù hợp câu hỏi WHO. A trả lời cho câu hỏi When, C trả lời cho câu hỏi Where.", "answerChunks": ["The", "event", "organizing", "team"] },
+        { "prompt": "Who reviewed the contract?", "options": ["Hôm qua.", "Trong văn phòng.", "Đội pháp lý."], "correct": 2, "explanation": "Đáp án C nêu một bộ phận (người) — phù hợp câu hỏi WHO. A trả lời cho câu hỏi When, B trả lời cho câu hỏi Where.", "answerChunks": ["The", "legal", "team"] },
+        { "prompt": "Who invited the VIP guests?", "options": ["Người lập kế hoạch sự kiện.", "Tuần trước.", "Qua email."], "correct": 0, "explanation": "Đáp án A nêu một người — phù hợp câu hỏi WHO. B trả lời cho câu hỏi When, C trả lời cho câu hỏi How (cách thức).", "answerChunks": ["The", "event", "planner"] },
+        { "prompt": "Who is overseeing the audit?", "options": ["Tháng tới.", "Bộ phận kế toán.", "Trong phòng họp."], "correct": 1, "explanation": "Đáp án B nêu một bộ phận (người) — phù hợp câu hỏi WHO. A trả lời cho câu hỏi When, C trả lời cho câu hỏi Where.", "answerChunks": ["The", "accounting", "department"] },
+        { "prompt": "Who prepared the sales forecast?", "options": ["Quý trước.", "Trên hệ thống.", "Quản lý bán hàng."], "correct": 2, "explanation": "Đáp án C nêu một chức danh (người) — phù hợp câu hỏi WHO. A trả lời cho câu hỏi When, B trả lời cho câu hỏi Where.", "answerChunks": ["The", "sales", "manager"] },
+        { "prompt": "Who contacted the media team?", "options": ["Tôi đã liên hệ.", "Sáng nay.", "Qua điện thoại."], "correct": 0, "explanation": "Đáp án A nêu một người (tôi) — phù hợp câu hỏi WHO. B trả lời cho câu hỏi When, C trả lời cho câu hỏi How (cách thức).", "answerChunks": ["I", "contacted", "them"] }
+      ]
+    }
+  ]
+}

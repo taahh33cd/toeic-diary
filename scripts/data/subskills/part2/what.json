@@ -1,0 +1,96 @@
+{
+  "part": "part2",
+  "questionWord": "what",
+  "label": "WHAT",
+  "labelVi": "Câu hỏi WHAT",
+  "passThreshold": 80,
+  "intro": "WHAT hỏi về sự việc, thông tin hoặc nội dung (không phải người). Đáp án đúng nêu tên vật, sự kiện, lý do, hoặc mô tả nội dung được hỏi.",
+  "exercises": [
+    {
+      "kind": "wordbank",
+      "title": "Bài 1 — Dịch câu hỏi (kéo–thả)",
+      "instruction": "Sắp xếp các mảnh để tạo bản dịch tiếng Việt đúng cho câu hỏi.",
+      "items": [
+        { "prompt": "What is the schedule for the event?", "chunks": ["Lịch trình", "của sự kiện", "là gì"] },
+        { "prompt": "What are the key points of the presentation?", "chunks": ["Các điểm chính", "của bài thuyết trình", "là gì"] },
+        { "prompt": "What caused the system error?", "chunks": ["Điều gì", "đã gây ra", "lỗi hệ thống"] },
+        { "prompt": "What is the target market for the product?", "chunks": ["Thị trường mục tiêu", "của sản phẩm", "là gì"] },
+        { "prompt": "What are the company's values?", "chunks": ["Giá trị", "của công ty", "là gì"] },
+        { "prompt": "What is the outcome of the meeting?", "chunks": ["Kết quả", "của cuộc họp", "là gì"] },
+        { "prompt": "What did the client request?", "chunks": ["Khách hàng", "đã yêu cầu", "điều gì"] },
+        { "prompt": "What is the theme of the campaign?", "chunks": ["Chủ đề", "của chiến dịch", "là gì"] },
+        { "prompt": "What are the specifications of the device?", "chunks": ["Thông số kỹ thuật", "của thiết bị", "là gì"] },
+        { "prompt": "What is the reason for the price increase?", "chunks": ["Lý do", "tăng giá", "là gì"] },
+        { "prompt": "What did the survey reveal?", "chunks": ["Cuộc khảo sát", "đã tiết lộ", "điều gì"] },
+        { "prompt": "What is the focus of the training?", "chunks": ["Trọng tâm", "của buổi đào tạo", "là gì"] },
+        { "prompt": "What are the benefits of the subscription?", "chunks": ["Lợi ích", "của gói đăng ký", "là gì"] },
+        { "prompt": "What is the timeline for the project?", "chunks": ["Thời gian biểu", "của dự án", "là gì"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ còn thiếu",
+      "instruction": "Điền từ còn thiếu vào ô trống để hoàn thành câu hỏi dựa trên nghĩa tiếng Việt.",
+      "items": [
+        { "template": "{0} is the topic of the {1}?", "hint": "Chủ đề của cuộc họp là gì?", "blanks": [["what"], ["meeting"]] },
+        { "template": "{0} did you {1} with the {2}?", "hint": "Bạn đã thảo luận gì với khách hàng?", "blanks": [["what"], ["discuss"], ["client", "customer"]] },
+        { "template": "{0} is the {1} for the {2}?", "hint": "Ngân sách cho sự kiện là gì?", "blanks": [["what"], ["budget"], ["event"]] },
+        { "template": "{0} caused the {1} in production?", "hint": "Cái gì gây ra sự chậm trễ trong sản xuất?", "blanks": [["what"], ["delay", "delays"]] },
+        { "template": "{0} are the benefits of the new {1}?", "hint": "Lợi ích của chính sách mới là gì?", "blanks": [["what"], ["policy", "policies"]] },
+        { "template": "{0} is the {1} of the new software?", "hint": "Tên của phần mềm mới là gì?", "blanks": [["what"], ["name"]] },
+        { "template": "{0} did the manager {1} for improvement?", "hint": "Quản lý đã gợi ý gì để cải thiện?", "blanks": [["what"], ["suggest", "recommend"]] },
+        { "template": "{0} is the purpose of the {1}?", "hint": "Mục đích của cuộc khảo sát là gì?", "blanks": [["what"], ["survey"]] },
+        { "template": "{0} are the main goals for this {1}?", "hint": "Mục tiêu chính cho quý này là gì?", "blanks": [["what"], ["quarter"]] },
+        { "template": "{0} is the {1} for the {2}?", "hint": "Hạn chót cho dự án là gì?", "blanks": [["what"], ["deadline"], ["project"]] },
+        { "template": "{0} did you {1} from the workshop?", "hint": "Bạn đã học được gì từ hội thảo?", "blanks": [["what"], ["learn", "take", "gain"]] },
+        { "template": "{0} is the {1} of the new product?", "hint": "Giá của sản phẩm mới là gì?", "blanks": [["what"], ["price", "cost"]] },
+        { "template": "{0} are the {1} for the job?", "hint": "Yêu cầu cho công việc là gì?", "blanks": [["what"], ["requirements", "qualifications"]] },
+        { "template": "{0} is the agenda for the {1}?", "hint": "Chương trình nghị sự cho hội nghị là gì?", "blanks": [["what"], ["conference", "meeting"]] }
+      ]
+    },
+    {
+      "kind": "keyword",
+      "title": "Bài 3 — Ghi lại từ khóa",
+      "instruction": "Gõ các từ khóa quan trọng trong câu hỏi (bao gồm cả từ để hỏi), cách nhau bằng dấu phẩy.",
+      "items": [
+        { "prompt": "What is the plan for the product launch?", "minRequired": 2, "keywords": [["what"], ["plan"], ["product"], ["launch"]] },
+        { "prompt": "What are the steps to complete the task?", "minRequired": 2, "keywords": [["what"], ["steps"], ["complete"], ["task"]] },
+        { "prompt": "What caused the project delay?", "minRequired": 2, "keywords": [["what"], ["caused", "cause"], ["delay"], ["project"]] },
+        { "prompt": "What is the cost of the new system?", "minRequired": 2, "keywords": [["what"], ["cost", "price"], ["system"]] },
+        { "prompt": "What are the advantages of the new tool?", "minRequired": 2, "keywords": [["what"], ["advantages", "benefits"], ["tool"]] },
+        { "prompt": "What is the result of the experiment?", "minRequired": 2, "keywords": [["what"], ["result", "outcome"], ["experiment"]] },
+        { "prompt": "What did the manager announce?", "minRequired": 2, "keywords": [["what"], ["announce", "announced"], ["manager"]] },
+        { "prompt": "What is the goal of the initiative?", "minRequired": 2, "keywords": [["what"], ["goal", "objective"], ["initiative"]] },
+        { "prompt": "What are the features of the app?", "minRequired": 2, "keywords": [["what"], ["features"], ["app", "application"]] },
+        { "prompt": "What is the reason the manager approved the budget?", "minRequired": 2, "keywords": [["what"], ["reason"], ["approved", "approve"], ["budget"]] },
+        { "prompt": "What did the team discuss yesterday?", "minRequired": 2, "keywords": [["what"], ["discuss", "discussed"], ["team"]] },
+        { "prompt": "What is the purpose of the meeting?", "minRequired": 2, "keywords": [["what"], ["purpose"], ["meeting"]] },
+        { "prompt": "What are the challenges of the project?", "minRequired": 2, "keywords": [["what"], ["challenges"], ["project"]] },
+        { "prompt": "What is the strategy for the campaign?", "minRequired": 2, "keywords": [["what"], ["strategy"], ["campaign"]] }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn câu trả lời & dịch sang tiếng Anh",
+      "instruction": "Chọn đáp án phù hợp nhất cho câu hỏi WHAT, sau đó kéo–thả các mảnh để dịch đáp án đúng sang tiếng Anh.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        { "prompt": "What is the schedule for the training?", "options": ["Người huấn luyện.", "Tuần tới.", "Trong văn phòng."], "correct": 1, "explanation": "B nêu lịch trình đào tạo (nội dung WHAT). A trả lời cho WHO, C trả lời cho WHERE.", "answerChunks": ["Next", "week"] },
+        { "prompt": "What are the main points of the report?", "options": ["Đội tài chính.", "Tháng trước.", "Doanh số tăng."], "correct": 2, "explanation": "C nêu nội dung chính của báo cáo (WHAT). A trả lời cho WHO, B trả lời cho WHEN.", "answerChunks": ["Sales", "increased"] },
+        { "prompt": "What caused the delay in shipping?", "options": ["Do thời tiết.", "Nhà cung cấp.", "Đến châu Âu."], "correct": 0, "explanation": "A nêu nguyên nhân gây chậm trễ (WHAT). B trả lời cho WHO, C trả lời cho WHERE.", "answerChunks": ["Due", "to", "bad", "weather"] },
+        { "prompt": "What is the target audience for the ad?", "options": ["Trên TV.", "Đội tiếp thị.", "Thanh niên."], "correct": 2, "explanation": "C nêu đối tượng mục tiêu (nội dung WHAT). A trả lời cho WHERE, B trả lời cho WHO.", "answerChunks": ["Young", "people"] },
+        { "prompt": "What are the company's goals?", "options": ["Mở rộng toàn cầu.", "Giám đốc điều hành.", "Năm tới."], "correct": 0, "explanation": "A nêu mục tiêu cụ thể của công ty (WHAT). B trả lời cho WHO, C trả lời cho WHEN.", "answerChunks": ["Global", "expansion"] },
+        { "prompt": "What is the outcome of the discussion?", "options": ["Trong phòng họp.", "Chúng tôi đồng ý.", "Hôm qua."], "correct": 1, "explanation": "B nêu kết quả thảo luận (WHAT). A trả lời cho WHERE, C trả lời cho WHEN.", "answerChunks": ["We", "reached", "an", "agreement"] },
+        { "prompt": "What did the client request?", "options": ["Qua email.", "Tuần trước.", "Thêm chi tiết."], "correct": 2, "explanation": "C nêu nội dung yêu cầu (WHAT). A trả lời cho HOW, B trả lời cho WHEN.", "answerChunks": ["More", "details"] },
+        { "prompt": "What is the theme of the event?", "options": ["Đổi mới.", "Tại khách sạn.", "Người tổ chức."], "correct": 0, "explanation": "A nêu chủ đề sự kiện (WHAT). B trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Innovation"] },
+        { "prompt": "What are the specifications of the product?", "options": ["Kỹ sư.", "Kích thước nhỏ.", "Trong sách hướng dẫn."], "correct": 1, "explanation": "B nêu thông số kỹ thuật (WHAT). A trả lời cho WHO, C trả lời cho WHERE.", "answerChunks": ["Compact", "size"] },
+        { "prompt": "What is the reason for the change?", "options": ["Chính phủ.", "Tháng trước.", "Quy định mới."], "correct": 2, "explanation": "C nêu lý do thay đổi (WHAT). A trả lời cho WHO, B trả lời cho WHEN.", "answerChunks": ["New", "regulations"] },
+        { "prompt": "What did the survey show?", "options": ["Sự hài lòng cao.", "Quý trước.", "Đội nhân sự."], "correct": 0, "explanation": "A nêu kết quả khảo sát (WHAT). B trả lời cho WHEN, C trả lời cho WHO.", "answerChunks": ["High", "satisfaction"] },
+        { "prompt": "What is the focus of the workshop?", "options": ["Tại khu nghỉ dưỡng.", "Xây dựng đội nhóm.", "Người hướng dẫn."], "correct": 1, "explanation": "B nêu trọng tâm hội thảo (WHAT). A trả lời cho WHERE, C trả lời cho WHO.", "answerChunks": ["Team", "building"] },
+        { "prompt": "What are the benefits of the plan?", "options": ["Nhà tư vấn.", "Năm tới.", "Tiết kiệm chi phí."], "correct": 2, "explanation": "C nêu lợi ích cụ thể (WHAT). A trả lời cho WHO, B trả lời cho WHEN.", "answerChunks": ["Cost", "savings"] },
+        { "prompt": "What is the timeline for the launch?", "options": ["Trong hai tháng.", "Đội tiếp thị.", "Trên trang web."], "correct": 0, "explanation": "A nêu khoảng thời gian triển khai (nội dung WHAT). B trả lời cho WHO, C trả lời cho WHERE.", "answerChunks": ["In", "two", "months"] }
+      ]
+    }
+  ]
+}
