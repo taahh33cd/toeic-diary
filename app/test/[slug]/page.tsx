@@ -53,8 +53,6 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
 
   if (!testSet) notFound();
 
-  const locked = !canAccessContent(profile);
-
   const lessonIds = testSet.parts.flatMap((p) => p.lessons.map((l) => l.id));
   const progressRows = lessonIds.length
     ? await prisma.userProgress.findMany({
@@ -77,6 +75,8 @@ export default async function TestPage({ params }: { params: Promise<{ slug: str
     where: { id: user.id },
     select: { displayName: true, role: true, studentCode: true, enrolledCourses: true },
   });
+
+  const locked = !canAccessContent(profile);
 
   const totalLessons = lessonIds.length;
   const completedLessons = new Set(
