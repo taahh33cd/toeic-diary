@@ -52,7 +52,8 @@ export function usePushSubscription({ studentCode }: { studentCode?: string } = 
         return;
       }
 
-      const vapidKey = (process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY ?? "").trim();
+      const vapidKey = (process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY ?? "")
+        .replace(/[^A-Za-z0-9\-_]/g, "");
       if (!vapidKey) throw new Error("NEXT_PUBLIC_VAPID_PUBLIC_KEY chưa được cấu hình");
 
       const sub = await reg.pushManager.subscribe({
