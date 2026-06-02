@@ -4,7 +4,38 @@ import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { PART2_SETS } from "@/lib/subskills";
 
-export const metadata: Metadata = { title: "Subskills — TOEIC Part 2" };
+export const metadata: Metadata = { title: "Subskills — TOEIC" };
+
+const SKILLS = [
+  {
+    key: "listening",
+    emoji: "🎧",
+    label: "Listening",
+    parts: [{ label: "Part 2 — Câu hỏi ngắn", href: "/subskills/listening/part2", active: true }],
+    comingSoon: false,
+  },
+  {
+    key: "reading",
+    emoji: "📖",
+    label: "Reading",
+    parts: [],
+    comingSoon: true,
+  },
+  {
+    key: "speaking",
+    emoji: "🗣",
+    label: "Speaking",
+    parts: [],
+    comingSoon: true,
+  },
+  {
+    key: "writing",
+    emoji: "✍️",
+    label: "Writing",
+    parts: [],
+    comingSoon: true,
+  },
+];
 
 export default async function SubskillsPage() {
   const supabase = await createClient();
@@ -37,12 +68,11 @@ export default async function SubskillsPage() {
 
   const displayName = profile?.displayName ?? user?.email?.split("@")[0] ?? "bạn";
 
-  const totalExercises = PART2_SETS.length * 4;
-  const doneExercises  = Object.keys(best).length;
-  const passedSets = PART2_SETS.filter((s) => {
-    const keys = [0, 1, 2, 3].map((i) => `${s.questionWord}:${i}`);
-    return keys.every((k) => best[k]?.passed);
-  }).length;
+  const part2PassedSets = PART2_SETS.filter((s) =>
+    [0, 1, 2, 3].every((i) => best[`${s.questionWord}:${i}`]?.passed)
+  ).length;
+  const part2DoneExercises = Object.keys(best).length;
+  const part2TotalExercises = PART2_SETS.length * 4;
 
   return (
     <div
@@ -57,14 +87,14 @@ export default async function SubskillsPage() {
         boxSizing: "border-box",
       }}
     >
-      {/* Hero banner — same pattern as practice/[part] */}
+      {/* Hero banner */}
       <section
         className="animate-slide-up"
         style={{
           background: "#1E5F8E",
           borderRadius: "var(--radius-xl, 16px)",
-          padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 4vw, 2.5rem)",
-          marginBottom: "1.5rem",
+          padding: "clamp(1.5rem, 4vw, 2.5rem)",
+          marginBottom: "2rem",
           display: "flex",
           flexDirection: "row",
           alignItems: "flex-end",
@@ -73,7 +103,6 @@ export default async function SubskillsPage() {
           flexWrap: "wrap",
         }}
       >
-        {/* Left: greeting */}
         <div>
           <p style={{
             fontSize: "0.72rem",
@@ -83,7 +112,7 @@ export default async function SubskillsPage() {
             textTransform: "uppercase",
             fontWeight: 600,
           }}>
-            Subskills · TOEIC Part 2
+            Subskills · TOEIC
           </p>
           <h1 style={{
             fontSize: "clamp(1.6rem, 4vw, 2.2rem)",
@@ -96,15 +125,15 @@ export default async function SubskillsPage() {
             Xin chào, {displayName}! 👋
           </h1>
           <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>
-            Luyện từng loại câu hỏi Part 2 — nhận biết nhanh, chọn đáp án chính xác.
+            Luyện từng kỹ năng TOEIC theo từng loại câu hỏi — chọn kỹ năng để bắt đầu.
           </p>
         </div>
 
-        {/* Right: stat cards */}
+        {/* Stat cards */}
         <div style={{ display: "flex", gap: "0.75rem", flexShrink: 0, flexWrap: "wrap" }}>
           {[
-            { value: `${passedSets}/${PART2_SETS.length}`, label: "Nhóm đã pass" },
-            { value: `${doneExercises}/${totalExercises}`,  label: "Bài hoàn thành" },
+            { value: `${part2PassedSets}/${PART2_SETS.length}`, label: "L. Part 2 pass" },
+            { value: `${part2DoneExercises}/${part2TotalExercises}`, label: "Bài hoàn thành" },
           ].map(({ value, label }) => (
             <div
               key={label}
@@ -119,172 +148,114 @@ export default async function SubskillsPage() {
                 minWidth: 90,
               }}
             >
-              <span style={{ fontSize: "1.5rem", fontWeight: 700, color: "#fff", lineHeight: 1 }}>
-                {value}
-              </span>
-              <span style={{ fontSize: "0.65rem", color: "rgba(255,255,255,0.7)", marginTop: "0.3rem", textAlign: "center" }}>
-                {label}
-              </span>
+              <span style={{ fontSize: "1.5rem", fontWeight: 700, color: "#fff", lineHeight: 1 }}>{value}</span>
+              <span style={{ fontSize: "0.65rem", color: "rgba(255,255,255,0.7)", marginTop: "0.3rem", textAlign: "center" }}>{label}</span>
             </div>
           ))}
         </div>
       </section>
 
       {/* Section divider */}
-      <div style={{ width: "100%", marginBottom: "1.5rem" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", color: "var(--text-muted)" }}>
-          <div style={{ flex: 1, height: 1, background: "var(--border)" }} />
-          <span style={{ fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", whiteSpace: "nowrap" }}>
-            TOEIC Part 2 — 10 loại câu hỏi
-          </span>
-          <div style={{ flex: 1, height: 1, background: "var(--border)" }} />
-        </div>
+      <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>
+        <div style={{ flex: 1, height: 1, background: "var(--border)" }} />
+        <span style={{ fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", whiteSpace: "nowrap" }}>
+          Chọn kỹ năng luyện tập
+        </span>
+        <div style={{ flex: 1, height: 1, background: "var(--border)" }} />
       </div>
 
-      {/* Question word cards */}
+      {/* Skill cards */}
       <div
         className="stagger-children animate-slide-up"
         style={{
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          gap: "1px",
-          border: "1px solid var(--border)",
-          borderRadius: "var(--radius-lg)",
-          overflow: "hidden",
-          boxShadow: "var(--shadow-md)",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+          gap: "1rem",
         }}
       >
-        {PART2_SETS.map((set, idx) => {
-          const exerciseBests = [0, 1, 2, 3].map((i) => best[`${set.questionWord}:${i}`] ?? null);
-          const doneCount  = exerciseBests.filter(Boolean).length;
-          const passedAll  = exerciseBests.every((b) => b?.passed);
-          const anyDone    = doneCount > 0;
-          const pct        = Math.round((doneCount / 4) * 100);
-
-          return (
-            <Link
-              key={set.questionWord}
-              href={`/subskills/part2/${set.questionWord}`}
-              className="r-row"
-              style={{
-                display: "flex",
-                alignItems: "flex-start",
-                gap: "1.25rem",
-                padding: "1.3rem 1.6rem",
-                background: idx % 2 === 0 ? "var(--bg-primary)" : "var(--bg-secondary)",
-                textDecoration: "none",
-                borderBottom: idx < PART2_SETS.length - 1 ? "1px solid var(--border)" : "none",
-              }}
-            >
-              {/* Status icon */}
+        {SKILLS.map((skill) => {
+          if (skill.comingSoon) {
+            return (
               <div
+                key={skill.key}
                 style={{
-                  width: 32,
-                  height: 32,
-                  borderRadius: "50%",
-                  background: passedAll && anyDone
-                    ? "rgba(34,197,94,0.15)"
-                    : anyDone
-                    ? "rgba(234,179,8,0.15)"
-                    : "var(--bg-elevated)",
-                  border: `1.5px solid ${
-                    passedAll && anyDone
-                      ? "rgba(34,197,94,0.5)"
-                      : anyDone
-                      ? "rgba(234,179,8,0.5)"
-                      : "var(--border)"
-                  }`,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: "0.85rem",
-                  flexShrink: 0,
-                  marginTop: 2,
+                  padding: "1.5rem",
+                  borderRadius: "var(--radius-lg, 12px)",
+                  border: "1px solid var(--border)",
+                  background: "var(--bg-secondary)",
+                  opacity: 0.55,
+                  cursor: "not-allowed",
                 }}
               >
-                {passedAll && anyDone ? "✓" : anyDone ? "…" : "○"}
-              </div>
-
-              {/* Content */}
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "0.15rem" }}>
-                  <span style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--text-primary)" }}>
-                    {set.label}
-                  </span>
-                  <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", fontStyle: "italic" }}>
-                    {set.labelVi}
-                  </span>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.75rem" }}>
+                  <span style={{ fontSize: "1.4rem" }}>{skill.emoji}</span>
+                  <span style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)" }}>{skill.label}</span>
                 </div>
-
-                <p style={{
-                  fontSize: "0.8rem",
-                  color: "var(--text-secondary)",
-                  lineHeight: 1.55,
-                  marginBottom: anyDone ? "0.55rem" : 0,
-                  display: "-webkit-box",
-                  WebkitLineClamp: 2,
-                  WebkitBoxOrient: "vertical",
-                  overflow: "hidden",
+                <span style={{
+                  display: "inline-block",
+                  fontSize: "0.65rem",
+                  fontWeight: 600,
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  color: "var(--text-muted)",
+                  background: "var(--bg-elevated)",
+                  border: "1px solid var(--border)",
+                  borderRadius: 4,
+                  padding: "2px 8px",
                 }}>
-                  {set.intro}
-                </p>
+                  Coming soon
+                </span>
+              </div>
+            );
+          }
 
-                {anyDone && (
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap" }}>
-                    <div style={{ flex: "1 1 100px", maxWidth: 120, height: 3, background: "var(--border)", borderRadius: 999 }}>
-                      <div style={{
-                        height: "100%",
-                        width: `${pct}%`,
-                        background: passedAll ? "rgb(34,197,94)" : "var(--accent-primary)",
-                        borderRadius: 999,
-                        transition: "width 0.3s",
-                      }} />
-                    </div>
-                    <span style={{ fontSize: "0.68rem", color: "var(--text-muted)" }}>
-                      {doneCount}/4 bài
-                    </span>
-                    <div style={{ display: "flex", gap: 3 }}>
-                      {exerciseBests.map((b, i) => (
-                        <span
-                          key={i}
-                          style={{
-                            display: "inline-flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            width: 18,
-                            height: 18,
-                            borderRadius: 4,
-                            fontSize: "0.55rem",
-                            fontWeight: 700,
-                            background: b?.passed
-                              ? "rgba(34,197,94,0.18)"
-                              : b
-                              ? "rgba(239,68,68,0.13)"
-                              : "var(--bg-elevated)",
-                            color: b?.passed ? "rgb(34,197,94)" : b ? "rgb(239,68,68)" : "var(--text-muted)",
-                            border: `1px solid ${
-                              b?.passed
-                                ? "rgba(34,197,94,0.35)"
-                                : b
-                                ? "rgba(239,68,68,0.25)"
-                                : "var(--border)"
-                            }`,
-                          }}
-                          title={`Bài ${i + 1}: ${b ? `${b.score}%` : "chưa làm"}`}
-                        >
-                          {i + 1}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
+          // Listening — active skill
+          return (
+            <div
+              key={skill.key}
+              style={{
+                padding: "1.5rem",
+                borderRadius: "var(--radius-lg, 12px)",
+                border: "1px solid var(--border)",
+                background: "var(--bg-elevated)",
+                boxShadow: "var(--shadow-sm)",
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "1rem" }}>
+                <span style={{ fontSize: "1.4rem" }}>{skill.emoji}</span>
+                <span style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)" }}>{skill.label}</span>
               </div>
 
-              <span className="r-arrow" style={{ fontSize: "0.8rem", color: "var(--accent-primary)", flexShrink: 0, marginTop: 6 }}>
-                →
-              </span>
-            </Link>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                {skill.parts.map((part) => (
+                  <Link
+                    key={part.href}
+                    href={part.href}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      padding: "0.75rem 1rem",
+                      borderRadius: "var(--radius-md, 8px)",
+                      border: "1px solid var(--border)",
+                      background: "var(--bg-primary)",
+                      textDecoration: "none",
+                      transition: "border-color 0.15s, background 0.15s",
+                    }}
+                  >
+                    <div>
+                      <div style={{ fontSize: "0.88rem", fontWeight: 600, color: "var(--text-primary)" }}>
+                        {part.label}
+                      </div>
+                      <div style={{ fontSize: "0.7rem", color: "var(--text-muted)", marginTop: "0.15rem" }}>
+                        {part2PassedSets}/{PART2_SETS.length} nhóm pass · {part2DoneExercises}/{part2TotalExercises} bài
+                      </div>
+                    </div>
+                    <span style={{ fontSize: "0.8rem", color: "var(--accent-primary)", flexShrink: 0, marginLeft: "0.5rem" }}>→</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
           );
         })}
       </div>

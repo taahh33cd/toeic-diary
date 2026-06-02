@@ -50,11 +50,6 @@ export function SubskillsHeader({ displayName }: { displayName: string }) {
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
-  // Hide on exercise pages: /subskills/part2/[questionWord] (2 segments after root)
-  const afterRoot = pathname.replace(/^\/subskills/, "");
-  const segments  = afterRoot.split("/").filter(Boolean);
-  if (segments.length >= 2) return null;
-
   return (
     <header
       style={{

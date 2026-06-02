@@ -122,7 +122,7 @@ export default async function SubskillsProgressPage() {
           return (
             <Link
               key={set.questionWord}
-              href={`/subskills/part2/${set.questionWord}`}
+              href={`/subskills/listening/part2/${set.questionWord}`}
               style={{
                 display: "flex",
                 alignItems: "center",
