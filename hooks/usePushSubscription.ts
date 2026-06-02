@@ -56,6 +56,10 @@ export function usePushSubscription({ studentCode }: { studentCode?: string } = 
         .replace(/[^A-Za-z0-9\-_]/g, "");
       if (!vapidKey) throw new Error("NEXT_PUBLIC_VAPID_PUBLIC_KEY chưa được cấu hình");
 
+      // Clear any stale/broken subscription before creating a fresh one
+      const existing = await reg.pushManager.getSubscription();
+      if (existing) await existing.unsubscribe().catch(() => {});
+
       const sub = await reg.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: urlBase64ToUint8Array(vapidKey),
@@ -69,7 +73,9 @@ export function usePushSubscription({ studentCode }: { studentCode?: string } = 
 
       setState("subscribed");
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Lỗi khi đăng ký thông báo");
+      const name = err instanceof DOMException ? `${err.name}: ` : "";
+      console.error("[push] subscribe failed:", err);
+      setError(err instanceof Error ? `${name}${err.message}` : "Lỗi khi đăng ký thông báo");
       setState("unsubscribed");
     }
   }, []);
