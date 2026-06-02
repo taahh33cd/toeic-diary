@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type {
   SubskillSet,
   WordbankItem as WBItem,
@@ -31,6 +31,8 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 type BestMap = Record<string, { score: number; passed: boolean }>;
+type DraftEntry = { itemIdx: number; correctCount: number };
+type DraftsMap  = Record<number, DraftEntry>; // keyed by exerciseIndex
 
 // ─────────────────────────────────────
 // Sub-components
@@ -478,14 +480,14 @@ function McqPanel({
 function IntroPanel({
   set,
   best,
+  drafts,
   onStart,
 }: {
   set: SubskillSet;
   best: BestMap;
-  onStart: (ei: number) => void;
+  drafts: DraftsMap;
+  onStart: (ei: number, resume: boolean) => void;
 }) {
-  const exerciseTitles = set.exercises.map(e => e.title);
-
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
       {/* Intro */}
@@ -496,10 +498,12 @@ function IntroPanel({
       {/* Exercise list */}
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         {set.exercises.map((ex, i) => {
-          const b = best[`${set.questionWord}:${i}`];
-          const passed  = b?.passed ?? false;
-          const score   = b?.score  ?? null;
-          const anyDone = b != null;
+          const b        = best[`${set.questionWord}:${i}`];
+          const passed   = b?.passed ?? false;
+          const score    = b?.score  ?? null;
+          const anyDone  = b != null;
+          const draft    = drafts[i];
+          const hasDraft = draft !== undefined;
 
           return (
             <div
@@ -510,7 +514,11 @@ function IntroPanel({
                 gap: 14,
                 padding: "14px 18px",
                 background: "var(--bg-secondary)",
-                border: `1px solid ${passed ? "rgba(34,197,94,0.25)" : "var(--border)"}`,
+                border: `1px solid ${
+                  hasDraft ? "rgba(234,179,8,0.35)"
+                  : passed  ? "rgba(34,197,94,0.25)"
+                  : "var(--border)"
+                }`,
                 borderRadius: 10,
               }}
             >
@@ -526,32 +534,54 @@ function IntroPanel({
                 {passed ? "✓" : i + 1}
               </div>
 
-              {/* Title + score */}
+              {/* Title + score/draft info */}
               <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ fontSize: "0.88rem", fontWeight: 600, color: "var(--text-primary)", marginBottom: 2 }}>
-                  {ex.title}
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 2, flexWrap: "wrap" }}>
+                  <span style={{ fontSize: "0.88rem", fontWeight: 600, color: "var(--text-primary)" }}>
+                    {ex.title}
+                  </span>
+                  {hasDraft && (
+                    <span style={{
+                      fontSize: "0.65rem",
+                      fontWeight: 600,
+                      padding: "2px 7px",
+                      borderRadius: 10,
+                      background: "rgba(234,179,8,0.15)",
+                      color: "rgb(161,117,0)",
+                      border: "1px solid rgba(234,179,8,0.4)",
+                      whiteSpace: "nowrap",
+                    }}>
+                      đang làm · câu {draft!.itemIdx + 1}/{ex.items.length}
+                    </span>
+                  )}
                 </div>
                 <div style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>
-                  {anyDone ? `Điểm cao nhất: ${score}% ${passed ? "✓ Đạt" : `(cần ${set.passThreshold}%)`}` : "Chưa làm"}
+                  {anyDone
+                    ? `Điểm cao nhất: ${score}% ${passed ? "✓ Đạt" : `(cần ${set.passThreshold}%)`}`
+                    : hasDraft ? "Đang làm dở" : "Chưa làm"}
                 </div>
               </div>
 
-              {/* Start/Redo button */}
+              {/* Action button */}
               <button
-                onClick={() => onStart(i)}
+                onClick={() => onStart(i, hasDraft)}
                 style={{
                   padding: "7px 18px",
                   borderRadius: 6,
                   fontSize: "0.82rem",
                   fontWeight: 600,
                   cursor: "pointer",
-                  background: passed ? "var(--bg-elevated)" : "var(--accent-primary)",
-                  color: passed ? "var(--text-secondary)" : "#fff",
-                  border: passed ? "1px solid var(--border)" : "none",
+                  background: hasDraft
+                    ? "rgba(234,179,8,0.85)"
+                    : passed
+                    ? "var(--bg-elevated)"
+                    : "var(--accent-primary)",
+                  color: hasDraft ? "#fff" : passed ? "var(--text-secondary)" : "#fff",
+                  border: hasDraft ? "none" : passed ? "1px solid var(--border)" : "none",
                   flexShrink: 0,
                 }}
               >
-                {anyDone ? "Làm lại" : "Bắt đầu"}
+                {hasDraft ? "Tiếp tục" : anyDone ? "Làm lại" : "Bắt đầu"}
               </button>
             </div>
           );
@@ -717,6 +747,32 @@ export default function ExerciseClient({
   const [exScores, setExScores] = useState<(number | null)[]>([null, null, null, null]);
   const [best, setBest] = useState<BestMap>(initialBest);
 
+  // ── Draft / resume state (one entry per exerciseIndex) ────────────
+  const [drafts, setDrafts] = useState<DraftsMap>({});
+
+  // Read saved drafts from localStorage on mount (SSR-safe: runs client-only).
+  // Use per-exercise keys so "Làm lại" on ex 0 never affects ex 1's draft.
+  useEffect(() => {
+    const loaded: DraftsMap = {};
+    for (let i = 0; i < 4; i++) {
+      try {
+        const raw = localStorage.getItem(`ss_draft_${set.questionWord}_${i}`);
+        if (!raw) continue;
+        const d = JSON.parse(raw) as unknown;
+        if (
+          d !== null &&
+          typeof d === "object" &&
+          typeof (d as Record<string, unknown>).itemIdx === "number" &&
+          typeof (d as Record<string, unknown>).correctCount === "number"
+        ) {
+          loaded[i] = d as DraftEntry;
+        }
+      } catch { /* ignore corrupt entries */ }
+    }
+    if (Object.keys(loaded).length > 0) setDrafts(loaded);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // run once on mount
+
   // Wordbank (Bài 1)
   const [wbSlots, setWbSlots] = useState<(string | null)[]>([]);
   const [wbBank, setWbBank] = useState<string[]>([]);
@@ -751,12 +807,25 @@ export default function ExerciseClient({
     }
   }
 
-  function startExercise(ei: number) {
+  function startExercise(ei: number, resume = false) {
+    // Resuming: use saved position for this specific exercise.
+    // Starting fresh: wipe only this exercise's draft (others are untouched).
+    const exDraft      = drafts[ei];
+    const hasDraft     = resume && exDraft !== undefined;
+    const startItem    = hasDraft ? exDraft.itemIdx    : 0;
+    const startCorrect = hasDraft ? exDraft.correctCount : 0;
+
     setExIdx(ei);
-    setItemIdx(0);
-    setCorrectCounts(prev => { const n = [...prev]; n[ei] = 0; return n; });
+    setItemIdx(startItem);
+    setCorrectCounts(prev => { const n = [...prev]; n[ei] = startCorrect; return n; });
     setPhase("quiz");
-    resetForItem(ei, 0);
+    resetForItem(ei, startItem);
+
+    if (!hasDraft) {
+      // Starting fresh — wipe only this exercise's draft
+      try { localStorage.removeItem(`ss_draft_${set.questionWord}_${ei}`); } catch {}
+      setDrafts(prev => { const n = { ...prev }; delete n[ei]; return n; });
+    }
   }
 
   function handleNextExercise() {
@@ -798,8 +867,20 @@ export default function ExerciseClient({
       const next = itemIdx + 1;
       setItemIdx(next);
       resetForItem(exIdx, next);
+      // Save progress to this exercise's own key.
+      // correctCounts[exIdx] is already updated (by handleCheck) before this call.
+      try {
+        localStorage.setItem(
+          `ss_draft_${set.questionWord}_${exIdx}`,
+          JSON.stringify({ itemIdx: next, correctCount: correctCounts[exIdx] })
+        );
+      } catch {}
       return;
     }
+    // Last item — exercise finished. Clear only this exercise's draft.
+    try { localStorage.removeItem(`ss_draft_${set.questionWord}_${exIdx}`); } catch {}
+    setDrafts(prev => { const n = { ...prev }; delete n[exIdx]; return n; });
+
     // Compute score
     const cc = correctCounts[exIdx];
     const score = Math.round((cc / ex.items.length) * 100);
@@ -861,7 +942,14 @@ export default function ExerciseClient({
   // ── Renders ───────────────────────────────────────────────────
 
   if (phase === "intro") {
-    return <IntroPanel set={set} best={best} onStart={startExercise} />;
+    return (
+      <IntroPanel
+        set={set}
+        best={best}
+        drafts={drafts}
+        onStart={startExercise}
+      />
+    );
   }
 
   if (phase === "ex-result") {
