@@ -1,6 +1,6 @@
 "use client";
 
-import { PushSubscribeCard } from "@/app/(student)/journal/settings/_push-subscribe";
+import { AdminPushSubscribeCard } from "./_admin-push-subscribe";
 
 export default function AdminSettingsPage() {
   return (
@@ -14,8 +14,7 @@ export default function AdminSettingsPage() {
         </p>
       </div>
 
-      {/* P2: Teacher push subscription */}
-      <PushSubscribeCard />
+      <AdminPushSubscribeCard />
     </div>
   );
 }

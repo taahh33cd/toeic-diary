@@ -3,6 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "@prisma/client";
 import pg from "pg";
+import { sendPushToAdminSubs } from "@/lib/push";
 
 let _pool: pg.Pool | null = null;
 function getPool() {
@@ -76,6 +77,14 @@ export async function POST(req: NextRequest) {
       where: { token },
       data: { usedAt: now },
     });
+
+    sendPushToAdminSubs({
+      title: "🎓 Học viên mới vừa tham gia!",
+      body: invite.studentCode
+        ? `Mã HV: ${invite.studentCode} — ${invite.email}`
+        : invite.email,
+      url: "/admin/students",
+    }).catch(() => {});
 
     return NextResponse.json({ ok: true, studentCode: invite.studentCode });
   } catch (err: unknown) {

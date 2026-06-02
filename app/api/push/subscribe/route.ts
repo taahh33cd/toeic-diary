@@ -8,6 +8,11 @@ function endpointKey(endpoint: string): string {
   return Buffer.from(endpoint).toString("base64url").slice(0, 40);
 }
 
+function isAdmin(user: { app_metadata?: Record<string, unknown> }): boolean {
+  const role = (user.app_metadata as Record<string, string>)?.role;
+  return role === "teacher" || role === "admin";
+}
+
 export async function POST(request: NextRequest) {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
@@ -20,7 +25,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Invalid body" }, { status: 400 });
   }
 
-  // Extract studentCode (optional) before passing the rest as PushSubscriptionJSON
   const { studentCode, ...subscriptionData } = body as { studentCode?: string } & Record<string, unknown>;
   const subscription = subscriptionData as PushSubscriptionJSON;
 
@@ -28,7 +32,26 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Missing endpoint" }, { status: 400 });
   }
 
-  // 1) Store in Postgres via Prisma (upsert by endpoint to avoid duplicates)
+  const key = endpointKey(subscription.endpoint);
+
+  if (isAdmin(user)) {
+    // Admin subscriptions go to adminSubs/ in RTDB only — not Prisma.
+    // Cloud Functions read adminSubs/ to push enrollment events to admin devices.
+    try {
+      const db = getAdminDb();
+      await db.ref(`adminSubs/${key}`).set({
+        subscription: JSON.stringify(subscription),
+        uid: user.id,
+        updatedAt: new Date().toISOString(),
+      });
+    } catch (err) {
+      console.error("[push/subscribe] adminSubs write failed:", err);
+      return NextResponse.json({ error: "Failed to save subscription" }, { status: 500 });
+    }
+    return NextResponse.json({ ok: true });
+  }
+
+  // Student / free user: store in Postgres + mirror to RTDB
   await prisma.pushSubscription.upsert({
     where: { endpoint: subscription.endpoint },
     update: { userId: user.id, subscription: JSON.stringify(subscription) },
@@ -39,21 +62,15 @@ export async function POST(request: NextRequest) {
     },
   });
 
-  // 2) Mirror to Firebase RTDB so Cloud Functions can access without Prisma
   try {
     const db = getAdminDb();
-    const key = endpointKey(subscription.endpoint);
-
     await db.ref(`pushSubs/${user.id}/subs/${key}`).set(JSON.stringify(subscription));
 
     if (studentCode) {
-      // Write studentCode alongside so P3 Cloud Function can query by it
       await db.ref(`pushSubs/${user.id}/studentCode`).set(studentCode);
-      // Also write reverse mapping for P4 (iterate all students quickly)
       await db.ref(`students/${studentCode}/supabaseUid`).set(user.id);
     }
   } catch (err) {
-    // RTDB write failure is non-fatal — Prisma record is the source of truth for existing push flow
     console.error("[push/subscribe] RTDB write failed:", err);
   }
 
@@ -66,23 +83,30 @@ export async function DELETE(request: NextRequest) {
   if (!user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   const { endpoint } = await request.json().catch(() => ({}));
-  if (endpoint) {
-    await prisma.pushSubscription.deleteMany({
-      where: { userId: user.id, endpoint },
-    });
 
-    // Remove from RTDB
+  if (isAdmin(user)) {
+    if (endpoint) {
+      try {
+        const db = getAdminDb();
+        await db.ref(`adminSubs/${endpointKey(endpoint)}`).remove();
+      } catch (err) {
+        console.error("[push/subscribe] adminSubs delete failed:", err);
+      }
+    }
+    return NextResponse.json({ ok: true });
+  }
+
+  // Student / free user cleanup
+  if (endpoint) {
+    await prisma.pushSubscription.deleteMany({ where: { userId: user.id, endpoint } });
     try {
       const db = getAdminDb();
-      const key = endpointKey(endpoint);
-      await db.ref(`pushSubs/${user.id}/subs/${key}`).remove();
+      await db.ref(`pushSubs/${user.id}/subs/${endpointKey(endpoint)}`).remove();
     } catch (err) {
       console.error("[push/subscribe] RTDB delete failed:", err);
     }
   } else {
     await prisma.pushSubscription.deleteMany({ where: { userId: user.id } });
-
-    // Remove all subs from RTDB for this user
     try {
       const db = getAdminDb();
       await db.ref(`pushSubs/${user.id}/subs`).remove();

@@ -3,5 +3,15 @@
   "buildCommand": "next build",
   "devCommand": "next dev",
   "installCommand": "npm install",
-  "regions": ["sin1"]
+  "regions": ["sin1"],
+  "crons": [
+    {
+      "path": "/api/cron/streak-remind",
+      "schedule": "0 12 * * *"
+    },
+    {
+      "path": "/api/cron/inactivity-alert",
+      "schedule": "0 2 * * *"
+    }
+  ]
 }

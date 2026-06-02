@@ -1,6 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { recordXp, XP_RULES, type XpSource } from "@/lib/xp";
+import { sendPushToUser } from "@/lib/push";
 
 // Subset of XP sources callable from client. Server-only sources
 // (dictation_lesson*, streak_*) are excluded — they fire from server actions.
@@ -31,5 +32,14 @@ export async function POST(request: NextRequest) {
   }
 
   const result = await recordXp(user.id, source, undefined, body.metadata);
+
+  if (result.levelUp || result.streakBonus) {
+    const STREAK_DAYS: Record<string, string> = { streak_7: "7", streak_30: "30", streak_100: "100" };
+    const payload = result.levelUp
+      ? { title: `🎉 Level ${result.level} đạt được!`, body: "Tiếp tục phát huy nhé!", url: "/journal/achievements" }
+      : { title: `🔥 Streak ${STREAK_DAYS[result.streakBonus!.source] ?? "?"} ngày!`, body: "Bạn đang học rất đều. Tuyệt vời!", url: "/journal/achievements" };
+    sendPushToUser(user.id, payload).catch(() => {});
+  }
+
   return NextResponse.json(result);
 }

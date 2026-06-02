@@ -1,36 +1,38 @@
-import { initializeApp } from "firebase-admin/app";
+import { initializeApp, getApps } from "firebase-admin/app";
 import { getDatabase } from "firebase-admin/database";
-import { onValueCreated } from "firebase-functions/v2/database";
+import { onValueCreated, onValueWritten } from "firebase-functions/v2/database";
 import { onSchedule } from "firebase-functions/v2/scheduler";
 import * as webpush from "web-push";
 
 // ── Firebase Admin init ───────────────────────────────────────────────────────
-// Pass databaseURL explicitly so getDatabase() connects to the correct RTDB instance.
-initializeApp({
-  databaseURL:
-    "https://quanlyhocvien-b1796-default-rtdb.asia-southeast1.firebasedatabase.app",
-});
+if (!getApps().length) {
+  initializeApp({
+    databaseURL:
+      "https://quanlyhocvien-b1796-default-rtdb.asia-southeast1.firebasedatabase.app",
+  });
+}
 
 function db() {
   return getDatabase();
 }
 
-// ── VAPID setup helper ────────────────────────────────────────────────────────
+// ── VAPID setup ───────────────────────────────────────────────────────────────
 function setupVapid() {
   const subject = process.env.VAPID_SUBJECT;
   const publicKey = process.env.VAPID_PUBLIC_KEY;
   const privateKey = process.env.VAPID_PRIVATE_KEY;
   if (!subject || !publicKey || !privateKey) {
-    throw new Error("VAPID env vars not set (VAPID_SUBJECT, VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY)");
+    throw new Error("VAPID env vars not set");
   }
   webpush.setVapidDetails(subject, publicKey, privateKey);
 }
 
-/** Send push to all subscriptions stored under pushSubs/{uid}/subs/* */
-async function sendToUidSubs(
-  uid: string,
-  payload: object
-): Promise<void> {
+const SECRETS: string[] = ["VAPID_SUBJECT", "VAPID_PUBLIC_KEY", "VAPID_PRIVATE_KEY"];
+const REGION = "asia-southeast1";
+const DB_INSTANCE = "quanlyhocvien-b1796-default-rtdb";
+
+// ── Helper: push to all subs under pushSubs/{uid}/subs/* ─────────────────────
+async function sendToUidSubs(uid: string, payload: object): Promise<void> {
   const snap = await db().ref(`pushSubs/${uid}/subs`).get();
   if (!snap.exists()) return;
 
@@ -44,53 +46,79 @@ async function sendToUidSubs(
       const sub = JSON.parse(raw) as webpush.PushSubscription;
       promises.push(
         webpush.sendNotification(sub, payloadStr).catch(async (err: { statusCode?: number }) => {
-          // 410 Gone → subscription expired, clean up
-          if (err.statusCode === 410) {
+          if (err.statusCode === 410 || err.statusCode === 404) {
             await child.ref.remove().catch(() => undefined);
           }
         })
       );
     } catch {
-      // malformed JSON in RTDB — ignore
+      // malformed JSON — ignore
     }
   });
 
   await Promise.all(promises);
 }
 
-// ── P3: Push notification on new RTDB notification node ──────────────────────
-/**
- * Triggered whenever a teacher writes to notifications/{studentCode}/{notifId}.
- * Looks up the student's supabaseUid via pushSubs, then sends a web push.
- *
- * Expected notification node shape: { title?: string, body?: string, url?: string }
- */
+// ── Helper: push to all adminSubs/* ──────────────────────────────────────────
+async function sendToAdminSubs(payload: object): Promise<void> {
+  const snap = await db().ref("adminSubs").get();
+  if (!snap.exists()) return;
+
+  const payloadStr = JSON.stringify(payload);
+  const promises: Promise<unknown>[] = [];
+
+  snap.forEach((child) => {
+    const data = child.val() as { subscription?: string } | null;
+    if (!data?.subscription) return;
+    try {
+      const sub = JSON.parse(data.subscription) as webpush.PushSubscription;
+      promises.push(
+        webpush.sendNotification(sub, payloadStr).catch(async (err: { statusCode?: number }) => {
+          if (err.statusCode === 410 || err.statusCode === 404) {
+            await child.ref.remove().catch(() => undefined);
+          }
+        })
+      );
+    } catch {
+      // malformed JSON — ignore
+    }
+  });
+
+  await Promise.all(promises);
+}
+
+// ── Helper: push to student by studentCode (via supabaseUid mapping) ─────────
+async function sendToStudentByCode(studentCode: string, payload: object): Promise<void> {
+  const uidSnap = await db().ref(`students/${studentCode}/supabaseUid`).get();
+  if (!uidSnap.exists()) return;
+  await sendToUidSubs(uidSnap.val() as string, payload);
+}
+
+// ── Helper: parse booking date+time (ICT) to UTC Date ────────────────────────
+function parseBookingTime(date: string, time: string): Date {
+  return new Date(`${date}T${time}:00+07:00`);
+}
+
+// ── P3: Push to student when teacher writes a notification node ───────────────
 export const onNewStudentNotification = onValueCreated(
   {
     ref: "/notifications/{studentCode}/{notifId}",
-    instance: "quanlyhocvien-b1796-default-rtdb",
-    region: "asia-southeast1",
-    secrets: ["VAPID_SUBJECT", "VAPID_PUBLIC_KEY", "VAPID_PRIVATE_KEY"],
+    instance: DB_INSTANCE,
+    region: REGION,
+    secrets: SECRETS,
   },
   async (event) => {
     const { studentCode } = event.params;
-    const data = event.data.val() as {
-      title?: string;
-      body?: string;
-      url?: string;
-    } | null;
-
+    const data = event.data.val() as { title?: string; body?: string; url?: string } | null;
     if (!data) return;
 
     setupVapid();
 
-    // Find uid(s) whose studentCode matches
     const snap = await db()
       .ref("pushSubs")
       .orderByChild("studentCode")
       .equalTo(studentCode)
       .get();
-
     if (!snap.exists()) return;
 
     const sendPromises: Promise<void>[] = [];
@@ -110,21 +138,18 @@ export const onNewStudentNotification = onValueCreated(
   }
 );
 
-// ── P4: Daily 8 PM Vietnam reminder ──────────────────────────────────────────
-/**
- * Sends a daily study reminder to ALL subscribed users at 20:00 ICT (13:00 UTC).
- * Iterates pushSubs/ in RTDB — only users who have subscribed will be reached.
- */
+// ── P4: Daily 8 PM Vietnam reminder (all users — free + enrolled) ─────────────
 export const dailyStudyReminder = onSchedule(
   {
-    schedule: "0 13 * * *", // 13:00 UTC = 20:00 ICT (UTC+7)
+    schedule: "0 13 * * *", // 13:00 UTC = 20:00 ICT
     timeZone: "Asia/Ho_Chi_Minh",
-    region: "asia-southeast1",
-    secrets: ["VAPID_SUBJECT", "VAPID_PUBLIC_KEY", "VAPID_PRIVATE_KEY"],
+    region: REGION,
+    secrets: SECRETS,
   },
   async () => {
     setupVapid();
 
+    // Only pushSubs/ — admin subscriptions are in adminSubs/ and should NOT get this
     const snap = await db().ref("pushSubs").get();
     if (!snap.exists()) return;
 
@@ -142,5 +167,175 @@ export const dailyStudyReminder = onSchedule(
     });
 
     await Promise.all(sendPromises);
+  }
+);
+
+// ── A1: Student nộp daylink → push admin ─────────────────────────────────────
+export const onStudentDaylink = onValueCreated(
+  {
+    ref: "/daylinks/{studentCode}/{hwId}",
+    instance: DB_INSTANCE,
+    region: REGION,
+    secrets: SECRETS,
+  },
+  async (event) => {
+    const { studentCode } = event.params;
+    setupVapid();
+
+    const nameSnap = await db().ref(`students/${studentCode}/name`).get();
+    const name: string = nameSnap.exists() ? (nameSnap.val() as string) : studentCode;
+
+    await sendToAdminSubs({
+      title: `📎 ${name} vừa nộp link bài!`,
+      body: "Nhấn để xem ngay",
+      url: `/admin/students/${studentCode}`,
+    });
+  }
+);
+
+// ── A2: Student done all tasks → push admin (with dedup) ─────────────────────
+export const onStudentProgressDone = onValueWritten(
+  {
+    ref: "/progress/{studentCode}/{date}",
+    instance: DB_INSTANCE,
+    region: REGION,
+    secrets: SECRETS,
+  },
+  async (event) => {
+    const { studentCode, date } = event.params;
+    const after = event.data.after.val() as { done?: number; total?: number } | null;
+
+    if (!after || typeof after.done !== "number" || typeof after.total !== "number") return;
+    if (after.done < after.total) return;
+
+    // Dedup: only push once per student per date
+    const dedupRef = db().ref(`notifiedAdmin/${studentCode}/${date}`);
+    const dedupSnap = await dedupRef.get();
+    if (dedupSnap.exists()) return;
+    await dedupRef.set(true);
+
+    setupVapid();
+
+    const nameSnap = await db().ref(`students/${studentCode}/name`).get();
+    const name: string = nameSnap.exists() ? (nameSnap.val() as string) : studentCode;
+
+    await sendToAdminSubs({
+      title: `✅ ${name} đã hoàn thành tất cả nhiệm vụ hôm nay!`,
+      body: `${after.done}/${after.total} nhiệm vụ — ${date}`,
+      url: `/admin/students/${studentCode}`,
+    });
+  }
+);
+
+// ── A3: Student đặt lịch → push admin ────────────────────────────────────────
+export const onBookingCreated = onValueCreated(
+  {
+    ref: "/bookings/{id}",
+    instance: DB_INSTANCE,
+    region: REGION,
+    secrets: SECRETS,
+  },
+  async (event) => {
+    const booking = event.data.val() as {
+      studentId?: string;
+      studentName?: string;
+      date?: string;
+      time?: string;
+    } | null;
+    if (!booking?.studentId) return;
+
+    setupVapid();
+
+    await sendToAdminSubs({
+      title: `📅 ${booking.studentName ?? booking.studentId} vừa đặt lịch học`,
+      body: booking.date && booking.time ? `${booking.date} lúc ${booking.time}` : "",
+      url: "/admin/bookings",
+    });
+  }
+);
+
+// ── S5: Admin duyệt/từ chối booking → push student ───────────────────────────
+export const onBookingStatusChanged = onValueWritten(
+  {
+    ref: "/bookings/{id}",
+    instance: DB_INSTANCE,
+    region: REGION,
+    secrets: SECRETS,
+  },
+  async (event) => {
+    const before = event.data.before.val() as { status?: string; studentId?: string; date?: string; time?: string } | null;
+    const after = event.data.after.val() as { status?: string; studentId?: string; date?: string; time?: string } | null;
+
+    if (!after?.studentId) return;
+    if (!before || before.status === after.status) return; // status không đổi
+
+    const { status, studentId, date, time } = after;
+    if (status !== "approved" && status !== "declined") return;
+
+    setupVapid();
+
+    const payload =
+      status === "approved"
+        ? {
+            title: "✅ Lịch học đã được xác nhận!",
+            body: date && time ? `Buổi học: ${date} lúc ${time}` : "Kiểm tra lịch học của bạn nhé!",
+            url: "/journal/schedule",
+          }
+        : {
+            title: "❌ Lịch học không được chấp nhận",
+            body: "Bạn có thể đặt lịch khác nhé!",
+            url: "/journal/booking",
+          };
+
+    await sendToStudentByCode(studentId, payload);
+  }
+);
+
+// ── S8: Nhắc trước buổi học 30 phút (cron mỗi 5 phút) ───────────────────────
+export const scheduledSessionReminder = onSchedule(
+  {
+    schedule: "*/5 * * * *",
+    timeZone: "Asia/Ho_Chi_Minh",
+    region: REGION,
+    secrets: SECRETS,
+  },
+  async () => {
+    setupVapid();
+
+    const now = new Date();
+    const windowStart = new Date(now.getTime() + 25 * 60 * 1000); // 25 min from now
+    const windowEnd = new Date(now.getTime() + 35 * 60 * 1000);   // 35 min from now
+
+    const snap = await db().ref("bookings").orderByChild("status").equalTo("approved").get();
+    if (!snap.exists()) return;
+
+    const promises: Promise<void>[] = [];
+
+    snap.forEach((child) => {
+      const b = child.val() as { studentId?: string; date?: string; time?: string } | null;
+      if (!b?.studentId || !b.date || !b.time) return;
+
+      const sessionTime = parseBookingTime(b.date, b.time);
+      if (sessionTime < windowStart || sessionTime > windowEnd) return;
+
+      const bookingId = child.key!;
+      promises.push(
+        (async () => {
+          // Dedup: only remind once per booking
+          const dedupRef = db().ref(`remindedSessions/${bookingId}`);
+          const already = await dedupRef.get();
+          if (already.exists()) return;
+          await dedupRef.set(true);
+
+          await sendToStudentByCode(b.studentId!, {
+            title: "⏰ Buổi học sắp bắt đầu!",
+            body: `Còn 30 phút nữa — ${b.date} lúc ${b.time}`,
+            url: "/journal/schedule",
+          });
+        })()
+      );
+    });
+
+    await Promise.all(promises);
   }
 );

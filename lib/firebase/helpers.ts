@@ -113,6 +113,12 @@ export async function pushHomework(
   const snap = await get(ref(firebaseDb, `students/${code}/homework`));
   const existing: Homework[] = snap.val() ?? [];
   await set(ref(firebaseDb, `students/${code}/homework`), [...existing, hw]);
+  await sendNotification(code, {
+    type: "homework",
+    title: "📚 Bài tập mới từ giáo viên!",
+    body: hw.title ?? "Thầy vừa giao bài tập mới. Kiểm tra ngay nhé!",
+    createdAt: new Date().toISOString(),
+  });
 }
 
 export async function updateHomework(
