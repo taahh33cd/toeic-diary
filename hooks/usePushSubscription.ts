@@ -43,8 +43,8 @@ export function usePushSubscription({ studentCode }: { studentCode?: string } = 
     setError(null);
     setState("loading");
     try {
-      const reg = await navigator.serviceWorker.register("/sw.js");
-      await navigator.serviceWorker.ready;
+      await navigator.serviceWorker.register("/sw.js");
+      const reg = await navigator.serviceWorker.ready; // guaranteed active SW
 
       const permission = await Notification.requestPermission();
       if (permission !== "granted") {
