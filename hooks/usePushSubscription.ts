@@ -54,6 +54,7 @@ export function usePushSubscription({ studentCode }: { studentCode?: string } = 
 
       const vapidKey = (process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY ?? "")
         .replace(/[^A-Za-z0-9\-_]/g, "");
+      console.log("[push] key in bundle:", vapidKey.slice(0, 16), "len:", vapidKey.length);
       if (!vapidKey) throw new Error("NEXT_PUBLIC_VAPID_PUBLIC_KEY chưa được cấu hình");
 
       // Clear any stale/broken subscription before creating a fresh one
