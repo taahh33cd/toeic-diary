@@ -201,7 +201,7 @@ export const onStudentDaylink = onValueCreated(
       body: "Nhấn để xem ngay",
       url: `/admin/students/${studentCode}`,
     };
-    await writeAdminNotification(daylinkPayload);
+    await writeAdminNotification(daylinkPayload).catch((e) => console.error("[notify] write failed:", e));
     await sendToAdminSubs(daylinkPayload);
   }
 );
@@ -237,7 +237,7 @@ export const onStudentProgressDone = onValueWritten(
       body: `${after.done}/${after.total} nhiệm vụ — ${date}`,
       url: `/admin/students/${studentCode}`,
     };
-    await writeAdminNotification(progressPayload);
+    await writeAdminNotification(progressPayload).catch((e) => console.error("[notify] write failed:", e));
     await sendToAdminSubs(progressPayload);
   }
 );
@@ -266,7 +266,7 @@ export const onBookingCreated = onValueCreated(
       body: booking.date && booking.time ? `${booking.date} lúc ${booking.time}` : "",
       url: "/admin/bookings",
     };
-    await writeAdminNotification(bookingPayload);
+    await writeAdminNotification(bookingPayload).catch((e) => console.error("[notify] write failed:", e));
     await sendToAdminSubs(bookingPayload);
   }
 );
