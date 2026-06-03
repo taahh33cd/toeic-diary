@@ -59,6 +59,17 @@ async function sendToUidSubs(uid: string, payload: object): Promise<void> {
   await Promise.all(promises);
 }
 
+// ── Helper: write notification to adminNotifications/ for bell icon ──────────
+async function writeAdminNotification(payload: { title: string; body?: string; url?: string }): Promise<void> {
+  await db().ref("adminNotifications").push({
+    title: payload.title,
+    body: payload.body ?? "",
+    url: payload.url ?? "/admin",
+    createdAt: Date.now(),
+    read: false,
+  });
+}
+
 // ── Helper: push to all adminSubs/* ──────────────────────────────────────────
 async function sendToAdminSubs(payload: object): Promise<void> {
   const snap = await db().ref("adminSubs").get();
@@ -185,11 +196,13 @@ export const onStudentDaylink = onValueCreated(
     const nameSnap = await db().ref(`students/${studentCode}/name`).get();
     const name: string = nameSnap.exists() ? (nameSnap.val() as string) : studentCode;
 
-    await sendToAdminSubs({
+    const daylinkPayload = {
       title: `📎 ${name} vừa nộp link bài!`,
       body: "Nhấn để xem ngay",
       url: `/admin/students/${studentCode}`,
-    });
+    };
+    await writeAdminNotification(daylinkPayload);
+    await sendToAdminSubs(daylinkPayload);
   }
 );
 
@@ -219,11 +232,13 @@ export const onStudentProgressDone = onValueWritten(
     const nameSnap = await db().ref(`students/${studentCode}/name`).get();
     const name: string = nameSnap.exists() ? (nameSnap.val() as string) : studentCode;
 
-    await sendToAdminSubs({
+    const progressPayload = {
       title: `✅ ${name} đã hoàn thành tất cả nhiệm vụ hôm nay!`,
       body: `${after.done}/${after.total} nhiệm vụ — ${date}`,
       url: `/admin/students/${studentCode}`,
-    });
+    };
+    await writeAdminNotification(progressPayload);
+    await sendToAdminSubs(progressPayload);
   }
 );
 
@@ -246,11 +261,13 @@ export const onBookingCreated = onValueCreated(
 
     setupVapid();
 
-    await sendToAdminSubs({
+    const bookingPayload = {
       title: `📅 ${booking.studentName ?? booking.studentId} vừa đặt lịch học`,
       body: booking.date && booking.time ? `${booking.date} lúc ${booking.time}` : "",
       url: "/admin/bookings",
-    });
+    };
+    await writeAdminNotification(bookingPayload);
+    await sendToAdminSubs(bookingPayload);
   }
 );
 
