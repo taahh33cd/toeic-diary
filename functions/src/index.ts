@@ -191,7 +191,6 @@ export const onStudentDaylink = onValueCreated(
   },
   async (event) => {
     const { studentCode } = event.params;
-    setupVapid();
 
     const nameSnap = await db().ref(`students/${studentCode}/name`).get();
     const name: string = nameSnap.exists() ? (nameSnap.val() as string) : studentCode;
@@ -202,6 +201,8 @@ export const onStudentDaylink = onValueCreated(
       url: `/admin/students/${studentCode}`,
     };
     await writeAdminNotification(daylinkPayload).catch((e) => console.error("[notify] write failed:", e));
+
+    setupVapid();
     await sendToAdminSubs(daylinkPayload);
   }
 );
@@ -227,8 +228,6 @@ export const onStudentProgressDone = onValueWritten(
     if (dedupSnap.exists()) return;
     await dedupRef.set(true);
 
-    setupVapid();
-
     const nameSnap = await db().ref(`students/${studentCode}/name`).get();
     const name: string = nameSnap.exists() ? (nameSnap.val() as string) : studentCode;
 
@@ -238,6 +237,8 @@ export const onStudentProgressDone = onValueWritten(
       url: `/admin/students/${studentCode}`,
     };
     await writeAdminNotification(progressPayload).catch((e) => console.error("[notify] write failed:", e));
+
+    setupVapid();
     await sendToAdminSubs(progressPayload);
   }
 );
@@ -259,14 +260,14 @@ export const onBookingCreated = onValueCreated(
     } | null;
     if (!booking?.studentId) return;
 
-    setupVapid();
-
     const bookingPayload = {
       title: `📅 ${booking.studentName ?? booking.studentId} vừa đặt lịch học`,
       body: booking.date && booking.time ? `${booking.date} lúc ${booking.time}` : "",
       url: "/admin/bookings",
     };
     await writeAdminNotification(bookingPayload).catch((e) => console.error("[notify] write failed:", e));
+
+    setupVapid();
     await sendToAdminSubs(bookingPayload);
   }
 );
