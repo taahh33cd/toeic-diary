@@ -6,8 +6,10 @@ import { useAllStudents } from "@/hooks/firebase/useAllStudents";
 import { useBookings } from "@/hooks/firebase/useBookings";
 import { useClasses } from "@/hooks/firebase/useClasses";
 import { useClassAttendance } from "@/hooks/firebase/useClassAttendance";
+import { useAllSubmissions } from "@/hooks/firebase/useAllSubmissions";
+import { useAllDayLinks } from "@/hooks/firebase/useAllDayLinks";
 import { setAttendance, createStudent } from "@/lib/firebase/helpers";
-import type { SchoolClass, AttendanceStatus, Student } from "@/lib/firebase/types";
+import type { SchoolClass, AttendanceStatus, Student, Homework, HwItem, SubmissionsMap, DayLinksMap } from "@/lib/firebase/types";
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -27,6 +29,191 @@ const COURSE_BADGE: Record<string, { label: string; bg: string; color: string }>
   per_session: { label: "1-1 BUỔI",  bg: "#dae2f8",   color: "#3f4758" },
   package:     { label: "TRỌN GÓI",  bg: "#1a1c20",   color: "#f1eeff" },
 };
+
+// ─── BTVN helpers ────────────────────────────────────────────────────────────
+
+const HW_SECTIONS = ["vocab", "listening", "reading", "practice", "other"] as const;
+
+function yesterdayStr() {
+  const d = new Date();
+  d.setDate(d.getDate() - 1);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+function calcHwProgress(
+  hw: Homework,
+  submissions: SubmissionsMap,
+  dayLinks: DayLinksMap
+): { done: number; total: number } {
+  let total = 0;
+  for (const sec of HW_SECTIONS) total += (hw[sec] as HwItem[] | undefined)?.length ?? 0;
+  if (total === 0) return { done: 0, total: 0 };
+  if (dayLinks[hw.id]?.link) return { done: total, total };
+  let done = 0;
+  for (const sec of HW_SECTIONS) {
+    const items = hw[sec] as HwItem[] | undefined;
+    if (!items) continue;
+    for (let i = 0; i < items.length; i++) {
+      const sub = submissions[`${hw.id}_${sec}_${i}`];
+      if (sub?.ticked || sub?.url) done++;
+    }
+  }
+  return { done, total };
+}
+
+// ─── YesterdayIncompleteCard ──────────────────────────────────────────────────
+
+function YesterdayIncompleteCard({
+  students,
+  allSubmissions,
+  allDayLinks,
+  yesterday,
+  loading,
+}: {
+  students: (Student & { id: string })[];
+  allSubmissions: Record<string, SubmissionsMap>;
+  allDayLinks: Record<string, DayLinksMap>;
+  yesterday: string;
+  loading: boolean;
+}) {
+  const incompleteEntries = useMemo(() => {
+    const result: Array<{ student: Student & { id: string }; hw: Homework; done: number; total: number }> = [];
+    for (const student of students) {
+      if (student.frozen) continue;
+      const hwRaw = student.homework;
+      const hwList: Homework[] = Array.isArray(hwRaw) ? hwRaw : Object.values((hwRaw ?? {}) as Record<string, Homework>);
+      for (const hw of hwList) {
+        const deadline = hw.endDate ?? hw.date;
+        if (deadline !== yesterday) continue;
+        const subs = allSubmissions[student.id] ?? {};
+        const dls = allDayLinks[student.id] ?? {};
+        const submitted = !!(dls[hw.id]?.link) || !!(subs[hw.date]?.ticked);
+        if (submitted) continue;
+        const { done, total } = calcHwProgress(hw, subs, dls);
+        result.push({ student, hw, done, total });
+      }
+    }
+    return result;
+  }, [students, allSubmissions, allDayLinks, yesterday]);
+
+  if (loading) {
+    return (
+      <div className="silk-card rounded-2xl p-6 animate-pulse" style={{ minHeight: 80 }}>
+        <div className="h-4 w-48 rounded" style={{ background: "rgba(0,0,0,0.07)" }} />
+      </div>
+    );
+  }
+
+  if (incompleteEntries.length === 0) {
+    return (
+      <div
+        className="silk-card rounded-2xl p-7 text-center"
+        style={{ borderColor: "rgba(34,197,94,0.3)", background: "rgba(34,197,94,0.04)" }}
+      >
+        <p className="text-base">🎉</p>
+        <p className="text-sm font-semibold mt-1" style={{ color: "rgb(22,163,74)" }}>
+          Tất cả học viên đã hoàn thành nhiệm vụ hôm qua!
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="silk-card rounded-2xl overflow-hidden">
+      <div
+        className="flex items-center justify-between px-6 py-4 border-b"
+        style={{ borderColor: "rgba(199,196,214,0.3)", background: "rgba(245,158,11,0.04)" }}
+      >
+        <div className="flex items-center gap-2">
+          <span style={{ fontSize: 15 }}>⚠️</span>
+          <p className="text-sm font-semibold" style={{ color: "rgb(161,110,0)" }}>
+            Chưa hoàn thành hôm qua
+          </p>
+        </div>
+        <span
+          className="text-xs font-bold px-2.5 py-1 rounded-full"
+          style={{ background: "rgba(245,158,11,0.15)", color: "rgb(161,110,0)" }}
+        >
+          {incompleteEntries.length} HV
+        </span>
+      </div>
+
+      <div className="divide-y" style={{ borderColor: "rgba(199,196,214,0.2)" }}>
+        {incompleteEntries.map(({ student, hw, done, total }) => {
+          const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+          const isPartial = done > 0;
+          const barColor = isPartial ? "#f59e0b" : "#ef4444";
+
+          return (
+            <Link
+              key={`${student.id}-${hw.id}`}
+              href={`/admin/students/${student.id}`}
+              className="flex items-center gap-4 px-6 py-4 transition-colors hover:bg-[rgba(0,0,0,0.02)]"
+            >
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between mb-1.5">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span
+                      className="text-sm font-medium truncate"
+                      style={{ color: "var(--text-primary)" }}
+                    >
+                      {student.name}
+                    </span>
+                    <span
+                      className="text-xs font-mono shrink-0"
+                      style={{ color: "var(--text-muted)" }}
+                    >
+                      {student.id}
+                    </span>
+                  </div>
+                  <span
+                    className="text-xs font-semibold ml-3 shrink-0"
+                    style={{
+                      color: pct === 0 ? "#ef4444" : "rgb(161,110,0)",
+                      fontFamily: "monospace",
+                    }}
+                  >
+                    {done}/{total}
+                  </span>
+                </div>
+
+                <div
+                  style={{
+                    height: 5,
+                    background: "rgba(0,0,0,0.07)",
+                    borderRadius: 99,
+                    overflow: "hidden",
+                  }}
+                >
+                  <div
+                    style={{
+                      height: "100%",
+                      width: `${pct}%`,
+                      background: barColor,
+                      borderRadius: 99,
+                      transition: "width 0.5s ease",
+                    }}
+                  />
+                </div>
+
+                <p className="text-xs mt-1.5" style={{ color: "var(--text-muted)" }}>
+                  Deadline: {hw.endDate ?? hw.date} · {done}/{total} mục · Chưa nộp link
+                </p>
+              </div>
+
+              <span
+                className="material-symbols-outlined text-[18px] shrink-0"
+                style={{ color: "var(--text-muted)", fontVariationSettings: "'wght' 300" }}
+              >
+                chevron_right
+              </span>
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
 
 // ─── AttBadge ─────────────────────────────────────────────────────────────────
 
@@ -287,12 +474,15 @@ export default function AdminDashboardClient() {
   const { students, loading: studentsLoading } = useAllStudents();
   const { bookings, loading: bookingsLoading } = useBookings();
   const { classes, loading: classesLoading } = useClasses();
+  const { allSubmissions, loading: subsLoading } = useAllSubmissions();
+  const { allDayLinks, loading: dlLoading } = useAllDayLinks();
 
   const [search, setSearch] = useState("");
   const [addOpen, setAddOpen] = useState(false);
 
   const todayDayName = DAYS_EN[new Date().getDay()];
   const date = todayStr();
+  const yesterday = yesterdayStr();
 
   const activeStudents = students.filter((s) => !s.frozen);
   const frozenCount = students.filter((s) => s.frozen).length;
@@ -325,6 +515,23 @@ export default function AdminDashboardClient() {
     return [...filtered].sort((a, b) => (b.currentWeek ?? 0) - (a.currentWeek ?? 0));
   }, [activeStudents, search]);
 
+  // "Hoàn thành hôm nay": students who have active BTVN today AND submitted dayLink
+  const { todayHwTotal, todayHwDone } = useMemo(() => {
+    let total = 0;
+    let done = 0;
+    for (const student of activeStudents) {
+      const hwRaw = student.homework;
+      const hwList: Homework[] = Array.isArray(hwRaw) ? hwRaw : Object.values((hwRaw ?? {}) as Record<string, Homework>);
+      const activeHw = hwList.find(
+        (hw) => hw.date <= date && (hw.endDate ?? hw.date) >= date
+      );
+      if (!activeHw) continue;
+      total++;
+      if (allDayLinks[student.id]?.[activeHw.id]?.link) done++;
+    }
+    return { todayHwTotal: total, todayHwDone: done };
+  }, [activeStudents, allDayLinks, date]);
+
   const loading = studentsLoading || bookingsLoading || classesLoading;
 
   return (
@@ -341,12 +548,13 @@ export default function AdminDashboardClient() {
       </div>
 
       {/* ── Stat cards ── */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 gap-5">
         {[
-          { icon: "group",          value: loading ? "…" : activeStudents.length, label: "Đang học",        num: "01", href: "/admin/students",  color: "#4441c4" },
-          { icon: "school",         value: loading ? "…" : classes.length,        label: "Lớp học",         num: "02", href: "/admin/classes",   color: "#565e71" },
-          { icon: "event_available",value: loading ? "…" : (pendingCount || "0"), label: "Pending bookings",num: "03", href: "/admin/bookings",  color: "#555460" },
-          { icon: "track_changes",  value: loading ? "…" : (avgScore ?? "—"),     label: "Điểm TB",         num: "04", href: "/admin/progress",  color: "#ba1a1a" },
+          { icon: "group",          value: loading ? "…" : activeStudents.length,                                                               label: "Đang học",            num: "01", href: "/admin/students",  color: "#4441c4" },
+          { icon: "school",         value: loading ? "…" : classes.length,                                                                     label: "Lớp học",             num: "02", href: "/admin/classes",   color: "#565e71" },
+          { icon: "event_available",value: loading ? "…" : (pendingCount || "0"),                                                              label: "Lịch chờ duyệt",      num: "03", href: "/admin/bookings",  color: "#555460" },
+          { icon: "track_changes",  value: loading ? "…" : (avgScore ?? "—"),                                                                  label: "Điểm TB",             num: "04", href: "/admin/progress",  color: "#ba1a1a" },
+          { icon: "task_alt",       value: dlLoading ? "…" : (todayHwTotal > 0 ? `${todayHwDone}/${todayHwTotal}` : "—"),                     label: "Hoàn thành hôm nay",  num: "05", href: "/admin/homework",  color: "#16a34a" },
         ].map((item) => (
           <Link key={item.href} href={item.href} className="block">
             <div className="silk-card p-5 rounded-2xl flex flex-col justify-between h-[130px] hover:scale-[1.02] transition-all">
@@ -440,6 +648,30 @@ export default function AdminDashboardClient() {
           </div>
         </div>
       )}
+
+      {/* ── Yesterday incomplete ── */}
+      <div className="space-y-4">
+        <h2
+          className="flex items-center gap-2 text-xl font-semibold"
+          style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}
+        >
+          <span
+            className="material-symbols-outlined text-[20px]"
+            style={{ color: "var(--text-muted)", fontVariationSettings: "'wght' 300" }}
+          >
+            assignment_late
+          </span>
+          Bài tập hôm qua
+          <span className="text-sm font-normal opacity-50">· {yesterday}</span>
+        </h2>
+        <YesterdayIncompleteCard
+          students={activeStudents as (Student & { id: string })[]}
+          allSubmissions={allSubmissions}
+          allDayLinks={allDayLinks}
+          yesterday={yesterday}
+          loading={subsLoading || dlLoading}
+        />
+      </div>
 
       {/* ── Student cards grid ── */}
       {!loading && (
