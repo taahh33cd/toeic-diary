@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { StudentPushSubscribeCard } from "./_push-subscribe";
 import { ThemePickerModal } from "@/components/journal/ThemePickerModal";
 
 export const metadata: Metadata = { title: "Cài đặt" };
@@ -17,8 +16,6 @@ export default function SettingsPage() {
       </div>
 
       <ThemePickerModal />
-
-      <StudentPushSubscribeCard />
     </div>
   );
 }

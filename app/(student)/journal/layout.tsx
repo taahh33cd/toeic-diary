@@ -10,6 +10,7 @@ import { JournalMobileNav } from "@/components/journal/MobileNav";
 import { MobileBottomNav } from "@/components/journal/MobileBottomNav";
 import { NotificationWatcher } from "@/components/shared/NotificationWatcher";
 import { InstallBanner } from "@/components/shared/InstallBanner";
+import { PushPromptBanner } from "@/components/shared/PushPromptBanner";
 import { LocaleProvider } from "@/hooks/useLocale";
 import { JournalThemeWrapper } from "@/components/journal/ThemeProvider";
 
@@ -89,6 +90,12 @@ export default async function JournalLayout({
 
       {/* ── Desktop journal tab bar ── */}
       <JournalTabBar />
+
+      {/* ── Push notification prompt ── */}
+      <PushPromptBanner
+        studentCode={profile.studentCode}
+        description="Bật thông báo để nhận lịch học, nhận xét và bài tập mới từ thầy"
+      />
 
       {/* ── Page content ── */}
       <main id="main-content" className="flex-1 max-w-[1400px] mx-auto w-full px-4 md:px-6 py-4 md:py-6">

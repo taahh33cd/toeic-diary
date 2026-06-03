@@ -7,16 +7,23 @@ export type PushState = "unsupported" | "denied" | "subscribed" | "unsubscribed"
 function urlBase64ToUint8Array(base64String: string): Uint8Array<ArrayBuffer> {
   const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
   const base64 = (base64String + padding).replace(/-/g, "+").replace(/_/g, "/");
-  let raw: string;
-  try {
-    raw = atob(base64);
-  } catch {
-    throw new Error(`VAPID key không hợp lệ (${base64String.length} ký tự, bắt đầu bằng "${base64String.slice(0, 12)}")`);
-  }
+  const raw = atob(base64);
   const buffer = new ArrayBuffer(raw.length);
   const output = new Uint8Array(buffer);
   for (let i = 0; i < raw.length; i++) output[i] = raw.charCodeAt(i);
   return output;
+}
+
+async function saveSubscription(sub: PushSubscription, studentCode?: string): Promise<void> {
+  await fetch("/api/push/subscribe", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ...sub.toJSON(), studentCode }),
+  });
+}
+
+function getVapidKey(): string {
+  return (process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY ?? "").replace(/[^A-Za-z0-9\-_]/g, "");
 }
 
 export function usePushSubscription({ studentCode }: { studentCode?: string } = {}) {
@@ -32,32 +39,48 @@ export function usePushSubscription({ studentCode }: { studentCode?: string } = 
       setState("denied");
       return;
     }
-    navigator.serviceWorker.ready.then((reg) => {
-      reg.pushManager.getSubscription().then((sub) => {
-        setState(sub ? "subscribed" : "unsubscribed");
-      });
-    });
-  }, []);
+
+    navigator.serviceWorker.register("/sw.js").then(async () => {
+      const reg = await navigator.serviceWorker.ready;
+
+      if (Notification.permission === "granted") {
+        try {
+          let sub = await reg.pushManager.getSubscription();
+          if (!sub) {
+            const vapidKey = getVapidKey();
+            if (!vapidKey) { setState("unsubscribed"); return; }
+            sub = await reg.pushManager.subscribe({
+              userVisibleOnly: true,
+              applicationServerKey: urlBase64ToUint8Array(vapidKey),
+            });
+          }
+          await saveSubscription(sub, studentCode);
+          setState("subscribed");
+        } catch {
+          setState("unsubscribed");
+        }
+      } else {
+        setState("unsubscribed");
+      }
+    }).catch(() => setState("unsubscribed"));
+  }, [studentCode]);
 
   const subscribe = useCallback(async () => {
     setError(null);
     setState("loading");
     try {
       await navigator.serviceWorker.register("/sw.js");
-      const reg = await navigator.serviceWorker.ready; // guaranteed active SW
+      const reg = await navigator.serviceWorker.ready;
 
       const permission = await Notification.requestPermission();
       if (permission !== "granted") {
-        setState("denied");
+        setState(permission === "denied" ? "denied" : "unsubscribed");
         return;
       }
 
-      const vapidKey = (process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY ?? "")
-        .replace(/[^A-Za-z0-9\-_]/g, "");
-      console.log("[push] key in bundle:", vapidKey.slice(0, 16), "len:", vapidKey.length);
-      if (!vapidKey) throw new Error("NEXT_PUBLIC_VAPID_PUBLIC_KEY chưa được cấu hình");
+      const vapidKey = getVapidKey();
+      if (!vapidKey) throw new Error("VAPID key chưa cấu hình");
 
-      // Clear any stale/broken subscription before creating a fresh one
       const existing = await reg.pushManager.getSubscription();
       if (existing) await existing.unsubscribe().catch(() => {});
 
@@ -66,42 +89,14 @@ export function usePushSubscription({ studentCode }: { studentCode?: string } = 
         applicationServerKey: urlBase64ToUint8Array(vapidKey),
       });
 
-      await fetch("/api/push/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...sub.toJSON(), studentCode }),
-      });
-
+      await saveSubscription(sub, studentCode);
       setState("subscribed");
     } catch (err) {
       const name = err instanceof DOMException ? `${err.name}: ` : "";
-      console.error("[push] subscribe failed:", err);
       setError(err instanceof Error ? `${name}${err.message}` : "Lỗi khi đăng ký thông báo");
       setState("unsubscribed");
     }
-  }, []);
+  }, [studentCode]);
 
-  const unsubscribe = useCallback(async () => {
-    setError(null);
-    setState("loading");
-    try {
-      const reg = await navigator.serviceWorker.ready;
-      const sub = await reg.pushManager.getSubscription();
-      if (sub) {
-        const endpoint = sub.endpoint;
-        await sub.unsubscribe();
-        await fetch("/api/push/subscribe", {
-          method: "DELETE",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ endpoint }),
-        });
-      }
-      setState("unsubscribed");
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Lỗi khi hủy thông báo");
-      setState("subscribed");
-    }
-  }, []);
-
-  return { state, error, subscribe, unsubscribe };
+  return { state, error, subscribe };
 }

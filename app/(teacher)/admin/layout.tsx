@@ -3,6 +3,7 @@ import { ViewTransition } from "react";
 import { Sidebar } from "@/components/admin/Sidebar";
 import { MobileNav } from "@/components/admin/MobileNav";
 import { AdminTopBar } from "@/components/admin/AdminTopBar";
+import { PushPromptBanner } from "@/components/shared/PushPromptBanner";
 
 export const metadata: Metadata = {
   title: {
@@ -44,6 +45,9 @@ export default function AdminLayout({
 
         {/* Desktop sticky top bar */}
         <AdminTopBar />
+
+        {/* Push notification prompt */}
+        <PushPromptBanner description="Bật thông báo để nhận cập nhật từ học viên" />
 
         {/* Page content */}
         <main id="main-content" className="flex-1 overflow-auto">

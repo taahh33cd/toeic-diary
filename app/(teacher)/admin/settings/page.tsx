@@ -1,7 +1,3 @@
-"use client";
-
-import { AdminPushSubscribeCard } from "./_admin-push-subscribe";
-
 export default function AdminSettingsPage() {
   return (
     <div className="max-w-xl space-y-6">
@@ -13,8 +9,6 @@ export default function AdminSettingsPage() {
           Cài đặt cho tài khoản giáo viên
         </p>
       </div>
-
-      <AdminPushSubscribeCard />
     </div>
   );
 }
