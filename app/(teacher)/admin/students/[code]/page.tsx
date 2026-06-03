@@ -946,20 +946,33 @@ function RichTextInput({ value, onChange, placeholder }: {
   onChange: (v: string) => void;
   placeholder?: string;
 }) {
-  const ref = useRef<HTMLTextAreaElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
+  const internalVal = useRef<string>(value);
+
+  useEffect(() => {
+    if (ref.current && value !== internalVal.current) {
+      ref.current.innerHTML = value;
+      internalVal.current = value;
+    }
+  }, [value]);
 
   function wrap(tag: string) {
-    const el = ref.current;
-    if (!el) return;
-    const s = el.selectionStart, e = el.selectionEnd;
-    const sel = el.value.slice(s, e);
-    const newVal = el.value.slice(0, s) + `<${tag}>${sel}</${tag}>` + el.value.slice(e);
-    onChange(newVal);
-    setTimeout(() => {
-      el.focus();
-      const cur = s + `<${tag}>`.length + sel.length;
-      el.setSelectionRange(cur, cur);
-    }, 0);
+    const sel = window.getSelection();
+    if (!sel || !sel.rangeCount || sel.isCollapsed) return;
+    const range = sel.getRangeAt(0);
+    if (!ref.current?.contains(range.commonAncestorContainer)) return;
+    const wrapper = document.createElement(tag);
+    try {
+      range.surroundContents(wrapper);
+    } catch {
+      const fragment = range.extractContents();
+      wrapper.appendChild(fragment);
+      range.insertNode(wrapper);
+    }
+    sel.removeAllRanges();
+    const html = ref.current!.innerHTML;
+    internalVal.current = html;
+    onChange(html);
   }
 
   return (
@@ -981,15 +994,25 @@ function RichTextInput({ value, onChange, placeholder }: {
         ))}
         <span className="text-[10px] self-center ml-1" style={{ color: "var(--text-muted)" }}>Bôi đen → format</span>
       </div>
-      <textarea
-        ref={ref}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        placeholder={placeholder}
-        rows={2}
-        className="w-full px-3 py-2 text-xs outline-none resize-none"
-        style={{ background: "var(--bg-primary)", color: "var(--text-primary)" }}
-      />
+      <div style={{ position: "relative" }}>
+        <div
+          ref={ref}
+          contentEditable
+          suppressContentEditableWarning
+          onInput={(e) => {
+            const html = (e.currentTarget as HTMLDivElement).innerHTML;
+            internalVal.current = html;
+            onChange(html);
+          }}
+          className="w-full px-3 py-2 text-xs outline-none min-h-[3rem]"
+          style={{ background: "var(--bg-primary)", color: "var(--text-primary)" }}
+        />
+        {!value && (
+          <span className="absolute top-2 left-3 text-xs pointer-events-none" style={{ color: "var(--text-muted)" }}>
+            {placeholder}
+          </span>
+        )}
+      </div>
     </div>
   );
 }
