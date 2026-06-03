@@ -3,9 +3,9 @@ import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { getAdminDb } from "@/lib/firebase/admin";
 
-/** Stable 40-char key derived from endpoint URL (base64url-encoded, safe for RTDB paths) */
+/** Unique key derived from full endpoint URL (base64url-encoded, safe for RTDB paths) */
 function endpointKey(endpoint: string): string {
-  return Buffer.from(endpoint).toString("base64url").slice(0, 40);
+  return Buffer.from(endpoint).toString("base64url");
 }
 
 function isAdmin(user: { app_metadata?: Record<string, unknown> }): boolean {
