@@ -15,20 +15,30 @@ export type ExerciseItem = {
   question:     string;
   options:      string[];
   correctIndex: number;
-  feedback:     string;  // shown after answering
+  feedback:     string;
 };
 
 export type ExerciseSet = {
   vocab:       ExerciseItem[];
   paraphrase:  ExerciseItem[];
   translation: ExerciseItem[];
-  summary:     ExerciseItem[];
 };
 
-// ─── helpers ────────────────────────────────────────────────
+export type ReadingQuestion = {
+  text:    string;
+  options: { A: string; B: string; C: string; D: string };
+  correct: string;
+};
 
-function stripHtml(html: string): string {
-  return html.replace(/<[^>]*>/g, "").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&").trim();
+// ─── helpers ─────────────────────────────────────────────────────────────────
+
+export function stripHtml(html: string): string {
+  return html
+    .replace(/<[^>]*>/g, "")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&")
+    .trim();
 }
 
 function shuffle<T>(arr: T[]): T[] {
@@ -40,22 +50,34 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-function makeOptions(correct: string, pool: string[]): { options: string[]; correctIndex: number } | null {
-  const distractors = shuffle(pool.filter(s => s !== correct && s.trim())).slice(0, 3);
-  if (distractors.length < 2) return null;  // need at least 3 options total
-  // pad to 3 distractors if short
-  const needed = 3 - distractors.length;
-  const padded = distractors.concat(distractors.slice(0, needed));
-  const options = shuffle([correct, ...padded.slice(0, 3)]);
+/**
+ * Build a 4-option question from a correct answer and a distractor pool.
+ * Picks up to 3 unique distractors; if fewer than 1 unique distractor exists, returns null.
+ */
+function makeOptions(
+  correct: string,
+  pool: string[]
+): { options: string[]; correctIndex: number } | null {
+  const unique = [...new Set(pool.filter(s => s !== correct && s.trim().length > 0))];
+  if (unique.length < 1) return null;
+
+  // Take up to 3 distractors; if pool small, repeat to reach 3
+  const shuffled = shuffle(unique);
+  const distractors: string[] = [];
+  for (let i = 0; distractors.length < 3; i++) {
+    distractors.push(shuffled[i % shuffled.length]);
+  }
+
+  const options = shuffle([correct, ...distractors]);
   return { options, correctIndex: options.indexOf(correct) };
 }
 
-// ─── vocab ──────────────────────────────────────────────────
+// ─── vocab ───────────────────────────────────────────────────────────────────
 
 export function generateVocab(rich: RichExplanation[]): ExerciseItem[] {
-  const all = rich.flatMap(e => e.tu_vung ?? []);
+  const all    = rich.flatMap(e => e.tu_vung ?? []);
   const unique = [...new Map(all.map(v => [v.tu, v])).values()];
-  if (unique.length < 3) return [];
+  if (unique.length < 2) return [];
 
   const nghiaPool = unique.map(v => v.nghia);
   const selected  = shuffle(unique).slice(0, 5);
@@ -73,12 +95,12 @@ export function generateVocab(rich: RichExplanation[]): ExerciseItem[] {
   });
 }
 
-// ─── paraphrase ─────────────────────────────────────────────
+// ─── paraphrase ──────────────────────────────────────────────────────────────
 
 type PhrasePair = { original: string; paraphrase: string };
 
 function extractPairs(hamY: string): PhrasePair[] {
-  // matches: ↳ <i>'X'</i> (...optional...) = <i>'Y'</i>
+  // Matches: ↳ <i>'X'</i> (optional Vietnamese gloss) = <i>'Y'</i>
   const RE = /↳\s*<i>'([^']+)'<\/i>[^=\n]*=\s*<i>'([^']+)'<\/i>/g;
   const pairs: PhrasePair[] = [];
   let m: RegExpExecArray | null;
@@ -90,12 +112,18 @@ function extractPairs(hamY: string): PhrasePair[] {
 
 export function generateParaphrase(rich: RichExplanation[]): ExerciseItem[] {
   const allPairs = rich.flatMap(e => extractPairs(e.ham_y));
-  if (allPairs.length < 2) return [];
+  if (allPairs.length < 1) return [];
 
+  // Distractor pool: paraphrase values (Y) + original phrases (X)
+  // Using originals as distractors is valid: students shouldn't confuse "the phrase itself"
+  // with "what the phrase means".
   const paraphrasePool = allPairs.map(p => p.paraphrase);
+  const originalPool   = allPairs.map(p => p.original);
+  const fullPool       = [...paraphrasePool, ...originalPool];
 
   return allPairs.slice(0, 4).flatMap((pair, i): ExerciseItem[] => {
-    const result = makeOptions(pair.paraphrase, paraphrasePool.filter(p => p !== pair.paraphrase));
+    const distractorPool = fullPool.filter(s => s !== pair.paraphrase);
+    const result = makeOptions(pair.paraphrase, distractorPool);
     if (!result) return [];
     return [{
       id:           `para-${i}`,
@@ -107,22 +135,41 @@ export function generateParaphrase(rich: RichExplanation[]): ExerciseItem[] {
   });
 }
 
-// ─── translation ────────────────────────────────────────────
+// ─── translation ─────────────────────────────────────────────────────────────
 
-export function generateTranslation(rich: RichExplanation[]): ExerciseItem[] {
-  if (rich.length < 2) return [];
+export function generateTranslation(
+  questions: ReadingQuestion[],
+  rich: RichExplanation[]
+): ExerciseItem[] {
+  if (rich.length < 1) return [];
 
-  const danChungPool = rich.map(e => stripHtml(e.dan_chung)).filter(s => s.length > 0);
+  const danChungPool = rich
+    .map(e => stripHtml(e.dan_chung))
+    .filter(s => s.length > 0);
+
+  // Fallback distractor pool: wrong answer options from reading questions
+  const wrongOptionsPool = questions.flatMap(q =>
+    (["A", "B", "C", "D"] as const)
+      .filter(k => k !== q.correct)
+      .map(k => q.options[k])
+  );
 
   return rich.slice(0, 3).flatMap((e, i): ExerciseItem[] => {
     const correct = stripHtml(e.dan_chung);
-    if (!correct) return [];
+    if (!correct || correct.length < 5) return [];
 
-    // Take the first meaningful sentence of the Vietnamese translation
+    // Take first meaningful sentence from Vietnamese translation
     const viRaw   = stripHtml(e.dich_bai);
-    const viFirst = viRaw.split(/[.!?]/).find(s => s.trim().length > 20) ?? viRaw.slice(0, 120);
+    const viFirst = viRaw.split(/[.!?](?=\s|$)/).find(s => s.trim().length > 20)
+      ?? viRaw.slice(0, 130);
 
-    const result = makeOptions(correct, danChungPool.filter(d => d !== correct));
+    // Build distractor pool: other dan_chung + wrong reading options
+    const distractorPool = [
+      ...danChungPool.filter(d => d !== correct),
+      ...wrongOptionsPool,
+    ];
+
+    const result = makeOptions(correct, distractorPool);
     if (!result) return [];
 
     return [{
@@ -135,40 +182,7 @@ export function generateTranslation(rich: RichExplanation[]): ExerciseItem[] {
   });
 }
 
-// ─── summary ────────────────────────────────────────────────
-
-type ReadingQuestion = {
-  text: string;
-  options: { A: string; B: string; C: string; D: string };
-  correct: string;
-};
-
-export function generateSummary(
-  questions: ReadingQuestion[],
-  rich: RichExplanation[]
-): ExerciseItem[] {
-  if (questions.length === 0) return [];
-
-  return questions.slice(0, 3).flatMap((q, i): ExerciseItem[] => {
-    const e = rich[i];
-    const hint = e ? stripHtml(e.lien_he).split(".")[0].trim() : "";
-    const opts  = [q.options.A, q.options.B, q.options.C, q.options.D];
-    const ci    = ["A", "B", "C", "D"].indexOf(q.correct);
-    if (ci < 0) return [];
-
-    const danChung = e ? `Bài đọc nêu rõ: "${stripHtml(e.dan_chung)}"` : "";
-
-    return [{
-      id:           `sum-${i}`,
-      question:     `${q.text}${hint ? `\n\n(Gợi ý: ${hint})` : ""}`,
-      options:      opts,
-      correctIndex: ci,
-      feedback:     danChung,
-    }];
-  });
-}
-
-// ─── main builder ────────────────────────────────────────────
+// ─── main builder ─────────────────────────────────────────────────────────────
 
 export function buildExercises(
   questions: ReadingQuestion[],
@@ -177,8 +191,7 @@ export function buildExercises(
   return {
     vocab:       generateVocab(rich),
     paraphrase:  generateParaphrase(rich),
-    translation: generateTranslation(rich),
-    summary:     generateSummary(questions, rich),
+    translation: generateTranslation(questions, rich),
   };
 }
 

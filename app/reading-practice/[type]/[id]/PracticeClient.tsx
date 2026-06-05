@@ -59,9 +59,9 @@ export function PracticeClient({
     return [...new Map(all.map(v => [v.tu, v])).values()].slice(0, 5);
   }, [richExplanations]);
 
-  // Post-reading exercises (only if we have rich explanations)
+  // Post-reading exercises (only if we have at least 1 rich explanation)
   const exercises = useMemo(() => {
-    if (richExplanations.length < 2) return null;
+    if (richExplanations.length < 1) return null;
     return buildExercises(
       passage.questions.map(q => ({
         text: q.text,

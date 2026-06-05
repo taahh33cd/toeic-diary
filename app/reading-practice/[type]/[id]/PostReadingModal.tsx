@@ -3,16 +3,15 @@
 import { useState, useMemo, useCallback } from "react";
 import { ExerciseItem, ExerciseSet, calcScore } from "./exercises";
 
-type Tab = "vocab" | "paraphrase" | "translation" | "summary";
+type Tab = "vocab" | "paraphrase" | "translation";
 
 const TAB_LABELS: Record<Tab, string> = {
   vocab:       "Từ vựng",
   paraphrase:  "Paraphrase",
   translation: "Dịch thuật",
-  summary:     "Tổng hợp",
 };
 
-const TABS: Tab[] = ["vocab", "paraphrase", "translation", "summary"];
+const TABS: Tab[] = ["vocab", "paraphrase", "translation"];
 
 type Props = {
   exercises:  ExerciseSet;
