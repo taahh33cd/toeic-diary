@@ -2,7 +2,14 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
 const PROTECTED_PREFIXES = ["/test", "/vocabulary", "/progress"];
-const AUTH_ROUTES = ["/auth/login", "/auth/register"];
+
+function isAdminRole(role?: string) {
+  return role === "admin" || role === "teacher";
+}
+
+function roleHome(role?: string) {
+  return isAdminRole(role) ? "/admin" : "/journal";
+}
 
 export async function proxy(request: NextRequest) {
   let supabaseResponse = NextResponse.next({ request });
@@ -28,49 +35,74 @@ export async function proxy(request: NextRequest) {
     }
   );
 
-  const { data: { user } } = await supabase.auth.getUser();
-  const pathname = request.nextUrl.pathname;
+  // IMPORTANT: Do not add code between createServerClient and getUser().
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  // ─── Existing dictation app guards ────────────────────────────────────────
+  const role = (user?.app_metadata?.role as string | undefined);
+  const { pathname } = request.nextUrl;
+
+  function redirectTo(dest: string) {
+    const url = request.nextUrl.clone();
+    url.pathname = dest;
+    url.search = "";
+    return NextResponse.redirect(url);
+  }
+
+  // ── Root "/" ─────────────────────────────────────────────────────────────────
+  if (pathname === "/") {
+    if (!user) return redirectTo("/home");
+    return redirectTo(roleHome(role));
+  }
+
+  // ── Auth pages: redirect logged-in users to their home ───────────────────────
+  if (pathname === "/auth/login" || pathname === "/auth/register") {
+    if (user) return redirectTo(roleHome(role));
+    return supabaseResponse;
+  }
+
+  // ── Admin routes ─────────────────────────────────────────────────────────────
+  if (pathname.startsWith("/admin")) {
+    if (!user) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/auth/login";
+      url.search = "";
+      return NextResponse.redirect(url);
+    }
+    if (!isAdminRole(role)) return redirectTo("/journal");
+    return supabaseResponse;
+  }
+
+  // ── Student journal routes ───────────────────────────────────────────────────
+  if (pathname.startsWith("/journal")) {
+    if (!user) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/auth/login";
+      url.searchParams.set("next", pathname);
+      return NextResponse.redirect(url);
+    }
+    if (isAdminRole(role)) return redirectTo("/admin");
+    return supabaseResponse;
+  }
+
+  // ── Other protected routes (test, vocabulary, progress) ─────────────────────
   const isProtected = PROTECTED_PREFIXES.some((prefix) =>
     pathname.startsWith(prefix)
   );
   if (isProtected && !user) {
-    const redirectUrl = new URL("/auth/login", request.url);
-    redirectUrl.searchParams.set("redirectTo", pathname);
-    return NextResponse.redirect(redirectUrl);
+    const url = request.nextUrl.clone();
+    url.pathname = "/auth/login";
+    url.searchParams.set("redirectTo", pathname);
+    return NextResponse.redirect(url);
   }
 
-  const isAuthRoute = AUTH_ROUTES.includes(pathname);
-  if (isAuthRoute && user) {
-    return NextResponse.redirect(new URL("/", request.url));
-  }
-
-  // ─── /journal/* — phải đăng nhập ──────────────────────────────────────────
-  if (pathname.startsWith("/journal")) {
-    if (!user) {
-      const url = new URL("/auth/login", request.url);
-      url.searchParams.set("next", pathname);
-      return NextResponse.redirect(url);
-    }
-    return supabaseResponse;
-  }
-
-  // ─── /admin/* — phải đăng nhập + role teacher/admin ──────────────────────
-  if (pathname.startsWith("/admin")) {
-    if (!user) {
-      const url = new URL("/auth/login", request.url);
-      url.searchParams.set("next", pathname);
-      return NextResponse.redirect(url);
-    }
-
-    // Role đọc từ app_metadata trong JWT (không cần DB query)
-    const role = (user.app_metadata?.role as string | undefined) ?? "student";
-    if (role !== "teacher" && role !== "admin") {
-      return NextResponse.redirect(new URL("/journal", request.url));
-    }
-
-    return supabaseResponse;
+  // ── Admin logged in → redirect away from any non-admin route ─────────────────
+  // Allow: /auth/* (logout/OAuth), /home (public landing)
+  if (user && isAdminRole(role)) {
+    const isPublicForAdmin =
+      pathname.startsWith("/auth/") || pathname === "/home";
+    if (!isPublicForAdmin) return redirectTo("/admin");
   }
 
   return supabaseResponse;
@@ -78,6 +110,6 @@ export async function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+    "/((?!_next/static|_next/image|favicon\\.ico|icon\\.svg|icon\\.png|sw\\.js|manifest\\.json|offline|api/|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|mp3|mp4|woff2?|ttf|eot)).*)",
   ],
 };
