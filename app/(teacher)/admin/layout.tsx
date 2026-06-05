@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { ViewTransition } from "react";
+import { redirect } from "next/navigation";
+import { createClient } from "@/lib/supabase/server";
 import { Sidebar } from "@/components/admin/Sidebar";
 import { MobileNav } from "@/components/admin/MobileNav";
 import { AdminTopBar } from "@/components/admin/AdminTopBar";
@@ -13,11 +15,16 @@ export const metadata: Metadata = {
   description: "Quản lý học viên, bài tập và tiến độ học TOEIC",
 };
 
-export default function AdminLayout({
+export default async function AdminLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  const role = user?.app_metadata?.role as string | undefined;
+  if (!user || (role !== "admin" && role !== "teacher")) redirect("/auth/login");
+
   return (
     <div
       className="theme-admin min-h-screen flex"

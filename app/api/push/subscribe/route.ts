@@ -44,6 +44,15 @@ export async function POST(request: NextRequest) {
         uid: user.id,
         updatedAt: new Date().toISOString(),
       });
+      // Cross-cleanup: remove this endpoint from any pushSubs entry (same physical device)
+      const allPushSubs = await db.ref("pushSubs").get();
+      if (allPushSubs.exists()) {
+        const removals: Promise<void>[] = [];
+        allPushSubs.forEach((child) => {
+          removals.push(child.ref.child(`subs/${key}`).remove().catch(() => {}));
+        });
+        await Promise.all(removals);
+      }
     } catch (err) {
       console.error("[push/subscribe] adminSubs write failed:", err);
       return NextResponse.json({ error: "Failed to save subscription" }, { status: 500 });
@@ -70,6 +79,9 @@ export async function POST(request: NextRequest) {
       await db.ref(`pushSubs/${user.id}/studentCode`).set(studentCode);
       await db.ref(`students/${studentCode}/supabaseUid`).set(user.id);
     }
+
+    // Cross-cleanup: remove this endpoint from adminSubs (same physical device)
+    await db.ref(`adminSubs/${key}`).remove().catch(() => {});
   } catch (err) {
     console.error("[push/subscribe] RTDB write failed:", err);
   }
