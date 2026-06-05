@@ -203,18 +203,29 @@ export function PostReadingModal({ exercises, passageId, onClose }: Props) {
                 borderRadius: 6, padding: "16px", marginBottom: 12,
                 boxShadow: "0 1px 3px rgba(0,0,0,0.05)",
               }}>
-                <div style={{
-                  fontWeight: 600, fontSize: "0.9rem", color: "#111827",
-                  marginBottom: 12, lineHeight: 1.5, whiteSpace: "pre-wrap",
-                }}>
-                  <span style={{
-                    display: "inline-flex", alignItems: "center", justifyContent: "center",
-                    width: 22, height: 22, borderRadius: "50%",
-                    background: "#0D3361", color: "#fff",
-                    fontSize: "0.72rem", fontWeight: 700,
-                    marginRight: 8, flexShrink: 0, verticalAlign: "middle",
-                  }}>{qi + 1}</span>
-                  {item.question}
+                <div style={{ marginBottom: 12 }}>
+                  <div style={{ display: "flex", alignItems: "flex-start", gap: 8, marginBottom: item.contextHtml ? 10 : 0 }}>
+                    <span style={{
+                      display: "inline-flex", alignItems: "center", justifyContent: "center",
+                      width: 22, height: 22, borderRadius: "50%",
+                      background: "#0D3361", color: "#fff",
+                      fontSize: "0.72rem", fontWeight: 700,
+                      flexShrink: 0, marginTop: 2,
+                    }}>{qi + 1}</span>
+                    <span style={{ fontWeight: 600, fontSize: "0.9rem", color: "#111827", lineHeight: 1.5, whiteSpace: "pre-wrap" }}>
+                      {item.question}
+                    </span>
+                  </div>
+                  {item.contextHtml && (
+                    <div
+                      style={{
+                        background: "#f9fafb", border: "1px solid #e5e7eb",
+                        borderRadius: 5, padding: "10px 14px",
+                        fontSize: "0.85rem", lineHeight: 1.7, color: "#374151",
+                      }}
+                      dangerouslySetInnerHTML={{ __html: item.contextHtml }}
+                    />
+                  )}
                 </div>
 
                 {item.options.map((opt, oi) => {
