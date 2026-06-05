@@ -157,9 +157,10 @@ model Profile {
   invitesSent     TeacherInvite[]
   managedStudents Profile[] @relation("TeacherStudent")
   teacher         Profile?  @relation("TeacherStudent", fields: [teacherId], references: [id])
-  grammarAttempts  GrammarAttempt[]
-  readingAttempts  ReadingAttempt[]
-  subskillAttempts SubskillAttempt[]
+  grammarAttempts      GrammarAttempt[]
+  readingAttempts      ReadingAttempt[]
+  postReadingAttempts  PostReadingAttempt[]
+  subskillAttempts     SubskillAttempt[]
 
   @@map("profiles")
 }
@@ -306,8 +307,9 @@ model ReadingPassage {
   orderIndex Int               @map("order_index")
   createdAt  DateTime          @default(now()) @map("created_at")
 
-  questions  ReadingQuestion[]
-  attempts   ReadingAttempt[]
+  questions           ReadingQuestion[]
+  attempts            ReadingAttempt[]
+  postReadingAttempts PostReadingAttempt[]
 
   @@index([type])
   @@map("reading_passages")
@@ -365,4 +367,20 @@ model ReadingAttempt {
   @@index([userId, passageId])
   @@index([userId])
   @@map("reading_attempts")
+}
+
+model PostReadingAttempt {
+  id          String         @id @default(uuid())
+  userId      String         @map("user_id")
+  profile     Profile        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  passageId   String         @map("passage_id")
+  passage     ReadingPassage @relation(fields: [passageId], references: [id])
+  score       Int            // 0-100 overall
+  details     Json           // { vocab, paraphrase, translation, summary } each 0-100
+  completedAt DateTime       @default(now()) @map("completed_at")
+  createdAt   DateTime       @default(now()) @map("created_at")
+
+  @@index([userId, passageId])
+  @@index([userId])
+  @@map("post_reading_attempts")
 }

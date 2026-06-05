@@ -1,7 +1,9 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { useRouter } from "next/navigation";
+import { buildExercises, RichExplanation } from "./exercises";
+import { PostReadingModal } from "./PostReadingModal";
 
 type Question = {
   id: string;
@@ -30,13 +32,48 @@ export function PracticeClient({
   backHref: string;
 }) {
   const router = useRouter();
-  const [answers, setAnswers] = useState<Record<number, string>>({});
-  const [submitted, setSubmitted] = useState(false);
-  const [activeQ, setActiveQ] = useState(0);
-  const [saving, setSaving] = useState(false);
-  const [fontSize, setFontSize] = useState(15); // px
+  const [answers, setAnswers]             = useState<Record<number, string>>({});
+  const [submitted, setSubmitted]         = useState(false);
+  const [activeQ, setActiveQ]             = useState(0);
+  const [saving, setSaving]               = useState(false);
+  const [fontSize, setFontSize]           = useState(15);
+  const [preReadingDone, setPreReadingDone] = useState(false);
+  const [showPostReading, setShowPostReading] = useState(false);
 
   const total = passage.questions.length;
+
+  // Parse rich explanations from JSON (graceful fallback for old string format)
+  const richExplanations = useMemo<RichExplanation[]>(() => {
+    return passage.questions.flatMap(q => {
+      try {
+        const p = JSON.parse(q.explanation);
+        if (p && typeof p === "object" && "dan_chung" in p) return [p as RichExplanation];
+      } catch { /* old string format */ }
+      return [];
+    });
+  }, [passage.questions]);
+
+  // Pre-reading vocabulary preview (first 5 unique words across all questions)
+  const preReadingVocab = useMemo(() => {
+    const all = richExplanations.flatMap(e => e.tu_vung ?? []);
+    return [...new Map(all.map(v => [v.tu, v])).values()].slice(0, 5);
+  }, [richExplanations]);
+
+  // Post-reading exercises (only if we have rich explanations)
+  const exercises = useMemo(() => {
+    if (richExplanations.length < 2) return null;
+    return buildExercises(
+      passage.questions.map(q => ({
+        text: q.text,
+        options: q.options,
+        correct: q.correct,
+      })),
+      richExplanations
+    );
+  }, [richExplanations, passage.questions]);
+
+  const hasExercises = exercises &&
+    Object.values(exercises).some(arr => arr.length > 0);
 
   const handleSelect = useCallback(
     (qIdx: number, option: string) => {
@@ -101,6 +138,86 @@ export function PracticeClient({
         color: "#1a1a2e",
       }}
     >
+      {/* Pre-reading overlay */}
+      {!preReadingDone && (
+        <div style={{
+          position: "fixed", inset: 0, zIndex: 80,
+          background: "rgba(13,51,97,0.92)",
+          display: "flex", alignItems: "center", justifyContent: "center",
+          padding: 24,
+        }}>
+          <div style={{
+            background: "#fff", borderRadius: 10,
+            maxWidth: 480, width: "100%",
+            padding: "32px 28px",
+            boxShadow: "0 20px 60px rgba(0,0,0,0.4)",
+          }}>
+            <div style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#6b7280", marginBottom: 6 }}>
+              Chuẩn bị trước khi đọc
+            </div>
+            <h2 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#111827", margin: "0 0 4px" }}>
+              {passage.category ?? `Bài ${passage.orderIndex}`}
+            </h2>
+            <p style={{ fontSize: "0.82rem", color: "#6b7280", margin: "0 0 20px", lineHeight: 1.5 }}>
+              Xem qua các từ khoá bên dưới và suy nghĩ về chủ đề bài đọc trước khi bắt đầu.
+            </p>
+
+            {preReadingVocab.length > 0 ? (
+              <div style={{ marginBottom: 24 }}>
+                <div style={{ fontSize: "0.75rem", fontWeight: 600, color: "#374151", marginBottom: 10, letterSpacing: "0.04em" }}>
+                  TU VUNG TRONG BAI
+                </div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                  {preReadingVocab.map(v => (
+                    <div key={v.tu} style={{
+                      background: "#eff6ff", border: "1px solid #bfdbfe",
+                      borderRadius: 6, padding: "6px 12px",
+                    }}>
+                      <span style={{ fontWeight: 700, color: "#1d4ed8", fontSize: "0.88rem" }}>{v.tu}</span>
+                      <span style={{ color: "#6b7280", fontSize: "0.8rem", marginLeft: 6 }}>— {v.nghia}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div style={{ marginBottom: 24, color: "#9ca3af", fontSize: "0.82rem" }}>
+                Sẵn sàng bắt đầu bài đọc.
+              </div>
+            )}
+
+            <button
+              onClick={() => setPreReadingDone(true)}
+              style={{
+                width: "100%", background: "#0D3361", color: "#fff",
+                border: "none", padding: "11px 0", borderRadius: 5,
+                fontWeight: 700, fontSize: "0.92rem", cursor: "pointer",
+              }}
+            >
+              Bắt đầu đọc
+            </button>
+            <button
+              onClick={() => setPreReadingDone(true)}
+              style={{
+                width: "100%", marginTop: 8, background: "transparent",
+                color: "#9ca3af", border: "none", padding: "6px 0",
+                fontSize: "0.8rem", cursor: "pointer",
+              }}
+            >
+              Bỏ qua
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Post-reading modal */}
+      {showPostReading && exercises && (
+        <PostReadingModal
+          exercises={exercises}
+          passageId={passage.id}
+          onClose={() => setShowPostReading(false)}
+        />
+      )}
+
       {/* Mobile portrait hint */}
       <style>{`
         @media (max-width: 768px) and (orientation: portrait) {
@@ -411,7 +528,7 @@ export function PracticeClient({
                     lineHeight: 1.6,
                     borderRadius: "0 4px 4px 0",
                   }}
-                  dangerouslySetInnerHTML={{ __html: "💡 " + q.explanation }}
+                  dangerouslySetInnerHTML={{ __html: renderExplanation(q.explanation) }}
                 />
               )}
             </div>
@@ -440,10 +557,18 @@ export function PracticeClient({
           </button>
           {submitted && (
             <button
-              onClick={() => { setAnswers({}); setSubmitted(false); setActiveQ(0); }}
+              onClick={() => { setAnswers({}); setSubmitted(false); setActiveQ(0); setPreReadingDone(false); }}
               style={{ ...navBtnStyle, color: "#0D3361", borderColor: "#0D3361" }}
             >
               Làm lại
+            </button>
+          )}
+          {submitted && hasExercises && (
+            <button
+              onClick={() => setShowPostReading(true)}
+              style={{ ...navBtnStyle, background: "#0D3361", color: "#fff", borderColor: "#0D3361" }}
+            >
+              Luyện thêm
             </button>
           )}
         </div>
@@ -515,6 +640,36 @@ export function PracticeClient({
       </footer>
     </div>
   );
+}
+
+// ─── Explanation renderer ────────────────────────────────────────────────────
+function renderExplanation(raw: string): string {
+  try {
+    const e = JSON.parse(raw);
+    if (!e || typeof e !== "object" || !("dan_chung" in e)) throw new Error();
+
+    const vocabRows = (e.tu_vung as { tu: string; nghia: string }[] ?? [])
+      .map(v => `<span style="display:inline-block;margin-right:14px"><b>${v.tu}</b>: ${v.nghia}</span>`)
+      .join("");
+
+    return `
+      <div style="font-size:0.85rem;line-height:1.7">
+        <div style="margin-bottom:8px">
+          <span style="font-weight:700;color:#1e40af">Dẫn chứng:</span>
+          <span style="font-style:italic"> "${e.dan_chung}"</span>
+        </div>
+        <div style="margin-bottom:8px">
+          <span style="font-weight:700;color:#1e40af">Phân tích:</span>
+          <span> ${e.ham_y}</span>
+        </div>
+        ${e.lien_he ? `<div style="margin-bottom:8px"><span style="font-weight:700;color:#1e40af">Liên hệ:</span> ${e.lien_he}</div>` : ""}
+        ${vocabRows ? `<div style="margin-top:8px;padding-top:8px;border-top:1px solid #bfdbfe;font-size:0.8rem;color:#374151">${vocabRows}</div>` : ""}
+      </div>
+    `.trim();
+  } catch {
+    // Old plain-string format
+    return raw;
+  }
 }
 
 const navBtnStyle: React.CSSProperties = {
