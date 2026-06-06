@@ -23,6 +23,7 @@ export type ExerciseSet = {
   vocab:       ExerciseItem[];
   paraphrase:  ExerciseItem[];
   translation: ExerciseItem[];
+  context:     ExerciseItem[];
 };
 
 export type ReadingQuestion = {
@@ -194,6 +195,7 @@ export function buildExercises(
     vocab:       generateVocab(rich),
     paraphrase:  generateParaphrase(rich),
     translation: generateTranslation(questions, rich),
+    context:     [],
   };
 }
 
@@ -204,4 +206,44 @@ export function calcScore(
   if (items.length === 0) return 0;
   const correct = items.filter(it => answers[it.id] === it.correctIndex).length;
   return Math.round((correct / items.length) * 100);
+}
+
+// ─── static JSON data ────────────────────────────────────────────────────────
+import staticData from "@/data/reading-exercises-all.json";
+
+type StaticEntry = {
+  orderIndex: number;
+  type:       string;
+  vocab:       Omit<ExerciseItem, "id">[];
+  paraphrase:  Omit<ExerciseItem, "id">[];
+  translation: Omit<ExerciseItem, "id">[];
+  context:     Omit<ExerciseItem, "id">[];
+};
+
+function addIds(items: Omit<ExerciseItem, "id">[], prefix: string): ExerciseItem[] {
+  return items.map((item, i) => ({ ...item, id: `${prefix}-${i}` }));
+}
+
+/** Look up curated exercises from static JSON. Falls back to auto-generated if not found. */
+export function getStaticExercises(
+  type: string,
+  orderIndex: number,
+  questions: ReadingQuestion[],
+  rich: RichExplanation[]
+): ExerciseSet {
+  const entry = (staticData as StaticEntry[]).find(
+    e => e.type === type && e.orderIndex === orderIndex
+  );
+
+  if (entry && (entry.vocab?.length || entry.paraphrase?.length || entry.translation?.length || entry.context?.length)) {
+    return {
+      vocab:       addIds(entry.vocab ?? [],       "vocab"),
+      paraphrase:  addIds(entry.paraphrase ?? [],  "para"),
+      translation: addIds(entry.translation ?? [], "trans"),
+      context:     addIds(entry.context ?? [],      "ctx"),
+    };
+  }
+
+  // Fallback: auto-generate from rich explanations (no context tab)
+  return buildExercises(questions, rich);
 }

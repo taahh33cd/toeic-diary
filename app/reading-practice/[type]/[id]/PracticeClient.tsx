@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useMemo } from "react";
 import { useRouter } from "next/navigation";
-import { buildExercises, RichExplanation } from "./exercises";
+import { getStaticExercises, RichExplanation } from "./exercises";
 import { PostReadingModal } from "./PostReadingModal";
 
 type Question = {
@@ -59,10 +59,11 @@ export function PracticeClient({
     return [...new Map(all.map(v => [v.tu, v])).values()].slice(0, 5);
   }, [richExplanations]);
 
-  // Post-reading exercises (only if we have at least 1 rich explanation)
+  // Post-reading exercises: prefer curated static JSON, fallback to auto-generated
   const exercises = useMemo(() => {
-    if (richExplanations.length < 1) return null;
-    return buildExercises(
+    return getStaticExercises(
+      passage.type,
+      passage.orderIndex,
       passage.questions.map(q => ({
         text: q.text,
         options: q.options,
@@ -70,10 +71,9 @@ export function PracticeClient({
       })),
       richExplanations
     );
-  }, [richExplanations, passage.questions]);
+  }, [passage.type, passage.orderIndex, richExplanations, passage.questions]);
 
-  const hasExercises = exercises &&
-    Object.values(exercises).some(arr => arr.length > 0);
+  const hasExercises = Object.values(exercises).some(arr => arr.length > 0);
 
   const handleSelect = useCallback(
     (qIdx: number, option: string) => {
@@ -210,7 +210,7 @@ export function PracticeClient({
       )}
 
       {/* Post-reading modal */}
-      {showPostReading && exercises && (
+      {showPostReading && (
         <PostReadingModal
           exercises={exercises}
           passageId={passage.id}
