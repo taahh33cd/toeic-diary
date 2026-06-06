@@ -33,31 +33,37 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.dailyStudyReminder = exports.onNewStudentNotification = void 0;
+exports.scheduledSessionReminder = exports.onBookingStatusChanged = exports.onBookingCreated = exports.onStudentProgressDone = exports.onStudentDaylink = exports.dailyStudyReminder = exports.onNewStudentNotification = void 0;
 const app_1 = require("firebase-admin/app");
 const database_1 = require("firebase-admin/database");
 const database_2 = require("firebase-functions/v2/database");
 const scheduler_1 = require("firebase-functions/v2/scheduler");
 const webpush = __importStar(require("web-push"));
 // ── Firebase Admin init ───────────────────────────────────────────────────────
-// Pass databaseURL explicitly so getDatabase() connects to the correct RTDB instance.
-(0, app_1.initializeApp)({
-    databaseURL: "https://quanlyhocvien-b1796-default-rtdb.asia-southeast1.firebasedatabase.app",
-});
+if (!(0, app_1.getApps)().length) {
+    (0, app_1.initializeApp)({
+        databaseURL: "https://quanlyhocvien-b1796-default-rtdb.asia-southeast1.firebasedatabase.app",
+    });
+}
 function db() {
     return (0, database_1.getDatabase)();
 }
-// ── VAPID setup helper ────────────────────────────────────────────────────────
+// ── VAPID setup ───────────────────────────────────────────────────────────────
 function setupVapid() {
     const subject = process.env.VAPID_SUBJECT;
-    const publicKey = process.env.VAPID_PUBLIC_KEY;
-    const privateKey = process.env.VAPID_PRIVATE_KEY;
+    // Strip "=" padding — Firebase Secrets may store base64url with padding,
+    // but web-push requires unpadded URL-safe base64.
+    const publicKey = (process.env.VAPID_PUBLIC_KEY ?? "").replace(/=/g, "");
+    const privateKey = (process.env.VAPID_PRIVATE_KEY ?? "").replace(/=/g, "");
     if (!subject || !publicKey || !privateKey) {
-        throw new Error("VAPID env vars not set (VAPID_SUBJECT, VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY)");
+        throw new Error("VAPID env vars not set");
     }
     webpush.setVapidDetails(subject, publicKey, privateKey);
 }
-/** Send push to all subscriptions stored under pushSubs/{uid}/subs/* */
+const SECRETS = ["VAPID_SUBJECT", "VAPID_PUBLIC_KEY", "VAPID_PRIVATE_KEY"];
+const REGION = "asia-southeast1";
+const DB_INSTANCE = "quanlyhocvien-b1796-default-rtdb";
+// ── Helper: push to all subs under pushSubs/{uid}/subs/* ─────────────────────
 async function sendToUidSubs(uid, payload) {
     const snap = await db().ref(`pushSubs/${uid}/subs`).get();
     if (!snap.exists())
@@ -71,37 +77,75 @@ async function sendToUidSubs(uid, payload) {
         try {
             const sub = JSON.parse(raw);
             promises.push(webpush.sendNotification(sub, payloadStr).catch(async (err) => {
-                // 410 Gone → subscription expired, clean up
-                if (err.statusCode === 410) {
+                if (err.statusCode === 410 || err.statusCode === 404) {
                     await child.ref.remove().catch(() => undefined);
                 }
             }));
         }
         catch {
-            // malformed JSON in RTDB — ignore
+            // malformed JSON — ignore
         }
     });
     await Promise.all(promises);
 }
-// ── P3: Push notification on new RTDB notification node ──────────────────────
-/**
- * Triggered whenever a teacher writes to notifications/{studentCode}/{notifId}.
- * Looks up the student's supabaseUid via pushSubs, then sends a web push.
- *
- * Expected notification node shape: { title?: string, body?: string, url?: string }
- */
+// ── Helper: write notification to adminNotifications/ for bell icon ──────────
+async function writeAdminNotification(payload) {
+    await db().ref("adminNotifications").push({
+        title: payload.title,
+        body: payload.body ?? "",
+        url: payload.url ?? "/admin",
+        createdAt: Date.now(),
+        read: false,
+    });
+}
+// ── Helper: push to all adminSubs/* ──────────────────────────────────────────
+async function sendToAdminSubs(payload) {
+    const snap = await db().ref("adminSubs").get();
+    if (!snap.exists())
+        return;
+    const payloadStr = JSON.stringify(payload);
+    const promises = [];
+    snap.forEach((child) => {
+        const data = child.val();
+        if (!data?.subscription)
+            return;
+        try {
+            const sub = JSON.parse(data.subscription);
+            promises.push(webpush.sendNotification(sub, payloadStr).catch(async (err) => {
+                if (err.statusCode === 410 || err.statusCode === 404) {
+                    await child.ref.remove().catch(() => undefined);
+                }
+            }));
+        }
+        catch {
+            // malformed JSON — ignore
+        }
+    });
+    await Promise.all(promises);
+}
+// ── Helper: push to student by studentCode (via supabaseUid mapping) ─────────
+async function sendToStudentByCode(studentCode, payload) {
+    const uidSnap = await db().ref(`students/${studentCode}/supabaseUid`).get();
+    if (!uidSnap.exists())
+        return;
+    await sendToUidSubs(uidSnap.val(), payload);
+}
+// ── Helper: parse booking date+time (ICT) to UTC Date ────────────────────────
+function parseBookingTime(date, time) {
+    return new Date(`${date}T${time}:00+07:00`);
+}
+// ── P3: Push to student when teacher writes a notification node ───────────────
 exports.onNewStudentNotification = (0, database_2.onValueCreated)({
     ref: "/notifications/{studentCode}/{notifId}",
-    instance: "quanlyhocvien-b1796-default-rtdb",
-    region: "asia-southeast1",
-    secrets: ["VAPID_SUBJECT", "VAPID_PUBLIC_KEY", "VAPID_PRIVATE_KEY"],
+    instance: DB_INSTANCE,
+    region: REGION,
+    secrets: SECRETS,
 }, async (event) => {
     const { studentCode } = event.params;
     const data = event.data.val();
     if (!data)
         return;
     setupVapid();
-    // Find uid(s) whose studentCode matches
     const snap = await db()
         .ref("pushSubs")
         .orderByChild("studentCode")
@@ -122,18 +166,15 @@ exports.onNewStudentNotification = (0, database_2.onValueCreated)({
     });
     await Promise.all(sendPromises);
 });
-// ── P4: Daily 8 PM Vietnam reminder ──────────────────────────────────────────
-/**
- * Sends a daily study reminder to ALL subscribed users at 20:00 ICT (13:00 UTC).
- * Iterates pushSubs/ in RTDB — only users who have subscribed will be reached.
- */
+// ── P4: Daily 8 PM Vietnam reminder (all users — free + enrolled) ─────────────
 exports.dailyStudyReminder = (0, scheduler_1.onSchedule)({
-    schedule: "0 13 * * *", // 13:00 UTC = 20:00 ICT (UTC+7)
+    schedule: "0 13 * * *", // 13:00 UTC = 20:00 ICT
     timeZone: "Asia/Ho_Chi_Minh",
-    region: "asia-southeast1",
-    secrets: ["VAPID_SUBJECT", "VAPID_PUBLIC_KEY", "VAPID_PRIVATE_KEY"],
+    region: REGION,
+    secrets: SECRETS,
 }, async () => {
     setupVapid();
+    // Only pushSubs/ — admin subscriptions are in adminSubs/ and should NOT get this
     const snap = await db().ref("pushSubs").get();
     if (!snap.exists())
         return;
@@ -150,5 +191,142 @@ exports.dailyStudyReminder = (0, scheduler_1.onSchedule)({
         sendPromises.push(sendToUidSubs(uid, payload));
     });
     await Promise.all(sendPromises);
+});
+// ── A1: Student nộp daylink → push admin ─────────────────────────────────────
+exports.onStudentDaylink = (0, database_2.onValueCreated)({
+    ref: "/daylinks/{studentCode}/{hwId}",
+    instance: DB_INSTANCE,
+    region: REGION,
+    secrets: SECRETS,
+}, async (event) => {
+    const { studentCode } = event.params;
+    const nameSnap = await db().ref(`students/${studentCode}/name`).get();
+    const name = nameSnap.exists() ? nameSnap.val() : studentCode;
+    const daylinkPayload = {
+        title: `📎 ${name} vừa nộp link bài!`,
+        body: "Nhấn để xem ngay",
+        url: `/admin/students/${studentCode}`,
+    };
+    await writeAdminNotification(daylinkPayload).catch((e) => console.error("[notify] write failed:", e));
+    setupVapid();
+    await sendToAdminSubs(daylinkPayload);
+});
+// ── A2: Student done all tasks → push admin (with dedup) ─────────────────────
+exports.onStudentProgressDone = (0, database_2.onValueWritten)({
+    ref: "/progress/{studentCode}/{date}",
+    instance: DB_INSTANCE,
+    region: REGION,
+    secrets: SECRETS,
+}, async (event) => {
+    const { studentCode, date } = event.params;
+    const after = event.data.after.val();
+    if (!after || typeof after.done !== "number" || typeof after.total !== "number")
+        return;
+    if (after.done < after.total)
+        return;
+    // Dedup: only push once per student per date
+    const dedupRef = db().ref(`notifiedAdmin/${studentCode}/${date}`);
+    const dedupSnap = await dedupRef.get();
+    if (dedupSnap.exists())
+        return;
+    await dedupRef.set(true);
+    const nameSnap = await db().ref(`students/${studentCode}/name`).get();
+    const name = nameSnap.exists() ? nameSnap.val() : studentCode;
+    const progressPayload = {
+        title: `✅ ${name} đã hoàn thành tất cả nhiệm vụ hôm nay!`,
+        body: `${after.done}/${after.total} nhiệm vụ — ${date}`,
+        url: `/admin/students/${studentCode}`,
+    };
+    await writeAdminNotification(progressPayload).catch((e) => console.error("[notify] write failed:", e));
+    setupVapid();
+    await sendToAdminSubs(progressPayload);
+});
+// ── A3: Student đặt lịch → push admin ────────────────────────────────────────
+exports.onBookingCreated = (0, database_2.onValueCreated)({
+    ref: "/bookings/{id}",
+    instance: DB_INSTANCE,
+    region: REGION,
+    secrets: SECRETS,
+}, async (event) => {
+    const booking = event.data.val();
+    if (!booking?.studentId)
+        return;
+    const bookingPayload = {
+        title: `📅 ${booking.studentName ?? booking.studentId} vừa đặt lịch học`,
+        body: booking.date && booking.time ? `${booking.date} lúc ${booking.time}` : "",
+        url: "/admin/bookings",
+    };
+    await writeAdminNotification(bookingPayload).catch((e) => console.error("[notify] write failed:", e));
+    setupVapid();
+    await sendToAdminSubs(bookingPayload);
+});
+// ── S5: Admin duyệt/từ chối booking → push student ───────────────────────────
+exports.onBookingStatusChanged = (0, database_2.onValueWritten)({
+    ref: "/bookings/{id}",
+    instance: DB_INSTANCE,
+    region: REGION,
+    secrets: SECRETS,
+}, async (event) => {
+    const before = event.data.before.val();
+    const after = event.data.after.val();
+    if (!after?.studentId)
+        return;
+    if (!before || before.status === after.status)
+        return; // status không đổi
+    const { status, studentId, date, time } = after;
+    if (status !== "approved" && status !== "declined")
+        return;
+    setupVapid();
+    const payload = status === "approved"
+        ? {
+            title: "✅ Lịch học đã được xác nhận!",
+            body: date && time ? `Buổi học: ${date} lúc ${time}` : "Kiểm tra lịch học của bạn nhé!",
+            url: "/journal/schedule",
+        }
+        : {
+            title: "❌ Lịch học không được chấp nhận",
+            body: "Bạn có thể đặt lịch khác nhé!",
+            url: "/journal/booking",
+        };
+    await sendToStudentByCode(studentId, payload);
+});
+// ── S8: Nhắc trước buổi học 30 phút (cron mỗi 5 phút) ───────────────────────
+exports.scheduledSessionReminder = (0, scheduler_1.onSchedule)({
+    schedule: "*/5 * * * *",
+    timeZone: "Asia/Ho_Chi_Minh",
+    region: REGION,
+    secrets: SECRETS,
+}, async () => {
+    setupVapid();
+    const now = new Date();
+    const windowStart = new Date(now.getTime() + 25 * 60 * 1000); // 25 min from now
+    const windowEnd = new Date(now.getTime() + 35 * 60 * 1000); // 35 min from now
+    const snap = await db().ref("bookings").orderByChild("status").equalTo("approved").get();
+    if (!snap.exists())
+        return;
+    const promises = [];
+    snap.forEach((child) => {
+        const b = child.val();
+        if (!b?.studentId || !b.date || !b.time)
+            return;
+        const sessionTime = parseBookingTime(b.date, b.time);
+        if (sessionTime < windowStart || sessionTime > windowEnd)
+            return;
+        const bookingId = child.key;
+        promises.push((async () => {
+            // Dedup: only remind once per booking
+            const dedupRef = db().ref(`remindedSessions/${bookingId}`);
+            const already = await dedupRef.get();
+            if (already.exists())
+                return;
+            await dedupRef.set(true);
+            await sendToStudentByCode(b.studentId, {
+                title: "⏰ Buổi học sắp bắt đầu!",
+                body: `Còn 30 phút nữa — ${b.date} lúc ${b.time}`,
+                url: "/journal/schedule",
+            });
+        })());
+    });
+    await Promise.all(promises);
 });
 //# sourceMappingURL=index.js.map
