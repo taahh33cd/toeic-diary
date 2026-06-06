@@ -23,7 +23,7 @@ async function saveSubscription(sub: PushSubscription, studentCode?: string): Pr
 }
 
 // Same key as old project (ta2hieu-functions/index.js) — hardcoded to avoid Turbopack cache issues
-const VAPID_PUBLIC_KEY = "BLrjzyy5bIbEzs2C67woqyn_NGrsR4a8QhOGtgCPLGMpOOLJ_K4b0YVuzUAQRbgNQPA06zHfsPTEDcik_PdGA9g";
+const VAPID_PUBLIC_KEY = "BI6oGa-wTvy5QgHNzfM5RxYpdE-eebpptuZd44MFZwE9-ZhMYjDeNTrzPPkI6ekKReAvTdCRckF_pHBQU1JbB6M";
 
 function getVapidKey(): string {
   return VAPID_PUBLIC_KEY;
