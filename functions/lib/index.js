@@ -49,12 +49,17 @@ function db() {
     return (0, database_1.getDatabase)();
 }
 // ── VAPID setup ───────────────────────────────────────────────────────────────
+/** Convert any base64 / base64url variant to unpadded base64url */
+function toBase64Url(s) {
+    return s.trim()             // remove accidental whitespace / newlines
+        .replace(/\+/g, "-")   // standard base64 → base64url
+        .replace(/\//g, "_")   // standard base64 → base64url
+        .replace(/=/g, "");    // remove padding
+}
 function setupVapid() {
     const subject = process.env.VAPID_SUBJECT;
-    // Strip "=" padding — Firebase Secrets may store base64url with padding,
-    // but web-push requires unpadded URL-safe base64.
-    const publicKey = (process.env.VAPID_PUBLIC_KEY ?? "").replace(/=/g, "");
-    const privateKey = (process.env.VAPID_PRIVATE_KEY ?? "").replace(/=/g, "");
+    const publicKey = toBase64Url(process.env.VAPID_PUBLIC_KEY ?? "");
+    const privateKey = toBase64Url(process.env.VAPID_PRIVATE_KEY ?? "");
     if (!subject || !publicKey || !privateKey) {
         throw new Error("VAPID env vars not set");
     }
