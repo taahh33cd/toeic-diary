@@ -35,6 +35,7 @@ function setupVapid() {
   webpush.setVapidDetails(subject, publicKey, privateKey);
 }
 
+// secrets v7
 const SECRETS: string[] = ["VAPID_SUBJECT", "VAPID_PUBLIC_KEY", "VAPID_PRIVATE_KEY"];
 const REGION = "asia-southeast1";
 const DB_INSTANCE = "quanlyhocvien-b1796-default-rtdb";
