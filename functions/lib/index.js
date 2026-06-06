@@ -51,10 +51,10 @@ function db() {
 // ── VAPID setup ───────────────────────────────────────────────────────────────
 /** Convert any base64 / base64url variant to unpadded base64url */
 function toBase64Url(s) {
-    return s.trim()             // remove accidental whitespace / newlines
-        .replace(/\+/g, "-")   // standard base64 → base64url
-        .replace(/\//g, "_")   // standard base64 → base64url
-        .replace(/=/g, "");    // remove padding
+    return s.trim() // remove accidental whitespace / newlines
+        .replace(/\+/g, "-") // standard base64 → base64url
+        .replace(/\//g, "_") // standard base64 → base64url
+        .replace(/=/g, ""); // remove padding
 }
 function setupVapid() {
     const subject = process.env.VAPID_SUBJECT;
@@ -81,7 +81,9 @@ async function sendToUidSubs(uid, payload) {
             return;
         try {
             const sub = JSON.parse(raw);
+            const endpoint = sub.endpoint ?? child.key;
             promises.push(webpush.sendNotification(sub, payloadStr).catch(async (err) => {
+                console.error(`[push/uid=${uid}] status=${err.statusCode} endpoint=${String(endpoint).slice(-30)}`, err.message);
                 if (err.statusCode === 410 || err.statusCode === 404) {
                     await child.ref.remove().catch(() => undefined);
                 }
@@ -116,7 +118,9 @@ async function sendToAdminSubs(payload) {
             return;
         try {
             const sub = JSON.parse(data.subscription);
+            const endpoint = sub.endpoint ?? "";
             promises.push(webpush.sendNotification(sub, payloadStr).catch(async (err) => {
+                console.error(`[push/admin] status=${err.statusCode} endpoint=${String(endpoint).slice(-30)}`, err.message);
                 if (err.statusCode === 410 || err.statusCode === 404) {
                     await child.ref.remove().catch(() => undefined);
                 }
