@@ -10,6 +10,7 @@ export type WordbankItem = {
 export type FillItem = {
   template: string;
   hint: string | null;
+  wordBank?: string[];
   blanks: string[][];
 };
 

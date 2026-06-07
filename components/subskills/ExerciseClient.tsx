@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import type {
   SubskillSet,
   WordbankItem as WBItem,
@@ -224,10 +224,49 @@ function FillPanel({
   submitted: boolean;
   onChange: (i: number, v: string) => void;
 }) {
+  const hasWordBank = !!(item.wordBank && item.wordBank.length > 0);
+  const [activeBlank, setActiveBlank] = useState<number | null>(null);
+
   const blankResults = submitted ? fillItemBlanksCorrect(item, inputs) : null;
   const allCorrect = blankResults?.every(Boolean) ?? false;
 
-  // Parse template into segments
+  // Chips still available (depletion: each word can only be placed once per occurrence)
+  const availableChips = useMemo(() => {
+    if (!item.wordBank) return [];
+    const remaining = [...item.wordBank];
+    for (const v of inputs) {
+      if (v) {
+        const idx = remaining.indexOf(v);
+        if (idx !== -1) remaining.splice(idx, 1);
+      }
+    }
+    return remaining;
+  }, [item.wordBank, inputs]);
+
+  function handleChipClick(chip: string) {
+    if (submitted) return;
+    let target = activeBlank;
+    if (target === null || inputs[target]) {
+      // fall back to first empty blank
+      target = inputs.findIndex((v, i) => !v && i < item.blanks.length);
+      if (target === -1) return;
+    }
+    onChange(target, chip);
+    // advance selection to next empty blank
+    const next = inputs.findIndex((v, i) => !v && i > target! && i < item.blanks.length);
+    setActiveBlank(next === -1 ? null : next);
+  }
+
+  function handleSlotClick(bi: number) {
+    if (submitted) return;
+    if (inputs[bi]) {
+      onChange(bi, "");
+      setActiveBlank(bi);
+    } else {
+      setActiveBlank(bi);
+    }
+  }
+
   const parts = item.template.split(/(\{\d+\})/);
   let blankCounter = 0;
 
@@ -238,17 +277,51 @@ function FillPanel({
           💡 {item.hint}
         </div>
       )}
-      <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "4px 6px", fontSize: "0.95rem", lineHeight: 2, padding: "14px 18px", background: "var(--bg-secondary)", borderRadius: 10 }}>
+
+      {/* Sentence */}
+      <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "4px 6px", fontSize: "0.95rem", lineHeight: 2.2, padding: "14px 18px", background: "var(--bg-secondary)", borderRadius: 10 }}>
         {parts.map((part, pi) => {
           const match = part.match(/^\{(\d+)\}$/);
           if (match) {
             const bi = blankCounter++;
             const ok = blankResults ? blankResults[bi] : null;
+            const isActive = !submitted && activeBlank === bi;
+            const value = inputs[bi] ?? "";
+
+            if (hasWordBank) {
+              return (
+                <span
+                  key={pi}
+                  onClick={() => handleSlotClick(bi)}
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    minWidth: 72,
+                    padding: "3px 10px",
+                    borderRadius: 6,
+                    border: `2px solid ${isActive ? "var(--accent, #4f8ef7)" : ok === true ? "rgba(34,197,94,0.6)" : ok === false ? "rgba(239,68,68,0.55)" : "var(--border)"}`,
+                    background: isActive ? "rgba(79,142,247,0.1)" : ok === true ? "rgba(34,197,94,0.08)" : ok === false ? "rgba(239,68,68,0.07)" : "var(--bg-primary)",
+                    color: ok === true ? "rgb(34,197,94)" : ok === false ? "rgb(239,68,68)" : value ? "var(--text-primary)" : "var(--text-muted)",
+                    cursor: submitted ? "default" : "pointer",
+                    fontSize: "0.88rem",
+                    fontStyle: value ? "normal" : "italic",
+                    userSelect: "none",
+                    verticalAlign: "middle",
+                    transition: "border-color 0.12s, background 0.12s",
+                  }}
+                >
+                  {value || `(${bi + 1})`}
+                </span>
+              );
+            }
+
+            // Text input mode (Easy fill with hint)
             return (
               <input
                 key={pi}
                 type="text"
-                value={inputs[bi] ?? ""}
+                value={value}
                 onChange={e => onChange(bi, e.target.value)}
                 readOnly={submitted}
                 placeholder={`(${bi + 1})`}
@@ -271,6 +344,35 @@ function FillPanel({
           return <span key={pi} style={{ color: "var(--text-primary)" }}>{part}</span>;
         })}
       </div>
+
+      {/* Word bank chips */}
+      {hasWordBank && !submitted && (
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+          {availableChips.map((chip, ci) => (
+            <button
+              key={`${chip}-${ci}`}
+              onClick={() => handleChipClick(chip)}
+              style={{
+                padding: "5px 14px",
+                borderRadius: 20,
+                border: "1.5px solid var(--border)",
+                background: "var(--bg-secondary)",
+                color: "var(--text-primary)",
+                fontSize: "0.85rem",
+                cursor: "pointer",
+                transition: "background 0.12s, border-color 0.12s",
+              }}
+            >
+              {chip}
+            </button>
+          ))}
+          {availableChips.length === 0 && (
+            <span style={{ fontSize: "0.78rem", color: "var(--text-muted)", fontStyle: "italic" }}>
+              Tất cả từ đã được đặt vào ô. Nhấn vào ô để hoàn trả.
+            </span>
+          )}
+        </div>
+      )}
 
       {submitted && (
         <>
