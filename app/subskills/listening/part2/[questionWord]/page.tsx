@@ -3,10 +3,11 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
-import { getPart2Set } from "@/lib/subskills";
+import { getPart2Set, getPart2MediumSet } from "@/lib/subskills";
 import ExerciseClient from "@/components/subskills/ExerciseClient";
+import DifficultyTabs from "@/components/subskills/DifficultyTabs";
 
-type Props = { params: Promise<{ questionWord: string }> };
+type Props = { params: Promise<{ questionWord: string }>; searchParams: Promise<{ d?: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { questionWord } = await params;
@@ -14,15 +15,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: set ? `${set.label} — Subskills Listening Part 2` : "Subskills" };
 }
 
-export default async function ListeningPart2ExercisePage({ params }: Props) {
+export default async function ListeningPart2ExercisePage({ params, searchParams }: Props) {
   const { questionWord } = await params;
-  const set = getPart2Set(questionWord);
-  if (!set) notFound();
+  const { d } = await searchParams;
+  const difficulty = d === "medium" ? "medium" : "easy";
+
+  const easySet = getPart2Set(questionWord);
+  if (!easySet) notFound();
+
+  const mediumSet = getPart2MediumSet(questionWord);
 
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
-  const attempts = user
+  // Fetch Easy attempts
+  const easyAttempts = user
     ? await prisma.subskillAttempt
         .findMany({
           where: { userId: user.id, part: "part2", questionWord },
@@ -31,13 +38,39 @@ export default async function ListeningPart2ExercisePage({ params }: Props) {
         .catch(() => [])
     : [];
 
-  const initialBest: Record<string, { score: number; passed: boolean }> = {};
-  for (const a of attempts) {
+  const easyBest: Record<string, { score: number; passed: boolean }> = {};
+  for (const a of easyAttempts) {
     const key = `${questionWord}:${a.exerciseIndex}`;
-    if (!initialBest[key] || a.score > initialBest[key].score) {
-      initialBest[key] = { score: a.score, passed: a.passed };
+    if (!easyBest[key] || a.score > easyBest[key].score) {
+      easyBest[key] = { score: a.score, passed: a.passed };
     }
   }
+
+  // Unlock Medium if any Easy attempt score ≥ 80%
+  const easyTopScore = Object.values(easyBest).reduce((max, b) => Math.max(max, b.score), 0);
+  const mediumUnlocked = easyTopScore >= 80;
+
+  // Fetch Medium attempts (stored with part: "part2-medium")
+  const mediumAttempts = user && mediumUnlocked
+    ? await prisma.subskillAttempt
+        .findMany({
+          where: { userId: user.id, part: "part2-medium", questionWord },
+          select: { exerciseIndex: true, score: true, passed: true },
+        })
+        .catch(() => [])
+    : [];
+
+  const mediumBest: Record<string, { score: number; passed: boolean }> = {};
+  for (const a of mediumAttempts) {
+    const key = `${questionWord}:${a.exerciseIndex}`;
+    if (!mediumBest[key] || a.score > mediumBest[key].score) {
+      mediumBest[key] = { score: a.score, passed: a.passed };
+    }
+  }
+
+  const activeSet  = difficulty === "medium" && mediumUnlocked && mediumSet ? mediumSet : easySet;
+  const activeBest = difficulty === "medium" && mediumUnlocked ? mediumBest : easyBest;
+  const activeDiff = difficulty === "medium" && mediumUnlocked ? "medium" : "easy";
 
   return (
     <div
@@ -61,23 +94,31 @@ export default async function ListeningPart2ExercisePage({ params }: Props) {
           Listening · Part 2
         </Link>
         <span>›</span>
-        <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>{set.label}</span>
+        <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>{easySet.label}</span>
       </div>
 
       {/* Page header */}
-      <div style={{ marginBottom: "2rem" }}>
+      <div style={{ marginBottom: "1.5rem" }}>
         <h1 style={{ fontSize: "clamp(1.4rem, 3vw, 1.8rem)", fontWeight: 800, color: "var(--text-primary)", margin: "0 0 4px" }}>
-          {set.label}
+          {easySet.label}
         </h1>
         <p style={{ margin: 0, fontSize: "0.88rem", color: "var(--text-muted)", fontStyle: "italic" }}>
-          {set.labelVi}
+          {easySet.labelVi}
         </p>
       </div>
 
-      {/* Client component with all interaction logic */}
+      {/* Difficulty tabs */}
+      <DifficultyTabs
+        questionWord={questionWord}
+        current={activeDiff}
+        mediumUnlocked={mediumUnlocked}
+        easyTopScore={easyTopScore}
+      />
+
+      {/* Client component */}
       <ExerciseClient
-        set={set}
-        initialBest={initialBest}
+        set={activeSet}
+        initialBest={activeBest}
         userId={user?.id ?? null}
       />
 
