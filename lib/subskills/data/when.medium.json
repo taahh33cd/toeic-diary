@@ -1,0 +1,227 @@
+{
+  "part": "part2",
+  "questionWord": "when",
+  "difficulty": "medium",
+  "label": "WHEN",
+  "labelVi": "Câu hỏi WHEN — Medium",
+  "passThreshold": 80,
+  "intro": "Medium: Câu hỏi WHEN hỏi về thời điểm/thời gian. Ở cấp độ này, distractors cũng là thời gian hợp lệ — cần hiểu ngữ cảnh để chọn đúng.",
+  "exercises": [
+    {
+      "kind": "wordbank",
+      "title": "Bài 1 — Sắp xếp câu hỏi (kéo–thả từng từ)",
+      "instruction": "Đọc gợi ý tiếng Việt, sau đó sắp xếp các từ tiếng Anh để tạo thành câu hỏi đúng.",
+      "items": [
+        { "prompt": "Khi nào thỏa thuận với nhà cung cấp mới hết hạn?", "chunks": ["When", "does", "the", "new", "vendor", "agreement", "expire"] },
+        { "prompt": "Khi nào bản báo cáo thường niên được công bố?", "chunks": ["When", "is", "the", "annual", "report", "published"] },
+        { "prompt": "Khi nào vòng phỏng vấn cuối cùng được lên lịch?", "chunks": ["When", "is", "the", "final", "interview", "round", "scheduled"] },
+        { "prompt": "Khi nào chương trình đào tạo kỹ năng mềm bắt đầu?", "chunks": ["When", "does", "the", "soft", "skills", "training", "program", "begin"] },
+        { "prompt": "Khi nào các phiếu đánh giá nhân viên phải được nộp?", "chunks": ["When", "are", "the", "staff", "appraisal", "forms", "due"] },
+        { "prompt": "Khi nào quy trình kiểm toán nội bộ được bắt đầu?", "chunks": ["When", "does", "the", "internal", "audit", "process", "start"] },
+        { "prompt": "Khi nào phần mềm kế toán mới được triển khai?", "chunks": ["When", "will", "the", "new", "accounting", "software", "be", "deployed"] },
+        { "prompt": "Khi nào buổi giới thiệu sản phẩm cho khách hàng được tổ chức?", "chunks": ["When", "is", "the", "client", "product", "showcase", "being", "held"] },
+        { "prompt": "Khi nào thủ tục đề xuất ngân sách cần được hoàn tất?", "chunks": ["When", "must", "the", "budget", "proposal", "process", "be", "completed"] },
+        { "prompt": "Khi nào chuyến thăm địa điểm của đoàn kiểm tra được lên kế hoạch?", "chunks": ["When", "is", "the", "inspection", "team's", "site", "visit", "planned"] },
+        { "prompt": "Khi nào hệ thống nghỉ phép mới có hiệu lực?", "chunks": ["When", "does", "the", "new", "leave", "management", "system", "take", "effect"] },
+        { "prompt": "Khi nào buổi họp cổ đông thường niên được tổ chức?", "chunks": ["When", "is", "the", "annual", "shareholders", "meeting", "held"] },
+        { "prompt": "Khi nào khóa học chứng nhận trực tuyến kết thúc?", "chunks": ["When", "does", "the", "online", "certification", "course", "end"] },
+        { "prompt": "Khi nào chính sách giá mới có hiệu lực?", "chunks": ["When", "will", "the", "new", "pricing", "policy", "come", "into", "effect"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ còn thiếu (không có gợi ý)",
+      "instruction": "Điền từ còn thiếu vào ô trống để hoàn thành câu hỏi tiếng Anh. Không có gợi ý tiếng Việt.",
+      "items": [
+        { "template": "{0} is the {1} for the {2} submission?", "hint": null, "blanks": [["when"], ["deadline", "due date", "cutoff"], ["report", "proposal", "application"]] },
+        { "template": "{0} will the {1} be {2} to staff?", "hint": null, "blanks": [["when"], ["update", "change", "announcement"], ["communicated", "announced", "sent"]] },
+        { "template": "{0} does the {1} contract {2}?", "hint": null, "blanks": [["when"], ["service", "maintenance", "supply"], ["expire", "end", "terminate"]] },
+        { "template": "{0} are the {1} results {2}?", "hint": null, "blanks": [["when"], ["quarterly", "final", "audit"], ["expected", "due", "released"]] },
+        { "template": "{0} will the {1} team {2} the project?", "hint": null, "blanks": [["when"], ["development", "project", "design"], ["complete", "finish", "deliver"]] },
+        { "template": "{0} is the {1} for the {2} review?", "hint": null, "blanks": [["when"], ["schedule", "timetable"], ["performance", "budget", "annual"]] },
+        { "template": "{0} does the {1} open for {2} enrollment?", "hint": null, "blanks": [["when"], ["portal", "system", "platform"], ["training", "benefits", "course"]] },
+        { "template": "{0} were the {1} {2} to the client?", "hint": null, "blanks": [["when"], ["invoices", "reports", "documents"], ["sent", "delivered", "issued"]] },
+        { "template": "{0} will the {1} office {2} after the renovation?", "hint": null, "blanks": [["when"], ["new", "main", "branch"], ["reopen", "open", "be ready"]] },
+        { "template": "{0} is the {1} for {2} the refund?", "hint": null, "blanks": [["when"], ["timeline", "deadline"], ["processing", "issuing", "completing"]] },
+        { "template": "{0} do the {1} employees {2} work?", "hint": null, "blanks": [["when"], ["part-time", "contract", "shift"], ["start", "begin", "commence"]] },
+        { "template": "{0} was the {1} policy last {2}?", "hint": null, "blanks": [["when"], ["expense", "travel", "leave"], ["updated", "revised", "amended"]] },
+        { "template": "{0} does the {1} board {2}?", "hint": null, "blanks": [["when"], ["executive", "advisory", "review"], ["convene", "meet", "assemble"]] },
+        { "template": "{0} will the {1} be {2} to all branches?", "hint": null, "blanks": [["when"], ["system", "platform", "software"], ["rolled out", "deployed", "available"]] }
+      ]
+    },
+    {
+      "kind": "match",
+      "title": "Bài 3 — Ghép câu hỏi & câu trả lời",
+      "instruction": "Chọn câu trả lời phù hợp nhất cho câu hỏi. Tất cả lựa chọn đều là thời gian hợp lệ — đọc kỹ ngữ cảnh.",
+      "items": [
+        {
+          "question": "When is the deadline for submitting performance appraisals?",
+          "options": [
+            "By the end of this Friday.",
+            "Starting from the first of next month.",
+            "Every other Tuesday at ten.",
+            "Sometime in the third quarter.",
+            "As soon as the audit wraps up."
+          ],
+          "correct": 0,
+          "explanation": "Deadline nộp đánh giá hiệu suất thường là cuối tuần cụ thể (A: by end of Friday). Đây là câu trả lời về deadline chính xác nhất trong ngữ cảnh."
+        },
+        {
+          "question": "When do the new employee benefits take effect?",
+          "options": [
+            "By the end of this Friday.",
+            "Starting from the first of next month.",
+            "Every other Tuesday at ten.",
+            "Sometime in the third quarter.",
+            "As soon as the audit wraps up."
+          ],
+          "correct": 1,
+          "explanation": "Phúc lợi mới có hiệu lực từ đầu tháng sau (B). Đây là mốc thời gian hợp lệ cho chính sách nhân sự áp dụng mới."
+        },
+        {
+          "question": "When does the project steering committee meet?",
+          "options": [
+            "By the end of this Friday.",
+            "Starting from the first of next month.",
+            "Every other Tuesday at ten.",
+            "Sometime in the third quarter.",
+            "As soon as the audit wraps up."
+          ],
+          "correct": 2,
+          "explanation": "Ủy ban chỉ đạo dự án họp định kỳ (C: every other Tuesday). Lịch họp định kỳ phù hợp với câu hỏi về thời gian họp thường xuyên."
+        },
+        {
+          "question": "When is the new product line scheduled for launch?",
+          "options": [
+            "By the end of this Friday.",
+            "Starting from the first of next month.",
+            "Every other Tuesday at ten.",
+            "Sometime in the third quarter.",
+            "As soon as the audit wraps up."
+          ],
+          "correct": 3,
+          "explanation": "Ra mắt sản phẩm mới thường được lên kế hoạch theo quý (D: third quarter). Đây là mốc kế hoạch kinh doanh điển hình."
+        },
+        {
+          "question": "When can we finalize the compliance report?",
+          "options": [
+            "By the end of this Friday.",
+            "Starting from the first of next month.",
+            "Every other Tuesday at ten.",
+            "Sometime in the third quarter.",
+            "As soon as the audit wraps up."
+          ],
+          "correct": 4,
+          "explanation": "Báo cáo tuân thủ có thể hoàn tất sau khi kiểm toán xong (E: after audit wraps up). Quan hệ nhân quả rõ ràng: kiểm toán xong → hoàn thiện compliance report."
+        }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn câu trả lời & dịch sang tiếng Anh",
+      "instruction": "Chọn đáp án phù hợp nhất. Nhiều lựa chọn đều là thời gian hợp lệ — đọc kỹ ngữ cảnh để phân biệt.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        {
+          "prompt": "When will the quarterly earnings report be released?",
+          "options": ["After the board reviews it.", "On the last Friday of the month.", "The finance team prepares it.", "Before the end of the fiscal year."],
+          "correct": 0,
+          "explanation": "Báo cáo lợi nhuận hàng quý được phát hành sau khi hội đồng xem xét (A). B (last Friday) quá cụ thể mà không có cơ sở. D (end of fiscal year) đúng cho báo cáo năm, không phải quý. C trả lời cho WHO.",
+          "answerChunks": ["After", "the", "board", "reviews", "it"]
+        },
+        {
+          "prompt": "When does the early-bird discount for the seminar expire?",
+          "options": ["At midnight this Sunday.", "By the end of registration.", "Next week at the latest.", "Two weeks before the event."],
+          "correct": 3,
+          "explanation": "Early-bird discount thường hết hạn trước sự kiện một khoảng thời gian cụ thể (D: two weeks before). A và C không phổ biến cho early-bird. B quá chung chung.",
+          "answerChunks": ["Two", "weeks", "before", "the", "event"]
+        },
+        {
+          "prompt": "When is the maintenance window scheduled?",
+          "options": ["During off-peak hours.", "On the first Sunday of the month.", "After business hours on Friday.", "Whenever IT is available."],
+          "correct": 1,
+          "explanation": "Bảo trì hệ thống thường được lên lịch cố định (B: first Sunday of the month) để tránh ảnh hưởng. A và C không cố định. D không phải lịch trình.",
+          "answerChunks": ["On", "the", "first", "Sunday", "of", "the", "month"]
+        },
+        {
+          "prompt": "When should I apply for the internal job posting?",
+          "options": ["Before the external recruitment begins.", "As soon as possible.", "By the closing date on the notice.", "When your manager approves it."],
+          "correct": 2,
+          "explanation": "Nộp đơn ứng tuyển nội bộ theo ngày đóng hồ sơ trên thông báo (C). B (ASAP) và D (manager approval) là gợi ý nhưng không phải câu trả lời chính xác cho WHEN. A không liên quan đến cách áp dụng.",
+          "answerChunks": ["By", "the", "closing", "date", "on", "the", "notice"]
+        },
+        {
+          "prompt": "When will the new HR software go live?",
+          "options": ["After successful testing.", "Next quarter.", "When the budget is approved.", "On the first of January."],
+          "correct": 3,
+          "explanation": "Phần mềm HR mới thường ra mắt vào đầu năm mới (D: January 1st) để áp dụng từ đầu chu kỳ. A và C là điều kiện tiên quyết. B quá chung chung.",
+          "answerChunks": ["On", "the", "first", "of", "January"]
+        },
+        {
+          "prompt": "When do temporary staff contracts get reviewed?",
+          "options": ["At the end of each assignment.", "Every six months.", "When the client requests it.", "Before the renewal date."],
+          "correct": 0,
+          "explanation": "Hợp đồng nhân viên tạm thời được xem xét khi kết thúc mỗi nhiệm vụ (A). B (every six months) áp dụng cho nhân viên lâu dài hơn. C trả lời cho WHO/CONDITION. D không phải thời điểm rõ ràng.",
+          "answerChunks": ["At", "the", "end", "of", "each", "assignment"]
+        },
+        {
+          "prompt": "When is the best time to schedule a site inspection?",
+          "options": ["During normal business hours.", "When production is at its lowest.", "The safety officer will advise.", "On a weekday morning."],
+          "correct": 1,
+          "explanation": "Thời điểm tốt nhất để kiểm tra địa điểm là khi sản xuất thấp nhất (B) — ít gián đoạn nhất. A (normal hours) có thể là lúc cao điểm. C trả lời cho WHO. D (weekday morning) không xét đến mức độ hoạt động.",
+          "answerChunks": ["When", "production", "is", "at", "its", "lowest"]
+        },
+        {
+          "prompt": "When can staff access the new benefits portal?",
+          "options": ["From next Monday.", "After completing the orientation.", "Once their account is activated.", "When HR sends the login details."],
+          "correct": 2,
+          "explanation": "Nhân viên có thể truy cập portal sau khi tài khoản được kích hoạt (C). A và B là điều kiện thời gian. D trả lời cho CONDITION nhưng không phải WHEN chính xác.",
+          "answerChunks": ["Once", "their", "account", "is", "activated"]
+        },
+        {
+          "prompt": "When was the last time the security system was updated?",
+          "options": ["About six months ago.", "Last financial year.", "Before the office renovation.", "The IT team handles updates."],
+          "correct": 0,
+          "explanation": "Thời điểm cập nhật cuối cùng của hệ thống bảo mật — A (six months ago) là câu trả lời cụ thể và tự nhiên nhất. B (last financial year) là khoảng thời gian nhưng ít chính xác. C là điều kiện. D trả lời cho WHO.",
+          "answerChunks": ["About", "six", "months", "ago"]
+        },
+        {
+          "prompt": "When does the promotional pricing for the software subscription end?",
+          "options": ["At the end of this month.", "After the trial period.", "When the full version launches.", "On the date shown in your confirmation email."],
+          "correct": 3,
+          "explanation": "Thời hạn giá khuyến mãi được ghi rõ trong email xác nhận (D). A, B, C đều có thể đúng nhưng D là câu trả lời chính xác và đáng tin cậy nhất cho giá subscription.",
+          "answerChunks": ["On", "the", "date", "shown", "in", "your", "confirmation", "email"]
+        },
+        {
+          "prompt": "When will the project handover be completed?",
+          "options": ["By the end of the sprint.", "After final client sign-off.", "Next Monday if all goes well.", "The project manager will confirm."],
+          "correct": 1,
+          "explanation": "Bàn giao dự án hoàn tất sau khi khách hàng ký nghiệm thu cuối cùng (B: final client sign-off). A (end of sprint) là mốc nội bộ. C (next Monday) không chắc chắn. D trả lời cho WHO.",
+          "answerChunks": ["After", "final", "client", "sign-off"]
+        },
+        {
+          "prompt": "When are expense reports due each month?",
+          "options": ["On the fifth of every month.", "By the last working day.", "When payroll is processed.", "At the end of each quarter."],
+          "correct": 1,
+          "explanation": "Báo cáo chi phí nộp vào ngày làm việc cuối tháng (B). A (fifth) thường là deadline quá sớm. C (when payroll processed) là kết quả, không phải deadline. D (quarterly) sai chu kỳ.",
+          "answerChunks": ["By", "the", "last", "working", "day"]
+        },
+        {
+          "prompt": "When does the company hold its annual strategy retreat?",
+          "options": ["At the beginning of each fiscal year.", "After the Q4 results are in.", "During the summer break.", "When the board approves the agenda."],
+          "correct": 1,
+          "explanation": "Hội nghị chiến lược thường tổ chức sau khi có kết quả Q4 (B) để lên kế hoạch năm tiếp theo. A (beginning of fiscal year) là lúc triển khai, không phải retreat. C (summer break) không phổ biến cho doanh nghiệp. D trả lời cho CONDITION.",
+          "answerChunks": ["After", "the", "Q4", "results", "are", "in"]
+        },
+        {
+          "prompt": "When should staff complete the mandatory compliance training?",
+          "options": ["Within 30 days of joining.", "By the end of the current quarter.", "Whenever they have time.", "Before annual leave begins."],
+          "correct": 0,
+          "explanation": "Đào tạo tuân thủ bắt buộc phải hoàn thành trong 30 ngày từ khi gia nhập (A). B (end of quarter) áp dụng cho nhân viên hiện tại, không phải mới. C không phải deadline. D không liên quan.",
+          "answerChunks": ["Within", "30", "days", "of", "joining"]
+        }
+      ]
+    }
+  ]
+}

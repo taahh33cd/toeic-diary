@@ -9,7 +9,7 @@ export type WordbankItem = {
 
 export type FillItem = {
   template: string;
-  hint: string;
+  hint: string | null;
   blanks: string[][];
 };
 
@@ -21,10 +21,17 @@ export type KeywordItem = {
 
 export type McqItem = {
   prompt: string;
-  options: [string, string, string];
-  correct: 0 | 1 | 2;
+  options: [string, string, string] | [string, string, string, string];
+  correct: 0 | 1 | 2 | 3;
   explanation: string;
   answerChunks: string[];
+};
+
+export type MatchItem = {
+  question: string;
+  options: [string, string, string, string, string];
+  correct: 0 | 1 | 2 | 3 | 4;
+  explanation: string;
 };
 
 export type WordbankExercise = {
@@ -57,20 +64,29 @@ export type McqExercise = {
   items: McqItem[];
 };
 
+export type MatchExercise = {
+  kind: "match";
+  title: string;
+  instruction: string;
+  items: MatchItem[];
+};
+
 export type AnyExercise =
   | WordbankExercise
   | FillExercise
   | KeywordExercise
-  | McqExercise;
+  | McqExercise
+  | MatchExercise;
 
 export type SubskillSet = {
   part: string;
   questionWord: string;
+  difficulty?: string;
   label: string;
   labelVi: string;
   passThreshold: number;
   intro: string;
-  exercises: [WordbankExercise, FillExercise, KeywordExercise, McqExercise];
+  exercises: [AnyExercise, AnyExercise, AnyExercise, AnyExercise];
 };
 
 // ─────────────────────────────────────
@@ -88,6 +104,17 @@ import yesNoData from "@/lib/subskills/data/yes-no.json";
 import tagData   from "@/lib/subskills/data/tag.json";
 import choiceData from "@/lib/subskills/data/choice.json";
 
+import whoMediumData    from "@/lib/subskills/data/who.medium.json";
+import whatMediumData   from "@/lib/subskills/data/what.medium.json";
+import whichMediumData  from "@/lib/subskills/data/which.medium.json";
+import whereMediumData  from "@/lib/subskills/data/where.medium.json";
+import whenMediumData   from "@/lib/subskills/data/when.medium.json";
+import whyMediumData    from "@/lib/subskills/data/why.medium.json";
+import howMediumData    from "@/lib/subskills/data/how.medium.json";
+import yesNoMediumData  from "@/lib/subskills/data/yes-no.medium.json";
+import tagMediumData    from "@/lib/subskills/data/tag.medium.json";
+import choiceMediumData from "@/lib/subskills/data/choice.medium.json";
+
 export const PART2_SETS: SubskillSet[] = [
   whoData,
   whatData,
@@ -101,8 +128,25 @@ export const PART2_SETS: SubskillSet[] = [
   choiceData,
 ] as SubskillSet[];
 
+export const PART2_MEDIUM_SETS: SubskillSet[] = [
+  whoMediumData,
+  whatMediumData,
+  whichMediumData,
+  whereMediumData,
+  whenMediumData,
+  whyMediumData,
+  howMediumData,
+  yesNoMediumData,
+  tagMediumData,
+  choiceMediumData,
+] as SubskillSet[];
+
 export function getPart2Set(questionWord: string): SubskillSet | undefined {
   return PART2_SETS.find((s) => s.questionWord === questionWord);
+}
+
+export function getPart2MediumSet(questionWord: string): SubskillSet | undefined {
+  return PART2_MEDIUM_SETS.find((s) => s.questionWord === questionWord);
 }
 
 // ─────────────────────────────────────

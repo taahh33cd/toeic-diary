@@ -1,0 +1,227 @@
+{
+  "part": "part2",
+  "questionWord": "who",
+  "difficulty": "medium",
+  "label": "WHO",
+  "labelVi": "Câu hỏi WHO — Medium",
+  "passThreshold": 80,
+  "intro": "Medium: Sắp xếp từng từ tiếng Anh thành câu hỏi, điền từ không có gợi ý, ghép câu hỏi với đáp án đúng ngữ cảnh, và phân biệt chức danh phù hợp nhất trong các lựa chọn tương đồng.",
+  "exercises": [
+    {
+      "kind": "wordbank",
+      "title": "Bài 1 — Sắp xếp câu hỏi (kéo–thả từng từ)",
+      "instruction": "Đọc gợi ý tiếng Việt, sau đó sắp xếp các từ tiếng Anh để tạo thành câu hỏi đúng.",
+      "items": [
+        { "prompt": "Ai phê duyệt các khoản chi hàng tháng?", "chunks": ["Who", "approves", "the", "monthly", "expenses"] },
+        { "prompt": "Ai sẽ dẫn dắt buổi định hướng nhân viên mới?", "chunks": ["Who", "will", "lead", "the", "new", "employee", "orientation"] },
+        { "prompt": "Ai xử lý các khiếu nại của nhà cung cấp?", "chunks": ["Who", "handles", "vendor", "complaints"] },
+        { "prompt": "Ai đã biên soạn báo cáo kiểm toán?", "chunks": ["Who", "compiled", "the", "audit", "report"] },
+        { "prompt": "Ai chịu trách nhiệm về tuân thủ an toàn?", "chunks": ["Who", "is", "responsible", "for", "safety", "compliance"] },
+        { "prompt": "Ai đang giám sát việc tái cơ cấu phòng ban?", "chunks": ["Who", "is", "overseeing", "the", "department", "restructuring"] },
+        { "prompt": "Ai phê duyệt các yêu cầu hoàn tiền công tác?", "chunks": ["Who", "approves", "travel", "reimbursement", "requests"] },
+        { "prompt": "Ai đã thương lượng các điều khoản hợp đồng mới nhất?", "chunks": ["Who", "negotiated", "the", "latest", "contract", "terms"] },
+        { "prompt": "Ai được chỉ định làm điều phối viên dự án?", "chunks": ["Who", "was", "assigned", "as", "project", "coordinator"] },
+        { "prompt": "Ai quản lý mối quan hệ với khách hàng doanh nghiệp?", "chunks": ["Who", "manages", "the", "corporate", "client", "relationships"] },
+        { "prompt": "Ai cập nhật hệ thống lương hàng quý?", "chunks": ["Who", "updates", "the", "payroll", "system", "quarterly"] },
+        { "prompt": "Ai cần xem xét đề xuất trước khi nộp?", "chunks": ["Who", "needs", "to", "review", "the", "proposal", "before", "submission"] },
+        { "prompt": "Ai liên lạc với nhà cung cấp dịch vụ logistics?", "chunks": ["Who", "liaises", "with", "the", "logistics", "provider"] },
+        { "prompt": "Ai phụ trách tuyển dụng cho quý tới?", "chunks": ["Who", "is", "in", "charge", "of", "recruitment", "next", "quarter"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ còn thiếu (không có gợi ý)",
+      "instruction": "Điền từ còn thiếu vào ô trống để hoàn thành câu hỏi tiếng Anh. Không có gợi ý tiếng Việt.",
+      "items": [
+        { "template": "{0} {1} the annual {2} report last quarter?", "hint": null, "blanks": [["who"], ["prepared", "wrote", "compiled"], ["financial", "budget", "sales"]] },
+        { "template": "{0} is {1} for the client {2} process?", "hint": null, "blanks": [["who"], ["responsible", "accountable"], ["onboarding", "account"]] },
+        { "template": "{0} do we {1} when the {2} goes down?", "hint": null, "blanks": [["who"], ["contact", "call", "notify"], ["system", "server", "network"]] },
+        { "template": "{0} {1} the decision to {2} the project timeline?", "hint": null, "blanks": [["who"], ["made", "took"], ["extend", "revise", "adjust"]] },
+        { "template": "{0} is {1} the team while the {2} is on leave?", "hint": null, "blanks": [["who"], ["leading", "managing", "covering"], ["manager", "director", "supervisor"]] },
+        { "template": "{0} can I {1} to about the {2} complaint?", "hint": null, "blanks": [["who"], ["speak", "talk"], ["customer", "client", "billing"]] },
+        { "template": "{0} {1} the warehouse {2} last Friday?", "hint": null, "blanks": [["who"], ["inspected", "visited", "checked"], ["inventory", "stock", "supplies"]] },
+        { "template": "{0} {1} the {2} credentials for the new system?", "hint": null, "blanks": [["who"], ["reset", "set up", "created"], ["login", "access", "admin"]] },
+        { "template": "{0} needs to {1} the {2} request form?", "hint": null, "blanks": [["who"], ["sign", "approve", "authorize"], ["expense", "leave", "purchase"]] },
+        { "template": "{0} {1} you about the {2} policy change?", "hint": null, "blanks": [["who"], ["told", "informed", "notified"], ["new", "updated", "revised"]] },
+        { "template": "{0} is {1} for the year-end {2} event?", "hint": null, "blanks": [["who"], ["organizing", "planning", "coordinating"], ["staff", "company", "annual"]] },
+        { "template": "{0} {1} the {2} review before the board meeting?", "hint": null, "blanks": [["who"], ["conducted", "led", "ran"], ["performance", "budget", "financial"]] },
+        { "template": "{0} was {1} to {2} the overseas branch?", "hint": null, "blanks": [["who"], ["sent", "assigned", "dispatched"], ["manage", "oversee", "run"]] },
+        { "template": "{0} {1} the vendor {2} for next year?", "hint": null, "blanks": [["who"], ["selected", "chose", "approved"], ["contract", "agreement", "proposal"]] }
+      ]
+    },
+    {
+      "kind": "match",
+      "title": "Bài 3 — Ghép câu hỏi & câu trả lời",
+      "instruction": "Chọn câu trả lời phù hợp nhất cho câu hỏi. Tất cả lựa chọn đều hợp lệ ngữ pháp — chỉ một câu khớp đúng ngữ cảnh.",
+      "items": [
+        {
+          "question": "Who coordinates the staff training schedule?",
+          "options": [
+            "The HR team handles that.",
+            "You should check with finance.",
+            "Our compliance officer signed off.",
+            "Ms. Tran from business development.",
+            "The department head takes care of logistics."
+          ],
+          "correct": 0,
+          "explanation": "Lịch đào tạo nhân viên thuộc phạm vi HR team. Các đáp án còn lại đều là người/bộ phận nhưng đúng cho các câu hỏi khác trong bộ này."
+        },
+        {
+          "question": "Who should I contact about expense reimbursements?",
+          "options": [
+            "The HR team handles that.",
+            "You should check with finance.",
+            "Our compliance officer signed off.",
+            "Ms. Tran from business development.",
+            "The department head takes care of logistics."
+          ],
+          "correct": 1,
+          "explanation": "Hoàn tiền chi phí là việc của bộ phận tài chính. Đáp án B (finance) phù hợp nhất với ngữ cảnh câu hỏi này."
+        },
+        {
+          "question": "Who reviewed the workplace safety procedures?",
+          "options": [
+            "The HR team handles that.",
+            "You should check with finance.",
+            "Our compliance officer signed off.",
+            "Ms. Tran from business development.",
+            "The department head takes care of logistics."
+          ],
+          "correct": 2,
+          "explanation": "Compliance officer (cán bộ tuân thủ) phụ trách các quy trình an toàn lao động. Đáp án C phù hợp nhất."
+        },
+        {
+          "question": "Who will represent our company at the trade fair?",
+          "options": [
+            "The HR team handles that.",
+            "You should check with finance.",
+            "Our compliance officer signed off.",
+            "Ms. Tran from business development.",
+            "The department head takes care of logistics."
+          ],
+          "correct": 3,
+          "explanation": "Đại diện công ty tại hội chợ thương mại thường là bộ phận phát triển kinh doanh. Ms. Tran (D) phù hợp nhất."
+        },
+        {
+          "question": "Who arranged the shipping for the client order?",
+          "options": [
+            "The HR team handles that.",
+            "You should check with finance.",
+            "Our compliance officer signed off.",
+            "Ms. Tran from business development.",
+            "The department head takes care of logistics."
+          ],
+          "correct": 4,
+          "explanation": "Vận chuyển/logistics là việc của department head phụ trách logistics. Đáp án E phù hợp nhất."
+        }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn câu trả lời & dịch sang tiếng Anh",
+      "instruction": "Chọn đáp án phù hợp nhất. Nhiều lựa chọn đều là người/chức danh — đọc kỹ ngữ cảnh để chọn đúng.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        {
+          "prompt": "Who is overseeing the new branch opening?",
+          "options": ["The regional director.", "The store manager.", "Next quarter.", "The operations supervisor."],
+          "correct": 0,
+          "explanation": "Mở chi nhánh mới là quyết định chiến lược cấp cao → regional director phù hợp nhất. B (store manager) và D (operations supervisor) là cấp thấp hơn. C (Next quarter) trả lời cho WHEN.",
+          "answerChunks": ["The", "regional", "director"]
+        },
+        {
+          "prompt": "Who should approve the new hiring plan?",
+          "options": ["The HR manager.", "The department head.", "Last week.", "The recruitment officer."],
+          "correct": 1,
+          "explanation": "Phê duyệt kế hoạch tuyển dụng là quyền của trưởng bộ phận (department head). A và D là nhân sự thực hiện, không phải người phê duyệt. C trả lời cho WHEN.",
+          "answerChunks": ["The", "department", "head"]
+        },
+        {
+          "prompt": "Who handles IT security for the whole office?",
+          "options": ["The help desk technician.", "In the server room.", "The IT security officer.", "The systems administrator."],
+          "correct": 2,
+          "explanation": "IT security (bảo mật CNTT) thuộc phạm vi IT security officer. A là kỹ thuật viên hỗ trợ, D là quản trị hệ thống — đều không chuyên trách bảo mật. B trả lời cho WHERE.",
+          "answerChunks": ["The", "IT", "security", "officer"]
+        },
+        {
+          "prompt": "Who prepared the quarterly earnings presentation?",
+          "options": ["The financial analyst.", "The accounting manager.", "Two days ago.", "The CFO."],
+          "correct": 0,
+          "explanation": "Chuẩn bị bài thuyết trình thu nhập hàng quý thường là việc của financial analyst (phân tích tài chính). B và D là cấp quản lý cao hơn, thường review chứ không tự chuẩn bị. C trả lời cho WHEN.",
+          "answerChunks": ["The", "financial", "analyst"]
+        },
+        {
+          "prompt": "Who is the main contact for our key client accounts?",
+          "options": ["The sales representative.", "The account manager.", "The customer service agent.", "Since last year."],
+          "correct": 1,
+          "explanation": "Key client accounts (tài khoản khách hàng trọng yếu) do account manager (quản lý tài khoản) phụ trách. A và C tiếp xúc khách hàng nhưng không phải đầu mối chính cho key accounts. D trả lời cho WHEN.",
+          "answerChunks": ["The", "account", "manager"]
+        },
+        {
+          "prompt": "Who do new employees report to during their first month?",
+          "options": ["Their assigned mentor.", "The HR coordinator.", "At the main office.", "Their direct supervisor."],
+          "correct": 3,
+          "explanation": "Nhân viên mới báo cáo trực tiếp với direct supervisor (quản lý trực tiếp) của họ. A (mentor) và B (HR coordinator) hỗ trợ nhưng không phải người nhận báo cáo công việc. C trả lời cho WHERE.",
+          "answerChunks": ["Their", "direct", "supervisor"]
+        },
+        {
+          "prompt": "Who is responsible for ordering office supplies?",
+          "options": ["The office administrator.", "Every two weeks.", "The procurement officer.", "The facilities manager."],
+          "correct": 2,
+          "explanation": "Đặt mua vật tư văn phòng thuộc về procurement officer (cán bộ mua sắm). A và D có thể liên quan nhưng procurement officer là vai trò chuyên biệt nhất. B trả lời cho WHEN.",
+          "answerChunks": ["The", "procurement", "officer"]
+        },
+        {
+          "prompt": "Who reviews employee performance evaluations?",
+          "options": ["The line manager.", "Through an online system.", "The HR director.", "The team leader."],
+          "correct": 2,
+          "explanation": "Đánh giá hiệu suất nhân viên được xem xét bởi HR director (giám đốc nhân sự) ở cấp tổng thể. A và D thực hiện đánh giá nhưng không phải người review cuối. B trả lời cho HOW.",
+          "answerChunks": ["The", "HR", "director"]
+        },
+        {
+          "prompt": "Who authorizes system access for new staff?",
+          "options": ["The IT department.", "The systems administrator.", "Upon joining.", "The help desk team."],
+          "correct": 1,
+          "explanation": "Cấp quyền truy cập hệ thống là công việc của systems administrator (quản trị viên hệ thống). A (IT department) quá chung chung, D (help desk) chỉ hỗ trợ sự cố. C trả lời cho WHEN.",
+          "answerChunks": ["The", "systems", "administrator"]
+        },
+        {
+          "prompt": "Who should I talk to about extending my contract?",
+          "options": ["Your direct manager.", "The HR business partner.", "Next month.", "The payroll officer."],
+          "correct": 1,
+          "explanation": "Gia hạn hợp đồng là việc của HR business partner, không phải manager trực tiếp hay payroll. A có thể biết thông tin nhưng không phải người quyết định. C trả lời cho WHEN.",
+          "answerChunks": ["The", "HR", "business", "partner"]
+        },
+        {
+          "prompt": "Who is in charge of quality control on the production line?",
+          "options": ["The production manager.", "At the factory floor.", "The QC supervisor.", "The shift leader."],
+          "correct": 2,
+          "explanation": "Quality control (kiểm soát chất lượng) thuộc trách nhiệm của QC supervisor (giám sát QC). A và D là cấp quản lý sản xuất chung, không chuyên trách QC. B trả lời cho WHERE.",
+          "answerChunks": ["The", "QC", "supervisor"]
+        },
+        {
+          "prompt": "Who signed the memorandum of understanding with the partner firm?",
+          "options": ["The legal counsel.", "The managing director.", "Last Thursday.", "The business development manager."],
+          "correct": 1,
+          "explanation": "Ký biên bản ghi nhớ (MOU) là thẩm quyền của managing director (giám đốc điều hành). A soạn thảo pháp lý, D dàn xếp thỏa thuận, nhưng chữ ký là của MD. C trả lời cho WHEN.",
+          "answerChunks": ["The", "managing", "director"]
+        },
+        {
+          "prompt": "Who processes the weekly payroll?",
+          "options": ["The finance officer.", "The payroll specialist.", "Every Friday.", "The HR coordinator."],
+          "correct": 1,
+          "explanation": "Xử lý bảng lương hàng tuần là việc của payroll specialist (chuyên viên lương). A và D có thể liên quan nhưng payroll specialist là vai trò chuyên biệt nhất. C trả lời cho WHEN.",
+          "answerChunks": ["The", "payroll", "specialist"]
+        },
+        {
+          "prompt": "Who is leading the digital transformation initiative?",
+          "options": ["The IT project manager.", "The CTO.", "Across all departments.", "The innovation director."],
+          "correct": 3,
+          "explanation": "Dẫn dắt sáng kiến chuyển đổi số là vai trò chiến lược của innovation director. A và B là người triển khai kỹ thuật, không phải người dẫn dắt sáng kiến toàn công ty. C trả lời cho WHERE.",
+          "answerChunks": ["The", "innovation", "director"]
+        }
+      ]
+    }
+  ]
+}

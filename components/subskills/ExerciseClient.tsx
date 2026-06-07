@@ -7,6 +7,7 @@ import type {
   FillItem as FIItem,
   KeywordItem as KWItem,
   McqItem as MCQItem,
+  MatchItem as MTItem,
 } from "@/lib/subskills";
 import {
   wordbankItemCorrect,
@@ -232,9 +233,11 @@ function FillPanel({
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-      <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", fontStyle: "italic" }}>
-        💡 {item.hint}
-      </div>
+      {item.hint && (
+        <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", fontStyle: "italic" }}>
+          💡 {item.hint}
+        </div>
+      )}
       <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "4px 6px", fontSize: "0.95rem", lineHeight: 2, padding: "14px 18px", background: "var(--bg-secondary)", borderRadius: 10 }}>
         {parts.map((part, pi) => {
           const match = part.match(/^\{(\d+)\}$/);
@@ -430,7 +433,7 @@ function McqPanel({
               }}
             >
               <span style={{ fontWeight: 700, color: "var(--text-muted)", fontSize: "0.78rem", minWidth: 16 }}>
-                {["A", "B", "C"][i]}
+                {["A", "B", "C", "D"][i]}
               </span>
               {opt}
             </button>
@@ -459,6 +462,86 @@ function McqPanel({
       {submitted && (
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           <ResultBadge correct={allOk} />
+          <div style={{
+            padding: "10px 14px",
+            background: "var(--bg-elevated)",
+            borderRadius: 8,
+            fontSize: "0.8rem",
+            color: "var(--text-secondary)",
+            borderLeft: "3px solid var(--border)",
+          }}>
+            {item.explanation}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── Match quiz panel ─────────────────────────────────────────────
+
+function MatchPanel({
+  item,
+  choice,
+  submitted,
+  onChoose,
+}: {
+  item: MTItem;
+  choice: number | null;
+  submitted: boolean;
+  onChoose: (i: number) => void;
+}) {
+  const isCorrect = submitted && choice === item.correct;
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+      <p style={{ margin: 0, fontSize: "1rem", fontWeight: 600, color: "var(--text-primary)", background: "var(--bg-secondary)", padding: "14px 18px", borderRadius: 10, borderLeft: "3px solid var(--accent-primary)" }}>
+        {item.question}
+      </p>
+
+      <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+        {item.options.map((opt, i) => {
+          const isSelected  = choice === i;
+          const showCorrect = submitted && i === item.correct;
+          const showWrong   = submitted && isSelected && i !== item.correct;
+          return (
+            <button
+              key={i}
+              onClick={() => onChoose(i)}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                padding: "11px 16px",
+                borderRadius: 8,
+                border: `1.5px solid ${
+                  showCorrect ? "rgba(34,197,94,0.5)"
+                  : showWrong  ? "rgba(239,68,68,0.5)"
+                  : isSelected ? "var(--accent-primary)"
+                  : "var(--border)"
+                }`,
+                background: showCorrect ? "rgba(34,197,94,0.08)"
+                  : showWrong  ? "rgba(239,68,68,0.07)"
+                  : isSelected ? "rgba(59,130,246,0.08)"
+                  : "var(--bg-secondary)",
+                cursor: submitted ? "default" : "pointer",
+                textAlign: "left",
+                color: showCorrect ? "rgb(34,197,94)" : showWrong ? "rgb(239,68,68)" : "var(--text-primary)",
+                fontSize: "0.9rem",
+              }}
+            >
+              <span style={{ fontWeight: 700, color: "var(--text-muted)", fontSize: "0.78rem", minWidth: 16 }}>
+                {["A", "B", "C", "D", "E"][i]}
+              </span>
+              {opt}
+            </button>
+          );
+        })}
+      </div>
+
+      {submitted && (
+        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+          <ResultBadge correct={isCorrect} />
           <div style={{
             padding: "10px 14px",
             background: "var(--bg-elevated)",
@@ -784,6 +867,8 @@ export default function ExerciseClient({
   const [mcqChoice, setMcqChoice] = useState<number | null>(null);
   const [mcqTSlots, setMcqTSlots] = useState<(string | null)[]>([]);
   const [mcqTBank, setMcqTBank] = useState<string[]>([]);
+  // Match (Bài 3 — Medium)
+  const [matchChoice, setMatchChoice] = useState<number | null>(null);
 
   const ex = set.exercises[exIdx];
 
@@ -804,6 +889,8 @@ export default function ExerciseClient({
       setMcqChoice(null);
       setMcqTSlots(item.answerChunks.map(() => null));
       setMcqTBank(shuffle(item.answerChunks));
+    } else if (exercise.kind === "match") {
+      setMatchChoice(null);
     }
   }
 
@@ -853,6 +940,9 @@ export default function ExerciseClient({
       correct =
         mcqChoice === item.correct &&
         item.answerChunks.every((c, j) => c === arranged[j]);
+    } else if (ex.kind === "match") {
+      const item = ex.items[itemIdx] as MTItem;
+      correct = matchChoice === item.correct;
     }
 
     setSubmitted(true);
@@ -936,7 +1026,8 @@ export default function ExerciseClient({
       ex.kind === "fill" ||
       ex.kind === "keyword" ||
       (ex.kind === "wordbank" && wbSlots.every(s => s !== null)) ||
-      (ex.kind === "mcq" && mcqChoice !== null && mcqTSlots.every(s => s !== null))
+      (ex.kind === "mcq" && mcqChoice !== null && mcqTSlots.every(s => s !== null)) ||
+      (ex.kind === "match" && matchChoice !== null)
     );
 
   // ── Renders ───────────────────────────────────────────────────
@@ -1036,6 +1127,14 @@ export default function ExerciseClient({
           onChoose={c => { if (!submitted) setMcqChoice(c); }}
           onPickBank={mcqTPickBank}
           onReturnSlot={mcqTReturnSlot}
+        />
+      )}
+      {ex.kind === "match" && (
+        <MatchPanel
+          item={items[itemIdx] as MTItem}
+          choice={matchChoice}
+          submitted={submitted}
+          onChoose={c => { if (!submitted) setMatchChoice(c); }}
         />
       )}
 

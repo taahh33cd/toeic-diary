@@ -1,0 +1,227 @@
+{
+  "part": "part2",
+  "questionWord": "which",
+  "difficulty": "medium",
+  "label": "WHICH",
+  "labelVi": "Câu hỏi WHICH — Medium",
+  "passThreshold": 80,
+  "intro": "Medium: Câu hỏi WHICH yêu cầu chọn giữa các lựa chọn cụ thể. Ở cấp độ này, distractors cùng loại làm khó việc phân biệt — phải đọc kỹ ngữ cảnh.",
+  "exercises": [
+    {
+      "kind": "wordbank",
+      "title": "Bài 1 — Sắp xếp câu hỏi (kéo–thả từng từ)",
+      "instruction": "Đọc gợi ý tiếng Việt, sau đó sắp xếp các từ tiếng Anh để tạo thành câu hỏi đúng.",
+      "items": [
+        { "prompt": "Phòng ban nào chịu trách nhiệm về dự án này?", "chunks": ["Which", "department", "is", "responsible", "for", "this", "project"] },
+        { "prompt": "Cách tiếp cận nào phù hợp hơn với ngân sách của chúng ta?", "chunks": ["Which", "approach", "best", "fits", "our", "budget"] },
+        { "prompt": "Phiên bản nào của phần mềm chúng ta đang dùng?", "chunks": ["Which", "version", "of", "the", "software", "are", "we", "using"] },
+        { "prompt": "Ứng viên nào được chọn cho vị trí đó?", "chunks": ["Which", "candidate", "was", "selected", "for", "the", "position"] },
+        { "prompt": "Nhà cung cấp nào cung cấp mức giá tốt nhất?", "chunks": ["Which", "vendor", "offered", "the", "best", "price"] },
+        { "prompt": "Thị trường nào chúng ta nên nhắm mục tiêu trước tiên?", "chunks": ["Which", "market", "should", "we", "target", "first"] },
+        { "prompt": "Hợp đồng nào cần gia hạn vào tháng tới?", "chunks": ["Which", "contract", "needs", "to", "be", "renewed", "next", "month"] },
+        { "prompt": "Tuyến đường nào hiệu quả hơn cho việc phân phối?", "chunks": ["Which", "route", "is", "more", "efficient", "for", "distribution"] },
+        { "prompt": "Kế hoạch nào ban quản lý đã phê duyệt?", "chunks": ["Which", "plan", "did", "management", "approve"] },
+        { "prompt": "Gói dịch vụ nào phù hợp nhất với nhu cầu của chúng ta?", "chunks": ["Which", "service", "package", "best", "suits", "our", "needs"] },
+        { "prompt": "Phương án nào trong hai phương án ít tốn kém hơn?", "chunks": ["Which", "of", "the", "two", "options", "is", "less", "expensive"] },
+        { "prompt": "Đội nào sẽ xử lý việc triển khai?", "chunks": ["Which", "team", "will", "handle", "the", "implementation"] },
+        { "prompt": "Tòa nhà văn phòng nào mà khách hàng đến thăm?", "chunks": ["Which", "office", "building", "is", "the", "client", "visiting"] },
+        { "prompt": "Bộ phận nào sẽ dẫn dắt quá trình tích hợp?", "chunks": ["Which", "division", "will", "lead", "the", "integration", "process"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ còn thiếu (không có gợi ý)",
+      "instruction": "Điền từ còn thiếu vào ô trống để hoàn thành câu hỏi tiếng Anh. Không có gợi ý tiếng Việt.",
+      "items": [
+        { "template": "{0} {1} did the committee {2}?", "hint": null, "blanks": [["which"], ["proposal", "option", "plan"], ["approve", "select", "choose"]] },
+        { "template": "{0} {1} should we use for the {2}?", "hint": null, "blanks": [["which"], ["template", "format", "system"], ["report", "presentation", "submission"]] },
+        { "template": "{0} of the {1} is {2} compliant?", "hint": null, "blanks": [["which"], ["products", "models", "versions"], ["fully", "currently"]] },
+        { "template": "{0} {1} has the {2} response time?", "hint": null, "blanks": [["which"], ["provider", "vendor", "supplier"], ["fastest", "best", "quickest"]] },
+        { "template": "{0} {1} are {2} for the conference?", "hint": null, "blanks": [["which"], ["dates", "sessions", "rooms"], ["available", "confirmed", "booked"]] },
+        { "template": "{0} {1} should be {2} to the client first?", "hint": null, "blanks": [["which"], ["item", "feature", "module"], ["presented", "demonstrated", "shown"]] },
+        { "template": "{0} {1} has the {2} track record?", "hint": null, "blanks": [["which"], ["firm", "agency", "company"], ["better", "stronger", "longer"]] },
+        { "template": "{0} {1} covers the {2} scenario?", "hint": null, "blanks": [["which"], ["policy", "clause", "provision"], ["liability", "refund", "cancellation"]] },
+        { "template": "{0} branch {1} the {2} figures?", "hint": null, "blanks": [["which"], ["reported", "submitted", "exceeded"], ["target", "quarterly", "projected"]] },
+        { "template": "{0} {1} is more {2} for remote collaboration?", "hint": null, "blanks": [["which"], ["platform", "tool", "software"], ["suitable", "effective", "efficient"]] },
+        { "template": "{0} {1} did the {2} recommend?", "hint": null, "blanks": [["which"], ["option", "course", "approach"], ["consultant", "auditor", "advisor"]] },
+        { "template": "{0} {1} should be {2} before the merger?", "hint": null, "blanks": [["which"], ["issues", "matters", "concerns"], ["resolved", "addressed", "settled"]] },
+        { "template": "{0} {1} handles {2} data backup?", "hint": null, "blanks": [["which"], ["team", "department", "unit"], ["daily", "weekly", "automated"]] },
+        { "template": "{0} {1} is the {2} for international transfers?", "hint": null, "blanks": [["which"], ["account", "channel", "method"], ["correct", "right", "approved"]] }
+      ]
+    },
+    {
+      "kind": "match",
+      "title": "Bài 3 — Ghép câu hỏi & câu trả lời",
+      "instruction": "Chọn câu trả lời phù hợp nhất cho câu hỏi. Tất cả lựa chọn đều hợp lệ ngữ pháp — chỉ một câu khớp đúng ngữ cảnh.",
+      "items": [
+        {
+          "question": "Which proposal did the board finally approve?",
+          "options": [
+            "The one from the consulting team.",
+            "The eastern region had better numbers.",
+            "Platform B is more user-friendly.",
+            "Any version above 3.0 will work.",
+            "The second shift reported the issue."
+          ],
+          "correct": 0,
+          "explanation": "Câu hỏi về đề xuất nào được phê duyệt → A (from the consulting team) là câu trả lời chỉ định đề xuất cụ thể. Các đáp án khác chỉ định các loại WHICH khác (region, platform, version, shift)."
+        },
+        {
+          "question": "Which region showed the strongest sales growth?",
+          "options": [
+            "The one from the consulting team.",
+            "The eastern region had better numbers.",
+            "Platform B is more user-friendly.",
+            "Any version above 3.0 will work.",
+            "The second shift reported the issue."
+          ],
+          "correct": 1,
+          "explanation": "Câu hỏi về khu vực nào tăng trưởng mạnh nhất → B (eastern region) phù hợp. Chú ý: không nhầm với A — 'consulting team' không phải khu vực địa lý."
+        },
+        {
+          "question": "Which platform should we use for the client demo?",
+          "options": [
+            "The one from the consulting team.",
+            "The eastern region had better numbers.",
+            "Platform B is more user-friendly.",
+            "Any version above 3.0 will work.",
+            "The second shift reported the issue."
+          ],
+          "correct": 2,
+          "explanation": "Câu hỏi về platform nào dùng → C (Platform B) là chỉ định platform cụ thể. D nói về version (liên quan nhưng không phải platform cụ thể)."
+        },
+        {
+          "question": "Which version of the software is compatible with our system?",
+          "options": [
+            "The one from the consulting team.",
+            "The eastern region had better numbers.",
+            "Platform B is more user-friendly.",
+            "Any version above 3.0 will work.",
+            "The second shift reported the issue."
+          ],
+          "correct": 3,
+          "explanation": "Câu hỏi về phiên bản tương thích → D (above 3.0) là câu trả lời về version cụ thể. C (Platform B) dễ nhầm nhưng đó là nền tảng, không phải version."
+        },
+        {
+          "question": "Which shift had the most downtime this week?",
+          "options": [
+            "The one from the consulting team.",
+            "The eastern region had better numbers.",
+            "Platform B is more user-friendly.",
+            "Any version above 3.0 will work.",
+            "The second shift reported the issue."
+          ],
+          "correct": 4,
+          "explanation": "Câu hỏi về ca làm việc nào có thời gian chết nhiều nhất → E (second shift) là chỉ định ca cụ thể."
+        }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn câu trả lời & dịch sang tiếng Anh",
+      "instruction": "Chọn đáp án phù hợp nhất. Nhiều lựa chọn cùng loại — đọc kỹ ngữ cảnh để phân biệt.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        {
+          "prompt": "Which department will take the lead on the rebrand?",
+          "options": ["The marketing department.", "The design team.", "Next fiscal year.", "The communications team."],
+          "correct": 0,
+          "explanation": "Marketing department (A) là đơn vị phù hợp nhất để dẫn dắt tái thương hiệu (rebrand). B và D hỗ trợ nhưng không phải đơn vị chủ đạo. C trả lời cho WHEN.",
+          "answerChunks": ["The", "marketing", "department"]
+        },
+        {
+          "prompt": "Which option is more cost-effective in the long run?",
+          "options": ["Option A with lower upfront costs.", "The second option.", "The finance team decided.", "Option B with lower maintenance fees."],
+          "correct": 3,
+          "explanation": "Hiệu quả chi phí lâu dài → D (Option B with lower maintenance fees) cụ thể hơn. A thấp chi phí ban đầu nhưng không tối ưu lâu dài. B quá chung chung. C trả lời cho WHO.",
+          "answerChunks": ["Option", "B", "with", "lower", "maintenance", "fees"]
+        },
+        {
+          "prompt": "Which supplier has the most reliable delivery track record?",
+          "options": ["The local supplier.", "Supplier B based on last year's data.", "The procurement team evaluated them.", "The overseas supplier."],
+          "correct": 1,
+          "explanation": "Track record (thành tích giao hàng) cần dựa trên dữ liệu cụ thể → B (based on last year's data) có căn cứ cụ thể nhất. A và D chỉ nêu loại nhà cung cấp. C trả lời cho WHO.",
+          "answerChunks": ["Supplier", "B", "based", "on", "last", "year's", "data"]
+        },
+        {
+          "prompt": "Which conference room is available at two o'clock?",
+          "options": ["Room 3 on the second floor.", "Room 5 is usually free.", "The receptionist can check.", "Room 3 or the boardroom."],
+          "correct": 0,
+          "explanation": "Câu hỏi về phòng nào available lúc 2 giờ → A (Room 3) là câu trả lời cụ thể và chắc chắn. B (usually free) không chắc chắn. D đưa ra 2 lựa chọn, không cụ thể. C trả lời cho WHO.",
+          "answerChunks": ["Room", "3", "on", "the", "second", "floor"]
+        },
+        {
+          "prompt": "Which format should the final report be in?",
+          "options": ["A Word document.", "PDF is preferred for distribution.", "The team leader will decide.", "A PowerPoint presentation."],
+          "correct": 1,
+          "explanation": "PDF (B) là format ưu tiên cho phân phối báo cáo cuối. A và D cũng là format nhưng B có lý do cụ thể (for distribution). C trả lời cho WHO.",
+          "answerChunks": ["PDF", "is", "preferred", "for", "distribution"]
+        },
+        {
+          "prompt": "Which team handled the system migration?",
+          "options": ["The IT operations team.", "An external contractor.", "Last quarter.", "The in-house development team."],
+          "correct": 3,
+          "explanation": "Di chuyển hệ thống (system migration) thường do đội phát triển nội bộ thực hiện (D). A và B cũng là khả năng nhưng D (in-house development) phù hợp nhất với ngữ cảnh. C trả lời cho WHEN.",
+          "answerChunks": ["The", "in-house", "development", "team"]
+        },
+        {
+          "prompt": "Which policy applies to part-time employees?",
+          "options": ["The standard leave policy.", "The reduced-hours agreement.", "HR can clarify.", "The flexible benefits policy."],
+          "correct": 1,
+          "explanation": "Nhân viên bán thời gian được điều chỉnh bởi thỏa thuận giờ giảm (B: reduced-hours agreement). A (leave policy) và D (flexible benefits) áp dụng chung. C trả lời cho WHO.",
+          "answerChunks": ["The", "reduced-hours", "agreement"]
+        },
+        {
+          "prompt": "Which candidate impressed the panel the most?",
+          "options": ["The one with the most experience.", "Ms. Kim from the final round.", "The panel will decide later.", "The candidate with the best presentation."],
+          "correct": 1,
+          "explanation": "Ứng viên gây ấn tượng nhất → B (Ms. Kim from final round) là tên cụ thể. A và D mô tả đặc điểm nhưng không chỉ định người cụ thể. C trả lời cho WHO+WHEN.",
+          "answerChunks": ["Ms.", "Kim", "from", "the", "final", "round"]
+        },
+        {
+          "prompt": "Which branch exceeded its quarterly target?",
+          "options": ["The northern branch.", "All branches met their targets.", "The regional manager checked.", "The downtown branch."],
+          "correct": 3,
+          "explanation": "Câu hỏi về chi nhánh nào vượt mục tiêu → D (downtown branch) là câu trả lời cụ thể nhất. A cũng là chi nhánh nhưng D phù hợp hơn trong ngữ cảnh. B không trả lời cho WHICH. C trả lời cho WHO.",
+          "answerChunks": ["The", "downtown", "branch"]
+        },
+        {
+          "prompt": "Which training module is mandatory for all staff?",
+          "options": ["The workplace safety module.", "The data privacy module.", "The HR team assigns them.", "The customer service module."],
+          "correct": 1,
+          "explanation": "Module bắt buộc cho tất cả nhân viên thường là data privacy (B) theo quy định pháp lý. A (safety) và D (customer service) cũng quan trọng nhưng không bắt buộc toàn bộ nhân viên. C trả lời cho WHO.",
+          "answerChunks": ["The", "data", "privacy", "module"]
+        },
+        {
+          "prompt": "Which invoice is still outstanding?",
+          "options": ["Invoice number 2047.", "The ones from last quarter.", "The accounts team is reviewing.", "The supplier invoices."],
+          "correct": 0,
+          "explanation": "Hóa đơn nào còn outstanding → A (invoice number 2047) cụ thể nhất với số hóa đơn. B quá chung, D chỉ loại hóa đơn. C trả lời cho WHO.",
+          "answerChunks": ["Invoice", "number", "2047"]
+        },
+        {
+          "prompt": "Which channel generated the most leads last quarter?",
+          "options": ["Social media advertising.", "The online campaign.", "Email marketing.", "The sales team tracked it."],
+          "correct": 2,
+          "explanation": "Email marketing (C) thường là kênh hiệu quả nhất tạo leads trong B2B. A và B (social media, online campaign) hợp lý nhưng ít targeted hơn. D trả lời cho WHO.",
+          "answerChunks": ["Email", "marketing"]
+        },
+        {
+          "prompt": "Which proposal addresses the cost reduction goal?",
+          "options": ["Proposal B focuses on efficiency.", "Proposal A cuts headcount.", "The CFO reviewed both.", "Proposal C streamlines operations."],
+          "correct": 3,
+          "explanation": "Giảm chi phí qua tối ưu hóa vận hành (C: streamlines operations) là cách tiếp cận bền vững nhất. A (efficiency) và B (cut headcount) cũng giảm chi phí nhưng D toàn diện hơn. C ở đây trả lời cho WHO.",
+          "answerChunks": ["Proposal", "C", "streamlines", "operations"]
+        },
+        {
+          "prompt": "Which office should I report to on my first day?",
+          "options": ["The reception desk on level one.", "The main headquarters.", "Your manager will escort you.", "The HR office on level three."],
+          "correct": 3,
+          "explanation": "Ngày đầu đi làm, cần báo cáo với HR office (D) để hoàn thành thủ tục onboarding. A là nơi đến đầu tiên nhưng không phải nơi báo cáo chính thức. B quá chung chung. C trả lời cho WHO.",
+          "answerChunks": ["The", "HR", "office", "on", "level", "three"]
+        }
+      ]
+    }
+  ]
+}

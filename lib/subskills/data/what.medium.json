@@ -1,0 +1,227 @@
+{
+  "part": "part2",
+  "questionWord": "what",
+  "difficulty": "medium",
+  "label": "WHAT",
+  "labelVi": "Câu hỏi WHAT — Medium",
+  "passThreshold": 80,
+  "intro": "Medium: Sắp xếp từng từ tiếng Anh thành câu hỏi WHAT, điền từ không có gợi ý, ghép câu hỏi với thông tin đúng ngữ cảnh, và phân biệt đáp án WHAT trong các lựa chọn cùng loại.",
+  "exercises": [
+    {
+      "kind": "wordbank",
+      "title": "Bài 1 — Sắp xếp câu hỏi (kéo–thả từng từ)",
+      "instruction": "Đọc gợi ý tiếng Việt, sau đó sắp xếp các từ tiếng Anh để tạo thành câu hỏi đúng.",
+      "items": [
+        { "prompt": "Mục tiêu chính của dự án này là gì?", "chunks": ["What", "is", "the", "main", "objective", "of", "this", "project"] },
+        { "prompt": "Điều gì cần nộp trước hạn chót?", "chunks": ["What", "needs", "to", "be", "submitted", "before", "the", "deadline"] },
+        { "prompt": "Điều gì đã gây ra sự chậm trễ trong sản xuất?", "chunks": ["What", "caused", "the", "delay", "in", "production"] },
+        { "prompt": "Tài liệu nào cần cho buổi họp?", "chunks": ["What", "documents", "are", "needed", "for", "the", "meeting"] },
+        { "prompt": "Chính sách mới về làm thêm giờ là gì?", "chunks": ["What", "is", "the", "new", "policy", "on", "overtime"] },
+        { "prompt": "Những thay đổi nào đã được thực hiện đối với hợp đồng?", "chunks": ["What", "changes", "were", "made", "to", "the", "contract"] },
+        { "prompt": "Các bước tiếp theo trong kế hoạch triển khai là gì?", "chunks": ["What", "are", "the", "next", "steps", "in", "the", "rollout", "plan"] },
+        { "prompt": "Ngân sách cho chiến dịch quảng cáo là bao nhiêu?", "chunks": ["What", "is", "the", "budget", "for", "the", "advertising", "campaign"] },
+        { "prompt": "Phản hồi từ khách hàng về sản phẩm mới là gì?", "chunks": ["What", "was", "the", "client", "feedback", "on", "the", "new", "product"] },
+        { "prompt": "Điều kiện bảo hành của thiết bị này là gì?", "chunks": ["What", "are", "the", "warranty", "conditions", "for", "this", "equipment"] },
+        { "prompt": "Thủ tục đối với trường hợp khẩn cấp tại nơi làm việc là gì?", "chunks": ["What", "is", "the", "procedure", "for", "a", "workplace", "emergency"] },
+        { "prompt": "Điều gì đã thúc đẩy quyết định tái cơ cấu?", "chunks": ["What", "prompted", "the", "decision", "to", "restructure"] },
+        { "prompt": "Những yêu cầu nào cần đáp ứng để được thăng chức?", "chunks": ["What", "requirements", "must", "be", "met", "for", "a", "promotion"] },
+        { "prompt": "Đề xuất giá trị của sản phẩm chủ lực của chúng ta là gì?", "chunks": ["What", "is", "the", "value", "proposition", "of", "our", "flagship", "product"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ còn thiếu (không có gợi ý)",
+      "instruction": "Điền từ còn thiếu vào ô trống để hoàn thành câu hỏi tiếng Anh. Không có gợi ý tiếng Việt.",
+      "items": [
+        { "template": "{0} is the {1} for the new {2}?", "hint": null, "blanks": [["what"], ["deadline", "timeline", "schedule"], ["project", "campaign", "product"]] },
+        { "template": "{0} {1} were {2} to the original plan?", "hint": null, "blanks": [["what"], ["changes", "adjustments", "updates"], ["made", "applied"]] },
+        { "template": "{0} do I need to {1} in the {2} form?", "hint": null, "blanks": [["what"], ["fill in", "complete", "include"], ["expense", "application", "request"]] },
+        { "template": "{0} was the {1} for the {2} overrun?", "hint": null, "blanks": [["what"], ["reason", "cause"], ["budget", "cost", "time"]] },
+        { "template": "{0} {1} of training is {2} for the new role?", "hint": null, "blanks": [["what"], ["type", "kind"], ["required", "needed", "mandatory"]] },
+        { "template": "{0} is the {1} process for {2} a complaint?", "hint": null, "blanks": [["what"], ["standard", "correct", "formal"], ["filing", "submitting", "raising"]] },
+        { "template": "{0} {1} are available for the {2} position?", "hint": null, "blanks": [["what"], ["benefits", "perks"], ["new", "open", "vacant"]] },
+        { "template": "{0} is the {1} on {2} work arrangements?", "hint": null, "blanks": [["what"], ["policy", "rule", "guideline"], ["remote", "flexible", "hybrid"]] },
+        { "template": "{0} {1} did the {2} team submit?", "hint": null, "blanks": [["what"], ["report", "proposal", "document"], ["sales", "finance", "marketing"]] },
+        { "template": "{0} action should be {1} if the {2} fails?", "hint": null, "blanks": [["what"], ["taken", "done"], ["system", "equipment", "process"]] },
+        { "template": "{0} is the {1} for {2} unused leave?", "hint": null, "blanks": [["what"], ["policy", "procedure", "rule"], ["carrying over", "encashing", "using"]] },
+        { "template": "{0} {1} does the {2} contract include?", "hint": null, "blanks": [["what"], ["clauses", "terms", "conditions"], ["new", "service", "maintenance"]] },
+        { "template": "{0} support is {1} for the {2} launch?", "hint": null, "blanks": [["what"], ["available", "provided", "offered"], ["product", "system", "platform"]] },
+        { "template": "{0} is the {1} between the two {2}?", "hint": null, "blanks": [["what"], ["difference", "distinction"], ["plans", "options", "proposals"]] }
+      ]
+    },
+    {
+      "kind": "match",
+      "title": "Bài 3 — Ghép câu hỏi & câu trả lời",
+      "instruction": "Chọn câu trả lời phù hợp nhất cho câu hỏi. Tất cả lựa chọn đều hợp lệ ngữ pháp — chỉ một câu khớp đúng ngữ cảnh.",
+      "items": [
+        {
+          "question": "What is the main deliverable for this project phase?",
+          "options": [
+            "A finalized technical report.",
+            "Unexpected increases from the supplier.",
+            "An orientation kit and access card.",
+            "The revised cost estimate needs sign-off.",
+            "Staff may work remotely twice a week."
+          ],
+          "correct": 0,
+          "explanation": "Câu hỏi về deliverable (sản phẩm đầu ra) → A (technical report) là câu trả lời phù hợp nhất. Các đáp án khác trả lời cho các WHAT câu hỏi khác trong bộ."
+        },
+        {
+          "question": "What caused the budget overrun last quarter?",
+          "options": [
+            "A finalized technical report.",
+            "Unexpected increases from the supplier.",
+            "An orientation kit and access card.",
+            "The revised cost estimate needs sign-off.",
+            "Staff may work remotely twice a week."
+          ],
+          "correct": 1,
+          "explanation": "Câu hỏi về nguyên nhân vượt ngân sách → B (unexpected increases from supplier) là nguyên nhân hợp lý nhất. Chú ý: không nên nhầm với D (revised cost estimate) — D là hành động sửa chữa, B là nguyên nhân."
+        },
+        {
+          "question": "What do new employees receive on their first day?",
+          "options": [
+            "A finalized technical report.",
+            "Unexpected increases from the supplier.",
+            "An orientation kit and access card.",
+            "The revised cost estimate needs sign-off.",
+            "Staff may work remotely twice a week."
+          ],
+          "correct": 2,
+          "explanation": "Nhân viên mới nhận được tài liệu định hướng và thẻ ra vào — C phù hợp nhất. Các đáp án khác không liên quan đến ngày đầu đi làm."
+        },
+        {
+          "question": "What still needs approval before we proceed?",
+          "options": [
+            "A finalized technical report.",
+            "Unexpected increases from the supplier.",
+            "An orientation kit and access card.",
+            "The revised cost estimate needs sign-off.",
+            "Staff may work remotely twice a week."
+          ],
+          "correct": 3,
+          "explanation": "Câu hỏi về thứ cần phê duyệt → D (revised cost estimate needs sign-off) phù hợp nhất. A là kết quả hoàn thành, không phải thứ chờ phê duyệt."
+        },
+        {
+          "question": "What is the current remote work arrangement?",
+          "options": [
+            "A finalized technical report.",
+            "Unexpected increases from the supplier.",
+            "An orientation kit and access card.",
+            "The revised cost estimate needs sign-off.",
+            "Staff may work remotely twice a week."
+          ],
+          "correct": 4,
+          "explanation": "Câu hỏi về chính sách làm việc từ xa → E (twice a week) là câu trả lời trực tiếp về nội dung chính sách."
+        }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn câu trả lời & dịch sang tiếng Anh",
+      "instruction": "Chọn đáp án phù hợp nhất. Nhiều lựa chọn đều là thông tin/vật/sự kiện — đọc kỹ ngữ cảnh để chọn đúng.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        {
+          "prompt": "What is required before a vendor can be added to the system?",
+          "options": ["A signed contract.", "Proof of insurance.", "The procurement manager.", "A completed vendor registration form."],
+          "correct": 3,
+          "explanation": "Để thêm nhà cung cấp vào hệ thống, cần có form đăng ký đã điền đầy đủ (D). A và B là tài liệu hỗ trợ, không phải yêu cầu bắt buộc đầu tiên. C trả lời cho WHO.",
+          "answerChunks": ["A", "completed", "vendor", "registration", "form"]
+        },
+        {
+          "prompt": "What did the audit report reveal?",
+          "options": ["Last month.", "Several compliance gaps.", "The internal auditor.", "Minor accounting errors."],
+          "correct": 1,
+          "explanation": "Báo cáo kiểm toán tiết lộ thông tin cụ thể về vấn đề → B (compliance gaps) và D (accounting errors) đều hợp lý, nhưng B ('several' gaps) cho thấy vấn đề nghiêm trọng hơn, phù hợp với 'reveal'. A trả lời cho WHEN, C trả lời cho WHO.",
+          "answerChunks": ["Several", "compliance", "gaps"]
+        },
+        {
+          "prompt": "What is included in the standard onboarding package?",
+          "options": ["The HR team prepares it.", "An employee handbook and IT credentials.", "A company laptop.", "A benefits guide and payroll forms."],
+          "correct": 3,
+          "explanation": "Gói onboarding tiêu chuẩn thường gồm hướng dẫn phúc lợi và biểu mẫu lương (D). B (laptop) và C (handbook + IT) là các thứ riêng lẻ, D bao quát hơn. A trả lời cho WHO.",
+          "answerChunks": ["A", "benefits", "guide", "and", "payroll", "forms"]
+        },
+        {
+          "prompt": "What was discussed at the last board meeting?",
+          "options": ["The expansion strategy.", "The board members.", "Every three months.", "The quarterly financial results."],
+          "correct": 3,
+          "explanation": "Cuộc họp hội đồng thường thảo luận kết quả tài chính hàng quý (D). A (expansion strategy) có thể đúng nhưng ít cụ thể. B trả lời cho WHO, C trả lời cho WHEN/HOW OFTEN.",
+          "answerChunks": ["The", "quarterly", "financial", "results"]
+        },
+        {
+          "prompt": "What needs to be submitted with the travel reimbursement form?",
+          "options": ["All original receipts.", "Your direct manager.", "The finance department.", "A detailed expense report."],
+          "correct": 0,
+          "explanation": "Nộp biên lai gốc (A) là yêu cầu bắt buộc đi kèm form hoàn tiền. D (expense report) cũng hợp lý nhưng biên lai gốc là chứng từ cụ thể hơn. B và C trả lời cho WHO.",
+          "answerChunks": ["All", "original", "receipts"]
+        },
+        {
+          "prompt": "What is the company's stance on workplace diversity?",
+          "options": ["The HR policy document.", "An equal opportunity employer.", "The diversity officer.", "A zero-tolerance policy on discrimination."],
+          "correct": 3,
+          "explanation": "Lập trường của công ty về đa dạng hóa nơi làm việc được thể hiện bằng chính sách không khoan nhượng (D). A là tài liệu, B là tuyên bố chung chung, C trả lời cho WHO.",
+          "answerChunks": ["A", "zero-tolerance", "policy", "on", "discrimination"]
+        },
+        {
+          "prompt": "What information is missing from this contract?",
+          "options": ["The payment terms.", "The legal counsel reviewed it.", "The signatory details.", "The effective start date."],
+          "correct": 2,
+          "explanation": "Trong hợp đồng, thông tin thường bị thiếu nhất là chi tiết người ký (C). A và D cũng có thể bị thiếu, nhưng C (signatory details) phổ biến hơn trong ngữ cảnh TOEIC. B trả lời cho WHO.",
+          "answerChunks": ["The", "signatory", "details"]
+        },
+        {
+          "prompt": "What should be done if the system crashes during a presentation?",
+          "options": ["Contact IT support immediately.", "The IT helpdesk number.", "Switch to a backup device.", "Reschedule the presentation."],
+          "correct": 2,
+          "explanation": "Khi hệ thống crash trong lúc thuyết trình, biện pháp tức thì là chuyển sang thiết bị dự phòng (C). A là bước tiếp theo, D là lựa chọn cuối cùng. B trả lời cho WHAT (thông tin cụ thể) nhưng không phải hành động cần làm.",
+          "answerChunks": ["Switch", "to", "a", "backup", "device"]
+        },
+        {
+          "prompt": "What does the new performance review process involve?",
+          "options": ["A self-assessment and peer feedback.", "The HR director leads it.", "Every six months.", "A written evaluation by the manager."],
+          "correct": 0,
+          "explanation": "Quy trình đánh giá hiệu suất mới thường bao gồm tự đánh giá và phản hồi đồng nghiệp (A). D chỉ mô tả một phần. B trả lời cho WHO, C trả lời cho WHEN.",
+          "answerChunks": ["A", "self-assessment", "and", "peer", "feedback"]
+        },
+        {
+          "prompt": "What is the protocol for data breaches?",
+          "options": ["Report to IT within one hour.", "The IT security officer.", "Change all passwords immediately.", "Notify the compliance team first."],
+          "correct": 3,
+          "explanation": "Khi có vi phạm dữ liệu, bước đầu tiên là thông báo cho compliance team (D). A và C là hành động tiếp theo. B trả lời cho WHO.",
+          "answerChunks": ["Notify", "the", "compliance", "team", "first"]
+        },
+        {
+          "prompt": "What was the outcome of the customer satisfaction survey?",
+          "options": ["The survey was conducted online.", "High satisfaction with delivery times.", "Overall ratings improved by 12%.", "The marketing team analyzed it."],
+          "correct": 2,
+          "explanation": "Kết quả (outcome) của khảo sát thường được thể hiện bằng số liệu cụ thể (C: ratings improved by 12%). B là thông tin cụ thể nhưng chỉ một khía cạnh. A trả lời cho HOW, D trả lời cho WHO.",
+          "answerChunks": ["Overall", "ratings", "improved", "by", "12%"]
+        },
+        {
+          "prompt": "What are the eligibility criteria for the employee wellness program?",
+          "options": ["Full-time staff with over one year of service.", "All permanent employees.", "The wellness coordinator.", "Staff who have completed their probation."],
+          "correct": 0,
+          "explanation": "Tiêu chí cụ thể cho chương trình sức khỏe nhân viên: nhân viên toàn thời gian với hơn 1 năm làm việc (A). B quá chung chung, D chỉ nêu một điều kiện. C trả lời cho WHO.",
+          "answerChunks": ["Full-time", "staff", "with", "over", "one", "year", "of", "service"]
+        },
+        {
+          "prompt": "What is the turnaround time for purchase order approvals?",
+          "options": ["Two to three business days.", "By the end of the week.", "The procurement officer handles it.", "Within 48 hours."],
+          "correct": 3,
+          "explanation": "Thời gian phê duyệt đơn mua hàng cụ thể là 48 giờ (D). A (two to three days) và B (end of week) ít chính xác hơn D. C trả lời cho WHO.",
+          "answerChunks": ["Within", "48", "hours"]
+        },
+        {
+          "prompt": "What format should the monthly report be submitted in?",
+          "options": ["A PDF with an Excel attachment.", "Via the internal portal.", "The team leader.", "A Word document with charts."],
+          "correct": 0,
+          "explanation": "Format nộp báo cáo hàng tháng — A (PDF kèm Excel) là câu trả lời về định dạng file. D (Word with charts) cũng về format nhưng A phổ biến và đầy đủ hơn. B trả lời cho HOW/WHERE, C trả lời cho WHO.",
+          "answerChunks": ["A", "PDF", "with", "an", "Excel", "attachment"]
+        }
+      ]
+    }
+  ]
+}

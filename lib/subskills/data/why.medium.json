@@ -1,0 +1,227 @@
+{
+  "part": "part2",
+  "questionWord": "why",
+  "difficulty": "medium",
+  "label": "WHY",
+  "labelVi": "Câu hỏi WHY — Medium",
+  "passThreshold": 80,
+  "intro": "Medium: Câu hỏi WHY hỏi về lý do/mục đích. Ở cấp độ này, distractors cũng là lý do hợp lý — cần hiểu quan hệ nguyên nhân-kết quả để chọn đúng.",
+  "exercises": [
+    {
+      "kind": "wordbank",
+      "title": "Bài 1 — Sắp xếp câu hỏi (kéo–thả từng từ)",
+      "instruction": "Đọc gợi ý tiếng Việt, sau đó sắp xếp các từ tiếng Anh để tạo thành câu hỏi đúng.",
+      "items": [
+        { "prompt": "Tại sao lịch trình dự án bị trì hoãn?", "chunks": ["Why", "was", "the", "project", "schedule", "delayed"] },
+        { "prompt": "Tại sao công ty quyết định mở rộng sang thị trường châu Á?", "chunks": ["Why", "did", "the", "company", "decide", "to", "expand", "into", "the", "Asian", "market"] },
+        { "prompt": "Tại sao đơn đặt hàng bị trả lại?", "chunks": ["Why", "was", "the", "purchase", "order", "returned"] },
+        { "prompt": "Tại sao ngân sách quảng cáo bị cắt giảm?", "chunks": ["Why", "was", "the", "advertising", "budget", "reduced"] },
+        { "prompt": "Tại sao hợp đồng dịch vụ bị hủy?", "chunks": ["Why", "was", "the", "service", "contract", "cancelled"] },
+        { "prompt": "Tại sao ứng viên không qua vòng phỏng vấn cuối?", "chunks": ["Why", "did", "the", "candidate", "fail", "the", "final", "interview"] },
+        { "prompt": "Tại sao buổi ra mắt sản phẩm bị hoãn lại?", "chunks": ["Why", "was", "the", "product", "launch", "postponed"] },
+        { "prompt": "Tại sao báo cáo quý này không khớp với dự báo?", "chunks": ["Why", "did", "this", "quarter's", "report", "not", "match", "the", "forecast"] },
+        { "prompt": "Tại sao văn phòng chi nhánh đóng cửa sớm hôm nay?", "chunks": ["Why", "is", "the", "branch", "office", "closing", "early", "today"] },
+        { "prompt": "Tại sao nhà cung cấp đổi lịch giao hàng?", "chunks": ["Why", "did", "the", "supplier", "change", "the", "delivery", "schedule"] },
+        { "prompt": "Tại sao đề xuất bị từ chối ở vòng đầu tiên?", "chunks": ["Why", "was", "the", "proposal", "rejected", "in", "the", "first", "round"] },
+        { "prompt": "Tại sao hệ thống IT ngừng hoạt động vào sáng nay?", "chunks": ["Why", "did", "the", "IT", "system", "go", "down", "this", "morning"] },
+        { "prompt": "Tại sao không có ai được thăng chức trong quý này?", "chunks": ["Why", "were", "no", "promotions", "given", "this", "quarter"] },
+        { "prompt": "Tại sao nhóm marketing yêu cầu thêm nguồn lực?", "chunks": ["Why", "is", "the", "marketing", "team", "requesting", "additional", "resources"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ còn thiếu (không có gợi ý)",
+      "instruction": "Điền từ còn thiếu vào ô trống để hoàn thành câu hỏi tiếng Anh. Không có gợi ý tiếng Việt.",
+      "items": [
+        { "template": "{0} was the {1} {2} without notice?", "hint": null, "blanks": [["why"], ["meeting", "event", "session"], ["cancelled", "postponed", "rescheduled"]] },
+        { "template": "{0} did the {1} {2} the initial offer?", "hint": null, "blanks": [["why"], ["client", "vendor", "candidate"], ["reject", "decline", "refuse"]] },
+        { "template": "{0} is the {1} {2} than expected?", "hint": null, "blanks": [["why"], ["cost", "budget", "timeline"], ["higher", "longer", "lower"]] },
+        { "template": "{0} was the {1} not {2} on time?", "hint": null, "blanks": [["why"], ["report", "order", "shipment"], ["submitted", "delivered", "completed"]] },
+        { "template": "{0} are we {1} to a {2} platform?", "hint": null, "blanks": [["why"], ["switching", "migrating", "moving"], ["new", "different", "cloud"]] },
+        { "template": "{0} did the {1} {2} the policy?", "hint": null, "blanks": [["why"], ["board", "committee", "management"], ["change", "update", "revise"]] },
+        { "template": "{0} is the {1} {2} being extended?", "hint": null, "blanks": [["why"], ["project", "contract", "trial"], ["period", "deadline", "phase"]] },
+        { "template": "{0} weren't the {1} {2} to the changes?", "hint": null, "blanks": [["why"], ["staff", "employees", "teams"], ["notified", "informed", "alerted"]] },
+        { "template": "{0} does the {1} require {2} approval?", "hint": null, "blanks": [["why"], ["process", "request", "transaction"], ["additional", "senior", "board"]] },
+        { "template": "{0} is the {1} {2} during the peak season?", "hint": null, "blanks": [["why"], ["factory", "warehouse", "office"], ["understaffed", "overcrowded", "closed"]] },
+        { "template": "{0} did the {1} {2} a competitor?", "hint": null, "blanks": [["why"], ["company", "firm", "group"], ["acquire", "merge with", "partner with"]] },
+        { "template": "{0} is the {1} {2} so many {3}?", "hint": null, "blanks": [["why"], ["department", "team", "unit"], ["experiencing", "having"], ["issues", "delays", "errors"]] },
+        { "template": "{0} was the {1} {2} for the position?", "hint": null, "blanks": [["why"], ["candidate", "applicant"], ["shortlisted", "selected", "chosen"]] },
+        { "template": "{0} are {1} from {2} required this quarter?", "hint": null, "blanks": [["why"], ["updates", "reports", "approvals"], ["all departments", "each branch", "managers"]] }
+      ]
+    },
+    {
+      "kind": "match",
+      "title": "Bài 3 — Ghép câu hỏi & câu trả lời",
+      "instruction": "Chọn câu trả lời phù hợp nhất cho câu hỏi. Tất cả lựa chọn đều là lý do hợp lệ — đọc kỹ để tìm nguyên nhân đúng ngữ cảnh.",
+      "items": [
+        {
+          "question": "Why was the product recall issued?",
+          "options": [
+            "A safety defect was identified in the batch.",
+            "The team needed more time to finalize the content.",
+            "Management decided to consolidate operations.",
+            "The original vendor could no longer meet supply demands.",
+            "Several compliance gaps were found during the review."
+          ],
+          "correct": 0,
+          "explanation": "Thu hồi sản phẩm (product recall) xảy ra do phát hiện lỗi an toàn (A: safety defect). Các đáp án khác đều là lý do hợp lệ nhưng cho các câu hỏi WHY khác."
+        },
+        {
+          "question": "Why was the report submission delayed?",
+          "options": [
+            "A safety defect was identified in the batch.",
+            "The team needed more time to finalize the content.",
+            "Management decided to consolidate operations.",
+            "The original vendor could no longer meet supply demands.",
+            "Several compliance gaps were found during the review."
+          ],
+          "correct": 1,
+          "explanation": "Nộp báo cáo trễ vì nhóm cần thêm thời gian hoàn thiện nội dung (B). Chú ý: không nhầm với E (compliance gaps) — đó là lý do cho câu hỏi khác."
+        },
+        {
+          "question": "Why did the company close two regional offices?",
+          "options": [
+            "A safety defect was identified in the batch.",
+            "The team needed more time to finalize the content.",
+            "Management decided to consolidate operations.",
+            "The original vendor could no longer meet supply demands.",
+            "Several compliance gaps were found during the review."
+          ],
+          "correct": 2,
+          "explanation": "Đóng văn phòng khu vực do quyết định tập trung hóa hoạt động (C: consolidate operations). Đây là quyết định chiến lược điển hình cho việc đóng cửa chi nhánh."
+        },
+        {
+          "question": "Why did we switch to a new supplier?",
+          "options": [
+            "A safety defect was identified in the batch.",
+            "The team needed more time to finalize the content.",
+            "Management decided to consolidate operations.",
+            "The original vendor could no longer meet supply demands.",
+            "Several compliance gaps were found during the review."
+          ],
+          "correct": 3,
+          "explanation": "Đổi nhà cung cấp vì nhà cung cấp cũ không đáp ứng được nhu cầu cung ứng (D). Chú ý: không nhầm với A (safety defect) — đó là lý do thu hồi sản phẩm, không phải đổi vendor."
+        },
+        {
+          "question": "Why was the certification renewed urgently?",
+          "options": [
+            "A safety defect was identified in the batch.",
+            "The team needed more time to finalize the content.",
+            "Management decided to consolidate operations.",
+            "The original vendor could no longer meet supply demands.",
+            "Several compliance gaps were found during the review."
+          ],
+          "correct": 4,
+          "explanation": "Gia hạn chứng nhận khẩn cấp do phát hiện nhiều lỗ hổng tuân thủ trong đợt kiểm tra (E). Compliance gaps là lý do trực tiếp cho việc gia hạn chứng nhận."
+        }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn câu trả lời & dịch sang tiếng Anh",
+      "instruction": "Chọn đáp án phù hợp nhất. Nhiều lựa chọn đều là lý do — đọc kỹ ngữ cảnh để phân biệt nguyên nhân đúng.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        {
+          "prompt": "Why was the budget meeting rescheduled?",
+          "options": ["The CFO had a prior commitment.", "The figures hadn't been finalized.", "The board requested changes.", "A key participant was unavailable."],
+          "correct": 1,
+          "explanation": "Hoãn họp ngân sách vì số liệu chưa được hoàn thiện (B) — nguyên nhân nội tại phổ biến nhất. A và D là nguyên nhân về con người. C trả lời cho WHO/WHAT.",
+          "answerChunks": ["The", "figures", "hadn't", "been", "finalized"]
+        },
+        {
+          "prompt": "Why is the company investing in employee wellness programs?",
+          "options": ["To meet regulatory requirements.", "To reduce healthcare costs long-term.", "Because staff requested it.", "To improve employee retention."],
+          "correct": 3,
+          "explanation": "Lý do chính chiến lược để đầu tư vào sức khỏe nhân viên là tăng tỷ lệ giữ chân (D: retention). A (regulatory) là ràng buộc. B (reduce costs) là lợi ích gián tiếp. C (staff request) không phải lý do doanh nghiệp.",
+          "answerChunks": ["To", "improve", "employee", "retention"]
+        },
+        {
+          "prompt": "Why was the software rollout paused?",
+          "options": ["Due to unexpected technical issues.", "The vendor requested more time.", "To allow more testing.", "Because of budget constraints."],
+          "correct": 2,
+          "explanation": "Tạm dừng triển khai phần mềm để cho phép kiểm tra thêm (C: allow more testing) là lý do chủ động và phổ biến nhất. A (technical issues) là lý do bị động. B và D ít liên quan đến việc dừng triển khai.",
+          "answerChunks": ["To", "allow", "more", "testing"]
+        },
+        {
+          "prompt": "Why did the client request an urgent meeting?",
+          "options": ["To discuss contract modifications.", "They had concerns about delivery.", "A dispute arose over billing.", "To review the project timeline."],
+          "correct": 2,
+          "explanation": "Khách hàng yêu cầu họp khẩn thường do có tranh chấp (C: billing dispute). A và D là lý do họp thông thường, không cần khẩn. B (delivery concerns) là lý do nhưng ít nghiêm trọng hơn C.",
+          "answerChunks": ["A", "dispute", "arose", "over", "billing"]
+        },
+        {
+          "prompt": "Why did the lead auditor request more documents?",
+          "options": ["To complete the compliance check.", "Some records were incomplete.", "The timeline required it.", "To assess internal controls better."],
+          "correct": 1,
+          "explanation": "Kiểm toán viên yêu cầu thêm tài liệu vì một số hồ sơ không đầy đủ (B). A và D là mục đích, không phải lý do yêu cầu thêm. C trả lời cho WHEN.",
+          "answerChunks": ["Some", "records", "were", "incomplete"]
+        },
+        {
+          "prompt": "Why was the trade show booth larger this year?",
+          "options": ["The event organizer assigned a bigger space.", "The company launched a new product line.", "More staff were attending.", "The design team redesigned it."],
+          "correct": 1,
+          "explanation": "Gian hàng lớn hơn vì công ty ra mắt dòng sản phẩm mới (B) — cần không gian trưng bày thêm. A (organizer assigned) không phải quyết định của công ty. C (more staff) không yêu cầu gian hàng lớn. D (design team) trả lời cho WHO.",
+          "answerChunks": ["The", "company", "launched", "a", "new", "product", "line"]
+        },
+        {
+          "prompt": "Why is the current warehouse lease not being renewed?",
+          "options": ["The rent increased significantly.", "A larger facility was found.", "The location is no longer convenient.", "The contract terms changed."],
+          "correct": 1,
+          "explanation": "Không gia hạn thuê kho vì tìm được cơ sở lớn hơn (B). A, C, D là các lý do không gia hạn hợp lệ nhưng B (larger facility) là lý do chiến lược phổ biến nhất trong TOEIC.",
+          "answerChunks": ["A", "larger", "facility", "was", "found"]
+        },
+        {
+          "prompt": "Why are employees being asked to update their emergency contacts?",
+          "options": ["It is a new legal requirement.", "HR is updating all personnel records.", "The system was recently upgraded.", "In preparation for the new year."],
+          "correct": 1,
+          "explanation": "Cập nhật thông tin liên hệ khẩn cấp vì HR đang cập nhật toàn bộ hồ sơ nhân sự (B). A (legal requirement) có thể đúng nhưng ít cụ thể. C (system upgrade) không phải lý do hỏi nhân viên. D quá chung chung.",
+          "answerChunks": ["HR", "is", "updating", "all", "personnel", "records"]
+        },
+        {
+          "prompt": "Why was the marketing campaign put on hold?",
+          "options": ["The budget was not yet approved.", "The creative assets needed revision.", "The target audience changed.", "A competing event was announced."],
+          "correct": 0,
+          "explanation": "Tạm dừng chiến dịch marketing phổ biến nhất vì ngân sách chưa được phê duyệt (A). B (creative assets) là lý do nội dung. C và D là lý do chiến lược ít gặp hơn trong TOEIC.",
+          "answerChunks": ["The", "budget", "was", "not", "yet", "approved"]
+        },
+        {
+          "prompt": "Why was the customer's order refunded?",
+          "options": ["It was shipped to the wrong address.", "The item was out of stock.", "The product arrived damaged.", "The customer changed their mind."],
+          "correct": 2,
+          "explanation": "Hoàn tiền đơn hàng vì sản phẩm đến tay khách bị hỏng (C) — lý do phổ biến nhất và hợp lý nhất trong môi trường kinh doanh. A, B, D cũng là lý do hoàn tiền nhưng C là nguyên nhân trực tiếp và khách quan nhất.",
+          "answerChunks": ["The", "product", "arrived", "damaged"]
+        },
+        {
+          "prompt": "Why did the IT team enforce a password reset policy?",
+          "options": ["To comply with the new data security standards.", "There were reports of unauthorized access.", "The old passwords had expired.", "The software was updated."],
+          "correct": 1,
+          "explanation": "Thực thi chính sách đặt lại mật khẩu do có báo cáo truy cập trái phép (B) — lý do khẩn cấp và cụ thể nhất. A (compliance) là lý do lâu dài. C (expired) là lý do thường xuyên. D là nguyên nhân gián tiếp.",
+          "answerChunks": ["There", "were", "reports", "of", "unauthorized", "access"]
+        },
+        {
+          "prompt": "Why is the annual conference moving to a virtual format?",
+          "options": ["To reduce travel and accommodation costs.", "The venue was unavailable.", "Participants prefer online events.", "The organizing committee recommended it."],
+          "correct": 0,
+          "explanation": "Chuyển sang hội nghị ảo để giảm chi phí đi lại và lưu trú (A) — lý do tài chính phổ biến và thực tế nhất. B (venue unavailable) là lý do một lần. C (participants prefer) là ý kiến chủ quan. D trả lời cho WHO.",
+          "answerChunks": ["To", "reduce", "travel", "and", "accommodation", "costs"]
+        },
+        {
+          "prompt": "Why was the new employee's start date pushed back?",
+          "options": ["The onboarding paperwork wasn't ready.", "The position had been redesigned.", "The manager requested more time.", "Background checks were still pending."],
+          "correct": 3,
+          "explanation": "Hoãn ngày bắt đầu làm việc của nhân viên mới do kiểm tra lý lịch chưa xong (D: background checks pending). A (paperwork) là lý do hành chính. B và C ít phổ biến hơn và ít cụ thể hơn.",
+          "answerChunks": ["Background", "checks", "were", "still", "pending"]
+        },
+        {
+          "prompt": "Why did the purchasing department reject the invoice?",
+          "options": ["The vendor is not on the approved list.", "It was submitted after the cutoff date.", "The amounts did not match the order.", "The invoice lacked a purchase order number."],
+          "correct": 2,
+          "explanation": "Từ chối hóa đơn vì số tiền không khớp với đơn đặt hàng (C) — lý do kỹ thuật phổ biến nhất trong bộ phận mua hàng. A, B, D cũng là lý do từ chối nhưng C là lý do phổ biến và cụ thể nhất.",
+          "answerChunks": ["The", "amounts", "did", "not", "match", "the", "order"]
+        }
+      ]
+    }
+  ]
+}
