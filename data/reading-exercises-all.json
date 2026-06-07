@@ -7588,12 +7588,115 @@
     "orderIndex": 2,
     "type": "triple",
     "category": null,
-    "approved": false,
+    "approved": true,
     "_hasRichData": false,
-    "vocab": [],
-    "paraphrase": [],
-    "translation": [],
-    "context": [],
+    "vocab": [
+      {
+        "question": "Từ \"referral\" trong bài có nghĩa là gì?",
+        "options": [
+          "Lời giới thiệu, sự tiến cử",
+          "Thư từ chối ứng viên",
+          "Thông báo tuyển dụng",
+          "Hợp đồng thử việc"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Referral\" = lời giới thiệu (từ người quen) để ứng tuyển một vị trí."
+      },
+      {
+        "question": "Từ \"criteria\" trong bài có nghĩa là gì?",
+        "options": [
+          "Thời gian thử việc quy định",
+          "Danh sách ứng viên lọt vòng",
+          "Kết quả đánh giá cuối năm",
+          "Tiêu chí, điều kiện tuyển dụng"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Criteria\" = tiêu chí, điều kiện (số ít: criterion)."
+      },
+      {
+        "question": "Từ \"mentor\" trong bài có nghĩa là gì?",
+        "options": [
+          "Người quản lý trực tiếp",
+          "Nhân viên mới được phân công",
+          "Khách hàng trọng điểm",
+          "Người cố vấn, người hướng dẫn"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Mentor\" = người cố vấn, hướng dẫn và hỗ trợ sự phát triển nghề nghiệp."
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"turned down for a position\"",
+        "options": [
+          "rejected for a job opening",
+          "assigned to a different department",
+          "promoted ahead of schedule",
+          "offered a higher salary package"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Turned down\" = bị từ chối; \"rejected for a job opening\" diễn đạt cùng ý."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"I was impressed with the knowledge you displayed\"",
+        "options": [
+          "I was pleased with the expertise you demonstrated",
+          "I was uncertain whether you met our requirements",
+          "I was surprised by your educational credentials",
+          "I was concerned about your lack of experience"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Impressed with knowledge displayed\" = \"pleased with expertise demonstrated\" — đều thể hiện ấn tượng tích cực."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"Your experience will be of tremendous value to our team\"",
+        "options": [
+          "Your background requires some improvement before joining",
+          "Your experience will greatly benefit our team",
+          "Your qualifications still need to be fully verified",
+          "Your skills may need further assessment by management"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Of tremendous value\" = \"greatly benefit\" — đều chỉ lợi ích lớn."
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Cô ấy không đáp ứng được tiêu chí cho công việc đó.\"",
+        "options": [
+          "She decided to withdraw from the hiring process.",
+          "She failed to submit her application before the deadline.",
+          "She did not meet the criteria for the job.",
+          "She was not available for the scheduled interview."
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"She did not meet the criteria for the job.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Giám đốc mời tôi nhận vị trí ngay trong buổi phỏng vấn.\"",
+        "options": [
+          "I received a written job offer from the director the following week.",
+          "I was informed of my acceptance through an official letter.",
+          "The director offered me the position during our interview.",
+          "The director asked me to reapply after completing additional training."
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"The director offered me the position during our interview.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Trong tuyển dụng, mục đích chính của 'referral' (lời giới thiệu từ nội bộ) là gì?",
+        "options": [
+          "Thay thế hoàn toàn cho vòng phỏng vấn chính thức",
+          "Đảm bảo ứng viên nhận được mức lương cao hơn mức thị trường",
+          "Giúp ứng viên được xem xét ưu tiên hơn nhờ sự tin tưởng từ người trong công ty",
+          "Yêu cầu ứng viên bỏ qua bước nộp hồ sơ trực tuyến"
+        ],
+        "correctIndex": 2,
+        "feedback": "Referral giúp ứng viên được chú ý sớm hơn, nhưng vẫn phải trải qua quy trình tuyển dụng đầy đủ."
+      }
+    ],
     "_note": "No rich explanation data — exercises require manual crafting."
   },
   {
@@ -7601,12 +7704,115 @@
     "orderIndex": 3,
     "type": "triple",
     "category": null,
-    "approved": false,
+    "approved": true,
     "_hasRichData": false,
-    "vocab": [],
-    "paraphrase": [],
-    "translation": [],
-    "context": [],
+    "vocab": [
+      {
+        "question": "Từ \"beverage\" trong bài có nghĩa là gì?",
+        "options": [
+          "Hương liệu thực phẩm",
+          "Thực phẩm đóng gói",
+          "Nguyên liệu chế biến",
+          "Đồ uống"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Beverage\" = đồ uống (nước giải khát, nước trái cây, v.v.)."
+      },
+      {
+        "question": "Từ \"questionnaire\" trong bài có nghĩa là gì?",
+        "options": [
+          "Bảng câu hỏi, phiếu khảo sát",
+          "Báo cáo kết quả thí nghiệm",
+          "Buổi thảo luận nhóm",
+          "Hợp đồng tham gia nghiên cứu"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Questionnaire\" = bảng câu hỏi dùng để thu thập ý kiến hoặc dữ liệu."
+      },
+      {
+        "question": "Từ \"incorporate\" trong bài có nghĩa là gì?",
+        "options": [
+          "Loại bỏ khỏi",
+          "Đưa vào, kết hợp vào",
+          "Tóm tắt lại",
+          "Trình bày trước đám đông"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Incorporate\" = đưa vào, tích hợp vào một thứ khác."
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"design a questionnaire to collect the participants' feedback\"",
+        "options": [
+          "compile a report based on existing research data",
+          "distribute promotional materials to potential customers",
+          "create a survey form to gather attendees' opinions",
+          "schedule interviews with each focus group member"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"Design a questionnaire to collect feedback\" = \"create a survey form to gather opinions\"."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"incorporate this information into my monthly report\"",
+        "options": [
+          "forward this data to the research department for review",
+          "remove outdated entries from last month's report",
+          "present these findings at the next team meeting",
+          "include this data in my regular monthly summary"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Incorporate information into a report\" = \"include data in a summary\"."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"only while supplies last\"",
+        "options": [
+          "subject to terms and conditions",
+          "available until items sell out",
+          "limited to online purchases only",
+          "free of charge for all customers"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Only while supplies last\" = \"available until items sell out\" — đều chỉ số lượng có hạn."
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"25 trong số 30 người đăng ký đã tham gia thử nghiệm hương vị.\"",
+        "options": [
+          "25 of the 30 registered participants took the taste test.",
+          "Fewer than half of the participants showed up for the event.",
+          "The taste test attracted 25 new customers to the focus group.",
+          "All 30 registered participants completed the taste test successfully."
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"25 of the 30 registered participants took the taste test.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Tôi cần đưa thông tin này vào báo cáo hàng tháng của mình.\"",
+        "options": [
+          "I will share this information with the rest of the team.",
+          "I need to present this data at our upcoming meeting.",
+          "I have already submitted the completed report to management.",
+          "I need to incorporate this information into my monthly report."
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"I need to incorporate this information into my monthly report.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Trong nghiên cứu thị trường, 'focus group' (nhóm tập trung) thường được sử dụng để làm gì?",
+        "options": [
+          "Thu thập phản hồi và ý kiến của người tiêu dùng về sản phẩm hoặc dịch vụ",
+          "Huấn luyện nhân viên bán hàng về kỹ năng thuyết phục khách hàng",
+          "Kiểm tra chất lượng sản phẩm trong nhà máy trước khi xuất xưởng",
+          "Xác định mức giá niêm yết dựa trên chi phí sản xuất"
+        ],
+        "correctIndex": 0,
+        "feedback": "Focus group là phương pháp nghiên cứu định tính: tập hợp nhóm nhỏ người dùng để thảo luận và đánh giá sản phẩm."
+      }
+    ],
     "_note": "No rich explanation data — exercises require manual crafting."
   },
   {
@@ -7614,12 +7820,115 @@
     "orderIndex": 4,
     "type": "triple",
     "category": null,
-    "approved": false,
+    "approved": true,
     "_hasRichData": false,
-    "vocab": [],
-    "paraphrase": [],
-    "translation": [],
-    "context": [],
+    "vocab": [
+      {
+        "question": "Từ \"mandatory\" trong bài có nghĩa là gì?",
+        "options": [
+          "Bắt buộc, bắt buộc phải thực hiện",
+          "Tự nguyện, không bắt buộc",
+          "Tạm thời, có thể thay đổi",
+          "Nâng cao, dành cho chuyên gia"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Mandatory\" = bắt buộc (mọi người đều phải thực hiện)."
+      },
+      {
+        "question": "Từ \"upgrade\" trong bài có nghĩa là gì?",
+        "options": [
+          "Quá trình gỡ cài đặt phần mềm",
+          "Nâng cấp, cải tiến phiên bản mới hơn",
+          "Sự cố kỹ thuật nghiêm trọng",
+          "Phiên bản phần mềm cũ"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Upgrade\" = nâng cấp lên phiên bản hoặc tính năng mới hơn."
+      },
+      {
+        "question": "Cụm \"reschedule\" trong bài có nghĩa là gì?",
+        "options": [
+          "Hủy bỏ hoàn toàn một sự kiện",
+          "Sắp xếp lại lịch trình vào thời gian khác",
+          "Tham gia muộn hơn so với kế hoạch",
+          "Thêm một buổi học mới vào lịch trình"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Reschedule\" = dời lịch, sắp xếp lại sang thời điểm khác."
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"mandatory training sessions\"",
+        "options": [
+          "informal meetings to discuss software updates",
+          "advanced seminars for senior managers only",
+          "required training classes for all staff",
+          "optional workshops for interested employees"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"Mandatory training sessions\" = \"required training classes\" — đều chỉ đào tạo bắt buộc."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"major upgrades have been made to the software\"",
+        "options": [
+          "the software has been replaced with a newer product",
+          "a technical issue was identified and reported to IT",
+          "the software license has been renewed for another year",
+          "significant improvements were implemented in the program"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Major upgrades were made\" = \"significant improvements were implemented\"."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"I must attend an all-day client meeting on November 22\"",
+        "options": [
+          "I will be attending the training session remotely that day",
+          "I have a full-day meeting with a client that cannot be moved",
+          "I plan to reschedule my client appointment to a later date",
+          "I am free on November 22 and can join any session"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Must attend an all-day client meeting\" = \"have a full-day meeting with a client that cannot be moved\"."
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Các buổi đào tạo phần mềm Abacus đều được tổ chức trực tuyến.\"",
+        "options": [
+          "The Abacus training sessions were cancelled due to technical issues.",
+          "Employees must travel to Building C for the Abacus training.",
+          "The Abacus software training is only available to senior staff.",
+          "All Abacus Deepthink training sessions are held online."
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"All Abacus Deepthink training sessions are held online.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Tôi cần tham dự cả hai khóa đào tạo phần mềm.\"",
+        "options": [
+          "I have already completed one of the two required training courses.",
+          "I would like to be exempted from the software training requirement.",
+          "I need to attend both software trainings.",
+          "I am only required to complete the Optisafe training this month."
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"I need to attend both software trainings.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Trong công ty, vì sao đào tạo phần mềm nội bộ thường được yêu cầu bắt buộc?",
+        "options": [
+          "Để đảm bảo toàn bộ nhân viên sử dụng thành thạo các công cụ cần thiết cho công việc",
+          "Để nhân viên có thêm bằng cấp chứng nhận từ tổ chức bên ngoài",
+          "Để giúp công ty tiết kiệm chi phí thuê chuyên gia tư vấn",
+          "Để thay thế cho các buổi họp nhóm hàng tháng"
+        ],
+        "correctIndex": 0,
+        "feedback": "Đào tạo phần mềm bắt buộc giúp đồng bộ năng lực kỹ thuật và tăng hiệu quả vận hành toàn công ty."
+      }
+    ],
     "_note": "No rich explanation data — exercises require manual crafting."
   },
   {
@@ -7627,12 +7936,115 @@
     "orderIndex": 5,
     "type": "triple",
     "category": null,
-    "approved": false,
+    "approved": true,
     "_hasRichData": false,
-    "vocab": [],
-    "paraphrase": [],
-    "translation": [],
-    "context": [],
+    "vocab": [
+      {
+        "question": "Từ \"alliance\" trong bài có nghĩa là gì?",
+        "options": [
+          "Chính sách kinh doanh",
+          "Liên minh, tổ chức liên kết",
+          "Hội đồng quản trị",
+          "Chiến dịch quảng cáo"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Alliance\" = liên minh, liên kết giữa các bên cùng chung lợi ích."
+      },
+      {
+        "question": "Cụm \"mission statement\" trong bài có nghĩa là gì?",
+        "options": [
+          "Danh sách thành viên đã đăng ký tham gia",
+          "Biên bản họp được lưu trữ chính thức",
+          "Bản báo cáo tài chính định kỳ",
+          "Tuyên bố sứ mệnh, mục tiêu của tổ chức"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Mission statement\" = tuyên bố sứ mệnh — mô tả mục đích và định hướng của tổ chức."
+      },
+      {
+        "question": "Từ \"initiative\" trong bài có nghĩa là gì?",
+        "options": [
+          "Khoản tài trợ từ chính phủ",
+          "Điều khoản trong hợp đồng",
+          "Sáng kiến, kế hoạch hành động mới",
+          "Quy trình phê duyệt nội bộ"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"Initiative\" = sáng kiến hoặc kế hoạch hành động được đề xuất chủ động."
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"news about the creation of our Business Alliance is generating interest\"",
+        "options": [
+          "the alliance has already secured funding from local businesses",
+          "members have begun promoting the alliance on social media",
+          "the upcoming meeting has been covered by local news outlets",
+          "our organization's launch is attracting attention from the local community"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Generating interest\" = \"attracting attention\" — đều chỉ sự quan tâm từ cộng đồng."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"save meeting time by doing it beforehand\"",
+        "options": [
+          "schedule a follow-up meeting for a later date",
+          "assign additional staff to help prepare the agenda",
+          "move the item to the end of the meeting agenda",
+          "reduce the duration of the meeting by completing the task in advance"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Save meeting time by doing it beforehand\" = \"reduce meeting duration by completing the task in advance\"."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"We have confirmed the workshop for June 28\"",
+        "options": [
+          "We plan to hold the workshop sometime in late June",
+          "We are still finalizing the arrangements for the June workshop",
+          "We have officially arranged the session for that date",
+          "We are waiting for approval before booking the event space"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"Confirmed the workshop\" = \"officially arranged the session\" — đều nói về việc xác nhận chính thức."
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Nhờ phản hồi của mọi người, lịch trình cuối cùng đã được hoàn thiện.\"",
+        "options": [
+          "The meeting was postponed due to a lack of responses from members.",
+          "Thanks to everyone's feedback, the final agenda has been completed.",
+          "All members submitted their proposals before the original deadline.",
+          "The final agenda was approved by the committee without changes."
+        ],
+        "correctIndex": 1,
+        "feedback": "Bản dịch: \"Thanks to everyone's feedback, the final agenda has been completed.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Thư viện mở cửa từ 9 giờ sáng và có chỗ để xe miễn phí.\"",
+        "options": [
+          "Parking near the library is limited and must be reserved in advance.",
+          "The library opens at noon and closes by early evening.",
+          "The library is open from 9 A.M. and has free parking available.",
+          "The library charges a small fee for parking on weekdays."
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"The library is open from 9 A.M. and has free parking available.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Trong một tổ chức hoặc doanh nghiệp, 'mission statement' (tuyên bố sứ mệnh) thường mô tả điều gì?",
+        "options": [
+          "Danh sách chi tiết các mục tiêu tài chính trong năm tới",
+          "Kế hoạch marketing và chiến lược truyền thông xã hội",
+          "Mục đích tồn tại, giá trị cốt lõi và định hướng hoạt động của tổ chức",
+          "Quy trình xử lý khiếu nại và phản hồi từ khách hàng"
+        ],
+        "correctIndex": 2,
+        "feedback": "Mission statement trả lời câu hỏi: tổ chức này tồn tại để làm gì và phục vụ ai."
+      }
+    ],
     "_note": "No rich explanation data — exercises require manual crafting."
   },
   {
@@ -7640,12 +8052,115 @@
     "orderIndex": 6,
     "type": "triple",
     "category": null,
-    "approved": false,
+    "approved": true,
     "_hasRichData": false,
-    "vocab": [],
-    "paraphrase": [],
-    "translation": [],
-    "context": [],
+    "vocab": [
+      {
+        "question": "Từ \"venue\" trong bài có nghĩa là gì?",
+        "options": [
+          "Thực đơn tiệc",
+          "Địa điểm tổ chức sự kiện",
+          "Ban tổ chức sự kiện",
+          "Danh sách khách mời"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Venue\" = địa điểm tổ chức sự kiện (tiệc, hội nghị, đám cưới, v.v.)."
+      },
+      {
+        "question": "Từ \"catering\" trong bài có nghĩa là gì?",
+        "options": [
+          "Dịch vụ âm thanh ánh sáng chuyên nghiệp",
+          "Dịch vụ cung cấp thức ăn và đồ uống cho sự kiện",
+          "Dịch vụ trang trí không gian sự kiện",
+          "Dịch vụ vệ sinh, dọn dẹp sau tiệc"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Catering\" = dịch vụ phục vụ ẩm thực (thức ăn & đồ uống) cho sự kiện."
+      },
+      {
+        "question": "Từ \"capacity\" trong ngữ cảnh đặt tiệc có nghĩa là gì?",
+        "options": [
+          "Sức chứa tối đa của địa điểm",
+          "Số lượng nhân viên phục vụ cần thiết",
+          "Chi phí thuê địa điểm tính theo giờ",
+          "Diện tích sàn tính bằng mét vuông"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Capacity\" = sức chứa — số người tối đa mà phòng/địa điểm có thể chứa."
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"the ideal venue for your reception or business meeting\"",
+        "options": [
+          "the only facility available near the city centre",
+          "a popular tourist attraction in the Bahamas",
+          "the most affordable option for large corporate events",
+          "a perfect location for hosting gatherings and professional events"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Ideal venue for reception or business meeting\" = \"perfect location for hosting gatherings and professional events\"."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"we need to make a decision quickly\"",
+        "options": [
+          "we need to gather more information before committing",
+          "we must act promptly before the opportunity is gone",
+          "we are still reviewing several alternative locations",
+          "we should postpone the booking until next quarter"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Make a decision quickly\" = \"act promptly before the opportunity is gone\"."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"take advantage of that discount date\"",
+        "options": [
+          "book on a date that offers a reduced rate",
+          "request a refund for an earlier booking",
+          "pay the full price to guarantee the reservation",
+          "ask for a customized pricing package"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Take advantage of that discount date\" = \"book on a date that offers a reduced rate\"."
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Thực đơn của họ sẽ phù hợp với sở thích đa dạng của khách mời.\"",
+        "options": [
+          "Their venue offers customizable decoration packages for all events.",
+          "Their catering staff is available for events throughout the year.",
+          "Their pricing is competitive compared to other locations in Nassau.",
+          "Their menu will suit the various preferences of our expected guests."
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"Their menu will suit the various preferences of our expected guests.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Chúng ta cần quyết định nhanh trước khi các nhóm khác đặt trước ngày đó.\"",
+        "options": [
+          "We must confirm the guest list before finalizing the booking.",
+          "We have already reserved the date and paid the deposit.",
+          "We should contact the venue to ask about their cancellation policy.",
+          "We need to make a decision quickly before other parties reserve those dates."
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"We need to make a decision quickly before other parties reserve those dates.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Khi đặt địa điểm tổ chức sự kiện lớn, điều nào sau đây thường được ưu tiên xác nhận đầu tiên?",
+        "options": [
+          "Danh sách diễn giả và chương trình biểu diễn",
+          "Ngày tổ chức và sức chứa của địa điểm",
+          "Thiết kế menu thực đơn và lựa chọn nhà thầu trang trí",
+          "Phương án dự phòng nếu thời tiết xấu"
+        ],
+        "correctIndex": 1,
+        "feedback": "Ngày tổ chức và sức chứa là hai yếu tố quyết định trước — tất cả chi tiết khác phụ thuộc vào hai yếu tố này."
+      }
+    ],
     "_note": "No rich explanation data — exercises require manual crafting."
   },
   {
@@ -7653,12 +8168,115 @@
     "orderIndex": 7,
     "type": "triple",
     "category": null,
-    "approved": false,
+    "approved": true,
     "_hasRichData": false,
-    "vocab": [],
-    "paraphrase": [],
-    "translation": [],
-    "context": [],
+    "vocab": [
+      {
+        "question": "Cụm \"advance purchase\" trên vé tàu có nghĩa là gì?",
+        "options": [
+          "Mua vé trước, thường với giá ưu đãi",
+          "Vé hạng nhất với đầy đủ tiện nghi",
+          "Vé không cần đặt chỗ ngồi",
+          "Vé có thể hoàn tiền trong vòng 24 giờ"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Advance purchase\" = mua trước — thường được giá tốt hơn nhưng có thể không đổi/hoàn được."
+      },
+      {
+        "question": "Từ \"departure\" trong bảng lịch tàu có nghĩa là gì?",
+        "options": [
+          "Thời gian khởi hành",
+          "Điểm đến cuối hành trình",
+          "Số hiệu chuyến tàu",
+          "Thời gian dự kiến đến nơi"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Departure\" = thời điểm khởi hành (tàu/máy bay/xe buýt rời bến)."
+      },
+      {
+        "question": "Từ \"duration\" trong bảng lịch tàu có nghĩa là gì?",
+        "options": [
+          "Thời lượng hành trình từ điểm đi đến điểm đến",
+          "Số lần dừng trung gian trên tuyến đường",
+          "Mức giá áp dụng vào giờ cao điểm",
+          "Khoảng cách giữa hai ga tính bằng km"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Duration\" = thời lượng — khoảng thời gian một hành trình kéo dài."
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"Return Trip: NOT INCLUDED\"",
+        "options": [
+          "the passenger may upgrade to a return ticket at the station",
+          "the ticket is valid for multiple trips within one week",
+          "the fare includes only the one-way journey",
+          "the ticket covers both the outbound and inbound journeys"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"Return trip not included\" = \"fare includes only the one-way journey\" — chỉ vé một chiều."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"Seat Number: NONE ASSIGNED\"",
+        "options": [
+          "the passenger has a guaranteed reserved seat on the train",
+          "no specific seat has been reserved for this passenger",
+          "the passenger must purchase a seat upgrade at the platform",
+          "the passenger is not permitted to sit in first class"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"None assigned\" = \"no specific seat has been reserved\" — chỗ ngồi tự chọn."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"I am looking forward to the conference\"",
+        "options": [
+          "I have not yet decided whether to attend the conference",
+          "I am eagerly anticipating the upcoming event",
+          "I am concerned about the schedule of the upcoming event",
+          "I plan to present my research findings at the conference"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Looking forward to\" = \"eagerly anticipating\" — đều thể hiện sự mong chờ."
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Cô ấy có thể tự do chọn chỗ ngồi trên tàu vì không có chỗ nào được chỉ định sẵn.\"",
+        "options": [
+          "She needs to confirm her seat selection at the ticket counter.",
+          "She must sit in her assigned seat throughout the journey.",
+          "She is not allowed to change seats once the train departs.",
+          "She may freely choose her seat as none has been assigned."
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"She may freely choose her seat as none has been assigned.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Tất cả các chuyến tàu trong lịch trình đều đến cùng một điểm đến.\"",
+        "options": [
+          "Some trains on the schedule make additional stops along the route.",
+          "All trains listed on the schedule arrive at the same destination.",
+          "The trains on the schedule depart from different stations.",
+          "The schedule only shows trains available on weekdays."
+        ],
+        "correctIndex": 1,
+        "feedback": "Bản dịch: \"All trains listed on the schedule arrive at the same destination.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Trong vé tàu hoặc máy bay, 'ADVANCE PURCHASE fare' thường có đặc điểm gì?",
+        "options": [
+          "Giá rẻ hơn nhưng thường không đổi/hoàn được",
+          "Giá chỉ áp dụng cho vé mua tại quầy trực tiếp",
+          "Giá cố định áp dụng cho mọi loại hành khách",
+          "Giá cao hơn vì đảm bảo chỗ ngồi ưu tiên"
+        ],
+        "correctIndex": 0,
+        "feedback": "Advance purchase = mua sớm với giá ưu đãi, đổi lấy tính linh hoạt thấp hơn (khó hoàn/đổi vé)."
+      }
+    ],
     "_note": "No rich explanation data — exercises require manual crafting."
   },
   {
@@ -7666,12 +8284,115 @@
     "orderIndex": 8,
     "type": "triple",
     "category": null,
-    "approved": false,
+    "approved": true,
     "_hasRichData": false,
-    "vocab": [],
-    "paraphrase": [],
-    "translation": [],
-    "context": [],
+    "vocab": [
+      {
+        "question": "Cụm \"standing order\" trong bài có nghĩa là gì?",
+        "options": [
+          "Đơn đặt hàng khẩn cấp cần giao ngay",
+          "Đơn đặt hàng định kỳ, tự động lặp lại",
+          "Danh sách sản phẩm cần kiểm tra chất lượng",
+          "Yêu cầu hoàn trả hàng hóa không đạt chuẩn"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Standing order\" = đơn hàng định kỳ được thiết lập sẵn và tự động thực hiện theo chu kỳ."
+      },
+      {
+        "question": "Từ \"letterhead\" trong bài có nghĩa là gì?",
+        "options": [
+          "Bao thư in logo công ty",
+          "Thư gửi tới giám đốc điều hành",
+          "Giấy tiêu đề có in logo và thông tin công ty",
+          "Nhãn dán trên hồ sơ tài liệu"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"Letterhead\" = giấy tiêu đề công ty — giấy in sẵn logo, địa chỉ và thông tin liên hệ."
+      },
+      {
+        "question": "Cụm \"out of stock\" trong bài có nghĩa là gì?",
+        "options": [
+          "Hết hàng, không còn trong kho",
+          "Sản phẩm cần được đặt hàng đặc biệt",
+          "Sản phẩm không còn được sản xuất",
+          "Sản phẩm đang chờ kiểm tra chất lượng"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Out of stock\" = hết hàng — sản phẩm tạm thời không có sẵn trong kho."
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"we would like to modify our usual order\"",
+        "options": [
+          "we are requesting a refund for our most recent delivery",
+          "we need to delay the delivery date for our next shipment",
+          "we want to cancel all future orders with your company",
+          "we would like to make changes to our regular purchase"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Modify our usual order\" = \"make changes to our regular purchase\"."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"we are currently out of the Witeglow whiteboards\"",
+        "options": [
+          "we are waiting for a price adjustment on the Witeglow boards",
+          "the Witeglow product is only available in limited quantities",
+          "we do not currently have the Witeglow whiteboards in stock",
+          "the Witeglow model has been permanently discontinued"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"Currently out of\" = \"do not currently have in stock\" — hết hàng tạm thời."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"we recently hired new attorneys and are preparing additional office spaces\"",
+        "options": [
+          "our company has undergone a major management restructuring",
+          "we are renovating the existing offices to improve working conditions",
+          "the firm is relocating its main offices to a new building",
+          "we have taken on new legal staff and are expanding our workspace"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Hired new attorneys, preparing additional office spaces\" = \"taken on new legal staff, expanding our workspace\"."
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Chúng tôi rất vui được đáp ứng các yêu cầu của anh theo đơn đặt hàng.\"",
+        "options": [
+          "We need additional information before we can confirm your order.",
+          "We are unable to process your order due to a system error.",
+          "We would be happy to accommodate your requests as outlined on your order form.",
+          "We have forwarded your order to our warehouse for immediate processing."
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"We would be happy to accommodate your requests as outlined on your order form.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Chúng tôi sẽ cung cấp bảng thay thế với cùng mức giá với sản phẩm Witeglow.\"",
+        "options": [
+          "We will place a back order and ship the Witeglow when it becomes available.",
+          "We will offer a full refund for the unavailable Witeglow product.",
+          "We will supply the substitute board at the same price as the Witeglow.",
+          "We can provide the replacement board at a discounted price."
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"We will supply the substitute board at the same price as the Witeglow.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Trong quan hệ B2B (doanh nghiệp với doanh nghiệp), 'standing order' giúp ích cho công ty theo dõi mua hàng như thế nào?",
+        "options": [
+          "Cho phép công ty thương lượng giá tốt hơn mỗi lần đặt hàng",
+          "Cho phép trả tiền sau khi đã kiểm tra toàn bộ hàng hóa",
+          "Đảm bảo công ty luôn được giao hàng trước các khách hàng khác",
+          "Giảm công việc hành chính bằng cách tự động hóa các đơn hàng định kỳ"
+        ],
+        "correctIndex": 3,
+        "feedback": "Standing order tự động hóa quy trình — tiết kiệm thời gian và tránh quên đặt hàng cho các nhu cầu thường xuyên."
+      }
+    ],
     "_note": "No rich explanation data — exercises require manual crafting."
   },
   {
@@ -7679,12 +8400,115 @@
     "orderIndex": 9,
     "type": "triple",
     "category": null,
-    "approved": false,
+    "approved": true,
     "_hasRichData": false,
-    "vocab": [],
-    "paraphrase": [],
-    "translation": [],
-    "context": [],
+    "vocab": [
+      {
+        "question": "Cụm \"purchasing manager\" trong bài có nghĩa là gì?",
+        "options": [
+          "Giám đốc/quản lý phụ trách mua hàng",
+          "Kế toán trưởng phụ trách thanh toán",
+          "Trưởng phòng chăm sóc khách hàng",
+          "Nhân viên phụ trách giao hàng"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Purchasing manager\" = người quản lý bộ phận mua hàng/thu mua của công ty."
+      },
+      {
+        "question": "Cụm \"bulk discount\" trong bài có nghĩa là gì?",
+        "options": [
+          "Giảm giá khi mua hàng với số lượng lớn",
+          "Giảm giá áp dụng cho thành viên VIP",
+          "Giảm giá trong các đợt khuyến mãi theo mùa",
+          "Giảm giá dành riêng cho khách hàng mới"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Bulk discount\" = chiết khấu khi mua số lượng lớn (thường áp dụng từ một ngưỡng số lượng nhất định)."
+      },
+      {
+        "question": "Cụm \"business account\" trong bài có nghĩa là gì?",
+        "options": [
+          "Tài khoản ngân hàng của doanh nghiệp",
+          "Tài khoản khách hàng doanh nghiệp tại nhà cung cấp",
+          "Trang mạng xã hội của công ty",
+          "Hồ sơ đăng ký kinh doanh chính thức"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Business account\" = tài khoản khách hàng doanh nghiệp, thường đi kèm ưu đãi đặc biệt."
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"50% off select printers\"",
+        "options": [
+          "a free upgrade to a newer printer model",
+          "half price on certain printer models",
+          "printers are free with any qualifying purchase",
+          "a 50-dollar rebate on all printer purchases"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"50% off\" = \"half price\" — giảm một nửa giá niêm yết."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"you automatically receive a 20 percent discount\"",
+        "options": [
+          "a 20 percent reduction is applied to your account without any extra steps",
+          "you may apply for a discount by contacting customer service",
+          "you are eligible for a refund of 20 percent of your total order",
+          "you will receive a coupon code valid for your next purchase"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Automatically receive a discount\" = \"reduction applied without any extra steps\"."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"only items purchased during the sale qualify for an exchange\"",
+        "options": [
+          "products bought at full price are not eligible for a price adjustment",
+          "exchanges are processed within five business days of the request",
+          "only sale-period purchases are eligible for the exchange policy",
+          "customers may return any product within 30 days of purchase"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"Only items purchased during the sale qualify for an exchange\" = \"only sale-period purchases are eligible\"."
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Chỉ những mặt hàng mua trong thời gian khuyến mãi mới đủ điều kiện đổi trả.\"",
+        "options": [
+          "Customers may return all items regardless of when they were purchased.",
+          "Only items purchased during the sale are eligible for an exchange.",
+          "Exchanges are only accepted at the original store of purchase.",
+          "All sale items are final and cannot be returned or exchanged."
+        ],
+        "correctIndex": 1,
+        "feedback": "Bản dịch: \"Only items purchased during the sale are eligible for an exchange.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Cô ấy muốn trả hàng, sau đó mua lại chúng vào đợt giảm giá.\"",
+        "options": [
+          "She would like to exchange her items for a different product.",
+          "She wants to return the items so she can repurchase them at the sale price.",
+          "She requested a full refund for all items in her recent order.",
+          "She asked to defer her payment until the sale begins."
+        ],
+        "correctIndex": 1,
+        "feedback": "Bản dịch: \"She wants to return the items so she can repurchase them at the sale price.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Trong thương mại B2B, tại sao khách hàng doanh nghiệp thường được hưởng chiết khấu cao hơn khách hàng cá nhân?",
+        "options": [
+          "Vì doanh nghiệp thường có uy tín tín dụng tốt hơn",
+          "Vì các nhà cung cấp muốn thu hút khách hàng doanh nghiệp bằng giá thấp",
+          "Vì doanh nghiệp không chịu thuế tiêu thụ đặc biệt",
+          "Vì doanh nghiệp mua với số lượng lớn, thường xuyên và ổn định hơn"
+        ],
+        "correctIndex": 3,
+        "feedback": "Doanh nghiệp thường mua số lượng lớn và đặt hàng định kỳ — đây là lý do chính để nhận chiết khấu ưu đãi."
+      }
+    ],
     "_note": "No rich explanation data — exercises require manual crafting."
   },
   {
@@ -7692,12 +8516,115 @@
     "orderIndex": 10,
     "type": "triple",
     "category": null,
-    "approved": false,
+    "approved": true,
     "_hasRichData": false,
-    "vocab": [],
-    "paraphrase": [],
-    "translation": [],
-    "context": [],
+    "vocab": [
+      {
+        "question": "Từ \"keynote address\" trong bài có nghĩa là gì?",
+        "options": [
+          "Bài phát biểu chính, thường do diễn giả nổi bật nhất trình bày",
+          "Bài thuyết trình kỹ thuật chi tiết về một sản phẩm",
+          "Bài phỏng vấn trực tiếp với người tổ chức hội nghị",
+          "Phần giới thiệu ngắn gọn về chương trình hội nghị"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Keynote address/speech\" = bài phát biểu chủ đạo, do nhân vật nổi bật nhất trình bày."
+      },
+      {
+        "question": "Từ \"attendee\" trong bài có nghĩa là gì?",
+        "options": [
+          "Người tham dự sự kiện",
+          "Nhà tài trợ của sự kiện",
+          "Ban tổ chức chương trình",
+          "Diễn giả được mời"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Attendee\" = người tham dự (tham gia) sự kiện, hội nghị."
+      },
+      {
+        "question": "Từ \"entrepreneur\" trong bài có nghĩa là gì?",
+        "options": [
+          "Doanh nhân, người khởi nghiệp",
+          "Nhà đầu tư tài chính",
+          "Nhà nghiên cứu học thuật",
+          "Chuyên gia tư vấn công nghệ"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Entrepreneur\" = doanh nhân khởi nghiệp, người tạo dựng doanh nghiệp từ ý tưởng mới."
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"get the name of your business out to our 500+ attendees\"",
+        "options": [
+          "place printed advertisements in the conference programme",
+          "distribute your business cards to all conference speakers",
+          "increase your company's visibility among over 500 participants",
+          "reach out to attendees directly through email marketing"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"Get your name out to attendees\" = \"increase your company's visibility among participants\"."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"a great way to network and stay informed\"",
+        "options": [
+          "an exclusive event restricted to registered members of the organization",
+          "the only method available to learn about new technologies in the field",
+          "a formal requirement for all employees in technology-related roles",
+          "a useful opportunity to connect professionally and keep up with industry developments"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Network and stay informed\" = \"connect professionally and keep up with industry developments\"."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"culminating with a keynote address by Ayana Gonzalez\"",
+        "options": [
+          "scheduling Ayana Gonzalez as the first speaker of the day",
+          "concluding the event with a featured speech by Ayana Gonzalez",
+          "starting the day with a welcome speech from the conference founder",
+          "introducing all sponsors before the main presentations begin"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Culminating with a keynote address\" = \"concluding the event with a featured speech\"."
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Đây là cách tuyệt vời để kết nối chuyên môn và cập nhật xu hướng ngành.\"",
+        "options": [
+          "It is a great way to network professionally and stay informed about industry trends.",
+          "Attending this event will earn participants a professional certification.",
+          "This event is mandatory for all employees in technical departments.",
+          "This conference is the largest technology event held in the region."
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"It is a great way to network professionally and stay informed about industry trends.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Nhân viên của công ty nhận được giảm giá cho vé vào cửa.\"",
+        "options": [
+          "Our employees receive a discount on tickets to the conference.",
+          "The company will cover the full cost of conference registration.",
+          "All company staff can attend the conference free of charge.",
+          "Employees are required to purchase tickets in advance for the conference."
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"Our employees receive a discount on tickets to the conference.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Trong hội nghị chuyên ngành, lợi ích chính của việc tài trợ (sponsorship) là gì?",
+        "options": [
+          "Được toàn quyền kiểm soát nội dung chương trình hội nghị",
+          "Miễn phí vé VIP cho toàn bộ nhân viên công ty tài trợ",
+          "Tăng độ nhận diện thương hiệu trước đông đảo người tham dự trong ngành",
+          "Được ưu tiên trình bày sản phẩm trước tất cả các diễn giả khác"
+        ],
+        "correctIndex": 2,
+        "feedback": "Tài trợ hội nghị giúp thương hiệu tiếp cận trực tiếp với đông đảo khán giả mục tiêu — chuyên gia và doanh nhân trong ngành."
+      }
+    ],
     "_note": "No rich explanation data — exercises require manual crafting."
   },
   {
@@ -7705,12 +8632,115 @@
     "orderIndex": 11,
     "type": "triple",
     "category": null,
-    "approved": false,
+    "approved": true,
     "_hasRichData": false,
-    "vocab": [],
-    "paraphrase": [],
-    "translation": [],
-    "context": [],
+    "vocab": [
+      {
+        "question": "Từ \"broadcast\" trong bài có nghĩa là gì?",
+        "options": [
+          "Lịch phát sóng, chương trình truyền thông",
+          "Phỏng vấn trực tiếp với khách mời",
+          "Tổng hợp bình luận từ người nghe đài",
+          "Thu âm trong phòng studio chuyên nghiệp"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Broadcast\" = phát sóng / lịch phát sóng (chương trình được truyền qua đài phát thanh hoặc truyền hình)."
+      },
+      {
+        "question": "Cụm \"entry-level position\" trong bài có nghĩa là gì?",
+        "options": [
+          "Vị trí quản lý cấp thấp nhất trong tổ chức",
+          "Vị trí dành cho chuyên gia nhiều năm kinh nghiệm",
+          "Vị trí đầu vào, phù hợp với người mới bắt đầu sự nghiệp",
+          "Vị trí tạm thời không có hợp đồng dài hạn"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"Entry-level\" = cấp thấp nhất, phù hợp với người mới ra trường hoặc ít kinh nghiệm."
+      },
+      {
+        "question": "Từ \"interviewee\" trong bài có nghĩa là gì?",
+        "options": [
+          "Người được phỏng vấn",
+          "Chuyên gia tư vấn xuất hiện trong chương trình",
+          "Người thực hiện phỏng vấn",
+          "Nhà sản xuất chương trình phỏng vấn"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Interviewee\" = người được phỏng vấn (ngược với \"interviewer\" = người phỏng vấn)."
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"I turned the dial and the car was filled with music\"",
+        "options": [
+          "I switched the channel and music immediately played throughout the car",
+          "I connected my phone to the car's audio system via Bluetooth",
+          "I purchased a new car stereo system for better sound quality",
+          "I turned up the volume to hear the broadcast more clearly"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Turned the dial\" = switched the channel; \"filled with music\" = music played throughout."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"conducting background research on interviewees\"",
+        "options": [
+          "editing recorded interviews before they are broadcast",
+          "gathering preliminary information about program guests",
+          "scheduling appointments with upcoming show guests",
+          "reviewing listener feedback about recent episodes"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Conducting background research on interviewees\" = \"gathering preliminary information about program guests\"."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"the programming assistant reports to the director of programming\"",
+        "options": [
+          "the assistant is responsible for hiring new on-air talent",
+          "the assistant manages a team of junior broadcasting staff",
+          "the programming assistant is supervised by the director of programming",
+          "the role requires direct communication with radio listeners"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"Reports to\" = \"is supervised by\" — cùng chỉ quan hệ cấp bậc quản lý."
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Đây là vị trí bán thời gian cấp thấp, báo cáo trực tiếp cho giám đốc lập trình.\"",
+        "options": [
+          "This role requires prior experience in radio broadcasting and journalism.",
+          "This is a senior full-time role responsible for managing the programming team.",
+          "The successful candidate will be promoted to a full-time position after six months.",
+          "This is an entry-level, part-time position that reports to the director of programming."
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"This is an entry-level, part-time position that reports to the director of programming.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Tôi vô tình bắt gặp chương trình của các bạn và hoàn toàn bị cuốn hút.\"",
+        "options": [
+          "I tuned in to your broadcast while searching for a news update.",
+          "I accidentally came across your program and was completely captivated.",
+          "I heard about your station through a recommendation from a colleague.",
+          "I have been listening to your station for several years and always enjoy it."
+        ],
+        "correctIndex": 1,
+        "feedback": "Bản dịch: \"I accidentally came across your program and was completely captivated.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Trong tuyển dụng, 'entry-level position' (vị trí đầu vào) thường yêu cầu ứng viên có những gì?",
+        "options": [
+          "Bằng đại học liên quan và kỹ năng cơ bản phù hợp với công việc",
+          "Kinh nghiệm quản lý nhóm và kỹ năng lãnh đạo",
+          "Chứng chỉ chuyên ngành quốc tế được công nhận toàn cầu",
+          "Bằng tiến sĩ và ít nhất 10 năm kinh nghiệm trong ngành"
+        ],
+        "correctIndex": 0,
+        "feedback": "Entry-level yêu cầu bằng đại học và kỹ năng cơ bản — không đòi hỏi kinh nghiệm dày dặn."
+      }
+    ],
     "_note": "No rich explanation data — exercises require manual crafting."
   },
   {
@@ -7718,12 +8748,115 @@
     "orderIndex": 12,
     "type": "triple",
     "category": null,
-    "approved": false,
+    "approved": true,
     "_hasRichData": false,
-    "vocab": [],
-    "paraphrase": [],
-    "translation": [],
-    "context": [],
+    "vocab": [
+      {
+        "question": "Từ \"portal\" trong bài có nghĩa là gì?",
+        "options": [
+          "Phần mềm quản lý hồ sơ nội bộ",
+          "Cổng vào tòa nhà hành chính",
+          "Cổng thông tin điện tử, trang web dịch vụ công",
+          "Bộ phận tiếp nhận yêu cầu qua điện thoại"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"Portal\" (web portal) = cổng thông tin điện tử — nơi người dùng đăng nhập để truy cập dịch vụ."
+      },
+      {
+        "question": "Cụm \"prior to\" trong bài có nghĩa là gì?",
+        "options": [
+          "Trong khoảng thời gian",
+          "Thay vì",
+          "Ngay sau khi",
+          "Trước khi"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Prior to\" = trước khi (mang nghĩa chính thức, trang trọng hơn \"before\")."
+      },
+      {
+        "question": "Cụm \"itemized statement\" trong bài có nghĩa là gì?",
+        "options": [
+          "Bảng kê chi tiết từng khoản mục và số tiền tương ứng",
+          "Thư thông báo phí xử lý yêu cầu",
+          "Biên lai thanh toán đã hoàn tất",
+          "Hóa đơn tổng hợp không chi tiết theo từng mục"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Itemized statement\" = bảng kê chi tiết — liệt kê từng khoản mục cùng số lượng và giá cụ thể."
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"all requests must be made through the portal\"",
+        "options": [
+          "visitors may submit requests in person at the front desk",
+          "requests can be sent by mail or dropped off at the office",
+          "the online system is the only accepted channel for submitting requests",
+          "applicants should contact the records department by telephone"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"All requests must be made through the portal\" = \"the online system is the only accepted channel\"."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"visitors must sign in prior to entering the building\"",
+        "options": [
+          "employees must show their ID badge at all entry points",
+          "all building visitors are required to register before gaining access",
+          "guests should wait in the lobby until an escort arrives",
+          "visitors need to schedule an appointment at least one day in advance"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Sign in prior to entering\" = \"required to register before gaining access\"."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"inform our firm's current work advising the city\"",
+        "options": [
+          "assist residents in filing official complaints with the city",
+          "replace the services currently provided by city consultants",
+          "support our company's ongoing advisory projects for the city",
+          "publish public findings about city infrastructure planning"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"Inform our firm's work advising the city\" = \"support our advisory projects for the city\"."
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Tất cả các yêu cầu phải được nộp qua cổng thông tin điện tử.\"",
+        "options": [
+          "Applicants should email their requests to the records department.",
+          "All requests must be made through the portal.",
+          "The records office accepts requests by mail, phone, or in person.",
+          "Requests may be submitted in person or through the online portal."
+        ],
+        "correctIndex": 1,
+        "feedback": "Bản dịch: \"All requests must be made through the portal.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Khách thăm quan phải ký tên vào sổ trước khi vào tòa nhà.\"",
+        "options": [
+          "Visitors must sign in prior to entering this facility.",
+          "Building access is restricted to employees and pre-approved visitors only.",
+          "All guests must present a valid photo ID to security personnel.",
+          "Visitors are encouraged to check in at the front desk upon arrival."
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"Visitors must sign in prior to entering this facility.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Tại các cơ quan nhà nước Mỹ, 'public records' (hồ sơ công cộng) theo luật thường bao gồm những loại tài liệu nào?",
+        "options": [
+          "Tài liệu mật của các cơ quan an ninh quốc gia",
+          "Hợp đồng nội bộ giữa các phòng ban chính phủ",
+          "Hồ sơ y tế cá nhân và thông tin thuế của công dân",
+          "Bản đồ quy hoạch, biên bản họp hội đồng thành phố, giấy phép xây dựng"
+        ],
+        "correctIndex": 3,
+        "feedback": "Public records là tài liệu do cơ quan nhà nước lập và lưu trữ — công dân có quyền tiếp cận theo Luật Tự do Thông tin."
+      }
+    ],
     "_note": "No rich explanation data — exercises require manual crafting."
   },
   {
@@ -7731,12 +8864,115 @@
     "orderIndex": 13,
     "type": "triple",
     "category": null,
-    "approved": false,
+    "approved": true,
     "_hasRichData": false,
-    "vocab": [],
-    "paraphrase": [],
-    "translation": [],
-    "context": [],
+    "vocab": [
+      {
+        "question": "Từ \"autobiography\" trong bài có nghĩa là gì?",
+        "options": [
+          "Bộ phim tài liệu về sự nghiệp của một diễn viên",
+          "Tự truyện do chính tác giả viết về cuộc đời mình",
+          "Tiểu sử do người khác viết về một nhân vật nổi tiếng",
+          "Bài phê bình văn học đăng trên tạp chí"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Autobiography\" = tự truyện — sách do chính tác giả viết kể về cuộc đời của mình."
+      },
+      {
+        "question": "Cụm \"storied career\" trong bài có nghĩa là gì?",
+        "options": [
+          "Sự nghiệp chưa được công nhận rộng rãi",
+          "Sự nghiệp lâu dài và rực rỡ, đầy thành tích đáng kể",
+          "Sự nghiệp gắn liền với nhiều vụ bê bối",
+          "Sự nghiệp ngắn ngủi nhưng đáng nhớ"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Storied career\" = sự nghiệp nổi tiếng, đầy chuyện đáng kể và thành tích đáng nhớ."
+      },
+      {
+        "question": "Từ \"coincidence\" trong bài có nghĩa là gì?",
+        "options": [
+          "Kế hoạch được lên trước có chủ đích",
+          "Quyết định đơn phương của một bên",
+          "Sự kiện đã được dự báo trước",
+          "Sự trùng hợp ngẫu nhiên"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Coincidence\" = sự trùng hợp ngẫu nhiên (không có chủ đích)."
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"a storied career as an actor\"",
+        "options": [
+          "a brief but memorable period working in film",
+          "a career that relied heavily on critical recognition",
+          "an unusual path from stage to screen performance",
+          "a distinguished and well-known history in acting"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Storied career\" = \"distinguished and well-known history\" — đều chỉ sự nghiệp nổi bật."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"I will be visiting his home country to address a journalists' convention\"",
+        "options": [
+          "I will be conducting research for a book about Scandinavian cinema",
+          "I will travel to his birthplace to interview him at his private residence",
+          "I am going to his native country to speak at a media conference",
+          "I plan to attend a local theatre performance during my upcoming trip"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"Address a journalists' convention\" = \"speak at a media conference\"."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"we need to finalize a few details before the interview\"",
+        "options": [
+          "we will need to reschedule the interview to a later date",
+          "we are still deciding whether to proceed with the interview",
+          "we require additional background information about the journalist",
+          "we want to confirm the remaining arrangements before the meeting"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Finalize a few details\" = \"confirm the remaining arrangements\"."
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Cuốn sách cung cấp cái nhìn sâu sắc về sự nghiệp của ông, bắt đầu từ những vai diễn đầu tiên.\"",
+        "options": [
+          "The author shares his opinions on the state of modern cinema worldwide.",
+          "The book discusses the challenges of working in the international film industry.",
+          "The book provides wonderful insight into his career, starting with his first roles.",
+          "The book focuses primarily on the actor's personal life and family background."
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"The book provides wonderful insight into his career, starting with his first roles.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Ông ấy rất thích đọc tất cả các bài viết của cô trên tờ Top News U.K.\"",
+        "options": [
+          "He was introduced to her articles through a mutual colleague.",
+          "He enjoys all of her writing for Top News U.K.",
+          "He is familiar with her work but has not read her recent articles.",
+          "He has agreed to be interviewed exclusively by Top News U.K."
+        ],
+        "correctIndex": 1,
+        "feedback": "Bản dịch: \"He enjoys all of her writing for Top News U.K.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Trong báo chí, sự khác biệt chính giữa 'autobiography' (tự truyện) và 'biography' (tiểu sử) là gì?",
+        "options": [
+          "Tự truyện được xuất bản sau khi tác giả qua đời; tiểu sử được viết khi còn sống",
+          "Tự truyện chỉ viết về người nổi tiếng; tiểu sử viết về người thường",
+          "Tự truyện do chính nhân vật viết; tiểu sử do người khác viết về nhân vật đó",
+          "Tự truyện chỉ tập trung vào thành tích nghề nghiệp; tiểu sử kể toàn bộ cuộc đời"
+        ],
+        "correctIndex": 2,
+        "feedback": "Sự khác biệt cốt lõi: tự truyện = tự mình viết; tiểu sử = người khác viết về mình."
+      }
+    ],
     "_note": "No rich explanation data — exercises require manual crafting."
   },
   {
@@ -7744,12 +8980,115 @@
     "orderIndex": 14,
     "type": "triple",
     "category": null,
-    "approved": false,
+    "approved": true,
     "_hasRichData": false,
-    "vocab": [],
-    "paraphrase": [],
-    "translation": [],
-    "context": [],
+    "vocab": [
+      {
+        "question": "Cụm \"industrial designer\" trong bài có nghĩa là gì?",
+        "options": [
+          "Kiến trúc sư thiết kế nhà xưởng và cơ sở hạ tầng",
+          "Chuyên gia phân tích quy trình sản xuất",
+          "Nhà thiết kế sản phẩm công nghiệp và tiêu dùng",
+          "Kỹ sư vận hành dây chuyền sản xuất công nghiệp"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"Industrial designer\" = nhà thiết kế công nghiệp — thiết kế hình dáng, chức năng và trải nghiệm người dùng của sản phẩm."
+      },
+      {
+        "question": "Từ \"qualification\" trong bài có nghĩa là gì?",
+        "options": [
+          "Kết quả phỏng vấn chính thức",
+          "Tiêu chuẩn, điều kiện ứng tuyển cần đáp ứng",
+          "Thư giới thiệu từ nhà tuyển dụng trước",
+          "Mức lương đề xuất cho vị trí tuyển dụng"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Qualification\" = tiêu chuẩn hoặc điều kiện mà ứng viên cần đáp ứng để được xem xét."
+      },
+      {
+        "question": "Từ \"portfolio\" trong ngữ cảnh tuyển dụng thiết kế có nghĩa là gì?",
+        "options": [
+          "Hồ sơ xin việc bao gồm CV và thư giới thiệu",
+          "Bản mô tả chi tiết về kinh nghiệm làm việc",
+          "Chứng chỉ hành nghề được cấp bởi hiệp hội thiết kế",
+          "Bộ sưu tập tác phẩm minh chứng năng lực thiết kế"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Portfolio\" = hồ sơ tác phẩm — tập hợp các thiết kế đã thực hiện để chứng minh năng lực."
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"our hiring committee has reviewed your application\"",
+        "options": [
+          "your application has been added to our candidate database",
+          "our recruitment team has examined your submitted documents",
+          "we have contacted your references for background verification",
+          "we have forwarded your application to the department manager"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Hiring committee reviewed your application\" = \"recruitment team examined your submitted documents\"."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"you meet the qualifications for this position\"",
+        "options": [
+          "you are one of several finalists being considered for the job",
+          "you fulfil the required criteria for this role",
+          "your background requires additional training before starting",
+          "your application has been shortlisted for further review"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Meet the qualifications\" = \"fulfil the required criteria\" — đều chỉ việc đáp ứng tiêu chuẩn."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"interviews will be held on-site during the first two weeks of December\"",
+        "options": [
+          "interviews have been postponed to January due to staffing changes",
+          "all candidates will be interviewed via video call throughout December",
+          "in-person interviews will take place at our offices in early December",
+          "the interview schedule will be confirmed after the application deadline"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"Held on-site\" = \"in-person at our offices\"; \"first two weeks of December\" = \"early December\"."
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Ủy ban tuyển dụng đã xem xét hồ sơ của anh và xác nhận anh đáp ứng đủ tiêu chuẩn.\"",
+        "options": [
+          "Your application has been placed on a waiting list pending further review.",
+          "We regret to inform you that your application was not successful at this time.",
+          "Our hiring committee has reviewed your application and determined that you meet the qualifications.",
+          "Your application is currently being assessed by our human resources department."
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"Our hiring committee has reviewed your application and determined that you meet the qualifications.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Vòng phỏng vấn đầu tiên sẽ được tổ chức tại văn phòng trong hai tuần đầu tháng 12.\"",
+        "options": [
+          "All interviews will take place over a single day at the company's headquarters.",
+          "The first round of interviews will be conducted remotely via video conference.",
+          "Candidates will be notified of their interview schedule by the end of November.",
+          "First-round interviews will be held on-site during the first two weeks of December."
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"First-round interviews will be held on-site during the first two weeks of December.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Trong quy trình tuyển dụng, tại sao nhà tuyển dụng thường yêu cầu nhà thiết kế nộp 'portfolio' (hồ sơ tác phẩm)?",
+        "options": [
+          "Để kiểm tra ứng viên có tuân thủ bản quyền sở hữu trí tuệ không",
+          "Để xác minh ứng viên đã hoàn thành chương trình đào tạo chính thức",
+          "Để đánh giá trực tiếp chất lượng và phong cách thiết kế thực tế của ứng viên",
+          "Để so sánh giá thành dịch vụ thiết kế với các nhà cung cấp khác"
+        ],
+        "correctIndex": 2,
+        "feedback": "Portfolio cho thấy năng lực thực tế — quan trọng hơn bằng cấp vì thiết kế là nghề thực hành."
+      }
+    ],
     "_note": "No rich explanation data — exercises require manual crafting."
   },
   {
@@ -7757,12 +9096,115 @@
     "orderIndex": 15,
     "type": "triple",
     "category": null,
-    "approved": false,
+    "approved": true,
     "_hasRichData": false,
-    "vocab": [],
-    "paraphrase": [],
-    "translation": [],
-    "context": [],
+    "vocab": [
+      {
+        "question": "Từ \"shingle\" trong bài có nghĩa là gì?",
+        "options": [
+          "Hệ thống máng xối thu nước mưa",
+          "Loại sơn chống thấm dùng cho tường ngoài",
+          "Vật liệu cách nhiệt dùng bên trong tường",
+          "Tấm lợp mái (ngói/tấm lợp hình chữ nhật)"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Shingle\" = tấm lợp mái — vật liệu lợp mái nhà (thường làm từ nhựa đường, gỗ, hoặc đá phiến)."
+      },
+      {
+        "question": "Từ \"deposit\" trong bài có nghĩa là gì?",
+        "options": [
+          "Số tiền còn lại cần thanh toán sau khi hoàn thành công việc",
+          "Khoản bồi thường trong trường hợp vi phạm hợp đồng",
+          "Phí bảo hiểm công trình bắt buộc phải đóng",
+          "Tiền đặt cọc thanh toán trước để xác nhận hợp đồng"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Deposit\" = tiền đặt cọc — khoản thanh toán trước để xác nhận cam kết thực hiện hợp đồng."
+      },
+      {
+        "question": "Từ \"exclusive\" trong bài có nghĩa là gì?",
+        "options": [
+          "Đắt tiền hơn so với các sản phẩm tương đương",
+          "Được cung cấp bởi nhiều nhà thầu trên thị trường",
+          "Mới nhất trên thị trường, chưa được thử nghiệm rộng rãi",
+          "Độc quyền, chỉ được cung cấp bởi một đơn vị duy nhất"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"Exclusive\" = độc quyền — chỉ có thể mua hoặc sử dụng qua một nguồn duy nhất."
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"this letter is to confirm our agreement to replace your roof\"",
+        "options": [
+          "we are writing to request your approval before starting the project",
+          "this letter serves to verify the terms of our roofing contract",
+          "this is a reminder to schedule your roof inspection appointment",
+          "we would like to provide you with a quote for the roofing work"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Confirm our agreement\" = \"verify the terms of our contract\"."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"guaranteed to keep your house dry\"",
+        "options": [
+          "ensures protection against water damage and leaks",
+          "provides a decorative finish in a range of color options",
+          "helps improve the energy efficiency of your home",
+          "reduces the need for routine maintenance and repairs"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"Keep your house dry\" = \"ensures protection against water damage and leaks\"."
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"be sure to confirm the job location and required materials\"",
+        "options": [
+          "review the color options with the homeowner before starting",
+          "complete the installation before the scheduled date if possible",
+          "double-check the work site details and the necessary supplies",
+          "contact the client to ask about any last-minute changes"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"Confirm job location and required materials\" = \"double-check the work site and necessary supplies\"."
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Chúng tôi xác nhận thỏa thuận thay thế mái nhà của bạn vào ngày 4 tháng 8.\"",
+        "options": [
+          "This is to confirm our agreement to replace your roof on August 4.",
+          "We are writing to provide a revised estimate for the roofing project.",
+          "We confirm that the roofing materials have been ordered and will arrive soon.",
+          "We would like to reschedule the roof installation to a date in August."
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"This is to confirm our agreement to replace your roof on August 4.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Tôi đã nhận được tiền đặt cọc và hợp đồng đã ký của bạn.\"",
+        "options": [
+          "I have received your deposit and signed contract.",
+          "I have confirmed the delivery of materials for your roofing project.",
+          "I am writing to request the remaining balance for the project.",
+          "I have reviewed the contract and will send it for your signature."
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"I have received your deposit and signed contract.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Trong hợp đồng xây dựng hoặc sửa chữa nhà, 'deposit' (tiền đặt cọc) thường có mục đích gì?",
+        "options": [
+          "Thay thế cho việc ký hợp đồng khi hai bên đã tin tưởng nhau",
+          "Được hoàn trả toàn bộ nếu công trình hoàn thành đúng hạn",
+          "Trang trải toàn bộ chi phí vật liệu trước khi bắt đầu công việc",
+          "Đảm bảo cam kết của cả hai bên và hỗ trợ nhà thầu chuẩn bị vật liệu ban đầu"
+        ],
+        "correctIndex": 3,
+        "feedback": "Tiền đặt cọc = cam kết hai chiều: khách hàng xác nhận thuê, nhà thầu xác nhận nhận việc và bắt đầu chuẩn bị."
+      }
+    ],
     "_note": "No rich explanation data — exercises require manual crafting."
   }
 ]
