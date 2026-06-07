@@ -128,98 +128,98 @@
           "options": ["In the main conference hall.", "At the offsite venue.", "In the east wing auditorium.", "In the largest boardroom."],
           "correct": 1,
           "explanation": "All-hands meeting (họp toàn công ty) thường tổ chức ở địa điểm bên ngoài (offsite) để đủ chỗ. A và D quá nhỏ cho all-hands. C (east wing auditorium) có thể đủ chỗ nhưng không phải địa điểm tiêu chuẩn cho all-hands toàn công ty.",
-          "answerChunks": ["At", "the", "offsite", "venue"]
+          "answerChunks": ["Tại", "địa", "điểm", "bên", "ngoài"]
         },
         {
           "prompt": "Where can I find the updated employee handbook?",
           "options": ["On the intranet portal.", "At the HR desk.", "In the staff common room.", "At the company's document archive."],
           "correct": 0,
           "explanation": "Tài liệu cập nhật (updated) thường được lưu trên intranet portal (A) để nhân viên tự truy cập. B và C là nơi có phiên bản cũ. D (document archive) lưu trữ tài liệu cũ, không phải bản cập nhật mới nhất.",
-          "answerChunks": ["On", "the", "intranet", "portal"]
+          "answerChunks": ["Trên", "cổng", "thông", "tin", "nội", "bộ"]
         },
         {
           "prompt": "Where should I wait for my interview?",
           "options": ["In the reception area.", "Outside the interview room.", "In the adjacent waiting area.", "On the third floor."],
           "correct": 0,
           "explanation": "Ứng viên phỏng vấn ngồi chờ ở khu vực lễ tân (A). B (outside the room) có thể đúng nhưng A là hướng dẫn chuẩn mực hơn. C (adjacent waiting area) chỉ hợp lệ nếu đã vào tầng phòng phỏng vấn — A là điểm tập trung ban đầu.",
-          "answerChunks": ["In", "the", "reception", "area"]
+          "answerChunks": ["Tại", "khu", "vực", "lễ", "tân"]
         },
         {
           "prompt": "Where are the fire evacuation assembly points?",
           "options": ["In the parking lot.", "Behind the building.", "At the designated spots on each floor plan.", "In front of the main entrance."],
           "correct": 2,
           "explanation": "Điểm tập kết sơ tán (assembly points) được chỉ định trên bản đồ từng tầng (C). A, B, D có thể là vị trí nhưng C là câu trả lời chính thức và đầy đủ nhất.",
-          "answerChunks": ["At", "the", "designated", "spots", "on", "each", "floor", "plan"]
+          "answerChunks": ["Tại", "các", "điểm", "chỉ", "định", "trên", "bản", "đồ", "tầng"]
         },
         {
           "prompt": "Where do I submit a request for IT equipment?",
           "options": ["Via the IT helpdesk portal.", "At the IT department office.", "Through your line manager.", "In person at the service desk."],
           "correct": 0,
           "explanation": "Yêu cầu thiết bị IT thường được gửi qua portal trực tuyến (A) để theo dõi và xử lý hiệu quả. B và D là cách tiếp cận cũ. C trả lời một phần (qua manager) nhưng không phải nơi nộp cuối.",
-          "answerChunks": ["Via", "the", "IT", "helpdesk", "portal"]
+          "answerChunks": ["Qua", "cổng", "hỗ", "trợ", "IT"]
         },
         {
           "prompt": "Where is the company's regional distribution center?",
           "options": ["In the industrial zone south of the city.", "At the head office location.", "Near the international airport.", "In the outer commercial estate."],
           "correct": 0,
           "explanation": "Trung tâm phân phối khu vực thường ở khu công nghiệp ngoại thành (A). B (head office) không phải trung tâm phân phối. C (airport) hợp lý cho nhập khẩu nhưng A chính xác hơn. D (outer commercial estate) là khu thương mại, không phù hợp cho phân phối.",
-          "answerChunks": ["In", "the", "industrial", "zone", "south", "of", "the", "city"]
+          "answerChunks": ["Trong", "khu", "công", "nghiệp", "phía", "nam", "thành", "phố"]
         },
         {
           "prompt": "Where should the client presentations be saved?",
           "options": ["On your local drive.", "In the shared project folder.", "On the company server.", "In the team's cloud storage drive."],
           "correct": 1,
           "explanation": "Bài thuyết trình cho khách hàng nên lưu trong thư mục dự án chung (B: shared project folder) để cả nhóm truy cập được. A (local drive) không an toàn. C (company server) quá chung chung. D (cloud storage) hợp lý nhưng không có cấu trúc project như B.",
-          "answerChunks": ["In", "the", "shared", "project", "folder"]
+          "answerChunks": ["Trong", "thư", "mục", "dự", "án", "chung"]
         },
         {
           "prompt": "Where is the new satellite office opening?",
           "options": ["In the financial district.", "In the technology park.", "Near the client's headquarters.", "In the uptown business district."],
           "correct": 2,
           "explanation": "Văn phòng vệ tinh (satellite office) mở gần trụ sở khách hàng (C) để thuận tiện làm việc. A và B là khu vực hợp lý nhưng C có lý do chiến lược rõ ràng hơn. D (uptown business district) là địa điểm cao cấp nhưng không có lý do chiến lược cụ thể.",
-          "answerChunks": ["Near", "the", "client's", "headquarters"]
+          "answerChunks": ["Gần", "trụ", "sở", "của", "khách", "hàng"]
         },
         {
           "prompt": "Where are the catering supplies for the event kept?",
           "options": ["In the kitchen storage area.", "In the service corridor near the venue.", "In the loading dock.", "At the catering company's facility."],
           "correct": 0,
           "explanation": "Đồ phục vụ ăn uống cho sự kiện được giữ trong khu vực bếp (A). C (loading dock) là nơi nhận hàng, không lưu trữ. D là cơ sở bên ngoài. B (service corridor) là nơi vận chuyển, không phải nơi lưu trữ.",
-          "answerChunks": ["In", "the", "kitchen", "storage", "area"]
+          "answerChunks": ["Trong", "khu", "vực", "kho", "bếp"]
         },
         {
           "prompt": "Where should I park when visiting the downtown office?",
           "options": ["In the basement car park.", "At a nearby public parking lot.", "In the designated visitor parking bay.", "On the street outside."],
           "correct": 1,
           "explanation": "Khách thăm văn phòng nên đỗ ở bãi đỗ xe công cộng gần đó (B). A (basement) thường dành riêng cho nhân viên. C (visitor parking bay) hợp lý nếu có nhưng B là lựa chọn phổ quát hơn. D (street) không phải lựa chọn khuyến nghị.",
-          "answerChunks": ["At", "a", "nearby", "public", "parking", "lot"]
+          "answerChunks": ["Tại", "bãi", "đỗ", "xe", "công", "cộng", "gần", "đó"]
         },
         {
           "prompt": "Where is the backup server room located?",
           "options": ["On the basement level.", "In the IT server room.", "Offsite at a data center.", "In a secure third-party data facility."],
           "correct": 2,
           "explanation": "Backup server room thường ở cơ sở bên ngoài (C: offsite data center) để bảo đảm phục hồi thảm họa. A và B có thể là server room chính, không phải backup. D (third-party facility) tương tự C nhưng C cụ thể hơn về loại cơ sở.",
-          "answerChunks": ["Offsite", "at", "a", "data", "center"]
+          "answerChunks": ["Bên", "ngoài", "tại", "trung", "tâm", "dữ", "liệu"]
         },
         {
           "prompt": "Where do we hold our monthly team briefings?",
           "options": ["In the open workspace.", "In Meeting Room B.", "The schedule varies.", "In the training center."],
           "correct": 1,
           "explanation": "Briefing hàng tháng tổ chức ở Meeting Room B (B) — địa điểm cố định, cụ thể. A (open workspace) không phù hợp cho briefing chính thức. D (training center) quá lớn cho briefing nhóm. C không trả lời câu hỏi WHERE.",
-          "answerChunks": ["In", "Meeting", "Room", "B"]
+          "answerChunks": ["Trong", "Phòng", "họp", "B"]
         },
         {
           "prompt": "Where can I pick up my company ID badge?",
           "options": ["At the HR office on the first floor.", "From your department head.", "At the security checkpoint.", "At the reception desk."],
           "correct": 3,
           "explanation": "Thẻ nhân viên được cấp tại quầy lễ tân (D) — đây là điểm phát thẻ đầu tiên cho nhân viên mới. A (HR) có thể chỉ định nhưng D là nơi nhận vật lý. B trả lời cho WHO. C là nơi dùng thẻ.",
-          "answerChunks": ["At", "the", "reception", "desk"]
+          "answerChunks": ["Tại", "quầy", "lễ", "tân"]
         },
         {
           "prompt": "Where is the mandatory safety briefing conducted?",
           "options": ["In the main auditorium.", "On the factory floor.", "At the training facility.", "In the designated assembly area."],
           "correct": 3,
           "explanation": "Briefing an toàn bắt buộc được tổ chức tại khu vực tập kết chỉ định (D) để thực hành sơ tán. A (auditorium) quá trang trọng, B (factory floor) không phù hợp trước khi vào làm, C (training facility) quá xa. D kết hợp cả học và thực hành.",
-          "answerChunks": ["In", "the", "designated", "assembly", "area"]
+          "answerChunks": ["Trong", "khu", "vực", "tập", "kết", "được", "chỉ", "định"]
         }
       ]
     }

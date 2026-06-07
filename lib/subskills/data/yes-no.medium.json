@@ -128,98 +128,98 @@
           "options": ["Yes, it has been confirmed.", "Yes, we have completed it.", "No, it wasn't scheduled.", "Yes, they have finalized it."],
           "correct": 0,
           "explanation": "Câu hỏi passive 'Has [schedule] been...' → đáp án A dùng đúng 'Yes, it has been' (passive, singular). B ('we have completed') sai voice. D ('they') sai chủ ngữ. C sai nghĩa.",
-          "answerChunks": ["Yes,", "it", "has", "been", "confirmed"]
+          "answerChunks": ["Đúng,", "lịch", "đã", "được", "xác", "nhận"]
         },
         {
           "prompt": "Do all contractors need a separate security clearance?",
           "options": ["Yes, without exception.", "Yes, they were cleared.", "No, only senior ones do.", "Yes, it is required."],
           "correct": 2,
           "explanation": "Câu hỏi dùng 'Do all...' → đáp án phủ nhận một phần: 'No, only senior ones do' (C) dùng đúng 'do' echo và hợp lý về mặt nghĩa. A quá tuyệt đối. B sai thì (past). D sai chủ ngữ ('it' cho 'contractors').",
-          "answerChunks": ["No,", "only", "senior", "ones", "do"]
+          "answerChunks": ["Không,", "chỉ", "những", "người", "cấp", "cao", "mới", "cần"]
         },
         {
           "prompt": "Were all the safety checks completed before the launch?",
           "options": ["Yes, they were all done.", "Yes, we have checked.", "No, it was not finished.", "Yes, they did complete them."],
           "correct": 0,
           "explanation": "Câu hỏi past passive 'Were all...' → đáp án A 'Yes, they were all done' dùng đúng 'were' past và 'they' cho 'safety checks' số nhiều. B sai thì (present perfect). C sai chủ ngữ. D không tự nhiên.",
-          "answerChunks": ["Yes,", "they", "were", "all", "done"]
+          "answerChunks": ["Đúng,", "tất", "cả", "đã", "được", "hoàn", "thành"]
         },
         {
           "prompt": "Will the new product be available in all markets by Q3?",
           "options": ["Yes, it will be.", "Yes, it is available.", "No, it wasn't launched.", "Yes, we will have it."],
           "correct": 0,
           "explanation": "Câu hỏi future 'Will... be available' → đáp án A 'Yes, it will be' dùng đúng 'will be' future. B sai thì (present). C sai thì (past). D không hoàn chỉnh và sai cấu trúc.",
-          "answerChunks": ["Yes,", "it", "will", "be"]
+          "answerChunks": ["Đúng,", "sản", "phẩm", "sẽ", "có", "mặt"]
         },
         {
           "prompt": "Has the project team been briefed on the new requirements?",
           "options": ["No, not all of them have.", "Yes, they were told yesterday.", "Yes, it has been briefed.", "No, the meeting is later."],
           "correct": 0,
           "explanation": "Câu hỏi present perfect passive → đáp án A 'No, not all of them have' dùng đúng 'have' perfect và 'them' cho 'project team' members. B sai thì (past simple). C sai chủ ngữ ('it' cho người). D không xác nhận/phủ nhận trực tiếp.",
-          "answerChunks": ["No,", "not", "all", "of", "them", "have"]
+          "answerChunks": ["Không,", "chưa", "phải", "tất", "cả", "đều", "được", "thông", "báo"]
         },
         {
           "prompt": "Does the vendor offer a post-installation support package?",
           "options": ["Yes, they do.", "Yes, it is offered.", "No, the IT team does not.", "Yes, they have offered."],
           "correct": 0,
           "explanation": "Câu hỏi 'Does [vendor]...' → đáp án A 'Yes, they do' dùng đúng 'do' (not 'does' — 'they' không dùng 'does'). B đúng cấu trúc nhưng passive không tự nhiên cho 'vendor'. C sai chủ ngữ. D sai thì.",
-          "answerChunks": ["Yes,", "they", "do"]
+          "answerChunks": ["Đúng,", "họ", "có", "cung", "cấp", "gói", "đó"]
         },
         {
           "prompt": "Is the quarterly budget report due this week?",
           "options": ["Yes, it is due on Thursday.", "Yes, they are due soon.", "No, it is not ready.", "Yes, the report has been."],
           "correct": 0,
           "explanation": "Câu hỏi 'Is [report]...' → đáp án A 'Yes, it is due on Thursday' dùng đúng 'it' cho 'report' và xác nhận cụ thể ngày. B sai chủ ngữ ('they'). C phủ nhận không đầy đủ. D không hoàn chỉnh.",
-          "answerChunks": ["Yes,", "it", "is", "due", "on", "Thursday"]
+          "answerChunks": ["Đúng,", "báo", "cáo", "đến", "hạn", "vào", "thứ", "Năm"]
         },
         {
           "prompt": "Did the client agree to the revised payment terms?",
           "options": ["No, they want more time.", "Yes, they have agreed.", "No, the terms were not revised.", "Yes, we did."],
           "correct": 0,
           "explanation": "Câu hỏi past simple 'Did the client...' → đáp án A 'No, they want more time' dùng đúng 'they' cho 'client' (third person plural in business). B sai thì (present perfect). C sai nghĩa. D sai chủ ngữ ('we' thay 'they').",
-          "answerChunks": ["No,", "they", "want", "more", "time"]
+          "answerChunks": ["Không,", "họ", "muốn", "thêm", "thời", "gian"]
         },
         {
           "prompt": "Are the recruitment interviews scheduled for next week?",
           "options": ["Yes, they are.", "Yes, it is scheduled.", "No, they were last week.", "Yes, we are scheduled."],
           "correct": 0,
           "explanation": "Câu hỏi 'Are [interviews]...' → đáp án A 'Yes, they are' dùng đúng 'they' cho 'interviews' và trợ động từ 'are'. B sai chủ ngữ ('it'). C sai thì. D sai chủ ngữ ('we' cho lịch phỏng vấn).",
-          "answerChunks": ["Yes,", "they", "are"]
+          "answerChunks": ["Đúng,", "các", "buổi", "phỏng", "vấn", "đã", "được", "lên", "lịch"]
         },
         {
           "prompt": "Can the maintenance request be processed urgently?",
           "options": ["Yes, it can be prioritized.", "Yes, they can process it.", "No, it is not urgent.", "Yes, we can do it."],
           "correct": 0,
           "explanation": "Câu hỏi passive 'Can [request] be processed' → đáp án A 'Yes, it can be prioritized' dùng đúng passive 'can be' và 'it' cho 'request'. B active voice không khớp với passive question. C sai nghĩa. D sai chủ ngữ.",
-          "answerChunks": ["Yes,", "it", "can", "be", "prioritized"]
+          "answerChunks": ["Đúng,", "yêu", "cầu", "có", "thể", "được", "ưu", "tiên"]
         },
         {
           "prompt": "Have the new staff completed their mandatory induction training?",
           "options": ["Yes, most of them have.", "Yes, it was completed.", "No, they haven't started.", "Yes, they did complete it."],
           "correct": 2,
           "explanation": "Câu hỏi present perfect 'Have... completed' → đáp án C 'No, they haven't started' dùng đúng present perfect negative và 'they' cho 'staff'. A cũng hợp lệ ngữ pháp nhưng C phù hợp hơn như câu trả lời thực tế khi có vấn đề. B sai thì. D không tự nhiên.",
-          "answerChunks": ["No,", "they", "haven't", "started"]
+          "answerChunks": ["Không,", "họ", "vẫn", "chưa", "bắt", "đầu"]
         },
         {
           "prompt": "Was the financial forecast shared with the investors?",
           "options": ["Yes, it was sent last week.", "Yes, they have shared it.", "No, it has not been.", "Yes, we shared it."],
           "correct": 0,
           "explanation": "Câu hỏi past passive 'Was [forecast] shared' → đáp án A 'Yes, it was sent last week' dùng đúng past tense và 'it' cho 'forecast'. B sai thì (present perfect). C không hoàn chỉnh. D sai chủ ngữ ('we' thay passive).",
-          "answerChunks": ["Yes,", "it", "was", "sent", "last", "week"]
+          "answerChunks": ["Đúng,", "tài", "liệu", "đã", "được", "gửi", "tuần", "trước"]
         },
         {
           "prompt": "Do part-time employees qualify for the annual bonus?",
           "options": ["No, only full-time staff do.", "No, they don't qualify.", "Yes, all employees qualify.", "Yes, if they meet targets."],
           "correct": 3,
           "explanation": "Câu hỏi 'Do part-time employees qualify' → đáp án D 'Yes, if they meet targets' thực tế nhất — điều kiện (if targets met) phổ biến trong chính sách thưởng. A, B phủ nhận hoàn toàn. C xác nhận quá đơn giản.",
-          "answerChunks": ["Yes,", "if", "they", "meet", "targets"]
+          "answerChunks": ["Đúng,", "nếu", "họ", "đạt", "mục", "tiêu"]
         },
         {
           "prompt": "Has the board approved the strategic plan for next year?",
           "options": ["No, it is still under review.", "Yes, they approved it.", "Yes, it was approved.", "No, the board has not."],
           "correct": 0,
           "explanation": "Câu hỏi present perfect 'Has [board] approved' → đáp án A 'No, it is still under review' tự nhiên và thực tế nhất — dùng 'it' cho 'plan'. B sai thì (past simple). C dùng passive past sai thì. D không hoàn chỉnh.",
-          "answerChunks": ["No,", "it", "is", "still", "under", "review"]
+          "answerChunks": ["Không,", "vẫn", "đang", "được", "xem", "xét"]
         }
       ]
     }

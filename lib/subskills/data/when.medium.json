@@ -128,98 +128,98 @@
           "options": ["After the board reviews it.", "On the last Friday of the month.", "On the date set by the regulatory body.", "Before the end of the fiscal year."],
           "correct": 0,
           "explanation": "Báo cáo lợi nhuận hàng quý được phát hành sau khi hội đồng xem xét (A). B (last Friday) quá cụ thể mà không có cơ sở. D (end of fiscal year) đúng cho báo cáo năm, không phải quý. C (regulatory deadline) có thể đúng cho báo cáo niêm yết nhưng A mô tả quy trình nội bộ phổ biến hơn.",
-          "answerChunks": ["After", "the", "board", "reviews", "it"]
+          "answerChunks": ["Sau", "khi", "hội", "đồng", "xem", "xét"]
         },
         {
           "prompt": "When does the early-bird discount for the seminar expire?",
           "options": ["At midnight this Sunday.", "By the end of registration.", "Next week at the latest.", "Two weeks before the event."],
           "correct": 3,
           "explanation": "Early-bird discount thường hết hạn trước sự kiện một khoảng thời gian cụ thể (D: two weeks before). A và C không phổ biến cho early-bird. B quá chung chung.",
-          "answerChunks": ["Two", "weeks", "before", "the", "event"]
+          "answerChunks": ["Hai", "tuần", "trước", "sự", "kiện"]
         },
         {
           "prompt": "When is the maintenance window scheduled?",
           "options": ["During off-peak hours.", "On the first Sunday of the month.", "After business hours on Friday.", "Whenever IT is available."],
           "correct": 1,
           "explanation": "Bảo trì hệ thống thường được lên lịch cố định (B: first Sunday of the month) để tránh ảnh hưởng. A và C không cố định. D không phải lịch trình.",
-          "answerChunks": ["On", "the", "first", "Sunday", "of", "the", "month"]
+          "answerChunks": ["Vào", "Chủ", "nhật", "đầu", "tiên", "của", "tháng"]
         },
         {
           "prompt": "When should I apply for the internal job posting?",
           "options": ["Before the external recruitment begins.", "As soon as possible.", "By the closing date on the notice.", "When your manager approves it."],
           "correct": 2,
           "explanation": "Nộp đơn ứng tuyển nội bộ theo ngày đóng hồ sơ trên thông báo (C). B (ASAP) và D (manager approval) là gợi ý nhưng không phải câu trả lời chính xác cho WHEN. A không liên quan đến cách áp dụng.",
-          "answerChunks": ["By", "the", "closing", "date", "on", "the", "notice"]
+          "answerChunks": ["Trước", "ngày", "đóng", "hồ", "sơ", "trên", "thông", "báo"]
         },
         {
           "prompt": "When will the new HR software go live?",
           "options": ["After successful testing.", "Next quarter.", "When the budget is approved.", "On the first of January."],
           "correct": 3,
           "explanation": "Phần mềm HR mới thường ra mắt vào đầu năm mới (D: January 1st) để áp dụng từ đầu chu kỳ. A và C là điều kiện tiên quyết. B quá chung chung.",
-          "answerChunks": ["On", "the", "first", "of", "January"]
+          "answerChunks": ["Vào", "ngày", "1", "tháng", "1"]
         },
         {
           "prompt": "When do temporary staff contracts get reviewed?",
           "options": ["At the end of each assignment.", "Every six months.", "When the client requests it.", "Before the renewal date."],
           "correct": 0,
           "explanation": "Hợp đồng nhân viên tạm thời được xem xét khi kết thúc mỗi nhiệm vụ (A). B (every six months) áp dụng cho nhân viên lâu dài hơn. C trả lời cho WHO/CONDITION. D không phải thời điểm rõ ràng.",
-          "answerChunks": ["At", "the", "end", "of", "each", "assignment"]
+          "answerChunks": ["Khi", "kết", "thúc", "mỗi", "nhiệm", "vụ"]
         },
         {
           "prompt": "When is the best time to schedule a site inspection?",
           "options": ["During normal business hours.", "When production is at its lowest.", "The safety officer will advise.", "On a weekday morning."],
           "correct": 1,
           "explanation": "Thời điểm tốt nhất để kiểm tra địa điểm là khi sản xuất thấp nhất (B) — ít gián đoạn nhất. A (normal hours) có thể là lúc cao điểm. C trả lời cho WHO. D (weekday morning) không xét đến mức độ hoạt động.",
-          "answerChunks": ["When", "production", "is", "at", "its", "lowest"]
+          "answerChunks": ["Khi", "sản", "xuất", "ở", "mức", "thấp", "nhất"]
         },
         {
           "prompt": "When can staff access the new benefits portal?",
           "options": ["From next Monday.", "After completing the orientation.", "Once their account is activated.", "When HR sends the login details."],
           "correct": 2,
           "explanation": "Nhân viên có thể truy cập portal sau khi tài khoản được kích hoạt (C). A và B là điều kiện thời gian. D trả lời cho CONDITION nhưng không phải WHEN chính xác.",
-          "answerChunks": ["Once", "their", "account", "is", "activated"]
+          "answerChunks": ["Sau", "khi", "tài", "khoản", "được", "kích", "hoạt"]
         },
         {
           "prompt": "When was the last time the security system was updated?",
           "options": ["About six months ago.", "Last financial year.", "Before the office renovation.", "The IT team handles updates."],
           "correct": 0,
           "explanation": "Thời điểm cập nhật cuối cùng của hệ thống bảo mật — A (six months ago) là câu trả lời cụ thể và tự nhiên nhất. B (last financial year) là khoảng thời gian nhưng ít chính xác. C là điều kiện. D trả lời cho WHO.",
-          "answerChunks": ["About", "six", "months", "ago"]
+          "answerChunks": ["Khoảng", "sáu", "tháng", "trước"]
         },
         {
           "prompt": "When does the promotional pricing for the software subscription end?",
           "options": ["At the end of this month.", "After the trial period.", "When the full version launches.", "On the date shown in your confirmation email."],
           "correct": 3,
           "explanation": "Thời hạn giá khuyến mãi được ghi rõ trong email xác nhận (D). A, B, C đều có thể đúng nhưng D là câu trả lời chính xác và đáng tin cậy nhất cho giá subscription.",
-          "answerChunks": ["On", "the", "date", "shown", "in", "your", "confirmation", "email"]
+          "answerChunks": ["Vào", "ngày", "ghi", "trong", "email", "xác", "nhận"]
         },
         {
           "prompt": "When will the project handover be completed?",
           "options": ["By the end of the sprint.", "After final client sign-off.", "Next Monday if all goes well.", "The project manager will confirm."],
           "correct": 1,
           "explanation": "Bàn giao dự án hoàn tất sau khi khách hàng ký nghiệm thu cuối cùng (B: final client sign-off). A (end of sprint) là mốc nội bộ. C (next Monday) không chắc chắn. D trả lời cho WHO.",
-          "answerChunks": ["After", "final", "client", "sign-off"]
+          "answerChunks": ["Sau", "khi", "khách", "hàng", "ký", "nghiệm", "thu", "cuối"]
         },
         {
           "prompt": "When are expense reports due each month?",
           "options": ["On the fifth of every month.", "By the last working day.", "When payroll is processed.", "At the end of each quarter."],
           "correct": 1,
           "explanation": "Báo cáo chi phí nộp vào ngày làm việc cuối tháng (B). A (fifth) thường là deadline quá sớm. C (when payroll processed) là kết quả, không phải deadline. D (quarterly) sai chu kỳ.",
-          "answerChunks": ["By", "the", "last", "working", "day"]
+          "answerChunks": ["Trước", "ngày", "làm", "việc", "cuối", "tháng"]
         },
         {
           "prompt": "When does the company hold its annual strategy retreat?",
           "options": ["At the beginning of each fiscal year.", "After the Q4 results are in.", "During the summer break.", "When the board approves the agenda."],
           "correct": 1,
           "explanation": "Hội nghị chiến lược thường tổ chức sau khi có kết quả Q4 (B) để lên kế hoạch năm tiếp theo. A (beginning of fiscal year) là lúc triển khai, không phải retreat. C (summer break) không phổ biến cho doanh nghiệp. D trả lời cho CONDITION.",
-          "answerChunks": ["After", "the", "Q4", "results", "are", "in"]
+          "answerChunks": ["Sau", "khi", "có", "kết", "quả", "quý", "4"]
         },
         {
           "prompt": "When should staff complete the mandatory compliance training?",
           "options": ["Within 30 days of joining.", "By the end of the current quarter.", "Whenever they have time.", "Before annual leave begins."],
           "correct": 0,
           "explanation": "Đào tạo tuân thủ bắt buộc phải hoàn thành trong 30 ngày từ khi gia nhập (A). B (end of quarter) áp dụng cho nhân viên hiện tại, không phải mới. C không phải deadline. D không liên quan.",
-          "answerChunks": ["Within", "30", "days", "of", "joining"]
+          "answerChunks": ["Trong", "vòng", "30", "ngày", "kể", "từ", "khi", "gia", "nhập"]
         }
       ]
     }

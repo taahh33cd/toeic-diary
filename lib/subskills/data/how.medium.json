@@ -128,98 +128,98 @@
           "options": ["Via the project management software.", "Through daily progress reports.", "Weekly check-ins with the team.", "Using a shared milestone tracker."],
           "correct": 3,
           "explanation": "Theo dõi cột mốc dự án bằng bảng theo dõi chung (D: shared milestone tracker) là phương pháp có hệ thống nhất. A (software) có thể là công cụ nhưng D mô tả phương tiện cụ thể. B (daily reports) là cách theo dõi nhưng không hệ thống bằng D. C là tần suất, không phải phương pháp.",
-          "answerChunks": ["Using", "a", "shared", "milestone", "tracker"]
+          "answerChunks": ["Sử", "dụng", "bảng", "theo", "dõi", "cột", "mốc", "chung"]
         },
         {
           "prompt": "How long does the probationary period last?",
           "options": ["Three to six months.", "Until performance improves.", "For the first year.", "According to the employment contract."],
           "correct": 0,
           "explanation": "Thời gian thử việc tiêu chuẩn là 3–6 tháng (A). B (until performance improves) không phải khoảng thời gian cố định. C (first year) quá dài. D (per employment contract) đúng nhưng không cụ thể như A.",
-          "answerChunks": ["Three", "to", "six", "months"]
+          "answerChunks": ["Ba", "đến", "sáu", "tháng"]
         },
         {
           "prompt": "How many approvals are needed for a large purchase?",
           "options": ["At least two levels of management.", "Three separate sign-offs.", "Based on a tiered approval threshold.", "Depends on the purchase amount."],
           "correct": 3,
           "explanation": "Số phê duyệt cho mua sắm lớn phụ thuộc vào số tiền (D: depends on purchase amount) — câu trả lời thực tế nhất cho quy trình mua sắm doanh nghiệp. A và B cụ thể nhưng không linh hoạt. C (tiered threshold) mô tả hệ thống nhưng không trả lời trực tiếp 'how many'.",
-          "answerChunks": ["Depends", "on", "the", "purchase", "amount"]
+          "answerChunks": ["Tùy", "thuộc", "vào", "số", "tiền", "mua", "hàng"]
         },
         {
           "prompt": "How should sensitive documents be disposed of?",
           "options": ["By shredding them securely.", "In the recycling bin.", "Through a certified document destruction service.", "By deleting digital copies only."],
           "correct": 0,
           "explanation": "Tài liệu nhạy cảm phải được hủy bằng cách cắt nhỏ an toàn (A: shredding). B (recycling bin) không bảo mật. D (digital copies only) bỏ qua bản in. C (certified destruction service) cũng an toàn nhưng A là phương pháp tức thì và phổ biến hơn trong văn phòng.",
-          "answerChunks": ["By", "shredding", "them", "securely"]
+          "answerChunks": ["Bằng", "cách", "cắt", "nhỏ", "an", "toàn"]
         },
         {
           "prompt": "How much notice is required for resigning from a senior position?",
           "options": ["Two weeks minimum.", "As per the employment contract.", "One month is standard.", "At least three months."],
           "correct": 3,
           "explanation": "Vị trí cấp cao (senior position) thường yêu cầu thông báo ít nhất 3 tháng (D). A (two weeks) là cho nhân viên thông thường. B (per contract) đúng nhưng D cụ thể hơn cho senior role. C (one month) quá ngắn cho cấp cao.",
-          "answerChunks": ["At", "least", "three", "months"]
+          "answerChunks": ["Ít", "nhất", "ba", "tháng"]
         },
         {
           "prompt": "How is remote work performance evaluated?",
           "options": ["Through regular check-ins.", "By output and deliverables.", "Through structured monthly targets.", "Via digital monitoring tools."],
           "correct": 1,
           "explanation": "Đánh giá hiệu suất làm việc từ xa tốt nhất dựa vào đầu ra và kết quả giao (B: output and deliverables) — tiêu chuẩn khách quan nhất. A (check-ins) là phương tiện. C (monthly targets) là mục tiêu, không phải phương pháp đánh giá. D (monitoring tools) có thể vi phạm quyền riêng tư.",
-          "answerChunks": ["By", "output", "and", "deliverables"]
+          "answerChunks": ["Dựa", "vào", "đầu", "ra", "và", "kết", "quả", "giao"]
         },
         {
           "prompt": "How often is the company's risk assessment updated?",
           "options": ["Every quarter.", "Annually or after major changes.", "When management requests it.", "Once every two years."],
           "correct": 1,
           "explanation": "Đánh giá rủi ro được cập nhật hàng năm hoặc sau thay đổi lớn (B) — tiêu chuẩn thực tiễn tốt nhất. A (quarterly) quá thường xuyên. C (when requested) không có lịch cố định. D (two years) quá lâu.",
-          "answerChunks": ["Annually", "or", "after", "major", "changes"]
+          "answerChunks": ["Hàng", "năm", "hoặc", "sau", "các", "thay", "đổi", "lớn"]
         },
         {
           "prompt": "How can staff report a workplace safety concern?",
           "options": ["By informing their supervisor directly.", "Via the anonymous reporting hotline.", "Through the safety committee.", "Using the incident report form."],
           "correct": 1,
           "explanation": "Báo cáo lo ngại an toàn qua đường dây nóng ẩn danh (B: anonymous hotline) khuyến khích nhân viên nói lên vấn đề mà không sợ trả thù. A, C, D cũng là kênh nhưng không bảo mật danh tính.",
-          "answerChunks": ["Via", "the", "anonymous", "reporting", "hotline"]
+          "answerChunks": ["Qua", "đường", "dây", "nóng", "báo", "cáo", "ẩn", "danh"]
         },
         {
           "prompt": "How much of the training budget is allocated to leadership development?",
           "options": ["About thirty percent.", "According to an approved allocation formula.", "A significant portion.", "Twenty percent on average."],
           "correct": 3,
           "explanation": "Phân bổ ngân sách đào tạo cho lãnh đạo trung bình 20% (D: twenty percent on average) là con số điển hình trong doanh nghiệp. A (thirty percent) hơi cao. B (allocation formula) mô tả cơ chế nhưng không nêu con số cụ thể. C (significant portion) quá mơ hồ.",
-          "answerChunks": ["Twenty", "percent", "on", "average"]
+          "answerChunks": ["Trung", "bình", "hai", "mươi", "phần", "trăm"]
         },
         {
           "prompt": "How are customer complaints escalated beyond the first level?",
           "options": ["By contacting the customer service manager.", "After two unresolved attempts.", "Through the internal escalation system.", "Automatically after 24 hours."],
           "correct": 1,
           "explanation": "Khiếu nại khách hàng được leo thang sau 2 lần không giải quyết được (B) — tiêu chuẩn SLA phổ biến. A (contacting manager) là hành động, không phải điều kiện leo thang. C (escalation system) mô tả kênh nhưng không xác định thời điểm. D (automatically 24h) là quy trình hệ thống nhưng B là điều kiện phổ biến nhất.",
-          "answerChunks": ["After", "two", "unresolved", "attempts"]
+          "answerChunks": ["Sau", "hai", "lần", "không", "giải", "quyết", "được"]
         },
         {
           "prompt": "How long is the standard warranty period for company-issued equipment?",
           "options": ["Two years from the purchase date.", "One year with possible extension.", "For the duration of employment.", "Three years under the service agreement."],
           "correct": 3,
           "explanation": "Bảo hành thiết bị công ty theo hợp đồng dịch vụ thường là 3 năm (D: three years under service agreement). A (two years) là bảo hành nhà sản xuất. B có thể gia hạn. C (employment duration) không phải tiêu chuẩn.",
-          "answerChunks": ["Three", "years", "under", "the", "service", "agreement"]
+          "answerChunks": ["Ba", "năm", "theo", "hợp", "đồng", "dịch", "vụ"]
         },
         {
           "prompt": "How is the final project score calculated for vendors?",
           "options": ["Based on delivery, quality, and cost.", "Through a standardized vendor scorecard.", "Using a weighted scoring matrix.", "On a case-by-case basis."],
           "correct": 2,
           "explanation": "Điểm cuối cùng của nhà cung cấp được tính qua ma trận điểm có trọng số (C: weighted scoring matrix). A liệt kê tiêu chí nhưng không mô tả phương pháp. B (vendor scorecard) là công cụ tương tự nhưng ít chính xác hơn C. D không có hệ thống.",
-          "answerChunks": ["Using", "a", "weighted", "scoring", "matrix"]
+          "answerChunks": ["Sử", "dụng", "ma", "trận", "điểm", "có", "trọng", "số"]
         },
         {
           "prompt": "How many vacation days do employees accrue per year?",
           "options": ["It varies by seniority level.", "Based on the employee's grade and tenure.", "Around fifteen days.", "Up to twenty days for senior staff."],
           "correct": 0,
           "explanation": "Số ngày nghỉ phép tích lũy thay đổi theo cấp bậc (A: varies by seniority). C và D đúng cho một số cấp bậc cụ thể. B (grade and tenure) là tiêu chí cụ thể nhưng không trả lời trực tiếp 'how many' như A. A là câu trả lời chính xác và đầy đủ nhất.",
-          "answerChunks": ["It", "varies", "by", "seniority", "level"]
+          "answerChunks": ["Tùy", "theo", "cấp", "bậc", "thâm", "niên"]
         },
         {
           "prompt": "How should we communicate the merger announcement to staff?",
           "options": ["Via a company-wide email.", "Through a town hall meeting.", "Through a structured announcement timeline.", "In a phased communication plan."],
           "correct": 3,
           "explanation": "Thông báo sáp nhập nên được truyền đạt theo kế hoạch truyền thông theo giai đoạn (D: phased communication plan) để quản lý tác động. A và B là kênh đơn lẻ. C (announcement timeline) là lịch trình, D bao gồm cả chiến lược và thực hiện.",
-          "answerChunks": ["In", "a", "phased", "communication", "plan"]
+          "answerChunks": ["Theo", "kế", "hoạch", "truyền", "thông", "theo", "giai", "đoạn"]
         }
       ]
     }
