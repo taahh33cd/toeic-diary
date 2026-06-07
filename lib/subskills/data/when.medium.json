@@ -125,9 +125,9 @@
       "items": [
         {
           "prompt": "When will the quarterly earnings report be released?",
-          "options": ["After the board reviews it.", "On the last Friday of the month.", "The finance team prepares it.", "Before the end of the fiscal year."],
+          "options": ["After the board reviews it.", "On the last Friday of the month.", "On the date set by the regulatory body.", "Before the end of the fiscal year."],
           "correct": 0,
-          "explanation": "Báo cáo lợi nhuận hàng quý được phát hành sau khi hội đồng xem xét (A). B (last Friday) quá cụ thể mà không có cơ sở. D (end of fiscal year) đúng cho báo cáo năm, không phải quý. C trả lời cho WHO.",
+          "explanation": "Báo cáo lợi nhuận hàng quý được phát hành sau khi hội đồng xem xét (A). B (last Friday) quá cụ thể mà không có cơ sở. D (end of fiscal year) đúng cho báo cáo năm, không phải quý. C (regulatory deadline) có thể đúng cho báo cáo niêm yết nhưng A mô tả quy trình nội bộ phổ biến hơn.",
           "answerChunks": ["After", "the", "board", "reviews", "it"]
         },
         {

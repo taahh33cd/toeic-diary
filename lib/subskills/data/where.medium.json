@@ -125,23 +125,23 @@
       "items": [
         {
           "prompt": "Where is the quarterly all-hands meeting being held?",
-          "options": ["In the main conference hall.", "At the offsite venue.", "The event team confirmed it.", "In the largest boardroom."],
+          "options": ["In the main conference hall.", "At the offsite venue.", "In the east wing auditorium.", "In the largest boardroom."],
           "correct": 1,
-          "explanation": "All-hands meeting (họp toàn công ty) thường tổ chức ở địa điểm bên ngoài (offsite) để đủ chỗ. A và D quá nhỏ cho all-hands. C trả lời cho WHO.",
+          "explanation": "All-hands meeting (họp toàn công ty) thường tổ chức ở địa điểm bên ngoài (offsite) để đủ chỗ. A và D quá nhỏ cho all-hands. C (east wing auditorium) có thể đủ chỗ nhưng không phải địa điểm tiêu chuẩn cho all-hands toàn công ty.",
           "answerChunks": ["At", "the", "offsite", "venue"]
         },
         {
           "prompt": "Where can I find the updated employee handbook?",
-          "options": ["On the intranet portal.", "At the HR desk.", "In the staff common room.", "Your manager will provide it."],
+          "options": ["On the intranet portal.", "At the HR desk.", "In the staff common room.", "At the company's document archive."],
           "correct": 0,
-          "explanation": "Tài liệu cập nhật (updated) thường được lưu trên intranet portal (A) để nhân viên tự truy cập. B và C là nơi có phiên bản cũ. D trả lời cho WHO.",
+          "explanation": "Tài liệu cập nhật (updated) thường được lưu trên intranet portal (A) để nhân viên tự truy cập. B và C là nơi có phiên bản cũ. D (document archive) lưu trữ tài liệu cũ, không phải bản cập nhật mới nhất.",
           "answerChunks": ["On", "the", "intranet", "portal"]
         },
         {
           "prompt": "Where should I wait for my interview?",
-          "options": ["In the reception area.", "Outside the interview room.", "The HR team will guide you.", "On the third floor."],
+          "options": ["In the reception area.", "Outside the interview room.", "In the adjacent waiting area.", "On the third floor."],
           "correct": 0,
-          "explanation": "Ứng viên phỏng vấn ngồi chờ ở khu vực lễ tân (A). B (outside the room) có thể đúng nhưng A là hướng dẫn chuẩn mực hơn. C trả lời cho WHO.",
+          "explanation": "Ứng viên phỏng vấn ngồi chờ ở khu vực lễ tân (A). B (outside the room) có thể đúng nhưng A là hướng dẫn chuẩn mực hơn. C (adjacent waiting area) chỉ hợp lệ nếu đã vào tầng phòng phỏng vấn — A là điểm tập trung ban đầu.",
           "answerChunks": ["In", "the", "reception", "area"]
         },
         {
@@ -160,44 +160,44 @@
         },
         {
           "prompt": "Where is the company's regional distribution center?",
-          "options": ["In the industrial zone south of the city.", "At the head office location.", "Near the international airport.", "The logistics team manages it."],
+          "options": ["In the industrial zone south of the city.", "At the head office location.", "Near the international airport.", "In the outer commercial estate."],
           "correct": 0,
-          "explanation": "Trung tâm phân phối khu vực thường ở khu công nghiệp ngoại thành (A). B (head office) không phải trung tâm phân phối. C (airport) hợp lý cho nhập khẩu nhưng A chính xác hơn. D trả lời cho WHO.",
+          "explanation": "Trung tâm phân phối khu vực thường ở khu công nghiệp ngoại thành (A). B (head office) không phải trung tâm phân phối. C (airport) hợp lý cho nhập khẩu nhưng A chính xác hơn. D (outer commercial estate) là khu thương mại, không phù hợp cho phân phối.",
           "answerChunks": ["In", "the", "industrial", "zone", "south", "of", "the", "city"]
         },
         {
           "prompt": "Where should the client presentations be saved?",
-          "options": ["On your local drive.", "In the shared project folder.", "On the company server.", "The project manager decides."],
+          "options": ["On your local drive.", "In the shared project folder.", "On the company server.", "In the team's cloud storage drive."],
           "correct": 1,
-          "explanation": "Bài thuyết trình cho khách hàng nên lưu trong thư mục dự án chung (B: shared project folder) để cả nhóm truy cập được. A (local drive) không an toàn, C quá chung chung. D trả lời cho WHO.",
+          "explanation": "Bài thuyết trình cho khách hàng nên lưu trong thư mục dự án chung (B: shared project folder) để cả nhóm truy cập được. A (local drive) không an toàn. C (company server) quá chung chung. D (cloud storage) hợp lý nhưng không có cấu trúc project như B.",
           "answerChunks": ["In", "the", "shared", "project", "folder"]
         },
         {
           "prompt": "Where is the new satellite office opening?",
-          "options": ["In the financial district.", "In the technology park.", "Near the client's headquarters.", "The expansion team announced it."],
+          "options": ["In the financial district.", "In the technology park.", "Near the client's headquarters.", "In the uptown business district."],
           "correct": 2,
-          "explanation": "Văn phòng vệ tinh (satellite office) mở gần trụ sở khách hàng (C) để thuận tiện làm việc. A và B là khu vực hợp lý nhưng C có lý do chiến lược rõ ràng hơn. D trả lời cho WHO.",
+          "explanation": "Văn phòng vệ tinh (satellite office) mở gần trụ sở khách hàng (C) để thuận tiện làm việc. A và B là khu vực hợp lý nhưng C có lý do chiến lược rõ ràng hơn. D (uptown business district) là địa điểm cao cấp nhưng không có lý do chiến lược cụ thể.",
           "answerChunks": ["Near", "the", "client's", "headquarters"]
         },
         {
           "prompt": "Where are the catering supplies for the event kept?",
-          "options": ["In the kitchen storage area.", "The event team will set it up.", "In the loading dock.", "At the catering company's facility."],
+          "options": ["In the kitchen storage area.", "In the service corridor near the venue.", "In the loading dock.", "At the catering company's facility."],
           "correct": 0,
-          "explanation": "Đồ phục vụ ăn uống cho sự kiện được giữ trong khu vực bếp (A). C (loading dock) là nơi nhận hàng, không lưu trữ. D là cơ sở bên ngoài. B trả lời cho WHO.",
+          "explanation": "Đồ phục vụ ăn uống cho sự kiện được giữ trong khu vực bếp (A). C (loading dock) là nơi nhận hàng, không lưu trữ. D là cơ sở bên ngoài. B (service corridor) là nơi vận chuyển, không phải nơi lưu trữ.",
           "answerChunks": ["In", "the", "kitchen", "storage", "area"]
         },
         {
           "prompt": "Where should I park when visiting the downtown office?",
-          "options": ["In the basement car park.", "At a nearby public parking lot.", "Your host will arrange it.", "On the street outside."],
+          "options": ["In the basement car park.", "At a nearby public parking lot.", "In the designated visitor parking bay.", "On the street outside."],
           "correct": 1,
-          "explanation": "Khách thăm văn phòng nên đỗ ở bãi đỗ xe công cộng gần đó (B). A (basement) thường dành riêng cho nhân viên. C trả lời cho WHO. D (street) không phải lựa chọn khuyến nghị.",
+          "explanation": "Khách thăm văn phòng nên đỗ ở bãi đỗ xe công cộng gần đó (B). A (basement) thường dành riêng cho nhân viên. C (visitor parking bay) hợp lý nếu có nhưng B là lựa chọn phổ quát hơn. D (street) không phải lựa chọn khuyến nghị.",
           "answerChunks": ["At", "a", "nearby", "public", "parking", "lot"]
         },
         {
           "prompt": "Where is the backup server room located?",
-          "options": ["On the basement level.", "In the IT server room.", "Offsite at a data center.", "The IT manager knows."],
+          "options": ["On the basement level.", "In the IT server room.", "Offsite at a data center.", "In a secure third-party data facility."],
           "correct": 2,
-          "explanation": "Backup server room thường ở cơ sở bên ngoài (C: offsite data center) để bảo đảm phục hồi thảm họa. A và B có thể là server room chính, không phải backup. D trả lời cho WHO.",
+          "explanation": "Backup server room thường ở cơ sở bên ngoài (C: offsite data center) để bảo đảm phục hồi thảm họa. A và B có thể là server room chính, không phải backup. D (third-party facility) tương tự C nhưng C cụ thể hơn về loại cơ sở.",
           "answerChunks": ["Offsite", "at", "a", "data", "center"]
         },
         {

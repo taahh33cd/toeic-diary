@@ -31,6 +31,18 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
+/** Deterministic shuffle — same seed → same order every render */
+function seededShuffle<T>(arr: T[], seed: number): T[] {
+  const a = [...arr];
+  let s = (seed + 1) >>> 0; // xorshift32, avoid zero state
+  for (let i = a.length - 1; i > 0; i--) {
+    s ^= s << 13; s ^= s >>> 17; s ^= s << 5; s >>>= 0;
+    const j = s % (i + 1);
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 type BestMap = Record<string, { score: number; passed: boolean }>;
 type DraftEntry = { itemIdx: number; correctCount: number };
 type DraftsMap  = Record<number, DraftEntry>; // keyed by exerciseIndex
@@ -474,6 +486,8 @@ function KeywordPanel({
 
 function McqPanel({
   item,
+  displayOpts,
+  displayCorrect,
   choice,
   tSlots,
   tBank,
@@ -483,6 +497,8 @@ function McqPanel({
   onReturnSlot,
 }: {
   item: MCQItem;
+  displayOpts: string[];
+  displayCorrect: number;
   choice: number | null;
   tSlots: (string | null)[];
   tBank: string[];
@@ -491,7 +507,7 @@ function McqPanel({
   onPickBank: (chip: string) => void;
   onReturnSlot: (i: number) => void;
 }) {
-  const mcqOk = submitted && choice === item.correct;
+  const mcqOk = submitted && choice === displayCorrect;
   const translation = tSlots.filter(Boolean) as string[];
   const transOk = submitted && item.answerChunks.every((c, j) => c === translation[j]);
   const allOk = mcqOk && transOk;
@@ -504,10 +520,10 @@ function McqPanel({
 
       {/* Options */}
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-        {item.options.map((opt, i) => {
+        {displayOpts.map((opt, i) => {
           const isSelected = choice === i;
-          const isCorrect  = submitted && i === item.correct;
-          const isWrong    = submitted && isSelected && i !== item.correct;
+          const isCorrect  = submitted && i === displayCorrect;
+          const isWrong    = submitted && isSelected && i !== displayCorrect;
           return (
             <button
               key={i}
@@ -584,16 +600,20 @@ function McqPanel({
 
 function MatchPanel({
   item,
+  displayOpts,
+  displayCorrect,
   choice,
   submitted,
   onChoose,
 }: {
   item: MTItem;
+  displayOpts: string[];
+  displayCorrect: number;
   choice: number | null;
   submitted: boolean;
   onChoose: (i: number) => void;
 }) {
-  const isCorrect = submitted && choice === item.correct;
+  const isCorrect = submitted && choice === displayCorrect;
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
@@ -602,10 +622,10 @@ function MatchPanel({
       </p>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-        {item.options.map((opt, i) => {
+        {displayOpts.map((opt, i) => {
           const isSelected  = choice === i;
-          const showCorrect = submitted && i === item.correct;
-          const showWrong   = submitted && isSelected && i !== item.correct;
+          const showCorrect = submitted && i === displayCorrect;
+          const showWrong   = submitted && isSelected && i !== displayCorrect;
           return (
             <button
               key={i}
@@ -974,6 +994,22 @@ export default function ExerciseClient({
 
   const ex = set.exercises[exIdx];
 
+  // ── Deterministic option shuffle for MCQ and Match ────────────────
+  // Seed = exIdx * 14 + itemIdx → unique per (exercise, item) pair
+  const [mcqDisplayOpts, mcqDisplayCorrect] = useMemo<[string[], number]>(() => {
+    if (ex.kind !== "mcq") return [[], 0];
+    const item = ex.items[itemIdx] as MCQItem;
+    const shuffled = seededShuffle([...item.options] as string[], exIdx * 14 + itemIdx);
+    return [shuffled, shuffled.indexOf(item.options[item.correct] as string)];
+  }, [ex, exIdx, itemIdx]);
+
+  const [matchDisplayOpts, matchDisplayCorrect] = useMemo<[string[], number]>(() => {
+    if (ex.kind !== "match") return [[], 0];
+    const item = ex.items[itemIdx] as MTItem;
+    const shuffled = seededShuffle([...item.options] as string[], exIdx * 14 + itemIdx + 500);
+    return [shuffled, shuffled.indexOf(item.options[item.correct])];
+  }, [ex, exIdx, itemIdx]);
+
   function resetForItem(ei: number, ii: number) {
     const exercise = set.exercises[ei];
     setSubmitted(false);
@@ -1040,11 +1076,10 @@ export default function ExerciseClient({
       const item = ex.items[itemIdx] as MCQItem;
       const arranged = mcqTSlots.filter(Boolean) as string[];
       correct =
-        mcqChoice === item.correct &&
+        mcqChoice === mcqDisplayCorrect &&
         item.answerChunks.every((c, j) => c === arranged[j]);
     } else if (ex.kind === "match") {
-      const item = ex.items[itemIdx] as MTItem;
-      correct = matchChoice === item.correct;
+      correct = matchChoice === matchDisplayCorrect;
     }
 
     setSubmitted(true);
@@ -1222,6 +1257,8 @@ export default function ExerciseClient({
       {ex.kind === "mcq" && (
         <McqPanel
           item={items[itemIdx] as MCQItem}
+          displayOpts={mcqDisplayOpts}
+          displayCorrect={mcqDisplayCorrect}
           choice={mcqChoice}
           tSlots={mcqTSlots}
           tBank={mcqTBank}
@@ -1234,6 +1271,8 @@ export default function ExerciseClient({
       {ex.kind === "match" && (
         <MatchPanel
           item={items[itemIdx] as MTItem}
+          displayOpts={matchDisplayOpts}
+          displayCorrect={matchDisplayCorrect}
           choice={matchChoice}
           submitted={submitted}
           onChoose={c => { if (!submitted) setMatchChoice(c); }}

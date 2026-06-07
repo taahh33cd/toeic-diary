@@ -125,30 +125,30 @@
       "items": [
         {
           "prompt": "How do we track project milestones?",
-          "options": ["Via the project management software.", "The project manager oversees it.", "Weekly check-ins with the team.", "Using a shared milestone tracker."],
+          "options": ["Via the project management software.", "Through daily progress reports.", "Weekly check-ins with the team.", "Using a shared milestone tracker."],
           "correct": 3,
-          "explanation": "Theo dõi cột mốc dự án bằng bảng theo dõi chung (D: shared milestone tracker) là phương pháp có hệ thống nhất. A (software) có thể là công cụ nhưng D mô tả phương tiện cụ thể. B trả lời cho WHO. C trả lời cho HOW OFTEN.",
+          "explanation": "Theo dõi cột mốc dự án bằng bảng theo dõi chung (D: shared milestone tracker) là phương pháp có hệ thống nhất. A (software) có thể là công cụ nhưng D mô tả phương tiện cụ thể. B (daily reports) là cách theo dõi nhưng không hệ thống bằng D. C là tần suất, không phải phương pháp.",
           "answerChunks": ["Using", "a", "shared", "milestone", "tracker"]
         },
         {
           "prompt": "How long does the probationary period last?",
-          "options": ["Three to six months.", "Until performance improves.", "For the first year.", "As determined by HR."],
+          "options": ["Three to six months.", "Until performance improves.", "For the first year.", "According to the employment contract."],
           "correct": 0,
-          "explanation": "Thời gian thử việc tiêu chuẩn là 3–6 tháng (A). B (until performance improves) không phải khoảng thời gian cố định. C (first year) quá dài. D trả lời cho WHO.",
+          "explanation": "Thời gian thử việc tiêu chuẩn là 3–6 tháng (A). B (until performance improves) không phải khoảng thời gian cố định. C (first year) quá dài. D (per employment contract) đúng nhưng không cụ thể như A.",
           "answerChunks": ["Three", "to", "six", "months"]
         },
         {
           "prompt": "How many approvals are needed for a large purchase?",
-          "options": ["At least two levels of management.", "Three separate sign-offs.", "The finance director alone.", "Depends on the purchase amount."],
+          "options": ["At least two levels of management.", "Three separate sign-offs.", "Based on a tiered approval threshold.", "Depends on the purchase amount."],
           "correct": 3,
-          "explanation": "Số phê duyệt cho mua sắm lớn phụ thuộc vào số tiền (D: depends on purchase amount) — câu trả lời thực tế nhất cho quy trình mua sắm doanh nghiệp. A và B cụ thể nhưng không linh hoạt. C trả lời cho WHO.",
+          "explanation": "Số phê duyệt cho mua sắm lớn phụ thuộc vào số tiền (D: depends on purchase amount) — câu trả lời thực tế nhất cho quy trình mua sắm doanh nghiệp. A và B cụ thể nhưng không linh hoạt. C (tiered threshold) mô tả hệ thống nhưng không trả lời trực tiếp 'how many'.",
           "answerChunks": ["Depends", "on", "the", "purchase", "amount"]
         },
         {
           "prompt": "How should sensitive documents be disposed of?",
-          "options": ["By shredding them securely.", "In the recycling bin.", "The admin team handles disposal.", "By deleting digital copies only."],
+          "options": ["By shredding them securely.", "In the recycling bin.", "Through a certified document destruction service.", "By deleting digital copies only."],
           "correct": 0,
-          "explanation": "Tài liệu nhạy cảm phải được hủy bằng cách cắt nhỏ an toàn (A: shredding). B (recycling bin) không bảo mật. D (digital copies only) bỏ qua bản in. C trả lời cho WHO.",
+          "explanation": "Tài liệu nhạy cảm phải được hủy bằng cách cắt nhỏ an toàn (A: shredding). B (recycling bin) không bảo mật. D (digital copies only) bỏ qua bản in. C (certified destruction service) cũng an toàn nhưng A là phương pháp tức thì và phổ biến hơn trong văn phòng.",
           "answerChunks": ["By", "shredding", "them", "securely"]
         },
         {
@@ -160,9 +160,9 @@
         },
         {
           "prompt": "How is remote work performance evaluated?",
-          "options": ["Through regular check-ins.", "By output and deliverables.", "The manager assesses it.", "Via digital monitoring tools."],
+          "options": ["Through regular check-ins.", "By output and deliverables.", "Through structured monthly targets.", "Via digital monitoring tools."],
           "correct": 1,
-          "explanation": "Đánh giá hiệu suất làm việc từ xa tốt nhất dựa vào đầu ra và kết quả giao (B: output and deliverables) — tiêu chuẩn khách quan nhất. A (check-ins) là phương tiện. C trả lời cho WHO. D (monitoring tools) có thể vi phạm quyền riêng tư.",
+          "explanation": "Đánh giá hiệu suất làm việc từ xa tốt nhất dựa vào đầu ra và kết quả giao (B: output and deliverables) — tiêu chuẩn khách quan nhất. A (check-ins) là phương tiện. C (monthly targets) là mục tiêu, không phải phương pháp đánh giá. D (monitoring tools) có thể vi phạm quyền riêng tư.",
           "answerChunks": ["By", "output", "and", "deliverables"]
         },
         {
@@ -181,16 +181,16 @@
         },
         {
           "prompt": "How much of the training budget is allocated to leadership development?",
-          "options": ["About thirty percent.", "The board decides annually.", "A significant portion.", "Twenty percent on average."],
+          "options": ["About thirty percent.", "According to an approved allocation formula.", "A significant portion.", "Twenty percent on average."],
           "correct": 3,
-          "explanation": "Phân bổ ngân sách đào tạo cho lãnh đạo trung bình 20% (D: twenty percent on average) là con số điển hình trong doanh nghiệp. A (thirty percent) hơi cao. B trả lời cho WHO/WHEN. C (significant portion) quá mơ hồ.",
+          "explanation": "Phân bổ ngân sách đào tạo cho lãnh đạo trung bình 20% (D: twenty percent on average) là con số điển hình trong doanh nghiệp. A (thirty percent) hơi cao. B (allocation formula) mô tả cơ chế nhưng không nêu con số cụ thể. C (significant portion) quá mơ hồ.",
           "answerChunks": ["Twenty", "percent", "on", "average"]
         },
         {
           "prompt": "How are customer complaints escalated beyond the first level?",
-          "options": ["By contacting the customer service manager.", "After two unresolved attempts.", "The team leader decides.", "Automatically after 24 hours."],
+          "options": ["By contacting the customer service manager.", "After two unresolved attempts.", "Through the internal escalation system.", "Automatically after 24 hours."],
           "correct": 1,
-          "explanation": "Khiếu nại khách hàng được leo thang sau 2 lần không giải quyết được (B) — tiêu chuẩn SLA phổ biến. A trả lời cho WHO. C trả lời cho WHO. D (automatically 24h) là quy trình hệ thống nhưng B là lý do leo thang.",
+          "explanation": "Khiếu nại khách hàng được leo thang sau 2 lần không giải quyết được (B) — tiêu chuẩn SLA phổ biến. A (contacting manager) là hành động, không phải điều kiện leo thang. C (escalation system) mô tả kênh nhưng không xác định thời điểm. D (automatically 24h) là quy trình hệ thống nhưng B là điều kiện phổ biến nhất.",
           "answerChunks": ["After", "two", "unresolved", "attempts"]
         },
         {
@@ -202,23 +202,23 @@
         },
         {
           "prompt": "How is the final project score calculated for vendors?",
-          "options": ["Based on delivery, quality, and cost.", "The procurement team evaluates it.", "Using a weighted scoring matrix.", "On a case-by-case basis."],
+          "options": ["Based on delivery, quality, and cost.", "Through a standardized vendor scorecard.", "Using a weighted scoring matrix.", "On a case-by-case basis."],
           "correct": 2,
-          "explanation": "Điểm cuối cùng của nhà cung cấp được tính qua ma trận điểm có trọng số (C: weighted scoring matrix). A liệt kê tiêu chí nhưng không mô tả phương pháp. B trả lời cho WHO. D không có hệ thống.",
+          "explanation": "Điểm cuối cùng của nhà cung cấp được tính qua ma trận điểm có trọng số (C: weighted scoring matrix). A liệt kê tiêu chí nhưng không mô tả phương pháp. B (vendor scorecard) là công cụ tương tự nhưng ít chính xác hơn C. D không có hệ thống.",
           "answerChunks": ["Using", "a", "weighted", "scoring", "matrix"]
         },
         {
           "prompt": "How many vacation days do employees accrue per year?",
-          "options": ["It varies by seniority level.", "The HR policy specifies it.", "Around fifteen days.", "Up to twenty days for senior staff."],
+          "options": ["It varies by seniority level.", "Based on the employee's grade and tenure.", "Around fifteen days.", "Up to twenty days for senior staff."],
           "correct": 0,
-          "explanation": "Số ngày nghỉ phép tích lũy thay đổi theo cấp bậc (A: varies by seniority). C và D đúng cho một số cấp bậc cụ thể. B trả lời cho WHERE. A là câu trả lời chính xác và đầy đủ nhất.",
+          "explanation": "Số ngày nghỉ phép tích lũy thay đổi theo cấp bậc (A: varies by seniority). C và D đúng cho một số cấp bậc cụ thể. B (grade and tenure) là tiêu chí cụ thể nhưng không trả lời trực tiếp 'how many' như A. A là câu trả lời chính xác và đầy đủ nhất.",
           "answerChunks": ["It", "varies", "by", "seniority", "level"]
         },
         {
           "prompt": "How should we communicate the merger announcement to staff?",
-          "options": ["Via a company-wide email.", "Through a town hall meeting.", "The CEO will address it directly.", "In a phased communication plan."],
+          "options": ["Via a company-wide email.", "Through a town hall meeting.", "Through a structured announcement timeline.", "In a phased communication plan."],
           "correct": 3,
-          "explanation": "Thông báo sáp nhập nên được truyền đạt theo kế hoạch truyền thông theo giai đoạn (D: phased communication plan) để quản lý tác động. A và B là kênh. C trả lời cho WHO.",
+          "explanation": "Thông báo sáp nhập nên được truyền đạt theo kế hoạch truyền thông theo giai đoạn (D: phased communication plan) để quản lý tác động. A và B là kênh đơn lẻ. C (announcement timeline) là lịch trình, D bao gồm cả chiến lược và thực hiện.",
           "answerChunks": ["In", "a", "phased", "communication", "plan"]
         }
       ]

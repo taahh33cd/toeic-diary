@@ -125,9 +125,9 @@
       "items": [
         {
           "prompt": "Which department will take the lead on the rebrand?",
-          "options": ["The marketing department.", "The design team.", "Next fiscal year.", "The communications team."],
+          "options": ["The marketing department.", "The design team.", "The customer success department.", "The communications team."],
           "correct": 0,
-          "explanation": "Marketing department (A) là đơn vị phù hợp nhất để dẫn dắt tái thương hiệu (rebrand). B và D hỗ trợ nhưng không phải đơn vị chủ đạo. C trả lời cho WHEN.",
+          "explanation": "Marketing department (A) là đơn vị phù hợp nhất để dẫn dắt tái thương hiệu (rebrand). B và D hỗ trợ nhưng không phải đơn vị chủ đạo. C (customer success) tập trung vào giữ chân khách hàng, không phải tái thương hiệu.",
           "answerChunks": ["The", "marketing", "department"]
         },
         {
@@ -160,9 +160,9 @@
         },
         {
           "prompt": "Which team handled the system migration?",
-          "options": ["The IT operations team.", "An external contractor.", "Last quarter.", "The in-house development team."],
+          "options": ["The IT operations team.", "An external contractor.", "The project governance team.", "The in-house development team."],
           "correct": 3,
-          "explanation": "Di chuyển hệ thống (system migration) thường do đội phát triển nội bộ thực hiện (D). A và B cũng là khả năng nhưng D (in-house development) phù hợp nhất với ngữ cảnh. C trả lời cho WHEN.",
+          "explanation": "Di chuyển hệ thống (system migration) thường do đội phát triển nội bộ thực hiện (D). A và B cũng là khả năng nhưng D (in-house development) phù hợp nhất với ngữ cảnh. C (project governance team) giám sát dự án, không trực tiếp thực hiện migration.",
           "answerChunks": ["The", "in-house", "development", "team"]
         },
         {

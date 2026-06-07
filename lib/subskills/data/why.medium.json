@@ -160,9 +160,9 @@
         },
         {
           "prompt": "Why was the trade show booth larger this year?",
-          "options": ["The event organizer assigned a bigger space.", "The company launched a new product line.", "More staff were attending.", "The design team redesigned it."],
+          "options": ["The event organizer assigned a bigger space.", "The company launched a new product line.", "More staff were attending.", "To showcase a wider range of products."],
           "correct": 1,
-          "explanation": "Gian hàng lớn hơn vì công ty ra mắt dòng sản phẩm mới (B) — cần không gian trưng bày thêm. A (organizer assigned) không phải quyết định của công ty. C (more staff) không yêu cầu gian hàng lớn. D (design team) trả lời cho WHO.",
+          "explanation": "Gian hàng lớn hơn vì công ty ra mắt dòng sản phẩm mới (B) — cần không gian trưng bày thêm. A (organizer assigned) không phải quyết định của công ty. C (more staff) không yêu cầu gian hàng lớn. D (showcase wider range) là mục đích hợp lý nhưng không cụ thể bằng B về nguyên nhân trực tiếp.",
           "answerChunks": ["The", "company", "launched", "a", "new", "product", "line"]
         },
         {
@@ -202,9 +202,9 @@
         },
         {
           "prompt": "Why is the annual conference moving to a virtual format?",
-          "options": ["To reduce travel and accommodation costs.", "The venue was unavailable.", "Participants prefer online events.", "The organizing committee recommended it."],
+          "options": ["To reduce travel and accommodation costs.", "The venue was unavailable.", "Participants prefer online events.", "To accommodate attendees from multiple time zones."],
           "correct": 0,
-          "explanation": "Chuyển sang hội nghị ảo để giảm chi phí đi lại và lưu trú (A) — lý do tài chính phổ biến và thực tế nhất. B (venue unavailable) là lý do một lần. C (participants prefer) là ý kiến chủ quan. D trả lời cho WHO.",
+          "explanation": "Chuyển sang hội nghị ảo để giảm chi phí đi lại và lưu trú (A) — lý do tài chính phổ biến và thực tế nhất. B (venue unavailable) là lý do một lần, không phải chiến lược. C (participants prefer) là ý kiến chủ quan. D (multiple time zones) hợp lý nhưng A là lý do kinh doanh chính yếu hơn.",
           "answerChunks": ["To", "reduce", "travel", "and", "accommodation", "costs"]
         },
         {

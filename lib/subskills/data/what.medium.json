@@ -125,51 +125,51 @@
       "items": [
         {
           "prompt": "What is required before a vendor can be added to the system?",
-          "options": ["A signed contract.", "Proof of insurance.", "The procurement manager.", "A completed vendor registration form."],
+          "options": ["A signed contract.", "Proof of insurance.", "A mandatory pre-qualification form.", "A completed vendor registration form."],
           "correct": 3,
-          "explanation": "Để thêm nhà cung cấp vào hệ thống, cần có form đăng ký đã điền đầy đủ (D). A và B là tài liệu hỗ trợ, không phải yêu cầu bắt buộc đầu tiên. C trả lời cho WHO.",
+          "explanation": "Để thêm nhà cung cấp vào hệ thống, cần có form đăng ký đã điền đầy đủ (D). A và B là tài liệu hỗ trợ, không phải yêu cầu bắt buộc đầu tiên. C (pre-qualification form) là bước sơ tuyển sớm hơn, không phải yêu cầu trực tiếp để thêm vào hệ thống.",
           "answerChunks": ["A", "completed", "vendor", "registration", "form"]
         },
         {
           "prompt": "What did the audit report reveal?",
-          "options": ["Last month.", "Several compliance gaps.", "The internal auditor.", "Minor accounting errors."],
+          "options": ["A number of policy violations.", "Several compliance gaps.", "Unrecorded financial adjustments.", "Minor accounting errors."],
           "correct": 1,
-          "explanation": "Báo cáo kiểm toán tiết lộ thông tin cụ thể về vấn đề → B (compliance gaps) và D (accounting errors) đều hợp lý, nhưng B ('several' gaps) cho thấy vấn đề nghiêm trọng hơn, phù hợp với 'reveal'. A trả lời cho WHEN, C trả lời cho WHO.",
+          "explanation": "Báo cáo kiểm toán tiết lộ thông tin cụ thể về vấn đề → B (compliance gaps) và D (accounting errors) đều hợp lý, nhưng B ('several' gaps) cho thấy vấn đề nghiêm trọng hơn, phù hợp với 'reveal'. A (policy violations) là loại vấn đề khác. C (unrecorded adjustments) liên quan nhưng ít nghiêm trọng hơn.",
           "answerChunks": ["Several", "compliance", "gaps"]
         },
         {
           "prompt": "What is included in the standard onboarding package?",
-          "options": ["The HR team prepares it.", "An employee handbook and IT credentials.", "A company laptop.", "A benefits guide and payroll forms."],
+          "options": ["A welcome letter and equipment checklist.", "An employee handbook and IT credentials.", "A company laptop.", "A benefits guide and payroll forms."],
           "correct": 3,
-          "explanation": "Gói onboarding tiêu chuẩn thường gồm hướng dẫn phúc lợi và biểu mẫu lương (D). B (laptop) và C (handbook + IT) là các thứ riêng lẻ, D bao quát hơn. A trả lời cho WHO.",
+          "explanation": "Gói onboarding tiêu chuẩn thường gồm hướng dẫn phúc lợi và biểu mẫu lương (D). B (handbook + IT) và C (laptop) là các thứ riêng lẻ, D bao quát hơn. A (welcome letter + checklist) là thành phần hành chính, không phải gói đầy đủ.",
           "answerChunks": ["A", "benefits", "guide", "and", "payroll", "forms"]
         },
         {
           "prompt": "What was discussed at the last board meeting?",
-          "options": ["The expansion strategy.", "The board members.", "Every three months.", "The quarterly financial results."],
+          "options": ["The expansion strategy.", "The revised budget projection.", "The annual compliance review.", "The quarterly financial results."],
           "correct": 3,
-          "explanation": "Cuộc họp hội đồng thường thảo luận kết quả tài chính hàng quý (D). A (expansion strategy) có thể đúng nhưng ít cụ thể. B trả lời cho WHO, C trả lời cho WHEN/HOW OFTEN.",
+          "explanation": "Cuộc họp hội đồng thường thảo luận kết quả tài chính hàng quý (D). A (expansion strategy) có thể đúng nhưng ít cụ thể cho cuộc họp cụ thể này. B (budget projection) và C (compliance review) là chủ đề khác trong các cuộc họp khác nhau.",
           "answerChunks": ["The", "quarterly", "financial", "results"]
         },
         {
           "prompt": "What needs to be submitted with the travel reimbursement form?",
-          "options": ["All original receipts.", "Your direct manager.", "The finance department.", "A detailed expense report."],
+          "options": ["All original receipts.", "A pre-approved expense limit.", "A signed authorization letter.", "A detailed expense report."],
           "correct": 0,
-          "explanation": "Nộp biên lai gốc (A) là yêu cầu bắt buộc đi kèm form hoàn tiền. D (expense report) cũng hợp lý nhưng biên lai gốc là chứng từ cụ thể hơn. B và C trả lời cho WHO.",
+          "explanation": "Nộp biên lai gốc (A) là yêu cầu bắt buộc đi kèm form hoàn tiền. D (expense report) cũng hợp lý nhưng biên lai gốc là chứng từ cụ thể hơn. B (pre-approved limit) là điều kiện trước, không phải tài liệu nộp kèm. C (authorization letter) là văn bản riêng biệt.",
           "answerChunks": ["All", "original", "receipts"]
         },
         {
           "prompt": "What is the company's stance on workplace diversity?",
-          "options": ["The HR policy document.", "An equal opportunity employer.", "The diversity officer.", "A zero-tolerance policy on discrimination."],
+          "options": ["The HR policy document.", "An equal opportunity employer.", "A formal inclusion and equity framework.", "A zero-tolerance policy on discrimination."],
           "correct": 3,
-          "explanation": "Lập trường của công ty về đa dạng hóa nơi làm việc được thể hiện bằng chính sách không khoan nhượng (D). A là tài liệu, B là tuyên bố chung chung, C trả lời cho WHO.",
+          "explanation": "Lập trường của công ty về đa dạng hóa nơi làm việc được thể hiện bằng chính sách không khoan nhượng (D). A là tài liệu, B là tuyên bố chung chung. C (inclusion framework) là tài liệu chính sách cũng hợp lý nhưng D cụ thể và mạnh mẽ hơn.",
           "answerChunks": ["A", "zero-tolerance", "policy", "on", "discrimination"]
         },
         {
           "prompt": "What information is missing from this contract?",
-          "options": ["The payment terms.", "The legal counsel reviewed it.", "The signatory details.", "The effective start date."],
+          "options": ["The payment terms.", "The contractor's insurance certificate.", "The signatory details.", "The effective start date."],
           "correct": 2,
-          "explanation": "Trong hợp đồng, thông tin thường bị thiếu nhất là chi tiết người ký (C). A và D cũng có thể bị thiếu, nhưng C (signatory details) phổ biến hơn trong ngữ cảnh TOEIC. B trả lời cho WHO.",
+          "explanation": "Trong hợp đồng, thông tin thường bị thiếu nhất là chi tiết người ký (C). A và D cũng có thể bị thiếu, nhưng C (signatory details) phổ biến hơn trong ngữ cảnh TOEIC. B (insurance certificate) là tài liệu đính kèm riêng, không phải thông tin bên trong hợp đồng.",
           "answerChunks": ["The", "signatory", "details"]
         },
         {
@@ -181,44 +181,44 @@
         },
         {
           "prompt": "What does the new performance review process involve?",
-          "options": ["A self-assessment and peer feedback.", "The HR director leads it.", "Every six months.", "A written evaluation by the manager."],
+          "options": ["A self-assessment and peer feedback.", "A calibration session among reviewers.", "A structured competency framework.", "A written evaluation by the manager."],
           "correct": 0,
-          "explanation": "Quy trình đánh giá hiệu suất mới thường bao gồm tự đánh giá và phản hồi đồng nghiệp (A). D chỉ mô tả một phần. B trả lời cho WHO, C trả lời cho WHEN.",
+          "explanation": "Quy trình đánh giá hiệu suất mới thường bao gồm tự đánh giá và phản hồi đồng nghiệp (A). D chỉ mô tả một phần. B (calibration session) là bước kiểm chuẩn, không phải toàn bộ quy trình. C (competency framework) là cơ sở đánh giá, không phải quy trình.",
           "answerChunks": ["A", "self-assessment", "and", "peer", "feedback"]
         },
         {
           "prompt": "What is the protocol for data breaches?",
-          "options": ["Report to IT within one hour.", "The IT security officer.", "Change all passwords immediately.", "Notify the compliance team first."],
+          "options": ["Report to IT within one hour.", "Initiate an urgent security breach notification.", "Change all passwords immediately.", "Notify the compliance team first."],
           "correct": 3,
-          "explanation": "Khi có vi phạm dữ liệu, bước đầu tiên là thông báo cho compliance team (D). A và C là hành động tiếp theo. B trả lời cho WHO.",
+          "explanation": "Khi có vi phạm dữ liệu, bước đầu tiên là thông báo cho compliance team (D). A và C là hành động tiếp theo. B (initiate breach notification) là cách diễn đạt tương tự nhưng không cụ thể bằng D về đối tượng thông báo.",
           "answerChunks": ["Notify", "the", "compliance", "team", "first"]
         },
         {
           "prompt": "What was the outcome of the customer satisfaction survey?",
-          "options": ["The survey was conducted online.", "High satisfaction with delivery times.", "Overall ratings improved by 12%.", "The marketing team analyzed it."],
+          "options": ["A slight decline in product satisfaction scores.", "High satisfaction with delivery times.", "Overall ratings improved by 12%.", "A drop in first-contact resolution rates."],
           "correct": 2,
-          "explanation": "Kết quả (outcome) của khảo sát thường được thể hiện bằng số liệu cụ thể (C: ratings improved by 12%). B là thông tin cụ thể nhưng chỉ một khía cạnh. A trả lời cho HOW, D trả lời cho WHO.",
+          "explanation": "Kết quả (outcome) của khảo sát thường được thể hiện bằng số liệu cụ thể (C: ratings improved by 12%). B là thông tin cụ thể nhưng chỉ một khía cạnh. A và D là kết quả tiêu cực — không phù hợp với từ 'outcome' tích cực trong ngữ cảnh.",
           "answerChunks": ["Overall", "ratings", "improved", "by", "12%"]
         },
         {
           "prompt": "What are the eligibility criteria for the employee wellness program?",
-          "options": ["Full-time staff with over one year of service.", "All permanent employees.", "The wellness coordinator.", "Staff who have completed their probation."],
+          "options": ["Full-time staff with over one year of service.", "All permanent employees.", "Staff who meet the enrollment criteria.", "Staff who have completed their probation."],
           "correct": 0,
-          "explanation": "Tiêu chí cụ thể cho chương trình sức khỏe nhân viên: nhân viên toàn thời gian với hơn 1 năm làm việc (A). B quá chung chung, D chỉ nêu một điều kiện. C trả lời cho WHO.",
+          "explanation": "Tiêu chí cụ thể cho chương trình sức khỏe nhân viên: nhân viên toàn thời gian với hơn 1 năm làm việc (A). B quá chung chung, D chỉ nêu một điều kiện. C (enrollment criteria) quá mơ hồ — không nêu tiêu chí cụ thể như A.",
           "answerChunks": ["Full-time", "staff", "with", "over", "one", "year", "of", "service"]
         },
         {
           "prompt": "What is the turnaround time for purchase order approvals?",
-          "options": ["Two to three business days.", "By the end of the week.", "The procurement officer handles it.", "Within 48 hours."],
+          "options": ["Two to three business days.", "By the end of the week.", "Within the same business day.", "Within 48 hours."],
           "correct": 3,
-          "explanation": "Thời gian phê duyệt đơn mua hàng cụ thể là 48 giờ (D). A (two to three days) và B (end of week) ít chính xác hơn D. C trả lời cho WHO.",
+          "explanation": "Thời gian phê duyệt đơn mua hàng cụ thể là 48 giờ (D). A (two to three days) và B (end of week) ít chính xác hơn D. C (same business day) quá nhanh và không thực tế cho quy trình phê duyệt đầy đủ.",
           "answerChunks": ["Within", "48", "hours"]
         },
         {
           "prompt": "What format should the monthly report be submitted in?",
-          "options": ["A PDF with an Excel attachment.", "Via the internal portal.", "The team leader.", "A Word document with charts."],
+          "options": ["A PDF with an Excel attachment.", "Via the internal portal.", "A structured spreadsheet with embedded charts.", "A Word document with charts."],
           "correct": 0,
-          "explanation": "Format nộp báo cáo hàng tháng — A (PDF kèm Excel) là câu trả lời về định dạng file. D (Word with charts) cũng về format nhưng A phổ biến và đầy đủ hơn. B trả lời cho HOW/WHERE, C trả lời cho WHO.",
+          "explanation": "Format nộp báo cáo hàng tháng — A (PDF kèm Excel) là câu trả lời về định dạng file. C và D cũng là format nhưng A phổ biến và đầy đủ hơn trong môi trường doanh nghiệp. B (via portal) trả lời cho HOW/WHERE nộp, không phải format.",
           "answerChunks": ["A", "PDF", "with", "an", "Excel", "attachment"]
         }
       ]

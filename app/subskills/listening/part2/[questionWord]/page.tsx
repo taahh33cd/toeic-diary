@@ -117,6 +117,7 @@ export default async function ListeningPart2ExercisePage({ params, searchParams 
 
       {/* Client component */}
       <ExerciseClient
+        key={activeDiff}
         set={activeSet}
         initialBest={activeBest}
         userId={user?.id ?? null}
