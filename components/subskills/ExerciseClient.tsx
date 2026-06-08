@@ -492,6 +492,8 @@ function McqPanel({
   tSlots,
   tBank,
   submitted,
+  disabledOpts,
+  mcqPartLocked,
   onChoose,
   onPickBank,
   onReturnSlot,
@@ -503,11 +505,13 @@ function McqPanel({
   tSlots: (string | null)[];
   tBank: string[];
   submitted: boolean;
+  disabledOpts: number[];
+  mcqPartLocked: boolean;
   onChoose: (i: number) => void;
   onPickBank: (chip: string) => void;
   onReturnSlot: (i: number) => void;
 }) {
-  const mcqOk = submitted && choice === displayCorrect;
+  const mcqOk = submitted && (choice === displayCorrect || mcqPartLocked);
   const translation = tSlots.filter(Boolean) as string[];
   const transOk = submitted && item.answerChunks.every((c, j) => c === translation[j]);
   const allOk = mcqOk && transOk;
@@ -521,33 +525,72 @@ function McqPanel({
       {/* Options */}
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
         {displayOpts.map((opt, i) => {
-          const isSelected = choice === i;
-          const isCorrect  = submitted && i === displayCorrect;
-          const isWrong    = submitted && isSelected && i !== displayCorrect;
+          const isDisabled      = !submitted && !mcqPartLocked && disabledOpts.includes(i);
+          const isSelected      = choice === i;
+          // when mcqPartLocked, MCQ is confirmed correct — show it as locked-correct
+          const isLockedCorrect = mcqPartLocked && !submitted && i === displayCorrect;
+          const isLockedOther   = mcqPartLocked && !submitted && i !== displayCorrect;
+          const isCorrect       = submitted && i === displayCorrect;
+          const isWrong         = submitted && isSelected && i !== displayCorrect;
+
+          let borderColor = "var(--border)";
+          let bgColor     = "var(--bg-secondary)";
+          let textColor   = "var(--text-primary)";
+          let opacity     = 1;
+          let cursor      = "pointer";
+          let textDeco: React.CSSProperties["textDecoration"] = "none";
+
+          if (isDisabled) {
+            borderColor = "rgba(239,68,68,0.25)";
+            bgColor     = "rgba(239,68,68,0.04)";
+            textColor   = "var(--text-muted)";
+            opacity     = 0.45;
+            cursor      = "not-allowed";
+            textDeco    = "line-through";
+          } else if (isLockedCorrect) {
+            borderColor = "rgba(34,197,94,0.5)";
+            bgColor     = "rgba(34,197,94,0.08)";
+            textColor   = "rgb(34,197,94)";
+            cursor      = "default";
+          } else if (isLockedOther) {
+            opacity = 0.4;
+            cursor  = "default";
+          } else if (isCorrect) {
+            borderColor = "rgba(34,197,94,0.5)";
+            bgColor     = "rgba(34,197,94,0.08)";
+            textColor   = "rgb(34,197,94)";
+            cursor      = "default";
+          } else if (isWrong) {
+            borderColor = "rgba(239,68,68,0.5)";
+            bgColor     = "rgba(239,68,68,0.07)";
+            textColor   = "rgb(239,68,68)";
+            cursor      = "default";
+          } else if (isSelected) {
+            borderColor = "var(--accent-primary)";
+            bgColor     = "rgba(var(--accent-primary-rgb, 59,130,246),0.08)";
+          }
+
           return (
             <button
               key={i}
-              onClick={() => onChoose(i)}
+              onClick={() => {
+                if (!submitted && !isDisabled && !mcqPartLocked) onChoose(i);
+              }}
               style={{
                 display: "flex",
                 alignItems: "center",
                 gap: 12,
                 padding: "11px 16px",
                 borderRadius: 8,
-                border: `1.5px solid ${
-                  isCorrect ? "rgba(34,197,94,0.5)"
-                  : isWrong  ? "rgba(239,68,68,0.5)"
-                  : isSelected ? "var(--accent-primary)"
-                  : "var(--border)"
-                }`,
-                background: isCorrect ? "rgba(34,197,94,0.08)"
-                  : isWrong  ? "rgba(239,68,68,0.07)"
-                  : isSelected ? "rgba(var(--accent-primary-rgb, 59,130,246),0.08)"
-                  : "var(--bg-secondary)",
-                cursor: submitted ? "default" : "pointer",
+                border: `1.5px solid ${borderColor}`,
+                background: bgColor,
+                cursor,
                 textAlign: "left",
-                color: isCorrect ? "rgb(34,197,94)" : isWrong ? "rgb(239,68,68)" : "var(--text-primary)",
+                color: textColor,
                 fontSize: "0.9rem",
+                opacity,
+                textDecoration: textDeco,
+                transition: "opacity 0.15s",
               }}
             >
               <span style={{ fontWeight: 700, color: "var(--text-muted)", fontSize: "0.78rem", minWidth: 16 }}>
@@ -559,11 +602,11 @@ function McqPanel({
         })}
       </div>
 
-      {/* Translation word-bank — always shown (translateMode: "always") */}
-      {choice !== null && (
-        <div style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "14px 16px", display: "flex", flexDirection: "column", gap: 10 }}>
+      {/* Translation word-bank — shown once MCQ is selected or locked */}
+      {(choice !== null || mcqPartLocked) && (
+        <div style={{ border: `1px solid ${mcqPartLocked && !submitted ? "rgba(34,197,94,0.3)" : "var(--border)"}`, borderRadius: 10, padding: "14px 16px", display: "flex", flexDirection: "column", gap: 10 }}>
           <div style={{ fontSize: "0.75rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
-            Dịch đáp án đúng sang tiếng Anh
+            Dịch nghĩa đáp án đúng sang tiếng Việt
           </div>
           <ChipSlots
             slots={tSlots}
@@ -604,6 +647,7 @@ function MatchPanel({
   displayCorrect,
   choice,
   submitted,
+  disabledOpts,
   onChoose,
 }: {
   item: MTItem;
@@ -611,6 +655,7 @@ function MatchPanel({
   displayCorrect: number;
   choice: number | null;
   submitted: boolean;
+  disabledOpts: number[];
   onChoose: (i: number) => void;
 }) {
   const isCorrect = submitted && choice === displayCorrect;
@@ -623,33 +668,61 @@ function MatchPanel({
 
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
         {displayOpts.map((opt, i) => {
+          const isDisabled  = !submitted && disabledOpts.includes(i);
           const isSelected  = choice === i;
           const showCorrect = submitted && i === displayCorrect;
           const showWrong   = submitted && isSelected && i !== displayCorrect;
+
+          let borderColor = "var(--border)";
+          let bgColor     = "var(--bg-secondary)";
+          let textColor   = "var(--text-primary)";
+          let opacity     = 1;
+          let cursor      = "pointer";
+          let textDeco: React.CSSProperties["textDecoration"] = "none";
+
+          if (isDisabled) {
+            borderColor = "rgba(239,68,68,0.25)";
+            bgColor     = "rgba(239,68,68,0.04)";
+            textColor   = "var(--text-muted)";
+            opacity     = 0.45;
+            cursor      = "not-allowed";
+            textDeco    = "line-through";
+          } else if (showCorrect) {
+            borderColor = "rgba(34,197,94,0.5)";
+            bgColor     = "rgba(34,197,94,0.08)";
+            textColor   = "rgb(34,197,94)";
+            cursor      = "default";
+          } else if (showWrong) {
+            borderColor = "rgba(239,68,68,0.5)";
+            bgColor     = "rgba(239,68,68,0.07)";
+            textColor   = "rgb(239,68,68)";
+            cursor      = "default";
+          } else if (submitted) {
+            cursor = "default";
+          } else if (isSelected) {
+            borderColor = "var(--accent-primary)";
+            bgColor     = "rgba(59,130,246,0.08)";
+          }
+
           return (
             <button
               key={i}
-              onClick={() => onChoose(i)}
+              onClick={() => { if (!submitted && !isDisabled) onChoose(i); }}
               style={{
                 display: "flex",
                 alignItems: "center",
                 gap: 12,
                 padding: "11px 16px",
                 borderRadius: 8,
-                border: `1.5px solid ${
-                  showCorrect ? "rgba(34,197,94,0.5)"
-                  : showWrong  ? "rgba(239,68,68,0.5)"
-                  : isSelected ? "var(--accent-primary)"
-                  : "var(--border)"
-                }`,
-                background: showCorrect ? "rgba(34,197,94,0.08)"
-                  : showWrong  ? "rgba(239,68,68,0.07)"
-                  : isSelected ? "rgba(59,130,246,0.08)"
-                  : "var(--bg-secondary)",
-                cursor: submitted ? "default" : "pointer",
+                border: `1.5px solid ${borderColor}`,
+                background: bgColor,
+                cursor,
                 textAlign: "left",
-                color: showCorrect ? "rgb(34,197,94)" : showWrong ? "rgb(239,68,68)" : "var(--text-primary)",
+                color: textColor,
                 fontSize: "0.9rem",
+                opacity,
+                textDecoration: textDeco,
+                transition: "opacity 0.15s",
               }}
             >
               <span style={{ fontWeight: 700, color: "var(--text-muted)", fontSize: "0.78rem", minWidth: 16 }}>
@@ -992,6 +1065,12 @@ export default function ExerciseClient({
   // Match (Bài 3 — Medium)
   const [matchChoice, setMatchChoice] = useState<number | null>(null);
 
+  // ── Retry state (reset per item) ──────────────────────────────────
+  const MAX_RETRIES = 2; // 2 retries → 3 total attempts
+  const [retryCount, setRetryCount] = useState(0);          // wrong attempts so far
+  const [disabledOpts, setDisabledOpts] = useState<number[]>([]); // tried-wrong option indices
+  const [mcqPartLocked, setMcqPartLocked] = useState(false); // MCQ correct, translate pending
+
   const ex = set.exercises[exIdx];
 
   // ── Deterministic option shuffle for MCQ and Match ────────────────
@@ -1013,6 +1092,9 @@ export default function ExerciseClient({
   function resetForItem(ei: number, ii: number) {
     const exercise = set.exercises[ei];
     setSubmitted(false);
+    setRetryCount(0);
+    setDisabledOpts([]);
+    setMcqPartLocked(false);
     if (exercise.kind === "wordbank") {
       const item = exercise.items[ii] as WBItem;
       setWbSlots(item.chunks.map(() => null));
@@ -1060,31 +1142,91 @@ export default function ExerciseClient({
 
   function handleCheck() {
     if (submitted) return;
-    let correct = false;
 
-    if (ex.kind === "wordbank") {
-      correct = wordbankItemCorrect(
-        ex.items[itemIdx] as WBItem,
-        wbSlots.filter(Boolean) as string[]
-      );
-    } else if (ex.kind === "fill") {
-      correct = fillItemBlanksCorrect(ex.items[itemIdx] as FIItem, fillInputs).every(Boolean);
-    } else if (ex.kind === "keyword") {
-      const item = ex.items[itemIdx] as KWItem;
-      correct = keywordItemGroupsMatched(item, kwInput).filter(Boolean).length >= item.minRequired;
-    } else if (ex.kind === "mcq") {
-      const item = ex.items[itemIdx] as MCQItem;
-      const arranged = mcqTSlots.filter(Boolean) as string[];
-      correct =
-        mcqChoice === mcqDisplayCorrect &&
-        item.answerChunks.every((c, j) => c === arranged[j]);
-    } else if (ex.kind === "match") {
-      correct = matchChoice === matchDisplayCorrect;
+    // Score multiplier: attempt 1 = 1.0, attempt 2 = 0.5, attempt 3+ = 0.0
+    function addCorrect() {
+      const multiplier = retryCount === 0 ? 1.0 : retryCount === 1 ? 0.5 : 0.0;
+      setCorrectCounts(prev => { const n = [...prev]; n[exIdx] += multiplier; return n; });
+      setSubmitted(true);
     }
 
-    setSubmitted(true);
-    if (correct) {
-      setCorrectCounts(prev => { const n = [...prev]; n[exIdx]++; return n; });
+    // Wrong answer: retry if attempts remain, else reveal
+    function handleWrong(resetFn: () => void) {
+      if (retryCount < MAX_RETRIES) {
+        setRetryCount(prev => prev + 1);
+        resetFn();
+        // do NOT setSubmitted — allow retry
+      } else {
+        setSubmitted(true); // exhausted — reveal answer, 0 points
+      }
+    }
+
+    if (ex.kind === "wordbank") {
+      const item = ex.items[itemIdx] as WBItem;
+      const correct = wordbankItemCorrect(item, wbSlots.filter(Boolean) as string[]);
+      if (correct) {
+        addCorrect();
+      } else {
+        handleWrong(() => {
+          setWbSlots(item.chunks.map(() => null));
+          setWbBank(shuffle(item.chunks));
+        });
+      }
+    } else if (ex.kind === "fill") {
+      const item = ex.items[itemIdx] as FIItem;
+      const blankResults = fillItemBlanksCorrect(item, fillInputs);
+      if (blankResults.every(Boolean)) {
+        addCorrect();
+      } else {
+        handleWrong(() => {
+          // Clear only wrong blanks; keep correct ones intact
+          setFillInputs(prev => prev.map((v, i) => blankResults[i] ? v : ""));
+        });
+      }
+    } else if (ex.kind === "keyword") {
+      const item = ex.items[itemIdx] as KWItem;
+      const correct = keywordItemGroupsMatched(item, kwInput).filter(Boolean).length >= item.minRequired;
+      if (correct) {
+        addCorrect();
+      } else {
+        handleWrong(() => { setKwInput(""); });
+      }
+    } else if (ex.kind === "mcq") {
+      const item = ex.items[itemIdx] as MCQItem;
+      // mcqPartLocked means MCQ was already confirmed correct; only translate matters now
+      const mcqCorrect = mcqPartLocked || (mcqChoice === mcqDisplayCorrect);
+      const arranged = mcqTSlots.filter(Boolean) as string[];
+      const transCorrect = item.answerChunks.every((c, j) => c === arranged[j]);
+      if (mcqCorrect && transCorrect) {
+        addCorrect();
+      } else {
+        handleWrong(() => {
+          if (!mcqPartLocked && mcqChoice !== mcqDisplayCorrect) {
+            // MCQ was wrong: disable that option, reset MCQ choice + translate
+            const wrong = mcqChoice;
+            setDisabledOpts(prev => wrong !== null ? [...prev, wrong] : prev);
+            setMcqChoice(null);
+            setMcqTSlots(item.answerChunks.map(() => null));
+            setMcqTBank(shuffle(item.answerChunks));
+          } else {
+            // MCQ was correct but translate wrong: lock MCQ, reset only translate
+            setMcqPartLocked(true);
+            setMcqTSlots(item.answerChunks.map(() => null));
+            setMcqTBank(shuffle(item.answerChunks));
+          }
+        });
+      }
+    } else if (ex.kind === "match") {
+      const correct = matchChoice === matchDisplayCorrect;
+      if (correct) {
+        addCorrect();
+      } else {
+        handleWrong(() => {
+          const wrong = matchChoice;
+          setDisabledOpts(prev => wrong !== null ? [...prev, wrong] : prev);
+          setMatchChoice(null);
+        });
+      }
     }
   }
 
@@ -1263,7 +1405,9 @@ export default function ExerciseClient({
           tSlots={mcqTSlots}
           tBank={mcqTBank}
           submitted={submitted}
-          onChoose={c => { if (!submitted) setMcqChoice(c); }}
+          disabledOpts={disabledOpts}
+          mcqPartLocked={mcqPartLocked}
+          onChoose={c => { if (!submitted && !mcqPartLocked) setMcqChoice(c); }}
           onPickBank={mcqTPickBank}
           onReturnSlot={mcqTReturnSlot}
         />
@@ -1275,8 +1419,30 @@ export default function ExerciseClient({
           displayCorrect={matchDisplayCorrect}
           choice={matchChoice}
           submitted={submitted}
+          disabledOpts={disabledOpts}
           onChoose={c => { if (!submitted) setMatchChoice(c); }}
         />
+      )}
+
+      {/* Retry feedback banner */}
+      {retryCount > 0 && !submitted && (
+        <div style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "8px 14px",
+          borderRadius: 8,
+          background: "rgba(239,68,68,0.07)",
+          border: "1px solid rgba(239,68,68,0.22)",
+          fontSize: "0.82rem",
+        }}>
+          <span style={{ color: "rgb(210,50,50)", fontWeight: 600 }}>
+            ✗ Chưa đúng — thử lại lần {retryCount + 1}/3{retryCount === 2 ? " (lần cuối)" : ""}
+          </span>
+          <span style={{ color: "var(--text-muted)", fontSize: "0.74rem" }}>
+            {retryCount === 1 ? "đúng lần này: 50%" : "đúng lần này: 0%"}
+          </span>
+        </div>
       )}
 
       {/* Actions */}
