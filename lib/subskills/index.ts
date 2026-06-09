@@ -318,9 +318,152 @@ function normalizeFreewrite(s: string): string {
     .trim();
 }
 
-export function freetypeItemCorrect(item: FreetypeItem, userInput: string): boolean {
+// ── Keyword-based grading helpers ──────────────────────────────────────────
+
+/**
+ * Structural words excluded from content keyword extraction.
+ * We want to keep only content/vocabulary words.
+ */
+const FREEWRITE_STOPWORDS = new Set([
+  // Articles (already stripped in normalizeFreewrite, kept here for safety)
+  "a", "an", "the",
+  // Forms of "to be"
+  "is", "are", "was", "were", "be", "been", "being", "am",
+  // Auxiliaries
+  "have", "has", "had", "do", "does", "did",
+  "will", "would", "could", "should", "may", "might", "must", "shall", "can",
+  // Pronouns
+  "i", "you", "he", "she", "it", "we", "they", "me", "him", "her", "us", "them",
+  "my", "your", "his", "its", "our", "their", "this", "that", "these", "those",
+  // Prepositions & conjunctions
+  "to", "of", "in", "on", "at", "by", "for", "with", "from", "into", "about",
+  "through", "during", "before", "after", "over", "under", "between", "and",
+  "but", "or", "nor", "so", "yet", "both", "also", "just", "very", "more",
+  "most", "not", "no", "if", "as", "than", "then", "still", "up", "out",
+  // Question words themselves (checked separately via questionWordPresent)
+  "what", "when", "where", "who", "which", "how", "why",
+]);
+
+/** Extract content keywords from a normalized answer string */
+function extractKeywords(normalized: string): string[] {
+  const words = normalized.split(/\s+/);
+  const seen = new Set<string>();
+  const result: string[] = [];
+  for (const w of words) {
+    // Keep words ≥ 4 chars that are not stopwords
+    if (w.length >= 4 && !FREEWRITE_STOPWORDS.has(w) && !seen.has(w)) {
+      seen.add(w);
+      result.push(w);
+    }
+  }
+  return result;
+}
+
+/** Levenshtein edit distance */
+function levenshtein(a: string, b: string): number {
+  if (a === b) return 0;
+  if (a.length === 0) return b.length;
+  if (b.length === 0) return a.length;
+  const prev = Array.from({ length: b.length + 1 }, (_, i) => i);
+  const curr = new Array<number>(b.length + 1);
+  for (let i = 1; i <= a.length; i++) {
+    curr[0] = i;
+    for (let j = 1; j <= b.length; j++) {
+      curr[j] = a[i - 1] === b[j - 1]
+        ? prev[j - 1]
+        : 1 + Math.min(prev[j], curr[j - 1], prev[j - 1]);
+    }
+    for (let j = 0; j <= b.length; j++) prev[j] = curr[j];
+  }
+  return prev[b.length];
+}
+
+/**
+ * Fuzzy-match a user word against a keyword.
+ * Tolerance: 1 typo for words < 8 chars, 2 typos for words ≥ 8 chars.
+ */
+function fuzzyWordMatch(userWord: string, keyword: string): boolean {
+  if (userWord === keyword) return true;
+  const maxDist = keyword.length >= 8 ? 2 : 1;
+  return levenshtein(userWord, keyword) <= maxDist;
+}
+
+/**
+ * Auxiliaries used as "question word" in yes-no and tag questions.
+ */
+const YES_NO_AUXILIARIES = [
+  "do", "does", "did", "is", "are", "was", "were",
+  "have", "has", "had", "can", "could", "will", "would",
+  "should", "must", "might", "shall",
+];
+
+/**
+ * Check whether the user's normalized answer contains the required question word
+ * (or question structure) for the given question type.
+ */
+function questionWordPresent(userNorm: string, questionWord: string): boolean {
+  const words = userNorm.split(/\s+/);
+  const wordSet = new Set(words);
+  switch (questionWord) {
+    case "yes-no":
+      // Must start with (or contain early) an auxiliary verb
+      return YES_NO_AUXILIARIES.some((aux) => wordSet.has(aux));
+    case "tag":
+      // Must contain a negative contraction ("hasnt", "didnt", "wont", etc.)
+      // OR a positive tag auxiliary in the last 3 words
+      if (words.some((w) => w.endsWith("nt") && w.length >= 4)) return true;
+      const lastThree = new Set(words.slice(-3));
+      return YES_NO_AUXILIARIES.some((aux) => lastThree.has(aux));
+    case "choice":
+      return wordSet.has("or");
+    default:
+      // who, what, which, where, when, why, how
+      return wordSet.has(questionWord);
+  }
+}
+
+/**
+ * Freewrite grading:
+ *
+ * 1. Exact match (after normalization) → true immediately.
+ * 2. Keyword + fuzzy approach:
+ *    a. Question word / structure must be present.
+ *    b. Extract content keywords from correct answers (union across all accepted answers).
+ *    c. User must fuzzy-match ≥ 70% of those keywords.
+ *
+ * `questionWord` = set.questionWord (e.g. "who", "what", "yes-no", "tag", "choice").
+ * Passing undefined falls back to exact-match only.
+ */
+export function freetypeItemCorrect(
+  item: FreetypeItem,
+  userInput: string,
+  questionWord?: string,
+): boolean {
   const userNorm = normalizeFreewrite(userInput);
   if (!userNorm) return false;
+
   const allAnswers = [item.answer, ...(item.acceptedAnswers ?? [])];
-  return allAnswers.some((a) => normalizeFreewrite(a) === userNorm);
+
+  // 1. Exact match
+  if (allAnswers.some((a) => normalizeFreewrite(a) === userNorm)) return true;
+
+  // 2. Keyword + fuzzy approach (requires questionWord)
+  if (!questionWord) return false;
+
+  // 2a. Question word / structure must be present
+  if (!questionWordPresent(userNorm, questionWord)) return false;
+
+  // 2b. Extract content keywords from all accepted answers (union)
+  const allKeywords = [
+    ...new Set(allAnswers.flatMap((a) => extractKeywords(normalizeFreewrite(a)))),
+  ];
+  if (allKeywords.length === 0) return true; // no content keywords — question word alone is enough
+
+  // 2c. Count matched keywords (at least one user word fuzzy-matches each keyword)
+  const userWords = userNorm.split(/\s+/);
+  const matchedCount = allKeywords.filter((kw) =>
+    userWords.some((uw) => fuzzyWordMatch(uw, kw))
+  ).length;
+
+  return matchedCount / allKeywords.length >= 0.7;
 }

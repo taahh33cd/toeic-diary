@@ -491,15 +491,17 @@ function FreetypePanel({
   input,
   submitted,
   retryCount,
+  questionWord,
   onChange,
 }: {
   item: FTItem;
   input: string;
   submitted: boolean;
   retryCount: number;
+  questionWord: string;
   onChange: (v: string) => void;
 }) {
-  const correct = submitted && freetypeItemCorrect(item, input);
+  const correct = submitted && freetypeItemCorrect(item, input, questionWord);
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
@@ -1270,7 +1272,7 @@ export default function ExerciseClient({
       }
     } else if (ex.kind === "freewrite") {
       const item = ex.items[itemIdx] as FTItem;
-      const correct = freetypeItemCorrect(item, ftInput);
+      const correct = freetypeItemCorrect(item, ftInput, set.questionWord);
       if (correct) {
         addCorrect();
       } else {
@@ -1489,6 +1491,7 @@ export default function ExerciseClient({
           input={ftInput}
           submitted={submitted}
           retryCount={retryCount}
+          questionWord={set.questionWord}
           onChange={setFtInput}
         />
       )}
