@@ -15,6 +15,8 @@ import {
   fillItemBlanksCorrect,
   keywordItemGroupsMatched,
   freetypeItemCorrect,
+  getFreetypeKeywordHint,
+  type FreetypeKeywordHint,
 } from "@/lib/subskills";
 
 // ─────────────────────────────────────
@@ -185,6 +187,165 @@ function ResultBadge({ correct }: { correct: boolean }) {
       border: `1px solid ${correct ? "rgba(34,197,94,0.35)" : "rgba(239,68,68,0.3)"}`,
     }}>
       {correct ? "✓ Đúng!" : "✗ Chưa đúng"}
+    </div>
+  );
+}
+
+// ── Freewrite hint components ────────────────────────────────────
+
+/** A single colored word chip used in freewrite hint rows */
+function FtWordChip({ word, color }: { word: string; color: "green" | "red" | "neutral" }) {
+  if (color === "neutral") {
+    return <span style={{ fontSize: "0.82rem", color: "var(--text-secondary)" }}>{word}</span>;
+  }
+  return (
+    <span style={{
+      padding: "1px 6px",
+      borderRadius: 3,
+      fontSize: "0.82rem",
+      fontWeight: 600,
+      background: color === "green" ? "rgba(34,197,94,0.13)" : "rgba(239,68,68,0.09)",
+      color: color === "green" ? "rgb(34,197,94)" : "rgb(239,68,68)",
+      border: `1px solid ${color === "green" ? "rgba(34,197,94,0.32)" : "rgba(239,68,68,0.27)"}`,
+    }}>{word}</span>
+  );
+}
+
+/** Keyword-level hint panel shown after a wrong freewrite attempt */
+function FreetypeHintDisplay({
+  hint,
+  lastInput,
+  retryCount,
+  questionWord,
+  item,
+}: {
+  hint: FreetypeKeywordHint;
+  lastInput: string;
+  retryCount: number;
+  questionWord: string;
+  item: FTItem;
+}) {
+  const matchedSet      = new Set(hint.matchedKeywords);
+  const missingSet      = new Set(hint.missingKeywords);
+  const userMatchedSet  = new Set(hint.userMatchedWords);
+  const simpleQWord     = !["yes-no", "tag", "choice"].includes(questionWord);
+  const ALL_QWORDS      = new Set(["who", "what", "which", "where", "when", "why", "how"]);
+  const isLightHint     = retryCount === 1;
+
+  /** Lowercase + strip punctuation, no article removal (that's only for grading) */
+  function wNorm(raw: string): string {
+    return raw.toLowerCase().replace(/[.,!?;:'"]/g, "").trim();
+  }
+
+  /** Determine color for a word in the CORRECT ANSWER row */
+  function answerWordColor(raw: string): "green" | "red" | "neutral" {
+    const n = wNorm(raw);
+    if (!n) return "neutral";
+    // Question word token in simple questions (who/what/when…)
+    if (simpleQWord && n === questionWord) return hint.questionWordOk ? "green" : "red";
+    if (matchedSet.has(n)) return "green";
+    if (missingSet.has(n)) return "red";
+    return "neutral";
+  }
+
+  /** Determine color for a word in the USER INPUT row */
+  function userWordColor(raw: string): "green" | "red" | "neutral" {
+    const n = wNorm(raw);
+    if (!n) return "neutral";
+    // User's own word that fuzzy-matched a correct-answer keyword → green
+    if (userMatchedSet.has(n)) return "green";
+    // Simple question word match
+    if (simpleQWord && n === questionWord) return "green";
+    // Wrong question word (user typed "who" but correct is "what")
+    if (simpleQWord && ALL_QWORDS.has(n) && n !== questionWord) return "red";
+    // "or" for choice questions
+    if (questionWord === "choice" && n === "or") return hint.questionWordOk ? "green" : "neutral";
+    return "neutral";
+  }
+
+  return (
+    <div style={{
+      padding: "10px 14px",
+      background: "rgba(234,179,8,0.04)",
+      border: "1px solid rgba(234,179,8,0.18)",
+      borderRadius: 8,
+      display: "flex",
+      flexDirection: "column",
+      gap: 8,
+    }}>
+      {/* Header */}
+      <div style={{ fontSize: "0.7rem", fontWeight: 700, color: "rgb(180,130,0)", letterSpacing: "0.04em" }}>
+        💡 {isLightHint ? "Gợi ý (lần thử 2)" : "Gợi ý đầy đủ (lần cuối)"}
+      </div>
+
+      {/* Question word badge */}
+      {hint.questionWordOk !== null && (
+        <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+          <span style={{ fontSize: "0.72rem", color: "var(--text-muted)" }}>Từ để hỏi:</span>
+          <span style={{
+            fontSize: "0.72rem", fontWeight: 600, padding: "1px 8px", borderRadius: 10,
+            background: hint.questionWordOk ? "rgba(34,197,94,0.12)" : "rgba(239,68,68,0.09)",
+            color:      hint.questionWordOk ? "rgb(34,197,94)"       : "rgb(239,68,68)",
+            border: `1px solid ${hint.questionWordOk ? "rgba(34,197,94,0.35)" : "rgba(239,68,68,0.28)"}`,
+          }}>
+            {hint.questionWordOk ? "✓ Đúng" : "✗ Sai / thiếu"}
+          </span>
+        </div>
+      )}
+
+      {/* ── Level 1: show only missing keywords ── */}
+      {isLightHint && (
+        hint.missingKeywords.length > 0 ? (
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "4px 5px", alignItems: "center" }}>
+            <span style={{ fontSize: "0.72rem", color: "var(--text-muted)", flexShrink: 0 }}>Từ khoá còn thiếu:</span>
+            {hint.missingKeywords.map(kw => (
+              <span key={kw} style={{
+                padding: "1px 8px", borderRadius: 4, fontSize: "0.78rem", fontWeight: 500,
+                background: "rgba(239,68,68,0.09)", color: "rgb(239,68,68)",
+                border: "1px solid rgba(239,68,68,0.28)",
+              }}>
+                ✗ {kw}
+              </span>
+            ))}
+          </div>
+        ) : (
+          <span style={{ fontSize: "0.72rem", color: "rgb(34,197,94)", fontStyle: "italic" }}>
+            ✓ Từ khoá đủ rồi — kiểm tra lại từ để hỏi hoặc cấu trúc câu.
+          </span>
+        )
+      )}
+
+      {/* ── Level 2: both sentence rows with word-level highlights ── */}
+      {!isLightHint && (
+        <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
+          {/* User's last wrong input */}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "3px 4px", alignItems: "center" }}>
+            <span style={{
+              fontSize: "0.68rem", color: "var(--text-muted)", fontWeight: 700,
+              minWidth: 58, flexShrink: 0,
+            }}>Bạn viết:</span>
+            {lastInput.trim().split(/\s+/).map((w, i) => (
+              <FtWordChip key={i} word={w} color={userWordColor(w)} />
+            ))}
+          </div>
+          {/* Correct answer */}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "3px 4px", alignItems: "center" }}>
+            <span style={{
+              fontSize: "0.68rem", color: "var(--text-muted)", fontWeight: 700,
+              minWidth: 58, flexShrink: 0,
+            }}>Đáp án:</span>
+            {item.answer.trim().split(/\s+/).map((w, i) => (
+              <FtWordChip key={i} word={w} color={answerWordColor(w)} />
+            ))}
+          </div>
+          {/* Legend */}
+          <div style={{ display: "flex", gap: 12, marginTop: 1, flexWrap: "wrap" }}>
+            <span style={{ fontSize: "0.63rem", color: "rgb(34,197,94)" }}>● xanh = đúng</span>
+            <span style={{ fontSize: "0.63rem", color: "rgb(239,68,68)" }}>● đỏ = sai / thiếu</span>
+            <span style={{ fontSize: "0.63rem", color: "var(--text-muted)" }}>● xám = từ phụ</span>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -1139,6 +1300,8 @@ export default function ExerciseClient({
 
   // Freewrite (Bài 1 Hard)
   const [ftInput, setFtInput] = useState("");
+  // Hint result from the last wrong freewrite attempt (saved before input is cleared)
+  const [ftHint, setFtHint] = useState<{ hint: FreetypeKeywordHint; input: string } | null>(null);
 
   // ── Retry state (reset per item) ──────────────────────────────────
   const MAX_RETRIES = 2; // 2 retries → 3 total attempts
@@ -1181,6 +1344,7 @@ export default function ExerciseClient({
       setKwInput("");
     } else if (exercise.kind === "freewrite") {
       setFtInput("");
+      setFtHint(null);
     } else if (exercise.kind === "mcq") {
       const item = exercise.items[ii] as MCQItem;
       setMcqChoice(null);
@@ -1276,7 +1440,13 @@ export default function ExerciseClient({
       if (correct) {
         addCorrect();
       } else {
-        handleWrong(() => { setFtInput(""); });
+        // Compute hint before clearing input so it can be shown in the hint panel
+        const computedHint = getFreetypeKeywordHint(item, ftInput, set.questionWord);
+        const capturedInput = ftInput;
+        handleWrong(() => {
+          setFtInput("");
+          setFtHint({ hint: computedHint, input: capturedInput });
+        });
       }
     } else if (ex.kind === "mcq") {
       const item = ex.items[itemIdx] as MCQItem;
@@ -1523,25 +1693,37 @@ export default function ExerciseClient({
         />
       )}
 
-      {/* Retry feedback banner */}
+      {/* Retry feedback banner + freewrite hint */}
       {retryCount > 0 && !submitted && (
-        <div style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "8px 14px",
-          borderRadius: 8,
-          background: "rgba(239,68,68,0.07)",
-          border: "1px solid rgba(239,68,68,0.22)",
-          fontSize: "0.82rem",
-        }}>
-          <span style={{ color: "rgb(210,50,50)", fontWeight: 600 }}>
-            ✗ Chưa đúng — thử lại lần {retryCount + 1}/3{retryCount === 2 ? " (lần cuối)" : ""}
-          </span>
-          <span style={{ color: "var(--text-muted)", fontSize: "0.74rem" }}>
-            {retryCount === 1 ? "đúng lần này: 50%" : "đúng lần này: 0%"}
-          </span>
-        </div>
+        <>
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: "8px 14px",
+            borderRadius: 8,
+            background: "rgba(239,68,68,0.07)",
+            border: "1px solid rgba(239,68,68,0.22)",
+            fontSize: "0.82rem",
+          }}>
+            <span style={{ color: "rgb(210,50,50)", fontWeight: 600 }}>
+              ✗ Chưa đúng — thử lại lần {retryCount + 1}/3{retryCount === 2 ? " (lần cuối)" : ""}
+            </span>
+            <span style={{ color: "var(--text-muted)", fontSize: "0.74rem" }}>
+              {retryCount === 1 ? "đúng lần này: 50%" : "đúng lần này: 0%"}
+            </span>
+          </div>
+          {/* Keyword hint panel — only for freewrite exercises */}
+          {ex.kind === "freewrite" && ftHint && (
+            <FreetypeHintDisplay
+              hint={ftHint.hint}
+              lastInput={ftHint.input}
+              retryCount={retryCount}
+              questionWord={set.questionWord}
+              item={items[itemIdx] as FTItem}
+            />
+          )}
+        </>
       )}
 
       {/* Actions */}

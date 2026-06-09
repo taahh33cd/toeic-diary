@@ -467,3 +467,60 @@ export function freetypeItemCorrect(
 
   return matchedCount / allKeywords.length >= 0.7;
 }
+
+// ── Freewrite hint feedback ────────────────────────────────────────────────
+
+export type FreetypeKeywordHint = {
+  /** Whether the required question word / structure was found. null = no questionWord given. */
+  questionWordOk: boolean | null;
+  /** Correct-answer keywords the user successfully matched (normalized form). */
+  matchedKeywords: string[];
+  /** Correct-answer keywords the user missed (normalized form). */
+  missingKeywords: string[];
+  /**
+   * The user's own word tokens (normalized) that fuzzy-matched a keyword.
+   * Used so the UI can color the user's typo-word as green even though it
+   * doesn't exactly equal the canonical keyword string.
+   */
+  userMatchedWords: string[];
+};
+
+/**
+ * Returns keyword-level feedback for a wrong freewrite attempt.
+ * Drives the hint panel shown after the 1st and 2nd wrong attempts.
+ */
+export function getFreetypeKeywordHint(
+  item: FreetypeItem,
+  userInput: string,
+  questionWord?: string,
+): FreetypeKeywordHint {
+  const userNorm = normalizeFreewrite(userInput);
+  const allAnswers = [item.answer, ...(item.acceptedAnswers ?? [])];
+  const allKws = [
+    ...new Set(allAnswers.flatMap((a) => extractKeywords(normalizeFreewrite(a)))),
+  ];
+  const userWords = userNorm.split(/\s+/).filter(Boolean);
+
+  const matched: string[] = [];
+  const missing: string[] = [];
+  const userMatchedWords: string[] = [];
+
+  for (const kw of allKws) {
+    const matchingUserWord = userWords.find((uw) => fuzzyWordMatch(uw, kw));
+    if (matchingUserWord) {
+      matched.push(kw);
+      if (!userMatchedWords.includes(matchingUserWord)) {
+        userMatchedWords.push(matchingUserWord);
+      }
+    } else {
+      missing.push(kw);
+    }
+  }
+
+  return {
+    questionWordOk: questionWord ? questionWordPresent(userNorm, questionWord) : null,
+    matchedKeywords: matched,
+    missingKeywords: missing,
+    userMatchedWords,
+  };
+}
