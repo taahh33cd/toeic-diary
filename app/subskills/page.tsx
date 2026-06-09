@@ -41,38 +41,45 @@ export default async function SubskillsPage() {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
-  const [profile, attempts] = await Promise.all([
+  const [profile, easyAttempts, mediumAttempts, hardAttempts] = await Promise.all([
     user
-      ? prisma.profile.findUnique({
-          where: { id: user.id },
-          select: { displayName: true },
-        })
+      ? prisma.profile.findUnique({ where: { id: user.id }, select: { displayName: true } })
       : Promise.resolve(null),
     user
-      ? prisma.subskillAttempt
-          .findMany({
-            where: { userId: user.id, part: "part2" },
-            select: { questionWord: true, exerciseIndex: true, score: true, passed: true },
-          })
-          .catch(() => [])
+      ? prisma.subskillAttempt.findMany({ where: { userId: user.id, part: "part2" },        select: { questionWord: true, exerciseIndex: true, score: true, passed: true } }).catch(() => [])
+      : Promise.resolve([]),
+    user
+      ? prisma.subskillAttempt.findMany({ where: { userId: user.id, part: "part2-medium" }, select: { questionWord: true, exerciseIndex: true, score: true, passed: true } }).catch(() => [])
+      : Promise.resolve([]),
+    user
+      ? prisma.subskillAttempt.findMany({ where: { userId: user.id, part: "part2-hard" },   select: { questionWord: true, exerciseIndex: true, score: true, passed: true } }).catch(() => [])
       : Promise.resolve([]),
   ]);
 
-  const best: Record<string, { score: number; passed: boolean }> = {};
-  for (const a of attempts) {
-    const key = `${a.questionWord}:${a.exerciseIndex}`;
-    if (!best[key] || a.score > best[key].score) {
-      best[key] = { score: a.score, passed: a.passed };
+  // Best score per difficulty tier, keyed by "questionWord:exerciseIndex"
+  function buildBest(attempts: { questionWord: string; exerciseIndex: number; score: number; passed: boolean }[]) {
+    const best: Record<string, { score: number; passed: boolean }> = {};
+    for (const a of attempts) {
+      const key = `${a.questionWord}:${a.exerciseIndex}`;
+      if (!best[key] || a.score > best[key].score) best[key] = { score: a.score, passed: a.passed };
     }
+    return best;
   }
+  const easyBest   = buildBest(easyAttempts);
+  const mediumBest = buildBest(mediumAttempts);
+  const hardBest   = buildBest(hardAttempts);
 
   const displayName = profile?.displayName ?? user?.email?.split("@")[0] ?? "bạn";
 
+  // Easy: a "set" is passed when all 4 Easy exercises are passed
   const part2PassedSets = PART2_SETS.filter((s) =>
-    [0, 1, 2, 3].every((i) => best[`${s.questionWord}:${i}`]?.passed)
+    [0, 1, 2, 3].every((i) => easyBest[`${s.questionWord}:${i}`]?.passed)
   ).length;
-  const part2DoneExercises = Object.keys(best).length;
-  const part2TotalExercises = PART2_SETS.length * 4;
+
+  // Total done = unique exercises done across all 3 difficulties
+  const allKeys = new Set([...Object.keys(easyBest), ...Object.keys(mediumBest), ...Object.keys(hardBest)]);
+  const part2DoneExercises  = allKeys.size;
+  const part2TotalExercises = PART2_SETS.length * 4 * 3; // 10 sets × 4 exercises × 3 difficulties
 
   return (
     <div
@@ -132,8 +139,8 @@ export default async function SubskillsPage() {
         {/* Stat cards */}
         <div style={{ display: "flex", gap: "0.75rem", flexShrink: 0, flexWrap: "wrap" }}>
           {[
-            { value: `${part2PassedSets}/${PART2_SETS.length}`, label: "L. Part 2 pass" },
-            { value: `${part2DoneExercises}/${part2TotalExercises}`, label: "Bài hoàn thành" },
+            { value: `${part2PassedSets}/${PART2_SETS.length}`, label: "L. Part 2 pass (Easy)" },
+            { value: `${part2DoneExercises}/${part2TotalExercises}`, label: "Bài xong (E+M+H)" },
           ].map(({ value, label }) => (
             <div
               key={label}
@@ -248,7 +255,7 @@ export default async function SubskillsPage() {
                         {part.label}
                       </div>
                       <div style={{ fontSize: "0.7rem", color: "var(--text-muted)", marginTop: "0.15rem" }}>
-                        {part2PassedSets}/{PART2_SETS.length} nhóm pass · {part2DoneExercises}/{part2TotalExercises} bài
+                        Easy: {part2PassedSets}/{PART2_SETS.length} nhóm pass · {part2DoneExercises}/{part2TotalExercises} bài (E+M+H)
                       </div>
                     </div>
                     <span style={{ fontSize: "0.8rem", color: "var(--accent-primary)", flexShrink: 0, marginLeft: "0.5rem" }}>→</span>
