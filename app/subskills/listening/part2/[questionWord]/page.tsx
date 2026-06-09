@@ -29,6 +29,12 @@ export default async function ListeningPart2ExercisePage({ params, searchParams 
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
+  // Check if this is the TEST account (always unlock all difficulties)
+  const profile = user
+    ? await prisma.profile.findUnique({ where: { id: user.id }, select: { studentCode: true } }).catch(() => null)
+    : null;
+  const isTestUser = profile?.studentCode?.toUpperCase() === "TEST";
+
   // Fetch Easy attempts
   const easyAttempts = user
     ? await prisma.subskillAttempt
@@ -47,9 +53,9 @@ export default async function ListeningPart2ExercisePage({ params, searchParams 
     }
   }
 
-  // Unlock Medium if any Easy attempt score ≥ 80%
+  // Unlock Medium if any Easy attempt score ≥ 80% (or TEST user)
   const easyTopScore = Object.values(easyBest).reduce((max, b) => Math.max(max, b.score), 0);
-  const mediumUnlocked = easyTopScore >= 80;
+  const mediumUnlocked = isTestUser || easyTopScore >= 80;
 
   // Fetch Medium attempts (stored with part: "part2-medium")
   const mediumAttempts = user && mediumUnlocked
@@ -69,9 +75,9 @@ export default async function ListeningPart2ExercisePage({ params, searchParams 
     }
   }
 
-  // Unlock Hard if any Medium attempt score ≥ 80%
+  // Unlock Hard if any Medium attempt score ≥ 80% (or TEST user)
   const mediumTopScore = Object.values(mediumBest).reduce((max, b) => Math.max(max, b.score), 0);
-  const hardUnlocked = mediumTopScore >= 80;
+  const hardUnlocked = isTestUser || mediumTopScore >= 80;
 
   // Fetch Hard attempts (stored with part: "part2-hard")
   const hardAttempts = user && hardUnlocked
