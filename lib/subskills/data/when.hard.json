@@ -1,0 +1,211 @@
+{
+  "part": "part2-hard",
+  "questionWord": "when",
+  "difficulty": "hard",
+  "label": "WHEN",
+  "labelVi": "Câu hỏi WHEN — Hard",
+  "passThreshold": 80,
+  "intro": "Hard: Viết câu hỏi WHEN tự do, điền từ không có hỗ trợ, và xác định thời điểm chính xác trong các tình huống quy trình doanh nghiệp phức tạp.",
+  "exercises": [
+    {
+      "kind": "freewrite",
+      "title": "Bài 1 — Viết câu hỏi WHEN hoàn chỉnh",
+      "instruction": "Dựa vào gợi ý tiếng Việt, viết câu hỏi WHEN hoàn chỉnh bằng tiếng Anh.",
+      "items": [
+        { "prompt": "Khi nào kết quả đánh giá hiệu suất hàng năm sẽ được thông báo?", "answer": "When will the annual performance review results be announced?", "acceptedAnswers": ["When will the annual appraisal results be notified?"] },
+        { "prompt": "Khi nào hợp đồng với nhà cung cấp mới có hiệu lực?", "answer": "When does the contract with the new supplier take effect?", "acceptedAnswers": ["When will the new supplier contract come into effect?"] },
+        { "prompt": "Khi nào nhân viên cần nộp đơn xin hoàn tiền công tác?", "answer": "When do employees need to submit their travel reimbursement claims?", "acceptedAnswers": ["When should employees file their travel expense claims?"] },
+        { "prompt": "Khi nào cuộc họp hội đồng quản trị tiếp theo được lên lịch?", "answer": "When is the next board of directors meeting scheduled?", "acceptedAnswers": ["When has the next board meeting been scheduled?"] },
+        { "prompt": "Khi nào giai đoạn thử nghiệm phần mềm mới dự kiến hoàn thành?", "answer": "When is the new software testing phase expected to be completed?", "acceptedAnswers": ["When will the testing phase for the new software be finished?"] },
+        { "prompt": "Khi nào nhân viên có thể bắt đầu sử dụng hạn mức nghỉ phép mới?", "answer": "When can employees start using the new leave entitlement?", "acceptedAnswers": ["When will the new leave allowance become available?"] },
+        { "prompt": "Khi nào thông báo chính thức về việc tái cơ cấu sẽ được phát đi?", "answer": "When will the official announcement about the restructuring be issued?", "acceptedAnswers": ["When is the formal restructuring announcement going out?"] },
+        { "prompt": "Khi nào hạn chót để nộp tài liệu cho vòng thẩm định pháp lý?", "answer": "When is the deadline to submit documents for the legal due diligence round?", "acceptedAnswers": ["When do we need to submit documents for the legal review?"] },
+        { "prompt": "Khi nào lịch đào tạo bắt buộc cho nhân viên năm nay sẽ được công bố?", "answer": "When will the mandatory training schedule for this year be published?", "acceptedAnswers": ["When is this year's compulsory training timetable being released?"] },
+        { "prompt": "Khi nào đợt kiểm toán nội bộ tiếp theo dự kiến diễn ra?", "answer": "When is the next internal audit expected to take place?", "acceptedAnswers": ["When is the next internal review scheduled to occur?"] },
+        { "prompt": "Khi nào phòng IT bắt đầu quá trình di chuyển dữ liệu lên cloud?", "answer": "When will IT begin the data migration process to the cloud?", "acceptedAnswers": ["When does the IT team start migrating data to the cloud?"] },
+        { "prompt": "Khi nào sản phẩm mới chính thức được tung ra thị trường?", "answer": "When will the new product be officially launched to the market?", "acceptedAnswers": ["When is the official market launch of the new product?"] },
+        { "prompt": "Khi nào ban lãnh đạo xem xét lại ngân sách hàng quý?", "answer": "When does the management team review the quarterly budget?", "acceptedAnswers": ["When is the quarterly budget reviewed by management?"] },
+        { "prompt": "Khi nào hợp đồng thuê văn phòng hiện tại hết hạn?", "answer": "When does the current office lease expire?", "acceptedAnswers": ["When will the existing office lease come to an end?"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ hoàn toàn tự do",
+      "instruction": "Điền từ còn thiếu để hoàn thành câu hỏi. Không có gợi ý, không có word bank.",
+      "items": [
+        { "template": "{0} is the {1} for the {2} project milestone review?", "hint": null, "blanks": [["when"], ["deadline", "due date"], ["final", "next", "upcoming"]] },
+        { "template": "{0} will the {1} results from the {2} feasibility study be ready?", "hint": null, "blanks": [["when"], ["final", "preliminary"], ["market", "technical", "financial"]] },
+        { "template": "{0} does the {1} need to {2} the signed memorandum of understanding?", "hint": null, "blanks": [["when"], ["company", "vendor", "client"], ["return", "submit", "deliver"]] },
+        { "template": "{0} are the updated {1} expected to be {2} to all staff?", "hint": null, "blanks": [["when"], ["policies", "guidelines", "procedures"], ["distributed", "circulated", "sent"]] },
+        { "template": "{0} did the {1} agree to {2} the service contract for another year?", "hint": null, "blanks": [["when"], ["board", "management", "client"], ["renew", "extend", "sign"]] },
+        { "template": "{0} will the {1} office be {2} to the new premises?", "hint": null, "blanks": [["when"], ["regional", "main", "head"], ["relocated", "moved", "transferred"]] },
+        { "template": "{0} should I {1} the final version of the {2} to the client?", "hint": null, "blanks": [["when"], ["send", "deliver", "submit"], ["proposal", "report", "invoice"]] },
+        { "template": "{0} is the {1} orientation programme for {2} graduates scheduled to start?", "hint": null, "blanks": [["when"], ["induction", "onboarding"], ["new", "recent", "incoming"]] },
+        { "template": "{0} {1} the company {2} its global expansion strategy?", "hint": null, "blanks": [["when"], ["did", "will"], ["announce", "finalise", "launch"]] },
+        { "template": "{0} will the revised {1} framework be {2} across all departments?", "hint": null, "blanks": [["when"], ["compliance", "reporting", "performance"], ["implemented", "rolled out", "adopted"]] },
+        { "template": "{0} is the {1} for submitting the annual {2} certification renewal?", "hint": null, "blanks": [["when"], ["deadline", "last date", "cut-off"], ["ISO", "safety", "quality"]] },
+        { "template": "{0} will the {1} team complete the {2} for the new client proposal?", "hint": null, "blanks": [["when"], ["research", "sales", "project"], ["analysis", "assessment", "review"]] },
+        { "template": "{0} are {1} typically notified of their end-of-year {2} decisions?", "hint": null, "blanks": [["when"], ["employees", "staff"], ["bonus", "promotion", "salary review"]] },
+        { "template": "{0} will the {1} system be taken {2} for the scheduled maintenance?", "hint": null, "blanks": [["when"], ["payroll", "IT", "ERP"], ["offline", "down", "out of service"]] }
+      ]
+    },
+    {
+      "kind": "match",
+      "title": "Bài 3 — Ghép câu hỏi & đáp án",
+      "instruction": "Chọn thời điểm phù hợp nhất cho từng câu hỏi. Các đáp án đều là cụm thời gian — đọc kỹ ngữ cảnh.",
+      "items": [
+        {
+          "question": "When is it appropriate to escalate a client complaint to senior management?",
+          "options": ["When it cannot be resolved within the agreed response window.", "Immediately upon receipt, regardless of severity.", "Only after the client files a formal written complaint.", "At the next scheduled team meeting.", "After the financial quarter closes."],
+          "correct": 0,
+          "explanation": "Leo thang lên cấp cao khi không thể giải quyết trong thời gian phản hồi đã cam kết — không phải ngay lập tức hay sau khi khách hàng viết đơn."
+        },
+        {
+          "question": "When should an employee inform HR of a long-term medical absence?",
+          "options": ["When it cannot be resolved within the agreed response window.", "Immediately upon receipt, regardless of severity.", "Only after the client files a formal written complaint.", "At the next scheduled team meeting.", "After the financial quarter closes."],
+          "correct": 1,
+          "explanation": "Nhân viên cần thông báo HR ngay khi biết mình vắng mặt lâu dài — để đảm bảo tuân thủ chính sách và sắp xếp nhân sự thay thế kịp thời."
+        },
+        {
+          "question": "When are budgetary variances typically reviewed by the finance committee?",
+          "options": ["When it cannot be resolved within the agreed response window.", "Immediately upon receipt, regardless of severity.", "Only after the client files a formal written complaint.", "At the next scheduled team meeting.", "After the financial quarter closes."],
+          "correct": 4,
+          "explanation": "Chênh lệch ngân sách thường được xem xét sau khi kết thúc quý tài chính — khi đã có đủ dữ liệu để phân tích."
+        },
+        {
+          "question": "When should action items from a project meeting be circulated to the team?",
+          "options": ["When it cannot be resolved within the agreed response window.", "Immediately upon receipt, regardless of severity.", "Only after the client files a formal written complaint.", "At the next scheduled team meeting.", "After the financial quarter closes."],
+          "correct": 3,
+          "explanation": "Action items thường được chia sẻ tại/sau cuộc họp tiếp theo nếu không có deadline khẩn cấp — thực tế phổ biến nhất trong quản lý dự án."
+        },
+        {
+          "question": "When is formal written documentation of a verbal warning required?",
+          "options": ["When it cannot be resolved within the agreed response window.", "Immediately upon receipt, regardless of severity.", "Only after the client files a formal written complaint.", "At the next scheduled team meeting.", "After the financial quarter closes."],
+          "correct": 1,
+          "explanation": "Ngay khi đưa cảnh báo miệng, cần lập tức ghi chép bằng văn bản — để bảo vệ cả hai bên nếu tình huống leo thang sau này."
+        }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn đáp án & dịch sang tiếng Việt",
+      "instruction": "Chọn thời điểm phù hợp nhất trong từng tình huống doanh nghiệp.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        {
+          "prompt": "When should a risk register be updated during a project lifecycle?",
+          "options": ["Only at project initiation.", "Only when a new risk is identified.", "Continuously throughout the project.", "At project closure only."],
+          "correct": 2,
+          "explanation": "Risk register cần được cập nhật liên tục trong suốt vòng đời dự án — rủi ro mới xuất hiện và rủi ro cũ thay đổi bất cứ lúc nào.",
+          "answerChunks": ["Liên", "tục", "trong", "suốt", "dự", "án"],
+          "answerChunkDistractors": ["Chỉ", "khi", "khởi", "động"]
+        },
+        {
+          "prompt": "When is it mandatory to conduct a formal performance review?",
+          "options": ["Only when an employee is underperforming.", "At least annually, as per most HR frameworks.", "Only after a promotion request is submitted.", "Whenever the manager deems it necessary."],
+          "correct": 1,
+          "explanation": "Theo hầu hết các khung nhân sự, đánh giá hiệu suất chính thức cần thực hiện ít nhất mỗi năm một lần — không phải chỉ khi có vấn đề.",
+          "answerChunks": ["Ít", "nhất", "mỗi", "năm", "một", "lần"],
+          "answerChunkDistractors": ["Chỉ", "khi", "kết", "quả", "kém"]
+        },
+        {
+          "prompt": "When should a company disclose a material change in its financial position to investors?",
+          "options": ["At the end of the financial year only.", "As soon as reasonably practicable after the change occurs.", "Only if requested by a major shareholder.", "During the next scheduled earnings call."],
+          "correct": 1,
+          "explanation": "Thay đổi trọng yếu trong tình hình tài chính cần được công bố ngay khi có thể về mặt thực tế — đây là yêu cầu pháp lý trong hầu hết các thị trường.",
+          "answerChunks": ["Ngay", "khi", "có", "thể", "sau", "khi", "thay", "đổi", "xảy", "ra"],
+          "answerChunkDistractors": ["Cuối", "năm", "tài", "chính"]
+        },
+        {
+          "prompt": "When is the best time to conduct a post-project review?",
+          "options": ["Before the project formally closes.", "Immediately after project handover and before the team disperses.", "Six months after the project ends.", "During the project planning phase."],
+          "correct": 1,
+          "explanation": "Đánh giá sau dự án nên thực hiện ngay sau khi bàn giao, khi ký ức còn tươi và nhóm vẫn còn nguyên — trì hoãn làm mất đi những bài học quan trọng.",
+          "answerChunks": ["Ngay", "sau", "bàn", "giao", "trước", "khi", "nhóm", "giải", "tán"],
+          "answerChunkDistractors": ["Sáu", "tháng", "sau", "khi", "kết", "thúc"]
+        },
+        {
+          "prompt": "When should a manager communicate redundancy decisions to affected employees?",
+          "options": ["Only after all legal procedures have been completed.", "As early as legally and operationally possible.", "At the end of the financial quarter.", "During the employee's performance review."],
+          "correct": 1,
+          "explanation": "Quyết định sa thải cần được thông báo sớm nhất có thể về mặt pháp lý và vận hành — để nhân viên có thời gian chuẩn bị và công ty thực hiện đúng nghĩa vụ.",
+          "answerChunks": ["Sớm", "nhất", "có", "thể", "về", "mặt", "pháp", "lý"],
+          "answerChunkDistractors": ["Cuối", "quý", "tài", "chính"]
+        },
+        {
+          "prompt": "When is a non-compete agreement typically signed by a new employee?",
+          "options": ["After the probationary period ends.", "At the time of signing the employment contract.", "Only when the employee is promoted.", "Before the employee hands in their resignation."],
+          "correct": 1,
+          "explanation": "Thỏa thuận không cạnh tranh thường được ký cùng lúc với hợp đồng lao động — trước khi nhân viên tiếp cận thông tin mật của công ty.",
+          "answerChunks": ["Khi", "ký", "hợp", "đồng", "lao", "động"],
+          "answerChunkDistractors": ["Sau", "thời", "gian", "thử", "việc"]
+        },
+        {
+          "prompt": "When should a business review its data retention policy?",
+          "options": ["Only when a data breach occurs.", "Annually and whenever relevant legislation changes.", "Every five years as a standard cycle.", "Only when a new IT system is implemented."],
+          "correct": 1,
+          "explanation": "Chính sách lưu giữ dữ liệu cần được xem xét hàng năm và mỗi khi có thay đổi pháp lý liên quan — để đảm bảo tuân thủ liên tục.",
+          "answerChunks": ["Hàng", "năm", "và", "khi", "pháp", "lý", "thay", "đổi"],
+          "answerChunkDistractors": ["Chỉ", "khi", "vi", "phạm", "xảy", "ra"]
+        },
+        {
+          "prompt": "When is overtime pay typically calculated and added to an employee's salary?",
+          "options": ["At the end of each working day.", "At the end of the payroll period it was earned.", "Only when the employee specifically requests it.", "During the annual performance appraisal."],
+          "correct": 1,
+          "explanation": "Lương làm thêm giờ được tính và cộng vào lương vào cuối kỳ trả lương tương ứng — theo quy định trả lương tiêu chuẩn.",
+          "answerChunks": ["Cuối", "kỳ", "trả", "lương", "tương", "ứng"],
+          "answerChunkDistractors": ["Cuối", "mỗi", "ngày", "làm", "việc"]
+        },
+        {
+          "prompt": "When should a project scope change request be formally documented?",
+          "options": ["Only if the client specifically requests it in writing.", "As soon as the change is agreed upon by relevant stakeholders.", "After the change has already been implemented.", "During the final project wrap-up meeting."],
+          "correct": 1,
+          "explanation": "Yêu cầu thay đổi phạm vi cần được ghi lại chính thức ngay khi các bên liên quan đồng ý — trước khi triển khai để tránh tranh chấp sau này.",
+          "answerChunks": ["Ngay", "khi", "các", "bên", "đồng", "ý"],
+          "answerChunkDistractors": ["Sau", "khi", "đã", "triển", "khai"]
+        },
+        {
+          "prompt": "When is a company's strategic plan typically reviewed and updated?",
+          "options": ["Every ten years as a long-term cycle.", "Annually and when major market changes occur.", "Only when the leadership team changes.", "Whenever the board requests it without a set cycle."],
+          "correct": 1,
+          "explanation": "Kế hoạch chiến lược thường được xem xét hàng năm và bất cứ khi nào có thay đổi lớn trên thị trường — không phải theo chu kỳ 10 năm hay tùy hứng.",
+          "answerChunks": ["Hàng", "năm", "và", "khi", "thị", "trường", "thay", "đổi", "lớn"],
+          "answerChunkDistractors": ["Mỗi", "mười", "năm", "một", "lần"]
+        },
+        {
+          "prompt": "When should a client be informed that a project is at risk of missing its deadline?",
+          "options": ["Only on the original deadline date.", "As soon as the risk is identified, with a mitigation plan.", "After the delay has already occurred.", "During the next scheduled status meeting."],
+          "correct": 1,
+          "explanation": "Khách hàng cần được thông báo ngay khi rủi ro trễ hạn được phát hiện, kèm kế hoạch giảm thiểu — không chờ đến ngày deadline hay sau khi đã trễ.",
+          "answerChunks": ["Ngay", "khi", "phát", "hiện", "rủi", "ro", "kèm", "kế", "hoạch"],
+          "answerChunkDistractors": ["Sau", "khi", "trễ", "đã", "xảy", "ra"]
+        },
+        {
+          "prompt": "When are employee contracts typically renewed in fixed-term employment arrangements?",
+          "options": ["Automatically without any notification.", "Before the contract expiry date, following a formal review.", "Only if the employee requests renewal.", "After a three-month cooling-off period."],
+          "correct": 1,
+          "explanation": "Hợp đồng có thời hạn cố định cần được gia hạn trước ngày hết hạn sau khi xem xét chính thức — không tự động và không cần nhân viên yêu cầu.",
+          "answerChunks": ["Trước", "ngày", "hết", "hạn", "sau", "đánh", "giá", "chính", "thức"],
+          "answerChunkDistractors": ["Tự", "động", "không", "cần", "thông", "báo"]
+        },
+        {
+          "prompt": "When is the most appropriate time to introduce new workplace safety protocols?",
+          "options": ["Only after an accident has occurred.", "During onboarding and whenever updates are made.", "At the start of each calendar year only.", "When insurance premiums are being reviewed."],
+          "correct": 1,
+          "explanation": "Quy trình an toàn lao động mới cần được giới thiệu khi nhân viên mới bắt đầu (onboarding) và mỗi khi có cập nhật — không đợi tai nạn xảy ra.",
+          "answerChunks": ["Khi", "onboarding", "và", "mỗi", "khi", "có", "cập", "nhật"],
+          "answerChunkDistractors": ["Chỉ", "khi", "tai", "nạn", "xảy", "ra"]
+        },
+        {
+          "prompt": "When should a company begin succession planning for key leadership positions?",
+          "options": ["Only when a senior leader announces their retirement.", "Proactively, well before any vacancies arise.", "After all other talent management priorities are addressed.", "When the board requests a leadership audit."],
+          "correct": 1,
+          "explanation": "Kế hoạch kế nhiệm cần được xây dựng chủ động, từ trước khi vị trí nào trống — để đảm bảo liên tục lãnh đạo và không bị động trước sự ra đi bất ngờ.",
+          "answerChunks": ["Chủ", "động,", "từ", "trước", "khi", "vị", "trí", "trống"],
+          "answerChunkDistractors": ["Chỉ", "khi", "lãnh", "đạo", "thông", "báo", "nghỉ"]
+        }
+      ]
+    }
+  ]
+}

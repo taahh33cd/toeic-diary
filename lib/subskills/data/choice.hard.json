@@ -1,0 +1,211 @@
+{
+  "part": "part2-hard",
+  "questionWord": "choice",
+  "difficulty": "hard",
+  "label": "CHOICE",
+  "labelVi": "Câu hỏi CHOICE (OR) — Hard",
+  "passThreshold": 80,
+  "intro": "Hard: Viết câu hỏi lựa chọn (OR) tự do, điền từ không có hỗ trợ, và chọn đáp án phù hợp nhất trong các tình huống doanh nghiệp chuyên sâu.",
+  "exercises": [
+    {
+      "kind": "freewrite",
+      "title": "Bài 1 — Viết câu hỏi CHOICE hoàn chỉnh",
+      "instruction": "Dựa vào gợi ý tiếng Việt, viết câu hỏi CHOICE (có 'or') hoàn chỉnh bằng tiếng Anh.",
+      "items": [
+        { "prompt": "Cuộc họp khách hàng sẽ được tổ chức trực tiếp hay trực tuyến?", "answer": "Will the client meeting be held in person or online?", "acceptedAnswers": ["Is the client meeting going to be face-to-face or virtual?"] },
+        { "prompt": "Bạn muốn nhận phản hồi hiệu suất hàng tháng hay hàng quý?", "answer": "Would you prefer to receive performance feedback monthly or quarterly?", "acceptedAnswers": ["Do you want to receive your performance feedback monthly or every quarter?"] },
+        { "prompt": "Hợp đồng này theo hình thức hợp đồng cố định hay hợp đồng có thể gia hạn?", "answer": "Is this a fixed-term contract or a renewable one?", "acceptedAnswers": ["Is the contract fixed term or renewable?"] },
+        { "prompt": "Bộ phận tài chính hay bộ phận pháp lý chịu trách nhiệm xem xét điều khoản hợp đồng?", "answer": "Is the finance department or the legal department responsible for reviewing contract terms?", "acceptedAnswers": ["Does finance or legal handle contract term reviews?"] },
+        { "prompt": "Sản phẩm mới sẽ được ra mắt trong quý một hay quý hai của năm tài chính?", "answer": "Will the new product be launched in the first or the second quarter of the financial year?", "acceptedAnswers": ["Is the product launch planned for Q1 or Q2 of the fiscal year?"] },
+        { "prompt": "Nhân viên tạm thời có được hưởng phúc lợi như nhân viên chính thức không hay có sự khác biệt?", "answer": "Do temporary employees receive the same benefits as permanent staff or are there differences?", "acceptedAnswers": ["Are temporary staff entitled to the same benefits as full-time employees or is there a difference?"] },
+        { "prompt": "Báo cáo này cần được gửi lên ban lãnh đạo hay gửi trực tiếp cho khách hàng?", "answer": "Does this report need to be sent to senior management or directly to the client?", "acceptedAnswers": ["Should this report go to senior management or straight to the client?"] },
+        { "prompt": "Anh ấy đang làm việc tại trụ sở chính hay tại chi nhánh khu vực?", "answer": "Is he working at the head office or at the regional branch?", "acceptedAnswers": ["Does he work at headquarters or the regional office?"] },
+        { "prompt": "Chương trình đào tạo này bắt buộc hay tự nguyện đối với tất cả nhân viên?", "answer": "Is this training programme mandatory or voluntary for all employees?", "acceptedAnswers": ["Is attendance at this training compulsory or optional for staff?"] },
+        { "prompt": "Dự án mới sẽ được quản lý nội bộ hay thuê ngoài cho một đơn vị tư vấn?", "answer": "Will the new project be managed in-house or outsourced to a consultancy?", "acceptedAnswers": ["Is the new project going to be handled internally or by an external consultant?"] },
+        { "prompt": "Phiên họp chiều nay sẽ được ghi âm để lưu hồ sơ hay không?", "answer": "Will this afternoon's session be recorded for the record or not?", "acceptedAnswers": ["Is today's afternoon meeting going to be recorded or not?"] },
+        { "prompt": "Giám đốc bộ phận hay phòng nhân sự phụ trách phê duyệt đơn xin nghỉ phép?", "answer": "Does the department head or the HR team handle the approval of leave requests?", "acceptedAnswers": ["Who approves leave requests — the line manager or HR?"] },
+        { "prompt": "Ngân sách dự án sẽ được phân bổ từ quỹ dự phòng hay từ ngân sách vận hành hàng năm?", "answer": "Will the project budget be allocated from the contingency fund or the annual operating budget?", "acceptedAnswers": ["Is the project funded from the contingency reserve or the regular annual budget?"] },
+        { "prompt": "Vị trí trống này sẽ được lấp bằng cách thăng chức nội bộ hay tuyển dụng bên ngoài?", "answer": "Will the vacant position be filled through internal promotion or external recruitment?", "acceptedAnswers": ["Is the open role going to be filled internally or through external hiring?"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ hoàn toàn tự do",
+      "instruction": "Điền từ còn thiếu để hoàn thành câu hỏi lựa chọn. Không có gợi ý, không có word bank.",
+      "items": [
+        { "template": "Is the {0} review conducted {1} or {2}?", "hint": null, "blanks": [["performance", "annual", "quarterly"], ["annually", "yearly", "once a year"], ["biannually", "twice a year", "semi-annually"]] },
+        { "template": "{0} the new policy apply to {1} staff or {2} to permanent employees?", "hint": null, "blanks": [["does", "will"], ["all", "both"], ["only", "exclusively", "solely"]] },
+        { "template": "Should the budget shortfall be addressed through {0} cuts or by {1} additional {2}?", "hint": null, "blanks": [["cost", "spending", "operational"], ["securing", "requesting", "seeking"], ["funding", "investment", "capital"]] },
+        { "template": "Are the {0} expenses reimbursed {1} or {2} against receipts?", "hint": null, "blanks": [["travel", "business", "client"], ["automatically", "instantly"], ["manually", "individually"]] },
+        { "template": "Will the {0} briefing be given by the {1} or by the {2} department?", "hint": null, "blanks": [["project", "client", "stakeholder"], ["strategy", "planning", "operations"], ["communications", "marketing", "PR"]] },
+        { "template": "Is the {0} position {1} full-time or is there a {2} option available?", "hint": null, "blanks": [["advertised", "open", "vacant"], ["strictly", "only", "exclusively"], ["part-time", "flexible", "hybrid"]] },
+        { "template": "Does the {0} require {1} approval from the {2} or just from the line manager?", "hint": null, "blanks": [["request", "purchase", "contract"], ["board", "senior", "executive"], ["CEO", "CFO", "director"]] },
+        { "template": "Will the {0} be {1} internally or {2} to a third-party provider?", "hint": null, "blanks": [["function", "service", "task"], ["handled", "managed", "processed"], ["outsourced", "delegated", "transferred"]] },
+        { "template": "Is the {0} deadline {1} negotiable or {2} in the original agreement?", "hint": null, "blanks": [["submission", "project", "contract"], ["still", "potentially"], ["fixed", "locked", "set"]] },
+        { "template": "Will the {0} session be held {1} or {2}?", "hint": null, "blanks": [["training", "onboarding", "orientation"], ["on-site", "in person", "face-to-face"], ["remotely", "online", "virtually"]] },
+        { "template": "Are {0} to be {1} before or {2} the proposal is submitted to the client?", "hint": null, "blanks": [["revisions", "changes", "amendments"], ["made", "completed", "finalised"], ["after"]] },
+        { "template": "Does the {0} report go to the {1} team or directly to the {2} committee?", "hint": null, "blanks": [["audit", "compliance", "risk"], ["internal", "finance"], ["executive", "audit", "board"]] },
+        { "template": "Is the {0} paid as a {1} lump sum or in {2} instalments?", "hint": null, "blanks": [["bonus", "settlement", "grant"], ["single", "one-time"], ["monthly", "quarterly", "equal"]] },
+        { "template": "Will {0} be {1} from the {2} or from the existing team budget?", "hint": null, "blanks": [["headcount", "resources", "staffing"], ["funded", "sourced", "drawn"], ["new", "central", "corporate"]] }
+      ]
+    },
+    {
+      "kind": "match",
+      "title": "Bài 3 — Ghép câu hỏi & đáp án",
+      "instruction": "Chọn đáp án phù hợp nhất với từng câu hỏi lựa chọn. Tất cả đáp án đều đưa ra sự lựa chọn cụ thể — đọc kỹ nội dung.",
+      "items": [
+        {
+          "question": "Is the end-of-year bonus distributed in December or in January with the first payroll?",
+          "options": ["It's paid in December, before the holiday break.", "Both options are acceptable under the current policy.", "The deadline is the last Friday of each month.", "The manager decides on a case-by-case basis.", "Only employees on grade eight or above receive it in December."],
+          "correct": 0,
+          "explanation": "Câu hỏi lựa chọn về thời điểm trả thưởng — đáp án chọn rõ ràng 'Tháng 12, trước kỳ nghỉ lễ.' Trả lời trực tiếp câu hỏi OR."
+        },
+        {
+          "question": "Should the project risk register be updated weekly or only at major milestone reviews?",
+          "options": ["It's paid in December, before the holiday break.", "Both options are acceptable under the current policy.", "The deadline is the last Friday of each month.", "The manager decides on a case-by-case basis.", "Only employees on grade eight or above receive it in December."],
+          "correct": 1,
+          "explanation": "Câu hỏi về tần suất cập nhật risk register — 'Cả hai tùy chọn đều được chấp nhận theo chính sách hiện tại.' Câu trả lời thực tế nhất khi không có quy định bắt buộc cụ thể."
+        },
+        {
+          "question": "Is the submission deadline for project proposals the last Friday of the month or the first Monday?",
+          "options": ["It's paid in December, before the holiday break.", "Both options are acceptable under the current policy.", "The deadline is the last Friday of each month.", "The manager decides on a case-by-case basis.", "Only employees on grade eight or above receive it in December."],
+          "correct": 2,
+          "explanation": "Câu hỏi về ngày deadline — 'Thời hạn là thứ Sáu cuối cùng mỗi tháng.' Chọn rõ ràng một trong hai lựa chọn được đưa ra."
+        },
+        {
+          "question": "Does the team leader or the department head approve overtime requests?",
+          "options": ["It's paid in December, before the holiday break.", "Both options are acceptable under the current policy.", "The deadline is the last Friday of each month.", "The manager decides on a case-by-case basis.", "Only employees on grade eight or above receive it in December."],
+          "correct": 3,
+          "explanation": "Câu hỏi về ai phê duyệt làm thêm giờ — 'Quản lý quyết định theo từng trường hợp.' Đây là câu trả lời linh hoạt phổ biến nhất trong môi trường doanh nghiệp."
+        },
+        {
+          "question": "Is the annual discretionary bonus available to all staff grades or only to senior-level employees?",
+          "options": ["It's paid in December, before the holiday break.", "Both options are acceptable under the current policy.", "The deadline is the last Friday of each month.", "The manager decides on a case-by-case basis.", "Only employees on grade eight or above receive it in December."],
+          "correct": 4,
+          "explanation": "Câu hỏi về đối tượng nhận thưởng — 'Chỉ nhân viên từ cấp tám trở lên mới nhận vào tháng 12.' Trả lời cụ thể về điều kiện."
+        }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn đáp án & dịch sang tiếng Việt",
+      "instruction": "Chọn đáp án phù hợp nhất cho từng câu hỏi lựa chọn trong môi trường doanh nghiệp.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        {
+          "prompt": "Should the project scope be reduced or the deadline extended to address the resource shortfall?",
+          "options": ["Neither — the team should simply work longer hours.", "The deadline should be extended, as reducing scope could affect the deliverable quality.", "The scope should be reduced to maintain the original timeline.", "Both options should be rejected and additional funding sought immediately."],
+          "correct": 1,
+          "explanation": "Gia hạn thời hạn bảo toàn chất lượng sản phẩm — trong quản lý dự án, khi thiếu nguồn lực, gia hạn thường ưu tiên hơn cắt giảm phạm vi để đảm bảo chất lượng.",
+          "answerChunks": ["Gia", "hạn", "thời", "hạn,", "vì", "giảm", "phạm", "vi", "có", "thể", "ảnh", "hưởng", "chất", "lượng"],
+          "answerChunkDistractors": ["Giảm", "phạm", "vi", "để", "giữ", "nguyên", "lịch", "trình"]
+        },
+        {
+          "prompt": "Is the new CRM system being piloted in one region or rolled out company-wide from day one?",
+          "options": ["It's being piloted in the Southeast Asia region first before a wider rollout.", "It will launch company-wide on the first day of the new fiscal year.", "The system has been available globally for over a year already.", "A decision on the rollout strategy hasn't been finalised yet."],
+          "correct": 0,
+          "explanation": "Triển khai thí điểm tại một khu vực trước — đây là chiến lược phổ biến và thực tế nhất khi ra mắt hệ thống CRM mới, giúp kiểm soát rủi ro.",
+          "answerChunks": ["Thí", "điểm", "tại", "khu", "vực", "Đông", "Nam", "Á", "trước", "khi", "mở", "rộng"],
+          "answerChunkDistractors": ["Ra", "mắt", "toàn", "công", "ty", "ngay", "ngày", "đầu", "năm", "tài", "chính"]
+        },
+        {
+          "prompt": "Should the quarterly business review be an in-person event or can it be conducted remotely?",
+          "options": ["It must always be held in person for governance reasons.", "It's being conducted remotely this quarter due to travel restrictions.", "The format is decided by the regional director each quarter.", "All quarterly reviews were cancelled last year and haven't resumed."],
+          "correct": 1,
+          "explanation": "Thực hiện từ xa quý này do hạn chế đi lại — câu trả lời trực tiếp chọn một trong hai lựa chọn và cung cấp lý do thực tế cụ thể.",
+          "answerChunks": ["Được", "thực", "hiện", "từ", "xa", "quý", "này", "do", "hạn", "chế", "đi", "lại"],
+          "answerChunkDistractors": ["Phải", "luôn", "họp", "trực", "tiếp", "vì", "lý", "do", "quản", "trị"]
+        },
+        {
+          "prompt": "Is the new employee wellness programme funded by the company or co-funded with employees?",
+          "options": ["Employees contribute fifty percent, with the company matching the rest.", "The company fully funds the programme as part of its benefits package.", "Funding decisions are made on an annual basis by the board.", "Employees choose their own wellness provider independently."],
+          "correct": 1,
+          "explanation": "Công ty tài trợ toàn bộ như một phần của gói phúc lợi — câu trả lời rõ ràng nhất chọn một trong hai lựa chọn với bối cảnh cụ thể.",
+          "answerChunks": ["Công", "ty", "tài", "trợ", "toàn", "bộ", "như", "một", "phần", "của", "gói", "phúc", "lợi"],
+          "answerChunkDistractors": ["Nhân", "viên", "đóng", "góp", "50%,", "công", "ty", "đóng", "phần", "còn", "lại"]
+        },
+        {
+          "prompt": "Does the chief operating officer or the chief financial officer have final sign-off authority on capital expenditure?",
+          "options": ["The COO approves operational capex, while the CFO signs off on strategic investments.", "The CEO has sole authority for all capital expenditure decisions.", "All capex above a set threshold requires board approval.", "Both the COO and CFO must co-sign any capital expenditure request."],
+          "correct": 0,
+          "explanation": "COO phê duyệt capex vận hành, CFO phê duyệt đầu tư chiến lược — phân biệt rõ ràng phạm vi trách nhiệm của hai vai trò trong cấu trúc doanh nghiệp phổ biến.",
+          "answerChunks": ["COO", "phê", "duyệt", "capex", "vận", "hành;", "CFO", "phê", "duyệt", "đầu", "tư", "chiến", "lược"],
+          "answerChunkDistractors": ["CEO", "có", "toàn", "quyền", "với", "mọi", "quyết", "định", "capex"]
+        },
+        {
+          "prompt": "Should the redundancy announcement be made in a group briefing or communicated individually?",
+          "options": ["Individual one-to-one conversations are strongly recommended by HR best practice.", "A group briefing is more efficient and ensures everyone receives the same message.", "The choice is left entirely to the department head.", "Redundancy notices should always be sent by email to avoid confrontation."],
+          "correct": 0,
+          "explanation": "Thông báo dư thừa nên được truyền đạt riêng lẻ — thực hành tốt nhất của HR nhấn mạnh phẩm giá và sự riêng tư của từng cá nhân.",
+          "answerChunks": ["Trò", "chuyện", "riêng", "lẻ", "được", "khuyến", "khích", "mạnh", "mẽ", "theo", "thực", "hành", "HR"],
+          "answerChunkDistractors": ["Họp", "nhóm", "hiệu", "quả", "hơn", "và", "đảm", "bảo", "thông", "điệp", "thống", "nhất"]
+        },
+        {
+          "prompt": "Will the merger announcement be made at the start of the financial year or after regulatory approval?",
+          "options": ["It will be made at the start of the year to align with investor expectations.", "It has to wait until formal regulatory approval is received.", "The announcement date is set for the middle of the second quarter.", "Both the board and shareholders must vote before any announcement."],
+          "correct": 1,
+          "explanation": "Thông báo sáp nhập phải chờ phê duyệt pháp lý chính thức — đây là yêu cầu pháp lý tiêu chuẩn, không thể thông báo trước khi được cơ quan quản lý chấp thuận.",
+          "answerChunks": ["Phải", "chờ", "đến", "khi", "nhận", "được", "phê", "duyệt", "pháp", "lý", "chính", "thức"],
+          "answerChunkDistractors": ["Sẽ", "được", "thực", "hiện", "vào", "đầu", "năm", "để", "phù", "hợp", "kỳ", "vọng"]
+        },
+        {
+          "prompt": "Is the new office dress code business formal or business casual from next month?",
+          "options": ["Business formal will still be required for client-facing days only.", "The new policy adopts business casual as the standard from next month.", "Employees may choose their own dress standard based on their role.", "A final decision on the dress code hasn't been communicated yet."],
+          "correct": 1,
+          "explanation": "Business casual sẽ là tiêu chuẩn từ tháng tới — chọn rõ ràng một trong hai lựa chọn với thông tin thời gian cụ thể.",
+          "answerChunks": ["Chính", "sách", "mới", "áp", "dụng", "business", "casual", "làm", "tiêu", "chuẩn", "từ", "tháng", "tới"],
+          "answerChunkDistractors": ["Business", "formal", "vẫn", "bắt", "buộc", "vào", "ngày", "gặp", "khách", "hàng"]
+        },
+        {
+          "prompt": "Should client entertainment expenses be approved in advance or can they be submitted retrospectively?",
+          "options": ["Pre-approval is mandatory for all entertainment costs above fifty pounds.", "Retrospective claims are accepted within thirty days of the event.", "Either approach is acceptable depending on the urgency of the situation.", "Client entertainment is no longer reimbursed under the revised policy."],
+          "correct": 0,
+          "explanation": "Phê duyệt trước là bắt buộc cho chi phí tiếp khách trên 50 bảng — câu trả lời rõ ràng chọn phương án 'in advance' với ngưỡng cụ thể.",
+          "answerChunks": ["Phê", "duyệt", "trước", "là", "bắt", "buộc", "cho", "chi", "phí", "tiếp", "khách", "trên", "50", "bảng"],
+          "answerChunkDistractors": ["Yêu", "cầu", "hoàn", "tiền", "hồi", "tố", "được", "chấp", "nhận", "trong", "30", "ngày"]
+        },
+        {
+          "prompt": "Are the new regional directors being promoted internally or recruited from outside the organisation?",
+          "options": ["All three positions have been filled through internal promotion.", "Two are internal promotions and one is an external hire.", "The selection process is still ongoing.", "External candidates are preferred for senior leadership roles."],
+          "correct": 1,
+          "explanation": "Hai thăng chức nội bộ và một tuyển ngoài — câu trả lời thực tế nhất phản ánh cách tiếp cận kết hợp phổ biến trong các tổ chức lớn.",
+          "answerChunks": ["Hai", "là", "thăng", "chức", "nội", "bộ", "và", "một", "là", "tuyển", "từ", "bên", "ngoài"],
+          "answerChunkDistractors": ["Tất", "cả", "ba", "vị", "trí", "được", "lấp", "bằng", "thăng", "chức", "nội", "bộ"]
+        },
+        {
+          "prompt": "Will the office refurbishment take place over the summer or be spread across the entire financial year?",
+          "options": ["It's scheduled to take place in phases during July and August.", "The works will be spread evenly across all twelve months.", "A final decision on the refurbishment timeline hasn't been made yet.", "The refurbishment plan has been indefinitely postponed due to budget constraints."],
+          "correct": 0,
+          "explanation": "Thi công theo giai đoạn trong tháng 7 và tháng 8 — chọn rõ ràng phương án 'over the summer' với thông tin chi tiết về lịch trình.",
+          "answerChunks": ["Dự", "kiến", "thực", "hiện", "theo", "giai", "đoạn", "trong", "tháng", "Bảy", "và", "tháng", "Tám"],
+          "answerChunkDistractors": ["Công", "việc", "sẽ", "được", "trải", "đều", "trong", "cả", "12", "tháng"]
+        },
+        {
+          "prompt": "Is the new maternity policy optional or does it apply to all employees regardless of contract type?",
+          "options": ["It applies to all employees, including part-time and fixed-term contract staff.", "It only applies to permanent full-time employees at this stage.", "The policy is optional — employees may opt in or out.", "Contract type determines the level of entitlement on a sliding scale."],
+          "correct": 0,
+          "explanation": "Chính sách áp dụng cho tất cả nhân viên, bao gồm bán thời gian và hợp đồng có thời hạn — câu trả lời rõ ràng nhất về phạm vi áp dụng.",
+          "answerChunks": ["Áp", "dụng", "cho", "tất", "cả", "nhân", "viên,", "kể", "cả", "bán", "thời", "gian", "và", "hợp", "đồng", "có", "thời", "hạn"],
+          "answerChunkDistractors": ["Chỉ", "áp", "dụng", "cho", "nhân", "viên", "toàn", "thời", "gian", "chính", "thức"]
+        },
+        {
+          "prompt": "Should the risk assessment be carried out by the project team or by an independent reviewer?",
+          "options": ["It should be done by the project team as they have the most context.", "An independent reviewer is required to ensure objectivity and compliance.", "Either approach is valid — it depends on the risk category.", "Risk assessments are only needed for projects above a certain value threshold."],
+          "correct": 1,
+          "explanation": "Người đánh giá độc lập được yêu cầu để đảm bảo tính khách quan và tuân thủ — nguyên tắc quản trị rủi ro tốt yêu cầu sự độc lập khỏi nhóm thực hiện dự án.",
+          "answerChunks": ["Người", "đánh", "giá", "độc", "lập", "được", "yêu", "cầu", "để", "đảm", "bảo", "tính", "khách", "quan"],
+          "answerChunkDistractors": ["Nhóm", "dự", "án", "tự", "thực", "hiện", "vì", "họ", "có", "nhiều", "bối", "cảnh", "nhất"]
+        },
+        {
+          "prompt": "Will the product recall be handled by the quality team or escalated directly to the executive committee?",
+          "options": ["Minor defects are handled by quality; major safety issues go directly to the executive committee.", "All product recalls must be escalated to the executive committee immediately.", "The quality team handles all recalls from start to finish.", "The recall process is outsourced to a specialist crisis management agency."],
+          "correct": 0,
+          "explanation": "Lỗi nhỏ do nhóm chất lượng xử lý; vấn đề an toàn nghiêm trọng leo thang lên ủy ban điều hành — phân biệt rõ ràng phạm vi trách nhiệm theo mức độ nghiêm trọng.",
+          "answerChunks": ["Lỗi", "nhỏ", "do", "nhóm", "chất", "lượng;", "vấn", "đề", "an", "toàn", "lớn", "leo", "thang", "lên", "ủy", "ban", "điều", "hành"],
+          "answerChunkDistractors": ["Tất", "cả", "thu", "hồi", "phải", "leo", "thang", "ngay", "lên", "ủy", "ban", "điều", "hành"]
+        }
+      ]
+    }
+  ]
+}

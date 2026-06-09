@@ -1,0 +1,211 @@
+{
+  "part": "part2-hard",
+  "questionWord": "why",
+  "difficulty": "hard",
+  "label": "WHY",
+  "labelVi": "Câu hỏi WHY — Hard",
+  "passThreshold": 80,
+  "intro": "Hard: Viết câu hỏi WHY tự do, điền từ không có hỗ trợ, và phân biệt lý do chính xác trong các tình huống doanh nghiệp phức tạp.",
+  "exercises": [
+    {
+      "kind": "freewrite",
+      "title": "Bài 1 — Viết câu hỏi WHY hoàn chỉnh",
+      "instruction": "Dựa vào gợi ý tiếng Việt, viết câu hỏi WHY hoàn chỉnh bằng tiếng Anh.",
+      "items": [
+        { "prompt": "Tại sao đề xuất ngân sách bị từ chối trong cuộc họp?", "answer": "Why was the budget proposal rejected at the meeting?", "acceptedAnswers": ["Why did the meeting reject the budget proposal?"] },
+        { "prompt": "Tại sao hợp đồng với nhà cung cấp cũ không được gia hạn?", "answer": "Why was the contract with the previous supplier not renewed?", "acceptedAnswers": ["Why wasn't the old supplier's contract renewed?"] },
+        { "prompt": "Tại sao thời hạn bàn giao dự án bị dời lại?", "answer": "Why was the project delivery deadline postponed?", "acceptedAnswers": ["Why has the project handover date been delayed?"] },
+        { "prompt": "Tại sao nhân viên nên đọc chính sách sử dụng thiết bị trước khi ký?", "answer": "Why should employees read the device usage policy before signing?", "acceptedAnswers": ["Why is it important to read the equipment policy prior to signing?"] },
+        { "prompt": "Tại sao bộ phận tiếp thị yêu cầu thêm ngân sách cho quý tới?", "answer": "Why is the marketing department requesting additional budget for next quarter?", "acceptedAnswers": ["Why does the marketing team need more budget next quarter?"] },
+        { "prompt": "Tại sao cuộc kiểm toán bên ngoài được tiến hành sớm hơn dự kiến?", "answer": "Why is the external audit being conducted earlier than expected?", "acceptedAnswers": ["Why has the external audit been brought forward?"] },
+        { "prompt": "Tại sao việc tuân thủ GDPR lại quan trọng đối với doanh nghiệp chúng ta?", "answer": "Why is GDPR compliance important for our business?", "acceptedAnswers": ["Why does GDPR compliance matter for our company?"] },
+        { "prompt": "Tại sao đơn xin việc của ứng viên đó không được xét duyệt?", "answer": "Why was that candidate's application not considered?", "acceptedAnswers": ["Why wasn't the candidate's application reviewed?"] },
+        { "prompt": "Tại sao việc cập nhật sổ tay nhân viên là bắt buộc mỗi năm?", "answer": "Why is updating the employee handbook mandatory every year?", "acceptedAnswers": ["Why must the staff handbook be updated annually?"] },
+        { "prompt": "Tại sao hệ thống xử lý đơn hàng bị tạm ngưng vào tuần trước?", "answer": "Why was the order processing system suspended last week?", "acceptedAnswers": ["Why did the order management system go down last week?"] },
+        { "prompt": "Tại sao ủy ban rủi ro đề nghị đình chỉ kế hoạch mở rộng?", "answer": "Why did the risk committee recommend suspending the expansion plan?", "acceptedAnswers": ["Why has the risk committee suggested pausing the expansion?"] },
+        { "prompt": "Tại sao mức lương khởi điểm cho vị trí mới thấp hơn dự kiến?", "answer": "Why is the starting salary for the new position lower than expected?", "acceptedAnswers": ["Why does the new role have a lower-than-expected starting salary?"] },
+        { "prompt": "Tại sao nhà thầu đó bị loại khỏi danh sách nhà cung cấp được duyệt?", "answer": "Why was that contractor removed from the approved supplier list?", "acceptedAnswers": ["Why has the contractor been taken off the approved vendor list?"] },
+        { "prompt": "Tại sao cuộc họp toàn thể nhân viên bị hủy vào phút cuối?", "answer": "Why was the all-staff meeting cancelled at the last minute?", "acceptedAnswers": ["Why did the all-hands meeting get cancelled at short notice?"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ hoàn toàn tự do",
+      "instruction": "Điền từ còn thiếu để hoàn thành câu hỏi. Không có gợi ý, không có word bank.",
+      "items": [
+        { "template": "{0} {1} the {2} team not informed about the system outage in advance?", "hint": null, "blanks": [["why"], ["was", "were"], ["IT", "operations", "support"]] },
+        { "template": "{0} has the {1} for the {2} been extended by three weeks?", "hint": null, "blanks": [["why"], ["timeline", "deadline", "schedule"], ["project", "submission", "handover"]] },
+        { "template": "{0} {1} clients required to complete a {2} verification process?", "hint": null, "blanks": [["why"], ["are"], ["full", "KYC", "identity"]] },
+        { "template": "{0} did the {1} not {2} the standard procurement procedures?", "hint": null, "blanks": [["why"], ["team", "department", "manager"], ["follow", "adhere to", "comply with"]] },
+        { "template": "{0} is it {1} to document all {2} communications with clients?", "hint": null, "blanks": [["why"], ["important", "necessary", "critical"], ["formal", "external", "contractual"]] },
+        { "template": "{0} was the {1} proposal {2} without a formal review process?", "hint": null, "blanks": [["why"], ["vendor", "budget", "project"], ["approved", "accepted", "passed"]] },
+        { "template": "{0} {1} the company {2} in implementing the new data protection measures?", "hint": null, "blanks": [["why"], ["did", "has"], ["delay", "struggle", "fail"]] },
+        { "template": "{0} are employees {1} to {2} non-disclosure agreements during onboarding?", "hint": null, "blanks": [["why"], ["required", "asked", "expected"], ["sign", "complete", "review"]] },
+        { "template": "{0} was the {1} report {2} from the board's agenda at the last meeting?", "hint": null, "blanks": [["why"], ["financial", "risk", "audit"], ["removed", "excluded", "omitted"]] },
+        { "template": "{0} {1} the company {2} to switch to a new accounting software platform?", "hint": null, "blanks": [["why"], ["did", "has"], ["decide", "choose", "opt"]] },
+        { "template": "{0} should {1} be {2} in the early stages of a restructuring process?", "hint": null, "blanks": [["why"], ["HR", "legal counsel", "employees"], ["involved", "consulted", "notified"]] },
+        { "template": "{0} did the {1} team {2} the product recall instead of issuing a patch?", "hint": null, "blanks": [["why"], ["quality", "technical", "product"], ["recommend", "request", "initiate"]] },
+        { "template": "{0} {1} some expense claims {2} without supporting documentation?", "hint": null, "blanks": [["why"], ["were", "are"], ["submitted", "processed", "approved"]] },
+        { "template": "{0} is the {1} of a {2} mentor important for new senior managers?", "hint": null, "blanks": [["why"], ["role", "guidance", "support"], ["senior", "executive", "designated"]] }
+      ]
+    },
+    {
+      "kind": "match",
+      "title": "Bài 3 — Ghép câu hỏi & đáp án",
+      "instruction": "Chọn lý do phù hợp nhất cho từng câu hỏi. Các đáp án đều là lý do hợp lệ nhưng chỉ một khớp đúng ngữ cảnh.",
+      "items": [
+        {
+          "question": "Why must all project stakeholders sign the project charter before work begins?",
+          "options": ["To confirm that roles, scope, and accountability are formally agreed.", "To ensure the budget is allocated correctly from the start.", "To prevent scope creep from affecting the timeline.", "To satisfy the requirements of external auditors.", "To give the project sponsor full control over decisions."],
+          "correct": 0,
+          "explanation": "Ký project charter xác nhận vai trò, phạm vi và trách nhiệm được đồng thuận chính thức — đây là lý do cốt lõi, không phải kiểm soát ngân sách hay kiểm toán."
+        },
+        {
+          "question": "Why is it important to maintain a separate contingency fund in a project budget?",
+          "options": ["To confirm that roles, scope, and accountability are formally agreed.", "To ensure the budget is allocated correctly from the start.", "To prevent scope creep from affecting the timeline.", "To satisfy the requirements of external auditors.", "To give the project sponsor full control over decisions."],
+          "correct": 1,
+          "explanation": "Quỹ dự phòng đảm bảo ngân sách được phân bổ đúng ngay từ đầu và có nguồn xử lý rủi ro tài chính bất ngờ — mục đích chính là kiểm soát tài chính."
+        },
+        {
+          "question": "Why are change control processes essential in complex projects?",
+          "options": ["To confirm that roles, scope, and accountability are formally agreed.", "To ensure the budget is allocated correctly from the start.", "To prevent scope creep from affecting the timeline.", "To satisfy the requirements of external auditors.", "To give the project sponsor full control over decisions."],
+          "correct": 2,
+          "explanation": "Quy trình kiểm soát thay đổi ngăn chặn scope creep — sự mở rộng phạm vi không kiểm soát làm chậm tiến độ và vượt ngân sách."
+        },
+        {
+          "question": "Why are project management records typically kept for several years after completion?",
+          "options": ["To confirm that roles, scope, and accountability are formally agreed.", "To ensure the budget is allocated correctly from the start.", "To prevent scope creep from affecting the timeline.", "To satisfy the requirements of external auditors.", "To give the project sponsor full control over decisions."],
+          "correct": 3,
+          "explanation": "Hồ sơ quản lý dự án được lưu giữ nhiều năm để đáp ứng yêu cầu của kiểm toán viên bên ngoài và các cơ quan quản lý."
+        },
+        {
+          "question": "Why is the project sponsor typically the final decision-maker on major changes?",
+          "options": ["To confirm that roles, scope, and accountability are formally agreed.", "To ensure the budget is allocated correctly from the start.", "To prevent scope creep from affecting the timeline.", "To satisfy the requirements of external auditors.", "To give the project sponsor full control over decisions."],
+          "correct": 4,
+          "explanation": "Project sponsor là người chịu trách nhiệm và có toàn quyền quyết định về các thay đổi lớn — đây là vai trò được thiết kế để đảm bảo quyền kiểm soát chiến lược."
+        }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn đáp án & dịch sang tiếng Việt",
+      "instruction": "Chọn lý do phù hợp nhất trong từng tình huống kinh doanh.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        {
+          "prompt": "Why is it important to have a clear escalation path in customer service operations?",
+          "options": ["To increase the number of customer complaints handled.", "To ensure complex issues reach the right level of authority promptly.", "To reduce the need for frontline staff training.", "To lower the cost of service delivery."],
+          "correct": 1,
+          "explanation": "Lộ trình leo thang rõ ràng đảm bảo các vấn đề phức tạp đến đúng cấp có thẩm quyền giải quyết nhanh chóng — không phải để tăng số khiếu nại hay giảm đào tạo.",
+          "answerChunks": ["Vấn", "đề", "phức", "tạp", "đến", "đúng", "cấp", "kịp", "thời"],
+          "answerChunkDistractors": ["Giảm", "chi", "phí", "dịch", "vụ"]
+        },
+        {
+          "prompt": "Why should financial forecasts include multiple scenarios?",
+          "options": ["To comply with accounting standards.", "To prepare the business for a range of possible outcomes.", "To justify requesting a higher budget from the board.", "To simplify the annual reporting process."],
+          "correct": 1,
+          "explanation": "Dự báo tài chính đa kịch bản giúp doanh nghiệp chuẩn bị cho nhiều tình huống có thể xảy ra — đây là lý do thực tiễn chính, không phải tuân thủ hay xin ngân sách.",
+          "answerChunks": ["Chuẩn", "bị", "cho", "nhiều", "tình", "huống", "có", "thể", "xảy", "ra"],
+          "answerChunkDistractors": ["Tuân", "thủ", "chuẩn", "mực", "kế", "toán"]
+        },
+        {
+          "prompt": "Why is a trial period commonly included in software procurement contracts?",
+          "options": ["To delay full payment obligations.", "To allow the company to assess fit before committing to a full deployment.", "To reduce the vendor's liability.", "To meet regulatory requirements."],
+          "correct": 1,
+          "explanation": "Giai đoạn dùng thử cho phép công ty đánh giá sự phù hợp trước khi cam kết triển khai đầy đủ — đây là mục đích chính, không phải hoãn thanh toán hay đáp ứng pháp lý.",
+          "answerChunks": ["Đánh", "giá", "sự", "phù", "hợp", "trước", "khi", "triển", "khai"],
+          "answerChunkDistractors": ["Hoãn", "nghĩa", "vụ", "thanh", "toán"]
+        },
+        {
+          "prompt": "Why are regular team retrospectives valuable in Agile project environments?",
+          "options": ["To formally document project progress for the client.", "To identify process improvements and increase team effectiveness.", "To track individual performance for HR purposes.", "To justify extending the project timeline."],
+          "correct": 1,
+          "explanation": "Retrospectives trong Agile giúp nhóm nhận diện cải tiến quy trình và tăng hiệu quả — không phải báo cáo cho khách hàng hay đánh giá cá nhân cho HR.",
+          "answerChunks": ["Nhận", "diện", "cải", "tiến", "và", "tăng", "hiệu", "quả", "nhóm"],
+          "answerChunkDistractors": ["Ghi", "lại", "tiến", "độ", "cho", "khách", "hàng"]
+        },
+        {
+          "prompt": "Why is it advisable to have legal counsel review all partnership agreements?",
+          "options": ["To speed up the signing process.", "To ensure all terms are enforceable and risks are properly understood.", "To demonstrate good faith to the other party.", "To reduce the cost of the partnership."],
+          "correct": 1,
+          "explanation": "Cố vấn pháp lý xem xét hợp đồng đối tác để đảm bảo tất cả điều khoản có thể thực thi được và rủi ro được hiểu đúng — không phải để đẩy nhanh hay giảm chi phí.",
+          "answerChunks": ["Đảm", "bảo", "điều", "khoản", "có", "thể", "thực", "thi", "và", "rủi", "ro", "được", "hiểu"],
+          "answerChunkDistractors": ["Đẩy", "nhanh", "quá", "trình", "ký"]
+        },
+        {
+          "prompt": "Why is transparent internal communication important during organisational change?",
+          "options": ["It allows management to monitor resistance to change.", "It reduces uncertainty and maintains employee trust and engagement.", "It eliminates the need for external consultants.", "It speeds up the implementation timeline."],
+          "correct": 1,
+          "explanation": "Giao tiếp nội bộ minh bạch giảm bất ổn và duy trì sự tin tưởng, gắn kết của nhân viên — đây là mục tiêu cốt lõi, không phải theo dõi kháng cự hay loại bỏ tư vấn ngoài.",
+          "answerChunks": ["Giảm", "bất", "ổn", "và", "duy", "trì", "tin", "tưởng", "gắn", "kết"],
+          "answerChunkDistractors": ["Theo", "dõi", "kháng", "cự", "thay", "đổi"]
+        },
+        {
+          "prompt": "Why do companies conduct background checks on senior-level candidates?",
+          "options": ["To delay the hiring process if the budget is tight.", "To verify credentials and assess any potential reputational or legal risk.", "To comply with standard payroll procedures.", "To reduce the number of applicants in the final round."],
+          "correct": 1,
+          "explanation": "Kiểm tra lý lịch cho ứng viên cấp cao nhằm xác minh bằng cấp và đánh giá rủi ro về uy tín hoặc pháp lý tiềm ẩn — không phải vì lý do ngân sách hay bảng lương.",
+          "answerChunks": ["Xác", "minh", "bằng", "cấp", "và", "đánh", "giá", "rủi", "ro", "tiềm", "ẩn"],
+          "answerChunkDistractors": ["Tuân", "thủ", "quy", "trình", "bảng", "lương"]
+        },
+        {
+          "prompt": "Why is it necessary to maintain a clear audit trail for financial transactions?",
+          "options": ["To justify the company's expenditure to investors.", "To enable traceability, accountability, and fraud detection.", "To simplify the year-end financial reporting.", "To reduce the workload of the finance team."],
+          "correct": 1,
+          "explanation": "Dấu vết kiểm toán rõ ràng cho phép truy xuất nguồn gốc, xác định trách nhiệm và phát hiện gian lận — đây là lý do chính, không phải báo cáo đơn giản hóa hay giảm tải.",
+          "answerChunks": ["Truy", "xuất", "nguồn", "gốc,", "trách", "nhiệm", "và", "phát", "hiện", "gian", "lận"],
+          "answerChunkDistractors": ["Đơn", "giản", "hóa", "báo", "cáo", "cuối", "năm"]
+        },
+        {
+          "prompt": "Why do organisations use key performance indicators (KPIs)?",
+          "options": ["To rank employees for salary increments.", "To measure progress toward strategic objectives.", "To simplify reporting to external stakeholders.", "To reduce the frequency of management meetings."],
+          "correct": 1,
+          "explanation": "KPIs được dùng để đo lường tiến độ hướng tới các mục tiêu chiến lược — đây là mục đích cốt lõi, không phải xếp hạng nhân viên hay giảm họp.",
+          "answerChunks": ["Đo", "lường", "tiến", "độ", "hướng", "tới", "mục", "tiêu", "chiến", "lược"],
+          "answerChunkDistractors": ["Xếp", "hạng", "nhân", "viên", "tăng", "lương"]
+        },
+        {
+          "prompt": "Why is employee wellbeing increasingly prioritised in corporate strategy?",
+          "options": ["Because it is required by employment law in all countries.", "Because it directly impacts productivity, retention, and business performance.", "Because investors demand it as a compliance requirement.", "Because it reduces the need for training programmes."],
+          "correct": 1,
+          "explanation": "Sức khỏe nhân viên ảnh hưởng trực tiếp đến năng suất, tỷ lệ giữ chân và hiệu quả kinh doanh — đây là lý do chiến lược chính, không phải pháp lý hay nhà đầu tư yêu cầu.",
+          "answerChunks": ["Ảnh", "hưởng", "trực", "tiếp", "đến", "năng", "suất", "và", "giữ", "chân"],
+          "answerChunkDistractors": ["Yêu", "cầu", "bởi", "luật", "lao", "động"]
+        },
+        {
+          "prompt": "Why should a company have a formal vendor management programme?",
+          "options": ["To limit the number of suppliers the company can use.", "To ensure consistent quality, compliance, and relationship management with suppliers.", "To eliminate the need for procurement staff.", "To reduce the frequency of supplier invoicing."],
+          "correct": 1,
+          "explanation": "Chương trình quản lý nhà cung cấp chính thức đảm bảo chất lượng nhất quán, tuân thủ pháp lý và quản lý mối quan hệ hiệu quả — không phải để giới hạn hay loại bỏ nhân sự.",
+          "answerChunks": ["Đảm", "bảo", "chất", "lượng,", "tuân", "thủ", "và", "quản", "lý", "quan", "hệ"],
+          "answerChunkDistractors": ["Giới", "hạn", "số", "nhà", "cung", "cấp"]
+        },
+        {
+          "prompt": "Why is a handover document important when an employee leaves a position?",
+          "options": ["To provide legal protection to the company in case of claims.", "To ensure continuity of work and minimise disruption for the incoming person.", "To justify the employee's final payroll calculations.", "To allow HR to close the personnel file promptly."],
+          "correct": 1,
+          "explanation": "Tài liệu bàn giao đảm bảo tính liên tục của công việc và giảm thiểu gián đoạn cho người tiếp nhận — đây là mục đích thực tiễn chính.",
+          "answerChunks": ["Đảm", "bảo", "liên", "tục", "và", "giảm", "gián", "đoạn"],
+          "answerChunkDistractors": ["Bảo", "vệ", "pháp", "lý", "cho", "công", "ty"]
+        },
+        {
+          "prompt": "Why is it considered best practice to separate financial duties among multiple employees?",
+          "options": ["To slow down the approval process intentionally.", "To reduce the risk of fraud and errors through checks and balances.", "To increase the finance department headcount.", "To comply with union agreements."],
+          "correct": 1,
+          "explanation": "Phân tách nhiệm vụ tài chính giữa nhiều nhân viên tạo ra hệ thống kiểm tra và đối trọng, giảm rủi ro gian lận và sai sót — đây là thực tiễn kiểm soát nội bộ cốt lõi.",
+          "answerChunks": ["Giảm", "rủi", "ro", "gian", "lận", "qua", "kiểm", "tra", "đối", "trọng"],
+          "answerChunkDistractors": ["Tăng", "số", "nhân", "viên", "tài", "chính"]
+        },
+        {
+          "prompt": "Why do companies issue press releases when announcing major business developments?",
+          "options": ["To satisfy the requirements of advertising regulations.", "To control the narrative and provide accurate information to the public and media.", "To avoid direct communication with shareholders.", "To reduce the cost of marketing campaigns."],
+          "correct": 1,
+          "explanation": "Thông cáo báo chí giúp công ty kiểm soát câu chuyện và cung cấp thông tin chính xác cho công chúng và truyền thông — không phải để tránh liên lạc hay tuân thủ quảng cáo.",
+          "answerChunks": ["Kiểm", "soát", "câu", "chuyện", "và", "cung", "cấp", "thông", "tin", "chính", "xác"],
+          "answerChunkDistractors": ["Tránh", "liên", "lạc", "với", "cổ", "đông"]
+        }
+      ]
+    }
+  ]
+}

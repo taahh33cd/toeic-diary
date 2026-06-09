@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
-import { getPart2Set, getPart2MediumSet } from "@/lib/subskills";
+import { getPart2Set, getPart2MediumSet, getPart2HardSet } from "@/lib/subskills";
 import ExerciseClient from "@/components/subskills/ExerciseClient";
 import DifficultyTabs from "@/components/subskills/DifficultyTabs";
 
@@ -18,12 +18,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ListeningPart2ExercisePage({ params, searchParams }: Props) {
   const { questionWord } = await params;
   const { d } = await searchParams;
-  const difficulty = d === "medium" ? "medium" : "easy";
+  const difficulty = d === "hard" ? "hard" : d === "medium" ? "medium" : "easy";
 
   const easySet = getPart2Set(questionWord);
   if (!easySet) notFound();
 
   const mediumSet = getPart2MediumSet(questionWord);
+  const hardSet   = getPart2HardSet(questionWord);
 
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
@@ -68,9 +69,39 @@ export default async function ListeningPart2ExercisePage({ params, searchParams 
     }
   }
 
-  const activeSet  = difficulty === "medium" && mediumUnlocked && mediumSet ? mediumSet : easySet;
-  const activeBest = difficulty === "medium" && mediumUnlocked ? mediumBest : easyBest;
-  const activeDiff = difficulty === "medium" && mediumUnlocked ? "medium" : "easy";
+  // Unlock Hard if any Medium attempt score ≥ 80%
+  const mediumTopScore = Object.values(mediumBest).reduce((max, b) => Math.max(max, b.score), 0);
+  const hardUnlocked = mediumTopScore >= 80;
+
+  // Fetch Hard attempts (stored with part: "part2-hard")
+  const hardAttempts = user && hardUnlocked
+    ? await prisma.subskillAttempt
+        .findMany({
+          where: { userId: user.id, part: "part2-hard", questionWord },
+          select: { exerciseIndex: true, score: true, passed: true },
+        })
+        .catch(() => [])
+    : [];
+
+  const hardBest: Record<string, { score: number; passed: boolean }> = {};
+  for (const a of hardAttempts) {
+    const key = `${questionWord}:${a.exerciseIndex}`;
+    if (!hardBest[key] || a.score > hardBest[key].score) {
+      hardBest[key] = { score: a.score, passed: a.passed };
+    }
+  }
+
+  const activeSet =
+    difficulty === "hard"   && hardUnlocked   && hardSet   ? hardSet   :
+    difficulty === "medium" && mediumUnlocked && mediumSet ? mediumSet : easySet;
+
+  const activeBest =
+    difficulty === "hard"   && hardUnlocked   ? hardBest   :
+    difficulty === "medium" && mediumUnlocked ? mediumBest : easyBest;
+
+  const activeDiff: "easy" | "medium" | "hard" =
+    difficulty === "hard"   && hardUnlocked   ? "hard"   :
+    difficulty === "medium" && mediumUnlocked ? "medium" : "easy";
 
   return (
     <div
@@ -112,7 +143,9 @@ export default async function ListeningPart2ExercisePage({ params, searchParams 
         questionWord={questionWord}
         current={activeDiff}
         mediumUnlocked={mediumUnlocked}
+        hardUnlocked={hardUnlocked}
         easyTopScore={easyTopScore}
+        mediumTopScore={mediumTopScore}
       />
 
       {/* Client component */}

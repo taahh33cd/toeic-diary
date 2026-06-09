@@ -1,0 +1,211 @@
+{
+  "part": "part2-hard",
+  "questionWord": "how",
+  "difficulty": "hard",
+  "label": "HOW",
+  "labelVi": "Câu hỏi HOW — Hard",
+  "passThreshold": 80,
+  "intro": "Hard: Viết câu hỏi HOW tự do, điền từ không có hỗ trợ, và chọn cách thức phù hợp nhất trong các tình huống doanh nghiệp chuyên sâu.",
+  "exercises": [
+    {
+      "kind": "freewrite",
+      "title": "Bài 1 — Viết câu hỏi HOW hoàn chỉnh",
+      "instruction": "Dựa vào gợi ý tiếng Việt, viết câu hỏi HOW hoàn chỉnh bằng tiếng Anh.",
+      "items": [
+        { "prompt": "Làm thế nào để tôi đặt lại mật khẩu hệ thống nội bộ?", "answer": "How do I reset my internal system password?", "acceptedAnswers": ["How can I reset my password for the internal system?"] },
+        { "prompt": "Nhân viên mới nộp đơn xin hoàn tiền công tác như thế nào?", "answer": "How do new employees submit travel reimbursement claims?", "acceptedAnswers": ["How can new staff file a travel expense reimbursement?"] },
+        { "prompt": "Công ty xử lý dữ liệu khách hàng nhạy cảm như thế nào?", "answer": "How does the company handle sensitive client data?", "acceptedAnswers": ["How is sensitive client data managed by the company?"] },
+        { "prompt": "Nhóm dự án đo lường sự thành công của dự án như thế nào?", "answer": "How does the project team measure project success?", "acceptedAnswers": ["How is project success measured by the team?"] },
+        { "prompt": "Tôi có thể xin gia hạn thời gian hoàn thành nhiệm vụ bằng cách nào?", "answer": "How can I request an extension for completing the assignment?", "acceptedAnswers": ["How do I ask for more time to finish the task?"] },
+        { "prompt": "Quy trình phê duyệt mua hàng vượt hạn mức hoạt động như thế nào?", "answer": "How does the approval process for purchases above the limit work?", "acceptedAnswers": ["How does the procurement approval process work for over-budget items?"] },
+        { "prompt": "Bộ phận nhân sự quản lý các trường hợp vắng mặt dài hạn như thế nào?", "answer": "How does the HR department manage long-term absence cases?", "acceptedAnswers": ["How does HR handle extended absence situations?"] },
+        { "prompt": "Công ty đánh giá hiệu quả của chương trình đào tạo mới như thế nào?", "answer": "How does the company evaluate the effectiveness of the new training programme?", "acceptedAnswers": ["How is the new training programme's effectiveness assessed?"] },
+        { "prompt": "Nhân viên làm thế nào để tố cáo hành vi vi phạm đạo đức nơi làm việc?", "answer": "How do employees report unethical behaviour in the workplace?", "acceptedAnswers": ["How can staff report workplace misconduct?"] },
+        { "prompt": "Quy trình kiểm tra lý lịch ứng viên được thực hiện như thế nào?", "answer": "How is the candidate background check process conducted?", "acceptedAnswers": ["How does the background verification process work for applicants?"] },
+        { "prompt": "Việc đặt lại thứ tự ưu tiên công việc khi có thay đổi đột xuất diễn ra như thế nào?", "answer": "How does task reprioritisation happen when there are unexpected changes?", "acceptedAnswers": ["How do we reprioritise tasks when sudden changes occur?"] },
+        { "prompt": "Chính sách làm việc từ xa được thực thi như thế nào trong tổ chức?", "answer": "How is the remote working policy enforced across the organisation?", "acceptedAnswers": ["How does the company enforce its remote work policy?"] },
+        { "prompt": "Quyết định về phân bổ tài nguyên trong dự án lớn được đưa ra như thế nào?", "answer": "How are resource allocation decisions made for large projects?", "acceptedAnswers": ["How is resource allocation decided on major projects?"] },
+        { "prompt": "Tôi có thể nộp đơn xin thuyên chuyển nội bộ như thế nào?", "answer": "How can I apply for an internal transfer?", "acceptedAnswers": ["How do I submit an application for an internal position transfer?"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ hoàn toàn tự do",
+      "instruction": "Điền từ còn thiếu để hoàn thành câu hỏi. Không có gợi ý, không có word bank.",
+      "items": [
+        { "template": "{0} {1} the {2} determine the final shortlist for the senior appointment?", "hint": null, "blanks": [["how"], ["did", "does"], ["panel", "committee", "board"]] },
+        { "template": "{0} is {1} shared between the {2} and the regional marketing teams?", "hint": null, "blanks": [["how"], ["budget", "responsibility", "workload"], ["central", "head office", "main"]] },
+        { "template": "{0} {1} we ensure {2} across all international branches?", "hint": null, "blanks": [["how"], ["do", "can", "should"], ["consistency", "compliance", "standardisation"]] },
+        { "template": "{0} many {1} does an employee need to {2} before the probationary period ends?", "hint": null, "blanks": [["how"], ["reviews", "check-ins", "assessments"], ["complete", "pass", "attend"]] },
+        { "template": "{0} {1} will the integration of the two {2} systems be completed?", "hint": null, "blanks": [["how"], ["soon", "quickly", "rapidly"], ["IT", "payroll", "ERP"]] },
+        { "template": "{0} does the {1} ensure {2} to the approved communication channels?", "hint": null, "blanks": [["how"], ["company", "policy", "organisation"], ["adherence", "compliance", "access"]] },
+        { "template": "{0} {1} are {2} typically informed of changes to their employment terms?", "hint": null, "blanks": [["how"], ["far in advance"], ["employees", "staff", "contractors"]] },
+        { "template": "{0} is the {1} of the new {2} system tracked after go-live?", "hint": null, "blanks": [["how"], ["performance", "adoption", "success"], ["ERP", "CRM", "HR"]] },
+        { "template": "{0} {1} employees appeal against an {2} performance assessment outcome?", "hint": null, "blanks": [["how"], ["can", "do"], ["unfair", "inaccurate", "disputed"]] },
+        { "template": "{0} often should {1} be {2} to remain aligned with business strategy?", "hint": null, "blanks": [["how"], ["KPIs", "targets", "objectives"], ["reviewed", "updated", "reassessed"]] },
+        { "template": "{0} {1} the company {2} its carbon emissions under the sustainability framework?", "hint": null, "blanks": [["how"], ["does", "will"], ["measure", "track", "report"]] },
+        { "template": "{0} {1} are {2} typically structured in a performance improvement plan?", "hint": null, "blanks": [["how"], ["targets", "milestones", "goals"], ["usually", "typically", "normally"]] },
+        { "template": "{0} is {1} feedback from clients {2} into the product development cycle?", "hint": null, "blanks": [["how"], ["direct", "external", "formal"], ["incorporated", "integrated", "included"]] },
+        { "template": "{0} {1} can our {2} be improved to handle higher transaction volumes?", "hint": null, "blanks": [["how"], ["infrastructure", "system", "platform"], ["upgraded", "scaled", "optimised"]] }
+      ]
+    },
+    {
+      "kind": "match",
+      "title": "Bài 3 — Ghép câu hỏi & đáp án",
+      "instruction": "Chọn cách thức phù hợp nhất với từng câu hỏi. Tất cả đáp án đều bắt đầu bằng 'By' — đọc kỹ nội dung cụ thể.",
+      "items": [
+        {
+          "question": "How does the company protect against data breaches from phishing attacks?",
+          "options": ["By running regular cybersecurity awareness training for all staff.", "By conducting quarterly financial audits.", "By implementing a four-day working week.", "By outsourcing all IT infrastructure to a third party.", "By requiring board approval for all email communications."],
+          "correct": 0,
+          "explanation": "Bảo vệ khỏi tấn công phishing hiệu quả nhất thông qua đào tạo nhận thức an ninh mạng thường xuyên — không phải kiểm toán tài chính hay thuê ngoài IT."
+        },
+        {
+          "question": "How does the finance team verify that invoices are accurate before payment?",
+          "options": ["By running regular cybersecurity awareness training for all staff.", "By conducting quarterly financial audits.", "By implementing a four-day working week.", "By outsourcing all IT infrastructure to a third party.", "By requiring board approval for all email communications."],
+          "correct": 1,
+          "explanation": "Kiểm toán tài chính hàng quý giúp xác minh tính chính xác của hóa đơn và phát hiện sai sót — đây là biện pháp kiểm soát tài chính phù hợp nhất."
+        },
+        {
+          "question": "How has the company improved employee productivity and reduced burnout?",
+          "options": ["By running regular cybersecurity awareness training for all staff.", "By conducting quarterly financial audits.", "By implementing a four-day working week.", "By outsourcing all IT infrastructure to a third party.", "By requiring board approval for all email communications."],
+          "correct": 2,
+          "explanation": "Tuần làm việc 4 ngày là biện pháp được nhiều công ty áp dụng để tăng năng suất và giảm kiệt sức nhân viên."
+        },
+        {
+          "question": "How does the company maintain uptime for its critical digital services?",
+          "options": ["By running regular cybersecurity awareness training for all staff.", "By conducting quarterly financial audits.", "By implementing a four-day working week.", "By outsourcing all IT infrastructure to a third party.", "By requiring board approval for all email communications."],
+          "correct": 3,
+          "explanation": "Thuê ngoài hạ tầng IT cho bên thứ ba chuyên nghiệp đảm bảo uptime cho dịch vụ kỹ thuật số quan trọng nhờ SLA và đội ngũ chuyên biệt."
+        },
+        {
+          "question": "How are sensitive internal communications typically controlled in regulated industries?",
+          "options": ["By running regular cybersecurity awareness training for all staff.", "By conducting quarterly financial audits.", "By implementing a four-day working week.", "By outsourcing all IT infrastructure to a third party.", "By requiring board approval for all email communications."],
+          "correct": 4,
+          "explanation": "Trong ngành có quy định chặt chẽ, kiểm soát giao tiếp nội bộ nhạy cảm bằng cách yêu cầu phê duyệt từ hội đồng là biện pháp quản trị phù hợp."
+        }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn đáp án & dịch sang tiếng Việt",
+      "instruction": "Chọn cách thức phù hợp nhất trong từng tình huống doanh nghiệp.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        {
+          "prompt": "How should a manager handle an employee who consistently arrives late?",
+          "options": ["Ignore it unless other team members complain.", "Address it privately and progressively according to the disciplinary policy.", "Announce it at the next team meeting.", "Immediately issue a written warning."],
+          "correct": 1,
+          "explanation": "Xử lý riêng tư và theo quy trình kỷ luật từng bước là cách tiếp cận chuyên nghiệp và đúng quy trình — không bỏ qua, không công bố công khai.",
+          "answerChunks": ["Xử", "lý", "riêng", "tư", "và", "từng", "bước", "theo", "quy", "trình"],
+          "answerChunkDistractors": ["Công", "bố", "tại", "họp", "nhóm"]
+        },
+        {
+          "prompt": "How is a balanced scorecard used in organisational performance management?",
+          "options": ["To rank employees based on salary levels.", "To track performance across financial, customer, process, and learning dimensions.", "To replace the annual appraisal process entirely.", "To allocate project resources across teams."],
+          "correct": 1,
+          "explanation": "Balanced scorecard theo dõi hiệu suất qua 4 chiều: tài chính, khách hàng, quy trình nội bộ và học hỏi phát triển — đây là mục đích thiết kế của công cụ này.",
+          "answerChunks": ["Theo", "dõi", "hiệu", "suất", "qua", "tài", "chính,", "khách", "hàng,", "quy", "trình"],
+          "answerChunkDistractors": ["Xếp", "hạng", "nhân", "viên", "theo", "lương"]
+        },
+        {
+          "prompt": "How should a company manage knowledge transfer when a key employee retires?",
+          "options": ["By asking the retiree to write their own replacement job description.", "Through structured knowledge capture, mentoring, and succession planning.", "By outsourcing the function to an external consultant.", "By delaying the retirement to give more time."],
+          "correct": 1,
+          "explanation": "Chuyển giao kiến thức hiệu quả cần kết hợp ghi chép có cấu trúc, mentoring và kế hoạch kế nhiệm — không phải thuê ngoài hay trì hoãn nghỉ hưu.",
+          "answerChunks": ["Ghi", "chép", "có", "cấu", "trúc,", "mentoring", "và", "kế", "hoạch", "kế", "nhiệm"],
+          "answerChunkDistractors": ["Thuê", "ngoài", "cho", "tư", "vấn", "bên", "ngoài"]
+        },
+        {
+          "prompt": "How is customer lifetime value (CLV) most effectively increased?",
+          "options": ["By reducing the price of products across the board.", "By improving customer retention, upselling, and personalising experiences.", "By increasing advertising spend significantly.", "By reducing the number of product offerings."],
+          "correct": 1,
+          "explanation": "CLV tăng hiệu quả nhất qua cải thiện tỷ lệ giữ chân, bán thêm sản phẩm và cá nhân hóa trải nghiệm — không chỉ giảm giá hay tăng quảng cáo.",
+          "answerChunks": ["Cải", "thiện", "giữ", "chân,", "bán", "thêm", "và", "cá", "nhân", "hóa"],
+          "answerChunkDistractors": ["Tăng", "ngân", "sách", "quảng", "cáo"]
+        },
+        {
+          "prompt": "How does a company typically communicate its core values to new hires?",
+          "options": ["By posting them on the company website only.", "Through induction programmes, leadership modelling, and ongoing reinforcement.", "By distributing a printed brochure on the first day.", "By requiring new hires to memorise a values statement."],
+          "correct": 1,
+          "explanation": "Giá trị cốt lõi được truyền đạt hiệu quả qua chương trình định hướng, lãnh đạo làm gương và củng cố thường xuyên — không chỉ qua tài liệu in hay ghi nhớ.",
+          "answerChunks": ["Định", "hướng,", "lãnh", "đạo", "làm", "gương", "và", "củng", "cố", "thường", "xuyên"],
+          "answerChunkDistractors": ["Chỉ", "đăng", "trên", "website", "công", "ty"]
+        },
+        {
+          "prompt": "How does the procurement team ensure value for money when awarding contracts?",
+          "options": ["By always selecting the lowest-priced bidder.", "Through a competitive tendering process with weighted evaluation criteria.", "By awarding contracts to existing preferred suppliers only.", "By seeking board approval for every purchase."],
+          "correct": 1,
+          "explanation": "Đấu thầu cạnh tranh với tiêu chí đánh giá có trọng số đảm bảo giá trị đồng tiền — không phải luôn chọn giá thấp nhất hay chỉ dùng nhà cung cấp quen thuộc.",
+          "answerChunks": ["Đấu", "thầu", "cạnh", "tranh", "với", "tiêu", "chí", "có", "trọng", "số"],
+          "answerChunkDistractors": ["Luôn", "chọn", "giá", "thầu", "thấp", "nhất"]
+        },
+        {
+          "prompt": "How should a project manager respond when a key deliverable is at risk of being delayed?",
+          "options": ["Wait until the delay is confirmed before taking any action.", "Proactively communicate with stakeholders and develop a recovery plan.", "Reduce the quality of the deliverable to save time.", "Assign additional resources without informing the client."],
+          "correct": 1,
+          "explanation": "Khi có nguy cơ trễ, project manager cần chủ động thông báo cho stakeholders và xây dựng kế hoạch phục hồi — không chờ xác nhận hay giảm chất lượng.",
+          "answerChunks": ["Chủ", "động", "thông", "báo", "và", "xây", "dựng", "kế", "hoạch", "phục", "hồi"],
+          "answerChunkDistractors": ["Chờ", "đến", "khi", "trễ", "được", "xác", "nhận"]
+        },
+        {
+          "prompt": "How can organisations reduce the risk of groupthink in executive decision-making?",
+          "options": ["By limiting the number of board members.", "By encouraging diverse perspectives and structured dissent.", "By delegating all decisions to a single authoritative leader.", "By removing anonymous feedback channels."],
+          "correct": 1,
+          "explanation": "Groupthink được giảm thiểu bằng cách khuyến khích quan điểm đa dạng và bất đồng có cấu trúc — không phải thu hẹp hội đồng hay tập trung quyết định.",
+          "answerChunks": ["Khuyến", "khích", "quan", "điểm", "đa", "dạng", "và", "bất", "đồng", "có", "cấu", "trúc"],
+          "answerChunkDistractors": ["Giới", "hạn", "số", "thành", "viên", "hội", "đồng"]
+        },
+        {
+          "prompt": "How is a company's working capital position typically improved in the short term?",
+          "options": ["By investing in new long-term assets.", "By accelerating accounts receivable collection and extending payables where possible.", "By reducing employee headcount immediately.", "By increasing the company's long-term borrowing."],
+          "correct": 1,
+          "explanation": "Vốn lưu động được cải thiện ngắn hạn bằng cách đẩy nhanh thu tiền phải thu và kéo dài thời gian trả tiền nhà cung cấp — không phải đầu tư dài hạn hay cắt giảm nhân sự.",
+          "answerChunks": ["Đẩy", "nhanh", "thu", "tiền", "và", "kéo", "dài", "thời", "gian", "trả"],
+          "answerChunkDistractors": ["Cắt", "giảm", "nhân", "sự", "ngay", "lập", "tức"]
+        },
+        {
+          "prompt": "How is cross-functional collaboration typically formalised in a matrix organisation?",
+          "options": ["By assigning employees to permanent single-function teams.", "Through shared goals, dual reporting lines, and joint accountability frameworks.", "By eliminating department heads and using flat structures.", "Through annual cross-departmental social events."],
+          "correct": 1,
+          "explanation": "Trong tổ chức ma trận, cộng tác đa chức năng được chính thức hóa qua mục tiêu chung, hai tuyến báo cáo và khung trách nhiệm chung.",
+          "answerChunks": ["Mục", "tiêu", "chung,", "hai", "tuyến", "báo", "cáo", "và", "trách", "nhiệm", "chung"],
+          "answerChunkDistractors": ["Sự", "kiện", "giao", "lưu", "hàng", "năm"]
+        },
+        {
+          "prompt": "How should a company address an identified gap in its compliance framework?",
+          "options": ["By waiting for the next regulatory review cycle.", "By conducting a root cause analysis and implementing targeted remediation.", "By reassigning the compliance officer to a different role.", "By temporarily suspending the affected business activity."],
+          "correct": 1,
+          "explanation": "Khoảng trống tuân thủ cần được xử lý qua phân tích nguyên nhân gốc rễ và triển khai biện pháp khắc phục có mục tiêu — không chờ chu kỳ xem xét hay tạm ngưng hoạt động.",
+          "answerChunks": ["Phân", "tích", "nguyên", "nhân", "gốc", "rễ", "và", "khắc", "phục", "có", "mục", "tiêu"],
+          "answerChunkDistractors": ["Chờ", "chu", "kỳ", "xem", "xét", "tiếp", "theo"]
+        },
+        {
+          "prompt": "How are internal audit findings typically communicated to senior leadership?",
+          "options": ["Through informal verbal updates during daily stand-ups.", "Through a formal written report with prioritised findings and management responses.", "By emailing raw data directly to all staff.", "Via a public summary on the company website."],
+          "correct": 1,
+          "explanation": "Kết quả kiểm toán nội bộ được truyền đạt qua báo cáo văn bản chính thức có phát hiện ưu tiên và phản hồi của ban quản lý — không phải qua email thô hay chia sẻ công khai.",
+          "answerChunks": ["Báo", "cáo", "văn", "bản", "chính", "thức", "với", "phát", "hiện", "ưu", "tiên"],
+          "answerChunkDistractors": ["Cập", "nhật", "miệng", "không", "chính", "thức"]
+        },
+        {
+          "prompt": "How can a company most effectively retain institutional knowledge?",
+          "options": ["By restricting access to company systems after employees leave.", "Through documented processes, knowledge bases, and cross-training programmes.", "By hiring retirees back as consultants on fixed-term contracts.", "By storing all information in a single employee's inbox."],
+          "correct": 1,
+          "explanation": "Kiến thức tổ chức được giữ lại hiệu quả nhất qua tài liệu hóa quy trình, cơ sở kiến thức và đào tạo chéo — không phải thuê lại cựu nhân viên hay lưu trữ tập trung.",
+          "answerChunks": ["Tài", "liệu", "hóa,", "cơ", "sở", "kiến", "thức", "và", "đào", "tạo", "chéo"],
+          "answerChunkDistractors": ["Thuê", "lại", "nhân", "viên", "nghỉ", "hưu"]
+        },
+        {
+          "prompt": "How is a company's brand reputation most effectively managed during a public crisis?",
+          "options": ["By deleting all negative social media comments.", "Through prompt, transparent communication and a clear corrective action plan.", "By transferring all media inquiries to legal counsel.", "By temporarily shutting down all public-facing channels."],
+          "correct": 1,
+          "explanation": "Quản lý danh tiếng trong khủng hoảng hiệu quả nhất qua giao tiếp nhanh chóng, minh bạch và kế hoạch khắc phục rõ ràng — không phải xóa bình luận hay đóng kênh.",
+          "answerChunks": ["Giao", "tiếp", "nhanh,", "minh", "bạch", "và", "kế", "hoạch", "khắc", "phục"],
+          "answerChunkDistractors": ["Xóa", "bình", "luận", "tiêu", "cực"]
+        }
+      ]
+    }
+  ]
+}

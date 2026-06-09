@@ -26,6 +26,7 @@ export type McqItem = {
   correct: 0 | 1 | 2 | 3;
   explanation: string;
   answerChunks: string[];
+  answerChunkDistractors?: string[]; // Extra wrong chips mixed into translate pool (Hard)
 };
 
 export type MatchItem = {
@@ -33,6 +34,12 @@ export type MatchItem = {
   options: [string, string, string, string, string];
   correct: 0 | 1 | 2 | 3 | 4;
   explanation: string;
+};
+
+export type FreetypeItem = {
+  prompt: string;           // Vietnamese hint shown to user
+  answer: string;           // Primary correct English sentence
+  acceptedAnswers?: string[]; // Alternative acceptable forms
 };
 
 export type WordbankExercise = {
@@ -72,12 +79,20 @@ export type MatchExercise = {
   items: MatchItem[];
 };
 
+export type FreetypeExercise = {
+  kind: "freewrite";
+  title: string;
+  instruction: string;
+  items: FreetypeItem[];
+};
+
 export type AnyExercise =
   | WordbankExercise
   | FillExercise
   | KeywordExercise
   | McqExercise
-  | MatchExercise;
+  | MatchExercise
+  | FreetypeExercise;
 
 export type SubskillSet = {
   part: string;
@@ -116,6 +131,17 @@ import yesNoMediumData  from "@/lib/subskills/data/yes-no.medium.json";
 import tagMediumData    from "@/lib/subskills/data/tag.medium.json";
 import choiceMediumData from "@/lib/subskills/data/choice.medium.json";
 
+import whoHardData    from "@/lib/subskills/data/who.hard.json";
+import whatHardData   from "@/lib/subskills/data/what.hard.json";
+import whichHardData  from "@/lib/subskills/data/which.hard.json";
+import whereHardData  from "@/lib/subskills/data/where.hard.json";
+import whenHardData   from "@/lib/subskills/data/when.hard.json";
+import whyHardData    from "@/lib/subskills/data/why.hard.json";
+import howHardData    from "@/lib/subskills/data/how.hard.json";
+import yesNoHardData  from "@/lib/subskills/data/yes-no.hard.json";
+import tagHardData    from "@/lib/subskills/data/tag.hard.json";
+import choiceHardData from "@/lib/subskills/data/choice.hard.json";
+
 export const PART2_SETS: SubskillSet[] = [
   whoData,
   whatData,
@@ -148,6 +174,23 @@ export function getPart2Set(questionWord: string): SubskillSet | undefined {
 
 export function getPart2MediumSet(questionWord: string): SubskillSet | undefined {
   return PART2_MEDIUM_SETS.find((s) => s.questionWord === questionWord);
+}
+
+export const PART2_HARD_SETS: SubskillSet[] = [
+  whoHardData,
+  whatHardData,
+  whichHardData,
+  whereHardData,
+  whenHardData,
+  whyHardData,
+  howHardData,
+  yesNoHardData,
+  tagHardData,
+  choiceHardData,
+] as SubskillSet[];
+
+export function getPart2HardSet(questionWord: string): SubskillSet | undefined {
+  return PART2_HARD_SETS.find((s) => s.questionWord === questionWord);
 }
 
 // ─────────────────────────────────────
@@ -262,4 +305,22 @@ export function keywordItemGroupsMatched(
   return item.keywords.map((group) =>
     group.some((variant) => typed.includes(normalize(variant)))
   );
+}
+
+/** Freewrite: normalize both sides, also strip articles (a/an/the) for leniency */
+function normalizeFreewrite(s: string): string {
+  return s
+    .trim()
+    .toLowerCase()
+    .replace(/[.,!?;:'"]/g, "")
+    .replace(/\b(a|an|the)\b/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+export function freetypeItemCorrect(item: FreetypeItem, userInput: string): boolean {
+  const userNorm = normalizeFreewrite(userInput);
+  if (!userNorm) return false;
+  const allAnswers = [item.answer, ...(item.acceptedAnswers ?? [])];
+  return allAnswers.some((a) => normalizeFreewrite(a) === userNorm);
 }

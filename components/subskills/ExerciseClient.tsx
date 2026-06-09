@@ -8,11 +8,13 @@ import type {
   KeywordItem as KWItem,
   McqItem as MCQItem,
   MatchItem as MTItem,
+  FreetypeItem as FTItem,
 } from "@/lib/subskills";
 import {
   wordbankItemCorrect,
   fillItemBlanksCorrect,
   keywordItemGroupsMatched,
+  freetypeItemCorrect,
 } from "@/lib/subskills";
 
 // ─────────────────────────────────────
@@ -476,6 +478,74 @@ function KeywordPanel({
           <div style={{ fontSize: "0.76rem", color: "var(--text-muted)" }}>
             {matchCount}/{item.keywords.length} nhóm từ khóa khớp
           </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── Freewrite quiz panel (Hard Bài 1 / Bài 2) ────────────────────
+
+function FreetypePanel({
+  item,
+  input,
+  submitted,
+  retryCount,
+  onChange,
+}: {
+  item: FTItem;
+  input: string;
+  submitted: boolean;
+  retryCount: number;
+  onChange: (v: string) => void;
+}) {
+  const correct = submitted && freetypeItemCorrect(item, input);
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+      {/* Vietnamese hint */}
+      <p style={{ margin: 0, fontSize: "1rem", fontWeight: 600, color: "var(--text-primary)", background: "var(--bg-secondary)", padding: "14px 18px", borderRadius: 10, borderLeft: "3px solid var(--accent-primary)" }}>
+        {item.prompt}
+      </p>
+
+      {/* Input */}
+      <div style={{ position: "relative" }}>
+        <input
+          type="text"
+          value={input}
+          onChange={e => !submitted && onChange(e.target.value)}
+          disabled={submitted}
+          placeholder="Viết câu hỏi tiếng Anh..."
+          style={{
+            width: "100%",
+            padding: "12px 16px",
+            borderRadius: 8,
+            border: `1.5px solid ${submitted ? (correct ? "rgba(34,197,94,0.5)" : "rgba(239,68,68,0.45)") : "var(--border)"}`,
+            background: submitted ? (correct ? "rgba(34,197,94,0.06)" : "rgba(239,68,68,0.05)") : "var(--bg-secondary)",
+            color: "var(--text-primary)",
+            fontSize: "0.92rem",
+            outline: "none",
+            boxSizing: "border-box",
+            cursor: submitted ? "default" : "text",
+            fontFamily: "inherit",
+          }}
+          onKeyDown={e => { if (e.key === "Enter" && !submitted && input.trim()) { /* handled by canCheck */ } }}
+          autoComplete="off"
+          autoCorrect="off"
+          spellCheck={false}
+        />
+      </div>
+
+      {/* Result */}
+      {submitted && (
+        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          <ResultBadge correct={correct} />
+          {!correct && (
+            <div style={{ padding: "10px 14px", background: "var(--bg-elevated)", borderRadius: 8, fontSize: "0.82rem", color: "var(--text-secondary)", borderLeft: "3px solid rgba(34,197,94,0.4)" }}>
+              <span style={{ color: "var(--text-muted)", fontSize: "0.75rem", display: "block", marginBottom: 4 }}>ĐÁP ÁN</span>
+              <strong style={{ color: "var(--text-primary)" }}>{item.answer}</strong>
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -1065,6 +1135,9 @@ export default function ExerciseClient({
   // Match (Bài 3 — Medium)
   const [matchChoice, setMatchChoice] = useState<number | null>(null);
 
+  // Freewrite (Bài 1 Hard)
+  const [ftInput, setFtInput] = useState("");
+
   // ── Retry state (reset per item) ──────────────────────────────────
   const MAX_RETRIES = 2; // 2 retries → 3 total attempts
   const [retryCount, setRetryCount] = useState(0);          // wrong attempts so far
@@ -1104,11 +1177,15 @@ export default function ExerciseClient({
       setFillInputs(item.blanks.map(() => ""));
     } else if (exercise.kind === "keyword") {
       setKwInput("");
+    } else if (exercise.kind === "freewrite") {
+      setFtInput("");
     } else if (exercise.kind === "mcq") {
       const item = exercise.items[ii] as MCQItem;
       setMcqChoice(null);
       setMcqTSlots(item.answerChunks.map(() => null));
-      setMcqTBank(shuffle(item.answerChunks));
+      // Include Hard distractors in bank if present
+      const allChips = [...item.answerChunks, ...(item.answerChunkDistractors ?? [])];
+      setMcqTBank(shuffle(allChips));
     } else if (exercise.kind === "match") {
       setMatchChoice(null);
     }
@@ -1191,12 +1268,21 @@ export default function ExerciseClient({
       } else {
         handleWrong(() => { setKwInput(""); });
       }
+    } else if (ex.kind === "freewrite") {
+      const item = ex.items[itemIdx] as FTItem;
+      const correct = freetypeItemCorrect(item, ftInput);
+      if (correct) {
+        addCorrect();
+      } else {
+        handleWrong(() => { setFtInput(""); });
+      }
     } else if (ex.kind === "mcq") {
       const item = ex.items[itemIdx] as MCQItem;
       // mcqPartLocked means MCQ was already confirmed correct; only translate matters now
       const mcqCorrect = mcqPartLocked || (mcqChoice === mcqDisplayCorrect);
       const arranged = mcqTSlots.filter(Boolean) as string[];
       const transCorrect = item.answerChunks.every((c, j) => c === arranged[j]);
+      const allChips = [...item.answerChunks, ...(item.answerChunkDistractors ?? [])];
       if (mcqCorrect && transCorrect) {
         addCorrect();
       } else {
@@ -1207,12 +1293,12 @@ export default function ExerciseClient({
             setDisabledOpts(prev => wrong !== null ? [...prev, wrong] : prev);
             setMcqChoice(null);
             setMcqTSlots(item.answerChunks.map(() => null));
-            setMcqTBank(shuffle(item.answerChunks));
+            setMcqTBank(shuffle(allChips));
           } else {
             // MCQ was correct but translate wrong: lock MCQ, reset only translate
             setMcqPartLocked(true);
             setMcqTSlots(item.answerChunks.map(() => null));
-            setMcqTBank(shuffle(item.answerChunks));
+            setMcqTBank(shuffle(allChips));
           }
         });
       }
@@ -1304,6 +1390,7 @@ export default function ExerciseClient({
     !submitted && (
       ex.kind === "fill" ||
       ex.kind === "keyword" ||
+      (ex.kind === "freewrite" && ftInput.trim().length > 0) ||
       (ex.kind === "wordbank" && wbSlots.every(s => s !== null)) ||
       (ex.kind === "mcq" && mcqChoice !== null && mcqTSlots.every(s => s !== null)) ||
       (ex.kind === "match" && matchChoice !== null)
@@ -1394,6 +1481,15 @@ export default function ExerciseClient({
           input={kwInput}
           submitted={submitted}
           onChange={setKwInput}
+        />
+      )}
+      {ex.kind === "freewrite" && (
+        <FreetypePanel
+          item={items[itemIdx] as FTItem}
+          input={ftInput}
+          submitted={submitted}
+          retryCount={retryCount}
+          onChange={setFtInput}
         />
       )}
       {ex.kind === "mcq" && (

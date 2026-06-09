@@ -4,20 +4,31 @@ import { useRouter, usePathname } from "next/navigation";
 
 type Props = {
   questionWord: string;
-  current: "easy" | "medium";
+  current: "easy" | "medium" | "hard";
   mediumUnlocked: boolean;
+  hardUnlocked: boolean;
   easyTopScore: number;
+  mediumTopScore: number;
 };
 
-export default function DifficultyTabs({ questionWord, current, mediumUnlocked, easyTopScore }: Props) {
+export default function DifficultyTabs({
+  questionWord,
+  current,
+  mediumUnlocked,
+  hardUnlocked,
+  easyTopScore,
+  mediumTopScore,
+}: Props) {
   const router = useRouter();
   const pathname = usePathname();
 
-  function goTo(d: "easy" | "medium") {
+  function goTo(d: "easy" | "medium" | "hard") {
     if (d === "easy") {
       router.push(pathname);
-    } else if (mediumUnlocked) {
+    } else if (d === "medium" && mediumUnlocked) {
       router.push(`${pathname}?d=medium`);
+    } else if (d === "hard" && hardUnlocked) {
+      router.push(`${pathname}?d=hard`);
     }
   }
 
@@ -83,8 +94,29 @@ export default function DifficultyTabs({ questionWord, current, mediumUnlocked, 
               🔒 Medium
             </button>
             <span style={{ fontSize: "0.75rem", color: "var(--text-muted, #aaa)" }}>
-              Cần điểm Easy ≥ 80% (hiện tại: {easyTopScore}%)
+              Cần Easy ≥ 80% (hiện: {easyTopScore}%)
             </span>
+          </div>
+        )}
+
+        {/* Hard tab */}
+        {hardUnlocked ? (
+          <button
+            onClick={() => goTo("hard")}
+            style={current === "hard" ? activeTab : inactiveTab}
+          >
+            🔴 Hard
+          </button>
+        ) : (
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <button style={lockedTab} disabled title="Hoàn thành Medium ≥80% để mở khoá">
+              🔒 Hard
+            </button>
+            {mediumUnlocked && (
+              <span style={{ fontSize: "0.75rem", color: "var(--text-muted, #aaa)" }}>
+                Cần Medium ≥ 80% (hiện: {mediumTopScore}%)
+              </span>
+            )}
           </div>
         )}
       </div>

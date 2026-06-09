@@ -1,0 +1,211 @@
+{
+  "part": "part2-hard",
+  "questionWord": "tag",
+  "difficulty": "hard",
+  "label": "TAG",
+  "labelVi": "Câu hỏi TAG — Hard",
+  "passThreshold": 80,
+  "intro": "Hard: Viết câu hỏi đuôi (tag question) tự do, điền từ không có hỗ trợ, và chọn đáp án phù hợp nhất trong các tình huống doanh nghiệp chuyên sâu.",
+  "exercises": [
+    {
+      "kind": "freewrite",
+      "title": "Bài 1 — Viết câu hỏi TAG hoàn chỉnh",
+      "instruction": "Dựa vào gợi ý tiếng Việt, viết câu hỏi đuôi hoàn chỉnh bằng tiếng Anh.",
+      "items": [
+        { "prompt": "Cuộc họp quản lý cấp cao đã bị dời lịch, phải không?", "answer": "The senior management meeting has been rescheduled, hasn't it?", "acceptedAnswers": ["The senior management meeting was rescheduled, wasn't it?"] },
+        { "prompt": "Cô ấy chưa nộp báo cáo quý cuối cho ban giám đốc, phải không?", "answer": "She hasn't submitted the end-of-quarter report to the board yet, has she?", "acceptedAnswers": ["She hasn't sent the quarterly report to the board yet, has she?"] },
+        { "prompt": "Anh ấy sẽ đại diện cho công ty tại hội nghị quốc tế, phải không?", "answer": "He will be representing the company at the international conference, won't he?", "acceptedAnswers": ["He is going to represent the company at the international conference, isn't he?"] },
+        { "prompt": "Hợp đồng với nhà cung cấp mới vẫn chưa được ký kết, phải không?", "answer": "The contract with the new supplier still hasn't been signed, has it?", "acceptedAnswers": ["The contract with the new vendor hasn't been finalised yet, has it?"] },
+        { "prompt": "Bạn đã xem xét đề xuất ngân sách trước khi gửi lên ban lãnh đạo, phải không?", "answer": "You reviewed the budget proposal before submitting it to senior management, didn't you?", "acceptedAnswers": ["You had reviewed the budget proposal before sending it to leadership, hadn't you?"] },
+        { "prompt": "Họ sẽ phải đào tạo lại nhân viên sau khi hệ thống mới được triển khai, phải không?", "answer": "They will have to retrain the staff after the new system is implemented, won't they?", "acceptedAnswers": ["They'll need to retrain employees once the new system goes live, won't they?"] },
+        { "prompt": "Kết quả kiểm toán nội bộ vẫn chưa được công bố cho toàn bộ nhân viên, phải không?", "answer": "The internal audit results haven't been disclosed to all staff yet, have they?", "acceptedAnswers": ["The results of the internal audit haven't been shared with all employees yet, have they?"] },
+        { "prompt": "Chương trình thưởng cho nhân viên sẽ được xem xét lại vào cuối năm, phải không?", "answer": "The employee incentive scheme will be reviewed at the end of the year, won't it?", "acceptedAnswers": ["The staff bonus programme is going to be reviewed at year end, isn't it?"] },
+        { "prompt": "Các bên liên quan đều đã được thông báo về việc thay đổi yêu cầu dự án, phải không?", "answer": "All stakeholders have been informed about the changes to the project requirements, haven't they?", "acceptedAnswers": ["All stakeholders were notified about the project scope changes, weren't they?"] },
+        { "prompt": "Chúng ta sẽ không cần thuê thêm nhân viên tạm thời cho mùa cao điểm này, phải không?", "answer": "We won't need to hire additional temporary staff for this peak season, will we?", "acceptedAnswers": ["We don't need to take on extra temporary workers for this busy period, do we?"] },
+        { "prompt": "Bộ phận tài chính đã hoàn thiện dự báo doanh thu cho năm tới, phải không?", "answer": "The finance department has finalised the revenue forecast for next year, hasn't it?", "acceptedAnswers": ["The finance team has completed the revenue projection for the coming year, hasn't it?"] },
+        { "prompt": "Khách hàng chính đã được thông báo về sự chậm trễ trong giao hàng, phải không?", "answer": "The key client has been informed about the delay in delivery, haven't they?", "acceptedAnswers": ["The major client was notified about the delivery delay, weren't they?"] },
+        { "prompt": "Các cập nhật tuân thủ pháp lý mới sẽ có hiệu lực từ đầu tháng tới, phải không?", "answer": "The new regulatory compliance updates will take effect from the beginning of next month, won't they?", "acceptedAnswers": ["The new compliance requirements will come into effect at the start of next month, won't they?"] },
+        { "prompt": "Phiên họp hội đồng quản trị sắp tới vẫn chưa được lên lịch chính thức, phải không?", "answer": "The upcoming board meeting hasn't been officially scheduled yet, has it?", "acceptedAnswers": ["The next board session hasn't been formally set in the calendar yet, has it?"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ hoàn toàn tự do",
+      "instruction": "Điền từ còn thiếu để hoàn thành câu hỏi đuôi. Không có gợi ý, không có word bank.",
+      "items": [
+        { "template": "The {0} has been {1} to next quarter, {2} it?", "hint": null, "blanks": [["merger", "acquisition", "restructuring"], ["postponed", "deferred", "delayed"], ["hasn't"]] },
+        { "template": "You haven't {0} the client about the {1} in the {2}, have you?", "hint": null, "blanks": [["informed", "notified", "told"], ["delay", "change", "issue"], ["deadline", "delivery", "proposal"]] },
+        { "template": "She'll be {0} the department while the director is on {1}, {2} she?", "hint": null, "blanks": [["managing", "leading", "overseeing"], ["leave", "assignment", "sabbatical"], ["won't"]] },
+        { "template": "The {0} targets for this {1} have already been {2}, haven't they?", "hint": null, "blanks": [["sales", "quarterly", "annual"], ["quarter", "year", "period"], ["exceeded", "met", "achieved"]] },
+        { "template": "They {0} complete the {1} before the end of the {2}, will they?", "hint": null, "blanks": [["won't", "can't"], ["audit", "migration", "rollout"], ["month", "quarter", "year"]] },
+        { "template": "The {0} didn't {1} all the {2} before approving the vendor, did they?", "hint": null, "blanks": [["team", "committee", "department"], ["review", "check", "verify"], ["references", "documents", "credentials"]] },
+        { "template": "All {0} staff have {1} the updated {2} procedure, haven't they?", "hint": null, "blanks": [["onboarding", "new", "incoming"], ["read", "completed", "acknowledged"], ["onboarding", "compliance", "safety"]] },
+        { "template": "The {0} won't {1} the {2} until legal clearance is received, will it?", "hint": null, "blanks": [["company", "board", "management"], ["finalise", "approve", "sign"], ["deal", "contract", "agreement"]] },
+        { "template": "You've already {0} the stakeholder {1} for the {2} review, haven't you?", "hint": null, "blanks": [["prepared", "sent", "circulated"], ["presentation", "report", "update"], ["quarterly", "annual", "project"]] },
+        { "template": "The new {0} system {1} go live until all {2} testing is complete, will it?", "hint": null, "blanks": [["payroll", "ERP", "CRM"], ["won't", "can't"], ["user", "system", "regression"]] },
+        { "template": "She {0} informed the {1} about the {2} before the announcement, hadn't she?", "hint": null, "blanks": [["had"], ["team", "board", "committee"], ["changes", "decision", "update"]] },
+        { "template": "The {0} still {1} finalised the {2} for next year's expansion, have they?", "hint": null, "blanks": [["executives", "board", "directors"], ["haven't"], ["budget", "plan", "strategy"]] },
+        { "template": "All {0} were {1} to sign the {2} before accessing sensitive data, weren't they?", "hint": null, "blanks": [["contractors", "consultants", "vendors"], ["required", "asked"], ["NDA", "agreement", "policy"]] },
+        { "template": "The {0} audit findings {1} been {2} with the executive team yet, have they?", "hint": null, "blanks": [["internal", "external", "compliance"], ["haven't"], ["shared", "discussed", "reviewed"]] }
+      ]
+    },
+    {
+      "kind": "match",
+      "title": "Bài 3 — Ghép câu hỏi & đáp án",
+      "instruction": "Chọn đáp án phù hợp nhất với từng câu hỏi đuôi trong môi trường doanh nghiệp.",
+      "items": [
+        {
+          "question": "The project handover documentation still isn't complete, is it?",
+          "options": ["That's right, the team lead is still compiling the final sections.", "Actually, we decided to extend the contract by another six months.", "No, the vendor confirmed delivery for Thursday morning.", "You're correct, the appraisals have all been completed and filed.", "That's true, the revised schedule was sent to all teams last night."],
+          "correct": 0,
+          "explanation": "Câu hỏi đuôi phủ định về tài liệu bàn giao chưa hoàn chỉnh — đáp án xác nhận: 'Đúng vậy, trưởng nhóm vẫn đang tổng hợp các phần cuối.' Trực tiếp và nhất quán."
+        },
+        {
+          "question": "The lease on the current office space has been extended, hasn't it?",
+          "options": ["That's right, the team lead is still compiling the final sections.", "Actually, we decided to extend the contract by another six months.", "No, the vendor confirmed delivery for Thursday morning.", "You're correct, the appraisals have all been completed and filed.", "That's true, the revised schedule was sent to all teams last night."],
+          "correct": 1,
+          "explanation": "Câu hỏi đuôi khẳng định về việc gia hạn hợp đồng thuê — 'Thực ra, chúng tôi đã quyết định gia hạn hợp đồng thêm 6 tháng.' Trả lời trực tiếp về quyết định gia hạn."
+        },
+        {
+          "question": "The office supplies for the new branch haven't arrived yet, have they?",
+          "options": ["That's right, the team lead is still compiling the final sections.", "Actually, we decided to extend the contract by another six months.", "No, the vendor confirmed delivery for Thursday morning.", "You're correct, the appraisals have all been completed and filed.", "That's true, the revised schedule was sent to all teams last night."],
+          "correct": 2,
+          "explanation": "Câu hỏi đuôi phủ định về vật tư văn phòng chưa đến — 'Không, nhà cung cấp đã xác nhận giao hàng vào sáng thứ Năm.' Cung cấp thông tin cụ thể về kế hoạch giao hàng."
+        },
+        {
+          "question": "All staff appraisals for the half-year cycle have been finalised, haven't they?",
+          "options": ["That's right, the team lead is still compiling the final sections.", "Actually, we decided to extend the contract by another six months.", "No, the vendor confirmed delivery for Thursday morning.", "You're correct, the appraisals have all been completed and filed.", "That's true, the revised schedule was sent to all teams last night."],
+          "correct": 3,
+          "explanation": "Câu hỏi đuôi khẳng định về hoàn tất đánh giá nhân viên — 'Đúng vậy, tất cả đánh giá đã hoàn thành và lưu hồ sơ.' Xác nhận trực tiếp."
+        },
+        {
+          "question": "The updated project timeline wasn't distributed to everyone last night, was it?",
+          "options": ["That's right, the team lead is still compiling the final sections.", "Actually, we decided to extend the contract by another six months.", "No, the vendor confirmed delivery for Thursday morning.", "You're correct, the appraisals have all been completed and filed.", "That's true, the revised schedule was sent to all teams last night."],
+          "correct": 4,
+          "explanation": "Câu hỏi đuôi phủ định về việc chưa phân phối lịch trình — 'Đó là sự thật, lịch trình sửa đổi đã được gửi cho tất cả các nhóm tối qua.' Mâu thuẫn với giả định trong câu hỏi — đây là cách đáp án tag question thường hoạt động."
+        }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn đáp án & dịch sang tiếng Việt",
+      "instruction": "Chọn đáp án phù hợp nhất cho từng câu hỏi đuôi trong môi trường doanh nghiệp.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        {
+          "prompt": "The annual compliance training hasn't been rolled out to all departments yet, has it?",
+          "options": ["No, it's scheduled to begin next Monday.", "Yes, all training records are archived in the HR portal.", "No, the compliance officer is on long-term sick leave.", "Yes, but completion rates are still below the required threshold."],
+          "correct": 0,
+          "explanation": "Đáp án 'Không, dự kiến bắt đầu thứ Hai tuần tới' — xác nhận câu hỏi đuôi phủ định: chưa triển khai, và cung cấp thông tin thời gian cụ thể.",
+          "answerChunks": ["Không,", "dự", "kiến", "bắt", "đầu", "thứ", "Hai", "tuần", "tới"],
+          "answerChunkDistractors": ["Có,", "tỷ", "lệ", "hoàn", "thành", "còn", "thấp"]
+        },
+        {
+          "prompt": "The board approved the revised merger terms last week, didn't they?",
+          "options": ["No, the vote has been deferred until after due diligence is completed.", "Yes, the minutes have been circulated to all shareholders.", "No, the lead negotiator was unavailable for the final session.", "Yes, but two board members abstained from the vote."],
+          "correct": 1,
+          "explanation": "Đáp án 'Có, biên bản đã được gửi cho tất cả cổ đông' — xác nhận trực tiếp hội đồng đã phê duyệt và phản ánh hành động tiếp theo phù hợp nhất.",
+          "answerChunks": ["Có,", "biên", "bản", "đã", "được", "gửi", "cho", "tất", "cả", "cổ", "đông"],
+          "answerChunkDistractors": ["Không,", "cuộc", "bỏ", "phiếu", "đã", "bị", "hoãn"]
+        },
+        {
+          "prompt": "She won't be presenting at the investor briefing this quarter, will she?",
+          "options": ["That's right, she's been replaced by the head of investor relations.", "Actually, she's been confirmed as the lead presenter.", "No, the briefing has been moved online due to venue issues.", "Yes, but her slides will be shared in advance."],
+          "correct": 0,
+          "explanation": "Câu hỏi đuôi dự đoán cô ấy sẽ không trình bày — 'Đúng vậy, cô ấy đã được thay thế bởi trưởng bộ phận quan hệ nhà đầu tư.' Xác nhận dự đoán và giải thích lý do.",
+          "answerChunks": ["Đúng", "vậy,", "cô", "ấy", "đã", "được", "thay", "thế", "bởi", "trưởng", "quan", "hệ", "nhà", "đầu", "tư"],
+          "answerChunkDistractors": ["Thực", "ra,", "cô", "ấy", "đã", "được", "xác", "nhận", "là", "người", "trình", "bày"]
+        },
+        {
+          "prompt": "The new appraisal criteria haven't been shared with team managers yet, have they?",
+          "options": ["No, the HR director will brief managers at next week's meeting.", "Yes, all managers received the updated guide three weeks ago.", "No, but HR has confirmed they're finalised.", "Yes, the criteria were embedded in the performance platform last month."],
+          "correct": 0,
+          "explanation": "Xác nhận chưa chia sẻ và cung cấp thông tin: giám đốc HR sẽ thông báo cho quản lý tại cuộc họp tuần tới — phù hợp nhất với câu hỏi đuôi phủ định.",
+          "answerChunks": ["Không,", "giám", "đốc", "HR", "sẽ", "thông", "báo", "cho", "quản", "lý", "tại", "cuộc", "họp", "tuần", "tới"],
+          "answerChunkDistractors": ["Có,", "tất", "cả", "quản", "lý", "đã", "nhận", "hướng", "dẫn", "ba", "tuần", "trước"]
+        },
+        {
+          "prompt": "The IT migration was supposed to be completed by end of March, wasn't it?",
+          "options": ["That's correct, but the deadline has now been extended to June.", "No, it was always scheduled for the fourth quarter.", "Yes, and it was finished two weeks ahead of schedule.", "No, the migration was cancelled after the vendor contract expired."],
+          "correct": 0,
+          "explanation": "Xác nhận deadline ban đầu là tháng 3 nhưng nay đã được gia hạn đến tháng 6 — câu trả lời nhất quán nhất với câu hỏi đuôi và phản ánh tình huống thực tế phổ biến.",
+          "answerChunks": ["Đúng,", "nhưng", "thời", "hạn", "nay", "đã", "được", "gia", "hạn", "đến", "tháng", "Sáu"],
+          "answerChunkDistractors": ["Có,", "và", "đã", "hoàn", "thành", "trước", "hai", "tuần"]
+        },
+        {
+          "prompt": "You haven't submitted your timesheet for last week's overtime, have you?",
+          "options": ["You're right, I'll complete it before the end of the day.", "Actually, I submitted it on Monday morning.", "No, I wasn't aware overtime needed to be reported separately.", "Yes, but the system wouldn't accept it after the deadline."],
+          "correct": 1,
+          "explanation": "Câu hỏi đuôi phủ định — nhưng thực ra đã nộp vào sáng thứ Hai. 'Actually, I submitted it on Monday morning' bác bỏ giả định và là câu trả lời chính xác nhất.",
+          "answerChunks": ["Thực", "ra,", "tôi", "đã", "nộp", "vào", "sáng", "thứ", "Hai"],
+          "answerChunkDistractors": ["Đúng,", "tôi", "sẽ", "hoàn", "thành", "trước", "cuối", "ngày"]
+        },
+        {
+          "prompt": "The client feedback from the pilot has been compiled into the final report, hasn't it?",
+          "options": ["No, the analysis team is still reviewing the raw data.", "Yes, it was incorporated into the executive summary last Thursday.", "No, there were confidentiality issues with some of the responses.", "Yes, but the report hasn't been signed off by the client yet."],
+          "correct": 1,
+          "explanation": "Xác nhận: phản hồi đã được tích hợp vào bản tóm tắt điều hành thứ Năm tuần trước — câu trả lời trực tiếp nhất xác nhận đã hoàn tất.",
+          "answerChunks": ["Có,", "đã", "được", "tích", "hợp", "vào", "bản", "tóm", "tắt", "điều", "hành", "thứ", "Năm", "tuần", "trước"],
+          "answerChunkDistractors": ["Không,", "nhóm", "phân", "tích", "vẫn", "đang", "xem", "xét"]
+        },
+        {
+          "prompt": "The CEO won't be attending the press conference in person, will she?",
+          "options": ["That's right, she'll be joining remotely via video link.", "Actually, she confirmed her attendance this morning.", "No, the press conference has been postponed indefinitely.", "Yes, but her remarks will be delivered by the communications director."],
+          "correct": 0,
+          "explanation": "Xác nhận dự đoán: CEO sẽ không tham dự trực tiếp — sẽ tham gia qua video. Câu trả lời trực tiếp và nhất quán nhất.",
+          "answerChunks": ["Đúng,", "cô", "ấy", "sẽ", "tham", "gia", "từ", "xa", "qua", "video"],
+          "answerChunkDistractors": ["Thực", "ra,", "cô", "ấy", "đã", "xác", "nhận", "tham", "dự", "sáng", "nay"]
+        },
+        {
+          "prompt": "All expense claims above the approved threshold were rejected, weren't they?",
+          "options": ["Yes, anything over the limit was returned for additional authorisation.", "No, exceptions were made for conference-related expenses.", "Yes, but three claims were later reinstated after appeal.", "No, the threshold was temporarily waived during the fiscal year."],
+          "correct": 0,
+          "explanation": "Xác nhận: tất cả yêu cầu thanh toán vượt hạn mức đã bị từ chối và trả lại để xin phê duyệt bổ sung — câu trả lời rõ ràng và nhất quán nhất với chính sách.",
+          "answerChunks": ["Có,", "bất", "cứ", "khoản", "nào", "vượt", "hạn", "mức", "đã", "được", "trả", "lại", "để", "phê", "duyệt", "thêm"],
+          "answerChunkDistractors": ["Không,", "có", "ngoại", "lệ", "cho", "chi", "phí", "hội", "nghị"]
+        },
+        {
+          "prompt": "The probationary review for the new hires hasn't taken place yet, has it?",
+          "options": ["No, it's been scheduled for the end of the month.", "Yes, all reviews were completed during the last HR cycle.", "No, two of the three new hires were let go before the review.", "Yes, but the results haven't been communicated to the individuals yet."],
+          "correct": 0,
+          "explanation": "Xác nhận chưa diễn ra và cung cấp thông tin: đã được lên lịch vào cuối tháng — câu trả lời trực tiếp nhất với câu hỏi đuôi phủ định.",
+          "answerChunks": ["Không,", "đã", "được", "lên", "lịch", "vào", "cuối", "tháng"],
+          "answerChunkDistractors": ["Có,", "tất", "cả", "đánh", "giá", "đã", "hoàn", "thành", "trong", "chu", "kỳ", "HR"]
+        },
+        {
+          "prompt": "The quarterly KPI dashboard is shared with all team leaders every month, isn't it?",
+          "options": ["That's right, it goes out on the first Monday of each month.", "Actually, it's only distributed to senior managers.", "No, it was replaced by individual performance scorecards.", "Yes, but access has been restricted since the data breach."],
+          "correct": 0,
+          "explanation": "Xác nhận: dashboard được gửi vào thứ Hai đầu tiên mỗi tháng — câu trả lời trực tiếp và cụ thể nhất xác nhận thói quen phân phối.",
+          "answerChunks": ["Đúng,", "được", "gửi", "vào", "thứ", "Hai", "đầu", "tiên", "mỗi", "tháng"],
+          "answerChunkDistractors": ["Thực", "ra,", "chỉ", "phân", "phối", "cho", "quản", "lý", "cấp", "cao"]
+        },
+        {
+          "prompt": "You were copied on the email about the supplier audit findings, weren't you?",
+          "options": ["Actually, I wasn't included in that distribution list.", "Yes, I reviewed it and forwarded it to the operations team.", "No, I was on leave when it was sent.", "Yes, but I haven't had a chance to read it in detail yet."],
+          "correct": 1,
+          "explanation": "Xác nhận: đã nhận email và chuyển tiếp cho nhóm vận hành — câu trả lời trực tiếp xác nhận đã được CC và đã hành động.",
+          "answerChunks": ["Có,", "tôi", "đã", "xem", "và", "chuyển", "tiếp", "cho", "nhóm", "vận", "hành"],
+          "answerChunkDistractors": ["Thực", "ra,", "tôi", "không", "có", "trong", "danh", "sách", "nhận"]
+        },
+        {
+          "prompt": "The health and safety regulations for the new warehouse haven't been finalised, have they?",
+          "options": ["No, they're still pending review by the site manager.", "Yes, all regulations were implemented on day one of operations.", "No, the Health and Safety Executive hasn't responded yet.", "Yes, but some elements are subject to change after the first inspection."],
+          "correct": 0,
+          "explanation": "Xác nhận chưa hoàn thiện, đang chờ trưởng công trường xem xét — câu trả lời trực tiếp nhất phù hợp với câu hỏi đuôi phủ định.",
+          "answerChunks": ["Không,", "vẫn", "đang", "chờ", "trưởng", "công", "trường", "xem", "xét"],
+          "answerChunkDistractors": ["Có,", "tất", "cả", "quy", "định", "đã", "áp", "dụng", "ngay", "ngày", "đầu"]
+        },
+        {
+          "prompt": "The financial projections for the new market entry were stress-tested, weren't they?",
+          "options": ["Yes, three different economic scenarios were modelled by the strategy team.", "No, they were based solely on the optimistic growth forecast.", "Yes, but the board didn't consider the downside scenario seriously.", "No, the project was approved before the full analysis was done."],
+          "correct": 0,
+          "explanation": "Xác nhận kiểm tra stress đã được thực hiện với ba kịch bản kinh tế khác nhau — câu trả lời chuyên nghiệp và cụ thể nhất xác nhận quy trình đã được tuân thủ.",
+          "answerChunks": ["Có,", "ba", "kịch", "bản", "kinh", "tế", "khác", "nhau", "đã", "được", "mô", "hình", "hóa"],
+          "answerChunkDistractors": ["Không,", "chỉ", "dựa", "trên", "dự", "báo", "tăng", "trưởng", "lạc", "quan"]
+        }
+      ]
+    }
+  ]
+}

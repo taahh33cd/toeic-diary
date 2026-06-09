@@ -1,0 +1,211 @@
+{
+  "part": "part2-hard",
+  "questionWord": "where",
+  "difficulty": "hard",
+  "label": "WHERE",
+  "labelVi": "Câu hỏi WHERE — Hard",
+  "passThreshold": 80,
+  "intro": "Hard: Viết câu hỏi WHERE tự do, điền từ không có hỗ trợ, và chọn địa điểm/nơi chốn phù hợp nhất trong ngữ cảnh doanh nghiệp.",
+  "exercises": [
+    {
+      "kind": "freewrite",
+      "title": "Bài 1 — Viết câu hỏi WHERE hoàn chỉnh",
+      "instruction": "Dựa vào gợi ý tiếng Việt, viết câu hỏi WHERE hoàn chỉnh bằng tiếng Anh.",
+      "items": [
+        { "prompt": "Buổi định hướng nhân viên mới diễn ra ở đâu?", "answer": "Where does the new employee orientation take place?", "acceptedAnswers": ["Where is the new employee orientation held?"] },
+        { "prompt": "Bản sao cứng của hợp đồng được lưu trữ ở đâu?", "answer": "Where are the hard copies of the contracts stored?", "acceptedAnswers": ["Where do we keep the hard copies of the contracts?"] },
+        { "prompt": "Tôi có thể tải mẫu đơn xin phép nghỉ ở đâu?", "answer": "Where can I download the leave application form?", "acceptedAnswers": ["Where do I find the leave request form?"] },
+        { "prompt": "Phòng máy chủ dự phòng nằm ở đâu trong tòa nhà?", "answer": "Where is the backup server room located in the building?", "acceptedAnswers": ["Where is the secondary server room in the building?"] },
+        { "prompt": "Cuộc họp với nhà đầu tư sẽ được tổ chức ở đâu?", "answer": "Where will the investor meeting be held?", "acceptedAnswers": ["Where is the investor meeting going to take place?"] },
+        { "prompt": "Các tài liệu kiểm toán lưu trữ ở đâu trên hệ thống chia sẻ?", "answer": "Where are the audit documents stored on the shared system?", "acceptedAnswers": ["Where can I find the audit files on the shared drive?"] },
+        { "prompt": "Văn phòng đại diện khu vực Đông Nam Á của chúng tôi đặt ở đâu?", "answer": "Where is our Southeast Asia regional representative office located?", "acceptedAnswers": ["Where is our regional office for Southeast Asia?"] },
+        { "prompt": "Nhân viên mới nên đến đâu để nhận thẻ ra vào?", "answer": "Where should new employees go to collect their access cards?", "acceptedAnswers": ["Where do new staff pick up their ID cards?"] },
+        { "prompt": "Khu vực tập kết khẩn cấp được chỉ định ở đâu?", "answer": "Where is the designated emergency assembly point?", "acceptedAnswers": ["Where is the emergency evacuation assembly area?"] },
+        { "prompt": "Hội nghị thường niên của công ty năm nay sẽ diễn ra ở đâu?", "answer": "Where will the company's annual conference be held this year?", "acceptedAnswers": ["Where is this year's annual company conference taking place?"] },
+        { "prompt": "Hồ sơ nhân sự của nhân viên được lưu giữ ở đâu?", "answer": "Where are employee personnel files kept?", "acceptedAnswers": ["Where do you store employee HR records?"] },
+        { "prompt": "Buổi đào tạo về phần mềm mới sẽ được tổ chức ở đâu?", "answer": "Where will the new software training session be conducted?", "acceptedAnswers": ["Where is the training for the new software being held?"] },
+        { "prompt": "Thiết bị văn phòng dư thừa được cất giữ ở đâu?", "answer": "Where is the surplus office equipment stored?", "acceptedAnswers": ["Where do we keep the excess office equipment?"] },
+        { "prompt": "Đơn vị kiểm toán độc lập đặt văn phòng ở đâu?", "answer": "Where is the independent auditing firm's office located?", "acceptedAnswers": ["Where is the external audit firm based?"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ hoàn toàn tự do",
+      "instruction": "Điền từ còn thiếu để hoàn thành câu hỏi. Không có gợi ý, không có word bank.",
+      "items": [
+        { "template": "{0} should I {1} the signed {2} once the deal is finalised?", "hint": null, "blanks": [["where"], ["file", "store", "send"], ["agreement", "contract", "document"]] },
+        { "template": "{0} can employees {1} access to the {2} development resources?", "hint": null, "blanks": [["where"], ["find", "get", "request"], ["professional", "online", "learning"]] },
+        { "template": "{0} is the {1} for the {2} management team's quarterly offsite?", "hint": null, "blanks": [["where"], ["venue", "location", "site"], ["senior", "regional", "project"]] },
+        { "template": "{0} are the {1} for the {2} safety drill stored?", "hint": null, "blanks": [["where"], ["instructions", "procedures", "guidelines"], ["annual", "fire", "emergency"]] },
+        { "template": "{0} {1} the {2} copies of the financial statements typically filed?", "hint": null, "blanks": [["where"], ["are", "get"], ["original", "certified", "signed"]] },
+        { "template": "{0} will the {1} client {2} session take place next month?", "hint": null, "blanks": [["where"], ["new", "key", "corporate"], ["briefing", "onboarding", "orientation"]] },
+        { "template": "{0} can I find the {1} for submitting a {2} reimbursement request?", "hint": null, "blanks": [["where"], ["form", "template", "link"], ["travel", "expense", "medical"]] },
+        { "template": "{0} is the {1} equipment {2} for the upcoming product demonstration?", "hint": null, "blanks": [["where"], ["presentation", "demo", "technical"], ["stored", "kept", "set up"]] },
+        { "template": "{0} are the backup {1} for the {2} operations centre kept?", "hint": null, "blanks": [["where"], ["files", "records", "logs"], ["regional", "main", "central"]] },
+        { "template": "{0} do we {1} the {2} documentation for regulatory inspections?", "hint": null, "blanks": [["where"], ["keep", "store", "archive"], ["compliance", "regulatory", "audit"]] },
+        { "template": "{0} should overseas {1} report on their first day at the {2} office?", "hint": null, "blanks": [["where"], ["staff", "employees", "hires"], ["main", "head", "regional"]] },
+        { "template": "{0} are the {1} for the {2} board of directors' meeting held?", "hint": null, "blanks": [["where"], ["sessions", "meetings", "discussions"], ["annual", "quarterly", "monthly"]] },
+        { "template": "{0} can I {1} the latest version of the {2} business continuity plan?", "hint": null, "blanks": [["where"], ["access", "find", "download"], ["company's", "updated", "revised"]] },
+        { "template": "{0} is the {1} point for the distribution of {2} parcels from overseas?", "hint": null, "blanks": [["where"], ["collection", "pickup", "receiving"], ["incoming", "international", "customs"]] }
+      ]
+    },
+    {
+      "kind": "match",
+      "title": "Bài 3 — Ghép câu hỏi & đáp án",
+      "instruction": "Chọn đáp án khớp đúng ngữ cảnh câu hỏi về địa điểm/nơi chốn.",
+      "items": [
+        {
+          "question": "Where should employees submit physical copies of expense claims?",
+          "options": ["At the reception desk on level two.", "In the document drop box outside the finance office.", "Via the HR self-service portal.", "In the storeroom on the ground floor.", "At the main security checkpoint."],
+          "correct": 1,
+          "explanation": "Nộp bản cứng phiếu chi phí cho phòng tài chính — hộp thư ngoài văn phòng finance là hợp lý nhất. Reception desk và security checkpoint không phải nơi nộp tài liệu tài chính."
+        },
+        {
+          "question": "Where are company-issued laptops collected when onboarding?",
+          "options": ["At the reception desk on level two.", "In the document drop box outside the finance office.", "Via the HR self-service portal.", "In the storeroom on the ground floor.", "At the main security checkpoint."],
+          "correct": 3,
+          "explanation": "Thiết bị IT thường được lấy từ kho (storeroom) hoặc phòng IT — storeroom tầng trệt là nơi hợp lý nhất."
+        },
+        {
+          "question": "Where do new employees collect their company ID badges?",
+          "options": ["At the reception desk on level two.", "In the document drop box outside the finance office.", "Via the HR self-service portal.", "In the storeroom on the ground floor.", "At the main security checkpoint."],
+          "correct": 4,
+          "explanation": "Thẻ bảo mật được phát tại điểm kiểm soát an ninh chính — đây là nơi quản lý quyền ra vào của nhân viên mới."
+        },
+        {
+          "question": "Where can employees update their personal contact details?",
+          "options": ["At the reception desk on level two.", "In the document drop box outside the finance office.", "Via the HR self-service portal.", "In the storeroom on the ground floor.", "At the main security checkpoint."],
+          "correct": 2,
+          "explanation": "Cập nhật thông tin cá nhân được thực hiện qua HR self-service portal — đây là kênh kỹ thuật số tiêu chuẩn cho việc tự phục vụ nhân sự."
+        },
+        {
+          "question": "Where should visitors report to upon arriving at the office building?",
+          "options": ["At the reception desk on level two.", "In the document drop box outside the finance office.", "Via the HR self-service portal.", "In the storeroom on the ground floor.", "At the main security checkpoint."],
+          "correct": 0,
+          "explanation": "Khách đến thăm báo cáo tại quầy lễ tân — đây là điểm tiếp đón tiêu chuẩn cho khách bên ngoài tại mọi văn phòng."
+        }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn đáp án & dịch sang tiếng Việt",
+      "instruction": "Chọn đáp án đúng nhất về địa điểm/nơi chốn trong bối cảnh doanh nghiệp.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        {
+          "prompt": "Where should a completed incident report be filed after a workplace accident?",
+          "options": ["In the employee's personal file.", "With the health and safety manager and HR simultaneously.", "In the shared team folder.", "At the front reception desk."],
+          "correct": 1,
+          "explanation": "Báo cáo sự cố sau tai nạn lao động cần nộp đồng thời cho quản lý an toàn sức khỏe và HR để đảm bảo tuân thủ pháp lý và lưu trữ hồ sơ nhân sự.",
+          "answerChunks": ["Với", "quản", "lý", "an", "toàn", "và", "HR", "đồng", "thời"],
+          "answerChunkDistractors": ["Tại", "quầy", "lễ", "tân"]
+        },
+        {
+          "prompt": "Where are confidential client contracts typically archived for long-term storage?",
+          "options": ["In the office manager's personal drawer.", "In a secure digital document management system.", "On the team's shared desktop folder.", "At the client's own premises."],
+          "correct": 1,
+          "explanation": "Hợp đồng khách hàng bảo mật cần được lưu trữ trong hệ thống quản lý tài liệu kỹ thuật số có bảo mật — không phải ngăn kéo cá nhân hay thư mục chia sẻ thông thường.",
+          "answerChunks": ["Hệ", "thống", "quản", "lý", "tài", "liệu", "kỹ", "thuật", "số", "bảo", "mật"],
+          "answerChunkDistractors": ["Ngăn", "kéo", "cá", "nhân"]
+        },
+        {
+          "prompt": "Where should an employee raise a concern about a colleague's behaviour before going to HR?",
+          "options": ["Directly with senior management.", "Informally with the line manager first.", "On the company intranet forum.", "Via an anonymous email."],
+          "correct": 1,
+          "explanation": "Trước khi leo thang lên HR, bước đầu tiên là nêu vấn đề với line manager một cách không chính thức — phù hợp với quy trình khiếu nại tiêu chuẩn.",
+          "answerChunks": ["Không", "chính", "thức", "với", "quản", "lý", "trực", "tiếp", "trước"],
+          "answerChunkDistractors": ["Trên", "diễn", "đàn", "nội", "bộ"]
+        },
+        {
+          "prompt": "Where do employees typically go to check their payslips and tax documents?",
+          "options": ["The HR department's physical office.", "The company's online employee self-service portal.", "The finance manager's desk.", "The payroll bulletin board."],
+          "correct": 1,
+          "explanation": "Bảng lương và tài liệu thuế được truy cập qua employee self-service portal — đây là chuẩn mực hiện đại thay thế cho việc đến văn phòng trực tiếp.",
+          "answerChunks": ["Cổng", "thông", "tin", "tự", "phục", "vụ", "nhân", "viên"],
+          "answerChunkDistractors": ["Bàn", "làm", "việc", "quản", "lý"]
+        },
+        {
+          "prompt": "Where should a new employee go if they experience technical issues with their workstation on their first day?",
+          "options": ["To their line manager's office.", "To the IT helpdesk or service desk.", "To the HR reception area.", "To the building facilities team."],
+          "correct": 1,
+          "explanation": "Vấn đề kỹ thuật máy trạm thuộc trách nhiệm của IT helpdesk/service desk — đây là đầu mối kỹ thuật đầu tiên trong mọi công ty.",
+          "answerChunks": ["Bộ", "phận", "hỗ", "trợ", "kỹ", "thuật", "IT"],
+          "answerChunkDistractors": ["Văn", "phòng", "quản", "lý"]
+        },
+        {
+          "prompt": "Where is the most appropriate place to store a meeting's action items and minutes?",
+          "options": ["In an email draft folder.", "In the shared project management tool or meeting log.", "In the chairperson's personal notes.", "In the office printer tray."],
+          "correct": 1,
+          "explanation": "Biên bản cuộc họp và action items cần được lưu trên công cụ quản lý dự án chia sẻ để tất cả người tham gia có thể truy cập và theo dõi.",
+          "answerChunks": ["Công", "cụ", "quản", "lý", "dự", "án", "chia", "sẻ"],
+          "answerChunkDistractors": ["Ghi", "chú", "cá", "nhân"]
+        },
+        {
+          "prompt": "Where should sensitive financial projections be sent to external stakeholders?",
+          "options": ["Via the company's public website download section.", "Through a secure encrypted file transfer channel.", "By attaching to a standard email.", "Via the company's social media channels."],
+          "correct": 1,
+          "explanation": "Dự báo tài chính nhạy cảm cần được gửi qua kênh truyền tải file được mã hóa bảo mật — không phải email thông thường hay trang web công khai.",
+          "answerChunks": ["Kênh", "truyền", "tải", "file", "được", "mã", "hóa", "bảo", "mật"],
+          "answerChunkDistractors": ["Trang", "web", "công", "khai"]
+        },
+        {
+          "prompt": "Where does an employee submit a formal request to work remotely on a regular basis?",
+          "options": ["Verbally to their team during a stand-up meeting.", "Via a written request to their manager and HR.", "By emailing the CEO directly.", "Through the payroll system."],
+          "correct": 1,
+          "explanation": "Yêu cầu làm việc từ xa thường xuyên cần được nộp bằng văn bản cho cả manager và HR để lưu hồ sơ chính thức và đánh giá tác động vận hành.",
+          "answerChunks": ["Yêu", "cầu", "bằng", "văn", "bản", "cho", "manager", "và", "HR"],
+          "answerChunkDistractors": ["Qua", "hệ", "thống", "bảng", "lương"]
+        },
+        {
+          "prompt": "Where are training completion records typically held for compliance auditing purposes?",
+          "options": ["In the employee's personal portfolio.", "In the Learning Management System (LMS).", "In the departmental shared drive.", "In the payroll database."],
+          "correct": 1,
+          "explanation": "Hồ sơ hoàn thành đào tạo được lưu trong Learning Management System (LMS) — đây là hệ thống chuẩn để truy xuất dữ liệu trong các cuộc kiểm toán tuân thủ.",
+          "answerChunks": ["Hệ", "thống", "quản", "lý", "học", "tập", "(LMS)"],
+          "answerChunkDistractors": ["Thư", "mục", "chia", "sẻ", "bộ", "phận"]
+        },
+        {
+          "prompt": "Where should a whistleblower report suspected fraudulent activities to ensure confidentiality?",
+          "options": ["Directly to their line manager.", "Via the designated confidential reporting hotline.", "By posting anonymously on the company intranet.", "To a colleague they trust."],
+          "correct": 1,
+          "explanation": "Đường dây tố cáo bảo mật được thiết kế đặc biệt để bảo vệ danh tính người tố giác — đây là kênh đảm bảo bảo mật nhất trong mọi trường hợp.",
+          "answerChunks": ["Đường", "dây", "tố", "cáo", "bảo", "mật", "được", "chỉ", "định"],
+          "answerChunkDistractors": ["Quản", "lý", "trực", "tiếp"]
+        },
+        {
+          "prompt": "Where should a product recall notice be posted to ensure maximum visibility to consumers?",
+          "options": ["Only on the company website.", "On the company website, in-store, and through official media channels.", "In an internal staff newsletter.", "Via a single press release."],
+          "correct": 1,
+          "explanation": "Thông báo thu hồi sản phẩm cần phổ biến qua nhiều kênh — website, điểm bán hàng, và truyền thông chính thức — để đảm bảo người tiêu dùng tiếp nhận thông tin.",
+          "answerChunks": ["Website,", "cửa", "hàng", "và", "kênh", "truyền", "thông", "chính", "thức"],
+          "answerChunkDistractors": ["Chỉ", "trên", "website", "công", "ty"]
+        },
+        {
+          "prompt": "Where are project milestone sign-off documents typically submitted at project closure?",
+          "options": ["To the project sponsor and project management office.", "To the client's accounts payable team.", "To the company's external auditors.", "To the marketing department."],
+          "correct": 0,
+          "explanation": "Tài liệu ký kết milestone khi đóng dự án được nộp cho project sponsor và PMO — những bên có trách nhiệm xác nhận dự án đã hoàn thành đúng phạm vi.",
+          "answerChunks": ["Nhà", "tài", "trợ", "dự", "án", "và", "văn", "phòng", "quản", "lý"],
+          "answerChunkDistractors": ["Bộ", "phận", "marketing"]
+        },
+        {
+          "prompt": "Where should a manager document an informal verbal warning given to an employee?",
+          "options": ["They should not document informal warnings.", "In a brief note filed in the employee's personnel record.", "In a public team performance report.", "In the company's annual review system."],
+          "correct": 1,
+          "explanation": "Ngay cả cảnh báo miệng không chính thức cũng nên được ghi chép ngắn gọn vào hồ sơ nhân sự — để có bằng chứng nếu cần leo thang kỷ luật sau này.",
+          "answerChunks": ["Ghi", "chú", "ngắn", "trong", "hồ", "sơ", "nhân", "sự"],
+          "answerChunkDistractors": ["Báo", "cáo", "hiệu", "suất", "công", "khai"]
+        },
+        {
+          "prompt": "Where do employees usually access the company's internal job vacancy listings?",
+          "options": ["On external recruitment websites.", "On the company intranet or internal careers page.", "Via a printed notice on the staff noticeboard only.", "Through a personal recommendation from HR."],
+          "correct": 1,
+          "explanation": "Tin tuyển dụng nội bộ được đăng trên intranet hoặc trang tuyển dụng nội bộ — đây là kênh chuẩn để nhân viên nắm bắt cơ hội thăng tiến nội bộ.",
+          "answerChunks": ["Intranet", "hoặc", "trang", "tuyển", "dụng", "nội", "bộ"],
+          "answerChunkDistractors": ["Trang", "tuyển", "dụng", "bên", "ngoài"]
+        }
+      ]
+    }
+  ]
+}

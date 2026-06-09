@@ -1,0 +1,211 @@
+{
+  "part": "part2-hard",
+  "questionWord": "yes-no",
+  "difficulty": "hard",
+  "label": "YES/NO",
+  "labelVi": "Câu hỏi YES/NO — Hard",
+  "passThreshold": 80,
+  "intro": "Hard: Viết câu hỏi Yes/No tự do, điền từ không có hỗ trợ, và chọn đáp án phù hợp nhất trong các tình huống văn phòng chuyên sâu.",
+  "exercises": [
+    {
+      "kind": "freewrite",
+      "title": "Bài 1 — Viết câu hỏi Yes/No hoàn chỉnh",
+      "instruction": "Dựa vào gợi ý tiếng Việt, viết câu hỏi Yes/No hoàn chỉnh bằng tiếng Anh.",
+      "items": [
+        { "prompt": "Bạn có thể xác nhận rằng hợp đồng đã được hai bên ký kết chưa?", "answer": "Can you confirm that the contract has been signed by both parties?", "acceptedAnswers": ["Has the contract been signed by both parties?"] },
+        { "prompt": "Ban quản lý có nhận thức được vấn đề về hệ thống trước khi nó bị sập không?", "answer": "Was management aware of the system issue before it went down?", "acceptedAnswers": ["Did management know about the system problem before it crashed?"] },
+        { "prompt": "Ngân sách quý này đã được hội đồng phê duyệt chưa?", "answer": "Has the budget for this quarter been approved by the board?", "acceptedAnswers": ["Did the board approve this quarter's budget?"] },
+        { "prompt": "Cô ấy đã thông báo cho nhóm về việc thay đổi thời gian họp chưa?", "answer": "Has she informed the team about the change in meeting time?", "acceptedAnswers": ["Did she notify the team of the rescheduled meeting?"] },
+        { "prompt": "Tất cả các nhân viên mới có bắt buộc phải tham gia buổi định hướng không?", "answer": "Are all new employees required to attend the orientation session?", "acceptedAnswers": ["Is attendance at the orientation session mandatory for new staff?"] },
+        { "prompt": "Công ty có cung cấp bảo hiểm sức khỏe cho nhân viên làm bán thời gian không?", "answer": "Does the company provide health insurance for part-time employees?", "acceptedAnswers": ["Is health insurance available to part-time staff?"] },
+        { "prompt": "Bản báo cáo tài chính hàng quý đã được nộp đúng hạn chưa?", "answer": "Has the quarterly financial report been submitted on time?", "acceptedAnswers": ["Was the quarterly financial report filed on time?"] },
+        { "prompt": "Phòng họp tầng ba có còn trống vào chiều thứ Năm không?", "answer": "Is the meeting room on the third floor still available on Thursday afternoon?", "acceptedAnswers": ["Is the third-floor meeting room free on Thursday afternoon?"] },
+        { "prompt": "Nhà cung cấp đã xác nhận ngày giao hàng của đơn đặt hàng mới nhất chưa?", "answer": "Has the supplier confirmed the delivery date for the latest order?", "acceptedAnswers": ["Did the vendor confirm when the most recent order will be delivered?"] },
+        { "prompt": "Dự án có thể hoàn thành trước khi kết thúc quý tài chính không?", "answer": "Can the project be completed before the end of the financial quarter?", "acceptedAnswers": ["Is it possible to finish the project before the financial quarter ends?"] },
+        { "prompt": "Nhân viên bán hàng mới có đủ điều kiện nhận thưởng hiệu suất quý này không?", "answer": "Is the new sales associate eligible for the performance bonus this quarter?", "acceptedAnswers": ["Does the new sales staff member qualify for a performance bonus this quarter?"] },
+        { "prompt": "Giám đốc điều hành có tham dự buổi ra mắt sản phẩm tuần tới không?", "answer": "Will the chief executive be attending the product launch next week?", "acceptedAnswers": ["Is the CEO going to attend the product launch next week?"] },
+        { "prompt": "Chúng ta có cần cập nhật chính sách bảo mật dữ liệu trước cuộc kiểm toán không?", "answer": "Do we need to update the data security policy before the audit?", "acceptedAnswers": ["Should we revise the data security policy prior to the audit?"] },
+        { "prompt": "Tất cả các yêu cầu kỹ thuật đã được ghi lại đầy đủ trong hồ sơ dự án chưa?", "answer": "Have all the technical requirements been fully documented in the project file?", "acceptedAnswers": ["Are all technical requirements properly recorded in the project documentation?"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ hoàn toàn tự do",
+      "instruction": "Điền từ còn thiếu để hoàn thành câu hỏi Yes/No. Không có gợi ý, không có word bank.",
+      "items": [
+        { "template": "{0} the procurement team {1} approval before placing {2} exceeding the threshold?", "hint": null, "blanks": [["does", "did"], ["require", "need", "get"], ["orders", "purchases"]] },
+        { "template": "{0} all remote employees been {1} with the updated VPN {2}?", "hint": null, "blanks": [["have"], ["issued", "provided", "equipped"], ["credentials", "access", "software"]] },
+        { "template": "{0} it be possible to {1} the contract {2} without incurring a penalty?", "hint": null, "blanks": [["would", "will", "could"], ["extend", "renew", "terminate"], ["early", "now"]] },
+        { "template": "{0} the new {1} software compatible with our existing {2} infrastructure?", "hint": null, "blanks": [["is"], ["accounting", "payroll", "HR"], ["IT", "legacy", "cloud"]] },
+        { "template": "{0} any employees {1} formally {2} against the recent restructuring decision?", "hint": null, "blanks": [["have"], ["appealed", "complained", "objected"], ["formally"]] },
+        { "template": "{0} the final {1} of the annual report been {2} by the audit committee?", "hint": null, "blanks": [["has"], ["version", "draft", "copy"], ["approved", "reviewed", "signed off"]] },
+        { "template": "{0} she confirm {1} the conference {2} will be held in the main auditorium?", "hint": null, "blanks": [["can", "could", "did"], ["that", "whether"], ["session", "event"]] },
+        { "template": "{0} the {1} team notified all {2} of the system maintenance window?", "hint": null, "blanks": [["has"], ["IT", "technical", "support"], ["users", "staff", "departments"]] },
+        { "template": "{0} the onboarding {1} for new hires include a {2} with the compliance officer?", "hint": null, "blanks": [["does"], ["process", "checklist", "programme"], ["meeting", "briefing", "session"]] },
+        { "template": "{0} there been any {1} to the original project {2} since the kickoff meeting?", "hint": null, "blanks": [["have"], ["changes", "amendments", "updates"], ["scope", "timeline", "plan"]] },
+        { "template": "{0} the {1} for the overseas assignment include a relocation {2}?", "hint": null, "blanks": [["does"], ["package", "offer", "contract"], ["allowance", "subsidy", "bonus"]] },
+        { "template": "{0} all {1} participants registered before the {2} registration deadline?", "hint": null, "blanks": [["have"], ["conference", "training", "workshop"], ["early", "formal"]] },
+        { "template": "{0} the client {1} their satisfaction with the {2} submitted last week?", "hint": null, "blanks": [["has"], ["confirmed", "expressed", "indicated"], ["proposal", "report", "deliverable"]] },
+        { "template": "{0} there a formal {1} in place for handling {2} from international customers?", "hint": null, "blanks": [["is"], ["procedure", "policy", "protocol"], ["complaints", "disputes", "queries"]] }
+      ]
+    },
+    {
+      "kind": "match",
+      "title": "Bài 3 — Ghép câu hỏi & đáp án",
+      "instruction": "Chọn đáp án Yes/No phù hợp nhất với từng câu hỏi. Tất cả đáp án đều bắt đầu bằng Yes hoặc No — đọc kỹ nội dung cụ thể.",
+      "items": [
+        {
+          "question": "Has the final version of the employee handbook been distributed to all departments?",
+          "options": ["Yes, it was emailed to all department heads earlier today.", "No, the IT system is currently undergoing scheduled maintenance.", "Yes, the catering order for the conference has been confirmed.", "No, the office relocation has been postponed to next year.", "Yes, all travel expenses under five hundred dollars are pre-approved."],
+          "correct": 0,
+          "explanation": "Câu hỏi về việc phân phối handbook — đáp án đúng là: 'Có, đã được gửi email cho tất cả trưởng bộ phận sáng nay.' Các đáp án khác nói về IT, đặt đồ ăn, chuyển văn phòng hoặc chi phí — không liên quan."
+        },
+        {
+          "question": "Is the company's data centre scheduled for maintenance this weekend?",
+          "options": ["Yes, it was emailed to all department heads earlier today.", "No, the IT system is currently undergoing scheduled maintenance.", "Yes, the catering order for the conference has been confirmed.", "No, the office relocation has been postponed to next year.", "Yes, all travel expenses under five hundred dollars are pre-approved."],
+          "correct": 1,
+          "explanation": "Câu hỏi về lịch bảo trì trung tâm dữ liệu — đáp án hợp lý nhất là: 'Không, hệ thống IT hiện đang trong quá trình bảo trì theo lịch.' Đây là thông tin liên quan nhất đến trạng thái hệ thống kỹ thuật."
+        },
+        {
+          "question": "Has the catering for the annual client conference been arranged?",
+          "options": ["Yes, it was emailed to all department heads earlier today.", "No, the IT system is currently undergoing scheduled maintenance.", "Yes, the catering order for the conference has been confirmed.", "No, the office relocation has been postponed to next year.", "Yes, all travel expenses under five hundred dollars are pre-approved."],
+          "correct": 2,
+          "explanation": "Câu hỏi về việc sắp xếp catering cho hội nghị — đáp án đúng là: 'Có, đơn hàng catering cho hội nghị đã được xác nhận.'"
+        },
+        {
+          "question": "Is the planned office move still going ahead as scheduled next month?",
+          "options": ["Yes, it was emailed to all department heads earlier today.", "No, the IT system is currently undergoing scheduled maintenance.", "Yes, the catering order for the conference has been confirmed.", "No, the office relocation has been postponed to next year.", "Yes, all travel expenses under five hundred dollars are pre-approved."],
+          "correct": 3,
+          "explanation": "Câu hỏi về kế hoạch chuyển văn phòng — đáp án đúng là: 'Không, việc chuyển văn phòng đã bị hoãn sang năm sau.' Đây là thông tin cập nhật trực tiếp về trạng thái kế hoạch."
+        },
+        {
+          "question": "Do employees need prior authorisation for domestic business travel below a certain amount?",
+          "options": ["Yes, it was emailed to all department heads earlier today.", "No, the IT system is currently undergoing scheduled maintenance.", "Yes, the catering order for the conference has been confirmed.", "No, the office relocation has been postponed to next year.", "Yes, all travel expenses under five hundred dollars are pre-approved."],
+          "correct": 4,
+          "explanation": "Câu hỏi về ủy quyền trước cho chi phí công tác — đáp án đúng là: 'Có, tất cả chi phí đi lại dưới 500 đô la đều được phê duyệt trước.' Đây là thông tin chính sách cụ thể và phù hợp nhất."
+        }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn đáp án & dịch sang tiếng Việt",
+      "instruction": "Chọn đáp án phù hợp nhất cho từng câu hỏi Yes/No trong môi trường doanh nghiệp.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        {
+          "prompt": "Has the revised data privacy policy been reviewed by the legal team?",
+          "options": ["Yes, it was reviewed and approved last Friday.", "No, but it is scheduled for review later in the year.", "Yes, but only by the communications department.", "No, the policy was written by an external consultant."],
+          "correct": 0,
+          "explanation": "Đáp án xác nhận rõ ràng đã được xem xét và phê duyệt — đây là câu trả lời trực tiếp và hoàn chỉnh nhất cho câu hỏi Yes/No về việc nhóm pháp lý đã review chưa.",
+          "answerChunks": ["Có,", "đã", "được", "xem", "xét", "và", "phê", "duyệt", "thứ", "Sáu", "tuần", "trước"],
+          "answerChunkDistractors": ["Không,", "chỉ", "bộ", "phận", "truyền", "thông"]
+        },
+        {
+          "prompt": "Is the recruitment freeze still in effect for all non-essential positions?",
+          "options": ["Yes, it has been extended until the end of the fiscal year.", "No, all departments can hire freely now.", "Yes, but only for permanent roles in finance.", "No, because the company exceeded its annual revenue target."],
+          "correct": 0,
+          "explanation": "Đáp án xác nhận lệnh đóng băng tuyển dụng vẫn còn hiệu lực và được gia hạn đến cuối năm tài chính — rõ ràng, cụ thể và nhất quán với ngữ cảnh.",
+          "answerChunks": ["Có,", "đã", "được", "gia", "hạn", "đến", "cuối", "năm", "tài", "chính"],
+          "answerChunkDistractors": ["Không,", "tất", "cả", "bộ", "phận", "có", "thể", "tuyển", "dụng"]
+        },
+        {
+          "prompt": "Can the quarterly targets be adjusted if market conditions change significantly?",
+          "options": ["Yes, but only with board-level approval and documented justification.", "No, targets are fixed for the entire financial year.", "Yes, any team leader can adjust targets as needed.", "No, because the targets were set by external consultants."],
+          "correct": 0,
+          "explanation": "Điều chỉnh mục tiêu hàng quý hợp lý nhất khi cần phê duyệt cấp hội đồng và lý do ghi chép — cân bằng giữa linh hoạt và kiểm soát quản trị.",
+          "answerChunks": ["Có,", "nhưng", "cần", "phê", "duyệt", "cấp", "hội", "đồng", "và", "lý", "do", "ghi", "chép"],
+          "answerChunkDistractors": ["Không,", "mục", "tiêu", "cố", "định", "cả", "năm"]
+        },
+        {
+          "prompt": "Did the new branch in Singapore open on schedule last month?",
+          "options": ["Yes, the grand opening was held as planned on the fifteenth.", "No, there were unexpected delays due to licensing issues.", "Yes, but only a temporary office is currently operational.", "No, the decision to open was reversed by senior management."],
+          "correct": 1,
+          "explanation": "Đáp án 'Không, có sự chậm trễ bất ngờ do vấn đề cấp phép' là câu trả lời trực tiếp nhất về lý do khai trương không đúng lịch — tình huống thực tế phổ biến trong mở rộng quốc tế.",
+          "answerChunks": ["Không,", "có", "sự", "chậm", "trễ", "bất", "ngờ", "do", "vấn", "đề", "cấp", "phép"],
+          "answerChunkDistractors": ["Có,", "lễ", "khai", "trương", "diễn", "ra", "như", "kế", "hoạch"]
+        },
+        {
+          "prompt": "Has the customer satisfaction survey for the fourth quarter been completed?",
+          "options": ["Yes, results are being compiled and will be ready next week.", "No, it has been postponed due to the product recall.", "Yes, but only fifty percent of customers responded.", "No, the survey platform experienced technical difficulties."],
+          "correct": 0,
+          "explanation": "Đáp án xác nhận khảo sát đã hoàn thành và kết quả đang được tổng hợp — trả lời trực tiếp Yes và cung cấp thông tin tiếp theo hữu ích.",
+          "answerChunks": ["Có,", "kết", "quả", "đang", "được", "tổng", "hợp", "và", "sẽ", "sẵn", "sàng", "tuần", "tới"],
+          "answerChunkDistractors": ["Không,", "đã", "bị", "hoãn", "do", "thu", "hồi", "sản", "phẩm"]
+        },
+        {
+          "prompt": "Is the company's graduate scheme open to applicants from all university disciplines?",
+          "options": ["Yes, candidates from any degree background are welcome to apply.", "No, only engineering and computer science graduates are eligible.", "Yes, but priority is given to graduates from partner universities.", "No, the scheme was discontinued after the merger."],
+          "correct": 0,
+          "explanation": "Chương trình dành cho sinh viên tốt nghiệp mở rộng cho mọi ngành học — đây là câu trả lời khẳng định rõ ràng nhất mà không đặt thêm điều kiện không cần thiết.",
+          "answerChunks": ["Có,", "ứng", "viên", "từ", "bất", "kỳ", "ngành", "học", "nào", "đều", "được", "chào", "đón"],
+          "answerChunkDistractors": ["Không,", "chỉ", "kỹ", "thuật", "và", "khoa", "học", "máy", "tính"]
+        },
+        {
+          "prompt": "Were all the key deliverables from the last sprint completed within the agreed timeframe?",
+          "options": ["Yes, the team finished ahead of schedule.", "No, two items were rolled over to the next sprint.", "Yes, but some items required additional testing after sign-off.", "No, the client requested scope changes mid-sprint."],
+          "correct": 1,
+          "explanation": "Đáp án 'Không, hai hạng mục đã được chuyển sang sprint tiếp theo' là câu trả lời trực tiếp nhất về việc không hoàn thành trong thời gian đã thỏa thuận.",
+          "answerChunks": ["Không,", "hai", "hạng", "mục", "đã", "được", "chuyển", "sang", "sprint", "tiếp", "theo"],
+          "answerChunkDistractors": ["Có,", "nhóm", "hoàn", "thành", "trước", "lịch"]
+        },
+        {
+          "prompt": "Has the company's ISO certification been renewed for the upcoming year?",
+          "options": ["Yes, the renewal audit passed with no major non-conformances.", "No, the certification lapsed after the audit was rescheduled.", "Yes, but only for the manufacturing division.", "No, the company is transitioning to a different standard."],
+          "correct": 0,
+          "explanation": "Kiểm toán gia hạn đã qua mà không có sự không phù hợp lớn — đây là kết quả lý tưởng và câu trả lời trực tiếp xác nhận gia hạn thành công.",
+          "answerChunks": ["Có,", "kiểm", "toán", "gia", "hạn", "đã", "qua", "mà", "không", "có", "sự", "không", "phù", "hợp", "lớn"],
+          "answerChunkDistractors": ["Không,", "chứng", "nhận", "đã", "hết", "hạn"]
+        },
+        {
+          "prompt": "Do employees who work overtime receive additional compensation under the current policy?",
+          "options": ["Yes, all approved overtime is compensated at a rate of one and a half times.", "No, overtime is considered part of the standard employment terms.", "Yes, but only for staff in grade seven or above.", "No, staff receive time off in lieu instead of payment."],
+          "correct": 0,
+          "explanation": "Bồi thường làm thêm giờ ở mức 1,5 lần lương là quy định phổ biến nhất và câu trả lời trực tiếp xác nhận có bồi thường bổ sung.",
+          "answerChunks": ["Có,", "tất", "cả", "làm", "thêm", "giờ", "được", "phê", "duyệt", "được", "trả", "gấp", "1,5", "lần"],
+          "answerChunkDistractors": ["Không,", "nhân", "viên", "được", "nghỉ", "bù"]
+        },
+        {
+          "prompt": "Has the supplier invoice been matched to the corresponding purchase order?",
+          "options": ["Yes, the three-way match was completed by accounts payable this morning.", "No, the invoice arrived before the purchase order was issued.", "Yes, but a discrepancy in the unit price was flagged for review.", "No, the invoice was sent to the wrong department by mistake."],
+          "correct": 0,
+          "explanation": "Three-way match hoàn thành bởi bộ phận kế toán phải trả sáng nay — đây là câu trả lời trực tiếp nhất xác nhận quy trình đối chiếu hóa đơn đã được hoàn tất.",
+          "answerChunks": ["Có,", "đối", "chiếu", "ba", "chiều", "đã", "hoàn", "thành", "bởi", "kế", "toán", "sáng", "nay"],
+          "answerChunkDistractors": ["Không,", "hóa", "đơn", "đến", "trước", "khi", "tạo", "PO"]
+        },
+        {
+          "prompt": "Can the training programme be delivered entirely online for remote teams?",
+          "options": ["Yes, an e-learning version has already been developed and tested.", "No, attendance at the head office is required for certification.", "Yes, but only the theoretical modules are available digitally.", "No, the facilitators do not have the technical equipment needed."],
+          "correct": 0,
+          "explanation": "Phiên bản e-learning đã được phát triển và kiểm tra — đây là câu trả lời trực tiếp xác nhận khả năng đào tạo hoàn toàn trực tuyến cho nhóm từ xa.",
+          "answerChunks": ["Có,", "phiên", "bản", "e-learning", "đã", "được", "phát", "triển", "và", "kiểm", "tra"],
+          "answerChunkDistractors": ["Không,", "phải", "có", "mặt", "tại", "trụ", "sở"]
+        },
+        {
+          "prompt": "Was the stakeholder feedback incorporated into the final version of the proposal?",
+          "options": ["Yes, all major comments were addressed before submission.", "No, the deadline did not allow time for revisions.", "Yes, but some minor suggestions were deferred to the next phase.", "No, the feedback arrived after the document was already approved."],
+          "correct": 0,
+          "explanation": "Tất cả nhận xét chính đã được giải quyết trước khi nộp — đây là câu trả lời xác nhận đầy đủ nhất rằng phản hồi đã được tích hợp.",
+          "answerChunks": ["Có,", "tất", "cả", "nhận", "xét", "chính", "đã", "được", "giải", "quyết", "trước", "khi", "nộp"],
+          "answerChunkDistractors": ["Không,", "thời", "hạn", "không", "cho", "phép", "sửa", "đổi"]
+        },
+        {
+          "prompt": "Is the conference registration system currently accepting submissions?",
+          "options": ["Yes, registration closes at the end of the business day on Friday.", "No, the system is offline for emergency maintenance.", "Yes, but early bird pricing has already ended.", "No, the event was cancelled due to insufficient sign-ups."],
+          "correct": 0,
+          "explanation": "Đăng ký đang mở và đóng vào cuối ngày làm việc thứ Sáu — câu trả lời trực tiếp xác nhận hệ thống đang hoạt động và cung cấp thời hạn quan trọng.",
+          "answerChunks": ["Có,", "đăng", "ký", "đóng", "vào", "cuối", "ngày", "làm", "việc", "thứ", "Sáu"],
+          "answerChunkDistractors": ["Không,", "hệ", "thống", "đang", "bảo", "trì", "khẩn"]
+        },
+        {
+          "prompt": "Has the new health and safety policy been communicated to all site workers?",
+          "options": ["Yes, a briefing was conducted at all sites last week.", "No, only management staff have been informed so far.", "Yes, but the documentation has not been formally signed off.", "No, translation into other languages is still pending."],
+          "correct": 0,
+          "explanation": "Buổi thông báo đã được tổ chức tại tất cả các địa điểm tuần trước — xác nhận trực tiếp chính sách đã được truyền đạt đến tất cả công nhân tại công trường.",
+          "answerChunks": ["Có,", "buổi", "thông", "báo", "đã", "được", "tổ", "chức", "tại", "tất", "cả", "địa", "điểm", "tuần", "trước"],
+          "answerChunkDistractors": ["Không,", "chỉ", "quản", "lý", "được", "thông", "báo"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "part": "part2-hard",
+  "questionWord": "who",
+  "difficulty": "hard",
+  "label": "WHO",
+  "labelVi": "Câu hỏi WHO — Hard",
+  "passThreshold": 80,
+  "intro": "Hard: Viết toàn bộ câu hỏi tiếng Anh không có hỗ trợ, điền từ hoàn toàn tự do, ghép ngữ cảnh phức tạp và phân biệt chức danh trong tình huống doanh nghiệp thực tế.",
+  "exercises": [
+    {
+      "kind": "freewrite",
+      "title": "Bài 1 — Viết câu hỏi WHO hoàn chỉnh",
+      "instruction": "Dựa vào gợi ý tiếng Việt, viết câu hỏi WHO hoàn chỉnh bằng tiếng Anh. Không có từ gợi ý — hãy tự nhớ và viết.",
+      "items": [
+        { "prompt": "Ai chịu trách nhiệm về chiến lược tiếp thị toàn cầu?", "answer": "Who is responsible for the global marketing strategy?", "acceptedAnswers": ["Who is in charge of the global marketing strategy?"] },
+        { "prompt": "Ai đã ký kết hợp đồng với nhà thầu phụ?", "answer": "Who signed the contract with the subcontractor?", "acceptedAnswers": ["Who signed the subcontractor contract?"] },
+        { "prompt": "Ai sẽ tiến hành đánh giá hiệu suất hàng năm?", "answer": "Who will conduct the annual performance review?", "acceptedAnswers": ["Who will carry out the annual performance review?"] },
+        { "prompt": "Ai được bổ nhiệm làm trưởng nhóm dự án mới?", "answer": "Who was appointed as the new project team leader?", "acceptedAnswers": ["Who was appointed the new project team leader?"] },
+        { "prompt": "Ai cần phê duyệt ngân sách chi tiêu bổ sung?", "answer": "Who needs to approve the additional expenditure budget?", "acceptedAnswers": ["Who needs to approve the extra budget?"] },
+        { "prompt": "Ai đang giám sát quá trình kiểm toán nội bộ?", "answer": "Who is overseeing the internal audit process?", "acceptedAnswers": ["Who is supervising the internal audit?"] },
+        { "prompt": "Ai liên lạc với bên cung cấp dịch vụ khi xảy ra sự cố?", "answer": "Who contacts the service provider when an incident occurs?", "acceptedAnswers": ["Who do we contact when there is an incident?"] },
+        { "prompt": "Ai phụ trách việc đào tạo nhân viên mới vào bộ phận kỹ thuật?", "answer": "Who is in charge of training new staff in the technical department?", "acceptedAnswers": ["Who handles training new employees in the technical department?"] },
+        { "prompt": "Ai đã đàm phán điều khoản gia hạn hợp đồng thuê văn phòng?", "answer": "Who negotiated the office lease renewal terms?", "acceptedAnswers": ["Who negotiated the terms for the office lease renewal?"] },
+        { "prompt": "Ai chịu trách nhiệm phê duyệt đơn xin nghỉ phép dài hạn?", "answer": "Who is responsible for approving extended leave requests?", "acceptedAnswers": ["Who approves extended leave applications?"] },
+        { "prompt": "Ai thực hiện kiểm tra an toàn lao động định kỳ?", "answer": "Who carries out the periodic occupational safety inspections?", "acceptedAnswers": ["Who conducts the regular safety inspections?"] },
+        { "prompt": "Ai được ủy quyền ký các hóa đơn có giá trị trên 50 triệu?", "answer": "Who is authorized to sign invoices over 50 million?", "acceptedAnswers": ["Who has the authority to sign invoices exceeding 50 million?"] },
+        { "prompt": "Ai điều phối giữa các chi nhánh trong nước và quốc tế?", "answer": "Who coordinates between the domestic and international branches?", "acceptedAnswers": ["Who coordinates the domestic and overseas branches?"] },
+        { "prompt": "Ai sẽ thay thế giám đốc điều hành trong thời gian nghỉ phép?", "answer": "Who will replace the CEO during the leave period?", "acceptedAnswers": ["Who will cover for the CEO during his leave?"] }
+      ]
+    },
+    {
+      "kind": "fill",
+      "title": "Bài 2 — Điền từ hoàn toàn tự do",
+      "instruction": "Điền từ còn thiếu để hoàn thành câu hỏi. Không có gợi ý tiếng Việt, không có word bank.",
+      "items": [
+        { "template": "{0} is {1} for {2} the quarterly compliance report to the board?", "hint": null, "blanks": [["who"], ["responsible", "accountable"], ["presenting", "submitting", "delivering"]] },
+        { "template": "{0} {1} the final {2} before the product launch?", "hint": null, "blanks": [["who"], ["approved", "authorized", "signed off on"], ["prototype", "design", "version"]] },
+        { "template": "{0} do we {1} if the {2} system fails during peak hours?", "hint": null, "blanks": [["who"], ["contact", "call", "notify"], ["payment", "ordering", "booking"]] },
+        { "template": "{0} is {1} the cross-functional {2} integration project?", "hint": null, "blanks": [["who"], ["leading", "heading", "overseeing"], ["system", "department", "team"]] },
+        { "template": "{0} {1} the authority to {2} new vendor agreements without prior notice?", "hint": null, "blanks": [["who"], ["has", "holds"], ["sign", "execute", "approve"]] },
+        { "template": "{0} was {1} to {2} client feedback after the service disruption?", "hint": null, "blanks": [["who"], ["assigned", "designated", "appointed"], ["address", "handle", "manage"]] },
+        { "template": "{0} {1} the warehouse {2} before it was cleared for dispatch?", "hint": null, "blanks": [["who"], ["inspected", "checked", "audited"], ["inventory", "shipment", "stock"]] },
+        { "template": "{0} should I {1} to about {2} my health benefit claims?", "hint": null, "blanks": [["who"], ["speak", "talk", "report"], ["submitting", "filing", "processing"]] },
+        { "template": "{0} {1} the performance metrics for the {2} sales team last quarter?", "hint": null, "blanks": [["who"], ["reviewed", "analyzed", "assessed"], ["regional", "overseas", "national"]] },
+        { "template": "{0} holds the {1} {2} for the executive decision-making process?", "hint": null, "blanks": [["who"], ["final", "casting", "deciding"], ["vote", "say", "authority"]] },
+        { "template": "{0} {1} the feasibility study for the {2} expansion plan?", "hint": null, "blanks": [["who"], ["conducted", "completed", "prepared"], ["overseas", "regional", "market"]] },
+        { "template": "{0} is {1} as the interim {2} while Ms. Park is on maternity leave?", "hint": null, "blanks": [["who"], ["serving", "acting"], ["director", "manager", "supervisor"]] },
+        { "template": "{0} {1} the discrepancy in the {2} payroll records last month?", "hint": null, "blanks": [["who"], ["noticed", "reported", "discovered"], ["monthly", "quarterly", "annual"]] },
+        { "template": "{0} has {1} to {2} the budget allocation for the new division?", "hint": null, "blanks": [["who"], ["authority", "permission", "approval"], ["revise", "adjust", "modify"]] }
+      ]
+    },
+    {
+      "kind": "match",
+      "title": "Bài 3 — Ghép câu hỏi & đáp án (ngữ cảnh phức tạp)",
+      "instruction": "Tất cả đáp án đều dùng chức danh người — chọn đáp án khớp chính xác với ngữ cảnh câu hỏi.",
+      "items": [
+        {
+          "question": "Who is responsible for approving large capital expenditure requests?",
+          "options": ["The chief financial officer does.", "The operations director handles that.", "The procurement manager reviews those.", "The department head signs off on them.", "The budget analyst prepares the reports."],
+          "correct": 0,
+          "explanation": "Phê duyệt chi tiêu vốn lớn là quyền CFO. Operations director quản lý vận hành; procurement manager xử lý mua sắm; department head phê duyệt ở cấp bộ phận nhỏ hơn."
+        },
+        {
+          "question": "Who handles day-to-day logistics and warehouse coordination?",
+          "options": ["The chief financial officer does.", "The operations director handles that.", "The procurement manager reviews those.", "The department head signs off on them.", "The budget analyst prepares the reports."],
+          "correct": 1,
+          "explanation": "Vận hành hàng ngày và phối hợp kho là vai trò của operations director — không phải CFO hay procurement manager."
+        },
+        {
+          "question": "Who evaluates supplier contracts and sourcing agreements?",
+          "options": ["The chief financial officer does.", "The operations director handles that.", "The procurement manager reviews those.", "The department head signs off on them.", "The budget analyst prepares the reports."],
+          "correct": 2,
+          "explanation": "Đánh giá hợp đồng nhà cung cấp là nhiệm vụ của procurement manager, không phải CFO hay operations director."
+        },
+        {
+          "question": "Who gives the final internal clearance before a project is submitted to management?",
+          "options": ["The chief financial officer does.", "The operations director handles that.", "The procurement manager reviews those.", "The department head signs off on them.", "The budget analyst prepares the reports."],
+          "correct": 3,
+          "explanation": "Phê duyệt nội bộ cuối trước khi nộp lên quản lý cấp cao là vai trò của department head — đây là cấp kiểm soát trực tiếp nhất."
+        },
+        {
+          "question": "Who compiles the variance analysis for quarterly spending reviews?",
+          "options": ["The chief financial officer does.", "The operations director handles that.", "The procurement manager reviews those.", "The department head signs off on them.", "The budget analyst prepares the reports."],
+          "correct": 4,
+          "explanation": "Phân tích chênh lệch ngân sách quý là công việc của budget analyst, không phải CFO hay department head."
+        }
+      ]
+    },
+    {
+      "kind": "mcq",
+      "title": "Bài 4 — Chọn đáp án & dịch sang tiếng Việt",
+      "instruction": "Chọn đáp án đúng nhất trong ngữ cảnh. Các lựa chọn rất gần nhau — đọc kỹ mức độ quyền hạn và chức năng.",
+      "translateMode": "always",
+      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "items": [
+        {
+          "prompt": "Who has the final authority to terminate a senior employee's contract?",
+          "options": ["The HR business partner.", "The CEO or board of directors.", "The department head.", "The line manager."],
+          "correct": 1,
+          "explanation": "Chấm dứt hợp đồng nhân viên cấp cao cần quyết định từ CEO hoặc hội đồng quản trị. HR business partner xử lý thủ tục; department head và line manager thiếu thẩm quyền ở cấp đó.",
+          "answerChunks": ["Giám", "đốc", "điều", "hành", "hoặc", "hội", "đồng"],
+          "answerChunkDistractors": ["Trưởng", "bộ", "phận", "nhân", "sự"]
+        },
+        {
+          "prompt": "Who is typically the first point of contact for a new client onboarding?",
+          "options": ["The account manager.", "The billing department.", "The legal team.", "The IT support desk."],
+          "correct": 0,
+          "explanation": "Account manager là đầu mối đầu tiên khi khách hàng mới gia nhập. Billing, legal, IT support là các bộ phận hỗ trợ sau giai đoạn đầu.",
+          "answerChunks": ["Quản", "lý", "tài", "khoản"],
+          "answerChunkDistractors": ["Bộ", "phận", "hỗ", "trợ"]
+        },
+        {
+          "prompt": "Who coordinates between the legal department and the finance team during a merger?",
+          "options": ["The compliance officer.", "The chief operating officer.", "The corporate secretary.", "The integration manager."],
+          "correct": 3,
+          "explanation": "Integration manager chuyên phối hợp giữa các phòng ban trong quá trình M&A. Corporate secretary xử lý thủ tục pháp lý; COO quản lý vận hành chung.",
+          "answerChunks": ["Giám", "đốc", "tích", "hợp"],
+          "answerChunkDistractors": ["Pháp", "lý", "tuân", "thủ"]
+        },
+        {
+          "prompt": "Who is responsible for ensuring data protection compliance under GDPR?",
+          "options": ["The IT manager.", "The data protection officer.", "The security analyst.", "The chief information officer."],
+          "correct": 1,
+          "explanation": "Data Protection Officer (DPO) là vai trò pháp định theo GDPR. IT manager và security analyst hỗ trợ kỹ thuật; CIO quản lý chiến lược IT tổng thể.",
+          "answerChunks": ["Cán", "bộ", "bảo", "vệ", "dữ", "liệu"],
+          "answerChunkDistractors": ["Giám", "đốc", "công", "nghệ"]
+        },
+        {
+          "prompt": "Who should be notified first when a safety incident occurs on-site?",
+          "options": ["The project manager.", "The health and safety officer.", "The site supervisor.", "The operations director."],
+          "correct": 2,
+          "explanation": "Site supervisor là người hiện diện trực tiếp tại công trường — phải được thông báo ngay lập tức. HSO được thông báo ngay sau; project manager và operations director ở cấp quản lý cao hơn.",
+          "answerChunks": ["Giám", "sát", "công", "trường"],
+          "answerChunkDistractors": ["An", "toàn", "lao", "động"]
+        },
+        {
+          "prompt": "Who signs off on employee performance improvement plans?",
+          "options": ["The HR generalist.", "The line manager and HR business partner.", "The payroll officer.", "The training coordinator."],
+          "correct": 1,
+          "explanation": "PIP yêu cầu chữ ký của cả line manager (người trực tiếp giám sát) và HR business partner (đại diện nhân sự). Chỉ một trong hai là không đủ.",
+          "answerChunks": ["Quản", "lý", "trực", "tiếp", "và", "đối", "tác", "nhân", "sự"],
+          "answerChunkDistractors": ["Điều", "phối", "đào", "tạo"]
+        },
+        {
+          "prompt": "Who is accountable for the organization's overall risk management framework?",
+          "options": ["The risk analyst.", "The internal auditor.", "The chief risk officer.", "The compliance manager."],
+          "correct": 2,
+          "explanation": "Chief Risk Officer (CRO) chịu trách nhiệm toàn bộ khung quản lý rủi ro. Risk analyst và compliance manager hỗ trợ; internal auditor kiểm tra độc lập nhưng không xây dựng framework.",
+          "answerChunks": ["Giám", "đốc", "quản", "lý", "rủi", "ro"],
+          "answerChunkDistractors": ["Kiểm", "toán", "nội", "bộ"]
+        },
+        {
+          "prompt": "Who handles the mediation process when there is a dispute between two departments?",
+          "options": ["The line manager of either department.", "The HR business partner.", "The department heads jointly.", "The legal advisor."],
+          "correct": 1,
+          "explanation": "HR business partner là trung gian hòa giải chuyên nghiệp giữa các bộ phận. Line manager thiếu tính trung lập; department heads cùng nhau quyết định có thể tạo thêm xung đột.",
+          "answerChunks": ["Đối", "tác", "kinh", "doanh", "nhân", "sự"],
+          "answerChunkDistractors": ["Cố", "vấn", "pháp", "lý"]
+        },
+        {
+          "prompt": "Who approves travel expense reimbursements above the standard policy limit?",
+          "options": ["The finance controller.", "The direct manager.", "The executive assistant.", "The accounts payable clerk."],
+          "correct": 0,
+          "explanation": "Chi phí vượt hạn mức chính sách cần phê duyệt của finance controller — người có thẩm quyền kiểm soát ngân sách. Direct manager chỉ phê duyệt trong hạn mức tiêu chuẩn.",
+          "answerChunks": ["Kiểm", "soát", "viên", "tài", "chính"],
+          "answerChunkDistractors": ["Quản", "lý", "trực", "tiếp"]
+        },
+        {
+          "prompt": "Who is responsible for communicating organisational restructuring to staff?",
+          "options": ["The communications manager.", "The CEO and HR director jointly.", "The department heads.", "The board secretary."],
+          "correct": 1,
+          "explanation": "Tái cơ cấu tổ chức là thông điệp chiến lược — CEO và HR director cùng truyền đạt để đảm bảo tính nhất quán và tin cậy. Communications manager chỉ hỗ trợ về hình thức.",
+          "answerChunks": ["Giám", "đốc", "điều", "hành", "và", "giám", "đốc", "nhân", "sự"],
+          "answerChunkDistractors": ["Trưởng", "phòng", "truyền", "thông"]
+        },
+        {
+          "prompt": "Who conducts exit interviews when an employee resigns?",
+          "options": ["The direct supervisor.", "The HR generalist.", "The department head.", "The payroll administrator."],
+          "correct": 1,
+          "explanation": "Exit interview thường do HR generalist thực hiện để đảm bảo tính khách quan và thu thập phản hồi trung thực. Direct supervisor hoặc department head có thể tạo áp lực không cần thiết.",
+          "answerChunks": ["Nhân", "viên", "nhân", "sự", "tổng", "hợp"],
+          "answerChunkDistractors": ["Quản", "lý", "trực", "tiếp"]
+        },
+        {
+          "prompt": "Who is typically involved in setting the key performance indicators for a new business unit?",
+          "options": ["The unit's line manager only.", "The senior leadership team and unit head.", "The HR department.", "The strategy analyst."],
+          "correct": 1,
+          "explanation": "KPIs cho đơn vị kinh doanh mới được xây dựng bởi lãnh đạo cấp cao kết hợp với trưởng đơn vị để đảm bảo gắn kết chiến lược. Line manager chỉ không có đủ tầm nhìn tổng thể.",
+          "answerChunks": ["Ban", "lãnh", "đạo", "cấp", "cao", "và", "trưởng", "đơn", "vị"],
+          "answerChunkDistractors": ["Phân", "tích", "viên", "chiến", "lược"]
+        },
+        {
+          "prompt": "Who must countersign a non-disclosure agreement with a third-party vendor?",
+          "options": ["The legal counsel.", "The procurement officer.", "An authorized company representative.", "The finance director."],
+          "correct": 2,
+          "explanation": "NDA với bên thứ ba cần chữ ký của đại diện được ủy quyền của công ty — thường là giám đốc hoặc người được giao quyền. Legal counsel soạn thảo, procurement officer điều phối nhưng không phải người ký.",
+          "answerChunks": ["Đại", "diện", "được", "ủy", "quyền", "của", "công", "ty"],
+          "answerChunkDistractors": ["Cố", "vấn", "pháp", "lý"]
+        },
+        {
+          "prompt": "Who oversees the professional development programme for graduate trainees?",
+          "options": ["The learning and development manager.", "The department head of each trainee.", "The graduate recruitment coordinator.", "The line manager."],
+          "correct": 0,
+          "explanation": "Learning and development manager thiết kế và giám sát toàn bộ chương trình đào tạo graduate. Department head và line manager hỗ trợ trong bộ phận cụ thể nhưng không quản lý chương trình tổng thể.",
+          "answerChunks": ["Quản", "lý", "học", "tập", "và", "phát", "triển"],
+          "answerChunkDistractors": ["Điều", "phối", "tuyển", "dụng"]
+        }
+      ]
+    }
+  ]
+}
