@@ -1104,7 +1104,7 @@ export default function ExerciseClient({
     const loaded: DraftsMap = {};
     for (let i = 0; i < 4; i++) {
       try {
-        const raw = localStorage.getItem(`ss_draft_${set.questionWord}_${i}`);
+        const raw = localStorage.getItem(`ss_draft_${set.part}_${set.questionWord}_${i}`);
         if (!raw) continue;
         const d = JSON.parse(raw) as unknown;
         if (
@@ -1207,7 +1207,7 @@ export default function ExerciseClient({
 
     if (!hasDraft) {
       // Starting fresh — wipe only this exercise's draft
-      try { localStorage.removeItem(`ss_draft_${set.questionWord}_${ei}`); } catch {}
+      try { localStorage.removeItem(`ss_draft_${set.part}_${set.questionWord}_${ei}`); } catch {}
       setDrafts(prev => { const n = { ...prev }; delete n[ei]; return n; });
     }
   }
@@ -1326,14 +1326,14 @@ export default function ExerciseClient({
       // correctCounts[exIdx] is already updated (by handleCheck) before this call.
       try {
         localStorage.setItem(
-          `ss_draft_${set.questionWord}_${exIdx}`,
+          `ss_draft_${set.part}_${set.questionWord}_${exIdx}`,
           JSON.stringify({ itemIdx: next, correctCount: correctCounts[exIdx] })
         );
       } catch {}
       return;
     }
     // Last item — exercise finished. Clear only this exercise's draft.
-    try { localStorage.removeItem(`ss_draft_${set.questionWord}_${exIdx}`); } catch {}
+    try { localStorage.removeItem(`ss_draft_${set.part}_${set.questionWord}_${exIdx}`); } catch {}
     setDrafts(prev => { const n = { ...prev }; delete n[exIdx]; return n; });
 
     // Compute score
