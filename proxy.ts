@@ -60,7 +60,6 @@ export async function proxy(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   const role = (user?.app_metadata?.role as string | undefined);
-  const { pathname } = request.nextUrl;
 
   function redirectTo(dest: string) {
     const url = request.nextUrl.clone();
