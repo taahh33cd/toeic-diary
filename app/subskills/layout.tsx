@@ -25,7 +25,11 @@ export default async function SubskillsLayout({
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--bg-primary)" }}>
-      <SubskillsHeader displayName={displayName} />
+      <SubskillsHeader
+        displayName={displayName}
+        userEmail={user?.email}
+        userDisplayName={profile?.displayName}
+      />
       {children}
     </div>
   );

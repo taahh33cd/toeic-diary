@@ -23,7 +23,11 @@ export default async function GrammarLayout({
     .catch(() => null);
 
   return (
-    <GrammarShell displayName={profile?.displayName}>
+    <GrammarShell
+      displayName={profile?.displayName}
+      userEmail={user.email}
+      userDisplayName={profile?.displayName}
+    >
       <UsageGate initialSeconds={profile?.freeUsageSeconds ?? 0} isExempt={isUsageExempt(profile)} />
       {children}
     </GrammarShell>

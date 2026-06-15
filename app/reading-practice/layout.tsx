@@ -32,7 +32,11 @@ export default async function ReadingPracticeLayout({
       style={{ minHeight: "100vh", background: "var(--bg-primary)" }}
     >
       <UsageGate initialSeconds={profile?.freeUsageSeconds ?? 0} isExempt={isUsageExempt(profile)} />
-      <ReadingBannerAndNav displayName={displayName} />
+      <ReadingBannerAndNav
+        displayName={displayName}
+        userEmail={user.email}
+        userDisplayName={profile?.displayName}
+      />
       {children}
     </div>
   );

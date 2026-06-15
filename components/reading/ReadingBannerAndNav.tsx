@@ -15,6 +15,7 @@ import {
   Puzzle,
   Home,
 } from "lucide-react";
+import { UserAvatarMenu } from "@/components/layout/UserAvatarMenu";
 
 const TOPBAR_H    = 64;
 const BG          = "#6B4C2A";
@@ -41,7 +42,15 @@ function isActive(pathname: string, href: string, exact?: boolean) {
   return pathname === href;
 }
 
-export function ReadingBannerAndNav({ displayName }: { displayName: string }) {
+export function ReadingBannerAndNav({
+  displayName,
+  userEmail,
+  userDisplayName,
+}: {
+  displayName: string;
+  userEmail?: string | null;
+  userDisplayName?: string | null;
+}) {
   const pathname  = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -212,24 +221,28 @@ export function ReadingBannerAndNav({ displayName }: { displayName: string }) {
           ))}
         </nav>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden"
-          onClick={() => setMenuOpen((v) => !v)}
-          style={{
-            marginLeft: "auto",
-            background: "none",
-            border: "none",
-            cursor: "pointer",
-            color: TEXT_ACTIVE,
-            padding: "6px",
-            display: "flex",
-            alignItems: "center",
-          }}
-          aria-label={menuOpen ? "Đóng menu" : "Mở menu"}
-        >
-          {menuOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        {/* Right side: avatar menu (all screens) + hamburger (mobile only) */}
+        <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: "0.5rem", flexShrink: 0 }}>
+          {userEmail && (
+            <UserAvatarMenu userEmail={userEmail} userDisplayName={userDisplayName} />
+          )}
+          <button
+            className="md:hidden"
+            onClick={() => setMenuOpen((v) => !v)}
+            style={{
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              color: TEXT_ACTIVE,
+              padding: "6px",
+              display: "flex",
+              alignItems: "center",
+            }}
+            aria-label={menuOpen ? "Đóng menu" : "Mở menu"}
+          >
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile overlay */}
