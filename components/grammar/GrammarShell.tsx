@@ -12,6 +12,7 @@ import {
   BookOpen,
   NotebookPen,
   Headphones,
+  Puzzle,
   Home,
 } from "lucide-react";
 
@@ -29,8 +30,9 @@ const NAV_INTERNAL = [
 ];
 
 const NAV_EXTERNAL = [
-  { href: "/",                 label: "Dictation", icon: Headphones },
+  { href: "/dictation",        label: "Dictation", icon: Headphones },
   { href: "/reading-practice", label: "Reading",   icon: BookOpen },
+  { href: "/subskills",        label: "Subskills", icon: Puzzle },
 ];
 
 function isActive(pathname: string, href: string, exact?: boolean) {

@@ -28,7 +28,7 @@ const NAV_INTERNAL = [
 ];
 
 const NAV_EXTERNAL = [
-  { href: "/",                  label: "Dictation", icon: Headphones    },
+  { href: "/dictation",         label: "Dictation", icon: Headphones    },
   { href: "/grammar",           label: "Ngữ pháp",  icon: GraduationCap },
   { href: "/reading-practice",  label: "Reading",   icon: BookOpen      },
 ];

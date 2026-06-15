@@ -7,9 +7,10 @@ import { Menu, X } from "lucide-react";
 
 const NAV = [
   { href: "/home",             label: "Home",      emoji: "🏠" },
-  { href: "/",                 label: "Dictation", emoji: "🎧" },
+  { href: "/dictation",        label: "Dictation", emoji: "🎧" },
   { href: "/grammar",          label: "Grammar",   emoji: "🎓" },
   { href: "/reading-practice", label: "Reading",   emoji: "📖" },
+  { href: "/subskills",        label: "Subskills", emoji: "🧩" },
 ];
 
 export function JournalMobileNav() {
