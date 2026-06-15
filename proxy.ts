@@ -11,7 +11,26 @@ function roleHome(role?: string) {
   return isAdminRole(role) ? "/admin" : "/journal";
 }
 
+const STUDENT_URL =
+  process.env.NEXT_PUBLIC_STUDENT_URL ?? 'https://toeic-dictation-diary.vercel.app'
+
 export async function proxy(request: NextRequest) {
+  const { pathname } = request.nextUrl
+
+  // ── Domain separation ─────────────────────────────────────────────────────────
+  if (process.env.SITE_MODE === 'admin') {
+    // Admin-only site: only /admin, /auth, /api, /invite allowed
+    const allowed =
+      pathname.startsWith('/admin') ||
+      pathname.startsWith('/auth') ||
+      pathname.startsWith('/api') ||
+      pathname.startsWith('/invite')
+    if (!allowed) return NextResponse.redirect(STUDENT_URL + pathname)
+  } else if (pathname.startsWith('/admin')) {
+    // Student site: hide /admin completely (404, don't reveal it exists)
+    return NextResponse.rewrite(new URL('/not-found', request.url))
+  }
+
   let supabaseResponse = NextResponse.next({ request });
 
   const supabase = createServerClient(
