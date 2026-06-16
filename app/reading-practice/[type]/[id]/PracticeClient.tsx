@@ -37,8 +37,10 @@ export function PracticeClient({
   const [activeQ, setActiveQ]             = useState(0);
   const [saving, setSaving]               = useState(false);
   const [fontSize, setFontSize]           = useState(15);
-  const [preReadingDone, setPreReadingDone] = useState(false);
-  const [showPostReading, setShowPostReading] = useState(false);
+  const [preReadingDone, setPreReadingDone]     = useState(false);
+  const [showPostReading, setShowPostReading]   = useState(false);
+  const [postReadingPassed, setPostReadingPassed] = useState(false);
+  const [showNextHint, setShowNextHint]         = useState(false);
 
   const total = passage.questions.length;
 
@@ -215,6 +217,7 @@ export function PracticeClient({
           exercises={exercises}
           passageId={passage.id}
           onClose={() => setShowPostReading(false)}
+          onComplete={() => setPostReadingPassed(true)}
         />
       )}
 
@@ -611,22 +614,41 @@ export function PracticeClient({
 
         {submitted ? (
           nextHref ? (
-            <button
-              onClick={() => router.push(nextHref)}
-              style={{
-                background: "#0D3361",
-                color: "#ffffff",
-                border: "none",
-                padding: "8px 20px",
-                borderRadius: 4,
-                fontWeight: "bold",
-                fontSize: "0.9rem",
-                cursor: "pointer",
-                letterSpacing: "0.03em",
-              }}
-            >
-              Bài tiếp theo →
-            </button>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 4 }}>
+              {showNextHint && (
+                <span style={{
+                  fontSize: "0.75rem", color: "#dc2626", fontWeight: 600,
+                  background: "#fef2f2", border: "1px solid #fca5a5",
+                  borderRadius: 4, padding: "3px 8px", whiteSpace: "nowrap",
+                }}>
+                  Hoàn thành &quot;Luyện thêm&quot; (≥60%) để tiếp tục
+                </span>
+              )}
+              <button
+                onClick={() => {
+                  const canGoNext = !hasExercises || postReadingPassed;
+                  if (canGoNext) {
+                    router.push(nextHref);
+                  } else {
+                    setShowNextHint(true);
+                    setTimeout(() => setShowNextHint(false), 3000);
+                  }
+                }}
+                style={{
+                  background: (!hasExercises || postReadingPassed) ? "#0D3361" : "#9ca3af",
+                  color: "#ffffff",
+                  border: "none",
+                  padding: "8px 20px",
+                  borderRadius: 4,
+                  fontWeight: "bold",
+                  fontSize: "0.9rem",
+                  cursor: (!hasExercises || postReadingPassed) ? "pointer" : "not-allowed",
+                  letterSpacing: "0.03em",
+                }}
+              >
+                Bài tiếp theo →
+              </button>
+            </div>
           ) : (
             <span style={{ fontSize: "0.85rem", fontWeight: 600, color: "#16a34a" }}>
               Hoàn thành!

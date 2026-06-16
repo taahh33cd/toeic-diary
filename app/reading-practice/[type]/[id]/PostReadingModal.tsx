@@ -15,12 +15,13 @@ const TAB_LABELS: Record<Tab, string> = {
 const TABS: Tab[] = ["vocab", "paraphrase", "translation", "context"];
 
 type Props = {
-  exercises:  ExerciseSet;
-  passageId:  string;
-  onClose:    () => void;
+  exercises:   ExerciseSet;
+  passageId:   string;
+  onClose:     () => void;
+  onComplete?: () => void;   // called when score ≥ 60%
 };
 
-export function PostReadingModal({ exercises, passageId, onClose }: Props) {
+export function PostReadingModal({ exercises, passageId, onClose, onComplete }: Props) {
   const [tab, setTab]             = useState<Tab>("vocab");
   const [answers, setAnswers]     = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
@@ -72,6 +73,8 @@ export function PostReadingModal({ exercises, passageId, onClose }: Props) {
       Object.values(details).reduce((a, b) => a + b, 0) / Math.max(Object.values(details).length, 1)
     );
 
+    if (overall >= 60) onComplete?.();
+
     setSaving(true);
     try {
       await fetch("/api/reading/post-attempt", {
@@ -85,7 +88,7 @@ export function PostReadingModal({ exercises, passageId, onClose }: Props) {
     } finally {
       setSaving(false);
     }
-  }, [submitted, exercises, answers, passageId]);
+  }, [submitted, exercises, answers, passageId, onComplete]);
 
   // Available tabs (those that have questions)
   const availableTabs = TABS.filter(t => exercises[t].length > 0);
