@@ -9,7 +9,6 @@ const PRIMARY = [
   { href: "/journal/scores",    label: "Điểm số" },
   { href: "/journal/missions",  label: "Nhiệm vụ" },
   { href: "/journal/vocab",     label: "Từ vựng" },
-  { href: "/journal/error-log", label: "Nhật ký lỗi" },
 ] as const;
 
 const OVERFLOW = [
