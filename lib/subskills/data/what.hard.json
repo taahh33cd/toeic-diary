@@ -12,20 +12,104 @@
       "title": "Bài 1 — Viết câu hỏi WHAT hoàn chỉnh",
       "instruction": "Dựa vào gợi ý tiếng Việt, viết câu hỏi WHAT hoàn chỉnh bằng tiếng Anh.",
       "items": [
-        { "prompt": "Thời hạn nộp báo cáo quý là khi nào?", "answer": "What is the deadline for submitting the quarterly report?", "acceptedAnswers": ["What is the submission deadline for the quarterly report?"] },
-        { "prompt": "Tài liệu nào cần nộp kèm đơn xin hoàn tiền?", "answer": "What documents need to be submitted with the reimbursement request?", "acceptedAnswers": ["What documents are required for the reimbursement request?"] },
-        { "prompt": "Chính sách của công ty về làm thêm giờ là gì?", "answer": "What is the company policy on overtime?", "acceptedAnswers": ["What is the company's overtime policy?"] },
-        { "prompt": "Những thay đổi nào đã được thực hiện đối với quy trình kiểm soát chất lượng?", "answer": "What changes have been made to the quality control process?", "acceptedAnswers": ["What modifications were made to the quality control procedure?"] },
-        { "prompt": "Thiết bị nào cần được thay thế trong đợt nâng cấp sắp tới?", "answer": "What equipment needs to be replaced in the upcoming upgrade?", "acceptedAnswers": ["What equipment will be replaced in the next upgrade?"] },
-        { "prompt": "Mục tiêu doanh thu của bộ phận bán hàng là bao nhiêu cho quý này?", "answer": "What is the sales department's revenue target for this quarter?", "acceptedAnswers": ["What is the revenue target for the sales team this quarter?"] },
-        { "prompt": "Những điều khoản nào trong hợp đồng cần được đàm phán lại?", "answer": "What clauses in the contract need to be renegotiated?", "acceptedAnswers": ["What terms in the contract need renegotiating?"] },
-        { "prompt": "Biện pháp khắc phục sự cố mạng đã được áp dụng là gì?", "answer": "What measures were applied to resolve the network outage?", "acceptedAnswers": ["What steps were taken to fix the network issue?"] },
-        { "prompt": "Tiêu chí đánh giá nhà cung cấp mới là gì?", "answer": "What are the criteria for evaluating new suppliers?", "acceptedAnswers": ["What criteria are used to assess new vendors?"] },
-        { "prompt": "Những ưu tiên hàng đầu của ban giám đốc trong năm nay là gì?", "answer": "What are the board's top priorities for this year?", "acceptedAnswers": ["What are the management's top priorities this year?"] },
-        { "prompt": "Hệ thống phần mềm nào được đề xuất để thay thế công cụ hiện tại?", "answer": "What software system is recommended to replace the current tool?", "acceptedAnswers": ["What system is being proposed to replace the existing software?"] },
-        { "prompt": "Kết quả kiểm tra an toàn định kỳ cho thấy điều gì?", "answer": "What did the periodic safety inspection results reveal?", "acceptedAnswers": ["What did the regular safety audit show?"] },
-        { "prompt": "Quy trình xử lý khiếu nại của khách hàng là gì?", "answer": "What is the procedure for handling customer complaints?", "acceptedAnswers": ["What is the process for dealing with customer complaints?"] },
-        { "prompt": "Lợi ích nào được đề nghị thêm trong gói phúc lợi mới?", "answer": "What additional benefits are offered in the new benefits package?", "acceptedAnswers": ["What new benefits are included in the revised package?"] }
+        {
+          "prompt": "Thời hạn nộp báo cáo quý là khi nào?",
+          "answer": "What is the deadline for submitting the quarterly report?",
+          "acceptedAnswers": [
+            "What is the submission deadline for the quarterly report?"
+          ]
+        },
+        {
+          "prompt": "Tài liệu nào cần nộp kèm đơn xin hoàn tiền?",
+          "answer": "What documents need to be submitted with the reimbursement request?",
+          "acceptedAnswers": [
+            "What documents are required for the reimbursement request?"
+          ]
+        },
+        {
+          "prompt": "Chính sách của công ty về làm thêm giờ là gì?",
+          "answer": "What is the company policy on overtime?",
+          "acceptedAnswers": [
+            "What is the company's overtime policy?"
+          ]
+        },
+        {
+          "prompt": "Những thay đổi nào đã được thực hiện đối với quy trình kiểm soát chất lượng?",
+          "answer": "What changes have been made to the quality control process?",
+          "acceptedAnswers": [
+            "What modifications were made to the quality control procedure?"
+          ]
+        },
+        {
+          "prompt": "Thiết bị nào cần được thay thế trong đợt nâng cấp sắp tới?",
+          "answer": "What equipment needs to be replaced in the upcoming upgrade?",
+          "acceptedAnswers": [
+            "What equipment will be replaced in the next upgrade?"
+          ]
+        },
+        {
+          "prompt": "Mục tiêu doanh thu của bộ phận bán hàng là bao nhiêu cho quý này?",
+          "answer": "What is the sales department's revenue target for this quarter?",
+          "acceptedAnswers": [
+            "What is the revenue target for the sales team this quarter?"
+          ]
+        },
+        {
+          "prompt": "Những điều khoản nào trong hợp đồng cần được đàm phán lại?",
+          "answer": "What clauses in the contract need to be renegotiated?",
+          "acceptedAnswers": [
+            "What terms in the contract need renegotiating?"
+          ]
+        },
+        {
+          "prompt": "Biện pháp khắc phục sự cố mạng đã được áp dụng là gì?",
+          "answer": "What measures were applied to resolve the network outage?",
+          "acceptedAnswers": [
+            "What steps were taken to fix the network issue?"
+          ]
+        },
+        {
+          "prompt": "Tiêu chí đánh giá nhà cung cấp mới là gì?",
+          "answer": "What are the criteria for evaluating new suppliers?",
+          "acceptedAnswers": [
+            "What criteria are used to assess new vendors?"
+          ]
+        },
+        {
+          "prompt": "Những ưu tiên hàng đầu của ban giám đốc trong năm nay là gì?",
+          "answer": "What are the board's top priorities for this year?",
+          "acceptedAnswers": [
+            "What are the management's top priorities this year?"
+          ]
+        },
+        {
+          "prompt": "Hệ thống phần mềm nào được đề xuất để thay thế công cụ hiện tại?",
+          "answer": "What software system is recommended to replace the current tool?",
+          "acceptedAnswers": [
+            "What system is being proposed to replace the existing software?"
+          ]
+        },
+        {
+          "prompt": "Kết quả kiểm tra an toàn định kỳ cho thấy điều gì?",
+          "answer": "What did the periodic safety inspection results reveal?",
+          "acceptedAnswers": [
+            "What did the regular safety audit show?"
+          ]
+        },
+        {
+          "prompt": "Quy trình xử lý khiếu nại của khách hàng là gì?",
+          "answer": "What is the procedure for handling customer complaints?",
+          "acceptedAnswers": [
+            "What is the process for dealing with customer complaints?"
+          ]
+        },
+        {
+          "prompt": "Lợi ích nào được đề nghị thêm trong gói phúc lợi mới?",
+          "answer": "What additional benefits are offered in the new benefits package?",
+          "acceptedAnswers": [
+            "What new benefits are included in the revised package?"
+          ]
+        }
       ]
     },
     {
@@ -33,20 +117,272 @@
       "title": "Bài 2 — Điền từ hoàn toàn tự do",
       "instruction": "Điền từ còn thiếu để hoàn thành câu hỏi. Không có gợi ý, không có word bank.",
       "items": [
-        { "template": "{0} {1} do you need from me before the {2} submission?", "hint": null, "blanks": [["what"], ["else", "more", "other documents"], ["final", "deadline", "project"]] },
-        { "template": "{0} was the {1} for the {2} shortfall in production output?", "hint": null, "blanks": [["what"], ["reason", "cause", "explanation"], ["recent", "monthly", "quarterly"]] },
-        { "template": "{0} {1} measures has the company {2} to improve staff retention?", "hint": null, "blanks": [["what"], ["specific", "new", "additional"], ["taken", "implemented", "introduced"]] },
-        { "template": "{0} is the {1} for escalating a {2} that cannot be resolved at team level?", "hint": null, "blanks": [["what"], ["procedure", "process", "protocol"], ["dispute", "complaint", "issue"]] },
-        { "template": "{0} are the key {1} that clients look for in a {2} service provider?", "hint": null, "blanks": [["what"], ["criteria", "factors", "qualities"], ["reliable", "professional", "preferred"]] },
-        { "template": "{0} {1} has been {2} for the headquarters renovation project?", "hint": null, "blanks": [["what"], ["budget", "funding", "amount"], ["allocated", "approved", "set aside"]] },
-        { "template": "{0} type of {1} is needed to access the {2} payroll database?", "hint": null, "blanks": [["what"], ["clearance", "authorisation", "access level"], ["internal", "secure", "restricted"]] },
-        { "template": "{0} were the {1} findings from the {2} customer satisfaction survey?", "hint": null, "blanks": [["what"], ["key", "main", "primary"], ["recent", "latest", "annual"]] },
-        { "template": "{0} {1} needs to be completed before the {2} can be finalised?", "hint": null, "blanks": [["what"], ["documentation", "paperwork", "approval"], ["merger", "contract", "proposal"]] },
-        { "template": "{0} is the {1} timeline for rolling out the new {2} management system?", "hint": null, "blanks": [["what"], ["expected", "projected", "proposed"], ["performance", "inventory", "content"]] },
-        { "template": "{0} {1} has been identified as the {2} barrier to digital transformation?", "hint": null, "blanks": [["what"], ["factor", "issue", "challenge"], ["main", "primary", "biggest"]] },
-        { "template": "{0} are the {1} consequences of {2} the project deadline by two weeks?", "hint": null, "blanks": [["what"], ["potential", "likely", "possible"], ["missing", "delaying", "extending"]] },
-        { "template": "{0} {1} does the revised {2} require employees to complete each year?", "hint": null, "blanks": [["what"], ["training", "coursework", "certification"], ["policy", "framework", "programme"]] },
-        { "template": "{0} is the {1} process for {2} a vendor from the approved supplier list?", "hint": null, "blanks": [["what"], ["formal", "correct", "required"], ["removing", "delisting", "deregistering"]] }
+        {
+          "template": "{0} {1} do you need from me before the {2} submission?",
+          "hint": null,
+          "blanks": [
+            [
+              "what"
+            ],
+            [
+              "else",
+              "more",
+              "other documents"
+            ],
+            [
+              "final",
+              "deadline",
+              "project"
+            ]
+          ]
+        },
+        {
+          "template": "{0} was the {1} for the {2} shortfall in production output?",
+          "hint": null,
+          "blanks": [
+            [
+              "what"
+            ],
+            [
+              "reason",
+              "cause",
+              "explanation"
+            ],
+            [
+              "recent",
+              "monthly",
+              "quarterly"
+            ]
+          ]
+        },
+        {
+          "template": "{0} {1} measures has the company {2} to improve staff retention?",
+          "hint": null,
+          "blanks": [
+            [
+              "what"
+            ],
+            [
+              "specific",
+              "new",
+              "additional"
+            ],
+            [
+              "taken",
+              "implemented",
+              "introduced"
+            ]
+          ]
+        },
+        {
+          "template": "{0} is the {1} for escalating a {2} that cannot be resolved at team level?",
+          "hint": null,
+          "blanks": [
+            [
+              "what"
+            ],
+            [
+              "procedure",
+              "process",
+              "protocol"
+            ],
+            [
+              "dispute",
+              "complaint",
+              "issue"
+            ]
+          ]
+        },
+        {
+          "template": "{0} are the key {1} that clients look for in a {2} service provider?",
+          "hint": null,
+          "blanks": [
+            [
+              "what"
+            ],
+            [
+              "criteria",
+              "factors",
+              "qualities"
+            ],
+            [
+              "reliable",
+              "professional",
+              "preferred"
+            ]
+          ]
+        },
+        {
+          "template": "{0} {1} has been {2} for the headquarters renovation project?",
+          "hint": null,
+          "blanks": [
+            [
+              "what"
+            ],
+            [
+              "budget",
+              "funding",
+              "amount"
+            ],
+            [
+              "allocated",
+              "approved",
+              "set aside"
+            ]
+          ]
+        },
+        {
+          "template": "{0} type of {1} is needed to access the {2} payroll database?",
+          "hint": null,
+          "blanks": [
+            [
+              "what"
+            ],
+            [
+              "clearance",
+              "authorisation",
+              "access level"
+            ],
+            [
+              "internal",
+              "secure",
+              "restricted"
+            ]
+          ]
+        },
+        {
+          "template": "{0} were the {1} findings from the {2} customer satisfaction survey?",
+          "hint": null,
+          "blanks": [
+            [
+              "what"
+            ],
+            [
+              "key",
+              "main",
+              "primary"
+            ],
+            [
+              "recent",
+              "latest",
+              "annual"
+            ]
+          ]
+        },
+        {
+          "template": "{0} {1} needs to be completed before the {2} can be finalised?",
+          "hint": null,
+          "blanks": [
+            [
+              "what"
+            ],
+            [
+              "documentation",
+              "paperwork",
+              "approval"
+            ],
+            [
+              "merger",
+              "contract",
+              "proposal"
+            ]
+          ]
+        },
+        {
+          "template": "{0} is the {1} timeline for rolling out the new {2} management system?",
+          "hint": null,
+          "blanks": [
+            [
+              "what"
+            ],
+            [
+              "expected",
+              "projected",
+              "proposed"
+            ],
+            [
+              "performance",
+              "inventory",
+              "content"
+            ]
+          ]
+        },
+        {
+          "template": "{0} {1} has been identified as the {2} barrier to digital transformation?",
+          "hint": null,
+          "blanks": [
+            [
+              "what"
+            ],
+            [
+              "factor",
+              "issue",
+              "challenge"
+            ],
+            [
+              "main",
+              "primary",
+              "biggest"
+            ]
+          ]
+        },
+        {
+          "template": "{0} are the {1} consequences of {2} the project deadline by two weeks?",
+          "hint": null,
+          "blanks": [
+            [
+              "what"
+            ],
+            [
+              "potential",
+              "likely",
+              "possible"
+            ],
+            [
+              "missing",
+              "delaying",
+              "extending"
+            ]
+          ]
+        },
+        {
+          "template": "{0} {1} does the revised {2} require employees to complete each year?",
+          "hint": null,
+          "blanks": [
+            [
+              "what"
+            ],
+            [
+              "training",
+              "coursework",
+              "certification"
+            ],
+            [
+              "policy",
+              "framework",
+              "programme"
+            ]
+          ]
+        },
+        {
+          "template": "{0} is the {1} process for {2} a vendor from the approved supplier list?",
+          "hint": null,
+          "blanks": [
+            [
+              "what"
+            ],
+            [
+              "formal",
+              "correct",
+              "required"
+            ],
+            [
+              "removing",
+              "delisting",
+              "deregistering"
+            ]
+          ]
+        }
       ]
     },
     {
@@ -56,31 +392,61 @@
       "items": [
         {
           "question": "What is the standard procedure when a client reports a data breach?",
-          "options": ["We escalate it to the IT security team immediately.", "We issue a refund within 48 hours.", "We forward it to accounts payable.", "We update the employee handbook first.", "We schedule a performance review."],
+          "options": [
+            "We escalate it to the IT security team immediately.",
+            "We issue a refund within 48 hours.",
+            "We forward it to accounts payable.",
+            "We update the employee handbook first.",
+            "We schedule a performance review."
+          ],
           "correct": 0,
           "explanation": "Báo cáo vi phạm dữ liệu cần chuyển ngay đến IT security team để xử lý. Refund, accounts payable, handbook, performance review đều không liên quan."
         },
         {
           "question": "What happens if an expense claim exceeds the approved limit?",
-          "options": ["We escalate it to the IT security team immediately.", "We issue a refund within 48 hours.", "We forward it to accounts payable.", "We update the employee handbook first.", "We schedule a performance review."],
+          "options": [
+            "We escalate it to the IT security team immediately.",
+            "We issue a refund within 48 hours.",
+            "We forward it to accounts payable.",
+            "We update the employee handbook first.",
+            "We schedule a performance review."
+          ],
           "correct": 2,
           "explanation": "Chi phí vượt hạn mức được chuyển đến accounts payable để xem xét và xử lý thêm."
         },
         {
           "question": "What is the required response time for urgent client refund requests?",
-          "options": ["We escalate it to the IT security team immediately.", "We issue a refund within 48 hours.", "We forward it to accounts payable.", "We update the employee handbook first.", "We schedule a performance review."],
+          "options": [
+            "We escalate it to the IT security team immediately.",
+            "We issue a refund within 48 hours.",
+            "We forward it to accounts payable.",
+            "We update the employee handbook first.",
+            "We schedule a performance review."
+          ],
           "correct": 1,
           "explanation": "Thời gian phản hồi hoàn tiền khẩn cấp là 48 giờ theo SLA dịch vụ."
         },
         {
           "question": "What needs to be revised when company policies change significantly?",
-          "options": ["We escalate it to the IT security team immediately.", "We issue a refund within 48 hours.", "We forward it to accounts payable.", "We update the employee handbook first.", "We schedule a performance review."],
+          "options": [
+            "We escalate it to the IT security team immediately.",
+            "We issue a refund within 48 hours.",
+            "We forward it to accounts payable.",
+            "We update the employee handbook first.",
+            "We schedule a performance review."
+          ],
           "correct": 3,
           "explanation": "Khi chính sách thay đổi lớn, sổ tay nhân viên cần được cập nhật trước để đảm bảo thông tin nhất quán."
         },
         {
           "question": "What is the correct next step when an employee consistently misses targets?",
-          "options": ["We escalate it to the IT security team immediately.", "We issue a refund within 48 hours.", "We forward it to accounts payable.", "We update the employee handbook first.", "We schedule a performance review."],
+          "options": [
+            "We escalate it to the IT security team immediately.",
+            "We issue a refund within 48 hours.",
+            "We forward it to accounts payable.",
+            "We update the employee handbook first.",
+            "We schedule a performance review."
+          ],
           "correct": 4,
           "explanation": "Khi nhân viên liên tục không đạt chỉ tiêu, bước tiếp theo là lên lịch đánh giá hiệu suất để xác định nguyên nhân và biện pháp cải thiện."
         }
@@ -91,119 +457,394 @@
       "title": "Bài 4 — Chọn đáp án & dịch sang tiếng Việt",
       "instruction": "Chọn đáp án đúng nhất. Các lựa chọn rất tương đồng — cần phân biệt sắc thái.",
       "translateMode": "always",
-      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "scoring": {
+        "mcqWeight": 0.5,
+        "translateWeight": 0.5
+      },
       "items": [
         {
           "prompt": "What is the primary purpose of an employee probationary period?",
-          "options": ["To reduce the company's payroll obligations.", "To assess job fit and performance before confirmation.", "To delay employee benefits eligibility.", "To maintain flexibility in workforce planning."],
+          "options": [
+            "To reduce the company's payroll obligations.",
+            "To assess job fit and performance before confirmation.",
+            "To delay employee benefits eligibility.",
+            "To maintain flexibility in workforce planning."
+          ],
           "correct": 1,
           "explanation": "Mục đích chính của thời gian thử việc là đánh giá năng lực và sự phù hợp trước khi chính thức ký hợp đồng, không phải để giảm lương hay hoãn phúc lợi.",
-          "answerChunks": ["Đánh", "giá", "sự", "phù", "hợp", "và", "hiệu", "suất"],
-          "answerChunkDistractors": ["Giảm", "nghĩa", "vụ", "lương"]
+          "answerChunks": [
+            "Đánh",
+            "giá",
+            "sự",
+            "phù",
+            "hợp",
+            "và",
+            "hiệu",
+            "suất"
+          ],
+          "answerChunkDistractors": [
+            "Giảm",
+            "nghĩa",
+            "vụ",
+            "lương"
+          ]
         },
         {
           "prompt": "What should a manager do first when an employee requests flexible working arrangements?",
-          "options": ["Consult HR policy and assess operational impact.", "Approve it immediately to maintain staff morale.", "Decline unless the role is part-time.", "Forward the request to the board."],
+          "options": [
+            "Consult HR policy and assess operational impact.",
+            "Approve it immediately to maintain staff morale.",
+            "Decline unless the role is part-time.",
+            "Forward the request to the board."
+          ],
           "correct": 0,
           "explanation": "Trước khi chấp thuận hay từ chối, manager cần tham khảo chính sách HR và đánh giá tác động vận hành — không nên phê duyệt ngay hay từ chối mà không xem xét.",
-          "answerChunks": ["Tham", "khảo", "chính", "sách", "và", "đánh", "giá", "tác", "động"],
-          "answerChunkDistractors": ["Từ", "chối", "ngay", "lập", "tức"]
+          "answerChunks": [
+            "Tham",
+            "khảo",
+            "chính",
+            "sách",
+            "và",
+            "đánh",
+            "giá",
+            "tác",
+            "động"
+          ],
+          "answerChunkDistractors": [
+            "Từ",
+            "chối",
+            "ngay",
+            "lập",
+            "tức"
+          ]
         },
         {
           "prompt": "What document outlines the agreed tasks and deliverables for a consulting engagement?",
-          "options": ["The non-disclosure agreement.", "The statement of work.", "The master service agreement.", "The invoice schedule."],
+          "options": [
+            "The non-disclosure agreement.",
+            "The statement of work.",
+            "The master service agreement.",
+            "The invoice schedule."
+          ],
           "correct": 1,
           "explanation": "Statement of Work (SOW) mô tả cụ thể các nhiệm vụ và kết quả giao nộp trong một hợp đồng tư vấn. NDA bảo mật thông tin; MSA là khung hợp đồng chung.",
-          "answerChunks": ["Bản", "mô", "tả", "phạm", "vi", "công", "việc"],
-          "answerChunkDistractors": ["Thỏa", "thuận", "dịch", "vụ"]
+          "answerChunks": [
+            "Bản",
+            "mô",
+            "tả",
+            "phạm",
+            "vi",
+            "công",
+            "việc"
+          ],
+          "answerChunkDistractors": [
+            "Thỏa",
+            "thuận",
+            "dịch",
+            "vụ"
+          ]
         },
         {
           "prompt": "What action should be taken when confidential data is accidentally shared with the wrong recipient?",
-          "options": ["Delete the email and hope the recipient ignores it.", "Immediately notify the data protection officer and IT.", "Send a follow-up email asking them not to read it.", "Wait to see if any complaint is raised."],
+          "options": [
+            "Delete the email and hope the recipient ignores it.",
+            "Immediately notify the data protection officer and IT.",
+            "Send a follow-up email asking them not to read it.",
+            "Wait to see if any complaint is raised."
+          ],
           "correct": 1,
           "explanation": "Vi phạm bảo mật dữ liệu dù vô tình cần được báo cáo ngay lập tức cho DPO và IT để kiểm soát thiệt hại. Tự xử lý hoặc chờ đợi có thể làm trầm trọng thêm tình huống.",
-          "answerChunks": ["Thông", "báo", "ngay", "cho", "DPO", "và", "IT"],
-          "answerChunkDistractors": ["Xóa", "email", "và", "chờ"]
+          "answerChunks": [
+            "Thông",
+            "báo",
+            "ngay",
+            "cho",
+            "DPO",
+            "và",
+            "IT"
+          ],
+          "answerChunkDistractors": [
+            "Xóa",
+            "email",
+            "chờ"
+          ]
         },
         {
           "prompt": "What is required before a new product can be launched in a regulated market?",
-          "options": ["Board approval and a marketing campaign.", "Regulatory clearance and compliance sign-off.", "Sales forecast and distribution plan.", "A product demo and client feedback session."],
+          "options": [
+            "Board approval and a marketing campaign.",
+            "Regulatory clearance and compliance sign-off.",
+            "Sales forecast and distribution plan.",
+            "A product demo and client feedback session."
+          ],
           "correct": 1,
           "explanation": "Trước khi ra mắt sản phẩm trong thị trường được quản lý, cần có giấy phép pháp lý (regulatory clearance) và xác nhận tuân thủ từ compliance team.",
-          "answerChunks": ["Chấp", "thuận", "pháp", "lý", "và", "xác", "nhận", "tuân", "thủ"],
-          "answerChunkDistractors": ["Chiến", "dịch", "tiếp", "thị"]
+          "answerChunks": [
+            "Chấp",
+            "thuận",
+            "pháp",
+            "lý",
+            "và",
+            "xác",
+            "nhận",
+            "tuân",
+            "thủ"
+          ],
+          "answerChunkDistractors": [
+            "Chiến",
+            "dịch",
+            "tiếp",
+            "thị"
+          ]
         },
         {
           "prompt": "What is the key difference between a business proposal and a business plan?",
-          "options": ["A proposal is internal; a plan is for investors only.", "A proposal is directed at a specific client; a plan outlines the overall business model.", "A plan is shorter and less formal than a proposal.", "There is no practical difference between the two."],
+          "options": [
+            "A proposal is internal; a plan is for investors only.",
+            "A proposal is directed at a specific client; a plan outlines the overall business model.",
+            "A plan is shorter and less formal than a proposal.",
+            "There is no practical difference between the two."
+          ],
           "correct": 1,
           "explanation": "Business proposal nhắm vào một khách hàng hoặc cơ hội cụ thể; business plan mô tả toàn bộ mô hình kinh doanh và chiến lược dài hạn. Không phải vấn đề nội bộ hay độ dài.",
-          "answerChunks": ["Đề", "xuất", "hướng", "đến", "khách", "hàng", "cụ", "thể"],
-          "answerChunkDistractors": ["Kế", "hoạch", "nội", "bộ"]
+          "answerChunks": [
+            "Đề",
+            "xuất",
+            "hướng",
+            "đến",
+            "khách",
+            "hàng",
+            "cụ",
+            "thể"
+          ],
+          "answerChunkDistractors": [
+            "Kế",
+            "hoạch",
+            "nội",
+            "bộ"
+          ]
         },
         {
           "prompt": "What must be included in a formal written warning to an employee?",
-          "options": ["The specific conduct issue, expected improvement, and consequences.", "Only a general statement of dissatisfaction.", "A summary of the employee's strengths and weaknesses.", "The employee's full salary history."],
+          "options": [
+            "The specific conduct issue, expected improvement, and consequences.",
+            "Only a general statement of dissatisfaction.",
+            "A summary of the employee's strengths and weaknesses.",
+            "The employee's full salary history."
+          ],
           "correct": 0,
           "explanation": "Cảnh báo chính thức bằng văn bản phải nêu rõ vấn đề cụ thể, kỳ vọng cải thiện, và hậu quả nếu không cải thiện — theo quy định nhân sự tiêu chuẩn.",
-          "answerChunks": ["Vấn", "đề", "cụ", "thể,", "cải", "thiện", "kỳ", "vọng", "và", "hậu", "quả"],
-          "answerChunkDistractors": ["Lịch", "sử", "lương", "thưởng"]
+          "answerChunks": [
+            "Vấn",
+            "đề",
+            "cụ",
+            "thể,",
+            "cải",
+            "thiện",
+            "kỳ",
+            "vọng",
+            "và",
+            "hậu",
+            "quả"
+          ],
+          "answerChunkDistractors": [
+            "Lịch",
+            "sử",
+            "lương",
+            "thưởng"
+          ]
         },
         {
           "prompt": "What is the main advantage of conducting an exit interview?",
-          "options": ["It saves the company money on severance pay.", "It gives insights into turnover causes and retention opportunities.", "It allows the company to challenge the resignation legally.", "It speeds up the offboarding process."],
+          "options": [
+            "It saves the company money on severance pay.",
+            "It gives insights into turnover causes and retention opportunities.",
+            "It allows the company to challenge the resignation legally.",
+            "It speeds up the offboarding process."
+          ],
           "correct": 1,
           "explanation": "Phỏng vấn thôi việc cung cấp thông tin về nguyên nhân nghỉ việc và cơ hội cải thiện để giữ chân nhân viên trong tương lai.",
-          "answerChunks": ["Hiểu", "rõ", "nguyên", "nhân", "và", "cơ", "hội", "giữ", "chân"],
-          "answerChunkDistractors": ["Tiết", "kiệm", "chi", "phí"]
+          "answerChunks": [
+            "Hiểu",
+            "rõ",
+            "nguyên",
+            "nhân",
+            "và",
+            "cơ",
+            "hội",
+            "giữ",
+            "chân"
+          ],
+          "answerChunkDistractors": [
+            "Tiết",
+            "kiệm",
+            "chi",
+            "phí"
+          ]
         },
         {
           "prompt": "What does a conflict of interest policy primarily aim to prevent?",
-          "options": ["Overspending in procurement.", "Situations where personal interests compromise professional decisions.", "Disputes between employees and management.", "Unauthorised use of company property."],
+          "options": [
+            "Overspending in procurement.",
+            "Situations where personal interests compromise professional decisions.",
+            "Disputes between employees and management.",
+            "Unauthorised use of company property."
+          ],
           "correct": 1,
           "explanation": "Chính sách xung đột lợi ích nhằm ngăn chặn các tình huống trong đó lợi ích cá nhân ảnh hưởng đến quyết định nghề nghiệp — không phải chi tiêu quá mức hay tranh chấp.",
-          "answerChunks": ["Ngăn", "lợi", "ích", "cá", "nhân", "ảnh", "hưởng", "quyết", "định"],
-          "answerChunkDistractors": ["Kiểm", "soát", "chi", "phí"]
+          "answerChunks": [
+            "Ngăn",
+            "lợi",
+            "ích",
+            "cá",
+            "nhân",
+            "ảnh",
+            "hưởng",
+            "quyết",
+            "định"
+          ],
+          "answerChunkDistractors": [
+            "Kiểm",
+            "soát",
+            "chi",
+            "phí"
+          ]
         },
         {
           "prompt": "What is typically the first step in a formal grievance procedure?",
-          "options": ["Filing a written complaint with HR.", "Raising the issue informally with the line manager.", "Contacting a trade union representative.", "Requesting a formal investigation."],
+          "options": [
+            "Filing a written complaint with HR.",
+            "Raising the issue informally with the line manager.",
+            "Contacting a trade union representative.",
+            "Requesting a formal investigation."
+          ],
           "correct": 1,
           "explanation": "Bước đầu tiên trong quy trình khiếu nại chính thức thường là nêu vấn đề một cách không chính thức với line manager trước khi leo thang lên cấp cao hơn.",
-          "answerChunks": ["Nêu", "vấn", "đề", "không", "chính", "thức", "với", "quản", "lý"],
-          "answerChunkDistractors": ["Nộp", "đơn", "khiếu", "nại"]
+          "answerChunks": [
+            "Nêu",
+            "vấn",
+            "đề",
+            "không",
+            "chính",
+            "thức",
+            "với",
+            "quản",
+            "lý"
+          ],
+          "answerChunkDistractors": [
+            "Nộp",
+            "đơn",
+            "khiếu",
+            "nại"
+          ]
         },
         {
           "prompt": "What information is typically excluded from a public-facing sustainability report?",
-          "options": ["Carbon emissions data.", "Detailed internal cost breakdowns.", "Renewable energy usage statistics.", "Supply chain environmental assessments."],
+          "options": [
+            "Carbon emissions data.",
+            "Detailed internal cost breakdowns.",
+            "Renewable energy usage statistics.",
+            "Supply chain environmental assessments."
+          ],
           "correct": 1,
           "explanation": "Báo cáo phát triển bền vững công bố rộng rãi không bao gồm chi tiết chi phí nội bộ do tính nhạy cảm thương mại. Dữ liệu khí thải và năng lượng thường được công bố.",
-          "answerChunks": ["Chi", "tiết", "chi", "phí", "nội", "bộ"],
-          "answerChunkDistractors": ["Dữ", "liệu", "khí", "thải"]
+          "answerChunks": [
+            "Chi",
+            "tiết",
+            "chi",
+            "phí",
+            "nội",
+            "bộ"
+          ],
+          "answerChunkDistractors": [
+            "Dữ",
+            "liệu",
+            "khí",
+            "thải"
+          ]
         },
         {
           "prompt": "What is the purpose of a RACI chart in project management?",
-          "options": ["To track project budget and expenditures.", "To clarify roles and responsibilities for each task.", "To schedule daily stand-up meetings.", "To measure team performance over time."],
+          "options": [
+            "To track project budget and expenditures.",
+            "To clarify roles and responsibilities for each task.",
+            "To schedule daily stand-up meetings.",
+            "To measure team performance over time."
+          ],
           "correct": 1,
           "explanation": "RACI chart xác định rõ ai Responsible, Accountable, Consulted và Informed cho mỗi nhiệm vụ — giúp tránh nhầm lẫn về trách nhiệm trong dự án.",
-          "answerChunks": ["Làm", "rõ", "vai", "trò", "và", "trách", "nhiệm"],
-          "answerChunkDistractors": ["Theo", "dõi", "ngân", "sách"]
+          "answerChunks": [
+            "Làm",
+            "rõ",
+            "vai",
+            "trò",
+            "và",
+            "trách",
+            "nhiệm"
+          ],
+          "answerChunkDistractors": [
+            "Theo",
+            "dõi",
+            "ngân",
+            "sách"
+          ]
         },
         {
           "prompt": "What does the term 'scope creep' refer to in project management?",
-          "options": ["A gradual reduction in project funding.", "The uncontrolled expansion of project scope beyond original agreements.", "A slow decline in team motivation.", "Unexpected delays due to supplier issues."],
+          "options": [
+            "A gradual reduction in project funding.",
+            "The uncontrolled expansion of project scope beyond original agreements.",
+            "A slow decline in team motivation.",
+            "Unexpected delays due to supplier issues."
+          ],
           "correct": 1,
           "explanation": "Scope creep là hiện tượng phạm vi dự án mở rộng dần ngoài tầm kiểm soát so với thỏa thuận ban đầu — thường dẫn đến chậm tiến độ và vượt ngân sách.",
-          "answerChunks": ["Mở", "rộng", "phạm", "vi", "ngoài", "thỏa", "thuận", "ban", "đầu"],
-          "answerChunkDistractors": ["Giảm", "ngân", "sách", "dự", "án"]
+          "answerChunks": [
+            "Mở",
+            "rộng",
+            "phạm",
+            "vi",
+            "ngoài",
+            "thỏa",
+            "thuận",
+            "ban",
+            "đầu"
+          ],
+          "answerChunkDistractors": [
+            "Giảm",
+            "ngân",
+            "sách",
+            "dự",
+            "án"
+          ]
         },
         {
           "prompt": "What is the standard protocol when an employee suspects financial fraud within the organisation?",
-          "options": ["Confront the suspected employee directly.", "Report via the confidential whistleblowing hotline or to a senior manager.", "Share the concern with colleagues first.", "Wait until the next audit cycle to raise the issue."],
+          "options": [
+            "Confront the suspected employee directly.",
+            "Report via the confidential whistleblowing hotline or to a senior manager.",
+            "Share the concern with colleagues first.",
+            "Wait until the next audit cycle to raise the issue."
+          ],
           "correct": 1,
           "explanation": "Nghi ngờ gian lận tài chính cần được báo cáo qua đường dây tố cáo bảo mật hoặc trực tiếp với quản lý cấp cao — không đối đầu hay chờ kiểm toán.",
-          "answerChunks": ["Báo", "cáo", "qua", "kênh", "tố", "cáo", "bảo", "mật"],
-          "answerChunkDistractors": ["Chờ", "đến", "kỳ", "kiểm", "toán"]
+          "answerChunks": [
+            "Báo",
+            "cáo",
+            "qua",
+            "kênh",
+            "tố",
+            "cáo",
+            "bảo",
+            "mật"
+          ],
+          "answerChunkDistractors": [
+            "Chờ",
+            "đến",
+            "kỳ",
+            "kiểm",
+            "toán"
+          ]
         }
       ]
     }

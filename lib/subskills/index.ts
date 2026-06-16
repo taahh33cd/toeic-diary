@@ -312,7 +312,7 @@ function normalizeFreewrite(s: string): string {
   return s
     .trim()
     .toLowerCase()
-    .replace(/[.,!?;:'"]/g, "")
+    .replace(/[.,!?;:'"—–]/g, "")   // strip punctuation incl. em-dash (—) and en-dash (–)
     .replace(/\b(a|an|the)\b/g, "")
     .replace(/\s+/g, " ")
     .trim();

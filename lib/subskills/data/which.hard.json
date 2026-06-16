@@ -12,20 +12,104 @@
       "title": "Bài 1 — Viết câu hỏi WHICH hoàn chỉnh",
       "instruction": "Dựa vào gợi ý tiếng Việt, viết câu hỏi WHICH hoàn chỉnh bằng tiếng Anh.",
       "items": [
-        { "prompt": "Phương án nào trong số hai đề xuất được ban giám đốc chấp thuận?", "answer": "Which of the two proposals was approved by the board?", "acceptedAnswers": ["Which proposal was approved by the board?"] },
-        { "prompt": "Nhà thầu nào phù hợp nhất với yêu cầu của dự án?", "answer": "Which contractor best meets the project requirements?", "acceptedAnswers": ["Which contractor is the best fit for the project?"] },
-        { "prompt": "Phòng họp nào được đặt sẵn cho buổi trình bày vào thứ Sáu?", "answer": "Which meeting room has been booked for Friday's presentation?", "acceptedAnswers": ["Which conference room is reserved for Friday's presentation?"] },
-        { "prompt": "Đợt đào tạo nào được yêu cầu bắt buộc đối với nhân viên mới?", "answer": "Which training sessions are mandatory for new employees?", "acceptedAnswers": ["Which training is compulsory for new staff?"] },
-        { "prompt": "Hệ thống ERP nào đang được đánh giá để nâng cấp?", "answer": "Which ERP system is being evaluated for the upgrade?", "acceptedAnswers": ["Which ERP platform is under review for upgrading?"] },
-        { "prompt": "Chi nhánh nào đạt doanh thu cao nhất trong quý vừa qua?", "answer": "Which branch achieved the highest revenue last quarter?", "acceptedAnswers": ["Which office recorded the highest sales last quarter?"] },
-        { "prompt": "Phương thức thanh toán nào được khách hàng ưu tiên nhất?", "answer": "Which payment method do clients prefer most?", "acceptedAnswers": ["Which payment option is most preferred by customers?"] },
-        { "prompt": "Dòng sản phẩm nào sẽ bị ngừng sản xuất vào cuối năm?", "answer": "Which product line will be discontinued at the end of the year?", "acceptedAnswers": ["Which product range is being phased out by year end?"] },
-        { "prompt": "Trong số các ứng viên, ai được tiến cử vào vòng phỏng vấn cuối?", "answer": "Which candidates have been shortlisted for the final interview?", "acceptedAnswers": ["Which applicants were selected for the final round?"] },
-        { "prompt": "Bộ phận nào sẽ dẫn đầu trong việc triển khai hệ thống mới?", "answer": "Which department will take the lead in implementing the new system?", "acceptedAnswers": ["Which team will lead the rollout of the new system?"] },
-        { "prompt": "Phiên bản tài liệu nào là bản cuối cùng để nộp cho khách hàng?", "answer": "Which version of the document is the final one to submit to the client?", "acceptedAnswers": ["Which document version should be submitted to the client?"] },
-        { "prompt": "Trong ba phương án vận chuyển, phương án nào có chi phí thấp nhất?", "answer": "Which of the three shipping options has the lowest cost?", "acceptedAnswers": ["Which shipping option is cheapest among the three?"] },
-        { "prompt": "Nhà cung cấp nào trong danh sách ngắn được đánh giá tốt nhất về thời gian giao hàng?", "answer": "Which shortlisted supplier has the best delivery time rating?", "acceptedAnswers": ["Which vendor on the shortlist has the best delivery performance?"] },
-        { "prompt": "Chương trình phúc lợi nào được nhân viên đăng ký nhiều nhất năm nay?", "answer": "Which benefit programme has the highest employee enrolment this year?", "acceptedAnswers": ["Which benefits scheme has the most sign-ups this year?"] }
+        {
+          "prompt": "Phương án nào trong số hai đề xuất được ban giám đốc chấp thuận?",
+          "answer": "Which of the two proposals was approved by the board?",
+          "acceptedAnswers": [
+            "Which proposal was approved by the board?"
+          ]
+        },
+        {
+          "prompt": "Nhà thầu nào phù hợp nhất với yêu cầu của dự án?",
+          "answer": "Which contractor best meets the project requirements?",
+          "acceptedAnswers": [
+            "Which contractor is the best fit for the project?"
+          ]
+        },
+        {
+          "prompt": "Phòng họp nào được đặt sẵn cho buổi trình bày vào thứ Sáu?",
+          "answer": "Which meeting room has been booked for Friday's presentation?",
+          "acceptedAnswers": [
+            "Which conference room is reserved for Friday's presentation?"
+          ]
+        },
+        {
+          "prompt": "Đợt đào tạo nào được yêu cầu bắt buộc đối với nhân viên mới?",
+          "answer": "Which training sessions are mandatory for new employees?",
+          "acceptedAnswers": [
+            "Which training is compulsory for new staff?"
+          ]
+        },
+        {
+          "prompt": "Hệ thống ERP nào đang được đánh giá để nâng cấp?",
+          "answer": "Which ERP system is being evaluated for the upgrade?",
+          "acceptedAnswers": [
+            "Which ERP platform is under review for upgrading?"
+          ]
+        },
+        {
+          "prompt": "Chi nhánh nào đạt doanh thu cao nhất trong quý vừa qua?",
+          "answer": "Which branch achieved the highest revenue last quarter?",
+          "acceptedAnswers": [
+            "Which office recorded the highest sales last quarter?"
+          ]
+        },
+        {
+          "prompt": "Phương thức thanh toán nào được khách hàng ưu tiên nhất?",
+          "answer": "Which payment method do clients prefer most?",
+          "acceptedAnswers": [
+            "Which payment option is most preferred by customers?"
+          ]
+        },
+        {
+          "prompt": "Dòng sản phẩm nào sẽ bị ngừng sản xuất vào cuối năm?",
+          "answer": "Which product line will be discontinued at the end of the year?",
+          "acceptedAnswers": [
+            "Which product range is being phased out by year end?"
+          ]
+        },
+        {
+          "prompt": "Trong số các ứng viên, ai được tiến cử vào vòng phỏng vấn cuối?",
+          "answer": "Which candidates have been shortlisted for the final interview?",
+          "acceptedAnswers": [
+            "Which applicants were selected for the final round?"
+          ]
+        },
+        {
+          "prompt": "Bộ phận nào sẽ dẫn đầu trong việc triển khai hệ thống mới?",
+          "answer": "Which department will take the lead in implementing the new system?",
+          "acceptedAnswers": [
+            "Which team will lead the rollout of the new system?"
+          ]
+        },
+        {
+          "prompt": "Phiên bản tài liệu nào là bản cuối cùng để nộp cho khách hàng?",
+          "answer": "Which version of the document is the final one to submit to the client?",
+          "acceptedAnswers": [
+            "Which document version should be submitted to the client?"
+          ]
+        },
+        {
+          "prompt": "Trong ba phương án vận chuyển, phương án nào có chi phí thấp nhất?",
+          "answer": "Which of the three shipping options has the lowest cost?",
+          "acceptedAnswers": [
+            "Which shipping option is cheapest among the three?"
+          ]
+        },
+        {
+          "prompt": "Nhà cung cấp nào trong danh sách ngắn được đánh giá tốt nhất về thời gian giao hàng?",
+          "answer": "Which shortlisted supplier has the best delivery time rating?",
+          "acceptedAnswers": [
+            "Which vendor on the shortlist has the best delivery performance?"
+          ]
+        },
+        {
+          "prompt": "Chương trình phúc lợi nào được nhân viên đăng ký nhiều nhất năm nay?",
+          "answer": "Which benefit programme has the highest employee enrolment this year?",
+          "acceptedAnswers": [
+            "Which benefits scheme has the most sign-ups this year?"
+          ]
+        }
       ]
     },
     {
@@ -33,20 +117,271 @@
       "title": "Bài 2 — Điền từ hoàn toàn tự do",
       "instruction": "Điền từ còn thiếu để hoàn thành câu hỏi. Không có gợi ý, không có word bank.",
       "items": [
-        { "template": "{0} {1} of the proposed {2} best addresses the compliance gap?", "hint": null, "blanks": [["which"], ["solution", "option", "approach"], ["changes", "measures", "policies"]] },
-        { "template": "{0} {1} has the {2} track record for on-time delivery among our current vendors?", "hint": null, "blanks": [["which"], ["supplier", "vendor", "contractor"], ["best", "strongest", "most reliable"]] },
-        { "template": "{0} {1} should the {2} report be filed under in the shared drive?", "hint": null, "blanks": [["which"], ["folder", "directory", "category"], ["audit", "compliance", "financial"]] },
-        { "template": "{0} version of the {1} is considered {2} for client distribution?", "hint": null, "blanks": [["which"], ["proposal", "document", "contract"], ["final", "approved", "official"]] },
-        { "template": "{0} of the two {1} frameworks aligns more closely with our {2} objectives?", "hint": null, "blanks": [["which"], ["risk", "governance", "reporting"], ["strategic", "operational", "long-term"]] },
-        { "template": "{0} {1} was {2} for the product launch in the Asia-Pacific region?", "hint": null, "blanks": [["which"], ["marketing", "distribution", "launch"], ["selected", "approved", "chosen"]] },
-        { "template": "{0} team {1} has {2} to handle the merger integration workload?", "hint": null, "blanks": [["which"], ["member", "leader"], ["capacity", "bandwidth", "availability"]] },
-        { "template": "{0} {1} of the internal audit was {2} as a high-priority finding?", "hint": null, "blanks": [["which"], ["section", "area", "part"], ["flagged", "identified", "classified"]] },
-        { "template": "{0} payment {1} carries the {2} transaction fees for international transfers?", "hint": null, "blanks": [["which"], ["method", "gateway", "platform"], ["lowest", "fewest", "smallest"]] },
-        { "template": "{0} of the shortlisted {1} best meets the technical {2} for the contract?", "hint": null, "blanks": [["which"], ["candidates", "bidders", "firms"], ["requirements", "specifications", "criteria"]] },
-        { "template": "{0} {1} would you {2} for drafting the partnership agreement?", "hint": null, "blanks": [["which"], ["template", "format", "structure"], ["recommend", "suggest", "use"]] },
-        { "template": "{0} branch {1} the {2} client base in the northern region?", "hint": null, "blanks": [["which"], ["manages", "serves", "handles"], ["largest", "biggest", "most significant"]] },
-        { "template": "{0} {1} in the policy {2} refers to data access privileges?", "hint": null, "blanks": [["which"], ["clause", "section", "article"], ["manual", "document", "handbook"]] },
-        { "template": "{0} of the two {1} strategies requires the {2} upfront capital investment?", "hint": null, "blanks": [["which"], ["expansion", "growth", "market entry"], ["least", "lowest", "minimum"]] }
+        {
+          "template": "{0} {1} of the proposed {2} best addresses the compliance gap?",
+          "hint": null,
+          "blanks": [
+            [
+              "which"
+            ],
+            [
+              "solution",
+              "option",
+              "approach"
+            ],
+            [
+              "changes",
+              "measures",
+              "policies"
+            ]
+          ]
+        },
+        {
+          "template": "{0} {1} has the {2} track record for on-time delivery among our current vendors?",
+          "hint": null,
+          "blanks": [
+            [
+              "which"
+            ],
+            [
+              "supplier",
+              "vendor",
+              "contractor"
+            ],
+            [
+              "best",
+              "strongest",
+              "most reliable"
+            ]
+          ]
+        },
+        {
+          "template": "{0} {1} should the {2} report be filed under in the shared drive?",
+          "hint": null,
+          "blanks": [
+            [
+              "which"
+            ],
+            [
+              "folder",
+              "directory",
+              "category"
+            ],
+            [
+              "audit",
+              "compliance",
+              "financial"
+            ]
+          ]
+        },
+        {
+          "template": "{0} version of the {1} is considered {2} for client distribution?",
+          "hint": null,
+          "blanks": [
+            [
+              "which"
+            ],
+            [
+              "proposal",
+              "document",
+              "contract"
+            ],
+            [
+              "final",
+              "approved",
+              "official"
+            ]
+          ]
+        },
+        {
+          "template": "{0} of the two {1} frameworks aligns more closely with our {2} objectives?",
+          "hint": null,
+          "blanks": [
+            [
+              "which"
+            ],
+            [
+              "risk",
+              "governance",
+              "reporting"
+            ],
+            [
+              "strategic",
+              "operational",
+              "long-term"
+            ]
+          ]
+        },
+        {
+          "template": "{0} {1} was {2} for the product launch in the Asia-Pacific region?",
+          "hint": null,
+          "blanks": [
+            [
+              "which"
+            ],
+            [
+              "marketing",
+              "distribution",
+              "launch"
+            ],
+            [
+              "selected",
+              "approved",
+              "chosen"
+            ]
+          ]
+        },
+        {
+          "template": "{0} team {1} has {2} to handle the merger integration workload?",
+          "hint": null,
+          "blanks": [
+            [
+              "which"
+            ],
+            [
+              "member",
+              "leader"
+            ],
+            [
+              "capacity",
+              "bandwidth",
+              "availability"
+            ]
+          ]
+        },
+        {
+          "template": "{0} {1} of the internal audit was {2} as a high-priority finding?",
+          "hint": null,
+          "blanks": [
+            [
+              "which"
+            ],
+            [
+              "section",
+              "area",
+              "part"
+            ],
+            [
+              "flagged",
+              "identified",
+              "classified"
+            ]
+          ]
+        },
+        {
+          "template": "{0} payment {1} carries the {2} transaction fees for international transfers?",
+          "hint": null,
+          "blanks": [
+            [
+              "which"
+            ],
+            [
+              "method",
+              "gateway",
+              "platform"
+            ],
+            [
+              "lowest",
+              "fewest",
+              "smallest"
+            ]
+          ]
+        },
+        {
+          "template": "{0} of the shortlisted {1} best meets the technical {2} for the contract?",
+          "hint": null,
+          "blanks": [
+            [
+              "which"
+            ],
+            [
+              "candidates",
+              "bidders",
+              "firms"
+            ],
+            [
+              "requirements",
+              "specifications",
+              "criteria"
+            ]
+          ]
+        },
+        {
+          "template": "{0} {1} would you {2} for drafting the partnership agreement?",
+          "hint": null,
+          "blanks": [
+            [
+              "which"
+            ],
+            [
+              "template",
+              "format",
+              "structure"
+            ],
+            [
+              "recommend",
+              "suggest",
+              "use"
+            ]
+          ]
+        },
+        {
+          "template": "{0} branch {1} the {2} client base in the northern region?",
+          "hint": null,
+          "blanks": [
+            [
+              "which"
+            ],
+            [
+              "manages",
+              "serves",
+              "handles"
+            ],
+            [
+              "largest",
+              "biggest",
+              "most significant"
+            ]
+          ]
+        },
+        {
+          "template": "{0} {1} in the policy {2} refers to data access privileges?",
+          "hint": null,
+          "blanks": [
+            [
+              "which"
+            ],
+            [
+              "clause",
+              "section",
+              "article"
+            ],
+            [
+              "manual",
+              "document",
+              "handbook"
+            ]
+          ]
+        },
+        {
+          "template": "{0} of the two {1} strategies requires the {2} upfront capital investment?",
+          "hint": null,
+          "blanks": [
+            [
+              "which"
+            ],
+            [
+              "expansion",
+              "growth",
+              "market entry"
+            ],
+            [
+              "least",
+              "lowest",
+              "minimum"
+            ]
+          ]
+        }
       ]
     },
     {
@@ -56,31 +391,61 @@
       "items": [
         {
           "question": "Which department manages company-wide software licensing?",
-          "options": ["The IT department does.", "The procurement team handles it.", "The finance office oversees it.", "The operations team coordinates it.", "The legal department manages it."],
+          "options": [
+            "The IT department does.",
+            "The procurement team handles it.",
+            "The finance office oversees it.",
+            "The operations team coordinates it.",
+            "The legal department manages it."
+          ],
           "correct": 0,
           "explanation": "Quản lý giấy phép phần mềm toàn công ty là trách nhiệm của IT department, không phải procurement hay finance."
         },
         {
           "question": "Which team is responsible for vendor selection and contract negotiation?",
-          "options": ["The IT department does.", "The procurement team handles it.", "The finance office oversees it.", "The operations team coordinates it.", "The legal department manages it."],
+          "options": [
+            "The IT department does.",
+            "The procurement team handles it.",
+            "The finance office oversees it.",
+            "The operations team coordinates it.",
+            "The legal department manages it."
+          ],
           "correct": 1,
           "explanation": "Chọn nhà cung cấp và đàm phán hợp đồng thuộc về procurement team. IT quản lý phần mềm; finance kiểm soát ngân sách."
         },
         {
           "question": "Which office is responsible for monitoring the company's cash flow and budget adherence?",
-          "options": ["The IT department does.", "The procurement team handles it.", "The finance office oversees it.", "The operations team coordinates it.", "The legal department manages it."],
+          "options": [
+            "The IT department does.",
+            "The procurement team handles it.",
+            "The finance office oversees it.",
+            "The operations team coordinates it.",
+            "The legal department manages it."
+          ],
           "correct": 2,
           "explanation": "Dòng tiền và tuân thủ ngân sách là trách nhiệm của finance office — không phải IT hay operations."
         },
         {
           "question": "Which team ensures day-to-day business processes run smoothly across all sites?",
-          "options": ["The IT department does.", "The procurement team handles it.", "The finance office oversees it.", "The operations team coordinates it.", "The legal department manages it."],
+          "options": [
+            "The IT department does.",
+            "The procurement team handles it.",
+            "The finance office oversees it.",
+            "The operations team coordinates it.",
+            "The legal department manages it."
+          ],
           "correct": 3,
           "explanation": "Đảm bảo quy trình vận hành hàng ngày suôn sẻ trên tất cả địa điểm là vai trò của operations team."
         },
         {
           "question": "Which department reviews employment contracts and regulatory compliance matters?",
-          "options": ["The IT department does.", "The procurement team handles it.", "The finance office oversees it.", "The operations team coordinates it.", "The legal department manages it."],
+          "options": [
+            "The IT department does.",
+            "The procurement team handles it.",
+            "The finance office oversees it.",
+            "The operations team coordinates it.",
+            "The legal department manages it."
+          ],
           "correct": 4,
           "explanation": "Xem xét hợp đồng lao động và tuân thủ pháp lý là nhiệm vụ của legal department, không phải HR hay finance."
         }
@@ -91,119 +456,365 @@
       "title": "Bài 4 — Chọn đáp án & dịch sang tiếng Việt",
       "instruction": "Chọn đáp án đúng nhất. Phân biệt kỹ lựa chọn nào phù hợp nhất với ngữ cảnh.",
       "translateMode": "always",
-      "scoring": { "mcqWeight": 0.5, "translateWeight": 0.5 },
+      "scoring": {
+        "mcqWeight": 0.5,
+        "translateWeight": 0.5
+      },
       "items": [
         {
           "prompt": "Which approach is most effective for reducing employee turnover in a competitive market?",
-          "options": ["Increasing salaries above market rate for all staff.", "Offering structured career development and recognition programmes.", "Reducing workload by cutting project scope.", "Implementing stricter performance monitoring."],
+          "options": [
+            "Increasing salaries above market rate for all staff.",
+            "Offering structured career development and recognition programmes.",
+            "Reducing workload by cutting project scope.",
+            "Implementing stricter performance monitoring."
+          ],
           "correct": 1,
           "explanation": "Chương trình phát triển nghề nghiệp và ghi nhận thành tích là cách bền vững nhất để giữ chân nhân viên — tăng lương cho tất cả không khả thi về lâu dài.",
-          "answerChunks": ["Chương", "trình", "phát", "triển", "và", "ghi", "nhận"],
-          "answerChunkDistractors": ["Tăng", "lương", "toàn", "bộ"]
+          "answerChunks": [
+            "Chương",
+            "trình",
+            "phát",
+            "triển",
+            "và",
+            "ghi",
+            "nhận"
+          ],
+          "answerChunkDistractors": [
+            "Tăng",
+            "lương",
+            "toàn",
+            "bộ"
+          ]
         },
         {
           "prompt": "Which document should be reviewed first when onboarding a new enterprise client?",
-          "options": ["The client's latest annual report.", "The master service agreement and data processing terms.", "The client's marketing materials.", "The list of previous invoices."],
+          "options": [
+            "The client's latest annual report.",
+            "The master service agreement and data processing terms.",
+            "The client's marketing materials.",
+            "The list of previous invoices."
+          ],
           "correct": 1,
           "explanation": "MSA và điều khoản xử lý dữ liệu xác định nghĩa vụ pháp lý và phạm vi dịch vụ — cần xem xét đầu tiên trước khi bắt đầu cung cấp dịch vụ.",
-          "answerChunks": ["Thỏa", "thuận", "dịch", "vụ", "và", "điều", "khoản", "dữ", "liệu"],
-          "answerChunkDistractors": ["Báo", "cáo", "thường", "niên"]
+          "answerChunks": [
+            "Thỏa",
+            "thuận",
+            "dịch",
+            "vụ",
+            "và",
+            "điều",
+            "khoản",
+            "dữ",
+            "liệu"
+          ],
+          "answerChunkDistractors": [
+            "Báo",
+            "cáo",
+            "thường",
+            "niên"
+          ]
         },
         {
           "prompt": "Which metric is most relevant for evaluating the effectiveness of a recruitment campaign?",
-          "options": ["Number of job advertisements placed.", "Cost per hire and time to fill.", "Total HR department headcount.", "Number of candidates who declined the offer."],
+          "options": [
+            "Number of job advertisements placed.",
+            "Cost per hire and time to fill.",
+            "Total HR department headcount.",
+            "Number of candidates who declined the offer."
+          ],
           "correct": 1,
           "explanation": "Cost per hire và time to fill là chỉ số trực tiếp đo lường hiệu quả tuyển dụng — không phải số lượng quảng cáo hay từ chối lời mời.",
-          "answerChunks": ["Chi", "phí", "tuyển", "dụng", "và", "thời", "gian", "lấp", "đầy"],
-          "answerChunkDistractors": ["Số", "lượng", "quảng", "cáo"]
+          "answerChunks": [
+            "Chi",
+            "phí",
+            "tuyển",
+            "dụng",
+            "và",
+            "thời",
+            "gian",
+            "lấp",
+            "đầy"
+          ],
+          "answerChunkDistractors": [
+            "Số",
+            "lượng",
+            "quảng",
+            "cáo"
+          ]
         },
         {
           "prompt": "Which risk management strategy involves transferring the financial impact of a risk to a third party?",
-          "options": ["Risk avoidance.", "Risk mitigation.", "Risk transfer.", "Risk acceptance."],
+          "options": [
+            "Risk avoidance.",
+            "Risk mitigation.",
+            "Risk transfer.",
+            "Risk acceptance."
+          ],
           "correct": 2,
           "explanation": "Risk transfer (chuyển giao rủi ro) — ví dụ mua bảo hiểm — chuyển gánh nặng tài chính sang bên thứ ba. Risk mitigation giảm xác suất; avoidance loại bỏ hoạt động rủi ro.",
-          "answerChunks": ["Chuyển", "giao", "rủi", "ro"],
-          "answerChunkDistractors": ["Giảm", "thiểu", "rủi", "ro"]
+          "answerChunks": [
+            "Chuyển",
+            "giao",
+            "rủi",
+            "ro"
+          ],
+          "answerChunkDistractors": [
+            "Giảm",
+            "thiểu"
+          ]
         },
         {
           "prompt": "Which communication channel is most appropriate for announcing a company-wide policy change?",
-          "options": ["A direct message to each employee's personal phone.", "An official all-staff email supported by a manager briefing.", "A post on the company's social media page.", "A notice on the break room bulletin board."],
+          "options": [
+            "A direct message to each employee's personal phone.",
+            "An official all-staff email supported by a manager briefing.",
+            "A post on the company's social media page.",
+            "A notice on the break room bulletin board."
+          ],
           "correct": 1,
           "explanation": "Email toàn công ty kết hợp với briefing từ manager đảm bảo thông điệp nhất quán, chính thức và được tiếp nhận đầy đủ.",
-          "answerChunks": ["Email", "chính", "thức", "kết", "hợp", "briefing", "của", "quản", "lý"],
-          "answerChunkDistractors": ["Tin", "nhắn", "cá", "nhân"]
+          "answerChunks": [
+            "Email",
+            "chính",
+            "thức",
+            "kết",
+            "hợp",
+            "briefing",
+            "của",
+            "quản",
+            "lý"
+          ],
+          "answerChunkDistractors": [
+            "Tin",
+            "nhắn",
+            "cá",
+            "nhân"
+          ]
         },
         {
           "prompt": "Which financial statement shows a company's assets, liabilities, and equity at a specific point in time?",
-          "options": ["The income statement.", "The cash flow statement.", "The balance sheet.", "The statement of retained earnings."],
+          "options": [
+            "The income statement.",
+            "The cash flow statement.",
+            "The balance sheet.",
+            "The statement of retained earnings."
+          ],
           "correct": 2,
           "explanation": "Balance sheet (bảng cân đối kế toán) thể hiện tài sản, nợ và vốn chủ sở hữu tại một thời điểm cụ thể. Income statement thể hiện kết quả hoạt động kinh doanh theo kỳ.",
-          "answerChunks": ["Bảng", "cân", "đối", "kế", "toán"],
-          "answerChunkDistractors": ["Báo", "cáo", "thu", "nhập"]
+          "answerChunks": [
+            "Bảng",
+            "cân",
+            "đối",
+            "kế",
+            "toán"
+          ],
+          "answerChunkDistractors": [
+            "Báo",
+            "cáo",
+            "thu",
+            "nhập"
+          ]
         },
         {
           "prompt": "Which contract clause protects a company if a client fails to make payment on time?",
-          "options": ["The indemnity clause.", "The late payment penalty clause.", "The force majeure clause.", "The limitation of liability clause."],
+          "options": [
+            "The indemnity clause.",
+            "The late payment penalty clause.",
+            "The force majeure clause.",
+            "The limitation of liability clause."
+          ],
           "correct": 1,
           "explanation": "Late payment penalty clause quy định phí phạt khi khách hàng thanh toán trễ — đây là điều khoản bảo vệ doanh nghiệp khỏi việc bị chậm thu tiền.",
-          "answerChunks": ["Điều", "khoản", "phạt", "thanh", "toán", "trễ"],
-          "answerChunkDistractors": ["Điều", "khoản", "bất", "khả", "kháng"]
+          "answerChunks": [
+            "Điều",
+            "khoản",
+            "phạt",
+            "thanh",
+            "toán",
+            "trễ"
+          ],
+          "answerChunkDistractors": [
+            "bất",
+            "khả",
+            "kháng"
+          ]
         },
         {
           "prompt": "Which project management methodology is best suited for projects with frequent scope changes?",
-          "options": ["Waterfall.", "PRINCE2.", "Agile.", "Critical path method."],
+          "options": [
+            "Waterfall.",
+            "PRINCE2.",
+            "Agile.",
+            "Critical path method."
+          ],
           "correct": 2,
           "explanation": "Agile được thiết kế cho môi trường thay đổi thường xuyên với các vòng lặp ngắn. Waterfall và Critical Path phù hợp với dự án có phạm vi cố định từ đầu.",
-          "answerChunks": ["Agile"],
-          "answerChunkDistractors": ["Waterfall", "Scrum", "tinh", "gọn"]
+          "answerChunks": [
+            "Agile"
+          ],
+          "answerChunkDistractors": [
+            "Waterfall",
+            "Scrum",
+            "tinh",
+            "gọn"
+          ]
         },
         {
           "prompt": "Which internal document is used to formally request approval for an unplanned purchase?",
-          "options": ["A purchase order.", "A purchase requisition.", "An invoice.", "A delivery note."],
+          "options": [
+            "A purchase order.",
+            "A purchase requisition.",
+            "An invoice.",
+            "A delivery note."
+          ],
           "correct": 1,
           "explanation": "Purchase requisition là biểu mẫu nội bộ để xin phê duyệt mua hàng chưa có trong kế hoạch. Purchase order được tạo sau khi đã được phê duyệt và gửi cho nhà cung cấp.",
-          "answerChunks": ["Phiếu", "yêu", "cầu", "mua", "hàng"],
-          "answerChunkDistractors": ["Đơn", "đặt", "hàng", "mua"]
+          "answerChunks": [
+            "Phiếu",
+            "yêu",
+            "cầu",
+            "mua",
+            "hàng"
+          ],
+          "answerChunkDistractors": [
+            "Đơn",
+            "đặt"
+          ]
         },
         {
           "prompt": "Which KPI best indicates the quality of customer service delivery?",
-          "options": ["Total number of incoming calls.", "Net Promoter Score and first-call resolution rate.", "Number of customer service staff on duty.", "Average call waiting time only."],
+          "options": [
+            "Total number of incoming calls.",
+            "Net Promoter Score and first-call resolution rate.",
+            "Number of customer service staff on duty.",
+            "Average call waiting time only."
+          ],
           "correct": 1,
           "explanation": "NPS đo lường sự hài lòng và khả năng giới thiệu; first-call resolution rate đo hiệu quả xử lý. Chỉ riêng số cuộc gọi hay thời gian chờ không phản ánh chất lượng dịch vụ.",
-          "answerChunks": ["NPS", "và", "tỷ", "lệ", "giải", "quyết", "ngay", "lần", "đầu"],
-          "answerChunkDistractors": ["Thời", "gian", "chờ", "trung", "bình"]
+          "answerChunks": [
+            "NPS",
+            "và",
+            "tỷ",
+            "lệ",
+            "giải",
+            "quyết",
+            "ngay",
+            "lần",
+            "đầu"
+          ],
+          "answerChunkDistractors": [
+            "Thời",
+            "gian",
+            "chờ",
+            "trung",
+            "bình"
+          ]
         },
         {
           "prompt": "Which element is essential in a well-structured business case document?",
-          "options": ["A timeline of past projects.", "A cost-benefit analysis and recommended option.", "A list of all employees involved.", "A summary of industry news."],
+          "options": [
+            "A timeline of past projects.",
+            "A cost-benefit analysis and recommended option.",
+            "A list of all employees involved.",
+            "A summary of industry news."
+          ],
           "correct": 1,
           "explanation": "Phân tích chi phí-lợi ích và khuyến nghị lựa chọn là cốt lõi của một business case — giúp người ra quyết định hiểu giá trị và rủi ro của từng phương án.",
-          "answerChunks": ["Phân", "tích", "chi", "phí-lợi", "ích", "và", "khuyến", "nghị"],
-          "answerChunkDistractors": ["Danh", "sách", "nhân", "viên"]
+          "answerChunks": [
+            "Phân",
+            "tích",
+            "chi",
+            "phí-lợi",
+            "ích",
+            "và",
+            "khuyến",
+            "nghị"
+          ],
+          "answerChunkDistractors": [
+            "Danh",
+            "sách",
+            "nhân",
+            "viên"
+          ]
         },
         {
           "prompt": "Which type of audit examines financial records to verify accuracy and compliance?",
-          "options": ["An operational audit.", "A financial audit.", "A compliance audit.", "A performance audit."],
+          "options": [
+            "An operational audit.",
+            "A financial audit.",
+            "A compliance audit.",
+            "A performance audit."
+          ],
           "correct": 1,
           "explanation": "Financial audit kiểm tra hồ sơ tài chính để xác minh tính chính xác và tuân thủ chuẩn mực kế toán. Operational audit đánh giá quy trình; compliance audit kiểm tra tuân thủ pháp lý.",
-          "answerChunks": ["Kiểm", "toán", "tài", "chính"],
-          "answerChunkDistractors": ["Kiểm", "toán", "vận", "hành"]
+          "answerChunks": [
+            "Kiểm",
+            "toán",
+            "tài",
+            "chính"
+          ],
+          "answerChunkDistractors": [
+            "vận",
+            "hành"
+          ]
         },
         {
           "prompt": "Which stakeholder group typically has the highest influence on a project's strategic direction?",
-          "options": ["The project sponsor and executive steering committee.", "The end users and daily operators.", "The external vendors and suppliers.", "The project management office."],
+          "options": [
+            "The project sponsor and executive steering committee.",
+            "The end users and daily operators.",
+            "The external vendors and suppliers.",
+            "The project management office."
+          ],
           "correct": 0,
           "explanation": "Project sponsor và ban chỉ đạo điều hành có quyền quyết định chiến lược cao nhất — họ cung cấp nguồn lực, phê duyệt ngân sách và chỉ đạo định hướng.",
-          "answerChunks": ["Nhà", "tài", "trợ", "và", "ban", "chỉ", "đạo", "điều", "hành"],
-          "answerChunkDistractors": ["Nhà", "cung", "cấp", "bên", "ngoài"]
+          "answerChunks": [
+            "Nhà",
+            "tài",
+            "trợ",
+            "và",
+            "ban",
+            "chỉ",
+            "đạo",
+            "điều",
+            "hành"
+          ],
+          "answerChunkDistractors": [
+            "cung",
+            "cấp",
+            "bên",
+            "ngoài"
+          ]
         },
         {
           "prompt": "Which process ensures that all employees are aware of and understand the updated company policies?",
-          "options": ["Publishing policies on the intranet only.", "A structured communication and acknowledgement process.", "Sending a single email announcement.", "Posting notices in staff common areas."],
+          "options": [
+            "Publishing policies on the intranet only.",
+            "A structured communication and acknowledgement process.",
+            "Sending a single email announcement.",
+            "Posting notices in staff common areas."
+          ],
           "correct": 1,
           "explanation": "Quy trình truyền thông có cấu trúc kèm xác nhận (acknowledgement) đảm bảo nhân viên không chỉ nhận được mà còn thực sự hiểu chính sách mới.",
-          "answerChunks": ["Quy", "trình", "truyền", "thông", "và", "xác", "nhận", "có", "cấu", "trúc"],
-          "answerChunkDistractors": ["Email", "thông", "báo", "một", "lần"]
+          "answerChunks": [
+            "Quy",
+            "trình",
+            "truyền",
+            "thông",
+            "và",
+            "xác",
+            "nhận",
+            "có",
+            "cấu",
+            "trúc"
+          ],
+          "answerChunkDistractors": [
+            "Email",
+            "báo",
+            "một",
+            "lần"
+          ]
         }
       ]
     }
