@@ -77,7 +77,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
     <header className={styles.header}>
       <div className={styles.inner}>
         {/* Logo */}
-        <Link href="/" className={styles.logo}>
+        <Link href="/dictation" className={styles.logo}>
           <div className={styles.logoIcon}>
             <span>🎧</span>
           </div>
@@ -91,10 +91,10 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
         <nav className={styles.nav}>
           {/* Home icon-only button */}
           <Link
-            href="/home"
+            href="/dictation"
             className={styles.navLink}
-            title="Trang chủ"
-            aria-label="Trang chủ"
+            title="Trang chủ Dictation"
+            aria-label="Trang chủ Dictation"
           >
             <Home size={16} />
           </Link>
@@ -249,11 +249,11 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
       <div className="px-4 py-3 flex flex-col gap-1">
         {/* Home */}
         <Link
-          href="/home"
+          href="/dictation"
           onClick={() => setMobileNavOpen(false)}
           className="flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-white transition-colors"
           style={{
-            background: pathname === "/home" ? "rgba(255,214,107,0.25)" : "transparent",
+            background: pathname === "/dictation" ? "rgba(255,214,107,0.25)" : "transparent",
             textDecoration: "none",
           }}
         >

@@ -97,9 +97,9 @@ export function GrammarShell({ children, displayName, userEmail, userDisplayName
           >
             {/* Home icon-only */}
             <Link
-              href="/home"
-              title="Trang chủ"
-              aria-label="Trang chủ"
+              href="/grammar"
+              title="Trang chủ Grammar"
+              aria-label="Trang chủ Grammar"
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -240,7 +240,7 @@ export function GrammarShell({ children, displayName, userEmail, userDisplayName
           >
             {/* Home */}
             <Link
-              href="/home"
+              href="/grammar"
               onClick={() => setMenuOpen(false)}
               style={{
                 display: "flex",

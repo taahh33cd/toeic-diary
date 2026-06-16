@@ -103,9 +103,9 @@ export function SubskillsHeader({
         >
           {/* Home icon-only */}
           <Link
-            href="/home"
-            title="Trang chủ"
-            aria-label="Trang chủ"
+            href="/subskills"
+            title="Trang chủ Subskills"
+            aria-label="Trang chủ Subskills"
             style={{
               display: "flex",
               alignItems: "center",
@@ -257,7 +257,7 @@ export function SubskillsHeader({
             }}
           >
             <Link
-              href="/home"
+              href="/subskills"
               onClick={() => setMenuOpen(false)}
               style={{
                 display: "flex",

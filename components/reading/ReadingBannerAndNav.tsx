@@ -113,9 +113,9 @@ export function ReadingBannerAndNav({
         >
           {/* Home icon-only */}
           <Link
-            href="/home"
-            title="Trang chủ"
-            aria-label="Trang chủ"
+            href="/reading-practice"
+            title="Trang chủ Reading"
+            aria-label="Trang chủ Reading"
             style={{
               display: "flex",
               alignItems: "center",
@@ -274,7 +274,7 @@ export function ReadingBannerAndNav({
           >
             {/* Home */}
             <Link
-              href="/home"
+              href="/reading-practice"
               onClick={() => setMenuOpen(false)}
               style={{
                 display: "flex",
