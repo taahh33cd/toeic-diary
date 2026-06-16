@@ -19,6 +19,12 @@ export async function proxy(request: NextRequest) {
 
   // ── Domain separation ─────────────────────────────────────────────────────────
   if (process.env.SITE_MODE === 'admin') {
+    // Root "/" → vào thẳng admin dashboard
+    if (pathname === '/') {
+      const url = request.nextUrl.clone()
+      url.pathname = '/admin'
+      return NextResponse.redirect(url)
+    }
     // Admin-only site: only /admin, /auth, /api, /invite allowed
     const allowed =
       pathname.startsWith('/admin') ||
