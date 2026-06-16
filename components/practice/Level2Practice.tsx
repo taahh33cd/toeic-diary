@@ -23,6 +23,7 @@ interface Props {
   sentences: Sentence[];
   startTime: number | null;
   transcriptFull: string;
+  keyVocab: VocabItem[] | null;
   onScored: (score: number) => void;
 }
 
@@ -51,7 +52,7 @@ function cleanAnswer(answer: string) {
   return answer.replace(/[^a-z0-9']/g, "");
 }
 
-export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessionStart, transcriptFull, onScored }: Props) {
+export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessionStart, transcriptFull, keyVocab, onScored }: Props) {
   const seed = useMemo(() => Math.floor(Math.random() * 10000), []);
 
   const sentencesWithBlanks = useMemo(() =>
@@ -90,8 +91,6 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
   const [submitted, setSubmitted] = useState(false);
   const [finalScore, setFinalScore] = useState<number | null>(null);
 
-  const [vocabItems, setVocabItems] = useState<VocabItem[] | null | "error">(null);
-  const vocabFetchStartedRef = useRef(false);
 
   const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
 
@@ -249,37 +248,6 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
     }
   }
 
-  useEffect(() => {
-    if (showSubmit) triggerFetchVocab();
-  }, [showSubmit]);
-
-  function triggerFetchVocab() {
-    if (vocabFetchStartedRef.current) return;
-    vocabFetchStartedRef.current = true;
-    void fetchVocab();
-  }
-
-  function retryVocab() {
-    vocabFetchStartedRef.current = false;
-    setVocabItems(null);
-    triggerFetchVocab();
-  }
-
-  async function fetchVocab() {
-    try {
-      const res = await fetch("/api/ai/extract-vocabulary", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ transcript: transcriptFull }),
-      });
-      if (!res.ok) { setVocabItems("error"); return; }
-      const data = await res.json();
-      setVocabItems(Array.isArray(data.items) && data.items.length > 0 ? data.items : data.items?.length === 0 ? [] : "error");
-    } catch {
-      setVocabItems("error");
-    }
-  }
-
   async function handleSubmit() {
     const allBlanks = sentencesWithBlanks.flatMap((s) => s.blanks);
     const correctCount = allBlanks.filter((b) => blankStates[b.id]?.status === "correct").length;
@@ -299,7 +267,6 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
       ),
       timeSpentSeconds: getTimeSpent(sessionStart),
     });
-    triggerFetchVocab(); // fallback nếu useEffect chưa kịp trigger
   }
 
   function renderWords(sentence: typeof sentencesWithBlanks[0]) {
@@ -373,9 +340,8 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
         detail={`${correctCount}/${allBlanks.length} blank đúng`}
         audioUrl={audioUrl}
         transcriptFull={transcriptFull}
-        vocabItems={vocabItems}
+        vocabItems={keyVocab}
         onRetry={() => window.location.reload()}
-        onRetryVocab={retryVocab}
       />
     );
   }

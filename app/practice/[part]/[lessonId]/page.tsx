@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PracticeClient } from "@/components/practice/PracticeClient";
+import type { VocabItem } from "@/components/practice/TranscriptVocabModal";
 import { ensureMinBlanks } from "@/lib/generateBlanks";
 import { isUsageExempt } from "@/lib/access";
 import { UsageGate } from "@/components/shared/UsageGate";
@@ -140,7 +141,13 @@ export default async function PartLessonPage({
           </p>
         </div>
 
-        <PracticeClient lesson={lessonData} userId={user.id} progressByLevel={progressByLevel} nextLessonUrl={nextLessonUrl} />
+        <PracticeClient
+          lesson={lessonData}
+          userId={user.id}
+          progressByLevel={progressByLevel}
+          nextLessonUrl={nextLessonUrl}
+          keyVocab={Array.isArray(lesson.keyVocabulary) ? (lesson.keyVocabulary as unknown as VocabItem[]) : null}
+        />
       </main>
 
       <Footer />

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PracticeClient } from "@/components/practice/PracticeClient";
+import type { VocabItem } from "@/components/practice/TranscriptVocabModal";
 import { ensureMinBlanks } from "@/lib/generateBlanks";
 import { ChevronLeft } from "lucide-react";
 import { isUsageExempt } from "@/lib/access";
@@ -136,6 +137,7 @@ export default async function LessonPage({
           userId={user.id}
           progressByLevel={progressByLevel}
           nextLessonUrl={nextLessonUrl}
+          keyVocab={Array.isArray(lesson.keyVocabulary) ? (lesson.keyVocabulary as unknown as VocabItem[]) : null}
         />
       </main>
 

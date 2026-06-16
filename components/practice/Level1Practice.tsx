@@ -37,6 +37,7 @@ interface Props {
   startTime: number | null;
   nextLessonUrl?: string | null;
   transcriptFull: string;
+  keyVocab: VocabItem[] | null;
   onScored: (score: number) => void;
 }
 
@@ -64,7 +65,7 @@ function cleanAnswer(answer: string) {
   return answer.replace(/[^a-z0-9']/g, "");
 }
 
-export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, nextLessonUrl, transcriptFull, onScored }: Props) {
+export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, nextLessonUrl, transcriptFull, keyVocab, onScored }: Props) {
   const isPart2 = partNumber === 2;
 
   // Ensure every sentence has at least 2 blanks; generate runtime if DB blanks are missing
@@ -104,8 +105,6 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
   const [answerRevealed, setAnswerRevealed] = useState(false);
   const [part2AllDone, setPart2AllDone] = useState(false);
 
-  const [vocabItems, setVocabItems] = useState<VocabItem[] | null | "error">(null);
-  const vocabFetchStartedRef = useRef(false);
 
   const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
 
@@ -328,41 +327,6 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
     }
   }
 
-  // ── Vocab prefetch ───────────────────────────────────────────────────────────
-
-  useEffect(() => {
-    if (showSubmit || (isPart2 && part2AllDone)) triggerFetchVocab();
-  }, [showSubmit, part2AllDone]);
-
-  function triggerFetchVocab() {
-    if (vocabFetchStartedRef.current) return;
-    vocabFetchStartedRef.current = true;
-    void fetchVocab();
-  }
-
-  function retryVocab() {
-    vocabFetchStartedRef.current = false;
-    setVocabItems(null);
-    triggerFetchVocab();
-  }
-
-  // ── Submit ───────────────────────────────────────────────────────────────────
-
-  async function fetchVocab() {
-    try {
-      const res = await fetch("/api/ai/extract-vocabulary", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ transcript: transcriptFull }),
-      });
-      if (!res.ok) { setVocabItems("error"); return; }
-      const data = await res.json();
-      setVocabItems(Array.isArray(data.items) && data.items.length > 0 ? data.items : data.items?.length === 0 ? [] : "error");
-    } catch {
-      setVocabItems("error");
-    }
-  }
-
   async function handleSubmit() {
     const allBlanks = processedSentences.flatMap((s) => s.blanks);
     const correctCount = allBlanks.filter((b) => blankStates[b.id]?.status === "correct").length;
@@ -386,7 +350,6 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
       ),
       timeSpentSeconds: getTimeSpent(sessionStart),
     });
-    triggerFetchVocab(); // fallback nếu useEffect chưa kịp trigger
   }
 
   // ── Sentence renderer ────────────────────────────────────────────────────────
@@ -474,10 +437,9 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
         detail={`${correctCount}/${allBlanks.length} blank đúng`}
         audioUrl={audioUrl}
         transcriptFull={transcriptFull}
-        vocabItems={vocabItems}
+        vocabItems={keyVocab}
         nextLessonUrl={nextLessonUrl}
         onRetry={() => window.location.reload()}
-        onRetryVocab={retryVocab}
       />
     );
   }

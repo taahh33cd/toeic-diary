@@ -30,6 +30,7 @@ interface Props {
   dbLevel?: number;
   nextLessonUrl?: string | null;
   transcriptFull: string;
+  keyVocab: VocabItem[] | null;
   onScored: (score: number) => void;
 }
 
@@ -76,7 +77,7 @@ function countCorrectWords(wordResults: WordResult[]): number {
   return wordResults.filter((w) => w.correct).length;
 }
 
-export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, dbLevel = 3, nextLessonUrl, transcriptFull, onScored }: Props) {
+export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, correctOption, explanation, startTime: sessionStart, dbLevel = 3, nextLessonUrl, transcriptFull, keyVocab, onScored }: Props) {
   const isPart2 = partNumber === 2;
   const [activeIdx, setActiveIdx] = useState(0);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -104,8 +105,6 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
   const [submitted, setSubmitted] = useState(false);
   const [finalScore, setFinalScore] = useState<number | null>(null);
 
-  const [vocabItems, setVocabItems] = useState<VocabItem[] | null | "error">(null);
-  const vocabFetchStartedRef = useRef(false);
 
   const activeSentence = sentences[activeIdx];
   const replayCount = replayCounts[activeSentence?.id ?? ""] ?? 0;
@@ -293,37 +292,6 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     setSentenceStates((prev) => ({ ...prev, [sentenceId]: { ...prev[sentenceId], phase: "revealed", wordResults: results } }));
   }
 
-  useEffect(() => {
-    if (showSubmit || (isPart2 && part2AllDone)) triggerFetchVocab();
-  }, [showSubmit, part2AllDone]);
-
-  function triggerFetchVocab() {
-    if (vocabFetchStartedRef.current) return;
-    vocabFetchStartedRef.current = true;
-    void fetchVocab();
-  }
-
-  function retryVocab() {
-    vocabFetchStartedRef.current = false;
-    setVocabItems(null);
-    triggerFetchVocab();
-  }
-
-  async function fetchVocab() {
-    try {
-      const res = await fetch("/api/ai/extract-vocabulary", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ transcript: transcriptFull }),
-      });
-      if (!res.ok) { setVocabItems("error"); return; }
-      const data = await res.json();
-      setVocabItems(Array.isArray(data.items) && data.items.length > 0 ? data.items : data.items?.length === 0 ? [] : "error");
-    } catch {
-      setVocabItems("error");
-    }
-  }
-
   async function handleSubmit() {
     let totalWords = 0;
     let correctWords = 0;
@@ -349,7 +317,6 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
       userAnswer: JSON.stringify(sentences.map((s) => ({ id: s.id, words: sentenceStates[s.id]?.wordResults?.map((w) => w.retryValue) ?? [] }))),
       timeSpentSeconds: getTimeSpent(sessionStart),
     });
-    triggerFetchVocab(); // fallback nếu useEffect chưa kịp trigger
   }
 
   function renderBlankPlaceholder(sentence: Sentence) {
@@ -424,10 +391,9 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
         detail={`${correctWords}/${totalWords} từ đúng`}
         audioUrl={audioUrl}
         transcriptFull={transcriptFull}
-        vocabItems={vocabItems}
+        vocabItems={keyVocab}
         nextLessonUrl={nextLessonUrl}
         onRetry={() => window.location.reload()}
-        onRetryVocab={retryVocab}
       />
     );
   }

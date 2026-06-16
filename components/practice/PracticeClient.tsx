@@ -8,6 +8,7 @@ import { Level3Practice } from "./Level3Practice";
 import { Level4Practice } from "./Level4Practice";
 import { PenLine, FileText, Sparkles, CheckCircle2 } from "lucide-react";
 import { usePracticeStore } from "@/stores/practiceStore";
+import type { VocabItem } from "./TranscriptVocabModal";
 
 interface Blank {
   id: string;
@@ -52,6 +53,7 @@ interface Props {
   userId: string;
   progressByLevel: Record<number, LevelProgress>;
   nextLessonUrl?: string | null;
+  keyVocab: VocabItem[] | null;
 }
 
 // Part 1 & 2: Level 1 (2 blanks, DB) + Level 2 (full dictation)
@@ -79,7 +81,7 @@ function LevelIcon({ level, active }: { level: number; active: boolean }) {
 
 type ActiveLevel = 1 | 2 | 3 | 4;
 
-export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl }: Props) {
+export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl, keyVocab }: Props) {
   const isPart12 = lesson.partNumber === 1 || lesson.partNumber === 2;
   const LEVEL_INFO = isPart12 ? LEVEL_INFO_12 : LEVEL_INFO_34;
 
@@ -236,6 +238,7 @@ export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl 
           startTime={startTime}
           nextLessonUrl={nextLessonUrl}
           transcriptFull={lesson.transcriptFull}
+          keyVocab={keyVocab}
           onScored={(s) => handleScored(1, s)}
         />
       )}
@@ -252,6 +255,7 @@ export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl 
           dbLevel={2}
           nextLessonUrl={nextLessonUrl}
           transcriptFull={lesson.transcriptFull}
+          keyVocab={keyVocab}
           onScored={(s) => handleScored(2, s)}
         />
       )}
@@ -263,6 +267,7 @@ export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl 
           sentences={lesson.sentences}
           startTime={startTime}
           transcriptFull={lesson.transcriptFull}
+          keyVocab={keyVocab}
           onScored={(s) => handleScored(2, s)}
         />
       )}
@@ -277,6 +282,7 @@ export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl 
           explanation={lesson.explanation ?? null}
           startTime={startTime}
           transcriptFull={lesson.transcriptFull}
+          keyVocab={keyVocab}
           onScored={(s) => handleScored(3, s)}
         />
       )}
