@@ -330,7 +330,7 @@ function StudentMiniCard({ student }: { student: Student & { id: string } }) {
       <div className="flex justify-between items-start mb-3">
         <div className="flex-1 min-w-0">
           <h4
-            className="text-[17px] font-medium truncate group-hover:text-[#4441c4] transition-colors"
+            className="text-[15px] font-medium truncate group-hover:text-[#4441c4] transition-colors"
             style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}
           >
             {student.name ?? student.id}
@@ -540,7 +540,7 @@ export default function AdminDashboardClient() {
       {/* Page title */}
       <div>
         <h1
-          className="text-4xl font-bold"
+          className="text-3xl font-bold"
           style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)", letterSpacing: "-0.01em" }}
         >
           Dashboard
@@ -569,7 +569,7 @@ export default function AdminDashboardClient() {
               </div>
               <div>
                 <h3
-                  className="text-4xl font-bold leading-none"
+                  className="text-3xl font-bold leading-none"
                   style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}
                 >
                   {item.value}
@@ -595,7 +595,7 @@ export default function AdminDashboardClient() {
             <div>
               <span className="text-xs font-bold tracking-widest uppercase" style={{ color: "#4441c4" }}>Điểm cao nhất</span>
               <h3
-                className="text-xl font-semibold mt-1 mb-0.5"
+                className="text-lg font-semibold mt-1 mb-0.5"
                 style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}
               >
                 {bestEntry.name}
@@ -613,7 +613,7 @@ export default function AdminDashboardClient() {
               </div>
               <div>
                 <span className="text-xs font-bold tracking-widest uppercase" style={{ color: "#565e71" }}>Đóng băng</span>
-                <h3 className="text-lg font-medium mt-1" style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}>
+                <h3 className="text-base font-medium mt-1" style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}>
                   {frozenCount} học viên
                 </h3>
                 <p className="text-xs mt-0.5 opacity-60" style={{ color: "var(--text-secondary)" }}>Đang tạm dừng học</p>
