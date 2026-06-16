@@ -267,7 +267,7 @@ function TodayClassPanel({
   return (
     <div className="silk-card rounded-xl overflow-hidden">
       <div
-        className="flex items-center justify-between px-5 py-3.5 border-b"
+        className="flex items-center justify-between px-4 py-2.5 border-b"
         style={{ borderColor: "rgba(199,196,214,0.3)" }}
       >
         <div>
@@ -297,7 +297,7 @@ function TodayClassPanel({
           {members.map((student) => {
             const status = attendance[student.id]?.[date] as AttendanceStatus | undefined;
             return (
-              <div key={student.id} className="flex items-center justify-between px-5 py-2.5">
+              <div key={student.id} className="flex items-center justify-between px-4 py-2">
                 <p className="text-sm" style={{ color: "var(--text-primary)" }}>
                   {student.name ?? student.id}
                 </p>
@@ -325,9 +325,9 @@ function StudentMiniCard({ student }: { student: Student & { id: string } }) {
   return (
     <Link
       href={`/admin/students/${student.id}`}
-      className="silk-card block p-5 rounded-xl hover:scale-[1.02] transition-all cursor-pointer group"
+      className="silk-card block p-4 rounded-xl hover:scale-[1.02] transition-all cursor-pointer group"
     >
-      <div className="flex justify-between items-start mb-3">
+      <div className="flex justify-between items-start mb-2">
         <div className="flex-1 min-w-0">
           <h4
             className="text-[15px] font-medium truncate group-hover:text-[#4441c4] transition-colors"
@@ -353,7 +353,7 @@ function StudentMiniCard({ student }: { student: Student & { id: string } }) {
           )}
         </div>
         <span
-          className="text-2xl font-bold opacity-30 ml-2 shrink-0"
+          className="text-xl font-bold opacity-30 ml-2 shrink-0"
           style={{ color: "var(--text-primary)", fontFamily: "var(--font-admin-serif)" }}
         >
           {latestScore?.score ?? "—"}
@@ -535,7 +535,7 @@ export default function AdminDashboardClient() {
   const loading = studentsLoading || bookingsLoading || classesLoading;
 
   return (
-    <div className="space-y-8" style={{ fontFamily: "var(--font-admin-sans)" }}>
+    <div className="space-y-5" style={{ fontFamily: "var(--font-admin-sans)" }}>
 
       {/* Page title */}
       <div>
@@ -548,7 +548,7 @@ export default function AdminDashboardClient() {
       </div>
 
       {/* ── Stat cards ── */}
-      <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 gap-5">
+      <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 gap-3">
         {[
           { icon: "group",          value: loading ? "…" : activeStudents.length,                                                               label: "Đang học",            num: "01", href: "/admin/students",  color: "#4441c4" },
           { icon: "school",         value: loading ? "…" : classes.length,                                                                     label: "Lớp học",             num: "02", href: "/admin/classes",   color: "#565e71" },
@@ -557,15 +557,15 @@ export default function AdminDashboardClient() {
           { icon: "task_alt",       value: dlLoading ? "…" : (todayHwTotal > 0 ? `${todayHwDone}/${todayHwTotal}` : "—"),                     label: "Hoàn thành hôm nay",  num: "05", href: "/admin/homework",  color: "#16a34a" },
         ].map((item) => (
           <Link key={item.href} href={item.href} className="block">
-            <div className="silk-card p-5 rounded-2xl flex flex-col justify-between h-[130px] hover:scale-[1.02] transition-all">
+            <div className="silk-card p-4 rounded-xl flex flex-col justify-between h-[108px] hover:scale-[1.02] transition-all">
               <div className="flex justify-between items-start">
                 <span
-                  className="material-symbols-outlined text-[22px] p-2 rounded-xl"
+                  className="material-symbols-outlined text-[18px] p-1.5 rounded-lg"
                   style={{ color: item.color, background: `${item.color}10`, fontVariationSettings: "'wght' 300" }}
                 >
                   {item.icon}
                 </span>
-                <span className="text-xs font-bold opacity-30" style={{ color: "var(--text-primary)" }}>{item.num}</span>
+                <span className="text-[10px] font-bold opacity-30" style={{ color: "var(--text-primary)" }}>{item.num}</span>
               </div>
               <div>
                 <h3
@@ -574,7 +574,7 @@ export default function AdminDashboardClient() {
                 >
                   {item.value}
                 </h3>
-                <p className="text-xs mt-1 font-semibold tracking-wider opacity-60" style={{ color: "var(--text-secondary)" }}>
+                <p className="text-[11px] mt-1 font-semibold tracking-wider opacity-60" style={{ color: "var(--text-secondary)" }}>
                   {item.label}
                 </p>
               </div>
@@ -584,39 +584,39 @@ export default function AdminDashboardClient() {
       </div>
 
       {/* ── Highlights row ── */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
         {bestEntry && (
-          <div className="silk-card col-span-2 p-7 rounded-2xl flex items-center gap-7 border-l-[6px] border-[#4441c4]">
-            <div className="p-5 rounded-full" style={{ background: "rgba(68,65,196,0.06)" }}>
-              <span className="material-symbols-outlined text-5xl" style={{ color: "#4441c4", fontVariationSettings: "'FILL' 1" }}>
+          <div className="silk-card col-span-2 p-5 rounded-xl flex items-center gap-4 border-l-[4px] border-[#4441c4]">
+            <div className="p-3 rounded-full" style={{ background: "rgba(68,65,196,0.06)" }}>
+              <span className="material-symbols-outlined text-3xl" style={{ color: "#4441c4", fontVariationSettings: "'FILL' 1" }}>
                 emoji_events
               </span>
             </div>
             <div>
-              <span className="text-xs font-bold tracking-widest uppercase" style={{ color: "#4441c4" }}>Điểm cao nhất</span>
+              <span className="text-[10px] font-bold tracking-widest uppercase" style={{ color: "#4441c4" }}>Điểm cao nhất</span>
               <h3
-                className="text-lg font-semibold mt-1 mb-0.5"
+                className="text-base font-semibold mt-0.5 mb-0.5"
                 style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}
               >
                 {bestEntry.name}
               </h3>
-              <p className="text-sm italic" style={{ color: "rgba(68,65,196,0.7)" }}>{bestEntry.score} điểm TOEIC</p>
+              <p className="text-xs italic" style={{ color: "rgba(68,65,196,0.7)" }}>{bestEntry.score} điểm TOEIC</p>
             </div>
           </div>
         )}
 
         {frozenCount > 0 && (
           <Link href="/admin/students" className="block">
-            <div className="silk-card p-7 rounded-2xl flex items-center gap-5 hover:scale-[1.02] transition-all h-full">
-              <div className="p-4 rounded-2xl" style={{ background: "rgba(218,226,248,0.4)" }}>
-                <span className="material-symbols-outlined text-4xl" style={{ color: "#565e71" }}>ac_unit</span>
+            <div className="silk-card p-5 rounded-xl flex items-center gap-3 hover:scale-[1.02] transition-all h-full">
+              <div className="p-3 rounded-xl" style={{ background: "rgba(218,226,248,0.4)" }}>
+                <span className="material-symbols-outlined text-2xl" style={{ color: "#565e71" }}>ac_unit</span>
               </div>
               <div>
-                <span className="text-xs font-bold tracking-widest uppercase" style={{ color: "#565e71" }}>Đóng băng</span>
-                <h3 className="text-base font-medium mt-1" style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}>
+                <span className="text-[10px] font-bold tracking-widest uppercase" style={{ color: "#565e71" }}>Đóng băng</span>
+                <h3 className="text-sm font-medium mt-0.5" style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}>
                   {frozenCount} học viên
                 </h3>
-                <p className="text-xs mt-0.5 opacity-60" style={{ color: "var(--text-secondary)" }}>Đang tạm dừng học</p>
+                <p className="text-[11px] mt-0.5 opacity-60" style={{ color: "var(--text-secondary)" }}>Đang tạm dừng học</p>
               </div>
             </div>
           </Link>
@@ -625,18 +625,18 @@ export default function AdminDashboardClient() {
 
       {/* ── Today's classes ── */}
       {!loading && todayClasses.length > 0 && (
-        <div className="space-y-4">
+        <div className="space-y-3">
           <h2
-            className="flex items-center gap-2 text-xl font-semibold"
+            className="flex items-center gap-1.5 text-base font-semibold"
             style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}
           >
-            <span className="material-symbols-outlined text-[20px]" style={{ color: "var(--text-muted)", fontVariationSettings: "'wght' 300" }}>
+            <span className="material-symbols-outlined text-[17px]" style={{ color: "var(--text-muted)", fontVariationSettings: "'wght' 300" }}>
               today
             </span>
             Lớp học hôm nay
-            <span className="text-sm font-normal opacity-50">· {DAYS_VI[todayDayName]}</span>
+            <span className="text-xs font-normal opacity-50">· {DAYS_VI[todayDayName]}</span>
           </h2>
-          <div className="space-y-3">
+          <div className="space-y-2">
             {todayClasses.map((cls) => (
               <TodayClassPanel
                 key={cls.id}
@@ -650,19 +650,19 @@ export default function AdminDashboardClient() {
       )}
 
       {/* ── Yesterday incomplete ── */}
-      <div className="space-y-4">
+      <div className="space-y-3">
         <h2
-          className="flex items-center gap-2 text-xl font-semibold"
+          className="flex items-center gap-1.5 text-base font-semibold"
           style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}
         >
           <span
-            className="material-symbols-outlined text-[20px]"
+            className="material-symbols-outlined text-[17px]"
             style={{ color: "var(--text-muted)", fontVariationSettings: "'wght' 300" }}
           >
             assignment_late
           </span>
           Bài tập hôm qua
-          <span className="text-sm font-normal opacity-50">· {yesterday}</span>
+          <span className="text-xs font-normal opacity-50">· {yesterday}</span>
         </h2>
         <YesterdayIncompleteCard
           students={activeStudents as (Student & { id: string })[]}
@@ -675,17 +675,17 @@ export default function AdminDashboardClient() {
 
       {/* ── Student cards grid ── */}
       {!loading && (
-        <div className="space-y-5">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div className="space-y-3">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
             <h2
-              className="flex items-center gap-2 text-xl font-semibold"
+              className="flex items-center gap-1.5 text-base font-semibold"
               style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}
             >
-              <span className="material-symbols-outlined text-[20px]" style={{ color: "var(--text-muted)", fontVariationSettings: "'wght' 300" }}>
+              <span className="material-symbols-outlined text-[17px]" style={{ color: "var(--text-muted)", fontVariationSettings: "'wght' 300" }}>
                 person_search
               </span>
               Học viên đang học
-              <span className="text-sm font-normal opacity-40">({activeStudents.length})</span>
+              <span className="text-xs font-normal opacity-40">({activeStudents.length})</span>
             </h2>
 
             <div className="flex items-center gap-2 flex-1 md:max-w-sm">
@@ -727,7 +727,7 @@ export default function AdminDashboardClient() {
 
           {sortedActive.length > 0 ? (
             <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3">
                 {sortedActive.slice(0, 12).map((student) => (
                   <StudentMiniCard
                     key={student.id}
@@ -758,15 +758,15 @@ export default function AdminDashboardClient() {
       {addOpen && <AddStudentModal onClose={() => setAddOpen(false)} />}
 
       {/* ── Quick access ── */}
-      <div className="space-y-5">
+      <div className="space-y-3">
         <h2
-          className="flex items-center gap-2 text-xl font-semibold"
+          className="flex items-center gap-1.5 text-base font-semibold"
           style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}
         >
-          <span className="material-symbols-outlined text-[20px]" style={{ color: "var(--text-muted)", fontVariationSettings: "'wght' 300" }}>bolt</span>
+          <span className="material-symbols-outlined text-[17px]" style={{ color: "var(--text-muted)", fontVariationSettings: "'wght' 300" }}>bolt</span>
           Truy cập nhanh
         </h2>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
           {[
             { href: "/admin/homework",   icon: "assignment_add", label: "Giao bài tập", bg: "rgba(68,65,196,0.05)",  iconColor: "#4441c4" },
             { href: "/admin/scores",     icon: "track_changes",  label: "Nhập điểm",    bg: "rgba(86,94,113,0.08)", iconColor: "#565e71", filled: true },
@@ -774,10 +774,10 @@ export default function AdminDashboardClient() {
             { href: "/admin/attendance", icon: "check_box",      label: "Điểm danh",    bg: "rgba(22,163,74,0.06)", iconColor: "rgb(22,163,74)", filled: true },
           ].map((item) => (
             <Link key={item.href} href={item.href} className="block">
-              <div className="silk-card p-7 rounded-2xl flex flex-col items-center justify-center gap-4 hover:bg-[#f3f3fa] transition-all cursor-pointer">
-                <div className="p-4 rounded-2xl" style={{ background: item.bg }}>
+              <div className="silk-card p-5 rounded-xl flex flex-col items-center justify-center gap-2.5 hover:bg-[#f3f3fa] transition-all cursor-pointer">
+                <div className="p-3 rounded-xl" style={{ background: item.bg }}>
                   <span
-                    className="material-symbols-outlined text-4xl"
+                    className="material-symbols-outlined text-2xl"
                     style={{ color: item.iconColor, fontVariationSettings: item.filled ? "'FILL' 1, 'wght' 300" : "'wght' 300" }}
                   >
                     {item.icon}
@@ -822,17 +822,17 @@ export default function AdminDashboardClient() {
 
       {/* ── CTA banner ── */}
       <div
-        className="relative overflow-hidden rounded-3xl p-10 text-white silk-card"
+        className="relative overflow-hidden rounded-2xl p-7 text-white silk-card"
         style={{ background: "#1a1c20" }}
       >
         <div className="relative z-10 md:w-2/3">
           <h3
-            className="text-2xl font-semibold mb-3"
+            className="text-xl font-semibold mb-2"
             style={{ fontFamily: "var(--font-admin-serif)" }}
           >
             Sẵn sàng cho khóa học mới?
           </h3>
-          <p className="text-sm mb-7 opacity-60 max-w-md leading-relaxed">
+          <p className="text-sm mb-5 opacity-60 max-w-md leading-relaxed">
             Phân tích dữ liệu học tập và tối ưu hóa giáo án của bạn chỉ trong vài bước đơn giản.
           </p>
           <Link
