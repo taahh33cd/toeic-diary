@@ -20,30 +20,29 @@ function formatDeadline(deadline: string, locale: "vi" | "en"): string {
   return locale === "en" ? `Before ${month}/${year}` : `Trước tháng ${month}/${year}`;
 }
 
-// Listening parts: p1-p4 (max 495), Reading parts: p5-p7 (max 495)
-const L_PARTS = ["p1", "p2", "p3", "p4"] as const;
-const R_PARTS = ["p5", "p6", "p7"] as const;
+// ─── Part definitions ─────────────────────────────────────────────────────────
+
+const PART_MAX = { p1: 6, p2: 25, p3: 39, p4: 30, p5: 30, p6: 16, p7: 54 } as const;
+type PartKey = keyof typeof PART_MAX;
+
+const L_PARTS_INFO: Array<{ key: PartKey; label: string }> = [
+  { key: "p1", label: "P1 · Photos" },
+  { key: "p2", label: "P2 · Q&A" },
+  { key: "p3", label: "P3 · Conversations" },
+  { key: "p4", label: "P4 · Talks" },
+];
+const R_PARTS_INFO: Array<{ key: PartKey; label: string }> = [
+  { key: "p5", label: "P5 · Incomplete Sent." },
+  { key: "p6", label: "P6 · Text Completion" },
+  { key: "p7", label: "P7 · Reading Comp." },
+];
 
 function getListening(s: ToeicScore): number | null {
-  const parts = L_PARTS.map((k) => (s as unknown as Record<string, unknown>)[k] as number | undefined);
-  if (parts.some((v) => v !== undefined)) {
-    return parts.reduce<number>((sum, v) => sum + (v ?? 0), 0);
-  }
-  if ((s as unknown as Record<string, unknown>).l !== undefined) {
-    return (s as unknown as Record<string, unknown>).l as number;
-  }
-  return null;
+  return s.l ?? null;
 }
 
 function getReading(s: ToeicScore): number | null {
-  const parts = R_PARTS.map((k) => (s as unknown as Record<string, unknown>)[k] as number | undefined);
-  if (parts.some((v) => v !== undefined)) {
-    return parts.reduce<number>((sum, v) => sum + (v ?? 0), 0);
-  }
-  if ((s as unknown as Record<string, unknown>).r !== undefined) {
-    return (s as unknown as Record<string, unknown>).r as number;
-  }
-  return null;
+  return s.r ?? null;
 }
 
 // ─── SVG Chart ────────────────────────────────────────────────────────────────
@@ -271,32 +270,65 @@ function AddScoreForm({ studentCode }: { studentCode: string }) {
   const { t } = useLocale();
   const [open, setOpen] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [mode, setMode] = useState<"simple" | "parts">("simple");
   const [date, setDate] = useState(() => new Date().toISOString().slice(0, 10));
   const [listening, setListening] = useState("");
   const [reading, setReading] = useState("");
+  const [parts, setParts] = useState<Record<PartKey, string>>({
+    p1: "", p2: "", p3: "", p4: "", p5: "", p6: "", p7: "",
+  });
   const [testname, setTestname] = useState("");
 
-  const total =
+  function setPart(key: PartKey, val: string) {
+    setParts((prev) => ({ ...prev, [key]: val }));
+  }
+
+  const lCorrect = (["p1", "p2", "p3", "p4"] as PartKey[]).reduce(
+    (s, k) => s + (parseInt(parts[k], 10) || 0), 0
+  );
+  const rCorrect = (["p5", "p6", "p7"] as PartKey[]).reduce(
+    (s, k) => s + (parseInt(parts[k], 10) || 0), 0
+  );
+  const lScore = Math.round((lCorrect / 100) * 495);
+  const rScore = Math.round((rCorrect / 100) * 495);
+
+  const simpleTotal =
     listening && reading
       ? (parseInt(listening, 10) || 0) + (parseInt(reading, 10) || 0)
       : null;
 
+  function resetForm() {
+    setDate(new Date().toISOString().slice(0, 10));
+    setListening("");
+    setReading("");
+    setParts({ p1: "", p2: "", p3: "", p4: "", p5: "", p6: "", p7: "" });
+    setTestname("");
+  }
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const l = parseInt(listening, 10);
-    const r = parseInt(reading, 10);
-    if (!date || isNaN(l) || isNaN(r) || l < 0 || r < 0 || l > 495 || r > 495) return;
     setSaving(true);
     try {
-      const entry: ToeicScore = { score: l + r, date };
+      let entry: ToeicScore;
+      if (mode === "simple") {
+        const l = parseInt(listening, 10);
+        const r = parseInt(reading, 10);
+        if (!date || isNaN(l) || isNaN(r) || l < 0 || r < 0 || l > 495 || r > 495) return;
+        entry = { score: l + r, date, l, r };
+      } else {
+        const parsed = (Object.keys(PART_MAX) as PartKey[]).map((k) => ({
+          key: k,
+          n: parseInt(parts[k], 10),
+        }));
+        if (parsed.some(({ key, n }) => isNaN(n) || n < 0 || n > PART_MAX[key])) return;
+        const pNums = Object.fromEntries(parsed.map(({ key, n }) => [key, n])) as Record<PartKey, number>;
+        const l = Math.round((pNums.p1 + pNums.p2 + pNums.p3 + pNums.p4) / 100 * 495);
+        const r = Math.round((pNums.p5 + pNums.p6 + pNums.p7) / 100 * 495);
+        entry = { score: l + r, date, l, r, ...pNums };
+      }
       if (testname.trim()) entry.testname = testname.trim();
-      (entry as unknown as Record<string, unknown>).l = l;
-      (entry as unknown as Record<string, unknown>).r = r;
       await pushStudentScore(studentCode, entry);
-      setDate(new Date().toISOString().slice(0, 10));
-      setListening("");
-      setReading("");
-      setTestname("");
+      resetForm();
       setOpen(false);
     } finally {
       setSaving(false);
@@ -325,7 +357,31 @@ function AddScoreForm({ studentCode }: { studentCode: string }) {
 
       {open && (
         <form onSubmit={handleSubmit} className="px-5 pb-5 flex flex-col gap-4">
-          <div className="grid grid-cols-4 gap-3 items-end">
+          {/* Mode toggle */}
+          <div
+            className="flex gap-1 p-1 rounded-lg self-start"
+            style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}
+          >
+            {(["simple", "parts"] as const).map((m) => (
+              <button
+                key={m}
+                type="button"
+                onClick={() => setMode(m)}
+                className="px-3 py-1.5 rounded-md text-xs font-semibold transition-all"
+                style={{
+                  background: mode === m ? "var(--orange)" : "transparent",
+                  color: mode === m ? "white" : "var(--text-muted)",
+                  border: "none",
+                  cursor: "pointer",
+                }}
+              >
+                {m === "simple" ? t("Tổng điểm", "Total score") : t("Theo từng Part", "By Part")}
+              </button>
+            ))}
+          </div>
+
+          {/* Date + Testname */}
+          <div className="grid grid-cols-2 gap-3">
             <div>
               <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
                 {t("Ngày thi", "Test Date")}
@@ -341,64 +397,133 @@ function AddScoreForm({ studentCode }: { studentCode: string }) {
             </div>
             <div>
               <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
-                {t("Điểm Nghe", "Listening")} <span style={{ color: "var(--text-muted)", fontWeight: 400 }}>(0–495)</span>
+                {t("Tên bài test (tuỳ chọn)", "Test name (optional)")}
               </label>
               <input
-                type="number"
-                min={0}
-                max={495}
                 className={inp}
                 style={inpStyle}
-                value={listening}
-                onChange={(e) => setListening(e.target.value)}
-                placeholder="300"
-                required
+                value={testname}
+                onChange={(e) => setTestname(e.target.value)}
+                placeholder="EST 2024 Test 1"
               />
             </div>
-            <div>
-              <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
-                {t("Điểm Đọc", "Reading")} <span style={{ color: "var(--text-muted)", fontWeight: 400 }}>(0–495)</span>
-              </label>
-              <input
-                type="number"
-                min={0}
-                max={495}
-                className={inp}
-                style={inpStyle}
-                value={reading}
-                onChange={(e) => setReading(e.target.value)}
-                placeholder="280"
-                required
-              />
-            </div>
-            <button
-              type="submit"
-              disabled={saving}
-              className="py-2.5 rounded-lg text-sm font-bold text-white transition-opacity"
-              style={{ background: saving ? "var(--border)" : "var(--orange)", cursor: saving ? "not-allowed" : "pointer" }}
-            >
-              {saving ? t("Đang lưu...", "Saving...") : t("Lưu kết quả", "Save")}
-            </button>
           </div>
 
-          {total !== null && (
-            <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-              {t("Tổng điểm", "Total")}: <span className="font-bold" style={{ color: "var(--orange)" }}>{total}</span>/990
-            </p>
+          {mode === "simple" ? (
+            <>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
+                    {t("Điểm Nghe", "Listening")} <span style={{ fontWeight: 400 }}>(0–495)</span>
+                  </label>
+                  <input
+                    type="number" min={0} max={495}
+                    className={inp} style={inpStyle}
+                    value={listening} onChange={(e) => setListening(e.target.value)}
+                    placeholder="300" required
+                  />
+                </div>
+                <div>
+                  <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
+                    {t("Điểm Đọc", "Reading")} <span style={{ fontWeight: 400 }}>(0–495)</span>
+                  </label>
+                  <input
+                    type="number" min={0} max={495}
+                    className={inp} style={inpStyle}
+                    value={reading} onChange={(e) => setReading(e.target.value)}
+                    placeholder="280" required
+                  />
+                </div>
+              </div>
+              {simpleTotal !== null && (
+                <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+                  {t("Tổng điểm", "Total")}: <span className="font-bold" style={{ color: "var(--orange)" }}>{simpleTotal}</span>/990
+                </p>
+              )}
+            </>
+          ) : (
+            <div className="flex flex-col gap-3">
+              {/* Listening parts */}
+              <div className="rounded-xl p-4" style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}>
+                <div className="text-[11px] font-bold uppercase tracking-wider mb-3" style={{ color: "var(--orange)" }}>
+                  Listening
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                  {L_PARTS_INFO.map(({ key, label }) => (
+                    <div key={key}>
+                      <label className="block text-[10px] mb-1" style={{ color: "var(--text-muted)" }}>
+                        {label} <span style={{ opacity: 0.6 }}>/{PART_MAX[key]}</span>
+                      </label>
+                      <input
+                        type="number" min={0} max={PART_MAX[key]}
+                        className={inp} style={inpStyle}
+                        value={parts[key]}
+                        onChange={(e) => setPart(key, e.target.value)}
+                        placeholder="0"
+                        required
+                      />
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs mt-2" style={{ color: "var(--text-muted)" }}>
+                  {t("Tổng đúng", "Correct")}:{" "}
+                  <strong style={{ color: "var(--orange)" }}>{lCorrect}/100</strong>
+                  {" → "}{t("Điểm L", "Score L")}:{" "}
+                  <strong style={{ color: "var(--orange)" }}>~{lScore}</strong>
+                </p>
+              </div>
+
+              {/* Reading parts */}
+              <div className="rounded-xl p-4" style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}>
+                <div className="text-[11px] font-bold uppercase tracking-wider mb-3" style={{ color: "#1E6FA8" }}>
+                  Reading
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                  {R_PARTS_INFO.map(({ key, label }) => (
+                    <div key={key}>
+                      <label className="block text-[10px] mb-1" style={{ color: "var(--text-muted)" }}>
+                        {label} <span style={{ opacity: 0.6 }}>/{PART_MAX[key]}</span>
+                      </label>
+                      <input
+                        type="number" min={0} max={PART_MAX[key]}
+                        className={inp} style={inpStyle}
+                        value={parts[key]}
+                        onChange={(e) => setPart(key, e.target.value)}
+                        placeholder="0"
+                        required
+                      />
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs mt-2" style={{ color: "var(--text-muted)" }}>
+                  {t("Tổng đúng", "Correct")}:{" "}
+                  <strong style={{ color: "#1E6FA8" }}>{rCorrect}/100</strong>
+                  {" → "}{t("Điểm R", "Score R")}:{" "}
+                  <strong style={{ color: "#1E6FA8" }}>~{rScore}</strong>
+                </p>
+              </div>
+
+              <p className="text-sm font-semibold" style={{ color: "var(--text-muted)" }}>
+                {t("Điểm ước tính", "Estimated total")}:{" "}
+                <span style={{ color: "var(--orange)", fontFamily: "'Lora', serif", fontSize: "1.1rem" }}>
+                  {lScore + rScore}
+                </span>/990
+              </p>
+            </div>
           )}
 
-          <div>
-            <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
-              {t("Tên bài test (tuỳ chọn)", "Test name (optional)")}
-            </label>
-            <input
-              className={`${inp} max-w-xs`}
-              style={inpStyle}
-              value={testname}
-              onChange={(e) => setTestname(e.target.value)}
-              placeholder="EST 2024 Test 1"
-            />
-          </div>
+          <button
+            type="submit"
+            disabled={saving}
+            className="self-start px-5 py-2.5 rounded-lg text-sm font-bold text-white"
+            style={{
+              background: saving ? "var(--border)" : "var(--orange)",
+              cursor: saving ? "not-allowed" : "pointer",
+              border: "none",
+            }}
+          >
+            {saving ? t("Đang lưu...", "Saving...") : t("Lưu kết quả", "Save")}
+          </button>
         </form>
       )}
     </div>
@@ -471,7 +596,7 @@ function ScoreRow({
           <td colSpan={5} className="px-4 py-3">
             <div className="flex flex-wrap gap-2 text-[11px]">
               {(["p1", "p2", "p3", "p4", "p5", "p6", "p7"] as const).map((k) => {
-                const v = (score as unknown as Record<string, unknown>)[k] as number | undefined;
+                const v = score[k];
                 if (v === undefined) return null;
                 const isL = ["p1", "p2", "p3", "p4"].includes(k);
                 return (

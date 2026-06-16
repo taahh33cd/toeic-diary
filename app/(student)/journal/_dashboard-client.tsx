@@ -12,7 +12,7 @@ import { useClasses } from "@/hooks/firebase/useClasses";
 import { useLocale } from "@/hooks/useLocale";
 import { LiveIndicator } from "@/components/shared/LiveIndicator";
 import type { XpStats } from "./page";
-import type { ScheduleItem, Goal, VocabWord } from "@/lib/firebase/types";
+import type { ScheduleItem, Goal, VocabWord, ToeicScore } from "@/lib/firebase/types";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -662,6 +662,258 @@ function DictationProgressTile({
   );
 }
 
+// ─── Skill Progress Tile ─────────────────────────────────────────────────────
+
+type ToeicPartKey = "p1" | "p2" | "p3" | "p4" | "p5" | "p6" | "p7";
+
+const SKILL_L_PARTS: Array<{ key: ToeicPartKey; label: string; max: number }> = [
+  { key: "p1", label: "P1 · Photos", max: 6 },
+  { key: "p2", label: "P2 · Q&A", max: 25 },
+  { key: "p3", label: "P3 · Conversations", max: 39 },
+  { key: "p4", label: "P4 · Talks", max: 30 },
+];
+const SKILL_R_PARTS: Array<{ key: ToeicPartKey; label: string; max: number }> = [
+  { key: "p5", label: "P5 · Incomplete Sent.", max: 30 },
+  { key: "p6", label: "P6 · Text Completion", max: 16 },
+  { key: "p7", label: "P7 · Reading Comp.", max: 54 },
+];
+
+function skillBarColor(pct: number): string {
+  if (pct >= 0.7) return "#1D9E75";
+  if (pct >= 0.5) return "#EF9F27";
+  return "#E24B4A";
+}
+
+function SkillProgressTile({ scores }: { scores: ToeicScore[] }) {
+  const { t } = useLocale();
+  const [tab, setTab] = useState<"lis" | "read">("lis");
+
+  const sorted = useMemo(
+    () => [...scores].sort((a, b) => a.date.localeCompare(b.date)),
+    [scores]
+  );
+
+  const skillScores = useMemo(
+    () =>
+      sorted
+        .map((s) => ({ val: tab === "lis" ? (s.l ?? null) : (s.r ?? null), date: s.date, raw: s }))
+        .filter((x): x is { val: number; date: string; raw: ToeicScore } => x.val !== null),
+    [sorted, tab]
+  );
+
+  const last8 = skillScores.slice(-8);
+  const maxBar = Math.max(...last8.map((x) => x.val), 1);
+  const count = skillScores.length;
+  const avg = count > 0 ? Math.round(skillScores.reduce((s, x) => s + x.val, 0) / count) : null;
+  const highest = count > 0 ? Math.max(...skillScores.map((x) => x.val)) : null;
+  const latest = skillScores[count - 1]?.val ?? null;
+  const prev = skillScores[count - 2]?.val ?? null;
+  const delta = latest !== null && prev !== null ? latest - prev : null;
+
+  const parts = tab === "lis" ? SKILL_L_PARTS : SKILL_R_PARTS;
+
+  const partAvgs = useMemo(
+    () =>
+      parts.map(({ key, max }) => {
+        const vals = scores
+          .map((s) => s[key] as number | undefined)
+          .filter((v): v is number => v !== undefined);
+        if (vals.length === 0) return null;
+        const mean = vals.reduce((s, v) => s + v, 0) / vals.length;
+        return { mean: Math.round(mean * 10) / 10, pct: mean / max };
+      }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [scores, tab]
+  );
+  const hasPartData = partAvgs.some((p) => p !== null);
+
+  const metrics = [
+    {
+      label: t("Điểm TB", "Average"),
+      value: avg ?? "—",
+      suffix: "/495",
+      color: avg !== null ? skillBarColor(avg / 495) : undefined,
+    },
+    { label: t("Cao nhất", "Best"), value: highest ?? "—", suffix: "/495", color: undefined },
+    { label: t("Số lần thi", "Tests"), value: count, suffix: t(" lần", " tests"), color: undefined },
+    {
+      label: t("Thay đổi", "Change"),
+      value: delta !== null ? `${delta > 0 ? "+" : ""}${delta}` : "—",
+      suffix: "",
+      color: delta !== null ? (delta > 0 ? "#1D9E75" : delta < 0 ? "#E24B4A" : undefined) : undefined,
+    },
+  ];
+
+  return (
+    <Tile className="col-span-12">
+      {/* Header + tab buttons */}
+      <div className="flex items-center justify-between mb-5 flex-wrap gap-3">
+        <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif" }}>
+          {t("Kỹ năng TOEIC", "TOEIC Skills")}
+        </p>
+        <div
+          className="flex gap-1 p-1 rounded-full"
+          style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}
+        >
+          {(["lis", "read"] as const).map((sk) => (
+            <button
+              key={sk}
+              onClick={() => setTab(sk)}
+              className="px-4 py-1.5 rounded-full text-xs font-semibold transition-all"
+              style={{
+                background: tab === sk ? "var(--orange)" : "transparent",
+                color: tab === sk ? "white" : "var(--text-muted)",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              {sk === "lis" ? "Listening" : "Reading"}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {count === 0 ? (
+        <p className="text-sm text-center py-8" style={{ color: "var(--text-muted)" }}>
+          {t(
+            `Chưa có dữ liệu ${tab === "lis" ? "Listening" : "Reading"}. Nhập điểm tại trang Điểm số.`,
+            `No ${tab === "lis" ? "Listening" : "Reading"} data yet. Add scores on the Scores page.`
+          )}
+        </p>
+      ) : (
+        <>
+          {/* Metric cards */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
+            {metrics.map(({ label, value, suffix, color }) => (
+              <div
+                key={label}
+                className="rounded-xl p-3"
+                style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}
+              >
+                <div className="text-[10px] uppercase tracking-wider mb-1" style={{ color: "var(--text-muted)" }}>
+                  {label}
+                </div>
+                <div
+                  className="text-2xl font-bold leading-none"
+                  style={{ fontFamily: "'Lora', serif", color: color ?? "var(--text-primary)" }}
+                >
+                  {value}
+                  <span className="text-xs font-normal ml-0.5" style={{ color: "var(--text-muted)" }}>
+                    {suffix}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Bar chart */}
+          {last8.length > 1 && (
+            <div className="mb-5">
+              <div
+                className="text-[10px] font-bold uppercase tracking-wider mb-3"
+                style={{ color: "var(--text-muted)" }}
+              >
+                {t("8 lần thi gần nhất", "Last 8 tests")}
+              </div>
+              <div className="flex gap-2 items-end" style={{ height: 80 }}>
+                {last8.map((x, i) => {
+                  const h = Math.max(6, Math.round((x.val / maxBar) * 56));
+                  const color = skillBarColor(x.val / 495);
+                  const [, m, d] = x.date.split("-");
+                  return (
+                    <div
+                      key={i}
+                      className="flex-1 flex flex-col items-center gap-1"
+                      style={{ minWidth: 0 }}
+                      title={`${x.val} (${x.date})`}
+                    >
+                      <span className="text-[9px] font-semibold" style={{ color: "var(--text-secondary)" }}>
+                        {x.val}
+                      </span>
+                      <div className="w-full rounded-t-sm" style={{ height: h, background: color }} />
+                      <span className="text-[9px]" style={{ color: "var(--text-muted)" }}>
+                        {d}/{m}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Sub-skill breakdown by part */}
+          {hasPartData && (
+            <div>
+              <div
+                className="text-[10px] font-bold uppercase tracking-wider mb-3"
+                style={{ color: "var(--text-muted)" }}
+              >
+                {t("Theo từng Part (TB các lần thi)", "By Part (avg across tests)")}
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {parts.map(({ key, label, max }, idx) => {
+                  const pd = partAvgs[idx];
+                  if (!pd) {
+                    return (
+                      <div
+                        key={key}
+                        className="rounded-lg p-3"
+                        style={{
+                          background: "var(--bg-primary)",
+                          border: "1px solid var(--border)",
+                          opacity: 0.45,
+                        }}
+                      >
+                        <div className="text-xs" style={{ color: "var(--text-muted)" }}>{label}</div>
+                        <div className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>— / {max}</div>
+                      </div>
+                    );
+                  }
+                  const pct = Math.round(pd.pct * 100);
+                  const barColor = skillBarColor(pd.pct);
+                  return (
+                    <div
+                      key={key}
+                      className="rounded-lg p-3"
+                      style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}
+                    >
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-xs font-medium" style={{ color: "var(--text-secondary)" }}>
+                          {label}
+                        </span>
+                        <span className="text-xs font-bold" style={{ color: barColor }}>
+                          {pd.mean}/{max}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div
+                          className="flex-1 h-1.5 rounded-full overflow-hidden"
+                          style={{ background: "var(--border)" }}
+                        >
+                          <div
+                            className="h-full rounded-full"
+                            style={{ width: `${pct}%`, background: barColor }}
+                          />
+                        </div>
+                        <span
+                          className="text-[10px] font-semibold"
+                          style={{ color: "var(--text-muted)", minWidth: 28, textAlign: "right" }}
+                        >
+                          {pct}%
+                        </span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </>
+      )}
+    </Tile>
+  );
+}
+
 // ─── Overdue Banner (B13) ─────────────────────────────────────────────────────
 
 function OverdueBanner({ count }: { count: number }) {
@@ -953,6 +1205,9 @@ export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }
 
         {/* Row 4: Dictation Progress (full width) */}
         <DictationProgressTile errorLog={errorLog} xpStats={xpStats} />
+
+        {/* Row 5: Skill Progress */}
+        <SkillProgressTile scores={scores} />
       </div>
     </>
   );

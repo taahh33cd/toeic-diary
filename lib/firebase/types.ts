@@ -10,6 +10,7 @@ export interface Homework {
   id: string;
   date: string;       // YYYY-MM-DD
   endDate?: string;   // YYYY-MM-DD
+  title?: string;     // optional display label
   vocab?: HwItem[];
   reading?: HwItem[];
   listening?: HwItem[];
@@ -39,6 +40,8 @@ export interface ToeicScore {
   date: string;       // YYYY-MM-DD
   testname?: string;
   note?: string;
+  l?: number;   // Listening scaled score 0–495
+  r?: number;   // Reading scaled score 0–495
   p1?: number;
   p2?: number;
   p3?: number;
