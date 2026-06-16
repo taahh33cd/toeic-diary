@@ -7,6 +7,7 @@ import {
   IconHome, IconScore, IconTasks, IconVocab,
   IconJournal, IconSchedule, IconFee, IconSettings,
 } from "@/components/journal/Icons";
+import { useNavBadges } from "@/hooks/firebase/useNavBadges";
 
 type NavItem = { href: string; Icon: (p: { size?: number }) => React.ReactElement; label: string; exact?: boolean };
 
@@ -24,9 +25,22 @@ const MODAL_ITEMS: NavItem[] = [
   { href: "/journal/settings",     Icon: IconSettings, label: "Cài đặt" },
 ];
 
-export function MobileBottomNav() {
+export function MobileBottomNav({ studentCode }: { studentCode?: string | null }) {
   const pathname = usePathname();
   const [modalOpen, setModalOpen] = useState(false);
+  const { taskCount, vocabDueCount, vocabRemind, feeDue } = useNavBadges(studentCode);
+
+  function getBadge(href: string): number | null {
+    if (href === "/journal/missions") return taskCount > 0 ? taskCount : null;
+    if (href === "/journal/vocab") return vocabDueCount > 0 ? vocabDueCount : null;
+    return null;
+  }
+
+  function getDot(href: string): boolean {
+    if (href === "/journal/vocab") return vocabDueCount === 0 && vocabRemind;
+    if (href === "/journal/fee") return feeDue;
+    return false;
+  }
 
   useEffect(() => { setModalOpen(false); }, [pathname]);
 
@@ -54,6 +68,8 @@ export function MobileBottomNav() {
       >
         {ITEMS.map((item) => {
           const active = isActive(item.href, item.exact);
+          const badge = getBadge(item.href);
+          const dot = getDot(item.href);
           return (
             <Link
               key={item.href}
@@ -65,7 +81,28 @@ export function MobileBottomNav() {
               }}
               aria-current={active ? "page" : undefined}
             >
-              <item.Icon size={22} />
+              <span style={{ position: "relative", display: "inline-flex" }}>
+                <item.Icon size={22} />
+                {badge !== null && (
+                  <span style={{
+                    position: "absolute", top: -4, right: -8,
+                    background: "var(--orange, #C4622D)", color: "#fff",
+                    fontSize: 9, fontWeight: 700, lineHeight: 1,
+                    minWidth: 14, height: 14, borderRadius: 7,
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    padding: "0 3px",
+                  }}>
+                    {badge > 99 ? "99+" : badge}
+                  </span>
+                )}
+                {dot && !badge && (
+                  <span style={{
+                    position: "absolute", top: -2, right: -4,
+                    width: 8, height: 8, borderRadius: "50%",
+                    background: "#E53E3E",
+                  }} />
+                )}
+              </span>
               <span style={{ fontSize: "10px", fontWeight: active ? 600 : 400 }}>
                 {item.label}
               </span>
@@ -91,11 +128,20 @@ export function MobileBottomNav() {
           }}
           aria-label="Xem thêm"
         >
-          <span
-            style={{ fontSize: "1.1rem", lineHeight: 1, letterSpacing: ".05em" }}
-            aria-hidden="true"
-          >
-            ···
+          <span style={{ position: "relative", display: "inline-flex", alignItems: "center" }}>
+            <span
+              style={{ fontSize: "1.1rem", lineHeight: 1, letterSpacing: ".05em" }}
+              aria-hidden="true"
+            >
+              ···
+            </span>
+            {feeDue && (
+              <span style={{
+                position: "absolute", top: -4, right: -6,
+                width: 8, height: 8, borderRadius: "50%",
+                background: "#E53E3E",
+              }} />
+            )}
           </span>
           <span style={{ fontSize: "10px", fontWeight: modalItemActive ? 600 : 400 }}>
             Thêm
@@ -176,6 +222,7 @@ export function MobileBottomNav() {
             >
               {MODAL_ITEMS.map((item) => {
                 const active = pathname.startsWith(item.href);
+                const dot = getDot(item.href);
                 return (
                   <Link
                     key={item.href}
@@ -192,7 +239,16 @@ export function MobileBottomNav() {
                       color: active ? "var(--accent-primary)" : "var(--text-muted)",
                     }}
                   >
-                    <item.Icon size={26} />
+                    <span style={{ position: "relative", display: "inline-flex" }}>
+                      <item.Icon size={26} />
+                      {dot && (
+                        <span style={{
+                          position: "absolute", top: -2, right: -4,
+                          width: 9, height: 9, borderRadius: "50%",
+                          background: "#E53E3E",
+                        }} />
+                      )}
+                    </span>
                     <span
                       style={{
                         fontSize: ".72rem",

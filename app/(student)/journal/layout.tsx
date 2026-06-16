@@ -89,7 +89,7 @@ export default async function JournalLayout({
       </header>
 
       {/* ── Desktop journal tab bar ── */}
-      <JournalTabBar />
+      <JournalTabBar studentCode={profile.studentCode} />
 
       {/* ── Push notification prompt ── */}
       <PushPromptBanner
@@ -111,7 +111,7 @@ export default async function JournalLayout({
       <InstallBanner />
 
       {/* ── Mobile bottom nav ── */}
-      <MobileBottomNav />
+      <MobileBottomNav studentCode={profile.studentCode} />
 
       {/* Spacer for mobile nav */}
       <div className="md:hidden h-16" aria-hidden="true" />

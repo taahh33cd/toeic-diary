@@ -8,6 +8,7 @@ import {
   IconHome, IconScore, IconJournal, IconVocab,
   IconTasks, IconSchedule, IconFee, IconSettings,
 } from "@/components/journal/Icons";
+import { useNavBadges } from "@/hooks/firebase/useNavBadges";
 
 type TabItem = {
   href: string;
@@ -28,9 +29,22 @@ const TABS: TabItem[] = [
   { href: "/journal/settings",  Icon: IconSettings, labelEn: "Settings",   labelVi: "Cài đặt" },
 ];
 
-export function JournalTabBar() {
+export function JournalTabBar({ studentCode }: { studentCode?: string | null }) {
   const pathname = usePathname();
   const { locale } = useLocale();
+  const { taskCount, vocabDueCount, vocabRemind, feeDue } = useNavBadges(studentCode);
+
+  function getBadge(href: string): number | null {
+    if (href === "/journal/missions") return taskCount > 0 ? taskCount : null;
+    if (href === "/journal/vocab") return vocabDueCount > 0 ? vocabDueCount : null;
+    return null;
+  }
+
+  function getDot(href: string): boolean {
+    if (href === "/journal/vocab") return vocabDueCount === 0 && vocabRemind;
+    if (href === "/journal/fee") return feeDue;
+    return false;
+  }
 
   return (
     <nav
@@ -49,6 +63,8 @@ export function JournalTabBar() {
             ? pathname === tab.href
             : pathname === tab.href || pathname.startsWith(tab.href + "/");
           const label = locale === "en" ? tab.labelEn : tab.labelVi;
+          const badge = getBadge(tab.href);
+          const dot = getDot(tab.href);
           return (
             <Link
               key={tab.href}
@@ -62,7 +78,28 @@ export function JournalTabBar() {
                 textDecoration: "none",
               }}
             >
-              <tab.Icon size={16} />
+              <span style={{ position: "relative", display: "inline-flex" }}>
+                <tab.Icon size={16} />
+                {badge !== null && (
+                  <span style={{
+                    position: "absolute", top: -5, right: -8,
+                    background: "var(--orange, #C4622D)", color: "#fff",
+                    fontSize: 9, fontWeight: 700, lineHeight: 1,
+                    minWidth: 13, height: 13, borderRadius: 7,
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    padding: "0 2px",
+                  }}>
+                    {badge > 99 ? "99+" : badge}
+                  </span>
+                )}
+                {dot && !badge && (
+                  <span style={{
+                    position: "absolute", top: -2, right: -3,
+                    width: 7, height: 7, borderRadius: "50%",
+                    background: "#E53E3E",
+                  }} />
+                )}
+              </span>
               <span>{label}</span>
             </Link>
           );
