@@ -749,7 +749,7 @@ function SkillProgressTile({ scores }: { scores: ToeicScore[] }) {
       {/* Header + tab buttons */}
       <div className="flex items-center justify-between mb-5 flex-wrap gap-3">
         <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif" }}>
-          {t("Kỹ năng TOEIC", "TOEIC Skills")}
+          {t("Tiến độ Kỹ năng", "Skill Progress")}
         </p>
         <div
           className="flex gap-1 p-1 rounded-full"
@@ -1203,11 +1203,11 @@ export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }
         <ScheduleTile schedule={mergedSchedule} />
         <FeedbackTile comments={student?.comments as Record<string, { text: string; ts: number }> | undefined} />
 
-        {/* Row 4: Dictation Progress (full width) */}
-        <DictationProgressTile errorLog={errorLog} xpStats={xpStats} />
-
-        {/* Row 5: Skill Progress */}
+        {/* Row 4: Skill Progress */}
         <SkillProgressTile scores={scores} />
+
+        {/* Row 5: Dictation Progress (full width) */}
+        <DictationProgressTile errorLog={errorLog} xpStats={xpStats} />
       </div>
     </>
   );
