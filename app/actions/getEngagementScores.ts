@@ -33,6 +33,8 @@ const startOfWeek = () => {
  * Teacher sees it for students they manage; admin sees all students.
  */
 export async function getEngagementScores(): Promise<EngagementRow[]> {
+  if (!process.env.DATABASE_URL) return [];
+  try {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return [];
@@ -94,4 +96,8 @@ export async function getEngagementScores(): Promise<EngagementRow[]> {
       };
     })
     .sort((a, b) => b.score - a.score);
+  } catch (err) {
+    console.error("[getEngagementScores] DB error (check DATABASE_URL):", err instanceof Error ? err.message : err);
+    return [];
+  }
 }
