@@ -106,7 +106,7 @@ async function importTestFolder(
 
     await prisma.lesson.update({
       where: { id: lesson.id },
-      data: { keyVocabulary: vocabItems },
+      data: { keyVocabulary: vocabItems as unknown as Parameters<typeof prisma.lesson.update>[0]["data"]["keyVocabulary"] },
     });
     updated++;
   }
