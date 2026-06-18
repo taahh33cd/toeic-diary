@@ -2,70 +2,69 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
-import { PART2_SETS } from "@/lib/subskills";
+import { SPEAKING_SKILLS } from "@/lib/subskills/speaking";
 
-export const metadata: Metadata = { title: "Listening — Subskills TOEIC" };
+export const metadata: Metadata = { title: "Speaking — Subskills TOEIC" };
+
+const TESTS_PER_SKILL = 5;
 
 const PARTS = [
   {
-    part: 2,
-    label: "Part 2 — Câu hỏi ngắn",
-    description: "Nghe câu hỏi ngắn, chọn câu trả lời phù hợp nhất (A/B/C). Luyện từ nhóm từ khóa, fill-in, keyword đến freewrite.",
-    href: "/subskills/listening/part2",
+    part: 1,
+    label: "Part 1 — Đọc văn bản to",
+    description: "Luyện 5 kỹ năng nền tảng: phát âm, ngắt nghỉ, ngữ điệu, trọng âm câu, nối âm. Mỗi kỹ năng có 5 bộ test × 3 cấp độ.",
+    href: "/subskills/speaking/part1",
     active: true,
-    detail: "10 nhóm · 4 bài/nhóm · 3 cấp độ",
+    detail: `5 kỹ năng · ${TESTS_PER_SKILL} bộ test/kỹ năng · 3 cấp độ`,
   },
   {
-    part: 3,
-    label: "Part 3 — Đoạn hội thoại",
-    description: "Nghe đoạn hội thoại giữa 2–3 người, trả lời 3 câu hỏi liên tiếp.",
+    part: 2,
+    label: "Part 2 — Mô tả ảnh",
+    description: "Quan sát ảnh và mô tả chi tiết trong 45 giây. Luyện cấu trúc câu, từ vựng mô tả.",
     href: null,
     active: false,
     detail: null,
   },
   {
-    part: 4,
-    label: "Part 4 — Bài nói độc thoại",
-    description: "Nghe bài nói một chiều (thông báo, bài phát biểu), trả lời 3 câu hỏi.",
+    part: 3,
+    label: "Part 3 — Trả lời câu hỏi",
+    description: "Trả lời 3 câu hỏi liên tiếp về một chủ đề quen thuộc trong 15–30 giây mỗi câu.",
     href: null,
     active: false,
     detail: null,
   },
 ];
 
-export default async function ListeningPage() {
+export default async function SpeakingPage() {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
-  // Part 2 stats
-  const [easyAttempts, mediumAttempts, hardAttempts] = user
-    ? await Promise.all([
-        prisma.subskillAttempt.findMany({ where: { userId: user.id, part: "part2" },        select: { questionWord: true, exerciseIndex: true, score: true, passed: true } }).catch(() => []),
-        prisma.subskillAttempt.findMany({ where: { userId: user.id, part: "part2-medium" }, select: { questionWord: true, exerciseIndex: true, score: true, passed: true } }).catch(() => []),
-        prisma.subskillAttempt.findMany({ where: { userId: user.id, part: "part2-hard" },   select: { questionWord: true, exerciseIndex: true, score: true, passed: true } }).catch(() => []),
-      ])
-    : [[], [], []];
+  // Part 1 stats — count skills with any attempt
+  const attempts = user
+    ? await prisma.subskillAttempt
+        .findMany({
+          where: { userId: user.id, part: { startsWith: "sp1-" } },
+          select: { part: true, questionWord: true, score: true, passed: true },
+        })
+        .catch(() => [])
+    : [];
 
-  function buildBest(list: typeof easyAttempts) {
-    const best: Record<string, { score: number; passed: boolean }> = {};
-    for (const a of list) {
-      const key = `${a.questionWord}:${a.exerciseIndex}`;
-      if (!best[key] || a.score > best[key].score) best[key] = { score: a.score, passed: a.passed };
+  // Count skills that have at least one Easy attempt
+  let skillsDone = 0;
+  let testsPassedTotal = 0;
+  for (const skill of SPEAKING_SKILLS) {
+    const skillAttempts = attempts.filter((a) => a.part === skill.part);
+    if (skillAttempts.length > 0) skillsDone++;
+    const easyBest: Record<string, number> = {};
+    for (const a of skillAttempts) {
+      const prev = easyBest[a.questionWord] ?? 0;
+      if (a.score > prev) easyBest[a.questionWord] = a.score;
     }
-    return best;
+    testsPassedTotal += Object.values(easyBest).filter((s) => s >= 80).length;
   }
 
-  const easyBest   = buildBest(easyAttempts);
-  const mediumBest = buildBest(mediumAttempts);
-  const hardBest   = buildBest(hardAttempts);
-
-  const passedSets = PART2_SETS.filter((s) =>
-    [0, 1, 2, 3].every((i) => easyBest[`${s.questionWord}:${i}`]?.passed)
-  ).length;
-
-  const allKeys = new Set([...Object.keys(easyBest), ...Object.keys(mediumBest), ...Object.keys(hardBest)]);
-  const doneExercises  = allKeys.size;
-  const totalExercises = PART2_SETS.length * 4 * 3;
+  const hasDone = skillsDone > 0;
+  const totalTests = SPEAKING_SKILLS.length * TESTS_PER_SKILL; // 25
 
   return (
     <div
@@ -83,19 +82,19 @@ export default async function ListeningPage() {
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: "0.8rem", color: "var(--text-muted)", flexWrap: "wrap" }}>
         <Link href="/subskills" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Subskills</Link>
         <span>›</span>
-        <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>Listening</span>
+        <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>Speaking</span>
       </div>
 
       {/* Header */}
       <div style={{ marginBottom: "1.75rem" }}>
         <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: "0.3rem" }}>
-          🎧 Listening
+          🗣 Speaking
         </p>
         <h1 style={{ fontSize: "clamp(1.3rem, 3vw, 1.7rem)", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.02em", lineHeight: 1.2, margin: "0 0 0.5rem" }}>
-          Luyện kỹ năng nghe TOEIC
+          Luyện kỹ năng nói TOEIC
         </h1>
         <p style={{ margin: 0, fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
-          Mỗi part được chia thành các bài tập theo cấp độ Easy → Medium → Hard, luyện từng kỹ năng nhỏ trước khi làm đề thật.
+          Luyện từng kỹ năng phát âm, ngắt nhịp và nhấn giọng trước khi bước vào đề thi Speaking chính thức.
         </p>
       </div>
 
@@ -133,10 +132,6 @@ export default async function ListeningPage() {
             );
           }
 
-          // Active part — Part 2
-          const hasDone = doneExercises > 0;
-          const pct = Math.round((doneExercises / totalExercises) * 100);
-
           return (
             <Link
               key={p.part}
@@ -150,15 +145,15 @@ export default async function ListeningPage() {
                 borderBottom: idx < PARTS.length - 1 ? "1px solid var(--border)" : "none",
               }}
             >
-              {/* Status */}
+              {/* Status icon */}
               <div style={{
                 width: 32, height: 32, borderRadius: "50%", flexShrink: 0, marginTop: 2,
-                background: passedSets === PART2_SETS.length && hasDone ? "rgba(34,197,94,0.15)" : hasDone ? "rgba(59,130,246,0.12)" : "var(--bg-elevated)",
-                border: `1.5px solid ${passedSets === PART2_SETS.length && hasDone ? "rgba(34,197,94,0.5)" : hasDone ? "rgba(59,130,246,0.4)" : "var(--border)"}`,
+                background: hasDone ? "rgba(59,130,246,0.12)" : "var(--bg-elevated)",
+                border: `1.5px solid ${hasDone ? "rgba(59,130,246,0.4)" : "var(--border)"}`,
                 display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.75rem", fontWeight: 700,
-                color: passedSets === PART2_SETS.length && hasDone ? "rgb(34,197,94)" : hasDone ? "var(--accent-primary)" : "var(--text-muted)",
+                color: hasDone ? "var(--accent-primary)" : "var(--text-muted)",
               }}>
-                {passedSets === PART2_SETS.length && hasDone ? "✓" : p.part}
+                {p.part}
               </div>
 
               {/* Content */}
@@ -171,11 +166,10 @@ export default async function ListeningPage() {
                   </span>
                   {hasDone && (
                     <>
-                      <div style={{ flex: "1 1 80px", maxWidth: 100, height: 3, background: "var(--border)", borderRadius: 999 }}>
-                        <div style={{ height: "100%", width: `${pct}%`, background: passedSets === PART2_SETS.length ? "rgb(34,197,94)" : "var(--accent-primary)", borderRadius: 999 }} />
-                      </div>
-                      <span style={{ fontSize: "0.68rem", color: "var(--text-muted)" }}>{doneExercises}/{totalExercises} bài</span>
-                      <span style={{ fontSize: "0.68rem", color: passedSets > 0 ? "rgb(34,197,94)" : "var(--text-muted)" }}>{passedSets}/{PART2_SETS.length} nhóm pass (Easy)</span>
+                      <span style={{ fontSize: "0.68rem", color: "var(--text-muted)" }}>{skillsDone}/{SPEAKING_SKILLS.length} kỹ năng đã bắt đầu</span>
+                      {testsPassedTotal > 0 && (
+                        <span style={{ fontSize: "0.68rem", color: "rgb(34,197,94)" }}>{testsPassedTotal}/{totalTests} test pass (Easy ≥ 80%)</span>
+                      )}
                     </>
                   )}
                 </div>

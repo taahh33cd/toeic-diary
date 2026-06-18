@@ -11,28 +11,32 @@ const SKILLS = [
     key: "listening",
     emoji: "🎧",
     label: "Listening",
-    parts: [{ label: "Part 2 — Câu hỏi ngắn", href: "/subskills/listening/part2", active: true }],
+    href: "/subskills/listening",
+    description: "Part 2 đang mở · Part 3, 4 sắp ra",
     comingSoon: false,
   },
   {
     key: "reading",
     emoji: "📖",
     label: "Reading",
-    parts: [],
+    href: null,
+    description: null,
     comingSoon: true,
   },
   {
     key: "speaking",
     emoji: "🗣",
     label: "Speaking",
-    parts: [{ label: "Part 1 — Đọc văn bản to", href: "/subskills/speaking/part1", active: true }],
+    href: "/subskills/speaking",
+    description: "Part 1 đang mở · Part 2, 3 sắp ra",
     comingSoon: false,
   },
   {
     key: "writing",
     emoji: "✍️",
     label: "Writing",
-    parts: [],
+    href: null,
+    description: null,
     comingSoon: true,
   },
 ];
@@ -216,60 +220,53 @@ export default async function SubskillsPage() {
             );
           }
 
-          // Listening — active skill
+          // Active skill — full card is a link
+          const statLine = skill.key === "listening"
+            ? `Easy: ${part2PassedSets}/${PART2_SETS.length} nhóm pass · ${part2DoneExercises}/${part2TotalExercises} bài (E+M+H)`
+            : null;
+
           return (
-            <div
+            <Link
               key={skill.key}
+              href={skill.href!}
               style={{
+                display: "flex",
+                flexDirection: "column",
                 padding: "1.5rem",
                 borderRadius: "var(--radius-lg, 12px)",
                 border: "1px solid var(--border)",
                 background: "var(--bg-elevated)",
                 boxShadow: "var(--shadow-sm)",
+                textDecoration: "none",
+                transition: "border-color 0.15s, box-shadow 0.15s",
+              }}
+              onMouseEnter={(e) => {
+                const el = e.currentTarget as HTMLAnchorElement;
+                el.style.borderColor = "var(--accent-primary)";
+                el.style.boxShadow = "var(--shadow-md)";
+              }}
+              onMouseLeave={(e) => {
+                const el = e.currentTarget as HTMLAnchorElement;
+                el.style.borderColor = "var(--border)";
+                el.style.boxShadow = "var(--shadow-sm)";
               }}
             >
-              <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "1rem" }}>
-                <span style={{ fontSize: "1.4rem" }}>{skill.emoji}</span>
-                <span style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)" }}>{skill.label}</span>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.75rem" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
+                  <span style={{ fontSize: "1.4rem" }}>{skill.emoji}</span>
+                  <span style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)" }}>{skill.label}</span>
+                </div>
+                <span style={{ fontSize: "0.85rem", color: "var(--accent-primary)" }}>→</span>
               </div>
-
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-                {skill.parts.map((part) => (
-                  <Link
-                    key={part.href}
-                    href={part.href}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-between",
-                      padding: "0.75rem 1rem",
-                      borderRadius: "var(--radius-md, 8px)",
-                      border: "1px solid var(--border)",
-                      background: "var(--bg-primary)",
-                      textDecoration: "none",
-                      transition: "border-color 0.15s, background 0.15s",
-                    }}
-                  >
-                    <div>
-                      <div style={{ fontSize: "0.88rem", fontWeight: 600, color: "var(--text-primary)" }}>
-                        {part.label}
-                      </div>
-                      {skill.key === "listening" && (
-                        <div style={{ fontSize: "0.7rem", color: "var(--text-muted)", marginTop: "0.15rem" }}>
-                          Easy: {part2PassedSets}/{PART2_SETS.length} nhóm pass · {part2DoneExercises}/{part2TotalExercises} bài (E+M+H)
-                        </div>
-                      )}
-                      {skill.key === "speaking" && (
-                        <div style={{ fontSize: "0.7rem", color: "var(--text-muted)", marginTop: "0.15rem" }}>
-                          5 kỹ năng · 5 bộ test/kỹ năng · 3 cấp độ mỗi bộ
-                        </div>
-                      )}
-                    </div>
-                    <span style={{ fontSize: "0.8rem", color: "var(--accent-primary)", flexShrink: 0, marginLeft: "0.5rem" }}>→</span>
-                  </Link>
-                ))}
+              <div style={{ fontSize: "0.78rem", color: "var(--text-muted)", lineHeight: 1.5 }}>
+                {skill.description}
               </div>
-            </div>
+              {statLine && (
+                <div style={{ marginTop: "0.5rem", fontSize: "0.7rem", color: "var(--text-secondary)", paddingTop: "0.5rem", borderTop: "1px solid var(--border)" }}>
+                  {statLine}
+                </div>
+              )}
+            </Link>
           );
         })}
       </div>
