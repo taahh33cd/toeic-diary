@@ -25,8 +25,8 @@ const SKILLS = [
     key: "speaking",
     emoji: "🗣",
     label: "Speaking",
-    parts: [],
-    comingSoon: true,
+    parts: [{ label: "Part 1 — Đọc văn bản to", href: "/subskills/speaking/part1", active: true }],
+    comingSoon: false,
   },
   {
     key: "writing",
@@ -254,9 +254,16 @@ export default async function SubskillsPage() {
                       <div style={{ fontSize: "0.88rem", fontWeight: 600, color: "var(--text-primary)" }}>
                         {part.label}
                       </div>
-                      <div style={{ fontSize: "0.7rem", color: "var(--text-muted)", marginTop: "0.15rem" }}>
-                        Easy: {part2PassedSets}/{PART2_SETS.length} nhóm pass · {part2DoneExercises}/{part2TotalExercises} bài (E+M+H)
-                      </div>
+                      {skill.key === "listening" && (
+                        <div style={{ fontSize: "0.7rem", color: "var(--text-muted)", marginTop: "0.15rem" }}>
+                          Easy: {part2PassedSets}/{PART2_SETS.length} nhóm pass · {part2DoneExercises}/{part2TotalExercises} bài (E+M+H)
+                        </div>
+                      )}
+                      {skill.key === "speaking" && (
+                        <div style={{ fontSize: "0.7rem", color: "var(--text-muted)", marginTop: "0.15rem" }}>
+                          5 kỹ năng · 5 bộ test/kỹ năng · 3 cấp độ mỗi bộ
+                        </div>
+                      )}
                     </div>
                     <span style={{ fontSize: "0.8rem", color: "var(--accent-primary)", flexShrink: 0, marginLeft: "0.5rem" }}>→</span>
                   </Link>
