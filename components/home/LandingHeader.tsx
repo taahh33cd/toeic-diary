@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { X, Menu } from "lucide-react";
+import { X, Menu, Moon, Sun } from "lucide-react";
 import { useState } from "react";
+import { useUIStore } from "@/stores/uiStore";
 
 const NAV = [
   { label: "Home",       href: "/home",               auth: false },
@@ -19,6 +20,7 @@ const TERRA = "#C4622D";
 export function LandingHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
   const [modal,      setModal]      = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { theme, toggleTheme } = useUIStore();
 
   function handleNavClick(e: React.MouseEvent, requireAuth: boolean) {
     setMobileOpen(false);
@@ -86,6 +88,16 @@ export function LandingHeader({ isLoggedIn }: { isLoggedIn: boolean }) {
 
           {/* Right */}
           <div style={{ display: "flex", alignItems: "center", gap: 8, flexShrink: 0 }}>
+            <button
+              onClick={toggleTheme}
+              title={theme === "dark" ? "Light mode" : "Dark mode"}
+              aria-label={theme === "dark" ? "Chuyển sang Light mode" : "Chuyển sang Dark mode"}
+              style={{ background: "none", border: "none", cursor: "pointer", color: "#FFFDF6", padding: "6px", display: "flex", alignItems: "center", borderRadius: 6, opacity: 0.8, transition: "opacity 0.15s" }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.opacity = "1"; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.opacity = "0.8"; }}
+            >
+              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
             {/* Desktop auth — className controls show/hide */}
             {isLoggedIn ? (
               <Link

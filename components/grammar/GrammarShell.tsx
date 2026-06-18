@@ -14,8 +14,11 @@ import {
   Headphones,
   Puzzle,
   Home,
+  Moon,
+  Sun,
 } from "lucide-react";
 import { UserAvatarMenu } from "@/components/layout/UserAvatarMenu";
+import { useUIStore } from "@/stores/uiStore";
 
 const TOPBAR_H = 64;
 const BG = "#1A4D35";           /* dark tropical green */
@@ -50,6 +53,7 @@ interface GrammarShellProps {
 export function GrammarShell({ children, displayName, userEmail, userDisplayName }: GrammarShellProps) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useUIStore();
 
   useEffect(() => { setMenuOpen(false); }, [pathname]);
 
@@ -193,6 +197,16 @@ export function GrammarShell({ children, displayName, userEmail, userDisplayName
 
           {/* Right side: avatar menu (all screens) + hamburger (mobile only) */}
           <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: "0.5rem", flexShrink: 0 }}>
+            <button
+              onClick={toggleTheme}
+              title={theme === "dark" ? "Light mode" : "Dark mode"}
+              aria-label={theme === "dark" ? "Chuyển sang Light mode" : "Chuyển sang Dark mode"}
+              style={{ background: "none", border: "none", cursor: "pointer", color: TEXT_ACTIVE, padding: "6px", display: "flex", alignItems: "center", borderRadius: 6, opacity: 0.8, transition: "opacity 0.15s" }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.opacity = "1"; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.opacity = "0.8"; }}
+            >
+              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
             {userEmail && (
               <UserAvatarMenu userEmail={userEmail} userDisplayName={userDisplayName} />
             )}
