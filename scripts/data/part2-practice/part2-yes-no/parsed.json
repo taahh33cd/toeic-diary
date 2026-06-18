@@ -1,5 +1,5 @@
-{
-  "testName": "Yes/No – Lựa chọn",
+﻿{
+  "testName": "Yes/No â€“ Lá»±a chá»n",
   "testSlug": "part2-yes-no",
   "orderIndex": 0,
   "examCode": "P2",
@@ -530,7 +530,7 @@
       "questionStart": 11,
       "questionEnd": 11,
       "part": 2,
-      "transcriptFull": "Isn’t Ken going on vacation soon?\n(A) Sure, I'd like some.\n(B) On Monday, I think.\n(C) No, it's not too late.",
+      "transcriptFull": "Isnâ€™t Ken going on vacation soon?\n(A) Sure, I'd like some.\n(B) On Monday, I think.\n(C) No, it's not too late.",
       "correctOption": "B",
       "explanation": "",
       "audioFiles": [
@@ -541,7 +541,7 @@
       "sentences": [
         {
           "orderIndex": 0,
-          "content": "Isn’t Ken going on vacation soon?",
+          "content": "Isnâ€™t Ken going on vacation soon?",
           "speaker": null,
           "optionLabel": null,
           "startTime": 0,
@@ -1414,7 +1414,7 @@
       "questionStart": 28,
       "questionEnd": 28,
       "part": 2,
-      "transcriptFull": "Which flavor of ice cream would you prefer, vanilla or chocolate?\n(A) I'll refer him to you.\n(B) Some of each, if there's enough.\n(C) It's next to the café.",
+      "transcriptFull": "Which flavor of ice cream would you prefer, vanilla or chocolate?\n(A) I'll refer him to you.\n(B) Some of each, if there's enough.\n(C) It's next to the cafÃ©.",
       "correctOption": "B",
       "explanation": "",
       "audioFiles": [
@@ -1452,7 +1452,7 @@
         },
         {
           "orderIndex": 3,
-          "content": "It's next to the café.",
+          "content": "It's next to the cafÃ©.",
           "speaker": null,
           "optionLabel": "C",
           "startTime": 0,

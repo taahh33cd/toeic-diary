@@ -1,4 +1,4 @@
-﻿{
+{
   "testName": "EST 2024 Test 5",
   "testSlug": "ets-2024-test-5",
   "orderIndex": 5,
@@ -98,8 +98,8 @@
       "audioFiles": [
         "E24-T05-01.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q1-1.mp3",
+      "audioDuration": 26.174756
     },
     {
       "title": "Question 2",
@@ -184,8 +184,8 @@
       "audioFiles": [
         "E24-T05-02.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q2-2.mp3",
+      "audioDuration": 29.093756
     },
     {
       "title": "Question 3",
@@ -270,8 +270,8 @@
       "audioFiles": [
         "E24-T05-03.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q3-3.mp3",
+      "audioDuration": 25.523189
     },
     {
       "title": "Question 4",
@@ -366,8 +366,8 @@
       "audioFiles": [
         "E24-T05-04.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q4-4.mp3",
+      "audioDuration": 25.809878
     },
     {
       "title": "Question 5",
@@ -452,8 +452,8 @@
       "audioFiles": [
         "E24-T05-05.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q5-5.mp3",
+      "audioDuration": 28.390067
     },
     {
       "title": "Question 6",
@@ -548,8 +548,8 @@
       "audioFiles": [
         "E24-T05-06.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q6-6.mp3",
+      "audioDuration": 28.077313
     },
     {
       "title": "Question 7",
@@ -628,8 +628,8 @@
       "audioFiles": [
         "E24-T05-07.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q7-7.mp3",
+      "audioDuration": 20.493125
     },
     {
       "title": "Question 8",
@@ -703,8 +703,8 @@
       "audioFiles": [
         "E24-T05-08.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q8-8.mp3",
+      "audioDuration": 19.893689
     },
     {
       "title": "Question 9",
@@ -789,8 +789,8 @@
       "audioFiles": [
         "E24-T05-09.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q9-9.mp3",
+      "audioDuration": 21.692
     },
     {
       "title": "Question 10",
@@ -864,8 +864,8 @@
       "audioFiles": [
         "E24-T05-10.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q10-10.mp3",
+      "audioDuration": 20.831938
     },
     {
       "title": "Question 11",
@@ -945,8 +945,8 @@
       "audioFiles": [
         "E24-T05-11.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q11-11.mp3",
+      "audioDuration": 21.0665
     },
     {
       "title": "Question 12",
@@ -1020,15 +1020,15 @@
       "audioFiles": [
         "E24-T05-12.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q12-12.mp3",
+      "audioDuration": 19.607
     },
     {
       "title": "Question 13",
       "questionStart": 13,
       "questionEnd": 13,
       "part": 2,
-      "transcriptFull": "I'll be out of the office this afternoon.\n(A) An awfully long commute.\n(B) OKâ€”I'll update your schedule.\n(C) It's right down the hallway.",
+      "transcriptFull": "I'll be out of the office this afternoon.\n(A) An awfully long commute.\n(B) OK—I'll update your schedule.\n(C) It's right down the hallway.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -1068,7 +1068,7 @@
         {
           "orderIndex": 2,
           "speaker": null,
-          "content": "OKâ€”I'll update your schedule.",
+          "content": "OK—I'll update your schedule.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": "B",
@@ -1106,8 +1106,8 @@
       "audioFiles": [
         "E24-T05-13.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q13-13.mp3",
+      "audioDuration": 20.831938
     },
     {
       "title": "Question 14",
@@ -1187,8 +1187,8 @@
       "audioFiles": [
         "E24-T05-14.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q14-14.mp3",
+      "audioDuration": 19.841567
     },
     {
       "title": "Question 15",
@@ -1263,15 +1263,15 @@
       "audioFiles": [
         "E24-T05-15.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q15-15.mp3",
+      "audioDuration": 19.997938
     },
     {
       "title": "Question 16",
       "questionStart": 16,
       "questionEnd": 16,
       "part": 2,
-      "transcriptFull": "Are you taking a vacation once this project is over?\n(A) Yesâ€”I'm planning a trip to Barcelona.\n(B) This is your second time, isn't it?\n(C) Blueprints for a high-rise building.",
+      "transcriptFull": "Are you taking a vacation once this project is over?\n(A) Yes—I'm planning a trip to Barcelona.\n(B) This is your second time, isn't it?\n(C) Blueprints for a high-rise building.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -1296,7 +1296,7 @@
         {
           "orderIndex": 1,
           "speaker": null,
-          "content": "Yesâ€”I'm planning a trip to Barcelona.",
+          "content": "Yes—I'm planning a trip to Barcelona.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": "A",
@@ -1354,8 +1354,8 @@
       "audioFiles": [
         "E24-T05-16.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q16-16.mp3",
+      "audioDuration": 22.864813
     },
     {
       "title": "Question 17",
@@ -1439,8 +1439,8 @@
       "audioFiles": [
         "E24-T05-17.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q17-17.mp3",
+      "audioDuration": 21.196813
     },
     {
       "title": "Question 18",
@@ -1514,8 +1514,8 @@
       "audioFiles": [
         "E24-T05-18.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q18-18.mp3",
+      "audioDuration": 18.851189
     },
     {
       "title": "Question 19",
@@ -1610,8 +1610,8 @@
       "audioFiles": [
         "E24-T05-19.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q19-19.mp3",
+      "audioDuration": 19.997938
     },
     {
       "title": "Question 20",
@@ -1674,8 +1674,8 @@
       "audioFiles": [
         "E24-T05-20.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q20-20.mp3",
+      "audioDuration": 17.261378
     },
     {
       "title": "Question 21",
@@ -1765,8 +1765,8 @@
       "audioFiles": [
         "E24-T05-21.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q21-21.mp3",
+      "audioDuration": 20.675567
     },
     {
       "title": "Question 22",
@@ -1834,8 +1834,8 @@
       "audioFiles": [
         "E24-T05-22.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q22-22.mp3",
+      "audioDuration": 20.310689
     },
     {
       "title": "Question 23",
@@ -1920,8 +1920,8 @@
       "audioFiles": [
         "E24-T05-23.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q23-23.mp3",
+      "audioDuration": 20.414938
     },
     {
       "title": "Question 24",
@@ -2006,15 +2006,15 @@
       "audioFiles": [
         "E24-T05-24.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q24-24.mp3",
+      "audioDuration": 22.760567
     },
     {
       "title": "Question 25",
       "questionStart": 25,
       "questionEnd": 25,
       "part": 2,
-      "transcriptFull": "The layout of the footwear department has changed.\n(A) There's a charging station in the cafÃ©.\n(B) Yes, a three-bedroom apartment.\n(C) The store has a new manager.",
+      "transcriptFull": "The layout of the footwear department has changed.\n(A) There's a charging station in the café.\n(B) Yes, a three-bedroom apartment.\n(C) The store has a new manager.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -2039,7 +2039,7 @@
         {
           "orderIndex": 1,
           "speaker": null,
-          "content": "There's a charging station in the cafÃ©.",
+          "content": "There's a charging station in the café.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": "A",
@@ -2092,8 +2092,8 @@
       "audioFiles": [
         "E24-T05-25.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q25-25.mp3",
+      "audioDuration": 22.109
     },
     {
       "title": "Question 26",
@@ -2188,8 +2188,8 @@
       "audioFiles": [
         "E24-T05-26.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q26-26.mp3",
+      "audioDuration": 22.030813
     },
     {
       "title": "Question 27",
@@ -2269,8 +2269,8 @@
       "audioFiles": [
         "E24-T05-27.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q27-27.mp3",
+      "audioDuration": 20.258567
     },
     {
       "title": "Question 28",
@@ -2349,15 +2349,15 @@
       "audioFiles": [
         "E24-T05-28.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q28-28.mp3",
+      "audioDuration": 21.874438
     },
     {
       "title": "Question 29",
       "questionStart": 29,
       "questionEnd": 29,
       "part": 2,
-      "transcriptFull": "Who manufactures the engines for our machines?\n(A) Koji is in charge of supplier contracts.\n(B) I'm sorryâ€”the storage room is full.\n(C) That's a cargo airplane.",
+      "transcriptFull": "Who manufactures the engines for our machines?\n(A) Koji is in charge of supplier contracts.\n(B) I'm sorry—the storage room is full.\n(C) That's a cargo airplane.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -2402,7 +2402,7 @@
         {
           "orderIndex": 2,
           "speaker": null,
-          "content": "I'm sorryâ€”the storage room is full.",
+          "content": "I'm sorry—the storage room is full.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": "B",
@@ -2440,8 +2440,8 @@
       "audioFiles": [
         "E24-T05-29.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q29-29.mp3",
+      "audioDuration": 22.969067
     },
     {
       "title": "Question 30",
@@ -2509,8 +2509,8 @@
       "audioFiles": [
         "E24-T05-30.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q30-30.mp3",
+      "audioDuration": 21.196813
     },
     {
       "title": "Question 31",
@@ -2600,11 +2600,11 @@
       "audioFiles": [
         "E24-T05-31.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q31-31.mp3",
+      "audioDuration": 22.265378
     },
     {
-      "title": "Questions 32â€“34",
+      "title": "Questions 32–34",
       "questionStart": 32,
       "questionEnd": 34,
       "part": 3,
@@ -2821,11 +2821,11 @@
       "audioFiles": [
         "E24-T05-32-34.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q32-34.mp3",
+      "audioDuration": 78.690689
     },
     {
-      "title": "Questions 35â€“37",
+      "title": "Questions 35–37",
       "questionStart": 35,
       "questionEnd": 37,
       "part": 3,
@@ -2997,11 +2997,11 @@
       "audioFiles": [
         "E24-T05-35-37.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q35-37.mp3",
+      "audioDuration": 77.153
     },
     {
-      "title": "Questions 38â€“40",
+      "title": "Questions 38–40",
       "questionStart": 38,
       "questionEnd": 40,
       "part": 3,
@@ -3178,11 +3178,11 @@
       "audioFiles": [
         "E24-T05-38-40.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q38-40.mp3",
+      "audioDuration": 72.956938
     },
     {
-      "title": "Questions 41â€“43",
+      "title": "Questions 41–43",
       "questionStart": 41,
       "questionEnd": 43,
       "part": 3,
@@ -3401,11 +3401,11 @@
       "audioFiles": [
         "E24-T05-41-43.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q41-43.mp3",
+      "audioDuration": 79.055567
     },
     {
-      "title": "Questions 44â€“46",
+      "title": "Questions 44–46",
       "questionStart": 44,
       "questionEnd": 46,
       "part": 3,
@@ -3583,11 +3583,11 @@
       "audioFiles": [
         "E24-T05-44-46.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q44-46.mp3",
+      "audioDuration": 71.992625
     },
     {
-      "title": "Questions 47â€“49",
+      "title": "Questions 47–49",
       "questionStart": 47,
       "questionEnd": 49,
       "part": 3,
@@ -3772,15 +3772,15 @@
       "audioFiles": [
         "E24-T05-47-49.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q47-49.mp3",
+      "audioDuration": 83.746813
     },
     {
-      "title": "Questions 50â€“52",
+      "title": "Questions 50–52",
       "questionStart": 50,
       "questionEnd": 52,
       "part": 3,
-      "transcriptFull": "W-AM: Good morning.\nW-AM: I wanted to meet today to discuss the recent decline in our museum's ticket sales.\nW-AM: You're the outreach coordinator, so I'm hoping you might have some ideas on how we can attract more community involvement.\nM-CN: Well, I recently read an article about a museum in Chicago that has a room where visitors can paint on the walls.\nM-CN: It's become very popular.\nM-CN: We could try it hereâ€”we have that huge room on the third floor that isn't being used.\nW-AM: That's a great idea.\nW-AM: Can you draft a list of the supplies we would need to make sure we have the budget for them?",
+      "transcriptFull": "W-AM: Good morning.\nW-AM: I wanted to meet today to discuss the recent decline in our museum's ticket sales.\nW-AM: You're the outreach coordinator, so I'm hoping you might have some ideas on how we can attract more community involvement.\nM-CN: Well, I recently read an article about a museum in Chicago that has a room where visitors can paint on the walls.\nM-CN: It's become very popular.\nM-CN: We could try it here—we have that huge room on the third floor that isn't being used.\nW-AM: That's a great idea.\nW-AM: Can you draft a list of the supplies we would need to make sure we have the budget for them?",
       "sentences": [
         {
           "orderIndex": 0,
@@ -3869,7 +3869,7 @@
         {
           "orderIndex": 5,
           "speaker": "M-CN",
-          "content": "We could try it hereâ€”we have that huge room on the third floor that isn't being used.",
+          "content": "We could try it here—we have that huge room on the third floor that isn't being used.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3921,15 +3921,15 @@
       "audioFiles": [
         "E24-T05-50-52.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q50-52.mp3",
+      "audioDuration": 79.602878
     },
     {
-      "title": "Questions 53â€“55",
+      "title": "Questions 53–55",
       "questionStart": 53,
       "questionEnd": 55,
       "part": 3,
-      "transcriptFull": "W-BR: Thilo, this is Ms.\nW-BR: Gao, a new customer.\nW-BR: She's purchasing an upholstered sofa.\nW-BR: We just walked around our showroom, and she's decided on our Hudson model.\nM-CN: One of our best sellers!\nW-AM: It is really comfortable.\nW-BR: Can you assist her with the paperwork for our payment plan?\nM-CN: Sure.\nM-CN: Happy to help you, Ms.\nM-CN: Gao.\nM-CN: Are you getting the standard fabric?\nW-AM: Noâ€”I'd like to select a custom fabric.\nM-CN: Just so you know, the price will increase some with a custom order.\nW-AM: I think it's worth the extra cost.\nW-AM: It'll really brighten up my living room.\nM-CN: Wonderful.\nM-CN: Now in order to set up a payment plan, I'll need to see some identification.\nM-CN: A driver's license will do.",
+      "transcriptFull": "W-BR: Thilo, this is Ms.\nW-BR: Gao, a new customer.\nW-BR: She's purchasing an upholstered sofa.\nW-BR: We just walked around our showroom, and she's decided on our Hudson model.\nM-CN: One of our best sellers!\nW-AM: It is really comfortable.\nW-BR: Can you assist her with the paperwork for our payment plan?\nM-CN: Sure.\nM-CN: Happy to help you, Ms.\nM-CN: Gao.\nM-CN: Are you getting the standard fabric?\nW-AM: No—I'd like to select a custom fabric.\nM-CN: Just so you know, the price will increase some with a custom order.\nW-AM: I think it's worth the extra cost.\nW-AM: It'll really brighten up my living room.\nM-CN: Wonderful.\nM-CN: Now in order to set up a payment plan, I'll need to see some identification.\nM-CN: A driver's license will do.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -4089,7 +4089,7 @@
         {
           "orderIndex": 11,
           "speaker": "W-AM",
-          "content": "Noâ€”I'd like to select a custom fabric.",
+          "content": "No—I'd like to select a custom fabric.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4221,11 +4221,11 @@
       "audioFiles": [
         "E24-T05-53-55.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q53-55.mp3",
+      "audioDuration": 86.822189
     },
     {
-      "title": "Questions 56â€“58",
+      "title": "Questions 56–58",
       "questionStart": 56,
       "questionEnd": 58,
       "part": 3,
@@ -4467,11 +4467,11 @@
       "audioFiles": [
         "E24-T05-56-58.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q56-58.mp3",
+      "audioDuration": 77.205125
     },
     {
-      "title": "Questions 59â€“61",
+      "title": "Questions 59–61",
       "questionStart": 59,
       "questionEnd": 61,
       "part": 3,
@@ -4671,15 +4671,15 @@
       "audioFiles": [
         "E24-T05-59-61.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q59-61.mp3",
+      "audioDuration": 79.159813
     },
     {
-      "title": "Questions 62â€“64",
+      "title": "Questions 62–64",
       "questionStart": 62,
       "questionEnd": 64,
       "part": 3,
-      "transcriptFull": "W-AM: Rajesh, it was nice to see you here in New York again this year.\nM-CN: Same here.\nM-CN: I look forward to attending the Theater Technology Conference again next year.\nW-AM: I really enjoyed your talk, especially the information you provided on acoustics.\nW-AM: Is it published anywhere?\nW-AM: I'd like to have a closer look.\nM-CN: Actually, it is.\nM-CN: You can find the article in last November's issue of Theater Sound.\nM-CN: It's posted online.\nW-AM: Great.\nW-AM: I'll look it up.\nM-CN: Ohâ€”my train leaves in fourteen minutes.\nM-CN: I have to get going.\nM-CN: Safe travels, Camille!",
+      "transcriptFull": "W-AM: Rajesh, it was nice to see you here in New York again this year.\nM-CN: Same here.\nM-CN: I look forward to attending the Theater Technology Conference again next year.\nW-AM: I really enjoyed your talk, especially the information you provided on acoustics.\nW-AM: Is it published anywhere?\nW-AM: I'd like to have a closer look.\nM-CN: Actually, it is.\nM-CN: You can find the article in last November's issue of Theater Sound.\nM-CN: It's posted online.\nW-AM: Great.\nW-AM: I'll look it up.\nM-CN: Oh—my train leaves in fourteen minutes.\nM-CN: I have to get going.\nM-CN: Safe travels, Camille!",
       "sentences": [
         {
           "orderIndex": 0,
@@ -4840,7 +4840,7 @@
         {
           "orderIndex": 11,
           "speaker": "M-CN",
-          "content": "Ohâ€”my train leaves in fourteen minutes.",
+          "content": "Oh—my train leaves in fourteen minutes.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4887,15 +4887,15 @@
       "audioFiles": [
         "E24-T05-62-64.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q62-64.mp3",
+      "audioDuration": 84.893567
     },
     {
-      "title": "Questions 65â€“67",
+      "title": "Questions 65–67",
       "questionStart": 65,
       "questionEnd": 67,
       "part": 3,
-      "transcriptFull": "M-CN: Welcome to Orlando's Deli.\nM-CN: If you'd like to try one of our daily specials, they're on the board behind me.\nW-BR: Wow, that's a great menu.\nW-BR: The vegetable curry looks good.\nW-BR: Is it spicy?\nM-CN: No, it's very mildâ€”but we just sold out, unfortunately.\nW-BR: In that case, I'll have the lasagna.\nM-CN: Great choice.\nM-CN: By the way, we just opened our new patio this week in case you'd like to sit outside.\nW-BR: Actually, it is a beautiful day.\nW-BR: And your patio looks lovely.",
+      "transcriptFull": "M-CN: Welcome to Orlando's Deli.\nM-CN: If you'd like to try one of our daily specials, they're on the board behind me.\nW-BR: Wow, that's a great menu.\nW-BR: The vegetable curry looks good.\nW-BR: Is it spicy?\nM-CN: No, it's very mild—but we just sold out, unfortunately.\nW-BR: In that case, I'll have the lasagna.\nM-CN: Great choice.\nM-CN: By the way, we just opened our new patio this week in case you'd like to sit outside.\nW-BR: Actually, it is a beautiful day.\nW-BR: And your patio looks lovely.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -4973,7 +4973,7 @@
         {
           "orderIndex": 5,
           "speaker": "M-CN",
-          "content": "No, it's very mildâ€”but we just sold out, unfortunately.",
+          "content": "No, it's very mild—but we just sold out, unfortunately.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5080,15 +5080,15 @@
       "audioFiles": [
         "E24-T05-65-67.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q65-67.mp3",
+      "audioDuration": 81.349067
     },
     {
-      "title": "Questions 68â€“70",
+      "title": "Questions 68–70",
       "questionStart": 68,
       "questionEnd": 70,
       "part": 3,
-      "transcriptFull": "W-AM: I'm excited about our hike today here at Marina Park.\nW-AM: And I'm so glad we got to the park early before it gets crowded.\nW-AM: Which trail should we hike?\nM-AU: Let's take a look at the map.\nM-AU: We're at the visitor center, and there's a shuttle that stops at different trailheads.\nW-AM: Right.\nW-AM: It looks like the Creek Trail and the Pond Trail are fairly short.\nW-AM: I'd like to do a more challenging hike.\nM-AU: OK.\nM-AU: How about the Waterfall Trail?\nW-AM: That sounds good.\nW-AM: And lookâ€”there's a video about the park.\nW-AM: We can watch while we wait.",
+      "transcriptFull": "W-AM: I'm excited about our hike today here at Marina Park.\nW-AM: And I'm so glad we got to the park early before it gets crowded.\nW-AM: Which trail should we hike?\nM-AU: Let's take a look at the map.\nM-AU: We're at the visitor center, and there's a shuttle that stops at different trailheads.\nW-AM: Right.\nW-AM: It looks like the Creek Trail and the Pond Trail are fairly short.\nW-AM: I'd like to do a more challenging hike.\nM-AU: OK.\nM-AU: How about the Waterfall Trail?\nW-AM: That sounds good.\nW-AM: And look—there's a video about the park.\nW-AM: We can watch while we wait.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -5254,7 +5254,7 @@
         {
           "orderIndex": 11,
           "speaker": "W-AM",
-          "content": "And lookâ€”there's a video about the park.",
+          "content": "And look—there's a video about the park.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5292,15 +5292,15 @@
       "audioFiles": [
         "E24-T05-68-70.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q68-70.mp3",
+      "audioDuration": 82.157
     },
     {
-      "title": "Questions 71â€“73",
+      "title": "Questions 71–73",
       "questionStart": 71,
       "questionEnd": 73,
       "part": 4,
-      "transcriptFull": "Hello, Mr.\nCho.\nThis is calling from Springdale Lights.\nIâ€™m calling regarding the order you placed yesterday for 24 of our purple solar lanterns for an upcoming event.\nUnfortunately, we just heard from our supplier that the purple lanterns won't be available for the next three weeks.\nAs a result, we currently only have the yellow ones in stock.\nTo apologize for this, we would like to offer you a 10 percent discount on the yellow lanterns.\nCould you please call me back to confirm if you would like the yellow solar lights instead?\nIf so, Iâ€™ll set them aside for you.",
+      "transcriptFull": "Hello, Mr.\nCho.\nThis is calling from Springdale Lights.\nI’m calling regarding the order you placed yesterday for 24 of our purple solar lanterns for an upcoming event.\nUnfortunately, we just heard from our supplier that the purple lanterns won't be available for the next three weeks.\nAs a result, we currently only have the yellow ones in stock.\nTo apologize for this, we would like to offer you a 10 percent discount on the yellow lanterns.\nCould you please call me back to confirm if you would like the yellow solar lights instead?\nIf so, I’ll set them aside for you.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -5338,7 +5338,7 @@
         {
           "orderIndex": 3,
           "speaker": null,
-          "content": "Iâ€™m calling regarding the order you placed yesterday for 24 of our purple solar lanterns for an upcoming event.",
+          "content": "I’m calling regarding the order you placed yesterday for 24 of our purple solar lanterns for an upcoming event.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5438,7 +5438,7 @@
         {
           "orderIndex": 8,
           "speaker": null,
-          "content": "If so, Iâ€™ll set them aside for you.",
+          "content": "If so, I’ll set them aside for you.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5456,11 +5456,11 @@
       "audioFiles": [
         "E24-T05-71-73.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q71-73.mp3",
+      "audioDuration": 72.722378
     },
     {
-      "title": "Questions 74â€“76",
+      "title": "Questions 74–76",
       "questionStart": 74,
       "questionEnd": 76,
       "part": 4,
@@ -5636,15 +5636,15 @@
       "audioFiles": [
         "E24-T05-74-76.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q74-76.mp3",
+      "audioDuration": 82.626125
     },
     {
-      "title": "Questions 77â€“79",
+      "title": "Questions 77–79",
       "questionStart": 77,
       "questionEnd": 79,
       "part": 4,
-      "transcriptFull": "Good morning, Ms.\nEspinosa.\nThis is Marcel Fournier.\nIâ€™m on my way to the airport this Saturday morning.\nI know this is a bit unusual, but I was in such a rush that I left the note with Mr.\nHangâ€™s mobile phone number on my desk at the office.\nHe is supposed to pick me up at the airport, and Iâ€™ll be stranded if I canâ€™t get in touch with him.\nCould you please go to my office and email that number to me?\nI know this is inconvenient, and I'm sorry.\nI'll check my messages once I land in San Diego.",
+      "transcriptFull": "Good morning, Ms.\nEspinosa.\nThis is Marcel Fournier.\nI’m on my way to the airport this Saturday morning.\nI know this is a bit unusual, but I was in such a rush that I left the note with Mr.\nHang’s mobile phone number on my desk at the office.\nHe is supposed to pick me up at the airport, and I’ll be stranded if I can’t get in touch with him.\nCould you please go to my office and email that number to me?\nI know this is inconvenient, and I'm sorry.\nI'll check my messages once I land in San Diego.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -5682,7 +5682,7 @@
         {
           "orderIndex": 3,
           "speaker": null,
-          "content": "Iâ€™m on my way to the airport this Saturday morning.",
+          "content": "I’m on my way to the airport this Saturday morning.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5717,7 +5717,7 @@
         {
           "orderIndex": 5,
           "speaker": null,
-          "content": "Hangâ€™s mobile phone number on my desk at the office.",
+          "content": "Hang’s mobile phone number on my desk at the office.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5737,7 +5737,7 @@
         {
           "orderIndex": 6,
           "speaker": null,
-          "content": "He is supposed to pick me up at the airport, and Iâ€™ll be stranded if I canâ€™t get in touch with him.",
+          "content": "He is supposed to pick me up at the airport, and I’ll be stranded if I can’t get in touch with him.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5815,15 +5815,15 @@
       "audioFiles": [
         "E24-T05-77-79.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q77-79.mp3",
+      "audioDuration": 77.622125
     },
     {
-      "title": "Questions 80â€“82",
+      "title": "Questions 80–82",
       "questionStart": 80,
       "questionEnd": 82,
       "part": 4,
-      "transcriptFull": "Hello, everyone!\nThanks for tuning in again today.\nFor those of you new to my channel, my videos focus on how to repurpose common items to keep them out of landfills.\nIn this video, weâ€™re going to learn how to make candles from old leftover crayons.\nThe first step is to gather the items youâ€™ll need.\nYou can use old crayons from your home, or ask friends and neighbors for theirs.\nIâ€™ll be going over a lot of steps, but donâ€™t worryâ€”a full written version of the instructions is available on my website.\nI recommend downloading it so you can refer to it later.",
+      "transcriptFull": "Hello, everyone!\nThanks for tuning in again today.\nFor those of you new to my channel, my videos focus on how to repurpose common items to keep them out of landfills.\nIn this video, we’re going to learn how to make candles from old leftover crayons.\nThe first step is to gather the items you’ll need.\nYou can use old crayons from your home, or ask friends and neighbors for theirs.\nI’ll be going over a lot of steps, but don’t worry—a full written version of the instructions is available on my website.\nI recommend downloading it so you can refer to it later.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -5872,7 +5872,7 @@
         {
           "orderIndex": 3,
           "speaker": null,
-          "content": "In this video, weâ€™re going to learn how to make candles from old leftover crayons.",
+          "content": "In this video, we’re going to learn how to make candles from old leftover crayons.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5892,7 +5892,7 @@
         {
           "orderIndex": 4,
           "speaker": null,
-          "content": "The first step is to gather the items youâ€™ll need.",
+          "content": "The first step is to gather the items you’ll need.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5932,7 +5932,7 @@
         {
           "orderIndex": 6,
           "speaker": null,
-          "content": "Iâ€™ll be going over a lot of steps, but donâ€™t worryâ€”a full written version of the instructions is available on my website.",
+          "content": "I’ll be going over a lot of steps, but don’t worry—a full written version of the instructions is available on my website.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5975,15 +5975,15 @@
       "audioFiles": [
         "E24-T05-80-82.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q80-82.mp3",
+      "audioDuration": 85.128125
     },
     {
-      "title": "Questions 83â€“85",
+      "title": "Questions 83–85",
       "questionStart": 83,
       "questionEnd": 85,
       "part": 4,
-      "transcriptFull": "Thank you for coming to this press conference.\nAs you know, the improvement project for the Grand Falls Bridge has been underway for almost a year now.\nWe are now approaching the final stages, which involve polishing and painting the newly constructed sections.\nI am aware that concerns have been expressed by members of the fishing industry regarding the project's potential environmental impact on local marine life.\nHowever, all required studies were conducted a year ago.\nNow, Iâ€™ll take a few questions.\nAfter that, our special events coordinator will talk about the planned opening ceremony.",
+      "transcriptFull": "Thank you for coming to this press conference.\nAs you know, the improvement project for the Grand Falls Bridge has been underway for almost a year now.\nWe are now approaching the final stages, which involve polishing and painting the newly constructed sections.\nI am aware that concerns have been expressed by members of the fishing industry regarding the project's potential environmental impact on local marine life.\nHowever, all required studies were conducted a year ago.\nNow, I’ll take a few questions.\nAfter that, our special events coordinator will talk about the planned opening ceremony.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -6088,7 +6088,7 @@
         {
           "orderIndex": 5,
           "speaker": null,
-          "content": "Now, Iâ€™ll take a few questions.",
+          "content": "Now, I’ll take a few questions.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -6120,15 +6120,15 @@
       "audioFiles": [
         "E24-T05-83-85.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q83-85.mp3",
+      "audioDuration": 77.465756
     },
     {
-      "title": "Questions 86â€“88",
+      "title": "Questions 86–88",
       "questionStart": 86,
       "questionEnd": 88,
       "part": 4,
-      "transcriptFull": "Hello, Mr.\nSmith.\nI hope you are settling into your office space in our building.\nIâ€™m calling about some large packages that arrived for your company last week.\nWe are holding them in the storage room downstairs.\nAccording to the lease agreement, management only holds packages for five days, but itâ€™s been ten days already.\nPlease call and let me know when you can come to pick them up.\nAt that time, Iâ€™ll go and open the storage room door for you.",
+      "transcriptFull": "Hello, Mr.\nSmith.\nI hope you are settling into your office space in our building.\nI’m calling about some large packages that arrived for your company last week.\nWe are holding them in the storage room downstairs.\nAccording to the lease agreement, management only holds packages for five days, but it’s been ten days already.\nPlease call and let me know when you can come to pick them up.\nAt that time, I’ll go and open the storage room door for you.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -6171,7 +6171,7 @@
         {
           "orderIndex": 3,
           "speaker": null,
-          "content": "Iâ€™m calling about some large packages that arrived for your company last week.",
+          "content": "I’m calling about some large packages that arrived for your company last week.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -6211,7 +6211,7 @@
         {
           "orderIndex": 5,
           "speaker": null,
-          "content": "According to the lease agreement, management only holds packages for five days, but itâ€™s been ten days already.",
+          "content": "According to the lease agreement, management only holds packages for five days, but it’s been ten days already.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -6251,7 +6251,7 @@
         {
           "orderIndex": 7,
           "speaker": null,
-          "content": "At that time, Iâ€™ll go and open the storage room door for you.",
+          "content": "At that time, I’ll go and open the storage room door for you.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -6274,11 +6274,11 @@
       "audioFiles": [
         "E24-T05-86-88.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q86-88.mp3",
+      "audioDuration": 73.452125
     },
     {
-      "title": "Questions 89â€“91",
+      "title": "Questions 89–91",
       "questionStart": 89,
       "questionEnd": 91,
       "part": 4,
@@ -6399,15 +6399,15 @@
       "audioFiles": [
         "E24-T05-89-91.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q89-91.mp3",
+      "audioDuration": 78.6125
     },
     {
-      "title": "Questions 92â€“94",
+      "title": "Questions 92–94",
       "questionStart": 92,
       "questionEnd": 94,
       "part": 4,
-      "transcriptFull": "Hello, Mr.\nKimura.\nThis is Ferras Portable Storage.\nYou recently ordered a container for storing and moving your household goods.\nM.\nA driver will place it in your driveway.\nAfter the delivery, weâ€™d appreciate it if you could complete a customer feedback survey that we will send via email.\nIt helps us improve our service.\nThank you.",
+      "transcriptFull": "Hello, Mr.\nKimura.\nThis is Ferras Portable Storage.\nYou recently ordered a container for storing and moving your household goods.\nM.\nA driver will place it in your driveway.\nAfter the delivery, we’d appreciate it if you could complete a customer feedback survey that we will send via email.\nIt helps us improve our service.\nThank you.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -6483,7 +6483,7 @@
         {
           "orderIndex": 6,
           "speaker": null,
-          "content": "After the delivery, weâ€™d appreciate it if you could complete a customer feedback survey that we will send via email.",
+          "content": "After the delivery, we’d appreciate it if you could complete a customer feedback survey that we will send via email.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -6535,11 +6535,11 @@
       "audioFiles": [
         "E24-T05-92-94.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q92-94.mp3",
+      "audioDuration": 71.288938
     },
     {
-      "title": "Questions 95â€“97",
+      "title": "Questions 95–97",
       "questionStart": 95,
       "questionEnd": 97,
       "part": 4,
@@ -6691,15 +6691,15 @@
       "audioFiles": [
         "E24-T05-95-97.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q95-97.mp3",
+      "audioDuration": 87.134938
     },
     {
-      "title": "Questions 98â€“100",
+      "title": "Questions 98–100",
       "questionStart": 98,
       "questionEnd": 100,
       "part": 4,
-      "transcriptFull": "Welcome to the professional development workshop.\nWeâ€™ll start by continuing our discussion on social media advertising using video, and weâ€™ll end todayâ€™s meeting with a group task.\nLast week, we discussed the planning stage of a video marketing campaign.\nToday, weâ€™ll move on to the production stage.\nDuring this stage, you need to ensure that high-quality equipment is being used for lighting and camera work, and that you have secured the best video editor for the job.\nIâ€™m honored to have an expert with us today to talk about her experience with this process.\nPlease give your attention to Usha Madan.",
+      "transcriptFull": "Welcome to the professional development workshop.\nWe’ll start by continuing our discussion on social media advertising using video, and we’ll end today’s meeting with a group task.\nLast week, we discussed the planning stage of a video marketing campaign.\nToday, we’ll move on to the production stage.\nDuring this stage, you need to ensure that high-quality equipment is being used for lighting and camera work, and that you have secured the best video editor for the job.\nI’m honored to have an expert with us today to talk about her experience with this process.\nPlease give your attention to Usha Madan.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -6724,7 +6724,7 @@
         {
           "orderIndex": 1,
           "speaker": null,
-          "content": "Weâ€™ll start by continuing our discussion on social media advertising using video, and weâ€™ll end todayâ€™s meeting with a group task.",
+          "content": "We’ll start by continuing our discussion on social media advertising using video, and we’ll end today’s meeting with a group task.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -6764,7 +6764,7 @@
         {
           "orderIndex": 3,
           "speaker": null,
-          "content": "Today, weâ€™ll move on to the production stage.",
+          "content": "Today, we’ll move on to the production stage.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -6804,7 +6804,7 @@
         {
           "orderIndex": 5,
           "speaker": null,
-          "content": "Iâ€™m honored to have an expert with us today to talk about her experience with this process.",
+          "content": "I’m honored to have an expert with us today to talk about her experience with this process.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -6847,8 +6847,8 @@
       "audioFiles": [
         "E24-T05-98-100.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-5/q98-100.mp3",
+      "audioDuration": 88.829
     }
   ]
 }

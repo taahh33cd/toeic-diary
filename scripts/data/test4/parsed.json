@@ -1,4 +1,4 @@
-﻿{
+{
   "testName": "EST 2024 Test 4",
   "testSlug": "ets-2024-test-4",
   "orderIndex": 4,
@@ -9,6 +9,173 @@
       "title": "Question 1",
       "questionStart": 1,
       "questionEnd": 1,
+      "part": 1,
+      "transcriptFull": "(A) He's cleaning the floor.\n(B) He's setting a plant on a shelf.\n(C) He's pouring some liquid into a cup.\n(D) He's ironing a shirt.",
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "speaker": null,
+          "content": "He's cleaning the floor.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "A",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "cleaning",
+              "hint": "c_______"
+            }
+          ]
+        },
+        {
+          "orderIndex": 1,
+          "speaker": null,
+          "content": "He's setting a plant on a shelf.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "B",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "setting",
+              "hint": "s______"
+            },
+            {
+              "position": 3,
+              "answer": "plant",
+              "hint": "p____"
+            }
+          ]
+        },
+        {
+          "orderIndex": 2,
+          "speaker": null,
+          "content": "He's pouring some liquid into a cup.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "C",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "pouring",
+              "hint": "p______"
+            },
+            {
+              "position": 3,
+              "answer": "liquid",
+              "hint": "l_____"
+            }
+          ]
+        },
+        {
+          "orderIndex": 3,
+          "speaker": null,
+          "content": "He's ironing a shirt.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "D",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "ironing",
+              "hint": "i______"
+            }
+          ]
+        }
+      ],
+      "correctOption": null,
+      "explanation": "",
+      "audioFiles": [
+        "E24-T04-01.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q1-1.mp3",
+      "audioDuration": 24.480689
+    },
+    {
+      "title": "Question 2",
+      "questionStart": 2,
+      "questionEnd": 2,
+      "part": 1,
+      "transcriptFull": "(A) They're glancing at a monitor.\n(B) They're putting pens in a jar.\n(C) They're wiping off a desk.\n(D) They're examining a document.",
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "speaker": null,
+          "content": "They're glancing at a monitor.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "A",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "glancing",
+              "hint": "g_______"
+            }
+          ]
+        },
+        {
+          "orderIndex": 1,
+          "speaker": null,
+          "content": "They're putting pens in a jar.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "B",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "putting",
+              "hint": "p______"
+            },
+            {
+              "position": 2,
+              "answer": "pens",
+              "hint": "p___"
+            }
+          ]
+        },
+        {
+          "orderIndex": 2,
+          "speaker": null,
+          "content": "They're wiping off a desk.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "C",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "wiping",
+              "hint": "w_____"
+            }
+          ]
+        },
+        {
+          "orderIndex": 3,
+          "speaker": null,
+          "content": "They're examining a document.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "D",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "examining",
+              "hint": "e________"
+            }
+          ]
+        }
+      ],
+      "correctOption": null,
+      "explanation": "",
+      "audioFiles": [
+        "E24-T04-02.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q2-2.mp3",
+      "audioDuration": 24.480689
+    },
+    {
+      "title": "Question 3",
+      "questionStart": 3,
+      "questionEnd": 3,
       "part": 1,
       "transcriptFull": "(A) Some people are taking a ride on a boat.\n(B) A boat is floating under a bridge.\n(C) A boat is being loaded with cargo.\n(D) Some people are rowing a boat past a lighthouse.",
       "sentences": [
@@ -96,369 +263,15 @@
       "correctOption": null,
       "explanation": "",
       "audioFiles": [
-        "E24-T04-01.mp3"
-      ],
-      "audioUrl": "",
-      "audioDuration": 0
-    },
-    {
-      "title": "Question 2",
-      "questionStart": 2,
-      "questionEnd": 2,
-      "part": 1,
-      "transcriptFull": "(A) They're glancing at a monitor.\n(B) They're putting pens in a jar.\n(C) They're wiping off a desk.\n(D) They're examining a document.",
-      "sentences": [
-        {
-          "orderIndex": 0,
-          "speaker": null,
-          "content": "They're glancing at a monitor.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "A",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "glancing",
-              "hint": "g_______"
-            }
-          ]
-        },
-        {
-          "orderIndex": 1,
-          "speaker": null,
-          "content": "They're putting pens in a jar.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "B",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "putting",
-              "hint": "p______"
-            },
-            {
-              "position": 2,
-              "answer": "pens",
-              "hint": "p___"
-            }
-          ]
-        },
-        {
-          "orderIndex": 2,
-          "speaker": null,
-          "content": "They're wiping off a desk.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "C",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "wiping",
-              "hint": "w_____"
-            }
-          ]
-        },
-        {
-          "orderIndex": 3,
-          "speaker": null,
-          "content": "They're examining a document.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "D",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "examining",
-              "hint": "e________"
-            }
-          ]
-        }
-      ],
-      "correctOption": null,
-      "explanation": "",
-      "audioFiles": [
-        "E24-T04-02.mp3"
-      ],
-      "audioUrl": "",
-      "audioDuration": 0
-    },
-    {
-      "title": "Question 3",
-      "questionStart": 3,
-      "questionEnd": 3,
-      "part": 1,
-      "transcriptFull": "(A) He's cleaning the floor.\n(B) He's setting a plant on a shelf.\n(C) He's pouring some liquid into a cup.\n(D) He's ironing a shirt.",
-      "sentences": [
-        {
-          "orderIndex": 0,
-          "speaker": null,
-          "content": "He's cleaning the floor.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "A",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "cleaning",
-              "hint": "c_______"
-            }
-          ]
-        },
-        {
-          "orderIndex": 1,
-          "speaker": null,
-          "content": "He's setting a plant on a shelf.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "B",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "setting",
-              "hint": "s______"
-            },
-            {
-              "position": 3,
-              "answer": "plant",
-              "hint": "p____"
-            }
-          ]
-        },
-        {
-          "orderIndex": 2,
-          "speaker": null,
-          "content": "He's pouring some liquid into a cup.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "C",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "pouring",
-              "hint": "p______"
-            },
-            {
-              "position": 3,
-              "answer": "liquid",
-              "hint": "l_____"
-            }
-          ]
-        },
-        {
-          "orderIndex": 3,
-          "speaker": null,
-          "content": "He's ironing a shirt.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "D",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "ironing",
-              "hint": "i______"
-            }
-          ]
-        }
-      ],
-      "correctOption": null,
-      "explanation": "",
-      "audioFiles": [
         "E24-T04-03.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q3-3.mp3",
+      "audioDuration": 23.829125
     },
     {
       "title": "Question 4",
       "questionStart": 4,
       "questionEnd": 4,
-      "part": 1,
-      "transcriptFull": "(A) Some people are riding bicycles through a field.\n(B) Some people are moving a picnic table.\n(C) There are some mountains in the distance.\n(D) A bicycle has fallen over on the ground.",
-      "sentences": [
-        {
-          "orderIndex": 0,
-          "speaker": null,
-          "content": "Some people are riding bicycles through a field.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "A",
-          "blanks": [
-            {
-              "position": 3,
-              "answer": "riding",
-              "hint": "r_____"
-            },
-            {
-              "position": 4,
-              "answer": "bicycles",
-              "hint": "b_______"
-            }
-          ]
-        },
-        {
-          "orderIndex": 1,
-          "speaker": null,
-          "content": "Some people are moving a picnic table.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "B",
-          "blanks": [
-            {
-              "position": 3,
-              "answer": "moving",
-              "hint": "m_____"
-            },
-            {
-              "position": 5,
-              "answer": "picnic",
-              "hint": "p_____"
-            }
-          ]
-        },
-        {
-          "orderIndex": 2,
-          "speaker": null,
-          "content": "There are some mountains in the distance.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "C",
-          "blanks": [
-            {
-              "position": 3,
-              "answer": "mountains",
-              "hint": "m________"
-            }
-          ]
-        },
-        {
-          "orderIndex": 3,
-          "speaker": null,
-          "content": "A bicycle has fallen over on the ground.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "D",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "bicycle",
-              "hint": "b______"
-            },
-            {
-              "position": 3,
-              "answer": "fallen",
-              "hint": "f_____"
-            }
-          ]
-        }
-      ],
-      "correctOption": null,
-      "explanation": "",
-      "audioFiles": [
-        "E24-T04-04.mp3"
-      ],
-      "audioUrl": "",
-      "audioDuration": 0
-    },
-    {
-      "title": "Question 5",
-      "questionStart": 5,
-      "questionEnd": 5,
-      "part": 1,
-      "transcriptFull": "(A) Some couches have been pushed against a wall.\n(B) Some lights have been hung from the ceiling.\n(C) Some cushions have been stacked on the floor.\n(D) Some flowers have been arranged in a vase.",
-      "sentences": [
-        {
-          "orderIndex": 0,
-          "speaker": null,
-          "content": "Some couches have been pushed against a wall.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "A",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "couches",
-              "hint": "c______"
-            },
-            {
-              "position": 4,
-              "answer": "pushed",
-              "hint": "p_____"
-            }
-          ]
-        },
-        {
-          "orderIndex": 1,
-          "speaker": null,
-          "content": "Some lights have been hung from the ceiling.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "B",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "lights",
-              "hint": "l_____"
-            },
-            {
-              "position": 4,
-              "answer": "hung",
-              "hint": "h___"
-            }
-          ]
-        },
-        {
-          "orderIndex": 2,
-          "speaker": null,
-          "content": "Some cushions have been stacked on the floor.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "C",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "cushions",
-              "hint": "c_______"
-            },
-            {
-              "position": 4,
-              "answer": "stacked",
-              "hint": "s______"
-            }
-          ]
-        },
-        {
-          "orderIndex": 3,
-          "speaker": null,
-          "content": "Some flowers have been arranged in a vase.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "D",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "flowers",
-              "hint": "f______"
-            },
-            {
-              "position": 4,
-              "answer": "arranged",
-              "hint": "a_______"
-            }
-          ]
-        }
-      ],
-      "correctOption": null,
-      "explanation": "",
-      "audioFiles": [
-        "E24-T04-05.mp3"
-      ],
-      "audioUrl": "",
-      "audioDuration": 0
-    },
-    {
-      "title": "Question 6",
-      "questionStart": 6,
-      "questionEnd": 6,
       "part": 1,
       "transcriptFull": "(A) There's a fire burning in a fireplace.\n(B) There's a guitar beside a fireplace.\n(C) Some cables have been left on the ground in a pile.\n(D) A television is being packed into a box.",
       "sentences": [
@@ -546,10 +359,197 @@
       "correctOption": null,
       "explanation": "",
       "audioFiles": [
+        "E24-T04-04.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q4-4.mp3",
+      "audioDuration": 26.565689
+    },
+    {
+      "title": "Question 5",
+      "questionStart": 5,
+      "questionEnd": 5,
+      "part": 1,
+      "transcriptFull": "(A) Some people are riding bicycles through a field.\n(B) Some people are moving a picnic table.\n(C) There are some mountains in the distance.\n(D) A bicycle has fallen over on the ground.",
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "speaker": null,
+          "content": "Some people are riding bicycles through a field.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "A",
+          "blanks": [
+            {
+              "position": 3,
+              "answer": "riding",
+              "hint": "r_____"
+            },
+            {
+              "position": 4,
+              "answer": "bicycles",
+              "hint": "b_______"
+            }
+          ]
+        },
+        {
+          "orderIndex": 1,
+          "speaker": null,
+          "content": "Some people are moving a picnic table.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "B",
+          "blanks": [
+            {
+              "position": 3,
+              "answer": "moving",
+              "hint": "m_____"
+            },
+            {
+              "position": 5,
+              "answer": "picnic",
+              "hint": "p_____"
+            }
+          ]
+        },
+        {
+          "orderIndex": 2,
+          "speaker": null,
+          "content": "There are some mountains in the distance.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "C",
+          "blanks": [
+            {
+              "position": 3,
+              "answer": "mountains",
+              "hint": "m________"
+            }
+          ]
+        },
+        {
+          "orderIndex": 3,
+          "speaker": null,
+          "content": "A bicycle has fallen over on the ground.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "D",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "bicycle",
+              "hint": "b______"
+            },
+            {
+              "position": 3,
+              "answer": "fallen",
+              "hint": "f_____"
+            }
+          ]
+        }
+      ],
+      "correctOption": null,
+      "explanation": "",
+      "audioFiles": [
+        "E24-T04-05.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q5-5.mp3",
+      "audioDuration": 28.911313
+    },
+    {
+      "title": "Question 6",
+      "questionStart": 6,
+      "questionEnd": 6,
+      "part": 1,
+      "transcriptFull": "(A) Some couches have been pushed against a wall.\n(B) Some lights have been hung from the ceiling.\n(C) Some cushions have been stacked on the floor.\n(D) Some flowers have been arranged in a vase.",
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "speaker": null,
+          "content": "Some couches have been pushed against a wall.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "A",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "couches",
+              "hint": "c______"
+            },
+            {
+              "position": 4,
+              "answer": "pushed",
+              "hint": "p_____"
+            }
+          ]
+        },
+        {
+          "orderIndex": 1,
+          "speaker": null,
+          "content": "Some lights have been hung from the ceiling.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "B",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "lights",
+              "hint": "l_____"
+            },
+            {
+              "position": 4,
+              "answer": "hung",
+              "hint": "h___"
+            }
+          ]
+        },
+        {
+          "orderIndex": 2,
+          "speaker": null,
+          "content": "Some cushions have been stacked on the floor.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "C",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "cushions",
+              "hint": "c_______"
+            },
+            {
+              "position": 4,
+              "answer": "stacked",
+              "hint": "s______"
+            }
+          ]
+        },
+        {
+          "orderIndex": 3,
+          "speaker": null,
+          "content": "Some flowers have been arranged in a vase.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "D",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "flowers",
+              "hint": "f______"
+            },
+            {
+              "position": 4,
+              "answer": "arranged",
+              "hint": "a_______"
+            }
+          ]
+        }
+      ],
+      "correctOption": null,
+      "explanation": "",
+      "audioFiles": [
         "E24-T04-06.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q6-6.mp3",
+      "audioDuration": 27.634256
     },
     {
       "title": "Question 7",
@@ -622,8 +622,8 @@
       "audioFiles": [
         "E24-T04-07.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q7-7.mp3",
+      "audioDuration": 27.243313
     },
     {
       "title": "Question 8",
@@ -703,8 +703,8 @@
       "audioFiles": [
         "E24-T04-08.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q8-8.mp3",
+      "audioDuration": 19.919756
     },
     {
       "title": "Question 9",
@@ -777,8 +777,8 @@
       "audioFiles": [
         "E24-T04-09.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q9-9.mp3",
+      "audioDuration": 20.206438
     },
     {
       "title": "Question 10",
@@ -846,8 +846,8 @@
       "audioFiles": [
         "E24-T04-10.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q10-10.mp3",
+      "audioDuration": 20.128256
     },
     {
       "title": "Question 11",
@@ -937,8 +937,8 @@
       "audioFiles": [
         "E24-T04-11.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q11-11.mp3",
+      "audioDuration": 20.258567
     },
     {
       "title": "Question 12",
@@ -1017,8 +1017,8 @@
       "audioFiles": [
         "E24-T04-12.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q12-12.mp3",
+      "audioDuration": 20.180378
     },
     {
       "title": "Question 13",
@@ -1091,8 +1091,8 @@
       "audioFiles": [
         "E24-T04-13.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q13-13.mp3",
+      "audioDuration": 20.910125
     },
     {
       "title": "Question 14",
@@ -1177,8 +1177,8 @@
       "audioFiles": [
         "E24-T04-14.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q14-14.mp3",
+      "audioDuration": 21.796256
     },
     {
       "title": "Question 15",
@@ -1263,8 +1263,8 @@
       "audioFiles": [
         "E24-T04-15.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q15-15.mp3",
+      "audioDuration": 19.789438
     },
     {
       "title": "Question 16",
@@ -1343,8 +1343,8 @@
       "audioFiles": [
         "E24-T04-16.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q16-16.mp3",
+      "audioDuration": 19.971878
     },
     {
       "title": "Question 17",
@@ -1413,8 +1413,8 @@
       "audioFiles": [
         "E24-T04-17.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q17-17.mp3",
+      "audioDuration": 22.421756
     },
     {
       "title": "Question 18",
@@ -1499,8 +1499,8 @@
       "audioFiles": [
         "E24-T04-18.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q18-18.mp3",
+      "audioDuration": 19.346378
     },
     {
       "title": "Question 19",
@@ -1595,8 +1595,8 @@
       "audioFiles": [
         "E24-T04-19.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q19-19.mp3",
+      "audioDuration": 21.770189
     },
     {
       "title": "Question 20",
@@ -1671,8 +1671,8 @@
       "audioFiles": [
         "E24-T04-20.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q20-20.mp3",
+      "audioDuration": 22.135067
     },
     {
       "title": "Question 21",
@@ -1756,8 +1756,8 @@
       "audioFiles": [
         "E24-T04-21.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q21-21.mp3",
+      "audioDuration": 18.9815
     },
     {
       "title": "Question 22",
@@ -1825,8 +1825,8 @@
       "audioFiles": [
         "E24-T04-22.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q22-22.mp3",
+      "audioDuration": 22.213256
     },
     {
       "title": "Question 23",
@@ -1906,8 +1906,8 @@
       "audioFiles": [
         "E24-T04-23.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q23-23.mp3",
+      "audioDuration": 20.206438
     },
     {
       "title": "Question 24",
@@ -1981,8 +1981,8 @@
       "audioFiles": [
         "E24-T04-24.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q24-24.mp3",
+      "audioDuration": 20.910125
     },
     {
       "title": "Question 25",
@@ -2067,15 +2067,15 @@
       "audioFiles": [
         "E24-T04-25.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q25-25.mp3",
+      "audioDuration": 19.8155
     },
     {
       "title": "Question 26",
       "questionStart": 26,
       "questionEnd": 26,
       "part": 2,
-      "transcriptFull": "When are they going to decide who to hire?\n(A) A much higher salary.\n(B) A lot of good rÃ©sumÃ©s have come in.\n(C) In the building across the street.",
+      "transcriptFull": "When are they going to decide who to hire?\n(A) A much higher salary.\n(B) A lot of good résumés have come in.\n(C) In the building across the street.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -2115,7 +2115,7 @@
         {
           "orderIndex": 2,
           "speaker": null,
-          "content": "A lot of good rÃ©sumÃ©s have come in.",
+          "content": "A lot of good résumés have come in.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": "B",
@@ -2153,8 +2153,8 @@
       "audioFiles": [
         "E24-T04-26.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q26-26.mp3",
+      "audioDuration": 21.144689
     },
     {
       "title": "Question 27",
@@ -2228,8 +2228,8 @@
       "audioFiles": [
         "E24-T04-27.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q27-27.mp3",
+      "audioDuration": 20.701625
     },
     {
       "title": "Question 28",
@@ -2309,8 +2309,8 @@
       "audioFiles": [
         "E24-T04-28.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q28-28.mp3",
+      "audioDuration": 20.310689
     },
     {
       "title": "Question 29",
@@ -2384,8 +2384,8 @@
       "audioFiles": [
         "E24-T04-29.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q29-29.mp3",
+      "audioDuration": 21.014378
     },
     {
       "title": "Question 30",
@@ -2458,8 +2458,8 @@
       "audioFiles": [
         "E24-T04-30.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q30-30.mp3",
+      "audioDuration": 20.858
     },
     {
       "title": "Question 31",
@@ -2549,15 +2549,15 @@
       "audioFiles": [
         "E24-T04-31.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q31-31.mp3",
+      "audioDuration": 19.424567
     },
     {
-      "title": "Questions 32â€“34",
+      "title": "Questions 32–34",
       "questionStart": 32,
       "questionEnd": 34,
       "part": 3,
-      "transcriptFull": "WOMAN: Excuse me, but wasn't the ferry to Osaka supposed to leave at ten o'clock?\nMAN: Yes, but the port authority has suspended all marine traffic due to rough water.\nWOMAN: I see.\nWOMAN: Does that mean ferries are canceled all day?\nMAN: This storm is expected to pass in about three hours.\nMAN: But operations should return to normal after that.\nMAN: Your ticket will be good until midnight.\nWOMAN: OK.\nWOMAN: Then I guess I'll grab some lunch nearby.\nMAN: I highly recommend Mary's CafÃ© for sandwiches and soup.",
+      "transcriptFull": "WOMAN: Excuse me, but wasn't the ferry to Osaka supposed to leave at ten o'clock?\nMAN: Yes, but the port authority has suspended all marine traffic due to rough water.\nWOMAN: I see.\nWOMAN: Does that mean ferries are canceled all day?\nMAN: This storm is expected to pass in about three hours.\nMAN: But operations should return to normal after that.\nMAN: Your ticket will be good until midnight.\nWOMAN: OK.\nWOMAN: Then I guess I'll grab some lunch nearby.\nMAN: I highly recommend Mary's Café for sandwiches and soup.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -2715,7 +2715,7 @@
         {
           "orderIndex": 9,
           "speaker": "MAN",
-          "content": "I highly recommend Mary's CafÃ© for sandwiches and soup.",
+          "content": "I highly recommend Mary's Café for sandwiches and soup.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -2738,11 +2738,11 @@
       "audioFiles": [
         "E24-T04-32-34.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q32-34.mp3",
+      "audioDuration": 22.812689
     },
     {
-      "title": "Questions 35â€“37",
+      "title": "Questions 35–37",
       "questionStart": 35,
       "questionEnd": 37,
       "part": 3,
@@ -2876,11 +2876,11 @@
       "audioFiles": [
         "E24-T04-35-37.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q35-37.mp3",
+      "audioDuration": 74.572813
     },
     {
-      "title": "Questions 38â€“40",
+      "title": "Questions 38–40",
       "questionStart": 38,
       "questionEnd": 40,
       "part": 3,
@@ -3061,11 +3061,11 @@
       "audioFiles": [
         "E24-T04-38-40.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q38-40.mp3",
+      "audioDuration": 67.301378
     },
     {
-      "title": "Questions 41â€“43",
+      "title": "Questions 41–43",
       "questionStart": 41,
       "questionEnd": 43,
       "part": 3,
@@ -3311,11 +3311,11 @@
       "audioFiles": [
         "E24-T04-41-43.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q41-43.mp3",
+      "audioDuration": 77.830625
     },
     {
-      "title": "Questions 44â€“46",
+      "title": "Questions 44–46",
       "questionStart": 44,
       "questionEnd": 46,
       "part": 3,
@@ -3508,11 +3508,11 @@
       "audioFiles": [
         "E24-T04-44-46.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q44-46.mp3",
+      "audioDuration": 79.8635
     },
     {
-      "title": "Questions 47â€“49",
+      "title": "Questions 47–49",
       "questionStart": 47,
       "questionEnd": 49,
       "part": 3,
@@ -3711,11 +3711,11 @@
       "audioFiles": [
         "E24-T04-47-49.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q47-49.mp3",
+      "audioDuration": 76.292938
     },
     {
-      "title": "Questions 50â€“52",
+      "title": "Questions 50–52",
       "questionStart": 50,
       "questionEnd": 52,
       "part": 3,
@@ -3998,11 +3998,11 @@
       "audioFiles": [
         "E24-T04-50-52.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q50-52.mp3",
+      "audioDuration": 81.9485
     },
     {
-      "title": "Questions 53â€“55",
+      "title": "Questions 53–55",
       "questionStart": 53,
       "questionEnd": 55,
       "part": 3,
@@ -4239,11 +4239,11 @@
       "audioFiles": [
         "E24-T04-53-55.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q53-55.mp3",
+      "audioDuration": 84.111689
     },
     {
-      "title": "Questions 56â€“58",
+      "title": "Questions 56–58",
       "questionStart": 56,
       "questionEnd": 58,
       "part": 3,
@@ -4450,11 +4450,11 @@
       "audioFiles": [
         "E24-T04-56-58.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q56-58.mp3",
+      "audioDuration": 84.111689
     },
     {
-      "title": "Questions 59â€“61",
+      "title": "Questions 59–61",
       "questionStart": 59,
       "questionEnd": 61,
       "part": 3,
@@ -4611,11 +4611,11 @@
       "audioFiles": [
         "E24-T04-59-61.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q59-61.mp3",
+      "audioDuration": 80.410813
     },
     {
-      "title": "Questions 62â€“64",
+      "title": "Questions 62–64",
       "questionStart": 62,
       "questionEnd": 64,
       "part": 3,
@@ -4836,11 +4836,11 @@
       "audioFiles": [
         "E24-T04-62-64.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q62-64.mp3",
+      "audioDuration": 70.559189
     },
     {
-      "title": "Questions 65â€“67",
+      "title": "Questions 65–67",
       "questionStart": 65,
       "questionEnd": 67,
       "part": 3,
@@ -5094,11 +5094,11 @@
       "audioFiles": [
         "E24-T04-65-67.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q65-67.mp3",
+      "audioDuration": 90.2885
     },
     {
-      "title": "Questions 68â€“70",
+      "title": "Questions 68–70",
       "questionStart": 68,
       "questionEnd": 70,
       "part": 3,
@@ -5310,11 +5310,11 @@
       "audioFiles": [
         "E24-T04-68-70.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q68-70.mp3",
+      "audioDuration": 90.914
     },
     {
-      "title": "Questions 71â€“73",
+      "title": "Questions 71–73",
       "questionStart": 71,
       "questionEnd": 73,
       "part": 4,
@@ -5415,15 +5415,15 @@
       "audioFiles": [
         "E24-T04-71-73.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q71-73.mp3",
+      "audioDuration": 89.4545
     },
     {
-      "title": "Questions 74â€“76",
+      "title": "Questions 74–76",
       "questionStart": 74,
       "questionEnd": 76,
       "part": 4,
-      "transcriptFull": "\"This weekend, we will be installing new security software on our internal servers.\nThis is a bit more complex than a routine updateâ€”we need an extra layer of protection for our customers' personal data.\nTherefore, we are all being asked to help prepare for this event.\nBefore leaving the office on Friday, we need to shut down our computers to allow the software patch to work.",
+      "transcriptFull": "\"This weekend, we will be installing new security software on our internal servers.\nThis is a bit more complex than a routine update—we need an extra layer of protection for our customers' personal data.\nTherefore, we are all being asked to help prepare for this event.\nBefore leaving the office on Friday, we need to shut down our computers to allow the software patch to work.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -5448,7 +5448,7 @@
         {
           "orderIndex": 1,
           "speaker": null,
-          "content": "This is a bit more complex than a routine updateâ€”we need an extra layer of protection for our customers' personal data.",
+          "content": "This is a bit more complex than a routine update—we need an extra layer of protection for our customers' personal data.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5511,20 +5511,20 @@
       "audioFiles": [
         "E24-T04-74-76.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q74-76.mp3",
+      "audioDuration": 79.290125
     },
     {
-      "title": "Questions 77â€“79",
+      "title": "Questions 77–79",
       "questionStart": 77,
       "questionEnd": 79,
       "part": 4,
-      "transcriptFull": "\"Iâ€™d like to remind everyone that starting Monday, the main entrance to the office building will be inaccessible while the road is being widened and repaved.\nThis also means our regular parking lot will be unavailable.\nBut don't worryâ€”there are plenty of spaces in the parking garage next to the Jay Building.\nFor your convenience, the company will provide a van service running every 15 minutes until the project is complete.\nM.",
+      "transcriptFull": "\"I’d like to remind everyone that starting Monday, the main entrance to the office building will be inaccessible while the road is being widened and repaved.\nThis also means our regular parking lot will be unavailable.\nBut don't worry—there are plenty of spaces in the parking garage next to the Jay Building.\nFor your convenience, the company will provide a van service running every 15 minutes until the project is complete.\nM.",
       "sentences": [
         {
           "orderIndex": 0,
           "speaker": null,
-          "content": "\"Iâ€™d like to remind everyone that starting Monday, the main entrance to the office building will be inaccessible while the road is being widened and repaved.",
+          "content": "\"I’d like to remind everyone that starting Monday, the main entrance to the office building will be inaccessible while the road is being widened and repaved.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5564,7 +5564,7 @@
         {
           "orderIndex": 2,
           "speaker": null,
-          "content": "But don't worryâ€”there are plenty of spaces in the parking garage next to the Jay Building.",
+          "content": "But don't worry—there are plenty of spaces in the parking garage next to the Jay Building.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5616,15 +5616,15 @@
       "audioFiles": [
         "E24-T04-77-79.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q77-79.mp3",
+      "audioDuration": 74.390378
     },
     {
-      "title": "Questions 80â€“82",
+      "title": "Questions 80–82",
       "questionStart": 80,
       "questionEnd": 82,
       "part": 4,
-      "transcriptFull": "\"Hi Asako.\nI'm calling to follow up on your request for me to book a hotel for the clients visiting from India next month.\nYou wanted to stay at Maple Lodge, but they are fully booked that week.\nSo, Iâ€™ve looked into other hotels in the area and found one on Jefferson Avenue.\nIt's a bit far from our office, but it seems like a good place.\nThey also offer a free shuttle service that can transport our guests back and forth between the hotel and the office.",
+      "transcriptFull": "\"Hi Asako.\nI'm calling to follow up on your request for me to book a hotel for the clients visiting from India next month.\nYou wanted to stay at Maple Lodge, but they are fully booked that week.\nSo, I’ve looked into other hotels in the area and found one on Jefferson Avenue.\nIt's a bit far from our office, but it seems like a good place.\nThey also offer a free shuttle service that can transport our guests back and forth between the hotel and the office.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -5678,7 +5678,7 @@
         {
           "orderIndex": 3,
           "speaker": null,
-          "content": "So, Iâ€™ve looked into other hotels in the area and found one on Jefferson Avenue.",
+          "content": "So, I’ve looked into other hotels in the area and found one on Jefferson Avenue.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5741,11 +5741,11 @@
       "audioFiles": [
         "E24-T04-80-82.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q80-82.mp3",
+      "audioDuration": 81.427256
     },
     {
-      "title": "Questions 83â€“85",
+      "title": "Questions 83–85",
       "questionStart": 83,
       "questionEnd": 85,
       "part": 4,
@@ -5857,11 +5857,11 @@
       "audioFiles": [
         "E24-T04-83-85.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q83-85.mp3",
+      "audioDuration": 74.624938
     },
     {
-      "title": "Questions 86â€“88",
+      "title": "Questions 86–88",
       "questionStart": 86,
       "questionEnd": 88,
       "part": 4,
@@ -5973,11 +5973,11 @@
       "audioFiles": [
         "E24-T04-86-88.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q86-88.mp3",
+      "audioDuration": 85.571189
     },
     {
-      "title": "Questions 89â€“91",
+      "title": "Questions 89–91",
       "questionStart": 89,
       "questionEnd": 91,
       "part": 4,
@@ -6069,11 +6069,11 @@
       "audioFiles": [
         "E24-T04-89-91.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q89-91.mp3",
+      "audioDuration": 73.973378
     },
     {
-      "title": "Questions 92â€“94",
+      "title": "Questions 92–94",
       "questionStart": 92,
       "questionEnd": 94,
       "part": 4,
@@ -6165,11 +6165,11 @@
       "audioFiles": [
         "E24-T04-92-94.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q92-94.mp3",
+      "audioDuration": 79.8635
     },
     {
-      "title": "Questions 95â€“97",
+      "title": "Questions 95–97",
       "questionStart": 95,
       "questionEnd": 97,
       "part": 4,
@@ -6241,11 +6241,11 @@
       "audioFiles": [
         "E24-T04-95-97.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q95-97.mp3",
+      "audioDuration": 83.1995
     },
     {
-      "title": "Questions 98â€“100",
+      "title": "Questions 98–100",
       "questionStart": 98,
       "questionEnd": 100,
       "part": 4,
@@ -6337,8 +6337,8 @@
       "audioFiles": [
         "E24-T04-98-100.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-4/q98-100.mp3",
+      "audioDuration": 92.764438
     }
   ]
 }

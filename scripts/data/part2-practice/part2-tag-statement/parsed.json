@@ -1,5 +1,5 @@
-{
-  "testName": "Câu hỏi đuôi – Câu trần thuật",
+﻿{
+  "testName": "CÃ¢u há»i Ä‘uÃ´i â€“ CÃ¢u tráº§n thuáº­t",
   "testSlug": "part2-tag-statement",
   "orderIndex": 0,
   "examCode": "P2",
@@ -530,7 +530,7 @@
       "questionStart": 11,
       "questionEnd": 11,
       "part": 2,
-      "transcriptFull": "There were more people at the trade show this year, weren't there?\n(A) An additional session\n(B) No. I won’t be able to come.\n(C) Yes, it was a big success.",
+      "transcriptFull": "There were more people at the trade show this year, weren't there?\n(A) An additional session\n(B) No. I wonâ€™t be able to come.\n(C) Yes, it was a big success.",
       "correctOption": "C",
       "explanation": "",
       "audioFiles": [
@@ -559,7 +559,7 @@
         },
         {
           "orderIndex": 2,
-          "content": "No. I won’t be able to come.",
+          "content": "No. I wonâ€™t be able to come.",
           "speaker": null,
           "optionLabel": "B",
           "startTime": 0,
@@ -946,7 +946,7 @@
       "questionStart": 19,
       "questionEnd": 19,
       "part": 2,
-      "transcriptFull": "We can have the replacement parts by Firday, right?\n(A) Put it on the lowest shelf.\n(B) Yes — but shipping costs more.\n(C) No, at the next traffic light.",
+      "transcriptFull": "We can have the replacement parts by Firday, right?\n(A) Put it on the lowest shelf.\n(B) Yes â€” but shipping costs more.\n(C) No, at the next traffic light.",
       "correctOption": "B",
       "explanation": "",
       "audioFiles": [
@@ -975,7 +975,7 @@
         },
         {
           "orderIndex": 2,
-          "content": "Yes — but shipping costs more.",
+          "content": "Yes â€” but shipping costs more.",
           "speaker": null,
           "optionLabel": "B",
           "startTime": 0,

@@ -33,7 +33,7 @@ import { PrismaPg } from "@prisma/adapter-pg";
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
-const DATA_DIR       = "D:\\Compressed\\part 3-20260528T141919Z-3-001\\part 3";
+const DATA_DIR       = "D:\\Compressed\\part 3-20260531T025157Z-3-001\\part 3";
 const STORAGE_BUCKET = "audio";
 const SKIP_UPLOAD    = process.argv.includes("--skip-upload");
 

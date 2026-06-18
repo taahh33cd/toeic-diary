@@ -1,4 +1,4 @@
-﻿{
+{
   "testName": "EST 2024 Test 6",
   "testSlug": "ets-2024-test-6",
   "orderIndex": 6,
@@ -93,8 +93,8 @@
       "audioFiles": [
         "E24-T06-01.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q1-1.mp3",
+      "audioDuration": 25.314689
     },
     {
       "title": "Question 2",
@@ -184,8 +184,8 @@
       "audioFiles": [
         "E24-T06-02.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q2-2.mp3",
+      "audioDuration": 25.418938
     },
     {
       "title": "Question 3",
@@ -270,104 +270,13 @@
       "audioFiles": [
         "E24-T06-03.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q3-3.mp3",
+      "audioDuration": 24.611
     },
     {
       "title": "Question 4",
       "questionStart": 4,
       "questionEnd": 4,
-      "part": 1,
-      "transcriptFull": "(A) Some people are gathered on top of a building.\n(B) Some trees are blocking the entrance to a stairway.\n(C) A woman is taking some stairs to a lower level.\n(D) A woman is walking across a pedestrian bridge.",
-      "sentences": [
-        {
-          "orderIndex": 0,
-          "speaker": null,
-          "content": "Some people are gathered on top of a building.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "A",
-          "blanks": [
-            {
-              "position": 3,
-              "answer": "gathered",
-              "hint": "g_______"
-            }
-          ]
-        },
-        {
-          "orderIndex": 1,
-          "speaker": null,
-          "content": "Some trees are blocking the entrance to a stairway.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "B",
-          "blanks": [
-            {
-              "position": 3,
-              "answer": "blocking",
-              "hint": "b_______"
-            },
-            {
-              "position": 5,
-              "answer": "entrance",
-              "hint": "e_______"
-            }
-          ]
-        },
-        {
-          "orderIndex": 2,
-          "speaker": null,
-          "content": "A woman is taking some stairs to a lower level.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "C",
-          "blanks": [
-            {
-              "position": 3,
-              "answer": "taking",
-              "hint": "t_____"
-            },
-            {
-              "position": 8,
-              "answer": "lower",
-              "hint": "l____"
-            }
-          ]
-        },
-        {
-          "orderIndex": 3,
-          "speaker": null,
-          "content": "A woman is walking across a pedestrian bridge.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "D",
-          "blanks": [
-            {
-              "position": 3,
-              "answer": "walking",
-              "hint": "w______"
-            },
-            {
-              "position": 6,
-              "answer": "pedestrian",
-              "hint": "p_________"
-            }
-          ]
-        }
-      ],
-      "correctOption": null,
-      "explanation": "",
-      "audioFiles": [
-        "E24-T06-04.mp3"
-      ],
-      "audioUrl": "",
-      "audioDuration": 0
-    },
-    {
-      "title": "Question 5",
-      "questionStart": 5,
-      "questionEnd": 5,
       "part": 1,
       "transcriptFull": "(A) Some tiles are being installed on a roof.\n(B) An outdoor dining area is unoccupied.\n(C) Flowers have been placed on tables.\n(D) Some chairs have been arranged around a fountain.",
       "sentences": [
@@ -450,10 +359,101 @@
       "correctOption": null,
       "explanation": "",
       "audioFiles": [
+        "E24-T06-04.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q4-4.mp3",
+      "audioDuration": 27.295438
+    },
+    {
+      "title": "Question 5",
+      "questionStart": 5,
+      "questionEnd": 5,
+      "part": 1,
+      "transcriptFull": "(A) Some people are gathered on top of a building.\n(B) Some trees are blocking the entrance to a stairway.\n(C) A woman is taking some stairs to a lower level.\n(D) A woman is walking across a pedestrian bridge.",
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "speaker": null,
+          "content": "Some people are gathered on top of a building.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "A",
+          "blanks": [
+            {
+              "position": 3,
+              "answer": "gathered",
+              "hint": "g_______"
+            }
+          ]
+        },
+        {
+          "orderIndex": 1,
+          "speaker": null,
+          "content": "Some trees are blocking the entrance to a stairway.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "B",
+          "blanks": [
+            {
+              "position": 3,
+              "answer": "blocking",
+              "hint": "b_______"
+            },
+            {
+              "position": 5,
+              "answer": "entrance",
+              "hint": "e_______"
+            }
+          ]
+        },
+        {
+          "orderIndex": 2,
+          "speaker": null,
+          "content": "A woman is taking some stairs to a lower level.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "C",
+          "blanks": [
+            {
+              "position": 3,
+              "answer": "taking",
+              "hint": "t_____"
+            },
+            {
+              "position": 8,
+              "answer": "lower",
+              "hint": "l____"
+            }
+          ]
+        },
+        {
+          "orderIndex": 3,
+          "speaker": null,
+          "content": "A woman is walking across a pedestrian bridge.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "D",
+          "blanks": [
+            {
+              "position": 3,
+              "answer": "walking",
+              "hint": "w______"
+            },
+            {
+              "position": 6,
+              "answer": "pedestrian",
+              "hint": "p_________"
+            }
+          ]
+        }
+      ],
+      "correctOption": null,
+      "explanation": "",
+      "audioFiles": [
         "E24-T06-05.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q5-5.mp3",
+      "audioDuration": 28.494313
     },
     {
       "title": "Question 6",
@@ -548,8 +548,8 @@
       "audioFiles": [
         "E24-T06-06.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q6-6.mp3",
+      "audioDuration": 27.712438
     },
     {
       "title": "Question 7",
@@ -633,8 +633,8 @@
       "audioFiles": [
         "E24-T06-07.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q7-7.mp3",
+      "audioDuration": 20.362813
     },
     {
       "title": "Question 8",
@@ -714,15 +714,15 @@
       "audioFiles": [
         "E24-T06-08.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q8-8.mp3",
+      "audioDuration": 19.659125
     },
     {
       "title": "Question 9",
       "questionStart": 9,
       "questionEnd": 9,
       "part": 2,
-      "transcriptFull": "What's the best way to contact you?\n(A) On my mobile phone.\n(B) No, I have to wear glasses.\n(C) This rÃ©sumÃ© is better.",
+      "transcriptFull": "What's the best way to contact you?\n(A) On my mobile phone.\n(B) No, I have to wear glasses.\n(C) This résumé is better.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -777,7 +777,7 @@
         {
           "orderIndex": 3,
           "speaker": null,
-          "content": "This rÃ©sumÃ© is better.",
+          "content": "This résumé is better.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": "C",
@@ -795,8 +795,8 @@
       "audioFiles": [
         "E24-T06-09.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q9-9.mp3",
+      "audioDuration": 19.059689
     },
     {
       "title": "Question 10",
@@ -876,8 +876,8 @@
       "audioFiles": [
         "E24-T06-10.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q10-10.mp3",
+      "audioDuration": 19.841567
     },
     {
       "title": "Question 11",
@@ -967,8 +967,8 @@
       "audioFiles": [
         "E24-T06-11.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q11-11.mp3",
+      "audioDuration": 20.962256
     },
     {
       "title": "Question 12",
@@ -1047,8 +1047,8 @@
       "audioFiles": [
         "E24-T06-12.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q12-12.mp3",
+      "audioDuration": 20.884067
     },
     {
       "title": "Question 13",
@@ -1133,8 +1133,8 @@
       "audioFiles": [
         "E24-T06-13.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q13-13.mp3",
+      "audioDuration": 19.554878
     },
     {
       "title": "Question 14",
@@ -1219,8 +1219,8 @@
       "audioFiles": [
         "E24-T06-14.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q14-14.mp3",
+      "audioDuration": 20.2325
     },
     {
       "title": "Question 15",
@@ -1299,8 +1299,8 @@
       "audioFiles": [
         "E24-T06-15.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q15-15.mp3",
+      "audioDuration": 20.284625
     },
     {
       "title": "Question 16",
@@ -1368,8 +1368,8 @@
       "audioFiles": [
         "E24-T06-16.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q16-16.mp3",
+      "audioDuration": 19.163938
     },
     {
       "title": "Question 17",
@@ -1438,8 +1438,8 @@
       "audioFiles": [
         "E24-T06-17.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q17-17.mp3",
+      "audioDuration": 19.580938
     },
     {
       "title": "Question 18",
@@ -1513,8 +1513,8 @@
       "audioFiles": [
         "E24-T06-18.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q18-18.mp3",
+      "audioDuration": 19.789438
     },
     {
       "title": "Question 19",
@@ -1594,8 +1594,8 @@
       "audioFiles": [
         "E24-T06-19.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q19-19.mp3",
+      "audioDuration": 19.580938
     },
     {
       "title": "Question 20",
@@ -1680,8 +1680,8 @@
       "audioFiles": [
         "E24-T06-20.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q20-20.mp3",
+      "audioDuration": 20.284625
     },
     {
       "title": "Question 21",
@@ -1755,8 +1755,8 @@
       "audioFiles": [
         "E24-T06-21.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q21-21.mp3",
+      "audioDuration": 19.971878
     },
     {
       "title": "Question 22",
@@ -1846,8 +1846,8 @@
       "audioFiles": [
         "E24-T06-22.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q22-22.mp3",
+      "audioDuration": 22.838756
     },
     {
       "title": "Question 23",
@@ -1932,8 +1932,8 @@
       "audioFiles": [
         "E24-T06-23.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q23-23.mp3",
+      "audioDuration": 22.343567
     },
     {
       "title": "Question 24",
@@ -2013,8 +2013,8 @@
       "audioFiles": [
         "E24-T06-24.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q24-24.mp3",
+      "audioDuration": 18.929378
     },
     {
       "title": "Question 25",
@@ -2099,8 +2099,8 @@
       "audioFiles": [
         "E24-T06-25.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q25-25.mp3",
+      "audioDuration": 21.248938
     },
     {
       "title": "Question 26",
@@ -2179,8 +2179,8 @@
       "audioFiles": [
         "E24-T06-26.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q26-26.mp3",
+      "audioDuration": 20.310689
     },
     {
       "title": "Question 27",
@@ -2265,8 +2265,8 @@
       "audioFiles": [
         "E24-T06-27.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q27-27.mp3",
+      "audioDuration": 20.336756
     },
     {
       "title": "Question 28",
@@ -2356,8 +2356,8 @@
       "audioFiles": [
         "E24-T06-28.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q28-28.mp3",
+      "audioDuration": 19.242125
     },
     {
       "title": "Question 29",
@@ -2452,8 +2452,8 @@
       "audioFiles": [
         "E24-T06-29.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q29-29.mp3",
+      "audioDuration": 20.831938
     },
     {
       "title": "Question 30",
@@ -2543,8 +2543,8 @@
       "audioFiles": [
         "E24-T06-30.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q30-30.mp3",
+      "audioDuration": 20.414938
     },
     {
       "title": "Question 31",
@@ -2634,15 +2634,15 @@
       "audioFiles": [
         "E24-T06-31.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q31-31.mp3",
+      "audioDuration": 22.473878
     },
     {
-      "title": "Questions 32â€“34",
+      "title": "Questions 32–34",
       "questionStart": 32,
       "questionEnd": 34,
       "part": 3,
-      "transcriptFull": "M-CN: The renovations we're planning for the theater are long overdue.\nW-BR: I'm glad we have time between productions so we can get the work done.\nM-CN: I agreeâ€”and even though it's great that our latest musical production has had such a successful run, we can all use the break.\nW-BR: Plus, it gives us time to focus on next month's fund-raiser.\nM-CN: Hopefully we'll raise enough money at that event to replace the old lighting system too.",
+      "transcriptFull": "M-CN: The renovations we're planning for the theater are long overdue.\nW-BR: I'm glad we have time between productions so we can get the work done.\nM-CN: I agree—and even though it's great that our latest musical production has had such a successful run, we can all use the break.\nW-BR: Plus, it gives us time to focus on next month's fund-raiser.\nM-CN: Hopefully we'll raise enough money at that event to replace the old lighting system too.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -2687,7 +2687,7 @@
         {
           "orderIndex": 2,
           "speaker": "M-CN",
-          "content": "I agreeâ€”and even though it's great that our latest musical production has had such a successful run, we can all use the break.",
+          "content": "I agree—and even though it's great that our latest musical production has had such a successful run, we can all use the break.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -2750,11 +2750,11 @@
       "audioFiles": [
         "E24-T06-32-34.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q32-34.mp3",
+      "audioDuration": 70.037938
     },
     {
-      "title": "Questions 35â€“37",
+      "title": "Questions 35–37",
       "questionStart": 35,
       "questionEnd": 37,
       "part": 3,
@@ -2988,11 +2988,11 @@
       "audioFiles": [
         "E24-T06-35-37.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q35-37.mp3",
+      "audioDuration": 83.981378
     },
     {
-      "title": "Questions 38â€“40",
+      "title": "Questions 38–40",
       "questionStart": 38,
       "questionEnd": 40,
       "part": 3,
@@ -3141,11 +3141,11 @@
       "audioFiles": [
         "E24-T06-38-40.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q38-40.mp3",
+      "audioDuration": 71.5235
     },
     {
-      "title": "Questions 41â€“43",
+      "title": "Questions 41–43",
       "questionStart": 41,
       "questionEnd": 43,
       "part": 3,
@@ -3326,11 +3326,11 @@
       "audioFiles": [
         "E24-T06-41-43.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q41-43.mp3",
+      "audioDuration": 76.736
     },
     {
-      "title": "Questions 44â€“46",
+      "title": "Questions 44–46",
       "questionStart": 44,
       "questionEnd": 46,
       "part": 3,
@@ -3466,11 +3466,11 @@
       "audioFiles": [
         "E24-T06-44-46.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q44-46.mp3",
+      "audioDuration": 74.598878
     },
     {
-      "title": "Questions 47â€“49",
+      "title": "Questions 47–49",
       "questionStart": 47,
       "questionEnd": 49,
       "part": 3,
@@ -3652,11 +3652,11 @@
       "audioFiles": [
         "E24-T06-47-49.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q47-49.mp3",
+      "audioDuration": 81.088438
     },
     {
-      "title": "Questions 50â€“52",
+      "title": "Questions 50–52",
       "questionStart": 50,
       "questionEnd": 52,
       "part": 3,
@@ -3869,11 +3869,11 @@
       "audioFiles": [
         "E24-T06-50-52.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q50-52.mp3",
+      "audioDuration": 79.4465
     },
     {
-      "title": "Questions 53â€“55",
+      "title": "Questions 53–55",
       "questionStart": 53,
       "questionEnd": 55,
       "part": 3,
@@ -4064,11 +4064,11 @@
       "audioFiles": [
         "E24-T06-53-55.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q53-55.mp3",
+      "audioDuration": 81.896378
     },
     {
-      "title": "Questions 56â€“58",
+      "title": "Questions 56–58",
       "questionStart": 56,
       "questionEnd": 58,
       "part": 3,
@@ -4202,15 +4202,15 @@
       "audioFiles": [
         "E24-T06-56-58.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q56-58.mp3",
+      "audioDuration": 75.015878
     },
     {
-      "title": "Questions 59â€“61",
+      "title": "Questions 59–61",
       "questionStart": 59,
       "questionEnd": 61,
       "part": 3,
-      "transcriptFull": "M-AU: Kriti and Melissa, I reviewed the results of the soil tests yesterday, and most of the sports fields we manage have healthy soil.\nM-AU: But unfortunately, the baseball field on Smith Drive has elevated levels of potassium.\nW-AM: The grass on that field is so brown and weedy.\nW-AM: Now we know why.\nW-BR: We'll need to order some special fertilizer to put on it.\nW-BR: Do you think we need approval to do that?\nM-AU: Yesâ€”since it's an unforeseen expense, it has to be approved by the acquisitions department.\nM-AU: Melissa, do you have time to prepare a cost estimate?\nW-BR: Sure.\nW-BR: It won't take long.\nW-BR: I'll send it by lunchtime, and I'll cc you both on the e-mail.",
+      "transcriptFull": "M-AU: Kriti and Melissa, I reviewed the results of the soil tests yesterday, and most of the sports fields we manage have healthy soil.\nM-AU: But unfortunately, the baseball field on Smith Drive has elevated levels of potassium.\nW-AM: The grass on that field is so brown and weedy.\nW-AM: Now we know why.\nW-BR: We'll need to order some special fertilizer to put on it.\nW-BR: Do you think we need approval to do that?\nM-AU: Yes—since it's an unforeseen expense, it has to be approved by the acquisitions department.\nM-AU: Melissa, do you have time to prepare a cost estimate?\nW-BR: Sure.\nW-BR: It won't take long.\nW-BR: I'll send it by lunchtime, and I'll cc you both on the e-mail.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -4319,7 +4319,7 @@
         {
           "orderIndex": 6,
           "speaker": "M-AU",
-          "content": "Yesâ€”since it's an unforeseen expense, it has to be approved by the acquisitions department.",
+          "content": "Yes—since it's an unforeseen expense, it has to be approved by the acquisitions department.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4406,11 +4406,11 @@
       "audioFiles": [
         "E24-T06-59-61.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q59-61.mp3",
+      "audioDuration": 86.639756
     },
     {
-      "title": "Questions 62â€“64",
+      "title": "Questions 62–64",
       "questionStart": 62,
       "questionEnd": 64,
       "part": 3,
@@ -4560,11 +4560,11 @@
       "audioFiles": [
         "E24-T06-62-64.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q62-64.mp3",
+      "audioDuration": 85.753625
     },
     {
-      "title": "Questions 65â€“67",
+      "title": "Questions 65–67",
       "questionStart": 65,
       "questionEnd": 67,
       "part": 3,
@@ -4772,11 +4772,11 @@
       "audioFiles": [
         "E24-T06-65-67.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q65-67.mp3",
+      "audioDuration": 87.551938
     },
     {
-      "title": "Questions 68â€“70",
+      "title": "Questions 68–70",
       "questionStart": 68,
       "questionEnd": 70,
       "part": 3,
@@ -4921,20 +4921,20 @@
       "audioFiles": [
         "E24-T06-68-70.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q68-70.mp3",
+      "audioDuration": 85.545125
     },
     {
-      "title": "Questions 71â€“73",
+      "title": "Questions 71–73",
       "questionStart": 71,
       "questionEnd": 73,
       "part": 4,
-      "transcriptFull": "Hi, everyoneâ€”big news.\nOur clinic is getting a check-in kiosk.\nWhat this means is that patients will be able to check themselves in to their medical appointments by clicking through some buttons in the kiosk.\nYou will no longer have to do it for them.\nI know all of you have been very busy answering phones, scheduling appointments, and checking patients in, so hopefully, this helps to make your work easier.\nWe'll have a very short training session next Tuesday on how the check-in kiosk works.",
+      "transcriptFull": "Hi, everyone—big news.\nOur clinic is getting a check-in kiosk.\nWhat this means is that patients will be able to check themselves in to their medical appointments by clicking through some buttons in the kiosk.\nYou will no longer have to do it for them.\nI know all of you have been very busy answering phones, scheduling appointments, and checking patients in, so hopefully, this helps to make your work easier.\nWe'll have a very short training session next Tuesday on how the check-in kiosk works.",
       "sentences": [
         {
           "orderIndex": 0,
           "speaker": null,
-          "content": "Hi, everyoneâ€”big news.",
+          "content": "Hi, everyone—big news.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5047,11 +5047,11 @@
       "audioFiles": [
         "E24-T06-71-73.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q71-73.mp3",
+      "audioDuration": 75.041938
     },
     {
-      "title": "Questions 74â€“76",
+      "title": "Questions 74–76",
       "questionStart": 74,
       "questionEnd": 76,
       "part": 4,
@@ -5163,11 +5163,11 @@
       "audioFiles": [
         "E24-T06-74-76.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q74-76.mp3",
+      "audioDuration": 71.1065
     },
     {
-      "title": "Questions 77â€“79",
+      "title": "Questions 77–79",
       "questionStart": 77,
       "questionEnd": 79,
       "part": 4,
@@ -5297,11 +5297,11 @@
       "audioFiles": [
         "E24-T06-77-79.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q77-79.mp3",
+      "audioDuration": 79.602878
     },
     {
-      "title": "Questions 80â€“82",
+      "title": "Questions 80–82",
       "questionStart": 80,
       "questionEnd": 82,
       "part": 4,
@@ -5453,15 +5453,15 @@
       "audioFiles": [
         "E24-T06-80-82.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q80-82.mp3",
+      "audioDuration": 83.486189
     },
     {
-      "title": "Questions 83â€“85",
+      "title": "Questions 83–85",
       "questionStart": 83,
       "questionEnd": 85,
       "part": 4,
-      "transcriptFull": "Hi.\nThis is So-Jinâ€”in Apartment 2A.\nI just moved into the complex last month.\nI'm calling about a problem with my kitchen sink.\nThe drain is completely clogged, so the water won't go down.\nI've tried a few different drain cleaning products, but they didn't help.\nI think I've done all I can do.\nI'm at work now, but I'll be home this afternoon.\nCould you call me back, so we can arrange a time to meet there?\nThanks.",
+      "transcriptFull": "Hi.\nThis is So-Jin—in Apartment 2A.\nI just moved into the complex last month.\nI'm calling about a problem with my kitchen sink.\nThe drain is completely clogged, so the water won't go down.\nI've tried a few different drain cleaning products, but they didn't help.\nI think I've done all I can do.\nI'm at work now, but I'll be home this afternoon.\nCould you call me back, so we can arrange a time to meet there?\nThanks.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -5475,7 +5475,7 @@
         {
           "orderIndex": 1,
           "speaker": null,
-          "content": "This is So-Jinâ€”in Apartment 2A.",
+          "content": "This is So-Jin—in Apartment 2A.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5636,11 +5636,11 @@
       "audioFiles": [
         "E24-T06-83-85.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q83-85.mp3",
+      "audioDuration": 73.243625
     },
     {
-      "title": "Questions 86â€“88",
+      "title": "Questions 86–88",
       "questionStart": 86,
       "questionEnd": 88,
       "part": 4,
@@ -5792,11 +5792,11 @@
       "audioFiles": [
         "E24-T06-86-88.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q86-88.mp3",
+      "audioDuration": 82.183067
     },
     {
-      "title": "Questions 89â€“91",
+      "title": "Questions 89–91",
       "questionStart": 89,
       "questionEnd": 91,
       "part": 4,
@@ -5968,11 +5968,11 @@
       "audioFiles": [
         "E24-T06-89-91.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q89-91.mp3",
+      "audioDuration": 85.232378
     },
     {
-      "title": "Questions 92â€“94",
+      "title": "Questions 92–94",
       "questionStart": 92,
       "questionEnd": 94,
       "part": 4,
@@ -6139,11 +6139,11 @@
       "audioFiles": [
         "E24-T06-92-94.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q92-94.mp3",
+      "audioDuration": 93.442067
     },
     {
-      "title": "Questions 95â€“97",
+      "title": "Questions 95–97",
       "questionStart": 95,
       "questionEnd": 97,
       "part": 4,
@@ -6319,11 +6319,11 @@
       "audioFiles": [
         "E24-T06-95-97.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q95-97.mp3",
+      "audioDuration": 87.968938
     },
     {
-      "title": "Questions 98â€“100",
+      "title": "Questions 98–100",
       "questionStart": 98,
       "questionEnd": 100,
       "part": 4,
@@ -6450,8 +6450,8 @@
       "audioFiles": [
         "E24-T06-98-100.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-6/q98-100.mp3",
+      "audioDuration": 84.085625
     }
   ]
 }

@@ -1,0 +1,1143 @@
+[
+  {
+    "_passage": "Bài 1 — A. E-MAIL - LETTER — Notice to All Staff",
+    "orderIndex": 1,
+    "type": "single",
+    "approved": false,
+    "vocab": [
+      {
+        "question": "Từ 'procedure' có nghĩa là gì?",
+        "options": [
+          "văn phòng phẩm",
+          "quảng bá",
+          "quy trình",
+          "ở nơi khác"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"procedure\" = quy trình"
+      },
+      {
+        "question": "Từ 'submit' có nghĩa là gì?",
+        "options": [
+          "thông tin xác thực",
+          "liên hệ",
+          "đặt chỗ",
+          "nộp / đệ trình"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"submit\" = nộp / đệ trình"
+      },
+      {
+        "question": "Từ 'portal' có nghĩa là gì?",
+        "options": [
+          "cổng thông tin trực tuyến",
+          "quy trình",
+          "liên hệ",
+          "ở nơi khác"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"portal\" = cổng thông tin trực tuyến"
+      },
+      {
+        "question": "Từ 'credential' có nghĩa là gì?",
+        "options": [
+          "liên hệ",
+          "quảng bá",
+          "quy trình",
+          "thông tin xác thực (tên đăng nhập, mật khẩu)"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"credential\" = thông tin xác thực"
+      },
+      {
+        "question": "Từ 'elsewhere' có nghĩa là gì?",
+        "options": [
+          "cổng thông tin trực tuyến",
+          "nộp / đệ trình",
+          "ở nơi khác",
+          "thông tin xác thực"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"elsewhere\" = ở nơi khác"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"new online portal\"",
+        "options": [
+          "Speak with the IT department",
+          "login credentials",
+          "paper forms",
+          "a change in a procedure"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"new online portal\" = \"a change in a procedure\" — cả hai đều chỉ phương thức MỚI để thực hiện công việc"
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"contact the IT department\"",
+        "options": [
+          "Wait until next Monday",
+          "a change in a procedure",
+          "Submit a paper form",
+          "Speak with the IT department"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"contact the IT department\" = \"Speak with the IT department\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Bắt đầu từ thứ Hai tới, tất cả các yêu cầu về văn phòng phẩm phải được nộp qua cổng thông tin trực tuyến mới của chúng tôi.\"",
+        "options": [
+          "Beginning next Monday, all requests for office supplies must be submitted through our new online portal.",
+          "The company will announce a new office location next Monday.",
+          "Paper forms will no longer be accepted starting next Monday.",
+          "Please contact the IT department if you need login credentials."
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"Beginning next Monday, all requests for office supplies must be submitted through our new online portal.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Vui lòng liên hệ với bộ phận IT nếu bạn cần thông tin đăng nhập.\"",
+        "options": [
+          "Please contact the IT department if you need login credentials.",
+          "Beginning next Monday, all requests for office supplies must be submitted online.",
+          "Paper forms are available from the IT department.",
+          "The IT department will introduce a new manager next month."
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"Please contact the IT department if you need login credentials.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Tại sao nhiều công ty hiện đại chuyển việc đặt văn phòng phẩm từ biểu mẫu giấy sang cổng trực tuyến?",
+        "options": [
+          "Vì biểu mẫu giấy đã bị cấm trong các văn phòng hiện đại theo quy định pháp luật",
+          "Vì nhà cung cấp văn phòng phẩm không còn chấp nhận đơn hàng bằng giấy nữa",
+          "Để bộ phận IT có thêm nhiệm vụ và lý do tồn tại trong cơ cấu công ty",
+          "Để giảm chi phí in ấn, tăng tốc xử lý và dễ theo dõi / kiểm soát đơn hàng hơn"
+        ],
+        "correctIndex": 3,
+        "feedback": "Số hóa quy trình (digitization) giúp doanh nghiệp tiết kiệm chi phí vận hành, rút ngắn thời gian xử lý và có dữ liệu minh bạch — đây là xu hướng phổ biến trong quản trị văn phòng hiện đại (paperless office)."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 2 — A. E-MAIL - LETTER — Dine at The Green Garden",
+    "orderIndex": 2,
+    "type": "single",
+    "approved": false,
+    "vocab": [
+      {
+        "question": "Từ 'farm-to-table' có nghĩa là gì?",
+        "options": [
+          "nguyên liệu địa phương",
+          "mô hình từ nông trại đến bàn ăn",
+          "thực đơn đặc biệt",
+          "theo mùa"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"farm-to-table\" = mô hình từ nông trại đến bàn ăn (nguyên liệu tươi trực tiếp)"
+      },
+      {
+        "question": "Từ 'seasonal' có nghĩa là gì?",
+        "options": [
+          "đặc biệt",
+          "hàng ngày",
+          "theo mùa",
+          "hữu cơ"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"seasonal\" = theo mùa"
+      },
+      {
+        "question": "Từ 'brunch' có nghĩa là gì?",
+        "options": [
+          "bữa ăn nhanh",
+          "bữa ăn cuối tuần",
+          "bữa ăn gộp sáng và trưa",
+          "bữa tối muộn"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"brunch\" = bữa ăn gộp sáng và trưa (breakfast + lunch)"
+      },
+      {
+        "question": "Từ 'reservation' có nghĩa là gì?",
+        "options": [
+          "sự hủy bỏ",
+          "sự đặt chỗ",
+          "thực đơn",
+          "nhóm khách"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"reservation\" = sự đặt chỗ (đặt bàn trước)"
+      },
+      {
+        "question": "Từ 'ingredient' có nghĩa là gì?",
+        "options": [
+          "thực đơn",
+          "nguyên liệu",
+          "nông trại",
+          "theo mùa"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"ingredient\" = nguyên liệu (để nấu ăn)"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"farm-to-table\"",
+        "options": [
+          "Saturdays and Sundays",
+          "food made with local ingredients",
+          "seasonal menu",
+          "weekend brunch"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"farm-to-table\" = \"food made with local ingredients\" — dùng nguyên liệu trực tiếp từ nông trại địa phương"
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"weekend\"",
+        "options": [
+          "every morning",
+          "daily until 2:00 P.M.",
+          "only on holidays",
+          "Saturdays and Sundays"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"weekend\" = \"Saturdays and Sundays\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Hãy thưởng thức thực đơn theo mùa sử dụng nguyên liệu trực tiếp từ nông trại của chúng tôi.\"",
+        "options": [
+          "It recently changed its menu to include local ingredients.",
+          "It specializes in breakfast items made with fresh produce.",
+          "Enjoy our farm-to-table seasonal menu.",
+          "We are now open for weekend brunch from 10:00 A.M. to 2:00 P.M."
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"Enjoy our farm-to-table seasonal menu.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Hiện tại, chúng tôi mở cửa phục vụ bữa gộp sáng-trưa vào cuối tuần từ 10:00 Sáng đến 2:00 Chiều.\"",
+        "options": [
+          "Enjoy our farm-to-table seasonal menu every weekend.",
+          "Reservations are required for all groups on weekends.",
+          "It is only open on weekdays from 10:00 A.M. to 2:00 P.M.",
+          "We are now open for weekend brunch from 10:00 A.M. to 2:00 P.M."
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"We are now open for weekend brunch from 10:00 A.M. to 2:00 P.M.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Xu hướng \"farm-to-table\" phản ánh điều gì về thói quen tiêu dùng hiện đại?",
+        "options": [
+          "Người tiêu dùng ngày càng coi trọng nguồn gốc thực phẩm và sự minh bạch của chuỗi cung ứng",
+          "Nhà nước bắt buộc các nhà hàng phải mua thực phẩm trực tiếp từ nông trại địa phương",
+          "Khách hàng không còn quan tâm đến giá cả mà chỉ quan tâm đến hình thức trình bày",
+          "Xu hướng này chỉ phổ biến ở các quốc gia phát triển có nền nông nghiệp mạnh"
+        ],
+        "correctIndex": 0,
+        "feedback": "Phong trào farm-to-table xuất hiện vì người tiêu dùng ngày càng quan tâm đến an toàn thực phẩm, tác động môi trường và muốn biết rõ thực phẩm đến từ đâu — phản ánh sự thay đổi giá trị tiêu dùng toàn cầu hướng đến sự bền vững."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 3 — A. E-MAIL - LETTER — Delayed Shipment (Logistics Team → Sarah Jenkins)",
+    "orderIndex": 3,
+    "type": "single",
+    "approved": false,
+    "vocab": [
+      {
+        "question": "Từ 'shipment' có nghĩa là gì?",
+        "options": [
+          "hoàn tiền",
+          "lô hàng / chuyến hàng",
+          "chậm trễ",
+          "trung tâm phân phối"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"shipment\" = lô hàng / chuyến hàng"
+      },
+      {
+        "question": "Từ 'severe' có nghĩa là gì?",
+        "options": [
+          "nhẹ",
+          "nghiêm trọng / khắc nghiệt",
+          "bất ngờ",
+          "kéo dài"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"severe\" = nghiêm trọng / khắc nghiệt"
+      },
+      {
+        "question": "Cụm 'gesture of goodwill' có nghĩa là gì?",
+        "options": [
+          "yêu cầu bồi thường",
+          "hoàn tiền đầy đủ",
+          "lời xin lỗi chính thức",
+          "cử chỉ thiện chí"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"gesture of goodwill\" = cử chỉ thiện chí (hành động thể hiện thiện ý)"
+      },
+      {
+        "question": "Từ 'credit' (động từ) có nghĩa là gì trong ngữ cảnh này?",
+        "options": [
+          "hoàn tiền một phần",
+          "khấu trừ",
+          "cộng tiền vào tài khoản",
+          "ghi nợ"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"credit\" (v.) = cộng tiền vào tài khoản (credit $10 = cộng thêm $10)"
+      },
+      {
+        "question": "Từ 'partial refund' có nghĩa là gì?",
+        "options": [
+          "hoàn tiền toàn bộ",
+          "hoàn hàng",
+          "hoàn tiền một phần",
+          "đổi hàng mới"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"partial refund\" = hoàn tiền một phần"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"severe weather conditions\"",
+        "options": [
+          "Bad weather",
+          "out-of-stock items",
+          "an incorrect address",
+          "a system error"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"severe weather conditions\" = \"Bad weather\" — điều kiện thời tiết khắc nghiệt"
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"credited $10 to your account\"",
+        "options": [
+          "Canceled her order entirely",
+          "Gave her a partial refund/credit",
+          "Called her to apologize",
+          "Reshipped the order at no cost"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"credited $10 to your account\" = \"Gave her a partial refund/credit\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Chúng tôi xin lỗi vì đơn hàng #5592 của bạn bị chậm trễ do điều kiện thời tiết khắc nghiệt tại trung tâm vận chuyển của chúng tôi.\"",
+        "options": [
+          "Your order #5592 has been rescheduled due to an out-of-stock issue.",
+          "We apologize that your order #5592 is delayed due to severe weather conditions at our shipping hub.",
+          "As a gesture of goodwill, we have credited $10 to your account.",
+          "We regret that the incorrect address caused a delay in your shipment."
+        ],
+        "correctIndex": 1,
+        "feedback": "Bản dịch: \"We apologize that your order #5592 is delayed due to severe weather conditions at our shipping hub.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Như một cử chỉ thiện chí, chúng tôi đã cộng thêm 10 đô la vào tài khoản của bạn.\"",
+        "options": [
+          "As a gesture of goodwill, we have credited $10 to your account.",
+          "We have reshipped your order at no additional cost.",
+          "We apologize for the severe weather delay affecting your shipment.",
+          "Your order has been canceled and a full refund has been issued."
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"As a gesture of goodwill, we have credited $10 to your account.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Việc chủ động \"cộng $10 vào tài khoản khách hàng\" khi đơn hàng bị trễ phản ánh chiến lược kinh doanh gì?",
+        "options": [
+          "Công ty bị bắt buộc bồi thường theo luật bảo vệ người tiêu dùng trong mọi trường hợp trễ hàng",
+          "Giữ chân khách hàng bằng cách bồi thường chủ động, duy trì lòng tin và giảm tỷ lệ khiếu nại",
+          "Công ty muốn tránh phải đền bù số tiền lớn hơn bằng cách bồi thường nhanh một khoản nhỏ",
+          "Đây là chiến thuật marketing để khuyến khích khách hàng mua thêm trong lần tiếp theo"
+        ],
+        "correctIndex": 1,
+        "feedback": "Trong kinh doanh, việc chủ động bồi thường khi xảy ra sự cố được gọi là \"service recovery\" — nghiên cứu cho thấy khách hàng được xử lý tốt sau sự cố thường trung thành hơn cả khách chưa từng gặp vấn đề."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 4 — A. E-MAIL - LETTER — Apex Electronics to Expand",
+    "orderIndex": 4,
+    "type": "single",
+    "approved": false,
+    "vocab": [
+      {
+        "question": "Từ 'expand' có nghĩa là gì?",
+        "options": [
+          "mở rộng",
+          "thu hẹp",
+          "hợp nhất",
+          "cải tổ"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"expand\" = mở rộng"
+      },
+      {
+        "question": "Từ 'announce' có nghĩa là gì?",
+        "options": [
+          "thông báo",
+          "thực hiện",
+          "xem xét",
+          "đề xuất"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"announce\" = thông báo"
+      },
+      {
+        "question": "Cụm 'retail location' có nghĩa là gì?",
+        "options": [
+          "kho hàng",
+          "địa điểm bán lẻ",
+          "văn phòng trung tâm",
+          "trung tâm phân phối"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"retail location\" = địa điểm bán lẻ (cửa hàng bán trực tiếp cho khách)"
+      },
+      {
+        "question": "Cụm 'metropolitan area' có nghĩa là gì?",
+        "options": [
+          "vùng nông thôn",
+          "khu công nghiệp",
+          "khu vực trung tâm thành phố lớn",
+          "vùng ngoại ô xa"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"metropolitan area\" = khu vực trung tâm thành phố lớn"
+      },
+      {
+        "question": "Từ 'move' (danh từ) có nghĩa là gì trong ngữ cảnh kinh doanh?",
+        "options": [
+          "đề xuất sáp nhập",
+          "sự di chuyển vật lý",
+          "sự thay đổi nhân sự",
+          "động thái / quyết định chiến lược"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"move\" (n.) = động thái / quyết định chiến lược (a bold move = một động thái táo bạo)"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"open three new retail locations\"",
+        "options": [
+          "Hire a new CEO",
+          "Close underperforming stores",
+          "Move its headquarters",
+          "Increase its number of stores"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"open three new retail locations\" = \"Increase its number of stores\" — mở thêm cửa hàng = tăng số lượng cửa hàng"
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Hôm nay, Apex Electronics đã thông báo rằng họ sẽ mở thêm ba địa điểm bán lẻ mới trong các khu vực trung tâm thành phố lớn.\"",
+        "options": [
+          "Today, Apex Electronics announced the sale of its retail division.",
+          "Apex Electronics has hired a new CEO to lead its expansion strategy.",
+          "Apex Electronics announced today that it will open three new retail locations in major metropolitan areas.",
+          "Apex Electronics will close three underperforming stores in metropolitan areas this year."
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"Apex Electronics announced today that it will open three new retail locations in major metropolitan areas.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Khi một công ty bán lẻ mở rộng sang khu vực trung tâm thành phố lớn, mục tiêu chiến lược thường là gì?",
+        "options": [
+          "Tránh cạnh tranh với các đối thủ đang hoạt động mạnh ở vùng ngoại ô",
+          "Tiếp cận tệp khách hàng đông đúc hơn, tăng độ nhận diện thương hiệu và cạnh tranh vị trí địa lý",
+          "Giảm chi phí thuê mặt bằng so với các khu vực ngoại ô thường đắt hơn",
+          "Thực hiện yêu cầu từ chính quyền địa phương về phát triển thương mại trung tâm"
+        ],
+        "correctIndex": 1,
+        "feedback": "Mở rộng vào metropolitan areas giúp thương hiệu tiếp cận lượng người tiêu dùng lớn, đặc biệt nhóm có thu nhập trung-cao — đây là chiến lược tăng trưởng (growth strategy) phổ biến trong bán lẻ hiện đại."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 5 — A. E-MAIL - LETTER — Position: Graphic Designer (Lumina Marketing)",
+    "orderIndex": 5,
+    "type": "single",
+    "approved": false,
+    "vocab": [
+      {
+        "question": "Từ 'seek' có nghĩa là gì?",
+        "options": [
+          "tìm kiếm",
+          "tuyển dụng bắt buộc",
+          "đề xuất",
+          "thay thế"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"seek\" = tìm kiếm (be seeking = đang tìm kiếm)"
+      },
+      {
+        "question": "Từ 'candidate' có nghĩa là gì?",
+        "options": [
+          "ứng viên",
+          "người giám sát",
+          "nhân viên hiện tại",
+          "khách hàng"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"candidate\" = ứng viên (người ứng tuyển)"
+      },
+      {
+        "question": "Từ 'portfolio' có nghĩa là gì trong ngữ cảnh tuyển dụng sáng tạo?",
+        "options": [
+          "hồ sơ năng lực (tập hợp sản phẩm đã làm)",
+          "thư giới thiệu",
+          "bằng cấp chuyên môn",
+          "hồ sơ xin việc (CV)"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"portfolio\" = hồ sơ năng lực — tập hợp các tác phẩm / sản phẩm đã thực hiện"
+      },
+      {
+        "question": "Từ 'previous' có nghĩa là gì?",
+        "options": [
+          "hiện tại",
+          "bổ sung",
+          "sắp tới",
+          "trước đó"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"previous\" = trước đó"
+      },
+      {
+        "question": "Từ 'submit' có nghĩa là gì?",
+        "options": [
+          "yêu cầu",
+          "tải về",
+          "nộp / gửi",
+          "xem xét"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"submit\" = nộp / gửi (submit a portfolio = nộp hồ sơ năng lực)"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"portfolio of their previous work\"",
+        "options": [
+          "A list of references",
+          "A certification in coding",
+          "Examples of their work",
+          "A university transcript"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"portfolio of their previous work\" = \"Examples of their work\" — hồ sơ năng lực = ví dụ về các sản phẩm đã làm"
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Các ứng viên phải nộp hồ sơ năng lực về các sản phẩm trước đây của họ cùng với sơ yếu lý lịch.\"",
+        "options": [
+          "Candidates should submit a transcript of their academic records.",
+          "All candidates must hold a university certification in graphic design.",
+          "Candidates must submit a portfolio of their previous work along with their CV.",
+          "Applicants are required to provide a list of professional references."
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"Candidates must submit a portfolio of their previous work along with their CV.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Tại sao các công ty sáng tạo thường yêu cầu portfolio thay vì chỉ xem bằng cấp khi tuyển dụng?",
+        "options": [
+          "Luật lao động bắt buộc tất cả vị trí sáng tạo phải nộp portfolio để được tuyển dụng hợp lệ",
+          "Bằng cấp chứng minh kiến thức lý thuyết, còn portfolio chứng minh khả năng thực tế và phong cách sáng tạo riêng",
+          "Vì bằng cấp thiết kế đồ họa không được công nhận chính thức ở hầu hết các quốc gia",
+          "Portfolio nhanh và rẻ hơn để đánh giá so với việc xác minh bằng cấp qua các trường đại học"
+        ],
+        "correctIndex": 1,
+        "feedback": "Trong các ngành sáng tạo, portfolio là bằng chứng trực tiếp về năng lực — tương tự như nguyên tắc \"show, don't tell\". Bằng cấp cho thấy bạn học gì, portfolio cho thấy bạn làm được gì."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 6 — A. E-MAIL - LETTER — City Art Museum (hours & renovation)",
+    "orderIndex": 6,
+    "type": "single",
+    "approved": false,
+    "vocab": [
+      {
+        "question": "Từ 'museum' có nghĩa là gì?",
+        "options": [
+          "bảo tàng",
+          "thư viện",
+          "phòng trưng bày tư nhân",
+          "trung tâm văn hóa"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"museum\" = bảo tàng"
+      },
+      {
+        "question": "Từ 'renovation' có nghĩa là gì?",
+        "options": [
+          "khai trương mới",
+          "đóng cửa vĩnh viễn",
+          "sự nâng cấp / sửa chữa",
+          "thay đổi tên"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"renovation\" = sự nâng cấp / sửa chữa (cải tạo lại)"
+      },
+      {
+        "question": "Từ 'currently' có nghĩa là gì?",
+        "options": [
+          "trước đây",
+          "sắp tới",
+          "hiện tại",
+          "tạm thời"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"currently\" = hiện tại"
+      },
+      {
+        "question": "Từ 'wing' (danh từ về tòa nhà) có nghĩa là gì?",
+        "options": [
+          "khu vực / cánh (của tòa nhà)",
+          "phòng trưng bày",
+          "lối vào chính",
+          "tầng lầu"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"wing\" = khu vực / cánh của tòa nhà (West Wing = cánh tây)"
+      },
+      {
+        "question": "Từ 'closed' có nghĩa là gì?",
+        "options": [
+          "đóng cửa",
+          "mở cửa",
+          "hạn chế",
+          "bận rộn"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"closed\" = đóng cửa"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"Saturday: 10:00–20:00\" (trong ngữ cảnh câu hỏi về 'late in the evening')",
+        "options": [
+          "on weekdays only",
+          "only on Sundays",
+          "during regular business hours",
+          "late in the evening"
+        ],
+        "correctIndex": 3,
+        "feedback": "Thứ Bảy bảo tàng mở đến 20:00 → \"late in the evening\" (đến tối muộn)"
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"closed for renovation\"",
+        "options": [
+          "is open only on Sundays",
+          "houses ancient sculptures",
+          "is the largest wing",
+          "is being repaired"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"closed for renovation\" = \"is being repaired\" — đóng cửa để sửa chữa"
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Cánh phía Tây hiện đang đóng cửa để nâng cấp cho đến ngày 5 tháng 11.\"",
+        "options": [
+          "The West Wing is the largest section of the museum.",
+          "The West Wing will reopen on November 5 with a new exhibition.",
+          "The West Wing is currently closed for renovation until November 5.",
+          "The West Wing houses ancient sculptures and is open on Sundays."
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"The West Wing is currently closed for renovation until November 5.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Khi một bảo tàng thông báo đóng cửa một khu vực để cải tạo, khách tham quan nên làm gì để có trải nghiệm tốt nhất?",
+        "options": [
+          "Yêu cầu hoàn tiền vé nếu khu vực yêu thích bị đóng cửa trong thời gian cải tạo",
+          "Chờ đến khi toàn bộ bảo tàng mở cửa trở lại mới tham quan để có trải nghiệm đầy đủ",
+          "Tham quan vào ngày cuối tuần vì bảo tàng thường mở toàn bộ khu vực vào cuối tuần",
+          "Kiểm tra trước thông tin các khu vực mở cửa, điều chỉnh kỳ vọng và lên kế hoạch tham quan phù hợp"
+        ],
+        "correctIndex": 3,
+        "feedback": "Trong du lịch và văn hóa, việc tìm hiểu thông tin trước (check schedules, read notices) giúp tránh thất vọng. Renovation thường là dấu hiệu tích cực — bảo tàng đang đầu tư nâng cấp trải nghiệm cho tương lai."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 7 — A. E-MAIL - LETTER — Parking Lot Repaving Notice",
+    "orderIndex": 7,
+    "type": "single",
+    "approved": false,
+    "vocab": [
+      {
+        "question": "Từ 'tenant' có nghĩa là gì?",
+        "options": [
+          "người thuê nhà / thuê văn phòng",
+          "khách vãng lai",
+          "nhân viên bảo vệ",
+          "chủ tòa nhà"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"tenant\" = người thuê nhà / thuê mặt bằng văn phòng"
+      },
+      {
+        "question": "Từ 'repave' có nghĩa là gì?",
+        "options": [
+          "mở rộng diện tích",
+          "lát lại mặt đường",
+          "xây thêm tầng",
+          "sơn lại"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"repave\" = lát lại mặt đường (đổ nhựa đường mới)"
+      },
+      {
+        "question": "Từ 'tow' có nghĩa là gì?",
+        "options": [
+          "phạt tiền",
+          "kéo (xe vi phạm)",
+          "niêm phong xe",
+          "đỗ xe đúng quy định"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"tow\" = kéo xe (tow away = kéo xe đi vì đỗ sai chỗ)"
+      },
+      {
+        "question": "Cụm 'at the owner's expense' có nghĩa là gì?",
+        "options": [
+          "miễn phí",
+          "được bảo hiểm chi trả",
+          "do ban quản lý thanh toán",
+          "chủ xe phải tự chịu mọi chi phí"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"at the owner's expense\" = chủ xe / chủ sở hữu phải tự chịu mọi chi phí"
+      },
+      {
+        "question": "Cụm 'out of service' (ngụ ý của việc đóng cửa bãi xe) gần nghĩa với gì?",
+        "options": [
+          "đang cải tạo thêm tầng",
+          "tạm ngừng sử dụng",
+          "chỉ dành cho khách VIP",
+          "đang hoạt động"
+        ],
+        "correctIndex": 1,
+        "feedback": "Bãi xe bị đóng để lát lại → \"out of service\" = tạm ngừng sử dụng"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"repaving\" (trong ngữ cảnh 'the parking lot will be closed for repaving')",
+        "options": [
+          "will be converted to green space",
+          "will be fixed / resurfaced",
+          "will be expanded",
+          "will be permanently closed"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"closed for repaving\" = bãi xe đang được lát lại / sửa lại mặt đường → \"will be fixed / resurfaced\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Bãi đậu xe phía bắc sẽ bị đóng cửa để lát lại mặt đường từ ngày 10 đến ngày 12 tháng 6.\"",
+        "options": [
+          "All tenants must vacate the south parking lot from June 10 to June 12.",
+          "A new building will be constructed in the north parking lot from June 10 to 12.",
+          "The parking lot will be expanded with new spaces starting June 10.",
+          "The north parking lot will be closed for repaving from June 10 to June 12."
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"The north parking lot will be closed for repaving from June 10 to June 12.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Việc ban quản lý tòa nhà thông báo trước về việc lát lại bãi đậu xe thể hiện nguyên tắc quản lý nào?",
+        "options": [
+          "Thông báo trước giúp công ty thi công có thêm nhân lực do người thuê nhà tình nguyện hỗ trợ",
+          "Truyền thông chủ động (proactive communication) — giúp người thuê có thời gian sắp xếp và giảm phàn nàn",
+          "Đây là yêu cầu pháp lý bắt buộc phải thông báo trong mọi dự án sửa chữa bất động sản",
+          "Ban quản lý muốn được đánh giá cao về sự minh bạch để tăng tỷ lệ gia hạn hợp đồng"
+        ],
+        "correctIndex": 1,
+        "feedback": "Trong quản lý bất động sản thương mại, thông báo trước (advance notice) là thực hành chuyên nghiệp quan trọng — thể hiện sự tôn trọng người thuê và giảm thiểu gián đoạn hoạt động kinh doanh của họ."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 8 — A. E-MAIL - LETTER — Global Technology Summit",
+    "orderIndex": 8,
+    "type": "single",
+    "approved": false,
+    "vocab": [
+      {
+        "question": "Từ 'summit' có nghĩa là gì?",
+        "options": [
+          "lễ khai mạc",
+          "buổi hội thảo trực tuyến",
+          "hội nghị cấp cao",
+          "đỉnh núi"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"summit\" = hội nghị cấp cao (hoặc đỉnh núi — ở đây là hội nghị)"
+      },
+      {
+        "question": "Từ 'annual' có nghĩa là gì?",
+        "options": [
+          "hai năm một lần",
+          "hàng tháng",
+          "đặc biệt",
+          "thường niên (hàng năm)"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"annual\" = thường niên / hàng năm"
+      },
+      {
+        "question": "Cụm 'keynote speaker' có nghĩa là gì?",
+        "options": [
+          "diễn giả chính / quan trọng nhất",
+          "người tổ chức sự kiện",
+          "khách mời đặc biệt",
+          "người dẫn chương trình"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"keynote speaker\" = diễn giả chính / người phát biểu khai mạc quan trọng nhất"
+      },
+      {
+        "question": "Từ 'register' có nghĩa là gì?",
+        "options": [
+          "xác nhận",
+          "đăng ký",
+          "xem xét",
+          "tham dự"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"register\" = đăng ký (register for an event = đăng ký tham gia sự kiện)"
+      },
+      {
+        "question": "Cụm 'early-bird discount' có nghĩa là gì?",
+        "options": [
+          "giảm giá theo nhóm",
+          "giảm giá cho sinh viên",
+          "chiết khấu cho người đăng ký sớm",
+          "ưu đãi thành viên VIP"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"early-bird discount\" = chiết khấu / giảm giá cho người đăng ký trước hạn chót"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"early-bird discount\" (trong ngữ cảnh đăng ký hội nghị)",
+        "options": [
+          "bring a friend",
+          "save money on registration",
+          "be a student",
+          "stay at the hotel"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"early-bird discount\" = \"save money on registration\" — đăng ký sớm = tiết kiệm tiền đăng ký"
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Đăng ký trước ngày 1 tháng 10 để nhận được chiết khấu ưu đãi cho người đăng ký sớm.\"",
+        "options": [
+          "Bring a friend to receive a group discount at the Global Technology Summit.",
+          "Stay at the partner hotel to save money on your registration fee.",
+          "Students are eligible for a special discount if they register before November 1.",
+          "Register by October 1 for an early-bird discount."
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"Register by October 1 for an early-bird discount.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Chiến lược \"early-bird discount\" mang lại lợi ích gì cho ban tổ chức hội nghị?",
+        "options": [
+          "Đây là yêu cầu từ nhà tài trợ để đảm bảo số lượng người tham dự tối thiểu theo hợp đồng tài trợ",
+          "Ban tổ chức muốn thưởng cho những người có tính kỷ luật và kế hoạch tốt",
+          "Dự báo sớm số lượng người tham dự để lên kế hoạch hậu cần, đồng thời đảm bảo dòng tiền trước sự kiện",
+          "Chỉ mang lại lợi ích cho người đăng ký sớm, ban tổ chức không hưởng lợi trực tiếp"
+        ],
+        "correctIndex": 2,
+        "feedback": "Early-bird pricing là chiến lược win-win: người đăng ký tiết kiệm tiền; ban tổ chức có cam kết tham dự sớm (giúp lên kế hoạch địa điểm, catering, tài liệu) và có dòng tiền ổn định trước ngày sự kiện."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 9 — A. E-MAIL - LETTER — Rescheduled Meeting (Nilsson → Burstein)",
+    "orderIndex": 9,
+    "type": "single",
+    "approved": false,
+    "vocab": [
+      {
+        "question": "Từ 'reschedule' có nghĩa là gì?",
+        "options": [
+          "tạm hoãn vô thời hạn",
+          "hủy bỏ hoàn toàn",
+          "xác nhận lại",
+          "dời lịch / sắp xếp lại thời gian"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"reschedule\" = dời lịch / sắp xếp lại thời gian họp"
+      },
+      {
+        "question": "Cụm 'take into consideration' có nghĩa là gì?",
+        "options": [
+          "thông báo trước",
+          "đề xuất lại",
+          "bỏ qua",
+          "xem xét / tính đến"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"take into consideration\" = xem xét / tính đến (consider = cân nhắc)"
+      },
+      {
+        "question": "Cụm 'time zone' có nghĩa là gì?",
+        "options": [
+          "giờ làm việc",
+          "khu vực địa lý",
+          "múi giờ",
+          "lịch trình cụ thể"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"time zone\" = múi giờ (vùng thời gian)"
+      },
+      {
+        "question": "Từ 'inconvenience' có nghĩa là gì?",
+        "options": [
+          "sự bất tiện / phiền toái",
+          "sự cố kỹ thuật",
+          "sự thuận tiện",
+          "lỗi lịch trình"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"inconvenience\" = sự bất tiện / phiền toái (gây ra cho người khác)"
+      },
+      {
+        "question": "Từ 'appointment' có nghĩa là gì?",
+        "options": [
+          "thông báo nội bộ",
+          "cuộc hẹn / lịch hẹn",
+          "thỏa thuận hợp tác",
+          "cuộc họp không chính thức"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"appointment\" = cuộc hẹn / lịch hẹn đã được xếp trước"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"review this with Martina\"",
+        "options": [
+          "suggest Martina as a new client manager",
+          "request that an employee be trained",
+          "set up an interview with Martina",
+          "announce a new calendar system"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"review this with Martina\" = \"request that an employee be trained\" — yêu cầu người quản lý hướng dẫn / đào tạo Martina về nhiệm vụ này"
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"located throughout the world\"",
+        "options": [
+          "scheduled during an office holiday",
+          "international clients",
+          "in a variety of time zones only",
+          "local Bay Shore residents"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"located throughout the world\" = \"international clients\" — khách hàng ở khắp nơi trên thế giới = khách hàng quốc tế"
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Martina, trợ lý văn phòng mới, đã không tính đến việc văn phòng của các khách hàng nằm ở khắp nơi trên thế giới và ở nhiều múi giờ khác nhau.\"",
+        "options": [
+          "The new office assistant, Martina, did not take into consideration that the clients' offices are located throughout the world and in a variety of time zones.",
+          "Martina suggested a new time for the meeting to accommodate international clients.",
+          "The meeting was rescheduled because Ms. Nilsson was not available on that date.",
+          "Martina announced a new calendar system to manage international meeting schedules."
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"The new office assistant, Martina, did not take into consideration that the clients' offices are located throughout the world...\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Bạn có thể sắp xếp thời gian để xem lại vấn đề này cùng với Martina không?\"",
+        "options": [
+          "Can you set up an interview with Martina for the new position?",
+          "Would you be available to attend the rescheduled meeting with Martina?",
+          "Could you please find time to review this with Martina?",
+          "Could Martina please reschedule the meeting with all international clients?"
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"Could you please find time to review this with Martina?\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Trong môi trường làm việc quốc tế, trợ lý hành chính cần kỹ năng nào để tránh sai sót lịch họp như trong bài?",
+        "options": [
+          "Chỉ cần thành thạo phần mềm lên lịch họp tự động là đủ để tránh mọi xung đột",
+          "Cần biết nhiều ngoại ngữ để giao tiếp trực tiếp với từng khách hàng quốc tế",
+          "Cần có kinh nghiệm làm việc thực tế ở ít nhất 3 quốc gia khác nhau trước khi đảm nhận vị trí",
+          "Nhận thức về múi giờ toàn cầu và kỹ năng phối hợp lịch làm việc đa quốc gia"
+        ],
+        "correctIndex": 3,
+        "feedback": "Kỹ năng quản lý múi giờ (time zone awareness) là kỹ năng thiết yếu trong môi trường làm việc toàn cầu. Các công cụ như World Time Buddy hay tính năng multiple time zones trên lịch điện tử giúp tránh sai sót như trường hợp của Martina."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 10 — A. E-MAIL - LETTER — Order Confirmation (eaterysource.com)",
+    "orderIndex": 10,
+    "type": "single",
+    "approved": false,
+    "vocab": [
+      {
+        "question": "Từ 'confirmation' có nghĩa là gì?",
+        "options": [
+          "yêu cầu",
+          "hóa đơn",
+          "sự xác nhận",
+          "biên lai hoàn tiền"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"confirmation\" = sự xác nhận (order confirmation = xác nhận đơn hàng)"
+      },
+      {
+        "question": "Từ 'supplier' có nghĩa là gì?",
+        "options": [
+          "khách hàng",
+          "đối tác vận chuyển",
+          "nhà cung cấp",
+          "nhà phân phối lẻ"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"supplier\" = nhà cung cấp (cung cấp hàng hóa / nguyên liệu)"
+      },
+      {
+        "question": "Từ 'process' (động từ) có nghĩa là gì trong ngữ cảnh đơn hàng?",
+        "options": [
+          "giao hàng",
+          "xử lý (đơn hàng)",
+          "hủy bỏ",
+          "xác nhận lại"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"process\" (v.) = xử lý (process an order = xử lý đơn hàng)"
+      },
+      {
+        "question": "Từ 'warehouse' có nghĩa là gì?",
+        "options": [
+          "cửa hàng bán lẻ",
+          "trung tâm phân phối online",
+          "văn phòng công ty",
+          "nhà kho"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"warehouse\" = nhà kho (nơi lưu trữ hàng hóa trước khi giao)"
+      },
+      {
+        "question": "Cụm 'tracking information' có nghĩa là gì?",
+        "options": [
+          "thông tin theo dõi đơn hàng",
+          "lịch sử mua hàng",
+          "thông tin thanh toán",
+          "thông tin tài khoản"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"tracking information\" = thông tin theo dõi đơn hàng (tra cứu vị trí gói hàng)"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"supplier of equipment to restaurants\"",
+        "options": [
+          "an equipment supplier for the restaurant industry",
+          "a food delivery company",
+          "a shipping company",
+          "works for a restaurant"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"supplier of equipment to restaurants\" = công ty cung cấp thiết bị cho ngành nhà hàng — không phải bản thân nhà hàng"
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"once your order has shipped\"",
+        "options": [
+          "When her order has left the warehouse",
+          "When she places another order",
+          "When new products become available",
+          "When she makes a payment"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"once your order has shipped\" = \"When her order has left the warehouse\" — hàng đã được gửi đi = đã rời kho"
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Chúng tôi tự hào là nhà cung cấp thiết bị quốc tế cho các nhà hàng trên toàn thế giới.\"",
+        "options": [
+          "We supply food and beverages to supermarkets and restaurants internationally.",
+          "We are a global shipping company serving the restaurant and food industry.",
+          "We are proud to be an international supplier of equipment to restaurants worldwide.",
+          "Our company specializes in delivering packages to restaurants across the world."
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"We are proud to be an international supplier of equipment to restaurants worldwide.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Bà sẽ nhận được một email khác khi đơn hàng của bà đã được gửi đi, kèm theo thông tin theo dõi đơn hàng.\"",
+        "options": [
+          "You will receive another e-mail once your order has shipped, including your tracking information.",
+          "You will receive another e-mail when a new product is available in our store.",
+          "You will receive a payment confirmation e-mail when your order is placed.",
+          "A customer service representative will contact you when your order is ready."
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"You will receive another e-mail once your order has shipped, including your tracking information.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Tại sao các công ty thương mại điện tử thường gửi email xác nhận đơn hàng ngay khi khách đặt mua?",
+        "options": [
+          "Xây dựng niềm tin, giúp khách theo dõi tình trạng đơn và giảm lo lắng sau khi thanh toán",
+          "Để nhân viên kho hàng biết có đơn mới và bắt đầu chuẩn bị ngay lập tức",
+          "Đây là yêu cầu pháp lý bắt buộc của luật thương mại điện tử tại mọi quốc gia",
+          "Vì khách hàng thường quên mất đã đặt hàng và cần được nhắc nhở liên tục"
+        ],
+        "correctIndex": 0,
+        "feedback": "Email xác nhận đơn hàng là bước quan trọng trong trải nghiệm khách hàng (customer experience). Nó giảm lo lắng sau khi thanh toán (post-purchase anxiety) và là điểm tiếp xúc (touchpoint) để thương hiệu thể hiện sự chuyên nghiệp."
+      }
+    ]
+  }
+]

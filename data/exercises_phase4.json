@@ -1,0 +1,332 @@
+[
+  {
+    "_passage": "Bài 1 — triple — TYCHE FINE CARPETS — Pleiades Collection Product Availabilit",
+    "orderIndex": 1,
+    "type": "triple",
+    "category": null,
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"comparable\" có nghĩa là gì?",
+        "options": [
+          "tương đương, có thể so sánh được",
+          "có sẵn",
+          "có sẵn trong kho",
+          "được dự kiến, được mong đợi"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"comparable\" = tương đương, có thể so sánh được"
+      },
+      {
+        "question": "Từ \"occupy\" có nghĩa là gì?",
+        "options": [
+          "chỉ ra",
+          "chiếm đóng, sử dụng (không gian)",
+          "ăn mừng, kỷ niệm",
+          "trống rỗng, bỏ không"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"occupy\" = chiếm đóng, sử dụng (không gian)"
+      },
+      {
+        "question": "Từ \"anticipated\" có nghĩa là gì?",
+        "options": [
+          "đúng tiến độ, đúng lịch trình",
+          "sự lựa chọn thay thế",
+          "được dự kiến, được mong đợi",
+          "trống rỗng, bỏ không"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"anticipated\" = được dự kiến, được mong đợi"
+      },
+      {
+        "question": "Từ \"indicate\" có nghĩa là gì?",
+        "options": [
+          "cân nặng, trọng lượng",
+          "ăn mừng, kỷ niệm",
+          "chiếm đóng, sử dụng (không gian)",
+          "chỉ ra"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"indicate\" = chỉ ra"
+      },
+      {
+        "question": "Từ \"celebrate\" có nghĩa là gì?",
+        "options": [
+          "ăn mừng, kỷ niệm",
+          "người/vật thay thế",
+          "trước khi",
+          "chiếm đóng, sử dụng (không gian)"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"celebrate\" = ăn mừng, kỷ niệm"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"Shipping Weight\"",
+        "options": [
+          "Select a substitute item",
+          "different weights",
+          "It opened on schedule",
+          "Shipping Weight"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"Shipping Weight\" = \"different weights\""
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"alternative selections\"",
+        "options": [
+          "It opened on schedule",
+          "anticipated... March 1",
+          "Select a substitute item",
+          "different weights"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"alternative selections\" = \"Select a substitute item\""
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"anticipated... March 1\"",
+        "options": [
+          "Shipping Weight",
+          "alternative selections",
+          "Select a substitute item",
+          "It opened on schedule"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"anticipated... March 1\" = \"It opened on schedule\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"[BẢNG] THẢM CAO CẤP TYCHE — Bộ sưu tập Pleiades Tình trạng Hàng hóa (cập nhật hằng ngày): Thảm Artemis (13kg, còn 30 chiếc), Hera (14kg, còn 16 chiếc), Janus (11kg, hiện hết hàng), Iris (9kg, còn 10 chiếc).\"",
+        "options": [
+          "Cột 'Shipping Weight' của 4 loại thảm lần lượt là: 13 kg, 14 kg, 11 kg, 9 kg.",
+          "[Đoạn 2]: \"will not have our chosen pattern available until well after the hotel's anticipated opening date of March 1... With the grand opening less than a month away\" và [Đoạn 1]: Mẫu 'Janus' có số lượng hôm nay là 0 và trong 30 ngày tới cũng là 0.",
+          "A library",
+          "It was under construction for nine years."
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"Cột 'Shipping Weight' của 4 loại thảm lần lượt là: 13 kg, 14 kg, 11 kg, 9 kg.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"[EMAIL] Từ: Miles Sorrell | Gửi tới: Frieda Zuckerman | Ngày: 5 tháng 2 Kính gửi bà Zuckerman, Tôi rất tiếc phải thông báo rằng Tyche Fine Carpets, nhà cung cấp mà chúng ta đã chọn cho khu vực sảnh Khách sạn Pavel, sẽ không có sẵn mẫu thảm chúng ta chọn cho đến tận sau ngày dự kiến khai trương là 1/3.\"",
+        "options": [
+          "Attached are photographs of several alternative selections... I need a decision from you as soon as possible.",
+          "[Đoạn 2]: \"will not have our chosen pattern available until well after the hotel's anticipated opening date of March 1... With the grand opening less than a month away\" và [Đoạn 1]: Mẫu 'Janus' có số lượng hôm nay là 0 và trong 30 ngày tới cũng là 0.",
+          "[Đoạn 2]: \"anticipated opening date of March 1\" và [Đoạn 3 viết ngày 2/3]: \"joined owner Patrice Snell yesterday to celebrate the opening of The Pavel Hotel\".",
+          "A café"
+        ],
+        "correctIndex": 1,
+        "feedback": "Bản dịch: \"[Đoạn 2]: \"will not have our chosen pattern available until well after the hotel's anticipated opening date of March 1... With the grand opening less than a month away\" và [Đoạn 1]: Mẫu 'Janus' có số lượng hôm nay là 0 và trong 30 ngày tới cũng là 0.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Đính kèm là hình ảnh một số lựa chọn thay thế mà tôi tin là sẽ phù hợp.\"",
+        "options": [
+          "Order some different furniture",
+          "It was not affected by the carpet delay.",
+          "Attached are photographs of several alternative selections... I need a decision from you as soon as possible.",
+          "Hera"
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"Attached are photographs of several alternative selections... I need a decision from you as soon as possible.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"Cột 'Shipping Weight' của 4 loại thảm lần lượt là: 13 kg, 14 kg, 11 kg, 9 kg\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Khi gặp sự cố thiếu hàng, người phụ trách nội thất thường sẽ đưa ra các phương án thay thế (substitute/alternative) có mức giá tương đương (comparable price) để xin ý kiến quyết định từ cấp trên hoặc khách hàng",
+          "Trong chuỗi cung ứng (supply chain), việc nhà cung cấp báo hết hàng (out of stock) sát ngày khai trương là rủi ro thường gặp, buộc người quản lý phải nhanh chóng tìm phương án thay thế (alternative selections)",
+          "Các dự án cải tạo (renovation) thường biến những tòa nhà cũ mang tính lịch sử (như bưu điện cũ, tòa án cũ) thành những không gian dịch vụ sang trọng như khách sạn hoặc nhà hàng, vừa giữ được nét kiến trúc đặc trưng vừa mang lại sức sống mới",
+          "Khi đọc thông số kỹ thuật (specifications) của sản phẩm, các đặc điểm khác biệt (như trọng lượng, kích thước) thường là điểm then chốt để phân biệt và lựa chọn mặt hàng"
+        ],
+        "correctIndex": 3,
+        "feedback": "Khi đọc thông số kỹ thuật (specifications) của sản phẩm, các đặc điểm khác biệt (như trọng lượng, kích thước) thường là điểm then chốt để phân biệt và lựa chọn mặt hàng."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 2 — triple — E-mail 1 To: a.raman@bgi.co.in From: s.kapoor@mail.co.in Dat",
+    "orderIndex": 2,
+    "type": "triple",
+    "category": null,
+    "approved": false,
+    "_hasRichData": false,
+    "vocab": [],
+    "paraphrase": [],
+    "translation": [],
+    "context": [],
+    "_note": "No rich explanation data — exercises require manual crafting."
+  },
+  {
+    "_passage": "Bài 3 — triple — E-mail 1 To: Kate Millerson From: Daniel Friedman Date: Janu",
+    "orderIndex": 3,
+    "type": "triple",
+    "category": null,
+    "approved": false,
+    "_hasRichData": false,
+    "vocab": [],
+    "paraphrase": [],
+    "translation": [],
+    "context": [],
+    "_note": "No rich explanation data — exercises require manual crafting."
+  },
+  {
+    "_passage": "Bài 4 — triple — E-mail 1 To: All Staff From: Leila Hedlund Subject: November",
+    "orderIndex": 4,
+    "type": "triple",
+    "category": null,
+    "approved": false,
+    "_hasRichData": false,
+    "vocab": [],
+    "paraphrase": [],
+    "translation": [],
+    "context": [],
+    "_note": "No rich explanation data — exercises require manual crafting."
+  },
+  {
+    "_passage": "Bài 5 — triple — E-mail 1 To: Linton Business Alliance members From: Robin Fo",
+    "orderIndex": 5,
+    "type": "triple",
+    "category": null,
+    "approved": false,
+    "_hasRichData": false,
+    "vocab": [],
+    "paraphrase": [],
+    "translation": [],
+    "context": [],
+    "_note": "No rich explanation data — exercises require manual crafting."
+  },
+  {
+    "_passage": "Bài 6 — triple — Brochure Elvinna’s Located just outside of Nassau, the capit",
+    "orderIndex": 6,
+    "type": "triple",
+    "category": null,
+    "approved": false,
+    "_hasRichData": false,
+    "vocab": [],
+    "paraphrase": [],
+    "translation": [],
+    "context": [],
+    "_note": "No rich explanation data — exercises require manual crafting."
+  },
+  {
+    "_passage": "Bài 7 — triple — E-Mail Message To: Andrea Williams &lt;a.williams@cardiocent",
+    "orderIndex": 7,
+    "type": "triple",
+    "category": null,
+    "approved": false,
+    "_hasRichData": false,
+    "vocab": [],
+    "paraphrase": [],
+    "translation": [],
+    "context": [],
+    "_note": "No rich explanation data — exercises require manual crafting."
+  },
+  {
+    "_passage": "Bài 8 — triple — E-mail 1 To: Imogen Chambers &lt;ichambers@championos.com&gt",
+    "orderIndex": 8,
+    "type": "triple",
+    "category": null,
+    "approved": false,
+    "_hasRichData": false,
+    "vocab": [],
+    "paraphrase": [],
+    "translation": [],
+    "context": [],
+    "_note": "No rich explanation data — exercises require manual crafting."
+  },
+  {
+    "_passage": "Bài 9 — triple — Carson Office Supplies SALE! This weekend only, May 25–26, w",
+    "orderIndex": 9,
+    "type": "triple",
+    "category": null,
+    "approved": false,
+    "_hasRichData": false,
+    "vocab": [],
+    "paraphrase": [],
+    "translation": [],
+    "context": [],
+    "_note": "No rich explanation data — exercises require manual crafting."
+  },
+  {
+    "_passage": "Bài 10 — triple — Creative Tech Conference Join us for the Tenth Annual Creati",
+    "orderIndex": 10,
+    "type": "triple",
+    "category": null,
+    "approved": false,
+    "_hasRichData": false,
+    "vocab": [],
+    "paraphrase": [],
+    "translation": [],
+    "context": [],
+    "_note": "No rich explanation data — exercises require manual crafting."
+  },
+  {
+    "_passage": "Bài 11 — triple — Wonder Ridge Radio Broadcast Schedule, Monday–Friday Time Pr",
+    "orderIndex": 11,
+    "type": "triple",
+    "category": null,
+    "approved": false,
+    "_hasRichData": false,
+    "vocab": [],
+    "paraphrase": [],
+    "translation": [],
+    "context": [],
+    "_note": "No rich explanation data — exercises require manual crafting."
+  },
+  {
+    "_passage": "Bài 12 — triple — Instructions for Requesting Records Thank you for your inter",
+    "orderIndex": 12,
+    "type": "triple",
+    "category": null,
+    "approved": false,
+    "_hasRichData": false,
+    "vocab": [],
+    "paraphrase": [],
+    "translation": [],
+    "context": [],
+    "_note": "No rich explanation data — exercises require manual crafting."
+  },
+  {
+    "_passage": "Bài 13 — triple — Famous Actor, First Book LONDON (25 February) —Fans of Simon",
+    "orderIndex": 13,
+    "type": "triple",
+    "category": null,
+    "approved": false,
+    "_hasRichData": false,
+    "vocab": [],
+    "paraphrase": [],
+    "translation": [],
+    "context": [],
+    "_note": "No rich explanation data — exercises require manual crafting."
+  },
+  {
+    "_passage": "Bài 14 — triple — E-mail 1 To: jsantos@coloniamenor.com From: markash@amtrcorp",
+    "orderIndex": 14,
+    "type": "triple",
+    "category": null,
+    "approved": false,
+    "_hasRichData": false,
+    "vocab": [],
+    "paraphrase": [],
+    "translation": [],
+    "context": [],
+    "_note": "No rich explanation data — exercises require manual crafting."
+  },
+  {
+    "_passage": "Bài 15 — triple — Shingle Town Roofing Color Options Choose from our many colo",
+    "orderIndex": 15,
+    "type": "triple",
+    "category": null,
+    "approved": false,
+    "_hasRichData": false,
+    "vocab": [],
+    "paraphrase": [],
+    "translation": [],
+    "context": [],
+    "_note": "No rich explanation data — exercises require manual crafting."
+  }
+]

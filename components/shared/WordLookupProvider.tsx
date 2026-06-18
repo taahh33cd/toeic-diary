@@ -156,9 +156,10 @@ export function WordLookupProvider({
     };
     // Phase 4: mobile touch — longer delay for selection to settle
     const onTouchEnd = () => setTimeout(tryCapture, 120);
+    // Only dismiss icon on outside click — popup uses backdrop instead
     const onDocClick = (e: MouseEvent) => {
+      if (popupOpenRef.current) return; // popup handles its own dismiss via backdrop
       if (iconRef.current?.contains(e.target as Node)) return;
-      if (popupRef.current?.contains(e.target as Node)) return;
       dismiss();
     };
     const onKeyDown = (e: KeyboardEvent) => {
@@ -193,7 +194,14 @@ export function WordLookupProvider({
         )}
       {mounted && sel && popupOpen &&
         createPortal(
-          <LookupPopup ref={popupRef} sel={sel} onDismiss={dismiss} />,
+          <>
+            {/* Backdrop: onMouseDown (not onClick) to dismiss before popup gets the click */}
+            <div
+              style={{ position: "fixed", inset: 0, zIndex: 99998 }}
+              onMouseDown={dismiss}
+            />
+            <LookupPopup ref={popupRef} sel={sel} onDismiss={dismiss} />
+          </>,
           document.body,
         )}
     </>
@@ -261,7 +269,7 @@ const LookupPopup = forwardRef<
   const [example, setExample] = useState("");
   const [viLoading, setViLoading] = useState(true);
   const [part, setPart] = useState(5);
-  const [saveState, setSaveState] = useState<"idle" | "saving" | "saved">("idle");
+  const [saveState, setSaveState] = useState<"idle" | "saving" | "saved" | "error">("idle");
 
   const isPhrase = sel.text.includes(" ");
 
@@ -312,9 +320,11 @@ const LookupPopup = forwardRef<
         repCount: 0,
       } as any);
       setSaveState("saved");
-      setTimeout(onDismiss, 1500);
-    } catch {
-      setSaveState("idle");
+      setTimeout(onDismiss, 2000);
+    } catch (err) {
+      console.error("[WordLookup] saveVocabWord failed:", err);
+      setSaveState("error");
+      setTimeout(() => setSaveState("idle"), 2500);
     }
   }
 
@@ -434,57 +444,55 @@ const LookupPopup = forwardRef<
           </p>
         )}
 
-        {/* Save section */}
-        {saveState === "saved" ? (
-          <div style={{ textAlign: "center", padding: "8px 0", fontSize: ".85rem", fontWeight: 700, color: "var(--accent-green,#4A7C59)" }}>
-            ✅ Đã lưu vào Vocab!
-          </div>
-        ) : (
-          <>
-            {/* Part selector */}
-            <div style={{ display: "flex", alignItems: "center", gap: 4, marginBottom: 8, flexWrap: "wrap" }}>
-              <span style={{ fontSize: ".6rem", color: "var(--text-muted,#888)", fontWeight: 600, textTransform: "uppercase", letterSpacing: ".06em" }}>
-                Part:
-              </span>
-              {[1, 2, 3, 4, 5, 6, 7].map((p) => (
-                <button
-                  key={p}
-                  onClick={() => setPart(p)}
-                  style={{
-                    width: 26, height: 26, borderRadius: 6, fontSize: ".7rem",
-                    fontWeight: part === p ? 700 : 500,
-                    border: part === p ? "1.5px solid var(--orange,#C4622D)" : "1px solid var(--border,#ddd)",
-                    background: part === p ? "rgba(196,98,45,.12)" : "transparent",
-                    color: part === p ? "var(--orange,#C4622D)" : "var(--text-muted,#888)",
-                    cursor: "pointer",
-                  }}
-                >
-                  {p}
-                </button>
-              ))}
-            </div>
-            {/* Save button */}
+        {/* Part selector — always visible */}
+        <div style={{ display: "flex", alignItems: "center", gap: 4, marginBottom: 8, flexWrap: "wrap" }}>
+          <span style={{ fontSize: ".6rem", color: "var(--text-muted,#888)", fontWeight: 600, textTransform: "uppercase", letterSpacing: ".06em" }}>
+            Part:
+          </span>
+          {[1, 2, 3, 4, 5, 6, 7].map((p) => (
             <button
-              onClick={handleSave}
-              disabled={!studentCode || saveState === "saving"}
+              key={p}
+              onClick={() => setPart(p)}
               style={{
-                width: "100%", padding: "9px 0", borderRadius: 8, border: "none",
-                background: studentCode ? "var(--orange,#C4622D)" : "#e5e5e5",
-                color: studentCode ? "#fff" : "#aaa",
-                fontWeight: 700, fontSize: ".85rem",
-                cursor: studentCode && saveState === "idle" ? "pointer" : "default",
-                opacity: saveState === "saving" ? 0.7 : 1,
-                transition: "opacity .15s",
+                width: 26, height: 26, borderRadius: 6, fontSize: ".7rem",
+                fontWeight: part === p ? 700 : 500,
+                border: part === p ? "1.5px solid var(--orange,#C4622D)" : "1px solid var(--border,#ddd)",
+                background: part === p ? "rgba(196,98,45,.12)" : "transparent",
+                color: part === p ? "var(--orange,#C4622D)" : "var(--text-muted,#888)",
+                cursor: "pointer",
               }}
             >
-              {!studentCode
-                ? "Đăng nhập để lưu từ"
-                : saveState === "saving"
-                  ? "Đang lưu…"
-                  : "✓ Lưu vào Vocab"}
+              {p}
             </button>
-          </>
-        )}
+          ))}
+        </div>
+
+        {/* Save button — state transitions in-place */}
+        <button
+          onMouseDown={(e) => e.stopPropagation()} // prevent backdrop from firing
+          onClick={handleSave}
+          disabled={!studentCode || saveState === "saving" || saveState === "saved"}
+          style={{
+            width: "100%", padding: "9px 0", borderRadius: 8, border: "none",
+            fontWeight: 700, fontSize: ".85rem",
+            cursor: (studentCode && saveState === "idle") ? "pointer" : "default",
+            transition: "background .25s, transform .15s",
+            transform: saveState === "saved" ? "scale(1.02)" : "scale(1)",
+            background:
+              !studentCode        ? "#e5e5e5" :
+              saveState === "saved"  ? "#4A7C59" :
+              saveState === "error"  ? "#e05c5c" :
+              "var(--orange,#C4622D)",
+            color: studentCode ? "#fff" : "#aaa",
+            opacity: saveState === "saving" ? 0.75 : 1,
+          }}
+        >
+          {!studentCode       ? "Đăng nhập để lưu từ" :
+           saveState === "saving" ? "⏳ Đang lưu…" :
+           saveState === "saved"  ? "✅ Đã lưu vào Vocab!" :
+           saveState === "error"  ? "❌ Lỗi — thử lại" :
+                                    "✓ Lưu vào Vocab"}
+        </button>
       </div>
     </div>
   );

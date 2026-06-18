@@ -21,7 +21,6 @@ import * as path from "path";
 import { PrismaClient } from "@prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 import type { LessonDef, ParsedTest, SentenceDef } from "./types";
-import { getPart2Explanation } from "../lib/ai/gemini";
 
 // ─── Prisma ───────────────────────────────────────────────────────────────────
 
@@ -148,32 +147,7 @@ async function upsertLesson(
     ? lesson.audioDuration
     : (existing?.audioDuration ?? 0);
 
-  // For Part 2: generate AI explanation if not already present
-  let explanation = lesson.explanation ?? "";
-  if (lesson.part === 2 && lesson.correctOption && !explanation) {
-    if (existing?.explanation) {
-      explanation = existing.explanation; // preserve existing
-    } else {
-      try {
-        const optionSentences = lesson.sentences.filter((s) => s.optionLabel);
-        const options = optionSentences.map((s) => ({
-          label: s.optionLabel!,
-          text: s.content,
-        }));
-        const questionSentence = lesson.sentences.find((s) => !s.optionLabel);
-        if (questionSentence && options.length > 0) {
-          explanation = await getPart2Explanation(
-            questionSentence.content,
-            options,
-            lesson.correctOption
-          );
-          console.log(`      [AI] explanation generated for Q${lesson.questionStart}`);
-        }
-      } catch (e) {
-        console.warn(`      [AI] explanation failed for Q${lesson.questionStart}: ${(e as Error).message}`);
-      }
-    }
-  }
+  const explanation = existing?.explanation ?? lesson.explanation ?? "";
 
   const data = {
     partId,

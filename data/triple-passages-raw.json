@@ -1,0 +1,856 @@
+[
+  {
+    "id": "e055fef3-a8f2-45b6-8f6c-8d48ca3ead0a",
+    "order_index": 2,
+    "texts": [
+      "<b>E-mail 1</b><br><b>To:</b> a.raman@bgi.co.in<br><b>From:</b> s.kapoor@mail.co.in<br><b>Date:</b> 15 April<br><b>Subject:</b> Thank-you note<br><br>Dear Mr. Raman,<br><br>Thanks for encouraging me to apply for the position at Neela Advertising and for writing such a glowing referral on my behalf. Mr. Nirmal, Neela’s chief recruiting officer, expressed his admiration for the television commercials I produced for Delhi Works, but he explained that his company in fact needs someone who can also create Web content and applications. I was therefore not offered the position.<br><br>Kindly let me know if you happen to hear of any other positions that might be a good fit for me. Thank you in advance.<br><br>Best regards,<br>Shreya",
+      "<b>Letter</b><br>17 May<br>Shreya Kapoor<br>21 Hammam Street<br>Mumbai<br><br>Dear Ms. Kapoor,<br><br>I am pleased that you will be joining Mumbai Canning Ltd. on 1 June. I was impressed with the knowledge you displayed at the time you interviewed at our offices. Your specific experience at Delhi Works, Inc., will be of tremendous value here.<br><br>I am enclosing some documents that you should complete, sign, and bring with you when you report to Human Resources at 9:30 A.M. on your first day. You will receive a brief administrative orientation at that time. Your assigned mentor, Ms. Meera Sethi, will meet you there at 10:30 to escort you to your department, where she will review your training plan and the projects the team is currently working on. At noon she will be taking you to our cafeteria for lunch in the company of some of your colleagues. I hope to join you there as well.<br><br>Welcome to Mumbai Canning Ltd.!<br><br>Sincerely,<br>Zara Mehta<br>Mumbai Canning Ltd.",
+      "<b>E-mail 2</b><br><b>To:</b> a.raman@bgi.co.in<br><b>From:</b> s.kapoor@mail.co.in<br><b>Date:</b> 20 May<br><b>Subject:</b> Good news<br><br>Dear Mr. Raman,<br><br>Thank you for your last referral. The director offered me the position during our interview, and I will be starting on 1 June. I will be happy to provide you with details about my duties once I get settled.<br><br>Best,<br>Shreya"
+    ],
+    "questions": [
+      {
+        "q_idx": 1,
+        "text": "Why was Ms. Kapoor turned down for a position at Neela Advertising?",
+        "optA": "She failed to provide adequate referrals.",
+        "optB": "She did not meet the criteria for the job.",
+        "optC": "She missed the application deadline.",
+        "optD": "She was not available for a follow-up interview.",
+        "correct": "B",
+        "explanation": "{\"dan_chung\":\"Email 1 cho biết công ty Neela Advertising cần người có khả năng tạo nội dung Web, nhưng cô ấy không có kỹ năng này nên không được nhận việc.<br><br>💡 <b>Cách paraphrase:</b> <i>'needs someone who can also create Web content... I was therefore not offered the position'</i> (cần người làm được nội dung web... do đó tôi không được nhận) = <i>'She did not meet the criteria for the job'</i> (Cô ấy không đáp ứng được các tiêu chí cho công việc).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 2,
+        "text": "What is suggested about Ms. Kapoor?",
+        "optA": "She left her job at Delhi Works, Inc., several years ago.",
+        "optB": "She used to work with Mr. Nirmal at Delhi Works, Inc.",
+        "optC": "She will produce television commercials for Mumbai Canning Ltd.",
+        "optD": "She has recently switched careers.",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Email 1 nhắc đến việc cô sản xuất quảng cáo truyền hình (television commercials) cho Delhi Works. Thư mời làm việc (Letter) nhấn mạnh kinh nghiệm tại Delhi Works sẽ cực kỳ giá trị tại đây -> Gợi ý rằng cô sẽ tiếp tục làm công việc tương tự.<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Đoạn 1 nhắc <i>'commercials I produced for Delhi Works'</i> (quảng cáo tôi làm cho Delhi Works) -> Đoạn 2 công ty mới nhận định <i>'experience at Delhi Works... will be of tremendous value here'</i> (kinh nghiệm ở Delhi Works sẽ cực giá trị ở đây) = Suy ra <i>'She will produce television commercials for Mumbai Canning Ltd.'</i>\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 3,
+        "text": "Who most likely is Ms. Sethi?",
+        "optA": "A cafeteria manager",
+        "optB": "A payroll accountant",
+        "optC": "A marketing team member",
+        "optD": "A budget director",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Sethi là người hướng dẫn (mentor) của Kapoor và sẽ xem xét các dự án nhóm đang làm. Vì Kapoor làm công việc quảng cáo (marketing), Sethi chắc chắn cũng thuộc đội này.<br><br>💡 <b>Cách paraphrase (Suy luận nghề nghiệp):</b> Kapoor làm việc liên quan đến <i>'television commercials'</i> (quảng cáo truyền hình) -> Sethi là <i>'Your assigned mentor'</i> (người cố vấn được chỉ định của bạn) = Suy ra cả hai đều là <i>'marketing team member'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 4,
+        "text": "According to the letter, where will Ms. Mehta be at noon on June 1?",
+        "optA": "In a design meeting",
+        "optB": "On a business trip",
+        "optC": "At a job interview",
+        "optD": "At a dining facility",
+        "correct": "D",
+        "explanation": "{\"dan_chung\":\"Mehta viết trong thư: 'At noon she will be taking you to our cafeteria for lunch... I hope to join you there as well.' -> Bà ấy sẽ có mặt ở nhà ăn (dining facility) vào buổi trưa.<br><br>💡 <b>Cách paraphrase:</b> <i>'cafeteria for lunch'</i> (nhà ăn tự phục vụ để ăn trưa) = <i>'dining facility'</i> (cơ sở ăn uống).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 5,
+        "text": "How was Ms. Kapoor offered her new job?",
+        "optA": "In person",
+        "optB": "In a letter",
+        "optC": "By e-mail",
+        "optD": "Over the telephone",
+        "correct": "A",
+        "explanation": "{\"dan_chung\":\"Trong Email 2, Kapoor viết: 'The director offered me the position during our interview' -> Cô được mời nhận việc ngay trong buổi phỏng vấn (tức là gặp mặt trực tiếp - In person).<br><br>💡 <b>Cách paraphrase:</b> <i>'during our interview'</i> (ngay trong buổi phỏng vấn trực tiếp của chúng ta) = <i>'In person'</i> (Trực tiếp đối mặt).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      }
+    ]
+  },
+  {
+    "id": "c92a134e-43e6-4619-835a-53aedb6bfae2",
+    "order_index": 3,
+    "texts": [
+      "<b>E-mail 1</b><br><b>To:</b> Kate Millerson<br><b>From:</b> Daniel Friedman<br><b>Date:</b> January 25<br><b>Subject:</b> Upcoming focus group<br><br>Hi, Kate,<br><br>The next focus group to test the new fruit-flavored beverage ideas will be held on February 1 in the Greenville office. Mari Kobayashi will be leading it.<br><br>Please design a questionnaire to collect the group’s feedback using the one you created last month as a template and send it over to Mari. After the focus group takes place, please tally the results in the form of a chart. I need to incorporate this information into my monthly report to the chief marketing officer.<br><br>Thanks,<br>Daniel",
+      "<b>E-mail 2</b><br><b>To:</b> Daniel Friedman<br><b>From:</b> Kate Millerson<br><b>Date:</b> February 3<br><b>Subject:</b> Results of Greenville focus group<br><b>Attachment:</b> 1 Greenville Results<br><br>Hi, Daniel,<br><br>According to Mari Kobayashi, 25 of the 30 registered participants for Greenville took the taste test and completed the questionnaire. The results are mostly in line with the results from last month’s focus group. However, Mari did note that the Greenville group’s most popular flavor was unexpected.<br><br>Per your request, the tabulated results are attached. Please let me know if you will need additional information for your report to Ms. Acosta or if she wants to see the comments on the questionnaires.<br><br>Kate",
+      "<b>Greenville Focus Group</b><br><b>February 1</b><br><br><i>(Numbers indicate how many participants preferred each option.)</i><br><br><b>Type of drink</b><br>Carbonated: (8) | Noncarbonated: (17)<br><br><b>Highest price willing to pay</b><br>$1.25: (5) | $1.50: (12) | $2.00: (5) | $2.50: (3)<br><br><b>Flavor</b><br>Cherry: (2) | Lemon: (7) | Lime: (13) | Orange: (3)"
+    ],
+    "questions": [
+      {
+        "q_idx": 1,
+        "text": "In the first e-mail, what is indicated about Ms. Millerson?",
+        "optA": "She has designed questionnaires before.",
+        "optB": "She will lead a focus group on February 1.",
+        "optC": "She will interview Ms. Kobayashi.",
+        "optD": "She has been transferred to the Greenville office.",
+        "correct": "A",
+        "explanation": "{\"dan_chung\":\"Daniel dặn cô dùng bảng khảo sát mà cô đã tạo tháng trước làm mẫu ('using the one you created last month as a template').<br><br>💡 <b>Cách paraphrase:</b> <i>'using the one [questionnaire] you created last month'</i> (sử dụng cái mà bạn đã tạo tháng trước) = <i>'She has designed questionnaires before'</i> (Cô ấy đã từng thiết kế các bảng khảo sát trước đây).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 2,
+        "text": "What does Mr. Friedman say he will do with Ms. Millerson’s data?",
+        "optA": "Distribute it to his staff",
+        "optB": "Show it to a new client",
+        "optC": "Include it in a report",
+        "optD": "Write an article based on it",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Daniel viết: 'I need to incorporate this information into my monthly report'.<br><br>💡 <b>Cách paraphrase:</b> <i>'incorporate this information into my monthly report'</i> (kết hợp thông tin này vào báo cáo hàng tháng của tôi) = <i>'Include it in a report'</i> (Bao gồm nó trong một bản báo cáo).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 3,
+        "text": "Who most likely is Ms. Acosta?",
+        "optA": "The director of Human Resources",
+        "optB": "The chief marketing officer",
+        "optC": "A focus group leader",
+        "optD": "An information technology expert",
+        "correct": "B",
+        "explanation": "{\"dan_chung\":\"Trong Email 2, Kate nhắc đến báo cáo gửi cho Ms. Acosta. Đối chiếu Email 1, Daniel nói phải làm báo cáo gửi cho 'chief marketing officer' -> Suy ra Acosta là Giám đốc Marketing.<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Đoạn 1 viết <i>'my monthly report to the chief marketing officer'</i> -> Đoạn 2 nhắc lại việc đó <i>'your report to Ms. Acosta'</i> = <i>'Ms. Acosta is the chief marketing officer'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 4,
+        "text": "What does Ms. Millerson suggest about the Greenville focus group?",
+        "optA": "Some people arrived late.",
+        "optB": "The group will meet again soon.",
+        "optC": "Each attendee received a payment.",
+        "optD": "There were fewer participants than expected.",
+        "correct": "D",
+        "explanation": "{\"dan_chung\":\"Email 2 ghi '25 of the 30 registered participants... took the taste test' -> Chỉ có 25/30 người đăng ký tham gia -> Ít người tham gia hơn mong đợi.<br><br>💡 <b>Cách paraphrase (Toán học):</b> <i>'25 of the 30 registered participants'</i> (chỉ 25 trên tổng số 30 người đăng ký tham gia) = <i>'fewer participants than expected'</i> (ít người tham gia hơn mong đợi).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 5,
+        "text": "Which flavor preference surprised Ms. Kobayashi?",
+        "optA": "Cherry",
+        "optB": "Lemon",
+        "optC": "Lime",
+        "optD": "Orange",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Email 2 nhắc đến việc hương vị được yêu thích nhất (most popular flavor) gây bất ngờ. Nhìn vào bảng kết quả, vị Lime (Chanh) có nhiều người chọn nhất (13 người).<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn & Số liệu):</b> Đoạn 2 nhắc <i>'most popular flavor was unexpected [surprised]'</i> (vị phổ biến nhất gây bất ngờ) -> Đối chiếu Đoạn 3 (Bảng kết quả), mục Flavor có con số cao nhất là <i>'Lime: (13)'</i> = Lime là vị gây ngạc nhiên.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      }
+    ]
+  },
+  {
+    "id": "bc334c95-1083-46da-b1fa-0ff3960dbaaf",
+    "order_index": 4,
+    "texts": [
+      "<b>E-mail 1</b><br><b>To:</b> All Staff<br><b>From:</b> Leila Hedlund<br><b>Subject:</b> November software training<br><b>Date:</b> October 30<br><b>Attachment:</b> 1 Software Training Schedule<br><br>Dear Staff,<br><br>Throughout November, we will be holding mandatory training sessions for two of our major software products.<br><br>Training in the Abacus Deepthink software will be required for all staff members and can be completed in a single online session. Several possible session times are available. The software has gone through several changes recently, so even longtime users must attend.<br><br>The Optisafe software training will be offered in person and is a requirement only for Drug Safety department members. This past year, major upgrades have been made to the software, and all department staff will need to learn how to use its new capabilities.<br><br>Please look over the attached schedule and go to the company training Web site to sign up.<br><br>Thank you,<br>Leila Hedlund",
+      "<b>Kodarex Pharmaceuticals</b><br><b>Software Training Schedule</b><table border='1' cellpadding='8' style='border-collapse: collapse; width: 100%; margin: 15px 0; text-align: center; background-color: #fff;'><tr><th style='background-color: #f0f0f0;'>Date</th><th style='background-color: #f0f0f0;'>Title</th><th style='background-color: #f0f0f0;'>Time</th><th style='background-color: #f0f0f0;'>Location</th></tr><tr><td>November 6</td><td>Abacus Deepthink</td><td>9 A.M.–11 A.M.</td><td>Online</td></tr><tr><td>November 9</td><td>Optisafe</td><td>9 A.M.–1 P.M.</td><td>Building C, Room 822</td></tr><tr><td>November 14</td><td>Abacus Deepthink</td><td>1 P.M.–3 P.M.</td><td>Online</td></tr><tr><td>November 17</td><td>Abacus Deepthink</td><td>10 A.M.–12 P.M.</td><td>Online</td></tr><tr><td>November 22</td><td>Optisafe</td><td>1 P.M.–5 P.M.</td><td>Building C, Room 822</td></tr><tr><td>November 27</td><td>Abacus Deepthink</td><td>3 P.M.–5 P.M.</td><td>Online</td></tr></table>",
+      "<b>E-mail 2</b><br><b>To:</b> Leila Hedlund<br><b>From:</b> Diego Ramos-Toro<br><b>Re:</b> November software training<br><b>Date:</b> October 31<br><br>Dear Leila,<br><br>I need to attend both software trainings, but I had planned to take off work from November 6 through November 18. Also, I must attend an all-day client meeting on November 22 that we cannot reschedule. Will there be any alternative sessions for the Optisafe training that I could attend?<br><br>Thank you,<br>Diego Ramos-Toro"
+    ],
+    "questions": [
+      {
+        "q_idx": 1,
+        "text": "According to the first e-mail, what is true about the Optisafe software?",
+        "optA": "It is replacing another software program.",
+        "optB": "It is used for data analysis.",
+        "optC": "It has undergone significant updates.",
+        "optD": "It is the focus of monthly trainings.",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Đoạn 3 của Email 1 nhắc đến Optisafe: 'major upgrades have been made to the software' -> Đã trải qua những cập nhật đáng kể.<br><br>💡 <b>Cách paraphrase:</b> <i>'major upgrades have been made'</i> (những nâng cấp lớn đã được thực hiện) = <i>'undergone significant updates'</i> (đã trải qua các bản cập nhật đáng kể).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 2,
+        "text": "According to the schedule, what do the Abacus Deepthink trainings have in common?",
+        "optA": "They are given on the same day of the month.",
+        "optB": "They are taught by the same instructor.",
+        "optC": "They are delivered through a Web site.",
+        "optD": "They all start at the same time.",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Nhìn vào cột Location trên lịch trình, tất cả các buổi đào tạo Abacus Deepthink đều được ghi là 'Online'.<br><br>💡 <b>Cách paraphrase:</b> <i>'Online'</i> (Trực tuyến) = <i>'delivered through a Web site'</i> (Được truyền tải/phân phối qua một trang web).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 3,
+        "text": "Why did Mr. Ramos-Toro write to Ms. Hedlund?",
+        "optA": "To register for a training session",
+        "optB": "To ask for help resolving a conflict",
+        "optC": "To report a software malfunction",
+        "optD": "To request additional time off",
+        "correct": "B",
+        "explanation": "{\"dan_chung\":\"Diego viết email để nhờ sắp xếp lại vì lịch học phần mềm Optisafe bị trùng với lịch nghỉ phép và lịch họp khách hàng của anh ấy.<br><br>💡 <b>Cách paraphrase (Mục đích tổng quát):</b> Cung cấp các thông tin trùng lịch (nghỉ phép, họp khách hàng) và hỏi <i>'Will there be any alternative sessions'</i> (Liệu có phiên học thay thế nào không) = <i>'ask for help resolving a conflict'</i> (yêu cầu trợ giúp giải quyết một sự trùng lặp/xung đột lịch trình).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 4,
+        "text": "What is suggested about Mr. Ramos-Toro?",
+        "optA": "He works in the Drug Safety department.",
+        "optB": "He completed a required training.",
+        "optC": "He is Ms. Hedlund’s supervisor.",
+        "optD": "He wants an alternative position in the company.",
+        "correct": "A",
+        "explanation": "{\"dan_chung\":\"Trong Email 2, Diego nói anh ấy phải học cả 2 phần mềm. Email 1 ghi rõ Optisafe 'is a requirement only for Drug Safety department members' -> Suy ra anh ấy làm ở phòng An toàn Thuốc.<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Đoạn 3 anh ấy nói <i>'I need to attend both software trainings [tức là bao gồm cả Optisafe]'</i> -> Đoạn 1 quy định <i>'Optisafe... is a requirement only for Drug Safety department members'</i> = Chứng tỏ <i>'He works in the Drug Safety department'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 5,
+        "text": "When will Mr. Ramos-Toro most likely complete a training?",
+        "optA": "On November 14",
+        "optB": "On November 17",
+        "optC": "On November 22",
+        "optD": "On November 27",
+        "correct": "D",
+        "explanation": "{\"dan_chung\":\"Diego nghỉ phép từ 6 đến 18/11 nên bỏ lỡ các buổi học Abacus ngày 6, 14, 17. Anh ấy bận họp ngày 22. Vậy lịch học Abacus duy nhất còn lại để anh ấy tham gia là vào ngày 27/11.<br><br>💡 <b>Cách paraphrase (Toán học & Loại trừ):</b> Bận nghỉ phép <i>'November 6 through November 18'</i> (loại ngày 6, 14, 17) + Bận họp cả ngày <i>'November 22'</i> (loại ngày 22) -> Trên bảng lịch trình, ngày duy nhất còn sót lại anh ấy có thể đi học là <i>'November 27'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      }
+    ]
+  },
+  {
+    "id": "d9ce8e2f-5310-4754-9d4f-5047f3a88cd9",
+    "order_index": 5,
+    "texts": [
+      "<b>E-mail 1</b><br><b>To:</b> Linton Business Alliance members<br><b>From:</b> Robin Fowler<br><b>Date:</b> June 12<br><b>Subject:</b> Organizational meeting<br><b>Attachment:</b> 1 Proposed agenda<br><br>Hello everyone,<br><br>I am reaching out to determine when we can meet. Since news about the creation of our Business Alliance is generating interest within the community, it is time to create some written materials to promote ourselves.<br><br>I would like to spend time at our meeting formulating an action plan for soliciting members. I have attached a draft agenda. It should not take long to coordinate our assignments for speaking to local business owners, but we could probably save meeting time by doing this online before the meeting.<br><br>Please send me an e-mail with your availability for the next few weeks. I understand that Sasha Zimmer is out of town until early July, but I still hope we can find a meeting date and time that will work for everyone.<br><br>Robin Fowler",
+      "<b>Organizational meeting — Proposed agenda</b><br><br><b>10:00 A.M.</b> — Introductions<br><b>10:15 A.M.</b> — Item 1: Discussion to define mission statement and identify three initiatives for the year<br><b>11:00 A.M.</b> — Item 2: Media training workshop with Brandon Clark*<br><b>12:00 noon</b> — Item 3: Assign tasks for creation of Alliance communications: press release, letter to local business owners, brochure, and a Web page highlighting membership<br><b>12:30 P.M.</b> — Item 4: Assign Alliance members to speak with business owners<br><b>12:45 P.M.</b> — Adjourn<br><br><i>*Brandon Clark, a news anchor at the Ulani News Network, has offered to lead a workshop about interacting with the media. He will emphasize the importance of preparing talking points and staying on message.</i>",
+      "<b>E-mail 2</b><br><b>To:</b> Linton Business Alliance members<br><b>From:</b> Robin Fowler<br><b>Date:</b> June 22<br><b>Subject:</b> Finalized organizational meeting<br><b>Attachment:</b> 1 Final agenda<br><br>Thanks to everyone for your feedback. The final agenda is attached. We have confirmed the workshop for June 28 at the Linton Community Library. The library opens at 10:00 A.M., and staff will be on hand to help set up the room.<br><br>I’d like to stress the importance of sticking to the agenda because our time together is limited. Those meeting participants who would like to discuss any topics further can perhaps enjoy some lunch after the meeting. I will plan to go to Devon’s Sandwich Shop, which is just one block south of the library. All are welcome to join me.<br><br>Robin Fowler"
+    ],
+    "questions": [
+      {
+        "q_idx": 1,
+        "text": "Based on the first e-mail, what is most likely true about the Linton Business Alliance?",
+        "optA": "It opposes a city policy.",
+        "optB": "It is a new organization.",
+        "optC": "It charges membership fees.",
+        "optD": "It is led by city officials.",
+        "correct": "B",
+        "explanation": "{\"dan_chung\":\"Email 1 nhắc đến 'creation of our Business Alliance' (sự thành lập Liên minh của chúng ta) và đây là cuộc họp 'Organizational' (tổ chức ban đầu) -> Đây là một tổ chức mới.<br><br>💡 <b>Cách paraphrase:</b> <i>'creation of our Business Alliance'</i> (việc thành lập Liên minh của chúng ta) = <i>'It is a new organization'</i> (Nó là một tổ chức mới).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 2,
+        "text": "What item does Ms. Fowler suggest could be removed from the proposed agenda?",
+        "optA": "Item 1",
+        "optB": "Item 2",
+        "optC": "Item 3",
+        "optD": "Item 4",
+        "correct": "D",
+        "explanation": "{\"dan_chung\":\"Trong Email 1, cô ấy viết 'coordinate our assignments for speaking to local business owners... save meeting time by doing this online' -> Cô ấy muốn làm việc này online thay vì làm trong cuộc họp. Đối chiếu lịch trình, đây là Item 4.<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Đoạn 1 đề xuất <i>'coordinate our assignments for speaking to local business owners... save meeting time by doing this online'</i> (phân công việc nói chuyện với chủ doanh nghiệp online để tiết kiệm giờ họp) -> Nhìn vào Đoạn 2, mục liên quan đến <i>'speak with business owners'</i> chính là <i>'Item 4'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 3,
+        "text": "What does the proposed agenda indicate about Mr. Clark?",
+        "optA": "He is applying for membership.",
+        "optB": "He will be a guest speaker.",
+        "optC": "He is a retired journalist.",
+        "optD": "He will take notes during a discussion.",
+        "correct": "B",
+        "explanation": "{\"dan_chung\":\"Phần ghi chú cuối lịch trình viết rằng Brandon Clark sẽ 'lead a workshop' (dẫn dắt hội thảo) -> Ông ấy sẽ là một diễn giả khách mời.<br><br>💡 <b>Cách paraphrase:</b> <i>'lead a workshop'</i> (dẫn dắt một buổi hội thảo đào tạo) = <i>'be a guest speaker'</i> (trở thành một diễn giả khách mời).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 4,
+        "text": "What can be concluded about the upcoming meeting?",
+        "optA": "It will be open to the general public.",
+        "optB": "It will receive significant media attention.",
+        "optC": "It will be missing at least one group member.",
+        "optD": "It will require attendees to bring some equipment.",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Email 1 báo Sasha Zimmer đi vắng đến đầu tháng 7. Email 2 chốt lịch họp vào ngày 28/6. Suy ra Sasha sẽ không thể tham dự cuộc họp này.<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Đoạn 1 nói <i>'Sasha Zimmer is out of town until early July'</i> (Sasha đi vắng đến đầu tháng 7) -> Đoạn 3 chốt lịch họp là <i>'June 28'</i> (28/6) = Suy ra <i>'missing at least one group member'</i> (sẽ vắng mặt ít nhất một thành viên trong nhóm).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 5,
+        "text": "In the second e-mail, what information about lunch does Ms. Fowler provide?",
+        "optA": "The time of a reservation",
+        "optB": "The number of attendees",
+        "optC": "The cost",
+        "optD": "The location",
+        "correct": "D",
+        "explanation": "{\"dan_chung\":\"Cô ấy rủ mọi người ăn trưa tại 'Devon’s Sandwich Shop' -> Cung cấp thông tin về địa điểm.<br><br>💡 <b>Cách paraphrase:</b> <i>'go to Devon’s Sandwich Shop'</i> (đi tới tiệm Sandwich Devon) = Cung cấp thông tin về <i>'The location'</i> (Địa điểm ăn trưa).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      }
+    ]
+  },
+  {
+    "id": "ea91a392-8ebb-4c11-a094-ebff5f5312d0",
+    "order_index": 6,
+    "texts": [
+      "<b>Brochure</b><br><b>Elvinna’s</b><br><br>Located just outside of Nassau, the capital city of The Bahamas, Elvinna’s is the ideal venue for your reception, banquet, or business meeting. Away from the hustle and bustle of the city, it is surrounded by lush gardens featuring a variety of beautiful sculptures.<br><br>The Alameda Room seats between 100 and 250 people comfortably, and our largest space, the Bougainvillea Room, is perfect for up to 300 guests. For business meetings, the Tamarind Room can accommodate up to 50 guests, while the Waterfall Room, slightly larger, seats up to 80 people. Our two business meeting spaces are outfitted with the latest technology to support productive and efficient meetings.<br><br>Our elegant restaurant, the Candlewood Tree, offers an ample menu that takes into account many dietary restrictions and preferences. Plan ahead to join us on July 10 when we offer a special Independence Day dinner menu!<br><br>To book an event, visit elvinnas.bs. First-time reservations for select dates receive a 15 percent discount. For further information call 242-555-0135.",
+      "<b>E-mail 1</b><br><b>To:</b> Tanika Nichols<br><b>From:</b> Brian Darville<br><b>Date:</b> 18 February<br><b>Subject:</b> Anniversary planning<br><br>Hello, Tanika,<br><br>I visited Elvinna’s and looked at the space that you suggested might be right for our company’s anniversary celebration. Their catering menu would suit the various preferences of our expected guests, now numbering over 250. Currently the room is available on two Saturdays, 15 July and 5 August; it is also available on Wednesday, 23 August. Note that this last date would qualify for a nice discount.<br><br>Let me know if I have your approval to book this room. We need to make a decision quickly before other parties reserve those dates. I’ll be in touch soon about rescheduling the awards ceremony in May.<br><br>Brian",
+      "<b>E-mail 2</b><br><b>To:</b> Brian Darville<br><b>From:</b> Tanika Nichols<br><b>Date:</b> 18 February<br><b>Subject:</b> Anniversary planning<br><br>Hello, Brian,<br><br>Thank you for the information about Elvinna’s. Let’s take advantage of that discount date they are offering. It may help us stay within our budget. Please contact them to make the reservation.<br><br>Tanika Nichols, Senior Vice President<br>Nassau Telecommunications"
+    ],
+    "questions": [
+      {
+        "q_idx": 1,
+        "text": "What does the brochure mention about Elvinna’s?",
+        "optA": "It is able to host groups of various types.",
+        "optB": "It is conveniently located in downtown Nassau.",
+        "optC": "It has hired a new chef for its restaurant.",
+        "optD": "It plans to renovate a business center.",
+        "correct": "A",
+        "explanation": "{\"dan_chung\":\"Tờ rơi quảng cáo đây là địa điểm lý tưởng cho 'reception, banquet, or business meeting' (tiệc chiêu đãi, tiệc lớn, hoặc họp doanh nghiệp).<br><br>💡 <b>Cách paraphrase:</b> Việc có thể tổ chức <i>'reception, banquet, or business meeting'</i> = <i>'able to host groups of various types'</i> (có khả năng tổ chức cho các nhóm nhiều loại hình khác nhau).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 2,
+        "text": "What does Mr. Darville indicate about the plan for his company’s celebration?",
+        "optA": "It should feature a simple menu.",
+        "optB": "It will need to be rescheduled.",
+        "optC": "It will include an awards ceremony.",
+        "optD": "It is a decision he cannot make alone.",
+        "correct": "D",
+        "explanation": "{\"dan_chung\":\"Trong Email 1, Brian viết: 'Let me know if I have your approval to book this room' -> Anh ấy cần sự phê duyệt của sếp.<br><br>💡 <b>Cách paraphrase:</b> Việc phải hỏi <i>'if I have your approval'</i> (liệu tôi có được sự phê duyệt của bạn không) = <i>'decision he cannot make alone'</i> (đó là một quyết định anh ấy không thể tự mình đưa ra).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 3,
+        "text": "Where will the company’s anniversary celebration most likely be held?",
+        "optA": "In the Alameda Room",
+        "optB": "In the Bougainvillea Room",
+        "optC": "In the Tamarind Room",
+        "optD": "In the Waterfall Room",
+        "correct": "B",
+        "explanation": "{\"dan_chung\":\"Trong Email 1, Brian nhắc đến lượng khách là 'over 250' (hơn 250 người). Đối chiếu với Tờ rơi, chỉ có Bougainvillea Room sức chứa lên tới 300 người mới đủ chỗ (Alameda tối đa chỉ 250).<br><br>💡 <b>Cách paraphrase (Toán học & Liên kết):</b> Lượng khách <i>'over 250'</i> (trên 250) -> Chỉ có phòng <i>'Bougainvillea Room... up to 300 guests'</i> (lên tới 300 khách) là đáp ứng được.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 4,
+        "text": "Why is Mr. Darville concerned?",
+        "optA": "Not enough people have responded to an invitation.",
+        "optB": "He thinks that a different venue might cost less.",
+        "optC": "A venue that he likes might be reserved by another group.",
+        "optD": "He has not been able to secure entertainment.",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Brian giục sếp: 'We need to make a decision quickly before other parties reserve those dates' -> Lo sợ địa điểm bị nhóm khác đặt mất.<br><br>💡 <b>Cách paraphrase:</b> <i>'before other parties reserve those dates'</i> (trước khi các bên khác đặt chỗ vào những ngày đó) = <i>'reserved by another group'</i> (bị đặt bởi một nhóm khác).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 5,
+        "text": "When will Nassau Telecommunications’ celebration most likely take place?",
+        "optA": "On July 10",
+        "optB": "On July 15",
+        "optC": "On August 5",
+        "optD": "On August 23",
+        "correct": "D",
+        "explanation": "{\"dan_chung\":\"Ở Email 2, sếp Tanika quyết định chọn ngày được giảm giá ('take advantage of that discount date'). Ở Email 1, Brian cho biết ngày được giảm giá là 23 tháng 8.<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Đoạn 3 sếp chốt <i>'take advantage of that discount date'</i> (tận dụng ngày có giảm giá) -> Đoạn 2 chỉ ra ngày đó là <i>'Wednesday, 23 August... qualify for a nice discount'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      }
+    ]
+  },
+  {
+    "id": "1396800a-04c1-4de2-8f8f-545a90fb73a6",
+    "order_index": 7,
+    "texts": [
+      "<b>E-Mail Message</b><br><b>To:</b> Andrea Williams &lt;a.williams@cardiocentre.co.uk&gt;<br><b>From:</b> Samuel Penfold &lt;s.penfold@cardiocentre.co.uk&gt;<br><b>Date:</b> 2 August<br><b>Subject:</b> Re: Cardiology conference<br><br>Dear Dr. Williams,<br><br>Yes, I will be going to the cardiology conference, and I am looking forward to it. Unfortunately, I will not be able to travel there with you because I am seeing patients until 3 P.M. on 5 August. I will have to miss the first day’s sessions, but I will be on-site that evening and for the next two days.<br><br>Maybe we can have dinner together one evening? Evrim Turgut was telling me about your research together into diagnostic imaging technologies, and I would love the chance to discuss it with you.<br><br>Let me know when you will be free.<br><br>All best,<br>Samuel Penfold, MD",
+      "<b>NTS Rail Ticket</b><br><br><b>Train Number:</b> EX111<br><b>Reservation:</b> 4JK5 4RN5 4XW8<br><b>Class:</b> STANDARD<br><b>Date:</b> 5 AUGUST<br><b>Passenger:</b> ANDREA WILLIAMS<br><b>Adult:</b> ONE<br><b>Price:</b> £18.00<br><b>Return Trip:</b> NOT INCLUDED<br><b>From:</b> LANCASTER<br><b>Seat Number:</b> NONE ASSIGNED<br><i>Printed on 1 August</i><br><b>To:</b> MANCHESTER<br><b>Fare:</b> ADVANCE PURCHASE",
+      "<b>Train Schedule — NTS Rail</b><br><b>Lancaster to Manchester</b><table border='1' cellpadding='8' style='border-collapse: collapse; width: 100%; margin: 15px 0; text-align: center; background-color: #fff;'><tr><th style='background-color: #f0f0f0;'>Train Number</th><th style='background-color: #f0f0f0;'>Departure Time</th><th style='background-color: #f0f0f0;'>Duration</th><th style='background-color: #f0f0f0;'>Arrival Time</th><th style='background-color: #f0f0f0;'>Price</th></tr><tr><td>EX111</td><td>7:00 A.M.</td><td>55 min</td><td>7:55 A.M.</td><td>£20.00</td></tr><tr><td>RN902</td><td>8:30 A.M.</td><td>1 h 01 min</td><td>9:31 A.M.</td><td>£20.00</td></tr><tr><td>EX224</td><td>10:15 A.M.</td><td>1 h 15 min</td><td>11:30 A.M.</td><td>£18.00</td></tr><tr><td>RNS16</td><td>12:30 P.M.</td><td>1 h 25 min</td><td>1:55 P.M.</td><td>£18.00</td></tr><tr><td>EX670</td><td>2:00 P.M.</td><td>1 h 35 min</td><td>3:35 P.M.</td><td>£18.00</td></tr><tr><td>RN823</td><td>4:45 P.M.</td><td>1 h 05 min</td><td>5:50 P.M.</td><td>£20.00</td></tr></table><i>Purchasing tickets online at https://www.ntsrail.co.uk more than 24 hours before your trip entitles you to a 10 percent discount off the above-listed fares. Full-price tickets are available at all NTS Rail kiosks.</i>"
+    ],
+    "questions": [
+      {
+        "q_idx": 1,
+        "text": "Who most likely is Evrim Turgut?",
+        "optA": "A medical doctor",
+        "optB": "An office manager",
+        "optC": "A conference organizer",
+        "optD": "A customer service representative",
+        "correct": "A",
+        "explanation": "{\"dan_chung\":\"Email nhắc đến việc Turgut và bác sĩ Williams cùng nghiên cứu công nghệ chẩn đoán hình ảnh y khoa -> Họ là bác sĩ.<br><br>💡 <b>Cách paraphrase (Suy luận ngữ cảnh):</b> Thực hiện <i>'research together into diagnostic imaging technologies'</i> (nghiên cứu chung về công nghệ chẩn đoán hình ảnh) với Dr. Williams = Cùng nghề nghiệp y khoa <i>'A medical doctor'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 2,
+        "text": "What does the ticket indicate about Dr. Williams’ trip?",
+        "optA": "She will be traveling in first class.",
+        "optB": "She will be changing trains during her trip.",
+        "optC": "She will be using the same ticket for her return trip.",
+        "optD": "She will be able to choose where to sit.",
+        "correct": "D",
+        "explanation": "{\"dan_chung\":\"Trên vé tàu ghi 'Seat Number: NONE ASSIGNED' (Không chỉ định chỗ ngồi) -> Cô ấy có thể tự do chọn chỗ ngồi trên tàu.<br><br>💡 <b>Cách paraphrase:</b> <i>'NONE ASSIGNED'</i> (Không có chỗ nào được ấn định trước) = <i>'choose where to sit'</i> (có thể tự do chọn nơi ngồi).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 3,
+        "text": "Based on his availability, what train will Dr. Penfold most likely take?",
+        "optA": "EX111",
+        "optB": "EX224",
+        "optC": "RNS16",
+        "optD": "RN823",
+        "correct": "D",
+        "explanation": "{\"dan_chung\":\"Trong Email, bác sĩ Penfold nói phải khám cho bệnh nhân đến 3 P.M. Đối chiếu với lịch trình, chuyến tàu duy nhất phù hợp (khởi hành sau 3h chiều) là chuyến RN823 khởi hành lúc 4:45 P.M.<br><br>💡 <b>Cách paraphrase (Logic & Bảng biểu):</b> Bận đến <i>'3 P.M.'</i> -> Nhìn bảng, chỉ có chuyến <i>'RN823 lúc 4:45 P.M.'</i> là khởi hành sau thời gian đó.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 4,
+        "text": "What is suggested about Dr. Williams?",
+        "optA": "She works in Manchester.",
+        "optB": "She travels by train on a regular basis.",
+        "optC": "She bought her ticket at a reduced price.",
+        "optD": "She made her reservation at the Lancaster train station.",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Vé của cô ấy ghi chuyến EX111 giá £18. Tuy nhiên trên bảng lịch trình, chuyến này có giá £20. Cô ấy được giảm giá nhờ mua vé Advance Purchase qua mạng.<br><br>💡 <b>Cách paraphrase (So sánh số liệu):</b> Vé thực tế ghi <i>'£18.00'</i> >< Lịch trình niêm yết giá <i>'£20.00'</i> = <i>'bought her ticket at a reduced price'</i> (mua vé với giá đã được giảm).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 5,
+        "text": "According to the schedule, what is true about the train trips?",
+        "optA": "They last the same length of time.",
+        "optB": "They are cheaper in the morning.",
+        "optC": "They will end at the same destination.",
+        "optD": "They must be purchased in person.",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Tiêu đề của lịch trình là 'Lancaster to Manchester' -> Tất cả các chuyến tàu đều kết thúc ở cùng một điểm đến là Manchester.<br><br>💡 <b>Cách paraphrase:</b> Tiêu đề bảng chung <i>'Lancaster to Manchester'</i> = <i>'end at the same destination'</i> (tất cả đều kết thúc tại cùng một điểm đến).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      }
+    ]
+  },
+  {
+    "id": "61ec13d5-31d1-4f06-b2b6-01db48527810",
+    "order_index": 8,
+    "texts": [
+      "<b>E-mail 1</b><br><b>To:</b> Imogen Chambers &lt;ichambers@championos.com&gt;<br><b>From:</b> Reginald Lee &lt;rlee@cooperandcolsonlaw.org&gt;<br><b>Re:</b> Office supplies order<br><b>Date:</b> March 20<br><br>Dear Ms. Chambers,<br><br>We have a standing order filled by Champion Office Supply, with automatic delivery to us on the first day of each month. I am writing because we would like to modify our usual order for the upcoming month as outlined in the attached form. Please note that we would like ink toner that we have ordered in the past to be replaced by a different brand as indicated. Furthermore, we would like to add item WB918 to the order only this month, as we have recently hired new attorneys and we are preparing additional office spaces for them. Please use our credit card account that you have on file.<br><br>We continue to be pleased with the quality of your merchandise, especially the recycled stationery products with our firm’s logo.<br><br>Thank you.<br>Reginald Lee, Office Manager<br>Cooper and Colson Law",
+      "<b>Order Form</b><br><b>Order for:</b> Cooper and Colson Law<br><b>Contact:</b> Reginald Lee<br><b>Delivery date:</b> April 1<table border='1' cellpadding='8' style='border-collapse: collapse; width: 100%; margin: 15px 0; text-align: left; background-color: #fff;'><tr><th style='background-color: #f0f0f0;'>Item Description</th><th style='background-color: #f0f0f0;'>Item Number</th><th style='background-color: #f0f0f0;'>Quantity</th><th style='background-color: #f0f0f0;'>Price Per Unit</th><th style='background-color: #f0f0f0;'>Itemized Total</th></tr><tr><td>Printed letterhead</td><td>LH228</td><td>10 Reams</td><td>$54</td><td>$540</td></tr><tr><td>Whiteboard pens</td><td>WP263</td><td>10 Packages of 4</td><td>$4.99</td><td>$49.90</td></tr><tr><td>Cytronics ink toner cartridge</td><td>CPS76</td><td>8</td><td>$42</td><td>$336</td></tr><tr><td>Witeglow Magnetic Whiteboard (50\" x 35\")</td><td>WB918</td><td>4</td><td>$79.99</td><td>$319.96</td></tr></table><b>TAX:</b> $74.75<br><b>TOTAL:</b> $1320.61<br><br><i>Champion Office Supply</i>",
+      "<b>E-mail 2</b><br><b>To:</b> Reginald Lee &lt;rlee@cooperandcolsonlaw.org&gt;<br><b>From:</b> Imogen Chambers &lt;ichambers@championos.com&gt;<br><b>Re:</b> Office supplies order<br><b>Date:</b> March 21<br><br>Dear Mr. Lee,<br><br>We would be happy to accommodate your requests as outlined on your order form. Unfortunately, however, we are currently out of the Witeglow brand whiteboards. I can recommend another brand of magnetic whiteboard that has been well liked by other customers, called Stellar Whiteboards. They are considered the best on the market. They are typically $85 each, but I am willing to provide four at the same cost of the Witeglow brand, if you would like to give them a try. Just let me know. Thank you.<br><br>Kind regards,<br>Imogen Chambers"
+    ],
+    "questions": [
+      {
+        "q_idx": 1,
+        "text": "What is the purpose of the first e-mail?",
+        "optA": "To amend a regular order",
+        "optB": "To report a delivery error",
+        "optC": "To make a complaint about a product",
+        "optD": "To confirm a delivery date",
+        "correct": "A",
+        "explanation": "{\"dan_chung\":\"Email viết: 'we would like to modify our usual order' -> Muốn chỉnh sửa một đơn hàng thường xuyên.<br><br>💡 <b>Cách paraphrase:</b> <i>'modify our usual order'</i> (sửa đổi đơn hàng thường lệ) = <i>'amend a regular order'</i> (tu chỉnh một đơn hàng thường xuyên).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 2,
+        "text": "In the first e-mail, what is indicated about Cooper and Colson Law?",
+        "optA": "It has just installed a new photocopier.",
+        "optB": "It is currently expanding.",
+        "optC": "It is in the process of relocating.",
+        "optD": "It has just hired a new office manager.",
+        "correct": "B",
+        "explanation": "{\"dan_chung\":\"Email 1 nhắc đến việc 'recently hired new attorneys and we are preparing additional office spaces' -> Vừa tuyển luật sư mới và đang chuẩn bị thêm văn phòng -> Công ty đang mở rộng.<br><br>💡 <b>Cách paraphrase:</b> <i>'hired new attorneys and we are preparing additional office spaces'</i> (tuyển luật sư mới và chuẩn bị thêm không gian văn phòng) = <i>'currently expanding'</i> (hiện đang mở rộng).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 3,
+        "text": "What product is Mr. Lee particularly pleased with?",
+        "optA": "Paper with company letterhead",
+        "optB": "Whiteboard pens",
+        "optC": "The Witeglow magnetic whiteboard",
+        "optD": "The Cytronics ink toner cartridge",
+        "correct": "A",
+        "explanation": "{\"dan_chung\":\"Cuối Email 1, Lee viết rất hài lòng với 'recycled stationery products with our firm’s logo' (sản phẩm văn phòng phẩm tái chế in logo công ty) -> Tương đương với giấy tiêu đề.<br><br>💡 <b>Cách paraphrase:</b> <i>'stationery products with our firm’s logo'</i> (văn phòng phẩm in logo công ty) = <i>'Paper with company letterhead'</i> (Giấy có tiêu đề thư của công ty).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 4,
+        "text": "What item number identifies a replacement for a regularly ordered product?",
+        "optA": "LH228",
+        "optB": "WP263",
+        "optC": "CPS76",
+        "optD": "WB918",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Email 1 ghi chú hộp mực in (ink toner) sẽ được đổi sang thương hiệu khác. Nhìn bảng đặt hàng, hộp mực mới là nhãn hiệu Cytronics có mã số CPS76.<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Đoạn 1 yêu cầu <i>'ink toner... replaced by a different brand'</i> (đổi mực in sang hãng khác) -> Nhìn bảng Đoạn 2, mục Ink toner có Item Number là <i>'CPS76'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 5,
+        "text": "How much will the law firm pay for each Stellar brand whiteboard?",
+        "optA": "$49.90",
+        "optB": "$54.00",
+        "optC": "$79.99",
+        "optD": "$85.00",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Ở Email 2, nhà cung cấp hết bảng Witeglow nên bán bảng Stellar bằng đúng giá với Witeglow. Đối chiếu bảng đặt hàng, bảng Witeglow có giá $79.99.<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Đoạn 3 bán bảng mới với giá <i>'same cost of the Witeglow brand'</i> (cùng giá với hãng Witeglow) -> Bảng Đoạn 2 ghi Witeglow giá <i>'$79.99'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      }
+    ]
+  },
+  {
+    "id": "ea8f468c-5b5d-49bb-b5e0-9935f46fd8a6",
+    "order_index": 9,
+    "texts": [
+      "<b>Carson Office Supplies</b><br><b>SALE!</b><br><br>This weekend only, May 25–26, we're having our biggest sale of the year!<br><br><b>50% off</b> select printers<br><b>$15.99</b> for a 10-ream case of paper<br><b>25% off</b> all Sonama televisions<br><b>$150 off</b> all Rigukere office desks<br><b>$10 off</b> all Herbrot ink cartridges<br><br>Shop in store or online. Only while supplies last!",
+      "<b>Carson Office Supplies</b><br><b>Return Authorization Request</b><br><br><b>Order Number:</b> 300034122<br><b>Account Number:</b> Business5271<br><b>Name:</b> Jane Mori<br><b>E-mail:</b> j.mori@welsomf.com<br><b>Subject:</b> Recent purchase<br><br><b>Reason for Return:</b><br>I am the purchasing manager at Welso Manufacturing, and we have a business account with Carson Office Supplies. Last week I purchased the following items: 3 Rigukere office desks, 15 Herbrot ink cartridges, 30 notepads, and 5 boxes of envelopes. Today I noticed in an advertisement for your upcoming weekend sale that some of the items I purchased are going to be heavily discounted. Would it be possible for me to get a refund for the applicable items and then rebuy them at the lower weekend sale price?",
+      "<b>E-mail Response</b><br><b>To:</b> Jane Mori &lt;j.mori@welsomf.com&gt;<br><b>From:</b> Sheridan Homel &lt;shomel@cos.com&gt;<br><b>Date:</b> May 22<br><b>Subject:</b> Re: Exchange<br><b>Attachment:</b> Coupon, returns & exchanges<br><br>Dear Ms. Mori,<br><br>Thank you for your message and your continued business with Carson Office Supplies. Unfortunately, only items purchased on the official sale dates are eligible for the sale prices.<br><br>Because you have a business account with us, however, you automatically receive a 20 percent discount on bulk items (purchases of fifteen or more of the same item), which is deducted when you make a purchase through our online business portal. I can see from your order that this was the case for some of your items.<br><br>I can also offer you a 10 percent off coupon on your next purchase. The coupon is attached—it specifies the access code that you can use online. I will also attach our return and exchange procedures for your future reference.<br><br>Do not hesitate to contact me with any questions or concerns.<br><br>Sheridan Homel<br>Branch Manager<br>Carson Office Supplies"
+    ],
+    "questions": [
+      {
+        "q_idx": 1,
+        "text": "What is probably true about Ms. Mori?",
+        "optA": "She owns a business.",
+        "optB": "She is a first-time customer.",
+        "optC": "She received a discount on a printer.",
+        "optD": "She purchased her items before May 25.",
+        "correct": "D",
+        "explanation": "{\"dan_chung\":\"Đợt giảm giá (Sale) diễn ra vào ngày 25-26/5. Trong yêu cầu trả hàng, cô Mori nói đã mua hàng vào 'Last week' (tuần trước) -> Tức là cô mua hàng trước ngày 25/5.<br><br>💡 <b>Cách paraphrase (Logic thời gian):</b> Đoạn 1 thông báo sale vào <i>'May 25-26'</i> -> Đoạn 2 gửi ngày 22/5 phàn nàn rằng <i>'Last week I purchased...'</i> (tuần trước tôi mua) = <i>'purchased her items before May 25'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 2,
+        "text": "Why does Ms. Mori ask about returning some of her items?",
+        "optA": "She received the wrong order.",
+        "optB": "The items were broken when they arrived.",
+        "optC": "The desks she ordered are too small.",
+        "optD": "She wants to purchase items during the weekend sale.",
+        "correct": "D",
+        "explanation": "{\"dan_chung\":\"Cô ấy muốn trả hàng để hoàn tiền, sau đó mua lại chính những món đó vào đợt giảm giá cuối tuần.<br><br>💡 <b>Cách paraphrase:</b> <i>'get a refund... and then rebuy them at the lower weekend sale price'</i> (hoàn tiền rồi mua lại với giá sale) = <i>'wants to purchase items during the weekend sale'</i> (muốn mua đồ trong dịp sale cuối tuần).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 3,
+        "text": "According to the e-mail, why did Ms. Mori receive a discount on her bulk purchases?",
+        "optA": "She redeemed a coupon.",
+        "optB": "She used a business account.",
+        "optC": "She entered a special code online.",
+        "optD": "She shopped during an exclusive sale for members.",
+        "correct": "B",
+        "explanation": "{\"dan_chung\":\"Người quản lý phản hồi: 'Because you have a business account with us... you automatically receive a 20 percent discount on bulk items' -> Nhờ có tài khoản doanh nghiệp.<br><br>💡 <b>Cách paraphrase:</b> Bê nguyên thông tin trong bài: <i>'Because you have a business account with us...'</i> (Vì bạn có tài khoản doanh nghiệp với chúng tôi) = <i>'used a business account'</i> (đã dùng tài khoản doanh nghiệp).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 4,
+        "text": "What items from Ms. Mori's purchase qualified for the bulk discount?",
+        "optA": "The office desks and notepads",
+        "optB": "The ink cartridges and boxes of envelopes",
+        "optC": "The ink cartridges and notepads",
+        "optD": "The boxes of envelopes and the office desks",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Quy định giảm sỉ là mua từ 15 sản phẩm CÙNG LOẠI trở lên. Đối chiếu với đơn hàng, cô ấy mua: 3 bàn, 15 hộp mực, 30 cuốn sổ, 5 hộp phong bì. Chỉ có hộp mực và sổ là từ 15 trở lên.<br><br>💡 <b>Cách paraphrase (Tính toán & Đối chiếu):</b> Đoạn 3 quy định bulk là <i>'purchases of fifteen or more'</i> (từ 15 trở lên) -> Nhìn vào giỏ hàng ở Đoạn 2, thỏa mãn điều kiện này là <i>'15 Herbrot ink cartridges'</i> và <i>'30 notepads'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 5,
+        "text": "What was included with the e-mail?",
+        "optA": "An updated return form",
+        "optB": "A document about store policy",
+        "optC": "An application for a new account",
+        "optD": "A receipt for Ms. Mori's purchase",
+        "correct": "B",
+        "explanation": "{\"dan_chung\":\"Quản lý viết: 'I will also attach our return and exchange procedures' -> Đính kèm quy trình (chính sách) đổi trả hàng của cửa hàng.<br><br>💡 <b>Cách paraphrase:</b> <i>'return and exchange procedures'</i> (quy trình đổi và trả hàng) = <i>'document about store policy'</i> (tài liệu về chính sách cửa hàng).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      }
+    ]
+  },
+  {
+    "id": "5e9c317f-ebea-4518-9f39-c78309f5f4fc",
+    "order_index": 10,
+    "texts": [
+      "<b>Creative Tech Conference</b><br><br>Join us for the Tenth Annual Creative Tech Conference. Explore the latest technologies with the top innovators in their fields. Enjoy a full day of presentations, workshops, discussions, and exhibitions, culminating with a keynote address by Ayana Gonzalez, the founder of Grutenhur Tech.<br><br>May 12, 9 A.M.–6 P.M.<br>Bondal University<br>22 Markus Street<br>Ione, California<br><br>Purchase tickets online at www.creativetechcon.com/tickets.<br><i>Interested in being a sponsor? See the attached sponsor benefits brochure.</i>",
+      "<b>Creative Tech Conference</b><br><b>Sponsor Benefits</b><br><br>We couldn’t run the Creative Tech Conference without the help of sponsors. In addition to supporting entrepreneurs and innovators, sponsorship is a great way to get the name of your business out to our 500+ attendees in various tech fields. See below for sponsorship levels.<br><br><b>Innovator — $5,000</b><br>Your company’s logo on a large banner displayed during the keynote address<br>Free four-hour exhibitor booth<br>Your company’s logo featured on our Web site and conference program<br>Half-price tickets for all employees that attend the conference<br><br><b>Creator — $3,000</b><br>Your company’s logo on a large banner displayed during the final reception<br>Free four-hour exhibitor booth<br>Your company’s logo featured on our Web site and conference program<br><br><b>Entrepreneur — $2,000</b><br>Your company’s logo featured on our Web site and conference program<br>Free four-hour exhibitor booth<br><br><b>Patron — $1,000</b><br>Your company’s logo featured on our Web site and conference program<br><br><i>Please contact sponsors@creativetechconference.com for more information.</i>",
+      "<b>E-mail</b><br><b>To:</b> All Orlavel Analytics Staff<br><b>From:</b> Edsel Skyers<br><b>Subject:</b> Creative Tech Conference<br><b>Date:</b> May 2<br><br>Dear Staff,<br><br>I hope you will attend the Creative Tech Conference on May 12. It is taking place nearby at Bondal University. I have gone the past two years, and it is a great way to network and stay informed about the newest trends in our field. And because we are a sponsor of the event, our employees receive a discount on tickets. Plus, as some of you may know, the keynote speaker is a former employee! Let me know if you have any questions.<br><br>Edsel Skyers<br>Product Development Director<br>Orlavel Analytics"
+    ],
+    "questions": [
+      {
+        "q_idx": 1,
+        "text": "What does the invitation state about the Creative Tech Conference?",
+        "optA": "It is organized by university professors.",
+        "optB": "University students can request free tickets.",
+        "optC": "It is a one-day conference.",
+        "optD": "This is the first year the conference will take place.",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Quảng cáo ghi 'Enjoy a full day of presentations...' và lịch trình chỉ diễn ra trong đúng 1 ngày (May 12, 9 A.M.–6 P.M.).<br><br>💡 <b>Cách paraphrase:</b> <i>'Enjoy a full day'</i> & <i>'May 12'</i> (diễn ra trọn vẹn trong một ngày 12/5) = <i>'It is a one-day conference'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 2,
+        "text": "According to the brochure, what is a benefit of sponsoring the conference?",
+        "optA": "Sponsors can give a presentation at the conference.",
+        "optB": "Sponsors are invited to a special reception.",
+        "optC": "Sponsors can advertise their business to potential customers.",
+        "optD": "Sponsors get free product samples.",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Tờ rơi viết: 'sponsorship is a great way to get the name of your business out to our 500+ attendees' -> Giúp quảng bá công ty tới hơn 500 khách tham dự.<br><br>💡 <b>Cách paraphrase:</b> <i>'get the name of your business out to our 500+ attendees'</i> (đưa tên doanh nghiệp của bạn đến hơn 500 người tham dự) = <i>'advertise their business to potential customers'</i> (quảng cáo doanh nghiệp tới khách hàng tiềm năng).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 3,
+        "text": "Why did Mr. Skyers write the e-mail?",
+        "optA": "To introduce his staff to a new employee",
+        "optB": "To encourage his staff to attend an event",
+        "optC": "To tell his staff about new technology",
+        "optD": "To announce a research partnership with a university",
+        "correct": "B",
+        "explanation": "{\"dan_chung\":\"Mục đích của Edsel Skyers khi viết email là khuyên nhân viên đi dự hội nghị công nghệ.<br><br>💡 <b>Cách paraphrase:</b> <i>'I hope you will attend the Creative Tech Conference'</i> (Tôi hy vọng các bạn sẽ tham dự Hội nghị) = <i>'encourage his staff to attend an event'</i> (khuyến khích nhân viên đi dự sự kiện).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 4,
+        "text": "What is indicated about Ms. Gonzalez?",
+        "optA": "She is a sponsor of the Creative Tech Conference.",
+        "optB": "She lives in Ione, California.",
+        "optC": "She opened a business 10 years ago.",
+        "optD": "She previously worked for Orlavel Analytics.",
+        "correct": "D",
+        "explanation": "{\"dan_chung\":\"Quảng cáo cho biết Ayana Gonzalez là diễn giả chính. Email tiết lộ diễn giả chính từng là nhân viên cũ của Orlavel Analytics.<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Đoạn 1 giới thiệu <i>'keynote address by Ayana Gonzalez'</i> (diễn giả chính là Ayana) -> Đoạn 3 bật mí <i>'keynote speaker is a former employee!'</i> (diễn giả chính là cựu nhân viên) = <i>'previously worked for Orlavel Analytics'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 5,
+        "text": "What type of sponsor is Orlavel Analytics?",
+        "optA": "Innovator",
+        "optB": "Creator",
+        "optC": "Entrepreneur",
+        "optD": "Patron",
+        "correct": "A",
+        "explanation": "{\"dan_chung\":\"Email nhắc việc nhân viên công ty được giảm giá vé ('our employees receive a discount on tickets'). Đối chiếu với bảng gói tài trợ, chỉ có gói Innovator mới có quyền lợi 'Half-price tickets for all employees'.<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Đoạn 3 nói <i>'employees receive a discount on tickets'</i> (nhân viên được giảm giá vé) -> Nhìn sang bảng đặc quyền Đoạn 2, chỉ mục <i>'Innovator'</i> mới có lợi ích <i>'Half-price tickets for all employees'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      }
+    ]
+  },
+  {
+    "id": "4a11e71b-24e1-408b-ab41-31b195717fb2",
+    "order_index": 11,
+    "texts": [
+      "<b>Wonder Ridge Radio Broadcast Schedule, Monday–Friday</b><table border='1' cellpadding='8' style='border-collapse: collapse; width: 100%; margin: 15px 0; text-align: left; background-color: #fff;'><tr><th style='background-color: #f0f0f0;'>Time</th><th style='background-color: #f0f0f0;'>Program</th><th style='background-color: #f0f0f0;'>Description</th><th style='background-color: #f0f0f0;'>Host</th></tr><tr><td>6 A.M.–Noon</td><td>COFFEE BREAK</td><td>Local news and interviews with community members</td><td>Felice Finney</td></tr><tr><td>Noon–4 P.M.</td><td>AFTERNOON JAZZ</td><td>Music from traditional jazz to jazz fusion</td><td>Malachi Mize</td></tr><tr><td>4 P.M.–7 P.M.</td><td>FOLK FRENZY</td><td>Folk music from around the world</td><td>Penny Ariza</td></tr><tr><td>7 P.M.–10 P.M.</td><td>JOSIE’S JOINT</td><td>Modern sounds selected by our station’s own music director</td><td>Josie Jones</td></tr></table>",
+      "<b>E-mail</b><br><b>To:</b> feedback@wonderridgeradio.org<br><b>From:</b> pfabre@sendmail.net<br><b>Subject:</b> My new radio station!<br><b>Date:</b> October 22<br><br>To the folks at Wonder Ridge Radio:<br><br>As I was driving last week, I got tired of listening to sports talk and turned the dial. Suddenly, my car was filled with a song that I hadn’t heard in many years. It was traditional music from France, where my grandmother was born. She used to play that song when I was a child. I never expected to hear it on the radio here in Wonder Ridge. Thanks for this experience and for all your great programs.<br><br>Your new fan,<br>Pierre Fabre",
+      "<b>Wonder Ridge Radio Job Opening: Programming Assistant</b><br><b>Posted November 2</b><br><br><b>Job Description</b><br>The programming assistant reports to the director of programming and supports the radio station by performing a variety of research and communication functions. This role is entry-level, part-time position.<br><br><b>Responsibilities</b><br>- Conducting background research on interviewees<br>- Keeping up-to-date on news and news makers in order to suggest potential topics and guests for on-air interviews<br>- Updating the station’s Web site and program host biography pages<br>- Using scheduling software to update the broadcast schedule<br>- Communicating with listeners, especially via e-mail and social media<br><br><i>To apply, e-mail a résumé and cover letter to hiring@wonderridgeradio.org.</i>"
+    ],
+    "questions": [
+      {
+        "q_idx": 1,
+        "text": "According to the schedule, who is Ms. Jones?",
+        "optA": "The advertising manager at a radio station.",
+        "optB": "The host of a community news program.",
+        "optC": "The music director at Wonder Ridge Radio.",
+        "optD": "The host of a sports radio program.",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Lịch trình mục 7 P.M. ghi người dẫn chương trình Josie Jones mở nhạc do 'our station’s own music director' lựa chọn. Thực chất vì show tên là 'JOSIE'S JOINT' nên Josie chính là giám đốc âm nhạc.<br><br>💡 <b>Cách paraphrase:</b> Mô tả chương trình của Host Josie Jones là <i>'selected by our station’s own music director'</i> (được chọn bởi chính giám đốc âm nhạc của đài) = Cô ấy chính là <i>'The music director'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 2,
+        "text": "What is the purpose of the e-mail?",
+        "optA": "To express praise for the radio station.",
+        "optB": "To ask about job opportunities.",
+        "optC": "To request more sports talk show programming.",
+        "optD": "To inquire about the name of a song.",
+        "correct": "A",
+        "explanation": "{\"dan_chung\":\"Email kết thúc bằng câu 'Thanks for this experience and for all your great programs' -> Cảm ơn và khen ngợi đài phát thanh.<br><br>💡 <b>Cách paraphrase:</b> <i>'Thanks for this experience and for all your great programs'</i> (Cảm ơn vì trải nghiệm này và tất cả các chương trình tuyệt vời của các bạn) = <i>'express praise for the radio station'</i> (bày tỏ lời khen ngợi dành cho nhà đài).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 3,
+        "text": "When did Mr. Fabre most likely first listen to Wonder Ridge Radio?",
+        "optA": "Between 6 and noon.",
+        "optB": "Between noon and 4.",
+        "optC": "Between 4 and 7.",
+        "optD": "Between 7 and 10.",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Ông Fabre nghe được 'traditional music from France' (nhạc truyền thống Pháp). Thể loại này thuộc nhóm nhạc dân gian thế giới (Folk music from around the world), phát sóng ở chương trình FOLK FRENZY lúc 4 P.M.–7 P.M.<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Đoạn 2 miêu tả thể loại nhạc là <i>'traditional music from France'</i> (nhạc truyền thống từ Pháp) -> Đối chiếu bảng (Đoạn 1) khớp với thể loại <i>'Folk music from around the world'</i> (Nhạc dân gian từ khắp nơi trên thế giới) = Phát sóng <i>'Between 4 and 7'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 4,
+        "text": "What does the job advertisement suggest applicants must have?",
+        "optA": "A willingness to travel.",
+        "optB": "Familiarity with computers.",
+        "optC": "A degree in communications.",
+        "optD": "Extensive experience in the radio industry.",
+        "correct": "B",
+        "explanation": "{\"dan_chung\":\"Trách nhiệm công việc có yêu cầu 'Updating the station’s Web site', 'Using scheduling software' -> Cần phải thành thạo sử dụng máy tính.<br><br>💡 <b>Cách paraphrase:</b> Các nhiệm vụ <i>'Updating the... Web site'</i> (cập nhật trang web) & <i>'Using scheduling software'</i> (sử dụng phần mềm xếp lịch) = Đòi hỏi <i>'Familiarity with computers'</i> (sự quen thuộc với máy tính).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 5,
+        "text": "What radio program will probably receive the most support from the programming assistant?",
+        "optA": "Coffee Break",
+        "optB": "Afternoon Jazz",
+        "optC": "Folk Frenzy",
+        "optD": "Josie’s Joint",
+        "correct": "A",
+        "explanation": "{\"dan_chung\":\"Trợ lý phải làm nhiệm vụ 'Conducting background research on interviewees' (nghiên cứu người được phỏng vấn). Nhìn lên lịch, chương trình duy nhất có phỏng vấn (interviews) là Coffee Break.<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Trách nhiệm ở Đoạn 3 yêu cầu <i>'Conducting background research on interviewees'</i> (Nghiên cứu lý lịch những người được phỏng vấn) -> Nhìn sang bảng (Đoạn 1), chỉ có chương trình <i>'COFFEE BREAK'</i> là có mô tả <i>'interviews with community members'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      }
+    ]
+  },
+  {
+    "id": "8a0cbfd6-97eb-4a71-9faa-25cbe20be6bb",
+    "order_index": 12,
+    "texts": [
+      "<b>Instructions for Requesting Records</b><br><br>Thank you for your interest in official records and documents maintained by the City of Abilene. To file a request for public information, please follow these steps.<br><br>1. Create an account in the Records Center Web portal. Currently, all requests must be made through the portal.<br>2. Use the drop-down menu to locate the department from which you are seeking information and submit your request. You will receive a confirmation e-mail with a reference number.<br>3. The department staff will locate the requested records and contact you when they are available. You can have the records delivered to you, or you can pick them up in person. If you prefer to pick them up in person, you must make an appointment with the department staff.<br>4. If there are any fees associated with your request, you will receive an itemized statement detailing the services provided and the charges for those specific services.",
+      "<b>E-Mail Message</b><br><b>To:</b> Joo-Hee Park &lt;jhpark@coa.net&gt;<br><b>From:</b> Keith Brandenberg &lt;kbrandenberg@mailcurrent.com&gt;<br><b>Date:</b> May 3<br><b>Subject:</b> RE: Reference number W2486<br><br>Dear Ms. Park,<br><br>Thank you for confirming that my documents are available. I would like to pick them up in person as soon as possible. Do you have any appointments available this week?<br><br>I have a question about the fee. Apparently, I am being charged $300 for my documents. I do not understand why the fee is so high, and there was no explanation included in your e-mail. I have requested records several times in the past in my role with RJ Environmental Engineering and have never paid such a high fee. In this case, I am only requesting two maps of the city’s underground pipelines, which will inform our firm’s current work advising the city on wastewater management.<br><br>Please clarify the fee for me, and let me know if I can pick up my documents this week. Thank you.<br><br>Best regards,<br>Keith Brandenberg",
+      "<b>City of Abilene Administrative Building</b><br><br><i>Visitors must sign in prior to entering this facility. Please enter your name and the room you will visit in the logbook.</i><br><br><b>First-Floor Directory:</b><br>IT Services – Room 100<br>Parks and Recreation – Room 101<br>Transportation – Room 102<br>Wastewater – Room 103"
+    ],
+    "questions": [
+      {
+        "q_idx": 1,
+        "text": "What do the instructions indicate about records requests?",
+        "optA": "They can be made only on certain days.",
+        "optB": "They can be made only online.",
+        "optC": "They can be filed only by authorized personnel.",
+        "optD": "They can be filed only after a fee is paid.",
+        "correct": "B",
+        "explanation": "{\"dan_chung\":\"Mục 1 của Hướng dẫn ghi rõ 'all requests must be made through the portal' -> Tất cả các yêu cầu phải làm trên cổng thông tin mạng (online).<br><br>💡 <b>Cách paraphrase:</b> <i>'must be made through the portal'</i> (bắt buộc thực hiện thông qua cổng thông tin) = <i>'made only online'</i> (chỉ có thể thực hiện trực tuyến).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 2,
+        "text": "According to the e-mail, how does Mr. Brandenberg plan to use some public information?",
+        "optA": "To add information to a Web portal.",
+        "optB": "To help his company advise the city.",
+        "optC": "To identify an accounting error.",
+        "optD": "To learn how an agency is structured.",
+        "correct": "B",
+        "explanation": "{\"dan_chung\":\"Ông ấy viết 'inform our firm’s current work advising the city' -> Dùng bản đồ để giúp công ty của ông ấy tư vấn cho thành phố.<br><br>💡 <b>Cách paraphrase:</b> <i>'inform our firm’s current work advising the city'</i> (cung cấp thông tin cho công việc hiện tại của công ty chúng tôi trong việc tư vấn cho thành phố) = <i>'help his company advise the city'</i> (giúp công ty của anh ấy cố vấn cho thành phố).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 3,
+        "text": "What does the sign indicate visitors must do before entering a building?",
+        "optA": "Go through a security screening.",
+        "optB": "Get a parking permit.",
+        "optC": "Present some identification.",
+        "optD": "Sign a logbook.",
+        "correct": "D",
+        "explanation": "{\"dan_chung\":\"Biển báo quy định 'Visitors must sign in prior to entering this facility... enter your name... in the logbook' -> Khách phải ký vào sổ đăng ký (logbook).<br><br>💡 <b>Cách paraphrase:</b> Bê nguyên thông tin <i>'enter your name... in the logbook'</i> (điền tên vào sổ ghi chép) = <i>'Sign a logbook'</i> (Ký tên vào một cuốn sổ đăng ký).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 4,
+        "text": "What was Mr. Brandenberg expecting to receive?",
+        "optA": "An itemized statement of fees.",
+        "optB": "A letter from his company.",
+        "optC": "A phone call from a city official.",
+        "optD": "A password for the Web portal.",
+        "correct": "A",
+        "explanation": "{\"dan_chung\":\"Theo mục số 4 (Đoạn 1), nếu bị thu phí thì người nộp đơn sẽ nhận được bản sao kê chi tiết (itemized statement). Trong Email, ông ấy thắc mắc tại sao bị thu $300 mà lại không nhận được 'explanation' (lời giải thích/bản sao kê) nào.<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Đoạn 2 ông ấy phàn nàn <i>'there was no explanation included in your e-mail'</i> (không có lời giải thích/kê khai nào đính kèm) -> Bởi vì theo quy định Đoạn 1, ông ấy đáng lẽ phải <i>'receive an itemized statement detailing the... charges'</i> (nhận được một bản sao kê chi tiết biểu phí).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 5,
+        "text": "What room will Mr. Brandenberg most likely visit?",
+        "optA": "Room 100",
+        "optB": "Room 101",
+        "optC": "Room 102",
+        "optD": "Room 103",
+        "correct": "D",
+        "explanation": "{\"dan_chung\":\"Trong Email, ông Brandenberg nói ông ấy xin tài liệu liên quan đến 'wastewater management' (quản lý nước thải). Dựa vào Bảng chỉ dẫn, phòng Wastewater nằm ở Room 103.<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Đoạn 2 cho biết lĩnh vực làm việc là <i>'wastewater management'</i> (quản lý nước thải) -> Đoạn 3 chỉ đường <i>'Wastewater – Room 103'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      }
+    ]
+  },
+  {
+    "id": "a5e47ec6-8139-4ec2-a2b1-6f935c3b2dd2",
+    "order_index": 13,
+    "texts": [
+      "<b>Famous Actor, First Book</b><br><b>LONDON (25 February)</b>—Fans of Simon Eklund will be delighted with his autobiography, The Theatre Lights Dimmed, the first book he has written in his storied career as an actor. It provides wonderful insight into his career, starting with his first roles in cinema in his native Sweden, moving into his work in France and Italy, and finishing with his recent theatre work in the U.K.<br><br>In his book, Mr. Eklund dedicates a fair amount of text to discussing his mentor, Charles Gunnarsson, who helped him develop his skills early on in Stockholm. He also describes the difficulty of transitioning into different types of roles, especially from comedic to dramatic acting. He includes several funny anecdotes about his first attempts at acting onstage here in London. He describes them as disastrous, but anyone who saw his recent performance in Life and Games would say just the opposite.<br><br>Mr. Eklund has long been a captivating actor on stage and screen, and now he is a thoroughly engaging author.<br><br>—Uma Joshi",
+      "<b>E-mail 1</b><br><b>To:</b> Edith Hocking<br><b>From:</b> Uma Joshi<br><b>Date:</b> 2 March<br><b>Subject:</b> RE: Opportunity<br><br>Dear Edith,<br><br>Thank you for agreeing to arrange an interview with Mr. Eklund for me. I think this will be a great follow-up to my recent piece.<br><br>In a helpful coincidence, I will be visiting his home country next month to address a journalists’ convention. I am the featured speaker and will discuss the benefits of diversity in journalism. I’m sure we can set up something with Mr. Eklund just before or after my speech.<br><br>Best,<br>Uma Joshi<br>Arts and Culture Editor<br>Top News U.K.",
+      "<b>E-mail 2</b><br><b>To:</b> Uma Joshi &lt;ujoshi@topnews.co.uk&gt;<br><b>From:</b> Maria Cazalla &lt;mcazalla@zephyrmail.se&gt;<br><b>Date:</b> 20 March<br><b>Subject:</b> RE: Information<br><br>Dear Ms. Joshi,<br><br>We are all very excited about your interview next month with Mr. Eklund. He enjoys all your writing for Top News U.K.—the news stories, interviews, and, of course, your recent article about The Theatre Lights Dimmed.<br><br>I just wanted to finalize a few details with you. We have arranged transportation for you from your hotel to Mr. Eklund’s house and then back to the hotel. Please let me know how many people there will be in your group, because Mr. Eklund would like you all to stay for lunch.<br><br>Sincerely,<br>Maria Cazalla"
+    ],
+    "questions": [
+      {
+        "q_idx": 1,
+        "text": "What does the review mention about Mr. Eklund?",
+        "optA": "He enjoys his work as a director.",
+        "optB": "He has been a mentor to many young people.",
+        "optC": "He is a well-known actor.",
+        "optD": "He has written many books.",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Bài báo viết ông ấy có 'storied career as an actor' và 'captivating actor' -> Là một nam diễn viên nổi tiếng.<br><br>💡 <b>Cách paraphrase:</b> <i>'storied career as an actor'</i> (sự nghiệp diễn xuất nổi tiếng/nhiều thăng trầm đáng nhớ) = <i>'well-known actor'</i> (nam diễn viên nổi tiếng).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 2,
+        "text": "Where most likely will Ms. Joshi meet Mr. Eklund?",
+        "optA": "In Sweden",
+        "optB": "In France",
+        "optC": "In Italy",
+        "optD": "In the United Kingdom",
+        "correct": "A",
+        "explanation": "{\"dan_chung\":\"Email 1 nói Joshi sẽ đến thăm quê nhà của ông ấy ('home country'). Bài review báo cho biết Eklund sinh ra ở Thụy Điển ('his native Sweden') -> Cô ấy sẽ gặp ông ở Thụy Điển.<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Đoạn 2 nhắc <i>'visiting his home country'</i> (đến thăm đất nước quê hương anh ấy) -> Đoạn 1 định danh quê hương anh ấy là <i>'his native Sweden'</i> = <i>'In Sweden'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 3,
+        "text": "According to the first e-mail, what is one reason Ms. Joshi will travel in April?",
+        "optA": "To go on a vacation",
+        "optB": "To interview for a new job",
+        "optC": "To attend an international film festival",
+        "optD": "To speak at a conference",
+        "correct": "D",
+        "explanation": "{\"dan_chung\":\"Email 1 cô ấy viết: 'address a journalists’ convention. I am the featured speaker' -> Diễn thuyết tại một hội nghị nhà báo.<br><br>💡 <b>Cách paraphrase:</b> <i>'address a journalists’ convention'</i> (phát biểu tại một hội nghị nhà báo) & <i>'featured speaker'</i> (diễn giả chính) = <i>'speak at a conference'</i> (nói chuyện tại một hội nghị).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 4,
+        "text": "What is the purpose of the second e-mail?",
+        "optA": "To reserve a hotel room",
+        "optB": "To confirm meeting arrangements",
+        "optC": "To discuss an idea for a movie",
+        "optD": "To ask for transportation",
+        "correct": "B",
+        "explanation": "{\"dan_chung\":\"Người trợ lý viết email để 'finalize a few details' (chốt lại vài chi tiết) như phương tiện đi lại, số người đi cùng, bữa trưa -> Để xác nhận sự sắp xếp cho cuộc hẹn.<br><br>💡 <b>Cách paraphrase:</b> <i>'finalize a few details... arranged transportation... stay for lunch'</i> (chốt một vài chi tiết... đã sắp xếp xe cộ... ở lại ăn trưa) = <i>'confirm meeting arrangements'</i> (xác nhận các sắp xếp cho cuộc gặp).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 5,
+        "text": "What can be concluded about Mr. Eklund?",
+        "optA": "He hopes to write for a British news site.",
+        "optB": "He just hired a new assistant.",
+        "optC": "He was pleased with Ms. Joshi’s review of his book.",
+        "optD": "He frequently cooks special meals.",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Email 2 nói ông Eklund rất thích bài báo gần đây của cô Joshi về cuốn tự truyện The Theatre Lights Dimmed. Bài báo (đoạn 1) chính là một bài review ngợi khen do chính Joshi viết. -> Suy ra ông ấy rất hài lòng với bài đánh giá sách của cô.<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Đoạn 3 khen ngợi <i>'He enjoys all your writing... your recent article about The Theatre Lights Dimmed'</i> (Anh ấy thích tất cả bài viết của bạn... bài báo gần đây về [cuốn sách]) -> Đoạn 1 chính là <i>'Ms. Joshi’s review of his book'</i> = Anh ấy hài lòng (pleased) với bài đánh giá đó.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      }
+    ]
+  },
+  {
+    "id": "0808e9a6-98c7-4999-96c6-040fe9ab0759",
+    "order_index": 14,
+    "texts": [
+      "<b>E-mail 1</b><br><b>To:</b> jsantos@coloniamenor.com<br><b>From:</b> markash@amtrcorp.com<br><b>Date:</b> September 4<br><b>Subject:</b> Job tip<br><br>Hello, Juan,<br><br>It was nice to see you again at the Tech Writers’ Conference in Mexico City. You mentioned that your cousin Carlos Cruz wants to find a product design job here in Dallas. Well, the company I work for, AMTR Corporation, is about to post a job for a junior industrial designer, which might interest him. So far, the company has announced the opening only to current employees, but next week it will appear on the company Web site. The salary is good, and there may not be any qualified candidates in-house. Please let him know about this opportunity.<br><br>Heide Markas",
+      "<b>Web Page</b><br><b>AMTR Corporation – Careers – Current Opportunities</b><br><br><b>Junior Industrial Designer:</b> This is a full-time position developing and improving the full range of products manufactured by AMTR Corporation in Dallas, Texas.<br><br><b>Sample Job Duties:</b><br>- Design consumer and office supply products, including personal computers, tablets, copiers, and printers<br>- Collaborate with design team and colleagues from engineering, marketing, and manufacturing departments to develop new products<br>- Improve sustainability efforts by promoting the use of recycled, recyclable, and reusable materials<br><br><b>Qualifications:</b><br>- Understanding of design principles, theories, and concepts<br>- Ability to analyze and apply customer feedback<br>- Proven analytical and problem-solving skills<br>- Experience in creating sketches, storyboards, models, and prototypes<br>- Bachelor’s or master’s degree in industrial design",
+      "<b>E-mail 2</b><br><b>To:</b> Carlos Cruz &lt;ccruz@mail.com&gt;<br><b>From:</b> Pamela Wang &lt;wangp@amtrcorp.com&gt;<br><b>Date:</b> November 11<br><b>Subject:</b> Job Application<br><br>Dear Mr. Cruz,<br><br>Thank you for submitting your application for junior industrial designer at AMTR Corporation. Our hiring committee has reviewed your application and determined that you meet the qualifications for the position. We will contact you shortly to schedule an initial interview. Interviews will be held on-site at our Dallas headquarters during the first two weeks of December. In the meantime, you will receive a request for professional references via e-mail. Please respond to the request as soon as you receive it.<br><br>Cordially,<br>Pamela Wang<br>Human Resources Specialist<br>AMTR Corporation"
+    ],
+    "questions": [
+      {
+        "q_idx": 1,
+        "text": "What is the purpose of the first e-mail?",
+        "optA": "To share information about a new job opening",
+        "optB": "To ask whether a company is hiring new staff",
+        "optC": "To learn whether a colleague will attend an upcoming conference",
+        "optD": "To congratulate someone for getting a new job",
+        "correct": "A",
+        "explanation": "{\"dan_chung\":\"Heide viết email báo cho bạn mình về vị trí 'junior industrial designer' sắp được đăng tuyển tại công ty của cô ấy -> Chia sẻ thông tin về việc làm mới.<br><br>💡 <b>Cách paraphrase:</b> <i>'about to post a job... let him know about this opportunity'</i> (sắp đăng tuyển công việc... hãy cho anh ấy biết về cơ hội này) = <i>'share information about a new job opening'</i> (chia sẻ thông tin về một vị trí tuyển dụng mới).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 2,
+        "text": "What does the company that Ms. Markas works for produce?",
+        "optA": "Guides for creating Web sites",
+        "optB": "Operating manuals for passenger airplanes",
+        "optC": "Transportation system maps",
+        "optD": "Office equipment",
+        "correct": "D",
+        "explanation": "{\"dan_chung\":\"Email 1 cho biết Markas làm việc tại AMTR Corporation. Trên trang Web, AMTR được mô tả là thiết kế máy tính cá nhân, máy tính bảng, máy photocopy và máy in ('copiers, and printers') -> Thiết bị văn phòng.<br><br>💡 <b>Cách paraphrase (Liên kết & Từ vựng nhóm):</b> Đoạn 2 liệt kê các sản phẩm của AMTR gồm <i>'personal computers, tablets, copiers, and printers'</i> (máy tính, máy tính bảng, máy photo, máy in) = Tất cả đều thuộc nhóm <i>'Office equipment'</i> (Thiết bị văn phòng).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 3,
+        "text": "What is explained in the second e-mail?",
+        "optA": "The procedure for submitting an application",
+        "optB": "What applicants can expect during an interview",
+        "optC": "The next steps of the hiring process",
+        "optD": "AMTR Corporation’s expectations for designers",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Email của chuyên viên nhân sự (Đoạn 3) hướng dẫn Carlos các bước tiếp theo: lên lịch phỏng vấn vòng 1, chờ email yêu cầu thư giới thiệu -> Giải thích các bước tiếp theo trong quy trình tuyển dụng.<br><br>💡 <b>Cách paraphrase:</b> Lời hẹn <i>'schedule an initial interview'</i> (xếp lịch phỏng vấn đầu tiên) và <i>'receive a request for professional references'</i> (nhận yêu cầu nộp thư giới thiệu) = <i>'The next steps of the hiring process'</i> (Các bước tiếp theo của quy trình tuyển dụng).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 4,
+        "text": "What will AMTR Corporation do during the first two weeks of December?",
+        "optA": "Move its headquarters to Dallas",
+        "optB": "Begin reviewing applications",
+        "optC": "Send out professional references",
+        "optD": "Perform the first round of interviews",
+        "correct": "D",
+        "explanation": "{\"dan_chung\":\"Email 2 viết: 'Interviews will be held on-site... during the first two weeks of December' -> Diễn ra vòng phỏng vấn đầu tiên.<br><br>💡 <b>Cách paraphrase:</b> Lời hẹn <i>'an initial interview... held... during the first two weeks of December'</i> (một cuộc phỏng vấn ban đầu... diễn ra vào 2 tuần đầu tháng 12) = <i>'Perform the first round of interviews'</i> (Thực hiện vòng phỏng vấn đầu tiên).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 5,
+        "text": "What is most likely true about Mr. Cruz?",
+        "optA": "He will begin the job in November.",
+        "optB": "He has a degree in industrial design.",
+        "optC": "He has relocated to Dallas.",
+        "optD": "He recently interviewed for a new job.",
+        "correct": "B",
+        "explanation": "{\"dan_chung\":\"Email 2 xác nhận anh ấy ĐÁP ỨNG ĐỦ tiêu chuẩn ('meet the qualifications'). Nhìn vào Web Page (Đoạn 2), điều kiện bắt buộc là phải có bằng Cử nhân hoặc Thạc sĩ ngành thiết kế công nghiệp -> Anh ấy phải có bằng cấp này.<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Đoạn 3 xác nhận <i>'meet the qualifications'</i> (đáp ứng đủ các tiêu chuẩn) -> Đối chiếu Đoạn 2, tiêu chuẩn (Qualifications) yêu cầu <i>'Bachelor’s or master’s degree in industrial design'</i> = Suy ra <i>'He has a degree in industrial design'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      }
+    ]
+  },
+  {
+    "id": "c76cf345-5e1b-46fa-9f89-af07715732d6",
+    "order_index": 15,
+    "texts": [
+      "<b>Shingle Town Roofing</b><br><b>Color Options</b><br><br>Choose from our many colors of high-quality, affordable shingles for a long-lasting, beautiful roof.<br><br><b>Color - Product Number</b><br>Lawnwood Blue (#302)<br>Charcoal Bliss (#702)<br>Foxwood Gray (#704)<br>Mission Gray (#707)<br>Cedarwood (#203)<br>Hickory Nut (#209)<br>Brick Red (#505)",
+      "<b>Letter</b><br>Joanne Westley<br>8021 Daffodil Lane<br>Herndon, Virginia 22090<br><br>Dear Ms. Westley,<br><br>This is to confirm our agreement to replace your roof in Herndon, Virginia, on August 4. As discussed, we will be using our exclusive Prime Technology System with Hickory Nut color shingles. The Prime Technology System is guaranteed to keep your house dry and has a ten-year warranty for labor and materials.<br><br>Our crew will arrive at 8:30 A.M. We have received your deposit and signed contract. The remainder of the charge is due upon completion of the job. Please contact us if you have any questions.<br><br>Martin Sage<br>Customer service representative<br>Shingle Town Roofing",
+      "<b>Shingle Town Roofing: Installation Schedule for August 1–7</b><br><i>Note to installation crew: Be sure to confirm the job location and the required materials.</i><table border='1' cellpadding='8' style='border-collapse: collapse; width: 100%; margin: 15px 0; text-align: left; background-color: #fff;'><tr><th style='background-color: #f0f0f0;'>Sunday</th><th style='background-color: #f0f0f0;'>Monday</th><th style='background-color: #f0f0f0;'>Tuesday</th><th style='background-color: #f0f0f0;'>Wednesday</th><th style='background-color: #f0f0f0;'>Thursday</th><th style='background-color: #f0f0f0;'>Friday</th><th style='background-color: #f0f0f0;'>Saturday</th></tr><tr><td>1</td><td>2<br>Harris residence (#702)</td><td>3<br>Landsford Apartments E-3 (#505)</td><td>4<br>Westley residence (#209)</td><td>5<br>Kendelwood Motel (#302)</td><td>6<br>Hopewell Gardens (#704)</td><td>7<br>Hopewell Gardens (#704)</td></tr></table>"
+    ],
+    "questions": [
+      {
+        "q_idx": 1,
+        "text": "What is the purpose of the letter?",
+        "optA": "To get a cost estimate for a new roof",
+        "optB": "To request a deposit for a job",
+        "optC": "To ask a contractor to do a project",
+        "optD": "To finalize a business arrangement",
+        "correct": "D",
+        "explanation": "{\"dan_chung\":\"Martin Sage viết thư 'to confirm our agreement' (để xác nhận thỏa thuận) và thông báo đã nhận cọc, đã ký hợp đồng -> Mục đích là để chốt lại/hoàn tất một thỏa thuận kinh doanh.<br><br>💡 <b>Cách paraphrase:</b> <i>'confirm our agreement'</i> (xác nhận thỏa thuận của chúng ta) & <i>'received your deposit and signed contract'</i> (nhận được tiền cọc và hợp đồng ký kết) = <i>'finalize a business arrangement'</i> (hoàn tất một sự sắp xếp kinh doanh).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 2,
+        "text": "What does Mr. Sage indicate about the Prime Technology System?",
+        "optA": "It requires a separate fee for the ten-year warranty.",
+        "optB": "It prevents water from leaking into a house.",
+        "optC": "It is available for only certain types of shingles.",
+        "optD": "It requires a large crew to install.",
+        "correct": "B",
+        "explanation": "{\"dan_chung\":\"Bức thư cam kết hệ thống này 'guaranteed to keep your house dry' (đảm bảo giữ nhà bạn khô ráo) -> Nó giúp ngăn nước rò rỉ vào nhà.<br><br>💡 <b>Cách paraphrase:</b> <i>'keep your house dry'</i> (giữ cho căn nhà của bạn khô ráo) = <i>'prevents water from leaking into a house'</i> (ngăn chặn rò rỉ nước vào trong nhà).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 3,
+        "text": "Where is a shingles installation scheduled to take place on August 3?",
+        "optA": "At the Harris residence",
+        "optB": "At Landsford Apartments",
+        "optC": "At Kendelwood Motel",
+        "optD": "At Hopewell Gardens",
+        "correct": "B",
+        "explanation": "{\"dan_chung\":\"Tra cứu trong bảng lịch trình thi công, ngày mùng 3 (Tuesday 3) ghi địa điểm là 'Landsford Apartments E-3'.<br><br>💡 <b>Cách paraphrase (Đọc bảng):</b> Tìm lịch ngày <i>'3'</i> tương ứng với ô <i>'Tuesday 3'</i> có ghi rõ tên địa điểm là <i>'Landsford Apartments'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 4,
+        "text": "What color shingles will the crew be installing at Kendelwood Motel?",
+        "optA": "Lawnwood Blue",
+        "optB": "Charcoal Bliss",
+        "optC": "Mission Gray",
+        "optD": "Brick Red",
+        "correct": "A",
+        "explanation": "{\"dan_chung\":\"Lịch trình ghi Kendelwood Motel sử dụng mã vật liệu #302. Gióng lên bảng Mã màu (Color Options), #302 tương ứng với màu 'Lawnwood Blue'.<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Đoạn 3 ghi lịch của <i>'Kendelwood Motel'</i> kèm mã số <i>'(#302)'</i> -> Đối chiếu bảng mã màu ở Đoạn 1, <i>'#302'</i> chính là màu <i>'Lawnwood Blue'</i>.\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      },
+      {
+        "q_idx": 5,
+        "text": "When will Shingle Town Roofing do work at 8021 Daffodil Lane?",
+        "optA": "On Monday",
+        "optB": "On Tuesday",
+        "optC": "On Wednesday",
+        "optD": "On Thursday",
+        "correct": "C",
+        "explanation": "{\"dan_chung\":\"Khách hàng Joanne Westley ở địa chỉ 8021 Daffodil Lane. Thư xác nhận thi công cho nhà cô ấy vào ngày August 4 (mùng 4 tháng 8). Tra trên lịch trình, ngày mùng 4 là thứ Tư (Wednesday).<br><br>💡 <b>Cách paraphrase (Liên kết 2 đoạn):</b> Đoạn 2 cho biết nhà cô <i>'Westley'</i> ở địa chỉ <i>'8021 Daffodil Lane'</i> sẽ được thi công vào <i>'August 4'</i> -> Đối chiếu với lịch Đoạn 3, ngày <i>'4'</i> rơi vào cột <i>'Wednesday'</i> (thứ Tư).\",\"ham_y\":\"\",\"lien_he\":\"\",\"tu_vung\":[],\"dich_bai\":\"\"}"
+      }
+    ]
+  }
+]

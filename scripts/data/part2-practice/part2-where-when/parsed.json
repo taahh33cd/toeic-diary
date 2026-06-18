@@ -1,5 +1,5 @@
-{
-  "testName": "Where – When",
+﻿{
+  "testName": "Where â€“ When",
   "testSlug": "part2-where-when",
   "orderIndex": 0,
   "examCode": "P2",
@@ -478,7 +478,7 @@
       "questionStart": 10,
       "questionEnd": 10,
       "part": 2,
-      "transcriptFull": "Where did you buy that picture frame?\n(A) With my new camera.\n(B) A silver one. – what / which\n(C) I didn't buy it — it was a gift",
+      "transcriptFull": "Where did you buy that picture frame?\n(A) With my new camera.\n(B) A silver one. â€“ what / which\n(C) I didn't buy it â€” it was a gift",
       "correctOption": "C",
       "explanation": "",
       "audioFiles": [
@@ -507,7 +507,7 @@
         },
         {
           "orderIndex": 2,
-          "content": "A silver one. – what / which",
+          "content": "A silver one. â€“ what / which",
           "speaker": null,
           "optionLabel": "B",
           "startTime": 0,
@@ -516,7 +516,7 @@
         },
         {
           "orderIndex": 3,
-          "content": "I didn't buy it — it was a gift",
+          "content": "I didn't buy it â€” it was a gift",
           "speaker": null,
           "optionLabel": "C",
           "startTime": 0,

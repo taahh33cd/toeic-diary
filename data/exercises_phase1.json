@@ -1,0 +1,2059 @@
+[
+  {
+    "_passage": "Bài 11 — A. E-MAIL - LETTER — To: Wenbin Peng &lt;wpeng@chenconstruction.com&gt; From: Tos",
+    "orderIndex": 11,
+    "type": "single",
+    "category": "A. E-MAIL - LETTER",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"take possession of\" có nghĩa là gì?",
+        "options": [
+          "đến hạn cho việc gì đó",
+          "nhận quyền sở hữu/sử dụng",
+          "sự bảo trì, bảo dưỡng",
+          "thuê (xe, nhà, đất)"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"take possession of\" = nhận quyền sở hữu/sử dụng"
+      },
+      {
+        "question": "Từ \"lease\" có nghĩa là gì?",
+        "options": [
+          "đến hạn cho việc gì đó",
+          "nhận quyền sở hữu/sử dụng",
+          "thuê (xe, nhà, đất)",
+          "sự bảo trì, bảo dưỡng"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"lease\" = thuê (xe, nhà, đất)"
+      },
+      {
+        "question": "Từ \"maintenance\" có nghĩa là gì?",
+        "options": [
+          "thuê (xe, nhà, đất)",
+          "nhận quyền sở hữu/sử dụng",
+          "sự bảo trì, bảo dưỡng",
+          "đến hạn cho việc gì đó"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"maintenance\" = sự bảo trì, bảo dưỡng"
+      },
+      {
+        "question": "Từ \"due for\" có nghĩa là gì?",
+        "options": [
+          "đến hạn cho việc gì đó",
+          "nhận quyền sở hữu/sử dụng",
+          "thuê (xe, nhà, đất)",
+          "sự bảo trì, bảo dưỡng"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"due for\" = đến hạn cho việc gì đó"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"due for its required annual service and maintenance check\"",
+        "options": [
+          "due for its required annual service and maintenance check",
+          "It provides leased cars to some employees",
+          "inform a customer of required car maintenance",
+          "cars leased by employees of Chen Construction"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"due for its required annual service and maintenance check\" = \"inform a customer of required car maintenance\""
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"cars leased by employees of Chen Construction\"",
+        "options": [
+          "cars leased by employees of Chen Construction",
+          "due for its required annual service and maintenance check",
+          "inform a customer of required car maintenance",
+          "It provides leased cars to some employees"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"cars leased by employees of Chen Construction\" = \"It provides leased cars to some employees\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Kính gửi ông Peng: Như ông đã biết, Toshi Auto Group xử lý mọi nhu cầu dịch vụ cho các xe ô tô được thuê bởi nhân viên của Chen Construction.\"",
+        "options": [
+          "Your car is now due for its required annual service and maintenance check.",
+          "To inquire about leasing a vehicle.",
+          "To announce the release of a new car.",
+          "To register a used car for an extended warranty."
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"Your car is now due for its required annual service and maintenance check.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Theo hồ sơ của chúng tôi, ông đã nhận chiếc xe thuê của mình vào ngày 1 tháng 3 năm ngoái.\"",
+        "options": [
+          "It has a new project beginning March 1.",
+          "To inquire about leasing a vehicle.",
+          "It will soon begin a construction project for Toshi Auto Group.",
+          "cars leased by employees of Chen Construction"
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"cars leased by employees of Chen Construction\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"Your car is now due for its required annual service and maintenance check\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Dạng câu hỏi NOT/TRUE/FALSE đòi hỏi bạn phải đối chiếu và loại trừ từng đáp án một",
+          "Trong sơ đồ tổ chức TOEIC, Site Manager (Quản lý hiện trường) hoặc Compliance Officer (Nhân viên pháp chế) là người giám sát (oversee) việc mọi người có làm đúng luật (policy/rules) hay không",
+          "Trong các bài đọc TOEIC, ứng viên chuyển việc thường vì hai lý do chính: 1",
+          "Trong các hợp đồng cho thuê xe (Car leasing), khách hàng thường bị bắt buộc phải mang xe đi bảo dưỡng định kỳ tại các garage chỉ định để đảm bảo tài sản (chiếc xe) luôn ở trạng thái tốt nhất"
+        ],
+        "correctIndex": 3,
+        "feedback": "Trong các hợp đồng cho thuê xe (Car leasing), khách hàng thường bị bắt buộc phải mang xe đi bảo dưỡng định kỳ tại các garage chỉ định để đảm bảo tài sản (chiếc xe) luôn ở trạng thái tốt nhất."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 12 — A. E-MAIL - LETTER — To: amal.abboud@buniifoundation.org From: maria_mcfarland@my",
+    "orderIndex": 12,
+    "type": "single",
+    "category": "A. E-MAIL - LETTER",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"coordinator\" có nghĩa là gì?",
+        "options": [
+          "đồng thời, cùng lúc",
+          "bền vững",
+          "người điều phối",
+          "sơ yếu lý lịch (CV)"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"coordinator\" = người điều phối"
+      },
+      {
+        "question": "Từ \"sustainable\" có nghĩa là gì?",
+        "options": [
+          "sơ yếu lý lịch (CV)",
+          "đồng thời, cùng lúc",
+          "truyền đạt, giao tiếp",
+          "bền vững"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"sustainable\" = bền vững"
+      },
+      {
+        "question": "Từ \"convey\" có nghĩa là gì?",
+        "options": [
+          "bền vững",
+          "sơ yếu lý lịch (CV)",
+          "người điều phối",
+          "truyền đạt, giao tiếp"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"convey\" = truyền đạt, giao tiếp"
+      },
+      {
+        "question": "Từ \"resume\" có nghĩa là gì?",
+        "options": [
+          "truyền đạt, giao tiếp",
+          "bền vững",
+          "sơ yếu lý lịch (CV)",
+          "đồng thời, cùng lúc"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"resume\" = sơ yếu lý lịch (CV)"
+      },
+      {
+        "question": "Từ \"simultaneously\" có nghĩa là gì?",
+        "options": [
+          "bền vững",
+          "sơ yếu lý lịch (CV)",
+          "đồng thời, cùng lúc",
+          "người điều phối"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"simultaneously\" = đồng thời, cùng lúc"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"told me that you are seeking a project coordinator\"",
+        "options": [
+          "informed her of a job opening",
+          "wants a role that inspires her more",
+          "convey",
+          "need motivation from a strong mission"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"told me that you are seeking a project coordinator\" = \"informed her of a job opening\""
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"convey\"",
+        "options": [
+          "wants a role that inspires her more",
+          "communicate",
+          "need motivation from a strong mission",
+          "told me that you are seeking a project coordinator"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"convey\" = \"communicate\""
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"need motivation from a strong mission\"",
+        "options": [
+          "told me that you are seeking a project coordinator",
+          "wants a role that inspires her more",
+          "informed her of a job opening",
+          "need motivation from a strong mission"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"need motivation from a strong mission\" = \"wants a role that inspires her more\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Kính gửi ông Abboud, Bạn của tôi, Josiah Wilkins, đã nói với tôi rằng ông đang tìm kiếm một điều phối viên dự án cho công ty của mình.\"",
+        "options": [
+          "My friend Josiah Wilkins told me that you are seeking a project coordinator...",
+          "He will require a professional reference.",
+          "I can convey expectations clearly to team members...",
+          "She wants a higher salary for her efforts."
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"My friend Josiah Wilkins told me that you are seeking a project coordinator...\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Tôi có bằng quản trị kinh doanh và xin đính kèm sơ yếu lý lịch vì tôi nghĩ mình rất phù hợp với nhu cầu của ông...\"",
+        "options": [
+          "I can convey expectations clearly to team members...",
+          "He would make a good business partner.",
+          "He will require a professional reference.",
+          "I need motivation from a strong mission. The goal of your company to create sustainable housing projects is something that I strongly support..."
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"I can convey expectations clearly to team members...\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Hơn nữa, kỹ năng tổ chức cho phép tôi điều phối nhiều hoạt động cùng lúc và tôi có thể truyền đạt các kỳ vọng một cách rõ ràng cho các thành viên trong nhóm tham gia vào từng giai đoạn của dự án.\"",
+        "options": [
+          "I need motivation from a strong mission. The goal of your company to create sustainable housing projects is something that I strongly support...",
+          "I can convey expectations clearly to team members...",
+          "She wants a higher salary for her efforts.",
+          "She wants more opportunities for advancement."
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"I need motivation from a strong mission. The goal of your company to create sustainable housing projects is something that I strongly support...\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"My friend Josiah Wilkins told me that you are seeking a project coordinator\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Thuật ngữ 'Lunch Workshop' hoặc 'Brown Bag Session' dùng để chỉ những buổi đào tạo diễn ra ngay trong giờ nghỉ trưa",
+          "Nhiều tập đoàn lớn thường cung cấp xe công ty (company cars) hoặc hỗ trợ chi phí thuê xe cho các vị trí quản lý hoặc nhân viên kinh doanh phải đi lại nhiều",
+          "Được bạn bè hoặc người quen giới thiệu (Referral) là một trong những nguồn tuyển dụng hiệu quả nhất",
+          "Các phương tiện giao thông công cộng (Public Transit) thường phải đăng thông báo (Notice/Alert) dán ở trạm dừng hoặc trên ứng dụng khi có sự cố đào đường (construction) khiến xe phải đi đường vòng (detour) hoặc tạm dừng (suspend)"
+        ],
+        "correctIndex": 2,
+        "feedback": "Được bạn bè hoặc người quen giới thiệu (Referral) là một trong những nguồn tuyển dụng hiệu quả nhất. Việc nhắc tên người giới thiệu ngay đầu thư xin việc giúp tạo sự tin tưởng (Trust) với nhà tuyển dụ..."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 13 — A. E-MAIL - LETTER — Pierre Gitane 26 Bear Tree Lane Charlote, NC 28804 April 15 ",
+    "orderIndex": 13,
+    "type": "single",
+    "category": "A. E-MAIL - LETTER",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"invisible braces\" có nghĩa là gì?",
+        "options": [
+          "cuộc hẹn",
+          "nửa năm một lần (6 tháng/lần)",
+          "làm trắng răng",
+          "niềng răng trong suốt"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"invisible braces\" = niềng răng trong suốt"
+      },
+      {
+        "question": "Từ \"appointment\" có nghĩa là gì?",
+        "options": [
+          "niềng răng trong suốt",
+          "làm trắng răng",
+          "nửa năm một lần (6 tháng/lần)",
+          "cuộc hẹn"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"appointment\" = cuộc hẹn"
+      },
+      {
+        "question": "Từ \"teeth whitening\" có nghĩa là gì?",
+        "options": [
+          "nửa năm một lần (6 tháng/lần)",
+          "cuộc hẹn",
+          "làm trắng răng",
+          "niềng răng trong suốt"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"teeth whitening\" = làm trắng răng"
+      },
+      {
+        "question": "Từ \"semiannual\" có nghĩa là gì?",
+        "options": [
+          "niềng răng trong suốt",
+          "làm trắng răng",
+          "nửa năm một lần (6 tháng/lần)",
+          "cuộc hẹn"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"semiannual\" = nửa năm một lần (6 tháng/lần)"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"due for your semiannual dental care visit\"",
+        "options": [
+          "was not available... until recently",
+          "time for a routine checkup",
+          "we now offer teeth whitening",
+          "due for your semiannual dental care visit"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"due for your semiannual dental care visit\" = \"time for a routine checkup\""
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"we now offer teeth whitening\"",
+        "options": [
+          "we now offer teeth whitening",
+          "due for your semiannual dental care visit",
+          "time for a routine checkup",
+          "was not available... until recently"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"we now offer teeth whitening\" = \"was not available... until recently\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Kính gửi ông Gitane, Bức thư này nhằm thông báo rằng ông đã đến hạn khám nha khoa định kỳ nửa năm một lần.\"",
+        "options": [
+          "It costs about the same as invisible braces.",
+          "It takes up to six months to obtain the desired results.",
+          "It is not covered by dental insurance plans.",
+          "you are due for your semiannual dental care visit."
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"you are due for your semiannual dental care visit.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Hãy truy cập trang web của chúng tôi và điền vào biểu mẫu để yêu cầu đặt lịch hẹn...\"",
+        "options": [
+          "It is not covered by dental insurance plans.",
+          "Red Street Dental Care is requesting his feedback.",
+          "It costs about the same as invisible braces.",
+          "we are happy to announce that we now offer teeth whitening..."
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"we are happy to announce that we now offer teeth whitening...\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"you are due for your semiannual dental care visit\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Từ vựng 'Apparel', 'Garment', 'Attire' và 'Clothing' là nhóm từ đồng nghĩa vô cùng quan trọng thường xuyên xuất hiện chéo nhau giữa câu hỏi và bài đọc trong TOEIC",
+          "Kỹ năng Đọc hiểu suy luận logic: Một công ty không thể có 'kỷ lục cao nhất trong 3 năm' nếu nó mới được thành lập năm ngoái",
+          "Các phòng khám nha khoa (Dental clinics) thường dùng hệ thống CRM để tự động gửi thư/email nhắc nhở khách hàng quay lại khám định kỳ (routine checkup) - thường là mỗi 6 tháng (semiannually) để cạo vôi răng",
+          "Trong sơ đồ tổ chức TOEIC, Site Manager (Quản lý hiện trường) hoặc Compliance Officer (Nhân viên pháp chế) là người giám sát (oversee) việc mọi người có làm đúng luật (policy/rules) hay không"
+        ],
+        "correctIndex": 2,
+        "feedback": "Các phòng khám nha khoa (Dental clinics) thường dùng hệ thống CRM để tự động gửi thư/email nhắc nhở khách hàng quay lại khám định kỳ (routine checkup) - thường là mỗi 6 tháng (semiannually) để cạo vôi..."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 14 — B. NOTICE - MEMO - ARTICLE — Harrod Automotive Manufacturing Andrew Dunn, Director Laura ",
+    "orderIndex": 14,
+    "type": "single",
+    "category": "B. NOTICE - MEMO - ARTICLE",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"premises\" có nghĩa là gì?",
+        "options": [
+          "khuôn viên, cơ sở",
+          "sự vi phạm",
+          "khu vực/xưởng lắp ráp",
+          "sự tuân thủ"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"premises\" = khuôn viên, cơ sở"
+      },
+      {
+        "question": "Từ \"compliance\" có nghĩa là gì?",
+        "options": [
+          "khu vực/xưởng lắp ráp",
+          "sự vi phạm",
+          "sự tuân thủ",
+          "được tuân thủ một cách nghiêm ngặt"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"compliance\" = sự tuân thủ"
+      },
+      {
+        "question": "Từ \"assembly floor\" có nghĩa là gì?",
+        "options": [
+          "khu vực/xưởng lắp ráp",
+          "sự tuân thủ",
+          "khuôn viên, cơ sở",
+          "sự vi phạm"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"assembly floor\" = khu vực/xưởng lắp ráp"
+      },
+      {
+        "question": "Từ \"strictly observed\" có nghĩa là gì?",
+        "options": [
+          "khuôn viên, cơ sở",
+          "được tuân thủ một cách nghiêm ngặt",
+          "sự vi phạm",
+          "khu vực/xưởng lắp ráp"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"strictly observed\" = được tuân thủ một cách nghiêm ngặt"
+      },
+      {
+        "question": "Từ \"violation\" có nghĩa là gì?",
+        "options": [
+          "sự vi phạm",
+          "khuôn viên, cơ sở",
+          "sự tuân thủ",
+          "khu vực/xưởng lắp ráp"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"violation\" = sự vi phạm"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"touring the assembly floor\"",
+        "options": [
+          "concerns about compliance",
+          "touring the assembly floor",
+          "inquire about a policy",
+          "Factory visitors"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"touring the assembly floor\" = \"Factory visitors\""
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"concerns about compliance\"",
+        "options": [
+          "touring the assembly floor",
+          "Factory visitors",
+          "inquire about a policy",
+          "concerns about compliance"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"concerns about compliance\" = \"inquire about a policy\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Chào mừng đến với Nhà máy Sản xuất Ô tô Harrod!\"",
+        "options": [
+          "while you are touring the assembly floor... ALWAYS: Stay with your tour guide.",
+          "To submit photographs",
+          "Laura Bradley, Site Manager... For concerns about compliance, please contact the site manager.",
+          "To obtain a schedule"
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"while you are touring the assembly floor... ALWAYS: Stay with your tour guide.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Chúng tôi rất nghiêm túc trong việc duy trì một môi trường làm việc an toàn.\"",
+        "options": [
+          "Maintenance workers",
+          "To submit photographs",
+          "Security guards",
+          "Laura Bradley, Site Manager... For concerns about compliance, please contact the site manager."
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"Laura Bradley, Site Manager... For concerns about compliance, please contact the site manager.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"while you are touring the assembly floor\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Trong TOEIC, một 'Delivery company' hoặc 'Shipping/Courier/Logistics company' luôn gắn liền với các dịch vụ 'tracking' (theo dõi) và 'packaging' (đóng gói)",
+          "Các nhà máy công nghiệp nặng thường tổ chức các chuyến tham quan (Factory Tour) cho đối tác, nhà đầu tư hoặc sinh viên",
+          "Được bạn bè hoặc người quen giới thiệu (Referral) là một trong những nguồn tuyển dụng hiệu quả nhất",
+          "Thuật ngữ 'Lunch Workshop' hoặc 'Brown Bag Session' dùng để chỉ những buổi đào tạo diễn ra ngay trong giờ nghỉ trưa"
+        ],
+        "correctIndex": 1,
+        "feedback": "Các nhà máy công nghiệp nặng thường tổ chức các chuyến tham quan (Factory Tour) cho đối tác, nhà đầu tư hoặc sinh viên. Khách tham quan phải luôn đi cùng Hướng dẫn viên (Tour guide) và mặc đồ bảo hộ."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 15 — B. NOTICE - MEMO - ARTICLE — STAR DESIGNS Dear Customers: For many years, we at Star Desi",
+    "orderIndex": 15,
+    "type": "single",
+    "category": "B. NOTICE - MEMO - ARTICLE",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"afford\" có nghĩa là gì?",
+        "options": [
+          "quần áo, trang phục",
+          "nỗ lực, phấn đấu",
+          "vải vóc",
+          "có đủ khả năng (tài chính) để làm gì"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"afford\" = có đủ khả năng (tài chính) để làm gì"
+      },
+      {
+        "question": "Từ \"apparel\" có nghĩa là gì?",
+        "options": [
+          "có tính cạnh tranh",
+          "quần áo, trang phục",
+          "có đủ khả năng (tài chính) để làm gì",
+          "vải vóc"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"apparel\" = quần áo, trang phục"
+      },
+      {
+        "question": "Từ \"competitive\" có nghĩa là gì?",
+        "options": [
+          "nỗ lực, phấn đấu",
+          "có tính cạnh tranh",
+          "vải vóc",
+          "quần áo, trang phục"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"competitive\" = có tính cạnh tranh"
+      },
+      {
+        "question": "Từ \"fabric\" có nghĩa là gì?",
+        "options": [
+          "có đủ khả năng (tài chính) để làm gì",
+          "nỗ lực, phấn đấu",
+          "vải vóc",
+          "quần áo, trang phục"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"fabric\" = vải vóc"
+      },
+      {
+        "question": "Từ \"strive\" có nghĩa là gì?",
+        "options": [
+          "nỗ lực, phấn đấu",
+          "quần áo, trang phục",
+          "có đủ khả năng (tài chính) để làm gì",
+          "vải vóc"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"strive\" = nỗ lực, phấn đấu"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"apparel\"",
+        "options": [
+          "increase our prices",
+          "Clothing",
+          "A change in prices",
+          "apparel"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"apparel\" = \"Clothing\""
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"increase our prices\"",
+        "options": [
+          "apparel",
+          "increase our prices",
+          "A change in prices",
+          "Clothing"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"increase our prices\" = \"A change in prices\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"STAR DESIGNS Kính gửi quý khách hàng: Trong nhiều năm qua, Star Designs chúng tôi luôn nỗ lực cung cấp trang phục chất lượng với giá cả cạnh tranh.\"",
+        "options": [
+          "An upgraded online store",
+          "A grand opening",
+          "offer quality apparel... sew our colorful shirts and formal wear",
+          "An expanded product line"
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"offer quality apparel... sew our colorful shirts and formal wear\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Thật không may, như quý vị có thể thấy khi lướt qua cửa hàng trực tuyến của chúng tôi, gần đây chúng tôi đã buộc phải tăng giá.\"",
+        "options": [
+          "A grand opening",
+          "Furniture",
+          "we have been forced to increase our prices recently.",
+          "Software"
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"we have been forced to increase our prices recently.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"offer quality apparel\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Trong các bài đọc TOEIC, ứng viên chuyển việc thường vì hai lý do chính: 1",
+          "Đây là kỹ thuật suy luận (Inference) rất đặc trưng trong TOEIC: Nếu một doanh nghiệp thông báo 'chúng tôi NAY ĐÃ CÓ",
+          "Từ vựng 'Apparel', 'Garment', 'Attire' và 'Clothing' là nhóm từ đồng nghĩa vô cùng quan trọng thường xuyên xuất hiện chéo nhau giữa câu hỏi và bài đọc trong TOEIC",
+          "Dạng bài 'Insert a sentence' (Điền câu vào vị trí thích hợp) yêu cầu bạn phải tìm 'từ khóa liên kết' (Linkers)"
+        ],
+        "correctIndex": 2,
+        "feedback": "Từ vựng 'Apparel', 'Garment', 'Attire' và 'Clothing' là nhóm từ đồng nghĩa vô cùng quan trọng thường xuyên xuất hiện chéo nhau giữa câu hỏi và bài đọc trong TOEIC."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 16 — B. NOTICE - MEMO - ARTICLE — Sales Lunch Workshop Attention sales associates! Are you new",
+    "orderIndex": 16,
+    "type": "single",
+    "category": "B. NOTICE - MEMO - ARTICLE",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"pack\" có nghĩa là gì?",
+        "options": [
+          "đóng gói, mang theo",
+          "tiền hoa hồng",
+          "đảm bảo, giành được",
+          "không có thông tin này trong bài"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"pack\" = đóng gói, mang theo"
+      },
+      {
+        "question": "Từ \"commission\" có nghĩa là gì?",
+        "options": [
+          "đảm bảo, giành được",
+          "đóng gói, mang theo",
+          "không có thông tin này trong bài",
+          "tiền hoa hồng"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"commission\" = tiền hoa hồng"
+      },
+      {
+        "question": "Từ \"secure\" có nghĩa là gì?",
+        "options": [
+          "không có thông tin này trong bài",
+          "đóng gói, mang theo",
+          "đảm bảo, giành được",
+          "tiền hoa hồng"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"secure\" = đảm bảo, giành được"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"pack something for yourself\"",
+        "options": [
+          "The passage does not provide this information.",
+          "This is not mentioned in the passage.",
+          "bring some food",
+          "pack something for yourself"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"pack something for yourself\" = \"bring some food\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Hội thảo Ăn trưa Dành cho Bộ phận Bán hàng Chú ý các nhân viên bán hàng!\"",
+        "options": [
+          "Sales sheets",
+          "Registration forms",
+          "A laptop computer",
+          "Lunch is not provided, so be sure to pack something for yourself."
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"Lunch is not provided, so be sure to pack something for yourself.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"Lunch is not provided, so be sure to pack something for yourself\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Các phương tiện giao thông công cộng (Public Transit) thường phải đăng thông báo (Notice/Alert) dán ở trạm dừng hoặc trên ứng dụng khi có sự cố đào đường (construction) khiến xe phải đi đường vòng (detour) hoặc tạm dừng (suspend)",
+          "Thuật ngữ 'Lunch Workshop' hoặc 'Brown Bag Session' dùng để chỉ những buổi đào tạo diễn ra ngay trong giờ nghỉ trưa",
+          "Đây là dạng câu hỏi Tính toán cơ bản trong TOEIC",
+          "Từ đồng nghĩa cực kỳ quan trọng trong TOEIC: 'Annual' = 'Yearly' = 'Once a year' (Hàng năm)"
+        ],
+        "correctIndex": 1,
+        "feedback": "Thuật ngữ 'Lunch Workshop' hoặc 'Brown Bag Session' dùng để chỉ những buổi đào tạo diễn ra ngay trong giờ nghỉ trưa. Tại đây, công ty cung cấp kiến thức, còn nhân viên thường tự mang đồ ăn từ nhà (bro..."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 17 — B. NOTICE - MEMO - ARTICLE — Attention Line 75 Riders All Metrowestern passengers should ",
+    "orderIndex": 17,
+    "type": "single",
+    "category": "B. NOTICE - MEMO - ARTICLE",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"temporary\" có nghĩa là gì?",
+        "options": [
+          "đình chỉ, tạm dừng",
+          "sự bất tiện",
+          "tạm thời",
+          "hành khách"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"temporary\" = tạm thời"
+      },
+      {
+        "question": "Từ \"passenger\" có nghĩa là gì?",
+        "options": [
+          "hành khách",
+          "tạm thời",
+          "đình chỉ, tạm dừng",
+          "sự bất tiện"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"passenger\" = hành khách"
+      },
+      {
+        "question": "Từ \"suspend\" có nghĩa là gì?",
+        "options": [
+          "sự bất tiện",
+          "tạm thời",
+          "đình chỉ, tạm dừng",
+          "hành khách"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"suspend\" = đình chỉ, tạm dừng"
+      },
+      {
+        "question": "Từ \"inconvenience\" có nghĩa là gì?",
+        "options": [
+          "sự bất tiện",
+          "tạm thời",
+          "đình chỉ, tạm dừng",
+          "hành khách"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"inconvenience\" = sự bất tiện"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"temporary changes for bus line 75\"",
+        "options": [
+          "announce temporary changes in bus service",
+          "This is not mentioned in the passage.",
+          "The passage does not provide this information.",
+          "temporary changes for bus line 75"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"temporary changes for bus line 75\" = \"announce temporary changes in bus service\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Chú ý hành khách tuyến xe buýt 75 Tất cả hành khách của Metrowestern cần lưu ý những thay đổi tạm thời sau đây đối với tuyến xe buýt 75.\"",
+        "options": [
+          "To request that riders avoid travel during peak hours",
+          "To introduce a new express bus route",
+          "All Metrowestern passengers should be aware of the following temporary changes for bus line 75.",
+          "on April 10 at 4:00 P.M."
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"All Metrowestern passengers should be aware of the following temporary changes for bus line 75.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Do công trình xây dựng, dịch vụ trên Đại lộ số 8 giữa đường Taylor và Đại lộ Forbes sẽ bị đình chỉ trong các khoảng thời gian sau.\"",
+        "options": [
+          "To request that riders avoid travel during peak hours",
+          "on April 10 at 4:00 P.M.",
+          "Friday, April 9, 6:30 P.M.-10:00 P.M. (suspended period)",
+          "on April 7 at 5:30 A.M."
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"Friday, April 9, 6:30 P.M.-10:00 P.M. (suspended period)\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"All Metrowestern passengers should be aware of the following temporary changes for bus line 75\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Dạng câu hỏi NOT/TRUE/FALSE đòi hỏi bạn phải đối chiếu và loại trừ từng đáp án một",
+          "Các phương tiện giao thông công cộng (Public Transit) thường phải đăng thông báo (Notice/Alert) dán ở trạm dừng hoặc trên ứng dụng khi có sự cố đào đường (construction) khiến xe phải đi đường vòng (detour) hoặc tạm dừng (suspend)",
+          "Khi một doanh nghiệp buộc phải tăng giá (Price increase) do chi phí nguyên vật liệu đầu vào (materials) hoặc lạm phát, họ thường gửi thư xin lỗi khách hàng và giải thích rõ lý do để giữ chân khách",
+          "Đây là kỹ thuật suy luận (Inference) rất đặc trưng trong TOEIC: Nếu một doanh nghiệp thông báo 'chúng tôi NAY ĐÃ CÓ"
+        ],
+        "correctIndex": 1,
+        "feedback": "Các phương tiện giao thông công cộng (Public Transit) thường phải đăng thông báo (Notice/Alert) dán ở trạm dừng hoặc trên ứng dụng khi có sự cố đào đường (construction) khiến xe phải đi đường vòng (de..."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 18 — B. NOTICE - MEMO - ARTICLE — To: Processing Plant Managers From: Sunlight Sugar Executive",
+    "orderIndex": 18,
+    "type": "single",
+    "category": "B. NOTICE - MEMO - ARTICLE",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"distributor\" có nghĩa là gì?",
+        "options": [
+          "phiếu lương, tiền lương",
+          "nhà phân phối",
+          "tiền thưởng",
+          "thành tựu"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"distributor\" = nhà phân phối"
+      },
+      {
+        "question": "Từ \"paycheck\" có nghĩa là gì?",
+        "options": [
+          "tiền thưởng",
+          "phiếu lương, tiền lương",
+          "thành tựu",
+          "nhà phân phối"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"paycheck\" = phiếu lương, tiền lương"
+      },
+      {
+        "question": "Từ \"achievement\" có nghĩa là gì?",
+        "options": [
+          "tiền thưởng",
+          "thành tựu",
+          "nhà phân phối",
+          "phiếu lương, tiền lương"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"achievement\" = thành tựu"
+      },
+      {
+        "question": "Từ \"bonus\" có nghĩa là gì?",
+        "options": [
+          "tiền thưởng",
+          "phiếu lương, tiền lương",
+          "thành tựu",
+          "nhà phân phối"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"bonus\" = tiền thưởng"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"strongest quarter in over three years\"",
+        "options": [
+          "announce an employee bonus... On July 1",
+          "inform staff... on July 1",
+          "strongest quarter in over three years",
+          "established more than three years ago"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"strongest quarter in over three years\" = \"established more than three years ago\""
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"inform staff... on July 1\"",
+        "options": [
+          "announce an employee bonus... On July 1",
+          "established more than three years ago",
+          "strongest quarter in over three years",
+          "inform staff... on July 1"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"inform staff... on July 1\" = \"announce an employee bonus... On July 1\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Gửi: Các Quản lý Nhà máy Xử lý Từ: Ban Giám đốc Sunlight Sugar Ngày: 15 tháng 6 Chủ đề: Tin tức Chúng tôi vui mừng thông báo rằng, sau quý hoạt động mạnh mẽ nhất trong hơn ba năm qua, chúng ta đã được xếp hạng là nhà phân phối đường số hai trong khu vực trên ấn bản ngày 1 tháng 6 của tạp chí Thời báo Công nghiệp Đường ...\"",
+        "options": [
+          "following our strongest quarter in over three years",
+          "On June 15",
+          "On June 1",
+          "On July 15"
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"following our strongest quarter in over three years\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Để ăn mừng thành tựu này, chúng tôi muốn tri ân nhân viên bằng một khoản tiền thưởng sẽ được cộng vào phiếu lương ngày 15 tháng 7.\"",
+        "options": [
+          "It is changing the payday schedule.",
+          "Plant managers at each location should inform staff at the next plant meeting on July 1.",
+          "On July 15",
+          "It publishes the Sugar Industry Times."
+        ],
+        "correctIndex": 1,
+        "feedback": "Bản dịch: \"Plant managers at each location should inform staff at the next plant meeting on July 1.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"following our strongest quarter in over three years\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Kỹ năng Đọc hiểu suy luận logic: Một công ty không thể có 'kỷ lục cao nhất trong 3 năm' nếu nó mới được thành lập năm ngoái",
+          "Các phòng khám nha khoa (Dental clinics) thường dùng hệ thống CRM để tự động gửi thư/email nhắc nhở khách hàng quay lại khám định kỳ (routine checkup) - thường là mỗi 6 tháng (semiannually) để cạo vôi răng",
+          "Dạng câu hỏi NOT/TRUE/FALSE đòi hỏi bạn phải đối chiếu và loại trừ từng đáp án một",
+          "Trong môi trường công sở hiện đại, việc trang bị 'standing desks' (bàn làm việc đứng) rất phổ biến để cải thiện sức khỏe (employee wellness) cho nhân viên văn phòng"
+        ],
+        "correctIndex": 0,
+        "feedback": "Kỹ năng Đọc hiểu suy luận logic: Một công ty không thể có 'kỷ lục cao nhất trong 3 năm' nếu nó mới được thành lập năm ngoái. Do đó, 'in over 3 years' ám chỉ tuổi đời doanh nghiệp (established/founded)..."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 19 — B. NOTICE - MEMO - ARTICLE — Expressions in Form and Color March 30 5:30 P.M. - 9:00 P.M.",
+    "orderIndex": 19,
+    "type": "single",
+    "category": "B. NOTICE - MEMO - ARTICLE",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"faculty\" có nghĩa là gì?",
+        "options": [
+          "đồ uống",
+          "món khai vị",
+          "giảng viên, ban cán sự (trong trường học)",
+          "buổi triển lãm, sự trưng bày"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"faculty\" = giảng viên, ban cán sự (trong trường học)"
+      },
+      {
+        "question": "Từ \"beverage\" có nghĩa là gì?",
+        "options": [
+          "tác phẩm điêu khắc",
+          "giấy phép",
+          "giảng viên, ban cán sự (trong trường học)",
+          "đồ uống"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"beverage\" = đồ uống"
+      },
+      {
+        "question": "Từ \"appetizer\" có nghĩa là gì?",
+        "options": [
+          "giảng viên, ban cán sự (trong trường học)",
+          "món khai vị",
+          "giấy phép",
+          "tác phẩm điêu khắc"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"appetizer\" = món khai vị"
+      },
+      {
+        "question": "Từ \"showcase\" có nghĩa là gì?",
+        "options": [
+          "giấy phép",
+          "giảng viên, ban cán sự (trong trường học)",
+          "đồ uống",
+          "buổi triển lãm, sự trưng bày"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"showcase\" = buổi triển lãm, sự trưng bày"
+      },
+      {
+        "question": "Từ \"sculpture\" có nghĩa là gì?",
+        "options": [
+          "tác phẩm điêu khắc",
+          "giấy phép",
+          "giảng viên, ban cán sự (trong trường học)",
+          "món khai vị"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"sculpture\" = tác phẩm điêu khắc"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"annual showcase\"",
+        "options": [
+          "The passage does not provide this information.",
+          "annual showcase",
+          "yearly exhibition",
+          "This is not mentioned in the passage."
+        ],
+        "correctIndex": 2,
+        "feedback": "\"annual showcase\" = \"yearly exhibition\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Những biểu hiện về Hình khối và Màu sắc Ngày 30 tháng 3 5:30 Chiều - 9:00 Tối Khoa Nghệ thuật Đại học Summerlake hân hạnh giới thiệu buổi triển lãm thường niên, khai mạc hôm nay lúc 5:30 Chiều tại phòng trưng bày nghệ thuật của khuôn viên nằm ở Tòa nhà số 4.\"",
+        "options": [
+          "To advertise an art class",
+          "Free parking is available.",
+          "To announce the opening of a museum",
+          "pleased to present its annual showcase"
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"pleased to present its annual showcase\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Hãy đến xem các tác phẩm nghệ thuật mới - bao gồm tranh vẽ, nhiếp ảnh, bản phác thảo và tác phẩm điêu khắc - trong khi thưởng thức đồ uống và món khai vị...\"",
+        "options": [
+          "To advertise an art class",
+          "To publicize the sale of a sculpture",
+          "Refreshments will be served.",
+          "enjoying beverages and appetizers (A) ... free to the public (C)"
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"enjoying beverages and appetizers (A) ... free to the public (C)\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"pleased to present its annual showcase\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Trong các văn bản hành chính, thường có nhiều mốc thời gian khác nhau (ngày ra thông báo, ngày họp thông báo, ngày nhận tiền)",
+          "Từ đồng nghĩa cực kỳ quan trọng trong TOEIC: 'Annual' = 'Yearly' = 'Once a year' (Hàng năm)",
+          "Trong TOEIC, một 'Delivery company' hoặc 'Shipping/Courier/Logistics company' luôn gắn liền với các dịch vụ 'tracking' (theo dõi) và 'packaging' (đóng gói)",
+          "Trong các bài thông báo của cộng đồng khu dân cư (Community Notice), người ta thường dựa vào các yếu tố thời tiết hoặc mùa màng để lên kế hoạch dọn dẹp hoặc trồng cây (garden planting thường diễn ra vào mùa Xuân)"
+        ],
+        "correctIndex": 1,
+        "feedback": "Từ đồng nghĩa cực kỳ quan trọng trong TOEIC: 'Annual' = 'Yearly' = 'Once a year' (Hàng năm). 'Showcase' = 'Exhibition' = 'Display' = 'Fair' (Triển lãm, trưng bày)."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 20 — B. NOTICE - MEMO - ARTICLE — To: South Street Bank staff From: William Rees-Yates, Chief ",
+    "orderIndex": 20,
+    "type": "single",
+    "category": "B. NOTICE - MEMO - ARTICLE",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"job opening\" có nghĩa là gì?",
+        "options": [
+          "chi nhánh",
+          "nhu cầu",
+          "mở rộng",
+          "vị trí công việc đang tuyển dụng"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"job opening\" = vị trí công việc đang tuyển dụng"
+      },
+      {
+        "question": "Từ \"branch\" có nghĩa là gì?",
+        "options": [
+          "đi vào hoạt động",
+          "chi nhánh",
+          "mở rộng",
+          "vị trí công việc đang tuyển dụng"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"branch\" = chi nhánh"
+      },
+      {
+        "question": "Từ \"expand\" có nghĩa là gì?",
+        "options": [
+          "mở rộng",
+          "đi vào hoạt động",
+          "nhu cầu",
+          "chi nhánh"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"expand\" = mở rộng"
+      },
+      {
+        "question": "Từ \"in operation\" có nghĩa là gì?",
+        "options": [
+          "đi vào hoạt động",
+          "vị trí công việc đang tuyển dụng",
+          "nhu cầu",
+          "mở rộng"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"in operation\" = đi vào hoạt động"
+      },
+      {
+        "question": "Từ \"demand\" có nghĩa là gì?",
+        "options": [
+          "đi vào hoạt động",
+          "mở rộng",
+          "vị trí công việc đang tuyển dụng",
+          "nhu cầu"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"demand\" = nhu cầu"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"opening a branch in Leesburg\"",
+        "options": [
+          "This is not mentioned in the passage.",
+          "The passage does not provide this information.",
+          "opening of a new branch",
+          "opening a branch in Leesburg"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"opening a branch in Leesburg\" = \"opening of a new branch\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Gửi: Nhân viên ngân hàng South Street Từ: William Rees-Yates, Giám đốc Điều hành Ngày: 12 tháng 5 Tôi vui mừng thông báo rằng ngân hàng của chúng ta đang mở rộng.\"",
+        "options": [
+          "[3]",
+          "our bank is expanding ... We will therefore be opening a branch in Leesburg this year.",
+          "A temporary closing for renovations",
+          "A merger with another company"
+        ],
+        "correctIndex": 1,
+        "feedback": "Bản dịch: \"our bank is expanding ... We will therefore be opening a branch in Leesburg this year.\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Nhờ chiến dịch tiếp thị sáng tạo và dịch vụ chăm sóc khách hàng đạt giải thưởng, nhu cầu về các dịch vụ của chúng ta đang không ngừng tăng lên.\"",
+        "options": [
+          "[2] There remain, however, a couple of job openings to be filled...",
+          "[3]",
+          "[1]",
+          "The hiring of several new staff"
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"[2] There remain, however, a couple of job openings to be filled...\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"our bank is expanding\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Đây là dạng câu hỏi Tính toán cơ bản trong TOEIC",
+          "Câu hỏi 'mainly about' / 'purpose' luôn nằm ở đoạn đầu tiên hoặc những câu đầu tiên của văn bản",
+          "Dạng câu hỏi NOT/TRUE/FALSE đòi hỏi bạn phải đối chiếu và loại trừ từng đáp án một",
+          "Đây là kỹ thuật suy luận (Inference) rất đặc trưng trong TOEIC: Nếu một doanh nghiệp thông báo 'chúng tôi NAY ĐÃ CÓ"
+        ],
+        "correctIndex": 1,
+        "feedback": "Câu hỏi 'mainly about' / 'purpose' luôn nằm ở đoạn đầu tiên hoặc những câu đầu tiên của văn bản. Việc 'mở rộng' (expanding) thường đi liền với 'mở chi nhánh' (opening a branch) hoặc 'xây cơ sở mới' (b..."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 21 — B. NOTICE - MEMO - ARTICLE — MEMO To: All Employees From: Don Wunder, Director of Facilit",
+    "orderIndex": 21,
+    "type": "single",
+    "category": "B. NOTICE - MEMO - ARTICLE",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"trial basis\" có nghĩa là gì?",
+        "options": [
+          "sức khỏe, sự khỏe mạnh",
+          "luân phiên",
+          "không có thông tin này trong bài",
+          "trên cơ sở dùng thử"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"trial basis\" = trên cơ sở dùng thử"
+      },
+      {
+        "question": "Từ \"wellness\" có nghĩa là gì?",
+        "options": [
+          "sức khỏe, sự khỏe mạnh",
+          "trên cơ sở dùng thử",
+          "luân phiên",
+          "không có thông tin này trong bài"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"wellness\" = sức khỏe, sự khỏe mạnh"
+      },
+      {
+        "question": "Từ \"alternate\" có nghĩa là gì?",
+        "options": [
+          "không có thông tin này trong bài",
+          "trên cơ sở dùng thử",
+          "luân phiên",
+          "sức khỏe, sự khỏe mạnh"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"alternate\" = luân phiên"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"available on a trial basis\"",
+        "options": [
+          "adjusted to different heights",
+          "adjustable",
+          "available on a trial basis",
+          "offer staff a chance to try"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"available on a trial basis\" = \"offer staff a chance to try\""
+      },
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"adjustable\"",
+        "options": [
+          "offer staff a chance to try",
+          "adjusted to different heights",
+          "available on a trial basis",
+          "adjustable"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"adjustable\" = \"adjusted to different heights\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"BẢN GHI NHỚ Gửi: Tất cả Nhân viên Từ: Don Wunder, Giám đốc Cơ sở vật chất Ngày: 10 tháng 2 Chủ đề: Bàn làm việc đứng Như một phần trong cam kết của chúng tôi đối với sức khỏe nhân viên, chúng tôi đang đánh giá các thiết bị văn phòng mới.\"",
+        "options": [
+          "The new Chanti B45 model is adjustable, so you can alternate between sitting and standing",
+          "To survey worker preferences for a new breakroom",
+          "Five standing desks will be available on a trial basis... Please feel free to test them out",
+          "It is difficult to use."
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"Five standing desks will be available on a trial basis... Please feel free to test them out\""
+      },
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Năm chiếc bàn làm việc đứng sẽ có sẵn để dùng thử từ ngày 20 tháng 2 đến ngày 15 tháng 3 tại phòng nghỉ ngơi trên tầng hai.\"",
+        "options": [
+          "To encourage participation in exercise classes",
+          "Five standing desks will be available on a trial basis... Please feel free to test them out",
+          "It is difficult to use.",
+          "The new Chanti B45 model is adjustable, so you can alternate between sitting and standing"
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"The new Chanti B45 model is adjustable, so you can alternate between sitting and standing\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"Five standing desks will be available on a trial basis\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Dạng câu hỏi NOT/TRUE/FALSE đòi hỏi bạn phải đối chiếu và loại trừ từng đáp án một",
+          "Trong sơ đồ tổ chức TOEIC, Site Manager (Quản lý hiện trường) hoặc Compliance Officer (Nhân viên pháp chế) là người giám sát (oversee) việc mọi người có làm đúng luật (policy/rules) hay không",
+          "Khi một doanh nghiệp buộc phải tăng giá (Price increase) do chi phí nguyên vật liệu đầu vào (materials) hoặc lạm phát, họ thường gửi thư xin lỗi khách hàng và giải thích rõ lý do để giữ chân khách",
+          "Trong môi trường công sở hiện đại, việc trang bị 'standing desks' (bàn làm việc đứng) rất phổ biến để cải thiện sức khỏe (employee wellness) cho nhân viên văn phòng"
+        ],
+        "correctIndex": 3,
+        "feedback": "Trong môi trường công sở hiện đại, việc trang bị 'standing desks' (bàn làm việc đứng) rất phổ biến để cải thiện sức khỏe (employee wellness) cho nhân viên văn phòng."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 22 — B. NOTICE - MEMO - ARTICLE — MEMO To: Building 3 Occupants From: Maintenance Department D",
+    "orderIndex": 22,
+    "type": "single",
+    "category": "B. NOTICE - MEMO - ARTICLE",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"drilling\" có nghĩa là gì?",
+        "options": [
+          "việc khoan",
+          "sự bất tiện",
+          "sự gián đoạn, sự phá vỡ",
+          "giảm thiểu"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"drilling\" = việc khoan"
+      },
+      {
+        "question": "Từ \"minimize\" có nghĩa là gì?",
+        "options": [
+          "sự bất tiện",
+          "sự gián đoạn, sự phá vỡ",
+          "việc khoan",
+          "giảm thiểu"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"minimize\" = giảm thiểu"
+      },
+      {
+        "question": "Từ \"disruption\" có nghĩa là gì?",
+        "options": [
+          "sự gián đoạn, sự phá vỡ",
+          "giảm thiểu",
+          "sự bất tiện",
+          "việc khoan"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"disruption\" = sự gián đoạn, sự phá vỡ"
+      },
+      {
+        "question": "Từ \"inconvenience\" có nghĩa là gì?",
+        "options": [
+          "sự gián đoạn, sự phá vỡ",
+          "giảm thiểu",
+          "sự bất tiện",
+          "việc khoan"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"inconvenience\" = sự bất tiện"
+      }
+    ],
+    "paraphrase": [],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"BẢN GHI NHỚ Gửi: Cư dân Tòa nhà số 3 Từ: Bộ phận Bảo trì Ngày: 4 tháng 9 Xin lưu ý rằng đội xây dựng sẽ tiến hành khoan vào nền móng bê tông của Tòa nhà số 3 vào sáng mai bắt đầu lúc 8:00 Sáng.\"",
+        "options": [
+          "[1]",
+          "[4]",
+          "[2]",
+          "[3] This should minimize the disruption for those of you with offices on the west side... [3]"
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"[3] This should minimize the disruption for those of you with offices on the west side... [3]\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"[3] This should minimize the disruption for those of you with offices on the west side\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Trong các bài thông báo của cộng đồng khu dân cư (Community Notice), người ta thường dựa vào các yếu tố thời tiết hoặc mùa màng để lên kế hoạch dọn dẹp hoặc trồng cây (garden planting thường diễn ra vào mùa Xuân)",
+          "Trong các bài thông báo sửa chữa (Maintenance Notice), quản lý thường dùng cấu trúc: 'Xin lỗi vì tiếng ồn' -> 'Chúng tôi sẽ cố gắng giảm thiểu (minimize)' -> 'Nhưng không thể tránh hoàn toàn (However)'",
+          "Nhiều tập đoàn bán lẻ (Retail chains) có chương trình cử nhân sự văn phòng (corporate staff) xuống làm việc trực tiếp tại cửa hàng vài ngày trong năm để hiểu rõ hơn trải nghiệm của nhân viên cấp dưới và khách hàng",
+          "Các phòng khám nha khoa (Dental clinics) thường dùng hệ thống CRM để tự động gửi thư/email nhắc nhở khách hàng quay lại khám định kỳ (routine checkup) - thường là mỗi 6 tháng (semiannually) để cạo vôi răng"
+        ],
+        "correctIndex": 1,
+        "feedback": "Trong các bài thông báo sửa chữa (Maintenance Notice), quản lý thường dùng cấu trúc: 'Xin lỗi vì tiếng ồn' -> 'Chúng tôi sẽ cố gắng giảm thiểu (minimize)' -> 'Nhưng không thể tránh hoàn toàn (However)..."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 23 — B. NOTICE - MEMO - ARTICLE — Last week we conducted a study to gather opinions about our ",
+    "orderIndex": 23,
+    "type": "single",
+    "category": "B. NOTICE - MEMO - ARTICLE",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"tracking feature\" có nghĩa là gì?",
+        "options": [
+          "tính năng theo dõi",
+          "được chọn ngẫu nhiên",
+          "tiến hành một nghiên cứu",
+          "một cách nhanh chóng, ngay lập tức"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"tracking feature\" = tính năng theo dõi"
+      },
+      {
+        "question": "Từ \"randomly selected\" có nghĩa là gì?",
+        "options": [
+          "một cách nhanh chóng, ngay lập tức",
+          "tiến hành một nghiên cứu",
+          "được chọn ngẫu nhiên",
+          "tính năng theo dõi"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"randomly selected\" = được chọn ngẫu nhiên"
+      },
+      {
+        "question": "Từ \"promptly\" có nghĩa là gì?",
+        "options": [
+          "một cách nhanh chóng, ngay lập tức",
+          "được chọn ngẫu nhiên",
+          "tính năng theo dõi",
+          "tiến hành một nghiên cứu"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"promptly\" = một cách nhanh chóng, ngay lập tức"
+      },
+      {
+        "question": "Từ \"conduct a study\" có nghĩa là gì?",
+        "options": [
+          "tiến hành một nghiên cứu",
+          "tính năng theo dõi",
+          "một cách nhanh chóng, ngay lập tức",
+          "được chọn ngẫu nhiên"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"conduct a study\" = tiến hành một nghiên cứu"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"packaging\"",
+        "options": [
+          "packaging",
+          "delivery company",
+          "The passage does not provide this information.",
+          "This is not mentioned in the passage."
+        ],
+        "correctIndex": 1,
+        "feedback": "\"packaging\" = \"delivery company\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Tuần trước, chúng tôi đã tiến hành một nghiên cứu để thu thập ý kiến về dịch vụ khách hàng của chúng tôi.\"",
+        "options": [
+          "At an insurance agency",
+          "At a market research firm",
+          "At an advertising company",
+          "questions about packaging services and shipping charges... tracking feature on our Web site"
+        ],
+        "correctIndex": 3,
+        "feedback": "Bản dịch: \"questions about packaging services and shipping charges... tracking feature on our Web site\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"questions about packaging services and shipping charges\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Thuật ngữ 'eco-friendly' (thân thiện môi trường) và 'green' (xanh) được dùng thay thế cho nhau liên tục trong TOEIC, đặc biệt trong các chủ đề về du lịch (tourism), phát triển bền vững, hoặc sản phẩm tái chế",
+          "Kỹ năng Đọc hiểu suy luận logic: Một công ty không thể có 'kỷ lục cao nhất trong 3 năm' nếu nó mới được thành lập năm ngoái",
+          "Trong TOEIC, một 'Delivery company' hoặc 'Shipping/Courier/Logistics company' luôn gắn liền với các dịch vụ 'tracking' (theo dõi) và 'packaging' (đóng gói)",
+          "Kỹ năng giao tiếp (Communication skills) luôn là yếu tố cốt lõi của một Điều phối viên (Coordinator), bởi họ phải làm việc với rất nhiều phòng ban và đảm bảo mọi người hiểu đúng mục tiêu chung"
+        ],
+        "correctIndex": 2,
+        "feedback": "Trong TOEIC, một 'Delivery company' hoặc 'Shipping/Courier/Logistics company' luôn gắn liền với các dịch vụ 'tracking' (theo dõi) và 'packaging' (đóng gói)."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 24 — B. NOTICE - MEMO - ARTICLE — LONDON (2 February) — Tillford Press announced today the lau",
+    "orderIndex": 24,
+    "type": "single",
+    "category": "B. NOTICE - MEMO - ARTICLE",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"memoir\" có nghĩa là gì?",
+        "options": [
+          "truyền cảm hứng, nâng đỡ tinh thần",
+          "ra mắt (sản phẩm)",
+          "hồi ký",
+          "thương hiệu xuất bản (phụ)"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"memoir\" = hồi ký"
+      },
+      {
+        "question": "Từ \"imprint\" có nghĩa là gì?",
+        "options": [
+          "hồi ký",
+          "truyền cảm hứng, nâng đỡ tinh thần",
+          "ra mắt (sản phẩm)",
+          "thương hiệu xuất bản (phụ)"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"imprint\" = thương hiệu xuất bản (phụ)"
+      },
+      {
+        "question": "Từ \"uplifting\" có nghĩa là gì?",
+        "options": [
+          "hồi ký",
+          "thương hiệu xuất bản (phụ)",
+          "truyền cảm hứng, nâng đỡ tinh thần",
+          "ra mắt (sản phẩm)"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"uplifting\" = truyền cảm hứng, nâng đỡ tinh thần"
+      },
+      {
+        "question": "Từ \"launch\" có nghĩa là gì?",
+        "options": [
+          "thương hiệu xuất bản (phụ)",
+          "truyền cảm hứng, nâng đỡ tinh thần",
+          "hồi ký",
+          "ra mắt (sản phẩm)"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"launch\" = ra mắt (sản phẩm)"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"launch of its new imprint\"",
+        "options": [
+          "launch of its new imprint",
+          "This is not mentioned in the passage.",
+          "The passage does not provide this information.",
+          "announce a new series of books"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"launch of its new imprint\" = \"announce a new series of books\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"LONDON (Ngày 2 tháng 2) — Tillford Press hôm nay đã công bố ra mắt thương hiệu xuất bản mới của mình, Tillford Exalt.\"",
+        "options": [
+          "To advertise a sports concert",
+          "To provide a local calendar",
+          "launch of its new imprint, Tillford Exalt. This new line will feature books...",
+          "To promote new cookware"
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"launch of its new imprint, Tillford Exalt. This new line will feature books...\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"launch of its new imprint, Tillford Exalt\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Trong ngành xuất bản (Publishing), một nhà xuất bản lớn có thể sở hữu nhiều 'imprints' (thương hiệu phụ/dòng sách)",
+          "Từ đồng nghĩa cực kỳ quan trọng trong TOEIC: 'Annual' = 'Yearly' = 'Once a year' (Hàng năm)",
+          "Được bạn bè hoặc người quen giới thiệu (Referral) là một trong những nguồn tuyển dụng hiệu quả nhất",
+          "Trong các văn bản hành chính, thường có nhiều mốc thời gian khác nhau (ngày ra thông báo, ngày họp thông báo, ngày nhận tiền)"
+        ],
+        "correctIndex": 0,
+        "feedback": "Trong ngành xuất bản (Publishing), một nhà xuất bản lớn có thể sở hữu nhiều 'imprints' (thương hiệu phụ/dòng sách). Mỗi imprint tập trung vào một thể loại riêng (ví dụ: dòng sách khoa học, dòng sách p..."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 25 — B. NOTICE - MEMO - ARTICLE — Gorman Electronics has finally revealed the details of its n",
+    "orderIndex": 25,
+    "type": "single",
+    "category": "B. NOTICE - MEMO - ARTICLE",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"reveal\" có nghĩa là gì?",
+        "options": [
+          "biện minh, chứng minh là hợp lý",
+          "không có thông tin này trong bài",
+          "lên kệ (được bán ra thị trường)",
+          "tiết lộ, công bố"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"reveal\" = tiết lộ, công bố"
+      },
+      {
+        "question": "Từ \"justify\" có nghĩa là gì?",
+        "options": [
+          "tiết lộ, công bố",
+          "không có thông tin này trong bài",
+          "lên kệ (được bán ra thị trường)",
+          "biện minh, chứng minh là hợp lý"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"justify\" = biện minh, chứng minh là hợp lý"
+      },
+      {
+        "question": "Từ \"hit the shelves\" có nghĩa là gì?",
+        "options": [
+          "lên kệ (được bán ra thị trường)",
+          "biện minh, chứng minh là hợp lý",
+          "tiết lộ, công bố",
+          "không có thông tin này trong bài"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"hit the shelves\" = lên kệ (được bán ra thị trường)"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"£999 starting price is £100 more than... previous model\"",
+        "options": [
+          "The passage does not provide this information.",
+          "£999 starting price is £100 more than... previous model",
+          "previous model cost £899",
+          "This is not mentioned in the passage."
+        ],
+        "correctIndex": 2,
+        "feedback": "\"£999 starting price is £100 more than... previous model\" = \"previous model cost £899\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Gorman Electronics cuối cùng đã tiết lộ chi tiết về chiếc điện thoại thông minh mới nhất của mình.\"",
+        "options": [
+          "£1099",
+          "£99",
+          "The £999 starting price is £100 more than that of the previous model",
+          "£100"
+        ],
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"The £999 starting price is £100 more than that of the previous model\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"The £999 starting price is £100 more than that of the previous model\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Trong môi trường công sở hiện đại, việc trang bị 'standing desks' (bàn làm việc đứng) rất phổ biến để cải thiện sức khỏe (employee wellness) cho nhân viên văn phòng",
+          "Trong các bài thông báo sửa chữa (Maintenance Notice), quản lý thường dùng cấu trúc: 'Xin lỗi vì tiếng ồn' -> 'Chúng tôi sẽ cố gắng giảm thiểu (minimize)' -> 'Nhưng không thể tránh hoàn toàn (However)'",
+          "Trong các văn bản hành chính, thường có nhiều mốc thời gian khác nhau (ngày ra thông báo, ngày họp thông báo, ngày nhận tiền)",
+          "Đây là dạng câu hỏi Tính toán cơ bản trong TOEIC"
+        ],
+        "correctIndex": 3,
+        "feedback": "Đây là dạng câu hỏi Tính toán cơ bản trong TOEIC. Bạn phải chú ý đến các cụm từ so sánh như 'more than' (nhiều hơn), 'less than' (ít hơn), 'discount of' (giảm giá) để làm phép cộng/trừ chính xác."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 26 — B. NOTICE - MEMO - ARTICLE — The Hannen Corporation recently launched a unique training i",
+    "orderIndex": 26,
+    "type": "single",
+    "category": "B. NOTICE - MEMO - ARTICLE",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"headquarters\" có nghĩa là gì?",
+        "options": [
+          "sự tương tác",
+          "các ca làm việc điển hình",
+          "sáng kiến, bước đầu",
+          "trụ sở chính"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"headquarters\" = trụ sở chính"
+      },
+      {
+        "question": "Từ \"interaction\" có nghĩa là gì?",
+        "options": [
+          "các ca làm việc điển hình",
+          "sáng kiến, bước đầu",
+          "sự tương tác",
+          "trụ sở chính"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"interaction\" = sự tương tác"
+      },
+      {
+        "question": "Từ \"typical shifts\" có nghĩa là gì?",
+        "options": [
+          "sáng kiến, bước đầu",
+          "trụ sở chính",
+          "các ca làm việc điển hình",
+          "sự tương tác"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"typical shifts\" = các ca làm việc điển hình"
+      },
+      {
+        "question": "Từ \"initiative\" có nghĩa là gì?",
+        "options": [
+          "các ca làm việc điển hình",
+          "sáng kiến, bước đầu",
+          "sự tương tác",
+          "trụ sở chính"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"initiative\" = sáng kiến, bước đầu"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"places employees from the corporate headquarters in retail stores\"",
+        "options": [
+          "The passage does not provide this information.",
+          "This is not mentioned in the passage.",
+          "Corporate employees temporarily working in stores",
+          "places employees from the corporate headquarters in retail stores"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"places employees from the corporate headquarters in retail stores\" = \"Corporate employees temporarily working in stores\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Tập đoàn Hannen gần đây đã khởi xướng một sáng kiến đào tạo độc đáo mang tên Dự án Tại-cửa-hàng (In-Store Project).\"",
+        "options": [
+          "This project places employees from the corporate headquarters in retail stores... to work typical shifts.",
+          "Redesigning the layout of retail stores",
+          "Hiring new interns for the summer",
+          "Store employees visiting the headquarters"
+        ],
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"This project places employees from the corporate headquarters in retail stores... to work typical shifts.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"This project places employees from the corporate headquarters in retail stores\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Nhiều tập đoàn lớn thường cung cấp xe công ty (company cars) hoặc hỗ trợ chi phí thuê xe cho các vị trí quản lý hoặc nhân viên kinh doanh phải đi lại nhiều",
+          "Trong TOEIC, một 'Delivery company' hoặc 'Shipping/Courier/Logistics company' luôn gắn liền với các dịch vụ 'tracking' (theo dõi) và 'packaging' (đóng gói)",
+          "Từ đồng nghĩa cực kỳ quan trọng trong TOEIC: 'Annual' = 'Yearly' = 'Once a year' (Hàng năm)",
+          "Nhiều tập đoàn bán lẻ (Retail chains) có chương trình cử nhân sự văn phòng (corporate staff) xuống làm việc trực tiếp tại cửa hàng vài ngày trong năm để hiểu rõ hơn trải nghiệm của nhân viên cấp dưới và khách hàng"
+        ],
+        "correctIndex": 3,
+        "feedback": "Nhiều tập đoàn bán lẻ (Retail chains) có chương trình cử nhân sự văn phòng (corporate staff) xuống làm việc trực tiếp tại cửa hàng vài ngày trong năm để hiểu rõ hơn trải nghiệm của nhân viên cấp dưới ..."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 27 — B. NOTICE - MEMO - ARTICLE — A recent survey regarding the future development of Karlinga",
+    "orderIndex": 27,
+    "type": "single",
+    "category": "B. NOTICE - MEMO - ARTICLE",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"respondent\" có nghĩa là gì?",
+        "options": [
+          "thân thiện với môi trường",
+          "sự chú trọng/nhấn mạnh vào",
+          "người trả lời (khảo sát)",
+          "mang lại, sản sinh (kết quả)"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"respondent\" = người trả lời (khảo sát)"
+      },
+      {
+        "question": "Từ \"emphasis on\" có nghĩa là gì?",
+        "options": [
+          "sự chú trọng/nhấn mạnh vào",
+          "mang lại, sản sinh (kết quả)",
+          "thân thiện với môi trường",
+          "người trả lời (khảo sát)"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"emphasis on\" = sự chú trọng/nhấn mạnh vào"
+      },
+      {
+        "question": "Từ \"yield\" có nghĩa là gì?",
+        "options": [
+          "mang lại, sản sinh (kết quả)",
+          "thân thiện với môi trường",
+          "người trả lời (khảo sát)",
+          "sự chú trọng/nhấn mạnh vào"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"yield\" = mang lại, sản sinh (kết quả)"
+      },
+      {
+        "question": "Từ \"eco-friendly\" có nghĩa là gì?",
+        "options": [
+          "mang lại, sản sinh (kết quả)",
+          "thân thiện với môi trường",
+          "sự chú trọng/nhấn mạnh vào",
+          "người trả lời (khảo sát)"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"eco-friendly\" = thân thiện với môi trường"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"more than 80 percent agreed\"",
+        "options": [
+          "The passage does not provide this information.",
+          "This is not mentioned in the passage.",
+          "more than 80 percent agreed",
+          "strong support"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"more than 80 percent agreed\" = \"strong support\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Một cuộc khảo sát gần đây liên quan đến sự phát triển trong tương lai của Bãi biển Karlinga đã mang lại những kết quả thú vị.\"",
+        "options": [
+          "Tourists want cheaper hotels.",
+          "more than 80 percent agreed that there should be more emphasis on eco-friendly tourism",
+          "The university should move to a new location.",
+          "Residents want more ferry service."
+        ],
+        "correctIndex": 1,
+        "feedback": "Bản dịch: \"more than 80 percent agreed that there should be more emphasis on eco-friendly tourism\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"more than 80 percent agreed that there should be more emphasis on eco-friendly tourism\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Trong môi trường công sở hiện đại, việc trang bị 'standing desks' (bàn làm việc đứng) rất phổ biến để cải thiện sức khỏe (employee wellness) cho nhân viên văn phòng",
+          "Thuật ngữ 'eco-friendly' (thân thiện môi trường) và 'green' (xanh) được dùng thay thế cho nhau liên tục trong TOEIC, đặc biệt trong các chủ đề về du lịch (tourism), phát triển bền vững, hoặc sản phẩm tái chế",
+          "Các phương tiện giao thông công cộng (Public Transit) thường phải đăng thông báo (Notice/Alert) dán ở trạm dừng hoặc trên ứng dụng khi có sự cố đào đường (construction) khiến xe phải đi đường vòng (detour) hoặc tạm dừng (suspend)",
+          "Trong các bài đọc TOEIC, ứng viên chuyển việc thường vì hai lý do chính: 1"
+        ],
+        "correctIndex": 1,
+        "feedback": "Thuật ngữ 'eco-friendly' (thân thiện môi trường) và 'green' (xanh) được dùng thay thế cho nhau liên tục trong TOEIC, đặc biệt trong các chủ đề về du lịch (tourism), phát triển bền vững, hoặc sản phẩm ..."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 28 — B. NOTICE - MEMO - ARTICLE — After running a successful online jewelry boutique for three",
+    "orderIndex": 28,
+    "type": "single",
+    "category": "B. NOTICE - MEMO - ARTICLE",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"set up\" có nghĩa là gì?",
+        "options": [
+          "cửa hàng nhỏ (thường bán quần áo, trang sức)",
+          "thành lập, thiết lập",
+          "truyền thống, có mặt bằng thực tế",
+          "không có thông tin này trong bài"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"set up\" = thành lập, thiết lập"
+      },
+      {
+        "question": "Từ \"boutique\" có nghĩa là gì?",
+        "options": [
+          "không có thông tin này trong bài",
+          "cửa hàng nhỏ (thường bán quần áo, trang sức)",
+          "thành lập, thiết lập",
+          "truyền thống, có mặt bằng thực tế"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"boutique\" = cửa hàng nhỏ (thường bán quần áo, trang sức)"
+      },
+      {
+        "question": "Từ \"brick-and-mortar\" có nghĩa là gì?",
+        "options": [
+          "thành lập, thiết lập",
+          "truyền thống, có mặt bằng thực tế",
+          "không có thông tin này trong bài",
+          "cửa hàng nhỏ (thường bán quần áo, trang sức)"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"brick-and-mortar\" = truyền thống, có mặt bằng thực tế"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"brick-and-mortar store\"",
+        "options": [
+          "physical shop location",
+          "The passage does not provide this information.",
+          "This is not mentioned in the passage.",
+          "brick-and-mortar store"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"brick-and-mortar store\" = \"physical shop location\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Sau khi điều hành một cửa hàng trang sức trực tuyến thành công trong ba năm, Tamara Banda cuối cùng đã thiết lập một cửa hàng truyền thống cho thương hiệu của mình, Design Glory.\"",
+        "options": [
+          "It is an online-only business.",
+          "Tamara Banda has finally set up a brick-and-mortar store for her brand",
+          "It was closed on Saturdays.",
+          "It sells heavy metal supplies."
+        ],
+        "correctIndex": 1,
+        "feedback": "Bản dịch: \"Tamara Banda has finally set up a brick-and-mortar store for her brand\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"Tamara Banda has finally set up a brick-and-mortar store for her brand\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "'Brick-and-mortar' là một thành ngữ (idiom) phổ biến trong kinh doanh để chỉ các cửa hàng truyền thống có địa điểm thật (được xây bằng gạch và vữa), phân biệt với cửa hàng thương mại điện tử (e-commerce/online store)",
+          "Trong các hợp đồng cho thuê xe (Car leasing), khách hàng thường bị bắt buộc phải mang xe đi bảo dưỡng định kỳ tại các garage chỉ định để đảm bảo tài sản (chiếc xe) luôn ở trạng thái tốt nhất",
+          "Kỹ năng giao tiếp (Communication skills) luôn là yếu tố cốt lõi của một Điều phối viên (Coordinator), bởi họ phải làm việc với rất nhiều phòng ban và đảm bảo mọi người hiểu đúng mục tiêu chung",
+          "Trong các bài đọc TOEIC, ứng viên chuyển việc thường vì hai lý do chính: 1"
+        ],
+        "correctIndex": 0,
+        "feedback": "'Brick-and-mortar' là một thành ngữ (idiom) phổ biến trong kinh doanh để chỉ các cửa hàng truyền thống có địa điểm thật (được xây bằng gạch và vữa), phân biệt với cửa hàng thương mại điện tử (e-commer..."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 29 — B. NOTICE - MEMO - ARTICLE — Dear Neighbor, Now that the long, cold winter is just behind",
+    "orderIndex": 29,
+    "type": "single",
+    "category": "B. NOTICE - MEMO - ARTICLE",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"established\" có nghĩa là gì?",
+        "options": [
+          "tình nguyện viên",
+          "trồng (cây)",
+          "This is not mentioned in the passage.",
+          "được thành lập, được thiết lập"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"established\" = được thành lập, được thiết lập"
+      },
+      {
+        "question": "Từ \"volunteer\" có nghĩa là gì?",
+        "options": [
+          "được thành lập, được thiết lập",
+          "tình nguyện viên",
+          "trồng (cây)",
+          "không có thông tin này trong bài"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"volunteer\" = tình nguyện viên"
+      },
+      {
+        "question": "Từ \"plant\" có nghĩa là gì?",
+        "options": [
+          "trồng (cây)",
+          "không có thông tin này trong bài",
+          "tình nguyện viên",
+          "được thành lập, được thiết lập"
+        ],
+        "correctIndex": 0,
+        "feedback": "\"plant\" = trồng (cây)"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"winter is just behind us\"",
+        "options": [
+          "winter is just behind us",
+          "Spring",
+          "This is not mentioned in the passage.",
+          "The passage does not provide this information."
+        ],
+        "correctIndex": 1,
+        "feedback": "\"winter is just behind us\" = \"Spring\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Gửi những người hàng xóm thân mến, Giờ đây, khi mùa đông dài và lạnh giá vừa trôi qua, chúng tôi muốn mời bạn giúp chúng tôi cải tạo Khu vườn Cộng đồng Thị trấn Moon mới được thành lập.\"",
+        "options": [
+          "Winter",
+          "Now that the long, cold winter is just behind us...",
+          "Autumn",
+          "Summer"
+        ],
+        "correctIndex": 1,
+        "feedback": "Bản dịch: \"Now that the long, cold winter is just behind us...\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"Now that the long, cold winter is just behind us\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Trong sơ đồ tổ chức TOEIC, Site Manager (Quản lý hiện trường) hoặc Compliance Officer (Nhân viên pháp chế) là người giám sát (oversee) việc mọi người có làm đúng luật (policy/rules) hay không",
+          "Trong các bài thông báo của cộng đồng khu dân cư (Community Notice), người ta thường dựa vào các yếu tố thời tiết hoặc mùa màng để lên kế hoạch dọn dẹp hoặc trồng cây (garden planting thường diễn ra vào mùa Xuân)",
+          "Đây là dạng câu hỏi CHÚ Ý CHI TIẾT KẾT HỢP SUY LUẬN",
+          "Từ đồng nghĩa cực kỳ quan trọng trong TOEIC: 'Annual' = 'Yearly' = 'Once a year' (Hàng năm)"
+        ],
+        "correctIndex": 1,
+        "feedback": "Trong các bài thông báo của cộng đồng khu dân cư (Community Notice), người ta thường dựa vào các yếu tố thời tiết hoặc mùa màng để lên kế hoạch dọn dẹp hoặc trồng cây (garden planting thường diễn ra v..."
+      }
+    ]
+  },
+  {
+    "_passage": "Bài 30 — B. NOTICE - MEMO - ARTICLE — Feller Airlines Tarmac Delay Plan In the rare event of a len",
+    "orderIndex": 30,
+    "type": "single",
+    "category": "B. NOTICE - MEMO - ARTICLE",
+    "approved": false,
+    "_hasRichData": true,
+    "vocab": [
+      {
+        "question": "Từ \"tarmac delay\" có nghĩa là gì?",
+        "options": [
+          "sự thông báo",
+          "sự trễ chuyến trên đường băng",
+          "kéo dài, dài dòng",
+          "miễn phí (được tặng kèm)"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"tarmac delay\" = sự trễ chuyến trên đường băng"
+      },
+      {
+        "question": "Từ \"lengthy\" có nghĩa là gì?",
+        "options": [
+          "miễn phí (được tặng kèm)",
+          "kéo dài, dài dòng",
+          "sự thông báo",
+          "sự trễ chuyến trên đường băng"
+        ],
+        "correctIndex": 1,
+        "feedback": "\"lengthy\" = kéo dài, dài dòng"
+      },
+      {
+        "question": "Từ \"complimentary\" có nghĩa là gì?",
+        "options": [
+          "kéo dài, dài dòng",
+          "sự trễ chuyến trên đường băng",
+          "sự thông báo",
+          "miễn phí (được tặng kèm)"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"complimentary\" = miễn phí (được tặng kèm)"
+      },
+      {
+        "question": "Từ \"notification\" có nghĩa là gì?",
+        "options": [
+          "sự trễ chuyến trên đường băng",
+          "kéo dài, dài dòng",
+          "sự thông báo",
+          "miễn phí (được tặng kèm)"
+        ],
+        "correctIndex": 2,
+        "feedback": "\"notification\" = sự thông báo"
+      }
+    ],
+    "paraphrase": [
+      {
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"receive notifications\"",
+        "options": [
+          "The passage does not provide this information.",
+          "This is not mentioned in the passage.",
+          "receive notifications",
+          "get updates"
+        ],
+        "correctIndex": 3,
+        "feedback": "\"receive notifications\" = \"get updates\""
+      }
+    ],
+    "translation": [
+      {
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Kế hoạch Xử lý Trễ chuyến trên Đường băng của Hãng hàng không Feller Trong trường hợp hiếm hoi xảy ra việc trễ chuyến kéo dài trên đường băng, Hãng hàng không Feller cam kết đảm bảo sự thoải mái cho hành khách.\"",
+        "options": [
+          "Once a day",
+          "Passengers will receive notifications regarding the status of the delay at the gate every 30 minutes.",
+          "Every 15 minutes",
+          "Every hour"
+        ],
+        "correctIndex": 1,
+        "feedback": "Bản dịch: \"Passengers will receive notifications regarding the status of the delay at the gate every 30 minutes.\""
+      }
+    ],
+    "context": [
+      {
+        "question": "Bài đọc đề cập đến: \"Passengers will receive notifications regarding the status of the delay at the gate every 30 minutes\". Trong thực tế, điều này thường có ý nghĩa gì?",
+        "options": [
+          "Khi xảy ra tình trạng trễ chuyến (Delay), các hãng hàng không thường có quy định nghiêm ngặt về việc cung cấp đồ ăn/nước uống (snacks/beverages) và phải liên tục cập nhật thông tin (updates/notifications) để hành khách không bị hoang mang",
+          "Thuật ngữ 'eco-friendly' (thân thiện môi trường) và 'green' (xanh) được dùng thay thế cho nhau liên tục trong TOEIC, đặc biệt trong các chủ đề về du lịch (tourism), phát triển bền vững, hoặc sản phẩm tái chế",
+          "Trong các bài đọc TOEIC, ứng viên chuyển việc thường vì hai lý do chính: 1",
+          "Trong các bài thông báo của cộng đồng khu dân cư (Community Notice), người ta thường dựa vào các yếu tố thời tiết hoặc mùa màng để lên kế hoạch dọn dẹp hoặc trồng cây (garden planting thường diễn ra vào mùa Xuân)"
+        ],
+        "correctIndex": 0,
+        "feedback": "Khi xảy ra tình trạng trễ chuyến (Delay), các hãng hàng không thường có quy định nghiêm ngặt về việc cung cấp đồ ăn/nước uống (snacks/beverages) và phải liên tục cập nhật thông tin (updates/notificati..."
+      }
+    ]
+  }
+]

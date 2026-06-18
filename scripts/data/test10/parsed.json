@@ -1,4 +1,4 @@
-﻿{
+{
   "testName": "EST 2024 Test 10",
   "testSlug": "ets-2024-test-10",
   "orderIndex": 10,
@@ -9,6 +9,87 @@
       "title": "Question 1",
       "questionStart": 1,
       "questionEnd": 1,
+      "part": 1,
+      "transcriptFull": "(A) The man is reaching above a shelf.\n(B) The man is adjusting his glasses.\n(C) The man is paying for an item.\n(D) The man is trying on gloves.",
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "speaker": null,
+          "content": "The man is reaching above a shelf.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "A",
+          "blanks": [
+            {
+              "position": 3,
+              "answer": "reaching",
+              "hint": "r_______"
+            },
+            {
+              "position": 4,
+              "answer": "above",
+              "hint": "a____"
+            }
+          ]
+        },
+        {
+          "orderIndex": 1,
+          "speaker": null,
+          "content": "The man is adjusting his glasses.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "B",
+          "blanks": [
+            {
+              "position": 3,
+              "answer": "adjusting",
+              "hint": "a________"
+            }
+          ]
+        },
+        {
+          "orderIndex": 2,
+          "speaker": null,
+          "content": "The man is paying for an item.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "C",
+          "blanks": [
+            {
+              "position": 3,
+              "answer": "paying",
+              "hint": "p_____"
+            }
+          ]
+        },
+        {
+          "orderIndex": 3,
+          "speaker": null,
+          "content": "The man is trying on gloves.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "D",
+          "blanks": [
+            {
+              "position": 3,
+              "answer": "trying",
+              "hint": "t_____"
+            }
+          ]
+        }
+      ],
+      "correctOption": null,
+      "explanation": "",
+      "audioFiles": [
+        "E24-T10-01.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q1-1.mp3",
+      "audioDuration": 26.357189
+    },
+    {
+      "title": "Question 2",
+      "questionStart": 2,
+      "questionEnd": 2,
       "part": 1,
       "transcriptFull": "(A) She's opening an umbrella over a dining area.\n(B) She's standing on a patio near a house.\n(C) She's taking a tool out of a storage cupboard.\n(D) She's picking up some cushions off the ground.",
       "sentences": [
@@ -96,15 +177,96 @@
       "correctOption": null,
       "explanation": "",
       "audioFiles": [
-        "E24-T10-01.mp3"
+        "E24-T10-02.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q2-2.mp3",
+      "audioDuration": 28.285813
     },
     {
-      "title": "Question 2",
-      "questionStart": 2,
-      "questionEnd": 2,
+      "title": "Question 3",
+      "questionStart": 3,
+      "questionEnd": 3,
+      "part": 1,
+      "transcriptFull": "(A) They're raking some leaves.\n(B) They're shoveling soil into a bag.\n(C) They're working in a garden.\n(D) They're watering some flowers.",
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "speaker": null,
+          "content": "They're raking some leaves.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "A",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "raking",
+              "hint": "r_____"
+            }
+          ]
+        },
+        {
+          "orderIndex": 1,
+          "speaker": null,
+          "content": "They're shoveling soil into a bag.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "B",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "shoveling",
+              "hint": "s________"
+            },
+            {
+              "position": 2,
+              "answer": "soil",
+              "hint": "s___"
+            }
+          ]
+        },
+        {
+          "orderIndex": 2,
+          "speaker": null,
+          "content": "They're working in a garden.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "C",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "working",
+              "hint": "w______"
+            }
+          ]
+        },
+        {
+          "orderIndex": 3,
+          "speaker": null,
+          "content": "They're watering some flowers.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "D",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "watering",
+              "hint": "w_______"
+            }
+          ]
+        }
+      ],
+      "correctOption": null,
+      "explanation": "",
+      "audioFiles": [
+        "E24-T10-03.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q3-3.mp3",
+      "audioDuration": 25.914125
+    },
+    {
+      "title": "Question 4",
+      "questionStart": 4,
+      "questionEnd": 4,
       "part": 1,
       "transcriptFull": "(A) Some food has been laid out on platters.\n(B) Some chairs are lined up against the wall.\n(C) Some floor tiles are being installed.\n(D) Some dinner plates have been placed in a sink.",
       "sentences": [
@@ -192,273 +354,15 @@
       "correctOption": null,
       "explanation": "",
       "audioFiles": [
-        "E24-T10-02.mp3"
-      ],
-      "audioUrl": "",
-      "audioDuration": 0
-    },
-    {
-      "title": "Question 3",
-      "questionStart": 3,
-      "questionEnd": 3,
-      "part": 1,
-      "transcriptFull": "(A) The man is reaching above a shelf.\n(B) The man is adjusting his glasses.\n(C) The man is paying for an item.\n(D) The man is trying on gloves.",
-      "sentences": [
-        {
-          "orderIndex": 0,
-          "speaker": null,
-          "content": "The man is reaching above a shelf.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "A",
-          "blanks": [
-            {
-              "position": 3,
-              "answer": "reaching",
-              "hint": "r_______"
-            },
-            {
-              "position": 4,
-              "answer": "above",
-              "hint": "a____"
-            }
-          ]
-        },
-        {
-          "orderIndex": 1,
-          "speaker": null,
-          "content": "The man is adjusting his glasses.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "B",
-          "blanks": [
-            {
-              "position": 3,
-              "answer": "adjusting",
-              "hint": "a________"
-            }
-          ]
-        },
-        {
-          "orderIndex": 2,
-          "speaker": null,
-          "content": "The man is paying for an item.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "C",
-          "blanks": [
-            {
-              "position": 3,
-              "answer": "paying",
-              "hint": "p_____"
-            }
-          ]
-        },
-        {
-          "orderIndex": 3,
-          "speaker": null,
-          "content": "The man is trying on gloves.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "D",
-          "blanks": [
-            {
-              "position": 3,
-              "answer": "trying",
-              "hint": "t_____"
-            }
-          ]
-        }
-      ],
-      "correctOption": null,
-      "explanation": "",
-      "audioFiles": [
-        "E24-T10-03.mp3"
-      ],
-      "audioUrl": "",
-      "audioDuration": 0
-    },
-    {
-      "title": "Question 4",
-      "questionStart": 4,
-      "questionEnd": 4,
-      "part": 1,
-      "transcriptFull": "(A) They're raking some leaves.\n(B) They're shoveling soil into a bag.\n(C) They're working in a garden.\n(D) They're watering some flowers.",
-      "sentences": [
-        {
-          "orderIndex": 0,
-          "speaker": null,
-          "content": "They're raking some leaves.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "A",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "raking",
-              "hint": "r_____"
-            }
-          ]
-        },
-        {
-          "orderIndex": 1,
-          "speaker": null,
-          "content": "They're shoveling soil into a bag.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "B",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "shoveling",
-              "hint": "s________"
-            },
-            {
-              "position": 2,
-              "answer": "soil",
-              "hint": "s___"
-            }
-          ]
-        },
-        {
-          "orderIndex": 2,
-          "speaker": null,
-          "content": "They're working in a garden.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "C",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "working",
-              "hint": "w______"
-            }
-          ]
-        },
-        {
-          "orderIndex": 3,
-          "speaker": null,
-          "content": "They're watering some flowers.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "D",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "watering",
-              "hint": "w_______"
-            }
-          ]
-        }
-      ],
-      "correctOption": null,
-      "explanation": "",
-      "audioFiles": [
         "E24-T10-04.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q4-4.mp3",
+      "audioDuration": 27.034813
     },
     {
       "title": "Question 5",
       "questionStart": 5,
       "questionEnd": 5,
-      "part": 1,
-      "transcriptFull": "(A) Some potted plants are on both sides of an entrance.\n(B) An awning is shading a parking area.\n(C) Some signs are posted on a brick building.\n(D) Some furniture is propping open a door.",
-      "sentences": [
-        {
-          "orderIndex": 0,
-          "speaker": null,
-          "content": "Some potted plants are on both sides of an entrance.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "A",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "potted",
-              "hint": "p_____"
-            },
-            {
-              "position": 6,
-              "answer": "sides",
-              "hint": "s____"
-            }
-          ]
-        },
-        {
-          "orderIndex": 1,
-          "speaker": null,
-          "content": "An awning is shading a parking area.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "B",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "awning",
-              "hint": "a_____"
-            },
-            {
-              "position": 5,
-              "answer": "parking",
-              "hint": "p______"
-            }
-          ]
-        },
-        {
-          "orderIndex": 2,
-          "speaker": null,
-          "content": "Some signs are posted on a brick building.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "C",
-          "blanks": [
-            {
-              "position": 3,
-              "answer": "posted",
-              "hint": "p_____"
-            },
-            {
-              "position": 6,
-              "answer": "brick",
-              "hint": "b____"
-            }
-          ]
-        },
-        {
-          "orderIndex": 3,
-          "speaker": null,
-          "content": "Some furniture is propping open a door.",
-          "startTime": 0,
-          "endTime": 0,
-          "optionLabel": "D",
-          "blanks": [
-            {
-              "position": 1,
-              "answer": "furniture",
-              "hint": "f________"
-            },
-            {
-              "position": 4,
-              "answer": "open",
-              "hint": "o___"
-            }
-          ]
-        }
-      ],
-      "correctOption": null,
-      "explanation": "",
-      "audioFiles": [
-        "E24-T10-05.mp3"
-      ],
-      "audioUrl": "",
-      "audioDuration": 0
-    },
-    {
-      "title": "Question 6",
-      "questionStart": 6,
-      "questionEnd": 6,
       "part": 1,
       "transcriptFull": "(A) A worker is changing a lightbulb.\n(B) A worker is handing a box to a customer.\n(C) A worker is crouching down behind a counter.\n(D) A worker is cleaning a window.",
       "sentences": [
@@ -546,10 +450,106 @@
       "correctOption": null,
       "explanation": "",
       "audioFiles": [
+        "E24-T10-05.mp3"
+      ],
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q5-5.mp3",
+      "audioDuration": 26.800256
+    },
+    {
+      "title": "Question 6",
+      "questionStart": 6,
+      "questionEnd": 6,
+      "part": 1,
+      "transcriptFull": "(A) Some potted plants are on both sides of an entrance.\n(B) An awning is shading a parking area.\n(C) Some signs are posted on a brick building.\n(D) Some furniture is propping open a door.",
+      "sentences": [
+        {
+          "orderIndex": 0,
+          "speaker": null,
+          "content": "Some potted plants are on both sides of an entrance.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "A",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "potted",
+              "hint": "p_____"
+            },
+            {
+              "position": 6,
+              "answer": "sides",
+              "hint": "s____"
+            }
+          ]
+        },
+        {
+          "orderIndex": 1,
+          "speaker": null,
+          "content": "An awning is shading a parking area.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "B",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "awning",
+              "hint": "a_____"
+            },
+            {
+              "position": 5,
+              "answer": "parking",
+              "hint": "p______"
+            }
+          ]
+        },
+        {
+          "orderIndex": 2,
+          "speaker": null,
+          "content": "Some signs are posted on a brick building.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "C",
+          "blanks": [
+            {
+              "position": 3,
+              "answer": "posted",
+              "hint": "p_____"
+            },
+            {
+              "position": 6,
+              "answer": "brick",
+              "hint": "b____"
+            }
+          ]
+        },
+        {
+          "orderIndex": 3,
+          "speaker": null,
+          "content": "Some furniture is propping open a door.",
+          "startTime": 0,
+          "endTime": 0,
+          "optionLabel": "D",
+          "blanks": [
+            {
+              "position": 1,
+              "answer": "furniture",
+              "hint": "f________"
+            },
+            {
+              "position": 4,
+              "answer": "open",
+              "hint": "o___"
+            }
+          ]
+        }
+      ],
+      "correctOption": null,
+      "explanation": "",
+      "audioFiles": [
         "E24-T10-06.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q6-6.mp3",
+      "audioDuration": 29.041625
     },
     {
       "title": "Question 7",
@@ -623,8 +623,8 @@
       "audioFiles": [
         "E24-T10-07.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q7-7.mp3",
+      "audioDuration": 19.294256
     },
     {
       "title": "Question 8",
@@ -692,8 +692,8 @@
       "audioFiles": [
         "E24-T10-08.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q8-8.mp3",
+      "audioDuration": 18.877256
     },
     {
       "title": "Question 9",
@@ -766,8 +766,8 @@
       "audioFiles": [
         "E24-T10-09.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q9-9.mp3",
+      "audioDuration": 19.919756
     },
     {
       "title": "Question 10",
@@ -852,8 +852,8 @@
       "audioFiles": [
         "E24-T10-10.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q10-10.mp3",
+      "audioDuration": 19.554878
     },
     {
       "title": "Question 11",
@@ -927,8 +927,8 @@
       "audioFiles": [
         "E24-T10-11.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q11-11.mp3",
+      "audioDuration": 19.580938
     },
     {
       "title": "Question 12",
@@ -1013,8 +1013,8 @@
       "audioFiles": [
         "E24-T10-12.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q12-12.mp3",
+      "audioDuration": 21.379256
     },
     {
       "title": "Question 13",
@@ -1094,8 +1094,8 @@
       "audioFiles": [
         "E24-T10-13.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q13-13.mp3",
+      "audioDuration": 19.607
     },
     {
       "title": "Question 14",
@@ -1174,8 +1174,8 @@
       "audioFiles": [
         "E24-T10-14.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q14-14.mp3",
+      "audioDuration": 21.9005
     },
     {
       "title": "Question 15",
@@ -1260,8 +1260,8 @@
       "audioFiles": [
         "E24-T10-15.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q15-15.mp3",
+      "audioDuration": 21.327125
     },
     {
       "title": "Question 16",
@@ -1335,8 +1335,8 @@
       "audioFiles": [
         "E24-T10-16.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q16-16.mp3",
+      "audioDuration": 21.014378
     },
     {
       "title": "Question 17",
@@ -1404,8 +1404,8 @@
       "audioFiles": [
         "E24-T10-17.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q17-17.mp3",
+      "audioDuration": 21.744125
     },
     {
       "title": "Question 18",
@@ -1500,8 +1500,8 @@
       "audioFiles": [
         "E24-T10-18.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q18-18.mp3",
+      "audioDuration": 22.890878
     },
     {
       "title": "Question 19",
@@ -1586,8 +1586,8 @@
       "audioFiles": [
         "E24-T10-19.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q19-19.mp3",
+      "audioDuration": 21.144689
     },
     {
       "title": "Question 20",
@@ -1672,8 +1672,8 @@
       "audioFiles": [
         "E24-T10-20.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q20-20.mp3",
+      "audioDuration": 21.040438
     },
     {
       "title": "Question 21",
@@ -1763,8 +1763,8 @@
       "audioFiles": [
         "E24-T10-21.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q21-21.mp3",
+      "audioDuration": 20.467067
     },
     {
       "title": "Question 22",
@@ -1849,8 +1849,8 @@
       "audioFiles": [
         "E24-T10-22.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q22-22.mp3",
+      "audioDuration": 22.630256
     },
     {
       "title": "Question 23",
@@ -1929,8 +1929,8 @@
       "audioFiles": [
         "E24-T10-23.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q23-23.mp3",
+      "audioDuration": 22.499938
     },
     {
       "title": "Question 24",
@@ -2010,20 +2010,20 @@
       "audioFiles": [
         "E24-T10-24.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q24-24.mp3",
+      "audioDuration": 20.102189
     },
     {
       "title": "Question 25",
       "questionStart": 25,
       "questionEnd": 25,
       "part": 2,
-      "transcriptFull": "Why isn't Ms. PÃ©rez here yet?\n(A) No, I can't hear anything.\n(B) Company headquarters.\n(C) Because she's meeting with her manager.",
+      "transcriptFull": "Why isn't Ms. Pérez here yet?\n(A) No, I can't hear anything.\n(B) Company headquarters.\n(C) Because she's meeting with her manager.",
       "sentences": [
         {
           "orderIndex": 0,
           "speaker": null,
-          "content": "Why isn't Ms. PÃ©rez here yet?",
+          "content": "Why isn't Ms. Pérez here yet?",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -2090,8 +2090,8 @@
       "audioFiles": [
         "E24-T10-25.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q25-25.mp3",
+      "audioDuration": 21.301067
     },
     {
       "title": "Question 26",
@@ -2165,8 +2165,8 @@
       "audioFiles": [
         "E24-T10-26.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q26-26.mp3",
+      "audioDuration": 21.144689
     },
     {
       "title": "Question 27",
@@ -2245,8 +2245,8 @@
       "audioFiles": [
         "E24-T10-27.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q27-27.mp3",
+      "audioDuration": 19.8155
     },
     {
       "title": "Question 28",
@@ -2326,8 +2326,8 @@
       "audioFiles": [
         "E24-T10-28.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q28-28.mp3",
+      "audioDuration": 20.519189
     },
     {
       "title": "Question 29",
@@ -2407,8 +2407,8 @@
       "audioFiles": [
         "E24-T10-29.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q29-29.mp3",
+      "audioDuration": 21.4835
     },
     {
       "title": "Question 30",
@@ -2482,8 +2482,8 @@
       "audioFiles": [
         "E24-T10-30.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q30-30.mp3",
+      "audioDuration": 20.884067
     },
     {
       "title": "Question 31",
@@ -2568,15 +2568,15 @@
       "audioFiles": [
         "E24-T10-31.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q31-31.mp3",
+      "audioDuration": 22.473878
     },
     {
-      "title": "Questions 32â€“34",
+      "title": "Questions 32–34",
       "questionStart": 32,
       "questionEnd": 34,
       "part": 3,
-      "transcriptFull": "M: Welcome to Firelamp Bistro.\nM: How many for dinner?\nW: Five, but unfortunately I forgot to make a reservation.\nM: Thatâ€™s no problem.\nM: However, I should inform you that we are closing earlier than usual tonight for a private event.\nM: While you wait, if you'd like to sit at the outdoor seating on the patio, Iâ€™ll send a server over so you can start with drinks and appetizers.\nM: We will seat you as soon as possible.\nW: That works for us.\nW: Thank you.\nW: And if possible, weâ€™d like to sit in a quiet area of the restaurant.\nW: We have some business to discuss.",
+      "transcriptFull": "M: Welcome to Firelamp Bistro.\nM: How many for dinner?\nW: Five, but unfortunately I forgot to make a reservation.\nM: That’s no problem.\nM: However, I should inform you that we are closing earlier than usual tonight for a private event.\nM: While you wait, if you'd like to sit at the outdoor seating on the patio, I’ll send a server over so you can start with drinks and appetizers.\nM: We will seat you as soon as possible.\nW: That works for us.\nW: Thank you.\nW: And if possible, we’d like to sit in a quiet area of the restaurant.\nW: We have some business to discuss.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -2619,7 +2619,7 @@
         {
           "orderIndex": 3,
           "speaker": "M",
-          "content": "Thatâ€™s no problem.",
+          "content": "That’s no problem.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -2648,7 +2648,7 @@
         {
           "orderIndex": 5,
           "speaker": "M",
-          "content": "While you wait, if you'd like to sit at the outdoor seating on the patio, Iâ€™ll send a server over so you can start with drinks and appetizers.",
+          "content": "While you wait, if you'd like to sit at the outdoor seating on the patio, I’ll send a server over so you can start with drinks and appetizers.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -2712,7 +2712,7 @@
         {
           "orderIndex": 9,
           "speaker": "W",
-          "content": "And if possible, weâ€™d like to sit in a quiet area of the restaurant.",
+          "content": "And if possible, we’d like to sit in a quiet area of the restaurant.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -2755,15 +2755,15 @@
       "audioFiles": [
         "E24-T10-32-34.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q32-34.mp3",
+      "audioDuration": 76.240813
     },
     {
-      "title": "Questions 35â€“37",
+      "title": "Questions 35–37",
       "questionStart": 35,
       "questionEnd": 37,
       "part": 3,
-      "transcriptFull": "W1: Hello, Suresh.\nOffice World Inc.\nis very pleased with this collaboration with your company.\nYour signature office product line is wonderful, and I believe it will sell very well.\nWe look forward to partnering with you.\nM: Thank you.\nM: I am also looking forward to a successful business partnership.\nM: Additionally, I take pride in the fact that all my products are made from recycled materials.\nM: I want to promote environmental responsibility.\nW1: I'm impressed!\nOh, and this is Vedika, who is here with her camera equipment.\nW2: Hi.\nIâ€™m here to take promotional photos.\nSuresh, Iâ€™d like to take a few shots of you with your products.\nWeâ€™re planning to post them online.",
+      "transcriptFull": "W1: Hello, Suresh.\nOffice World Inc.\nis very pleased with this collaboration with your company.\nYour signature office product line is wonderful, and I believe it will sell very well.\nWe look forward to partnering with you.\nM: Thank you.\nM: I am also looking forward to a successful business partnership.\nM: Additionally, I take pride in the fact that all my products are made from recycled materials.\nM: I want to promote environmental responsibility.\nW1: I'm impressed!\nOh, and this is Vedika, who is here with her camera equipment.\nW2: Hi.\nI’m here to take promotional photos.\nSuresh, I’d like to take a few shots of you with your products.\nWe’re planning to post them online.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -2948,7 +2948,7 @@
         {
           "orderIndex": 12,
           "speaker": null,
-          "content": "Iâ€™m here to take promotional photos.",
+          "content": "I’m here to take promotional photos.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -2963,7 +2963,7 @@
         {
           "orderIndex": 13,
           "speaker": null,
-          "content": "Suresh, Iâ€™d like to take a few shots of you with your products.",
+          "content": "Suresh, I’d like to take a few shots of you with your products.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -2978,7 +2978,7 @@
         {
           "orderIndex": 14,
           "speaker": null,
-          "content": "Weâ€™re planning to post them online.",
+          "content": "We’re planning to post them online.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3001,15 +3001,15 @@
       "audioFiles": [
         "E24-T10-35-37.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q35-37.mp3",
+      "audioDuration": 84.789313
     },
     {
-      "title": "Questions 38â€“40",
+      "title": "Questions 38–40",
       "questionStart": 38,
       "questionEnd": 40,
       "part": 3,
-      "transcriptFull": "M: Hi, Liron.\nM: Thanks for meeting with me.\nM: Iâ€™d like to review the advertising strategy for our bike shop during the annual charity bicycle race.\nW: Well, just like last year, as part of the event sponsorship, we plan to print the company name on the banners.\nM: That sounds good.\nM: But this year, to show how much we care about the community, Iâ€™d also like to donate a top-of-the-line bicycle to the winner of the race.\nW: Thatâ€™s a good idea, but simply sponsoring the race is already quite expensive.\nW: Iâ€™m concerned about the additional cost of donating the bicycle.",
+      "transcriptFull": "M: Hi, Liron.\nM: Thanks for meeting with me.\nM: I’d like to review the advertising strategy for our bike shop during the annual charity bicycle race.\nW: Well, just like last year, as part of the event sponsorship, we plan to print the company name on the banners.\nM: That sounds good.\nM: But this year, to show how much we care about the community, I’d also like to donate a top-of-the-line bicycle to the winner of the race.\nW: That’s a good idea, but simply sponsoring the race is already quite expensive.\nW: I’m concerned about the additional cost of donating the bicycle.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -3038,7 +3038,7 @@
         {
           "orderIndex": 2,
           "speaker": "M",
-          "content": "Iâ€™d like to review the advertising strategy for our bike shop during the annual charity bicycle race.",
+          "content": "I’d like to review the advertising strategy for our bike shop during the annual charity bicycle race.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3093,7 +3093,7 @@
         {
           "orderIndex": 5,
           "speaker": "M",
-          "content": "But this year, to show how much we care about the community, Iâ€™d also like to donate a top-of-the-line bicycle to the winner of the race.",
+          "content": "But this year, to show how much we care about the community, I’d also like to donate a top-of-the-line bicycle to the winner of the race.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3113,7 +3113,7 @@
         {
           "orderIndex": 6,
           "speaker": "W",
-          "content": "Thatâ€™s a good idea, but simply sponsoring the race is already quite expensive.",
+          "content": "That’s a good idea, but simply sponsoring the race is already quite expensive.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3133,7 +3133,7 @@
         {
           "orderIndex": 7,
           "speaker": "W",
-          "content": "Iâ€™m concerned about the additional cost of donating the bicycle.",
+          "content": "I’m concerned about the additional cost of donating the bicycle.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3156,15 +3156,15 @@
       "audioFiles": [
         "E24-T10-38-40.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q38-40.mp3",
+      "audioDuration": 78.560378
     },
     {
-      "title": "Questions 41â€“43",
+      "title": "Questions 41–43",
       "questionStart": 41,
       "questionEnd": 43,
       "part": 3,
-      "transcriptFull": "M: Welcome, Farida.\nM: Here is your ID badge.\nM: My name is Malik Al-Johani.\nM: Iâ€™m a senior engineer, and Iâ€™ll be serving as your mentor through the new employee onboarding process during your first 60 days at Tilmer Tech.\nW: Iâ€™m happy to be here.\nW: Your company is one of the top robotic vacuum manufacturers in the country.\nW: Since I just graduated from university, Iâ€™m excited to apply all that theory directly to this engineering job.\nM: Exactly!\nM: And now, weâ€™ll head to our first activity of the day.\nM: Like every new engineer here, your task is to disassemble and reassemble our best-selling product.\nM: This is the first step in deepening your knowledge of how our products function.",
+      "transcriptFull": "M: Welcome, Farida.\nM: Here is your ID badge.\nM: My name is Malik Al-Johani.\nM: I’m a senior engineer, and I’ll be serving as your mentor through the new employee onboarding process during your first 60 days at Tilmer Tech.\nW: I’m happy to be here.\nW: Your company is one of the top robotic vacuum manufacturers in the country.\nW: Since I just graduated from university, I’m excited to apply all that theory directly to this engineering job.\nM: Exactly!\nM: And now, we’ll head to our first activity of the day.\nM: Like every new engineer here, your task is to disassemble and reassemble our best-selling product.\nM: This is the first step in deepening your knowledge of how our products function.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -3202,7 +3202,7 @@
         {
           "orderIndex": 3,
           "speaker": "M",
-          "content": "Iâ€™m a senior engineer, and Iâ€™ll be serving as your mentor through the new employee onboarding process during your first 60 days at Tilmer Tech.",
+          "content": "I’m a senior engineer, and I’ll be serving as your mentor through the new employee onboarding process during your first 60 days at Tilmer Tech.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3222,7 +3222,7 @@
         {
           "orderIndex": 4,
           "speaker": "W",
-          "content": "Iâ€™m happy to be here.",
+          "content": "I’m happy to be here.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3257,7 +3257,7 @@
         {
           "orderIndex": 6,
           "speaker": "W",
-          "content": "Since I just graduated from university, Iâ€™m excited to apply all that theory directly to this engineering job.",
+          "content": "Since I just graduated from university, I’m excited to apply all that theory directly to this engineering job.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3286,7 +3286,7 @@
         {
           "orderIndex": 8,
           "speaker": "M",
-          "content": "And now, weâ€™ll head to our first activity of the day.",
+          "content": "And now, we’ll head to our first activity of the day.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3349,15 +3349,15 @@
       "audioFiles": [
         "E24-T10-41-43.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q41-43.mp3",
+      "audioDuration": 88.881125
     },
     {
-      "title": "Questions 44â€“46",
+      "title": "Questions 44–46",
       "questionStart": 44,
       "questionEnd": 46,
       "part": 3,
-      "transcriptFull": "M: Hey, Jyoti.\nM: I canâ€™t believe it.\nM: I told you I won tickets to my favorite basketball team's championship this weekend, right?\nM: Well, I can't go anymore.\nW: Why?\nW: What happened?\nW: You seem really disappointed.\nM: One of our clients requested an urgent order.\nM: I need to perform quality inspections on all products so they can be shipped by Monday morning.\nW: Well, Iâ€™m free this weekend.\nW: How about I take over for you?\nW: You just need to tell your supervisor that I can do the quality inspections.\nW: You can just help me out next weekend.",
+      "transcriptFull": "M: Hey, Jyoti.\nM: I can’t believe it.\nM: I told you I won tickets to my favorite basketball team's championship this weekend, right?\nM: Well, I can't go anymore.\nW: Why?\nW: What happened?\nW: You seem really disappointed.\nM: One of our clients requested an urgent order.\nM: I need to perform quality inspections on all products so they can be shipped by Monday morning.\nW: Well, I’m free this weekend.\nW: How about I take over for you?\nW: You just need to tell your supervisor that I can do the quality inspections.\nW: You can just help me out next weekend.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -3371,7 +3371,7 @@
         {
           "orderIndex": 1,
           "speaker": "M",
-          "content": "I canâ€™t believe it.",
+          "content": "I can’t believe it.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3499,7 +3499,7 @@
         {
           "orderIndex": 9,
           "speaker": "W",
-          "content": "Well, Iâ€™m free this weekend.",
+          "content": "Well, I’m free this weekend.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3566,15 +3566,15 @@
       "audioFiles": [
         "E24-T10-44-46.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q44-46.mp3",
+      "audioDuration": 78.430067
     },
     {
-      "title": "Questions 47â€“49",
+      "title": "Questions 47–49",
       "questionStart": 47,
       "questionEnd": 49,
       "part": 3,
-      "transcriptFull": "W: I heard you found a suitable candidate to give the keynote speech at our conference.\nM: Yes, Dr.\nM: Murad Jebreen.\nM: He is an expert in sports medicine and developed a new surgical technique for athletes with knee injuries.\nM: Actually, his new book on this topic will be published at the end of this month.\nW: Oh, yes.\nW: Iâ€™ve heard of him.\nW: I wonder if we have enough funds to give a copy to everyone attending the conference.\nM: Iâ€™ll check the budget.",
+      "transcriptFull": "W: I heard you found a suitable candidate to give the keynote speech at our conference.\nM: Yes, Dr.\nM: Murad Jebreen.\nM: He is an expert in sports medicine and developed a new surgical technique for athletes with knee injuries.\nM: Actually, his new book on this topic will be published at the end of this month.\nW: Oh, yes.\nW: I’ve heard of him.\nW: I wonder if we have enough funds to give a copy to everyone attending the conference.\nM: I’ll check the budget.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -3666,7 +3666,7 @@
         {
           "orderIndex": 6,
           "speaker": "W",
-          "content": "Iâ€™ve heard of him.",
+          "content": "I’ve heard of him.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3701,7 +3701,7 @@
         {
           "orderIndex": 8,
           "speaker": "M",
-          "content": "Iâ€™ll check the budget.",
+          "content": "I’ll check the budget.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3719,15 +3719,15 @@
       "audioFiles": [
         "E24-T10-47-49.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q47-49.mp3",
+      "audioDuration": 74.546756
     },
     {
-      "title": "Questions 50â€“52",
+      "title": "Questions 50–52",
       "questionStart": 50,
       "questionEnd": 52,
       "part": 3,
-      "transcriptFull": "W: Hello.\nW: Iâ€™m calling about your advertisement.\nW: I currently rent a space downtown for building and repairing furniture, but the owner sold the building and I have to move out by the end of the month.\nM: I see.\nM: My space is quite large, enough to fit two cars or a work truck.\nM: Also, if it helps, there is a loading dock in the back for loading large containers.\nW: Thatâ€™s ideal.\nW: I build large items, so a loading dock would make pickups and deliveries much easier.\nM: Can you come and see it this afternoon?\nM: The electricity isn't connected right now, but I can call today to have it turned on.",
+      "transcriptFull": "W: Hello.\nW: I’m calling about your advertisement.\nW: I currently rent a space downtown for building and repairing furniture, but the owner sold the building and I have to move out by the end of the month.\nM: I see.\nM: My space is quite large, enough to fit two cars or a work truck.\nM: Also, if it helps, there is a loading dock in the back for loading large containers.\nW: That’s ideal.\nW: I build large items, so a loading dock would make pickups and deliveries much easier.\nM: Can you come and see it this afternoon?\nM: The electricity isn't connected right now, but I can call today to have it turned on.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -3741,7 +3741,7 @@
         {
           "orderIndex": 1,
           "speaker": "W",
-          "content": "Iâ€™m calling about your advertisement.",
+          "content": "I’m calling about your advertisement.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3825,7 +3825,7 @@
         {
           "orderIndex": 6,
           "speaker": "W",
-          "content": "Thatâ€™s ideal.",
+          "content": "That’s ideal.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -3886,20 +3886,20 @@
       "audioFiles": [
         "E24-T10-50-52.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q50-52.mp3",
+      "audioDuration": 78.951313
     },
     {
-      "title": "Questions 53â€“55",
+      "title": "Questions 53–55",
       "questionStart": 53,
       "questionEnd": 55,
       "part": 3,
-      "transcriptFull": "W: Wasim, I know itâ€™s last minute, but is there any possibility we can add another section to the workbook for tomorrowâ€™s seminar?\nM: Oh.\nM: The workbooks have already been printed.\nW: I see.\nW: I just found out that the company added a new policy regarding work with clients that needs to be included.\nM: Well, how about we add an insert (a separate sheet) to each copy of the workbook before we hand them out?\nM: That way, everyone will be notified of the changes.",
+      "transcriptFull": "W: Wasim, I know it’s last minute, but is there any possibility we can add another section to the workbook for tomorrow’s seminar?\nM: Oh.\nM: The workbooks have already been printed.\nW: I see.\nW: I just found out that the company added a new policy regarding work with clients that needs to be included.\nM: Well, how about we add an insert (a separate sheet) to each copy of the workbook before we hand them out?\nM: That way, everyone will be notified of the changes.",
       "sentences": [
         {
           "orderIndex": 0,
           "speaker": "W",
-          "content": "Wasim, I know itâ€™s last minute, but is there any possibility we can add another section to the workbook for tomorrowâ€™s seminar?",
+          "content": "Wasim, I know it’s last minute, but is there any possibility we can add another section to the workbook for tomorrow’s seminar?",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4020,15 +4020,15 @@
       "audioFiles": [
         "E24-T10-53-55.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q53-55.mp3",
+      "audioDuration": 74.677067
     },
     {
-      "title": "Questions 56â€“58",
+      "title": "Questions 56–58",
       "questionStart": 56,
       "questionEnd": 58,
       "part": 3,
-      "transcriptFull": "M: Hello, Astrid.\nM: Thanks for meeting with me.\nW: Of course.\nW: I have an open-door policy for all employees here at the factory.\nM: So, Iâ€™d like to talk about changing my work schedule to the day shift.\nW: I see.\nW: I've been getting a lot of those requests lately.\nM: I understand.\nM: But please remember that I have been working the night shift for over ten years.\nW: Thatâ€™s true.\nW: Let me look into it.\nW: Iâ€™ll check the schedule and see what I can do.\nW: I canâ€™t make any promises, though.",
+      "transcriptFull": "M: Hello, Astrid.\nM: Thanks for meeting with me.\nW: Of course.\nW: I have an open-door policy for all employees here at the factory.\nM: So, I’d like to talk about changing my work schedule to the day shift.\nW: I see.\nW: I've been getting a lot of those requests lately.\nM: I understand.\nM: But please remember that I have been working the night shift for over ten years.\nW: That’s true.\nW: Let me look into it.\nW: I’ll check the schedule and see what I can do.\nW: I can’t make any promises, though.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -4086,7 +4086,7 @@
         {
           "orderIndex": 4,
           "speaker": "M",
-          "content": "So, Iâ€™d like to talk about changing my work schedule to the day shift.",
+          "content": "So, I’d like to talk about changing my work schedule to the day shift.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4164,7 +4164,7 @@
         {
           "orderIndex": 9,
           "speaker": "W",
-          "content": "Thatâ€™s true.",
+          "content": "That’s true.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4182,7 +4182,7 @@
         {
           "orderIndex": 11,
           "speaker": "W",
-          "content": "Iâ€™ll check the schedule and see what I can do.",
+          "content": "I’ll check the schedule and see what I can do.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4202,7 +4202,7 @@
         {
           "orderIndex": 12,
           "speaker": "W",
-          "content": "I canâ€™t make any promises, though.",
+          "content": "I can’t make any promises, though.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4225,15 +4225,15 @@
       "audioFiles": [
         "E24-T10-56-58.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q56-58.mp3",
+      "audioDuration": 74.703125
     },
     {
-      "title": "Questions 59â€“61",
+      "title": "Questions 59–61",
       "questionStart": 59,
       "questionEnd": 61,
       "part": 3,
-      "transcriptFull": "W: I have some bad news.\nW: I got a text message from Ife.\nW: Her car won't start; it seems the battery is dead.\nW: She won't make it in time to lead her tour group.\nM1: Oh no.\nM1: Hmm, Iâ€™m scheduled to lead a tour of the harbor this morning.\nW: Rajeev, youâ€™re free.\nW: I know youâ€™re technically still in training, but I think you can handle it.\nM2: Hmm.\nM2: Itâ€™s the historic warehouse district, right?\nM2: Iâ€™m a little nervous about that one.\nM1: You did a great job shadowing me on that tour last week.\nM1: You were even answering questions from the group.",
+      "transcriptFull": "W: I have some bad news.\nW: I got a text message from Ife.\nW: Her car won't start; it seems the battery is dead.\nW: She won't make it in time to lead her tour group.\nM1: Oh no.\nM1: Hmm, I’m scheduled to lead a tour of the harbor this morning.\nW: Rajeev, you’re free.\nW: I know you’re technically still in training, but I think you can handle it.\nM2: Hmm.\nM2: It’s the historic warehouse district, right?\nM2: I’m a little nervous about that one.\nM1: You did a great job shadowing me on that tour last week.\nM1: You were even answering questions from the group.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -4316,7 +4316,7 @@
         {
           "orderIndex": 5,
           "speaker": "M1",
-          "content": "Hmm, Iâ€™m scheduled to lead a tour of the harbor this morning.",
+          "content": "Hmm, I’m scheduled to lead a tour of the harbor this morning.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4336,7 +4336,7 @@
         {
           "orderIndex": 6,
           "speaker": "W",
-          "content": "Rajeev, youâ€™re free.",
+          "content": "Rajeev, you’re free.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4351,7 +4351,7 @@
         {
           "orderIndex": 7,
           "speaker": "W",
-          "content": "I know youâ€™re technically still in training, but I think you can handle it.",
+          "content": "I know you’re technically still in training, but I think you can handle it.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4380,7 +4380,7 @@
         {
           "orderIndex": 9,
           "speaker": "M2",
-          "content": "Itâ€™s the historic warehouse district, right?",
+          "content": "It’s the historic warehouse district, right?",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4400,7 +4400,7 @@
         {
           "orderIndex": 10,
           "speaker": "M2",
-          "content": "Iâ€™m a little nervous about that one.",
+          "content": "I’m a little nervous about that one.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4458,20 +4458,20 @@
       "audioFiles": [
         "E24-T10-59-61.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q59-61.mp3",
+      "audioDuration": 75.719567
     },
     {
-      "title": "Questions 62â€“64",
+      "title": "Questions 62–64",
       "questionStart": 62,
       "questionEnd": 64,
       "part": 3,
-      "transcriptFull": "M: I need to check with the project manager about todayâ€™s construction schedule.\nW: I already did.\nW: I just came from his office.\nW: He said they will be closing multiple lanes to create a safe work zone.\nM: I see.\nM: Which lanes are they closing?\nW: All of them except for the passing lane.\nM: Wow, this closure is really going to affect the morning commute.\nW: Exactly.\nW: Iâ€™m going to request additional personnel to manage the traffic flow.",
+      "transcriptFull": "M: I need to check with the project manager about today’s construction schedule.\nW: I already did.\nW: I just came from his office.\nW: He said they will be closing multiple lanes to create a safe work zone.\nM: I see.\nM: Which lanes are they closing?\nW: All of them except for the passing lane.\nM: Wow, this closure is really going to affect the morning commute.\nW: Exactly.\nW: I’m going to request additional personnel to manage the traffic flow.",
       "sentences": [
         {
           "orderIndex": 0,
           "speaker": "M",
-          "content": "I need to check with the project manager about todayâ€™s construction schedule.",
+          "content": "I need to check with the project manager about today’s construction schedule.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4608,7 +4608,7 @@
         {
           "orderIndex": 9,
           "speaker": "W",
-          "content": "Iâ€™m going to request additional personnel to manage the traffic flow.",
+          "content": "I’m going to request additional personnel to manage the traffic flow.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4631,20 +4631,20 @@
       "audioFiles": [
         "E24-T10-62-64.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q62-64.mp3",
+      "audioDuration": 78.716756
     },
     {
-      "title": "Questions 65â€“67",
+      "title": "Questions 65–67",
       "questionStart": 65,
       "questionEnd": 67,
       "part": 3,
-      "transcriptFull": "M: Letâ€™s start planning the annual employee retreat.\nW: Yes.\nW: I think we should hold it outdoors.\nW: Since weâ€™re at our desks all day, I think spending time in the sun would be really wonderful.\nM: I agree.\nM: Thereâ€™s a place called Oliverâ€™s Orchard where you can pick your own fruit.\nM: We could hold the event there.\nW: Thatâ€™s a great idea.\nW: The retreat is in June.\nW: Are they open then?\nM: According to the website, they are.\nW: Perfect.\nW: Iâ€™ll call the orchard to make a reservation for our group.",
+      "transcriptFull": "M: Let’s start planning the annual employee retreat.\nW: Yes.\nW: I think we should hold it outdoors.\nW: Since we’re at our desks all day, I think spending time in the sun would be really wonderful.\nM: I agree.\nM: There’s a place called Oliver’s Orchard where you can pick your own fruit.\nM: We could hold the event there.\nW: That’s a great idea.\nW: The retreat is in June.\nW: Are they open then?\nM: According to the website, they are.\nW: Perfect.\nW: I’ll call the orchard to make a reservation for our group.",
       "sentences": [
         {
           "orderIndex": 0,
           "speaker": "M",
-          "content": "Letâ€™s start planning the annual employee retreat.",
+          "content": "Let’s start planning the annual employee retreat.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4688,7 +4688,7 @@
         {
           "orderIndex": 3,
           "speaker": "W",
-          "content": "Since weâ€™re at our desks all day, I think spending time in the sun would be really wonderful.",
+          "content": "Since we’re at our desks all day, I think spending time in the sun would be really wonderful.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4723,7 +4723,7 @@
         {
           "orderIndex": 5,
           "speaker": "M",
-          "content": "Thereâ€™s a place called Oliverâ€™s Orchard where you can pick your own fruit.",
+          "content": "There’s a place called Oliver’s Orchard where you can pick your own fruit.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4763,7 +4763,7 @@
         {
           "orderIndex": 7,
           "speaker": "W",
-          "content": "Thatâ€™s a great idea.",
+          "content": "That’s a great idea.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4826,7 +4826,7 @@
         {
           "orderIndex": 12,
           "speaker": "W",
-          "content": "Iâ€™ll call the orchard to make a reservation for our group.",
+          "content": "I’ll call the orchard to make a reservation for our group.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4849,15 +4849,15 @@
       "audioFiles": [
         "E24-T10-65-67.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q65-67.mp3",
+      "audioDuration": 82.574
     },
     {
-      "title": "Questions 68â€“70",
+      "title": "Questions 68–70",
       "questionStart": 68,
       "questionEnd": 70,
       "part": 3,
-      "transcriptFull": "M: Hello.\nM: Iâ€™m looking for an apartment and saw your advertisement.\nM: Do you have any two-bedroom apartments available in May?\nW: Yes.\nW: Actually, construction on a new complex was just completed.\nM: Does that complex have a lot of outdoor space?\nM: Iâ€™d like an area for entertaining guests outdoors.\nW: Yes, there is a lot of green space.\nW: The building in the back corner, furthest from the office, has the most space and plenty of shade.\nM: Iâ€™m interested in that one.\nW: And for an additional $80 per month, you can secure a designated parking space right in front of your unit.",
+      "transcriptFull": "M: Hello.\nM: I’m looking for an apartment and saw your advertisement.\nM: Do you have any two-bedroom apartments available in May?\nW: Yes.\nW: Actually, construction on a new complex was just completed.\nM: Does that complex have a lot of outdoor space?\nM: I’d like an area for entertaining guests outdoors.\nW: Yes, there is a lot of green space.\nW: The building in the back corner, furthest from the office, has the most space and plenty of shade.\nM: I’m interested in that one.\nW: And for an additional $80 per month, you can secure a designated parking space right in front of your unit.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -4871,7 +4871,7 @@
         {
           "orderIndex": 1,
           "speaker": "M",
-          "content": "Iâ€™m looking for an apartment and saw your advertisement.",
+          "content": "I’m looking for an apartment and saw your advertisement.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -4960,7 +4960,7 @@
         {
           "orderIndex": 6,
           "speaker": "M",
-          "content": "Iâ€™d like an area for entertaining guests outdoors.",
+          "content": "I’d like an area for entertaining guests outdoors.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5015,7 +5015,7 @@
         {
           "orderIndex": 9,
           "speaker": "M",
-          "content": "Iâ€™m interested in that one.",
+          "content": "I’m interested in that one.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5053,11 +5053,11 @@
       "audioFiles": [
         "E24-T10-68-70.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q68-70.mp3",
+      "audioDuration": 88.047125
     },
     {
-      "title": "Questions 71â€“73",
+      "title": "Questions 71–73",
       "questionStart": 71,
       "questionEnd": 73,
       "part": 4,
@@ -5129,11 +5129,11 @@
       "audioFiles": [
         "E24-T10-71-73.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q71-73.mp3",
+      "audioDuration": 71.549567
     },
     {
-      "title": "Questions 74â€“76",
+      "title": "Questions 74–76",
       "questionStart": 74,
       "questionEnd": 76,
       "part": 4,
@@ -5205,11 +5205,11 @@
       "audioFiles": [
         "E24-T10-74-76.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q74-76.mp3",
+      "audioDuration": 85.753625
     },
     {
-      "title": "Questions 77â€“79",
+      "title": "Questions 77–79",
       "questionStart": 77,
       "questionEnd": 79,
       "part": 4,
@@ -5305,11 +5305,11 @@
       "audioFiles": [
         "E24-T10-77-79.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q77-79.mp3",
+      "audioDuration": 88.6205
     },
     {
-      "title": "Questions 80â€“82",
+      "title": "Questions 80–82",
       "questionStart": 80,
       "questionEnd": 82,
       "part": 4,
@@ -5381,15 +5381,15 @@
       "audioFiles": [
         "E24-T10-80-82.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q80-82.mp3",
+      "audioDuration": 82.287313
     },
     {
-      "title": "Questions 83â€“85",
+      "title": "Questions 83–85",
       "questionStart": 83,
       "questionEnd": 85,
       "part": 4,
-      "transcriptFull": "This call is regarding the television advertising project for the Dearborn Hotel.\nThe client is very satisfied with how Andrew handled the projectâ€™s needs.\nThis was Andrewâ€™s first client.\nThe speaker requests that the latest copy of the project timeline be sent over.",
+      "transcriptFull": "This call is regarding the television advertising project for the Dearborn Hotel.\nThe client is very satisfied with how Andrew handled the project’s needs.\nThis was Andrew’s first client.\nThe speaker requests that the latest copy of the project timeline be sent over.",
       "sentences": [
         {
           "orderIndex": 0,
@@ -5414,7 +5414,7 @@
         {
           "orderIndex": 1,
           "speaker": null,
-          "content": "The client is very satisfied with how Andrew handled the projectâ€™s needs.",
+          "content": "The client is very satisfied with how Andrew handled the project’s needs.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5434,7 +5434,7 @@
         {
           "orderIndex": 2,
           "speaker": null,
-          "content": "This was Andrewâ€™s first client.",
+          "content": "This was Andrew’s first client.",
           "startTime": 0,
           "endTime": 0,
           "optionLabel": null,
@@ -5472,11 +5472,11 @@
       "audioFiles": [
         "E24-T10-83-85.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q83-85.mp3",
+      "audioDuration": 75.928067
     },
     {
-      "title": "Questions 86â€“88",
+      "title": "Questions 86–88",
       "questionStart": 86,
       "questionEnd": 88,
       "part": 4,
@@ -5548,11 +5548,11 @@
       "audioFiles": [
         "E24-T10-86-88.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q86-88.mp3",
+      "audioDuration": 79.785313
     },
     {
-      "title": "Questions 89â€“91",
+      "title": "Questions 89–91",
       "questionStart": 89,
       "questionEnd": 91,
       "part": 4,
@@ -5624,11 +5624,11 @@
       "audioFiles": [
         "E24-T10-89-91.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q89-91.mp3",
+      "audioDuration": 75.511067
     },
     {
-      "title": "Questions 92â€“94",
+      "title": "Questions 92–94",
       "questionStart": 92,
       "questionEnd": 94,
       "part": 4,
@@ -5680,11 +5680,11 @@
       "audioFiles": [
         "E24-T10-92-94.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q92-94.mp3",
+      "audioDuration": 86.066378
     },
     {
-      "title": "Questions 95â€“97",
+      "title": "Questions 95–97",
       "questionStart": 95,
       "questionEnd": 97,
       "part": 4,
@@ -5756,11 +5756,11 @@
       "audioFiles": [
         "E24-T10-95-97.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q95-97.mp3",
+      "audioDuration": 85.023878
     },
     {
-      "title": "Questions 98â€“100",
+      "title": "Questions 98–100",
       "questionStart": 98,
       "questionEnd": 100,
       "part": 4,
@@ -5812,8 +5812,8 @@
       "audioFiles": [
         "E24-T10-98-100.mp3"
       ],
-      "audioUrl": "",
-      "audioDuration": 0
+      "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2024-test-10/q98-100.mp3",
+      "audioDuration": 86.222756
     }
   ]
 }
