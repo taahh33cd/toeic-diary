@@ -229,6 +229,7 @@ export default async function SubskillsPage() {
             <Link
               key={skill.key}
               href={skill.href!}
+              className="skill-card-link"
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -239,16 +240,6 @@ export default async function SubskillsPage() {
                 boxShadow: "var(--shadow-sm)",
                 textDecoration: "none",
                 transition: "border-color 0.15s, box-shadow 0.15s",
-              }}
-              onMouseEnter={(e) => {
-                const el = e.currentTarget as HTMLAnchorElement;
-                el.style.borderColor = "var(--accent-primary)";
-                el.style.boxShadow = "var(--shadow-md)";
-              }}
-              onMouseLeave={(e) => {
-                const el = e.currentTarget as HTMLAnchorElement;
-                el.style.borderColor = "var(--border)";
-                el.style.boxShadow = "var(--shadow-sm)";
               }}
             >
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.75rem" }}>
