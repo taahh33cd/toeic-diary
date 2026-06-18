@@ -5,6 +5,7 @@ import { FirebaseBridgeProvider } from "@/components/shared/FirebaseBridgeProvid
 import { ToastProvider } from "@/components/shared/Toast";
 import { ConnectionStatus } from "@/components/shared/ConnectionStatus";
 import { ServiceWorkerRegistrar } from "@/components/shared/ServiceWorkerRegistrar";
+import { WordLookupProvider } from "@/components/shared/WordLookupProvider";
 
 // ── Fonts ──────────────────────────────────────
 const dmSans = DM_Sans({
@@ -121,7 +122,9 @@ export default function RootLayout({
         <FirebaseBridgeProvider />
         <ServiceWorkerRegistrar />
         <ToastProvider>
-          {children}
+          <WordLookupProvider>
+            {children}
+          </WordLookupProvider>
           <ConnectionStatus />
         </ToastProvider>
       </body>
