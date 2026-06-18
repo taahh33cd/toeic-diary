@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useRef } from "react";
+import Link from "next/link";
 import type { SpeakingTestData, SpeakingExercise } from "@/lib/subskills/speaking";
 import { checkMcqAnswer, checkEssayAnswer, PASS_THRESHOLD } from "@/lib/subskills/speaking";
 
@@ -287,6 +288,7 @@ export default function SpeakingExerciseClient({
   difficulty,
   testData,
   initialBest,
+  tabBest,
   userId,
 }: {
   skillId: string;
@@ -294,6 +296,7 @@ export default function SpeakingExerciseClient({
   difficulty: "easy" | "medium" | "hard";
   testData: SpeakingTestData;
   initialBest: Record<string, { score: number; passed: boolean }>;
+  tabBest: Record<string, { score: number; passed: boolean }>;
   userId: string | null;
 }) {
   const levelLabel = LEVEL_MAP[difficulty];
@@ -412,6 +415,7 @@ export default function SpeakingExerciseClient({
 
   if (!ex) return null;
 
+  const isInProgress = idx > 0 || submitted;
   const progressPct = ((idx + 1) / total) * 100;
   const isMcq  = ex.type === "multiple_choice";
   const isEssay = ex.type === "essay_typing";
@@ -420,6 +424,60 @@ export default function SpeakingExerciseClient({
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+      {/* Test selector tabs */}
+      <div style={{ display: "flex", gap: 6, flexWrap: "wrap", alignItems: "center" }}>
+        {[1, 2, 3, 4, 5].map((n) => {
+          const tb = tabBest[String(n)];
+          const isActive = n === testNum;
+          const passed = tb?.passed;
+          const done = tb != null;
+          const lockedByProgress = isInProgress && !isActive;
+
+          const tabStyle = {
+            display: "flex",
+            alignItems: "center",
+            gap: 5,
+            padding: "6px 14px",
+            borderRadius: 20,
+            fontSize: "0.82rem",
+            fontWeight: isActive ? 700 : 500,
+            textDecoration: "none",
+            border: `1.5px solid ${
+              isActive ? "var(--accent-primary)"
+              : passed  ? "rgba(34,197,94,0.4)"
+              : done    ? "rgba(234,179,8,0.4)"
+              : "var(--border)"
+            }`,
+            background: isActive ? "var(--accent-primary)" : "var(--bg-elevated)",
+            color: isActive ? "#fff" : passed ? "rgb(34,197,94)" : done ? "rgb(161,117,0)" : "var(--text-primary)",
+          } as const;
+
+          if (lockedByProgress) {
+            return (
+              <span
+                key={n}
+                title="Hoàn thành bộ đang làm trước khi chuyển sang bộ khác"
+                style={{ ...tabStyle, opacity: 0.35, cursor: "not-allowed" }}
+              >
+                Bộ {n}
+              </span>
+            );
+          }
+
+          return (
+            <Link key={n} href={`/subskills/speaking/part1/${skillId}?t=${n}`} style={tabStyle}>
+              {passed && !isActive && <span style={{ fontSize: "0.7rem" }}>✓</span>}
+              Bộ {n}
+            </Link>
+          );
+        })}
+        {isInProgress && (
+          <span style={{ fontSize: "0.7rem", color: "var(--text-muted)", fontStyle: "italic", marginLeft: 2 }}>
+            🔒 Làm xong bộ này trước
+          </span>
+        )}
+      </div>
+
       {/* Progress bar */}
       <div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.75rem", color: "var(--text-muted)", marginBottom: 6 }}>

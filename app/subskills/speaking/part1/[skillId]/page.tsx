@@ -128,45 +128,6 @@ export default async function SpeakingSkillPage({ params, searchParams }: Props)
         </p>
       </div>
 
-      {/* Test selector tabs */}
-      <div style={{ display: "flex", gap: 6, marginBottom: "1.25rem", flexWrap: "wrap" }}>
-        {[1, 2, 3, 4, 5].map((n) => {
-          const eb = easyBest[String(n)];
-          const isActive = n === testNum;
-          const passed   = eb?.passed;
-          const done     = eb != null;
-          return (
-            <Link
-              key={n}
-              href={`/subskills/speaking/part1/${skillId}?t=${n}`}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 5,
-                padding: "6px 14px",
-                borderRadius: 20,
-                fontSize: "0.82rem",
-                fontWeight: isActive ? 700 : 500,
-                textDecoration: "none",
-                border: `1.5px solid ${
-                  isActive ? "var(--accent-primary)"
-                  : passed  ? "rgba(34,197,94,0.4)"
-                  : done    ? "rgba(234,179,8,0.4)"
-                  : "var(--border)"
-                }`,
-                background: isActive
-                  ? "var(--accent-primary)"
-                  : "var(--bg-elevated)",
-                color: isActive ? "#fff" : passed ? "rgb(34,197,94)" : done ? "rgb(161,117,0)" : "var(--text-primary)",
-              }}
-            >
-              {passed && !isActive && <span style={{ fontSize: "0.7rem" }}>✓</span>}
-              Bộ {n}
-            </Link>
-          );
-        })}
-      </div>
-
       {/* Difficulty tabs */}
       <div style={{ display: "flex", gap: 6, marginBottom: "1.5rem" }}>
         {(["easy", "medium", "hard"] as const).map((diff) => {
@@ -240,6 +201,7 @@ export default async function SpeakingSkillPage({ params, searchParams }: Props)
         difficulty={activeDiff}
         testData={testData}
         initialBest={activeBest}
+        tabBest={easyBest}
         userId={user?.id ?? null}
       />
 
