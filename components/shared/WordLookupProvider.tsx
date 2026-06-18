@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState, useCallback, forwardRef } from "react";
 import { createPortal } from "react-dom";
 import { useProfile } from "@/hooks/useProfile";
-import { saveVocabWord } from "@/lib/firebase/helpers";
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -307,22 +306,29 @@ const LookupPopup = forwardRef<
     if (!studentCode || saveState !== "idle") return;
     setSaveState("saving");
     try {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      await saveVocabWord(studentCode, {
-        word: sel.text,
-        vi: vi || undefined,
-        ipa: dict.ipa || undefined,
-        pos: dict.pos || undefined,
-        def: dict.def || undefined,
-        example: example || undefined,
-        part,
-        addedDate: new Date().toISOString().slice(0, 10),
-        repCount: 0,
-      } as any);
+      const res = await fetch("/api/vocab/save", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          word: sel.text,
+          vi: vi || undefined,
+          ipa: dict.ipa || undefined,
+          pos: dict.pos || undefined,
+          def: dict.def || undefined,
+          example: example || undefined,
+          part,
+          addedDate: new Date().toISOString().slice(0, 10),
+          repCount: 0,
+        }),
+      });
+      if (!res.ok) {
+        const { error } = await res.json().catch(() => ({ error: res.statusText }));
+        throw new Error(error ?? res.statusText);
+      }
       setSaveState("saved");
       setTimeout(onDismiss, 2000);
     } catch (err) {
-      console.error("[WordLookup] saveVocabWord failed:", err);
+      console.error("[WordLookup] save failed:", err);
       setSaveState("error");
       setTimeout(() => setSaveState("idle"), 2500);
     }
