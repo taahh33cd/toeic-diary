@@ -654,6 +654,7 @@ function FreetypePanel({
   retryCount,
   questionWord,
   onChange,
+  onSubmit,
 }: {
   item: FTItem;
   input: string;
@@ -661,6 +662,7 @@ function FreetypePanel({
   retryCount: number;
   questionWord: string;
   onChange: (v: string) => void;
+  onSubmit?: () => void;
 }) {
   const correct = submitted && freetypeItemCorrect(item, input, questionWord);
 
@@ -692,7 +694,7 @@ function FreetypePanel({
             cursor: submitted ? "default" : "text",
             fontFamily: "inherit",
           }}
-          onKeyDown={e => { if (e.key === "Enter" && !submitted && input.trim()) { /* handled by canCheck */ } }}
+          onKeyDown={e => { if (e.key === "Enter" && !submitted && input.trim()) onSubmit?.(); }}
           autoComplete="off"
           autoCorrect="off"
           spellCheck={false}
@@ -1624,7 +1626,7 @@ export default function ExerciseClient({
       </div>
 
       {/* Instruction banner */}
-      <div style={{ padding: "10px 14px", background: "var(--bg-elevated)", borderRadius: 8, fontSize: "0.8rem", color: "var(--text-secondary)" }}>
+      <div style={{ padding: "12px 16px", background: "rgba(59,130,246,0.06)", border: "1px solid rgba(59,130,246,0.18)", borderLeft: "3px solid var(--accent-primary)", borderRadius: 8, fontSize: "0.95rem", fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.5 }}>
         {ex.instruction}
       </div>
 
@@ -1663,6 +1665,7 @@ export default function ExerciseClient({
           retryCount={retryCount}
           questionWord={set.questionWord}
           onChange={setFtInput}
+          onSubmit={canCheck ? handleCheck : undefined}
         />
       )}
       {ex.kind === "mcq" && (

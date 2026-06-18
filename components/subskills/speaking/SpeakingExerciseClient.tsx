@@ -171,12 +171,14 @@ function EssayPanel({
   submitted,
   isCorrect,
   onChange,
+  onSubmit,
 }: {
   exercise: Extract<SpeakingExercise, { type: "essay_typing" }>;
   input: string;
   submitted: boolean;
   isCorrect: boolean;
   onChange: (v: string) => void;
+  onSubmit?: () => void;
 }) {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -186,6 +188,7 @@ function EssayPanel({
         onChange={(e) => !submitted && onChange(e.target.value)}
         disabled={submitted}
         placeholder="Gõ câu trả lời..."
+        onKeyDown={(e) => { if (e.key === "Enter" && !submitted && input.trim()) onSubmit?.(); }}
         autoComplete="off"
         autoCorrect="off"
         spellCheck={false}
@@ -490,7 +493,7 @@ export default function SpeakingExerciseClient({
       </div>
 
       {/* Instruction */}
-      <div style={{ padding: "10px 14px", background: "var(--bg-elevated)", borderRadius: 8, fontSize: "0.8rem", color: "var(--text-secondary)" }}>
+      <div style={{ padding: "12px 16px", background: "rgba(59,130,246,0.06)", border: "1px solid rgba(59,130,246,0.18)", borderLeft: "3px solid var(--accent-primary)", borderRadius: 8, fontSize: "0.95rem", fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.5 }}>
         {ex.instruction}
       </div>
 
@@ -536,6 +539,7 @@ export default function SpeakingExerciseClient({
           submitted={submitted}
           isCorrect={isEssayCorrect}
           onChange={setEssay}
+          onSubmit={canCheck ? handleCheck : undefined}
         />
       )}
 
