@@ -14,14 +14,26 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    // Verify user actually owns this studentCode
+    // Verify user owns a studentCode and has access
     const { data: profile } = await supabase
       .from("profiles")
-      .select("student_code")
+      .select("role, student_code, enrolled_courses")
       .eq("id", user.id)
-      .single<{ student_code: string | null }>();
+      .single<{ role: string; student_code: string | null; enrolled_courses: number[] | null }>();
 
+    const isPrivileged = profile?.role === "teacher" || profile?.role === "admin";
     const studentCode = profile?.student_code;
+
+    if (!isPrivileged) {
+      if (!studentCode || (profile?.enrolled_courses ?? []).length === 0) {
+        return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+      }
+      const frozen = await getAdminDb().ref(`students/${studentCode}/frozen`).get();
+      if (frozen.val() === true) {
+        return NextResponse.json({ error: "Account frozen" }, { status: 403 });
+      }
+    }
+
     if (!studentCode) {
       return NextResponse.json({ error: "No student code" }, { status: 403 });
     }

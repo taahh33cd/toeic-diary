@@ -105,6 +105,13 @@ async function fetchMeaning(
   }
 }
 
+// ── Access check ─────────────────────────────────────────────────────────────
+
+interface AccessResult {
+  canUse: boolean;
+  reason: string;
+}
+
 // ── Provider ──────────────────────────────────────────────────────────────────
 
 export function WordLookupProvider({
@@ -118,8 +125,16 @@ export function WordLookupProvider({
   const iconRef = useRef<HTMLButtonElement>(null);
   const popupRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
+  const [access, setAccess] = useState<AccessResult | null>(null);
 
   useEffect(() => setMounted(true), []);
+
+  useEffect(() => {
+    fetch("/api/vocab/access")
+      .then((r) => r.json() as Promise<AccessResult>)
+      .then(setAccess)
+      .catch(() => setAccess({ canUse: true, reason: "ok" })); // fail open on network error
+  }, []);
   useEffect(() => {
     popupOpenRef.current = popupOpen;
   }, [popupOpen]);
@@ -199,7 +214,10 @@ export function WordLookupProvider({
               style={{ position: "fixed", inset: 0, zIndex: 99998 }}
               onMouseDown={dismiss}
             />
-            <LookupPopup ref={popupRef} sel={sel} onDismiss={dismiss} />
+            {access?.canUse === false
+              ? <LockedPopup sel={sel} reason={access.reason} onDismiss={dismiss} />
+              : <LookupPopup ref={popupRef} sel={sel} onDismiss={dismiss} />
+            }
           </>,
           document.body,
         )}
@@ -503,3 +521,84 @@ const LookupPopup = forwardRef<
     </div>
   );
 });
+
+// ── Locked popup ──────────────────────────────────────────────────────────────
+
+const LOCK_MESSAGES: Record<string, { icon: string; title: string; body: string }> = {
+  frozen: {
+    icon: "🔒",
+    title: "Tài khoản tạm khóa",
+    body: "Tài khoản của bạn đang bị tạm khóa. Liên hệ giáo viên để được hỗ trợ.",
+  },
+  not_logged_in: {
+    icon: "🔑",
+    title: "Chưa đăng nhập",
+    body: "Đăng nhập để sử dụng tính năng tra nghĩa từ.",
+  },
+  free: {
+    icon: "⭐",
+    title: "Tính năng học viên",
+    body: "Chỉ học viên đã đăng ký khoá học mới có thể sử dụng tính năng tra nghĩa từ.",
+  },
+};
+
+function LockedPopup({
+  sel,
+  reason,
+  onDismiss,
+}: {
+  sel: SelectionState;
+  reason: string;
+  onDismiss: () => void;
+}) {
+  const vw = typeof window !== "undefined" ? window.innerWidth : 800;
+  const vh = typeof window !== "undefined" ? window.innerHeight : 600;
+  const left = Math.max(8, Math.min(sel.cx - POPUP_W / 2, vw - POPUP_W - 8));
+  const spaceBelow = vh - sel.top;
+  const top = spaceBelow > 150 ? sel.top + 28 : Math.max(8, sel.top - 150);
+
+  const msg = LOCK_MESSAGES[reason] ?? LOCK_MESSAGES.free;
+
+  return (
+    <div
+      onMouseDown={(e) => e.stopPropagation()}
+      style={{
+        position: "fixed",
+        left,
+        top,
+        width: POPUP_W,
+        maxWidth: "calc(100vw - 16px)",
+        zIndex: 99999,
+        background: "var(--bg-elevated, #fff)",
+        border: "1.5px solid rgba(196,98,45,0.3)",
+        borderRadius: 14,
+        boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
+        fontFamily: "system-ui, -apple-system, sans-serif",
+        animation: "wl-slide .15s ease-out",
+        overflow: "hidden",
+      }}
+    >
+      <style>{`@keyframes wl-slide{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}`}</style>
+      <div style={{
+        display: "flex", alignItems: "center", justifyContent: "space-between",
+        padding: "10px 14px 8px", borderBottom: "1px solid rgba(196,98,45,0.12)",
+      }}>
+        <span style={{ fontWeight: 700, fontSize: ".9rem", color: "var(--text-primary,#1a1a1a)" }}>
+          {msg.icon} {msg.title}
+        </span>
+        <button
+          onClick={onDismiss}
+          style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-muted,#888)", fontSize: ".88rem", padding: "2px 4px" }}
+        >
+          ✕
+        </button>
+      </div>
+      <p style={{
+        padding: "10px 14px 12px", margin: 0,
+        fontSize: ".82rem", color: "var(--text-muted,#666)", lineHeight: 1.5,
+      }}>
+        {msg.body}
+      </p>
+    </div>
+  );
+}
