@@ -2,8 +2,6 @@ import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { redirect } from "next/navigation";
 import { GrammarShell } from "@/components/grammar/GrammarShell";
-import { isUsageExempt } from "@/lib/access";
-import { UsageGate } from "@/components/shared/UsageGate";
 
 export const dynamic = "force-dynamic";
 
@@ -19,7 +17,7 @@ export default async function GrammarLayout({
   if (!user) redirect("/auth/login?next=/grammar");
 
   const profile = await prisma.profile
-    .findUnique({ where: { id: user.id }, select: { displayName: true, role: true, studentCode: true, enrolledCourses: true, freeUsageSeconds: true } })
+    .findUnique({ where: { id: user.id }, select: { displayName: true } })
     .catch(() => null);
 
   return (
@@ -28,7 +26,6 @@ export default async function GrammarLayout({
       userEmail={user.email}
       userDisplayName={profile?.displayName}
     >
-      <UsageGate initialSeconds={profile?.freeUsageSeconds ?? 0} isExempt={isUsageExempt(profile)} />
       {children}
     </GrammarShell>
   );
