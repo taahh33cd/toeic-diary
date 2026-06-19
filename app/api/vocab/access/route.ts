@@ -1,10 +1,9 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
-import { getAdminDb } from "@/lib/firebase/admin";
 
 export const dynamic = "force-dynamic";
 
-export type VocabAccessReason = "ok" | "not_logged_in" | "free" | "frozen";
+export type VocabAccessReason = "ok" | "not_logged_in" | "free";
 
 export async function GET() {
   try {
@@ -19,9 +18,9 @@ export async function GET() {
 
     const { data: profile } = await supabase
       .from("profiles")
-      .select("role, student_code, enrolled_courses")
+      .select("role, student_code")
       .eq("id", user.id)
-      .single<{ role: string; student_code: string | null; enrolled_courses: number[] | null }>();
+      .single<{ role: string; student_code: string | null }>();
 
     if (!profile) {
       return NextResponse.json({ canUse: false, reason: "not_logged_in" });
@@ -32,19 +31,9 @@ export async function GET() {
       return NextResponse.json({ canUse: true, reason: "ok" });
     }
 
-    // Student must have a code and at least one enrolled course (0–3)
-    const courses = profile.enrolled_courses ?? [];
-    if (!profile.student_code || courses.length === 0) {
+    // Student must have a student code (i.e. enrolled in at least one course)
+    if (!profile.student_code) {
       return NextResponse.json({ canUse: false, reason: "free" });
-    }
-
-    // Check frozen flag in Firebase
-    const snap = await getAdminDb()
-      .ref(`students/${profile.student_code}/frozen`)
-      .get();
-
-    if (snap.val() === true) {
-      return NextResponse.json({ canUse: false, reason: "frozen" });
     }
 
     return NextResponse.json({ canUse: true, reason: "ok" });

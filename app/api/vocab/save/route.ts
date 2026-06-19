@@ -17,21 +17,15 @@ export async function POST(req: NextRequest) {
     // Verify user owns a studentCode and has access
     const { data: profile } = await supabase
       .from("profiles")
-      .select("role, student_code, enrolled_courses")
+      .select("role, student_code")
       .eq("id", user.id)
-      .single<{ role: string; student_code: string | null; enrolled_courses: number[] | null }>();
+      .single<{ role: string; student_code: string | null }>();
 
     const isPrivileged = profile?.role === "teacher" || profile?.role === "admin";
     const studentCode = profile?.student_code;
 
-    if (!isPrivileged) {
-      if (!studentCode || (profile?.enrolled_courses ?? []).length === 0) {
-        return NextResponse.json({ error: "Forbidden" }, { status: 403 });
-      }
-      const frozen = await getAdminDb().ref(`students/${studentCode}/frozen`).get();
-      if (frozen.val() === true) {
-        return NextResponse.json({ error: "Account frozen" }, { status: 403 });
-      }
+    if (!isPrivileged && !studentCode) {
+      return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
 
     if (!studentCode) {
