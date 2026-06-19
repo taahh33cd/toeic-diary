@@ -4,6 +4,7 @@ import { useState, useCallback, useRef } from "react";
 import Link from "next/link";
 import type { SpeakingTestData, SpeakingExercise } from "@/lib/subskills/speaking";
 import { checkMcqAnswer, checkEssayAnswer, PASS_THRESHOLD } from "@/lib/subskills/speaking";
+import { RecordingPanel } from "@/components/subskills/speaking/RecordingPanel";
 
 // ─────────────────────────────────────
 // TTS hook — Google TTS → Web Speech fallback
@@ -570,6 +571,18 @@ export default function SpeakingExerciseClient({
           <span style={{ fontSize: "0.72rem", color: "var(--text-muted)", display: "block", marginBottom: 4 }}>GIẢI THÍCH</span>
           {ex.explanation}
         </div>
+      )}
+
+      {/* Recording panel — only for phat-am */}
+      {submitted && skillId === "phat-am" && userId && (
+        <RecordingPanel
+          key={idx}
+          referenceText={ex.tts_text}
+          skillId={skillId}
+          testNum={testNum}
+          exerciseIndex={idx}
+          userId={userId}
+        />
       )}
 
       {/* Action button */}

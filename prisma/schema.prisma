@@ -161,6 +161,7 @@ model Profile {
   readingAttempts      ReadingAttempt[]
   postReadingAttempts  PostReadingAttempt[]
   subskillAttempts     SubskillAttempt[]
+  recordingAttempts    SpeakingRecordingAttempt[]
 
   @@map("profiles")
 }
@@ -351,6 +352,24 @@ model SubskillAttempt {
   @@index([userId, part, questionWord])
   @@index([userId])
   @@map("subskill_attempts")
+}
+
+model SpeakingRecordingAttempt {
+  id                 String   @id
+  userId             String   @map("user_id")
+  profile            Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  skillId            String   @map("skill_id")
+  testNum            Int      @map("test_num")
+  exerciseIndex      Int      @map("exercise_index")
+  referenceText      String   @map("reference_text")
+  pronunciationScore Float    @map("pronunciation_score")
+  fluencyScore       Float    @map("fluency_score")
+  prosodyScore       Float    @map("prosody_score")
+  overallScore       Float    @map("overall_score")
+  recordedAt         DateTime @default(now()) @map("recorded_at")
+
+  @@index([userId, skillId])
+  @@map("speaking_recording_attempts")
 }
 
 model ReadingAttempt {

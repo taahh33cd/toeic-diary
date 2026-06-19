@@ -63,6 +63,19 @@ export default async function SpeakingPage() {
     testsPassedTotal += Object.values(easyBest).filter((s) => s >= 80).length;
   }
 
+  // Phat-am recording stats
+  const recordingRows = user
+    ? await (prisma.$queryRaw`
+        SELECT overall_score FROM speaking_recording_attempts
+        WHERE user_id = ${user.id} AND skill_id = 'phat-am'
+      ` as Promise<{ overall_score: number }[]>).catch(() => [] as { overall_score: number }[])
+    : ([] as { overall_score: number }[]);
+
+  const recordingCount = recordingRows.length;
+  const bestRecordingScore = recordingCount > 0
+    ? Math.round(Math.max(...recordingRows.map((r) => r.overall_score)))
+    : null;
+
   const hasDone = skillsDone > 0;
   const totalTests = SPEAKING_SKILLS.length * TESTS_PER_SKILL; // 25
 
@@ -171,6 +184,11 @@ export default async function SpeakingPage() {
                         <span style={{ fontSize: "0.68rem", color: "rgb(34,197,94)" }}>{testsPassedTotal}/{totalTests} test pass (Easy ≥ 80%)</span>
                       )}
                     </>
+                  )}
+                  {recordingCount > 0 && (
+                    <span style={{ fontSize: "0.68rem", color: "rgba(168,85,247,0.85)" }}>
+                      🎙 {recordingCount} lần ghi âm · phát âm tốt nhất: {bestRecordingScore}%
+                    </span>
                   )}
                 </div>
               </div>
