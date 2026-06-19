@@ -74,10 +74,12 @@ export async function POST(req: NextRequest) {
 
   const pa = azureData.NBest?.[0]?.PronunciationAssessment;
   if (!pa) {
-    return NextResponse.json(
-      { error: "Azure không trả về dữ liệu phát âm. Thử ghi âm lại." },
-      { status: 502 }
-    );
+    // Temporary debug: return raw Azure response so we can diagnose
+    const nBest0 = azureData.NBest?.[0];
+    const debugMsg = nBest0
+      ? `NBest[0] có keys: [${Object.keys(nBest0).join(", ")}]`
+      : `RecognitionStatus=${azureData.RecognitionStatus ?? "?"}, NBest=${JSON.stringify(azureData.NBest ?? null).slice(0, 100)}`;
+    return NextResponse.json({ error: `[DEBUG] ${debugMsg}` }, { status: 502 });
   }
 
   const scores = {
