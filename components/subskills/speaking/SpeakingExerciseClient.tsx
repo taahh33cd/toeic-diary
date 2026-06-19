@@ -573,8 +573,8 @@ export default function SpeakingExerciseClient({
         </div>
       )}
 
-      {/* Recording panel — only for phat-am */}
-      {submitted && skillId === "phat-am" && userId && (
+      {/* Recording panel — all speaking skills (only when tts_text available) */}
+      {submitted && userId && ex.tts_text?.trim() && (
         <RecordingPanel
           key={idx}
           referenceText={ex.tts_text}

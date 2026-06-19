@@ -63,11 +63,11 @@ export default async function SpeakingPage() {
     testsPassedTotal += Object.values(easyBest).filter((s) => s >= 80).length;
   }
 
-  // Phat-am recording stats
+  // Recording stats — all speaking skills
   const recordingRows = user
     ? await (prisma.$queryRaw`
         SELECT overall_score FROM speaking_recording_attempts
-        WHERE user_id = ${user.id} AND skill_id = 'phat-am'
+        WHERE user_id = ${user.id}
       ` as Promise<{ overall_score: number }[]>).catch(() => [] as { overall_score: number }[])
     : ([] as { overall_score: number }[]);
 
