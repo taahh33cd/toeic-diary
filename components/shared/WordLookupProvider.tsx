@@ -2,7 +2,17 @@
 
 import { useEffect, useRef, useState, useCallback, forwardRef } from "react";
 import { createPortal } from "react-dom";
+import { usePathname } from "next/navigation";
 import { useProfile } from "@/hooks/useProfile";
+
+// ── Route allowlist ───────────────────────────────────────────────────────────
+
+function isExercisePage(pathname: string): boolean {
+  if (pathname === "/dictation") return true;
+  if (/^\/grammar\/[^/]+\/[^/]+/.test(pathname)) return true;
+  if (/^\/reading-practice\/[^/]+\/[^/]+/.test(pathname)) return true;
+  return false;
+}
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -119,6 +129,9 @@ export function WordLookupProvider({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+  const active = isExercisePage(pathname);
+
   const [sel, setSel] = useState<SelectionState | null>(null);
   const [popupOpen, setPopupOpen] = useState(false);
   const popupOpenRef = useRef(false);
@@ -130,11 +143,12 @@ export function WordLookupProvider({
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
+    if (!active) return;
     fetch("/api/vocab/access")
       .then((r) => r.json() as Promise<AccessResult>)
       .then(setAccess)
       .catch(() => setAccess({ canUse: true, reason: "ok" })); // fail open on network error
-  }, []);
+  }, [active]);
   useEffect(() => {
     popupOpenRef.current = popupOpen;
   }, [popupOpen]);
@@ -145,7 +159,7 @@ export function WordLookupProvider({
   }, []);
 
   useEffect(() => {
-    if (!mounted) return;
+    if (!mounted || !active) return;
 
     function tryCapture() {
       const s = window.getSelection();
@@ -196,7 +210,7 @@ export function WordLookupProvider({
       document.removeEventListener("keydown", onKeyDown);
       document.removeEventListener("scroll", onScroll, true);
     };
-  }, [mounted, dismiss]);
+  }, [mounted, active, dismiss]);
 
   return (
     <>
