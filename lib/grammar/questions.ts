@@ -10268,7 +10268,7 @@ export const grammarQuestions = [
     "options": {
       "A": "durably",
       "B": "durable",
-      "C": "durable",
+      "C": "enduring",
       "D": "durability"
     },
     "correct_answer": "B",
@@ -10377,7 +10377,7 @@ export const grammarQuestions = [
     "question": "Mr. Chen received an award for developing the most __________ software solution at ByteCore.",
     "options": {
       "A": "efficient",
-      "B": "efficient",
+      "B": "inefficient",
       "C": "efficiently",
       "D": "efficiency"
     },
@@ -10467,7 +10467,7 @@ export const grammarQuestions = [
       "A": "comprehensive",
       "B": "comprehensiveness",
       "C": "comprehensively",
-      "D": "comprehensive"
+      "D": "comprehension"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -10533,7 +10533,7 @@ export const grammarQuestions = [
       "A": "accurate",
       "B": "accuracy",
       "C": "accurately",
-      "D": "accurate"
+      "D": "inaccurate"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -10577,7 +10577,7 @@ export const grammarQuestions = [
       "A": "responsively",
       "B": "responsiveness",
       "C": "responsive",
-      "D": "responsive"
+      "D": "unresponsive"
     },
     "correct_answer": "C",
     "grammar_type": "So sánh",
@@ -10620,7 +10620,7 @@ export const grammarQuestions = [
     "options": {
       "A": "distinct",
       "B": "distinctively",
-      "C": "distinct",
+      "C": "distinctive",
       "D": "distinction"
     },
     "correct_answer": "A",
@@ -10643,7 +10643,7 @@ export const grammarQuestions = [
       "A": "reliable",
       "B": "reliability",
       "C": "reliably",
-      "D": "reliable"
+      "D": "unreliable"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -10708,7 +10708,7 @@ export const grammarQuestions = [
     "options": {
       "A": "consistently",
       "B": "consistent",
-      "C": "consistent",
+      "C": "inconsistent",
       "D": "consistency"
     },
     "correct_answer": "B",
@@ -10731,7 +10731,7 @@ export const grammarQuestions = [
       "A": "intuition",
       "B": "intuitively",
       "C": "intuitive",
-      "D": "intuitive"
+      "D": "intuit"
     },
     "correct_answer": "C",
     "grammar_type": "So sánh",
@@ -10775,7 +10775,7 @@ export const grammarQuestions = [
       "A": "functionality",
       "B": "functional",
       "C": "functionally",
-      "D": "functional"
+      "D": "function"
     },
     "correct_answer": "B",
     "grammar_type": "So sánh",
@@ -10796,7 +10796,7 @@ export const grammarQuestions = [
     "options": {
       "A": "professionalism",
       "B": "professional",
-      "C": "professional",
+      "C": "profession",
       "D": "professionally"
     },
     "correct_answer": "B",
@@ -10921,10 +10921,10 @@ export const grammarQuestions = [
       "A": "half",
       "B": "halved",
       "C": "halve",
-      "D": "half"
+      "D": "halving"
     },
     "correct_answer": "A",
-    "explanation_reason": "Cấu trúc so sánh bội số/phân số: phân số + as + adj/adv + as. 'half' đóng vai trò là phân số (cân nặng bằng một nửa). *Lưu ý: Tùy chọn A và D giống nhau (half), chọn A theo mặc định.*",
+    "explanation_reason": "Cấu trúc so sánh bội số/phân số: phân số + as + adj/adv + as. 'half' đóng vai trò là phân số (cân nặng bằng một nửa).",
     "explanation_grammar": "So sánh phân số/gấp số lần: Số lần/phân số + as + Adj/Adv + as.",
     "translation": "Máy tính bảng Lumina mới được nâng cấp nặng gần bằng một nửa so với thiết bị của đối thủ cạnh tranh, giúp nó có tính di động cao.",
     "core_vocabulary": [
@@ -68140,7 +68140,7 @@ export const grammarQuestions = [
     "id": "q_test5_sosanh_06",
     "question": "Dr. Aris received an award for conducting the most __________ clinical trial at BioLab Inc.",
     "options": {
-      "A": "comprehensive",
+      "A": "comprehension",
       "B": "comprehensive",
       "C": "comprehensively",
       "D": "comprehensiveness"
@@ -69423,7 +69423,7 @@ export const grammarQuestions = [
       "A": "favorable",
       "B": "favorably",
       "C": "favor",
-      "D": "favorable"
+      "D": "favoritism"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -69728,7 +69728,7 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_24",
     "question": "The synthetic material used in Zenith wallets is not as ________ as genuine leather.",
     "options": {
-      "A": "pliant",
+      "A": "pliability",
       "B": "pliantly",
       "C": "pliancy",
       "D": "pliant"
@@ -69957,7 +69957,7 @@ export const grammarQuestions = [
   },
   {
     "id": "q_test8_sosanh_09",
-    "question": "Streamlining the feedback loop made the development cycle more ________ than last year.",
+    "question": "Automating the inventory system made the reordering process more ________ than the manual method.",
     "options": {
       "A": "effect",
       "B": "effectively",
@@ -69968,7 +69968,7 @@ export const grammarQuestions = [
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'effective' là tính từ.",
     "explanation_grammar": "So sánh hơn",
-    "translation": "Việc tinh giản quy trình phản hồi đã làm cho chu kỳ phát triển hiệu quả hơn so với năm ngoái.",
+    "translation": "Việc tự động hóa hệ thống kiểm kê đã làm cho quy trình đặt hàng lại hiệu quả hơn so với phương pháp thủ công.",
     "core_vocabulary": [
       {
         "word": "effective",
@@ -70155,7 +70155,7 @@ export const grammarQuestions = [
   },
   {
     "id": "q_test8_sosanh_18",
-    "question": "Modernizing the payment gateway made the online checkout more ________ than the manual system.",
+    "question": "Introducing the self-checkout lane made the shopping experience more ________ than the traditional cashier process.",
     "options": {
       "A": "convenient",
       "B": "conveniently",
@@ -70166,7 +70166,7 @@ export const grammarQuestions = [
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'convenient' là tính từ.",
     "explanation_grammar": "So sánh hơn",
-    "translation": "Việc hiện đại hóa cổng thanh toán đã làm cho việc thanh toán trực tuyến thuận tiện hơn so với hệ thống thủ công.",
+    "translation": "Việc giới thiệu làn thanh toán tự động đã làm cho trải nghiệm mua sắm thuận tiện hơn so với quy trình thu ngân truyền thống.",
     "core_vocabulary": [
       {
         "word": "convenient",
@@ -70243,7 +70243,7 @@ export const grammarQuestions = [
   },
   {
     "id": "q_test8_sosanh_22",
-    "question": "Simplifying the user agreement made the terms more ________ than the legal jargon.",
+    "question": "Rewriting the instruction manual made the assembly steps more ________ than the original version.",
     "options": {
       "A": "understand",
       "B": "understandable",
@@ -70254,7 +70254,7 @@ export const grammarQuestions = [
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'understandable' là tính từ.",
     "explanation_grammar": "So sánh hơn",
-    "translation": "Việc đơn giản hóa thỏa thuận người dùng đã làm cho các điều khoản trở nên dễ hiểu hơn so với các thuật ngữ pháp lý.",
+    "translation": "Việc viết lại hướng dẫn sử dụng đã làm cho các bước lắp ráp trở nên dễ hiểu hơn so với phiên bản gốc.",
     "core_vocabulary": [
       {
         "word": "understandable",
@@ -70287,7 +70287,7 @@ export const grammarQuestions = [
   },
   {
     "id": "q_test8_sosanh_24",
-    "question": "The new battery technology is more ________ than the lithium-ion cells used previously.",
+    "question": "The solar panel system proved more ________ than the backup generator during the power outage.",
     "options": {
       "A": "dependable",
       "B": "dependably",
@@ -70296,9 +70296,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
-    "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'is' cần tính từ 'dependable'.",
+    "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau động từ 'proved' cần tính từ 'dependable'.",
     "explanation_grammar": "So sánh hơn",
-    "translation": "Công nghệ pin mới đáng tin cậy hơn so với các tế bào pin lithium-ion được sử dụng trước đây.",
+    "translation": "Hệ thống pin mặt trời chứng tỏ đáng tin cậy hơn so với máy phát điện dự phòng trong thời gian mất điện.",
     "core_vocabulary": [
       {
         "word": "dependable",
@@ -70309,7 +70309,7 @@ export const grammarQuestions = [
   },
   {
     "id": "q_test8_sosanh_25",
-    "question": "The training video for the marketing team was not quite as ________ as the live seminar.",
+    "question": "The orientation session for new hires was not quite as ________ as the online training module.",
     "options": {
       "A": "informatively",
       "B": "informative",
@@ -70320,7 +70320,7 @@ export const grammarQuestions = [
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'was' cần tính từ 'informative'.",
     "explanation_grammar": "So sánh bằng",
-    "translation": "Video đào tạo cho nhóm tiếp thị không hoàn toàn cung cấp nhiều thông tin như cuộc thảo luận trực tiếp.",
+    "translation": "Buổi định hướng cho nhân viên mới không cung cấp nhiều thông tin bằng module đào tạo trực tuyến.",
     "core_vocabulary": [
       {
         "word": "informative",
