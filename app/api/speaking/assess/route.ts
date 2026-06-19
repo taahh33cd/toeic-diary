@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
       method: "POST",
       headers: {
         "Ocp-Apim-Subscription-Key": key,
-        "Content-Type": "audio/wav",
+        "Content-Type": "audio/wav; codecs=audio/pcm; samplerate=16000",
         "Pronunciation-Assessment": assessmentConfig,
       },
       body: audioBuffer,
@@ -50,15 +50,34 @@ export async function POST(req: NextRequest) {
 
   if (!azureRes.ok) {
     const detail = await azureRes.text();
-    console.error("Azure Speech error:", detail);
-    return NextResponse.json({ error: "Azure API error", detail }, { status: 502 });
+    console.error("Azure Speech error:", azureRes.status, detail);
+    return NextResponse.json({ error: `Azure lỗi ${azureRes.status}: ${detail}` }, { status: 502 });
   }
 
   const azureData = await azureRes.json();
-  const pa = azureData.NBest?.[0]?.PronunciationAssessment;
+  console.log("Azure response:", JSON.stringify(azureData).slice(0, 300));
 
+  // Handle non-Success recognition statuses
+  const STATUS_MESSAGES: Record<string, string> = {
+    NoMatch:                "Không nhận diện được. Hãy đọc to và rõ hơn.",
+    InitialSilenceTimeout:  "Không phát hiện giọng nói. Đọc ngay sau khi nhấn ghi âm.",
+    BabbleTimeout:          "Quá nhiều tiếng ồn. Thử lại ở nơi yên tĩnh hơn.",
+    Error:                  "Azure gặp lỗi nội bộ. Vui lòng thử lại.",
+  };
+  const status = azureData.RecognitionStatus as string | undefined;
+  if (status && status !== "Success") {
+    return NextResponse.json(
+      { error: STATUS_MESSAGES[status] ?? `Nhận diện thất bại: ${status}` },
+      { status: 422 }
+    );
+  }
+
+  const pa = azureData.NBest?.[0]?.PronunciationAssessment;
   if (!pa) {
-    return NextResponse.json({ error: "No pronunciation data in response" }, { status: 502 });
+    return NextResponse.json(
+      { error: "Azure không trả về dữ liệu phát âm. Thử ghi âm lại." },
+      { status: 502 }
+    );
   }
 
   const scores = {
