@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/db/prisma";
 import { PracticeClient } from "./PracticeClient";
+import { WordLookupActive } from "@/components/shared/WordLookupProvider";
 
 export default async function PracticePage({
   params,
@@ -37,23 +38,26 @@ export default async function PracticePage({
   const backHref = `/reading-practice/${type}`;
 
   return (
-    <PracticeClient
-      passage={{
-        id: passage.id,
-        type: passage.type,
-        category: passage.category,
-        orderIndex: passage.orderIndex,
-        texts: passage.texts as string[],
-        questions: passage.questions.map((q) => ({
-          id: q.id,
-          text: q.text,
-          options: { A: q.optionA, B: q.optionB, C: q.optionC, D: q.optionD },
-          correct: q.correct,
-          explanation: q.explanation,
-        })),
-      }}
-      nextHref={nextHref}
-      backHref={backHref}
-    />
+    <>
+      <WordLookupActive />
+      <PracticeClient
+        passage={{
+          id: passage.id,
+          type: passage.type,
+          category: passage.category,
+          orderIndex: passage.orderIndex,
+          texts: passage.texts as string[],
+          questions: passage.questions.map((q) => ({
+            id: q.id,
+            text: q.text,
+            options: { A: q.optionA, B: q.optionB, C: q.optionC, D: q.optionD },
+            correct: q.correct,
+            explanation: q.explanation,
+          })),
+        }}
+        nextHref={nextHref}
+        backHref={backHref}
+      />
+    </>
   );
 }

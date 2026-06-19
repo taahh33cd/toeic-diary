@@ -1,17 +1,22 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback, forwardRef } from "react";
+import { useEffect, useRef, useState, useCallback, forwardRef, createContext, useContext } from "react";
 import { createPortal } from "react-dom";
-import { usePathname } from "next/navigation";
 import { useProfile } from "@/hooks/useProfile";
 
-// ── Route allowlist ───────────────────────────────────────────────────────────
+// ── Opt-in context (pages call <WordLookupActive /> to enable) ────────────────
 
-function isExercisePage(pathname: string): boolean {
-  if (pathname === "/dictation") return true;
-  if (/^\/grammar\/[^/]+\/[^/]+/.test(pathname)) return true;
-  if (/^\/reading-practice\/[^/]+\/[^/]+/.test(pathname)) return true;
-  return false;
+type SetActive = React.Dispatch<React.SetStateAction<boolean>>;
+const SetActiveCtx = createContext<SetActive | null>(null);
+
+/** Drop this into any page/layout to enable word lookup on that route. */
+export function WordLookupActive() {
+  const setActive = useContext(SetActiveCtx);
+  useEffect(() => {
+    setActive?.(true);
+    return () => setActive?.(false);
+  }, [setActive]);
+  return null;
 }
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -129,8 +134,7 @@ export function WordLookupProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const pathname = usePathname();
-  const active = isExercisePage(pathname);
+  const [active, setActive] = useState(false);
 
   const [sel, setSel] = useState<SelectionState | null>(null);
   const [popupOpen, setPopupOpen] = useState(false);
@@ -213,7 +217,7 @@ export function WordLookupProvider({
   }, [mounted, active, dismiss]);
 
   return (
-    <>
+    <SetActiveCtx.Provider value={setActive}>
       {children}
       {mounted && sel && !popupOpen &&
         createPortal(
@@ -235,7 +239,7 @@ export function WordLookupProvider({
           </>,
           document.body,
         )}
-    </>
+    </SetActiveCtx.Provider>
   );
 }
 
