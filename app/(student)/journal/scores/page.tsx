@@ -11,6 +11,7 @@ import {
   addParaphraseEntry, reviewParaphraseEntry, deleteParaphraseEntry,
 } from "@/lib/firebase/helpers";
 import type { ToeicScore, ErrorLogEntry, ErrorDetail, ParaphraseEntry } from "@/lib/firebase/types";
+import ReviewDrawer from "@/components/journal/ReviewDrawer";
 
 // ─── Scores: Part definitions ─────────────────────────────────────────────────
 
@@ -474,12 +475,14 @@ function AddScoreForm({ studentCode }: { studentCode: string }) {
   );
 }
 
-function ScoreRow({ score, isNewest, onDelete, locale }: {
-  score: ToeicScore; isNewest: boolean; onDelete: () => void; locale: "vi" | "en";
+function ScoreRow({ score, isNewest, onDelete, onReview, locale }: {
+  score: ToeicScore; isNewest: boolean; onDelete: () => void;
+  onReview: () => void; locale: "vi" | "en";
 }) {
   const { t } = useLocale();
   const [expanded, setExpanded] = useState(false);
   const l = getListening(score), r = getReading(score);
+  const hasPartScores = (["p1","p2","p3","p4","p5","p6","p7"] as const).some((k) => (score[k] ?? 0) > 0);
 
   return (
     <>
@@ -498,11 +501,18 @@ function ScoreRow({ score, isNewest, onDelete, locale }: {
         <td className="py-3.5 px-4 text-sm" style={{ color: "var(--text-secondary)" }}>{l ?? "—"}</td>
         <td className="py-3.5 px-4 text-sm" style={{ color: "var(--text-secondary)" }}>{r ?? "—"}</td>
         <td className="py-3.5 px-4 text-right">
-          <div className="flex items-center justify-end gap-3">
+          <div className="flex items-center justify-end gap-2 flex-wrap">
+            {hasPartScores && (
+              <button onClick={onReview}
+                className="text-[11px] px-2 py-1 rounded font-semibold transition-opacity hover:opacity-80"
+                style={{ color: "#3b5bdb", border: "1px solid rgba(59,91,219,0.3)", background: "rgba(59,91,219,0.06)", cursor: "pointer" }}>
+                📋 {t("Chữa bài", "Review")}
+              </button>
+            )}
             <button onClick={() => setExpanded((o) => !o)}
               className="text-sm font-medium flex items-center gap-1 transition-opacity hover:opacity-80"
               style={{ color: "var(--orange)", background: "none", border: "none", cursor: "pointer" }}>
-              <span>📄</span><span>{t("Xem chi tiết", "View details")}</span>
+              <span>📄</span><span>{t("Chi tiết", "Details")}</span>
             </button>
             <button onClick={onDelete}
               className="text-[11px] px-2 py-1 rounded transition-colors"
@@ -1282,6 +1292,7 @@ export default function ScoresPage() {
   const [errorlogTab, setErrorlogTab] = useState<"log" | "dashboard">("log");
   const [editingGoal, setEditingGoal] = useState(false);
   const [deleteKey, setDeleteKey] = useState<number | null>(null);
+  const [reviewScore, setReviewScore] = useState<ToeicScore | null>(null);
 
   const loading = profileLoading || studentLoading || goalLoading;
 
@@ -1454,7 +1465,9 @@ export default function ScoresPage() {
                 <tbody>
                   {sortedScores.map((s, i) => (
                     <ScoreRow key={`${s.date}-${s.score}-${i}`} score={s} isNewest={i === 0}
-                      onDelete={() => deleteKey === null && handleDelete(i)} locale={locale} />
+                      onDelete={() => deleteKey === null && handleDelete(i)}
+                      onReview={() => setReviewScore(s)}
+                      locale={locale} />
                   ))}
                 </tbody>
               </table>
@@ -1499,6 +1512,13 @@ export default function ScoresPage() {
           <ParaphraseTab studentCode={studentCode} entries={paraphraseEntries} />
         </div>
       )}
+
+      {/* ── Review Drawer ── */}
+      <ReviewDrawer
+        score={reviewScore}
+        studentCode={studentCode ?? ""}
+        onClose={() => setReviewScore(null)}
+      />
     </div>
   );
 }

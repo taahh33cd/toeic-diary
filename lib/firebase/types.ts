@@ -102,6 +102,13 @@ export interface ParaphraseEntry {
   lastReview?: string;
 }
 
+// ─── Review Progress (path: students/{code}/reviewProgress/{scoreKey}/{partKey}/{stepId}) ──
+
+/** scoreKey = `${date}_${testname || totalScore}` */
+export type ReviewPartProgress = Record<string, boolean>; // stepId → done
+export type ReviewScoreProgress = Record<string, ReviewPartProgress>; // partKey → steps
+export type ReviewProgress = Record<string, ReviewScoreProgress>; // scoreKey → parts
+
 export interface Student {
   id: string;
   name: string;
@@ -116,6 +123,7 @@ export interface Student {
   schedule?: ScheduleItem[];
   errorLog?: Record<string, ErrorLogEntry>;
   paraphraseLog?: Record<string, ParaphraseEntry>;
+  reviewProgress?: ReviewProgress;
   teacherId?: string;
   courseType?: "group" | "per-session" | "package";
   pricePerSession?: number;

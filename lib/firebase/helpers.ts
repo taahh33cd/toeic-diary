@@ -534,3 +534,31 @@ export async function deleteParaphraseEntry(
 ): Promise<void> {
   await remove(ref(firebaseDb, `students/${code}/paraphraseLog/${key}`));
 }
+
+// ─── Review Progress (path: students/{code}/reviewProgress/{scoreKey}/{partKey}/{stepId}) ─
+
+/** Build a stable key from a ToeicScore so progress survives score list reorders. */
+export function buildScoreKey(score: ToeicScore): string {
+  const name = score.testname?.trim().replace(/\s+/g, "_") ?? String(score.score);
+  return `${score.date}_${name}`;
+}
+
+export async function setReviewStep(
+  code: string,
+  scoreKey: string,
+  partKey: string,
+  stepId: string,
+  done: boolean
+): Promise<void> {
+  await set(
+    ref(firebaseDb, `students/${code}/reviewProgress/${scoreKey}/${partKey}/${stepId}`),
+    done
+  );
+}
+
+export async function clearReviewProgress(
+  code: string,
+  scoreKey: string
+): Promise<void> {
+  await remove(ref(firebaseDb, `students/${code}/reviewProgress/${scoreKey}`));
+}
