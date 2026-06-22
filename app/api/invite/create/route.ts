@@ -64,8 +64,11 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    const origin = req.headers.get("origin") ?? `https://${req.headers.get("host")}`;
-    const inviteUrl = `${origin}/invite/${invite.token}`;
+    const studentBase =
+      process.env.NEXT_PUBLIC_STUDENT_URL ??
+      req.headers.get("origin") ??
+      `https://${req.headers.get("host")}`;
+    const inviteUrl = `${studentBase}/invite/${invite.token}`;
 
     return NextResponse.json({ token: invite.token, inviteUrl });
   } catch (err: unknown) {
