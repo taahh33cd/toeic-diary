@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
@@ -48,14 +48,16 @@ export function LoginForm() {
   const router      = useRouter();
   const searchParams = useSearchParams();
   const nextParam   = searchParams.get("next");
+  const autoCode    = searchParams.get("auto");
 
   const [tab, setTab]         = useState<Tab>("email");
   const [email, setEmail]     = useState("");
   const [password, setPassword] = useState("");
-  const [code, setCode]       = useState("");
+  const [code, setCode]       = useState(autoCode ?? "");
   const [loading, setLoading] = useState(false);
   const [error, setError]     = useState("");
   const [focused, setFocused] = useState<string | null>(null);
+  const [autoLogging, setAutoLogging] = useState(!!autoCode);
 
   // ── Email login ──────────────────────────────────────────────
 
@@ -87,9 +89,8 @@ export function LoginForm() {
 
   // ── Code login ───────────────────────────────────────────────
 
-  const handleCodeLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const trimmed = code.trim();
+  async function doCodeLogin(codeToUse: string) {
+    const trimmed = codeToUse.trim();
     if (!trimmed) { setError("Vui lòng nhập mã học viên."); return; }
     setLoading(true);
     setError("");
@@ -103,6 +104,7 @@ export function LoginForm() {
       if (!res.ok || !json.email || !json.token) {
         setError(json.error ?? "Đăng nhập thất bại.");
         setLoading(false);
+        setAutoLogging(false);
         return;
       }
       const supabase = createClient();
@@ -114,6 +116,7 @@ export function LoginForm() {
       if (otpErr) {
         setError(otpErr.message);
         setLoading(false);
+        setAutoLogging(false);
         return;
       }
       router.push(nextParam ?? "/journal");
@@ -121,8 +124,24 @@ export function LoginForm() {
     } catch {
       setError("Không thể kết nối server.");
       setLoading(false);
+      setAutoLogging(false);
     }
+  }
+
+  const handleCodeLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!code.trim()) { setError("Vui lòng nhập mã học viên."); return; }
+    await doCodeLogin(code);
   };
+
+  // Auto-login khi có ?auto=<code> trong URL
+  useEffect(() => {
+    if (autoCode) {
+      setTab("code");
+      doCodeLogin(autoCode);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // ─────────────────────────────────────────────────────────────
 
@@ -149,6 +168,19 @@ export function LoginForm() {
     padding: "2.5rem 2rem",
     boxShadow: "0 4px 24px rgba(61,43,31,0.09), 0 1px 4px rgba(61,43,31,0.05)",
   };
+
+  // Màn hình auto-login — hiện khi có ?auto= và chưa có lỗi
+  if (autoLogging && !error) {
+    return (
+      <div style={{ ...card, textAlign: "center", padding: "3.5rem 2rem" }}>
+        <div style={{ fontSize: "2.5rem", marginBottom: "1.25rem" }}>🔑</div>
+        <h1 style={{ fontFamily: SERIF, fontSize: "1.3rem", fontWeight: 700, color: INK, margin: "0 0 8px" }}>
+          Đang đăng nhập…
+        </h1>
+        <p style={{ color: MUTED, fontSize: "0.82rem" }}>Vui lòng đợi trong giây lát</p>
+      </div>
+    );
+  }
 
   return (
     <div style={card}>
