@@ -728,9 +728,7 @@ function HomeworkProgressSection({ homework, dayLinks }: { homework: Homework[];
 
 function StudentLinkSection({ code }: { code: string }) {
   const [copied, setCopied] = useState(false);
-  const url = typeof window !== "undefined"
-    ? `${window.location.origin}/auth/login?auto=${code}`
-    : `https://toeic-dictation-diary.vercel.app/auth/login?auto=${code}`;
+  const url = `${process.env.NEXT_PUBLIC_STUDENT_URL ?? "https://toeic-dictation-diary.vercel.app"}/auth/login?auto=${code}`;
 
   async function handleCopy() {
     await navigator.clipboard.writeText(url);
