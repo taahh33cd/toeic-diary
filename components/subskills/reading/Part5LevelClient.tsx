@@ -697,7 +697,7 @@ export function Part5LevelClient({
                   width: 26,
                   height: 26,
                   borderRadius: 3,
-                  border: "none",
+                  border: "1px solid var(--border)",
                   fontSize: "0.6rem",
                   fontWeight: 700,
                   background: isActive
@@ -707,7 +707,6 @@ export function Part5LevelClient({
                     : "var(--bg-elevated)",
                   color: isActive ? "#FFD66B" : isDone ? "#fff" : "var(--text-muted)",
                   cursor: "pointer",
-                  border: "1px solid var(--border)",
                   fontFamily: "var(--font-sans)",
                 }}
               >
