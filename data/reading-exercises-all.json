@@ -4367,13 +4367,13 @@
       {
         "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Tất cả thực tập sinh của tôi đã đến, nhưng tôi nhận thấy cửa tự động ở Khu vực Chất hàng B đang dở chứng.\"",
         "options": [
-          "inform us of your maintenance schedule in advance",
-          "It is a shopping and dining destination for local Bay Shore residents and tourists alike.",
-          "Why don't you bring your trainees to my area? You can teach them",
+          "All of my trainees have arrived, but I noticed the power door at Loading Dock B is acting up.",
+          "The updated schedule will be posted on the company intranet by Friday.",
+          "You can teach them how to create shipping labels and pack this morning's shipments.",
           "We are proud to be an international supplier of equipment to restaurants worldwide."
         ],
-        "correctIndex": 2,
-        "feedback": "Bản dịch: \"Why don't you bring your trainees to my area? You can teach them\""
+        "correctIndex": 0,
+        "feedback": "Bản dịch: \"All of my trainees have arrived, but I noticed the power door at Loading Dock B is acting up.\""
       }
     ],
     "context": [
@@ -4458,7 +4458,7 @@
     ],
     "translation": [
       {
-        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Tôi biết hôm nay là một ngày bận rộn, nhưng tôi muốn biết liệu có ai từ nhóm tài chính có thể tham gia cuộc\"",
+        "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Chúng tôi chỉ cần một trong số các bạn làm rõ một vài điểm nhanh về ngân sách cho chiến dịch quảng cáo tiếp theo.\"",
         "options": [
           "She is happy that a project has been completed.",
           "To summarize a previous meeting",
@@ -4642,7 +4642,7 @@
     ],
     "paraphrase": [
       {
-        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"lane closure\"",
+        "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"It's all backed up\"",
         "options": [
           "stuck in traffic",
           "The meeting was moved to Thursday.",
@@ -4650,7 +4650,7 @@
           "bring some food"
         ],
         "correctIndex": 0,
-        "feedback": "\"lane closure\" = \"stuck in traffic\""
+        "feedback": "\"It's all backed up\" = \"stuck in traffic\""
       },
       {
         "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"over the allocated budget\"",
@@ -4679,18 +4679,18 @@
       {
         "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Đường bị ùn tắc hết, và xe buýt gần như không nhúc nhích.\"",
         "options": [
-          "we're already over the allocated budget",
-          "It has been poorly managed.",
+          "It's all backed up, and the bus is barely moving.",
+          "He won't be back until tomorrow.",
           "It has some technical difficulties.",
-          "lane closure on Roseway Boulevard. It's all backed up, and the bus is barely moving."
+          "Hopefully the changes are minor, because we're already over the allocated budget."
         ],
         "correctIndex": 0,
-        "feedback": "Bản dịch: \"we're already over the allocated budget\""
+        "feedback": "Bản dịch: \"It's all backed up, and the bus is barely moving.\""
       }
     ],
     "context": [
       {
-        "question": "Khi dịch vụ giao thông công cộng có thay đổi, cơ quan quản lý thường thông báo như thế nào?",
+        "question": "Dựa trên nội dung bài đọc, kiến thức thực tế nào giúp hiểu sâu hơn về tình huống được mô tả?",
         "options": [
           "Từ 'Times' thường được dùng trong tên của các tờ báo nổi tiếng (như The New York Times, The Los Angeles Times)",
           "Các đặc điểm như 'stain resistance' hay 'lifetime guarantee' là những tính năng vốn đã được đánh giá cao từ lâu (are prized for), không phải là tính năng mới (new/now offering)",
@@ -4751,22 +4751,22 @@
         "options": [
           "She is unsure where a coworker's office is.",
           "Interviews will be conducted the following week.",
-          "Did you check in the future projects file cabinet?",
+          "I am at the office, but I can't find the Miller file anywhere.",
           "The West Wing is currently closed for renovation until November 5."
         ],
         "correctIndex": 2,
-        "feedback": "Bản dịch: \"Did you check in the future projects file cabinet?\""
+        "feedback": "Bản dịch: \"I am at the office, but I can't find the Miller file anywhere.\""
       },
       {
         "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Bạn đã kiểm tra trong tủ hồ sơ các dự án tương lai chưa?\"",
         "options": [
           "while you are touring the assembly floor",
           "Water service will be temporarily shut off",
-          "Would it be too much to ask you to deliver it?",
+          "Did you check in the future projects file cabinet?",
           "No experience is required to apply for this position."
         ],
         "correctIndex": 2,
-        "feedback": "Bản dịch: \"Would it be too much to ask you to deliver it?\""
+        "feedback": "Bản dịch: \"Did you check in the future projects file cabinet?\""
       }
     ],
     "context": [
@@ -4851,13 +4851,13 @@
       {
         "question": "Cụm nào diễn đạt cùng ý nghĩa với:\n\"out making a delivery\"",
         "options": [
-          "A delivery site",
+          "away on a delivery",
           "She needs help locating something",
           "express gratitude for help that was provided",
           "bring some food"
         ],
         "correctIndex": 0,
-        "feedback": "\"out making a delivery\" = \"A delivery site\""
+        "feedback": "\"out making a delivery\" = \"away on a delivery\""
       }
     ],
     "translation": [
@@ -4877,22 +4877,22 @@
         "options": [
           "We are now open for weekend brunch from 10:00 A.M. to 2:00 P.M.",
           "She wants to know why the tent is up today.",
-          "Jim Thomas: I'm out making a delivery right now, but I'll be back soon.",
+          "I haven't seen it lately.",
           "She will meet Mr. Thomas at the entrance."
         ],
         "correctIndex": 2,
-        "feedback": "Bản dịch: \"Jim Thomas: I'm out making a delivery right now, but I'll be back soon.\""
+        "feedback": "Bản dịch: \"I haven't seen it lately.\""
       },
       {
         "question": "Câu tiếng Anh nào là bản dịch chính xác của câu sau?\n\n\"Tôi đang chuẩn bị cho bữa tiệc chiều nay dưới túp lều ngoài sân trong của quán cà phê, và tôi muốn dán thông tin\"",
         "options": [
           "She wants help putting up decorations.",
           "We just need one of you to clarify a few quick points about the budget",
-          "She wants to know why the tent is up today.",
+          "I'm setting up for this afternoon's party under the tent out in the café courtyard",
           "Just put it back when you're done"
         ],
-        "correctIndex": 3,
-        "feedback": "Bản dịch: \"Just put it back when you're done\""
+        "correctIndex": 2,
+        "feedback": "Bản dịch: \"I'm setting up for this afternoon's party under the tent out in the café courtyard, and I want to have seating information posted\""
       }
     ],
     "context": [
