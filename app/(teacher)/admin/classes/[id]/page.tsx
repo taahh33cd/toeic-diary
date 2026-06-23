@@ -720,33 +720,40 @@ function ClassHomeworkSection({
     await Promise.all(memberCodes.map((code) => deleteHomework(code, hwId)));
   }
 
-  function renderItems(items: HwItem[] | undefined, catLabel: string) {
+  function renderItems(items: HwItem[] | undefined, catLabel: string, color: string) {
     if (!items?.length) return null;
     return (
-      <div>
-        <p className="text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>
-          {catLabel}
-        </p>
-        <ul className="space-y-1">
+      <div className="rounded-xl overflow-hidden" style={{ border: `1.5px solid ${color}30` }}>
+        <div className="flex items-center gap-2 px-3 py-2" style={{ background: `${color}14`, borderBottom: `1px solid ${color}25` }}>
+          <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: color }} />
+          <span className="text-xs font-bold uppercase tracking-widest" style={{ color }}>{catLabel}</span>
+        </div>
+        <div className="px-3 py-2.5 space-y-3" style={{ background: "var(--bg-primary)" }}>
           {items.map((item, i) => (
-            <li key={i} className="text-xs" style={{ color: "var(--text-primary)" }}>
-              <div className="flex gap-1">
-                <span style={{ color: "var(--text-muted)" }}>·</span>
+            <div key={i} className="flex gap-2.5 items-start">
+              <span className="mt-[7px] w-1.5 h-1.5 rounded-full shrink-0" style={{ background: color }} />
+              <div className="flex-1 min-w-0">
                 {item.link ? (
-                  <a href={item.link} target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">
-                    {item.text}
-                  </a>
+                  <a href={item.link} target="_blank" rel="noopener noreferrer"
+                    className="text-sm font-medium leading-snug hover:opacity-75 break-words"
+                    style={{ color }}
+                    dangerouslySetInnerHTML={{ __html: item.text }}
+                  />
                 ) : (
-                  item.text
+                  <span className="text-sm leading-snug break-words" style={{ color: "var(--text-primary)" }}
+                    dangerouslySetInnerHTML={{ __html: item.text }}
+                  />
+                )}
+                {item.desc && (
+                  <div className="mt-1.5 text-xs leading-relaxed px-2 py-1.5 rounded-lg"
+                    style={{ color: "var(--text-secondary)", background: `${color}08`, borderLeft: `2px solid ${color}40` }}
+                    dangerouslySetInnerHTML={{ __html: item.desc }}
+                  />
                 )}
               </div>
-              {item.desc && (
-                <p className="ml-3 text-[10px] mt-0.5" style={{ color: "var(--text-muted)" }}
-                  dangerouslySetInnerHTML={{ __html: item.desc }} />
-              )}
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     );
   }
@@ -776,57 +783,64 @@ function ClassHomeworkSection({
               return (
                 <div
                   key={hw.id}
-                  className="rounded-lg border overflow-hidden"
+                  className="rounded-xl border overflow-hidden"
                   style={{ borderColor: "var(--border)" }}
                 >
+                  {/* Card header */}
                   <div
-                    className="flex items-center justify-between px-3 py-2.5 cursor-pointer"
+                    className="flex items-center justify-between px-4 py-3 cursor-pointer"
                     style={{ background: "var(--bg-primary)" }}
                     onClick={() => setExpanded(isOpen ? null : hw.id)}
                   >
-                    <div>
+                    <div className="flex-1 min-w-0">
                       {hw.title && (
-                        <p className="text-xs font-semibold leading-tight" style={{ color: "var(--text-primary)" }}>
+                        <p className="text-sm font-bold leading-tight mb-0.5" style={{ color: "var(--text-primary)" }}>
                           {hw.title}
                         </p>
                       )}
-                      <p className="text-xs" style={{ color: hw.title ? "var(--text-muted)" : "var(--text-primary)" }}>
+                      <p className="text-sm font-medium" style={{ color: hw.title ? "var(--text-muted)" : "var(--accent-primary)" }}>
                         {fmtDate(hw.date)}{hw.endDate ? ` → ${fmtDate(hw.endDate)}` : ""}
                       </p>
-                      <p className="text-xs" style={{ color: "var(--text-muted)" }}>
-                        {count} task{count !== 1 ? "s" : ""}
-                      </p>
+                      <div className="flex items-center gap-2 mt-1.5">
+                        {/* Category dots preview */}
+                        {HW_CATS.filter(({ key }) => hw[key]?.length).map(({ key, color, label }) => (
+                          <span key={key} className="inline-flex items-center gap-1 text-[11px] font-medium px-1.5 py-0.5 rounded-full"
+                            style={{ background: `${color}15`, color }}>
+                            <span className="w-1.5 h-1.5 rounded-full" style={{ background: color }} />
+                            {label} ({hw[key]!.length})
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 ml-3 shrink-0">
                       <button
                         onClick={(e) => { e.stopPropagation(); setModal({ mode: "edit", hw }); }}
-                        style={{ color: "var(--text-muted)" }}
+                        className="p-1.5 rounded-lg hover:opacity-70"
+                        style={{ color: "var(--text-muted)", background: "var(--bg-elevated)" }}
                       >
                         <Pencil size={13} />
                       </button>
                       <button
                         onClick={(e) => { e.stopPropagation(); handleDelete(hw.id); }}
-                        style={{ color: "var(--text-muted)" }}
+                        className="p-1.5 rounded-lg hover:opacity-70"
+                        style={{ color: "rgb(239,68,68)", background: "rgba(239,68,68,0.08)" }}
                       >
                         <Trash2 size={13} />
                       </button>
                       {isOpen ? (
-                        <ChevronUp size={14} style={{ color: "var(--text-muted)" }} />
+                        <ChevronUp size={16} style={{ color: "var(--text-muted)" }} />
                       ) : (
-                        <ChevronDown size={14} style={{ color: "var(--text-muted)" }} />
+                        <ChevronDown size={16} style={{ color: "var(--text-muted)" }} />
                       )}
                     </div>
                   </div>
+                  {/* Expanded content */}
                   {isOpen && (
                     <div
-                      className="px-3 py-3 space-y-2 border-t"
+                      className="px-4 py-4 space-y-3 border-t"
                       style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}
                     >
-                      {renderItems(hw.vocab, "Từ vựng")}
-                      {renderItems(hw.listening, "Nghe")}
-                      {renderItems(hw.reading, "Đọc")}
-                      {renderItems(hw.practice, "Luyện đề")}
-                      {renderItems(hw.other, "Khác")}
+                      {HW_CATS.map(({ key, label, color }) => renderItems(hw[key], label, color))}
                     </div>
                   )}
                 </div>
