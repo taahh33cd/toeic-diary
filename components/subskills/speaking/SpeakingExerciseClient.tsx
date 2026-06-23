@@ -325,6 +325,23 @@ export default function SpeakingExerciseClient({
   // ── scoring multiplier ────────────────────────────────────────────
   function multiplier() { return retryCount === 0 ? 1.0 : retryCount === 1 ? 0.5 : 0.0; }
 
+  // ── auto-save running progress after each submitted question ──────
+  function saveProgress(newCorrect: number) {
+    if (!userId) return;
+    const score = Math.round((newCorrect / total) * 100);
+    fetch("/api/subskills/attempt", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        part: difficulty === "easy" ? `sp1-${skillId}` : `sp1-${skillId}-${difficulty}`,
+        questionWord: String(testNum),
+        exerciseIndex: 0,
+        score,
+        passed: score >= PASS_THRESHOLD,
+      }),
+    }).catch(() => {});
+  }
+
   // ── reset for next item ───────────────────────────────────────────
   function resetItem() {
     setSubmitted(false);
@@ -337,13 +354,16 @@ export default function SpeakingExerciseClient({
   // ── check answer ──────────────────────────────────────────────────
   function handleCheck() {
     if (submitted) return;
+    const mult = multiplier();
 
     if (ex.type === "multiple_choice") {
       if (!mcqSelected) return;
       const correct = checkMcqAnswer(ex as Extract<SpeakingExercise, { type: "multiple_choice" }>, mcqSelected);
       if (correct) {
-        setCorrect((c) => c + multiplier());
+        const newCorrect = correctCount + mult;
+        setCorrect(newCorrect);
         setSubmitted(true);
+        saveProgress(newCorrect);
       } else {
         if (retryCount < MAX_RETRIES) {
           setDisabled((d) => [...d, mcqSelected]);
@@ -351,6 +371,7 @@ export default function SpeakingExerciseClient({
           setRetry((r) => r + 1);
         } else {
           setSubmitted(true); // reveal, 0 points
+          saveProgress(correctCount);
         }
       }
     } else {
@@ -358,14 +379,17 @@ export default function SpeakingExerciseClient({
       if (!essayInput.trim()) return;
       const correct = checkEssayAnswer(ex as Extract<SpeakingExercise, { type: "essay_typing" }>, essayInput);
       if (correct) {
-        setCorrect((c) => c + multiplier());
+        const newCorrect = correctCount + mult;
+        setCorrect(newCorrect);
         setSubmitted(true);
+        saveProgress(newCorrect);
       } else {
         if (retryCount < MAX_RETRIES) {
           setEssay("");
           setRetry((r) => r + 1);
         } else {
           setSubmitted(true);
+          saveProgress(correctCount);
         }
       }
     }
