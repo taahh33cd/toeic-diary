@@ -128,10 +128,13 @@ export async function updateHomework(
 ): Promise<void> {
   const snap = await get(ref(firebaseDb, `students/${code}/homework`));
   const existing: Homework[] = snap.val() ?? [];
-  await set(
-    ref(firebaseDb, `students/${code}/homework`),
-    existing.map((h) => h.id === hwId ? hw : h)
-  );
+  const idx = existing.findIndex((h) => h.id === hwId);
+  if (idx === -1) {
+    // Student doesn't have this hw yet (e.g. added to class after initial push) → upsert
+    await set(ref(firebaseDb, `students/${code}/homework`), [...existing, hw]);
+  } else {
+    await set(ref(firebaseDb, `students/${code}/homework`), existing.map((h) => h.id === hwId ? hw : h));
+  }
 }
 
 export async function deleteHomework(

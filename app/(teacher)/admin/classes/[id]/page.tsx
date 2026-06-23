@@ -15,6 +15,7 @@ import {
   X,
   Pencil,
   UserMinus,
+  RefreshCw,
 } from "lucide-react";
 import { useClass } from "@/hooks/firebase/useClasses";
 import { useAllStudents } from "@/hooks/firebase/useAllStudents";
@@ -718,6 +719,13 @@ function ClassHomeworkSection({
     setPropagating(false);
   }
 
+  async function handleSync(hw: Homework) {
+    if (!confirm(`Đồng bộ BTVN "${hw.title ?? fmtDate(hw.date)}" sang ${memberCodes.length} học viên?`)) return;
+    setPropagating(true);
+    await Promise.all(memberCodes.map((code) => updateHomework(code, hw.id, hw)));
+    setPropagating(false);
+  }
+
   // M7: Delete from class + propagate to all member students
   async function handleDelete(hwId: string) {
     if (!confirm("Xoá BTVN này? Sẽ xoá ở cả lớp lẫn từng học viên.")) return;
@@ -822,13 +830,24 @@ function ClassHomeworkSection({
                         onClick={(e) => { e.stopPropagation(); setModal({ mode: "edit", hw }); }}
                         className="p-1.5 rounded-lg hover:opacity-70"
                         style={{ color: "var(--text-muted)", background: "var(--bg-elevated)" }}
+                        title="Sửa BTVN"
                       >
                         <Pencil size={13} />
+                      </button>
+                      <button
+                        onClick={(e) => { e.stopPropagation(); handleSync(hw); }}
+                        className="p-1.5 rounded-lg hover:opacity-70"
+                        style={{ color: "rgb(59,130,246)", background: "rgba(59,130,246,0.08)" }}
+                        title="Đồng bộ lại cho học viên"
+                        disabled={propagating}
+                      >
+                        <RefreshCw size={13} />
                       </button>
                       <button
                         onClick={(e) => { e.stopPropagation(); handleDelete(hw.id); }}
                         className="p-1.5 rounded-lg hover:opacity-70"
                         style={{ color: "rgb(239,68,68)", background: "rgba(239,68,68,0.08)" }}
+                        title="Xoá BTVN"
                       >
                         <Trash2 size={13} />
                       </button>
