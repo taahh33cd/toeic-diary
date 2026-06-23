@@ -337,16 +337,18 @@ function AddScoreForm({ studentCode }: { studentCode: string }) {
     try {
       let entry: ToeicScore;
       if (mode === "simple") {
-        const l = parseInt(listening, 10), r = parseInt(reading, 10);
-        if (!date || isNaN(l) || isNaN(r) || l < 0 || r < 0 || l > 495 || r > 495) return;
+        const lParsed = parseInt(listening, 10), rParsed = parseInt(reading, 10);
+        const l = isNaN(lParsed) ? 0 : lParsed, r = isNaN(rParsed) ? 0 : rParsed;
+        if (l < 0 || r < 0 || l > 495 || r > 495) return;
         entry = { score: l + r, date, l, r };
       } else {
-        const parsed = (Object.keys(PART_MAX) as PartKey[]).map((k) => ({ key: k, n: parseInt(parts[k], 10) }));
-        if (parsed.some(({ key, n }) => isNaN(n) || n < 0 || n > PART_MAX[key])) return;
+        const parsed = (Object.keys(PART_MAX) as PartKey[]).map((k) => ({ key: k, n: parseInt(parts[k], 10) || 0 }));
+        if (parsed.some(({ key, n }) => n < 0 || n > PART_MAX[key])) return;
         const pNums = Object.fromEntries(parsed.map(({ key, n }) => [key, n])) as Record<PartKey, number>;
         const l = Math.round((pNums.p1 + pNums.p2 + pNums.p3 + pNums.p4) / 100 * 495);
         const r = Math.round((pNums.p5 + pNums.p6 + pNums.p7) / 100 * 495);
-        entry = { score: l + r, date, l, r, ...pNums };
+        const filledParts = Object.fromEntries(parsed.filter(({ n }) => n > 0).map(({ key, n }) => [key, n])) as Partial<Record<PartKey, number>>;
+        entry = { score: l + r, date, l, r, ...filledParts };
       }
       if (testname.trim()) entry.testname = testname.trim();
       await pushStudentScore(studentCode, entry);
@@ -390,9 +392,9 @@ function AddScoreForm({ studentCode }: { studentCode: string }) {
             </div>
             <div>
               <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
-                {t("Tên bài test (tuỳ chọn)", "Test name (optional)")}
+                {t("Tên bài test", "Test name")}
               </label>
-              <input className={inp} style={inpStyle} value={testname} onChange={(e) => setTestname(e.target.value)} placeholder="EST 2024 Test 1" />
+              <input className={inp} style={inpStyle} value={testname} onChange={(e) => setTestname(e.target.value)} placeholder="EST 2024 Test 1" required />
             </div>
           </div>
 
@@ -404,14 +406,14 @@ function AddScoreForm({ studentCode }: { studentCode: string }) {
                     {t("Điểm Nghe", "Listening")} <span style={{ fontWeight: 400 }}>(0–495)</span>
                   </label>
                   <input type="number" min={0} max={495} className={inp} style={inpStyle}
-                    value={listening} onChange={(e) => setListening(e.target.value)} placeholder="300" required />
+                    value={listening} onChange={(e) => setListening(e.target.value)} placeholder="300" />
                 </div>
                 <div>
                   <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
                     {t("Điểm Đọc", "Reading")} <span style={{ fontWeight: 400 }}>(0–495)</span>
                   </label>
                   <input type="number" min={0} max={495} className={inp} style={inpStyle}
-                    value={reading} onChange={(e) => setReading(e.target.value)} placeholder="280" required />
+                    value={reading} onChange={(e) => setReading(e.target.value)} placeholder="280" />
                 </div>
               </div>
               {simpleTotal !== null && (
@@ -431,7 +433,7 @@ function AddScoreForm({ studentCode }: { studentCode: string }) {
                         {label} <span style={{ opacity: 0.6 }}>/{PART_MAX[key]}</span>
                       </label>
                       <input type="number" min={0} max={PART_MAX[key]} className={inp} style={inpStyle}
-                        value={parts[key]} onChange={(e) => setPart(key, e.target.value)} placeholder="0" required />
+                        value={parts[key]} onChange={(e) => setPart(key, e.target.value)} placeholder="0" />
                     </div>
                   ))}
                 </div>
@@ -449,7 +451,7 @@ function AddScoreForm({ studentCode }: { studentCode: string }) {
                         {label} <span style={{ opacity: 0.6 }}>/{PART_MAX[key]}</span>
                       </label>
                       <input type="number" min={0} max={PART_MAX[key]} className={inp} style={inpStyle}
-                        value={parts[key]} onChange={(e) => setPart(key, e.target.value)} placeholder="0" required />
+                        value={parts[key]} onChange={(e) => setPart(key, e.target.value)} placeholder="0" />
                     </div>
                   ))}
                 </div>
