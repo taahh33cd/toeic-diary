@@ -12,7 +12,7 @@ import {
 } from "@/lib/subskills/speaking";
 import SpeakingExerciseClient from "@/components/subskills/speaking/SpeakingExerciseClient";
 
-type Props = { params: Promise<{ skillId: string }>; searchParams: Promise<{ t?: string; d?: string }> };
+type Props = { params: Promise<{ skillId: string }> };
 
 export async function generateStaticParams() {
   return SPEAKING_SKILLS.map((s) => ({ skillId: s.id }));
@@ -24,9 +24,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: skill ? `${skill.labelVi} — Speaking Part 1` : "Subskills" };
 }
 
-export default async function SpeakingSkillPage({ params, searchParams }: Props) {
+type BestMap = Record<string, { score: number; passed: boolean }>;
+
+function buildBest(list: { questionWord: string; score: number; passed: boolean }[]): BestMap {
+  const best: BestMap = {};
+  for (const a of list) {
+    const key = a.questionWord;
+    if (!best[key] || a.score > best[key].score) best[key] = { score: a.score, passed: a.passed };
+  }
+  return best;
+}
+
+export default async function SpeakingSkillPage({ params }: Props) {
   const { skillId } = await params;
-  const { t, d } = await searchParams;
 
   const skill = getSkillMeta(skillId);
   if (!skill) notFound();
@@ -34,68 +44,34 @@ export default async function SpeakingSkillPage({ params, searchParams }: Props)
   const tests = getSkillTests(skillId);
   if (!tests) notFound();
 
-  const testNum   = Math.min(5, Math.max(1, parseInt(t ?? "1") || 1));
-  const difficulty = d === "hard" ? "hard" : d === "medium" ? "medium" : "easy";
-
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
-  // Check TEST account
   const profile = user
     ? await prisma.profile.findUnique({ where: { id: user.id }, select: { studentCode: true } }).catch(() => null)
     : null;
   const isTestUser = profile?.studentCode?.toUpperCase() === "TEST";
 
-  // Fetch all attempts for this skill
-  const [easyAttempts, mediumAttempts, hardAttempts] = user
+  const [easyRaw, mediumRaw, hardRaw] = user
     ? await Promise.all([
         prisma.subskillAttempt.findMany({
           where: { userId: user.id, part: dbPart(skillId, "easy") },
-          select: { questionWord: true, exerciseIndex: true, score: true, passed: true },
+          select: { questionWord: true, score: true, passed: true },
         }).catch(() => []),
         prisma.subskillAttempt.findMany({
           where: { userId: user.id, part: dbPart(skillId, "medium") },
-          select: { questionWord: true, exerciseIndex: true, score: true, passed: true },
+          select: { questionWord: true, score: true, passed: true },
         }).catch(() => []),
         prisma.subskillAttempt.findMany({
           where: { userId: user.id, part: dbPart(skillId, "hard") },
-          select: { questionWord: true, exerciseIndex: true, score: true, passed: true },
+          select: { questionWord: true, score: true, passed: true },
         }).catch(() => []),
       ])
     : [[], [], []];
 
-  // Best score per testNum per difficulty
-  type BestMap = Record<string, { score: number; passed: boolean }>;
-  function buildBest(list: typeof easyAttempts): BestMap {
-    const best: BestMap = {};
-    for (const a of list) {
-      const key = a.questionWord; // "1".."5"
-      if (!best[key] || a.score > best[key].score) {
-        best[key] = { score: a.score, passed: a.passed };
-      }
-    }
-    return best;
-  }
-
-  const easyBest   = buildBest(easyAttempts);
-  const mediumBest = buildBest(mediumAttempts);
-  const hardBest   = buildBest(hardAttempts);
-
-  // Unlock Medium for this test if Easy ≥ threshold
-  const easyScore  = easyBest[String(testNum)]?.score ?? 0;
-  const mediumScore = mediumBest[String(testNum)]?.score ?? 0;
-  const mediumUnlocked = isTestUser || easyScore >= PASS_THRESHOLD;
-  const hardUnlocked   = isTestUser || mediumScore >= PASS_THRESHOLD;
-
-  const activeDiff: "easy" | "medium" | "hard" =
-    difficulty === "hard"   && hardUnlocked   ? "hard"   :
-    difficulty === "medium" && mediumUnlocked ? "medium" : "easy";
-
-  const activeBest =
-    activeDiff === "hard"   ? hardBest   :
-    activeDiff === "medium" ? mediumBest : easyBest;
-
-  const testData = tests[testNum - 1];
+  const easyBest   = buildBest(easyRaw);
+  const mediumBest = buildBest(mediumRaw);
+  const hardBest   = buildBest(hardRaw);
 
   return (
     <div
@@ -128,84 +104,16 @@ export default async function SpeakingSkillPage({ params, searchParams }: Props)
         </p>
       </div>
 
-      {/* Difficulty tabs */}
-      <div style={{ display: "flex", gap: 6, marginBottom: "1.5rem" }}>
-        {(["easy", "medium", "hard"] as const).map((diff) => {
-          const label = diff === "easy" ? "🟢 Easy" : diff === "medium" ? "🟡 Medium" : "🔴 Hard";
-          const locked = diff === "medium" ? !mediumUnlocked : diff === "hard" ? !hardUnlocked : false;
-          const isActive = diff === activeDiff;
-          const bestScore =
-            diff === "easy"   ? easyBest[String(testNum)]?.score   :
-            diff === "medium" ? mediumBest[String(testNum)]?.score  :
-                                hardBest[String(testNum)]?.score;
-
-          return (
-            <div key={diff} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
-              {locked ? (
-                <div
-                  title={`Cần Easy ≥ ${PASS_THRESHOLD}% để mở`}
-                  style={{
-                    padding: "6px 14px",
-                    borderRadius: 8,
-                    fontSize: "0.82rem",
-                    fontWeight: 500,
-                    background: "var(--bg-elevated)",
-                    color: "var(--text-muted)",
-                    border: "1.5px solid var(--border)",
-                    cursor: "not-allowed",
-                    opacity: 0.5,
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 5,
-                  }}
-                >
-                  🔒 {label.split(" ")[1]}
-                </div>
-              ) : (
-                <Link
-                  href={`/subskills/speaking/part1/${skillId}?t=${testNum}&d=${diff}`}
-                  style={{
-                    padding: "6px 14px",
-                    borderRadius: 8,
-                    fontSize: "0.82rem",
-                    fontWeight: isActive ? 700 : 500,
-                    textDecoration: "none",
-                    border: `1.5px solid ${isActive ? "var(--accent-primary)" : "var(--border)"}`,
-                    background: isActive ? "var(--accent-primary)" : "var(--bg-elevated)",
-                    color: isActive ? "#fff" : "var(--text-primary)",
-                  }}
-                >
-                  {label}
-                </Link>
-              )}
-              {bestScore !== undefined && (
-                <span style={{ fontSize: "0.62rem", color: bestScore >= PASS_THRESHOLD ? "rgb(34,197,94)" : "var(--text-muted)" }}>
-                  {bestScore}%{bestScore >= PASS_THRESHOLD ? " ✓" : ""}
-                </span>
-              )}
-            </div>
-          );
-        })}
-        {!mediumUnlocked && (
-          <span style={{ fontSize: "0.72rem", color: "var(--text-muted)", alignSelf: "center", marginLeft: 4 }}>
-            Easy ≥ {PASS_THRESHOLD}% để mở Medium
-          </span>
-        )}
-      </div>
-
-      {/* Client exercise component */}
       <SpeakingExerciseClient
-        key={`${skillId}-${testNum}-${activeDiff}`}
         skillId={skillId}
-        testNum={testNum}
-        difficulty={activeDiff}
-        testData={testData}
-        initialBest={activeBest}
-        tabBest={easyBest}
+        allTests={tests}
+        easyBest={easyBest}
+        mediumBest={mediumBest}
+        hardBest={hardBest}
+        isTestUser={isTestUser}
         userId={user?.id ?? null}
       />
 
-      {/* Footer */}
       <div style={{ marginTop: "3rem", height: 1, background: "var(--border)" }} />
       <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.08em" }}>
         TOEIC DICTATION DIARY
