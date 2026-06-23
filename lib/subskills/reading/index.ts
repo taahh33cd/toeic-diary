@@ -1,4 +1,5 @@
 import type { Part5TenseConfig, Part5Level, LevelSlug } from "./types";
+import { hienTaiHoanThanhLevels } from "./data/hien-tai-hoan-thanh";
 
 // ── Level metadata template (same for all tenses) ────────────────────────────
 
@@ -120,7 +121,7 @@ export const TENSES: Part5TenseConfig[] = [
     ],
     contrastWith: "qua-khu-don",
     importance: 3,
-    levels: [],
+    levels: hienTaiHoanThanhLevels,
   },
   {
     slug: "hien-tai-hoan-thanh-tiep-dien",
