@@ -1504,6 +1504,20 @@ export default function ExerciseClient({
           JSON.stringify({ itemIdx: next, correctCount: correctCounts[exIdx] })
         );
       } catch {}
+      if (userId) {
+        const partialScore = Math.round((correctCounts[exIdx] / ex.items.length) * 100);
+        fetch("/api/subskills/attempt", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            part: set.part,
+            questionWord: set.questionWord,
+            exerciseIndex: exIdx,
+            score: partialScore,
+            passed: partialScore >= set.passThreshold,
+          }),
+        }).catch(() => {});
+      }
       return;
     }
     // Last item — exercise finished. Clear only this exercise's draft.
