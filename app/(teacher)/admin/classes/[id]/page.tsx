@@ -702,9 +702,14 @@ function ClassHomeworkSection({
   async function handleSave(hw: Homework) {
     setPropagating(true);
     const alreadyCreated = autosavedHwIdRef.current === hw.id;
-    if (modal?.mode === "edit" || alreadyCreated) {
+    if (modal?.mode === "edit") {
+      // Edit mode: class record + student records both already exist
       await updateClassHomework(classId, hw.id, hw);
       await Promise.all(memberCodes.map((code) => updateHomework(code, hw.id, hw)));
+    } else if (alreadyCreated) {
+      // Autosave created the class record but never pushed to students
+      await updateClassHomework(classId, hw.id, hw);
+      await Promise.all(memberCodes.map((code) => pushHomework(code, hw)));
     } else {
       await pushClassHomework(classId, hw);
       await Promise.all(memberCodes.map((code) => pushHomework(code, hw)));
