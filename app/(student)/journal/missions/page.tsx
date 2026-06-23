@@ -471,21 +471,21 @@ function HwCard({
                 const items = hw[sec] ?? [];
                 const isPractice = sec === "practice";
                 return (
-                  <div key={sec}>
-                    {/* Section header — full-width colored bar */}
+                  <div key={sec} style={{ borderRadius: "0.75rem", overflow: "hidden", border: `1.5px solid ${meta.color}30` }}>
+                    {/* Section header */}
                     <div style={{
-                      display: "flex", alignItems: "center", gap: ".45rem",
-                      padding: ".3rem .75rem", marginBottom: ".5rem",
-                      background: meta.bg, borderLeft: `3px solid ${meta.color}`,
+                      display: "flex", alignItems: "center", gap: ".5rem",
+                      padding: ".45rem .75rem",
+                      background: `${meta.color}14`, borderBottom: `1px solid ${meta.color}25`,
                     }}>
-                      <span style={{ fontSize: ".85rem" }}>{meta.emoji}</span>
+                      <span style={{ width: "0.625rem", height: "0.625rem", borderRadius: "50%", flexShrink: 0, background: meta.color }} />
                       <span style={{ fontSize: ".63rem", fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: meta.color }}>
                         {meta.label}
                       </span>
                     </div>
 
                     {/* Items */}
-                    <div style={{ display: "flex", flexDirection: "column", gap: ".4rem" }}>
+                    <div style={{ padding: ".55rem .75rem", display: "flex", flexDirection: "column", gap: ".4rem", background: "var(--bg-primary,#F5EFE6)" }}>
                       {items.map((item, i) => {
                         const key = `${sec}-${i}`;
                         const isChecked = checked[key] ?? false;
@@ -495,12 +495,8 @@ function HwCard({
                           <div
                             key={key}
                             style={{
-                              border: isChecked
-                                ? "1px solid rgba(74,124,89,.4)"
-                                : isPractice ? "1px solid #c5d0ee" : "1px solid var(--border,#DDD0BC)",
-                              background: isChecked
-                                ? "rgba(74,124,89,.06)"
-                                : isPractice ? "#f0f4ff" : "var(--bg-primary,#F5EFE6)",
+                              border: isChecked ? "1px solid rgba(74,124,89,.4)" : `1px solid ${meta.color}25`,
+                              background: isChecked ? "rgba(74,124,89,.06)" : `${meta.color}05`,
                               transition: "all .15s",
                             }}
                           >
@@ -547,9 +543,9 @@ function HwCard({
                                 textDecoration: isChecked ? "line-through" : "none",
                                 color: isChecked ? "#9A8672" : "var(--text-primary,#2C1E0F)",
                                 transition: "all .2s",
-                              }}>
-                                {item.text}
-                              </span>
+                              }}
+                                dangerouslySetInnerHTML={{ __html: item.text }}
+                              />
 
                               {/* Link button */}
                               {item.link && (
@@ -578,7 +574,7 @@ function HwCard({
                                     flexShrink: 0, fontSize: ".68rem", fontWeight: 600,
                                     padding: ".2rem .55rem",
                                     border: `1px solid ${showDesc ? meta.color : "var(--border,#DDD0BC)"}`,
-                                    background: showDesc ? meta.bg : "transparent",
+                                    background: showDesc ? `${meta.color}14` : "transparent",
                                     color: showDesc ? meta.color : "#9A8672",
                                     cursor: "pointer", whiteSpace: "nowrap",
                                   }}
@@ -602,9 +598,9 @@ function HwCard({
                                   <div
                                     style={{
                                       padding: ".5rem .75rem .6rem 2.5rem",
-                                      borderTop: `1px solid ${meta.bg}`,
-                                      fontSize: ".78rem", color: "#6B4C30", lineHeight: 1.6,
-                                      background: meta.bg,
+                                      borderTop: `1px solid ${meta.color}20`,
+                                      fontSize: ".78rem", color: "var(--text-secondary,#6B4C30)", lineHeight: 1.6,
+                                      background: `${meta.color}08`,
                                     }}
                                     dangerouslySetInnerHTML={{ __html: item.desc }}
                                   />

@@ -1479,12 +1479,12 @@ function PersonalHWSection({
                         const items = hw[key] ?? [];
                         if (items.length === 0) return null;
                         return (
-                          <div key={key}>
-                            <p className="text-[10px] font-bold uppercase tracking-wider mb-1.5"
-                              style={{ color }}>
-                              {secLabel}
-                            </p>
-                            <div className="space-y-1.5">
+                          <div key={key} className="rounded-xl overflow-hidden" style={{ border: `1.5px solid ${color}30` }}>
+                            <div className="flex items-center gap-2 px-3 py-2" style={{ background: `${color}14`, borderBottom: `1px solid ${color}25` }}>
+                              <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: color }} />
+                              <span className="text-xs font-bold uppercase tracking-widest" style={{ color }}>{secLabel}</span>
+                            </div>
+                            <div className="px-3 py-2.5 space-y-3" style={{ background: "var(--bg-primary)" }}>
                               {items.map((item, idx) => {
                                 const subKey = `${hw.id}_${key}_${idx}`;
                                 const sub = submissions[subKey];
@@ -1493,32 +1493,36 @@ function PersonalHWSection({
                                   ? new Date(sub.updatedAt).toLocaleString("vi-VN", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" })
                                   : null;
                                 return (
-                                  <div key={idx} className="flex items-start gap-2 py-1.5 px-2 rounded-lg"
-                                    style={{ background: subDone ? "rgba(16,185,129,0.04)" : "var(--bg-primary)", border: "1px solid var(--border)" }}>
+                                  <div key={idx} className="flex gap-2.5 items-start">
+                                    <span className="mt-[7px] w-1.5 h-1.5 rounded-full shrink-0" style={{ background: color }} />
                                     <div className="flex-1 min-w-0">
-                                      <span
-                                        className="text-xs"
-                                        style={{ color: "var(--text-primary)" }}
-                                      >{item.text}</span>
-                                      {item.link && (
-                                        <a href={item.link} target="_blank" rel="noopener noreferrer"
-                                          className="ml-2 inline-flex items-center gap-0.5 text-[10px] px-1.5 py-0.5 rounded"
-                                          style={{ background: "rgba(196,98,45,0.1)", color: "var(--accent-primary)" }}>
-                                          Bài tập <ExternalLink size={9} />
-                                        </a>
-                                      )}
-                                      {item.desc && (
-                                        <p className="text-[10px] mt-0.5" style={{ color: "var(--text-muted)" }}
-                                          dangerouslySetInnerHTML={{ __html: item.desc }} />
-                                      )}
+                                      <div className="flex items-start gap-2">
+                                        <div className="flex-1 min-w-0">
+                                          {item.link ? (
+                                            <a href={item.link} target="_blank" rel="noopener noreferrer"
+                                              className="text-sm font-medium leading-snug hover:opacity-75 break-words"
+                                              style={{ color }}
+                                              dangerouslySetInnerHTML={{ __html: item.text }} />
+                                          ) : (
+                                            <span className="text-sm leading-snug break-words"
+                                              style={{ color: "var(--text-primary)" }}
+                                              dangerouslySetInnerHTML={{ __html: item.text }} />
+                                          )}
+                                          {item.desc && (
+                                            <div className="mt-1.5 text-xs leading-relaxed px-2 py-1.5 rounded-lg"
+                                              style={{ color: "var(--text-muted)", background: `${color}08`, borderLeft: `2px solid ${color}40` }}
+                                              dangerouslySetInnerHTML={{ __html: item.desc }} />
+                                          )}
+                                        </div>
+                                        {subDone ? (
+                                          <span className="text-[10px] shrink-0 font-semibold" style={{ color: "rgb(5,150,105)" }}>
+                                            ✓ Đã nộp{subTime ? ` · ${subTime}` : ""}
+                                          </span>
+                                        ) : (
+                                          <span className="text-[10px] shrink-0" style={{ color: "var(--text-muted)" }}>—</span>
+                                        )}
+                                      </div>
                                     </div>
-                                    {subDone ? (
-                                      <span className="text-[10px] shrink-0 font-semibold" style={{ color: "rgb(5,150,105)" }}>
-                                        ✓ Đã hoàn thành{subTime ? ` · ${subTime}` : ""}
-                                      </span>
-                                    ) : (
-                                      <span className="text-[10px] shrink-0" style={{ color: "var(--text-muted)" }}>—</span>
-                                    )}
                                   </div>
                                 );
                               })}
