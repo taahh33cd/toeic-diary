@@ -1092,13 +1092,53 @@ function HwItemRow({ item, onUpdate, onRemove }: {
   );
 }
 
-function HwModal({ initial, onSave, onClose }: {
+function buildHwFromForm(form: HwFormState, hwId: string): Homework {
+  const hw: Homework = {
+    id: hwId,
+    date: form.date,
+    ...(form.endDate ? { endDate: form.endDate } : {}),
+    ...(form.title.trim() ? { title: form.title.trim() } : {}),
+  };
+  HW_SECTIONS.forEach(({ key }) => {
+    const items = form.sections[key].filter((i) => i.text.trim());
+    if (items.length > 0) hw[key] = items.map((i) => ({
+      text: i.text,
+      ...(i.link ? { link: i.link } : {}),
+      ...(i.desc ? { desc: i.desc } : {}),
+    }));
+  });
+  return hw;
+}
+
+function HwModal({ initial, editId, onSave, onAutosave, onClose }: {
   initial: HwFormState;
-  onSave: (form: HwFormState) => Promise<void>;
+  editId?: string;
+  onSave: (form: HwFormState, hwId: string) => Promise<void>;
+  onAutosave?: (hw: Homework, isNew: boolean) => Promise<void>;
   onClose: () => void;
 }) {
   const [form, setForm] = useState<HwFormState>(initial);
   const [saving, setSaving] = useState(false);
+  const [saveStatus, setSaveStatus] = useState<"idle" | "saving" | "saved">("idle");
+  const hwIdRef = useRef(editId ?? `hw${Date.now()}`);
+  const isNewRef = useRef(!editId);
+  const onAutosaveRef = useRef(onAutosave);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  useEffect(() => { onAutosaveRef.current = onAutosave; }, [onAutosave]);
+
+  useEffect(() => {
+    if (!onAutosaveRef.current) return;
+    clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(async () => {
+      if (!onAutosaveRef.current) return;
+      setSaveStatus("saving");
+      const hw = buildHwFromForm(form, hwIdRef.current);
+      await onAutosaveRef.current(hw, isNewRef.current);
+      isNewRef.current = false;
+      setSaveStatus("saved");
+    }, 1000);
+    return () => clearTimeout(timerRef.current);
+  }, [form]);
 
   function addItem(sec: HwSectionKey) {
     setForm((f) => ({ ...f, sections: { ...f.sections, [sec]: [...f.sections[sec], { text: "", link: "", desc: "" }] } }));
@@ -1117,7 +1157,8 @@ function HwModal({ initial, onSave, onClose }: {
   async function handleSave() {
     if (!form.date) return;
     setSaving(true);
-    await onSave(form);
+    clearTimeout(timerRef.current);
+    await onSave(form, hwIdRef.current);
     setSaving(false);
   }
 
@@ -1126,7 +1167,7 @@ function HwModal({ initial, onSave, onClose }: {
       <div className="w-full max-w-2xl my-8 rounded-2xl" style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)" }}>
         {/* Header */}
         <div className="flex items-center justify-between px-5 py-4 border-b" style={{ borderColor: "var(--border)" }}>
-          <h3 className="font-bold" style={{ color: "var(--accent-primary)" }}>📋 Thêm BTVN</h3>
+          <h3 className="font-bold" style={{ color: "var(--accent-primary)" }}>📋 {editId ? "Sửa BTVN" : "Thêm BTVN"}</h3>
           <button onClick={onClose} className="text-xl" style={{ color: "var(--text-muted)" }}>×</button>
         </div>
 
@@ -1189,11 +1230,16 @@ function HwModal({ initial, onSave, onClose }: {
           ))}
         </div>
 
-        <div className="flex gap-2 justify-end px-5 py-4 border-t" style={{ borderColor: "var(--border)" }}>
-          <button onClick={onClose} className="px-4 py-2 rounded-xl text-sm border" style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}>Hủy</button>
-          <button onClick={handleSave} disabled={saving || !form.date} className="px-4 py-2 rounded-xl text-sm font-semibold disabled:opacity-50" style={{ background: "var(--accent-primary)", color: "#fff" }}>
-            {saving ? "Đang lưu..." : "💾 Lưu BTVN"}
-          </button>
+        <div className="flex items-center justify-between px-5 py-4 border-t" style={{ borderColor: "var(--border)" }}>
+          <span className="text-xs" style={{ color: "var(--text-muted)" }}>
+            {saveStatus === "saving" ? "Đang lưu tự động..." : saveStatus === "saved" ? "✓ Đã lưu tự động" : ""}
+          </span>
+          <div className="flex gap-2">
+            <button onClick={onClose} className="px-4 py-2 rounded-xl text-sm border" style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}>Hủy</button>
+            <button onClick={handleSave} disabled={saving || !form.date} className="px-4 py-2 rounded-xl text-sm font-semibold disabled:opacity-50" style={{ background: "var(--accent-primary)", color: "#fff" }}>
+              {saving ? "Đang lưu..." : "💾 Lưu BTVN"}
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -1215,6 +1261,7 @@ function PersonalHWSection({
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
   const [modal, setModal] = useState<{ mode: "add" | "edit"; initial: HwFormState; editId?: string } | null>(null);
   const [deleting, setDeleting] = useState<string | null>(null);
+  const autosavedHwIdRef = useRef<string | null>(null);
 
   const todayStr = today();
 
@@ -1249,9 +1296,19 @@ function PersonalHWSection({
     return { date: hw.date, endDate: hw.endDate ?? "", title: hw.title ?? "", sections };
   }
 
-  async function handleSaveHw(form: HwFormState, editId?: string) {
+  async function handleAutosaveHw(hw: Homework, isNew: boolean, editId?: string) {
+    if (isNew) {
+      await pushHomework(code, hw);
+      autosavedHwIdRef.current = hw.id;
+    } else {
+      await updateHomework(code, editId ?? hw.id, hw);
+    }
+  }
+
+  async function handleSaveHw(form: HwFormState, editId?: string, modalHwId?: string) {
+    const resolvedId = editId ?? modalHwId ?? `hw${Date.now()}`;
     const hwBase = {
-      id: editId ?? `hw${Date.now()}`,
+      id: resolvedId,
       date: form.date,
       endDate: form.endDate || undefined,
       ...(form.title.trim() ? { title: form.title.trim() } : {}),
@@ -1264,8 +1321,10 @@ function PersonalHWSection({
         ...(i.desc ? { desc: i.desc } : {}),
       }));
     });
-    if (editId) await updateHomework(code, editId, hwBase);
+    const alreadyPushed = !editId && autosavedHwIdRef.current === resolvedId;
+    if (editId || alreadyPushed) await updateHomework(code, resolvedId, hwBase);
     else await pushHomework(code, hwBase);
+    autosavedHwIdRef.current = null;
     setModal(null);
   }
 
@@ -1288,8 +1347,10 @@ function PersonalHWSection({
       {modal && (
         <HwModal
           initial={modal.initial}
-          onSave={(form) => handleSaveHw(form, modal.editId)}
-          onClose={() => setModal(null)}
+          editId={modal.editId}
+          onSave={(form, hwId) => handleSaveHw(form, modal.editId, hwId)}
+          onAutosave={(hw, isNew) => handleAutosaveHw(hw, isNew, modal.editId)}
+          onClose={() => { setModal(null); autosavedHwIdRef.current = null; }}
         />
       )}
 

@@ -260,19 +260,32 @@ function sectionsToHw(id: string, date: string, endDate: string, sections: HwSec
   return hw;
 }
 
-function RichText({ value, onChange, placeholder }: { value: string; onChange: (v: string) => void; placeholder?: string }) {
-  const ref = useRef<HTMLTextAreaElement>(null);
+function RichTextInput({ value, onChange, placeholder }: { value: string; onChange: (v: string) => void; placeholder?: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const internalVal = useRef<string>(value);
+  useEffect(() => {
+    if (ref.current && value !== internalVal.current) {
+      ref.current.innerHTML = value;
+      internalVal.current = value;
+    }
+  }, [value]);
   function wrap(tag: string) {
-    const el = ref.current; if (!el) return;
-    const s = el.selectionStart, e = el.selectionEnd;
-    const sel = el.value.slice(s, e);
-    onChange(el.value.slice(0, s) + `<${tag}>${sel}</${tag}>` + el.value.slice(e));
-    setTimeout(() => { el.focus(); const c = s + `<${tag}>`.length + sel.length; el.setSelectionRange(c, c); }, 0);
+    const sel = window.getSelection();
+    if (!sel || !sel.rangeCount || sel.isCollapsed) return;
+    const range = sel.getRangeAt(0);
+    if (!ref.current?.contains(range.commonAncestorContainer)) return;
+    const wrapper = document.createElement(tag);
+    try { range.surroundContents(wrapper); }
+    catch { const fragment = range.extractContents(); wrapper.appendChild(fragment); range.insertNode(wrapper); }
+    sel.removeAllRanges();
+    const html = ref.current!.innerHTML;
+    internalVal.current = html;
+    onChange(html);
   }
   return (
     <div style={{ border: "1px solid var(--border)", borderRadius: 8, overflow: "hidden" }}>
       <div className="flex gap-1 px-2 py-1" style={{ background: "var(--bg-elevated)", borderBottom: "1px solid var(--border)" }}>
-        {[["b","B"],["i","I"],["u","U"],["mark","HL"]].map(([tag, label]) => (
+        {[{ tag: "b", label: "B" }, { tag: "i", label: "I" }, { tag: "u", label: "U" }, { tag: "mark", label: "HL" }].map(({ tag, label }) => (
           <button key={tag} type="button" onMouseDown={(e) => { e.preventDefault(); wrap(tag); }}
             className="text-[11px] px-1.5 py-0.5 rounded font-semibold"
             style={{ border: "1px solid var(--border)", background: "var(--bg-primary)", cursor: "pointer", color: "var(--text-primary)" }}>
@@ -281,9 +294,68 @@ function RichText({ value, onChange, placeholder }: { value: string; onChange: (
         ))}
         <span className="text-[10px] self-center ml-1" style={{ color: "var(--text-muted)" }}>Bôi đen → format</span>
       </div>
-      <textarea ref={ref} value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder}
-        rows={2} className="w-full px-3 py-2 text-xs outline-none resize-none"
-        style={{ background: "var(--bg-primary)", color: "var(--text-primary)" }} />
+      <div style={{ position: "relative" }}>
+        <div ref={ref} contentEditable suppressContentEditableWarning
+          onInput={(e) => {
+            const html = (e.currentTarget as HTMLDivElement).innerHTML;
+            internalVal.current = html;
+            onChange(html);
+          }}
+          className="w-full px-3 py-2 text-xs outline-none min-h-[3rem]"
+          style={{ background: "var(--bg-primary)", color: "var(--text-primary)" }}
+        />
+        {!value && <span className="absolute top-2 left-3 text-xs pointer-events-none" style={{ color: "var(--text-muted)" }}>{placeholder}</span>}
+      </div>
+    </div>
+  );
+}
+
+function HwItemRow({ item, onUpdate, onRemove }: {
+  item: HwItemDraft;
+  onUpdate: (field: keyof HwItemDraft, val: string) => void;
+  onRemove: () => void;
+}) {
+  const [showDesc, setShowDesc] = useState(!!item.desc);
+  return (
+    <div className="space-y-1.5 rounded-lg p-2" style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}>
+      <div className="flex gap-2 items-center">
+        <input
+          value={item.text}
+          onChange={(e) => onUpdate("text", e.target.value)}
+          placeholder="Nội dung bài tập..."
+          className="flex-1 min-w-0 px-2 py-1.5 text-xs rounded-lg border outline-none"
+          style={{ background: "var(--bg-elevated)", borderColor: "var(--border)", color: "var(--text-primary)" }}
+        />
+        <input
+          value={item.link}
+          onChange={(e) => onUpdate("link", e.target.value)}
+          placeholder="Link (paste vào đây)"
+          className="w-44 px-2 py-1.5 text-xs rounded-lg border outline-none shrink-0"
+          style={{ background: "var(--bg-elevated)", borderColor: "var(--border)", color: "var(--text-primary)" }}
+        />
+        <button
+          type="button"
+          onClick={() => setShowDesc((v) => !v)}
+          className="text-[10px] px-2 py-1.5 rounded-lg border shrink-0 whitespace-nowrap"
+          style={{
+            borderColor: showDesc ? "var(--accent-primary)" : "var(--border)",
+            color: showDesc ? "var(--accent-primary)" : "var(--text-muted)",
+            background: showDesc ? "rgba(196,98,45,0.08)" : "transparent",
+          }}
+        >
+          {showDesc ? "✓ Mô tả" : "+ Mô tả"}
+        </button>
+        <button type="button" onClick={onRemove} className="p-1 shrink-0 hover:opacity-70" style={{ color: "rgb(239,68,68)" }}>
+          <Trash2 size={12} />
+        </button>
+      </div>
+      {showDesc && (
+        <RichTextInput
+          value={item.desc}
+          onChange={(v) => onUpdate("desc", v)}
+          placeholder="Mô tả chi tiết (hỗ trợ B/I/U/HL)..."
+        />
+      )}
     </div>
   );
 }
@@ -291,10 +363,12 @@ function RichText({ value, onChange, placeholder }: { value: string; onChange: (
 function HomeworkModal({
   initial,
   onSave,
+  onAutosave,
   onClose,
 }: {
   initial?: Homework;
   onSave: (hw: Homework) => Promise<void>;
+  onAutosave?: (hw: Homework, isNew: boolean) => Promise<void>;
   onClose: () => void;
 }) {
   const [date, setDate] = useState(initial?.date ?? today());
@@ -302,6 +376,26 @@ function HomeworkModal({
   const [title, setTitle] = useState(initial?.title ?? "");
   const [sections, setSections] = useState<HwSections>(initial ? hwToSections(initial) : emptyHwSections());
   const [saving, setSaving] = useState(false);
+  const [saveStatus, setSaveStatus] = useState<"idle" | "saving" | "saved">("idle");
+  const hwIdRef = useRef(initial?.id ?? `hw${Date.now()}`);
+  const isNewRef = useRef(!initial);
+  const onAutosaveRef = useRef(onAutosave);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  useEffect(() => { onAutosaveRef.current = onAutosave; }, [onAutosave]);
+
+  useEffect(() => {
+    if (!onAutosaveRef.current) return;
+    clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(async () => {
+      if (!onAutosaveRef.current) return;
+      setSaveStatus("saving");
+      const hw = sectionsToHw(hwIdRef.current, date, endDate, sections, title);
+      await onAutosaveRef.current(hw, isNewRef.current);
+      isNewRef.current = false;
+      setSaveStatus("saved");
+    }, 1000);
+    return () => clearTimeout(timerRef.current);
+  }, [date, endDate, title, sections]);
 
   function addItem(key: HwCatKey) {
     setSections((s) => ({ ...s, [key]: [...s[key], { text: "", link: "", desc: "" }] }));
@@ -316,20 +410,20 @@ function HomeworkModal({
   async function handleSave() {
     if (!date) return;
     setSaving(true);
-    await onSave(sectionsToHw(initial?.id ?? `hw${Date.now()}`, date, endDate, sections, title));
+    clearTimeout(timerRef.current);
+    await onSave(sectionsToHw(hwIdRef.current, date, endDate, sections, title));
     setSaving(false);
     onClose();
   }
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center p-4 overflow-y-auto"
-      style={{ background: "rgba(0,0,0,0.5)" }}
-      onClick={(e) => e.target === e.currentTarget && onClose()}>
+      style={{ background: "rgba(0,0,0,0.5)" }}>
       <div className="w-full max-w-2xl my-8 rounded-2xl border shadow-xl overflow-hidden"
         style={{ background: "var(--bg-elevated)", borderColor: "var(--border)" }}>
         <div className="flex items-center justify-between px-5 py-4 border-b" style={{ borderColor: "var(--border)" }}>
           <h3 className="font-bold" style={{ color: "var(--accent-primary)" }}>
-            {initial ? "Sửa BTVN lớp" : "Thêm BTVN lớp"}
+            📋 {initial ? "Sửa BTVN lớp" : "Thêm BTVN lớp"}
           </h3>
           <button onClick={onClose} style={{ color: "var(--text-muted)" }}><X size={18} /></button>
         </div>
@@ -357,7 +451,13 @@ function HomeworkModal({
                   <span className="w-2 h-2 rounded-full shrink-0" style={{ background: color }} />
                   <span className="text-xs font-bold uppercase tracking-wider" style={{ color }}>{label}</span>
                 </div>
-                <Btn onClick={() => addItem(key)} size="xs"><Plus size={10} /> Thêm mục</Btn>
+                <button
+                  onClick={() => addItem(key)}
+                  className="text-xs px-2 py-0.5 rounded-lg flex items-center gap-1"
+                  style={{ color: "var(--accent-primary)", background: "rgba(196,98,45,0.08)" }}
+                >
+                  <Plus size={10} /> Thêm mục
+                </button>
               </div>
               {hint && <p className="text-[10px] mb-2 px-2 py-1 rounded" style={{ color, background: `${color}12` }}>{hint}</p>}
               {sections[key].length === 0 ? (
@@ -366,18 +466,14 @@ function HomeworkModal({
                   + Thêm mục
                 </button>
               ) : (
-                <div className="space-y-3">
+                <div className="space-y-2">
                   {sections[key].map((item, idx) => (
-                    <div key={idx} className="flex gap-2 items-start">
-                      <div className="flex-1 space-y-1.5">
-                        <RichText value={item.text} onChange={(v) => updateItem(key, idx, "text", v)} placeholder="Nội dung bài tập..." />
-                        <TextInput value={item.link} onChange={(v) => updateItem(key, idx, "link", v)} placeholder="Link (paste vào đây)" />
-                        <TextInput value={item.desc} onChange={(v) => updateItem(key, idx, "desc", v)} placeholder="+ Mô tả (tuỳ chọn)" />
-                      </div>
-                      <button onClick={() => removeItem(key, idx)} className="mt-1 shrink-0" style={{ color: "rgb(239,68,68)" }}>
-                        <Trash2 size={14} />
-                      </button>
-                    </div>
+                    <HwItemRow
+                      key={idx}
+                      item={item}
+                      onUpdate={(field, val) => updateItem(key, idx, field, val)}
+                      onRemove={() => removeItem(key, idx)}
+                    />
                   ))}
                 </div>
               )}
@@ -385,11 +481,16 @@ function HomeworkModal({
           ))}
         </div>
 
-        <div className="flex justify-end gap-2 px-5 py-4 border-t" style={{ borderColor: "var(--border)" }}>
-          <Btn onClick={onClose}>Huỷ</Btn>
-          <Btn onClick={handleSave} variant="primary" disabled={!date || saving}>
-            {saving ? "Đang lưu..." : "💾 Lưu BTVN"}
-          </Btn>
+        <div className="flex items-center justify-between px-5 py-4 border-t" style={{ borderColor: "var(--border)" }}>
+          <span className="text-xs" style={{ color: "var(--text-muted)" }}>
+            {saveStatus === "saving" ? "Đang lưu tự động..." : saveStatus === "saved" ? "✓ Đã lưu tự động" : ""}
+          </span>
+          <div className="flex gap-2">
+            <Btn onClick={onClose}>Huỷ</Btn>
+            <Btn onClick={handleSave} variant="primary" disabled={!date || saving}>
+              {saving ? "Đang lưu..." : "💾 Lưu & Giao cho HV"}
+            </Btn>
+          </div>
         </div>
       </div>
     </div>
@@ -581,22 +682,34 @@ function ClassHomeworkSection({
   const [modal, setModal] = useState<{ mode: "add" } | { mode: "edit"; hw: Homework } | null>(null);
   const [expanded, setExpanded] = useState<string | null>(null);
   const [propagating, setPropagating] = useState(false);
+  const autosavedHwIdRef = useRef<string | null>(null);
 
   const sorted = useMemo(
     () => [...homework].sort((a, b) => b.date.localeCompare(a.date)),
     [homework]
   );
 
+  async function handleAutosave(hw: Homework, isNew: boolean) {
+    if (isNew) {
+      await pushClassHomework(classId, hw);
+      autosavedHwIdRef.current = hw.id;
+    } else {
+      await updateClassHomework(classId, hw.id, hw);
+    }
+  }
+
   // M7: Save HW to class + propagate to all member students
   async function handleSave(hw: Homework) {
     setPropagating(true);
-    if (modal?.mode === "edit") {
+    const alreadyCreated = autosavedHwIdRef.current === hw.id;
+    if (modal?.mode === "edit" || alreadyCreated) {
       await updateClassHomework(classId, hw.id, hw);
       await Promise.all(memberCodes.map((code) => updateHomework(code, hw.id, hw)));
     } else {
       await pushClassHomework(classId, hw);
       await Promise.all(memberCodes.map((code) => pushHomework(code, hw)));
     }
+    autosavedHwIdRef.current = null;
     setPropagating(false);
   }
 
@@ -727,7 +840,8 @@ function ClassHomeworkSection({
         <HomeworkModal
           initial={modal.mode === "edit" ? modal.hw : undefined}
           onSave={handleSave}
-          onClose={() => setModal(null)}
+          onAutosave={handleAutosave}
+          onClose={() => { setModal(null); autosavedHwIdRef.current = null; }}
         />
       )}
     </>
