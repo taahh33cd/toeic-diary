@@ -19,9 +19,9 @@ const SKILLS = [
     key: "reading",
     emoji: "📖",
     label: "Reading",
-    href: null,
-    description: null,
-    comingSoon: true,
+    href: "/subskills/reading",
+    description: "Part 5 đang mở · 12 thì, 6 levels mỗi thì",
+    comingSoon: false,
   },
   {
     key: "speaking",
