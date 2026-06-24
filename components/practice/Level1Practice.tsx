@@ -112,12 +112,10 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
   const activeBlankIdx = blankSentences.findIndex((s) => s.id === activeSentence?.id);
   const replayCount = replayCounts[activeSentence?.id ?? ""] ?? 0;
 
-  // Returns true when a blank is fully resolved (correct or hints exhausted)
   function isBlankResolved(blank: Blank): boolean {
     const bs = blankStates[blank.id];
     if (!bs) return false;
-    if (bs.status === "correct") return true;
-    return bs.status === "wrong" && bs.hintCount >= cleanAnswer(blank.answer).length;
+    return bs.status === "correct";
   }
 
   useEffect(() => {
@@ -301,12 +299,6 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
       return;
     }
 
-    // Hints exhausted → navigate
-    if (state.status === "wrong" && state.hintCount >= ca.length) {
-      focusNextOrAdvance(blankId);
-      return;
-    }
-
     // Check answer
     const correct = normalize(state.value) === normalize(blankDef.answer);
 
@@ -317,13 +309,12 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
       }));
       focusNextOrAdvance(blankId);
     } else {
-      const newHintCount = state.hintCount + 1;
+      if (!state.value.trim()) return;
+      const newHintCount = Math.min(state.hintCount + 1, ca.length);
       setBlankStates((prev) => ({
         ...prev,
         [blankId]: { value: "", status: "wrong", hintCount: newHintCount },
       }));
-      // No auto-advance when fully revealed — user must press Enter to proceed
-      // (pressing Enter with hintCount >= ca.length is handled by the early return above)
     }
   }
 

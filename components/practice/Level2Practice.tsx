@@ -101,8 +101,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
   function isBlankResolved(blank: GeneratedBlank): boolean {
     const bs = blankStates[blank.id];
     if (!bs) return false;
-    if (bs.status === "correct") return true;
-    return bs.status === "wrong" && bs.hintCount >= cleanAnswer(blank.answer).length;
+    return bs.status === "correct";
   }
 
   useEffect(() => {
@@ -228,7 +227,6 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
     const ca = cleanAnswer(blankDef.answer);
 
     if (state.status === "correct") { focusNextOrAdvance(blankId); return; }
-    if (state.status === "wrong" && state.hintCount >= ca.length) { focusNextOrAdvance(blankId); return; }
 
     const correct = normalize(state.value) === normalize(blankDef.answer);
 
@@ -239,12 +237,12 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
       }));
       focusNextOrAdvance(blankId);
     } else {
-      const newHintCount = state.hintCount + 1;
+      if (!state.value.trim()) return;
+      const newHintCount = Math.min(state.hintCount + 1, ca.length);
       setBlankStates((prev) => ({
         ...prev,
         [blankId]: { value: "", status: "wrong", hintCount: newHintCount },
       }));
-      // No auto-advance when fully revealed — user must press Enter to proceed
     }
   }
 
