@@ -344,13 +344,15 @@ function VocabForm({ studentCode, scoreKey }: { studentCode: string; scoreKey: s
   const [example, setExample] = useState("");
   const [part, setPart] = useState("");
   const [saving, setSaving] = useState(false);
-  const canSave = word.trim() && meaning.trim() && part;
+  const [err, setErr] = useState("");
+  const canSave = !!(word.trim() && meaning.trim());
 
   async function handleAdd() {
     if (!canSave || saving) return;
+    setErr("");
     setSaving(true);
     try {
-      const partNum = parseInt(part, 10);
+      const partNum = part ? parseInt(part, 10) : 5;
       const today = new Date().toISOString().slice(0, 10);
       await saveVocabWord(studentCode, {
         word: word.trim(), vi: meaning.trim(),
@@ -359,9 +361,11 @@ function VocabForm({ studentCode, scoreKey }: { studentCode: string; scoreKey: s
       });
       await addReviewNote(studentCode, scoreKey, {
         type: "vocab", content: word.trim(), extra: meaning.trim(),
-        example: example.trim() || undefined, part: partNum,
+        example: example.trim() || undefined, part: partNum || undefined,
       });
       setWord(""); setMeaning(""); setExample(""); setPart("");
+    } catch (e) {
+      setErr(e instanceof Error ? e.message : "Lỗi khi lưu");
     } finally { setSaving(false); }
   }
 
@@ -379,51 +383,16 @@ function VocabForm({ studentCode, scoreKey }: { studentCode: string; scoreKey: s
           placeholder="Ví dụ câu (tuỳ chọn)…" style={NOTE_INP} />
         <PartSelect value={part} onChange={setPart} />
       </div>
-      <button onClick={handleAdd} disabled={!canSave || saving}
+      {err && <div style={{ fontSize: 12, color: "#c62828", marginBottom: 6 }}>{err}</div>}
+      <button
+        onClick={handleAdd}
+        disabled={!canSave || saving}
         style={{ width: "100%", padding: "8px", border: "none", borderRadius: 6,
           fontWeight: 600, fontSize: 13,
-          background: canSave ? "#3b5bdb" : "var(--border)",
-          color: canSave ? "#fff" : "var(--text-muted)",
-          cursor: canSave ? "pointer" : "not-allowed" }}>
+          background: canSave && !saving ? "#3b5bdb" : "var(--border)",
+          color: canSave && !saving ? "#fff" : "var(--text-muted)",
+          cursor: canSave && !saving ? "pointer" : "not-allowed" }}>
         {saving ? "Đang lưu…" : "+ Lưu vào Vocab Bank"}
-      </button>
-    </div>
-  );
-}
-
-function GrammarForm({ studentCode, scoreKey }: { studentCode: string; scoreKey: string }) {
-  const [content, setContent] = useState("");
-  const [part, setPart] = useState("");
-  const [saving, setSaving] = useState(false);
-  const canSave = content.trim();
-
-  async function handleAdd() {
-    if (!canSave || saving) return;
-    setSaving(true);
-    try {
-      const partNum = part ? parseInt(part, 10) : undefined;
-      await addReviewNote(studentCode, scoreKey, {
-        type: "grammar", content: content.trim(), part: partNum,
-      });
-      setContent(""); setPart("");
-    } finally { setSaving(false); }
-  }
-
-  return (
-    <div style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)",
-      borderRadius: 8, padding: 12, marginBottom: 10 }}>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 6, marginBottom: 8 }}>
-        <input value={content} onChange={(e) => setContent(e.target.value)}
-          placeholder="Ghi chú cấu trúc / ngữ pháp…" style={NOTE_INP} />
-        <PartSelect value={part} onChange={setPart} />
-      </div>
-      <button onClick={handleAdd} disabled={!canSave || saving}
-        style={{ width: "100%", padding: "8px", border: "none", borderRadius: 6,
-          fontWeight: 600, fontSize: 13,
-          background: canSave ? "#c4622d" : "var(--border)",
-          color: canSave ? "#fff" : "var(--text-muted)",
-          cursor: canSave ? "pointer" : "not-allowed" }}>
-        {saving ? "Đang lưu…" : "+ Lưu ghi chú"}
       </button>
     </div>
   );
@@ -434,10 +403,12 @@ function ParaForm({ studentCode, scoreKey }: { studentCode: string; scoreKey: st
   const [target, setTarget] = useState("");
   const [part, setPart] = useState("3");
   const [saving, setSaving] = useState(false);
-  const canSave = source.trim() && target.trim();
+  const [err, setErr] = useState("");
+  const canSave = !!(source.trim() && target.trim());
 
   async function handleAdd() {
     if (!canSave || saving) return;
+    setErr("");
     setSaving(true);
     try {
       const partNum = part ? parseInt(part, 10) : 3;
@@ -446,6 +417,8 @@ function ParaForm({ studentCode, scoreKey }: { studentCode: string; scoreKey: st
         type: "paraphrase", content: source.trim(), extra: target.trim(), part: partNum,
       });
       setSource(""); setTarget(""); setPart("3");
+    } catch (e) {
+      setErr(e instanceof Error ? e.message : "Lỗi khi lưu");
     } finally { setSaving(false); }
   }
 
@@ -461,12 +434,15 @@ function ParaForm({ studentCode, scoreKey }: { studentCode: string; scoreKey: st
           <PartSelect value={part} onChange={setPart} />
         </div>
       </div>
-      <button onClick={handleAdd} disabled={!canSave || saving}
+      {err && <div style={{ fontSize: 12, color: "#c62828", marginBottom: 6 }}>{err}</div>}
+      <button
+        onClick={handleAdd}
+        disabled={!canSave || saving}
         style={{ width: "100%", padding: "8px", border: "none", borderRadius: 6,
           fontWeight: 600, fontSize: 13,
-          background: canSave ? "#2f9e44" : "var(--border)",
-          color: canSave ? "#fff" : "var(--text-muted)",
-          cursor: canSave ? "pointer" : "not-allowed" }}>
+          background: canSave && !saving ? "#2f9e44" : "var(--border)",
+          color: canSave && !saving ? "#fff" : "var(--text-muted)",
+          cursor: canSave && !saving ? "pointer" : "not-allowed" }}>
         {saving ? "Đang lưu…" : "+ Lưu vào Paraphrase Log"}
       </button>
     </div>
@@ -483,13 +459,11 @@ function NotesTab({ studentCode, scoreKey }: { studentCode: string; scoreKey: st
       )
     : [];
 
-  const byType = (t: ReviewNote["type"]) => allNotes.filter(([, n]) => n.type === t);
-  const vocabNotes  = byType("vocab");
-  const grammarNotes = byType("grammar");
-  const paraNotes   = byType("paraphrase");
+  const vocabNotes = allNotes.filter(([, n]) => n.type === "vocab");
+  const paraNotes  = allNotes.filter(([, n]) => n.type === "paraphrase");
 
   async function del(k: string) {
-    await deleteReviewNote(studentCode, scoreKey, k);
+    try { await deleteReviewNote(studentCode, scoreKey, k); } catch { /* ignore */ }
   }
 
   return (
@@ -497,13 +471,6 @@ function NotesTab({ studentCode, scoreKey }: { studentCode: string; scoreKey: st
       <NoteSection title="📝 Từ vựng mới" count={vocabNotes.length} accentColor="#3b5bdb">
         <VocabForm studentCode={studentCode} scoreKey={scoreKey} />
         {vocabNotes.map(([k, n]) => (
-          <NoteItem key={k} note={n} onDelete={() => del(k)} />
-        ))}
-      </NoteSection>
-
-      <NoteSection title="🔤 Ghi chú ngữ pháp" count={grammarNotes.length} accentColor="#c4622d">
-        <GrammarForm studentCode={studentCode} scoreKey={scoreKey} />
-        {grammarNotes.map(([k, n]) => (
           <NoteItem key={k} note={n} onDelete={() => del(k)} />
         ))}
       </NoteSection>
