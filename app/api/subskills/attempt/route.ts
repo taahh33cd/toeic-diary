@@ -13,6 +13,8 @@ export async function POST(req: Request) {
     exerciseIndex: number;
     score: number;
     passed: boolean;
+    itemIdx?: number | null;
+    correctCount?: number | null;
   };
 
   if (
@@ -33,6 +35,8 @@ export async function POST(req: Request) {
       exerciseIndex: body.exerciseIndex,
       score: body.score,
       passed: body.passed,
+      itemIdx: body.itemIdx ?? null,
+      correctCount: body.correctCount ?? null,
     },
   });
 

@@ -346,6 +346,8 @@ model SubskillAttempt {
   exerciseIndex Int      @map("exercise_index") // 0-3  (Bài 1-4)
   score         Int      // 0-100
   passed        Boolean  // score >= passThreshold (80)
+  itemIdx       Int?     @map("item_idx")       // null = completed; number = next question index to resume from
+  correctCount  Float?   @map("correct_count")  // running correct count when saved mid-exercise
   completedAt   DateTime @default(now()) @map("completed_at")
   createdAt     DateTime @default(now()) @map("created_at")
 
