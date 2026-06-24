@@ -109,6 +109,18 @@ export type ReviewPartProgress = Record<string, boolean>; // stepId → done
 export type ReviewScoreProgress = Record<string, ReviewPartProgress>; // partKey → steps
 export type ReviewProgress = Record<string, ReviewScoreProgress>; // scoreKey → parts
 
+// ─── Review Notes / Thành phẩm (path: students/{code}/reviewNotes/{scoreKey}/{noteId}) ──
+
+export interface ReviewNote {
+  type: "vocab" | "grammar" | "paraphrase";
+  content: string;   // word / note text / source sentence
+  extra?: string;    // nghĩa vi (vocab) / target (paraphrase)
+  example?: string;  // vocab: ví dụ câu
+  part?: number;     // 1–7
+  addedAt: string;   // ISO string
+}
+export type ReviewNotesMap = Record<string, ReviewNote>;
+
 export interface Student {
   id: string;
   name: string;
