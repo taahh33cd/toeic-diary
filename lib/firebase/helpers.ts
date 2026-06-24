@@ -24,7 +24,6 @@ import type {
   ErrorLogEntry,
   ErrorDetail,
   ParaphraseEntry,
-  ReviewNote,
 } from "./types";
 
 // ─── Students ────────────────────────────────────────────────────────────────
@@ -567,24 +566,3 @@ export async function clearReviewProgress(
   await remove(ref(firebaseDb, `students/${code}/reviewProgress/${scoreKey}`));
 }
 
-// ─── Review Notes / Thành phẩm (path: students/{code}/reviewNotes/{scoreKey}/{noteId}) ─
-
-export async function addReviewNote(
-  code: string,
-  scoreKey: string,
-  note: Omit<ReviewNote, "addedAt">
-): Promise<void> {
-  const key = `n${Date.now()}`;
-  await set(ref(firebaseDb, `students/${code}/reviewNotes/${scoreKey}/${key}`), {
-    ...note,
-    addedAt: new Date().toISOString(),
-  });
-}
-
-export async function deleteReviewNote(
-  code: string,
-  scoreKey: string,
-  noteKey: string
-): Promise<void> {
-  await remove(ref(firebaseDb, `students/${code}/reviewNotes/${scoreKey}/${noteKey}`));
-}
