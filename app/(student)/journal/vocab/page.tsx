@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import { useProfile } from "@/hooks/useProfile";
 import { useVocab } from "@/hooks/firebase/useVocab";
-import { saveVocabWord, updateVocabWord, deleteVocabWord, saveForgottenWords, loadForgottenWords } from "@/lib/firebase/helpers";
+import { updateVocabWord, deleteVocabWord, saveForgottenWords, loadForgottenWords } from "@/lib/firebase/helpers";
 import { awardXp } from "@/lib/xp-client";
 import { useLocale } from "@/hooks/useLocale";
 import type { VocabWord } from "@/lib/firebase/types";
@@ -164,18 +164,22 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
     if (!word.trim() || phase === "saving") return;
     setPhase("saving");
     try {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      await saveVocabWord(studentCode, {
-        word: word.trim(),
-        vi: vi.trim() || undefined,
-        ipa: ipa.trim() || undefined,
-        pos: pos || undefined,
-        def: def.trim() || undefined,
-        example: example.trim() || undefined,
-        part,
-        addedDate: today,
-        repCount: 0,
-      } as any);
+      const res = await fetch("/api/vocab/save", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          word: word.trim(),
+          vi: vi.trim() || undefined,
+          ipa: ipa.trim() || undefined,
+          pos: pos || undefined,
+          def: def.trim() || undefined,
+          example: example.trim() || undefined,
+          part,
+          addedDate: today,
+          repCount: 0,
+        }),
+      });
+      if (!res.ok) throw new Error(await res.text());
       const savedWord = word.trim();
       setPhase("saved");
       onSaved?.(savedWord);
