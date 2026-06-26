@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import Image from "next/image";
 import {
   type Part2TestData,
   type Part2Exercise,
@@ -50,7 +49,6 @@ export default function SpeakingPart2Client({
   easyBest,
   mediumBest,
   hardBest,
-  isTestUser,
   userId,
 }: Props) {
   const [phase, setPhase] = useState<Phase>("intro");
@@ -169,12 +167,6 @@ export default function SpeakingPart2Client({
       setIsCorrect(false);
       setImgError(false);
     }
-  }
-
-  // ── Skip (test user) ────────────────────────────────────────────────────────
-  function handleSkip() {
-    if (!isTestUser) return;
-    handleNext();
   }
 
   // ─────────────────────────────────────
@@ -362,15 +354,14 @@ export default function SpeakingPart2Client({
       <div style={{ border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", overflow: "hidden", marginBottom: "1rem" }}>
         {/* Image */}
         {currentEx.image_url && !imgError && (
-          <div style={{ width: "100%", aspectRatio: "4/3", maxHeight: 340, background: "var(--bg-elevated)", position: "relative", overflow: "hidden" }}>
-            <Image
+          <div style={{ width: "100%", background: "var(--bg-elevated)", overflow: "hidden" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               key={`${testNum}-${difficulty}-${idx}`}
               src={currentEx.image_url}
               alt="Exercise image"
-              fill
-              style={{ objectFit: "cover" }}
               onError={() => setImgError(true)}
-              unoptimized
+              style={{ width: "100%", height: "auto", maxHeight: 360, objectFit: "cover", display: "block" }}
             />
           </div>
         )}
@@ -478,14 +469,6 @@ export default function SpeakingPart2Client({
 
       {/* Action buttons */}
       <div style={{ display: "flex", gap: 8, justifyContent: "flex-end", flexWrap: "wrap" }}>
-        {isTestUser && !submitted && (
-          <button
-            onClick={handleSkip}
-            style={{ padding: "8px 18px", borderRadius: 8, border: "1px dashed var(--border)", background: "none", color: "var(--text-muted)", fontSize: "0.8rem", cursor: "pointer" }}
-          >
-            Bỏ qua (test)
-          </button>
-        )}
         {!submitted ? (
           <button
             disabled={!canCheck}
