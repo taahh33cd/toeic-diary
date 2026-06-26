@@ -945,7 +945,7 @@ function RichTextInput({ value, onChange, placeholder }: {
   placeholder?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const internalVal = useRef<string>(value);
+  const internalVal = useRef<string>("");
 
   useEffect(() => {
     if (ref.current && value !== internalVal.current) {
