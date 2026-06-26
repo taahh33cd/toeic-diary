@@ -258,7 +258,13 @@ function CommentsSection({ student, code }: { student: Student; code: string }) 
   async function handleSend() {
     if (!text.trim()) return;
     setSending(true);
-    await pushComment(code, text.trim());
+    const commentText = text.trim();
+    await pushComment(code, commentText);
+    fetch("/api/push/comment-new", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ studentCode: code, comment: commentText }),
+    }).catch(() => {});
     setText("");
     setSending(false);
   }

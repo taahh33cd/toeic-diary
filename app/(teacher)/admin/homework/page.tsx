@@ -101,6 +101,12 @@ function HomeworkForm({ code, onSaved }: { code: string; onSaved: () => void }) 
 
     setSaving(true);
     await pushHomework(code, hw);
+    // Fire-and-forget web push — don't block UI on delivery
+    fetch("/api/push/homework-new", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ studentCode: code, hwTitle: hw.title }),
+    }).catch(() => {});
     setSaving(false);
 
     // Reset
