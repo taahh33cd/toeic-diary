@@ -264,7 +264,7 @@ function sectionsToHw(id: string, date: string, endDate: string, sections: HwSec
 
 function RichTextInput({ value, onChange, placeholder }: { value: string; onChange: (v: string) => void; placeholder?: string }) {
   const ref = useRef<HTMLDivElement>(null);
-  const internalVal = useRef<string>(value);
+  const internalVal = useRef<string>("");
   useEffect(() => {
     if (ref.current && value !== internalVal.current) {
       ref.current.innerHTML = value;
