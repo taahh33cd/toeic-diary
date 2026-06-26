@@ -1,0 +1,1670 @@
+﻿{
+  "course": "TOEIC Speaking Part 2",
+  "skill": {
+    "id": "part2_skill_1",
+    "name": "Kỹ năng 1: Xác định Bối cảnh chung (Overview & Setting)",
+    "description": "Mục tiêu: Chọn đúng giới từ và cấu trúc chuẩn xác để giới thiệu bức tranh trong TOEIC Speaking Part 2."
+  },
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p2_s1_e1",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu mở đầu hoàn hảo nhất cho bức tranh này.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Restaurant",
+          "image_path": "images/part2/s1/restaurant.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "This is a picture taken at a busy restaurant."
+            },
+            {
+              "id": "B",
+              "text": "I can see a restaurant in this picture."
+            },
+            {
+              "id": "C",
+              "text": "There are many people eating food."
+            },
+            {
+              "id": "D",
+              "text": "This picture is a restaurant."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Cấu trúc chuẩn xác và chuyên nghiệp nhất để mở bài là 'This is a picture taken at/in + [Địa điểm]'."
+        },
+        {
+          "id": "p2_s1_e2",
+          "type": "essay_typing",
+          "instruction": "Điền GIỚI TỪ phù hợp vào chỗ trống để hoàn thành câu mở đầu.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Market",
+          "image_path": "images/part2/s1/market.jpg",
+          "content": "This is a picture taken ______ an outdoor market.",
+          "options": [],
+          "correct_answers": [
+            "at",
+            "in"
+          ],
+          "explanation": "Sử dụng 'at' hoặc 'in' để chỉ địa điểm chung."
+        },
+        {
+          "id": "p2_s1_e3",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu mở đầu hoàn hảo nhất cho bức tranh này.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Office",
+          "image_path": "images/part2/s1/office.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "This picture shows an office."
+            },
+            {
+              "id": "B",
+              "text": "This is a picture taken in a modern office."
+            },
+            {
+              "id": "C",
+              "text": "The people are in the office."
+            },
+            {
+              "id": "D",
+              "text": "I am looking at an office."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Luôn ưu tiên cấu trúc 'This is a picture taken in/at...' cho câu mở đầu."
+        },
+        {
+          "id": "p2_s1_e4",
+          "type": "essay_typing",
+          "instruction": "Điền MỘT TỪ phù hợp vào chỗ trống để hoàn thành câu mở đầu.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Park",
+          "image_path": "images/part2/s1/park.jpg",
+          "content": "This picture was ______ in a public park.",
+          "options": [],
+          "correct_answers": [
+            "taken",
+            "shot"
+          ],
+          "explanation": "Cấu trúc bị động: 'This picture was taken in/at...'"
+        },
+        {
+          "id": "p2_s1_e5",
+          "type": "multiple_choice",
+          "instruction": "Đâu là giới từ ĐÚNG để điền vào chỗ trống: 'This picture was taken ____ a street.'?",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Street",
+          "image_path": "images/part2/s1/street.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "in"
+            },
+            {
+              "id": "B",
+              "text": "at"
+            },
+            {
+              "id": "C",
+              "text": "on"
+            },
+            {
+              "id": "D",
+              "text": "by"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Với đường phố (street), ta sử dụng giới từ 'on' (on a street)."
+        },
+        {
+          "id": "p2_s1_e6",
+          "type": "essay_typing",
+          "instruction": "Điền GIỚI TỪ phù hợp vào chỗ trống.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Library",
+          "image_path": "images/part2/s1/library.jpg",
+          "content": "This is a picture taken ______ a quiet library.",
+          "options": [],
+          "correct_answers": [
+            "in",
+            "inside"
+          ],
+          "explanation": "Đối với không gian kín như thư viện, dùng 'in' hoặc 'inside' là chuẩn xác nhất."
+        },
+        {
+          "id": "p2_s1_e7",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu mở đầu hoàn hảo nhất cho bức tranh này.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Airport",
+          "image_path": "images/part2/s1/airport.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Here is an airport."
+            },
+            {
+              "id": "B",
+              "text": "This is an airport terminal picture."
+            },
+            {
+              "id": "C",
+              "text": "This is a picture taken at an airport terminal."
+            },
+            {
+              "id": "D",
+              "text": "We can see an airport."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "'This is a picture taken at an airport terminal' tuân thủ đúng template ghi điểm."
+        },
+        {
+          "id": "p2_s1_e8",
+          "type": "essay_typing",
+          "instruction": "Điền TỪ CÒN THIẾU vào cấu trúc mở đầu.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Supermarket",
+          "image_path": "images/part2/s1/supermarket.jpg",
+          "content": "This is a ______ taken at a supermarket.",
+          "options": [],
+          "correct_answers": [
+            "picture",
+            "photo",
+            "photograph"
+          ],
+          "explanation": "Từ vựng cơ bản 'picture' hoặc 'photo'."
+        },
+        {
+          "id": "p2_s1_e9",
+          "type": "multiple_choice",
+          "instruction": "Chọn giới từ đi kèm với 'construction site' (công trường).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Construction",
+          "image_path": "images/part2/s1/construction.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "in"
+            },
+            {
+              "id": "B",
+              "text": "at"
+            },
+            {
+              "id": "C",
+              "text": "on"
+            },
+            {
+              "id": "D",
+              "text": "of"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Dùng 'at a construction site' để chỉ địa điểm làm việc/công trình."
+        },
+        {
+          "id": "p2_s1_e10",
+          "type": "essay_typing",
+          "instruction": "Hoàn thiện câu mở bài.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Cafe",
+          "image_path": "images/part2/s1/cafe.jpg",
+          "content": "This picture ______ taken in a coffee shop.",
+          "options": [],
+          "correct_answers": [
+            "was",
+            "is"
+          ],
+          "explanation": "'was taken' (bị động quá khứ) hoặc 'is taken' đều được chấp nhận, nhưng 'was taken' phổ biến hơn."
+        },
+        {
+          "id": "p2_s1_e11",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu mở đầu hoàn hảo nhất cho bức tranh.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Station",
+          "image_path": "images/part2/s1/station.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "I look at the train station."
+            },
+            {
+              "id": "B",
+              "text": "This is a picture taken at a train station."
+            },
+            {
+              "id": "C",
+              "text": "There is a train station."
+            },
+            {
+              "id": "D",
+              "text": "The picture is about a train station."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Câu B theo chuẩn template TOEIC Part 2."
+        },
+        {
+          "id": "p2_s1_e12",
+          "type": "essay_typing",
+          "instruction": "Điền MỘT TỪ để câu tự nhiên hơn (gợi ý: chỉ tính chất bận rộn).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Busy+Street",
+          "image_path": "images/part2/s1/busy_street.jpg",
+          "content": "This is a picture taken on a ______ street.",
+          "options": [],
+          "correct_answers": [
+            "busy",
+            "crowded"
+          ],
+          "explanation": "Thêm tính từ như busy/crowded sẽ giúp câu mở bài ấn tượng hơn."
+        },
+        {
+          "id": "p2_s1_e13",
+          "type": "multiple_choice",
+          "instruction": "Giới từ nào đúng khi miêu tả cảnh 'phòng họp' (meeting room)?",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Meeting",
+          "image_path": "images/part2/s1/meeting.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "on"
+            },
+            {
+              "id": "B",
+              "text": "at"
+            },
+            {
+              "id": "C",
+              "text": "in"
+            },
+            {
+              "id": "D",
+              "text": "by"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Với các căn phòng có vách ngăn, ta dùng 'in' (in a meeting room)."
+        },
+        {
+          "id": "p2_s1_e14",
+          "type": "essay_typing",
+          "instruction": "Hoàn thiện câu.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Classroom",
+          "image_path": "images/part2/s1/classroom.jpg",
+          "content": "This is a picture ______ in a classroom.",
+          "options": [],
+          "correct_answers": [
+            "taken",
+            "shot"
+          ],
+          "explanation": "Từ 'taken' là thành phần bắt buộc của template."
+        },
+        {
+          "id": "p2_s1_e15",
+          "type": "multiple_choice",
+          "instruction": "Câu nào sau đây mô tả BỐI CẢNH chung (không sa đà vào chi tiết)?",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Store",
+          "image_path": "images/part2/s1/store.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "A woman is holding a red shirt."
+            },
+            {
+              "id": "B",
+              "text": "This is a picture taken in a clothing store."
+            },
+            {
+              "id": "C",
+              "text": "There are many clothes on the rack."
+            },
+            {
+              "id": "D",
+              "text": "The store has bright lights."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Câu mở bài phải bao quát không gian chung trước (clothing store), không được đi ngay vào chi tiết (red shirt, bright lights)."
+        },
+        {
+          "id": "p2_s1_e16",
+          "type": "essay_typing",
+          "instruction": "Điền giới từ chỉ vị trí (phòng thí nghiệm).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Lab",
+          "image_path": "images/part2/s1/lab.jpg",
+          "content": "This picture was taken ______ a laboratory.",
+          "options": [],
+          "correct_answers": [
+            "in",
+            "inside"
+          ],
+          "explanation": "in a laboratory."
+        },
+        {
+          "id": "p2_s1_e17",
+          "type": "multiple_choice",
+          "instruction": "Đâu là cách nói khác ĐÚNG của template mở bài?",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Hospital",
+          "image_path": "images/part2/s1/hospital.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "This picture shows a scene in a hospital."
+            },
+            {
+              "id": "B",
+              "text": "This picture is taking in a hospital."
+            },
+            {
+              "id": "C",
+              "text": "The picture taking at a hospital."
+            },
+            {
+              "id": "D",
+              "text": "A hospital is in this picture."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'This picture shows a scene in...' là một cụm từ thay thế hoàn hảo cho 'This is a picture taken in...'."
+        },
+        {
+          "id": "p2_s1_e18",
+          "type": "essay_typing",
+          "instruction": "Hoàn thiện template thay thế.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Gym",
+          "image_path": "images/part2/s1/gym.jpg",
+          "content": "This picture ______ a scene in a fitness center.",
+          "options": [],
+          "correct_answers": [
+            "shows",
+            "depicts"
+          ],
+          "explanation": "Động từ 'shows' (chỉ ra/cho thấy)."
+        },
+        {
+          "id": "p2_s1_e19",
+          "type": "multiple_choice",
+          "instruction": "Chọn giới từ đúng cho 'bến xe buýt' (bus stop).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Bus+Stop",
+          "image_path": "images/part2/s1/bus_stop.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "in"
+            },
+            {
+              "id": "B",
+              "text": "on"
+            },
+            {
+              "id": "C",
+              "text": "at"
+            },
+            {
+              "id": "D",
+              "text": "inside"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Một điểm dừng nhỏ (point) dùng 'at' (at a bus stop)."
+        },
+        {
+          "id": "p2_s1_e20",
+          "type": "essay_typing",
+          "instruction": "Thêm một TÍNH TỪ để câu phong phú hơn.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Modern+Office",
+          "image_path": "images/part2/s1/modern_office.jpg",
+          "content": "This is a picture taken in a ______ office.",
+          "options": [],
+          "correct_answers": [
+            "modern",
+            "large",
+            "spacious",
+            "bright"
+          ],
+          "explanation": "Bất kỳ tính từ nào mô tả văn phòng đều được (modern, large, spacious...)."
+        },
+        {
+          "id": "p2_s1_e21",
+          "type": "multiple_choice",
+          "instruction": "Câu nào sau đây mắc LỖI NGỮ PHÁP?",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Park+Error",
+          "image_path": "images/part2/s1/park_error.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "This is a picture taken in a park."
+            },
+            {
+              "id": "B",
+              "text": "This picture was taken in a park."
+            },
+            {
+              "id": "C",
+              "text": "This is picture taken in park."
+            },
+            {
+              "id": "D",
+              "text": "This picture shows a scene in a park."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Thiếu mạo từ 'a/the' trước danh từ số ít (picture, park)."
+        },
+        {
+          "id": "p2_s1_e22",
+          "type": "essay_typing",
+          "instruction": "Điền MẠO TỪ (a/an/the) còn thiếu.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Hotel",
+          "image_path": "images/part2/s1/hotel.jpg",
+          "content": "This is a picture taken in ______ hotel lobby.",
+          "options": [],
+          "correct_answers": [
+            "a",
+            "the"
+          ],
+          "explanation": "Cần mạo từ 'a' hoặc 'the' trước danh từ đếm được."
+        },
+        {
+          "id": "p2_s1_e23",
+          "type": "multiple_choice",
+          "instruction": "Giới từ nào đúng cho 'ngoài trời' (outdoors)?",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Outdoors",
+          "image_path": "images/part2/s1/outdoors.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "This picture was taken in outdoors."
+            },
+            {
+              "id": "B",
+              "text": "This picture was taken outdoors."
+            },
+            {
+              "id": "C",
+              "text": "This picture was taken at outdoors."
+            },
+            {
+              "id": "D",
+              "text": "This picture was taken on outdoors."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "'outdoors' là trạng từ, không đi kèm giới từ (taken outdoors)."
+        },
+        {
+          "id": "p2_s1_e24",
+          "type": "essay_typing",
+          "instruction": "Viết lại TỪ để câu đúng ngữ pháp (trong nhà).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Indoors",
+          "image_path": "images/part2/s1/indoors.jpg",
+          "content": "This picture was taken ______.",
+          "options": [],
+          "correct_answers": [
+            "indoors"
+          ],
+          "explanation": "'indoors' là trạng từ, dùng trực tiếp sau taken."
+        },
+        {
+          "id": "p2_s1_e25",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu mở đầu an toàn nhất nếu bạn KHÔNG CHẮC CHẮN địa điểm cụ thể ở đâu.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Unknown",
+          "image_path": "images/part2/s1/unknown.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "This is a picture taken in a room."
+            },
+            {
+              "id": "B",
+              "text": "This is a picture taken somewhere."
+            },
+            {
+              "id": "C",
+              "text": "I don't know where this is."
+            },
+            {
+              "id": "D",
+              "text": "This is a picture taken outdoors."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Dùng 'in a room' hoặc 'indoors' là cách chữa cháy an toàn nhất nếu ảnh chụp trong nhà nhưng không rõ phòng gì."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p2_s1_m1",
+          "type": "multiple_choice",
+          "instruction": "Làm cách nào để ghép CHỦ THỂ (Main subject) vào ngay câu mở đầu Bối cảnh?",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Meeting+People",
+          "image_path": "images/part2/s1/meeting_people.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "This is a picture taken in a meeting room, there are people."
+            },
+            {
+              "id": "B",
+              "text": "This picture shows some people having a meeting in an office."
+            },
+            {
+              "id": "C",
+              "text": "This is an office and people."
+            },
+            {
+              "id": "D",
+              "text": "People are in the picture taken at the office."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Level Medium: Kết hợp Bối cảnh + Hành động chung của chủ thể ('shows [ai đó] doing [việc gì] in [ở đâu]')."
+        },
+        {
+          "id": "p2_s1_m2",
+          "type": "essay_typing",
+          "instruction": "Điền TỪ CÒN THIẾU để hoàn thành câu mở đầu kết hợp bối cảnh & chủ thể.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Park+Walk",
+          "image_path": "images/part2/s1/park_walk.jpg",
+          "content": "This picture shows a few people ______ in a park.",
+          "options": [],
+          "correct_answers": [
+            "walking",
+            "relaxing",
+            "sitting",
+            "running"
+          ],
+          "explanation": "Dùng V-ing (walking/relaxing) sau tân ngữ để mô tả hành động chung."
+        },
+        {
+          "id": "p2_s1_m3",
+          "type": "multiple_choice",
+          "instruction": "Đâu là câu mở đầu Medium-level xuất sắc cho ảnh nhà hàng?",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Dining",
+          "image_path": "images/part2/s1/dining.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "This is a picture taken in a restaurant. Many people are eating."
+            },
+            {
+              "id": "B",
+              "text": "This picture shows several customers enjoying their meals in a restaurant."
+            },
+            {
+              "id": "C",
+              "text": "There is a restaurant with people eating food."
+            },
+            {
+              "id": "D",
+              "text": "A restaurant is shown here and people are sitting."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Kết hợp mượt mà: 'shows + customers + enjoying meals + in a restaurant'."
+        },
+        {
+          "id": "p2_s1_m4",
+          "type": "essay_typing",
+          "instruction": "Ghép nối: Điền giới từ và động từ (V-ing) phù hợp.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Shopping",
+          "image_path": "images/part2/s1/shopping.jpg",
+          "content": "This picture shows a woman shopping ______ a supermarket.",
+          "options": [],
+          "correct_answers": [
+            "in",
+            "at"
+          ],
+          "explanation": "shopping in/at a supermarket."
+        },
+        {
+          "id": "p2_s1_m5",
+          "type": "multiple_choice",
+          "instruction": "Nếu bức tranh CÓ TẬP TRUNG RÕ RÀNG VÀO 1 NGƯỜI, câu mở bài nào hợp lý nhất?",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Focus",
+          "image_path": "images/part2/s1/focus.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "This is a picture taken at an office."
+            },
+            {
+              "id": "B",
+              "text": "This picture was taken in an office. The main focus is on a man."
+            },
+            {
+              "id": "C",
+              "text": "There is a man."
+            },
+            {
+              "id": "D",
+              "text": "The office has a man."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Câu B rất chuyên nghiệp vì giới thiệu cảnh chung rồi lập tức xác định tiêu điểm (The main focus is on...)."
+        },
+        {
+          "id": "p2_s1_m6",
+          "type": "essay_typing",
+          "instruction": "Hoàn thành cụm từ chuyển hướng sự chú ý.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Focus+Phrase",
+          "image_path": "images/part2/s1/focus_phrase.jpg",
+          "content": "The main ______ of the picture is a young woman.",
+          "options": [],
+          "correct_answers": [
+            "focus",
+            "subject"
+          ],
+          "explanation": "The main focus / subject."
+        },
+        {
+          "id": "p2_s1_m7",
+          "type": "multiple_choice",
+          "instruction": "Nếu bối cảnh ở 'ngã tư đường' (intersection), giới từ nào chuẩn?",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Intersection",
+          "image_path": "images/part2/s1/intersection.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "in an intersection"
+            },
+            {
+              "id": "B",
+              "text": "on an intersection"
+            },
+            {
+              "id": "C",
+              "text": "at an intersection"
+            },
+            {
+              "id": "D",
+              "text": "over an intersection"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "at an intersection (tại một ngã tư - điểm tụ)."
+        },
+        {
+          "id": "p2_s1_m8",
+          "type": "essay_typing",
+          "instruction": "Điền cụm từ (2 từ) để mô tả bối cảnh ngoài trời chung chung.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Outside",
+          "image_path": "images/part2/s1/outside.jpg",
+          "content": "This picture was taken ______ ______.",
+          "options": [],
+          "correct_answers": [
+            "outside somewhere",
+            "outdoors somewhere",
+            "outside today",
+            "outdoors today"
+          ],
+          "explanation": "Dùng 'outdoors' hoặc 'outside'."
+        },
+        {
+          "id": "p2_s1_m9",
+          "type": "multiple_choice",
+          "instruction": "Đâu là cụm từ mô tả bối cảnh NHÀ KHO (warehouse)?",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Warehouse",
+          "image_path": "images/part2/s1/warehouse.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "in a warehouse"
+            },
+            {
+              "id": "B",
+              "text": "at a warehouse"
+            },
+            {
+              "id": "C",
+              "text": "Cả A và B đều đúng"
+            },
+            {
+              "id": "D",
+              "text": "on a warehouse"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Cả in (bên trong) và at (tại) đều dùng được."
+        },
+        {
+          "id": "p2_s1_m10",
+          "type": "essay_typing",
+          "instruction": "Điền từ mô tả BÃI ĐỖ XE.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Parking",
+          "image_path": "images/part2/s1/parking.jpg",
+          "content": "This is a picture taken in a parking ______.",
+          "options": [],
+          "correct_answers": [
+            "lot",
+            "area",
+            "garage"
+          ],
+          "explanation": "parking lot / parking garage."
+        },
+        {
+          "id": "p2_s1_m11",
+          "type": "multiple_choice",
+          "instruction": "Bức ảnh có cảnh sông/hồ, câu nào mở đầu mượt nhất?",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=River",
+          "image_path": "images/part2/s1/river.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "This picture was taken in the water."
+            },
+            {
+              "id": "B",
+              "text": "This picture was taken near a river."
+            },
+            {
+              "id": "C",
+              "text": "This is a picture of a water."
+            },
+            {
+              "id": "D",
+              "text": "I see a river taken picture."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "taken near a river / by a lake (gần sông/hồ)."
+        },
+        {
+          "id": "p2_s1_m12",
+          "type": "essay_typing",
+          "instruction": "Điền giới từ: cạnh một cái hồ.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Lake",
+          "image_path": "images/part2/s1/lake.jpg",
+          "content": "This picture was taken ______ a lake.",
+          "options": [],
+          "correct_answers": [
+            "by",
+            "near",
+            "beside"
+          ],
+          "explanation": "by/near a lake."
+        },
+        {
+          "id": "p2_s1_m13",
+          "type": "multiple_choice",
+          "instruction": "Ảnh chụp ở TIỆM CẮT TÓC, từ nào đúng?",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Salon",
+          "image_path": "images/part2/s1/salon.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "at a hair salon"
+            },
+            {
+              "id": "B",
+              "text": "at a barbershop"
+            },
+            {
+              "id": "C",
+              "text": "Cả A và B tùy vào đối tượng trong ảnh"
+            },
+            {
+              "id": "D",
+              "text": "in a hair cutting"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "hair salon (thường cho nữ), barbershop (thường cho nam)."
+        },
+        {
+          "id": "p2_s1_m14",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Bức ảnh chụp ở một hiệu thuốc.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Pharmacy",
+          "image_path": "images/part2/s1/pharmacy.jpg",
+          "content": "This picture was taken in a ______.",
+          "options": [],
+          "correct_answers": [
+            "pharmacy",
+            "drugstore"
+          ],
+          "explanation": "pharmacy / drugstore."
+        },
+        {
+          "id": "p2_s1_m15",
+          "type": "multiple_choice",
+          "instruction": "Xác định từ khóa Bối cảnh nếu thấy nhiều quầy hàng, trái cây, người mua kẻ bán ngoài trời.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Farmer",
+          "image_path": "images/part2/s1/farmer.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "supermarket"
+            },
+            {
+              "id": "B",
+              "text": "shopping mall"
+            },
+            {
+              "id": "C",
+              "text": "outdoor market / farmer's market"
+            },
+            {
+              "id": "D",
+              "text": "restaurant"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "outdoor market."
+        },
+        {
+          "id": "p2_s1_m16",
+          "type": "essay_typing",
+          "instruction": "Hoàn thiện: Bối cảnh bãi biển.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Beach",
+          "image_path": "images/part2/s1/beach.jpg",
+          "content": "This picture was taken on a ______.",
+          "options": [],
+          "correct_answers": [
+            "beach"
+          ],
+          "explanation": "on a beach."
+        },
+        {
+          "id": "p2_s1_m17",
+          "type": "multiple_choice",
+          "instruction": "Cách nối 2 bối cảnh: 'Đây là ảnh chụp ở sân bay. Chỗ này có vẻ là khu vực chờ.'",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Waiting",
+          "image_path": "images/part2/s1/waiting.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "This picture was taken at an airport, specifically in a waiting area."
+            },
+            {
+              "id": "B",
+              "text": "This picture is airport and waiting area."
+            },
+            {
+              "id": "C",
+              "text": "At an airport is waiting area."
+            },
+            {
+              "id": "D",
+              "text": "This picture shows airport waiting."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Sử dụng 'specifically in...' để làm rõ hơn vị trí cụ thể bên trong bối cảnh lớn."
+        },
+        {
+          "id": "p2_s1_m18",
+          "type": "essay_typing",
+          "instruction": "Điền trạng từ làm rõ (Cụ thể là).",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Specific",
+          "image_path": "images/part2/s1/specific.jpg",
+          "content": "This picture was taken in a hospital, ______ in a patient's room.",
+          "options": [],
+          "correct_answers": [
+            "specifically",
+            "probably",
+            "maybe"
+          ],
+          "explanation": "specifically (cụ thể là)."
+        },
+        {
+          "id": "p2_s1_m19",
+          "type": "multiple_choice",
+          "instruction": "Bối cảnh Lối đi giữa các kệ hàng siêu thị gọi là gì?",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Aisle",
+          "image_path": "images/part2/s1/aisle.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "street"
+            },
+            {
+              "id": "B",
+              "text": "hallway"
+            },
+            {
+              "id": "C",
+              "text": "aisle"
+            },
+            {
+              "id": "D",
+              "text": "line"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "aisle /aɪl/ (lối đi giữa các kệ/ghế)."
+        },
+        {
+          "id": "p2_s1_m20",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Bức ảnh chụp ở một hành lang.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Hallway",
+          "image_path": "images/part2/s1/hallway.jpg",
+          "content": "This picture was taken in a ______.",
+          "options": [],
+          "correct_answers": [
+            "hallway",
+            "corridor"
+          ],
+          "explanation": "hallway / corridor."
+        },
+        {
+          "id": "p2_s1_m21",
+          "type": "multiple_choice",
+          "instruction": "Bối cảnh Xưởng cơ khí / Gara sửa xe ô tô gọi là gì?",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Garage",
+          "image_path": "images/part2/s1/garage.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "auto repair shop / garage"
+            },
+            {
+              "id": "B",
+              "text": "car market"
+            },
+            {
+              "id": "C",
+              "text": "vehicle house"
+            },
+            {
+              "id": "D",
+              "text": "car park"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "auto repair shop / garage."
+        },
+        {
+          "id": "p2_s1_m22",
+          "type": "essay_typing",
+          "instruction": "Hoàn thiện: Chụp ở một trạm xăng.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Gas",
+          "image_path": "images/part2/s1/gas.jpg",
+          "content": "This is a picture taken at a gas ______.",
+          "options": [],
+          "correct_answers": [
+            "station"
+          ],
+          "explanation": "gas station."
+        },
+        {
+          "id": "p2_s1_m23",
+          "type": "multiple_choice",
+          "instruction": "Bối cảnh Khách sạn, khu vực Quầy lễ tân gọi là gì?",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Reception",
+          "image_path": "images/part2/s1/reception.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "hotel room"
+            },
+            {
+              "id": "B",
+              "text": "reception desk / front desk"
+            },
+            {
+              "id": "C",
+              "text": "waiting area"
+            },
+            {
+              "id": "D",
+              "text": "manager office"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "reception desk / front desk."
+        },
+        {
+          "id": "p2_s1_m24",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Bức ảnh chụp ở một sân vận động.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Stadium",
+          "image_path": "images/part2/s1/stadium.jpg",
+          "content": "This picture was taken in a ______.",
+          "options": [],
+          "correct_answers": [
+            "stadium"
+          ],
+          "explanation": "stadium."
+        },
+        {
+          "id": "p2_s1_m25",
+          "type": "multiple_choice",
+          "instruction": "Nếu bức tranh hiển thị người đang đứng chờ lấy hành lý ở sân bay?",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Baggage",
+          "image_path": "images/part2/s1/baggage.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "at a baggage claim area"
+            },
+            {
+              "id": "B",
+              "text": "at a ticket counter"
+            },
+            {
+              "id": "C",
+              "text": "at a boarding gate"
+            },
+            {
+              "id": "D",
+              "text": "at a security check"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "baggage claim area (khu vực lấy hành lý)."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p2_s1_h1",
+          "type": "multiple_choice",
+          "instruction": "Nâng cấp câu mở bài: Chèn đánh giá (ấn tượng ban đầu) vào sau bối cảnh.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Crowded+Hard",
+          "image_path": "images/part2/s1/crowded_hard.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "This picture was taken in a market. It looks very crowded and bustling."
+            },
+            {
+              "id": "B",
+              "text": "This is a market. Very crowded."
+            },
+            {
+              "id": "C",
+              "text": "Many people in the market so it is crowded."
+            },
+            {
+              "id": "D",
+              "text": "The market is a crowded picture."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Level Hard: Nhận định ngay ấn tượng chung (crowded, busy, peaceful) sau khi nêu địa điểm để kéo dài và làm hay câu mở đầu."
+        },
+        {
+          "id": "p2_s1_h2",
+          "type": "essay_typing",
+          "instruction": "Điền TÍNH TỪ mô tả không khí yên bình, thư giãn (cho cảnh công viên).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Peaceful",
+          "image_path": "images/part2/s1/peaceful.jpg",
+          "content": "This picture was taken in a park. The atmosphere looks very ______.",
+          "options": [],
+          "correct_answers": [
+            "peaceful",
+            "relaxing",
+            "calm",
+            "quiet"
+          ],
+          "explanation": "peaceful / relaxing."
+        },
+        {
+          "id": "p2_s1_h3",
+          "type": "multiple_choice",
+          "instruction": "Dự đoán bối cảnh (khi không nhìn rõ đó là đâu). Câu nào an toàn và tự nhiên nhất?",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Guessing",
+          "image_path": "images/part2/s1/guessing.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "I don't know this place."
+            },
+            {
+              "id": "B",
+              "text": "This picture seems to be taken in a corporate office."
+            },
+            {
+              "id": "C",
+              "text": "This is an office."
+            },
+            {
+              "id": "D",
+              "text": "Maybe it is somewhere."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Sử dụng 'seems to be taken' (có vẻ như được chụp ở) cho thấy sự linh hoạt và tự nhiên trong giao tiếp."
+        },
+        {
+          "id": "p2_s1_h4",
+          "type": "essay_typing",
+          "instruction": "Điền từ để tạo cấu trúc dự đoán: 'It looks ______ this picture was taken...'",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Looks+Like",
+          "image_path": "images/part2/s1/looks_like.jpg",
+          "content": "It looks ______ this picture was taken in a laboratory.",
+          "options": [],
+          "correct_answers": [
+            "like"
+          ],
+          "explanation": "It looks like (Có vẻ như)."
+        },
+        {
+          "id": "p2_s1_h5",
+          "type": "multiple_choice",
+          "instruction": "Xác định từ vựng: Một khu vực sản xuất có dây chuyền lắp ráp.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Assembly",
+          "image_path": "images/part2/s1/assembly.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "on an assembly line in a factory"
+            },
+            {
+              "id": "B",
+              "text": "in a car parking"
+            },
+            {
+              "id": "C",
+              "text": "at a construction site"
+            },
+            {
+              "id": "D",
+              "text": "in a mechanical room"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "assembly line (dây chuyền lắp ráp)."
+        },
+        {
+          "id": "p2_s1_h6",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Lối dành cho người đi bộ sang đường.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Crosswalk",
+          "image_path": "images/part2/s1/crosswalk.jpg",
+          "content": "This picture was taken at a pedestrian ______.",
+          "options": [],
+          "correct_answers": [
+            "crossing",
+            "crosswalk"
+          ],
+          "explanation": "pedestrian crossing / crosswalk."
+        },
+        {
+          "id": "p2_s1_h7",
+          "type": "multiple_choice",
+          "instruction": "Xác định từ vựng: Cảng cá / Bến tàu (có tàu thuyền neo đậu).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Harbor",
+          "image_path": "images/part2/s1/harbor.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "at a harbor / port"
+            },
+            {
+              "id": "B",
+              "text": "at a train station"
+            },
+            {
+              "id": "C",
+              "text": "at an airport"
+            },
+            {
+              "id": "D",
+              "text": "at a swimming pool"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "harbor / port (cảng, bến tàu)."
+        },
+        {
+          "id": "p2_s1_h8",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Khu vực lấy hàng / kho bãi chứa hàng.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Storage",
+          "image_path": "images/part2/s1/storage.jpg",
+          "content": "This picture was taken in a ______ facility.",
+          "options": [],
+          "correct_answers": [
+            "storage",
+            "warehouse"
+          ],
+          "explanation": "storage facility."
+        },
+        {
+          "id": "p2_s1_h9",
+          "type": "multiple_choice",
+          "instruction": "Xác định từ vựng: Lễ tân khách sạn HOẶC Sảnh chờ của tòa nhà thương mại.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Lobby",
+          "image_path": "images/part2/s1/lobby.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "in the lobby of a building"
+            },
+            {
+              "id": "B",
+              "text": "in the living room"
+            },
+            {
+              "id": "C",
+              "text": "in a hallway"
+            },
+            {
+              "id": "D",
+              "text": "at a counter"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "lobby (sảnh)."
+        },
+        {
+          "id": "p2_s1_h10",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Lối đi bộ có mái che ngoài trời (đường lát gạch cạnh bãi biển/công viên).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Walkway",
+          "image_path": "images/part2/s1/walkway.jpg",
+          "content": "This picture was taken on a public ______.",
+          "options": [],
+          "correct_answers": [
+            "walkway",
+            "path",
+            "sidewalk"
+          ],
+          "explanation": "walkway / path."
+        },
+        {
+          "id": "p2_s1_h11",
+          "type": "multiple_choice",
+          "instruction": "Mô tả cảnh 'Một buổi hội thảo/thuyết trình'.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Seminar",
+          "image_path": "images/part2/s1/seminar.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "This picture was taken during a seminar or conference."
+            },
+            {
+              "id": "B",
+              "text": "This is a seminar taken picture."
+            },
+            {
+              "id": "C",
+              "text": "I see a seminar."
+            },
+            {
+              "id": "D",
+              "text": "A seminar is taking place."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Dùng 'taken during...' (chụp trong suốt quá trình...) rất tự nhiên cho các sự kiện (seminar, conference)."
+        },
+        {
+          "id": "p2_s1_h12",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Bức ảnh được chụp TRONG YẾN TIỆC / SỰ KIỆN (event).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Event",
+          "image_path": "images/part2/s1/event.jpg",
+          "content": "This picture was taken ______ an outdoor event.",
+          "options": [],
+          "correct_answers": [
+            "during",
+            "at"
+          ],
+          "explanation": "during / at an event."
+        },
+        {
+          "id": "p2_s1_h13",
+          "type": "multiple_choice",
+          "instruction": "Mở bài nâng cao: Gom Bối cảnh + Phân bố người trong ảnh.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Distribution",
+          "image_path": "images/part2/s1/distribution.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "This picture was taken in an office. There are people everywhere."
+            },
+            {
+              "id": "B",
+              "text": "This picture was taken in an office, and the people are scattered around the room."
+            },
+            {
+              "id": "C",
+              "text": "An office has scattered people."
+            },
+            {
+              "id": "D",
+              "text": "People scatter in the office picture."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Kết hợp mô tả bố cục: 'scattered around the room' (phân tán khắp phòng)."
+        },
+        {
+          "id": "p2_s1_h14",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Mọi người tập trung / quây quần lại một chỗ.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Gathered",
+          "image_path": "images/part2/s1/gathered.jpg",
+          "content": "In this picture, several people are ______ around a table.",
+          "options": [],
+          "correct_answers": [
+            "gathered",
+            "gathering",
+            "sitting",
+            "standing"
+          ],
+          "explanation": "gathered around (tụ tập quanh)."
+        },
+        {
+          "id": "p2_s1_h15",
+          "type": "multiple_choice",
+          "instruction": "Bối cảnh: 'Khu dân cư' (ngoại ô, có nhà cửa, đường nhỏ).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Residential",
+          "image_path": "images/part2/s1/residential.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "in a residential area"
+            },
+            {
+              "id": "B",
+              "text": "in a commercial area"
+            },
+            {
+              "id": "C",
+              "text": "in an industrial zone"
+            },
+            {
+              "id": "D",
+              "text": "in a farming area"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "residential area (khu dân cư)."
+        },
+        {
+          "id": "p2_s1_h16",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Khu thương mại / Mua sắm sầm uất.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Commercial",
+          "image_path": "images/part2/s1/commercial.jpg",
+          "content": "This picture was taken in a ______ area.",
+          "options": [],
+          "correct_answers": [
+            "commercial",
+            "shopping",
+            "busy"
+          ],
+          "explanation": "commercial area."
+        },
+        {
+          "id": "p2_s1_h17",
+          "type": "multiple_choice",
+          "instruction": "Mô tả thời tiết ảnh hưởng đến bối cảnh (trời mưa, người che ô).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Rainy",
+          "image_path": "images/part2/s1/rainy.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "This picture was taken on a street on a rainy day."
+            },
+            {
+              "id": "B",
+              "text": "This is a street and it rains."
+            },
+            {
+              "id": "C",
+              "text": "Rain is falling on the street."
+            },
+            {
+              "id": "D",
+              "text": "The picture is rainy street."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "on a street + on a rainy day."
+        },
+        {
+          "id": "p2_s1_h18",
+          "type": "essay_typing",
+          "instruction": "Điền giới từ: Vào một ngày tuyết rơi.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Snowy",
+          "image_path": "images/part2/s1/snowy.jpg",
+          "content": "This picture was taken outside ______ a snowy day.",
+          "options": [],
+          "correct_answers": [
+            "on"
+          ],
+          "explanation": "on a snowy day (với Day luôn dùng On)."
+        },
+        {
+          "id": "p2_s1_h19",
+          "type": "multiple_choice",
+          "instruction": "Bối cảnh: Phương tiện công cộng (bên trong xe buýt/tàu hỏa).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Inside+Bus",
+          "image_path": "images/part2/s1/inside_bus.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "This picture was taken inside a public transport vehicle."
+            },
+            {
+              "id": "B",
+              "text": "This picture was taken in the street."
+            },
+            {
+              "id": "C",
+              "text": "This picture shows a train station."
+            },
+            {
+              "id": "D",
+              "text": "This is a transport."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "inside a public transport vehicle (bus, train...)."
+        },
+        {
+          "id": "p2_s1_h20",
+          "type": "essay_typing",
+          "instruction": "Điền giới từ: TRÊN xe buýt / tàu hỏa.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=On+Bus",
+          "image_path": "images/part2/s1/on_bus.jpg",
+          "content": "This picture was taken ______ a bus.",
+          "options": [],
+          "correct_answers": [
+            "on",
+            "inside"
+          ],
+          "explanation": "on a bus / on a train."
+        },
+        {
+          "id": "p2_s1_h21",
+          "type": "multiple_choice",
+          "instruction": "Bối cảnh: 'Khuôn viên trường đại học'.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Campus",
+          "image_path": "images/part2/s1/campus.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "on a university campus"
+            },
+            {
+              "id": "B",
+              "text": "in a university campus"
+            },
+            {
+              "id": "C",
+              "text": "at a university campus"
+            },
+            {
+              "id": "D",
+              "text": "Cả A và C đều đúng"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "on / at a university campus."
+        },
+        {
+          "id": "p2_s1_h22",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Ở lối vào của một tòa nhà.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Entrance",
+          "image_path": "images/part2/s1/entrance.jpg",
+          "content": "This picture was taken at the ______ of a building.",
+          "options": [],
+          "correct_answers": [
+            "entrance",
+            "front"
+          ],
+          "explanation": "at the entrance."
+        },
+        {
+          "id": "p2_s1_h23",
+          "type": "multiple_choice",
+          "instruction": "Mở bài có cấu trúc phức hợp: 'Nhìn chung bức ảnh, ta thấy...'",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Overall",
+          "image_path": "images/part2/s1/overall.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Looking at the overall picture, we can see a busy outdoor market."
+            },
+            {
+              "id": "B",
+              "text": "Overall picture is an outdoor market."
+            },
+            {
+              "id": "C",
+              "text": "Look the picture, it is an outdoor market."
+            },
+            {
+              "id": "D",
+              "text": "The picture overall shows outdoor market."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'Looking at the overall picture, we can see...' là một cụm từ kéo dài thời gian suy nghĩ cực kỳ hữu ích."
+        },
+        {
+          "id": "p2_s1_h24",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Cấu trúc nhìn chung.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Generally",
+          "image_path": "images/part2/s1/generally.jpg",
+          "content": "______ speaking, this is a picture of a construction site.",
+          "options": [],
+          "correct_answers": [
+            "Generally",
+            "Broadly"
+          ],
+          "explanation": "Generally speaking (nói chung)."
+        },
+        {
+          "id": "p2_s1_h25",
+          "type": "multiple_choice",
+          "instruction": "Bối cảnh: 'Tại một quầy thanh toán' (checkout counter / cash register).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Checkout",
+          "image_path": "images/part2/s1/checkout.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "This picture was taken at a checkout counter in a store."
+            },
+            {
+              "id": "B",
+              "text": "This picture was taken on a checkout counter."
+            },
+            {
+              "id": "C",
+              "text": "This is a picture in a checkout counter."
+            },
+            {
+              "id": "D",
+              "text": "A checkout counter is taken in this picture."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "at a checkout counter (tại quầy thanh toán)."
+        }
+      ]
+    }
+  ]
+}

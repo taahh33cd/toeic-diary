@@ -1,0 +1,1570 @@
+{
+  "course": "TOEIC Speaking Part 2",
+  "skill": {
+    "id": "part2_skill_1",
+    "name": "Kỹ năng 1: Xác định Bối cảnh chung (Overview & Setting)",
+    "description": "Test 4 - Kỹ năng 1: Xác định Bối cảnh chung (Overview & Setting)"
+  },
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p2_s1_t4_e24",
+          "type": "multiple_choice",
+          "instruction": "Trái nghĩa với outdoors là gì?",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Indoors",
+          "image_path": "images/part2/s1/indoors.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "indoors"
+            },
+            {
+              "id": "B",
+              "text": "insides"
+            },
+            {
+              "id": "C",
+              "text": "inward"
+            },
+            {
+              "id": "D",
+              "text": "interior"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Indoors."
+        },
+        {
+          "id": "p2_s1_t4_e23",
+          "type": "multiple_choice",
+          "instruction": "Câu nào NGỮ PHÁP SAI?",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Outdoors",
+          "image_path": "images/part2/s1/outdoors.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "This picture was taken in outdoors."
+            },
+            {
+              "id": "B",
+              "text": "This picture was taken outdoors."
+            },
+            {
+              "id": "C",
+              "text": "This is an outdoor scene."
+            },
+            {
+              "id": "D",
+              "text": "This picture was taken outside."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Outdoors là trạng từ, không được dùng giới từ 'in' ở đằng trước."
+        },
+        {
+          "id": "p2_s1_t4_e19",
+          "type": "multiple_choice",
+          "instruction": "Đâu là giới từ chính xác?",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Bus+Stop",
+          "image_path": "images/part2/s1/bus_stop.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "at a bus stop"
+            },
+            {
+              "id": "B",
+              "text": "in a bus stop"
+            },
+            {
+              "id": "C",
+              "text": "on a bus stop"
+            },
+            {
+              "id": "D",
+              "text": "over a bus stop"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "At (tại một điểm)."
+        },
+        {
+          "id": "p2_s1_t4_e25",
+          "type": "multiple_choice",
+          "instruction": "Bối cảnh căn phòng trống không có người.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Unknown",
+          "image_path": "images/part2/s1/unknown.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "an empty room"
+            },
+            {
+              "id": "B",
+              "text": "a crowded room"
+            },
+            {
+              "id": "C",
+              "text": "a busy room"
+            },
+            {
+              "id": "D",
+              "text": "an occupied room"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Empty room (phòng trống)."
+        },
+        {
+          "id": "p2_s1_t4_e22",
+          "type": "multiple_choice",
+          "instruction": "Sảnh khách sạn:",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Hotel",
+          "image_path": "images/part2/s1/hotel.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "hotel lobby"
+            },
+            {
+              "id": "B",
+              "text": "hotel room"
+            },
+            {
+              "id": "C",
+              "text": "hotel gate"
+            },
+            {
+              "id": "D",
+              "text": "hotel front"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Hotel lobby."
+        },
+        {
+          "id": "p2_s1_t4_e11",
+          "type": "essay_typing",
+          "instruction": "Điền từ để hoàn thiện 'nhà ga tàu hỏa'.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Station",
+          "image_path": "images/part2/s1/station.jpg",
+          "correct_answers": [
+            "train",
+            "railway"
+          ],
+          "explanation": "train station.",
+          "content": "This picture was taken at a ______ station."
+        },
+        {
+          "id": "p2_s1_t4_e9",
+          "type": "essay_typing",
+          "instruction": "Khu vực đang xây dựng tiếng Anh là gì? (2 từ)",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Construction",
+          "image_path": "images/part2/s1/construction.jpg",
+          "correct_answers": [
+            "construction site",
+            "building site"
+          ],
+          "explanation": "Construction site.",
+          "content": "This picture was taken at a ______ ______."
+        },
+        {
+          "id": "p2_s1_t4_e14",
+          "type": "essay_typing",
+          "instruction": "Trường học.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Classroom",
+          "image_path": "images/part2/s1/classroom.jpg",
+          "content": "This picture was taken at a ______.",
+          "correct_answers": [
+            "school"
+          ],
+          "explanation": "School."
+        },
+        {
+          "id": "p2_s1_t4_e20",
+          "type": "multiple_choice",
+          "instruction": "Nơi làm việc tiếng Anh là gì?",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Modern+Office",
+          "image_path": "images/part2/s1/modern_office.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "workplace"
+            },
+            {
+              "id": "B",
+              "text": "working area"
+            },
+            {
+              "id": "C",
+              "text": "work zone"
+            },
+            {
+              "id": "D",
+              "text": "office space"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Workplace."
+        },
+        {
+          "id": "p2_s1_t4_e15",
+          "type": "multiple_choice",
+          "instruction": "Cửa hàng bán lẻ:",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Store",
+          "image_path": "images/part2/s1/store.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "retail store"
+            },
+            {
+              "id": "B",
+              "text": "wholesale store"
+            },
+            {
+              "id": "C",
+              "text": "factory"
+            },
+            {
+              "id": "D",
+              "text": "warehouse"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Retail store."
+        },
+        {
+          "id": "p2_s1_t4_e16",
+          "type": "essay_typing",
+          "instruction": "Phòng thí nghiệm nghiên cứu.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Lab",
+          "image_path": "images/part2/s1/lab.jpg",
+          "content": "This is a ______ lab.",
+          "correct_answers": [
+            "research"
+          ],
+          "explanation": "Research lab."
+        },
+        {
+          "id": "p2_s1_t4_e21",
+          "type": "essay_typing",
+          "instruction": "Công viên tiếng Anh là gì?",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Park+Error",
+          "image_path": "images/part2/s1/park_error.jpg",
+          "correct_answers": [
+            "park"
+          ],
+          "explanation": "Park.",
+          "content": "This is a picture of a ______."
+        },
+        {
+          "id": "p2_s1_t4_e3",
+          "type": "multiple_choice",
+          "instruction": "Cấu trúc thay thế cho 'This picture was taken in':",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Office",
+          "image_path": "images/part2/s1/office.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "The setting of this picture is an office."
+            },
+            {
+              "id": "B",
+              "text": "This picture taken an office."
+            },
+            {
+              "id": "C",
+              "text": "An office is being taken."
+            },
+            {
+              "id": "D",
+              "text": "The picture is office."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "The setting of this picture is... (Bối cảnh của bức ảnh là...) là cách mở bài xuất sắc."
+        },
+        {
+          "id": "p2_s1_t4_e12",
+          "type": "essay_typing",
+          "instruction": "Điền tính từ: Đường phố 'tấp nập/đông đúc' (bắt đầu bằng b).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Busy+Street",
+          "image_path": "images/part2/s1/busy_street.jpg",
+          "content": "This picture was taken on a ______ street.",
+          "correct_answers": [
+            "busy",
+            "bustling"
+          ],
+          "explanation": "Busy / bustling."
+        },
+        {
+          "id": "p2_s1_t4_e10",
+          "type": "essay_typing",
+          "instruction": "Từ đồng nghĩa với cafe (2 từ).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Cafe",
+          "image_path": "images/part2/s1/cafe.jpg",
+          "content": "This picture was taken in a ______ ______.",
+          "correct_answers": [
+            "coffee shop",
+            "coffee house"
+          ],
+          "explanation": "Coffee shop hoặc coffee house."
+        },
+        {
+          "id": "p2_s1_t4_e6",
+          "type": "essay_typing",
+          "instruction": "Thư viện (điền 1 từ).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Library",
+          "image_path": "images/part2/s1/library.jpg",
+          "content": "This picture was taken in a ______.",
+          "correct_answers": [
+            "library"
+          ],
+          "explanation": "Library."
+        },
+        {
+          "id": "p2_s1_t4_e5",
+          "type": "essay_typing",
+          "instruction": "Điền giới từ: Đứng trên vỉa hè.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Street",
+          "image_path": "images/part2/s1/street.jpg",
+          "correct_answers": [
+            "on"
+          ],
+          "explanation": "On a sidewalk.",
+          "content": "Standing ______ a sidewalk."
+        },
+        {
+          "id": "p2_s1_t4_e13",
+          "type": "multiple_choice",
+          "instruction": "Phòng họp ban giám đốc gọi là gì?",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Meeting",
+          "image_path": "images/part2/s1/meeting.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "boardroom"
+            },
+            {
+              "id": "B",
+              "text": "meeting room"
+            },
+            {
+              "id": "C",
+              "text": "waiting room"
+            },
+            {
+              "id": "D",
+              "text": "office"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Boardroom (phòng họp ban quản trị)."
+        },
+        {
+          "id": "p2_s1_t4_e1",
+          "type": "multiple_choice",
+          "instruction": "Từ vựng thay thế cho restaurant sang trọng:",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Restaurant",
+          "image_path": "images/part2/s1/restaurant.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "dining establishment"
+            },
+            {
+              "id": "B",
+              "text": "food room"
+            },
+            {
+              "id": "C",
+              "text": "eating place"
+            },
+            {
+              "id": "D",
+              "text": "meal house"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Dining establishment (cơ sở ăn uống)."
+        },
+        {
+          "id": "p2_s1_t4_e8",
+          "type": "essay_typing",
+          "instruction": "Cụm từ chỉ 'khu vực bán thực phẩm' trong siêu thị (bắt đầu bằng g).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Supermarket",
+          "image_path": "images/part2/s1/supermarket.jpg",
+          "content": "This is a picture taken in the ______ section.",
+          "correct_answers": [
+            "grocery"
+          ],
+          "explanation": "Grocery section (khu vực tạp hóa/thực phẩm)."
+        },
+        {
+          "id": "p2_s1_t4_e7",
+          "type": "essay_typing",
+          "instruction": "Nhà ga hành khách ở sân bay gọi là gì?",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Airport",
+          "image_path": "images/part2/s1/airport.jpg",
+          "correct_answers": [
+            "terminal"
+          ],
+          "explanation": "Passenger terminal (nhà ga hành khách).",
+          "content": "This picture was taken at a passenger ______."
+        },
+        {
+          "id": "p2_s1_t4_e17",
+          "type": "multiple_choice",
+          "instruction": "Cơ sở y tế:",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Hospital",
+          "image_path": "images/part2/s1/hospital.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "medical facility"
+            },
+            {
+              "id": "B",
+              "text": "health area"
+            },
+            {
+              "id": "C",
+              "text": "disease center"
+            },
+            {
+              "id": "D",
+              "text": "healing place"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Medical facility (cơ sở y tế)."
+        },
+        {
+          "id": "p2_s1_t4_e18",
+          "type": "multiple_choice",
+          "instruction": "Tên gọi khác của Gym mang tính học thuật cao:",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Gym",
+          "image_path": "images/part2/s1/gym.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "fitness facility"
+            },
+            {
+              "id": "B",
+              "text": "sport room"
+            },
+            {
+              "id": "C",
+              "text": "health house"
+            },
+            {
+              "id": "D",
+              "text": "workout place"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Fitness facility (cơ sở tập thể hình)."
+        },
+        {
+          "id": "p2_s1_t4_e2",
+          "type": "essay_typing",
+          "instruction": "Chợ ngoài trời.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Market",
+          "image_path": "images/part2/s1/market.jpg",
+          "content": "This picture was taken at an outdoor ______.",
+          "correct_answers": [
+            "market"
+          ],
+          "explanation": "Market."
+        },
+        {
+          "id": "p2_s1_t4_e4",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Khu vực giải trí (r...).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Park",
+          "image_path": "images/part2/s1/park.jpg",
+          "content": "This is a ______ area.",
+          "correct_answers": [
+            "recreation",
+            "recreational"
+          ],
+          "explanation": "Recreation area."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p2_s1_t4_m24",
+          "type": "multiple_choice",
+          "instruction": "Sân vận động:",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Stadium",
+          "image_path": "images/part2/s1/stadium.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "sports stadium"
+            },
+            {
+              "id": "B",
+              "text": "sports building"
+            },
+            {
+              "id": "C",
+              "text": "sports house"
+            },
+            {
+              "id": "D",
+              "text": "sports place"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Sports stadium."
+        },
+        {
+          "id": "p2_s1_t4_m23",
+          "type": "multiple_choice",
+          "instruction": "Bàn làm việc của tiếp tân:",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Reception",
+          "image_path": "images/part2/s1/reception.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "reception desk"
+            },
+            {
+              "id": "B",
+              "text": "welcome table"
+            },
+            {
+              "id": "C",
+              "text": "greeting desk"
+            },
+            {
+              "id": "D",
+              "text": "front table"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Reception desk."
+        },
+        {
+          "id": "p2_s1_t4_m19",
+          "type": "multiple_choice",
+          "instruction": "Lối đi trong siêu thị:",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Aisle",
+          "image_path": "images/part2/s1/aisle.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "supermarket aisle"
+            },
+            {
+              "id": "B",
+              "text": "supermarket way"
+            },
+            {
+              "id": "C",
+              "text": "supermarket path"
+            },
+            {
+              "id": "D",
+              "text": "supermarket road"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Supermarket aisle."
+        },
+        {
+          "id": "p2_s1_t4_m25",
+          "type": "multiple_choice",
+          "instruction": "Khu lấy hành lý.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Baggage",
+          "image_path": "images/part2/s1/baggage.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "baggage claim area"
+            },
+            {
+              "id": "B",
+              "text": "baggage pickup"
+            },
+            {
+              "id": "C",
+              "text": "luggage taking"
+            },
+            {
+              "id": "D",
+              "text": "bag room"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Baggage claim area."
+        },
+        {
+          "id": "p2_s1_t4_m22",
+          "type": "multiple_choice",
+          "instruction": "Trạm xăng.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Gas",
+          "image_path": "images/part2/s1/gas.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "gas station"
+            },
+            {
+              "id": "B",
+              "text": "gas shop"
+            },
+            {
+              "id": "C",
+              "text": "fuel house"
+            },
+            {
+              "id": "D",
+              "text": "oil stop"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Gas station."
+        },
+        {
+          "id": "p2_s1_t4_m11",
+          "type": "essay_typing",
+          "instruction": "Con sông.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=River",
+          "image_path": "images/part2/s1/river.jpg",
+          "correct_answers": [
+            "river"
+          ],
+          "explanation": "River.",
+          "content": "This is a picture of a ______."
+        },
+        {
+          "id": "p2_s1_t4_m9",
+          "type": "essay_typing",
+          "instruction": "Cơ sở lưu trữ.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Warehouse",
+          "image_path": "images/part2/s1/warehouse.jpg",
+          "correct_answers": [
+            "facility"
+          ],
+          "explanation": "Storage facility.",
+          "content": "This is a storage ______."
+        },
+        {
+          "id": "p2_s1_t4_m14",
+          "type": "essay_typing",
+          "instruction": "Hiệu thuốc (bắt đầu bằng p).",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Pharmacy",
+          "image_path": "images/part2/s1/pharmacy.jpg",
+          "content": "This picture was taken in a ______.",
+          "correct_answers": [
+            "pharmacy"
+          ],
+          "explanation": "Pharmacy."
+        },
+        {
+          "id": "p2_s1_t4_m20",
+          "type": "multiple_choice",
+          "instruction": "Hành lang.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Hallway",
+          "image_path": "images/part2/s1/hallway.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "corridor"
+            },
+            {
+              "id": "B",
+              "text": "alley"
+            },
+            {
+              "id": "C",
+              "text": "tunnel"
+            },
+            {
+              "id": "D",
+              "text": "path"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Corridor."
+        },
+        {
+          "id": "p2_s1_t4_m15",
+          "type": "multiple_choice",
+          "instruction": "Trên nông trại.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Farmer",
+          "image_path": "images/part2/s1/farmer.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "on a farm"
+            },
+            {
+              "id": "B",
+              "text": "in a farm"
+            },
+            {
+              "id": "C",
+              "text": "at a farm"
+            },
+            {
+              "id": "D",
+              "text": "over a farm"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "On a farm."
+        },
+        {
+          "id": "p2_s1_t4_m16",
+          "type": "essay_typing",
+          "instruction": "Bãi biển.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Beach",
+          "image_path": "images/part2/s1/beach.jpg",
+          "content": "This picture was taken on a ______.",
+          "correct_answers": [
+            "beach"
+          ],
+          "explanation": "Beach."
+        },
+        {
+          "id": "p2_s1_t4_m21",
+          "type": "essay_typing",
+          "instruction": "Tiệm cơ khí (ô tô).",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Garage",
+          "image_path": "images/part2/s1/garage.jpg",
+          "correct_answers": [
+            "shop",
+            "center"
+          ],
+          "explanation": "Auto repair shop.",
+          "content": "This is an auto repair ______."
+        },
+        {
+          "id": "p2_s1_t4_m3",
+          "type": "multiple_choice",
+          "instruction": "Cấu trúc nào tự nhiên nhất?",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Dining",
+          "image_path": "images/part2/s1/dining.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "The picture features a dining scene."
+            },
+            {
+              "id": "B",
+              "text": "The picture takes a dining scene."
+            },
+            {
+              "id": "C",
+              "text": "This is eating."
+            },
+            {
+              "id": "D",
+              "text": "People are a restaurant."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Features (có đặc trưng/miêu tả) là động từ rất hay."
+        },
+        {
+          "id": "p2_s1_t4_m12",
+          "type": "essay_typing",
+          "instruction": "Bờ hồ.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Lake",
+          "image_path": "images/part2/s1/lake.jpg",
+          "content": "This picture was taken on the ______.",
+          "correct_answers": [
+            "lakeside",
+            "bank"
+          ],
+          "explanation": "Lakeside / Bank."
+        },
+        {
+          "id": "p2_s1_t4_m10",
+          "type": "essay_typing",
+          "instruction": "Bãi đậu xe.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Parking",
+          "image_path": "images/part2/s1/parking.jpg",
+          "content": "This is a parking ______.",
+          "correct_answers": [
+            "lot"
+          ],
+          "explanation": "Parking lot."
+        },
+        {
+          "id": "p2_s1_t4_m6",
+          "type": "essay_typing",
+          "instruction": "Chủ thể chính.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Focus+Phrase",
+          "image_path": "images/part2/s1/focus_phrase.jpg",
+          "content": "The main ______ of the picture is...",
+          "correct_answers": [
+            "subject",
+            "focus"
+          ],
+          "explanation": "Subject."
+        },
+        {
+          "id": "p2_s1_t4_m5",
+          "type": "essay_typing",
+          "instruction": "Trọng tâm.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Focus",
+          "image_path": "images/part2/s1/focus.jpg",
+          "correct_answers": [
+            "focus"
+          ],
+          "explanation": "Focus.",
+          "content": "The ______ is on a man."
+        },
+        {
+          "id": "p2_s1_t4_m13",
+          "type": "multiple_choice",
+          "instruction": "Tiệm làm tóc.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Salon",
+          "image_path": "images/part2/s1/salon.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "hair salon"
+            },
+            {
+              "id": "B",
+              "text": "hair store"
+            },
+            {
+              "id": "C",
+              "text": "hair market"
+            },
+            {
+              "id": "D",
+              "text": "hair place"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Hair salon."
+        },
+        {
+          "id": "p2_s1_t4_m1",
+          "type": "multiple_choice",
+          "instruction": "Nhân viên văn phòng đang họp:",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Meeting+People",
+          "image_path": "images/part2/s1/meeting_people.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "office workers attending a meeting"
+            },
+            {
+              "id": "B",
+              "text": "people at an office"
+            },
+            {
+              "id": "C",
+              "text": "workers in room"
+            },
+            {
+              "id": "D",
+              "text": "meeting people"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Attending a meeting."
+        },
+        {
+          "id": "p2_s1_t4_m8",
+          "type": "essay_typing",
+          "instruction": "Ngoài trời.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Outside",
+          "image_path": "images/part2/s1/outside.jpg",
+          "content": "This picture was taken ______.",
+          "correct_answers": [
+            "outside",
+            "outdoors"
+          ],
+          "explanation": "Outside."
+        },
+        {
+          "id": "p2_s1_t4_m7",
+          "type": "essay_typing",
+          "instruction": "Ngã tư.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Intersection",
+          "image_path": "images/part2/s1/intersection.jpg",
+          "correct_answers": [
+            "intersection"
+          ],
+          "explanation": "Intersection.",
+          "content": "This picture was taken at an ______."
+        },
+        {
+          "id": "p2_s1_t4_m17",
+          "type": "multiple_choice",
+          "instruction": "Phòng chờ.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Waiting",
+          "image_path": "images/part2/s1/waiting.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "waiting room"
+            },
+            {
+              "id": "B",
+              "text": "staying room"
+            },
+            {
+              "id": "C",
+              "text": "resting room"
+            },
+            {
+              "id": "D",
+              "text": "stopping room"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Waiting room."
+        },
+        {
+          "id": "p2_s1_t4_m18",
+          "type": "multiple_choice",
+          "instruction": "Phòng bệnh nhân:",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Specific",
+          "image_path": "images/part2/s1/specific.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "patient's room"
+            },
+            {
+              "id": "B",
+              "text": "nurse room"
+            },
+            {
+              "id": "C",
+              "text": "clinic room"
+            },
+            {
+              "id": "D",
+              "text": "medical room"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Patient's room."
+        },
+        {
+          "id": "p2_s1_t4_m2",
+          "type": "essay_typing",
+          "instruction": "Tản bộ trong công viên.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Park+Walk",
+          "image_path": "images/part2/s1/park_walk.jpg",
+          "content": "People are taking a ______ in a park.",
+          "correct_answers": [
+            "walk",
+            "stroll"
+          ],
+          "explanation": "Taking a walk."
+        },
+        {
+          "id": "p2_s1_t4_m4",
+          "type": "essay_typing",
+          "instruction": "Đi mua sắm thực phẩm.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Shopping",
+          "image_path": "images/part2/s1/shopping.jpg",
+          "content": "The woman is grocery ______.",
+          "correct_answers": [
+            "shopping"
+          ],
+          "explanation": "Grocery shopping."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p2_s1_t4_h24",
+          "type": "essay_typing",
+          "instruction": "Địa điểm thi công.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Generally",
+          "image_path": "images/part2/s1/generally.jpg",
+          "content": "This is a construction ______.",
+          "correct_answers": [
+            "site"
+          ],
+          "explanation": "Construction site."
+        },
+        {
+          "id": "p2_s1_t4_h23",
+          "type": "essay_typing",
+          "instruction": "Nhìn chung (B...).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Overall",
+          "image_path": "images/part2/s1/overall.jpg",
+          "correct_answers": [
+            "Basically",
+            "Broadly",
+            "Overall"
+          ],
+          "explanation": "Basically/Overall.",
+          "content": "______, this is an outdoor market."
+        },
+        {
+          "id": "p2_s1_t4_h19",
+          "type": "essay_typing",
+          "instruction": "Phương tiện giao thông.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Inside+Bus",
+          "image_path": "images/part2/s1/inside_bus.jpg",
+          "correct_answers": [
+            "transit",
+            "transport"
+          ],
+          "explanation": "Public transit/transport.",
+          "content": "This is a public ______ vehicle."
+        },
+        {
+          "id": "p2_s1_t4_h25",
+          "type": "essay_typing",
+          "instruction": "Quầy thu ngân.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Checkout",
+          "image_path": "images/part2/s1/checkout.jpg",
+          "correct_answers": [
+            "checkout"
+          ],
+          "explanation": "Checkout counter.",
+          "content": "This is a ______ counter."
+        },
+        {
+          "id": "p2_s1_t4_h22",
+          "type": "essay_typing",
+          "instruction": "Lối vào.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Entrance",
+          "image_path": "images/part2/s1/entrance.jpg",
+          "content": "This is the ______.",
+          "correct_answers": [
+            "entrance",
+            "doorway"
+          ],
+          "explanation": "Entrance."
+        },
+        {
+          "id": "p2_s1_t4_h11",
+          "type": "multiple_choice",
+          "instruction": "Buổi hội thảo.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Seminar",
+          "image_path": "images/part2/s1/seminar.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "seminar"
+            },
+            {
+              "id": "B",
+              "text": "festival"
+            },
+            {
+              "id": "C",
+              "text": "party"
+            },
+            {
+              "id": "D",
+              "text": "concert"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Seminar."
+        },
+        {
+          "id": "p2_s1_t4_h9",
+          "type": "multiple_choice",
+          "instruction": "Sảnh.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Lobby",
+          "image_path": "images/part2/s1/lobby.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "lobby"
+            },
+            {
+              "id": "B",
+              "text": "hall"
+            },
+            {
+              "id": "C",
+              "text": "entry"
+            },
+            {
+              "id": "D",
+              "text": "front"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Lobby."
+        },
+        {
+          "id": "p2_s1_t4_h14",
+          "type": "multiple_choice",
+          "instruction": "Tụ tập.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Gathered",
+          "image_path": "images/part2/s1/gathered.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "gathered"
+            },
+            {
+              "id": "B",
+              "text": "separated"
+            },
+            {
+              "id": "C",
+              "text": "scattered"
+            },
+            {
+              "id": "D",
+              "text": "divided"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Gathered."
+        },
+        {
+          "id": "p2_s1_t4_h20",
+          "type": "essay_typing",
+          "instruction": "Đang ngồi xe buýt.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=On+Bus",
+          "image_path": "images/part2/s1/on_bus.jpg",
+          "content": "People are riding ______ a bus.",
+          "correct_answers": [
+            "on"
+          ],
+          "explanation": "Riding on a bus."
+        },
+        {
+          "id": "p2_s1_t4_h15",
+          "type": "essay_typing",
+          "instruction": "Khu dân cư.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Residential",
+          "image_path": "images/part2/s1/residential.jpg",
+          "correct_answers": [
+            "residential"
+          ],
+          "explanation": "Residential area.",
+          "content": "This is a ______ area."
+        },
+        {
+          "id": "p2_s1_t4_h16",
+          "type": "multiple_choice",
+          "instruction": "Khu thương mại.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Commercial",
+          "image_path": "images/part2/s1/commercial.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "commercial area"
+            },
+            {
+              "id": "B",
+              "text": "residential area"
+            },
+            {
+              "id": "C",
+              "text": "school area"
+            },
+            {
+              "id": "D",
+              "text": "factory area"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Commercial area."
+        },
+        {
+          "id": "p2_s1_t4_h21",
+          "type": "multiple_choice",
+          "instruction": "Trường đại học.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Campus",
+          "image_path": "images/part2/s1/campus.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "university campus"
+            },
+            {
+              "id": "B",
+              "text": "university ground"
+            },
+            {
+              "id": "C",
+              "text": "university park"
+            },
+            {
+              "id": "D",
+              "text": "university field"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "University campus."
+        },
+        {
+          "id": "p2_s1_t4_h3",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Có vẻ như (S...).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Guessing",
+          "image_path": "images/part2/s1/guessing.jpg",
+          "correct_answers": [
+            "seems",
+            "appears"
+          ],
+          "explanation": "Seems to be (Có vẻ như).",
+          "content": "This picture ______ to be taken in an office."
+        },
+        {
+          "id": "p2_s1_t4_h12",
+          "type": "multiple_choice",
+          "instruction": "Sự kiện ngoài trời.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Event",
+          "image_path": "images/part2/s1/event.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "outdoor event"
+            },
+            {
+              "id": "B",
+              "text": "outdoor case"
+            },
+            {
+              "id": "C",
+              "text": "outdoor thing"
+            },
+            {
+              "id": "D",
+              "text": "outdoor play"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Outdoor event."
+        },
+        {
+          "id": "p2_s1_t4_h10",
+          "type": "multiple_choice",
+          "instruction": "Đường đi bộ.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Walkway",
+          "image_path": "images/part2/s1/walkway.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "walkway"
+            },
+            {
+              "id": "B",
+              "text": "driveway"
+            },
+            {
+              "id": "C",
+              "text": "highway"
+            },
+            {
+              "id": "D",
+              "text": "subway"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Walkway."
+        },
+        {
+          "id": "p2_s1_t4_h6",
+          "type": "multiple_choice",
+          "instruction": "Vạch qua đường.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Crosswalk",
+          "image_path": "images/part2/s1/crosswalk.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "pedestrian crossing"
+            },
+            {
+              "id": "B",
+              "text": "pedestrian walking"
+            },
+            {
+              "id": "C",
+              "text": "pedestrian line"
+            },
+            {
+              "id": "D",
+              "text": "pedestrian road"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Pedestrian crossing."
+        },
+        {
+          "id": "p2_s1_t4_h5",
+          "type": "multiple_choice",
+          "instruction": "Dây chuyền lắp ráp.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Assembly",
+          "image_path": "images/part2/s1/assembly.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "assembly line"
+            },
+            {
+              "id": "B",
+              "text": "checkout line"
+            },
+            {
+              "id": "C",
+              "text": "waiting line"
+            },
+            {
+              "id": "D",
+              "text": "border line"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Assembly line."
+        },
+        {
+          "id": "p2_s1_t4_h13",
+          "type": "essay_typing",
+          "instruction": "Đứng rải rác.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Distribution",
+          "image_path": "images/part2/s1/distribution.jpg",
+          "correct_answers": [
+            "scattered"
+          ],
+          "explanation": "Scattered.",
+          "content": "People are ______ around."
+        },
+        {
+          "id": "p2_s1_t4_h1",
+          "type": "essay_typing",
+          "instruction": "Đông nghịt người (p...).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Crowded+Hard",
+          "image_path": "images/part2/s1/crowded_hard.jpg",
+          "correct_answers": [
+            "packed"
+          ],
+          "explanation": "Packed (chật ních).",
+          "content": "This is a ______ room."
+        },
+        {
+          "id": "p2_s1_t4_h8",
+          "type": "multiple_choice",
+          "instruction": "Phòng chứa đồ.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Storage",
+          "image_path": "images/part2/s1/storage.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "storage room"
+            },
+            {
+              "id": "B",
+              "text": "junk room"
+            },
+            {
+              "id": "C",
+              "text": "hiding room"
+            },
+            {
+              "id": "D",
+              "text": "back room"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Storage room."
+        },
+        {
+          "id": "p2_s1_t4_h7",
+          "type": "multiple_choice",
+          "instruction": "Cảng biển.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Harbor",
+          "image_path": "images/part2/s1/harbor.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "harbor"
+            },
+            {
+              "id": "B",
+              "text": "airport"
+            },
+            {
+              "id": "C",
+              "text": "bus stop"
+            },
+            {
+              "id": "D",
+              "text": "train station"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Harbor."
+        },
+        {
+          "id": "p2_s1_t4_h17",
+          "type": "essay_typing",
+          "instruction": "Ngày mưa.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Rainy",
+          "image_path": "images/part2/s1/rainy.jpg",
+          "correct_answers": [
+            "rainy"
+          ],
+          "explanation": "Rainy day.",
+          "content": "It is a ______ day."
+        },
+        {
+          "id": "p2_s1_t4_h18",
+          "type": "essay_typing",
+          "instruction": "Tuyết rơi.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Snowy",
+          "image_path": "images/part2/s1/snowy.jpg",
+          "content": "This picture was taken on a ______ day.",
+          "correct_answers": [
+            "snowy",
+            "cold"
+          ],
+          "explanation": "Snowy day."
+        },
+        {
+          "id": "p2_s1_t4_h2",
+          "type": "multiple_choice",
+          "instruction": "Thanh bình.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Peaceful",
+          "image_path": "images/part2/s1/peaceful.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "peaceful"
+            },
+            {
+              "id": "B",
+              "text": "noisy"
+            },
+            {
+              "id": "C",
+              "text": "loud"
+            },
+            {
+              "id": "D",
+              "text": "crowded"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Peaceful."
+        },
+        {
+          "id": "p2_s1_t4_h4",
+          "type": "multiple_choice",
+          "instruction": "Viết tắt của Laboratory.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Looks+Like",
+          "image_path": "images/part2/s1/looks_like.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "lab"
+            },
+            {
+              "id": "B",
+              "text": "laby"
+            },
+            {
+              "id": "C",
+              "text": "labor"
+            },
+            {
+              "id": "D",
+              "text": "lato"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Lab."
+        }
+      ]
+    }
+  ]
+}

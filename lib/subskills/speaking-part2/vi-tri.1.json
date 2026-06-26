@@ -1,0 +1,1647 @@
+{
+  "course": "TOEIC Speaking Part 2",
+  "skill": {
+    "id": "part2_skill_2",
+    "name": "Kỹ năng 2: Vị trí & Định hướng không gian (Prepositions of Place)",
+    "description": "Mục tiêu: Sử dụng chính xác các giới từ và cụm từ chỉ vị trí (Trái, phải, trước, sau, trung tâm, phông nền) để định vị đối tượng trong ảnh."
+  },
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p2_s2_e1",
+          "type": "multiple_choice",
+          "instruction": "Để miêu tả cái cây ở phía xa (làm phông nền), bạn dùng cụm từ nào?",
+          "options": [
+            {
+              "id": "A",
+              "text": "At the front of the picture"
+            },
+            {
+              "id": "B",
+              "text": "In the background"
+            },
+            {
+              "id": "C",
+              "text": "On the left side"
+            },
+            {
+              "id": "D",
+              "text": "In the foreground"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "'In the background' dùng để chỉ các vật thể nằm ở phía xa, làm nền cho bức ảnh.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Background+Tree",
+          "image_path": "images/part2/s2/background_tree.jpg"
+        },
+        {
+          "id": "p2_s2_e2",
+          "type": "essay_typing",
+          "instruction": "Điền cụm từ chỉ vị trí (3 chữ) mang nghĩa 'ở chính giữa bức ảnh'.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Middle+Handshake",
+          "image_path": "images/part2/s2/middle_handshake.jpg",
+          "content": "______ ______ ______, two people are shaking hands.",
+          "options": [],
+          "correct_answers": [
+            "In the middle"
+          ],
+          "explanation": "In the middle (of the picture) = ở chính giữa."
+        },
+        {
+          "id": "p2_s2_e3",
+          "type": "multiple_choice",
+          "instruction": "Khi muốn nói 'Ở phía bên trái của bức ảnh', cụm từ nào chuẩn xác nhất?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In the left side of the picture"
+            },
+            {
+              "id": "B",
+              "text": "At the left of the picture"
+            },
+            {
+              "id": "C",
+              "text": "On the left side of the picture"
+            },
+            {
+              "id": "D",
+              "text": "By the left side"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Dùng giới từ 'On' cho các phía (On the left/right side).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Left+Side",
+          "image_path": "images/part2/s2/left_side.jpg"
+        },
+        {
+          "id": "p2_s2_e4",
+          "type": "essay_typing",
+          "instruction": "Điền 1 từ: 'Ở phía bên phải...'",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Right+Side",
+          "image_path": "images/part2/s2/right_side.jpg",
+          "content": "On the ______ side of the picture, there is a car.",
+          "options": [],
+          "correct_answers": [
+            "right"
+          ],
+          "explanation": "On the right side."
+        },
+        {
+          "id": "p2_s2_e5",
+          "type": "multiple_choice",
+          "instruction": "Để miêu tả các vật thể nằm ngay phía trước, gần người nhìn nhất, dùng cụm nào?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In the foreground"
+            },
+            {
+              "id": "B",
+              "text": "In the background"
+            },
+            {
+              "id": "C",
+              "text": "On the front"
+            },
+            {
+              "id": "D",
+              "text": "At the middle"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'In the foreground' là khu vực tiền cảnh (gần camera nhất).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Foreground",
+          "image_path": "images/part2/s2/foreground.jpg"
+        },
+        {
+          "id": "p2_s2_e6",
+          "type": "essay_typing",
+          "instruction": "Điền giới từ: Kế bên / Cạnh bên một cái bàn.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Next+To",
+          "image_path": "images/part2/s2/next_to.jpg",
+          "content": "There is a chair ______ to the table.",
+          "options": [],
+          "correct_answers": [
+            "next"
+          ],
+          "explanation": "next to = bên cạnh."
+        },
+        {
+          "id": "p2_s2_e7",
+          "type": "multiple_choice",
+          "instruction": "Đâu là cách nói sai ngữ pháp khi miêu tả vị trí?",
+          "options": [
+            {
+              "id": "A",
+              "text": "On the left side"
+            },
+            {
+              "id": "B",
+              "text": "In the middle"
+            },
+            {
+              "id": "C",
+              "text": "In the right"
+            },
+            {
+              "id": "D",
+              "text": "In the background"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Sai giới từ. Phải là 'On the right', không dùng 'In'.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Error",
+          "image_path": "images/part2/s2/error.jpg"
+        },
+        {
+          "id": "p2_s2_e8",
+          "type": "essay_typing",
+          "instruction": "Điền MỘT TỪ: Ở trung tâm bức ảnh.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Center",
+          "image_path": "images/part2/s2/center.jpg",
+          "content": "In the ______ of the picture, a man is standing.",
+          "options": [],
+          "correct_answers": [
+            "center",
+            "middle"
+          ],
+          "explanation": "In the center / middle of the picture."
+        },
+        {
+          "id": "p2_s2_e9",
+          "type": "multiple_choice",
+          "instruction": "Cụm từ nào đồng nghĩa với 'next to'?",
+          "options": [
+            {
+              "id": "A",
+              "text": "behind"
+            },
+            {
+              "id": "B",
+              "text": "in front of"
+            },
+            {
+              "id": "C",
+              "text": "beside"
+            },
+            {
+              "id": "D",
+              "text": "above"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Beside = Next to (bên cạnh).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Beside",
+          "image_path": "images/part2/s2/beside.jpg"
+        },
+        {
+          "id": "p2_s2_e10",
+          "type": "essay_typing",
+          "instruction": "Điền giới từ (1 từ): Bức tranh ở TRÊN tường.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=On+Wall",
+          "image_path": "images/part2/s2/on_wall.jpg",
+          "content": "There is a painting ______ the wall.",
+          "options": [],
+          "correct_answers": [
+            "on"
+          ],
+          "explanation": "Dùng 'on' cho bề mặt (tường, bàn, sàn nhà)."
+        },
+        {
+          "id": "p2_s2_e11",
+          "type": "multiple_choice",
+          "instruction": "Chọn giới từ đúng: 'A lamp is hanging ___ the table.'",
+          "options": [
+            {
+              "id": "A",
+              "text": "on"
+            },
+            {
+              "id": "B",
+              "text": "above"
+            },
+            {
+              "id": "C",
+              "text": "under"
+            },
+            {
+              "id": "D",
+              "text": "next"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "'Above' dùng cho vật lơ lửng phía trên (không chạm vào bề mặt).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Above",
+          "image_path": "images/part2/s2/above.jpg"
+        },
+        {
+          "id": "p2_s2_e12",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Con chó nằm DƯỚI cái bàn.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Under",
+          "image_path": "images/part2/s2/under.jpg",
+          "content": "A dog is sleeping ______ the table.",
+          "options": [],
+          "correct_answers": [
+            "under",
+            "beneath"
+          ],
+          "explanation": "Under (bên dưới)."
+        },
+        {
+          "id": "p2_s2_e13",
+          "type": "multiple_choice",
+          "instruction": "Khi nói 'Ở phía bên kia đường', dùng cụm nào?",
+          "options": [
+            {
+              "id": "A",
+              "text": "across the street"
+            },
+            {
+              "id": "B",
+              "text": "through the street"
+            },
+            {
+              "id": "C",
+              "text": "over the street"
+            },
+            {
+              "id": "D",
+              "text": "beside the street"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Across the street (phía bên kia đường).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Across",
+          "image_path": "images/part2/s2/across.jpg"
+        },
+        {
+          "id": "p2_s2_e14",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Gần cửa sổ (bắt đầu bằng N).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Near",
+          "image_path": "images/part2/s2/near.jpg",
+          "content": "A woman is standing ______ the window.",
+          "options": [],
+          "correct_answers": [
+            "near"
+          ],
+          "explanation": "Near (gần)."
+        },
+        {
+          "id": "p2_s2_e15",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'In front of' nghĩa là gì trong TOEIC?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Đằng sau"
+            },
+            {
+              "id": "B",
+              "text": "Bên cạnh"
+            },
+            {
+              "id": "C",
+              "text": "Phía trước (che lấp vật phía sau)"
+            },
+            {
+              "id": "D",
+              "text": "Ở giữa"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "In front of (phía trước một vật khác).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Front",
+          "image_path": "images/part2/s2/front.jpg"
+        },
+        {
+          "id": "p2_s2_e16",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Phía sau quầy thu ngân (bắt đầu bằng B).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Behind",
+          "image_path": "images/part2/s2/behind.jpg",
+          "content": "A cashier is standing ______ the counter.",
+          "options": [],
+          "correct_answers": [
+            "behind"
+          ],
+          "explanation": "Behind (phía sau)."
+        },
+        {
+          "id": "p2_s2_e17",
+          "type": "multiple_choice",
+          "instruction": "Để miêu tả 2 người đứng GẦN SÁT nhau, dùng cụm nào?",
+          "options": [
+            {
+              "id": "A",
+              "text": "far from each other"
+            },
+            {
+              "id": "B",
+              "text": "close to each other"
+            },
+            {
+              "id": "C",
+              "text": "behind each other"
+            },
+            {
+              "id": "D",
+              "text": "under each other"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Close to (gần sát).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Close",
+          "image_path": "images/part2/s2/close.jpg"
+        },
+        {
+          "id": "p2_s2_e18",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Ở phía TRÊN (nhưng chạm bề mặt, ví dụ cốc đặt trên bàn).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=On+Top",
+          "image_path": "images/part2/s2/on_top.jpg",
+          "content": "A cup of coffee is placed ______ the table.",
+          "options": [],
+          "correct_answers": [
+            "on"
+          ],
+          "explanation": "on (trên bề mặt)."
+        },
+        {
+          "id": "p2_s2_e19",
+          "type": "multiple_choice",
+          "instruction": "Câu nào đúng ngữ pháp khi dùng 'background'?",
+          "options": [
+            {
+              "id": "A",
+              "text": "On the background, there are mountains."
+            },
+            {
+              "id": "B",
+              "text": "At the background, there are mountains."
+            },
+            {
+              "id": "C",
+              "text": "In the background, there are mountains."
+            },
+            {
+              "id": "D",
+              "text": "By the background, there are mountains."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Luôn dùng 'In the background / In the foreground'.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Bg+Grammar",
+          "image_path": "images/part2/s2/bg_grammar.jpg"
+        },
+        {
+          "id": "p2_s2_e20",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Những bông hoa được trồng DỌC THEO con đường.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Along",
+          "image_path": "images/part2/s2/along.jpg",
+          "content": "Flowers are planted ______ the path.",
+          "options": [],
+          "correct_answers": [
+            "along",
+            "beside"
+          ],
+          "explanation": "along (dọc theo)."
+        },
+        {
+          "id": "p2_s2_e21",
+          "type": "multiple_choice",
+          "instruction": "Từ 'around' mang nghĩa gì khi tả vị trí?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Bên trong"
+            },
+            {
+              "id": "B",
+              "text": "Xung quanh"
+            },
+            {
+              "id": "C",
+              "text": "Ở giữa"
+            },
+            {
+              "id": "D",
+              "text": "Bên dưới"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Around = xung quanh (ví dụ: sitting around a table).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Around",
+          "image_path": "images/part2/s2/around.jpg"
+        },
+        {
+          "id": "p2_s2_e22",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Họ đang ngồi XUNG QUANH một cái bàn.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Around+Table",
+          "image_path": "images/part2/s2/around_table.jpg",
+          "content": "They are sitting ______ a round table.",
+          "options": [],
+          "correct_answers": [
+            "around"
+          ],
+          "explanation": "sitting around (ngồi quanh)."
+        },
+        {
+          "id": "p2_s2_e23",
+          "type": "multiple_choice",
+          "instruction": "Từ nào tả vị trí 'giữa 2 vật'?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Among"
+            },
+            {
+              "id": "B",
+              "text": "Between"
+            },
+            {
+              "id": "C",
+              "text": "Middle"
+            },
+            {
+              "id": "D",
+              "text": "Center"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Between (nằm giữa 2 vật thể).",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Between",
+          "image_path": "images/part2/s2/between.jpg"
+        },
+        {
+          "id": "p2_s2_e24",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Đứng GIỮA hai cái cây.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Between+Trees",
+          "image_path": "images/part2/s2/between_trees.jpg",
+          "content": "A man is standing ______ two trees.",
+          "options": [],
+          "correct_answers": [
+            "between"
+          ],
+          "explanation": "between."
+        },
+        {
+          "id": "p2_s2_e25",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu mô tả đúng vị trí tiền cảnh.",
+          "options": [
+            {
+              "id": "A",
+              "text": "At the foreground, I can see a car."
+            },
+            {
+              "id": "B",
+              "text": "On the foreground, I can see a car."
+            },
+            {
+              "id": "C",
+              "text": "In the foreground, I can see a car."
+            },
+            {
+              "id": "D",
+              "text": "By the foreground, I can see a car."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "In the foreground.",
+          "image_url": "https://placehold.co/800x600/1e293b/fff?text=Check+Fg",
+          "image_path": "images/part2/s2/check_fg.jpg"
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p2_s2_m1",
+          "type": "multiple_choice",
+          "instruction": "Để tả một góc nhỏ (Góc trên bên trái), bạn dùng cụm nào?",
+          "options": [
+            {
+              "id": "A",
+              "text": "In the top left corner"
+            },
+            {
+              "id": "B",
+              "text": "On the top left corner"
+            },
+            {
+              "id": "C",
+              "text": "At the top left corner"
+            },
+            {
+              "id": "D",
+              "text": "By the top left corner"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Dùng 'In' cho các góc của bức ảnh (In the top/bottom left/right corner).",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Top+Left",
+          "image_path": "images/part2/s2/top_left.jpg"
+        },
+        {
+          "id": "p2_s2_m2",
+          "type": "essay_typing",
+          "instruction": "Điền cụm 3 từ: Ở góc dưới cùng bên phải.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Bottom+Right",
+          "image_path": "images/part2/s2/bottom_right.jpg",
+          "content": "______ ______ ______ bottom right corner, there is a logo.",
+          "options": [],
+          "correct_answers": [
+            "In the",
+            "In the bottom"
+          ],
+          "explanation": "In the bottom right corner. Điền 'In the' hoặc 'In the bottom' tùy cách gõ, chuẩn là 'In the'."
+        },
+        {
+          "id": "p2_s2_m3",
+          "type": "multiple_choice",
+          "instruction": "Khi vật này che khuất một phần vật kia (phía sau), giới từ nào hợp lý?",
+          "options": [
+            {
+              "id": "A",
+              "text": "in front of"
+            },
+            {
+              "id": "B",
+              "text": "behind"
+            },
+            {
+              "id": "C",
+              "text": "next to"
+            },
+            {
+              "id": "D",
+              "text": "above"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Behind (phía sau).",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Behind+Obj",
+          "image_path": "images/part2/s2/behind_obj.jpg"
+        },
+        {
+          "id": "p2_s2_m4",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Những cuốn sách xếp CHỒNG LÊN NHAU trên bàn.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Stacked",
+          "image_path": "images/part2/s2/stacked.jpg",
+          "content": "Some books are ______ on the table.",
+          "options": [],
+          "correct_answers": [
+            "stacked",
+            "piled"
+          ],
+          "explanation": "stacked (được xếp chồng)."
+        },
+        {
+          "id": "p2_s2_m5",
+          "type": "multiple_choice",
+          "instruction": "Tả vị trí người tựa lưng vào tường?",
+          "options": [
+            {
+              "id": "A",
+              "text": "standing near the wall"
+            },
+            {
+              "id": "B",
+              "text": "leaning against the wall"
+            },
+            {
+              "id": "C",
+              "text": "touching the wall"
+            },
+            {
+              "id": "D",
+              "text": "sitting on the wall"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "leaning against (tựa vào).",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Leaning",
+          "image_path": "images/part2/s2/leaning.jpg"
+        },
+        {
+          "id": "p2_s2_m6",
+          "type": "essay_typing",
+          "instruction": "Điền giới từ: Tựa VÀO hàng rào.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Fence",
+          "image_path": "images/part2/s2/fence.jpg",
+          "content": "A bicycle is leaning ______ the fence.",
+          "options": [],
+          "correct_answers": [
+            "against"
+          ],
+          "explanation": "leaning against."
+        },
+        {
+          "id": "p2_s2_m7",
+          "type": "multiple_choice",
+          "instruction": "Miêu tả đèn trần treo thả xuống từ trần nhà?",
+          "options": [
+            {
+              "id": "A",
+              "text": "hanging from the ceiling"
+            },
+            {
+              "id": "B",
+              "text": "hanging on the ceiling"
+            },
+            {
+              "id": "C",
+              "text": "attached to the ceiling"
+            },
+            {
+              "id": "D",
+              "text": "falling from the ceiling"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "hanging from (treo lơ lửng từ).",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Hanging",
+          "image_path": "images/part2/s2/hanging.jpg"
+        },
+        {
+          "id": "p2_s2_m8",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Bức tranh được TREO trên tường.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Painting",
+          "image_path": "images/part2/s2/painting.jpg",
+          "content": "A painting is ______ on the wall.",
+          "options": [],
+          "correct_answers": [
+            "hanging",
+            "hung"
+          ],
+          "explanation": "hanging on the wall."
+        },
+        {
+          "id": "p2_s2_m9",
+          "type": "multiple_choice",
+          "instruction": "Vị trí 'Across from' khác 'Next to' như thế nào?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Across from = ở bên cạnh"
+            },
+            {
+              "id": "B",
+              "text": "Across from = ở đối diện"
+            },
+            {
+              "id": "C",
+              "text": "Across from = ở phía sau"
+            },
+            {
+              "id": "D",
+              "text": "Across from = ở bên dưới"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Across from = đối diện (thường bị ngăn cách bởi bàn/đường).",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Across+Diff",
+          "image_path": "images/part2/s2/across_diff.jpg"
+        },
+        {
+          "id": "p2_s2_m10",
+          "type": "essay_typing",
+          "instruction": "Điền từ đồng nghĩa với 'Across from'.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Opposite",
+          "image_path": "images/part2/s2/opposite.jpg",
+          "content": "They are sitting ______ each other at the table.",
+          "options": [],
+          "correct_answers": [
+            "opposite"
+          ],
+          "explanation": "opposite = đối diện."
+        },
+        {
+          "id": "p2_s2_m11",
+          "type": "multiple_choice",
+          "instruction": "Đâu là cách nói 'Hai người đi cạnh nhau'?",
+          "options": [
+            {
+              "id": "A",
+              "text": "walking front to back"
+            },
+            {
+              "id": "B",
+              "text": "walking face to face"
+            },
+            {
+              "id": "C",
+              "text": "walking side by side"
+            },
+            {
+              "id": "D",
+              "text": "walking together by"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "side by side (sát vai nhau / cạnh nhau).",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Side+By+Side",
+          "image_path": "images/part2/s2/side_by_side.jpg"
+        },
+        {
+          "id": "p2_s2_m12",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Những chiếc ghế xếp THÀNH MỘT HÀNG.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=In+A+Row",
+          "image_path": "images/part2/s2/in_a_row.jpg",
+          "content": "The chairs are arranged in a ______.",
+          "options": [],
+          "correct_answers": [
+            "row",
+            "line"
+          ],
+          "explanation": "in a row (thành một hàng)."
+        },
+        {
+          "id": "p2_s2_m13",
+          "type": "multiple_choice",
+          "instruction": "Tả hàng cây dọc lối đi?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Trees are lined up along the path."
+            },
+            {
+              "id": "B",
+              "text": "Trees are grouped in the path."
+            },
+            {
+              "id": "C",
+              "text": "Trees are stacked on the path."
+            },
+            {
+              "id": "D",
+              "text": "Trees are surrounding the path."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "lined up along (xếp hàng dọc theo).",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Lined",
+          "image_path": "images/part2/s2/lined.jpg"
+        },
+        {
+          "id": "p2_s2_m14",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Con thuyền NỔI trên mặt nước.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Floating",
+          "image_path": "images/part2/s2/floating.jpg",
+          "content": "A boat is ______ on the water.",
+          "options": [],
+          "correct_answers": [
+            "floating",
+            "sailing"
+          ],
+          "explanation": "floating (nổi / lơ lửng trên mặt nước)."
+        },
+        {
+          "id": "p2_s2_m15",
+          "type": "multiple_choice",
+          "instruction": "Tả vị trí đồ vật TRONG TẦM TAY người nào đó?",
+          "options": [
+            {
+              "id": "A",
+              "text": "within reach"
+            },
+            {
+              "id": "B",
+              "text": "in the hand"
+            },
+            {
+              "id": "C",
+              "text": "next to hand"
+            },
+            {
+              "id": "D",
+              "text": "near arm"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "within reach (trong tầm với).",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Reach",
+          "image_path": "images/part2/s2/reach.jpg"
+        },
+        {
+          "id": "p2_s2_m16",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Giấy tờ vương vãi KHẮP nơi trên bàn.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Scattered",
+          "image_path": "images/part2/s2/scattered.jpg",
+          "content": "Papers are ______ all over the desk.",
+          "options": [],
+          "correct_answers": [
+            "scattered",
+            "spread"
+          ],
+          "explanation": "scattered (vương vãi / rải rác)."
+        },
+        {
+          "id": "p2_s2_m17",
+          "type": "multiple_choice",
+          "instruction": "Cách nối câu: Ở bên trái có A, TRONG KHI ĐÓ ở bên phải có B.",
+          "options": [
+            {
+              "id": "A",
+              "text": "On the left is A, because on the right is B."
+            },
+            {
+              "id": "B",
+              "text": "On the left is A, while on the right is B."
+            },
+            {
+              "id": "C",
+              "text": "On the left is A, so on the right is B."
+            },
+            {
+              "id": "D",
+              "text": "On the left is A, if on the right is B."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Dùng 'while/meanwhile' để đối chiếu 2 phía của bức tranh.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=While",
+          "image_path": "images/part2/s2/while.jpg"
+        },
+        {
+          "id": "p2_s2_m18",
+          "type": "essay_typing",
+          "instruction": "Điền từ nối: ... TRONG KHI ĐÓ, ở phía sau...",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Meanwhile",
+          "image_path": "images/part2/s2/meanwhile.jpg",
+          "content": "The man is working. ______, in the background, a woman is reading.",
+          "options": [],
+          "correct_answers": [
+            "Meanwhile",
+            "While"
+          ],
+          "explanation": "Meanwhile (trong khi đó)."
+        },
+        {
+          "id": "p2_s2_m19",
+          "type": "multiple_choice",
+          "instruction": "Chọn từ miêu tả vật liệu BỊ CHE KHUẤT một phần.",
+          "options": [
+            {
+              "id": "A",
+              "text": "partially hidden"
+            },
+            {
+              "id": "B",
+              "text": "fully covered"
+            },
+            {
+              "id": "C",
+              "text": "clearly visible"
+            },
+            {
+              "id": "D",
+              "text": "completely lost"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "partially hidden (bị che khuất một phần).",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Partially",
+          "image_path": "images/part2/s2/partially.jpg"
+        },
+        {
+          "id": "p2_s2_m20",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Chiếc xe bị CHE KHUẤT bởi cái cây.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Blocked",
+          "image_path": "images/part2/s2/blocked.jpg",
+          "content": "The car is partially ______ by a large tree.",
+          "options": [],
+          "correct_answers": [
+            "hidden",
+            "blocked",
+            "covered"
+          ],
+          "explanation": "hidden / blocked."
+        },
+        {
+          "id": "p2_s2_m21",
+          "type": "multiple_choice",
+          "instruction": "Tả vị trí hàng rào bao quanh ngôi nhà?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A fence surrounds the house."
+            },
+            {
+              "id": "B",
+              "text": "A fence is inside the house."
+            },
+            {
+              "id": "C",
+              "text": "A fence is under the house."
+            },
+            {
+              "id": "D",
+              "text": "A fence crosses the house."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "surround (bao quanh).",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Surround",
+          "image_path": "images/part2/s2/surround.jpg"
+        },
+        {
+          "id": "p2_s2_m22",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Hồ nước ĐƯỢC BAO QUANH bởi cây cối (bị động).",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Surrounded",
+          "image_path": "images/part2/s2/surrounded.jpg",
+          "content": "The lake is ______ by tall trees.",
+          "options": [],
+          "correct_answers": [
+            "surrounded"
+          ],
+          "explanation": "surrounded by."
+        },
+        {
+          "id": "p2_s2_m23",
+          "type": "multiple_choice",
+          "instruction": "Để chuyển ý từ TỔNG QUAN (background) sang CHI TIẾT (foreground), dùng cấu trúc nào?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Moving to the front of the picture..."
+            },
+            {
+              "id": "B",
+              "text": "Look back..."
+            },
+            {
+              "id": "C",
+              "text": "In addition..."
+            },
+            {
+              "id": "D",
+              "text": "Therefore..."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'Moving to the front...' là cụm từ chỉ hướng nhìn của mắt.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Transition",
+          "image_path": "images/part2/s2/transition.jpg"
+        },
+        {
+          "id": "p2_s2_m24",
+          "type": "essay_typing",
+          "instruction": "Điền từ: HƯỚNG SỰ CHÚ Ý sang bên phải.",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Looking",
+          "image_path": "images/part2/s2/looking.jpg",
+          "content": "______ to the right side, we can see a dog.",
+          "options": [],
+          "correct_answers": [
+            "Moving",
+            "Looking",
+            "Turning"
+          ],
+          "explanation": "Moving / Looking to the right."
+        },
+        {
+          "id": "p2_s2_m25",
+          "type": "multiple_choice",
+          "instruction": "Tả các đám mây trên bầu trời?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Clouds are on the sky."
+            },
+            {
+              "id": "B",
+              "text": "Clouds are in the sky."
+            },
+            {
+              "id": "C",
+              "text": "Clouds are at the sky."
+            },
+            {
+              "id": "D",
+              "text": "Clouds are over the sky."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "In the sky (trên bầu trời).",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=Sky",
+          "image_path": "images/part2/s2/sky.jpg"
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p2_s2_h1",
+          "type": "multiple_choice",
+          "instruction": "Ghép nối định hướng KHÔNG GIAN + HÀNH ĐỘNG phức tạp. Câu nào mượt nhất?",
+          "options": [
+            {
+              "id": "A",
+              "text": "On the left side, a man in a blue shirt is reaching for a book on the top shelf."
+            },
+            {
+              "id": "B",
+              "text": "Left side has a man. He wears blue. He takes a book from the top."
+            },
+            {
+              "id": "C",
+              "text": "In the left, a man is taking book."
+            },
+            {
+              "id": "D",
+              "text": "A man is left and taking a book on top."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Sử dụng cụm từ định hướng (On the left side) + Mệnh đề tả chi tiết hành động (is reaching for).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=P2+S2+H1",
+          "image_path": "images/part2/s2/p2_s2_h1.jpg"
+        },
+        {
+          "id": "p2_s2_h2",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Vươn tay LẤY một thứ gì đó.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Reaching",
+          "image_path": "images/part2/s2/reaching.jpg",
+          "content": "A woman is ______ for an apple on the table.",
+          "options": [],
+          "correct_answers": [
+            "reaching"
+          ],
+          "explanation": "reaching for (vươn tay lấy)."
+        },
+        {
+          "id": "p2_s2_h3",
+          "type": "multiple_choice",
+          "instruction": "Tả vị trí 'phía xa ở chân trời'?",
+          "options": [
+            {
+              "id": "A",
+              "text": "in the distance / on the horizon"
+            },
+            {
+              "id": "B",
+              "text": "at the far end"
+            },
+            {
+              "id": "C",
+              "text": "behind the view"
+            },
+            {
+              "id": "D",
+              "text": "on the background"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "in the distance / on the horizon (phía xa / chân trời).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=P2+S2+H3",
+          "image_path": "images/part2/s2/p2_s2_h3.jpg"
+        },
+        {
+          "id": "p2_s2_h4",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Ở phía xa, tôi thấy vài ngọn núi.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Distance",
+          "image_path": "images/part2/s2/distance.jpg",
+          "content": "In the ______, I can see some mountains.",
+          "options": [],
+          "correct_answers": [
+            "distance",
+            "background"
+          ],
+          "explanation": "in the distance."
+        },
+        {
+          "id": "p2_s2_h5",
+          "type": "multiple_choice",
+          "instruction": "Tả bóng râm (shadow) ĐỔ XUỐNG mặt đất?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Shadows are casting on the ground."
+            },
+            {
+              "id": "B",
+              "text": "Shadows are falling in the ground."
+            },
+            {
+              "id": "C",
+              "text": "Shadows are making on the ground."
+            },
+            {
+              "id": "D",
+              "text": "Shadows are doing on the ground."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "cast a shadow (đổ bóng).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=P2+S2+H5",
+          "image_path": "images/part2/s2/p2_s2_h5.jpg"
+        },
+        {
+          "id": "p2_s2_h6",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Cái cây ĐỔ bóng xuống bãi cỏ.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Casting",
+          "image_path": "images/part2/s2/casting.jpg",
+          "content": "The tree is ______ a shadow on the grass.",
+          "options": [],
+          "correct_answers": [
+            "casting"
+          ],
+          "explanation": "casting."
+        },
+        {
+          "id": "p2_s2_h7",
+          "type": "multiple_choice",
+          "instruction": "Khi mọi người đi BỘ DỌC THEO mép nước (bờ biển)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "walking along the shore"
+            },
+            {
+              "id": "B",
+              "text": "walking in the shore"
+            },
+            {
+              "id": "C",
+              "text": "walking through the shore"
+            },
+            {
+              "id": "D",
+              "text": "walking by the shore"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "along the shore / along the water's edge.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=P2+S2+H7",
+          "image_path": "images/part2/s2/p2_s2_h7.jpg"
+        },
+        {
+          "id": "p2_s2_h8",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Đi dạo DỌC THEO hành lang.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Corridor",
+          "image_path": "images/part2/s2/corridor.jpg",
+          "content": "They are strolling ______ the corridor.",
+          "options": [],
+          "correct_answers": [
+            "along",
+            "down"
+          ],
+          "explanation": "along / down."
+        },
+        {
+          "id": "p2_s2_h9",
+          "type": "multiple_choice",
+          "instruction": "Định vị vật lơ lửng phía trên ĐẦU của ai đó?",
+          "options": [
+            {
+              "id": "A",
+              "text": "overhead / directly above"
+            },
+            {
+              "id": "B",
+              "text": "on the head"
+            },
+            {
+              "id": "C",
+              "text": "in top"
+            },
+            {
+              "id": "D",
+              "text": "upward"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "overhead / directly above (ngay phía trên đầu).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=P2+S2+H9",
+          "image_path": "images/part2/s2/p2_s2_h9.jpg"
+        },
+        {
+          "id": "p2_s2_h10",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Có một biển báo treo PHÍA TRÊN đầu họ.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Sign",
+          "image_path": "images/part2/s2/sign.jpg",
+          "content": "There is a sign hanging ______.",
+          "options": [],
+          "correct_answers": [
+            "overhead",
+            "above"
+          ],
+          "explanation": "overhead."
+        },
+        {
+          "id": "p2_s2_h11",
+          "type": "multiple_choice",
+          "instruction": "Tả hàng xe đỗ DỌC hai bên lề đường?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Cars are parked on both sides of the street."
+            },
+            {
+              "id": "B",
+              "text": "Cars are parked in two lines."
+            },
+            {
+              "id": "C",
+              "text": "Cars parked parallel."
+            },
+            {
+              "id": "D",
+              "text": "Cars are at both sides."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "on both sides of the street (ở cả hai bên đường).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=P2+S2+H11",
+          "image_path": "images/part2/s2/p2_s2_h11.jpg"
+        },
+        {
+          "id": "p2_s2_h12",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Những chiếc xe được ĐỖ bên lề đường.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Curb",
+          "image_path": "images/part2/s2/curb.jpg",
+          "content": "Cars are ______ along the curb.",
+          "options": [],
+          "correct_answers": [
+            "parked"
+          ],
+          "explanation": "parked."
+        },
+        {
+          "id": "p2_s2_h13",
+          "type": "multiple_choice",
+          "instruction": "Tả cảnh phản chiếu (reflection) trên mặt nước/cửa kính?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The building is reflected in the water."
+            },
+            {
+              "id": "B",
+              "text": "The building reflects on the water."
+            },
+            {
+              "id": "C",
+              "text": "The water has building's reflection."
+            },
+            {
+              "id": "D",
+              "text": "Cả A và C đều tốt nhưng A tự nhiên hơn."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "is reflected in the water (được phản chiếu dưới nước).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=P2+S2+H13",
+          "image_path": "images/part2/s2/p2_s2_h13.jpg"
+        },
+        {
+          "id": "p2_s2_h14",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Hình BÓNG PHẢN CHIẾU của cái cây trên hồ.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Reflected",
+          "image_path": "images/part2/s2/reflected.jpg",
+          "content": "We can see the tree's ______ in the lake.",
+          "options": [],
+          "correct_answers": [
+            "reflection"
+          ],
+          "explanation": "reflection (hình bóng phản chiếu)."
+        },
+        {
+          "id": "p2_s2_h15",
+          "type": "multiple_choice",
+          "instruction": "Tả các tài liệu được XẾP THÀNH ĐỐNG NGỔN NGANG (lộn xộn)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "piled up / stacked haphazardly"
+            },
+            {
+              "id": "B",
+              "text": "organized neatly"
+            },
+            {
+              "id": "C",
+              "text": "arranged nicely"
+            },
+            {
+              "id": "D",
+              "text": "put together"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "piled up (chất đống) / stacked haphazardly (xếp lộn xộn).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=P2+S2+H15",
+          "image_path": "images/part2/s2/p2_s2_h15.jpg"
+        },
+        {
+          "id": "p2_s2_h16",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Một ĐỐNG sách trên bàn.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Pile",
+          "image_path": "images/part2/s2/pile.jpg",
+          "content": "There is a ______ of books on the desk.",
+          "options": [],
+          "correct_answers": [
+            "pile",
+            "stack"
+          ],
+          "explanation": "pile / stack."
+        },
+        {
+          "id": "p2_s2_h17",
+          "type": "multiple_choice",
+          "instruction": "Sử dụng 'Right next to' (Ngay sát cạnh) mang lại sắc thái gì?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Nhấn mạnh khoảng cách cực kỳ gần."
+            },
+            {
+              "id": "B",
+              "text": "Chỉ vị trí bên phải."
+            },
+            {
+              "id": "C",
+              "text": "Chỉ hướng đi đúng."
+            },
+            {
+              "id": "D",
+              "text": "Không có ý nghĩa đặc biệt."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'Right next to' nhấn mạnh sự tiếp xúc gần gũi (ngay sát bên cạnh).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=P2+S2+H17",
+          "image_path": "images/part2/s2/p2_s2_h17.jpg"
+        },
+        {
+          "id": "p2_s2_h18",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Quán cà phê nằm NGAY cạnh bưu điện.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Just+Next",
+          "image_path": "images/part2/s2/just_next.jpg",
+          "content": "The cafe is ______ next to the post office.",
+          "options": [],
+          "correct_answers": [
+            "right",
+            "just"
+          ],
+          "explanation": "right next to / just next to."
+        },
+        {
+          "id": "p2_s2_h19",
+          "type": "multiple_choice",
+          "instruction": "Tả cấu trúc BẮC QUA sông (như cầu)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "A bridge is spanning the river."
+            },
+            {
+              "id": "B",
+              "text": "A bridge is over the river."
+            },
+            {
+              "id": "C",
+              "text": "A bridge crosses the river."
+            },
+            {
+              "id": "D",
+              "text": "Tất cả đều đúng, nhưng 'spanning' hoặc 'crossing' mang tính mô tả hành động tĩnh rất chuyên nghiệp."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "spanning / crossing (bắc qua / vắt ngang qua).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=P2+S2+H19",
+          "image_path": "images/part2/s2/p2_s2_h19.jpg"
+        },
+        {
+          "id": "p2_s2_h20",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Chiếc cầu BẮC QUA con sông.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Spanning",
+          "image_path": "images/part2/s2/spanning.jpg",
+          "content": "A long bridge is ______ the river.",
+          "options": [],
+          "correct_answers": [
+            "spanning",
+            "crossing"
+          ],
+          "explanation": "spanning / crossing."
+        },
+        {
+          "id": "p2_s2_h21",
+          "type": "multiple_choice",
+          "instruction": "Tả các tòa nhà chọc trời MỌC LÊN SÁT NHAU tạo thành đường chân trời (skyline)?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Buildings are packed closely together, forming a skyline."
+            },
+            {
+              "id": "B",
+              "text": "Buildings are near each other."
+            },
+            {
+              "id": "C",
+              "text": "Many buildings are tall."
+            },
+            {
+              "id": "D",
+              "text": "The sky has buildings."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "packed closely together (nằm san sát nhau).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=P2+S2+H21",
+          "image_path": "images/part2/s2/p2_s2_h21.jpg"
+        },
+        {
+          "id": "p2_s2_h22",
+          "type": "essay_typing",
+          "instruction": "Điền từ: Những ngôi nhà mọc SAN SÁT nhau.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Packed",
+          "image_path": "images/part2/s2/packed.jpg",
+          "content": "The houses are ______ closely together.",
+          "options": [],
+          "correct_answers": [
+            "packed",
+            "built",
+            "grouped"
+          ],
+          "explanation": "packed closely."
+        },
+        {
+          "id": "p2_s2_h23",
+          "type": "multiple_choice",
+          "instruction": "Cách nối câu siêu việt: Tả phía trước, DẪN DẮT MẮT NGƯỜI NHÌN LÙI VỀ PHÍA SAU.",
+          "options": [
+            {
+              "id": "A",
+              "text": "In the foreground is A. Further back, we can spot B."
+            },
+            {
+              "id": "B",
+              "text": "Foreground A. Background B."
+            },
+            {
+              "id": "C",
+              "text": "Here is A, there is B."
+            },
+            {
+              "id": "D",
+              "text": "A is front, B is back."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'Further back, we can spot...' (Xa hơn một chút về phía sau, ta có thể thấy...) là cấu trúc ăn điểm cực mạnh.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=P2+S2+H23",
+          "image_path": "images/part2/s2/p2_s2_h23.jpg"
+        },
+        {
+          "id": "p2_s2_h24",
+          "type": "essay_typing",
+          "instruction": "Điền từ: XA HƠN về phía sau.",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=Further",
+          "image_path": "images/part2/s2/further.jpg",
+          "content": "______ back in the picture, there is a mountain.",
+          "options": [],
+          "correct_answers": [
+            "Further",
+            "Farther"
+          ],
+          "explanation": "Further back / Farther back."
+        },
+        {
+          "id": "p2_s2_h25",
+          "type": "multiple_choice",
+          "instruction": "Từ chỉ vị trí bao trùm: 'Một thứ gì đó CHIẾM PHẦN LỚN bức tranh'.",
+          "options": [
+            {
+              "id": "A",
+              "text": "takes up most of the space / dominates the picture"
+            },
+            {
+              "id": "B",
+              "text": "is very big"
+            },
+            {
+              "id": "C",
+              "text": "looks large in the picture"
+            },
+            {
+              "id": "D",
+              "text": "covers everywhere"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "dominates the picture (chiếm thế chủ đạo / chiếm phần lớn không gian).",
+          "image_url": "https://placehold.co/800x600/312e81/fff?text=P2+S2+H25",
+          "image_path": "images/part2/s2/p2_s2_h25.jpg"
+        }
+      ]
+    }
+  ]
+}

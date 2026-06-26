@@ -1,0 +1,1553 @@
+{
+  "part": "Part2",
+  "section": "4. Miêu tả Vật và Phong cảnh",
+  "test_number": 4,
+  "title": "Test 4 – Miêu tả Vật & Phong cảnh (There is/are & Bị động trạng thái – Góc nhìn mới)",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p2_s4_t4_e01",
+          "type": "essay_typing",
+          "instruction": "Điền 'is' hoặc 'are' phù hợp.",
+          "image_path": "images/part2/s4/parked_cars.jpg",
+          "content": "There ________ many cars parked along the street.",
+          "options": [],
+          "correct_answers": [
+            "are"
+          ],
+          "explanation": "'many cars' là danh từ số nhiều nên dùng 'There are'."
+        },
+        {
+          "id": "p2_s4_t4_e02",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu mô tả đúng chiếc bàn.",
+          "image_path": "images/part2/s4/laptop_desk.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "A laptop and some documents are placed on the desk."
+            },
+            {
+              "id": "B",
+              "text": "Someone is placing a laptop on the desk."
+            },
+            {
+              "id": "C",
+              "text": "The desk is placed on a laptop."
+            },
+            {
+              "id": "D",
+              "text": "There are a laptop place on the desk."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are placed' – bị động trạng thái diễn tả vị trí của đồ vật trên bàn."
+        },
+        {
+          "id": "p2_s4_t4_e03",
+          "type": "essay_typing",
+          "instruction": "Điền trạng từ chỉ sự gọn gàng.",
+          "image_path": "images/part2/s4/stacked_boxes.jpg",
+          "content": "The boxes are stacked ________ in the corner of the warehouse.",
+          "options": [],
+          "correct_answers": [
+            "neatly",
+            "carefully",
+            "orderly"
+          ],
+          "explanation": "'neatly / carefully / orderly' – miêu tả các hộp được xếp chồng một cách gọn gàng."
+        },
+        {
+          "id": "p2_s4_t4_e04",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả kệ sách đúng nhất?",
+          "image_path": "images/part2/s4/books_shelf.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Someone is organizing books on the shelf."
+            },
+            {
+              "id": "B",
+              "text": "The bookshelf is full of neatly organized books."
+            },
+            {
+              "id": "C",
+              "text": "Books are organizing on the shelves."
+            },
+            {
+              "id": "D",
+              "text": "There is books on the bookshelf."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "'is full of neatly organized books' – mô tả trạng thái hiện tại của kệ sách."
+        },
+        {
+          "id": "p2_s4_t4_e05",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed chỉ trạng thái đặt để.",
+          "image_path": "images/part2/s4/potted_plants.jpg",
+          "content": "The potted plants are ________ on the windowsill.",
+          "options": [],
+          "correct_answers": [
+            "placed",
+            "arranged",
+            "displayed"
+          ],
+          "explanation": "'placed / arranged' – các chậu cây được đặt/bày trên bậu cửa sổ."
+        },
+        {
+          "id": "p2_s4_t4_e06",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả những chiếc ghế đúng?",
+          "image_path": "images/part2/s4/empty_chairs.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "The chairs are left unoccupied."
+            },
+            {
+              "id": "B",
+              "text": "People are sitting on the chairs."
+            },
+            {
+              "id": "C",
+              "text": "Someone is placing chairs."
+            },
+            {
+              "id": "D",
+              "text": "There are a chairs left empty."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are left unoccupied' – bị động trạng thái, ghế bị bỏ trống không có ai ngồi."
+        },
+        {
+          "id": "p2_s4_t4_e07",
+          "type": "essay_typing",
+          "instruction": "Điền động từ 'to be' và V-ed phù hợp.",
+          "image_path": "images/part2/s4/coffee_cup.jpg",
+          "content": "A coffee cup ________ placed next to the keyboard on the desk.",
+          "options": [],
+          "correct_answers": [
+            "is",
+            "has been"
+          ],
+          "explanation": "'is placed' hoặc 'has been placed' đều diễn tả trạng thái của chiếc cốc trên bàn."
+        },
+        {
+          "id": "p2_s4_t4_e08",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả đèn đường đúng?",
+          "image_path": "images/part2/s4/street_lamps.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Street lamps are lined up along the sidewalk."
+            },
+            {
+              "id": "B",
+              "text": "Street lamps are lining up along the sidewalk."
+            },
+            {
+              "id": "C",
+              "text": "There is street lamps lined up."
+            },
+            {
+              "id": "D",
+              "text": "Both A and B are correct."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "'are lined up' (bị động trạng thái) và 'are lining up' (hiện tại tiếp diễn nghĩa tĩnh) đều chấp nhận được."
+        },
+        {
+          "id": "p2_s4_t4_e09",
+          "type": "essay_typing",
+          "instruction": "Điền 'is' hoặc 'are'.",
+          "image_path": "images/part2/s4/framed_pictures.jpg",
+          "content": "There ________ several framed pictures displayed on the wall.",
+          "options": [],
+          "correct_answers": [
+            "are"
+          ],
+          "explanation": "'several framed pictures' là số nhiều nên dùng 'There are'."
+        },
+        {
+          "id": "p2_s4_t4_e10",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả giỏ trái cây đúng?",
+          "image_path": "images/part2/s4/fruit_basket.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "A basket of fruit is placed on the kitchen counter."
+            },
+            {
+              "id": "B",
+              "text": "The kitchen counter is in the fruit basket."
+            },
+            {
+              "id": "C",
+              "text": "Fruit is placing in the basket."
+            },
+            {
+              "id": "D",
+              "text": "There are a basket of fruit on the counter."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'is placed on' – bị động trạng thái, giỏ trái cây được đặt trên mặt bếp."
+        },
+        {
+          "id": "p2_s4_t4_e11",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed chỉ trạng thái lưu giữ.",
+          "image_path": "images/part2/s4/parked_bicycles.jpg",
+          "content": "The bicycles are ________ in a rack near the entrance.",
+          "options": [],
+          "correct_answers": [
+            "parked",
+            "stored",
+            "secured"
+          ],
+          "explanation": "'parked / stored in a rack' – xe đạp được dựng/cất trong giá để xe."
+        },
+        {
+          "id": "p2_s4_t4_e12",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả chiếc ghế dài trong công viên?",
+          "image_path": "images/part2/s4/park_bench.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "The park bench is situated under a shady tree."
+            },
+            {
+              "id": "B",
+              "text": "Someone is sitting on the park bench."
+            },
+            {
+              "id": "C",
+              "text": "The shady tree is on the park bench."
+            },
+            {
+              "id": "D",
+              "text": "There are a bench situated in the park."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'is situated under' – diễn tả vị trí của ghế dài dưới bóng cây."
+        },
+        {
+          "id": "p2_s4_t4_e13",
+          "type": "essay_typing",
+          "instruction": "Điền 'is' hoặc 'are'.",
+          "image_path": "images/part2/s4/boats_dock.jpg",
+          "content": "There ________ several boats tied to the dock.",
+          "options": [],
+          "correct_answers": [
+            "are"
+          ],
+          "explanation": "'several boats' là số nhiều nên dùng 'There are'."
+        },
+        {
+          "id": "p2_s4_t4_e14",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả bầu trời đúng?",
+          "image_path": "images/part2/s4/clouds_sky.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "There are fluffy clouds floating in the sky."
+            },
+            {
+              "id": "B",
+              "text": "There is fluffy clouds floating in the sky."
+            },
+            {
+              "id": "C",
+              "text": "The sky is cloud today."
+            },
+            {
+              "id": "D",
+              "text": "Clouds is floating in the sky."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'There are clouds' – 'clouds' là số nhiều nên dùng 'are'."
+        },
+        {
+          "id": "p2_s4_t4_e15",
+          "type": "essay_typing",
+          "instruction": "Điền động từ 'to be' thích hợp.",
+          "image_path": "images/part2/s4/rug_floor.jpg",
+          "content": "A colorful rug ________ laid on the wooden floor.",
+          "options": [],
+          "correct_answers": [
+            "has been",
+            "is"
+          ],
+          "explanation": "'has been laid' (hoàn thành bị động) hoặc 'is laid' đều mô tả tấm thảm đã/đang được trải."
+        },
+        {
+          "id": "p2_s4_t4_e16",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả cửa hàng đúng?",
+          "image_path": "images/part2/s4/merchandise_display.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Clothes are displayed in the store window."
+            },
+            {
+              "id": "B",
+              "text": "Clothes are displaying in the store window."
+            },
+            {
+              "id": "C",
+              "text": "Someone is displaying clothes."
+            },
+            {
+              "id": "D",
+              "text": "There is clothes displayed in the window."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are displayed' – bị động trạng thái, quần áo đang được trưng bày trong cửa sổ shop."
+        },
+        {
+          "id": "p2_s4_t4_e17",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed chỉ việc vẽ/sơn.",
+          "image_path": "images/part2/s4/pedestrian_crossing.jpg",
+          "content": "White lines are ________ on the road to mark the pedestrian crossing.",
+          "options": [],
+          "correct_answers": [
+            "painted",
+            "drawn",
+            "marked"
+          ],
+          "explanation": "'painted / marked on the road' – vạch trắng được sơn/kẻ để đánh dấu lối qua đường."
+        },
+        {
+          "id": "p2_s4_t4_e18",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả các tòa nhà cao tầng đúng?",
+          "image_path": "images/part2/s4/tall_buildings.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tall buildings are clustered in the city center."
+            },
+            {
+              "id": "B",
+              "text": "Tall buildings are clustering in the city center."
+            },
+            {
+              "id": "C",
+              "text": "The city center is tall buildings."
+            },
+            {
+              "id": "D",
+              "text": "There is tall buildings clustered in the city."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are clustered in' – bị động trạng thái, các tòa nhà tập trung ở trung tâm thành phố."
+        },
+        {
+          "id": "p2_s4_t4_e19",
+          "type": "essay_typing",
+          "instruction": "Điền 'is' hoặc 'are'.",
+          "image_path": "images/part2/s4/water_fountain.jpg",
+          "content": "Water ________ spraying from the fountain in the public square.",
+          "options": [],
+          "correct_answers": [
+            "is"
+          ],
+          "explanation": "'Water' là danh từ không đếm được, dùng 'is'."
+        },
+        {
+          "id": "p2_s4_t4_e20",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả bàn ăn đúng nhất?",
+          "image_path": "images/part2/s4/dining_table.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "The dining table is set with plates, glasses, and cutlery."
+            },
+            {
+              "id": "B",
+              "text": "Someone is setting the dining table."
+            },
+            {
+              "id": "C",
+              "text": "Plates and glasses are setting on the table."
+            },
+            {
+              "id": "D",
+              "text": "There are a dining table with plates."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'is set with' – bàn ăn được dọn sẵn với bát đĩa, ly và dao thìa dĩa."
+        },
+        {
+          "id": "p2_s4_t4_e21",
+          "type": "essay_typing",
+          "instruction": "Điền cấu trúc bị động phù hợp.",
+          "image_path": "images/part2/s4/trash_can.jpg",
+          "content": "A trash bin ________ placed near the entrance door.",
+          "options": [],
+          "correct_answers": [
+            "is",
+            "has been"
+          ],
+          "explanation": "'is placed' hoặc 'has been placed' – thùng rác đặt/được đặt gần cửa ra vào."
+        },
+        {
+          "id": "p2_s4_t4_e22",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả cầu thang đúng?",
+          "image_path": "images/part2/s4/staircase.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "A wooden staircase connects the ground floor to the upper level."
+            },
+            {
+              "id": "B",
+              "text": "A wooden staircase is connecting to the upper floor."
+            },
+            {
+              "id": "C",
+              "text": "Someone is climbing the staircase."
+            },
+            {
+              "id": "D",
+              "text": "There are a staircase leading upstairs."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'connects the ground floor to the upper level' – dùng hiện tại đơn mô tả chức năng/trạng thái tĩnh của cầu thang."
+        },
+        {
+          "id": "p2_s4_t4_e23",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed chỉ trạng thái treo.",
+          "image_path": "images/part2/s4/store_sign.jpg",
+          "content": "A sign ________ above the shop entrance.",
+          "options": [],
+          "correct_answers": [
+            "is hung",
+            "is hanging",
+            "hangs"
+          ],
+          "explanation": "'is hung / is hanging / hangs above' – biển hiệu được treo/đang treo/treo trên cửa hàng."
+        },
+        {
+          "id": "p2_s4_t4_e24",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả cầu qua sông đúng?",
+          "image_path": "images/part2/s4/bridge_river.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "A stone bridge spans over the flowing river."
+            },
+            {
+              "id": "B",
+              "text": "The river spans over the bridge."
+            },
+            {
+              "id": "C",
+              "text": "Someone is building a bridge."
+            },
+            {
+              "id": "D",
+              "text": "There are a bridge spanning the river."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'spans over the flowing river' – dùng hiện tại đơn mô tả cầu bắc qua sông."
+        },
+        {
+          "id": "p2_s4_t4_e25",
+          "type": "essay_typing",
+          "instruction": "Điền 'is' hoặc 'are'.",
+          "image_path": "images/part2/s4/train_tracks.jpg",
+          "content": "There ________ train tracks running through the dense forest.",
+          "options": [],
+          "correct_answers": [
+            "are"
+          ],
+          "explanation": "'train tracks' là số nhiều nên dùng 'There are'."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p2_s4_t4_m01",
+          "type": "essay_typing",
+          "instruction": "Điền 'is' hoặc 'are'.",
+          "image_path": "images/part2/s4/scattered_papers.jpg",
+          "content": "There ________ papers scattered all across the desk surface.",
+          "options": [],
+          "correct_answers": [
+            "are"
+          ],
+          "explanation": "'papers' là số nhiều nên dùng 'There are'."
+        },
+        {
+          "id": "p2_s4_t4_m02",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả hàng cây dọc lối đi đúng nhất?",
+          "image_path": "images/part2/s4/lined_trees.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Trees are planted symmetrically on both sides of the walkway."
+            },
+            {
+              "id": "B",
+              "text": "Trees are planting on both sides of the walkway."
+            },
+            {
+              "id": "C",
+              "text": "There is trees planted along the walkway."
+            },
+            {
+              "id": "D",
+              "text": "Someone is planting trees along the path."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are planted symmetrically' – bị động trạng thái, cây được trồng đối xứng hai bên lối đi."
+        },
+        {
+          "id": "p2_s4_t4_m03",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed chỉ trạng thái để vật liệu.",
+          "image_path": "images/part2/s4/construction_materials.jpg",
+          "content": "Construction materials are ________ near the building site.",
+          "options": [],
+          "correct_answers": [
+            "stored",
+            "stacked",
+            "piled"
+          ],
+          "explanation": "'stored / stacked / piled near the site' – vật liệu xây dựng được cất/chất gần công trường."
+        },
+        {
+          "id": "p2_s4_t4_m04",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả quán cà phê ngoài trời đúng?",
+          "image_path": "images/part2/s4/outdoor_cafe.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tables and chairs are arranged on the outdoor terrace."
+            },
+            {
+              "id": "B",
+              "text": "Tables and chairs are arranging on the terrace."
+            },
+            {
+              "id": "C",
+              "text": "Someone is arranging tables and chairs."
+            },
+            {
+              "id": "D",
+              "text": "There are a table arranged on the terrace."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are arranged on' – bí động trạng thái, bàn ghế được sắp xếp trên sân ngoài trời."
+        },
+        {
+          "id": "p2_s4_t4_m05",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed hoặc V-ing chỉ trạng thái treo lơ lửng.",
+          "image_path": "images/part2/s4/traffic_lights.jpg",
+          "content": "Traffic lights ________ suspended over the busy intersection.",
+          "options": [],
+          "correct_answers": [
+            "are"
+          ],
+          "explanation": "Cấu trúc bị động 'are suspended over' – đèn giao thông được treo trên ngã tư."
+        },
+        {
+          "id": "p2_s4_t4_m06",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả xe đẩy hành lý đúng?",
+          "image_path": "images/part2/s4/luggage_cart.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Multiple bags are stacked on the luggage cart."
+            },
+            {
+              "id": "B",
+              "text": "Multiple bags are stacking on the luggage cart."
+            },
+            {
+              "id": "C",
+              "text": "There are a bag stacked on the cart."
+            },
+            {
+              "id": "D",
+              "text": "The luggage cart is stacking bags."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are stacked on' – bị động trạng thái, nhiều túi được xếp chồng trên xe đẩy."
+        },
+        {
+          "id": "p2_s4_t4_m07",
+          "type": "essay_typing",
+          "instruction": "Điền 'is' hoặc 'are'.",
+          "image_path": "images/part2/s4/art_gallery.jpg",
+          "content": "There ________ sculptures and paintings exhibited throughout the gallery.",
+          "options": [],
+          "correct_answers": [
+            "are"
+          ],
+          "explanation": "'sculptures and paintings' là số nhiều nên dùng 'There are'."
+        },
+        {
+          "id": "p2_s4_t4_m08",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả cảnh sân bay đúng?",
+          "image_path": "images/part2/s4/airport_runway.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "A large aircraft is parked on the tarmac near the terminal."
+            },
+            {
+              "id": "B",
+              "text": "A large aircraft is parking on the tarmac."
+            },
+            {
+              "id": "C",
+              "text": "There are a aircraft parked on the tarmac."
+            },
+            {
+              "id": "D",
+              "text": "The tarmac is parked near the aircraft."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'is parked on the tarmac' – bị động trạng thái, máy bay đậu trên đường băng."
+        },
+        {
+          "id": "p2_s4_t4_m09",
+          "type": "essay_typing",
+          "instruction": "Điền trạng từ chỉ sự gọn gàng.",
+          "image_path": "images/part2/s4/fruit_market.jpg",
+          "content": "Fresh produce is ________ displayed in wooden crates at the market.",
+          "options": [],
+          "correct_answers": [
+            "neatly",
+            "carefully",
+            "attractively"
+          ],
+          "explanation": "'neatly / carefully displayed' – nông sản tươi được bày một cách ngăn nắp trong các thùng gỗ."
+        },
+        {
+          "id": "p2_s4_t4_m10",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả văn phòng đúng?",
+          "image_path": "images/part2/s4/office_cubicles.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Workstations are separated by partitions in the open office."
+            },
+            {
+              "id": "B",
+              "text": "Workstations are separating by partitions."
+            },
+            {
+              "id": "C",
+              "text": "There is workstations in the office."
+            },
+            {
+              "id": "D",
+              "text": "The partitions are working in the office."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are separated by' – bị động trạng thái, các chỗ làm được ngăn cách bởi vách ngăn."
+        },
+        {
+          "id": "p2_s4_t4_m11",
+          "type": "essay_typing",
+          "instruction": "Điền 'is' hoặc 'are'.",
+          "image_path": "images/part2/s4/parking_garage.jpg",
+          "content": "There ________ multiple levels of parked vehicles in the garage.",
+          "options": [],
+          "correct_answers": [
+            "are"
+          ],
+          "explanation": "'multiple levels' là cụm danh từ số nhiều, dùng 'There are'."
+        },
+        {
+          "id": "p2_s4_t4_m12",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả đường chân trời thành phố ban đêm?",
+          "image_path": "images/part2/s4/city_skyline.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "The city skyline is dominated by towering skyscrapers."
+            },
+            {
+              "id": "B",
+              "text": "The city skyline is dominating by skyscrapers."
+            },
+            {
+              "id": "C",
+              "text": "Skyscrapers are dominating the city skyline."
+            },
+            {
+              "id": "D",
+              "text": "There are the city skyline dominated."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'is dominated by' – bị động trạng thái, đường chân trời được thống trị bởi các tòa nhà chọc trời."
+        },
+        {
+          "id": "p2_s4_t4_m13",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed chỉ trạng thái bị phủ.",
+          "image_path": "images/part2/s4/mountain_landscape.jpg",
+          "content": "The mountain peaks are ________ with a thick blanket of snow.",
+          "options": [],
+          "correct_answers": [
+            "covered",
+            "capped"
+          ],
+          "explanation": "'covered with / capped with' – đỉnh núi được phủ bởi một lớp tuyết dày."
+        },
+        {
+          "id": "p2_s4_t4_m14",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả căn bếp đúng?",
+          "image_path": "images/part2/s4/kitchen_appliances.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Modern appliances are neatly fitted into the kitchen cabinets."
+            },
+            {
+              "id": "B",
+              "text": "Modern appliances are neatly fitting into the kitchen."
+            },
+            {
+              "id": "C",
+              "text": "Someone is fitting appliances into the kitchen."
+            },
+            {
+              "id": "D",
+              "text": "There is appliances fitted in the kitchen."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are neatly fitted into' – bị động trạng thái, thiết bị được lắp gọn vào tủ bếp."
+        },
+        {
+          "id": "p2_s4_t4_m15",
+          "type": "essay_typing",
+          "instruction": "Điền V-ing chỉ trạng thái tựa vào.",
+          "image_path": "images/part2/s4/garden_tools.jpg",
+          "content": "Various garden tools are ________ against the wall of the shed.",
+          "options": [],
+          "correct_answers": [
+            "leaning",
+            "propped",
+            "resting"
+          ],
+          "explanation": "'leaning / resting / propped against' – các dụng cụ làm vườn đang tựa vào tường nhà kho."
+        },
+        {
+          "id": "p2_s4_t4_m16",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả phòng chờ đúng?",
+          "image_path": "images/part2/s4/waiting_area.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chairs are arranged in rows in the waiting area."
+            },
+            {
+              "id": "B",
+              "text": "Chairs are arranging in rows."
+            },
+            {
+              "id": "C",
+              "text": "There is chairs arranged in the waiting area."
+            },
+            {
+              "id": "D",
+              "text": "The waiting area is arranging chairs."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are arranged in rows' – bị động trạng thái, ghế được sắp xếp thành hàng trong khu vực chờ."
+        },
+        {
+          "id": "p2_s4_t4_m17",
+          "type": "essay_typing",
+          "instruction": "Điền 'is' hoặc 'are'.",
+          "image_path": "images/part2/s4/bulletin_board.jpg",
+          "content": "There ________ several notices and announcements pinned to the board.",
+          "options": [],
+          "correct_answers": [
+            "are"
+          ],
+          "explanation": "'several notices and announcements' là số nhiều, dùng 'There are'."
+        },
+        {
+          "id": "p2_s4_t4_m18",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả quầy hàng rong đúng?",
+          "image_path": "images/part2/s4/street_vendor.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "A variety of goods are displayed on the vendor's cart."
+            },
+            {
+              "id": "B",
+              "text": "A variety of goods is displayed on the vendor's cart."
+            },
+            {
+              "id": "C",
+              "text": "Someone is displaying goods on the cart."
+            },
+            {
+              "id": "D",
+              "text": "Both A and B are correct."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "'A variety of' có thể đi với cả 'is' và 'are'. Cả hai đều được chấp nhận trong tiếng Anh hiện đại."
+        },
+        {
+          "id": "p2_s4_t4_m19",
+          "type": "essay_typing",
+          "instruction": "Điền V chỉ trạng thái treo.",
+          "image_path": "images/part2/s4/hotel_lobby.jpg",
+          "content": "An elegant chandelier ________ from the ceiling of the hotel lobby.",
+          "options": [],
+          "correct_answers": [
+            "hangs",
+            "is suspended",
+            "is hanging"
+          ],
+          "explanation": "'hangs from / is suspended from / is hanging from' – đèn chùm treo/được treo từ trần của sảnh khách sạn."
+        },
+        {
+          "id": "p2_s4_t4_m20",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả cảnh nhà ga đúng?",
+          "image_path": "images/part2/s4/train_station.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Passengers are waiting on the platform near the tracks."
+            },
+            {
+              "id": "B",
+              "text": "The platform is waiting for passengers."
+            },
+            {
+              "id": "C",
+              "text": "Passengers are waited on the platform."
+            },
+            {
+              "id": "D",
+              "text": "There is passengers waiting on the platform."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are waiting on the platform' – hiện tại tiếp diễn mô tả hành khách đang chờ trên sân ga."
+        },
+        {
+          "id": "p2_s4_t4_m21",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed chỉ sự xếp chồng.",
+          "image_path": "images/part2/s4/books_stacked_floor.jpg",
+          "content": "Books are ________ in tall stacks on the floor.",
+          "options": [],
+          "correct_answers": [
+            "piled",
+            "stacked",
+            "arranged"
+          ],
+          "explanation": "'piled / stacked in tall stacks' – sách được xếp chồng thành những chồng cao trên sàn."
+        },
+        {
+          "id": "p2_s4_t4_m22",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả luống hoa đúng?",
+          "image_path": "images/part2/s4/flower_bed.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Colorful flowers are in full bloom in the garden bed."
+            },
+            {
+              "id": "B",
+              "text": "Colorful flowers are in full blooming."
+            },
+            {
+              "id": "C",
+              "text": "There is colorful flowers blooming."
+            },
+            {
+              "id": "D",
+              "text": "The garden bed is blooming flowers."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are in full bloom' – cụm từ cố định mô tả hoa đang nở rực rỡ."
+        },
+        {
+          "id": "p2_s4_t4_m23",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed chỉ trạng thái bị phủ.",
+          "image_path": "images/part2/s4/brick_wall.jpg",
+          "content": "The old brick wall is ________ with climbing plants and vines.",
+          "options": [],
+          "correct_answers": [
+            "covered",
+            "draped",
+            "adorned"
+          ],
+          "explanation": "'covered / draped with' – bức tường gạch cũ bị phủ đầy cây leo và dây leo."
+        },
+        {
+          "id": "p2_s4_t4_m24",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả cầu đi bộ trên cao đúng?",
+          "image_path": "images/part2/s4/pedestrian_bridge.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "A pedestrian bridge is suspended above the highway traffic."
+            },
+            {
+              "id": "B",
+              "text": "A pedestrian bridge is suspending above the highway."
+            },
+            {
+              "id": "C",
+              "text": "Someone is suspending the pedestrian bridge."
+            },
+            {
+              "id": "D",
+              "text": "There are a pedestrian bridge above the highway."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'is suspended above' – bị động trạng thái, cầu đi bộ được treo phía trên làn đường cao tốc."
+        },
+        {
+          "id": "p2_s4_t4_m25",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed chỉ trạng thái bỏ hoang.",
+          "image_path": "images/part2/s4/abandoned_building.jpg",
+          "content": "The old building appears to be ________ and left in disrepair.",
+          "options": [],
+          "correct_answers": [
+            "abandoned",
+            "neglected",
+            "deserted"
+          ],
+          "explanation": "'abandoned / neglected' – tòa nhà cũ có vẻ bị bỏ hoang và để trong tình trạng xuống cấp."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p2_s4_t4_h01",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed chỉ trạng thái bỏ hoang.",
+          "image_path": "images/part2/s4/overgrown_garden.jpg",
+          "content": "The garden has been left ________, with weeds overgrowing everything.",
+          "options": [],
+          "correct_answers": [
+            "untended",
+            "overgrown",
+            "neglected"
+          ],
+          "explanation": "'left untended / neglected / overgrown' – khu vườn bị bỏ mặc không chăm sóc, cỏ dại mọc um tùm."
+        },
+        {
+          "id": "p2_s4_t4_h02",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả cần cẩu cảng đúng nhất?",
+          "image_path": "images/part2/s4/harbor_cranes.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Multiple industrial cranes are positioned along the waterfront for loading cargo."
+            },
+            {
+              "id": "B",
+              "text": "Multiple industrial cranes are positioning along the waterfront."
+            },
+            {
+              "id": "C",
+              "text": "There is industrial cranes positioned along the waterfront."
+            },
+            {
+              "id": "D",
+              "text": "Someone is positioning industrial cranes."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are positioned along' – bị động trạng thái, nhiều cần cẩu công nghiệp được đặt dọc bờ kè để bốc dỡ hàng."
+        },
+        {
+          "id": "p2_s4_t4_h03",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed chỉ sự trang trí tinh xảo.",
+          "image_path": "images/part2/s4/intricate_architecture.jpg",
+          "content": "The building facade is ________ with intricate stone carvings and ornamental details.",
+          "options": [],
+          "correct_answers": [
+            "adorned",
+            "decorated",
+            "embellished"
+          ],
+          "explanation": "'adorned / decorated / embellished with' – mặt ngoài tòa nhà được trang trí bằng những hình chạm khắc đá tinh xảo."
+        },
+        {
+          "id": "p2_s4_t4_h04",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả ngã tư tấp nập đúng nhất?",
+          "image_path": "images/part2/s4/busy_intersection.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Traffic signals and road markings are clearly visible at the busy crossing."
+            },
+            {
+              "id": "B",
+              "text": "Traffic signals are visibly clear at the crossing."
+            },
+            {
+              "id": "C",
+              "text": "Road markings are painting at the intersection."
+            },
+            {
+              "id": "D",
+              "text": "There is traffic signals and markings visible."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are clearly visible at' – diễn tả trạng thái nhìn thấy rõ ràng của đèn hiệu và vạch kẻ đường."
+        },
+        {
+          "id": "p2_s4_t4_h05",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed chỉ trạng thái chất đầy.",
+          "image_path": "images/part2/s4/warehouse_shelves.jpg",
+          "content": "Rows of shelving units are ________ from floor to ceiling with inventory.",
+          "options": [],
+          "correct_answers": [
+            "packed",
+            "stacked",
+            "lined"
+          ],
+          "explanation": "'packed / lined from floor to ceiling' – các kệ hàng được xếp chật từ sàn đến trần."
+        },
+        {
+          "id": "p2_s4_t4_h06",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả cảnh phản chiếu dưới nước đúng nhất?",
+          "image_path": "images/part2/s4/reflections_water.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "The mirror-like surface of the lake reflects the surrounding landscape perfectly."
+            },
+            {
+              "id": "B",
+              "text": "The surrounding landscape is reflecting the lake surface."
+            },
+            {
+              "id": "C",
+              "text": "There are reflections reflecting on the lake."
+            },
+            {
+              "id": "D",
+              "text": "The lake is being reflected by the landscape."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'reflects the surrounding landscape perfectly' – mặt hồ phẳng lặng phản chiếu hoàn hảo cảnh vật xung quanh."
+        },
+        {
+          "id": "p2_s4_t4_h07",
+          "type": "essay_typing",
+          "instruction": "Điền tính từ chỉ trạng thái vắng vẻ.",
+          "image_path": "images/part2/s4/deserted_alley.jpg",
+          "content": "The narrow alleyway appears ________ and completely void of pedestrians.",
+          "options": [],
+          "correct_answers": [
+            "deserted",
+            "abandoned",
+            "empty"
+          ],
+          "explanation": "'deserted / empty and void of pedestrians' – con hẻm hẹp trông vắng vẻ, hoàn toàn không bóng người."
+        },
+        {
+          "id": "p2_s4_t4_h08",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả cửa hàng đồ cổ đúng nhất?",
+          "image_path": "images/part2/s4/antique_shop.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Assorted antiques and collectibles are densely packed into every available space."
+            },
+            {
+              "id": "B",
+              "text": "Assorted antiques are densely packing into every space."
+            },
+            {
+              "id": "C",
+              "text": "Someone is packing antiques into the shop."
+            },
+            {
+              "id": "D",
+              "text": "There is antiques densely packed in the shop."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are densely packed into' – bị động trạng thái, đồ cổ và vật phẩm sưu tầm được nhồi chật vào mọi không gian."
+        },
+        {
+          "id": "p2_s4_t4_h09",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed chỉ việc lắp dựng giàn giáo.",
+          "image_path": "images/part2/s4/construction_scaffolding.jpg",
+          "content": "Scaffolding has been ________ around the entire perimeter of the historic structure.",
+          "options": [],
+          "correct_answers": [
+            "erected",
+            "installed",
+            "put up"
+          ],
+          "explanation": "'erected / installed around' – giàn giáo đã được dựng lên bao quanh toàn bộ chu vi công trình lịch sử."
+        },
+        {
+          "id": "p2_s4_t4_h10",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả cảnh đường cao tốc đúng nhất?",
+          "image_path": "images/part2/s4/highway_overpass.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Multiple highway lanes converge and diverge beneath the elevated overpass."
+            },
+            {
+              "id": "B",
+              "text": "The elevated overpass converges highway lanes."
+            },
+            {
+              "id": "C",
+              "text": "There is multiple lanes beneath the overpass."
+            },
+            {
+              "id": "D",
+              "text": "Highway lanes are being converged beneath the overpass."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'converge and diverge beneath' – dùng hiện tại đơn mô tả đặc điểm tĩnh của các làn đường hội tụ và phân kỳ dưới cầu vượt."
+        },
+        {
+          "id": "p2_s4_t4_h11",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed chỉ sự chuẩn bị sự kiện.",
+          "image_path": "images/part2/s4/banquet_hall.jpg",
+          "content": "The banquet hall is ________ for a formal event with elaborate decorations.",
+          "options": [],
+          "correct_answers": [
+            "set up",
+            "prepared",
+            "arranged"
+          ],
+          "explanation": "'set up / prepared for a formal event' – hội trường tiệc được bố trí/chuẩn bị cho một sự kiện trang trọng."
+        },
+        {
+          "id": "p2_s4_t4_h12",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả phòng thí nghiệm đúng nhất?",
+          "image_path": "images/part2/s4/laboratory_equipment.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Precision instruments are carefully arranged on the laboratory workbench."
+            },
+            {
+              "id": "B",
+              "text": "Precision instruments are carefully arranging on the workbench."
+            },
+            {
+              "id": "C",
+              "text": "There is precision instruments on the workbench."
+            },
+            {
+              "id": "D",
+              "text": "Someone is carefully arranging instruments."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are carefully arranged on' – bị động trạng thái, các dụng cụ chính xác được sắp xếp cẩn thận trên bàn làm việc."
+        },
+        {
+          "id": "p2_s4_t4_h13",
+          "type": "essay_typing",
+          "instruction": "Điền V chỉ sự chạy dài.",
+          "image_path": "images/part2/s4/power_lines.jpg",
+          "content": "A network of cables and wires ________ between the utility poles along the road.",
+          "options": [],
+          "correct_answers": [
+            "is strung",
+            "runs",
+            "is stretched"
+          ],
+          "explanation": "'is strung / runs between' – mạng lưới cáp và dây điện được giăng/chạy giữa các cột điện."
+        },
+        {
+          "id": "p2_s4_t4_h14",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả công trình pin mặt trời đúng nhất?",
+          "image_path": "images/part2/s4/solar_panels.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "An array of photovoltaic panels is installed across the slanted rooftop surface."
+            },
+            {
+              "id": "B",
+              "text": "An array of photovoltaic panels are installed across the rooftop."
+            },
+            {
+              "id": "C",
+              "text": "An array of photovoltaic panels is installing across the rooftop."
+            },
+            {
+              "id": "D",
+              "text": "Someone is installing photovoltaic panels."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'An array of + danh từ số nhiều' vẫn đi với 'is' (cụm đơn vị). 'is installed across' – bị động trạng thái."
+        },
+        {
+          "id": "p2_s4_t4_h15",
+          "type": "essay_typing",
+          "instruction": "Điền tính từ chỉ sự phong phú/đa dạng.",
+          "image_path": "images/part2/s4/botanical_greenhouse.jpg",
+          "content": "A ________ variety of tropical plants and exotic foliage is grown inside the greenhouse.",
+          "options": [],
+          "correct_answers": [
+            "diverse",
+            "wide",
+            "rich"
+          ],
+          "explanation": "'a diverse / wide / rich variety of' – đa dạng các loài cây nhiệt đới và tán lá kỳ lạ được trồng trong nhà kính."
+        },
+        {
+          "id": "p2_s4_t4_h16",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả cảng container đúng nhất?",
+          "image_path": "images/part2/s4/shipping_containers.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Freight containers are stacked in towering columns throughout the shipping yard."
+            },
+            {
+              "id": "B",
+              "text": "Freight containers are stacking in towering columns."
+            },
+            {
+              "id": "C",
+              "text": "There is freight containers stacked in the yard."
+            },
+            {
+              "id": "D",
+              "text": "The shipping yard is stacking containers."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are stacked in towering columns' – bị động trạng thái, container được xếp thành những cột cao chọc trời khắp bãi cảng."
+        },
+        {
+          "id": "p2_s4_t4_h17",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed chỉ sự đổ vỡ theo thời gian.",
+          "image_path": "images/part2/s4/ruined_castle.jpg",
+          "content": "The ancient castle walls have been ________ by centuries of weathering and neglect.",
+          "options": [],
+          "correct_answers": [
+            "crumbled",
+            "deteriorated",
+            "eroded"
+          ],
+          "explanation": "'crumbled / eroded by centuries of weathering' – tường lâu đài cổ đã bị xói mòn/sụp đổ sau nhiều thế kỷ."
+        },
+        {
+          "id": "p2_s4_t4_h18",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả hành lang đối xứng đúng nhất?",
+          "image_path": "images/part2/s4/symmetrical_hallway.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "The corridor is characterized by perfect symmetry and evenly spaced architectural arches."
+            },
+            {
+              "id": "B",
+              "text": "The corridor is characterizing by symmetry and arches."
+            },
+            {
+              "id": "C",
+              "text": "There are a corridor characterized by symmetry."
+            },
+            {
+              "id": "D",
+              "text": "Arches are characterizing the corridor."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'is characterized by' – bị động trạng thái, hành lang được đặc trưng bởi sự đối xứng hoàn hảo và những vòm kiến trúc đều nhau."
+        },
+        {
+          "id": "p2_s4_t4_h19",
+          "type": "essay_typing",
+          "instruction": "Điền danh từ chỉ ký hiệu/biển báo.",
+          "image_path": "images/part2/s4/subway_platform.jpg",
+          "content": "Warning markings and safety ________ are clearly stenciled along the platform edge.",
+          "options": [],
+          "correct_answers": [
+            "signs",
+            "symbols",
+            "notices"
+          ],
+          "explanation": "'safety signs / symbols / notices' – biển cảnh báo và ký hiệu an toàn được in khuôn rõ ràng dọc mép sân ga."
+        },
+        {
+          "id": "p2_s4_t4_h20",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả bến du thuyền đúng nhất?",
+          "image_path": "images/part2/s4/marina_yachts.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Luxury yachts are berthed in orderly rows at the marina."
+            },
+            {
+              "id": "B",
+              "text": "Luxury yachts are berthing in orderly rows."
+            },
+            {
+              "id": "C",
+              "text": "There is luxury yachts berthed at the marina."
+            },
+            {
+              "id": "D",
+              "text": "The marina is berthing luxury yachts."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are berthed in orderly rows' – bị động trạng thái, du thuyền cao cấp cập bến thành hàng ngăn nắp."
+        },
+        {
+          "id": "p2_s4_t4_h21",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed chỉ trạng thái bị chôn vùi.",
+          "image_path": "images/part2/s4/snowy_driveway.jpg",
+          "content": "The driveway is completely ________ under a heavy accumulation of overnight snow.",
+          "options": [],
+          "correct_answers": [
+            "buried",
+            "covered",
+            "hidden"
+          ],
+          "explanation": "'buried / covered under' – đường lái xe bị chôn hoàn toàn dưới lớp tuyết dày tích tụ qua đêm."
+        },
+        {
+          "id": "p2_s4_t4_h22",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả sân khấu nhà hát trước buổi diễn đúng nhất?",
+          "image_path": "images/part2/s4/theater_stage.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "The stage is set with elaborate props and scenery behind the closed curtain."
+            },
+            {
+              "id": "B",
+              "text": "The curtain is setting the stage."
+            },
+            {
+              "id": "C",
+              "text": "Someone is setting props on the stage."
+            },
+            {
+              "id": "D",
+              "text": "There are a stage set with props."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'is set with' – sân khấu được bố trí với đạo cụ và cảnh nền cầu kỳ sau tấm màn nhung đóng kín."
+        },
+        {
+          "id": "p2_s4_t4_h23",
+          "type": "essay_typing",
+          "instruction": "Điền tính từ chỉ sự đan xen phức tạp.",
+          "image_path": "images/part2/s4/industrial_pipes.jpg",
+          "content": "An intricate system of ________ pipes runs throughout the factory ceiling.",
+          "options": [],
+          "correct_answers": [
+            "interlocking",
+            "interconnected",
+            "industrial"
+          ],
+          "explanation": "'interlocking / interconnected pipes' – hệ thống đường ống đan xen phức tạp chạy khắp trần nhà máy."
+        },
+        {
+          "id": "p2_s4_t4_h24",
+          "type": "multiple_choice",
+          "instruction": "Câu nào mô tả chợ ngoài trời đúng nhất?",
+          "image_path": "images/part2/s4/outdoor_market_canopies.jpg",
+          "options": [
+            {
+              "id": "A",
+              "text": "Colorful canopies and awnings are stretched over the market stalls to provide shade."
+            },
+            {
+              "id": "B",
+              "text": "Colorful canopies are stretching over the market stalls."
+            },
+            {
+              "id": "C",
+              "text": "Market stalls are stretched by canopies."
+            },
+            {
+              "id": "D",
+              "text": "There is canopies stretched over the market."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'are stretched over … to provide shade' – mái che đầy màu sắc được căng phủ trên các gian hàng để che nắng."
+        },
+        {
+          "id": "p2_s4_t4_h25",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed chỉ sự uốn nắn theo hướng.",
+          "image_path": "images/part2/s4/vineyard_rows.jpg",
+          "content": "The grapevines are carefully ________ along parallel support wires in neat rows.",
+          "options": [],
+          "correct_answers": [
+            "trained",
+            "guided",
+            "arranged"
+          ],
+          "explanation": "'trained along parallel wires' – cây nho được uốn nắn/hướng dẫn cẩn thận dọc theo các dây đỡ song song thành hàng ngăn nắp."
+        }
+      ]
+    }
+  ]
+}

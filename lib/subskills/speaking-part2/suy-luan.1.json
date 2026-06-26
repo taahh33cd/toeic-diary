@@ -1,0 +1,1975 @@
+﻿{
+    "part":  "Part2",
+    "section":  "5. Suy luận và Cảm nhận",
+    "test_number":  1,
+    "title":  "Test 1 - Suy luận \u0026 Cảm nhận (looks / seems / might / probably / overall)",
+    "target_level":  "Ng??i m?t g?c",
+    "total_questions":  75,
+    "levels":  [
+                   {
+                       "level":  "Easy",
+                       "exercises":  [
+                                         {
+                                             "id":  "p2_s5_t1_e01",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một người phụ nữ đang cười. Chọn cảm nhận đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e01.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "She looks happy."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "She looks angry."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "She looks tired."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "She looks sad."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Người phụ nữ đang cười nên cảm nhận phù hợp là happy.",
+                                             "image_query":  "smiling woman portrait",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=smiling+woman+portrait"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e02",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một người đàn ông đang ngủ trên ghế. Chọn câu đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e02.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "He looks tired."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "He looks excited."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "He looks busy."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "He looks hungry."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Đang ngủ thường cho thấy người đó mệt, nên dùng He looks tired.",
+                                             "image_query":  "tired man sleeping on chair",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=tired+man+sleeping+on+chair"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e03",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Nhiều người đang đi bộ trên đường. Chọn cảm nhận đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e03.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "The street looks busy."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "The street looks empty."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "The street looks quiet."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "The street looks small."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Có nhiều người trên đường nên đường phố trông bận rộn, đông đúc.",
+                                             "image_query":  "busy city street pedestrians",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=busy+city+street+pedestrians"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e04",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Hai người đang ngồi uống cà phê và cười. Chọn câu đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e04.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "They seem relaxed."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "They seem angry."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "They seem tired."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "They seem lost."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Uống cà phê và cười thường tạo cảm giác thoải mái.",
+                                             "image_query":  "friends drinking coffee smiling",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=friends+drinking+coffee+smiling"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e05",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một học sinh đang nhìn lên bảng. Chọn câu đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e05.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "He looks focused."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "He looks asleep."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "He looks angry."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "He looks cold."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Nhìn lên bảng cho thấy học sinh đang tập trung.",
+                                             "image_query":  "student looking at classroom board",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=student+looking+at+classroom+board"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e06",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Chọn câu kết bài phù hợp cho ảnh công viên yên tĩnh.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e06.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "Overall, it looks peaceful."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "Overall, it looks noisy."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "Overall, it looks dangerous."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "Overall, it looks broken."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Công viên yên tĩnh phù hợp với peaceful.",
+                                             "image_query":  "peaceful park walking path",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=peaceful+park+walking+path"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e07",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một người đang cầm nhiều túi mua sắm. Chọn suy luận đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e07.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "She is probably shopping."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "She is probably swimming."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "She is probably sleeping."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "She is probably driving."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Cầm nhiều túi mua sắm nên có thể cô ấy đang mua sắm.",
+                                             "image_query":  "woman carrying shopping bags",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=woman+carrying+shopping+bags"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e08",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một người phục vụ đang cầm thực đơn. Chọn nơi phù hợp.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e08.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "It looks like a restaurant."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "It looks like a hospital."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "It looks like a library."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "It looks like a train station."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Người phục vụ và thực đơn là dấu hiệu của nhà hàng.",
+                                             "image_query":  "waiter holding menu restaurant",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=waiter+holding+menu+restaurant"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e09",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Hoàn thành câu: She looks ____.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e09.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "happy"
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "bus"
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "table"
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "office"
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Sau looks cần tính từ chỉ cảm xúc hoặc trạng thái. Happy là tính từ.",
+                                             "image_query":  "smiling woman portrait",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=smiling+woman+portrait"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e10",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Hoàn thành câu: They seem ____.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e10.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "relaxed"
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "restaurant"
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "computer"
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "street"
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Sau seem thường dùng tính từ. Relaxed là tính từ phù hợp.",
+                                             "image_query":  "relaxed people cafe",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=relaxed+people+cafe"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e11",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Chọn câu đúng để nói \u0027Trông anh ấy mệt\u0027.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e11.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "He looks tired."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "He looks table."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "He looks office."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "He looks restaurant."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Cấu trúc đúng là He looks + tính từ.",
+                                             "image_query":  "tired man portrait",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=tired+man+portrait"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e12",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Chọn câu đúng để nói \u0027Có vẻ là một văn phòng\u0027.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e12.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "It looks like an office."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "It looks happy."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "It looks coworker."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "It seems tired."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Khi đoán địa điểm, dùng It looks like + danh từ.",
+                                             "image_query":  "modern office interior",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=modern+office+interior"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e13",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một người đang chạy trong công viên. Chọn câu đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e13.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "He looks active."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "He looks asleep."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "He looks broken."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "He looks empty."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Đang chạy cho thấy người đó năng động.",
+                                             "image_query":  "man running in park",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=man+running+in+park"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e14",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Hai người mặc đồ công sở. Chọn suy luận đơn giản.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e14.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "They might be coworkers."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "They might be children."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "They might be animals."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "They might be food."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Mặc đồ công sở nên có thể họ là đồng nghiệp.",
+                                             "image_query":  "business coworkers office",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=business+coworkers+office"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e15",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Chọn từ phù hợp: Overall, it looks ____.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e15.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "nice"
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "man"
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "laptop"
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "bus"
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Sau looks cần tính từ. Nice là tính từ.",
+                                             "image_query":  "pleasant everyday scene",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=pleasant+everyday+scene"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e16",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Quán cà phê ít người, ánh sáng nhẹ. Chọn câu kết.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e16.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "Overall, it looks quiet."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "Overall, it looks crowded."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "Overall, it looks dirty."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "Overall, it looks fast."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Ít người và ánh sáng nhẹ tạo cảm giác yên tĩnh.",
+                                             "image_query":  "quiet coffee shop interior",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=quiet+coffee+shop+interior"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e17",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một người đang nhìn điện thoại gần trạm xe buýt. Chọn suy luận đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e17.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "He might be waiting for a bus."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "He might be cooking dinner."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "He might be swimming."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "He might be teaching a class."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Đứng gần trạm xe buýt nên có thể đang chờ xe buýt.",
+                                             "image_query":  "man waiting at bus stop phone",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=man+waiting+at+bus+stop+phone"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e18",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Chọn câu có nghĩa phỏng đoán nhẹ.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e18.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "She might be a customer."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "She is a table."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "She are happy."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "She looks restaurant."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Might be dùng để nói phỏng đoán khi không chắc chắn.",
+                                             "image_query":  "female customer checkout counter",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=female+customer+checkout+counter"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e19",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một lớp học có giáo viên và học sinh. Chọn câu đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e19.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "It looks like a classroom."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "It looks like a beach."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "It looks like a supermarket."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "It looks like a kitchen."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Có giáo viên và học sinh nên có vẻ là lớp học.",
+                                             "image_query":  "teacher students classroom",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=teacher+students+classroom"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e20",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Chọn câu kết bài đơn giản nhất.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e20.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "Overall, it looks good."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "Overall, good it looks."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "Looks overall good it."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "It overall good looks."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Trật tự đúng là Overall, it looks + tính từ.",
+                                             "image_query":  "simple pleasant scene",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=simple+pleasant+scene"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e21",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một người đang cười với trẻ em. Chọn cảm nhận đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e21.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "They seem happy."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "They seem angry."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "They seem asleep."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "They seem lost."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Cười thường thể hiện sự vui vẻ.",
+                                             "image_query":  "adult smiling with children",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=adult+smiling+with+children"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e22",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Hoàn thành câu: It looks like a ____.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e22.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "park"
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "happy"
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "tired"
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "busy"
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Sau It looks like a cần danh từ. Park là danh từ.",
+                                             "image_query":  "green park landscape",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=green+park+landscape"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e23",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Hoàn thành câu: The people seem ____.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e23.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "busy"
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "office"
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "computer"
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "menu"
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Busy là tính từ, phù hợp sau seem.",
+                                             "image_query":  "busy office people",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=busy+office+people"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e24",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một người đang ôm nhiều tài liệu và đi nhanh. Chọn cảm nhận đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e24.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "She looks busy."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "She looks relaxed."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "She looks asleep."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "She looks empty."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Ôm nhiều tài liệu và đi nhanh cho thấy cô ấy bận.",
+                                             "image_query":  "woman carrying documents office",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=woman+carrying+documents+office"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_e25",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Chọn câu dùng để kết thúc bài miêu tả ảnh.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_e25.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "Overall, it looks nice."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "First, I see a man."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "On the left, there is a chair."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "In the background, I see trees."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Overall thường dùng để chốt lại bài nói.",
+                                             "image_query":  "nice everyday scene",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=nice+everyday+scene"
+                                         }
+                                     ]
+                   },
+                   {
+                       "level":  "Medium",
+                       "exercises":  [
+                                         {
+                                             "id":  "p2_s5_t1_m01",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Hai người nhìn laptop, một người chỉ vào màn hình. Chọn suy luận tốt nhất.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m26.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "They might be discussing something on the computer."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "They might be eating lunch outside."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "They might be playing tennis."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "They might be cleaning a kitchen."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Nhìn laptop và chỉ vào màn hình cho thấy họ có thể đang thảo luận nội dung trên máy tính.",
+                                             "image_query":  "coworkers looking at laptop office",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=coworkers+looking+at+laptop+office"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m02",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một người phụ nữ đứng trước kệ hàng và cầm giỏ. Chọn câu phù hợp.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m27.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "She is probably shopping for groceries."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "She is probably giving a presentation."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "She is probably riding a bicycle."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "She is probably waiting at an airport."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Kệ hàng và giỏ mua sắm cho thấy cô ấy có thể đang mua đồ.",
+                                             "image_query":  "woman grocery shopping supermarket aisle",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=woman+grocery+shopping+supermarket+aisle"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m03",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một người đàn ông nhìn bản đồ trên điện thoại. Chọn suy luận đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m28.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "He might be looking for directions."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "He might be washing dishes."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "He might be teaching math."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "He might be serving food."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Nhìn bản đồ trên điện thoại thường là đang tìm đường.",
+                                             "image_query":  "man using phone bus stop map",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=man+using+phone+bus+stop+map"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m04",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Ba người mặc đồ công sở ngồi quanh bàn. Chọn câu suy luận về quan hệ.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m29.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "They are probably coworkers."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "They are probably tourists."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "They are probably students at a playground."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "They are probably customers at a beach."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Đồ công sở và bàn họp gợi ý họ là đồng nghiệp.",
+                                             "image_query":  "business people meeting around table",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=business+people+meeting+around+table"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m05",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một người phục vụ đưa thực đơn cho hai khách. Chọn câu đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m30.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "The waiter might be explaining the menu."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "The waiter might be fixing a car."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "The waiter might be planting flowers."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "The waiter might be buying clothes."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Người phục vụ đưa thực đơn nên có thể đang giải thích thực đơn.",
+                                             "image_query":  "waiter explaining menu restaurant",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=waiter+explaining+menu+restaurant"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m06",
+                                             "type":  "fill_blank",
+                                             "instruction":  "Điền từ phù hợp: They are ____ coworkers.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m31.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "probably"
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "happy"
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "table"
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "restaurant"
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Probably dùng để phỏng đoán: có lẽ họ là đồng nghiệp.",
+                                             "image_query":  "business coworkers meeting",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=business+coworkers+meeting"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m07",
+                                             "type":  "fill_blank",
+                                             "instruction":  "Điền từ phù hợp: The object ____ be a phone.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m32.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "might"
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "looks"
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "overall"
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "happy"
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Might be dùng khi không chắc chắn vật đó là gì.",
+                                             "image_query":  "small object on table phone wallet",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=small+object+on+table+phone+wallet"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m08",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Chọn câu an toàn khi nhìn không rõ một vật trên bàn.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m33.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "It might be a phone."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "It is definitely a phone."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "It is surely a large bus."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "It is never a phone."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Khi không chắc, dùng might be để nói an toàn.",
+                                             "image_query":  "small object on table phone",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=small+object+on+table+phone"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m09",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một gia đình ăn ngoài trời trong công viên. Chọn câu kết phù hợp.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m34.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "Overall, they seem to be enjoying a meal together."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "Overall, they seem to be repairing a machine."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "Overall, they seem to be working in an office."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "Overall, they seem to be waiting in a hospital."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Gia đình ăn ngoài trời phù hợp với enjoying a meal together.",
+                                             "image_query":  "family picnic meal park",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=family+picnic+meal+park"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m10",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một người đang đứng trước bảng và nhiều người đang nhìn lên. Chọn suy luận đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m35.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "The person is probably giving a presentation."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "The person is probably cooking dinner."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "The person is probably swimming."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "The person is probably shopping."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Đứng trước bảng và có người nghe thường là đang thuyết trình hoặc giảng bài.",
+                                             "image_query":  "person giving presentation whiteboard",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=person+giving+presentation+whiteboard"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m11",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Chọn câu có ngữ pháp đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m36.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "They seem relaxed."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "They seems relaxed."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "They look like happy."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "They might busy."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "They đi với seem, không thêm s. Sau seem dùng tính từ relaxed.",
+                                             "image_query":  "relaxed cheerful friends sitting grass",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=relaxed+cheerful+friends+sitting+grass"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m12",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Chọn câu phù hợp để chốt ảnh văn phòng đông người.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m37.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "Overall, it seems like a busy workplace."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "Overall, it seems like a quiet beach."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "Overall, it seems like an empty park."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "Overall, it seems like a small bedroom."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Văn phòng đông người phù hợp với busy workplace.",
+                                             "image_query":  "busy workplace office people",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=busy+workplace+office+people"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m13",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Người phụ nữ mặc đồng phục, đứng sau quầy. Chọn suy luận đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m38.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "She might be an employee."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "She might be a passenger on a plane."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "She might be a student in a park."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "She might be a driver in a car."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Mặc đồng phục và đứng sau quầy thường là nhân viên.",
+                                             "image_query":  "employee uniform behind counter",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=employee+uniform+behind+counter"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m14",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một nhóm người ngồi trên cỏ, nói chuyện và cười. Chọn cảm nhận đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m39.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "They seem relaxed and cheerful."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "They seem angry and tired."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "They seem lost and worried."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "They seem busy and serious."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Ngồi trên cỏ, nói chuyện và cười tạo cảm giác vui vẻ, thoải mái.",
+                                             "image_query":  "friends laughing sitting on grass",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=friends+laughing+sitting+on+grass"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m15",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Chọn câu diễn đạt \u0027Tôi nghĩ đây là một buổi họp\u0027.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m40.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "I think this is a meeting."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "I think this happy."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "I think this is tired."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "I think this looks coworkers."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Cấu trúc đúng là I think this is + danh từ.",
+                                             "image_query":  "business meeting room",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=business+meeting+room"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m16",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Người đàn ông cầm vali ở nhà ga. Chọn suy luận đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m41.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "He might be traveling."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "He might be cooking."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "He might be sleeping at home."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "He might be cutting paper."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Vali và nhà ga gợi ý người đó đang đi du lịch hoặc di chuyển.",
+                                             "image_query":  "traveler suitcase train station",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=traveler+suitcase+train+station"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m17",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một người nhìn đồng hồ và đứng ở cửa. Chọn suy luận hợp lý.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m42.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "She might be waiting for someone."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "She might be eating dinner."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "She might be swimming in a pool."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "She might be washing a car."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Nhìn đồng hồ và đứng chờ ở cửa thường là đang đợi ai đó.",
+                                             "image_query":  "woman checking watch doorway",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=woman+checking+watch+doorway"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m18",
+                                             "type":  "fill_blank",
+                                             "instruction":  "Điền từ: Overall, the people ____ happy.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m43.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "seem"
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "is"
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "looks like"
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "might"
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "The people là số nhiều nên dùng seem + tính từ.",
+                                             "image_query":  "happy people group",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=happy+people+group"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m19",
+                                             "type":  "fill_blank",
+                                             "instruction":  "Điền từ: It ____ like a small cafe.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m44.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "looks"
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "look"
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "seem"
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "might"
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "It đi với looks. Cấu trúc: It looks like + danh từ.",
+                                             "image_query":  "small cafe interior",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=small+cafe+interior"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m20",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một người đàn ông đang lau bàn trong nhà hàng. Chọn suy luận đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m45.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "He is probably cleaning the table."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "He is probably driving a bus."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "He is probably studying in class."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "He is probably buying groceries."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Hành động lau bàn cho thấy anh ấy đang dọn bàn.",
+                                             "image_query":  "waiter cleaning table restaurant",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=waiter+cleaning+table+restaurant"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m21",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Chọn câu tốt nhất khi muốn nói không chắc chắn.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m46.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "It seems to be a printer."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "It is 100 percent a printer."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "It never looks like a printer."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "It printer happy."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "It seems to be dùng khi nhìn không rõ hoặc chưa chắc chắn.",
+                                             "image_query":  "office printer desk",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=office+printer+desk"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m22",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một cửa hàng có nhiều quần áo treo trên giá. Chọn câu kết đúng.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m47.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "Overall, this picture shows a shopping scene."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "Overall, this picture shows a classroom scene."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "Overall, this picture shows a hospital scene."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "Overall, this picture shows a beach scene."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Nhiều quần áo trong cửa hàng là cảnh mua sắm.",
+                                             "image_query":  "clothing store shopping scene",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=clothing+store+shopping+scene"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m23",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Hai người đang bắt tay trong văn phòng. Chọn suy luận phù hợp.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m48.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "They might be meeting for business."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "They might be playing in the ocean."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "They might be cooking in a kitchen."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "They might be running in a park."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Bắt tay trong văn phòng thường liên quan đến công việc hoặc gặp gỡ kinh doanh.",
+                                             "image_query":  "business handshake office",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=business+handshake+office"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m24",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Chọn câu phù hợp nhất cho ảnh nhà ga đông người.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m49.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "Overall, it looks crowded."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "Overall, it looks empty."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "Overall, it looks quiet and private."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "Overall, it looks like a bedroom."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Nhà ga đông người nên dùng crowded.",
+                                             "image_query":  "crowded train station people",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=crowded+train+station+people"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_m25",
+                                             "type":  "multiple_choice",
+                                             "instruction":  "Ảnh: Một người đang ngồi một mình với sách và cà phê. Chọn cảm nhận hợp lý.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_m50.jpg",
+                                             "options":  [
+                                                             {
+                                                                 "id":  "A",
+                                                                 "text":  "He seems relaxed."
+                                                             },
+                                                             {
+                                                                 "id":  "B",
+                                                                 "text":  "He seems angry."
+                                                             },
+                                                             {
+                                                                 "id":  "C",
+                                                                 "text":  "He seems lost."
+                                                             },
+                                                             {
+                                                                 "id":  "D",
+                                                                 "text":  "He seems noisy."
+                                                             }
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "A"
+                                                                 ],
+                                             "explanation":  "Ngồi đọc sách với cà phê thường tạo cảm giác thư giãn.",
+                                             "image_query":  "relaxed man reading book coffee",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=relaxed+man+reading+book+coffee"
+                                         }
+                                     ]
+                   },
+                   {
+                       "level":  "Hard",
+                       "exercises":  [
+                                         {
+                                             "id":  "p2_s5_t1_h01",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Hai người nhìn laptop trong văn phòng. Viết 1 câu suy luận với \u0027might\u0027.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h51.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "They might be discussing a project."
+                                                                 ],
+                                             "explanation":  "Câu mẫu dùng might be để phỏng đoán nhẹ, phù hợp khi không chắc họ đang làm gì.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "They might be discussing a project.",
+                                             "answer_criteria":  "Câu cần có might be hoặc might + V, và suy luận hợp lý về công việc/laptop.",
+                                             "image_query":  "two coworkers laptop office discussion",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=two+coworkers+laptop+office+discussion"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h02",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một người phụ nữ cười và cầm túi mua sắm. Viết 1 câu cảm nhận.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h52.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "She looks happy."
+                                                                 ],
+                                             "explanation":  "Cười là dấu hiệu đơn giản để suy luận cảm xúc tích cực.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "She looks happy.",
+                                             "answer_criteria":  "Câu nên dùng looks/seems + tính từ cảm xúc như happy, relaxed hoặc excited.",
+                                             "image_query":  "happy woman shopping bags",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=happy+woman+shopping+bags"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h03",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một người đàn ông nhìn điện thoại ở trạm xe buýt. Viết 1 câu với \u0027probably\u0027.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h53.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "He is probably waiting for a bus."
+                                                                 ],
+                                             "explanation":  "Trạm xe buýt là manh mối để đoán người đó đang chờ xe.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "He is probably waiting for a bus.",
+                                             "answer_criteria":  "Câu cần dùng probably và liên quan đến chờ xe buýt hoặc tìm đường.",
+                                             "image_query":  "man waiting bus stop phone",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=man+waiting+bus+stop+phone"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h04",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một lớp học có giáo viên đứng trước bảng. Viết 1 câu suy luận.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h54.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "The teacher is probably explaining something."
+                                                                 ],
+                                             "explanation":  "Giáo viên đứng trước bảng thường đang giải thích bài.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "The teacher is probably explaining something.",
+                                             "answer_criteria":  "Câu nên suy luận về giáo viên, bài học, hoặc hoạt động trong lớp.",
+                                             "image_query":  "teacher explaining classroom board",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=teacher+explaining+classroom+board"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h05",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một công viên có cây xanh và vài người đi bộ. Viết 1 câu kết bài với \u0027Overall\u0027.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h55.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "Overall, it looks peaceful."
+                                                                 ],
+                                             "explanation":  "Công viên có cây xanh và người đi bộ thường tạo cảm giác yên bình.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "Overall, it looks peaceful.",
+                                             "answer_criteria":  "Câu cần bắt đầu bằng Overall và nêu cảm nhận chung phù hợp.",
+                                             "image_query":  "peaceful park trees people walking",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=peaceful+park+trees+people+walking"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h06",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một vật nhỏ trên bàn nhìn không rõ. Viết 1 câu an toàn khi không chắc.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h56.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "It might be a phone."
+                                                                 ],
+                                             "explanation":  "Khi không nhìn rõ, dùng might be giúp câu nói an toàn hơn.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "It might be a phone.",
+                                             "answer_criteria":  "Câu nên dùng might be, seems to be hoặc looks like để tránh khẳng định chắc chắn.",
+                                             "image_query":  "unclear small object on table",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=unclear+small+object+on+table"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h07",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Ba người mặc đồ công sở ngồi quanh bàn. Viết 1 câu suy luận về quan hệ.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h57.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "They are probably coworkers."
+                                                                 ],
+                                             "explanation":  "Đồ công sở và bàn họp là dấu hiệu của môi trường làm việc.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "They are probably coworkers.",
+                                             "answer_criteria":  "Câu cần đoán quan hệ hợp lý như coworkers, colleagues hoặc business partners.",
+                                             "image_query":  "business coworkers around table",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=business+coworkers+around+table"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h08",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một người phục vụ đưa thực đơn cho khách. Viết 1 câu với \u0027might be\u0027.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h58.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "The waiter might be explaining the menu."
+                                                                 ],
+                                             "explanation":  "Đưa thực đơn thường đi kèm việc giải thích hoặc giới thiệu món.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "The waiter might be explaining the menu.",
+                                             "answer_criteria":  "Câu cần dùng might be và liên quan đến nhà hàng/thực đơn/khách hàng.",
+                                             "image_query":  "waiter menu restaurant customer",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=waiter+menu+restaurant+customer"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h09",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một quán cà phê ít người, không gian yên tĩnh. Viết 1 câu kết bài.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h59.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "Overall, it seems like a quiet cafe."
+                                                                 ],
+                                             "explanation":  "Ít người và không gian yên tĩnh phù hợp với quiet cafe.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "Overall, it seems like a quiet cafe.",
+                                             "answer_criteria":  "Câu cần chốt lại bằng Overall hoặc nêu cảm nhận chung về nơi chốn.",
+                                             "image_query":  "quiet cafe interior",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=quiet+cafe+interior"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h10",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một người ôm nhiều tài liệu và đi nhanh. Viết 1 câu cảm nhận.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h60.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "She looks busy."
+                                                                 ],
+                                             "explanation":  "Nhiều tài liệu và đi nhanh cho thấy người đó bận.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "She looks busy.",
+                                             "answer_criteria":  "Câu nên dùng looks/seems + busy, rushed hoặc focused.",
+                                             "image_query":  "busy woman carrying documents office",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=busy+woman+carrying+documents+office"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h11",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một gia đình ăn ngoài trời trong công viên. Viết 1 câu cảm nhận chung.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h61.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "They seem to be enjoying their meal."
+                                                                 ],
+                                             "explanation":  "Ăn ngoài trời cùng gia đình thường tạo cảm giác vui và thoải mái.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "They seem to be enjoying their meal.",
+                                             "answer_criteria":  "Câu nên nói về cảm nhận vui vẻ, thư giãn hoặc cùng ăn uống.",
+                                             "image_query":  "family eating picnic park",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=family+eating+picnic+park"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h12",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một người đứng trước kệ hàng trong siêu thị. Viết 1 câu suy luận.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h62.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "She might be choosing something to buy."
+                                                                 ],
+                                             "explanation":  "Đứng trước kệ hàng thường là đang chọn sản phẩm.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "She might be choosing something to buy.",
+                                             "answer_criteria":  "Câu cần suy luận về mua sắm, chọn sản phẩm hoặc tìm đồ.",
+                                             "image_query":  "woman choosing groceries supermarket shelf",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=woman+choosing+groceries+supermarket+shelf"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h13",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Hai người bắt tay trong văn phòng. Viết 1 câu suy luận.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h63.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "They might be having a business meeting."
+                                                                 ],
+                                             "explanation":  "Bắt tay trong văn phòng thường gắn với tình huống công việc.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "They might be having a business meeting.",
+                                             "answer_criteria":  "Câu nên liên quan đến công việc, buổi gặp, thỏa thuận hoặc giới thiệu.",
+                                             "image_query":  "business handshake office meeting",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=business+handshake+office+meeting"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h14",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một nhà ga đông người, nhiều người cầm vali. Viết 1 câu kết bài.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h64.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "Overall, it looks like a crowded train station."
+                                                                 ],
+                                             "explanation":  "Đông người và vali là dấu hiệu của nhà ga hoặc nơi di chuyển.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "Overall, it looks like a crowded train station.",
+                                             "answer_criteria":  "Câu cần dùng Overall và nêu đúng cảm nhận/địa điểm.",
+                                             "image_query":  "crowded train station luggage",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=crowded+train+station+luggage"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h15",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một người ngồi đọc sách với cà phê. Viết 1 câu cảm nhận.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h65.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "He seems relaxed."
+                                                                 ],
+                                             "explanation":  "Đọc sách và uống cà phê thường tạo cảm giác thư giãn.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "He seems relaxed.",
+                                             "answer_criteria":  "Câu nên dùng seems/looks + relaxed, calm hoặc peaceful.",
+                                             "image_query":  "man reading book coffee relaxed",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=man+reading+book+coffee+relaxed"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h16",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một nhóm bạn ngồi trên cỏ và cười. Viết 1 câu suy luận về cảm xúc.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h66.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "They seem happy and relaxed."
+                                                                 ],
+                                             "explanation":  "Ngồi cùng nhau và cười cho thấy họ vui vẻ.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "They seem happy and relaxed.",
+                                             "answer_criteria":  "Câu cần nêu cảm xúc hợp lý như happy, relaxed, cheerful.",
+                                             "image_query":  "happy friends sitting grass laughing",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=happy+friends+sitting+grass+laughing"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h17",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một người mặc đồng phục đứng sau quầy. Viết 1 câu suy luận về nghề/vai trò.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h67.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "She might be an employee."
+                                                                 ],
+                                             "explanation":  "Đồng phục và vị trí sau quầy thường cho thấy đó là nhân viên.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "She might be an employee.",
+                                             "answer_criteria":  "Câu cần dùng might/probably và đoán vai trò như employee, cashier hoặc worker.",
+                                             "image_query":  "cashier uniform behind counter",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=cashier+uniform+behind+counter"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h18",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một người nhìn đồng hồ ở cửa ra vào. Viết 1 câu suy luận.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h68.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "She might be waiting for someone."
+                                                                 ],
+                                             "explanation":  "Nhìn đồng hồ là dấu hiệu của việc chờ đợi hoặc lo về thời gian.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "She might be waiting for someone.",
+                                             "answer_criteria":  "Câu nên liên quan đến chờ ai đó hoặc đang vội.",
+                                             "image_query":  "woman checking watch waiting doorway",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=woman+checking+watch+waiting+doorway"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h19",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một cửa hàng quần áo có nhiều khách. Viết 1 câu kết bài.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h69.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "Overall, this picture shows a busy shopping scene."
+                                                                 ],
+                                             "explanation":  "Cửa hàng quần áo có nhiều khách là cảnh mua sắm bận rộn.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "Overall, this picture shows a busy shopping scene.",
+                                             "answer_criteria":  "Câu cần bắt đầu bằng Overall hoặc nêu cảm nhận chung về cảnh mua sắm.",
+                                             "image_query":  "busy clothing store shoppers",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=busy+clothing+store+shoppers"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h20",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một người đang chạy trong công viên. Viết 1 câu cảm nhận.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h70.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "He looks active."
+                                                                 ],
+                                             "explanation":  "Chạy bộ thể hiện sự năng động.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "He looks active.",
+                                             "answer_criteria":  "Câu nên dùng looks/seems + active, healthy hoặc energetic.",
+                                             "image_query":  "active man running park",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=active+man+running+park"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h21",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một căn phòng có nhiều bàn, máy tính và giấy tờ. Viết 1 câu đoán địa điểm.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h71.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "It looks like an office."
+                                                                 ],
+                                             "explanation":  "Bàn, máy tính và giấy tờ là dấu hiệu của văn phòng.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "It looks like an office.",
+                                             "answer_criteria":  "Câu cần dùng It looks like hoặc It seems like và đoán địa điểm hợp lý.",
+                                             "image_query":  "office room desks computers papers",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=office+room+desks+computers+papers"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h22",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một người đang nói trước nhiều người trong phòng họp. Viết 1 câu suy luận.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h72.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "He is probably giving a presentation."
+                                                                 ],
+                                             "explanation":  "Nói trước nhiều người trong phòng họp thường là đang thuyết trình.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "He is probably giving a presentation.",
+                                             "answer_criteria":  "Câu cần dùng probably/might và liên quan đến thuyết trình hoặc họp.",
+                                             "image_query":  "man giving presentation meeting room",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=man+giving+presentation+meeting+room"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h23",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một bãi biển có nhiều người nằm nghỉ. Viết 1 câu kết bài.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h73.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "Overall, the people seem relaxed."
+                                                                 ],
+                                             "explanation":  "Nằm nghỉ ở bãi biển thường thể hiện sự thư giãn.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "Overall, the people seem relaxed.",
+                                             "answer_criteria":  "Câu cần nêu cảm nhận chung phù hợp với cảnh nghỉ ngơi ở bãi biển.",
+                                             "image_query":  "people relaxing beach",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=people+relaxing+beach"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h24",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Một người đang nhìn màn hình máy tính rất chăm chú. Viết 1 câu cảm nhận.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h74.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "She looks focused."
+                                                                 ],
+                                             "explanation":  "Nhìn màn hình chăm chú cho thấy người đó đang tập trung.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "She looks focused.",
+                                             "answer_criteria":  "Câu nên dùng looks/seems + focused, busy hoặc serious.",
+                                             "image_query":  "focused woman computer screen",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=focused+woman+computer+screen"
+                                         },
+                                         {
+                                             "id":  "p2_s5_t1_h25",
+                                             "type":  "essay_typing",
+                                             "instruction":  "Tình huống: Sau khi miêu tả một ảnh văn phòng bận rộn, hãy viết 1 câu chốt bài.",
+                                             "image_path":  "images/part2/s5/p2_s5_t1_h75.jpg",
+                                             "options":  [
+
+                                                         ],
+                                             "correct_answers":  [
+                                                                     "Overall, it seems like a busy workplace."
+                                                                 ],
+                                             "explanation":  "Overall giúp kết thúc bài nói, còn busy workplace phù hợp với cảnh văn phòng đông/bận.",
+                                             "content":  "Write one sentence.",
+                                             "sample_answer":  "Overall, it seems like a busy workplace.",
+                                             "answer_criteria":  "Câu cần có Overall và cảm nhận chung phù hợp với văn phòng bận rộn.",
+                                             "image_query":  "busy modern office workplace",
+                                             "image_url":  "https://placehold.co/800x600/0f172a/fff?text=busy+modern+office+workplace"
+                                         }
+                                     ]
+                   }
+               ]
+}

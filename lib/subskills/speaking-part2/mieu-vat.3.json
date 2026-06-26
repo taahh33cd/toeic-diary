@@ -1,0 +1,1670 @@
+{
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "skill4_test3_easy_1",
+          "type": "multiple_choice",
+          "instruction": "Choose the correct statement about the picture.",
+          "image_path": "images/part2/s4/water_fountain.jpg",
+          "image_url": null,
+          "explanation": "Cả chủ động đang phun (is spraying) hoặc bị động (is sprayed) đều chấp nhận được trong mô tả tĩnh.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Water is spraying from the fountain."
+            },
+            {
+              "id": "B",
+              "text": "Water is sprayed from the fountain."
+            },
+            {
+              "id": "C",
+              "text": "Both A and B."
+            },
+            {
+              "id": "D",
+              "text": "Neither A nor B."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_2",
+          "type": "essay_typing",
+          "instruction": "Fill in the blank with the correct form of there is/there are.",
+          "image_path": "images/part2/s4/clouds_sky.jpg",
+          "image_url": null,
+          "explanation": "Danh từ số nhiều 'dark clouds' đi với There are.",
+          "options": [],
+          "content": "________ dark clouds gathering in the sky.",
+          "correct_answers": [
+            "There are"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_3",
+          "type": "essay_typing",
+          "instruction": "Fill in the blank with the correct form of there is/there are.",
+          "image_path": "images/part2/s4/park_bench.jpg",
+          "image_url": null,
+          "explanation": "Empty/vacant (trống không).",
+          "options": [],
+          "content": "The wooden bench is entirely ________.",
+          "correct_answers": [
+            "empty",
+            "unoccupied",
+            "vacant"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_4",
+          "type": "essay_typing",
+          "instruction": "Complete the sentence using There is/There are.",
+          "image_path": "images/part2/s4/street_lamps.jpg",
+          "image_url": null,
+          "explanation": "Installed (được lắp ráp/dựng lên).",
+          "options": [],
+          "content": "Lights are ________ by the side of the road.",
+          "correct_answers": [
+            "installed",
+            "placed",
+            "erected"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_5",
+          "type": "multiple_choice",
+          "instruction": "Select the right description for the scene.",
+          "image_path": "images/part2/s4/potted_plants.jpg",
+          "image_url": null,
+          "explanation": "'are grown in containers' (được trồng trong chậu).",
+          "options": [
+            {
+              "id": "D",
+              "text": "Plants are watering the containers."
+            },
+            {
+              "id": "B",
+              "text": "Plants are grown in containers."
+            },
+            {
+              "id": "A",
+              "text": "Plants grow in containers themselves."
+            },
+            {
+              "id": "C",
+              "text": "Someone is growing a plant."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_6",
+          "type": "essay_typing",
+          "instruction": "Fill in the blank with the correct form of there is/there are.",
+          "image_path": "images/part2/s4/laptop_desk.jpg",
+          "image_url": null,
+          "explanation": "Dùng There is vì 'a computer' là số ít.",
+          "options": [],
+          "content": "________ a computer on the workspace.",
+          "correct_answers": [
+            "There is"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_7",
+          "type": "multiple_choice",
+          "instruction": "Select the right description for the scene.",
+          "image_path": "images/part2/s4/parked_bicycles.jpg",
+          "image_url": null,
+          "explanation": "'are secured' (được cố định/buộc chặt vào giá).",
+          "options": [
+            {
+              "id": "C",
+              "text": "Bikes are securing a stand."
+            },
+            {
+              "id": "A",
+              "text": "Bikes are secured to a stand."
+            },
+            {
+              "id": "D",
+              "text": "Bikes are broken."
+            },
+            {
+              "id": "B",
+              "text": "Bikes are riding down the street."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_8",
+          "type": "multiple_choice",
+          "instruction": "Which sentence correctly describes the image?",
+          "image_path": "images/part2/s4/boats_dock.jpg",
+          "image_url": null,
+          "explanation": "'are moored' là từ chuyên dùng cho việc neo đậu thuyền.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Watercraft are sinking at the pier."
+            },
+            {
+              "id": "B",
+              "text": "Watercraft are moored at the pier."
+            },
+            {
+              "id": "D",
+              "text": "They are building watercraft."
+            },
+            {
+              "id": "C",
+              "text": "Watercraft are moving fast."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_9",
+          "type": "multiple_choice",
+          "instruction": "Which sentence correctly describes the image?",
+          "image_path": "images/part2/s4/parked_cars.jpg",
+          "image_url": null,
+          "explanation": "Bị động 'are left' mang nghĩa được để lại/đỗ lại.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Vehicles are leaving the curb."
+            },
+            {
+              "id": "B",
+              "text": "Vehicles are left along the curb."
+            },
+            {
+              "id": "D",
+              "text": "Vehicles are moving fast."
+            },
+            {
+              "id": "C",
+              "text": "Someone is washing the vehicles."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_10",
+          "type": "essay_typing",
+          "instruction": "Complete the sentence using There is/There are.",
+          "image_path": "images/part2/s4/books_shelf.jpg",
+          "image_url": null,
+          "explanation": "Displayed (được trưng bày).",
+          "options": [],
+          "content": "Reading materials are ________ on the shelves.",
+          "correct_answers": [
+            "displayed",
+            "placed",
+            "organized"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_11",
+          "type": "essay_typing",
+          "instruction": "Fill in the blank with the correct form of there is/there are.",
+          "image_path": "images/part2/s4/empty_chairs.jpg",
+          "image_url": null,
+          "explanation": "Available/empty (trống, có sẵn để ngồi).",
+          "options": [],
+          "content": "The seats are currently ________.",
+          "correct_answers": [
+            "available",
+            "empty",
+            "unoccupied"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_12",
+          "type": "essay_typing",
+          "instruction": "Fill in the blank with the correct form of there is/there are.",
+          "image_path": "images/part2/s4/merchandise_display.jpg",
+          "image_url": null,
+          "explanation": "Shown / displayed (được trưng bày).",
+          "options": [],
+          "content": "Garments are ________ in the boutique window.",
+          "correct_answers": [
+            "shown",
+            "displayed",
+            "exhibited"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_13",
+          "type": "essay_typing",
+          "instruction": "Fill in the blank with the correct form of there is/there are.",
+          "image_path": "images/part2/s4/dining_table.jpg",
+          "image_url": null,
+          "explanation": "Set for a meal (được dọn sẵn để ăn).",
+          "options": [],
+          "content": "The table is fully ________ for a meal.",
+          "correct_answers": [
+            "set",
+            "prepared",
+            "arranged"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_14",
+          "type": "multiple_choice",
+          "instruction": "Select the right description for the scene.",
+          "image_path": "images/part2/s4/store_sign.jpg",
+          "image_url": null,
+          "explanation": "Suspended (được treo lơ lửng).",
+          "options": [
+            {
+              "id": "C",
+              "text": "The door is suspended above the banner."
+            },
+            {
+              "id": "B",
+              "text": "A banner is holding the door."
+            },
+            {
+              "id": "D",
+              "text": "Someone is painting the banner."
+            },
+            {
+              "id": "A",
+              "text": "A banner is suspended above the door."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_15",
+          "type": "multiple_choice",
+          "instruction": "Choose the correct statement about the picture.",
+          "image_path": "images/part2/s4/framed_pictures.jpg",
+          "image_url": null,
+          "explanation": "'are mounted' (được gắn/treo lên tường).",
+          "options": [
+            {
+              "id": "A",
+              "text": "Artworks are painted on the wall."
+            },
+            {
+              "id": "B",
+              "text": "Artworks are mounted on the wall."
+            },
+            {
+              "id": "C",
+              "text": "They are framing the artwork."
+            },
+            {
+              "id": "D",
+              "text": "The artwork is broken."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_16",
+          "type": "multiple_choice",
+          "instruction": "Choose the correct statement about the picture.",
+          "image_path": "images/part2/s4/pedestrian_crossing.jpg",
+          "image_url": null,
+          "explanation": "'is marked' (được đánh dấu).",
+          "options": [
+            {
+              "id": "A",
+              "text": "A crosswalk is marking on the pavement."
+            },
+            {
+              "id": "B",
+              "text": "A crosswalk is marked on the pavement."
+            },
+            {
+              "id": "D",
+              "text": "The pavement is marked by the cars."
+            },
+            {
+              "id": "C",
+              "text": "They are walking on the pavement."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_17",
+          "type": "multiple_choice",
+          "instruction": "Which sentence correctly describes the image?",
+          "image_path": "images/part2/s4/stacked_boxes.jpg",
+          "image_url": null,
+          "explanation": "'arranged in a pile' (được sắp xếp thành đống) tương tự stacked.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Cartons are arranged in a pile."
+            },
+            {
+              "id": "B",
+              "text": "Cartons are scattered everywhere."
+            },
+            {
+              "id": "C",
+              "text": "They are throwing cartons."
+            },
+            {
+              "id": "D",
+              "text": "Cartons are unboxed."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_18",
+          "type": "multiple_choice",
+          "instruction": "Choose the correct statement about the picture.",
+          "image_path": "images/part2/s4/train_tracks.jpg",
+          "image_url": null,
+          "explanation": "Extends into the distance (Trải dài về phía xa).",
+          "options": [
+            {
+              "id": "B",
+              "text": "The railway is extending the distance."
+            },
+            {
+              "id": "A",
+              "text": "The railway extends into the distance."
+            },
+            {
+              "id": "C",
+              "text": "The trains are extending."
+            },
+            {
+              "id": "D",
+              "text": "There is an extension."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_19",
+          "type": "multiple_choice",
+          "instruction": "Choose the correct statement about the picture.",
+          "image_path": "images/part2/s4/rug_floor.jpg",
+          "image_url": null,
+          "explanation": "Carpet covers the floor (Tấm thảm che phủ sàn nhà).",
+          "options": [
+            {
+              "id": "B",
+              "text": "A carpet is covering by the floor."
+            },
+            {
+              "id": "D",
+              "text": "A carpet is being rolled up."
+            },
+            {
+              "id": "C",
+              "text": "The floor is rolling the carpet."
+            },
+            {
+              "id": "A",
+              "text": "A carpet covers part of the floor."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_20",
+          "type": "essay_typing",
+          "instruction": "Fill in the blank with the correct form of there is/there are.",
+          "image_path": "images/part2/s4/tall_buildings.jpg",
+          "image_url": null,
+          "explanation": "Sử dụng There are cho danh từ số nhiều skyscrapers.",
+          "options": [],
+          "content": "________ several skyscrapers towering over the street.",
+          "correct_answers": [
+            "There are"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_21",
+          "type": "essay_typing",
+          "instruction": "Fill in the blank with the correct form of there is/there are.",
+          "image_path": "images/part2/s4/fruit_basket.jpg",
+          "image_url": null,
+          "explanation": "Kept/stored (được cất giữ/đặt).",
+          "options": [],
+          "content": "Fresh produce is ________ in a basket.",
+          "correct_answers": [
+            "kept",
+            "stored",
+            "placed"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_22",
+          "type": "essay_typing",
+          "instruction": "Complete the sentence using There is/There are.",
+          "image_path": "images/part2/s4/bridge_river.jpg",
+          "image_url": null,
+          "explanation": "Spans (Bắc ngang qua).",
+          "options": [],
+          "content": "A large structure ________ the waterway.",
+          "correct_answers": [
+            "spans",
+            "crosses"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_23",
+          "type": "multiple_choice",
+          "instruction": "Select the right description for the scene.",
+          "image_path": "images/part2/s4/coffee_cup.jpg",
+          "image_url": null,
+          "explanation": "is left on the table (bị bỏ lại/đặt trên bàn).",
+          "options": [
+            {
+              "id": "A",
+              "text": "A mug is leaving the table."
+            },
+            {
+              "id": "C",
+              "text": "A mug is drinking on the table."
+            },
+            {
+              "id": "D",
+              "text": "The table is on the mug."
+            },
+            {
+              "id": "B",
+              "text": "A mug is left on the table."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_24",
+          "type": "essay_typing",
+          "instruction": "Complete the sentence using There is/There are.",
+          "image_path": "images/part2/s4/staircase.jpg",
+          "image_url": null,
+          "explanation": "Lead up to (Dẫn lên).",
+          "options": [],
+          "content": "Steps ________ up to the next level.",
+          "correct_answers": [
+            "lead",
+            "go"
+          ]
+        },
+        {
+          "id": "skill4_test3_easy_25",
+          "type": "multiple_choice",
+          "instruction": "Choose the correct statement about the picture.",
+          "image_path": "images/part2/s4/trash_can.jpg",
+          "image_url": null,
+          "explanation": "'is positioned' (được đặt ở vị trí).",
+          "options": [
+            {
+              "id": "B",
+              "text": "A garbage bin is moving to the corner."
+            },
+            {
+              "id": "A",
+              "text": "A garbage bin is positioned in the corner."
+            },
+            {
+              "id": "D",
+              "text": "There is a bin positioning the corner."
+            },
+            {
+              "id": "C",
+              "text": "The corner is positioned by the bin."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "skill4_test3_medium_1",
+          "type": "multiple_choice",
+          "instruction": "Pick the sentence that accurately describes the scene.",
+          "image_path": "images/part2/s4/brick_wall.jpg",
+          "image_url": null,
+          "explanation": "Is clinging to (đang bám chặt vào).",
+          "options": [
+            {
+              "id": "B",
+              "text": "Greenery is clung to the masonry."
+            },
+            {
+              "id": "D",
+              "text": "Greenery is clinging the masonry."
+            },
+            {
+              "id": "A",
+              "text": "Greenery is clinging to the masonry."
+            },
+            {
+              "id": "C",
+              "text": "Greenery clings the masonry."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_2",
+          "type": "essay_typing",
+          "instruction": "Create a sentence with There is/There are that matches the picture.",
+          "image_path": "images/part2/s4/street_vendor.jpg",
+          "image_url": null,
+          "explanation": "Offered for sale (được chào bán).",
+          "options": [],
+          "content": "Items are ________ for sale on the cart.",
+          "correct_answers": [
+            "offered",
+            "displayed",
+            "put"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_3",
+          "type": "multiple_choice",
+          "instruction": "Identify the correct description of the picture.",
+          "image_path": "images/part2/s4/art_gallery.jpg",
+          "image_url": null,
+          "explanation": "Are showcased (được trưng bày).",
+          "options": [
+            {
+              "id": "D",
+              "text": "Pieces of art showcase themselves."
+            },
+            {
+              "id": "C",
+              "text": "Visitors are showcased by pieces of art."
+            },
+            {
+              "id": "B",
+              "text": "Pieces of art are showcasing visitors."
+            },
+            {
+              "id": "A",
+              "text": "Pieces of art are showcased for visitors."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_4",
+          "type": "multiple_choice",
+          "instruction": "Identify the correct description of the picture.",
+          "image_path": "images/part2/s4/scattered_papers.jpg",
+          "image_url": null,
+          "explanation": "Are spread messily (bị trải ra bừa bộn).",
+          "options": [
+            {
+              "id": "D",
+              "text": "Documents spread themselves on the desk."
+            },
+            {
+              "id": "C",
+              "text": "They are spreading documents messily."
+            },
+            {
+              "id": "B",
+              "text": "Documents are spreading the desk messily."
+            },
+            {
+              "id": "A",
+              "text": "Documents are spread messily on the desk."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_5",
+          "type": "essay_typing",
+          "instruction": "Create a sentence with There is/There are that matches the picture.",
+          "image_path": "images/part2/s4/airport_runway.jpg",
+          "image_url": null,
+          "explanation": "Stationed (được đỗ/bố trí).",
+          "options": [],
+          "content": "An aircraft is ________ on the asphalt.",
+          "correct_answers": [
+            "stationed",
+            "parked",
+            "situated"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_6",
+          "type": "essay_typing",
+          "instruction": "Write a sentence describing the image using the passive state.",
+          "image_path": "images/part2/s4/lined_trees.jpg",
+          "image_url": null,
+          "explanation": "Planted (được trồng).",
+          "options": [],
+          "content": "Vegetation is ________ in straight rows.",
+          "correct_answers": [
+            "planted",
+            "arranged"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_7",
+          "type": "multiple_choice",
+          "instruction": "Identify the correct description of the picture.",
+          "image_path": "images/part2/s4/construction_materials.jpg",
+          "image_url": null,
+          "explanation": "Are dumped (bị đổ/bỏ lại thành đống).",
+          "options": [
+            {
+              "id": "B",
+              "text": "Building supplies are jumping on the ground."
+            },
+            {
+              "id": "A",
+              "text": "Building supplies are dumped on the ground."
+            },
+            {
+              "id": "D",
+              "text": "Building supplies dump the ground."
+            },
+            {
+              "id": "C",
+              "text": "They are supplying buildings on the ground."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_8",
+          "type": "multiple_choice",
+          "instruction": "Identify the correct description of the picture.",
+          "image_path": "images/part2/s4/fruit_market.jpg",
+          "image_url": null,
+          "explanation": "Are sorted (được phân loại/xếp vào).",
+          "options": [
+            {
+              "id": "C",
+              "text": "There is fresh fruits sorted into bins."
+            },
+            {
+              "id": "A",
+              "text": "Fresh fruits are sorted into bins."
+            },
+            {
+              "id": "D",
+              "text": "Fresh fruits sort into bins."
+            },
+            {
+              "id": "B",
+              "text": "Fresh fruits are sorting into bins."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_9",
+          "type": "multiple_choice",
+          "instruction": "Which option best matches the image?",
+          "image_path": "images/part2/s4/abandoned_building.jpg",
+          "image_url": null,
+          "explanation": "Are sealed (bị bịt kín/niêm phong).",
+          "options": [
+            {
+              "id": "C",
+              "text": "The wood is sealed with windows."
+            },
+            {
+              "id": "B",
+              "text": "The windows seal with wood."
+            },
+            {
+              "id": "A",
+              "text": "The windows are sealed with wood."
+            },
+            {
+              "id": "D",
+              "text": "The windows are sealing with wood."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_10",
+          "type": "multiple_choice",
+          "instruction": "Which option best matches the image?",
+          "image_path": "images/part2/s4/garden_tools.jpg",
+          "image_url": null,
+          "explanation": "Are propped against (được dựng tựa vào).",
+          "options": [
+            {
+              "id": "A",
+              "text": "Implements are propped against the wall."
+            },
+            {
+              "id": "B",
+              "text": "Implements are propping the wall."
+            },
+            {
+              "id": "C",
+              "text": "The wall is propped against the implements."
+            },
+            {
+              "id": "D",
+              "text": "Implements prop against the wall."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_11",
+          "type": "essay_typing",
+          "instruction": "Write a sentence describing the image using the passive state.",
+          "image_path": "images/part2/s4/pedestrian_bridge.jpg",
+          "image_url": null,
+          "explanation": "Spans (Bắc ngang qua).",
+          "options": [],
+          "content": "An overpass ________ the busy road.",
+          "correct_answers": [
+            "spans",
+            "crosses"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_12",
+          "type": "essay_typing",
+          "instruction": "Create a sentence with There is/There are that matches the picture.",
+          "image_path": "images/part2/s4/flower_bed.jpg",
+          "image_url": null,
+          "explanation": "Blossoming (đang đâm chồi nở hoa).",
+          "options": [],
+          "content": "Plants are ________ in the dirt.",
+          "correct_answers": [
+            "blossoming",
+            "blooming",
+            "growing"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_13",
+          "type": "essay_typing",
+          "instruction": "Write a sentence describing the image using the passive state.",
+          "image_path": "images/part2/s4/outdoor_cafe.jpg",
+          "image_url": null,
+          "explanation": "Opened (được mở ra).",
+          "options": [],
+          "content": "Parasols are ________ to provide shade.",
+          "correct_answers": [
+            "opened",
+            "set",
+            "used"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_14",
+          "type": "multiple_choice",
+          "instruction": "Identify the correct description of the picture.",
+          "image_path": "images/part2/s4/hotel_lobby.jpg",
+          "image_url": null,
+          "explanation": "Is suspended (được treo lơ lửng).",
+          "options": [
+            {
+              "id": "B",
+              "text": "An elaborate fixture suspends above."
+            },
+            {
+              "id": "D",
+              "text": "An elaborate fixture is suspending the above."
+            },
+            {
+              "id": "A",
+              "text": "An elaborate fixture is suspended above."
+            },
+            {
+              "id": "C",
+              "text": "An elaborate fixture is suspending above."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_15",
+          "type": "essay_typing",
+          "instruction": "Create a sentence with There is/There are that matches the picture.",
+          "image_path": "images/part2/s4/waiting_area.jpg",
+          "image_url": null,
+          "explanation": "Provided (được cung cấp/chuẩn bị sẵn).",
+          "options": [],
+          "content": "Reading materials are ________ for guests.",
+          "correct_answers": [
+            "provided",
+            "supplied",
+            "available"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_16",
+          "type": "multiple_choice",
+          "instruction": "Identify the correct description of the picture.",
+          "image_path": "images/part2/s4/parking_garage.jpg",
+          "image_url": null,
+          "explanation": "Are parked indoors (được đỗ trong nhà).",
+          "options": [
+            {
+              "id": "D",
+              "text": "Automobiles are parking indoors."
+            },
+            {
+              "id": "C",
+              "text": "Automobiles park themselves indoors."
+            },
+            {
+              "id": "B",
+              "text": "Automobiles are parked outdoors."
+            },
+            {
+              "id": "A",
+              "text": "Automobiles are parked indoors."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_17",
+          "type": "essay_typing",
+          "instruction": "Create a sentence with There is/There are that matches the picture.",
+          "image_path": "images/part2/s4/office_cubicles.jpg",
+          "image_url": null,
+          "explanation": "Separated (được chia cắt).",
+          "options": [],
+          "content": "Workstations are ________ by partitions.",
+          "correct_answers": [
+            "separated",
+            "divided"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_18",
+          "type": "essay_typing",
+          "instruction": "Write a sentence describing the image using the passive state.",
+          "image_path": "images/part2/s4/city_skyline.jpg",
+          "image_url": null,
+          "explanation": "Brightly lit (được thắp sáng rực rỡ).",
+          "options": [],
+          "content": "The urban area is brightly ________.",
+          "correct_answers": [
+            "lit",
+            "illuminated"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_19",
+          "type": "multiple_choice",
+          "instruction": "Identify the correct description of the picture.",
+          "image_path": "images/part2/s4/mountain_landscape.jpg",
+          "image_url": null,
+          "explanation": "Are capped with snow (được bao phủ/chỏm đầu bằng tuyết).",
+          "options": [
+            {
+              "id": "B",
+              "text": "The peaks are capping with snow."
+            },
+            {
+              "id": "A",
+              "text": "The peaks are capped with snow."
+            },
+            {
+              "id": "D",
+              "text": "The peaks cap with snow."
+            },
+            {
+              "id": "C",
+              "text": "Snow is capped with the peaks."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_20",
+          "type": "essay_typing",
+          "instruction": "Create a sentence with There is/There are that matches the picture.",
+          "image_path": "images/part2/s4/luggage_cart.jpg",
+          "image_url": null,
+          "explanation": "Trolley / cart (xe đẩy hành lý).",
+          "options": [],
+          "content": "Suitcases are stacked on the ________.",
+          "correct_answers": [
+            "trolley",
+            "cart"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_21",
+          "type": "essay_typing",
+          "instruction": "Create a sentence with There is/There are that matches the picture.",
+          "image_path": "images/part2/s4/train_station.jpg",
+          "image_url": null,
+          "explanation": "Listed (được liệt kê/hiển thị).",
+          "options": [],
+          "content": "Departure times are ________ on the monitor.",
+          "correct_answers": [
+            "listed",
+            "shown",
+            "displayed"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_22",
+          "type": "multiple_choice",
+          "instruction": "Which option best matches the image?",
+          "image_path": "images/part2/s4/traffic_lights.jpg",
+          "image_url": null,
+          "explanation": "Are hung (được treo).",
+          "options": [
+            {
+              "id": "B",
+              "text": "Signals are hanging the street."
+            },
+            {
+              "id": "D",
+              "text": "Signals have hung above the street."
+            },
+            {
+              "id": "A",
+              "text": "Signals are hung above the street."
+            },
+            {
+              "id": "C",
+              "text": "There is signals above the street."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_23",
+          "type": "multiple_choice",
+          "instruction": "Which option best matches the image?",
+          "image_path": "images/part2/s4/bulletin_board.jpg",
+          "image_url": null,
+          "explanation": "Are attached to (được đính vào).",
+          "options": [
+            {
+              "id": "A",
+              "text": "Flyers are attached to the corkboard."
+            },
+            {
+              "id": "B",
+              "text": "Flyers attach the corkboard."
+            },
+            {
+              "id": "D",
+              "text": "Flyers are attaching to the corkboard."
+            },
+            {
+              "id": "C",
+              "text": "There is flyers attached to the corkboard."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_24",
+          "type": "essay_typing",
+          "instruction": "Write a sentence describing the image using the passive state.",
+          "image_path": "images/part2/s4/kitchen_appliances.jpg",
+          "image_url": null,
+          "explanation": "Fitted (được lắp ráp vừa vặn).",
+          "options": [],
+          "content": "Equipment is ________ into the counters.",
+          "correct_answers": [
+            "fitted",
+            "installed",
+            "built"
+          ]
+        },
+        {
+          "id": "skill4_test3_medium_25",
+          "type": "multiple_choice",
+          "instruction": "Pick the sentence that accurately describes the scene.",
+          "image_path": "images/part2/s4/books_stacked_floor.jpg",
+          "image_url": null,
+          "explanation": "Are piled (được xếp thành đống).",
+          "options": [
+            {
+              "id": "A",
+              "text": "Hardcovers are piled on the ground."
+            },
+            {
+              "id": "B",
+              "text": "Hardcovers are piling on the ground."
+            },
+            {
+              "id": "C",
+              "text": "Hardcovers pile the ground."
+            },
+            {
+              "id": "D",
+              "text": "Hardcovers are piled by the ground."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "skill4_test3_hard_1",
+          "type": "essay_typing",
+          "instruction": "Form a sentence with There is/There are that fits the picture.",
+          "image_path": "images/part2/s4/busy_intersection.jpg",
+          "image_url": null,
+          "explanation": "Painted (được sơn).",
+          "options": [],
+          "content": "Directional arrows are ________ on the road.",
+          "correct_answers": [
+            "painted",
+            "marked"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_2",
+          "type": "multiple_choice",
+          "instruction": "Select the most accurate statement for the image.",
+          "image_path": "images/part2/s4/deserted_alley.jpg",
+          "image_url": null,
+          "explanation": "Is cast in shadow (được/bị bao phủ bởi bóng tối).",
+          "options": [
+            {
+              "id": "C",
+              "text": "The shadow is cast in the narrow passageway."
+            },
+            {
+              "id": "D",
+              "text": "The narrow passageway is casting in shadow."
+            },
+            {
+              "id": "B",
+              "text": "The narrow passageway casts in shadow."
+            },
+            {
+              "id": "A",
+              "text": "The narrow passageway is cast in shadow."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_3",
+          "type": "essay_typing",
+          "instruction": "Form a sentence with There is/There are that fits the picture.",
+          "image_path": "images/part2/s4/marina_yachts.jpg",
+          "image_url": null,
+          "explanation": "Tied up (được buộc lại).",
+          "options": [],
+          "content": "Expensive boats are ________ up at the slips.",
+          "correct_answers": [
+            "tied",
+            "moored"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_4",
+          "type": "multiple_choice",
+          "instruction": "Choose the correct description among the options.",
+          "image_path": "images/part2/s4/warehouse_shelves.jpg",
+          "image_url": null,
+          "explanation": "Are stored (được lưu trữ).",
+          "options": [
+            {
+              "id": "D",
+              "text": "Goods store systematically on the shelves."
+            },
+            {
+              "id": "C",
+              "text": "There is goods stored systematically."
+            },
+            {
+              "id": "B",
+              "text": "Goods are storing systematically on the shelves."
+            },
+            {
+              "id": "A",
+              "text": "Goods are stored systematically on the shelves."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_5",
+          "type": "multiple_choice",
+          "instruction": "Which sentence best reflects the visual context?",
+          "image_path": "images/part2/s4/banquet_hall.jpg",
+          "image_url": null,
+          "explanation": "Are arranged (được sắp đặt).",
+          "options": [
+            {
+              "id": "D",
+              "text": "Someone arranges the dining area elegantly."
+            },
+            {
+              "id": "C",
+              "text": "The dining area is arranging elegantly."
+            },
+            {
+              "id": "B",
+              "text": "The dining area arranges elegantly."
+            },
+            {
+              "id": "A",
+              "text": "The dining area is arranged elegantly."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_6",
+          "type": "essay_typing",
+          "instruction": "Form a sentence with There is/There are that fits the picture.",
+          "image_path": "images/part2/s4/symmetrical_hallway.jpg",
+          "image_url": null,
+          "explanation": "Repeating pattern (hoa văn lặp lại).",
+          "options": [],
+          "content": "The arches form a ________ pattern.",
+          "correct_answers": [
+            "repeating",
+            "symmetrical"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_7",
+          "type": "multiple_choice",
+          "instruction": "Which sentence best reflects the visual context?",
+          "image_path": "images/part2/s4/botanical_greenhouse.jpg",
+          "image_url": null,
+          "explanation": "Are housed (được chứa đựng/nuôi trồng trong nhà).",
+          "options": [
+            {
+              "id": "D",
+              "text": "The indoors are housed with tropical plants."
+            },
+            {
+              "id": "B",
+              "text": "Tropical plants house indoors."
+            },
+            {
+              "id": "A",
+              "text": "Tropical plants are housed indoors."
+            },
+            {
+              "id": "C",
+              "text": "Tropical plants are housing indoors."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_8",
+          "type": "multiple_choice",
+          "instruction": "Select the most accurate statement for the image.",
+          "image_path": "images/part2/s4/industrial_pipes.jpg",
+          "image_url": null,
+          "explanation": "Cả chủ động và bị động đều phổ biến (runs / is run).",
+          "options": [
+            {
+              "id": "B",
+              "text": "A network of tubes is run overhead."
+            },
+            {
+              "id": "D",
+              "text": "Both A and B are correct."
+            },
+            {
+              "id": "C",
+              "text": "A network of tubes running overhead."
+            },
+            {
+              "id": "A",
+              "text": "A network of tubes runs overhead."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_9",
+          "type": "essay_typing",
+          "instruction": "Form a sentence with There is/There are that fits the picture.",
+          "image_path": "images/part2/s4/laboratory_equipment.jpg",
+          "image_url": null,
+          "explanation": "Secured (được cố định an toàn).",
+          "options": [],
+          "content": "Apparatus is ________ to the worktop.",
+          "correct_answers": [
+            "secured",
+            "attached",
+            "fastened"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_10",
+          "type": "essay_typing",
+          "instruction": "Form a sentence with There is/There are that fits the picture.",
+          "image_path": "images/part2/s4/harbor_cranes.jpg",
+          "image_url": null,
+          "explanation": "Situated (được đặt ở vị trí).",
+          "options": [],
+          "content": "Machinery is ________ near the water's edge.",
+          "correct_answers": [
+            "situated",
+            "located",
+            "positioned"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_11",
+          "type": "essay_typing",
+          "instruction": "Compose a sentence describing the image using the passive construction.",
+          "image_path": "images/part2/s4/outdoor_market_canopies.jpg",
+          "image_url": null,
+          "explanation": "Pitched (được dựng lên).",
+          "options": [],
+          "content": "Tents are ________ over the vendor stalls.",
+          "correct_answers": [
+            "pitched",
+            "erected"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_12",
+          "type": "essay_typing",
+          "instruction": "Form a sentence with There is/There are that fits the picture.",
+          "image_path": "images/part2/s4/highway_overpass.jpg",
+          "image_url": null,
+          "explanation": "Intersect (giao cắt).",
+          "options": [],
+          "content": "Roads ________ at multiple levels.",
+          "correct_answers": [
+            "intersect",
+            "cross"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_13",
+          "type": "multiple_choice",
+          "instruction": "Which sentence best reflects the visual context?",
+          "image_path": "images/part2/s4/vineyard_rows.jpg",
+          "image_url": null,
+          "explanation": "Are supported by (được hỗ trợ/chống đỡ bởi).",
+          "options": [
+            {
+              "id": "B",
+              "text": "The vines are supporting a trellis system."
+            },
+            {
+              "id": "A",
+              "text": "The vines are supported by a trellis system."
+            },
+            {
+              "id": "C",
+              "text": "A trellis system is supported by the vines."
+            },
+            {
+              "id": "D",
+              "text": "The vines support a trellis system."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_14",
+          "type": "essay_typing",
+          "instruction": "Form a sentence with There is/There are that fits the picture.",
+          "image_path": "images/part2/s4/reflections_water.jpg",
+          "image_url": null,
+          "explanation": "Mirrored (được phản chiếu như gương).",
+          "options": [],
+          "content": "The cityscape is ________ in the water.",
+          "correct_answers": [
+            "mirrored",
+            "reflected"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_15",
+          "type": "multiple_choice",
+          "instruction": "Choose the correct description among the options.",
+          "image_path": "images/part2/s4/power_lines.jpg",
+          "image_url": null,
+          "explanation": "Are suspended (được treo lơ lửng).",
+          "options": [
+            {
+              "id": "D",
+              "text": "Wires are suspending between tall poles."
+            },
+            {
+              "id": "B",
+              "text": "Wires suspend between tall poles."
+            },
+            {
+              "id": "C",
+              "text": "Tall poles are suspended between wires."
+            },
+            {
+              "id": "A",
+              "text": "Wires are suspended between tall poles."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_16",
+          "type": "essay_typing",
+          "instruction": "Form a sentence with There is/There are that fits the picture.",
+          "image_path": "images/part2/s4/antique_shop.jpg",
+          "image_url": null,
+          "explanation": "Crowded/packed (nhồi nhét đông đúc).",
+          "options": [],
+          "content": "Vintage items are ________ into the shop.",
+          "correct_answers": [
+            "crowded",
+            "packed",
+            "crammed"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_17",
+          "type": "multiple_choice",
+          "instruction": "Choose the correct description among the options.",
+          "image_path": "images/part2/s4/construction_scaffolding.jpg",
+          "image_url": null,
+          "explanation": "Chủ động 'surrounds' (bao quanh) thường dùng để miêu tả vị trí tĩnh.",
+          "options": [
+            {
+              "id": "B",
+              "text": "A temporary framework is surrounded by the building."
+            },
+            {
+              "id": "D",
+              "text": "A temporary framework is surrounding the building."
+            },
+            {
+              "id": "C",
+              "text": "The building is surrounding a temporary framework."
+            },
+            {
+              "id": "A",
+              "text": "A temporary framework surrounds the building."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_18",
+          "type": "multiple_choice",
+          "instruction": "Select the most accurate statement for the image.",
+          "image_path": "images/part2/s4/subway_platform.jpg",
+          "image_url": null,
+          "explanation": "Are marked (được đánh dấu).",
+          "options": [
+            {
+              "id": "A",
+              "text": "Cautionary lines are marked on the floor."
+            },
+            {
+              "id": "B",
+              "text": "Cautionary lines are marking on the floor."
+            },
+            {
+              "id": "C",
+              "text": "Cautionary lines mark the floor."
+            },
+            {
+              "id": "D",
+              "text": "The floor is marking cautionary lines."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_19",
+          "type": "essay_typing",
+          "instruction": "Compose a sentence describing the image using the passive construction.",
+          "image_path": "images/part2/s4/theater_stage.jpg",
+          "image_url": null,
+          "explanation": "Concealed (bị che khuất).",
+          "options": [],
+          "content": "The performance area is ________ by fabric.",
+          "correct_answers": [
+            "concealed",
+            "covered",
+            "hidden"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_20",
+          "type": "essay_typing",
+          "instruction": "Form a sentence with There is/There are that fits the picture.",
+          "image_path": "images/part2/s4/solar_panels.jpg",
+          "image_url": null,
+          "explanation": "Affixed / mounted (được gắn/cố định vào).",
+          "options": [],
+          "content": "Energy-collecting devices are ________ to the roof.",
+          "correct_answers": [
+            "affixed",
+            "attached",
+            "mounted"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_21",
+          "type": "essay_typing",
+          "instruction": "Form a sentence with There is/There are that fits the picture.",
+          "image_path": "images/part2/s4/shipping_containers.jpg",
+          "image_url": null,
+          "explanation": "Receptacles (thùng chứa).",
+          "options": [],
+          "content": "Large ________ are piled at the terminal.",
+          "correct_answers": [
+            "receptacles",
+            "containers"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_22",
+          "type": "multiple_choice",
+          "instruction": "Select the most accurate statement for the image.",
+          "image_path": "images/part2/s4/ruined_castle.jpg",
+          "image_url": null,
+          "explanation": "Debris (mảnh vụn, tàn tích) không đếm được -> is scattered.",
+          "options": [
+            {
+              "id": "C",
+              "text": "Debris is scattering amidst the historical site."
+            },
+            {
+              "id": "D",
+              "text": "Debris scatters amidst the historical site."
+            },
+            {
+              "id": "A",
+              "text": "Debris is scattered amidst the historical site."
+            },
+            {
+              "id": "B",
+              "text": "Debris are scattered amidst the historical site."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_23",
+          "type": "multiple_choice",
+          "instruction": "Select the most accurate statement for the image.",
+          "image_path": "images/part2/s4/overgrown_garden.jpg",
+          "image_url": null,
+          "explanation": "Has encroached upon (đã xâm lấn/lấn chiếm vào).",
+          "options": [
+            {
+              "id": "A",
+              "text": "Vegetation has encroached upon the structure."
+            },
+            {
+              "id": "B",
+              "text": "Vegetation is encroaching the structure."
+            },
+            {
+              "id": "C",
+              "text": "The structure has encroached upon the vegetation."
+            },
+            {
+              "id": "D",
+              "text": "Vegetation encroaches upon the structure."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_24",
+          "type": "multiple_choice",
+          "instruction": "Select the most accurate statement for the image.",
+          "image_path": "images/part2/s4/intricate_architecture.jpg",
+          "image_url": null,
+          "explanation": "Are engraved (được chạm trổ/khắc).",
+          "options": [
+            {
+              "id": "B",
+              "text": "Ornate designs engrave into the stone."
+            },
+            {
+              "id": "D",
+              "text": "Ornate designs are engraving into the stone."
+            },
+            {
+              "id": "A",
+              "text": "Ornate designs are engraved into the stone."
+            },
+            {
+              "id": "C",
+              "text": "The stone is engraved by ornate designs."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "id": "skill4_test3_hard_25",
+          "type": "multiple_choice",
+          "instruction": "Choose the correct description among the options.",
+          "image_path": "images/part2/s4/snowy_driveway.jpg",
+          "image_url": null,
+          "explanation": "Has blanketed (đã bao phủ như một tấm chăn) - dùng hiện tại hoàn thành.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Precipitation has blanketed the path."
+            },
+            {
+              "id": "B",
+              "text": "Precipitation is blanketing the path."
+            },
+            {
+              "id": "C",
+              "text": "Precipitation blankets the path."
+            },
+            {
+              "id": "D",
+              "text": "The path has blanketed precipitation."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        }
+      ]
+    }
+  ]
+}

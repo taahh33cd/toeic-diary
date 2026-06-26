@@ -1,0 +1,1471 @@
+{
+  "part": "Part2",
+  "section": "3. Miêu tả Người",
+  "test_number": 4,
+  "title": "Test 4 – Miêu tả Người (Xáo trộn ngẫu nhiên & Câu hỏi mới)",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "image_path": "images/part2/s3/skirt.jpg",
+          "type": "multiple_choice",
+          "instruction": "Mô tả phần trang phục phía dưới.",
+          "options": [
+            {
+              "id": "A",
+              "text": "She is trying on a pair of pants."
+            },
+            {
+              "id": "B",
+              "text": "She is wearing a flowing skirt."
+            },
+            {
+              "id": "C",
+              "text": "The dress is hanging on a rack."
+            },
+            {
+              "id": "D",
+              "text": "She is tying her shoelaces."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "'Flowing skirt' là một chiếc váy dài xòe bay bổng.",
+          "id": "p2_s3_t4_e01"
+        },
+        {
+          "image_path": "images/part2/s3/drinking.jpg",
+          "type": "multiple_choice",
+          "instruction": "Mô tả nào khớp với bức ảnh?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The glass is completely empty."
+            },
+            {
+              "id": "B",
+              "text": "She is serving beverages to guests."
+            },
+            {
+              "id": "C",
+              "text": "She is consuming a liquid from a container."
+            },
+            {
+              "id": "D",
+              "text": "She is breaking a cup."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "'Consuming a liquid from a container' là cách nói gián tiếp cho việc đang uống (drinking).",
+          "id": "p2_s3_t4_e02"
+        },
+        {
+          "image_path": "images/part2/s3/walking_down.jpg",
+          "type": "multiple_choice",
+          "instruction": "Hành động nào đang diễn ra trên cầu thang?",
+          "options": [
+            {
+              "id": "A",
+              "text": "People are climbing up to the top floor."
+            },
+            {
+              "id": "B",
+              "text": "Individuals are making their way down the steps."
+            },
+            {
+              "id": "C",
+              "text": "Someone is sweeping the staircase."
+            },
+            {
+              "id": "D",
+              "text": "They are waiting at the bottom of the stairs."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "'Making their way down the steps' có nghĩa là đi xuống các bậc thang.",
+          "id": "p2_s3_t4_e03"
+        },
+        {
+          "image_path": "images/part2/s3/helmet.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ miêu tả hành động bảo vệ đầu.",
+          "content": "He is wearing a safety ________ on a construction site.",
+          "correct_answers": [
+            "helmet",
+            "hat"
+          ],
+          "explanation": "'Safety helmet' (mũ bảo hộ) là vật dụng thiết yếu ở công trường.",
+          "id": "p2_s3_t4_e04"
+        },
+        {
+          "image_path": "images/part2/s3/carrying.jpg",
+          "type": "multiple_choice",
+          "instruction": "Người đàn ông đang mang vật nặng như thế nào?",
+          "options": [
+            {
+              "id": "A",
+              "text": "He is dragging a box on the floor."
+            },
+            {
+              "id": "B",
+              "text": "He is holding a heavy item on his shoulders."
+            },
+            {
+              "id": "C",
+              "text": "He is dropping a sack."
+            },
+            {
+              "id": "D",
+              "text": "He is opening a parcel."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Mang vác trên vai hay đầu đều có thể miêu tả bằng 'holding a heavy item on his shoulders/head'.",
+          "id": "p2_s3_t4_e05"
+        },
+        {
+          "image_path": "images/part2/s3/glasses.jpg",
+          "type": "multiple_choice",
+          "instruction": "Chọn mô tả đúng về phụ kiện ở mặt.",
+          "options": [
+            {
+              "id": "A",
+              "text": "He is putting on his sunglasses."
+            },
+            {
+              "id": "B",
+              "text": "He is wearing corrective eyewear."
+            },
+            {
+              "id": "C",
+              "text": "He is taking off his spectacles."
+            },
+            {
+              "id": "D",
+              "text": "His glasses are resting on the table."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "'Corrective eyewear' là cách nói trang trọng để chỉ kính cận/kính thuốc.",
+          "id": "p2_s3_t4_e06"
+        },
+        {
+          "image_path": "images/part2/s3/sitting.jpg",
+          "type": "multiple_choice",
+          "instruction": "Mô tả nào đúng cho nhóm người?",
+          "options": [
+            {
+              "id": "A",
+              "text": "They are occupying seats around the table."
+            },
+            {
+              "id": "B",
+              "text": "They are unfolding the chairs."
+            },
+            {
+              "id": "C",
+              "text": "They are standing in a circle."
+            },
+            {
+              "id": "D",
+              "text": "They are purchasing furniture."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'Occupying seats' (đang ngồi vào ghế) là cách nói đồng nghĩa với sitting.",
+          "id": "p2_s3_t4_e07"
+        },
+        {
+          "image_path": "images/part2/s3/sweeping.jpg",
+          "type": "multiple_choice",
+          "instruction": "Mô tả công việc dọn dẹp.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The floor is being washed with a mop."
+            },
+            {
+              "id": "B",
+              "text": "A broom is being used to clear dirt from the floor."
+            },
+            {
+              "id": "C",
+              "text": "The dustpan is full of trash."
+            },
+            {
+              "id": "D",
+              "text": "The person is dusting the shelves."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "'A broom is being used' (Chổi đang được sử dụng để quét sạch bụi).",
+          "id": "p2_s3_t4_e08"
+        },
+        {
+          "image_path": "images/part2/s3/examining.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền V-ing để miêu tả sự soi gương.",
+          "content": "He is ________ his own reflection.",
+          "correct_answers": [
+            "examining",
+            "observing",
+            "studying"
+          ],
+          "explanation": "'Examining his own reflection' là đang soi gương cẩn thận.",
+          "id": "p2_s3_t4_e09"
+        },
+        {
+          "image_path": "images/part2/s3/suit.jpg",
+          "type": "multiple_choice",
+          "instruction": "Đâu là câu miêu tả trang phục chính xác?",
+          "options": [
+            {
+              "id": "A",
+              "text": "He is putting on his uniform."
+            },
+            {
+              "id": "B",
+              "text": "He is dressed in formal business clothing."
+            },
+            {
+              "id": "C",
+              "text": "The suit is hanging in the closet."
+            },
+            {
+              "id": "D",
+              "text": "He is wearing a casual t-shirt."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "'Dressed in formal business clothing' là cách diễn đạt đúng cho việc mặc áo vest.",
+          "id": "p2_s3_t4_e10"
+        },
+        {
+          "image_path": "images/part2/s3/looking_monitor.jpg",
+          "type": "multiple_choice",
+          "instruction": "Mô tả nào đúng với hành động ở màn hình?",
+          "options": [
+            {
+              "id": "A",
+              "text": "He is repairing the computer."
+            },
+            {
+              "id": "B",
+              "text": "He is cleaning the monitor screen."
+            },
+            {
+              "id": "C",
+              "text": "He is focusing his attention on the display."
+            },
+            {
+              "id": "D",
+              "text": "He is moving the monitor aside."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "'Focusing his attention on the display' diễn đạt việc đang nhìn chằm chằm vào màn hình.",
+          "id": "p2_s3_t4_e11"
+        },
+        {
+          "image_path": "images/part2/s3/holding_pen.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ chỉ đồ vật đang được cầm.",
+          "content": "The individual is grasping a ________ to sign the document.",
+          "correct_answers": [
+            "pen"
+          ],
+          "explanation": "Đồ vật dùng để ký tên (sign) là cây bút (pen).",
+          "id": "p2_s3_t4_e12"
+        },
+        {
+          "image_path": "images/part2/s3/pushing.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ chỉ hành động tác dụng lực.",
+          "content": "A heavy cart is being ________ forward.",
+          "correct_answers": [
+            "pushed"
+          ],
+          "explanation": "Xe đẩy được đẩy về phía trước (being pushed forward).",
+          "id": "p2_s3_t4_e13"
+        },
+        {
+          "image_path": "images/part2/s3/error.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ cảnh báo.",
+          "content": "An ________ message is displayed on the monitor.",
+          "correct_answers": [
+            "error"
+          ],
+          "explanation": "Thông báo lỗi tiếng Anh là 'error message'.",
+          "id": "p2_s3_t4_e14"
+        },
+        {
+          "image_path": "images/part2/s3/vest.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền danh từ chỉ trang phục bên ngoài.",
+          "content": "The worker is visible in a high-visibility ________.",
+          "correct_answers": [
+            "vest"
+          ],
+          "explanation": "'High-visibility vest' là loại áo khoác bảo hộ phản quang.",
+          "id": "p2_s3_t4_e15"
+        },
+        {
+          "image_path": "images/part2/s3/typing.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ liên quan đến máy tính.",
+          "content": "She is actively using the computer ________.",
+          "correct_answers": [
+            "keyboard"
+          ],
+          "explanation": "Hành động gõ phím liên quan mật thiết tới 'keyboard'.",
+          "id": "p2_s3_t4_e16"
+        },
+        {
+          "image_path": "images/part2/s3/shaking_hands.jpg",
+          "type": "multiple_choice",
+          "instruction": "Họ đang làm gì?",
+          "options": [
+            {
+              "id": "A",
+              "text": "They are greeting each other with a handshake."
+            },
+            {
+              "id": "B",
+              "text": "They are waving hello from a distance."
+            },
+            {
+              "id": "C",
+              "text": "They are clapping for a performance."
+            },
+            {
+              "id": "D",
+              "text": "They are handing out flyers."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'Greeting each other with a handshake' (chào nhau bằng cái bắt tay).",
+          "id": "p2_s3_t4_e17"
+        },
+        {
+          "image_path": "images/part2/s3/pointing.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ chỉ cử chỉ tay.",
+          "content": "He is indicating a chart by ________ at it.",
+          "correct_answers": [
+            "pointing"
+          ],
+          "explanation": "'Pointing at' (chỉ tay vào) dùng để nhấn mạnh chi tiết (indicating).",
+          "id": "p2_s3_t4_e18"
+        },
+        {
+          "image_path": "images/part2/s3/backpack.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ để hoàn thành câu.",
+          "content": "A heavy ________ is strapped to his shoulders.",
+          "correct_answers": [
+            "backpack",
+            "bag",
+            "pack"
+          ],
+          "explanation": "'Strapped to his shoulders' (buộc/đeo trên vai) mô tả cái balo (backpack).",
+          "id": "p2_s3_t4_e19"
+        },
+        {
+          "image_path": "images/part2/s3/talking_phone.jpg",
+          "type": "multiple_choice",
+          "instruction": "Mô tả hành động của người này.",
+          "options": [
+            {
+              "id": "A",
+              "text": "A person is hanging up the telephone."
+            },
+            {
+              "id": "B",
+              "text": "Someone is engaged in a mobile conversation."
+            },
+            {
+              "id": "C",
+              "text": "The phone has been left on the desk."
+            },
+            {
+              "id": "D",
+              "text": "She is putting the phone in her pocket."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "'Engaged in a mobile conversation' tương đương với việc nói chuyện qua điện thoại di động.",
+          "id": "p2_s3_t4_e20"
+        },
+        {
+          "image_path": "images/part2/s3/writing.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ mô tả hành động ghi chép.",
+          "content": "The instructor is ________ some notes on the whiteboard.",
+          "correct_answers": [
+            "jotting",
+            "writing",
+            "taking"
+          ],
+          "explanation": "'Jotting down' hoặc 'writing' notes nghĩa là ghi chép nhanh lên bảng.",
+          "id": "p2_s3_t4_e21"
+        },
+        {
+          "image_path": "images/part2/s3/tie.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền phụ kiện đi kèm sơ mi.",
+          "content": "He has a neck________ fastened around his collar.",
+          "correct_answers": [
+            "tie"
+          ],
+          "explanation": "Cà vạt có thể gọi là 'necktie'.",
+          "id": "p2_s3_t4_e22"
+        },
+        {
+          "image_path": "images/part2/s3/reading.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ miêu tả hành động với sách.",
+          "content": "She is absorbed in ________ a publication.",
+          "correct_answers": [
+            "reading"
+          ],
+          "explanation": "'Absorbed in reading' (say sưa đọc sách).",
+          "id": "p2_s3_t4_e23"
+        },
+        {
+          "image_path": "images/part2/s3/shirt.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền danh từ chỉ trang phục.",
+          "content": "He has chosen to wear a patterned ________ today.",
+          "correct_answers": [
+            "shirt"
+          ],
+          "explanation": "Áo sơ mi có họa tiết được miêu tả là 'patterned shirt'.",
+          "id": "p2_s3_t4_e24"
+        },
+        {
+          "image_path": "images/part2/s3/standing.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền động từ ở thì hiện tại tiếp diễn.",
+          "content": "A person is ________ upright near the desk.",
+          "correct_answers": [
+            "standing"
+          ],
+          "explanation": "'Standing upright' (đứng thẳng).",
+          "id": "p2_s3_t4_e25"
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "image_path": "images/part2/s3/with_bag.jpg",
+          "type": "multiple_choice",
+          "instruction": "Phụ kiện đi kèm.",
+          "options": [
+            {
+              "id": "A",
+              "text": "A purse is being carried over her shoulder."
+            },
+            {
+              "id": "B",
+              "text": "She left her bag on the chair."
+            },
+            {
+              "id": "C",
+              "text": "She is searching inside her handbag."
+            },
+            {
+              "id": "D",
+              "text": "She is purchasing a new tote bag."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Carried over her shoulder (đeo trên vai).",
+          "id": "p2_s3_t4_m01"
+        },
+        {
+          "image_path": "images/part2/s3/crossed_legs.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền trạng thái vắt chéo.",
+          "content": "The seated woman has her legs ________.",
+          "correct_answers": [
+            "crossed"
+          ],
+          "explanation": "Legs crossed (chân vắt chéo).",
+          "id": "p2_s3_t4_m02"
+        },
+        {
+          "image_path": "images/part2/s3/next_to.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ chỉ vị trí cạnh bên.",
+          "content": "She is seated ________ to the glass pane.",
+          "correct_answers": [
+            "next",
+            "close"
+          ],
+          "explanation": "'next to' (bên cạnh).",
+          "id": "p2_s3_t4_m03"
+        },
+        {
+          "image_path": "images/part2/s3/leaning.jpg",
+          "type": "multiple_choice",
+          "instruction": "Tư thế tựa.",
+          "options": [
+            {
+              "id": "A",
+              "text": "He is painting the wall."
+            },
+            {
+              "id": "B",
+              "text": "The wall is being repaired."
+            },
+            {
+              "id": "C",
+              "text": "A person is resting their weight against a flat surface."
+            },
+            {
+              "id": "D",
+              "text": "He is pushing the wall hard."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Resting their weight against (Tựa sức nặng vào bề mặt).",
+          "id": "p2_s3_t4_m04"
+        },
+        {
+          "image_path": "images/part2/s3/combined.jpg",
+          "type": "essay_typing",
+          "instruction": "Sử dụng phân từ để rút gọn.",
+          "content": "________ a briefcase, the man stands formally.",
+          "correct_answers": [
+            "Holding",
+            "Carrying"
+          ],
+          "explanation": "Dùng V-ing 'Holding' đứng đầu câu để miêu tả hành động cầm túi.",
+          "id": "p2_s3_t4_m05"
+        },
+        {
+          "image_path": "images/part2/s3/and.jpg",
+          "type": "multiple_choice",
+          "instruction": "Câu kết hợp nào hợp lý nhất?",
+          "options": [
+            {
+              "id": "A",
+              "text": "He is drinking coffee while looking down at a device."
+            },
+            {
+              "id": "B",
+              "text": "He is staring at the sky and drinking tea."
+            },
+            {
+              "id": "C",
+              "text": "He is throwing a cup and holding a phone."
+            },
+            {
+              "id": "D",
+              "text": "He is taking a photo of his coffee."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'while looking down at a device' (trong khi nhìn xuống thiết bị).",
+          "id": "p2_s3_t4_m06"
+        },
+        {
+          "image_path": "images/part2/s3/lifting.jpg",
+          "type": "multiple_choice",
+          "instruction": "Mô tả lực nâng.",
+          "options": [
+            {
+              "id": "A",
+              "text": "He is dropping the heavy package."
+            },
+            {
+              "id": "B",
+              "text": "A box is being hoisted from the floor."
+            },
+            {
+              "id": "C",
+              "text": "He is dragging a carton."
+            },
+            {
+              "id": "D",
+              "text": "He is taping the box shut."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "'A box is being hoisted' dùng bị động thay thế cho lifting.",
+          "id": "p2_s3_t4_m07"
+        },
+        {
+          "image_path": "images/part2/s3/dressed.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền V-ed chỉ việc mặc đồ.",
+          "content": "The professionals are ________ sharply in business suits.",
+          "correct_answers": [
+            "dressed"
+          ],
+          "explanation": "'Dressed sharply' là cách khen ngợi ăn mặc bảnh bao, lịch sự.",
+          "id": "p2_s3_t4_m08"
+        },
+        {
+          "image_path": "images/part2/s3/buttoned.jpg",
+          "type": "multiple_choice",
+          "instruction": "Tình trạng của chiếc áo.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The shirt is unbuttoned at the top."
+            },
+            {
+              "id": "B",
+              "text": "His collar is completely buttoned up."
+            },
+            {
+              "id": "C",
+              "text": "He is ironing his shirt."
+            },
+            {
+              "id": "D",
+              "text": "He is rolling up his sleeves."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Buttoned up (được cài cúc kín).",
+          "id": "p2_s3_t4_m09"
+        },
+        {
+          "image_path": "images/part2/s3/watch.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền đồ vật đeo tay.",
+          "content": "A wrist________ is strapped to his arm.",
+          "correct_answers": [
+            "watch"
+          ],
+          "explanation": "Wristwatch (đồng hồ đeo tay).",
+          "id": "p2_s3_t4_m10"
+        },
+        {
+          "image_path": "images/part2/s3/through.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền giới từ.",
+          "content": "The scene is viewed ________ the clear glass of the window.",
+          "correct_answers": [
+            "through"
+          ],
+          "explanation": "Viewed through (được nhìn xuyên qua).",
+          "id": "p2_s3_t4_m11"
+        },
+        {
+          "image_path": "images/part2/s3/compare.jpg",
+          "type": "multiple_choice",
+          "instruction": "Câu nào sử dụng sự tương phản đúng?",
+          "options": [
+            {
+              "id": "A",
+              "text": "One person is seated, while another is on their feet."
+            },
+            {
+              "id": "B",
+              "text": "Everyone in the room is seated."
+            },
+            {
+              "id": "C",
+              "text": "One person stands before sitting down."
+            },
+            {
+              "id": "D",
+              "text": "They are walking in opposite directions."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'While another is on their feet' là cụm từ khác của standing.",
+          "id": "p2_s3_t4_m12"
+        },
+        {
+          "image_path": "images/part2/s3/right_hand.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ phân biệt bên phải.",
+          "content": "A sheet of paper is held in his ________ hand.",
+          "correct_answers": [
+            "right"
+          ],
+          "explanation": "Phân biệt right hand và left hand.",
+          "id": "p2_s3_t4_m13"
+        },
+        {
+          "image_path": "images/part2/s3/about_to.jpg",
+          "type": "multiple_choice",
+          "instruction": "Hành động sắp sửa xảy ra.",
+          "options": [
+            {
+              "id": "A",
+              "text": "They have just finished crossing the road."
+            },
+            {
+              "id": "B",
+              "text": "They are on the verge of stepping into the street."
+            },
+            {
+              "id": "C",
+              "text": "They are sitting on the pavement."
+            },
+            {
+              "id": "D",
+              "text": "A car is blocking their path."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "On the verge of stepping (sắp sửa bước xuống phố).",
+          "id": "p2_s3_t4_m14"
+        },
+        {
+          "image_path": "images/part2/s3/sitting_people.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ chỉ vị trí quanh bàn.",
+          "content": "Colleagues are positioned ________ a circular desk.",
+          "correct_answers": [
+            "around"
+          ],
+          "explanation": "'Positioned around' (được bố trí/ngồi xung quanh).",
+          "id": "p2_s3_t4_m15"
+        },
+        {
+          "image_path": "images/part2/s3/putting_on.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền V-ing hành động xỏ áo.",
+          "content": "He is currently ________ on an article of clothing.",
+          "correct_answers": [
+            "putting"
+          ],
+          "explanation": "Putting on an article of clothing (mặc một món đồ vào người).",
+          "id": "p2_s3_t4_m16"
+        },
+        {
+          "image_path": "images/part2/s3/reduced.jpg",
+          "type": "multiple_choice",
+          "instruction": "Đâu là câu miêu tả bằng cụm giới từ?",
+          "options": [
+            {
+              "id": "A",
+              "text": "The woman wears a red dress standing."
+            },
+            {
+              "id": "B",
+              "text": "The lady in the red dress is speaking."
+            },
+            {
+              "id": "C",
+              "text": "She puts on a red dress."
+            },
+            {
+              "id": "D",
+              "text": "A red dress is wearing the woman."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "'The lady in the red dress' là cụm danh từ rút gọn cực kỳ tự nhiên.",
+          "id": "p2_s3_t4_m17"
+        },
+        {
+          "image_path": "images/part2/s3/talking_to.jpg",
+          "type": "multiple_choice",
+          "instruction": "Cuộc đối thoại hai người.",
+          "options": [
+            {
+              "id": "A",
+              "text": "They are arguing aggressively."
+            },
+            {
+              "id": "B",
+              "text": "An exchange of words is taking place between them."
+            },
+            {
+              "id": "C",
+              "text": "They are ignoring each other."
+            },
+            {
+              "id": "D",
+              "text": "One person is whispering a secret."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "An exchange of words (sự trao đổi lời nói) bằng với cuộc hội thoại.",
+          "id": "p2_s3_t4_m18"
+        },
+        {
+          "image_path": "images/part2/s3/folded_arms.jpg",
+          "type": "multiple_choice",
+          "instruction": "Mô tả cánh tay.",
+          "options": [
+            {
+              "id": "A",
+              "text": "He is pointing at someone."
+            },
+            {
+              "id": "B",
+              "text": "His arms are securely interlocked in front of him."
+            },
+            {
+              "id": "C",
+              "text": "He is raising his hands up."
+            },
+            {
+              "id": "D",
+              "text": "He is holding a thick book."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Arms securely interlocked (Hai tay khóa chặt/khoanh lại trước mặt).",
+          "id": "p2_s3_t4_m19"
+        },
+        {
+          "image_path": "images/part2/s3/look_away.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền trạng từ chỉ hướng ra xa.",
+          "content": "She has shifted her focus ________ from the screen.",
+          "correct_answers": [
+            "away"
+          ],
+          "explanation": "'Shifted focus away' (đổi sự tập trung ra chỗ khác).",
+          "id": "p2_s3_t4_m20"
+        },
+        {
+          "image_path": "images/part2/s3/one_of.jpg",
+          "type": "multiple_choice",
+          "instruction": "Mô tả một người trong nhóm.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Every woman is frowning."
+            },
+            {
+              "id": "B",
+              "text": "A single woman out of the group is grinning."
+            },
+            {
+              "id": "C",
+              "text": "None of the women are smiling."
+            },
+            {
+              "id": "D",
+              "text": "All of them are laughing out loud."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "'A single woman out of the group' là một cách nói dài của 'One of the women'.",
+          "id": "p2_s3_t4_m21"
+        },
+        {
+          "image_path": "images/part2/s3/both.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền lượng từ chỉ cả hai.",
+          "content": "________ figures in the image are wearing neckties.",
+          "correct_answers": [
+            "Both"
+          ],
+          "explanation": "Dùng 'Both' cho hai người.",
+          "id": "p2_s3_t4_m22"
+        },
+        {
+          "image_path": "images/part2/s3/preposition.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền giới từ.",
+          "content": "The individual ________ a tailored suit looks professional.",
+          "correct_answers": [
+            "in"
+          ],
+          "explanation": "Dùng 'in' trước trang phục để thay cho wearing.",
+          "id": "p2_s3_t4_m23"
+        },
+        {
+          "image_path": "images/part2/s3/bending.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ miêu tả hành động cúi.",
+          "content": "The individual is ________ down to grab a package.",
+          "correct_answers": [
+            "bending",
+            "reaching"
+          ],
+          "explanation": "Bending down (cúi người xuống).",
+          "id": "p2_s3_t4_m24"
+        },
+        {
+          "image_path": "images/part2/s3/working.jpg",
+          "type": "multiple_choice",
+          "instruction": "Mô tả trạng thái làm việc.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The laptop has been shut down."
+            },
+            {
+              "id": "B",
+              "text": "He is busy operating his portable computer."
+            },
+            {
+              "id": "C",
+              "text": "He is unplugging the charger."
+            },
+            {
+              "id": "D",
+              "text": "He is taking a break from his tasks."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Operating his portable computer (sử dụng máy tính xách tay).",
+          "id": "p2_s3_t4_m25"
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "image_path": "images/part2/s3/strolling.jpg",
+          "type": "multiple_choice",
+          "instruction": "Mô tả hành động đi bộ thư giãn.",
+          "options": [
+            {
+              "id": "A",
+              "text": "They are jogging rapidly down the trail."
+            },
+            {
+              "id": "B",
+              "text": "They are taking a relaxed walk through the greenery."
+            },
+            {
+              "id": "C",
+              "text": "They are riding bicycles."
+            },
+            {
+              "id": "D",
+              "text": "They are resting on the grass."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Taking a relaxed walk (đi bộ thư giãn) = strolling.",
+          "id": "p2_s3_t4_h01"
+        },
+        {
+          "image_path": "images/part2/s3/lab_coat.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ chỉ môi trường làm việc.",
+          "content": "A professional is dressed in clinical or ________ attire.",
+          "correct_answers": [
+            "laboratory",
+            "medical",
+            "lab"
+          ],
+          "explanation": "Clinical or laboratory attire (trang phục phòng khám hoặc phòng thí nghiệm).",
+          "id": "p2_s3_t4_h02"
+        },
+        {
+          "image_path": "images/part2/s3/facing_each_other.jpg",
+          "type": "multiple_choice",
+          "instruction": "Mô tả hai người đối mặt.",
+          "options": [
+            {
+              "id": "A",
+              "text": "They are sitting shoulder to shoulder."
+            },
+            {
+              "id": "B",
+              "text": "They are seated directly opposite one another."
+            },
+            {
+              "id": "C",
+              "text": "One person is standing behind the other."
+            },
+            {
+              "id": "D",
+              "text": "They are looking in opposite directions."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Directly opposite one another (trực tiếp đối diện nhau).",
+          "id": "p2_s3_t4_h03"
+        },
+        {
+          "image_path": "images/part2/s3/formal_attire.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ cho trang phục cao cấp.",
+          "content": "He is donning highly sophisticated ________.",
+          "correct_answers": [
+            "attire",
+            "clothing",
+            "apparel"
+          ],
+          "explanation": "Sophisticated attire (trang phục tinh tế, trang trọng).",
+          "id": "p2_s3_t4_h04"
+        },
+        {
+          "image_path": "images/part2/s3/applauding.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền động từ chỉ sự hoan hô.",
+          "content": "The crowd is enthusiastically ________.",
+          "correct_answers": [
+            "applauding",
+            "cheering",
+            "clapping"
+          ],
+          "explanation": "Enthusiastically applauding (Vỗ tay nhiệt liệt).",
+          "id": "p2_s3_t4_h05"
+        },
+        {
+          "image_path": "images/part2/s3/kneeling.jpg",
+          "type": "multiple_choice",
+          "instruction": "Tư thế khuỵu gối.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The individual is lying flat on their stomach."
+            },
+            {
+              "id": "B",
+              "text": "The individual is resting on bent knees."
+            },
+            {
+              "id": "C",
+              "text": "The person is standing on tiptoes."
+            },
+            {
+              "id": "D",
+              "text": "The person is leaping in the air."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Resting on bent knees (Tựa lên đầu gối uốn cong) = kneeling.",
+          "id": "p2_s3_t4_h06"
+        },
+        {
+          "image_path": "images/part2/s3/gathered.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ miêu tả đám đông.",
+          "content": "A large ________ has clustered around the focal point.",
+          "correct_answers": [
+            "crowd",
+            "group"
+          ],
+          "explanation": "A large crowd / group has clustered (Một nhóm đông đã tụ lại).",
+          "id": "p2_s3_t4_h07"
+        },
+        {
+          "image_path": "images/part2/s3/side_by_side.jpg",
+          "type": "multiple_choice",
+          "instruction": "Di chuyển song song.",
+          "options": [
+            {
+              "id": "A",
+              "text": "They are moving forward in tandem."
+            },
+            {
+              "id": "B",
+              "text": "One is lagging far behind the other."
+            },
+            {
+              "id": "C",
+              "text": "They are stepping on each other's feet."
+            },
+            {
+              "id": "D",
+              "text": "They are running a race."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Moving forward in tandem (Tiến về phía trước song hành cùng nhau).",
+          "id": "p2_s3_t4_h08"
+        },
+        {
+          "image_path": "images/part2/s3/casual.jpg",
+          "type": "multiple_choice",
+          "instruction": "Trang phục dạo phố.",
+          "options": [
+            {
+              "id": "A",
+              "text": "She is wearing a formal evening gown."
+            },
+            {
+              "id": "B",
+              "text": "She is sporting everyday, relaxed clothing."
+            },
+            {
+              "id": "C",
+              "text": "She is dressed for a winter storm."
+            },
+            {
+              "id": "D",
+              "text": "She is wearing a protective suit."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Everyday, relaxed clothing (Quần áo thư giãn, thường ngày).",
+          "id": "p2_s3_t4_h09"
+        },
+        {
+          "image_path": "images/part2/s3/commuting.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ miêu tả hành khách.",
+          "content": "The daily ________ are traveling to the city center.",
+          "correct_answers": [
+            "commuters"
+          ],
+          "explanation": "Commuters (những người đi làm xa bằng xe công cộng).",
+          "id": "p2_s3_t4_h10"
+        },
+        {
+          "image_path": "images/part2/s3/stacking.jpg",
+          "type": "multiple_choice",
+          "instruction": "Mô tả chồng hàng hóa.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The items are scattered randomly."
+            },
+            {
+              "id": "B",
+              "text": "Boxes are piled one on top of the other."
+            },
+            {
+              "id": "C",
+              "text": "The packages are being opened."
+            },
+            {
+              "id": "D",
+              "text": "The shelves are completely bare."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Piled one on top of the other (Xếp chồng cái nọ lên cái kia).",
+          "id": "p2_s3_t4_h11"
+        },
+        {
+          "image_path": "images/part2/s3/gesturing.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền động từ thể hiện việc dùng tay để diễn tả.",
+          "content": "He is ________ wildly to make his point clear.",
+          "correct_answers": [
+            "gesturing"
+          ],
+          "explanation": "Gesturing wildly (Múa tay mạnh mẽ).",
+          "id": "p2_s3_t4_h12"
+        },
+        {
+          "image_path": "images/part2/s3/adjusting.jpg",
+          "type": "multiple_choice",
+          "instruction": "Mô tả việc cân chỉnh kính.",
+          "options": [
+            {
+              "id": "A",
+              "text": "He is cleaning the lenses with a cloth."
+            },
+            {
+              "id": "B",
+              "text": "He is repositioning his glasses on his nose."
+            },
+            {
+              "id": "C",
+              "text": "He is taking off his helmet."
+            },
+            {
+              "id": "D",
+              "text": "He is covering his eyes."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Repositioning (chỉnh lại vị trí) = adjusting.",
+          "id": "p2_s3_t4_h13"
+        },
+        {
+          "image_path": "images/part2/s3/addressing.jpg",
+          "type": "multiple_choice",
+          "instruction": "Phát biểu trước công chúng.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The speaker is writing on a whiteboard."
+            },
+            {
+              "id": "B",
+              "text": "Remarks are being directed to an assembled group."
+            },
+            {
+              "id": "C",
+              "text": "The audience is ignoring the speaker."
+            },
+            {
+              "id": "D",
+              "text": "The microphone is turned off."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Remarks are being directed to an assembled group (Những lời phát biểu đang được nhắm tới nhóm người tụ họp).",
+          "id": "p2_s3_t4_h14"
+        },
+        {
+          "image_path": "images/part2/s3/leaning_over.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền giới từ.",
+          "content": "The customer is leaning ________ the service desk.",
+          "correct_answers": [
+            "over",
+            "across"
+          ],
+          "explanation": "Leaning over/across (Nhoài người qua).",
+          "id": "p2_s3_t4_h15"
+        },
+        {
+          "image_path": "images/part2/s3/browsing.jpg",
+          "type": "multiple_choice",
+          "instruction": "Khách hàng trong cửa tiệm.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Shoppers are casually inspecting retail items."
+            },
+            {
+              "id": "B",
+              "text": "The cashier is scanning barcodes."
+            },
+            {
+              "id": "C",
+              "text": "Products are being stocked on empty shelves."
+            },
+            {
+              "id": "D",
+              "text": "The store is currently closed."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Inspecting retail items (Kiểm tra/xem xét các mặt hàng bán lẻ) = browsing.",
+          "id": "p2_s3_t4_h16"
+        },
+        {
+          "image_path": "images/part2/s3/queue.jpg",
+          "type": "multiple_choice",
+          "instruction": "Hàng người đang xếp.",
+          "options": [
+            {
+              "id": "A",
+              "text": "People are lined up sequentially."
+            },
+            {
+              "id": "B",
+              "text": "The queue has dispersed."
+            },
+            {
+              "id": "C",
+              "text": "Everyone is rushing to the front."
+            },
+            {
+              "id": "D",
+              "text": "They are wandering aimlessly."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Lined up sequentially (xếp hàng theo thứ tự).",
+          "id": "p2_s3_t4_h17"
+        },
+        {
+          "image_path": "images/part2/s3/examining.jpg",
+          "type": "multiple_choice",
+          "instruction": "Mô tả sự kiểm tra tỉ mỉ.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The blueprint is being thoroughly scrutinized."
+            },
+            {
+              "id": "B",
+              "text": "He is rolling up a poster."
+            },
+            {
+              "id": "C",
+              "text": "The document is being printed out."
+            },
+            {
+              "id": "D",
+              "text": "He is tearing up the paper."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Thoroughly scrutinized (được xem xét kỹ lưỡng) là cấu trúc bị động mức độ Hard.",
+          "id": "p2_s3_t4_h18"
+        },
+        {
+          "image_path": "images/part2/s3/conversing.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền danh từ cho cuộc đối thoại nghiêm túc.",
+          "content": "The men are locked in a deep ________.",
+          "correct_answers": [
+            "conversation",
+            "discussion"
+          ],
+          "explanation": "Locked in a deep conversation (đang mải mê đàm thoại sâu).",
+          "id": "p2_s3_t4_h19"
+        },
+        {
+          "image_path": "images/part2/s3/reaching.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền động từ chỉ việc nắm lấy.",
+          "content": "An arm is outstretched to ________ the object.",
+          "correct_answers": [
+            "grasp",
+            "grab",
+            "reach",
+            "take"
+          ],
+          "explanation": "Outstretched to grasp (vươn ra để nắm lấy).",
+          "id": "p2_s3_t4_h20"
+        },
+        {
+          "image_path": "images/part2/s3/facing_away.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ mô tả phía sau.",
+          "content": "We can only see the ________ of his head.",
+          "correct_answers": [
+            "back"
+          ],
+          "explanation": "The back of his head (phía sau đầu).",
+          "id": "p2_s3_t4_h21"
+        },
+        {
+          "image_path": "images/part2/s3/handing.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ chỉ việc đưa đồ vật.",
+          "content": "An object is being ________ to the recipient.",
+          "correct_answers": [
+            "handed",
+            "given",
+            "passed"
+          ],
+          "explanation": "Being handed (được trao tay).",
+          "id": "p2_s3_t4_h22"
+        },
+        {
+          "image_path": "images/part2/s3/engaged.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền tính từ miêu tả sự chăm chú.",
+          "content": "The participants are completely ________ in their dialogue.",
+          "correct_answers": [
+            "absorbed",
+            "engaged",
+            "immersed"
+          ],
+          "explanation": "Completely absorbed (Hoàn toàn đắm chìm).",
+          "id": "p2_s3_t4_h23"
+        },
+        {
+          "image_path": "images/part2/s3/protective_gear.jpg",
+          "type": "multiple_choice",
+          "instruction": "Thiết bị bảo hộ.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Safety equipment is being utilized by the worker."
+            },
+            {
+              "id": "B",
+              "text": "The worker forgot his protective gear."
+            },
+            {
+              "id": "C",
+              "text": "He is manufacturing safety helmets."
+            },
+            {
+              "id": "D",
+              "text": "He is wearing standard office clothes."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Safety equipment is being utilized (Thiết bị an toàn đang được sử dụng).",
+          "id": "p2_s3_t4_h24"
+        },
+        {
+          "image_path": "images/part2/s3/wiping.jpg",
+          "type": "essay_typing",
+          "instruction": "Điền từ chỉ mảnh vải/giẻ lau.",
+          "content": "He is using a ________ to dry the surface.",
+          "correct_answers": [
+            "cloth",
+            "rag",
+            "towel"
+          ],
+          "explanation": "Using a cloth (dùng mảnh vải).",
+          "id": "p2_s3_t4_h25"
+        }
+      ]
+    }
+  ]
+}

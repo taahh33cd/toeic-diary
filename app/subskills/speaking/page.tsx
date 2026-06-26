@@ -3,81 +3,115 @@ import Link from "next/link";
 import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { SPEAKING_SKILLS } from "@/lib/subskills/speaking";
+import { SPEAKING_P2_SKILLS } from "@/lib/subskills/speaking-part2";
 
 export const metadata: Metadata = { title: "Speaking — Subskills TOEIC" };
 
 const TESTS_PER_SKILL = 5;
 
-const PARTS = [
-  {
-    part: 1,
-    label: "Part 1 — Đọc văn bản to",
-    description: "Luyện 5 kỹ năng nền tảng: phát âm, ngắt nghỉ, ngữ điệu, trọng âm câu, nối âm. Mỗi kỹ năng có 5 bộ test × 3 cấp độ.",
-    href: "/subskills/speaking/part1",
-    active: true,
-    detail: `5 kỹ năng · ${TESTS_PER_SKILL} bộ test/kỹ năng · 3 cấp độ`,
-  },
-  {
-    part: 2,
-    label: "Part 2 — Mô tả ảnh",
-    description: "Quan sát ảnh và mô tả chi tiết trong 45 giây. Luyện cấu trúc câu, từ vựng mô tả.",
-    href: null,
-    active: false,
-    detail: null,
-  },
-  {
-    part: 3,
-    label: "Part 3 — Trả lời câu hỏi",
-    description: "Trả lời 3 câu hỏi liên tiếp về một chủ đề quen thuộc trong 15–30 giây mỗi câu.",
-    href: null,
-    active: false,
-    detail: null,
-  },
-];
-
 export default async function SpeakingPage() {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
-  // Part 1 stats — count skills with any attempt
-  const attempts = user
-    ? await prisma.subskillAttempt
-        .findMany({
-          where: { userId: user.id, part: { startsWith: "sp1-" } },
-          select: { part: true, questionWord: true, score: true, passed: true },
-        })
-        .catch(() => [])
-    : [];
+  const [p1Attempts, p2Attempts, recordingRows] = user
+    ? await Promise.all([
+        prisma.subskillAttempt
+          .findMany({ where: { userId: user.id, part: { startsWith: "sp1-" } }, select: { part: true, questionWord: true, score: true, passed: true } })
+          .catch(() => []),
+        prisma.subskillAttempt
+          .findMany({ where: { userId: user.id, part: { startsWith: "sp2-" } }, select: { part: true, questionWord: true, score: true, passed: true } })
+          .catch(() => []),
+        (prisma.$queryRaw`SELECT overall_score FROM speaking_recording_attempts WHERE user_id = ${user.id}` as Promise<{ overall_score: number }[]>)
+          .catch(() => [] as { overall_score: number }[]),
+      ])
+    : [[], [], [] as { overall_score: number }[]];
 
-  // Count skills that have at least one Easy attempt
-  let skillsDone = 0;
-  let testsPassedTotal = 0;
+  // Part 1 stats
+  let p1SkillsDone = 0;
+  let p1TestsPassed = 0;
   for (const skill of SPEAKING_SKILLS) {
-    const skillAttempts = attempts.filter((a) => a.part === skill.part);
-    if (skillAttempts.length > 0) skillsDone++;
-    const easyBest: Record<string, number> = {};
+    const skillAttempts = p1Attempts.filter((a) => a.part === skill.part);
+    if (skillAttempts.length > 0) p1SkillsDone++;
+    const best: Record<string, number> = {};
     for (const a of skillAttempts) {
-      const prev = easyBest[a.questionWord] ?? 0;
-      if (a.score > prev) easyBest[a.questionWord] = a.score;
+      const prev = best[a.questionWord] ?? 0;
+      if (a.score > prev) best[a.questionWord] = a.score;
     }
-    testsPassedTotal += Object.values(easyBest).filter((s) => s >= 80).length;
+    p1TestsPassed += Object.values(best).filter((s) => s >= 80).length;
   }
 
-  // Recording stats — all speaking skills
-  const recordingRows = user
-    ? await (prisma.$queryRaw`
-        SELECT overall_score FROM speaking_recording_attempts
-        WHERE user_id = ${user.id}
-      ` as Promise<{ overall_score: number }[]>).catch(() => [] as { overall_score: number }[])
-    : ([] as { overall_score: number }[]);
+  // Part 2 stats
+  let p2SkillsDone = 0;
+  let p2TestsPassed = 0;
+  for (const skill of SPEAKING_P2_SKILLS) {
+    const skillAttempts = p2Attempts.filter((a) => a.part === skill.part);
+    if (skillAttempts.length > 0) p2SkillsDone++;
+    const best: Record<string, number> = {};
+    for (const a of skillAttempts) {
+      const prev = best[a.questionWord] ?? 0;
+      if (a.score > prev) best[a.questionWord] = a.score;
+    }
+    p2TestsPassed += Object.values(best).filter((s) => s >= 80).length;
+  }
 
   const recordingCount = recordingRows.length;
   const bestRecordingScore = recordingCount > 0
     ? Math.round(Math.max(...recordingRows.map((r) => r.overall_score)))
     : null;
 
-  const hasDone = skillsDone > 0;
   const totalTests = SPEAKING_SKILLS.length * TESTS_PER_SKILL; // 25
+
+  type PartConfig = {
+    part: number;
+    label: string;
+    description: string;
+    href: string | null;
+    active: boolean;
+    detail: string | null;
+    skillsDone: number;
+    totalSkills: number;
+    testsPassed: number;
+    totalTestsAll: number;
+  };
+
+  const PARTS: PartConfig[] = [
+    {
+      part: 1,
+      label: "Part 1 — Đọc văn bản to",
+      description: "Luyện 5 kỹ năng nền tảng: phát âm, ngắt nghỉ, ngữ điệu, trọng âm câu, nối âm. Mỗi kỹ năng có 5 bộ test × 3 cấp độ.",
+      href: "/subskills/speaking/part1",
+      active: true,
+      detail: `5 kỹ năng · ${TESTS_PER_SKILL} bộ test/kỹ năng · 3 cấp độ`,
+      skillsDone: p1SkillsDone,
+      totalSkills: SPEAKING_SKILLS.length,
+      testsPassed: p1TestsPassed,
+      totalTestsAll: totalTests,
+    },
+    {
+      part: 2,
+      label: "Part 2 — Mô tả ảnh",
+      description: "Quan sát ảnh và mô tả chi tiết trong 45 giây. Luyện cấu trúc câu, từ vựng mô tả.",
+      href: "/subskills/speaking/part2",
+      active: true,
+      detail: `5 kỹ năng · ${TESTS_PER_SKILL} bộ test/kỹ năng · 3 cấp độ`,
+      skillsDone: p2SkillsDone,
+      totalSkills: SPEAKING_P2_SKILLS.length,
+      testsPassed: p2TestsPassed,
+      totalTestsAll: SPEAKING_P2_SKILLS.length * TESTS_PER_SKILL,
+    },
+    {
+      part: 3,
+      label: "Part 3 — Trả lời câu hỏi",
+      description: "Trả lời 3 câu hỏi liên tiếp về một chủ đề quen thuộc trong 15–30 giây mỗi câu.",
+      href: null,
+      active: false,
+      detail: null,
+      skillsDone: 0,
+      totalSkills: 0,
+      testsPassed: 0,
+      totalTestsAll: 0,
+    },
+  ];
 
   return (
     <div
@@ -145,6 +179,8 @@ export default async function SpeakingPage() {
             );
           }
 
+          const hasDone = p.skillsDone > 0;
+
           return (
             <Link
               key={p.part}
@@ -179,13 +215,13 @@ export default async function SpeakingPage() {
                   </span>
                   {hasDone && (
                     <>
-                      <span style={{ fontSize: "0.68rem", color: "var(--text-muted)" }}>{skillsDone}/{SPEAKING_SKILLS.length} kỹ năng đã bắt đầu</span>
-                      {testsPassedTotal > 0 && (
-                        <span style={{ fontSize: "0.68rem", color: "rgb(34,197,94)" }}>{testsPassedTotal}/{totalTests} test pass (Easy ≥ 80%)</span>
+                      <span style={{ fontSize: "0.68rem", color: "var(--text-muted)" }}>{p.skillsDone}/{p.totalSkills} kỹ năng đã bắt đầu</span>
+                      {p.testsPassed > 0 && (
+                        <span style={{ fontSize: "0.68rem", color: "rgb(34,197,94)" }}>{p.testsPassed}/{p.totalTestsAll} test pass (Easy ≥ 80%)</span>
                       )}
                     </>
                   )}
-                  {recordingCount > 0 && (
+                  {p.part === 1 && recordingCount > 0 && (
                     <span style={{ fontSize: "0.68rem", color: "rgba(168,85,247,0.85)" }}>
                       🎙 {recordingCount} lần ghi âm · phát âm tốt nhất: {bestRecordingScore}%
                     </span>
