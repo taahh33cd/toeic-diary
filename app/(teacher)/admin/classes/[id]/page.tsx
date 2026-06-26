@@ -27,6 +27,7 @@ import {
   updateClassHomework,
   deleteClassHomework,
   setAttendance,
+  addClassMember,
   removeClassMember,
   pushHomework,
   updateHomework,
@@ -595,6 +596,163 @@ function ClassInfoSection({
   );
 }
 
+// ─── AddMemberModal ───────────────────────────────────────────────────────────
+
+function AddMemberModal({
+  classId,
+  allStudents,
+  memberCodes,
+  onClose,
+}: {
+  classId: string;
+  allStudents: (Student & { id: string })[];
+  memberCodes: string[];
+  onClose: () => void;
+}) {
+  const [search, setSearch] = useState("");
+  const [manualCode, setManualCode] = useState("");
+  const [adding, setAdding] = useState<string | null>(null);
+  const [added, setAdded] = useState<Set<string>>(new Set());
+  const [error, setError] = useState("");
+
+  const available = useMemo(
+    () =>
+      allStudents.filter(
+        (s) =>
+          !memberCodes.includes(s.id) &&
+          !added.has(s.id) &&
+          (search === "" ||
+            (s.name ?? "").toLowerCase().includes(search.toLowerCase()) ||
+            s.id.includes(search))
+      ),
+    [allStudents, memberCodes, added, search]
+  );
+
+  async function addStudent(code: string, name?: string) {
+    const trimmed = code.trim();
+    if (!trimmed || adding) return;
+    setAdding(trimmed);
+    setError("");
+    try {
+      await addClassMember(classId, trimmed);
+      setAdded((prev) => new Set(prev).add(trimmed));
+      setManualCode("");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Có lỗi xảy ra.");
+    }
+    setAdding(null);
+  }
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      style={{ background: "rgba(0,0,0,0.45)" }}
+      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
+    >
+      <div
+        className="w-full max-w-md rounded-2xl flex flex-col"
+        style={{
+          background: "var(--bg-card)",
+          border: "1px solid var(--border)",
+          boxShadow: "var(--shadow-lg)",
+          maxHeight: "80vh",
+        }}
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between px-4 py-3 border-b" style={{ borderColor: "var(--border)" }}>
+          <h3 className="font-bold text-sm" style={{ color: "var(--text-primary)" }}>
+            Thêm học viên vào lớp
+          </h3>
+          <button onClick={onClose} style={{ color: "var(--text-muted)", background: "none", border: "none", cursor: "pointer", fontSize: 18, lineHeight: 1 }}>×</button>
+        </div>
+
+        {/* Manual code */}
+        <div className="px-4 pt-4 pb-3 border-b" style={{ borderColor: "var(--border)" }}>
+          <p className="text-xs font-semibold mb-2" style={{ color: "var(--text-secondary)" }}>NHẬP MÃ HỌC VIÊN THỦ CÔNG</p>
+          <div className="flex gap-2">
+            <input
+              type="text"
+              value={manualCode}
+              onChange={(e) => setManualCode(e.target.value)}
+              onKeyDown={(e) => { if (e.key === "Enter") addStudent(manualCode); }}
+              placeholder="VD: 0386761664"
+              className="flex-1 px-3 py-2 rounded-lg text-sm border outline-none"
+              style={{ background: "var(--bg-elevated)", borderColor: "var(--border)", color: "var(--text-primary)" }}
+            />
+            <button
+              onClick={() => addStudent(manualCode)}
+              disabled={!manualCode.trim() || !!adding}
+              className="px-3 py-2 rounded-lg text-xs font-bold"
+              style={{ background: "var(--accent-primary)", color: "#fff", border: "none", cursor: "pointer", opacity: !manualCode.trim() || !!adding ? 0.5 : 1 }}
+            >
+              {adding === manualCode.trim() ? "..." : "Thêm"}
+            </button>
+          </div>
+          {error && <p className="text-xs mt-1.5" style={{ color: "rgb(220,38,38)" }}>{error}</p>}
+        </div>
+
+        {/* Search from list */}
+        <div className="px-4 pt-3 pb-2">
+          <p className="text-xs font-semibold mb-2" style={{ color: "var(--text-secondary)" }}>CHỌN TỪ DANH SÁCH</p>
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Tìm theo tên hoặc mã..."
+            className="w-full px-3 py-2 rounded-lg text-sm border outline-none"
+            style={{ background: "var(--bg-elevated)", borderColor: "var(--border)", color: "var(--text-primary)" }}
+          />
+        </div>
+
+        {/* Student list */}
+        <div className="flex-1 overflow-y-auto px-4 pb-4 space-y-1.5">
+          {available.length === 0 ? (
+            <p className="text-xs text-center py-6" style={{ color: "var(--text-muted)" }}>
+              {search ? "Không tìm thấy học viên phù hợp" : "Tất cả học viên đã trong lớp"}
+            </p>
+          ) : (
+            available.slice(0, 30).map((s) => (
+              <div
+                key={s.id}
+                className="flex items-center justify-between gap-3 px-3 py-2.5 rounded-lg border"
+                style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}
+              >
+                <div className="min-w-0">
+                  <p className="text-sm font-medium truncate" style={{ color: "var(--text-primary)" }}>{s.name ?? s.id}</p>
+                  <p className="text-xs" style={{ color: "var(--text-muted)" }}>{s.id} · Tuần {s.currentWeek ?? 0}</p>
+                </div>
+                <button
+                  onClick={() => addStudent(s.id, s.name)}
+                  disabled={!!adding}
+                  className="shrink-0 px-2.5 py-1 rounded-lg text-xs font-bold"
+                  style={{ background: "rgba(196,98,45,0.1)", color: "var(--accent-primary)", border: "none", cursor: "pointer" }}
+                >
+                  {adding === s.id ? "..." : "+ Thêm"}
+                </button>
+              </div>
+            ))
+          )}
+          {added.size > 0 && (
+            <p className="text-xs text-center pt-2" style={{ color: "rgb(5,150,105)" }}>
+              ✓ Đã thêm {added.size} học viên
+            </p>
+          )}
+        </div>
+
+        <div className="px-4 py-3 border-t flex justify-end" style={{ borderColor: "var(--border)" }}>
+          <button
+            onClick={onClose}
+            className="px-4 py-2 rounded-xl text-sm font-semibold border"
+            style={{ background: "transparent", borderColor: "var(--border)", color: "var(--text-secondary)", cursor: "pointer" }}
+          >
+            Xong
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ─── StudentGridSection ───────────────────────────────────────────────────────
 
 function StudentGridSection({
@@ -607,6 +765,7 @@ function StudentGridSection({
   allStudents: (Student & { id: string })[];
 }) {
   const memberCodes = cls.members ?? [];
+  const [showAdd, setShowAdd] = useState(false);
 
   const members = useMemo(
     () =>
@@ -622,50 +781,68 @@ function StudentGridSection({
   }
 
   return (
-    <SectionCard title={`👥 Học viên (${members.length})`}>
-      {members.length === 0 ? (
-        <p className="text-xs text-center py-4" style={{ color: "var(--text-muted)" }}>
-          Chưa có học viên
-        </p>
-      ) : (
-        <div className="grid grid-cols-1 gap-2">
-          {members.map((student) => (
-            <div
-              key={student.id}
-              className="flex items-center gap-3 p-2.5 rounded-lg border"
-              style={{
-                borderColor: "var(--border)",
-                background: "var(--bg-primary)",
-              }}
-            >
-              <Link
-                href={`/admin/students/${student.id}`}
-                className="flex-1 min-w-0"
+    <>
+      <SectionCard
+        title={`👥 Học viên (${members.length})`}
+        action={
+          <Btn onClick={() => setShowAdd(true)} variant="primary" size="xs">
+            <Plus size={12} /> Thêm
+          </Btn>
+        }
+      >
+        {members.length === 0 ? (
+          <p className="text-xs text-center py-4" style={{ color: "var(--text-muted)" }}>
+            Chưa có học viên
+          </p>
+        ) : (
+          <div className="grid grid-cols-1 gap-2">
+            {members.map((student) => (
+              <div
+                key={student.id}
+                className="flex items-center gap-3 p-2.5 rounded-lg border"
+                style={{
+                  borderColor: "var(--border)",
+                  background: "var(--bg-primary)",
+                }}
               >
-                <p
-                  className="text-sm font-medium truncate hover:underline"
-                  style={{ color: "var(--text-primary)" }}
+                <Link
+                  href={`/admin/students/${student.id}`}
+                  className="flex-1 min-w-0"
                 >
-                  {student.name ?? student.id}
-                </p>
-                <p className="text-xs" style={{ color: "var(--text-muted)" }}>
-                  Tuần {student.currentWeek ?? 0}
-                  {student.frozen ? " · 🧊 Đóng băng" : ""}
-                </p>
-              </Link>
-              <button
-                onClick={() => handleRemove(student.id)}
-                className="shrink-0 p-1 rounded"
-                style={{ color: "var(--text-muted)" }}
-                title="Xoá khỏi lớp"
-              >
-                <UserMinus size={14} />
-              </button>
-            </div>
-          ))}
-        </div>
+                  <p
+                    className="text-sm font-medium truncate hover:underline"
+                    style={{ color: "var(--text-primary)" }}
+                  >
+                    {student.name ?? student.id}
+                  </p>
+                  <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+                    Tuần {student.currentWeek ?? 0}
+                    {student.frozen ? " · 🧊 Đóng băng" : ""}
+                  </p>
+                </Link>
+                <button
+                  onClick={() => handleRemove(student.id)}
+                  className="shrink-0 p-1 rounded"
+                  style={{ color: "var(--text-muted)" }}
+                  title="Xoá khỏi lớp"
+                >
+                  <UserMinus size={14} />
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+      </SectionCard>
+
+      {showAdd && (
+        <AddMemberModal
+          classId={classId}
+          allStudents={allStudents}
+          memberCodes={memberCodes}
+          onClose={() => setShowAdd(false)}
+        />
       )}
-    </SectionCard>
+    </>
   );
 }
 
@@ -1003,6 +1180,172 @@ function ProgressGridSection({
   );
 }
 
+// ─── WeekProgressSection ────────────────────────────────────────────────────
+
+function getMondayOf(date: Date): Date {
+  const d = new Date(date);
+  const day = d.getDay();
+  const diff = day === 0 ? -6 : 1 - day;
+  d.setDate(d.getDate() + diff);
+  return d;
+}
+
+function datesBetween(start: string, end: string): string[] {
+  const dates: string[] = [];
+  const cur = new Date(start + "T00:00:00");
+  const endD = new Date(end + "T00:00:00");
+  while (cur <= endD) {
+    dates.push(cur.toISOString().slice(0, 10));
+    cur.setDate(cur.getDate() + 1);
+  }
+  return dates;
+}
+
+function WeekProgressSection({
+  homework,
+  memberCodes,
+  allStudents,
+  attendance,
+}: {
+  homework: Homework[];
+  memberCodes: string[];
+  allStudents: (Student & { id: string })[];
+  attendance: Record<string, Record<string, AttendanceStatus>>;
+}) {
+  const [weekStart, setWeekStart] = useState(() => getMondayOf(new Date()).toISOString().slice(0, 10));
+  const [dayLinksMap, setDayLinksMap] = useState<Record<string, Record<string, boolean>>>({});
+  const [loading, setLoading] = useState(false);
+
+  const weekEnd = useMemo(() => {
+    const d = new Date(weekStart + "T00:00:00");
+    d.setDate(d.getDate() + 6);
+    return d.toISOString().slice(0, 10);
+  }, [weekStart]);
+
+  const weekDates = useMemo(() => datesBetween(weekStart, weekEnd), [weekStart, weekEnd]);
+
+  const weekHomework = useMemo(
+    () => homework.filter((hw) => hw.date >= weekStart && hw.date <= weekEnd),
+    [homework, weekStart, weekEnd]
+  );
+
+  const members = useMemo(
+    () => memberCodes.map((c) => allStudents.find((s) => s.id === c)).filter(Boolean) as (Student & { id: string })[],
+    [memberCodes, allStudents]
+  );
+
+  useEffect(() => {
+    if (memberCodes.length === 0 || weekHomework.length === 0) { setDayLinksMap({}); return; }
+    let cancelled = false;
+    setLoading(true);
+    Promise.all(
+      memberCodes.map(async (code) => {
+        const snap = await get(dbRef(firebaseDb, `daylinks/${code}`));
+        return { code, data: snap.val() as Record<string, unknown> | null };
+      })
+    ).then((results) => {
+      if (cancelled) return;
+      const map: Record<string, Record<string, boolean>> = {};
+      for (const { code, data } of results) {
+        map[code] = {};
+        for (const hw of weekHomework) map[code][hw.id] = !!(data?.[hw.id]);
+      }
+      setDayLinksMap(map);
+      setLoading(false);
+    });
+    return () => { cancelled = true; };
+  }, [memberCodes, weekHomework]);
+
+  function shiftWeek(delta: number) {
+    const d = new Date(weekStart + "T00:00:00");
+    d.setDate(d.getDate() + delta * 7);
+    setWeekStart(d.toISOString().slice(0, 10));
+  }
+
+  if (members.length === 0) return null;
+
+  const weekLabel = `${fmtDate(weekStart)} – ${fmtDate(weekEnd)}`;
+
+  return (
+    <SectionCard
+      title="📈 Tiến độ tuần"
+      action={
+        <div className="flex items-center gap-1">
+          <button onClick={() => shiftWeek(-1)} className="p-1 rounded hover:opacity-70" style={{ border: "1px solid var(--border)", background: "var(--bg-primary)", color: "var(--text-secondary)", cursor: "pointer", lineHeight: 1 }}>‹</button>
+          <span className="text-xs px-2" style={{ color: "var(--text-secondary)", whiteSpace: "nowrap" }}>{weekLabel}</span>
+          <button onClick={() => shiftWeek(1)} className="p-1 rounded hover:opacity-70" style={{ border: "1px solid var(--border)", background: "var(--bg-primary)", color: "var(--text-secondary)", cursor: "pointer", lineHeight: 1 }}>›</button>
+        </div>
+      }
+    >
+      {loading ? (
+        <p className="text-xs text-center py-4" style={{ color: "var(--text-muted)" }}>Đang tải…</p>
+      ) : (
+        <div style={{ overflowX: "auto" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: ".72rem" }}>
+            <thead>
+              <tr>
+                <th style={{ textAlign: "left", padding: ".4rem .5rem", color: "var(--text-muted)", fontWeight: 600, borderBottom: "1px solid var(--border)", minWidth: 100 }}>Học viên</th>
+                <th style={{ textAlign: "center", padding: ".4rem", color: "var(--text-muted)", fontWeight: 600, borderBottom: "1px solid var(--border)" }}>Tuần HV</th>
+                <th style={{ textAlign: "center", padding: ".4rem", color: "var(--text-muted)", fontWeight: 600, borderBottom: "1px solid var(--border)", whiteSpace: "nowrap" }}>Điểm danh tuần</th>
+                <th style={{ textAlign: "center", padding: ".4rem", color: "var(--text-muted)", fontWeight: 600, borderBottom: "1px solid var(--border)", whiteSpace: "nowrap" }}>
+                  BTVN tuần {weekHomework.length > 0 ? `(${weekHomework.length})` : ""}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {members.map((student) => {
+                const attPresent = weekDates.filter((d) => attendance[student.id]?.[d] === "present").length;
+                const attLate    = weekDates.filter((d) => attendance[student.id]?.[d] === "late").length;
+                const attAbsent  = weekDates.filter((d) => attendance[student.id]?.[d] === "absent").length;
+                const attTotal   = attPresent + attLate + attAbsent;
+                const hwDone     = weekHomework.filter((hw) => dayLinksMap[student.id]?.[hw.id]).length;
+                const hwTotal    = weekHomework.length;
+
+                return (
+                  <tr key={student.id}>
+                    <td style={{ padding: ".4rem .5rem", color: "var(--text-primary)", fontWeight: 500, borderBottom: "1px solid var(--border)" }}>
+                      <Link href={`/admin/students/${student.id}`} className="hover:underline">{student.name ?? student.id}</Link>
+                    </td>
+                    <td style={{ textAlign: "center", padding: ".4rem", borderBottom: "1px solid var(--border)", color: "var(--text-secondary)" }}>
+                      T.{student.currentWeek ?? 0}
+                    </td>
+                    <td style={{ textAlign: "center", padding: ".4rem", borderBottom: "1px solid var(--border)" }}>
+                      {attTotal === 0 ? (
+                        <span style={{ color: "var(--text-muted)" }}>—</span>
+                      ) : (
+                        <span style={{ color: attPresent > 0 ? "rgb(5,150,105)" : "var(--text-secondary)", fontWeight: 600 }}>
+                          {attPresent > 0 && <span style={{ color: "rgb(5,150,105)" }}>✓{attPresent}</span>}
+                          {attLate > 0 && <span style={{ color: "rgb(234,179,8)", marginLeft: attPresent > 0 ? 4 : 0 }}>~{attLate}</span>}
+                          {attAbsent > 0 && <span style={{ color: "rgb(239,68,68)", marginLeft: attTotal > attAbsent ? 4 : 0 }}>✗{attAbsent}</span>}
+                        </span>
+                      )}
+                    </td>
+                    <td style={{ textAlign: "center", padding: ".4rem", borderBottom: "1px solid var(--border)" }}>
+                      {hwTotal === 0 ? (
+                        <span style={{ color: "var(--text-muted)" }}>—</span>
+                      ) : (
+                        <span style={{
+                          fontWeight: 700,
+                          color: hwDone === hwTotal ? "rgb(5,150,105)" : hwDone > 0 ? "rgb(234,179,8)" : "rgb(239,68,68)",
+                        }}>
+                          {hwDone}/{hwTotal}
+                        </span>
+                      )}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          {weekHomework.length === 0 && (
+            <p className="text-xs mt-2" style={{ color: "var(--text-muted)" }}>Tuần này chưa có BTVN được giao.</p>
+          )}
+        </div>
+      )}
+    </SectionCard>
+  );
+}
+
 // ─── AttendanceSection ────────────────────────────────────────────────────────
 
 function AttendanceSection({
@@ -1218,6 +1561,12 @@ export default function ClassDetailPage() {
             homework={homework}
             memberCodes={memberCodes}
             allStudents={allStudents as (Student & { id: string })[]}
+          />
+          <WeekProgressSection
+            homework={homework}
+            memberCodes={memberCodes}
+            allStudents={allStudents as (Student & { id: string })[]}
+            attendance={attendance as Record<string, Record<string, AttendanceStatus>>}
           />
           <AttendanceSection
             classId={classId}
