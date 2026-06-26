@@ -21,6 +21,7 @@ import type {
   StudentModule,
   ScheduleItem,
   SchoolClass,
+  ClassSession,
   ErrorLogEntry,
   ErrorDetail,
   ParaphraseEntry,
@@ -388,6 +389,23 @@ export async function deleteScheduleItem(
 }
 
 // ─── Classes ─────────────────────────────────────────────────────────────────
+
+export async function createClass(data: {
+  name: string;
+  desc?: string;
+  weeklySchedule?: ClassSession[];
+}): Promise<string> {
+  const id = `class_${Date.now()}`;
+  const cls: SchoolClass = {
+    id,
+    name: data.name,
+    members: [],
+    ...(data.desc ? { desc: data.desc } : {}),
+    ...(data.weeklySchedule?.length ? { weeklySchedule: data.weeklySchedule } : {}),
+  };
+  await set(ref(firebaseDb, `classes/${id}`), cls);
+  return id;
+}
 
 export async function deleteClass(id: string): Promise<void> {
   await remove(ref(firebaseDb, `classes/${id}`));
