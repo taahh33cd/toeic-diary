@@ -115,7 +115,7 @@ function MCQQuestion({
       {/* Translation */}
       {showTranslation && q.translation && (
         <p style={{
-          fontSize: "0.78rem",
+          fontSize: "0.9rem",
           color: "var(--text-muted)",
           fontStyle: "italic",
           marginBottom: "1.25rem",
@@ -241,7 +241,7 @@ function HighlightQuestion({
 
       {/* Translation */}
       <p style={{
-        fontSize: "0.78rem",
+        fontSize: "0.9rem",
         color: "var(--text-muted)",
         fontStyle: "italic",
         marginBottom: "1rem",
