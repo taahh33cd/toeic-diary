@@ -366,15 +366,15 @@ export default function SpeakingPart2Client({
           </div>
         )}
 
-        <div style={{ padding: "1.25rem 1.5rem" }}>
+        <div style={{ padding: "1.5rem 1.75rem" }}>
           {/* Instruction */}
-          <p style={{ margin: "0 0 1rem", fontSize: "0.92rem", fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.5 }}>
+          <p style={{ margin: "0 0 1.1rem", fontSize: "1.05rem", fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.55 }}>
             {currentEx.instruction}
           </p>
 
           {/* MCQ options */}
           {currentEx.type === "multiple_choice" && (
-            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {currentEx.options.map((opt) => {
                 const isSelected = selectedOption === opt.id;
                 const isCorrectOpt = currentEx.correct_answers.includes(opt.id);
@@ -394,14 +394,14 @@ export default function SpeakingPart2Client({
                     onClick={() => setSelectedOption(opt.id)}
                     style={{
                       display: "flex", alignItems: "flex-start", gap: "0.75rem",
-                      padding: "0.75rem 1rem", borderRadius: 8,
+                      padding: "0.85rem 1.1rem", borderRadius: 8,
                       border: `1.5px solid ${borderColor}`,
                       background: bg, color: textColor,
-                      fontSize: "0.85rem", textAlign: "left", cursor: submitted ? "default" : "pointer",
+                      fontSize: "0.97rem", textAlign: "left", cursor: submitted ? "default" : "pointer",
                       transition: "all 0.15s",
                     }}
                   >
-                    <span style={{ fontWeight: 700, flexShrink: 0, minWidth: 18 }}>{opt.id}.</span>
+                    <span style={{ fontWeight: 700, flexShrink: 0, minWidth: 20 }}>{opt.id}.</span>
                     <span>{opt.text}</span>
                   </button>
                 );
@@ -413,7 +413,7 @@ export default function SpeakingPart2Client({
           {currentEx.type === "essay_typing" && (
             <div>
               {currentEx.content && (
-                <div style={{ marginBottom: "0.75rem", padding: "0.75rem 1rem", background: "var(--bg-elevated)", borderRadius: 8, border: "1px solid var(--border)", fontSize: "0.9rem", color: "var(--text-primary)", lineHeight: 1.6 }}>
+                <div style={{ marginBottom: "0.85rem", padding: "0.85rem 1.1rem", background: "var(--bg-elevated)", borderRadius: 8, border: "1px solid var(--border)", fontSize: "1rem", color: "var(--text-primary)", lineHeight: 1.65 }}>
                   {currentEx.content}
                 </div>
               )}
@@ -425,14 +425,14 @@ export default function SpeakingPart2Client({
                 disabled={submitted}
                 placeholder="Điền câu trả lời..."
                 style={{
-                  width: "100%", padding: "0.65rem 0.9rem", borderRadius: 8,
+                  width: "100%", padding: "0.75rem 1rem", borderRadius: 8,
                   border: submitted
                     ? `1.5px solid ${isCorrect ? "rgba(34,197,94,0.5)" : "rgba(239,68,68,0.4)"}`
                     : "1.5px solid var(--border)",
                   background: submitted
                     ? (isCorrect ? "rgba(34,197,94,0.08)" : "rgba(239,68,68,0.06)")
                     : "var(--bg-primary)",
-                  color: "var(--text-primary)", fontSize: "0.9rem",
+                  color: "var(--text-primary)", fontSize: "1rem",
                   boxSizing: "border-box", outline: "none",
                 }}
               />
@@ -441,11 +441,11 @@ export default function SpeakingPart2Client({
 
           {/* Result feedback */}
           {submitted && (
-            <div style={{ marginTop: "0.75rem", padding: "0.75rem 1rem", borderRadius: 8, background: isCorrect ? "rgba(34,197,94,0.08)" : "rgba(239,68,68,0.06)", border: `1px solid ${isCorrect ? "rgba(34,197,94,0.25)" : "rgba(239,68,68,0.2)"}` }}>
-              <div style={{ fontWeight: 700, color: isCorrect ? "rgb(34,197,94)" : "rgb(239,68,68)", marginBottom: 4, fontSize: "0.85rem" }}>
+            <div style={{ marginTop: "0.85rem", padding: "0.85rem 1.1rem", borderRadius: 8, background: isCorrect ? "rgba(34,197,94,0.08)" : "rgba(239,68,68,0.06)", border: `1px solid ${isCorrect ? "rgba(34,197,94,0.25)" : "rgba(239,68,68,0.2)"}` }}>
+              <div style={{ fontWeight: 700, color: isCorrect ? "rgb(34,197,94)" : "rgb(239,68,68)", marginBottom: 5, fontSize: "0.95rem" }}>
                 {isCorrect ? "✓ Chính xác!" : `✗ Sai — Đáp án đúng: ${correctOptionText}`}
               </div>
-              <div style={{ fontSize: "0.78rem", color: "var(--text-secondary)", lineHeight: 1.5 }}>
+              <div style={{ fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
                 {currentEx.explanation}
               </div>
             </div>
