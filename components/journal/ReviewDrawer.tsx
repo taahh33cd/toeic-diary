@@ -19,22 +19,26 @@ const STEPS: Record<string, StepDef[]> = {
     { id: "s1", text: "Tra từ vựng mới" },
     { id: "s2", text: "Phân tích tranh — đối tượng + hành động trong ảnh" },
     { id: "s3", text: "Luyện nghe – chép chính tả các câu sai", dictation: true },
+    { id: "s4", text: "Quay video / Ghi âm: bật file nghe → tạm dừng sau mỗi câu sai → nhắc lại và dịch nghĩa câu hỏi + đáp án đúng" },
   ],
   p2: [
     { id: "s1", text: "Tra từ vựng mới" },
     { id: "s2", text: "Phân tích hàm ý / bối cảnh câu hỏi và đáp án đúng" },
     { id: "s3", text: "Chỉ ra lý do sai của từng lựa chọn sai", trap: true },
     { id: "s4", text: "Luyện nghe – chép chính tả các câu sai", dictation: true },
+    { id: "s5", text: "Quay video / Ghi âm: bật file nghe → tạm dừng sau mỗi câu sai → nhắc lại và dịch nghĩa câu hỏi + đáp án đúng" },
   ],
   p3: [
     { id: "s1", text: "Tra từ vựng mới" },
     { id: "s2", text: "Luyện nghe – chép chính tả các bài nghe sai >1 câu hỏi", dictation: true },
     { id: "s3", text: "Tóm tắt & ghi chú từ đồng nghĩa trong đáp án và transcript" },
+    { id: "s4", text: "Quay video / Ghi âm: đọc to transcript của các bài nghe sai từ 2 câu trở lên" },
   ],
   p4: [
     { id: "s1", text: "Tra từ vựng mới" },
     { id: "s2", text: "Luyện nghe – chép chính tả các bài nghe sai >1 câu hỏi", dictation: true },
     { id: "s3", text: "Tóm tắt & ghi chú từ đồng nghĩa trong đáp án và transcript" },
+    { id: "s4", text: "Quay video / Ghi âm: đọc to transcript của các bài nghe sai từ 2 câu trở lên" },
   ],
   p5: [
     { id: "s1", text: "Chia cụm SVOC của câu" },
