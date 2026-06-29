@@ -354,14 +354,14 @@ export default function SpeakingPart2Client({
       <div style={{ border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", overflow: "hidden", marginBottom: "1rem" }}>
         {/* Image */}
         {currentEx.image_url && !imgError && (
-          <div style={{ width: "100%", background: "var(--bg-elevated)", overflow: "hidden" }}>
+          <div style={{ width: "100%", background: "var(--bg-elevated)", display: "flex", justifyContent: "center" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               key={`${testNum}-${difficulty}-${idx}`}
               src={currentEx.image_url}
               alt="Exercise image"
               onError={() => setImgError(true)}
-              style={{ width: "100%", height: "auto", maxHeight: 360, objectFit: "cover", display: "block" }}
+              style={{ maxWidth: "100%", height: "auto", display: "block" }}
             />
           </div>
         )}
