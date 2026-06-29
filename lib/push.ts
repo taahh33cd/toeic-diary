@@ -60,7 +60,7 @@ export async function sendPushToAdminSubs(
       const sub = JSON.parse(data.subscription) as webpush.PushSubscription;
       promises.push(
         webpush.sendNotification(sub, payloadStr).catch(async (err: { statusCode?: number }) => {
-          if (err.statusCode === 410 || err.statusCode === 404) {
+          if (err.statusCode === 410 || err.statusCode === 404 || err.statusCode === 401) {
             await child.ref.remove().catch(() => undefined);
           }
         })
