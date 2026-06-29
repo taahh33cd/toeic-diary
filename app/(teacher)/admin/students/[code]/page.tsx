@@ -119,17 +119,23 @@ function BasicInfoSection({ student, code, saveRef }: {
 
   async function handleSave() {
     setSaving(true);
-    await updateStudent(code, {
-      name: name.trim(),
-      currentWeek: parseInt(week) || 1,
-      courseType: courseType as Student["courseType"],
-      pricePerSession: courseType !== "package" ? (parseInt(price) || undefined) : undefined,
-      totalFee: courseType === "package" ? (parseInt(totalFee) || undefined) : undefined,
-      paidAmount: courseType === "package" ? (parseInt(paid) || undefined) : undefined,
-    });
-    setSaving(false);
-    setSaved(true);
-    setTimeout(() => setSaved(false), 2000);
+    try {
+      await updateStudent(code, {
+        name: name.trim(),
+        currentWeek: parseInt(week) || 1,
+        courseType: courseType as Student["courseType"],
+        pricePerSession: courseType !== "package" ? (parseInt(price) || undefined) : undefined,
+        totalFee: courseType === "package" ? (parseInt(totalFee) || undefined) : undefined,
+        paidAmount: courseType === "package" ? (parseInt(paid) || undefined) : undefined,
+      });
+      setSaved(true);
+      setTimeout(() => setSaved(false), 2000);
+    } catch (err) {
+      console.error("[handleSave]", err);
+      alert("Lưu thất bại. Vui lòng thử lại.");
+    } finally {
+      setSaving(false);
+    }
   }
 
   // L14: expose save fn to parent via ref
