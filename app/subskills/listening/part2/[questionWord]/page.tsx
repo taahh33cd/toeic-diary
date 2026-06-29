@@ -35,23 +35,52 @@ export default async function ListeningPart2ExercisePage({ params, searchParams 
     : null;
   const isTestUser = profile?.studentCode?.toUpperCase() === "TEST";
 
+  type AttemptRow = { exerciseIndex: number; score: number; passed: boolean; itemIdx: number | null; correctCount: number | null; completedAt: Date };
+  type DraftMap = Record<number, { itemIdx: number; correctCount: number }>;
+
+  function computeBestAndDrafts(attempts: AttemptRow[], qw: string) {
+    const best: Record<string, { score: number; passed: boolean }> = {};
+    // Track latest checkpoint (itemIdx != null) and latest complete (itemIdx == null) per exercise
+    const latestCheckpoint: Record<number, { itemIdx: number; correctCount: number; at: Date }> = {};
+    const latestComplete: Record<number, Date> = {};
+
+    for (const a of attempts) {
+      const key = `${qw}:${a.exerciseIndex}`;
+      if (!best[key] || a.score > best[key].score) {
+        best[key] = { score: a.score, passed: a.passed };
+      }
+      if (a.itemIdx !== null && a.correctCount !== null) {
+        const cur = latestCheckpoint[a.exerciseIndex];
+        if (!cur || a.completedAt > cur.at) {
+          latestCheckpoint[a.exerciseIndex] = { itemIdx: a.itemIdx, correctCount: a.correctCount, at: a.completedAt };
+        }
+      } else {
+        const cur = latestComplete[a.exerciseIndex];
+        if (!cur || a.completedAt > cur) latestComplete[a.exerciseIndex] = a.completedAt;
+      }
+    }
+
+    const drafts: DraftMap = {};
+    for (const [eiStr, cp] of Object.entries(latestCheckpoint)) {
+      const ei = Number(eiStr);
+      const done = latestComplete[ei];
+      if (!done || cp.at > done) drafts[ei] = { itemIdx: cp.itemIdx, correctCount: cp.correctCount };
+    }
+
+    return { best, drafts };
+  }
+
   // Fetch Easy attempts
   const easyAttempts = user
     ? await prisma.subskillAttempt
         .findMany({
           where: { userId: user.id, part: "part2", questionWord },
-          select: { exerciseIndex: true, score: true, passed: true },
+          select: { exerciseIndex: true, score: true, passed: true, itemIdx: true, correctCount: true, completedAt: true },
         })
-        .catch(() => [])
-    : [];
+        .catch(() => [] as AttemptRow[])
+    : [] as AttemptRow[];
 
-  const easyBest: Record<string, { score: number; passed: boolean }> = {};
-  for (const a of easyAttempts) {
-    const key = `${questionWord}:${a.exerciseIndex}`;
-    if (!easyBest[key] || a.score > easyBest[key].score) {
-      easyBest[key] = { score: a.score, passed: a.passed };
-    }
-  }
+  const { best: easyBest, drafts: easyDrafts } = computeBestAndDrafts(easyAttempts, questionWord);
 
   // Unlock Medium if any Easy attempt score ≥ 80% (or TEST user)
   const easyTopScore = Object.values(easyBest).reduce((max, b) => Math.max(max, b.score), 0);
@@ -62,18 +91,12 @@ export default async function ListeningPart2ExercisePage({ params, searchParams 
     ? await prisma.subskillAttempt
         .findMany({
           where: { userId: user.id, part: "part2-medium", questionWord },
-          select: { exerciseIndex: true, score: true, passed: true },
+          select: { exerciseIndex: true, score: true, passed: true, itemIdx: true, correctCount: true, completedAt: true },
         })
-        .catch(() => [])
-    : [];
+        .catch(() => [] as AttemptRow[])
+    : [] as AttemptRow[];
 
-  const mediumBest: Record<string, { score: number; passed: boolean }> = {};
-  for (const a of mediumAttempts) {
-    const key = `${questionWord}:${a.exerciseIndex}`;
-    if (!mediumBest[key] || a.score > mediumBest[key].score) {
-      mediumBest[key] = { score: a.score, passed: a.passed };
-    }
-  }
+  const { best: mediumBest, drafts: mediumDrafts } = computeBestAndDrafts(mediumAttempts, questionWord);
 
   // Unlock Hard if any Medium attempt score ≥ 80% (or TEST user)
   const mediumTopScore = Object.values(mediumBest).reduce((max, b) => Math.max(max, b.score), 0);
@@ -84,18 +107,12 @@ export default async function ListeningPart2ExercisePage({ params, searchParams 
     ? await prisma.subskillAttempt
         .findMany({
           where: { userId: user.id, part: "part2-hard", questionWord },
-          select: { exerciseIndex: true, score: true, passed: true },
+          select: { exerciseIndex: true, score: true, passed: true, itemIdx: true, correctCount: true, completedAt: true },
         })
-        .catch(() => [])
-    : [];
+        .catch(() => [] as AttemptRow[])
+    : [] as AttemptRow[];
 
-  const hardBest: Record<string, { score: number; passed: boolean }> = {};
-  for (const a of hardAttempts) {
-    const key = `${questionWord}:${a.exerciseIndex}`;
-    if (!hardBest[key] || a.score > hardBest[key].score) {
-      hardBest[key] = { score: a.score, passed: a.passed };
-    }
-  }
+  const { best: hardBest, drafts: hardDrafts } = computeBestAndDrafts(hardAttempts, questionWord);
 
   const activeSet =
     difficulty === "hard"   && hardUnlocked   && hardSet   ? hardSet   :
@@ -104,6 +121,10 @@ export default async function ListeningPart2ExercisePage({ params, searchParams 
   const activeBest =
     difficulty === "hard"   && hardUnlocked   ? hardBest   :
     difficulty === "medium" && mediumUnlocked ? mediumBest : easyBest;
+
+  const activeDrafts =
+    difficulty === "hard"   && hardUnlocked   ? hardDrafts   :
+    difficulty === "medium" && mediumUnlocked ? mediumDrafts : easyDrafts;
 
   const activeDiff: "easy" | "medium" | "hard" =
     difficulty === "hard"   && hardUnlocked   ? "hard"   :
@@ -159,6 +180,7 @@ export default async function ListeningPart2ExercisePage({ params, searchParams 
         key={activeDiff}
         set={activeSet}
         initialBest={activeBest}
+        initialDrafts={activeDrafts}
         userId={user?.id ?? null}
       />
 
