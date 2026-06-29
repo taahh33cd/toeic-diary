@@ -46,24 +46,31 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    // 2. Fetch profile for claims
-    const prisma = getPrisma();
-    const profile = await prisma.profile.findUnique({
-      where: { id: user.id },
-      select: {
-        role: true,
-        studentCode: true,
-        teacherId: true,
-      },
-    });
+    // 2. Fetch profile for claims (fallback to app_metadata if DB unavailable)
+    let role = (user.app_metadata?.role as string | undefined) ?? "student";
+    let studentCode: string | null = null;
+    let teacherId: string | null = null;
+
+    if (process.env.DATABASE_URL) {
+      try {
+        const prisma = getPrisma();
+        const profile = await prisma.profile.findUnique({
+          where: { id: user.id },
+          select: { role: true, studentCode: true, teacherId: true },
+        });
+        if (profile) {
+          role = profile.role ?? role;
+          studentCode = profile.studentCode ?? null;
+          teacherId = profile.teacherId ?? null;
+        }
+      } catch (dbErr) {
+        console.warn("[firebase-token] DB unavailable, using app_metadata:", dbErr);
+      }
+    }
 
     // 3. Create Firebase Custom Token
     const adminAuth = getAdminAuth();
-    const claims: Record<string, string | null> = {
-      role: profile?.role ?? "student",
-      studentCode: profile?.studentCode ?? null,
-      teacherId: profile?.teacherId ?? null,
-    };
+    const claims: Record<string, string | null> = { role, studentCode, teacherId };
 
     // Firebase custom token uid must be Supabase user id
     const firebaseToken = await adminAuth.createCustomToken(user.id, claims);
