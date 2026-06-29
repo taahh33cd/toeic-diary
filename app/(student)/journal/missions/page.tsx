@@ -7,7 +7,7 @@ import { useHomework } from "@/hooks/firebase/useHomework";
 import { useGoal } from "@/hooks/firebase/useGoal";
 import { useSubmissions } from "@/hooks/firebase/useSubmissions";
 import { useDayLinks } from "@/hooks/firebase/useDayLinks";
-import { saveSubmission, removeSubmission, saveProgress, saveDayLink } from "@/lib/firebase/helpers";
+import { saveSubmission, removeSubmission, saveProgress, saveDayLink, uploadHomeworkFile } from "@/lib/firebase/helpers";
 import { awardXp } from "@/lib/xp-client";
 import type { Homework } from "@/lib/firebase/types";
 
@@ -180,6 +180,17 @@ function HwCard({
   const [url, setUrl] = useState(dayLinkUrl ?? submittedUrl ?? "");
   const [done, setDone] = useState(submitted);
   const [showDescMap, setShowDescMap] = useState<Record<string, boolean>>({});
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [localPreview, setLocalPreview] = useState<string | null>(null);
+  const [uploadPct, setUploadPct] = useState<number | null>(null);
+  const [showUrlInput, setShowUrlInput] = useState(false);
+  const [lightboxUrl, setLightboxUrl] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    return () => { if (localPreview) URL.revokeObjectURL(localPreview); };
+  }, [localPreview]);
+
   // Per-item check state — initialized from Firebase, persisted on toggle
   const [checked, setChecked] = useState<Record<string, boolean>>(() => {
     const init: Record<string, boolean> = {};
@@ -223,20 +234,40 @@ function HwCard({
   const dateLabel = startDate.toLocaleDateString("vi-VN", { day: "numeric", month: "long" });
   const endLabel  = endDate ? endDate.toLocaleDateString("vi-VN", { day: "numeric", month: "numeric" }) : null;
 
+  async function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    if (file.size > 50 * 1024 * 1024) {
+      alert("File quá lớn! Video tối đa 50MB.");
+      return;
+    }
+    let finalFile = file;
+    if (file.type.startsWith("image/")) {
+      const imageCompression = (await import("browser-image-compression")).default;
+      finalFile = await imageCompression(file, { maxSizeMB: 1, maxWidthOrHeight: 1920, useWebWorker: true });
+    }
+    setSelectedFile(finalFile);
+    setLocalPreview(URL.createObjectURL(finalFile));
+    setUrl("");
+  }
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (submitting || done) return;
     setSubmitting(true);
     try {
-      const trimmedUrl = url.trim();
+      let finalUrl = url.trim();
+      if (selectedFile) {
+        setUploadPct(0);
+        finalUrl = await uploadHomeworkFile(studentCode, hw.id, selectedFile, setUploadPct);
+        setUploadPct(null);
+      }
       await saveSubmission(studentCode, hw.date, {
         ticked: true,
-        url: trimmedUrl || undefined,
+        url: finalUrl || undefined,
         updatedAt: new Date().toISOString(),
       });
-      // Sync link to daylinks so admin sees LINK TỔNG HỢP
-      if (trimmedUrl) await saveDayLink(studentCode, hw.id, trimmedUrl);
-      // G10: Sync progress node
+      if (finalUrl) await saveDayLink(studentCode, hw.id, finalUrl);
       await saveProgress(studentCode, hw.date, {
         done: totalItems,
         total: totalItems,
@@ -244,7 +275,7 @@ function HwCard({
       });
       await awardXp("homework_submit", { hwDate: hw.date });
       setDone(true);
-      onDone?.(); // G11: trigger congrats popup
+      onDone?.();
     } finally {
       setSubmitting(false);
     }
@@ -390,76 +421,165 @@ function HwCard({
           {!done && (
             <form
               onSubmit={handleSubmit}
-              style={{
-                marginBottom: ".9rem",
-                border: "1px solid var(--border,#DDD0BC)",
-                background: "var(--bg-primary,#F5EFE6)",
-              }}
+              style={{ marginBottom: ".9rem", border: "1px solid var(--border,#DDD0BC)", background: "var(--bg-primary,#F5EFE6)" }}
             >
-              <div style={{
-                padding: ".4rem .75rem",
-                borderBottom: "1px solid var(--border,#DDD0BC)",
-                fontSize: ".6rem", fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase",
-                color: "#9A8672", display: "flex", alignItems: "center", gap: ".4rem",
-              }}>
-                📎 NỘP LINK DRIVE TỔNG HỢP
+              <div style={{ padding: ".4rem .75rem", borderBottom: "1px solid var(--border,#DDD0BC)", fontSize: ".6rem", fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: "#9A8672", display: "flex", alignItems: "center", gap: ".4rem" }}>
+                📎 NỘP BÀI TẬP
               </div>
-              <div style={{ display: "flex", alignItems: "center", gap: ".65rem", flexWrap: "wrap", padding: ".5rem .75rem" }}>
+              <div style={{ padding: ".5rem .75rem", display: "flex", flexDirection: "column", gap: ".5rem" }}>
+                {/* Hidden file input */}
                 <input
-                  type="url"
-                  placeholder="Paste link Google Drive tổng hợp..."
-                  value={url}
-                  onChange={e => setUrl(e.target.value)}
-                  onClick={e => e.stopPropagation()}
-                  style={{
-                    flex: 1, minWidth: 160,
-                    padding: ".4rem .7rem",
-                    border: "1px solid var(--border,#DDD0BC)",
-                    background: "var(--bg-elevated,#FBF7F2)",
-                    color: "var(--text-primary,#2C1E0F)",
-                    fontSize: ".82rem",
-                    outline: "none",
-                  }}
-                  aria-label="Link bài làm"
+                  ref={fileInputRef}
+                  type="file"
+                  accept="image/*,video/mp4,video/quicktime"
+                  style={{ display: "none" }}
+                  onChange={handleFileChange}
                 />
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  style={{
-                    flexShrink: 0,
-                    padding: ".42rem 1.1rem",
-                    background: "#C4622D", color: "#fff", border: "none",
-                    fontSize: ".8rem", fontWeight: 700,
-                    cursor: submitting ? "not-allowed" : "pointer",
-                    opacity: submitting ? 0.6 : 1,
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  {submitting ? "Đang nộp…" : "Nộp →"}
-                </button>
+
+                {/* File preview OR upload zone */}
+                {selectedFile ? (
+                  <div style={{ display: "flex", alignItems: "center", gap: ".65rem", padding: ".45rem .6rem", border: "1px solid var(--border,#DDD0BC)", background: "var(--bg-elevated,#FBF7F2)" }}>
+                    {localPreview && !selectedFile.type.startsWith("video/") ? (
+                      <img src={localPreview} alt="" style={{ width: 52, height: 52, objectFit: "cover", flexShrink: 0, border: "1px solid var(--border,#DDD0BC)" }} />
+                    ) : (
+                      <div style={{ width: 52, height: 52, background: "rgba(26,62,128,.06)", border: "1px solid rgba(26,62,128,.2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.4rem", flexShrink: 0 }}>
+                        🎬
+                      </div>
+                    )}
+                    <div style={{ flex: 1, minWidth: 0 }}>
+                      <div style={{ fontSize: ".78rem", fontWeight: 600, color: "var(--text-primary,#2C1E0F)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                        {selectedFile.name}
+                      </div>
+                      <div style={{ fontSize: ".65rem", color: "#9A8672", marginTop: ".1rem" }}>
+                        {(selectedFile.size / 1024 / 1024).toFixed(1)} MB{selectedFile.type.startsWith("image/") ? " · Đã nén" : ""}
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setSelectedFile(null);
+                        if (localPreview) { URL.revokeObjectURL(localPreview); setLocalPreview(null); }
+                        if (fileInputRef.current) fileInputRef.current.value = "";
+                      }}
+                      style={{ flexShrink: 0, background: "none", border: "1px solid var(--border,#DDD0BC)", width: 26, height: 26, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: "#9A8672", fontSize: ".75rem" }}
+                    >
+                      ✕
+                    </button>
+                  </div>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => fileInputRef.current?.click()}
+                    style={{ width: "100%", padding: ".9rem .75rem", border: "1.5px dashed var(--border,#DDD0BC)", background: "transparent", cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", gap: ".3rem" }}
+                  >
+                    <span style={{ fontSize: "1.4rem" }}>📤</span>
+                    <span style={{ fontSize: ".8rem", fontWeight: 700, color: "var(--text-primary,#2C1E0F)" }}>Chọn ảnh hoặc video</span>
+                    <span style={{ fontSize: ".64rem", color: "#9A8672" }}>Ảnh tự nén về ≤1MB · Video tối đa 50MB</span>
+                  </button>
+                )}
+
+                {/* Upload progress bar */}
+                {uploadPct !== null && (
+                  <div style={{ height: 3, background: "rgba(0,0,0,.08)", overflow: "hidden" }}>
+                    <div style={{ height: "100%", background: "#C4622D", width: `${uploadPct}%`, transition: "width .3s ease" }} />
+                  </div>
+                )}
+
+                {/* Submit + fallback URL toggle */}
+                <div style={{ display: "flex", alignItems: "center", gap: ".65rem", flexWrap: "wrap" }}>
+                  <button
+                    type="submit"
+                    disabled={submitting || (!selectedFile && !url.trim())}
+                    style={{
+                      flexShrink: 0, padding: ".42rem 1.1rem",
+                      background: "#C4622D", color: "#fff", border: "none",
+                      fontSize: ".8rem", fontWeight: 700, whiteSpace: "nowrap",
+                      cursor: (submitting || (!selectedFile && !url.trim())) ? "not-allowed" : "pointer",
+                      opacity: (submitting || (!selectedFile && !url.trim())) ? 0.5 : 1,
+                    }}
+                  >
+                    {submitting
+                      ? (uploadPct !== null ? `Đang tải ${uploadPct}%…` : "Đang nộp…")
+                      : "Nộp bài →"
+                    }
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setShowUrlInput(v => !v)}
+                    style={{ fontSize: ".7rem", color: "#9A8672", background: "none", border: "none", cursor: "pointer", padding: 0, textDecoration: "underline" }}
+                  >
+                    {showUrlInput ? "Ẩn link Drive" : "Dán link Drive thay thế"}
+                  </button>
+                </div>
+
+                {/* Fallback URL input */}
+                {showUrlInput && (
+                  <input
+                    type="url"
+                    placeholder="Paste link Google Drive tổng hợp..."
+                    value={url}
+                    onChange={e => {
+                      setUrl(e.target.value);
+                      if (e.target.value) {
+                        setSelectedFile(null);
+                        if (localPreview) { URL.revokeObjectURL(localPreview); setLocalPreview(null); }
+                      }
+                    }}
+                    onClick={e => e.stopPropagation()}
+                    style={{
+                      width: "100%", padding: ".4rem .7rem",
+                      border: "1px solid var(--border,#DDD0BC)",
+                      background: "var(--bg-elevated,#FBF7F2)",
+                      color: "var(--text-primary,#2C1E0F)",
+                      fontSize: ".82rem", outline: "none",
+                      boxSizing: "border-box",
+                    }}
+                    aria-label="Link bài làm"
+                  />
+                )}
               </div>
             </form>
           )}
 
-          {/* ── Link tổng hợp (if done) ── */}
-          {done && (dayLinkUrl || submittedUrl) && (
-            <div style={{
-              padding: ".5rem .75rem", marginBottom: ".9rem",
-              background: "rgba(74,124,89,.06)", border: "1px solid rgba(74,124,89,.2)",
-              display: "flex", alignItems: "center", gap: ".6rem", flexWrap: "wrap",
-            }}>
-              <span style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", color: "#4A7C59", flexShrink: 0 }}>
-                🔗 LINK TỔNG HỢP:
-              </span>
-              <a
-                href={dayLinkUrl ?? submittedUrl}
-                target="_blank" rel="noopener noreferrer"
-                style={{ fontSize: ".8rem", color: "#4A7C59", textDecoration: "underline", flex: 1, minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}
-              >
-                {dayLinkUrl ?? submittedUrl}
-              </a>
-            </div>
-          )}
+          {/* ── Bài đã nộp (if done) ── */}
+          {done && (dayLinkUrl || submittedUrl) && (() => {
+            const fileUrl = (dayLinkUrl ?? submittedUrl)!;
+            const fromStorage = fileUrl.startsWith("https://firebasestorage.googleapis.com");
+            const isVid = /\.(mp4|mov|avi|webm|mkv)/i.test(fileUrl.split("?")[0]);
+            if (fromStorage) {
+              return (
+                <div style={{ marginBottom: ".9rem" }}>
+                  {isVid ? (
+                    <button
+                      type="button"
+                      onClick={() => setLightboxUrl(fileUrl)}
+                      style={{ display: "flex", alignItems: "center", gap: ".6rem", padding: ".5rem .75rem", background: "rgba(26,62,128,.06)", border: "1px solid rgba(26,62,128,.2)", cursor: "pointer", width: "100%" }}
+                    >
+                      <span style={{ fontSize: "1.1rem" }}>🎬</span>
+                      <span style={{ fontSize: ".78rem", fontWeight: 600, color: "#2860A8" }}>Xem video bài nộp</span>
+                    </button>
+                  ) : (
+                    <img
+                      src={fileUrl}
+                      alt="Bài nộp"
+                      onClick={() => setLightboxUrl(fileUrl)}
+                      style={{ maxHeight: 80, objectFit: "cover", cursor: "pointer", border: "1px solid rgba(74,124,89,.3)", display: "block" }}
+                    />
+                  )}
+                </div>
+              );
+            }
+            return (
+              <div style={{ padding: ".5rem .75rem", marginBottom: ".9rem", background: "rgba(74,124,89,.06)", border: "1px solid rgba(74,124,89,.2)", display: "flex", alignItems: "center", gap: ".6rem", flexWrap: "wrap" }}>
+                <span style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", color: "#4A7C59", flexShrink: 0 }}>
+                  🔗 LINK TỔNG HỢP:
+                </span>
+                <a href={fileUrl} target="_blank" rel="noopener noreferrer" style={{ fontSize: ".8rem", color: "#4A7C59", textDecoration: "underline", flex: 1, minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                  {fileUrl}
+                </a>
+              </div>
+            );
+          })()}
 
           {/* ── Section groups ── */}
           {sections.length === 0 ? (
@@ -620,6 +740,29 @@ function HwCard({
         </motion.div>
       )}
       </AnimatePresence>
+
+      {/* ── Media lightbox ── */}
+      {lightboxUrl && (
+        <div
+          onClick={() => setLightboxUrl(null)}
+          style={{ position: "fixed", inset: 0, zIndex: 300, background: "rgba(0,0,0,.9)", display: "flex", alignItems: "center", justifyContent: "center", padding: "1rem" }}
+        >
+          <button
+            type="button"
+            onClick={() => setLightboxUrl(null)}
+            style={{ position: "absolute", top: "1rem", right: "1rem", background: "rgba(255,255,255,.15)", border: "none", color: "#fff", width: 36, height: 36, borderRadius: "50%", cursor: "pointer", fontSize: "1rem", display: "flex", alignItems: "center", justifyContent: "center" }}
+          >
+            ✕
+          </button>
+          <div onClick={e => e.stopPropagation()} style={{ maxWidth: "min(90vw,800px)", maxHeight: "90vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            {/\.(mp4|mov|avi|webm|mkv)/i.test(lightboxUrl.split("?")[0]) ? (
+              <video src={lightboxUrl} controls autoPlay style={{ maxWidth: "100%", maxHeight: "85vh" }} />
+            ) : (
+              <img src={lightboxUrl} alt="" style={{ maxWidth: "100%", maxHeight: "85vh", objectFit: "contain" }} />
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

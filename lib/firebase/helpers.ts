@@ -5,7 +5,8 @@ import {
   remove,
   get,
 } from "firebase/database";
-import { firebaseDb } from "./client";
+import { ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { firebaseDb, firebaseStorage } from "./client";
 import type {
   Student,
   Homework,
@@ -582,5 +583,26 @@ export async function clearReviewProgress(
   scoreKey: string
 ): Promise<void> {
   await remove(ref(firebaseDb, `students/${code}/reviewProgress/${scoreKey}`));
+}
+
+// ─── Homework File Upload (Firebase Storage) ──────────────────────────────────
+
+export function uploadHomeworkFile(
+  studentCode: string,
+  hwId: string,
+  file: File,
+  onProgress?: (pct: number) => void
+): Promise<string> {
+  const path = `homework/${studentCode}/${hwId}/${Date.now()}_${file.name}`;
+  const sRef = storageRef(firebaseStorage, path);
+  return new Promise((resolve, reject) => {
+    const task = uploadBytesResumable(sRef, file);
+    task.on(
+      "state_changed",
+      snap => onProgress?.(Math.round((snap.bytesTransferred / snap.totalBytes) * 100)),
+      reject,
+      async () => resolve(await getDownloadURL(task.snapshot.ref))
+    );
+  });
 }
 
