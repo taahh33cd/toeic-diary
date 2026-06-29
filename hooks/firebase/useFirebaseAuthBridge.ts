@@ -34,7 +34,7 @@ export function useFirebaseAuthBridge() {
           return;
         }
 
-        if (event === "SIGNED_IN" || event === "TOKEN_REFRESHED") {
+        if (event === "SIGNED_IN" || event === "TOKEN_REFRESHED" || event === "INITIAL_SESSION") {
           if (isBridging.current) return;
           isBridging.current = true;
 
