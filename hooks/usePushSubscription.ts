@@ -22,8 +22,9 @@ async function saveSubscription(sub: PushSubscription, studentCode?: string): Pr
   });
 }
 
-// Same key as old project (ta2hieu-functions/index.js) — hardcoded to avoid Turbopack cache issues
-const VAPID_PUBLIC_KEY = "BI6oGa-wTvy5QgHNzfM5RxYpdE-eebpptuZd44MFZwE9-ZhMYjDeNTrzPPkI6ekKReAvTdCRckF_pHBQU1JbB6M";
+// Hardcoded to avoid Turbopack build-cache issues with NEXT_PUBLIC_ env vars.
+// Must match NEXT_PUBLIC_VAPID_PUBLIC_KEY in .env / Vercel project settings.
+const VAPID_PUBLIC_KEY = "BLrjzyy5bIbEzs2C67woqyn_NGrsR4a8QhOGtgCPLGMpOOLJ_K4b0YVuzUAQRbgNQPA06zHfsPTEDcik_PdGA9g";
 
 function getVapidKey(): string {
   return VAPID_PUBLIC_KEY;
@@ -48,10 +49,27 @@ export function usePushSubscription({ studentCode }: { studentCode?: string } = 
 
       if (Notification.permission === "granted") {
         try {
+          const vapidKey = getVapidKey();
+          if (!vapidKey) { setState("unsubscribed"); return; }
+
           let sub = await reg.pushManager.getSubscription();
+
+          // Detect VAPID key rotation: if the stored subscription was created
+          // with a different application server key, unsubscribe so we re-register
+          // with the correct key (avoids silent 401 failures from the push service).
+          if (sub?.options?.applicationServerKey) {
+            const expected = urlBase64ToUint8Array(vapidKey);
+            const actual = new Uint8Array(sub.options.applicationServerKey as ArrayBuffer);
+            const keyMismatch =
+              expected.length !== actual.length ||
+              expected.some((b, i) => b !== actual[i]);
+            if (keyMismatch) {
+              await sub.unsubscribe().catch(() => {});
+              sub = null;
+            }
+          }
+
           if (!sub) {
-            const vapidKey = getVapidKey();
-            if (!vapidKey) { setState("unsubscribed"); return; }
             sub = await reg.pushManager.subscribe({
               userVisibleOnly: true,
               applicationServerKey: urlBase64ToUint8Array(vapidKey),

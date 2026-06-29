@@ -31,7 +31,9 @@ export async function sendPushToUser(
       webpush
         .sendNotification(JSON.parse(s.subscription) as webpush.PushSubscription, payloadStr)
         .catch(async (err: { statusCode?: number }) => {
-          if (err.statusCode === 410 || err.statusCode === 404) {
+          // 410 Gone / 404: subscription expired or revoked by browser
+          // 401 Unauthorized: VAPID key mismatch — subscription was created with a different key
+          if (err.statusCode === 410 || err.statusCode === 404 || err.statusCode === 401) {
             await prisma.pushSubscription.delete({ where: { id: s.id } }).catch(() => {});
           }
         })
