@@ -8,6 +8,7 @@ import { useStudent } from "@/hooks/firebase/useStudent";
 import { useHomework } from "@/hooks/firebase/useHomework";
 import { useSubmissions } from "@/hooks/firebase/useSubmissions";
 import { useDayLinks } from "@/hooks/firebase/useDayLinks";
+import { useHwViewed } from "@/hooks/firebase/useHwViewed";
 import {
   updateStudent,
   deleteStudent,
@@ -24,6 +25,7 @@ import {
   pushHomework,
   updateHomework,
   deleteHomework,
+  markHwViewed,
 } from "@/lib/firebase/helpers";
 import { calcEtsScore } from "@/lib/ets-scale";
 import type {
@@ -720,11 +722,11 @@ function HomeworkProgressSection({ homework, dayLinks }: { homework: Homework[];
               <div className="shrink-0">
                 {submitted ? (
                   <span className="text-[10px] px-2 py-1 rounded-full font-medium" style={{ background: "rgba(16,185,129,0.12)", color: "rgb(5,150,105)" }}>
-                    ✓ Đã nộp
+                    ✓ Có file
                   </span>
                 ) : (
                   <span className="text-[10px] px-2 py-1 rounded-full font-medium" style={{ background: "var(--border)", color: "var(--text-muted)" }}>
-                    Chưa nộp
+                    Chưa có file
                   </span>
                 )}
               </div>
@@ -1039,7 +1041,6 @@ function calcHwProgress(
   let total = 0;
   for (const k of HW_KEYS) total += hw[k]?.length ?? 0;
   if (total === 0) return { done: 0, total: 0 };
-  if (dayLinks[hw.id]?.link) return { done: total, total };
   let done = 0;
   for (const k of HW_KEYS) {
     const items = hw[k] ?? [];
@@ -1273,7 +1274,12 @@ function PersonalHWSection({
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
   const [modal, setModal] = useState<{ mode: "add" | "edit"; initial: HwFormState; editId?: string } | null>(null);
   const [deleting, setDeleting] = useState<string | null>(null);
+  const [fileModal, setFileModal] = useState<{ url: string; hwId: string } | null>(null);
+  const [noteInput, setNoteInput] = useState("");
+  const [savingNote, setSavingNote] = useState(false);
   const autosavedHwIdRef = useRef<string | null>(null);
+
+  const { hwViewed } = useHwViewed(code);
 
   const todayStr = today();
 
@@ -1447,7 +1453,7 @@ function PersonalHWSection({
                   {total > 0 && (
                     <span className="text-[10px] font-semibold shrink-0"
                       style={{ color: done === total ? "rgb(5,150,105)" : "var(--text-muted)" }}>
-                      {done}/{total} đã nộp
+                      {done}/{total} đã tick
                     </span>
                   )}
 
@@ -1474,12 +1480,38 @@ function PersonalHWSection({
                     {/* Day link row */}
                     <div className="flex items-center gap-2 px-3 py-2 border-b text-xs"
                       style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}>
-                      <span className="font-semibold" style={{ color: "var(--text-secondary)" }}>🔗 LINK TỔNG HỢP:</span>
+                      <span className="font-semibold shrink-0" style={{ color: "var(--text-secondary)" }}>📎 BÀI NỘP:</span>
                       {dayLink ? (
-                        <a href={dayLink} target="_blank" rel="noopener noreferrer"
-                          className="truncate flex-1" style={{ color: "var(--accent-primary)" }}>
-                          {dayLink}
-                        </a>
+                        dayLink.startsWith("https://firebasestorage.googleapis.com") ? (
+                          <div className="flex items-center gap-2 flex-1 min-w-0">
+                            <button
+                              onClick={() => { setFileModal({ url: dayLink, hwId: hw.id }); setNoteInput(hwViewed[hw.id]?.note ?? ""); }}
+                              className="flex items-center gap-1.5 hover:opacity-75 transition-opacity"
+                            >
+                              {/\.(mp4|mov|avi|webm|mkv)/i.test(dayLink.split("?")[0]) ? (
+                                <span className="text-sm px-2 py-1 rounded" style={{ background: "rgba(26,62,128,.1)", color: "#2860A8" }}>🎬 Xem video</span>
+                              ) : (
+                                <img src={dayLink} alt="" className="rounded" style={{ height: 40, width: 56, objectFit: "cover", border: "1px solid var(--border)" }} />
+                              )}
+                            </button>
+                            {hwViewed[hw.id] ? (
+                              <span className="text-[10px] font-semibold shrink-0" style={{ color: "rgb(5,150,105)" }}>✓ Đã xem</span>
+                            ) : (
+                              <button
+                                onClick={() => { setFileModal({ url: dayLink, hwId: hw.id }); setNoteInput(""); }}
+                                className="text-[10px] px-1.5 py-0.5 rounded shrink-0 hover:opacity-75"
+                                style={{ background: "rgba(26,62,128,.1)", color: "#2860A8" }}
+                              >
+                                Xem & đánh dấu
+                              </button>
+                            )}
+                          </div>
+                        ) : (
+                          <a href={dayLink} target="_blank" rel="noopener noreferrer"
+                            className="truncate flex-1" style={{ color: "var(--accent-primary)" }}>
+                            {dayLink}
+                          </a>
+                        )
                       ) : (
                         <span style={{ color: "var(--text-muted)" }}>Chưa nộp</span>
                       )}
@@ -1550,6 +1582,73 @@ function PersonalHWSection({
           })}
         </div>
       </SectionCard>
+
+      {/* ── File viewer modal ── */}
+      {fileModal && (
+        <div
+          onClick={() => setFileModal(null)}
+          style={{ position: "fixed", inset: 0, zIndex: 300, background: "rgba(0,0,0,.9)", display: "flex", alignItems: "center", justifyContent: "center", padding: "1rem" }}
+        >
+          <button
+            type="button"
+            onClick={() => setFileModal(null)}
+            style={{ position: "absolute", top: "1rem", right: "1rem", background: "rgba(255,255,255,.15)", border: "none", color: "#fff", width: 36, height: 36, borderRadius: "50%", cursor: "pointer", fontSize: "1rem", display: "flex", alignItems: "center", justifyContent: "center" }}
+          >
+            ✕
+          </button>
+          <div
+            onClick={e => e.stopPropagation()}
+            style={{ display: "flex", flexDirection: "column", gap: "1rem", width: "min(90vw,700px)", maxHeight: "90vh" }}
+          >
+            {/* File preview */}
+            <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+              {/\.(mp4|mov|avi|webm|mkv)/i.test(fileModal.url.split("?")[0]) ? (
+                <video src={fileModal.url} controls autoPlay style={{ maxWidth: "100%", maxHeight: "65vh" }} />
+              ) : (
+                <img src={fileModal.url} alt="Bài nộp" style={{ maxWidth: "100%", maxHeight: "65vh", objectFit: "contain" }} />
+              )}
+            </div>
+
+            {/* Review panel */}
+            <div style={{ background: "rgba(255,255,255,.08)", borderRadius: 8, padding: "1rem", display: "flex", flexDirection: "column", gap: ".65rem" }}>
+              {hwViewed[fileModal.hwId] ? (
+                <div style={{ display: "flex", alignItems: "center", gap: ".5rem" }}>
+                  <span style={{ color: "rgb(52,211,153)", fontWeight: 700, fontSize: ".85rem" }}>✓ Đã xem</span>
+                  <span style={{ color: "rgba(255,255,255,.4)", fontSize: ".75rem" }}>
+                    {new Date(hwViewed[fileModal.hwId].viewedAt).toLocaleString("vi-VN", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" })}
+                  </span>
+                </div>
+              ) : (
+                <button
+                  onClick={async () => { await markHwViewed(code, fileModal.hwId); }}
+                  style={{ alignSelf: "flex-start", padding: ".4rem 1rem", background: "rgba(52,211,153,.2)", border: "1px solid rgba(52,211,153,.4)", color: "rgb(52,211,153)", borderRadius: 6, cursor: "pointer", fontSize: ".82rem", fontWeight: 600 }}
+                >
+                  Đánh dấu đã xem ✓
+                </button>
+              )}
+
+              <textarea
+                value={noteInput}
+                onChange={e => setNoteInput(e.target.value)}
+                placeholder="Nhận xét về bài nộp này..."
+                rows={2}
+                style={{ width: "100%", padding: ".5rem .7rem", background: "rgba(255,255,255,.1)", border: "1px solid rgba(255,255,255,.2)", color: "#fff", borderRadius: 6, fontSize: ".82rem", resize: "vertical", outline: "none", boxSizing: "border-box" }}
+              />
+              <button
+                onClick={async () => {
+                  setSavingNote(true);
+                  try { await markHwViewed(code, fileModal.hwId, noteInput.trim() || undefined); }
+                  finally { setSavingNote(false); }
+                }}
+                disabled={savingNote}
+                style={{ alignSelf: "flex-end", padding: ".4rem 1.1rem", background: "#C4622D", color: "#fff", border: "none", borderRadius: 6, cursor: savingNote ? "not-allowed" : "pointer", fontSize: ".82rem", fontWeight: 600, opacity: savingNote ? 0.6 : 1 }}
+              >
+                {savingNote ? "Đang lưu…" : "Lưu nhận xét"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

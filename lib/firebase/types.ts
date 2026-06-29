@@ -167,6 +167,15 @@ export interface Submission {
 
 export type SubmissionsMap = Record<string, Submission>;
 
+// ─── HwViewed (path: hwViewed/{studentCode}/{hwId}) ──────────────────────────
+
+export interface HwViewed {
+  viewedAt: string;
+  note?: string;
+}
+
+export type HwViewedMap = Record<string, HwViewed>;
+
 // ─── Goal (path: goals/{studentCode}) ────────────────────────────────────────
 
 export interface Goal {

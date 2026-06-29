@@ -26,7 +26,6 @@ function calcHwIsDone(
     total += hw[sec]?.length ?? 0;
   }
   if (total === 0) return false;
-  if (dayLinks[hw.id]?.link) return true;
   let done = 0;
   for (const sec of (["vocab", "listening", "reading", "practice", "other"] as const)) {
     const items = hw[sec] ?? [];
@@ -212,10 +211,16 @@ function HwCard({
   const totalItems = sections.reduce((sum, s) => sum + (hw[s]?.length ?? 0), 0);
   const checkedCount = Object.values(checked).filter(Boolean).length;
 
-  // Card status
-  // isDone: official submission (Nộp button) OR every item ticked
+  // Card status — hoàn thành khi tick đủ tất cả items
   const allItemsChecked = totalItems > 0 && checkedCount === totalItems;
-  const isDone    = done || allItemsChecked;
+  const isDone    = allItemsChecked;
+
+  // Congrats popup: chỉ fire khi user vừa tick item cuối cùng (không fire khi đã tick sẵn từ trước)
+  const isMountedRef2 = useRef(false);
+  useEffect(() => {
+    if (!isMountedRef2.current) { isMountedRef2.current = true; return; }
+    if (allItemsChecked) onDone?.();
+  }, [allItemsChecked]); // eslint-disable-line react-hooks/exhaustive-deps
   const isOverdue = !isDone && hw.date < td && (!hw.endDate || hw.endDate < td);
   const isFuture  = hw.date > td;
   const ringPct = totalItems > 0 ? (checkedCount / totalItems) * 100 : 0;
@@ -275,7 +280,6 @@ function HwCard({
       });
       await awardXp("homework_submit", { hwDate: hw.date });
       setDone(true);
-      onDone?.();
     } finally {
       setSubmitting(false);
     }
@@ -424,7 +428,7 @@ function HwCard({
               style={{ marginBottom: ".9rem", border: "1px solid var(--border,#DDD0BC)", background: "var(--bg-primary,#F5EFE6)" }}
             >
               <div style={{ padding: ".4rem .75rem", borderBottom: "1px solid var(--border,#DDD0BC)", fontSize: ".6rem", fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: "#9A8672", display: "flex", alignItems: "center", gap: ".4rem" }}>
-                📎 NỘP BÀI TẬP
+                📎 GỬI BẰNG CHỨNG CHO GIÁO VIÊN <span style={{ fontWeight: 400, opacity: .6 }}>(tùy chọn)</span>
               </div>
               <div style={{ padding: ".5rem .75rem", display: "flex", flexDirection: "column", gap: ".5rem" }}>
                 {/* Hidden file input */}
@@ -541,8 +545,8 @@ function HwCard({
             </form>
           )}
 
-          {/* ── Bài đã nộp (if done) ── */}
-          {done && (dayLinkUrl || submittedUrl) && (() => {
+          {/* ── Bài đã nộp (show whenever file exists) ── */}
+          {(dayLinkUrl || submittedUrl) && (() => {
             const fileUrl = (dayLinkUrl ?? submittedUrl)!;
             const fromStorage = fileUrl.startsWith("https://firebasestorage.googleapis.com");
             const isVid = /\.(mp4|mov|avi|webm|mkv)/i.test(fileUrl.split("?")[0]);

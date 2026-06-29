@@ -587,6 +587,19 @@ export async function clearReviewProgress(
 
 // ─── Homework File Upload (Firebase Storage) ──────────────────────────────────
 
+// ─── Hw Viewed (path: hwViewed/{studentCode}/{hwId}) ─────────────────────────
+
+export async function markHwViewed(
+  code: string,
+  hwId: string,
+  note?: string
+): Promise<void> {
+  await set(ref(firebaseDb, `hwViewed/${code}/${hwId}`), {
+    viewedAt: new Date().toISOString(),
+    ...(note ? { note } : {}),
+  });
+}
+
 export function uploadHomeworkFile(
   studentCode: string,
   hwId: string,
