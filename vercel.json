@@ -6,24 +6,12 @@
   "regions": ["sin1"],
   "crons": [
     {
-      "path": "/api/cron/streak-remind",
-      "schedule": "0 12 * * *"
+      "path": "/api/cron/daily-student",
+      "schedule": "0 13 * * *"
     },
     {
       "path": "/api/cron/inactivity-alert",
       "schedule": "0 2 * * *"
-    },
-    {
-      "path": "/api/cron/homework-remind",
-      "schedule": "0 13 * * *"
-    },
-    {
-      "path": "/api/cron/vocab-remind",
-      "schedule": "0 0 * * *"
-    },
-    {
-      "path": "/api/cron/weekly-summary",
-      "schedule": "0 14 * * 0"
     }
   ]
 }
