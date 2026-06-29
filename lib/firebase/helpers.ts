@@ -51,7 +51,10 @@ export async function updateStudent(
   code: string,
   partial: Partial<Student>
 ): Promise<void> {
-  await update(ref(firebaseDb, `students/${code}`), partial);
+  const cleaned = Object.fromEntries(
+    Object.entries(partial as Record<string, unknown>).filter(([, v]) => v !== undefined)
+  );
+  await update(ref(firebaseDb, `students/${code}`), cleaned);
 }
 
 export async function setStudentFrozen(

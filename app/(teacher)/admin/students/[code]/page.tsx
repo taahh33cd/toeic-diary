@@ -134,8 +134,7 @@ function BasicInfoSection({ student, code, saveRef }: {
       setTimeout(() => setSaved(false), 2000);
     } catch (err) {
       console.error("[handleSave]", err);
-      const msg = err instanceof Error ? err.message : String(err);
-      alert("Lưu thất bại: " + msg);
+      alert("Lưu thất bại. Vui lòng thử lại.");
     } finally {
       setSaving(false);
     }
