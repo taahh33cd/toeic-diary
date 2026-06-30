@@ -46,8 +46,8 @@ export async function POST() {
         return { id: s.id, domain, status: "ok" };
       } catch (err: unknown) {
         const code = (err as { statusCode?: number }).statusCode;
-        // Auto-clean stale subscriptions
-        if (code === 410 || code === 404 || code === 401) {
+        // Auto-clean stale/rejected subscriptions
+        if (code === 410 || code === 404 || code === 401 || code === 400 || code === 403) {
           await prisma.pushSubscription.delete({ where: { id: s.id } }).catch(() => {});
         }
         return { id: s.id, domain, status: "error", code };
