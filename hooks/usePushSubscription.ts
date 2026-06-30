@@ -15,11 +15,12 @@ function urlBase64ToUint8Array(base64String: string): Uint8Array<ArrayBuffer> {
 }
 
 async function saveSubscription(sub: PushSubscription, studentCode?: string): Promise<void> {
-  await fetch("/api/push/subscribe", {
+  const res = await fetch("/api/push/subscribe", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ ...sub.toJSON(), studentCode }),
   });
+  if (!res.ok) throw new Error(`subscribe failed: ${res.status}`);
 }
 
 // Hardcoded to avoid Turbopack build-cache issues with NEXT_PUBLIC_ env vars.
