@@ -1,7 +1,7 @@
 // Service Worker — mytoeicdiary
 // Handles Web Push notifications and offline shell cache.
 
-const CACHE_NAME = "mytoeicdiary-shell-v1";
+const CACHE_NAME = "mytoeicdiary-shell-v2";
 const SHELL_URLS = ["/journal", "/offline"];
 
 self.addEventListener("install", (event) => {
@@ -32,18 +32,29 @@ self.addEventListener("fetch", (event) => {
 
 // ── Push notification handler ─────────────────────────────────────────────────
 self.addEventListener("push", (event) => {
-  let data = { title: "mytoeicdiary", body: "", url: "/journal" };
+  let title = "Anh Hiếu²";
+  let body = "Bạn có thông báo mới";
+  let url = "/journal";
   try {
-    if (event.data) data = { ...data, ...event.data.json() };
+    if (event.data) {
+      const d = event.data.json();
+      if (d.title) title = d.title;
+      if (d.body) body = d.body;
+      if (d.url) url = d.url;
+    }
   } catch {}
 
+  // No icon/badge: iOS fetches them asynchronously in background
+  // and may silently drop the notification if the fetch fails/times out.
+  // iOS uses the web app manifest icon automatically.
   event.waitUntil(
-    self.registration.showNotification(data.title, {
-      body: data.body,
-      icon: "/icon-192.png",
-      badge: "/icon-192.png",
-      data: { url: data.url },
-    })
+    self.registration.showNotification(title, {
+      body,
+      tag: "push",
+      data: { url },
+    }).catch(() =>
+      self.registration.showNotification("Anh Hiếu²", { body: "Bạn có thông báo mới" })
+    )
   );
 });
 
