@@ -1,0 +1,548 @@
+
+{
+  "title": "TẦNG 3 – GIỚI TỪ VỊ TRÍ & MẠO TỪ (a / an / the)",
+  "target_audience": "Học viên TOEIC Writing mất gốc",
+  "theory": {
+    "prepositions": {
+      "in": "Bên trong (không gian kín, trong phòng, trong hộp...)",
+      "on": "Bên trên (tiếp xúc bề mặt: trên bàn, trên tường, trên sàn...)",
+      "at": "Tại một điểm cụ thể (at the desk, at the door, at the station)",
+      "next_to": "Bên cạnh, sát bên",
+      "near": "Gần (không nhất thiết phải sát cạnh)",
+      "in_front_of": "Phía trước",
+      "behind": "Phía sau"
+    },
+    "articles": {
+      "a": "Một (dùng trước danh từ đếm được số ít, bắt đầu bằng phụ âm)",
+      "an": "Một (dùng trước danh từ đếm được số ít, bắt đầu bằng nguyên âm: u, e, o, a, i)",
+      "the": "Cái/Con/Người... (dùng cho danh từ đã xác định, cả hai người nói/nghe đều biết đang nói về cái gì)"
+    }
+  },
+  "exercises": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "question": "There is ___ cup ___ the table.",
+      "answer": "There is a cup on the table.",
+      "explanation": "'a' vì 'cup' là danh từ đếm được số ít chưa xác định. 'on' vì cái cốc nằm trên bề mặt bàn."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "question": "___ man is sitting ___ the desk.",
+      "answer": "A man is sitting at the desk.",
+      "explanation": "'A' vì nhắc đến một người đàn ông chung chung. 'at' dùng cho vị trí ngồi tại bàn làm việc."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "question": "She has ___ apple ___ her bag.",
+      "answer": "She has an apple in her bag.",
+      "explanation": "'an' đứng trước nguyên âm 'a'. 'in' vì quả táo nằm bên trong túi."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "question": "___ dog is sleeping ___ the floor.",
+      "answer": "A dog is sleeping on the floor.",
+      "explanation": "'A' dog (một con chó). 'on' dùng cho bề mặt sàn nhà (the floor)."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "question": "There is ___ car parked ___ front of the house.",
+      "answer": "There is a car parked in front of the house.",
+      "explanation": "'a' car (một chiếc xe). Cụm giới từ cố định: 'in front of' (phía trước)."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "question": "Look at ___ bird ___ the tree.",
+      "answer": "Look at the bird in the tree.",
+      "explanation": "'the' vì người nói đang chỉ vào một con chim cụ thể. 'in' dùng cho vị trí trên cành cây."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "question": "He is reading ___ book ___ the room.",
+      "answer": "He is reading a book in the room.",
+      "explanation": "'a' book (một quyển sách bất kỳ). 'in' vì ở bên trong căn phòng."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "question": "___ picture is hanging ___ the wall.",
+      "answer": "A picture is hanging on the wall.",
+      "explanation": "'A' picture (một bức tranh). 'on' vì treo trên bề mặt tường."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "question": "There is ___ umbrella ___ the door.",
+      "answer": "There is an umbrella near the door.",
+      "explanation": "'an' đứng trước nguyên âm 'u'. 'near' (gần) chỉ vị trí tương đối so với cánh cửa."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "question": "They are waiting ___ ___ bus stop.",
+      "answer": "They are waiting at the bus stop.",
+      "explanation": "'at' dùng cho một địa điểm cụ thể. 'the' vì trạm xe buýt này đã được xác định ở khu vực đó."
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "question": "I see ___ cat ___ the chair.",
+      "answer": "I see a cat under the chair.",
+      "explanation": "'a' cat (một con mèo). 'under' (bên dưới) là giới từ vị trí cơ bản."
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "question": "___ computer is ___ the desk.",
+      "answer": "The computer is on the desk.",
+      "explanation": "'The' vì máy tính là vật thể cụ thể đang được nhắc đến. 'on' vì nó nằm trên bàn."
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "question": "She puts ___ pen ___ the box.",
+      "answer": "She puts a pen in the box.",
+      "explanation": "'a' pen (một cây bút). 'in' vì đặt vào bên trong hộp."
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "question": "There is ___ lamp next ___ the bed.",
+      "answer": "There is a lamp next to the bed.",
+      "explanation": "'a' lamp (một cái đèn). Cụm giới từ 'next to' (bên cạnh)."
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "question": "___ teacher is standing ___ the board.",
+      "answer": "The teacher is standing near the board.",
+      "explanation": "'The' teacher (người giáo viên cụ thể của lớp). 'near' (gần) bảng."
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "question": "He has ___ idea ___ his mind.",
+      "answer": "He has an idea in his mind.",
+      "explanation": "'an' trước nguyên âm 'i'. 'in' dùng cho suy nghĩ bên trong đầu."
+    },
+    {
+      "id": 17,
+      "difficulty": "easy",
+      "question": "___ woman is standing ___ the bus.",
+      "answer": "A woman is standing near the bus.",
+      "explanation": "'A' woman (một người phụ nữ). 'near' (gần) chiếc xe buýt."
+    },
+    {
+      "id": 18,
+      "difficulty": "easy",
+      "question": "There is ___ window ___ the left.",
+      "answer": "There is a window on the left.",
+      "explanation": "'a' window (một cửa sổ). Cụm cố định 'on the left' (bên trái)."
+    },
+    {
+      "id": 19,
+      "difficulty": "easy",
+      "question": "Please put ___ documents ___ the folder.",
+      "answer": "Please put the documents in the folder.",
+      "explanation": "'the' documents (tài liệu đã xác định). 'in' (vào trong) bìa hồ sơ."
+    },
+    {
+      "id": 20,
+      "difficulty": "easy",
+      "question": "___ clock is ___ the wall.",
+      "answer": "A clock is on the wall.",
+      "explanation": "'A' clock (một cái đồng hồ). 'on' (trên bề mặt tường)."
+    },
+    {
+      "id": 21,
+      "difficulty": "easy",
+      "question": "I have ___ meeting ___ the office.",
+      "answer": "I have a meeting in the office.",
+      "explanation": "'a' meeting (một cuộc họp). 'in' (bên trong) văn phòng."
+    },
+    {
+      "id": 22,
+      "difficulty": "easy",
+      "question": "___ chair is ___ front of the desk.",
+      "answer": "The chair is in front of the desk.",
+      "explanation": "'The' chair (chiếc ghế cụ thể của cái bàn). 'in' (nằm trong cụm in front of)."
+    },
+    {
+      "id": 23,
+      "difficulty": "easy",
+      "question": "He works ___ ___ hospital.",
+      "answer": "He works in a hospital.",
+      "explanation": "'in' (bên trong). 'a' hospital (một bệnh viện chung chung)."
+    },
+    {
+      "id": 24,
+      "difficulty": "easy",
+      "question": "There is ___ apple ___ the basket.",
+      "answer": "There is an apple in the basket.",
+      "explanation": "'an' apple. 'in' (bên trong giỏ)."
+    },
+    {
+      "id": 25,
+      "difficulty": "easy",
+      "question": "___ keys are ___ the table.",
+      "answer": "The keys are on the table.",
+      "explanation": "'The' keys (chìa khóa đã xác định). 'on' (trên bề mặt bàn)."
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "question": "Some people are walking ___ ___ street.",
+      "answer": "Some people are walking on the street.",
+      "explanation": "'on' dùng cho bề mặt đường phố. 'the' street vì con đường trong ngữ cảnh bức ảnh là cụ thể."
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "question": "___ manager is standing behind ___ counter.",
+      "answer": "The manager is standing behind the counter.",
+      "explanation": "'The' manager và 'the' counter vì cả hai đều là đối tượng xác định trong ngữ cảnh bức tranh TOEIC."
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "question": "A monitor is placed next ___ ___ keyboard.",
+      "answer": "A monitor is placed next to the keyboard.",
+      "explanation": "Cụm 'next to' (bên cạnh). 'the' keyboard vì bàn phím đi kèm cụ thể với màn hình đó."
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "question": "There are some boxes ___ ___ corner of the room.",
+      "answer": "There are some boxes in the corner of the room.",
+      "explanation": "'in' dùng cho góc bên trong căn phòng. 'the' corner là góc cụ thể."
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "question": "___ passengers are waiting ___ the platform.",
+      "answer": "The passengers are waiting on the platform.",
+      "explanation": "'The' hành khách (đã xác định trong ảnh). 'on' the platform (trên nền sân ga)."
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "question": "She is holding ___ folder ___ her left hand.",
+      "answer": "She is holding a folder in her left hand.",
+      "explanation": "'a' folder (một tập hồ sơ). 'in' her hand (trong tay)."
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "question": "___ plants are arranged ___ a row.",
+      "answer": "The plants are arranged in a row.",
+      "explanation": "'The' plants (các chậu cây trong ảnh). 'in a row' (thành một hàng) là cụm cố định."
+    },
+    {
+      "id": 33,
+      "difficulty": "medium",
+      "question": "A projector is mounted ___ ___ ceiling.",
+      "answer": "A projector is mounted on the ceiling.",
+      "explanation": "'on' dùng cho bề mặt trần nhà. 'the' ceiling (trần nhà của căn phòng đó)."
+    },
+    {
+      "id": 34,
+      "difficulty": "medium",
+      "question": "___ vehicle is parked ___ front of the building.",
+      "answer": "A vehicle is parked in front of the building.",
+      "explanation": "'A' vehicle (một chiếc xe). 'in front of' (phía trước) tòa nhà."
+    },
+    {
+      "id": 35,
+      "difficulty": "medium",
+      "question": "They are having ___ discussion ___ the table.",
+      "answer": "They are having a discussion at the table.",
+      "explanation": "'a' discussion (một cuộc thảo luận). 'at' the table (ngồi tại bàn để làm việc/họp)."
+    },
+    {
+      "id": 36,
+      "difficulty": "medium",
+      "question": "There is ___ empty seat next to ___ window.",
+      "answer": "There is an empty seat next to the window.",
+      "explanation": "'an' empty seat (chỗ trống, bắt đầu bằng nguyên âm e). 'the' window (cửa sổ cụ thể)."
+    },
+    {
+      "id": 37,
+      "difficulty": "medium",
+      "question": "___ pedestrian is crossing ___ street.",
+      "answer": "A pedestrian is crossing the street.",
+      "explanation": "'A' pedestrian (một người đi bộ). 'the' street (con đường cụ thể đang băng qua)."
+    },
+    {
+      "id": 38,
+      "difficulty": "medium",
+      "question": "Some tools are left ___ ___ ground.",
+      "answer": "Some tools are left on the ground.",
+      "explanation": "'on' the ground (trên mặt đất). 'the' ground luôn dùng mạo từ the."
+    },
+    {
+      "id": 39,
+      "difficulty": "medium",
+      "question": "___ whiteboard is located behind ___ speaker.",
+      "answer": "A whiteboard is located behind the speaker.",
+      "explanation": "'A' whiteboard (một cái bảng trắng). 'the' speaker (người thuyết trình đã xác định)."
+    },
+    {
+      "id": 40,
+      "difficulty": "medium",
+      "question": "She is looking at ___ poster ___ the wall.",
+      "answer": "She is looking at a poster on the wall.",
+      "explanation": "'a' poster (một tấm áp phích). 'on' the wall (trên bề mặt tường)."
+    },
+    {
+      "id": 41,
+      "difficulty": "medium",
+      "question": "___ bicycle is leaning against ___ fence.",
+      "answer": "A bicycle is leaning against the fence.",
+      "explanation": "'A' bicycle (một chiếc xe đạp). 'the' fence (hàng rào cụ thể trong ảnh)."
+    },
+    {
+      "id": 42,
+      "difficulty": "medium",
+      "question": "There is ___ shadow ___ the building.",
+      "answer": "There is a shadow near the building.",
+      "explanation": "'a' shadow (một bóng râm). 'near' the building (gần tòa nhà)."
+    },
+    {
+      "id": 43,
+      "difficulty": "medium",
+      "question": "___ customers are standing ___ line.",
+      "answer": "The customers are standing in line.",
+      "explanation": "'The' khách hàng (đang đợi). 'in line' (xếp hàng) là cụm cố định không dùng mạo từ."
+    },
+    {
+      "id": 44,
+      "difficulty": "medium",
+      "question": "He is pouring water into ___ glass ___ the table.",
+      "answer": "He is pouring water into a glass on the table.",
+      "explanation": "'a' glass (một cái ly). 'on' the table (trên bàn)."
+    },
+    {
+      "id": 45,
+      "difficulty": "medium",
+      "question": "___ documents are scattered ___ the desk.",
+      "answer": "The documents are scattered on the desk.",
+      "explanation": "'The' documents (tài liệu xác định). 'on' the desk (nằm rải rác trên bàn)."
+    },
+    {
+      "id": 46,
+      "difficulty": "medium",
+      "question": "They are sitting ___ ___ shade of the tree.",
+      "answer": "They are sitting in the shade of the tree.",
+      "explanation": "'in' the shade (bên trong bóng râm - cụm cố định). 'the' shade (bóng râm của cái cây cụ thể đó)."
+    },
+    {
+      "id": 47,
+      "difficulty": "medium",
+      "question": "___ shelf is filled with ___ books.",
+      "answer": "The shelf is filled with books.",
+      "explanation": "'The' shelf (cái kệ cụ thể). Không dùng mạo từ trước danh từ số nhiều 'books' nói chung."
+    },
+    {
+      "id": 48,
+      "difficulty": "medium",
+      "question": "There is ___ bridge over ___ river.",
+      "answer": "There is a bridge over the river.",
+      "explanation": "'a' bridge (một cây cầu). 'the' river (con sông cụ thể ở khu vực đó)."
+    },
+    {
+      "id": 49,
+      "difficulty": "medium",
+      "question": "___ worker is fixing ___ equipment.",
+      "answer": "A worker is fixing the equipment.",
+      "explanation": "'A' worker (một công nhân). 'the' equipment (thiết bị cụ thể đang được sửa)."
+    },
+    {
+      "id": 50,
+      "difficulty": "medium",
+      "question": "She places ___ notebook ___ her laptop.",
+      "answer": "She places a notebook near her laptop.",
+      "explanation": "'a' notebook (một cuốn sổ). 'near' (gần) máy tính xách tay của cô ấy."
+    },
+    {
+      "id": 51,
+      "difficulty": "hard",
+      "question": "___ items have been displayed ___ the storefront window.",
+      "answer": "The items have been displayed in the storefront window.",
+      "explanation": "'The' items (các món hàng cụ thể). 'in' the window (nằm bên trong tủ kính trưng bày)."
+    },
+    {
+      "id": 52,
+      "difficulty": "hard",
+      "question": "___ audience is seated ___ the auditorium.",
+      "answer": "The audience is seated in the auditorium.",
+      "explanation": "'The' audience (khán giả tập thể). 'in' the auditorium (bên trong hội trường)."
+    },
+    {
+      "id": 53,
+      "difficulty": "hard",
+      "question": "A potted plant is situated ___ ___ corner of the office.",
+      "answer": "A potted plant is situated in the corner of the office.",
+      "explanation": "'in the corner' (trong góc phòng). 'the' corner (góc cụ thể của văn phòng)."
+    },
+    {
+      "id": 54,
+      "difficulty": "hard",
+      "question": "___ staircase leads down ___ the basement.",
+      "answer": "The staircase leads down to the basement.",
+      "explanation": "'The' staircase (cầu thang cụ thể). 'to' chỉ hướng đi tới tầng hầm (the basement)."
+    },
+    {
+      "id": 55,
+      "difficulty": "hard",
+      "question": "An extension cord is plugged ___ ___ wall outlet.",
+      "answer": "An extension cord is plugged into the wall outlet.",
+      "explanation": "Cắm vào: 'plugged into'. 'the' wall outlet (ổ cắm cụ thể trên tường)."
+    },
+    {
+      "id": 56,
+      "difficulty": "hard",
+      "question": "___ merchandise is arranged neatly ___ the shelves.",
+      "answer": "The merchandise is arranged neatly on the shelves.",
+      "explanation": "'The' merchandise (hàng hóa không đếm được). 'on' the shelves (trên bề mặt các kệ)."
+    },
+    {
+      "id": 57,
+      "difficulty": "hard",
+      "question": "A sign is suspended ___ ___ ceiling.",
+      "answer": "A sign is suspended from the ceiling.",
+      "explanation": "Treo từ trên xuống dùng giới từ 'from'. 'the' ceiling (trần nhà)."
+    },
+    {
+      "id": 58,
+      "difficulty": "hard",
+      "question": "___ scaffolding has been erected ___ the building.",
+      "answer": "The scaffolding has been erected around the building.",
+      "explanation": "'The' scaffolding (giàn giáo). 'around' (xung quanh) tòa nhà."
+    },
+    {
+      "id": 59,
+      "difficulty": "hard",
+      "question": "Some commuters are waiting ___ ___ intersection.",
+      "answer": "Some commuters are waiting at the intersection.",
+      "explanation": "'at' dùng cho điểm giao cắt (ngã tư). 'the' intersection (ngã tư cụ thể)."
+    },
+    {
+      "id": 60,
+      "difficulty": "hard",
+      "question": "___ boat is tied ___ the pier.",
+      "answer": "A boat is tied to the pier.",
+      "explanation": "'A' boat (một chiếc thuyền). Cột vào đâu dùng 'to', 'the' pier (bến tàu cụ thể)."
+    },
+    {
+      "id": 61,
+      "difficulty": "hard",
+      "question": "A rug covers part ___ ___ floor.",
+      "answer": "A rug covers part of the floor.",
+      "explanation": "Một phần của: 'part of'. 'the' floor (sàn nhà luôn dùng the)."
+    },
+    {
+      "id": 62,
+      "difficulty": "hard",
+      "question": "___ articles of clothing are hanging ___ a rack.",
+      "answer": "The articles of clothing are hanging on a rack.",
+      "explanation": "'The' articles (các món đồ cụ thể). 'on' a rack (trên một cái giá treo)."
+    },
+    {
+      "id": 63,
+      "difficulty": "hard",
+      "question": "A lamp casts ___ shadow ___ the wall.",
+      "answer": "A lamp casts a shadow against the wall.",
+      "explanation": "Đổ bóng lên tường: 'casts a shadow against/on'. 'the' wall."
+    },
+    {
+      "id": 64,
+      "difficulty": "hard",
+      "question": "___ documents have been organized ___ alphabetical order.",
+      "answer": "The documents have been organized in alphabetical order.",
+      "explanation": "'The' documents. 'in alphabetical order' (theo thứ tự chữ cái - cụm cố định không có mạo từ)."
+    },
+    {
+      "id": 65,
+      "difficulty": "hard",
+      "question": "Water is flowing ___ ___ fountain.",
+      "answer": "Water is flowing from the fountain.",
+      "explanation": "Chảy ra từ: 'from'. 'the' fountain (đài phun nước cụ thể)."
+    },
+    {
+      "id": 66,
+      "difficulty": "hard",
+      "question": "___ path winds ___ the forest.",
+      "answer": "A path winds through the forest.",
+      "explanation": "'A' path (một con đường nhỏ). 'through' (xuyên qua) khu rừng (the forest)."
+    },
+    {
+      "id": 67,
+      "difficulty": "hard",
+      "question": "A presentation is being projected ___ ___ screen.",
+      "answer": "A presentation is being projected onto the screen.",
+      "explanation": "Chiếu lên bề mặt: 'onto' hoặc 'on'. 'the' screen (màn hình chiếu cụ thể)."
+    },
+    {
+      "id": 68,
+      "difficulty": "hard",
+      "question": "___ branches extend ___ the roof of the house.",
+      "answer": "The branches extend over the roof of the house.",
+      "explanation": "'The' branches (các cành cây). 'over' (vươn qua, phủ lên trên không chạm) mái nhà."
+    },
+    {
+      "id": 69,
+      "difficulty": "hard",
+      "question": "Several passengers are boarding ___ airplane ___ the gate.",
+      "answer": "Several passengers are boarding the airplane at the gate.",
+      "explanation": "Lên máy bay (đã xác định): 'boarding the airplane'. Tại cổng: 'at the gate'."
+    },
+    {
+      "id": 70,
+      "difficulty": "hard",
+      "question": "___ bricks are stacked ___ top of each other.",
+      "answer": "The bricks are stacked on top of each other.",
+      "explanation": "'The' bricks (những viên gạch). Cụm 'on top of' (chồng lên nhau)."
+    },
+    {
+      "id": 71,
+      "difficulty": "hard",
+      "question": "A row of trees provides shade ___ ___ walkway.",
+      "answer": "A row of trees provides shade along the walkway.",
+      "explanation": "Dọc theo: 'along'. 'the' walkway (lối đi bộ cụ thể)."
+    },
+    {
+      "id": 72,
+      "difficulty": "hard",
+      "question": "___ vendor is standing ___ his cart.",
+      "answer": "The vendor is standing behind his cart.",
+      "explanation": "'The' vendor (người bán hàng rong). 'behind' (đứng phía sau xe đẩy để bán)."
+    },
+    {
+      "id": 73,
+      "difficulty": "hard",
+      "question": "A safety rail runs ___ ___ edge of the cliff.",
+      "answer": "A safety rail runs along the edge of the cliff.",
+      "explanation": "Chạy dọc theo: 'runs along'. 'the' edge (rìa vách đá)."
+    },
+    {
+      "id": 74,
+      "difficulty": "hard",
+      "question": "___ construction equipment is parked ___ the site.",
+      "answer": "The construction equipment is parked at the site.",
+      "explanation": "'The' equipment (thiết bị không đếm được). 'at' the site (tại công trường)."
+    },
+    {
+      "id": 75,
+      "difficulty": "hard",
+      "question": "Some cables are running ___ ___ floor under the desks.",
+      "answer": "Some cables are running across the floor under the desks.",
+      "explanation": "Chạy ngang qua: 'across'. 'the' floor (sàn nhà)."
+    }
+  ]
+}

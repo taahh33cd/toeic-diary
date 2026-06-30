@@ -1,0 +1,536 @@
+{
+  "course": "TOEIC Writing Part 1 - Dành cho người mất gốc",
+  "level": "TẦNG 3 – GIỚI TỪ VỊ TRÍ & MẠO TỪ (a / an / the) - PHẦN 3",
+  "instructions": {
+    "theory": {
+      "reminders": "Hoàn thành phần kiểm tra cuối cùng của Tầng 3. Chú ý phân biệt nguyên âm/phụ âm khi dùng a/an và xác định vị trí đa chiều trong các bối cảnh văn phòng, nhà máy, công cộng của đề thi TOEIC thật."
+    }
+  },
+  "exercises": [
+    {
+      "id": 151,
+      "difficulty": "Dễ",
+      "question": "___ mug is ___ ___ desk.",
+      "answer": "A mug is on the desk.",
+      "explanation": "Chiếc ly có quai nằm trên bề mặt bàn làm việc, dùng giới từ 'on'."
+    },
+    {
+      "id": 152,
+      "difficulty": "Dễ",
+      "question": "___ documents are ___ ___ folder.",
+      "answer": "The documents are in the folder.",
+      "explanation": "Tài liệu (số nhiều) nằm bên trong kẹp hồ sơ, dùng giới từ 'in'."
+    },
+    {
+      "id": 153,
+      "difficulty": "Dễ",
+      "question": "___ bus is ___ ___ terminal.",
+      "answer": "The bus is at the terminal.",
+      "explanation": "Xe buýt đỗ tại trạm cuối/bến xe, dùng giới từ 'at' để chỉ địa điểm."
+    },
+    {
+      "id": 154,
+      "difficulty": "Dễ",
+      "question": "___ envelope is ___ ___ ___ ___ keyboard.",
+      "answer": "An envelope is next to the keyboard.",
+      "explanation": "'envelope' bắt đầu bằng nguyên âm 'e' dùng 'An'. Nằm sát cạnh dùng 'next to'."
+    },
+    {
+      "id": 155,
+      "difficulty": "Dễ",
+      "question": "___ ladder is ___ ___ wall.",
+      "answer": "A ladder is near the wall.",
+      "explanation": "Chiếc thang đang dựng ở vị trí gần bức tường, dùng 'near'."
+    },
+    {
+      "id": 156,
+      "difficulty": "Dễ",
+      "question": "___ box is ___ ___ door.",
+      "answer": "A box is behind the door.",
+      "explanation": "Cái hộp nằm khuất ở phía sau cánh cửa, dùng giới từ 'behind'."
+    },
+    {
+      "id": 157,
+      "difficulty": "Dễ",
+      "question": "___ podium is ___ ___ ___ ___ curtain.",
+      "answer": "The podium is in front of the curtain.",
+      "explanation": "Bục phát biểu nằm ở ngay phía trước tấm màn sân khấu, dùng 'in front of'."
+    },
+    {
+      "id": 158,
+      "difficulty": "Dễ",
+      "question": "___ apron is hanging ___ ___ hook.",
+      "answer": "An apron is hanging on the hook.",
+      "explanation": "'apron' (tạp dề) bắt đầu bằng nguyên âm 'a' dùng 'An'. Treo tiếp xúc trên cái móc dùng 'on'."
+    },
+    {
+      "id": 159,
+      "difficulty": "Dễ",
+      "question": "___ briefcase is ___ ___ floor.",
+      "answer": "A briefcase is on the floor.",
+      "explanation": "Cặp tài liệu đặt trên bề mặt sàn nhà, dùng 'on'."
+    },
+    {
+      "id": 160,
+      "difficulty": "Dễ",
+      "question": "___ wallet is ___ ___ drawer.",
+      "answer": "A wallet is in the drawer.",
+      "explanation": "Ví tiền nằm bên trong ngăn kéo không gian đóng, dùng 'in'."
+    },
+    {
+      "id": 161,
+      "difficulty": "Dễ",
+      "question": "___ truck is ___ ___ factory.",
+      "answer": "The truck is at the factory.",
+      "explanation": "Xe tải đang đỗ tại địa điểm nhà máy, dùng giới từ 'at'."
+    },
+    {
+      "id": 162,
+      "difficulty": "Dễ",
+      "question": "___ employee is ___ ___ elevator.",
+      "answer": "An employee is near the elevator.",
+      "explanation": "'employee' bắt đầu bằng 'e' dùng 'An'. Đứng gần khu vực thang máy dùng 'near'."
+    },
+    {
+      "id": 163,
+      "difficulty": "Dễ",
+      "question": "___ trash can is ___ ___ ___ ___ desk.",
+      "answer": "A trash can is next to the desk.",
+      "explanation": "Thùng rác đặt ngay sát cạnh bàn làm việc, dùng cụm 'next to'."
+    },
+    {
+      "id": 164,
+      "difficulty": "Dễ",
+      "question": "___ whiteboard is ___ ___ wall.",
+      "answer": "A whiteboard is on the wall.",
+      "explanation": "Bảng trắng treo tiếp xúc trên bề mặt tường, dùng 'on'."
+    },
+    {
+      "id": 165,
+      "difficulty": "Dễ",
+      "question": "___ bicycle is ___ ___ fence.",
+      "answer": "A bicycle is behind the fence.",
+      "explanation": "Xe đạp dựng ở phía sau hàng rào, dùng giới từ 'behind'."
+    },
+    {
+      "id": 166,
+      "difficulty": "Dễ",
+      "question": "___ vehicle is ___ ___ ___ ___ building.",
+      "answer": "A vehicle is in front of the building.",
+      "explanation": "Phương tiện giao thông đỗ ở phía trước tòa nhà, dùng 'in front of'."
+    },
+    {
+      "id": 167,
+      "difficulty": "Dễ",
+      "question": "___ office is ___ ___ building.",
+      "answer": "An office is in the building.",
+      "explanation": "'office' đi với 'An'. Văn phòng nằm bên trong tòa nhà, dùng 'in'."
+    },
+    {
+      "id": 168,
+      "difficulty": "Dễ",
+      "question": "___ screen is ___ ___ wall.",
+      "answer": "The screen is on the wall.",
+      "explanation": "Màn hình được gắn trên bề mặt tường, dùng 'on'."
+    },
+    {
+      "id": 169,
+      "difficulty": "Dễ",
+      "question": "___ man is standing ___ ___ counter.",
+      "answer": "A man is standing at the counter.",
+      "explanation": "Người đàn ông đứng tại vị trí quầy hàng, dùng giới từ 'at'."
+    },
+    {
+      "id": 170,
+      "difficulty": "Dễ",
+      "question": "___ identification card is ___ ___ table.",
+      "answer": "An identification card is on the table.",
+      "explanation": "'identification' bắt đầu bằng 'i' dùng 'An'. Thẻ đặt trên bàn dùng 'on'."
+    },
+    {
+      "id": 171,
+      "difficulty": "Dễ",
+      "question": "___ keys are ___ ___ bag.",
+      "answer": "The keys are in the bag.",
+      "explanation": "Chìa khóa nằm gọn bên trong túi xách, dùng 'in'."
+    },
+    {
+      "id": 172,
+      "difficulty": "Dễ",
+      "question": "___ car is ___ ___ intersection.",
+      "answer": "A car is at the intersection.",
+      "explanation": "Xe ô tô đang dừng tại địa điểm ngã tư, dùng giới từ 'at'."
+    },
+    {
+      "id": 173,
+      "difficulty": "Dễ",
+      "question": "___ notebook is ___ ___ ___ ___ laptop.",
+      "answer": "A notebook is next to the laptop.",
+      "explanation": "Sổ ghi chép đặt sát bên cạnh máy tính xách tay, dùng 'next to'."
+    },
+    {
+      "id": 174,
+      "difficulty": "Dễ",
+      "question": "___ plant is ___ ___ door.",
+      "answer": "A plant is near the door.",
+      "explanation": "Chậu cây được đặt ở vị trí gần cửa ra vào, dùng 'near'."
+    },
+    {
+      "id": 175,
+      "difficulty": "Dễ",
+      "question": "___ umbrella is ___ ___ stand.",
+      "answer": "An umbrella is in the stand.",
+      "explanation": "'umbrella' đi với 'An'. Chiếc ô được cắm bên trong giá đỡ, dùng 'in'."
+    },
+    {
+      "id": 176,
+      "difficulty": "Trung bình",
+      "question": "___ customer is waiting ___ ___ checkout counter.",
+      "answer": "A customer is waiting at the checkout counter.",
+      "explanation": "Khách hàng đang đợi tại một điểm cụ thể là quầy thanh toán, dùng 'at'."
+    },
+    {
+      "id": 177,
+      "difficulty": "Trung bình",
+      "question": "___ official memo is pinned ___ ___ bulletin board.",
+      "answer": "An official memo is pinned on the bulletin board.",
+      "explanation": "'official' đi với 'An'. Bản ghi nhớ được ghim trên bề mặt bảng tin, dùng 'on'."
+    },
+    {
+      "id": 178,
+      "difficulty": "Trung bình",
+      "question": "___ stack of boxes is piled ___ ___ warehouse floor.",
+      "answer": "A stack of boxes is piled on the warehouse floor.",
+      "explanation": "Chồng hộp được xếp trên bề mặt sàn nhà kho, dùng giới từ 'on'."
+    },
+    {
+      "id": 179,
+      "difficulty": "Trung bình",
+      "question": "___ mechanic is working ___ ___ garage.",
+      "answer": "A mechanic is working in the garage.",
+      "explanation": "Thợ máy làm việc bên trong không gian của xưởng sửa xe/gara, dùng 'in'."
+    },
+    {
+      "id": 180,
+      "difficulty": "Trung bình",
+      "question": "___ executive is sitting ___ ___ ___ ___ window.",
+      "answer": "An executive is sitting in front of the window.",
+      "explanation": "'executive' đi với 'An'. Ngồi ở vị trí phía trước cửa sổ nhìn ra ngoài, dùng 'in front of'."
+    },
+    {
+      "id": 181,
+      "difficulty": "Trung bình",
+      "question": "___ informational sign is standing ___ ___ entrance.",
+      "answer": "An informational sign is standing at the entrance.",
+      "explanation": "'informational' đi với 'An'. Biển thông tin đặt tại vị trí lối vào, dùng 'at'."
+    },
+    {
+      "id": 182,
+      "difficulty": "Trung bình",
+      "question": "___ security camera is fixed ___ ___ ceiling.",
+      "answer": "A security camera is fixed on the ceiling.",
+      "explanation": "Camera an ninh gắn tiếp xúc trực tiếp trên bề mặt trần nhà, dùng 'on'."
+    },
+    {
+      "id": 183,
+      "difficulty": "Trung bình",
+      "question": "___ office chair is placed ___ ___ desk.",
+      "answer": "An office chair is placed behind the desk.",
+      "explanation": "'office' đi với 'An'. Ghế làm việc đặt ở phía sau cái bàn, dùng 'behind'."
+    },
+    {
+      "id": 184,
+      "difficulty": "Trung bình",
+      "question": "___ row of tools is hanging ___ ___ wall.",
+      "answer": "A row of tools is hanging on the wall.",
+      "explanation": "Hàng dụng cụ treo tiếp xúc trên bề mặt bức tường, dùng giới từ 'on'."
+    },
+    {
+      "id": 185,
+      "difficulty": "Trung bình",
+      "question": "___ instructor is speaking ___ ___ workshop.",
+      "answer": "An instructor is speaking in the workshop.",
+      "explanation": "'instructor' đi với 'An'. Người hướng dẫn nói chuyện bên trong phân xưởng, dùng 'in'."
+    },
+    {
+      "id": 186,
+      "difficulty": "Trung bình",
+      "question": "___ empty bench is located ___ ___ ___ ___ fountain.",
+      "answer": "An empty bench is located next to the fountain.",
+      "explanation": "'empty' đi với 'An'. Băng ghế trống nằm sát bên cạnh đài phun nước, dùng 'next to'."
+    },
+    {
+      "id": 187,
+      "difficulty": "Trung bình",
+      "question": "___ delivery van is stopped ___ ___ traffic light.",
+      "answer": "A delivery van is stopped at the traffic light.",
+      "explanation": "Xe giao hàng dừng lại tại vị trí cột đèn giao thông, dùng giới từ 'at'."
+    },
+    {
+      "id": 188,
+      "difficulty": "Trung bình",
+      "question": "___ open laptop is resting ___ ___ desk.",
+      "answer": "An open laptop is resting on the desk.",
+      "explanation": "'open' đi với 'An'. Máy tính đang mở nằm trên mặt bàn, dùng giới từ 'on'."
+    },
+    {
+      "id": 189,
+      "difficulty": "Trung bình",
+      "question": "___ art piece is displayed ___ ___ gallery.",
+      "answer": "An art piece is displayed in the gallery.",
+      "explanation": "'art' bắt đầu bằng 'a' dùng 'An'. Tác phẩm trưng bày bên trong phòng triển lãm, dùng 'in'."
+    },
+    {
+      "id": 190,
+      "difficulty": "Trung bình",
+      "question": "___ supervisor is standing ___ ___ employees.",
+      "answer": "The supervisor is standing near the employees.",
+      "explanation": "Người giám sát đứng ở khoảng cách gần với các nhân viên, dùng 'near'."
+    },
+    {
+      "id": 191,
+      "difficulty": "Trung bình",
+      "question": "___ dynamic speaker is standing ___ ___ ___ ___ stage.",
+      "answer": "A dynamic speaker is standing in front of the stage.",
+      "explanation": "Diễn giả đứng ở khu vực phía trước sân khấu, dùng cụm 'in front of'."
+    },
+    {
+      "id": 192,
+      "difficulty": "Trung bình",
+      "question": "___ index card is placed ___ ___ computer monitor.",
+      "answer": "An index card is placed near the computer monitor.",
+      "explanation": "'index' đi với 'An'. Thẻ ghi chú đặt gần màn hình máy tính, dùng 'near'."
+    },
+    {
+      "id": 193,
+      "difficulty": "Trung bình",
+      "question": "___ extra uniform is kept ___ ___ locker.",
+      "answer": "An extra uniform is kept in a locker.",
+      "explanation": "'extra' đi với 'An'. Đồng phục phụ được cất bên trong tủ đồ cá nhân, dùng 'in'."
+    },
+    {
+      "id": 194,
+      "difficulty": "Trung bình",
+      "question": "___ old truck is parked ___ ___ ___ ___ garage.",
+      "answer": "An old truck is parked next to the garage.",
+      "explanation": "'old' đi với 'An'. Xe tải cũ đỗ sát bên cạnh nhà xe, dùng cụm 'next to'."
+    },
+    {
+      "id": 195,
+      "difficulty": "Trung bình",
+      "question": "___ evaluation form is lying ___ ___ counter.",
+      "answer": "An evaluation form is lying on the counter.",
+      "explanation": "'evaluation' đi với 'An'. Tờ biểu mẫu đánh giá nằm trên mặt quầy, dùng 'on'."
+    },
+    {
+      "id": 196,
+      "difficulty": "Trung bình",
+      "question": "___ audience is gathering ___ ___ concert hall.",
+      "answer": "The audience is gathering in the concert hall.",
+      "explanation": "Khán giả đang tụ họp bên trong không gian nhà hát/phòng hòa nhạc, dùng 'in'."
+    },
+    {
+      "id": 197,
+      "difficulty": "Trung bình",
+      "question": "___ engineer is checking equipment ___ ___ lab.",
+      "answer": "An engineer is checking equipment in the lab.",
+      "explanation": "'engineer' đi với 'An'. Kỹ sư kiểm tra thiết bị bên trong phòng lab, dùng 'in'."
+    },
+    {
+      "id": 198,
+      "difficulty": "Trung bình",
+      "question": "___ item of clothing is hanging ___ ___ rack.",
+      "answer": "An item of clothing is hanging on a rack.",
+      "explanation": "'item' đi với 'An'. Quần áo treo tiếp xúc trên giá đỡ, dùng giới từ 'on'."
+    },
+    {
+      "id": 199,
+      "difficulty": "Trung bình",
+      "question": "___ operator is working ___ ___ control panel.",
+      "answer": "An operator is working at the control panel.",
+      "explanation": "'operator' đi với 'An'. Ngồi làm việc tại vị trí bảng điều khiển, dùng giới từ 'at'."
+    },
+    {
+      "id": 200,
+      "difficulty": "Trung bình",
+      "question": "___ broad road runs ___ ___ ___ ___ building.",
+      "answer": "A broad road runs in front of the building.",
+      "explanation": "Con đường lớn chạy ngang qua phía trước tòa nhà, dùng 'in front of'."
+    },
+    {
+      "id": 201,
+      "difficulty": "Khó",
+      "question": "___ administrative assistant is organizing files ___ ___ cabinet.",
+      "answer": "An administrative assistant is organizing files in the cabinet.",
+      "explanation": "'administrative' đi với 'An'. Thư ký hành chính đang sắp xếp hồ sơ bên trong tủ tài liệu (in)."
+    },
+    {
+      "id": 202,
+      "difficulty": "Khó",
+      "question": "___ original painting is hanging ___ ___ wall ___ ___ gallery.",
+      "answer": "An original painting is hanging on the wall in the gallery.",
+      "explanation": "'original' đi với 'An'. Tranh treo trên tường (on) bên trong không gian phòng triển lãm (in)."
+    },
+    {
+      "id": 203,
+      "difficulty": "Khó",
+      "question": "___ emergency vehicle is parked ___ ___ exit ___ ___ hospital.",
+      "answer": "An emergency vehicle is parked at the exit of the hospital.",
+      "explanation": "'emergency' đi với 'An'. Xe cấp cứu đỗ ngay tại vị trí lối thoát của bệnh viện (at)."
+    },
+    {
+      "id": 204,
+      "difficulty": "Khó",
+      "question": "___ informative lecture is being given ___ ___ auditorium ___ ___ campus.",
+      "answer": "An informative lecture is being given in the auditorium on campus.",
+      "explanation": "'informative' đi với 'An'. Bài giảng diễn ra trong khán phòng (in), trên khuôn viên trường dùng 'on campus'."
+    },
+    {
+      "id": 205,
+      "difficulty": "Khó",
+      "question": "___ experienced worker is operating ___ machine ___ ___ facility.",
+      "answer": "An experienced worker is operating a machine in the facility.",
+      "explanation": "'experienced' đi với 'An'. Công nhân vận hành máy móc bên trong nhà xưởng/cơ sở dùng 'in'."
+    },
+    {
+      "id": 206,
+      "difficulty": "Khó",
+      "question": "___ array of products is displayed ___ ___ shelf ___ ___ store.",
+      "answer": "An array of products is displayed on the shelf in the store.",
+      "explanation": "'array' đi với 'An'. Loạt sản phẩm bày trên kệ (on) bên trong cửa hàng (in)."
+    },
+    {
+      "id": 207,
+      "difficulty": "Khó",
+      "question": "___ outgoing message is being typed ___ ___ computer ___ ___ office.",
+      "answer": "An outgoing message is being typed on the computer in the office.",
+      "explanation": "'outgoing' đi với 'An'. Tin nhắn được gõ trên máy tính (on) bên trong văn phòng (in)."
+    },
+    {
+      "id": 208,
+      "difficulty": "Khó",
+      "question": "___ inspector is looking ___ ___ engine ___ ___ truck.",
+      "answer": "An inspector is looking at the engine in the truck.",
+      "explanation": "'inspector' đi với 'An'. Cụm từ cố định 'look at'. Động cơ nằm bên trong xe tải nên dùng 'in'."
+    },
+    {
+      "id": 209,
+      "difficulty": "Khó",
+      "question": "___ safety notice is posted ___ ___ glass door ___ ___ lab.",
+      "answer": "A safety notice is posted on the glass door in the lab.",
+      "explanation": "Thông báo dán trên bề mặt cửa kính (on) nằm bên trong phòng thí nghiệm (in)."
+    },
+    {
+      "id": 210,
+      "difficulty": "Khó",
+      "question": "___ automated system is monitored ___ ___ terminal ___ ___ center.",
+      "answer": "An automated system is monitored at the terminal in the center.",
+      "explanation": "'automated' đi với 'An'. Hệ thống được giám sát tại trạm máy (at) bên trong trung tâm (in)."
+    },
+    {
+      "id": 211,
+      "difficulty": "Khó",
+      "question": "___ unpaved path runs ___ ___ ___ ___ main gate ___ ___ park.",
+      "answer": "An unpaved path runs in front of the main gate of the park.",
+      "explanation": "'unpaved' đi với 'An'. Lối đi chưa rải nhựa chạy qua phía trước cổng chính (in front of)."
+    },
+    {
+      "id": 212,
+      "difficulty": "Khó",
+      "question": "___ empty crate is left ___ ___ ___ ___ forklift ___ ___ warehouse.",
+      "answer": "An empty crate is left in front of the forklift in the warehouse.",
+      "explanation": "'empty' đi với 'An'. Thùng hàng rỗng đặt phía trước xe nâng (in front of) bên trong kho (in)."
+    },
+    {
+      "id": 213,
+      "difficulty": "Khó",
+      "question": "___ internal memo is pinned ___ ___ board ___ ___ hallway.",
+      "answer": "An internal memo is pinned on the board in the hallway.",
+      "explanation": "'internal' đi với 'An'. Bản ghi nhớ nội bộ được ghim trên bảng (on) ngoài hành lang (in)."
+    },
+    {
+      "id": 214,
+      "difficulty": "Khó",
+      "question": "___ electronic device is placed ___ ___ podium ___ ___ hall.",
+      "answer": "An electronic device is placed on the podium in the hall.",
+      "explanation": "'electronic' đi với 'An'. Thiết bị đặt trên bục phát biểu (on) bên trong sảnh/hội trường (in)."
+    },
+    {
+      "id": 215,
+      "difficulty": "Khó",
+      "question": "___ evaluation form is resting ___ ___ counter ___ ___ lobby.",
+      "answer": "An evaluation form is resting on the counter in the lobby.",
+      "explanation": "'evaluation' đi với 'An'. Biểu mẫu nằm trên mặt quầy thanh toán (on) thuộc sảnh chờ (in)."
+    },
+    {
+      "id": 216,
+      "difficulty": "Khó",
+      "question": "___ industrial machine is set up ___ ___ back ___ ___ workshop.",
+      "answer": "An industrial machine is set up behind the back of the workshop.",
+      "explanation": "'industrial' đi với 'An'. Máy công nghiệp đặt lùi sâu về phía sau của phân xưởng (behind)."
+    },
+    {
+      "id": 217,
+      "difficulty": "Khó",
+      "question": "___ office worker is standing ___ ___ ___ ___ vending machine ___ ___ breakroom.",
+      "answer": "An office worker is standing in front of the vending machine in the breakroom.",
+      "explanation": "'office' đi với 'An'. Nhân viên đứng trước máy bán hàng tự động (in front of) trong phòng nghỉ (in)."
+    },
+    {
+      "id": 218,
+      "difficulty": "Khó",
+      "question": "___ executive is sitting ___ ___ leather chair ___ ___ boardroom.",
+      "answer": "An executive is sitting on a leather chair in the boardroom.",
+      "explanation": "'executive' đi với 'An'. Ngồi trên ghế da (on) bên trong phòng họp hội đồng quản trị (in)."
+    },
+    {
+      "id": 219,
+      "difficulty": "Khó",
+      "question": "___ item of luggage is placed ___ ___ conveyor belt ___ ___ airport.",
+      "answer": "An item of luggage is placed on the conveyor belt at the airport.",
+      "explanation": "'item' đi với 'An'. Hành lý nằm trên băng chuyền (on), tại địa điểm sân bay lớn dùng 'at'."
+    },
+    {
+      "id": 220,
+      "difficulty": "Khó",
+      "question": "___ updated schedule is attached ___ ___ monitor ___ ___ reception desk.",
+      "answer": "An updated schedule is attached on the monitor at the reception desk.",
+      "explanation": "'updated' đi với 'An'. Lịch trình dán tiếp xúc trên màn hình (on) tại quầy tiếp tân (at)."
+    },
+    {
+      "id": 221,
+      "difficulty": "Khó",
+      "question": "___ open box of tools is left ___ ___ floor ___ ___ garage.",
+      "answer": "An open box of tools is left on the floor in the garage.",
+      "explanation": "'open' đi với 'An'. Hộp dụng cụ đang mở để trên sàn nhà (on) bên trong gara (in)."
+    },
+    {
+      "id": 222,
+      "difficulty": "Khó",
+      "question": "___ instructor is writing formulas ___ ___ board ___ ___ classroom.",
+      "answer": "An instructor is writing formulas on the board in the classroom.",
+      "explanation": "'instructor' đi với 'An'. Giảng viên viết công thức lên trên bảng (on) ở trong lớp học (in)."
+    },
+    {
+      "id": 223,
+      "difficulty": "Khó",
+      "question": "___ identification badge is clipped ___ ___ uniform ___ ___ officer.",
+      "answer": "An identification badge is clipped on the uniform of the officer.",
+      "explanation": "'identification' đi với 'An'. Thẻ tên được kẹp trên bề mặt bộ đồng phục (on)."
+    },
+    {
+      "id": 224,
+      "difficulty": "Khó",
+      "question": "___ artist is working ___ ___ painting ___ ___ studio.",
+      "answer": "An artist is working on a painting in the studio.",
+      "explanation": "'artist' đi với 'An'. Cụm 'work on something' (đang tập trung làm việc gì). Trong studio dùng 'in'."
+    },
+    {
+      "id": 225,
+      "difficulty": "Khó",
+      "question": "___ employee is reviewing ___ document ___ ___ desk ___ ___ corner.",
+      "answer": "An employee is reviewing a document at the desk in the corner.",
+      "explanation": "'employee' đi với 'An'. Làm việc tại bàn dùng giới từ 'at', vị trí góc phòng dùng 'in the corner'."
+    }
+  ]
+}

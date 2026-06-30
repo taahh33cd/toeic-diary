@@ -1,0 +1,3921 @@
+{
+  "level": 4,
+  "title": "TẦNG 4 – TỪ VỰNG THEO CHỦ ĐỀ ẢNH",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Một chiếc ghế không có người ngồi trong phòng họp.",
+          "sentence": "Make sure there is an extra ______ for the new member.",
+          "word_box": [
+            "helmet",
+            "pay",
+            "carry",
+            "chair",
+            "type",
+            "walk"
+          ],
+          "answer": "chair",
+          "explanation": "Đáp án đúng là \"chair\". Dựa vào bối cảnh: Một chiếc ghế không có người ngồi trong phòng họp.",
+          "id": "w1_t4_e05",
+          "image_path": "images/writing_part1/tang4/w1_t4_e05.jpg",
+          "image_query": "empty chair in meeting room",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=empty%20chair%20in%20meeting%20room",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một chiếc ghế không có người ngồi trong phòng họp.",
+          "type": "multiple_choice",
+          "content": "Make sure there is an extra ______ for the new member.",
+          "options": [
+            {
+              "id": "A",
+              "text": "helmet"
+            },
+            {
+              "id": "B",
+              "text": "carry"
+            },
+            {
+              "id": "C",
+              "text": "pay"
+            },
+            {
+              "id": "D",
+              "text": "type"
+            },
+            {
+              "id": "E",
+              "text": "chair"
+            },
+            {
+              "id": "F",
+              "text": "walk"
+            }
+          ],
+          "correct_answers": [
+            "E"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Thợ mộc đang cầm một dụng cụ cầm tay (như búa hoặc cờ lê).",
+          "sentence": "You need to use the right ______ for the repair.",
+          "word_box": [
+            "tool",
+            "ride",
+            "helmet",
+            "push",
+            "tree",
+            "lift"
+          ],
+          "answer": "tool",
+          "explanation": "Đáp án đúng là \"tool\". Dựa vào bối cảnh: Thợ mộc đang cầm một dụng cụ cầm tay (như búa hoặc cờ lê).",
+          "id": "w1_t4_e09",
+          "image_path": "images/writing_part1/tang4/w1_t4_e09.jpg",
+          "image_query": "carpenter holding hand tool",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=carpenter%20holding%20hand%20tool",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Thợ mộc đang cầm một dụng cụ cầm tay (như búa hoặc cờ lê).",
+          "type": "multiple_choice",
+          "content": "You need to use the right ______ for the repair.",
+          "options": [
+            {
+              "id": "A",
+              "text": "push"
+            },
+            {
+              "id": "B",
+              "text": "lift"
+            },
+            {
+              "id": "C",
+              "text": "helmet"
+            },
+            {
+              "id": "D",
+              "text": "ride"
+            },
+            {
+              "id": "E",
+              "text": "tool"
+            },
+            {
+              "id": "F",
+              "text": "tree"
+            }
+          ],
+          "correct_answers": [
+            "E"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Một người đang đánh máy văn bản trên máy tính.",
+          "sentence": "She will ______ the draft proposal on her computer.",
+          "word_box": [
+            "carry",
+            "order",
+            "type",
+            "wear",
+            "tree",
+            "examine"
+          ],
+          "answer": "type",
+          "explanation": "Đáp án đúng là \"type\". Dựa vào bối cảnh: Một người đang đánh máy văn bản trên máy tính.",
+          "id": "w1_t4_e25",
+          "image_path": "images/writing_part1/tang4/w1_t4_e25.jpg",
+          "image_query": "person typing on computer keyboard",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=person%20typing%20on%20computer%20keyboard",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người đang đánh máy văn bản trên máy tính.",
+          "type": "multiple_choice",
+          "content": "She will ______ the draft proposal on her computer.",
+          "options": [
+            {
+              "id": "A",
+              "text": "order"
+            },
+            {
+              "id": "B",
+              "text": "wear"
+            },
+            {
+              "id": "C",
+              "text": "carry"
+            },
+            {
+              "id": "D",
+              "text": "type"
+            },
+            {
+              "id": "E",
+              "text": "tree"
+            },
+            {
+              "id": "F",
+              "text": "examine"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Công nhân xây dựng đội mũ bảo hộ màu vàng trên đầu.",
+          "sentence": "A worker should always secure his safety ______ at work.",
+          "word_box": [
+            "wait",
+            "order",
+            "walk",
+            "box",
+            "helmet",
+            "carry"
+          ],
+          "answer": "helmet",
+          "explanation": "Đáp án đúng là \"helmet\". Dựa vào bối cảnh: Công nhân xây dựng đội mũ bảo hộ màu vàng trên đầu.",
+          "id": "w1_t4_e08",
+          "image_path": "images/writing_part1/tang4/w1_t4_e08.jpg",
+          "image_query": "construction worker wearing yellow helmet",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=construction%20worker%20wearing%20yellow%20helmet",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Công nhân xây dựng đội mũ bảo hộ màu vàng trên đầu.",
+          "type": "multiple_choice",
+          "content": "A worker should always secure his safety ______ at work.",
+          "options": [
+            {
+              "id": "A",
+              "text": "carry"
+            },
+            {
+              "id": "B",
+              "text": "order"
+            },
+            {
+              "id": "C",
+              "text": "wait"
+            },
+            {
+              "id": "D",
+              "text": "box"
+            },
+            {
+              "id": "E",
+              "text": "walk"
+            },
+            {
+              "id": "F",
+              "text": "helmet"
+            }
+          ],
+          "correct_answers": [
+            "F"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Nhân viên lễ tân đứng sau quầy tiếp đón khách.",
+          "sentence": "Payment can be made at the service ______.",
+          "word_box": [
+            "counter",
+            "tree",
+            "push",
+            "menu",
+            "path",
+            "rest"
+          ],
+          "answer": "counter",
+          "explanation": "Đáp án đúng là \"counter\". Dựa vào bối cảnh: Nhân viên lễ tân đứng sau quầy tiếp đón khách.",
+          "id": "w1_t4_e13",
+          "image_path": "images/writing_part1/tang4/w1_t4_e13.jpg",
+          "image_query": "receptionist standing behind counter",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=receptionist%20standing%20behind%20counter",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Nhân viên lễ tân đứng sau quầy tiếp đón khách.",
+          "type": "multiple_choice",
+          "content": "Payment can be made at the service ______.",
+          "options": [
+            {
+              "id": "A",
+              "text": "counter"
+            },
+            {
+              "id": "B",
+              "text": "push"
+            },
+            {
+              "id": "C",
+              "text": "rest"
+            },
+            {
+              "id": "D",
+              "text": "menu"
+            },
+            {
+              "id": "E",
+              "text": "tree"
+            },
+            {
+              "id": "F",
+              "text": "path"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Một đôi bạn trẻ đang ngồi trò chuyện trên ghế đá công viên.",
+          "sentence": "The elderly couple sat quietly on the park ______.",
+          "word_box": [
+            "hand",
+            "path",
+            "copier",
+            "hold",
+            "bench",
+            "helmet"
+          ],
+          "answer": "bench",
+          "explanation": "Đáp án đúng là \"bench\". Dựa vào bối cảnh: Một đôi bạn trẻ đang ngồi trò chuyện trên ghế đá công viên.",
+          "id": "w1_t4_e20",
+          "image_path": "images/writing_part1/tang4/w1_t4_e20.jpg",
+          "image_query": "couple sitting on park bench",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=couple%20sitting%20on%20park%20bench",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một đôi bạn trẻ đang ngồi trò chuyện trên ghế đá công viên.",
+          "type": "multiple_choice",
+          "content": "The elderly couple sat quietly on the park ______.",
+          "options": [
+            {
+              "id": "A",
+              "text": "hand"
+            },
+            {
+              "id": "B",
+              "text": "helmet"
+            },
+            {
+              "id": "C",
+              "text": "copier"
+            },
+            {
+              "id": "D",
+              "text": "hold"
+            },
+            {
+              "id": "E",
+              "text": "path"
+            },
+            {
+              "id": "F",
+              "text": "bench"
+            }
+          ],
+          "correct_answers": [
+            "F"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Một gia đình đang tổ chức dã ngoại, ngồi trên thảm cỏ xanh.",
+          "sentence": "Do not step on the newly planted ______.",
+          "word_box": [
+            "push",
+            "grass",
+            "menu",
+            "bench",
+            "ladder",
+            "walk"
+          ],
+          "answer": "grass",
+          "explanation": "Đáp án đúng là \"grass\". Dựa vào bối cảnh: Một gia đình đang tổ chức dã ngoại, ngồi trên thảm cỏ xanh.",
+          "id": "w1_t4_e23",
+          "image_path": "images/writing_part1/tang4/w1_t4_e23.jpg",
+          "image_query": "family picnicking on green grass",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=family%20picnicking%20on%20green%20grass",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một gia đình đang tổ chức dã ngoại, ngồi trên thảm cỏ xanh.",
+          "type": "multiple_choice",
+          "content": "Do not step on the newly planted ______.",
+          "options": [
+            {
+              "id": "A",
+              "text": "menu"
+            },
+            {
+              "id": "B",
+              "text": "push"
+            },
+            {
+              "id": "C",
+              "text": "grass"
+            },
+            {
+              "id": "D",
+              "text": "walk"
+            },
+            {
+              "id": "E",
+              "text": "ladder"
+            },
+            {
+              "id": "F",
+              "text": "bench"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Công nhân xây dựng đang xếp gạch thành một bức tường.",
+          "sentence": "The wall is made of durable red ______ material.",
+          "word_box": [
+            "monitor",
+            "carry",
+            "walk",
+            "wait",
+            "order",
+            "brick"
+          ],
+          "answer": "brick",
+          "explanation": "Đáp án đúng là \"brick\". Dựa vào bối cảnh: Công nhân xây dựng đang xếp gạch thành một bức tường.",
+          "id": "w1_t4_e11",
+          "image_path": "images/writing_part1/tang4/w1_t4_e11.jpg",
+          "image_query": "construction worker building brick wall",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=construction%20worker%20building%20brick%20wall",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Công nhân xây dựng đang xếp gạch thành một bức tường.",
+          "type": "multiple_choice",
+          "content": "The wall is made of durable red ______ material.",
+          "options": [
+            {
+              "id": "A",
+              "text": "monitor"
+            },
+            {
+              "id": "B",
+              "text": "order"
+            },
+            {
+              "id": "C",
+              "text": "wait"
+            },
+            {
+              "id": "D",
+              "text": "carry"
+            },
+            {
+              "id": "E",
+              "text": "walk"
+            },
+            {
+              "id": "F",
+              "text": "brick"
+            }
+          ],
+          "correct_answers": [
+            "F"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Một người phụ nữ mang theo một chiếc túi xách tay đi trên phố.",
+          "sentence": "She packed some snacks in her shoulder ______ for the trip.",
+          "word_box": [
+            "water",
+            "lift",
+            "copier",
+            "bag",
+            "hand",
+            "run"
+          ],
+          "answer": "bag",
+          "explanation": "Đáp án đúng là \"bag\". Dựa vào bối cảnh: Một người phụ nữ mang theo một chiếc túi xách tay đi trên phố.",
+          "id": "w1_t4_e17",
+          "image_path": "images/writing_part1/tang4/w1_t4_e17.jpg",
+          "image_query": "woman walking carrying black bag",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=woman%20walking%20carrying%20black%20bag",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người phụ nữ mang theo một chiếc túi xách tay đi trên phố.",
+          "type": "multiple_choice",
+          "content": "She packed some snacks in her shoulder ______ for the trip.",
+          "options": [
+            {
+              "id": "A",
+              "text": "copier"
+            },
+            {
+              "id": "B",
+              "text": "lift"
+            },
+            {
+              "id": "C",
+              "text": "run"
+            },
+            {
+              "id": "D",
+              "text": "hand"
+            },
+            {
+              "id": "E",
+              "text": "bag"
+            },
+            {
+              "id": "F",
+              "text": "water"
+            }
+          ],
+          "correct_answers": [
+            "E"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Hai người ngồi ở nhà hàng đang xem thực đơn trên tay.",
+          "sentence": "Check the blackboard ______ for the chef's special.",
+          "word_box": [
+            "sit",
+            "counter",
+            "walk",
+            "menu",
+            "plant",
+            "serve"
+          ],
+          "answer": "menu",
+          "explanation": "Đáp án đúng là \"menu\". Dựa vào bối cảnh: Hai người ngồi ở nhà hàng đang xem thực đơn trên tay.",
+          "id": "w1_t4_e16",
+          "image_path": "images/writing_part1/tang4/w1_t4_e16.jpg",
+          "image_query": "two people reading restaurant menu",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=two%20people%20reading%20restaurant%20menu",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Hai người ngồi ở nhà hàng đang xem thực đơn trên tay.",
+          "type": "multiple_choice",
+          "content": "Check the blackboard ______ for the chef's special.",
+          "options": [
+            {
+              "id": "A",
+              "text": "walk"
+            },
+            {
+              "id": "B",
+              "text": "sit"
+            },
+            {
+              "id": "C",
+              "text": "menu"
+            },
+            {
+              "id": "D",
+              "text": "counter"
+            },
+            {
+              "id": "E",
+              "text": "serve"
+            },
+            {
+              "id": "F",
+              "text": "plant"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Một người phụ nữ đang ngồi làm việc tại bàn của mình trong văn phòng.",
+          "sentence": "He put his coffee cup on the corner of the ______.",
+          "word_box": [
+            "water",
+            "desk",
+            "build",
+            "helmet",
+            "money",
+            "sit"
+          ],
+          "answer": "desk",
+          "explanation": "Đáp án đúng là \"desk\". Dựa vào bối cảnh: Một người phụ nữ đang ngồi làm việc tại bàn của mình trong văn phòng.",
+          "id": "w1_t4_e04",
+          "image_path": "images/writing_part1/tang4/w1_t4_e04.jpg",
+          "image_query": "woman sitting at office desk",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=woman%20sitting%20at%20office%20desk",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người phụ nữ đang ngồi làm việc tại bàn của mình trong văn phòng.",
+          "type": "multiple_choice",
+          "content": "He put his coffee cup on the corner of the ______.",
+          "options": [
+            {
+              "id": "A",
+              "text": "money"
+            },
+            {
+              "id": "B",
+              "text": "water"
+            },
+            {
+              "id": "C",
+              "text": "build"
+            },
+            {
+              "id": "D",
+              "text": "desk"
+            },
+            {
+              "id": "E",
+              "text": "helmet"
+            },
+            {
+              "id": "F",
+              "text": "sit"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Một người đàn ông đang đứng cạnh và thao tác với máy photocopy.",
+          "sentence": "She needs to scan some documents using the ______.",
+          "word_box": [
+            "copier",
+            "wear",
+            "path",
+            "tree",
+            "document",
+            "stand"
+          ],
+          "answer": "copier",
+          "explanation": "Đáp án đúng là \"copier\". Dựa vào bối cảnh: Một người đàn ông đang đứng cạnh và thao tác với máy photocopy.",
+          "id": "w1_t4_e06",
+          "image_path": "images/writing_part1/tang4/w1_t4_e06.jpg",
+          "image_query": "man using office copier machine",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=man%20using%20office%20copier%20machine",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người đàn ông đang đứng cạnh và thao tác với máy photocopy.",
+          "type": "multiple_choice",
+          "content": "She needs to scan some documents using the ______.",
+          "options": [
+            {
+              "id": "A",
+              "text": "tree"
+            },
+            {
+              "id": "B",
+              "text": "path"
+            },
+            {
+              "id": "C",
+              "text": "document"
+            },
+            {
+              "id": "D",
+              "text": "wear"
+            },
+            {
+              "id": "E",
+              "text": "stand"
+            },
+            {
+              "id": "F",
+              "text": "copier"
+            }
+          ],
+          "correct_answers": [
+            "F"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Một nhân viên bán hàng nam mỉm cười thân thiện với khách.",
+          "sentence": "The sales ______ will scan the items for you.",
+          "word_box": [
+            "copier",
+            "stand",
+            "clerk",
+            "lift",
+            "sit",
+            "walk"
+          ],
+          "answer": "clerk",
+          "explanation": "Đáp án đúng là \"clerk\". Dựa vào bối cảnh: Một nhân viên bán hàng nam mỉm cười thân thiện với khách.",
+          "id": "w1_t4_e15",
+          "image_path": "images/writing_part1/tang4/w1_t4_e15.jpg",
+          "image_query": "male sales clerk smiling",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=male%20sales%20clerk%20smiling",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một nhân viên bán hàng nam mỉm cười thân thiện với khách.",
+          "type": "multiple_choice",
+          "content": "The sales ______ will scan the items for you.",
+          "options": [
+            {
+              "id": "A",
+              "text": "walk"
+            },
+            {
+              "id": "B",
+              "text": "copier"
+            },
+            {
+              "id": "C",
+              "text": "lift"
+            },
+            {
+              "id": "D",
+              "text": "sit"
+            },
+            {
+              "id": "E",
+              "text": "stand"
+            },
+            {
+              "id": "F",
+              "text": "clerk"
+            }
+          ],
+          "correct_answers": [
+            "F"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Hai người phụ nữ đang cùng xem một tập giấy tờ trên tay.",
+          "sentence": "They are verifying the signatures on the ______ together.",
+          "word_box": [
+            "stand",
+            "hand",
+            "water",
+            "push",
+            "wait",
+            "document"
+          ],
+          "answer": "document",
+          "explanation": "Đáp án đúng là \"document\". Dựa vào bối cảnh: Hai người phụ nữ đang cùng xem một tập giấy tờ trên tay.",
+          "id": "w1_t4_e02",
+          "image_path": "images/writing_part1/tang4/w1_t4_e02.jpg",
+          "image_query": "two women reading document together",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=two%20women%20reading%20document%20together",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Hai người phụ nữ đang cùng xem một tập giấy tờ trên tay.",
+          "type": "multiple_choice",
+          "content": "They are verifying the signatures on the ______ together.",
+          "options": [
+            {
+              "id": "A",
+              "text": "stand"
+            },
+            {
+              "id": "B",
+              "text": "wait"
+            },
+            {
+              "id": "C",
+              "text": "push"
+            },
+            {
+              "id": "D",
+              "text": "document"
+            },
+            {
+              "id": "E",
+              "text": "water"
+            },
+            {
+              "id": "F",
+              "text": "hand"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Bàn tay của một người đang gõ trên bàn phím máy tính.",
+          "sentence": "The typing sound comes from the mechanical ______.",
+          "word_box": [
+            "type",
+            "point",
+            "sky",
+            "keyboard",
+            "grass",
+            "tree"
+          ],
+          "answer": "keyboard",
+          "explanation": "Đáp án đúng là \"keyboard\". Dựa vào bối cảnh: Bàn tay của một người đang gõ trên bàn phím máy tính.",
+          "id": "w1_t4_e03",
+          "image_path": "images/writing_part1/tang4/w1_t4_e03.jpg",
+          "image_query": "hands typing on computer keyboard",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=hands%20typing%20on%20computer%20keyboard",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Bàn tay của một người đang gõ trên bàn phím máy tính.",
+          "type": "multiple_choice",
+          "content": "The typing sound comes from the mechanical ______.",
+          "options": [
+            {
+              "id": "A",
+              "text": "sky"
+            },
+            {
+              "id": "B",
+              "text": "tree"
+            },
+            {
+              "id": "C",
+              "text": "type"
+            },
+            {
+              "id": "D",
+              "text": "keyboard"
+            },
+            {
+              "id": "E",
+              "text": "point"
+            },
+            {
+              "id": "F",
+              "text": "grass"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Một người đàn ông đang bước lên những bậc thang của một chiếc thang nhôm.",
+          "sentence": "She positioned the ______ carefully before climbing up.",
+          "word_box": [
+            "run",
+            "ride",
+            "ladder",
+            "box",
+            "stack",
+            "point"
+          ],
+          "answer": "ladder",
+          "explanation": "Đáp án đúng là \"ladder\". Dựa vào bối cảnh: Một người đàn ông đang bước lên những bậc thang của một chiếc thang nhôm.",
+          "id": "w1_t4_e10",
+          "image_path": "images/writing_part1/tang4/w1_t4_e10.jpg",
+          "image_query": "man climbing aluminum ladder",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=man%20climbing%20aluminum%20ladder",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người đàn ông đang bước lên những bậc thang của một chiếc thang nhôm.",
+          "type": "multiple_choice",
+          "content": "She positioned the ______ carefully before climbing up.",
+          "options": [
+            {
+              "id": "A",
+              "text": "point"
+            },
+            {
+              "id": "B",
+              "text": "box"
+            },
+            {
+              "id": "C",
+              "text": "run"
+            },
+            {
+              "id": "D",
+              "text": "stack"
+            },
+            {
+              "id": "E",
+              "text": "ride"
+            },
+            {
+              "id": "F",
+              "text": "ladder"
+            }
+          ],
+          "correct_answers": [
+            "F"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Hình ảnh một cái cây lớn, nhiều lá xanh trong công viên.",
+          "sentence": "The green leaves of the big ______ sway in the breeze.",
+          "word_box": [
+            "tree",
+            "tool",
+            "keyboard",
+            "forklift",
+            "wait",
+            "plant"
+          ],
+          "answer": "tree",
+          "explanation": "Đáp án đúng là \"tree\". Dựa vào bối cảnh: Hình ảnh một cái cây lớn, nhiều lá xanh trong công viên.",
+          "id": "w1_t4_e19",
+          "image_path": "images/writing_part1/tang4/w1_t4_e19.jpg",
+          "image_query": "large green tree in park",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=large%20green%20tree%20in%20park",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Hình ảnh một cái cây lớn, nhiều lá xanh trong công viên.",
+          "type": "multiple_choice",
+          "content": "The green leaves of the big ______ sway in the breeze.",
+          "options": [
+            {
+              "id": "A",
+              "text": "keyboard"
+            },
+            {
+              "id": "B",
+              "text": "tool"
+            },
+            {
+              "id": "C",
+              "text": "forklift"
+            },
+            {
+              "id": "D",
+              "text": "plant"
+            },
+            {
+              "id": "E",
+              "text": "tree"
+            },
+            {
+              "id": "F",
+              "text": "wait"
+            }
+          ],
+          "correct_answers": [
+            "E"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Một người đàn ông mặc áo bảo hộ đang bê một thùng carton lớn.",
+          "sentence": "Please seal the cardboard ______ with adhesive tape.",
+          "word_box": [
+            "carry",
+            "box",
+            "menu",
+            "stack",
+            "ladder",
+            "hold"
+          ],
+          "answer": "box",
+          "explanation": "Đáp án đúng là \"box\". Dựa vào bối cảnh: Một người đàn ông mặc áo bảo hộ đang bê một thùng carton lớn.",
+          "id": "w1_t4_e07",
+          "image_path": "images/writing_part1/tang4/w1_t4_e07.jpg",
+          "image_query": "worker carrying large cardboard box",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=worker%20carrying%20large%20cardboard%20box",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người đàn ông mặc áo bảo hộ đang bê một thùng carton lớn.",
+          "type": "multiple_choice",
+          "content": "Please seal the cardboard ______ with adhesive tape.",
+          "options": [
+            {
+              "id": "A",
+              "text": "stack"
+            },
+            {
+              "id": "B",
+              "text": "menu"
+            },
+            {
+              "id": "C",
+              "text": "ladder"
+            },
+            {
+              "id": "D",
+              "text": "carry"
+            },
+            {
+              "id": "E",
+              "text": "box"
+            },
+            {
+              "id": "F",
+              "text": "hold"
+            }
+          ],
+          "correct_answers": [
+            "E"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Một người phụ nữ đưa tiền cho nhân viên thu ngân.",
+          "sentence": "A satisfied ______ leaves a good review.",
+          "word_box": [
+            "menu",
+            "read",
+            "customer",
+            "order",
+            "bicycle",
+            "desk"
+          ],
+          "answer": "customer",
+          "explanation": "Đáp án đúng là \"customer\". Dựa vào bối cảnh: Một người phụ nữ đưa tiền cho nhân viên thu ngân.",
+          "id": "w1_t4_e14",
+          "image_path": "images/writing_part1/tang4/w1_t4_e14.jpg",
+          "image_query": "customer paying cashier at counter",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=customer%20paying%20cashier%20at%20counter",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người phụ nữ đưa tiền cho nhân viên thu ngân.",
+          "type": "multiple_choice",
+          "content": "A satisfied ______ leaves a good review.",
+          "options": [
+            {
+              "id": "A",
+              "text": "read"
+            },
+            {
+              "id": "B",
+              "text": "bicycle"
+            },
+            {
+              "id": "C",
+              "text": "desk"
+            },
+            {
+              "id": "D",
+              "text": "order"
+            },
+            {
+              "id": "E",
+              "text": "customer"
+            },
+            {
+              "id": "F",
+              "text": "menu"
+            }
+          ],
+          "correct_answers": [
+            "E"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Một người đàn ông ngồi ở bàn làm việc, nhìn chằm chằm vào màn hình máy tính.",
+          "sentence": "The engineer is checking the system status on the ______.",
+          "word_box": [
+            "walk",
+            "run",
+            "stand",
+            "chair",
+            "monitor",
+            "copier"
+          ],
+          "answer": "monitor",
+          "explanation": "Đáp án đúng là \"monitor\". Dựa vào bối cảnh: Một người đàn ông ngồi ở bàn làm việc, nhìn chằm chằm vào màn hình máy tính.",
+          "id": "w1_t4_e01",
+          "image_path": "images/writing_part1/tang4/w1_t4_e01.jpg",
+          "image_query": "man looking at computer monitor desk",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=man%20looking%20at%20computer%20monitor%20desk",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người đàn ông ngồi ở bàn làm việc, nhìn chằm chằm vào màn hình máy tính.",
+          "type": "multiple_choice",
+          "content": "The engineer is checking the system status on the ______.",
+          "options": [
+            {
+              "id": "A",
+              "text": "chair"
+            },
+            {
+              "id": "B",
+              "text": "run"
+            },
+            {
+              "id": "C",
+              "text": "walk"
+            },
+            {
+              "id": "D",
+              "text": "copier"
+            },
+            {
+              "id": "E",
+              "text": "stand"
+            },
+            {
+              "id": "F",
+              "text": "monitor"
+            }
+          ],
+          "correct_answers": [
+            "F"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Khách hàng đưa tiền mặt cho người bán hàng.",
+          "sentence": "Please count the received ______ before putting it away.",
+          "word_box": [
+            "walk",
+            "box",
+            "money",
+            "stack",
+            "sit",
+            "grass"
+          ],
+          "answer": "money",
+          "explanation": "Đáp án đúng là \"money\". Dựa vào bối cảnh: Khách hàng đưa tiền mặt cho người bán hàng.",
+          "id": "w1_t4_e18",
+          "image_path": "images/writing_part1/tang4/w1_t4_e18.jpg",
+          "image_query": "customer handing money to cashier",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=customer%20handing%20money%20to%20cashier",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Khách hàng đưa tiền mặt cho người bán hàng.",
+          "type": "multiple_choice",
+          "content": "Please count the received ______ before putting it away.",
+          "options": [
+            {
+              "id": "A",
+              "text": "stack"
+            },
+            {
+              "id": "B",
+              "text": "box"
+            },
+            {
+              "id": "C",
+              "text": "sit"
+            },
+            {
+              "id": "D",
+              "text": "grass"
+            },
+            {
+              "id": "E",
+              "text": "walk"
+            },
+            {
+              "id": "F",
+              "text": "money"
+            }
+          ],
+          "correct_answers": [
+            "F"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Khung cảnh bầu trời xanh ngắt không gợn mây.",
+          "sentence": "Heavy rain is expected as the dark ______ suggests.",
+          "word_box": [
+            "customer",
+            "push",
+            "bag",
+            "hand",
+            "sky",
+            "menu"
+          ],
+          "answer": "sky",
+          "explanation": "Đáp án đúng là \"sky\". Dựa vào bối cảnh: Khung cảnh bầu trời xanh ngắt không gợn mây.",
+          "id": "w1_t4_e24",
+          "image_path": "images/writing_part1/tang4/w1_t4_e24.jpg",
+          "image_query": "clear blue sky no clouds",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=clear%20blue%20sky%20no%20clouds",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Khung cảnh bầu trời xanh ngắt không gợn mây.",
+          "type": "multiple_choice",
+          "content": "Heavy rain is expected as the dark ______ suggests.",
+          "options": [
+            {
+              "id": "A",
+              "text": "customer"
+            },
+            {
+              "id": "B",
+              "text": "menu"
+            },
+            {
+              "id": "C",
+              "text": "sky"
+            },
+            {
+              "id": "D",
+              "text": "push"
+            },
+            {
+              "id": "E",
+              "text": "bag"
+            },
+            {
+              "id": "F",
+              "text": "hand"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Một bé gái đang đạp xe đạp trên đường nhỏ.",
+          "sentence": "A red ______ is parked near the park gate.",
+          "word_box": [
+            "lift",
+            "build",
+            "bicycle",
+            "stack",
+            "box",
+            "wait"
+          ],
+          "answer": "bicycle",
+          "explanation": "Đáp án đúng là \"bicycle\". Dựa vào bối cảnh: Một bé gái đang đạp xe đạp trên đường nhỏ.",
+          "id": "w1_t4_e21",
+          "image_path": "images/writing_part1/tang4/w1_t4_e21.jpg",
+          "image_query": "little girl riding bicycle",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=little%20girl%20riding%20bicycle",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một bé gái đang đạp xe đạp trên đường nhỏ.",
+          "type": "multiple_choice",
+          "content": "A red ______ is parked near the park gate.",
+          "options": [
+            {
+              "id": "A",
+              "text": "lift"
+            },
+            {
+              "id": "B",
+              "text": "wait"
+            },
+            {
+              "id": "C",
+              "text": "stack"
+            },
+            {
+              "id": "D",
+              "text": "box"
+            },
+            {
+              "id": "E",
+              "text": "bicycle"
+            },
+            {
+              "id": "F",
+              "text": "build"
+            }
+          ],
+          "correct_answers": [
+            "E"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Một nhóm người tản bộ trên con đường mòn trong rừng.",
+          "sentence": "The concrete ______ leads directly to the main lake.",
+          "word_box": [
+            "clerk",
+            "tree",
+            "read",
+            "bicycle",
+            "document",
+            "path"
+          ],
+          "answer": "path",
+          "explanation": "Đáp án đúng là \"path\". Dựa vào bối cảnh: Một nhóm người tản bộ trên con đường mòn trong rừng.",
+          "id": "w1_t4_e22",
+          "image_path": "images/writing_part1/tang4/w1_t4_e22.jpg",
+          "image_query": "people walking on forest path",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=people%20walking%20on%20forest%20path",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một nhóm người tản bộ trên con đường mòn trong rừng.",
+          "type": "multiple_choice",
+          "content": "The concrete ______ leads directly to the main lake.",
+          "options": [
+            {
+              "id": "A",
+              "text": "path"
+            },
+            {
+              "id": "B",
+              "text": "tree"
+            },
+            {
+              "id": "C",
+              "text": "bicycle"
+            },
+            {
+              "id": "D",
+              "text": "document"
+            },
+            {
+              "id": "E",
+              "text": "clerk"
+            },
+            {
+              "id": "F",
+              "text": "read"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "level": "Dễ",
+          "context": "Bối cảnh: Một người đàn ông đang điều khiển xe nâng hàng trong kho.",
+          "sentence": "The machine operator is backing up the ______ slowly.",
+          "word_box": [
+            "rest",
+            "forklift",
+            "bench",
+            "monitor",
+            "chair",
+            "stack"
+          ],
+          "answer": "forklift",
+          "explanation": "Đáp án đúng là \"forklift\". Dựa vào bối cảnh: Một người đàn ông đang điều khiển xe nâng hàng trong kho.",
+          "id": "w1_t4_e12",
+          "image_path": "images/writing_part1/tang4/w1_t4_e12.jpg",
+          "image_query": "man driving forklift in warehouse",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=man%20driving%20forklift%20in%20warehouse",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người đàn ông đang điều khiển xe nâng hàng trong kho.",
+          "type": "multiple_choice",
+          "content": "The machine operator is backing up the ______ slowly.",
+          "options": [
+            {
+              "id": "A",
+              "text": "monitor"
+            },
+            {
+              "id": "B",
+              "text": "chair"
+            },
+            {
+              "id": "C",
+              "text": "forklift"
+            },
+            {
+              "id": "D",
+              "text": "stack"
+            },
+            {
+              "id": "E",
+              "text": "bench"
+            },
+            {
+              "id": "F",
+              "text": "rest"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ]
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Giáo viên dùng tay chỉ vào một quốc gia trên bản đồ thế giới.",
+          "sentence": "You can use your finger to ______ at the item you want.",
+          "word_box": [
+            "hand",
+            "path",
+            "menu",
+            "point",
+            "clerk",
+            "ride"
+          ],
+          "answer": "point",
+          "explanation": "Đáp án đúng là \"point\". Dựa vào bối cảnh: Giáo viên dùng tay chỉ vào một quốc gia trên bản đồ thế giới.",
+          "id": "w1_t4_e28",
+          "image_path": "images/writing_part1/tang4/w1_t4_e28.jpg",
+          "image_query": "teacher pointing at world map",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=teacher%20pointing%20at%20world%20map",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Giáo viên dùng tay chỉ vào một quốc gia trên bản đồ thế giới.",
+          "type": "multiple_choice",
+          "content": "You can use your finger to ______ at the item you want.",
+          "options": [
+            {
+              "id": "A",
+              "text": "hand"
+            },
+            {
+              "id": "B",
+              "text": "clerk"
+            },
+            {
+              "id": "C",
+              "text": "path"
+            },
+            {
+              "id": "D",
+              "text": "menu"
+            },
+            {
+              "id": "E",
+              "text": "point"
+            },
+            {
+              "id": "F",
+              "text": "ride"
+            }
+          ],
+          "correct_answers": [
+            "E"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Nhiều chiếc ghế nhựa được xếp chồng cao gọn gàng trong góc phòng.",
+          "sentence": "Please ______ the clean plates in the cupboard.",
+          "word_box": [
+            "hold",
+            "read",
+            "stack",
+            "tool",
+            "sit",
+            "bicycle"
+          ],
+          "answer": "stack",
+          "explanation": "Đáp án đúng là \"stack\". Dựa vào bối cảnh: Nhiều chiếc ghế nhựa được xếp chồng cao gọn gàng trong góc phòng.",
+          "id": "w1_t4_e33",
+          "image_path": "images/writing_part1/tang4/w1_t4_e33.jpg",
+          "image_query": "plastic chairs stacked in corner",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=plastic%20chairs%20stacked%20in%20corner",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Nhiều chiếc ghế nhựa được xếp chồng cao gọn gàng trong góc phòng.",
+          "type": "multiple_choice",
+          "content": "Please ______ the clean plates in the cupboard.",
+          "options": [
+            {
+              "id": "A",
+              "text": "stack"
+            },
+            {
+              "id": "B",
+              "text": "read"
+            },
+            {
+              "id": "C",
+              "text": "hold"
+            },
+            {
+              "id": "D",
+              "text": "sit"
+            },
+            {
+              "id": "E",
+              "text": "bicycle"
+            },
+            {
+              "id": "F",
+              "text": "tool"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Một người đang dùng xẻng nhỏ đào đất và đặt cây hoa vào chậu.",
+          "sentence": "She wants to ______ some rose bushes in the garden.",
+          "word_box": [
+            "read",
+            "document",
+            "plant",
+            "build",
+            "water",
+            "bicycle"
+          ],
+          "answer": "plant",
+          "explanation": "Đáp án đúng là \"plant\". Dựa vào bối cảnh: Một người đang dùng xẻng nhỏ đào đất và đặt cây hoa vào chậu.",
+          "id": "w1_t4_e46",
+          "image_path": "images/writing_part1/tang4/w1_t4_e46.jpg",
+          "image_query": "gardener planting flowers in pot",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=gardener%20planting%20flowers%20in%20pot",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người đang dùng xẻng nhỏ đào đất và đặt cây hoa vào chậu.",
+          "type": "multiple_choice",
+          "content": "She wants to ______ some rose bushes in the garden.",
+          "options": [
+            {
+              "id": "A",
+              "text": "build"
+            },
+            {
+              "id": "B",
+              "text": "bicycle"
+            },
+            {
+              "id": "C",
+              "text": "document"
+            },
+            {
+              "id": "D",
+              "text": "read"
+            },
+            {
+              "id": "E",
+              "text": "water"
+            },
+            {
+              "id": "F",
+              "text": "plant"
+            }
+          ],
+          "correct_answers": [
+            "F"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Một nam thanh niên đứng nói chuyện, tay phải cầm ly cà phê giấy.",
+          "sentence": "She will ______ the baby in her arms gently.",
+          "word_box": [
+            "ladder",
+            "wait",
+            "copier",
+            "menu",
+            "rest",
+            "hold"
+          ],
+          "answer": "hold",
+          "explanation": "Đáp án đúng là \"hold\". Dựa vào bối cảnh: Một nam thanh niên đứng nói chuyện, tay phải cầm ly cà phê giấy.",
+          "id": "w1_t4_e29",
+          "image_path": "images/writing_part1/tang4/w1_t4_e29.jpg",
+          "image_query": "man holding paper coffee cup",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=man%20holding%20paper%20coffee%20cup",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một nam thanh niên đứng nói chuyện, tay phải cầm ly cà phê giấy.",
+          "type": "multiple_choice",
+          "content": "She will ______ the baby in her arms gently.",
+          "options": [
+            {
+              "id": "A",
+              "text": "wait"
+            },
+            {
+              "id": "B",
+              "text": "ladder"
+            },
+            {
+              "id": "C",
+              "text": "menu"
+            },
+            {
+              "id": "D",
+              "text": "rest"
+            },
+            {
+              "id": "E",
+              "text": "copier"
+            },
+            {
+              "id": "F",
+              "text": "hold"
+            }
+          ],
+          "correct_answers": [
+            "F"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Hai người khách đang chỉ tay vào thực đơn và nói chuyện với bồi bàn.",
+          "sentence": "We should ______ some appetizers first.",
+          "word_box": [
+            "money",
+            "order",
+            "lift",
+            "chair",
+            "desk",
+            "water"
+          ],
+          "answer": "order",
+          "explanation": "Đáp án đúng là \"order\". Dựa vào bối cảnh: Hai người khách đang chỉ tay vào thực đơn và nói chuyện với bồi bàn.",
+          "id": "w1_t4_e38",
+          "image_path": "images/writing_part1/tang4/w1_t4_e38.jpg",
+          "image_query": "couple ordering dessert from waiter",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=couple%20ordering%20dessert%20from%20waiter",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Hai người khách đang chỉ tay vào thực đơn và nói chuyện với bồi bàn.",
+          "type": "multiple_choice",
+          "content": "We should ______ some appetizers first.",
+          "options": [
+            {
+              "id": "A",
+              "text": "money"
+            },
+            {
+              "id": "B",
+              "text": "lift"
+            },
+            {
+              "id": "C",
+              "text": "order"
+            },
+            {
+              "id": "D",
+              "text": "chair"
+            },
+            {
+              "id": "E",
+              "text": "water"
+            },
+            {
+              "id": "F",
+              "text": "desk"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Một người đàn ông đưa thẻ tín dụng cho bồi bàn sau bữa ăn.",
+          "sentence": "You can ______ for the items using your phone.",
+          "word_box": [
+            "box",
+            "point",
+            "pay",
+            "bicycle",
+            "wear",
+            "chair"
+          ],
+          "answer": "pay",
+          "explanation": "Đáp án đúng là \"pay\". Dựa vào bối cảnh: Một người đàn ông đưa thẻ tín dụng cho bồi bàn sau bữa ăn.",
+          "id": "w1_t4_e37",
+          "image_path": "images/writing_part1/tang4/w1_t4_e37.jpg",
+          "image_query": "man paying with credit card at restaurant",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=man%20paying%20with%20credit%20card%20at%20restaurant",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người đàn ông đưa thẻ tín dụng cho bồi bàn sau bữa ăn.",
+          "type": "multiple_choice",
+          "content": "You can ______ for the items using your phone.",
+          "options": [
+            {
+              "id": "A",
+              "text": "wear"
+            },
+            {
+              "id": "B",
+              "text": "chair"
+            },
+            {
+              "id": "C",
+              "text": "box"
+            },
+            {
+              "id": "D",
+              "text": "bicycle"
+            },
+            {
+              "id": "E",
+              "text": "point"
+            },
+            {
+              "id": "F",
+              "text": "pay"
+            }
+          ],
+          "correct_answers": [
+            "F"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Nhóm 4 người đang ngồi làm việc quanh một chiếc bàn tròn nhỏ.",
+          "sentence": "Let's all ______ down and start the discussion.",
+          "word_box": [
+            "plant",
+            "sit",
+            "carry",
+            "bicycle",
+            "keyboard",
+            "money"
+          ],
+          "answer": "sit",
+          "explanation": "Đáp án đúng là \"sit\". Dựa vào bối cảnh: Nhóm 4 người đang ngồi làm việc quanh một chiếc bàn tròn nhỏ.",
+          "id": "w1_t4_e30",
+          "image_path": "images/writing_part1/tang4/w1_t4_e30.jpg",
+          "image_query": "four people sitting around round table",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=four%20people%20sitting%20around%20round%20table",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Nhóm 4 người đang ngồi làm việc quanh một chiếc bàn tròn nhỏ.",
+          "type": "multiple_choice",
+          "content": "Let's all ______ down and start the discussion.",
+          "options": [
+            {
+              "id": "A",
+              "text": "bicycle"
+            },
+            {
+              "id": "B",
+              "text": "carry"
+            },
+            {
+              "id": "C",
+              "text": "keyboard"
+            },
+            {
+              "id": "D",
+              "text": "plant"
+            },
+            {
+              "id": "E",
+              "text": "sit"
+            },
+            {
+              "id": "F",
+              "text": "money"
+            }
+          ],
+          "correct_answers": [
+            "E"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Bác sĩ giơ tấm phim X-quang lên trước ánh sáng để xem xét.",
+          "sentence": "It is necessary to ______ the details under a microscope.",
+          "word_box": [
+            "point",
+            "document",
+            "menu",
+            "bench",
+            "examine",
+            "brick"
+          ],
+          "answer": "examine",
+          "explanation": "Đáp án đúng là \"examine\". Dựa vào bối cảnh: Bác sĩ giơ tấm phim X-quang lên trước ánh sáng để xem xét.",
+          "id": "w1_t4_e27",
+          "image_path": "images/writing_part1/tang4/w1_t4_e27.jpg",
+          "image_query": "doctor examining x-ray film",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=doctor%20examining%20x-ray%20film",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Bác sĩ giơ tấm phim X-quang lên trước ánh sáng để xem xét.",
+          "type": "multiple_choice",
+          "content": "It is necessary to ______ the details under a microscope.",
+          "options": [
+            {
+              "id": "A",
+              "text": "document"
+            },
+            {
+              "id": "B",
+              "text": "examine"
+            },
+            {
+              "id": "C",
+              "text": "bench"
+            },
+            {
+              "id": "D",
+              "text": "menu"
+            },
+            {
+              "id": "E",
+              "text": "point"
+            },
+            {
+              "id": "F",
+              "text": "brick"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Một cô gái đứng cạnh biển báo điểm dừng xe buýt, thỉnh thoảng nhìn đồng hồ.",
+          "sentence": "We will ______ for the rain to stop before going out.",
+          "word_box": [
+            "serve",
+            "sky",
+            "water",
+            "wait",
+            "hand",
+            "clerk"
+          ],
+          "answer": "wait",
+          "explanation": "Đáp án đúng là \"wait\". Dựa vào bối cảnh: Một cô gái đứng cạnh biển báo điểm dừng xe buýt, thỉnh thoảng nhìn đồng hồ.",
+          "id": "w1_t4_e41",
+          "image_path": "images/writing_part1/tang4/w1_t4_e41.jpg",
+          "image_query": "girl waiting at bus stop",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=girl%20waiting%20at%20bus%20stop",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một cô gái đứng cạnh biển báo điểm dừng xe buýt, thỉnh thoảng nhìn đồng hồ.",
+          "type": "multiple_choice",
+          "content": "We will ______ for the rain to stop before going out.",
+          "options": [
+            {
+              "id": "A",
+              "text": "serve"
+            },
+            {
+              "id": "B",
+              "text": "clerk"
+            },
+            {
+              "id": "C",
+              "text": "hand"
+            },
+            {
+              "id": "D",
+              "text": "wait"
+            },
+            {
+              "id": "E",
+              "text": "water"
+            },
+            {
+              "id": "F",
+              "text": "sky"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Chú chó đang chạy nước rút đuổi theo quả bóng trên cỏ.",
+          "sentence": "The dogs like to ______ freely on the beach.",
+          "word_box": [
+            "run",
+            "keyboard",
+            "read",
+            "wear",
+            "chair",
+            "point"
+          ],
+          "answer": "run",
+          "explanation": "Đáp án đúng là \"run\". Dựa vào bối cảnh: Chú chó đang chạy nước rút đuổi theo quả bóng trên cỏ.",
+          "id": "w1_t4_e44",
+          "image_path": "images/writing_part1/tang4/w1_t4_e44.jpg",
+          "image_query": "dog running on green grass",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=dog%20running%20on%20green%20grass",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Chú chó đang chạy nước rút đuổi theo quả bóng trên cỏ.",
+          "type": "multiple_choice",
+          "content": "The dogs like to ______ freely on the beach.",
+          "options": [
+            {
+              "id": "A",
+              "text": "read"
+            },
+            {
+              "id": "B",
+              "text": "wear"
+            },
+            {
+              "id": "C",
+              "text": "chair"
+            },
+            {
+              "id": "D",
+              "text": "point"
+            },
+            {
+              "id": "E",
+              "text": "keyboard"
+            },
+            {
+              "id": "F",
+              "text": "run"
+            }
+          ],
+          "correct_answers": [
+            "F"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Những người tập thể dục đang đạp xe trên con đường ven hồ.",
+          "sentence": "They want to ______ horses during the vacation.",
+          "word_box": [
+            "grass",
+            "build",
+            "stack",
+            "ride",
+            "tree",
+            "bicycle"
+          ],
+          "answer": "ride",
+          "explanation": "Đáp án đúng là \"ride\". Dựa vào bối cảnh: Những người tập thể dục đang đạp xe trên con đường ven hồ.",
+          "id": "w1_t4_e45",
+          "image_path": "images/writing_part1/tang4/w1_t4_e45.jpg",
+          "image_query": "people riding bicycles near lake",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=people%20riding%20bicycles%20near%20lake",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Những người tập thể dục đang đạp xe trên con đường ven hồ.",
+          "type": "multiple_choice",
+          "content": "They want to ______ horses during the vacation.",
+          "options": [
+            {
+              "id": "A",
+              "text": "bicycle"
+            },
+            {
+              "id": "B",
+              "text": "grass"
+            },
+            {
+              "id": "C",
+              "text": "ride"
+            },
+            {
+              "id": "D",
+              "text": "build"
+            },
+            {
+              "id": "E",
+              "text": "stack"
+            },
+            {
+              "id": "F",
+              "text": "tree"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Nhân viên nhà hàng bưng khay đồ uống đặt lên bàn cho khách.",
+          "sentence": "They will ______ breakfast until ten o'clock.",
+          "word_box": [
+            "tree",
+            "sit",
+            "wear",
+            "serve",
+            "plant",
+            "counter"
+          ],
+          "answer": "serve",
+          "explanation": "Đáp án đúng là \"serve\". Dựa vào bối cảnh: Nhân viên nhà hàng bưng khay đồ uống đặt lên bàn cho khách.",
+          "id": "w1_t4_e39",
+          "image_path": "images/writing_part1/tang4/w1_t4_e39.jpg",
+          "image_query": "waiter serving drinks to customers",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=waiter%20serving%20drinks%20to%20customers",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Nhân viên nhà hàng bưng khay đồ uống đặt lên bàn cho khách.",
+          "type": "multiple_choice",
+          "content": "They will ______ breakfast until ten o'clock.",
+          "options": [
+            {
+              "id": "A",
+              "text": "wear"
+            },
+            {
+              "id": "B",
+              "text": "counter"
+            },
+            {
+              "id": "C",
+              "text": "serve"
+            },
+            {
+              "id": "D",
+              "text": "tree"
+            },
+            {
+              "id": "E",
+              "text": "plant"
+            },
+            {
+              "id": "F",
+              "text": "sit"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Nhân viên bưu điện đưa hộp hàng cho một người phụ nữ tại cửa nhà.",
+          "sentence": "The teacher will ______ out the test papers now.",
+          "word_box": [
+            "box",
+            "push",
+            "serve",
+            "run",
+            "hand",
+            "walk"
+          ],
+          "answer": "hand",
+          "explanation": "Đáp án đúng là \"hand\". Dựa vào bối cảnh: Nhân viên bưu điện đưa hộp hàng cho một người phụ nữ tại cửa nhà.",
+          "id": "w1_t4_e42",
+          "image_path": "images/writing_part1/tang4/w1_t4_e42.jpg",
+          "image_query": "delivery man handing package to woman",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=delivery%20man%20handing%20package%20to%20woman",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Nhân viên bưu điện đưa hộp hàng cho một người phụ nữ tại cửa nhà.",
+          "type": "multiple_choice",
+          "content": "The teacher will ______ out the test papers now.",
+          "options": [
+            {
+              "id": "A",
+              "text": "hand"
+            },
+            {
+              "id": "B",
+              "text": "walk"
+            },
+            {
+              "id": "C",
+              "text": "push"
+            },
+            {
+              "id": "D",
+              "text": "box"
+            },
+            {
+              "id": "E",
+              "text": "run"
+            },
+            {
+              "id": "F",
+              "text": "serve"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Một nhóm người đi dạo phố, ai cũng mặc áo khoác dày.",
+          "sentence": "Do you need to ______ glasses for reading?",
+          "word_box": [
+            "water",
+            "examine",
+            "wear",
+            "point",
+            "serve",
+            "stand"
+          ],
+          "answer": "wear",
+          "explanation": "Đáp án đúng là \"wear\". Dựa vào bối cảnh: Một nhóm người đi dạo phố, ai cũng mặc áo khoác dày.",
+          "id": "w1_t4_e34",
+          "image_path": "images/writing_part1/tang4/w1_t4_e34.jpg",
+          "image_query": "group of people wearing winter coats",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=group%20of%20people%20wearing%20winter%20coats",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một nhóm người đi dạo phố, ai cũng mặc áo khoác dày.",
+          "type": "multiple_choice",
+          "content": "Do you need to ______ glasses for reading?",
+          "options": [
+            {
+              "id": "A",
+              "text": "stand"
+            },
+            {
+              "id": "B",
+              "text": "wear"
+            },
+            {
+              "id": "C",
+              "text": "water"
+            },
+            {
+              "id": "D",
+              "text": "serve"
+            },
+            {
+              "id": "E",
+              "text": "examine"
+            },
+            {
+              "id": "F",
+              "text": "point"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Người đàn ông ngồi trên sô-pha, mắt nhìn vào cuốn tạp chí đang mở.",
+          "sentence": "The boy likes to ______ comic books in his bedroom.",
+          "word_box": [
+            "read",
+            "helmet",
+            "desk",
+            "ladder",
+            "serve",
+            "path"
+          ],
+          "answer": "read",
+          "explanation": "Đáp án đúng là \"read\". Dựa vào bối cảnh: Người đàn ông ngồi trên sô-pha, mắt nhìn vào cuốn tạp chí đang mở.",
+          "id": "w1_t4_e26",
+          "image_path": "images/writing_part1/tang4/w1_t4_e26.jpg",
+          "image_query": "man reading magazine in waiting room",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=man%20reading%20magazine%20in%20waiting%20room",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Người đàn ông ngồi trên sô-pha, mắt nhìn vào cuốn tạp chí đang mở.",
+          "type": "multiple_choice",
+          "content": "The boy likes to ______ comic books in his bedroom.",
+          "options": [
+            {
+              "id": "A",
+              "text": "serve"
+            },
+            {
+              "id": "B",
+              "text": "desk"
+            },
+            {
+              "id": "C",
+              "text": "path"
+            },
+            {
+              "id": "D",
+              "text": "read"
+            },
+            {
+              "id": "E",
+              "text": "helmet"
+            },
+            {
+              "id": "F",
+              "text": "ladder"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Một nhân viên giao hàng đang cúi xuống nhấc thùng carton lên.",
+          "sentence": "He tried to ______ the heavy wooden crate.",
+          "word_box": [
+            "serve",
+            "wear",
+            "copier",
+            "bag",
+            "brick",
+            "lift"
+          ],
+          "answer": "lift",
+          "explanation": "Đáp án đúng là \"lift\". Dựa vào bối cảnh: Một nhân viên giao hàng đang cúi xuống nhấc thùng carton lên.",
+          "id": "w1_t4_e31",
+          "image_path": "images/writing_part1/tang4/w1_t4_e31.jpg",
+          "image_query": "delivery man lifting heavy cardboard box",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=delivery%20man%20lifting%20heavy%20cardboard%20box",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một nhân viên giao hàng đang cúi xuống nhấc thùng carton lên.",
+          "type": "multiple_choice",
+          "content": "He tried to ______ the heavy wooden crate.",
+          "options": [
+            {
+              "id": "A",
+              "text": "serve"
+            },
+            {
+              "id": "B",
+              "text": "bag"
+            },
+            {
+              "id": "C",
+              "text": "copier"
+            },
+            {
+              "id": "D",
+              "text": "wear"
+            },
+            {
+              "id": "E",
+              "text": "lift"
+            },
+            {
+              "id": "F",
+              "text": "brick"
+            }
+          ],
+          "correct_answers": [
+            "E"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Một cặp đôi đi bộ trên bãi cát, cạnh mép nước biển.",
+          "sentence": "They decided to ______ in the park after dinner.",
+          "word_box": [
+            "keyboard",
+            "order",
+            "ride",
+            "walk",
+            "counter",
+            "wear"
+          ],
+          "answer": "walk",
+          "explanation": "Đáp án đúng là \"walk\". Dựa vào bối cảnh: Một cặp đôi đi bộ trên bãi cát, cạnh mép nước biển.",
+          "id": "w1_t4_e43",
+          "image_path": "images/writing_part1/tang4/w1_t4_e43.jpg",
+          "image_query": "couple walking on sandy beach",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=couple%20walking%20on%20sandy%20beach",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một cặp đôi đi bộ trên bãi cát, cạnh mép nước biển.",
+          "type": "multiple_choice",
+          "content": "They decided to ______ in the park after dinner.",
+          "options": [
+            {
+              "id": "A",
+              "text": "keyboard"
+            },
+            {
+              "id": "B",
+              "text": "counter"
+            },
+            {
+              "id": "C",
+              "text": "order"
+            },
+            {
+              "id": "D",
+              "text": "wear"
+            },
+            {
+              "id": "E",
+              "text": "walk"
+            },
+            {
+              "id": "F",
+              "text": "ride"
+            }
+          ],
+          "correct_answers": [
+            "E"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Một người đang xếp các tệp tài liệu vào trong tủ kéo.",
+          "sentence": "She is signing a legal ______ for the transaction.",
+          "word_box": [
+            "examine",
+            "document",
+            "money",
+            "run",
+            "stand",
+            "stack"
+          ],
+          "answer": "document",
+          "explanation": "Đáp án đúng là \"document\". Dựa vào bối cảnh: Một người đang xếp các tệp tài liệu vào trong tủ kéo.",
+          "id": "w1_t4_e49",
+          "image_path": "images/writing_part1/tang4/w1_t4_e49.jpg",
+          "image_query": "person putting documents in file cabinet",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=person%20putting%20documents%20in%20file%20cabinet",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người đang xếp các tệp tài liệu vào trong tủ kéo.",
+          "type": "multiple_choice",
+          "content": "She is signing a legal ______ for the transaction.",
+          "options": [
+            {
+              "id": "A",
+              "text": "stack"
+            },
+            {
+              "id": "B",
+              "text": "document"
+            },
+            {
+              "id": "C",
+              "text": "stand"
+            },
+            {
+              "id": "D",
+              "text": "examine"
+            },
+            {
+              "id": "E",
+              "text": "run"
+            },
+            {
+              "id": "F",
+              "text": "money"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Một người lớn tuổi dùng vòi phun nước tưới cho khu vườn rau xanh.",
+          "sentence": "You should ______ the garden every morning.",
+          "word_box": [
+            "counter",
+            "customer",
+            "document",
+            "path",
+            "water",
+            "ride"
+          ],
+          "answer": "water",
+          "explanation": "Đáp án đúng là \"water\". Dựa vào bối cảnh: Một người lớn tuổi dùng vòi phun nước tưới cho khu vườn rau xanh.",
+          "id": "w1_t4_e48",
+          "image_path": "images/writing_part1/tang4/w1_t4_e48.jpg",
+          "image_query": "old man watering vegetable garden",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=old%20man%20watering%20vegetable%20garden",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người lớn tuổi dùng vòi phun nước tưới cho khu vườn rau xanh.",
+          "type": "multiple_choice",
+          "content": "You should ______ the garden every morning.",
+          "options": [
+            {
+              "id": "A",
+              "text": "counter"
+            },
+            {
+              "id": "B",
+              "text": "ride"
+            },
+            {
+              "id": "C",
+              "text": "path"
+            },
+            {
+              "id": "D",
+              "text": "water"
+            },
+            {
+              "id": "E",
+              "text": "customer"
+            },
+            {
+              "id": "F",
+              "text": "document"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Nhóm người đang tập trung nhìn vào một màn hình TV lớn treo trên tường.",
+          "sentence": "The computer ______ displays the code clearly.",
+          "word_box": [
+            "customer",
+            "helmet",
+            "monitor",
+            "order",
+            "wear",
+            "lift"
+          ],
+          "answer": "monitor",
+          "explanation": "Đáp án đúng là \"monitor\". Dựa vào bối cảnh: Nhóm người đang tập trung nhìn vào một màn hình TV lớn treo trên tường.",
+          "id": "w1_t4_e50",
+          "image_path": "images/writing_part1/tang4/w1_t4_e50.jpg",
+          "image_query": "group of people looking at large tv monitor",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=group%20of%20people%20looking%20at%20large%20tv%20monitor",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Nhóm người đang tập trung nhìn vào một màn hình TV lớn treo trên tường.",
+          "type": "multiple_choice",
+          "content": "The computer ______ displays the code clearly.",
+          "options": [
+            {
+              "id": "A",
+              "text": "lift"
+            },
+            {
+              "id": "B",
+              "text": "helmet"
+            },
+            {
+              "id": "C",
+              "text": "monitor"
+            },
+            {
+              "id": "D",
+              "text": "order"
+            },
+            {
+              "id": "E",
+              "text": "wear"
+            },
+            {
+              "id": "F",
+              "text": "customer"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Một người đàn ông vác một chiếc túi du lịch lớn trên vai.",
+          "sentence": "Can you help me ______ this box to the car?",
+          "word_box": [
+            "clerk",
+            "ladder",
+            "hold",
+            "keyboard",
+            "type",
+            "carry"
+          ],
+          "answer": "carry",
+          "explanation": "Đáp án đúng là \"carry\". Dựa vào bối cảnh: Một người đàn ông vác một chiếc túi du lịch lớn trên vai.",
+          "id": "w1_t4_e32",
+          "image_path": "images/writing_part1/tang4/w1_t4_e32.jpg",
+          "image_query": "man carrying large travel bag on shoulder",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=man%20carrying%20large%20travel%20bag%20on%20shoulder",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người đàn ông vác một chiếc túi du lịch lớn trên vai.",
+          "type": "multiple_choice",
+          "content": "Can you help me ______ this box to the car?",
+          "options": [
+            {
+              "id": "A",
+              "text": "clerk"
+            },
+            {
+              "id": "B",
+              "text": "type"
+            },
+            {
+              "id": "C",
+              "text": "hold"
+            },
+            {
+              "id": "D",
+              "text": "keyboard"
+            },
+            {
+              "id": "E",
+              "text": "ladder"
+            },
+            {
+              "id": "F",
+              "text": "carry"
+            }
+          ],
+          "correct_answers": [
+            "F"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Những người thợ xây đang làm việc tại công trường một ngôi nhà đang thi công.",
+          "sentence": "The construction company plans to ______ a shopping mall.",
+          "word_box": [
+            "menu",
+            "build",
+            "push",
+            "carry",
+            "customer",
+            "bicycle"
+          ],
+          "answer": "build",
+          "explanation": "Đáp án đúng là \"build\". Dựa vào bối cảnh: Những người thợ xây đang làm việc tại công trường một ngôi nhà đang thi công.",
+          "id": "w1_t4_e36",
+          "image_path": "images/writing_part1/tang4/w1_t4_e36.jpg",
+          "image_query": "construction workers building new house",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=construction%20workers%20building%20new%20house",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Những người thợ xây đang làm việc tại công trường một ngôi nhà đang thi công.",
+          "type": "multiple_choice",
+          "content": "The construction company plans to ______ a shopping mall.",
+          "options": [
+            {
+              "id": "A",
+              "text": "bicycle"
+            },
+            {
+              "id": "B",
+              "text": "carry"
+            },
+            {
+              "id": "C",
+              "text": "customer"
+            },
+            {
+              "id": "D",
+              "text": "build"
+            },
+            {
+              "id": "E",
+              "text": "menu"
+            },
+            {
+              "id": "F",
+              "text": "push"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Hành khách đứng dọc theo sân ga, nhìn về phía đường tàu.",
+          "sentence": "Please do not ______ too close to the edge.",
+          "word_box": [
+            "helmet",
+            "grass",
+            "wait",
+            "stand",
+            "carry",
+            "tool"
+          ],
+          "answer": "stand",
+          "explanation": "Đáp án đúng là \"stand\". Dựa vào bối cảnh: Hành khách đứng dọc theo sân ga, nhìn về phía đường tàu.",
+          "id": "w1_t4_e40",
+          "image_path": "images/writing_part1/tang4/w1_t4_e40.jpg",
+          "image_query": "passengers standing at train station",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=passengers%20standing%20at%20train%20station",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Hành khách đứng dọc theo sân ga, nhìn về phía đường tàu.",
+          "type": "multiple_choice",
+          "content": "Please do not ______ too close to the edge.",
+          "options": [
+            {
+              "id": "A",
+              "text": "carry"
+            },
+            {
+              "id": "B",
+              "text": "tool"
+            },
+            {
+              "id": "C",
+              "text": "grass"
+            },
+            {
+              "id": "D",
+              "text": "helmet"
+            },
+            {
+              "id": "E",
+              "text": "stand"
+            },
+            {
+              "id": "F",
+              "text": "wait"
+            }
+          ],
+          "correct_answers": [
+            "E"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Khách hàng đang đẩy xe đựng đầy hàng hóa trong siêu thị.",
+          "sentence": "He had to ______ the stalled vehicle to the roadside.",
+          "word_box": [
+            "keyboard",
+            "water",
+            "push",
+            "ladder",
+            "examine",
+            "bag"
+          ],
+          "answer": "push",
+          "explanation": "Đáp án đúng là \"push\". Dựa vào bối cảnh: Khách hàng đang đẩy xe đựng đầy hàng hóa trong siêu thị.",
+          "id": "w1_t4_e35",
+          "image_path": "images/writing_part1/tang4/w1_t4_e35.jpg",
+          "image_query": "customer pushing shopping cart in supermarket",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=customer%20pushing%20shopping%20cart%20in%20supermarket",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Khách hàng đang đẩy xe đựng đầy hàng hóa trong siêu thị.",
+          "type": "multiple_choice",
+          "content": "He had to ______ the stalled vehicle to the roadside.",
+          "options": [
+            {
+              "id": "A",
+              "text": "water"
+            },
+            {
+              "id": "B",
+              "text": "examine"
+            },
+            {
+              "id": "C",
+              "text": "ladder"
+            },
+            {
+              "id": "D",
+              "text": "push"
+            },
+            {
+              "id": "E",
+              "text": "bag"
+            },
+            {
+              "id": "F",
+              "text": "keyboard"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ]
+        },
+        {
+          "level": "Trung bình",
+          "context": "Bối cảnh: Nhóm bạn đang ngả lưng thư giãn dưới một gốc cây lớn.",
+          "sentence": "He stopped to ______ his legs after a long walk.",
+          "word_box": [
+            "keyboard",
+            "stand",
+            "rest",
+            "push",
+            "path",
+            "read"
+          ],
+          "answer": "rest",
+          "explanation": "Đáp án đúng là \"rest\". Dựa vào bối cảnh: Nhóm bạn đang ngả lưng thư giãn dưới một gốc cây lớn.",
+          "id": "w1_t4_e47",
+          "image_path": "images/writing_part1/tang4/w1_t4_e47.jpg",
+          "image_query": "friends resting under large tree",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=friends%20resting%20under%20large%20tree",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Nhóm bạn đang ngả lưng thư giãn dưới một gốc cây lớn.",
+          "type": "multiple_choice",
+          "content": "He stopped to ______ his legs after a long walk.",
+          "options": [
+            {
+              "id": "A",
+              "text": "stand"
+            },
+            {
+              "id": "B",
+              "text": "rest"
+            },
+            {
+              "id": "C",
+              "text": "push"
+            },
+            {
+              "id": "D",
+              "text": "keyboard"
+            },
+            {
+              "id": "E",
+              "text": "read"
+            },
+            {
+              "id": "F",
+              "text": "path"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ]
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Một người phụ nữ đang đeo tai nghe và đánh máy với tốc độ cao.",
+          "sentence": "The clerk will ______ the dictation into a document.",
+          "word_box": [
+            "bicycle",
+            "forklift",
+            "desk",
+            "serve",
+            "sit",
+            "type"
+          ],
+          "answer": "type",
+          "explanation": "Đáp án đúng là \"type\". Dựa vào bối cảnh: Một người phụ nữ đang đeo tai nghe và đánh máy với tốc độ cao.",
+          "id": "w1_t4_e73",
+          "image_path": "images/writing_part1/tang4/w1_t4_e73.jpg",
+          "image_query": "secretary typing fast with headphones",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=secretary%20typing%20fast%20with%20headphones",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người phụ nữ đang đeo tai nghe và đánh máy với tốc độ cao.",
+          "type": "multiple_choice",
+          "content": "The clerk will ______ the dictation into a document.",
+          "options": [
+            {
+              "id": "A",
+              "text": "serve"
+            },
+            {
+              "id": "B",
+              "text": "type"
+            },
+            {
+              "id": "C",
+              "text": "bicycle"
+            },
+            {
+              "id": "D",
+              "text": "sit"
+            },
+            {
+              "id": "E",
+              "text": "desk"
+            },
+            {
+              "id": "F",
+              "text": "forklift"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Bầu trời xám xịt với những đám mây đen vần vũ, báo hiệu sắp có mưa lớn.",
+          "sentence": "Stars filled the dark ______ as night fell.",
+          "word_box": [
+            "sky",
+            "read",
+            "customer",
+            "chair",
+            "build",
+            "counter"
+          ],
+          "answer": "sky",
+          "explanation": "Đáp án đúng là \"sky\". Dựa vào bối cảnh: Bầu trời xám xịt với những đám mây đen vần vũ, báo hiệu sắp có mưa lớn.",
+          "id": "w1_t4_e72",
+          "image_path": "images/writing_part1/tang4/w1_t4_e72.jpg",
+          "image_query": "dark stormy clouds in sky",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=dark%20stormy%20clouds%20in%20sky",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Bầu trời xám xịt với những đám mây đen vần vũ, báo hiệu sắp có mưa lớn.",
+          "type": "multiple_choice",
+          "content": "Stars filled the dark ______ as night fell.",
+          "options": [
+            {
+              "id": "A",
+              "text": "build"
+            },
+            {
+              "id": "B",
+              "text": "read"
+            },
+            {
+              "id": "C",
+              "text": "sky"
+            },
+            {
+              "id": "D",
+              "text": "counter"
+            },
+            {
+              "id": "E",
+              "text": "customer"
+            },
+            {
+              "id": "F",
+              "text": "chair"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Nhân viên cửa hàng tiện lợi đang vuốt phẳng các tờ tiền trong ngăn kéo tại quầy.",
+          "sentence": "Food preparations are done on the kitchen ______.",
+          "word_box": [
+            "path",
+            "desk",
+            "tree",
+            "counter",
+            "build",
+            "bicycle"
+          ],
+          "answer": "counter",
+          "explanation": "Đáp án đúng là \"counter\". Dựa vào bối cảnh: Nhân viên cửa hàng tiện lợi đang vuốt phẳng các tờ tiền trong ngăn kéo tại quầy.",
+          "id": "w1_t4_e61",
+          "image_path": "images/writing_part1/tang4/w1_t4_e61.jpg",
+          "image_query": "cashier organizing money in register counter",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=cashier%20organizing%20money%20in%20register%20counter",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Nhân viên cửa hàng tiện lợi đang vuốt phẳng các tờ tiền trong ngăn kéo tại quầy.",
+          "type": "multiple_choice",
+          "content": "Food preparations are done on the kitchen ______.",
+          "options": [
+            {
+              "id": "A",
+              "text": "tree"
+            },
+            {
+              "id": "B",
+              "text": "path"
+            },
+            {
+              "id": "C",
+              "text": "build"
+            },
+            {
+              "id": "D",
+              "text": "counter"
+            },
+            {
+              "id": "E",
+              "text": "bicycle"
+            },
+            {
+              "id": "F",
+              "text": "desk"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Cận cảnh một bức tường rào đang xây dở với các viên gạch nung đỏ.",
+          "sentence": "He cemented a single ______ into the chimney wall.",
+          "word_box": [
+            "run",
+            "brick",
+            "path",
+            "money",
+            "copier",
+            "helmet"
+          ],
+          "answer": "brick",
+          "explanation": "Đáp án đúng là \"brick\". Dựa vào bối cảnh: Cận cảnh một bức tường rào đang xây dở với các viên gạch nung đỏ.",
+          "id": "w1_t4_e59",
+          "image_path": "images/writing_part1/tang4/w1_t4_e59.jpg",
+          "image_query": "brick wall construction",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=brick%20wall%20construction",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Cận cảnh một bức tường rào đang xây dở với các viên gạch nung đỏ.",
+          "type": "multiple_choice",
+          "content": "He cemented a single ______ into the chimney wall.",
+          "options": [
+            {
+              "id": "A",
+              "text": "path"
+            },
+            {
+              "id": "B",
+              "text": "helmet"
+            },
+            {
+              "id": "C",
+              "text": "money"
+            },
+            {
+              "id": "D",
+              "text": "brick"
+            },
+            {
+              "id": "E",
+              "text": "copier"
+            },
+            {
+              "id": "F",
+              "text": "run"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Hàng chục thùng carton bọc nilon được đặt trên các tấm pallet gỗ trong kho.",
+          "sentence": "She received a wooden ______ containing old letters.",
+          "word_box": [
+            "path",
+            "bench",
+            "walk",
+            "hold",
+            "box",
+            "grass"
+          ],
+          "answer": "box",
+          "explanation": "Đáp án đúng là \"box\". Dựa vào bối cảnh: Hàng chục thùng carton bọc nilon được đặt trên các tấm pallet gỗ trong kho.",
+          "id": "w1_t4_e55",
+          "image_path": "images/writing_part1/tang4/w1_t4_e55.jpg",
+          "image_query": "boxes stacked on wooden pallets in warehouse",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=boxes%20stacked%20on%20wooden%20pallets%20in%20warehouse",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Hàng chục thùng carton bọc nilon được đặt trên các tấm pallet gỗ trong kho.",
+          "type": "multiple_choice",
+          "content": "She received a wooden ______ containing old letters.",
+          "options": [
+            {
+              "id": "A",
+              "text": "box"
+            },
+            {
+              "id": "B",
+              "text": "grass"
+            },
+            {
+              "id": "C",
+              "text": "bench"
+            },
+            {
+              "id": "D",
+              "text": "hold"
+            },
+            {
+              "id": "E",
+              "text": "walk"
+            },
+            {
+              "id": "F",
+              "text": "path"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Giám đốc đang cầm bút bi dò theo từng dòng chữ trên trang giấy.",
+          "sentence": "The doctor needs to ______ the patient's history.",
+          "word_box": [
+            "helmet",
+            "bag",
+            "read",
+            "customer",
+            "document",
+            "clerk"
+          ],
+          "answer": "read",
+          "explanation": "Đáp án đúng là \"read\". Dựa vào bối cảnh: Giám đốc đang cầm bút bi dò theo từng dòng chữ trên trang giấy.",
+          "id": "w1_t4_e74",
+          "image_path": "images/writing_part1/tang4/w1_t4_e74.jpg",
+          "image_query": "director reading long contract document",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=director%20reading%20long%20contract%20document",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Giám đốc đang cầm bút bi dò theo từng dòng chữ trên trang giấy.",
+          "type": "multiple_choice",
+          "content": "The doctor needs to ______ the patient's history.",
+          "options": [
+            {
+              "id": "A",
+              "text": "read"
+            },
+            {
+              "id": "B",
+              "text": "customer"
+            },
+            {
+              "id": "C",
+              "text": "helmet"
+            },
+            {
+              "id": "D",
+              "text": "clerk"
+            },
+            {
+              "id": "E",
+              "text": "bag"
+            },
+            {
+              "id": "F",
+              "text": "document"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Một hàng dài người đang đứng đợi trước quầy thanh toán của siêu thị.",
+          "sentence": "The store clerk welcomed the first ______ of the day.",
+          "word_box": [
+            "stack",
+            "brick",
+            "ride",
+            "pay",
+            "serve",
+            "customer"
+          ],
+          "answer": "customer",
+          "explanation": "Đáp án đúng là \"customer\". Dựa vào bối cảnh: Một hàng dài người đang đứng đợi trước quầy thanh toán của siêu thị.",
+          "id": "w1_t4_e62",
+          "image_path": "images/writing_part1/tang4/w1_t4_e62.jpg",
+          "image_query": "customers waiting in line at supermarket checkout",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=customers%20waiting%20in%20line%20at%20supermarket%20checkout",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một hàng dài người đang đứng đợi trước quầy thanh toán của siêu thị.",
+          "type": "multiple_choice",
+          "content": "The store clerk welcomed the first ______ of the day.",
+          "options": [
+            {
+              "id": "A",
+              "text": "pay"
+            },
+            {
+              "id": "B",
+              "text": "customer"
+            },
+            {
+              "id": "C",
+              "text": "stack"
+            },
+            {
+              "id": "D",
+              "text": "ride"
+            },
+            {
+              "id": "E",
+              "text": "serve"
+            },
+            {
+              "id": "F",
+              "text": "brick"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Một người đang mở nắp máy photocopy và dùng đèn pin soi vào trong.",
+          "sentence": "The multi-function ______ is currently out of order.",
+          "word_box": [
+            "build",
+            "bag",
+            "ladder",
+            "path",
+            "carry",
+            "copier"
+          ],
+          "answer": "copier",
+          "explanation": "Đáp án đúng là \"copier\". Dựa vào bối cảnh: Một người đang mở nắp máy photocopy và dùng đèn pin soi vào trong.",
+          "id": "w1_t4_e54",
+          "image_path": "images/writing_part1/tang4/w1_t4_e54.jpg",
+          "image_query": "technician checking inside copier machine",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=technician%20checking%20inside%20copier%20machine",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người đang mở nắp máy photocopy và dùng đèn pin soi vào trong.",
+          "type": "multiple_choice",
+          "content": "The multi-function ______ is currently out of order.",
+          "options": [
+            {
+              "id": "A",
+              "text": "build"
+            },
+            {
+              "id": "B",
+              "text": "path"
+            },
+            {
+              "id": "C",
+              "text": "ladder"
+            },
+            {
+              "id": "D",
+              "text": "carry"
+            },
+            {
+              "id": "E",
+              "text": "bag"
+            },
+            {
+              "id": "F",
+              "text": "copier"
+            }
+          ],
+          "correct_answers": [
+            "F"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Một người đang đếm một xấp tiền giấy dày trên tay.",
+          "sentence": "They collected ______ to support the local charity.",
+          "word_box": [
+            "rest",
+            "hand",
+            "money",
+            "sky",
+            "hold",
+            "forklift"
+          ],
+          "answer": "money",
+          "explanation": "Đáp án đúng là \"money\". Dựa vào bối cảnh: Một người đang đếm một xấp tiền giấy dày trên tay.",
+          "id": "w1_t4_e66",
+          "image_path": "images/writing_part1/tang4/w1_t4_e66.jpg",
+          "image_query": "person counting thick stack of paper money",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=person%20counting%20thick%20stack%20of%20paper%20money",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người đang đếm một xấp tiền giấy dày trên tay.",
+          "type": "multiple_choice",
+          "content": "They collected ______ to support the local charity.",
+          "options": [
+            {
+              "id": "A",
+              "text": "money"
+            },
+            {
+              "id": "B",
+              "text": "hold"
+            },
+            {
+              "id": "C",
+              "text": "rest"
+            },
+            {
+              "id": "D",
+              "text": "hand"
+            },
+            {
+              "id": "E",
+              "text": "forklift"
+            },
+            {
+              "id": "F",
+              "text": "sky"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Người đàn ông mặc vest đang di chuyển một chiếc ghế xoay để ngồi xuống.",
+          "sentence": "An ergonomic ______ can prevent back pain.",
+          "word_box": [
+            "rest",
+            "build",
+            "hold",
+            "tree",
+            "lift",
+            "chair"
+          ],
+          "answer": "chair",
+          "explanation": "Đáp án đúng là \"chair\". Dựa vào bối cảnh: Người đàn ông mặc vest đang di chuyển một chiếc ghế xoay để ngồi xuống.",
+          "id": "w1_t4_e53",
+          "image_path": "images/writing_part1/tang4/w1_t4_e53.jpg",
+          "image_query": "man moving swivel chair in meeting room",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=man%20moving%20swivel%20chair%20in%20meeting%20room",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Người đàn ông mặc vest đang di chuyển một chiếc ghế xoay để ngồi xuống.",
+          "type": "multiple_choice",
+          "content": "An ergonomic ______ can prevent back pain.",
+          "options": [
+            {
+              "id": "A",
+              "text": "lift"
+            },
+            {
+              "id": "B",
+              "text": "tree"
+            },
+            {
+              "id": "C",
+              "text": "hold"
+            },
+            {
+              "id": "D",
+              "text": "rest"
+            },
+            {
+              "id": "E",
+              "text": "chair"
+            },
+            {
+              "id": "F",
+              "text": "build"
+            }
+          ],
+          "correct_answers": [
+            "E"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Nhân viên cửa hàng đang dùng giấy màu và ruy băng để gói một hộp quà.",
+          "sentence": "The bank ______ assisted the man with his transaction.",
+          "word_box": [
+            "path",
+            "clerk",
+            "copier",
+            "pay",
+            "ladder",
+            "stack"
+          ],
+          "answer": "clerk",
+          "explanation": "Đáp án đúng là \"clerk\". Dựa vào bối cảnh: Nhân viên cửa hàng đang dùng giấy màu và ruy băng để gói một hộp quà.",
+          "id": "w1_t4_e63",
+          "image_path": "images/writing_part1/tang4/w1_t4_e63.jpg",
+          "image_query": "clerk wrapping gift box with ribbon",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=clerk%20wrapping%20gift%20box%20with%20ribbon",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Nhân viên cửa hàng đang dùng giấy màu và ruy băng để gói một hộp quà.",
+          "type": "multiple_choice",
+          "content": "The bank ______ assisted the man with his transaction.",
+          "options": [
+            {
+              "id": "A",
+              "text": "stack"
+            },
+            {
+              "id": "B",
+              "text": "ladder"
+            },
+            {
+              "id": "C",
+              "text": "path"
+            },
+            {
+              "id": "D",
+              "text": "pay"
+            },
+            {
+              "id": "E",
+              "text": "clerk"
+            },
+            {
+              "id": "F",
+              "text": "copier"
+            }
+          ],
+          "correct_answers": [
+            "E"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Một người đang lục tìm thứ gì đó trong túi xách tay ở sân bay.",
+          "sentence": "He put his laptop inside a padded ______.",
+          "word_box": [
+            "tool",
+            "examine",
+            "monitor",
+            "bag",
+            "type",
+            "point"
+          ],
+          "answer": "bag",
+          "explanation": "Đáp án đúng là \"bag\". Dựa vào bối cảnh: Một người đang lục tìm thứ gì đó trong túi xách tay ở sân bay.",
+          "id": "w1_t4_e65",
+          "image_path": "images/writing_part1/tang4/w1_t4_e65.jpg",
+          "image_query": "passenger searching in hand bag at airport",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=passenger%20searching%20in%20hand%20bag%20at%20airport",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người đang lục tìm thứ gì đó trong túi xách tay ở sân bay.",
+          "type": "multiple_choice",
+          "content": "He put his laptop inside a padded ______.",
+          "options": [
+            {
+              "id": "A",
+              "text": "monitor"
+            },
+            {
+              "id": "B",
+              "text": "tool"
+            },
+            {
+              "id": "C",
+              "text": "examine"
+            },
+            {
+              "id": "D",
+              "text": "point"
+            },
+            {
+              "id": "E",
+              "text": "type"
+            },
+            {
+              "id": "F",
+              "text": "bag"
+            }
+          ],
+          "correct_answers": [
+            "F"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Người thợ đang quỳ dưới sàn nhà, sửa ổ điện cạnh bàn làm việc.",
+          "sentence": "The manager sits at a large mahogany ______ in his office.",
+          "word_box": [
+            "keyboard",
+            "desk",
+            "hold",
+            "push",
+            "ride",
+            "hand"
+          ],
+          "answer": "desk",
+          "explanation": "Đáp án đúng là \"desk\". Dựa vào bối cảnh: Người thợ đang quỳ dưới sàn nhà, sửa ổ điện cạnh bàn làm việc.",
+          "id": "w1_t4_e51",
+          "image_path": "images/writing_part1/tang4/w1_t4_e51.jpg",
+          "image_query": "electrician repairing outlet under desk",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=electrician%20repairing%20outlet%20under%20desk",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Người thợ đang quỳ dưới sàn nhà, sửa ổ điện cạnh bàn làm việc.",
+          "type": "multiple_choice",
+          "content": "The manager sits at a large mahogany ______ in his office.",
+          "options": [
+            {
+              "id": "A",
+              "text": "hold"
+            },
+            {
+              "id": "B",
+              "text": "push"
+            },
+            {
+              "id": "C",
+              "text": "hand"
+            },
+            {
+              "id": "D",
+              "text": "keyboard"
+            },
+            {
+              "id": "E",
+              "text": "desk"
+            },
+            {
+              "id": "F",
+              "text": "ride"
+            }
+          ],
+          "correct_answers": [
+            "E"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Một người đàn ông đang đẩy chiếc máy cắt cỏ màu đỏ trên bãi cỏ xanh mướt.",
+          "sentence": "Dewdrops sparkled on the green ______ in the morning.",
+          "word_box": [
+            "stack",
+            "point",
+            "counter",
+            "grass",
+            "brick",
+            "wait"
+          ],
+          "answer": "grass",
+          "explanation": "Đáp án đúng là \"grass\". Dựa vào bối cảnh: Một người đàn ông đang đẩy chiếc máy cắt cỏ màu đỏ trên bãi cỏ xanh mướt.",
+          "id": "w1_t4_e71",
+          "image_path": "images/writing_part1/tang4/w1_t4_e71.jpg",
+          "image_query": "man pushing red lawnmower on green grass",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=man%20pushing%20red%20lawnmower%20on%20green%20grass",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người đàn ông đang đẩy chiếc máy cắt cỏ màu đỏ trên bãi cỏ xanh mướt.",
+          "type": "multiple_choice",
+          "content": "Dewdrops sparkled on the green ______ in the morning.",
+          "options": [
+            {
+              "id": "A",
+              "text": "wait"
+            },
+            {
+              "id": "B",
+              "text": "counter"
+            },
+            {
+              "id": "C",
+              "text": "stack"
+            },
+            {
+              "id": "D",
+              "text": "brick"
+            },
+            {
+              "id": "E",
+              "text": "point"
+            },
+            {
+              "id": "F",
+              "text": "grass"
+            }
+          ],
+          "correct_answers": [
+            "F"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Một chiếc xe nâng đang nâng một pallet hàng lớn chạy qua lại trong nhà kho.",
+          "sentence": "The heavy ______ is loaded with several pallets.",
+          "word_box": [
+            "walk",
+            "order",
+            "examine",
+            "bicycle",
+            "forklift",
+            "grass"
+          ],
+          "answer": "forklift",
+          "explanation": "Đáp án đúng là \"forklift\". Dựa vào bối cảnh: Một chiếc xe nâng đang nâng một pallet hàng lớn chạy qua lại trong nhà kho.",
+          "id": "w1_t4_e60",
+          "image_path": "images/writing_part1/tang4/w1_t4_e60.jpg",
+          "image_query": "forklift moving pallet in warehouse",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=forklift%20moving%20pallet%20in%20warehouse",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một chiếc xe nâng đang nâng một pallet hàng lớn chạy qua lại trong nhà kho.",
+          "type": "multiple_choice",
+          "content": "The heavy ______ is loaded with several pallets.",
+          "options": [
+            {
+              "id": "A",
+              "text": "grass"
+            },
+            {
+              "id": "B",
+              "text": "forklift"
+            },
+            {
+              "id": "C",
+              "text": "walk"
+            },
+            {
+              "id": "D",
+              "text": "bicycle"
+            },
+            {
+              "id": "E",
+              "text": "order"
+            },
+            {
+              "id": "F",
+              "text": "examine"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Băng ghế đá công viên mới được sơn lại trông rất bóng bẩy và sạch sẽ.",
+          "sentence": "They painted the park ______ green last week.",
+          "word_box": [
+            "push",
+            "run",
+            "serve",
+            "bench",
+            "document",
+            "water"
+          ],
+          "answer": "bench",
+          "explanation": "Đáp án đúng là \"bench\". Dựa vào bối cảnh: Băng ghế đá công viên mới được sơn lại trông rất bóng bẩy và sạch sẽ.",
+          "id": "w1_t4_e68",
+          "image_path": "images/writing_part1/tang4/w1_t4_e68.jpg",
+          "image_query": "newly painted green park bench",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=newly%20painted%20green%20park%20bench",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Băng ghế đá công viên mới được sơn lại trông rất bóng bẩy và sạch sẽ.",
+          "type": "multiple_choice",
+          "content": "They painted the park ______ green last week.",
+          "options": [
+            {
+              "id": "A",
+              "text": "run"
+            },
+            {
+              "id": "B",
+              "text": "push"
+            },
+            {
+              "id": "C",
+              "text": "water"
+            },
+            {
+              "id": "D",
+              "text": "serve"
+            },
+            {
+              "id": "E",
+              "text": "document"
+            },
+            {
+              "id": "F",
+              "text": "bench"
+            }
+          ],
+          "correct_answers": [
+            "F"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Một cái cây lớn với những chiếc lá vàng đang rơi lả tả xuống sân gạch.",
+          "sentence": "A bird built its nest on a branch of the ______.",
+          "word_box": [
+            "bicycle",
+            "sky",
+            "ladder",
+            "brick",
+            "money",
+            "tree"
+          ],
+          "answer": "tree",
+          "explanation": "Đáp án đúng là \"tree\". Dựa vào bối cảnh: Một cái cây lớn với những chiếc lá vàng đang rơi lả tả xuống sân gạch.",
+          "id": "w1_t4_e67",
+          "image_path": "images/writing_part1/tang4/w1_t4_e67.jpg",
+          "image_query": "large tree with yellow leaves falling",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=large%20tree%20with%20yellow%20leaves%20falling",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một cái cây lớn với những chiếc lá vàng đang rơi lả tả xuống sân gạch.",
+          "type": "multiple_choice",
+          "content": "A bird built its nest on a branch of the ______.",
+          "options": [
+            {
+              "id": "A",
+              "text": "sky"
+            },
+            {
+              "id": "B",
+              "text": "tree"
+            },
+            {
+              "id": "C",
+              "text": "bicycle"
+            },
+            {
+              "id": "D",
+              "text": "brick"
+            },
+            {
+              "id": "E",
+              "text": "ladder"
+            },
+            {
+              "id": "F",
+              "text": "money"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Người thợ máy đang lục lọi trong hộp đồ nghề bằng kim loại.",
+          "sentence": "A screwdriver is a useful ______ for this task.",
+          "word_box": [
+            "tool",
+            "path",
+            "wait",
+            "bicycle",
+            "type",
+            "copier"
+          ],
+          "answer": "tool",
+          "explanation": "Đáp án đúng là \"tool\". Dựa vào bối cảnh: Người thợ máy đang lục lọi trong hộp đồ nghề bằng kim loại.",
+          "id": "w1_t4_e57",
+          "image_path": "images/writing_part1/tang4/w1_t4_e57.jpg",
+          "image_query": "mechanic searching in metal tool box",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=mechanic%20searching%20in%20metal%20tool%20box",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Người thợ máy đang lục lọi trong hộp đồ nghề bằng kim loại.",
+          "type": "multiple_choice",
+          "content": "A screwdriver is a useful ______ for this task.",
+          "options": [
+            {
+              "id": "A",
+              "text": "path"
+            },
+            {
+              "id": "B",
+              "text": "bicycle"
+            },
+            {
+              "id": "C",
+              "text": "type"
+            },
+            {
+              "id": "D",
+              "text": "copier"
+            },
+            {
+              "id": "E",
+              "text": "wait"
+            },
+            {
+              "id": "F",
+              "text": "tool"
+            }
+          ],
+          "correct_answers": [
+            "F"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Người phụ nữ dùng khăn lau cẩn thận từng phím bấm trên bàn phím.",
+          "sentence": "A dusty ______ was found in the storage room.",
+          "word_box": [
+            "keyboard",
+            "serve",
+            "bench",
+            "document",
+            "rest",
+            "clerk"
+          ],
+          "answer": "keyboard",
+          "explanation": "Đáp án đúng là \"keyboard\". Dựa vào bối cảnh: Người phụ nữ dùng khăn lau cẩn thận từng phím bấm trên bàn phím.",
+          "id": "w1_t4_e52",
+          "image_path": "images/writing_part1/tang4/w1_t4_e52.jpg",
+          "image_query": "woman cleaning computer keyboard",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=woman%20cleaning%20computer%20keyboard",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Người phụ nữ dùng khăn lau cẩn thận từng phím bấm trên bàn phím.",
+          "type": "multiple_choice",
+          "content": "A dusty ______ was found in the storage room.",
+          "options": [
+            {
+              "id": "A",
+              "text": "rest"
+            },
+            {
+              "id": "B",
+              "text": "keyboard"
+            },
+            {
+              "id": "C",
+              "text": "serve"
+            },
+            {
+              "id": "D",
+              "text": "clerk"
+            },
+            {
+              "id": "E",
+              "text": "bench"
+            },
+            {
+              "id": "F",
+              "text": "document"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Chiếc xe đạp đua màu đỏ được dựng dựa vào một bức tường gạch cũ.",
+          "sentence": "A lock was used to secure the ______ to the fence.",
+          "word_box": [
+            "clerk",
+            "monitor",
+            "serve",
+            "bicycle",
+            "wait",
+            "type"
+          ],
+          "answer": "bicycle",
+          "explanation": "Đáp án đúng là \"bicycle\". Dựa vào bối cảnh: Chiếc xe đạp đua màu đỏ được dựng dựa vào một bức tường gạch cũ.",
+          "id": "w1_t4_e69",
+          "image_path": "images/writing_part1/tang4/w1_t4_e69.jpg",
+          "image_query": "red racing bicycle leaning against brick wall",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=red%20racing%20bicycle%20leaning%20against%20brick%20wall",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Chiếc xe đạp đua màu đỏ được dựng dựa vào một bức tường gạch cũ.",
+          "type": "multiple_choice",
+          "content": "A lock was used to secure the ______ to the fence.",
+          "options": [
+            {
+              "id": "A",
+              "text": "serve"
+            },
+            {
+              "id": "B",
+              "text": "bicycle"
+            },
+            {
+              "id": "C",
+              "text": "wait"
+            },
+            {
+              "id": "D",
+              "text": "clerk"
+            },
+            {
+              "id": "E",
+              "text": "monitor"
+            },
+            {
+              "id": "F",
+              "text": "type"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Hai công nhân môi trường đang dùng chổi quét lá trên lối đi lát đá.",
+          "sentence": "The narrow gravel ______ winds through the woods.",
+          "word_box": [
+            "path",
+            "hold",
+            "brick",
+            "ladder",
+            "run",
+            "copier"
+          ],
+          "answer": "path",
+          "explanation": "Đáp án đúng là \"path\". Dựa vào bối cảnh: Hai công nhân môi trường đang dùng chổi quét lá trên lối đi lát đá.",
+          "id": "w1_t4_e70",
+          "image_path": "images/writing_part1/tang4/w1_t4_e70.jpg",
+          "image_query": "cleaners sweeping leaves on paved path",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=cleaners%20sweeping%20leaves%20on%20paved%20path",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Hai công nhân môi trường đang dùng chổi quét lá trên lối đi lát đá.",
+          "type": "multiple_choice",
+          "content": "The narrow gravel ______ winds through the woods.",
+          "options": [
+            {
+              "id": "A",
+              "text": "brick"
+            },
+            {
+              "id": "B",
+              "text": "copier"
+            },
+            {
+              "id": "C",
+              "text": "hold"
+            },
+            {
+              "id": "D",
+              "text": "ladder"
+            },
+            {
+              "id": "E",
+              "text": "path"
+            },
+            {
+              "id": "F",
+              "text": "run"
+            }
+          ],
+          "correct_answers": [
+            "E"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Một nhóm công nhân đang cài quai mũ bảo hộ màu cam trước khi vào công trường.",
+          "sentence": "Wearing a protective ______ is crucial for head safety.",
+          "word_box": [
+            "helmet",
+            "clerk",
+            "sit",
+            "hold",
+            "bag",
+            "brick"
+          ],
+          "answer": "helmet",
+          "explanation": "Đáp án đúng là \"helmet\". Dựa vào bối cảnh: Một nhóm công nhân đang cài quai mũ bảo hộ màu cam trước khi vào công trường.",
+          "id": "w1_t4_e56",
+          "image_path": "images/writing_part1/tang4/w1_t4_e56.jpg",
+          "image_query": "workers wearing orange helmets at construction site",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=workers%20wearing%20orange%20helmets%20at%20construction%20site",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một nhóm công nhân đang cài quai mũ bảo hộ màu cam trước khi vào công trường.",
+          "type": "multiple_choice",
+          "content": "Wearing a protective ______ is crucial for head safety.",
+          "options": [
+            {
+              "id": "A",
+              "text": "helmet"
+            },
+            {
+              "id": "B",
+              "text": "brick"
+            },
+            {
+              "id": "C",
+              "text": "sit"
+            },
+            {
+              "id": "D",
+              "text": "hold"
+            },
+            {
+              "id": "E",
+              "text": "clerk"
+            },
+            {
+              "id": "F",
+              "text": "bag"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Cán bộ hải quan đang mở một vali lớn và kiểm tra các vật dụng bên trong.",
+          "sentence": "The custom officers will ______ the cargo box.",
+          "word_box": [
+            "path",
+            "brick",
+            "tree",
+            "push",
+            "helmet",
+            "examine"
+          ],
+          "answer": "examine",
+          "explanation": "Đáp án đúng là \"examine\". Dựa vào bối cảnh: Cán bộ hải quan đang mở một vali lớn và kiểm tra các vật dụng bên trong.",
+          "id": "w1_t4_e75",
+          "image_path": "images/writing_part1/tang4/w1_t4_e75.jpg",
+          "image_query": "customs officer examining large suitcase",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=customs%20officer%20examining%20large%20suitcase",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Cán bộ hải quan đang mở một vali lớn và kiểm tra các vật dụng bên trong.",
+          "type": "multiple_choice",
+          "content": "The custom officers will ______ the cargo box.",
+          "options": [
+            {
+              "id": "A",
+              "text": "examine"
+            },
+            {
+              "id": "B",
+              "text": "path"
+            },
+            {
+              "id": "C",
+              "text": "helmet"
+            },
+            {
+              "id": "D",
+              "text": "tree"
+            },
+            {
+              "id": "E",
+              "text": "brick"
+            },
+            {
+              "id": "F",
+              "text": "push"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Tấm bảng đen nhỏ đặt trên bàn ghi dòng chữ Special Menu với các món mới.",
+          "sentence": "There are several vegan options on the restaurant ______.",
+          "word_box": [
+            "menu",
+            "walk",
+            "bag",
+            "path",
+            "money",
+            "carry"
+          ],
+          "answer": "menu",
+          "explanation": "Đáp án đúng là \"menu\". Dựa vào bối cảnh: Tấm bảng đen nhỏ đặt trên bàn ghi dòng chữ Special Menu với các món mới.",
+          "id": "w1_t4_e64",
+          "image_path": "images/writing_part1/tang4/w1_t4_e64.jpg",
+          "image_query": "restaurant special menu on blackboard",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=restaurant%20special%20menu%20on%20blackboard",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Tấm bảng đen nhỏ đặt trên bàn ghi dòng chữ Special Menu với các món mới.",
+          "type": "multiple_choice",
+          "content": "There are several vegan options on the restaurant ______.",
+          "options": [
+            {
+              "id": "A",
+              "text": "carry"
+            },
+            {
+              "id": "B",
+              "text": "walk"
+            },
+            {
+              "id": "C",
+              "text": "bag"
+            },
+            {
+              "id": "D",
+              "text": "path"
+            },
+            {
+              "id": "E",
+              "text": "menu"
+            },
+            {
+              "id": "F",
+              "text": "money"
+            }
+          ],
+          "correct_answers": [
+            "E"
+          ]
+        },
+        {
+          "level": "Khó",
+          "context": "Bối cảnh: Một người thợ cầm cọ sơn đang vươn tay sơn trần nhà khi đứng trên thang.",
+          "sentence": "Be careful when climbing the wooden ______.",
+          "word_box": [
+            "copier",
+            "lift",
+            "brick",
+            "forklift",
+            "tool",
+            "ladder"
+          ],
+          "answer": "ladder",
+          "explanation": "Đáp án đúng là \"ladder\". Dựa vào bối cảnh: Một người thợ cầm cọ sơn đang vươn tay sơn trần nhà khi đứng trên thang.",
+          "id": "w1_t4_e58",
+          "image_path": "images/writing_part1/tang4/w1_t4_e58.jpg",
+          "image_query": "painter standing on ladder painting ceiling",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=painter%20standing%20on%20ladder%20painting%20ceiling",
+          "instruction": "Fill in the blank with the correct word.",
+          "image_context": "Bối cảnh: Một người thợ cầm cọ sơn đang vươn tay sơn trần nhà khi đứng trên thang.",
+          "type": "multiple_choice",
+          "content": "Be careful when climbing the wooden ______.",
+          "options": [
+            {
+              "id": "A",
+              "text": "copier"
+            },
+            {
+              "id": "B",
+              "text": "ladder"
+            },
+            {
+              "id": "C",
+              "text": "forklift"
+            },
+            {
+              "id": "D",
+              "text": "brick"
+            },
+            {
+              "id": "E",
+              "text": "lift"
+            },
+            {
+              "id": "F",
+              "text": "tool"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ]
+        }
+      ]
+    }
+  ]
+}

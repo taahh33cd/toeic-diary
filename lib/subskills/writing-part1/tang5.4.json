@@ -1,0 +1,1746 @@
+{
+  "level": 5,
+  "title": "TẦNG 5 – KỸ NĂNG ĐỌC ẢNH & MÔ TẢ (3 bước)",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "w1_t5_e06",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một giáo viên đang chiếu thông tin trên bảng cho học sinh.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "A teacher is sitting at the teacher's desk."
+            },
+            {
+              "id": "B",
+              "text": "A teacher is showing information on the board to the students."
+            },
+            {
+              "id": "C",
+              "text": "A teacher is erasing the chalkboard."
+            },
+            {
+              "id": "D",
+              "text": "A student is asking a question in the classroom."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Đáp án đúng là: A teacher is showing information on the board to the students.\nDịch nghĩa: Một giáo viên đang chiếu thông tin trên bảng cho học sinh.",
+          "image_query": "teacher pointing at board in classroom",
+          "image_path": "images/writing_part1/tang5/w1_t5_e06.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=teacher%20pointing%20at%20board%20in%20classroom"
+        },
+        {
+          "id": "w1_t5_e22",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một nhiếp ảnh gia động vật hoang dã đang chụp ảnh giữa những hàng cây trong rừng.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "A photographer is painting a picture in the forest."
+            },
+            {
+              "id": "B",
+              "text": "A photographer is recording a video in the city."
+            },
+            {
+              "id": "C",
+              "text": "A tourist is looking at pictures in the forest."
+            },
+            {
+              "id": "D",
+              "text": "A wildlife photographer is taking pictures among the forest trees."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Đáp án đúng là: A wildlife photographer is taking pictures among the forest trees.\nDịch nghĩa: Một nhiếp ảnh gia động vật hoang dã đang chụp ảnh giữa những hàng cây trong rừng.",
+          "image_query": "photographer taking pictures in forest",
+          "image_path": "images/writing_part1/tang5/w1_t5_e22.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=photographer%20taking%20pictures%20in%20forest"
+        },
+        {
+          "id": "w1_t5_e18",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một ca sĩ biểu diễn đang hát trước micro dưới ánh đèn sân khấu.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "A vocal performer is bowing on the stage."
+            },
+            {
+              "id": "B",
+              "text": "A vocal performer is playing a guitar on the stage."
+            },
+            {
+              "id": "C",
+              "text": "An audience is cheering near the stage."
+            },
+            {
+              "id": "D",
+              "text": "A vocal performer is singing into a microphone under the stage lights."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Đáp án đúng là: A vocal performer is singing into a microphone under the stage lights.\nDịch nghĩa: Một ca sĩ biểu diễn đang hát trước micro dưới ánh đèn sân khấu.",
+          "image_query": "singer singing on stage",
+          "image_path": "images/writing_part1/tang5/w1_t5_e18.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=singer%20singing%20on%20stage"
+        },
+        {
+          "id": "w1_t5_e13",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một người mua sắm ở siêu thị đang chọn nông sản tươi trong cửa hàng.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "A supermarket shopper is pushing a cart outside."
+            },
+            {
+              "id": "B",
+              "text": "A supermarket shopper is selecting fresh produce in the store."
+            },
+            {
+              "id": "C",
+              "text": "A supermarket shopper is paying at the cash register."
+            },
+            {
+              "id": "D",
+              "text": "A worker is stocking shelves in the grocery store."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Đáp án đúng là: A supermarket shopper is selecting fresh produce in the store.\nDịch nghĩa: Một người mua sắm ở siêu thị đang chọn nông sản tươi trong cửa hàng.",
+          "image_query": "woman buying fruits at supermarket",
+          "image_path": "images/writing_part1/tang5/w1_t5_e13.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=woman%20buying%20fruits%20at%20supermarket"
+        },
+        {
+          "id": "w1_t5_e04",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một đứa trẻ đang thả chiếc diều đầy màu sắc trên cỏ.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "An adult is flying a model airplane in the field."
+            },
+            {
+              "id": "B",
+              "text": "A young child is riding a bicycle in the park."
+            },
+            {
+              "id": "C",
+              "text": "A young child is sitting on the grass."
+            },
+            {
+              "id": "D",
+              "text": "A young child is flying his colorful kite on the grass."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Đáp án đúng là: A young child is flying his colorful kite on the grass.\nDịch nghĩa: Một đứa trẻ đang thả chiếc diều đầy màu sắc trên cỏ.",
+          "image_query": "boy flying kite in park",
+          "image_path": "images/writing_part1/tang5/w1_t5_e04.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=boy%20flying%20kite%20in%20park"
+        },
+        {
+          "id": "w1_t5_e19",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một nhân viên bảo vệ đang đứng gần lối đi chính của tòa nhà.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "A security guard is opening the door for guests."
+            },
+            {
+              "id": "B",
+              "text": "A visitor is waiting near the main entrance."
+            },
+            {
+              "id": "C",
+              "text": "A security guard is standing near the main doorway of the building."
+            },
+            {
+              "id": "D",
+              "text": "A security guard is sleeping near the entrance."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Đáp án đúng là: A security guard is standing near the main doorway of the building.\nDịch nghĩa: Một nhân viên bảo vệ đang đứng gần lối đi chính của tòa nhà.",
+          "image_query": "security guard standing at entrance",
+          "image_path": "images/writing_part1/tang5/w1_t5_e19.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=security%20guard%20standing%20at%20entrance"
+        },
+        {
+          "id": "w1_t5_e25",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một gia đình đi cắm trại đang dựng lều gần hồ.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "A single hiker is setting up a campsite near the lake."
+            },
+            {
+              "id": "B",
+              "text": "A camping family is setting up their tent near the lake."
+            },
+            {
+              "id": "C",
+              "text": "A camping family is fishing near the lake."
+            },
+            {
+              "id": "D",
+              "text": "A camping family is swimming in the lake."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Đáp án đúng là: A camping family is setting up their tent near the lake.\nDịch nghĩa: Một gia đình đi cắm trại đang dựng lều gần hồ.",
+          "image_query": "family camping near lake",
+          "image_path": "images/writing_part1/tang5/w1_t5_e25.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=family%20camping%20near%20lake"
+        },
+        {
+          "id": "w1_t5_e10",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một người thợ sơn đang quét một lớp sơn lên tường ngoài.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "A painter is painting a door inside the office."
+            },
+            {
+              "id": "B",
+              "text": "A painter is applying a layer of paint to the outer wall."
+            },
+            {
+              "id": "C",
+              "text": "A painter is washing the windows of the building."
+            },
+            {
+              "id": "D",
+              "text": "A woman is painting a wall in the garden."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Đáp án đúng là: A painter is applying a layer of paint to the outer wall.\nDịch nghĩa: Một người thợ sơn đang quét một lớp sơn lên tường ngoài.",
+          "image_query": "man painting wall outside house",
+          "image_path": "images/writing_part1/tang5/w1_t5_e10.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=man%20painting%20wall%20outside%20house"
+        },
+        {
+          "id": "w1_t5_e08",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một cặp đôi đang ăn tối tại một nhà hàng ấm cúng.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "A dining couple are paying the bill at the counter."
+            },
+            {
+              "id": "B",
+              "text": "A dining couple are cooking food in the kitchen."
+            },
+            {
+              "id": "C",
+              "text": "Two waiters are cleaning a restaurant table."
+            },
+            {
+              "id": "D",
+              "text": "A dining couple are eating their dinner at a cozy restaurant."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Đáp án đúng là: A dining couple are eating their dinner at a cozy restaurant.\nDịch nghĩa: Một cặp đôi đang ăn tối tại một nhà hàng ấm cúng.",
+          "image_query": "couple having dinner at restaurant",
+          "image_path": "images/writing_part1/tang5/w1_t5_e08.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=couple%20having%20dinner%20at%20restaurant"
+        },
+        {
+          "id": "w1_t5_e07",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một người đi bộ nữ đang dắt chó đi dạo trên bãi cát bờ biển.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "A female pedestrian is feeding her dog at home."
+            },
+            {
+              "id": "B",
+              "text": "A female pedestrian is walking her dog on the sandy beach."
+            },
+            {
+              "id": "C",
+              "text": "A female pedestrian is swimming in the ocean with her dog."
+            },
+            {
+              "id": "D",
+              "text": "An old man is walking along the beach."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Đáp án đúng là: A female pedestrian is walking her dog on the sandy beach.\nDịch nghĩa: Một người đi bộ nữ đang dắt chó đi dạo trên bãi cát bờ biển.",
+          "image_query": "girl walking dog along beach",
+          "image_path": "images/writing_part1/tang5/w1_t5_e07.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=girl%20walking%20dog%20along%20beach"
+        },
+        {
+          "id": "w1_t5_e24",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một vận động viên đang chạy đua trên đường chạy thể thao.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "An athlete is stretching on the track."
+            },
+            {
+              "id": "B",
+              "text": "An athlete is running a race on the sports track."
+            },
+            {
+              "id": "C",
+              "text": "A coach is sprinting on the track."
+            },
+            {
+              "id": "D",
+              "text": "An athlete is jumping over a hurdle on the track."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Đáp án đúng là: An athlete is running a race on the sports track.\nDịch nghĩa: Một vận động viên đang chạy đua trên đường chạy thể thao.",
+          "image_query": "athlete running on track",
+          "image_path": "images/writing_part1/tang5/w1_t5_e24.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=athlete%20running%20on%20track"
+        },
+        {
+          "id": "w1_t5_e14",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Những đứa trẻ đang vui đùa trên xích đu trong sân chơi.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Young kids are playing on the slide at the playground."
+            },
+            {
+              "id": "B",
+              "text": "Young kids are having fun on the swings in the playground."
+            },
+            {
+              "id": "C",
+              "text": "Young kids are eating lunch at the playground."
+            },
+            {
+              "id": "D",
+              "text": "Some parents are swinging at the playground."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Đáp án đúng là: Young kids are having fun on the swings in the playground.\nDịch nghĩa: Những đứa trẻ đang vui đùa trên xích đu trong sân chơi.",
+          "image_query": "two children playing on swings playground",
+          "image_path": "images/writing_part1/tang5/w1_t5_e14.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=two%20children%20playing%20on%20swings%20playground"
+        },
+        {
+          "id": "w1_t5_e05",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một thợ sửa xe ô tô đang sửa một chiếc xe đạp trong gara.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "An auto mechanic is washing a car in the garage."
+            },
+            {
+              "id": "B",
+              "text": "An auto mechanic is resting outside the garage."
+            },
+            {
+              "id": "C",
+              "text": "An auto mechanic is repairing a bicycle in the garage."
+            },
+            {
+              "id": "D",
+              "text": "A customer is buying a bicycle in the shop."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Đáp án đúng là: An auto mechanic is repairing a bicycle in the garage.\nDịch nghĩa: Một thợ sửa xe ô tô đang sửa một chiếc xe đạp trong gara.",
+          "image_query": "mechanic repairing bicycle in garage",
+          "image_path": "images/writing_part1/tang5/w1_t5_e05.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=mechanic%20repairing%20bicycle%20in%20garage"
+        },
+        {
+          "id": "w1_t5_e11",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Nhiều du khách đang đợi xe buýt tại trạm trung chuyển.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Many travelers are waiting for their bus at the transit shelter."
+            },
+            {
+              "id": "B",
+              "text": "A single commuter is running to catch the bus."
+            },
+            {
+              "id": "C",
+              "text": "Many travelers are sitting at the transit shelter."
+            },
+            {
+              "id": "D",
+              "text": "Many travelers are getting off the train."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Đáp án đúng là: Many travelers are waiting for their bus at the transit shelter.\nDịch nghĩa: Nhiều du khách đang đợi xe buýt tại trạm trung chuyển.",
+          "image_query": "passengers waiting at bus stop",
+          "image_path": "images/writing_part1/tang5/w1_t5_e11.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=passengers%20waiting%20at%20bus%20stop"
+        },
+        {
+          "id": "w1_t5_e03",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một người đàn ông và một người phụ nữ đang uống chung vài món đồ uống tại bàn cà phê ngoài trời.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "A man and a woman are walking past the cafe table."
+            },
+            {
+              "id": "B",
+              "text": "A man and a woman are ordering food inside a restaurant."
+            },
+            {
+              "id": "C",
+              "text": "A man and a woman are sharing some drinks at a cafe table outdoors."
+            },
+            {
+              "id": "D",
+              "text": "Two children are drinking juice at home."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Đáp án đúng là: A man and a woman are sharing some drinks at a cafe table outdoors.\nDịch nghĩa: Một người đàn ông và một người phụ nữ đang uống chung vài món đồ uống tại bàn cà phê ngoài trời.",
+          "image_query": "two people drinking coffee outdoor cafe",
+          "image_path": "images/writing_part1/tang5/w1_t5_e03.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=two%20people%20drinking%20coffee%20outdoor%20cafe"
+        },
+        {
+          "id": "w1_t5_e09",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một nhân viên đang bê một thùng các-tông nặng trong kho.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "An employee is opening a box in the storage area."
+            },
+            {
+              "id": "B",
+              "text": "A customer is carrying a bag out of the warehouse."
+            },
+            {
+              "id": "C",
+              "text": "An employee is carrying a heavy carton box in the storage area."
+            },
+            {
+              "id": "D",
+              "text": "An employee is resting on the boxes."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Đáp án đúng là: An employee is carrying a heavy carton box in the storage area.\nDịch nghĩa: Một nhân viên đang bê một thùng các-tông nặng trong kho.",
+          "image_query": "worker carrying box warehouse",
+          "image_path": "images/writing_part1/tang5/w1_t5_e09.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=worker%20carrying%20box%20warehouse"
+        },
+        {
+          "id": "w1_t5_e15",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một chủ nhà đang rửa chiếc xe ô tô sạch sẽ của mình ở trong sân.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "A woman is washing her car on the driveway."
+            },
+            {
+              "id": "B",
+              "text": "A homeowner is repairing his car in the garage."
+            },
+            {
+              "id": "C",
+              "text": "A homeowner is driving his car on the highway."
+            },
+            {
+              "id": "D",
+              "text": "A homeowner is washing his clean car in the yard."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Đáp án đúng là: A homeowner is washing his clean car in the yard.\nDịch nghĩa: Một chủ nhà đang rửa chiếc xe ô tô sạch sẽ của mình ở trong sân.",
+          "image_query": "man washing car on driveway",
+          "image_path": "images/writing_part1/tang5/w1_t5_e15.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=man%20washing%20car%20on%20driveway"
+        },
+        {
+          "id": "w1_t5_e12",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một chuyên gia y tế đang nói chuyện với bệnh nhân của mình trong phòng tư vấn.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "A medical professional is resting in the break room."
+            },
+            {
+              "id": "B",
+              "text": "A nurse is checking a patient's temperature."
+            },
+            {
+              "id": "C",
+              "text": "A medical professional is speaking with his patient in the consultation room."
+            },
+            {
+              "id": "D",
+              "text": "A medical professional is writing a prescription."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Đáp án đúng là: A medical professional is speaking with his patient in the consultation room.\nDịch nghĩa: Một chuyên gia y tế đang nói chuyện với bệnh nhân của mình trong phòng tư vấn.",
+          "image_query": "doctor talking to patient in clinic",
+          "image_path": "images/writing_part1/tang5/w1_t5_e12.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=doctor%20talking%20to%20patient%20in%20clinic"
+        },
+        {
+          "id": "w1_t5_e17",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một đầu bếp nhà hàng đang nấu súp nóng trong bếp.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "A restaurant chef is eating in the kitchen area."
+            },
+            {
+              "id": "B",
+              "text": "A restaurant chef is cleaning dishes in the kitchen."
+            },
+            {
+              "id": "C",
+              "text": "A waiter is serving soup in the dining area."
+            },
+            {
+              "id": "D",
+              "text": "A restaurant chef is cooking some hot soup in the kitchen."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Đáp án đúng là: A restaurant chef is cooking some hot soup in the kitchen.\nDịch nghĩa: Một đầu bếp nhà hàng đang nấu súp nóng trong bếp.",
+          "image_query": "chef cooking soup in kitchen",
+          "image_path": "images/writing_part1/tang5/w1_t5_e17.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=chef%20cooking%20soup%20in%20kitchen"
+        },
+        {
+          "id": "w1_t5_e16",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một sinh viên đại học đang gõ máy tính xách tay trong khu học tập của thư viện.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "A college student is typing on her laptop inside the library study area."
+            },
+            {
+              "id": "B",
+              "text": "A college student is sleeping in the library."
+            },
+            {
+              "id": "C",
+              "text": "A college student is reading a book in the library."
+            },
+            {
+              "id": "D",
+              "text": "A professor is lecturing in the library hall."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Đáp án đúng là: A college student is typing on her laptop inside the library study area.\nDịch nghĩa: Một sinh viên đại học đang gõ máy tính xách tay trong khu học tập của thư viện.",
+          "image_query": "student using laptop in library",
+          "image_path": "images/writing_part1/tang5/w1_t5_e16.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=student%20using%20laptop%20in%20library"
+        },
+        {
+          "id": "w1_t5_e02",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một nhân viên đang viết vào sổ kế hoạch của cô ấy tại bàn làm việc.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "A worker is writing in her planner at the workstation desk."
+            },
+            {
+              "id": "B",
+              "text": "A worker is organizing files in the cabinet."
+            },
+            {
+              "id": "C",
+              "text": "A worker is typing on a keyboard at her desk."
+            },
+            {
+              "id": "D",
+              "text": "A manager is writing in her planner at the table."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Đáp án đúng là: A worker is writing in her planner at the workstation desk.\nDịch nghĩa: Một nhân viên đang viết vào sổ kế hoạch của cô ấy tại bàn làm việc.",
+          "image_query": "woman writing in notebook at desk",
+          "image_path": "images/writing_part1/tang5/w1_t5_e02.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=woman%20writing%20in%20notebook%20at%20desk"
+        },
+        {
+          "id": "w1_t5_e20",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một người làm vườn đang tưới nước cho cây xanh ở trong sân.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "A gardener is watering the green plants in the yard."
+            },
+            {
+              "id": "B",
+              "text": "A gardener is cutting grass in the front yard."
+            },
+            {
+              "id": "C",
+              "text": "A gardener is harvesting vegetables."
+            },
+            {
+              "id": "D",
+              "text": "A homeowner is planting flowers in the backyard."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Đáp án đúng là: A gardener is watering the green plants in the yard.\nDịch nghĩa: Một người làm vườn đang tưới nước cho cây xanh ở trong sân.",
+          "image_query": "gardener watering plants in backyard",
+          "image_path": "images/writing_part1/tang5/w1_t5_e20.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=gardener%20watering%20plants%20in%20backyard"
+        },
+        {
+          "id": "w1_t5_e01",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một người đang đọc một cuốn sách bìa mềm trên một đoàn tàu đang chuyển động.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "An individual is reading a paperback on a moving train."
+            },
+            {
+              "id": "B",
+              "text": "An individual is buying a ticket at the station."
+            },
+            {
+              "id": "C",
+              "text": "An individual is sleeping on a moving train."
+            },
+            {
+              "id": "D",
+              "text": "A reporter is interviewing a passenger on the bus."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Đáp án đúng là: An individual is reading a paperback on a moving train.\nDịch nghĩa: Một người đang đọc một cuốn sách bìa mềm trên một đoàn tàu đang chuyển động.",
+          "image_query": "man reading book on train",
+          "image_path": "images/writing_part1/tang5/w1_t5_e01.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=man%20reading%20book%20on%20train"
+        },
+        {
+          "id": "w1_t5_e23",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một công nhân nông nghiệp đang thu hoạch lúa chín trên cánh đồng.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "A worker is watering plants in the greenhouse."
+            },
+            {
+              "id": "B",
+              "text": "An agricultural worker is harvesting ripe rice crops on the field."
+            },
+            {
+              "id": "C",
+              "text": "An agricultural worker is driving a tractor on the road."
+            },
+            {
+              "id": "D",
+              "text": "An agricultural worker is planting corn in the field."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Đáp án đúng là: An agricultural worker is harvesting ripe rice crops on the field.\nDịch nghĩa: Một công nhân nông nghiệp đang thu hoạch lúa chín trên cánh đồng.",
+          "image_query": "farmer harvesting rice in field",
+          "image_path": "images/writing_part1/tang5/w1_t5_e23.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=farmer%20harvesting%20rice%20in%20field"
+        },
+        {
+          "id": "w1_t5_e21",
+          "level": "Dễ",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu tiếng Anh mô tả đúng nhất về bức ảnh.",
+          "image_context": "Bối cảnh: Một tài xế taxi đang điều khiển một chiếc xe taxi màu vàng trong dòng xe cộ đông đúc trên đường.",
+          "content": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "A taxi driver is getting out of the vehicle."
+            },
+            {
+              "id": "B",
+              "text": "A taxi driver is stopping the vehicle in the traffic."
+            },
+            {
+              "id": "C",
+              "text": "A bus driver is honking the horn in the traffic."
+            },
+            {
+              "id": "D",
+              "text": "A taxi driver is operating a yellow cab in the heavy street traffic."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Đáp án đúng là: A taxi driver is operating a yellow cab in the heavy street traffic.\nDịch nghĩa: Một tài xế taxi đang điều khiển một chiếc xe taxi màu vàng trong dòng xe cộ đông đúc trên đường.",
+          "image_query": "driver driving taxi on busy street",
+          "image_path": "images/writing_part1/tang5/w1_t5_e21.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=driver%20driving%20taxi%20on%20busy%20street"
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "w1_t5_e28",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một quản gia khách sạn đang hút bụi trên sàn trải thảm ở hành lang.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A hotel housekeeper",
+            "2: is vacuuming the carpeted floor",
+            "3: in the hallway",
+            "Full: A hotel housekeeper is vacuuming the carpeted floor in the hallway."
+          ],
+          "explanation": "Dịch nghĩa: Một quản gia khách sạn đang hút bụi trên sàn trải thảm ở hành lang.\nQuy tắc: Ai (A hotel housekeeper) đang làm gì (is vacuuming the carpeted floor) ở đâu (in the hallway). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "cleaner vacuuming carpet in hotel",
+          "image_path": "images/writing_part1/tang5/w1_t5_e28.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=cleaner%20vacuuming%20carpet%20in%20hotel"
+        },
+        {
+          "id": "w1_t5_e40",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một phóng viên đang phỏng vấn một người dân ở góc đường.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A reporter",
+            "2: is interviewing a citizen",
+            "3: on the street corner",
+            "Full: A reporter is interviewing a citizen on the street corner."
+          ],
+          "explanation": "Dịch nghĩa: Một phóng viên đang phỏng vấn một người dân ở góc đường.\nQuy tắc: Ai (A reporter) đang làm gì (is interviewing a citizen) ở đâu (on the street corner). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "journalist interviewing citizen on street",
+          "image_path": "images/writing_part1/tang5/w1_t5_e40.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=journalist%20interviewing%20citizen%20on%20street"
+        },
+        {
+          "id": "w1_t5_e30",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một nhà nghiên cứu đang nhìn qua kính hiển vi trong phòng thí nghiệm khoa học.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A researcher",
+            "2: is looking through a microscope",
+            "3: in the science laboratory",
+            "Full: A researcher is looking through a microscope in the science laboratory."
+          ],
+          "explanation": "Dịch nghĩa: Một nhà nghiên cứu đang nhìn qua kính hiển vi trong phòng thí nghiệm khoa học.\nQuy tắc: Ai (A researcher) đang làm gì (is looking through a microscope) ở đâu (in the science laboratory). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "scientist looking through microscope in laboratory",
+          "image_path": "images/writing_part1/tang5/w1_t5_e30.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=scientist%20looking%20through%20microscope%20in%20laboratory"
+        },
+        {
+          "id": "w1_t5_e39",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một thợ điện đang sửa chữa hệ thống dây điện trên trần nhà cao.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: An electrician",
+            "2: is fixing the wiring",
+            "3: on the high ceiling",
+            "Full: An electrician is fixing the wiring on the high ceiling."
+          ],
+          "explanation": "Dịch nghĩa: Một thợ điện đang sửa chữa hệ thống dây điện trên trần nhà cao.\nQuy tắc: Ai (An electrician) đang làm gì (is fixing the wiring) ở đâu (on the high ceiling). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "electrician repairing wires on ceiling",
+          "image_path": "images/writing_part1/tang5/w1_t5_e39.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=electrician%20repairing%20wires%20on%20ceiling"
+        },
+        {
+          "id": "w1_t5_e45",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một nhân viên giao hàng đang để lại một gói hàng trên hiên nhà trước.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A delivery courier",
+            "2: is leaving a package",
+            "3: on the front porch",
+            "Full: A delivery courier is leaving a package on the front porch."
+          ],
+          "explanation": "Dịch nghĩa: Một nhân viên giao hàng đang để lại một gói hàng trên hiên nhà trước.\nQuy tắc: Ai (A delivery courier) đang làm gì (is leaving a package) ở đâu (on the front porch). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "delivery person bringing package to front door",
+          "image_path": "images/writing_part1/tang5/w1_t5_e45.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=delivery%20person%20bringing%20package%20to%20front%20door"
+        },
+        {
+          "id": "w1_t5_e44",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một nha sĩ đang kiểm tra răng của bệnh nhân trong phòng làm việc.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A dentist",
+            "2: is examining a patient's teeth",
+            "3: in the office",
+            "Full: A dentist is examining a patient's teeth in the office."
+          ],
+          "explanation": "Dịch nghĩa: Một nha sĩ đang kiểm tra răng của bệnh nhân trong phòng làm việc.\nQuy tắc: Ai (A dentist) đang làm gì (is examining a patient's teeth) ở đâu (in the office). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "dentist examining patient teeth in clinic",
+          "image_path": "images/writing_part1/tang5/w1_t5_e44.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=dentist%20examining%20patient%20teeth%20in%20clinic"
+        },
+        {
+          "id": "w1_t5_e47",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một thợ sửa ống nước đang sửa một đường ống dưới bồn rửa phòng tắm.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A plumber",
+            "2: is repairing a pipe",
+            "3: under the bathroom sink",
+            "Full: A plumber is repairing a pipe under the bathroom sink."
+          ],
+          "explanation": "Dịch nghĩa: Một thợ sửa ống nước đang sửa một đường ống dưới bồn rửa phòng tắm.\nQuy tắc: Ai (A plumber) đang làm gì (is repairing a pipe) ở đâu (under the bathroom sink). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "plumber fixing sink in bathroom",
+          "image_path": "images/writing_part1/tang5/w1_t5_e47.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=plumber%20fixing%20sink%20in%20bathroom"
+        },
+        {
+          "id": "w1_t5_e36",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một kiến trúc sư dự án đang kiểm tra các bản vẽ tại công trường xây dựng.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A project architect",
+            "2: is checking the blueprints",
+            "3: at the construction site",
+            "Full: A project architect is checking the blueprints at the construction site."
+          ],
+          "explanation": "Dịch nghĩa: Một kiến trúc sư dự án đang kiểm tra các bản vẽ tại công trường xây dựng.\nQuy tắc: Ai (A project architect) đang làm gì (is checking the blueprints) ở đâu (at the construction site). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "architect reviewing blueprints at construction site",
+          "image_path": "images/writing_part1/tang5/w1_t5_e36.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=architect%20reviewing%20blueprints%20at%20construction%20site"
+        },
+        {
+          "id": "w1_t5_e43",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một tiếp viên hàng không đang phục vụ đồ ăn nhẹ cho hành khách.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A flight attendant",
+            "2: is serving refreshments",
+            "3: to the passengers",
+            "Full: A flight attendant is serving refreshments to the passengers."
+          ],
+          "explanation": "Dịch nghĩa: Một tiếp viên hàng không đang phục vụ đồ ăn nhẹ cho hành khách.\nQuy tắc: Ai (A flight attendant) đang làm gì (is serving refreshments) ở đâu (to the passengers). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "flight attendant serving drinks on airplane",
+          "image_path": "images/writing_part1/tang5/w1_t5_e43.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=flight%20attendant%20serving%20drinks%20on%20airplane"
+        },
+        {
+          "id": "w1_t5_e42",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một thợ mộc đang cắt một miếng gỗ bằng cưa của mình.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A carpenter",
+            "2: is cutting a piece of wood",
+            "3: with his saw",
+            "Full: A carpenter is cutting a piece of wood with his saw."
+          ],
+          "explanation": "Dịch nghĩa: Một thợ mộc đang cắt một miếng gỗ bằng cưa của mình.\nQuy tắc: Ai (A carpenter) đang làm gì (is cutting a piece of wood) ở đâu (with his saw). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "carpenter sawing piece of wood in workshop",
+          "image_path": "images/writing_part1/tang5/w1_t5_e42.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=carpenter%20sawing%20piece%20of%20wood%20in%20workshop"
+        },
+        {
+          "id": "w1_t5_e38",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một thợ làm bánh đang trang trí một chiếc bánh kem theo yêu cầu trong bếp.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A baker",
+            "2: is decorating a custom cake",
+            "3: in the kitchen",
+            "Full: A baker is decorating a custom cake in the kitchen."
+          ],
+          "explanation": "Dịch nghĩa: Một thợ làm bánh đang trang trí một chiếc bánh kem theo yêu cầu trong bếp.\nQuy tắc: Ai (A baker) đang làm gì (is decorating a custom cake) ở đâu (in the kitchen). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "baker decorating cake in bakery",
+          "image_path": "images/writing_part1/tang5/w1_t5_e38.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=baker%20decorating%20cake%20in%20bakery"
+        },
+        {
+          "id": "w1_t5_e31",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một người phục vụ nhà hàng đang rót nước uống vào ly.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A restaurant server",
+            "2: is pouring drinking water",
+            "3: into a glass",
+            "Full: A restaurant server is pouring drinking water into a glass."
+          ],
+          "explanation": "Dịch nghĩa: Một người phục vụ nhà hàng đang rót nước uống vào ly.\nQuy tắc: Ai (A restaurant server) đang làm gì (is pouring drinking water) ở đâu (into a glass). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "waiter pouring water into glass at restaurant",
+          "image_path": "images/writing_part1/tang5/w1_t5_e31.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=waiter%20pouring%20water%20into%20glass%20at%20restaurant"
+        },
+        {
+          "id": "w1_t5_e26",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một nhân viên cửa hàng đang gấp áo sơ mi tại quầy trưng bày.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A store clerk",
+            "2: is folding shirts",
+            "3: at the display counter",
+            "Full: A store clerk is folding shirts at the display counter."
+          ],
+          "explanation": "Dịch nghĩa: Một nhân viên cửa hàng đang gấp áo sơ mi tại quầy trưng bày.\nQuy tắc: Ai (A store clerk) đang làm gì (is folding shirts) ở đâu (at the display counter). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "salesperson folding clothes in store",
+          "image_path": "images/writing_part1/tang5/w1_t5_e26.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=salesperson%20folding%20clothes%20in%20store"
+        },
+        {
+          "id": "w1_t5_e32",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một họa sĩ địa phương đang vẽ một bức chân dung trong studio.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A local artist",
+            "2: is working on a portrait",
+            "3: in the studio",
+            "Full: A local artist is working on a portrait in the studio."
+          ],
+          "explanation": "Dịch nghĩa: Một họa sĩ địa phương đang vẽ một bức chân dung trong studio.\nQuy tắc: Ai (A local artist) đang làm gì (is working on a portrait) ở đâu (in the studio). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "artist painting portrait in studio",
+          "image_path": "images/writing_part1/tang5/w1_t5_e32.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=artist%20painting%20portrait%20in%20studio"
+        },
+        {
+          "id": "w1_t5_e50",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một quản lý đang trình bày dữ liệu trong phòng họp.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A manager",
+            "2: is presenting data",
+            "3: in the meeting room",
+            "Full: A manager is presenting data in the meeting room."
+          ],
+          "explanation": "Dịch nghĩa: Một quản lý đang trình bày dữ liệu trong phòng họp.\nQuy tắc: Ai (A manager) đang làm gì (is presenting data) ở đâu (in the meeting room). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "manager giving speech in meeting at office",
+          "image_path": "images/writing_part1/tang5/w1_t5_e50.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=manager%20giving%20speech%20in%20meeting%20at%20office"
+        },
+        {
+          "id": "w1_t5_e27",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một phi công lái máy bay đang ngồi trong khoang lái của máy bay.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: An aircraft pilot",
+            "2: is sitting in the cockpit",
+            "3: of the airplane",
+            "Full: An aircraft pilot is sitting in the cockpit of the airplane."
+          ],
+          "explanation": "Dịch nghĩa: Một phi công lái máy bay đang ngồi trong khoang lái của máy bay.\nQuy tắc: Ai (An aircraft pilot) đang làm gì (is sitting in the cockpit) ở đâu (of the airplane). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "pilot sitting in cockpit",
+          "image_path": "images/writing_part1/tang5/w1_t5_e27.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=pilot%20sitting%20in%20cockpit"
+        },
+        {
+          "id": "w1_t5_e34",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một thợ cắt tóc đang cắt tóc cho khách hàng trong cửa tiệm.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A barber",
+            "2: is cutting a customer's hair",
+            "3: in the shop",
+            "Full: A barber is cutting a customer's hair in the shop."
+          ],
+          "explanation": "Dịch nghĩa: Một thợ cắt tóc đang cắt tóc cho khách hàng trong cửa tiệm.\nQuy tắc: Ai (A barber) đang làm gì (is cutting a customer's hair) ở đâu (in the shop). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "barber cutting customer hair in salon",
+          "image_path": "images/writing_part1/tang5/w1_t5_e34.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=barber%20cutting%20customer%20hair%20in%20salon"
+        },
+        {
+          "id": "w1_t5_e48",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một người đưa thư đang phát các lá thư vào hộp thư.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A mail carrier",
+            "2: is delivering letters",
+            "3: to the mailbox",
+            "Full: A mail carrier is delivering letters to the mailbox."
+          ],
+          "explanation": "Dịch nghĩa: Một người đưa thư đang phát các lá thư vào hộp thư.\nQuy tắc: Ai (A mail carrier) đang làm gì (is delivering letters) ở đâu (to the mailbox). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "mail carrier putting mail into mailbox",
+          "image_path": "images/writing_part1/tang5/w1_t5_e48.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=mail%20carrier%20putting%20mail%20into%20mailbox"
+        },
+        {
+          "id": "w1_t5_e33",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một lính cứu hỏa đang dập tắt đám cháy trong tòa nhà.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A firefighter",
+            "2: is extinguishing a fire",
+            "3: in the building",
+            "Full: A firefighter is extinguishing a fire in the building."
+          ],
+          "explanation": "Dịch nghĩa: Một lính cứu hỏa đang dập tắt đám cháy trong tòa nhà.\nQuy tắc: Ai (A firefighter) đang làm gì (is extinguishing a fire) ở đâu (in the building). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "firefighter putting out fire in building",
+          "image_path": "images/writing_part1/tang5/w1_t5_e33.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=firefighter%20putting%20out%20fire%20in%20building"
+        },
+        {
+          "id": "w1_t5_e41",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một hướng dẫn viên bảo tàng đang nói về lịch sử cho nhóm khách du lịch.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A museum guide",
+            "2: is talking about the history",
+            "3: to the tour group",
+            "Full: A museum guide is talking about the history to the tour group."
+          ],
+          "explanation": "Dịch nghĩa: Một hướng dẫn viên bảo tàng đang nói về lịch sử cho nhóm khách du lịch.\nQuy tắc: Ai (A museum guide) đang làm gì (is talking about the history) ở đâu (to the tour group). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "tour guide leading tourists through museum",
+          "image_path": "images/writing_part1/tang5/w1_t5_e41.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=tour%20guide%20leading%20tourists%20through%20museum"
+        },
+        {
+          "id": "w1_t5_e29",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một nghệ sĩ đường phố đang chơi ghi-ta acoustic trên vỉa hè.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A street musician",
+            "2: is playing an acoustic guitar",
+            "3: on the pavement",
+            "Full: A street musician is playing an acoustic guitar on the pavement."
+          ],
+          "explanation": "Dịch nghĩa: Một nghệ sĩ đường phố đang chơi ghi-ta acoustic trên vỉa hè.\nQuy tắc: Ai (A street musician) đang làm gì (is playing an acoustic guitar) ở đâu (on the pavement). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "musician playing guitar on street",
+          "image_path": "images/writing_part1/tang5/w1_t5_e29.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=musician%20playing%20guitar%20on%20street"
+        },
+        {
+          "id": "w1_t5_e49",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một thủ thư đang xếp sách lên kệ trong thư viện.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A librarian",
+            "2: is putting books on the shelves",
+            "3: in the library",
+            "Full: A librarian is putting books on the shelves in the library."
+          ],
+          "explanation": "Dịch nghĩa: Một thủ thư đang xếp sách lên kệ trong thư viện.\nQuy tắc: Ai (A librarian) đang làm gì (is putting books on the shelves) ở đâu (in the library). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "librarian arranging books on shelves in library",
+          "image_path": "images/writing_part1/tang5/w1_t5_e49.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=librarian%20arranging%20books%20on%20shelves%20in%20library"
+        },
+        {
+          "id": "w1_t5_e35",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một cảnh sát giao thông đang điều khiển xe cộ tại ngã tư.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A traffic officer",
+            "2: is directing cars",
+            "3: at the intersection",
+            "Full: A traffic officer is directing cars at the intersection."
+          ],
+          "explanation": "Dịch nghĩa: Một cảnh sát giao thông đang điều khiển xe cộ tại ngã tư.\nQuy tắc: Ai (A traffic officer) đang làm gì (is directing cars) ở đâu (at the intersection). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "police officer directing traffic at intersection",
+          "image_path": "images/writing_part1/tang5/w1_t5_e35.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=police%20officer%20directing%20traffic%20at%20intersection"
+        },
+        {
+          "id": "w1_t5_e46",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một thợ may đang khâu vải tại máy may.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A dressmaker",
+            "2: is stitching some fabric",
+            "3: at the sewing machine",
+            "Full: A dressmaker is stitching some fabric at the sewing machine."
+          ],
+          "explanation": "Dịch nghĩa: Một thợ may đang khâu vải tại máy may.\nQuy tắc: Ai (A dressmaker) đang làm gì (is stitching some fabric) ở đâu (at the sewing machine). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "tailor sewing dress in tailor shop",
+          "image_path": "images/writing_part1/tang5/w1_t5_e46.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=tailor%20sewing%20dress%20in%20tailor%20shop"
+        },
+        {
+          "id": "w1_t5_e37",
+          "level": "Trung bình",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một nhân viên nhà thuốc đang đưa một chai thuốc cho khách hàng.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A drugstore employee",
+            "2: is handing a bottle of medicine",
+            "3: to the client",
+            "Full: A drugstore employee is handing a bottle of medicine to the client."
+          ],
+          "explanation": "Dịch nghĩa: Một nhân viên nhà thuốc đang đưa một chai thuốc cho khách hàng.\nQuy tắc: Ai (A drugstore employee) đang làm gì (is handing a bottle of medicine) ở đâu (to the client). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "pharmacist handing medicine to customer at pharmacy",
+          "image_path": "images/writing_part1/tang5/w1_t5_e37.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=pharmacist%20handing%20medicine%20to%20customer%20at%20pharmacy"
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "w1_t5_e74",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Các chuyên gia phục chế đang làm sạch một bức tranh sơn dầu cổ trong bảo tàng.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: Restoration experts",
+            "2: are cleaning an old oil painting",
+            "3: in the museum",
+            "Full: Restoration experts are cleaning an old oil painting in the museum."
+          ],
+          "explanation": "Dịch nghĩa: Các chuyên gia phục chế đang làm sạch một bức tranh sơn dầu cổ trong bảo tàng.\nQuy tắc: Ai (Restoration experts) đang làm gì (are cleaning an old oil painting) ở đâu (in the museum). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "restoration experts cleaning oil painting museum",
+          "image_path": "images/writing_part1/tang5/w1_t5_e74.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=restoration%20experts%20cleaning%20oil%20painting%20museum"
+        },
+        {
+          "id": "w1_t5_e52",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một thợ cơ khí đang sử dụng cờ lê dưới gầm xe tải.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A mechanic",
+            "2: is using a wrench",
+            "3: under the truck chassis",
+            "Full: A mechanic is using a wrench under the truck chassis."
+          ],
+          "explanation": "Dịch nghĩa: Một thợ cơ khí đang sử dụng cờ lê dưới gầm xe tải.\nQuy tắc: Ai (A mechanic) đang làm gì (is using a wrench) ở đâu (under the truck chassis). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "mechanic using wrench to loosen nut under truck",
+          "image_path": "images/writing_part1/tang5/w1_t5_e52.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=mechanic%20using%20wrench%20to%20loosen%20nut%20under%20truck"
+        },
+        {
+          "id": "w1_t5_e72",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một huấn luyện viên trượt tuyết đang chỉ các kỹ thuật thăng bằng trên sườn tuyết.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A ski coach",
+            "2: is showing balance techniques",
+            "3: on the snow slope",
+            "Full: A ski coach is showing balance techniques on the snow slope."
+          ],
+          "explanation": "Dịch nghĩa: Một huấn luyện viên trượt tuyết đang chỉ các kỹ thuật thăng bằng trên sườn tuyết.\nQuy tắc: Ai (A ski coach) đang làm gì (is showing balance techniques) ở đâu (on the snow slope). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "ski instructor showing beginners balance snow slope",
+          "image_path": "images/writing_part1/tang5/w1_t5_e72.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=ski%20instructor%20showing%20beginners%20balance%20snow%20slope"
+        },
+        {
+          "id": "w1_t5_e64",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Những người thu hoạch đang hái nho chín trên đồi vườn nho.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: Harvesters",
+            "2: are picking ripe grapes",
+            "3: on the vineyard hill",
+            "Full: Harvesters are picking ripe grapes on the vineyard hill."
+          ],
+          "explanation": "Dịch nghĩa: Những người thu hoạch đang hái nho chín trên đồi vườn nho.\nQuy tắc: Ai (Harvesters) đang làm gì (are picking ripe grapes) ở đâu (on the vineyard hill). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "harvesters picking ripe grapes hillside",
+          "image_path": "images/writing_part1/tang5/w1_t5_e64.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=harvesters%20picking%20ripe%20grapes%20hillside"
+        },
+        {
+          "id": "w1_t5_e66",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một huấn luyện viên khiêu vũ đang hướng dẫn các vũ công trong phòng tập.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A dance instructor",
+            "2: is coaching the dancers",
+            "3: in the studio room",
+            "Full: A dance instructor is coaching the dancers in the studio room."
+          ],
+          "explanation": "Dịch nghĩa: Một huấn luyện viên khiêu vũ đang hướng dẫn các vũ công trong phòng tập.\nQuy tắc: Ai (A dance instructor) đang làm gì (is coaching the dancers) ở đâu (in the studio room). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "choreographer instructing dancers rehearsal studio",
+          "image_path": "images/writing_part1/tang5/w1_t5_e66.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=choreographer%20instructing%20dancers%20rehearsal%20studio"
+        },
+        {
+          "id": "w1_t5_e69",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Các nhà nghiên cứu đang lấy các mẫu nước từ dòng sông bị ô nhiễm.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: Researchers",
+            "2: are collecting water samples",
+            "3: from the polluted river",
+            "Full: Researchers are collecting water samples from the polluted river."
+          ],
+          "explanation": "Dịch nghĩa: Các nhà nghiên cứu đang lấy các mẫu nước từ dòng sông bị ô nhiễm.\nQuy tắc: Ai (Researchers) đang làm gì (are collecting water samples) ở đâu (from the polluted river). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "researchers collecting water samples polluted river",
+          "image_path": "images/writing_part1/tang5/w1_t5_e69.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=researchers%20collecting%20water%20samples%20polluted%20river"
+        },
+        {
+          "id": "w1_t5_e57",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một người cắt tỉa cây đang cắt các cành khô trên cây cổ thụ.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A tree trimmer",
+            "2: is cutting dry branches",
+            "3: on the ancient tree",
+            "Full: A tree trimmer is cutting dry branches on the ancient tree."
+          ],
+          "explanation": "Dịch nghĩa: Một người cắt tỉa cây đang cắt các cành khô trên cây cổ thụ.\nQuy tắc: Ai (A tree trimmer) đang làm gì (is cutting dry branches) ở đâu (on the ancient tree). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "gardener pruning dry branches ancient tree villa",
+          "image_path": "images/writing_part1/tang5/w1_t5_e57.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=gardener%20pruning%20dry%20branches%20ancient%20tree%20villa"
+        },
+        {
+          "id": "w1_t5_e65",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Các kỹ thuật viên lắp đặt đang lắp ráp các tấm pin năng lượng mặt trời trên mái nhà.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: Installation technicians",
+            "2: are assembling solar panels",
+            "3: on the roof",
+            "Full: Installation technicians are assembling solar panels on the roof."
+          ],
+          "explanation": "Dịch nghĩa: Các kỹ thuật viên lắp đặt đang lắp ráp các tấm pin năng lượng mặt trời trên mái nhà.\nQuy tắc: Ai (Installation technicians) đang làm gì (are assembling solar panels) ở đâu (on the roof). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "engineers assembling solar panel roof building",
+          "image_path": "images/writing_part1/tang5/w1_t5_e65.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=engineers%20assembling%20solar%20panel%20roof%20building"
+        },
+        {
+          "id": "w1_t5_e63",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một bác sĩ phẫu thuật đang tiến hành một ca phẫu thuật phức tạp trong phòng sáng rực.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A surgeon",
+            "2: is performing a complex operation",
+            "3: in the brightly lit room",
+            "Full: A surgeon is performing a complex operation in the brightly lit room."
+          ],
+          "explanation": "Dịch nghĩa: Một bác sĩ phẫu thuật đang tiến hành một ca phẫu thuật phức tạp trong phòng sáng rực.\nQuy tắc: Ai (A surgeon) đang làm gì (is performing a complex operation) ở đâu (in the brightly lit room). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "surgeon performing complex surgery operating room",
+          "image_path": "images/writing_part1/tang5/w1_t5_e63.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=surgeon%20performing%20complex%20surgery%20operating%20room"
+        },
+        {
+          "id": "w1_t5_e56",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Học sinh đang ghi chép trong suốt buổi học ở hội trường.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: Students",
+            "2: are taking notes",
+            "3: during the lecture in the hall",
+            "Full: Students are taking notes during the lecture in the hall."
+          ],
+          "explanation": "Dịch nghĩa: Học sinh đang ghi chép trong suốt buổi học ở hội trường.\nQuy tắc: Ai (Students) đang làm gì (are taking notes) ở đâu (during the lecture in the hall). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "students taking notes listening teacher lecture hall",
+          "image_path": "images/writing_part1/tang5/w1_t5_e56.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=students%20taking%20notes%20listening%20teacher%20lecture%20hall"
+        },
+        {
+          "id": "w1_t5_e61",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một thợ thủ công làm gốm đang tạo hình đất sét trên bàn xoay.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A pottery craftsman",
+            "2: is shaping clay",
+            "3: on the rotating wheel",
+            "Full: A pottery craftsman is shaping clay on the rotating wheel."
+          ],
+          "explanation": "Dịch nghĩa: Một thợ thủ công làm gốm đang tạo hình đất sét trên bàn xoay.\nQuy tắc: Ai (A pottery craftsman) đang làm gì (is shaping clay) ở đâu (on the rotating wheel). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "artisan using pottery wheel shape clay vase workshop",
+          "image_path": "images/writing_part1/tang5/w1_t5_e61.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=artisan%20using%20pottery%20wheel%20shape%20clay%20vase%20workshop"
+        },
+        {
+          "id": "w1_t5_e51",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một vài hành khách đang đặt hành lý của họ lên băng chuyền an ninh.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: Several travelers",
+            "2: are putting their luggage",
+            "3: onto the security conveyor",
+            "Full: Several travelers are putting their luggage onto the security conveyor."
+          ],
+          "explanation": "Dịch nghĩa: Một vài hành khách đang đặt hành lý của họ lên băng chuyền an ninh.\nQuy tắc: Ai (Several travelers) đang làm gì (are putting their luggage) ở đâu (onto the security conveyor). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "passengers moving luggage through security checkpoint at airport",
+          "image_path": "images/writing_part1/tang5/w1_t5_e51.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=passengers%20moving%20luggage%20through%20security%20checkpoint%20at%20airport"
+        },
+        {
+          "id": "w1_t5_e55",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Các công nhân xây dựng đang đổ bê tông ướt để làm nền móng mới.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: Construction workers",
+            "2: are pouring wet concrete",
+            "3: for the new foundation",
+            "Full: Construction workers are pouring wet concrete for the new foundation."
+          ],
+          "explanation": "Dịch nghĩa: Các công nhân xây dựng đang đổ bê tông ướt để làm nền móng mới.\nQuy tắc: Ai (Construction workers) đang làm gì (are pouring wet concrete) ở đâu (for the new foundation). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "construction workers pouring concrete foundation high-rise building",
+          "image_path": "images/writing_part1/tang5/w1_t5_e55.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=construction%20workers%20pouring%20concrete%20foundation%20high-rise%20building"
+        },
+        {
+          "id": "w1_t5_e62",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một nhiếp ảnh gia ngoài trời đang thiết lập máy ảnh trong lúc hoàng hôn.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: An outdoor photographer",
+            "2: is setting up a camera",
+            "3: during the sunset",
+            "Full: An outdoor photographer is setting up a camera during the sunset."
+          ],
+          "explanation": "Dịch nghĩa: Một nhiếp ảnh gia ngoài trời đang thiết lập máy ảnh trong lúc hoàng hôn.\nQuy tắc: Ai (An outdoor photographer) đang làm gì (is setting up a camera) ở đâu (during the sunset). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "photographer adjusting lens large camera sunset",
+          "image_path": "images/writing_part1/tang5/w1_t5_e62.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=photographer%20adjusting%20lens%20large%20camera%20sunset"
+        },
+        {
+          "id": "w1_t5_e58",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một người thợ kim hoàn đang đặt những viên kim cương nhỏ lên một chiếc nhẫn vàng.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A jeweler",
+            "2: is placing small diamonds",
+            "3: onto a gold ring",
+            "Full: A jeweler is placing small diamonds onto a gold ring."
+          ],
+          "explanation": "Dịch nghĩa: Một người thợ kim hoàn đang đặt những viên kim cương nhỏ lên một chiếc nhẫn vàng.\nQuy tắc: Ai (A jeweler) đang làm gì (is placing small diamonds) ở đâu (onto a gold ring). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "jeweler attaching diamonds gold ring workshop",
+          "image_path": "images/writing_part1/tang5/w1_t5_e58.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=jeweler%20attaching%20diamonds%20gold%20ring%20workshop"
+        },
+        {
+          "id": "w1_t5_e67",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một nhà thiên văn học đang nhìn qua một chiếc kính viễn vọng khổng lồ trên đỉnh núi.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: An astronomer",
+            "2: is looking through a giant telescope",
+            "3: on the mountain peak",
+            "Full: An astronomer is looking through a giant telescope on the mountain peak."
+          ],
+          "explanation": "Dịch nghĩa: Một nhà thiên văn học đang nhìn qua một chiếc kính viễn vọng khổng lồ trên đỉnh núi.\nQuy tắc: Ai (An astronomer) đang làm gì (is looking through a giant telescope) ở đâu (on the mountain peak). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "astronomer observing stars telescope mountain peak",
+          "image_path": "images/writing_part1/tang5/w1_t5_e67.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=astronomer%20observing%20stars%20telescope%20mountain%20peak"
+        },
+        {
+          "id": "w1_t5_e54",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một phụ nữ lớn tuổi đang đi bộ chậm rãi qua vạch đi bộ sang đường.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: An elderly lady",
+            "2: is walking slowly",
+            "3: across the pedestrian crosswalk",
+            "Full: An elderly lady is walking slowly across the pedestrian crosswalk."
+          ],
+          "explanation": "Dịch nghĩa: Một phụ nữ lớn tuổi đang đi bộ chậm rãi qua vạch đi bộ sang đường.\nQuy tắc: Ai (An elderly lady) đang làm gì (is walking slowly) ở đâu (across the pedestrian crosswalk). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "elderly woman crossing busy road at crosswalk",
+          "image_path": "images/writing_part1/tang5/w1_t5_e54.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=elderly%20woman%20crossing%20busy%20road%20at%20crosswalk"
+        },
+        {
+          "id": "w1_t5_e73",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Những người leo núi đang leo lên một vách đá dựng đứng bằng dây thừng.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: Climbers",
+            "2: are scaling a steep rock face",
+            "3: with ropes",
+            "Full: Climbers are scaling a steep rock face with ropes."
+          ],
+          "explanation": "Dịch nghĩa: Những người leo núi đang leo lên một vách đá dựng đứng bằng dây thừng.\nQuy tắc: Ai (Climbers) đang làm gì (are scaling a steep rock face) ở đâu (with ropes). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "climbers clinging steep cliff using ropes",
+          "image_path": "images/writing_part1/tang5/w1_t5_e73.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=climbers%20clinging%20steep%20cliff%20using%20ropes"
+        },
+        {
+          "id": "w1_t5_e53",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Các đồng nghiệp kinh doanh đang thảo luận về biểu đồ bán hàng trên màn hình chiếu.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: Business colleagues",
+            "2: are discussing a sales chart",
+            "3: on the projection screen",
+            "Full: Business colleagues are discussing a sales chart on the projection screen."
+          ],
+          "explanation": "Dịch nghĩa: Các đồng nghiệp kinh doanh đang thảo luận về biểu đồ bán hàng trên màn hình chiếu.\nQuy tắc: Ai (Business colleagues) đang làm gì (are discussing a sales chart) ở đâu (on the projection screen). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "colleagues discussing chart on projector screen",
+          "image_path": "images/writing_part1/tang5/w1_t5_e53.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=colleagues%20discussing%20chart%20on%20projector%20screen"
+        },
+        {
+          "id": "w1_t5_e75",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một đạo diễn phim đang thảo luận về phân cảnh tiếp theo trên trường quay phim.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A film director",
+            "2: is discussing the next scene",
+            "3: on the movie set",
+            "Full: A film director is discussing the next scene on the movie set."
+          ],
+          "explanation": "Dịch nghĩa: Một đạo diễn phim đang thảo luận về phân cảnh tiếp theo trên trường quay phim.\nQuy tắc: Ai (A film director) đang làm gì (is discussing the next scene) ở đâu (on the movie set). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "film director discussing scene with actors movie set",
+          "image_path": "images/writing_part1/tang5/w1_t5_e75.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=film%20director%20discussing%20scene%20with%20actors%20movie%20set"
+        },
+        {
+          "id": "w1_t5_e70",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một nhạc trưởng đang điều khiển dàn nhạc giao hưởng trên sân khấu lớn.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A conductor",
+            "2: is directing the symphony orchestra",
+            "3: on the large stage",
+            "Full: A conductor is directing the symphony orchestra on the large stage."
+          ],
+          "explanation": "Dịch nghĩa: Một nhạc trưởng đang điều khiển dàn nhạc giao hưởng trên sân khấu lớn.\nQuy tắc: Ai (A conductor) đang làm gì (is directing the symphony orchestra) ở đâu (on the large stage). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "conductor directing symphony orchestra stage",
+          "image_path": "images/writing_part1/tang5/w1_t5_e70.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=conductor%20directing%20symphony%20orchestra%20stage"
+        },
+        {
+          "id": "w1_t5_e68",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Các nhân viên y tế đang chuyển một bệnh nhân lên cáng.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: Paramedics",
+            "2: are transferring a patient",
+            "3: to the stretcher",
+            "Full: Paramedics are transferring a patient to the stretcher."
+          ],
+          "explanation": "Dịch nghĩa: Các nhân viên y tế đang chuyển một bệnh nhân lên cáng.\nQuy tắc: Ai (Paramedics) đang làm gì (are transferring a patient) ở đâu (to the stretcher). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "medical staff transferring patient ambulance stretcher",
+          "image_path": "images/writing_part1/tang5/w1_t5_e68.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=medical%20staff%20transferring%20patient%20ambulance%20stretcher"
+        },
+        {
+          "id": "w1_t5_e60",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Những người lặn biển đang khám phá rạn san hô dưới nước biển.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: Scuba divers",
+            "2: are exploring the coral reef",
+            "3: in the ocean water",
+            "Full: Scuba divers are exploring the coral reef in the ocean water."
+          ],
+          "explanation": "Dịch nghĩa: Những người lặn biển đang khám phá rạn san hô dưới nước biển.\nQuy tắc: Ai (Scuba divers) đang làm gì (are exploring the coral reef) ở đâu (in the ocean water). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "divers exploring coral reef bottom of ocean",
+          "image_path": "images/writing_part1/tang5/w1_t5_e60.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=divers%20exploring%20coral%20reef%20bottom%20of%20ocean"
+        },
+        {
+          "id": "w1_t5_e71",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Một người thợ làm đồng hồ đang kiểm tra các bánh răng nhỏ dưới kính lúp.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: A watchmaker",
+            "2: is examining tiny gears",
+            "3: under a magnifying glass",
+            "Full: A watchmaker is examining tiny gears under a magnifying glass."
+          ],
+          "explanation": "Dịch nghĩa: Một người thợ làm đồng hồ đang kiểm tra các bánh răng nhỏ dưới kính lúp.\nQuy tắc: Ai (A watchmaker) đang làm gì (is examining tiny gears) ở đâu (under a magnifying glass). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "watchmaker using magnifying glass inspect gears antique watch",
+          "image_path": "images/writing_part1/tang5/w1_t5_e71.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=watchmaker%20using%20magnifying%20glass%20inspect%20gears%20antique%20watch"
+        },
+        {
+          "id": "w1_t5_e59",
+          "level": "Khó",
+          "type": "essay_typing",
+          "instruction": "Đọc mô tả ảnh và hoàn thành các bước phân tích để tạo thành câu tiếng Anh hoàn chỉnh.",
+          "image_context": "Bối cảnh: Những người cứu hộ đang hạ một chiếc xuồng cao su cứu sinh từ con tàu lớn xuống.",
+          "content": "1 - AI?\n______\n\n2 - LÀM GÌ?\n______\n\n3 - Ở ĐÂU?\n______\n\nCâu hoàn chỉnh:\n______",
+          "correct_answers": [
+            "1: Rescuers",
+            "2: are lowering a rubber lifeboat",
+            "3: from the big vessel",
+            "Full: Rescuers are lowering a rubber lifeboat from the big vessel."
+          ],
+          "explanation": "Dịch nghĩa: Những người cứu hộ đang hạ một chiếc xuồng cao su cứu sinh từ con tàu lớn xuống.\nQuy tắc: Ai (Rescuers) đang làm gì (are lowering a rubber lifeboat) ở đâu (from the big vessel). Ghép lại thành câu hoàn chỉnh.",
+          "image_query": "rescuers lowering rubber boat into sea from ship",
+          "image_path": "images/writing_part1/tang5/w1_t5_e59.jpg",
+          "image_url": "https://placehold.co/800x600/0f172a/fff?text=rescuers%20lowering%20rubber%20boat%20into%20sea%20from%20ship"
+        }
+      ]
+    }
+  ]
+}

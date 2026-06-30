@@ -1,0 +1,536 @@
+{
+  "title": "TOEIC Writing Part 1 - Tầng 1: Cấu trúc câu cơ bản (Test 2)",
+  "level": 1,
+  "skill": "S + V + O/C",
+  "language_instruction": "vi",
+  "exercise_language": "en",
+  "total_questions": 75,
+  "instructions": "Sắp xếp các từ xáo trộn thành câu đúng. Sau đó đối chiếu với đáp án và đọc giải thích để nhận ra chủ ngữ, động từ, tân ngữ hoặc bổ ngữ trong câu.",
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "easy",
+      "prompt": "is / A bird / singing",
+      "answer": "A bird is singing.",
+      "explanation": "A bird là chủ ngữ, is singing là động từ. Câu mô tả hành động của con chim."
+    },
+    {
+      "id": 2,
+      "difficulty": "easy",
+      "prompt": "is / The sun / shining",
+      "answer": "The sun is shining.",
+      "explanation": "The sun là chủ ngữ, is shining là động từ diễn tả trạng thái thời tiết."
+    },
+    {
+      "id": 3,
+      "difficulty": "easy",
+      "prompt": "hot / The coffee / is",
+      "answer": "The coffee is hot.",
+      "explanation": "The coffee là chủ ngữ, is là hệ từ, hot là tính từ đóng vai trò bổ ngữ cho chủ ngữ."
+    },
+    {
+      "id": 4,
+      "difficulty": "easy",
+      "prompt": "sleeping / is / The baby",
+      "answer": "The baby is sleeping.",
+      "explanation": "The baby là chủ ngữ số ít, is sleeping là động từ thì hiện tại tiếp diễn."
+    },
+    {
+      "id": 5,
+      "difficulty": "easy",
+      "prompt": "are / The leaves / falling",
+      "answer": "The leaves are falling.",
+      "explanation": "The leaves là chủ ngữ số nhiều, are falling là động từ."
+    },
+    {
+      "id": 6,
+      "difficulty": "easy",
+      "prompt": "landing / is / The plane",
+      "answer": "The plane is landing.",
+      "explanation": "The plane là chủ ngữ, is landing là động từ chỉ hành động đang xảy ra."
+    },
+    {
+      "id": 7,
+      "difficulty": "easy",
+      "prompt": "dirty / are / The windows",
+      "answer": "The windows are dirty.",
+      "explanation": "The windows là chủ ngữ số nhiều, dirty là tính từ làm bổ ngữ."
+    },
+    {
+      "id": 8,
+      "difficulty": "easy",
+      "prompt": "swimming / is / A fish",
+      "answer": "A fish is swimming.",
+      "explanation": "A fish là chủ ngữ, is swimming là động từ S + V."
+    },
+    {
+      "id": 9,
+      "difficulty": "easy",
+      "prompt": "is / green / The grass",
+      "answer": "The grass is green.",
+      "explanation": "The grass là chủ ngữ, green là tính từ miêu tả đặc điểm."
+    },
+    {
+      "id": 10,
+      "difficulty": "easy",
+      "prompt": "laughing / are / The children",
+      "answer": "The children are laughing.",
+      "explanation": "The children (số nhiều) đi với động từ are laughing."
+    },
+    {
+      "id": 11,
+      "difficulty": "easy",
+      "prompt": "locked / The gate / is",
+      "answer": "The gate is locked.",
+      "explanation": "The gate là chủ ngữ, locked là bổ ngữ chỉ trạng thái của cổng."
+    },
+    {
+      "id": 12,
+      "difficulty": "easy",
+      "prompt": "bright / are / The stars",
+      "answer": "The stars are bright.",
+      "explanation": "The stars là chủ ngữ số nhiều, bright là tính từ bổ nghĩa."
+    },
+    {
+      "id": 13,
+      "difficulty": "easy",
+      "prompt": "ticking / is / The clock",
+      "answer": "The clock is ticking.",
+      "explanation": "The clock là chủ ngữ số ít, is ticking là động từ mô tả âm thanh/hành động."
+    },
+    {
+      "id": 14,
+      "difficulty": "easy",
+      "prompt": "crying / is / A boy",
+      "answer": "A boy is crying.",
+      "explanation": "A boy là chủ ngữ, is crying là động từ hiện tại tiếp diễn."
+    },
+    {
+      "id": 15,
+      "difficulty": "easy",
+      "prompt": "cold / is / The water",
+      "answer": "The water is cold.",
+      "explanation": "The water là chủ ngữ, is là động từ, cold là tính từ chỉ tính chất."
+    },
+    {
+      "id": 16,
+      "difficulty": "easy",
+      "prompt": "working / are / The computers",
+      "answer": "The computers are working.",
+      "explanation": "The computers là chủ ngữ số nhiều, are working là động từ."
+    },
+    {
+      "id": 17,
+      "difficulty": "easy",
+      "prompt": "is / delicious / The food",
+      "answer": "The food is delicious.",
+      "explanation": "The food là chủ ngữ, delicious là bổ ngữ khen ngợi món ăn."
+    },
+    {
+      "id": 18,
+      "difficulty": "easy",
+      "prompt": "jumping / is / A cat",
+      "answer": "A cat is jumping.",
+      "explanation": "A cat là chủ ngữ, is jumping là động từ mô tả hành động tức thời."
+    },
+    {
+      "id": 19,
+      "difficulty": "easy",
+      "prompt": "blue / is / The sky",
+      "answer": "The sky is blue.",
+      "explanation": "The sky là chủ ngữ, blue là bổ ngữ miêu tả màu sắc."
+    },
+    {
+      "id": 20,
+      "difficulty": "easy",
+      "prompt": "The students / listening / are",
+      "answer": "The students are listening.",
+      "explanation": "The students là chủ ngữ, are listening là động từ."
+    },
+    {
+      "id": 21,
+      "difficulty": "easy",
+      "prompt": "hot / is / The oven",
+      "answer": "The oven is hot.",
+      "explanation": "The oven là chủ ngữ, hot là tính từ đóng vai trò bổ ngữ."
+    },
+    {
+      "id": 22,
+      "difficulty": "easy",
+      "prompt": "blooming / The flowers / are",
+      "answer": "The flowers are blooming.",
+      "explanation": "The flowers (số nhiều) đi với are blooming (đang nở)."
+    },
+    {
+      "id": 23,
+      "difficulty": "easy",
+      "prompt": "wet / is / The road",
+      "answer": "The road is wet.",
+      "explanation": "The road là chủ ngữ, wet là bổ ngữ miêu tả trạng thái mặt đường."
+    },
+    {
+      "id": 24,
+      "difficulty": "easy",
+      "prompt": "barking / is / The dog",
+      "answer": "The dog is barking.",
+      "explanation": "The dog là chủ ngữ, is barking là động từ mô tả hành động của con chó."
+    },
+    {
+      "id": 25,
+      "difficulty": "easy",
+      "prompt": "is / bright / The light",
+      "answer": "The light is bright.",
+      "explanation": "The light là chủ ngữ, bright là tính từ bổ ngữ."
+    },
+    {
+      "id": 26,
+      "difficulty": "medium",
+      "prompt": "is making / The chef / a cake",
+      "answer": "The chef is making a cake.",
+      "explanation": "The chef là chủ ngữ, is making là động từ, a cake là tân ngữ chịu tác động."
+    },
+    {
+      "id": 27,
+      "difficulty": "medium",
+      "prompt": "are watching / The friends / a movie",
+      "answer": "The friends are watching a movie.",
+      "explanation": "The friends là chủ ngữ số nhiều, a movie là tân ngữ của hành động xem."
+    },
+    {
+      "id": 28,
+      "difficulty": "medium",
+      "prompt": "a report / is typing / The secretary",
+      "answer": "The secretary is typing a report.",
+      "explanation": "The secretary là chủ ngữ, is typing là động từ, a report là tân ngữ."
+    },
+    {
+      "id": 29,
+      "difficulty": "medium",
+      "prompt": "juice / is drinking / The girl",
+      "answer": "The girl is drinking juice.",
+      "explanation": "The girl là chủ ngữ, is drinking là động từ, juice là tân ngữ."
+    },
+    {
+      "id": 30,
+      "difficulty": "medium",
+      "prompt": "a shirt / is buying / The customer",
+      "answer": "The customer is buying a shirt.",
+      "explanation": "The customer là chủ ngữ, is buying là động từ, a shirt là tân ngữ."
+    },
+    {
+      "id": 31,
+      "difficulty": "medium",
+      "prompt": "The gardener / the plants / is watering",
+      "answer": "The gardener is watering the plants.",
+      "explanation": "The gardener là chủ ngữ, is watering là động từ, the plants là tân ngữ."
+    },
+    {
+      "id": 32,
+      "difficulty": "medium",
+      "prompt": "a ball / is throwing / The player",
+      "answer": "The player is throwing a ball.",
+      "explanation": "The player là chủ ngữ, is throwing là động từ, a ball là tân ngữ."
+    },
+    {
+      "id": 33,
+      "difficulty": "medium",
+      "prompt": "a portrait / is painting / The artist",
+      "answer": "The artist is painting a portrait.",
+      "explanation": "The artist là chủ ngữ, is painting là động từ, a portrait là tân ngữ."
+    },
+    {
+      "id": 34,
+      "difficulty": "medium",
+      "prompt": "a map / are checking / The tourists",
+      "answer": "The tourists are checking a map.",
+      "explanation": "The tourists là chủ ngữ, are checking là động từ, a map là tân ngữ."
+    },
+    {
+      "id": 35,
+      "difficulty": "medium",
+      "prompt": "is repairing / The technician / the laptop",
+      "answer": "The technician is repairing the laptop.",
+      "explanation": "The technician là chủ ngữ, is repairing là động từ, the laptop là tân ngữ."
+    },
+    {
+      "id": 36,
+      "difficulty": "medium",
+      "prompt": "a song / is playing / The musician",
+      "answer": "The musician is playing a song.",
+      "explanation": "The musician là chủ ngữ, is playing là động từ, a song là tân ngữ."
+    },
+    {
+      "id": 37,
+      "difficulty": "medium",
+      "prompt": "is eating / The woman / her breakfast",
+      "answer": "The woman is eating her breakfast.",
+      "explanation": "The woman là chủ ngữ, is eating là động từ, her breakfast là tân ngữ."
+    },
+    {
+      "id": 38,
+      "difficulty": "medium",
+      "prompt": "a bus / is operating / The driver",
+      "answer": "The driver is operating a bus.",
+      "explanation": "The driver là chủ ngữ, is operating là động từ, a bus là tân ngữ."
+    },
+    {
+      "id": 39,
+      "difficulty": "medium",
+      "prompt": "the documents / is signing / The manager",
+      "answer": "The manager is signing the documents.",
+      "explanation": "The manager là chủ ngữ, is signing là động từ, the documents là tân ngữ."
+    },
+    {
+      "id": 40,
+      "difficulty": "medium",
+      "prompt": "a ladder / is climbing / The man",
+      "answer": "The man is climbing a ladder.",
+      "explanation": "The man là chủ ngữ, is climbing là động từ, a ladder là tân ngữ."
+    },
+    {
+      "id": 41,
+      "difficulty": "medium",
+      "prompt": "the dishes / is washing / The boy",
+      "answer": "The boy is washing the dishes.",
+      "explanation": "The boy là chủ ngữ, is washing là động từ, the dishes là tân ngữ."
+    },
+    {
+      "id": 42,
+      "difficulty": "medium",
+      "prompt": "a bicycle / is fixing / The mechanic",
+      "answer": "The mechanic is fixing a bicycle.",
+      "explanation": "The mechanic là chủ ngữ, is fixing là động từ, a bicycle là tân ngữ."
+    },
+    {
+      "id": 43,
+      "difficulty": "medium",
+      "prompt": "the books / is organizing / The librarian",
+      "answer": "The librarian is organizing the books.",
+      "explanation": "The librarian là chủ ngữ, is organizing là động từ, the books là tân ngữ."
+    },
+    {
+      "id": 44,
+      "difficulty": "medium",
+      "prompt": "a taxi / is hailing / A man",
+      "answer": "A man is hailing a taxi.",
+      "explanation": "A man là chủ ngữ, is hailing là động từ, a taxi là tân ngữ."
+    },
+    {
+      "id": 45,
+      "difficulty": "medium",
+      "prompt": "is giving / a presentation / The speaker",
+      "answer": "The speaker is giving a presentation.",
+      "explanation": "The speaker là chủ ngữ, is giving là động từ, a presentation là tân ngữ."
+    },
+    {
+      "id": 46,
+      "difficulty": "medium",
+      "prompt": "the fence / is painting / The father",
+      "answer": "The father is painting the fence.",
+      "explanation": "The father là chủ ngữ, is painting là động từ, the fence là tân ngữ."
+    },
+    {
+      "id": 47,
+      "difficulty": "medium",
+      "prompt": "a camera / is carrying / The tourist",
+      "answer": "The tourist is carrying a camera.",
+      "explanation": "The tourist là chủ ngữ, is carrying là động từ, a camera là tân ngữ."
+    },
+    {
+      "id": 48,
+      "difficulty": "medium",
+      "prompt": "his lunch / is packing / The worker",
+      "answer": "The worker is packing his lunch.",
+      "explanation": "The worker là chủ ngữ, is packing là động từ, his lunch là tân ngữ."
+    },
+    {
+      "id": 49,
+      "difficulty": "medium",
+      "prompt": "the groceries / is buying / The woman",
+      "answer": "The woman is buying the groceries.",
+      "explanation": "The woman là chủ ngữ, is buying là động từ, the groceries là tân ngữ."
+    },
+    {
+      "id": 50,
+      "difficulty": "medium",
+      "prompt": "a tree / is planting / The volunteer",
+      "answer": "The volunteer is planting a tree.",
+      "explanation": "The volunteer là chủ ngữ, is planting là động từ, a tree là tân ngữ."
+    },
+    {
+      "id": 51,
+      "difficulty": "hard",
+      "prompt": "in the garden / is sitting / The grandmother",
+      "answer": "The grandmother is sitting in the garden.",
+      "explanation": "The grandmother là chủ ngữ, is sitting là động từ, in the garden là cụm trạng từ chỉ nơi chốn."
+    },
+    {
+      "id": 52,
+      "difficulty": "hard",
+      "prompt": "on the stage / is performing / The band",
+      "answer": "The band is performing on the stage.",
+      "explanation": "The band là chủ ngữ, is performing là động từ, on the stage là nơi chốn."
+    },
+    {
+      "id": 53,
+      "difficulty": "hard",
+      "prompt": "in the sky / are flying / The birds",
+      "answer": "The birds are flying in the sky.",
+      "explanation": "The birds (số nhiều) đi với are flying, in the sky chỉ nơi chốn."
+    },
+    {
+      "id": 54,
+      "difficulty": "hard",
+      "prompt": "at the bus stop / are waiting / The commuters",
+      "answer": "The commuters are waiting at the bus stop.",
+      "explanation": "The commuters là chủ ngữ số nhiều, are waiting là động từ, at the bus stop là cụm nơi chốn."
+    },
+    {
+      "id": 55,
+      "difficulty": "hard",
+      "prompt": "on the shelf / is placed / A vase",
+      "answer": "A vase is placed on the shelf.",
+      "explanation": "A vase là chủ ngữ, is placed là động từ bị động/trạng thái, on the shelf chỉ vị trí."
+    },
+    {
+      "id": 56,
+      "difficulty": "hard",
+      "prompt": "in the library / are studying / The researchers",
+      "answer": "The researchers are studying in the library.",
+      "explanation": "The researchers là chủ ngữ, are studying là động từ, in the library là nơi chốn."
+    },
+    {
+      "id": 57,
+      "difficulty": "hard",
+      "prompt": "through the park / is running / The athlete",
+      "answer": "The athlete is running through the park.",
+      "explanation": "The athlete là chủ ngữ, is running là động từ, through the park chỉ hướng di chuyển."
+    },
+    {
+      "id": 58,
+      "difficulty": "hard",
+      "prompt": "in the lobby / is waiting / A guest",
+      "answer": "A guest is waiting in the lobby.",
+      "explanation": "A guest là chủ ngữ, is waiting là động từ, in the lobby là vị trí."
+    },
+    {
+      "id": 59,
+      "difficulty": "hard",
+      "prompt": "on the wall / is hanging / A mirror",
+      "answer": "A mirror is hanging on the wall.",
+      "explanation": "A mirror là chủ ngữ, is hanging là động từ, on the wall là vị trí."
+    },
+    {
+      "id": 60,
+      "difficulty": "hard",
+      "prompt": "around the table / are sitting / The colleagues",
+      "answer": "The colleagues are sitting around the table.",
+      "explanation": "The colleagues là chủ ngữ số nhiều, are sitting là động từ, around the table là vị trí."
+    },
+    {
+      "id": 61,
+      "difficulty": "hard",
+      "prompt": "near the river / is walking / The couple",
+      "answer": "The couple is walking near the river.",
+      "explanation": "The couple (cặp đôi) đi với is walking, near the river là nơi chốn."
+    },
+    {
+      "id": 62,
+      "difficulty": "hard",
+      "prompt": "into the room / is entering / The doctor",
+      "answer": "The doctor is entering into the room.",
+      "explanation": "The doctor là chủ ngữ, is entering là động từ, into the room chỉ hướng di chuyển."
+    },
+    {
+      "id": 63,
+      "difficulty": "hard",
+      "prompt": "on the computer / is working / The freelancer",
+      "answer": "The freelancer is working on the computer.",
+      "explanation": "The freelancer là chủ ngữ, is working là động từ, on the computer là cụm từ chỉ phương tiện/vị trí."
+    },
+    {
+      "id": 64,
+      "difficulty": "hard",
+      "prompt": "in the box / are stored / The files",
+      "answer": "The files are stored in the box.",
+      "explanation": "The files là chủ ngữ, are stored là động từ (trạng thái), in the box là nơi chốn."
+    },
+    {
+      "id": 65,
+      "difficulty": "hard",
+      "prompt": "at the airport / are arriving / The travelers",
+      "answer": "The travelers are arriving at the airport.",
+      "explanation": "The travelers là chủ ngữ số nhiều, are arriving là động từ, at the airport là nơi chốn."
+    },
+    {
+      "id": 66,
+      "difficulty": "hard",
+      "prompt": "on the street / is performing / A musician",
+      "answer": "A musician is performing on the street.",
+      "explanation": "A musician là chủ ngữ, is performing là động từ, on the street là nơi chốn."
+    },
+    {
+      "id": 67,
+      "difficulty": "hard",
+      "prompt": "under the tree / is resting / A hiker",
+      "answer": "A hiker is resting under the tree.",
+      "explanation": "A hiker là chủ ngữ, is resting là động từ, under the tree là vị trí."
+    },
+    {
+      "id": 68,
+      "difficulty": "hard",
+      "prompt": "across the bridge / is driving / The truck",
+      "answer": "The truck is driving across the bridge.",
+      "explanation": "The truck là chủ ngữ, is driving là động từ, across the bridge là cụm chỉ vị trí/hướng."
+    },
+    {
+      "id": 69,
+      "difficulty": "hard",
+      "prompt": "in the bowl / is mixing ingredients / The baker",
+      "answer": "The baker is mixing ingredients in the bowl.",
+      "explanation": "The baker là chủ ngữ, is mixing là động từ, ingredients là tân ngữ, in the bowl là nơi chốn."
+    },
+    {
+      "id": 70,
+      "difficulty": "hard",
+      "prompt": "at the station / are standing / The police officers",
+      "answer": "The police officers are standing at the station.",
+      "explanation": "The police officers là chủ ngữ số nhiều, are standing là động từ, at the station là nơi chốn."
+    },
+    {
+      "id": 71,
+      "difficulty": "hard",
+      "prompt": "on the field / are practicing / The players",
+      "answer": "The players are practicing on the field.",
+      "explanation": "The players là chủ ngữ, are practicing là động từ, on the field là nơi chốn."
+    },
+    {
+      "id": 72,
+      "difficulty": "hard",
+      "prompt": "in the hallway / is walking / The student",
+      "answer": "The student is walking in the hallway.",
+      "explanation": "The student là chủ ngữ, is walking là động từ, in the hallway là nơi chốn."
+    },
+    {
+      "id": 73,
+      "difficulty": "hard",
+      "prompt": "behind the desk / is sitting / The receptionist",
+      "answer": "The receptionist is sitting behind the desk.",
+      "explanation": "The receptionist là chủ ngữ, is sitting là động từ, behind the desk là vị trí."
+    },
+    {
+      "id": 74,
+      "difficulty": "hard",
+      "prompt": "for the bus / is waiting / The girl",
+      "answer": "The girl is waiting for the bus.",
+      "explanation": "The girl là chủ ngữ, is waiting là động từ, for the bus là cụm giới từ bổ sung ý nghĩa."
+    },
+    {
+      "id": 75,
+      "difficulty": "hard",
+      "prompt": "at the counter / is paying / The man",
+      "answer": "The man is paying at the counter.",
+      "explanation": "The man là chủ ngữ, is paying là động từ, at the counter là vị trí."
+    }
+  ]
+}

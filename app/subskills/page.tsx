@@ -35,9 +35,9 @@ const SKILLS = [
     key: "writing",
     emoji: "✍️",
     label: "Writing",
-    href: null,
-    description: null,
-    comingSoon: true,
+    href: "/subskills/writing",
+    description: "Luyện kỹ năng mô tả ảnh và hoàn thành câu",
+    comingSoon: false,
   },
 ];
 
