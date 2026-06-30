@@ -1171,8 +1171,15 @@ function HwModal({ initial, editId, onSave, onAutosave, onClose }: {
     if (!form.date) return;
     setSaving(true);
     clearTimeout(timerRef.current);
-    await onSave(form, hwIdRef.current);
-    setSaving(false);
+    try {
+      await onSave(form, hwIdRef.current);
+    } catch (err) {
+      console.error("[HwModal handleSave]", err);
+      const msg = err instanceof Error ? err.message : String(err);
+      alert("Lưu thất bại: " + msg);
+    } finally {
+      setSaving(false);
+    }
   }
 
   return (
