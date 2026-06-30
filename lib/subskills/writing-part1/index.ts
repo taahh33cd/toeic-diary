@@ -18,6 +18,7 @@ export type W2Exercise = {
   question: string;
   answer: string;
   explanation: string;
+  imagePath?: string;
   imageUrl?: string;
   imageContext?: string;
 };
@@ -178,7 +179,7 @@ export function checkMcq(selected: string, correctAnswers: string[]): boolean {
 // ─────────────────────────────────────
 
 type Tang1Raw = { questions: { id: number; difficulty: string; prompt: string; answer: string; explanation: string }[] };
-type Tang2Raw = { levels: { level: string; exercises: { id: string; question: string; correct_answer: string; explanation: string; image_url?: string; image_context?: string; instruction?: string }[] }[] };
+type Tang2Raw = { levels: { level: string; exercises: { id: string; question: string; correct_answer: string; explanation: string; image_path?: string; image_url?: string; image_context?: string; instruction?: string }[] }[] };
 type Tang3Raw = { exercises: { id: number; difficulty: string; question: string; answer: string; explanation: string }[] };
 type Tang4Raw = { levels: { level: string; exercises: { id: string; content: string; image_context?: string; context?: string; options: { id: string; text: string }[]; correct_answers: string[]; explanation: string; image_path?: string; image_url?: string }[] }[] };
 type Tang5Raw = { levels: { level: string; exercises: { id: string; instruction?: string; image_context: string; options: { id: string; text: string }[]; correct_answers: string[]; explanation: string; image_path?: string; image_url?: string }[] }[] };
@@ -210,6 +211,7 @@ function normTang2(raw: Tang2Raw, skillId: string, testNum: number): WTestData {
         question: ex.question,
         answer: ex.correct_answer,
         explanation: ex.explanation,
+        imagePath: ex.image_path ? `/${ex.image_path}` : undefined,
         imageUrl: ex.image_url,
         imageContext: ex.instruction ?? ex.image_context,
       })),

@@ -42,25 +42,13 @@ function ResultBadge({ correct }: { correct: boolean }) {
 // ─────────────────────────────────────
 
 function WordOrderingCard({ ex, onResult }: { ex: W1Exercise; onResult: (correct: boolean) => void }) {
-  const [selected, setSelected] = useState<string[]>([]);
+  const [input, setInput] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [correct, setCorrect] = useState(false);
 
-  const available = ex.tokens.filter((t) => !selected.includes(t));
-
-  function pickToken(t: string) {
-    if (submitted) return;
-    setSelected((prev) => [...prev, t]);
-  }
-
-  function removeToken(i: number) {
-    if (submitted) return;
-    setSelected((prev) => prev.filter((_, idx) => idx !== i));
-  }
-
   function submit() {
-    if (selected.length < ex.tokens.length) return;
-    const c = checkWordOrdering(selected, ex.answer);
+    if (!input.trim()) return;
+    const c = checkWordOrdering(input.trim().split(/\s+/), ex.answer);
     setCorrect(c);
     setSubmitted(true);
     onResult(c);
@@ -68,40 +56,33 @@ function WordOrderingCard({ ex, onResult }: { ex: W1Exercise; onResult: (correct
 
   return (
     <div>
-      {/* Token slots — answer area */}
-      <div style={{ minHeight: 44, border: "1.5px dashed var(--border)", borderRadius: 8, padding: "8px 12px", marginBottom: "0.75rem", display: "flex", flexWrap: "wrap", gap: 6, alignItems: "center", background: "var(--bg-secondary)" }}>
-        {selected.length === 0 && <span style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>Click vào từ bên dưới để xếp thứ tự…</span>}
-        {selected.map((t, i) => (
-          <button
+      {/* Hint: scrambled tokens */}
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: "0.75rem" }}>
+        {ex.tokens.map((t, i) => (
+          <span
             key={i}
-            onClick={() => removeToken(i)}
-            disabled={submitted}
-            style={{ background: submitted ? (correct ? "rgba(34,197,94,0.12)" : "rgba(239,68,68,0.12)") : "var(--accent-primary)", color: submitted ? (correct ? "rgb(34,197,94)" : "rgb(239,68,68)") : "#fff", border: "none", borderRadius: 6, padding: "5px 12px", fontSize: "0.85rem", fontWeight: 600, cursor: submitted ? "default" : "pointer", fontFamily: "inherit" }}
+            style={{ background: "var(--bg-elevated)", border: "1.5px solid var(--border)", borderRadius: 6, padding: "4px 10px", fontSize: "0.85rem", fontWeight: 500, color: "var(--text-secondary)" }}
           >
             {t}
-          </button>
+          </span>
         ))}
       </div>
 
-      {/* Token bank */}
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: "0.75rem" }}>
-        {available.map((t, i) => (
-          <button
-            key={i}
-            onClick={() => pickToken(t)}
-            disabled={submitted}
-            style={{ background: "var(--bg-elevated)", border: "1.5px solid var(--border)", borderRadius: 6, padding: "5px 12px", fontSize: "0.85rem", fontWeight: 500, cursor: submitted ? "default" : "pointer", color: "var(--text-primary)", fontFamily: "inherit" }}
-          >
-            {t}
-          </button>
-        ))}
-      </div>
+      <input
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        onKeyDown={(e) => { if (e.key === "Enter" && !submitted) submit(); }}
+        disabled={submitted}
+        placeholder="Nhập câu hoàn chỉnh…"
+        style={{ width: "100%", boxSizing: "border-box", padding: "8px 12px", fontSize: "0.9rem", border: submitted ? `1.5px solid ${correct ? "rgba(34,197,94,0.5)" : "rgba(239,68,68,0.5)"}` : "1.5px solid var(--border)", borderRadius: 8, background: "var(--bg-secondary)", color: "var(--text-primary)", outline: "none", marginBottom: "0.5rem", fontFamily: "inherit" }}
+      />
 
       {!submitted ? (
         <button
           onClick={submit}
-          disabled={selected.length < ex.tokens.length}
-          style={{ background: selected.length < ex.tokens.length ? "var(--bg-elevated)" : "var(--accent-primary)", color: selected.length < ex.tokens.length ? "var(--text-muted)" : "#fff", border: "none", borderRadius: 8, padding: "8px 20px", fontSize: "0.85rem", fontWeight: 600, cursor: selected.length < ex.tokens.length ? "not-allowed" : "pointer", fontFamily: "inherit" }}
+          disabled={!input.trim()}
+          style={{ background: !input.trim() ? "var(--bg-elevated)" : "var(--accent-primary)", color: !input.trim() ? "var(--text-muted)" : "#fff", border: "none", borderRadius: 8, padding: "8px 20px", fontSize: "0.85rem", fontWeight: 600, cursor: !input.trim() ? "not-allowed" : "pointer", fontFamily: "inherit" }}
         >
           Kiểm tra
         </button>
@@ -138,10 +119,26 @@ function VerbFillCard({ ex, onResult }: { ex: W2Exercise; onResult: (correct: bo
 
   return (
     <div>
-      {ex.imageUrl && !imgError && (
-        <div style={{ marginBottom: "0.75rem", borderRadius: 8, overflow: "hidden", border: "1px solid var(--border)" }}>
+      {(ex.imagePath || ex.imageUrl) && !imgError && (
+        <div style={{ marginBottom: "0.75rem", borderRadius: 8, border: "1px solid var(--border)", overflow: "hidden", display: "flex", justifyContent: "center", background: "var(--bg-secondary)" }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={ex.imageUrl} alt="Exercise context" onError={() => setImgError(true)} style={{ width: "100%", maxHeight: 220, objectFit: "cover", display: "block" }} />
+          <img
+            src={ex.imagePath ?? ex.imageUrl}
+            alt="Exercise context"
+            onError={() => {
+              if (ex.imagePath && ex.imageUrl && !imgError) {
+                // swap to fallback URL by clearing imagePath via error flag
+              }
+              setImgError(true);
+            }}
+            style={{ maxWidth: "100%", height: "auto", display: "block" }}
+          />
+        </div>
+      )}
+      {(ex.imagePath || ex.imageUrl) && imgError && ex.imagePath && ex.imageUrl && (
+        <div style={{ marginBottom: "0.75rem", borderRadius: 8, border: "1px solid var(--border)", overflow: "hidden", display: "flex", justifyContent: "center", background: "var(--bg-secondary)" }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={ex.imageUrl} alt="Exercise context" style={{ maxWidth: "100%", height: "auto", display: "block" }} />
         </div>
       )}
       {ex.imageContext && (
@@ -252,7 +249,7 @@ function MultipleChoiceCard({ ex, onResult }: { ex: W45Exercise; onResult: (corr
     <div>
       {/* Image */}
       {ex.imagePath && !imgError && (
-        <div style={{ marginBottom: "0.75rem", borderRadius: 8, overflow: "hidden", border: "1px solid var(--border)" }}>
+        <div style={{ marginBottom: "0.75rem", borderRadius: 8, border: "1px solid var(--border)", overflow: "hidden", display: "flex", justifyContent: "center", background: "var(--bg-secondary)" }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={ex.imagePath}
@@ -263,14 +260,14 @@ function MultipleChoiceCard({ ex, onResult }: { ex: W45Exercise; onResult: (corr
                 // will be shown via separate logic
               }
             }}
-            style={{ width: "100%", maxHeight: 260, objectFit: "cover", display: "block" }}
+            style={{ maxWidth: "100%", height: "auto", display: "block" }}
           />
         </div>
       )}
       {ex.imagePath && imgError && ex.imageUrl && (
-        <div style={{ marginBottom: "0.75rem", borderRadius: 8, overflow: "hidden", border: "1px solid var(--border)" }}>
+        <div style={{ marginBottom: "0.75rem", borderRadius: 8, border: "1px solid var(--border)", overflow: "hidden", display: "flex", justifyContent: "center", background: "var(--bg-secondary)" }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={ex.imageUrl} alt="Exercise image" style={{ width: "100%", maxHeight: 260, objectFit: "cover", display: "block" }} />
+          <img src={ex.imageUrl} alt="Exercise image" style={{ maxWidth: "100%", height: "auto", display: "block" }} />
         </div>
       )}
 
@@ -388,9 +385,25 @@ export default function WritingPart1Client({ skillId, allTests, easyBest, medium
     if (correct) setCorrectCount((c) => c + 1);
   }, []);
 
+  function saveAttempt(payload: { score: number; passed: boolean; itemIdx: number | null }) {
+    if (!userId || isTestUser) return;
+    fetch("/api/subskills/attempt", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        part: dbPartW1(skillId, difficulty),
+        questionWord: String(activeTest),
+        exerciseIndex: 0,
+        ...payload,
+      }),
+    }).catch(() => {});
+  }
+
   function onExResult(correct: boolean) {
     handleResult(correct);
     setAnswered(true);
+    // Per-question analytics save: itemIdx = question index
+    saveAttempt({ score: correct ? 100 : 0, passed: correct, itemIdx: exerciseIdx });
   }
 
   async function advanceOrFinish() {
@@ -400,18 +413,10 @@ export default function WritingPart1Client({ skillId, allTests, easyBest, medium
       const score = Math.round((correctCount / total) * 100);
       const passed = score >= passThreshold;
       setPhase("done");
-      if (userId && !isTestUser) {
-        setSaving(true);
-        try {
-          await fetch("/api/subskills/attempt", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ part: dbPartW1(skillId, difficulty), questionWord: String(activeTest), exerciseIndex: 0, score, passed }),
-          });
-        } catch { /* ignore */ } finally {
-          setSaving(false);
-        }
-      }
+      setSaving(true);
+      // Final summary save: itemIdx = null marks "completed"
+      saveAttempt({ score, passed, itemIdx: null });
+      setSaving(false);
     }
   }
 
