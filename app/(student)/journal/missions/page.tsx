@@ -401,40 +401,65 @@ function HwCard({
             </div>
             <div style={{ padding: ".5rem .75rem", display: "flex", flexDirection: "column", gap: ".5rem" }}>
 
-              {/* Gallery of uploaded files */}
-              {Object.keys(hwFilesForHw).length > 0 && (
-                <div style={{ display: "flex", flexWrap: "wrap", gap: ".5rem" }}>
-                  {Object.entries(hwFilesForHw).map(([fileId, file]) => {
-                    const isVid = /\.(mp4|mov|avi|webm|mkv)/i.test(file.url.split("?")[0]);
-                    const isConfirming = deleteConfirm === fileId;
-                    return (
-                      <div key={fileId} style={{ position: "relative", flexShrink: 0 }}>
-                        {isConfirming ? (
-                          <div style={{ width: 72, height: 72, background: "rgba(176,58,42,.92)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: ".25rem" }}>
-                            <span style={{ fontSize: ".6rem", color: "#fff", fontWeight: 700 }}>Xoá?</span>
-                            <div style={{ display: "flex", gap: ".3rem" }}>
-                              <button type="button" onClick={() => handleDeleteFile(fileId, file.url)} style={{ padding: ".2rem .45rem", background: "#fff", border: "none", color: "#B03A2A", fontSize: ".65rem", fontWeight: 700, cursor: "pointer" }}>Có</button>
-                              <button type="button" onClick={() => setDeleteConfirm(null)} style={{ padding: ".2rem .4rem", background: "rgba(255,255,255,.25)", border: "none", color: "#fff", fontSize: ".65rem", cursor: "pointer" }}>Không</button>
+              {/* Gallery: new files + old Storage file from dayLinks */}
+              {(() => {
+                const oldStorageUrl = (dayLinkUrl ?? submittedUrl);
+                const hasOld = !!oldStorageUrl?.startsWith("https://firebasestorage.googleapis.com")
+                  && !Object.values(hwFilesForHw).some(f => f.url === oldStorageUrl);
+                const hasNew = Object.keys(hwFilesForHw).length > 0;
+                if (!hasNew && !hasOld) return null;
+                return (
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: ".5rem" }}>
+                    {/* New deletable files */}
+                    {Object.entries(hwFilesForHw).map(([fileId, file]) => {
+                      const isVid = /\.(mp4|mov|avi|webm|mkv)/i.test(file.url.split("?")[0]);
+                      const isConfirming = deleteConfirm === fileId;
+                      return (
+                        <div key={fileId} style={{ position: "relative", flexShrink: 0 }}>
+                          {isConfirming ? (
+                            <div style={{ width: 72, height: 72, background: "rgba(176,58,42,.92)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: ".25rem" }}>
+                              <span style={{ fontSize: ".6rem", color: "#fff", fontWeight: 700 }}>Xoá?</span>
+                              <div style={{ display: "flex", gap: ".3rem" }}>
+                                <button type="button" onClick={() => handleDeleteFile(fileId, file.url)} style={{ padding: ".2rem .45rem", background: "#fff", border: "none", color: "#B03A2A", fontSize: ".65rem", fontWeight: 700, cursor: "pointer" }}>Có</button>
+                                <button type="button" onClick={() => setDeleteConfirm(null)} style={{ padding: ".2rem .4rem", background: "rgba(255,255,255,.25)", border: "none", color: "#fff", fontSize: ".65rem", cursor: "pointer" }}>Không</button>
+                              </div>
                             </div>
-                          </div>
-                        ) : isVid ? (
-                          <button type="button" onClick={() => setLightboxUrl(file.url)} style={{ width: 72, height: 72, background: "rgba(26,62,128,.08)", border: "1px solid rgba(26,62,128,.25)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: ".15rem", cursor: "pointer" }}>
-                            <span style={{ fontSize: "1.3rem" }}>🎬</span>
-                            <span style={{ fontSize: ".55rem", color: "#2860A8", fontWeight: 600 }}>Video</span>
-                          </button>
-                        ) : (
-                          <img src={file.url} alt="" onClick={() => setLightboxUrl(file.url)} style={{ width: 72, height: 72, objectFit: "cover", cursor: "pointer", border: "1px solid var(--border,#DDD0BC)", display: "block" }} />
-                        )}
-                        {!isConfirming && (
-                          <button type="button" onClick={() => setDeleteConfirm(fileId)} style={{ position: "absolute", top: -7, right: -7, width: 18, height: 18, borderRadius: "50%", background: "rgba(176,58,42,.88)", border: "2px solid var(--bg-primary,#F5EFE6)", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".55rem", fontWeight: 700, padding: 0 }}>✕</button>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
+                          ) : isVid ? (
+                            <button type="button" onClick={() => setLightboxUrl(file.url)} style={{ width: 72, height: 72, background: "rgba(26,62,128,.08)", border: "1px solid rgba(26,62,128,.25)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: ".15rem", cursor: "pointer" }}>
+                              <span style={{ fontSize: "1.3rem" }}>🎬</span>
+                              <span style={{ fontSize: ".55rem", color: "#2860A8", fontWeight: 600 }}>Video</span>
+                            </button>
+                          ) : (
+                            <img src={file.url} alt="" onClick={() => setLightboxUrl(file.url)} style={{ width: 72, height: 72, objectFit: "cover", cursor: "pointer", border: "1px solid var(--border,#DDD0BC)", display: "block" }} />
+                          )}
+                          {/* ✕ bên TRONG thumbnail để tránh bị clip bởi overflow:hidden */}
+                          {!isConfirming && (
+                            <button type="button" onClick={() => setDeleteConfirm(fileId)} style={{ position: "absolute", top: 3, right: 3, width: 18, height: 18, borderRadius: "50%", background: "rgba(0,0,0,.55)", border: "1.5px solid rgba(255,255,255,.7)", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".55rem", fontWeight: 700, padding: 0 }}>✕</button>
+                          )}
+                        </div>
+                      );
+                    })}
+                    {/* Old Storage file (read-only, no delete) */}
+                    {hasOld && (() => {
+                      const isVid = /\.(mp4|mov|avi|webm|mkv)/i.test(oldStorageUrl!.split("?")[0]);
+                      return (
+                        <div style={{ position: "relative", flexShrink: 0 }}>
+                          {isVid ? (
+                            <button type="button" onClick={() => setLightboxUrl(oldStorageUrl!)} style={{ width: 72, height: 72, background: "rgba(26,62,128,.08)", border: "1px solid rgba(26,62,128,.25)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: ".15rem", cursor: "pointer" }}>
+                              <span style={{ fontSize: "1.3rem" }}>🎬</span>
+                            </button>
+                          ) : (
+                            <img src={oldStorageUrl!} alt="" onClick={() => setLightboxUrl(oldStorageUrl!)} style={{ width: 72, height: 72, objectFit: "cover", cursor: "pointer", border: "1px solid var(--border,#DDD0BC)", display: "block" }} />
+                          )}
+                          <div style={{ position: "absolute", bottom: 2, left: 2, fontSize: ".45rem", fontWeight: 700, color: "#fff", background: "rgba(0,0,0,.45)", padding: "1px 3px", borderRadius: 2 }}>cũ</div>
+                        </div>
+                      );
+                    })()}
+                  </div>
+                );
+              })()}
 
-              {/* Backward compat: old daylink / drive link (read-only) */}
+              {/* Backward compat: old Drive link (non-Storage, read-only) */}
               {(dayLinkUrl || submittedUrl) && (() => {
                 const fileUrl = (dayLinkUrl ?? submittedUrl)!;
                 if (fileUrl.startsWith("https://firebasestorage.googleapis.com")) return null;
