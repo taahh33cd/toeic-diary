@@ -1464,6 +1464,21 @@ function PersonalHWSection({
                     </span>
                   )}
 
+                  {/* File submitted badge */}
+                  {dayLink && (
+                    hwViewed[hw.id] ? (
+                      <span className="text-[10px] px-1.5 py-0.5 rounded-full font-semibold shrink-0"
+                        style={{ background: "rgba(5,150,105,.12)", color: "rgb(5,150,105)" }}>
+                        {/\.(mp4|mov|avi|webm|mkv)/i.test(dayLink.split("?")[0]) ? "🎬" : "📷"}✓
+                      </span>
+                    ) : (
+                      <span className="text-[10px] px-1.5 py-0.5 rounded-full font-semibold shrink-0"
+                        style={{ background: "rgba(245,158,11,.15)", color: "rgb(180,110,0)" }}>
+                        {/\.(mp4|mov|avi|webm|mkv)/i.test(dayLink.split("?")[0]) ? "🎬" : "📷"} Chưa xem
+                      </span>
+                    )
+                  )}
+
                   <button
                     onClick={(e) => { e.stopPropagation(); setModal({ mode: "edit", initial: formFromHw(hw), editId: hw.id }); }}
                     className="p-1 hover:opacity-70 shrink-0" style={{ color: "var(--text-muted)" }}
