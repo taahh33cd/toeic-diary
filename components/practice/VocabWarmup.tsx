@@ -30,7 +30,9 @@ function useTTS() {
           return;
         }
       }
-    } catch { /* fall through */ }
+    } catch { /* fall through */ } finally {
+      setLoading(false);
+    }
     // Fallback: Web Speech API
     if (typeof window !== "undefined" && "speechSynthesis" in window) {
       const utt = new SpeechSynthesisUtterance(text);
