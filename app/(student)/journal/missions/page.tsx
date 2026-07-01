@@ -8,6 +8,7 @@ import { useGoal } from "@/hooks/firebase/useGoal";
 import { useSubmissions } from "@/hooks/firebase/useSubmissions";
 import { useDayLinks } from "@/hooks/firebase/useDayLinks";
 import { saveSubmission, removeSubmission, saveProgress, uploadHomeworkFile, addHwFile, deleteHwFile, deleteOldDayLink } from "@/lib/firebase/helpers";
+import { uploadToCloudinary } from "@/lib/cloudinary/upload";
 import { useHwFiles } from "@/hooks/firebase/useHwFiles";
 import type { HwFilesForHw } from "@/lib/firebase/types";
 import { awardXp } from "@/lib/xp-client";
@@ -237,17 +238,23 @@ function HwCard({
     const file = e.target.files?.[0];
     if (!file) return;
     if (fileInputRef.current) fileInputRef.current.value = "";
-    if (file.size > 50 * 1024 * 1024) { alert("File quá lớn! Video tối đa 50MB."); return; }
-    let finalFile = file;
-    if (file.type.startsWith("image/")) {
-      const imageCompression = (await import("browser-image-compression")).default;
-      finalFile = await imageCompression(file, { maxSizeMB: 1, maxWidthOrHeight: 1920, useWebWorker: true });
-    }
     setUploading(0);
     try {
-      const url = await uploadHomeworkFile(studentCode, hw.id, finalFile, setUploading);
-      await addHwFile(studentCode, hw.id, url, file.name);
+      if (file.type.startsWith("video/")) {
+        // Video → Cloudinary (không giới hạn dung lượng, tự compress phía server)
+        const { url, publicId } = await uploadToCloudinary(file, setUploading);
+        await addHwFile(studentCode, hw.id, url, file.name, publicId);
+      } else {
+        // Ảnh → Firebase Storage (compress trước)
+        let finalFile = file;
+        const imageCompression = (await import("browser-image-compression")).default;
+        finalFile = await imageCompression(file, { maxSizeMB: 1, maxWidthOrHeight: 1920, useWebWorker: true });
+        const url = await uploadHomeworkFile(studentCode, hw.id, finalFile, setUploading);
+        await addHwFile(studentCode, hw.id, url, file.name);
+      }
       await awardXp("homework_submit", { hwDate: hw.date });
+    } catch (err) {
+      alert((err as Error).message ?? "Upload thất bại, thử lại.");
     } finally {
       setUploading(null);
     }
@@ -258,7 +265,8 @@ function HwCard({
     if (fileId === "__legacy__") {
       await deleteOldDayLink(studentCode, hw.id, hw.date, fileUrl);
     } else {
-      await deleteHwFile(studentCode, hw.id, fileId, fileUrl);
+      const publicId = hwFilesForHw[fileId]?.publicId;
+      await deleteHwFile(studentCode, hw.id, fileId, fileUrl, publicId);
     }
   }
 
@@ -505,7 +513,7 @@ function HwCard({
                 >
                   <span style={{ fontSize: ".9rem" }}>📤</span>
                   <span style={{ fontSize: ".78rem", fontWeight: 600, color: "var(--text-primary,#2C1E0F)" }}>Thêm ảnh / video</span>
-                  <span style={{ fontSize: ".62rem", color: "#9A8672" }}>· Ảnh ≤1MB · Video ≤50MB</span>
+                  <span style={{ fontSize: ".62rem", color: "#9A8672" }}>· Ảnh ≤5MB · Video mọi dung lượng</span>
                 </button>
               )}
             </div>

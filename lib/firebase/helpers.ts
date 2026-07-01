@@ -598,21 +598,53 @@ export async function addHwFile(
   code: string,
   hwId: string,
   url: string,
-  name?: string
+  name?: string,
+  publicId?: string
 ): Promise<string> {
   const newRef = push(ref(firebaseDb, `hwFiles/${code}/${hwId}`));
-  await set(newRef, { url, uploadedAt: new Date().toISOString(), ...(name ? { name } : {}) });
+  await set(newRef, {
+    url,
+    uploadedAt: new Date().toISOString(),
+    ...(name ? { name } : {}),
+    ...(publicId ? { publicId } : {}),
+  });
   return newRef.key!;
+}
+
+export async function deleteOldDayLink(
+  code: string,
+  hwId: string,
+  hwDate: string,
+  storageUrl?: string
+): Promise<void> {
+  await remove(ref(firebaseDb, `daylinks/${code}/${hwId}`));
+  await remove(ref(firebaseDb, `submissions/${code}/${hwDate}/url`));
+  if (storageUrl?.startsWith("https://firebasestorage.googleapis.com")) {
+    try {
+      const match = storageUrl.match(/\/o\/(.+?)\?/);
+      if (match) await deleteObject(storageRef(firebaseStorage, decodeURIComponent(match[1])));
+    } catch { /* file may already be gone */ }
+  }
 }
 
 export async function deleteHwFile(
   code: string,
   hwId: string,
   fileId: string,
-  storageUrl?: string
+  storageUrl?: string,
+  publicId?: string
 ): Promise<void> {
   await remove(ref(firebaseDb, `hwFiles/${code}/${hwId}/${fileId}`));
-  if (storageUrl?.startsWith("https://firebasestorage.googleapis.com")) {
+  if (publicId) {
+    const resourceType = storageUrl?.includes("/video/") ? "video" : "image";
+    try {
+      await fetch("/api/cloudinary/delete", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ publicId, resourceType }),
+      });
+    } catch { /* deletion failure is non-critical */ }
+  } else if (storageUrl?.startsWith("https://firebasestorage.googleapis.com")) {
     try {
       const match = storageUrl.match(/\/o\/(.+?)\?/);
       if (match) await deleteObject(storageRef(firebaseStorage, decodeURIComponent(match[1])));

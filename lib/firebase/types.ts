@@ -173,6 +173,7 @@ export interface HwFile {
   url: string;
   uploadedAt: string;
   name?: string;
+  publicId?: string;
 }
 export type HwFilesForHw = Record<string, HwFile>;
 export type HwFilesMap = Record<string, HwFilesForHw>;
