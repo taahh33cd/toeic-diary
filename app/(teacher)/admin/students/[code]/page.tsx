@@ -1284,6 +1284,7 @@ function PersonalHWSection({
   const [fileModal, setFileModal] = useState<{ url: string; hwId: string } | null>(null);
   const [noteInput, setNoteInput] = useState("");
   const [savingNote, setSavingNote] = useState(false);
+  const [noteSaved, setNoteSaved] = useState(false);
   const autosavedHwIdRef = useRef<string | null>(null);
 
   const { hwViewed } = useHwViewed(code);
@@ -1659,13 +1660,22 @@ function PersonalHWSection({
               <button
                 onClick={async () => {
                   setSavingNote(true);
-                  try { await markHwViewed(code, fileModal.hwId, noteInput.trim() || undefined); }
-                  finally { setSavingNote(false); }
+                  setNoteSaved(false);
+                  try {
+                    await markHwViewed(code, fileModal.hwId, noteInput.trim() || undefined);
+                    setNoteSaved(true);
+                    setTimeout(() => setNoteSaved(false), 2000);
+                  } catch (err) {
+                    const msg = err instanceof Error ? err.message : String(err);
+                    alert("Lưu thất bại: " + msg);
+                  } finally {
+                    setSavingNote(false);
+                  }
                 }}
                 disabled={savingNote}
-                style={{ alignSelf: "flex-end", padding: ".4rem 1.1rem", background: "#C4622D", color: "#fff", border: "none", borderRadius: 6, cursor: savingNote ? "not-allowed" : "pointer", fontSize: ".82rem", fontWeight: 600, opacity: savingNote ? 0.6 : 1 }}
+                style={{ alignSelf: "flex-end", padding: ".4rem 1.1rem", background: noteSaved ? "rgb(5,150,105)" : "#C4622D", color: "#fff", border: "none", borderRadius: 6, cursor: savingNote ? "not-allowed" : "pointer", fontSize: ".82rem", fontWeight: 600, opacity: savingNote ? 0.6 : 1, transition: "background .2s" }}
               >
-                {savingNote ? "Đang lưu…" : "Lưu nhận xét"}
+                {savingNote ? "Đang lưu…" : noteSaved ? "✓ Đã lưu" : "Lưu nhận xét"}
               </button>
             </div>
           </div>
