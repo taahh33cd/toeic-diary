@@ -9,6 +9,7 @@ import { Level4Practice } from "./Level4Practice";
 import { PenLine, FileText, Sparkles, CheckCircle2 } from "lucide-react";
 import { usePracticeStore } from "@/stores/practiceStore";
 import type { VocabItem } from "./TranscriptVocabModal";
+import { VocabWarmup } from "./VocabWarmup";
 
 interface Blank {
   id: string;
@@ -85,6 +86,7 @@ export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl,
   const isPart12 = lesson.partNumber === 1 || lesson.partNumber === 2;
   const LEVEL_INFO = isPart12 ? LEVEL_INFO_12 : LEVEL_INFO_34;
 
+  const [warmupDone, setWarmupDone] = useState(false);
   const [activeLevel, setActiveLevel] = useState<ActiveLevel>(1);
   const [sessionScores, setSessionScores] = useState<Record<number, number>>({});
   const { startSession, startTime } = usePracticeStore();
@@ -110,6 +112,11 @@ export function PracticeClient({ lesson, userId, progressByLevel, nextLessonUrl,
       };
     }
     return db;
+  }
+
+  // Gate: show vocab warmup before level selector if lesson has pre-written vocab
+  if (keyVocab && keyVocab.length > 0 && !warmupDone) {
+    return <VocabWarmup vocab={keyVocab} onDone={() => setWarmupDone(true)} />;
   }
 
   return (
