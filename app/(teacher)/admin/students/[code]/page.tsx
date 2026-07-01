@@ -9,6 +9,7 @@ import { useHomework } from "@/hooks/firebase/useHomework";
 import { useSubmissions } from "@/hooks/firebase/useSubmissions";
 import { useDayLinks } from "@/hooks/firebase/useDayLinks";
 import { useHwViewed } from "@/hooks/firebase/useHwViewed";
+import { useHwFiles } from "@/hooks/firebase/useHwFiles";
 import {
   updateStudent,
   deleteStudent,
@@ -26,6 +27,7 @@ import {
   updateHomework,
   deleteHomework,
   markHwViewed,
+  deleteHwFile,
 } from "@/lib/firebase/helpers";
 import { calcEtsScore } from "@/lib/ets-scale";
 import type {
@@ -35,6 +37,7 @@ import type {
   ScheduleItem,
   Homework,
   HwItem,
+  HwFilesMap,
 } from "@/lib/firebase/types";
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -690,7 +693,7 @@ function ErrorLogSection({ student }: { student: Student }) {
 
 // ─── 7. Homework Progress (read-only) ─────────────────────────────────────────
 
-function HomeworkProgressSection({ homework, dayLinks }: { homework: Homework[]; dayLinks: Record<string, unknown> }) {
+function HomeworkProgressSection({ homework, dayLinks, hwFiles }: { homework: Homework[]; dayLinks: Record<string, unknown>; hwFiles: HwFilesMap }) {
   const recent = homework.slice(0, 7);
 
   if (recent.length === 0) {
@@ -705,7 +708,7 @@ function HomeworkProgressSection({ homework, dayLinks }: { homework: Homework[];
     <SectionCard title="📊 Tiến độ nhiệm vụ">
       <div className="space-y-2">
         {recent.map((hw) => {
-          const submitted = !!dayLinks[hw.id];
+          const submitted = !!dayLinks[hw.id] || Object.keys(hwFiles[hw.id] ?? {}).length > 0;
           const allItems = [
             ...(hw.vocab ?? []), ...(hw.listening ?? []),
             ...(hw.reading ?? []), ...(hw.practice ?? []), ...(hw.other ?? []),
@@ -1271,11 +1274,13 @@ function PersonalHWSection({
   code,
   submissions,
   dayLinks,
+  hwFiles,
 }: {
   homework: Homework[];
   code: string;
   submissions: Record<string, { ticked?: boolean; url?: string; updatedAt?: string }>;
   dayLinks: Record<string, { link?: string }>;
+  hwFiles: HwFilesMap;
 }) {
   const [filter, setFilter] = useState<"active" | "all" | "done" | "expired">("all");
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
@@ -1500,45 +1505,59 @@ function PersonalHWSection({
                 {/* Expanded detail */}
                 {isOpen && (
                   <div className="border-t" style={{ borderColor: "var(--border)" }}>
-                    {/* Day link row */}
-                    <div className="flex items-center gap-2 px-3 py-2 border-b text-xs"
-                      style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}>
-                      <span className="font-semibold shrink-0" style={{ color: "var(--text-secondary)" }}>📎 BÀI NỘP:</span>
-                      {dayLink ? (
-                        dayLink.startsWith("https://firebasestorage.googleapis.com") ? (
-                          <div className="flex items-center gap-2 flex-1 min-w-0">
+                    {/* File gallery row */}
+                    {(() => {
+                      const files = hwFiles[hw.id] ?? {};
+                      const fileEntries = Object.entries(files);
+                      const hasNewFiles = fileEntries.length > 0;
+                      const oldLink = dayLink && !dayLink.startsWith("https://firebasestorage.googleapis.com") ? dayLink : null;
+                      if (!hasNewFiles && !dayLink) return (
+                        <div className="flex items-center gap-2 px-3 py-2 border-b text-xs" style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}>
+                          <span className="font-semibold shrink-0 text-[10px]" style={{ color: "var(--text-secondary)" }}>📎 BÀI NỘP:</span>
+                          <span className="text-xs" style={{ color: "var(--text-muted)" }}>Chưa nộp</span>
+                        </div>
+                      );
+                      return (
+                        <div className="px-3 py-2 border-b" style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}>
+                          <div className="flex items-center gap-2 mb-1.5">
+                            <span className="font-semibold text-[10px] shrink-0" style={{ color: "var(--text-secondary)" }}>📎 BÀI NỘP:</span>
+                            {hwViewed[hw.id] && <span className="text-[10px] font-semibold" style={{ color: "rgb(5,150,105)" }}>✓ Đã xem</span>}
                             <button
-                              onClick={() => { setFileModal({ url: dayLink, hwId: hw.id }); setNoteInput(hwViewed[hw.id]?.note ?? ""); }}
-                              className="flex items-center gap-1.5 hover:opacity-75 transition-opacity"
+                              onClick={() => { setFileModal({ url: fileEntries[0]?.[1]?.url ?? dayLink ?? "", hwId: hw.id }); setNoteInput(hwViewed[hw.id]?.note ?? ""); }}
+                              className="text-[10px] px-1.5 py-0.5 rounded hover:opacity-75"
+                              style={{ background: "rgba(26,62,128,.1)", color: "#2860A8" }}
                             >
-                              {/\.(mp4|mov|avi|webm|mkv)/i.test(dayLink.split("?")[0]) ? (
-                                <span className="text-sm px-2 py-1 rounded" style={{ background: "rgba(26,62,128,.1)", color: "#2860A8" }}>🎬 Xem video</span>
-                              ) : (
-                                <img src={dayLink} alt="" className="rounded" style={{ height: 40, width: 56, objectFit: "cover", border: "1px solid var(--border)" }} />
-                              )}
+                              {hwViewed[hw.id] ? "Xem lại" : "Xem & đánh dấu"}
                             </button>
-                            {hwViewed[hw.id] ? (
-                              <span className="text-[10px] font-semibold shrink-0" style={{ color: "rgb(5,150,105)" }}>✓ Đã xem</span>
-                            ) : (
-                              <button
-                                onClick={() => { setFileModal({ url: dayLink, hwId: hw.id }); setNoteInput(""); }}
-                                className="text-[10px] px-1.5 py-0.5 rounded shrink-0 hover:opacity-75"
-                                style={{ background: "rgba(26,62,128,.1)", color: "#2860A8" }}
-                              >
-                                Xem & đánh dấu
-                              </button>
+                          </div>
+                          <div className="flex flex-wrap gap-1.5">
+                            {fileEntries.map(([fileId, file]) => {
+                              const isVid = /\.(mp4|mov|avi|webm|mkv)/i.test(file.url.split("?")[0]);
+                              return (
+                                <div key={fileId} style={{ position: "relative" }}>
+                                  <button onClick={() => { setFileModal({ url: file.url, hwId: hw.id }); setNoteInput(hwViewed[hw.id]?.note ?? ""); }} className="hover:opacity-80 transition-opacity">
+                                    {isVid ? (
+                                      <div style={{ width: 52, height: 52, background: "rgba(26,62,128,.08)", border: "1px solid rgba(26,62,128,.2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem" }}>🎬</div>
+                                    ) : (
+                                      <img src={file.url} alt="" style={{ width: 52, height: 52, objectFit: "cover", border: "1px solid var(--border)", display: "block" }} />
+                                    )}
+                                  </button>
+                                  <button
+                                    onClick={async () => { if (confirm("Xoá file này?")) await deleteHwFile(code, hw.id, fileId, file.url); }}
+                                    style={{ position: "absolute", top: -5, right: -5, width: 15, height: 15, borderRadius: "50%", background: "rgba(239,68,68,.85)", border: "none", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".5rem", fontWeight: 700, padding: 0 }}
+                                  >✕</button>
+                                </div>
+                              );
+                            })}
+                            {oldLink && (
+                              <a href={oldLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-[10px] px-2 py-1 rounded" style={{ background: "rgba(74,124,89,.1)", color: "#4A7C59", border: "1px solid rgba(74,124,89,.2)" }}>
+                                🔗 Drive
+                              </a>
                             )}
                           </div>
-                        ) : (
-                          <a href={dayLink} target="_blank" rel="noopener noreferrer"
-                            className="truncate flex-1" style={{ color: "var(--accent-primary)" }}>
-                            {dayLink}
-                          </a>
-                        )
-                      ) : (
-                        <span style={{ color: "var(--text-muted)" }}>Chưa nộp</span>
-                      )}
-                    </div>
+                        </div>
+                      );
+                    })()}
 
                     {/* Per-section items */}
                     <div className="px-3 py-3 space-y-3">
@@ -1794,6 +1813,7 @@ export default function StudentEditorPage() {
   const { homework } = useHomework(code);
   const { dayLinks } = useDayLinks(code);
   const { submissions } = useSubmissions(code);
+  const { hwFiles } = useHwFiles(code);
 
   const [freezing, setFreezing] = useState(false);
   const [deleting, setDeleting] = useState(false);
@@ -1920,6 +1940,7 @@ export default function StudentEditorPage() {
             code={code}
             submissions={submissions}
             dayLinks={dayLinks}
+            hwFiles={hwFiles}
           />
         </div>
 

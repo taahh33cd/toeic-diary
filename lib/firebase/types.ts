@@ -167,6 +167,16 @@ export interface Submission {
 
 export type SubmissionsMap = Record<string, Submission>;
 
+// ─── HwFiles (path: hwFiles/{studentCode}/{hwId}/{fileId}) ───────────────────
+
+export interface HwFile {
+  url: string;
+  uploadedAt: string;
+  name?: string;
+}
+export type HwFilesForHw = Record<string, HwFile>;
+export type HwFilesMap = Record<string, HwFilesForHw>;
+
 // ─── HwViewed (path: hwViewed/{studentCode}/{hwId}) ──────────────────────────
 
 export interface HwViewed {

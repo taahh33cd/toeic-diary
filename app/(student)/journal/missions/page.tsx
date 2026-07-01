@@ -7,7 +7,9 @@ import { useHomework } from "@/hooks/firebase/useHomework";
 import { useGoal } from "@/hooks/firebase/useGoal";
 import { useSubmissions } from "@/hooks/firebase/useSubmissions";
 import { useDayLinks } from "@/hooks/firebase/useDayLinks";
-import { saveSubmission, removeSubmission, saveProgress, saveDayLink, uploadHomeworkFile } from "@/lib/firebase/helpers";
+import { saveSubmission, removeSubmission, saveProgress, uploadHomeworkFile, addHwFile, deleteHwFile } from "@/lib/firebase/helpers";
+import { useHwFiles } from "@/hooks/firebase/useHwFiles";
+import type { HwFilesForHw } from "@/lib/firebase/types";
 import { awardXp } from "@/lib/xp-client";
 import type { Homework } from "@/lib/firebase/types";
 
@@ -167,28 +169,20 @@ function CongratsPopup({ onClose }: { onClose: () => void }) {
 // ─── Homework card ────────────────────────────────────────────────────────────
 
 function HwCard({
-  hw, isCurrent, studentCode, submitted, submittedUrl, dayLinkUrl, onDone, allSubmissions,
+  hw, isCurrent, studentCode, submitted, submittedUrl, dayLinkUrl, onDone, allSubmissions, hwFilesForHw,
 }: {
   hw: Homework; isCurrent: boolean; studentCode: string;
   submitted: boolean; submittedUrl?: string; dayLinkUrl?: string;
   onDone?: () => void;
   allSubmissions: Record<string, { ticked?: boolean }>;
+  hwFilesForHw: HwFilesForHw;
 }) {
   const [open, setOpen] = useState(isCurrent);
-  const [submitting, setSubmitting] = useState(false);
-  const [url, setUrl] = useState(dayLinkUrl ?? submittedUrl ?? "");
-  const [done, setDone] = useState(submitted);
   const [showDescMap, setShowDescMap] = useState<Record<string, boolean>>({});
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const [localPreview, setLocalPreview] = useState<string | null>(null);
-  const [uploadPct, setUploadPct] = useState<number | null>(null);
-  const [showUrlInput, setShowUrlInput] = useState(false);
+  const [uploading, setUploading] = useState<number | null>(null);
+  const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null);
   const [lightboxUrl, setLightboxUrl] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    return () => { if (localPreview) URL.revokeObjectURL(localPreview); };
-  }, [localPreview]);
 
   // Per-item check state — initialized from Firebase, persisted on toggle
   const [checked, setChecked] = useState<Record<string, boolean>>(() => {
@@ -239,50 +233,29 @@ function HwCard({
   const dateLabel = startDate.toLocaleDateString("vi-VN", { day: "numeric", month: "long" });
   const endLabel  = endDate ? endDate.toLocaleDateString("vi-VN", { day: "numeric", month: "numeric" }) : null;
 
-  async function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
+  async function handleFileSelect(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
     if (!file) return;
-    if (file.size > 50 * 1024 * 1024) {
-      alert("File quá lớn! Video tối đa 50MB.");
-      return;
-    }
+    if (fileInputRef.current) fileInputRef.current.value = "";
+    if (file.size > 50 * 1024 * 1024) { alert("File quá lớn! Video tối đa 50MB."); return; }
     let finalFile = file;
     if (file.type.startsWith("image/")) {
       const imageCompression = (await import("browser-image-compression")).default;
       finalFile = await imageCompression(file, { maxSizeMB: 1, maxWidthOrHeight: 1920, useWebWorker: true });
     }
-    setSelectedFile(finalFile);
-    setLocalPreview(URL.createObjectURL(finalFile));
-    setUrl("");
+    setUploading(0);
+    try {
+      const url = await uploadHomeworkFile(studentCode, hw.id, finalFile, setUploading);
+      await addHwFile(studentCode, hw.id, url, file.name);
+      await awardXp("homework_submit", { hwDate: hw.date });
+    } finally {
+      setUploading(null);
+    }
   }
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    if (submitting || done) return;
-    setSubmitting(true);
-    try {
-      let finalUrl = url.trim();
-      if (selectedFile) {
-        setUploadPct(0);
-        finalUrl = await uploadHomeworkFile(studentCode, hw.id, selectedFile, setUploadPct);
-        setUploadPct(null);
-      }
-      await saveSubmission(studentCode, hw.date, {
-        ticked: true,
-        url: finalUrl || undefined,
-        updatedAt: new Date().toISOString(),
-      });
-      if (finalUrl) await saveDayLink(studentCode, hw.id, finalUrl);
-      await saveProgress(studentCode, hw.date, {
-        done: totalItems,
-        total: totalItems,
-        updatedAt: new Date().toISOString().slice(0, 10),
-      });
-      await awardXp("homework_submit", { hwDate: hw.date });
-      setDone(true);
-    } finally {
-      setSubmitting(false);
-    }
+  async function handleDeleteFile(fileId: string, fileUrl: string) {
+    setDeleteConfirm(null);
+    await deleteHwFile(studentCode, hw.id, fileId, fileUrl);
   }
 
   function toggleItem(sec: typeof SECTIONS[number], i: number) {
@@ -421,169 +394,82 @@ function HwCard({
         >
         <div style={{ padding: ".9rem 1.1rem 1.1rem" }}>
 
-          {/* ── Submit form at TOP (if not done) ── */}
-          {!done && (
-            <form
-              onSubmit={handleSubmit}
-              style={{ marginBottom: ".9rem", border: "1px solid var(--border,#DDD0BC)", background: "var(--bg-primary,#F5EFE6)" }}
-            >
-              <div style={{ padding: ".4rem .75rem", borderBottom: "1px solid var(--border,#DDD0BC)", fontSize: ".6rem", fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: "#9A8672", display: "flex", alignItems: "center", gap: ".4rem" }}>
-                📎 GỬI BẰNG CHỨNG CHO GIÁO VIÊN <span style={{ fontWeight: 400, opacity: .6 }}>(tùy chọn)</span>
-              </div>
-              <div style={{ padding: ".5rem .75rem", display: "flex", flexDirection: "column", gap: ".5rem" }}>
-                {/* Hidden file input */}
-                <input
-                  ref={fileInputRef}
-                  type="file"
-                  accept="image/*,video/mp4,video/quicktime"
-                  style={{ display: "none" }}
-                  onChange={handleFileChange}
-                />
+          {/* ── File gallery + upload ── */}
+          <div style={{ marginBottom: ".9rem", border: "1px solid var(--border,#DDD0BC)", background: "var(--bg-primary,#F5EFE6)" }}>
+            <div style={{ padding: ".4rem .75rem", borderBottom: "1px solid var(--border,#DDD0BC)", fontSize: ".6rem", fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: "#9A8672", display: "flex", alignItems: "center", gap: ".4rem" }}>
+              📎 BẰNG CHỨNG <span style={{ fontWeight: 400, opacity: .6 }}>(tùy chọn)</span>
+            </div>
+            <div style={{ padding: ".5rem .75rem", display: "flex", flexDirection: "column", gap: ".5rem" }}>
 
-                {/* File preview OR upload zone */}
-                {selectedFile ? (
-                  <div style={{ display: "flex", alignItems: "center", gap: ".65rem", padding: ".45rem .6rem", border: "1px solid var(--border,#DDD0BC)", background: "var(--bg-elevated,#FBF7F2)" }}>
-                    {localPreview && !selectedFile.type.startsWith("video/") ? (
-                      <img src={localPreview} alt="" style={{ width: 52, height: 52, objectFit: "cover", flexShrink: 0, border: "1px solid var(--border,#DDD0BC)" }} />
-                    ) : (
-                      <div style={{ width: 52, height: 52, background: "rgba(26,62,128,.06)", border: "1px solid rgba(26,62,128,.2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.4rem", flexShrink: 0 }}>
-                        🎬
+              {/* Gallery of uploaded files */}
+              {Object.keys(hwFilesForHw).length > 0 && (
+                <div style={{ display: "flex", flexWrap: "wrap", gap: ".5rem" }}>
+                  {Object.entries(hwFilesForHw).map(([fileId, file]) => {
+                    const isVid = /\.(mp4|mov|avi|webm|mkv)/i.test(file.url.split("?")[0]);
+                    const isConfirming = deleteConfirm === fileId;
+                    return (
+                      <div key={fileId} style={{ position: "relative", flexShrink: 0 }}>
+                        {isConfirming ? (
+                          <div style={{ width: 72, height: 72, background: "rgba(176,58,42,.92)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: ".25rem" }}>
+                            <span style={{ fontSize: ".6rem", color: "#fff", fontWeight: 700 }}>Xoá?</span>
+                            <div style={{ display: "flex", gap: ".3rem" }}>
+                              <button type="button" onClick={() => handleDeleteFile(fileId, file.url)} style={{ padding: ".2rem .45rem", background: "#fff", border: "none", color: "#B03A2A", fontSize: ".65rem", fontWeight: 700, cursor: "pointer" }}>Có</button>
+                              <button type="button" onClick={() => setDeleteConfirm(null)} style={{ padding: ".2rem .4rem", background: "rgba(255,255,255,.25)", border: "none", color: "#fff", fontSize: ".65rem", cursor: "pointer" }}>Không</button>
+                            </div>
+                          </div>
+                        ) : isVid ? (
+                          <button type="button" onClick={() => setLightboxUrl(file.url)} style={{ width: 72, height: 72, background: "rgba(26,62,128,.08)", border: "1px solid rgba(26,62,128,.25)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: ".15rem", cursor: "pointer" }}>
+                            <span style={{ fontSize: "1.3rem" }}>🎬</span>
+                            <span style={{ fontSize: ".55rem", color: "#2860A8", fontWeight: 600 }}>Video</span>
+                          </button>
+                        ) : (
+                          <img src={file.url} alt="" onClick={() => setLightboxUrl(file.url)} style={{ width: 72, height: 72, objectFit: "cover", cursor: "pointer", border: "1px solid var(--border,#DDD0BC)", display: "block" }} />
+                        )}
+                        {!isConfirming && (
+                          <button type="button" onClick={() => setDeleteConfirm(fileId)} style={{ position: "absolute", top: -7, right: -7, width: 18, height: 18, borderRadius: "50%", background: "rgba(176,58,42,.88)", border: "2px solid var(--bg-primary,#F5EFE6)", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".55rem", fontWeight: 700, padding: 0 }}>✕</button>
+                        )}
                       </div>
-                    )}
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ fontSize: ".78rem", fontWeight: 600, color: "var(--text-primary,#2C1E0F)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-                        {selectedFile.name}
-                      </div>
-                      <div style={{ fontSize: ".65rem", color: "#9A8672", marginTop: ".1rem" }}>
-                        {(selectedFile.size / 1024 / 1024).toFixed(1)} MB{selectedFile.type.startsWith("image/") ? " · Đã nén" : ""}
-                      </div>
-                    </div>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setSelectedFile(null);
-                        if (localPreview) { URL.revokeObjectURL(localPreview); setLocalPreview(null); }
-                        if (fileInputRef.current) fileInputRef.current.value = "";
-                      }}
-                      style={{ flexShrink: 0, background: "none", border: "1px solid var(--border,#DDD0BC)", width: 26, height: 26, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", color: "#9A8672", fontSize: ".75rem" }}
-                    >
-                      ✕
-                    </button>
+                    );
+                  })}
+                </div>
+              )}
+
+              {/* Backward compat: old daylink / drive link (read-only) */}
+              {(dayLinkUrl || submittedUrl) && (() => {
+                const fileUrl = (dayLinkUrl ?? submittedUrl)!;
+                if (fileUrl.startsWith("https://firebasestorage.googleapis.com")) return null;
+                return (
+                  <div style={{ display: "flex", alignItems: "center", gap: ".5rem", padding: ".35rem .6rem", background: "rgba(74,124,89,.06)", border: "1px solid rgba(74,124,89,.2)" }}>
+                    <span style={{ fontSize: ".6rem", fontWeight: 700, color: "#4A7C59", flexShrink: 0, letterSpacing: ".06em" }}>🔗 LINK:</span>
+                    <a href={fileUrl} target="_blank" rel="noopener noreferrer" style={{ fontSize: ".75rem", color: "#4A7C59", textDecoration: "underline", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", flex: 1, minWidth: 0 }}>{fileUrl}</a>
                   </div>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => fileInputRef.current?.click()}
-                    style={{ width: "100%", padding: ".9rem .75rem", border: "1.5px dashed var(--border,#DDD0BC)", background: "transparent", cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", gap: ".3rem" }}
-                  >
-                    <span style={{ fontSize: "1.4rem" }}>📤</span>
-                    <span style={{ fontSize: ".8rem", fontWeight: 700, color: "var(--text-primary,#2C1E0F)" }}>Chọn ảnh hoặc video</span>
-                    <span style={{ fontSize: ".64rem", color: "#9A8672" }}>Ảnh tự nén về ≤1MB · Video tối đa 50MB</span>
-                  </button>
-                )}
+                );
+              })()}
 
-                {/* Upload progress bar */}
-                {uploadPct !== null && (
+              {/* Hidden file input */}
+              <input ref={fileInputRef} type="file" accept="image/*,video/mp4,video/quicktime" style={{ display: "none" }} onChange={handleFileSelect} />
+
+              {/* Upload button OR progress */}
+              {uploading !== null ? (
+                <div>
+                  <div style={{ fontSize: ".68rem", color: "#9A8672", marginBottom: ".2rem" }}>Đang tải lên {uploading}%…</div>
                   <div style={{ height: 3, background: "rgba(0,0,0,.08)", overflow: "hidden" }}>
-                    <div style={{ height: "100%", background: "#C4622D", width: `${uploadPct}%`, transition: "width .3s ease" }} />
+                    <div style={{ height: "100%", background: "#C4622D", width: `${uploading}%`, transition: "width .3s ease" }} />
                   </div>
-                )}
-
-                {/* Submit + fallback URL toggle */}
-                <div style={{ display: "flex", alignItems: "center", gap: ".65rem", flexWrap: "wrap" }}>
-                  <button
-                    type="submit"
-                    disabled={submitting || (!selectedFile && !url.trim())}
-                    style={{
-                      flexShrink: 0, padding: ".42rem 1.1rem",
-                      background: "#C4622D", color: "#fff", border: "none",
-                      fontSize: ".8rem", fontWeight: 700, whiteSpace: "nowrap",
-                      cursor: (submitting || (!selectedFile && !url.trim())) ? "not-allowed" : "pointer",
-                      opacity: (submitting || (!selectedFile && !url.trim())) ? 0.5 : 1,
-                    }}
-                  >
-                    {submitting
-                      ? (uploadPct !== null ? `Đang tải ${uploadPct}%…` : "Đang nộp…")
-                      : "Nộp bài →"
-                    }
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setShowUrlInput(v => !v)}
-                    style={{ fontSize: ".7rem", color: "#9A8672", background: "none", border: "none", cursor: "pointer", padding: 0, textDecoration: "underline" }}
-                  >
-                    {showUrlInput ? "Ẩn link Drive" : "Dán link Drive thay thế"}
-                  </button>
                 </div>
-
-                {/* Fallback URL input */}
-                {showUrlInput && (
-                  <input
-                    type="url"
-                    placeholder="Paste link Google Drive tổng hợp..."
-                    value={url}
-                    onChange={e => {
-                      setUrl(e.target.value);
-                      if (e.target.value) {
-                        setSelectedFile(null);
-                        if (localPreview) { URL.revokeObjectURL(localPreview); setLocalPreview(null); }
-                      }
-                    }}
-                    onClick={e => e.stopPropagation()}
-                    style={{
-                      width: "100%", padding: ".4rem .7rem",
-                      border: "1px solid var(--border,#DDD0BC)",
-                      background: "var(--bg-elevated,#FBF7F2)",
-                      color: "var(--text-primary,#2C1E0F)",
-                      fontSize: ".82rem", outline: "none",
-                      boxSizing: "border-box",
-                    }}
-                    aria-label="Link bài làm"
-                  />
-                )}
-              </div>
-            </form>
-          )}
-
-          {/* ── Bài đã nộp (show whenever file exists) ── */}
-          {(dayLinkUrl || submittedUrl) && (() => {
-            const fileUrl = (dayLinkUrl ?? submittedUrl)!;
-            const fromStorage = fileUrl.startsWith("https://firebasestorage.googleapis.com");
-            const isVid = /\.(mp4|mov|avi|webm|mkv)/i.test(fileUrl.split("?")[0]);
-            if (fromStorage) {
-              return (
-                <div style={{ marginBottom: ".9rem" }}>
-                  {isVid ? (
-                    <button
-                      type="button"
-                      onClick={() => setLightboxUrl(fileUrl)}
-                      style={{ display: "flex", alignItems: "center", gap: ".6rem", padding: ".5rem .75rem", background: "rgba(26,62,128,.06)", border: "1px solid rgba(26,62,128,.2)", cursor: "pointer", width: "100%" }}
-                    >
-                      <span style={{ fontSize: "1.1rem" }}>🎬</span>
-                      <span style={{ fontSize: ".78rem", fontWeight: 600, color: "#2860A8" }}>Xem video bài nộp</span>
-                    </button>
-                  ) : (
-                    <img
-                      src={fileUrl}
-                      alt="Bài nộp"
-                      onClick={() => setLightboxUrl(fileUrl)}
-                      style={{ maxHeight: 80, objectFit: "cover", cursor: "pointer", border: "1px solid rgba(74,124,89,.3)", display: "block" }}
-                    />
-                  )}
-                </div>
-              );
-            }
-            return (
-              <div style={{ padding: ".5rem .75rem", marginBottom: ".9rem", background: "rgba(74,124,89,.06)", border: "1px solid rgba(74,124,89,.2)", display: "flex", alignItems: "center", gap: ".6rem", flexWrap: "wrap" }}>
-                <span style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", color: "#4A7C59", flexShrink: 0 }}>
-                  🔗 LINK TỔNG HỢP:
-                </span>
-                <a href={fileUrl} target="_blank" rel="noopener noreferrer" style={{ fontSize: ".8rem", color: "#4A7C59", textDecoration: "underline", flex: 1, minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-                  {fileUrl}
-                </a>
-              </div>
-            );
-          })()}
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => fileInputRef.current?.click()}
+                  style={{ width: "100%", padding: ".6rem .75rem", border: "1.5px dashed var(--border,#DDD0BC)", background: "transparent", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: ".45rem" }}
+                >
+                  <span style={{ fontSize: ".9rem" }}>📤</span>
+                  <span style={{ fontSize: ".78rem", fontWeight: 600, color: "var(--text-primary,#2C1E0F)" }}>Thêm ảnh / video</span>
+                  <span style={{ fontSize: ".62rem", color: "#9A8672" }}>· Ảnh ≤1MB · Video ≤50MB</span>
+                </button>
+              )}
+            </div>
+          </div>
 
           {/* ── Section groups ── */}
           {sections.length === 0 ? (
@@ -779,6 +665,7 @@ export default function MissionsPage() {
   const { goal, loading: goalLoading } = useGoal(profile?.studentCode);
   const { submissions, loading: subLoading } = useSubmissions(profile?.studentCode);
   const { dayLinks } = useDayLinks(profile?.studentCode);
+  const { hwFiles } = useHwFiles(profile?.studentCode);
   const [showCongrats, setShowCongrats] = useState(false); // G11
 
   const loading = profileLoading || hwLoading || goalLoading || subLoading;
@@ -922,6 +809,7 @@ export default function MissionsPage() {
                 dayLinkUrl={(dayLinks as Record<string, { link?: string }>)[hw.id]?.link}
                 onDone={() => setShowCongrats(true)}
                 allSubmissions={submissions}
+                hwFilesForHw={hwFiles[hw.id] ?? {}}
               />
             </motion.div>
           ))}

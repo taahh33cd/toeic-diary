@@ -4,8 +4,9 @@ import {
   update,
   remove,
   get,
+  push,
 } from "firebase/database";
-import { ref as storageRef, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { ref as storageRef, uploadBytesResumable, getDownloadURL, deleteObject } from "firebase/storage";
 import { firebaseDb, firebaseStorage } from "./client";
 import type {
   Student,
@@ -590,6 +591,34 @@ export async function clearReviewProgress(
 }
 
 // ─── Homework File Upload (Firebase Storage) ──────────────────────────────────
+
+// ─── Hw Files (path: hwFiles/{studentCode}/{hwId}/{fileId}) ──────────────────
+
+export async function addHwFile(
+  code: string,
+  hwId: string,
+  url: string,
+  name?: string
+): Promise<string> {
+  const newRef = push(ref(firebaseDb, `hwFiles/${code}/${hwId}`));
+  await set(newRef, { url, uploadedAt: new Date().toISOString(), ...(name ? { name } : {}) });
+  return newRef.key!;
+}
+
+export async function deleteHwFile(
+  code: string,
+  hwId: string,
+  fileId: string,
+  storageUrl?: string
+): Promise<void> {
+  await remove(ref(firebaseDb, `hwFiles/${code}/${hwId}/${fileId}`));
+  if (storageUrl?.startsWith("https://firebasestorage.googleapis.com")) {
+    try {
+      const match = storageUrl.match(/\/o\/(.+?)\?/);
+      if (match) await deleteObject(storageRef(firebaseStorage, decodeURIComponent(match[1])));
+    } catch { /* file may already be gone */ }
+  }
+}
 
 // ─── Hw Viewed (path: hwViewed/{studentCode}/{hwId}) ─────────────────────────
 
