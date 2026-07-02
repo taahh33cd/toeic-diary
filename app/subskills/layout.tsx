@@ -1,4 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
+import { redirect } from "next/navigation";
 import { prisma } from "@/lib/db/prisma";
 import { SubskillsHeader } from "@/components/subskills/SubskillsHeader";
 
@@ -13,6 +14,7 @@ export default async function SubskillsLayout({
   const {
     data: { user },
   } = await supabase.auth.getUser();
+  if (!user) redirect("/auth/login?next=/subskills");
 
   const profile = user
     ? await prisma.profile
