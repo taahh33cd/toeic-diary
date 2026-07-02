@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
+import { createClient } from "@/lib/supabase/server";
+import { prisma } from "@/lib/db/prisma";
 import { ThemePickerModal } from "@/components/journal/ThemePickerModal";
 import { PushTestButton } from "./_push-test";
 
 export const metadata: Metadata = { title: "Cài đặt" };
 
-export default function SettingsPage() {
+export default async function SettingsPage() {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  const profile = user
+    ? await prisma.profile.findUnique({ where: { id: user.id }, select: { studentCode: true } })
+    : null;
+
   return (
     <div className="space-y-8 max-w-xl">
       <div>
@@ -25,7 +33,7 @@ export default function SettingsPage() {
         <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
           Kiểm tra xem thông báo push có hoạt động trên thiết bị này không.
         </p>
-        <PushTestButton />
+        <PushTestButton studentCode={profile?.studentCode ?? undefined} />
       </div>
     </div>
   );
