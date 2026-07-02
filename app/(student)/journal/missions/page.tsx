@@ -210,11 +210,19 @@ function HwCard({
   const allItemsChecked = totalItems > 0 && checkedCount === totalItems;
   const isDone    = allItemsChecked;
 
-  // Congrats popup: chỉ fire khi user vừa tick item cuối cùng (không fire khi đã tick sẵn từ trước)
+  // Congrats popup + saveProgress: chỉ fire khi user vừa tick item cuối cùng
   const isMountedRef2 = useRef(false);
   useEffect(() => {
     if (!isMountedRef2.current) { isMountedRef2.current = true; return; }
-    if (allItemsChecked) onDone?.();
+    if (allItemsChecked) {
+      onDone?.();
+      // Trigger Firebase Cloud Function A2 → push notification to admin
+      saveProgress(studentCode, hw.date, {
+        done: totalItems,
+        total: totalItems,
+        updatedAt: new Date().toISOString().slice(0, 10),
+      }).catch(console.error);
+    }
   }, [allItemsChecked]); // eslint-disable-line react-hooks/exhaustive-deps
   const isOverdue = !isDone && hw.date < td && (!hw.endDate || hw.endDate < td);
   const isFuture  = hw.date > td;

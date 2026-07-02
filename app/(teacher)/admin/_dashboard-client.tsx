@@ -513,7 +513,7 @@ export default function AdminDashboardClient() {
     return [...filtered].sort((a, b) => (b.currentWeek ?? 0) - (a.currentWeek ?? 0));
   }, [activeStudents, search]);
 
-  // "Hoàn thành hôm nay": students who have active BTVN today AND submitted dayLink
+  // "Hoàn thành hôm nay": students with active BTVN today who ticked all items
   const { todayHwTotal, todayHwDone } = useMemo(() => {
     let total = 0;
     let done = 0;
@@ -525,10 +525,13 @@ export default function AdminDashboardClient() {
       );
       if (!activeHw) continue;
       total++;
-      if (allDayLinks[student.id]?.[activeHw.id]?.link) done++;
+      const subs = allSubmissions[student.id] ?? {};
+      const dls = allDayLinks[student.id] ?? {};
+      const { done: d, total: t } = calcHwProgress(activeHw, subs, dls);
+      if (t > 0 && d === t) done++;
     }
     return { todayHwTotal: total, todayHwDone: done };
-  }, [activeStudents, allDayLinks, date]);
+  }, [activeStudents, allSubmissions, allDayLinks, date]);
 
   const loading = studentsLoading || bookingsLoading || classesLoading;
 
@@ -579,46 +582,6 @@ export default function AdminDashboardClient() {
             </div>
           </Link>
         ))}
-      </div>
-
-      {/* ── Highlights row ── */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
-        {bestEntry && (
-          <div className="silk-card col-span-2 p-5 rounded-xl flex items-center gap-4 border-l-[4px] border-[#4441c4]">
-            <div className="p-3 rounded-full" style={{ background: "rgba(68,65,196,0.06)" }}>
-              <span className="material-symbols-outlined text-3xl" style={{ color: "#4441c4", fontVariationSettings: "'FILL' 1" }}>
-                emoji_events
-              </span>
-            </div>
-            <div>
-              <span className="text-[10px] font-bold tracking-widest uppercase" style={{ color: "#4441c4" }}>Điểm cao nhất</span>
-              <h3
-                className="text-base font-semibold mt-0.5 mb-0.5"
-                style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}
-              >
-                {bestEntry.name}
-              </h3>
-              <p className="text-xs italic" style={{ color: "rgba(68,65,196,0.7)" }}>{bestEntry.score} điểm TOEIC</p>
-            </div>
-          </div>
-        )}
-
-        {frozenCount > 0 && (
-          <Link href="/admin/students" className="block">
-            <div className="silk-card p-5 rounded-xl flex items-center gap-3 hover:scale-[1.02] transition-all h-full">
-              <div className="p-3 rounded-xl" style={{ background: "rgba(218,226,248,0.4)" }}>
-                <span className="material-symbols-outlined text-2xl" style={{ color: "#565e71" }}>ac_unit</span>
-              </div>
-              <div>
-                <span className="text-[10px] font-bold tracking-widest uppercase" style={{ color: "#565e71" }}>Đóng băng</span>
-                <h3 className="text-sm font-medium mt-0.5" style={{ fontFamily: "var(--font-admin-serif)", color: "var(--text-primary)" }}>
-                  {frozenCount} học viên
-                </h3>
-                <p className="text-[11px] mt-0.5 opacity-60" style={{ color: "var(--text-secondary)" }}>Đang tạm dừng học</p>
-              </div>
-            </div>
-          </Link>
-        )}
       </div>
 
       {/* ── Today's classes ── */}
@@ -764,8 +727,9 @@ export default function AdminDashboardClient() {
           <span className="material-symbols-outlined text-[17px]" style={{ color: "var(--text-muted)", fontVariationSettings: "'wght' 300" }}>bolt</span>
           Truy cập nhanh
         </h2>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-3">
           {[
+            { href: "/admin/classes",    icon: "groups",         label: "Lớp học",      bg: "rgba(86,94,113,0.08)", iconColor: "#565e71", filled: true },
             { href: "/admin/homework",   icon: "assignment_add", label: "Giao bài tập", bg: "rgba(68,65,196,0.05)",  iconColor: "#4441c4" },
             { href: "/admin/scores",     icon: "track_changes",  label: "Nhập điểm",    bg: "rgba(86,94,113,0.08)", iconColor: "#565e71", filled: true },
             { href: "/admin/slots",      icon: "alarm_add",      label: "Tạo khung giờ",bg: "rgba(85,84,96,0.08)",  iconColor: "#555460" },
@@ -817,36 +781,6 @@ export default function AdminDashboardClient() {
           </div>
         </div>
       )}
-
-      {/* ── CTA banner ── */}
-      <div
-        className="relative overflow-hidden rounded-2xl p-7 text-white silk-card"
-        style={{ background: "#1a1c20" }}
-      >
-        <div className="relative z-10 md:w-2/3">
-          <h3
-            className="text-xl font-semibold mb-2"
-            style={{ fontFamily: "var(--font-admin-serif)" }}
-          >
-            Sẵn sàng cho khóa học mới?
-          </h3>
-          <p className="text-sm mb-5 opacity-60 max-w-md leading-relaxed">
-            Phân tích dữ liệu học tập và tối ưu hóa giáo án của bạn chỉ trong vài bước đơn giản.
-          </p>
-          <Link
-            href="/admin/students"
-            className="inline-block px-6 py-2.5 bg-white text-[#1a1c20] text-sm font-bold rounded-xl hover:scale-105 transition-transform"
-            style={{ letterSpacing: "0.04em" }}
-          >
-            KHÁM PHÁ NGAY
-          </Link>
-        </div>
-        <div className="absolute right-6 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
-          <span className="material-symbols-outlined" style={{ fontSize: "10rem", fontVariationSettings: "'FILL' 1" }}>
-            auto_awesome
-          </span>
-        </div>
-      </div>
 
     </div>
   );
