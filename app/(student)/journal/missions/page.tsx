@@ -34,7 +34,7 @@ function calcHwIsDone(
     const items = hw[sec] ?? [];
     for (let i = 0; i < items.length; i++) {
       const sub = submissions[`${hw.id}_${sec}_${i}`];
-      if (sub?.ticked || sub?.url) done++;
+      if (sub?.ticked) done++;
     }
   }
   return done === total;

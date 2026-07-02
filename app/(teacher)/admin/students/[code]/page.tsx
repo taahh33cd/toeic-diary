@@ -1049,7 +1049,7 @@ function calcHwProgress(
     const items = hw[k] ?? [];
     for (let i = 0; i < items.length; i++) {
       const sub = submissions[`${hw.id}_${k}_${i}`];
-      if (sub?.ticked || sub?.url) done++;
+      if (sub?.ticked) done++;
     }
   }
   return { done, total };

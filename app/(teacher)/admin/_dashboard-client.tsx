@@ -48,14 +48,13 @@ function calcHwProgress(
   let total = 0;
   for (const sec of HW_SECTIONS) total += (hw[sec] as HwItem[] | undefined)?.length ?? 0;
   if (total === 0) return { done: 0, total: 0 };
-  if (dayLinks[hw.id]?.link) return { done: total, total };
   let done = 0;
   for (const sec of HW_SECTIONS) {
     const items = hw[sec] as HwItem[] | undefined;
     if (!items) continue;
     for (let i = 0; i < items.length; i++) {
       const sub = submissions[`${hw.id}_${sec}_${i}`];
-      if (sub?.ticked || sub?.url) done++;
+      if (sub?.ticked) done++;
     }
   }
   return { done, total };
@@ -87,9 +86,8 @@ function YesterdayIncompleteCard({
         if (deadline !== yesterday) continue;
         const subs = allSubmissions[student.id] ?? {};
         const dls = allDayLinks[student.id] ?? {};
-        const submitted = !!(dls[hw.id]?.link) || !!(subs[hw.date]?.ticked);
-        if (submitted) continue;
         const { done, total } = calcHwProgress(hw, subs, dls);
+        if (total === 0 || done === total) continue;
         result.push({ student, hw, done, total });
       }
     }

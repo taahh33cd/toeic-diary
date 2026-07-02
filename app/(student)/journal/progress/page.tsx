@@ -43,8 +43,7 @@ function calcProgress(
   hw: Homework,
   submissions: SubmissionsMap,
   dayLinks: DayLinksMap
-): { done: number; total: number; mode: "daylink" | "ticks" | "empty" } {
-  // Count total items
+): { done: number; total: number; mode: "ticks" | "empty" } {
   let total = 0;
   for (const sec of SECTIONS) {
     total += (hw[sec] as HwItem[] | undefined)?.length ?? 0;
@@ -52,12 +51,6 @@ function calcProgress(
 
   if (total === 0) return { done: 0, total: 0, mode: "empty" };
 
-  // C3: nộp link ngày → done = total
-  if (dayLinks[hw.id]?.link) {
-    return { done: total, total, mode: "daylink" };
-  }
-
-  // C3: đếm từng tick riêng lẻ
   let done = 0;
   for (const sec of SECTIONS) {
     const items = hw[sec] as HwItem[] | undefined;
@@ -65,7 +58,7 @@ function calcProgress(
     for (let i = 0; i < items.length; i++) {
       const key = `${hw.id}_${sec}_${i}`;
       const sub = submissions[key];
-      if (sub?.ticked || sub?.url) done++;
+      if (sub?.ticked) done++;
     }
   }
 
@@ -113,26 +106,12 @@ function StatusBadge({
   isOverdue,
   isFuture,
 }: {
-  mode: "daylink" | "ticks" | "empty";
+  mode: "ticks" | "empty";
   isDone: boolean;
   isToday: boolean;
   isOverdue: boolean;
   isFuture: boolean;
 }) {
-  // C3: distinguish how it was completed
-  if (isDone && mode === "daylink") {
-    return (
-      <span style={{
-        display: "inline-flex", alignItems: "center", gap: ".25rem",
-        fontSize: ".65rem", fontWeight: 600,
-        padding: ".2rem .55rem", borderRadius: 99,
-        background: "rgba(46,204,113,.14)", color: "#27AE60",
-        whiteSpace: "nowrap",
-      }}>
-        🔗 Nộp link
-      </span>
-    );
-  }
   if (isDone && mode === "ticks") {
     return (
       <span style={{
