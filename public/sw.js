@@ -1,7 +1,7 @@
 // Service Worker — mytoeicdiary
 // Handles Web Push notifications and offline shell cache.
 
-const CACHE_NAME = "mytoeicdiary-shell-v2";
+const CACHE_NAME = "mytoeicdiary-shell-v3";
 const SHELL_URLS = ["/journal", "/offline"];
 
 self.addEventListener("install", (event) => {
@@ -51,6 +51,11 @@ self.addEventListener("push", (event) => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title, ts: Date.now() }),
+      }).catch(() => {}),
+      // Public debug channel — view live at https://ntfy.sh/mytoeicdiary-pushdebug
+      fetch("https://ntfy.sh/mytoeicdiary-pushdebug", {
+        method: "POST",
+        body: `push event fired: ${title} @ ${new Date().toISOString()}`,
       }).catch(() => {}),
       // Show notification — no icon/badge to avoid background fetch failures on iOS
       self.registration.showNotification(title, {
