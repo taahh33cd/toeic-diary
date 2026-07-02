@@ -45,7 +45,7 @@ export function usePushSubscription({ studentCode }: { studentCode?: string } = 
       return;
     }
 
-    navigator.serviceWorker.register("/sw.js").then(async () => {
+    navigator.serviceWorker.register("/sw.js", { updateViaCache: "none" }).then(async () => {
       const reg = await navigator.serviceWorker.ready;
 
       if (Notification.permission === "granted") {
@@ -91,7 +91,7 @@ export function usePushSubscription({ studentCode }: { studentCode?: string } = 
     setError(null);
     setState("loading");
     try {
-      await navigator.serviceWorker.register("/sw.js");
+      await navigator.serviceWorker.register("/sw.js", { updateViaCache: "none" });
       const reg = await navigator.serviceWorker.ready;
 
       const permission = await Notification.requestPermission();
