@@ -46,11 +46,12 @@ export async function POST() {
         return { id: s.id, domain, status: "ok" };
       } catch (err: unknown) {
         const code = (err as { statusCode?: number }).statusCode;
-        // Auto-clean stale/rejected subscriptions
-        if (code === 410 || code === 404 || code === 401 || code === 400 || code === 403) {
+        const body = (err as { body?: string }).body;
+        // Auto-clean stale/rejected subscriptions (skip 400 while debugging root cause)
+        if (code === 410 || code === 404 || code === 401 || code === 403) {
           await prisma.pushSubscription.delete({ where: { id: s.id } }).catch(() => {});
         }
-        return { id: s.id, domain, status: "error", code };
+        return { id: s.id, domain, status: "error", code, reason: body };
       }
     })
   );

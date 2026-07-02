@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-type SubResult = { id?: string; domain?: string; status: "ok" | "error"; code?: number };
+type SubResult = { id?: string; domain?: string; status: "ok" | "error"; code?: number; reason?: string };
 type TestResponse = { ok: boolean; sent?: number; total?: number; results?: SubResult[]; error?: string; subCount?: number };
 
 export function PushTestButton({ studentCode }: { studentCode?: string }) {
@@ -113,6 +113,7 @@ export function PushTestButton({ studentCode }: { studentCode?: string }) {
               {result.results.map((r, i) => (
                 <li key={i}>
                   {r.status === "ok" ? "✅" : `❌ (${r.code})`} {r.domain ?? "unknown"}
+                  {r.reason && <div className="pl-4 opacity-70">{r.reason}</div>}
                 </li>
               ))}
             </ul>
