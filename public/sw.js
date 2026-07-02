@@ -44,17 +44,23 @@ self.addEventListener("push", (event) => {
     }
   } catch {}
 
-  // No icon/badge: iOS fetches them asynchronously in background
-  // and may silently drop the notification if the fetch fails/times out.
-  // iOS uses the web app manifest icon automatically.
   event.waitUntil(
-    self.registration.showNotification(title, {
-      body,
-      tag: "push",
-      data: { url },
-    }).catch(() =>
-      self.registration.showNotification("Anh Hiếu²", { body: "Bạn có thông báo mới" })
-    )
+    Promise.all([
+      // Ping server so we can confirm SW received this push (check Vercel logs)
+      fetch("/api/push/ping", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ title, ts: Date.now() }),
+      }).catch(() => {}),
+      // Show notification — no icon/badge to avoid background fetch failures on iOS
+      self.registration.showNotification(title, {
+        body,
+        tag: "push",
+        data: { url },
+      }).catch(() =>
+        self.registration.showNotification("Anh Hiếu²", { body: "Bạn có thông báo mới" })
+      ),
+    ])
   );
 });
 
