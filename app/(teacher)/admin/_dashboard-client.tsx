@@ -364,6 +364,81 @@ function StudentMiniCard({ student }: { student: Student & { id: string } }) {
   );
 }
 
+// ─── Today Completed Modal ────────────────────────────────────────────────────
+
+function TodayCompletedModal({
+  students,
+  total,
+  onClose,
+}: {
+  students: Array<{ student: Student & { id: string }; done: number; total: number }>;
+  total: number;
+  onClose: () => void;
+}) {
+  return (
+    <div
+      style={{ position: "fixed", inset: 0, zIndex: 50, background: "rgba(26,28,32,.6)", display: "flex", alignItems: "center", justifyContent: "center" }}
+      onClick={onClose}
+    >
+      <div
+        className="silk-card"
+        style={{ borderRadius: 20, width: "calc(100vw - 2rem)", maxWidth: 460, maxHeight: "80vh", display: "flex", flexDirection: "column", overflow: "hidden" }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "1.25rem 1.5rem", borderBottom: "1px solid rgba(199,196,214,0.3)" }}>
+          <div>
+            <h2 style={{ fontSize: "1rem", fontWeight: 600, color: "#1a1c20", margin: 0, fontFamily: "var(--font-admin-serif)" }}>
+              ✅ Hoàn thành hôm nay
+            </h2>
+            <p style={{ fontSize: ".75rem", color: "var(--text-muted)", margin: "2px 0 0" }}>
+              {students.length}/{total} học viên có bài tập
+            </p>
+          </div>
+          <button onClick={onClose} style={{ background: "none", border: "none", cursor: "pointer", fontSize: "1.3rem", color: "#777585", lineHeight: 1 }}>×</button>
+        </div>
+
+        {/* Body */}
+        <div style={{ overflowY: "auto", flex: 1 }}>
+          {students.length === 0 ? (
+            <p style={{ padding: "2rem", textAlign: "center", fontSize: ".85rem", color: "var(--text-muted)" }}>
+              Chưa có học viên nào hoàn thành hôm nay.
+            </p>
+          ) : (
+            <div>
+              {students.map(({ student, done, total: t }) => (
+                <Link
+                  key={student.id}
+                  href={`/admin/students/${student.id}`}
+                  onClick={onClose}
+                  style={{ display: "flex", alignItems: "center", gap: "0.75rem", padding: "0.85rem 1.5rem", borderBottom: "1px solid rgba(199,196,214,0.2)", textDecoration: "none" }}
+                  className="hover:bg-[rgba(0,0,0,0.02)] transition-colors"
+                >
+                  <span style={{ fontSize: "1.1rem", flexShrink: 0 }}>✅</span>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <p style={{ fontSize: ".88rem", fontWeight: 500, color: "var(--text-primary)", margin: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                      {student.name}
+                    </p>
+                    <p style={{ fontSize: ".72rem", color: "var(--text-muted)", margin: "2px 0 0", fontFamily: "monospace" }}>
+                      {student.id}
+                    </p>
+                  </div>
+                  <span style={{ fontSize: ".78rem", fontWeight: 700, color: "rgb(22,163,74)", fontFamily: "monospace", flexShrink: 0 }}>
+                    {done}/{t}
+                  </span>
+                  <span className="material-symbols-outlined" style={{ fontSize: "18px", color: "var(--text-muted)", fontVariationSettings: "'wght' 300", flexShrink: 0 }}>
+                    chevron_right
+                  </span>
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ─── Add Student Modal ────────────────────────────────────────────────────────
 
 function AddStudentModal({ onClose }: { onClose: () => void }) {
@@ -477,6 +552,7 @@ export default function AdminDashboardClient() {
 
   const [search, setSearch] = useState("");
   const [addOpen, setAddOpen] = useState(false);
+  const [showTodayModal, setShowTodayModal] = useState(false);
 
   const todayDayName = DAYS_EN[new Date().getDay()];
   const date = todayStr();
@@ -514,9 +590,10 @@ export default function AdminDashboardClient() {
   }, [activeStudents, search]);
 
   // "Hoàn thành hôm nay": students with active BTVN today who ticked all items
-  const { todayHwTotal, todayHwDone } = useMemo(() => {
+  const { todayHwTotal, todayHwDone, todayHwCompletedStudents } = useMemo(() => {
     let total = 0;
     let done = 0;
+    const completedStudents: Array<{ student: Student & { id: string }; done: number; total: number }> = [];
     for (const student of activeStudents) {
       const hwRaw = student.homework;
       const hwList: Homework[] = Array.isArray(hwRaw) ? hwRaw : Object.values((hwRaw ?? {}) as Record<string, Homework>);
@@ -528,9 +605,12 @@ export default function AdminDashboardClient() {
       const subs = allSubmissions[student.id] ?? {};
       const dls = allDayLinks[student.id] ?? {};
       const { done: d, total: t } = calcHwProgress(activeHw, subs, dls);
-      if (t > 0 && d === t) done++;
+      if (t > 0 && d === t) {
+        done++;
+        completedStudents.push({ student: student as Student & { id: string }, done: d, total: t });
+      }
     }
-    return { todayHwTotal: total, todayHwDone: done };
+    return { todayHwTotal: total, todayHwDone: done, todayHwCompletedStudents: completedStudents };
   }, [activeStudents, allSubmissions, allDayLinks, date]);
 
   const loading = studentsLoading || bookingsLoading || classesLoading;
@@ -551,13 +631,13 @@ export default function AdminDashboardClient() {
       {/* ── Stat cards ── */}
       <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 gap-3">
         {[
-          { icon: "group",          value: loading ? "…" : activeStudents.length,                                                               label: "Đang học",            num: "01", href: "/admin/students",  color: "#4441c4" },
-          { icon: "school",         value: loading ? "…" : classes.length,                                                                     label: "Lớp học",             num: "02", href: "/admin/classes",   color: "#565e71" },
-          { icon: "event_available",value: loading ? "…" : (pendingCount || "0"),                                                              label: "Lịch chờ duyệt",      num: "03", href: "/admin/bookings",  color: "#555460" },
-          { icon: "track_changes",  value: loading ? "…" : (avgScore ?? "—"),                                                                  label: "Điểm TB",             num: "04", href: "/admin/progress",  color: "#ba1a1a" },
-          { icon: "task_alt",       value: dlLoading ? "…" : (todayHwTotal > 0 ? `${todayHwDone}/${todayHwTotal}` : "—"),                     label: "Hoàn thành hôm nay",  num: "05", href: "/admin/homework",  color: "#16a34a" },
-        ].map((item) => (
-          <Link key={item.href} href={item.href} className="block">
+          { icon: "group",          value: loading ? "…" : activeStudents.length,                                                            label: "Đang học",            num: "01", href: "/admin/students"  as string | undefined, onClick: undefined as (() => void) | undefined, color: "#4441c4" },
+          { icon: "school",         value: loading ? "…" : classes.length,                                                                  label: "Lớp học",             num: "02", href: "/admin/classes"   as string | undefined, onClick: undefined as (() => void) | undefined, color: "#565e71" },
+          { icon: "event_available",value: loading ? "…" : (pendingCount || "0"),                                                           label: "Lịch chờ duyệt",      num: "03", href: "/admin/bookings"  as string | undefined, onClick: undefined as (() => void) | undefined, color: "#555460" },
+          { icon: "track_changes",  value: loading ? "…" : (avgScore ?? "—"),                                                               label: "Điểm TB",             num: "04", href: "/admin/progress"  as string | undefined, onClick: undefined as (() => void) | undefined, color: "#ba1a1a" },
+          { icon: "task_alt",       value: dlLoading ? "…" : (todayHwTotal > 0 ? `${todayHwDone}/${todayHwTotal}` : "—"),                  label: "Hoàn thành hôm nay",  num: "05", href: undefined,                                onClick: () => setShowTodayModal(true),           color: "#16a34a" },
+        ].map((item) => {
+          const cardInner = (
             <div className="silk-card p-4 rounded-xl flex flex-col justify-between h-[108px] hover:scale-[1.02] transition-all">
               <div className="flex justify-between items-start">
                 <span
@@ -580,8 +660,13 @@ export default function AdminDashboardClient() {
                 </p>
               </div>
             </div>
-          </Link>
-        ))}
+          );
+          return item.href ? (
+            <Link key={item.num} href={item.href} className="block">{cardInner}</Link>
+          ) : (
+            <button key={item.num} type="button" onClick={item.onClick} className="block w-full text-left">{cardInner}</button>
+          );
+        })}
       </div>
 
       {/* ── Today's classes ── */}
@@ -717,6 +802,13 @@ export default function AdminDashboardClient() {
       )}
 
       {addOpen && <AddStudentModal onClose={() => setAddOpen(false)} />}
+      {showTodayModal && (
+        <TodayCompletedModal
+          students={todayHwCompletedStudents}
+          total={todayHwTotal}
+          onClose={() => setShowTodayModal(false)}
+        />
+      )}
 
       {/* ── Quick access ── */}
       <div className="space-y-3">
