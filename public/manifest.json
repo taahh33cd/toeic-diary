@@ -8,7 +8,7 @@
   "background_color": "#fff8f0",
   "theme_color": "#c4622d",
   "lang": "vi",
-  "scope": "/",
+  "scope": "/journal",
   "icons": [
     {
       "src": "/icon-192.png",

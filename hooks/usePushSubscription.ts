@@ -50,34 +50,28 @@ export function usePushSubscription({ studentCode }: { studentCode?: string } = 
 
       if (Notification.permission === "granted") {
         try {
-          const vapidKey = getVapidKey();
-          if (!vapidKey) { setState("unsubscribed"); return; }
-
-          let sub = await reg.pushManager.getSubscription();
-
-          // Detect VAPID key rotation: if the stored subscription was created
-          // with a different application server key, unsubscribe so we re-register
-          // with the correct key (avoids silent 401 failures from the push service).
-          if (sub?.options?.applicationServerKey) {
-            const expected = urlBase64ToUint8Array(vapidKey);
-            const actual = new Uint8Array(sub.options.applicationServerKey as ArrayBuffer);
-            const keyMismatch =
-              expected.length !== actual.length ||
-              expected.some((b, i) => b !== actual[i]);
-            if (keyMismatch) {
-              await sub.unsubscribe().catch(() => {});
-              sub = null;
+          const sub = await reg.pushManager.getSubscription();
+          if (sub) {
+            // Validate VAPID key matches — if not, purge so user re-subscribes via button.
+            const vapidKey = getVapidKey();
+            if (vapidKey && sub.options?.applicationServerKey) {
+              const expected = urlBase64ToUint8Array(vapidKey);
+              const actual = new Uint8Array(sub.options.applicationServerKey as ArrayBuffer);
+              const keyMismatch =
+                expected.length !== actual.length ||
+                expected.some((b, i) => b !== actual[i]);
+              if (keyMismatch) {
+                await sub.unsubscribe().catch(() => {});
+                setState("unsubscribed");
+                return;
+              }
             }
+            await saveSubscription(sub, studentCode);
+            setState("subscribed");
+          } else {
+            // No subscription — must come from a user gesture (iOS requirement).
+            setState("unsubscribed");
           }
-
-          if (!sub) {
-            sub = await reg.pushManager.subscribe({
-              userVisibleOnly: true,
-              applicationServerKey: urlBase64ToUint8Array(vapidKey),
-            });
-          }
-          await saveSubscription(sub, studentCode);
-          setState("subscribed");
         } catch {
           setState("unsubscribed");
         }
