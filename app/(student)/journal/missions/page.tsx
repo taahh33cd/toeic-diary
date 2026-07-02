@@ -417,7 +417,7 @@ function HwCard({
           {/* ── File gallery + upload ── */}
           <div style={{ marginBottom: ".9rem", border: "1px solid var(--border,#DDD0BC)", background: "var(--bg-primary,#F5EFE6)" }}>
             <div style={{ padding: ".4rem .75rem", borderBottom: "1px solid var(--border,#DDD0BC)", fontSize: ".6rem", fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: "#9A8672", display: "flex", alignItems: "center", gap: ".4rem" }}>
-              📎 BẰNG CHỨNG <span style={{ fontWeight: 400, opacity: .6 }}>(tùy chọn)</span>
+              📎 BẰNG CHỨNG <span style={{ fontWeight: 400, opacity: .6 }}>(khuyến khích)</span>
             </div>
             <div style={{ padding: ".5rem .75rem", display: "flex", flexDirection: "column", gap: ".5rem" }}>
 
@@ -762,6 +762,20 @@ export default function MissionsPage() {
         }}>
           Nhiệm vụ & Bài tập
         </h1>
+      </div>
+
+      {/* Notice: nhắc học viên lưu bằng chứng làm bài */}
+      <div style={{
+        display: "flex", alignItems: "flex-start", gap: ".6rem",
+        padding: ".7rem .9rem",
+        background: "rgba(196,98,45,.08)",
+        border: "1px solid rgba(196,98,45,.3)",
+        marginBottom: "1.25rem",
+      }}>
+        <span style={{ fontSize: "1rem", flexShrink: 0, lineHeight: 1.3 }}>📸</span>
+        <p style={{ fontSize: ".8rem", color: "var(--text-primary,#2C1E0F)", lineHeight: 1.5 }}>
+          <strong>Lưu ý:</strong> với mỗi phần bài tập, hãy chụp ảnh / quay video hoặc ghi âm lại toàn bộ bài đã làm (vở, giáo trình, ảnh chụp màn hình…) và tải lên mục <strong>Bằng chứng</strong> để được ghi nhận.
+        </p>
       </div>
 
       {/* Goal banner */}
