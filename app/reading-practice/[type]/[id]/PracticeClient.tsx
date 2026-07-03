@@ -4,6 +4,7 @@ import { useState, useCallback, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { getStaticExercises, RichExplanation } from "./exercises";
 import { PostReadingModal } from "./PostReadingModal";
+import { PreReadingVocabQuiz } from "./PreReadingVocabQuiz";
 
 type Question = {
   id: string;
@@ -37,7 +38,7 @@ export function PracticeClient({
   const [activeQ, setActiveQ]             = useState(0);
   const [saving, setSaving]               = useState(false);
   const [fontSize, setFontSize]           = useState(15);
-  const [preReadingDone, setPreReadingDone]     = useState(false);
+  const [vocabQuizDone, setVocabQuizDone]       = useState(false);
   const [showPostReading, setShowPostReading]   = useState(false);
   const [postReadingPassed, setPostReadingPassed] = useState(false);
   const [showNextHint, setShowNextHint]         = useState(false);
@@ -55,12 +56,6 @@ export function PracticeClient({
     });
   }, [passage.questions]);
 
-  // Pre-reading vocabulary preview (first 5 unique words across all questions)
-  const preReadingVocab = useMemo(() => {
-    const all = richExplanations.flatMap(e => e.tu_vung ?? []);
-    return [...new Map(all.map(v => [v.tu, v])).values()].slice(0, 5);
-  }, [richExplanations]);
-
   // Post-reading exercises: prefer curated static JSON, fallback to auto-generated
   const exercises = useMemo(() => {
     return getStaticExercises(
@@ -75,7 +70,9 @@ export function PracticeClient({
     );
   }, [passage.type, passage.orderIndex, richExplanations, passage.questions]);
 
-  const hasExercises = Object.values(exercises).some(arr => arr.length > 0);
+  const hasExercises   = Object.values(exercises).some(arr => arr.length > 0);
+  // Pre-reading is done when vocab quiz is done (or no vocab items exist)
+  const preReadingDone = vocabQuizDone || exercises.vocab.length === 0;
 
   const handleSelect = useCallback(
     (qIdx: number, option: string) => {
@@ -140,75 +137,13 @@ export function PracticeClient({
         color: "#1a1a2e",
       }}
     >
-      {/* Pre-reading overlay */}
+      {/* Pre-reading vocab quiz */}
       {!preReadingDone && (
-        <div style={{
-          position: "fixed", inset: 0, zIndex: 80,
-          background: "rgba(13,51,97,0.92)",
-          display: "flex", alignItems: "center", justifyContent: "center",
-          padding: 24,
-        }}>
-          <div style={{
-            background: "#fff", borderRadius: 10,
-            maxWidth: 480, width: "100%",
-            padding: "32px 28px",
-            boxShadow: "0 20px 60px rgba(0,0,0,0.4)",
-          }}>
-            <div style={{ fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#6b7280", marginBottom: 6 }}>
-              Chuẩn bị trước khi đọc
-            </div>
-            <h2 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#111827", margin: "0 0 4px" }}>
-              {passage.category ?? `Bài ${passage.orderIndex}`}
-            </h2>
-            <p style={{ fontSize: "0.82rem", color: "#6b7280", margin: "0 0 20px", lineHeight: 1.5 }}>
-              Xem qua các từ khoá bên dưới và suy nghĩ về chủ đề bài đọc trước khi bắt đầu.
-            </p>
-
-            {preReadingVocab.length > 0 ? (
-              <div style={{ marginBottom: 24 }}>
-                <div style={{ fontSize: "0.75rem", fontWeight: 600, color: "#374151", marginBottom: 10, letterSpacing: "0.04em" }}>
-                  TU VUNG TRONG BAI
-                </div>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                  {preReadingVocab.map(v => (
-                    <div key={v.tu} style={{
-                      background: "#eff6ff", border: "1px solid #bfdbfe",
-                      borderRadius: 6, padding: "6px 12px",
-                    }}>
-                      <span style={{ fontWeight: 700, color: "#1d4ed8", fontSize: "0.88rem" }}>{v.tu}</span>
-                      <span style={{ color: "#6b7280", fontSize: "0.8rem", marginLeft: 6 }}>— {v.nghia}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <div style={{ marginBottom: 24, color: "#9ca3af", fontSize: "0.82rem" }}>
-                Sẵn sàng bắt đầu bài đọc.
-              </div>
-            )}
-
-            <button
-              onClick={() => setPreReadingDone(true)}
-              style={{
-                width: "100%", background: "#0D3361", color: "#fff",
-                border: "none", padding: "11px 0", borderRadius: 5,
-                fontWeight: 700, fontSize: "0.92rem", cursor: "pointer",
-              }}
-            >
-              Bắt đầu đọc
-            </button>
-            <button
-              onClick={() => setPreReadingDone(true)}
-              style={{
-                width: "100%", marginTop: 8, background: "transparent",
-                color: "#9ca3af", border: "none", padding: "6px 0",
-                fontSize: "0.8rem", cursor: "pointer",
-              }}
-            >
-              Bỏ qua
-            </button>
-          </div>
-        </div>
+        <PreReadingVocabQuiz
+          items={exercises.vocab}
+          passageTitle={passage.category ?? `Bài ${passage.orderIndex}`}
+          onComplete={() => setVocabQuizDone(true)}
+        />
       )}
 
       {/* Post-reading modal */}
@@ -560,7 +495,7 @@ export function PracticeClient({
           </button>
           {submitted && (
             <button
-              onClick={() => { setAnswers({}); setSubmitted(false); setActiveQ(0); setPreReadingDone(false); }}
+              onClick={() => { setAnswers({}); setSubmitted(false); setActiveQ(0); setVocabQuizDone(false); }}
               style={{ ...navBtnStyle, color: "#0D3361", borderColor: "#0D3361" }}
             >
               Làm lại
