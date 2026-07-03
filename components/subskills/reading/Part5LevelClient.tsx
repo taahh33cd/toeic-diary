@@ -408,18 +408,12 @@ export function Part5LevelClient({
   useEffect(() => {
     if (screen !== "quiz") return;
     function handleKeyDown(e: KeyboardEvent) {
-      console.log("[EnterDebug] keydown", { key: e.key, currentIdx, confirmed: confirmedIdx.has(currentIdx), total, activeTag: (document.activeElement as HTMLElement | null)?.tagName });
       if (e.key !== "Enter") return;
-      if (!confirmedIdx.has(currentIdx)) {
-        console.log("[EnterDebug] blocked: question not confirmed yet");
-        return;
-      }
+      if (!confirmedIdx.has(currentIdx)) return;
       e.preventDefault();
       if (currentIdx < total - 1) {
-        console.log("[EnterDebug] advancing to next question");
         setCurrentIdx((i) => i + 1);
       } else if (confirmedIdx.size === total) {
-        console.log("[EnterDebug] submitting");
         handleSubmit();
       }
     }
