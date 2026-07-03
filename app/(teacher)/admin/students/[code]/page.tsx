@@ -10,6 +10,8 @@ import { useSubmissions } from "@/hooks/firebase/useSubmissions";
 import { useDayLinks } from "@/hooks/firebase/useDayLinks";
 import { useHwViewed } from "@/hooks/firebase/useHwViewed";
 import { useHwFiles } from "@/hooks/firebase/useHwFiles";
+import { useAllStudents } from "@/hooks/firebase/useAllStudents";
+import { useClasses } from "@/hooks/firebase/useClasses";
 import {
   updateStudent,
   deleteStudent,
@@ -26,6 +28,7 @@ import {
   pushHomework,
   updateHomework,
   deleteHomework,
+  pushClassHomework,
   markHwViewed,
   deleteHwFile,
 } from "@/lib/firebase/helpers";
@@ -1126,9 +1129,10 @@ function buildHwFromForm(form: HwFormState, hwId: string): Homework {
   return hw;
 }
 
-function HwModal({ initial, editId, onSave, onAutosave, onClose }: {
+function HwModal({ initial, editId, targetLabel, onSave, onAutosave, onClose }: {
   initial: HwFormState;
   editId?: string;
+  targetLabel?: string;
   onSave: (form: HwFormState, hwId: string) => Promise<void>;
   onAutosave?: (hw: Homework, isNew: boolean) => Promise<void>;
   onClose: () => void;
@@ -1190,7 +1194,12 @@ function HwModal({ initial, editId, onSave, onAutosave, onClose }: {
       <div className="w-full max-w-2xl my-8 rounded-2xl" style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)" }}>
         {/* Header */}
         <div className="flex items-center justify-between px-5 py-4 border-b" style={{ borderColor: "var(--border)" }}>
-          <h3 className="font-bold" style={{ color: "var(--accent-primary)" }}>📋 {editId ? "Sửa BTVN" : "Thêm BTVN"}</h3>
+          <div>
+            <h3 className="font-bold" style={{ color: "var(--accent-primary)" }}>📋 {editId ? "Sửa BTVN" : "Thêm BTVN"}</h3>
+            {targetLabel && (
+              <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>→ {targetLabel}</p>
+            )}
+          </div>
           <button onClick={onClose} className="text-xl" style={{ color: "var(--text-muted)" }}>×</button>
         </div>
 
@@ -1269,6 +1278,141 @@ function HwModal({ initial, editId, onSave, onAutosave, onClose }: {
   );
 }
 
+// ─── Duplicate BTVN: target picker ────────────────────────────────────────────
+
+type DupTarget =
+  | { type: "student"; code: string; label: string }
+  | { type: "class"; classId: string; members: string[]; label: string };
+
+function DuplicateTargetModal({ hw, currentCode, onConfirm, onClose }: {
+  hw: Homework;
+  currentCode: string;
+  onConfirm: (target: DupTarget) => void;
+  onClose: () => void;
+}) {
+  const [scope, setScope] = useState<"self" | "student" | "class">("self");
+  const [query, setQuery] = useState("");
+  const [selectedCode, setSelectedCode] = useState<string | null>(null);
+  const [selectedClassId, setSelectedClassId] = useState<string | null>(null);
+  const { students } = useAllStudents();
+  const { classes } = useClasses();
+
+  const q = query.trim().toLowerCase();
+  const filteredStudents = students
+    .filter((s) => s.id !== currentCode)
+    .filter((s) => !q || s.name?.toLowerCase().includes(q) || s.id.toLowerCase().includes(q));
+
+  const canConfirm = scope === "self" || (scope === "student" && !!selectedCode) || (scope === "class" && !!selectedClassId);
+
+  function handleConfirm() {
+    if (scope === "self") {
+      onConfirm({ type: "student", code: currentCode, label: "Học viên này" });
+    } else if (scope === "student" && selectedCode) {
+      const s = students.find((s) => s.id === selectedCode);
+      onConfirm({ type: "student", code: selectedCode, label: s ? `${s.name} (${s.id})` : selectedCode });
+    } else if (scope === "class" && selectedClassId) {
+      const c = classes.find((c) => c.id === selectedClassId);
+      if (c) onConfirm({ type: "class", classId: c.id, members: c.members ?? [], label: `${c.name} (${c.members?.length ?? 0} học viên)` });
+    }
+  }
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ background: "rgba(0,0,0,0.5)" }}>
+      <div className="w-full max-w-md rounded-2xl" style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)" }}>
+        <div className="flex items-center justify-between px-5 py-4 border-b" style={{ borderColor: "var(--border)" }}>
+          <h3 className="font-bold" style={{ color: "var(--accent-primary)" }}>📋 Nhân bản BTVN</h3>
+          <button onClick={onClose} className="text-xl" style={{ color: "var(--text-muted)" }}>×</button>
+        </div>
+
+        <div className="p-5 space-y-3">
+          <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+            Chọn nơi nhân bản nội dung BTVN {hw.title ? `"${hw.title}"` : fmtDate(hw.date)} sang. Bạn sẽ chọn lại ngày ở bước tiếp theo.
+          </p>
+
+          <div className="flex gap-1.5">
+            {([
+              { key: "self", label: "Học viên này" },
+              { key: "student", label: "Học viên khác" },
+              { key: "class", label: "Cả lớp" },
+            ] as const).map(({ key, label }) => (
+              <button
+                key={key}
+                onClick={() => setScope(key)}
+                className="text-xs px-2.5 py-1.5 rounded-lg font-medium flex-1"
+                style={{
+                  background: scope === key ? "var(--accent-primary)" : "var(--border)",
+                  color: scope === key ? "#fff" : "var(--text-secondary)",
+                }}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+
+          {scope === "student" && (
+            <div className="space-y-2">
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Tìm theo tên hoặc mã học viên..."
+                className="w-full px-3 py-2 text-xs rounded-lg border outline-none"
+                style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }}
+              />
+              <div className="max-h-48 overflow-y-auto rounded-lg" style={{ border: "1px solid var(--border)" }}>
+                {filteredStudents.length === 0 && (
+                  <p className="text-xs text-center py-3" style={{ color: "var(--text-muted)" }}>Không tìm thấy học viên</p>
+                )}
+                {filteredStudents.map((s) => (
+                  <button
+                    key={s.id}
+                    onClick={() => setSelectedCode(s.id)}
+                    className="w-full text-left px-3 py-2 text-xs flex items-center justify-between"
+                    style={{ background: selectedCode === s.id ? "rgba(196,98,45,0.1)" : "transparent", color: "var(--text-primary)" }}
+                  >
+                    <span>{s.name}</span>
+                    <span style={{ color: "var(--text-muted)" }}>{s.id}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {scope === "class" && (
+            <div className="max-h-48 overflow-y-auto rounded-lg" style={{ border: "1px solid var(--border)" }}>
+              {classes.length === 0 && (
+                <p className="text-xs text-center py-3" style={{ color: "var(--text-muted)" }}>Chưa có lớp học nào</p>
+              )}
+              {classes.map((c) => (
+                <button
+                  key={c.id}
+                  onClick={() => setSelectedClassId(c.id)}
+                  className="w-full text-left px-3 py-2 text-xs flex items-center justify-between"
+                  style={{ background: selectedClassId === c.id ? "rgba(196,98,45,0.1)" : "transparent", color: "var(--text-primary)" }}
+                >
+                  <span>{c.name}</span>
+                  <span style={{ color: "var(--text-muted)" }}>{c.members?.length ?? 0} học viên</span>
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div className="flex justify-end gap-2 px-5 py-4 border-t" style={{ borderColor: "var(--border)" }}>
+          <button onClick={onClose} className="px-4 py-2 rounded-xl text-sm border" style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}>Hủy</button>
+          <button
+            onClick={handleConfirm}
+            disabled={!canConfirm}
+            className="px-4 py-2 rounded-xl text-sm font-semibold disabled:opacity-50"
+            style={{ background: "var(--accent-primary)", color: "#fff" }}
+          >
+            Tiếp tục
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function PersonalHWSection({
   homework,
   code,
@@ -1285,6 +1429,8 @@ function PersonalHWSection({
   const [filter, setFilter] = useState<"active" | "all" | "done" | "expired">("all");
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
   const [modal, setModal] = useState<{ mode: "add" | "edit"; initial: HwFormState; editId?: string } | null>(null);
+  const [dupPick, setDupPick] = useState<Homework | null>(null);
+  const [dupModal, setDupModal] = useState<{ initial: HwFormState; target: DupTarget } | null>(null);
   const [deleting, setDeleting] = useState<string | null>(null);
   const [fileModal, setFileModal] = useState<{ url: string; hwId: string } | null>(null);
   const [noteInput, setNoteInput] = useState("");
@@ -1366,6 +1512,22 @@ function PersonalHWSection({
     setDeleting(null);
   }
 
+  function handleDupTargetConfirm(hw: Homework, target: DupTarget) {
+    setDupModal({ initial: { ...formFromHw(hw), date: "", endDate: "" }, target });
+    setDupPick(null);
+  }
+
+  async function handleSaveDuplicate(form: HwFormState, hwId: string, target: DupTarget) {
+    const hw = buildHwFromForm(form, hwId);
+    if (target.type === "student") {
+      await pushHomework(target.code, hw);
+    } else {
+      await pushClassHomework(target.classId, hw);
+      await Promise.all(target.members.map((memberCode) => pushHomework(memberCode, hw)));
+    }
+    setDupModal(null);
+  }
+
   const FILTER_TABS: { key: typeof filter; label: string }[] = [
     { key: "active",  label: `Đang học ${counts.active}` },
     { key: "all",     label: `Tất cả ${counts.all}` },
@@ -1382,6 +1544,24 @@ function PersonalHWSection({
           onSave={(form, hwId) => handleSaveHw(form, modal.editId, hwId)}
           onAutosave={(hw, isNew) => handleAutosaveHw(hw, isNew, modal.editId)}
           onClose={() => { setModal(null); autosavedHwIdRef.current = null; }}
+        />
+      )}
+
+      {dupPick && (
+        <DuplicateTargetModal
+          hw={dupPick}
+          currentCode={code}
+          onConfirm={(target) => handleDupTargetConfirm(dupPick, target)}
+          onClose={() => setDupPick(null)}
+        />
+      )}
+
+      {dupModal && (
+        <HwModal
+          initial={dupModal.initial}
+          targetLabel={dupModal.target.label}
+          onSave={(form, hwId) => handleSaveDuplicate(form, hwId, dupModal.target)}
+          onClose={() => setDupModal(null)}
         />
       )}
 
@@ -1490,6 +1670,13 @@ function PersonalHWSection({
                     className="p-1 hover:opacity-70 shrink-0" style={{ color: "var(--text-muted)" }}
                   >
                     <ChevronDown size={12} style={{ display: "none" }} />✏️
+                  </button>
+                  <button
+                    onClick={(e) => { e.stopPropagation(); setDupPick(hw); }}
+                    title="Nhân bản BTVN"
+                    className="p-1 hover:opacity-70 shrink-0" style={{ color: "var(--text-muted)" }}
+                  >
+                    <Copy size={12} />
                   </button>
                   <button
                     onClick={(e) => { e.stopPropagation(); handleDelete(hw.id); }}
