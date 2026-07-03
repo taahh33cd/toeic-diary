@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import Link from "next/link";
 import { CheckCircle2, XCircle, ChevronLeft, ChevronRight, ArrowLeft, RotateCcw } from "lucide-react";
 import type { GrammarQuestion, GrammarMCQ, GrammarHighlight, LevelSlug, BestScore } from "@/lib/subskills/reading/types";
@@ -402,6 +402,24 @@ export function Part5LevelClient({
     setAnswers({});
     setConfirmedIdx(new Set());
   }, []);
+
+  // Enter advances to the next question once the current one is confirmed;
+  // on the last question it submits instead.
+  useEffect(() => {
+    if (screen !== "quiz") return;
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key !== "Enter") return;
+      if (!confirmedIdx.has(currentIdx)) return;
+      e.preventDefault();
+      if (currentIdx < total - 1) {
+        setCurrentIdx((i) => i + 1);
+      } else if (confirmedIdx.size === total) {
+        handleSubmit();
+      }
+    }
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [screen, confirmedIdx, currentIdx, total, handleSubmit]);
 
   // ── Result screen ─────────────────────────────────────────────────────────────
 
