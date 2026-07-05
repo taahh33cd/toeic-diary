@@ -1,6 +1,6 @@
 "use client";
 
-import { ref } from "firebase/database";
+import { ref, query, orderByChild, equalTo } from "firebase/database";
 import { useObjectVal } from "react-firebase-hooks/database";
 import { firebaseDb } from "@/lib/firebase/client";
 import type { Booking, BookingStatus } from "@/lib/firebase/types";
@@ -14,9 +14,17 @@ interface BookingFilter {
 }
 
 export function useBookings(filter?: BookingFilter) {
-  const [raw, loading, error] = useObjectVal<BookingsRaw>(
-    ref(firebaseDb, "bookings")
+  // Students may only read their own bookings — scope the query by studentId so
+  // the security rule can enforce it. Admin (no studentId filter) reads all.
+  const bookingsQuery = useMemo(
+    () =>
+      filter?.studentId
+        ? query(ref(firebaseDb, "bookings"), orderByChild("studentId"), equalTo(filter.studentId))
+        : ref(firebaseDb, "bookings"),
+    [filter?.studentId]
   );
+
+  const [raw, loading, error] = useObjectVal<BookingsRaw>(bookingsQuery);
 
   const bookings = useMemo(() => {
     if (!raw) return [];
