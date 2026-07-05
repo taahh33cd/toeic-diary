@@ -501,6 +501,21 @@ function HomeworkModal({
 
 // ─── ClassInfoSection ─────────────────────────────────────────────────────────
 
+const DAYS_VI: Record<string, string> = {
+  Monday: "Thứ 2", Tuesday: "Thứ 3", Wednesday: "Thứ 4",
+  Thursday: "Thứ 5", Friday: "Thứ 6", Saturday: "Thứ 7", Sunday: "CN",
+};
+
+const DAY_OPTIONS = [
+  { value: "Monday",    label: "Thứ 2" },
+  { value: "Tuesday",   label: "Thứ 3" },
+  { value: "Wednesday", label: "Thứ 4" },
+  { value: "Thursday",  label: "Thứ 5" },
+  { value: "Friday",    label: "Thứ 6" },
+  { value: "Saturday",  label: "Thứ 7" },
+  { value: "Sunday",    label: "CN" },
+];
+
 function ClassInfoSection({
   cls,
   classId,
@@ -511,24 +526,23 @@ function ClassInfoSection({
   const [editing, setEditing] = useState(false);
   const [name, setName] = useState(cls.name ?? "");
   const [desc, setDesc] = useState(cls.desc ?? "");
+  const [sessions, setSessions] = useState<import("@/lib/firebase/types").ClassSession[]>(cls.weeklySchedule ?? []);
   const [saving, setSaving] = useState(false);
 
   async function handleSave() {
     setSaving(true);
-    await updateClass(classId, { name: name.trim(), desc: desc.trim() || undefined });
+    await updateClass(classId, {
+      name: name.trim(),
+      desc: desc.trim() || undefined,
+      weeklySchedule: sessions.length > 0 ? sessions : null,
+    });
     setSaving(false);
     setEditing(false);
   }
 
-  const DAYS_VI: Record<string, string> = {
-    Monday: "Thứ 2",
-    Tuesday: "Thứ 3",
-    Wednesday: "Thứ 4",
-    Thursday: "Thứ 5",
-    Friday: "Thứ 6",
-    Saturday: "Thứ 7",
-    Sunday: "CN",
-  };
+  function updateSession(i: number, field: "day" | "time", val: string) {
+    setSessions(prev => prev.map((s, j) => j === i ? { ...s, [field]: val } : s));
+  }
 
   return (
     <SectionCard
@@ -536,7 +550,7 @@ function ClassInfoSection({
       action={
         editing ? (
           <div className="flex gap-2">
-            <Btn onClick={() => setEditing(false)} size="xs">Huỷ</Btn>
+            <Btn onClick={() => { setEditing(false); setName(cls.name ?? ""); setDesc(cls.desc ?? ""); setSessions(cls.weeklySchedule ?? []); }} size="xs">Huỷ</Btn>
             <Btn onClick={handleSave} variant="primary" size="xs" disabled={saving}>
               {saving ? "..." : <><Check size={12} /> Lưu</>}
             </Btn>
@@ -551,16 +565,58 @@ function ClassInfoSection({
       {editing ? (
         <div className="space-y-3">
           <div>
-            <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>
-              Tên lớp
-            </label>
+            <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>Tên lớp</label>
             <TextInput value={name} onChange={setName} placeholder="VD: TOEIC 600 K3" />
           </div>
           <div>
-            <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>
-              Mô tả
-            </label>
+            <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-secondary)" }}>Mô tả</label>
             <TextInput value={desc} onChange={setDesc} placeholder="Mô tả ngắn..." />
+          </div>
+          <div>
+            <div className="flex items-center justify-between mb-1.5">
+              <label className="text-xs font-medium" style={{ color: "var(--text-secondary)" }}>Buổi học</label>
+              <button
+                type="button"
+                onClick={() => setSessions(prev => [...prev, { day: "Monday", time: "20:00" }])}
+                className="text-[11px] font-semibold px-2 py-0.5 rounded"
+                style={{ background: "rgba(196,98,45,0.1)", color: "var(--accent-primary)" }}
+              >
+                + Thêm buổi
+              </button>
+            </div>
+            {sessions.length === 0 ? (
+              <p className="text-xs" style={{ color: "var(--text-muted)" }}>Chưa có buổi học.</p>
+            ) : (
+              <div className="space-y-2">
+                {sessions.map((s, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <select
+                      value={s.day}
+                      onChange={e => updateSession(i, "day", e.target.value)}
+                      className="text-xs px-2 py-1.5 rounded border flex-1"
+                      style={{ background: "var(--bg-primary)", color: "var(--text-primary)", borderColor: "var(--border)" }}
+                    >
+                      {DAY_OPTIONS.map(d => <option key={d.value} value={d.value}>{d.label}</option>)}
+                    </select>
+                    <input
+                      type="time"
+                      value={s.time}
+                      onChange={e => updateSession(i, "time", e.target.value)}
+                      className="text-xs px-2 py-1.5 rounded border"
+                      style={{ background: "var(--bg-primary)", color: "var(--text-primary)", borderColor: "var(--border)", width: "7.5rem" }}
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setSessions(prev => prev.filter((_, j) => j !== i))}
+                      className="p-1 hover:opacity-70 shrink-0"
+                      style={{ color: "rgb(239,68,68)" }}
+                    >
+                      <X size={13} />
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       ) : (
@@ -576,14 +632,8 @@ function ClassInfoSection({
           {cls.weeklySchedule && cls.weeklySchedule.length > 0 && (
             <div className="flex gap-2 flex-wrap pt-1">
               {cls.weeklySchedule.map((s, i) => (
-                <span
-                  key={i}
-                  className="text-xs px-2 py-0.5 rounded-full"
-                  style={{
-                    background: "rgba(196,98,45,0.08)",
-                    color: "var(--accent-primary)",
-                  }}
-                >
+                <span key={i} className="text-xs px-2 py-0.5 rounded-full"
+                  style={{ background: "rgba(196,98,45,0.08)", color: "var(--accent-primary)" }}>
                   {DAYS_VI[s.day] ?? s.day} · {s.time}
                   {s.room ? ` · ${s.room}` : ""}
                 </span>
