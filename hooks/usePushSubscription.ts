@@ -31,6 +31,24 @@ function getVapidKey(): string {
   return VAPID_PUBLIC_KEY;
 }
 
+/**
+ * Create a fresh push subscription (dropping any existing one) and save it.
+ * Assumes Notification permission is already granted — does not prompt.
+ * On Android/desktop this can run without a user gesture; iOS (WebKit)
+ * requires a gesture and will throw, letting callers fall back to a button.
+ */
+async function createSubscription(reg: ServiceWorkerRegistration, studentCode?: string): Promise<void> {
+  const vapidKey = getVapidKey();
+  if (!vapidKey) throw new Error("VAPID key chưa cấu hình");
+  const existing = await reg.pushManager.getSubscription();
+  if (existing) await existing.unsubscribe().catch(() => {});
+  const sub = await reg.pushManager.subscribe({
+    userVisibleOnly: true,
+    applicationServerKey: urlBase64ToUint8Array(vapidKey),
+  });
+  await saveSubscription(sub, studentCode);
+}
+
 export function usePushSubscription({ studentCode }: { studentCode?: string } = {}) {
   const [state, setState] = useState<PushState>("loading");
   const [error, setError] = useState<string | null>(null);
@@ -52,24 +70,31 @@ export function usePushSubscription({ studentCode }: { studentCode?: string } = 
         try {
           const sub = await reg.pushManager.getSubscription();
           if (sub) {
-            // Validate VAPID key matches — if not, purge so user re-subscribes via button.
+            // Validate VAPID key matches the current key.
             const vapidKey = getVapidKey();
+            let keyMismatch = false;
             if (vapidKey && sub.options?.applicationServerKey) {
               const expected = urlBase64ToUint8Array(vapidKey);
               const actual = new Uint8Array(sub.options.applicationServerKey as ArrayBuffer);
-              const keyMismatch =
+              keyMismatch =
                 expected.length !== actual.length ||
                 expected.some((b, i) => b !== actual[i]);
-              if (keyMismatch) {
-                await sub.unsubscribe().catch(() => {});
-                setState("unsubscribed");
-                return;
-              }
             }
-            await saveSubscription(sub, studentCode);
+            if (!keyMismatch) {
+              await saveSubscription(sub, studentCode);
+              setState("subscribed");
+              return;
+            }
+            // Stale key — drop it, then silently re-subscribe below.
+            await sub.unsubscribe().catch(() => {});
+          }
+          // No valid subscription. Permission is already granted, so on
+          // Android/desktop we can re-subscribe silently (no user gesture).
+          // iOS (WebKit) requires a gesture and throws → banner button fallback.
+          try {
+            await createSubscription(reg, studentCode);
             setState("subscribed");
-          } else {
-            // No subscription — must come from a user gesture (iOS requirement).
+          } catch {
             setState("unsubscribed");
           }
         } catch {
@@ -94,18 +119,7 @@ export function usePushSubscription({ studentCode }: { studentCode?: string } = 
         return;
       }
 
-      const vapidKey = getVapidKey();
-      if (!vapidKey) throw new Error("VAPID key chưa cấu hình");
-
-      const existing = await reg.pushManager.getSubscription();
-      if (existing) await existing.unsubscribe().catch(() => {});
-
-      const sub = await reg.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: urlBase64ToUint8Array(vapidKey),
-      });
-
-      await saveSubscription(sub, studentCode);
+      await createSubscription(reg, studentCode);
       setState("subscribed");
     } catch (err) {
       const name = err instanceof DOMException ? `${err.name}: ` : "";
