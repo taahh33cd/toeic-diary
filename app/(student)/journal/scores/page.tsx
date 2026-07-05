@@ -6,7 +6,7 @@ import { useStudent } from "@/hooks/firebase/useStudent";
 import { useGoal } from "@/hooks/firebase/useGoal";
 import { useLocale } from "@/hooks/useLocale";
 import {
-  pushStudentScore, deleteStudentScore, setGoal,
+  pushStudentScore, deleteStudentScore, updateStudentScore, setGoal,
   addErrorEntry, deleteErrorEntry, markDetailReviewed,
   addParaphraseEntry, reviewParaphraseEntry, deleteParaphraseEntry,
 } from "@/lib/firebase/helpers";
@@ -303,16 +303,30 @@ function GoalCard({
   );
 }
 
-function AddScoreForm({ studentCode }: { studentCode: string }) {
+function ScoreEntryForm({
+  initial, onSubmit, onCancel, submitLabel, savingLabel,
+}: {
+  initial?: ToeicScore;
+  onSubmit: (entry: ToeicScore) => Promise<void>;
+  onCancel?: () => void;
+  submitLabel: string;
+  savingLabel: string;
+}) {
   const { t } = useLocale();
-  const [open, setOpen] = useState(false);
   const [saving, setSaving] = useState(false);
-  const [mode, setMode] = useState<"simple" | "parts">("simple");
-  const [date, setDate] = useState(() => new Date().toISOString().slice(0, 10));
-  const [listening, setListening] = useState("");
-  const [reading, setReading] = useState("");
-  const [parts, setParts] = useState<Record<PartKey, string>>({ p1: "", p2: "", p3: "", p4: "", p5: "", p6: "", p7: "" });
-  const [testname, setTestname] = useState("");
+  const initialHasParts = initial
+    ? (["p1", "p2", "p3", "p4", "p5", "p6", "p7"] as PartKey[]).some((k) => (initial[k] ?? 0) > 0)
+    : false;
+  const [mode, setMode] = useState<"simple" | "parts">(initialHasParts ? "parts" : "simple");
+  const [date, setDate] = useState(initial?.date ?? new Date().toISOString().slice(0, 10));
+  const [listening, setListening] = useState(initial?.l !== undefined ? String(initial.l) : "");
+  const [reading, setReading] = useState(initial?.r !== undefined ? String(initial.r) : "");
+  const [parts, setParts] = useState<Record<PartKey, string>>(() => {
+    const base: Record<PartKey, string> = { p1: "", p2: "", p3: "", p4: "", p5: "", p6: "", p7: "" };
+    if (initial) for (const k of Object.keys(base) as PartKey[]) if (initial[k] !== undefined) base[k] = String(initial[k]);
+    return base;
+  });
+  const [testname, setTestname] = useState(initial?.testname ?? "");
 
   function setPart(key: PartKey, val: string) {
     setParts((prev) => ({ ...prev, [key]: val }));
@@ -320,16 +334,18 @@ function AddScoreForm({ studentCode }: { studentCode: string }) {
 
   const lCorrect = (["p1", "p2", "p3", "p4"] as PartKey[]).reduce((s, k) => s + (parseInt(parts[k], 10) || 0), 0);
   const rCorrect = (["p5", "p6", "p7"] as PartKey[]).reduce((s, k) => s + (parseInt(parts[k], 10) || 0), 0);
-  const lScore = Math.round((lCorrect / 100) * 495);
-  const rScore = Math.round((rCorrect / 100) * 495);
+  const autoLScore = Math.round((lCorrect / 100) * 495);
+  const autoRScore = Math.round((rCorrect / 100) * 495);
   const simpleTotal = listening && reading ? (parseInt(listening, 10) || 0) + (parseInt(reading, 10) || 0) : null;
 
-  function resetForm() {
-    setDate(new Date().toISOString().slice(0, 10));
-    setListening(""); setReading("");
-    setParts({ p1: "", p2: "", p3: "", p4: "", p5: "", p6: "", p7: "" });
-    setTestname("");
-  }
+  const [manualOverride, setManualOverride] = useState(
+    () => initialHasParts && (initial?.l !== autoLScore || initial?.r !== autoRScore)
+  );
+  const [manualL, setManualL] = useState(String(initial?.l ?? autoLScore));
+  const [manualR, setManualR] = useState(String(initial?.r ?? autoRScore));
+
+  const lScore = manualOverride ? (parseInt(manualL, 10) || 0) : autoLScore;
+  const rScore = manualOverride ? (parseInt(manualR, 10) || 0) : autoRScore;
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -344,21 +360,162 @@ function AddScoreForm({ studentCode }: { studentCode: string }) {
       } else {
         const parsed = (Object.keys(PART_MAX) as PartKey[]).map((k) => ({ key: k, n: parseInt(parts[k], 10) || 0 }));
         if (parsed.some(({ key, n }) => n < 0 || n > PART_MAX[key])) return;
-        const pNums = Object.fromEntries(parsed.map(({ key, n }) => [key, n])) as Record<PartKey, number>;
-        const l = Math.round((pNums.p1 + pNums.p2 + pNums.p3 + pNums.p4) / 100 * 495);
-        const r = Math.round((pNums.p5 + pNums.p6 + pNums.p7) / 100 * 495);
+        const l = lScore, r = rScore;
+        if (l < 0 || r < 0 || l > 495 || r > 495) return;
         const filledParts = Object.fromEntries(parsed.filter(({ n }) => n > 0).map(({ key, n }) => [key, n])) as Partial<Record<PartKey, number>>;
         entry = { score: l + r, date, l, r, ...filledParts };
       }
       if (testname.trim()) entry.testname = testname.trim();
-      await pushStudentScore(studentCode, entry);
-      resetForm();
-      setOpen(false);
+      await onSubmit(entry);
     } finally { setSaving(false); }
   }
 
   const inp = "w-full px-3 py-2.5 rounded-lg text-sm outline-none transition-colors";
   const inpStyle: React.CSSProperties = { border: "1px solid var(--border)", background: "var(--bg-primary)", color: "var(--text-primary)" };
+
+  return (
+    <form onSubmit={handleSubmit} className="px-5 pb-5 flex flex-col gap-4">
+      {/* Mode toggle */}
+      <div className="flex gap-1 p-1 rounded-lg self-start" style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}>
+        {(["simple", "parts"] as const).map((m) => (
+          <button key={m} type="button" onClick={() => setMode(m)}
+            className="px-3 py-1.5 rounded-md text-xs font-semibold transition-all"
+            style={{ background: mode === m ? "var(--orange)" : "transparent", color: mode === m ? "white" : "var(--text-muted)", border: "none", cursor: "pointer" }}>
+            {m === "simple" ? t("Tổng điểm", "Total score") : t("Theo từng Part", "By Part")}
+          </button>
+        ))}
+      </div>
+
+      {/* Date + Testname */}
+      <div className="grid grid-cols-2 gap-3">
+        <div>
+          <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
+            {t("Ngày thi", "Test Date")}
+          </label>
+          <input type="date" className={inp} style={inpStyle} value={date} onChange={(e) => setDate(e.target.value)} required />
+        </div>
+        <div>
+          <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
+            {t("Tên bài test", "Test name")}
+          </label>
+          <input className={inp} style={inpStyle} value={testname} onChange={(e) => setTestname(e.target.value)} placeholder="EST 2024 Test 1" required />
+        </div>
+      </div>
+
+      {mode === "simple" ? (
+        <>
+          <div className="grid grid-cols-2 gap-3">
+            <div>
+              <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
+                {t("Điểm Nghe", "Listening")} <span style={{ fontWeight: 400 }}>(0–495)</span>
+              </label>
+              <input type="number" min={0} max={495} className={inp} style={inpStyle}
+                value={listening} onChange={(e) => setListening(e.target.value)} placeholder="300" />
+            </div>
+            <div>
+              <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
+                {t("Điểm Đọc", "Reading")} <span style={{ fontWeight: 400 }}>(0–495)</span>
+              </label>
+              <input type="number" min={0} max={495} className={inp} style={inpStyle}
+                value={reading} onChange={(e) => setReading(e.target.value)} placeholder="280" />
+            </div>
+          </div>
+          {simpleTotal !== null && (
+            <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+              {t("Tổng điểm", "Total")}: <span className="font-bold" style={{ color: "var(--orange)" }}>{simpleTotal}</span>/990
+            </p>
+          )}
+        </>
+      ) : (
+        <div className="flex flex-col gap-3">
+          <div className="rounded-xl p-4" style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}>
+            <div className="text-[11px] font-bold uppercase tracking-wider mb-3" style={{ color: "var(--orange)" }}>Listening</div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              {L_PARTS_INFO.map(({ key, label }) => (
+                <div key={key}>
+                  <label className="block text-[10px] mb-1" style={{ color: "var(--text-muted)" }}>
+                    {label} <span style={{ opacity: 0.6 }}>/{PART_MAX[key]}</span>
+                  </label>
+                  <input type="number" min={0} max={PART_MAX[key]} className={inp} style={inpStyle}
+                    value={parts[key]} onChange={(e) => setPart(key, e.target.value)} placeholder="0" />
+                </div>
+              ))}
+            </div>
+            <p className="text-xs mt-2" style={{ color: "var(--text-muted)" }}>
+              {t("Tổng đúng", "Correct")}: <strong style={{ color: "var(--orange)" }}>{lCorrect}/100</strong>
+              {" → "}{t("Điểm L (tự động)", "Score L (auto)")}: <strong style={{ color: "var(--orange)" }}>~{autoLScore}</strong>
+            </p>
+          </div>
+          <div className="rounded-xl p-4" style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}>
+            <div className="text-[11px] font-bold uppercase tracking-wider mb-3" style={{ color: "#1E6FA8" }}>Reading</div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              {R_PARTS_INFO.map(({ key, label }) => (
+                <div key={key}>
+                  <label className="block text-[10px] mb-1" style={{ color: "var(--text-muted)" }}>
+                    {label} <span style={{ opacity: 0.6 }}>/{PART_MAX[key]}</span>
+                  </label>
+                  <input type="number" min={0} max={PART_MAX[key]} className={inp} style={inpStyle}
+                    value={parts[key]} onChange={(e) => setPart(key, e.target.value)} placeholder="0" />
+                </div>
+              ))}
+            </div>
+            <p className="text-xs mt-2" style={{ color: "var(--text-muted)" }}>
+              {t("Tổng đúng", "Correct")}: <strong style={{ color: "#1E6FA8" }}>{rCorrect}/100</strong>
+              {" → "}{t("Điểm R (tự động)", "Score R (auto)")}: <strong style={{ color: "#1E6FA8" }}>~{autoRScore}</strong>
+            </p>
+          </div>
+
+          <div className="rounded-xl p-4" style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}>
+            <label className="flex items-center gap-2 text-xs font-medium" style={{ color: "var(--text-secondary)" }}>
+              <input type="checkbox" checked={manualOverride} onChange={(e) => setManualOverride(e.target.checked)} />
+              {t("Ghi đè điểm ước tính thủ công", "Manually override estimated score")}
+            </label>
+            {manualOverride ? (
+              <div className="grid grid-cols-2 gap-3 mt-3">
+                <div>
+                  <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
+                    {t("Điểm L (thủ công)", "L score (manual)")}
+                  </label>
+                  <input type="number" min={0} max={495} className={inp} style={inpStyle}
+                    value={manualL} onChange={(e) => setManualL(e.target.value)} />
+                </div>
+                <div>
+                  <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
+                    {t("Điểm R (thủ công)", "R score (manual)")}
+                  </label>
+                  <input type="number" min={0} max={495} className={inp} style={inpStyle}
+                    value={manualR} onChange={(e) => setManualR(e.target.value)} />
+                </div>
+              </div>
+            ) : null}
+            <p className="text-sm font-semibold mt-3" style={{ color: "var(--text-muted)" }}>
+              {t("Điểm ước tính", "Estimated total")}:{" "}
+              <span style={{ color: "var(--orange)", fontFamily: "'Lora', serif", fontSize: "1.1rem" }}>{lScore + rScore}</span>/990
+            </p>
+          </div>
+        </div>
+      )}
+
+      <div className="flex gap-2">
+        <button type="submit" disabled={saving} className="self-start px-5 py-2.5 rounded-lg text-sm font-bold text-white"
+          style={{ background: saving ? "var(--border)" : "var(--orange)", cursor: saving ? "not-allowed" : "pointer", border: "none" }}>
+          {saving ? savingLabel : submitLabel}
+        </button>
+        {onCancel && (
+          <button type="button" onClick={onCancel}
+            className="self-start px-5 py-2.5 rounded-lg text-sm"
+            style={{ background: "transparent", border: "1px solid var(--border)", color: "var(--text-muted)", cursor: "pointer" }}>
+            {t("Huỷ", "Cancel")}
+          </button>
+        )}
+      </div>
+    </form>
+  );
+}
+
+function AddScoreForm({ studentCode }: { studentCode: string }) {
+  const { t } = useLocale();
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid var(--border)", background: "var(--bg-elevated)" }}>
@@ -370,119 +527,27 @@ function AddScoreForm({ studentCode }: { studentCode: string }) {
       </button>
 
       {open && (
-        <form onSubmit={handleSubmit} className="px-5 pb-5 flex flex-col gap-4">
-          {/* Mode toggle */}
-          <div className="flex gap-1 p-1 rounded-lg self-start" style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}>
-            {(["simple", "parts"] as const).map((m) => (
-              <button key={m} type="button" onClick={() => setMode(m)}
-                className="px-3 py-1.5 rounded-md text-xs font-semibold transition-all"
-                style={{ background: mode === m ? "var(--orange)" : "transparent", color: mode === m ? "white" : "var(--text-muted)", border: "none", cursor: "pointer" }}>
-                {m === "simple" ? t("Tổng điểm", "Total score") : t("Theo từng Part", "By Part")}
-              </button>
-            ))}
-          </div>
-
-          {/* Date + Testname */}
-          <div className="grid grid-cols-2 gap-3">
-            <div>
-              <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
-                {t("Ngày thi", "Test Date")}
-              </label>
-              <input type="date" className={inp} style={inpStyle} value={date} onChange={(e) => setDate(e.target.value)} required />
-            </div>
-            <div>
-              <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
-                {t("Tên bài test", "Test name")}
-              </label>
-              <input className={inp} style={inpStyle} value={testname} onChange={(e) => setTestname(e.target.value)} placeholder="EST 2024 Test 1" required />
-            </div>
-          </div>
-
-          {mode === "simple" ? (
-            <>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
-                    {t("Điểm Nghe", "Listening")} <span style={{ fontWeight: 400 }}>(0–495)</span>
-                  </label>
-                  <input type="number" min={0} max={495} className={inp} style={inpStyle}
-                    value={listening} onChange={(e) => setListening(e.target.value)} placeholder="300" />
-                </div>
-                <div>
-                  <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
-                    {t("Điểm Đọc", "Reading")} <span style={{ fontWeight: 400 }}>(0–495)</span>
-                  </label>
-                  <input type="number" min={0} max={495} className={inp} style={inpStyle}
-                    value={reading} onChange={(e) => setReading(e.target.value)} placeholder="280" />
-                </div>
-              </div>
-              {simpleTotal !== null && (
-                <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-                  {t("Tổng điểm", "Total")}: <span className="font-bold" style={{ color: "var(--orange)" }}>{simpleTotal}</span>/990
-                </p>
-              )}
-            </>
-          ) : (
-            <div className="flex flex-col gap-3">
-              <div className="rounded-xl p-4" style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}>
-                <div className="text-[11px] font-bold uppercase tracking-wider mb-3" style={{ color: "var(--orange)" }}>Listening</div>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                  {L_PARTS_INFO.map(({ key, label }) => (
-                    <div key={key}>
-                      <label className="block text-[10px] mb-1" style={{ color: "var(--text-muted)" }}>
-                        {label} <span style={{ opacity: 0.6 }}>/{PART_MAX[key]}</span>
-                      </label>
-                      <input type="number" min={0} max={PART_MAX[key]} className={inp} style={inpStyle}
-                        value={parts[key]} onChange={(e) => setPart(key, e.target.value)} placeholder="0" />
-                    </div>
-                  ))}
-                </div>
-                <p className="text-xs mt-2" style={{ color: "var(--text-muted)" }}>
-                  {t("Tổng đúng", "Correct")}: <strong style={{ color: "var(--orange)" }}>{lCorrect}/100</strong>
-                  {" → "}{t("Điểm L", "Score L")}: <strong style={{ color: "var(--orange)" }}>~{lScore}</strong>
-                </p>
-              </div>
-              <div className="rounded-xl p-4" style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}>
-                <div className="text-[11px] font-bold uppercase tracking-wider mb-3" style={{ color: "#1E6FA8" }}>Reading</div>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                  {R_PARTS_INFO.map(({ key, label }) => (
-                    <div key={key}>
-                      <label className="block text-[10px] mb-1" style={{ color: "var(--text-muted)" }}>
-                        {label} <span style={{ opacity: 0.6 }}>/{PART_MAX[key]}</span>
-                      </label>
-                      <input type="number" min={0} max={PART_MAX[key]} className={inp} style={inpStyle}
-                        value={parts[key]} onChange={(e) => setPart(key, e.target.value)} placeholder="0" />
-                    </div>
-                  ))}
-                </div>
-                <p className="text-xs mt-2" style={{ color: "var(--text-muted)" }}>
-                  {t("Tổng đúng", "Correct")}: <strong style={{ color: "#1E6FA8" }}>{rCorrect}/100</strong>
-                  {" → "}{t("Điểm R", "Score R")}: <strong style={{ color: "#1E6FA8" }}>~{rScore}</strong>
-                </p>
-              </div>
-              <p className="text-sm font-semibold" style={{ color: "var(--text-muted)" }}>
-                {t("Điểm ước tính", "Estimated total")}:{" "}
-                <span style={{ color: "var(--orange)", fontFamily: "'Lora', serif", fontSize: "1.1rem" }}>{lScore + rScore}</span>/990
-              </p>
-            </div>
-          )}
-
-          <button type="submit" disabled={saving} className="self-start px-5 py-2.5 rounded-lg text-sm font-bold text-white"
-            style={{ background: saving ? "var(--border)" : "var(--orange)", cursor: saving ? "not-allowed" : "pointer", border: "none" }}>
-            {saving ? t("Đang lưu...", "Saving...") : t("Lưu kết quả", "Save")}
-          </button>
-        </form>
+        <ScoreEntryForm
+          submitLabel={t("Lưu kết quả", "Save")}
+          savingLabel={t("Đang lưu...", "Saving...")}
+          onSubmit={async (entry) => {
+            await pushStudentScore(studentCode, entry);
+            setOpen(false);
+          }}
+        />
       )}
     </div>
   );
 }
 
-function ScoreRow({ score, isNewest, onDelete, onReview, locale }: {
+function ScoreRow({ score, isNewest, onDelete, onEdit, onReview, locale }: {
   score: ToeicScore; isNewest: boolean; onDelete: () => void;
+  onEdit: (entry: ToeicScore) => Promise<void>;
   onReview: () => void; locale: "vi" | "en";
 }) {
   const { t } = useLocale();
   const [expanded, setExpanded] = useState(false);
+  const [editing, setEditing] = useState(false);
   const l = getListening(score), r = getReading(score);
   const hasPartScores = (["p1","p2","p3","p4","p5","p6","p7"] as const).some((k) => (score[k] ?? 0) > 0);
 
@@ -516,6 +581,11 @@ function ScoreRow({ score, isNewest, onDelete, onReview, locale }: {
               style={{ color: "var(--orange)", background: "none", border: "none", cursor: "pointer" }}>
               <span>📄</span><span>{t("Chi tiết", "Details")}</span>
             </button>
+            <button onClick={() => { setEditing(true); setExpanded(true); }}
+              className="text-[11px] px-2 py-1 rounded font-semibold transition-opacity hover:opacity-80"
+              style={{ color: "var(--orange)", border: "1px solid var(--border-focus)", background: "none", cursor: "pointer" }}>
+              {t("Sửa", "Edit")}
+            </button>
             <button onClick={onDelete}
               className="text-[11px] px-2 py-1 rounded transition-colors"
               style={{ color: "#c62828", border: "1px solid rgba(198,40,40,0.3)", background: "none", cursor: "pointer" }}>
@@ -524,7 +594,20 @@ function ScoreRow({ score, isNewest, onDelete, onReview, locale }: {
           </div>
         </td>
       </tr>
-      {expanded && (
+      {expanded && editing && (
+        <tr style={{ background: "rgba(196,98,45,0.03)", borderBottom: `1px solid var(--border)` }}>
+          <td colSpan={5} className="p-0">
+            <ScoreEntryForm
+              initial={score}
+              submitLabel={t("Lưu thay đổi", "Save changes")}
+              savingLabel={t("Đang lưu...", "Saving...")}
+              onSubmit={async (entry) => { await onEdit(entry); setEditing(false); }}
+              onCancel={() => setEditing(false)}
+            />
+          </td>
+        </tr>
+      )}
+      {expanded && !editing && (
         <tr style={{ background: "rgba(196,98,45,0.03)", borderBottom: `1px solid var(--border)` }}>
           <td colSpan={5} className="px-4 py-3">
             <div className="flex flex-wrap gap-2 text-[11px]">
@@ -1333,6 +1416,17 @@ export default function ScoresPage() {
     finally { setDeleteKey(null); }
   }
 
+  async function handleEdit(displayIndex: number, updated: ToeicScore) {
+    if (!studentCode) return;
+    const scoreToEdit = sortedScores[displayIndex];
+    const originalScores: ToeicScore[] = student?.scores ? [...student.scores] : [];
+    const originalIndex = originalScores.findIndex(
+      (s) => s.date === scoreToEdit.date && s.score === scoreToEdit.score
+    );
+    if (originalIndex === -1) return;
+    await updateStudentScore(studentCode, originalIndex, updated);
+  }
+
   if (loading) {
     return (
       <div className="space-y-4 animate-pulse">
@@ -1468,6 +1562,7 @@ export default function ScoresPage() {
                   {sortedScores.map((s, i) => (
                     <ScoreRow key={`${s.date}-${s.score}-${i}`} score={s} isNewest={i === 0}
                       onDelete={() => deleteKey === null && handleDelete(i)}
+                      onEdit={(entry) => handleEdit(i, entry)}
                       onReview={() => setReviewScore(s)}
                       locale={locale} />
                   ))}
