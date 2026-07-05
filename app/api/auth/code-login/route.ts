@@ -1,9 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { prisma } from "@/lib/db/prisma";
-
-const RTDB =
-  "https://quanlyhocvien-b1796-default-rtdb.asia-southeast1.firebasedatabase.app";
+import { getAdminDb } from "@/lib/firebase/admin";
 
 /**
  * POST /api/auth/code-login
@@ -23,12 +21,16 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Vui lòng nhập mã học viên." }, { status: 400 });
     }
 
-    // 1. Kiểm tra mã trong Firebase
-    const fbRes = await fetch(`${RTDB}/students/${encodeURIComponent(code)}/name.json`);
-    if (!fbRes.ok) {
+    // 1. Kiểm tra mã trong Firebase — dùng Admin SDK (service account bypass
+    //    security rules; đọc REST ẩn danh giờ bị rules chặn 401).
+    let studentName: string | null;
+    try {
+      const snap = await getAdminDb().ref(`students/${code}/name`).get();
+      studentName = snap.exists() ? (snap.val() as string) : null;
+    } catch (e) {
+      console.error("[code-login] RTDB read failed:", e);
       return NextResponse.json({ error: "Không thể kết nối hệ thống." }, { status: 502 });
     }
-    const studentName: string | null = await fbRes.json();
     if (studentName === null) {
       return NextResponse.json({ error: "Mã học viên không tồn tại." }, { status: 404 });
     }
