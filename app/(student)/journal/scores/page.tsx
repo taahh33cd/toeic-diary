@@ -1547,27 +1547,29 @@ export default function ScoresPage() {
                 </p>
               </div>
             ) : (
-              <table className="w-full">
-                <thead>
-                  <tr style={{ borderBottom: "1px solid var(--border)", background: "var(--bg-primary)" }}>
-                    {[t("Ngày thi", "Date"), t("Điểm Tổng", "Total"), t("Điểm Nghe", "Listening"), t("Điểm Đọc", "Reading"), ""].map((h, i) => (
-                      <th key={i} className={`px-4 py-3 text-left text-[11px] font-bold uppercase tracking-wider ${i === 4 ? "text-right" : ""}`}
-                        style={{ color: "var(--text-muted)" }}>
-                        {h}
-                      </th>
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr style={{ borderBottom: "1px solid var(--border)", background: "var(--bg-primary)" }}>
+                      {[t("Ngày thi", "Date"), t("Điểm Tổng", "Total"), t("Điểm Nghe", "Listening"), t("Điểm Đọc", "Reading"), ""].map((h, i) => (
+                        <th key={i} className={`px-4 py-3 text-left text-[11px] font-bold uppercase tracking-wider ${i === 4 ? "text-right" : ""}`}
+                          style={{ color: "var(--text-muted)" }}>
+                          {h}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {sortedScores.map((s, i) => (
+                      <ScoreRow key={`${s.date}-${s.score}-${i}`} score={s} isNewest={i === 0}
+                        onDelete={() => deleteKey === null && handleDelete(i)}
+                        onEdit={(entry) => handleEdit(i, entry)}
+                        onReview={() => setReviewScore(s)}
+                        locale={locale} />
                     ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {sortedScores.map((s, i) => (
-                    <ScoreRow key={`${s.date}-${s.score}-${i}`} score={s} isNewest={i === 0}
-                      onDelete={() => deleteKey === null && handleDelete(i)}
-                      onEdit={(entry) => handleEdit(i, entry)}
-                      onReview={() => setReviewScore(s)}
-                      locale={locale} />
-                  ))}
-                </tbody>
-              </table>
+                  </tbody>
+                </table>
+              </div>
             )}
           </div>
         </div>
