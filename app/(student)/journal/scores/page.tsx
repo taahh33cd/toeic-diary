@@ -11,6 +11,7 @@ import {
   addParaphraseEntry, reviewParaphraseEntry, deleteParaphraseEntry,
 } from "@/lib/firebase/helpers";
 import type { ToeicScore, ErrorLogEntry, ErrorDetail, ParaphraseEntry } from "@/lib/firebase/types";
+import { calcEtsScore } from "@/lib/ets-scale";
 import ReviewDrawer from "@/components/journal/ReviewDrawer";
 
 // ─── Scores: Part definitions ─────────────────────────────────────────────────
@@ -334,8 +335,12 @@ function ScoreEntryForm({
 
   const lCorrect = (["p1", "p2", "p3", "p4"] as PartKey[]).reduce((s, k) => s + (parseInt(parts[k], 10) || 0), 0);
   const rCorrect = (["p5", "p6", "p7"] as PartKey[]).reduce((s, k) => s + (parseInt(parts[k], 10) || 0), 0);
-  const autoLScore = Math.round((lCorrect / 100) * 495);
-  const autoRScore = Math.round((rCorrect / 100) * 495);
+  const etsAuto = calcEtsScore(
+    parseInt(parts.p1, 10) || 0, parseInt(parts.p2, 10) || 0, parseInt(parts.p3, 10) || 0, parseInt(parts.p4, 10) || 0,
+    parseInt(parts.p5, 10) || 0, parseInt(parts.p6, 10) || 0, parseInt(parts.p7, 10) || 0,
+  );
+  const autoLScore = etsAuto.ls;
+  const autoRScore = etsAuto.rd;
   const simpleTotal = listening && reading ? (parseInt(listening, 10) || 0) + (parseInt(reading, 10) || 0) : null;
 
   const [manualOverride, setManualOverride] = useState(
