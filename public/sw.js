@@ -57,10 +57,14 @@ self.addEventListener("push", (event) => {
         method: "POST",
         body: `push event fired: ${title} @ ${new Date().toISOString()}`,
       }).catch(() => {}),
-      // Show notification — no icon/badge to avoid background fetch failures on iOS
+      // Show notification — no icon/badge to avoid background fetch failures on iOS.
+      // Unique tag per push: a fixed tag makes iOS/WebKit *silently* replace the
+      // previous notification (no alert) unless renotify is set — that made every
+      // notification after the first invisible. renotify re-alerts on same tag.
       self.registration.showNotification(title, {
         body,
-        tag: "push",
+        tag: `push-${Date.now()}`,
+        renotify: true,
         data: { url },
       }).catch(() =>
         self.registration.showNotification("Anh Hiếu²", { body: "Bạn có thông báo mới" })
