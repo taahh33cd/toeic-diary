@@ -121,6 +121,7 @@ export interface Student {
   homework?: Homework[];
   modules?: StudentModule[];
   schedule?: ScheduleItem[];
+  weeklySchedule?: ClassSession[];   // lịch học cố định (chỉ dùng khi HV không thuộc lớp)
   errorLog?: Record<string, ErrorLogEntry>;
   paraphraseLog?: Record<string, ParaphraseEntry>;
   reviewProgress?: ReviewProgress;

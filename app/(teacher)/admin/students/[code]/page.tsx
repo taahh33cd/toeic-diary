@@ -38,6 +38,7 @@ import type {
   ToeicScore,
   StudentModule,
   ScheduleItem,
+  ClassSession,
   Homework,
   HwItem,
   HwFilesMap,
@@ -1989,6 +1990,148 @@ function PersonalScheduleSection({ student, code }: { student: Student; code: st
   );
 }
 
+// ─── 12. Fixed weekly schedule ────────────────────────────────────────────────
+
+const DAY_OPTIONS = [
+  { value: "Monday",    label: "Thứ 2" },
+  { value: "Tuesday",   label: "Thứ 3" },
+  { value: "Wednesday", label: "Thứ 4" },
+  { value: "Thursday",  label: "Thứ 5" },
+  { value: "Friday",    label: "Thứ 6" },
+  { value: "Saturday",  label: "Thứ 7" },
+  { value: "Sunday",    label: "CN" },
+];
+const DAYS_VI: Record<string, string> = Object.fromEntries(DAY_OPTIONS.map((d) => [d.value, d.label]));
+
+function FixedScheduleSection({ student, code }: { student: Student; code: string }) {
+  const { classes } = useClasses();
+  const memberClass = classes.find((c) => c.members?.includes(code));
+
+  const [editing, setEditing] = useState(false);
+  const [sessions, setSessions] = useState<ClassSession[]>(student.weeklySchedule ?? []);
+  const [saving, setSaving] = useState(false);
+
+  // Read-only mirror khi HV thuộc lớp
+  if (memberClass) {
+    const cls = memberClass;
+    return (
+      <SectionCard title="⏰ Lịch học cố định">
+        <div className="space-y-2">
+          <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+            Đồng bộ từ lớp{" "}
+            <Link href={`/admin/classes/${cls.id}`} className="font-semibold" style={{ color: "var(--accent-primary)" }}>
+              {cls.name}
+            </Link>
+          </p>
+          {cls.weeklySchedule && cls.weeklySchedule.length > 0 ? (
+            <div className="flex gap-2 flex-wrap">
+              {cls.weeklySchedule.map((s, i) => (
+                <span key={i} className="text-xs px-2 py-0.5 rounded-full"
+                  style={{ background: "rgba(196,98,45,0.08)", color: "var(--accent-primary)" }}>
+                  {DAYS_VI[s.day] ?? s.day} · {s.time}{s.room ? ` · ${s.room}` : ""}
+                </span>
+              ))}
+            </div>
+          ) : (
+            <p className="text-sm text-center py-2" style={{ color: "var(--text-muted)" }}>
+              Lớp chưa có lịch cố định. Thêm ở trang lớp.
+            </p>
+          )}
+        </div>
+      </SectionCard>
+    );
+  }
+
+  // Editable khi HV học lẻ
+  async function handleSave() {
+    setSaving(true);
+    await updateStudent(code, { weeklySchedule: sessions.length > 0 ? sessions : [] });
+    setSaving(false);
+    setEditing(false);
+  }
+
+  function updateSession(i: number, field: "day" | "time", val: string) {
+    setSessions((prev) => prev.map((s, j) => (j === i ? { ...s, [field]: val } : s)));
+  }
+
+  return (
+    <SectionCard
+      title="⏰ Lịch học cố định"
+      action={
+        editing ? (
+          <div className="flex gap-2">
+            <button onClick={() => { setEditing(false); setSessions(student.weeklySchedule ?? []); }} className="text-xs px-2.5 py-1.5 rounded-lg border" style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}>Huỷ</button>
+            <button onClick={handleSave} disabled={saving} className="text-xs px-2.5 py-1.5 rounded-lg font-semibold disabled:opacity-50" style={{ background: "var(--accent-primary)", color: "#fff" }}>{saving ? "..." : "Lưu"}</button>
+          </div>
+        ) : (
+          <button onClick={() => setEditing(true)} className="text-xs px-2.5 py-1.5 rounded-lg font-medium flex items-center gap-1" style={{ background: "var(--accent-primary)", color: "#fff" }}>
+            <Plus size={12} /> Sửa
+          </button>
+        )
+      }
+    >
+      {editing ? (
+        <div className="space-y-2">
+          <button
+            type="button"
+            onClick={() => setSessions((prev) => [...prev, { day: "Monday", time: "20:00" }])}
+            className="text-[11px] font-semibold px-2 py-1 rounded"
+            style={{ background: "rgba(196,98,45,0.1)", color: "var(--accent-primary)" }}
+          >
+            + Thêm buổi
+          </button>
+          {sessions.length === 0 ? (
+            <p className="text-xs" style={{ color: "var(--text-muted)" }}>Chưa có buổi cố định.</p>
+          ) : (
+            sessions.map((s, i) => (
+              <div key={i} className="flex items-center gap-2">
+                <select
+                  value={s.day}
+                  onChange={(e) => updateSession(i, "day", e.target.value)}
+                  className="text-xs px-2 py-1.5 rounded-lg border flex-1"
+                  style={{ background: "var(--bg-primary)", color: "var(--text-primary)", borderColor: "var(--border)" }}
+                >
+                  {DAY_OPTIONS.map((d) => <option key={d.value} value={d.value}>{d.label}</option>)}
+                </select>
+                <input
+                  type="time"
+                  value={s.time}
+                  onChange={(e) => updateSession(i, "time", e.target.value)}
+                  className="text-xs px-2 py-1.5 rounded-lg border"
+                  style={{ background: "var(--bg-primary)", color: "var(--text-primary)", borderColor: "var(--border)", width: "7.5rem" }}
+                />
+                <button
+                  type="button"
+                  onClick={() => setSessions((prev) => prev.filter((_, j) => j !== i))}
+                  className="p-1 hover:opacity-70 shrink-0"
+                  style={{ color: "rgb(239,68,68)" }}
+                >
+                  <Trash2 size={13} />
+                </button>
+              </div>
+            ))
+          )}
+        </div>
+      ) : (
+        <div>
+          {student.weeklySchedule && student.weeklySchedule.length > 0 ? (
+            <div className="flex gap-2 flex-wrap">
+              {student.weeklySchedule.map((s, i) => (
+                <span key={i} className="text-xs px-2 py-0.5 rounded-full"
+                  style={{ background: "rgba(196,98,45,0.08)", color: "var(--accent-primary)" }}>
+                  {DAYS_VI[s.day] ?? s.day} · {s.time}
+                </span>
+              ))}
+            </div>
+          ) : (
+            <p className="text-sm text-center py-2" style={{ color: "var(--text-muted)" }}>Chưa có lịch cố định</p>
+          )}
+        </div>
+      )}
+    </SectionCard>
+  );
+}
+
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
 export default function StudentEditorPage() {
@@ -2135,6 +2278,7 @@ export default function StudentEditorPage() {
         <div className="space-y-5">
           <StudentLinkSection code={code} />
           <ModulesSection student={student} code={code} />
+          <FixedScheduleSection student={student} code={code} />
           <PersonalScheduleSection student={student} code={code} />
         </div>
       </div>

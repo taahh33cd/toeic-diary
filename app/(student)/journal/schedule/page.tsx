@@ -29,6 +29,10 @@ function fmtDateLabel(dateStr: string) {
   return `${d}/${m}/${y}`;
 }
 
+const DAY_NAME_TO_NUM: Record<string, number> = {
+  Sunday: 0, Monday: 1, Tuesday: 2, Wednesday: 3, Thursday: 4, Friday: 5, Saturday: 6,
+};
+
 function generateWeeklyDates(
   day: string,
   time: string,
@@ -37,7 +41,8 @@ function generateWeeklyDates(
   fromDate: string,
   count = 8
 ): (ScheduleItem & { kind: string; source: "class"; classId: string; className: string })[] {
-  const dayNum = parseInt(day, 10);
+  // day có thể là số ("0".."6") hoặc tên ("Monday".."Sunday")
+  const dayNum = day in DAY_NAME_TO_NUM ? DAY_NAME_TO_NUM[day] : parseInt(day, 10);
   if (isNaN(dayNum) || dayNum < 0 || dayNum > 6) return [];
 
   const [fy, fm, fd] = fromDate.split("-").map(Number);
@@ -61,6 +66,39 @@ function generateWeeklyDates(
       source: "class",
       classId,
       className,
+    });
+    cur.setDate(cur.getDate() + 7);
+  }
+  return results;
+}
+
+// Lịch cố định cá nhân (HV học lẻ, không thuộc lớp)
+function generateWeeklyPersonal(
+  day: string,
+  time: string,
+  fromDate: string,
+  idx: number,
+  count = 8
+): SessionEntry[] {
+  const dayNum = day in DAY_NAME_TO_NUM ? DAY_NAME_TO_NUM[day] : parseInt(day, 10);
+  if (isNaN(dayNum) || dayNum < 0 || dayNum > 6) return [];
+
+  const [fy, fm, fd] = fromDate.split("-").map(Number);
+  let cur = new Date(fy, fm - 1, fd);
+  cur.setDate(cur.getDate() + ((dayNum - cur.getDay() + 7) % 7));
+
+  const results: SessionEntry[] = [];
+  for (let i = 0; i < count; i++) {
+    const y = cur.getFullYear();
+    const m = String(cur.getMonth() + 1).padStart(2, "0");
+    const d = String(cur.getDate()).padStart(2, "0");
+    results.push({
+      id: `fixed_${idx}_${y}-${m}-${d}`,
+      date: `${y}-${m}-${d}`,
+      time,
+      title: "⏰ Lịch cố định",
+      kind: "1-1",
+      source: "personal",
     });
     cur.setDate(cur.getDate() + 7);
   }
@@ -454,14 +492,23 @@ export default function SchedulePage() {
     }
 
     const studentCode = profile?.studentCode;
+    let inClass = false;
     if (studentCode) {
       for (const cls of classes) {
         if (!cls.members?.includes(studentCode)) continue;
+        inClass = true;
         for (const slot of cls.weeklySchedule ?? []) {
           const generated = generateWeeklyDates(slot.day, slot.time, cls.name, cls.id, td, 8);
           results.push(...generated);
         }
       }
+    }
+
+    // Lịch cố định cá nhân — chỉ khi HV không thuộc lớp nào
+    if (!inClass) {
+      (student?.weeklySchedule ?? []).forEach((slot, i) => {
+        results.push(...generateWeeklyPersonal(slot.day, slot.time, td, i, 8));
+      });
     }
 
     // Deduplicate (personal takes priority)
@@ -481,7 +528,7 @@ export default function SchedulePage() {
     }
 
     return deduped.sort((a, b) => a.date.localeCompare(b.date));
-  }, [student?.schedule, classes, profile?.studentCode, td]);
+  }, [student?.schedule, student?.weeklySchedule, classes, profile?.studentCode, td]);
 
   const upcoming = useMemo(() => allSessions.filter((s) => s.date >= td), [allSessions, td]);
   const history  = useMemo(() => allSessions.filter((s) => s.date < td).reverse(), [allSessions, td]);
