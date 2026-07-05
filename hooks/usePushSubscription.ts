@@ -25,7 +25,7 @@ async function saveSubscription(sub: PushSubscription, studentCode?: string): Pr
 
 // Hardcoded to avoid Turbopack build-cache issues with NEXT_PUBLIC_ env vars.
 // Must match NEXT_PUBLIC_VAPID_PUBLIC_KEY in .env / Vercel project settings.
-const VAPID_PUBLIC_KEY = "BFqswye__H00897x4Td7bAqfCNNe3DNdvVuN10A68Z9MbQb3r_plnSQIy-OasGYJX5e_nQRnF_aMBxlXoX_YOkI";
+const VAPID_PUBLIC_KEY = "BHqkCvrsrK0m9n4MlEtF3ChsKXFR2PmtoFase9zuXRyHUQH0n8HCZ1qhgN15KPGK6hYu_CyNNky8Rzr3clhiMRA";
 
 function getVapidKey(): string {
   return VAPID_PUBLIC_KEY;

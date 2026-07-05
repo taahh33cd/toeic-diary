@@ -47,7 +47,7 @@ export function PushTestButton({ studentCode }: { studentCode?: string }) {
       }
 
       // 2. Create fresh subscription
-      const VAPID_PUBLIC_KEY = "BFqswye__H00897x4Td7bAqfCNNe3DNdvVuN10A68Z9MbQb3r_plnSQIy-OasGYJX5e_nQRnF_aMBxlXoX_YOkI";
+      const VAPID_PUBLIC_KEY = "BHqkCvrsrK0m9n4MlEtF3ChsKXFR2PmtoFase9zuXRyHUQH0n8HCZ1qhgN15KPGK6hYu_CyNNky8Rzr3clhiMRA";
       const padding = "=".repeat((4 - (VAPID_PUBLIC_KEY.length % 4)) % 4);
       const base64 = (VAPID_PUBLIC_KEY + padding).replace(/-/g, "+").replace(/_/g, "/");
       const raw = atob(base64);
