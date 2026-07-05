@@ -40,6 +40,16 @@ const SECRETS: string[] = ["VAPID_SUBJECT", "VAPID_PUBLIC_KEY", "VAPID_PRIVATE_K
 const REGION = "asia-southeast1";
 const DB_INSTANCE = "quanlyhocvien-b1796-default-rtdb";
 
+// ── Helper: is subscription permanently dead? (purge it) ─────────────────────
+// 410/404 = expired/revoked; 401/403 = VAPID key mismatch;
+// 400 + VapidPkHashMismatch = Apple Web Push's form of the same mismatch.
+function isDeadSubscription(err: { statusCode?: number; body?: string }): boolean {
+  const { statusCode, body } = err;
+  if (statusCode === 410 || statusCode === 404 || statusCode === 401 || statusCode === 403) return true;
+  if (statusCode === 400 && typeof body === "string" && body.includes("VapidPkHashMismatch")) return true;
+  return false;
+}
+
 // ── Helper: push to all subs under pushSubs/{uid}/subs/* ─────────────────────
 async function sendToUidSubs(uid: string, payload: object): Promise<void> {
   const snap = await db().ref(`pushSubs/${uid}/subs`).get();
@@ -55,9 +65,9 @@ async function sendToUidSubs(uid: string, payload: object): Promise<void> {
       const sub = JSON.parse(raw) as webpush.PushSubscription;
       const endpoint = (sub as { endpoint?: string }).endpoint ?? "";
       promises.push(
-        webpush.sendNotification(sub, payloadStr).catch(async (err: { statusCode?: number; message?: string }) => {
+        webpush.sendNotification(sub, payloadStr).catch(async (err: { statusCode?: number; message?: string; body?: string }) => {
           console.error(`[push/uid=${uid}] status=${err.statusCode} ep=...${String(endpoint).slice(-30)}`, err.message);
-          if (err.statusCode === 410 || err.statusCode === 404) {
+          if (isDeadSubscription(err)) {
             await child.ref.remove().catch(() => undefined);
           }
         })
@@ -96,9 +106,9 @@ async function sendToAdminSubs(payload: object): Promise<void> {
       const sub = JSON.parse(data.subscription) as webpush.PushSubscription;
       const endpoint = (sub as { endpoint?: string }).endpoint ?? "";
       promises.push(
-        webpush.sendNotification(sub, payloadStr).catch(async (err: { statusCode?: number; message?: string }) => {
+        webpush.sendNotification(sub, payloadStr).catch(async (err: { statusCode?: number; message?: string; body?: string }) => {
           console.error(`[push/admin] status=${err.statusCode} ep=...${String(endpoint).slice(-30)}`, err.message);
-          if (err.statusCode === 410 || err.statusCode === 404) {
+          if (isDeadSubscription(err)) {
             await child.ref.remove().catch(() => undefined);
           }
         })

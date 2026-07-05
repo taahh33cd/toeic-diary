@@ -15,6 +15,20 @@ function setupVapid() {
   );
 }
 
+/**
+ * True when the push service permanently rejected the subscription, so it
+ * should be purged from storage.
+ *   410 Gone / 404 Not Found — expired or revoked by the browser.
+ *   401 / 403 — VAPID key mismatch (sub created with a different key).
+ *   400 + VapidPkHashMismatch — Apple Web Push's form of the same mismatch.
+ */
+function isDeadSubscription(err: { statusCode?: number; body?: string }): boolean {
+  const { statusCode, body } = err;
+  if (statusCode === 410 || statusCode === 404 || statusCode === 401 || statusCode === 403) return true;
+  if (statusCode === 400 && typeof body === "string" && body.includes("VapidPkHashMismatch")) return true;
+  return false;
+}
+
 /** Send push to all subscriptions of a Supabase user (from Prisma). */
 export async function sendPushToUser(
   userId: string,
@@ -30,10 +44,8 @@ export async function sendPushToUser(
     subs.map((s) =>
       webpush
         .sendNotification(JSON.parse(s.subscription) as webpush.PushSubscription, payloadStr)
-        .catch(async (err: { statusCode?: number }) => {
-          // 410 Gone / 404: subscription expired or revoked by browser
-          // 401 Unauthorized: VAPID key mismatch — subscription was created with a different key
-          if (err.statusCode === 410 || err.statusCode === 404 || err.statusCode === 401) {
+        .catch(async (err: { statusCode?: number; body?: string }) => {
+          if (isDeadSubscription(err)) {
             await prisma.pushSubscription.delete({ where: { id: s.id } }).catch(() => {});
           }
         })
@@ -59,8 +71,8 @@ export async function sendPushToAdminSubs(
     try {
       const sub = JSON.parse(data.subscription) as webpush.PushSubscription;
       promises.push(
-        webpush.sendNotification(sub, payloadStr).catch(async (err: { statusCode?: number }) => {
-          if (err.statusCode === 410 || err.statusCode === 404 || err.statusCode === 401) {
+        webpush.sendNotification(sub, payloadStr).catch(async (err: { statusCode?: number; body?: string }) => {
+          if (isDeadSubscription(err)) {
             await child.ref.remove().catch(() => undefined);
           }
         })
