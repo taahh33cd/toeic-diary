@@ -103,6 +103,18 @@ export async function deleteStudentScore(
   await set(ref(firebaseDb, `students/${code}/scores`), existing);
 }
 
+export async function updateStudentScore(
+  code: string,
+  index: number,
+  score: ToeicScore
+): Promise<void> {
+  const snap = await get(ref(firebaseDb, `students/${code}/scores`));
+  const existing: ToeicScore[] = snap.val() ?? [];
+  existing[index] = score;
+  const updated = [...existing].sort((a, b) => a.date.localeCompare(b.date));
+  await set(ref(firebaseDb, `students/${code}/scores`), updated);
+}
+
 // ─── Homework ────────────────────────────────────────────────────────────────
 
 export async function setHomework(
@@ -421,7 +433,10 @@ export async function updateClass(
   id: string,
   partial: Partial<SchoolClass>
 ): Promise<void> {
-  await update(ref(firebaseDb, `classes/${id}`), partial);
+  const cleaned = Object.fromEntries(
+    Object.entries(partial as Record<string, unknown>).filter(([, v]) => v !== undefined)
+  );
+  await update(ref(firebaseDb, `classes/${id}`), cleaned);
 }
 
 export async function pushClassHomework(
