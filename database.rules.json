@@ -1,0 +1,21 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": true,
+    "notifications": {
+      "$studentId": {
+        ".read": true,
+        ".write": true
+      }
+    },
+    "pushSubscriptions": {
+      "$studentId": {
+        ".read": true,
+        ".write": true
+      }
+    },
+    "pushSubs": {
+      ".indexOn": ["studentCode"]
+    }
+  }
+}
