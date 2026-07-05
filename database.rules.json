@@ -1,21 +1,114 @@
 {
   "rules": {
-    ".read": true,
-    ".write": true,
+    "students": {
+      ".read": "auth != null && (auth.token.role === 'teacher' || auth.token.role === 'admin')",
+      "$code": {
+        ".read": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')",
+        ".write": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')"
+      }
+    },
+
     "notifications": {
-      "$studentId": {
-        ".read": true,
-        ".write": true
+      "$code": {
+        ".read": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')",
+        ".write": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')"
       }
     },
-    "pushSubscriptions": {
-      "$studentId": {
-        ".read": true,
-        ".write": true
+
+    "vocab": {
+      "$code": {
+        ".read": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')",
+        ".write": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')"
       }
     },
+    "vocab_forgotten": {
+      "$code": {
+        ".read": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')",
+        ".write": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')"
+      }
+    },
+    "goals": {
+      "$code": {
+        ".read": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')",
+        ".write": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')"
+      }
+    },
+    "progress": {
+      "$code": {
+        ".read": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')",
+        ".write": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')"
+      }
+    },
+    "hwViewed": {
+      "$code": {
+        ".read": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')",
+        ".write": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')"
+      }
+    },
+
+    "hwFiles": {
+      ".read": "auth != null && (auth.token.role === 'teacher' || auth.token.role === 'admin')",
+      "$code": {
+        ".read": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')",
+        ".write": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')"
+      }
+    },
+    "submissions": {
+      ".read": "auth != null && (auth.token.role === 'teacher' || auth.token.role === 'admin')",
+      "$code": {
+        ".read": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')",
+        ".write": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')"
+      }
+    },
+    "daylinks": {
+      ".read": "auth != null && (auth.token.role === 'teacher' || auth.token.role === 'admin')",
+      "$code": {
+        ".read": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')",
+        ".write": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')"
+      }
+    },
+    "attendance": {
+      ".read": "auth != null && (auth.token.role === 'teacher' || auth.token.role === 'admin')",
+      "$code": {
+        ".read": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')",
+        ".write": "auth != null && (auth.token.role === 'teacher' || auth.token.role === 'admin')"
+      }
+    },
+
+    "bookings": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "classes": {
+      ".read": "auth != null",
+      ".write": "auth != null && (auth.token.role === 'teacher' || auth.token.role === 'admin')"
+    },
+    "slots": {
+      ".read": "auth != null",
+      ".write": "auth != null && (auth.token.role === 'teacher' || auth.token.role === 'admin')"
+    },
+
+    "adminNotifications": {
+      ".read": "auth != null && (auth.token.role === 'teacher' || auth.token.role === 'admin')",
+      ".write": "auth != null && (auth.token.role === 'teacher' || auth.token.role === 'admin')",
+      ".indexOn": ["createdAt"]
+    },
+    "scoreRequests": {
+      ".read": "auth != null && (auth.token.role === 'teacher' || auth.token.role === 'admin')",
+      ".write": "auth != null"
+    },
+
     "pushSubs": {
+      ".read": false,
+      ".write": false,
       ".indexOn": ["studentCode"]
-    }
+    },
+    "adminSubs": { ".read": false, ".write": false },
+    "pushSubscriptions": { ".read": false, ".write": false },
+    "teacherSubscriptions": { ".read": false, ".write": false },
+    "notifiedAdmin": { ".read": false, ".write": false },
+    "notifSent": { ".read": false, ".write": false },
+    "remindedSessions": { ".read": false, ".write": false },
+    "vocab_word_cache": { ".read": false, ".write": false }
   }
 }
