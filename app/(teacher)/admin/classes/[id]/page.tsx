@@ -534,7 +534,7 @@ function ClassInfoSection({
     await updateClass(classId, {
       name: name.trim(),
       desc: desc.trim() || undefined,
-      weeklySchedule: sessions.length > 0 ? sessions : null,
+      weeklySchedule: sessions.length > 0 ? sessions : undefined,
     });
     setSaving(false);
     setEditing(false);
