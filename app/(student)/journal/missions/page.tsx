@@ -181,6 +181,7 @@ function HwCard({
   const [open, setOpen] = useState(isCurrent);
   const [showDescMap, setShowDescMap] = useState<Record<string, boolean>>({});
   const [uploading, setUploading] = useState<number | null>(null);
+  const [batch, setBatch] = useState<{ index: number; total: number } | null>(null);
   const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null);
   const [lightboxUrl, setLightboxUrl] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -243,28 +244,42 @@ function HwCard({
   const endLabel  = endDate ? endDate.toLocaleDateString("vi-VN", { day: "numeric", month: "numeric" }) : null;
 
   async function handleFileSelect(e: React.ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0];
-    if (!file) return;
+    const files = Array.from(e.target.files ?? []);
+    if (files.length === 0) return;
     if (fileInputRef.current) fileInputRef.current.value = "";
-    setUploading(0);
-    try {
-      if (file.type.startsWith("video/")) {
-        // Video → Cloudinary (không giới hạn dung lượng, tự compress phía server)
-        const { url, publicId } = await uploadToCloudinary(file, setUploading);
-        await addHwFile(studentCode, hw.id, url, file.name, publicId);
-      } else {
-        // Ảnh → Firebase Storage (compress trước)
-        let finalFile = file;
-        const imageCompression = (await import("browser-image-compression")).default;
-        finalFile = await imageCompression(file, { maxSizeMB: 1, maxWidthOrHeight: 1920, useWebWorker: true });
-        const url = await uploadHomeworkFile(studentCode, hw.id, finalFile, setUploading);
-        await addHwFile(studentCode, hw.id, url, file.name);
+
+    let successCount = 0;
+    const failed: string[] = [];
+
+    // Upload lần lượt từng file để tiến trình rõ ràng + không nghẽn mạng
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      setBatch({ index: i + 1, total: files.length });
+      setUploading(0);
+      try {
+        if (file.type.startsWith("video/")) {
+          // Video → Cloudinary (không giới hạn dung lượng, tự compress phía server)
+          const { url, publicId } = await uploadToCloudinary(file, setUploading);
+          await addHwFile(studentCode, hw.id, url, file.name, publicId);
+        } else {
+          // Ảnh → Firebase Storage (compress trước)
+          const imageCompression = (await import("browser-image-compression")).default;
+          const finalFile = await imageCompression(file, { maxSizeMB: 1, maxWidthOrHeight: 1920, useWebWorker: true });
+          const url = await uploadHomeworkFile(studentCode, hw.id, finalFile, setUploading);
+          await addHwFile(studentCode, hw.id, url, file.name);
+        }
+        successCount++;
+      } catch (err) {
+        failed.push(`${file.name}: ${(err as Error).message ?? "lỗi"}`);
       }
-      await awardXp("homework_submit", { hwDate: hw.date });
-    } catch (err) {
-      alert((err as Error).message ?? "Upload thất bại, thử lại.");
-    } finally {
-      setUploading(null);
+    }
+
+    setUploading(null);
+    setBatch(null);
+
+    if (successCount > 0) await awardXp("homework_submit", { hwDate: hw.date });
+    if (failed.length > 0) {
+      alert(`${failed.length} file tải lên thất bại:\n${failed.join("\n")}`);
     }
   }
 
@@ -503,12 +518,14 @@ function HwCard({
               })()}
 
               {/* Hidden file input */}
-              <input ref={fileInputRef} type="file" accept="image/*,video/mp4,video/quicktime" style={{ display: "none" }} onChange={handleFileSelect} />
+              <input ref={fileInputRef} type="file" accept="image/*,video/mp4,video/quicktime" multiple style={{ display: "none" }} onChange={handleFileSelect} />
 
               {/* Upload button OR progress */}
               {uploading !== null ? (
                 <div>
-                  <div style={{ fontSize: ".68rem", color: "#9A8672", marginBottom: ".2rem" }}>Đang tải lên {uploading}%…</div>
+                  <div style={{ fontSize: ".68rem", color: "#9A8672", marginBottom: ".2rem" }}>
+                    {batch && batch.total > 1 ? `Đang tải ${batch.index}/${batch.total} · ${uploading}%…` : `Đang tải lên ${uploading}%…`}
+                  </div>
                   <div style={{ height: 3, background: "rgba(0,0,0,.08)", overflow: "hidden" }}>
                     <div style={{ height: "100%", background: "#C4622D", width: `${uploading}%`, transition: "width .3s ease" }} />
                   </div>
@@ -521,7 +538,7 @@ function HwCard({
                 >
                   <span style={{ fontSize: ".9rem" }}>📤</span>
                   <span style={{ fontSize: ".78rem", fontWeight: 600, color: "var(--text-primary,#2C1E0F)" }}>Thêm ảnh / video</span>
-                  <span style={{ fontSize: ".62rem", color: "#9A8672" }}>· Ảnh ≤5MB · Video mọi dung lượng</span>
+                  <span style={{ fontSize: ".62rem", color: "#9A8672" }}>· Chọn nhiều file · Ảnh ≤5MB · Video mọi dung lượng</span>
                 </button>
               )}
             </div>
