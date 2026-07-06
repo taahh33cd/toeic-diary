@@ -1,8 +1,7 @@
 // Service Worker — mytoeicdiary
 // Handles Web Push notifications and offline shell cache.
 
-const CACHE_NAME = "mytoeicdiary-shell-v4";
-const SW_VERSION = "v4-tagfix";
+const CACHE_NAME = "mytoeicdiary-shell-v5";
 const SHELL_URLS = ["/journal", "/offline"];
 
 self.addEventListener("install", (event) => {
@@ -45,43 +44,17 @@ self.addEventListener("push", (event) => {
     }
   } catch {}
 
+  // Show notification — no icon/badge to avoid background fetch failures on iOS.
+  // Unique tag per push: a fixed tag makes iOS/WebKit *silently* replace the
+  // previous notification (no alert) unless renotify is set — that made every
+  // notification after the first invisible. renotify re-alerts on same tag.
   event.waitUntil(
-    Promise.all([
-      // Ping server so we can confirm SW received this push (check Vercel logs)
-      fetch("/api/push/ping", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ title, ts: Date.now() }),
-      }).catch(() => {}),
-      // Public debug channel — view live at https://ntfy.sh/mytoeicdiary-pushdebug
-      fetch("https://ntfy.sh/mytoeicdiary-pushdebug", {
-        method: "POST",
-        body: `push event fired [${SW_VERSION}]: ${title} @ ${new Date().toISOString()}`,
-      }).catch(() => {}),
-      // Show notification — no icon/badge to avoid background fetch failures on iOS.
-      // Unique tag per push: a fixed tag makes iOS/WebKit *silently* replace the
-      // previous notification (no alert) unless renotify is set — that made every
-      // notification after the first invisible. renotify re-alerts on same tag.
-      self.registration.showNotification(title, {
-        body,
-        tag: `push-${Date.now()}`,
-        renotify: true,
-        data: { url },
-      })
-        .then(async () => {
-          const n = (await self.registration.getNotifications()).length;
-          return fetch("https://ntfy.sh/mytoeicdiary-pushdebug", {
-            method: "POST",
-            body: `showNotification OK [${SW_VERSION}] — visible count: ${n}`,
-          }).catch(() => {});
-        })
-        .catch((e) =>
-          fetch("https://ntfy.sh/mytoeicdiary-pushdebug", {
-            method: "POST",
-            body: `showNotification FAILED [${SW_VERSION}]: ${e && e.message ? e.message : e}`,
-          }).catch(() => {})
-        ),
-    ])
+    self.registration.showNotification(title, {
+      body,
+      tag: `push-${Date.now()}`,
+      renotify: true,
+      data: { url },
+    })
   );
 });
 
