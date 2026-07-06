@@ -1,12 +1,20 @@
 // ─────────────────────────────────────
 // IPA audio layer
 //
-// Placeholder engine: Web Speech API (speechSynthesis) reads the *example word*
-// of a phoneme — never the raw IPA symbol (TTS can't pronounce "/ʃ/").
-//
-// Phase 6 swap: `playWord` will first try a static mp3 in /audio/ipa/,
-// falling back to Web Speech. The calling UI stays unchanged.
+// Primary: pre-generated Google TTS mp3 in /audio/ipa/<slug>.mp3 (words listed
+// in audio-manifest.json). Fallback: Web Speech API reads the *example word* —
+// never the raw IPA symbol (TTS can't pronounce "/ʃ/").
 // ─────────────────────────────────────
+
+import manifest from "./audio-manifest.json";
+
+const HAVE_MP3 = new Set(manifest as string[]);
+
+function slug(word: string): string {
+  return word.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+let currentAudio: HTMLAudioElement | null = null;
 
 let cachedVoice: SpeechSynthesisVoice | null = null;
 let voiceResolved = false;
@@ -34,23 +42,20 @@ function pickVoice(api: SpeechSynthesis): SpeechSynthesisVoice | null {
   return cachedVoice;
 }
 
-/** Stop any ongoing speech. */
+/** Stop any ongoing audio + speech. */
 export function stopSpeech(): void {
   speechApi()?.cancel();
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio = null;
+  }
 }
 
-/**
- * Speak a single word/phrase in US English.
- * Cancels any in-flight utterance first (rapid clicks stay responsive).
- * Resolves when speech ends (or immediately if unavailable).
- * Must be triggered by a user gesture on mobile (autoplay policy).
- */
-export function playWord(word: string, rate = 0.9): Promise<void> {
+/** Speak via Web Speech (fallback when no mp3 exists / audio fails). */
+function speakWord(word: string, rate: number): Promise<void> {
   const api = speechApi();
   if (!api) return Promise.resolve();
-
   api.cancel();
-
   return new Promise<void>((resolve) => {
     const utter = new SpeechSynthesisUtterance(word);
     utter.lang = "en-US";
@@ -61,6 +66,35 @@ export function playWord(word: string, rate = 0.9): Promise<void> {
     utter.onerror = () => resolve();
     api.speak(utter);
   });
+}
+
+/**
+ * Play a single word in US English. Prefers the pre-generated mp3; on any
+ * failure (missing file, load/play error) falls back to Web Speech.
+ * Cancels any in-flight playback first. Must be triggered by a user gesture
+ * on mobile (autoplay policy).
+ */
+export function playWord(word: string, rate = 0.9): Promise<void> {
+  stopSpeech();
+
+  const s = slug(word);
+  if (HAVE_MP3.has(s) && typeof Audio !== "undefined") {
+    return new Promise<void>((resolve) => {
+      const audio = new Audio(`/audio/ipa/${s}.mp3`);
+      currentAudio = audio;
+      audio.onended = () => { if (currentAudio === audio) currentAudio = null; resolve(); };
+      audio.onerror = () => {
+        if (currentAudio === audio) currentAudio = null;
+        speakWord(word, rate).then(resolve); // fallback
+      };
+      audio.play().catch(() => {
+        if (currentAudio === audio) currentAudio = null;
+        speakWord(word, rate).then(resolve);
+      });
+    });
+  }
+
+  return speakWord(word, rate);
 }
 
 /** Play the phoneme by reading its example word (IPA symbols aren't TTS-readable). */
