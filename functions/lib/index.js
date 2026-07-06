@@ -93,7 +93,7 @@ async function sendToUidSubs(uid, payload) {
         try {
             const sub = JSON.parse(raw);
             const endpoint = sub.endpoint ?? "";
-            promises.push(webpush.sendNotification(sub, payloadStr).catch(async (err) => {
+            promises.push(webpush.sendNotification(sub, payloadStr, { TTL: 86400, urgency: "high" }).catch(async (err) => {
                 console.error(`[push/uid=${uid}] status=${err.statusCode} ep=...${String(endpoint).slice(-30)}`, err.message);
                 if (isDeadSubscription(err)) {
                     await child.ref.remove().catch(() => undefined);
@@ -130,7 +130,7 @@ async function sendToAdminSubs(payload) {
         try {
             const sub = JSON.parse(data.subscription);
             const endpoint = sub.endpoint ?? "";
-            promises.push(webpush.sendNotification(sub, payloadStr).catch(async (err) => {
+            promises.push(webpush.sendNotification(sub, payloadStr, { TTL: 86400, urgency: "high" }).catch(async (err) => {
                 console.error(`[push/admin] status=${err.statusCode} ep=...${String(endpoint).slice(-30)}`, err.message);
                 if (isDeadSubscription(err)) {
                     await child.ref.remove().catch(() => undefined);

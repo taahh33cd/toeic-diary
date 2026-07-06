@@ -17,16 +17,13 @@ function setupVapid() {
 
 /**
  * True when the push service permanently rejected the subscription, so it
- * should be purged from storage.
- *   410 Gone / 404 Not Found — expired or revoked by the browser.
- *   401 / 403 — VAPID key mismatch (sub created with a different key).
- *   400 + VapidPkHashMismatch — Apple Web Push's form of the same mismatch.
+ * should be purged from storage. ONLY 410 Gone / 404 Not Found qualify —
+ * the browser expired or revoked the sub. 401/403 and 400+VapidPkHashMismatch
+ * are VAPID server-key problems: the sub is still valid, our signing key was
+ * wrong. Deleting on those wrongly nukes live devices (fix the key instead).
  */
 function isDeadSubscription(err: { statusCode?: number; body?: string }): boolean {
-  const { statusCode, body } = err;
-  if (statusCode === 410 || statusCode === 404 || statusCode === 401 || statusCode === 403) return true;
-  if (statusCode === 400 && typeof body === "string" && body.includes("VapidPkHashMismatch")) return true;
-  return false;
+  return err.statusCode === 410 || err.statusCode === 404;
 }
 
 /** Send push to all subscriptions of a Supabase user (from Prisma). */

@@ -66,7 +66,7 @@ async function sendToUidSubs(uid: string, payload: object): Promise<void> {
       const sub = JSON.parse(raw) as webpush.PushSubscription;
       const endpoint = (sub as { endpoint?: string }).endpoint ?? "";
       promises.push(
-        webpush.sendNotification(sub, payloadStr).catch(async (err: { statusCode?: number; message?: string; body?: string }) => {
+        webpush.sendNotification(sub, payloadStr, { TTL: 86400, urgency: "high" }).catch(async (err: { statusCode?: number; message?: string; body?: string }) => {
           console.error(`[push/uid=${uid}] status=${err.statusCode} ep=...${String(endpoint).slice(-30)}`, err.message);
           if (isDeadSubscription(err)) {
             await child.ref.remove().catch(() => undefined);
@@ -107,7 +107,7 @@ async function sendToAdminSubs(payload: object): Promise<void> {
       const sub = JSON.parse(data.subscription) as webpush.PushSubscription;
       const endpoint = (sub as { endpoint?: string }).endpoint ?? "";
       promises.push(
-        webpush.sendNotification(sub, payloadStr).catch(async (err: { statusCode?: number; message?: string; body?: string }) => {
+        webpush.sendNotification(sub, payloadStr, { TTL: 86400, urgency: "high" }).catch(async (err: { statusCode?: number; message?: string; body?: string }) => {
           console.error(`[push/admin] status=${err.statusCode} ep=...${String(endpoint).slice(-30)}`, err.message);
           if (isDeadSubscription(err)) {
             await child.ref.remove().catch(() => undefined);
