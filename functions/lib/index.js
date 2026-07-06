@@ -69,42 +69,34 @@ function setupVapid() {
 const SECRETS = ["VAPID_SUBJECT", "VAPID_PUBLIC_KEY", "VAPID_PRIVATE_KEY"];
 const REGION = "asia-southeast1";
 const DB_INSTANCE = "quanlyhocvien-b1796-default-rtdb";
-// ── Helper: is subscription permanently dead? (purge it) ─────────────────────
-// ONLY 410 (Gone) / 404 (Not Found) mean the subscription itself is revoked/expired.
-// 401/403 and 400+VapidPkHashMismatch are VAPID *server-key* problems — the
-// subscription is still valid, our signing key was wrong. Deleting on those was a
-// bug: a transient key mismatch (e.g. during key rotation) permanently nuked live
-// subscriptions, so admin pushes silently stopped reaching those devices. Fix the
-// key instead; never purge the sub for an auth/config error.
-function isDeadSubscription(err) {
-    return err.statusCode === 410 || err.statusCode === 404;
+// ── Helper: delegate the actual web-push send to the Vercel Node runtime ─────
+// Pushes sent directly from the Cloud Functions runtime reach the service worker
+// but iOS does NOT present them as a banner; the identical web-push call from
+// Vercel is presented correctly. So we POST to a Vercel endpoint that performs
+// the send. target = { kind: "uid", uid } | { kind: "studentCode", code } | { kind: "admins" }.
+async function dispatchPush(target, payload) {
+    const url = process.env.PUSH_DISPATCH_URL;
+    const secret = process.env.INTERNAL_PUSH_SECRET;
+    if (!url || !secret) {
+        console.error("[dispatch] PUSH_DISPATCH_URL / INTERNAL_PUSH_SECRET not set");
+        return;
+    }
+    try {
+        const res = await fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "x-internal-secret": secret },
+            body: JSON.stringify({ target, ...payload }),
+        });
+        if (!res.ok)
+            console.error(`[dispatch] ${res.status} ${await res.text()}`);
+    }
+    catch (e) {
+        console.error("[dispatch] fetch failed", e);
+    }
 }
 // ── Helper: push to all subs under pushSubs/{uid}/subs/* ─────────────────────
 async function sendToUidSubs(uid, payload) {
-    const snap = await db().ref(`pushSubs/${uid}/subs`).get();
-    if (!snap.exists())
-        return;
-    const payloadStr = JSON.stringify(payload);
-    const promises = [];
-    snap.forEach((child) => {
-        const raw = child.val();
-        if (!raw)
-            return;
-        try {
-            const sub = JSON.parse(raw);
-            const endpoint = sub.endpoint ?? "";
-            promises.push(webpush.sendNotification(sub, payloadStr, { TTL: 86400, urgency: "high" }).catch(async (err) => {
-                console.error(`[push/uid=${uid}] status=${err.statusCode} ep=...${String(endpoint).slice(-30)}`, err.message);
-                if (isDeadSubscription(err)) {
-                    await child.ref.remove().catch(() => undefined);
-                }
-            }));
-        }
-        catch {
-            // malformed JSON — ignore
-        }
-    });
-    await Promise.all(promises);
+    await dispatchPush({ kind: "uid", uid }, payload);
 }
 // ── Helper: write notification to adminNotifications/ for bell icon ──────────
 async function writeAdminNotification(payload) {
@@ -118,30 +110,7 @@ async function writeAdminNotification(payload) {
 }
 // ── Helper: push to all adminSubs/* ──────────────────────────────────────────
 async function sendToAdminSubs(payload) {
-    const snap = await db().ref("adminSubs").get();
-    if (!snap.exists())
-        return;
-    const payloadStr = JSON.stringify(payload);
-    const promises = [];
-    snap.forEach((child) => {
-        const data = child.val();
-        if (!data?.subscription)
-            return;
-        try {
-            const sub = JSON.parse(data.subscription);
-            const endpoint = sub.endpoint ?? "";
-            promises.push(webpush.sendNotification(sub, payloadStr, { TTL: 86400, urgency: "high" }).catch(async (err) => {
-                console.error(`[push/admin] status=${err.statusCode} ep=...${String(endpoint).slice(-30)}`, err.message);
-                if (isDeadSubscription(err)) {
-                    await child.ref.remove().catch(() => undefined);
-                }
-            }));
-        }
-        catch {
-            // malformed JSON — ignore
-        }
-    });
-    await Promise.all(promises);
+    await dispatchPush({ kind: "admins" }, payload);
 }
 // ── Helper: push to student by studentCode (via supabaseUid mapping) ─────────
 async function sendToStudentByCode(studentCode, payload) {
