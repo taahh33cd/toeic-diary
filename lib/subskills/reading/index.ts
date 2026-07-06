@@ -3,6 +3,7 @@ import { hienTaiHoanThanhLevels } from "./data/hien-tai-hoan-thanh";
 import { hienTaiDonLevels } from "./data/hien-tai-don";
 import { hienTaiTiepDienLevels } from "./data/hien-tai-tiep-dien";
 import { quaKhuDonLevels } from "./data/qua-khu-don";
+import { tuongLaiDonLevels } from "./data/tuong-lai-don";
 
 // ── Level metadata template (same for all tenses) ────────────────────────────
 
@@ -213,7 +214,7 @@ export const TENSES: Part5TenseConfig[] = [
     ],
     contrastWith: "tuong-lai-tiep-dien",
     importance: 3,
-    levels: [],
+    levels: tuongLaiDonLevels,
   },
   {
     slug: "tuong-lai-tiep-dien",
