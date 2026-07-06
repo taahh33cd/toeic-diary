@@ -69,6 +69,16 @@ function setupVapid() {
 const SECRETS = ["VAPID_SUBJECT", "VAPID_PUBLIC_KEY", "VAPID_PRIVATE_KEY"];
 const REGION = "asia-southeast1";
 const DB_INSTANCE = "quanlyhocvien-b1796-default-rtdb";
+// ── Helper: is subscription permanently dead? (purge it) ─────────────────────
+// ONLY 410 (Gone) / 404 (Not Found) mean the subscription itself is revoked/expired.
+// 401/403 and 400+VapidPkHashMismatch are VAPID *server-key* problems — the
+// subscription is still valid, our signing key was wrong. Deleting on those was a
+// bug: a transient key mismatch (e.g. during key rotation) permanently nuked live
+// subscriptions, so admin pushes silently stopped reaching those devices. Fix the
+// key instead; never purge the sub for an auth/config error.
+function isDeadSubscription(err) {
+    return err.statusCode === 410 || err.statusCode === 404;
+}
 // ── Helper: push to all subs under pushSubs/{uid}/subs/* ─────────────────────
 async function sendToUidSubs(uid, payload) {
     const snap = await db().ref(`pushSubs/${uid}/subs`).get();
@@ -85,7 +95,7 @@ async function sendToUidSubs(uid, payload) {
             const endpoint = sub.endpoint ?? "";
             promises.push(webpush.sendNotification(sub, payloadStr).catch(async (err) => {
                 console.error(`[push/uid=${uid}] status=${err.statusCode} ep=...${String(endpoint).slice(-30)}`, err.message);
-                if (err.statusCode === 410 || err.statusCode === 404) {
+                if (isDeadSubscription(err)) {
                     await child.ref.remove().catch(() => undefined);
                 }
             }));
@@ -122,7 +132,7 @@ async function sendToAdminSubs(payload) {
             const endpoint = sub.endpoint ?? "";
             promises.push(webpush.sendNotification(sub, payloadStr).catch(async (err) => {
                 console.error(`[push/admin] status=${err.statusCode} ep=...${String(endpoint).slice(-30)}`, err.message);
-                if (err.statusCode === 410 || err.statusCode === 404) {
+                if (isDeadSubscription(err)) {
                     await child.ref.remove().catch(() => undefined);
                 }
             }));

@@ -41,13 +41,14 @@ const REGION = "asia-southeast1";
 const DB_INSTANCE = "quanlyhocvien-b1796-default-rtdb";
 
 // ── Helper: is subscription permanently dead? (purge it) ─────────────────────
-// 410/404 = expired/revoked; 401/403 = VAPID key mismatch;
-// 400 + VapidPkHashMismatch = Apple Web Push's form of the same mismatch.
+// ONLY 410 (Gone) / 404 (Not Found) mean the subscription itself is revoked/expired.
+// 401/403 and 400+VapidPkHashMismatch are VAPID *server-key* problems — the
+// subscription is still valid, our signing key was wrong. Deleting on those was a
+// bug: a transient key mismatch (e.g. during key rotation) permanently nuked live
+// subscriptions, so admin pushes silently stopped reaching those devices. Fix the
+// key instead; never purge the sub for an auth/config error.
 function isDeadSubscription(err: { statusCode?: number; body?: string }): boolean {
-  const { statusCode, body } = err;
-  if (statusCode === 410 || statusCode === 404 || statusCode === 401 || statusCode === 403) return true;
-  if (statusCode === 400 && typeof body === "string" && body.includes("VapidPkHashMismatch")) return true;
-  return false;
+  return err.statusCode === 410 || err.statusCode === 404;
 }
 
 // ── Helper: push to all subs under pushSubs/{uid}/subs/* ─────────────────────
