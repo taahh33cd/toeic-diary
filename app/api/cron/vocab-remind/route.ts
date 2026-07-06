@@ -22,9 +22,11 @@ function isDue(word: Omit<VocabWord, "id">, todayStr: string): boolean {
 
 export async function GET(request: NextRequest) {
   const authHeader = request.headers.get("authorization");
-  if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
+  const internal = request.headers.get("x-internal-secret");
+  const ok =
+    authHeader === `Bearer ${process.env.CRON_SECRET}` ||
+    (!!process.env.INTERNAL_PUSH_SECRET && internal === process.env.INTERNAL_PUSH_SECRET);
+  if (!ok) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
   // Today in ICT (UTC+7)
   const nowUtc = new Date();

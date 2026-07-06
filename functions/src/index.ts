@@ -344,3 +344,38 @@ export const scheduledSessionReminder = onSchedule(
     await Promise.all(promises);
   }
 );
+
+// ── P5: Nhắc buổi sáng 8:00 ICT — từ vựng SRS đến hạn + bài tập quá hạn ───────
+// Delegates to the Vercel cron endpoints, which send via sendPushToUser so iOS
+// presents the banner (a direct Cloud Functions send is not presented). Scheduled
+// here because the Vercel Hobby plan caps cron jobs at 2 (both already in use).
+export const morningReminders = onSchedule(
+  {
+    schedule: "0 1 * * *", // 01:00 UTC = 08:00 ICT
+    timeZone: "Asia/Ho_Chi_Minh",
+    region: REGION,
+  },
+  async () => {
+    const dispatchUrl = process.env.PUSH_DISPATCH_URL;
+    const secret = process.env.INTERNAL_PUSH_SECRET;
+    if (!dispatchUrl || !secret) {
+      console.error("[morningReminders] PUSH_DISPATCH_URL / INTERNAL_PUSH_SECRET not set");
+      return;
+    }
+    const base = dispatchUrl.replace(/\/api\/push\/dispatch$/, "");
+    const endpoints = [
+      `${base}/api/cron/vocab-remind`,
+      `${base}/api/cron/homework-overdue`,
+    ];
+    await Promise.all(
+      endpoints.map(async (url) => {
+        try {
+          const res = await fetch(url, { headers: { "x-internal-secret": secret } });
+          console.log(`[morningReminders] ${url} → ${res.status} ${await res.text()}`);
+        } catch (e) {
+          console.error(`[morningReminders] ${url} failed`, e);
+        }
+      })
+    );
+  }
+);
