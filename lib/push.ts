@@ -26,12 +26,34 @@ function isDeadSubscription(err: { statusCode?: number; body?: string }): boolea
   return err.statusCode === 410 || err.statusCode === 404;
 }
 
+/**
+ * Frozen accounts receive no push at all. `frozen` lives in RTDB at
+ * students/{studentCode}/frozen; map userId → studentCode via Prisma.
+ * Fail-open: a transient lookup error must not block all notifications.
+ */
+export async function isUserFrozen(userId: string): Promise<boolean> {
+  try {
+    const profile = await prisma.profile.findUnique({
+      where: { id: userId },
+      select: { studentCode: true },
+    });
+    if (!profile?.studentCode) return false;
+    const snap = await getAdminDb().ref(`students/${profile.studentCode}/frozen`).get();
+    return snap.val() === true;
+  } catch (e) {
+    console.error("[push] frozen check failed, proceeding:", e);
+    return false;
+  }
+}
+
 /** Send push to all subscriptions of a Supabase user (from Prisma). */
 export async function sendPushToUser(
   userId: string,
   payload: { title: string; body?: string; url?: string }
 ): Promise<void> {
   setupVapid();
+  if (await isUserFrozen(userId)) return;
+
   const subs = await prisma.pushSubscription.findMany({ where: { userId } });
   if (subs.length === 0) return;
 

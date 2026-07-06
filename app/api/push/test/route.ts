@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import webpush from "web-push";
 import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
+import { isUserFrozen } from "@/lib/push";
 
 export const runtime = "nodejs";
 
@@ -18,6 +19,11 @@ export async function POST() {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+
+  // Frozen accounts receive no push — not even a self-test.
+  if (await isUserFrozen(user.id)) {
+    return NextResponse.json({ ok: false, error: "frozen", subCount: 0, results: [] });
+  }
 
   const subs = await prisma.pushSubscription.findMany({
     where: { userId: user.id },
