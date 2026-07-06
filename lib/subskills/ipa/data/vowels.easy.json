@@ -1,0 +1,52 @@
+{
+  "section": "vowels",
+  "difficulty": "easy",
+  "label": "Vowels — Easy",
+  "passThreshold": 80,
+  "exercises": [
+    {
+      "title": "Minimal pairs: /ɪ/ vs /iː/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "ship", "options": ["ship", "sheep"], "correct": 0, "explanation": "/ɪ/ ngắn — ship. /iː/ dài hơn — sheep." },
+        { "kind": "audiochoice", "audio": "feel", "options": ["fill", "feel"], "correct": 1, "explanation": "/iː/ dài — feel. fill có /ɪ/ ngắn." },
+        { "kind": "audiochoice", "audio": "live", "options": ["live", "leave"], "correct": 0, "explanation": "/ɪ/ ngắn — live. leave có /iː/ dài." },
+        { "kind": "audiochoice", "audio": "seat", "options": ["sit", "seat"], "correct": 1, "explanation": "/iː/ dài — seat. sit có /ɪ/ ngắn." },
+        { "kind": "audiochoice", "audio": "bin", "options": ["bin", "bean"], "correct": 0, "explanation": "/ɪ/ ngắn — bin. bean có /iː/ dài." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /æ/ vs /ʌ/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "cat", "options": ["cat", "cut"], "correct": 0, "explanation": "/æ/ — cat. cut có /ʌ/." },
+        { "kind": "audiochoice", "audio": "cup", "options": ["cap", "cup"], "correct": 1, "explanation": "/ʌ/ — cup. cap có /æ/." },
+        { "kind": "audiochoice", "audio": "ran", "options": ["ran", "run"], "correct": 0, "explanation": "/æ/ — ran. run có /ʌ/." },
+        { "kind": "audiochoice", "audio": "bud", "options": ["bad", "bud"], "correct": 1, "explanation": "/ʌ/ — bud. bad có /æ/." },
+        { "kind": "audiochoice", "audio": "hat", "options": ["hat", "hut"], "correct": 0, "explanation": "/æ/ — hat. hut có /ʌ/." }
+      ]
+    },
+    {
+      "title": "Sound ID: /ɪ/ hay /iː/?",
+      "instruction": "Đọc từ và chọn nguyên âm chính xuất hiện trong từ.",
+      "items": [
+        { "kind": "soundid", "display": "meeting", "options": ["/ɪ/", "/iː/"], "correct": 1, "explanation": "meeting — /ˈmiːtɪŋ/, âm nhấn là /iː/ dài." },
+        { "kind": "soundid", "display": "list", "options": ["/ɪ/", "/iː/"], "correct": 0, "explanation": "list — /lɪst/, /ɪ/ ngắn." },
+        { "kind": "soundid", "display": "team", "options": ["/ɪ/", "/iː/"], "correct": 1, "explanation": "team — /tiːm/, /iː/ dài." },
+        { "kind": "soundid", "display": "shipment", "options": ["/ɪ/", "/iː/"], "correct": 0, "explanation": "shipment — /ˈʃɪpmənt/, /ɪ/ ngắn." },
+        { "kind": "soundid", "display": "receipt", "options": ["/ɪ/", "/iː/"], "correct": 1, "explanation": "receipt — /rɪˈsiːt/, âm nhấn /iː/ dài." }
+      ]
+    },
+    {
+      "title": "Odd one out: nguyên âm khác",
+      "instruction": "Chọn từ có nguyên âm KHÁC ba từ còn lại.",
+      "items": [
+        { "kind": "oddoneout", "options": ["seat", "meet", "bread", "team"], "correct": 2, "explanation": "bread có /e/; seat, meet, team đều /iː/." },
+        { "kind": "oddoneout", "options": ["big", "sit", "five", "list"], "correct": 2, "explanation": "five có /aɪ/; big, sit, list đều /ɪ/." },
+        { "kind": "oddoneout", "options": ["cat", "map", "cake", "bag"], "correct": 2, "explanation": "cake có /eɪ/; cat, map, bag đều /æ/." },
+        { "kind": "oddoneout", "options": ["cup", "sun", "bus", "moon"], "correct": 3, "explanation": "moon có /uː/; cup, sun, bus đều /ʌ/." },
+        { "kind": "oddoneout", "options": ["desk", "ten", "meet", "pen"], "correct": 2, "explanation": "meet có /iː/; desk, ten, pen đều /e/." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "section": "vowels",
+  "difficulty": "medium",
+  "label": "Vowels — Medium",
+  "passThreshold": 80,
+  "exercises": [
+    {
+      "title": "Minimal pairs: /ʊ/ vs /uː/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "pool", "options": ["pull", "pool"], "correct": 1, "explanation": "/uː/ dài — pool. pull có /ʊ/ ngắn." },
+        { "kind": "audiochoice", "audio": "full", "options": ["full", "fool"], "correct": 0, "explanation": "/ʊ/ ngắn — full. fool có /uː/ dài." },
+        { "kind": "audiochoice", "audio": "look", "options": ["look", "Luke"], "correct": 0, "explanation": "/ʊ/ ngắn — look. Luke có /uː/ dài." },
+        { "kind": "audiochoice", "audio": "suit", "options": ["soot", "suit"], "correct": 1, "explanation": "/uː/ dài — suit. soot có /ʊ/ ngắn." },
+        { "kind": "audiochoice", "audio": "food", "options": ["foot", "food"], "correct": 1, "explanation": "/uː/ dài — food. foot có /ʊ/ ngắn." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /ɔː/ vs /oʊ/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "coat", "options": ["caught", "coat"], "correct": 1, "explanation": "/oʊ/ — coat. caught có /ɔː/." },
+        { "kind": "audiochoice", "audio": "ball", "options": ["ball", "bowl"], "correct": 0, "explanation": "/ɔː/ — ball. bowl có /oʊ/." },
+        { "kind": "audiochoice", "audio": "low", "options": ["law", "low"], "correct": 1, "explanation": "/oʊ/ — low. law có /ɔː/." },
+        { "kind": "audiochoice", "audio": "bought", "options": ["bought", "boat"], "correct": 0, "explanation": "/ɔː/ — bought. boat có /oʊ/." },
+        { "kind": "audiochoice", "audio": "so", "options": ["saw", "so"], "correct": 1, "explanation": "/oʊ/ — so. saw có /ɔː/." }
+      ]
+    },
+    {
+      "title": "Sound ID: /ʊ/ hay /uː/?",
+      "instruction": "Đọc từ và chọn nguyên âm chính xuất hiện trong từ.",
+      "items": [
+        { "kind": "soundid", "display": "improve", "options": ["/ʊ/", "/uː/"], "correct": 1, "explanation": "improve — /ɪmˈpruːv/, /uː/ dài." },
+        { "kind": "soundid", "display": "cushion", "options": ["/ʊ/", "/uː/"], "correct": 0, "explanation": "cushion — /ˈkʊʃən/, /ʊ/ ngắn." },
+        { "kind": "soundid", "display": "recruit", "options": ["/ʊ/", "/uː/"], "correct": 1, "explanation": "recruit — /rɪˈkruːt/, /uː/ dài." },
+        { "kind": "soundid", "display": "bulletin", "options": ["/ʊ/", "/uː/"], "correct": 0, "explanation": "bulletin — /ˈbʊlətɪn/, /ʊ/ ngắn." },
+        { "kind": "soundid", "display": "commute", "options": ["/ʊ/", "/uː/"], "correct": 1, "explanation": "commute — /kəˈmjuːt/, /uː/ dài." }
+      ]
+    },
+    {
+      "title": "Odd one out: nguyên âm khác",
+      "instruction": "Chọn từ có nguyên âm KHÁC ba từ còn lại.",
+      "items": [
+        { "kind": "oddoneout", "options": ["pool", "move", "good", "tune"], "correct": 2, "explanation": "good có /ʊ/; pool, move, tune đều /uː/." },
+        { "kind": "oddoneout", "options": ["book", "cook", "look", "moon"], "correct": 3, "explanation": "moon có /uː/; book, cook, look đều /ʊ/." },
+        { "kind": "oddoneout", "options": ["ball", "call", "tall", "cool"], "correct": 3, "explanation": "cool có /uː/; ball, call, tall đều /ɔː/." },
+        { "kind": "oddoneout", "options": ["note", "road", "cost", "soap"], "correct": 2, "explanation": "cost có /ɔː/; note, road, soap đều /oʊ/." },
+        { "kind": "oddoneout", "options": ["boat", "home", "gold", "gone"], "correct": 3, "explanation": "gone có /ɔː/; boat, home, gold đều /oʊ/." }
+      ]
+    }
+  ]
+}

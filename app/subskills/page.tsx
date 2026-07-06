@@ -8,6 +8,14 @@ export const metadata: Metadata = { title: "Subskills — TOEIC" };
 
 const SKILLS = [
   {
+    key: "ipa",
+    emoji: "🔤",
+    label: "IPA / Pronunciation",
+    href: "/subskills/ipa",
+    description: "Bảng phiên âm tương tác + bài tập vowel, diphthong, consonant · 3 cấp độ",
+    comingSoon: false,
+  },
+  {
     key: "listening",
     emoji: "🎧",
     label: "Listening",

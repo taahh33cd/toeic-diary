@@ -1,0 +1,52 @@
+{
+  "section": "diphthongs",
+  "difficulty": "easy",
+  "label": "Diphthongs — Easy",
+  "passThreshold": 80,
+  "exercises": [
+    {
+      "title": "Sound ID: nguyên âm đôi nào?",
+      "instruction": "Đọc từ và chọn nguyên âm đôi xuất hiện trong từ.",
+      "items": [
+        { "kind": "soundid", "display": "email", "options": ["/eɪ/", "/aɪ/", "/oʊ/"], "correct": 0, "explanation": "email — /ˈiːmeɪl/, có /eɪ/." },
+        { "kind": "soundid", "display": "price", "options": ["/eɪ/", "/aɪ/", "/ɔɪ/"], "correct": 1, "explanation": "price — /praɪs/, có /aɪ/." },
+        { "kind": "soundid", "display": "phone", "options": ["/aʊ/", "/oʊ/", "/ɔɪ/"], "correct": 1, "explanation": "phone — /foʊn/, có /oʊ/." },
+        { "kind": "soundid", "display": "voice", "options": ["/ɔɪ/", "/aʊ/", "/eɪ/"], "correct": 0, "explanation": "voice — /vɔɪs/, có /ɔɪ/." },
+        { "kind": "soundid", "display": "house", "options": ["/oʊ/", "/aʊ/", "/aɪ/"], "correct": 1, "explanation": "house — /haʊs/, có /aʊ/." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /eɪ/ vs /e/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "late", "options": ["late", "let"], "correct": 0, "explanation": "/eɪ/ — late. let có /e/." },
+        { "kind": "audiochoice", "audio": "pen", "options": ["pain", "pen"], "correct": 1, "explanation": "/e/ — pen. pain có /eɪ/." },
+        { "kind": "audiochoice", "audio": "wait", "options": ["wet", "wait"], "correct": 1, "explanation": "/eɪ/ — wait. wet có /e/." },
+        { "kind": "audiochoice", "audio": "main", "options": ["main", "men"], "correct": 0, "explanation": "/eɪ/ — main. men có /e/." },
+        { "kind": "audiochoice", "audio": "tell", "options": ["tale", "tell"], "correct": 1, "explanation": "/e/ — tell. tale có /eɪ/." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /oʊ/ vs /ɔː/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "coat", "options": ["coat", "caught"], "correct": 0, "explanation": "/oʊ/ — coat. caught có /ɔː/." },
+        { "kind": "audiochoice", "audio": "bought", "options": ["boat", "bought"], "correct": 1, "explanation": "/ɔː/ — bought. boat có /oʊ/." },
+        { "kind": "audiochoice", "audio": "low", "options": ["low", "law"], "correct": 0, "explanation": "/oʊ/ — low. law có /ɔː/." },
+        { "kind": "audiochoice", "audio": "call", "options": ["coal", "call"], "correct": 1, "explanation": "/ɔː/ — call. coal có /oʊ/." },
+        { "kind": "audiochoice", "audio": "so", "options": ["so", "saw"], "correct": 0, "explanation": "/oʊ/ — so. saw có /ɔː/." }
+      ]
+    },
+    {
+      "title": "Odd one out: âm đôi vs âm đơn",
+      "instruction": "Chọn từ có nguyên âm KHÁC ba từ còn lại.",
+      "items": [
+        { "kind": "oddoneout", "options": ["day", "play", "cat", "stay"], "correct": 2, "explanation": "cat có /æ/; day, play, stay đều /eɪ/." },
+        { "kind": "oddoneout", "options": ["time", "nice", "big", "fly"], "correct": 2, "explanation": "big có /ɪ/; time, nice, fly đều /aɪ/." },
+        { "kind": "oddoneout", "options": ["boy", "toy", "top", "enjoy"], "correct": 2, "explanation": "top có /ɑː/; boy, toy, enjoy đều /ɔɪ/." },
+        { "kind": "oddoneout", "options": ["now", "how", "no", "down"], "correct": 2, "explanation": "no có /oʊ/; now, how, down đều /aʊ/." },
+        { "kind": "oddoneout", "options": ["go", "show", "dog", "boat"], "correct": 2, "explanation": "dog có /ɔː/; go, show, boat đều /oʊ/." }
+      ]
+    }
+  ]
+}

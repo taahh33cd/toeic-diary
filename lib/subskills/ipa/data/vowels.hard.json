@@ -1,0 +1,52 @@
+{
+  "section": "vowels",
+  "difficulty": "hard",
+  "label": "Vowels — Hard",
+  "passThreshold": 80,
+  "exercises": [
+    {
+      "title": "Minimal pairs: /e/ vs /æ/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "bad", "options": ["bed", "bad"], "correct": 1, "explanation": "/æ/ — bad. bed có /e/." },
+        { "kind": "audiochoice", "audio": "men", "options": ["men", "man"], "correct": 0, "explanation": "/e/ — men. man có /æ/." },
+        { "kind": "audiochoice", "audio": "sad", "options": ["said", "sad"], "correct": 1, "explanation": "/æ/ — sad. said đọc /sed/ với /e/." },
+        { "kind": "audiochoice", "audio": "pen", "options": ["pen", "pan"], "correct": 0, "explanation": "/e/ — pen. pan có /æ/." },
+        { "kind": "audiochoice", "audio": "dead", "options": ["dead", "dad"], "correct": 0, "explanation": "/e/ — dead. dad có /æ/." }
+      ]
+    },
+    {
+      "title": "Transcription: chọn phiên âm đúng",
+      "instruction": "Chọn cách phiên âm đúng (giọng Mỹ) của từ.",
+      "items": [
+        { "kind": "transcription", "display": "purchase", "options": ["/ˈpɜːrtʃəs/", "/pɜːrˈtʃeɪs/"], "correct": 0, "explanation": "purchase — /ˈpɜːrtʃəs/, nhấn âm đầu, âm cuối là /əs/." },
+        { "kind": "transcription", "display": "receipt", "options": ["/rɪˈsiːt/", "/rɪˈsept/"], "correct": 0, "explanation": "receipt — /rɪˈsiːt/, 'p' câm, âm /iː/ dài." },
+        { "kind": "transcription", "display": "colleague", "options": ["/ˈkɑːliːɡ/", "/kəˈleɪɡ/"], "correct": 0, "explanation": "colleague — /ˈkɑːliːɡ/, nhấn âm đầu." },
+        { "kind": "transcription", "display": "invoice", "options": ["/ˈɪnvɔɪs/", "/ɪnˈvaɪs/"], "correct": 0, "explanation": "invoice — /ˈɪnvɔɪs/, có nguyên âm đôi /ɔɪ/." },
+        { "kind": "transcription", "display": "manager", "options": ["/ˈmænɪdʒər/", "/məˈnædʒər/"], "correct": 0, "explanation": "manager — /ˈmænɪdʒər/, nhấn âm đầu /æ/." }
+      ]
+    },
+    {
+      "title": "Sound ID: nguyên âm được nhấn",
+      "instruction": "Chọn nguyên âm ở âm tiết được NHẤN trong từ.",
+      "items": [
+        { "kind": "soundid", "display": "company", "options": ["/ʌ/", "/ɑː/"], "correct": 0, "explanation": "company — /ˈkʌmpəni/, âm nhấn /ʌ/." },
+        { "kind": "soundid", "display": "product", "options": ["/ɑː/", "/ʌ/"], "correct": 0, "explanation": "product — /ˈprɑːdʌkt/, âm nhấn /ɑː/." },
+        { "kind": "soundid", "display": "budget", "options": ["/ʌ/", "/ʊ/"], "correct": 0, "explanation": "budget — /ˈbʌdʒɪt/, âm nhấn /ʌ/." },
+        { "kind": "soundid", "display": "purchase", "options": ["/ɜː/", "/ɑː/"], "correct": 0, "explanation": "purchase — /ˈpɜːrtʃəs/, âm nhấn /ɜː/." },
+        { "kind": "soundid", "display": "salary", "options": ["/æ/", "/eɪ/"], "correct": 0, "explanation": "salary — /ˈsæləri/, âm nhấn /æ/." }
+      ]
+    },
+    {
+      "title": "Odd one out: nguyên âm khác",
+      "instruction": "Chọn từ có nguyên âm KHÁC ba từ còn lại.",
+      "items": [
+        { "kind": "oddoneout", "options": ["bad", "man", "cat", "cake"], "correct": 3, "explanation": "cake có /eɪ/; bad, man, cat đều /æ/." },
+        { "kind": "oddoneout", "options": ["bed", "said", "head", "paid"], "correct": 3, "explanation": "paid có /eɪ/; bed, said, head đều /e/." },
+        { "kind": "oddoneout", "options": ["work", "word", "world", "ward"], "correct": 3, "explanation": "ward có /ɔː/; work, word, world đều /ɜːr/." },
+        { "kind": "oddoneout", "options": ["run", "cut", "put", "sun"], "correct": 2, "explanation": "put có /ʊ/; run, cut, sun đều /ʌ/." },
+        { "kind": "oddoneout", "options": ["hot", "stop", "box", "home"], "correct": 3, "explanation": "home có /oʊ/; hot, stop, box đều /ɑː/." }
+      ]
+    }
+  ]
+}

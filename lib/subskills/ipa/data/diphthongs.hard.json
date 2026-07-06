@@ -1,0 +1,52 @@
+{
+  "section": "diphthongs",
+  "difficulty": "hard",
+  "label": "Diphthongs — Hard",
+  "passThreshold": 80,
+  "exercises": [
+    {
+      "title": "Transcription: chọn phiên âm đúng",
+      "instruction": "Chọn cách phiên âm đúng (giọng Mỹ) của từ.",
+      "items": [
+        { "kind": "transcription", "display": "appointment", "options": ["/əˈpɔɪntmənt/", "/əˈpaɪntmənt/"], "correct": 0, "explanation": "appointment có /ɔɪ/, không phải /aɪ/." },
+        { "kind": "transcription", "display": "reliable", "options": ["/rɪˈlaɪəbəl/", "/rɪˈleɪəbəl/"], "correct": 0, "explanation": "reliable có /aɪ/ ở âm nhấn." },
+        { "kind": "transcription", "display": "avoid", "options": ["/əˈvɔɪd/", "/əˈvaɪd/"], "correct": 0, "explanation": "avoid có /ɔɪ/." },
+        { "kind": "transcription", "display": "downtown", "options": ["/ˈdaʊntaʊn/", "/ˈdoʊntoʊn/"], "correct": 0, "explanation": "downtown có hai /aʊ/." },
+        { "kind": "transcription", "display": "negotiate", "options": ["/nɪˈɡoʊʃieɪt/", "/nɪˈɡɔːʃieɪt/"], "correct": 0, "explanation": "negotiate có /oʊ/ ở âm nhấn." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: tổng hợp",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "raise", "options": ["rise", "raise"], "correct": 1, "explanation": "/eɪ/ — raise. rise có /aɪ/." },
+        { "kind": "audiochoice", "audio": "point", "options": ["pint", "point"], "correct": 1, "explanation": "/ɔɪ/ — point. pint có /aɪ/." },
+        { "kind": "audiochoice", "audio": "note", "options": ["note", "nought"], "correct": 0, "explanation": "/oʊ/ — note. nought có /ɔː/." },
+        { "kind": "audiochoice", "audio": "loud", "options": ["load", "loud"], "correct": 1, "explanation": "/aʊ/ — loud. load có /oʊ/." },
+        { "kind": "audiochoice", "audio": "joy", "options": ["jaw", "joy"], "correct": 1, "explanation": "/ɔɪ/ — joy. jaw có /ɔː/." }
+      ]
+    },
+    {
+      "title": "Sound ID: nguyên âm đôi được nhấn",
+      "instruction": "Chọn nguyên âm đôi ở âm tiết được nhấn.",
+      "items": [
+        { "kind": "soundid", "display": "highlight", "options": ["/aɪ/", "/eɪ/"], "correct": 0, "explanation": "highlight — /ˈhaɪlaɪt/, /aɪ/." },
+        { "kind": "soundid", "display": "maintain", "options": ["/eɪ/", "/aɪ/"], "correct": 0, "explanation": "maintain — /meɪnˈteɪn/, /eɪ/." },
+        { "kind": "soundid", "display": "outline", "options": ["/aʊ/", "/oʊ/"], "correct": 0, "explanation": "outline — /ˈaʊtlaɪn/, âm nhấn /aʊ/." },
+        { "kind": "soundid", "display": "overload", "options": ["/oʊ/", "/ɔː/"], "correct": 0, "explanation": "overload — /ˈoʊvərloʊd/, /oʊ/." },
+        { "kind": "soundid", "display": "annoying", "options": ["/ɔɪ/", "/aɪ/"], "correct": 0, "explanation": "annoying — /əˈnɔɪɪŋ/, /ɔɪ/." }
+      ]
+    },
+    {
+      "title": "Odd one out: nguyên âm khác",
+      "instruction": "Chọn từ có nguyên âm KHÁC ba từ còn lại.",
+      "items": [
+        { "kind": "oddoneout", "options": ["price", "time", "piece", "fine"], "correct": 2, "explanation": "piece có /iː/; price, time, fine đều /aɪ/." },
+        { "kind": "oddoneout", "options": ["phone", "goal", "town", "road"], "correct": 2, "explanation": "town có /aʊ/; phone, goal, road đều /oʊ/." },
+        { "kind": "oddoneout", "options": ["voice", "noise", "nice", "choice"], "correct": 2, "explanation": "nice có /aɪ/; voice, noise, choice đều /ɔɪ/." },
+        { "kind": "oddoneout", "options": ["stay", "paid", "aim", "aisle"], "correct": 3, "explanation": "aisle có /aɪ/; stay, paid, aim đều /eɪ/." },
+        { "kind": "oddoneout", "options": ["allow", "account", "approach", "around"], "correct": 2, "explanation": "approach có /oʊ/; allow, account, around đều /aʊ/." }
+      ]
+    }
+  ]
+}

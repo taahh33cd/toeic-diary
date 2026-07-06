@@ -1,0 +1,53 @@
+{
+  "section": "consonants",
+  "difficulty": "hard",
+  "label": "Consonants — Hard",
+  "passThreshold": 80,
+  "exercises": [
+    {
+      "title": "Sort: đuôi -ed đọc /t/, /d/ hay /ɪd/",
+      "instruction": "Chọn cách đọc đuôi -ed của động từ quá khứ.",
+      "items": [
+        { "kind": "sort", "display": "worked", "options": ["/t/", "/d/", "/ɪd/"], "correct": 0, "explanation": "worked — sau /k/ (vô thanh) → /t/." },
+        { "kind": "sort", "display": "played", "options": ["/t/", "/d/", "/ɪd/"], "correct": 1, "explanation": "played — sau nguyên âm (hữu thanh) → /d/." },
+        { "kind": "sort", "display": "wanted", "options": ["/t/", "/d/", "/ɪd/"], "correct": 2, "explanation": "wanted — sau /t/ → /ɪd/." },
+        { "kind": "sort", "display": "stopped", "options": ["/t/", "/d/", "/ɪd/"], "correct": 0, "explanation": "stopped — sau /p/ (vô thanh) → /t/." },
+        { "kind": "sort", "display": "needed", "options": ["/t/", "/d/", "/ɪd/"], "correct": 2, "explanation": "needed — sau /d/ → /ɪd/." },
+        { "kind": "sort", "display": "cleaned", "options": ["/t/", "/d/", "/ɪd/"], "correct": 1, "explanation": "cleaned — sau /n/ (hữu thanh) → /d/." }
+      ]
+    },
+    {
+      "title": "Sound ID: /ʒ/, /dʒ/ hay /ʃ/",
+      "instruction": "Chọn phụ âm được in đậm khi đọc từ.",
+      "items": [
+        { "kind": "soundid", "display": "measure", "options": ["/ʒ/", "/dʒ/", "/ʃ/"], "correct": 0, "explanation": "measure — /ˈmeʒər/, có /ʒ/." },
+        { "kind": "soundid", "display": "manager", "options": ["/dʒ/", "/ʒ/", "/ɡ/"], "correct": 0, "explanation": "manager — /ˈmænɪdʒər/, có /dʒ/." },
+        { "kind": "soundid", "display": "decision", "options": ["/ʒ/", "/ʃ/", "/dʒ/"], "correct": 0, "explanation": "decision — /dɪˈsɪʒən/, có /ʒ/." },
+        { "kind": "soundid", "display": "schedule", "options": ["/dʒ/", "/ʃ/", "/sk/"], "correct": 0, "explanation": "schedule — /ˈskedʒuːl/ (Mỹ), có /dʒ/." },
+        { "kind": "soundid", "display": "usually", "options": ["/ʒ/", "/dʒ/", "/z/"], "correct": 0, "explanation": "usually — /ˈjuːʒuəli/, có /ʒ/." }
+      ]
+    },
+    {
+      "title": "Transcription: cụm phụ âm",
+      "instruction": "Chọn cách phiên âm đúng (giọng Mỹ) của từ.",
+      "items": [
+        { "kind": "transcription", "display": "strengths", "options": ["/streŋθs/", "/streŋks/"], "correct": 0, "explanation": "strengths — /streŋθs/, có /θs/ cuối." },
+        { "kind": "transcription", "display": "months", "options": ["/mʌnθs/", "/mʌns/"], "correct": 0, "explanation": "months — /mʌnθs/, giữ /θ/." },
+        { "kind": "transcription", "display": "asked", "options": ["/æskt/", "/æst/"], "correct": 0, "explanation": "asked — /æskt/, giữ /sk/ + /t/." },
+        { "kind": "transcription", "display": "clothes", "options": ["/kloʊðz/", "/kloʊθs/"], "correct": 0, "explanation": "clothes — /kloʊðz/, đuôi /ðz/." },
+        { "kind": "transcription", "display": "texts", "options": ["/teksts/", "/teks/"], "correct": 0, "explanation": "texts — /teksts/, giữ cụm /ksts/." }
+      ]
+    },
+    {
+      "title": "Odd one out: âm cuối khác",
+      "instruction": "Chọn từ có âm CUỐI khác ba từ còn lại.",
+      "items": [
+        { "kind": "oddoneout", "options": ["cats", "maps", "books", "dogs"], "correct": 3, "explanation": "dogs đuôi /z/; cats, maps, books đều /s/." },
+        { "kind": "oddoneout", "options": ["worked", "asked", "wanted", "stopped"], "correct": 2, "explanation": "wanted đuôi /ɪd/; worked, asked, stopped đều /t/." },
+        { "kind": "oddoneout", "options": ["wish", "watch", "cash", "rush"], "correct": 1, "explanation": "watch đuôi /tʃ/; wish, cash, rush đều /ʃ/." },
+        { "kind": "oddoneout", "options": ["think", "thank", "this", "thick"], "correct": 2, "explanation": "this đầu /ð/; think, thank, thick đều /θ/." },
+        { "kind": "oddoneout", "options": ["sing", "ring", "thin", "king"], "correct": 2, "explanation": "thin đuôi /n/; sing, ring, king đều /ŋ/." }
+      ]
+    }
+  ]
+}

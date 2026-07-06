@@ -1,0 +1,53 @@
+{
+  "section": "consonants",
+  "difficulty": "medium",
+  "label": "Consonants — Medium",
+  "passThreshold": 80,
+  "exercises": [
+    {
+      "title": "Minimal pairs: /θ/ vs /s/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "think", "options": ["think", "sink"], "correct": 0, "explanation": "/θ/ — think. sink có /s/." },
+        { "kind": "audiochoice", "audio": "sick", "options": ["thick", "sick"], "correct": 1, "explanation": "/s/ — sick. thick có /θ/." },
+        { "kind": "audiochoice", "audio": "mouth", "options": ["mouth", "mouse"], "correct": 0, "explanation": "/θ/ cuối — mouth. mouse có /s/." },
+        { "kind": "audiochoice", "audio": "sing", "options": ["thing", "sing"], "correct": 1, "explanation": "/s/ — sing. thing có /θ/." },
+        { "kind": "audiochoice", "audio": "path", "options": ["path", "pass"], "correct": 0, "explanation": "/θ/ cuối — path. pass có /s/." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /ʃ/ vs /tʃ/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "chip", "options": ["ship", "chip"], "correct": 1, "explanation": "/tʃ/ — chip. ship có /ʃ/." },
+        { "kind": "audiochoice", "audio": "share", "options": ["share", "chair"], "correct": 0, "explanation": "/ʃ/ — share. chair có /tʃ/." },
+        { "kind": "audiochoice", "audio": "watch", "options": ["wash", "watch"], "correct": 1, "explanation": "/tʃ/ cuối — watch. wash có /ʃ/." },
+        { "kind": "audiochoice", "audio": "cash", "options": ["cash", "catch"], "correct": 0, "explanation": "/ʃ/ cuối — cash. catch có /tʃ/." },
+        { "kind": "audiochoice", "audio": "cheap", "options": ["sheep", "cheap"], "correct": 1, "explanation": "/tʃ/ — cheap. sheep có /ʃ/." }
+      ]
+    },
+    {
+      "title": "Sort: đuôi -s đọc /s/, /z/ hay /ɪz/",
+      "instruction": "Chọn cách đọc đuôi -s của từ.",
+      "items": [
+        { "kind": "sort", "display": "books", "options": ["/s/", "/z/", "/ɪz/"], "correct": 0, "explanation": "books — sau /k/ (âm vô thanh) → /s/." },
+        { "kind": "sort", "display": "jobs", "options": ["/s/", "/z/", "/ɪz/"], "correct": 1, "explanation": "jobs — sau /b/ (âm hữu thanh) → /z/." },
+        { "kind": "sort", "display": "boxes", "options": ["/s/", "/z/", "/ɪz/"], "correct": 2, "explanation": "boxes — sau âm xì /ks/ → /ɪz/." },
+        { "kind": "sort", "display": "meetings", "options": ["/s/", "/z/", "/ɪz/"], "correct": 1, "explanation": "meetings — sau /ŋ/ (hữu thanh) → /z/." },
+        { "kind": "sort", "display": "prices", "options": ["/s/", "/z/", "/ɪz/"], "correct": 2, "explanation": "prices — sau /s/ → /ɪz/." },
+        { "kind": "sort", "display": "maps", "options": ["/s/", "/z/", "/ɪz/"], "correct": 0, "explanation": "maps — sau /p/ (vô thanh) → /s/." }
+      ]
+    },
+    {
+      "title": "Sound ID: /n/ hay /ŋ/ (âm cuối)",
+      "instruction": "Chọn phụ âm ở CUỐI từ.",
+      "items": [
+        { "kind": "soundid", "display": "meeting", "options": ["/n/", "/ŋ/"], "correct": 1, "explanation": "meeting — cuối 'ng' đọc /ŋ/." },
+        { "kind": "soundid", "display": "phone", "options": ["/n/", "/ŋ/"], "correct": 0, "explanation": "phone — cuối /n/." },
+        { "kind": "soundid", "display": "morning", "options": ["/n/", "/ŋ/"], "correct": 1, "explanation": "morning — cuối /ŋ/." },
+        { "kind": "soundid", "display": "line", "options": ["/n/", "/ŋ/"], "correct": 0, "explanation": "line — cuối /n/." },
+        { "kind": "soundid", "display": "training", "options": ["/n/", "/ŋ/"], "correct": 1, "explanation": "training — cuối /ŋ/." }
+      ]
+    }
+  ]
+}

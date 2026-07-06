@@ -1,0 +1,52 @@
+{
+  "section": "consonants",
+  "difficulty": "easy",
+  "label": "Consonants — Easy",
+  "passThreshold": 80,
+  "exercises": [
+    {
+      "title": "Minimal pairs: /p/ vs /b/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "pack", "options": ["pack", "back"], "correct": 0, "explanation": "/p/ — pack. back có /b/." },
+        { "kind": "audiochoice", "audio": "bin", "options": ["pin", "bin"], "correct": 1, "explanation": "/b/ — bin. pin có /p/." },
+        { "kind": "audiochoice", "audio": "pear", "options": ["pear", "bear"], "correct": 0, "explanation": "/p/ — pear. bear có /b/." },
+        { "kind": "audiochoice", "audio": "cab", "options": ["cap", "cab"], "correct": 1, "explanation": "/b/ cuối — cab. cap có /p/." },
+        { "kind": "audiochoice", "audio": "pull", "options": ["pull", "bull"], "correct": 0, "explanation": "/p/ — pull. bull có /b/." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /f/ vs /v/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "van", "options": ["fan", "van"], "correct": 1, "explanation": "/v/ — van. fan có /f/." },
+        { "kind": "audiochoice", "audio": "fine", "options": ["fine", "vine"], "correct": 0, "explanation": "/f/ — fine. vine có /v/." },
+        { "kind": "audiochoice", "audio": "leave", "options": ["leaf", "leave"], "correct": 1, "explanation": "/v/ cuối — leave. leaf có /f/." },
+        { "kind": "audiochoice", "audio": "few", "options": ["few", "view"], "correct": 0, "explanation": "/f/ — few. view có /v/." },
+        { "kind": "audiochoice", "audio": "save", "options": ["safe", "save"], "correct": 1, "explanation": "/v/ cuối — save. safe có /f/." }
+      ]
+    },
+    {
+      "title": "Sound ID: phụ âm đầu",
+      "instruction": "Đọc từ và chọn phụ âm ĐẦU của từ.",
+      "items": [
+        { "kind": "soundid", "display": "photo", "options": ["/f/", "/p/"], "correct": 0, "explanation": "photo — /ˈfoʊtoʊ/, 'ph' đọc /f/." },
+        { "kind": "soundid", "display": "vehicle", "options": ["/v/", "/f/"], "correct": 0, "explanation": "vehicle — /ˈviːɪkəl/, đầu /v/." },
+        { "kind": "soundid", "display": "chemical", "options": ["/k/", "/tʃ/"], "correct": 0, "explanation": "chemical — /ˈkemɪkəl/, 'ch' đọc /k/." },
+        { "kind": "soundid", "display": "guarantee", "options": ["/ɡ/", "/dʒ/"], "correct": 0, "explanation": "guarantee — /ˌɡærənˈtiː/, đầu /ɡ/." },
+        { "kind": "soundid", "display": "receipt", "options": ["/r/", "/s/"], "correct": 0, "explanation": "receipt — /rɪˈsiːt/, đầu /r/." }
+      ]
+    },
+    {
+      "title": "Odd one out: phụ âm đầu khác",
+      "instruction": "Chọn từ có phụ âm ĐẦU khác ba từ còn lại.",
+      "items": [
+        { "kind": "oddoneout", "options": ["photo", "phone", "point", "fun"], "correct": 2, "explanation": "point đầu /p/; photo, phone, fun đều /f/." },
+        { "kind": "oddoneout", "options": ["city", "cent", "cell", "cat"], "correct": 3, "explanation": "cat đầu /k/; city, cent, cell đều /s/." },
+        { "kind": "oddoneout", "options": ["give", "gym", "goal", "gate"], "correct": 1, "explanation": "gym đầu /dʒ/; give, goal, gate đều /ɡ/." },
+        { "kind": "oddoneout", "options": ["hour", "honest", "house", "heir"], "correct": 2, "explanation": "house phát âm /h/; hour, honest, heir có 'h' câm." },
+        { "kind": "oddoneout", "options": ["chef", "chair", "cheese", "check"], "correct": 0, "explanation": "chef đầu /ʃ/; chair, cheese, check đều /tʃ/." }
+      ]
+    }
+  ]
+}

@@ -162,6 +162,7 @@ model Profile {
   postReadingAttempts  PostReadingAttempt[]
   subskillAttempts     SubskillAttempt[]
   recordingAttempts    SpeakingRecordingAttempt[]
+  ipaAttempts          IpaAttempt[]
 
   @@map("profiles")
 }
@@ -354,6 +355,25 @@ model SubskillAttempt {
   @@index([userId, part, questionWord])
   @@index([userId])
   @@map("subskill_attempts")
+}
+
+model IpaAttempt {
+  id            String   @id @default(uuid())
+  userId        String   @map("user_id")
+  profile       Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  section       String   // "vowels" | "diphthongs" | "consonants"
+  difficulty    String   // "easy" | "medium" | "hard"
+  exerciseIndex Int      @map("exercise_index")
+  score         Int      // 0-100
+  passed        Boolean  // score >= passThreshold (80)
+  itemIdx       Int?     @map("item_idx")       // null = completed; number = next item to resume from
+  correctCount  Float?   @map("correct_count")  // running correct count when saved mid-exercise
+  completedAt   DateTime @default(now()) @map("completed_at")
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  @@index([userId, section, difficulty])
+  @@index([userId])
+  @@map("ipa_attempts")
 }
 
 model SpeakingRecordingAttempt {

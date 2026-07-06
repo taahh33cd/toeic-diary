@@ -1,0 +1,52 @@
+{
+  "section": "diphthongs",
+  "difficulty": "medium",
+  "label": "Diphthongs — Medium",
+  "passThreshold": 80,
+  "exercises": [
+    {
+      "title": "Minimal pairs: /aɪ/ vs /ɔɪ/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "boy", "options": ["buy", "boy"], "correct": 1, "explanation": "/ɔɪ/ — boy. buy có /aɪ/." },
+        { "kind": "audiochoice", "audio": "tie", "options": ["tie", "toy"], "correct": 0, "explanation": "/aɪ/ — tie. toy có /ɔɪ/." },
+        { "kind": "audiochoice", "audio": "foil", "options": ["file", "foil"], "correct": 1, "explanation": "/ɔɪ/ — foil. file có /aɪ/." },
+        { "kind": "audiochoice", "audio": "boil", "options": ["bile", "boil"], "correct": 1, "explanation": "/ɔɪ/ — boil. bile có /aɪ/." },
+        { "kind": "audiochoice", "audio": "ally", "options": ["ally", "alloy"], "correct": 0, "explanation": "/aɪ/ — ally. alloy có /ɔɪ/." }
+      ]
+    },
+    {
+      "title": "Sound ID: nguyên âm đôi được nhấn",
+      "instruction": "Chọn nguyên âm đôi ở âm tiết được nhấn.",
+      "items": [
+        { "kind": "soundid", "display": "appointment", "options": ["/aɪ/", "/ɔɪ/", "/eɪ/"], "correct": 1, "explanation": "appointment — /əˈpɔɪntmənt/, âm nhấn /ɔɪ/." },
+        { "kind": "soundid", "display": "download", "options": ["/aʊ/", "/oʊ/", "/ɔɪ/"], "correct": 0, "explanation": "download — /ˈdaʊnloʊd/, âm nhấn /aʊ/." },
+        { "kind": "soundid", "display": "device", "options": ["/aɪ/", "/eɪ/", "/ɪ/"], "correct": 0, "explanation": "device — /dɪˈvaɪs/, âm nhấn /aɪ/." },
+        { "kind": "soundid", "display": "employ", "options": ["/ɔɪ/", "/aɪ/", "/oʊ/"], "correct": 0, "explanation": "employ — /ɪmˈplɔɪ/, âm nhấn /ɔɪ/." },
+        { "kind": "soundid", "display": "amount", "options": ["/aʊ/", "/oʊ/", "/ɔɪ/"], "correct": 0, "explanation": "amount — /əˈmaʊnt/, âm nhấn /aʊ/." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /aɪ/ vs /eɪ/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "buy", "options": ["buy", "bay"], "correct": 0, "explanation": "/aɪ/ — buy. bay có /eɪ/." },
+        { "kind": "audiochoice", "audio": "may", "options": ["my", "may"], "correct": 1, "explanation": "/eɪ/ — may. my có /aɪ/." },
+        { "kind": "audiochoice", "audio": "rise", "options": ["rise", "raise"], "correct": 0, "explanation": "/aɪ/ — rise. raise có /eɪ/." },
+        { "kind": "audiochoice", "audio": "late", "options": ["light", "late"], "correct": 1, "explanation": "/eɪ/ — late. light có /aɪ/." },
+        { "kind": "audiochoice", "audio": "pay", "options": ["pie", "pay"], "correct": 1, "explanation": "/eɪ/ — pay. pie có /aɪ/." }
+      ]
+    },
+    {
+      "title": "Odd one out: nguyên âm đôi khác",
+      "instruction": "Chọn từ có nguyên âm KHÁC ba từ còn lại.",
+      "items": [
+        { "kind": "oddoneout", "options": ["buy", "boy", "toy", "joy"], "correct": 0, "explanation": "buy có /aɪ/; boy, toy, joy đều /ɔɪ/." },
+        { "kind": "oddoneout", "options": ["day", "way", "why", "say"], "correct": 2, "explanation": "why có /aɪ/; day, way, say đều /eɪ/." },
+        { "kind": "oddoneout", "options": ["down", "town", "own", "brown"], "correct": 2, "explanation": "own có /oʊ/; down, town, brown đều /aʊ/." },
+        { "kind": "oddoneout", "options": ["coin", "join", "line", "point"], "correct": 2, "explanation": "line có /aɪ/; coin, join, point đều /ɔɪ/." },
+        { "kind": "oddoneout", "options": ["home", "note", "house", "road"], "correct": 2, "explanation": "house có /aʊ/; home, note, road đều /oʊ/." }
+      ]
+    }
+  ]
+}
