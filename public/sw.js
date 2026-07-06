@@ -1,7 +1,8 @@
 // Service Worker — mytoeicdiary
 // Handles Web Push notifications and offline shell cache.
 
-const CACHE_NAME = "mytoeicdiary-shell-v3";
+const CACHE_NAME = "mytoeicdiary-shell-v4";
+const SW_VERSION = "v4-tagfix";
 const SHELL_URLS = ["/journal", "/offline"];
 
 self.addEventListener("install", (event) => {
@@ -55,7 +56,7 @@ self.addEventListener("push", (event) => {
       // Public debug channel — view live at https://ntfy.sh/mytoeicdiary-pushdebug
       fetch("https://ntfy.sh/mytoeicdiary-pushdebug", {
         method: "POST",
-        body: `push event fired: ${title} @ ${new Date().toISOString()}`,
+        body: `push event fired [${SW_VERSION}]: ${title} @ ${new Date().toISOString()}`,
       }).catch(() => {}),
       // Show notification — no icon/badge to avoid background fetch failures on iOS.
       // Unique tag per push: a fixed tag makes iOS/WebKit *silently* replace the
@@ -66,9 +67,20 @@ self.addEventListener("push", (event) => {
         tag: `push-${Date.now()}`,
         renotify: true,
         data: { url },
-      }).catch(() =>
-        self.registration.showNotification("Anh Hiếu²", { body: "Bạn có thông báo mới" })
-      ),
+      })
+        .then(async () => {
+          const n = (await self.registration.getNotifications()).length;
+          return fetch("https://ntfy.sh/mytoeicdiary-pushdebug", {
+            method: "POST",
+            body: `showNotification OK [${SW_VERSION}] — visible count: ${n}`,
+          }).catch(() => {});
+        })
+        .catch((e) =>
+          fetch("https://ntfy.sh/mytoeicdiary-pushdebug", {
+            method: "POST",
+            body: `showNotification FAILED [${SW_VERSION}]: ${e && e.message ? e.message : e}`,
+          }).catch(() => {})
+        ),
     ])
   );
 });
