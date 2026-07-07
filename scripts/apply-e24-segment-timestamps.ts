@@ -61,6 +61,7 @@ function segmentsToWords(segments: Segment[]): WordTs[] {
   for (const seg of segments) {
     if (!seg.timestamp || seg.timestamp.length < 2) continue;
     const [s, e] = seg.timestamp;
+    if (s == null || e == null) continue;
     const toks = seg.text.split(/\s+/).map(normalizeWord).filter(Boolean);
     const k = toks.length;
     if (k === 0) continue;
