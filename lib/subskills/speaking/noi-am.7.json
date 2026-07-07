@@ -1,0 +1,2125 @@
+{
+  "course": "TOEIC Speaking Part 1",
+  "skill": {
+    "id": "skill_5",
+    "name": "Kỹ năng Nối âm (Linking Sounds)",
+    "description": "75 bài tập tập trung vào kỹ năng nối Phụ âm cuối của từ đằng trước với Nguyên âm đầu của từ đằng sau để câu nói trôi chảy, tự nhiên."
+  },
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "s5_t7_e1",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'look at' được nối âm như thế nào?",
+          "tts_text": "look at",
+          "options": [
+            {
+              "id": "A",
+              "text": "loo - a - t"
+            },
+            {
+              "id": "B",
+              "text": "look - at (không nối)"
+            },
+            {
+              "id": "C",
+              "text": "loo - kat (/lʊ - kæt/)"
+            },
+            {
+              "id": "D",
+              "text": "lo - kat"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "/k/ cuối 'look' nối với /æ/ đầu 'at'."
+        },
+        {
+          "id": "s5_t7_e2",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'hold on' được nối âm như thế nào?",
+          "tts_text": "hold on",
+          "options": [
+            {
+              "id": "A",
+              "text": "hold - on (không nối)"
+            },
+            {
+              "id": "B",
+              "text": "hol - don (/hoʊl - dɒn/)"
+            },
+            {
+              "id": "C",
+              "text": "ho - don"
+            },
+            {
+              "id": "D",
+              "text": "hol - d - on"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "/d/ cuối nối với /ɒ/ đầu 'on'."
+        },
+        {
+          "id": "s5_t7_e3",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'come in' được nối âm như thế nào?",
+          "tts_text": "come in",
+          "options": [
+            {
+              "id": "A",
+              "text": "c - omin"
+            },
+            {
+              "id": "B",
+              "text": "co - me - in"
+            },
+            {
+              "id": "C",
+              "text": "co - min (/kʌ - mɪn/)"
+            },
+            {
+              "id": "D",
+              "text": "come - in (không nối)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "'e' câm, /m/ nối với /ɪ/."
+        },
+        {
+          "id": "s5_t7_e4",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'turn off' được nối âm như thế nào?",
+          "tts_text": "turn off",
+          "options": [
+            {
+              "id": "A",
+              "text": "tur - noff (/tɜːr - nɒf/)"
+            },
+            {
+              "id": "B",
+              "text": "tu - noff"
+            },
+            {
+              "id": "C",
+              "text": "tur - n - off"
+            },
+            {
+              "id": "D",
+              "text": "turn - off (không nối)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/n/ cuối nối với /ɒ/ đầu 'off'."
+        },
+        {
+          "id": "s5_t7_e5",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'pick it up' được nối âm như thế nào?",
+          "tts_text": "pick it up",
+          "options": [
+            {
+              "id": "A",
+              "text": "pi - ki - tup (/pɪ - kɪ - tʌp/)"
+            },
+            {
+              "id": "B",
+              "text": "pic - kit - up"
+            },
+            {
+              "id": "C",
+              "text": "pi - kit - up"
+            },
+            {
+              "id": "D",
+              "text": "pick - it - up"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Nối liên tiếp /k/+it, /t/+up."
+        },
+        {
+          "id": "s5_t7_e6",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'stand up' được nối âm như thế nào?",
+          "tts_text": "stand up",
+          "options": [
+            {
+              "id": "A",
+              "text": "stan - dup (/stæn - dʌp/)"
+            },
+            {
+              "id": "B",
+              "text": "sta - dup"
+            },
+            {
+              "id": "C",
+              "text": "stan - d - up"
+            },
+            {
+              "id": "D",
+              "text": "stand - up (không nối)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/d/ cuối nối với /ʌ/ đầu 'up'."
+        },
+        {
+          "id": "s5_t7_e7",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'sit down' được nối âm như thế nào?",
+          "tts_text": "sit down",
+          "options": [
+            {
+              "id": "A",
+              "text": "sit - down"
+            },
+            {
+              "id": "B",
+              "text": "s - itdown"
+            },
+            {
+              "id": "C",
+              "text": "si - down"
+            },
+            {
+              "id": "D",
+              "text": "sitt - own"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'down' bắt đầu bằng phụ âm /d/ nên KHÔNG nối kiểu C→V."
+        },
+        {
+          "id": "s5_t7_e8",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'get up' được nối âm như thế nào?",
+          "tts_text": "get up",
+          "options": [
+            {
+              "id": "A",
+              "text": "ge - t - up"
+            },
+            {
+              "id": "B",
+              "text": "ge - tup (/ɡe - tʌp/)"
+            },
+            {
+              "id": "C",
+              "text": "get - up (không nối)"
+            },
+            {
+              "id": "D",
+              "text": "g - etup"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "/t/ cuối nối với /ʌ/ đầu 'up'."
+        },
+        {
+          "id": "s5_t7_e9",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'put it on' được nối âm như thế nào?",
+          "tts_text": "put it on",
+          "options": [
+            {
+              "id": "A",
+              "text": "put - i - ton"
+            },
+            {
+              "id": "B",
+              "text": "pu - tit - on"
+            },
+            {
+              "id": "C",
+              "text": "put - it - on"
+            },
+            {
+              "id": "D",
+              "text": "pu - ti - ton (/pʊ - tɪ - tɒn/)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Nối liên tiếp /t/+it, /t/+on."
+        },
+        {
+          "id": "s5_t7_e10",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'far away' được nối âm như thế nào?",
+          "tts_text": "far away",
+          "options": [
+            {
+              "id": "A",
+              "text": "far - r - away"
+            },
+            {
+              "id": "B",
+              "text": "far - away (không nối)"
+            },
+            {
+              "id": "C",
+              "text": "fa - raway (/fɑː - rəweɪ/)"
+            },
+            {
+              "id": "D",
+              "text": "fa - away"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "/r/ cuối nối với /ə/ đầu 'away'."
+        },
+        {
+          "id": "s5_t7_e11",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'an apple' được nối âm như thế nào?",
+          "tts_text": "an apple",
+          "options": [
+            {
+              "id": "A",
+              "text": "an - n - apple"
+            },
+            {
+              "id": "B",
+              "text": "an - apple (không nối)"
+            },
+            {
+              "id": "C",
+              "text": "a - napple (/ə - næpl/)"
+            },
+            {
+              "id": "D",
+              "text": "a - apple"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "/n/ cuối nối với /æ/ đầu 'apple'."
+        },
+        {
+          "id": "s5_t7_e12",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'this evening' được nối âm như thế nào?",
+          "tts_text": "this evening",
+          "options": [
+            {
+              "id": "A",
+              "text": "thiss - evening"
+            },
+            {
+              "id": "B",
+              "text": "thi - sevening (/ðɪ - siːvnɪŋ/)"
+            },
+            {
+              "id": "C",
+              "text": "this - evening (không nối)"
+            },
+            {
+              "id": "D",
+              "text": "thi - evening"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "/s/ cuối nối với /iː/ đầu 'evening'."
+        },
+        {
+          "id": "s5_t7_e13",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'not at all' được nối âm như thế nào?",
+          "tts_text": "not at all",
+          "options": [
+            {
+              "id": "A",
+              "text": "not - at - all"
+            },
+            {
+              "id": "B",
+              "text": "no - ta - tall (/nɒ - tə - tɔːl/)"
+            },
+            {
+              "id": "C",
+              "text": "no - tat - all"
+            },
+            {
+              "id": "D",
+              "text": "not - a - tall"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Nối liên tiếp /t/+at, /t/+all."
+        },
+        {
+          "id": "s5_t7_e14",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'give it back' được nối âm như thế nào?",
+          "tts_text": "give it back",
+          "options": [
+            {
+              "id": "A",
+              "text": "gi - vi - tback"
+            },
+            {
+              "id": "B",
+              "text": "give - it - back"
+            },
+            {
+              "id": "C",
+              "text": "gi - vit - back (/ɡɪ - vɪt - bæk/)"
+            },
+            {
+              "id": "D",
+              "text": "giv - it - back"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "/v/ nối với /ɪ/; 'back' bắt đầu phụ âm."
+        },
+        {
+          "id": "s5_t7_e15",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'take it easy' được nối âm như thế nào?",
+          "tts_text": "take it easy",
+          "options": [
+            {
+              "id": "A",
+              "text": "take - it - easy"
+            },
+            {
+              "id": "B",
+              "text": "ta - kit - easy"
+            },
+            {
+              "id": "C",
+              "text": "tak - it - easy"
+            },
+            {
+              "id": "D",
+              "text": "ta - ki - teasy (/teɪ - kɪ - tiːzi/)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Nối liên tiếp /k/+it, /t/+easy."
+        },
+        {
+          "id": "s5_t7_e16",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'fill in' được nối âm như thế nào?",
+          "tts_text": "fill in",
+          "options": [
+            {
+              "id": "A",
+              "text": "fi - in"
+            },
+            {
+              "id": "B",
+              "text": "fill - l - in"
+            },
+            {
+              "id": "C",
+              "text": "fill - in (không nối)"
+            },
+            {
+              "id": "D",
+              "text": "fi - lin (/fɪ - lɪn/)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "/l/ cuối nối với /ɪ/ đầu 'in'."
+        },
+        {
+          "id": "s5_t7_e17",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'call us' được nối âm như thế nào?",
+          "tts_text": "call us",
+          "options": [
+            {
+              "id": "A",
+              "text": "ca - us"
+            },
+            {
+              "id": "B",
+              "text": "call - l - us"
+            },
+            {
+              "id": "C",
+              "text": "call - us (không nối)"
+            },
+            {
+              "id": "D",
+              "text": "ca - lus (/kɔː - ləs/)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "/l/ cuối nối với /ə/ đầu 'us'."
+        },
+        {
+          "id": "s5_t7_e18",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'read it' được nối âm như thế nào?",
+          "tts_text": "read it",
+          "options": [
+            {
+              "id": "A",
+              "text": "rea - dit (/riː - dɪt/)"
+            },
+            {
+              "id": "B",
+              "text": "read - it (không nối)"
+            },
+            {
+              "id": "C",
+              "text": "rea - d - it"
+            },
+            {
+              "id": "D",
+              "text": "rea - it"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/d/ cuối nối với /ɪ/ đầu 'it'."
+        },
+        {
+          "id": "s5_t7_e19",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'keep out' được nối âm như thế nào?",
+          "tts_text": "keep out",
+          "options": [
+            {
+              "id": "A",
+              "text": "kee - out"
+            },
+            {
+              "id": "B",
+              "text": "keep - out (không nối)"
+            },
+            {
+              "id": "C",
+              "text": "keep - p - out"
+            },
+            {
+              "id": "D",
+              "text": "kee - pout (/kiː - paʊt/)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "/p/ cuối nối với /aʊ/ đầu 'out'."
+        },
+        {
+          "id": "s5_t7_e20",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'work out' được nối âm như thế nào?",
+          "tts_text": "work out",
+          "options": [
+            {
+              "id": "A",
+              "text": "wor - out"
+            },
+            {
+              "id": "B",
+              "text": "work - out (không nối)"
+            },
+            {
+              "id": "C",
+              "text": "wor - kout (/wɜːr - kaʊt/)"
+            },
+            {
+              "id": "D",
+              "text": "work - k - out"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "/k/ cuối nối với /aʊ/ đầu 'out'."
+        },
+        {
+          "id": "s5_t7_e21",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'check in' được nối âm như thế nào?",
+          "tts_text": "check in",
+          "options": [
+            {
+              "id": "A",
+              "text": "che - in"
+            },
+            {
+              "id": "B",
+              "text": "check - in (không nối)"
+            },
+            {
+              "id": "C",
+              "text": "check - k - in"
+            },
+            {
+              "id": "D",
+              "text": "che - kin (/tʃe - kɪn/)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "/k/ cuối nối với /ɪ/ đầu 'in'."
+        },
+        {
+          "id": "s5_t7_e22",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'fall asleep' được nối âm như thế nào?",
+          "tts_text": "fall asleep",
+          "options": [
+            {
+              "id": "A",
+              "text": "fall - l - asleep"
+            },
+            {
+              "id": "B",
+              "text": "fa - asleep"
+            },
+            {
+              "id": "C",
+              "text": "fall - asleep (không nối)"
+            },
+            {
+              "id": "D",
+              "text": "fa - lasleep (/fɔː - ləsliːp/)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "/l/ cuối nối với /ə/ đầu 'asleep'."
+        },
+        {
+          "id": "s5_t7_e23",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'run errands' được nối âm như thế nào?",
+          "tts_text": "run errands",
+          "options": [
+            {
+              "id": "A",
+              "text": "run - n - errands"
+            },
+            {
+              "id": "B",
+              "text": "ru - errands"
+            },
+            {
+              "id": "C",
+              "text": "ru - nerrands (/rʌ - nerəndz/)"
+            },
+            {
+              "id": "D",
+              "text": "run - errands (không nối)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "/n/ cuối nối với /e/ đầu 'errands'."
+        },
+        {
+          "id": "s5_t7_e24",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'sign in' được nối âm như thế nào?",
+          "tts_text": "sign in",
+          "options": [
+            {
+              "id": "A",
+              "text": "sign - n - in"
+            },
+            {
+              "id": "B",
+              "text": "sig - nin (/saɪ - nɪn/)"
+            },
+            {
+              "id": "C",
+              "text": "si - nin"
+            },
+            {
+              "id": "D",
+              "text": "sign - in (không nối)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "'g' câm, /n/ nối với /ɪ/ đầu 'in'."
+        },
+        {
+          "id": "s5_t7_e25",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'laugh at' được nối âm như thế nào?",
+          "tts_text": "laugh at",
+          "options": [
+            {
+              "id": "A",
+              "text": "laugh - at (không nối)"
+            },
+            {
+              "id": "B",
+              "text": "lau - at"
+            },
+            {
+              "id": "C",
+              "text": "laughh - at"
+            },
+            {
+              "id": "D",
+              "text": "lau - ghat (/læ - fæt/)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "'gh' đọc /f/, nối với /æ/ đầu 'at'."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "s5_t7_m1",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'She fixed everything.', hiện tượng nối âm nào xảy ra?",
+          "tts_text": "She fixed everything.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ngắt nghỉ rõ ràng giữa 2 từ, không nối."
+            },
+            {
+              "id": "B",
+              "text": "Đổi âm cuối thành âm khác."
+            },
+            {
+              "id": "C",
+              "text": "Âm cuối bị câm hoàn toàn."
+            },
+            {
+              "id": "D",
+              "text": "'fixed' (/kst/) nối 'everything': /fɪks - tevriθɪŋ/."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "đuôi /t/ nối với /e/."
+        },
+        {
+          "id": "s5_t7_m2",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'They arrived early.', hiện tượng nối âm nào xảy ra?",
+          "tts_text": "They arrived early.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Đổi âm cuối thành âm khác."
+            },
+            {
+              "id": "B",
+              "text": "'arrived' (/d/) nối 'early': /əraɪv - dɜːrli/."
+            },
+            {
+              "id": "C",
+              "text": "Âm cuối bị câm hoàn toàn."
+            },
+            {
+              "id": "D",
+              "text": "Ngắt nghỉ rõ ràng giữa 2 từ, không nối."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "arrived + early → nối /d/ với /ɜː/."
+        },
+        {
+          "id": "s5_t7_m3",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'He played a game.', hiện tượng nối âm nào xảy ra?",
+          "tts_text": "He played a game.",
+          "options": [
+            {
+              "id": "A",
+              "text": "'played' (/d/) nối với 'a' (/ə/): /pleɪ - də/."
+            },
+            {
+              "id": "B",
+              "text": "Đổi âm cuối thành âm khác."
+            },
+            {
+              "id": "C",
+              "text": "Âm cuối bị câm hoàn toàn."
+            },
+            {
+              "id": "D",
+              "text": "Ngắt nghỉ rõ ràng giữa 2 từ, không nối."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "played + a → /pleɪ - də/."
+        },
+        {
+          "id": "s5_t7_m4",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'She worked on it.', hiện tượng nối âm nào xảy ra?",
+          "tts_text": "She worked on it.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ngắt nghỉ rõ ràng giữa 2 từ, không nối."
+            },
+            {
+              "id": "B",
+              "text": "'worked' (/t/) nối 'on'; 'on' nối 'it'."
+            },
+            {
+              "id": "C",
+              "text": "Đổi âm cuối thành âm khác."
+            },
+            {
+              "id": "D",
+              "text": "Âm cuối bị câm hoàn toàn."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "worked-on /wɜːrk - tɒn/, on-it /ɒ - nɪt/ — 2 chỗ nối."
+        },
+        {
+          "id": "s5_t7_m5",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'They moved out.', hiện tượng nối âm nào xảy ra?",
+          "tts_text": "They moved out.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Đổi âm cuối thành âm khác."
+            },
+            {
+              "id": "B",
+              "text": "'moved' (/d/) nối 'out': /muːv - daʊt/."
+            },
+            {
+              "id": "C",
+              "text": "Ngắt nghỉ rõ ràng giữa 2 từ, không nối."
+            },
+            {
+              "id": "D",
+              "text": "Âm cuối bị câm hoàn toàn."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "moved + out → /muːv - daʊt/."
+        },
+        {
+          "id": "s5_t7_m6",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'We asked him.', hiện tượng nối âm nào xảy ra?",
+          "tts_text": "We asked him.",
+          "options": [
+            {
+              "id": "A",
+              "text": "'asked' (/t/) đứng trước 'him' (phụ âm /h/), không nối C→V."
+            },
+            {
+              "id": "B",
+              "text": "Ngắt nghỉ rõ ràng giữa 2 từ, không nối."
+            },
+            {
+              "id": "C",
+              "text": "Âm cuối bị câm hoàn toàn."
+            },
+            {
+              "id": "D",
+              "text": "Đổi âm cuối thành âm khác."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'him' bắt đầu bằng phụ âm."
+        },
+        {
+          "id": "s5_t7_m7",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'I cleaned it up.', hiện tượng nối âm nào xảy ra?",
+          "tts_text": "I cleaned it up.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Âm cuối bị câm hoàn toàn."
+            },
+            {
+              "id": "B",
+              "text": "Ngắt nghỉ rõ ràng giữa 2 từ, không nối."
+            },
+            {
+              "id": "C",
+              "text": "'cleaned' (/d/) nối 'it'; 'it' nối 'up'."
+            },
+            {
+              "id": "D",
+              "text": "Đổi âm cuối thành âm khác."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "cleaned-it, it-up — 2 chỗ nối."
+        },
+        {
+          "id": "s5_t7_m8",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'He turned around.', hiện tượng nối âm nào xảy ra?",
+          "tts_text": "He turned around.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ngắt nghỉ rõ ràng giữa 2 từ, không nối."
+            },
+            {
+              "id": "B",
+              "text": "'turned' (/d/) nối 'around': /tɜːrn - dəraʊnd/."
+            },
+            {
+              "id": "C",
+              "text": "Âm cuối bị câm hoàn toàn."
+            },
+            {
+              "id": "D",
+              "text": "Đổi âm cuối thành âm khác."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "turned + around → nối /d/ với /ə/."
+        },
+        {
+          "id": "s5_t7_m9",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'She fixed everything.', hiện tượng nối âm nào xảy ra?",
+          "tts_text": "She fixed everything.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Âm cuối bị câm hoàn toàn."
+            },
+            {
+              "id": "B",
+              "text": "'fixed' (/kst/) nối 'everything': /fɪks - tevriθɪŋ/."
+            },
+            {
+              "id": "C",
+              "text": "Đổi âm cuối thành âm khác."
+            },
+            {
+              "id": "D",
+              "text": "Ngắt nghỉ rõ ràng giữa 2 từ, không nối."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "đuôi /t/ nối với /e/."
+        },
+        {
+          "id": "s5_t7_m10",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'They arrived early.', hiện tượng nối âm nào xảy ra?",
+          "tts_text": "They arrived early.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Đổi âm cuối thành âm khác."
+            },
+            {
+              "id": "B",
+              "text": "'arrived' (/d/) nối 'early': /əraɪv - dɜːrli/."
+            },
+            {
+              "id": "C",
+              "text": "Ngắt nghỉ rõ ràng giữa 2 từ, không nối."
+            },
+            {
+              "id": "D",
+              "text": "Âm cuối bị câm hoàn toàn."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "arrived + early → nối /d/ với /ɜː/."
+        },
+        {
+          "id": "s5_t7_m11",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'He played a game.', hiện tượng nối âm nào xảy ra?",
+          "tts_text": "He played a game.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Ngắt nghỉ rõ ràng giữa 2 từ, không nối."
+            },
+            {
+              "id": "B",
+              "text": "'played' (/d/) nối với 'a' (/ə/): /pleɪ - də/."
+            },
+            {
+              "id": "C",
+              "text": "Đổi âm cuối thành âm khác."
+            },
+            {
+              "id": "D",
+              "text": "Âm cuối bị câm hoàn toàn."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "played + a → /pleɪ - də/."
+        },
+        {
+          "id": "s5_t7_m12",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'She worked on it.', hiện tượng nối âm nào xảy ra?",
+          "tts_text": "She worked on it.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Đổi âm cuối thành âm khác."
+            },
+            {
+              "id": "B",
+              "text": "Ngắt nghỉ rõ ràng giữa 2 từ, không nối."
+            },
+            {
+              "id": "C",
+              "text": "'worked' (/t/) nối 'on'; 'on' nối 'it'."
+            },
+            {
+              "id": "D",
+              "text": "Âm cuối bị câm hoàn toàn."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "worked-on /wɜːrk - tɒn/, on-it /ɒ - nɪt/ — 2 chỗ nối."
+        },
+        {
+          "id": "s5_t7_m13",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'They moved out.', hiện tượng nối âm nào xảy ra?",
+          "tts_text": "They moved out.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Đổi âm cuối thành âm khác."
+            },
+            {
+              "id": "B",
+              "text": "'moved' (/d/) nối 'out': /muːv - daʊt/."
+            },
+            {
+              "id": "C",
+              "text": "Ngắt nghỉ rõ ràng giữa 2 từ, không nối."
+            },
+            {
+              "id": "D",
+              "text": "Âm cuối bị câm hoàn toàn."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "moved + out → /muːv - daʊt/."
+        },
+        {
+          "id": "s5_t7_m14",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'put it on' được nối âm như thế nào?",
+          "tts_text": "put it on",
+          "options": [
+            {
+              "id": "A",
+              "text": "put - it - on"
+            },
+            {
+              "id": "B",
+              "text": "pu - ti - ton (/pʊ - tɪ - tɒn/)"
+            },
+            {
+              "id": "C",
+              "text": "put - i - ton"
+            },
+            {
+              "id": "D",
+              "text": "pu - tit - on"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Nối liên tiếp /t/+it, /t/+on."
+        },
+        {
+          "id": "s5_t7_m15",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'far away' được nối âm như thế nào?",
+          "tts_text": "far away",
+          "options": [
+            {
+              "id": "A",
+              "text": "fa - raway (/fɑː - rəweɪ/)"
+            },
+            {
+              "id": "B",
+              "text": "fa - away"
+            },
+            {
+              "id": "C",
+              "text": "far - r - away"
+            },
+            {
+              "id": "D",
+              "text": "far - away (không nối)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/r/ cuối nối với /ə/ đầu 'away'."
+        },
+        {
+          "id": "s5_t7_m16",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'an apple' được nối âm như thế nào?",
+          "tts_text": "an apple",
+          "options": [
+            {
+              "id": "A",
+              "text": "a - napple (/ə - næpl/)"
+            },
+            {
+              "id": "B",
+              "text": "an - n - apple"
+            },
+            {
+              "id": "C",
+              "text": "an - apple (không nối)"
+            },
+            {
+              "id": "D",
+              "text": "a - apple"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/n/ cuối nối với /æ/ đầu 'apple'."
+        },
+        {
+          "id": "s5_t7_m17",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'this evening' được nối âm như thế nào?",
+          "tts_text": "this evening",
+          "options": [
+            {
+              "id": "A",
+              "text": "thi - evening"
+            },
+            {
+              "id": "B",
+              "text": "thiss - evening"
+            },
+            {
+              "id": "C",
+              "text": "thi - sevening (/ðɪ - siːvnɪŋ/)"
+            },
+            {
+              "id": "D",
+              "text": "this - evening (không nối)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "/s/ cuối nối với /iː/ đầu 'evening'."
+        },
+        {
+          "id": "s5_t7_m18",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'not at all' được nối âm như thế nào?",
+          "tts_text": "not at all",
+          "options": [
+            {
+              "id": "A",
+              "text": "no - ta - tall (/nɒ - tə - tɔːl/)"
+            },
+            {
+              "id": "B",
+              "text": "not - a - tall"
+            },
+            {
+              "id": "C",
+              "text": "not - at - all"
+            },
+            {
+              "id": "D",
+              "text": "no - tat - all"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Nối liên tiếp /t/+at, /t/+all."
+        },
+        {
+          "id": "s5_t7_m19",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'give it back' được nối âm như thế nào?",
+          "tts_text": "give it back",
+          "options": [
+            {
+              "id": "A",
+              "text": "gi - vi - tback"
+            },
+            {
+              "id": "B",
+              "text": "giv - it - back"
+            },
+            {
+              "id": "C",
+              "text": "give - it - back"
+            },
+            {
+              "id": "D",
+              "text": "gi - vit - back (/ɡɪ - vɪt - bæk/)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "/v/ nối với /ɪ/; 'back' bắt đầu phụ âm."
+        },
+        {
+          "id": "s5_t7_m20",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'take it easy' được nối âm như thế nào?",
+          "tts_text": "take it easy",
+          "options": [
+            {
+              "id": "A",
+              "text": "take - it - easy"
+            },
+            {
+              "id": "B",
+              "text": "ta - ki - teasy (/teɪ - kɪ - tiːzi/)"
+            },
+            {
+              "id": "C",
+              "text": "ta - kit - easy"
+            },
+            {
+              "id": "D",
+              "text": "tak - it - easy"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Nối liên tiếp /k/+it, /t/+easy."
+        },
+        {
+          "id": "s5_t7_m21",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'fill in' được nối âm như thế nào?",
+          "tts_text": "fill in",
+          "options": [
+            {
+              "id": "A",
+              "text": "fill - l - in"
+            },
+            {
+              "id": "B",
+              "text": "fill - in (không nối)"
+            },
+            {
+              "id": "C",
+              "text": "fi - in"
+            },
+            {
+              "id": "D",
+              "text": "fi - lin (/fɪ - lɪn/)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "/l/ cuối nối với /ɪ/ đầu 'in'."
+        },
+        {
+          "id": "s5_t7_m22",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'call us' được nối âm như thế nào?",
+          "tts_text": "call us",
+          "options": [
+            {
+              "id": "A",
+              "text": "call - l - us"
+            },
+            {
+              "id": "B",
+              "text": "ca - us"
+            },
+            {
+              "id": "C",
+              "text": "call - us (không nối)"
+            },
+            {
+              "id": "D",
+              "text": "ca - lus (/kɔː - ləs/)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "/l/ cuối nối với /ə/ đầu 'us'."
+        },
+        {
+          "id": "s5_t7_m23",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'read it' được nối âm như thế nào?",
+          "tts_text": "read it",
+          "options": [
+            {
+              "id": "A",
+              "text": "read - it (không nối)"
+            },
+            {
+              "id": "B",
+              "text": "rea - dit (/riː - dɪt/)"
+            },
+            {
+              "id": "C",
+              "text": "rea - it"
+            },
+            {
+              "id": "D",
+              "text": "rea - d - it"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "/d/ cuối nối với /ɪ/ đầu 'it'."
+        },
+        {
+          "id": "s5_t7_m24",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'keep out' được nối âm như thế nào?",
+          "tts_text": "keep out",
+          "options": [
+            {
+              "id": "A",
+              "text": "keep - out (không nối)"
+            },
+            {
+              "id": "B",
+              "text": "kee - pout (/kiː - paʊt/)"
+            },
+            {
+              "id": "C",
+              "text": "keep - p - out"
+            },
+            {
+              "id": "D",
+              "text": "kee - out"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "/p/ cuối nối với /aʊ/ đầu 'out'."
+        },
+        {
+          "id": "s5_t7_m25",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'work out' được nối âm như thế nào?",
+          "tts_text": "work out",
+          "options": [
+            {
+              "id": "A",
+              "text": "work - k - out"
+            },
+            {
+              "id": "B",
+              "text": "wor - kout (/wɜːr - kaʊt/)"
+            },
+            {
+              "id": "C",
+              "text": "work - out (không nối)"
+            },
+            {
+              "id": "D",
+              "text": "wor - out"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "/k/ cuối nối với /aʊ/ đầu 'out'."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "s5_t7_h1",
+          "type": "multiple_choice",
+          "instruction": "Khi nối 'they are' (nguyên âm + nguyên âm), người bản xứ chèn thêm âm gì?",
+          "tts_text": "they are",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chèn âm /w/"
+            },
+            {
+              "id": "B",
+              "text": "Chèn âm /r/"
+            },
+            {
+              "id": "C",
+              "text": "Không chèn âm nào"
+            },
+            {
+              "id": "D",
+              "text": "Chèn âm /j/ (y)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "/eɪ/ lưỡi cao → sinh /j/: they-y-are."
+        },
+        {
+          "id": "s5_t7_h2",
+          "type": "multiple_choice",
+          "instruction": "Khi nối 'be honest' (nguyên âm + nguyên âm), người bản xứ chèn thêm âm gì?",
+          "tts_text": "be honest",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chèn âm /r/"
+            },
+            {
+              "id": "B",
+              "text": "Không chèn âm nào"
+            },
+            {
+              "id": "C",
+              "text": "Chèn âm /w/"
+            },
+            {
+              "id": "D",
+              "text": "Chèn âm /j/ (y)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "/iː/ lưỡi cao → sinh /j/: be-y-honest."
+        },
+        {
+          "id": "s5_t7_h3",
+          "type": "multiple_choice",
+          "instruction": "Khi nối 'the end' (nguyên âm + nguyên âm), người bản xứ chèn thêm âm gì?",
+          "tts_text": "the end",
+          "options": [
+            {
+              "id": "A",
+              "text": "Không chèn âm nào"
+            },
+            {
+              "id": "B",
+              "text": "Chèn âm /j/ (y)"
+            },
+            {
+              "id": "C",
+              "text": "Chèn âm /w/"
+            },
+            {
+              "id": "D",
+              "text": "Chèn âm /r/"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "/iː/ (the trước nguyên âm) → sinh /j/: the-y-end."
+        },
+        {
+          "id": "s5_t7_h4",
+          "type": "multiple_choice",
+          "instruction": "Khi nối 'say it' (nguyên âm + nguyên âm), người bản xứ chèn thêm âm gì?",
+          "tts_text": "say it",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chèn âm /w/"
+            },
+            {
+              "id": "B",
+              "text": "Chèn âm /j/ (y)"
+            },
+            {
+              "id": "C",
+              "text": "Không chèn âm nào"
+            },
+            {
+              "id": "D",
+              "text": "Chèn âm /r/"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "/eɪ/ lưỡi cao → sinh /j/: say-y-it."
+        },
+        {
+          "id": "s5_t7_h5",
+          "type": "multiple_choice",
+          "instruction": "Khi nối 'he asked' (nguyên âm + nguyên âm), người bản xứ chèn thêm âm gì?",
+          "tts_text": "he asked",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chèn âm /j/ (y)"
+            },
+            {
+              "id": "B",
+              "text": "Chèn âm /r/"
+            },
+            {
+              "id": "C",
+              "text": "Chèn âm /w/"
+            },
+            {
+              "id": "D",
+              "text": "Không chèn âm nào"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/iː/ lưỡi cao → sinh /j/: he-y-asked."
+        },
+        {
+          "id": "s5_t7_h6",
+          "type": "multiple_choice",
+          "instruction": "Khi nối 'try again' (nguyên âm + nguyên âm), người bản xứ chèn thêm âm gì?",
+          "tts_text": "try again",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chèn âm /j/ (y)"
+            },
+            {
+              "id": "B",
+              "text": "Chèn âm /w/"
+            },
+            {
+              "id": "C",
+              "text": "Chèn âm /r/"
+            },
+            {
+              "id": "D",
+              "text": "Không chèn âm nào"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/aɪ/ lưỡi cao → sinh /j/: try-y-again."
+        },
+        {
+          "id": "s5_t7_h7",
+          "type": "multiple_choice",
+          "instruction": "Khi nối 'who is' (nguyên âm + nguyên âm), người bản xứ chèn thêm âm gì?",
+          "tts_text": "who is",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chèn âm /w/"
+            },
+            {
+              "id": "B",
+              "text": "Chèn âm /r/"
+            },
+            {
+              "id": "C",
+              "text": "Không chèn âm nào"
+            },
+            {
+              "id": "D",
+              "text": "Chèn âm /j/ (y)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/uː/ chu môi → sinh /w/: who-w-is."
+        },
+        {
+          "id": "s5_t7_h8",
+          "type": "multiple_choice",
+          "instruction": "Khi nối 'throw away' (nguyên âm + nguyên âm), người bản xứ chèn thêm âm gì?",
+          "tts_text": "throw away",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chèn âm /w/"
+            },
+            {
+              "id": "B",
+              "text": "Không chèn âm nào"
+            },
+            {
+              "id": "C",
+              "text": "Chèn âm /r/"
+            },
+            {
+              "id": "D",
+              "text": "Chèn âm /j/ (y)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/oʊ/ chu môi → sinh /w/: throw-w-away."
+        },
+        {
+          "id": "s5_t7_h9",
+          "type": "multiple_choice",
+          "instruction": "Khi nối 'may I' (nguyên âm + nguyên âm), người bản xứ chèn thêm âm gì?",
+          "tts_text": "may I",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chèn âm /r/"
+            },
+            {
+              "id": "B",
+              "text": "Không chèn âm nào"
+            },
+            {
+              "id": "C",
+              "text": "Chèn âm /j/ (y)"
+            },
+            {
+              "id": "D",
+              "text": "Chèn âm /w/"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "/eɪ/ lưỡi cao → sinh /j/: may-y-I."
+        },
+        {
+          "id": "s5_t7_h10",
+          "type": "multiple_choice",
+          "instruction": "Khi nối 'see it' (nguyên âm + nguyên âm), người bản xứ chèn thêm âm gì?",
+          "tts_text": "see it",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chèn âm /j/ (y)"
+            },
+            {
+              "id": "B",
+              "text": "Chèn âm /r/"
+            },
+            {
+              "id": "C",
+              "text": "Chèn âm /w/"
+            },
+            {
+              "id": "D",
+              "text": "Không chèn âm nào"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/iː/ lưỡi cao → sinh /j/: see-y-it."
+        },
+        {
+          "id": "s5_t7_h11",
+          "type": "multiple_choice",
+          "instruction": "Khi nối 'go away' (nguyên âm + nguyên âm), người bản xứ chèn thêm âm gì?",
+          "tts_text": "go away",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chèn âm /w/"
+            },
+            {
+              "id": "B",
+              "text": "Chèn âm /r/"
+            },
+            {
+              "id": "C",
+              "text": "Không chèn âm nào"
+            },
+            {
+              "id": "D",
+              "text": "Chèn âm /j/ (y)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/oʊ/ chu môi → sinh /w/: go-w-away."
+        },
+        {
+          "id": "s5_t7_h12",
+          "type": "multiple_choice",
+          "instruction": "Khi nối 'go out' (nguyên âm + nguyên âm), người bản xứ chèn thêm âm gì?",
+          "tts_text": "go out",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chèn âm /r/"
+            },
+            {
+              "id": "B",
+              "text": "Chèn âm /w/"
+            },
+            {
+              "id": "C",
+              "text": "Không chèn âm nào"
+            },
+            {
+              "id": "D",
+              "text": "Chèn âm /j/ (y)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "/oʊ/ chu môi → sinh /w/: go-w-out."
+        },
+        {
+          "id": "s5_t7_h13",
+          "type": "multiple_choice",
+          "instruction": "Khi nối 'do it' (nguyên âm + nguyên âm), người bản xứ chèn thêm âm gì?",
+          "tts_text": "do it",
+          "options": [
+            {
+              "id": "A",
+              "text": "Chèn âm /w/"
+            },
+            {
+              "id": "B",
+              "text": "Chèn âm /r/"
+            },
+            {
+              "id": "C",
+              "text": "Chèn âm /j/ (y)"
+            },
+            {
+              "id": "D",
+              "text": "Không chèn âm nào"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/uː/ chu môi → sinh /w/: do-w-it."
+        },
+        {
+          "id": "s5_t7_h14",
+          "type": "multiple_choice",
+          "instruction": "Khi nối 'you are' (nguyên âm + nguyên âm), người bản xứ chèn thêm âm gì?",
+          "tts_text": "you are",
+          "options": [
+            {
+              "id": "A",
+              "text": "Không chèn âm nào"
+            },
+            {
+              "id": "B",
+              "text": "Chèn âm /j/ (y)"
+            },
+            {
+              "id": "C",
+              "text": "Chèn âm /r/"
+            },
+            {
+              "id": "D",
+              "text": "Chèn âm /w/"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "/uː/ chu môi → sinh /w/: you-w-are."
+        },
+        {
+          "id": "s5_t7_h15",
+          "type": "multiple_choice",
+          "instruction": "Khi nối 'how is' (nguyên âm + nguyên âm), người bản xứ chèn thêm âm gì?",
+          "tts_text": "how is",
+          "options": [
+            {
+              "id": "A",
+              "text": "Không chèn âm nào"
+            },
+            {
+              "id": "B",
+              "text": "Chèn âm /j/ (y)"
+            },
+            {
+              "id": "C",
+              "text": "Chèn âm /r/"
+            },
+            {
+              "id": "D",
+              "text": "Chèn âm /w/"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "/aʊ/ chu môi → sinh /w/: how-w-is."
+        },
+        {
+          "id": "s5_t7_h16",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'go away' được chèn thêm âm gì để nối cho mượt?",
+          "tts_text": "go away",
+          "options": [
+            {
+              "id": "A",
+              "text": "Âm /j/ (y)"
+            },
+            {
+              "id": "B",
+              "text": "Âm /r/"
+            },
+            {
+              "id": "C",
+              "text": "Âm /h/"
+            },
+            {
+              "id": "D",
+              "text": "Âm /w/"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "/oʊ/ chu môi → sinh /w/: go-w-away."
+        },
+        {
+          "id": "s5_t7_h17",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'go out' được chèn thêm âm gì để nối cho mượt?",
+          "tts_text": "go out",
+          "options": [
+            {
+              "id": "A",
+              "text": "Âm /w/"
+            },
+            {
+              "id": "B",
+              "text": "Âm /r/"
+            },
+            {
+              "id": "C",
+              "text": "Âm /j/ (y)"
+            },
+            {
+              "id": "D",
+              "text": "Âm /h/"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/oʊ/ chu môi → sinh /w/: go-w-out."
+        },
+        {
+          "id": "s5_t7_h18",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'do it' được chèn thêm âm gì để nối cho mượt?",
+          "tts_text": "do it",
+          "options": [
+            {
+              "id": "A",
+              "text": "Âm /w/"
+            },
+            {
+              "id": "B",
+              "text": "Âm /r/"
+            },
+            {
+              "id": "C",
+              "text": "Âm /h/"
+            },
+            {
+              "id": "D",
+              "text": "Âm /j/ (y)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/uː/ chu môi → sinh /w/: do-w-it."
+        },
+        {
+          "id": "s5_t7_h19",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'you are' được chèn thêm âm gì để nối cho mượt?",
+          "tts_text": "you are",
+          "options": [
+            {
+              "id": "A",
+              "text": "Âm /j/ (y)"
+            },
+            {
+              "id": "B",
+              "text": "Âm /r/"
+            },
+            {
+              "id": "C",
+              "text": "Âm /w/"
+            },
+            {
+              "id": "D",
+              "text": "Âm /h/"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "/uː/ chu môi → sinh /w/: you-w-are."
+        },
+        {
+          "id": "s5_t7_h20",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'how is' được chèn thêm âm gì để nối cho mượt?",
+          "tts_text": "how is",
+          "options": [
+            {
+              "id": "A",
+              "text": "Âm /w/"
+            },
+            {
+              "id": "B",
+              "text": "Âm /r/"
+            },
+            {
+              "id": "C",
+              "text": "Âm /h/"
+            },
+            {
+              "id": "D",
+              "text": "Âm /j/ (y)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/aʊ/ chu môi → sinh /w/: how-w-is."
+        },
+        {
+          "id": "s5_t7_h21",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'now and then' được chèn thêm âm gì để nối cho mượt?",
+          "tts_text": "now and then",
+          "options": [
+            {
+              "id": "A",
+              "text": "Âm /j/ (y)"
+            },
+            {
+              "id": "B",
+              "text": "Âm /r/"
+            },
+            {
+              "id": "C",
+              "text": "Âm /h/"
+            },
+            {
+              "id": "D",
+              "text": "Âm /w/"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "/aʊ/ chu môi → sinh /w/: now-w-and."
+        },
+        {
+          "id": "s5_t7_h22",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'too easy' được chèn thêm âm gì để nối cho mượt?",
+          "tts_text": "too easy",
+          "options": [
+            {
+              "id": "A",
+              "text": "Âm /w/"
+            },
+            {
+              "id": "B",
+              "text": "Âm /r/"
+            },
+            {
+              "id": "C",
+              "text": "Âm /h/"
+            },
+            {
+              "id": "D",
+              "text": "Âm /j/ (y)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/uː/ chu môi → sinh /w/: too-w-easy."
+        },
+        {
+          "id": "s5_t7_h23",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'so it is' được chèn thêm âm gì để nối cho mượt?",
+          "tts_text": "so it is",
+          "options": [
+            {
+              "id": "A",
+              "text": "Âm /w/"
+            },
+            {
+              "id": "B",
+              "text": "Âm /j/ (y)"
+            },
+            {
+              "id": "C",
+              "text": "Âm /r/"
+            },
+            {
+              "id": "D",
+              "text": "Âm /h/"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/oʊ/ chu môi → sinh /w/: so-w-it."
+        },
+        {
+          "id": "s5_t7_h24",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'I am' được chèn thêm âm gì để nối cho mượt?",
+          "tts_text": "I am",
+          "options": [
+            {
+              "id": "A",
+              "text": "Âm /h/"
+            },
+            {
+              "id": "B",
+              "text": "Âm /w/"
+            },
+            {
+              "id": "C",
+              "text": "Âm /r/"
+            },
+            {
+              "id": "D",
+              "text": "Âm /j/ (y)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "/aɪ/ lưỡi cao → sinh /j/: I-y-am."
+        },
+        {
+          "id": "s5_t7_h25",
+          "type": "multiple_choice",
+          "instruction": "Cụm 'my own' được chèn thêm âm gì để nối cho mượt?",
+          "tts_text": "my own",
+          "options": [
+            {
+              "id": "A",
+              "text": "Âm /h/"
+            },
+            {
+              "id": "B",
+              "text": "Âm /w/"
+            },
+            {
+              "id": "C",
+              "text": "Âm /j/ (y)"
+            },
+            {
+              "id": "D",
+              "text": "Âm /r/"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "/aɪ/ lưỡi cao → sinh /j/: my-y-own."
+        }
+      ]
+    }
+  ]
+}

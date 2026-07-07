@@ -7,7 +7,8 @@ import { SPEAKING_P2_SKILLS } from "@/lib/subskills/speaking-part2";
 
 export const metadata: Metadata = { title: "Speaking — Subskills TOEIC" };
 
-const TESTS_PER_SKILL = 5;
+const P1_TESTS_PER_SKILL = 20;
+const P2_TESTS_PER_SKILL = 5;
 
 export default async function SpeakingPage() {
   const supabase = await createClient();
@@ -59,7 +60,7 @@ export default async function SpeakingPage() {
     ? Math.round(Math.max(...recordingRows.map((r) => r.overall_score)))
     : null;
 
-  const totalTests = SPEAKING_SKILLS.length * TESTS_PER_SKILL; // 25
+  const totalTests = SPEAKING_SKILLS.length * P1_TESTS_PER_SKILL; // 100
 
   type PartConfig = {
     part: number;
@@ -81,7 +82,7 @@ export default async function SpeakingPage() {
       description: "Luyện 5 kỹ năng nền tảng: phát âm, ngắt nghỉ, ngữ điệu, trọng âm câu, nối âm. Mỗi kỹ năng có 5 bộ test × 3 cấp độ.",
       href: "/subskills/speaking/part1",
       active: true,
-      detail: `5 kỹ năng · ${TESTS_PER_SKILL} bộ test/kỹ năng · 3 cấp độ`,
+      detail: `5 kỹ năng · ${P1_TESTS_PER_SKILL} bộ test/kỹ năng · 3 cấp độ`,
       skillsDone: p1SkillsDone,
       totalSkills: SPEAKING_SKILLS.length,
       testsPassed: p1TestsPassed,
@@ -93,11 +94,11 @@ export default async function SpeakingPage() {
       description: "Quan sát ảnh và mô tả chi tiết trong 45 giây. Luyện cấu trúc câu, từ vựng mô tả.",
       href: "/subskills/speaking/part2",
       active: true,
-      detail: `5 kỹ năng · ${TESTS_PER_SKILL} bộ test/kỹ năng · 3 cấp độ`,
+      detail: `5 kỹ năng · ${P2_TESTS_PER_SKILL} bộ test/kỹ năng · 3 cấp độ`,
       skillsDone: p2SkillsDone,
       totalSkills: SPEAKING_P2_SKILLS.length,
       testsPassed: p2TestsPassed,
-      totalTestsAll: SPEAKING_P2_SKILLS.length * TESTS_PER_SKILL,
+      totalTestsAll: SPEAKING_P2_SKILLS.length * P2_TESTS_PER_SKILL,
     },
     {
       part: 3,

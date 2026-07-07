@@ -1,0 +1,2125 @@
+{
+  "course": "TOEIC Speaking Part 1",
+  "skill": {
+    "id": "skill_2",
+    "name": "Kỹ năng Ngắt nghỉ (Chunking & Pausing)",
+    "description": "75 bài tập tập trung vào kỹ năng ngắt nghỉ cụm ý nghĩa (Chunking), chia làm 3 mức độ (mỗi mức 25 câu), trộn lẫn Trắc nghiệm 4 lựa chọn và Tự luận chèn dấu gạch chéo (/)."
+  },
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "s2_t7_e1",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "Please wait in the lobby.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Please / wait in the lobby."
+            },
+            {
+              "id": "B",
+              "text": "Please wait in / the lobby."
+            },
+            {
+              "id": "C",
+              "text": "Please wait in the / lobby."
+            },
+            {
+              "id": "D",
+              "text": "Please wait / in the lobby."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Ngắt trước cụm giới từ chỉ địa điểm."
+        },
+        {
+          "id": "s2_t7_e2",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "Thanks for calling our customer service.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Thanks for / calling our customer service."
+            },
+            {
+              "id": "B",
+              "text": "Thanks for calling / our customer service."
+            },
+            {
+              "id": "C",
+              "text": "Thanks / for calling our customer service."
+            },
+            {
+              "id": "D",
+              "text": "Thanks for calling our / customer service."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Ngắt trước cụm danh từ làm tân ngữ."
+        },
+        {
+          "id": "s2_t7_e3",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "If you need help, please call us.",
+          "options": [
+            {
+              "id": "A",
+              "text": "If / you need help, please call us."
+            },
+            {
+              "id": "B",
+              "text": "If you need help, / please call us."
+            },
+            {
+              "id": "C",
+              "text": "If you need help, please call / us."
+            },
+            {
+              "id": "D",
+              "text": "If you / need help, please call us."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Ngắt giữa mệnh đề điều kiện và mệnh đề chính."
+        },
+        {
+          "id": "s2_t7_e4",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The meeting starts at nine.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The meeting starts at / nine."
+            },
+            {
+              "id": "B",
+              "text": "The meeting / starts at nine."
+            },
+            {
+              "id": "C",
+              "text": "The / meeting starts at nine."
+            },
+            {
+              "id": "D",
+              "text": "The meeting starts / at nine."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Ngắt trước cụm giới từ chỉ thời gian."
+        },
+        {
+          "id": "s2_t7_e5",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "We are closed on weekends.",
+          "options": [
+            {
+              "id": "A",
+              "text": "We are closed on / weekends."
+            },
+            {
+              "id": "B",
+              "text": "We / are closed on weekends."
+            },
+            {
+              "id": "C",
+              "text": "We are closed / on weekends."
+            },
+            {
+              "id": "D",
+              "text": "We are / closed on weekends."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Ngắt trước cụm giới từ."
+        },
+        {
+          "id": "s2_t7_e6",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "Please turn off your phone.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Please turn off / your phone."
+            },
+            {
+              "id": "B",
+              "text": "Please / turn off your phone."
+            },
+            {
+              "id": "C",
+              "text": "Please turn off your / phone."
+            },
+            {
+              "id": "D",
+              "text": "Please turn / off your phone."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt trước cụm tân ngữ."
+        },
+        {
+          "id": "s2_t7_e7",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The train arrives in ten minutes.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The / train arrives in ten minutes."
+            },
+            {
+              "id": "B",
+              "text": "The train arrives in ten / minutes."
+            },
+            {
+              "id": "C",
+              "text": "The train / arrives in ten minutes."
+            },
+            {
+              "id": "D",
+              "text": "The train arrives / in ten minutes."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Ngắt trước cụm giới từ chỉ thời gian."
+        },
+        {
+          "id": "s2_t7_e8",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "I would like a coffee, please.",
+          "options": [
+            {
+              "id": "A",
+              "text": "I would like a coffee, / please."
+            },
+            {
+              "id": "B",
+              "text": "I would / like a coffee, please."
+            },
+            {
+              "id": "C",
+              "text": "I / would like a coffee, please."
+            },
+            {
+              "id": "D",
+              "text": "I would like / a coffee, please."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt trước từ lịch sự cuối câu."
+        },
+        {
+          "id": "s2_t7_e9",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "Our office is on the third floor.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Our / office is on the third floor."
+            },
+            {
+              "id": "B",
+              "text": "Our office / is on the third floor."
+            },
+            {
+              "id": "C",
+              "text": "Our office is on / the third floor."
+            },
+            {
+              "id": "D",
+              "text": "Our office is / on the third floor."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Ngắt trước cụm giới từ chỉ vị trí."
+        },
+        {
+          "id": "s2_t7_e10",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "Please sign at the bottom.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Please sign at the / bottom."
+            },
+            {
+              "id": "B",
+              "text": "Please / sign at the bottom."
+            },
+            {
+              "id": "C",
+              "text": "Please sign at / the bottom."
+            },
+            {
+              "id": "D",
+              "text": "Please sign / at the bottom."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Ngắt trước cụm giới từ."
+        },
+        {
+          "id": "s2_t7_e11",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The store opens at eight.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The store opens / at eight."
+            },
+            {
+              "id": "B",
+              "text": "The / store opens at eight."
+            },
+            {
+              "id": "C",
+              "text": "The store / opens at eight."
+            },
+            {
+              "id": "D",
+              "text": "The store opens at / eight."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt trước cụm giới từ thời gian."
+        },
+        {
+          "id": "s2_t7_e12",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "Thank you for your patience.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Thank you / for your patience."
+            },
+            {
+              "id": "B",
+              "text": "Thank you for / your patience."
+            },
+            {
+              "id": "C",
+              "text": "Thank you for your / patience."
+            },
+            {
+              "id": "D",
+              "text": "Thank / you for your patience."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt trước cụm danh từ."
+        },
+        {
+          "id": "s2_t7_e13",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "We offer free delivery.",
+          "options": [
+            {
+              "id": "A",
+              "text": "We offer / free delivery."
+            },
+            {
+              "id": "B",
+              "text": "We offer free delivery."
+            },
+            {
+              "id": "C",
+              "text": "We / offer free delivery."
+            },
+            {
+              "id": "D",
+              "text": "We offer free / delivery."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt trước cụm tân ngữ."
+        },
+        {
+          "id": "s2_t7_e14",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The manager is in a meeting.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The manager is in / a meeting."
+            },
+            {
+              "id": "B",
+              "text": "The manager / is in a meeting."
+            },
+            {
+              "id": "C",
+              "text": "The / manager is in a meeting."
+            },
+            {
+              "id": "D",
+              "text": "The manager is / in a meeting."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Ngắt trước cụm giới từ."
+        },
+        {
+          "id": "s2_t7_e15",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "Please leave a message.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Please leave a message."
+            },
+            {
+              "id": "B",
+              "text": "Please leave a / message."
+            },
+            {
+              "id": "C",
+              "text": "Please / leave a message."
+            },
+            {
+              "id": "D",
+              "text": "Please leave / a message."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Ngắt trước cụm tân ngữ."
+        },
+        {
+          "id": "s2_t7_e16",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The elevator is out of order.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The elevator is out / of order."
+            },
+            {
+              "id": "B",
+              "text": "The elevator is / out of order."
+            },
+            {
+              "id": "C",
+              "text": "The elevator / is out of order."
+            },
+            {
+              "id": "D",
+              "text": "The / elevator is out of order."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Ngắt trước cụm bổ ngữ."
+        },
+        {
+          "id": "s2_t7_e17",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "We accept all major cards.",
+          "options": [
+            {
+              "id": "A",
+              "text": "We accept all major / cards."
+            },
+            {
+              "id": "B",
+              "text": "We accept all / major cards."
+            },
+            {
+              "id": "C",
+              "text": "We accept / all major cards."
+            },
+            {
+              "id": "D",
+              "text": "We / accept all major cards."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Ngắt trước cụm tân ngữ."
+        },
+        {
+          "id": "s2_t7_e18",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "Your table is ready now.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Your / table is ready now."
+            },
+            {
+              "id": "B",
+              "text": "Your table is ready / now."
+            },
+            {
+              "id": "C",
+              "text": "Your table is / ready now."
+            },
+            {
+              "id": "D",
+              "text": "Your table / is ready now."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Ngắt trước phần vị ngữ mở rộng."
+        },
+        {
+          "id": "s2_t7_e19",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "Please fasten your seatbelt.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Please fasten / your seatbelt."
+            },
+            {
+              "id": "B",
+              "text": "Please fasten your / seatbelt."
+            },
+            {
+              "id": "C",
+              "text": "Please fasten your seatbelt."
+            },
+            {
+              "id": "D",
+              "text": "Please / fasten your seatbelt."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt trước cụm tân ngữ."
+        },
+        {
+          "id": "s2_t7_e20",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The library closes at six.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The library closes at / six."
+            },
+            {
+              "id": "B",
+              "text": "The library / closes at six."
+            },
+            {
+              "id": "C",
+              "text": "The / library closes at six."
+            },
+            {
+              "id": "D",
+              "text": "The library closes / at six."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Ngắt trước cụm giới từ thời gian."
+        },
+        {
+          "id": "s2_t7_e21",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "We hope to see you soon.",
+          "options": [
+            {
+              "id": "A",
+              "text": "We hope to / see you soon."
+            },
+            {
+              "id": "B",
+              "text": "We / hope to see you soon."
+            },
+            {
+              "id": "C",
+              "text": "We hope to see you / soon."
+            },
+            {
+              "id": "D",
+              "text": "We hope to see / you soon."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Ngắt trước trạng ngữ cuối câu."
+        },
+        {
+          "id": "s2_t7_e22",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The package will arrive tomorrow.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The package / will arrive tomorrow."
+            },
+            {
+              "id": "B",
+              "text": "The package will arrive / tomorrow."
+            },
+            {
+              "id": "C",
+              "text": "The / package will arrive tomorrow."
+            },
+            {
+              "id": "D",
+              "text": "The package will / arrive tomorrow."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Ngắt trước phần vị ngữ."
+        },
+        {
+          "id": "s2_t7_e23",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "Please check your email regularly.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Please / check your email regularly."
+            },
+            {
+              "id": "B",
+              "text": "Please check your email / regularly."
+            },
+            {
+              "id": "C",
+              "text": "Please check your / email regularly."
+            },
+            {
+              "id": "D",
+              "text": "Please check / your email regularly."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Ngắt trước cụm tân ngữ."
+        },
+        {
+          "id": "s2_t7_e24",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The results are quite impressive.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The results are / quite impressive."
+            },
+            {
+              "id": "B",
+              "text": "The / results are quite impressive."
+            },
+            {
+              "id": "C",
+              "text": "The results are quite / impressive."
+            },
+            {
+              "id": "D",
+              "text": "The results / are quite impressive."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt trước phần bổ ngữ."
+        },
+        {
+          "id": "s2_t7_e25",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "We value your feedback greatly.",
+          "options": [
+            {
+              "id": "A",
+              "text": "We value your / feedback greatly."
+            },
+            {
+              "id": "B",
+              "text": "We value your feedback / greatly."
+            },
+            {
+              "id": "C",
+              "text": "We value / your feedback greatly."
+            },
+            {
+              "id": "D",
+              "text": "We / value your feedback greatly."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Ngắt trước cụm tân ngữ."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "s2_t7_m1",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The report that you requested is on your desk.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The report that you requested is / on your desk."
+            },
+            {
+              "id": "B",
+              "text": "The report that you requested is on your / desk."
+            },
+            {
+              "id": "C",
+              "text": "The report that you / requested is on your desk."
+            },
+            {
+              "id": "D",
+              "text": "The report / that you requested is on your desk."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt sau mệnh đề quan hệ, trước động từ chính."
+        },
+        {
+          "id": "s2_t7_m2",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "We offer discounts to all our loyal customers.",
+          "options": [
+            {
+              "id": "A",
+              "text": "We offer discounts to all our / loyal customers."
+            },
+            {
+              "id": "B",
+              "text": "We offer discounts / to all our loyal customers."
+            },
+            {
+              "id": "C",
+              "text": "We offer discounts to all our loyal / customers."
+            },
+            {
+              "id": "D",
+              "text": "We offer discounts to all / our loyal customers."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Ngắt trước cụm giới từ dài."
+        },
+        {
+          "id": "s2_t7_m3",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The new employees will start their training next week.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The new employees will start / their training next week."
+            },
+            {
+              "id": "B",
+              "text": "The new employees will start their training / next week."
+            },
+            {
+              "id": "C",
+              "text": "The new / employees will start their training next week."
+            },
+            {
+              "id": "D",
+              "text": "The new employees will start their / training next week."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Ngắt sau tân ngữ, trước trạng ngữ thời gian."
+        },
+        {
+          "id": "s2_t7_m4",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "Everyone who attended the seminar received a certificate.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Everyone / who attended the seminar received a certificate."
+            },
+            {
+              "id": "B",
+              "text": "Everyone who attended the seminar / received a certificate."
+            },
+            {
+              "id": "C",
+              "text": "Everyone who attended the / seminar received a certificate."
+            },
+            {
+              "id": "D",
+              "text": "Everyone who attended / the seminar received a certificate."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Ngắt sau mệnh đề quan hệ."
+        },
+        {
+          "id": "s2_t7_m5",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The company announced a new policy this morning.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The company announced a new policy this / morning."
+            },
+            {
+              "id": "B",
+              "text": "The company announced a new / policy this morning."
+            },
+            {
+              "id": "C",
+              "text": "The company announced a / new policy this morning."
+            },
+            {
+              "id": "D",
+              "text": "The company announced a new policy / this morning."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Ngắt sau tân ngữ, trước trạng ngữ."
+        },
+        {
+          "id": "s2_t7_m6",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "Our team is working hard to meet the deadline.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Our team / is working hard to meet the deadline."
+            },
+            {
+              "id": "B",
+              "text": "Our / team is working hard to meet the deadline."
+            },
+            {
+              "id": "C",
+              "text": "Our team is working / hard to meet the deadline."
+            },
+            {
+              "id": "D",
+              "text": "Our team is working hard / to meet the deadline."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Ngắt trước mệnh đề chỉ mục đích (to)."
+        },
+        {
+          "id": "s2_t7_m7",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The customer asked for a full refund yesterday.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The customer asked for a full refund / yesterday."
+            },
+            {
+              "id": "B",
+              "text": "The customer asked for / a full refund yesterday."
+            },
+            {
+              "id": "C",
+              "text": "The customer asked / for a full refund yesterday."
+            },
+            {
+              "id": "D",
+              "text": "The customer asked for a full / refund yesterday."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Ngắt trước trạng ngữ thời gian."
+        },
+        {
+          "id": "s2_t7_m8",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "Please submit your application before the end of the month.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Please submit your application / before the end of the month."
+            },
+            {
+              "id": "B",
+              "text": "Please submit / your application before the end of the month."
+            },
+            {
+              "id": "C",
+              "text": "Please submit your application before the / end of the month."
+            },
+            {
+              "id": "D",
+              "text": "Please / submit your application before the end of the month."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt trước cụm giới từ thời gian."
+        },
+        {
+          "id": "s2_t7_m9",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The conference will be held in the main auditorium.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The conference will / be held in the main auditorium."
+            },
+            {
+              "id": "B",
+              "text": "The conference will be / held in the main auditorium."
+            },
+            {
+              "id": "C",
+              "text": "The conference will be held / in the main auditorium."
+            },
+            {
+              "id": "D",
+              "text": "The / conference will be held in the main auditorium."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Ngắt trước cụm giới từ chỉ nơi chốn."
+        },
+        {
+          "id": "s2_t7_m10",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "All visitors must register at the front desk.",
+          "options": [
+            {
+              "id": "A",
+              "text": "All visitors must register / at the front desk."
+            },
+            {
+              "id": "B",
+              "text": "All visitors / must register at the front desk."
+            },
+            {
+              "id": "C",
+              "text": "All visitors must / register at the front desk."
+            },
+            {
+              "id": "D",
+              "text": "All / visitors must register at the front desk."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt trước cụm giới từ chỉ nơi chốn."
+        },
+        {
+          "id": "s2_t7_m11",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The document you signed is now legally binding.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The document you signed / is now legally binding."
+            },
+            {
+              "id": "B",
+              "text": "The document you / signed is now legally binding."
+            },
+            {
+              "id": "C",
+              "text": "The / document you signed is now legally binding."
+            },
+            {
+              "id": "D",
+              "text": "The document you signed is now legally / binding."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt sau mệnh đề quan hệ rút gọn."
+        },
+        {
+          "id": "s2_t7_m12",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "We would appreciate your response as soon as possible.",
+          "options": [
+            {
+              "id": "A",
+              "text": "We / would appreciate your response as soon as possible."
+            },
+            {
+              "id": "B",
+              "text": "We would appreciate your response / as soon as possible."
+            },
+            {
+              "id": "C",
+              "text": "We would appreciate your response as soon / as possible."
+            },
+            {
+              "id": "D",
+              "text": "We would appreciate your / response as soon as possible."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Ngắt trước cụm trạng ngữ."
+        },
+        {
+          "id": "s2_t7_m13",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The technician who fixed the printer left a note.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The / technician who fixed the printer left a note."
+            },
+            {
+              "id": "B",
+              "text": "The technician who fixed the printer / left a note."
+            },
+            {
+              "id": "C",
+              "text": "The technician who fixed the printer left a / note."
+            },
+            {
+              "id": "D",
+              "text": "The technician who fixed / the printer left a note."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Ngắt sau mệnh đề quan hệ."
+        },
+        {
+          "id": "s2_t7_m14",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "Our flight was delayed because of the bad weather.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Our flight was delayed because of / the bad weather."
+            },
+            {
+              "id": "B",
+              "text": "Our flight was / delayed because of the bad weather."
+            },
+            {
+              "id": "C",
+              "text": "Our flight was delayed / because of the bad weather."
+            },
+            {
+              "id": "D",
+              "text": "Our flight was delayed because of the bad / weather."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Ngắt trước mệnh đề chỉ lý do."
+        },
+        {
+          "id": "s2_t7_m15",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The instructions are printed on the back of the box.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The / instructions are printed on the back of the box."
+            },
+            {
+              "id": "B",
+              "text": "The instructions are / printed on the back of the box."
+            },
+            {
+              "id": "C",
+              "text": "The instructions are printed on / the back of the box."
+            },
+            {
+              "id": "D",
+              "text": "The instructions are printed on the back of / the box."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Ngắt trước cụm giới từ chỉ vị trí."
+        },
+        {
+          "id": "s2_t7_m16",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "Employees are encouraged to take regular breaks.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Employees are encouraged to take regular / breaks."
+            },
+            {
+              "id": "B",
+              "text": "Employees are encouraged to / take regular breaks."
+            },
+            {
+              "id": "C",
+              "text": "Employees are encouraged / to take regular breaks."
+            },
+            {
+              "id": "D",
+              "text": "Employees / are encouraged to take regular breaks."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Ngắt trước mệnh đề bị động chỉ mục đích."
+        },
+        {
+          "id": "s2_t7_m17",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The proposal was approved after a long discussion.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The proposal / was approved after a long discussion."
+            },
+            {
+              "id": "B",
+              "text": "The proposal was approved after a / long discussion."
+            },
+            {
+              "id": "C",
+              "text": "The proposal was approved / after a long discussion."
+            },
+            {
+              "id": "D",
+              "text": "The proposal was / approved after a long discussion."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Ngắt trước cụm giới từ thời gian."
+        },
+        {
+          "id": "s2_t7_m18",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "She reviewed the contract before signing it.",
+          "options": [
+            {
+              "id": "A",
+              "text": "She reviewed the contract / before signing it."
+            },
+            {
+              "id": "B",
+              "text": "She reviewed the contract before / signing it."
+            },
+            {
+              "id": "C",
+              "text": "She reviewed the / contract before signing it."
+            },
+            {
+              "id": "D",
+              "text": "She reviewed / the contract before signing it."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt trước mệnh đề thời gian."
+        },
+        {
+          "id": "s2_t7_m19",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The hotel provides free breakfast for all guests.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The hotel provides free breakfast for / all guests."
+            },
+            {
+              "id": "B",
+              "text": "The hotel provides free breakfast for all / guests."
+            },
+            {
+              "id": "C",
+              "text": "The hotel provides free breakfast / for all guests."
+            },
+            {
+              "id": "D",
+              "text": "The hotel provides free / breakfast for all guests."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Ngắt trước cụm giới từ."
+        },
+        {
+          "id": "s2_t7_m20",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "We need to increase sales in the next quarter.",
+          "options": [
+            {
+              "id": "A",
+              "text": "We need to increase sales / in the next quarter."
+            },
+            {
+              "id": "B",
+              "text": "We need to increase sales in / the next quarter."
+            },
+            {
+              "id": "C",
+              "text": "We need / to increase sales in the next quarter."
+            },
+            {
+              "id": "D",
+              "text": "We need to / increase sales in the next quarter."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt trước cụm giới từ thời gian."
+        },
+        {
+          "id": "s2_t7_m21",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The speaker thanked the audience for their attention.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The speaker thanked the audience / for their attention."
+            },
+            {
+              "id": "B",
+              "text": "The / speaker thanked the audience for their attention."
+            },
+            {
+              "id": "C",
+              "text": "The speaker thanked the / audience for their attention."
+            },
+            {
+              "id": "D",
+              "text": "The speaker / thanked the audience for their attention."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Ngắt trước cụm giới từ."
+        },
+        {
+          "id": "s2_t7_m22",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "Customers who spend over fifty dollars get free shipping.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Customers who spend over fifty dollars / get free shipping."
+            },
+            {
+              "id": "B",
+              "text": "Customers who spend over / fifty dollars get free shipping."
+            },
+            {
+              "id": "C",
+              "text": "Customers who / spend over fifty dollars get free shipping."
+            },
+            {
+              "id": "D",
+              "text": "Customers who spend over fifty dollars get / free shipping."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Ngắt sau mệnh đề quan hệ."
+        },
+        {
+          "id": "s2_t7_m23",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The factory produces thousands of units every day.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The factory produces thousands of / units every day."
+            },
+            {
+              "id": "B",
+              "text": "The factory produces thousands / of units every day."
+            },
+            {
+              "id": "C",
+              "text": "The factory produces thousands of units / every day."
+            },
+            {
+              "id": "D",
+              "text": "The factory produces thousands of units every / day."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt trước trạng ngữ thời gian."
+        },
+        {
+          "id": "s2_t7_m24",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "Our records show that the payment was received.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Our records show that / the payment was received."
+            },
+            {
+              "id": "B",
+              "text": "Our records show that the payment was / received."
+            },
+            {
+              "id": "C",
+              "text": "Our records show that the / payment was received."
+            },
+            {
+              "id": "D",
+              "text": "Our records / show that the payment was received."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt trước mệnh đề tân ngữ (that)."
+        },
+        {
+          "id": "s2_t7_m25",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất.",
+          "tts_text": "The workshop will cover several important topics.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The workshop will cover / several important topics."
+            },
+            {
+              "id": "B",
+              "text": "The workshop will cover several important / topics."
+            },
+            {
+              "id": "C",
+              "text": "The / workshop will cover several important topics."
+            },
+            {
+              "id": "D",
+              "text": "The workshop will / cover several important topics."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt trước cụm tân ngữ."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "s2_t7_h1",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "Welcome to the grand opening of our new branch in downtown Seattle.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Welcome to the grand / opening of our new branch in downtown Seattle."
+            },
+            {
+              "id": "B",
+              "text": "Welcome to the grand opening / of our new branch in downtown Seattle."
+            },
+            {
+              "id": "C",
+              "text": "Welcome to the grand opening of our new branch in downtown / Seattle."
+            },
+            {
+              "id": "D",
+              "text": "Welcome to / the grand opening of our new branch in downtown Seattle."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Ngắt trước cụm giới từ 'of'."
+        },
+        {
+          "id": "s2_t7_h2",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "Passengers traveling to London should proceed to Gate 5 immediately.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Passengers traveling / to London should proceed to Gate 5 immediately."
+            },
+            {
+              "id": "B",
+              "text": "Passengers / traveling to London should proceed to Gate 5 immediately."
+            },
+            {
+              "id": "C",
+              "text": "Passengers traveling to London should / proceed to Gate 5 immediately."
+            },
+            {
+              "id": "D",
+              "text": "Passengers traveling to / London should proceed to Gate 5 immediately."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Ngắt sau chủ ngữ lớn, trước động từ."
+        },
+        {
+          "id": "s2_t7_h3",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "In order to complete the survey, please click the link below.",
+          "options": [
+            {
+              "id": "A",
+              "text": "In order to complete the survey, / please click the link below."
+            },
+            {
+              "id": "B",
+              "text": "In order to complete / the survey, please click the link below."
+            },
+            {
+              "id": "C",
+              "text": "In order to / complete the survey, please click the link below."
+            },
+            {
+              "id": "D",
+              "text": "In order to complete the survey, please click the link / below."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt sau mệnh đề phụ chỉ mục đích."
+        },
+        {
+          "id": "s2_t7_h4",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "Due to unforeseen circumstances, the event has been postponed.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Due to unforeseen circumstances, the event / has been postponed."
+            },
+            {
+              "id": "B",
+              "text": "Due to unforeseen circumstances, / the event has been postponed."
+            },
+            {
+              "id": "C",
+              "text": "Due / to unforeseen circumstances, the event has been postponed."
+            },
+            {
+              "id": "D",
+              "text": "Due to unforeseen circumstances, the / event has been postponed."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Ngắt sau cụm trạng ngữ mở đầu."
+        },
+        {
+          "id": "s2_t7_h5",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "The committee, after much deliberation, reached a final decision.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The committee, / after much deliberation, reached a final decision."
+            },
+            {
+              "id": "B",
+              "text": "The committee, after / much deliberation, reached a final decision."
+            },
+            {
+              "id": "C",
+              "text": "The / committee, after much deliberation, reached a final decision."
+            },
+            {
+              "id": "D",
+              "text": "The committee, after much / deliberation, reached a final decision."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Ngắt trước cụm chêm giữa hai dấu phẩy."
+        },
+        {
+          "id": "s2_t7_h6",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "Although the price is high, the quality justifies the cost.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Although the price is high, the quality justifies the / cost."
+            },
+            {
+              "id": "B",
+              "text": "Although the price is high, / the quality justifies the cost."
+            },
+            {
+              "id": "C",
+              "text": "Although the / price is high, the quality justifies the cost."
+            },
+            {
+              "id": "D",
+              "text": "Although the price is high, the / quality justifies the cost."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Ngắt sau mệnh đề nhượng bộ."
+        },
+        {
+          "id": "s2_t7_h7",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "Once the payment is confirmed, we will ship your order.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Once the payment is / confirmed, we will ship your order."
+            },
+            {
+              "id": "B",
+              "text": "Once the payment is confirmed, / we will ship your order."
+            },
+            {
+              "id": "C",
+              "text": "Once the payment is confirmed, we will ship your / order."
+            },
+            {
+              "id": "D",
+              "text": "Once the payment / is confirmed, we will ship your order."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Ngắt sau mệnh đề thời gian."
+        },
+        {
+          "id": "s2_t7_h8",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "The keynote speaker, a renowned economist, will present the findings.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The keynote speaker, / a renowned economist, will present the findings."
+            },
+            {
+              "id": "B",
+              "text": "The keynote speaker, a renowned economist, will present / the findings."
+            },
+            {
+              "id": "C",
+              "text": "The keynote speaker, a renowned economist, will / present the findings."
+            },
+            {
+              "id": "D",
+              "text": "The keynote speaker, a renowned economist, will present the / findings."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt trước cụm đồng vị ngữ."
+        },
+        {
+          "id": "s2_t7_h9",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "To ensure your safety, please read all the instructions carefully.",
+          "options": [
+            {
+              "id": "A",
+              "text": "To ensure your safety, please read all the / instructions carefully."
+            },
+            {
+              "id": "B",
+              "text": "To ensure your safety, / please read all the instructions carefully."
+            },
+            {
+              "id": "C",
+              "text": "To ensure your safety, please / read all the instructions carefully."
+            },
+            {
+              "id": "D",
+              "text": "To ensure your / safety, please read all the instructions carefully."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Ngắt sau mệnh đề mục đích mở đầu."
+        },
+        {
+          "id": "s2_t7_h10",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "Whenever you have a question, feel free to contact our support team.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Whenever you have / a question, feel free to contact our support team."
+            },
+            {
+              "id": "B",
+              "text": "Whenever you have a question, / feel free to contact our support team."
+            },
+            {
+              "id": "C",
+              "text": "Whenever you have a question, feel free to / contact our support team."
+            },
+            {
+              "id": "D",
+              "text": "Whenever you have a / question, feel free to contact our support team."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Ngắt sau mệnh đề thời gian."
+        },
+        {
+          "id": "s2_t7_h11",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "The building, which was constructed in 1920, is now a museum.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The / building, which was constructed in 1920, is now a museum."
+            },
+            {
+              "id": "B",
+              "text": "The building, which was constructed in 1920, is now a / museum."
+            },
+            {
+              "id": "C",
+              "text": "The building, which was constructed in 1920, is / now a museum."
+            },
+            {
+              "id": "D",
+              "text": "The building, which / was constructed in 1920, is now a museum."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Ngắt trước mệnh đề quan hệ không xác định."
+        },
+        {
+          "id": "s2_t7_h12",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "After reviewing your resume, we would like to invite you for an interview.",
+          "options": [
+            {
+              "id": "A",
+              "text": "After reviewing your resume, we would like to invite you for / an interview."
+            },
+            {
+              "id": "B",
+              "text": "After reviewing your resume, / we would like to invite you for an interview."
+            },
+            {
+              "id": "C",
+              "text": "After / reviewing your resume, we would like to invite you for an interview."
+            },
+            {
+              "id": "D",
+              "text": "After reviewing your resume, we would like to invite / you for an interview."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Ngắt sau mệnh đề phân từ mở đầu."
+        },
+        {
+          "id": "s2_t7_h13",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "Despite the heavy rain, the outdoor concert continued as planned.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Despite the heavy rain, the outdoor concert continued / as planned."
+            },
+            {
+              "id": "B",
+              "text": "Despite the heavy rain, the / outdoor concert continued as planned."
+            },
+            {
+              "id": "C",
+              "text": "Despite the heavy rain, / the outdoor concert continued as planned."
+            },
+            {
+              "id": "D",
+              "text": "Despite the / heavy rain, the outdoor concert continued as planned."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Ngắt sau cụm giới từ nhượng bộ."
+        },
+        {
+          "id": "s2_t7_h14",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "The proposal, if approved by the board, will take effect immediately.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The proposal, if approved by the board, will take / effect immediately."
+            },
+            {
+              "id": "B",
+              "text": "The / proposal, if approved by the board, will take effect immediately."
+            },
+            {
+              "id": "C",
+              "text": "The proposal, if / approved by the board, will take effect immediately."
+            },
+            {
+              "id": "D",
+              "text": "The proposal, if approved by the / board, will take effect immediately."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Ngắt trước mệnh đề điều kiện chêm giữa."
+        },
+        {
+          "id": "s2_t7_h15",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "Before you leave the building, make sure all the lights are off.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Before you leave / the building, make sure all the lights are off."
+            },
+            {
+              "id": "B",
+              "text": "Before you / leave the building, make sure all the lights are off."
+            },
+            {
+              "id": "C",
+              "text": "Before you leave the building, make sure / all the lights are off."
+            },
+            {
+              "id": "D",
+              "text": "Before you leave the building, / make sure all the lights are off."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Ngắt sau mệnh đề thời gian mở đầu."
+        },
+        {
+          "id": "s2_t7_h16",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "Our latest product, designed for professionals, offers advanced features.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Our latest product, designed / for professionals, offers advanced features."
+            },
+            {
+              "id": "B",
+              "text": "Our latest product, designed for professionals, / offers advanced features."
+            },
+            {
+              "id": "C",
+              "text": "Our latest product, / designed for professionals, offers advanced features."
+            },
+            {
+              "id": "D",
+              "text": "Our latest product, designed for professionals, offers / advanced features."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Ngắt trước cụm phân từ chêm giữa."
+        },
+        {
+          "id": "s2_t7_h17",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "Since the market is changing rapidly, we must adapt our strategy.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Since the market is changing / rapidly, we must adapt our strategy."
+            },
+            {
+              "id": "B",
+              "text": "Since the market is changing rapidly, we must / adapt our strategy."
+            },
+            {
+              "id": "C",
+              "text": "Since the market is changing rapidly, we must adapt / our strategy."
+            },
+            {
+              "id": "D",
+              "text": "Since the market is changing rapidly, we / must adapt our strategy."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt sau mệnh đề chỉ lý do."
+        },
+        {
+          "id": "s2_t7_h18",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "The award, presented annually to top performers, recognizes excellence.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The award, presented annually to top performers, recognizes / excellence."
+            },
+            {
+              "id": "B",
+              "text": "The award, presented annually / to top performers, recognizes excellence."
+            },
+            {
+              "id": "C",
+              "text": "The award, presented / annually to top performers, recognizes excellence."
+            },
+            {
+              "id": "D",
+              "text": "The award, / presented annually to top performers, recognizes excellence."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Ngắt trước cụm phân từ chêm giữa."
+        },
+        {
+          "id": "s2_t7_h19",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "If you are not satisfied, we offer a full refund within thirty days.",
+          "options": [
+            {
+              "id": "A",
+              "text": "If you are not satisfied, we offer a full refund within thirty / days."
+            },
+            {
+              "id": "B",
+              "text": "If you are not satisfied, we offer / a full refund within thirty days."
+            },
+            {
+              "id": "C",
+              "text": "If you are not satisfied, we offer a full / refund within thirty days."
+            },
+            {
+              "id": "D",
+              "text": "If you are not satisfied, / we offer a full refund within thirty days."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Ngắt sau mệnh đề điều kiện."
+        },
+        {
+          "id": "s2_t7_h20",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "As mentioned in the previous email, the deadline has been extended.",
+          "options": [
+            {
+              "id": "A",
+              "text": "As mentioned in the previous email, / the deadline has been extended."
+            },
+            {
+              "id": "B",
+              "text": "As mentioned in the previous email, the deadline has been / extended."
+            },
+            {
+              "id": "C",
+              "text": "As mentioned in the previous email, the / deadline has been extended."
+            },
+            {
+              "id": "D",
+              "text": "As / mentioned in the previous email, the deadline has been extended."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt sau cụm trạng ngữ mở đầu."
+        },
+        {
+          "id": "s2_t7_h21",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "The new regulations, which take effect next month, affect all departments.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The new / regulations, which take effect next month, affect all departments."
+            },
+            {
+              "id": "B",
+              "text": "The new regulations, which / take effect next month, affect all departments."
+            },
+            {
+              "id": "C",
+              "text": "The new regulations, which take effect / next month, affect all departments."
+            },
+            {
+              "id": "D",
+              "text": "The new regulations, which take effect next / month, affect all departments."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Ngắt trước mệnh đề quan hệ chêm giữa."
+        },
+        {
+          "id": "s2_t7_h22",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "While we appreciate your interest, the position has already been filled.",
+          "options": [
+            {
+              "id": "A",
+              "text": "While we appreciate your interest, the position has / already been filled."
+            },
+            {
+              "id": "B",
+              "text": "While we appreciate your interest, the position has already been / filled."
+            },
+            {
+              "id": "C",
+              "text": "While we / appreciate your interest, the position has already been filled."
+            },
+            {
+              "id": "D",
+              "text": "While we appreciate your interest, / the position has already been filled."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Ngắt sau mệnh đề nhượng bộ."
+        },
+        {
+          "id": "s2_t7_h23",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "Upon arrival at the airport, please collect your baggage from carousel three.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Upon arrival at the airport, / please collect your baggage from carousel three."
+            },
+            {
+              "id": "B",
+              "text": "Upon arrival / at the airport, please collect your baggage from carousel three."
+            },
+            {
+              "id": "C",
+              "text": "Upon arrival at the airport, please collect your baggage from / carousel three."
+            },
+            {
+              "id": "D",
+              "text": "Upon arrival at the airport, please collect your baggage / from carousel three."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt sau cụm giới từ mở đầu."
+        },
+        {
+          "id": "s2_t7_h24",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "The seminar, hosted by industry experts, attracted hundreds of participants.",
+          "options": [
+            {
+              "id": "A",
+              "text": "The seminar, hosted / by industry experts, attracted hundreds of participants."
+            },
+            {
+              "id": "B",
+              "text": "The seminar, hosted by / industry experts, attracted hundreds of participants."
+            },
+            {
+              "id": "C",
+              "text": "The / seminar, hosted by industry experts, attracted hundreds of participants."
+            },
+            {
+              "id": "D",
+              "text": "The seminar, / hosted by industry experts, attracted hundreds of participants."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt trước cụm phân từ chêm giữa."
+        },
+        {
+          "id": "s2_t7_h25",
+          "type": "multiple_choice",
+          "instruction": "Chọn cách ngắt câu (/) tự nhiên nhất cho câu phức tạp.",
+          "tts_text": "Given the current situation, we recommend booking your tickets early.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Given the current situation, / we recommend booking your tickets early."
+            },
+            {
+              "id": "B",
+              "text": "Given the / current situation, we recommend booking your tickets early."
+            },
+            {
+              "id": "C",
+              "text": "Given / the current situation, we recommend booking your tickets early."
+            },
+            {
+              "id": "D",
+              "text": "Given the current situation, we recommend booking / your tickets early."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Ngắt sau cụm trạng ngữ mở đầu."
+        }
+      ]
+    }
+  ]
+}

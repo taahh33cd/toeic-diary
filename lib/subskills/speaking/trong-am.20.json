@@ -1,0 +1,2125 @@
+{
+  "course": "TOEIC Speaking Part 1",
+  "skill": {
+    "id": "skill_4",
+    "name": "Kỹ năng Trọng âm câu (Sentence Stress)",
+    "description": "75 bài tập tập trung vào việc xác định Từ Nội Dung (đọc to, rõ) và Từ Chức Năng (đọc lướt, nhỏ) trong câu."
+  },
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "s4_t20_e1",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây thường BỊ ĐỌC LƯỚT (nhỏ, nhanh)?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Trạng từ"
+            },
+            {
+              "id": "B",
+              "text": "Liên từ (and, but, or)"
+            },
+            {
+              "id": "C",
+              "text": "Động từ chính"
+            },
+            {
+              "id": "D",
+              "text": "Danh từ"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Liên từ chỉ nối câu, đọc lướt."
+        },
+        {
+          "id": "s4_t20_e2",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây cần được ĐỌC NHẤN MẠNH?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mạo từ (the)"
+            },
+            {
+              "id": "B",
+              "text": "Đại từ (it)"
+            },
+            {
+              "id": "C",
+              "text": "Danh từ (Noun)"
+            },
+            {
+              "id": "D",
+              "text": "Giới từ (in)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Danh từ mang nghĩa chính → nhấn."
+        },
+        {
+          "id": "s4_t20_e3",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây cần được ĐỌC NHẤN MẠNH?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mạo từ (the)"
+            },
+            {
+              "id": "B",
+              "text": "Liên từ (but)"
+            },
+            {
+              "id": "C",
+              "text": "Giới từ (at)"
+            },
+            {
+              "id": "D",
+              "text": "Trạng từ (Adverb)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Trạng từ bổ nghĩa → nhấn."
+        },
+        {
+          "id": "s4_t20_e4",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây cần được ĐỌC NHẤN MẠNH?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Động từ chính (Main Verb)"
+            },
+            {
+              "id": "B",
+              "text": "Giới từ (on)"
+            },
+            {
+              "id": "C",
+              "text": "Liên từ (and)"
+            },
+            {
+              "id": "D",
+              "text": "Trợ động từ (do)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Động từ chính mang nghĩa → nhấn."
+        },
+        {
+          "id": "s4_t20_e5",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây thường BỊ ĐỌC LƯỚT (nhỏ, nhanh)?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mạo từ (a, an, the)"
+            },
+            {
+              "id": "B",
+              "text": "Động từ"
+            },
+            {
+              "id": "C",
+              "text": "Danh từ"
+            },
+            {
+              "id": "D",
+              "text": "Tính từ"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Mạo từ là từ chức năng, đọc lướt."
+        },
+        {
+          "id": "s4_t20_e6",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây cần được ĐỌC NHẤN MẠNH?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tính từ (Adjective)"
+            },
+            {
+              "id": "B",
+              "text": "Giới từ (of)"
+            },
+            {
+              "id": "C",
+              "text": "Mạo từ (a)"
+            },
+            {
+              "id": "D",
+              "text": "Đại từ (he)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Tính từ miêu tả → nhấn."
+        },
+        {
+          "id": "s4_t20_e7",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây thường BỊ ĐỌC LƯỚT (nhỏ, nhanh)?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Động từ chính"
+            },
+            {
+              "id": "B",
+              "text": "Danh từ"
+            },
+            {
+              "id": "C",
+              "text": "Trợ động từ (do, does, is)"
+            },
+            {
+              "id": "D",
+              "text": "Tính từ"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Trợ động từ (khẳng định) thường đọc lướt."
+        },
+        {
+          "id": "s4_t20_e8",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây thường BỊ ĐỌC LƯỚT (nhỏ, nhanh)?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Động từ chính (Main Verb)"
+            },
+            {
+              "id": "B",
+              "text": "Danh từ (Noun)"
+            },
+            {
+              "id": "C",
+              "text": "Đại từ nhân xưng (he, she, it...)"
+            },
+            {
+              "id": "D",
+              "text": "Tính từ (Adjective)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Đại từ nhân xưng là từ chức năng, thường đọc lướt."
+        },
+        {
+          "id": "s4_t20_e9",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây cần được ĐỌC NHẤN MẠNH?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Trợ động từ phủ định (don't, can't)"
+            },
+            {
+              "id": "B",
+              "text": "Mạo từ"
+            },
+            {
+              "id": "C",
+              "text": "Trợ động từ khẳng định (do)"
+            },
+            {
+              "id": "D",
+              "text": "Giới từ"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Phủ định LUÔN được nhấn để làm rõ nghĩa."
+        },
+        {
+          "id": "s4_t20_e10",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây thường BỊ ĐỌC LƯỚT (nhỏ, nhanh)?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Giới từ (in, on, at...)"
+            },
+            {
+              "id": "B",
+              "text": "Trạng từ (Adverb)"
+            },
+            {
+              "id": "C",
+              "text": "Danh từ (Noun)"
+            },
+            {
+              "id": "D",
+              "text": "Động từ (Verb)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Giới từ là từ chức năng, đọc lướt."
+        },
+        {
+          "id": "s4_t20_e11",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây thường BỊ ĐỌC LƯỚT (nhỏ, nhanh)?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Trạng từ"
+            },
+            {
+              "id": "B",
+              "text": "Động từ chính"
+            },
+            {
+              "id": "C",
+              "text": "Danh từ"
+            },
+            {
+              "id": "D",
+              "text": "Liên từ (and, but, or)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Liên từ chỉ nối câu, đọc lướt."
+        },
+        {
+          "id": "s4_t20_e12",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây cần được ĐỌC NHẤN MẠNH?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Đại từ (it)"
+            },
+            {
+              "id": "B",
+              "text": "Danh từ (Noun)"
+            },
+            {
+              "id": "C",
+              "text": "Mạo từ (the)"
+            },
+            {
+              "id": "D",
+              "text": "Giới từ (in)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Danh từ mang nghĩa chính → nhấn."
+        },
+        {
+          "id": "s4_t20_e13",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây cần được ĐỌC NHẤN MẠNH?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mạo từ (the)"
+            },
+            {
+              "id": "B",
+              "text": "Liên từ (but)"
+            },
+            {
+              "id": "C",
+              "text": "Trạng từ (Adverb)"
+            },
+            {
+              "id": "D",
+              "text": "Giới từ (at)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Trạng từ bổ nghĩa → nhấn."
+        },
+        {
+          "id": "s4_t20_e14",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây cần được ĐỌC NHẤN MẠNH?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Giới từ (on)"
+            },
+            {
+              "id": "B",
+              "text": "Liên từ (and)"
+            },
+            {
+              "id": "C",
+              "text": "Trợ động từ (do)"
+            },
+            {
+              "id": "D",
+              "text": "Động từ chính (Main Verb)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Động từ chính mang nghĩa → nhấn."
+        },
+        {
+          "id": "s4_t20_e15",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây thường BỊ ĐỌC LƯỚT (nhỏ, nhanh)?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Tính từ"
+            },
+            {
+              "id": "B",
+              "text": "Mạo từ (a, an, the)"
+            },
+            {
+              "id": "C",
+              "text": "Danh từ"
+            },
+            {
+              "id": "D",
+              "text": "Động từ"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Mạo từ là từ chức năng, đọc lướt."
+        },
+        {
+          "id": "s4_t20_e16",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây cần được ĐỌC NHẤN MẠNH?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Đại từ (he)"
+            },
+            {
+              "id": "B",
+              "text": "Giới từ (of)"
+            },
+            {
+              "id": "C",
+              "text": "Mạo từ (a)"
+            },
+            {
+              "id": "D",
+              "text": "Tính từ (Adjective)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Tính từ miêu tả → nhấn."
+        },
+        {
+          "id": "s4_t20_e17",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây thường BỊ ĐỌC LƯỚT (nhỏ, nhanh)?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Động từ chính"
+            },
+            {
+              "id": "B",
+              "text": "Tính từ"
+            },
+            {
+              "id": "C",
+              "text": "Trợ động từ (do, does, is)"
+            },
+            {
+              "id": "D",
+              "text": "Danh từ"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Trợ động từ (khẳng định) thường đọc lướt."
+        },
+        {
+          "id": "s4_t20_e18",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây thường BỊ ĐỌC LƯỚT (nhỏ, nhanh)?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Động từ chính (Main Verb)"
+            },
+            {
+              "id": "B",
+              "text": "Tính từ (Adjective)"
+            },
+            {
+              "id": "C",
+              "text": "Đại từ nhân xưng (he, she, it...)"
+            },
+            {
+              "id": "D",
+              "text": "Danh từ (Noun)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Đại từ nhân xưng là từ chức năng, thường đọc lướt."
+        },
+        {
+          "id": "s4_t20_e19",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây cần được ĐỌC NHẤN MẠNH?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mạo từ"
+            },
+            {
+              "id": "B",
+              "text": "Trợ động từ khẳng định (do)"
+            },
+            {
+              "id": "C",
+              "text": "Trợ động từ phủ định (don't, can't)"
+            },
+            {
+              "id": "D",
+              "text": "Giới từ"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Phủ định LUÔN được nhấn để làm rõ nghĩa."
+        },
+        {
+          "id": "s4_t20_e20",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây thường BỊ ĐỌC LƯỚT (nhỏ, nhanh)?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Trạng từ (Adverb)"
+            },
+            {
+              "id": "B",
+              "text": "Giới từ (in, on, at...)"
+            },
+            {
+              "id": "C",
+              "text": "Danh từ (Noun)"
+            },
+            {
+              "id": "D",
+              "text": "Động từ (Verb)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Giới từ là từ chức năng, đọc lướt."
+        },
+        {
+          "id": "s4_t20_e21",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây thường BỊ ĐỌC LƯỚT (nhỏ, nhanh)?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Động từ chính"
+            },
+            {
+              "id": "B",
+              "text": "Liên từ (and, but, or)"
+            },
+            {
+              "id": "C",
+              "text": "Danh từ"
+            },
+            {
+              "id": "D",
+              "text": "Trạng từ"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Liên từ chỉ nối câu, đọc lướt."
+        },
+        {
+          "id": "s4_t20_e22",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây cần được ĐỌC NHẤN MẠNH?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Danh từ (Noun)"
+            },
+            {
+              "id": "B",
+              "text": "Mạo từ (the)"
+            },
+            {
+              "id": "C",
+              "text": "Đại từ (it)"
+            },
+            {
+              "id": "D",
+              "text": "Giới từ (in)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Danh từ mang nghĩa chính → nhấn."
+        },
+        {
+          "id": "s4_t20_e23",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây cần được ĐỌC NHẤN MẠNH?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Liên từ (but)"
+            },
+            {
+              "id": "B",
+              "text": "Trạng từ (Adverb)"
+            },
+            {
+              "id": "C",
+              "text": "Mạo từ (the)"
+            },
+            {
+              "id": "D",
+              "text": "Giới từ (at)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Trạng từ bổ nghĩa → nhấn."
+        },
+        {
+          "id": "s4_t20_e24",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây cần được ĐỌC NHẤN MẠNH?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Liên từ (and)"
+            },
+            {
+              "id": "B",
+              "text": "Động từ chính (Main Verb)"
+            },
+            {
+              "id": "C",
+              "text": "Trợ động từ (do)"
+            },
+            {
+              "id": "D",
+              "text": "Giới từ (on)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Động từ chính mang nghĩa → nhấn."
+        },
+        {
+          "id": "s4_t20_e25",
+          "type": "multiple_choice",
+          "instruction": "Loại từ nào sau đây thường BỊ ĐỌC LƯỚT (nhỏ, nhanh)?",
+          "tts_text": "",
+          "options": [
+            {
+              "id": "A",
+              "text": "Mạo từ (a, an, the)"
+            },
+            {
+              "id": "B",
+              "text": "Tính từ"
+            },
+            {
+              "id": "C",
+              "text": "Động từ"
+            },
+            {
+              "id": "D",
+              "text": "Danh từ"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Mạo từ là từ chức năng, đọc lướt."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "s4_t20_m1",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'The report is on the desk.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "The report is on the desk.",
+          "options": [
+            {
+              "id": "A",
+              "text": "report, desk"
+            },
+            {
+              "id": "B",
+              "text": "desk"
+            },
+            {
+              "id": "C",
+              "text": "report, the, desk"
+            },
+            {
+              "id": "D",
+              "text": "report"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Từ nội dung: report, desk. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m2",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'I will call you tomorrow.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "I will call you tomorrow.",
+          "options": [
+            {
+              "id": "A",
+              "text": "call, the, tomorrow"
+            },
+            {
+              "id": "B",
+              "text": "tomorrow"
+            },
+            {
+              "id": "C",
+              "text": "call, tomorrow"
+            },
+            {
+              "id": "D",
+              "text": "call"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Từ nội dung: call, tomorrow. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m3",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'She doesn't like coffee.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "She doesn't like coffee.",
+          "options": [
+            {
+              "id": "A",
+              "text": "doesn't, the, coffee"
+            },
+            {
+              "id": "B",
+              "text": "doesn't, like"
+            },
+            {
+              "id": "C",
+              "text": "like, coffee"
+            },
+            {
+              "id": "D",
+              "text": "doesn't, like, coffee"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Từ nội dung: doesn't, like, coffee. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m4",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'We need more time.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "We need more time.",
+          "options": [
+            {
+              "id": "A",
+              "text": "need, more, time"
+            },
+            {
+              "id": "B",
+              "text": "need, more"
+            },
+            {
+              "id": "C",
+              "text": "need, the, time"
+            },
+            {
+              "id": "D",
+              "text": "more, time"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Từ nội dung: need, more, time. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m5",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'The manager wants the report.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "The manager wants the report.",
+          "options": [
+            {
+              "id": "A",
+              "text": "wants, report"
+            },
+            {
+              "id": "B",
+              "text": "manager, wants"
+            },
+            {
+              "id": "C",
+              "text": "manager, wants, report"
+            },
+            {
+              "id": "D",
+              "text": "manager, the, report"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Từ nội dung: manager, wants, report. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m6",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'They bought a new car.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "They bought a new car.",
+          "options": [
+            {
+              "id": "A",
+              "text": "new, car"
+            },
+            {
+              "id": "B",
+              "text": "bought, the, car"
+            },
+            {
+              "id": "C",
+              "text": "bought, new, car"
+            },
+            {
+              "id": "D",
+              "text": "bought, new"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Từ nội dung: bought, new, car. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m7",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'He works in the city.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "He works in the city.",
+          "options": [
+            {
+              "id": "A",
+              "text": "works, the, city"
+            },
+            {
+              "id": "B",
+              "text": "city"
+            },
+            {
+              "id": "C",
+              "text": "works"
+            },
+            {
+              "id": "D",
+              "text": "works, city"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Từ nội dung: works, city. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m8",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'Please close the window.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "Please close the window.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Please, the, window"
+            },
+            {
+              "id": "B",
+              "text": "close, window"
+            },
+            {
+              "id": "C",
+              "text": "Please, close"
+            },
+            {
+              "id": "D",
+              "text": "Please, close, window"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Từ nội dung: Please, close, window. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m9",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'The meeting starts at noon.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "The meeting starts at noon.",
+          "options": [
+            {
+              "id": "A",
+              "text": "meeting, the, noon"
+            },
+            {
+              "id": "B",
+              "text": "meeting, starts"
+            },
+            {
+              "id": "C",
+              "text": "starts, noon"
+            },
+            {
+              "id": "D",
+              "text": "meeting, starts, noon"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Từ nội dung: meeting, starts, noon. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m10",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'I can't find my keys.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "I can't find my keys.",
+          "options": [
+            {
+              "id": "A",
+              "text": "can't, find, keys"
+            },
+            {
+              "id": "B",
+              "text": "find, keys"
+            },
+            {
+              "id": "C",
+              "text": "can't, find"
+            },
+            {
+              "id": "D",
+              "text": "can't, the, keys"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Từ nội dung: can't, find, keys. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m11",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'The train arrives at six.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "The train arrives at six.",
+          "options": [
+            {
+              "id": "A",
+              "text": "arrives, six"
+            },
+            {
+              "id": "B",
+              "text": "train, the, six"
+            },
+            {
+              "id": "C",
+              "text": "train, arrives, six"
+            },
+            {
+              "id": "D",
+              "text": "train, arrives"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Từ nội dung: train, arrives, six. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m12",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'She teaches English well.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "She teaches English well.",
+          "options": [
+            {
+              "id": "A",
+              "text": "teaches, the, well"
+            },
+            {
+              "id": "B",
+              "text": "teaches, English, well"
+            },
+            {
+              "id": "C",
+              "text": "English, well"
+            },
+            {
+              "id": "D",
+              "text": "teaches, English"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Từ nội dung: teaches, English, well. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m13",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'We finished the project early.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "We finished the project early.",
+          "options": [
+            {
+              "id": "A",
+              "text": "project, early"
+            },
+            {
+              "id": "B",
+              "text": "finished, project"
+            },
+            {
+              "id": "C",
+              "text": "finished, project, early"
+            },
+            {
+              "id": "D",
+              "text": "finished, the, early"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Từ nội dung: finished, project, early. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m14",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'The store sells fresh bread.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "The store sells fresh bread.",
+          "options": [
+            {
+              "id": "A",
+              "text": "store, the, bread"
+            },
+            {
+              "id": "B",
+              "text": "store, sells, fresh"
+            },
+            {
+              "id": "C",
+              "text": "sells, fresh, bread"
+            },
+            {
+              "id": "D",
+              "text": "store, sells, fresh, bread"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Từ nội dung: store, sells, fresh, bread. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m15",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'He never eats meat.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "He never eats meat.",
+          "options": [
+            {
+              "id": "A",
+              "text": "never, eats, meat"
+            },
+            {
+              "id": "B",
+              "text": "never, the, meat"
+            },
+            {
+              "id": "C",
+              "text": "eats, meat"
+            },
+            {
+              "id": "D",
+              "text": "never, eats"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Từ nội dung: never, eats, meat. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m16",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'They visited the museum.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "They visited the museum.",
+          "options": [
+            {
+              "id": "A",
+              "text": "visited, museum"
+            },
+            {
+              "id": "B",
+              "text": "visited"
+            },
+            {
+              "id": "C",
+              "text": "visited, the, museum"
+            },
+            {
+              "id": "D",
+              "text": "museum"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Từ nội dung: visited, museum. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m17",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'The children played outside.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "The children played outside.",
+          "options": [
+            {
+              "id": "A",
+              "text": "children, the, outside"
+            },
+            {
+              "id": "B",
+              "text": "children, played"
+            },
+            {
+              "id": "C",
+              "text": "children, played, outside"
+            },
+            {
+              "id": "D",
+              "text": "played, outside"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Từ nội dung: children, played, outside. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m18",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'I bought some flowers.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "I bought some flowers.",
+          "options": [
+            {
+              "id": "A",
+              "text": "bought, some, flowers"
+            },
+            {
+              "id": "B",
+              "text": "bought, the, flowers"
+            },
+            {
+              "id": "C",
+              "text": "some, flowers"
+            },
+            {
+              "id": "D",
+              "text": "bought, some"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Từ nội dung: bought, some, flowers. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m19",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'The doctor helped the patient.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "The doctor helped the patient.",
+          "options": [
+            {
+              "id": "A",
+              "text": "doctor, helped, patient"
+            },
+            {
+              "id": "B",
+              "text": "doctor, helped"
+            },
+            {
+              "id": "C",
+              "text": "doctor, the, patient"
+            },
+            {
+              "id": "D",
+              "text": "helped, patient"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Từ nội dung: doctor, helped, patient. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m20",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'We watched a good movie.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "We watched a good movie.",
+          "options": [
+            {
+              "id": "A",
+              "text": "watched, good"
+            },
+            {
+              "id": "B",
+              "text": "good, movie"
+            },
+            {
+              "id": "C",
+              "text": "watched, the, movie"
+            },
+            {
+              "id": "D",
+              "text": "watched, good, movie"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Từ nội dung: watched, good, movie. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m21",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'The company hired new staff.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "The company hired new staff.",
+          "options": [
+            {
+              "id": "A",
+              "text": "company, hired, new, staff"
+            },
+            {
+              "id": "B",
+              "text": "company, the, staff"
+            },
+            {
+              "id": "C",
+              "text": "hired, new, staff"
+            },
+            {
+              "id": "D",
+              "text": "company, hired, new"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Từ nội dung: company, hired, new, staff. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m22",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'She wrote a long letter.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "She wrote a long letter.",
+          "options": [
+            {
+              "id": "A",
+              "text": "long, letter"
+            },
+            {
+              "id": "B",
+              "text": "wrote, the, letter"
+            },
+            {
+              "id": "C",
+              "text": "wrote, long, letter"
+            },
+            {
+              "id": "D",
+              "text": "wrote, long"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Từ nội dung: wrote, long, letter. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m23",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'The garden looks beautiful.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "The garden looks beautiful.",
+          "options": [
+            {
+              "id": "A",
+              "text": "garden, looks, beautiful"
+            },
+            {
+              "id": "B",
+              "text": "garden, the, beautiful"
+            },
+            {
+              "id": "C",
+              "text": "garden, looks"
+            },
+            {
+              "id": "D",
+              "text": "looks, beautiful"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Từ nội dung: garden, looks, beautiful. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m24",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'He fixed the broken chair.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "He fixed the broken chair.",
+          "options": [
+            {
+              "id": "A",
+              "text": "fixed, the, chair"
+            },
+            {
+              "id": "B",
+              "text": "fixed, broken"
+            },
+            {
+              "id": "C",
+              "text": "fixed, broken, chair"
+            },
+            {
+              "id": "D",
+              "text": "broken, chair"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Từ nội dung: fixed, broken, chair. Các từ chức năng còn lại đọc lướt."
+        },
+        {
+          "id": "s4_t20_m25",
+          "type": "multiple_choice",
+          "instruction": "Trong câu 'They ordered pizza tonight.', những từ nào CẦN NHẤN MẠNH?",
+          "tts_text": "They ordered pizza tonight.",
+          "options": [
+            {
+              "id": "A",
+              "text": "pizza, tonight"
+            },
+            {
+              "id": "B",
+              "text": "ordered, pizza"
+            },
+            {
+              "id": "C",
+              "text": "ordered, pizza, tonight"
+            },
+            {
+              "id": "D",
+              "text": "ordered, the, tonight"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Từ nội dung: ordered, pizza, tonight. Các từ chức năng còn lại đọc lướt."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "s4_t20_h1",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "The report is on the desk.",
+          "options": [
+            {
+              "id": "A",
+              "text": "the REPORT is on the DESK."
+            },
+            {
+              "id": "B",
+              "text": "THE REPORT IS ON THE DESK."
+            },
+            {
+              "id": "C",
+              "text": "THE report IS on THE desk."
+            },
+            {
+              "id": "D",
+              "text": "THE report IS ON THE desk."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Nhấn các từ nội dung: report, desk."
+        },
+        {
+          "id": "s4_t20_h2",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "I will call you tomorrow.",
+          "options": [
+            {
+              "id": "A",
+              "text": "I WILL CALL YOU TOMORROW."
+            },
+            {
+              "id": "B",
+              "text": "i will CALL you TOMORROW."
+            },
+            {
+              "id": "C",
+              "text": "I will CALL you TOMORROW."
+            },
+            {
+              "id": "D",
+              "text": "I WILL call YOU tomorrow."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Nhấn các từ nội dung: call, tomorrow."
+        },
+        {
+          "id": "s4_t20_h3",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "She doesn't like coffee.",
+          "options": [
+            {
+              "id": "A",
+              "text": "SHE DOESN'T LIKE COFFEE."
+            },
+            {
+              "id": "B",
+              "text": "she DOESN'T LIKE COFFEE."
+            },
+            {
+              "id": "C",
+              "text": "SHE doesn't LIKE coffee."
+            },
+            {
+              "id": "D",
+              "text": "SHE doesn't like coffee."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Nhấn các từ nội dung: doesn't, like, coffee."
+        },
+        {
+          "id": "s4_t20_h4",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "We need more time.",
+          "options": [
+            {
+              "id": "A",
+              "text": "we NEED MORE TIME."
+            },
+            {
+              "id": "B",
+              "text": "WE need more time."
+            },
+            {
+              "id": "C",
+              "text": "WE NEED MORE TIME."
+            },
+            {
+              "id": "D",
+              "text": "WE need MORE time."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Nhấn các từ nội dung: need, more, time."
+        },
+        {
+          "id": "s4_t20_h5",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "The manager wants the report.",
+          "options": [
+            {
+              "id": "A",
+              "text": "THE manager WANTS the REPORT."
+            },
+            {
+              "id": "B",
+              "text": "THE manager wants THE report."
+            },
+            {
+              "id": "C",
+              "text": "the MANAGER WANTS the REPORT."
+            },
+            {
+              "id": "D",
+              "text": "THE MANAGER WANTS THE REPORT."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Nhấn các từ nội dung: manager, wants, report."
+        },
+        {
+          "id": "s4_t20_h6",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "They bought a new car.",
+          "options": [
+            {
+              "id": "A",
+              "text": "THEY bought A new car."
+            },
+            {
+              "id": "B",
+              "text": "THEY bought A new CAR."
+            },
+            {
+              "id": "C",
+              "text": "they BOUGHT a NEW CAR."
+            },
+            {
+              "id": "D",
+              "text": "THEY BOUGHT A NEW CAR."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Nhấn các từ nội dung: bought, new, car."
+        },
+        {
+          "id": "s4_t20_h7",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "He works in the city.",
+          "options": [
+            {
+              "id": "A",
+              "text": "he WORKS in the CITY."
+            },
+            {
+              "id": "B",
+              "text": "HE works IN THE city."
+            },
+            {
+              "id": "C",
+              "text": "HE works IN the CITY."
+            },
+            {
+              "id": "D",
+              "text": "HE WORKS IN THE CITY."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Nhấn các từ nội dung: works, city."
+        },
+        {
+          "id": "s4_t20_h8",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "Please close the window.",
+          "options": [
+            {
+              "id": "A",
+              "text": "PLEASE CLOSE the WINDOW."
+            },
+            {
+              "id": "B",
+              "text": "PLEASE close THE window."
+            },
+            {
+              "id": "C",
+              "text": "PLEASE CLOSE THE WINDOW."
+            },
+            {
+              "id": "D",
+              "text": "please close THE window."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Nhấn các từ nội dung: Please, close, window."
+        },
+        {
+          "id": "s4_t20_h9",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "The meeting starts at noon.",
+          "options": [
+            {
+              "id": "A",
+              "text": "THE meeting STARTS at NOON."
+            },
+            {
+              "id": "B",
+              "text": "the MEETING STARTS at NOON."
+            },
+            {
+              "id": "C",
+              "text": "THE MEETING STARTS AT NOON."
+            },
+            {
+              "id": "D",
+              "text": "THE meeting starts AT noon."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Nhấn các từ nội dung: meeting, starts, noon."
+        },
+        {
+          "id": "s4_t20_h10",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "I can't find my keys.",
+          "options": [
+            {
+              "id": "A",
+              "text": "i CAN'T FIND my KEYS."
+            },
+            {
+              "id": "B",
+              "text": "I CAN'T FIND MY KEYS."
+            },
+            {
+              "id": "C",
+              "text": "I can't find MY keys."
+            },
+            {
+              "id": "D",
+              "text": "I can't FIND my KEYS."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Nhấn các từ nội dung: can't, find, keys."
+        },
+        {
+          "id": "s4_t20_h11",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "The train arrives at six.",
+          "options": [
+            {
+              "id": "A",
+              "text": "THE TRAIN ARRIVES AT SIX."
+            },
+            {
+              "id": "B",
+              "text": "THE train ARRIVES at SIX."
+            },
+            {
+              "id": "C",
+              "text": "THE train arrives AT six."
+            },
+            {
+              "id": "D",
+              "text": "the TRAIN ARRIVES at SIX."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Nhấn các từ nội dung: train, arrives, six."
+        },
+        {
+          "id": "s4_t20_h12",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "She teaches English well.",
+          "options": [
+            {
+              "id": "A",
+              "text": "she TEACHES ENGLISH WELL."
+            },
+            {
+              "id": "B",
+              "text": "SHE TEACHES ENGLISH WELL."
+            },
+            {
+              "id": "C",
+              "text": "SHE teaches ENGLISH well."
+            },
+            {
+              "id": "D",
+              "text": "SHE teaches english well."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Nhấn các từ nội dung: teaches, English, well."
+        },
+        {
+          "id": "s4_t20_h13",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "We finished the project early.",
+          "options": [
+            {
+              "id": "A",
+              "text": "WE finished THE project early."
+            },
+            {
+              "id": "B",
+              "text": "WE FINISHED THE PROJECT EARLY."
+            },
+            {
+              "id": "C",
+              "text": "we FINISHED the PROJECT EARLY."
+            },
+            {
+              "id": "D",
+              "text": "WE finished THE project EARLY."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Nhấn các từ nội dung: finished, project, early."
+        },
+        {
+          "id": "s4_t20_h14",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "The store sells fresh bread.",
+          "options": [
+            {
+              "id": "A",
+              "text": "the STORE SELLS FRESH BREAD."
+            },
+            {
+              "id": "B",
+              "text": "THE store SELLS fresh BREAD."
+            },
+            {
+              "id": "C",
+              "text": "THE store sells fresh bread."
+            },
+            {
+              "id": "D",
+              "text": "THE STORE SELLS FRESH BREAD."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Nhấn các từ nội dung: store, sells, fresh, bread."
+        },
+        {
+          "id": "s4_t20_h15",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "He never eats meat.",
+          "options": [
+            {
+              "id": "A",
+              "text": "HE never eats meat."
+            },
+            {
+              "id": "B",
+              "text": "he NEVER EATS MEAT."
+            },
+            {
+              "id": "C",
+              "text": "HE never EATS meat."
+            },
+            {
+              "id": "D",
+              "text": "HE NEVER EATS MEAT."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Nhấn các từ nội dung: never, eats, meat."
+        },
+        {
+          "id": "s4_t20_h16",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "They visited the museum.",
+          "options": [
+            {
+              "id": "A",
+              "text": "they visited THE museum."
+            },
+            {
+              "id": "B",
+              "text": "they VISITED the MUSEUM."
+            },
+            {
+              "id": "C",
+              "text": "THEY visited THE museum."
+            },
+            {
+              "id": "D",
+              "text": "THEY VISITED THE MUSEUM."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Nhấn các từ nội dung: visited, museum."
+        },
+        {
+          "id": "s4_t20_h17",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "The children played outside.",
+          "options": [
+            {
+              "id": "A",
+              "text": "THE children played outside."
+            },
+            {
+              "id": "B",
+              "text": "the CHILDREN PLAYED OUTSIDE."
+            },
+            {
+              "id": "C",
+              "text": "THE children PLAYED outside."
+            },
+            {
+              "id": "D",
+              "text": "THE CHILDREN PLAYED OUTSIDE."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Nhấn các từ nội dung: children, played, outside."
+        },
+        {
+          "id": "s4_t20_h18",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "I bought some flowers.",
+          "options": [
+            {
+              "id": "A",
+              "text": "I BOUGHT SOME FLOWERS."
+            },
+            {
+              "id": "B",
+              "text": "I bought SOME flowers."
+            },
+            {
+              "id": "C",
+              "text": "i BOUGHT SOME FLOWERS."
+            },
+            {
+              "id": "D",
+              "text": "I bought some flowers."
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Nhấn các từ nội dung: bought, some, flowers."
+        },
+        {
+          "id": "s4_t20_h19",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "The doctor helped the patient.",
+          "options": [
+            {
+              "id": "A",
+              "text": "THE doctor helped THE patient."
+            },
+            {
+              "id": "B",
+              "text": "the DOCTOR HELPED the PATIENT."
+            },
+            {
+              "id": "C",
+              "text": "THE doctor HELPED the PATIENT."
+            },
+            {
+              "id": "D",
+              "text": "THE DOCTOR HELPED THE PATIENT."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Nhấn các từ nội dung: doctor, helped, patient."
+        },
+        {
+          "id": "s4_t20_h20",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "We watched a good movie.",
+          "options": [
+            {
+              "id": "A",
+              "text": "WE watched A good MOVIE."
+            },
+            {
+              "id": "B",
+              "text": "WE WATCHED A GOOD MOVIE."
+            },
+            {
+              "id": "C",
+              "text": "WE watched A good movie."
+            },
+            {
+              "id": "D",
+              "text": "we WATCHED a GOOD MOVIE."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Nhấn các từ nội dung: watched, good, movie."
+        },
+        {
+          "id": "s4_t20_h21",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "The company hired new staff.",
+          "options": [
+            {
+              "id": "A",
+              "text": "THE company HIRED new STAFF."
+            },
+            {
+              "id": "B",
+              "text": "THE company hired new staff."
+            },
+            {
+              "id": "C",
+              "text": "THE COMPANY HIRED NEW STAFF."
+            },
+            {
+              "id": "D",
+              "text": "the COMPANY HIRED NEW STAFF."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Nhấn các từ nội dung: company, hired, new, staff."
+        },
+        {
+          "id": "s4_t20_h22",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "She wrote a long letter.",
+          "options": [
+            {
+              "id": "A",
+              "text": "SHE WROTE A LONG LETTER."
+            },
+            {
+              "id": "B",
+              "text": "SHE wrote A long LETTER."
+            },
+            {
+              "id": "C",
+              "text": "SHE wrote A long letter."
+            },
+            {
+              "id": "D",
+              "text": "she WROTE a LONG LETTER."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Nhấn các từ nội dung: wrote, long, letter."
+        },
+        {
+          "id": "s4_t20_h23",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "The garden looks beautiful.",
+          "options": [
+            {
+              "id": "A",
+              "text": "THE GARDEN LOOKS BEAUTIFUL."
+            },
+            {
+              "id": "B",
+              "text": "THE garden LOOKS beautiful."
+            },
+            {
+              "id": "C",
+              "text": "THE garden looks beautiful."
+            },
+            {
+              "id": "D",
+              "text": "the GARDEN LOOKS BEAUTIFUL."
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Nhấn các từ nội dung: garden, looks, beautiful."
+        },
+        {
+          "id": "s4_t20_h24",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "He fixed the broken chair.",
+          "options": [
+            {
+              "id": "A",
+              "text": "he FIXED the BROKEN CHAIR."
+            },
+            {
+              "id": "B",
+              "text": "HE fixed THE broken chair."
+            },
+            {
+              "id": "C",
+              "text": "HE fixed THE broken CHAIR."
+            },
+            {
+              "id": "D",
+              "text": "HE FIXED THE BROKEN CHAIR."
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Nhấn các từ nội dung: fixed, broken, chair."
+        },
+        {
+          "id": "s4_t20_h25",
+          "type": "multiple_choice",
+          "instruction": "Câu nào có nhịp điệu ĐÚNG NHẤT? (Chữ IN HOA là từ được nhấn)",
+          "tts_text": "They ordered pizza tonight.",
+          "options": [
+            {
+              "id": "A",
+              "text": "THEY ordered pizza tonight."
+            },
+            {
+              "id": "B",
+              "text": "they ORDERED PIZZA TONIGHT."
+            },
+            {
+              "id": "C",
+              "text": "THEY ordered PIZZA tonight."
+            },
+            {
+              "id": "D",
+              "text": "THEY ORDERED PIZZA TONIGHT."
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Nhấn các từ nội dung: ordered, pizza, tonight."
+        }
+      ]
+    }
+  ]
+}

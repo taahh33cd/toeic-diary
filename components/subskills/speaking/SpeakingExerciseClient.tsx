@@ -341,7 +341,7 @@ export default function SpeakingExerciseClient({
 
   useEffect(() => {
     const loaded: DraftsMap = {};
-    for (let t = 1; t <= 5; t++) {
+    for (let t = 1; t <= allTests.length; t++) {
       try {
         const raw = localStorage.getItem(`ss_sp_${skillId}_${t}`);
         if (!raw) continue;

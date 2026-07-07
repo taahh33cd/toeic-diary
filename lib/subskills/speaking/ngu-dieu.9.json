@@ -1,0 +1,2125 @@
+{
+  "course": "TOEIC Speaking Part 1",
+  "skill": {
+    "id": "skill_3",
+    "name": "Kỹ năng Ngữ điệu (Intonation)",
+    "description": "75 bài tập tập trung vào ngữ điệu Lên giọng (↗) và Xuống giọng (↘), pha trộn câu hỏi trắc nghiệm (4 đáp án) và tự luận."
+  },
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "s3_t9_e1",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu sau đây là gì?",
+          "tts_text": "Would you mind waiting?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "B",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "C",
+              "text": "Lên giọng (↗)"
+            },
+            {
+              "id": "D",
+              "text": "Giữ ngang (→)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Câu hỏi Yes/No → Lên giọng (↗) ở cuối."
+        },
+        {
+          "id": "s3_t9_e2",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu sau đây là gì?",
+          "tts_text": "Have they paid?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "B",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "C",
+              "text": "Giữ ngang (→)"
+            },
+            {
+              "id": "D",
+              "text": "Lên giọng (↗)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Câu hỏi Yes/No → Lên giọng (↗) ở cuối."
+        },
+        {
+          "id": "s3_t9_e3",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu sau đây là gì?",
+          "tts_text": "Does it work?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Lên giọng (↗)"
+            },
+            {
+              "id": "B",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "C",
+              "text": "Giữ ngang (→)"
+            },
+            {
+              "id": "D",
+              "text": "Lên rồi xuống (↗↘)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Câu hỏi Yes/No → Lên giọng (↗) ở cuối."
+        },
+        {
+          "id": "s3_t9_e4",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu sau đây là gì?",
+          "tts_text": "Are you ready?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Lên giọng (↗)"
+            },
+            {
+              "id": "B",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "C",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "D",
+              "text": "Giữ ngang (→)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Câu hỏi Yes/No → Lên giọng (↗) ở cuối."
+        },
+        {
+          "id": "s3_t9_e5",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu sau đây là gì?",
+          "tts_text": "Do you like coffee?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "B",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "C",
+              "text": "Giữ ngang (→)"
+            },
+            {
+              "id": "D",
+              "text": "Lên giọng (↗)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Câu hỏi Yes/No → Lên giọng (↗) ở cuối."
+        },
+        {
+          "id": "s3_t9_e6",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu sau đây là gì?",
+          "tts_text": "Is this seat taken?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Giữ ngang (→)"
+            },
+            {
+              "id": "B",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "C",
+              "text": "Lên giọng (↗)"
+            },
+            {
+              "id": "D",
+              "text": "Xuống giọng (↘)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Câu hỏi Yes/No → Lên giọng (↗) ở cuối."
+        },
+        {
+          "id": "s3_t9_e7",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu sau đây là gì?",
+          "tts_text": "Can you help me?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "B",
+              "text": "Lên giọng (↗)"
+            },
+            {
+              "id": "C",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "D",
+              "text": "Giữ ngang (→)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Câu hỏi Yes/No → Lên giọng (↗) ở cuối."
+        },
+        {
+          "id": "s3_t9_e8",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu sau đây là gì?",
+          "tts_text": "Have you finished?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Giữ ngang (→)"
+            },
+            {
+              "id": "B",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "C",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "D",
+              "text": "Lên giọng (↗)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Câu hỏi Yes/No → Lên giọng (↗) ở cuối."
+        },
+        {
+          "id": "s3_t9_e9",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu sau đây là gì?",
+          "tts_text": "Did you call him?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Giữ ngang (→)"
+            },
+            {
+              "id": "B",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "C",
+              "text": "Lên giọng (↗)"
+            },
+            {
+              "id": "D",
+              "text": "Lên rồi xuống (↗↘)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Câu hỏi Yes/No → Lên giọng (↗) ở cuối."
+        },
+        {
+          "id": "s3_t9_e10",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu sau đây là gì?",
+          "tts_text": "How many people came?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Lên giọng (↗)"
+            },
+            {
+              "id": "B",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "C",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "D",
+              "text": "Giữ ngang (→)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Câu hỏi Wh- → Xuống giọng (↘) ở cuối."
+        },
+        {
+          "id": "s3_t9_e11",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu sau đây là gì?",
+          "tts_text": "What is the problem?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "B",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "C",
+              "text": "Lên giọng (↗)"
+            },
+            {
+              "id": "D",
+              "text": "Giữ ngang (→)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Câu hỏi Wh- → Xuống giọng (↘) ở cuối."
+        },
+        {
+          "id": "s3_t9_e12",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu sau đây là gì?",
+          "tts_text": "Where are the documents?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "B",
+              "text": "Lên giọng (↗)"
+            },
+            {
+              "id": "C",
+              "text": "Giữ ngang (→)"
+            },
+            {
+              "id": "D",
+              "text": "Lên rồi xuống (↗↘)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Câu hỏi Wh- → Xuống giọng (↘) ở cuối."
+        },
+        {
+          "id": "s3_t9_e13",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu sau đây là gì?",
+          "tts_text": "Who wrote this report?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "B",
+              "text": "Giữ ngang (→)"
+            },
+            {
+              "id": "C",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "D",
+              "text": "Lên giọng (↗)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Câu hỏi Wh- → Xuống giọng (↘) ở cuối."
+        },
+        {
+          "id": "s3_t9_e14",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu sau đây là gì?",
+          "tts_text": "How long does it take?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "B",
+              "text": "Giữ ngang (→)"
+            },
+            {
+              "id": "C",
+              "text": "Lên giọng (↗)"
+            },
+            {
+              "id": "D",
+              "text": "Lên rồi xuống (↗↘)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Câu hỏi Wh- → Xuống giọng (↘) ở cuối."
+        },
+        {
+          "id": "s3_t9_e15",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu sau đây là gì?",
+          "tts_text": "What happened yesterday?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "B",
+              "text": "Lên giọng (↗)"
+            },
+            {
+              "id": "C",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "D",
+              "text": "Giữ ngang (→)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Câu hỏi Wh- → Xuống giọng (↘) ở cuối."
+        },
+        {
+          "id": "s3_t9_e16",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu sau đây là gì?",
+          "tts_text": "Where should I sign?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "B",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "C",
+              "text": "Giữ ngang (→)"
+            },
+            {
+              "id": "D",
+              "text": "Lên giọng (↗)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Câu hỏi Wh- → Xuống giọng (↘) ở cuối."
+        },
+        {
+          "id": "s3_t9_e17",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu sau đây là gì?",
+          "tts_text": "When is the deadline?",
+          "options": [
+            {
+              "id": "A",
+              "text": "Lên giọng (↗)"
+            },
+            {
+              "id": "B",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "C",
+              "text": "Giữ ngang (→)"
+            },
+            {
+              "id": "D",
+              "text": "Xuống giọng (↘)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Câu hỏi Wh- → Xuống giọng (↘) ở cuối."
+        },
+        {
+          "id": "s3_t9_e18",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu trần thuật/mệnh lệnh sau là gì?",
+          "tts_text": "The report is finished.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "B",
+              "text": "Giữ ngang (→)"
+            },
+            {
+              "id": "C",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "D",
+              "text": "Lên giọng (↗)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Câu trần thuật/mệnh lệnh → Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_e19",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu trần thuật/mệnh lệnh sau là gì?",
+          "tts_text": "Follow me, please.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "B",
+              "text": "Lên giọng (↗)"
+            },
+            {
+              "id": "C",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "D",
+              "text": "Giữ ngang (→)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Câu trần thuật/mệnh lệnh → Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_e20",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu trần thuật/mệnh lệnh sau là gì?",
+          "tts_text": "It costs ten dollars.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "B",
+              "text": "Giữ ngang (→)"
+            },
+            {
+              "id": "C",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "D",
+              "text": "Lên giọng (↗)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Câu trần thuật/mệnh lệnh → Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_e21",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu trần thuật/mệnh lệnh sau là gì?",
+          "tts_text": "The bus is late.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "B",
+              "text": "Lên giọng (↗)"
+            },
+            {
+              "id": "C",
+              "text": "Giữ ngang (→)"
+            },
+            {
+              "id": "D",
+              "text": "Xuống giọng (↘)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Câu trần thuật/mệnh lệnh → Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_e22",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu trần thuật/mệnh lệnh sau là gì?",
+          "tts_text": "Welcome aboard.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "B",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "C",
+              "text": "Lên giọng (↗)"
+            },
+            {
+              "id": "D",
+              "text": "Giữ ngang (→)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Câu trần thuật/mệnh lệnh → Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_e23",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu trần thuật/mệnh lệnh sau là gì?",
+          "tts_text": "Have a nice day.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "B",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "C",
+              "text": "Lên giọng (↗)"
+            },
+            {
+              "id": "D",
+              "text": "Giữ ngang (→)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Câu trần thuật/mệnh lệnh → Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_e24",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu trần thuật/mệnh lệnh sau là gì?",
+          "tts_text": "The results are good.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "B",
+              "text": "Lên giọng (↗)"
+            },
+            {
+              "id": "C",
+              "text": "Giữ ngang (→)"
+            },
+            {
+              "id": "D",
+              "text": "Lên rồi xuống (↗↘)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Câu trần thuật/mệnh lệnh → Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_e25",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu ở cuối câu trần thuật/mệnh lệnh sau là gì?",
+          "tts_text": "Sign here, please.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Giữ ngang (→)"
+            },
+            {
+              "id": "B",
+              "text": "Lên rồi xuống (↗↘)"
+            },
+            {
+              "id": "C",
+              "text": "Xuống giọng (↘)"
+            },
+            {
+              "id": "D",
+              "text": "Lên giọng (↗)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Câu trần thuật/mệnh lệnh → Xuống giọng (↘)."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "s3_t9_m1",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "We offer coffee, tea, and juice.",
+          "options": [
+            {
+              "id": "A",
+              "text": "coffee (↘), tea (↘), and juice (↘)"
+            },
+            {
+              "id": "B",
+              "text": "coffee (↗), tea (↗), and juice (↘)"
+            },
+            {
+              "id": "C",
+              "text": "coffee (↗), tea (↘), and juice (↗)"
+            },
+            {
+              "id": "D",
+              "text": "coffee (↘), tea (↗), and juice (↗)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Liệt kê: Lên giọng ở các mục đầu/giữa, Xuống giọng ở mục cuối."
+        },
+        {
+          "id": "s3_t9_m2",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "Please bring your passport, ticket, and visa.",
+          "options": [
+            {
+              "id": "A",
+              "text": "passport (↘), ticket (↗), and visa (↗)"
+            },
+            {
+              "id": "B",
+              "text": "passport (↘), ticket (↘), and visa (↘)"
+            },
+            {
+              "id": "C",
+              "text": "passport (↗), ticket (↗), and visa (↘)"
+            },
+            {
+              "id": "D",
+              "text": "passport (↗), ticket (↘), and visa (↗)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Liệt kê: Lên giọng ở các mục đầu/giữa, Xuống giọng ở mục cuối."
+        },
+        {
+          "id": "s3_t9_m3",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "The menu has soup, salad, and bread.",
+          "options": [
+            {
+              "id": "A",
+              "text": "soup (↗), salad (↗), and bread (↘)"
+            },
+            {
+              "id": "B",
+              "text": "soup (↗), salad (↘), and bread (↗)"
+            },
+            {
+              "id": "C",
+              "text": "soup (↘), salad (↗), and bread (↗)"
+            },
+            {
+              "id": "D",
+              "text": "soup (↘), salad (↘), and bread (↘)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Liệt kê: Lên giọng ở các mục đầu/giữa, Xuống giọng ở mục cuối."
+        },
+        {
+          "id": "s3_t9_m4",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "He visited Rome, Paris, and Berlin.",
+          "options": [
+            {
+              "id": "A",
+              "text": "Rome (↗), Paris (↗), and Berlin (↘)"
+            },
+            {
+              "id": "B",
+              "text": "Rome (↘), Paris (↘), and Berlin (↘)"
+            },
+            {
+              "id": "C",
+              "text": "Rome (↗), Paris (↘), and Berlin (↗)"
+            },
+            {
+              "id": "D",
+              "text": "Rome (↘), Paris (↗), and Berlin (↗)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Liệt kê: Lên giọng ở các mục đầu/giữa, Xuống giọng ở mục cuối."
+        },
+        {
+          "id": "s3_t9_m5",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "Our goals are quality, speed, and safety.",
+          "options": [
+            {
+              "id": "A",
+              "text": "quality (↘), speed (↗), and safety (↗)"
+            },
+            {
+              "id": "B",
+              "text": "quality (↗), speed (↗), and safety (↘)"
+            },
+            {
+              "id": "C",
+              "text": "quality (↘), speed (↘), and safety (↘)"
+            },
+            {
+              "id": "D",
+              "text": "quality (↗), speed (↘), and safety (↗)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Liệt kê: Lên giọng ở các mục đầu/giữa, Xuống giọng ở mục cuối."
+        },
+        {
+          "id": "s3_t9_m6",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "The box contains screws, bolts, and nails.",
+          "options": [
+            {
+              "id": "A",
+              "text": "screws (↘), bolts (↘), and nails (↘)"
+            },
+            {
+              "id": "B",
+              "text": "screws (↘), bolts (↗), and nails (↗)"
+            },
+            {
+              "id": "C",
+              "text": "screws (↗), bolts (↘), and nails (↗)"
+            },
+            {
+              "id": "D",
+              "text": "screws (↗), bolts (↗), and nails (↘)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Liệt kê: Lên giọng ở các mục đầu/giữa, Xuống giọng ở mục cuối."
+        },
+        {
+          "id": "s3_t9_m7",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "I need milk, eggs, and butter.",
+          "options": [
+            {
+              "id": "A",
+              "text": "milk (↘), eggs (↗), and butter (↗)"
+            },
+            {
+              "id": "B",
+              "text": "milk (↗), eggs (↗), and butter (↘)"
+            },
+            {
+              "id": "C",
+              "text": "milk (↗), eggs (↘), and butter (↗)"
+            },
+            {
+              "id": "D",
+              "text": "milk (↘), eggs (↘), and butter (↘)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Liệt kê: Lên giọng ở các mục đầu/giữa, Xuống giọng ở mục cuối."
+        },
+        {
+          "id": "s3_t9_m8",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "They sell shirts, pants, and shoes.",
+          "options": [
+            {
+              "id": "A",
+              "text": "shirts (↗), pants (↘), and shoes (↗)"
+            },
+            {
+              "id": "B",
+              "text": "shirts (↘), pants (↗), and shoes (↗)"
+            },
+            {
+              "id": "C",
+              "text": "shirts (↗), pants (↗), and shoes (↘)"
+            },
+            {
+              "id": "D",
+              "text": "shirts (↘), pants (↘), and shoes (↘)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Liệt kê: Lên giọng ở các mục đầu/giữa, Xuống giọng ở mục cuối."
+        },
+        {
+          "id": "s3_t9_m9",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "The course covers reading, writing, and speaking.",
+          "options": [
+            {
+              "id": "A",
+              "text": "reading (↗), writing (↘), and speaking (↗)"
+            },
+            {
+              "id": "B",
+              "text": "reading (↘), writing (↘), and speaking (↘)"
+            },
+            {
+              "id": "C",
+              "text": "reading (↗), writing (↗), and speaking (↘)"
+            },
+            {
+              "id": "D",
+              "text": "reading (↘), writing (↗), and speaking (↗)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Liệt kê: Lên giọng ở các mục đầu/giữa, Xuống giọng ở mục cuối."
+        },
+        {
+          "id": "s3_t9_m10",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "We accept cash, cards, and checks.",
+          "options": [
+            {
+              "id": "A",
+              "text": "cash (↘), cards (↘), and checks (↘)"
+            },
+            {
+              "id": "B",
+              "text": "cash (↗), cards (↗), and checks (↘)"
+            },
+            {
+              "id": "C",
+              "text": "cash (↗), cards (↘), and checks (↗)"
+            },
+            {
+              "id": "D",
+              "text": "cash (↘), cards (↗), and checks (↗)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Liệt kê: Lên giọng ở các mục đầu/giữa, Xuống giọng ở mục cuối."
+        },
+        {
+          "id": "s3_t9_m11",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "The team includes John, Mary, and Paul.",
+          "options": [
+            {
+              "id": "A",
+              "text": "John (↗), Mary (↘), and Paul (↗)"
+            },
+            {
+              "id": "B",
+              "text": "John (↘), Mary (↘), and Paul (↘)"
+            },
+            {
+              "id": "C",
+              "text": "John (↘), Mary (↗), and Paul (↗)"
+            },
+            {
+              "id": "D",
+              "text": "John (↗), Mary (↗), and Paul (↘)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Liệt kê: Lên giọng ở các mục đầu/giữa, Xuống giọng ở mục cuối."
+        },
+        {
+          "id": "s3_t9_m12",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "Please review the budget, schedule, and plan.",
+          "options": [
+            {
+              "id": "A",
+              "text": "budget (↘), schedule (↘), and plan (↘)"
+            },
+            {
+              "id": "B",
+              "text": "budget (↗), schedule (↗), and plan (↘)"
+            },
+            {
+              "id": "C",
+              "text": "budget (↗), schedule (↘), and plan (↗)"
+            },
+            {
+              "id": "D",
+              "text": "budget (↘), schedule (↗), and plan (↗)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Liệt kê: Lên giọng ở các mục đầu/giữa, Xuống giọng ở mục cuối."
+        },
+        {
+          "id": "s3_t9_m13",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "The tour visits the museum, the park, and the castle.",
+          "options": [
+            {
+              "id": "A",
+              "text": "museum (↘), park (↗), and castle (↗)"
+            },
+            {
+              "id": "B",
+              "text": "museum (↗), park (↘), and castle (↗)"
+            },
+            {
+              "id": "C",
+              "text": "museum (↘), park (↘), and castle (↘)"
+            },
+            {
+              "id": "D",
+              "text": "museum (↗), park (↗), and castle (↘)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Liệt kê: Lên giọng ở các mục đầu/giữa, Xuống giọng ở mục cuối."
+        },
+        {
+          "id": "s3_t9_m14",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu trước và sau dấu phẩy trong câu sau là gì?",
+          "tts_text": "Once you finish, let me know.",
+          "options": [
+            {
+              "id": "A",
+              "text": "finish (↘), know (↘)"
+            },
+            {
+              "id": "B",
+              "text": "finish (↗), know (↗)"
+            },
+            {
+              "id": "C",
+              "text": "finish (↗), know (↘)"
+            },
+            {
+              "id": "D",
+              "text": "finish (↘), know (↗)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Chưa hết ý (trước phẩy) → Lên giọng (↗); kết thúc câu → Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_m15",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu trước và sau dấu phẩy trong câu sau là gì?",
+          "tts_text": "Since you asked, I will explain.",
+          "options": [
+            {
+              "id": "A",
+              "text": "asked (↗), explain (↗)"
+            },
+            {
+              "id": "B",
+              "text": "asked (↗), explain (↘)"
+            },
+            {
+              "id": "C",
+              "text": "asked (↘), explain (↘)"
+            },
+            {
+              "id": "D",
+              "text": "asked (↘), explain (↗)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Chưa hết ý (trước phẩy) → Lên giọng (↗); kết thúc câu → Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_m16",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu trước và sau dấu phẩy trong câu sau là gì?",
+          "tts_text": "While I cook, you can rest.",
+          "options": [
+            {
+              "id": "A",
+              "text": "cook (↘), rest (↘)"
+            },
+            {
+              "id": "B",
+              "text": "cook (↗), rest (↗)"
+            },
+            {
+              "id": "C",
+              "text": "cook (↗), rest (↘)"
+            },
+            {
+              "id": "D",
+              "text": "cook (↘), rest (↗)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Chưa hết ý (trước phẩy) → Lên giọng (↗); kết thúc câu → Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_m17",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu trước và sau dấu phẩy trong câu sau là gì?",
+          "tts_text": "As soon as it opens, we will enter.",
+          "options": [
+            {
+              "id": "A",
+              "text": "opens (↗), enter (↘)"
+            },
+            {
+              "id": "B",
+              "text": "opens (↘), enter (↗)"
+            },
+            {
+              "id": "C",
+              "text": "opens (↘), enter (↘)"
+            },
+            {
+              "id": "D",
+              "text": "opens (↗), enter (↗)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Chưa hết ý (trước phẩy) → Lên giọng (↗); kết thúc câu → Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_m18",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu trước và sau dấu phẩy trong câu sau là gì?",
+          "tts_text": "If the price drops, we will buy.",
+          "options": [
+            {
+              "id": "A",
+              "text": "drops (↗), buy (↘)"
+            },
+            {
+              "id": "B",
+              "text": "drops (↘), buy (↘)"
+            },
+            {
+              "id": "C",
+              "text": "drops (↗), buy (↗)"
+            },
+            {
+              "id": "D",
+              "text": "drops (↘), buy (↗)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Chưa hết ý (trước phẩy) → Lên giọng (↗); kết thúc câu → Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_m19",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu trước và sau dấu phẩy trong câu sau là gì?",
+          "tts_text": "When you arrive, call the office.",
+          "options": [
+            {
+              "id": "A",
+              "text": "arrive (↘), office (↘)"
+            },
+            {
+              "id": "B",
+              "text": "arrive (↗), office (↘)"
+            },
+            {
+              "id": "C",
+              "text": "arrive (↘), office (↗)"
+            },
+            {
+              "id": "D",
+              "text": "arrive (↗), office (↗)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Chưa hết ý (trước phẩy) → Lên giọng (↗); kết thúc câu → Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_m20",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu trước và sau dấu phẩy trong câu sau là gì?",
+          "tts_text": "Before the show starts, take your seats.",
+          "options": [
+            {
+              "id": "A",
+              "text": "starts (↗), seats (↗)"
+            },
+            {
+              "id": "B",
+              "text": "starts (↘), seats (↘)"
+            },
+            {
+              "id": "C",
+              "text": "starts (↗), seats (↘)"
+            },
+            {
+              "id": "D",
+              "text": "starts (↘), seats (↗)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Chưa hết ý (trước phẩy) → Lên giọng (↗); kết thúc câu → Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_m21",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu trước và sau dấu phẩy trong câu sau là gì?",
+          "tts_text": "After you register, collect your badge.",
+          "options": [
+            {
+              "id": "A",
+              "text": "register (↘), badge (↗)"
+            },
+            {
+              "id": "B",
+              "text": "register (↗), badge (↘)"
+            },
+            {
+              "id": "C",
+              "text": "register (↘), badge (↘)"
+            },
+            {
+              "id": "D",
+              "text": "register (↗), badge (↗)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Chưa hết ý (trước phẩy) → Lên giọng (↗); kết thúc câu → Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_m22",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu trước và sau dấu phẩy trong câu sau là gì?",
+          "tts_text": "Because of the delay, we apologized.",
+          "options": [
+            {
+              "id": "A",
+              "text": "delay (↗), apologized (↘)"
+            },
+            {
+              "id": "B",
+              "text": "delay (↗), apologized (↗)"
+            },
+            {
+              "id": "C",
+              "text": "delay (↘), apologized (↘)"
+            },
+            {
+              "id": "D",
+              "text": "delay (↘), apologized (↗)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Chưa hết ý (trước phẩy) → Lên giọng (↗); kết thúc câu → Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_m23",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu trước và sau dấu phẩy trong câu sau là gì?",
+          "tts_text": "If you are ready, we will start.",
+          "options": [
+            {
+              "id": "A",
+              "text": "ready (↗), start (↘)"
+            },
+            {
+              "id": "B",
+              "text": "ready (↘), start (↗)"
+            },
+            {
+              "id": "C",
+              "text": "ready (↗), start (↗)"
+            },
+            {
+              "id": "D",
+              "text": "ready (↘), start (↘)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Chưa hết ý (trước phẩy) → Lên giọng (↗); kết thúc câu → Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_m24",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu trước và sau dấu phẩy trong câu sau là gì?",
+          "tts_text": "When the bell rings, please leave.",
+          "options": [
+            {
+              "id": "A",
+              "text": "rings (↘), leave (↘)"
+            },
+            {
+              "id": "B",
+              "text": "rings (↗), leave (↗)"
+            },
+            {
+              "id": "C",
+              "text": "rings (↘), leave (↗)"
+            },
+            {
+              "id": "D",
+              "text": "rings (↗), leave (↘)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Chưa hết ý (trước phẩy) → Lên giọng (↗); kết thúc câu → Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_m25",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu trước và sau dấu phẩy trong câu sau là gì?",
+          "tts_text": "Before you go, sign the form.",
+          "options": [
+            {
+              "id": "A",
+              "text": "go (↗), form (↘)"
+            },
+            {
+              "id": "B",
+              "text": "go (↗), form (↗)"
+            },
+            {
+              "id": "C",
+              "text": "go (↘), form (↗)"
+            },
+            {
+              "id": "D",
+              "text": "go (↘), form (↘)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Chưa hết ý (trước phẩy) → Lên giọng (↗); kết thúc câu → Xuống giọng (↘)."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "s3_t9_h1",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu câu hỏi đuôi khi THỰC SỰ MUỐN HỎI (không chắc chắn) là gì?",
+          "tts_text": "You haven't seen my keys, have you?",
+          "options": [
+            {
+              "id": "A",
+              "text": "keys (↗), have you (↗)"
+            },
+            {
+              "id": "B",
+              "text": "keys (↘), have you (↘)"
+            },
+            {
+              "id": "C",
+              "text": "keys (↘), have you (↗)"
+            },
+            {
+              "id": "D",
+              "text": "keys (↗), have you (↘)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Không chắc chắn → Xuống ở vế đầu, LÊN giọng ở câu hỏi đuôi (↗)."
+        },
+        {
+          "id": "s3_t9_h2",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu câu hỏi đuôi khi THỰC SỰ MUỐN HỎI (không chắc chắn) là gì?",
+          "tts_text": "She is the manager, isn't she?",
+          "options": [
+            {
+              "id": "A",
+              "text": "manager (↘), isn't she (↗)"
+            },
+            {
+              "id": "B",
+              "text": "manager (↘), isn't she (↘)"
+            },
+            {
+              "id": "C",
+              "text": "manager (↗), isn't she (↘)"
+            },
+            {
+              "id": "D",
+              "text": "manager (↗), isn't she (↗)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Không chắc chắn → Xuống ở vế đầu, LÊN giọng ở câu hỏi đuôi (↗)."
+        },
+        {
+          "id": "s3_t9_h3",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu câu hỏi đuôi khi THỰC SỰ MUỐN HỎI (không chắc chắn) là gì?",
+          "tts_text": "They didn't call, did they?",
+          "options": [
+            {
+              "id": "A",
+              "text": "call (↗), did they (↘)"
+            },
+            {
+              "id": "B",
+              "text": "call (↘), did they (↗)"
+            },
+            {
+              "id": "C",
+              "text": "call (↘), did they (↘)"
+            },
+            {
+              "id": "D",
+              "text": "call (↗), did they (↗)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Không chắc chắn → Xuống ở vế đầu, LÊN giọng ở câu hỏi đuôi (↗)."
+        },
+        {
+          "id": "s3_t9_h4",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu câu hỏi đuôi khi THỰC SỰ MUỐN HỎI (không chắc chắn) là gì?",
+          "tts_text": "You can swim, can't you?",
+          "options": [
+            {
+              "id": "A",
+              "text": "swim (↘), can't you (↘)"
+            },
+            {
+              "id": "B",
+              "text": "swim (↗), can't you (↘)"
+            },
+            {
+              "id": "C",
+              "text": "swim (↘), can't you (↗)"
+            },
+            {
+              "id": "D",
+              "text": "swim (↗), can't you (↗)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Không chắc chắn → Xuống ở vế đầu, LÊN giọng ở câu hỏi đuôi (↗)."
+        },
+        {
+          "id": "s3_t9_h5",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu câu hỏi đuôi khi THỰC SỰ MUỐN HỎI (không chắc chắn) là gì?",
+          "tts_text": "He works here, doesn't he?",
+          "options": [
+            {
+              "id": "A",
+              "text": "here (↗), doesn't he (↘)"
+            },
+            {
+              "id": "B",
+              "text": "here (↗), doesn't he (↗)"
+            },
+            {
+              "id": "C",
+              "text": "here (↘), doesn't he (↗)"
+            },
+            {
+              "id": "D",
+              "text": "here (↘), doesn't he (↘)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Không chắc chắn → Xuống ở vế đầu, LÊN giọng ở câu hỏi đuôi (↗)."
+        },
+        {
+          "id": "s3_t9_h6",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu câu hỏi đuôi khi THỰC SỰ MUỐN HỎI (không chắc chắn) là gì?",
+          "tts_text": "We are late, aren't we?",
+          "options": [
+            {
+              "id": "A",
+              "text": "late (↘), aren't we (↗)"
+            },
+            {
+              "id": "B",
+              "text": "late (↘), aren't we (↘)"
+            },
+            {
+              "id": "C",
+              "text": "late (↗), aren't we (↗)"
+            },
+            {
+              "id": "D",
+              "text": "late (↗), aren't we (↘)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Không chắc chắn → Xuống ở vế đầu, LÊN giọng ở câu hỏi đuôi (↗)."
+        },
+        {
+          "id": "s3_t9_h7",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu câu hỏi đuôi khi THỰC SỰ MUỐN HỎI (không chắc chắn) là gì?",
+          "tts_text": "You won't forget, will you?",
+          "options": [
+            {
+              "id": "A",
+              "text": "forget (↘), will you (↗)"
+            },
+            {
+              "id": "B",
+              "text": "forget (↗), will you (↗)"
+            },
+            {
+              "id": "C",
+              "text": "forget (↘), will you (↘)"
+            },
+            {
+              "id": "D",
+              "text": "forget (↗), will you (↘)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Không chắc chắn → Xuống ở vế đầu, LÊN giọng ở câu hỏi đuôi (↗)."
+        },
+        {
+          "id": "s3_t9_h8",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu câu hỏi đuôi khi THỰC SỰ MUỐN HỎI (không chắc chắn) là gì?",
+          "tts_text": "It wasn't easy, was it?",
+          "options": [
+            {
+              "id": "A",
+              "text": "easy (↘), was it (↗)"
+            },
+            {
+              "id": "B",
+              "text": "easy (↗), was it (↘)"
+            },
+            {
+              "id": "C",
+              "text": "easy (↗), was it (↗)"
+            },
+            {
+              "id": "D",
+              "text": "easy (↘), was it (↘)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Không chắc chắn → Xuống ở vế đầu, LÊN giọng ở câu hỏi đuôi (↗)."
+        },
+        {
+          "id": "s3_t9_h9",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu câu hỏi đuôi khi THỰC SỰ MUỐN HỎI (không chắc chắn) là gì?",
+          "tts_text": "They have arrived, haven't they?",
+          "options": [
+            {
+              "id": "A",
+              "text": "arrived (↗), haven't they (↗)"
+            },
+            {
+              "id": "B",
+              "text": "arrived (↘), haven't they (↘)"
+            },
+            {
+              "id": "C",
+              "text": "arrived (↗), haven't they (↘)"
+            },
+            {
+              "id": "D",
+              "text": "arrived (↘), haven't they (↗)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Không chắc chắn → Xuống ở vế đầu, LÊN giọng ở câu hỏi đuôi (↗)."
+        },
+        {
+          "id": "s3_t9_h10",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu câu hỏi đuôi khi THỰC SỰ MUỐN HỎI (không chắc chắn) là gì?",
+          "tts_text": "You like it, don't you?",
+          "options": [
+            {
+              "id": "A",
+              "text": "it (↘), don't you (↗)"
+            },
+            {
+              "id": "B",
+              "text": "it (↘), don't you (↘)"
+            },
+            {
+              "id": "C",
+              "text": "it (↗), don't you (↗)"
+            },
+            {
+              "id": "D",
+              "text": "it (↗), don't you (↘)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Không chắc chắn → Xuống ở vế đầu, LÊN giọng ở câu hỏi đuôi (↗)."
+        },
+        {
+          "id": "s3_t9_h11",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu câu hỏi đuôi khi CHỈ MUỐN XÁC NHẬN (đã chắc chắn) là gì?",
+          "tts_text": "We are late, aren't we?",
+          "options": [
+            {
+              "id": "A",
+              "text": "late (↗), aren't we (↘)"
+            },
+            {
+              "id": "B",
+              "text": "late (↘), aren't we (↘)"
+            },
+            {
+              "id": "C",
+              "text": "late (↗), aren't we (↗)"
+            },
+            {
+              "id": "D",
+              "text": "late (↘), aren't we (↗)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Đã chắc chắn, chỉ xác nhận → Xuống giọng ở cả hai vế (↘)."
+        },
+        {
+          "id": "s3_t9_h12",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu câu hỏi đuôi khi CHỈ MUỐN XÁC NHẬN (đã chắc chắn) là gì?",
+          "tts_text": "You won't forget, will you?",
+          "options": [
+            {
+              "id": "A",
+              "text": "forget (↗), will you (↘)"
+            },
+            {
+              "id": "B",
+              "text": "forget (↗), will you (↗)"
+            },
+            {
+              "id": "C",
+              "text": "forget (↘), will you (↗)"
+            },
+            {
+              "id": "D",
+              "text": "forget (↘), will you (↘)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Đã chắc chắn, chỉ xác nhận → Xuống giọng ở cả hai vế (↘)."
+        },
+        {
+          "id": "s3_t9_h13",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu câu hỏi đuôi khi CHỈ MUỐN XÁC NHẬN (đã chắc chắn) là gì?",
+          "tts_text": "It wasn't easy, was it?",
+          "options": [
+            {
+              "id": "A",
+              "text": "easy (↗), was it (↘)"
+            },
+            {
+              "id": "B",
+              "text": "easy (↘), was it (↘)"
+            },
+            {
+              "id": "C",
+              "text": "easy (↘), was it (↗)"
+            },
+            {
+              "id": "D",
+              "text": "easy (↗), was it (↗)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Đã chắc chắn, chỉ xác nhận → Xuống giọng ở cả hai vế (↘)."
+        },
+        {
+          "id": "s3_t9_h14",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu câu hỏi đuôi khi CHỈ MUỐN XÁC NHẬN (đã chắc chắn) là gì?",
+          "tts_text": "They have arrived, haven't they?",
+          "options": [
+            {
+              "id": "A",
+              "text": "arrived (↘), haven't they (↗)"
+            },
+            {
+              "id": "B",
+              "text": "arrived (↗), haven't they (↘)"
+            },
+            {
+              "id": "C",
+              "text": "arrived (↗), haven't they (↗)"
+            },
+            {
+              "id": "D",
+              "text": "arrived (↘), haven't they (↘)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Đã chắc chắn, chỉ xác nhận → Xuống giọng ở cả hai vế (↘)."
+        },
+        {
+          "id": "s3_t9_h15",
+          "type": "multiple_choice",
+          "instruction": "Ngữ điệu câu hỏi đuôi khi CHỈ MUỐN XÁC NHẬN (đã chắc chắn) là gì?",
+          "tts_text": "You like it, don't you?",
+          "options": [
+            {
+              "id": "A",
+              "text": "it (↘), don't you (↗)"
+            },
+            {
+              "id": "B",
+              "text": "it (↘), don't you (↘)"
+            },
+            {
+              "id": "C",
+              "text": "it (↗), don't you (↗)"
+            },
+            {
+              "id": "D",
+              "text": "it (↗), don't you (↘)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Đã chắc chắn, chỉ xác nhận → Xuống giọng ở cả hai vế (↘)."
+        },
+        {
+          "id": "s3_t9_h16",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "I need milk, eggs, and butter.",
+          "options": [
+            {
+              "id": "A",
+              "text": "milk (↗), eggs (↗), and butter (↘)"
+            },
+            {
+              "id": "B",
+              "text": "milk (↗), eggs (↘), and butter (↘)"
+            },
+            {
+              "id": "C",
+              "text": "milk (↘), eggs (↘), and butter (↗)"
+            },
+            {
+              "id": "D",
+              "text": "milk (↘), eggs (↗), and butter (↗)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Các mục đầu/giữa Lên giọng (↗), mục cuối Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_h17",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "They sell shirts, pants, and shoes.",
+          "options": [
+            {
+              "id": "A",
+              "text": "shirts (↘), pants (↘), and shoes (↗)"
+            },
+            {
+              "id": "B",
+              "text": "shirts (↘), pants (↗), and shoes (↗)"
+            },
+            {
+              "id": "C",
+              "text": "shirts (↗), pants (↘), and shoes (↘)"
+            },
+            {
+              "id": "D",
+              "text": "shirts (↗), pants (↗), and shoes (↘)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Các mục đầu/giữa Lên giọng (↗), mục cuối Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_h18",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "The course covers reading, writing, and speaking.",
+          "options": [
+            {
+              "id": "A",
+              "text": "reading (↗), writing (↗), and speaking (↘)"
+            },
+            {
+              "id": "B",
+              "text": "reading (↘), writing (↘), and speaking (↗)"
+            },
+            {
+              "id": "C",
+              "text": "reading (↗), writing (↘), and speaking (↘)"
+            },
+            {
+              "id": "D",
+              "text": "reading (↘), writing (↗), and speaking (↗)"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Các mục đầu/giữa Lên giọng (↗), mục cuối Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_h19",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "We accept cash, cards, and checks.",
+          "options": [
+            {
+              "id": "A",
+              "text": "cash (↘), cards (↘), and checks (↗)"
+            },
+            {
+              "id": "B",
+              "text": "cash (↗), cards (↗), and checks (↘)"
+            },
+            {
+              "id": "C",
+              "text": "cash (↘), cards (↗), and checks (↗)"
+            },
+            {
+              "id": "D",
+              "text": "cash (↗), cards (↘), and checks (↘)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Các mục đầu/giữa Lên giọng (↗), mục cuối Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_h20",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "The team includes John, Mary, and Paul.",
+          "options": [
+            {
+              "id": "A",
+              "text": "John (↘), Mary (↗), and Paul (↗)"
+            },
+            {
+              "id": "B",
+              "text": "John (↗), Mary (↘), and Paul (↘)"
+            },
+            {
+              "id": "C",
+              "text": "John (↗), Mary (↗), and Paul (↘)"
+            },
+            {
+              "id": "D",
+              "text": "John (↘), Mary (↘), and Paul (↗)"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Các mục đầu/giữa Lên giọng (↗), mục cuối Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_h21",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "Please review the budget, schedule, and plan.",
+          "options": [
+            {
+              "id": "A",
+              "text": "budget (↗), schedule (↘), and plan (↘)"
+            },
+            {
+              "id": "B",
+              "text": "budget (↗), schedule (↗), and plan (↘)"
+            },
+            {
+              "id": "C",
+              "text": "budget (↘), schedule (↗), and plan (↗)"
+            },
+            {
+              "id": "D",
+              "text": "budget (↘), schedule (↘), and plan (↗)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Các mục đầu/giữa Lên giọng (↗), mục cuối Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_h22",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "The tour visits the museum, the park, and the castle.",
+          "options": [
+            {
+              "id": "A",
+              "text": "museum (↘), park (↗), and castle (↗)"
+            },
+            {
+              "id": "B",
+              "text": "museum (↗), park (↘), and castle (↘)"
+            },
+            {
+              "id": "C",
+              "text": "museum (↘), park (↘), and castle (↗)"
+            },
+            {
+              "id": "D",
+              "text": "museum (↗), park (↗), and castle (↘)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Các mục đầu/giữa Lên giọng (↗), mục cuối Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_h23",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "She teaches math, science, and history.",
+          "options": [
+            {
+              "id": "A",
+              "text": "math (↘), science (↗), and history (↗)"
+            },
+            {
+              "id": "B",
+              "text": "math (↘), science (↘), and history (↗)"
+            },
+            {
+              "id": "C",
+              "text": "math (↗), science (↘), and history (↘)"
+            },
+            {
+              "id": "D",
+              "text": "math (↗), science (↗), and history (↘)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Các mục đầu/giữa Lên giọng (↗), mục cuối Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_h24",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "We provide breakfast, lunch, and dinner.",
+          "options": [
+            {
+              "id": "A",
+              "text": "breakfast (↘), lunch (↗), and dinner (↗)"
+            },
+            {
+              "id": "B",
+              "text": "breakfast (↗), lunch (↘), and dinner (↘)"
+            },
+            {
+              "id": "C",
+              "text": "breakfast (↘), lunch (↘), and dinner (↗)"
+            },
+            {
+              "id": "D",
+              "text": "breakfast (↗), lunch (↗), and dinner (↘)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Các mục đầu/giữa Lên giọng (↗), mục cuối Xuống giọng (↘)."
+        },
+        {
+          "id": "s3_t9_h25",
+          "type": "multiple_choice",
+          "instruction": "Chọn chuỗi ngữ điệu đúng cho câu liệt kê sau.",
+          "tts_text": "The report covers sales, costs, and profits.",
+          "options": [
+            {
+              "id": "A",
+              "text": "sales (↗), costs (↘), and profits (↘)"
+            },
+            {
+              "id": "B",
+              "text": "sales (↗), costs (↗), and profits (↘)"
+            },
+            {
+              "id": "C",
+              "text": "sales (↘), costs (↗), and profits (↗)"
+            },
+            {
+              "id": "D",
+              "text": "sales (↘), costs (↘), and profits (↗)"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Các mục đầu/giữa Lên giọng (↗), mục cuối Xuống giọng (↘)."
+        }
+      ]
+    }
+  ]
+}

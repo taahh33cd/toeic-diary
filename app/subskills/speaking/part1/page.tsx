@@ -6,7 +6,7 @@ import { SPEAKING_SKILLS } from "@/lib/subskills/speaking";
 
 export const metadata: Metadata = { title: "Speaking Part 1 — Subskills TOEIC" };
 
-const TESTS_PER_SKILL = 5;
+const TESTS_PER_SKILL = 20;
 
 export default async function SpeakingPart1Page() {
   const supabase = await createClient();
@@ -69,10 +69,10 @@ export default async function SpeakingPart1Page() {
           Speaking · Part 1
         </p>
         <h1 style={{ fontSize: "clamp(1.3rem, 3vw, 1.7rem)", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.02em", lineHeight: 1.2, margin: 0 }}>
-          Đọc văn bản to — 5 kỹ năng nền tảng
+          Đọc văn bản to — 5 kỹ năng nền tảng, 20 bộ test mỗi kỹ năng
         </h1>
         <p style={{ marginTop: "0.5rem", fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
-          Mỗi kỹ năng có 5 bộ test, mỗi bộ gồm 3 cấp độ (Easy → Medium → Hard), 25 câu/cấp.
+          Mỗi kỹ năng có 20 bộ test, mỗi bộ gồm 3 cấp độ (Easy → Medium → Hard), 25 câu/cấp.
         </p>
       </div>
 

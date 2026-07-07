@@ -1,0 +1,1711 @@
+{
+  "course": "TOEIC Speaking Part 1",
+  "skill": {
+    "id": "skill_1",
+    "name": "Kỹ năng Phát âm nền tảng (Pronunciation)",
+    "description": "75 bài tập tập trung vào phát âm chuẩn xác, trọng âm từ và bật âm đuôi (Ending sounds), trộn lẫn dạng Trắc nghiệm (4 lựa chọn) và Tự luận gõ phím."
+  },
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "s1_t13_e1",
+          "type": "multiple_choice",
+          "instruction": "Chọn phiên âm chuẩn xác nhất cho từ sau.",
+          "tts_text": "light",
+          "options": [
+            {
+              "id": "A",
+              "text": "/liːt/"
+            },
+            {
+              "id": "B",
+              "text": "/raɪt/"
+            },
+            {
+              "id": "C",
+              "text": "/leɪt/"
+            },
+            {
+              "id": "D",
+              "text": "/laɪt/"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "'light' có âm /l/."
+        },
+        {
+          "id": "s1_t13_e2",
+          "type": "multiple_choice",
+          "instruction": "Chọn phiên âm chuẩn xác nhất cho từ sau.",
+          "tts_text": "saw",
+          "options": [
+            {
+              "id": "A",
+              "text": "/saʊ/"
+            },
+            {
+              "id": "B",
+              "text": "/soʊ/"
+            },
+            {
+              "id": "C",
+              "text": "/sɔː/"
+            },
+            {
+              "id": "D",
+              "text": "/sɑː/"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "'saw' có âm /ɔː/. Phân biệt 'so' /soʊ/."
+        },
+        {
+          "id": "s1_t13_e3",
+          "type": "multiple_choice",
+          "instruction": "Chọn phiên âm chuẩn xác nhất cho từ sau.",
+          "tts_text": "thin",
+          "options": [
+            {
+              "id": "A",
+              "text": "/θɪn/"
+            },
+            {
+              "id": "B",
+              "text": "/sɪn/"
+            },
+            {
+              "id": "C",
+              "text": "/fɪn/"
+            },
+            {
+              "id": "D",
+              "text": "/tɪn/"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'thin' có âm /θ/. Phân biệt 'tin' /tɪn/."
+        },
+        {
+          "id": "s1_t13_e4",
+          "type": "multiple_choice",
+          "instruction": "Chọn phiên âm chuẩn xác nhất cho từ sau.",
+          "tts_text": "three",
+          "options": [
+            {
+              "id": "A",
+              "text": "/θriː/"
+            },
+            {
+              "id": "B",
+              "text": "/triː/"
+            },
+            {
+              "id": "C",
+              "text": "/sriː/"
+            },
+            {
+              "id": "D",
+              "text": "/friː/"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'three' có âm /θr/. Phân biệt 'tree' /triː/."
+        },
+        {
+          "id": "s1_t13_e5",
+          "type": "multiple_choice",
+          "instruction": "Chọn phiên âm chuẩn xác nhất cho từ sau.",
+          "tts_text": "tree",
+          "options": [
+            {
+              "id": "A",
+              "text": "/triː/"
+            },
+            {
+              "id": "B",
+              "text": "/driː/"
+            },
+            {
+              "id": "C",
+              "text": "/triːə/"
+            },
+            {
+              "id": "D",
+              "text": "/θriː/"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'tree' có âm /tr/."
+        },
+        {
+          "id": "s1_t13_e6",
+          "type": "multiple_choice",
+          "instruction": "Âm 'th' trong từ 'brother' được phát âm là gì?",
+          "tts_text": "brother",
+          "options": [
+            {
+              "id": "A",
+              "text": "/t/"
+            },
+            {
+              "id": "B",
+              "text": "/d/"
+            },
+            {
+              "id": "C",
+              "text": "/θ/ (vô thanh)"
+            },
+            {
+              "id": "D",
+              "text": "/ð/ (hữu thanh)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "'th' trong 'brother' là âm hữu thanh /ð/."
+        },
+        {
+          "id": "s1_t13_e7",
+          "type": "multiple_choice",
+          "instruction": "Âm 'th' trong từ 'weather' được phát âm là gì?",
+          "tts_text": "weather",
+          "options": [
+            {
+              "id": "A",
+              "text": "/ð/ (hữu thanh)"
+            },
+            {
+              "id": "B",
+              "text": "/d/"
+            },
+            {
+              "id": "C",
+              "text": "/θ/ (vô thanh)"
+            },
+            {
+              "id": "D",
+              "text": "/t/"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'th' trong 'weather' là âm hữu thanh /ð/."
+        },
+        {
+          "id": "s1_t13_e8",
+          "type": "multiple_choice",
+          "instruction": "Từ 'bus' kết thúc bằng âm gì?",
+          "tts_text": "bus",
+          "options": [
+            {
+              "id": "A",
+              "text": "/r/"
+            },
+            {
+              "id": "B",
+              "text": "/k/"
+            },
+            {
+              "id": "C",
+              "text": "/s/"
+            },
+            {
+              "id": "D",
+              "text": "/n/"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "'bus' kết thúc bằng âm /s/."
+        },
+        {
+          "id": "s1_t13_e9",
+          "type": "multiple_choice",
+          "instruction": "Từ 'class' kết thúc bằng âm gì?",
+          "tts_text": "class",
+          "options": [
+            {
+              "id": "A",
+              "text": "/n/"
+            },
+            {
+              "id": "B",
+              "text": "/b/"
+            },
+            {
+              "id": "C",
+              "text": "/s/"
+            },
+            {
+              "id": "D",
+              "text": "/dʒ/"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "'class' kết thúc bằng âm /s/."
+        },
+        {
+          "id": "s1_t13_e10",
+          "type": "multiple_choice",
+          "instruction": "Từ 'kiss' kết thúc bằng âm gì?",
+          "tts_text": "kiss",
+          "options": [
+            {
+              "id": "A",
+              "text": "/s/"
+            },
+            {
+              "id": "B",
+              "text": "/n/"
+            },
+            {
+              "id": "C",
+              "text": "/f/"
+            },
+            {
+              "id": "D",
+              "text": "/ʃ/"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "'kiss' kết thúc bằng âm /s/."
+        },
+        {
+          "id": "s1_t13_e11",
+          "type": "essay_typing",
+          "instruction": "Gõ lại ÂM ĐUÔI (Ending sound) của từ sau bằng chữ cái tiếng Anh (VD: k, t, sh).",
+          "content": "strong",
+          "tts_text": "strong",
+          "options": [],
+          "correct_answers": [
+            "ng",
+            "NG",
+            "Ng"
+          ],
+          "explanation": "'strong' kết thúc bằng âm /ŋ/."
+        },
+        {
+          "id": "s1_t13_e12",
+          "type": "essay_typing",
+          "instruction": "Gõ lại ÂM ĐUÔI (Ending sound) của từ sau bằng chữ cái tiếng Anh (VD: k, t, sh).",
+          "content": "morning",
+          "tts_text": "morning",
+          "options": [],
+          "correct_answers": [
+            "ng",
+            "NG",
+            "Ng"
+          ],
+          "explanation": "'morning' kết thúc bằng âm /ŋ/."
+        },
+        {
+          "id": "s1_t13_e13",
+          "type": "essay_typing",
+          "instruction": "Gõ lại ÂM ĐUÔI (Ending sound) của từ sau bằng chữ cái tiếng Anh (VD: k, t, sh).",
+          "content": "evening",
+          "tts_text": "evening",
+          "options": [],
+          "correct_answers": [
+            "ng",
+            "NG",
+            "Ng"
+          ],
+          "explanation": "'evening' kết thúc bằng âm /ŋ/."
+        },
+        {
+          "id": "s1_t13_e14",
+          "type": "essay_typing",
+          "instruction": "Gõ lại ÂM ĐUÔI (Ending sound) của từ sau bằng chữ cái tiếng Anh (VD: k, t, sh).",
+          "content": "meeting",
+          "tts_text": "meeting",
+          "options": [],
+          "correct_answers": [
+            "ng",
+            "NG",
+            "Ng"
+          ],
+          "explanation": "'meeting' kết thúc bằng âm /ŋ/."
+        },
+        {
+          "id": "s1_t13_e15",
+          "type": "essay_typing",
+          "instruction": "Gõ lại ÂM ĐUÔI (Ending sound) của từ sau bằng chữ cái tiếng Anh (VD: k, t, sh).",
+          "content": "building",
+          "tts_text": "building",
+          "options": [],
+          "correct_answers": [
+            "ng",
+            "NG",
+            "Ng"
+          ],
+          "explanation": "'building' kết thúc bằng âm /ŋ/."
+        },
+        {
+          "id": "s1_t13_e16",
+          "type": "essay_typing",
+          "instruction": "Gõ lại ÂM ĐUÔI (Ending sound) của từ sau bằng chữ cái tiếng Anh (VD: k, t, sh).",
+          "content": "young",
+          "tts_text": "young",
+          "options": [],
+          "correct_answers": [
+            "ng",
+            "NG",
+            "Ng"
+          ],
+          "explanation": "'young' kết thúc bằng âm /ŋ/."
+        },
+        {
+          "id": "s1_t13_e17",
+          "type": "essay_typing",
+          "instruction": "Gõ lại ÂM ĐUÔI (Ending sound) của từ sau bằng chữ cái tiếng Anh (VD: k, t, sh).",
+          "content": "ball",
+          "tts_text": "ball",
+          "options": [],
+          "correct_answers": [
+            "l",
+            "L"
+          ],
+          "explanation": "'ball' kết thúc bằng âm /l/."
+        },
+        {
+          "id": "s1_t13_e18",
+          "type": "essay_typing",
+          "instruction": "Gõ lại ÂM ĐUÔI (Ending sound) của từ sau bằng chữ cái tiếng Anh (VD: k, t, sh).",
+          "content": "call",
+          "tts_text": "call",
+          "options": [],
+          "correct_answers": [
+            "l",
+            "L"
+          ],
+          "explanation": "'call' kết thúc bằng âm /l/."
+        },
+        {
+          "id": "s1_t13_e19",
+          "type": "essay_typing",
+          "instruction": "Gõ lại ÂM ĐUÔI (Ending sound) của từ sau bằng chữ cái tiếng Anh (VD: k, t, sh).",
+          "content": "tell",
+          "tts_text": "tell",
+          "options": [],
+          "correct_answers": [
+            "l",
+            "L"
+          ],
+          "explanation": "'tell' kết thúc bằng âm /l/."
+        },
+        {
+          "id": "s1_t13_e20",
+          "type": "essay_typing",
+          "instruction": "Gõ lại ÂM ĐUÔI (Ending sound) của từ sau bằng chữ cái tiếng Anh (VD: k, t, sh).",
+          "content": "sell",
+          "tts_text": "sell",
+          "options": [],
+          "correct_answers": [
+            "l",
+            "L"
+          ],
+          "explanation": "'sell' kết thúc bằng âm /l/."
+        },
+        {
+          "id": "s1_t13_e21",
+          "type": "essay_typing",
+          "instruction": "Gõ lại từ, viết HOA âm tiết mang trọng âm (VD: RE-cord).",
+          "content": "object (động từ)",
+          "tts_text": "object",
+          "options": [],
+          "correct_answers": [
+            "ob-JECT",
+            "obJECT"
+          ],
+          "explanation": "Động từ 2 âm tiết → nhấn âm 2."
+        },
+        {
+          "id": "s1_t13_e22",
+          "type": "essay_typing",
+          "instruction": "Gõ lại từ, viết HOA âm tiết mang trọng âm (VD: RE-cord).",
+          "content": "subject (động từ)",
+          "tts_text": "subject",
+          "options": [],
+          "correct_answers": [
+            "sub-JECT",
+            "subJECT"
+          ],
+          "explanation": "Động từ 2 âm tiết → nhấn âm 2."
+        },
+        {
+          "id": "s1_t13_e23",
+          "type": "essay_typing",
+          "instruction": "Gõ lại từ, viết HOA âm tiết mang trọng âm (VD: RE-cord).",
+          "content": "project (động từ)",
+          "tts_text": "project",
+          "options": [],
+          "correct_answers": [
+            "pro-JECT",
+            "proJECT"
+          ],
+          "explanation": "Động từ 2 âm tiết → nhấn âm 2."
+        },
+        {
+          "id": "s1_t13_e24",
+          "type": "essay_typing",
+          "instruction": "Gõ lại từ, viết HOA âm tiết mang trọng âm (VD: RE-cord).",
+          "content": "produce (danh từ)",
+          "tts_text": "produce",
+          "options": [],
+          "correct_answers": [
+            "PRO-duce",
+            "PROduce"
+          ],
+          "explanation": "Danh từ 2 âm tiết → nhấn âm 1."
+        },
+        {
+          "id": "s1_t13_e25",
+          "type": "essay_typing",
+          "instruction": "Gõ lại từ, viết HOA âm tiết mang trọng âm (VD: RE-cord).",
+          "content": "permit (danh từ)",
+          "tts_text": "permit",
+          "options": [],
+          "correct_answers": [
+            "PER-mit",
+            "PERmit"
+          ],
+          "explanation": "Danh từ 2 âm tiết → nhấn âm 1."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "s1_t13_m1",
+          "type": "multiple_choice",
+          "instruction": "Từ 'stops' phát âm đuôi '-s/-es' như thế nào?",
+          "tts_text": "stops",
+          "options": [
+            {
+              "id": "A",
+              "text": "/es/"
+            },
+            {
+              "id": "B",
+              "text": "/s/"
+            },
+            {
+              "id": "C",
+              "text": "/ɪz/"
+            },
+            {
+              "id": "D",
+              "text": "/z/"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Đuôi '-s' của 'stops' đọc là /s/."
+        },
+        {
+          "id": "s1_t13_m2",
+          "type": "multiple_choice",
+          "instruction": "Từ 'hits' phát âm đuôi '-s/-es' như thế nào?",
+          "tts_text": "hits",
+          "options": [
+            {
+              "id": "A",
+              "text": "/es/"
+            },
+            {
+              "id": "B",
+              "text": "/s/"
+            },
+            {
+              "id": "C",
+              "text": "/z/"
+            },
+            {
+              "id": "D",
+              "text": "/ɪz/"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Đuôi '-s' của 'hits' đọc là /s/."
+        },
+        {
+          "id": "s1_t13_m3",
+          "type": "multiple_choice",
+          "instruction": "Từ 'shops' phát âm đuôi '-s/-es' như thế nào?",
+          "tts_text": "shops",
+          "options": [
+            {
+              "id": "A",
+              "text": "/z/"
+            },
+            {
+              "id": "B",
+              "text": "/s/"
+            },
+            {
+              "id": "C",
+              "text": "/es/"
+            },
+            {
+              "id": "D",
+              "text": "/ɪz/"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "Đuôi '-s' của 'shops' đọc là /s/."
+        },
+        {
+          "id": "s1_t13_m4",
+          "type": "multiple_choice",
+          "instruction": "Từ 'cliffs' phát âm đuôi '-s/-es' như thế nào?",
+          "tts_text": "cliffs",
+          "options": [
+            {
+              "id": "A",
+              "text": "/z/"
+            },
+            {
+              "id": "B",
+              "text": "/ɪz/"
+            },
+            {
+              "id": "C",
+              "text": "/s/"
+            },
+            {
+              "id": "D",
+              "text": "/es/"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Đuôi '-s' của 'cliffs' đọc là /s/."
+        },
+        {
+          "id": "s1_t13_m5",
+          "type": "multiple_choice",
+          "instruction": "Từ 'dogs' phát âm đuôi '-s/-es' như thế nào?",
+          "tts_text": "dogs",
+          "options": [
+            {
+              "id": "A",
+              "text": "/ɪz/"
+            },
+            {
+              "id": "B",
+              "text": "/s/"
+            },
+            {
+              "id": "C",
+              "text": "/z/"
+            },
+            {
+              "id": "D",
+              "text": "/es/"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Đuôi '-s' của 'dogs' đọc là /z/."
+        },
+        {
+          "id": "s1_t13_m6",
+          "type": "multiple_choice",
+          "instruction": "Từ 'cars' phát âm đuôi '-s/-es' như thế nào?",
+          "tts_text": "cars",
+          "options": [
+            {
+              "id": "A",
+              "text": "/ɪz/"
+            },
+            {
+              "id": "B",
+              "text": "/es/"
+            },
+            {
+              "id": "C",
+              "text": "/s/"
+            },
+            {
+              "id": "D",
+              "text": "/z/"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Đuôi '-s' của 'cars' đọc là /z/."
+        },
+        {
+          "id": "s1_t13_m7",
+          "type": "multiple_choice",
+          "instruction": "Từ 'painted' phát âm đuôi '-ed' như thế nào?",
+          "tts_text": "painted",
+          "options": [
+            {
+              "id": "A",
+              "text": "/t/"
+            },
+            {
+              "id": "B",
+              "text": "/ed/"
+            },
+            {
+              "id": "C",
+              "text": "/ɪd/"
+            },
+            {
+              "id": "D",
+              "text": "/d/"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Đuôi '-ed' của 'painted' đọc là /ɪd/."
+        },
+        {
+          "id": "s1_t13_m8",
+          "type": "multiple_choice",
+          "instruction": "Từ 'invited' phát âm đuôi '-ed' như thế nào?",
+          "tts_text": "invited",
+          "options": [
+            {
+              "id": "A",
+              "text": "/t/"
+            },
+            {
+              "id": "B",
+              "text": "/ed/"
+            },
+            {
+              "id": "C",
+              "text": "/ɪd/"
+            },
+            {
+              "id": "D",
+              "text": "/d/"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "Đuôi '-ed' của 'invited' đọc là /ɪd/."
+        },
+        {
+          "id": "s1_t13_m9",
+          "type": "multiple_choice",
+          "instruction": "Từ 'counted' phát âm đuôi '-ed' như thế nào?",
+          "tts_text": "counted",
+          "options": [
+            {
+              "id": "A",
+              "text": "/ɪd/"
+            },
+            {
+              "id": "B",
+              "text": "/t/"
+            },
+            {
+              "id": "C",
+              "text": "/ed/"
+            },
+            {
+              "id": "D",
+              "text": "/d/"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Đuôi '-ed' của 'counted' đọc là /ɪd/."
+        },
+        {
+          "id": "s1_t13_m10",
+          "type": "multiple_choice",
+          "instruction": "Từ 'created' phát âm đuôi '-ed' như thế nào?",
+          "tts_text": "created",
+          "options": [
+            {
+              "id": "A",
+              "text": "/ed/"
+            },
+            {
+              "id": "B",
+              "text": "/t/"
+            },
+            {
+              "id": "C",
+              "text": "/d/"
+            },
+            {
+              "id": "D",
+              "text": "/ɪd/"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "Đuôi '-ed' của 'created' đọc là /ɪd/."
+        },
+        {
+          "id": "s1_t13_m11",
+          "type": "multiple_choice",
+          "instruction": "Từ 'worked' phát âm đuôi '-ed' như thế nào?",
+          "tts_text": "worked",
+          "options": [
+            {
+              "id": "A",
+              "text": "/t/"
+            },
+            {
+              "id": "B",
+              "text": "/d/"
+            },
+            {
+              "id": "C",
+              "text": "/ed/"
+            },
+            {
+              "id": "D",
+              "text": "/ɪd/"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Đuôi '-ed' của 'worked' đọc là /t/."
+        },
+        {
+          "id": "s1_t13_m12",
+          "type": "multiple_choice",
+          "instruction": "Từ 'helped' phát âm đuôi '-ed' như thế nào?",
+          "tts_text": "helped",
+          "options": [
+            {
+              "id": "A",
+              "text": "/t/"
+            },
+            {
+              "id": "B",
+              "text": "/ed/"
+            },
+            {
+              "id": "C",
+              "text": "/d/"
+            },
+            {
+              "id": "D",
+              "text": "/ɪd/"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "Đuôi '-ed' của 'helped' đọc là /t/."
+        },
+        {
+          "id": "s1_t13_m13",
+          "type": "multiple_choice",
+          "instruction": "Trọng âm của từ 'volunteer' rơi vào âm tiết thứ mấy?",
+          "tts_text": "volunteer",
+          "options": [
+            {
+              "id": "A",
+              "text": "Thứ 4"
+            },
+            {
+              "id": "B",
+              "text": "Thứ 1"
+            },
+            {
+              "id": "C",
+              "text": "Thứ 2"
+            },
+            {
+              "id": "D",
+              "text": "Thứ 3"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "vol-un-TEER — trọng âm âm tiết 3."
+        },
+        {
+          "id": "s1_t13_m14",
+          "type": "multiple_choice",
+          "instruction": "Trọng âm của từ 'introduce' rơi vào âm tiết thứ mấy?",
+          "tts_text": "introduce",
+          "options": [
+            {
+              "id": "A",
+              "text": "Thứ 2"
+            },
+            {
+              "id": "B",
+              "text": "Thứ 1"
+            },
+            {
+              "id": "C",
+              "text": "Thứ 4"
+            },
+            {
+              "id": "D",
+              "text": "Thứ 3"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "in-tro-DUCE — trọng âm âm tiết 3."
+        },
+        {
+          "id": "s1_t13_m15",
+          "type": "multiple_choice",
+          "instruction": "Trọng âm của từ 'represent' rơi vào âm tiết thứ mấy?",
+          "tts_text": "represent",
+          "options": [
+            {
+              "id": "A",
+              "text": "Thứ 3"
+            },
+            {
+              "id": "B",
+              "text": "Thứ 2"
+            },
+            {
+              "id": "C",
+              "text": "Thứ 4"
+            },
+            {
+              "id": "D",
+              "text": "Thứ 1"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "rep-re-SENT — trọng âm âm tiết 3."
+        },
+        {
+          "id": "s1_t13_m16",
+          "type": "multiple_choice",
+          "instruction": "Trọng âm của từ 'guarantee' rơi vào âm tiết thứ mấy?",
+          "tts_text": "guarantee",
+          "options": [
+            {
+              "id": "A",
+              "text": "Thứ 1"
+            },
+            {
+              "id": "B",
+              "text": "Thứ 4"
+            },
+            {
+              "id": "C",
+              "text": "Thứ 3"
+            },
+            {
+              "id": "D",
+              "text": "Thứ 2"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "gua-ran-TEE — trọng âm âm tiết 3."
+        },
+        {
+          "id": "s1_t13_m17",
+          "type": "essay_typing",
+          "instruction": "Gõ lại âm đuôi '-s' của từ sau (s, z, hay iz).",
+          "content": "cliffs",
+          "tts_text": "cliffs",
+          "options": [],
+          "correct_answers": [
+            "s",
+            "S"
+          ],
+          "explanation": "Đuôi đọc là /s/."
+        },
+        {
+          "id": "s1_t13_m18",
+          "type": "essay_typing",
+          "instruction": "Gõ lại âm đuôi '-s' của từ sau (s, z, hay iz).",
+          "content": "dogs",
+          "tts_text": "dogs",
+          "options": [],
+          "correct_answers": [
+            "z",
+            "Z"
+          ],
+          "explanation": "Đuôi đọc là /z/."
+        },
+        {
+          "id": "s1_t13_m19",
+          "type": "essay_typing",
+          "instruction": "Gõ lại âm đuôi '-s' của từ sau (s, z, hay iz).",
+          "content": "cars",
+          "tts_text": "cars",
+          "options": [],
+          "correct_answers": [
+            "z",
+            "Z"
+          ],
+          "explanation": "Đuôi đọc là /z/."
+        },
+        {
+          "id": "s1_t13_m20",
+          "type": "essay_typing",
+          "instruction": "Gõ lại âm đuôi '-ed' của từ sau (t, d, hay id).",
+          "content": "laughed",
+          "tts_text": "laughed",
+          "options": [],
+          "correct_answers": [
+            "t",
+            "T"
+          ],
+          "explanation": "Đuôi đọc là /t/."
+        },
+        {
+          "id": "s1_t13_m21",
+          "type": "essay_typing",
+          "instruction": "Gõ lại âm đuôi '-ed' của từ sau (t, d, hay id).",
+          "content": "stopped",
+          "tts_text": "stopped",
+          "options": [],
+          "correct_answers": [
+            "t",
+            "T"
+          ],
+          "explanation": "Đuôi đọc là /t/."
+        },
+        {
+          "id": "s1_t13_m22",
+          "type": "essay_typing",
+          "instruction": "Gõ lại âm đuôi '-ed' của từ sau (t, d, hay id).",
+          "content": "kissed",
+          "tts_text": "kissed",
+          "options": [],
+          "correct_answers": [
+            "t",
+            "T"
+          ],
+          "explanation": "Đuôi đọc là /t/."
+        },
+        {
+          "id": "s1_t13_m23",
+          "type": "essay_typing",
+          "instruction": "Gõ lại từ, viết HOA âm tiết mang trọng âm (VD: im-POR-tant).",
+          "content": "volunteer",
+          "tts_text": "volunteer",
+          "options": [],
+          "correct_answers": [
+            "vol-un-TEER",
+            "volunTEER"
+          ],
+          "explanation": "Trọng âm âm tiết 3."
+        },
+        {
+          "id": "s1_t13_m24",
+          "type": "essay_typing",
+          "instruction": "Gõ lại từ, viết HOA âm tiết mang trọng âm (VD: im-POR-tant).",
+          "content": "introduce",
+          "tts_text": "introduce",
+          "options": [],
+          "correct_answers": [
+            "in-tro-DUCE",
+            "introDUCE"
+          ],
+          "explanation": "Trọng âm âm tiết 3."
+        },
+        {
+          "id": "s1_t13_m25",
+          "type": "essay_typing",
+          "instruction": "Gõ lại từ, viết HOA âm tiết mang trọng âm (VD: im-POR-tant).",
+          "content": "represent",
+          "tts_text": "represent",
+          "options": [],
+          "correct_answers": [
+            "rep-re-SENT",
+            "repreSENT"
+          ],
+          "explanation": "Trọng âm âm tiết 3."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "s1_t13_h1",
+          "type": "multiple_choice",
+          "instruction": "Chữ 'b' trong từ 'doubt' được phát âm là gì?",
+          "tts_text": "doubt",
+          "options": [
+            {
+              "id": "A",
+              "text": "/t/"
+            },
+            {
+              "id": "B",
+              "text": "Âm câm (Silent)"
+            },
+            {
+              "id": "C",
+              "text": "/b/"
+            },
+            {
+              "id": "D",
+              "text": "/p/"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "/daʊt/ — chữ 'b' câm."
+        },
+        {
+          "id": "s1_t13_h2",
+          "type": "multiple_choice",
+          "instruction": "Chữ 'b' trong từ 'climb' được phát âm là gì?",
+          "tts_text": "climb",
+          "options": [
+            {
+              "id": "A",
+              "text": "Âm câm (Silent)"
+            },
+            {
+              "id": "B",
+              "text": "/p/"
+            },
+            {
+              "id": "C",
+              "text": "/b/"
+            },
+            {
+              "id": "D",
+              "text": "/m/"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/klaɪm/ — chữ 'b' câm."
+        },
+        {
+          "id": "s1_t13_h3",
+          "type": "multiple_choice",
+          "instruction": "Chữ 'b' trong từ 'thumb' được phát âm là gì?",
+          "tts_text": "thumb",
+          "options": [
+            {
+              "id": "A",
+              "text": "/p/"
+            },
+            {
+              "id": "B",
+              "text": "/b/"
+            },
+            {
+              "id": "C",
+              "text": "Âm câm (Silent)"
+            },
+            {
+              "id": "D",
+              "text": "/m/"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "/θʌm/ — chữ 'b' câm."
+        },
+        {
+          "id": "s1_t13_h4",
+          "type": "multiple_choice",
+          "instruction": "Chữ 'c' trong từ 'muscle' được phát âm là gì?",
+          "tts_text": "muscle",
+          "options": [
+            {
+              "id": "A",
+              "text": "Âm câm (Silent)"
+            },
+            {
+              "id": "B",
+              "text": "/s/"
+            },
+            {
+              "id": "C",
+              "text": "/tʃ/"
+            },
+            {
+              "id": "D",
+              "text": "/k/"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/ˈmʌsl/ — chữ 'c' câm."
+        },
+        {
+          "id": "s1_t13_h5",
+          "type": "multiple_choice",
+          "instruction": "Chữ 'k' trong từ 'knife' được phát âm là gì?",
+          "tts_text": "knife",
+          "options": [
+            {
+              "id": "A",
+              "text": "/k/"
+            },
+            {
+              "id": "B",
+              "text": "/n/"
+            },
+            {
+              "id": "C",
+              "text": "Âm câm (Silent)"
+            },
+            {
+              "id": "D",
+              "text": "/f/"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "/naɪf/ — chữ 'k' câm."
+        },
+        {
+          "id": "s1_t13_h6",
+          "type": "multiple_choice",
+          "instruction": "Chữ 'w' trong từ 'answer' được phát âm là gì?",
+          "tts_text": "answer",
+          "options": [
+            {
+              "id": "A",
+              "text": "Âm câm (Silent)"
+            },
+            {
+              "id": "B",
+              "text": "/v/"
+            },
+            {
+              "id": "C",
+              "text": "/w/"
+            },
+            {
+              "id": "D",
+              "text": "/r/"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/ˈænsər/ — chữ 'w' câm."
+        },
+        {
+          "id": "s1_t13_h7",
+          "type": "multiple_choice",
+          "instruction": "Chữ 'l' trong từ 'half' được phát âm là gì?",
+          "tts_text": "half",
+          "options": [
+            {
+              "id": "A",
+              "text": "/v/"
+            },
+            {
+              "id": "B",
+              "text": "/l/"
+            },
+            {
+              "id": "C",
+              "text": "Âm câm (Silent)"
+            },
+            {
+              "id": "D",
+              "text": "/f/"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "/hɑːf/ — chữ 'l' câm."
+        },
+        {
+          "id": "s1_t13_h8",
+          "type": "multiple_choice",
+          "instruction": "Chữ 'l' trong từ 'salmon' được phát âm là gì?",
+          "tts_text": "salmon",
+          "options": [
+            {
+              "id": "A",
+              "text": "/l/"
+            },
+            {
+              "id": "B",
+              "text": "/m/"
+            },
+            {
+              "id": "C",
+              "text": "/s/"
+            },
+            {
+              "id": "D",
+              "text": "Âm câm (Silent)"
+            }
+          ],
+          "correct_answers": [
+            "D"
+          ],
+          "explanation": "/ˈsæmən/ — chữ 'l' câm."
+        },
+        {
+          "id": "s1_t13_h9",
+          "type": "multiple_choice",
+          "instruction": "Chữ 'h' trong từ 'ghost' được phát âm là gì?",
+          "tts_text": "ghost",
+          "options": [
+            {
+              "id": "A",
+              "text": "/g/"
+            },
+            {
+              "id": "B",
+              "text": "Âm câm (Silent)"
+            },
+            {
+              "id": "C",
+              "text": "/h/"
+            },
+            {
+              "id": "D",
+              "text": "/dʒ/"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "/ɡoʊst/ — chữ 'h' câm."
+        },
+        {
+          "id": "s1_t13_h10",
+          "type": "multiple_choice",
+          "instruction": "Chữ 'u' trong từ 'busy' được phát âm là gì?",
+          "tts_text": "busy",
+          "options": [
+            {
+              "id": "A",
+              "text": "/ɪ/"
+            },
+            {
+              "id": "B",
+              "text": "/ʌ/"
+            },
+            {
+              "id": "C",
+              "text": "/uː/"
+            },
+            {
+              "id": "D",
+              "text": "/juː/"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/ˈbɪzi/ — 'u' đọc là /ɪ/."
+        },
+        {
+          "id": "s1_t13_h11",
+          "type": "multiple_choice",
+          "instruction": "Chữ 'oo' trong từ 'blood' được phát âm là gì?",
+          "tts_text": "blood",
+          "options": [
+            {
+              "id": "A",
+              "text": "/oʊ/"
+            },
+            {
+              "id": "B",
+              "text": "/ʌ/"
+            },
+            {
+              "id": "C",
+              "text": "/uː/"
+            },
+            {
+              "id": "D",
+              "text": "/ʊ/"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "/blʌd/ — 'oo' đọc là /ʌ/."
+        },
+        {
+          "id": "s1_t13_h12",
+          "type": "multiple_choice",
+          "instruction": "Chữ 'oo' trong từ 'flood' được phát âm là gì?",
+          "tts_text": "flood",
+          "options": [
+            {
+              "id": "A",
+              "text": "/uː/"
+            },
+            {
+              "id": "B",
+              "text": "/ʊ/"
+            },
+            {
+              "id": "C",
+              "text": "/ʌ/"
+            },
+            {
+              "id": "D",
+              "text": "/ɒ/"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "/flʌd/ — 'oo' đọc là /ʌ/."
+        },
+        {
+          "id": "s1_t13_h13",
+          "type": "multiple_choice",
+          "instruction": "Từ 'clothes' kết thúc bằng âm/cụm âm gì?",
+          "tts_text": "clothes",
+          "options": [
+            {
+              "id": "A",
+              "text": "/s/"
+            },
+            {
+              "id": "B",
+              "text": "/ðz/"
+            },
+            {
+              "id": "C",
+              "text": "/z/"
+            },
+            {
+              "id": "D",
+              "text": "/ɪz/"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "/kloʊðz/ — có /ð/ rung rồi /z/."
+        },
+        {
+          "id": "s1_t13_h14",
+          "type": "multiple_choice",
+          "instruction": "Từ 'sixth' kết thúc bằng âm/cụm âm gì?",
+          "tts_text": "sixth",
+          "options": [
+            {
+              "id": "A",
+              "text": "/ksθ/"
+            },
+            {
+              "id": "B",
+              "text": "/kθ/"
+            },
+            {
+              "id": "C",
+              "text": "/kst/"
+            },
+            {
+              "id": "D",
+              "text": "/sθ/"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/sɪksθ/ — cụm /ksθ/ khó đọc."
+        },
+        {
+          "id": "s1_t13_h15",
+          "type": "multiple_choice",
+          "instruction": "Từ 'months' kết thúc bằng âm/cụm âm gì?",
+          "tts_text": "months",
+          "options": [
+            {
+              "id": "A",
+              "text": "/nθs/"
+            },
+            {
+              "id": "B",
+              "text": "/nts/"
+            },
+            {
+              "id": "C",
+              "text": "/mθs/"
+            },
+            {
+              "id": "D",
+              "text": "/nθ/"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "/mʌnθs/ — cụm /nθs/."
+        },
+        {
+          "id": "s1_t13_h16",
+          "type": "multiple_choice",
+          "instruction": "Từ 'asked' kết thúc bằng âm/cụm âm gì?",
+          "tts_text": "asked",
+          "options": [
+            {
+              "id": "A",
+              "text": "/sk/"
+            },
+            {
+              "id": "B",
+              "text": "/kst/"
+            },
+            {
+              "id": "C",
+              "text": "/skt/"
+            },
+            {
+              "id": "D",
+              "text": "/skɪd/"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "/æskt/ — '-ed' đọc /t/ sau /k/."
+        },
+        {
+          "id": "s1_t13_h17",
+          "type": "multiple_choice",
+          "instruction": "Trọng âm của từ 'particular' rơi vào âm tiết thứ mấy?",
+          "tts_text": "particular",
+          "options": [
+            {
+              "id": "A",
+              "text": "Thứ 4"
+            },
+            {
+              "id": "B",
+              "text": "Thứ 3"
+            },
+            {
+              "id": "C",
+              "text": "Thứ 2"
+            },
+            {
+              "id": "D",
+              "text": "Thứ 1"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "par-TIC-u-lar — trọng âm âm tiết 2."
+        },
+        {
+          "id": "s1_t13_h18",
+          "type": "multiple_choice",
+          "instruction": "Trọng âm của từ 'activity' rơi vào âm tiết thứ mấy?",
+          "tts_text": "activity",
+          "options": [
+            {
+              "id": "A",
+              "text": "Thứ 3"
+            },
+            {
+              "id": "B",
+              "text": "Thứ 1"
+            },
+            {
+              "id": "C",
+              "text": "Thứ 2"
+            },
+            {
+              "id": "D",
+              "text": "Thứ 4"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "ac-TIV-i-ty — trọng âm âm tiết 2."
+        },
+        {
+          "id": "s1_t13_h19",
+          "type": "multiple_choice",
+          "instruction": "Trọng âm của từ 'community' rơi vào âm tiết thứ mấy?",
+          "tts_text": "community",
+          "options": [
+            {
+              "id": "A",
+              "text": "Thứ 4"
+            },
+            {
+              "id": "B",
+              "text": "Thứ 1"
+            },
+            {
+              "id": "C",
+              "text": "Thứ 2"
+            },
+            {
+              "id": "D",
+              "text": "Thứ 3"
+            }
+          ],
+          "correct_answers": [
+            "C"
+          ],
+          "explanation": "com-MU-ni-ty — trọng âm âm tiết 2."
+        },
+        {
+          "id": "s1_t13_h20",
+          "type": "multiple_choice",
+          "instruction": "Trọng âm của từ 'majority' rơi vào âm tiết thứ mấy?",
+          "tts_text": "majority",
+          "options": [
+            {
+              "id": "A",
+              "text": "Thứ 2"
+            },
+            {
+              "id": "B",
+              "text": "Thứ 3"
+            },
+            {
+              "id": "C",
+              "text": "Thứ 4"
+            },
+            {
+              "id": "D",
+              "text": "Thứ 1"
+            }
+          ],
+          "correct_answers": [
+            "A"
+          ],
+          "explanation": "ma-JOR-i-ty — trọng âm âm tiết 2."
+        },
+        {
+          "id": "s1_t13_h21",
+          "type": "multiple_choice",
+          "instruction": "Trọng âm của từ 'political' rơi vào âm tiết thứ mấy?",
+          "tts_text": "political",
+          "options": [
+            {
+              "id": "A",
+              "text": "Thứ 4"
+            },
+            {
+              "id": "B",
+              "text": "Thứ 2"
+            },
+            {
+              "id": "C",
+              "text": "Thứ 1"
+            },
+            {
+              "id": "D",
+              "text": "Thứ 3"
+            }
+          ],
+          "correct_answers": [
+            "B"
+          ],
+          "explanation": "po-LIT-i-cal — trọng âm âm tiết 2."
+        },
+        {
+          "id": "s1_t13_h22",
+          "type": "essay_typing",
+          "instruction": "Gõ lại từ, viết HOA âm tiết mang trọng âm.",
+          "content": "development",
+          "tts_text": "development",
+          "options": [],
+          "correct_answers": [
+            "de-VEL-op-ment",
+            "deVELopment"
+          ],
+          "explanation": "Trọng âm âm tiết 2."
+        },
+        {
+          "id": "s1_t13_h23",
+          "type": "essay_typing",
+          "instruction": "Gõ lại từ, viết HOA âm tiết mang trọng âm.",
+          "content": "environment",
+          "tts_text": "environment",
+          "options": [],
+          "correct_answers": [
+            "en-VI-ron-ment",
+            "enVIronment"
+          ],
+          "explanation": "Trọng âm âm tiết 2."
+        },
+        {
+          "id": "s1_t13_h24",
+          "type": "essay_typing",
+          "instruction": "Gõ lại từ, viết HOA âm tiết mang trọng âm.",
+          "content": "communicate",
+          "tts_text": "communicate",
+          "options": [],
+          "correct_answers": [
+            "com-MU-ni-cate",
+            "comMUnicate"
+          ],
+          "explanation": "Trọng âm âm tiết 2."
+        },
+        {
+          "id": "s1_t13_h25",
+          "type": "essay_typing",
+          "instruction": "Gõ lại từ, viết HOA âm tiết mang trọng âm.",
+          "content": "responsible",
+          "tts_text": "responsible",
+          "options": [],
+          "correct_answers": [
+            "re-SPON-si-ble",
+            "reSPONsible"
+          ],
+          "explanation": "Trọng âm âm tiết 2."
+        }
+      ]
+    }
+  ]
+}
