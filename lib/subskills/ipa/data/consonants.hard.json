@@ -17,6 +17,40 @@
       ]
     },
     {
+      "title": "Sort: đuôi -ed (mở rộng)",
+      "instruction": "Chọn cách đọc đuôi -ed của động từ quá khứ.",
+      "items": [
+        { "kind": "sort", "display": "decided", "options": ["/t/", "/d/", "/ɪd/"], "correct": 2, "explanation": "decided — sau /d/ → /ɪd/." },
+        { "kind": "sort", "display": "watched", "options": ["/t/", "/d/", "/ɪd/"], "correct": 0, "explanation": "watched — sau /tʃ/ (vô thanh) → /t/." },
+        { "kind": "sort", "display": "learned", "options": ["/t/", "/d/", "/ɪd/"], "correct": 1, "explanation": "learned — sau /n/ (hữu thanh) → /d/." },
+        { "kind": "sort", "display": "started", "options": ["/t/", "/d/", "/ɪd/"], "correct": 2, "explanation": "started — sau /t/ → /ɪd/." },
+        { "kind": "sort", "display": "helped", "options": ["/t/", "/d/", "/ɪd/"], "correct": 0, "explanation": "helped — sau /p/ (vô thanh) → /t/." },
+        { "kind": "sort", "display": "arrived", "options": ["/t/", "/d/", "/ɪd/"], "correct": 1, "explanation": "arrived — sau /v/ (hữu thanh) → /d/." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /tʃ/ vs /dʒ/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "jeep", "options": ["cheap", "jeep"], "correct": 1, "explanation": "/dʒ/ — jeep. cheap có /tʃ/." },
+        { "kind": "audiochoice", "audio": "choke", "options": ["choke", "joke"], "correct": 0, "explanation": "/tʃ/ — choke. joke có /dʒ/." },
+        { "kind": "audiochoice", "audio": "gin", "options": ["chin", "gin"], "correct": 1, "explanation": "/dʒ/ — gin. chin có /tʃ/." },
+        { "kind": "audiochoice", "audio": "ridge", "options": ["rich", "ridge"], "correct": 1, "explanation": "/dʒ/ cuối — ridge. rich có /tʃ/." },
+        { "kind": "audiochoice", "audio": "badge", "options": ["batch", "badge"], "correct": 1, "explanation": "/dʒ/ cuối — badge. batch có /tʃ/." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /s/ vs /ʃ/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "ship", "options": ["sip", "ship"], "correct": 1, "explanation": "/ʃ/ — ship. sip có /s/." },
+        { "kind": "audiochoice", "audio": "see", "options": ["see", "she"], "correct": 0, "explanation": "/s/ — see. she có /ʃ/." },
+        { "kind": "audiochoice", "audio": "sheet", "options": ["seat", "sheet"], "correct": 1, "explanation": "/ʃ/ — sheet. seat có /s/." },
+        { "kind": "audiochoice", "audio": "save", "options": ["save", "shave"], "correct": 0, "explanation": "/s/ — save. shave có /ʃ/." },
+        { "kind": "audiochoice", "audio": "show", "options": ["so", "show"], "correct": 1, "explanation": "/ʃ/ — show. so có /s/." }
+      ]
+    },
+    {
       "title": "Sound ID: /ʒ/, /dʒ/ hay /ʃ/",
       "instruction": "Chọn phụ âm được in đậm khi đọc từ.",
       "items": [
@@ -25,6 +59,17 @@
         { "kind": "soundid", "display": "decision", "options": ["/ʒ/", "/ʃ/", "/dʒ/"], "correct": 0, "explanation": "decision — /dɪˈsɪʒən/, có /ʒ/." },
         { "kind": "soundid", "display": "schedule", "options": ["/dʒ/", "/ʃ/", "/sk/"], "correct": 0, "explanation": "schedule — /ˈskedʒuːl/ (Mỹ), có /dʒ/." },
         { "kind": "soundid", "display": "usually", "options": ["/ʒ/", "/dʒ/", "/z/"], "correct": 0, "explanation": "usually — /ˈjuːʒuəli/, có /ʒ/." }
+      ]
+    },
+    {
+      "title": "Sound ID: chữ câm trong cụm phụ âm",
+      "instruction": "Chọn cách đọc đúng phần được hỏi (chữ câm bị lược).",
+      "items": [
+        { "kind": "soundid", "display": "castle", "options": ["/sl/", "/stl/"], "correct": 0, "explanation": "castle — /ˈkæsəl/, 't' câm → /sl/." },
+        { "kind": "soundid", "display": "climb", "options": ["/m/", "/mb/"], "correct": 0, "explanation": "climb — /klaɪm/, 'b' câm → /m/." },
+        { "kind": "soundid", "display": "foreign", "options": ["/n/", "/ɡn/"], "correct": 0, "explanation": "foreign — /ˈfɔːrən/, 'g' câm → /n/." },
+        { "kind": "soundid", "display": "column", "options": ["/m/", "/mn/"], "correct": 0, "explanation": "column — /ˈkɑːləm/, 'n' câm → /m/." },
+        { "kind": "soundid", "display": "receipt", "options": ["/t/", "/pt/"], "correct": 0, "explanation": "receipt — /rɪˈsiːt/, 'p' câm → /t/." }
       ]
     },
     {
@@ -39,6 +84,17 @@
       ]
     },
     {
+      "title": "Transcription: cụm phụ âm khó",
+      "instruction": "Chọn cách phiên âm đúng (giọng Mỹ) của từ.",
+      "items": [
+        { "kind": "transcription", "display": "sixths", "options": ["/sɪksθs/", "/sɪks/"], "correct": 0, "explanation": "sixths — /sɪksθs/, cụm cuối rất khó." },
+        { "kind": "transcription", "display": "prompts", "options": ["/prɑːmpts/", "/prɑːms/"], "correct": 0, "explanation": "prompts — /prɑːmpts/, giữ /mpts/." },
+        { "kind": "transcription", "display": "twelfths", "options": ["/twelfθs/", "/twelfs/"], "correct": 0, "explanation": "twelfths — /twelfθs/, giữ /fθs/." },
+        { "kind": "transcription", "display": "glimpsed", "options": ["/ɡlɪmpst/", "/ɡlɪmst/"], "correct": 0, "explanation": "glimpsed — /ɡlɪmpst/, giữ /mpst/." },
+        { "kind": "transcription", "display": "acts", "options": ["/ækts/", "/æks/"], "correct": 0, "explanation": "acts — /ækts/, giữ /kts/." }
+      ]
+    },
+    {
       "title": "Odd one out: âm cuối khác",
       "instruction": "Chọn từ có âm CUỐI khác ba từ còn lại.",
       "items": [
@@ -47,6 +103,17 @@
         { "kind": "oddoneout", "options": ["wish", "watch", "cash", "rush"], "correct": 1, "explanation": "watch đuôi /tʃ/; wish, cash, rush đều /ʃ/." },
         { "kind": "oddoneout", "options": ["think", "thank", "this", "thick"], "correct": 2, "explanation": "this đầu /ð/; think, thank, thick đều /θ/." },
         { "kind": "oddoneout", "options": ["sing", "ring", "thin", "king"], "correct": 2, "explanation": "thin đuôi /n/; sing, ring, king đều /ŋ/." }
+      ]
+    },
+    {
+      "title": "Odd one out: đuôi -ed / -s khác",
+      "instruction": "Chọn từ có âm CUỐI khác ba từ còn lại.",
+      "items": [
+        { "kind": "oddoneout", "options": ["laughed", "passed", "raised", "stopped"], "correct": 2, "explanation": "raised đuôi /d/; laughed, passed, stopped đều /t/." },
+        { "kind": "oddoneout", "options": ["dogs", "cats", "runs", "plays"], "correct": 1, "explanation": "cats đuôi /s/; dogs, runs, plays đều /z/." },
+        { "kind": "oddoneout", "options": ["wished", "matched", "judged", "washed"], "correct": 2, "explanation": "judged đuôi /d/; wished, matched, washed đều /t/." },
+        { "kind": "oddoneout", "options": ["wanted", "needed", "played", "started"], "correct": 2, "explanation": "played đuôi /d/; wanted, needed, started đều /ɪd/." },
+        { "kind": "oddoneout", "options": ["laugh", "cough", "enough", "weigh"], "correct": 3, "explanation": "weigh có 'gh' câm; laugh, cough, enough 'gh' đọc /f/." }
       ]
     }
   ]

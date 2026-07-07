@@ -38,6 +38,61 @@
       ]
     },
     {
+      "title": "Minimal pairs: /eɪ/ vs /e/ (mở rộng)",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "get", "options": ["gate", "get"], "correct": 1, "explanation": "/e/ — get. gate có /eɪ/." },
+        { "kind": "audiochoice", "audio": "sale", "options": ["sale", "sell"], "correct": 0, "explanation": "/eɪ/ — sale. sell có /e/." },
+        { "kind": "audiochoice", "audio": "fell", "options": ["fail", "fell"], "correct": 1, "explanation": "/e/ — fell. fail có /eɪ/." },
+        { "kind": "audiochoice", "audio": "mate", "options": ["mate", "met"], "correct": 0, "explanation": "/eɪ/ — mate. met có /e/." },
+        { "kind": "audiochoice", "audio": "debt", "options": ["date", "debt"], "correct": 1, "explanation": "/e/ — debt. date có /eɪ/." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /oʊ/ vs /ɑː/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "cot", "options": ["coat", "cot"], "correct": 1, "explanation": "/ɑː/ — cot. coat có /oʊ/." },
+        { "kind": "audiochoice", "audio": "note", "options": ["note", "not"], "correct": 0, "explanation": "/oʊ/ — note. not có /ɑː/." },
+        { "kind": "audiochoice", "audio": "hop", "options": ["hope", "hop"], "correct": 1, "explanation": "/ɑː/ — hop. hope có /oʊ/." },
+        { "kind": "audiochoice", "audio": "code", "options": ["code", "cod"], "correct": 0, "explanation": "/oʊ/ — code. cod có /ɑː/." },
+        { "kind": "audiochoice", "audio": "coat", "options": ["coat", "cot"], "correct": 0, "explanation": "/oʊ/ — coat. cot có /ɑː/." }
+      ]
+    },
+    {
+      "title": "Sound ID: /eɪ/ hay /e/?",
+      "instruction": "Đọc từ và chọn nguyên âm ở âm tiết được nhấn.",
+      "items": [
+        { "kind": "soundid", "display": "email", "options": ["/eɪ/", "/e/"], "correct": 0, "explanation": "email — /ˈiːmeɪl/, /eɪ/." },
+        { "kind": "soundid", "display": "sent", "options": ["/eɪ/", "/e/"], "correct": 1, "explanation": "sent — /sent/, /e/." },
+        { "kind": "soundid", "display": "later", "options": ["/eɪ/", "/e/"], "correct": 0, "explanation": "later — /ˈleɪtər/, /eɪ/." },
+        { "kind": "soundid", "display": "ready", "options": ["/eɪ/", "/e/"], "correct": 1, "explanation": "ready — /ˈredi/, /e/." },
+        { "kind": "soundid", "display": "basic", "options": ["/eɪ/", "/e/"], "correct": 0, "explanation": "basic — /ˈbeɪsɪk/, /eɪ/." }
+      ]
+    },
+    {
+      "title": "Sound ID: /oʊ/ hay /ɔː/?",
+      "instruction": "Đọc từ và chọn nguyên âm ở âm tiết được nhấn.",
+      "items": [
+        { "kind": "soundid", "display": "notice", "options": ["/oʊ/", "/ɔː/"], "correct": 0, "explanation": "notice — /ˈnoʊtɪs/, /oʊ/." },
+        { "kind": "soundid", "display": "always", "options": ["/oʊ/", "/ɔː/"], "correct": 1, "explanation": "always — /ˈɔːlweɪz/, /ɔː/." },
+        { "kind": "soundid", "display": "close", "options": ["/oʊ/", "/ɔː/"], "correct": 0, "explanation": "close — /kloʊz/, /oʊ/." },
+        { "kind": "soundid", "display": "small", "options": ["/oʊ/", "/ɔː/"], "correct": 1, "explanation": "small — /smɔːl/, /ɔː/." },
+        { "kind": "soundid", "display": "focus", "options": ["/oʊ/", "/ɔː/"], "correct": 0, "explanation": "focus — /ˈfoʊkəs/, /oʊ/." }
+      ]
+    },
+    {
+      "title": "Sound ID: /aɪ/ hay /ɪ/?",
+      "instruction": "Đọc từ và chọn nguyên âm ở âm tiết được nhấn.",
+      "items": [
+        { "kind": "soundid", "display": "price", "options": ["/aɪ/", "/ɪ/"], "correct": 0, "explanation": "price — /praɪs/, /aɪ/." },
+        { "kind": "soundid", "display": "listen", "options": ["/aɪ/", "/ɪ/"], "correct": 1, "explanation": "listen — /ˈlɪsən/, /ɪ/." },
+        { "kind": "soundid", "display": "device", "options": ["/aɪ/", "/ɪ/"], "correct": 0, "explanation": "device — /dɪˈvaɪs/, /aɪ/." },
+        { "kind": "soundid", "display": "finish", "options": ["/aɪ/", "/ɪ/"], "correct": 1, "explanation": "finish — /ˈfɪnɪʃ/, /ɪ/." },
+        { "kind": "soundid", "display": "final", "options": ["/aɪ/", "/ɪ/"], "correct": 0, "explanation": "final — /ˈfaɪnəl/, /aɪ/." }
+      ]
+    },
+    {
       "title": "Odd one out: âm đôi vs âm đơn",
       "instruction": "Chọn từ có nguyên âm KHÁC ba từ còn lại.",
       "items": [
@@ -46,6 +101,17 @@
         { "kind": "oddoneout", "options": ["boy", "toy", "top", "enjoy"], "correct": 2, "explanation": "top có /ɑː/; boy, toy, enjoy đều /ɔɪ/." },
         { "kind": "oddoneout", "options": ["now", "how", "no", "down"], "correct": 2, "explanation": "no có /oʊ/; now, how, down đều /aʊ/." },
         { "kind": "oddoneout", "options": ["go", "show", "dog", "boat"], "correct": 2, "explanation": "dog có /ɔː/; go, show, boat đều /oʊ/." }
+      ]
+    },
+    {
+      "title": "Odd one out: âm đôi khác (mở rộng)",
+      "instruction": "Chọn từ có nguyên âm KHÁC ba từ còn lại.",
+      "items": [
+        { "kind": "oddoneout", "options": ["rain", "train", "said", "play"], "correct": 2, "explanation": "said có /e/; rain, train, play đều /eɪ/." },
+        { "kind": "oddoneout", "options": ["my", "fly", "happy", "try"], "correct": 2, "explanation": "happy kết thúc /i/; my, fly, try đều /aɪ/." },
+        { "kind": "oddoneout", "options": ["boy", "toy", "go", "joy"], "correct": 2, "explanation": "go có /oʊ/; boy, toy, joy đều /ɔɪ/." },
+        { "kind": "oddoneout", "options": ["house", "mouse", "four", "cloud"], "correct": 2, "explanation": "four có /ɔː/; house, mouse, cloud đều /aʊ/." },
+        { "kind": "oddoneout", "options": ["road", "coat", "cow", "note"], "correct": 2, "explanation": "cow có /aʊ/; road, coat, note đều /oʊ/." }
       ]
     }
   ]

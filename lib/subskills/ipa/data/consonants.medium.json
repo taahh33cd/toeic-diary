@@ -27,15 +27,71 @@
       ]
     },
     {
+      "title": "Minimal pairs: /θ/ vs /f/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "free", "options": ["three", "free"], "correct": 1, "explanation": "/f/ — free. three có /θ/." },
+        { "kind": "audiochoice", "audio": "thin", "options": ["thin", "fin"], "correct": 0, "explanation": "/θ/ — thin. fin có /f/." },
+        { "kind": "audiochoice", "audio": "fought", "options": ["thought", "fought"], "correct": 1, "explanation": "/f/ — fought. thought có /θ/." },
+        { "kind": "audiochoice", "audio": "thirst", "options": ["first", "thirst"], "correct": 1, "explanation": "/θ/ — thirst. first có /f/." },
+        { "kind": "audiochoice", "audio": "death", "options": ["deaf", "death"], "correct": 1, "explanation": "/θ/ cuối — death. deaf có /f/." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /ð/ vs /d/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "they", "options": ["they", "day"], "correct": 0, "explanation": "/ð/ — they. day có /d/." },
+        { "kind": "audiochoice", "audio": "den", "options": ["then", "den"], "correct": 1, "explanation": "/d/ — den. then có /ð/." },
+        { "kind": "audiochoice", "audio": "though", "options": ["though", "dough"], "correct": 0, "explanation": "/ð/ — though. dough có /d/." },
+        { "kind": "audiochoice", "audio": "dare", "options": ["there", "dare"], "correct": 1, "explanation": "/d/ — dare. there có /ð/." },
+        { "kind": "audiochoice", "audio": "than", "options": ["than", "Dan"], "correct": 0, "explanation": "/ð/ — than. Dan có /d/." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /v/ vs /w/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "wine", "options": ["vine", "wine"], "correct": 1, "explanation": "/w/ — wine. vine có /v/." },
+        { "kind": "audiochoice", "audio": "vest", "options": ["vest", "west"], "correct": 0, "explanation": "/v/ — vest. west có /w/." },
+        { "kind": "audiochoice", "audio": "wet", "options": ["vet", "wet"], "correct": 1, "explanation": "/w/ — wet. vet có /v/." },
+        { "kind": "audiochoice", "audio": "verse", "options": ["verse", "worse"], "correct": 0, "explanation": "/v/ — verse. worse có /w/." },
+        { "kind": "audiochoice", "audio": "wail", "options": ["veil", "wail"], "correct": 1, "explanation": "/w/ — wail. veil có /v/." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /l/ vs /r/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "right", "options": ["light", "right"], "correct": 1, "explanation": "/r/ — right. light có /l/." },
+        { "kind": "audiochoice", "audio": "lead", "options": ["lead", "read"], "correct": 0, "explanation": "/l/ — lead. read có /r/." },
+        { "kind": "audiochoice", "audio": "grass", "options": ["glass", "grass"], "correct": 1, "explanation": "/r/ — grass. glass có /l/." },
+        { "kind": "audiochoice", "audio": "lock", "options": ["lock", "rock"], "correct": 0, "explanation": "/l/ — lock. rock có /r/." },
+        { "kind": "audiochoice", "audio": "correct", "options": ["collect", "correct"], "correct": 1, "explanation": "/r/ — correct. collect có /l/." }
+      ]
+    },
+    {
       "title": "Sort: đuôi -s đọc /s/, /z/ hay /ɪz/",
       "instruction": "Chọn cách đọc đuôi -s của từ.",
       "items": [
-        { "kind": "sort", "display": "books", "options": ["/s/", "/z/", "/ɪz/"], "correct": 0, "explanation": "books — sau /k/ (âm vô thanh) → /s/." },
-        { "kind": "sort", "display": "jobs", "options": ["/s/", "/z/", "/ɪz/"], "correct": 1, "explanation": "jobs — sau /b/ (âm hữu thanh) → /z/." },
+        { "kind": "sort", "display": "books", "options": ["/s/", "/z/", "/ɪz/"], "correct": 0, "explanation": "books — sau /k/ (vô thanh) → /s/." },
+        { "kind": "sort", "display": "jobs", "options": ["/s/", "/z/", "/ɪz/"], "correct": 1, "explanation": "jobs — sau /b/ (hữu thanh) → /z/." },
         { "kind": "sort", "display": "boxes", "options": ["/s/", "/z/", "/ɪz/"], "correct": 2, "explanation": "boxes — sau âm xì /ks/ → /ɪz/." },
         { "kind": "sort", "display": "meetings", "options": ["/s/", "/z/", "/ɪz/"], "correct": 1, "explanation": "meetings — sau /ŋ/ (hữu thanh) → /z/." },
         { "kind": "sort", "display": "prices", "options": ["/s/", "/z/", "/ɪz/"], "correct": 2, "explanation": "prices — sau /s/ → /ɪz/." },
         { "kind": "sort", "display": "maps", "options": ["/s/", "/z/", "/ɪz/"], "correct": 0, "explanation": "maps — sau /p/ (vô thanh) → /s/." }
+      ]
+    },
+    {
+      "title": "Sort: đuôi -s đọc /s/, /z/ hay /ɪz/ (mở rộng)",
+      "instruction": "Chọn cách đọc đuôi -s của từ.",
+      "items": [
+        { "kind": "sort", "display": "watches", "options": ["/s/", "/z/", "/ɪz/"], "correct": 2, "explanation": "watches — sau /tʃ/ → /ɪz/." },
+        { "kind": "sort", "display": "cars", "options": ["/s/", "/z/", "/ɪz/"], "correct": 1, "explanation": "cars — sau /r/ (hữu thanh) → /z/." },
+        { "kind": "sort", "display": "desks", "options": ["/s/", "/z/", "/ɪz/"], "correct": 0, "explanation": "desks — sau /k/ (vô thanh) → /s/." },
+        { "kind": "sort", "display": "pages", "options": ["/s/", "/z/", "/ɪz/"], "correct": 2, "explanation": "pages — sau /dʒ/ → /ɪz/." },
+        { "kind": "sort", "display": "clients", "options": ["/s/", "/z/", "/ɪz/"], "correct": 0, "explanation": "clients — sau /t/ (vô thanh) → /s/." },
+        { "kind": "sort", "display": "phones", "options": ["/s/", "/z/", "/ɪz/"], "correct": 1, "explanation": "phones — sau /n/ (hữu thanh) → /z/." }
       ]
     },
     {
@@ -47,6 +103,17 @@
         { "kind": "soundid", "display": "morning", "options": ["/n/", "/ŋ/"], "correct": 1, "explanation": "morning — cuối /ŋ/." },
         { "kind": "soundid", "display": "line", "options": ["/n/", "/ŋ/"], "correct": 0, "explanation": "line — cuối /n/." },
         { "kind": "soundid", "display": "training", "options": ["/n/", "/ŋ/"], "correct": 1, "explanation": "training — cuối /ŋ/." }
+      ]
+    },
+    {
+      "title": "Sound ID: /θ/ hay /ð/ (th vô thanh / hữu thanh)",
+      "instruction": "Chọn cách đọc 'th' trong từ.",
+      "items": [
+        { "kind": "soundid", "display": "think", "options": ["/θ/", "/ð/"], "correct": 0, "explanation": "think — /θ/ vô thanh." },
+        { "kind": "soundid", "display": "these", "options": ["/θ/", "/ð/"], "correct": 1, "explanation": "these — /ð/ hữu thanh." },
+        { "kind": "soundid", "display": "birthday", "options": ["/θ/", "/ð/"], "correct": 0, "explanation": "birthday — /θ/ vô thanh." },
+        { "kind": "soundid", "display": "weather", "options": ["/θ/", "/ð/"], "correct": 1, "explanation": "weather — /ð/ hữu thanh." },
+        { "kind": "soundid", "display": "mouth", "options": ["/θ/", "/ð/"], "correct": 0, "explanation": "mouth (danh từ) — /θ/ vô thanh." }
       ]
     }
   ]

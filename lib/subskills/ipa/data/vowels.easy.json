@@ -27,14 +27,69 @@
       ]
     },
     {
+      "title": "Minimal pairs: /e/ vs /æ/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "bat", "options": ["bet", "bat"], "correct": 1, "explanation": "/æ/ — bat. bet có /e/." },
+        { "kind": "audiochoice", "audio": "pen", "options": ["pen", "pan"], "correct": 0, "explanation": "/e/ — pen. pan có /æ/." },
+        { "kind": "audiochoice", "audio": "sad", "options": ["said", "sad"], "correct": 1, "explanation": "/æ/ — sad. said đọc /sed/ (/e/)." },
+        { "kind": "audiochoice", "audio": "man", "options": ["men", "man"], "correct": 1, "explanation": "/æ/ — man. men có /e/." },
+        { "kind": "audiochoice", "audio": "dead", "options": ["dead", "dad"], "correct": 0, "explanation": "/e/ — dead. dad có /æ/." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /ɪ/ vs /e/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "bet", "options": ["bit", "bet"], "correct": 1, "explanation": "/e/ — bet. bit có /ɪ/." },
+        { "kind": "audiochoice", "audio": "sit", "options": ["sit", "set"], "correct": 0, "explanation": "/ɪ/ — sit. set có /e/." },
+        { "kind": "audiochoice", "audio": "ten", "options": ["tin", "ten"], "correct": 1, "explanation": "/e/ — ten. tin có /ɪ/." },
+        { "kind": "audiochoice", "audio": "left", "options": ["lift", "left"], "correct": 1, "explanation": "/e/ — left. lift có /ɪ/." },
+        { "kind": "audiochoice", "audio": "pig", "options": ["pig", "peg"], "correct": 0, "explanation": "/ɪ/ — pig. peg có /e/." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /ɪ/ vs /iː/ (mở rộng)",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "reach", "options": ["rich", "reach"], "correct": 1, "explanation": "/iː/ — reach. rich có /ɪ/." },
+        { "kind": "audiochoice", "audio": "chip", "options": ["chip", "cheap"], "correct": 0, "explanation": "/ɪ/ — chip. cheap có /iː/." },
+        { "kind": "audiochoice", "audio": "feet", "options": ["fit", "feet"], "correct": 1, "explanation": "/iː/ — feet. fit có /ɪ/." },
+        { "kind": "audiochoice", "audio": "sleep", "options": ["slip", "sleep"], "correct": 1, "explanation": "/iː/ — sleep. slip có /ɪ/." },
+        { "kind": "audiochoice", "audio": "hill", "options": ["hill", "heal"], "correct": 0, "explanation": "/ɪ/ — hill. heal có /iː/." }
+      ]
+    },
+    {
       "title": "Sound ID: /ɪ/ hay /iː/?",
       "instruction": "Đọc từ và chọn nguyên âm chính xuất hiện trong từ.",
       "items": [
-        { "kind": "soundid", "display": "meeting", "options": ["/ɪ/", "/iː/"], "correct": 1, "explanation": "meeting — /ˈmiːtɪŋ/, âm nhấn là /iː/ dài." },
+        { "kind": "soundid", "display": "meeting", "options": ["/ɪ/", "/iː/"], "correct": 1, "explanation": "meeting — /ˈmiːtɪŋ/, âm nhấn /iː/." },
         { "kind": "soundid", "display": "list", "options": ["/ɪ/", "/iː/"], "correct": 0, "explanation": "list — /lɪst/, /ɪ/ ngắn." },
         { "kind": "soundid", "display": "team", "options": ["/ɪ/", "/iː/"], "correct": 1, "explanation": "team — /tiːm/, /iː/ dài." },
         { "kind": "soundid", "display": "shipment", "options": ["/ɪ/", "/iː/"], "correct": 0, "explanation": "shipment — /ˈʃɪpmənt/, /ɪ/ ngắn." },
-        { "kind": "soundid", "display": "receipt", "options": ["/ɪ/", "/iː/"], "correct": 1, "explanation": "receipt — /rɪˈsiːt/, âm nhấn /iː/ dài." }
+        { "kind": "soundid", "display": "receipt", "options": ["/ɪ/", "/iː/"], "correct": 1, "explanation": "receipt — /rɪˈsiːt/, âm nhấn /iː/." }
+      ]
+    },
+    {
+      "title": "Sound ID: /æ/ hay /e/?",
+      "instruction": "Đọc từ và chọn nguyên âm ở âm tiết được nhấn.",
+      "items": [
+        { "kind": "soundid", "display": "salary", "options": ["/æ/", "/e/"], "correct": 0, "explanation": "salary — /ˈsæləri/, /æ/." },
+        { "kind": "soundid", "display": "any", "options": ["/æ/", "/e/"], "correct": 1, "explanation": "any — /ˈeni/, /e/." },
+        { "kind": "soundid", "display": "cash", "options": ["/æ/", "/e/"], "correct": 0, "explanation": "cash — /kæʃ/, /æ/." },
+        { "kind": "soundid", "display": "guest", "options": ["/æ/", "/e/"], "correct": 1, "explanation": "guest — /ɡest/, /e/." },
+        { "kind": "soundid", "display": "travel", "options": ["/æ/", "/e/"], "correct": 0, "explanation": "travel — /ˈtrævəl/, /æ/." }
+      ]
+    },
+    {
+      "title": "Sound ID: /ʌ/ hay /æ/?",
+      "instruction": "Đọc từ và chọn nguyên âm ở âm tiết được nhấn.",
+      "items": [
+        { "kind": "soundid", "display": "company", "options": ["/ʌ/", "/æ/"], "correct": 0, "explanation": "company — /ˈkʌmpəni/, /ʌ/." },
+        { "kind": "soundid", "display": "package", "options": ["/ʌ/", "/æ/"], "correct": 1, "explanation": "package — /ˈpækɪdʒ/, /æ/." },
+        { "kind": "soundid", "display": "budget", "options": ["/ʌ/", "/æ/"], "correct": 0, "explanation": "budget — /ˈbʌdʒɪt/, /ʌ/." },
+        { "kind": "soundid", "display": "traffic", "options": ["/ʌ/", "/æ/"], "correct": 1, "explanation": "traffic — /ˈtræfɪk/, /æ/." },
+        { "kind": "soundid", "display": "public", "options": ["/ʌ/", "/æ/"], "correct": 0, "explanation": "public — /ˈpʌblɪk/, /ʌ/." }
       ]
     },
     {
@@ -46,6 +101,17 @@
         { "kind": "oddoneout", "options": ["cat", "map", "cake", "bag"], "correct": 2, "explanation": "cake có /eɪ/; cat, map, bag đều /æ/." },
         { "kind": "oddoneout", "options": ["cup", "sun", "bus", "moon"], "correct": 3, "explanation": "moon có /uː/; cup, sun, bus đều /ʌ/." },
         { "kind": "oddoneout", "options": ["desk", "ten", "meet", "pen"], "correct": 2, "explanation": "meet có /iː/; desk, ten, pen đều /e/." }
+      ]
+    },
+    {
+      "title": "Odd one out: nguyên âm khác (mở rộng)",
+      "instruction": "Chọn từ có nguyên âm KHÁC ba từ còn lại.",
+      "items": [
+        { "kind": "oddoneout", "options": ["ship", "fit", "time", "milk"], "correct": 2, "explanation": "time có /aɪ/; ship, fit, milk đều /ɪ/." },
+        { "kind": "oddoneout", "options": ["cat", "hand", "last", "name"], "correct": 3, "explanation": "name có /eɪ/; cat, hand, last đều /æ/." },
+        { "kind": "oddoneout", "options": ["red", "bed", "meet", "desk"], "correct": 2, "explanation": "meet có /iː/; red, bed, desk đều /e/." },
+        { "kind": "oddoneout", "options": ["cup", "bus", "full", "much"], "correct": 2, "explanation": "full có /ʊ/; cup, bus, much đều /ʌ/." },
+        { "kind": "oddoneout", "options": ["sit", "win", "five", "list"], "correct": 2, "explanation": "five có /aɪ/; sit, win, list đều /ɪ/." }
       ]
     }
   ]

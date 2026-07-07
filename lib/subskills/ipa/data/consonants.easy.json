@@ -27,6 +27,39 @@
       ]
     },
     {
+      "title": "Minimal pairs: /t/ vs /d/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "dime", "options": ["time", "dime"], "correct": 1, "explanation": "/d/ — dime. time có /t/." },
+        { "kind": "audiochoice", "audio": "tie", "options": ["tie", "die"], "correct": 0, "explanation": "/t/ — tie. die có /d/." },
+        { "kind": "audiochoice", "audio": "den", "options": ["ten", "den"], "correct": 1, "explanation": "/d/ — den. ten có /t/." },
+        { "kind": "audiochoice", "audio": "town", "options": ["town", "down"], "correct": 0, "explanation": "/t/ — town. down có /d/." },
+        { "kind": "audiochoice", "audio": "code", "options": ["coat", "code"], "correct": 1, "explanation": "/d/ cuối — code. coat có /t/." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /k/ vs /g/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "goat", "options": ["coat", "goat"], "correct": 1, "explanation": "/g/ — goat. coat có /k/." },
+        { "kind": "audiochoice", "audio": "came", "options": ["came", "game"], "correct": 0, "explanation": "/k/ — came. game có /g/." },
+        { "kind": "audiochoice", "audio": "gold", "options": ["cold", "gold"], "correct": 1, "explanation": "/g/ — gold. cold có /k/." },
+        { "kind": "audiochoice", "audio": "class", "options": ["class", "glass"], "correct": 0, "explanation": "/k/ — class. glass có /g/." },
+        { "kind": "audiochoice", "audio": "bag", "options": ["back", "bag"], "correct": 1, "explanation": "/g/ cuối — bag. back có /k/." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /s/ vs /z/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "zip", "options": ["sip", "zip"], "correct": 1, "explanation": "/z/ — zip. sip có /s/." },
+        { "kind": "audiochoice", "audio": "sue", "options": ["sue", "zoo"], "correct": 0, "explanation": "/s/ — sue. zoo có /z/." },
+        { "kind": "audiochoice", "audio": "buzz", "options": ["bus", "buzz"], "correct": 1, "explanation": "/z/ cuối — buzz. bus có /s/." },
+        { "kind": "audiochoice", "audio": "prize", "options": ["price", "prize"], "correct": 1, "explanation": "/z/ cuối — prize. price có /s/." },
+        { "kind": "audiochoice", "audio": "race", "options": ["race", "raise"], "correct": 0, "explanation": "/s/ cuối — race. raise có /z/." }
+      ]
+    },
+    {
       "title": "Sound ID: phụ âm đầu",
       "instruction": "Đọc từ và chọn phụ âm ĐẦU của từ.",
       "items": [
@@ -38,6 +71,28 @@
       ]
     },
     {
+      "title": "Sound ID: chữ câm hay không?",
+      "instruction": "Chọn phụ âm ĐẦU thực sự được phát âm.",
+      "items": [
+        { "kind": "soundid", "display": "knife", "options": ["/n/", "/k/"], "correct": 0, "explanation": "knife — /naɪf/, 'k' câm → /n/." },
+        { "kind": "soundid", "display": "write", "options": ["/r/", "/w/"], "correct": 0, "explanation": "write — /raɪt/, 'w' câm → /r/." },
+        { "kind": "soundid", "display": "psychology", "options": ["/s/", "/p/"], "correct": 0, "explanation": "psychology — /saɪˈkɑːlədʒi/, 'p' câm → /s/." },
+        { "kind": "soundid", "display": "science", "options": ["/s/", "/sk/"], "correct": 0, "explanation": "science — /ˈsaɪəns/, 'sc' đọc /s/." },
+        { "kind": "soundid", "display": "honest", "options": ["/ɑː/", "/h/"], "correct": 0, "explanation": "honest — /ˈɑːnɪst/, 'h' câm → bắt đầu bằng nguyên âm." }
+      ]
+    },
+    {
+      "title": "Sound ID: 'c' đọc /k/ hay /s/",
+      "instruction": "Chọn cách đọc chữ 'c' trong từ.",
+      "items": [
+        { "kind": "soundid", "display": "century", "options": ["/s/", "/k/"], "correct": 0, "explanation": "century — /ˈsentʃəri/, 'c' trước 'e' → /s/." },
+        { "kind": "soundid", "display": "contract", "options": ["/k/", "/s/"], "correct": 0, "explanation": "contract — /ˈkɑːntrækt/, 'c' trước 'o' → /k/." },
+        { "kind": "soundid", "display": "receive", "options": ["/s/", "/k/"], "correct": 0, "explanation": "receive — /rɪˈsiːv/, 'c' trước 'e' → /s/." },
+        { "kind": "soundid", "display": "account", "options": ["/k/", "/s/"], "correct": 0, "explanation": "account — /əˈkaʊnt/, 'cc' → /k/." },
+        { "kind": "soundid", "display": "decide", "options": ["/s/", "/k/"], "correct": 0, "explanation": "decide — /dɪˈsaɪd/, 'c' trước 'i' → /s/." }
+      ]
+    },
+    {
       "title": "Odd one out: phụ âm đầu khác",
       "instruction": "Chọn từ có phụ âm ĐẦU khác ba từ còn lại.",
       "items": [
@@ -46,6 +101,17 @@
         { "kind": "oddoneout", "options": ["give", "gym", "goal", "gate"], "correct": 1, "explanation": "gym đầu /dʒ/; give, goal, gate đều /ɡ/." },
         { "kind": "oddoneout", "options": ["hour", "honest", "house", "heir"], "correct": 2, "explanation": "house phát âm /h/; hour, honest, heir có 'h' câm." },
         { "kind": "oddoneout", "options": ["chef", "chair", "cheese", "check"], "correct": 0, "explanation": "chef đầu /ʃ/; chair, cheese, check đều /tʃ/." }
+      ]
+    },
+    {
+      "title": "Odd one out: phụ âm khác (mở rộng)",
+      "instruction": "Chọn từ có phụ âm ĐẦU khác ba từ còn lại.",
+      "items": [
+        { "kind": "oddoneout", "options": ["cat", "cent", "cut", "cost"], "correct": 1, "explanation": "cent đầu /s/; cat, cut, cost đều /k/." },
+        { "kind": "oddoneout", "options": ["gym", "giant", "gate", "general"], "correct": 2, "explanation": "gate đầu /ɡ/; gym, giant, general đều /dʒ/." },
+        { "kind": "oddoneout", "options": ["sure", "sugar", "sun", "session"], "correct": 2, "explanation": "sun đầu /s/; sure, sugar, session đều /ʃ/." },
+        { "kind": "oddoneout", "options": ["cell", "circle", "cake", "cinema"], "correct": 2, "explanation": "cake đầu /k/; cell, circle, cinema đều /s/." },
+        { "kind": "oddoneout", "options": ["chef", "shop", "chair", "shine"], "correct": 2, "explanation": "chair đầu /tʃ/; chef, shop, shine đều /ʃ/." }
       ]
     }
   ]

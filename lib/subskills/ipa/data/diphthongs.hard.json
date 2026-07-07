@@ -16,6 +16,17 @@
       ]
     },
     {
+      "title": "Transcription: chọn phiên âm đúng (mở rộng)",
+      "instruction": "Chọn cách phiên âm đúng (giọng Mỹ) của từ.",
+      "items": [
+        { "kind": "transcription", "display": "acquire", "options": ["/əˈkwaɪər/", "/əˈkweɪr/"], "correct": 0, "explanation": "acquire có /aɪ/." },
+        { "kind": "transcription", "display": "loyal", "options": ["/ˈlɔɪəl/", "/ˈloʊəl/"], "correct": 0, "explanation": "loyal có /ɔɪ/." },
+        { "kind": "transcription", "display": "announce", "options": ["/əˈnaʊns/", "/əˈnoʊns/"], "correct": 0, "explanation": "announce có /aʊ/." },
+        { "kind": "transcription", "display": "postpone", "options": ["/poʊstˈpoʊn/", "/pɑːstˈpɔːn/"], "correct": 0, "explanation": "postpone có hai /oʊ/." },
+        { "kind": "transcription", "display": "outcome", "options": ["/ˈaʊtkʌm/", "/ˈoʊtkoʊm/"], "correct": 0, "explanation": "outcome — /aʊ/ + /ʌ/." }
+      ]
+    },
+    {
       "title": "Minimal pairs: tổng hợp",
       "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
       "items": [
@@ -24,6 +35,17 @@
         { "kind": "audiochoice", "audio": "note", "options": ["note", "nought"], "correct": 0, "explanation": "/oʊ/ — note. nought có /ɔː/." },
         { "kind": "audiochoice", "audio": "loud", "options": ["load", "loud"], "correct": 1, "explanation": "/aʊ/ — loud. load có /oʊ/." },
         { "kind": "audiochoice", "audio": "joy", "options": ["jaw", "joy"], "correct": 1, "explanation": "/ɔɪ/ — joy. jaw có /ɔː/." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: tổng hợp (mở rộng)",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "voice", "options": ["vice", "voice"], "correct": 1, "explanation": "/ɔɪ/ — voice. vice có /aɪ/." },
+        { "kind": "audiochoice", "audio": "pint", "options": ["pint", "point"], "correct": 0, "explanation": "/aɪ/ — pint. point có /ɔɪ/." },
+        { "kind": "audiochoice", "audio": "loan", "options": ["loan", "lawn"], "correct": 0, "explanation": "/oʊ/ — loan. lawn có /ɔː/." },
+        { "kind": "audiochoice", "audio": "found", "options": ["found", "phoned"], "correct": 0, "explanation": "/aʊ/ — found. phoned có /oʊ/." },
+        { "kind": "audiochoice", "audio": "aisle", "options": ["aisle", "oil"], "correct": 0, "explanation": "/aɪ/ — aisle. oil có /ɔɪ/." }
       ]
     },
     {
@@ -38,14 +60,47 @@
       ]
     },
     {
+      "title": "Sound ID: nguyên âm đôi (3 lựa chọn)",
+      "instruction": "Chọn nguyên âm đôi ở âm tiết được nhấn.",
+      "items": [
+        { "kind": "soundid", "display": "reliable", "options": ["/aɪ/", "/eɪ/", "/iː/"], "correct": 0, "explanation": "reliable — /rɪˈlaɪəbəl/, /aɪ/." },
+        { "kind": "soundid", "display": "appointment", "options": ["/ɔɪ/", "/aɪ/", "/oʊ/"], "correct": 0, "explanation": "appointment — /əˈpɔɪntmənt/, /ɔɪ/." },
+        { "kind": "soundid", "display": "download", "options": ["/aʊ/", "/oʊ/", "/ɔɪ/"], "correct": 0, "explanation": "download — /ˈdaʊnloʊd/, /aʊ/." },
+        { "kind": "soundid", "display": "campaign", "options": ["/eɪ/", "/aɪ/", "/aʊ/"], "correct": 0, "explanation": "campaign — /kæmˈpeɪn/, /eɪ/." },
+        { "kind": "soundid", "display": "overflow", "options": ["/oʊ/", "/aʊ/", "/ɔː/"], "correct": 0, "explanation": "overflow — /ˈoʊvərfloʊ/, /oʊ/." }
+      ]
+    },
+    {
+      "title": "Sound ID: nguyên âm đôi được nhấn (từ khó)",
+      "instruction": "Chọn nguyên âm đôi ở âm tiết được nhấn.",
+      "items": [
+        { "kind": "soundid", "display": "survive", "options": ["/aɪ/", "/eɪ/"], "correct": 0, "explanation": "survive — /sərˈvaɪv/, /aɪ/." },
+        { "kind": "soundid", "display": "relate", "options": ["/eɪ/", "/aɪ/"], "correct": 0, "explanation": "relate — /rɪˈleɪt/, /eɪ/." },
+        { "kind": "soundid", "display": "rejoice", "options": ["/ɔɪ/", "/oʊ/"], "correct": 0, "explanation": "rejoice — /rɪˈdʒɔɪs/, /ɔɪ/." },
+        { "kind": "soundid", "display": "pronounce", "options": ["/aʊ/", "/oʊ/"], "correct": 0, "explanation": "pronounce — /prəˈnaʊns/, /aʊ/." },
+        { "kind": "soundid", "display": "approach", "options": ["/oʊ/", "/aʊ/"], "correct": 0, "explanation": "approach — /əˈproʊtʃ/, /oʊ/." }
+      ]
+    },
+    {
+      "title": "Odd one out: âm đôi cuối khác",
+      "instruction": "Chọn từ có nguyên âm KHÁC ba từ còn lại.",
+      "items": [
+        { "kind": "oddoneout", "options": ["delay", "betray", "employ", "display"], "correct": 2, "explanation": "employ có /ɔɪ/; delay, betray, display đều /eɪ/." },
+        { "kind": "oddoneout", "options": ["apply", "supply", "imply", "survey"], "correct": 3, "explanation": "survey có /eɪ/; apply, supply, imply đều /aɪ/." },
+        { "kind": "oddoneout", "options": ["below", "although", "somehow", "window"], "correct": 2, "explanation": "somehow có /aʊ/; below, although, window đều /oʊ/." },
+        { "kind": "oddoneout", "options": ["destroy", "enjoy", "annoy", "decide"], "correct": 3, "explanation": "decide có /aɪ/; destroy, enjoy, annoy đều /ɔɪ/." },
+        { "kind": "oddoneout", "options": ["allow", "somehow", "follow", "however"], "correct": 2, "explanation": "follow có /oʊ/; allow, somehow, however đều /aʊ/." }
+      ]
+    },
+    {
       "title": "Odd one out: nguyên âm khác",
       "instruction": "Chọn từ có nguyên âm KHÁC ba từ còn lại.",
       "items": [
         { "kind": "oddoneout", "options": ["price", "time", "piece", "fine"], "correct": 2, "explanation": "piece có /iː/; price, time, fine đều /aɪ/." },
         { "kind": "oddoneout", "options": ["phone", "goal", "town", "road"], "correct": 2, "explanation": "town có /aʊ/; phone, goal, road đều /oʊ/." },
-        { "kind": "oddoneout", "options": ["voice", "noise", "nice", "choice"], "correct": 2, "explanation": "nice có /aɪ/; voice, noise, choice đều /ɔɪ/." },
+        { "kind": "oddoneout", "options": ["choice", "noise", "rise", "voice"], "correct": 2, "explanation": "rise có /aɪ/; choice, noise, voice đều /ɔɪ/." },
         { "kind": "oddoneout", "options": ["stay", "paid", "aim", "aisle"], "correct": 3, "explanation": "aisle có /aɪ/; stay, paid, aim đều /eɪ/." },
-        { "kind": "oddoneout", "options": ["allow", "account", "approach", "around"], "correct": 2, "explanation": "approach có /oʊ/; allow, account, around đều /aʊ/." }
+        { "kind": "oddoneout", "options": ["load", "boat", "proud", "hope"], "correct": 2, "explanation": "proud có /aʊ/; load, boat, hope đều /oʊ/." }
       ]
     }
   ]

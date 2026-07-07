@@ -10,42 +10,97 @@
       "items": [
         { "kind": "audiochoice", "audio": "bad", "options": ["bed", "bad"], "correct": 1, "explanation": "/æ/ — bad. bed có /e/." },
         { "kind": "audiochoice", "audio": "men", "options": ["men", "man"], "correct": 0, "explanation": "/e/ — men. man có /æ/." },
-        { "kind": "audiochoice", "audio": "sad", "options": ["said", "sad"], "correct": 1, "explanation": "/æ/ — sad. said đọc /sed/ với /e/." },
+        { "kind": "audiochoice", "audio": "sad", "options": ["said", "sad"], "correct": 1, "explanation": "/æ/ — sad. said đọc /sed/ (/e/)." },
         { "kind": "audiochoice", "audio": "pen", "options": ["pen", "pan"], "correct": 0, "explanation": "/e/ — pen. pan có /æ/." },
         { "kind": "audiochoice", "audio": "dead", "options": ["dead", "dad"], "correct": 0, "explanation": "/e/ — dead. dad có /æ/." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /ɪ/ vs /iː/ (nhanh)",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "greed", "options": ["grid", "greed"], "correct": 1, "explanation": "/iː/ — greed. grid có /ɪ/." },
+        { "kind": "audiochoice", "audio": "pick", "options": ["pick", "peak"], "correct": 0, "explanation": "/ɪ/ — pick. peak có /iː/." },
+        { "kind": "audiochoice", "audio": "neat", "options": ["knit", "neat"], "correct": 1, "explanation": "/iː/ — neat. knit có /ɪ/." },
+        { "kind": "audiochoice", "audio": "rid", "options": ["rid", "read"], "correct": 0, "explanation": "/ɪ/ — rid. read (hiện tại) có /iː/." },
+        { "kind": "audiochoice", "audio": "dean", "options": ["din", "dean"], "correct": 1, "explanation": "/iː/ — dean. din có /ɪ/." }
+      ]
+    },
+    {
+      "title": "Minimal pairs: /ʌ/ vs /ʊ/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "look", "options": ["luck", "look"], "correct": 1, "explanation": "/ʊ/ — look. luck có /ʌ/." },
+        { "kind": "audiochoice", "audio": "buck", "options": ["buck", "book"], "correct": 0, "explanation": "/ʌ/ — buck. book có /ʊ/." },
+        { "kind": "audiochoice", "audio": "took", "options": ["tuck", "took"], "correct": 1, "explanation": "/ʊ/ — took. tuck có /ʌ/." },
+        { "kind": "audiochoice", "audio": "put", "options": ["putt", "put"], "correct": 1, "explanation": "/ʊ/ — put. putt có /ʌ/." },
+        { "kind": "audiochoice", "audio": "stud", "options": ["stud", "stood"], "correct": 0, "explanation": "/ʌ/ — stud. stood có /ʊ/." }
       ]
     },
     {
       "title": "Transcription: chọn phiên âm đúng",
       "instruction": "Chọn cách phiên âm đúng (giọng Mỹ) của từ.",
       "items": [
-        { "kind": "transcription", "display": "purchase", "options": ["/ˈpɜːrtʃəs/", "/pɜːrˈtʃeɪs/"], "correct": 0, "explanation": "purchase — /ˈpɜːrtʃəs/, nhấn âm đầu, âm cuối là /əs/." },
-        { "kind": "transcription", "display": "receipt", "options": ["/rɪˈsiːt/", "/rɪˈsept/"], "correct": 0, "explanation": "receipt — /rɪˈsiːt/, 'p' câm, âm /iː/ dài." },
+        { "kind": "transcription", "display": "purchase", "options": ["/ˈpɜːrtʃəs/", "/pɜːrˈtʃeɪs/"], "correct": 0, "explanation": "purchase — /ˈpɜːrtʃəs/, nhấn âm đầu, đuôi /əs/." },
+        { "kind": "transcription", "display": "receipt", "options": ["/rɪˈsiːt/", "/rɪˈsept/"], "correct": 0, "explanation": "receipt — /rɪˈsiːt/, 'p' câm, /iː/ dài." },
         { "kind": "transcription", "display": "colleague", "options": ["/ˈkɑːliːɡ/", "/kəˈleɪɡ/"], "correct": 0, "explanation": "colleague — /ˈkɑːliːɡ/, nhấn âm đầu." },
-        { "kind": "transcription", "display": "invoice", "options": ["/ˈɪnvɔɪs/", "/ɪnˈvaɪs/"], "correct": 0, "explanation": "invoice — /ˈɪnvɔɪs/, có nguyên âm đôi /ɔɪ/." },
-        { "kind": "transcription", "display": "manager", "options": ["/ˈmænɪdʒər/", "/məˈnædʒər/"], "correct": 0, "explanation": "manager — /ˈmænɪdʒər/, nhấn âm đầu /æ/." }
+        { "kind": "transcription", "display": "invoice", "options": ["/ˈɪnvɔɪs/", "/ɪnˈvaɪs/"], "correct": 0, "explanation": "invoice — /ˈɪnvɔɪs/, có /ɔɪ/." },
+        { "kind": "transcription", "display": "manager", "options": ["/ˈmænɪdʒər/", "/məˈnædʒər/"], "correct": 0, "explanation": "manager — /ˈmænɪdʒər/, nhấn /æ/." }
       ]
     },
     {
-      "title": "Sound ID: nguyên âm được nhấn",
+      "title": "Transcription: từ nhiều âm tiết",
+      "instruction": "Chọn cách phiên âm đúng (giọng Mỹ) của từ.",
+      "items": [
+        { "kind": "transcription", "display": "vehicle", "options": ["/ˈviːɪkəl/", "/vɪˈhɪkəl/"], "correct": 0, "explanation": "vehicle — /ˈviːɪkəl/, 'h' câm." },
+        { "kind": "transcription", "display": "comfortable", "options": ["/ˈkʌmftərbəl/", "/kəmˈfɔːrtəbəl/"], "correct": 0, "explanation": "comfortable — /ˈkʌmftərbəl/, nuốt âm giữa." },
+        { "kind": "transcription", "display": "vegetable", "options": ["/ˈvedʒtəbəl/", "/ˈveɡɪteɪbəl/"], "correct": 0, "explanation": "vegetable — /ˈvedʒtəbəl/, 3 âm tiết." },
+        { "kind": "transcription", "display": "average", "options": ["/ˈævərɪdʒ/", "/əˈverɪdʒ/"], "correct": 0, "explanation": "average — /ˈævərɪdʒ/, nhấn /æ/ đầu." },
+        { "kind": "transcription", "display": "category", "options": ["/ˈkætəɡɔːri/", "/kəˈteɡəri/"], "correct": 0, "explanation": "category — /ˈkætəɡɔːri/, nhấn /æ/ đầu." }
+      ]
+    },
+    {
+      "title": "Sound ID: nguyên âm được nhấn (/ʌ/ /ɑː/)",
       "instruction": "Chọn nguyên âm ở âm tiết được NHẤN trong từ.",
       "items": [
-        { "kind": "soundid", "display": "company", "options": ["/ʌ/", "/ɑː/"], "correct": 0, "explanation": "company — /ˈkʌmpəni/, âm nhấn /ʌ/." },
-        { "kind": "soundid", "display": "product", "options": ["/ɑː/", "/ʌ/"], "correct": 0, "explanation": "product — /ˈprɑːdʌkt/, âm nhấn /ɑː/." },
-        { "kind": "soundid", "display": "budget", "options": ["/ʌ/", "/ʊ/"], "correct": 0, "explanation": "budget — /ˈbʌdʒɪt/, âm nhấn /ʌ/." },
-        { "kind": "soundid", "display": "purchase", "options": ["/ɜː/", "/ɑː/"], "correct": 0, "explanation": "purchase — /ˈpɜːrtʃəs/, âm nhấn /ɜː/." },
-        { "kind": "soundid", "display": "salary", "options": ["/æ/", "/eɪ/"], "correct": 0, "explanation": "salary — /ˈsæləri/, âm nhấn /æ/." }
+        { "kind": "soundid", "display": "company", "options": ["/ʌ/", "/ɑː/"], "correct": 0, "explanation": "company — /ˈkʌmpəni/, /ʌ/." },
+        { "kind": "soundid", "display": "product", "options": ["/ʌ/", "/ɑː/"], "correct": 1, "explanation": "product — /ˈprɑːdʌkt/, /ɑː/." },
+        { "kind": "soundid", "display": "budget", "options": ["/ʌ/", "/ɑː/"], "correct": 0, "explanation": "budget — /ˈbʌdʒɪt/, /ʌ/." },
+        { "kind": "soundid", "display": "common", "options": ["/ʌ/", "/ɑː/"], "correct": 1, "explanation": "common — /ˈkɑːmən/, /ɑː/." },
+        { "kind": "soundid", "display": "public", "options": ["/ʌ/", "/ɑː/"], "correct": 0, "explanation": "public — /ˈpʌblɪk/, /ʌ/." }
+      ]
+    },
+    {
+      "title": "Sound ID: /ɜː/ hay /ɑː/ (âm có 'r')",
+      "instruction": "Chọn nguyên âm ở âm tiết được nhấn.",
+      "items": [
+        { "kind": "soundid", "display": "purpose", "options": ["/ɜː/", "/ɑː/"], "correct": 0, "explanation": "purpose — /ˈpɜːrpəs/, /ɜː/." },
+        { "kind": "soundid", "display": "market", "options": ["/ɜː/", "/ɑː/"], "correct": 1, "explanation": "market — /ˈmɑːrkɪt/, /ɑː/." },
+        { "kind": "soundid", "display": "further", "options": ["/ɜː/", "/ɑː/"], "correct": 0, "explanation": "further — /ˈfɜːrðər/, /ɜː/." },
+        { "kind": "soundid", "display": "partner", "options": ["/ɜː/", "/ɑː/"], "correct": 1, "explanation": "partner — /ˈpɑːrtnər/, /ɑː/." },
+        { "kind": "soundid", "display": "concern", "options": ["/ɜː/", "/ɑː/"], "correct": 0, "explanation": "concern — /kənˈsɜːrn/, /ɜː/." }
+      ]
+    },
+    {
+      "title": "Sound ID: /ɔː/ hay /oʊ/",
+      "instruction": "Chọn nguyên âm ở âm tiết được nhấn.",
+      "items": [
+        { "kind": "soundid", "display": "audit", "options": ["/ɔː/", "/oʊ/"], "correct": 0, "explanation": "audit — /ˈɔːdɪt/, /ɔː/." },
+        { "kind": "soundid", "display": "owner", "options": ["/ɔː/", "/oʊ/"], "correct": 1, "explanation": "owner — /ˈoʊnər/, /oʊ/." },
+        { "kind": "soundid", "display": "August", "options": ["/ɔː/", "/oʊ/"], "correct": 0, "explanation": "August — /ˈɔːɡəst/, /ɔː/." },
+        { "kind": "soundid", "display": "overseas", "options": ["/ɔː/", "/oʊ/"], "correct": 1, "explanation": "overseas — /ˌoʊvərˈsiːz/, /oʊ/." },
+        { "kind": "soundid", "display": "author", "options": ["/ɔː/", "/oʊ/"], "correct": 0, "explanation": "author — /ˈɔːθər/, /ɔː/." }
       ]
     },
     {
       "title": "Odd one out: nguyên âm khác",
       "instruction": "Chọn từ có nguyên âm KHÁC ba từ còn lại.",
       "items": [
-        { "kind": "oddoneout", "options": ["bad", "man", "cat", "cake"], "correct": 3, "explanation": "cake có /eɪ/; bad, man, cat đều /æ/." },
-        { "kind": "oddoneout", "options": ["bed", "said", "head", "paid"], "correct": 3, "explanation": "paid có /eɪ/; bed, said, head đều /e/." },
-        { "kind": "oddoneout", "options": ["work", "word", "world", "ward"], "correct": 3, "explanation": "ward có /ɔː/; work, word, world đều /ɜːr/." },
-        { "kind": "oddoneout", "options": ["run", "cut", "put", "sun"], "correct": 2, "explanation": "put có /ʊ/; run, cut, sun đều /ʌ/." },
-        { "kind": "oddoneout", "options": ["hot", "stop", "box", "home"], "correct": 3, "explanation": "home có /oʊ/; hot, stop, box đều /ɑː/." }
+        { "kind": "oddoneout", "options": ["purchase", "service", "further", "market"], "correct": 3, "explanation": "market có /ɑː/; purchase, service, further đều /ɜː/." },
+        { "kind": "oddoneout", "options": ["product", "common", "profit", "program"], "correct": 3, "explanation": "program có /oʊ/; product, common, profit đều /ɑː/." },
+        { "kind": "oddoneout", "options": ["month", "some", "won", "phone"], "correct": 3, "explanation": "phone có /oʊ/; month, some, won đều /ʌ/." },
+        { "kind": "oddoneout", "options": ["earn", "learn", "heart", "term"], "correct": 2, "explanation": "heart có /ɑː/; earn, learn, term đều /ɜː/." },
+        { "kind": "oddoneout", "options": ["cause", "law", "coast", "fault"], "correct": 2, "explanation": "coast có /oʊ/; cause, law, fault đều /ɔː/." }
       ]
     }
   ]

@@ -16,17 +16,6 @@
       ]
     },
     {
-      "title": "Sound ID: nguyên âm đôi được nhấn",
-      "instruction": "Chọn nguyên âm đôi ở âm tiết được nhấn.",
-      "items": [
-        { "kind": "soundid", "display": "appointment", "options": ["/aɪ/", "/ɔɪ/", "/eɪ/"], "correct": 1, "explanation": "appointment — /əˈpɔɪntmənt/, âm nhấn /ɔɪ/." },
-        { "kind": "soundid", "display": "download", "options": ["/aʊ/", "/oʊ/", "/ɔɪ/"], "correct": 0, "explanation": "download — /ˈdaʊnloʊd/, âm nhấn /aʊ/." },
-        { "kind": "soundid", "display": "device", "options": ["/aɪ/", "/eɪ/", "/ɪ/"], "correct": 0, "explanation": "device — /dɪˈvaɪs/, âm nhấn /aɪ/." },
-        { "kind": "soundid", "display": "employ", "options": ["/ɔɪ/", "/aɪ/", "/oʊ/"], "correct": 0, "explanation": "employ — /ɪmˈplɔɪ/, âm nhấn /ɔɪ/." },
-        { "kind": "soundid", "display": "amount", "options": ["/aʊ/", "/oʊ/", "/ɔɪ/"], "correct": 0, "explanation": "amount — /əˈmaʊnt/, âm nhấn /aʊ/." }
-      ]
-    },
-    {
       "title": "Minimal pairs: /aɪ/ vs /eɪ/",
       "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
       "items": [
@@ -38,6 +27,72 @@
       ]
     },
     {
+      "title": "Minimal pairs: /aʊ/ vs /oʊ/",
+      "instruction": "Nghe từ được phát, chọn đúng từ bạn nghe.",
+      "items": [
+        { "kind": "audiochoice", "audio": "load", "options": ["loud", "load"], "correct": 1, "explanation": "/oʊ/ — load. loud có /aʊ/." },
+        { "kind": "audiochoice", "audio": "town", "options": ["town", "tone"], "correct": 0, "explanation": "/aʊ/ — town. tone có /oʊ/." },
+        { "kind": "audiochoice", "audio": "boat", "options": ["bout", "boat"], "correct": 1, "explanation": "/oʊ/ — boat. bout có /aʊ/." },
+        { "kind": "audiochoice", "audio": "foul", "options": ["foul", "foal"], "correct": 0, "explanation": "/aʊ/ — foul. foal có /oʊ/." },
+        { "kind": "audiochoice", "audio": "goat", "options": ["gout", "goat"], "correct": 1, "explanation": "/oʊ/ — goat. gout có /aʊ/." }
+      ]
+    },
+    {
+      "title": "Sound ID: nguyên âm đôi được nhấn",
+      "instruction": "Chọn nguyên âm đôi ở âm tiết được nhấn.",
+      "items": [
+        { "kind": "soundid", "display": "appointment", "options": ["/aɪ/", "/ɔɪ/", "/eɪ/"], "correct": 1, "explanation": "appointment — /əˈpɔɪntmənt/, /ɔɪ/." },
+        { "kind": "soundid", "display": "download", "options": ["/aʊ/", "/oʊ/", "/ɔɪ/"], "correct": 0, "explanation": "download — /ˈdaʊnloʊd/, âm nhấn /aʊ/." },
+        { "kind": "soundid", "display": "device", "options": ["/aɪ/", "/eɪ/", "/ɪ/"], "correct": 0, "explanation": "device — /dɪˈvaɪs/, /aɪ/." },
+        { "kind": "soundid", "display": "employ", "options": ["/ɔɪ/", "/aɪ/", "/oʊ/"], "correct": 0, "explanation": "employ — /ɪmˈplɔɪ/, /ɔɪ/." },
+        { "kind": "soundid", "display": "amount", "options": ["/aʊ/", "/oʊ/", "/ɔɪ/"], "correct": 0, "explanation": "amount — /əˈmaʊnt/, /aʊ/." }
+      ]
+    },
+    {
+      "title": "Sound ID: /ɔɪ/ hay /oʊ/?",
+      "instruction": "Chọn nguyên âm đôi ở âm tiết được nhấn.",
+      "items": [
+        { "kind": "soundid", "display": "employ", "options": ["/ɔɪ/", "/oʊ/"], "correct": 0, "explanation": "employ — /ɪmˈplɔɪ/, /ɔɪ/." },
+        { "kind": "soundid", "display": "control", "options": ["/ɔɪ/", "/oʊ/"], "correct": 1, "explanation": "control — /kənˈtroʊl/, /oʊ/." },
+        { "kind": "soundid", "display": "avoid", "options": ["/ɔɪ/", "/oʊ/"], "correct": 0, "explanation": "avoid — /əˈvɔɪd/, /ɔɪ/." },
+        { "kind": "soundid", "display": "promote", "options": ["/ɔɪ/", "/oʊ/"], "correct": 1, "explanation": "promote — /prəˈmoʊt/, /oʊ/." },
+        { "kind": "soundid", "display": "appoint", "options": ["/ɔɪ/", "/oʊ/"], "correct": 0, "explanation": "appoint — /əˈpɔɪnt/, /ɔɪ/." }
+      ]
+    },
+    {
+      "title": "Sound ID: /aʊ/ hay /oʊ/?",
+      "instruction": "Chọn nguyên âm đôi ở âm tiết được nhấn.",
+      "items": [
+        { "kind": "soundid", "display": "account", "options": ["/aʊ/", "/oʊ/"], "correct": 0, "explanation": "account — /əˈkaʊnt/, /aʊ/." },
+        { "kind": "soundid", "display": "control", "options": ["/aʊ/", "/oʊ/"], "correct": 1, "explanation": "control — /kənˈtroʊl/, /oʊ/." },
+        { "kind": "soundid", "display": "amount", "options": ["/aʊ/", "/oʊ/"], "correct": 0, "explanation": "amount — /əˈmaʊnt/, /aʊ/." },
+        { "kind": "soundid", "display": "focus", "options": ["/aʊ/", "/oʊ/"], "correct": 1, "explanation": "focus — /ˈfoʊkəs/, /oʊ/." },
+        { "kind": "soundid", "display": "around", "options": ["/aʊ/", "/oʊ/"], "correct": 0, "explanation": "around — /əˈraʊnd/, /aʊ/." }
+      ]
+    },
+    {
+      "title": "Sound ID: /eɪ/ hay /aɪ/?",
+      "instruction": "Chọn nguyên âm đôi ở âm tiết được nhấn.",
+      "items": [
+        { "kind": "soundid", "display": "maintain", "options": ["/eɪ/", "/aɪ/"], "correct": 0, "explanation": "maintain — /meɪnˈteɪn/, /eɪ/." },
+        { "kind": "soundid", "display": "advise", "options": ["/eɪ/", "/aɪ/"], "correct": 1, "explanation": "advise — /ədˈvaɪz/, /aɪ/." },
+        { "kind": "soundid", "display": "delay", "options": ["/eɪ/", "/aɪ/"], "correct": 0, "explanation": "delay — /dɪˈleɪ/, /eɪ/." },
+        { "kind": "soundid", "display": "arrive", "options": ["/eɪ/", "/aɪ/"], "correct": 1, "explanation": "arrive — /əˈraɪv/, /aɪ/." },
+        { "kind": "soundid", "display": "campaign", "options": ["/eɪ/", "/aɪ/"], "correct": 0, "explanation": "campaign — /kæmˈpeɪn/, /eɪ/." }
+      ]
+    },
+    {
+      "title": "Transcription: từ có nguyên âm đôi",
+      "instruction": "Chọn cách phiên âm đúng (giọng Mỹ) của từ.",
+      "items": [
+        { "kind": "transcription", "display": "employee", "options": ["/ˌemplɔɪˈiː/", "/ɪmˈplaɪiː/"], "correct": 0, "explanation": "employee — /ˌemplɔɪˈiː/, có /ɔɪ/." },
+        { "kind": "transcription", "display": "supplier", "options": ["/səˈplaɪər/", "/ˈsʌpliər/"], "correct": 0, "explanation": "supplier — /səˈplaɪər/, có /aɪ/." },
+        { "kind": "transcription", "display": "advertise", "options": ["/ˈædvərtaɪz/", "/ædˈvɜːrtɪz/"], "correct": 0, "explanation": "advertise — /ˈædvərtaɪz/, đuôi /taɪz/." },
+        { "kind": "transcription", "display": "enjoy", "options": ["/ɪnˈdʒɔɪ/", "/ˈendʒɔɪ/"], "correct": 0, "explanation": "enjoy — /ɪnˈdʒɔɪ/, nhấn âm sau." },
+        { "kind": "transcription", "display": "download", "options": ["/ˈdaʊnloʊd/", "/ˈdoʊnlaʊd/"], "correct": 0, "explanation": "download — /ˈdaʊnloʊd/." }
+      ]
+    },
+    {
       "title": "Odd one out: nguyên âm đôi khác",
       "instruction": "Chọn từ có nguyên âm KHÁC ba từ còn lại.",
       "items": [
@@ -46,6 +101,17 @@
         { "kind": "oddoneout", "options": ["down", "town", "own", "brown"], "correct": 2, "explanation": "own có /oʊ/; down, town, brown đều /aʊ/." },
         { "kind": "oddoneout", "options": ["coin", "join", "line", "point"], "correct": 2, "explanation": "line có /aɪ/; coin, join, point đều /ɔɪ/." },
         { "kind": "oddoneout", "options": ["home", "note", "house", "road"], "correct": 2, "explanation": "house có /aʊ/; home, note, road đều /oʊ/." }
+      ]
+    },
+    {
+      "title": "Odd one out: nguyên âm đôi khác (mở rộng)",
+      "instruction": "Chọn từ có nguyên âm KHÁC ba từ còn lại.",
+      "items": [
+        { "kind": "oddoneout", "options": ["voice", "noise", "price", "choice"], "correct": 2, "explanation": "price có /aɪ/; voice, noise, choice đều /ɔɪ/." },
+        { "kind": "oddoneout", "options": ["train", "stain", "sign", "brain"], "correct": 2, "explanation": "sign có /aɪ/; train, stain, brain đều /eɪ/." },
+        { "kind": "oddoneout", "options": ["cloud", "proud", "close", "loud"], "correct": 2, "explanation": "close có /oʊ/; cloud, proud, loud đều /aʊ/." },
+        { "kind": "oddoneout", "options": ["show", "slow", "how", "throw"], "correct": 2, "explanation": "how có /aʊ/; show, slow, throw đều /oʊ/." },
+        { "kind": "oddoneout", "options": ["oil", "boil", "mile", "spoil"], "correct": 2, "explanation": "mile có /aɪ/; oil, boil, spoil đều /ɔɪ/." }
       ]
     }
   ]
