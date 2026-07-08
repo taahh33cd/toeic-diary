@@ -7,6 +7,7 @@ import { Brand } from "@/components/shared/Brand";
 import { NavSwitcher } from "@/components/shared/NavSwitcher";
 import { JournalTabBar } from "@/components/journal/TabBar";
 import { JournalMobileNav } from "@/components/journal/MobileNav";
+import { JournalNotificationBell } from "@/components/journal/JournalNotificationBell";
 import { MobileBottomNav } from "@/components/journal/MobileBottomNav";
 import { NotificationWatcher } from "@/components/shared/NotificationWatcher";
 import { InstallBanner } from "@/components/shared/InstallBanner";
@@ -81,9 +82,14 @@ export default async function JournalLayout({
             <NavSwitcher orientation="horizontal" />
           </div>
 
-          {/* Mobile: hamburger dropdown on the right */}
-          <div className="md:hidden ml-auto">
-            <JournalMobileNav />
+          {/* Right: notification bell (all sizes) + mobile hamburger */}
+          <div className="ml-auto flex items-center gap-1">
+            {profile.studentCode && (
+              <JournalNotificationBell studentCode={profile.studentCode} />
+            )}
+            <div className="md:hidden">
+              <JournalMobileNav />
+            </div>
           </div>
         </div>
       </header>

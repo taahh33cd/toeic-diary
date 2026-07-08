@@ -1,10 +1,10 @@
 "use client";
 
-import { ref } from "firebase/database";
+import { ref, update } from "firebase/database";
 import { useObjectVal } from "react-firebase-hooks/database";
 import { firebaseDb } from "@/lib/firebase/client";
 import type { FbNotification, NotificationsMap } from "@/lib/firebase/types";
-import { useMemo } from "react";
+import { useCallback, useMemo } from "react";
 
 /** Realtime notifications for one student, sorted newest-first. */
 export function useNotifications(code: string | null | undefined) {
@@ -22,5 +22,24 @@ export function useNotifications(code: string | null | undefined) {
 
   const unreadCount = notifications.filter((n) => !n.read).length;
 
-  return { notifications, unreadCount, loading, error };
+  const markAsRead = useCallback(
+    (key: string) => {
+      if (!code) return;
+      void update(ref(firebaseDb, `notifications/${code}/${key}`), { read: true });
+    },
+    [code]
+  );
+
+  const markAllRead = useCallback(() => {
+    if (!code) return;
+    const updates: Record<string, unknown> = {};
+    for (const n of notifications) {
+      if (!n.read) updates[`${n._key}/read`] = true;
+    }
+    if (Object.keys(updates).length > 0) {
+      void update(ref(firebaseDb, `notifications/${code}`), updates);
+    }
+  }, [code, notifications]);
+
+  return { notifications, unreadCount, loading, error, markAsRead, markAllRead };
 }
