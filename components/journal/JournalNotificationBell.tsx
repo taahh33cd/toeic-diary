@@ -20,7 +20,9 @@ function formatRelativeTime(iso?: string, fallbackKey?: string): string {
 
 /** Notifications carry only a `type` (no url) — route by type. */
 function urlForType(type: string): string {
-  return type === "homework" ? "/journal/progress" : "/journal";
+  if (type === "homework") return "/journal/progress";
+  if (type === "vocab") return "/journal/vocab";
+  return "/journal";
 }
 
 // Hardcoded palette: the journal header overrides --text-* to white, so the

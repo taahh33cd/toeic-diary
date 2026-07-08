@@ -106,7 +106,10 @@ export const onNewStudentNotification = onValueCreated(
     secrets: SECRETS,
   },
   async (event) => {
-    const { studentCode } = event.params;
+    const { studentCode, notifId } = event.params;
+    // Reminder entries (fixed keys like reminder_homework_overdue) are pushed by
+    // the morning cron; skip here so refreshing the bell node doesn't double-push.
+    if (typeof notifId === "string" && notifId.startsWith("reminder_")) return;
     const data = event.data.val() as { title?: string; body?: string; url?: string } | null;
     if (!data) return;
 

@@ -69,16 +69,22 @@ export async function GET(request: NextRequest) {
         const deadline = hw.endDate ?? hw.date;
         return deadline < today && !isDone(hw, submissions, dayLinks);
       });
-      if (overdue.length === 0) return;
 
-      await sendPushToUser(student.id, {
-        title: "📌 Bài tập quá hạn cần hoàn thành",
-        body:
-          overdue.length === 1
-            ? "Bạn có 1 bài tập đã quá hạn chưa nộp. Hoàn thành ngay nhé!"
-            : `Bạn có ${overdue.length} bài tập đã quá hạn chưa nộp. Hoàn thành ngay nhé!`,
-        url: "/journal/progress",
-      });
+      // Deduped bell entry (fixed key): refresh while overdue, remove when clear.
+      const bellRef = db.ref(`notifications/${code}/reminder_homework_overdue`);
+      if (overdue.length === 0) {
+        await bellRef.remove().catch(() => {});
+        return;
+      }
+
+      const body =
+        overdue.length === 1
+          ? "Bạn có 1 bài tập đã quá hạn chưa nộp. Hoàn thành ngay nhé!"
+          : `Bạn có ${overdue.length} bài tập đã quá hạn chưa nộp. Hoàn thành ngay nhé!`;
+      const title = "📌 Bài tập quá hạn cần hoàn thành";
+
+      await bellRef.set({ type: "homework", title, body, read: false, createdAt: new Date().toISOString() });
+      await sendPushToUser(student.id, { title, body, url: "/journal/progress" });
       notified++;
     })
   );

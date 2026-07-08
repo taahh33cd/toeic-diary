@@ -50,16 +50,22 @@ export async function GET(request: NextRequest) {
 
       const raw = snap.val() as Record<string, Omit<VocabWord, "id">>;
       const dueCount = Object.values(raw).filter((w) => isDue(w, today)).length;
-      if (dueCount === 0) return;
 
-      await sendPushToUser(student.id, {
-        title: "🧠 Ôn từ vựng hôm nay!",
-        body:
-          dueCount === 1
-            ? "Có 1 từ cần ôn lại hôm nay. Mất chưa đến 1 phút!"
-            : `${dueCount} từ đang chờ bạn ôn lại. Giữ đà nhớ từ nhé!`,
-        url: "/journal/vocab",
-      });
+      // Deduped bell entry (fixed key): refresh while due, remove when clear.
+      const bellRef = db.ref(`notifications/${student.studentCode}/reminder_vocab_due`);
+      if (dueCount === 0) {
+        await bellRef.remove().catch(() => {});
+        return;
+      }
+
+      const body =
+        dueCount === 1
+          ? "Có 1 từ cần ôn lại hôm nay. Mất chưa đến 1 phút!"
+          : `${dueCount} từ đang chờ bạn ôn lại. Giữ đà nhớ từ nhé!`;
+      const title = "🧠 Ôn từ vựng hôm nay!";
+
+      await bellRef.set({ type: "vocab", title, body, read: false, createdAt: new Date().toISOString() });
+      await sendPushToUser(student.id, { title, body, url: "/journal/vocab" });
       notified++;
     })
   );
