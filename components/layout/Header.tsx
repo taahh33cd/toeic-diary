@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import { BookOpen, Moon, Sun, LogOut, BarChart2, NotebookPen, Headphones, GraduationCap, Menu, X, Home, Puzzle } from "lucide-react";
+import { BookOpen, Moon, Sun, LogOut, BarChart2, NotebookPen, Headphones, GraduationCap, Menu, X, Home, Puzzle, ClipboardList } from "lucide-react";
 import { useUIStore } from "@/stores/uiStore";
 import { createClient } from "@/lib/supabase/client";
 import { cn } from "@/lib/utils/cn";
@@ -70,6 +70,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
     { href: "/grammar",           icon: <GraduationCap size={16} />, label: "Ngữ pháp" },
     { href: "/reading-practice",  icon: <BookOpen size={16} />,      label: "Reading" },
     { href: "/subskills",         icon: <Puzzle size={16} />,        label: "Subskills" },
+    { href: "/skills",            icon: <ClipboardList size={16} />, label: "Luyện đề" },
   ];
 
   return (
