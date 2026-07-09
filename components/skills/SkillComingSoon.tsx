@@ -1,16 +1,7 @@
 import Link from "next/link";
+import type { Skill, SkillUnit } from "@/lib/skills/structure";
 
-export function SkillComingSoon({
-  emoji,
-  label,
-  labelVi,
-  description,
-}: {
-  emoji: string;
-  label: string;
-  labelVi: string;
-  description: string;
-}) {
+export function SkillComingSoon({ skill, unit }: { skill: Skill; unit: SkillUnit }) {
   return (
     <div
       style={{
@@ -27,19 +18,21 @@ export function SkillComingSoon({
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: "0.8rem", color: "var(--text-muted)", flexWrap: "wrap" }}>
         <Link href="/skills" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Luyện đề</Link>
         <span>›</span>
-        <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>{label}</span>
+        <Link href={`/skills/${skill.slug}`} style={{ color: "var(--text-muted)", textDecoration: "none" }}>{skill.label}</Link>
+        <span>›</span>
+        <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>{unit.label}</span>
       </div>
 
       {/* Header */}
       <div style={{ marginBottom: "1.75rem" }}>
         <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: "0.3rem" }}>
-          {emoji} {label}
+          {skill.emoji} {skill.label} · {unit.label}
         </p>
         <h1 style={{ fontSize: "clamp(1.3rem, 3vw, 1.7rem)", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.02em", lineHeight: 1.2, margin: "0 0 0.5rem" }}>
-          Luyện đề {labelVi} TOEIC
+          {unit.labelVi} <span style={{ fontSize: "0.85rem", color: "var(--text-muted)", fontWeight: 500, fontStyle: "italic" }}>({unit.labelEn})</span>
         </h1>
         <p style={{ margin: 0, fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
-          {description}
+          {unit.description}
         </p>
       </div>
 
@@ -75,10 +68,10 @@ export function SkillComingSoon({
           Đang phát triển
         </span>
         <p style={{ margin: 0, fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6, maxWidth: 420 }}>
-          Bài tập luyện đề {labelVi} sẽ sớm có mặt. Cảm ơn bạn đã kiên nhẫn chờ đợi!
+          Bài tập luyện <strong>{skill.label} {unit.label}</strong> sẽ sớm có mặt. Cảm ơn bạn đã kiên nhẫn chờ đợi!
         </p>
         <Link
-          href="/skills"
+          href={`/skills/${skill.slug}`}
           style={{
             marginTop: "0.5rem",
             fontSize: "0.8rem",
@@ -87,7 +80,7 @@ export function SkillComingSoon({
             textDecoration: "none",
           }}
         >
-          ← Quay lại Luyện đề
+          ← Quay lại {skill.label}
         </Link>
       </div>
 

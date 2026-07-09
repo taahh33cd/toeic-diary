@@ -1,42 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SKILLS } from "@/lib/skills/structure";
 
 export const metadata: Metadata = { title: "Luyện đề — TOEIC" };
-
-const SKILLS = [
-  {
-    key: "listening",
-    emoji: "🎧",
-    label: "Listening",
-    labelVi: "Nghe hiểu",
-    href: "/skills/listening",
-    description: "Part 1–4 · luyện theo đúng format đề thi chính thức.",
-  },
-  {
-    key: "reading",
-    emoji: "📖",
-    label: "Reading",
-    labelVi: "Đọc hiểu",
-    href: "/skills/reading",
-    description: "Part 5–7 · luyện theo đúng format đề thi chính thức.",
-  },
-  {
-    key: "speaking",
-    emoji: "🗣",
-    label: "Speaking",
-    labelVi: "Nói",
-    href: "/skills/speaking",
-    description: "11 câu hỏi · luyện theo đúng format đề thi chính thức.",
-  },
-  {
-    key: "writing",
-    emoji: "✍️",
-    label: "Writing",
-    labelVi: "Viết",
-    href: "/skills/writing",
-    description: "8 câu hỏi · luyện theo đúng format đề thi chính thức.",
-  },
-];
 
 export default function SkillsPage() {
   return (
@@ -108,8 +74,8 @@ export default function SkillsPage() {
       >
         {SKILLS.map((skill) => (
           <Link
-            key={skill.key}
-            href={skill.href}
+            key={skill.slug}
+            href={`/skills/${skill.slug}`}
             className="skill-card-link"
             style={{
               display: "flex",
@@ -134,7 +100,10 @@ export default function SkillsPage() {
               <span style={{ fontSize: "0.85rem", color: "var(--accent-primary)" }}>→</span>
             </div>
             <div style={{ fontSize: "0.78rem", color: "var(--text-muted)", lineHeight: 1.5 }}>
-              {skill.description}
+              {skill.intro}
+            </div>
+            <div style={{ marginTop: "0.6rem", fontSize: "0.7rem", color: "var(--text-secondary)", paddingTop: "0.6rem", borderTop: "1px solid var(--border)" }}>
+              {skill.units.length} phần · {skill.units.map((u) => u.label.replace("Questions ", "Q").replace("Question ", "Q").replace("Part ", "P")).join(" · ")}
             </div>
           </Link>
         ))}
