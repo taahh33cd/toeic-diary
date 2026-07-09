@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import type { WTestData, WExercise, W1Exercise, W2Exercise, W3Exercise, W45Exercise } from "@/lib/subskills/writing-part1";
+import type { WTestData, WExercise, W1Exercise, W2Exercise, W3Exercise, W45Exercise, W5bExercise } from "@/lib/subskills/writing-part1";
 import { checkWordOrdering, checkVerbFill, checkBlankFill, checkMcq } from "@/lib/subskills/writing-part1";
 import { dbPartW1 } from "@/lib/subskills/writing-part1";
 
@@ -141,9 +141,6 @@ function VerbFillCard({ ex, onResult }: { ex: W2Exercise; onResult: (correct: bo
           <img src={ex.imageUrl} alt="Exercise context" style={{ maxWidth: "100%", height: "auto", display: "block" }} />
         </div>
       )}
-      {ex.imageContext && (
-        <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", fontStyle: "italic", marginBottom: "0.5rem", padding: "6px 10px", background: "var(--bg-secondary)", borderRadius: 6, borderLeft: "3px solid var(--border)" }}>{ex.imageContext}</p>
-      )}
       <p style={{ fontSize: "0.95rem", color: "var(--text-primary)", fontWeight: 500, marginBottom: "0.75rem" }}>{ex.question}</p>
       <input
         type="text"
@@ -271,11 +268,6 @@ function MultipleChoiceCard({ ex, onResult }: { ex: W45Exercise; onResult: (corr
         </div>
       )}
 
-      {/* Image context */}
-      {ex.imageContext && (
-        <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", fontStyle: "italic", marginBottom: "0.6rem", padding: "6px 10px", background: "var(--bg-secondary)", borderRadius: 6, borderLeft: "3px solid var(--border)" }}>{ex.imageContext}</p>
-      )}
-
       {/* Question */}
       {ex.question && (
         <p style={{ fontSize: "0.95rem", color: "var(--text-primary)", fontWeight: 500, marginBottom: "0.75rem" }}>{ex.question}</p>
@@ -322,6 +314,98 @@ function MultipleChoiceCard({ ex, onResult }: { ex: W45Exercise; onResult: (corr
 }
 
 // ─────────────────────────────────────
+// Exercise: Photo Analysis (Tang 5 Medium/Hard)
+// ─────────────────────────────────────
+
+function PhotoAnalysisCard({ ex, onResult }: { ex: W5bExercise; onResult: (correct: boolean) => void }) {
+  const [inputs, setInputs] = useState<string[]>(ex.steps.map(() => ""));
+  const [submitted, setSubmitted] = useState(false);
+  const [results, setResults] = useState<boolean[]>([]);
+  const [imgError, setImgError] = useState(false);
+
+  function norm(s: string) { return s.toLowerCase().trim().replace(/\s+/g, " ").replace(/[.,!?;:]/g, ""); }
+
+  function setInput(i: number, v: string) {
+    setInputs((prev) => { const next = [...prev]; next[i] = v; return next; });
+  }
+
+  function submit() {
+    if (inputs.some((v) => !v.trim())) return;
+    const res = ex.steps.map((step, i) => norm(inputs[i]) === norm(step.answer));
+    setResults(res);
+    setSubmitted(true);
+    // Correct = full sentence (last step) is correct
+    onResult(res[res.length - 1] ?? false);
+  }
+
+  const allFilled = inputs.every((v) => v.trim());
+
+  return (
+    <div>
+      {/* Image */}
+      {(ex.imagePath || ex.imageUrl) && !imgError && (
+        <div style={{ marginBottom: "0.75rem", borderRadius: 8, border: "1px solid var(--border)", overflow: "hidden", display: "flex", justifyContent: "center", background: "var(--bg-secondary)" }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={ex.imagePath ?? ex.imageUrl} alt="Exercise image" onError={() => setImgError(true)} style={{ maxWidth: "100%", height: "auto", display: "block" }} />
+        </div>
+      )}
+
+
+      {/* Step inputs */}
+      <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem", marginBottom: "0.75rem" }}>
+        {ex.steps.map((step, i) => {
+          const isLast = i === ex.steps.length - 1;
+          const res = results[i];
+          const borderColor = submitted ? (res ? "rgba(34,197,94,0.5)" : "rgba(239,68,68,0.5)") : "var(--border)";
+          const bg = submitted ? (res ? "rgba(34,197,94,0.06)" : "rgba(239,68,68,0.06)") : "var(--bg-secondary)";
+          return (
+            <div key={i}>
+              <label style={{ display: "block", fontSize: "0.78rem", fontWeight: 700, color: "var(--text-secondary)", marginBottom: 4 }}>{step.label}</label>
+              {isLast ? (
+                <textarea
+                  value={inputs[i]}
+                  onChange={(e) => setInput(i, e.target.value)}
+                  disabled={submitted}
+                  rows={2}
+                  placeholder="Viết câu hoàn chỉnh…"
+                  style={{ width: "100%", boxSizing: "border-box", padding: "8px 12px", fontSize: "0.9rem", border: `1.5px solid ${borderColor}`, borderRadius: 8, background: bg, color: "var(--text-primary)", outline: "none", resize: "none", fontFamily: "inherit" }}
+                />
+              ) : (
+                <input
+                  type="text"
+                  value={inputs[i]}
+                  onChange={(e) => setInput(i, e.target.value)}
+                  onKeyDown={(e) => { if (e.key === "Enter" && !submitted) { e.preventDefault(); } }}
+                  disabled={submitted}
+                  placeholder={`Nhập ${step.label.toLowerCase()}…`}
+                  style={{ width: "100%", boxSizing: "border-box", padding: "8px 12px", fontSize: "0.9rem", border: `1.5px solid ${borderColor}`, borderRadius: 8, background: bg, color: "var(--text-primary)", outline: "none", fontFamily: "inherit" }}
+                />
+              )}
+              {submitted && (
+                <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 3 }}>
+                  <span style={{ fontSize: "0.72rem", color: res ? "rgb(34,197,94)" : "rgb(239,68,68)", fontWeight: 600 }}>{res ? "✓" : "✗"}</span>
+                  {!res && <span style={{ fontSize: "0.72rem", color: "var(--text-muted)" }}>→ {step.answer}</span>}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {!submitted ? (
+        <button onClick={submit} disabled={!allFilled} style={{ background: !allFilled ? "var(--bg-elevated)" : "var(--accent-primary)", color: !allFilled ? "var(--text-muted)" : "#fff", border: "none", borderRadius: 8, padding: "8px 20px", fontSize: "0.85rem", fontWeight: 600, cursor: !allFilled ? "not-allowed" : "pointer", fontFamily: "inherit" }}>
+          Kiểm tra
+        </button>
+      ) : (
+        <div style={{ marginTop: "0.5rem" }}>
+          <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", margin: 0, lineHeight: 1.5 }}>{ex.explanation}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────
 // Exercise dispatcher
 // ─────────────────────────────────────
 
@@ -329,6 +413,7 @@ function ExerciseCard({ ex, onResult }: { ex: WExercise; onResult: (correct: boo
   if (ex.type === "word_ordering") return <WordOrderingCard ex={ex as W1Exercise} onResult={onResult} />;
   if (ex.type === "verb_fill") return <VerbFillCard ex={ex as W2Exercise} onResult={onResult} />;
   if (ex.type === "blank_fill") return <BlankFillCard ex={ex as W3Exercise} onResult={onResult} />;
+  if (ex.type === "photo_analysis") return <PhotoAnalysisCard ex={ex as W5bExercise} onResult={onResult} />;
   return <MultipleChoiceCard ex={ex as W45Exercise} onResult={onResult} />;
 }
 
