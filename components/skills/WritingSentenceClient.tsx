@@ -109,6 +109,12 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
     }
   }
 
+  function prev() {
+    if (idx > 0) {
+      setIdx(idx - 1); setAnswer(""); setSubmitted(false); setAi(null); setAiFailed(false); setGrading(false); setImgError(false);
+    }
+  }
+
   const sessionVals = Object.values(sessionScores);
   const sessionAvg = sessionVals.length ? Math.round(sessionVals.reduce((a, b) => a + b, 0) / sessionVals.length) : 0;
   const sessionPassed = sessionVals.filter((s) => s >= Q15_PASS).length;
@@ -157,15 +163,23 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
   }
 
   // ── Doing ──
+  const backBtn = idx > 0 ? [{ label: "Back", icon: "◀", onClick: prev }] : [];
   const nav: Parameters<typeof ExamShell>[0]["nav"] = !submitted
-    ? [{ label: "Chấm điểm", variant: "primary", disabled: !answer.trim(), onClick: submit }]
+    ? [...backBtn, { label: "Chấm điểm", variant: "primary", disabled: !answer.trim(), onClick: submit }]
     : grading
     ? [{ label: "Đang chấm…", variant: "primary", disabled: true }]
-    : [{ label: idx < total - 1 ? "Câu tiếp ▶" : "Kết thúc ✓", variant: "primary", onClick: next }];
+    : [{ label: idx < total - 1 ? "Next ▶" : "Kết thúc ✓", variant: "primary", onClick: next }];
 
   return (
     <ExamShell family={skill.family} testName={testName} questionLabel={`${idx + 1} / ${total}`} timer="08:00" exitHref={exitHref} nav={nav}>
       <ExamDirHeading family={skill.family}>Write a sentence based on a picture</ExamDirHeading>
+
+      {/* Directions (như đề thật) */}
+      <p style={{ fontSize: "0.82rem", color: EXAM.inkSoft, lineHeight: 1.6, margin: "0 0 14px" }}>
+        <strong>Directions:</strong> Write ONE sentence that is based on the picture. With the picture,
+        you are given TWO words that you must use in your sentence. You may change the forms of the words
+        and use them in any order.
+      </p>
 
       {/* image */}
       <div style={{ border: `1px solid ${EXAM.border}`, borderRadius: 8, overflow: "hidden", background: EXAM.panel, marginBottom: 4 }}>
@@ -178,23 +192,10 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
       </div>
       <p style={{ fontSize: "0.66rem", color: EXAM.muted, textAlign: "right", margin: "0 0 12px" }}>Ảnh: {ex.credit.author}</p>
 
-      {/* keywords */}
-      <p style={{ fontSize: "0.8rem", color: EXAM.inkSoft, margin: "0 0 6px" }}>Bắt buộc dùng 2 từ:</p>
-      <div style={{ display: "flex", gap: 8, marginBottom: 12, flexWrap: "wrap" }}>
-        {ex.keywords.map((k, i) => {
-          const used = submitted ? (i === 0 ? kw0Used : kw1Used) : null;
-          return (
-            <span key={k} style={{
-              fontSize: "0.9rem", fontWeight: 800, padding: "5px 14px", borderRadius: 7,
-              background: used === null ? EXAM.panel : used ? "rgba(31,157,87,0.1)" : "rgba(209,67,91,0.08)",
-              border: `1.5px solid ${used === null ? EXAM.border : used ? EXAM.ok : EXAM.bad}`,
-              color: used === null ? color.primary : used ? EXAM.ok : EXAM.bad,
-            }}>
-              {k}{used === true ? " ✓" : used === false ? " ✗" : ""}
-            </span>
-          );
-        })}
-      </div>
+      {/* Hai từ bắt buộc — dạng "word / word" dưới ảnh như đề thật */}
+      <p style={{ textAlign: "center", fontSize: "1.05rem", fontWeight: 700, color: EXAM.ink, margin: "0 0 14px", fontFamily: EXAM.sans }}>
+        {ex.keywords[0]} <span style={{ color: EXAM.muted, fontWeight: 400, margin: "0 4px" }}>/</span> {ex.keywords[1]}
+      </p>
 
       {/* textarea */}
       <textarea
@@ -241,6 +242,15 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
                 <button type="button" onClick={() => markSelf(false)} style={selfBtn(sessionScores[idx] != null && sessionScores[idx] < Q15_PASS, color.primary)}>✍️ Cần luyện thêm</button>
               </div>
             </div>
+          )}
+
+          {!grading && (
+            <p style={{ fontSize: "0.78rem", margin: "0 0 8px", color: EXAM.inkSoft }}>
+              Từ bắt buộc:
+              <span style={{ color: kw0Used ? EXAM.ok : EXAM.bad, fontWeight: 700 }}> {ex.keywords[0]} {kw0Used ? "✓" : "✗"}</span>
+              <span style={{ color: EXAM.muted }}> · </span>
+              <span style={{ color: kw1Used ? EXAM.ok : EXAM.bad, fontWeight: 700 }}>{ex.keywords[1]} {kw1Used ? "✓" : "✗"}</span>
+            </p>
           )}
 
           {!grading && (
