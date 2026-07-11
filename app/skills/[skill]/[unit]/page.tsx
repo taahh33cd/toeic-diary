@@ -5,7 +5,10 @@ import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { SkillComingSoon } from "@/components/skills/SkillComingSoon";
 import { WritingSentenceClient } from "@/components/skills/WritingSentenceClient";
+import { McqExamClient } from "@/components/skills/exam/McqExamClient";
+import { SpeakingExamClient } from "@/components/skills/exam/SpeakingExamClient";
 import { WRITING_Q1_5, Q15_PART_KEY } from "@/lib/skills/writing-q1-5";
+import { READING_PART5, LISTENING_PART2, SPEAKING_Q3_4 } from "@/lib/skills/sample";
 
 type Props = { params: Promise<{ skill: string; unit: string }> };
 
@@ -23,6 +26,17 @@ export default async function SkillUnitPage({ params }: Props) {
   const { skill, unit } = await params;
   const found = getUnit(skill, unit);
   if (!found) notFound();
+
+  // Các unit "flagship" đã có khung màn thi mẫu
+  if (skill === "reading" && unit === "part5") {
+    return <McqExamClient skill={found.skill} unit={found.unit} items={READING_PART5} mode="reading" totalSeconds={360} />;
+  }
+  if (skill === "listening" && unit === "part2") {
+    return <McqExamClient skill={found.skill} unit={found.unit} items={LISTENING_PART2} mode="listening" totalSeconds={300} />;
+  }
+  if (skill === "speaking" && unit === "q3-4") {
+    return <SpeakingExamClient skill={found.skill} unit={found.unit} items={SPEAKING_Q3_4} />;
+  }
 
   // Writing Q1-5 đã có bài tập thật → render trang làm bài
   if (skill === "writing" && unit === "q1-5") {

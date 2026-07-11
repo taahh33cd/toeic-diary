@@ -19,6 +19,8 @@ export interface Skill {
   emoji: string;
   label: string;
   labelVi: string;
+  /** Họ màu bài thi: "lr" (xanh lá) cho Listening/Reading, "sw" (navy) cho Speaking/Writing */
+  family: "lr" | "sw";
   /** Câu mô tả ở hero của trang kỹ năng */
   intro: string;
   units: SkillUnit[];
@@ -30,6 +32,7 @@ export const SKILLS: Skill[] = [
     emoji: "🎧",
     label: "Listening",
     labelVi: "Nghe hiểu",
+    family: "lr",
     intro: "Part 1–4 · luyện theo đúng format đề thi TOEIC chính thức.",
     units: [
       { slug: "part1", label: "Part 1", labelVi: "Mô tả tranh", labelEn: "Photographs", description: "Nghe 4 câu mô tả một bức ảnh, chọn câu đúng nhất." },
@@ -43,6 +46,7 @@ export const SKILLS: Skill[] = [
     emoji: "📖",
     label: "Reading",
     labelVi: "Đọc hiểu",
+    family: "lr",
     intro: "Part 5–7 · luyện theo đúng format đề thi TOEIC chính thức.",
     units: [
       { slug: "part5", label: "Part 5", labelVi: "Hoàn thành câu", labelEn: "Incomplete Sentences", description: "Chọn từ/cụm từ điền vào chỗ trống hoàn thành câu." },
@@ -55,6 +59,7 @@ export const SKILLS: Skill[] = [
     emoji: "🗣",
     label: "Speaking",
     labelVi: "Nói",
+    family: "sw",
     intro: "11 câu hỏi · luyện theo đúng format đề thi TOEIC chính thức.",
     units: [
       { slug: "q1-2",  label: "Questions 1–2",  labelVi: "Đọc to đoạn văn", labelEn: "Read a text aloud", description: "Đọc to một đoạn văn ngắn với ngữ điệu và phát âm chuẩn." },
@@ -69,6 +74,7 @@ export const SKILLS: Skill[] = [
     emoji: "✍️",
     label: "Writing",
     labelVi: "Viết",
+    family: "sw",
     intro: "8 câu hỏi · luyện theo đúng format đề thi TOEIC chính thức.",
     units: [
       { slug: "q1-5", label: "Questions 1–5", labelVi: "Mô tả tranh", labelEn: "Write a sentence based on a picture", description: "Viết câu mô tả ảnh dựa trên 2 từ khóa cho trước." },
