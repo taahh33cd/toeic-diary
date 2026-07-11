@@ -168,7 +168,46 @@ export const WRITING_Q1_5: WritingQ15Exercise[] = [
     ],
     tip: "\"prepare food\" = chuẩn bị món ăn. Có thể dùng bị động: food is being prepared.",
   },
+  {
+    id: "q15-13",
+    imageUrl: U("photo-1664382953518-4a664ab8a8c9"),
+    imageAlt: "Một người đang viết lên bảng trắng.",
+    credit: { author: "Centre for Ageing Better / Unsplash" },
+    keywords: ["teacher", "write"],
+    modelAnswers: [
+      "The teacher is writing on the whiteboard.",
+      "A teacher is writing something on the board.",
+    ],
+    tip: "\"write on the whiteboard/board\" — giới từ on chỉ bề mặt.",
+  },
+  {
+    id: "q15-14",
+    imageUrl: U("photo-1717281234297-3def5ae3eee1"),
+    imageAlt: "Một người đàn ông đang lăn sơn lên tường.",
+    credit: { author: "Ernys / Unsplash" },
+    keywords: ["man", "paint"],
+    modelAnswers: [
+      "The man is painting the wall.",
+      "A man is painting the wall with a roller.",
+    ],
+    tip: "\"paint the wall\" — paint đi thẳng với tân ngữ, không cần giới từ.",
+  },
+  {
+    id: "q15-15",
+    imageUrl: U("photo-1728706613021-e447801e1ea6"),
+    imageAlt: "Một người phụ nữ đội mũ, mặc tạp dề đang chăm sóc hoa.",
+    credit: { author: "Amie Roussel / Unsplash" },
+    keywords: ["woman", "flower"],
+    modelAnswers: [
+      "The woman is taking care of the flowers.",
+      "A woman is arranging some flowers in the garden.",
+    ],
+    tip: "\"take care of\" = chăm sóc. flower thường ở số nhiều: the flowers.",
+  },
 ];
+
+/** Số câu mỗi test (đúng format thật: Q1-5 = 5 câu / test) */
+export const Q15_TEST_SIZE = 5;
 
 // ─────────────────────────────────────
 // Kiểm tra học viên đã dùng đủ 2 từ khóa chưa (chỉ là gợi ý, không phải chấm ngữ pháp).
