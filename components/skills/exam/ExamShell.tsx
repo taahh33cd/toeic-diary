@@ -60,14 +60,14 @@ export function ExamShell({
             background: `linear-gradient(180deg, ${fam.primary}, ${fam.dark})`,
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: 9, fontWeight: 800, fontSize: "0.95rem", minWidth: 0 }}>
-            <span style={{ fontSize: "1.05rem", lineHeight: 1 }}>✳</span>
+          <div style={{ display: "flex", alignItems: "center", gap: 9, fontWeight: 800, fontSize: "1.05rem", minWidth: 0 }}>
+            <span style={{ fontSize: "1.15rem", lineHeight: 1 }}>✳</span>
             <span>TOEIC</span>
-            <span style={{ fontWeight: 600, opacity: 0.85, fontSize: "0.74rem", borderLeft: "1px solid rgba(255,255,255,.35)", paddingLeft: 9, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+            <span style={{ fontWeight: 600, opacity: 0.85, fontSize: "0.82rem", borderLeft: "1px solid rgba(255,255,255,.35)", paddingLeft: 9, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
               {testName}
             </span>
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: "0.8rem", flexShrink: 0 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: "0.9rem", flexShrink: 0 }}>
             {questionLabel && <span style={{ opacity: 0.9, fontVariantNumeric: "tabular-nums", whiteSpace: "nowrap" }}>{questionLabel}</span>}
             {timer && (
               <span style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,.16)", border: "1px solid rgba(255,255,255,.28)", borderRadius: 7, padding: "4px 10px", fontVariantNumeric: "tabular-nums", fontWeight: 700 }}>
@@ -88,10 +88,10 @@ export function ExamShell({
               const isGhost = b.variant === "ghost";
               const style: React.CSSProperties = {
                 fontFamily: EXAM.sans,
-                fontSize: "0.76rem",
+                fontSize: "0.86rem",
                 fontWeight: 700,
                 borderRadius: 7,
-                padding: isPrimary ? "7px 22px" : "7px 13px",
+                padding: isPrimary ? "9px 24px" : "9px 15px",
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 6,
@@ -117,7 +117,7 @@ export function ExamShell({
 
       {/* Exit link under the exam card */}
       <div style={{ textAlign: "center", marginTop: "0.9rem" }}>
-        <Link href={exitHref} style={{ fontSize: "0.78rem", color: EXAM.muted, textDecoration: "none", fontFamily: EXAM.sans }}>
+        <Link href={exitHref} style={{ fontSize: "0.86rem", color: EXAM.muted, textDecoration: "none", fontFamily: EXAM.sans }}>
           ← Thoát bài thi
         </Link>
       </div>
@@ -129,7 +129,7 @@ export function ExamShell({
 export function ExamDirHeading({ family, children }: { family: Family; children: React.ReactNode }) {
   const fam = FAMILY[family];
   return (
-    <p style={{ color: fam.primary, fontWeight: 800, fontSize: "0.95rem", borderBottom: `2px solid ${fam.soft === "#eaf5ef" ? "#cfe4d7" : "#d5deec"}`, paddingBottom: 5, margin: "0 0 12px" }}>
+    <p style={{ color: fam.primary, fontWeight: 800, fontSize: "1.1rem", borderBottom: `2px solid ${fam.soft === "#eaf5ef" ? "#cfe4d7" : "#d5deec"}`, paddingBottom: 6, margin: "0 0 14px" }}>
       {children}
     </p>
   );

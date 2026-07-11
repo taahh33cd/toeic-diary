@@ -140,17 +140,17 @@ export function SpeakingExamClient({ skill, unit, items }: { skill: Skill; unit:
             </div>
           )}
           <div style={{ background: EXAM.panel, border: `1px solid ${EXAM.border}`, borderRadius: 8, padding: "12px 14px" }}>
-            <p style={{ fontSize: "0.75rem", fontWeight: 700, color: EXAM.inkSoft, textTransform: "uppercase", letterSpacing: "0.03em", margin: "0 0 6px" }}>Bài nói mẫu</p>
-            <p style={{ fontSize: "0.9rem", color: EXAM.ink, lineHeight: 1.6, margin: "0 0 10px" }}>{item.sampleResponse}</p>
+            <p style={{ fontSize: "0.82rem", fontWeight: 700, color: EXAM.inkSoft, textTransform: "uppercase", letterSpacing: "0.03em", margin: "0 0 6px" }}>Bài nói mẫu</p>
+            <p style={{ fontSize: "1rem", color: EXAM.ink, lineHeight: 1.65, margin: "0 0 10px" }}>{item.sampleResponse}</p>
             <ul style={{ margin: 0, paddingLeft: "1.1rem" }}>
-              {item.tips.map((t, i) => <li key={i} style={{ fontSize: "0.8rem", color: EXAM.inkSoft, lineHeight: 1.5, marginBottom: 3 }}>{t}</li>)}
+              {item.tips.map((t, i) => <li key={i} style={{ fontSize: "0.88rem", color: EXAM.inkSoft, lineHeight: 1.55, marginBottom: 4 }}>{t}</li>)}
             </ul>
           </div>
         </div>
       )}
 
       {phase === "prep" && (
-        <p style={{ fontSize: "0.82rem", color: EXAM.inkSoft, textAlign: "center", margin: 0 }}>
+        <p style={{ fontSize: "0.92rem", color: EXAM.inkSoft, textAlign: "center", margin: 0 }}>
           Chuẩn bị mô tả bức ảnh. Khi hết giờ chuẩn bị, phần trả lời sẽ tự bắt đầu.
         </p>
       )}
@@ -162,7 +162,7 @@ function TimerCard({ label, value, active, color, live }: { label: string; value
   return (
     <div style={{ border: `1px solid ${live ? "#f3c6cc" : EXAM.border}`, borderRadius: 9, padding: "10px 12px", textAlign: "center", background: live ? "#fdeff0" : active ? "#fff" : EXAM.panel, opacity: active ? 1 : 0.6 }}>
       <div style={{ fontSize: "0.64rem", letterSpacing: "0.09em", fontWeight: 800, color: EXAM.muted, textTransform: "uppercase" }}>{label}</div>
-      <div style={{ fontSize: "1.5rem", fontWeight: 800, fontVariantNumeric: "tabular-nums", color, marginTop: 2 }}>{value}</div>
+      <div style={{ fontSize: "1.75rem", fontWeight: 800, fontVariantNumeric: "tabular-nums", color, marginTop: 2 }}>{value}</div>
     </div>
   );
 }

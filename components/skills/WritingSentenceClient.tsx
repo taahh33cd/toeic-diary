@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ExamShell, ExamDirHeading } from "@/components/skills/exam/ExamShell";
 import { FAMILY, EXAM } from "@/lib/skills/exam-theme";
 import type { Skill, SkillUnit } from "@/lib/skills/structure";
@@ -41,6 +41,15 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
   const [imgError, setImgError] = useState(false);
   const [sessionScores, setSessionScores] = useState<Record<number, number>>({});
   const [best, setBest] = useState<Record<string, Best>>(bestByExercise);
+  const [secondsLeft, setSecondsLeft] = useState(8 * 60);
+
+  // Đếm ngược 8 phút khi đang làm bài (dừng ở 00:00)
+  useEffect(() => {
+    if (phase !== "doing") return;
+    const t = setInterval(() => setSecondsLeft((s) => (s <= 1 ? 0 : s - 1)), 1000);
+    return () => clearInterval(t);
+  }, [phase]);
+  const timerStr = `${String(Math.floor(secondsLeft / 60)).padStart(2, "0")}:${String(secondsLeft % 60).padStart(2, "0")}`;
 
   const total = exercises.length;
   const ex = exercises[idx];
@@ -58,7 +67,7 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
     setIdx(0); setAnswer(""); setSubmitted(false); setGrading(false);
     setAi(null); setAiFailed(false); setImgError(false); setSessionScores({});
   }
-  function start() { reset(); setPhase("doing"); }
+  function start() { reset(); setSecondsLeft(8 * 60); setPhase("doing"); }
 
   function saveAttempt(exerciseId: string, score: number, passed: boolean) {
     setBest((prev) => {
@@ -124,7 +133,7 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
     return (
       <ExamShell family={skill.family} testName={testName} exitHref={exitHref} nav={[{ label: `Bắt đầu · ${total} câu`, variant: "primary", onClick: start }]}>
         <ExamDirHeading family={skill.family}>Write a sentence based on a picture</ExamDirHeading>
-        <ul style={{ margin: "0 0 14px", paddingLeft: "1.1rem", fontSize: "0.85rem", color: EXAM.inkSoft, lineHeight: 1.7 }}>
+        <ul style={{ margin: "0 0 14px", paddingLeft: "1.1rem", fontSize: "0.95rem", color: EXAM.inkSoft, lineHeight: 1.7 }}>
           <li>Mỗi câu có 1 bức ảnh và <strong>2 từ cho trước</strong>.</li>
           <li>Viết <strong>một câu</strong> mô tả ảnh, <strong>bắt buộc dùng cả 2 từ</strong> (được chia dạng khác).</li>
           <li><strong>AI chấm ngay</strong>: cho điểm, sửa lỗi, và có câu mẫu để đối chiếu.</li>
@@ -171,11 +180,11 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
     : [{ label: idx < total - 1 ? "Next ▶" : "Kết thúc ✓", variant: "primary", onClick: next }];
 
   return (
-    <ExamShell family={skill.family} testName={testName} questionLabel={`${idx + 1} / ${total}`} timer="08:00" exitHref={exitHref} nav={nav}>
+    <ExamShell family={skill.family} testName={testName} questionLabel={`${idx + 1} / ${total}`} timer={timerStr} exitHref={exitHref} nav={nav}>
       <ExamDirHeading family={skill.family}>Write a sentence based on a picture</ExamDirHeading>
 
       {/* Directions (như đề thật) */}
-      <p style={{ fontSize: "0.82rem", color: EXAM.inkSoft, lineHeight: 1.6, margin: "0 0 14px" }}>
+      <p style={{ fontSize: "0.95rem", color: EXAM.inkSoft, lineHeight: 1.6, margin: "0 0 14px" }}>
         <strong>Directions:</strong> Write ONE sentence that is based on the picture. With the picture,
         you are given TWO words that you must use in your sentence. You may change the forms of the words
         and use them in any order.
@@ -193,8 +202,8 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
       <p style={{ fontSize: "0.66rem", color: EXAM.muted, textAlign: "right", margin: "0 0 12px" }}>Ảnh: {ex.credit.author}</p>
 
       {/* Hai từ bắt buộc — dạng "word / word" dưới ảnh như đề thật */}
-      <p style={{ textAlign: "center", fontSize: "1.05rem", fontWeight: 700, color: EXAM.ink, margin: "0 0 14px", fontFamily: EXAM.sans }}>
-        {ex.keywords[0]} <span style={{ color: EXAM.muted, fontWeight: 400, margin: "0 4px" }}>/</span> {ex.keywords[1]}
+      <p style={{ textAlign: "center", fontSize: "1.35rem", fontWeight: 700, color: EXAM.ink, margin: "2px 0 16px", fontFamily: EXAM.sans }}>
+        {ex.keywords[0]} <span style={{ color: EXAM.muted, fontWeight: 400, margin: "0 6px" }}>/</span> {ex.keywords[1]}
       </p>
 
       {/* textarea */}
@@ -204,10 +213,10 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
         disabled={submitted}
         rows={2}
         placeholder="Type your response here."
-        style={{ width: "100%", boxSizing: "border-box", padding: "10px 12px", fontSize: "0.95rem", border: `1.5px solid ${EXAM.border}`, borderRadius: 8, background: "#fff", color: EXAM.ink, outline: "none", resize: "vertical", fontFamily: EXAM.sans, lineHeight: 1.5 }}
+        style={{ width: "100%", boxSizing: "border-box", padding: "12px 14px", fontSize: "1.05rem", border: `1.5px solid ${EXAM.border}`, borderRadius: 8, background: "#fff", color: EXAM.ink, outline: "none", resize: "vertical", fontFamily: EXAM.sans, lineHeight: 1.5 }}
       />
       {!submitted && (
-        <p style={{ fontSize: "0.72rem", color: EXAM.muted, margin: "5px 0 0" }}>
+        <p style={{ fontSize: "0.82rem", color: EXAM.muted, margin: "6px 0 0" }}>
           {countWords(answer)} từ{!enoughWords && answer.trim() ? " · nên viết câu đủ ý (≥ 5 từ)" : ""}
         </p>
       )}
@@ -220,14 +229,14 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
             <div style={{ marginBottom: 12 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6, flexWrap: "wrap" }}>
                 <ScoreBadge score={ai.score} color={color.primary} />
-                <span style={{ fontSize: "0.78rem", fontWeight: 700, color: ai.usedBothKeywords ? EXAM.ok : EXAM.bad }}>
+                <span style={{ fontSize: "0.86rem", fontWeight: 700, color: ai.usedBothKeywords ? EXAM.ok : EXAM.bad }}>
                   {ai.usedBothKeywords ? "✓ Dùng đủ 2 từ" : "✗ Thiếu từ bắt buộc"}
                 </span>
               </div>
-              {ai.corrected && <p style={{ fontSize: "0.88rem", color: EXAM.ink, margin: "0 0 4px", lineHeight: 1.5 }}><strong>Câu sửa lại:</strong> {ai.corrected}</p>}
-              {ai.feedback && <p style={{ fontSize: "0.82rem", color: EXAM.inkSoft, margin: "0 0 4px", lineHeight: 1.5 }}>{ai.feedback}</p>}
+              {ai.corrected && <p style={{ fontSize: "0.98rem", color: EXAM.ink, margin: "0 0 4px", lineHeight: 1.55 }}><strong>Câu sửa lại:</strong> {ai.corrected}</p>}
+              {ai.feedback && <p style={{ fontSize: "0.9rem", color: EXAM.inkSoft, margin: "0 0 4px", lineHeight: 1.55 }}>{ai.feedback}</p>}
               {ai.errors.length > 0 && (
-                <ul style={{ margin: "0.25rem 0 0", paddingLeft: "1.1rem", fontSize: "0.78rem", color: EXAM.muted, lineHeight: 1.55 }}>
+                <ul style={{ margin: "0.25rem 0 0", paddingLeft: "1.1rem", fontSize: "0.86rem", color: EXAM.muted, lineHeight: 1.55 }}>
                   {ai.errors.map((e, i) => <li key={i}>{e}</li>)}
                 </ul>
               )}
@@ -245,7 +254,7 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
           )}
 
           {!grading && (
-            <p style={{ fontSize: "0.78rem", margin: "0 0 8px", color: EXAM.inkSoft }}>
+            <p style={{ fontSize: "0.88rem", margin: "0 0 8px", color: EXAM.inkSoft }}>
               Từ bắt buộc:
               <span style={{ color: kw0Used ? EXAM.ok : EXAM.bad, fontWeight: 700 }}> {ex.keywords[0]} {kw0Used ? "✓" : "✗"}</span>
               <span style={{ color: EXAM.muted }}> · </span>
@@ -254,10 +263,10 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
           )}
 
           {!grading && (
-            <div style={{ background: EXAM.panel, border: `1px solid ${EXAM.border}`, borderRadius: 8, padding: "10px 12px" }}>
-              <p style={{ fontSize: "0.75rem", fontWeight: 700, color: EXAM.inkSoft, margin: "0 0 6px", letterSpacing: "0.03em", textTransform: "uppercase" }}>Câu mẫu tham khảo</p>
-              {ex.modelAnswers.map((m, i) => <p key={i} style={{ fontSize: "0.9rem", color: EXAM.ink, margin: "0 0 3px", lineHeight: 1.5 }}>• {m}</p>)}
-              <p style={{ fontSize: "0.78rem", color: EXAM.muted, margin: "6px 0 0", lineHeight: 1.5, fontStyle: "italic" }}>💡 {ex.tip}</p>
+            <div style={{ background: EXAM.panel, border: `1px solid ${EXAM.border}`, borderRadius: 8, padding: "12px 14px" }}>
+              <p style={{ fontSize: "0.82rem", fontWeight: 700, color: EXAM.inkSoft, margin: "0 0 6px", letterSpacing: "0.03em", textTransform: "uppercase" }}>Câu mẫu tham khảo</p>
+              {ex.modelAnswers.map((m, i) => <p key={i} style={{ fontSize: "1rem", color: EXAM.ink, margin: "0 0 4px", lineHeight: 1.55 }}>• {m}</p>)}
+              <p style={{ fontSize: "0.86rem", color: EXAM.muted, margin: "6px 0 0", lineHeight: 1.55, fontStyle: "italic" }}>💡 {ex.tip}</p>
             </div>
           )}
         </div>

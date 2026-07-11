@@ -118,7 +118,7 @@ export function McqExamClient({ skill, unit, items, mode, totalSeconds }: Props)
         type="button"
         onClick={() => pick(id)}
         disabled={submitted}
-        style={{ display: "flex", alignItems: "flex-start", gap: 10, padding: "10px 13px", border, borderRadius: 8, background: bg, color: col, textAlign: "left", cursor: submitted ? "default" : "pointer", fontFamily: EXAM.sans, fontSize: "0.88rem", width: "100%" }}
+        style={{ display: "flex", alignItems: "flex-start", gap: 10, padding: "12px 15px", border, borderRadius: 8, background: bg, color: col, textAlign: "left", cursor: submitted ? "default" : "pointer", fontFamily: EXAM.sans, fontSize: "0.98rem", width: "100%" }}
       >
         <span style={{ fontWeight: 800, minWidth: 16 }}>{id}.</span>
         <span style={{ lineHeight: 1.45 }}>{text}</span>
@@ -147,12 +147,12 @@ export function McqExamClient({ skill, unit, items, mode, totalSeconds }: Props)
       {mode === "listening" ? (
         <div style={{ display: "flex", alignItems: "center", gap: 12, background: EXAM.panel, border: `1px solid ${EXAM.border}`, borderRadius: 9, padding: "12px 14px", marginBottom: 14 }}>
           <button type="button" onClick={() => speak(item)} style={{ width: 34, height: 34, borderRadius: "50%", background: color.primary, color: "#fff", border: "none", cursor: "pointer", fontSize: "0.9rem", flexShrink: 0 }}>▶</button>
-          <div style={{ fontSize: "0.82rem", color: EXAM.inkSoft }}>
+          <div style={{ fontSize: "0.92rem", color: EXAM.inkSoft }}>
             Nhấn ▶ để nghe câu hỏi &amp; 3 phương án (giọng đọc máy). Chọn phản hồi phù hợp nhất.
           </div>
         </div>
       ) : (
-        <p style={{ fontSize: "1rem", color: EXAM.ink, lineHeight: 1.6, margin: "0 0 14px" }}>
+        <p style={{ fontSize: "1.15rem", color: EXAM.ink, lineHeight: 1.65, margin: "0 0 16px" }}>
           {item.prompt.split("_____").map((seg, i, arr) => (
             <span key={i}>
               {seg}
@@ -168,10 +168,10 @@ export function McqExamClient({ skill, unit, items, mode, totalSeconds }: Props)
 
       {submitted && (
         <div style={{ marginTop: 12, background: EXAM.panel, border: `1px solid ${EXAM.border}`, borderRadius: 8, padding: "10px 12px" }}>
-          <span style={{ fontSize: "0.78rem", fontWeight: 700, color: selected === item.answer ? EXAM.ok : EXAM.bad }}>
+          <span style={{ fontSize: "0.88rem", fontWeight: 700, color: selected === item.answer ? EXAM.ok : EXAM.bad }}>
             {selected === item.answer ? "✓ Chính xác" : `✗ Đáp án đúng: ${item.answer}`}
           </span>
-          <p style={{ fontSize: "0.82rem", color: EXAM.inkSoft, margin: "4px 0 0", lineHeight: 1.5 }}>{item.explanation}</p>
+          <p style={{ fontSize: "0.9rem", color: EXAM.inkSoft, margin: "5px 0 0", lineHeight: 1.55 }}>{item.explanation}</p>
         </div>
       )}
     </ExamShell>
