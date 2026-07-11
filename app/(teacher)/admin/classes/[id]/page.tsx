@@ -16,8 +16,9 @@ import {
   Pencil,
   UserMinus,
   RefreshCw,
+  Copy,
 } from "lucide-react";
-import { useClass } from "@/hooks/firebase/useClasses";
+import { useClass, useClasses } from "@/hooks/firebase/useClasses";
 import { useAllStudents } from "@/hooks/firebase/useAllStudents";
 import { useClassAttendance } from "@/hooks/firebase/useClassAttendance";
 import {
@@ -367,11 +368,15 @@ function HomeworkModal({
   onSave,
   onAutosave,
   onClose,
+  headerOverride,
+  targetLabel,
 }: {
   initial?: Homework;
   onSave: (hw: Homework) => Promise<void>;
   onAutosave?: (hw: Homework, isNew: boolean) => Promise<void>;
   onClose: () => void;
+  headerOverride?: string;
+  targetLabel?: string;
 }) {
   const [date, setDate] = useState(initial?.date ?? today());
   const [endDate, setEndDate] = useState(initial?.endDate ?? "");
@@ -424,9 +429,14 @@ function HomeworkModal({
       <div className="w-full max-w-2xl my-8 rounded-2xl border shadow-xl overflow-hidden"
         style={{ background: "var(--bg-elevated)", borderColor: "var(--border)" }}>
         <div className="flex items-center justify-between px-5 py-4 border-b" style={{ borderColor: "var(--border)" }}>
-          <h3 className="font-bold" style={{ color: "var(--accent-primary)" }}>
-            📋 {initial ? "Sửa BTVN lớp" : "Thêm BTVN lớp"}
-          </h3>
+          <div>
+            <h3 className="font-bold" style={{ color: "var(--accent-primary)" }}>
+              📋 {headerOverride ?? (initial ? "Sửa BTVN lớp" : "Thêm BTVN lớp")}
+            </h3>
+            {targetLabel && (
+              <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>→ {targetLabel}</p>
+            )}
+          </div>
           <button onClick={onClose} style={{ color: "var(--text-muted)" }}><X size={18} /></button>
         </div>
 
@@ -896,6 +906,144 @@ function StudentGridSection({
   );
 }
 
+// ─── Duplicate BTVN: target picker ────────────────────────────────────────────
+
+type DupTarget =
+  | { type: "class"; classId: string; members: string[]; label: string }
+  | { type: "student"; code: string; label: string };
+
+function ClassDupTargetModal({ hw, currentClassId, currentMembers, onConfirm, onClose }: {
+  hw: Homework;
+  currentClassId: string;
+  currentMembers: string[];
+  onConfirm: (target: DupTarget) => void;
+  onClose: () => void;
+}) {
+  const [scope, setScope] = useState<"self" | "class" | "student">("self");
+  const [query, setQuery] = useState("");
+  const [selectedClassId, setSelectedClassId] = useState<string | null>(null);
+  const [selectedCode, setSelectedCode] = useState<string | null>(null);
+  const { classes } = useClasses();
+  const { students } = useAllStudents();
+
+  const q = query.trim().toLowerCase();
+  const otherClasses = classes.filter((c) => c.id !== currentClassId);
+  const filteredStudents = students
+    .filter((s) => !q || s.name?.toLowerCase().includes(q) || s.id.toLowerCase().includes(q));
+
+  const canConfirm = scope === "self"
+    || (scope === "class" && !!selectedClassId)
+    || (scope === "student" && !!selectedCode);
+
+  function handleConfirm() {
+    if (scope === "self") {
+      onConfirm({ type: "class", classId: currentClassId, members: currentMembers, label: "Lớp này" });
+    } else if (scope === "class" && selectedClassId) {
+      const c = classes.find((c) => c.id === selectedClassId);
+      if (c) onConfirm({ type: "class", classId: c.id, members: c.members ?? [], label: `${c.name} (${c.members?.length ?? 0} học viên)` });
+    } else if (scope === "student" && selectedCode) {
+      const s = students.find((s) => s.id === selectedCode);
+      onConfirm({ type: "student", code: selectedCode, label: s ? `${s.name} (${s.id})` : selectedCode });
+    }
+  }
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4" style={{ background: "rgba(0,0,0,0.5)" }}>
+      <div className="w-full max-w-md rounded-2xl" style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)" }}>
+        <div className="flex items-center justify-between px-5 py-4 border-b" style={{ borderColor: "var(--border)" }}>
+          <h3 className="font-bold" style={{ color: "var(--accent-primary)" }}>📋 Nhân bản BTVN</h3>
+          <button onClick={onClose} style={{ color: "var(--text-muted)" }}><X size={18} /></button>
+        </div>
+
+        <div className="p-5 space-y-3">
+          <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+            Chọn nơi nhân bản nội dung BTVN {hw.title ? `"${hw.title}"` : fmtDate(hw.date)} sang. Bạn sẽ chọn lại ngày ở bước tiếp theo.
+          </p>
+
+          <div className="flex gap-1.5">
+            {([
+              { key: "self", label: "Lớp này" },
+              { key: "class", label: "Lớp khác" },
+              { key: "student", label: "Học viên" },
+            ] as const).map(({ key, label }) => (
+              <button
+                key={key}
+                onClick={() => setScope(key)}
+                className="text-xs px-2.5 py-1.5 rounded-lg font-medium flex-1"
+                style={{
+                  background: scope === key ? "var(--accent-primary)" : "var(--border)",
+                  color: scope === key ? "#fff" : "var(--text-secondary)",
+                }}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+
+          {scope === "class" && (
+            <div className="max-h-48 overflow-y-auto rounded-lg" style={{ border: "1px solid var(--border)" }}>
+              {otherClasses.length === 0 && (
+                <p className="text-xs text-center py-3" style={{ color: "var(--text-muted)" }}>Không có lớp khác</p>
+              )}
+              {otherClasses.map((c) => (
+                <button
+                  key={c.id}
+                  onClick={() => setSelectedClassId(c.id)}
+                  className="w-full text-left px-3 py-2 text-xs flex items-center justify-between"
+                  style={{ background: selectedClassId === c.id ? "rgba(196,98,45,0.1)" : "transparent", color: "var(--text-primary)" }}
+                >
+                  <span>{c.name}</span>
+                  <span style={{ color: "var(--text-muted)" }}>{c.members?.length ?? 0} học viên</span>
+                </button>
+              ))}
+            </div>
+          )}
+
+          {scope === "student" && (
+            <div className="space-y-2">
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Tìm theo tên hoặc mã học viên..."
+                className="w-full px-3 py-2 text-xs rounded-lg border outline-none"
+                style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }}
+              />
+              <div className="max-h-44 overflow-y-auto rounded-lg" style={{ border: "1px solid var(--border)" }}>
+                {filteredStudents.length === 0 && (
+                  <p className="text-xs text-center py-3" style={{ color: "var(--text-muted)" }}>Không tìm thấy học viên</p>
+                )}
+                {filteredStudents.map((s) => (
+                  <button
+                    key={s.id}
+                    onClick={() => setSelectedCode(s.id)}
+                    className="w-full text-left px-3 py-2 text-xs flex items-center justify-between"
+                    style={{ background: selectedCode === s.id ? "rgba(196,98,45,0.1)" : "transparent", color: "var(--text-primary)" }}
+                  >
+                    <span>{s.name}</span>
+                    <span style={{ color: "var(--text-muted)" }}>{s.id}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        <div className="flex justify-end gap-2 px-5 py-4 border-t" style={{ borderColor: "var(--border)" }}>
+          <button onClick={onClose} className="px-4 py-2 rounded-xl text-sm border" style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}>Hủy</button>
+          <button
+            onClick={handleConfirm}
+            disabled={!canConfirm}
+            className="px-4 py-2 rounded-xl text-sm font-semibold disabled:opacity-50"
+            style={{ background: "var(--accent-primary)", color: "#fff" }}
+          >
+            Tiếp tục
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ─── ClassHomeworkSection ─────────────────────────────────────────────────────
 
 function ClassHomeworkSection({
@@ -908,6 +1056,8 @@ function ClassHomeworkSection({
   memberCodes: string[];
 }) {
   const [modal, setModal] = useState<{ mode: "add" } | { mode: "edit"; hw: Homework } | null>(null);
+  const [dupPick, setDupPick] = useState<Homework | null>(null);
+  const [dupModal, setDupModal] = useState<{ initial: Homework; target: DupTarget } | null>(null);
   const [expanded, setExpanded] = useState<string | null>(null);
   const [propagating, setPropagating] = useState(false);
   const autosavedHwIdRef = useRef<string | null>(null);
@@ -951,6 +1101,24 @@ function ClassHomeworkSection({
     setPropagating(true);
     await Promise.all(memberCodes.map((code) => updateHomework(code, hw.id, hw)));
     setPropagating(false);
+  }
+
+  function handleDupTargetConfirm(source: Homework, target: DupTarget) {
+    const initial: Homework = { ...source, id: `hw${Date.now()}`, date: "", endDate: undefined };
+    setDupModal({ initial, target });
+    setDupPick(null);
+  }
+
+  async function handleSaveDuplicate(hw: Homework, target: DupTarget) {
+    setPropagating(true);
+    if (target.type === "class") {
+      await pushClassHomework(target.classId, hw);
+      await Promise.all(target.members.map((code) => pushHomework(code, hw)));
+    } else {
+      await pushHomework(target.code, hw);
+    }
+    setPropagating(false);
+    setDupModal(null);
   }
 
   // M7: Delete from class + propagate to all member students
@@ -1062,6 +1230,14 @@ function ClassHomeworkSection({
                         <Pencil size={13} />
                       </button>
                       <button
+                        onClick={(e) => { e.stopPropagation(); setDupPick(hw); }}
+                        className="p-1.5 rounded-lg hover:opacity-70"
+                        style={{ color: "var(--text-muted)", background: "var(--bg-elevated)" }}
+                        title="Nhân bản BTVN"
+                      >
+                        <Copy size={13} />
+                      </button>
+                      <button
                         onClick={(e) => { e.stopPropagation(); handleSync(hw); }}
                         className="p-1.5 rounded-lg hover:opacity-70"
                         style={{ color: "rgb(59,130,246)", background: "rgba(59,130,246,0.08)" }}
@@ -1107,6 +1283,26 @@ function ClassHomeworkSection({
           onSave={handleSave}
           onAutosave={handleAutosave}
           onClose={() => { setModal(null); autosavedHwIdRef.current = null; }}
+        />
+      )}
+
+      {dupPick && (
+        <ClassDupTargetModal
+          hw={dupPick}
+          currentClassId={classId}
+          currentMembers={memberCodes}
+          onConfirm={(target) => handleDupTargetConfirm(dupPick, target)}
+          onClose={() => setDupPick(null)}
+        />
+      )}
+
+      {dupModal && (
+        <HomeworkModal
+          initial={dupModal.initial}
+          headerOverride="Nhân bản BTVN"
+          targetLabel={dupModal.target.label}
+          onSave={(hw) => handleSaveDuplicate(hw, dupModal.target)}
+          onClose={() => setDupModal(null)}
         />
       )}
     </>
