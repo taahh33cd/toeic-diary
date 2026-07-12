@@ -53,6 +53,8 @@ export default function PurchasesPage() {
         body: JSON.stringify({ id, action }),
       });
       setPurchases((prev) => prev.filter((p) => p.id !== id));
+      // Cập nhật ngay indicator "Mở khoá" trên nav
+      window.dispatchEvent(new Event("purchases:changed"));
     } catch {
       alert("Thao tác thất bại, thử lại.");
     } finally {

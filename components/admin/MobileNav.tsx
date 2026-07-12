@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { signOutAll } from "@/hooks/firebase/useFirebaseAuthBridge";
 import { useRouter } from "next/navigation";
+import { usePendingPurchases } from "@/hooks/usePendingPurchases";
 
 const FOCUSABLE_SELECTORS =
   'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
@@ -31,6 +32,7 @@ export function MobileNav({ role = "teacher" }: { role?: string }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
+  const pendingPurchases = usePendingPurchases();
   const triggerRef = useRef<HTMLButtonElement>(null);
   const drawerRef = useRef<HTMLDivElement>(null);
 
@@ -179,6 +181,15 @@ export function MobileNav({ role = "teacher" }: { role?: string }) {
               >
                 <span className="text-base w-5 text-center" aria-hidden="true">{item.emoji}</span>
                 {item.label}
+                {item.href === "/admin/purchases" && pendingPurchases > 0 && (
+                  <span
+                    className="ml-auto min-w-[18px] h-[18px] rounded-full text-white text-[10px] font-bold flex items-center justify-center px-1 leading-none shrink-0"
+                    style={{ background: "#ef4444" }}
+                    aria-label={`${pendingPurchases} đơn chờ xác nhận`}
+                  >
+                    {pendingPurchases > 99 ? "99+" : pendingPurchases}
+                  </span>
+                )}
               </Link>
             );
           })}

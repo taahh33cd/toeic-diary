@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { signOutAll } from "@/hooks/firebase/useFirebaseAuthBridge";
 import { useRouter } from "next/navigation";
+import { usePendingPurchases } from "@/hooks/usePendingPurchases";
 
 const NAV = [
   { href: "/admin",            icon: "dashboard",    label: "Dashboard",  exact: true },
@@ -27,6 +28,7 @@ interface SidebarProps {
 export function Sidebar({ role = "teacher" }: SidebarProps) {
   const pathname = usePathname();
   const router = useRouter();
+  const pendingPurchases = usePendingPurchases();
 
   async function handleSignOut() {
     await signOutAll();
@@ -100,6 +102,15 @@ export function Sidebar({ role = "teacher" }: SidebarProps) {
                 {item.icon}
               </span>
               <span className="text-[13px] font-semibold tracking-[0.04em]">{item.label}</span>
+              {item.href === "/admin/purchases" && pendingPurchases > 0 && (
+                <span
+                  className="ml-auto min-w-[18px] h-[18px] rounded-full text-white text-[10px] font-bold flex items-center justify-center px-1 leading-none shrink-0"
+                  style={{ background: "#ef4444" }}
+                  aria-label={`${pendingPurchases} đơn chờ xác nhận`}
+                >
+                  {pendingPurchases > 99 ? "99+" : pendingPurchases}
+                </span>
+              )}
             </Link>
           );
         })}
