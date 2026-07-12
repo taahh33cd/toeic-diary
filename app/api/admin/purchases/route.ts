@@ -1,6 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
+import { sendPushToUser } from "@/lib/push";
 
 export const dynamic = "force-dynamic";
 
@@ -88,6 +89,14 @@ export async function POST(req: NextRequest) {
       });
     }
   });
+
+  // Notify the buyer their account was upgraded (best-effort; the in-app
+  // celebration popup covers users who don't have push enabled).
+  await sendPushToUser(purchase.userId, {
+    title: "🎉 Bạn đã được mở khoá!",
+    body: "Khoá 0 đã kích hoạt — toàn bộ bài luyện nghe, ngữ pháp và đọc hiểu giờ đã mở khoá không giới hạn.",
+    url: "/dictation",
+  }).catch((e) => console.error("[admin/purchases] sendPushToUser failed:", e));
 
   return NextResponse.json({ status: "paid" });
 }

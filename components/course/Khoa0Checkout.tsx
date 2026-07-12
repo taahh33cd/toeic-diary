@@ -72,6 +72,14 @@ export function Khoa0Checkout() {
     return () => clearInterval(iv);
   }, [phase]);
 
+  // On-page buyers already see this success screen, so mark the app-wide
+  // celebration popup as seen to avoid showing it again on the next navigation.
+  useEffect(() => {
+    if (phase === "paid") {
+      fetch("/api/me/course-unlock", { method: "POST" }).catch(() => {});
+    }
+  }, [phase]);
+
   const copy = useCallback((label: string, value: string) => {
     navigator.clipboard?.writeText(value).then(() => {
       setCopied(label);

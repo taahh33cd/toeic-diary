@@ -6,6 +6,7 @@ import { ToastProvider } from "@/components/shared/Toast";
 import { ConnectionStatus } from "@/components/shared/ConnectionStatus";
 import { ServiceWorkerRegistrar } from "@/components/shared/ServiceWorkerRegistrar";
 import { WordLookupProvider } from "@/components/shared/WordLookupProvider";
+import { CourseUnlockCelebration } from "@/components/course/CourseUnlockCelebration";
 
 // ── Fonts ──────────────────────────────────────
 const dmSans = DM_Sans({
@@ -125,6 +126,7 @@ export default function RootLayout({
           <WordLookupProvider>
             {children}
           </WordLookupProvider>
+          <CourseUnlockCelebration />
           <ConnectionStatus />
         </ToastProvider>
       </body>
