@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import { X, MessageCircle } from "lucide-react";
 
 const ZALO_LINK = "https://zalo.me/0789066326";
@@ -138,6 +139,7 @@ const COURSES: Course[] = [
 ];
 
 export function CourseCards() {
+  const router = useRouter();
   const [modalCourse, setModalCourse]   = useState<Course | null>(null);
   const [hoveredId,   setHoveredId]     = useState<number | null>(null);
   const [activeBtn,   setActiveBtn]     = useState<number | null>(null);
@@ -248,7 +250,7 @@ export function CourseCards() {
                     <p style={{ fontSize: "0.66rem", color: MUTED, marginTop: 4 }}>{course.priceNote}</p>
                   </div>
                   <button
-                    onClick={() => { setActiveBtn(course.id); setModalCourse(course); }}
+                    onClick={() => { setActiveBtn(course.id); router.push("/course/khoa-0"); }}
                     onMouseDown={() => setActiveBtn(course.id)}
                     onMouseUp={()   => setActiveBtn(null)}
                     onMouseLeave={() => setActiveBtn(null)}
