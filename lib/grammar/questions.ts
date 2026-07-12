@@ -66,9 +66,9 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V-O-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The cargo' + Động từ 'arrived'. 'late' là trạng từ, nên S-V.",
+    "explanation_reason": "Chủ ngữ 'The cargo' + Động từ 'arrived'. 'late' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Lô hàng đã đến muộn.",
     "core_vocabulary": [
@@ -277,9 +277,9 @@ export const grammarQuestions = [
       "C": "S-V-O",
       "D": "S-V-O-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The economy' + Động từ 'recovered'. 'slowly' là trạng từ, nên S-V.",
+    "explanation_reason": "Chủ ngữ 'The economy' + Động từ 'recovered'. 'slowly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Nền kinh tế phục hồi chậm.",
     "core_vocabulary": [
@@ -385,9 +385,9 @@ export const grammarQuestions = [
       "C": "S-V",
       "D": "S-V-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The workers' + Động từ 'started'. 'early' là trạng từ, nên S-V.",
+    "explanation_reason": "Chủ ngữ 'The workers' + Động từ 'started'. 'early' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Các công nhân đã bắt đầu sớm.",
     "core_vocabulary": [
@@ -488,9 +488,9 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The market' + Động từ 'crashed'. 'suddenly' là trạng từ, nên S-V.",
+    "explanation_reason": "Chủ ngữ 'The market' + Động từ 'crashed'. 'suddenly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Thị trường sụp đổ đột ngột.",
     "core_vocabulary": [
@@ -763,9 +763,9 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V-O-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The algorithm' + Động từ 'ran' + Trạng từ 'smoothly' là trạng từ, nên cấu trúc S-V.",
+    "explanation_reason": "Chủ ngữ 'The algorithm' + Động từ 'ran'. 'smoothly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Thuật toán đã vận hành trôi chảy.",
     "core_vocabulary": [
@@ -893,9 +893,9 @@ export const grammarQuestions = [
       "C": "S-V-O",
       "D": "S-V-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The fresh apples' + Động từ 'arrived'. 'yesterday' là trạng từ, không ảnh hưởng cấu trúc S-V-O.",
+    "explanation_reason": "Chủ ngữ 'The fresh apples' + Động từ 'arrived'. 'yesterday' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Những quả táo tươi đã đến vào ngày hôm qua.",
     "core_vocabulary": [
@@ -947,9 +947,9 @@ export const grammarQuestions = [
       "C": "S-V-O-C",
       "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The inventory' + Động từ 'decreased'. 'steadily' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The inventory' + Động từ 'decreased'. 'steadily' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Hàng tồn kho đã giảm dần đều.",
     "core_vocabulary": [
@@ -1028,9 +1028,9 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V-O"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The freight train' + Động từ 'departed'. 'early' là trạng từ, nên cấu trúc là S-V.",
+    "explanation_reason": "Chủ ngữ 'The freight train' + Động từ 'departed'. 'early' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Tàu chở hàng đã khởi hành sớm.",
     "core_vocabulary": [
@@ -1082,9 +1082,9 @@ export const grammarQuestions = [
       "C": "S-V-O",
       "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The import tax' + Động từ 'increased'. 'slightly' là trạng từ, nên S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The import tax' + Động từ 'increased'. 'slightly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Thuế nhập khẩu đã tăng nhẹ.",
     "core_vocabulary": [
@@ -1136,9 +1136,9 @@ export const grammarQuestions = [
       "C": "S-V-O",
       "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The business' + Động từ 'expanded'. 'rapidly' là trạng từ, nên S-V-O.",
+    "explanation_reason": "Chủ ngữ 'The business' + Động từ 'expanded'. 'rapidly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Doanh nghiệp đã mở rộng nhanh chóng.",
     "core_vocabulary": [
@@ -1190,9 +1190,9 @@ export const grammarQuestions = [
       "C": "S-V-O",
       "D": "S-V-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The database' + Động từ 'works'. 'efficiently' là trạng từ, nên S-V.",
+    "explanation_reason": "Chủ ngữ 'The database' + Động từ 'works'. 'efficiently' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Cơ sở dữ liệu hoạt động hiệu quả.",
     "core_vocabulary": [
@@ -1379,9 +1379,9 @@ export const grammarQuestions = [
       "C": "S-V",
       "D": "S-V-O-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The cargo plane' + Động từ 'departed'. 'safely' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The cargo plane' + Động từ 'departed'. 'safely' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Máy bay chở hàng khởi hành an toàn.",
     "core_vocabulary": [
@@ -1476,9 +1476,9 @@ export const grammarQuestions = [
       "C": "S-V",
       "D": "S-V-O"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The new equipment' + Động từ 'works'. 'perfectly' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The new equipment' + Động từ 'works'. 'perfectly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Thiết bị mới hoạt động hoàn hảo.",
     "core_vocabulary": [
@@ -1584,9 +1584,9 @@ export const grammarQuestions = [
       "C": "S-V-O-C",
       "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The shipping costs' + Động từ 'increased'. 'rapidly' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The shipping costs' + Động từ 'increased'. 'rapidly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Chi phí vận chuyển tăng nhanh.",
     "core_vocabulary": [
@@ -1692,9 +1692,9 @@ export const grammarQuestions = [
       "C": "S-V-O-C",
       "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The power' + Động từ 'failed'. 'again' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The power' + Động từ 'failed'. 'again' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Mất điện một lần nữa.",
     "core_vocabulary": [
@@ -1800,9 +1800,9 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The negotiations' + Động từ 'continued'. 'peacefully' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The negotiations' + Động từ 'continued'. 'peacefully' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Các cuộc đàm phán tiếp tục trong hòa bình.",
     "core_vocabulary": [
@@ -1908,9 +1908,9 @@ export const grammarQuestions = [
       "C": "S-V-O-C",
       "D": "S-V-O"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The alarm' + Động từ 'rang'. 'loudly' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The alarm' + Động từ 'rang'. 'loudly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Chuông báo vang lên ồn ào.",
     "core_vocabulary": [
@@ -2043,9 +2043,9 @@ export const grammarQuestions = [
       "C": "S-V-O-C",
       "D": "S-V-O"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The supplier' + Động từ 'called'. 'yesterday' là trạng từ chỉ thời gian.",
+    "explanation_reason": "Chủ ngữ 'The supplier' + Động từ 'called'. 'yesterday' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Nhà cung cấp đã gọi hôm qua.",
     "core_vocabulary": [
@@ -2114,9 +2114,9 @@ export const grammarQuestions = [
       "C": "S-V-O-C",
       "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The goods' + Động từ 'shipped'. 'quickly' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The goods' + Động từ 'shipped'. 'quickly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Hàng hóa được giao nhanh chóng.",
     "core_vocabulary": [
@@ -2244,9 +2244,9 @@ export const grammarQuestions = [
       "C": "S-V",
       "D": "S-V-O"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The system' + Động từ 'crashed'. 'suddenly' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The system' + Động từ 'crashed'. 'suddenly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Hệ thống sụp đổ đột ngột.",
     "core_vocabulary": [
@@ -2352,9 +2352,9 @@ export const grammarQuestions = [
       "C": "S-V-O",
       "D": "S-V-O-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The factory' + Động từ 'operates'. 'smoothly' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The factory' + Động từ 'operates'. 'smoothly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Nhà máy vận hành trôi chảy.",
     "core_vocabulary": [
@@ -2568,9 +2568,9 @@ export const grammarQuestions = [
       "C": "S-V-O-C",
       "D": "S-V-O"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The meeting' + Động từ 'ended'. 'early' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The meeting' + Động từ 'ended'. 'early' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Cuộc họp kết thúc sớm.",
     "core_vocabulary": [
@@ -2703,9 +2703,9 @@ export const grammarQuestions = [
       "C": "S-V",
       "D": "S-V-O-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The shipment' + Động từ 'arrived'. 'safely' là trạng từ bổ nghĩa cho động từ.",
+    "explanation_reason": "Chủ ngữ 'The shipment' + Động từ 'arrived'. 'safely' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Lô hàng đã đến an toàn.",
     "core_vocabulary": [
@@ -2946,9 +2946,9 @@ export const grammarQuestions = [
       "C": "S-V-O",
       "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The warehouse' + Động từ 'opened'. 'early' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The warehouse' + Động từ 'opened'. 'early' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Nhà kho đã mở cửa sớm.",
     "core_vocabulary": [
@@ -3059,9 +3059,9 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The meeting' + Động từ 'started'. 'late' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The meeting' + Động từ 'started'. 'late' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Cuộc họp bắt đầu muộn.",
     "core_vocabulary": [
@@ -3140,9 +3140,9 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The negotiations' + Động từ 'failed'. 'completely' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The negotiations' + Động từ 'failed'. 'completely' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Cuộc đàm phán thất bại hoàn toàn.",
     "core_vocabulary": [
@@ -3248,9 +3248,9 @@ export const grammarQuestions = [
       "C": "S-V-O",
       "D": "S-V-O-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The prices' + Động từ 'dropped'. 'suddenly' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The prices' + Động từ 'dropped'. 'suddenly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Giá cả giảm đột ngột.",
     "core_vocabulary": [
@@ -4552,9 +4552,9 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V-O-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Giống như câu trước, hành động 'sang' (hát) không trực tiếp tác động lên vật nào, 'beautifully' là trạng từ chỉ thể hiện cách thức diễn ra của động từ nên cấu trúc vẫn là S-V.",
+    "explanation_reason": "Chủ ngữ 'She' + Động từ 'sang'. 'beautifully' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc S-V (Chủ ngữ - Động từ). Trạng từ (Adverb) bổ nghĩa không làm thay đổi cấu trúc cốt lõi.",
     "translation": "Cô ấy hát rất hay/đẹp.",
     "core_vocabulary": []
@@ -4962,9 +4962,9 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Tuy có find/found nhưng cuối câu chỉ có trạng từ 'easily' (chỉ cách thức người đó tìm) chứ không có tính từ định phẩm cho 'the book'. Vì vậy nó là S-V-O đơn thuần.",
+    "explanation_reason": "Chủ ngữ 'I' + Động từ 'found' + Tân ngữ 'the book'. 'easily' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-O-C.",
     "explanation_grammar": "S-V-(O)-(A): Trạng từ (Adverb) bổ nghĩa không được tính là Cấu trúc Complement.",
     "translation": "Tôi tìm thấy cuốn sách một cách dễ dàng.",
     "core_vocabulary": [
@@ -5205,9 +5205,9 @@ export const grammarQuestions = [
       "C": "S-V-O",
       "D": "S-V-O-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "'arrive' là nội động từ, đi một mình tự mang đầy đủ ý nghĩa (đến). 'tomorrow' là trạng từ chỉ thời gian không phải Object.",
+    "explanation_reason": "Chủ ngữ 'Machines' + Động từ 'arrive'. 'tomorrow' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "S-V là cấu trúc thuần có V là nội động từ tự nó trọn vẹn không cần ai hỗ trợ.",
     "translation": "Máy móc sẽ đến vào ngày mai.",
     "core_vocabulary": [
@@ -13958,9 +13958,9 @@ export const grammarQuestions = [
       "C": "S-V",
       "D": "S-V-O"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The construction' + Động từ 'stopped'. 'immediately' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The construction' + Động từ 'stopped'. 'immediately' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Công trình xây dựng đã dừng lại ngay lập tức.",
     "core_vocabulary": [
@@ -14287,9 +14287,9 @@ export const grammarQuestions = [
       "C": "S-V-O",
       "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The application' + Động từ 'crashed'. 'unexpectedly' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The application' + Động từ 'crashed'. 'unexpectedly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Ứng dụng đã bị treo đột ngột.",
     "core_vocabulary": [
@@ -14405,9 +14405,9 @@ export const grammarQuestions = [
       "C": "S-V-O-C",
       "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The negotiations' + Động từ 'concluded'. 'successfully' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The negotiations' + Động từ 'concluded'. 'successfully' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Cuộc đàm phán đã kết thúc thành công.",
     "core_vocabulary": [
@@ -14508,9 +14508,9 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V-O-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The new factory' + Động từ 'opened'. 'today' là trạng từ.",
+    "explanation_reason": "Chủ ngữ 'The new factory' + Động từ 'opened'. 'today' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Nhà máy mới đã khai trương hôm nay.",
     "core_vocabulary": [
@@ -43025,9 +43025,9 @@ export const grammarQuestions = [
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The old tree' + Động từ 'fell'. 'yesterday' là trạng từ chỉ thời gian.",
+  "explanation_reason": "Chủ ngữ 'The old tree' + Động từ 'fell'. 'yesterday' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Cây cổ thụ đã đổ vào ngày hôm qua.",
   "core_vocabulary": [
@@ -43113,9 +43113,9 @@ export const grammarQuestions = [
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The mysterious bird' + Động từ 'vanished'. 'quickly' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The mysterious bird' + Động từ 'vanished'. 'quickly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Con chim bí ẩn đã biến mất một cách nhanh chóng.",
   "core_vocabulary": [
@@ -43201,9 +43201,9 @@ export const grammarQuestions = [
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The heavy rain' + Động từ 'stopped'. 'finally' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The heavy rain' + Động từ 'stopped'. 'finally' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Cơn mưa nặng hạt cuối cùng cũng đã tạnh.",
   "core_vocabulary": [
@@ -43294,9 +43294,9 @@ export const grammarQuestions = [
     "C": "S-V-C",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The tired children' + Động từ 'slept'. 'deeply' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The tired children' + Động từ 'slept'. 'deeply' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Những đứa trẻ mệt mỏi đã ngủ say.",
   "core_vocabulary": [
@@ -43382,9 +43382,9 @@ export const grammarQuestions = [
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The wild flowers' + Động từ 'bloomed'. 'early' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The wild flowers' + Động từ 'bloomed'. 'early' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Những bông hoa dại đã nở sớm.",
   "core_vocabulary": [
@@ -43470,9 +43470,9 @@ export const grammarQuestions = [
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The ancient bridge' + Động từ 'collapsed'. 'suddenly' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The ancient bridge' + Động từ 'collapsed'. 'suddenly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Cây cầu cổ đã sụp đổ đột ngột.",
   "core_vocabulary": [
@@ -43581,9 +43581,9 @@ export const grammarQuestions = [
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The energetic puppy' + Động từ 'barked'. 'loudly' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The energetic puppy' + Động từ 'barked'. 'loudly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Chú chó con năng động sủa rất to.",
   "core_vocabulary": [
@@ -43674,9 +43674,9 @@ export const grammarQuestions = [
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The morning train' + Động từ 'arrived'. 'late' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The morning train' + Động từ 'arrived'. 'late' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Chuyến tàu sáng đã đến muộn.",
   "core_vocabulary": [
@@ -43762,9 +43762,9 @@ export const grammarQuestions = [
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The heavy door' + Động từ 'closed'. 'slowly' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The heavy door' + Động từ 'closed'. 'slowly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Cánh cửa nặng nề đã đóng lại một cách chậm chạp.",
   "core_vocabulary": [
@@ -43850,9 +43850,9 @@ export const grammarQuestions = [
     "C": "S-V-C",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The bright stars' + Động từ 'shine'. 'tonight' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The bright stars' + Động từ 'shine'. 'tonight' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Những ngôi sao sáng tỏa sáng đêm nay.",
   "core_vocabulary": [
@@ -43938,9 +43938,9 @@ export const grammarQuestions = [
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The cold water' + Động từ 'boiled'. 'eventually' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The cold water' + Động từ 'boiled'. 'eventually' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Nước lạnh cuối cùng cũng đã sôi.",
   "core_vocabulary": [
@@ -44026,9 +44026,9 @@ export const grammarQuestions = [
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The alarm clock' + Động từ 'rang'. 'early' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The alarm clock' + Động từ 'rang'. 'early' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Đồng hồ báo thức đã reo sớm.",
   "core_vocabulary": [
@@ -44114,9 +44114,9 @@ export const grammarQuestions = [
     "C": "S-V",
     "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The autumn leaves' + Động từ 'fell'. 'silently' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The autumn leaves' + Động từ 'fell'. 'silently' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Lá thu rơi trong im lặng.",
   "core_vocabulary": [
@@ -44186,9 +44186,9 @@ export const grammarQuestions = [
     "C": "S-V-C",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The heavy curtains' + Động từ 'opened'. 'slowly' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The heavy curtains' + Động từ 'opened'. 'slowly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Những tấm rèm dày đã mở ra một cách chậm chạp.",
   "core_vocabulary": [
@@ -44279,9 +44279,9 @@ export const grammarQuestions = [
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The tired guests' + Động từ 'left'. 'early' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The tired guests' + Động từ 'left'. 'early' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Những vị khách mệt mỏi đã rời đi sớm.",
   "core_vocabulary": [
@@ -44328,9 +44328,9 @@ export const grammarQuestions = [
     "C": "S-V-C",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The bright sun' + Động từ 'rose'. 'eventually' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The bright sun' + Động từ 'rose'. 'eventually' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Mặt trời rực rỡ cuối cùng cũng đã mọc.",
   "core_vocabulary": [
@@ -44416,9 +44416,9 @@ export const grammarQuestions = [
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The old clock' + Động từ 'stopped'. 'suddenly' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The old clock' + Động từ 'stopped'. 'suddenly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Chiếc đồng hồ cũ đã dừng lại đột ngột.",
   "core_vocabulary": [
@@ -44504,9 +44504,9 @@ export const grammarQuestions = [
     "C": "S-V-C",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The forest fire' + Động từ 'spread'. 'rapidly' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The forest fire' + Động từ 'spread'. 'rapidly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Đám cháy rừng lan rộng nhanh chóng.",
   "core_vocabulary": [
@@ -44592,9 +44592,9 @@ export const grammarQuestions = [
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The dark clouds' + Động từ 'disappeared'. 'completely' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The dark clouds' + Động từ 'disappeared'. 'completely' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Những đám mây đen đã biến mất hoàn toàn.",
   "core_vocabulary": [
@@ -44703,9 +44703,9 @@ export const grammarQuestions = [
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The heavy gate' + Động từ 'locked'. 'automatically' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The heavy gate' + Động từ 'locked'. 'automatically' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Cánh cổng nặng nề tự động khóa lại.",
   "core_vocabulary": [
@@ -44791,9 +44791,9 @@ export const grammarQuestions = [
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The tiny seed' + Động từ 'grew'. 'slowly' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The tiny seed' + Động từ 'grew'. 'slowly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Hạt giống nhỏ bé lớn lên một cách chậm chạp.",
   "core_vocabulary": [
@@ -44967,9 +44967,9 @@ export const grammarQuestions = [
     "C": "S-V-C",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The phone' + Động từ 'rang'. 'twice' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The phone' + Động từ 'rang'. 'twice' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Điện thoại đã reo hai lần.",
   "core_vocabulary": [
@@ -45055,9 +45055,9 @@ export const grammarQuestions = [
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The glass' + Động từ 'broke'. 'suddenly' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The glass' + Động từ 'broke'. 'suddenly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Tấm kính đã vỡ đột ngột.",
   "core_vocabulary": [
@@ -45143,9 +45143,9 @@ export const grammarQuestions = [
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The plane' + Động từ 'landed'. 'safely' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The plane' + Động từ 'landed'. 'safely' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Máy bay đã hạ cánh an toàn.",
   "core_vocabulary": [
@@ -45281,9 +45281,9 @@ export const grammarQuestions = [
     "C": "S-V-O-C",
     "D": "S-V"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The ancient volcano' + Động từ 'erupted'. 'violently' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The ancient volcano' + Động từ 'erupted'. 'violently' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Núi lửa cổ đại đã phun trào dữ dội.",
   "core_vocabulary": [
@@ -45347,9 +45347,9 @@ export const grammarQuestions = [
     "C": "S-V-C",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The snow' + Động từ 'melted'. 'quickly' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The snow' + Động từ 'melted'. 'quickly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Tuyết đã tan nhanh chóng.",
   "core_vocabulary": [
@@ -45435,9 +45435,9 @@ export const grammarQuestions = [
     "C": "S-V",
     "D": "S-V-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The wild horses' + Động từ 'ran'. 'freely' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The wild horses' + Động từ 'ran'. 'freely' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Những con ngựa hoang chạy tự do.",
   "core_vocabulary": [
@@ -45523,9 +45523,9 @@ export const grammarQuestions = [
     "C": "S-V-C",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The morning meeting' + Động từ 'started'. 'late' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The morning meeting' + Động từ 'started'. 'late' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Cuộc họp sáng đã bắt đầu muộn.",
   "core_vocabulary": [
@@ -45611,9 +45611,9 @@ export const grammarQuestions = [
     "C": "S-V",
     "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The bright moon' + Động từ 'appeared'. 'tonight' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The bright moon' + Động từ 'appeared'. 'tonight' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Mặt trời rực rỡ đã xuất hiện đêm nay.",
   "core_vocabulary": [
@@ -45699,9 +45699,9 @@ export const grammarQuestions = [
     "C": "S-V-O-C",
     "D": "S-V"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The old engine' + Động từ 'failed'. 'eventually' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The old engine' + Động từ 'failed'. 'eventually' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Động cơ cũ cuối cùng cũng đã hỏng.",
   "core_vocabulary": [
@@ -45787,9 +45787,9 @@ export const grammarQuestions = [
     "C": "S-V-C",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The tiny insects' + Động từ 'multiplied'. 'rapidly' là trạng từ.",
+  "explanation_reason": "Chủ ngữ 'The tiny insects' + Động từ 'multiplied'. 'rapidly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
   "translation": "Những loài côn trùng nhỏ bé sinh sôi nảy nở nhanh chóng.",
   "core_vocabulary": [
