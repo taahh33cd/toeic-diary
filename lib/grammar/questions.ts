@@ -12,7 +12,7 @@ export const grammarQuestions = [
       "C": "S-V",
       "D": "S-V-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The architect' + Động từ 'designed' + Tân ngữ 'the building'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -147,7 +147,7 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V-O-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The tax rate' + Động từ 'dropped'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -174,7 +174,7 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The customs officer' + Động từ 'checked' + Tân ngữ 'the passport'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -201,7 +201,7 @@ export const grammarQuestions = [
       "C": "S-V-O",
       "D": "S-V-O-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The schedule' + Động từ 'remains' + Bổ ngữ 'unchanged'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -304,7 +304,7 @@ export const grammarQuestions = [
       "C": "S-V",
       "D": "S-V-O"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The new regulations' + Động từ nối 'appear' + Bổ ngữ 'strict'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -331,7 +331,7 @@ export const grammarQuestions = [
       "C": "S-V-O",
       "D": "S-V"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The supervisor' + Động từ 'found' + Tân ngữ 'the error'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -358,7 +358,7 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V-O"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The client' + Động từ 'considered' + Tân ngữ 'the cost' + Bổ ngữ tân ngữ 'high'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -385,7 +385,7 @@ export const grammarQuestions = [
       "C": "S-V",
       "D": "S-V-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The workers' + Động từ 'started'. 'early' là trạng từ, nên S-V.",
     "explanation_grammar": "Cấu trúc câu",
@@ -439,7 +439,7 @@ export const grammarQuestions = [
       "C": "S-V-O",
       "D": "S-V"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The shipment' + Động từ 'looks' + Bổ ngữ 'heavy'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -488,7 +488,7 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The market' + Động từ 'crashed'. 'suddenly' là trạng từ, nên S-V.",
     "explanation_grammar": "Cấu trúc câu",
@@ -542,7 +542,7 @@ export const grammarQuestions = [
       "C": "S-V",
       "D": "S-V-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The delivery' + Động từ 'proved' + Bổ ngữ 'difficult'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -601,7 +601,7 @@ export const grammarQuestions = [
       "C": "S-V-O-C",
       "D": "S-V"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The import duties' + Động từ 'increased'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -655,7 +655,7 @@ export const grammarQuestions = [
       "C": "S-V-O",
       "D": "S-V"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The project' + Động từ nối 'became' + Bổ ngữ 'successful'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -709,9 +709,9 @@ export const grammarQuestions = [
       "C": "S-V",
       "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Cùng câu, đáp án đúng là S-V-O-C (động từ + tân ngữ + bổ ngữ).",
+    "explanation_reason": "Chủ ngữ 'The customs officers' + Động từ 'inspected' + Tân ngữ 'the cargo'. Đây là cấu trúc S-V-O.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Nhân viên hải quan đã kiểm tra hàng hóa.",
     "core_vocabulary": [
@@ -736,7 +736,7 @@ export const grammarQuestions = [
       "C": "S-V-O-C",
       "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The tax policy' + Động từ nối 'remains' + Bổ ngữ 'unchanged'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -812,7 +812,7 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The engineers' + Động từ 'analyzed' + Tân ngữ 'the data'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -839,7 +839,7 @@ export const grammarQuestions = [
       "C": "S-V-O",
       "D": "S-V-O-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The construction site' + Động từ nối 'looks' + Bổ ngữ 'hazardous'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -866,7 +866,7 @@ export const grammarQuestions = [
       "C": "S-V-O-C",
       "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The team' + Động từ 'considered' + Tân ngữ 'the import' + Bổ ngữ tân ngữ 'successful'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -893,7 +893,7 @@ export const grammarQuestions = [
       "C": "S-V-O",
       "D": "S-V-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The fresh apples' + Động từ 'arrived'. 'yesterday' là trạng từ, không ảnh hưởng cấu trúc S-V-O.",
     "explanation_grammar": "Cấu trúc câu",
@@ -920,7 +920,7 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V-O-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The supply chain' + Động từ 'became' + Bổ ngữ 'disrupted'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -974,7 +974,7 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V-O-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The software' + Động từ 'generated' + Tân ngữ 'a visual chart'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1028,9 +1028,9 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The freight train' + Động từ 'departed'. 'early' là trạng từ, nên S-V-O-C (động từ + tân ngữ + bổ ngữ).",
+    "explanation_reason": "Chủ ngữ 'The freight train' + Động từ 'departed'. 'early' là trạng từ, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Tàu chở hàng đã khởi hành sớm.",
     "core_vocabulary": [
@@ -1082,7 +1082,7 @@ export const grammarQuestions = [
       "C": "S-V-O",
       "D": "S-V"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The import tax' + Động từ 'increased'. 'slightly' là trạng từ, nên S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1136,7 +1136,7 @@ export const grammarQuestions = [
       "C": "S-V-O",
       "D": "S-V"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The business' + Động từ 'expanded'. 'rapidly' là trạng từ, nên S-V-O.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1217,7 +1217,7 @@ export const grammarQuestions = [
       "C": "S-V-C",
       "D": "S-V"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The supervisor' + Động từ 'made' + Tân ngữ 'the rules' + Bổ ngữ tân ngữ 'clear'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1244,7 +1244,7 @@ export const grammarQuestions = [
       "C": "S-V",
       "D": "S-V-O-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The analysts' + Động từ 'predicted' + Tân ngữ 'a market shift'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1271,7 +1271,7 @@ export const grammarQuestions = [
       "C": "S-V-O-C",
       "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The workflow' + Động từ nối 'appears' + Bổ ngữ 'logical'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1298,7 +1298,7 @@ export const grammarQuestions = [
       "C": "S-V",
       "D": "S-V-O-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The port authority' + Động từ 'approved' + Tân ngữ 'the shipment'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1325,9 +1325,9 @@ export const grammarQuestions = [
       "C": "S-V",
       "D": "S-V-O-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The customs procedure' + Động từ 'proved' + Tân ngữ 'complicated'.",
+    "explanation_reason": "Chủ ngữ 'The customs procedure' + Động từ nối 'proved' + Bổ ngữ 'complicated'. Đây là cấu trúc S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Thủ tục hải quan tỏ ra phức tạp.",
     "core_vocabulary": [
