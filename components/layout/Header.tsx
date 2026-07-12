@@ -11,9 +11,11 @@ import { useState, useRef, useEffect } from "react";
 interface HeaderProps {
   userEmail?: string | null;
   userDisplayName?: string | null;
+  /** Màu nền thanh header (mặc định sky-blue). Cho phép từng khu đổi tone. */
+  bg?: string;
 }
 
-export function Header({ userEmail, userDisplayName }: HeaderProps) {
+export function Header({ userEmail, userDisplayName, bg = "#4DA8DA" }: HeaderProps) {
   const { theme, toggleTheme } = useUIStore();
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -75,7 +77,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
 
   return (
     <>
-    <header className={styles.header}>
+    <header className={styles.header} style={{ background: bg }}>
       <div className={styles.inner}>
         {/* Logo */}
         <Link href="/dictation" className={styles.logo}>
@@ -239,7 +241,7 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
       className="lg:hidden fixed left-0 right-0 z-50 transition-transform duration-200"
       style={{
         top: 64,
-        background: "#4DA8DA",
+        background: bg,
         borderBottom: "1px solid rgba(255,255,255,0.15)",
         transform: mobileNavOpen ? "translateY(0)" : "translateY(calc(-100% - 64px))",
         boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
@@ -302,7 +304,6 @@ export function Header({ userEmail, userDisplayName }: HeaderProps) {
 const styles = {
   header: `
     sticky top-0 z-50 w-full
-    bg-[#4DA8DA]
   `,
   inner: `
     max-w-[1400px] mx-auto px-4 md:px-6

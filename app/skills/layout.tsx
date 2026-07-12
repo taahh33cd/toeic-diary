@@ -1,9 +1,12 @@
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/db/prisma";
-import { SkillsHeader } from "@/components/skills/SkillsHeader";
+import { Header } from "@/components/layout/Header";
 
 export const dynamic = "force-dynamic";
+
+// Tone riêng cho khu Luyện đề: header indigo (khác sky-blue của phần còn lại)
+const SKILLS_HEADER_BG = "#4f46e5";
 
 export default async function SkillsLayout({
   children,
@@ -22,7 +25,7 @@ export default async function SkillsLayout({
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--bg-primary)" }}>
-      <SkillsHeader userEmail={user.email} userDisplayName={profile?.displayName} />
+      <Header userEmail={user.email} userDisplayName={profile?.displayName} bg={SKILLS_HEADER_BG} />
       {children}
     </div>
   );
