@@ -169,20 +169,23 @@ model Profile {
 }
 
 model CoursePurchase {
-  id         String    @id @default(cuid())
-  userId     String    @map("user_id")
-  courseId   Int       @map("course_id")             // course 0-3 being purchased (only 0 automated)
-  code       String    @unique                        // transfer note used to match the SePay webhook
-  amount     Int                                       // price in VND
-  status     String    @default("pending")            // "pending" | "paid" | "expired"
-  provider   String    @default("sepay")
-  sepayTxId  String?   @unique @map("sepay_tx_id")    // SePay transaction id — idempotency guard
-  paidAt     DateTime? @map("paid_at")
-  createdAt  DateTime  @default(now()) @map("created_at")
+  id          String    @id @default(cuid())
+  userId      String    @map("user_id")
+  email       String?                                  // buyer email, captured for the admin panel
+  courseId    Int       @map("course_id")              // course 0-3 being purchased (only 0 sold online)
+  code        String    @unique                         // transfer note the admin uses to match the payment
+  amount      Int                                        // price in VND
+  status      String    @default("pending")             // "pending" | "submitted" | "paid" | "rejected"
+  provider    String    @default("manual")
+  submittedAt DateTime? @map("submitted_at")           // when the buyer clicked "I have transferred"
+  paidAt      DateTime? @map("paid_at")                 // when an admin approved
+  approvedBy  String?   @map("approved_by")             // admin Profile.id who approved
+  createdAt   DateTime  @default(now()) @map("created_at")
 
-  user       Profile   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user        Profile   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId, status])
+  @@index([status, createdAt])
   @@map("course_purchases")
 }
 

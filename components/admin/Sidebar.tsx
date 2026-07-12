@@ -15,6 +15,7 @@ const NAV = [
   { href: "/admin/bookings",   icon: "event",        label: "Lịch hẹn" },
   { href: "/admin/slots",      icon: "schedule",     label: "Khung giờ" },
   { href: "/admin/attendance", icon: "fact_check",   label: "Điểm danh" },
+  { href: "/admin/purchases",  icon: "payments",     label: "Mở khoá" },
   { href: "/admin/settings",   icon: "settings",     label: "Cài đặt" },
   { href: "/admin/teachers",   icon: "badge",        label: "Giáo viên", adminOnly: true },
 ];

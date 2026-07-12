@@ -16,10 +16,10 @@ type Order = {
   code: string;
   amount: number;
   qrUrl: string;
-  bank: { code: string; account: string; owner: string };
+  bank: { label: string; account: string; owner: string };
 };
 
-type Phase = "loading" | "pending" | "paid" | "error";
+type Phase = "loading" | "pending" | "submitted" | "paid" | "rejected" | "error";
 
 function fmtVnd(n: number) {
   return n.toLocaleString("vi-VN") + "đ";
@@ -29,8 +29,9 @@ export function Khoa0Checkout() {
   const [phase, setPhase] = useState<Phase>("loading");
   const [order, setOrder] = useState<Order | null>(null);
   const [copied, setCopied] = useState<string | null>(null);
+  const [submitting, setSubmitting] = useState(false);
 
-  // Create (or re-use) the pending order on mount.
+  // Create (or re-use) the open order on mount.
   useEffect(() => {
     let cancelled = false;
     (async () => {
@@ -40,9 +41,9 @@ export function Khoa0Checkout() {
         if (cancelled) return;
         if (data.status === "already_owned" || data.status === "paid") {
           setPhase("paid");
-        } else if (data.status === "pending" && data.code) {
+        } else if (data.code) {
           setOrder(data as Order);
-          setPhase("pending");
+          setPhase(data.status === "submitted" ? "submitted" : "pending");
         } else {
           setPhase("error");
         }
@@ -55,18 +56,19 @@ export function Khoa0Checkout() {
     };
   }, []);
 
-  // Poll for payment confirmation while pending.
+  // Poll for admin confirmation while waiting.
   useEffect(() => {
-    if (phase !== "pending") return;
+    if (phase !== "pending" && phase !== "submitted") return;
     const iv = setInterval(async () => {
       try {
         const res = await fetch("/api/payment/khoa-0/status");
         const data = await res.json();
         if (data.status === "paid") setPhase("paid");
+        else if (data.status === "rejected") setPhase("rejected");
       } catch {
         /* keep polling */
       }
-    }, 4000);
+    }, 5000);
     return () => clearInterval(iv);
   }, [phase]);
 
@@ -77,13 +79,25 @@ export function Khoa0Checkout() {
     });
   }, []);
 
+  const submit = useCallback(async () => {
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/payment/khoa-0/submit", { method: "POST" });
+      if (res.ok) setPhase("submitted");
+    } catch {
+      /* ignore */
+    } finally {
+      setSubmitting(false);
+    }
+  }, []);
+
   // ── Success ───────────────────────────────────────────────────────────────
   if (phase === "paid") {
     return (
       <div style={{ maxWidth: 440, textAlign: "center", paddingTop: "2rem" }}>
         <div style={{ fontSize: "3rem", marginBottom: "0.75rem" }}>🎉</div>
         <h1 style={{ fontFamily: SERIF, fontSize: "1.5rem", fontWeight: 700, color: INK, marginBottom: "0.5rem" }}>
-          Thanh toán thành công!
+          Đã mở khoá thành công!
         </h1>
         <p style={{ fontSize: "0.9rem", color: SEPIA, lineHeight: 1.7, marginBottom: "1.5rem" }}>
           Khoá 0 đã được mở khoá vĩnh viễn cho tài khoản của bạn. Toàn bộ bài luyện
@@ -104,9 +118,7 @@ export function Khoa0Checkout() {
 
   // ── Loading ─────────────────────────────────────────────────────────────────
   if (phase === "loading") {
-    return (
-      <div style={{ paddingTop: "3rem", color: MUTED, fontSize: "0.9rem" }}>Đang tạo đơn thanh toán…</div>
-    );
+    return <div style={{ paddingTop: "3rem", color: MUTED, fontSize: "0.9rem" }}>Đang tạo đơn thanh toán…</div>;
   }
 
   // ── Error ─────────────────────────────────────────────────────────────────
@@ -127,9 +139,47 @@ export function Khoa0Checkout() {
     );
   }
 
+  // ── Rejected ────────────────────────────────────────────────────────────────
+  if (phase === "rejected") {
+    return (
+      <div style={{ maxWidth: 420, textAlign: "center", paddingTop: "2rem" }}>
+        <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>❌</div>
+        <h1 style={{ fontFamily: SERIF, fontSize: "1.25rem", fontWeight: 700, color: INK, marginBottom: "0.5rem" }}>
+          Đơn chưa được xác nhận
+        </h1>
+        <p style={{ fontSize: "0.88rem", color: SEPIA, lineHeight: 1.7 }}>
+          Admin chưa xác nhận được khoản chuyển của bạn. Vui lòng kiểm tra lại hoặc
+          liên hệ thầy/cô để được hỗ trợ.
+        </p>
+      </div>
+    );
+  }
+
+  // ── Awaiting admin review ─────────────────────────────────────────────────────
+  if (phase === "submitted") {
+    return (
+      <div style={{ maxWidth: 440, textAlign: "center", paddingTop: "2rem" }}>
+        <div style={{ fontSize: "2.5rem", marginBottom: "0.75rem" }}>⏳</div>
+        <h1 style={{ fontFamily: SERIF, fontSize: "1.35rem", fontWeight: 700, color: INK, marginBottom: "0.5rem" }}>
+          Đang chờ xác nhận
+        </h1>
+        <p style={{ fontSize: "0.9rem", color: SEPIA, lineHeight: 1.7, marginBottom: "1rem" }}>
+          Cảm ơn bạn! Chúng tôi đã nhận được yêu cầu. Ngay khi kiểm tra được khoản
+          chuyển khoản (mã <strong>{order.code}</strong>), tài khoản của bạn sẽ được
+          mở khoá tự động — trang này sẽ tự cập nhật.
+        </p>
+        <div style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: "0.82rem", color: MUTED }}>
+          <span style={{ width: 10, height: 10, borderRadius: "50%", background: TERRA, display: "inline-block", animation: "khoa0-pulse 1.2s ease-in-out infinite" }} />
+          Đang chờ admin duyệt…
+        </div>
+        <style>{`@keyframes khoa0-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }`}</style>
+      </div>
+    );
+  }
+
   // ── Pending — show QR + bank details ────────────────────────────────────────
   const rows: { label: string; value: string; copyable?: boolean; highlight?: boolean }[] = [
-    { label: "Ngân hàng", value: order.bank.code },
+    { label: "Ngân hàng", value: order.bank.label },
     { label: "Chủ tài khoản", value: order.bank.owner },
     { label: "Số tài khoản", value: order.bank.account, copyable: true },
     { label: "Số tiền", value: fmtVnd(order.amount), copyable: true, highlight: true },
@@ -143,8 +193,9 @@ export function Khoa0Checkout() {
           Mở khoá Khoá 0 ☕
         </h1>
         <p style={{ fontSize: "0.85rem", color: SEPIA, lineHeight: 1.6 }}>
-          Quét mã QR hoặc chuyển khoản đúng nội dung bên dưới. Hệ thống sẽ tự động
-          mở khoá <strong>ngay khi nhận được tiền</strong> — không cần nhắn tin.
+          Quét mã QR hoặc chuyển khoản đúng nội dung bên dưới. Sau khi chuyển, bấm
+          <strong> “Tôi đã chuyển khoản”</strong> — admin xác nhận là tài khoản của bạn
+          được mở khoá ngay.
         </p>
       </div>
 
@@ -159,8 +210,8 @@ export function Khoa0Checkout() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={order.qrUrl}
-            alt="QR chuyển khoản"
-            style={{ width: 220, maxWidth: "100%", border: `1px solid ${BORDER}`, borderRadius: 8, background: "#fff" }}
+            alt="QR chuyển khoản Techcombank"
+            style={{ width: 240, maxWidth: "100%", border: `1px solid ${BORDER}`, borderRadius: 8, background: "#fff" }}
           />
         </div>
 
@@ -196,19 +247,23 @@ export function Khoa0Checkout() {
           ))}
         </div>
 
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginTop: "1.25rem", fontSize: "0.8rem", color: MUTED }}>
-          <span
-            style={{ width: 10, height: 10, borderRadius: "50%", background: TERRA, display: "inline-block", animation: "khoa0-pulse 1.2s ease-in-out infinite" }}
-          />
-          Đang chờ thanh toán…
-        </div>
+        {/* Confirm button */}
+        <button
+          onClick={submit}
+          disabled={submitting}
+          style={{
+            width: "100%", marginTop: "1.25rem", padding: "12px 16px", borderRadius: 8,
+            background: TERRA, color: "#fff", fontWeight: 700, fontSize: "0.9rem",
+            border: "none", cursor: submitting ? "default" : "pointer", opacity: submitting ? 0.7 : 1,
+          }}
+        >
+          {submitting ? "Đang gửi…" : "Tôi đã chuyển khoản →"}
+        </button>
       </div>
 
       <p style={{ fontSize: "0.72rem", color: MUTED, textAlign: "center", lineHeight: 1.6, marginTop: "1rem" }}>
-        ⚠️ Vui lòng giữ đúng nội dung chuyển khoản <strong>{order.code}</strong> để hệ thống nhận diện đơn của bạn.
+        ⚠️ Vui lòng giữ đúng nội dung chuyển khoản <strong>{order.code}</strong> để admin đối soát đúng đơn của bạn.
       </p>
-
-      <style>{`@keyframes khoa0-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }`}</style>
     </div>
   );
 }
