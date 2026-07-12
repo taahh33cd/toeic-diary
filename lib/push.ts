@@ -103,3 +103,25 @@ export async function sendPushToAdminSubs(
 
   await Promise.all(promises);
 }
+
+/**
+ * Notify all admins: write an admin-bell entry (RTDB adminNotifications, read by
+ * AdminTopBar) AND push a banner to every admin device. Use for events the
+ * teacher must act on — e.g. a new purchase awaiting approval.
+ */
+export async function notifyAdmins(
+  payload: { title: string; body?: string; url?: string }
+): Promise<void> {
+  try {
+    await getAdminDb().ref("adminNotifications").push({
+      title: payload.title,
+      body: payload.body ?? "",
+      url: payload.url ?? "/admin",
+      createdAt: Date.now(),
+      read: false,
+    });
+  } catch (e) {
+    console.error("[notifyAdmins] bell write failed:", e);
+  }
+  await sendPushToAdminSubs(payload);
+}
