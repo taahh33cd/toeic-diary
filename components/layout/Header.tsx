@@ -75,6 +75,10 @@ export function Header({ userEmail, userDisplayName, bg = "#4DA8DA" }: HeaderPro
     { href: "/skills",            icon: <ClipboardList size={16} />, label: "Luyện đề" },
   ];
 
+  // Ẩn item "Luyện đề" khi user đang ở trong khu Luyện đề (/skills)
+  const onSkills = pathname === "/skills" || pathname.startsWith("/skills/");
+  const navLinks = NAV_LINKS.filter((l) => !(onSkills && l.href === "/skills"));
+
   return (
     <>
     <header className={styles.header} style={{ background: bg }}>
@@ -102,7 +106,7 @@ export function Header({ userEmail, userDisplayName, bg = "#4DA8DA" }: HeaderPro
             <Home size={16} />
           </Link>
           <div className={styles.navDivider} />
-          {NAV_LINKS.map(({ href, icon, label, divider }) => (
+          {navLinks.map(({ href, icon, label, divider }) => (
             <>
               <Link key={href} href={href} className={styles.navLink}>
                 {icon}
@@ -263,7 +267,7 @@ export function Header({ userEmail, userDisplayName, bg = "#4DA8DA" }: HeaderPro
           <Home size={16} />
           Trang chủ
         </Link>
-        {NAV_LINKS.map(({ href, icon, label }) => {
+        {navLinks.map(({ href, icon, label }) => {
           const active = pathname === href || pathname.startsWith(href + "/");
           return (
             <Link
