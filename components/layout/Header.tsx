@@ -328,14 +328,14 @@ const styles = {
     hidden
   `,
   nav: `
-    hidden lg:flex items-center gap-6
+    hidden lg:flex items-center gap-3 xl:gap-5
   `,
   navDivider: `
     w-px h-4 bg-white/30 flex-shrink-0
   `,
   navLink: `
     flex items-center gap-1.5 px-0 pb-1
-    text-sm text-white font-medium
+    text-sm text-white font-medium whitespace-nowrap flex-shrink-0
     border-b-2 border-transparent
     hover:border-[#FFD66B]
     transition-colors
