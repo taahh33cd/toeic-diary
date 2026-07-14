@@ -4,6 +4,7 @@ import type {
   LevelSlug,
   BestScore,
 } from "./types";
+import { tuongPhanLevels } from "./data/tuong-phan";
 
 // ── Level metadata template (giống nhau cho mọi nhóm) ────────────────────────
 //
@@ -108,7 +109,7 @@ export const CONNECTOR_GROUPS: ConnGroupConfig[] = [
       { word: "in contrast", kind: "adv", vi: "trái lại" },
       { word: "conversely", kind: "adv", vi: "ngược lại" },
     ],
-    levels: [],
+    levels: tuongPhanLevels,
   },
   {
     slug: "nguyen-nhan",
