@@ -14,11 +14,12 @@ const PARTS = [
     totalTenses: 12,
   },
   {
-    part: "Part 6",
-    slug: null,
-    title: "Điền vào đoạn văn",
-    description: "Chọn từ/cụm phù hợp ngữ cảnh đoạn văn ngắn.",
-    available: false,
+    part: "Part 5 & 6",
+    slug: "connectors",
+    title: "Liên từ & Từ nối",
+    description: "Phân biệt liên từ / giới từ / trạng từ liên kết theo 10 nhóm quan hệ logic — bẫy hay gặp nhất của ETS.",
+    available: true,
+    totalTenses: 10,
   },
   {
     part: "Part 7",
