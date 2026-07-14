@@ -5,6 +5,7 @@ import type {
   BestScore,
 } from "./types";
 import { tuongPhanLevels } from "./data/tuong-phan";
+import { nguyenNhanLevels } from "./data/nguyen-nhan";
 
 // ── Level metadata template (giống nhau cho mọi nhóm) ────────────────────────
 //
@@ -134,7 +135,7 @@ export const CONNECTOR_GROUPS: ConnGroupConfig[] = [
       { word: "in light of", kind: "prep", vi: "xét theo, trước tình hình" },
       { word: "in view of", kind: "prep", vi: "xét về, do" },
     ],
-    levels: [],
+    levels: nguyenNhanLevels,
   },
   {
     slug: "ket-qua",
