@@ -87,8 +87,10 @@ function DayRow({
   const [saving, setSaving] = useState<AttendanceStatus | null>(null);
 
   async function handle(status: AttendanceStatus) {
+    // Bấm lại trạng thái đang chọn = bỏ tick (xoá bản ghi điểm danh)
+    const next = current === status ? null : status;
     setSaving(status);
-    await setAttendance(student.id, date, status);
+    await setAttendance(student.id, date, next);
     setSaving(null);
   }
 
@@ -118,6 +120,8 @@ function DayRow({
               key={status}
               onClick={() => handle(status)}
               disabled={!!saving}
+              title={isActive ? `${c.label} — bấm lại để bỏ tick` : c.label}
+              aria-pressed={isActive}
               className="text-xs px-2.5 py-1.5 min-h-[44px] rounded-lg font-medium transition-all border"
               style={{
                 background: isActive ? c.bg : "transparent",
