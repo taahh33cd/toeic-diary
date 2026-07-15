@@ -6,6 +6,7 @@ import type {
 } from "./types";
 import { tuongPhanLevels } from "./data/tuong-phan";
 import { nguyenNhanLevels } from "./data/nguyen-nhan";
+import { ketQuaLevels } from "./data/ket-qua";
 
 // ── Level metadata template (giống nhau cho mọi nhóm) ────────────────────────
 //
@@ -156,7 +157,7 @@ export const CONNECTOR_GROUPS: ConnGroupConfig[] = [
       { word: "as a result", kind: "adv", vi: "kết quả là", note: "Không có 'of' — khác 'as a result of'." },
       { word: "otherwise", kind: "adv", vi: "nếu không thì", note: "Hệ quả nếu điều kiện không xảy ra." },
     ],
-    levels: [],
+    levels: ketQuaLevels,
   },
   {
     slug: "thoi-gian",
