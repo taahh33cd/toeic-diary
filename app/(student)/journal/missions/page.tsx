@@ -538,7 +538,7 @@ function HwCard({
                 >
                   <span style={{ fontSize: ".9rem" }}>📤</span>
                   <span style={{ fontSize: ".78rem", fontWeight: 600, color: "var(--text-primary,#2C1E0F)" }}>Thêm ảnh / video</span>
-                  <span style={{ fontSize: ".62rem", color: "#9A8672" }}>· Chọn nhiều file · Ảnh ≤5MB · Video mọi dung lượng</span>
+                  <span style={{ fontSize: ".62rem", color: "#9A8672" }}>· Chọn nhiều file · Ảnh ≤5MB · Video ≤100MB</span>
                 </button>
               )}
             </div>
