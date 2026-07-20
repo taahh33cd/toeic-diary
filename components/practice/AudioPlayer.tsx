@@ -30,6 +30,12 @@ export function AudioPlayer({ audioUrl }: { audioUrl: string }) {
     if (audioRef.current) audioRef.current.playbackRate = speed;
   }, [speed]);
 
+  // Detached <audio> keeps playing after unmount — stop it explicitly
+  useEffect(() => {
+    const audio = audioRef.current;
+    return () => { audio?.pause(); };
+  }, []);
+
   // Sync play/pause
   useEffect(() => {
     const audio = audioRef.current;

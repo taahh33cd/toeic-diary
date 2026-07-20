@@ -41,6 +41,12 @@ export function PostSubmitView({
     if (audioRef.current) audioRef.current.playbackRate = speed;
   }, [speed]);
 
+  // Detached <audio> keeps playing after unmount — stop it explicitly
+  useEffect(() => {
+    const audio = audioRef.current;
+    return () => { audio?.pause(); };
+  }, []);
+
   function togglePlay() {
     const a = audioRef.current;
     if (!a) return;

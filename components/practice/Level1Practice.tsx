@@ -96,6 +96,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
   const [speed, setSpeed] = useState(1.0);
 
   const replayStateRef = useRef<{ sentenceId: string; count: number }>({ sentenceId: "", count: 0 });
+  const seekingRef = useRef(false);
 
   const [showSubmit, setShowSubmit] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -122,6 +123,27 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
     if (audioRef.current) audioRef.current.playbackRate = speed;
   }, [speed]);
 
+  // Detached <audio> keeps playing after unmount — stop it explicitly
+  useEffect(() => {
+    const audio = audioRef.current;
+    return () => { audio?.pause(); };
+  }, []);
+
+  // Seek is async: play() before it lands replays the previous segment
+  function seekAndPlay(audio: HTMLAudioElement, to: number) {
+    audio.currentTime = to;
+    const start = () => {
+      seekingRef.current = false;
+      audio.play().catch(() => {});
+    };
+    if (audio.seeking) {
+      seekingRef.current = true;
+      audio.addEventListener("seeked", start, { once: true });
+    } else {
+      start();
+    }
+  }
+
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -132,9 +154,10 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
 
     const seekTo = activeSentence.startTime > 0 ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET) : 0;
 
+    let cancelled = false;
     const doSeekAndPlay = () => {
-      audio.currentTime = seekTo;
-      audio.play().catch(() => {});
+      if (cancelled) return;
+      seekAndPlay(audio, seekTo);
       setIsPlaying(true);
     };
 
@@ -142,8 +165,12 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
       doSeekAndPlay();
     } else {
       audio.addEventListener("canplay", doSeekAndPlay, { once: true });
-      audio.load();
     }
+
+    return () => {
+      cancelled = true;
+      audio.removeEventListener("canplay", doSeekAndPlay);
+    };
   }, [activeIdx]);
 
   useEffect(() => {
@@ -161,6 +188,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
     const t = audio.currentTime;
     setAudioCurrent(t);
 
+    if (seekingRef.current) return;
     if (!activeSentence) return;
     if (activeSentence.blanks.length === 0) return;
 
@@ -174,8 +202,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
       if (state.count < MAX_REPLAY - 1) {
         state.count += 1;
         setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: state.count }));
-        audio.currentTime = activeSentence.startTime > 0 ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET) : 0;
-        audio.play().catch(() => {});
+        seekAndPlay(audio, activeSentence.startTime > 0 ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET) : 0);
       } else {
         state.count = MAX_REPLAY;
         setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: MAX_REPLAY }));
@@ -202,8 +229,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
     const seekTo = activeSentence.startTime > 0 ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET) : 0;
     replayStateRef.current = { sentenceId: activeSentence.id, count: 0 };
     setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: 0 }));
-    audio.currentTime = seekTo;
-    audio.play().catch(() => {});
+    seekAndPlay(audio, seekTo);
     setIsPlaying(true);
   }
 
@@ -220,8 +246,7 @@ export function Level1Practice({ lessonId, audioUrl, sentences, partNumber, corr
     if (state.count < MAX_REPLAY - 1) {
       state.count += 1;
       setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: state.count }));
-      audio.currentTime = 0;
-      audio.play().catch(() => {});
+      seekAndPlay(audio, 0);
     } else {
       state.count = MAX_REPLAY;
       setReplayCounts((prev) => ({ ...prev, [activeSentence.id]: MAX_REPLAY }));
