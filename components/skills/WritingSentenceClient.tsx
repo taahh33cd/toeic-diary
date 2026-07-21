@@ -247,7 +247,7 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
       <div style={{ border: `1px solid ${EXAM.border}`, borderRadius: 8, overflow: "hidden", background: EXAM.panel, marginBottom: 4 }}>
         {!imgError ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={ex.imageUrl} alt={ex.imageAlt} onError={() => setImgError(true)} style={{ width: "100%", maxHeight: 300, objectFit: "cover", display: "block" }} />
+          <img src={ex.imageUrl} alt={ex.imageAlt} onError={() => setImgError(true)} style={{ width: "100%", height: "auto", display: "block" }} />
         ) : (
           <div style={{ padding: "2rem", textAlign: "center", color: EXAM.muted, fontSize: "0.85rem" }}>Không tải được ảnh 🖼️</div>
         )}
