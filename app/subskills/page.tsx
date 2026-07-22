@@ -32,6 +32,14 @@ const SKILLS = [
     comingSoon: false,
   },
   {
+    key: "verbs",
+    emoji: "🔁",
+    label: "Động từ bất quy tắc",
+    href: "/subskills/verbs",
+    description: "120 từ trọng tâm · học theo quy luật biến đổi · tự gõ V2/V3",
+    comingSoon: false,
+  },
+  {
     key: "speaking",
     emoji: "🗣",
     label: "Speaking",
