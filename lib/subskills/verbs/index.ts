@@ -1,4 +1,5 @@
 import { VERBS } from "./data/verbs";
+import { GROUP_SENTENCES } from "./data/sentences";
 import {
   SHAPE_LABEL,
   SHAPE_HINT,
@@ -231,21 +232,23 @@ function buildTyping(
   }));
 }
 
-function buildLevels(groupVerbs: Verb[]): VerbLevel[] {
+function buildLevels(groupSlug: string, groupVerbs: Verb[]): VerbLevel[] {
   const meta = buildLevelMeta();
   const withQuestions = (slug: LevelSlug, questions: VerbLevel["questions"]) => {
     const m = meta.find((x) => x.slug === slug)!;
     return { ...m, questions };
   };
 
+  // L5 / L6 cần câu ngữ cảnh nên phải soạn tay; nhóm nào chưa soạn thì để rỗng.
+  const sentences = GROUP_SENTENCES[groupSlug];
+
   return [
     withQuestions("l1", buildL1(groupVerbs)),
     withQuestions("l2", buildTyping(groupVerbs, ["v2"], "l2")),
     withQuestions("l3", buildTyping(groupVerbs, ["v3"], "l3")),
     withQuestions("l4", buildTyping(groupVerbs, ["v2", "v3"], "l4")),
-    // L5 và L6 cần câu ngữ cảnh — soạn tay theo từng phase sau.
-    withQuestions("l5", []),
-    withQuestions("l6", []),
+    withQuestions("l5", sentences?.l5 ?? []),
+    withQuestions("l6", sentences?.l6 ?? []),
   ];
 }
 
@@ -253,7 +256,7 @@ function buildLevels(groupVerbs: Verb[]): VerbLevel[] {
 
 export const VERB_GROUPS: VerbGroupConfig[] = GROUP_META.map((m) => {
   const verbs = VERBS.filter((v) => v.group === m.slug);
-  return { ...m, verbs, levels: buildLevels(verbs) };
+  return { ...m, verbs, levels: buildLevels(m.slug, verbs) };
 });
 
 // ── Lookup helpers ───────────────────────────────────────────────────────────
