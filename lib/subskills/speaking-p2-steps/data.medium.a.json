@@ -1,0 +1,466 @@
+[
+  {
+    "id": "m01",
+    "level": "Medium",
+    "test": 1,
+    "image": "/images/speaking-p2-steps/m01.jpg",
+    "title": "Xếp đồ vào cốp xe",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a supermarket car park",
+        "distractors": ["in a hotel lobby", "at a football stadium", "in a hospital room"],
+        "explanation": "Có xe đẩy siêu thị, ô tô đỗ và toà nhà siêu thị phía sau → bãi đỗ xe siêu thị."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a supermarket car park.",
+        "answers": ["in", "at"],
+        "explanation": "Dùng 'in a car park' hoặc 'at a car park' đều được chấp nhận."
+      },
+      "models": [
+        "This picture was taken in a supermarket car park. The main focus is a young couple.",
+        "This picture shows a young couple loading their car in a car park.",
+        "This is a picture of a couple with their shopping in a car park."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a man holding a paper bag of groceries",
+        "distractors": ["a woman washing her car", "a child running away", "two men changing a tyre"],
+        "explanation": "Người đàn ông đang cầm túi giấy đựng thực phẩm là điểm nhấn chính."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a couple ______ (put) their shopping in the car.",
+        "answers": ["putting"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a man holding a paper bag of groceries.",
+        "What I can see first is a couple loading their shopping into the car.",
+        "What I can see first is two people smiling after going shopping."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The open car trunk is on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Cốp xe đang mở nằm ở phía bên trái khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả hai người, đồ vật và phần nền (ít nhất 3 câu).",
+        "model": "The man in the middle is wearing a light blue shirt and beige trousers, and he is holding a paper bag full of food with a pineapple sticking out. The woman on the right has blonde hair in a ponytail and she is wearing a yellow sweater and jeans. She is pushing a shopping trolley and smiling at the man. On the left, the trunk of a white car is open, and the trolley in front of her is full of bottles and other products. In the background, there is a supermarket building with a yellow sign and several parked cars."
+      }
+    },
+    "fullModel": "This picture was taken in a supermarket car park. What I can see first is a couple putting their shopping in the car. The man in the middle is wearing a light blue shirt and beige trousers, and he is holding a paper bag full of food with a pineapple sticking out. The woman on the right has blonde hair in a ponytail and she is wearing a yellow sweater and jeans. She is pushing a shopping trolley and smiling at the man. On the left, the trunk of a white car is open. In the background, there is a supermarket building with a yellow sign and several parked cars."
+  },
+  {
+    "id": "m02",
+    "level": "Medium",
+    "test": 1,
+    "image": "/images/speaking-p2-steps/m02.png",
+    "title": "Ba người phụ nữ đi mua sắm",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "on a shopping street, in front of a shop window",
+        "distractors": ["in a school playground", "on a farm", "in a train carriage"],
+        "explanation": "Bên trái là tủ kính trưng bày có ma-nơ-canh → phố mua sắm."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ front of a shop window.",
+        "answers": ["in"],
+        "explanation": "Cụm cố định 'in front of' = phía trước."
+      },
+      "models": [
+        "This picture was taken on a shopping street. The main focus is three women.",
+        "This picture shows three women shopping on a street.",
+        "This is a picture of three women in front of a shop window."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "three women carrying a lot of shopping bags",
+        "distractors": ["a shop assistant serving a customer", "two men waiting for a bus", "a woman walking a dog"],
+        "explanation": "Ba người phụ nữ xách rất nhiều túi mua sắm là hình ảnh nổi bật nhất."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is three women ______ (carry) shopping bags.",
+        "answers": ["carrying"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is three women carrying a lot of shopping bags.",
+        "What I can see first is three friends looking at a shop window.",
+        "What I can see first is three women enjoying a shopping trip."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The shop window with mannequins is on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Tủ kính có ma-nơ-canh nằm ở phía bên trái khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả ba người phụ nữ (trang phục, hành động) và phần nền (ít nhất 3 câu).",
+        "model": "All three women are wearing hats and warm coats, so it is probably autumn or winter. The woman on the left is wearing a cream hat and glasses with a dark coat and a checked scarf, and she is pointing at something in the window. The woman in the middle has a navy wide-brimmed hat and a red coat, and she is holding a blue paper bag. The woman on the right is wearing a purple hat and a green checked coat, and she is carrying orange and blue bags. On the left, there is a shop window with mannequins, and in the background the street is blurred."
+      }
+    },
+    "fullModel": "This picture was taken in front of a shop window on a shopping street. What I can see first is three women carrying a lot of shopping bags. All three women are wearing hats and warm coats, so it is probably autumn or winter. The woman on the left is wearing a cream hat and glasses, and she is pointing at something in the window. The woman in the middle has a navy hat and a red coat. The woman on the right is wearing a purple hat and a green checked coat. On the left, there is a shop window with mannequins."
+  },
+  {
+    "id": "m03",
+    "level": "Medium",
+    "test": 1,
+    "image": "/images/speaking-p2-steps/m03.png",
+    "title": "Quầy cà phê văn phòng",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in an office break room",
+        "distractors": ["in a bedroom", "on a beach", "in a garage"],
+        "explanation": "Có quầy pha cà phê, bình đựng cà phê và bàn gỗ → phòng nghỉ của văn phòng."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ an office break room.",
+        "answers": ["in"],
+        "explanation": "Dùng 'in' cho không gian bên trong."
+      },
+      "models": [
+        "This picture was taken in an office break room. The main focus is three women.",
+        "This picture shows three women at a coffee counter in an office.",
+        "This is a picture of three women getting coffee in an office."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a woman pouring coffee into a cup",
+        "distractors": ["a man cleaning the floor", "two people shaking hands", "a woman typing on a laptop"],
+        "explanation": "Người phụ nữ ở giữa đang rót cà phê từ bình vào cốc."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a woman ______ (pour) some coffee.",
+        "answers": ["pouring"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a woman pouring coffee into a cup.",
+        "What I can see first is three women taking a coffee break.",
+        "What I can see first is three colleagues at a coffee counter."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The woman looking at her phone is on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Người phụ nữ đang nhìn điện thoại đứng ở phía bên trái."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả ba người phụ nữ và các đồ vật trên quầy (ít nhất 3 câu).",
+        "model": "The woman on the left is wearing glasses and a blue top with black trousers, and she is looking down at her phone. The woman in the middle is wearing a light patterned blouse and magenta trousers, and she is filling a cup from a coffee dispenser. The woman on the right is wearing a black suit and she is reaching for a plate of food. On the counter, there are two coffee urns, a rack of snacks and some plates. In the background, there is a large red and gold wall decoration and a green plant in the corner."
+      }
+    },
+    "fullModel": "This picture was taken in an office break room. What I can see first is a woman pouring some coffee. The woman on the left is wearing glasses and a blue top, and she is looking down at her phone. The woman in the middle is wearing a light patterned blouse and magenta trousers, and she is filling a cup from a coffee dispenser. The woman on the right is wearing a black suit and she is reaching for a plate of food. On the counter, there are two coffee urns and a rack of snacks. In the background, there is a large red and gold wall decoration."
+  },
+  {
+    "id": "m04",
+    "level": "Medium",
+    "test": 2,
+    "image": "/images/speaking-p2-steps/m04.jpg",
+    "title": "Bắt tay trong văn phòng",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a meeting room at an office",
+        "distractors": ["in a supermarket", "at a bus stop", "in a park"],
+        "explanation": "Có bảng trắng phía sau và mọi người mặc vest → phòng họp văn phòng."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a meeting room.",
+        "answers": ["in"],
+        "explanation": "Dùng 'in' cho phòng (in a room)."
+      },
+      "models": [
+        "This picture was taken in a meeting room. The main focus is three business people.",
+        "This picture shows three business people in a meeting room.",
+        "This is a picture of three business people shaking hands."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "two people shaking hands",
+        "distractors": ["a man giving a presentation", "a woman answering the phone", "people eating lunch"],
+        "explanation": "Cái bắt tay ở giữa khung hình là hành động nổi bật nhất."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is two people ______ (shake) hands.",
+        "answers": ["shaking"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is two people shaking hands.",
+        "What I can see first is a man and a woman greeting each other.",
+        "What I can see first is three colleagues at a business meeting."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The smiling man in the dark suit is on the ______ side of the picture.",
+        "answers": ["right"],
+        "explanation": "Người đàn ông mặc vest sẫm màu đứng ở phía bên phải."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả ba người và bối cảnh phòng họp (ít nhất 3 câu).",
+        "model": "All three people are wearing formal business clothes. The person on the left has dark hair with sunglasses on their head, and we can only see their back as they reach out to shake hands. The man on the right is wearing a dark suit with a white shirt and a light tie, and he is smiling while shaking hands. Behind them in the middle, a woman in a dark suit with a pearl necklace is standing and watching. In the background, there is a whiteboard and the bright wall of a modern office."
+      }
+    },
+    "fullModel": "This picture was taken in a meeting room at an office. What I can see first is two people shaking hands. All three people are wearing formal business clothes. The person on the left has dark hair and we can only see their back as they reach out to shake hands. The man on the right is wearing a dark suit with a white shirt and a light tie, and he is smiling. Behind them in the middle, a woman in a dark suit with a pearl necklace is standing and watching. In the background, there is a whiteboard."
+  },
+  {
+    "id": "m05",
+    "level": "Medium",
+    "test": 2,
+    "image": "/images/speaking-p2-steps/m05.png",
+    "title": "Bờ kè ven biển",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "on a walkway next to the water",
+        "distractors": ["inside a museum", "in an underground car park", "in a classroom"],
+        "explanation": "Có lan can, mặt nước và các toà nhà cao tầng phía xa → lối đi bộ ven sông/biển."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a walkway next to the water.",
+        "answers": ["on"],
+        "explanation": "Dùng 'on' với lối đi/bề mặt (on a walkway, on a path)."
+      },
+      "models": [
+        "This picture was taken on a walkway next to the water. The main focus is two women.",
+        "This picture shows two women walking beside the water.",
+        "This is a picture of a woman pushing a stroller near the water."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a woman pushing a stroller with a child in it",
+        "distractors": ["a man fishing from a boat", "children swimming in the sea", "a couple riding a motorbike"],
+        "explanation": "Người phụ nữ đẩy xe nôi có em bé ngồi trong là chủ thể chính."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a woman ______ (push) a stroller.",
+        "answers": ["pushing"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a woman pushing a stroller with a child in it.",
+        "What I can see first is a mother taking her child for a walk.",
+        "What I can see first is two women enjoying a walk by the water."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The woman taking a photo is on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Người phụ nữ đang chụp ảnh đứng ở phía bên trái, cạnh lan can."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả hai người phụ nữ, em bé và phần nền (ít nhất 3 câu).",
+        "model": "The woman on the left is wearing a pink top and jeans, and she is leaning against the railing and taking a photo of the view. The woman on the right is wearing a teal tank top and jeans, and she is pushing a grey stroller along the walkway. In the stroller, there is a small child wearing sunglasses. In the background, I can see calm blue water, some palm trees and several tall buildings under a clear blue sky."
+      }
+    },
+    "fullModel": "This picture was taken on a walkway next to the water. What I can see first is a woman pushing a stroller with a child in it. The woman on the left is wearing a pink top and jeans, and she is leaning against the railing and taking a photo. The woman on the right is wearing a teal tank top and jeans, and she is pushing a grey stroller. In the stroller, there is a small child wearing sunglasses. In the background, I can see calm blue water, some palm trees and several tall buildings."
+  },
+  {
+    "id": "m06",
+    "level": "Medium",
+    "test": 2,
+    "image": "/images/speaking-p2-steps/m06.jpg",
+    "title": "Mẹ và hai con ở siêu thị",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in the fruit section of a supermarket",
+        "distractors": ["in a hair salon", "at a petrol station", "in a library"],
+        "explanation": "Có quầy hoa quả, cân treo và xe đẩy → khu rau quả trong siêu thị."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a supermarket.",
+        "answers": ["in", "at"],
+        "explanation": "Dùng 'in a supermarket' (bên trong) hoặc 'at a supermarket' đều được."
+      },
+      "models": [
+        "This picture was taken in a supermarket. The main focus is a mother and her two children.",
+        "This picture shows a mother and two children shopping in a supermarket.",
+        "This is a picture of a family buying fruit in a supermarket."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a woman putting apples into a plastic bag",
+        "distractors": ["a cashier scanning items", "a man carrying a heavy box", "two children eating ice cream"],
+        "explanation": "Người mẹ đang cho táo xanh vào túi ni lông là hành động chính."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a woman ______ (choose) some fruit.",
+        "answers": ["choosing"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a woman putting apples into a plastic bag.",
+        "What I can see first is a mother and her children buying fruit.",
+        "What I can see first is a family shopping for groceries."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The little girl is on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Bé gái đứng ở phía bên trái, tựa vào xe đẩy."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả ba người, xe đẩy và phần nền (ít nhất 3 câu).",
+        "model": "The mother on the right has curly dark hair and she is wearing a pink sweater and jeans. She is holding a plastic bag in one hand and picking up a green apple with the other. The boy in the middle is wearing a blue sweater and he is holding a small piece of paper, probably a shopping list. The girl on the left is wearing a light blue cardigan and leaning on the trolley, which is already full of vegetables. In the background, there are shelves full of colourful fruit, and on the right there is a big pile of oranges and a metal scale hanging from the ceiling."
+      }
+    },
+    "fullModel": "This picture was taken in a supermarket. What I can see first is a woman choosing some fruit. The mother on the right has curly dark hair and she is wearing a pink sweater. She is holding a plastic bag and picking up a green apple. The boy in the middle is wearing a blue sweater and holding a shopping list. The girl on the left is wearing a light blue cardigan and leaning on the trolley, which is full of vegetables. In the background, there are shelves full of colourful fruit and a metal scale hanging from the ceiling."
+  },
+  {
+    "id": "m07",
+    "level": "Medium",
+    "test": 3,
+    "image": "/images/speaking-p2-steps/m07.jpg",
+    "title": "Chọn rau ở chợ",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "at a vegetable market",
+        "distractors": ["in a dentist's office", "on a football pitch", "in a bookshop"],
+        "explanation": "Có quầy rau củ, bảng giá và người bán đeo tạp dề → chợ rau quả."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a vegetable market.",
+        "answers": ["at", "in"],
+        "explanation": "Dùng 'at a market' hoặc 'in a market' đều được chấp nhận."
+      },
+      "models": [
+        "This picture was taken at a vegetable market. The main focus is a woman buying vegetables.",
+        "This picture shows a woman choosing vegetables at a market.",
+        "This is a picture of a customer and a shop assistant at a market."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a woman picking up some leeks",
+        "distractors": ["a man weighing meat", "a child stealing an apple", "two women chatting on a bench"],
+        "explanation": "Người phụ nữ đang cầm bó tỏi tây lên xem là hành động chính."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a woman ______ (pick) up some vegetables.",
+        "answers": ["picking"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a woman picking up some leeks.",
+        "What I can see first is a customer choosing fresh vegetables.",
+        "What I can see first is a woman shopping at a market stall."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The male shop assistant is on the ______ side of the picture.",
+        "answers": ["right"],
+        "explanation": "Người bán hàng nam đứng ở phía bên phải, phía sau quầy."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả người mua, người bán và những gì bày trên quầy (ít nhất 3 câu).",
+        "model": "The woman on the left has long fair hair and she is wearing a grey coat with a bright blue scarf. She is looking down and holding a bunch of green leeks in her hand. The man on the right has a beard and he is wearing a grey turtleneck with a dark green apron. He is carrying a black plastic crate, so he is probably a shop assistant refilling the stall. In front of them, there are a lot of vegetables such as leeks, celery, peppers and apples, and in the background I can see price tags and more shelves of produce."
+      }
+    },
+    "fullModel": "This picture was taken at a vegetable market. What I can see first is a woman picking up some vegetables. The woman on the left has long fair hair and she is wearing a grey coat with a bright blue scarf. She is holding a bunch of green leeks. The man on the right has a beard and he is wearing a grey turtleneck with a dark green apron. He is carrying a black plastic crate, so he is probably a shop assistant. In front of them, there are a lot of vegetables such as leeks, celery, peppers and apples."
+  },
+  {
+    "id": "m08",
+    "level": "Medium",
+    "test": 3,
+    "image": "/images/speaking-p2-steps/m08.jpg",
+    "title": "Lớp học âm nhạc",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a classroom at a kindergarten",
+        "distractors": ["in a hospital ward", "at a car showroom", "on a mountain"],
+        "explanation": "Có giá đồ chơi nhiều màu, ghế nhỏ và trẻ nhỏ → lớp học mẫu giáo."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a classroom.",
+        "answers": ["in"],
+        "explanation": "Dùng 'in' cho phòng học (in a classroom)."
+      },
+      "models": [
+        "This picture was taken in a classroom. The main focus is a teacher and three children.",
+        "This picture shows a teacher playing music with three children.",
+        "This is a picture of a music lesson in a kindergarten."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a teacher playing the guitar with children",
+        "distractors": ["children painting a picture", "a teacher reading a story", "children sleeping on mats"],
+        "explanation": "Cô giáo đang chơi guitar cùng các bé chơi nhạc cụ."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a teacher ______ (play) the guitar.",
+        "answers": ["playing"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a teacher playing the guitar with children.",
+        "What I can see first is four people making music together.",
+        "What I can see first is a music lesson for young children."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The teacher with the guitar is on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Cô giáo cầm đàn guitar ngồi ở phía bên trái khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả cô giáo, từng em bé và nhạc cụ của họ (ít nhất 3 câu).",
+        "model": "The teacher on the left has long curly hair and she is wearing an orange top with khaki trousers. She is sitting on a small chair and playing an acoustic guitar. Next to her, a boy in a white and grey shirt is sitting behind a red drum and hitting it with his hands. In the middle, a girl in a green top is holding two maracas and smiling happily. The girl on the right is wearing a khaki top and holding a small guitar. In the background, there are colourful shelves full of toys and books."
+      }
+    },
+    "fullModel": "This picture was taken in a classroom. What I can see first is a teacher playing the guitar with children. The teacher on the left has long curly hair and she is wearing an orange top. She is sitting on a small chair and playing an acoustic guitar. Next to her, a boy is sitting behind a red drum and hitting it with his hands. In the middle, a girl in a green top is holding two maracas and smiling. The girl on the right is holding a small guitar. In the background, there are colourful shelves full of toys."
+  }
+]

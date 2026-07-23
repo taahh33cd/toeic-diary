@@ -3,6 +3,7 @@ import Link from "next/link";
 import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { SPEAKING_P2_SKILLS } from "@/lib/subskills/speaking-part2";
+import { STEPS_SKILL, STEP_TESTS_COUNT } from "@/lib/subskills/speaking-p2-steps";
 
 export const metadata: Metadata = { title: "Speaking Part 2 — Subskills TOEIC" };
 
@@ -36,6 +37,17 @@ export default async function SpeakingPart2Page() {
     statsMap[skill.id] = { passedTests, doneTests };
   }
 
+  // Skill 6 — guided 3-step picture description (own data model, own route)
+  const stepsEasyBest: Record<string, number> = {};
+  for (const a of attempts.filter((x) => x.part === STEPS_SKILL.part)) {
+    const prev = stepsEasyBest[a.questionWord] ?? 0;
+    if (a.score > prev) stepsEasyBest[a.questionWord] = a.score;
+  }
+  const stepsStats = {
+    passedTests: Object.values(stepsEasyBest).filter((s) => s >= 80).length,
+    doneTests: Object.keys(stepsEasyBest).length,
+  };
+
   return (
     <div
       style={{
@@ -63,10 +75,11 @@ export default async function SpeakingPart2Page() {
           Speaking · Part 2
         </p>
         <h1 style={{ fontSize: "clamp(1.3rem, 3vw, 1.7rem)", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.02em", lineHeight: 1.2, margin: 0 }}>
-          Mô tả ảnh — 5 kỹ năng
+          Mô tả ảnh — 6 kỹ năng
         </h1>
         <p style={{ marginTop: "0.5rem", fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
-          Mỗi kỹ năng có 5 bộ test, mỗi bộ gồm 3 cấp độ (Easy → Medium → Hard), 25 câu/cấp.
+          5 kỹ năng ngữ pháp — mỗi kỹ năng 5 bộ test × 3 cấp độ (Easy → Medium → Hard), 25 câu/cấp.
+          Riêng <b>Mô tả tranh theo 3 bước</b> luyện quy trình mô tả hoàn chỉnh trên 47 bức ảnh thật, có ghi âm.
         </p>
       </div>
 
@@ -103,7 +116,7 @@ export default async function SpeakingPart2Page() {
                 padding: "1.3rem 1.6rem",
                 background: idx % 2 === 0 ? "var(--bg-primary)" : "var(--bg-secondary)",
                 textDecoration: "none",
-                borderBottom: idx < SPEAKING_P2_SKILLS.length - 1 ? "1px solid var(--border)" : "none",
+                borderBottom: "1px solid var(--border)",
               }}
             >
               {/* Status icon */}
@@ -147,6 +160,66 @@ export default async function SpeakingPart2Page() {
             </Link>
           );
         })}
+
+        {/* Skill 6 — guided 3-step picture description */}
+        {(() => {
+          const pct = Math.round((stepsStats.doneTests / STEP_TESTS_COUNT) * 100);
+          const allPassed = stepsStats.passedTests === STEP_TESTS_COUNT;
+          const anyDone = stepsStats.doneTests > 0;
+          return (
+            <Link
+              href={`/subskills/speaking/part2/${STEPS_SKILL.id}`}
+              className="r-row"
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                gap: "1.25rem",
+                padding: "1.3rem 1.6rem",
+                background: SPEAKING_P2_SKILLS.length % 2 === 0 ? "var(--bg-primary)" : "var(--bg-secondary)",
+                textDecoration: "none",
+              }}
+            >
+              <div style={{
+                width: 32, height: 32, borderRadius: "50%", flexShrink: 0, marginTop: 2,
+                background: allPassed && anyDone ? "rgba(34,197,94,0.15)" : anyDone ? "rgba(234,179,8,0.15)" : "var(--bg-elevated)",
+                border: `1.5px solid ${allPassed && anyDone ? "rgba(34,197,94,0.5)" : anyDone ? "rgba(234,179,8,0.5)" : "var(--border)"}`,
+                display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.85rem",
+              }}>
+                {allPassed && anyDone ? "✓" : anyDone ? "…" : "○"}
+              </div>
+
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "0.15rem", flexWrap: "wrap" }}>
+                  <span style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--text-primary)" }}>{STEPS_SKILL.labelVi}</span>
+                  <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", fontStyle: "italic" }}>{STEPS_SKILL.label}</span>
+                  <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "rgb(168,85,247)", background: "rgba(168,85,247,0.12)", border: "1px solid rgba(168,85,247,0.35)", borderRadius: 4, padding: "1px 6px" }}>
+                    Có ghi âm
+                  </span>
+                </div>
+                <p style={{
+                  fontSize: "0.8rem", color: "var(--text-secondary)", lineHeight: 1.55,
+                  marginBottom: anyDone ? "0.55rem" : 0,
+                }}>
+                  {STEPS_SKILL.description}
+                </p>
+                {anyDone && (
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap" }}>
+                    <div style={{ flex: "1 1 100px", maxWidth: 120, height: 3, background: "var(--border)", borderRadius: 999 }}>
+                      <div style={{ height: "100%", width: `${pct}%`, background: allPassed ? "rgb(34,197,94)" : "var(--accent-primary)", borderRadius: 999, transition: "width 0.3s" }} />
+                    </div>
+                    <span style={{ fontSize: "0.68rem", color: "var(--text-muted)" }}>{stepsStats.doneTests}/{STEP_TESTS_COUNT} bộ</span>
+                    <span style={{ fontSize: "0.68rem", color: "var(--text-muted)" }}>·</span>
+                    <span style={{ fontSize: "0.68rem", color: stepsStats.passedTests > 0 ? "rgb(34,197,94)" : "var(--text-muted)" }}>
+                      {stepsStats.passedTests} pass (Easy ≥ 80%)
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              <span className="r-arrow" style={{ fontSize: "0.8rem", color: "var(--accent-primary)", flexShrink: 0, marginTop: 6 }}>→</span>
+            </Link>
+          );
+        })()}
       </div>
 
       {/* Footer */}

@@ -1,0 +1,408 @@
+[
+  {
+    "id": "h01",
+    "level": "Hard",
+    "test": 1,
+    "image": "/images/speaking-p2-steps/h01.jpg",
+    "title": "Nhóm văn phòng xem máy tính bảng",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a bright modern office",
+        "distractors": ["in a hospital ward", "at a construction site", "in a school canteen"],
+        "explanation": "Có bàn trắng, cửa sổ lớn, bảng lật và mọi người mặc đồ công sở → văn phòng hiện đại."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a modern office.",
+        "answers": ["in"],
+        "explanation": "Dùng 'in' cho không gian bên trong."
+      },
+      "models": [
+        "This picture was taken in a bright modern office. The main focus is a team of five colleagues.",
+        "This picture shows five colleagues looking at a tablet together.",
+        "This is a picture of a business team having an informal meeting."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a man holding up a tablet for the others to see",
+        "distractors": ["a woman writing on a flip chart", "two men arguing loudly", "a group eating lunch"],
+        "explanation": "Người đàn ông bên phải giơ máy tính bảng lên cho cả nhóm cùng xem."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is five colleagues ______ (look) at a tablet.",
+        "answers": ["looking"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a man holding up a tablet for the others to see.",
+        "What I can see first is five colleagues looking at a tablet together.",
+        "What I can see first is a team discussing something on a screen."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The woman drinking coffee is on the ______ side of the picture.",
+        "answers": ["right"],
+        "explanation": "Người phụ nữ tóc đen đang uống cà phê ngồi ở phía bên phải."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả từng người (vị trí, trang phục, hành động) và bối cảnh (ít nhất 4 câu).",
+        "model": "On the far left, a blonde woman in a light blue shirt is leaning over the table and smiling. Next to her, another woman with long fair hair is bending down and pointing at the tablet with her finger. In the middle, a man in a white shirt and dark tie is sitting at the table and smiling at the screen. On the right, a woman with long dark hair in a grey jacket is holding a white cup and drinking coffee. Next to her, a man in a light blue shirt and glasses is holding up a white tablet with both hands. On the table, there are a laptop, a glass of water, some sticky notes and a notebook, and in the background there are tall bright windows and a flip chart."
+      }
+    },
+    "fullModel": "This picture was taken in a bright modern office. What I can see first is five colleagues looking at a tablet. On the far left, a blonde woman in a light blue shirt is leaning over the table and smiling. Next to her, another woman is pointing at the tablet with her finger. In the middle, a man in a white shirt and dark tie is sitting and smiling at the screen. On the right, a woman in a grey jacket is drinking coffee, and next to her a man in a light blue shirt is holding up a white tablet. On the table, there are a laptop, a glass of water and some sticky notes."
+  },
+  {
+    "id": "h02",
+    "level": "Hard",
+    "test": 1,
+    "image": "/images/speaking-p2-steps/h02.png",
+    "title": "Phố có tiệm fish and chips",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "on a busy city street",
+        "distractors": ["inside a shopping mall", "in a private garden", "at a railway platform"],
+        "explanation": "Có lòng đường, vỉa hè, cửa hàng và người qua lại → phố đông trong thành phố."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a busy city street.",
+        "answers": ["on", "in"],
+        "explanation": "Dùng 'on a street' (Mỹ) hoặc 'in a street' (Anh) đều được chấp nhận."
+      },
+      "models": [
+        "This picture was taken on a busy city street. The main focus is a corner shop and the people around it.",
+        "This picture shows a busy street with a fish and chips shop.",
+        "This is a picture of people walking on a city street."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a fish and chips shop with people outside it",
+        "distractors": ["a fire engine in the street", "a market selling flowers", "a group of children in uniform"],
+        "explanation": "Cửa hàng có biển 'POPPIE'S FISH & CHIPS' cùng nhóm người phía trước là điểm nhấn."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a lot of people ______ (walk) on the street.",
+        "answers": ["walking"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a fish and chips shop with people outside it.",
+        "What I can see first is a lot of people walking on a busy street.",
+        "What I can see first is a corner restaurant in a city."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The man in the white shirt walking towards the camera is on the ______ side.",
+        "answers": ["right"],
+        "explanation": "Người đàn ông mặc áo sơ mi trắng đi về phía máy ảnh ở bên phải khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả cửa hàng, những người trên phố và phần nền (ít nhất 4 câu).",
+        "model": "In the middle of the picture, there is a corner shop with a big sign that says POPPIE'S FISH AND CHIPS, and a red OPEN sign in the window. In front of the shop, about eight or nine people are standing and walking on the pavement, and some of them are waiting to go inside. On the left, a person is riding a bicycle along the road, and a man in a yellow shirt is walking near the shop. On the right, an older man in a white shirt and dark trousers is walking towards the camera along the pavement. In the background, there are brick buildings on both sides of the narrow street and an English flag hanging above the shop."
+      }
+    },
+    "fullModel": "This picture was taken on a busy city street. What I can see first is a lot of people walking on the street. In the middle, there is a corner shop with a big sign that says POPPIE'S FISH AND CHIPS and a red OPEN sign in the window. In front of the shop, about eight or nine people are standing and walking on the pavement. On the left, a person is riding a bicycle along the road. On the right, an older man in a white shirt is walking towards the camera. In the background, there are brick buildings on both sides of the narrow street."
+  },
+  {
+    "id": "h03",
+    "level": "Hard",
+    "test": 2,
+    "image": "/images/speaking-p2-steps/h03.png",
+    "title": "Thuyết trình kết quả kinh doanh",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a boardroom on a high floor",
+        "distractors": ["in a hotel bedroom", "in a car repair shop", "at a music concert"],
+        "explanation": "Có bàn họp gỗ dài, màn hình lớn và cửa sổ nhìn ra thành phố → phòng họp cao tầng."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a boardroom.",
+        "answers": ["in"],
+        "explanation": "Dùng 'in' cho phòng (in a boardroom)."
+      },
+      "models": [
+        "This picture was taken in a boardroom. The main focus is a man giving a presentation.",
+        "This picture shows a man presenting sales results to his colleagues.",
+        "This is a picture of a business presentation in a boardroom."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a man standing and giving a presentation",
+        "distractors": ["a woman serving coffee", "two men shaking hands", "people leaving the room"],
+        "explanation": "Người đàn ông đứng trước màn hình thuyết trình là chủ thể trung tâm."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a man ______ (give) a presentation.",
+        "answers": ["giving"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a man standing and giving a presentation.",
+        "What I can see first is a business meeting with a presenter and seven colleagues.",
+        "What I can see first is a man presenting a chart to his team."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The presenter is standing in the ______ of the picture.",
+        "answers": ["middle", "centre", "center"],
+        "explanation": "Người thuyết trình đứng ở chính giữa khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả người thuyết trình, những người ngồi hai bên và bối cảnh phòng họp (ít nhất 4 câu).",
+        "model": "The man in the middle is wearing a dark blue suit with a light blue patterned tie, and he is standing in front of a large screen and holding his glasses. Behind him, the screen shows a bar chart with the title Quarterly Sales Performance. On the left side of the table, three colleagues in dark suits are sitting and listening to him, and one woman with blonde hair is looking up at the screen. On the right side, four more colleagues are sitting, and some of them are writing notes in their notebooks. On the long wooden table, there are laptops, bottles of water, paper cups of coffee and printed documents. In the background on the left, there are floor-to-ceiling windows with a view of the city."
+      }
+    },
+    "fullModel": "This picture was taken in a boardroom. What I can see first is a man giving a presentation. The man in the middle is wearing a dark blue suit and standing in front of a large screen showing a bar chart titled Quarterly Sales Performance. On the left side of the table, three colleagues in dark suits are sitting and listening. On the right side, four more colleagues are sitting and some of them are writing notes. On the long wooden table, there are laptops, bottles of water and paper cups of coffee. In the background, there are floor-to-ceiling windows with a view of the city."
+  },
+  {
+    "id": "h04",
+    "level": "Hard",
+    "test": 2,
+    "image": "/images/speaking-p2-steps/h04.jpg",
+    "title": "Cuộc họp quanh bàn tròn",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a meeting room at an office",
+        "distractors": ["in a gym", "at a farmers' market", "in a hotel swimming pool"],
+        "explanation": "Có bàn họp trắng, laptop, tài liệu và mọi người mặc vest → phòng họp văn phòng."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a meeting room.",
+        "answers": ["in"],
+        "explanation": "Dùng 'in' cho phòng."
+      },
+      "models": [
+        "This picture was taken in a meeting room. The main focus is a group of seven colleagues.",
+        "This picture shows seven business people having a meeting.",
+        "This is a picture of a business meeting around a table."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a woman showing a chart to the group",
+        "distractors": ["a man sleeping at the table", "two people playing cards", "a waiter bringing food"],
+        "explanation": "Người phụ nữ đang giơ tờ biểu đồ cho cả nhóm xem là hành động nổi bật."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is seven people ______ (have) a meeting.",
+        "answers": ["having"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a woman showing a chart to the group.",
+        "What I can see first is seven colleagues having a business meeting.",
+        "What I can see first is a group of people sitting around a white table."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The older man with grey hair is sitting in the ______ of the picture.",
+        "answers": ["middle", "centre", "center"],
+        "explanation": "Người đàn ông lớn tuổi tóc bạc ngồi ở giữa, phía sau bàn."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả các thành viên, tài liệu trên bàn và không khí cuộc họp (ít nhất 4 câu).",
+        "model": "Seven people in dark business suits are sitting around a large white table. In the middle at the back, an older man with grey hair is sitting behind a laptop and writing something. Next to him, a woman with blonde hair in a dark jacket is holding up a sheet of paper with a bar chart on it. On the left, two women are sitting and listening, and in the front left corner a man in a suit is looking down at his documents. On the right, a man and a woman are also sitting and paying attention. On the table, there are papers with colourful charts, white cups of coffee, a mobile phone and a laptop. Everyone looks relaxed and they are all smiling, so the meeting is probably going well."
+      }
+    },
+    "fullModel": "This picture was taken in a meeting room at an office. What I can see first is seven people having a meeting. Seven people in dark business suits are sitting around a large white table. In the middle at the back, an older man with grey hair is sitting behind a laptop. Next to him, a woman with blonde hair is holding up a sheet of paper with a bar chart on it. On the left, two women are sitting and listening. On the right, a man and a woman are also paying attention. On the table, there are papers with colourful charts and cups of coffee."
+  },
+  {
+    "id": "h05",
+    "level": "Hard",
+    "test": 3,
+    "image": "/images/speaking-p2-steps/h05.jpg",
+    "title": "Bãi biển nhiệt đới đông người",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "on a tropical beach",
+        "distractors": ["in a shopping centre", "in a mountain village", "at an ice rink"],
+        "explanation": "Có cát trắng, hàng dừa, nước biển xanh và ghế tắm nắng → bãi biển nhiệt đới."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a tropical beach.",
+        "answers": ["on", "at"],
+        "explanation": "Dùng 'on the beach' hoặc 'at the beach' đều được chấp nhận."
+      },
+      "models": [
+        "This picture was taken on a tropical beach. The main focus is a crowd of tourists.",
+        "This picture shows a lot of tourists enjoying a tropical beach.",
+        "This is a picture of a busy beach on a sunny day."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a crowded beach with a colourful sailing boat",
+        "distractors": ["a fishing village at sunset", "an empty beach with no people", "a group of surfers on big waves"],
+        "explanation": "Bãi biển đông người cùng chiếc thuyền buồm xanh-vàng là hình ảnh nổi bật nhất."
+      },
+      "blank": {
+        "instruction": "Điền từ đúng vào chỗ trống (số nhiều).",
+        "content": "What I can see first is a lot of ______ (tourist) on the beach.",
+        "answers": ["tourists"],
+        "explanation": "Sau 'a lot of' + danh từ đếm được → dùng số nhiều."
+      },
+      "models": [
+        "What I can see first in this picture is a crowded beach with a colourful sailing boat.",
+        "What I can see first is a lot of tourists relaxing on the sand.",
+        "What I can see first is a busy beach resort by the sea."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The tall palm trees are on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Hàng dừa cao nằm ở phía bên trái khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả bãi biển, mọi người và phần nền (ít nhất 4 câu).",
+        "model": "On the left side of the picture, there is a long row of tall palm trees and many yellow sun loungers on the white sand. Under the trees, a large crowd of tourists is sitting, standing and walking along the beach. In the middle at the front, a man in a dark patterned shirt and a cap is walking towards the camera, and two women in swimsuits are walking next to the water. On the right, there is a colourful sailing boat with a green and yellow sail, and two people are standing beside it in the shallow water. In the background, I can see the turquoise sea, a few small boats far away, and a bright blue sky with white clouds."
+      }
+    },
+    "fullModel": "This picture was taken on a tropical beach. What I can see first is a lot of tourists on the beach. On the left, there is a long row of tall palm trees and many yellow sun loungers on the white sand. Under the trees, a large crowd of tourists is sitting and walking along the beach. In the middle at the front, a man in a dark shirt and a cap is walking towards the camera. On the right, there is a colourful sailing boat with a green and yellow sail. In the background, I can see the turquoise sea and a bright blue sky."
+  },
+  {
+    "id": "h06",
+    "level": "Hard",
+    "test": 3,
+    "image": "/images/speaking-p2-steps/h06.jpg",
+    "title": "Thợ xây trên khung mái",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "at a construction site, on the roof of a building",
+        "distractors": ["in an underground station", "in a public library", "on a cruise ship"],
+        "explanation": "Có khung gỗ mái nhà, mũ bảo hộ và dụng cụ → công trường xây dựng trên mái."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ the roof of a building.",
+        "answers": ["on"],
+        "explanation": "Dùng 'on the roof' (trên mái nhà)."
+      },
+      "models": [
+        "This picture was taken on the roof of a building at a construction site. The main focus is three workers.",
+        "This picture shows three construction workers building a roof.",
+        "This is a picture of three builders working on a wooden roof frame."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "three workers wearing red hard hats",
+        "distractors": ["a crane lifting a container", "firefighters putting out a fire", "a group of tourists taking photos"],
+        "explanation": "Ba người thợ đội mũ bảo hộ đỏ là chủ thể chính của bức ảnh."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is three workers ______ (build) a roof.",
+        "answers": ["building"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is three workers wearing red hard hats.",
+        "What I can see first is three builders working on a wooden roof frame.",
+        "What I can see first is three men doing construction work."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The worker who is kneeling down is on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Người thợ đang quỳ xuống làm việc ở phía bên trái khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả ba người thợ, dụng cụ và phần nền (ít nhất 4 câu).",
+        "model": "All three workers are wearing red hard hats to protect their heads. The worker on the left is wearing a yellow T-shirt and shorts, and he is kneeling down and holding a long wooden plank while he works. In the middle, a man in a white T-shirt and blue shorts is standing with his back to the camera and wearing a tool belt around his waist. On the right, a young man in an orange T-shirt and blue shorts is walking across the wooden frame and carrying a tool in his hand. Around them, there are wooden beams, planks and an electric saw lying on the floor. In the background, I can see the roofs and green trees of a small town and some hills in the distance."
+      }
+    },
+    "fullModel": "This picture was taken on the roof of a building at a construction site. What I can see first is three workers building a roof. All three workers are wearing red hard hats. The worker on the left is wearing a yellow T-shirt and kneeling down while he holds a long wooden plank. In the middle, a man in a white T-shirt is standing with his back to the camera and wearing a tool belt. On the right, a young man in an orange T-shirt is walking across the wooden frame. In the background, I can see the roofs of a small town and some hills."
+  },
+  {
+    "id": "h07",
+    "level": "Hard",
+    "test": 4,
+    "image": "/images/speaking-p2-steps/h07.jpg",
+    "title": "Phố đi bộ đông đúc",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "on a crowded street in a big city",
+        "distractors": ["in a quiet village", "inside an airport terminal", "on a beach"],
+        "explanation": "Có vỉa hè đông người, cửa hàng, biển hiệu và toà nhà cao tầng → phố lớn trong thành phố."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a crowded street in a big city.",
+        "answers": ["on", "in"],
+        "explanation": "Dùng 'on a street' hoặc 'in a street' đều được chấp nhận."
+      },
+      "models": [
+        "This picture was taken on a crowded street in a big city. The main focus is a group of pedestrians.",
+        "This picture shows a lot of people walking along a busy street.",
+        "This is a picture of a busy shopping street in a city."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a boy sitting on a man's shoulders and touching a sign",
+        "distractors": ["a police officer directing traffic", "a street musician playing guitar", "a woman selling newspapers"],
+        "explanation": "Cậu bé ngồi trên vai người lớn và đưa tay chạm vào biển hiệu là điểm nhấn đặc biệt nhất."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a lot of people ______ (walk) along the street.",
+        "answers": ["walking"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a boy sitting on a man's shoulders and touching a sign.",
+        "What I can see first is a lot of people walking along a busy street.",
+        "What I can see first is a crowd of pedestrians on a city pavement."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The white car is parked on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Chiếc ô tô trắng đỗ ở phía bên trái khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả nhóm người đi bộ, các cửa hàng và phần nền (ít nhất 4 câu).",
+        "model": "On the right side of the picture, a man in red trousers with a black backpack is carrying a boy on his shoulders, and the boy in a blue top is reaching up to touch a black shop sign that says RICHARD JAMES. In the middle, a large group of about ten pedestrians is walking away from the camera along the pavement, and most of them are wearing jackets and carrying bags. On the far left, a woman in a long brown coat is walking with a plastic container in her hand, and a man in a black hoodie and tracksuit trousers is walking next to a white car parked on the road. In the background, I can see old brick buildings, an English restaurant and an oyster bar on the left, and tall modern glass towers further away. It looks like a bright, sunny day in a big city."
+      }
+    },
+    "fullModel": "This picture was taken on a crowded street in a big city. What I can see first is a lot of people walking along the street. On the right, a man in red trousers is carrying a boy on his shoulders, and the boy is reaching up to touch a black shop sign. In the middle, a large group of about ten pedestrians is walking away from the camera. On the far left, a woman in a long brown coat is walking next to a white car. In the background, I can see old brick buildings, an English restaurant and tall modern glass towers."
+  }
+]

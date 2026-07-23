@@ -1,0 +1,466 @@
+[
+  {
+    "id": "m09",
+    "level": "Medium",
+    "test": 3,
+    "image": "/images/speaking-p2-steps/m09.jpg",
+    "title": "Gia đình trong bếp",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a kitchen at home",
+        "distractors": ["in a factory", "at a bus station", "in a swimming pool"],
+        "explanation": "Có tủ bếp trắng, bồn rửa, bếp nấu và thức ăn trên bàn → nhà bếp gia đình."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a kitchen at home.",
+        "answers": ["in"],
+        "explanation": "Dùng 'in' cho phòng (in a kitchen)."
+      },
+      "models": [
+        "This picture was taken in a kitchen. The main focus is a family of four.",
+        "This picture shows a family of four in their kitchen.",
+        "This is a picture of a family cooking together in a kitchen."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a woman cutting apples on a chopping board",
+        "distractors": ["a man washing the dishes", "a child drinking milk", "a woman answering the door"],
+        "explanation": "Người mẹ đang thái táo trên thớt gỗ là hành động nổi bật nhất."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a woman ______ (cut) some apples.",
+        "answers": ["cutting"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a woman cutting apples on a chopping board.",
+        "What I can see first is a mother preparing food for her family.",
+        "What I can see first is a family spending time together in the kitchen."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The father holding the small child is on the ______ side of the picture.",
+        "answers": ["right"],
+        "explanation": "Người bố đang bế em bé ở phía bên phải khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả từng thành viên và các đồ vật trên bàn bếp (ít nhất 3 câu).",
+        "model": "The mother on the left has her dark hair tied up and she is wearing an olive green top. She is smiling and cutting red apples on a wooden chopping board. Next to her, her daughter is wearing an orange striped top and looking up at her happily. On the right, the father is wearing a dark red top and lifting a small child up in the air. On the counter in front of them, there is a bowl of fruit, a bowl of corn and a dish of green vegetables, and in the background there are white kitchen cabinets and a cooker."
+      }
+    },
+    "fullModel": "This picture was taken in a kitchen at home. What I can see first is a woman cutting some apples. The mother on the left has her dark hair tied up and she is wearing an olive green top. She is smiling and cutting red apples on a wooden chopping board. Next to her, her daughter is wearing an orange striped top and looking up at her. On the right, the father is lifting a small child up in the air. On the counter, there is a bowl of fruit and a dish of green vegetables."
+  },
+  {
+    "id": "m10",
+    "level": "Medium",
+    "test": 4,
+    "image": "/images/speaking-p2-steps/m10.png",
+    "title": "Sạp rau quả ở chợ",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "at an indoor fruit and vegetable market",
+        "distractors": ["in a hotel room", "at an airport gate", "in a gym"],
+        "explanation": "Các sạp bày đầy rau quả trong nhà có mái che → chợ nông sản."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a fruit and vegetable market.",
+        "answers": ["at", "in"],
+        "explanation": "Dùng 'at a market' hoặc 'in a market' đều được chấp nhận."
+      },
+      "models": [
+        "This picture was taken at a fruit and vegetable market. The main focus is the market stalls.",
+        "This picture shows a lot of fresh produce at a market.",
+        "This is a picture of a busy market full of fruit and vegetables."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a long stall full of colourful fruit and vegetables",
+        "distractors": ["a chef cooking on a stove", "a queue at a cash register", "a delivery truck unloading"],
+        "explanation": "Chủ thể chính là dãy sạp bày đầy rau quả nhiều màu sắc."
+      },
+      "blank": {
+        "instruction": "Điền từ đúng vào chỗ trống (số ít/số nhiều).",
+        "content": "What I can see first is a lot ______ fresh fruit and vegetables.",
+        "answers": ["of"],
+        "explanation": "Cụm cố định 'a lot of' = rất nhiều."
+      },
+      "models": [
+        "What I can see first in this picture is a long stall full of colourful fruit and vegetables.",
+        "What I can see first is a lot of fresh produce on display.",
+        "What I can see first is a busy market with many kinds of vegetables."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The blurred shoppers are on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Những người mua hàng bị làm mờ đứng ở phía bên trái."
+      },
+      "freeWrite": {
+        "instruction": "Liệt kê và mô tả các loại nông sản, người mua và phần nền (ít nhất 3 câu).",
+        "model": "In the foreground on the right, there are red peppers, dark cherries, orange apricots and purple plums arranged in wooden and plastic boxes. Behind them, I can see aubergines, cabbages and green lettuce on the same long stall. On the left side of the picture, there are two shoppers, but they are out of focus. One of them is a man wearing a blue shirt and checked shorts, and the other is a woman in a light dress. In the background, the market continues with more stalls and a few sellers standing behind them."
+      }
+    },
+    "fullModel": "This picture was taken at an indoor fruit and vegetable market. What I can see first is a lot of fresh fruit and vegetables. In the foreground on the right, there are red peppers, dark cherries, orange apricots and purple plums in wooden boxes. Behind them, I can see aubergines, cabbages and green lettuce. On the left side of the picture, there are two shoppers, but they are out of focus. In the background, the market continues with more stalls."
+  },
+  {
+    "id": "m11",
+    "level": "Medium",
+    "test": 4,
+    "image": "/images/speaking-p2-steps/m11.png",
+    "title": "Hai nhà khoa học trong phòng thí nghiệm",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a laboratory",
+        "distractors": ["in a restaurant kitchen", "on a farm", "in a clothing shop"],
+        "explanation": "Có kính hiển vi, đĩa petri, áo blouse trắng và lưới trùm tóc → phòng thí nghiệm."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a laboratory.",
+        "answers": ["in"],
+        "explanation": "Dùng 'in' cho không gian bên trong (in a laboratory)."
+      },
+      "models": [
+        "This picture was taken in a laboratory. The main focus is two scientists.",
+        "This picture shows two scientists working in a laboratory.",
+        "This is a picture of two researchers doing an experiment."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a man looking through a microscope",
+        "distractors": ["a nurse giving an injection", "a teacher writing on a board", "a man repairing a machine"],
+        "explanation": "Người đàn ông đang nhìn qua kính hiển vi là hành động nổi bật nhất."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is two scientists ______ (do) research.",
+        "answers": ["doing"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a man looking through a microscope.",
+        "What I can see first is two scientists examining something.",
+        "What I can see first is two researchers wearing white lab coats."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The woman writing on a piece of paper is on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Người phụ nữ đang ghi chép ngồi ở phía bên trái."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả hai nhà khoa học, trang phục bảo hộ và các thiết bị (ít nhất 3 câu).",
+        "model": "Both scientists are wearing white lab coats, hairnets and face masks for safety. The woman on the left is sitting at the table and writing something on a sheet of paper. The man on the right is leaning forward and looking through a microscope very carefully. On the table in front of them, there are several petri dishes, a tablet and some small test tubes. In the background, there is a shelf full of files and a large window that lets in a lot of natural light."
+      }
+    },
+    "fullModel": "This picture was taken in a laboratory. What I can see first is two scientists doing research. Both scientists are wearing white lab coats, hairnets and face masks for safety. The woman on the left is sitting at the table and writing something on a sheet of paper. The man on the right is leaning forward and looking through a microscope. On the table, there are several petri dishes and a tablet. In the background, there is a shelf full of files and a large window."
+  },
+  {
+    "id": "m12",
+    "level": "Medium",
+    "test": 4,
+    "image": "/images/speaking-p2-steps/m12.jpg",
+    "title": "Gia đình trên thang cuốn",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a shopping mall",
+        "distractors": ["in a police station", "on a farm", "at a swimming pool"],
+        "explanation": "Có thang cuốn, cột tròn lớn, đèn trần và cửa hàng → trung tâm thương mại."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a shopping mall.",
+        "answers": ["in", "at"],
+        "explanation": "Dùng 'in a mall' (bên trong) hoặc 'at a mall' đều được."
+      },
+      "models": [
+        "This picture was taken in a shopping mall. The main focus is a family of four.",
+        "This picture shows a family of four on an escalator in a mall.",
+        "This is a picture of a family going shopping in a mall."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a family standing on an escalator with shopping bags",
+        "distractors": ["a security guard checking tickets", "people eating at a food court", "a man riding a bicycle"],
+        "explanation": "Gia đình đứng trên thang cuốn cùng các túi mua sắm là chủ thể chính."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a family ______ (stand) on an escalator.",
+        "answers": ["standing"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a family standing on an escalator with shopping bags.",
+        "What I can see first is a family of four going shopping together.",
+        "What I can see first is a father carrying red shopping bags."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The boy with his arms open is on the ______ side of the picture.",
+        "answers": ["right"],
+        "explanation": "Cậu bé dang tay đứng ở phía bên phải khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả từng thành viên trong gia đình và bối cảnh trung tâm thương mại (ít nhất 3 câu).",
+        "model": "The father on the left is wearing a grey knitted sweater and he is holding two big red bags with the word SALE on them. Next to him, the mother has long blonde hair and is wearing a cream top with a bag over her shoulder. In front of them, a little girl in a green dress is looking up and smiling at her mother. On the right, a young boy in a blue jacket is standing with his arms open wide. In the background, I can see the bright interior of the mall with large round columns, ceiling lights and shops on the lower floor."
+      }
+    },
+    "fullModel": "This picture was taken in a shopping mall. What I can see first is a family standing on an escalator. The father on the left is wearing a grey sweater and holding two big red bags with the word SALE on them. Next to him, the mother has long blonde hair and is wearing a cream top. In front of them, a little girl in a green dress is looking up at her mother. On the right, a young boy in a blue jacket is standing with his arms open wide. In the background, I can see the bright interior of the mall."
+  },
+  {
+    "id": "m13",
+    "level": "Medium",
+    "test": 5,
+    "image": "/images/speaking-p2-steps/m13.jpg",
+    "title": "Picnic trong công viên",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a park, on the grass",
+        "distractors": ["in a meeting room", "at a train station", "in a supermarket"],
+        "explanation": "Mọi người ngồi trên bãi cỏ dưới tán cây lớn → công viên."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ the grass in a park.",
+        "answers": ["on"],
+        "explanation": "Dùng 'on' với bề mặt (on the grass)."
+      },
+      "models": [
+        "This picture was taken in a park. The main focus is a group of friends.",
+        "This picture shows a group of friends having a picnic in a park.",
+        "This is a picture of a group of people sitting on the grass."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a group of friends having a picnic",
+        "distractors": ["a football match", "a man mowing the lawn", "children flying kites"],
+        "explanation": "Nhóm bạn ngồi quanh tấm khăn có đồ ăn → đang picnic."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a group of friends ______ (sit) on a blanket.",
+        "answers": ["sitting"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a group of friends having a picnic.",
+        "What I can see first is about five people sitting on the grass together.",
+        "What I can see first is a group of people eating outdoors."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The man standing up is on the ______ side of the picture.",
+        "answers": ["right"],
+        "explanation": "Người đàn ông đứng ở phía bên phải, sau lưng nhóm bạn."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả nhóm bạn, đồ ăn và phần nền (ít nhất 3 câu).",
+        "model": "There are about five friends sitting in a circle on a blanket on the grass. On the left, two men are sitting close together and talking, and one of them is wearing a dark top. In the middle, a woman in a red top is sitting and listening to the others. On the right, two more men are sitting, and one of them is wearing a green shirt. In front of them, there are boxes of food and some drinks on the blanket. On the right, another man is standing behind the group, and in the background there are large green trees and open grass."
+      }
+    },
+    "fullModel": "This picture was taken on the grass in a park. What I can see first is a group of friends having a picnic. There are about five friends sitting in a circle on a blanket. On the left, two men are sitting close together and talking. In the middle, a woman in a red top is listening to the others. On the right, two more men are sitting, and one of them is wearing a green shirt. In front of them, there are boxes of food and some drinks. In the background, there are large green trees."
+  },
+  {
+    "id": "m14",
+    "level": "Medium",
+    "test": 5,
+    "image": "/images/speaking-p2-steps/m14.jpg",
+    "title": "Ba đầu bếp trong bếp nhà hàng",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a restaurant kitchen",
+        "distractors": ["in a hair salon", "in a library", "at a bus stop"],
+        "explanation": "Có máy hút mùi công nghiệp, tủ bếp và đầu bếp mặc đồng phục → bếp nhà hàng."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a restaurant kitchen.",
+        "answers": ["in"],
+        "explanation": "Dùng 'in' cho không gian bên trong."
+      },
+      "models": [
+        "This picture was taken in a restaurant kitchen. The main focus is three chefs.",
+        "This picture shows three chefs preparing food in a kitchen.",
+        "This is a picture of three chefs working in a restaurant kitchen."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "three chefs cutting vegetables",
+        "distractors": ["a waiter carrying plates", "a customer paying the bill", "two chefs washing dishes"],
+        "explanation": "Cả ba đầu bếp đều đang cầm dao thái rau củ."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is three chefs ______ (cut) vegetables.",
+        "answers": ["cutting"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is three chefs cutting vegetables.",
+        "What I can see first is three people wearing white chef uniforms.",
+        "What I can see first is three chefs preparing food together."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The female chef is on the ______ side of the picture.",
+        "answers": ["right"],
+        "explanation": "Nữ đầu bếp đứng ở phía bên phải khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả ba đầu bếp và những gì trên mặt bàn (ít nhất 3 câu).",
+        "model": "All three chefs are wearing white jackets with black cuffs and tall white chef hats. The chef on the left is wearing glasses and looking down while he cuts something on a board. The chef in the middle is smiling and slicing a red pepper on a green chopping board. The female chef on the right has her hair tied back and she is holding a knife near a loaf of bread. On the counter in front of them, there are lemons, carrots, fresh herbs, potatoes and a white bowl of green vegetables. In the background, there is a large metal extractor hood and dark wooden cabinets."
+      }
+    },
+    "fullModel": "This picture was taken in a restaurant kitchen. What I can see first is three chefs cutting vegetables. All three chefs are wearing white jackets with black cuffs and tall white chef hats. The chef on the left is wearing glasses and cutting something on a board. The chef in the middle is smiling and slicing a red pepper on a green chopping board. The female chef on the right is holding a knife near a loaf of bread. On the counter, there are lemons, carrots, fresh herbs and a bowl of green vegetables."
+  },
+  {
+    "id": "m15",
+    "level": "Medium",
+    "test": 5,
+    "image": "/images/speaking-p2-steps/m15.jpg",
+    "title": "Ba du khách ở sân bay",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in an airport terminal",
+        "distractors": ["in a cinema", "in a hospital", "on a farm"],
+        "explanation": "Có dãy ghế chờ màu xanh, vali kéo và sảnh rộng → nhà ga sân bay."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ an airport terminal.",
+        "answers": ["in", "at"],
+        "explanation": "Dùng 'in a terminal' hoặc 'at an airport' đều được chấp nhận."
+      },
+      "models": [
+        "This picture was taken in an airport terminal. The main focus is three young travellers.",
+        "This picture shows three young travellers in an airport.",
+        "This is a picture of three friends travelling together."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a woman pulling a blue suitcase",
+        "distractors": ["a pilot boarding a plane", "a family saying goodbye", "a man sleeping on a bench"],
+        "explanation": "Người phụ nữ ở giữa đang kéo chiếc vali xanh là điểm nhấn chính."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is three travellers ______ (hurry) through the airport.",
+        "answers": ["hurrying"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a woman pulling a blue suitcase.",
+        "What I can see first is three young people hurrying through an airport.",
+        "What I can see first is three travellers carrying their luggage."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The man wearing an orange beanie is on the ______ side of the picture.",
+        "answers": ["right"],
+        "explanation": "Người đàn ông đội mũ len cam ở phía bên phải khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả ba người, hành lý và phần nền (ít nhất 3 câu).",
+        "model": "The man on the left is wearing a white T-shirt with a checked shirt tied around his waist, and he is carrying a black backpack in his hand. The woman in the middle has curly hair and she is wearing a white T-shirt with denim shorts. She is smiling and pulling a large blue suitcase behind her. The man on the right is wearing an orange beanie, a blue shirt and brown trousers, with headphones around his neck and a backpack on his shoulder. In the background, there are rows of empty blue waiting seats and large windows, and they all look like they are in a hurry to catch their flight."
+      }
+    },
+    "fullModel": "This picture was taken in an airport terminal. What I can see first is three travellers hurrying through the airport. The man on the left is wearing a white T-shirt and carrying a black backpack. The woman in the middle has curly hair and is wearing a white T-shirt with denim shorts. She is smiling and pulling a large blue suitcase. The man on the right is wearing an orange beanie and has headphones around his neck. In the background, there are rows of empty blue waiting seats and large windows."
+  },
+  {
+    "id": "m16",
+    "level": "Medium",
+    "test": 6,
+    "image": "/images/speaking-p2-steps/m16.png",
+    "title": "Nướng BBQ ngoài vườn",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a garden, outdoors",
+        "distractors": ["in an office", "in a shopping centre", "on an airplane"],
+        "explanation": "Có cây xanh, bàn ăn ngoài trời và bếp nướng → khu vườn ngoài trời."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a garden.",
+        "answers": ["in"],
+        "explanation": "Dùng 'in a garden' cho khu vườn."
+      },
+      "models": [
+        "This picture was taken in a garden. The main focus is an older man cooking.",
+        "This picture shows an older man having a barbecue in a garden.",
+        "This is a picture of a family barbecue in a garden."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "an older man grilling meat on a barbecue",
+        "distractors": ["a woman watering flowers", "children playing football", "a man mowing the grass"],
+        "explanation": "Người đàn ông lớn tuổi đang nướng thịt trên bếp là chủ thể chính."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a man ______ (grill) some meat.",
+        "answers": ["grilling"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is an older man grilling meat on a barbecue.",
+        "What I can see first is a man cooking outdoors for his family.",
+        "What I can see first is a man wearing an apron and using a barbecue."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The blurred family sitting at the table is on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Nhóm người ngồi ở bàn (bị làm mờ) ở phía bên trái khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả người đàn ông, bếp nướng và những người phía sau (ít nhất 3 câu).",
+        "model": "The man on the right is quite old, with grey hair and a grey beard. He is wearing a yellow polo shirt and a blue and white checked apron, and he is smiling while he turns a piece of meat with a pair of tongs. In front of him, there is a black barbecue with the lid open. On the left side of the picture, three or four family members are sitting at a table with drinks and food, but they are out of focus. In the background, there are lots of green trees and bushes, so it is probably a sunny summer day."
+      }
+    },
+    "fullModel": "This picture was taken in a garden. What I can see first is a man grilling some meat. The man on the right is quite old, with grey hair and a grey beard. He is wearing a yellow polo shirt and a blue and white checked apron, and he is smiling while he turns a piece of meat. In front of him, there is a black barbecue with the lid open. On the left, three or four family members are sitting at a table, but they are out of focus. In the background, there are lots of green trees."
+  }
+]

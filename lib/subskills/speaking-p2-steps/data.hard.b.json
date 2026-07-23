@@ -1,0 +1,408 @@
+[
+  {
+    "id": "h08",
+    "level": "Hard",
+    "test": 4,
+    "image": "/images/speaking-p2-steps/h08.png",
+    "title": "Công viên bên hồ",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a large park with a lake",
+        "distractors": ["in a factory", "on a busy motorway", "inside a museum"],
+        "explanation": "Có bãi cỏ rộng, cây xanh, luống hoa, lối đi và mặt hồ → công viên lớn."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a large park.",
+        "answers": ["in"],
+        "explanation": "Dùng 'in a park' cho không gian công viên."
+      },
+      "models": [
+        "This picture was taken in a large park with a lake. The main focus is a family having a picnic.",
+        "This picture shows people relaxing in a park on a sunny day.",
+        "This is a picture of a park where people are doing different activities."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a family having a picnic on a red checked blanket",
+        "distractors": ["a football match on a pitch", "workers cutting down a tree", "a concert on an outdoor stage"],
+        "explanation": "Gia đình ngồi picnic trên tấm khăn kẻ đỏ ở tiền cảnh là điểm nhấn chính."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a family ______ (have) a picnic.",
+        "answers": ["having"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a family having a picnic on a red checked blanket.",
+        "What I can see first is several people enjoying a sunny day in a park.",
+        "What I can see first is a family sitting on the grass with food."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The wooden bench is on the ______ side of the picture.",
+        "answers": ["right"],
+        "explanation": "Chiếc ghế băng gỗ đặt ở phía bên phải, cạnh lối đi."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả gia đình picnic, những người khác trong công viên và phần nền (ít nhất 4 câu).",
+        "model": "In the foreground in the middle, a family of five is sitting on a red and white checked blanket on the grass. The parents are sitting on the right of the blanket and three children are sitting on the left, and in front of them there are plates of food, some drinks and a wicker picnic basket. On the left, three or four cyclists are riding along a path through the park, and one of them is wearing a red top. On the right, a woman in a pink top is walking a golden dog on a lead next to a wooden bench. In the background, there is a calm lake with a few ducks on it, and the whole park is surrounded by tall green trees. At the bottom of the picture, there are colourful flower beds with orange and pink flowers."
+      }
+    },
+    "fullModel": "This picture was taken in a large park with a lake. What I can see first is a family having a picnic. In the foreground, a family of five is sitting on a red and white checked blanket on the grass, with plates of food and a picnic basket in front of them. On the left, three or four cyclists are riding along a path. On the right, a woman in a pink top is walking a golden dog next to a wooden bench. In the background, there is a calm lake and tall green trees, and at the bottom there are colourful flower beds."
+  },
+  {
+    "id": "h09",
+    "level": "Hard",
+    "test": 5,
+    "image": "/images/speaking-p2-steps/h09.png",
+    "title": "Quán cà phê nhiều cây xanh",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "inside a small coffee shop",
+        "distractors": ["in a hospital waiting room", "in a sports stadium", "in a car park"],
+        "explanation": "Có quầy bar gỗ, máy pha espresso, bàn ghế và khách uống cà phê → quán cà phê nhỏ."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a small coffee shop.",
+        "answers": ["in", "at"],
+        "explanation": "Dùng 'in a coffee shop' (bên trong) hoặc 'at a coffee shop'."
+      },
+      "models": [
+        "This picture was taken in a small coffee shop. The main focus is the customers and the barista.",
+        "This picture shows customers relaxing in a cosy coffee shop.",
+        "This is a picture of a coffee shop full of hanging plants."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "two women talking and drinking coffee at a table",
+        "distractors": ["a chef cooking a meal", "a man cleaning the windows", "children playing a board game"],
+        "explanation": "Hai người phụ nữ ngồi bàn phía trước, cầm tách cà phê và trò chuyện là điểm nhấn gần nhất."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is two women ______ (talk) over a cup of coffee.",
+        "answers": ["talking"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is two women talking and drinking coffee at a table.",
+        "What I can see first is several customers relaxing in a cosy cafe.",
+        "What I can see first is a barista making coffee behind the counter."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The barista and the coffee machine are on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Nhân viên pha chế và máy pha cà phê ở phía bên trái khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả nhân viên pha chế, các nhóm khách và cách trang trí quán (ít nhất 4 câu).",
+        "model": "On the left, a barista in a white T-shirt and a grey apron is standing behind a wooden counter and using a large silver espresso machine. In the foreground, two women are sitting at a wooden table: the one on the left is wearing a denim shirt and holding a cup of coffee, and the one on the right is wearing a grey top and smiling at her. Behind them on the right, another woman in a cream top is sitting at a second table with a cup in her hands. In the middle at the back, a man in a grey sweater is sitting alone at a table by the window and working on a laptop. The whole cafe is decorated with a lot of hanging plants, warm light bulbs and wooden shelves with jars and cups, so the atmosphere looks very cosy and relaxing."
+      }
+    },
+    "fullModel": "This picture was taken inside a small coffee shop. What I can see first is two women talking over a cup of coffee. On the left, a barista in a grey apron is standing behind a wooden counter and using a large espresso machine. In the foreground, two women are sitting at a wooden table with cups of coffee. Behind them on the right, another woman is sitting at a second table. In the middle at the back, a man is working on a laptop by the window. The whole cafe is decorated with a lot of hanging plants and warm light bulbs, so it looks very cosy."
+  },
+  {
+    "id": "h10",
+    "level": "Hard",
+    "test": 5,
+    "image": "/images/speaking-p2-steps/h10.png",
+    "title": "Chuyến tham quan bảo tàng",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a museum",
+        "distractors": ["in a supermarket", "at a swimming pool", "in a factory"],
+        "explanation": "Có tủ kính trưng bày cổ vật và bảng chú thích trên tường → bảo tàng."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a museum.",
+        "answers": ["in", "at"],
+        "explanation": "Dùng 'in a museum' hoặc 'at a museum' đều được chấp nhận."
+      },
+      "models": [
+        "This picture was taken in a museum. The main focus is a group of schoolchildren.",
+        "This picture shows a group of children visiting a museum.",
+        "This is a picture of a school trip to a museum."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a group of children looking at a display case",
+        "distractors": ["a class taking an exam", "children playing in a playground", "a family eating in a canteen"],
+        "explanation": "Nhóm trẻ đang đứng xem tủ kính trưng bày là chủ thể chính."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a group of children ______ (look) at a display case.",
+        "answers": ["looking"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a group of children looking at a display case.",
+        "What I can see first is a teacher explaining something to some children.",
+        "What I can see first is about six children visiting a museum."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The man in the light blue shirt is standing on the ______ side of the picture.",
+        "answers": ["right"],
+        "explanation": "Người đàn ông mặc áo sơ mi xanh nhạt đứng ở phía bên phải khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả người hướng dẫn, các em nhỏ và những gì trưng bày trong tủ kính (ít nhất 4 câu).",
+        "model": "In the middle of the picture, about six schoolchildren are standing in front of a tall glass display case. One girl in the middle is raising her hand high, and another child next to her is also putting a hand up, so they are probably answering a question. On the left, a woman with dark hair in a dark jacket is standing behind the children and raising her hand too, and she is probably their teacher. On the right, a man with grey hair in a light blue shirt is standing with his back to the camera and talking to the group, so he is most likely a museum guide. Inside the display cases, I can see ancient pottery, bowls and other objects from an old civilisation, and there are labels and information panels on the walls around them."
+      }
+    },
+    "fullModel": "This picture was taken in a museum. What I can see first is a group of children looking at a display case. In the middle, about six schoolchildren are standing in front of a tall glass display case, and one girl is raising her hand high. On the left, a woman in a dark jacket is standing behind the children, and she is probably their teacher. On the right, a man with grey hair in a light blue shirt is talking to the group, so he is most likely a museum guide. Inside the display cases, I can see ancient pottery and bowls."
+  },
+  {
+    "id": "h11",
+    "level": "Hard",
+    "test": 6,
+    "image": "/images/speaking-p2-steps/h11.png",
+    "title": "Chợ phố cổ châu Âu",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "at an outdoor market on a cobbled street",
+        "distractors": ["in an underground car park", "in a modern office", "on a farm"],
+        "explanation": "Có sạp gỗ bày trái cây, đường lát đá và nhà mái ngói kiểu châu Âu → chợ ngoài trời phố cổ."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ an outdoor market.",
+        "answers": ["at", "in"],
+        "explanation": "Dùng 'at a market' hoặc 'in a market' đều được chấp nhận."
+      },
+      "models": [
+        "This picture was taken at an outdoor market. The main focus is the market stalls and the shoppers.",
+        "This picture shows people shopping at an outdoor market.",
+        "This is a picture of a street market in a European town."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a long stall full of fruit and vegetables",
+        "distractors": ["a fountain in a square", "a bus stopping for passengers", "a group of musicians"],
+        "explanation": "Dãy sạp gỗ bày chuối, cà chua, rau xanh ở tiền cảnh là hình ảnh nổi bật nhất."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is some people ______ (shop) at a market stall.",
+        "answers": ["shopping"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a long stall full of fruit and vegetables.",
+        "What I can see first is some people shopping at an outdoor market.",
+        "What I can see first is a busy street market on a sunny day."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The man riding a bicycle is on the ______ side of the picture.",
+        "answers": ["right"],
+        "explanation": "Người đàn ông đạp xe ở phía bên phải, trên đường lát đá."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả sạp hàng, người bán, khách mua và phần nền (ít nhất 4 câu).",
+        "model": "In the foreground on the left, there is a long wooden stall covered with a canopy and full of bananas, red tomatoes, green lettuce, oranges and apples in wooden crates. Behind the stall, a man in a black T-shirt is standing and serving customers, and there is a set of scales next to him. In the middle, two older women are standing in front of the stall and choosing fruit: one is wearing a pink top and the other a light pink cardigan, and both of them are carrying paper shopping bags. On the right, a man in a white T-shirt is riding a bicycle along the cobbled street, and several other people are walking past the shops. In the background, there are old brick houses with tiled roofs, a shop sign, big green trees and a hanging basket of pink flowers on the left."
+      }
+    },
+    "fullModel": "This picture was taken at an outdoor market on a cobbled street. What I can see first is some people shopping at a market stall. In the foreground on the left, there is a long wooden stall full of bananas, tomatoes, lettuce and apples in wooden crates. Behind the stall, a man in a black T-shirt is serving customers. In the middle, two older women are choosing fruit and carrying paper shopping bags. On the right, a man is riding a bicycle along the cobbled street. In the background, there are old brick houses with tiled roofs and big green trees."
+  },
+  {
+    "id": "h12",
+    "level": "Hard",
+    "test": 7,
+    "image": "/images/speaking-p2-steps/h12.png",
+    "title": "Công trường có cần cẩu",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "at a large construction site",
+        "distractors": ["in a shopping mall", "at a beach resort", "in a library"],
+        "explanation": "Có cần cẩu tháp, giàn giáo, khung bê tông và công nhân đội mũ bảo hộ → công trường lớn."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a large construction site.",
+        "answers": ["at", "on"],
+        "explanation": "Dùng 'at a construction site' hoặc 'on a construction site' đều đúng."
+      },
+      "models": [
+        "This picture was taken at a large construction site. The main focus is a group of workers and engineers.",
+        "This picture shows engineers and workers at a construction site.",
+        "This is a picture of a building under construction with a big crane."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "two engineers looking at a large blueprint",
+        "distractors": ["a driver parking a lorry", "people queuing for tickets", "a farmer feeding animals"],
+        "explanation": "Hai kỹ sư cúi xem bản vẽ lớn trên bàn ở tiền cảnh là điểm nhấn chính."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is two engineers ______ (study) a blueprint.",
+        "answers": ["studying", "looking"],
+        "explanation": "Hành động đang diễn ra → V-ing ('studying' hoặc 'looking' đều chấp nhận)."
+      },
+      "models": [
+        "What I can see first in this picture is two engineers looking at a large blueprint.",
+        "What I can see first is several workers wearing yellow hard hats.",
+        "What I can see first is a building site with a tall crane."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The two workers bending over the steel bars are on the ______ side of the picture.",
+        "answers": ["right"],
+        "explanation": "Hai công nhân cúi xuống làm việc với thanh thép ở phía bên phải."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả các kỹ sư, công nhân, cần cẩu và công trình phía sau (ít nhất 4 câu).",
+        "model": "Everyone in the picture is wearing a yellow hard hat and an orange high-visibility vest for safety. On the left in the foreground, two engineers are standing at a folding table and looking down at a large white blueprint spread out in front of them. On the right, two workers are bending over some long steel bars and using tools to fix them together. Behind them, there is a huge yellow tower crane in the middle of the site, and one worker is standing high up on the top floor of the building. In the background, I can see a concrete building under construction with several floors, scaffolding and steel rods sticking out of the columns. The sky above is clear and blue, so it is probably a hot sunny day."
+      }
+    },
+    "fullModel": "This picture was taken at a large construction site. What I can see first is two engineers studying a blueprint. Everyone in the picture is wearing a yellow hard hat and an orange high-visibility vest. On the left in the foreground, two engineers are standing at a folding table and looking down at a large white blueprint. On the right, two workers are bending over some long steel bars. Behind them, there is a huge yellow tower crane, and one worker is standing high up on the top floor. In the background, I can see a concrete building under construction with scaffolding."
+  },
+  {
+    "id": "h13",
+    "level": "Hard",
+    "test": 8,
+    "image": "/images/speaking-p2-steps/h13.png",
+    "title": "Dây chuyền sản xuất trong nhà máy",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a factory",
+        "distractors": ["in a hotel lobby", "in a classroom", "on a farm"],
+        "explanation": "Có máy CNC, băng chuyền, kệ linh kiện và công nhân mặc đồ bảo hộ → nhà máy sản xuất."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a factory.",
+        "answers": ["in", "at"],
+        "explanation": "Dùng 'in a factory' (bên trong) hoặc 'at a factory'."
+      },
+      "models": [
+        "This picture was taken in a factory. The main focus is a group of workers on a production line.",
+        "This picture shows workers operating machines in a factory.",
+        "This is a picture of a modern factory with an assembly line."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "workers in blue overalls working along an assembly line",
+        "distractors": ["a manager giving a speech", "cleaners washing the floor", "customers choosing products"],
+        "explanation": "Nhóm công nhân mặc đồ liền xanh làm việc dọc băng chuyền là chủ thể chính."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is some workers ______ (operate) machines.",
+        "answers": ["operating"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is workers in blue overalls working along an assembly line.",
+        "What I can see first is several people operating machines in a factory.",
+        "What I can see first is a long production line with workers beside it."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The large grey CNC machine is on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Chiếc máy CNC lớn màu xám đặt ở phía bên trái khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả các công nhân, máy móc và không gian nhà máy (ít nhất 4 câu).",
+        "model": "All the workers are wearing blue overalls, white hard hats and gloves for safety. On the left in the foreground, a worker is standing in front of a large grey CNC machine and holding a part in his hands while he looks at the control panel. In the middle, two workers are standing on either side of a long roller conveyor and checking the products moving along it. Behind them, another worker in blue is doing the same job further down the line. On the right, there are blue shelves and trolleys full of components, and yellow safety lines are painted on the grey floor. The ceiling is high with bright fluorescent lights, and there are long windows near the roof that let in daylight."
+      }
+    },
+    "fullModel": "This picture was taken in a factory. What I can see first is some workers operating machines. All the workers are wearing blue overalls, white hard hats and gloves for safety. On the left, a worker is standing in front of a large grey CNC machine and holding a part in his hands. In the middle, two workers are standing on either side of a long roller conveyor and checking the products. On the right, there are blue shelves and trolleys full of components, and yellow safety lines are painted on the floor. The ceiling is high with bright fluorescent lights."
+  },
+  {
+    "id": "h14",
+    "level": "Hard",
+    "test": 9,
+    "image": "/images/speaking-p2-steps/h14.png",
+    "title": "Quầy làm thủ tục sân bay",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "at the check-in counter of an airport",
+        "distractors": ["in a hospital reception", "in a school hall", "at a petrol station"],
+        "explanation": "Có quầy check-in, bảng thông tin chuyến bay, vali và nhân viên hàng không → sân bay."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ the check-in counter of an airport.",
+        "answers": ["at"],
+        "explanation": "Dùng 'at the counter' (tại quầy)."
+      },
+      "models": [
+        "This picture was taken at the check-in counter of an airport. The main focus is a queue of passengers.",
+        "This picture shows passengers checking in at an airport.",
+        "This is a picture of a busy check-in area at an airport."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a line of passengers waiting with their suitcases",
+        "distractors": ["a plane taking off", "people eating at a restaurant", "security officers checking bags"],
+        "explanation": "Hàng dài hành khách đứng chờ cùng vali là hình ảnh nổi bật nhất."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a lot of passengers ______ (wait) in a queue.",
+        "answers": ["waiting"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a line of passengers waiting with their suitcases.",
+        "What I can see first is a lot of people checking in at an airport.",
+        "What I can see first is a busy check-in counter with a long queue."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The airline staff member behind the desk is on the ______ side of the picture.",
+        "answers": ["right"],
+        "explanation": "Nữ nhân viên hàng không đứng sau quầy ở phía bên phải khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả hành khách, nhân viên, hành lý và các chi tiết trong nhà ga (ít nhất 4 câu).",
+        "model": "On the right side of the picture, a woman in a dark navy uniform is standing behind the check-in desk and typing on a computer. In front of the desk, about five or six passengers are standing in a queue and most of them are holding their passports and boarding passes. The man closest to the desk is wearing a dark blue jacket and a backpack, and he is handing his documents to the staff member. Behind him, a man in a beige jacket and a man in a grey sweater are waiting with large black and red suitcases on the floor. Above the counter, there are several screens showing flight information, and on the left there is a big black clock and a yellow display board showing 10:30. In the background, more travellers are walking through the bright terminal."
+      }
+    },
+    "fullModel": "This picture was taken at the check-in counter of an airport. What I can see first is a lot of passengers waiting in a queue. On the right, a woman in a dark navy uniform is standing behind the check-in desk and typing on a computer. In front of the desk, about five or six passengers are standing in a queue holding their passports. The man closest to the desk is wearing a dark blue jacket and a backpack. Above the counter, there are several screens showing flight information, and on the left there is a big black clock showing 10:30."
+  }
+]

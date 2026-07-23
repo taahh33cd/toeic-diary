@@ -1,0 +1,466 @@
+[
+  {
+    "id": "m17",
+    "level": "Medium",
+    "test": 6,
+    "image": "/images/speaking-p2-steps/m17.png",
+    "title": "Xe bán đồ ăn trên phố",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "on a street, next to a food truck",
+        "distractors": ["in a hospital", "in a library", "on a farm"],
+        "explanation": "Có xe bán đồ ăn với biển 'SNACKS & DRINKS' đỗ trên vỉa hè → cảnh đường phố."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a street, next to a food truck.",
+        "answers": ["on"],
+        "explanation": "Dùng 'on' với đường phố (on a street)."
+      },
+      "models": [
+        "This picture was taken on a street. The main focus is a food truck and its customers.",
+        "This picture shows a woman buying food from a food truck.",
+        "This is a picture of a food truck on a city street."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a vendor handing food to a customer",
+        "distractors": ["a chef cooking in a restaurant", "a man washing a car", "two people riding bicycles"],
+        "explanation": "Người bán đang đưa đồ ăn cho khách qua cửa sổ xe."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a vendor ______ (serve) a customer.",
+        "answers": ["serving"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a vendor handing food to a customer.",
+        "What I can see first is a woman buying snacks from a food truck.",
+        "What I can see first is a blue food truck with a customer in front of it."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The man in the grey blazer is standing on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Người đàn ông mặc áo khoác xám đứng ở phía bên trái."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả người bán, khách hàng và chiếc xe bán đồ ăn (ít nhất 3 câu).",
+        "model": "The food truck in the middle is dark blue and has a big sign that says SNACKS AND DRINKS. The vendor inside is wearing a cap and an apron, and he is leaning out of the window to hand something to a customer. The woman in front of the truck is wearing a yellow top and a navy skirt, and she is reaching up to take the food. On the left, a man in a grey blazer and jeans is standing and waiting for his turn. Next to the truck, there is a small round table, and above the window there is a chalkboard menu and some string lights."
+      }
+    },
+    "fullModel": "This picture was taken on a street, next to a food truck. What I can see first is a vendor serving a customer. The food truck in the middle is dark blue and has a big sign that says SNACKS AND DRINKS. The vendor inside is wearing a cap and an apron, and he is leaning out of the window. The woman in front of the truck is wearing a yellow top and a navy skirt, and she is reaching up to take the food. On the left, a man in a grey blazer is waiting for his turn."
+  },
+  {
+    "id": "m18",
+    "level": "Medium",
+    "test": 6,
+    "image": "/images/speaking-p2-steps/m18.png",
+    "title": "Buổi brainstorm ở văn phòng",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a modern office",
+        "distractors": ["in a restaurant", "at a beach", "in a garage"],
+        "explanation": "Có tường trắng dán giấy note, máy chiếu và ghế văn phòng → văn phòng hiện đại."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a modern office.",
+        "answers": ["in"],
+        "explanation": "Dùng 'in' cho không gian bên trong."
+      },
+      "models": [
+        "This picture was taken in a modern office. The main focus is three colleagues.",
+        "This picture shows three colleagues working on a project in an office.",
+        "This is a picture of a team meeting in an office."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a woman putting sticky notes on a wall",
+        "distractors": ["a man cleaning a window", "two people eating lunch", "a woman answering a phone"],
+        "explanation": "Người phụ nữ đang dán giấy note vàng lên tường là hành động nổi bật nhất."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a woman ______ (put) notes on the wall.",
+        "answers": ["putting"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a woman putting sticky notes on a wall.",
+        "What I can see first is three colleagues having a brainstorming session.",
+        "What I can see first is a woman presenting ideas to two other people."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The two people sitting on chairs are on the ______ side of the picture.",
+        "answers": ["right"],
+        "explanation": "Hai người ngồi trên ghế tím ở phía bên phải khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả ba người, bức tường ý tưởng và phần nền (ít nhất 3 câu).",
+        "model": "The woman on the left is wearing a dark purple T-shirt and jeans, and she is standing up and sticking a yellow note onto the wall. She is holding a notebook in her other hand. On the right, two colleagues are sitting on purple chairs: a woman in a patterned top who is holding a tablet, and a man in a blue hoodie who is listening to her. The whole wall behind them is covered with yellow sticky notes and printed photos. In the background, there is a projector on the ceiling and large windows that let in a lot of light."
+      }
+    },
+    "fullModel": "This picture was taken in a modern office. What I can see first is a woman putting notes on the wall. The woman on the left is wearing a dark purple T-shirt and jeans, and she is sticking a yellow note onto the wall while holding a notebook. On the right, two colleagues are sitting on purple chairs: a woman holding a tablet and a man in a blue hoodie. The whole wall behind them is covered with yellow sticky notes and printed photos. In the background, there is a projector and large windows."
+  },
+  {
+    "id": "m19",
+    "level": "Medium",
+    "test": 7,
+    "image": "/images/speaking-p2-steps/m19.webp",
+    "title": "Buổi học trượt tuyết",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "on a ski slope",
+        "distractors": ["in a swimming pool", "in a supermarket", "in a classroom"],
+        "explanation": "Mặt đất phủ tuyết trắng, có cây thông và người mang ván trượt → sườn dốc trượt tuyết."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a ski slope.",
+        "answers": ["on", "at"],
+        "explanation": "Dùng 'on a slope' (trên sườn dốc) hoặc 'at a ski resort'."
+      },
+      "models": [
+        "This picture was taken on a ski slope. The main focus is a man teaching a child to ski.",
+        "This picture shows a man helping a child to ski.",
+        "This is a picture of a skiing lesson in the snow."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a man helping a child to ski",
+        "distractors": ["a family building a snowman", "a woman driving a snowmobile", "children throwing snowballs"],
+        "explanation": "Người lớn đang cúi xuống giữ tay đứa trẻ để dạy trượt tuyết."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a man ______ (help) a child to ski.",
+        "answers": ["helping"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a man helping a child to ski.",
+        "What I can see first is a skiing lesson on a snowy slope.",
+        "What I can see first is a child learning how to ski."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The adult is standing on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Người lớn đứng ở phía bên trái khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả hai người, trang phục mùa đông và phần nền (ít nhất 3 câu).",
+        "model": "The man on the left is wearing a navy and green ski jacket, black trousers, a black cap and sunglasses. He is bending forward and holding the child's hand to help them balance. The child in the middle is wearing a bright green jacket, blue trousers, black gloves and a helmet with goggles, and they are smiling happily on a pair of skis. In the background on the right, there are several other skiers going down the slope. Behind them, I can see dark evergreen trees and a white, cloudy sky."
+      }
+    },
+    "fullModel": "This picture was taken on a ski slope. What I can see first is a man helping a child to ski. The man on the left is wearing a navy and green ski jacket, black trousers, a cap and sunglasses. He is bending forward and holding the child's hand. The child in the middle is wearing a bright green jacket, blue trousers and a helmet with goggles, and they are smiling happily on a pair of skis. In the background, there are several other skiers and dark evergreen trees."
+  },
+  {
+    "id": "m20",
+    "level": "Medium",
+    "test": 7,
+    "image": "/images/speaking-p2-steps/m20.png",
+    "title": "Lễ cưới trên bãi biển",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "on a beach, next to the sea",
+        "distractors": ["in a church hall", "in a hotel kitchen", "in a car park"],
+        "explanation": "Có cát, đá và biển phía sau cùng cổng hoa cưới → lễ cưới trên bãi biển."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a beach, next to the sea.",
+        "answers": ["on"],
+        "explanation": "Dùng 'on the beach' (trên bãi biển)."
+      },
+      "models": [
+        "This picture was taken on a beach. The main focus is a wedding ceremony.",
+        "This picture shows a wedding ceremony on a beach.",
+        "This is a picture of a bride and groom getting married on a beach."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a bride and groom standing under a flower arch",
+        "distractors": ["people swimming in the sea", "a band playing music", "waiters serving dinner"],
+        "explanation": "Cô dâu và chú rể đứng dưới cổng hoa là điểm nhấn trung tâm."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a couple ______ (get) married on the beach.",
+        "answers": ["getting"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a bride and groom standing under a flower arch.",
+        "What I can see first is a wedding ceremony taking place on a beach.",
+        "What I can see first is three people standing under a decorated arch."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The bride in the white dress is on the ______ side, next to the groom.",
+        "answers": ["left"],
+        "explanation": "Cô dâu mặc váy trắng đứng ở phía bên trái chú rể."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả cô dâu, chú rể, người chủ hôn và bối cảnh xung quanh (ít nhất 3 câu).",
+        "model": "In the middle of the picture, there is a wooden arch decorated with white flowers, green leaves and long white curtains. The bride on the left is wearing a long white lace dress and holding the groom's hands. The groom on the right is wearing a light beige suit. Between them, behind the arch, a man in a beige suit is standing and holding an open book, so he is probably leading the ceremony. On both sides of the picture, there are rows of white folding chairs with a few guests sitting on them, and a white carpet runs down the middle. In the background, I can see large rocks, the blue sea and a sky with white clouds."
+      }
+    },
+    "fullModel": "This picture was taken on a beach, next to the sea. What I can see first is a couple getting married on the beach. In the middle, there is a wooden arch decorated with white flowers and long white curtains. The bride on the left is wearing a long white lace dress and holding the groom's hands. The groom on the right is wearing a light beige suit. Between them, a man is holding an open book and leading the ceremony. On both sides, there are rows of white chairs, and in the background I can see rocks and the blue sea."
+  },
+  {
+    "id": "m21",
+    "level": "Medium",
+    "test": 8,
+    "image": "/images/speaking-p2-steps/m21.webp",
+    "title": "Bờ kè ven sông",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "on a path beside a river",
+        "distractors": ["inside a shopping mall", "in an aeroplane", "in a bedroom"],
+        "explanation": "Có bờ kè, mặt nước bên trái và lối đi có cây → đường ven sông."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a path beside a river.",
+        "answers": ["on"],
+        "explanation": "Dùng 'on' với lối đi (on a path)."
+      },
+      "models": [
+        "This picture was taken on a path beside a river. The main focus is people relaxing outdoors.",
+        "This picture shows people walking and cycling beside a river.",
+        "This is a picture of a riverside path in a town."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "two people riding bicycles along the path",
+        "distractors": ["a boat sailing on the river", "a man selling ice cream", "children playing football"],
+        "explanation": "Hai người đạp xe trên lối đi là chuyển động nổi bật nhất."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is two people ______ (ride) bicycles.",
+        "answers": ["riding"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is two people riding bicycles along the path.",
+        "What I can see first is some people enjoying a sunny day by the river.",
+        "What I can see first is a riverside path with cyclists and pedestrians."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The river is on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Dòng sông nằm ở phía bên trái khung hình."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả những người trong ảnh, dòng sông và phần nền (ít nhất 3 câu).",
+        "model": "On the left side of the picture, there is a wide river with calm blue water and a low concrete wall along the edge. Near the wall, a small group of people is standing and looking at the water: a woman in a blue and white top, a person in a red jacket and a child. In the middle of the path, two cyclists are riding away from the camera, and one of them is wearing a blue shirt. On the right, there is a row of tall trees with white-painted trunks and a road with a yellow vehicle. In the background, I can see the buildings of a small town on the other side of the river."
+      }
+    },
+    "fullModel": "This picture was taken on a path beside a river. What I can see first is two people riding bicycles. On the left, there is a wide river with calm blue water and a low concrete wall along the edge. Near the wall, a small group of people is standing and looking at the water. In the middle of the path, two cyclists are riding away from the camera. On the right, there is a row of tall trees with white-painted trunks. In the background, I can see the buildings of a small town."
+  },
+  {
+    "id": "m22",
+    "level": "Medium",
+    "test": 8,
+    "image": "/images/speaking-p2-steps/m22.png",
+    "title": "Họp nhóm bên bảng trắng",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a meeting room",
+        "distractors": ["in a bakery", "at a train station", "in a garden"],
+        "explanation": "Có bàn họp, ghế xoay và bảng trắng → phòng họp văn phòng."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a meeting room.",
+        "answers": ["in"],
+        "explanation": "Dùng 'in' cho phòng (in a room)."
+      },
+      "models": [
+        "This picture was taken in a meeting room. The main focus is four women.",
+        "This picture shows four women having a meeting.",
+        "This is a picture of a team preparing a presentation."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a woman drawing a graph on a whiteboard",
+        "distractors": ["a man giving out documents", "two women having lunch", "a woman using a photocopier"],
+        "explanation": "Người phụ nữ đang vẽ đồ thị lên bảng trắng là hành động chính."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a woman ______ (draw) on a whiteboard.",
+        "answers": ["drawing", "writing"],
+        "explanation": "Hành động đang diễn ra → V-ing ('drawing' hoặc 'writing' đều chấp nhận)."
+      },
+      "models": [
+        "What I can see first in this picture is a woman drawing a graph on a whiteboard.",
+        "What I can see first is four women working together in a meeting.",
+        "What I can see first is a group of colleagues preparing a presentation."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The woman carrying a jacket over her arm is on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Người phụ nữ vắt áo khoác trên tay đứng ở phía bên trái."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả bốn người phụ nữ và các đồ vật trong phòng (ít nhất 3 câu).",
+        "model": "The woman on the left is wearing a magenta pair of trousers and carrying a black jacket over her arm. Behind the table in the middle, a woman in a grey cardigan is standing and holding some sheets of paper. Next to her, a woman in a pink top is reaching up to draw a circle on the whiteboard, which already has a line graph on it. The woman on the right is wearing a black suit and has long dark hair, and she is looking down at some documents next to a black bag. On the table, there are papers, a cup and some cables, and around the room there are several teal office chairs."
+      }
+    },
+    "fullModel": "This picture was taken in a meeting room. What I can see first is a woman drawing on a whiteboard. The woman on the left is wearing magenta trousers and carrying a black jacket over her arm. In the middle, a woman in a grey cardigan is holding some sheets of paper. Next to her, a woman in a pink top is drawing a circle on the whiteboard, which already has a line graph on it. The woman on the right is wearing a black suit and looking down at some documents."
+  },
+  {
+    "id": "m23",
+    "level": "Medium",
+    "test": 9,
+    "image": "/images/speaking-p2-steps/m23.png",
+    "title": "Không gian làm việc chung",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a cafe or co-working space",
+        "distractors": ["in a hospital", "on a football pitch", "in a bathroom"],
+        "explanation": "Có bàn gỗ, laptop, tường gạch và xe đạp dựng trong nhà → quán cafe/không gian làm việc chung."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a co-working space.",
+        "answers": ["in", "at"],
+        "explanation": "Dùng 'in' hoặc 'at' cho địa điểm này đều được chấp nhận."
+      },
+      "models": [
+        "This picture was taken in a co-working space. The main focus is three people working.",
+        "This picture shows three people working in a cafe.",
+        "This is a picture of three colleagues in a co-working space."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a woman standing and holding a tablet",
+        "distractors": ["a waiter carrying a tray", "a man sleeping on a sofa", "two children drawing"],
+        "explanation": "Người phụ nữ đứng cầm máy tính bảng ở giữa là chủ thể chính."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a woman ______ (hold) a tablet.",
+        "answers": ["holding"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a woman standing and holding a tablet.",
+        "What I can see first is three people working in a relaxed office space.",
+        "What I can see first is a yellow bicycle and some people working."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The yellow bicycle is on the ______ side of the picture.",
+        "answers": ["left"],
+        "explanation": "Chiếc xe đạp màu vàng dựng ở phía bên trái, cạnh tường gạch."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả ba người, chiếc xe đạp và các đồ vật trên bàn (ít nhất 3 câu).",
+        "model": "This photo was taken from above. The woman in the middle is wearing a green jacket and glasses, and she is standing and looking down at a tablet in her hands. Behind her on the right, a man in a mustard yellow jacket is sitting on a chair and using his phone. At the bottom of the picture, another person in a light shirt is sitting and typing on a laptop. On the left, a yellow bicycle is leaning against a red brick wall under a window. On the wooden table, there are a laptop, a notebook, a small plant and a mobile phone."
+      }
+    },
+    "fullModel": "This picture was taken in a co-working space. What I can see first is a woman holding a tablet. This photo was taken from above. The woman in the middle is wearing a green jacket and glasses, and she is standing and looking down at a tablet. Behind her on the right, a man in a mustard yellow jacket is sitting and using his phone. At the bottom, another person is typing on a laptop. On the left, a yellow bicycle is leaning against a red brick wall."
+  },
+  {
+    "id": "m24",
+    "level": "Medium",
+    "test": 9,
+    "image": "/images/speaking-p2-steps/m24.png",
+    "title": "Gia đình chuyển nhà",
+    "step1": {
+      "mcq": {
+        "instruction": "Bức ảnh này được chụp ở đâu?",
+        "correct": "in a room of a new house",
+        "distractors": ["in a supermarket", "at an airport", "on a beach"],
+        "explanation": "Phòng gần như trống với nhiều thùng carton → căn nhà mới đang chuyển vào."
+      },
+      "blank": {
+        "instruction": "Điền giới từ đúng vào chỗ trống.",
+        "content": "This picture was taken ______ a room of a new house.",
+        "answers": ["in"],
+        "explanation": "Dùng 'in' cho phòng (in a room)."
+      },
+      "models": [
+        "This picture was taken in a room of a new house. The main focus is a family moving in.",
+        "This picture shows a family moving into a new house.",
+        "This is a picture of a family unpacking boxes in a new home."
+      ]
+    },
+    "step2": {
+      "mcq": {
+        "instruction": "Điều bạn nhìn thấy ĐẦU TIÊN trong ảnh là gì?",
+        "correct": "a family unpacking cardboard boxes",
+        "distractors": ["a family eating dinner", "workers painting a wall", "children watching television"],
+        "explanation": "Cả gia đình đang mở và dỡ các thùng carton → đang chuyển nhà."
+      },
+      "blank": {
+        "instruction": "Điền dạng V-ing của động từ trong ngoặc.",
+        "content": "What I can see first is a family ______ (move) into a new house.",
+        "answers": ["moving"],
+        "explanation": "Hành động đang diễn ra → V-ing."
+      },
+      "models": [
+        "What I can see first in this picture is a family unpacking cardboard boxes.",
+        "What I can see first is a family moving into a new home.",
+        "What I can see first is two men hanging a picture on the wall."
+      ]
+    },
+    "step3": {
+      "blank": {
+        "instruction": "Điền từ chỉ vị trí (left / right / middle).",
+        "content": "The woman in the red checked shirt is on the ______ side of the picture.",
+        "answers": ["right"],
+        "explanation": "Người phụ nữ mặc áo sơ mi kẻ đỏ đứng ở phía bên phải."
+      },
+      "freeWrite": {
+        "instruction": "Mô tả từng người, các thùng đồ và căn phòng (ít nhất 3 câu).",
+        "model": "In the background in the middle, a man in a green top is standing on a ladder and hanging a picture on the wall, while another man in a blue checked shirt is helping him hold it. In the foreground, a girl in a striped top is sitting on the floor next to an open box and passing something to the woman. The woman on the right is wearing a red checked shirt over a white top, and she is leaning over a large cardboard box. There are cardboard boxes all around the room, and on the left there is a white door and a fireplace behind them. The room is almost empty, so the family have probably just arrived."
+      }
+    },
+    "fullModel": "This picture was taken in a room of a new house. What I can see first is a family moving into a new house. In the background, a man in a green top is standing on a ladder and hanging a picture on the wall, while another man in a blue checked shirt is helping him. In the foreground, a girl in a striped top is sitting on the floor next to an open box. The woman on the right is wearing a red checked shirt and leaning over a large cardboard box. There are cardboard boxes all around the room."
+  }
+]

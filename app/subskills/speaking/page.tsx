@@ -94,7 +94,7 @@ export default async function SpeakingPage() {
       description: "Quan sát ảnh và mô tả chi tiết trong 45 giây. Luyện cấu trúc câu, từ vựng mô tả.",
       href: "/subskills/speaking/part2",
       active: true,
-      detail: `5 kỹ năng · ${P2_TESTS_PER_SKILL} bộ test/kỹ năng · 3 cấp độ`,
+      detail: `6 kỹ năng · ${P2_TESTS_PER_SKILL} bộ test/kỹ năng · 3 cấp độ · có ghi âm`,
       skillsDone: p2SkillsDone,
       totalSkills: SPEAKING_P2_SKILLS.length,
       testsPassed: p2TestsPassed,
