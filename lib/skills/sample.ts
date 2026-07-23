@@ -166,8 +166,8 @@ export const SPEAKING_Q3_4: SpeakingItem[] = [
     imageUrl: U("photo-1517048676732-d65bc937f952"),
     imageAlt: "Nhóm người trong một cuộc họp quanh bàn.",
     credit: "Dylan Gillis / Unsplash",
-    prepSeconds: 30,
-    responseSeconds: 45,
+    prepSeconds: 45,
+    responseSeconds: 30,
     sampleResponse:
       "This picture was taken in an office. In the center, a group of people are having a meeting around a table. They are looking at some documents and seem to be discussing a project. On the right, a woman is taking notes. The atmosphere looks professional and focused.",
     tips: [
@@ -181,8 +181,8 @@ export const SPEAKING_Q3_4: SpeakingItem[] = [
     imageUrl: U("photo-1553877522-43269d4ea984"),
     imageAlt: "Một người đàn ông đang làm việc bên laptop.",
     credit: "charlesdeluvio / Unsplash",
-    prepSeconds: 30,
-    responseSeconds: 45,
+    prepSeconds: 45,
+    responseSeconds: 30,
     sampleResponse:
       "This is a photo of a workplace. In the foreground, a man is sitting at a desk and working on his laptop. There are some papers and a cup of coffee next to him. In the background, I can see large windows with natural light. Overall, it looks like a busy but comfortable working environment.",
     tips: [

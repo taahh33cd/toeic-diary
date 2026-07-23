@@ -112,6 +112,12 @@ export function getStepItems(test: StepTest, difficulty: Difficulty): StepItem[]
 
 export const STEP_TESTS_COUNT = [...new Set(ALL_ITEMS.map((i) => i.test))].length;
 
+/** Every image, ordered Easy → Medium → Hard. Shared with the /skills exam practice. */
+export function getAllStepItems(): StepItem[] {
+  const rank: Record<StepLevel, number> = { Easy: 0, Medium: 1, Hard: 2 };
+  return [...ALL_ITEMS].sort((a, b) => rank[a.level] - rank[b.level] || a.id.localeCompare(b.id));
+}
+
 // ─────────────────────────────────────
 // DB helper
 // ─────────────────────────────────────
