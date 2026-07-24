@@ -3,8 +3,9 @@
 import { useEffect, useRef } from "react";
 import { useAudioStore } from "@/stores/audioStore";
 import { Play, Pause, RotateCcw, Volume2 } from "lucide-react";
+import { useAudioShortcuts } from "./useAudioShortcuts";
 
-const SPEEDS = [0.75, 1.0, 1.25, 1.5, 2.0];
+const SPEEDS = [0.75, 1.0, 1.25, 1.5];
 
 function fmt(sec: number) {
   const m = Math.floor(sec / 60);
@@ -17,7 +18,7 @@ export function AudioPlayer({ audioUrl }: { audioUrl: string }) {
   const {
     isPlaying, currentTime, duration, isLoaded, isBuffering, speed,
     setIsPlaying, setCurrentTime, setDuration, setIsLoaded, setIsBuffering, setSpeed, setAudioUrl,
-    loopAB,
+    loopAB, seekRequest, requestSeekBy,
   } = useAudioStore();
 
   // Sync URL
@@ -54,6 +55,15 @@ export function AudioPlayer({ audioUrl }: { audioUrl: string }) {
     }
   }, [currentTime, loopAB]);
 
+  // Seek tương đối do nơi khác yêu cầu (nút replay, phím tắt)
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio || !seekRequest) return;
+    const target = Math.max(0, Math.min(audio.duration || 0, audio.currentTime + seekRequest.delta));
+    audio.currentTime = target;
+    setCurrentTime(target);
+  }, [seekRequest, setCurrentTime]);
+
   function handleSeek(e: React.ChangeEvent<HTMLInputElement>) {
     const t = parseFloat(e.target.value);
     setCurrentTime(t);
@@ -61,10 +71,20 @@ export function AudioPlayer({ audioUrl }: { audioUrl: string }) {
   }
 
   function handleReplay() {
-    if (audioRef.current) {
-      audioRef.current.currentTime = Math.max(0, audioRef.current.currentTime - 5);
-    }
+    requestSeekBy(-5);
   }
+
+  function stepSpeed(dir: 1 | -1) {
+    const i = SPEEDS.indexOf(speed);
+    const next = Math.min(SPEEDS.length - 1, Math.max(0, (i === -1 ? 1 : i) + dir));
+    setSpeed(SPEEDS[next]);
+  }
+
+  useAudioShortcuts({
+    onTogglePlay: () => { if (isLoaded) setIsPlaying(!isPlaying); },
+    onRewind: handleReplay,
+    onSpeedStep: stepSpeed,
+  });
 
   const pct = duration > 0 ? (currentTime / duration) * 100 : 0;
 
@@ -137,7 +157,7 @@ export function AudioPlayer({ audioUrl }: { audioUrl: string }) {
 
           {/* Speed controls */}
           <div className="flex items-center bg-[var(--bg-secondary)] p-1 rounded-lg border border-[var(--border)]/40">
-            {[0.75, 1.0, 1.25, 1.5].map((s) => (
+            {SPEEDS.map((s) => (
               <button
                 key={s}
                 onClick={() => setSpeed(s)}

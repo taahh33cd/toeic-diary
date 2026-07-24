@@ -24,6 +24,9 @@ interface AudioState {
   // Current lesson audio
   audioUrl: string | null;
 
+  // Yêu cầu seek tương đối — AudioPlayer sở hữu <audio> nên nó áp dụng, nonce để lặp lại được
+  seekRequest: { delta: number; nonce: number } | null;
+
   // Actions
   setIsPlaying: (playing: boolean) => void;
   setCurrentTime: (time: number) => void;
@@ -33,6 +36,7 @@ interface AudioState {
   setSpeed: (speed: number) => void;
   setVolume: (volume: number) => void;
   setAudioUrl: (url: string | null) => void;
+  requestSeekBy: (delta: number) => void;
   setLoopPoint: (point: "A" | "B", time: number) => void;
   clearLoop: () => void;
   toggleLoop: () => void;
@@ -49,6 +53,7 @@ const INITIAL_STATE = {
   volume: 1,
   loopAB: { pointA: null, pointB: null, isLooping: false },
   audioUrl: null,
+  seekRequest: null,
 };
 
 /**
@@ -66,6 +71,11 @@ export const useAudioStore = create<AudioState>()((set, get) => ({
   setSpeed: (speed) => set({ speed }),
   setVolume: (volume) => set({ volume }),
   setAudioUrl: (audioUrl) => set({ audioUrl, isLoaded: false, currentTime: 0 }),
+
+  requestSeekBy: (delta) =>
+    set((state) => ({
+      seekRequest: { delta, nonce: (state.seekRequest?.nonce ?? 0) + 1 },
+    })),
 
   setLoopPoint: (point, time) => {
     const { loopAB } = get();

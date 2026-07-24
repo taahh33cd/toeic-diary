@@ -5,6 +5,7 @@ import { getAiFeedback } from "@/app/actions/getAiFeedback";
 import { Level3Feedback } from "@/lib/ai/gemini";
 import { getTimeSpent } from "@/stores/practiceStore";
 import { CheckCircle2, XCircle, Sparkles, ChevronDown, ChevronUp } from "lucide-react";
+import { KeyboardHints } from "./KeyboardHints";
 
 interface Sentence {
   id: string;
@@ -82,11 +83,7 @@ export function Level4Practice({ lessonId, sentences, transcriptFull, startTime,
           placeholder="Write a summary of what you heard..."
           className="w-full min-h-[320px] p-6 rounded-2xl border-2 border-[var(--border)] bg-[var(--bg-elevated)] text-[var(--text-primary)] text-base resize-none outline-none focus:border-[var(--practice-accent)] transition-colors disabled:opacity-60 shadow-sm"
         />
-        {!feedback && (
-          <p className="text-xs text-[var(--text-muted)] mt-2 text-center select-none">
-            ⌨ Viết tóm tắt bằng tiếng Anh · bấm "Nhận AI Feedback" để gửi
-          </p>
-        )}
+        {!feedback && <KeyboardHints mode="summary" />}
       </div>
 
       {error && (

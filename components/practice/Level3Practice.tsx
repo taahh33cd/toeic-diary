@@ -7,6 +7,8 @@ import { getTimeSpent } from "@/stores/practiceStore";
 import { Part2Result } from "./Part2Result";
 import { type VocabItem } from "./TranscriptVocabModal";
 import { PostSubmitView } from "./PostSubmitView";
+import { KeyboardHints } from "./KeyboardHints";
+import { useAudioShortcuts } from "./useAudioShortcuts";
 
 interface Sentence {
   id: string;
@@ -214,6 +216,25 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     audioRef.current.currentTime = ((e.clientX - rect.left) / rect.width) * audioDuration;
   }
 
+  // Lùi 5s nhưng không vượt ra khỏi câu đang luyện
+  function handleRewind() {
+    const audio = audioRef.current;
+    if (!audio) return;
+    const floor = activeSentence && activeSentence.startTime > 0
+      ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET)
+      : 0;
+    seekAndPlay(audio, Math.max(floor, audio.currentTime - 5));
+    setIsPlaying(true);
+  }
+
+  function stepSpeed(dir: 1 | -1) {
+    const i = SPEEDS.indexOf(speed);
+    const next = Math.min(SPEEDS.length - 1, Math.max(0, (i === -1 ? 1 : i) + dir));
+    setSpeed(SPEEDS[next]);
+  }
+
+  useAudioShortcuts({ onTogglePlay: togglePlay, onRewind: handleRewind, onSpeedStep: stepSpeed });
+
   function advanceToNext() {
     audioRef.current?.pause();
     setIsPlaying(false);
@@ -254,8 +275,28 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
     if (e.key === "Enter") { e.preventDefault(); submitSentence(sentenceId); }
   }
 
+  // Tab / Shift+Tab: chỉ chạy vòng trong các từ còn sai của câu hiện tại
+  function focusAdjacentWrongWord(sentenceId: string, fromIdx: number, dir: 1 | -1) {
+    const state = sentenceStates[sentenceId];
+    if (!state) return;
+    const n = state.wordResults.length;
+    if (n === 0) return;
+    for (let step = 1; step <= n; step++) {
+      const idx = (((fromIdx + dir * step) % n) + n) % n;
+      if (!state.wordResults[idx].correct) {
+        retryInputRefs.current[idx]?.focus();
+        return;
+      }
+    }
+  }
+
   // Per-word Enter: check current word immediately, update state, move to next wrong
   function handleRetryKeyDown(e: React.KeyboardEvent<HTMLInputElement>, sentenceId: string, wordIdx: number) {
+    if (e.key === "Tab") {
+      e.preventDefault();
+      focusAdjacentWrongWord(sentenceId, wordIdx, e.shiftKey ? -1 : 1);
+      return;
+    }
     if (e.key !== "Enter") return;
     e.preventDefault();
 
@@ -529,16 +570,12 @@ export function Level3Practice({ lessonId, audioUrl, sentences, partNumber, corr
                   className="w-full px-5 py-4 bg-transparent text-[var(--text-primary)] text-lg outline-none text-center"
                 />
               </div>
-              <p className="text-xs text-[var(--text-muted)] mt-3 text-center select-none">
-                ⌨ Gõ toàn bộ câu · Enter để kiểm tra · Replay để nghe lại
-              </p>
+              <KeyboardHints mode="sentence" />
             </div>
           )}
           {activeSentenceState.phase === "feedback" && (
             <div className="flex flex-col items-center gap-3 mt-4">
-              <p className="text-xs text-[var(--text-muted)] select-none">
-                ⌨ Gõ lại từng từ sai · Enter để xác nhận · Replay để nghe lại
-              </p>
+              <KeyboardHints mode="words" />
               <button
                 onClick={() => showAnswer(activeSentence.id)}
                 className="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm text-[var(--text-secondary)] hover:bg-[var(--bg-secondary)] transition-colors border border-[var(--border)]"

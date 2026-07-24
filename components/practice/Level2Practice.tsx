@@ -7,6 +7,8 @@ import { getTimeSpent } from "@/stores/practiceStore";
 import { generateBlanks, GeneratedBlank } from "@/lib/generateBlanks";
 import { type VocabItem } from "./TranscriptVocabModal";
 import { PostSubmitView } from "./PostSubmitView";
+import { KeyboardHints } from "./KeyboardHints";
+import { useAudioShortcuts } from "./useAudioShortcuts";
 
 interface Sentence {
   id: string;
@@ -214,6 +216,25 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
     audioRef.current.currentTime = ((e.clientX - rect.left) / rect.width) * audioDuration;
   }
 
+  // Lùi 5s nhưng không vượt ra khỏi câu đang luyện
+  function handleRewind() {
+    const audio = audioRef.current;
+    if (!audio) return;
+    const floor = activeSentence && activeSentence.startTime > 0
+      ? Math.max(0, activeSentence.startTime - AUDIO_OFFSET)
+      : 0;
+    seekAndPlay(audio, Math.max(floor, audio.currentTime - 5));
+    setIsPlaying(true);
+  }
+
+  function stepSpeed(dir: 1 | -1) {
+    const i = SPEEDS.indexOf(speed);
+    const next = Math.min(SPEEDS.length - 1, Math.max(0, (i === -1 ? 1 : i) + dir));
+    setSpeed(SPEEDS[next]);
+  }
+
+  useAudioShortcuts({ onTogglePlay: togglePlay, onRewind: handleRewind, onSpeedStep: stepSpeed });
+
   function advanceToNextBlankSentence() {
     audioRef.current?.pause();
     setIsPlaying(false);
@@ -236,6 +257,22 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
       inputRefs.current[nextBlank.id]?.focus();
     } else {
       setTimeout(() => advanceToNextBlankSentence(), 500);
+    }
+  }
+
+  // Tab / Shift+Tab: chỉ chạy vòng trong các ô trống chưa đúng của câu hiện tại
+  function focusAdjacentBlank(currentBlankId: string, dir: 1 | -1) {
+    if (!activeSentence) return;
+    const blanks = activeSentence.blanks;
+    const n = blanks.length;
+    const idx = blanks.findIndex((b) => b.id === currentBlankId);
+    if (idx === -1) return;
+    for (let step = 1; step <= n; step++) {
+      const target = blanks[(((idx + dir * step) % n) + n) % n];
+      if (!isBlankResolved(target)) {
+        inputRefs.current[target.id]?.focus();
+        return;
+      }
     }
   }
 
@@ -327,6 +364,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
               onChange={(e) => handleInput(blank.id, e.target.value)}
               onKeyDown={(e) => {
                 if (e.key === "Enter") { e.preventDefault(); handleEnter(blank.id); }
+                if (e.key === "Tab") { e.preventDefault(); focusAdjacentBlank(blank.id, e.shiftKey ? -1 : 1); }
                 if (e.key === " ") e.preventDefault();
               }}
               disabled={submitted || bs?.status === "correct"}
@@ -461,11 +499,7 @@ export function Level2Practice({ lessonId, audioUrl, sentences, startTime: sessi
               ? renderWords(activeSentence)
               : <span className="text-[var(--text-primary)]">{activeSentence.content}</span>}
           </div>
-          {activeSentence.blanks.length > 0 && (
-            <p className="text-xs text-[var(--text-muted)] mt-6 select-none">
-              ⌨ Gõ vào ô trống · Enter để kiểm tra · Replay để nghe lại
-            </p>
-          )}
+          {activeSentence.blanks.length > 0 && <KeyboardHints mode="blanks" />}
         </div>
       )}
 
