@@ -3,6 +3,7 @@ import { khongDoiL5, khongDoiL6 } from "./khong-doi";
 import { v2v3DuoiTL5, v2v3DuoiTL6 } from "./v2v3-duoi-t";
 import { v2v3DoiNguyenAmL5, v2v3DoiNguyenAmL6 } from "./v2v3-doi-nguyen-am";
 import { baDangKhac2L5, baDangKhac2L6 } from "./ba-dang-khac-2";
+import { dacBietL5, dacBietL6 } from "./dac-biet";
 
 /**
  * Câu ngữ cảnh cho L5 (điền vào câu) và L6 (TOEIC Part 5).
@@ -14,4 +15,5 @@ export const GROUP_SENTENCES: Record<string, { l5: VerbBlank[]; l6: VerbMCQ[] }>
   "v2v3-duoi-t": { l5: v2v3DuoiTL5, l6: v2v3DuoiTL6 },
   "v2v3-doi-nguyen-am": { l5: v2v3DoiNguyenAmL5, l6: v2v3DoiNguyenAmL6 },
   "ba-dang-khac-2": { l5: baDangKhac2L5, l6: baDangKhac2L6 },
+  "dac-biet": { l5: dacBietL5, l6: dacBietL6 },
 };
