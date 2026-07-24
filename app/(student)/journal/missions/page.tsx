@@ -13,6 +13,7 @@ import { useHwFiles } from "@/hooks/firebase/useHwFiles";
 import type { HwFilesForHw } from "@/lib/firebase/types";
 import { awardXp } from "@/lib/xp-client";
 import type { Homework } from "@/lib/firebase/types";
+import { EXAM_LABEL, goalDeadline, goalExamType, goalTotal } from "@/lib/exam-goal";
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -796,7 +797,7 @@ export default function MissionsPage() {
       </div>
 
       {/* Goal banner */}
-      {goal && (
+      {goalTotal(goal) !== null && (
         <div style={{
           display: "flex", alignItems: "center", gap: 0,
           border: "1px solid var(--border,#DDD0BC)",
@@ -807,16 +808,23 @@ export default function MissionsPage() {
             borderRight: "1px solid var(--border,#DDD0BC)",
             background: "var(--bg-elevated,#FBF7F2)",
           }}>
-            <div style={{ fontSize: ".68rem", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", color: "#9A8672", marginBottom: ".2rem" }}>Mục tiêu</div>
-            <div style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#C4622D", lineHeight: 1 }}>
-              {goal.target} điểm
+            <div style={{ fontSize: ".68rem", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", color: "#9A8672", marginBottom: ".2rem" }}>
+              Mục tiêu {EXAM_LABEL[goalExamType(goal)]}
             </div>
+            <div style={{ fontFamily: "'Lora', Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#C4622D", lineHeight: 1 }}>
+              {goalTotal(goal)} điểm
+            </div>
+            {goalExamType(goal) === "sw" && (
+              <div style={{ fontSize: ".72rem", color: "#9A8672", marginTop: ".25rem" }}>
+                S {goal!.swTargetS ?? 0} · W {goal!.swTargetW ?? 0}
+              </div>
+            )}
           </div>
-          {goal.deadline && (
+          {goalDeadline(goal) && (
             <div style={{ padding: ".7rem 1.2rem", background: "var(--bg-elevated,#FBF7F2)" }}>
               <div style={{ fontSize: ".68rem", fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", color: "#9A8672", marginBottom: ".2rem" }}>Hạn</div>
               <div style={{ fontSize: ".9rem", fontWeight: 600, color: "var(--text-primary,#2C1E0F)" }}>
-                {new Date(goal.deadline).toLocaleDateString("vi-VN")}
+                {new Date(goalDeadline(goal)!).toLocaleDateString("vi-VN")}
               </div>
             </div>
           )}

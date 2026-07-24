@@ -12,7 +12,8 @@ import { useClasses } from "@/hooks/firebase/useClasses";
 import { useLocale } from "@/hooks/useLocale";
 import { LiveIndicator } from "@/components/shared/LiveIndicator";
 import type { XpStats } from "./page";
-import type { ScheduleItem, Goal, VocabWord, ToeicScore } from "@/lib/firebase/types";
+import type { ScheduleItem, Goal, VocabWord, ToeicScore, SwScore } from "@/lib/firebase/types";
+import { EXAM_MAX, examScores, goalExamType, goalTotal } from "@/lib/exam-goal";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -181,21 +182,27 @@ function HeaderTile({ name, xpStats, currentWeek }: { name: string; xpStats: XpS
 
 // ─── Score tile ───────────────────────────────────────────────────────────────
 
-function ScoreTile({ scores, goal }: { scores: { score: number; date: string }[]; goal: Goal | null }) {
+function ScoreTile({ scores, swScores, goal }: {
+  scores: ToeicScore[]; swScores: SwScore[]; goal: Goal | null;
+}) {
   const { t } = useLocale();
-  const sorted = [...scores].sort((a, b) => b.date.localeCompare(a.date));
+  const examType = goalExamType(goal);
+  const isSw = examType === "sw";
+  const max = EXAM_MAX[examType];
+  const sorted = examScores(examType, scores, swScores).sort((a, b) => b.date.localeCompare(a.date));
   const latest = sorted[0]?.score ?? null;
   const prev = sorted[1]?.score ?? null;
   const delta = latest !== null && prev !== null ? latest - prev : null;
+  const target = goalTotal(goal);
 
-  // B6
-  const grade = latest !== null ? scoreGrade(latest) : null;
-  const gradeColor = latest !== null ? scoreGradeColor(latest) : "#9A8672";
+  // B6 — thang xếp loại chỉ đúng cho L&R (0–990)
+  const grade = !isSw && latest !== null ? scoreGrade(latest) : null;
+  const gradeColor = !isSw && latest !== null ? scoreGradeColor(latest) : "#9A8672";
 
-  // B7: progress bar 0–990
-  const barPct = latest !== null ? Math.min((latest / 990) * 100, 100) : 0;
-  const goalPct = goal ? Math.min((goal.target / 990) * 100, 100) : null;
-  const gap = latest !== null && goal ? goal.target - latest : null;
+  // B7: progress bar 0–max
+  const barPct = latest !== null ? Math.min((latest / max) * 100, 100) : 0;
+  const goalPct = target !== null ? Math.min((target / max) * 100, 100) : null;
+  const gap = latest !== null && target !== null ? target - latest : null;
 
   // B8: pip dots (up to 8 recent scores, oldest left)
   const pips = sorted.slice(0, 8).reverse();
@@ -205,7 +212,7 @@ function ScoreTile({ scores, goal }: { scores: { score: number; date: string }[]
       <div className="flex justify-between items-start mb-3">
         <div>
           <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif" }}>
-            {t("Điểm TOEIC", "TOEIC Score")}
+            {isSw ? t("Điểm TOEIC S&W", "TOEIC S&W Score") : t("Điểm TOEIC", "TOEIC Score")}
           </p>
           {/* B6: xếp loại */}
           {grade && (
@@ -249,7 +256,7 @@ function ScoreTile({ scores, goal }: { scores: { score: number; date: string }[]
             <div
               className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2"
               style={{ left: `${goalPct}%` }}
-              title={t(`Mục tiêu: ${goal!.target}`, `Goal: ${goal!.target}`)}
+              title={t(`Mục tiêu: ${target}`, `Goal: ${target}`)}
             >
               <div
                 className="w-2.5 h-2.5 rounded-full border-2"
@@ -259,7 +266,7 @@ function ScoreTile({ scores, goal }: { scores: { score: number; date: string }[]
           )}
         </div>
         <div className="flex justify-between text-[10px] mt-1" style={{ color: "var(--text-muted)" }}>
-          <span>0</span><span>990</span>
+          <span>0</span><span>{max}</span>
         </div>
       </div>
 
@@ -267,7 +274,7 @@ function ScoreTile({ scores, goal }: { scores: { score: number; date: string }[]
       {pips.length > 1 && (
         <div className="flex gap-1 items-end mb-2">
           {pips.map((s, i) => {
-            const h = Math.max(4, Math.round((s.score / 990) * 20));
+            const h = Math.max(4, Math.round((s.score / max) * 20));
             const isLast = i === pips.length - 1;
             return (
               <div
@@ -290,7 +297,7 @@ function ScoreTile({ scores, goal }: { scores: { score: number; date: string }[]
         <p className="text-xs" style={{ color: gap <= 0 ? "#16a34a" : "var(--text-muted)" }}>
           {gap <= 0
             ? t("✓ Đã đạt mục tiêu!", "✓ Goal achieved!")
-            : t(`Còn ${gap} điểm → mục tiêu ${goal!.target}`, `${gap} pts to goal ${goal!.target}`)}
+            : t(`Còn ${gap} điểm → mục tiêu ${target}`, `${gap} pts to goal ${target}`)}
         </p>
       )}
     </Tile>
@@ -1122,6 +1129,7 @@ export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }
 
   const td = localToday();
   const scores = student?.scores ?? [];
+  const swScores = student?.swScores ?? [];
   const personalSchedule: ScheduleItem[] = Array.isArray(student?.schedule) ? student!.schedule : [];
 
   // Merge personal + class weeklySchedule (same logic as /schedule page)
@@ -1196,7 +1204,7 @@ export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }
         <HeaderTile name={name} xpStats={xpStats} currentWeek={student?.currentWeek} />
 
         {/* Row 2: Score | Tasks */}
-        <ScoreTile scores={scores} goal={goal} />
+        <ScoreTile scores={scores} swScores={swScores} goal={goal} />
         <TasksTile homework={hwSections} submittedDate={todaySubmitted} />
 
         {/* Row 3: Schedule | Feedback */}

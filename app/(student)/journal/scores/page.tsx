@@ -7,11 +7,13 @@ import { useGoal } from "@/hooks/firebase/useGoal";
 import { useLocale } from "@/hooks/useLocale";
 import {
   pushStudentScore, deleteStudentScore, updateStudentScore, setGoal,
+  pushStudentSwScore, deleteStudentSwScore, updateStudentSwScore,
   addErrorEntry, deleteErrorEntry, markDetailReviewed,
   addParaphraseEntry, reviewParaphraseEntry, deleteParaphraseEntry,
 } from "@/lib/firebase/helpers";
-import type { ToeicScore, ErrorLogEntry, ErrorDetail, ParaphraseEntry } from "@/lib/firebase/types";
+import type { ToeicScore, SwScore, ExamType, ErrorLogEntry, ErrorDetail, ParaphraseEntry } from "@/lib/firebase/types";
 import { calcEtsScore } from "@/lib/ets-scale";
+import { goalExamType, goalTotal } from "@/lib/exam-goal";
 import ReviewDrawer from "@/components/journal/ReviewDrawer";
 
 // ─── Scores: Part definitions ─────────────────────────────────────────────────
@@ -149,7 +151,9 @@ function TabBtn({
 // SCORES COMPONENTS
 // ═══════════════════════════════════════════════════════════════════════════════
 
-function ScoreChart({ scores, noDataLabel }: { scores: ToeicScore[]; noDataLabel: string }) {
+function ScoreChart({ scores, noDataLabel, maxFloor = 500 }: {
+  scores: { score: number; date: string }[]; noDataLabel: string; maxFloor?: number;
+}) {
   if (scores.length === 0) {
     return (
       <div className="flex items-center justify-center h-full min-h-[140px]">
@@ -160,7 +164,7 @@ function ScoreChart({ scores, noDataLabel }: { scores: ToeicScore[]; noDataLabel
 
   const sorted = [...scores].sort((a, b) => a.date.localeCompare(b.date));
   const values = sorted.map((s) => s.score);
-  const maxV = Math.max(...values, 500);
+  const maxV = Math.max(...values, maxFloor);
   const minV = Math.max(0, Math.min(...values) - 50);
   const range = maxV - minV || 100;
 
@@ -219,7 +223,10 @@ function GoalEditForm({
     if (isNaN(numTarget) || numTarget < 10 || numTarget > 990) return;
     setSaving(true);
     try {
-      await setGoal(studentCode, { target: numTarget, deadline: deadline || undefined, studentId, studentName, updatedAt: new Date().toISOString() });
+      await setGoal(studentCode, {
+        examType: "lr", target: numTarget, deadline: deadline || undefined,
+        studentId, studentName, updatedAt: new Date().toISOString(),
+      });
       onDone();
     } finally { setSaving(false); }
   }
@@ -284,6 +291,140 @@ function GoalCard({
         <div className="text-sm" style={{ color: "var(--text-muted)" }}>{formatDeadline(deadline, locale)}</div>
       )}
       {latestScore !== null && (
+        <div className="text-sm mt-1">
+          {achieved
+            ? <span className="font-semibold" style={{ color: "var(--sage)" }}>✓ {t("Đã đạt mục tiêu!", "Goal achieved!")}</span>
+            : <span style={{ color: "var(--text-muted)" }}>
+                {t("Còn thiếu", "Still need")}{" "}
+                <span className="font-bold" style={{ color: "var(--orange2)" }}>{gap}</span>{" "}
+                {t("điểm", "pts")}
+              </span>
+          }
+        </div>
+      )}
+      <button onClick={onEdit}
+        className="mt-3 self-start px-4 py-1.5 rounded-lg text-sm font-medium transition-colors"
+        style={{ background: "transparent", border: "1px solid var(--border-focus)", color: "var(--orange2)", cursor: "pointer" }}>
+        {t("Chỉnh mục tiêu", "Edit Goal")}
+      </button>
+    </div>
+  );
+}
+
+function SwGoalEditForm({
+  currentS, currentW, currentDeadline, studentCode, studentId, studentName, onDone,
+}: {
+  currentS: number; currentW: number; currentDeadline?: string;
+  studentCode: string; studentId: string; studentName: string; onDone: () => void;
+}) {
+  const { t } = useLocale();
+  const [targetS, setTargetS] = useState(String(currentS));
+  const [targetW, setTargetW] = useState(String(currentW));
+  const [deadline, setDeadline] = useState(currentDeadline ?? "");
+  const [saving, setSaving] = useState(false);
+
+  const numS = parseInt(targetS, 10);
+  const numW = parseInt(targetW, 10);
+  const preview = isNaN(numS) || isNaN(numW) ? null : numS + numW;
+
+  async function handleSave(e: React.FormEvent) {
+    e.preventDefault();
+    if (isNaN(numS) || numS < 0 || numS > 200) return;
+    if (isNaN(numW) || numW < 0 || numW > 200) return;
+    setSaving(true);
+    try {
+      await setGoal(studentCode, {
+        examType: "sw", swTargetS: numS, swTargetW: numW,
+        swDeadline: deadline || undefined,
+        studentId, studentName, updatedAt: new Date().toISOString(),
+      });
+      onDone();
+    } finally { setSaving(false); }
+  }
+
+  const inp: React.CSSProperties = {
+    padding: "0.4rem 0.6rem", border: "1px solid var(--border-focus)",
+    background: "rgba(255,255,255,0.06)", color: "#fff",
+    fontSize: "0.85rem", borderRadius: "8px", outline: "none",
+    width: "100%", boxSizing: "border-box",
+  };
+
+  return (
+    <form onSubmit={handleSave} className="flex flex-col gap-3 mt-3">
+      <div className="grid grid-cols-2 gap-2">
+        <div>
+          <label className="block text-[11px] uppercase tracking-wider mb-1" style={{ color: "#9A8672" }}>
+            {t("Speaking (0–200)", "Speaking (0–200)")}
+          </label>
+          <input type="number" min={0} max={200} step={10} value={targetS}
+            onChange={(e) => setTargetS(e.target.value)} style={inp} required />
+        </div>
+        <div>
+          <label className="block text-[11px] uppercase tracking-wider mb-1" style={{ color: "#9A8672" }}>
+            {t("Writing (0–200)", "Writing (0–200)")}
+          </label>
+          <input type="number" min={0} max={200} step={10} value={targetW}
+            onChange={(e) => setTargetW(e.target.value)} style={inp} required />
+        </div>
+      </div>
+      {preview !== null && (
+        <p className="text-xs" style={{ color: "#9A8672" }}>
+          {t("Tổng mục tiêu", "Target total")}: <strong style={{ color: "var(--orange2)" }}>{preview}</strong>/400
+        </p>
+      )}
+      <div>
+        <label className="block text-[11px] uppercase tracking-wider mb-1" style={{ color: "#9A8672" }}>
+          {t("Deadline (tháng/năm)", "Deadline (month/year)")}
+        </label>
+        <input type="month" value={deadline.slice(0, 7)}
+          onChange={(e) => setDeadline(e.target.value ? e.target.value + "-01" : "")} style={inp} />
+      </div>
+      <div className="flex gap-2">
+        <button type="submit" disabled={saving}
+          className="px-4 py-2 rounded-lg text-sm font-bold text-white transition-opacity"
+          style={{ background: saving ? "var(--border)" : "var(--orange)", cursor: saving ? "not-allowed" : "pointer" }}>
+          {saving ? t("Đang lưu...", "Saving...") : t("Lưu", "Save")}
+        </button>
+        <button type="button" onClick={onDone}
+          className="px-4 py-2 rounded-lg text-sm"
+          style={{ background: "transparent", color: "#9A8672", border: "1px solid rgba(154,134,114,0.4)", cursor: "pointer" }}>
+          {t("Huỷ", "Cancel")}
+        </button>
+      </div>
+    </form>
+  );
+}
+
+function SwGoalCard({
+  targetS, targetW, deadline, latestTotal, locale, onEdit,
+}: {
+  targetS: number; targetW: number; deadline?: string;
+  latestTotal: number | null; locale: "vi" | "en"; onEdit: () => void;
+}) {
+  const { t } = useLocale();
+  const total = targetS + targetW;
+  const achieved = latestTotal !== null && latestTotal >= total;
+  const gap = latestTotal !== null ? total - latestTotal : null;
+
+  return (
+    <div className="flex flex-col gap-2 h-full">
+      <div className="text-[11px] font-bold uppercase tracking-widest" style={{ color: "var(--text-muted)" }}>
+        {t("MỤC TIÊU S&W", "S&W GOAL")}
+      </div>
+      <div className="flex items-baseline gap-1.5">
+        <span className="leading-none font-bold" style={{ fontFamily: "'Lora', serif", fontSize: "3.5rem", color: "var(--orange)" }}>
+          {total}
+        </span>
+        <span className="text-sm" style={{ color: "var(--text-muted)" }}>/400 {t("điểm S&W", "S&W")}</span>
+      </div>
+      <div className="text-sm" style={{ color: "var(--text-muted)" }}>
+        Speaking <strong style={{ color: "var(--orange2)" }}>{targetS}</strong>
+        {" · "}Writing <strong style={{ color: "var(--orange2)" }}>{targetW}</strong>
+      </div>
+      {deadline && (
+        <div className="text-sm" style={{ color: "var(--text-muted)" }}>{formatDeadline(deadline, locale)}</div>
+      )}
+      {latestTotal !== null && (
         <div className="text-sm mt-1">
           {achieved
             ? <span className="font-semibold" style={{ color: "var(--sage)" }}>✓ {t("Đã đạt mục tiêu!", "Goal achieved!")}</span>
@@ -633,6 +774,185 @@ function ScoreRow({ score, isNewest, onDelete, onEdit, onReview, locale }: {
               })}
               {score.note && <span className="ml-2 italic" style={{ color: "var(--text-muted)" }}>{score.note}</span>}
             </div>
+          </td>
+        </tr>
+      )}
+    </>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// SW SCORE COMPONENTS
+// ═══════════════════════════════════════════════════════════════════════════════
+
+function SwScoreEntryForm({
+  initial, onSubmit, onCancel, submitLabel, savingLabel,
+}: {
+  initial?: SwScore;
+  onSubmit: (entry: SwScore) => Promise<void>;
+  onCancel?: () => void;
+  submitLabel: string;
+  savingLabel: string;
+}) {
+  const { t } = useLocale();
+  const [saving, setSaving] = useState(false);
+  const [date, setDate] = useState(initial?.date ?? new Date().toISOString().slice(0, 10));
+  const [speaking, setSpeaking] = useState(initial?.s !== undefined ? String(initial.s) : "");
+  const [writing, setWriting] = useState(initial?.w !== undefined ? String(initial.w) : "");
+  const [testname, setTestname] = useState(initial?.testname ?? "");
+
+  const numS = parseInt(speaking, 10);
+  const numW = parseInt(writing, 10);
+  const total = isNaN(numS) || isNaN(numW) ? null : numS + numW;
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    const s = isNaN(numS) ? 0 : numS;
+    const w = isNaN(numW) ? 0 : numW;
+    if (s < 0 || s > 200 || w < 0 || w > 200) return;
+    setSaving(true);
+    try {
+      const entry: SwScore = { total: s + w, date, s, w };
+      if (testname.trim()) entry.testname = testname.trim();
+      await onSubmit(entry);
+    } finally { setSaving(false); }
+  }
+
+  const inp = "w-full px-3 py-2.5 rounded-lg text-sm outline-none transition-colors";
+  const inpStyle: React.CSSProperties = { border: "1px solid var(--border)", background: "var(--bg-primary)", color: "var(--text-primary)" };
+
+  return (
+    <form onSubmit={handleSubmit} className="px-5 pb-5 flex flex-col gap-4">
+      <div className="grid grid-cols-2 gap-3">
+        <div>
+          <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
+            {t("Ngày thi", "Test Date")}
+          </label>
+          <input type="date" className={inp} style={inpStyle} value={date} onChange={(e) => setDate(e.target.value)} required />
+        </div>
+        <div>
+          <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
+            {t("Tên bài test", "Test name")}
+          </label>
+          <input className={inp} style={inpStyle} value={testname} onChange={(e) => setTestname(e.target.value)} placeholder="ETS S&W Test 1" required />
+        </div>
+      </div>
+
+      <div className="grid grid-cols-2 gap-3">
+        <div>
+          <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
+            Speaking <span style={{ fontWeight: 400 }}>(0–200)</span>
+          </label>
+          <input type="number" min={0} max={200} step={10} className={inp} style={inpStyle}
+            value={speaking} onChange={(e) => setSpeaking(e.target.value)} placeholder="130" />
+        </div>
+        <div>
+          <label className="block text-[11px] uppercase tracking-wider mb-1.5" style={{ color: "var(--text-muted)" }}>
+            Writing <span style={{ fontWeight: 400 }}>(0–200)</span>
+          </label>
+          <input type="number" min={0} max={200} step={10} className={inp} style={inpStyle}
+            value={writing} onChange={(e) => setWriting(e.target.value)} placeholder="140" />
+        </div>
+      </div>
+
+      {total !== null && (
+        <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+          {t("Tổng điểm", "Total")}: <span className="font-bold" style={{ color: "var(--orange)" }}>{total}</span>/400
+        </p>
+      )}
+
+      <div className="flex gap-2">
+        <button type="submit" disabled={saving} className="self-start px-5 py-2.5 rounded-lg text-sm font-bold text-white"
+          style={{ background: saving ? "var(--border)" : "var(--orange)", cursor: saving ? "not-allowed" : "pointer", border: "none" }}>
+          {saving ? savingLabel : submitLabel}
+        </button>
+        {onCancel && (
+          <button type="button" onClick={onCancel}
+            className="self-start px-5 py-2.5 rounded-lg text-sm"
+            style={{ background: "transparent", border: "1px solid var(--border)", color: "var(--text-muted)", cursor: "pointer" }}>
+            {t("Huỷ", "Cancel")}
+          </button>
+        )}
+      </div>
+    </form>
+  );
+}
+
+function AddSwScoreForm({ studentCode }: { studentCode: string }) {
+  const { t } = useLocale();
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid var(--border)", background: "var(--bg-elevated)" }}>
+      <button onClick={() => setOpen((o) => !o)}
+        className="w-full flex items-center justify-between px-5 py-4 text-sm font-semibold transition-colors"
+        style={{ background: "none", border: "none", cursor: "pointer", color: "var(--text-primary)" }}>
+        <span><span style={{ color: "var(--orange)" }}>+</span> {t("Nhập điểm S&W mới", "Add New S&W Score")}</span>
+        <span style={{ color: "var(--text-muted)", fontSize: "0.7rem" }}>{open ? "▲" : "▼"}</span>
+      </button>
+
+      {open && (
+        <SwScoreEntryForm
+          submitLabel={t("Lưu kết quả", "Save")}
+          savingLabel={t("Đang lưu...", "Saving...")}
+          onSubmit={async (entry) => {
+            await pushStudentSwScore(studentCode, entry);
+            setOpen(false);
+          }}
+        />
+      )}
+    </div>
+  );
+}
+
+function SwScoreRow({ score, isNewest, onDelete, onEdit }: {
+  score: SwScore; isNewest: boolean; onDelete: () => void;
+  onEdit: (entry: SwScore) => Promise<void>;
+}) {
+  const { t } = useLocale();
+  const [editing, setEditing] = useState(false);
+
+  return (
+    <>
+      <tr className="border-b transition-colors"
+        style={{ borderColor: "var(--border)", background: isNewest ? "var(--accent-faint)" : "transparent" }}>
+        <td className="py-3.5 px-4 text-sm" style={{ color: "var(--text-secondary)" }}>
+          {formatDate(score.date)}
+          {score.testname && (
+            <div className="text-[11px] mt-0.5 truncate max-w-[160px]" style={{ color: "var(--text-muted)" }}>{score.testname}</div>
+          )}
+        </td>
+        <td className="py-3.5 px-4 text-sm font-bold"
+          style={{ fontFamily: "'Lora', serif", color: isNewest ? "var(--orange)" : "var(--text-primary)" }}>
+          {score.total}
+        </td>
+        <td className="py-3.5 px-4 text-sm" style={{ color: "var(--text-secondary)" }}>{score.s}</td>
+        <td className="py-3.5 px-4 text-sm" style={{ color: "var(--text-secondary)" }}>{score.w}</td>
+        <td className="py-3.5 px-4 text-right">
+          <div className="flex items-center justify-end gap-2 flex-wrap">
+            <button onClick={() => setEditing(true)}
+              className="text-[11px] px-2 py-1 rounded font-semibold transition-opacity hover:opacity-80"
+              style={{ color: "var(--orange)", border: "1px solid var(--border-focus)", background: "none", cursor: "pointer" }}>
+              {t("Sửa", "Edit")}
+            </button>
+            <button onClick={onDelete}
+              className="text-[11px] px-2 py-1 rounded transition-colors"
+              style={{ color: "#c62828", border: "1px solid rgba(198,40,40,0.3)", background: "none", cursor: "pointer" }}>
+              {t("Xoá", "Del")}
+            </button>
+          </div>
+        </td>
+      </tr>
+      {editing && (
+        <tr style={{ background: "rgba(196,98,45,0.03)", borderBottom: `1px solid var(--border)` }}>
+          <td colSpan={5} className="p-0">
+            <SwScoreEntryForm
+              initial={score}
+              submitLabel={t("Lưu thay đổi", "Save changes")}
+              savingLabel={t("Đang lưu...", "Saving...")}
+              onSubmit={async (entry) => { await onEdit(entry); setEditing(false); }}
+              onCancel={() => setEditing(false)}
+            />
           </td>
         </tr>
       )}
@@ -1383,6 +1703,9 @@ export default function ScoresPage() {
   const [editingGoal, setEditingGoal] = useState(false);
   const [deleteKey, setDeleteKey] = useState<number | null>(null);
   const [reviewScore, setReviewScore] = useState<ToeicScore | null>(null);
+  // null ⇒ dùng kỳ thi đã lưu trong goal; khác null ⇒ HV vừa bấm toggle
+  const [examOverride, setExamOverride] = useState<ExamType | null>(null);
+  const examType: ExamType = examOverride ?? goalExamType(goal);
 
   const loading = profileLoading || studentLoading || goalLoading;
 
@@ -1390,6 +1713,11 @@ export default function ScoresPage() {
     ? [...student.scores].sort((a, b) => b.date.localeCompare(a.date))
     : [];
   const latestScore = sortedScores[0]?.score ?? null;
+
+  const sortedSwScores: SwScore[] = student?.swScores
+    ? [...student.swScores].sort((a, b) => b.date.localeCompare(a.date))
+    : [];
+  const latestSwTotal = sortedSwScores[0]?.total ?? null;
 
   const sessionEntries = useMemo(() => {
     const raw = student?.errorLog ?? {};
@@ -1432,6 +1760,35 @@ export default function ScoresPage() {
     await updateStudentScore(studentCode, originalIndex, updated);
   }
 
+  /** Đổi kỳ thi đang xem; ghi lại vào goal để dashboard/missions bám theo. */
+  async function switchExam(next: ExamType) {
+    if (next === examType) return;
+    setExamOverride(next);
+    setEditingGoal(false);
+    if (studentCode && goal) await setGoal(studentCode, { examType: next });
+  }
+
+  async function handleDeleteSw(displayIndex: number) {
+    if (!studentCode) return;
+    const target = sortedSwScores[displayIndex];
+    if (!window.confirm(`${t("Xoá điểm", "Delete score")} ${target.total} (${formatDate(target.date)})?`)) return;
+    const original: SwScore[] = student?.swScores ? [...student.swScores] : [];
+    const originalIndex = original.findIndex((s) => s.date === target.date && s.total === target.total);
+    if (originalIndex === -1) return;
+    setDeleteKey(displayIndex);
+    try { await deleteStudentSwScore(studentCode, originalIndex); }
+    finally { setDeleteKey(null); }
+  }
+
+  async function handleEditSw(displayIndex: number, updated: SwScore) {
+    if (!studentCode) return;
+    const target = sortedSwScores[displayIndex];
+    const original: SwScore[] = student?.swScores ? [...student.swScores] : [];
+    const originalIndex = original.findIndex((s) => s.date === target.date && s.total === target.total);
+    if (originalIndex === -1) return;
+    await updateStudentSwScore(studentCode, originalIndex, updated);
+  }
+
   if (loading) {
     return (
       <div className="space-y-4 animate-pulse">
@@ -1459,8 +1816,8 @@ export default function ScoresPage() {
     );
   }
 
-  const hasGoal = goal !== null;
-  const hasScores = sortedScores.length > 0;
+  const hasGoal = goalTotal(goal) !== null;
+  const hasScores = examType === "sw" ? sortedSwScores.length > 0 : sortedScores.length > 0;
 
   return (
     <div className="space-y-4">
@@ -1489,9 +1846,28 @@ export default function ScoresPage() {
             </h1>
             {hasScores && (
               <span className="text-sm" style={{ color: "var(--text-muted)" }}>
-                {sortedScores.length} {t("lần thi", "tests")}
+                {examType === "sw" ? sortedSwScores.length : sortedScores.length} {t("lần thi", "tests")}
               </span>
             )}
+          </div>
+
+          {/* ── Toggle kỳ thi: L&R / S&W ── */}
+          <div className="flex gap-1 p-1 rounded-lg self-start w-fit"
+            style={{ background: "var(--bg-primary)", border: "1px solid var(--border)" }}>
+            {([
+              { key: "lr" as const, label: t("Listening & Reading", "Listening & Reading") },
+              { key: "sw" as const, label: t("Speaking & Writing", "Speaking & Writing") },
+            ]).map((x) => (
+              <button key={x.key} type="button" onClick={() => switchExam(x.key)}
+                className="px-3 py-1.5 rounded-md text-xs font-semibold transition-all"
+                style={{
+                  background: examType === x.key ? "var(--orange)" : "transparent",
+                  color: examType === x.key ? "white" : "var(--text-muted)",
+                  border: "none", cursor: "pointer",
+                }}>
+                {x.label}
+              </button>
+            ))}
           </div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -1501,21 +1877,46 @@ export default function ScoresPage() {
                   <div className="text-[11px] font-bold uppercase tracking-widest mb-2" style={{ color: "#9A8672" }}>
                     {t("Chỉnh mục tiêu", "Edit Goal")}
                   </div>
-                  <GoalEditForm
-                    currentTarget={hasGoal ? goal.target : 500}
-                    currentDeadline={hasGoal ? goal.deadline : ""}
-                    studentCode={studentCode}
-                    studentId={profile?.id ?? ""}
-                    studentName={profile?.displayName ?? ""}
-                    onDone={() => setEditingGoal(false)}
-                  />
+                  {examType === "sw" ? (
+                    <SwGoalEditForm
+                      currentS={goal?.swTargetS ?? 130}
+                      currentW={goal?.swTargetW ?? 130}
+                      currentDeadline={goal?.swDeadline}
+                      studentCode={studentCode}
+                      studentId={profile?.id ?? ""}
+                      studentName={profile?.displayName ?? ""}
+                      onDone={() => setEditingGoal(false)}
+                    />
+                  ) : (
+                    <GoalEditForm
+                      currentTarget={goal?.target ?? 500}
+                      currentDeadline={goal?.deadline}
+                      studentCode={studentCode}
+                      studentId={profile?.id ?? ""}
+                      studentName={profile?.displayName ?? ""}
+                      onDone={() => setEditingGoal(false)}
+                    />
+                  )}
                 </>
               ) : hasGoal ? (
-                <GoalCard target={goal.target} deadline={goal.deadline} latestScore={latestScore} locale={locale} onEdit={() => setEditingGoal(true)} />
+                examType === "sw" ? (
+                  <SwGoalCard
+                    targetS={goal?.swTargetS ?? 0}
+                    targetW={goal?.swTargetW ?? 0}
+                    deadline={goal?.swDeadline}
+                    latestTotal={latestSwTotal}
+                    locale={locale}
+                    onEdit={() => setEditingGoal(true)}
+                  />
+                ) : (
+                  <GoalCard target={goal!.target!} deadline={goal!.deadline} latestScore={latestScore} locale={locale} onEdit={() => setEditingGoal(true)} />
+                )
               ) : (
                 <div className="flex flex-col gap-3">
                   <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-                    {t("Bạn chưa đặt mục tiêu điểm TOEIC.", "You haven't set a TOEIC goal yet.")}
+                    {examType === "sw"
+                      ? t("Bạn chưa đặt mục tiêu TOEIC Speaking & Writing.", "You haven't set a TOEIC Speaking & Writing goal yet.")
+                      : t("Bạn chưa đặt mục tiêu điểm TOEIC.", "You haven't set a TOEIC goal yet.")}
                   </p>
                   <button onClick={() => setEditingGoal(true)}
                     className="self-start px-4 py-2 rounded-lg text-sm font-bold text-white"
@@ -1530,11 +1931,21 @@ export default function ScoresPage() {
               <h2 className="font-semibold text-base mb-3" style={{ color: "var(--text-primary)" }}>
                 {t("Phân tích điểm số", "Score Analysis")}
               </h2>
-              <ScoreChart scores={sortedScores} noDataLabel={t("Chưa có dữ liệu", "No data yet")} />
+              {examType === "sw" ? (
+                <ScoreChart
+                  scores={sortedSwScores.map((s) => ({ score: s.total, date: s.date }))}
+                  noDataLabel={t("Chưa có dữ liệu", "No data yet")}
+                  maxFloor={200}
+                />
+              ) : (
+                <ScoreChart scores={sortedScores} noDataLabel={t("Chưa có dữ liệu", "No data yet")} />
+              )}
             </div>
           </div>
 
-          <AddScoreForm studentCode={studentCode} />
+          {examType === "sw"
+            ? <AddSwScoreForm studentCode={studentCode} />
+            : <AddScoreForm studentCode={studentCode} />}
 
           <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid var(--border)", background: "var(--bg-elevated)", boxShadow: "var(--shadow-sm)" }}>
             <div className="px-5 py-4" style={{ borderBottom: "1px solid var(--border)" }}>
@@ -1556,7 +1967,10 @@ export default function ScoresPage() {
                 <table className="w-full">
                   <thead>
                     <tr style={{ borderBottom: "1px solid var(--border)", background: "var(--bg-primary)" }}>
-                      {[t("Ngày thi", "Date"), t("Điểm Tổng", "Total"), t("Điểm Nghe", "Listening"), t("Điểm Đọc", "Reading"), ""].map((h, i) => (
+                      {(examType === "sw"
+                        ? [t("Ngày thi", "Date"), t("Điểm Tổng", "Total"), "Speaking", "Writing", ""]
+                        : [t("Ngày thi", "Date"), t("Điểm Tổng", "Total"), t("Điểm Nghe", "Listening"), t("Điểm Đọc", "Reading"), ""]
+                      ).map((h, i) => (
                         <th key={i} className={`px-4 py-3 text-left text-[11px] font-bold uppercase tracking-wider ${i === 4 ? "text-right" : ""}`}
                           style={{ color: "var(--text-muted)" }}>
                           {h}
@@ -1565,13 +1979,19 @@ export default function ScoresPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    {sortedScores.map((s, i) => (
-                      <ScoreRow key={`${s.date}-${s.score}-${i}`} score={s} isNewest={i === 0}
-                        onDelete={() => deleteKey === null && handleDelete(i)}
-                        onEdit={(entry) => handleEdit(i, entry)}
-                        onReview={() => setReviewScore(s)}
-                        locale={locale} />
-                    ))}
+                    {examType === "sw"
+                      ? sortedSwScores.map((s, i) => (
+                          <SwScoreRow key={`${s.date}-${s.total}-${i}`} score={s} isNewest={i === 0}
+                            onDelete={() => deleteKey === null && handleDeleteSw(i)}
+                            onEdit={(entry) => handleEditSw(i, entry)} />
+                        ))
+                      : sortedScores.map((s, i) => (
+                          <ScoreRow key={`${s.date}-${s.score}-${i}`} score={s} isNewest={i === 0}
+                            onDelete={() => deleteKey === null && handleDelete(i)}
+                            onEdit={(entry) => handleEdit(i, entry)}
+                            onReview={() => setReviewScore(s)}
+                            locale={locale} />
+                        ))}
                   </tbody>
                 </table>
               </div>

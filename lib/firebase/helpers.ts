@@ -17,6 +17,7 @@ import type {
   Slot,
   Goal,
   ToeicScore,
+  SwScore,
   VocabWord,
   AttendanceStatus,
   FbNotification,
@@ -113,6 +114,42 @@ export async function updateStudentScore(
   existing[index] = score;
   const updated = [...existing].sort((a, b) => a.date.localeCompare(b.date));
   await set(ref(firebaseDb, `students/${code}/scores`), updated);
+}
+
+// ─── SW scores ───────────────────────────────────────────────────────────────
+
+export async function pushStudentSwScore(
+  code: string,
+  score: SwScore
+): Promise<void> {
+  const snap = await get(ref(firebaseDb, `students/${code}/swScores`));
+  const existing: SwScore[] = snap.val() ?? [];
+  const updated = [...existing, score].sort((a, b) =>
+    a.date.localeCompare(b.date)
+  );
+  await set(ref(firebaseDb, `students/${code}/swScores`), updated);
+}
+
+export async function deleteStudentSwScore(
+  code: string,
+  index: number
+): Promise<void> {
+  const snap = await get(ref(firebaseDb, `students/${code}/swScores`));
+  const existing: SwScore[] = snap.val() ?? [];
+  existing.splice(index, 1);
+  await set(ref(firebaseDb, `students/${code}/swScores`), existing);
+}
+
+export async function updateStudentSwScore(
+  code: string,
+  index: number,
+  score: SwScore
+): Promise<void> {
+  const snap = await get(ref(firebaseDb, `students/${code}/swScores`));
+  const existing: SwScore[] = snap.val() ?? [];
+  existing[index] = score;
+  const updated = [...existing].sort((a, b) => a.date.localeCompare(b.date));
+  await set(ref(firebaseDb, `students/${code}/swScores`), updated);
 }
 
 // ─── Homework ────────────────────────────────────────────────────────────────
@@ -285,11 +322,18 @@ export async function deleteSlot(id: string): Promise<void> {
 
 // ─── Goal ────────────────────────────────────────────────────────────────────
 
-export async function setGoal(code: string, goal: Goal): Promise<void> {
-  await set(ref(firebaseDb, `goals/${code}`), {
-    ...goal,
-    updatedAt: new Date().toISOString(),
-  });
+/**
+ * Ghi mục tiêu theo kiểu patch: chỉ những field được truyền vào mới thay đổi,
+ * nên sửa mục tiêu S&W không xoá mục tiêu L&R và ngược lại. Field mang giá trị
+ * `undefined` sẽ bị xoá khỏi node (dùng khi HV bỏ trống deadline).
+ */
+export async function setGoal(code: string, goal: Partial<Goal>): Promise<void> {
+  const patch: Record<string, unknown> = {};
+  for (const [key, value] of Object.entries(goal)) {
+    patch[key] = value === undefined ? null : value;
+  }
+  patch.updatedAt = new Date().toISOString();
+  await update(ref(firebaseDb, `goals/${code}`), patch);
 }
 
 // ─── Attendance ───────────────────────────────────────────────────────────────

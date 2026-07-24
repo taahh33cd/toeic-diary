@@ -51,6 +51,16 @@ export interface ToeicScore {
   p7?: number;
 }
 
+/** Điểm TOEIC Speaking & Writing (path: students/{code}/swScores) */
+export interface SwScore {
+  total: number;      // s + w, 0–400
+  date: string;       // YYYY-MM-DD
+  s: number;          // Speaking 0–200
+  w: number;          // Writing 0–200
+  testname?: string;
+  note?: string;
+}
+
 export interface ErrorDetail {
   content: string;
   paraphrase?: string;
@@ -118,6 +128,7 @@ export interface Student {
   comments?: Record<string, { text: string; ts: number }>;
   frozen?: boolean;
   scores?: ToeicScore[];
+  swScores?: SwScore[];
   homework?: Homework[];
   modules?: StudentModule[];
   schedule?: ScheduleItem[];
@@ -190,9 +201,20 @@ export type HwViewedMap = Record<string, HwViewed>;
 
 // ─── Goal (path: goals/{studentCode}) ────────────────────────────────────────
 
+/** Kỳ thi học viên đang nhắm tới. Thiếu ⇒ "lr" (dữ liệu trước khi có S&W). */
+export type ExamType = "lr" | "sw";
+
 export interface Goal {
-  target: number;
+  /** Kỳ thi đang chọn — quyết định mục tiêu nào hiển thị ở dashboard/missions. */
+  examType?: ExamType;
+  /** L&R: tổng 10–990. Thiếu khi HV chỉ đặt mục tiêu S&W. */
+  target?: number;
   deadline?: string;
+  /** S&W: Speaking 0–200. */
+  swTargetS?: number;
+  /** S&W: Writing 0–200. */
+  swTargetW?: number;
+  swDeadline?: string;
   studentId: string;
   studentName: string;
   updatedAt: string;
