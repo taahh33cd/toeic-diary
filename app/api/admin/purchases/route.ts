@@ -64,6 +64,11 @@ export async function POST(req: NextRequest) {
   if (purchase.status === "paid") {
     return NextResponse.json({ status: "paid" }); // already approved — idempotent
   }
+  if (purchase.status === "rejected") {
+    // Terminal state — don't silently re-approve a rejected order (the panel
+    // never lists these, so this only guards direct API calls).
+    return NextResponse.json({ error: "Order already rejected", status: "rejected" }, { status: 409 });
+  }
 
   if (action === "reject") {
     await prisma.coursePurchase.update({ where: { id }, data: { status: "rejected" } });

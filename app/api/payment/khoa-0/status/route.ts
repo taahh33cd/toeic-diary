@@ -7,8 +7,8 @@ export const dynamic = "force-dynamic";
 
 /**
  * GET /api/payment/khoa-0/status
- * Polled by the checkout screen. Returns "paid" once the webhook has granted
- * the course, otherwise the latest pending order's status.
+ * Polled by the checkout screen. Returns "paid" once an admin has approved the
+ * order (granting the course), otherwise the latest order's status.
  */
 export async function GET() {
   const supabase = await createClient();
