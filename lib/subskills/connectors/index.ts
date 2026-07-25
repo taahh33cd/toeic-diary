@@ -8,6 +8,7 @@ import { tuongPhanLevels } from "./data/tuong-phan";
 import { nguyenNhanLevels } from "./data/nguyen-nhan";
 import { ketQuaLevels } from "./data/ket-qua";
 import { thoiGianLevels } from "./data/thoi-gian";
+import { boSungLevels } from "./data/bo-sung";
 
 // ── Level metadata template (giống nhau cho mọi nhóm) ────────────────────────
 //
@@ -209,7 +210,7 @@ export const CONNECTOR_GROUPS: ConnGroupConfig[] = [
       { word: "likewise", kind: "adv", vi: "tương tự" },
       { word: "similarly", kind: "adv", vi: "tương tự như vậy" },
     ],
-    levels: [],
+    levels: boSungLevels,
   },
   {
     slug: "dieu-kien",
