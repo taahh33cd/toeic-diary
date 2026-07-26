@@ -563,6 +563,10 @@ def main() -> int:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     targets = range(1, 11) if args.all else [args.test]
     rc = 0
+    catalog: dict[int, dict] = {}
+    cat_file = OUT_DIR / "catalog.json"
+    if cat_file.is_file():
+        catalog = {int(e["testNumber"]): e for e in json.load(open(cat_file, encoding="utf-8"))["tests"]}
     for n in targets:
         try:
             data = build(src, n, image_map)
@@ -581,6 +585,24 @@ def main() -> int:
             if "ảnh" in w and "chưa có URL" in w:
                 continue  # gộp lại, tránh in 11 dòng mỗi đề
             print(f"    ⚠ {w}")
+
+        catalog[n] = {
+            "slug": data["slug"],
+            "testNumber": n,
+            "title": data["title"],
+            "locked": data["locked"],
+            "lockReason": data["lockReason"],
+            **st,
+        }
+
+    # catalog nhẹ cho trang danh sách — khỏi phải load 10 file JSON ~350KB
+    cat = {
+        "examSlug": "est-2026",
+        "examTitle": "PRACTICE TEST EST 2026",
+        "tests": [catalog[k] for k in sorted(catalog)],
+    }
+    cat_file.write_text(json.dumps(cat, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"\n✓ catalog: {len(cat['tests'])} đề → {cat_file.relative_to(REPO)}")
     return rc
 
 

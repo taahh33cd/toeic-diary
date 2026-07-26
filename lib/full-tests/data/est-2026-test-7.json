@@ -19,7 +19,7 @@
    "questionStart": 1,
    "questionEnd": 1,
    "audio": "q1-1.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-7/1.png",
    "transcript": "(A) She's holding a water bottle.\n(B) She's looking at a newspaper.\n(C) She's reaching for a book.\n(D) She's standing next to a copier.",
    "keywords": [
     {
@@ -117,7 +117,7 @@
    "questionStart": 2,
    "questionEnd": 2,
    "audio": "q2-2.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-7/2.png",
    "transcript": "(A) A tire is leaning against a car.\n(B) A chain has been left on the ground.\n(C) A car is backing out of a garage.\n(D) A box of tools has been set on top of a car.",
    "keywords": [
     {
@@ -215,7 +215,7 @@
    "questionStart": 3,
    "questionEnd": 3,
    "audio": "q3-3.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-7/3.png",
    "transcript": "(A) He's pushing a cart toward a doorway.\n(B) He's spraying cleaning liquid onto a glass door.\n(C) He's mopping up a tiled floor.\n(D) He's setting up a bulletin board.",
    "keywords": [
     {
@@ -319,7 +319,7 @@
    "questionStart": 4,
    "questionEnd": 4,
    "audio": "q4-4.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-7/4.png",
    "transcript": "(A) The woman is walking across the street.\n(B) The woman is repairing a bicycle.\n(C) The woman is wearing a helmet.\n(D) The woman is getting into a vehicle.",
    "keywords": [
     {
@@ -417,7 +417,7 @@
    "questionStart": 5,
    "questionEnd": 5,
    "audio": "q5-5.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-7/5.png",
    "transcript": "(A) Some umbrellas have been opened in an outdoor dining area.\n(B) All the tables are occupied by diners.\n(C) A worker is sweeping a dining area.\n(D) Flowers have been placed on the tables.",
    "keywords": [
     {
@@ -515,7 +515,7 @@
    "questionStart": 6,
    "questionEnd": 6,
    "audio": "q6-6.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-7/6.png",
    "transcript": "(A) File folders have been arranged on a shelf.\n(B) Some window blinds have been raised.\n(C) Some waste baskets have been turned upside down.\n(D) An office chair has been pushed under a desk.",
    "keywords": [
     {
@@ -2742,7 +2742,7 @@
    "questionStart": 62,
    "questionEnd": 64,
    "audio": "q62-64.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-7/62-64.png",
    "transcript": "W: Hey, Pablo. I missed the intern team morning update. Was there information about cleaning acrylic test tubes? I wonder whether there are specific guidelines for these as opposed to glass tubes.\nM: You should check the intern lab manual-I think it was updated this week with step-by-step instructions.\nW: Good idea! You know, what I'm enjoying most so far is learning about the practical side of the work. But I wish we could start working alongside the researchers here.\nM: Professor Kwon is showing us how to analyze data later today. She usually asks the interns to participate.\n62. Who are the speakers?\n63. Why should the woman check a manual?\n64. Look at the graphic. What day does the conversation take place?",
    "keywords": [
     {
@@ -2835,7 +2835,7 @@
    "questionStart": 65,
    "questionEnd": 67,
    "audio": "q65-67.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-7/65-67.png",
    "transcript": "M: Hi, Farida. I'm excited to see the designs you created. People spend a lot of time outside during the summer, so we want to get our sunscreen on store shelves before the summer rush. We need to pick a logo design quickly.\nW: Take a look at these logo designs. All of them will grab the attention of shoppers.\nM: I like this one with the palm tree in a circle.\nW: I agree. The single palm tree's a simple, clean logo.\nM: Before we make our decision, I'd like to show it to a focus group that represents our target audience. We have a large group coming in next week.\n65. Why does the man want to make a decision quickly?\n66. Look at the graphic. Which logo design does the man prefer?\n67. What is scheduled for next week?",
    "keywords": [
     {
@@ -2928,7 +2928,7 @@
    "questionStart": 68,
    "questionEnd": 70,
    "audio": "q68-70.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-7/68-70.png",
    "transcript": "W: Stefan, have you given any more thought to that parcel of land that's available for lease? If we leased it, we'd have space for a lot more crops this spring and summer.\nM: Yes, with the extra growing space, we'd definitely increase our yield. What crops do you think would be best?\nW: Well, we could plant more celery, which is our most popular crop. And we could even add cabbage as a new crop in the spring.\nM: That makes sense. We'll need to extend our irrigation system to the new parcel, though, and that could be expensive. I can call Lynden Ag Supply for an estimate on that.\nW: Sure, that would be great.\n68. What does the woman ask about?\n69. Look at the graphic. When is the most popular crop planted?\n70. What does the man offer to do?",
    "keywords": [
     {
@@ -3765,7 +3765,7 @@
    "questionStart": 95,
    "questionEnd": 97,
    "audio": "q95-97.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-7/95-97.png",
    "transcript": "Thank you for attending. Last fall, the city approved more funding for transportation projects. Today my department is happy to announce that we'll use some of those funds to install covered benches at city bus stops. They will give riders a place to rest and keep out of the sun, rain, or snow while they wait. This map shows the neighborhoods where we'll construct new bus shelters. We'll start with the neighborhood around the university since students make up a large portion of the overall ridership.\n95. What happened last fall?\n96. What department does the speaker most likely work in?\n97. Look at the graphic. Which neighborhood will be served first?",
    "keywords": [
     {
@@ -3858,7 +3858,7 @@
    "questionStart": 98,
    "questionEnd": 100,
    "audio": "q98-100.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-7/98-100.png",
    "transcript": "Hi, Andrew. This is Samantha Evans. It was great running into you at the flower trade show in Boston. And thanks for recommending that I visit the art museum while I was in town. I really enjoyed seeing the modern art exhibit. I'm calling because I wanted to follow up with you right away about the tulips you're getting shipped from the Netherlands next week. I'd like to buy ten dozen tulips from you for my flower shop. However, my budget is tight and I can't spend more than $250.00, so I'd like to order tulips in that price range.\n98. What does the speaker say she enjoyed seeing while she was in Boston?\n99. Who most likely is the speaker?\n100. Look at the graphic. What type of tulips will the speaker most likely order?",
    "keywords": [
     {
@@ -9029,17 +9029,5 @@
    ]
   }
  ],
- "warnings": [
-  "ảnh 1.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 2.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 3.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 4.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 5.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 6.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 62-64.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 65-67.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 68-70.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 95-97.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 98-100.png chưa có URL (chạy upload ảnh) "
- ]
+ "warnings": []
 }

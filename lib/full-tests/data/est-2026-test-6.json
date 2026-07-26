@@ -19,7 +19,7 @@
    "questionStart": 1,
    "questionEnd": 1,
    "audio": "q1-1.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-6/1.png",
    "transcript": "(A) A restaurant buffet is filled with food.\n(B) Cups are sitting in a sink.\n(C) A dining area is empty.\n(D) Some candles have been lit.",
    "keywords": [
     {
@@ -99,7 +99,7 @@
    "questionStart": 2,
    "questionEnd": 2,
    "audio": "q2-2.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-6/2.png",
    "transcript": "(A) He's facing a machine.\n(B) He's lifting up a machine.\n(C) He's wiping down a machine.\n(D) He's repairing a machine with a tool.",
    "keywords": [
     {
@@ -179,7 +179,7 @@
    "questionStart": 3,
    "questionEnd": 3,
    "audio": "q3-3.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-6/3.png",
    "transcript": "(A) A man is tying his shoe.\n(B) A woman is looking through her purse.\n(C) They're boarding a bus.\n(D) They're walking past a bench.",
    "keywords": [
     {
@@ -259,7 +259,7 @@
    "questionStart": 4,
    "questionEnd": 4,
    "audio": "q4-4.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-6/4.png",
    "transcript": "(A) She's organizing a workstation.\n(B) She's holding a water bottle.\n(C) She's removing a book from a shelf.\n(D) She's reaching for a pen.",
    "keywords": [
     {
@@ -339,7 +339,7 @@
    "questionStart": 5,
    "questionEnd": 5,
    "audio": "q5-5.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-6/5.png",
    "transcript": "(A) A woman is lifting a suitcase onto a counter.\n(B) A woman is writing on a piece of paper.\n(C) A woman is leaning against a glass door.\n(D) A woman is talking to a worker at a desk.",
    "keywords": [
     {
@@ -419,7 +419,7 @@
    "questionStart": 6,
    "questionEnd": 6,
    "audio": "q6-6.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-6/6.png",
    "transcript": "(A) Some paintings have been hung above a sofa.\n(B) Some wooden chairs are stacked in a corner.\n(C) There are lamps lighting some seating areas.\n(D) There are curtains framing a doorway.",
    "keywords": [
     {
@@ -2316,7 +2316,7 @@
    "questionStart": 62,
    "questionEnd": 64,
    "audio": "q62-64.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-6/62-64.png",
    "transcript": "M: I'm looking forward to our anniversary banquet, Shreya. It's hard to believe we've been in business for ten years!\nW: I know. I was looking through old company photos last night. I found some from when we had just started and were a team of only three people.\nM: Wow. Those would be great to use for a slideshow during the welcome speech.\nW: I agree. And by the way, since I'll be getting up a few times to make announcements, I'd like to sit at the table closest to the stage.\nM: I'll make sure to reserve a seat for you there.\n62. Why is the company hosting a banquet?\n63. What does the man say should be included in a presentation?\n64. Look at the graphic. Where will the woman be seated?",
    "keywords": [
     {
@@ -2409,7 +2409,7 @@
    "questionStart": 65,
    "questionEnd": 67,
    "audio": "q65-67.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-6/65-67.png",
    "transcript": "W: Thank you for holding. This is Bianca. How can I help you?\nM: Hi. I have a ticket for the bus to Springdale this morning, but my plans have changed and I need to switch my destination.\nW: Sure. I can help you with that.\nM: Thanks very much. I need the bus to Centerton instead.\nW: No problem. If you purchased your bus ticket electronically, I just need your confirmation number.\nM: OK, let me just find the e-mail that has it.\n65. Where does the woman most likely work?\n66. Look at the graphic. What is the man's new departure time?\n67. What does the woman ask the man for?",
    "keywords": [
     {
@@ -2502,7 +2502,7 @@
    "questionStart": 68,
    "questionEnd": 70,
    "audio": "q68-70.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-6/68-70.png",
    "transcript": "M: Henderson's Electricians. How can I help you?\nW: Hello. I'm calling because I purchased a clothes dryer a few days ago. But I have a problem. I'm not sure if my home's electric system can support it.\nM: Well, let's see. Could you take a look at your electric panel? There should be a series of switches on it.\nW: Sure. Hold on. OK. I'm looking at it.\nM: OK. Do you see any unused spaces where additional switches could be installed?\nW: Just one.\nM: I see. Well, a clothes dryer requires two spaces. So most likely, we'd need to install something called a subpanel. The good news is that you'd only need a 60-amp electrical switch to fix the problem.\n68. What has the woman recently purchased?\n69. What does the man ask the woman to do?\n70. Look at the graphic. How much will the woman probably pay for an electrical switch?",
    "keywords": [
     {
@@ -3339,7 +3339,7 @@
    "questionStart": 95,
    "questionEnd": 97,
    "audio": "q95-97.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-6/95-97.png",
    "transcript": "Are you looking for a convenient way to get around the city? The city of Lakepoint offers on-demand transportation in several of our neighborhoods. Just download the Lakepoint City application onto your mobile phone. Once you make an appointment on the app, a shuttle will arrive within fifteen minutes. This easy-to-use service will take you to any destination within the service area, like your doctor's office or the library. And we've recently expanded service to Westbrook, so residents can take the shuttle to the soccer stadium.\n95. What type of service is being advertised?\n96. According to the speaker, how can the listeners use a new service?\n97. Look at the graphic. Which area was recently added?",
    "keywords": [
     {
@@ -3432,7 +3432,7 @@
    "questionStart": 98,
    "questionEnd": 100,
    "audio": "q98-100.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-6/98-100.png",
    "transcript": "And our last news item today is the Greenchester Archaeological Festival taking place this weekend. Greenchester is home to some rich prehistoric findings. If you've ever wondered what goes into excavating a site, here's your chance to find out. There'll be a special workshop where you can get hands-on experience practicing excavation skills. The workshop will be held on the grounds in front of the historical society building. As for getting here, I recommend that you simply walk over-many streets will be blocked off for the festival, and it will take longer to drive.\n98. What event is the speaker mainly discussing?\n99. Look at the graphic. Where will a workshop take place?\n100. What does the speaker recommend?",
    "keywords": [
     {
@@ -6953,17 +6953,5 @@
    ]
   }
  ],
- "warnings": [
-  "ảnh 1.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 2.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 3.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 4.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 5.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 6.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 62-64.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 65-67.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 68-70.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 95-97.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 98-100.png chưa có URL (chạy upload ảnh) "
- ]
+ "warnings": []
 }

@@ -19,7 +19,7 @@
    "questionStart": 1,
    "questionEnd": 1,
    "audio": "q1-1.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-10/1.png",
    "transcript": "(A) He's reaching for the ceiling.\n(B) He's carrying a bucket of paint.\n(C) He's fixing a doorway.\n(D) He's climbing down a ladder.",
    "keywords": [
     {
@@ -129,7 +129,7 @@
    "questionStart": 2,
    "questionEnd": 2,
    "audio": "q2-2.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-10/2.png",
    "transcript": "(A) She's reading a poster on the wall.\n(B) A chair is propped against the door.\n(C) A laptop has been left open.\n(D) She's speaking into a microphone.",
    "keywords": [
     {
@@ -215,7 +215,7 @@
    "questionStart": 3,
    "questionEnd": 3,
    "audio": "q3-3.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-10/3.png",
    "transcript": "(A) They're strolling in a park.\n(B) They're shaking hands.\n(C) He's holding up an umbrella.\n(D) She's handing him a phone.",
    "keywords": [
     {
@@ -301,7 +301,7 @@
    "questionStart": 4,
    "questionEnd": 4,
    "audio": "q4-4.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-10/4.png",
    "transcript": "(A) A car is being towed down a street.\n(B) Some men are removing a tire from a truck.\n(C) One of the men is unloading equipment from a truck.\n(D) A building has a clock tower on top of it.",
    "keywords": [
     {
@@ -399,7 +399,7 @@
    "questionStart": 5,
    "questionEnd": 5,
    "audio": "q5-5.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-10/5.png",
    "transcript": "(A) Some of the bicycles are being repaired.\n(B) The bicycles are lined up in a row.\n(C) One of the bicycles is leaning against a traffic sign.\n(D) A bicycle path is being painted.",
    "keywords": [
     {
@@ -491,7 +491,7 @@
    "questionStart": 6,
    "questionEnd": 6,
    "audio": "q6-6.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-10/6.png",
    "transcript": "(A) Some ships are moving under a bridge.\n(B) Some boats are docked near a shore.\n(C) A ferryboat is traveling through a marina.\n(D) There are buildings along the side of a street.",
    "keywords": [
     {
@@ -2705,7 +2705,7 @@
    "questionStart": 62,
    "questionEnd": 64,
    "audio": "q62-64.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-10/62-64.png",
    "transcript": "W: Hi. Some of us at work decided to get together to buy some flowers here. They're for a colleague who just received a promotion.\nM: We have a nice selection of arrangements that are appropriate for an event like that. Here's a list of the most popular, in a range of prices.\nW: Oh, I have enough money for the Harmony arrangement. Can you make that while I wait?\nM: Sure, I'll have it made for you now. And will you want a greeting card to go with that?\nW: Actually, no card is needed. We already have one that we've all signed.\n62. Why does the woman want to purchase flowers?\n63. Look at the graphic. How much will the woman pay for the flower arrangement?\n64. What additional items do the speakers discuss?",
    "keywords": [
     {
@@ -2837,7 +2837,7 @@
    "questionStart": 65,
    "questionEnd": 67,
    "audio": "q65-67.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-10/65-67.png",
    "transcript": "M: Welcome to Centerville Fitness Center.\nW: Hi. I hear you're having a fund-raising campaign.\nM: Yes, today's the start of our annual fund-raiser. All proceeds go toward the purchase of new sports equipment for the center. You'll be entered into a raffle to win a prize based on your donation amount.\nW: Sounds great. I'd like to donate $50.\nM: Wonderful! Just fill out the donation form, and I'll get you your raffle ticket.\nW: How will I find out if I won?\nM: The drawing's on Friday, and winners will receive a phone call from the organizers.\n65. Where is the conversation taking place?\n66. Look at the graphic. Which prize could the woman win?\n67. How will winners be notified?",
    "keywords": [
     {
@@ -2963,7 +2963,7 @@
    "questionStart": 68,
    "questionEnd": 70,
    "audio": "q68-70.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-10/68-70.png",
    "transcript": "W: Hi, Andrew. How have you enjoyed your first week here at Jebreen Farms?\nM: It's been great. I'm definitely learning a lot about commercial agriculture.\nW: So glad to hear that. Let's go over to where we'll store the upcoming corn harvest. As you know, we sell a lot of corn as feed for livestock farms in the area.\nM: Yes. I'm eager to get some hands-on experience with drying and storing the corn.\nW: Good. If the process is done right, it can be stored for long periods, but conditions inside the grain bin have to be just right.\nM: How long will the drying process take after the harvest?\nW: About four to six weeks.\n68. Who most likely is the man?\n69. Look at the graphic. Where will the upcoming harvest be stored?\n70. What does the man ask about?",
    "keywords": [
     {
@@ -4253,7 +4253,7 @@
    "questionStart": 95,
    "questionEnd": 97,
    "audio": "q95-97.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-10/95-97.png",
    "transcript": "First, I'd like to welcome our new employees. Won-Sang Kwon has joined the human resources department as a junior associate, and So-Jin Cho is our newest chief of building security. Welcome! Next, I want to inform everyone about an upcoming recommended safety workshop. Links to the registration form have been e-mailed. When filling out the registration form, you do not need to fill in the street address. Leave that field blank. Do enter your work e-mail in the appropriate place. Finally, don't forget that the cafeteria will be closed next week, so you'll need to bring your lunch.\n95. How does the speaker begin the meeting?\n96. Look at the graphic. Which section does the speaker say the listeners should leave blank?\n97. What does the speaker say will happen next week?",
    "keywords": [
     {
@@ -4385,7 +4385,7 @@
    "questionStart": 98,
    "questionEnd": 100,
    "audio": "q98-100.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-10/98-100.png",
    "transcript": "Hi, Marta. This is Oleg from Sola Salon returning your call. You wanted to know about my availability for haircuts-yes, I am accepting new clients. This week, I can fit you in on Wednesday at four o'clock. Please let me know whether that day and time work for you. And in case you didn't know, there's a parking garage with reasonable rates right under our building. A full styling session takes about one and a half hours, so you won't need to park for more than two hours in the garage.\n98. Where does the speaker work?\n99. What does the speaker ask the listener to do?\n100. Look at the graphic. How much will the listener most likely pay for parking?",
    "keywords": [
     {
@@ -8287,17 +8287,5 @@
    ]
   }
  ],
- "warnings": [
-  "ảnh 1.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 2.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 3.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 4.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 5.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 6.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 62-64.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 65-67.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 68-70.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 95-97.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 98-100.png chưa có URL (chạy upload ảnh) "
- ]
+ "warnings": []
 }

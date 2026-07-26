@@ -54,7 +54,7 @@
    "questionStart": 1,
    "questionEnd": 1,
    "audio": "q1-1.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-2/1.png",
    "transcript": "(A) A man is closing a metal gate.\n(B) A man is walking down a stone path.\n(C) Some potted plants line a walkway.\n(D) Some flags are hanging from balconies.",
    "keywords": [
     {
@@ -146,7 +146,7 @@
    "questionStart": 2,
    "questionEnd": 2,
    "audio": "q2-2.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-2/2.png",
    "transcript": "(A) Some shopping bags have been placed on a train platform.\n(B) Some people are lined up to buy train tickets.\n(C) A woman is pulling her luggage behind her.\n(D) A man is leaning against a railing.",
    "keywords": [
     {
@@ -238,7 +238,7 @@
    "questionStart": 3,
    "questionEnd": 3,
    "audio": "q3-3.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-2/3.png",
    "transcript": "(A) Some wooden planks are leaning against a wall.\n(B) A vehicle is parked next to a building.\n(C) Some stones have been stacked on a pallet.\n(D) A package has been left near a door.",
    "keywords": [
     {
@@ -330,7 +330,7 @@
    "questionStart": 4,
    "questionEnd": 4,
    "audio": "q4-4.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-2/4.png",
    "transcript": "(A) A man is holding up his phone.\n(B) A man is pinning a note to a bulletin board.\n(C) A man is dropping an item into a bin.\n(D) A man is washing some windows.",
    "keywords": [
     {
@@ -422,7 +422,7 @@
    "questionStart": 5,
    "questionEnd": 5,
    "audio": "q5-5.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-2/5.png",
    "transcript": "(A) She's tying the back of her apron.\n(B) She's reaching for food on a shelf.\n(C) She's working at a counter.\n(D) She's putting food into a refrigerator.",
    "keywords": [
     {
@@ -520,7 +520,7 @@
    "questionStart": 6,
    "questionEnd": 6,
    "audio": "q6-6.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-2/6.png",
    "transcript": "(A) He's setting up a buffet.\n(B) He's putting plates on dining tables.\n(C) He's watering some plants in a garden.\n(D) He's carrying food up a stairway.",
    "keywords": [
     {
@@ -2457,7 +2457,7 @@
    "questionStart": 62,
    "questionEnd": 64,
    "audio": "q62-64.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-2/62-64.png",
    "transcript": "M: I really need this coffee break. My morning meeting with my client was really challenging.\nW: What were you discussing?\nM: The project schedule. They asked us to provide the prototype design to them three weeks earlier than originally planned.\nW: Well. Then today's cup is my treat. Which one would you like?\nM: That's so nice of you! I'll go with the White Cloud Coffee. I like a little milk in mine.\nW: Good choice. So, I have some news to share with you. Did you hear about David?\nM: No, what's going on?\nW: Apparently, he's planning to retire next month.\n62. What did the man's client request?\n63. Look at the graphic. How much does the man's coffee cost?\n64. What does the woman say about David?",
    "keywords": [
     {
@@ -2552,7 +2552,7 @@
    "questionStart": 65,
    "questionEnd": 67,
    "audio": "q65-67.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-2/65-67.png",
    "transcript": "M: This is Bradley from Windows Galore. How can I help you?\nW: Hello! I'd like to have screens added to my windows at home. I was wondering if you would be available to stop by and take a look. I live at 42 West Third Street, by the way.\nM: OK—that's not far. Let me see. I could come any morning this week.\nW: How about in the afternoon?\nM: Hmm. I could reschedule my Tuesday afternoon appointment. I'll check and get back to you—I have your number now. And your name is?\nW: Hoffman—Claudia Hoffman. Thank you. Talk to you soon.\n65. What does the man most likely do?\n66. What does the woman provide?\n67. Look at the graphic. Which appointment will the man try to reschedule?",
    "keywords": [
     {
@@ -2651,7 +2651,7 @@
    "questionStart": 68,
    "questionEnd": 70,
    "audio": "q68-70.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-2/68-70.png",
    "transcript": "M: Ms. Kwon, thank you for sending me to the upcoming robotics conference. I didn't expect an opportunity like this so soon after being hired here.\nW: It's important for you to be familiar with current robot designs. There are always new trends and technologies coming out, and I want you to stay ahead of developments in our industry.\nM: I agree. Plus, it'll give me the chance to introduce myself to potential clients.\nW: Oh, about that: here's a handout I provide to all new hires. It includes some helpful tips—especially this one. Do you have your business cards yet?\nM: Hmm. I haven't received them, but I'll call the printer today for an update.\n68. What industry do the speakers most likely work in?\n69. Why does the woman want the man to attend a conference?\n70. Look at the graphic. Which tip does the woman point out?",
    "keywords": [
     {
@@ -3708,7 +3708,7 @@
    "questionStart": 95,
    "questionEnd": 97,
    "audio": "q95-97.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-2/95-97.png",
    "transcript": "W-Br: Welcome to the Abingdon Transit Station. Please be advised that the Circle Route bus is not currently stopping at the station entrance because of some street resurfacing work. A temporary bus stop has been set up around the corner in front of the post office. Signs are posted directing you to the new stop. Bus timetables will be affected by the change in the route. Use the Abingdon Transit mobile phone app to view live updates for when the next bus is due.\n95. According to the speaker, why was a transit route changed?\n96. Look at the graphic. Where will the listeners find a new bus stop?\n97. Why should the listeners check a mobile phone application?",
    "keywords": [
     {
@@ -3807,7 +3807,7 @@
    "questionStart": 98,
    "questionEnd": 100,
    "audio": "q98-100.mp3",
-   "image": null,
+   "image": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/full-tests/est-2026/test-2/98-100.png",
    "transcript": "M-Cn: Hello, everyone! We're happy to announce that the February continuing education workshops here at the community center were very successful. Thank you for working so hard to make sure they ran smoothly. Every workshop was completely full. In fact, we had to create a waiting list for the Monday night workshop. Beginning in March, we'll offer that same workshop on Fridays. Now, many participants complained about the lack of vending machines in the building. Bianca will be contacting vending services next week to ask about pricing.\n98. Where does the speaker work?\n99. Look at the graphic. Which workshop will be offered on Fridays starting in March?\n100. What will Bianca do next week?",
    "keywords": [
     {
@@ -6190,17 +6190,5 @@
    ]
   }
  ],
- "warnings": [
-  "ảnh 1.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 2.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 3.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 4.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 5.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 6.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 62-64.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 65-67.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 68-70.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 95-97.png chưa có URL (chạy upload ảnh) ",
-  "ảnh 98-100.png chưa có URL (chạy upload ảnh) "
- ]
+ "warnings": []
 }

@@ -91,6 +91,23 @@ export default async function SkillsLanding() {
           })}
         </div>
 
+        {/* Full test — thi thử trọn đề 200 câu, tách riêng khỏi 4 thẻ kỹ năng */}
+        <Link
+          href="/skills/full-tests"
+          className="skill-card-link"
+          style={{ display: "flex", alignItems: "center", gap: "1.1rem", marginTop: "0.9rem", background: C.card, border: `1px solid ${C.border}`, borderRadius: 14, padding: "1.3rem", textDecoration: "none", color: C.ink, transition: "border-color .15s, box-shadow .15s" }}
+        >
+          <span style={{ fontSize: "1.9rem", lineHeight: 1 }}>🎯</span>
+          <span style={{ flex: 1, minWidth: 0 }}>
+            <span style={{ display: "block", fontSize: "1.05rem", fontWeight: 700 }}>Full Test</span>
+            <span style={{ display: "block", fontSize: "0.76rem", color: C.muted, marginBottom: "0.4rem" }}>Thi thử trọn đề</span>
+            <span style={{ display: "block", fontSize: "0.82rem", color: C.muted, lineHeight: 1.5 }}>
+              200 câu Listening &amp; Reading, bấm giờ như thi thật — hoặc chọn riêng từng part để luyện.
+            </span>
+          </span>
+          <span style={{ fontSize: "0.85rem", fontWeight: 700, color: C.accent, flexShrink: 0 }}>→</span>
+        </Link>
+
         {/* Footer */}
         <p style={{ textAlign: "center", fontSize: "0.7rem", letterSpacing: "0.1em", color: C.muted, marginTop: "3rem" }}>
           TOEIC DICTATION DIARY
