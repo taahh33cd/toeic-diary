@@ -12,7 +12,9 @@ import type { RunConfig } from "./SetupPanel";
 type Stage = "listening" | "reading";
 
 const SPEEDS = [0.75, 1, 1.25, 1.5];
-const FONT_STEPS = [0.9, 1, 1.15, 1.3];
+// Mặc định là bậc 1 (1.15). Bậc 0 = 1.0 tương đương cỡ chữ cũ, để ai muốn nhỏ lại.
+const FONT_STEPS = [1, 1.15, 1.32, 1.5];
+const FONT_DEFAULT = 1;
 const SPLIT_KEY = "fulltest:split";
 
 /**
@@ -76,7 +78,7 @@ export function ExamScreen({
     (real && listeningParts.length ? listeningParts[0].part : partsInPlay[0]?.part) ?? 1,
   );
   const [groupIndex, setGroupIndex] = useState(0);
-  const [fontStep, setFontStep] = useState(1);
+  const [fontStep, setFontStep] = useState(FONT_DEFAULT);
   const [speed, setSpeed] = useState(1);
   const [mobilePane, setMobilePane] = useState<"media" | "questions">("media");
   const [narrow, setNarrow] = useState(false);
@@ -269,12 +271,12 @@ export function ExamScreen({
 
       {/* ── Header ─────────────────────────────────────────────────────── */}
       <header style={{ display: "flex", alignItems: "center", gap: 12, padding: "0.6rem 1rem", background: P.panel, borderBottom: `1px solid ${P.border}`, flexWrap: "wrap", flexShrink: 0 }}>
-        <span style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 800, fontSize: "0.95rem", minWidth: 0 }}>
+        <span style={{ display: "flex", alignItems: "center", gap: 8, fontWeight: 800, fontSize: "1.02rem", minWidth: 0 }}>
           <span style={{ color: P.primary }}>✳</span>
           <span style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{test.title}</span>
         </span>
 
-        <span style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "4px 11px", borderRadius: 8, fontSize: "0.8rem", fontWeight: 700, background: P.primarySoft, color: P.primary, border: `1px solid ${P.primary}` }}>
+        <span style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "4px 11px", borderRadius: 8, fontSize: "0.85rem", fontWeight: 700, background: P.primarySoft, color: P.primary, border: `1px solid ${P.primary}` }}>
           {real ? "Thi thật" : "Luyện tập"}
           {real && <span style={{ fontWeight: 500, opacity: 0.85 }}>· {stage === "listening" ? "Listening" : "Reading"}</span>}
         </span>
@@ -301,7 +303,7 @@ export function ExamScreen({
             title={`Cỡ chữ ${Math.round(fontScale * 100)}%`}
             style={iconBtn(P)}
           >
-            {fontStep === 0 ? "A−" : fontStep >= 2 ? "A+" : "A"}
+            {fontStep === 0 ? "A−" : fontStep === FONT_DEFAULT ? "A" : "A+"}
           </button>
           <button
             type="button"
@@ -330,7 +332,7 @@ export function ExamScreen({
               style={{
                 display: "inline-flex", alignItems: "center", gap: 7, flexShrink: 0,
                 padding: "6px 13px", borderRadius: 8, fontFamily: P.sans,
-                fontSize: "0.85rem", fontWeight: 700, cursor: open ? "pointer" : "not-allowed",
+                fontSize: "0.9rem", fontWeight: 700, cursor: open ? "pointer" : "not-allowed",
                 background: on ? P.primary : "transparent",
                 color: on ? P.onPrimary : open ? P.inkSoft : P.muted,
                 border: `1px solid ${on ? P.primary : P.border}`,
@@ -338,7 +340,7 @@ export function ExamScreen({
               }}
             >
               {p.label}
-              <span style={{ fontSize: "0.7rem", fontWeight: 600, opacity: 0.85, fontVariantNumeric: "tabular-nums" }}>
+              <span style={{ fontSize: "0.75rem", fontWeight: 600, opacity: 0.85, fontVariantNumeric: "tabular-nums" }}>
                 {got}/{qs.length}
               </span>
               {!open && <span style={{ fontSize: "0.7rem" }}>🔒</span>}
@@ -382,7 +384,7 @@ export function ExamScreen({
           <button type="button" onClick={prevGroup} disabled={!canPrev} style={navBtn(P, !canPrev)}>
             ← Trước
           </button>
-          <span style={{ fontSize: "0.84rem", fontWeight: 700, textAlign: "center", flex: 1 }}>
+          <span style={{ fontSize: "0.9rem", fontWeight: 700, textAlign: "center", flex: 1 }}>
             {rangeLabel(activeGroups[safeIndex])}
             <span style={{ color: P.muted, fontWeight: 500 }}>
               {" "}· {safeIndex + 1}/{activeGroups.length}
@@ -758,11 +760,8 @@ function QuestionCard({
         <p style={{ margin: "0 0 0.7rem", fontSize: `${0.92 * fontScale}rem`, lineHeight: 1.55 }}>{q.prompt}</p>
       )}
 
-      {/* Không hiện chữ ⇒ chỉ là dãy nút A B C D nằm ngang */}
-      <div style={showText
-        ? { display: "grid", gap: 6 }
-        : { display: "flex", gap: 8, flexWrap: "wrap" }}
-      >
+      {/* Part 1/2 không hiện chữ, nhưng vẫn xếp dọc từng dòng như các part khác */}
+      <div style={{ display: "grid", gap: 6 }}>
         {letters.map((L) => {
           const text = showText ? q.options?.[L] : undefined;
           const on = picked === L;
@@ -776,20 +775,18 @@ function QuestionCard({
               onClick={() => onPick(q.number, L)}
               style={{
                 display: "flex", alignItems: "center", gap: 10, textAlign: "left",
-                padding: showText ? "0.6rem 0.8rem" : "0.5rem 0.85rem",
-                minWidth: showText ? undefined : 58,
-                justifyContent: showText ? "flex-start" : "center",
+                padding: "0.6rem 0.8rem",
                 borderRadius: 8, cursor: "pointer", fontFamily: P.sans,
                 background: on || isAnswer ? P.primarySoft : "transparent",
                 border: `${on || isAnswer || isWrong ? 2 : 1}px solid ${border}`,
                 color: P.ink, fontSize: `${0.88 * fontScale}rem`,
               }}
             >
-              <span style={{ width: 24, height: 24, borderRadius: "50%", flexShrink: 0, display: "grid", placeItems: "center", fontWeight: 800, fontSize: `${0.76 * fontScale}rem`, background: on ? P.primary : "transparent", color: on ? P.onPrimary : P.inkSoft, border: `1px solid ${on ? P.primary : P.border}` }}>
+              <span style={{ width: 25 * fontScale, height: 25 * fontScale, borderRadius: "50%", flexShrink: 0, display: "grid", placeItems: "center", fontWeight: 800, fontSize: `${0.78 * fontScale}rem`, background: on ? P.primary : "transparent", color: on ? P.onPrimary : P.inkSoft, border: `1px solid ${on ? P.primary : P.border}` }}>
                 {L}
               </span>
               {text && <span style={{ lineHeight: 1.45 }}>{text}</span>}
-              {isAnswer && showText && <span style={{ marginLeft: "auto", color: P.ok, fontWeight: 800, fontSize: "0.8rem" }}>✓</span>}
+              {isAnswer && <span style={{ marginLeft: "auto", color: P.ok, fontWeight: 800, fontSize: `${0.8 * fontScale}rem` }}>✓</span>}
             </button>
           );
         })}
@@ -844,8 +841,8 @@ function ProgressSidebar({
   return (
     <aside style={{ flex: "0 0 236px", overflowY: "auto", background: P.panel, borderLeft: `1px solid ${P.border}`, padding: "0.9rem" }}>
       <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: 8 }}>
-        <span style={{ fontSize: "0.86rem", fontWeight: 800 }}>Tiến độ</span>
-        <span style={{ fontSize: "0.74rem", color: P.muted, fontVariantNumeric: "tabular-nums" }}>
+        <span style={{ fontSize: "0.93rem", fontWeight: 800 }}>Tiến độ</span>
+        <span style={{ fontSize: "0.79rem", color: P.muted, fontVariantNumeric: "tabular-nums" }}>
           {done}/{total.length} ({pct}%)
         </span>
       </div>
@@ -858,7 +855,7 @@ function ProgressSidebar({
         const qs = groups.filter((g) => g.part === p.part).flatMap((g) => g.questions);
         return (
           <div key={p.part} style={{ marginBottom: "0.9rem", opacity: open ? 1 : 0.5 }}>
-            <p style={{ fontSize: "0.74rem", fontWeight: 700, color: p.part === activePart ? P.primary : P.muted, margin: "0 0 0.4rem" }}>
+            <p style={{ fontSize: "0.79rem", fontWeight: 700, color: p.part === activePart ? P.primary : P.muted, margin: "0 0 0.4rem" }}>
               {p.label} ({p.first}–{p.last}){!open && " 🔒"}
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 4 }}>
@@ -880,7 +877,7 @@ function ProgressSidebar({
                     title={q.broken ? "Câu bị thiếu nội dung" : jumpLocked ? "Không đi lại được ở phần Listening" : undefined}
                     style={{
                       padding: "4px 0", borderRadius: 5, fontFamily: P.sans,
-                      fontSize: "0.7rem", fontWeight: 700,
+                      fontSize: "0.76rem", fontWeight: 700,
                       cursor: clickable ? "pointer" : "not-allowed",
                       background: q.broken ? "transparent" : picked ? P.primary : P.panelAlt,
                       color: q.broken ? P.muted : picked ? P.onPrimary : P.inkSoft,
@@ -899,7 +896,7 @@ function ProgressSidebar({
         );
       })}
 
-      <div style={{ display: "grid", gap: 5, fontSize: "0.7rem", color: P.muted, borderTop: `1px solid ${P.borderSoft}`, paddingTop: "0.7rem" }}>
+      <div style={{ display: "grid", gap: 5, fontSize: "0.76rem", color: P.muted, borderTop: `1px solid ${P.borderSoft}`, paddingTop: "0.7rem" }}>
         <Legend bg={P.primary} border={P.primary} text="Đã trả lời" />
         <Legend bg={P.panelAlt} border={P.border} text="Chưa trả lời" />
         <Legend bg={P.panelAlt} border={P.marked} text="Đã đánh dấu" />
