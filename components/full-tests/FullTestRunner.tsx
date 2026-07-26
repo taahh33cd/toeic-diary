@@ -34,7 +34,10 @@ export function FullTestRunner({ test, examSlug }: { test: FullTest; examSlug: s
 
   const P = PALETTE[skin];
 
-  // nạp skin + bài đang làm dở
+  // Nạp skin + bài đang làm dở sau khi mount. Không đọc localStorage ở hàm khởi
+  // tạo useState được: server render ra "light", client có thể ra "dark" ⇒ lệch
+  // hydration. Một lượt render thêm lúc mount là đánh đổi rẻ hơn.
+  /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
     const s = localStorage.getItem(SKIN_KEY);
     if (s === "dark" || s === "light") setSkin(s);
@@ -48,6 +51,7 @@ export function FullTestRunner({ test, examSlug }: { test: FullTest; examSlug: s
       // dữ liệu cũ hỏng thì bỏ qua
     }
   }, [test.slug]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   const toggleSkin = useCallback(() => {
     setSkin((prev) => {

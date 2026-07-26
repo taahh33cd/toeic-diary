@@ -119,8 +119,14 @@ export function ExamScreen({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [answers, marked]);
 
+  // Nếu chỉ chọn part Listening thì hết audio vẫn giữ các part đó lại,
+  // không thì màn hình trắng trơn chẳng còn gì bấm ngoài nút nộp bài.
   const visibleParts = real
-    ? (stage === "listening" ? listeningParts : readingParts)
+    ? stage === "listening"
+      ? listeningParts
+      : readingParts.length
+        ? readingParts
+        : listeningParts
     : partsInPlay;
 
   // giữ activePart luôn nằm trong nhóm part đang mở
@@ -140,6 +146,9 @@ export function ExamScreen({
   const [playIndex, setPlayIndex] = useState(0); // chỉ dùng ở chế độ thi thật
   const [playing, setPlaying] = useState(false);
   const [gap, setGap] = useState(0);
+  // Chỉ nhảy đoạn khi đoạn hiện tại đã phát xong. Không suy từ gap === 0 được:
+  // lúc mới bấm bắt đầu thì gap cũng đang 0 và sẽ nhảy mất đoạn đầu.
+  const [pendingNext, setPendingNext] = useState(false);
 
   // Playlist chế độ thi thật: nối 54 file rời thành chuỗi liền mạch, chèn khoảng nghỉ.
   const playlist = useMemo(
@@ -147,25 +156,26 @@ export function ExamScreen({
     [real, groups],
   );
 
+  // Hết một đoạn ⇒ mở khoảng nghỉ để trả lời (5s/câu ở P1-P2, 8s/câu ở P3-P4).
   const advance = useCallback(() => {
     const cur = playlist[playIndex];
     if (!cur) return;
-    const meta = partMeta(cur.part);
     const count = cur.questionEnd - cur.questionStart + 1;
-    const pause = meta.gapSeconds * count;
-    setGap(pause);
+    setGap(partMeta(cur.part).gapSeconds * count);
+    setPendingNext(true);
   }, [playlist, playIndex]);
 
-  // đếm khoảng nghỉ giữa các đoạn rồi phát tiếp
+  // đếm khoảng nghỉ
   useEffect(() => {
     if (!real || gap <= 0) return;
     const t = setTimeout(() => setGap((g) => g - 1), 1000);
     return () => clearTimeout(t);
   }, [real, gap]);
 
+  // hết nghỉ ⇒ sang đoạn kế; hết playlist ⇒ khoá Listening, sang Reading
   useEffect(() => {
-    if (!real || !playing) return;
-    if (gap !== 0) return;
+    if (!real || !playing || !pendingNext || gap > 0) return;
+    setPendingNext(false);
     const next = playIndex + 1;
     if (next >= playlist.length) {
       setPlaying(false);
@@ -173,7 +183,14 @@ export function ExamScreen({
       return;
     }
     setPlayIndex(next);
-  }, [gap, real, playing, playIndex, playlist.length]);
+  }, [gap, real, playing, pendingNext, playIndex, playlist.length]);
+
+  // đổi đoạn ⇒ phát ngay; thuộc tính autoPlay không kích lại khi chỉ src thay đổi
+  useEffect(() => {
+    if (!real || !playing) return;
+    const el = audioRef.current;
+    if (el) el.play().catch(() => {});
+  }, [real, playing, playIndex]);
 
   // theo dõi đoạn đang phát để tự nhảy part + cuộn tới câu
   const current = playlist[playIndex];
@@ -195,7 +212,8 @@ export function ExamScreen({
   function toggleMark(q: number) {
     setMarked((prev) => {
       const next = new Set(prev);
-      next.has(q) ? next.delete(q) : next.add(q);
+      if (next.has(q)) next.delete(q);
+      else next.add(q);
       return next;
     });
   }
@@ -469,7 +487,6 @@ function MainPane({
           <audio
             ref={audioRef}
             src={playlistGroup?.audio ? `${audioBase}/${playlistGroup.audio}` : undefined}
-            autoPlay={playing}
             onEnded={onAudioEnded}
             style={{ display: "none" }}
           />
@@ -792,15 +809,15 @@ function ProgressSidebar({
       })}
 
       <div style={{ display: "grid", gap: 5, fontSize: "0.7rem", color: P.muted, borderTop: `1px solid ${P.borderSoft}`, paddingTop: "0.7rem" }}>
-        <Legend P={P} bg={P.primary} border={P.primary} text="Đã trả lời" />
-        <Legend P={P} bg={P.panelAlt} border={P.border} text="Chưa trả lời" />
-        <Legend P={P} bg={P.panelAlt} border={P.marked} text="Đã đánh dấu" />
+        <Legend bg={P.primary} border={P.primary} text="Đã trả lời" />
+        <Legend bg={P.panelAlt} border={P.border} text="Chưa trả lời" />
+        <Legend bg={P.panelAlt} border={P.marked} text="Đã đánh dấu" />
       </div>
     </aside>
   );
 }
 
-function Legend({ P, bg, border, text }: { P: Palette; bg: string; border: string; text: string }) {
+function Legend({ bg, border, text }: { bg: string; border: string; text: string }) {
   return (
     <span style={{ display: "flex", alignItems: "center", gap: 7 }}>
       <span style={{ width: 15, height: 13, borderRadius: 4, background: bg, border: `1px solid ${border}`, flexShrink: 0 }} />

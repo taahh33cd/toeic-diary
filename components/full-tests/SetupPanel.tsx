@@ -70,7 +70,6 @@ export function SetupPanel({
     () => parts.reduce((s, p) => s + partMeta(p).count, 0),
     [parts],
   );
-  const isFull = parts.length === ALL_PARTS.length;
   const realMode = mode === "real";
 
   function togglePart(p: PartNumber) {
