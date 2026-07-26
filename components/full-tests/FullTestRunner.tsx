@@ -2,7 +2,9 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { PARTS, scoreAttempt, type FullTest, type PartNumber } from "@/lib/full-tests";
+import { PARTS } from "@/lib/full-tests/parts";
+import { scoreAttempt } from "@/lib/full-tests/scoring";
+import type { FullTest, PartNumber } from "@/lib/full-tests/types";
 import { PALETTE, type Skin } from "./theme";
 import { SetupPanel, type RunConfig } from "./SetupPanel";
 import { ExamScreen } from "./ExamScreen";

@@ -5,8 +5,9 @@ import Link from "next/link";
 import {
   ALL_PARTS, PARTS, REAL_READING_MINUTES, TIME_PRESETS,
   hasSection, partMeta, suggestedMinutes,
-  type ExamMode, type PartNumber,
-} from "@/lib/full-tests";
+  type ExamMode,
+} from "@/lib/full-tests/parts";
+import type { PartNumber } from "@/lib/full-tests/types";
 import { PALETTE, type Palette, type Skin } from "./theme";
 
 export interface RunConfig {

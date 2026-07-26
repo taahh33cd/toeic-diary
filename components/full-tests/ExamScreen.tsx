@@ -1,10 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import {
-  PARTS, partMeta,
-  type FullTest, type FullTestGroup, type FullTestQuestion, type PartNumber,
-} from "@/lib/full-tests";
+import { PARTS, partMeta } from "@/lib/full-tests/parts";
+import type {
+  FullTest, FullTestGroup, FullTestQuestion, PartNumber,
+} from "@/lib/full-tests/types";
 import { PALETTE, type Palette, type Skin } from "./theme";
 import type { RunConfig } from "./SetupPanel";
 
