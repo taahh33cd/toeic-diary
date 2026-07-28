@@ -2,8 +2,14 @@ import Link from "next/link";
 import type { Skill } from "@/lib/skills/structure";
 import { FAMILY } from "@/lib/skills/exam-theme";
 
-// Các unit đã có khung màn thi (đề mẫu) — mở được ngay
-const READY = new Set(["listening/part2", "reading/part5", "speaking/q3-4", "writing/q1-5"]);
+// Các unit mở được ngay → nhãn hiển thị
+const READY: Record<string, string> = {
+  "listening/part1": "9 đề",
+  "listening/part2": "9 đề",
+  "reading/part5": "Đề mẫu",
+  "speaking/q3-4": "Đề mẫu",
+  "writing/q1-5": "Đề mẫu",
+};
 
 export function SkillUnitList({ skill }: { skill: Skill }) {
   const fam = FAMILY[skill.family];
@@ -45,7 +51,8 @@ export function SkillUnitList({ skill }: { skill: Skill }) {
       {/* Unit list */}
       <div className="stagger-children animate-slide-up" style={{ display: "flex", flexDirection: "column", gap: "1px", border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", overflow: "hidden", boxShadow: "var(--shadow-md)" }}>
         {skill.units.map((unit, idx) => {
-          const ready = READY.has(`${skill.slug}/${unit.slug}`);
+          const badge = READY[`${skill.slug}/${unit.slug}`];
+          const ready = Boolean(badge);
           return (
             <Link
               key={unit.slug}
@@ -66,7 +73,7 @@ export function SkillUnitList({ skill }: { skill: Skill }) {
                   <span style={{ fontSize: "0.85rem", color: "var(--text-secondary)" }}>· {unit.labelVi}</span>
                   <span style={{ fontSize: "0.72rem", color: "var(--text-muted)", fontStyle: "italic" }}>({unit.labelEn})</span>
                   {ready && (
-                    <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#fff", background: fam.primary, borderRadius: 4, padding: "2px 7px" }}>Đề mẫu</span>
+                    <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#fff", background: fam.primary, borderRadius: 4, padding: "2px 7px" }}>{badge}</span>
                   )}
                 </div>
                 <p style={{ fontSize: "0.8rem", color: "var(--text-secondary)", lineHeight: 1.55, margin: 0 }}>{unit.description}</p>
