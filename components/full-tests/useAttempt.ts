@@ -93,12 +93,17 @@ export function useAttempt(examSlug: string, testSlug: string) {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ examSlug, testSlug, config, restart }),
         });
-        if (!r.ok) return null;
+        if (!r.ok) {
+          setSaveState("error");
+          return null;
+        }
         const { attempt } = (await r.json()) as { attempt: AttemptRow };
         setAttemptId(attempt.id);
         if (restart) clearMirror();
         return attempt;
       } catch {
+        // Không tạo được lượt ⇒ không có gì để auto-save. Báo ngay thay vì im lặng.
+        setSaveState("error");
         return null;
       }
     },
