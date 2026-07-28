@@ -6,7 +6,17 @@ import { useClasses } from "@/hooks/firebase/useClasses";
 import { createClass } from "@/lib/firebase/helpers";
 import type { ClassSession } from "@/lib/firebase/types";
 
-const DAYS = ["Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7", "CN"];
+// Lưu tên ngày tiếng Anh cho khớp form sửa lớp / sửa HV (dữ liệu cũ dạng "Thứ 2" hay "0".."6" vẫn đọc được qua dayToNum)
+const DAYS = [
+  { value: "Monday",    label: "Thứ 2" },
+  { value: "Tuesday",   label: "Thứ 3" },
+  { value: "Wednesday", label: "Thứ 4" },
+  { value: "Thursday",  label: "Thứ 5" },
+  { value: "Friday",    label: "Thứ 6" },
+  { value: "Saturday",  label: "Thứ 7" },
+  { value: "Sunday",    label: "CN" },
+];
+const DAY_LABEL: Record<string, string> = Object.fromEntries(DAYS.map((d) => [d.value, d.label]));
 
 function AddClassModal({ onClose, onCreated }: { onClose: () => void; onCreated: (id: string) => void }) {
   const [name, setName] = useState("");
@@ -16,7 +26,7 @@ function AddClassModal({ onClose, onCreated }: { onClose: () => void; onCreated:
   const [error, setError] = useState("");
 
   function addSession() {
-    setSessions((prev) => [...prev, { day: "Thứ 2", time: "08:00" }]);
+    setSessions((prev) => [...prev, { day: "Monday", time: "08:00" }]);
   }
 
   function removeSession(i: number) {
@@ -137,7 +147,7 @@ function AddClassModal({ onClose, onCreated }: { onClose: () => void; onCreated:
                     className="rounded-lg px-2 py-1.5 text-xs border flex-1"
                     style={{ background: "var(--bg-elevated)", borderColor: "var(--border)", color: "var(--text-primary)" }}
                   >
-                    {DAYS.map((d) => <option key={d} value={d}>{d}</option>)}
+                    {DAYS.map((d) => <option key={d.value} value={d.value}>{d.label}</option>)}
                   </select>
                   <input
                     type="time"
@@ -286,7 +296,7 @@ export default function ClassesPage() {
                             color: "var(--accent-primary)",
                           }}
                         >
-                          {session.day} · {session.time}
+                          {DAY_LABEL[session.day] ?? session.day} · {session.time}
                         </span>
                       ))}
                     </div>

@@ -8,6 +8,7 @@ import { useClasses } from "@/hooks/firebase/useClasses";
 import { useSlots } from "@/hooks/firebase/useSlots";
 import { useBookings } from "@/hooks/firebase/useBookings";
 import { createBooking } from "@/lib/firebase/helpers";
+import { dayToNum } from "@/lib/schedule-day";
 import type { ScheduleItem, Slot, Booking } from "@/lib/firebase/types";
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -29,10 +30,6 @@ function fmtDateLabel(dateStr: string) {
   return `${d}/${m}/${y}`;
 }
 
-const DAY_NAME_TO_NUM: Record<string, number> = {
-  Sunday: 0, Monday: 1, Tuesday: 2, Wednesday: 3, Thursday: 4, Friday: 5, Saturday: 6,
-};
-
 function generateWeeklyDates(
   day: string,
   time: string,
@@ -41,9 +38,8 @@ function generateWeeklyDates(
   fromDate: string,
   count = 8
 ): (ScheduleItem & { kind: string; source: "class"; classId: string; className: string })[] {
-  // day có thể là số ("0".."6") hoặc tên ("Monday".."Sunday")
-  const dayNum = day in DAY_NAME_TO_NUM ? DAY_NAME_TO_NUM[day] : parseInt(day, 10);
-  if (isNaN(dayNum) || dayNum < 0 || dayNum > 6) return [];
+  const dayNum = dayToNum(day);
+  if (dayNum === null) return [];
 
   const [fy, fm, fd] = fromDate.split("-").map(Number);
   const start = new Date(fy, fm - 1, fd);
@@ -80,8 +76,8 @@ function generateWeeklyPersonal(
   idx: number,
   count = 8
 ): SessionEntry[] {
-  const dayNum = day in DAY_NAME_TO_NUM ? DAY_NAME_TO_NUM[day] : parseInt(day, 10);
-  if (isNaN(dayNum) || dayNum < 0 || dayNum > 6) return [];
+  const dayNum = dayToNum(day);
+  if (dayNum === null) return [];
 
   const [fy, fm, fd] = fromDate.split("-").map(Number);
   let cur = new Date(fy, fm - 1, fd);

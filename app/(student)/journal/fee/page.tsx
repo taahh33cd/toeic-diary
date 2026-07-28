@@ -5,6 +5,7 @@ import { useProfile } from "@/hooks/useProfile";
 import { useStudent } from "@/hooks/firebase/useStudent";
 import { useClasses } from "@/hooks/firebase/useClasses";
 import { useAttendance } from "@/hooks/firebase/useAttendance";
+import { dayToNum } from "@/lib/schedule-day";
 import type { AttendanceStatus } from "@/lib/firebase/types";
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -39,44 +40,56 @@ function getDaysInMonth(year: number, month: number): string[] {
   return days;
 }
 
+type SessionInfo = { date: string; time?: string; source: "personal" | "class" | "attendance"; className?: string };
+
+/** Học phí tính theo ngày (attendance chỉ có 1 bản ghi/ngày) nên dedup theo date, ưu tiên personal > class > attendance. */
 function getSessionDates(
   year: number,
   month: number,
   personalSchedule: { date: string; time?: string }[],
-  classWeeklySlots: { day: string; time: string; className: string }[],
+  weeklySlots: { day: string; time: string; className?: string }[],
+  attendedDates: string[],
   todayStr: string
-): { date: string; time?: string; source: "personal" | "class"; className?: string }[] {
+): SessionInfo[] {
   const monthStr = `${year}-${String(month).padStart(2,"0")}`;
-  const results: { date: string; time?: string; source: "personal" | "class"; className?: string }[] = [];
-  const seen = new Set<string>();
+  const byDate = new Map<string, SessionInfo>();
 
   for (const s of personalSchedule) {
-    if (s.date.startsWith(monthStr)) {
-      const key = s.date;
-      if (!seen.has(key)) {
-        seen.add(key);
-        results.push({ date: s.date, time: s.time, source: "personal" });
-      }
+    if (!s.date.startsWith(monthStr)) continue;
+    if (s.date > todayStr) continue;
+    if (!byDate.has(s.date)) {
+      byDate.set(s.date, { date: s.date, time: s.time, source: "personal" });
     }
   }
 
   const allDays = getDaysInMonth(year, month);
-  for (const slot of classWeeklySlots) {
-    const dayNum = parseInt(slot.day, 10);
-    if (isNaN(dayNum) || dayNum < 0 || dayNum > 6) continue;
+  for (const slot of weeklySlots) {
+    const dayNum = dayToNum(slot.day);
+    if (dayNum === null) continue;
     for (const dateStr of allDays) {
       if (dateStr > todayStr) continue;
       const [dy, dm, dd] = dateStr.split("-").map(Number);
       if (new Date(dy, dm - 1, dd).getDay() !== dayNum) continue;
-      const key = `${dateStr}_${slot.time}`;
-      if (!seen.has(key)) {
-        seen.add(key);
-        results.push({ date: dateStr, time: slot.time, source: "class", className: slot.className });
+      if (!byDate.has(dateStr)) {
+        byDate.set(dateStr, { date: dateStr, time: slot.time, source: "class", className: slot.className });
       }
     }
   }
 
-  return results.sort((a, b) => a.date.localeCompare(b.date));
+  // Buổi đã điểm danh nhưng không khớp lịch (học bù / đổi lịch) vẫn phải hiện
+  for (const dateStr of attendedDates) {
+    if (!dateStr.startsWith(monthStr)) continue;
+    if (!byDate.has(dateStr)) {
+      byDate.set(dateStr, { date: dateStr, source: "attendance" });
+    }
+  }
+
+  return [...byDate.values()].sort((a, b) => a.date.localeCompare(b.date));
+}
+
+/** Đi học muộn vẫn tính là có mặt và vẫn tính học phí. */
+function isAttended(status: AttendanceStatus | undefined): boolean {
+  return status === "present" || status === "late";
 }
 
 function courseTypeLabel(ct: string | undefined): string {
@@ -281,7 +294,7 @@ function ReceiptModal({
               </div>
               {sessions.map((s, idx) => {
                 const st = attendance[s.date] as AttendanceStatus | undefined;
-                const isPresent = st === "present";
+                const isPresent = isAttended(st);
                 const isAbsent = st === "absent";
                 return (
                   <div
@@ -315,7 +328,7 @@ function ReceiptModal({
                         whiteSpace: "nowrap",
                       }}
                     >
-                      {isPresent ? "✓ Có mặt" : isAbsent ? "✗ Vắng" : "— Chưa"}
+                      {st === "late" ? "⏱ Muộn" : isPresent ? "✓ Có mặt" : isAbsent ? "✗ Vắng" : "— Chưa"}
                     </span>
                     <span
                       style={{
@@ -432,7 +445,7 @@ function SessionRow({
   pricePerSession: number;
   className?: string;
 }) {
-  const isPresent = status === "present";
+  const isPresent = isAttended(status);
   const isAbsent = status === "absent";
 
   const dayNum = date.split("-")[2];
@@ -476,7 +489,7 @@ function SessionRow({
           color: isPresent ? "#4A7C59" : isAbsent ? "#B03A2A" : "#9A8672",
         }}
       >
-        {isPresent ? "✓ CÓ MẶT" : isAbsent ? "✗ VẮNG" : "— CHƯA"}
+        {status === "late" ? "⏱ MUỘN" : isPresent ? "✓ CÓ MẶT" : isAbsent ? "✗ VẮNG" : "— CHƯA"}
       </span>
 
       {/* Amount */}
@@ -531,26 +544,34 @@ export default function FeePage() {
     return classes.filter(cls => cls.members?.includes(profile.studentCode!));
   }, [classes, profile?.studentCode]);
 
-  const classWeeklySlots = useMemo(() => {
-    const slots: { day: string; time: string; className: string }[] = [];
+  const weeklySlots = useMemo(() => {
+    const slots: { day: string; time: string; className?: string }[] = [];
     for (const cls of myClasses) {
       for (const slot of cls.weeklySchedule ?? []) {
         slots.push({ day: slot.day, time: slot.time, className: cls.name });
       }
     }
+    // Lịch cố định cá nhân — chỉ khi HV không thuộc lớp nào (giống trang /schedule)
+    if (myClasses.length === 0) {
+      for (const slot of student?.weeklySchedule ?? []) {
+        slots.push({ day: slot.day, time: slot.time });
+      }
+    }
     return slots;
-  }, [myClasses]);
+  }, [myClasses, student?.weeklySchedule]);
+
+  const attendedDates = useMemo(() => Object.keys(attendance), [attendance]);
 
   const sessionDates = useMemo(() => {
     if (!student) return [];
-    return getSessionDates(year, month, student.schedule ?? [], classWeeklySlots, today);
-  }, [student, year, month, classWeeklySlots, today]);
+    return getSessionDates(year, month, student.schedule ?? [], weeklySlots, attendedDates, today);
+  }, [student, year, month, weeklySlots, attendedDates, today]);
 
   const summary = useMemo(() => {
     let present = 0, absent = 0, unknown = 0;
     for (const s of sessionDates) {
       const st = attendance[s.date] as AttendanceStatus | undefined;
-      if (st === "present") present++;
+      if (isAttended(st)) present++;
       else if (st === "absent") absent++;
       else unknown++;
     }

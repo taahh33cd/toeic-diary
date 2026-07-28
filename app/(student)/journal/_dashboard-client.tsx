@@ -11,6 +11,7 @@ import { useVocab } from "@/hooks/firebase/useVocab";
 import { useClasses } from "@/hooks/firebase/useClasses";
 import { useLocale } from "@/hooks/useLocale";
 import { LiveIndicator } from "@/components/shared/LiveIndicator";
+import { dayToNum } from "@/lib/schedule-day";
 import type { XpStats } from "./page";
 import type { ScheduleItem, Goal, VocabWord, ToeicScore, SwScore } from "@/lib/firebase/types";
 import { EXAM_MAX, examScores, goalExamType, goalTotal } from "@/lib/exam-goal";
@@ -81,8 +82,8 @@ const INK = "var(--journal-ink, #3D2B1F)";
 function generateWeeklyDatesForTile(
   day: string, time: string, className: string, classId: string, fromDate: string, count = 4
 ): ScheduleItem[] {
-  const dayNum = parseInt(day, 10);
-  if (isNaN(dayNum) || dayNum < 0 || dayNum > 6) return [];
+  const dayNum = dayToNum(day);
+  if (dayNum === null) return [];
   const [fy, fm, fd] = fromDate.split("-").map(Number);
   let cur = new Date(fy, fm - 1, fd);
   cur.setDate(cur.getDate() + (dayNum - cur.getDay() + 7) % 7);
