@@ -24,27 +24,29 @@ export default async function FullTestPage({ params }: Props) {
   const entry = getCatalogEntry(exam, testNumber);
   if (!entry || entry.locked) notFound();
 
-  // Đề 1 mở cho mọi người; còn lại cần đã đăng ký khoá (hoặc là HV nội bộ/giáo viên).
-  if (!isTestFree(testNumber)) {
-    const supabase = await createClient();
-    const { data: { user } } = await supabase.auth.getUser();
-    const profile = user
-      ? await prisma.profile
-          .findUnique({
-            where: { id: user.id },
-            select: { role: true, studentCode: true, enrolledCourses: true, freeUsageSeconds: true },
-          })
-          .catch(() => null)
-      : null;
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  const profile = user
+    ? await prisma.profile
+        .findUnique({
+          where: { id: user.id },
+          select: { role: true, studentCode: true, enrolledCourses: true, freeUsageSeconds: true },
+        })
+        .catch(() => null)
+    : null;
 
-    if (!isUsageExempt(profile)) {
-      // Không nạp đề: người chưa mở khoá thì không cần tải 350KB dữ liệu đề.
-      return <ContentLockModal />;
-    }
+  // Đề 1 mở cho mọi người; còn lại cần đã đăng ký khoá (hoặc là HV nội bộ/giáo viên).
+  if (!isTestFree(testNumber) && !isUsageExempt(profile)) {
+    // Không nạp đề: người chưa mở khoá thì không cần tải 350KB dữ liệu đề.
+    return <ContentLockModal />;
   }
 
   const data = await loadTest(entry.slug);
   if (!data) notFound();
 
-  return <FullTestRunner test={data} examSlug={exam} />;
+  // Sổ từ vựng ghi theo studentCode trên Firebase, nên chỉ HV nội bộ mới lưu được.
+  const canSaveVocab = Boolean(profile?.studentCode)
+    || profile?.role === "teacher" || profile?.role === "admin";
+
+  return <FullTestRunner test={data} examSlug={exam} canSaveVocab={canSaveVocab} />;
 }
