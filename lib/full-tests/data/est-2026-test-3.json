@@ -5,16 +5,12 @@
  "slug": "est-2026-test-3",
  "title": "PRACTICE TEST EST 2026 — Test 3",
  "audioBase": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-3",
- "locked": true,
- "lockReason": "Thiếu đáp án gốc cho một số câu — đang bổ sung.",
+ "locked": false,
+ "lockReason": null,
  "stats": {
   "questions": 200,
-  "answered": 197,
-  "missingAnswers": [
-   78,
-   80,
-   81
-  ],
+  "answered": 200,
+  "missingAnswers": [],
   "brokenQuestions": []
  },
  "groups": [
@@ -84,38 +80,26 @@
      "broken": false,
      "answer": "D",
      "explanation": {
-      "translation": "(A) He's fixing a file drawer.\n(B) He's rolling up his sleeves.\n(C) He's closing a laptop computer.\n(D) He's drinking from a mug.\n(A) Anh ấy đang sửa một ngăn kéo đựng hồ sơ.\n(B) Anh ấy đang xắn tay áo lên.\n(C) Anh ấy đang gấp chiếc máy tính xách tay lại.\n(D) Anh ấy đang uống nước từ một chiếc cốc có quai. (Đúng)",
+      "translation": "(A) He's fixing a file drawer.(B) He's rolling up his sleeves.(C) He's closing a laptop computer.(D) He's drinking from a mug.\n(A) Anh ấy đang sửa một ngăn kéo đựng hồ sơ.(B) Anh ấy đang xắn tay áo lên.(C) Anh ấy đang gấp chiếc máy tính xách tay lại.(D) Anh ấy đang uống nước từ một chiếc cốc có quai. (Đúng)",
       "reasoning": null,
       "glossary": [
        {
         "term": "fix",
         "pos": "v",
         "ipa": "",
-        "meaning": "sửa chữa"
+        "meaning": "sửa chữafile"
        },
        {
         "term": "drawer",
         "pos": "n",
         "ipa": "",
-        "meaning": "ngăn kéo đựng hồ sơ"
+        "meaning": "ngăn kéo đựng hồ sơroll"
        },
        {
         "term": "up",
         "pos": "v",
         "ipa": "",
-        "meaning": "xắn lên (tay áo)"
-       },
-       {
-        "term": "sleeve",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "tay áo"
-       },
-       {
-        "term": "mug",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "cốc có quai"
+        "meaning": "xắn lên (tay áo)sleeve (n): tay áomug (n): cốc có quai"
        }
       ]
      }
@@ -176,32 +160,20 @@
      "broken": false,
      "answer": "A",
      "explanation": {
-      "translation": "(A) Some bushes are covered with snow.\n(B) Some flowers are being planted.\n(C) A person is walking in the road.\n(D) A person is cleaning some windows.\n(A) Vài bụi cây đang bị bao phủ bởi tuyết. (Đúng)\n(B) Một số bông hoa đang được trồng.\n(C) Một người đang đi bộ trên đường.\n(D) Một người đang lau vài cửa sổ.",
+      "translation": "(A) Some bushes are covered with snow.(B) Some flowers are being planted.(C) A person is walking in the road.(D) A person is cleaning some windows.\n(A) Vài bụi cây đang bị bao phủ bởi tuyết. (Đúng)(B) Một số bông hoa đang được trồng.(C) Một người đang đi bộ trên đường.(D) Một người đang lau vài cửa sổ.",
       "reasoning": null,
       "glossary": [
        {
         "term": "bush",
         "pos": "n",
         "ipa": "",
-        "meaning": "bụi cây"
+        "meaning": "bụi câycovered"
        },
        {
         "term": "with",
         "pos": "adj",
         "ipa": "",
-        "meaning": "bị bao phủ bởi"
-       },
-       {
-        "term": "snow",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "tuyết"
-       },
-       {
-        "term": "plant",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "trồng cây"
+        "meaning": "bị bao phủ bởisnow (n): tuyếtplant (v): trồng cây"
        }
       ]
      }
@@ -262,26 +234,26 @@
      "broken": false,
      "answer": "D",
      "explanation": {
-      "translation": "(A) A man is changing a tire on his car.\n(B) A man is opening a car door.\n(C) A man is putting fuel into his car.\n(D) A man is spreading out a map on top of his car.\n(A) Một người đàn ông đang thay lốp xe ô tô.\n(B) Một người đàn ông đang mở cửa xe ô tô.\n(C) Một người đàn ông đang đổ nhiên liệu vào xe ô tô.\n(D) Một người đàn ông đang trải rộng một tấm bản đồ trên nóc xe ô tô. (Đúng)",
+      "translation": "(A) A man is changing a tire on his car.(B) A man is opening a car door.(C) A man is putting fuel into his car.(D) A man is spreading out a map on top of his car.\n(A) Một người đàn ông đang thay lốp xe ô tô.(B) Một người đàn ông đang mở cửa xe ô tô.(C) Một người đàn ông đang đổ nhiên liệu vào xe ô tô.(D) Một người đàn ông đang trải rộng một tấm bản đồ trên nóc xe ô tô. (Đúng)",
       "reasoning": null,
       "glossary": [
        {
         "term": "tire",
         "pos": "v",
         "ipa": "",
-        "meaning": "thay lốp xe"
+        "meaning": "thay lốp"
        },
        {
-        "term": "fuel",
+        "term": "xefuel",
         "pos": "n",
         "ipa": "",
-        "meaning": "nhiên liệu"
+        "meaning": "nhiên liệuspread"
        },
        {
         "term": "out",
         "pos": "v",
         "ipa": "",
-        "meaning": "trải rộng ra"
+        "meaning": "trải rộng"
        },
        {
         "term": "of",
@@ -354,44 +326,32 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "(A) They're leaving a restaurant.\n(B) They're seated next to each other.\n(C) One of the women is looking in her handbag.\n(D) One of the women is folding a scarf.\n(A) Họ đang rời khỏi một nhà hàng.\n(B) Họ đang ngồi cạnh nhau. (Đúng)\n(C) Một trong những người phụ nữ đang nhìn vào túi xách của cô ấy.\n(D) Một trong những người phụ nữ đang gấp chiếc khăn quàng cổ.",
+      "translation": "(A) They're leaving a restaurant.(B) They're seated next to each other.(C) One of the women is looking in her handbag.(D) One of the women is folding a scarf.\n(A) Họ đang rời khỏi một nhà hàng.(B) Họ đang ngồi cạnh nhau. (Đúng)(C) Một trong những người phụ nữ đang nhìn vào túi xách của cô ấy.(D) Một trong những người phụ nữ đang gấp chiếc khăn quàng cổ.",
       "reasoning": null,
       "glossary": [
        {
         "term": "leave",
         "pos": "v",
         "ipa": "",
-        "meaning": "rời đi"
-       },
-       {
-        "term": "seated",
-        "pos": "adj",
-        "ipa": "",
-        "meaning": "ngồi"
+        "meaning": "rời điseated (adj): ngồinext"
        },
        {
         "term": "other",
         "pos": "adv",
         "ipa": "",
-        "meaning": "cạnh nhau"
+        "meaning": "cạnh"
        },
        {
-        "term": "handbag",
+        "term": "nhauhandbag",
         "pos": "n",
         "ipa": "",
-        "meaning": "túi xách tay"
+        "meaning": "túi xách"
        },
        {
-        "term": "fold",
+        "term": "tayfold",
         "pos": "v",
         "ipa": "",
-        "meaning": "gấp, xếp"
-       },
-       {
-        "term": "scarf",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "khăn quàng cổ"
+        "meaning": "gấp, xếpscarf (n): khăn quàng cổ"
        }
       ]
      }
@@ -458,38 +418,20 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "(A) A selection of luggage is on display.\n(B) A lamp and some papers are on a desk.\n(C) Some boxes are arranged under some lamps.\n(D) Some wire has been rolled up on the floor.\n(A) Một loạt hành lý đang được trưng bày.\n(B) Một chiếc đèn và vài tờ giấy đang ở trên bàn làm việc.\n(C) Vài chiếc hộp được sắp xếp bên dưới những chiếc đèn. (Đúng)\n(D) Một đoạn dây kẽm/dây cáp đã được cuộn lại trên sàn nhà.",
+      "translation": "(A) A selection of luggage is on display.(B) A lamp and some papers are on a desk.(C) Some boxes are arranged under some lamps.(D) Some wire has been rolled up on the floor.\n(A) Một loạt hành lý đang được trưng bày.(B) Một chiếc đèn và vài tờ giấy đang ở trên bàn làm việc.(C) Vài chiếc hộp được sắp xếp bên dưới những chiếc đèn. (Đúng)(D) Một đoạn dây kẽm/dây cáp đã được cuộn lại trên sàn nhà.",
       "reasoning": null,
       "glossary": [
        {
         "term": "of",
         "pos": "phr",
         "ipa": "",
-        "meaning": "một sự lựa chọn/một loạt"
-       },
-       {
-        "term": "luggage",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "hành lý"
+        "meaning": "một sự lựa chọn/một loạtluggage (n): hành lýon"
        },
        {
         "term": "display",
         "pos": "phr",
         "ipa": "",
-        "meaning": "được trưng bày"
-       },
-       {
-        "term": "arrange",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "sắp xếp"
-       },
-       {
-        "term": "wire",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "dây kẽm, dây cáp"
+        "meaning": "được trưng bàyarrange (v): sắp xếpwire (n): dây kẽm, dây cáproll"
        },
        {
         "term": "up",
@@ -562,38 +504,20 @@
      "broken": false,
      "answer": "A",
      "explanation": {
-      "translation": "(A) A cyclist is riding past a pedestrian.\n(B) A tent is set up next to a lake.\n(C) Some people are resting on a stone wall.\n(D) Some people are swimming in a lake.\n(A) Một người đi xe đạp đang chạy ngang qua một người đi bộ. (Đúng)\n(B) Một cái lều được dựng lên cạnh một cái hồ.\n(C) Vài người đang nghỉ ngơi trên một bức tường đá.\n(D) Một số người đang bơi trong hồ.",
+      "translation": "(A) A cyclist is riding past a pedestrian.(B) A tent is set up next to a lake.(C) Some people are resting on a stone wall.(D) Some people are swimming in a lake.\n(A) Một người đi xe đạp đang chạy ngang qua một người đi bộ. (Đúng)(B) Một cái lều được dựng lên cạnh một cái hồ.(C) Vài người đang nghỉ ngơi trên một bức tường đá.(D) Một số người đang bơi trong hồ.",
       "reasoning": null,
       "glossary": [
        {
         "term": "cyclist",
         "pos": "n",
         "ipa": "",
-        "meaning": "người đi xe đạp"
-       },
-       {
-        "term": "pedestrian",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "người đi bộ"
-       },
-       {
-        "term": "tent",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "cái lều"
+        "meaning": "người đi xe đạppedestrian (n): người đi bộtent (n): cái lềuset"
        },
        {
         "term": "up",
         "pos": "v",
         "ipa": "",
-        "meaning": "dựng lên"
-       },
-       {
-        "term": "rest",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "nghỉ ngơi"
+        "meaning": "dựng lênrest (v): nghỉ ngơistone"
        },
        {
         "term": "wall",
@@ -627,26 +551,20 @@
      "broken": false,
      "answer": "A",
      "explanation": {
-      "translation": "- Hỏi: Where's the coffeemaker? (Máy pha cà phê ở đâu?)\n- (A) On the bottom shelf. (Ở trên kệ dưới cùng.)\n- (B) A large serving spoon. (Một chiếc muỗng phục vụ lớn.)\n- (C) It was discounted. (Nó đã được giảm giá.)\n2.",
+      "translation": "- Hỏi: Where's the coffeemaker? (Máy pha cà phê ở đâu?)- (A) On the bottom shelf. (Ở trên kệ dưới cùng.)- (B) A large serving spoon. (Một chiếc muỗng phục vụ lớn.)- (C) It was discounted. (Nó đã được giảm giá.)\n2.",
       "reasoning": "3.\nCâu hỏi bắt đầu bằng 'Where' (Ở đâu), hỏi về vị trí. Đáp án A trả lời đúng trọng tâm với cụm giới từ chỉ vị trí 'On the bottom shelf' (Trên kệ dưới cùng).",
       "glossary": [
        {
         "term": "coffeemaker",
         "pos": "n",
         "ipa": "",
-        "meaning": "máy pha cà phê"
+        "meaning": "máy pha cà phêbottom"
        },
        {
         "term": "shelf",
         "pos": "n",
         "ipa": "",
-        "meaning": "kệ dưới cùng"
-       },
-       {
-        "term": "discount",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "giảm giá"
+        "meaning": "kệ dưới cùngdiscount (v): giảm giá"
        }
       ]
      }
@@ -674,26 +592,14 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "- Hỏi: Why are you calling the clients? (Tại sao bạn lại gọi cho khách hàng?)\n- (A) A spreadsheet with their contact information. (Một bảng tính có thông tin liên lạc của họ.)\n- (B) Because they canceled their order. (Bởi vì họ đã hủy đơn đặt hàng của họ.)\n- (C) I can walk you there. (Tôi có thể đi bộ cùng bạn đến đó.)\n2.",
+      "translation": "- Hỏi: Why are you calling the clients? (Tại sao bạn lại gọi cho khách hàng?)- (A) A spreadsheet with their contact information. (Một bảng tính có thông tin liên lạc của họ.)- (B) Because they canceled their order. (Bởi vì họ đã hủy đơn đặt hàng của họ.)- (C) I can walk you there. (Tôi có thể đi bộ cùng bạn đến đó.)\n2.",
       "reasoning": "3.\nCâu hỏi bắt đầu bằng 'Why' (Tại sao), hỏi về lý do. Đáp án B bắt đầu bằng 'Because' (Bởi vì) và đưa ra lý do hợp lý: 'Bởi vì họ đã hủy đơn hàng của họ'.",
       "glossary": [
        {
         "term": "client",
         "pos": "n",
         "ipa": "",
-        "meaning": "khách hàng"
-       },
-       {
-        "term": "spreadsheet",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "bảng tính"
-       },
-       {
-        "term": "cancel",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "hủy bỏ"
+        "meaning": "khách hàngspreadsheet (n): bảng tínhcancel (v): hủy bỏ"
        }
       ]
      }
@@ -721,23 +627,23 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "- Hỏi: Would you like to attend our next company retreat? (Bạn có muốn tham dự chuyến nghỉ dưỡng sắp tới của công ty chúng ta không?)\n- (A) I'm parked next to that tree. (Tôi đậu xe cạnh cái cây đó.)\n- (B) Yes, I'd like that. (Vâng, tôi rất muốn.)\n- (C) Just some grilled vegetables. (Chỉ một ít rau nướng thôi.)\n2.",
+      "translation": "- Hỏi: Would you like to attend our next company retreat? (Bạn có muốn tham dự chuyến nghỉ dưỡng sắp tới của công ty chúng ta không?)- (A) I'm parked next to that tree. (Tôi đậu xe cạnh cái cây đó.)- (B) Yes, I'd like that. (Vâng, tôi rất muốn.)- (C) Just some grilled vegetables. (Chỉ một ít rau nướng thôi.)\n2.",
       "reasoning": "3.\nCâu hỏi là một lời mời 'Would you like...?' (Bạn có muốn...). Đáp án B là một lời đáp lại lịch sự và trực tiếp: 'Yes, I'd like that' (Vâng, tôi rất muốn).",
       "glossary": [
        {
         "term": "attend",
         "pos": "v",
         "ipa": "",
-        "meaning": "tham dự"
+        "meaning": "tham dựcompany"
        },
        {
         "term": "retreat",
         "pos": "n",
         "ipa": "",
-        "meaning": "chuyến nghỉ dưỡng/dã ngoại của công ty"
+        "meaning": "chuyến nghỉ dưỡng/dã ngoại của công"
        },
        {
-        "term": "grilled",
+        "term": "tygrilled",
         "pos": "adj",
         "ipa": "",
         "meaning": "nướng"
@@ -768,20 +674,14 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "- Hỏi: Who can update the Web site? (Ai có thể cập nhật trang web?)\n- (A) I like the new Web site, too. (Tôi cũng thích trang web mới.)\n- (B) Kento said he could do it. (Kento nói anh ấy có thể làm việc đó.)\n- (C) That's the right password. (Đó là mật khẩu đúng.)\n2.",
+      "translation": "- Hỏi: Who can update the Web site? (Ai có thể cập nhật trang web?)- (A) I like the new Web site, too. (Tôi cũng thích trang web mới.)- (B) Kento said he could do it. (Kento nói anh ấy có thể làm việc đó.)- (C) That's the right password. (Đó là mật khẩu đúng.)\n2.",
       "reasoning": "3.\nCâu hỏi bắt đầu bằng 'Who' (Ai), hỏi về người có thể thực hiện hành động. Đáp án B chỉ ra một người cụ thể là 'Kento' và xác nhận anh ấy có thể làm việc đó.",
       "glossary": [
        {
         "term": "update",
         "pos": "v",
         "ipa": "",
-        "meaning": "cập nhật"
-       },
-       {
-        "term": "password",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "mật khẩu"
+        "meaning": "cập nhậtpassword (n): mật khẩu"
        }
       ]
      }
@@ -809,7 +709,7 @@
      "broken": false,
      "answer": "A",
      "explanation": {
-      "translation": "- Hỏi: Does your desk face the door or the window? (Bàn làm việc của bạn hướng ra cửa ra vào hay cửa sổ?)\n- (A) It faces the door. (Nó hướng ra cửa.)\n- (B) About forty minutes. (Khoảng 40 phút.)\n- (C) Because the room is too small. (Bởi vì căn phòng quá nhỏ.)\n2.",
+      "translation": "- Hỏi: Does your desk face the door or the window? (Bàn làm việc của bạn hướng ra cửa ra vào hay cửa sổ?)- (A) It faces the door. (Nó hướng ra cửa.)- (B) About forty minutes. (Khoảng 40 phút.)- (C) Because the room is too small. (Bởi vì căn phòng quá nhỏ.)\n2.",
       "reasoning": "3.\nCâu hỏi là câu hỏi lựa chọn 'or' (cửa ra vào hay cửa sổ). Đáp án A trả lời trực tiếp bằng cách chọn một trong hai phương án: 'It faces the door' (Nó hướng ra cửa).",
       "glossary": [
        {
@@ -844,14 +744,14 @@
      "broken": false,
      "answer": "A",
      "explanation": {
-      "translation": "- Hỏi: When will your performance take place? (Buổi biểu diễn của bạn sẽ diễn ra khi nào?)\n- (A) Next Tuesday. (Thứ Ba tới.)\n- (B) No, I just checked. (Không, tôi vừa kiểm tra.)\n- (C) We shopped there yesterday. (Chúng tôi đã mua sắm ở đó hôm qua.)\n2.",
+      "translation": "- Hỏi: When will your performance take place? (Buổi biểu diễn của bạn sẽ diễn ra khi nào?)- (A) Next Tuesday. (Thứ Ba tới.)- (B) No, I just checked. (Không, tôi vừa kiểm tra.)- (C) We shopped there yesterday. (Chúng tôi đã mua sắm ở đó hôm qua.)\n2.",
       "reasoning": "3.\nCâu hỏi bắt đầu bằng 'When' (Khi nào), hỏi về thời gian. Đáp án A đưa ra thời gian cụ thể: 'Next Tuesday' (Thứ ba tới).",
       "glossary": [
        {
         "term": "performance",
         "pos": "n",
         "ipa": "",
-        "meaning": "buổi biểu diễn"
+        "meaning": "buổi biểu diễntake"
        },
        {
         "term": "place",
@@ -885,26 +785,14 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "- Hỏi: What will you get for completing the program? (Bạn sẽ nhận được gì khi hoàn thành chương trình?)\n- (A) How many hours a week? (Bao nhiêu giờ một tuần?)\n- (B) OK, thanks for asking. (Được rồi, cảm ơn vì đã hỏi.)\n- (C) A certificate in accounting. (Một chứng chỉ kế toán.)\n2.",
+      "translation": "- Hỏi: What will you get for completing the program? (Bạn sẽ nhận được gì khi hoàn thành chương trình?)- (A) How many hours a week? (Bao nhiêu giờ một tuần?)- (B) OK, thanks for asking. (Được rồi, cảm ơn vì đã hỏi.)- (C) A certificate in accounting. (Một chứng chỉ kế toán.)\n2.",
       "reasoning": "3.\nCâu hỏi bắt đầu bằng 'What' (Cái gì), hỏi về một đồ vật hoặc phần thưởng. Đáp án C chỉ ra một danh từ phù hợp: 'A certificate in accounting' (Một chứng chỉ kế toán).",
       "glossary": [
        {
         "term": "complete",
         "pos": "v",
         "ipa": "",
-        "meaning": "hoàn thành"
-       },
-       {
-        "term": "certificate",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "chứng chỉ"
-       },
-       {
-        "term": "accounting",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "ngành kế toán"
+        "meaning": "hoàn thànhcertificate (n): chứng chỉaccounting (n): ngành kế toán"
        }
       ]
      }
@@ -932,17 +820,17 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "- Hỏi: How did the company get its name? (Công ty đã có tên gọi như thế nào?)\n- (A) There's a new guest list. (Có một danh sách khách mời mới.)\n- (B) Oh, about three years ago. (Ồ, khoảng ba năm trước.)\n- (C) It's named after the owner. (Nó được đặt theo tên người chủ.)\n2.",
+      "translation": "- Hỏi: How did the company get its name? (Công ty đã có tên gọi như thế nào?)- (A) There's a new guest list. (Có một danh sách khách mời mới.)- (B) Oh, about three years ago. (Ồ, khoảng ba năm trước.)- (C) It's named after the owner. (Nó được đặt theo tên người chủ.)\n2.",
       "reasoning": "3.\nCâu hỏi bắt đầu bằng 'How' (Như thế nào/Bằng cách nào), hỏi về nguồn gốc tên công ty. Đáp án C giải thích rõ ràng: 'It's named after the owner' (Nó được đặt theo tên người chủ).",
       "glossary": [
        {
         "term": "after",
         "pos": "v",
         "ipa": "",
-        "meaning": "đặt tên theo"
+        "meaning": "đặt tên"
        },
        {
-        "term": "owner",
+        "term": "theoowner",
         "pos": "n",
         "ipa": "",
         "meaning": "người chủ"
@@ -973,14 +861,14 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "- Hỏi: Your kitchen looks nice painted in this shade of yellow. (Nhà bếp của bạn trông rất đẹp khi được sơn bằng tông màu vàng này.)\n- (A) Twenty color copies, please. (Vui lòng cho 20 bản sao màu.)\n- (B) Dinner will be ready in ten minutes. (Bữa tối sẽ sẵn sàng trong 10 phút nữa.)\n- (C) Yes, it really brightens up the room. (Vâng, nó thực sự làm sáng bừng căn phòng.)\n2.",
+      "translation": "- Hỏi: Your kitchen looks nice painted in this shade of yellow. (Nhà bếp của bạn trông rất đẹp khi được sơn bằng tông màu vàng này.)- (A) Twenty color copies, please. (Vui lòng cho 20 bản sao màu.)- (B) Dinner will be ready in ten minutes. (Bữa tối sẽ sẵn sàng trong 10 phút nữa.)- (C) Yes, it really brightens up the room. (Vâng, nó thực sự làm sáng bừng căn phòng.)\n2.",
       "reasoning": "3.\nCâu nói là một lời khen ngợi về màu sơn của nhà bếp. Đáp án C là một lời phản hồi đồng tình và nhận xét thêm: 'Yes, it really brightens up the room' (Vâng, nó thực sự làm sáng bừng căn phòng).",
       "glossary": [
        {
         "term": "shade",
         "pos": "n",
         "ipa": "",
-        "meaning": "tông màu, sắc thái"
+        "meaning": "tông màu, sắc tháibrighten"
        },
        {
         "term": "up",
@@ -1014,20 +902,20 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "- Hỏi: Are you considering hiring a public relations firm? (Bạn có đang cân nhắc thuê một công ty quan hệ công chúng không?)\n- (A) I wasn't at that press conference. (Tôi đã không ở buổi họp báo đó.)\n- (B) No, we decided not to. (Không, chúng tôi đã quyết định không thuê.)\n- (C) It's in the closet. (Nó ở trong tủ.)\n2.",
+      "translation": "- Hỏi: Are you considering hiring a public relations firm? (Bạn có đang cân nhắc thuê một công ty quan hệ công chúng không?)- (A) I wasn't at that press conference. (Tôi đã không ở buổi họp báo đó.)- (B) No, we decided not to. (Không, chúng tôi đã quyết định không thuê.)- (C) It's in the closet. (Nó ở trong tủ.)\n2.",
       "reasoning": "3.\nCâu hỏi dạng Yes/No hỏi về dự định thuê công ty quan hệ công chúng. Đáp án B trả lời trực tiếp 'No' và đưa ra quyết định: 'chúng tôi đã quyết định không thuê'.",
       "glossary": [
        {
         "term": "consider",
         "pos": "v",
         "ipa": "",
-        "meaning": "cân nhắc"
+        "meaning": "cân nhắcpublic"
        },
        {
         "term": "firm",
         "pos": "n",
         "ipa": "",
-        "meaning": "công ty quan hệ công chúng (PR)"
+        "meaning": "công ty quan hệ công chúng (PR)press"
        },
        {
         "term": "conference",
@@ -1061,32 +949,20 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "- Hỏi: Does this hallway lead to the lobby or to the courtyard? (Hành lang này dẫn ra sảnh chờ hay dẫn ra sân trong?)\n- (A) My brother mentioned that. (Anh trai tôi đã đề cập đến điều đó.)\n- (B) How much does the box weigh? (Cái hộp nặng bao nhiêu?)\n- (C) To the lobby, I think. (Dẫn ra sảnh chờ, tôi nghĩ vậy.)\n2.",
+      "translation": "- Hỏi: Does this hallway lead to the lobby or to the courtyard? (Hành lang này dẫn ra sảnh chờ hay dẫn ra sân trong?)- (A) My brother mentioned that. (Anh trai tôi đã đề cập đến điều đó.)- (B) How much does the box weigh? (Cái hộp nặng bao nhiêu?)- (C) To the lobby, I think. (Dẫn ra sảnh chờ, tôi nghĩ vậy.)\n2.",
       "reasoning": "3.\nCâu hỏi là dạng câu hỏi lựa chọn 'or' (dẫn ra sảnh hay ra sân trong). Đáp án C trả lời trực tiếp sự lựa chọn: 'To the lobby, I think' (Tôi nghĩ là dẫn ra sảnh).",
       "glossary": [
        {
         "term": "hallway",
         "pos": "n",
         "ipa": "",
-        "meaning": "hành lang"
+        "meaning": "hành"
        },
        {
         "term": "to",
         "pos": "v",
         "ipa": "",
-        "meaning": "dẫn đến"
-       },
-       {
-        "term": "lobby",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "sảnh chờ"
-       },
-       {
-        "term": "courtyard",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "sân trong"
+        "meaning": "dẫn đếnlobby (n): sảnh chờcourtyard (n): sân trong"
        }
       ]
      }
@@ -1114,20 +990,14 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "- Hỏi: The company's headquarters is in Houston, right? (Trụ sở chính của công ty ở Houston, phải không?)\n- (A) This quarter's budget. (Ngân sách của quý này.)\n- (B) Let me look at the directory. (Để tôi xem danh bạ.)\n- (C) From nine to three. (Từ chín giờ đến ba giờ.)\n2.",
+      "translation": "- Hỏi: The company's headquarters is in Houston, right? (Trụ sở chính của công ty ở Houston, phải không?)- (A) This quarter's budget. (Ngân sách của quý này.)- (B) Let me look at the directory. (Để tôi xem danh bạ.)- (C) From nine to three. (Từ chín giờ đến ba giờ.)\n2.",
       "reasoning": "3.\nCâu hỏi là một câu hỏi đuôi để xác nhận thông tin (trụ sở chính ở Houston phải không). Đáp án B đưa ra cách để kiểm tra lại thông tin thay vì trả lời trực tiếp: 'Let me look at the directory' (Để tôi xem danh bạ).",
       "glossary": [
        {
         "term": "headquarters",
         "pos": "n",
         "ipa": "",
-        "meaning": "trụ sở chính"
-       },
-       {
-        "term": "directory",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "danh bạ"
+        "meaning": "trụ sở chínhdirectory (n): danh bạ"
        }
       ]
      }
@@ -1155,26 +1025,20 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "- Hỏi: Aren't the windows in the warehouse supposed to be replaced? (Chẳng phải cửa sổ trong nhà kho dự kiến sẽ được thay thế sao?)\n- (A) Sure, I'll frame the picture. (Chắc chắn rồi, tôi sẽ đóng khung bức tranh.)\n- (B) No, I don't have any. (Không, tôi không có cái nào.)\n- (C) Mr. Bora ordered them. (Ông Bora đã đặt hàng chúng rồi.)\n2.",
+      "translation": "- Hỏi: Aren't the windows in the warehouse supposed to be replaced? (Chẳng phải cửa sổ trong nhà kho dự kiến sẽ được thay thế sao?)- (A) Sure, I'll frame the picture. (Chắc chắn rồi, tôi sẽ đóng khung bức tranh.)- (B) No, I don't have any. (Không, tôi không có cái nào.)- (C) Mr. Bora ordered them. (Ông Bora đã đặt hàng chúng rồi.)\n2.",
       "reasoning": "3.\nCâu hỏi dạng phủ định hỏi về việc thay cửa sổ trong nhà kho. Đáp án C cung cấp thêm thông tin liên quan đến việc thay thế đó: 'Mr. Bora ordered them' (Ông Bora đã đặt chúng rồi) - ngụ ý rằng việc thay thế đang được tiến hành vì đã đặt hàng cửa sổ mới.",
       "glossary": [
        {
         "term": "warehouse",
         "pos": "n",
         "ipa": "",
-        "meaning": "nhà kho"
+        "meaning": "nhà"
        },
        {
         "term": "to",
         "pos": "phr",
         "ipa": "",
-        "meaning": "được cho là, dự kiến là"
-       },
-       {
-        "term": "replace",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "thay thế"
+        "meaning": "được cho là, dự kiến làreplace (v): thay thế"
        }
       ]
      }
@@ -1202,20 +1066,14 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "- Hỏi: Who's leading the workshop on Friday? (Ai sẽ là người dẫn dắt buổi hội thảo vào thứ Sáu?)\n- (A) Nice seeing you, too! (Cũng rất vui được gặp bạn!)\n- (B) The other team has a ten-point lead. (Đội kia đang dẫn trước 10 điểm.)\n- (C) It'll be Olga. (Sẽ là Olga.)\n2.",
+      "translation": "- Hỏi: Who's leading the workshop on Friday? (Ai sẽ là người dẫn dắt buổi hội thảo vào thứ Sáu?)- (A) Nice seeing you, too! (Cũng rất vui được gặp bạn!)- (B) The other team has a ten-point lead. (Đội kia đang dẫn trước 10 điểm.)- (C) It'll be Olga. (Sẽ là Olga.)\n2.",
       "reasoning": "3.\nCâu hỏi bắt đầu bằng 'Who' (Ai), hỏi về người dẫn dắt buổi hội thảo. Đáp án C trực tiếp chỉ ra tên của người đó: 'It'll be Olga' (Sẽ là Olga).",
       "glossary": [
        {
         "term": "lead",
         "pos": "v",
         "ipa": "",
-        "meaning": "dẫn dắt, lãnh đạo"
-       },
-       {
-        "term": "workshop",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "buổi hội thảo"
+        "meaning": "dẫn dắt, lãnh đạoworkshop (n): buổi hội thảo"
        }
       ]
      }
@@ -1243,15 +1101,9 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "- Hỏi: Should we join our department's book club? (Chúng ta có nên tham gia câu lạc bộ sách của bộ phận chúng ta không?)\n- (A) An award-winning author. (Một tác giả đoạt giải thưởng.)\n- (B) The office supplies are in the storage room. (Văn phòng phẩm ở trong phòng chứa đồ.)\n- (C) They could use a few more people. (Họ có thể cần thêm một vài người nữa đấy.)\n2.",
+      "translation": "- Hỏi: Should we join our department's book club? (Chúng ta có nên tham gia câu lạc bộ sách của bộ phận chúng ta không?)- (A) An award-winning author. (Một tác giả đoạt giải thưởng.)- (B) The office supplies are in the storage room. (Văn phòng phẩm ở trong phòng chứa đồ.)- (C) They could use a few more people. (Họ có thể cần thêm một vài người nữa đấy.)\n2.",
       "reasoning": "3.\nCâu hỏi xin ý kiến về việc tham gia câu lạc bộ sách. Đáp án C là một lời động viên ngụ ý đồng ý tham gia: 'They could use a few more people' (Họ có thể cần thêm một vài người nữa đấy).",
       "glossary": [
-       {
-        "term": "join",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "tham gia"
-       },
        {
         "term": "use",
         "pos": "phr",
@@ -1284,26 +1136,14 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "- Hỏi: Shouldn't this package be returned? (Chẳng phải gói hàng này nên được trả lại sao?)\n- (A) Several packets of stamps from the post office. (Một vài tệp tem từ bưu điện.)\n- (B) Yes, it has to go back to the manufacturer. (Đúng vậy, nó phải được trả về cho nhà sản xuất.)\n- (C) Didn't she return from her trip last week? (Chẳng phải cô ấy đã trở về từ chuyến đi tuần trước sao?)\n2.",
+      "translation": "- Hỏi: Shouldn't this package be returned? (Chẳng phải gói hàng này nên được trả lại sao?)- (A) Several packets of stamps from the post office. (Một vài tệp tem từ bưu điện.)- (B) Yes, it has to go back to the manufacturer. (Đúng vậy, nó phải được trả về cho nhà sản xuất.)- (C) Didn't she return from her trip last week? (Chẳng phải cô ấy đã trở về từ chuyến đi tuần trước sao?)\n2.",
       "reasoning": "3.\nCâu hỏi dạng phủ định hỏi về việc gửi trả lại gói hàng. Đáp án B đồng tình 'Yes' và giải thích thêm: 'nó phải được gửi trả lại cho nhà sản xuất'.",
       "glossary": [
        {
         "term": "package",
         "pos": "n",
         "ipa": "",
-        "meaning": "gói hàng"
-       },
-       {
-        "term": "return",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "gửi trả lại"
-       },
-       {
-        "term": "manufacturer",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "nhà sản xuất"
+        "meaning": "gói hàngreturn (v): gửi trả lạimanufacturer (n): nhà sản xuất"
        }
       ]
      }
@@ -1331,20 +1171,20 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "- Hỏi: When will the training sessions for the new security measures take place? (Các buổi đào tạo về các biện pháp an ninh mới sẽ diễn ra khi nào?)\n- (A) Yes, it was a complete success. (Vâng, đó là một thành công hoàn toàn.)\n- (B) The upstairs conference room is large enough. (Phòng hội nghị trên lầu đủ lớn.)\n- (C) Not until the start of next month. (Mãi cho đến đầu tháng sau.)\n2.",
+      "translation": "- Hỏi: When will the training sessions for the new security measures take place? (Các buổi đào tạo về các biện pháp an ninh mới sẽ diễn ra khi nào?)- (A) Yes, it was a complete success. (Vâng, đó là một thành công hoàn toàn.)- (B) The upstairs conference room is large enough. (Phòng hội nghị trên lầu đủ lớn.)- (C) Not until the start of next month. (Mãi cho đến đầu tháng sau.)\n2.",
       "reasoning": "3.\nCâu hỏi bắt đầu bằng 'When' (Khi nào), hỏi về thời gian diễn ra buổi tập huấn. Đáp án C đưa ra thông tin về thời điểm: 'Not until the start of next month' (Mãi cho đến đầu tháng sau).",
       "glossary": [
        {
         "term": "session",
         "pos": "n",
         "ipa": "",
-        "meaning": "buổi đào tạo"
+        "meaning": "buổi đào tạosecurity"
        },
        {
         "term": "measure",
         "pos": "n",
         "ipa": "",
-        "meaning": "biện pháp an ninh"
+        "meaning": "biện pháp"
        },
        {
         "term": "place",
@@ -1378,26 +1218,14 @@
      "broken": false,
      "answer": "A",
      "explanation": {
-      "translation": "- Hỏi: Do you want the draft of the proposal e-mailed to you or printed out? (Bạn muốn bản thảo của đề xuất được gửi email cho bạn hay in ra?)\n- (A) Erina will be the one reviewing it. (Erina sẽ là người xem xét nó.)\n- (B) They're too expensive. (Chúng quá đắt.)\n- (C) I can arrange a client dinner. (Tôi có thể sắp xếp một bữa tối với khách hàng.)\n2.",
+      "translation": "- Hỏi: Do you want the draft of the proposal e-mailed to you or printed out? (Bạn muốn bản thảo của đề xuất được gửi email cho bạn hay in ra?)- (A) Erina will be the one reviewing it. (Erina sẽ là người xem xét nó.)- (B) They're too expensive. (Chúng quá đắt.)- (C) I can arrange a client dinner. (Tôi có thể sắp xếp một bữa tối với khách hàng.)\n2.",
       "reasoning": "3.\nCâu hỏi là dạng câu hỏi lựa chọn (gửi email hay in ra). Tuy nhiên, đáp án A đưa ra một câu trả lời gián tiếp, chỉ ra rằng Erina mới là người phụ trách việc xem xét nên hãy hỏi hoặc gửi cho cô ấy: 'Erina will be the one reviewing it' (Erina sẽ là người xem xét nó).",
       "glossary": [
        {
         "term": "draft",
         "pos": "n",
         "ipa": "",
-        "meaning": "bản thảo"
-       },
-       {
-        "term": "proposal",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "bản đề xuất"
-       },
-       {
-        "term": "review",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "xem xét, duyệt lại"
+        "meaning": "bản thảoproposal (n): bản đề xuấtreview (v): xem xét, duyệt lại"
        }
       ]
      }
@@ -1425,20 +1253,14 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "- Hỏi: Which day is most convenient for you? (Ngày nào là thuận tiện nhất cho bạn?)\n- (A) Yes, I'd appreciate it. (Vâng, tôi rất cảm kích.)\n- (B) Well, the conference begins on Thursday. (Chà, hội nghị bắt đầu vào thứ Năm.)\n- (C) Yes, it's under the passenger seat. (Vâng, nó ở dưới ghế hành khách.)\n2.",
+      "translation": "- Hỏi: Which day is most convenient for you? (Ngày nào là thuận tiện nhất cho bạn?)- (A) Yes, I'd appreciate it. (Vâng, tôi rất cảm kích.)- (B) Well, the conference begins on Thursday. (Chà, hội nghị bắt đầu vào thứ Năm.)- (C) Yes, it's under the passenger seat. (Vâng, nó ở dưới ghế hành khách.)\n2.",
       "reasoning": "3.\nCâu hỏi bắt đầu bằng 'Which day' (Ngày nào), hỏi về sự lựa chọn ngày thuận tiện nhất. Đáp án B trả lời gián tiếp bằng cách đưa ra một thông tin liên quan đến ngày: 'Well, the conference begins on Thursday' (Chà, hội nghị bắt đầu vào thứ Năm - ngụ ý rằng thứ Năm trở đi sẽ bận hoặc nên chọn trước thứ Năm).",
       "glossary": [
        {
         "term": "convenient",
         "pos": "adj",
         "ipa": "",
-        "meaning": "thuận tiện"
-       },
-       {
-        "term": "appreciate",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "cảm kích, đánh giá cao"
+        "meaning": "thuận tiệnappreciate (v): cảm kích, đánh giá"
        },
        {
         "term": "seat",
@@ -1472,26 +1294,20 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "- Hỏi: Our department's looking for more interns. (Bộ phận của chúng ta đang tìm kiếm thêm thực tập sinh.)\n- (A) My phone has an extended warranty. (Điện thoại của tôi có bảo hành mở rộng.)\n- (B) What are the qualifications? (Các tiêu chuẩn/điều kiện là gì?)\n- (C) Yes, you completed your project. (Vâng, bạn đã hoàn thành dự án của mình.)\n2.",
+      "translation": "- Hỏi: Our department's looking for more interns. (Bộ phận của chúng ta đang tìm kiếm thêm thực tập sinh.)- (A) My phone has an extended warranty. (Điện thoại của tôi có bảo hành mở rộng.)- (B) What are the qualifications? (Các tiêu chuẩn/điều kiện là gì?)- (C) Yes, you completed your project. (Vâng, bạn đã hoàn thành dự án của mình.)\n2.",
       "reasoning": "3.\nCâu nói cung cấp thông tin (bộ phận chúng tôi đang tìm thêm thực tập sinh). Đáp án B là một lời phản hồi phù hợp để hỏi thêm thông tin về vị trí đó: 'What are the qualifications?' (Các tiêu chuẩn/điều kiện là gì?).",
       "glossary": [
        {
         "term": "intern",
         "pos": "n",
         "ipa": "",
-        "meaning": "thực tập sinh"
+        "meaning": "thực tập"
        },
        {
-        "term": "warranty",
+        "term": "sinhwarranty",
         "pos": "n",
         "ipa": "",
-        "meaning": "giấy bảo hành"
-       },
-       {
-        "term": "qualification",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "tiêu chuẩn, điều kiện (về năng lực)"
+        "meaning": "giấy bảo hànhqualification (n): tiêu chuẩn, điều kiện (về năng lực)"
        }
       ]
      }
@@ -1519,14 +1335,14 @@
      "broken": false,
      "answer": "A",
      "explanation": {
-      "translation": "- Hỏi: How was your lunch at the park? (Bữa trưa của bạn ở công viên thế nào?)\n- (A) I had an unexpected client meeting. (Tôi đã có một cuộc họp khách hàng đột xuất.)\n- (B) Three sugars, please. (Vui lòng cho ba viên đường.)\n- (C) It's on the top shelf. (Nó ở trên kệ trên cùng.)\n2.",
+      "translation": "- Hỏi: How was your lunch at the park? (Bữa trưa của bạn ở công viên thế nào?)- (A) I had an unexpected client meeting. (Tôi đã có một cuộc họp khách hàng đột xuất.)- (B) Three sugars, please. (Vui lòng cho ba viên đường.)- (C) It's on the top shelf. (Nó ở trên kệ trên cùng.)\n2.",
       "reasoning": "3.\nCâu hỏi 'How was your lunch...' hỏi thăm về bữa trưa ở công viên. Tuy nhiên, đáp án A giải thích lý do không thể ăn trưa ở công viên như dự định: 'I had an unexpected client meeting' (Tôi có một cuộc họp khách hàng đột xuất).",
       "glossary": [
        {
         "term": "unexpected",
         "pos": "adj",
         "ipa": "",
-        "meaning": "đột xuất, không lường trước"
+        "meaning": "đột xuất, không lường trướcclient"
        },
        {
         "term": "meeting",
@@ -1560,20 +1376,20 @@
      "broken": false,
      "answer": "A",
      "explanation": {
-      "translation": "- Hỏi: Does your company send out the same promotional material every month? (Công ty của bạn có gửi cùng một tài liệu quảng cáo mỗi tháng không?)\n- (A) We're going to try something new. (Chúng tôi dự định thử một cái gì đó mới mẻ.)\n- (B) The bank across the street. (Ngân hàng ở bên kia đường.)\n- (C) Niko just got promoted. (Niko vừa mới được thăng chức.)\n2.",
+      "translation": "- Hỏi: Does your company send out the same promotional material every month? (Công ty của bạn có gửi cùng một tài liệu quảng cáo mỗi tháng không?)- (A) We're going to try something new. (Chúng tôi dự định thử một cái gì đó mới mẻ.)- (B) The bank across the street. (Ngân hàng ở bên kia đường.)- (C) Niko just got promoted. (Niko vừa mới được thăng chức.)\n2.",
       "reasoning": "3.\nCâu hỏi dạng Yes/No hỏi về việc gửi cùng một tài liệu quảng cáo mỗi tháng. Đáp án A trả lời gián tiếp bằng cách phủ định điều đó: 'We're going to try something new' (Chúng tôi dự định thử một cái gì đó mới mẻ - tức là sẽ không gửi cái cũ nữa).",
       "glossary": [
        {
         "term": "out",
         "pos": "v",
         "ipa": "",
-        "meaning": "gửi đi"
+        "meaning": "gửi đipromotional"
        },
        {
         "term": "material",
         "pos": "n",
         "ipa": "",
-        "meaning": "tài liệu quảng cáo"
+        "meaning": "tài liệu quảng cáoget"
        },
        {
         "term": "promoted",
@@ -1607,26 +1423,14 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "- Hỏi: Where can I look at floor plans for our new office building? (Tôi có thể xem sơ đồ mặt bằng cho tòa nhà văn phòng mới của chúng ta ở đâu?)\n- (A) Yes, I'd like some coffee. (Vâng, tôi muốn một chút cà phê.)\n- (B) A few more résumés. (Thêm một vài sơ yếu lý lịch nữa.)\n- (C) I can ask the architect. (Tôi có thể hỏi kiến trúc sư.)\n2.",
+      "translation": "- Hỏi: Where can I look at floor plans for our new office building? (Tôi có thể xem sơ đồ mặt bằng cho tòa nhà văn phòng mới của chúng ta ở đâu?)- (A) Yes, I'd like some coffee. (Vâng, tôi muốn một chút cà phê.)- (B) A few more résumés. (Thêm một vài sơ yếu lý lịch nữa.)- (C) I can ask the architect. (Tôi có thể hỏi kiến trúc sư.)\n2.",
       "reasoning": "3.\nCâu hỏi bắt đầu bằng 'Where' (Ở đâu), tìm kiếm thông tin về sơ đồ mặt bằng. Đáp án C đưa ra giải pháp giúp đỡ: 'I can ask the architect' (Tôi có thể hỏi kiến trúc sư).",
       "glossary": [
        {
         "term": "plan",
         "pos": "n",
         "ipa": "",
-        "meaning": "sơ đồ mặt bằng"
-       },
-       {
-        "term": "résumé",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "sơ yếu lý lịch"
-       },
-       {
-        "term": "architect",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "kiến trúc sư"
+        "meaning": "sơ đồ mặt bằngrésumé (n): sơ yếu lý lịcharchitect (n): kiến trúc sư"
        }
       ]
      }
@@ -1654,14 +1458,14 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "- Hỏi: Can I use the company car to pick up the clients from the airport? (Tôi có thể sử dụng xe của công ty để đón khách hàng từ sân bay không?)\n- (A) Shenchao is the best project manager I know. (Shenchao là người quản lý dự án giỏi nhất mà tôi biết.)\n- (B) No, thanks-I've already been there. (Không, cảm ơn - tôi đã đến đó rồi.)\n- (C) The keys are on the desk over there. (Chìa khóa ở trên bàn đằng kia kìa.)\n2.",
+      "translation": "- Hỏi: Can I use the company car to pick up the clients from the airport? (Tôi có thể sử dụng xe của công ty để đón khách hàng từ sân bay không?)- (A) Shenchao is the best project manager I know. (Shenchao là người quản lý dự án giỏi nhất mà tôi biết.)- (B) No, thanks-I've already been there. (Không, cảm ơn - tôi đã đến đó rồi.)- (C) The keys are on the desk over there. (Chìa khóa ở trên bàn đằng kia kìa.)\n2.",
       "reasoning": "3.\nCâu hỏi xin phép sử dụng xe công ty ('Can I use...?'). Đáp án C ngầm đồng ý và chỉ ra vị trí chìa khóa xe: 'The keys are on the desk over there' (Chìa khóa ở trên bàn đằng kia).",
       "glossary": [
        {
         "term": "up",
         "pos": "v",
         "ipa": "",
-        "meaning": "đón (ai đó)"
+        "meaning": "đón (ai đó)project"
        },
        {
         "term": "manager",
@@ -1695,38 +1499,20 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "- Hỏi: How often should our heating system be inspected? (Hệ thống sưởi của chúng ta nên được kiểm tra bao lâu một lần?)\n- (A) Approximately $400. (Khoảng $400.)\n- (B) Because I have a meeting at that time. (Bởi vì tôi có một cuộc họp vào lúc đó.)\n- (C) The recommendation is in the manual. (Khuyến nghị nằm trong sách hướng dẫn.)\n2.",
+      "translation": "- Hỏi: How often should our heating system be inspected? (Hệ thống sưởi của chúng ta nên được kiểm tra bao lâu một lần?)- (A) Approximately $400. (Khoảng $400.)- (B) Because I have a meeting at that time. (Bởi vì tôi có một cuộc họp vào lúc đó.)- (C) The recommendation is in the manual. (Khuyến nghị nằm trong sách hướng dẫn.)\n2.",
       "reasoning": "3.\nCâu hỏi bắt đầu bằng 'How often' (Bao lâu một lần), hỏi về tần suất kiểm tra hệ thống sưởi. Đáp án C trả lời gián tiếp bằng cách chỉ ra nơi có thể tìm thấy thông tin đó: 'The recommendation is in the manual' (Khuyến nghị nằm trong sách hướng dẫn).",
       "glossary": [
        {
         "term": "system",
         "pos": "n",
         "ipa": "",
-        "meaning": "hệ thống sưởi"
+        "meaning": "hệ thống sưởiinspect (v): kiểm"
        },
        {
-        "term": "inspect",
-        "pos": "v",
-        "ipa": "",
-        "meaning": "kiểm tra"
-       },
-       {
-        "term": "approximately",
+        "term": "traapproximately",
         "pos": "adv",
         "ipa": "",
-        "meaning": "xấp xỉ, khoảng"
-       },
-       {
-        "term": "recommendation",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "sự khuyến nghị"
-       },
-       {
-        "term": "manual",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "sách hướng dẫn"
+        "meaning": "xấp xỉ, khoảngrecommendation (n): sự khuyến nghịmanual (n): sách hướng dẫn"
        }
       ]
      }
@@ -1800,7 +1586,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười đàn ông gọi người phụ nữ là \"Chef\" (Đầu bếp) và họ nhắc đến \"menu\" (thực đơn), \"patrons\" (khách hàng ăn uống). Do đó, họ làm việc tại một nhà hàng.",
+      "reasoning": "Người đàn ông gọi người phụ nữ là \"Chef\" (Đầu bếp) và họ nhắc đến \"menu\" (thực đơn), \"patrons\" (khách hàng ăn uống). Do đó, họ làm việc tại một nhà hàng.",
       "glossary": []
      }
     },
@@ -1819,7 +1605,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười đàn ông nói: \"we might need to consider that when we set the price for the dish\" (chúng ta có thể cần phải xem xét điều đó khi định giá cho món ăn).",
+      "reasoning": "Người đàn ông nói: \"we might need to consider that when we set the price for the dish\" (chúng ta có thể cần phải xem xét điều đó khi định giá cho món ăn).",
       "glossary": []
      }
     },
@@ -1838,7 +1624,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười phụ nữ quyết định: \"I'll call our supplier too\" (Tôi cũng sẽ gọi cho nhà cung cấp của chúng ta).\nĐOẠN HỘI THOẠI 2 (",
+      "reasoning": "Người phụ nữ quyết định: \"I'll call our supplier too\" (Tôi cũng sẽ gọi cho nhà cung cấp của chúng ta).\nĐOẠN HỘI THOẠI 2 (",
       "glossary": []
      }
     }
@@ -1911,7 +1697,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nCuộc hội thoại hỏi về chuyến tàu (\"does train 1401 stop...\") và người phụ nữ đáp \"The train leaves from platform twelve\" (Tàu khởi hành từ sân ga số 12).",
+      "reasoning": "Cuộc hội thoại hỏi về chuyến tàu (\"does train 1401 stop...\") và người phụ nữ đáp \"The train leaves from platform twelve\" (Tàu khởi hành từ sân ga số 12).",
       "glossary": []
      }
     },
@@ -1930,7 +1716,7 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười đàn ông thứ hai nói: \"I'm really looking forward to our company gala event tonight\" (Tôi thực sự mong đợi sự kiện dạ tiệc của công ty chúng ta tối nay).",
+      "reasoning": "Người đàn ông thứ hai nói: \"I'm really looking forward to our company gala event tonight\" (Tôi thực sự mong đợi sự kiện dạ tiệc của công ty chúng ta tối nay).",
       "glossary": []
      }
     },
@@ -1949,7 +1735,7 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nSergey (M1) hỏi: \"did you happen to bring an umbrella? I forgot mine.\" (Cậu có tình cờ mang theo ô không? Tôi quên ô của mình rồi).\nĐOẠN HỘI THOẠI 3 (",
+      "reasoning": "Sergey (M1) hỏi: \"did you happen to bring an umbrella? I forgot mine.\" (Cậu có tình cờ mang theo ô không? Tôi quên ô của mình rồi).\nĐOẠN HỘI THOẠI 3 (",
       "glossary": []
      }
     }
@@ -2034,7 +1820,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười phụ nữ thông báo rằng \"he's decided to start a delivery service\" (ông ấy đã quyết định bắt đầu một dịch vụ giao hàng).",
+      "reasoning": "Người phụ nữ thông báo rằng \"he's decided to start a delivery service\" (ông ấy đã quyết định bắt đầu một dịch vụ giao hàng).",
       "glossary": []
      }
     },
@@ -2053,7 +1839,7 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nHọ liên tục nhắc đến việc khách hàng đến lấy thuốc theo toa (\"prescriptions\") và lấy thuốc (\"medications\", \"medicine\"). Do đó, họ làm việc tại một hiệu thuốc.",
+      "reasoning": "Họ liên tục nhắc đến việc khách hàng đến lấy thuốc theo toa (\"prescriptions\") và lấy thuốc (\"medications\", \"medicine\"). Do đó, họ làm việc tại một hiệu thuốc.",
       "glossary": []
      }
     },
@@ -2072,7 +1858,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nCô ấy nói: \"I'm supposed to draft a job posting... Could you help me do that?\" (Tôi có nhiệm vụ soạn thảo một bài đăng tuyển dụng... Anh có thể giúp tôi làm việc đó không?).\nĐOẠN HỘI THOẠI 4 (",
+      "reasoning": "Cô ấy nói: \"I'm supposed to draft a job posting... Could you help me do that?\" (Tôi có nhiệm vụ soạn thảo một bài đăng tuyển dụng... Anh có thể giúp tôi làm việc đó không?).\nĐOẠN HỘI THOẠI 4 (",
       "glossary": []
      }
     }
@@ -2151,7 +1937,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười phụ nữ cho biết: \"Unfortunately, our sales are continuing to drop\" (Thật không may, doanh số bán hàng của chúng ta vẫn tiếp tục giảm).",
+      "reasoning": "Người phụ nữ cho biết: \"Unfortunately, our sales are continuing to drop\" (Thật không may, doanh số bán hàng của chúng ta vẫn tiếp tục giảm).",
       "glossary": []
      }
     },
@@ -2170,7 +1956,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nHọ kinh doanh \"clothing and gear for outdoor recreation\" (quần áo và dụng cụ giải trí ngoài trời) và muốn mời \"professional rock climber\" (vận động viên leo núi chuyên nghiệp).",
+      "reasoning": "Họ kinh doanh \"clothing and gear for outdoor recreation\" (quần áo và dụng cụ giải trí ngoài trời) và muốn mời \"professional rock climber\" (vận động viên leo núi chuyên nghiệp).",
       "glossary": []
      }
     },
@@ -2189,7 +1975,7 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười đàn ông hứa: \"I'll e-mail you a list this afternoon\" (Tôi sẽ gửi e-mail cho cô một danh sách vào chiều nay).\nĐOẠN HỘI THOẠI 5 (",
+      "reasoning": "Người đàn ông hứa: \"I'll e-mail you a list this afternoon\" (Tôi sẽ gửi e-mail cho cô một danh sách vào chiều nay).\nĐOẠN HỘI THOẠI 5 (",
       "glossary": []
      }
     }
@@ -2262,7 +2048,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nCô ấy giải thích mục đích: \"I was featured in an article... now when I click on the link, nothing happens\" (Tôi đã xuất hiện trong một bài báo... bây giờ tôi nhấp vào liên kết thì không có gì hiện ra).",
+      "reasoning": "Cô ấy giải thích mục đích: \"I was featured in an article... now when I click on the link, nothing happens\" (Tôi đã xuất hiện trong một bài báo... bây giờ tôi nhấp vào liên kết thì không có gì hiện ra).",
       "glossary": []
      }
     },
@@ -2281,7 +2067,7 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười đàn ông đề nghị: \"I can search for your article in our database\" (tôi có thể tìm bài báo của cô trong cơ sở dữ liệu của chúng tôi).",
+      "reasoning": "Người đàn ông đề nghị: \"I can search for your article in our database\" (tôi có thể tìm bài báo của cô trong cơ sở dữ liệu của chúng tôi).",
       "glossary": []
      }
     },
@@ -2300,7 +2086,7 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười phụ nữ cho biết: \"now I'm starting my own practice\" (bây giờ tôi đang mở phòng khám riêng). Việc tự mở phòng khám đồng nghĩa với việc cô ấy bắt đầu sự nghiệp kinh doanh của riêng mình.\nĐOẠN HỘI THOẠI 6 (",
+      "reasoning": "Người phụ nữ cho biết: \"now I'm starting my own practice\" (bây giờ tôi đang mở phòng khám riêng). Việc tự mở phòng khám đồng nghĩa với việc cô ấy bắt đầu sự nghiệp kinh doanh của riêng mình.\nĐOẠN HỘI THOẠI 6 (",
       "glossary": []
      }
     }
@@ -2391,7 +2177,7 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười phụ nữ nhắc đến cửa hàng tên \"Scott's Supplies\" và bán \"power tools and ladders\" (dụng cụ điện và thang). Người đàn ông cũng mua \"lumber\" (gỗ xẻ/vật liệu xây dựng). Điều này cho thấy đây là cửa hàng vật liệu xây dựng.",
+      "reasoning": "Người phụ nữ nhắc đến cửa hàng tên \"Scott's Supplies\" và bán \"power tools and ladders\" (dụng cụ điện và thang). Người đàn ông cũng mua \"lumber\" (gỗ xẻ/vật liệu xây dựng). Điều này cho thấy đây là cửa hàng vật liệu xây dựng.",
       "glossary": []
      }
     },
@@ -2410,7 +2196,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười đàn ông nói: \"the boards I purchased are the wrong width\" (những tấm ván mà tôi đã mua lại có chiều rộng không đúng). \"Wrong width\" (chiều rộng không đúng) đồng nghĩa với việc mua sai kích cỡ (wrong size).",
+      "reasoning": "Người đàn ông nói: \"the boards I purchased are the wrong width\" (những tấm ván mà tôi đã mua lại có chiều rộng không đúng). \"Wrong width\" (chiều rộng không đúng) đồng nghĩa với việc mua sai kích cỡ (wrong size).",
       "glossary": []
      }
     },
@@ -2429,7 +2215,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nVì người khách hàng không có biên lai (\"No... I must've lost it\"), nhân viên thu ngân bình thường sẽ không được phép tự ý hoàn tiền. Cô ấy cần gọi quản lý để xin ý kiến vì cô ấy không đủ thẩm quyền xử lý trường hợp không có biên lai.\nĐOẠN HỘI THOẠI 7 (",
+      "reasoning": "Vì người khách hàng không có biên lai (\"No... I must've lost it\"), nhân viên thu ngân bình thường sẽ không được phép tự ý hoàn tiền. Cô ấy cần gọi quản lý để xin ý kiến vì cô ấy không đủ thẩm quyền xử lý trường hợp không có biên lai.\nĐOẠN HỘI THOẠI 7 (",
       "glossary": []
      }
     }
@@ -2496,7 +2282,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười phụ nữ hỏi về \"lunch deliveries\" (các chuyến giao đồ ăn trưa) và người đàn ông kể lại chuyện \"food container fell out... walking up to a customer's door\" (hộp đồ ăn rơi ra... bước tới cửa khách hàng).",
+      "reasoning": "Người phụ nữ hỏi về \"lunch deliveries\" (các chuyến giao đồ ăn trưa) và người đàn ông kể lại chuyện \"food container fell out... walking up to a customer's door\" (hộp đồ ăn rơi ra... bước tới cửa khách hàng).",
       "glossary": []
      }
     },
@@ -2515,7 +2301,7 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nCô ấy khoe: \"I got the new delivery software installed and running while you were gone\" (Tôi đã cài đặt xong và chạy phần mềm giao hàng mới trong lúc anh đi vắng).",
+      "reasoning": "Cô ấy khoe: \"I got the new delivery software installed and running while you were gone\" (Tôi đã cài đặt xong và chạy phần mềm giao hàng mới trong lúc anh đi vắng).",
       "glossary": []
      }
     },
@@ -2534,7 +2320,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nỞ cuối đoạn hội thoại, cô ấy nhắc đến việc: \"we've recently had such a significant increase in customers\" (gần đây chúng ta có sự gia tăng lượng khách hàng đáng kể).\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 3 (Phần 2)\nĐOẠN HỘI THOẠI 8 (",
+      "reasoning": "Ở cuối đoạn hội thoại, cô ấy nhắc đến việc: \"we've recently had such a significant increase in customers\" (gần đây chúng ta có sự gia tăng lượng khách hàng đáng kể).\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 3 (Phần 2)\nĐOẠN HỘI THOẠI 8 (",
       "glossary": []
      }
     }
@@ -2619,7 +2405,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười đàn ông nói: \"We signed a contract to create an ad campaign\" (Chúng ta đã ký hợp đồng tạo một chiến dịch quảng cáo). \"Ad campaign\" (chiến dịch quảng cáo) cho thấy họ làm việc tại một công ty quảng cáo.",
+      "reasoning": "Người đàn ông nói: \"We signed a contract to create an ad campaign\" (Chúng ta đã ký hợp đồng tạo một chiến dịch quảng cáo). \"Ad campaign\" (chiến dịch quảng cáo) cho thấy họ làm việc tại một công ty quảng cáo.",
       "glossary": []
      }
     },
@@ -2638,7 +2424,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nBài nghe chỉ ra rằng HMD Incorporated \"just developed a new line of snacks\" (vừa phát triển một dòng đồ ăn nhẹ mới). Đồ ăn nhẹ (snacks) là một dạng sản phẩm (products).",
+      "reasoning": "Bài nghe chỉ ra rằng HMD Incorporated \"just developed a new line of snacks\" (vừa phát triển một dòng đồ ăn nhẹ mới). Đồ ăn nhẹ (snacks) là một dạng sản phẩm (products).",
       "glossary": []
      }
     },
@@ -2657,7 +2443,7 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nỞ cuối đoạn, người đàn ông nói: \"I'll schedule a meeting with them soon\" (Tôi sẽ sớm sắp xếp một cuộc họp với họ). \"Schedule\" (lên lịch) đồng nghĩa với \"arrange\" (sắp xếp).\nĐOẠN HỘI THOẠI 9 (",
+      "reasoning": "Ở cuối đoạn, người đàn ông nói: \"I'll schedule a meeting with them soon\" (Tôi sẽ sớm sắp xếp một cuộc họp với họ). \"Schedule\" (lên lịch) đồng nghĩa với \"arrange\" (sắp xếp).\nĐOẠN HỘI THOẠI 9 (",
       "glossary": []
      }
     }
@@ -2736,7 +2522,7 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười phụ nữ hỏi: \"have you finished the maintenance check on the small airplane...?\" (anh đã hoàn thành việc kiểm tra bảo trì chiếc máy bay nhỏ chưa?).",
+      "reasoning": "Người phụ nữ hỏi: \"have you finished the maintenance check on the small airplane...?\" (anh đã hoàn thành việc kiểm tra bảo trì chiếc máy bay nhỏ chưa?).",
       "glossary": []
      }
     },
@@ -2755,7 +2541,7 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nCamille thông báo: \"The manufacturer said there'll be a delay...\" (Nhà sản xuất cho biết sẽ có sự chậm trễ), nghĩa là bộ phận thay thế được đặt mua sẽ không được giao đúng hạn.",
+      "reasoning": "Camille thông báo: \"The manufacturer said there'll be a delay...\" (Nhà sản xuất cho biết sẽ có sự chậm trễ), nghĩa là bộ phận thay thế được đặt mua sẽ không được giao đúng hạn.",
       "glossary": []
      }
     },
@@ -2774,7 +2560,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nKhách hàng cần đến Toronto \"for a friend's wedding\" (để dự đám cưới của một người bạn).\nĐOẠN HỘI THOẠI 10 (",
+      "reasoning": "Khách hàng cần đến Toronto \"for a friend's wedding\" (để dự đám cưới của một người bạn).\nĐOẠN HỘI THOẠI 10 (",
       "glossary": []
      }
     }
@@ -2859,7 +2645,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười đàn ông nói rõ anh làm việc cho \"Quality Internet Service\".",
+      "reasoning": "Người đàn ông nói rõ anh làm việc cho \"Quality Internet Service\".",
       "glossary": []
      }
     },
@@ -2878,7 +2664,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nKhi nhân viên hỗ trợ lo lắng hỏi xem cô ấy có gặp vấn đề gì với dịch vụ không (khiến cô ấy phải đóng tài khoản), cô ấy giải thích lý do chuyển nhà là vì công việc. Việc này ngụ ý rằng dịch vụ vẫn tốt, cô hủy dịch vụ chỉ vì lý do cá nhân.",
+      "reasoning": "Khi nhân viên hỗ trợ lo lắng hỏi xem cô ấy có gặp vấn đề gì với dịch vụ không (khiến cô ấy phải đóng tài khoản), cô ấy giải thích lý do chuyển nhà là vì công việc. Việc này ngụ ý rằng dịch vụ vẫn tốt, cô hủy dịch vụ chỉ vì lý do cá nhân.",
       "glossary": []
      }
     },
@@ -2897,7 +2683,7 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười đàn ông hỏi cô ấy có sẵn lòng \"take a survey\" không, và cô ấy đồng ý (\"Certainly\").\nĐOẠN HỘI THOẠI 11 (",
+      "reasoning": "Người đàn ông hỏi cô ấy có sẵn lòng \"take a survey\" không, và cô ấy đồng ý (\"Certainly\").\nĐOẠN HỘI THOẠI 11 (",
       "glossary": []
      }
     }
@@ -2988,7 +2774,7 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nDựa vào hình ảnh đi kèm trong đề thi, bạn tìm giá tiền tương ứng của mặt hàng \"hand soap dispensers\" (bình xịt nước rửa tay) để đưa ra đáp án.",
+      "reasoning": "Dựa vào hình ảnh đi kèm trong đề thi, bạn tìm giá tiền tương ứng của mặt hàng \"hand soap dispensers\" (bình xịt nước rửa tay) để đưa ra đáp án.",
       "glossary": []
      }
     },
@@ -3007,7 +2793,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười phụ nữ yêu cầu dọn chỗ cho \"our new international foods section at the front of the store\" (khu vực thực phẩm quốc tế mới ở phía trước cửa hàng).",
+      "reasoning": "Người phụ nữ yêu cầu dọn chỗ cho \"our new international foods section at the front of the store\" (khu vực thực phẩm quốc tế mới ở phía trước cửa hàng).",
       "glossary": []
      }
     },
@@ -3026,7 +2812,7 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười đàn ông nói: \"That snowstorm up north really affected delivery schedules\" (Trận bão tuyết ở phía bắc thực sự đã ảnh hưởng đến lịch trình giao hàng). Bão tuyết chính là điều kiện thời tiết khắc nghiệt.\nĐOẠN HỘI THOẠI 12 (",
+      "reasoning": "Người đàn ông nói: \"That snowstorm up north really affected delivery schedules\" (Trận bão tuyết ở phía bắc thực sự đã ảnh hưởng đến lịch trình giao hàng). Bão tuyết chính là điều kiện thời tiết khắc nghiệt.\nĐOẠN HỘI THOẠI 12 (",
       "glossary": []
      }
     }
@@ -3099,7 +2885,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nAnh ấy gọi đến studio nhiếp ảnh và nói: \"I need to have a photo taken\" (tôi cần chụp một bức ảnh).",
+      "reasoning": "Anh ấy gọi đến studio nhiếp ảnh và nói: \"I need to have a photo taken\" (tôi cần chụp một bức ảnh).",
       "glossary": []
      }
     },
@@ -3118,7 +2904,7 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nCô ấy dặn: \"bring in a copy of the application\" (mang theo một bản sao của đơn đăng ký).",
+      "reasoning": "Cô ấy dặn: \"bring in a copy of the application\" (mang theo một bản sao của đơn đăng ký).",
       "glossary": []
      }
     },
@@ -3137,7 +2923,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nDựa vào hình ảnh lịch làm việc, bạn tìm xem ngày nào trong tuần studio mở cửa đến \"six P.M.\" (18h) theo như lời người phụ nữ nói để chọn đáp án phù hợp.\nĐOẠN HỘI THOẠI 13 (",
+      "reasoning": "Dựa vào hình ảnh lịch làm việc, bạn tìm xem ngày nào trong tuần studio mở cửa đến \"six P.M.\" (18h) theo như lời người phụ nữ nói để chọn đáp án phù hợp.\nĐOẠN HỘI THOẠI 13 (",
       "glossary": []
      }
     }
@@ -3222,7 +3008,7 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười đàn ông nhắc tới việc cô ấy tham dự \"dental hygienists' conference\" (hội nghị các chuyên viên vệ sinh nha khoa). Đây là một dạng hội nghị chuyên ngành (professional conference).",
+      "reasoning": "Người đàn ông nhắc tới việc cô ấy tham dự \"dental hygienists' conference\" (hội nghị các chuyên viên vệ sinh nha khoa). Đây là một dạng hội nghị chuyên ngành (professional conference).",
       "glossary": []
      }
     },
@@ -3241,7 +3027,7 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nAnh ấy nói: \"Once I receive them, I'll process your request for reimbursement\" (Khi nhận được chúng, tôi sẽ xử lý yêu cầu hoàn trả chi phí của cô).",
+      "reasoning": "Anh ấy nói: \"Once I receive them, I'll process your request for reimbursement\" (Khi nhận được chúng, tôi sẽ xử lý yêu cầu hoàn trả chi phí của cô).",
       "glossary": []
      }
     },
@@ -3260,7 +3046,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười phụ nữ thắc mắc: \"what should I use for the department code?\" (tôi nên sử dụng mã phòng ban nào?). Dựa vào hình ảnh biểu mẫu đi kèm, bạn đối chiếu xem \"department code\" nằm ở mục (section) số mấy để tìm ra đáp án.\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 4 (Phần 1)\nĐOẠN HỘI THOẠI 1 (",
+      "reasoning": "Người phụ nữ thắc mắc: \"what should I use for the department code?\" (tôi nên sử dụng mã phòng ban nào?). Dựa vào hình ảnh biểu mẫu đi kèm, bạn đối chiếu xem \"department code\" nằm ở mục (section) số mấy để tìm ra đáp án.\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 4 (Phần 1)\nĐOẠN HỘI THOẠI 1 (",
       "glossary": []
      }
     }
@@ -3351,7 +3137,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười nói mở đầu bài thông báo: \"The town's annual music festival is only a few months away...\" (Lễ hội âm nhạc thường niên của thị trấn chỉ còn vài tháng nữa...).",
+      "reasoning": "Người nói mở đầu bài thông báo: \"The town's annual music festival is only a few months away...\" (Lễ hội âm nhạc thường niên của thị trấn chỉ còn vài tháng nữa...).",
       "glossary": []
      }
     },
@@ -3370,7 +3156,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười nói trình bày khó khăn: \"However, we don't have enough fencing to create a larger seating area\" (Tuy nhiên, chúng ta không có đủ hàng rào để tạo ra một khu vực chỗ ngồi lớn hơn).",
+      "reasoning": "Người nói trình bày khó khăn: \"However, we don't have enough fencing to create a larger seating area\" (Tuy nhiên, chúng ta không có đủ hàng rào để tạo ra một khu vực chỗ ngồi lớn hơn).",
       "glossary": []
      }
     },
@@ -3389,7 +3175,7 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười nói nhờ Eniola: \"check sometime today to see whether we have money for extra fencing\" (kiểm tra vào hôm nay xem liệu chúng ta có tiền cho phần hàng rào thêm hay không). Việc kiểm tra xem có tiền hay không chính là kiểm tra ngân sách (budget).\nĐOẠN HỘI THOẠI 2 (",
+      "reasoning": "Người nói nhờ Eniola: \"check sometime today to see whether we have money for extra fencing\" (kiểm tra vào hôm nay xem liệu chúng ta có tiền cho phần hàng rào thêm hay không). Việc kiểm tra xem có tiền hay không chính là kiểm tra ngân sách (budget).\nĐOẠN HỘI THOẠI 2 (",
       "glossary": []
      }
     }
@@ -3480,7 +3266,7 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười nói chào mừng khách đến \"booth\" (gian hàng) và hy vọng họ thích thú với \"exhibits and demonstrations\" (các khu trưng bày và trình diễn). Đây là các đặc trưng thường thấy của một hội chợ thương mại (trade show).",
+      "reasoning": "Người nói chào mừng khách đến \"booth\" (gian hàng) và hy vọng họ thích thú với \"exhibits and demonstrations\" (các khu trưng bày và trình diễn). Đây là các đặc trưng thường thấy của một hội chợ thương mại (trade show).",
       "glossary": []
      }
     },
@@ -3499,7 +3285,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nCô ấy cho biết máy có thể tạo ra 96 nắp chai mỗi 2 giây, và sau đó thốt lên: \"That's incredibly fast!\" (Thật nhanh chóng một cách khó tin!). Do đó, tốc độ (speed) là điều cô ấy muốn nhấn mạnh.",
+      "reasoning": "Cô ấy cho biết máy có thể tạo ra 96 nắp chai mỗi 2 giây, và sau đó thốt lên: \"That's incredibly fast!\" (Thật nhanh chóng một cách khó tin!). Do đó, tốc độ (speed) là điều cô ấy muốn nhấn mạnh.",
       "glossary": []
      }
     },
@@ -3518,7 +3304,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười nói đưa ra lời chào mời: \"we're offering a ten percent discount on orders for this machine\" (chúng tôi sẽ giảm giá 10% cho các đơn đặt hàng loại máy này).\nĐOẠN HỘI THOẠI 3 (",
+      "reasoning": "Người nói đưa ra lời chào mời: \"we're offering a ten percent discount on orders for this machine\" (chúng tôi sẽ giảm giá 10% cho các đơn đặt hàng loại máy này).\nĐOẠN HỘI THOẠI 3 (",
       "glossary": []
      }
     }
@@ -3603,7 +3389,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nTên công ty là \"PCF Technologies\" và họ là nhà sản xuất \"computer chips\" (chip máy tính). Do đó, ngành công nghiệp của họ là Công nghệ.",
+      "reasoning": "Tên công ty là \"PCF Technologies\" và họ là nhà sản xuất \"computer chips\" (chip máy tính). Do đó, ngành công nghiệp của họ là Công nghệ.",
       "glossary": []
      }
     },
@@ -3619,8 +3405,12 @@
      },
      "showText": true,
      "broken": false,
-     "answer": null,
-     "explanation": null
+     "answer": "D",
+     "explanation": {
+      "translation": null,
+      "reasoning": "-\nTrong đoạn văn có câu: \"We've decided to make this change to allow us to have more control over the quality of the technology we produce.\" Công ty muốn thay đổi để kiểm soát chất lượng tốt hơn, trùng khớp với đáp án (D) To increase control over quality.",
+      "glossary": []
+     }
     },
     {
      "number": 79,
@@ -3637,7 +3427,7 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười nói thông báo: \"Those assignments will be communicated later in the morning\" (Những nhiệm vụ đó sẽ được thông báo vào cuối buổi sáng).\nĐOẠN HỘI THOẠI 4 (",
+      "reasoning": "Người nói thông báo: \"Those assignments will be communicated later in the morning\" (Những nhiệm vụ đó sẽ được thông báo vào cuối buổi sáng).\nĐOẠN HỘI THOẠI 4 (",
       "glossary": []
      }
     }
@@ -3719,8 +3509,12 @@
      },
      "showText": true,
      "broken": false,
-     "answer": null,
-     "explanation": null
+     "answer": "B",
+     "explanation": {
+      "translation": null,
+      "reasoning": "-\nNgay đầu bài nói: \"Welcome to Ag-Cast—a podcast all about the latest news in agriculture.\" (Nông nghiệp)",
+      "glossary": []
+     }
     },
     {
      "number": 81,
@@ -3734,8 +3528,12 @@
      },
      "showText": true,
      "broken": false,
-     "answer": null,
-     "explanation": null
+     "answer": "D",
+     "explanation": {
+      "translation": null,
+      "reasoning": "-\nNgười nói sửa lại lịch: \"I provided the wrong dates for the Farming Exposition... I'm sorry about that.\" (Cung cấp sai ngày)",
+      "glossary": []
+     }
     },
     {
      "number": 82,
@@ -3752,7 +3550,7 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười nói giới thiệu: \"Ms. Junko Adachi is the director at Fertilizer-ONE-a nonprofit organization...\" (Cô Junko Adachi là giám đốc tại Fertilizer-ONE - một tổ chức phi lợi nhuận...).\nĐOẠN HỘI THOẠI 5 (",
+      "reasoning": "Người nói giới thiệu: \"Ms. Junko Adachi is the director at Fertilizer-ONE-a nonprofit organization...\" (Cô Junko Adachi là giám đốc tại Fertilizer-ONE - một tổ chức phi lợi nhuận...).\nĐOẠN HỘI THOẠI 5 (",
       "glossary": []
      }
     }
@@ -3849,7 +3647,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười nói giới thiệu mình là \"the supervisor of the construction crew\" (người giám sát của đội thi công/xây dựng).",
+      "reasoning": "Người nói giới thiệu mình là \"the supervisor of the construction crew\" (người giám sát của đội thi công/xây dựng).",
       "glossary": []
      }
     },
@@ -3868,7 +3666,7 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nVấn đề xảy ra là do \"Your house was built a long time ago\" (Ngôi nhà của ông được xây dựng từ rất lâu rồi) dẫn đến \"frame alignment issues\" (vấn đề về căn chỉnh khung). Yếu tố \"xây từ lâu\" chính là tuổi đời (age) của tòa nhà.",
+      "reasoning": "Vấn đề xảy ra là do \"Your house was built a long time ago\" (Ngôi nhà của ông được xây dựng từ rất lâu rồi) dẫn đến \"frame alignment issues\" (vấn đề về căn chỉnh khung). Yếu tố \"xây từ lâu\" chính là tuổi đời (age) của tòa nhà.",
       "glossary": []
      }
     },
@@ -3887,7 +3685,7 @@
      "answer": "D",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nTrước câu nói đó, người phụ nữ nói \"we'll need to know how to proceed by tomorrow\" (chúng tôi cần biết cách tiếp tục như thế nào vào ngày mai). Bằng việc nói mình sẽ sẵn sàng nghe máy trong vài giờ tới, cô ấy mong muốn ông Flores gọi lại sớm để thảo luận và đưa ra quyết định.\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 4 (Phần 2)\nĐOẠN HỘI THOẠI 6 (",
+      "reasoning": "Trước câu nói đó, người phụ nữ nói \"we'll need to know how to proceed by tomorrow\" (chúng tôi cần biết cách tiếp tục như thế nào vào ngày mai). Bằng việc nói mình sẽ sẵn sàng nghe máy trong vài giờ tới, cô ấy mong muốn ông Flores gọi lại sớm để thảo luận và đưa ra quyết định.\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 4 (Phần 2)\nĐOẠN HỘI THOẠI 6 (",
       "glossary": []
      }
     }
@@ -3990,7 +3788,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười nói đề cập đến \"our bank branch\" (chi nhánh ngân hàng của chúng ta) và ra chỉ thị cho \"all supervisors\" (tất cả các giám sát viên). Vai trò này tương ứng với người quản lý của chi nhánh ngân hàng.",
+      "reasoning": "Người nói đề cập đến \"our bank branch\" (chi nhánh ngân hàng của chúng ta) và ra chỉ thị cho \"all supervisors\" (tất cả các giám sát viên). Vai trò này tương ứng với người quản lý của chi nhánh ngân hàng.",
       "glossary": []
      }
     },
@@ -4009,7 +3807,7 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười nói khẳng định: \"they were impressed with the quality of our customer service\" (họ bị ấn tượng bởi chất lượng dịch vụ khách hàng của chúng ta).",
+      "reasoning": "Người nói khẳng định: \"they were impressed with the quality of our customer service\" (họ bị ấn tượng bởi chất lượng dịch vụ khách hàng của chúng ta).",
       "glossary": []
      }
     },
@@ -4028,7 +3826,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nAnh ấy nói: \"I'd like all supervisors to talk to their staff about strategies to pitch our products...\" (Tôi muốn tất cả các giám sát viên nói chuyện với nhân viên của họ về các chiến lược để chào bán các sản phẩm...).\nĐOẠN HỘI THOẠI 7 (",
+      "reasoning": "Anh ấy nói: \"I'd like all supervisors to talk to their staff about strategies to pitch our products...\" (Tôi muốn tất cả các giám sát viên nói chuyện với nhân viên của họ về các chiến lược để chào bán các sản phẩm...).\nĐOẠN HỘI THOẠI 7 (",
       "glossary": []
      }
     }
@@ -4125,7 +3923,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười nói lý giải việc gọi mọi người đến sớm là vì: \"We have an unusually busy night ahead of us\" (Chúng ta có một đêm bận rộn một cách bất thường ở phía trước).",
+      "reasoning": "Người nói lý giải việc gọi mọi người đến sớm là vì: \"We have an unusually busy night ahead of us\" (Chúng ta có một đêm bận rộn một cách bất thường ở phía trước).",
       "glossary": []
      }
     },
@@ -4144,7 +3942,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nAnh ấy chỉ thị: \"Tables will need to come out of storage\" (Bàn sẽ cần được lấy ra khỏi kho).",
+      "reasoning": "Anh ấy chỉ thị: \"Tables will need to come out of storage\" (Bàn sẽ cần được lấy ra khỏi kho).",
       "glossary": []
      }
     },
@@ -4163,7 +3961,7 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nTrước câu nói đó, anh ấy đề cập đến việc muốn xem xét liệu món nấm cục có thể trở thành món thường xuyên trong thực đơn hay không (\"see if this could be a permanent menu item\"). Ban quản lý theo dõi doanh số của món này để ra quyết định đó.\nĐOẠN HỘI THOẠI 8 (",
+      "reasoning": "Trước câu nói đó, anh ấy đề cập đến việc muốn xem xét liệu món nấm cục có thể trở thành món thường xuyên trong thực đơn hay không (\"see if this could be a permanent menu item\"). Ban quản lý theo dõi doanh số của món này để ra quyết định đó.\nĐOẠN HỘI THOẠI 8 (",
       "glossary": []
      }
     }
@@ -4248,7 +4046,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười nói bắt đầu chương trình bằng câu: \"welcome to WBCO financial news\" (chào mừng đến với bản tin tài chính WBCO).",
+      "reasoning": "Người nói bắt đầu chương trình bằng câu: \"welcome to WBCO financial news\" (chào mừng đến với bản tin tài chính WBCO).",
       "glossary": []
      }
     },
@@ -4267,7 +4065,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nCô ấy đang nói về xu hướng \"surge pricing\" (định giá tăng vọt lúc cao điểm). Công nghệ này ban đầu chỉ dùng cho các hãng hàng không lớn, nhưng giờ đã phổ biến, giải thích tại sao hiện nay cả các doanh nghiệp nhỏ cũng áp dụng xu hướng này.",
+      "reasoning": "Cô ấy đang nói về xu hướng \"surge pricing\" (định giá tăng vọt lúc cao điểm). Công nghệ này ban đầu chỉ dùng cho các hãng hàng không lớn, nhưng giờ đã phổ biến, giải thích tại sao hiện nay cả các doanh nghiệp nhỏ cũng áp dụng xu hướng này.",
       "glossary": []
      }
     },
@@ -4286,7 +4084,7 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười nói giới thiệu: \"Last month he was the featured speaker at the International Economics Summit\" (Tháng trước, ông là diễn giả nổi bật tại Hội nghị thượng đỉnh Kinh tế Quốc tế).\nĐOẠN HỘI THOẠI 9 (",
+      "reasoning": "Người nói giới thiệu: \"Last month he was the featured speaker at the International Economics Summit\" (Tháng trước, ông là diễn giả nổi bật tại Hội nghị thượng đỉnh Kinh tế Quốc tế).\nĐOẠN HỘI THOẠI 9 (",
       "glossary": []
      }
     }
@@ -4365,7 +4163,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nAnh ấy gọi đến để thông báo thay đổi thời gian nhận hàng (từ thứ Sáu sang thứ Tư) và thay đổi giới hạn mua hàng in trên phiếu giảm giá. Đây là hành động sửa đổi/chỉnh sửa đơn hàng (revise an order).",
+      "reasoning": "Anh ấy gọi đến để thông báo thay đổi thời gian nhận hàng (từ thứ Sáu sang thứ Tư) và thay đổi giới hạn mua hàng in trên phiếu giảm giá. Đây là hành động sửa đổi/chỉnh sửa đơn hàng (revise an order).",
       "glossary": []
      }
     },
@@ -4384,7 +4182,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nAnh ấy nói: \"We just found out yesterday that our application... was approved\" (Chúng tôi vừa mới phát hiện ra vào hôm qua rằng đơn đăng ký của chúng tôi... đã được chấp thuận).",
+      "reasoning": "Anh ấy nói: \"We just found out yesterday that our application... was approved\" (Chúng tôi vừa mới phát hiện ra vào hôm qua rằng đơn đăng ký của chúng tôi... đã được chấp thuận).",
       "glossary": []
      }
     },
@@ -4403,7 +4201,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nDựa vào lời nói: \"change the limit to five items on the coupon\" (thay đổi giới hạn thành 5 mặt hàng trên phiếu giảm giá), bạn tìm kiếm con số quy định \"giới hạn mặt hàng\" (item limit) đang in trên phiếu hiện tại trong hình để chọn ra đáp án cần thay đổi.\nĐOẠN HỘI THOẠI 10 (",
+      "reasoning": "Dựa vào lời nói: \"change the limit to five items on the coupon\" (thay đổi giới hạn thành 5 mặt hàng trên phiếu giảm giá), bạn tìm kiếm con số quy định \"giới hạn mặt hàng\" (item limit) đang in trên phiếu hiện tại trong hình để chọn ra đáp án cần thay đổi.\nĐOẠN HỘI THOẠI 10 (",
       "glossary": []
      }
     }
@@ -4488,7 +4286,7 @@
      "answer": "A",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười nói thông báo: \"you got your first television audition! It's for a role in a TV drama\" (cậu đã nhận được buổi thử vai trên truyền hình đầu tiên! Đó là cho một vai diễn trong phim truyền hình). Người thử vai diễn xuất trên truyền hình là một diễn viên.",
+      "reasoning": "Người nói thông báo: \"you got your first television audition! It's for a role in a TV drama\" (cậu đã nhận được buổi thử vai trên truyền hình đầu tiên! Đó là cho một vai diễn trong phim truyền hình). Người thử vai diễn xuất trên truyền hình là một diễn viên.",
       "glossary": []
      }
     },
@@ -4507,7 +4305,7 @@
      "answer": "B",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười nói dặn dò: \"you should watch some videos of previous episodes\" (cậu nên xem một số video của các tập trước). \"Watch\" (xem) đồng nghĩa với \"review\" (xem xét lại).",
+      "reasoning": "Người nói dặn dò: \"you should watch some videos of previous episodes\" (cậu nên xem một số video của các tập trước). \"Watch\" (xem) đồng nghĩa với \"review\" (xem xét lại).",
       "glossary": []
      }
     },
@@ -4526,7 +4324,7 @@
      "answer": "C",
      "explanation": {
       "translation": null,
-      "reasoning": "-\nNgười nói khuyên: \"recommend taking the yellow line to the last stop\" (khuyên cậu nên đi tuyến màu vàng đến điểm dừng cuối cùng). Dựa vào bản đồ xe buýt đi kèm, bạn tìm tuyến màu vàng (yellow line) và xem điểm dừng cuối cùng của nó tên là gì để đưa ra đáp án.\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 5",
+      "reasoning": "Người nói khuyên: \"recommend taking the yellow line to the last stop\" (khuyên cậu nên đi tuyến màu vàng đến điểm dừng cuối cùng). Dựa vào bản đồ xe buýt đi kèm, bạn tìm tuyến màu vàng (yellow line) và xem điểm dừng cuối cùng của nó tên là gì để đưa ra đáp án.\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 5",
       "glossary": []
      }
     }
@@ -4551,8 +4349,8 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "Despite ------- youth, Ms. Cho is already quite popular on social media.\n(A) she (B) her (C) hers (D) herself\n2.\nMặc dù tuổi đời còn trẻ, cô Cho đã khá nổi tiếng trên mạng xã hội.\n- Phân tích: \"Despite her youth\" = mặc dù tuổi đời còn trẻ. \"she\" không đứng trước danh từ; \"hers\" không đi với danh từ; \"herself\" sai cấu trúc.\n- Glossary (Từ vựng/ Cụm từ):\nyouth (n): tuổi trẻ\npopular (adj): nổi tiếng",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Đại từ / Tính từ sở hữu)\n-",
+      "translation": "Despite ------- youth, Ms. Cho is already quite popular on social media.(A) she (B) her (C) hers (D) herself\n2.\nMặc dù tuổi đời còn trẻ, cô Cho đã khá nổi tiếng trên mạng xã hội.- Phân tích: \"Despite her youth\" = mặc dù tuổi đời còn trẻ. \"she\" không đứng trước danh từ; \"hers\" không đi với danh từ; \"herself\" sai cấu trúc.- Glossary (Từ vựng/ Cụm từ):youth (n): tuổi trẻpopular (adj): nổi tiếng",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Đại từ / Tính từ sở hữu)-",
       "glossary": []
      }
     }
@@ -4577,8 +4375,8 @@
      "broken": false,
      "answer": "A",
      "explanation": {
-      "translation": "Most of the materials distributed at last month's accounting conference are now ------- online.\n(A) available (B) intended (C) comparable (D) decisive\n2.\nHầu hết các tài liệu được phân phát tại hội nghị kế toán tháng trước hiện đã có sẵn trực tuyến.\n- Phân tích: \"be available online\" = có sẵn trên mạng. Các từ khác sai nghĩa/ngữ cảnh.\n- Glossary (Từ vựng/ Cụm từ):\ndistribute (v): phân phát\nmaterial (n): tài liệu",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Tính từ)\n-",
+      "translation": "Most of the materials distributed at last month's accounting conference are now ------- online.(A) available (B) intended (C) comparable (D) decisive\n2.\nHầu hết các tài liệu được phân phát tại hội nghị kế toán tháng trước hiện đã có sẵn trực tuyến.- Phân tích: \"be available online\" = có sẵn trên mạng. Các từ khác sai nghĩa/ngữ cảnh.- Glossary (Từ vựng/ Cụm từ):distribute (v): phân phátmaterial (n): tài liệu",
+      "reasoning": "3.\n- Phân loại: Từ vựng (Tính từ)-",
       "glossary": []
      }
     }
@@ -4603,8 +4401,8 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "A full-scale ------- will be conducted by the accounting department.\n(A) reviewer (B) review (C) reviewed (D) reviews\n2.\nMột cuộc đánh giá toàn diện sẽ được tiến hành bởi bộ phận kế toán.\n- Phân tích: \"conduct a review\" = tiến hành một cuộc đánh giá. \"reviewer\" là người, \"reviews\" số nhiều không hợp với mạo từ \"a\".\n- Glossary (Từ vựng/ Cụm từ):\nfull-scale (adj): toàn diện\nconduct (v): tiến hành",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Danh từ)\n-",
+      "translation": "A full-scale ------- will be conducted by the accounting department.(A) reviewer (B) review (C) reviewed (D) reviews\n2.\nMột cuộc đánh giá toàn diện sẽ được tiến hành bởi bộ phận kế toán.- Phân tích: \"conduct a review\" = tiến hành một cuộc đánh giá. \"reviewer\" là người, \"reviews\" số nhiều không hợp với mạo từ \"a\".- Glossary (Từ vựng/ Cụm từ):full-scale (adj): toàn diệnconduct (v): tiến hành",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Danh từ)-",
       "glossary": []
      }
     }
@@ -4629,8 +4427,8 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "Poshy Shoes vice president Lucille Jeris has been ------- to president of the company.\n(A) provided (B) decorated (C) promoted (D) responded\n2.\nPhó chủ tịch Poshy Shoes Lucille Jeris đã được thăng chức lên làm chủ tịch công ty.\n- Phân tích: \"be promoted to president\" = được thăng chức lên (vị trí chủ tịch).\n- Glossary (Từ vựng/ Cụm từ):\npromote (v): thăng chức\npresident (n): chủ tịch",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Động từ)\n-",
+      "translation": "Poshy Shoes vice president Lucille Jeris has been ------- to president of the company.(A) provided (B) decorated (C) promoted (D) responded\n2.\nPhó chủ tịch Poshy Shoes Lucille Jeris đã được thăng chức lên làm chủ tịch công ty.- Phân tích: \"be promoted to president\" = được thăng chức lên (vị trí chủ tịch).- Glossary (Từ vựng/ Cụm từ):promote (v): thăng chứcpresident (n): chủ tịch",
+      "reasoning": "3.\n- Phân loại: Từ vựng (Động từ)-",
       "glossary": []
      }
     }
@@ -4655,8 +4453,8 @@
      "broken": false,
      "answer": "D",
      "explanation": {
-      "translation": "The report found that employees who take regular breaks are more ------- than those who take no breaks.\n(A) production (B) productively (C) productivity (D) productive\n2.\nBáo cáo cho thấy những nhân viên nghỉ giải lao thường xuyên thì làm việc năng suất hơn những người không nghỉ ngơi.\n- Phân tích: Cấu trúc so sánh \"more productive than\" = năng suất hơn. Cần tính từ ở vị trí này sau to be \"are\".\n- Glossary (Từ vựng/ Cụm từ):\nregular break (n): sự nghỉ ngơi thường xuyên\nproductive (adj): năng suất",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Tính từ)\n-",
+      "translation": "The report found that employees who take regular breaks are more ------- than those who take no breaks.(A) production (B) productively (C) productivity (D) productive\n2.\nBáo cáo cho thấy những nhân viên nghỉ giải lao thường xuyên thì làm việc năng suất hơn những người không nghỉ ngơi.- Phân tích: Cấu trúc so sánh \"more productive than\" = năng suất hơn. Cần tính từ ở vị trí này sau to be \"are\".- Glossary (Từ vựng/ Cụm từ):regular break (n): sự nghỉ ngơi thường xuyênproductive (adj): năng suất",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Tính từ)-",
       "glossary": []
      }
     }
@@ -4681,8 +4479,8 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "Customers of Twins Photocopiers are encouraged to contact a ------- if their machines need repairs.\n(A) replacement (B) technician (C) renewal (D) structure\n2.\nKhách hàng của Twins Photocopiers được khuyến khích liên hệ với kỹ thuật viên nếu máy của họ cần sửa chữa.\n- Phân tích: \"contact a technician\" = liên hệ kỹ thuật viên.\n- Glossary (Từ vựng/ Cụm từ):\ntechnician (n): kỹ thuật viên\nrepair (n): sự sửa chữa",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Danh từ)\n-",
+      "translation": "Customers of Twins Photocopiers are encouraged to contact a ------- if their machines need repairs.(A) replacement (B) technician (C) renewal (D) structure\n2.\nKhách hàng của Twins Photocopiers được khuyến khích liên hệ với kỹ thuật viên nếu máy của họ cần sửa chữa.- Phân tích: \"contact a technician\" = liên hệ kỹ thuật viên.- Glossary (Từ vựng/ Cụm từ):technician (n): kỹ thuật viênrepair (n): sự sửa chữa",
+      "reasoning": "3.\n- Phân loại: Từ vựng (Danh từ)-",
       "glossary": []
      }
     }
@@ -4707,8 +4505,8 @@
      "broken": false,
      "answer": "A",
      "explanation": {
-      "translation": "The heavy traffic on the way to the airport ------- caused Ms. Ikeda to miss her flight.\n(A) nearly (B) near (C) nears (D) nearness\n2.\nGiao thông đông đúc trên đường đến sân bay suýt nữa đã khiến cô Ikeda lỡ chuyến bay của mình.\n- Phân tích: \"nearly caused\" = suýt nữa gây ra. Cần trạng từ bổ nghĩa cho động từ \"caused\".\n- Glossary (Từ vựng/ Cụm từ):\nheavy traffic (n): giao thông đông đúc\nmiss (v): bỏ lỡ",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Trạng từ)\n-",
+      "translation": "The heavy traffic on the way to the airport ------- caused Ms. Ikeda to miss her flight.(A) nearly (B) near (C) nears (D) nearness\n2.\nGiao thông đông đúc trên đường đến sân bay suýt nữa đã khiến cô Ikeda lỡ chuyến bay của mình.- Phân tích: \"nearly caused\" = suýt nữa gây ra. Cần trạng từ bổ nghĩa cho động từ \"caused\".- Glossary (Từ vựng/ Cụm từ):heavy traffic (n): giao thông đông đúcmiss (v): bỏ lỡ",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Trạng từ)-",
       "glossary": []
      }
     }
@@ -4733,8 +4531,8 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "A news source suggested that the merger will ------- take place next year.\n(A) originally (B) probably (C) regularly (D) thoughtfully\n2.\nMột nguồn tin cho rằng vụ sáp nhập có thể sẽ diễn ra vào năm tới.\n- Phân tích: \"will probably take place\" = có khả năng sẽ diễn ra.\n- Glossary (Từ vựng/ Cụm từ):\nmerger (n): sự sáp nhập\ntake place (v): diễn ra",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Trạng từ)\n-",
+      "translation": "A news source suggested that the merger will ------- take place next year.(A) originally (B) probably (C) regularly (D) thoughtfully\n2.\nMột nguồn tin cho rằng vụ sáp nhập có thể sẽ diễn ra vào năm tới.- Phân tích: \"will probably take place\" = có khả năng sẽ diễn ra.- Glossary (Từ vựng/ Cụm từ):merger (n): sự sáp nhậptake place (v): diễn ra",
+      "reasoning": "3.\n- Phân loại: Từ vựng (Trạng từ)-",
       "glossary": []
      }
     }
@@ -4759,8 +4557,8 @@
      "broken": false,
      "answer": "A",
      "explanation": {
-      "translation": "The Seaborne Inn has ------- beautiful guest rooms that can be booked on a monthly basis.\n(A) various (B) among (C) throughout (D) itself\n2.\nNhà trọ Seaborne có nhiều phòng khách xinh đẹp khác nhau có thể được đặt theo tháng.\n- Phân tích: \"various beautiful rooms\" = nhiều phòng khác nhau.\n- Glossary (Từ vựng/ Cụm từ):\nvarious (adj): nhiều, đa dạng\non a monthly basis (phr): theo tháng",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp / Từ vựng (Lượng từ / Tính từ)\n-",
+      "translation": "The Seaborne Inn has ------- beautiful guest rooms that can be booked on a monthly basis.(A) various (B) among (C) throughout (D) itself\n2.\nNhà trọ Seaborne có nhiều phòng khách xinh đẹp khác nhau có thể được đặt theo tháng.- Phân tích: \"various beautiful rooms\" = nhiều phòng khác nhau.- Glossary (Từ vựng/ Cụm từ):various (adj): nhiều, đa dạngon a monthly basis (phr): theo tháng",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp / Từ vựng (Lượng từ / Tính từ)-",
       "glossary": []
      }
     }
@@ -4785,8 +4583,8 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "Ahearn Accessories' retail shop is located ------- Gordon Avenue and Hutch Street.\n(A) until (B) against (C) at (D) aside from\n2.\nCửa hàng bán lẻ của Ahearn Accessories nằm tại giao lộ đại lộ Gordon và đường Hutch.\n- Phân tích: \"located at\" dùng cho vị trí cụ thể (tại một ngã tư/giao lộ).\n- Glossary (Từ vựng/ Cụm từ):\nretail shop (n): cửa hàng bán lẻ\nlocate (v): tọa lạc",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Giới từ)\n-",
+      "translation": "Ahearn Accessories' retail shop is located ------- Gordon Avenue and Hutch Street.(A) until (B) against (C) at (D) aside from\n2.\nCửa hàng bán lẻ của Ahearn Accessories nằm tại giao lộ đại lộ Gordon và đường Hutch.- Phân tích: \"located at\" dùng cho vị trí cụ thể (tại một ngã tư/giao lộ).- Glossary (Từ vựng/ Cụm từ):retail shop (n): cửa hàng bán lẻlocate (v): tọa lạc",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Giới từ)-",
       "glossary": []
      }
     }
@@ -4811,8 +4609,8 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "A majority of the city's residents rated its transportation app as -------.\n(A) acceptability (B) acceptable (C) acceptance (D) accepting\n2.\nPhần lớn cư dân thành phố đánh giá ứng dụng giao thông của họ là có thể chấp nhận được.\n- Phân tích: \"rated as acceptable\" = được đánh giá là chấp nhận được. Cần tính từ sau giới từ \"as\" để miêu tả ứng dụng.\n- Glossary (Từ vựng/ Cụm từ):\nmajority (n): phần lớn\nacceptable (adj): có thể chấp nhận",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Tính từ)\n-",
+      "translation": "A majority of the city's residents rated its transportation app as -------.(A) acceptability (B) acceptable (C) acceptance (D) accepting\n2.\nPhần lớn cư dân thành phố đánh giá ứng dụng giao thông của họ là có thể chấp nhận được.- Phân tích: \"rated as acceptable\" = được đánh giá là chấp nhận được. Cần tính từ sau giới từ \"as\" để miêu tả ứng dụng.- Glossary (Từ vựng/ Cụm từ):majority (n): phần lớnacceptable (adj): có thể chấp nhận",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Tính từ)-",
       "glossary": []
      }
     }
@@ -4837,8 +4635,8 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "Dr. Cheung ------- Silk Valley Hospital at next weekend's medical fair.\n(A) represent (B) did represent (C) is representing (D) had represented\n2.\nBác sĩ Cheung sẽ đại diện cho Bệnh viện Silk Valley tại hội chợ y tế cuối tuần tới.\n- Phân tích: \"next weekend\" là dấu hiệu của kế hoạch tương lai, dùng thì hiện tại tiếp diễn mang ý nghĩa tương lai dự định (is representing).\n- Glossary (Từ vựng/ Cụm từ):\nrepresent (v): đại diện\nfair (n): hội chợ",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Thì của động từ)\n-",
+      "translation": "Dr. Cheung ------- Silk Valley Hospital at next weekend's medical fair.(A) represent (B) did represent (C) is representing (D) had represented\n2.\nBác sĩ Cheung sẽ đại diện cho Bệnh viện Silk Valley tại hội chợ y tế cuối tuần tới.- Phân tích: \"next weekend\" là dấu hiệu của kế hoạch tương lai, dùng thì hiện tại tiếp diễn mang ý nghĩa tương lai dự định (is representing).- Glossary (Từ vựng/ Cụm từ):represent (v): đại diệnfair (n): hội chợ",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Thì của động từ)-",
       "glossary": []
      }
     }
@@ -4863,8 +4661,8 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "Frankie's Boutique had a financially ------- quarter after taking measures to reduce costs.\n(A) plain (B) profitable (C) full (D) additional\n2.\nFrankie's Boutique đã có một quý sinh lời về mặt tài chính sau khi thực hiện các biện pháp cắt giảm chi phí.\n- Phân tích: \"financially profitable\" = có lãi về mặt tài chính.\n- Glossary (Từ vựng/ Cụm từ):\nprofitable (adj): sinh lời\nmeasure (n): biện pháp",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Tính từ)\n-",
+      "translation": "Frankie's Boutique had a financially ------- quarter after taking measures to reduce costs.(A) plain (B) profitable (C) full (D) additional\n2.\nFrankie's Boutique đã có một quý sinh lời về mặt tài chính sau khi thực hiện các biện pháp cắt giảm chi phí.- Phân tích: \"financially profitable\" = có lãi về mặt tài chính.- Glossary (Từ vựng/ Cụm từ):profitable (adj): sinh lờimeasure (n): biện pháp",
+      "reasoning": "3.\n- Phân loại: Từ vựng (Tính từ)-",
       "glossary": []
      }
     }
@@ -4889,8 +4687,8 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "Because it submitted the lowest bid, Deb's Gifting has been chosen as the ------- of this year's holiday cards.\n(A) supply (B) supplier (C) supplies (D) supplying\n2.\nVì họ đã nộp hồ sơ dự thầu thấp nhất, Deb's Gifting đã được chọn làm nhà cung cấp thiệp chúc mừng lễ của năm nay.\n- Phân tích: \"chosen as the supplier\" = được chọn làm nhà cung cấp.\n- Glossary (Từ vựng/ Cụm từ):\nsubmit (v): nộp\nbid (n): hồ sơ dự thầu",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Danh từ chỉ người/nhà cung cấp)\n-",
+      "translation": "Because it submitted the lowest bid, Deb's Gifting has been chosen as the ------- of this year's holiday cards.(A) supply (B) supplier (C) supplies (D) supplying\n2.\nVì họ đã nộp hồ sơ dự thầu thấp nhất, Deb's Gifting đã được chọn làm nhà cung cấp thiệp chúc mừng lễ của năm nay.- Phân tích: \"chosen as the supplier\" = được chọn làm nhà cung cấp.- Glossary (Từ vựng/ Cụm từ):submit (v): nộpbid (n): hồ sơ dự thầu",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Danh từ chỉ người/nhà cung cấp)-",
       "glossary": []
      }
     }
@@ -4915,8 +4713,8 @@
      "broken": false,
      "answer": "D",
      "explanation": {
-      "translation": "The Whitetail Institute is the only ------- that tracks deer populations in rapidly expanding suburban areas.\n(A) leadership (B) neighborhood (C) official (D) organization\n2.\nViện Whitetail là tổ chức duy nhất theo dõi quần thể hươu ở các khu vực ngoại ô đang mở rộng nhanh chóng.\n- Phân tích: \"only organization that tracks\" = tổ chức duy nhất theo dõi.\n- Glossary (Từ vựng/ Cụm từ):\ntrack (v): theo dõi\nsuburban (adj): ngoại ô",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Danh từ)\n-",
+      "translation": "The Whitetail Institute is the only ------- that tracks deer populations in rapidly expanding suburban areas.(A) leadership (B) neighborhood (C) official (D) organization\n2.\nViện Whitetail là tổ chức duy nhất theo dõi quần thể hươu ở các khu vực ngoại ô đang mở rộng nhanh chóng.- Phân tích: \"only organization that tracks\" = tổ chức duy nhất theo dõi.- Glossary (Từ vựng/ Cụm từ):track (v): theo dõisuburban (adj): ngoại ô",
+      "reasoning": "3.\n- Phân loại: Từ vựng (Danh từ)-",
       "glossary": []
      }
     }
@@ -4941,8 +4739,8 @@
      "broken": false,
      "answer": "A",
      "explanation": {
-      "translation": "The committee members ------- attended the meeting are listed in the appendix.\n(A) who (B) they (C) when (D) some\n2.\nCác thành viên ủy ban những người đã tham dự cuộc họp được liệt kê trong phụ lục.\n- Phân tích: Cần đại từ quan hệ \"who\" thay thế cho danh từ chỉ người (\"members\") và làm chủ ngữ cho động từ \"attended\".\n- Glossary (Từ vựng/ Cụm từ):\ncommittee (n): ủy ban\nappendix (n): phụ lục",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Đại từ quan hệ)\n-",
+      "translation": "The committee members ------- attended the meeting are listed in the appendix.(A) who (B) they (C) when (D) some\n2.\nCác thành viên ủy ban những người đã tham dự cuộc họp được liệt kê trong phụ lục.- Phân tích: Cần đại từ quan hệ \"who\" thay thế cho danh từ chỉ người (\"members\") và làm chủ ngữ cho động từ \"attended\".- Glossary (Từ vựng/ Cụm từ):committee (n): ủy banappendix (n): phụ lục",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Đại từ quan hệ)-",
       "glossary": []
      }
     }
@@ -4967,8 +4765,8 @@
      "broken": false,
      "answer": "D",
      "explanation": {
-      "translation": "Our new app is ------- designed to provide data-driven insights to investment professionals.\n(A) specify (B) specific (C) specificity (D) specifically\n2.\nỨng dụng mới của chúng tôi được thiết kế một cách đặc thù để cung cấp thông tin chuyên sâu dựa trên dữ liệu cho các chuyên gia đầu tư.\n- Phân tích: \"specifically designed\" = được thiết kế một cách cụ thể/đặc thù. Cần trạng từ bổ nghĩa cho phân từ \"designed\".\n- Glossary (Từ vựng/ Cụm từ):\nspecifically (adv): một cách đặc thù/cụ thể\ninsight (n): thông tin chi tiết",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Trạng từ)\n-",
+      "translation": "Our new app is ------- designed to provide data-driven insights to investment professionals.(A) specify (B) specific (C) specificity (D) specifically\n2.\nỨng dụng mới của chúng tôi được thiết kế một cách đặc thù để cung cấp thông tin chuyên sâu dựa trên dữ liệu cho các chuyên gia đầu tư.- Phân tích: \"specifically designed\" = được thiết kế một cách cụ thể/đặc thù. Cần trạng từ bổ nghĩa cho phân từ \"designed\".- Glossary (Từ vựng/ Cụm từ):specifically (adv): một cách đặc thù/cụ thểinsight (n): thông tin chi tiết",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Trạng từ)-",
       "glossary": []
      }
     }
@@ -4993,8 +4791,8 @@
      "broken": false,
      "answer": "D",
      "explanation": {
-      "translation": "The results of the study suggest that more people ------- with night driving than previously believed.\n(A) struggles (B) struggling (C) to struggle (D) struggle\n2.\nKết quả của nghiên cứu cho thấy rằng có nhiều người gặp khó khăn với việc lái xe vào ban đêm hơn người ta từng tin trước đây.\n- Phân tích: Sau chủ ngữ số nhiều \"more people\" cần động từ chia ở số nhiều/nguyên thể (\"struggle\").\n- Glossary (Từ vựng/ Cụm từ):\nstudy (n): nghiên cứu\nstruggle (v): gặp khó khăn",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Sự hòa hợp chủ ngữ - động từ)\n-",
+      "translation": "The results of the study suggest that more people ------- with night driving than previously believed.(A) struggles (B) struggling (C) to struggle (D) struggle\n2.\nKết quả của nghiên cứu cho thấy rằng có nhiều người gặp khó khăn với việc lái xe vào ban đêm hơn người ta từng tin trước đây.- Phân tích: Sau chủ ngữ số nhiều \"more people\" cần động từ chia ở số nhiều/nguyên thể (\"struggle\").- Glossary (Từ vựng/ Cụm từ):study (n): nghiên cứustruggle (v): gặp khó khăn",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Sự hòa hợp chủ ngữ - động từ)-",
       "glossary": []
      }
     }
@@ -5019,8 +4817,8 @@
      "broken": false,
      "answer": "A",
      "explanation": {
-      "translation": "Each department has been asked to develop an action plan in ------- to the budget cuts announced last week.\n(A) response (B) effect (C) apology (D) confirmation\n2.\nMỗi bộ phận đã được yêu cầu phát triển một kế hoạch hành động để đối phó/phản hồi lại việc cắt giảm ngân sách được công bố vào tuần trước.\n- Phân tích: Cụm \"in response to\" = để phản ứng với, để đối phó với.\n- Glossary (Từ vựng/ Cụm từ):\nin response to (phr): để phản hồi lại\nbudget cut (n): cắt giảm ngân sách",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Cụm từ cố định)\n-",
+      "translation": "Each department has been asked to develop an action plan in ------- to the budget cuts announced last week.(A) response (B) effect (C) apology (D) confirmation\n2.\nMỗi bộ phận đã được yêu cầu phát triển một kế hoạch hành động để đối phó/phản hồi lại việc cắt giảm ngân sách được công bố vào tuần trước.- Phân tích: Cụm \"in response to\" = để phản ứng với, để đối phó với.- Glossary (Từ vựng/ Cụm từ):in response to (phr): để phản hồi lạibudget cut (n): cắt giảm ngân sách",
+      "reasoning": "3.\n- Phân loại: Từ vựng (Cụm từ cố định)-",
       "glossary": []
      }
     }
@@ -5045,8 +4843,8 @@
      "broken": false,
      "answer": "A",
      "explanation": {
-      "translation": "Our popular online training materials have ------- been shown to improve job seekers' skills.\n(A) consistently (B) emotionally (C) dressed (D) randomly\n2.\nTài liệu đào tạo trực tuyến phổ biến của chúng tôi đã luôn luôn được chứng minh là cải thiện các kỹ năng của người tìm việc.\n- Phân tích: \"have consistently been shown\" = luôn luôn/liên tục được chứng minh.\n- Glossary (Từ vựng/ Cụm từ):\nconsistently (adv): liên tục\njob seeker (n): người tìm việc",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Trạng từ)\n-",
+      "translation": "Our popular online training materials have ------- been shown to improve job seekers' skills.(A) consistently (B) emotionally (C) dressed (D) randomly\n2.\nTài liệu đào tạo trực tuyến phổ biến của chúng tôi đã luôn luôn được chứng minh là cải thiện các kỹ năng của người tìm việc.- Phân tích: \"have consistently been shown\" = luôn luôn/liên tục được chứng minh.- Glossary (Từ vựng/ Cụm từ):consistently (adv): liên tụcjob seeker (n): người tìm việc",
+      "reasoning": "3.\n- Phân loại: Từ vựng (Trạng từ)-",
       "glossary": []
      }
     }
@@ -5071,8 +4869,8 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "Ms. Yamada, ------- director of the Midlands Chamber of Commerce, was recently appointed to the state trade commission.\n(A) formed (B) former (C) formalize (D) formality\n2.\nBà Yamada, cựu giám đốc Phòng Thương mại Midlands, gần đây đã được bổ nhiệm vào ủy ban thương mại tiểu bang.\n- Phân tích: \"former director\" = cựu giám đốc.\n- Glossary (Từ vựng/ Cụm từ):\nformer (adj): cựu, cũ\nappoint (v): bổ nhiệm",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Tính từ)\n-",
+      "translation": "Ms. Yamada, ------- director of the Midlands Chamber of Commerce, was recently appointed to the state trade commission.(A) formed (B) former (C) formalize (D) formality\n2.\nBà Yamada, cựu giám đốc Phòng Thương mại Midlands, gần đây đã được bổ nhiệm vào ủy ban thương mại tiểu bang.- Phân tích: \"former director\" = cựu giám đốc.- Glossary (Từ vựng/ Cụm từ):former (adj): cựu, cũappoint (v): bổ nhiệm",
+      "reasoning": "3.\n- Phân loại: Từ vựng (Tính từ)-",
       "glossary": []
      }
     }
@@ -5097,8 +4895,8 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "The software uses computer memory efficiently, allowing users to open ------- five files simultaneously.\n(A) far from (B) as for (C) up to (D) out of\n2.\nPhần mềm sử dụng bộ nhớ máy tính một cách hiệu quả, cho phép người dùng mở cùng lúc tối đa năm tệp.\n- Phân tích: \"up to five files\" = tối đa năm tệp.\n- Glossary (Từ vựng/ Cụm từ):\nefficiently (adv): một cách hiệu quả\nsimultaneously (adv): đồng thời",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Giới từ / Cụm từ chỉ mức độ)\n-",
+      "translation": "The software uses computer memory efficiently, allowing users to open ------- five files simultaneously.(A) far from (B) as for (C) up to (D) out of\n2.\nPhần mềm sử dụng bộ nhớ máy tính một cách hiệu quả, cho phép người dùng mở cùng lúc tối đa năm tệp.- Phân tích: \"up to five files\" = tối đa năm tệp.- Glossary (Từ vựng/ Cụm từ):efficiently (adv): một cách hiệu quảsimultaneously (adv): đồng thời",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Giới từ / Cụm từ chỉ mức độ)-",
       "glossary": []
      }
     }
@@ -5123,8 +4921,8 @@
      "broken": false,
      "answer": "D",
      "explanation": {
-      "translation": "A monthly newsletter is an excellent way to ------- your group's activities and events.\n(A) realize (B) propose (C) observe (D) promote\n2.\nBản tin hàng tháng là một cách tuyệt vời để quảng bá các hoạt động và sự kiện của nhóm bạn.\n- Phân tích: \"promote activities\" = quảng bá hoạt động.\n- Glossary (Từ vựng/ Cụm từ):\nnewsletter (n): bản tin\npromote (v): quảng bá",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Động từ)\n-",
+      "translation": "A monthly newsletter is an excellent way to ------- your group's activities and events.(A) realize (B) propose (C) observe (D) promote\n2.\nBản tin hàng tháng là một cách tuyệt vời để quảng bá các hoạt động và sự kiện của nhóm bạn.- Phân tích: \"promote activities\" = quảng bá hoạt động.- Glossary (Từ vựng/ Cụm từ):newsletter (n): bản tinpromote (v): quảng bá",
+      "reasoning": "3.\n- Phân loại: Từ vựng (Động từ)-",
       "glossary": []
      }
     }
@@ -5149,8 +4947,8 @@
      "broken": false,
      "answer": "A",
      "explanation": {
-      "translation": "------- the hotel does not have a restaurant on site, there are many dining options nearby.\n(A) While (B) Such as (C) Unless (D) Without\n2.\nMặc dù khách sạn không có nhà hàng trong khuôn viên, nhưng có rất nhiều lựa chọn ăn uống ở khu vực gần đó.\n- Phân tích: \"While\" ở đây mang nghĩa là mặc dù, phù hợp với ngữ cảnh tương phản giữa hai mệnh đề.\n- Glossary (Từ vựng/ Cụm từ):\non site (adv): tại chỗ\ndining option (n): lựa chọn ăn uống",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Liên từ)\n-",
+      "translation": "------- the hotel does not have a restaurant on site, there are many dining options nearby.(A) While (B) Such as (C) Unless (D) Without\n2.\nMặc dù khách sạn không có nhà hàng trong khuôn viên, nhưng có rất nhiều lựa chọn ăn uống ở khu vực gần đó.- Phân tích: \"While\" ở đây mang nghĩa là mặc dù, phù hợp với ngữ cảnh tương phản giữa hai mệnh đề.- Glossary (Từ vựng/ Cụm từ):on site (adv): tại chỗdining option (n): lựa chọn ăn uống",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Liên từ)-",
       "glossary": []
      }
     }
@@ -5175,8 +4973,8 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "------- a slight decline in revenue from the previous quarter, Blakely Components is moving forward with its expansion plan.\n(A) Aside (B) Despite (C) Becoming (D) Often\n2.\nBất chấp sự sụt giảm doanh thu nhẹ so với quý trước, Blakely Components vẫn đang tiến tới với kế hoạch mở rộng của mình.\n- Phân tích: \"Despite\" + cụm danh từ mang nghĩa \"mặc dù / bất chấp\".\n- Glossary (Từ vựng/ Cụm từ):\ndecline (n): sự sụt giảm\nexpansion (n): sự mở rộng",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Giới từ)\n-",
+      "translation": "------- a slight decline in revenue from the previous quarter, Blakely Components is moving forward with its expansion plan.(A) Aside (B) Despite (C) Becoming (D) Often\n2.\nBất chấp sự sụt giảm doanh thu nhẹ so với quý trước, Blakely Components vẫn đang tiến tới với kế hoạch mở rộng của mình.- Phân tích: \"Despite\" + cụm danh từ mang nghĩa \"mặc dù / bất chấp\".- Glossary (Từ vựng/ Cụm từ):decline (n): sự sụt giảmexpansion (n): sự mở rộng",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Giới từ)-",
       "glossary": []
      }
     }
@@ -5201,8 +4999,8 @@
      "broken": false,
      "answer": "A",
      "explanation": {
-      "translation": "Abelia Dairy Company has undergone several changes in leadership ------- the past ten years.\n(A) over (B) into (C) since (D) beside\n2.\nCông ty sữa Abelia đã trải qua một vài thay đổi trong ban lãnh đạo trong suốt 10 năm qua.\n- Phân tích: Cụm \"over the past ten years\" = trong suốt 10 năm qua. Đi kèm với thì hiện tại hoàn thành.\n- Glossary (Từ vựng/ Cụm từ):\nundergo (v): trải qua\nleadership (n): ban lãnh đạo",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Giới từ chỉ thời gian)\n-",
+      "translation": "Abelia Dairy Company has undergone several changes in leadership ------- the past ten years.(A) over (B) into (C) since (D) beside\n2.\nCông ty sữa Abelia đã trải qua một vài thay đổi trong ban lãnh đạo trong suốt 10 năm qua.- Phân tích: Cụm \"over the past ten years\" = trong suốt 10 năm qua. Đi kèm với thì hiện tại hoàn thành.- Glossary (Từ vựng/ Cụm từ):undergo (v): trải qualeadership (n): ban lãnh đạo",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Giới từ chỉ thời gian)-",
       "glossary": []
      }
     }
@@ -5227,8 +5025,8 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "Opal City's Community Theater is holding ------- for its spring production during the first week of December.\n(A) to audition (B) auditioned (C) auditions (D) audition\n2.\nNhà hát Cộng đồng Opal City đang tổ chức các buổi thử vai cho vở diễn mùa xuân của họ trong suốt tuần đầu tiên của tháng Mười Hai.\n- Phân tích: Cụm \"holding auditions\" = tổ chức các buổi tuyển vai/thử vai. Cần danh từ số nhiều (hoặc có mạo từ nếu số ít).\n- Glossary (Từ vựng/ Cụm từ):\naudition (n): buổi thử vai\nproduction (n): vở diễn/sự sản xuất",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Danh từ)\n-",
+      "translation": "Opal City's Community Theater is holding ------- for its spring production during the first week of December.(A) to audition (B) auditioned (C) auditions (D) audition\n2.\nNhà hát Cộng đồng Opal City đang tổ chức các buổi thử vai cho vở diễn mùa xuân của họ trong suốt tuần đầu tiên của tháng Mười Hai.- Phân tích: Cụm \"holding auditions\" = tổ chức các buổi tuyển vai/thử vai. Cần danh từ số nhiều (hoặc có mạo từ nếu số ít).- Glossary (Từ vựng/ Cụm từ):audition (n): buổi thử vaiproduction (n): vở diễn/sự sản xuất",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Danh từ)-",
       "glossary": []
      }
     }
@@ -5253,8 +5051,8 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "Mr. Kane said he packed so ------- this morning that he forgot to bring a suit and tie for tomorrow's dinner.\n(A) enormously (B) briefly (C) hastily (D) mysteriously\n2.\nÔng Kane nói rằng sáng nay ông ấy đã đóng gói hành lý quá vội vàng đến nỗi ông ấy đã quên mang theo bộ vest và cà vạt cho bữa tối ngày mai.\n- Phân tích: \"packed so hastily\" = đóng đồ quá vội vàng.\n- Glossary (Từ vựng/ Cụm từ):\nhastily (adv): một cách vội vàng\nsuit and tie (n): áo vest và cà vạt",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Trạng từ)\n-",
+      "translation": "Mr. Kane said he packed so ------- this morning that he forgot to bring a suit and tie for tomorrow's dinner.(A) enormously (B) briefly (C) hastily (D) mysteriously\n2.\nÔng Kane nói rằng sáng nay ông ấy đã đóng gói hành lý quá vội vàng đến nỗi ông ấy đã quên mang theo bộ vest và cà vạt cho bữa tối ngày mai.- Phân tích: \"packed so hastily\" = đóng đồ quá vội vàng.- Glossary (Từ vựng/ Cụm từ):hastily (adv): một cách vội vàngsuit and tie (n): áo vest và cà vạt",
+      "reasoning": "3.\n- Phân loại: Từ vựng (Trạng từ)-",
       "glossary": []
      }
     }
@@ -5279,8 +5077,8 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "Long before the training program began, Ms. Morris ------- the schedule to allow her team to attend.\n(A) was revised (B) is revising (C) had revised (D) has to revise\n2.\nRất lâu trước khi chương trình đào tạo bắt đầu, cô Morris đã sửa đổi lại lịch trình để cho phép đội của cô ấy tham dự.\n- Phân tích: Hành động \"revised\" xảy ra trước một hành động khác trong quá khứ (\"began\"), do đó yêu cầu thì quá khứ hoàn thành (\"had revised\").\n- Glossary (Từ vựng/ Cụm từ):\nrevise (v): sửa đổi\nattend (v): tham dự",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Thì của động từ)\n-",
+      "translation": "Long before the training program began, Ms. Morris ------- the schedule to allow her team to attend.(A) was revised (B) is revising (C) had revised (D) has to revise\n2.\nRất lâu trước khi chương trình đào tạo bắt đầu, cô Morris đã sửa đổi lại lịch trình để cho phép đội của cô ấy tham dự.- Phân tích: Hành động \"revised\" xảy ra trước một hành động khác trong quá khứ (\"began\"), do đó yêu cầu thì quá khứ hoàn thành (\"had revised\").- Glossary (Từ vựng/ Cụm từ):revise (v): sửa đổiattend (v): tham dự",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Thì của động từ)-",
       "glossary": []
      }
     }
@@ -5305,8 +5103,8 @@
      "broken": false,
      "answer": "A",
      "explanation": {
-      "translation": "Mr. Swan will return to the planning meeting ------- the interns have arrived.\n(A) once (B) unlike (C) whereas (D) regarding\n2.\nÔng Swan sẽ quay lại cuộc họp lập kế hoạch ngay khi các thực tập sinh đến.\n- Phân tích: \"once\" = ngay khi, đóng vai trò liên từ nối hai mệnh đề chỉ thời gian.\n- Glossary (Từ vựng/ Cụm từ):\nintern (n): thực tập sinh\narrive (v): đến nơi\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 6",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Liên từ thời gian)\n-",
+      "translation": "Mr. Swan will return to the planning meeting ------- the interns have arrived.(A) once (B) unlike (C) whereas (D) regarding\n2.\nÔng Swan sẽ quay lại cuộc họp lập kế hoạch ngay khi các thực tập sinh đến.- Phân tích: \"once\" = ngay khi, đóng vai trò liên từ nối hai mệnh đề chỉ thời gian.- Glossary (Từ vựng/ Cụm từ):intern (n): thực tập sinharrive (v): đến nơi\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 6",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Liên từ thời gian)-",
       "glossary": []
      }
     }
@@ -5339,7 +5137,7 @@
      "answer": "A",
      "explanation": {
       "translation": "(A) purchase (B) purchaser (C) purchased (D) purchasing\n2.",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại)\n- Dịch nghĩa các đáp án: (A) đơn hàng/sự mua sắm (B) người mua (C) đã mua (D) việc mua\n- Phân tích: Sau \"every\" cần danh từ số ít đếm được. Dựa vào ngữ cảnh, \"purchase\" (đơn hàng/việc mua hàng) là phù hợp nhất.\n- Glossary (Từ vựng/ Cụm từ):\npurchase (n): đơn hàng/sự mua sắm",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại)- Dịch nghĩa các đáp án: (A) đơn hàng/sự mua sắm (B) người mua (C) đã mua (D) việc mua- Phân tích: Sau \"every\" cần danh từ số ít đếm được. Dựa vào ngữ cảnh, \"purchase\" (đơn hàng/việc mua hàng) là phù hợp nhất.- Glossary (Từ vựng/ Cụm từ):purchase (n): đơn hàng/sự mua sắm",
       "glossary": []
      }
     },
@@ -5358,7 +5156,7 @@
      "answer": "D",
      "explanation": {
       "translation": "(A) automate (B) automatic (C) automation (D) automatically\n2.",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Trạng từ)\n- Dịch nghĩa các đáp án: (A) tự động hóa (động từ) (B) tự động (tính từ) (C) sự tự động hóa (danh từ) (D) một cách tự động (trạng từ)\n- Phân tích: Cần trạng từ bổ nghĩa cho phân từ \"deposited\" (được gửi/được nạp một cách tự động).\n- Glossary (Từ vựng/ Cụm từ):\ndeposit (v): gửi tiền/nạp tiền\nautomatically (adv): một cách tự động",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Trạng từ)- Dịch nghĩa các đáp án: (A) tự động hóa (động từ) (B) tự động (tính từ) (C) sự tự động hóa (danh từ) (D) một cách tự động (trạng từ)- Phân tích: Cần trạng từ bổ nghĩa cho phân từ \"deposited\" (được gửi/được nạp một cách tự động).- Glossary (Từ vựng/ Cụm từ):deposit (v): gửi tiền/nạp tiềnautomatically (adv): một cách tự động",
       "glossary": []
      }
     },
@@ -5377,7 +5175,7 @@
      "answer": "A",
      "explanation": {
       "translation": "(A) Alternatively (B) Likewise (C) Nevertheless (D) Frequently\n2.",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Trạng từ liên kết)\n- Dịch nghĩa các đáp án: (A) Ngoài ra / Hoặc là (B) Tương tự như vậy (C) Tuy nhiên (D) Thường xuyên\n- Phân tích: Nối tiếp phương án trước, \"Alternatively\" (Ngoài ra/Hoặc là) đưa ra một sự lựa chọn thay thế trong ngữ cảnh đoạn văn.\n- Glossary (Từ vựng/ Cụm từ):\nalternatively (adv): ngoài ra/hoặc là",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Trạng từ liên kết)- Dịch nghĩa các đáp án: (A) Ngoài ra / Hoặc là (B) Tương tự như vậy (C) Tuy nhiên (D) Thường xuyên- Phân tích: Nối tiếp phương án trước, \"Alternatively\" (Ngoài ra/Hoặc là) đưa ra một sự lựa chọn thay thế trong ngữ cảnh đoạn văn.- Glossary (Từ vựng/ Cụm từ):alternatively (adv): ngoài ra/hoặc là",
       "glossary": []
      }
     },
@@ -5395,8 +5193,8 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "(A) The use of double rewards...\n(B) Don't wait-the double-rewards promotion ends on January 31.\n(C) Please make sure...\n(D) Thank you for...\n2.",
-      "reasoning": "3.\n- Phân loại: Đọc hiểu (Điền câu vào đoạn văn)\n- Dịch nghĩa các đáp án:\n(A) Việc sử dụng điểm thưởng nhân đôi...\n(B) Đừng chần chừ - chương trình khuyến mãi điểm thưởng nhân đôi kết thúc vào ngày 31 tháng 1.\n(C) Vui lòng đảm bảo...\n(D) Cảm ơn bạn vì...\n- Phân tích: Câu sau nhắc việc mức thưởng trở lại bình thường vào ngày 1/2, nên câu này thông báo ngày kết thúc khuyến mãi (31/1) là hợp lý nhất về mặt logic.\n- Glossary (Từ vựng/ Cụm từ):\npromotion (n): chương trình khuyến mãi",
+      "translation": "(A) The use of double rewards...(B) Don't wait-the double-rewards promotion ends on January 31.(C) Please make sure...(D) Thank you for...\n2.",
+      "reasoning": "3.\n- Phân loại: Đọc hiểu (Điền câu vào đoạn văn)- Dịch nghĩa các đáp án:(A) Việc sử dụng điểm thưởng nhân đôi...(B) Đừng chần chừ - chương trình khuyến mãi điểm thưởng nhân đôi kết thúc vào ngày 31 tháng 1.(C) Vui lòng đảm bảo...(D) Cảm ơn bạn vì...- Phân tích: Câu sau nhắc việc mức thưởng trở lại bình thường vào ngày 1/2, nên câu này thông báo ngày kết thúc khuyến mãi (31/1) là hợp lý nhất về mặt logic.- Glossary (Từ vựng/ Cụm từ):promotion (n): chương trình khuyến mãi",
       "glossary": []
      }
     }
@@ -5429,7 +5227,7 @@
      "answer": "B",
      "explanation": {
       "translation": "(A) Originally (B) Instead (C) Regardless (D) Moreover\n2.",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Trạng từ liên kết)\n- Dịch nghĩa các đáp án: (A) Ban đầu (B) Thay vào đó (C) Bất kể (D) Hơn nữa\n- Phân tích: Cô ấy không rời công ty, \"Instead\" (Thay vào đó) cô ấy đảm nhiệm vị trí mới.\n- Glossary (Từ vựng/ Cụm từ):\ninstead (adv): thay vào đó",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Trạng từ liên kết)- Dịch nghĩa các đáp án: (A) Ban đầu (B) Thay vào đó (C) Bất kể (D) Hơn nữa- Phân tích: Cô ấy không rời công ty, \"Instead\" (Thay vào đó) cô ấy đảm nhiệm vị trí mới.- Glossary (Từ vựng/ Cụm từ):instead (adv): thay vào đó",
       "glossary": []
      }
     },
@@ -5448,7 +5246,7 @@
      "answer": "B",
      "explanation": {
       "translation": "(A) availability (B) promotion (C) cooperation (D) generosity\n2.",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Danh từ)\n- Dịch nghĩa các đáp án: (A) sự có sẵn (B) sự thăng chức/khuyến mãi (C) sự hợp tác (D) sự hào phóng\n- Phân tích: Việc chuyển lên làm quản lý vùng là một sự thăng chức (\"promotion\").\n- Glossary (Từ vựng/ Cụm từ):\ngenerosity (n): sự hào phóng",
+      "reasoning": "3.\n- Phân loại: Từ vựng (Danh từ)- Dịch nghĩa các đáp án: (A) sự có sẵn (B) sự thăng chức/khuyến mãi (C) sự hợp tác (D) sự hào phóng- Phân tích: Việc chuyển lên làm quản lý vùng là một sự thăng chức (\"promotion\").- Glossary (Từ vựng/ Cụm từ):generosity (n): sự hào phóng",
       "glossary": []
      }
     },
@@ -5467,7 +5265,7 @@
      "answer": "A",
      "explanation": {
       "translation": "(A) final (B) finalize (C) finalized (D) finally\n2.",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Tính từ)\n- Dịch nghĩa các đáp án: (A) cuối cùng (tính từ) (B) hoàn tất (động từ) (C) đã hoàn tất (phân từ) (D) cuối cùng (trạng từ)\n- Phân tích: Cần tính từ bổ nghĩa cho danh từ \"day\" (ngày làm việc cuối cùng).\n- Glossary (Từ vựng/ Cụm từ):\nfinalize (v): hoàn tất",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Từ loại - Tính từ)- Dịch nghĩa các đáp án: (A) cuối cùng (tính từ) (B) hoàn tất (động từ) (C) đã hoàn tất (phân từ) (D) cuối cùng (trạng từ)- Phân tích: Cần tính từ bổ nghĩa cho danh từ \"day\" (ngày làm việc cuối cùng).- Glossary (Từ vựng/ Cụm từ):finalize (v): hoàn tất",
       "glossary": []
      }
     },
@@ -5485,8 +5283,8 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "(A) Our day will start...\n(B) She was the best...\n(C) Please join us for coffee and cake.\n(D) The break room is...\n2.",
-      "reasoning": "3.\n- Phân loại: Đọc hiểu (Điền câu vào đoạn văn)\n- Dịch nghĩa các đáp án:\n(A) Ngày của chúng ta sẽ bắt đầu...\n(B) Cô ấy là người giỏi nhất...\n(C) Vui lòng tham gia cùng chúng tôi để dùng cà phê và bánh.\n(D) Phòng nghỉ thì...\n- Phân tích: Câu trước đề cập tổ chức bữa tiệc (party), nên mời dùng cà phê và bánh là hợp lý nhất.\n- Glossary (Từ vựng/ Cụm từ):\nbreak room (n): phòng nghỉ",
+      "translation": "(A) Our day will start...(B) She was the best...(C) Please join us for coffee and cake.(D) The break room is...\n2.",
+      "reasoning": "3.\n- Phân loại: Đọc hiểu (Điền câu vào đoạn văn)- Dịch nghĩa các đáp án:(A) Ngày của chúng ta sẽ bắt đầu...(B) Cô ấy là người giỏi nhất...(C) Vui lòng tham gia cùng chúng tôi để dùng cà phê và bánh.(D) Phòng nghỉ thì...- Phân tích: Câu trước đề cập tổ chức bữa tiệc (party), nên mời dùng cà phê và bánh là hợp lý nhất.- Glossary (Từ vựng/ Cụm từ):break room (n): phòng nghỉ",
       "glossary": []
      }
     }
@@ -5518,8 +5316,8 @@
      "broken": false,
      "answer": "B",
      "explanation": {
-      "translation": "(A) Investors often expect...\n(B) Reveal your company's greatest strength from the outset.\n(C) Make sure to cite...\n(D) An infusion of cash...\n2.",
-      "reasoning": "3.\n- Phân loại: Đọc hiểu (Điền câu vào đoạn văn)\n- Dịch nghĩa các đáp án:\n(A) Các nhà đầu tư thường mong đợi...\n(B) Hãy tiết lộ điểm mạnh lớn nhất của công ty bạn ngay từ đầu.\n(C) Hãy chắc chắn trích dẫn...\n(D) Một sự truyền tiền mặt/bơm vốn...\n- Phân tích: Câu trước khuyên không để nhà đầu tư chờ đợi, nên câu này khuyên tiết lộ điểm mạnh lớn nhất ngay từ đầu là sự tiếp nối logic.\n- Glossary (Từ vựng/ Cụm từ):\nstrength (n): điểm mạnh\noutset (n): sự bắt đầu",
+      "translation": "(A) Investors often expect...(B) Reveal your company's greatest strength from the outset.(C) Make sure to cite...(D) An infusion of cash...\n2.",
+      "reasoning": "3.\n- Phân loại: Đọc hiểu (Điền câu vào đoạn văn)- Dịch nghĩa các đáp án:(A) Các nhà đầu tư thường mong đợi...(B) Hãy tiết lộ điểm mạnh lớn nhất của công ty bạn ngay từ đầu.(C) Hãy chắc chắn trích dẫn...(D) Một sự truyền tiền mặt/bơm vốn...- Phân tích: Câu trước khuyên không để nhà đầu tư chờ đợi, nên câu này khuyên tiết lộ điểm mạnh lớn nhất ngay từ đầu là sự tiếp nối logic.- Glossary (Từ vựng/ Cụm từ):strength (n): điểm mạnhoutset (n): sự bắt đầu",
       "glossary": []
      }
     },
@@ -5538,7 +5336,7 @@
      "answer": "D",
      "explanation": {
       "translation": "(A) capable (B) progressive (C) first (D) relevant\n2.",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Tính từ đi kèm giới từ)\n- Dịch nghĩa các đáp án: (A) có khả năng (B) tiến bộ (C) đầu tiên (D) có liên quan/thích hợp\n- Phân tích: Cụm từ \"relevant to something\" = liên quan đến/thích hợp với cái gì đó.\n- Glossary (Từ vựng/ Cụm từ):\nrelevant (adj): có liên quan",
+      "reasoning": "3.\n- Phân loại: Từ vựng (Tính từ đi kèm giới từ)- Dịch nghĩa các đáp án: (A) có khả năng (B) tiến bộ (C) đầu tiên (D) có liên quan/thích hợp- Phân tích: Cụm từ \"relevant to something\" = liên quan đến/thích hợp với cái gì đó.- Glossary (Từ vựng/ Cụm từ):relevant (adj): có liên quan",
       "glossary": []
      }
     },
@@ -5557,7 +5355,7 @@
      "answer": "C",
      "explanation": {
       "translation": "(A) it (B) that (C) what (D) anything\n2.",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Đại từ quan hệ)\n- Dịch nghĩa các đáp án: (A) nó (B) rằng/cái mà (C) điều mà/những gì (D) bất cứ thứ gì\n- Phân tích: \"what\" (điều mà/những gì) làm đại từ quan hệ đóng vai trò chủ ngữ cho mệnh đề danh ngữ trong câu.\n- Glossary (Từ vựng/ Cụm từ):\ninvestor (n): nhà đầu tư",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Đại từ quan hệ)- Dịch nghĩa các đáp án: (A) nó (B) rằng/cái mà (C) điều mà/những gì (D) bất cứ thứ gì- Phân tích: \"what\" (điều mà/những gì) làm đại từ quan hệ đóng vai trò chủ ngữ cho mệnh đề danh ngữ trong câu.- Glossary (Từ vựng/ Cụm từ):investor (n): nhà đầu tư",
       "glossary": []
      }
     },
@@ -5576,7 +5374,7 @@
      "answer": "A",
      "explanation": {
       "translation": "(A) funding (B) property (C) materials (D) awards\n2.",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Danh từ)\n- Dịch nghĩa các đáp án: (A) nguồn vốn/kinh phí (B) tài sản (C) vật liệu (D) giải thưởng\n- Phân tích: Mục đích thuyết trình trước nhà đầu tư là tìm kiếm nguồn vốn/sự tài trợ (\"funding\").\n- Glossary (Từ vựng/ Cụm từ):\nfunding (n): nguồn vốn",
+      "reasoning": "3.\n- Phân loại: Từ vựng (Danh từ)- Dịch nghĩa các đáp án: (A) nguồn vốn/kinh phí (B) tài sản (C) vật liệu (D) giải thưởng- Phân tích: Mục đích thuyết trình trước nhà đầu tư là tìm kiếm nguồn vốn/sự tài trợ (\"funding\").- Glossary (Từ vựng/ Cụm từ):funding (n): nguồn vốn",
       "glossary": []
      }
     }
@@ -5609,7 +5407,7 @@
      "answer": "B",
      "explanation": {
       "translation": "(A) course (B) system (C) account (D) plan\n2.",
-      "reasoning": "3.\n- Phân loại: Từ vựng (Danh từ)\n- Dịch nghĩa các đáp án: (A) khóa học (B) hệ thống (C) tài khoản (D) kế hoạch\n- Phân tích: Đang nói về \"online payroll portal\" (cổng thông tin trả lương trực tuyến), tức là một hệ thống (\"system\").\n- Glossary (Từ vựng/ Cụm từ):\npayroll (n): bảng lương",
+      "reasoning": "3.\n- Phân loại: Từ vựng (Danh từ)- Dịch nghĩa các đáp án: (A) khóa học (B) hệ thống (C) tài khoản (D) kế hoạch- Phân tích: Đang nói về \"online payroll portal\" (cổng thông tin trả lương trực tuyến), tức là một hệ thống (\"system\").- Glossary (Từ vựng/ Cụm từ):payroll (n): bảng lương",
       "glossary": []
      }
     },
@@ -5627,8 +5425,8 @@
      "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "(A) enabled (B) enabling (C) will enable (D) would have enabled\n2.\nsẽ cho phép\n- Phân tích: Đang nói về tính năng của trang web sau khi hoàn thành việc nâng cấp trong tương lai, do đó dùng thì tương lai đơn (\"will enable\").\n- Glossary (Từ vựng/ Cụm từ):\nenable (v): cho phép",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Thì của động từ)\n-",
+      "translation": "(A) enabled (B) enabling (C) will enable (D) would have enabled\n2.\nsẽ cho phép- Phân tích: Đang nói về tính năng của trang web sau khi hoàn thành việc nâng cấp trong tương lai, do đó dùng thì tương lai đơn (\"will enable\").- Glossary (Từ vựng/ Cụm từ):enable (v): cho phép",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Thì của động từ)-",
       "glossary": []
      }
     },
@@ -5646,8 +5444,8 @@
      "broken": false,
      "answer": "D",
      "explanation": {
-      "translation": "(A) This gathering will...\n(B) Our shareholders will...\n(C) Productivity reductions...\n(D) This function will optimize the services offered by the department.\n2.",
-      "reasoning": "3.\n- Phân loại: Đọc hiểu (Điền câu vào đoạn văn)\n- Dịch nghĩa các đáp án:\n(A) Sự tụ tập này sẽ...\n(B) Các cổ đông của chúng ta sẽ...\n(C) Sự sụt giảm năng suất...\n(D) Chức năng này sẽ tối ưu hóa các dịch vụ do bộ phận cung cấp.\n- Phân tích: Câu trước nói về chức năng \"live-chat\" (trò chuyện trực tiếp) mới, do vậy câu này giải thích rằng chức năng đó sẽ tối ưu hóa dịch vụ là phù hợp ngữ cảnh nhất.\n- Glossary (Từ vựng/ Cụm từ):\noptimize (v): tối ưu hóa",
+      "translation": "(A) This gathering will...(B) Our shareholders will...(C) Productivity reductions...(D) This function will optimize the services offered by the department.\n2.",
+      "reasoning": "3.\n- Phân loại: Đọc hiểu (Điền câu vào đoạn văn)- Dịch nghĩa các đáp án:(A) Sự tụ tập này sẽ...(B) Các cổ đông của chúng ta sẽ...(C) Sự sụt giảm năng suất...(D) Chức năng này sẽ tối ưu hóa các dịch vụ do bộ phận cung cấp.- Phân tích: Câu trước nói về chức năng \"live-chat\" (trò chuyện trực tiếp) mới, do vậy câu này giải thích rằng chức năng đó sẽ tối ưu hóa dịch vụ là phù hợp ngữ cảnh nhất.- Glossary (Từ vựng/ Cụm từ):optimize (v): tối ưu hóa",
       "glossary": []
      }
     },
@@ -5666,7 +5464,7 @@
      "answer": "C",
      "explanation": {
       "translation": "(A) apart from (B) along with (C) during (D) toward\n2.",
-      "reasoning": "3.\n- Phân loại: Ngữ pháp (Giới từ)\n- Dịch nghĩa các đáp án: (A) ngoại trừ (B) cùng với (C) trong suốt (D) hướng về\n- Phân tích: Dùng \"during\" (trong suốt) để nói về việc cần xem chi tiết lương trong khoảng thời gian hệ thống đang bảo trì.\n- Glossary (Từ vựng/ Cụm từ):\napart from (phr): ngoại trừ\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 7 (Phần 1)",
+      "reasoning": "3.\n- Phân loại: Ngữ pháp (Giới từ)- Dịch nghĩa các đáp án: (A) ngoại trừ (B) cùng với (C) trong suốt (D) hướng về- Phân tích: Dùng \"during\" (trong suốt) để nói về việc cần xem chi tiết lương trong khoảng thời gian hệ thống đang bảo trì.- Glossary (Từ vựng/ Cụm từ):apart from (phr): ngoại trừ\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 7 (Phần 1)",
       "glossary": []
      }
     }
@@ -5699,7 +5497,7 @@
      "answer": "D",
      "explanation": {
       "translation": "What service is NOT included with the special?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Dịch vụ nào KHÔNG được bao gồm trong gói ưu đãi đặc biệt?\n- Dịch đáp án: (D) Rửa xe ô tô\n- Phân loại: Đọc hiểu (Tìm chi tiết phủ định)\n- Phân tích: Dịch vụ thay dầu, thay lọc, kiểm tra xe được liệt kê. Rửa xe không có.\n- Glossary (Từ vựng/ Cụm từ):\ncar wash (n): sự rửa xe ô tô\noil change (n): sự thay dầu",
+      "reasoning": "3.\n- Dịch câu hỏi: Dịch vụ nào KHÔNG được bao gồm trong gói ưu đãi đặc biệt?- Dịch đáp án: (D) Rửa xe ô tô- Phân loại: Đọc hiểu (Tìm chi tiết phủ định)- Phân tích: Dịch vụ thay dầu, thay lọc, kiểm tra xe được liệt kê. Rửa xe không có.- Glossary (Từ vựng/ Cụm từ):car wash (n): sự rửa xe ô tôoil change (n): sự thay dầu",
       "glossary": []
      }
     },
@@ -5718,7 +5516,7 @@
      "answer": "C",
      "explanation": {
       "translation": "What is indicated about the coupon?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Điều gì được chỉ ra về phiếu giảm giá?\n- Dịch đáp án: (C) Nó phải được sử dụng trước cuối tháng Tám.\n- Phân loại: Đọc hiểu (Tìm chi tiết / Suy luận)\n- Phân tích: Ưu đãi có giá trị cho đến hết ngày 31 tháng 8.\n- Glossary (Từ vựng/ Cụm từ):\nindicate (v): chỉ ra\nvalid (adj): có hiệu lực",
+      "reasoning": "3.\n- Dịch câu hỏi: Điều gì được chỉ ra về phiếu giảm giá?- Dịch đáp án: (C) Nó phải được sử dụng trước cuối tháng Tám.- Phân loại: Đọc hiểu (Tìm chi tiết / Suy luận)- Phân tích: Ưu đãi có giá trị cho đến hết ngày 31 tháng 8.- Glossary (Từ vựng/ Cụm từ):indicate (v): chỉ ravalid (adj): có hiệu lực",
       "glossary": []
      }
     }
@@ -5751,7 +5549,7 @@
      "answer": "B",
      "explanation": {
       "translation": "What is the main purpose of the article?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Mục đích chính của bài báo là gì?\n- Dịch đáp án: (B) Để công bố sự khởi đầu của một dự án cải tạo\n- Phân loại: Đọc hiểu (Hỏi mục đích chính)\n- Phân tích: Bài báo quảng bá việc bắt đầu dự án cải tạo Ga tàu hỏa River Avenue.\n- Glossary (Từ vựng/ Cụm từ):\npublicize (v): công bố\nrenovation (n): sự cải tạo",
+      "reasoning": "3.\n- Dịch câu hỏi: Mục đích chính của bài báo là gì?- Dịch đáp án: (B) Để công bố sự khởi đầu của một dự án cải tạo- Phân loại: Đọc hiểu (Hỏi mục đích chính)- Phân tích: Bài báo quảng bá việc bắt đầu dự án cải tạo Ga tàu hỏa River Avenue.- Glossary (Từ vựng/ Cụm từ):publicize (v): công bốrenovation (n): sự cải tạo",
       "glossary": []
      }
     },
@@ -5770,7 +5568,7 @@
      "answer": "D",
      "explanation": {
       "translation": "According to the article, what will happen in March?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Theo bài báo, chuyện gì sẽ xảy ra vào tháng Ba?\n- Dịch đáp án: (D) Các nghệ sĩ sẽ gửi ý tưởng trang trí tường\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Các nghệ sĩ địa phương được ủy thác gửi đề xuất trang trí vào tháng 3.\n- Glossary (Từ vựng/ Cụm từ):\ndeliver (v): giao nộp\ncommission (v): ủy thác",
+      "reasoning": "3.\n- Dịch câu hỏi: Theo bài báo, chuyện gì sẽ xảy ra vào tháng Ba?- Dịch đáp án: (D) Các nghệ sĩ sẽ gửi ý tưởng trang trí tường- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Các nghệ sĩ địa phương được ủy thác gửi đề xuất trang trí vào tháng 3.- Glossary (Từ vựng/ Cụm từ):deliver (v): giao nộpcommission (v): ủy thác",
       "glossary": []
      }
     }
@@ -5803,7 +5601,7 @@
      "answer": "C",
      "explanation": {
       "translation": "What is the purpose of the e-mail?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Mục đích của bức e-mail là gì?\n- Dịch đáp án: (C) Để mời ông Sanchez tham gia một sự kiện\n- Phân loại: Đọc hiểu (Hỏi mục đích chính)\n- Phân tích: Mời ông Sanchez dự lễ khai trương Khu trưng bày Prosner.\n- Glossary (Từ vựng/ Cụm từ):\ninvite (v): mời\nopening (n): sự khai trương",
+      "reasoning": "3.\n- Dịch câu hỏi: Mục đích của bức e-mail là gì?- Dịch đáp án: (C) Để mời ông Sanchez tham gia một sự kiện- Phân loại: Đọc hiểu (Hỏi mục đích chính)- Phân tích: Mời ông Sanchez dự lễ khai trương Khu trưng bày Prosner.- Glossary (Từ vựng/ Cụm từ):invite (v): mờiopening (n): sự khai trương",
       "glossary": []
      }
     },
@@ -5822,7 +5620,7 @@
      "answer": "D",
      "explanation": {
       "translation": "What is indicated about Mr. Sanchez?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Điều gì được chỉ ra về ông Sanchez?\n- Dịch đáp án: (D) Ông ấy có thẻ thành viên tại một bảo tàng nghệ thuật.\n- Phân loại: Đọc hiểu (Suy luận)\n- Phân tích: Sự kiện giới hạn cho những thành viên của bảo tàng như ông.\n- Glossary (Từ vựng/ Cụm từ):\nmembership (n): tư cách thành viên",
+      "reasoning": "3.\n- Dịch câu hỏi: Điều gì được chỉ ra về ông Sanchez?- Dịch đáp án: (D) Ông ấy có thẻ thành viên tại một bảo tàng nghệ thuật.- Phân loại: Đọc hiểu (Suy luận)- Phân tích: Sự kiện giới hạn cho những thành viên của bảo tàng như ông.- Glossary (Từ vựng/ Cụm từ):membership (n): tư cách thành viên",
       "glossary": []
      }
     }
@@ -5855,7 +5653,7 @@
      "answer": "A",
      "explanation": {
       "translation": "What are the writers mainly discussing?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Những người viết chủ yếu đang thảo luận về vấn đề gì?\n- Dịch đáp án: (A) Việc thuê một không gian tạm thời\n- Phân loại: Đọc hiểu (Chủ đề đoạn chat)\n- Phân tích: Họ đang thảo luận thuê địa điểm kho bãi còn trống qua ứng dụng.\n- Glossary (Từ vựng/ Cụm từ):\ntemporary (adj): tạm thời\nspace (n): không gian",
+      "reasoning": "3.\n- Dịch câu hỏi: Những người viết chủ yếu đang thảo luận về vấn đề gì?- Dịch đáp án: (A) Việc thuê một không gian tạm thời- Phân loại: Đọc hiểu (Chủ đề đoạn chat)- Phân tích: Họ đang thảo luận thuê địa điểm kho bãi còn trống qua ứng dụng.- Glossary (Từ vựng/ Cụm từ):temporary (adj): tạm thờispace (n): không gian",
       "glossary": []
      }
     },
@@ -5874,7 +5672,7 @@
      "answer": "C",
      "explanation": {
       "translation": "At 9:05 A.M., what does Mr. Boiger most likely mean when he writes, \"That's exactly what I was thinking\"?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Vào lúc 9:05 sáng, ông Boiger có khả năng ngụ ý gì nhất khi viết: \"Đó chính xác là những gì tôi đang nghĩ\"?\n- Dịch đáp án: (C) Ông ấy sẵn sàng lái một chiếc xe tải đến một địa điểm.\n- Phân loại: Đọc hiểu (Suy luận ý nghĩa câu nói trong chuỗi tin nhắn)\n- Phân tích: Ông đồng ý với gợi ý của Avani về việc tự lái chiếc xe tải chở hàng tới.\n- Glossary (Từ vựng/ Cụm từ):\nwilling (adj): sẵn lòng\nvan (n): xe tải",
+      "reasoning": "3.\n- Dịch câu hỏi: Vào lúc 9:05 sáng, ông Boiger có khả năng ngụ ý gì nhất khi viết: \"Đó chính xác là những gì tôi đang nghĩ\"?- Dịch đáp án: (C) Ông ấy sẵn sàng lái một chiếc xe tải đến một địa điểm.- Phân loại: Đọc hiểu (Suy luận ý nghĩa câu nói trong chuỗi tin nhắn)- Phân tích: Ông đồng ý với gợi ý của Avani về việc tự lái chiếc xe tải chở hàng tới.- Glossary (Từ vựng/ Cụm từ):willing (adj): sẵn lòngvan (n): xe tải",
       "glossary": []
      }
     }
@@ -5907,7 +5705,7 @@
      "answer": "A",
      "explanation": {
       "translation": "What kind of business is Dannla Brothers?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Dannla Brothers là loại hình doanh nghiệp gì?\n- Dịch đáp án: (A) Một nhà sản xuất đồ nội thất cho máy tính\n- Phân loại: Đọc hiểu (Thông tin chung)\n- Phân tích: Công ty sản xuất giá đỡ laptop, ghế, bàn đứng.\n- Glossary (Từ vựng/ Cụm từ):\nfurniture (n): đồ nội thất",
+      "reasoning": "3.\n- Dịch câu hỏi: Dannla Brothers là loại hình doanh nghiệp gì?- Dịch đáp án: (A) Một nhà sản xuất đồ nội thất cho máy tính- Phân loại: Đọc hiểu (Thông tin chung)- Phân tích: Công ty sản xuất giá đỡ laptop, ghế, bàn đứng.- Glossary (Từ vựng/ Cụm từ):furniture (n): đồ nội thất",
       "glossary": []
      }
     },
@@ -5926,7 +5724,7 @@
      "answer": "D",
      "explanation": {
       "translation": "What are visitors to the Web page encouraged to do?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Những người truy cập vào trang web được khuyến khích làm gì?\n- Dịch đáp án: (D) Đọc các bài đánh giá sản phẩm\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Truy cập trang Testimonials để xem các bài đánh giá độc lập.\n- Glossary (Từ vựng/ Cụm từ):\nencourage (v): khuyến khích\ntestimonial (n): giấy chứng nhận/lời đánh giá",
+      "reasoning": "3.\n- Dịch câu hỏi: Những người truy cập vào trang web được khuyến khích làm gì?- Dịch đáp án: (D) Đọc các bài đánh giá sản phẩm- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Truy cập trang Testimonials để xem các bài đánh giá độc lập.- Glossary (Từ vựng/ Cụm từ):encourage (v): khuyến khíchtestimonial (n): giấy chứng nhận/lời đánh giá",
       "glossary": []
      }
     },
@@ -5945,7 +5743,7 @@
      "answer": "C",
      "explanation": {
       "translation": "According to the Web page, why should someone send an e-mail?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Theo trang web, tại sao một người nên gửi một e-mail?\n- Dịch đáp án: (C) Để nhận được một báo giá cho một đơn đặt hàng lớn\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Gửi email để nhận báo giá miễn phí cho đơn hàng số lượng lớn.\n- Glossary (Từ vựng/ Cụm từ):\nobtain (v): đạt được\nprice quote (n): báo giá",
+      "reasoning": "3.\n- Dịch câu hỏi: Theo trang web, tại sao một người nên gửi một e-mail?- Dịch đáp án: (C) Để nhận được một báo giá cho một đơn đặt hàng lớn- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Gửi email để nhận báo giá miễn phí cho đơn hàng số lượng lớn.- Glossary (Từ vựng/ Cụm từ):obtain (v): đạt đượcprice quote (n): báo giá",
       "glossary": []
      }
     }
@@ -5978,7 +5776,7 @@
      "answer": "C",
      "explanation": {
       "translation": "What did Ms. Paulsen do at a recent meeting?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Bà Paulsen đã làm gì tại một cuộc họp gần đây?\n- Dịch đáp án: (C) Bà ấy đã chúc mừng nhân viên về những số liệu doanh số bán hàng mới nhất.\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Bà chúc mừng nhân viên về sự gia tăng doanh số.\n- Glossary (Từ vựng/ Cụm từ):\ncongratulate (v): chúc mừng\nsales figure (n): số liệu doanh số",
+      "reasoning": "3.\n- Dịch câu hỏi: Bà Paulsen đã làm gì tại một cuộc họp gần đây?- Dịch đáp án: (C) Bà ấy đã chúc mừng nhân viên về những số liệu doanh số bán hàng mới nhất.- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Bà chúc mừng nhân viên về sự gia tăng doanh số.- Glossary (Từ vựng/ Cụm từ):congratulate (v): chúc mừngsales figure (n): số liệu doanh số",
       "glossary": []
      }
     },
@@ -5997,7 +5795,7 @@
      "answer": "D",
      "explanation": {
       "translation": "Who received a job promotion from within Osmond Microtronics Ltd.?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Ai đã nhận được sự thăng chức nội bộ từ công ty Osmond Microtronics Ltd.?\n- Dịch đáp án: (D) Ông Sung\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Nhà thiết kế sản phẩm Lewis Sung giờ sẽ giám sát bộ phận với tư cách giám đốc.\n- Glossary (Từ vựng/ Cụm từ):\npromotion (n): sự thăng chức\noversee (v): giám sát",
+      "reasoning": "3.\n- Dịch câu hỏi: Ai đã nhận được sự thăng chức nội bộ từ công ty Osmond Microtronics Ltd.?- Dịch đáp án: (D) Ông Sung- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Nhà thiết kế sản phẩm Lewis Sung giờ sẽ giám sát bộ phận với tư cách giám đốc.- Glossary (Từ vựng/ Cụm từ):promotion (n): sự thăng chứcoversee (v): giám sát",
       "glossary": []
      }
     },
@@ -6016,7 +5814,7 @@
      "answer": "A",
      "explanation": {
       "translation": "Why does Ms. Paulsen mention Pretoria?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Tại sao bà Paulsen lại nhắc đến Pretoria?\n- Dịch đáp án: (A) Một đồng nghiệp đang lên kế hoạch chuyển đến đó.\n- Phân loại: Đọc hiểu (Suy luận)\n- Phân tích: Ông Marcus Bromley quyết định nghỉ hưu và sẽ định cư tại quê hương Pretoria.\n- Glossary (Từ vựng/ Cụm từ):\ncolleague (n): đồng nghiệp\nretire (v): nghỉ hưu",
+      "reasoning": "3.\n- Dịch câu hỏi: Tại sao bà Paulsen lại nhắc đến Pretoria?- Dịch đáp án: (A) Một đồng nghiệp đang lên kế hoạch chuyển đến đó.- Phân loại: Đọc hiểu (Suy luận)- Phân tích: Ông Marcus Bromley quyết định nghỉ hưu và sẽ định cư tại quê hương Pretoria.- Glossary (Từ vựng/ Cụm từ):colleague (n): đồng nghiệpretire (v): nghỉ hưu",
       "glossary": []
      }
     }
@@ -6049,7 +5847,7 @@
      "answer": "B",
      "explanation": {
       "translation": "What is most likely true about Dr. Able?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Điều gì có khả năng đúng nhất về Tiến sĩ Able?\n- Dịch đáp án: (B) Ông ấy tiến hành nghiên cứu tại một viện học thuật.\n- Phân loại: Đọc hiểu (Suy luận)\n- Phân tích: Ông làm việc trong môi trường học thuật (Viện Borman) và có các nghiên cứu.\n- Glossary (Từ vựng/ Cụm từ):\nconduct research (phr): tiến hành nghiên cứu\ninstitution (n): học viện",
+      "reasoning": "3.\n- Dịch câu hỏi: Điều gì có khả năng đúng nhất về Tiến sĩ Able?- Dịch đáp án: (B) Ông ấy tiến hành nghiên cứu tại một viện học thuật.- Phân loại: Đọc hiểu (Suy luận)- Phân tích: Ông làm việc trong môi trường học thuật (Viện Borman) và có các nghiên cứu.- Glossary (Từ vựng/ Cụm từ):conduct research (phr): tiến hành nghiên cứuinstitution (n): học viện",
       "glossary": []
      }
     },
@@ -6068,7 +5866,7 @@
      "answer": "D",
      "explanation": {
       "translation": "What does Ms. McGrath indicate that she would like to do in the future?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Cô McGrath chỉ ra rằng cô ấy muốn làm gì trong tương lai?\n- Dịch đáp án: (D) Hợp tác với nhóm của Tiến sĩ Able\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: DGA muốn tìm hiểu các phương thức hợp tác với nhóm nghiên cứu của ông.\n- Glossary (Từ vựng/ Cụm từ):\ncollaborate (v): hợp tác",
+      "reasoning": "3.\n- Dịch câu hỏi: Cô McGrath chỉ ra rằng cô ấy muốn làm gì trong tương lai?- Dịch đáp án: (D) Hợp tác với nhóm của Tiến sĩ Able- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: DGA muốn tìm hiểu các phương thức hợp tác với nhóm nghiên cứu của ông.- Glossary (Từ vựng/ Cụm từ):collaborate (v): hợp tác",
       "glossary": []
      }
     },
@@ -6087,7 +5885,7 @@
      "answer": "B",
      "explanation": {
       "translation": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"We would love to read your complete research report.\"\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Câu \"Chúng tôi rất muốn đọc toàn bộ báo cáo nghiên cứu của bạn\" phù hợp nhất để điền vào vị trí nào trong số các vị trí được đánh dấu [1], [2], [3] và [4]?\n- Dịch đáp án: (B) Vị trí [2]\n- Phân loại: Đọc hiểu (Điền câu vào đoạn văn)\n- Phân tích: Phù hợp nhất khi xin đọc toàn bộ báo cáo nghiên cứu ngay sau khi đề cập đến việc ấn tượng với nghiên cứu đó.\n- Glossary (Từ vựng/ Cụm từ):\nbelong (v): thuộc về, nằm ở",
+      "reasoning": "3.\n- Dịch câu hỏi: Câu \"Chúng tôi rất muốn đọc toàn bộ báo cáo nghiên cứu của bạn\" phù hợp nhất để điền vào vị trí nào trong số các vị trí được đánh dấu [1], [2], [3] và [4]?- Dịch đáp án: (B) Vị trí [2]- Phân loại: Đọc hiểu (Điền câu vào đoạn văn)- Phân tích: Phù hợp nhất khi xin đọc toàn bộ báo cáo nghiên cứu ngay sau khi đề cập đến việc ấn tượng với nghiên cứu đó.- Glossary (Từ vựng/ Cụm từ):belong (v): thuộc về, nằm ở",
       "glossary": []
      }
     }
@@ -6120,7 +5918,7 @@
      "answer": "A",
      "explanation": {
       "translation": "What is indicated about the available position?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Điều gì được chỉ ra về vị trí đang ứng tuyển?\n- Dịch đáp án: (A) Đó là một vị trí làm việc từ xa.\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Tin tuyển dụng cho biết đây là một vị trí làm việc tại nhà.\n- Glossary (Từ vựng/ Cụm từ):\nremote position (n): vị trí làm việc từ xa",
+      "reasoning": "3.\n- Dịch câu hỏi: Điều gì được chỉ ra về vị trí đang ứng tuyển?- Dịch đáp án: (A) Đó là một vị trí làm việc từ xa.- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Tin tuyển dụng cho biết đây là một vị trí làm việc tại nhà.- Glossary (Từ vựng/ Cụm từ):remote position (n): vị trí làm việc từ xa",
       "glossary": []
      }
     },
@@ -6139,7 +5937,7 @@
      "answer": "C",
      "explanation": {
       "translation": "What is listed as a job requirement?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Điều gì được liệt kê như một yêu cầu của công việc?\n- Dịch đáp án: (C) Kỹ năng giao tiếp tốt\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Kỹ năng giao tiếp mạnh mẽ là điều thiết yếu.\n- Glossary (Từ vựng/ Cụm từ):\nrequirement (n): yêu cầu\nessential (adj): thiết yếu",
+      "reasoning": "3.\n- Dịch câu hỏi: Điều gì được liệt kê như một yêu cầu của công việc?- Dịch đáp án: (C) Kỹ năng giao tiếp tốt- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Kỹ năng giao tiếp mạnh mẽ là điều thiết yếu.- Glossary (Từ vựng/ Cụm từ):requirement (n): yêu cầuessential (adj): thiết yếu",
       "glossary": []
      }
     },
@@ -6158,7 +5956,7 @@
      "answer": "C",
      "explanation": {
       "translation": "What does the job posting NOT mention?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Bài đăng tuyển dụng KHÔNG đề cập đến điều gì?\n- Dịch đáp án: (C) Ngày bắt đầu làm việc\n- Phân loại: Đọc hiểu (Tìm chi tiết phủ định)\n- Phân tích: Trách nhiệm, lịch làm việc, yêu cầu học vấn đều có. Ngày bắt đầu không được nhắc đến.\n- Glossary (Từ vựng/ Cụm từ):\nmention (v): đề cập\nresponsibility (n): trách nhiệm",
+      "reasoning": "3.\n- Dịch câu hỏi: Bài đăng tuyển dụng KHÔNG đề cập đến điều gì?- Dịch đáp án: (C) Ngày bắt đầu làm việc- Phân loại: Đọc hiểu (Tìm chi tiết phủ định)- Phân tích: Trách nhiệm, lịch làm việc, yêu cầu học vấn đều có. Ngày bắt đầu không được nhắc đến.- Glossary (Từ vựng/ Cụm từ):mention (v): đề cậpresponsibility (n): trách nhiệm",
       "glossary": []
      }
     },
@@ -6177,7 +5975,7 @@
      "answer": "A",
      "explanation": {
       "translation": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? \"Health insurance and retirement benefits are included.\"\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Câu \"Bảo hiểm y tế và quyền lợi hưu trí được bao gồm\" phù hợp nhất để điền vào vị trí nào?\n- Dịch đáp án: (A) Vị trí [1]\n- Phân loại: Đọc hiểu (Điền câu vào đoạn văn)\n- Phân tích: Phù hợp khi nói về quyền lợi bảo hiểm, hưu trí ngay sau khi đề cập đến mức lương.\n- Glossary (Từ vựng/ Cụm từ):\nretirement benefit (n): quyền lợi hưu trí",
+      "reasoning": "3.\n- Dịch câu hỏi: Câu \"Bảo hiểm y tế và quyền lợi hưu trí được bao gồm\" phù hợp nhất để điền vào vị trí nào?- Dịch đáp án: (A) Vị trí [1]- Phân loại: Đọc hiểu (Điền câu vào đoạn văn)- Phân tích: Phù hợp khi nói về quyền lợi bảo hiểm, hưu trí ngay sau khi đề cập đến mức lương.- Glossary (Từ vựng/ Cụm từ):retirement benefit (n): quyền lợi hưu trí",
       "glossary": []
      }
     }
@@ -6210,7 +6008,7 @@
      "answer": "C",
      "explanation": {
       "translation": "What is mentioned about the FGS?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Điều gì được đề cập về tổ chức FGS?\n- Dịch đáp án: (C) Nó cung cấp các khóa học liên quan đến thiên nhiên.\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: FGS cung cấp tour khám phá thiên nhiên và các chương trình giáo dục.\n- Glossary (Từ vựng/ Cụm từ):\nnature-related (adj): liên quan đến thiên nhiên",
+      "reasoning": "3.\n- Dịch câu hỏi: Điều gì được đề cập về tổ chức FGS?- Dịch đáp án: (C) Nó cung cấp các khóa học liên quan đến thiên nhiên.- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: FGS cung cấp tour khám phá thiên nhiên và các chương trình giáo dục.- Glossary (Từ vựng/ Cụm từ):nature-related (adj): liên quan đến thiên nhiên",
       "glossary": []
      }
     },
@@ -6229,7 +6027,7 @@
      "answer": "D",
      "explanation": {
       "translation": "Why does the FGS want to build a garden in Raxford Park?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Tại sao FGS muốn xây dựng một khu vườn ở Công viên Raxford?\n- Dịch đáp án: (D) Để thu hút nhiều loại chim khác nhau\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Mục tiêu là thu hút thêm nhiều loài chim phong phú của khu vực.\n- Glossary (Từ vựng/ Cụm từ):\nattract (v): thu hút\na wide variety of (phr): sự đa dạng lớn của",
+      "reasoning": "3.\n- Dịch câu hỏi: Tại sao FGS muốn xây dựng một khu vườn ở Công viên Raxford?- Dịch đáp án: (D) Để thu hút nhiều loại chim khác nhau- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Mục tiêu là thu hút thêm nhiều loài chim phong phú của khu vực.- Glossary (Từ vựng/ Cụm từ):attract (v): thu húta wide variety of (phr): sự đa dạng lớn của",
       "glossary": []
      }
     },
@@ -6248,7 +6046,7 @@
      "answer": "C",
      "explanation": {
       "translation": "Who will select the plants for the new garden?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Ai sẽ chọn các loại cây cho khu vườn mới?\n- Dịch đáp án: (C) Các giáo sư đại học\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Giảng viên Đại học Elbart sẽ chọn cây trồng.\n- Glossary (Từ vựng/ Cụm từ):\nselect (v): lựa chọn",
+      "reasoning": "3.\n- Dịch câu hỏi: Ai sẽ chọn các loại cây cho khu vườn mới?- Dịch đáp án: (C) Các giáo sư đại học- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Giảng viên Đại học Elbart sẽ chọn cây trồng.- Glossary (Từ vựng/ Cụm từ):select (v): lựa chọn",
       "glossary": []
      }
     },
@@ -6267,7 +6065,7 @@
      "answer": "D",
      "explanation": {
       "translation": "What work will be done by Elbart City employees?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Những nhân viên của Thành phố Elbart sẽ thực hiện công việc gì?\n- Dịch đáp án: (D) Chuẩn bị mặt đất để trồng cây\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Đội ngũ sở công viên sẽ trải lớp đất mặt mới (chuẩn bị mặt bằng).\n- Glossary (Từ vựng/ Cụm từ):\nprepare (v): chuẩn bị",
+      "reasoning": "3.\n- Dịch câu hỏi: Những nhân viên của Thành phố Elbart sẽ thực hiện công việc gì?- Dịch đáp án: (D) Chuẩn bị mặt đất để trồng cây- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Đội ngũ sở công viên sẽ trải lớp đất mặt mới (chuẩn bị mặt bằng).- Glossary (Từ vựng/ Cụm từ):prepare (v): chuẩn bị",
       "glossary": []
      }
     }
@@ -6300,7 +6098,7 @@
      "answer": "A",
      "explanation": {
       "translation": "What does Ms. Parkin want the board of directors to do?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Bà Parkin muốn ban giám đốc làm gì?\n- Dịch đáp án: (A) Tăng ngân sách tiếp thị cho nhóm của bà ấy\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Bà lo hội đồng sẽ không tăng ngân sách và muốn thuyết phục họ ủng hộ ngân sách tiếp thị.\n- Glossary (Từ vựng/ Cụm từ):\nboard of directors (n): ban giám đốc\nbudget (n): ngân sách",
+      "reasoning": "3.\n- Dịch câu hỏi: Bà Parkin muốn ban giám đốc làm gì?- Dịch đáp án: (A) Tăng ngân sách tiếp thị cho nhóm của bà ấy- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Bà lo hội đồng sẽ không tăng ngân sách và muốn thuyết phục họ ủng hộ ngân sách tiếp thị.- Glossary (Từ vựng/ Cụm từ):board of directors (n): ban giám đốcbudget (n): ngân sách",
       "glossary": []
      }
     },
@@ -6319,7 +6117,7 @@
      "answer": "D",
      "explanation": {
       "translation": "What do the writers indicate about their product?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Những người viết chỉ ra điều gì về sản phẩm của họ?\n- Dịch đáp án: (D) Nó không bán chạy vào một thời điểm nhất định trong năm.\n- Phân loại: Đọc hiểu (Suy luận)\n- Phân tích: Doanh số chậm lại vào thời điểm này trong năm là xu hướng chung của toàn ngành.\n- Glossary (Từ vựng/ Cụm từ):\nrevenue (n): doanh thu\ntrend (n): xu hướng",
+      "reasoning": "3.\n- Dịch câu hỏi: Những người viết chỉ ra điều gì về sản phẩm của họ?- Dịch đáp án: (D) Nó không bán chạy vào một thời điểm nhất định trong năm.- Phân loại: Đọc hiểu (Suy luận)- Phân tích: Doanh số chậm lại vào thời điểm này trong năm là xu hướng chung của toàn ngành.- Glossary (Từ vựng/ Cụm từ):revenue (n): doanh thutrend (n): xu hướng",
       "glossary": []
      }
     },
@@ -6338,7 +6136,7 @@
      "answer": "B",
      "explanation": {
       "translation": "At 3:05 P.M., what does Mr. Naifeh imply when he writes, \"I have the details onscreen right now\"?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Lúc 3:05 chiều, ông Naifeh ngụ ý gì khi ông ấy viết: \"Tôi có các chi tiết trên màn hình ngay bây giờ\"?\n- Dịch đáp án: (B) Ông ấy có thể đáp ứng yêu cầu của bà Parkin.\n- Phân loại: Đọc hiểu (Suy luận ý nghĩa câu nói)\n- Phân tích: Ông ấy có sẵn dữ liệu để cung cấp thông tin theo yêu cầu của bà Parkin.\n- Glossary (Từ vựng/ Cụm từ):\nimply (v): ngụ ý\nfulfill (v): hoàn thành, đáp ứng",
+      "reasoning": "3.\n- Dịch câu hỏi: Lúc 3:05 chiều, ông Naifeh ngụ ý gì khi ông ấy viết: \"Tôi có các chi tiết trên màn hình ngay bây giờ\"?- Dịch đáp án: (B) Ông ấy có thể đáp ứng yêu cầu của bà Parkin.- Phân loại: Đọc hiểu (Suy luận ý nghĩa câu nói)- Phân tích: Ông ấy có sẵn dữ liệu để cung cấp thông tin theo yêu cầu của bà Parkin.- Glossary (Từ vựng/ Cụm từ):imply (v): ngụ ýfulfill (v): hoàn thành, đáp ứng",
       "glossary": []
      }
     },
@@ -6357,7 +6155,7 @@
      "answer": "D",
      "explanation": {
       "translation": "What kind of advertising did Ms. Tuan focus on at her previous job?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Loại hình quảng cáo nào mà cô Tuan đã tập trung vào ở công việc trước đây của cô ấy?\n- Dịch đáp án: (D) Mạng xã hội\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Mạng xã hội là chuyên môn của bà ở công việc trước.\n- Glossary (Từ vựng/ Cụm từ):\nfocus on (v): tập trung vào\nexpertise (n): chuyên môn\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 7 (Phần 2)",
+      "reasoning": "3.\n- Dịch câu hỏi: Loại hình quảng cáo nào mà cô Tuan đã tập trung vào ở công việc trước đây của cô ấy?- Dịch đáp án: (D) Mạng xã hội- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Mạng xã hội là chuyên môn của bà ở công việc trước.- Glossary (Từ vựng/ Cụm từ):focus on (v): tập trung vàoexpertise (n): chuyên môn\nGIẢI THÍCH CHI TIẾT TOEIC TEST 3 - PART 7 (Phần 2)",
       "glossary": []
      }
     }
@@ -6394,7 +6192,7 @@
      "answer": "C",
      "explanation": {
       "translation": "According to the Web page, what is true about Branxley Cycles?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Theo trang web, điều gì đúng về Branxley Cycles?\n- Dịch đáp án: (C) Công ty sản xuất các sản phẩm của mình bằng các bộ phận có nguồn gốc từ địa phương.\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Công ty chế tạo xe bằng linh kiện do thợ thủ công địa phương làm ra.\n- Glossary (Từ vựng/ Cụm từ):\nlocally sourced (adj): có nguồn gốc địa phương\ncraftsman (n): thợ thủ công",
+      "reasoning": "3.\n- Dịch câu hỏi: Theo trang web, điều gì đúng về Branxley Cycles?- Dịch đáp án: (C) Công ty sản xuất các sản phẩm của mình bằng các bộ phận có nguồn gốc từ địa phương.- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Công ty chế tạo xe bằng linh kiện do thợ thủ công địa phương làm ra.- Glossary (Từ vựng/ Cụm từ):locally sourced (adj): có nguồn gốc địa phươngcraftsman (n): thợ thủ công",
       "glossary": []
      }
     },
@@ -6413,7 +6211,7 @@
      "answer": "B",
      "explanation": {
       "translation": "What does Branxley Cycles encourage its customers to do?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Branxley Cycles khuyến khích khách hàng của họ làm gì?\n- Dịch đáp án: (B) Đăng ảnh trực tuyến\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Khuyến khích khách chụp ảnh và chia sẻ trên mạng xã hội.\n- Glossary (Từ vựng/ Cụm từ):\npost (v): đăng tải",
+      "reasoning": "3.\n- Dịch câu hỏi: Branxley Cycles khuyến khích khách hàng của họ làm gì?- Dịch đáp án: (B) Đăng ảnh trực tuyến- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Khuyến khích khách chụp ảnh và chia sẻ trên mạng xã hội.- Glossary (Từ vựng/ Cụm từ):post (v): đăng tải",
       "glossary": []
      }
     },
@@ -6432,7 +6230,7 @@
      "answer": "A",
      "explanation": {
       "translation": "According to the review, how did Mr. Stewart learn about Branxley Cycles?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Theo bài đánh giá, ông Stewart đã biết đến Branxley Cycles bằng cách nào?\n- Dịch đáp án: (A) Thông qua việc trò chuyện với một đồng nghiệp tại nơi làm việc\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Ông biết đến công ty sau khi trò chuyện với một đồng nghiệp.\n- Glossary (Từ vựng/ Cụm từ):\ncolleague (n): đồng nghiệp",
+      "reasoning": "3.\n- Dịch câu hỏi: Theo bài đánh giá, ông Stewart đã biết đến Branxley Cycles bằng cách nào?- Dịch đáp án: (A) Thông qua việc trò chuyện với một đồng nghiệp tại nơi làm việc- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Ông biết đến công ty sau khi trò chuyện với một đồng nghiệp.- Glossary (Từ vựng/ Cụm từ):colleague (n): đồng nghiệp",
       "glossary": []
      }
     },
@@ -6451,7 +6249,7 @@
      "answer": "D",
      "explanation": {
       "translation": "What can be concluded about the reviewer?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Có thể kết luận điều gì về người viết bài đánh giá?\n- Dịch đáp án: (D) Ông ấy đã nhận được đơn đặt hàng sớm hơn mong đợi.\n- Phân loại: Đọc hiểu (Suy luận)\n- Phân tích: Ông nhận hàng chỉ sau hai tuần so với thời gian giao hàng dự kiến 10-12 tuần của công ty.\n- Glossary (Từ vựng/ Cụm từ):\nconclude (v): kết luận\nexpected (adj): được mong đợi",
+      "reasoning": "3.\n- Dịch câu hỏi: Có thể kết luận điều gì về người viết bài đánh giá?- Dịch đáp án: (D) Ông ấy đã nhận được đơn đặt hàng sớm hơn mong đợi.- Phân loại: Đọc hiểu (Suy luận)- Phân tích: Ông nhận hàng chỉ sau hai tuần so với thời gian giao hàng dự kiến 10-12 tuần của công ty.- Glossary (Từ vựng/ Cụm từ):conclude (v): kết luậnexpected (adj): được mong đợi",
       "glossary": []
      }
     },
@@ -6470,7 +6268,7 @@
      "answer": "B",
      "explanation": {
       "translation": "In the review, the word \"meet\" in paragraph 1, line 8, is closest in meaning to\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Trong bài đánh giá, từ \"meet\" ở đoạn 1, dòng 8 gần nghĩa nhất với từ nào?\n- Dịch đáp án: (B) satisfy (đáp ứng/làm thỏa mãn)\n- Phân loại: Từ vựng (Tìm từ đồng nghĩa ngữ cảnh)\n- Phân tích: \"meet the demand\" = đáp ứng nhu cầu. Đồng nghĩa với \"satisfy\".\n- Glossary (Từ vựng/ Cụm từ):\nmeet (v): đáp ứng\nsatisfy (v): thỏa mãn, đáp ứng",
+      "reasoning": "3.\n- Dịch câu hỏi: Trong bài đánh giá, từ \"meet\" ở đoạn 1, dòng 8 gần nghĩa nhất với từ nào?- Dịch đáp án: (B) satisfy (đáp ứng/làm thỏa mãn)- Phân loại: Từ vựng (Tìm từ đồng nghĩa ngữ cảnh)- Phân tích: \"meet the demand\" = đáp ứng nhu cầu. Đồng nghĩa với \"satisfy\".- Glossary (Từ vựng/ Cụm từ):meet (v): đáp ứngsatisfy (v): thỏa mãn, đáp ứng",
       "glossary": []
      }
     }
@@ -6507,7 +6305,7 @@
      "answer": "B",
      "explanation": {
       "translation": "What is the purpose of the article?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Mục đích của bài báo là gì?\n- Dịch đáp án: (B) Để phác họa/giới thiệu một doanh nghiệp địa phương thành công\n- Phân loại: Đọc hiểu (Hỏi mục đích chính)\n- Phân tích: Bài báo giới thiệu về Milne Associates, một doanh nghiệp gia đình lâu đời và thành công.\n- Glossary (Từ vựng/ Cụm từ):\nprofile (v): phác họa/giới thiệu sơ lược\nsuccessful (adj): thành công",
+      "reasoning": "3.\n- Dịch câu hỏi: Mục đích của bài báo là gì?- Dịch đáp án: (B) Để phác họa/giới thiệu một doanh nghiệp địa phương thành công- Phân loại: Đọc hiểu (Hỏi mục đích chính)- Phân tích: Bài báo giới thiệu về Milne Associates, một doanh nghiệp gia đình lâu đời và thành công.- Glossary (Từ vựng/ Cụm từ):profile (v): phác họa/giới thiệu sơ lượcsuccessful (adj): thành công",
       "glossary": []
      }
     },
@@ -6526,7 +6324,7 @@
      "answer": "C",
      "explanation": {
       "translation": "What is indicated in the article about Angus Milne?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Điều gì được chỉ ra trong bài báo về Angus Milne?\n- Dịch đáp án: (C) Ông ấy đã thành lập một công ty cách đây 100 năm.\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Ông cố Angus Milne đã thành lập công ty hơn một thế kỷ trước.\n- Glossary (Từ vựng/ Cụm từ):\ncentury (n): thế kỷ",
+      "reasoning": "3.\n- Dịch câu hỏi: Điều gì được chỉ ra trong bài báo về Angus Milne?- Dịch đáp án: (C) Ông ấy đã thành lập một công ty cách đây 100 năm.- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Ông cố Angus Milne đã thành lập công ty hơn một thế kỷ trước.- Glossary (Từ vựng/ Cụm từ):century (n): thế kỷ",
       "glossary": []
      }
     },
@@ -6545,7 +6343,7 @@
      "answer": "B",
      "explanation": {
       "translation": "What does Ms. Nandi mention in her review?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Bà Nandi đề cập đến điều gì trong bài đánh giá của bà ấy?\n- Dịch đáp án: (B) Bà ấy muốn quay trở lại Edinburgh.\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Bà lên kế hoạch quay lại vào cuối mùa hè vì một ngày không đủ khám phá hết.\n- Glossary (Từ vựng/ Cụm từ):\nexplore (v): khám phá",
+      "reasoning": "3.\n- Dịch câu hỏi: Bà Nandi đề cập đến điều gì trong bài đánh giá của bà ấy?- Dịch đáp án: (B) Bà ấy muốn quay trở lại Edinburgh.- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Bà lên kế hoạch quay lại vào cuối mùa hè vì một ngày không đủ khám phá hết.- Glossary (Từ vựng/ Cụm từ):explore (v): khám phá",
       "glossary": []
      }
     },
@@ -6564,7 +6362,7 @@
      "answer": "A",
      "explanation": {
       "translation": "In the review, the word \"appreciates\" in paragraph 2, line 3, is closest in meaning to\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Trong bài đánh giá, từ \"appreciates\" ở đoạn 2, dòng 3 gần nghĩa nhất với từ nào?\n- Dịch đáp án: (A) values (trân trọng/đánh giá cao)\n- Phân loại: Từ vựng (Tìm từ đồng nghĩa ngữ cảnh)\n- Phân tích: \"appreciates\" = đánh giá cao, trân trọng, đồng nghĩa với \"values\".\n- Glossary (Từ vựng/ Cụm từ):\nappreciate (v): đánh giá cao, trân trọng\nvalue (v): trân trọng",
+      "reasoning": "3.\n- Dịch câu hỏi: Trong bài đánh giá, từ \"appreciates\" ở đoạn 2, dòng 3 gần nghĩa nhất với từ nào?- Dịch đáp án: (A) values (trân trọng/đánh giá cao)- Phân loại: Từ vựng (Tìm từ đồng nghĩa ngữ cảnh)- Phân tích: \"appreciates\" = đánh giá cao, trân trọng, đồng nghĩa với \"values\".- Glossary (Từ vựng/ Cụm từ):appreciate (v): đánh giá cao, trân trọngvalue (v): trân trọng",
       "glossary": []
      }
     },
@@ -6583,7 +6381,7 @@
      "answer": "D",
      "explanation": {
       "translation": "What can be concluded about Ms. Nandi?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Có thể kết luận điều gì về bà Nandi?\n- Dịch đáp án: (D) Bà ấy đã có một trải nghiệm tốt với một sản phẩm từ Milne Associates.\n- Phân loại: Đọc hiểu (Suy luận liên kết văn bản)\n- Phân tích: Bà rất hài lòng và biết ơn những chiếc ghế ngồi mới thoải mái của nhà hát (do Milne Associates làm).\n- Glossary (Từ vựng/ Cụm từ):\nexperience (n): trải nghiệm\ngrateful (adj): biết ơn",
+      "reasoning": "3.\n- Dịch câu hỏi: Có thể kết luận điều gì về bà Nandi?- Dịch đáp án: (D) Bà ấy đã có một trải nghiệm tốt với một sản phẩm từ Milne Associates.- Phân loại: Đọc hiểu (Suy luận liên kết văn bản)- Phân tích: Bà rất hài lòng và biết ơn những chiếc ghế ngồi mới thoải mái của nhà hát (do Milne Associates làm).- Glossary (Từ vựng/ Cụm từ):experience (n): trải nghiệmgrateful (adj): biết ơn",
       "glossary": []
      }
     }
@@ -6624,7 +6422,7 @@
      "answer": "A",
      "explanation": {
       "translation": "According to the Web page, who made a recent discovery?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Theo trang web, ai đã thực hiện một khám phá gần đây?\n- Dịch đáp án: (A) Một người nông dân\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Nơi này thực sự được phát hiện tình cờ bởi một nông dân đào giếng.\n- Glossary (Từ vựng/ Cụm từ):\ndiscovery (n): sự khám phá\naccidentally (adv): một cách tình cờ",
+      "reasoning": "3.\n- Dịch câu hỏi: Theo trang web, ai đã thực hiện một khám phá gần đây?- Dịch đáp án: (A) Một người nông dân- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Nơi này thực sự được phát hiện tình cờ bởi một nông dân đào giếng.- Glossary (Từ vựng/ Cụm từ):discovery (n): sự khám pháaccidentally (adv): một cách tình cờ",
       "glossary": []
      }
     },
@@ -6643,7 +6441,7 @@
      "answer": "B",
      "explanation": {
       "translation": "Why are some objects unavailable to see in person during a lecture?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Tại sao một số đồ vật không có sẵn để xem tận mắt trong suốt buổi thuyết trình?\n- Dịch đáp án: (B) Chúng quá mong manh/dễ vỡ.\n- Phân loại: Đọc hiểu (Tìm chi tiết nguyên nhân)\n- Phân tích: Nhiều mảnh gốm chỉ trưng bày qua ảnh vì chúng quá mong manh để di chuyển.\n- Glossary (Từ vựng/ Cụm từ):\nin person (adv): tận mắt/đích thân\nfragile (adj): dễ vỡ/mong manh",
+      "reasoning": "3.\n- Dịch câu hỏi: Tại sao một số đồ vật không có sẵn để xem tận mắt trong suốt buổi thuyết trình?- Dịch đáp án: (B) Chúng quá mong manh/dễ vỡ.- Phân loại: Đọc hiểu (Tìm chi tiết nguyên nhân)- Phân tích: Nhiều mảnh gốm chỉ trưng bày qua ảnh vì chúng quá mong manh để di chuyển.- Glossary (Từ vựng/ Cụm từ):in person (adv): tận mắt/đích thânfragile (adj): dễ vỡ/mong manh",
       "glossary": []
      }
     },
@@ -6662,7 +6460,7 @@
      "answer": "C",
      "explanation": {
       "translation": "What is suggested about the Chovey Community Room?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Điều gì được suy ra về Phòng Cộng đồng Chovey?\n- Dịch đáp án: (C) Sức chứa của nó không nhiều hơn 75 người.\n- Phân loại: Đọc hiểu (Suy luận)\n- Phân tích: Do cần hơn 75 chỗ ngồi nên họ phải thảo luận việc dời sang địa điểm khác.\n- Glossary (Từ vựng/ Cụm từ):\nsuggest (v): đề xuất, ám chỉ\nseat (v): chứa (chỗ ngồi)",
+      "reasoning": "3.\n- Dịch câu hỏi: Điều gì được suy ra về Phòng Cộng đồng Chovey?- Dịch đáp án: (C) Sức chứa của nó không nhiều hơn 75 người.- Phân loại: Đọc hiểu (Suy luận)- Phân tích: Do cần hơn 75 chỗ ngồi nên họ phải thảo luận việc dời sang địa điểm khác.- Glossary (Từ vựng/ Cụm từ):suggest (v): đề xuất, ám chỉseat (v): chứa (chỗ ngồi)",
       "glossary": []
      }
     },
@@ -6681,7 +6479,7 @@
      "answer": "D",
      "explanation": {
       "translation": "According to the second e-mail, what does Professor Whitford want Dr. Fiallo to do?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Theo e-mail thứ hai, Giáo sư Whitford muốn Tiến sĩ Fiallo làm gì?\n- Dịch đáp án: (D) Hợp tác trong các dự án nghiên cứu\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Giáo sư mong Tiến sĩ Fiallo cân nhắc lời mời hợp tác trong dự án nghiên cứu.\n- Glossary (Từ vựng/ Cụm từ):\ncollaborate (v): hợp tác",
+      "reasoning": "3.\n- Dịch câu hỏi: Theo e-mail thứ hai, Giáo sư Whitford muốn Tiến sĩ Fiallo làm gì?- Dịch đáp án: (D) Hợp tác trong các dự án nghiên cứu- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Giáo sư mong Tiến sĩ Fiallo cân nhắc lời mời hợp tác trong dự án nghiên cứu.- Glossary (Từ vựng/ Cụm từ):collaborate (v): hợp tác",
       "glossary": []
      }
     },
@@ -6700,7 +6498,7 @@
      "answer": "C",
      "explanation": {
       "translation": "What is suggested about the tools that Professor Whitford's students looked at?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Điều gì được suy ra về những công cụ mà các sinh viên của Giáo sư Whitford đã xem?\n- Dịch đáp án: (C) Chúng có hơn 800 năm tuổi.\n- Phân loại: Đọc hiểu (Suy luận liên kết văn bản)\n- Phân tích: Tiến sĩ Fiallo có nói các phát hiện cho thấy sinh hoạt của người xưa cách đây hơn 800 năm.\n- Glossary (Từ vựng/ Cụm từ):\ntool (n): công cụ",
+      "reasoning": "3.\n- Dịch câu hỏi: Điều gì được suy ra về những công cụ mà các sinh viên của Giáo sư Whitford đã xem?- Dịch đáp án: (C) Chúng có hơn 800 năm tuổi.- Phân loại: Đọc hiểu (Suy luận liên kết văn bản)- Phân tích: Tiến sĩ Fiallo có nói các phát hiện cho thấy sinh hoạt của người xưa cách đây hơn 800 năm.- Glossary (Từ vựng/ Cụm từ):tool (n): công cụ",
       "glossary": []
      }
     }
@@ -6741,7 +6539,7 @@
      "answer": "B",
      "explanation": {
       "translation": "When will Ms. Moreland return to the office?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Khi nào bà Moreland sẽ quay trở lại văn phòng?\n- Dịch đáp án: (B) Vào thứ Tư\n- Phân loại: Đọc hiểu (Suy luận liên kết văn bản)\n- Phân tích: Chuyến bay bị hủy, chuyến tiếp theo là sáng hôm sau (ngày 8, thứ Ba), và bà dự kiến quay lại kịp cho buổi đào tạo lúc 9:00 AM thứ Tư (ngày 9).\n- Glossary (Từ vựng/ Cụm từ):\ncancel (v): hủy bỏ",
+      "reasoning": "3.\n- Dịch câu hỏi: Khi nào bà Moreland sẽ quay trở lại văn phòng?- Dịch đáp án: (B) Vào thứ Tư- Phân loại: Đọc hiểu (Suy luận liên kết văn bản)- Phân tích: Chuyến bay bị hủy, chuyến tiếp theo là sáng hôm sau (ngày 8, thứ Ba), và bà dự kiến quay lại kịp cho buổi đào tạo lúc 9:00 AM thứ Tư (ngày 9).- Glossary (Từ vựng/ Cụm từ):cancel (v): hủy bỏ",
       "glossary": []
      }
     },
@@ -6760,7 +6558,7 @@
      "answer": "D",
      "explanation": {
       "translation": "Who most likely is Ms. Weaver?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Cô Weaver có khả năng là ai nhất?\n- Dịch đáp án: (D) Một trợ lý điều hành\n- Phân loại: Đọc hiểu (Suy luận nghề nghiệp)\n- Phân tích: Cindy Weaver là người giúp sắp xếp lại lịch trình, báo cáo lại công việc họp hành cho sếp, do đó cô ấy là trợ lý.\n- Glossary (Từ vựng/ Cụm từ):\nexecutive assistant (n): trợ lý điều hành",
+      "reasoning": "3.\n- Dịch câu hỏi: Cô Weaver có khả năng là ai nhất?- Dịch đáp án: (D) Một trợ lý điều hành- Phân loại: Đọc hiểu (Suy luận nghề nghiệp)- Phân tích: Cindy Weaver là người giúp sắp xếp lại lịch trình, báo cáo lại công việc họp hành cho sếp, do đó cô ấy là trợ lý.- Glossary (Từ vựng/ Cụm từ):executive assistant (n): trợ lý điều hành",
       "glossary": []
      }
     },
@@ -6779,7 +6577,7 @@
      "answer": "A",
      "explanation": {
       "translation": "According to the first e-mail, what will likely be discussed during the human resources meeting?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Theo email đầu tiên, điều gì có khả năng sẽ được thảo luận trong cuộc họp nhân sự?\n- Dịch đáp án: (A) Kết quả của một số cuộc phỏng vấn\n- Phân loại: Đọc hiểu (Suy luận)\n- Phân tích: Cuộc họp nhân sự cần diễn ra sau khi tất cả phỏng vấn ứng viên đã xong để bàn kết quả.\n- Glossary (Từ vựng/ Cụm từ):\nhuman resources (n): nhân sự\ninterview (n): cuộc phỏng vấn",
+      "reasoning": "3.\n- Dịch câu hỏi: Theo email đầu tiên, điều gì có khả năng sẽ được thảo luận trong cuộc họp nhân sự?- Dịch đáp án: (A) Kết quả của một số cuộc phỏng vấn- Phân loại: Đọc hiểu (Suy luận)- Phân tích: Cuộc họp nhân sự cần diễn ra sau khi tất cả phỏng vấn ứng viên đã xong để bàn kết quả.- Glossary (Từ vựng/ Cụm từ):human resources (n): nhân sựinterview (n): cuộc phỏng vấn",
       "glossary": []
      }
     },
@@ -6798,7 +6596,7 @@
      "answer": "B",
      "explanation": {
       "translation": "What is the subject of Ms. Moreland's meeting with Mr. Kim?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Chủ đề cuộc họp của bà Moreland với ông Kim là gì?\n- Dịch đáp án: (B) Các cập nhật về công nghệ\n- Phân loại: Đọc hiểu (Tìm chi tiết liên kết văn bản)\n- Phân tích: Theo lịch làm việc, 2:00 chiều thứ Sáu là cuộc họp Cập nhật công nghệ, khớp với lời dặn hoãn họp với Eric Kim.\n- Glossary (Từ vựng/ Cụm từ):\nsubject (n): chủ đề",
+      "reasoning": "3.\n- Dịch câu hỏi: Chủ đề cuộc họp của bà Moreland với ông Kim là gì?- Dịch đáp án: (B) Các cập nhật về công nghệ- Phân loại: Đọc hiểu (Tìm chi tiết liên kết văn bản)- Phân tích: Theo lịch làm việc, 2:00 chiều thứ Sáu là cuộc họp Cập nhật công nghệ, khớp với lời dặn hoãn họp với Eric Kim.- Glossary (Từ vựng/ Cụm từ):subject (n): chủ đề",
       "glossary": []
      }
     },
@@ -6817,7 +6615,7 @@
      "answer": "B",
      "explanation": {
       "translation": "What does Ms. Weaver indicate she will do?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Cô Weaver cho biết cô ấy sẽ làm gì?\n- Dịch đáp án: (B) Cố gắng liên lạc với một số thành viên nhóm tiếp thị\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Bà báo cáo rằng chưa liên lạc được với mọi thành viên đội tiếp thị và sẽ tiếp tục cố gắng.\n- Glossary (Từ vựng/ Cụm từ):\nattempt (v): cố gắng",
+      "reasoning": "3.\n- Dịch câu hỏi: Cô Weaver cho biết cô ấy sẽ làm gì?- Dịch đáp án: (B) Cố gắng liên lạc với một số thành viên nhóm tiếp thị- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Bà báo cáo rằng chưa liên lạc được với mọi thành viên đội tiếp thị và sẽ tiếp tục cố gắng.- Glossary (Từ vựng/ Cụm từ):attempt (v): cố gắng",
       "glossary": []
      }
     }
@@ -6858,7 +6656,7 @@
      "answer": "A",
      "explanation": {
       "translation": "What is indicated about Mr. Stolarz?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Điều gì được chỉ ra về ông Stolarz?\n- Dịch đáp án: (A) Ông ấy gốc là người ở Gradey City.\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Cụm \"Gradey City's own Jeffrey Stolartz\" nghĩa là ông vốn là người (con em) của thành phố này.\n- Glossary (Từ vựng/ Cụm từ):\noriginally (adv): gốc là, ban đầu",
+      "reasoning": "3.\n- Dịch câu hỏi: Điều gì được chỉ ra về ông Stolarz?- Dịch đáp án: (A) Ông ấy gốc là người ở Gradey City.- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Cụm \"Gradey City's own Jeffrey Stolartz\" nghĩa là ông vốn là người (con em) của thành phố này.- Glossary (Từ vựng/ Cụm từ):originally (adv): gốc là, ban đầu",
       "glossary": []
      }
     },
@@ -6877,7 +6675,7 @@
      "answer": "B",
      "explanation": {
       "translation": "According to the e-mail, what is Mr. Ellis concerned about?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Theo e-mail, ông Ellis lo lắng về điều gì?\n- Dịch đáp án: (B) Tuyển dụng các ca sĩ trong thời gian ngắn (thông báo gấp)\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Ông lo lắng việc phải tìm và thay thế hai ca sĩ gấp rút trước khi bắt đầu tập luyện.\n- Glossary (Từ vựng/ Cụm từ):\nconcerned (adj): lo lắng\nat short notice (phr): thông báo gấp",
+      "reasoning": "3.\n- Dịch câu hỏi: Theo e-mail, ông Ellis lo lắng về điều gì?- Dịch đáp án: (B) Tuyển dụng các ca sĩ trong thời gian ngắn (thông báo gấp)- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Ông lo lắng việc phải tìm và thay thế hai ca sĩ gấp rút trước khi bắt đầu tập luyện.- Glossary (Từ vựng/ Cụm từ):concerned (adj): lo lắngat short notice (phr): thông báo gấp",
       "glossary": []
      }
     },
@@ -6896,7 +6694,7 @@
      "answer": "C",
      "explanation": {
       "translation": "What is one thing Mr. Ellis did on July 7?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Một việc mà ông Ellis đã làm vào ngày 7 tháng Bảy là gì?\n- Dịch đáp án: (C) Ông ấy đã trả cho MLP một khoản phí €300.\n- Phân loại: Đọc hiểu (Tìm chi tiết liên kết văn bản)\n- Phân tích: Ông đã mở tài khoản với Music Link Plus vào sáng hôm đó (và theo chính sách, việc này sẽ tốn phí ban đầu là €300).\n- Glossary (Từ vựng/ Cụm từ):\ninitial (adj): ban đầu\nfee (n): khoản phí",
+      "reasoning": "3.\n- Dịch câu hỏi: Một việc mà ông Ellis đã làm vào ngày 7 tháng Bảy là gì?- Dịch đáp án: (C) Ông ấy đã trả cho MLP một khoản phí €300.- Phân loại: Đọc hiểu (Tìm chi tiết liên kết văn bản)- Phân tích: Ông đã mở tài khoản với Music Link Plus vào sáng hôm đó (và theo chính sách, việc này sẽ tốn phí ban đầu là €300).- Glossary (Từ vựng/ Cụm từ):initial (adj): ban đầufee (n): khoản phí",
       "glossary": []
      }
     },
@@ -6915,7 +6713,7 @@
      "answer": "D",
      "explanation": {
       "translation": "When do practice sessions for the autumn performances begin?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Khi nào các buổi tập luyện cho những buổi biểu diễn mùa thu bắt đầu?\n- Dịch đáp án: (D) Vào ngày 11 tháng Tám\n- Phân loại: Đọc hiểu (Tìm chi tiết)\n- Phân tích: Ứng viên thành công dự kiến có mặt tại hội trường vào ngày 11 tháng Tám để bắt đầu tập luyện.\n- Glossary (Từ vựng/ Cụm từ):\npractice session (n): buổi tập luyện",
+      "reasoning": "3.\n- Dịch câu hỏi: Khi nào các buổi tập luyện cho những buổi biểu diễn mùa thu bắt đầu?- Dịch đáp án: (D) Vào ngày 11 tháng Tám- Phân loại: Đọc hiểu (Tìm chi tiết)- Phân tích: Ứng viên thành công dự kiến có mặt tại hội trường vào ngày 11 tháng Tám để bắt đầu tập luyện.- Glossary (Từ vựng/ Cụm từ):practice session (n): buổi tập luyện",
       "glossary": []
      }
     },
@@ -6934,7 +6732,7 @@
      "answer": "D",
      "explanation": {
       "translation": "What do applicants need to do to audition for the Gradey City Choir?\n2.",
-      "reasoning": "3.\n- Dịch câu hỏi: Những ứng viên cần làm gì để thử giọng cho Dàn hợp xướng Gradey City?\n- Dịch đáp án: (D) Truy cập trang Resources để tải lên một bản ghi hình video\n- Phân loại: Đọc hiểu (Tìm chi tiết liên kết văn bản)\n- Phân tích: Ứng viên phải nộp video thử giọng và làm theo hướng dẫn trên trang Resources.\n- Glossary (Từ vựng/ Cụm từ):\napplicant (n): người nộp đơn/ứng viên\nsubmit (v): nộp",
+      "reasoning": "3.\n- Dịch câu hỏi: Những ứng viên cần làm gì để thử giọng cho Dàn hợp xướng Gradey City?- Dịch đáp án: (D) Truy cập trang Resources để tải lên một bản ghi hình video- Phân loại: Đọc hiểu (Tìm chi tiết liên kết văn bản)- Phân tích: Ứng viên phải nộp video thử giọng và làm theo hướng dẫn trên trang Resources.- Glossary (Từ vựng/ Cụm từ):applicant (n): người nộp đơn/ứng viênsubmit (v): nộp",
       "glossary": []
      }
     }

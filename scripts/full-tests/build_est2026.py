@@ -33,12 +33,12 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 OUT_DIR = REPO / "lib" / "full-tests" / "data"
-DEFAULT_SRC = r"D:/Compressed/ETS 2026-20260726T081737Z-1-001/ETS 2026"
+DEFAULT_SRC = r"D:/Compressed/ETS 2026-20260727T130940Z-1-001/ETS 2026"
 AUDIO_BASE = ("https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public"
               "/audio/tests/ets-2026-test-{n}")
 
-# Đề 2 thiếu trọn Part 5 + câu 63/77-79; đề 3 thiếu câu 78/80-81 trong file đáp án gốc.
-LOCKED_TESTS = {2, 3}
+                                        # Khoá đề nào là suy từ độ phủ đáp án thật
+                                        # (xem `locked` bên dưới), không khai báo cứng.
 
 PART_RANGES = [(1, 1, 6), (2, 7, 31), (3, 32, 70), (4, 71, 100),
                (5, 101, 130), (6, 131, 146), (7, 147, 200)]
@@ -248,7 +248,8 @@ SECTION_KW = r"(?:Transcript|Bản dịch|Nội dung|Đáp án|Giải thích|Glo
 # ". Transcript..." ngay sau số ⇒ chữ số cuối là số thứ tự mục, không thuộc số câu
 # ("Câu 11. Transcript" = Câu 1 + mục "1.")
 RUNON = re.compile(rf"^\s*\.\s*{SECTION_KW}")
-ANS = re.compile(r"Đáp án(?:[ \t]+đúng)?[^\(\n]{0,30}\((?P<l>[A-D])\)")
+# Cho phép khoảng trắng lọt vào trong ngoặc: có file viết "(C )" thay vì "(C)".
+ANS = re.compile(r"Đáp án(?:[ \t]+đúng)?[^\(\n]{0,30}\([ \t]*(?P<l>[A-D])[ \t]*\)")
 SUB = re.compile(r"(?:^|\n)[ \t]*(?P<n>\d{1,3})[\.:)][ \t]")
 
 
@@ -523,9 +524,11 @@ def build(src: Src, n: int, image_map: dict[str, str]) -> dict:
         "slug": f"est-2026-test-{n}",
         "title": f"PRACTICE TEST EST 2026 — Test {n}",
         "audioBase": AUDIO_BASE.format(n=n),
-        "locked": n in LOCKED_TESTS,
-        "lockReason": ("Thiếu đáp án gốc cho một số câu — đang bổ sung."
-                       if n in LOCKED_TESTS else None),
+        # Thiếu đáp án thì không chấm nổi ⇒ khoá đề. Câu lỗi (thiếu nội dung trong
+        # docx gốc) thì chỉ loại khỏi mẫu số, không cần khoá cả đề.
+        "locked": bool(missing_ans),
+        "lockReason": (f"Thiếu đáp án gốc cho {len(missing_ans)} câu — đang bổ sung."
+                       if missing_ans else None),
         "stats": {
             "questions": len(all_q),
             "answered": len(all_q) - len(missing_ans),
