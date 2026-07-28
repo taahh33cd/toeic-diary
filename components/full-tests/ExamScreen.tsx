@@ -51,6 +51,7 @@ export function ExamScreen({
   onSubmit,
   initialAnswers,
   initialMarked,
+  saveState,
   onProgress,
 }: {
   test: FullTest;
@@ -60,7 +61,8 @@ export function ExamScreen({
   onSubmit: (answers: Record<number, string>, marked: number[]) => void;
   initialAnswers?: Record<number, string>;
   initialMarked?: number[];
-  onProgress?: (answers: Record<number, string>, marked: number[]) => void;
+  saveState?: "idle" | "saving" | "saved" | "error";
+  onProgress?: (answers: Record<number, string>, marked: number[], secondsLeft: number | null) => void;
 }) {
   const P = PALETTE[skin];
   const real = config.mode === "real";
@@ -121,8 +123,13 @@ export function ExamScreen({
     return () => clearTimeout(t);
   }, [secondsLeft, config.autoSubmit, submit]);
 
+  // Đồng hồ đổi mỗi giây nên đọc qua ref — chỉ lưu khi đáp án/đánh dấu thay đổi,
+  // không phải mỗi nhịp đếm.
+  const secondsRef = useRef(secondsLeft);
+  secondsRef.current = secondsLeft;
+
   useEffect(() => {
-    onProgress?.(answers, [...marked]);
+    onProgress?.(answers, [...marked], secondsRef.current);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [answers, marked]);
 
@@ -294,6 +301,17 @@ export function ExamScreen({
           <span style={{ fontSize: "0.8rem", color: P.muted, fontVariantNumeric: "tabular-nums" }}>
             {answeredCount}/{allQuestions.length}
           </span>
+
+          {saveState === "error" ? (
+            <span title="Bài vẫn được giữ trên máy này, sẽ thử lưu lại ở lần chọn tiếp theo"
+              style={{ fontSize: "0.78rem", fontWeight: 700, color: P.bad }}>
+              ⚠ Chưa lưu được
+            </span>
+          ) : saveState === "saving" ? (
+            <span style={{ fontSize: "0.78rem", color: P.muted }}>Đang lưu…</span>
+          ) : saveState === "saved" ? (
+            <span style={{ fontSize: "0.78rem", color: P.ok }}>✓ Đã lưu</span>
+          ) : null}
           <button type="button" onClick={onToggleSkin} title="Sáng / tối" style={iconBtn(P)}>
             {skin === "light" ? "🌙" : "☀️"}
           </button>

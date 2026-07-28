@@ -8,20 +8,19 @@ import type { FullTest, PartNumber } from "@/lib/full-tests/types";
 import { PALETTE, type Skin } from "./theme";
 import { SetupPanel, type RunConfig } from "./SetupPanel";
 import { ExamScreen } from "./ExamScreen";
+import { useAttempt, type AttemptRow } from "./useAttempt";
 
 type Phase = "setup" | "exam" | "result";
 
-interface Saved {
-  config: RunConfig;
-  answers: Record<number, string>;
-  marked: number[];
-  savedAt: number;
-}
-
 const SKIN_KEY = "fulltest:skin";
 
-function saveKey(slug: string) {
-  return `fulltest:progress:${slug}`;
+function toAnswerMap(raw: Record<string, string> | Record<number, string>): Record<number, string> {
+  const out: Record<number, string> = {};
+  for (const [k, v] of Object.entries(raw ?? {})) {
+    const n = Number(k);
+    if (Number.isInteger(n)) out[n] = v;
+  }
+  return out;
 }
 
 export function FullTestRunner({ test, examSlug }: { test: FullTest; examSlug: string }) {
@@ -30,28 +29,28 @@ export function FullTestRunner({ test, examSlug }: { test: FullTest; examSlug: s
   const [config, setConfig] = useState<RunConfig | null>(null);
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [marked, setMarked] = useState<number[]>([]);
-  const [resumable, setResumable] = useState<Saved | null>(null);
+  const [resumable, setResumable] = useState<AttemptRow | null>(null);
+  const [busy, setBusy] = useState(false);
 
   const P = PALETTE[skin];
+  const attempt = useAttempt(examSlug, test.slug);
 
-  // Nạp skin + bài đang làm dở sau khi mount. Không đọc localStorage ở hàm khởi
-  // tạo useState được: server render ra "light", client có thể ra "dark" ⇒ lệch
-  // hydration. Một lượt render thêm lúc mount là đánh đổi rẻ hơn.
   /* eslint-disable react-hooks/set-state-in-effect */
+  // Đọc localStorage ở hàm khởi tạo state sẽ lệch hydration (server luôn ra
+  // "light"), nên nhận sau khi mount.
   useEffect(() => {
     const s = localStorage.getItem(SKIN_KEY);
     if (s === "dark" || s === "light") setSkin(s);
-    try {
-      const raw = localStorage.getItem(saveKey(test.slug));
-      if (raw) {
-        const parsed = JSON.parse(raw) as Saved;
-        if (parsed?.config?.parts?.length) setResumable(parsed);
-      }
-    } catch {
-      // dữ liệu cũ hỏng thì bỏ qua
-    }
-  }, [test.slug]);
+  }, []);
   /* eslint-enable react-hooks/set-state-in-effect */
+
+  useEffect(() => {
+    let alive = true;
+    attempt.fetchInProgress().then((row) => {
+      if (alive && row) setResumable(row);
+    });
+    return () => { alive = false; };
+  }, [attempt]);
 
   const toggleSkin = useCallback(() => {
     setSkin((prev) => {
@@ -61,30 +60,28 @@ export function FullTestRunner({ test, examSlug }: { test: FullTest; examSlug: s
     });
   }, []);
 
-  const persist = useCallback(
-    (cfg: RunConfig, a: Record<number, string>, m: number[]) => {
-      const payload: Saved = { config: cfg, answers: a, marked: m, savedAt: Date.now() };
-      try {
-        localStorage.setItem(saveKey(test.slug), JSON.stringify(payload));
-      } catch {
-        // hết quota thì bỏ qua, không chặn người làm bài
-      }
-    },
-    [test.slug],
-  );
-
-  function start(cfg: RunConfig, resume?: Saved) {
-    setConfig(cfg);
-    setAnswers(resume?.answers ?? {});
+  async function start(cfg: RunConfig, resume?: AttemptRow) {
+    setBusy(true);
+    const row = await attempt.start(cfg, !resume);
+    setBusy(false);
+    setConfig(resume?.config ?? cfg);
+    setAnswers(resume ? toAnswerMap(resume.answers) : {});
     setMarked(resume?.marked ?? []);
     setResumable(null);
+    if (!row) {
+      // Không tạo được lượt trên server (mất mạng) — vẫn cho làm, chỉ là
+      // bài chỉ được giữ trong localStorage cho tới khi có mạng lại.
+      console.warn("Không tạo được lượt làm trên server, chuyển sang lưu cục bộ");
+    }
     setPhase("exam");
   }
 
-  function finish(a: Record<number, string>, m: number[]) {
+  async function finish(a: Record<number, string>, m: number[]) {
     setAnswers(a);
     setMarked(m);
-    localStorage.removeItem(saveKey(test.slug));
+    setBusy(true);
+    await attempt.submit(a, m);
+    setBusy(false);
     setPhase("result");
   }
 
@@ -96,25 +93,24 @@ export function FullTestRunner({ test, examSlug }: { test: FullTest; examSlug: s
             <div style={{ maxWidth: 780, margin: "0 auto", background: P.panel, border: `1px solid ${P.primary}`, borderRadius: 12, padding: "0.95rem 1.1rem", display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", color: P.ink }}>
               <span style={{ flex: 1, minWidth: 200, fontSize: "0.88rem", lineHeight: 1.5 }}>
                 <strong>Có bài đang làm dở</strong> — đã trả lời{" "}
-                {Object.keys(resumable.answers).length} câu,{" "}
-                {new Date(resumable.savedAt).toLocaleString("vi-VN")}.
+                {Object.keys(resumable.answers ?? {}).length} câu,{" "}
+                {new Date(resumable.updatedAt).toLocaleString("vi-VN")}.
               </span>
               <button
                 type="button"
+                disabled={busy}
                 onClick={() => start(resumable.config, resumable)}
-                style={{ padding: "8px 16px", borderRadius: 8, border: "none", background: P.primary, color: P.onPrimary, fontWeight: 800, fontFamily: P.sans, fontSize: "0.85rem", cursor: "pointer" }}
+                style={{ padding: "8px 16px", borderRadius: 8, border: "none", background: P.primary, color: P.onPrimary, fontWeight: 800, fontFamily: P.sans, fontSize: "0.85rem", cursor: busy ? "wait" : "pointer" }}
               >
                 Làm tiếp
               </button>
               <button
                 type="button"
-                onClick={() => {
-                  localStorage.removeItem(saveKey(test.slug));
-                  setResumable(null);
-                }}
-                style={{ padding: "8px 14px", borderRadius: 8, border: `1px solid ${P.border}`, background: "transparent", color: P.muted, fontWeight: 700, fontFamily: P.sans, fontSize: "0.85rem", cursor: "pointer" }}
+                disabled={busy}
+                onClick={() => setResumable(null)}
+                style={{ padding: "8px 14px", borderRadius: 8, border: `1px solid ${P.border}`, background: "transparent", color: P.muted, fontWeight: 700, fontFamily: P.sans, fontSize: "0.85rem", cursor: busy ? "wait" : "pointer" }}
               >
-                Làm lại từ đầu
+                Bỏ qua, làm lại từ đầu
               </button>
             </div>
           </div>
@@ -141,7 +137,8 @@ export function FullTestRunner({ test, examSlug }: { test: FullTest; examSlug: s
         onSubmit={finish}
         initialAnswers={answers}
         initialMarked={marked}
-        onProgress={(a, m) => persist(config, a, m)}
+        saveState={attempt.saveState}
+        onProgress={attempt.save}
       />
     );
   }
@@ -154,7 +151,7 @@ export function FullTestRunner({ test, examSlug }: { test: FullTest; examSlug: s
         answers={answers}
         skin={skin}
         onToggleSkin={toggleSkin}
-        onRetry={() => setPhase("setup")}
+        onRetry={() => { setPhase("setup"); setAnswers({}); setMarked([]); }}
       />
     );
   }

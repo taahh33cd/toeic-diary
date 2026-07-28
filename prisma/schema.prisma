@@ -164,6 +164,7 @@ model Profile {
   subskillAttempts     SubskillAttempt[]
   recordingAttempts    SpeakingRecordingAttempt[]
   ipaAttempts          IpaAttempt[]
+  fullTestAttempts     FullTestAttempt[]
   coursePurchases      CoursePurchase[]
 
   @@map("profiles")
@@ -447,4 +448,36 @@ model PostReadingAttempt {
   @@index([userId, passageId])
   @@index([userId])
   @@map("post_reading_attempts")
+}
+
+/// Một lượt làm full test. Dùng cho cả bài đang làm dở (status "in_progress",
+/// auto-save mỗi vài giây để đổi máy vẫn làm tiếp được) lẫn lịch sử đã nộp
+/// (status "done"). Một user có thể có nhiều lượt cho cùng một đề.
+model FullTestAttempt {
+  id          String    @id @default(uuid())
+  userId      String    @map("user_id")
+  profile     Profile   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  examSlug    String    @map("exam_slug")  // "est-2026"
+  testSlug    String    @map("test_slug")  // "est-2026-test-1"
+  status      String    @default("in_progress") // "in_progress" | "done"
+  config      Json      // { mode, parts, minutes, autoSubmit, instantFeedback }
+  answers     Json      @default("{}")     // { "1": "B", "32": "D", ... }
+  marked      Json      @default("[]")     // [12, 45, 78]
+  secondsLeft Int?      @map("seconds_left") // đồng hồ còn lại lúc lưu; null = không giới hạn
+
+  // Điểm chỉ có khi đã nộp. Chấm ở server nên client không sửa được.
+  correct     Int?
+  gradable    Int?
+  listening   Int?      // 5-495, null nếu không làm đủ 7 part
+  reading     Int?      // 5-495
+  total       Int?      // 10-990
+  partScores  Json?     @map("part_scores") // [{ part, correct, gradable }]
+
+  startedAt   DateTime  @default(now()) @map("started_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+  completedAt DateTime? @map("completed_at")
+
+  @@index([userId, testSlug])
+  @@index([userId, status])
+  @@map("full_test_attempts")
 }
