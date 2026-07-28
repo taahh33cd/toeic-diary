@@ -21,10 +21,20 @@ const SPLIT_KEY = "fulltest:split";
  * Part có media riêng theo nhóm ⇒ phân trang từng nhóm một, hai khung scroll độc lập.
  * Part 2 và 5 mỗi câu độc lập, không có gì để ghép cặp ⇒ danh sách dọc.
  */
-const PAGINATED: PartNumber[] = [1, 3, 4, 6, 7];
+/** Số nhóm hiển thị mỗi trang. Infinity = không chia trang, cuộn một hơi. */
+function pageSize(part: PartNumber): number {
+  if (part === 2) return Infinity; // 25 câu ngắn, mỗi câu một audio — cuộn nhanh hơn bấm
+  if (part === 5) return 10;       // 30 câu rời, chia 3 trang cho đỡ ngợp
+  return 1;                        // mỗi đoạn audio / bài đọc một trang
+}
 
 function isPaginated(part: PartNumber) {
-  return PAGINATED.includes(part);
+  return Number.isFinite(pageSize(part));
+}
+
+/** Part có media riêng ⇒ chia hai khung scroll độc lập. Part 2/5 thì không. */
+function hasSplit(part: PartNumber) {
+  return part !== 2 && part !== 5;
 }
 
 function mmss(sec: number) {
@@ -150,8 +160,12 @@ export function ExamScreen({
 
   const activeGroups = useMemo(() => groups.filter((g) => g.part === activePart), [groups, activePart]);
   const paginated = isPaginated(activePart);
-  const safeIndex = Math.min(groupIndex, Math.max(0, activeGroups.length - 1));
-  const shownGroups = paginated ? activeGroups.slice(safeIndex, safeIndex + 1) : activeGroups;
+  const size = pageSize(activePart);
+  const pageCount = paginated ? Math.max(1, Math.ceil(activeGroups.length / size)) : 1;
+  const page = Math.min(groupIndex, pageCount - 1);
+  const shownGroups = paginated
+    ? activeGroups.slice(page * size, page * size + size)
+    : activeGroups;
 
   const goToPart = useCallback((part: PartNumber, index = 0) => {
     setActivePart(part);
@@ -167,8 +181,8 @@ export function ExamScreen({
       const list = groups.filter((g) => g.part === part);
       const idx = list.findIndex((g) => q >= g.questionStart && q <= g.questionEnd);
       setActivePart(part);
-      setGroupIndex(Math.max(0, idx));
-      if (!isPaginated(part)) {
+      setGroupIndex(Math.max(0, Math.floor(idx / pageSize(part))));
+      if (!isPaginated(part) || pageSize(part) > 1) {
         requestAnimationFrame(() =>
           document.getElementById(`q-${q}`)?.scrollIntoView({ block: "center", behavior: "smooth" }),
         );
@@ -257,18 +271,19 @@ export function ExamScreen({
 
   // điều hướng nhóm: hết nhóm thì sang part kế trong nhóm part đang mở
   const partPos = visibleParts.findIndex((p) => p.part === activePart);
-  const canPrev = paginated && !navLocked && (safeIndex > 0 || partPos > 0);
-  const canNext = paginated && !navLocked && (safeIndex < activeGroups.length - 1 || partPos < visibleParts.length - 1);
+  const canPrev = paginated && !navLocked && (page > 0 || partPos > 0);
+  const canNext = paginated && !navLocked && (page < pageCount - 1 || partPos < visibleParts.length - 1);
 
   function prevGroup() {
-    if (safeIndex > 0) return setGroupIndex(safeIndex - 1);
+    if (page > 0) return setGroupIndex(page - 1);
     const prev = visibleParts[partPos - 1];
     if (!prev) return;
     const list = groups.filter((g) => g.part === prev.part);
-    goToPart(prev.part, Math.max(0, list.length - 1));
+    const lastPage = Math.max(0, Math.ceil(list.length / pageSize(prev.part)) - 1);
+    goToPart(prev.part, lastPage);
   }
   function nextGroup() {
-    if (safeIndex < activeGroups.length - 1) return setGroupIndex(safeIndex + 1);
+    if (page < pageCount - 1) return setGroupIndex(page + 1);
     const nxt = visibleParts[partPos + 1];
     if (nxt) goToPart(nxt.part, 0);
   }
@@ -403,9 +418,13 @@ export function ExamScreen({
             ← Trước
           </button>
           <span style={{ fontSize: "0.9rem", fontWeight: 700, textAlign: "center", flex: 1 }}>
-            {rangeLabel(activeGroups[safeIndex])}
+            {shownGroups.length > 0 && (
+              shownGroups[0].questionStart === shownGroups[shownGroups.length - 1].questionEnd
+                ? `Câu ${shownGroups[0].questionStart}`
+                : `Câu ${shownGroups[0].questionStart}–${shownGroups[shownGroups.length - 1].questionEnd}`
+            )}
             <span style={{ color: P.muted, fontWeight: 500 }}>
-              {" "}· {safeIndex + 1}/{activeGroups.length}
+              {" "}· {page + 1}/{pageCount}
             </span>
           </span>
           <button type="button" onClick={nextGroup} disabled={!canNext} style={navBtn(P, !canNext)}>
@@ -420,7 +439,7 @@ export function ExamScreen({
           P={P}
           groups={shownGroups}
           part={activePart}
-          paginated={paginated}
+          split={hasSplit(activePart)}
           real={real}
           config={config}
           answers={answers}
@@ -448,7 +467,10 @@ export function ExamScreen({
             answers={answers}
             marked={marked}
             activePart={activePart}
-            shownRange={paginated && activeGroups[safeIndex] ? activeGroups[safeIndex] : null}
+            shownRange={paginated && shownGroups.length ? {
+              questionStart: shownGroups[0].questionStart,
+              questionEnd: shownGroups[shownGroups.length - 1].questionEnd,
+            } : null}
             jumpLocked={navLocked}
             onJump={jumpToQuestion}
           />
@@ -519,14 +541,14 @@ function navBtn(P: Palette, disabled: boolean): React.CSSProperties {
 // ── Khung chính ──────────────────────────────────────────────────────────────
 
 function MainPane({
-  P, groups, part, paginated, real, config, answers, marked, onPick, onMark,
+  P, groups, part, split, real, config, answers, marked, onPick, onMark,
   fontScale, narrow, mobilePane, setMobilePane, audioBase, speed, setSpeed,
   onZoom, splitPct, setSplitPct,
 }: {
   P: Palette;
   groups: FullTestGroup[];
   part: PartNumber;
-  paginated: boolean;
+  split: boolean;
   real: boolean;
   config: RunConfig;
   answers: Record<number, string>;
@@ -578,8 +600,8 @@ function MainPane({
       />
     ));
 
-  // Part 2 / 5: danh sách dọc một cột, mỗi câu tự chứa audio của nó
-  if (!paginated) {
+  // Part 2 / 5: không có media để ghép cặp ⇒ một cột dọc
+  if (!split) {
     return (
       <div style={{ flex: 1, minWidth: 0, overflowY: "auto", padding: "1rem", background: P.bg }}>
         <div style={{ maxWidth: 820, margin: "0 auto" }}>
@@ -848,7 +870,7 @@ function ProgressSidebar({
   answers: Record<number, string>;
   marked: Set<number>;
   activePart: PartNumber;
-  shownRange: FullTestGroup | null;
+  shownRange: { questionStart: number; questionEnd: number } | null;
   jumpLocked: boolean;
   onJump: (q: number) => void;
 }) {
