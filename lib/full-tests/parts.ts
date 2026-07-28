@@ -63,3 +63,12 @@ export const TIME_PRESETS = [
 export function hasSection(parts: PartNumber[], section: Section): boolean {
   return parts.some((p) => partMeta(p).section === section);
 }
+
+// ── Phân quyền ───────────────────────────────────────────────────────────────
+
+/** Đề mở cho mọi tài khoản, làm bản dùng thử. Còn lại cần đã đăng ký khoá học. */
+export const FREE_TEST_NUMBERS = [1];
+
+export function isTestFree(testNumber: number): boolean {
+  return FREE_TEST_NUMBERS.includes(testNumber);
+}

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { EXAM_SETS, listTests, PARTS } from "@/lib/full-tests";
+import { createClient } from "@/lib/supabase/server";
+import { prisma } from "@/lib/db/prisma";
+import { isUsageExempt } from "@/lib/access";
+import { EXAM_SETS, isTestFree, listTests, PARTS } from "@/lib/full-tests";
 
 export const metadata: Metadata = { title: "Full Test — Luyện đề TOEIC" };
 
@@ -15,7 +18,19 @@ const C = {
   accentSoft: "#eef0fe",
 };
 
-export default function FullTestsLanding() {
+export default async function FullTestsLanding() {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  const profile = user
+    ? await prisma.profile
+        .findUnique({
+          where: { id: user.id },
+          select: { role: true, studentCode: true, enrolledCourses: true, freeUsageSeconds: true },
+        })
+        .catch(() => null)
+    : null;
+  const unlocked = isUsageExempt(profile);
+
   return (
     <div style={{ minHeight: "calc(100vh - 64px)", background: C.bg, color: C.ink, padding: "clamp(1.75rem, 5vw, 3.5rem) clamp(1.25rem, 5vw, 2rem)" }}>
       <div style={{ maxWidth: 920, margin: "0 auto" }}>
@@ -70,16 +85,39 @@ export default function FullTestsLanding() {
                 {exam.available && (
                   <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: "0.7rem" }}>
                     {tests.map((t) => {
+                      const needsPurchase = !isTestFree(t.testNumber) && !unlocked;
                       const inner = (
                         <>
-                          <span style={{ display: "block", fontSize: "0.95rem", fontWeight: 700 }}>
+                          <span style={{ display: "flex", alignItems: "center", gap: 6, fontSize: "0.95rem", fontWeight: 700 }}>
                             Test {t.testNumber}
+                            {isTestFree(t.testNumber) && (
+                              <span style={{ fontSize: "0.62rem", fontWeight: 800, letterSpacing: "0.06em", textTransform: "uppercase", color: C.accent, background: C.accentSoft, borderRadius: 4, padding: "2px 5px" }}>
+                                Miễn phí
+                              </span>
+                            )}
                           </span>
                           <span style={{ display: "block", fontSize: "0.72rem", color: C.muted, marginTop: 2 }}>
                             {t.locked ? "Thiếu đáp án gốc" : `${t.questions} câu · 120 phút`}
                           </span>
                         </>
                       );
+
+                      // Chưa mở khoá: vẫn cho bấm, sang trang kia mới hiện lời mời đăng ký
+                      if (needsPurchase && !t.locked) {
+                        return (
+                          <Link
+                            key={t.slug}
+                            href={`/skills/full-tests/${exam.slug}/${t.testNumber}`}
+                            className="skill-card-link"
+                            style={{ display: "block", border: `1px solid ${C.border}`, borderRadius: 11, padding: "0.85rem 0.95rem", textDecoration: "none", color: C.muted, background: C.bg, transition: "border-color .15s, box-shadow .15s" }}
+                          >
+                            {inner}
+                            <span style={{ display: "flex", alignItems: "center", gap: 5, fontSize: "0.75rem", fontWeight: 700, marginTop: 6 }}>
+                              🔒 Cần đăng ký khoá học
+                            </span>
+                          </Link>
+                        );
+                      }
 
                       if (t.locked) {
                         return (
