@@ -35,8 +35,7 @@ CREATE INDEX IF NOT EXISTS full_test_attempts_user_status_idx
 
 -- Bảng chỉ được đọc/ghi qua route handler đã xác thực, không truy cập trực tiếp
 -- từ client, nên bật RLS và không thêm policy nào.
--- Chủ bảng bỏ qua RLS nên Prisma (DATABASE_URL) vẫn ghi bình thường. NẾU sau khi
--- chạy migration mà lưu bài báo lỗi, tức DATABASE_URL không phải chủ bảng — khi đó
--- chạy: ALTER TABLE full_test_attempts DISABLE ROW LEVEL SECURITY;
--- (bảng course_purchases sẵn có cũng không bật RLS).
+-- Chủ bảng bỏ qua RLS (relforcerowsecurity = false) nên Prisma vẫn ghi bình thường.
+-- Cấu hình này giống hệt bảng course_purchases đang chạy tốt trên production:
+-- RLS bật, 0 policy, owner = postgres.
 ALTER TABLE full_test_attempts ENABLE ROW LEVEL SECURITY;
