@@ -7,7 +7,7 @@ import {
   LogOut,
   BarChart2,
   NotebookPen,
-  Headphones,
+  ClipboardList,
   GraduationCap,
   BookOpen,
   Puzzle,
@@ -67,12 +67,12 @@ export function UserAvatarMenu({
   }
 
   const NAV_ITEMS = [
-    { href: "/practice",       icon: <Headphones   size={15} aria-hidden />, label: "Luyện tập theo Part" },
+    { href: "/journal",        icon: <NotebookPen  size={15} aria-hidden />, label: "Nhật ký học tập"   },
     { href: "/progress",       icon: <BarChart2    size={15} aria-hidden />, label: "Tiến độ học tập"    },
     { href: "/journal/vocab",  icon: <BookOpen     size={15} aria-hidden />, label: "Từ vựng đã lưu"     },
     { href: "/grammar",        icon: <GraduationCap size={15} aria-hidden />, label: "Luyện ngữ pháp"   },
     { href: "/subskills",      icon: <Puzzle       size={15} aria-hidden />, label: "Subskills Part 2"   },
-    { href: "/journal",        icon: <NotebookPen  size={15} aria-hidden />, label: "Nhật ký học tập"   },
+    { href: "/skills",         icon: <ClipboardList size={15} aria-hidden />, label: "Luyện đề"          },
   ];
 
   return (

@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import { BookOpen, Moon, Sun, LogOut, BarChart2, NotebookPen, Headphones, GraduationCap, Menu, X, Home, Puzzle, ClipboardList } from "lucide-react";
+import { BookOpen, Moon, Sun, LogOut, BarChart2, NotebookPen, GraduationCap, Menu, X, Home, Puzzle, ClipboardList } from "lucide-react";
 import { useUIStore } from "@/stores/uiStore";
 import { createClient } from "@/lib/supabase/client";
 import { cn } from "@/lib/utils/cn";
-import { useState, useRef, useEffect } from "react";
+import { Fragment, useState, useRef, useEffect } from "react";
 
 interface HeaderProps {
   userEmail?: string | null;
@@ -66,9 +66,8 @@ export function Header({ userEmail, userDisplayName, bg = "#4DA8DA" }: HeaderPro
   const displayName = userDisplayName ?? userEmail?.split("@")[0] ?? "User";
 
   const NAV_LINKS = [
-    { href: "/practice",          icon: <Headphones size={16} />,    label: "Luyện tập theo Part" },
-    { href: "/progress",          icon: <BarChart2 size={16} />,     label: "Tiến độ" },
-    { href: "/journal",           icon: <NotebookPen size={16} />,   label: "Nhật ký", divider: true },
+    { href: "/journal",           icon: <NotebookPen size={16} />,   label: "Nhật ký" },
+    { href: "/progress",          icon: <BarChart2 size={16} />,     label: "Tiến độ", divider: true },
     { href: "/grammar",           icon: <GraduationCap size={16} />, label: "Ngữ pháp" },
     { href: "/reading-practice",  icon: <BookOpen size={16} />,      label: "Reading" },
     { href: "/subskills",         icon: <Puzzle size={16} />,        label: "Subskills" },
@@ -107,13 +106,13 @@ export function Header({ userEmail, userDisplayName, bg = "#4DA8DA" }: HeaderPro
           </Link>
           <div className={styles.navDivider} />
           {navLinks.map(({ href, icon, label, divider }) => (
-            <>
-              <Link key={href} href={href} className={styles.navLink}>
+            <Fragment key={href}>
+              <Link href={href} className={styles.navLink}>
                 {icon}
                 <span>{label}</span>
               </Link>
-              {divider && <div key={`${href}-div`} className={styles.navDivider} />}
-            </>
+              {divider && <div className={styles.navDivider} />}
+            </Fragment>
           ))}
         </nav>
 
@@ -160,13 +159,13 @@ export function Header({ userEmail, userDisplayName, bg = "#4DA8DA" }: HeaderPro
                   </div>
                   <div className={styles.dropdownDivider} role="separator" />
                   <Link
-                    href="/practice"
+                    href="/journal"
                     className={styles.dropdownItem}
                     role="menuitem"
                     onClick={() => setMenuOpen(false)}
                   >
-                    <Headphones size={15} aria-hidden="true" />
-                    Luyện tập theo Part
+                    <NotebookPen size={15} aria-hidden="true" />
+                    Nhật ký học tập
                   </Link>
                   <Link
                     href="/progress"
@@ -204,15 +203,17 @@ export function Header({ userEmail, userDisplayName, bg = "#4DA8DA" }: HeaderPro
                     <Puzzle size={15} aria-hidden="true" />
                     Subskills Part 2
                   </Link>
-                  <Link
-                    href="/journal"
-                    className={styles.dropdownItem}
-                    role="menuitem"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    <NotebookPen size={15} aria-hidden="true" />
-                    Nhật ký học tập
-                  </Link>
+                  {!onSkills && (
+                    <Link
+                      href="/skills"
+                      className={styles.dropdownItem}
+                      role="menuitem"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      <ClipboardList size={15} aria-hidden="true" />
+                      Luyện đề
+                    </Link>
+                  )}
                   <div className={styles.dropdownDivider} role="separator" />
                   <button
                     onClick={handleSignOut}

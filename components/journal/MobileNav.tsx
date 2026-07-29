@@ -11,6 +11,7 @@ const NAV = [
   { href: "/grammar",          label: "Grammar",   emoji: "🎓" },
   { href: "/reading-practice", label: "Reading",   emoji: "📖" },
   { href: "/subskills",        label: "Subskills", emoji: "🧩" },
+  { href: "/skills",           label: "Luyện đề",  emoji: "📝" },
 ];
 
 export function JournalMobileNav() {

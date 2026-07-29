@@ -11,6 +11,7 @@ import {
   BookX,
   BookOpen,
   NotebookPen,
+  ClipboardList,
   Headphones,
   Puzzle,
   Home,
@@ -19,8 +20,8 @@ import {
 } from "lucide-react";
 import { UserAvatarMenu } from "@/components/layout/UserAvatarMenu";
 import { useUIStore } from "@/stores/uiStore";
+import { TOPBAR_H } from "./scale";
 
-const TOPBAR_H = 64;
 const BG = "#1A4D35";           /* dark tropical green */
 const TEXT_ACTIVE   = "#FFD66B"; /* gold — retro contrast */
 const TEXT_INACTIVE = "rgba(255,214,107,0.65)";
@@ -30,13 +31,14 @@ const NAV_INTERNAL = [
   { href: "/grammar",          label: "Tổng quan", icon: LayoutGrid, exact: true },
   { href: "/grammar/progress", label: "Tiến độ",   icon: BarChart2 },
   { href: "/grammar/review",   label: "Câu sai",   icon: BookX },
-  { href: "/journal",          label: "Nhật ký",   icon: NotebookPen },
 ];
 
 const NAV_EXTERNAL = [
+  { href: "/journal",          label: "Nhật ký",   icon: NotebookPen },
   { href: "/dictation",        label: "Dictation", icon: Headphones },
   { href: "/reading-practice", label: "Reading",   icon: BookOpen },
   { href: "/subskills",        label: "Subskills", icon: Puzzle },
+  { href: "/skills",           label: "Luyện đề",  icon: ClipboardList },
 ];
 
 function isActive(pathname: string, href: string, exact?: boolean) {

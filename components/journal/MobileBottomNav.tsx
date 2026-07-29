@@ -266,7 +266,7 @@ export function MobileBottomNav({ studentCode }: { studentCode?: string | null }
             {/* Dictation link */}
             <div style={{ borderTop: "1px solid var(--border)" }}>
               <Link
-                href="/"
+                href="/dictation"
                 style={{
                   display: "flex",
                   alignItems: "center",

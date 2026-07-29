@@ -12,7 +12,7 @@ const PRIMARY = [
 ] as const;
 
 const OVERFLOW = [
-  { href: "/journal/booking",      label: "Lịch học",  emoji: "📅" },
+  { href: "/journal/schedule",     label: "Lịch học",  emoji: "📅" },
   { href: "/journal/achievements", label: "Thành tựu", emoji: "🏆" },
   { href: "/journal/settings",     label: "Cài đặt",   emoji: "⚙️" },
 ] as const;
@@ -173,7 +173,7 @@ export function TopNav() {
             <div style={{ borderTop: "1px solid #EDE4D6", margin: ".2rem 0" }} />
 
             <Link
-              href="/"
+              href="/dictation"
               role="menuitem"
               onClick={() => setOpen(false)}
               style={{

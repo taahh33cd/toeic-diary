@@ -10,7 +10,7 @@ const NAV = [
   { label: "Dictation",  href: "/dictation",          auth: true  },
   { label: "Grammar",    href: "/grammar",             auth: true  },
   { label: "Reading",    href: "/reading-practice",    auth: true  },
-  { label: "Luyện đề",  href: "/practice",            auth: true  },
+  { label: "Luyện đề",  href: "/skills",              auth: true  },
   { label: "Khoá học",  href: "/course",              auth: false },
 ];
 

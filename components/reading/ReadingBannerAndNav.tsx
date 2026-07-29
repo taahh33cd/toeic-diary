@@ -9,9 +9,9 @@ import {
   LayoutGrid,
   BarChart2,
   NotebookPen,
+  ClipboardList,
   Headphones,
   GraduationCap,
-  BookOpen,
   Puzzle,
   Home,
   Moon,
@@ -29,13 +29,14 @@ const TEXT_EXTERNAL = "rgba(255,253,246,0.40)";
 const NAV_INTERNAL = [
   { href: "/reading-practice",          label: "Tổng quan", icon: LayoutGrid,   exact: true  },
   { href: "/reading-practice/progress", label: "Tiến độ",   icon: BarChart2,    exact: false },
-  { href: "/journal",                   label: "Nhật ký",   icon: NotebookPen,  exact: false },
 ];
 
 const NAV_EXTERNAL = [
+  { href: "/journal",   label: "Nhật ký",   icon: NotebookPen   },
   { href: "/dictation", label: "Dictation", icon: Headphones    },
   { href: "/grammar",   label: "Ngữ pháp",  icon: GraduationCap },
   { href: "/subskills", label: "Subskills", icon: Puzzle        },
+  { href: "/skills",    label: "Luyện đề",  icon: ClipboardList },
 ];
 
 function isActive(pathname: string, href: string, exact?: boolean) {
