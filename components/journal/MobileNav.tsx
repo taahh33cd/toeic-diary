@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const NAV = [
-  { href: "/home",             label: "Home",      emoji: "🏠" },
   { href: "/dictation",        label: "Dictation", emoji: "🎧" },
   { href: "/grammar",          label: "Grammar",   emoji: "🎓" },
   { href: "/reading-practice", label: "Reading",   emoji: "📖" },

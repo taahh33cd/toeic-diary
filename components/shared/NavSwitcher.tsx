@@ -12,7 +12,6 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { href: "/home",             label: "Home",      emoji: "🏠", exact: true },
   { href: "/dictation",        label: "Dictation", emoji: "🎧", exact: true },
   { href: "/grammar",          label: "Grammar",   emoji: "🎓" },
   { href: "/reading-practice", label: "Reading",   emoji: "📖" },

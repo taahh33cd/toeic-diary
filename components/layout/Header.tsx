@@ -8,6 +8,14 @@ import { createClient } from "@/lib/supabase/client";
 import { cn } from "@/lib/utils/cn";
 import { Fragment, useState, useRef, useEffect } from "react";
 
+/** Các khu dùng chung Header này, mỗi khu có trang tổng quan riêng. */
+const ZONE_HOMES = [
+  { href: "/skills",   label: "Luyện đề" },
+  { href: "/practice", label: "Luyện tập theo Part" },
+  { href: "/progress", label: "Tiến độ" },
+];
+const DEFAULT_ZONE = { href: "/dictation", label: "Dictation" };
+
 interface HeaderProps {
   userEmail?: string | null;
   userDisplayName?: string | null;
@@ -78,12 +86,18 @@ export function Header({ userEmail, userDisplayName, bg = "#4DA8DA" }: HeaderPro
   const onSkills = pathname === "/skills" || pathname.startsWith("/skills/");
   const navLinks = NAV_LINKS.filter((l) => !(onSkills && l.href === "/skills"));
 
+  // Nút Home + logo trỏ về trang tổng quan của khu đang đứng.
+  // /test/* thuộc khu Dictation nên rơi vào mặc định.
+  const zone =
+    ZONE_HOMES.find((z) => pathname === z.href || pathname.startsWith(z.href + "/")) ??
+    DEFAULT_ZONE;
+
   return (
     <>
     <header className={styles.header} style={{ background: bg }}>
       <div className={styles.inner}>
         {/* Logo */}
-        <Link href="/dictation" className={styles.logo}>
+        <Link href={zone.href} className={styles.logo}>
           <div className={styles.logoIcon}>
             <span>🎧</span>
           </div>
@@ -97,10 +111,10 @@ export function Header({ userEmail, userDisplayName, bg = "#4DA8DA" }: HeaderPro
         <nav className={styles.nav}>
           {/* Home icon-only button */}
           <Link
-            href="/dictation"
+            href={zone.href}
             className={styles.navLink}
-            title="Trang chủ Dictation"
-            aria-label="Trang chủ Dictation"
+            title={`Trang chủ ${zone.label}`}
+            aria-label={`Trang chủ ${zone.label}`}
           >
             <Home size={16} />
           </Link>
@@ -257,11 +271,11 @@ export function Header({ userEmail, userDisplayName, bg = "#4DA8DA" }: HeaderPro
       <div className="px-4 py-3 flex flex-col gap-1">
         {/* Home */}
         <Link
-          href="/dictation"
+          href={zone.href}
           onClick={() => setMobileNavOpen(false)}
           className="flex items-center gap-3 px-3 py-3 rounded-lg text-sm font-medium text-white transition-colors"
           style={{
-            background: pathname === "/dictation" ? "rgba(255,214,107,0.25)" : "transparent",
+            background: pathname === zone.href ? "rgba(255,214,107,0.25)" : "transparent",
             textDecoration: "none",
           }}
         >
