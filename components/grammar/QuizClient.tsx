@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import Link from "next/link";
 import {
   ChevronLeft,
@@ -14,6 +14,8 @@ import {
   X,
 } from "lucide-react";
 import type { GrammarQuestion } from "@/lib/grammar/types";
+import { buildGlossary } from "@/lib/grammar/glossary";
+import { GlossaryScreen } from "./GlossaryScreen";
 
 interface Props {
   questions: GrammarQuestion[];
@@ -24,6 +26,7 @@ interface Props {
 }
 
 const resumeKey = (slug: string, idx: number) => `grammar-resume-${slug}-${idx}`;
+const glossarySeenKey = (slug: string, idx: number) => `grammar-glossary-seen-${slug}-${idx}`;
 
 function formatTime(s: number) {
   const m = Math.floor(s / 60);
@@ -33,7 +36,8 @@ function formatTime(s: number) {
 
 export function QuizClient({ questions, topicSlug, topicName, testIndex, testNumber }: Props) {
   const [activeQs, setActiveQs] = useState<GrammarQuestion[]>(questions);
-  const [screen, setScreen] = useState<"quiz" | "result">("quiz");
+  // null = chưa biết vào glossary hay vào thẳng bài (đọc localStorage ở effect dưới)
+  const [screen, setScreen] = useState<"glossary" | "quiz" | "result" | null>(null);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [currentIdx, setCurrentIdx] = useState(0);
   const [elapsed, setElapsed] = useState(0);
@@ -42,7 +46,9 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
   const [isMiniQuiz, setIsMiniQuiz] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  // Restore resume from localStorage
+  const glossary = useMemo(() => buildGlossary(questions), [questions]);
+
+  // Restore resume from localStorage + quyết định màn hình đầu tiên
   useEffect(() => {
     if (isMiniQuiz) return;
     try {
@@ -53,8 +59,21 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
         if (e) setElapsed(e);
       }
     } catch {}
+
+    let seen = false;
+    try {
+      seen = localStorage.getItem(glossarySeenKey(topicSlug, testIndex)) === "1";
+    } catch {}
+    setScreen(glossary.focus.length > 0 && !seen ? "glossary" : "quiz");
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const startQuiz = useCallback(() => {
+    try {
+      localStorage.setItem(glossarySeenKey(topicSlug, testIndex), "1");
+    } catch {}
+    setScreen("quiz");
+  }, [topicSlug, testIndex]);
 
   // Timer
   useEffect(() => {
@@ -111,6 +130,23 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
   ).length;
   const correctCount = activeQs.filter((q) => answers[q.id] === q.correct_answer).length;
   const score = activeQs.length > 0 ? Math.round((correctCount / activeQs.length) * 100) : 0;
+
+  // Chưa đọc xong localStorage — tránh nháy nhầm màn hình
+  if (screen === null) return null;
+
+  // ── Glossary screen — xem từ vựng trước khi làm bài ────────────────
+  if (screen === "glossary") {
+    return (
+      <GlossaryScreen
+        focus={glossary.focus}
+        extra={glossary.extra}
+        topicName={topicName}
+        testNumber={testNumber}
+        questionCount={activeQs.length}
+        onStart={startQuiz}
+      />
+    );
+  }
 
   // ── Result screen ──────────────────────────────────────────────────
   if (screen === "result") {
