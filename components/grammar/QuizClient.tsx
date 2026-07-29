@@ -16,6 +16,7 @@ import {
 import type { GrammarQuestion } from "@/lib/grammar/types";
 import { buildGlossary } from "@/lib/grammar/glossary";
 import { GlossaryScreen } from "./GlossaryScreen";
+import { FS, CONTAINER, PAD_X, STRIP_H, FILL_SCREEN } from "./scale";
 
 interface Props {
   questions: GrammarQuestion[];
@@ -237,7 +238,7 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
   if (!q) return null;
 
   return (
-    <div style={{ maxWidth: 860, margin: "0 auto", paddingBottom: "3rem", fontFamily: "var(--font-sans)" }}>
+    <div style={{ ...CONTAINER, ...FILL_SCREEN, fontFamily: "var(--font-sans)" }}>
       <style>{`
         @keyframes grammar-radio-pop {
           0%   { transform: scale(0); opacity: 0; }
@@ -261,25 +262,50 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
         .grammar-radio-dot {
           animation: grammar-radio-pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
         }
+        /* Màn hình hẹp không đủ chỗ cho dải header — bỏ phần phụ trước */
+        @media (max-width: 640px) {
+          .grammar-hide-sm { display: none; }
+        }
       `}</style>
 
       {/* ── CBT Header strip ── */}
       <div
         style={{
           background: "#4DA86A",
-          padding: "0 1.5rem",
-          height: 52,
+          paddingInline: PAD_X,
+          height: STRIP_H,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           gap: "1rem",
+          flexShrink: 0,
         }}
       >
-        <span style={{ fontSize: "0.8rem", fontWeight: 600, color: "#FFD66B", whiteSpace: "nowrap" }}>
+        <span
+          style={{
+            fontSize: FS.sm,
+            fontWeight: 600,
+            color: "#FFD66B",
+            whiteSpace: "nowrap",
+            minWidth: 0,
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+          }}
+        >
           Part 5 &nbsp;·&nbsp; {isMiniQuiz ? "Ôn câu sai" : `${topicName} — Test ${testNumber}`}
         </span>
-        <div style={{ display: "flex", alignItems: "center", gap: "1.25rem" }}>
-          <span style={{ fontSize: "0.78rem", color: "rgba(255,239,179,0.75)", whiteSpace: "nowrap" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "clamp(0.7rem, 2vw, 1.25rem)",
+            flexShrink: 0,
+          }}
+        >
+          <span
+            className="grammar-hide-sm"
+            style={{ fontSize: FS.xs, color: "rgba(255,239,179,0.75)", whiteSpace: "nowrap" }}
+          >
             {answeredCount} / {activeQs.length} đã trả lời
           </span>
           <span
@@ -287,25 +313,25 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
               display: "inline-flex",
               alignItems: "center",
               gap: "0.3rem",
-              fontSize: "0.85rem",
+              fontSize: FS.sm,
               fontWeight: 600,
               color: "#FFD66B",
               letterSpacing: "0.02em",
             }}
           >
-            <Clock size={13} />
+            <Clock size={15} />
             {formatTime(elapsed)}
           </span>
           <button
             onClick={submit}
             disabled={saving}
             style={{
-              padding: "0.35rem 1rem",
+              padding: "0.45rem 1.2rem",
               borderRadius: 4,
               border: "1.5px solid rgba(255,239,179,0.5)",
               background: "transparent",
               color: "#FFD66B",
-              fontSize: "0.78rem",
+              fontSize: FS.xs,
               fontWeight: 600,
               cursor: saving ? "not-allowed" : "pointer",
               opacity: saving ? 0.6 : 1,
@@ -322,29 +348,30 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
       <div
         style={{
           background: "#e4ede8",
-          padding: "0.55rem 1.5rem",
+          padding: `0.65rem ${PAD_X}`,
           borderBottom: "1px solid #B8E6C8",
+          flexShrink: 0,
         }}
       >
-        <span style={{ fontSize: "0.72rem", fontWeight: 600, color: "#2e5049", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+        <span style={{ fontSize: FS.xs, fontWeight: 600, color: "#2e5049", textTransform: "uppercase", letterSpacing: "0.06em" }}>
           Directions:
         </span>
-        <span style={{ fontSize: "0.72rem", color: "#5A8A6A", marginLeft: "0.4rem" }}>
+        <span style={{ fontSize: FS.xs, color: "#5A8A6A", marginLeft: "0.4rem" }}>
           A word or phrase is missing in each of the sentences below. Select the best answer to complete the sentence.
         </span>
       </div>
 
       {/* ── Question area ── */}
-      <div style={{ background: "#ffffff", padding: "2rem 2.5rem 2.5rem" }}>
+      <div style={{ background: "#ffffff", flex: 1, padding: `clamp(2rem, 4vw, 3rem) ${PAD_X}` }}>
         {/* Question number + grammar tag */}
-        <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", marginBottom: "1.25rem" }}>
-          <span style={{ fontSize: "1.5rem", fontWeight: 800, color: "#4DA86A", lineHeight: 1 }}>
+        <div style={{ display: "flex", alignItems: "baseline", gap: "0.6rem", marginBottom: "1.5rem" }}>
+          <span style={{ fontSize: FS.lg, fontWeight: 800, color: "#4DA86A", lineHeight: 1 }}>
             {currentIdx + 1}.
           </span>
           {q.grammar_type && (
             <span
               style={{
-                fontSize: "0.62rem",
+                fontSize: FS.xs,
                 fontWeight: 700,
                 textTransform: "uppercase",
                 letterSpacing: "0.08em",
@@ -362,10 +389,10 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
         {/* Question sentence */}
         <p
           style={{
-            fontSize: "1.05rem",
+            fontSize: FS.md,
             lineHeight: 1.85,
             color: "#1A3D28",
-            marginBottom: "2rem",
+            marginBottom: "2.25rem",
             fontFamily: "var(--font-sans)",
             fontWeight: 400,
           }}
@@ -385,8 +412,8 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  gap: "0.9rem",
-                  padding: "0.8rem 1.1rem",
+                  gap: "1rem",
+                  padding: "clamp(0.85rem, 1.6vw, 1.15rem) 1.3rem",
                   borderRadius: 6,
                   border: selected ? "2px solid #4DA86A" : "1.5px solid #B8E6C8",
                   background: selected ? "rgba(77,168,106,0.05)" : "#FAFFF8",
@@ -398,8 +425,8 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
                 {/* Radio circle */}
                 <span
                   style={{
-                    width: 18,
-                    height: 18,
+                    width: 21,
+                    height: 21,
                     borderRadius: "50%",
                     border: selected ? "2px solid #4DA86A" : "2px solid #8AC89A",
                     background: selected ? "#4DA86A" : "transparent",
@@ -411,16 +438,16 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
                   }}
                 >
                   {selected && (
-                    <span className="grammar-radio-dot" style={{ width: 6, height: 6, borderRadius: "50%", background: "#FFD66B", display: "block" }} />
+                    <span className="grammar-radio-dot" style={{ width: 7, height: 7, borderRadius: "50%", background: "#FFD66B", display: "block" }} />
                   )}
                 </span>
                 {/* Letter */}
                 <span
                   style={{
-                    fontSize: "0.85rem",
+                    fontSize: FS.sm,
                     fontWeight: 700,
                     color: selected ? "#4DA86A" : "#5A8A6A",
-                    width: 18,
+                    width: 20,
                     flexShrink: 0,
                     fontFamily: "var(--font-sans)",
                     transition: "color 0.13s",
@@ -431,7 +458,7 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
                 {/* Option text */}
                 <span
                   style={{
-                    fontSize: "0.93rem",
+                    fontSize: FS.md,
                     color: selected ? "#4DA86A" : "#1A3D28",
                     fontWeight: selected ? 500 : 400,
                     fontFamily: "var(--font-sans)",
@@ -451,10 +478,11 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
         style={{
           background: "#e4ede8",
           borderTop: "1px solid #B8E6C8",
-          padding: "0.75rem 1.5rem",
+          padding: `0.9rem ${PAD_X}`,
           display: "flex",
           alignItems: "center",
           gap: "1rem",
+          flexShrink: 0,
         }}
       >
         {/* Prev */}
@@ -464,13 +492,13 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "0.25rem",
-            padding: "0.45rem 0.9rem",
+            gap: "0.3rem",
+            padding: "0.55rem 1.1rem",
             borderRadius: 4,
             border: "1.5px solid #8AC89A",
             background: "transparent",
             color: currentIdx === 0 ? "#8AC89A" : "#4DA86A",
-            fontSize: "0.78rem",
+            fontSize: FS.xs,
             fontWeight: 600,
             cursor: currentIdx === 0 ? "not-allowed" : "pointer",
             whiteSpace: "nowrap",
@@ -500,9 +528,9 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
                 onClick={() => setCurrentIdx(i)}
                 title={`Câu ${i + 1}`}
                 style={{
-                  width: 26,
-                  height: 26,
-                  fontSize: "0.65rem",
+                  width: 30,
+                  height: 30,
+                  fontSize: FS.xs,
                   fontWeight: 700,
                   borderRadius: 3,
                   border: "none",
@@ -526,13 +554,13 @@ export function QuizClient({ questions, topicSlug, topicName, testIndex, testNum
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "0.25rem",
-            padding: "0.45rem 0.9rem",
+            gap: "0.3rem",
+            padding: "0.55rem 1.1rem",
             borderRadius: 4,
             border: "1.5px solid #8AC89A",
             background: "transparent",
             color: currentIdx === activeQs.length - 1 ? "#8AC89A" : "#4DA86A",
-            fontSize: "0.78rem",
+            fontSize: FS.xs,
             fontWeight: 600,
             cursor: currentIdx === activeQs.length - 1 ? "not-allowed" : "pointer",
             whiteSpace: "nowrap",

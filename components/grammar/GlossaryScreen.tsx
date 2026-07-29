@@ -14,6 +14,7 @@ import {
   ChevronUp,
 } from "lucide-react";
 import type { GlossaryEntry } from "@/lib/grammar/glossary";
+import { FS, CONTAINER, PAD_X, STRIP_H, FILL_SCREEN } from "./scale";
 
 interface Props {
   focus: GlossaryEntry[];
@@ -125,14 +126,24 @@ function normalize(s: string) {
   return s.toLowerCase().replace(/[.,!?;:]/g, "").replace(/\s+/g, " ").trim();
 }
 
+/** Nhãn nhỏ in hoa dùng lại ở đầu mọi chế độ. */
+const eyebrow: React.CSSProperties = {
+  fontSize: FS.xs,
+  fontWeight: 700,
+  letterSpacing: "0.1em",
+  textTransform: "uppercase",
+  color: "#9ca3af",
+  marginBottom: "0.85rem",
+};
+
 const btnPrimary: React.CSSProperties = {
   background: GREEN,
   color: "#fff",
   border: "none",
   borderRadius: 6,
-  padding: "0.7rem 1.4rem",
+  padding: "0.85rem 1.7rem",
   fontWeight: 700,
-  fontSize: "0.92rem",
+  fontSize: FS.sm,
   cursor: "pointer",
   fontFamily: "var(--font-sans)",
 };
@@ -142,9 +153,9 @@ const btnGhost: React.CSSProperties = {
   color: INK,
   border: "1.5px solid #B8E6C8",
   borderRadius: 6,
-  padding: "0.7rem 1.4rem",
+  padding: "0.85rem 1.7rem",
   fontWeight: 600,
-  fontSize: "0.9rem",
+  fontSize: FS.sm,
   cursor: "pointer",
   fontFamily: "var(--font-sans)",
 };
@@ -158,8 +169,8 @@ const speakerBtn: React.CSSProperties = {
   color: GREEN,
   border: "1px solid #B8E6C8",
   borderRadius: 5,
-  padding: "5px 10px",
-  fontSize: "0.78rem",
+  padding: "7px 12px",
+  fontSize: FS.xs,
   fontWeight: 600,
   cursor: "pointer",
   fontFamily: "var(--font-sans)",
@@ -176,38 +187,43 @@ export function GlossaryScreen({
   const [mode, setMode] = useState<Mode>("list");
 
   return (
-    <div
-      style={{
-        maxWidth: 860,
-        margin: "0 auto",
-        paddingBottom: "3rem",
-        fontFamily: "var(--font-sans)",
-      }}
-    >
+    <div style={{ ...CONTAINER, ...FILL_SCREEN, fontFamily: "var(--font-sans)" }}>
       {/* ── Header strip (đồng bộ với màn hình làm bài) ── */}
       <div
         style={{
           background: GREEN,
-          padding: "0 1.5rem",
-          height: 52,
+          paddingInline: PAD_X,
+          height: STRIP_H,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           gap: "1rem",
+          flexShrink: 0,
         }}
       >
-        <span style={{ fontSize: "0.8rem", fontWeight: 600, color: CREAM, whiteSpace: "nowrap" }}>
+        <span
+          style={{
+            fontSize: FS.sm,
+            fontWeight: 600,
+            color: CREAM,
+            whiteSpace: "nowrap",
+            minWidth: 0,
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+          }}
+        >
           Từ vựng &nbsp;·&nbsp; {topicName} — Test {testNumber}
         </span>
         <button
           onClick={onStart}
           style={{
-            padding: "0.35rem 1rem",
+            flexShrink: 0,
+            padding: "0.45rem 1.2rem",
             borderRadius: 4,
             border: `1.5px solid rgba(255,239,179,0.5)`,
             background: "transparent",
             color: CREAM,
-            fontSize: "0.78rem",
+            fontSize: FS.xs,
             fontWeight: 600,
             cursor: "pointer",
             whiteSpace: "nowrap",
@@ -222,13 +238,14 @@ export function GlossaryScreen({
       <div
         style={{
           background: "#e4ede8",
-          padding: "0.55rem 1.5rem",
+          padding: `0.65rem ${PAD_X}`,
           borderBottom: "1px solid #B8E6C8",
+          flexShrink: 0,
         }}
       >
         <span
           style={{
-            fontSize: "0.72rem",
+            fontSize: FS.xs,
             fontWeight: 600,
             color: INK,
             textTransform: "uppercase",
@@ -237,7 +254,7 @@ export function GlossaryScreen({
         >
           Trước khi làm bài:
         </span>
-        <span style={{ fontSize: "0.72rem", color: "#5A8A6A", marginLeft: "0.4rem" }}>
+        <span style={{ fontSize: FS.xs, color: "#5A8A6A", marginLeft: "0.4rem" }}>
           Lướt qua {focus.length} từ trọng điểm của {questionCount} câu trong đề. Học kỹ bằng
           flashcard hoặc bài tập rồi hãy vào làm bài.
         </span>
@@ -251,6 +268,7 @@ export function GlossaryScreen({
           gap: 0,
           borderBottom: "1px solid #e5e7eb",
           overflowX: "auto",
+          flexShrink: 0,
         }}
       >
         {MODES.map((m) => {
@@ -265,20 +283,20 @@ export function GlossaryScreen({
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
-                gap: 6,
-                padding: "0.7rem 1rem",
+                gap: 8,
+                padding: "clamp(0.75rem, 1.4vw, 1.1rem) 1rem",
                 border: "none",
                 borderBottom: `2.5px solid ${active ? GREEN : "transparent"}`,
                 background: "transparent",
                 color: active ? GREEN : "#9ca3af",
-                fontSize: "0.82rem",
+                fontSize: FS.sm,
                 fontWeight: active ? 700 : 600,
                 cursor: "pointer",
                 whiteSpace: "nowrap",
                 fontFamily: "var(--font-sans)",
               }}
             >
-              <Icon size={15} />
+              <Icon size={17} />
               {m.label}
             </button>
           );
@@ -286,7 +304,13 @@ export function GlossaryScreen({
       </div>
 
       {/* ── Nội dung theo chế độ ── */}
-      <div style={{ background: "#fff", padding: "1.5rem 1.75rem 2rem" }}>
+      <div
+        style={{
+          background: "#fff",
+          flex: 1,
+          padding: `clamp(1.5rem, 3vw, 2.5rem) ${PAD_X}`,
+        }}
+      >
         {mode === "list" && <ListMode focus={focus} extra={extra} />}
         {mode === "flashcard" && <FlashcardMode entries={focus} />}
         {mode === "quiz" && <QuizMode entries={focus} />}
@@ -297,12 +321,14 @@ export function GlossaryScreen({
       <div
         style={{
           background: "#e4ede8",
-          padding: "1rem 1.75rem",
+          borderTop: "1px solid #B8E6C8",
+          padding: `1rem ${PAD_X}`,
           display: "flex",
           flexWrap: "wrap",
           gap: "0.75rem",
           alignItems: "center",
           justifyContent: "space-between",
+          flexShrink: 0,
         }}
       >
         <Link href="/grammar" style={{ ...btnGhost, display: "inline-flex", alignItems: "center", gap: 6, textDecoration: "none" }}>
@@ -324,21 +350,21 @@ function WordRow({ e }: { e: GlossaryEntry }) {
         display: "flex",
         alignItems: "baseline",
         gap: "0.6rem",
-        padding: "0.65rem 0.25rem",
+        padding: "0.8rem 0.25rem",
         borderBottom: "1px solid #f1f5f3",
       }}
     >
-      <div style={{ flex: "0 0 34%", minWidth: 0 }}>
-        <span style={{ fontWeight: 700, color: INK, fontSize: "0.92rem" }}>{e.word}</span>
+      <div style={{ flex: "0 0 38%", minWidth: 0 }}>
+        <span style={{ fontWeight: 700, color: INK, fontSize: FS.md }}>{e.word}</span>
         {e.type && (
-          <span style={{ marginLeft: 6, fontSize: "0.72rem", color: "#9ca3af", fontStyle: "italic" }}>
+          <span style={{ marginLeft: 6, fontSize: FS.xs, color: "#9ca3af", fontStyle: "italic" }}>
             {e.type}
           </span>
         )}
       </div>
-      <div style={{ flex: 1, fontSize: "0.88rem", color: "#374151" }}>{e.meaning}</div>
+      <div style={{ flex: 1, fontSize: FS.sm, color: "#374151" }}>{e.meaning}</div>
       <button onClick={() => playWord(e.word)} style={speakerBtn} aria-label={`Nghe ${e.word}`}>
-        <Volume2 size={13} />
+        <Volume2 size={15} />
       </button>
     </div>
   );
@@ -347,23 +373,21 @@ function WordRow({ e }: { e: GlossaryEntry }) {
 function ListMode({ focus, extra }: { focus: GlossaryEntry[]; extra: GlossaryEntry[] }) {
   const [showExtra, setShowExtra] = useState(false);
 
+  // Trên màn hình rộng tự tách thành nhiều cột thay vì để trống hai bên.
+  const grid: React.CSSProperties = {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 400px), 1fr))",
+    columnGap: "clamp(1rem, 3vw, 3rem)",
+  };
+
   return (
     <div>
-      <div
-        style={{
-          fontSize: "0.68rem",
-          fontWeight: 700,
-          letterSpacing: "0.1em",
-          textTransform: "uppercase",
-          color: "#9ca3af",
-          marginBottom: "0.5rem",
-        }}
-      >
-        {focus.length} từ trọng điểm
+      <div style={eyebrow}>{focus.length} từ trọng điểm</div>
+      <div style={grid}>
+        {focus.map((e) => (
+          <WordRow key={e.word} e={e} />
+        ))}
       </div>
-      {focus.map((e) => (
-        <WordRow key={e.word} e={e} />
-      ))}
 
       {extra.length > 0 && (
         <>
@@ -371,19 +395,18 @@ function ListMode({ focus, extra }: { focus: GlossaryEntry[]; extra: GlossaryEnt
             onClick={() => setShowExtra((v) => !v)}
             style={{
               ...btnGhost,
-              marginTop: "1rem",
-              padding: "0.5rem 1rem",
-              fontSize: "0.82rem",
+              marginTop: "1.25rem",
+              padding: "0.6rem 1.2rem",
               display: "inline-flex",
               alignItems: "center",
               gap: 6,
             }}
           >
-            {showExtra ? <ChevronUp size={15} /> : <ChevronDown size={15} />}
+            {showExtra ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
             {showExtra ? "Ẩn" : `Xem thêm ${extra.length} từ khác trong đề`}
           </button>
           {showExtra && (
-            <div style={{ marginTop: "0.75rem" }}>
+            <div style={{ ...grid, marginTop: "1rem" }}>
               {extra.map((e) => (
                 <WordRow key={e.word} e={e} />
               ))}
@@ -410,18 +433,8 @@ function FlashcardMode({ entries }: { entries: GlossaryEntry[] }) {
   };
 
   return (
-    <div style={{ maxWidth: 460, margin: "0 auto" }}>
-      <div
-        style={{
-          fontSize: "0.68rem",
-          fontWeight: 700,
-          letterSpacing: "0.1em",
-          textTransform: "uppercase",
-          color: "#9ca3af",
-          textAlign: "center",
-          marginBottom: "0.75rem",
-        }}
-      >
+    <div style={{ maxWidth: 720, margin: "0 auto" }}>
+      <div style={{ ...eyebrow, textAlign: "center" }}>
         Thẻ {idx + 1} / {entries.length}
       </div>
 
@@ -429,11 +442,11 @@ function FlashcardMode({ entries }: { entries: GlossaryEntry[] }) {
         onClick={() => setFlipped((f) => !f)}
         style={{
           width: "100%",
-          minHeight: 190,
+          minHeight: "clamp(220px, 34vh, 380px)",
           background: flipped ? "#eef7f1" : "#f9fafb",
           border: `1.5px solid ${flipped ? "#B8E6C8" : "#e5e7eb"}`,
           borderRadius: 10,
-          padding: "1.75rem 1.25rem",
+          padding: "clamp(1.75rem, 4vw, 3rem) 1.25rem",
           cursor: "pointer",
           display: "flex",
           flexDirection: "column",
@@ -444,33 +457,33 @@ function FlashcardMode({ entries }: { entries: GlossaryEntry[] }) {
           transition: "background 0.15s, border-color 0.15s",
         }}
       >
-        <div style={{ fontSize: "1.45rem", fontWeight: 800, color: INK }}>{current.word}</div>
+        <div style={{ fontSize: FS.xl, fontWeight: 800, color: INK }}>{current.word}</div>
         {current.type && (
-          <div style={{ fontSize: "0.75rem", color: "#9ca3af", fontStyle: "italic" }}>
+          <div style={{ fontSize: FS.xs, color: "#9ca3af", fontStyle: "italic" }}>
             {current.type}
           </div>
         )}
-        <div style={{ fontSize: "0.8rem", color: "#9ca3af", minHeight: "1.1em" }}>{ipa}</div>
+        <div style={{ fontSize: FS.sm, color: "#9ca3af", minHeight: "1.1em" }}>{ipa}</div>
         {flipped ? (
-          <div style={{ fontSize: "1rem", color: GREEN, fontWeight: 700, marginTop: "0.5rem" }}>
+          <div style={{ fontSize: FS.lg, color: GREEN, fontWeight: 700, marginTop: "0.75rem" }}>
             {current.meaning}
           </div>
         ) : (
-          <div style={{ fontSize: "0.78rem", color: "#9ca3af", marginTop: "0.5rem" }}>
+          <div style={{ fontSize: FS.sm, color: "#9ca3af", marginTop: "0.75rem" }}>
             Bấm để xem nghĩa
           </div>
         )}
       </button>
 
-      <div style={{ display: "flex", gap: "0.5rem", marginTop: "0.85rem" }}>
+      <div style={{ display: "flex", gap: "0.5rem", marginTop: "1rem" }}>
         <button onClick={() => go(-1)} style={{ ...btnGhost, flex: 1 }}>
           ← Trước
         </button>
         <button
           onClick={() => playWord(current.word, audioUrl)}
-          style={{ ...speakerBtn, padding: "0.7rem 1rem" }}
+          style={{ ...speakerBtn, padding: "0.85rem 1.3rem", fontSize: FS.sm }}
         >
-          <Volume2 size={15} /> Nghe
+          <Volume2 size={17} /> Nghe
         </button>
         <button onClick={() => go(1)} style={{ ...btnPrimary, flex: 1 }}>
           Sau →
@@ -523,31 +536,22 @@ function QuizMode({ entries }: { entries: GlossaryEntry[] }) {
   };
 
   return (
-    <div style={{ maxWidth: 460, margin: "0 auto" }}>
-      <div
-        style={{
-          fontSize: "0.68rem",
-          fontWeight: 700,
-          letterSpacing: "0.1em",
-          textTransform: "uppercase",
-          color: "#9ca3af",
-          marginBottom: "0.75rem",
-        }}
-      >
+    <div style={{ maxWidth: 720, margin: "0 auto" }}>
+      <div style={eyebrow}>
         Câu {idx + 1} / {items.length} &nbsp;·&nbsp; Đúng {correct}
       </div>
 
-      <div style={{ marginBottom: "1rem", display: "flex", alignItems: "center", gap: "0.6rem" }}>
-        <span style={{ fontSize: "1.2rem", fontWeight: 800, color: INK }}>
+      <div style={{ marginBottom: "1.5rem", display: "flex", alignItems: "center", gap: "0.7rem" }}>
+        <span style={{ fontSize: FS.lg, fontWeight: 800, color: INK }}>
           {current.entry.word}
         </span>
         {current.entry.type && (
-          <span style={{ fontSize: "0.75rem", color: "#9ca3af", fontStyle: "italic" }}>
+          <span style={{ fontSize: FS.xs, color: "#9ca3af", fontStyle: "italic" }}>
             {current.entry.type}
           </span>
         )}
         <button onClick={() => playWord(current.entry.word)} style={speakerBtn}>
-          <Volume2 size={13} />
+          <Volume2 size={15} />
         </button>
       </div>
 
@@ -583,14 +587,14 @@ function QuizMode({ entries }: { entries: GlossaryEntry[] }) {
               display: "block",
               width: "100%",
               textAlign: "left",
-              padding: "0.65rem 0.9rem",
-              marginBottom: "0.5rem",
+              padding: "0.85rem 1.2rem",
+              marginBottom: "0.6rem",
               border: `1.5px solid ${border}`,
               borderRadius: 6,
               background: bg,
               color,
               fontWeight: weight,
-              fontSize: "0.9rem",
+              fontSize: FS.md,
               lineHeight: 1.4,
               cursor: revealed ? "default" : "pointer",
               fontFamily: "var(--font-sans)",
@@ -648,17 +652,8 @@ function FillMode({ entries }: { entries: GlossaryEntry[] }) {
   };
 
   return (
-    <div style={{ maxWidth: 460, margin: "0 auto" }}>
-      <div
-        style={{
-          fontSize: "0.68rem",
-          fontWeight: 700,
-          letterSpacing: "0.1em",
-          textTransform: "uppercase",
-          color: "#9ca3af",
-          marginBottom: "0.75rem",
-        }}
-      >
+    <div style={{ maxWidth: 720, margin: "0 auto" }}>
+      <div style={eyebrow}>
         Từ {idx + 1} / {items.length} &nbsp;·&nbsp; Đúng {correct}
       </div>
 
@@ -667,12 +662,12 @@ function FillMode({ entries }: { entries: GlossaryEntry[] }) {
           background: "#f9fafb",
           border: "1px solid #e5e7eb",
           borderRadius: 8,
-          padding: "1rem 1.1rem",
-          marginBottom: "0.85rem",
+          padding: "clamp(1.1rem, 2.5vw, 1.75rem) 1.3rem",
+          marginBottom: "1rem",
         }}
       >
-        <div style={{ fontSize: "1rem", fontWeight: 700, color: INK }}>{current.meaning}</div>
-        <div style={{ fontSize: "0.78rem", color: "#9ca3af", marginTop: "0.35rem" }}>
+        <div style={{ fontSize: FS.lg, fontWeight: 700, color: INK }}>{current.meaning}</div>
+        <div style={{ fontSize: FS.sm, color: "#9ca3af", marginTop: "0.5rem" }}>
           {current.type && <span style={{ fontStyle: "italic", marginRight: 8 }}>{current.type}</span>}
           <span style={{ letterSpacing: "0.15em", fontFamily: "monospace" }}>{hint}</span>
         </div>
@@ -691,13 +686,13 @@ function FillMode({ entries }: { entries: GlossaryEntry[] }) {
         autoFocus
         style={{
           width: "100%",
-          padding: "0.7rem 0.9rem",
+          padding: "0.9rem 1.2rem",
           borderRadius: 6,
           border: `1.5px solid ${
             state === "right" ? "#4ade80" : state === "wrong" ? "#fca5a5" : "#e5e7eb"
           }`,
           background: state === "right" ? "#f0fdf4" : state === "wrong" ? "#fef2f2" : "#fff",
-          fontSize: "0.95rem",
+          fontSize: FS.md,
           color: INK,
           fontFamily: "var(--font-sans)",
           outline: "none",
@@ -707,8 +702,8 @@ function FillMode({ entries }: { entries: GlossaryEntry[] }) {
       {state !== "typing" && (
         <div
           style={{
-            marginTop: "0.6rem",
-            fontSize: "0.85rem",
+            marginTop: "0.7rem",
+            fontSize: FS.sm,
             color: state === "right" ? "#166534" : "#991b1b",
             fontWeight: 600,
           }}
@@ -717,7 +712,7 @@ function FillMode({ entries }: { entries: GlossaryEntry[] }) {
         </div>
       )}
 
-      <div style={{ display: "flex", gap: "0.5rem", marginTop: "0.85rem" }}>
+      <div style={{ display: "flex", gap: "0.5rem", marginTop: "1rem" }}>
         {state === "typing" ? (
           <button onClick={check} disabled={!input.trim()} style={{ ...btnPrimary, flex: 1, opacity: input.trim() ? 1 : 0.5 }}>
             Kiểm tra
@@ -744,22 +739,22 @@ function Summary({
 }) {
   const pct = total > 0 ? Math.round((correct / total) * 100) : 0;
   return (
-    <div style={{ maxWidth: 460, margin: "0 auto", textAlign: "center", padding: "1.5rem 0" }}>
-      <div style={{ fontSize: "2.5rem", fontWeight: 800, color: GREEN }}>{pct}%</div>
-      <div style={{ fontSize: "0.88rem", color: "#6b7280", marginTop: "0.25rem" }}>
+    <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center", padding: "clamp(1.5rem, 5vh, 4rem) 0" }}>
+      <div style={{ fontSize: FS.xl, fontWeight: 800, color: GREEN }}>{pct}%</div>
+      <div style={{ fontSize: FS.md, color: "#6b7280", marginTop: "0.4rem" }}>
         Thuộc {correct}/{total} từ
       </div>
       <button
         onClick={onRetry}
         style={{
           ...btnGhost,
-          marginTop: "1.25rem",
+          marginTop: "1.5rem",
           display: "inline-flex",
           alignItems: "center",
           gap: 6,
         }}
       >
-        <RotateCcw size={15} /> Làm lại
+        <RotateCcw size={16} /> Làm lại
       </button>
     </div>
   );
