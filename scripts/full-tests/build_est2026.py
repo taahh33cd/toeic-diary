@@ -386,6 +386,39 @@ def part2_answers(transcripts: dict[tuple[int, int], dict]) -> dict[int, str]:
 
 # ─────────────────────────── build 1 đề ─────────────────────────────────────
 
+OVERRIDES_FILE = Path(__file__).with_name("overrides.json")
+
+
+def load_overrides() -> dict:
+    if not OVERRIDES_FILE.is_file():
+        return {}
+    data = json.load(open(OVERRIDES_FILE, encoding="utf-8"))
+    return {k: v for k, v in data.items() if not k.startswith("_")}
+
+
+def apply_overrides(test_slug: str, questions: list[dict]) -> list[int]:
+    """Ghi đè các trường được khai trong overrides.json. Trả về số câu đã vá."""
+    patch = load_overrides().get(test_slug) or {}
+    if not patch:
+        return []
+    by_num = {q["number"]: q for q in questions}
+    done = []
+    for raw_num, fields in patch.items():
+        num = int(raw_num)
+        target = by_num.get(num)
+        if target is None:
+            continue
+        for key, value in fields.items():
+            if key.startswith("_"):  # _why là ghi chú, không phải dữ liệu
+                continue
+            target[key] = value
+        # Đã có đề bài và phương án ⇒ không còn là câu hỏng
+        if target.get("prompt") and target.get("options"):
+            target["broken"] = False
+        done.append(num)
+    return sorted(done)
+
+
 def build(src: Src, n: int, image_map: dict[str, str]) -> dict:
     transcripts = read_transcripts(src, n)
     lcq = read_lc_questions(src, n)
@@ -511,6 +544,14 @@ def build(src: Src, n: int, image_map: dict[str, str]) -> dict:
             groups.append(s)
 
     all_q = [q for g in groups for q in g["questions"]]
+
+    # Vá thủ công cho câu mà nguồn không có nội dung dùng được. Áp sau khi parse
+    # nên chạy lại parser bao nhiêu lần cũng không mất.
+    patched = apply_overrides(f"est-2026-test-{n}", all_q)
+    if patched:
+        warnings.append(f"đã vá thủ công câu: {patched}")
+        broken[:] = [q for q in broken if q not in patched]
+
     numbers = sorted(x["number"] for x in all_q)
     missing_q = sorted(set(range(1, 201)) - set(numbers))
     missing_ans = sorted(x["number"] for x in all_q if not x["answer"])

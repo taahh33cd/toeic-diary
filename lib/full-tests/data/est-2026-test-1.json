@@ -11,9 +11,7 @@
   "questions": 200,
   "answered": 200,
   "missingAnswers": [],
-  "brokenQuestions": [
-   114
-  ]
+  "brokenQuestions": []
  },
  "groups": [
   {
@@ -5200,38 +5198,25 @@
     {
      "number": 114,
      "part": 5,
-     "prompt": null,
-     "options": null,
+     "prompt": "As part of its marketing campaign, Elegancia Dishware is ------- soliciting feedback from customers.",
+     "options": {
+      "A": "lightly",
+      "B": "loyally",
+      "C": "actively",
+      "D": "cleanly"
+     },
      "showText": true,
-     "broken": true,
+     "broken": false,
      "answer": "C",
      "explanation": {
-      "translation": "As part of its marketing campaign, Elegancia Dishware is --- soliciting feedback from customers. (A) lightly (B) loyally (C) actively (D) cleanly",
-      "reasoning": "* Loại câu hỏi: Từ vựng (Vocabulary)\nNghĩa: Như một phần của chiến dịch tiếp thị, Elegancia Dishware đang tích cực thu thập phản hồi từ khách hàng.\nNgữ pháp & Từ vựng:\nĐộng từ \"solicit\" nghĩa là khẩn khoản, thu thập (ý kiến/phản hồi). Trong marketing, người ta thường \"tích cực/chủ động thu thập\" (actively solicit). Do đó trạng từ \"actively\" là phù hợp nhất về nghĩa.",
+      "translation": "Như một phần của chiến dịch tiếp thị, Elegancia Dishware đang tích cực thu thập phản hồi từ khách hàng.",
+      "reasoning": "Loại câu hỏi: Từ vựng (Vocabulary)\nĐộng từ \"solicit\" nghĩa là khẩn khoản, thu thập (ý kiến/phản hồi). Trong marketing, người ta thường \"tích cực/chủ động thu thập\" (actively solicit). Do đó trạng từ \"actively\" là phù hợp nhất về nghĩa.",
       "glossary": [
-       {
-        "term": "campaign",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "chiến dịch tiếp thị"
-       },
-       {
-        "term": "actively",
-        "pos": "adv",
-        "ipa": "",
-        "meaning": "một cách tích cực, chủ động"
-       },
        {
         "term": "solicit",
         "pos": "v",
         "ipa": "",
-        "meaning": "thu thập, khẩn khoản, kêu gọi"
-       },
-       {
-        "term": "feedback",
-        "pos": "n",
-        "ipa": "",
-        "meaning": "sự phản hồi"
+        "meaning": "khẩn khoản, thu thập (ý kiến/phản hồi)"
        }
       ]
      }
@@ -10250,6 +10235,7 @@
   }
  ],
  "warnings": [
-  "câu 114: đề bài là placeholder ảnh trong docx gốc"
+  "câu 114: đề bài là placeholder ảnh trong docx gốc",
+  "đã vá thủ công câu: [114]"
  ]
 }

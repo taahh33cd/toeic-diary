@@ -11,9 +11,7 @@
    "questions": 200,
    "answered": 200,
    "missingAnswers": [],
-   "brokenQuestions": [
-    114
-   ]
+   "brokenQuestions": []
   },
   {
    "slug": "est-2026-test-2",
