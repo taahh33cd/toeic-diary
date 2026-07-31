@@ -1,0 +1,255 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t4-2-e1",
+          "question": "Câu này thuộc nhóm chức năng nào? «I'd like to give you information on our summer programs.»",
+          "options": [
+            { "id": "A", "text": "Cung cấp thông tin" },
+            { "id": "B", "text": "Hỏi thông tin" },
+            { "id": "C", "text": "Xin lỗi" },
+            { "id": "D", "text": "Câu kết" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Khuôn C của mục Cung cấp thông tin: «I'd like to give you information on…»"
+        },
+        {
+          "type": "mcq",
+          "id": "t4-2-e2",
+          "question": "Câu này thuộc nhóm chức năng nào? «In my opinion, it would be good to start with the basic level.»",
+          "options": [
+            { "id": "A", "text": "Đề nghị / gợi ý" },
+            { "id": "B", "text": "Phàn nàn" },
+            { "id": "C", "text": "Xin lỗi" },
+            { "id": "D", "text": "Xưng hô" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Khuôn C của mục Đề nghị/Gợi ý: «In my opinion, it would be good to…»"
+        },
+        {
+          "type": "mcq",
+          "id": "t4-2-e3",
+          "question": "Câu này thuộc nhóm chức năng nào? «I am writing in relation to your recent complaint.»",
+          "options": [
+            { "id": "A", "text": "Xin lỗi" },
+            { "id": "B", "text": "Đề nghị / gợi ý" },
+            { "id": "C", "text": "Cung cấp thông tin" },
+            { "id": "D", "text": "Câu kết" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Khuôn A của mục Xin lỗi. Câu này báo hiệu bạn đang trả lời một khiếu nại."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-2-e4",
+          "question": "Directions ghi «describe TWO problems». Bạn nên tách chúng thế nào?",
+          "options": [
+            { "id": "A", "text": "Hai câu riêng, nối bằng «Unfortunately…» và «In addition…»" },
+            { "id": "B", "text": "Gộp cả hai vào một câu dài duy nhất" },
+            { "id": "C", "text": "Chỉ nêu vấn đề nghiêm trọng hơn" },
+            { "id": "D", "text": "Nêu ở hai đoạn cách xa nhau trong thư" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Tách rõ hai câu để giám khảo đếm được 2 mission. Gộp thành một câu dài rất dễ bị tính là 1."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-2-e5",
+          "question": "Từ nối nào dùng để thêm vấn đề THỨ HAI?",
+          "options": [
+            { "id": "A", "text": "In addition," },
+            { "id": "B", "text": "However," },
+            { "id": "C", "text": "Therefore," },
+            { "id": "D", "text": "Otherwise," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«In addition» / «Also» / «Furthermore» dùng để bổ sung. «However» là tương phản, «Therefore» là kết quả, «Otherwise» là phương án thay thế."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-2-e6",
+          "question": "Từ nối nào dùng để đưa ra PHƯƠNG ÁN THAY THẾ?",
+          "options": [
+            { "id": "A", "text": "Otherwise," },
+            { "id": "B", "text": "In addition," },
+            { "id": "C", "text": "For example," },
+            { "id": "D", "text": "As a result," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«Otherwise» và «Alternatively» đều dùng khi bạn vừa nêu phương án 1 và chuyển sang phương án 2. Bài mẫu trong giáo trình dùng đúng «Otherwise»."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-2-e7",
+          "question": "Directions ghi «explain why the problem happened». Câu nào hoàn thành mission này?",
+          "options": [
+            { "id": "A", "text": "Our computer showed that there was one book left, but that turned out to be wrong." },
+            { "id": "B", "text": "I would like to apologize for the problem." },
+            { "id": "C", "text": "Would you like a refund?" },
+            { "id": "D", "text": "Sincerely yours," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Mission «explain why» đòi hỏi nêu NGUYÊN NHÂN cụ thể. B là xin lỗi, C là câu hỏi — không phải giải thích."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-2-e8",
+          "question": "Câu nào thuộc nhóm HỎI THÔNG TIN?",
+          "options": [
+            { "id": "A", "text": "Could you tell me how much the annual fee is?" },
+            { "id": "B", "text": "Our annual fee is 540 dollars." },
+            { "id": "C", "text": "I am attaching our price list." },
+            { "id": "D", "text": "We have full assurance that it will not happen again." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "B và C là CUNG CẤP thông tin, D là câu kết trấn an. Chỉ A là đi hỏi."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "type_blank",
+          "id": "t4-2-m1",
+          "sentence": "I'd like to give you ___ on our summer programs.",
+          "answers": ["information"],
+          "vi": "Tôi muốn cung cấp cho bạn thông tin về các chương trình mùa hè.",
+          "explanation": "«information» không đếm được — không có «informations», không có «an information»."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-2-m2",
+          "sentence": "In my opinion, it would be ___ to go on a business trip with your colleagues.",
+          "answers": ["good"],
+          "accepted": [["better", "best"]],
+          "vi": "Theo ý tôi, sẽ tốt nếu đi công tác cùng đồng nghiệp lần này.",
+          "explanation": "Khuôn C: «In my opinion, it would be good to + V». Dùng «better» khi so sánh với một phương án khác."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-2-m3",
+          "sentence": "___, if you give me some time, I will contact the publisher.",
+          "answers": ["Otherwise"],
+          "accepted": [["Alternatively"]],
+          "vi": "Ngược lại, nếu bạn cho tôi thêm chút thời gian, tôi sẽ liên hệ nhà xuất bản.",
+          "explanation": "Đây là câu trong bài mẫu của giáo trình. «Otherwise» chuyển sang phương án thứ hai sau khi đã nêu phương án thứ nhất."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-2-m4",
+          "sentence": "___, there are several dead pixels in the bottom corner.",
+          "answers": ["In addition"],
+          "accepted": [["Also", "Furthermore", "Moreover"]],
+          "vi": "Ngoài ra, còn có vài điểm chết ở góc dưới màn hình.",
+          "explanation": "Từ nối bổ sung — dùng khi nêu vấn đề thứ hai. Bốn từ này thay thế được cho nhau."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-2-m5",
+          "sentence": "At the time you ___ an order, our computer showed that there was one book left.",
+          "answers": ["placed"],
+          "vi": "Vào thời điểm bạn đặt hàng, hệ thống của chúng tôi báo còn một cuốn.",
+          "explanation": "«place an order» = đặt hàng. Sự việc đã qua nên dùng quá khứ đơn «placed»."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-2-m6",
+          "sentence": "However, that ___ out to be wrong.",
+          "answers": ["turned"],
+          "vi": "Tuy nhiên, hoá ra điều đó là sai.",
+          "explanation": "«turn out to be» = hoá ra là. Đây là cách nêu nguyên nhân sự cố rất tự nhiên trong thư xin lỗi."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-2-m7",
+          "sentence": "Currently, we don't have any more ___ of the book at the store.",
+          "answers": ["copies"],
+          "vi": "Hiện tại cửa hàng chúng tôi không còn bản nào của cuốn sách này.",
+          "explanation": "«a copy of a book» = một bản sách. Sau «any more» dùng danh từ số nhiều → copies."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-2-m8",
+          "sentence": "If that's the ___, could you wait a few more days?",
+          "answers": ["case"],
+          "vi": "Nếu đúng như vậy, bạn có thể đợi thêm vài ngày được không?",
+          "explanation": "«If that's the case» = nếu đúng như vậy. Cụm cố định nối câu, lấy từ bài mẫu trong giáo trình."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "word_order",
+          "id": "t4-2-h1",
+          "tokens": ["I", "suggest", "that", "you", "should", "come", "early", "from", "now", "on"],
+          "answer": "I suggest that you should come early from now on.",
+          "vi": "Tôi đề nghị bạn nên đến sớm hơn kể từ bây giờ.",
+          "explanation": "«from now on» = kể từ bây giờ, luôn đứng cuối câu. Sau «should» là V nguyên mẫu."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-2-h2",
+          "tokens": ["I", "would", "like", "to", "inform", "you", "of", "a", "change", "in", "our", "policy"],
+          "answer": "I would like to inform you of a change in our policy.",
+          "vi": "Tôi muốn thông báo với bạn về một thay đổi trong chính sách của chúng tôi.",
+          "explanation": "«inform someone OF something» — không dùng «inform to». Khuôn B của mục Cung cấp thông tin."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-2-h3",
+          "tokens": ["Could", "you", "tell", "me", "how", "much", "the", "annual", "fee", "is"],
+          "answer": "Could you tell me how much the annual fee is?",
+          "vi": "Bạn có thể cho tôi biết phí thường niên là bao nhiêu không?",
+          "explanation": "Câu hỏi gián tiếp: «how much the annual fee IS» — động từ «is» ở CUỐI, không đảo lên trước chủ ngữ."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-2-h4",
+          "tokens": ["To", "compensate", "for", "the", "inconvenience", "we", "would", "like", "to", "offer", "you", "a", "discount"],
+          "answer": "To compensate for the inconvenience, we would like to offer you a discount.",
+          "vi": "Để bù đắp sự bất tiện, chúng tôi muốn dành cho bạn một khoản giảm giá.",
+          "explanation": "Mệnh đề chỉ mục đích «To + V» đứng đầu câu, có dấu phẩy ngăn cách với mệnh đề chính."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-2-h5",
+          "tokens": ["I", "have", "a", "suggestion", "for", "you", "about", "the", "vehicle", "you", "are", "going", "to", "purchase"],
+          "answer": "I have a suggestion for you about the vehicle you are going to purchase.",
+          "vi": "Tôi có một gợi ý cho bạn về chiếc xe bạn định mua.",
+          "explanation": "«a suggestion FOR someone ABOUT something» — hai giới từ khác nhau, dễ nhầm. Khuôn B của mục Đề nghị/Gợi ý."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-2-h6",
+          "tokens": ["Would", "it", "be", "possible", "to", "move", "the", "meeting", "to", "Thursday"],
+          "answer": "Would it be possible to move the meeting to Thursday?",
+          "vi": "Có thể dời cuộc họp sang thứ Năm được không?",
+          "explanation": "«Would it be possible to + V?» — cách xin đổi lịch lịch sự nhất, nhẹ hơn nhiều so với «Can we move…?»."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-2-h7",
+          "tokens": ["We", "will", "replace", "the", "ordered", "items", "or", "give", "you", "a", "full", "refund"],
+          "answer": "We will replace the ordered items or give you a full refund.",
+          "vi": "Chúng tôi sẽ thay sản phẩm đã đặt hoặc hoàn tiền toàn bộ cho bạn.",
+          "explanation": "Hai động từ «replace» và «give» dùng chung trợ động từ «will» — không lặp lại «will» sau «or»."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-2-h8",
+          "tokens": ["If", "you", "have", "any", "further", "queries", "please", "contact", "me", "without", "hesitation"],
+          "answer": "If you have any further queries, please contact me without hesitation.",
+          "vi": "Nếu còn thắc mắc nào khác, xin đừng ngần ngại liên hệ với tôi.",
+          "explanation": "Mệnh đề «If…» đứng đầu thì có dấu phẩy trước mệnh đề chính. «without hesitation» = không do dự."
+        }
+      ]
+    }
+  ]
+}

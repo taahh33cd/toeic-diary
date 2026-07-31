@@ -1,0 +1,253 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t3-2-e1",
+          "question": "E-mail đề ký «Dr. Elena Sousa». Xưng hô nào đúng nhất?",
+          "options": [
+            { "id": "A", "text": "Dear Dr. Sousa," },
+            { "id": "B", "text": "Dear Ms. Elena," },
+            { "id": "C", "text": "Dear Elena Sousa Madam," },
+            { "id": "D", "text": "Dear Doctor," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Khi người gửi có học hàm học vị (Dr., Prof.), dùng học vị đó thay cho Mr./Ms. — vẫn theo công thức: học vị + HỌ."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-2-e2",
+          "question": "Bạn trả lời một thư gửi cho «All Staff» và ký «Human Resources Department». Xưng hô nào đúng?",
+          "options": [
+            { "id": "A", "text": "Dear Human Resources Team," },
+            { "id": "B", "text": "Dear All Staff," },
+            { "id": "C", "text": "Dear Human," },
+            { "id": "D", "text": "Hi everyone," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«Dear All Staff» là cách họ gọi bạn. Khi trả lời, bạn phải gọi ĐÚNG bên gửi — tức phòng Nhân sự."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-2-e3",
+          "question": "Câu nào là câu chào hỏi mở đầu THÔNG THƯỜNG (casual)?",
+          "options": [
+            { "id": "A", "text": "Hi Jenny," },
+            { "id": "B", "text": "Thank you for your e-mail of July 10th." },
+            { "id": "C", "text": "I've just received your e-mail concerning the refund." },
+            { "id": "D", "text": "To Whom It May Concern," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«Hi + tên riêng» thuộc nhóm thông thường, chỉ dùng với người thân thiết. Trong bài thi TOEIC nên tránh."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-2-e4",
+          "question": "Bạn đóng vai nhân viên trả lời khách hàng khiếu nại. Câu mở đầu nào phù hợp nhất?",
+          "options": [
+            { "id": "A", "text": "I was very concerned to learn about the problem you have had." },
+            { "id": "B", "text": "I am writing to complain about your service." },
+            { "id": "C", "text": "I am writing to inquire about your order." },
+            { "id": "D", "text": "I suggest that you should be more careful." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Vai nhân viên thì phải thể hiện sự quan tâm và xin lỗi, không phải phàn nàn ngược lại. B là câu của khách hàng, D là trách móc khách."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-2-e5",
+          "question": "Bạn đóng vai khách hàng bị giao hàng hỏng. Câu mở đầu nào phù hợp nhất?",
+          "options": [
+            { "id": "A", "text": "I am writing to complain about the damaged items in my order." },
+            { "id": "B", "text": "I would like to apologize for the damaged items." },
+            { "id": "C", "text": "Thank you for pointing this matter out to us." },
+            { "id": "D", "text": "We have full assurance that it will not happen again." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Vai khách hàng thì PHÀN NÀN. B, C, D đều là câu của bên bán hàng — chọn nhầm là sai vai ngay từ dòng đầu."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-2-e6",
+          "question": "Câu kết nào phù hợp với e-mail đang CHỜ HỒI ÂM?",
+          "options": [
+            { "id": "A", "text": "An early reply would be greatly appreciated." },
+            { "id": "B", "text": "We will replace ordered items or give you a full refund." },
+            { "id": "C", "text": "We have full assurance that it will not happen again." },
+            { "id": "D", "text": "To compensate for the inconvenience, we would like to offer you a discount." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Nhóm câu kết chờ hồi âm: «Hope to hear from you soon», «An early reply would be greatly appreciated». Ba đáp án còn lại thuộc nhóm xin lỗi–bồi thường."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-2-e7",
+          "question": "Câu kết nào phù hợp với e-mail XIN LỖI khách hàng?",
+          "options": [
+            { "id": "A", "text": "We have full assurance that it will not happen again." },
+            { "id": "B", "text": "Please send your response by the end of November." },
+            { "id": "C", "text": "I am writing to inquire about your services." },
+            { "id": "D", "text": "Could you tell me how much the annual fee is?" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Sau khi xin lỗi, câu kết nên trấn an khách. B là câu kết chờ hồi âm, C là câu mở đầu, D là câu hỏi — không phải câu kết."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-2-e8",
+          "question": "Thứ tự đúng của các khối cuối thư là gì?",
+          "options": [
+            { "id": "A", "text": "Câu kết → Lời chào cuối → Ký tên" },
+            { "id": "B", "text": "Lời chào cuối → Câu kết → Ký tên" },
+            { "id": "C", "text": "Ký tên → Câu kết → Lời chào cuối" },
+            { "id": "D", "text": "Câu kết → Ký tên → Lời chào cuối" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Câu kết («I look forward to hearing from you.») là câu văn cuối cùng, rồi mới đến lời chào («Sincerely,») và cuối cùng là tên bạn."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "type_blank",
+          "id": "t3-2-m1",
+          "sentence": "I am writing ___ connection to the problem with the fax machine.",
+          "answers": ["in"],
+          "vi": "Tôi viết thư này liên quan đến vấn đề với chiếc máy fax.",
+          "explanation": "«in connection to» = liên quan đến. Cùng nhóm với «in relation to» — cả hai đều mở đầu bằng giới từ IN."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-2-m2",
+          "sentence": "I look ___ to ___ from you soon.",
+          "answers": ["forward", "hearing"],
+          "vi": "Tôi mong sớm nhận được hồi âm từ bạn.",
+          "explanation": "Bẫy kinh điển: «look forward TO» — chữ «to» ở đây là GIỚI TỪ nên theo sau phải là V-ing (hearing), không phải «hear»."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-2-m3",
+          "sentence": "An early reply would be greatly ___.",
+          "answers": ["appreciated"],
+          "vi": "Một hồi âm sớm sẽ được đánh giá rất cao.",
+          "explanation": "Câu bị động «would be + V3». Đây là cách nói lịch sự thay cho câu mệnh lệnh «Reply soon!»."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-2-m4",
+          "sentence": "Please send your response ___ the end of November.",
+          "answers": ["by"],
+          "vi": "Xin gửi phản hồi trước cuối tháng Mười Một.",
+          "explanation": "«BY + thời điểm» = trước, chậm nhất là. Khác «until» (cho tới tận) và «in» (trong khoảng)."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-2-m5",
+          "sentence": "If you have any further queries, please ___ me without ___.",
+          "answers": ["contact", "hesitation"],
+          "vi": "Nếu còn thắc mắc nào khác, xin đừng ngần ngại liên hệ với tôi.",
+          "explanation": "«without hesitation» = không do dự. Sau «please» dùng V nguyên mẫu, sau «without» dùng danh từ."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-2-m6",
+          "sentence": "Hope to ___ from you soon.",
+          "answers": ["hear"],
+          "vi": "Mong sớm nhận được hồi âm.",
+          "explanation": "Chú ý khác với «look forward to hearing»: ở đây «to» là TO nguyên mẫu nên dùng «hear», không phải «hearing»."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-2-m7",
+          "sentence": "Once again, please ___ my sincere apology for the inconvenience ___.",
+          "answers": ["accept", "caused"],
+          "vi": "Một lần nữa, xin hãy chấp nhận lời xin lỗi chân thành của tôi vì sự bất tiện đã gây ra.",
+          "explanation": "«the inconvenience caused» = sự bất tiện đã gây ra, dạng rút gọn của «the inconvenience that was caused»."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-2-m8",
+          "sentence": "Yours ___, (đi với «Dear Sir or Madam,»)",
+          "answers": ["faithfully"],
+          "vi": "Kính thư,",
+          "explanation": "Mẹo nhớ: không biết tên thì phải có «đức tin» (faith) — Yours FAITHfully. Biết tên rồi thì chân thành — Yours SINcerely."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "matching",
+          "id": "t3-2-h1",
+          "prompt": "Ghép mỗi loại mission với câu kết phù hợp nhất.",
+          "pairs": [
+            { "left": "Thư hỏi thông tin, đang chờ trả lời", "right": "An early reply would be greatly appreciated." },
+            { "left": "Thư xin lỗi vì sự cố lặp lại", "right": "We have full assurance that it will not happen again." },
+            { "left": "Thư vừa đưa ra hai phương án cho khách", "right": "Please let me know which option you would prefer." },
+            { "left": "Thư cảm ơn khách đã báo lỗi", "right": "Thank you for pointing this matter out to us." },
+            { "left": "Thư có hạn chót cụ thể", "right": "Please send your response by the end of November." }
+          ],
+          "explanation": "Câu kết phải khớp với việc bạn vừa làm ở thân thư. Vừa đưa hai phương án mà kết bằng «Hope to hear from you soon» thì khách không biết phải chọn gì."
+        },
+        {
+          "type": "matching",
+          "id": "t3-2-h2",
+          "prompt": "Ghép mỗi vai với câu mở đầu phù hợp.",
+          "pairs": [
+            { "left": "Khách hàng khiếu nại", "right": "I am writing to complain about the poor service I received." },
+            { "left": "Nhân viên trả lời khiếu nại", "right": "I was very concerned to learn about your problem." },
+            { "left": "Khách hàng hỏi thông tin", "right": "I am writing to inquire about your language courses." },
+            { "left": "Doanh nghiệp thông báo thay đổi", "right": "I would like to inform you of a change in our policy." },
+            { "left": "Nhân viên gửi tài liệu kèm", "right": "I am attaching some information on the products you asked about." }
+          ],
+          "explanation": "Chọn sai khuôn mở đầu là lệch vai ngay dòng đầu tiên. Trước khi viết, luôn tự hỏi: mình đang là bên bán hay bên mua?"
+        },
+        {
+          "type": "matching",
+          "id": "t3-2-h3",
+          "prompt": "Ghép mỗi cụm mở đầu với giới từ đi kèm đúng.",
+          "pairs": [
+            { "left": "I am writing to inform you", "right": "OF a change in our policy." },
+            { "left": "I am writing to let you know", "right": "ABOUT our new opening hours." },
+            { "left": "I am writing to complain", "right": "ABOUT the copier I bought." },
+            { "left": "I am writing in connection", "right": "TO the problem with the fax machine." },
+            { "left": "I am writing in relation", "right": "TO your recent complaint." }
+          ],
+          "explanation": "Đây là nhóm dễ nhầm nhất: inform you OF nhưng let you know ABOUT; complain ABOUT nhưng in connection/relation TO. Học thuộc theo cặp, đừng suy luận."
+        },
+        {
+          "type": "matching",
+          "id": "t3-2-h4",
+          "prompt": "Ghép mỗi câu SAI với lỗi của nó.",
+          "pairs": [
+            { "left": "Dear Ms. Kimberly,", "right": "Ghép Ms. với TÊN RIÊNG thay vì họ" },
+            { "left": "I look forward to hear from you.", "right": "Sau «look forward to» phải là V-ing" },
+            { "left": "Dear Sir or Madam, ... Yours sincerely,", "right": "Sai cặp — không biết tên thì phải faithfully" },
+            { "left": "Talk to you later! (gửi khách hàng)", "right": "Quá suồng sã cho e-mail công việc" },
+            { "left": "I am writing to inform you about a change.", "right": "Nên là «inform you OF»" }
+          ],
+          "explanation": "Năm lỗi này chiếm phần lớn điểm trừ ở phần xưng hô và câu kết. Nhận diện được lỗi của người khác là bước đầu để không mắc lại."
+        },
+        {
+          "type": "matching",
+          "id": "t3-2-h5",
+          "prompt": "Ghép mỗi cách xưng hô với dấu hiệu nhận biết trong e-mail đề.",
+          "pairs": [
+            { "left": "Dòng FROM ghi «Laura Benson»", "right": "Dear Ms. Benson," },
+            { "left": "Dòng FROM ghi «Dr. Peter Lee»", "right": "Dear Dr. Lee," },
+            { "left": "Chữ ký ghi «Accounts Team»", "right": "Dear Accounts Team," },
+            { "left": "Không có tên ở đâu cả", "right": "Dear Sir or Madam," },
+            { "left": "Chữ ký ghi «Victor Lam — Manager»", "right": "Dear Mr. Lam," }
+          ],
+          "explanation": "Quy trình 3 bước: (1) đọc dòng FROM, (2) nếu không rõ thì đọc chữ ký cuối thư, (3) nếu vẫn không có tên người thì mới dùng tên bộ phận hoặc «Dear Sir or Madam»."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t4-1-e1",
+          "question": "Câu này thuộc nhóm chức năng nào? «I would like to apologize for the inconvenience.»",
+          "options": [
+            { "id": "A", "text": "Xin lỗi" },
+            { "id": "B", "text": "Cung cấp thông tin" },
+            { "id": "C", "text": "Đề nghị / gợi ý" },
+            { "id": "D", "text": "Hỏi thông tin" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«apologize for» là dấu hiệu rõ nhất của mission xin lỗi. Dùng khi Directions ghi «make an apology»."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-1-e2",
+          "question": "Câu này thuộc nhóm chức năng nào? «I am writing to inform you of a change in our policy.»",
+          "options": [
+            { "id": "A", "text": "Cung cấp thông tin" },
+            { "id": "B", "text": "Xin lỗi" },
+            { "id": "C", "text": "Phàn nàn" },
+            { "id": "D", "text": "Đề nghị / gợi ý" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«inform you of» là một trong 5 khuôn cung cấp thông tin của giáo trình (A–E)."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-1-e3",
+          "question": "Câu này thuộc nhóm chức năng nào? «One thing I can recommend is our weekend class.»",
+          "options": [
+            { "id": "A", "text": "Đề nghị / gợi ý" },
+            { "id": "B", "text": "Xin lỗi" },
+            { "id": "C", "text": "Câu kết" },
+            { "id": "D", "text": "Xưng hô" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«One thing I can recommend is…» là khuôn D trong mục Đề nghị/Gợi ý. Dùng khi Directions ghi «make a suggestion/recommendation»."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-1-e4",
+          "question": "Câu này thuộc nhóm chức năng nào? «I am writing to complain about a problem with the copier.»",
+          "options": [
+            { "id": "A", "text": "Phàn nàn" },
+            { "id": "B", "text": "Xin lỗi" },
+            { "id": "C", "text": "Đề nghị / gợi ý" },
+            { "id": "D", "text": "Câu kết" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«complain about» — bạn đang ở vai khách hàng nêu vấn đề, không phải bên xin lỗi."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-1-e5",
+          "question": "Directions ghi «make an apology». Câu nào hoàn thành mission này?",
+          "options": [
+            { "id": "A", "text": "On behalf of my store, I would like to apologize for the problem with your book." },
+            { "id": "B", "text": "Could you tell me when you placed the order?" },
+            { "id": "C", "text": "I am attaching some information on our products." },
+            { "id": "D", "text": "Thank you for your e-mail dated June 5." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Chỉ A có động từ «apologize». B là câu hỏi, C là cung cấp thông tin, D là câu chào hỏi."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-1-e6",
+          "question": "Directions ghi «ask ONE question». Câu nào hoàn thành mission này?",
+          "options": [
+            { "id": "A", "text": "Would you give us a call or visit if you would like a refund?" },
+            { "id": "B", "text": "We are very sorry for the delay." },
+            { "id": "C", "text": "We will replace the item free of charge." },
+            { "id": "D", "text": "Sincerely yours," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Mission «ask a question» đòi hỏi một câu có DẤU HỎI thật sự. B là xin lỗi, C là nêu giải pháp, D là lời chào cuối."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-1-e7",
+          "question": "Directions ghi «make ONE offer». Câu nào hoàn thành mission này?",
+          "options": [
+            { "id": "A", "text": "We would like to offer you a ten percent discount." },
+            { "id": "B", "text": "I was very concerned to learn about your problem." },
+            { "id": "C", "text": "Could you wait a few more days?" },
+            { "id": "D", "text": "I am writing to inquire about your services." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«offer» là điều bạn CHO khách. B là câu mở đầu thư xin lỗi, C là câu hỏi, D là câu hỏi thông tin."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-1-e8",
+          "question": "Câu nào KHÔNG thuộc nhóm câu kết?",
+          "options": [
+            { "id": "A", "text": "I am writing to let you know about our new opening hours." },
+            { "id": "B", "text": "Hope to hear from you soon." },
+            { "id": "C", "text": "An early reply would be greatly appreciated." },
+            { "id": "D", "text": "We have full assurance that it will not happen again." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "A là câu MỞ ĐẦU cung cấp thông tin. Ba câu còn lại đều nằm trong danh sách câu kết của giáo trình."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "type_blank",
+          "id": "t4-1-m1",
+          "sentence": "I am writing to ___ you know about the schedule change.",
+          "answers": ["let"],
+          "vi": "Tôi viết thư này để báo cho bạn biết về việc đổi lịch.",
+          "explanation": "Khuôn A của mục Cung cấp thông tin: «I am writing to let you know about…»"
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-1-m2",
+          "sentence": "I ___ that you should come early from now on.",
+          "answers": ["suggest"],
+          "accepted": [["recommend"]],
+          "vi": "Tôi đề nghị bạn nên đến sớm hơn kể từ bây giờ.",
+          "explanation": "Khuôn A của mục Đề nghị/Gợi ý. Chú ý sau «suggest that + chủ ngữ» dùng V nguyên mẫu, không thêm «s»."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-1-m3",
+          "sentence": "I have a ___ for you about the vehicle you are going to purchase.",
+          "answers": ["suggestion"],
+          "vi": "Tôi có một gợi ý cho bạn về chiếc xe bạn định mua.",
+          "explanation": "Sau mạo từ «a» cần DANH TỪ → suggestion. Đây là khuôn B của mục Đề nghị/Gợi ý."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-1-m4",
+          "sentence": "I was very concerned to ___ about your problem.",
+          "answers": ["learn"],
+          "accepted": [["hear"]],
+          "vi": "Tôi rất lo lắng khi biết về vấn đề của bạn.",
+          "explanation": "«concerned to learn/hear about» — cả hai đều đúng. Đây là khuôn B của mục Xin lỗi."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-1-m5",
+          "sentence": "Please ___ my sincere ___.",
+          "answers": ["accept", "apology"],
+          "accepted": [[], ["apologies"]],
+          "vi": "Xin hãy chấp nhận lời xin lỗi chân thành của tôi.",
+          "explanation": "Số ít «apology» hoặc số nhiều «apologies» đều dùng được. Sau «Please» là V nguyên mẫu."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-1-m6",
+          "sentence": "To ___ for the inconvenience, we would like to ___ you a free upgrade.",
+          "answers": ["compensate", "offer"],
+          "vi": "Để bù đắp sự bất tiện, chúng tôi muốn dành cho bạn một lần nâng hạng miễn phí.",
+          "explanation": "«compensate for + sự cố» và «offer someone something» — hai cụm luôn đi cùng nhau trong câu bồi thường."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-1-m7",
+          "sentence": "We will ___ ordered items or give you a full ___ instantly.",
+          "answers": ["replace", "refund"],
+          "vi": "Chúng tôi sẽ thay sản phẩm đã đặt hoặc hoàn tiền toàn bộ ngay lập tức.",
+          "explanation": "Sau «will» là V nguyên mẫu → replace. «a full refund» = hoàn tiền toàn bộ, danh từ đếm được số ít."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-1-m8",
+          "sentence": "I am writing in ___ to the problem we have recently experienced with the fax machine.",
+          "answers": ["connection"],
+          "accepted": [["relation"]],
+          "vi": "Tôi viết thư này liên quan đến vấn đề gần đây với chiếc máy fax.",
+          "explanation": "«in connection to» và «in relation to» thay thế được cho nhau. Cả hai đều là khuôn mở đầu khi nêu vấn đề."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "word_order",
+          "id": "t4-1-h1",
+          "tokens": ["Would", "you", "give", "us", "a", "call", "or", "visit", "our", "store"],
+          "answer": "Would you give us a call or visit our store?",
+          "vi": "Bạn có thể gọi cho chúng tôi hoặc ghé cửa hàng được không?",
+          "explanation": "Câu hỏi lịch sự với «Would you…?». Hai hành động nối bằng «or» dùng chung một trợ động từ — không lặp lại «would you» lần thứ hai."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-1-h2",
+          "tokens": ["Could", "you", "tell", "me", "when", "you", "placed", "the", "order"],
+          "answer": "Could you tell me when you placed the order?",
+          "vi": "Bạn có thể cho tôi biết bạn đặt hàng khi nào không?",
+          "explanation": "Câu hỏi GIÁN TIẾP: sau «Could you tell me when» giữ trật tự S + V bình thường («you placed»), KHÔNG đảo thành «did you place»."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-1-h3",
+          "tokens": ["I", "would", "like", "to", "apologize", "for", "the", "inconvenience", "caused"],
+          "answer": "I would like to apologize for the inconvenience caused.",
+          "vi": "Tôi xin lỗi vì sự bất tiện đã gây ra.",
+          "explanation": "«apologize FOR + sự cố». «the inconvenience caused» là dạng rút gọn của «the inconvenience that was caused»."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-1-h4",
+          "tokens": ["On", "behalf", "of", "my", "store", "I", "would", "like", "to", "apologize"],
+          "answer": "On behalf of my store, I would like to apologize.",
+          "vi": "Thay mặt cửa hàng, tôi xin lỗi.",
+          "explanation": "«On behalf of + tổ chức» đứng đầu câu, có dấu phẩy ngăn cách. Cụm này biến lời xin lỗi cá nhân thành lời xin lỗi chính thức."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-1-h5",
+          "tokens": ["One", "thing", "I", "can", "recommend", "is", "our", "seasonal", "menu"],
+          "answer": "One thing I can recommend is our seasonal menu.",
+          "vi": "Một điều tôi có thể khuyên là thực đơn theo mùa của chúng tôi.",
+          "explanation": "Chủ ngữ dài «One thing I can recommend» + động từ «is». Đây là khuôn D của mục Đề nghị/Gợi ý."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-1-h6",
+          "tokens": ["I", "was", "very", "concerned", "to", "learn", "about", "your", "problem"],
+          "answer": "I was very concerned to learn about your problem.",
+          "vi": "Tôi rất lo lắng khi biết về vấn đề của bạn.",
+          "explanation": "Trật tự: S + be + trạng từ mức độ (very) + concerned + to V + about + tân ngữ."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-1-h7",
+          "tokens": ["I", "am", "attaching", "some", "information", "on", "the", "products", "you", "asked", "about"],
+          "answer": "I am attaching some information on the products you asked about.",
+          "vi": "Tôi đính kèm một số thông tin về các sản phẩm bạn đã hỏi.",
+          "explanation": "Mệnh đề quan hệ rút gọn «(that) you asked about» đứng sau danh từ nó bổ nghĩa. Giới từ «about» nằm cuối câu — đúng ngữ pháp."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-1-h8",
+          "tokens": ["We", "have", "full", "assurance", "that", "it", "will", "not", "happen", "again"],
+          "answer": "We have full assurance that it will not happen again.",
+          "vi": "Chúng tôi đảm bảo chắc chắn rằng chuyện này sẽ không tái diễn.",
+          "explanation": "«have full assurance that + mệnh đề» — câu trấn an khách sau lời xin lỗi, đặc biệt khi sự cố đã lặp lại."
+        }
+      ]
+    }
+  ]
+}

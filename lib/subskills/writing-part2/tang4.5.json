@@ -1,0 +1,257 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t4-5-e1",
+          "question": "Câu này thuộc nhóm chức năng nào? «Thank you for pointing this matter out to us.»",
+          "options": [
+            { "id": "A", "text": "Câu kết của thư xin lỗi" },
+            { "id": "B", "text": "Câu chào hỏi mở đầu" },
+            { "id": "C", "text": "Hỏi thông tin" },
+            { "id": "D", "text": "Đề nghị / gợi ý" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Câu này biến lời phàn nàn của khách thành sự đóng góp — rất hay dùng để chốt thư xử lý khiếu nại."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-5-e2",
+          "question": "Câu này thuộc nhóm chức năng nào? «We expect that you will continue to use our services.»",
+          "options": [
+            { "id": "A", "text": "Câu kết của thư xin lỗi" },
+            { "id": "B", "text": "Cung cấp thông tin" },
+            { "id": "C", "text": "Phàn nàn" },
+            { "id": "D", "text": "Xưng hô" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Câu kết thiện chí, dùng khi bạn vừa xin lỗi và muốn giữ chân khách hàng."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-5-e3",
+          "question": "Bạn phải nêu MỘT lý do khiến sự cố xảy ra. Cách viết nào tốt nhất?",
+          "options": [
+            { "id": "A", "text": "Nêu nguyên nhân cụ thể: «A burst pipe on the fourth floor forced us to close six rooms.»" },
+            { "id": "B", "text": "Nêu chung chung: «Due to some problems, we had to close rooms.»" },
+            { "id": "C", "text": "Không giải thích, chỉ xin lỗi" },
+            { "id": "D", "text": "Đổ lỗi cho khách hàng" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Lý do càng cụ thể càng đáng tin. «Due to some problems» là câu rỗng — giám khảo không tính là đã hoàn thành mission «explain»."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-5-e4",
+          "question": "Bạn hứa khắc phục sự cố. Điều gì BẮT BUỘC phải có trong lời hứa?",
+          "options": [
+            { "id": "A", "text": "Mốc thời gian cụ thể" },
+            { "id": "B", "text": "Lời xin lỗi lặp lại" },
+            { "id": "C", "text": "Tên của giám đốc" },
+            { "id": "D", "text": "Lịch sử công ty" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«We will reprint the cards by October 7» mạnh hơn nhiều so với «We will reprint the cards soon». Lời hứa không có mốc là lời hứa suông."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-5-e5",
+          "question": "Câu nào phù hợp làm câu bồi thường (mission «make an offer»)?",
+          "options": [
+            { "id": "A", "text": "To compensate for the inconvenience, we would like to offer you a complimentary dinner." },
+            { "id": "B", "text": "I am writing to complain about the cold food." },
+            { "id": "C", "text": "Could you tell me what time you arrived?" },
+            { "id": "D", "text": "Dear Ms. Benson," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«complimentary» = miễn phí, tặng kèm — từ trang trọng hơn «free» trong ngữ cảnh dịch vụ."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-5-e6",
+          "question": "Trong thư PHÀN NÀN, chi tiết nào làm thư có sức nặng nhất?",
+          "options": [
+            { "id": "A", "text": "Ngày giờ, số tiền, mã đơn hàng cụ thể" },
+            { "id": "B", "text": "Nhiều tính từ chỉ sự tức giận" },
+            { "id": "C", "text": "Doạ sẽ kiện ra toà" },
+            { "id": "D", "text": "Viết chữ in hoa cho nổi bật" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Thư phàn nàn hiệu quả dựa trên DỮ KIỆN chứ không phải cảm xúc. «The bill was 90 dollars higher than the estimate» mạnh hơn «I was very angry»."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-5-e7",
+          "question": "Câu nào là cách từ chối LỊCH SỰ nhất?",
+          "options": [
+            { "id": "A", "text": "I am afraid I will not be able to attend, as I will be abroad on that date." },
+            { "id": "B", "text": "I cannot come." },
+            { "id": "C", "text": "No." },
+            { "id": "D", "text": "Maybe I will come, maybe not." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Từ chối lịch sự = đệm («I am afraid») + từ chối rõ ràng + lý do ngắn. D vừa cộc lốc vừa mơ hồ."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-5-e8",
+          "question": "Sau khi từ chối một lời mời, câu nào nên có để giữ quan hệ?",
+          "options": [
+            { "id": "A", "text": "I hope you will consider me for a future event." },
+            { "id": "B", "text": "Please do not contact me again." },
+            { "id": "C", "text": "An early reply would be greatly appreciated." },
+            { "id": "D", "text": "I am writing to inquire about your services." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Từ chối xong nên để ngỏ cho lần sau. Đây là chi tiết nhỏ nhưng làm thư chuyên nghiệp hơn hẳn."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "type_blank",
+          "id": "t4-5-m1",
+          "sentence": "To ___ for the inconvenience, we would like to offer you a ___ dinner.",
+          "answers": ["compensate", "complimentary"],
+          "accepted": [[], ["free"]],
+          "vi": "Để bù đắp sự bất tiện, chúng tôi muốn mời bạn một bữa tối miễn phí.",
+          "explanation": "«complimentary» trang trọng hơn «free» trong ngữ cảnh dịch vụ, nhưng cả hai đều đúng."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-5-m2",
+          "sentence": "We will reprint all five hundred cards ___ charge and have them ready ___ October 7.",
+          "answers": ["free of", "by"],
+          "accepted": [["without"], []],
+          "vi": "Chúng tôi sẽ in lại toàn bộ năm trăm tấm danh thiếp miễn phí và hoàn thành trước ngày 7 tháng 10.",
+          "explanation": "«free of charge» hoặc «without charge» = miễn phí. «by + ngày» = chậm nhất là ngày đó."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-5-m3",
+          "sentence": "I am afraid I will not be ___ to attend, ___ I will be abroad on that date.",
+          "answers": ["able", "as"],
+          "accepted": [[], ["because", "since"]],
+          "vi": "Tôi e rằng tôi không thể tham dự, vì tôi sẽ ở nước ngoài vào ngày đó.",
+          "explanation": "«be able to + V». «as / because / since» đều nêu lý do; «as» và «since» trang trọng hơn một chút."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-5-m4",
+          "sentence": "I hope you will ___ me for a future event.",
+          "answers": ["consider"],
+          "vi": "Tôi hy vọng quý vị sẽ cân nhắc tôi cho một sự kiện trong tương lai.",
+          "explanation": "«consider someone for something» = cân nhắc ai cho việc gì. Câu để ngỏ sau khi từ chối."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-5-m5",
+          "sentence": "A burst pipe on the fourth floor ___ us to close six rooms at short ___.",
+          "answers": ["forced", "notice"],
+          "vi": "Một đường ống vỡ ở tầng bốn buộc chúng tôi phải đóng sáu phòng mà không kịp báo trước.",
+          "explanation": "«force someone to + V» = buộc ai làm gì. «at short notice» = gấp, không kịp báo trước."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-5-m6",
+          "sentence": "Our supplier has informed us that a small ___ of jackets were stitched with the wrong thread.",
+          "answers": ["number"],
+          "vi": "Nhà cung cấp đã báo với chúng tôi rằng một số ít áo khoác bị may sai chỉ.",
+          "explanation": "«a small number of + danh từ đếm được số nhiều». Với danh từ không đếm được thì dùng «a small amount of»."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-5-m7",
+          "sentence": "Your parcel left the depot yesterday and is ___ for delivery before noon tomorrow.",
+          "answers": ["scheduled"],
+          "accepted": [["due"]],
+          "vi": "Kiện hàng của bạn đã rời kho hôm qua và dự kiến giao trước trưa mai.",
+          "explanation": "«be scheduled for» hoặc «be due for» = dự kiến vào lúc nào. Thông tin khách quan tâm nhất trong thư xin lỗi giao chậm."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-5-m8",
+          "sentence": "The final bill was 90 dollars ___ than the estimate I was given.",
+          "answers": ["higher"],
+          "accepted": [["more"]],
+          "vi": "Hoá đơn cuối cùng cao hơn 90 đô la so với báo giá tôi nhận được.",
+          "explanation": "Cấu trúc so sánh: «số tiền + higher than». Nêu con số cụ thể làm thư phàn nàn có sức nặng."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "word_order",
+          "id": "t4-5-h1",
+          "tokens": ["Thank", "you", "for", "pointing", "this", "matter", "out", "to", "us"],
+          "answer": "Thank you for pointing this matter out to us.",
+          "vi": "Cảm ơn vì đã chỉ ra vấn đề này cho chúng tôi.",
+          "explanation": "«point something out TO someone». Cụm «point out» tách được nên «this matter» chen vào giữa cũng đúng."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-5-h2",
+          "tokens": ["We", "hope", "that", "you", "will", "continue", "to", "use", "our", "services"],
+          "answer": "We hope that you will continue to use our services.",
+          "vi": "Chúng tôi hy vọng bạn sẽ tiếp tục sử dụng dịch vụ của chúng tôi.",
+          "explanation": "«continue to + V» hoặc «continue + V-ing» đều đúng. «services» thường ở số nhiều khi nói về dịch vụ của công ty."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-5-h3",
+          "tokens": ["I", "am", "afraid", "I", "will", "not", "be", "able", "to", "attend", "the", "conference"],
+          "answer": "I am afraid I will not be able to attend the conference.",
+          "vi": "Tôi e rằng tôi không thể tham dự hội nghị.",
+          "explanation": "«I am afraid» + mệnh đề (có thể lược «that»). «be able to» dùng cho tương lai thay cho «can»."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-5-h4",
+          "tokens": ["We", "would", "like", "to", "refund", "the", "express", "delivery", "charge", "to", "your", "account"],
+          "answer": "We would like to refund the express delivery charge to your account.",
+          "vi": "Chúng tôi muốn hoàn khoản phí giao hàng nhanh vào tài khoản của bạn.",
+          "explanation": "«refund something to someone» = hoàn khoản gì cho ai. Nêu rõ hoàn vào đâu để khách yên tâm."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-5-h5",
+          "tokens": ["I", "would", "like", "to", "request", "a", "written", "explanation", "of", "the", "additional", "charges"],
+          "answer": "I would like to request a written explanation of the additional charges.",
+          "vi": "Tôi muốn yêu cầu một bản giải thích bằng văn bản về các khoản phụ phí.",
+          "explanation": "«a written explanation OF something». Yêu cầu bằng văn bản là cách phàn nàn cứng rắn mà vẫn lịch sự."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-5-h6",
+          "tokens": ["I", "hope", "you", "will", "consider", "me", "for", "a", "future", "event"],
+          "answer": "I hope you will consider me for a future event.",
+          "vi": "Tôi hy vọng quý vị sẽ cân nhắc tôi cho một sự kiện trong tương lai.",
+          "explanation": "«consider someone FOR something». Câu để ngỏ sau khi từ chối — giữ được quan hệ cho lần sau."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-5-h7",
+          "tokens": ["Once", "again", "please", "accept", "my", "sincere", "apology", "for", "the", "inconvenience", "caused"],
+          "answer": "Once again, please accept my sincere apology for the inconvenience caused.",
+          "vi": "Một lần nữa, xin hãy chấp nhận lời xin lỗi chân thành của tôi vì sự bất tiện đã gây ra.",
+          "explanation": "«Once again» đứng đầu câu kết, báo hiệu bạn đang nhắc lại lời xin lỗi lần cuối trước khi chốt thư."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-5-h8",
+          "tokens": ["We", "are", "sorry", "that", "you", "will", "not", "be", "able", "to", "join", "us", "this", "year"],
+          "answer": "We are sorry that you will not be able to join us this year.",
+          "vi": "Chúng tôi rất tiếc vì bạn không thể tham gia cùng chúng tôi năm nay.",
+          "explanation": "«be sorry that + mệnh đề» thể hiện sự tiếc nuối, khác với «be sorry for» dùng khi bạn có lỗi."
+        }
+      ]
+    }
+  ]
+}

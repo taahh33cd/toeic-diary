@@ -1,0 +1,258 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t3-5-e1",
+          "question": "Thư đề ký «Sofia Marchetti». Bạn là quản lý xưởng in. Xưng hô nào đúng?",
+          "options": [
+            { "id": "A", "text": "Dear Ms. Marchetti," },
+            { "id": "B", "text": "Dear Sofia Marchetti," },
+            { "id": "C", "text": "Dear Ms. Sofia," },
+            { "id": "D", "text": "Dear Customer," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«Marchetti» là họ. Dùng «Dear + họ tên đầy đủ» hoặc «Dear Customer» đều kém trang trọng hơn hẳn."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-5-e2",
+          "question": "Câu nào là câu chào hỏi mở đầu của thư CẢM ƠN khách vừa mua hàng?",
+          "options": [
+            { "id": "A", "text": "Thank you for your recent purchase of a 19-inch LCD monitor." },
+            { "id": "B", "text": "I am writing to complain about the monitor." },
+            { "id": "C", "text": "We are currently out of stock for that item." },
+            { "id": "D", "text": "An early reply would be greatly appreciated." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Doanh nghiệp mở thư cảm ơn khách bằng «Thank you for your recent purchase of + sản phẩm». Nhắc rõ tên sản phẩm để khách biết ngay thư nói về đơn nào."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-5-e3",
+          "question": "Bạn viết cho ngân hàng, mở bằng «Dear Customer Support Team,». Kết thế nào hợp lý nhất?",
+          "options": [
+            { "id": "A", "text": "Yours sincerely," },
+            { "id": "B", "text": "Talk to you later!" },
+            { "id": "C", "text": "Cheers," },
+            { "id": "D", "text": "Love," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«Yours sincerely» hoặc «Best regards» đều được. Ba đáp án còn lại đều quá suồng sã; «Love,» chỉ dùng cho thư cá nhân với người thân."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-5-e4",
+          "question": "Trong thư trả lời cấp trên, câu kết nào thể hiện sự chủ động tốt nhất?",
+          "options": [
+            { "id": "A", "text": "I will submit the report before the end of the month." },
+            { "id": "B", "text": "Hope to hear from you soon." },
+            { "id": "C", "text": "Please contact me if you want." },
+            { "id": "D", "text": "Thanks a lot!" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Với cấp trên, câu kết là một CAM KẾT có mốc thời gian sẽ tốt hơn câu chờ hồi âm — thể hiện bạn đã nắm việc."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-5-e5",
+          "question": "Câu nào KHÔNG dùng được để mở đầu thư trả lời (vì bạn đang là người viết trước)?",
+          "options": [
+            { "id": "A", "text": "I saw your advertisement in yesterday's newspaper." },
+            { "id": "B", "text": "Thank you for your e-mail dated June 5." },
+            { "id": "C", "text": "I've just received your e-mail regarding the delay." },
+            { "id": "D", "text": "I just got your e-mail about the order." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«I saw your advertisement…» dùng khi bạn CHỦ ĐỘNG viết trước. Ba câu còn lại đều giả định bạn vừa nhận được thư — dùng khi trả lời."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-5-e6",
+          "question": "Bạn phải báo tin không vui (dời lịch, từ chối). Câu mở đầu nào làm dịu tin xấu?",
+          "options": [
+            { "id": "A", "text": "I am afraid I have to reschedule our meeting." },
+            { "id": "B", "text": "Our meeting is cancelled." },
+            { "id": "C", "text": "I will not come." },
+            { "id": "D", "text": "Forget about the meeting." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«I am afraid…» là đệm lịch sự trước tin xấu. Ba đáp án còn lại cộc lốc, sai văn phong e-mail công việc."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-5-e7",
+          "question": "Bạn phải báo tin vui (duyệt đơn, hàng đã về). Câu mở đầu nào phù hợp?",
+          "options": [
+            { "id": "A", "text": "I am pleased to inform you that two copies have arrived." },
+            { "id": "B", "text": "I am afraid that two copies have arrived." },
+            { "id": "C", "text": "Unfortunately, two copies have arrived." },
+            { "id": "D", "text": "I regret to inform you that two copies have arrived." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«I am pleased to inform you that…» cho tin vui, «I am afraid / I regret to inform you that…» cho tin buồn. Dùng nhầm là câu văn mâu thuẫn với nội dung."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-5-e8",
+          "question": "Xưng hô nào an toàn nhất khi bạn KHÔNG chắc người nhận là ai?",
+          "options": [
+            { "id": "A", "text": "Dear Sir or Madam," },
+            { "id": "B", "text": "Dear Sir," },
+            { "id": "C", "text": "Hi there," },
+            { "id": "D", "text": "Dear Someone," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«Dear Sir or Madam» và «To Whom It May Concern» là hai lựa chọn an toàn. Nhớ kết thư bằng «Yours faithfully» cho khớp."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "type_blank",
+          "id": "t3-5-m1",
+          "sentence": "I am ___ that I have to reschedule our meeting.",
+          "answers": ["afraid"],
+          "accepted": [["sorry"]],
+          "vi": "Tôi e rằng tôi phải dời lại cuộc họp của chúng ta.",
+          "explanation": "«I am afraid that…» là đệm lịch sự trước tin xấu. «I am sorry that…» cũng dùng được nhưng nhấn vào lời xin lỗi hơn."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-5-m2",
+          "sentence": "I am ___ to inform you that your order has arrived.",
+          "answers": ["pleased"],
+          "accepted": [["happy", "glad", "delighted"]],
+          "vi": "Tôi vui mừng thông báo rằng đơn hàng của bạn đã về.",
+          "explanation": "«be pleased/happy/glad/delighted to + V» — tất cả đều dùng được cho tin vui. «pleased» và «delighted» trang trọng nhất."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-5-m3",
+          "sentence": "Please be ___ that the office will close early on Friday.",
+          "answers": ["informed"],
+          "accepted": [["advised"]],
+          "vi": "Xin lưu ý rằng văn phòng sẽ đóng cửa sớm vào thứ Sáu.",
+          "explanation": "«Please be informed/advised that…» — câu mệnh lệnh ở thể bị động, khuôn thông báo nội bộ trang trọng nhất."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-5-m4",
+          "sentence": "We are ___ to announce the opening of our new branch.",
+          "answers": ["pleased"],
+          "accepted": [["happy", "delighted", "proud"]],
+          "vi": "Chúng tôi hân hạnh thông báo về việc khai trương chi nhánh mới.",
+          "explanation": "«We are pleased to announce…» — khuôn báo tin vui thay mặt công ty. Chú ý dùng «we» khi nói thay mặt tổ chức."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-5-m5",
+          "sentence": "This is a ___ that the deadline is next Monday.",
+          "answers": ["reminder"],
+          "vi": "Đây là lời nhắc rằng hạn chót là thứ Hai tới.",
+          "explanation": "«This is a reminder that…» — dùng khi nhắc lại việc đã thông báo trước đó. Sau mạo từ «a» cần danh từ."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-5-m6",
+          "sentence": "I would ___ it if you could look into this matter.",
+          "answers": ["appreciate"],
+          "vi": "Tôi sẽ rất biết ơn nếu bạn có thể xem xét vấn đề này.",
+          "explanation": "«I would appreciate it if you could + V» — cách yêu cầu lịch sự nhất. Chú ý bắt buộc có chữ «it» sau «appreciate»."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-5-m7",
+          "sentence": "Further details will be ___ at a later date.",
+          "answers": ["announced"],
+          "accepted": [["provided", "released"]],
+          "vi": "Thông tin chi tiết sẽ được thông báo vào một dịp sau.",
+          "explanation": "«will be + V3» là bị động tương lai. Câu chốt cho thông báo khi bạn chưa có đủ thông tin để nói hết."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-5-m8",
+          "sentence": "Yours ___, (đi với «Dear Ms. Marchetti,»)",
+          "answers": ["sincerely"],
+          "vi": "Trân trọng,",
+          "explanation": "Biết tên người nhận → «Yours sincerely». Nếu mở bằng «Dear Sir or Madam» thì mới dùng «Yours faithfully»."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "matching",
+          "id": "t3-5-h1",
+          "prompt": "Ghép mỗi loại tin với khuôn câu báo tin phù hợp.",
+          "pairs": [
+            { "left": "Tin vui — đơn hàng đã về", "right": "I am pleased to inform you that…" },
+            { "left": "Tin xấu — phải dời lịch họp", "right": "I am afraid I have to…" },
+            { "left": "Thông báo trung tính — đổi giờ mở cửa", "right": "Please be informed that…" },
+            { "left": "Nhắc lại việc đã báo trước", "right": "This is a reminder that…" },
+            { "left": "Tin vui lớn — khai trương chi nhánh", "right": "We are pleased to announce…" }
+          ],
+          "explanation": "Chọn đúng khuôn báo tin làm giọng thư khớp với nội dung. Dùng «I am pleased» cho tin xấu hoặc «I am afraid» cho tin vui đều gây khó hiểu."
+        },
+        {
+          "type": "matching",
+          "id": "t3-5-h2",
+          "prompt": "Ghép mỗi câu với vị trí của nó trong thư.",
+          "pairs": [
+            { "left": "Dear Mr. Ellison,", "right": "Dòng 1 — Xưng hô" },
+            { "left": "Thank you for your e-mail about the dishwasher.", "right": "Dòng 2 — Chào hỏi & tóm tắt" },
+            { "left": "Our standard warranty covers twelve months.", "right": "Giữa thư — Mission" },
+            { "left": "Please let me know if you would like an appointment.", "right": "Gần cuối — Câu kết" },
+            { "left": "Best regards, / Halberd Customer Care", "right": "Dòng cuối — Lời chào & ký tên" }
+          ],
+          "explanation": "Năm vị trí này là bộ khung bất biến của mọi e-mail TOEIC Part 2. Nắm khung rồi thì chỉ còn việc thay ruột ở phần giữa."
+        },
+        {
+          "type": "matching",
+          "id": "t3-5-h3",
+          "prompt": "Ghép mỗi câu yêu cầu với mức lịch sự tương ứng.",
+          "pairs": [
+            { "left": "Send me the report.", "right": "Cộc lốc — KHÔNG dùng trong bài thi" },
+            { "left": "Please send me the report.", "right": "Lịch sự cơ bản" },
+            { "left": "Could you send me the report?", "right": "Lịch sự — an toàn nhất" },
+            { "left": "I would appreciate it if you could send me the report.", "right": "Rất lịch sự — hợp thư trang trọng" },
+            { "left": "Would you be so kind as to send me the report?", "right": "Cực kỳ trang trọng — hơi khách sáo" }
+          ],
+          "explanation": "Trong bài thi, «Could you…?» và «I would appreciate it if you could…» là hai mức an toàn nhất. Câu mệnh lệnh trần trụi luôn bị trừ điểm văn phong."
+        },
+        {
+          "type": "matching",
+          "id": "t3-5-h4",
+          "prompt": "Ghép mỗi cặp mở–kết với việc nó ĐÚNG hay SAI.",
+          "pairs": [
+            { "left": "Dear Sir or Madam, … Yours faithfully,", "right": "ĐÚNG — không biết tên thì faithfully" },
+            { "left": "Dear Mr. Lam, … Yours sincerely,", "right": "ĐÚNG — biết tên thì sincerely" },
+            { "left": "Dear Sir or Madam, … Yours sincerely,", "right": "SAI — không biết tên mà dùng sincerely" },
+            { "left": "Dear Ms. Young, … Yours faithfully,", "right": "SAI — biết tên mà dùng faithfully" },
+            { "left": "Dear Ms. Young, … Talk to you later!", "right": "SAI — kết quá suồng sã" }
+          ],
+          "explanation": "Hai cặp đầu là chuẩn. Ba cặp sau là ba lỗi phổ biến nhất — đọc lại thư trước khi nộp, kiểm tra dòng đầu và dòng cuối có khớp nhau không."
+        },
+        {
+          "type": "matching",
+          "id": "t3-5-h5",
+          "prompt": "Ghép mỗi câu kết với điều nó yêu cầu người đọc làm.",
+          "pairs": [
+            { "left": "Please let me know which option you would prefer.", "right": "Chọn một trong các phương án đã nêu" },
+            { "left": "Please send your response by November 30.", "right": "Trả lời trước một mốc thời gian" },
+            { "left": "Would you give us a call or visit our store?", "right": "Liên hệ lại bằng điện thoại hoặc đến trực tiếp" },
+            { "left": "Please confirm the details at your earliest convenience.", "right": "Xác nhận lại thông tin đã trao đổi" },
+            { "left": "If you have any further queries, please contact me.", "right": "Không bắt buộc làm gì — chỉ mở đường hỏi thêm" }
+          ],
+          "explanation": "Câu kết cuối cùng («If you have any further queries…») KHÔNG yêu cầu hành động. Nếu bạn thật sự cần khách phản hồi thì đừng chọn nó."
+        }
+      ]
+    }
+  ]
+}

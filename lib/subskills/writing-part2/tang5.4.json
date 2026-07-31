@@ -1,0 +1,196 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "translate",
+          "id": "t5-4-e1",
+          "vi": "Tôi viết thư này để hỏi về các khoá học ngoại ngữ của quý vị.",
+          "hintWords": ["I am writing", "to inquire", "about", "your language courses"],
+          "answer": "I am writing to inquire about your language courses.",
+          "accepted": ["I'm writing to inquire about your language courses.", "I am writing to enquire about your language courses.", "I am writing to ask about your language courses."],
+          "explanation": "«inquire» (Mỹ) và «enquire» (Anh) đều đúng. «inquire ABOUT + chủ đề»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-4-e2",
+          "vi": "Tôi muốn thông báo với bạn về một thay đổi trong chính sách của chúng tôi.",
+          "hintWords": ["I would like to", "inform you", "of", "a change in our policy"],
+          "answer": "I would like to inform you of a change in our policy.",
+          "accepted": ["I'd like to inform you of a change in our policy.", "I would like to inform you about a change in our policy."],
+          "explanation": "«inform someone OF something» là chuẩn nhất trong giáo trình, dù «about» cũng gặp."
+        },
+        {
+          "type": "translate",
+          "id": "t5-4-e3",
+          "vi": "Tôi đính kèm một số thông tin về các sản phẩm mà bạn đã hỏi.",
+          "hintWords": ["I am attaching", "some information", "on", "the products you asked about"],
+          "answer": "I am attaching some information on the products you asked about.",
+          "accepted": ["I'm attaching some information on the products you asked about.", "I am attaching some information about the products you asked about."],
+          "explanation": "«information» không đếm được — không bao giờ có «informations». Giới từ «on» hoặc «about» đều đúng."
+        },
+        {
+          "type": "translate",
+          "id": "t5-4-e4",
+          "vi": "Bạn có thể cho tôi biết phí thường niên là bao nhiêu không?",
+          "hintWords": ["Could you tell me", "how much", "the annual fee", "is"],
+          "answer": "Could you tell me how much the annual fee is?",
+          "accepted": ["Would you tell me how much the annual fee is?", "Could you tell me what the annual fee is?"],
+          "explanation": "Câu hỏi gián tiếp: động từ «is» nằm CUỐI. Viết «how much is the annual fee» trong câu này là sai."
+        },
+        {
+          "type": "translate",
+          "id": "t5-4-e5",
+          "vi": "Tôi đề nghị bạn nên đăng ký trước hạn chót.",
+          "hintWords": ["I suggest", "that you", "sign up", "before the deadline"],
+          "answer": "I suggest that you sign up before the deadline.",
+          "accepted": ["I suggest that you should sign up before the deadline."],
+          "explanation": "Sau «suggest that + chủ ngữ» dùng V NGUYÊN MẪU (kể cả với he/she). Thêm «should» cũng đúng."
+        },
+        {
+          "type": "translate",
+          "id": "t5-4-e6",
+          "vi": "Không có phụ phí nào cho việc giao hàng.",
+          "hintWords": ["There is no", "additional charge", "for delivery"],
+          "answer": "There is no additional charge for delivery.",
+          "accepted": ["There is no extra charge for delivery.", "There's no additional charge for delivery."],
+          "explanation": "«charge FOR + dịch vụ» = phí cho việc gì. Trước «charge» cần tính từ («additional/extra»)."
+        },
+        {
+          "type": "translate",
+          "id": "t5-4-e7",
+          "vi": "Chúng tôi chấp nhận cả tiền mặt lẫn thẻ tín dụng.",
+          "hintWords": ["We accept", "both", "cash", "and credit cards"],
+          "answer": "We accept both cash and credit cards.",
+          "accepted": ["We accept both cash and credit card."],
+          "explanation": "«both A and B» = cả A lẫn B. «cash» không đếm được nên không thêm «s»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-4-e8",
+          "vi": "Xin gửi phản hồi của bạn trước cuối tháng Mười Một.",
+          "hintWords": ["Please send", "your response", "by", "the end of November"],
+          "answer": "Please send your response by the end of November.",
+          "accepted": ["Please send your reply by the end of November."],
+          "explanation": "«BY + thời điểm» = chậm nhất là. Dùng «until» ở đây là sai nghĩa (until = cho tới tận)."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "translate",
+          "id": "t5-4-m1",
+          "vi": "Phí hội viên năm là 540 đô la, và khoản này cũng có thể trả theo tháng.",
+          "answer": "The annual membership fee is 540 dollars, which can also be paid monthly.",
+          "accepted": ["The annual membership fee is 540 dollars, and it can also be paid monthly."],
+          "explanation": "Sau dấu phẩy dùng «which» cho mệnh đề quan hệ không xác định — không dùng «that»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-4-m2",
+          "vi": "Sách giáo khoa không nằm trong học phí, nhưng có thể mua tại quầy lễ tân.",
+          "answer": "Textbooks are not included in the fee, but they can be purchased at our reception.",
+          "accepted": ["Textbooks are not included in the fee, but they can be bought at our reception."],
+          "explanation": "«be included IN + khoản phí». «purchase» trang trọng hơn «buy» trong e-mail business."
+        },
+        {
+          "type": "translate",
+          "id": "t5-4-m3",
+          "vi": "Một điều tôi có thể khuyên là buổi học thử, hoàn toàn miễn phí và diễn ra vào mỗi thứ Ba.",
+          "answer": "One thing I can recommend is our trial lesson, which is free and takes place every Tuesday.",
+          "accepted": ["One thing I can recommend is our trial lesson, which is free and is held every Tuesday."],
+          "explanation": "«One thing I can recommend is + danh từ» — khuôn D của mục Đề nghị/Gợi ý. «every Tuesday» không có giới từ."
+        },
+        {
+          "type": "translate",
+          "id": "t5-4-m4",
+          "vi": "Vì bạn làm việc đến bảy giờ, tôi khuyên bạn chọn gói premium.",
+          "answer": "Since you work until seven, I would recommend our premium plan.",
+          "accepted": ["As you work until seven, I would recommend our premium plan.", "Because you work until seven, I would recommend our premium plan."],
+          "explanation": "«Since / As / Because» đều nêu lý do. Khuyến nghị bám vào chi tiết cụ thể của khách mới thuyết phục."
+        },
+        {
+          "type": "translate",
+          "id": "t5-4-m5",
+          "vi": "Tôi thấy quảng cáo của quý vị trên báo hôm qua và tôi quan tâm đến việc tham gia phòng tập.",
+          "answer": "I saw your advertisement in yesterday's newspaper and I am interested in joining your fitness centre.",
+          "accepted": ["I saw your advertisement in yesterday's newspaper and I'm interested in joining your fitness center."],
+          "explanation": "«interested IN + V-ing» — sau giới từ «in» phải là danh động từ. «advertisement IN + báo»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-4-m6",
+          "vi": "Xin gửi cho tôi một tờ rơi qua đường bưu điện được không?",
+          "answer": "Would you send me a brochure by mail?",
+          "accepted": ["Could you send me a brochure by mail?", "Would you send me a brochure by post?"],
+          "explanation": "«by mail» (Mỹ) / «by post» (Anh) = qua bưu điện. «send someone something» — không cần «to»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-4-m7",
+          "vi": "Việc thanh toán phải được thực hiện trước, và mức giảm giá mười phần trăm áp dụng cho học sinh sinh viên.",
+          "answer": "Payment must be made in advance, and a ten percent discount applies to students.",
+          "accepted": ["Payment must be made in advance, and a 10 percent discount applies to students."],
+          "explanation": "«apply TO + đối tượng» = áp dụng cho ai. «in advance» = trả trước."
+        },
+        {
+          "type": "translate",
+          "id": "t5-4-m8",
+          "vi": "Xin e-mail cho tôi sớm nhất có thể nếu bạn muốn giữ chỗ.",
+          "answer": "Please e-mail me as soon as possible if you would like to reserve a place.",
+          "accepted": ["Please email me as soon as possible if you would like to reserve a place.", "Please e-mail me as soon as possible if you want to reserve a place."],
+          "explanation": "«reserve a place» = giữ một chỗ. Câu kết mời khách hành động tiếp, mạnh hơn «Hope to hear from you»."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "translate",
+          "id": "t5-4-h1",
+          "vi": "Cảm ơn bạn đã quan tâm đến các khoá học buổi tối trên website của chúng tôi. Học phí là 320 đô la cho một kỳ mười hai tuần.",
+          "answer": "Thank you for your interest in the evening courses advertised on our website. The course fee is 320 dollars for a twelve-week term.",
+          "accepted": ["Thank you for your interest in the evening courses on our website. The course fee is 320 dollars for a twelve-week term."],
+          "explanation": "«interest IN + chủ đề». «a twelve-week term» — tính từ ghép có gạch nối thì danh từ ở SỐ ÍT («week», không phải «weeks»)."
+        },
+        {
+          "type": "translate",
+          "id": "t5-4-h2",
+          "vi": "Sách giáo khoa không nằm trong học phí, nhưng có thể mua tại quầy lễ tân với giá 45 đô la một bộ.",
+          "answer": "Textbooks are not included in the fee, but they can be purchased at our reception for 45 dollars per set.",
+          "accepted": ["Textbooks are not included in the fee, but they can be bought at our reception for 45 dollars per set."],
+          "explanation": "«per set» = mỗi bộ. Trả lời câu hỏi bằng số liệu cụ thể là điểm phân biệt bài khá và bài giỏi."
+        },
+        {
+          "type": "translate",
+          "id": "t5-4-h3",
+          "vi": "Bể bơi mở cửa cho tất cả hội viên, tuy nhiên hội viên hạng premium còn được dùng trước bảy giờ sáng.",
+          "answer": "The swimming pool is open to all members, although premium members may also use it before seven in the morning.",
+          "accepted": ["The swimming pool is open to all members, but premium members may also use it before seven in the morning."],
+          "explanation": "«be open TO + đối tượng» = mở cho ai. «although/but» nối hai vế tương phản."
+        },
+        {
+          "type": "translate",
+          "id": "t5-4-h4",
+          "vi": "Vì bạn làm việc đến bảy giờ, tôi khuyên bạn chọn gói premium, gói này cho phép dùng bể bơi thoải mái vào buổi tối.",
+          "answer": "Since you work until seven, I would recommend our premium plan, which gives you full pool access in the evening.",
+          "accepted": ["As you work until seven, I would recommend our premium plan, which gives you full pool access in the evening."],
+          "explanation": "Khuyến nghị + lý do + lợi ích cụ thể. Mệnh đề «which» giải thích vì sao gói đó phù hợp với hoàn cảnh của khách."
+        },
+        {
+          "type": "translate",
+          "id": "t5-4-h5",
+          "vi": "Chúng tôi mở cửa từ sáu giờ sáng đến mười một giờ đêm các ngày trong tuần. Xin e-mail cho tôi nếu bạn muốn sắp xếp một buổi tham quan.",
+          "answer": "We are open from six in the morning until eleven at night on weekdays. Please e-mail me if you would like to arrange a visit.",
+          "accepted": ["We're open from six in the morning until eleven at night on weekdays. Please email me if you would like to arrange a visit."],
+          "explanation": "«from A until/to B» cho khoảng thời gian. «arrange a visit» = sắp xếp một buổi tham quan."
+        }
+      ]
+    }
+  ]
+}

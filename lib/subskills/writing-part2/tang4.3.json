@@ -1,0 +1,256 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t4-3-e1",
+          "question": "Câu này thuộc nhóm chức năng nào? «I am attaching some information on the products you asked about.»",
+          "options": [
+            { "id": "A", "text": "Cung cấp thông tin" },
+            { "id": "B", "text": "Hỏi thông tin" },
+            { "id": "C", "text": "Đề nghị / gợi ý" },
+            { "id": "D", "text": "Xin lỗi" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Khuôn D của mục Cung cấp thông tin: «I am attaching some information on…» — bạn gửi kèm tài liệu cho người ta."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-3-e2",
+          "question": "Câu này thuộc nhóm chức năng nào? «I would suggest that it would be better for you to move to another company.»",
+          "options": [
+            { "id": "A", "text": "Đề nghị / gợi ý" },
+            { "id": "B", "text": "Cung cấp thông tin" },
+            { "id": "C", "text": "Phàn nàn" },
+            { "id": "D", "text": "Câu kết" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Khuôn E của mục Đề nghị/Gợi ý — khuôn dài nhất và cũng lịch sự nhất trong nhóm."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-3-e3",
+          "question": "Directions ghi «make a recommendation». Câu nào KHÔNG hoàn thành mission này?",
+          "options": [
+            { "id": "A", "text": "Our annual fee is 540 dollars." },
+            { "id": "B", "text": "I suggest that you sign up before the deadline." },
+            { "id": "C", "text": "One thing I can recommend is our premium plan." },
+            { "id": "D", "text": "In my opinion, it would be good to visit us first." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "A chỉ CUNG CẤP thông tin, không khuyên gì cả. Ba đáp án còn lại đều là khuôn gợi ý."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-3-e4",
+          "question": "Câu nào phù hợp để trả lời câu hỏi của khách bằng SỐ LIỆU CỤ THỂ?",
+          "options": [
+            { "id": "A", "text": "Our annual membership fee is 540 dollars, or 50 dollars per month." },
+            { "id": "B", "text": "Our fee is quite reasonable." },
+            { "id": "C", "text": "The fee depends on many things." },
+            { "id": "D", "text": "Please ask at our reception." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Mission «provide information» đòi hỏi con số cụ thể. B, C, D đều né tránh — giám khảo sẽ tính là chưa hoàn thành mission."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-3-e5",
+          "question": "Từ nối nào dùng để nêu KẾT QUẢ / HỆ QUẢ?",
+          "options": [
+            { "id": "A", "text": "Therefore," },
+            { "id": "B", "text": "In addition," },
+            { "id": "C", "text": "Otherwise," },
+            { "id": "D", "text": "For instance," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«Therefore» / «As a result» / «Consequently» đều chỉ kết quả. Dùng khi bạn vừa nêu bối cảnh và muốn chỉ ra hệ quả."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-3-e6",
+          "question": "Từ nối nào dùng để nêu điều TRÁI NGƯỢC với câu trước?",
+          "options": [
+            { "id": "A", "text": "However," },
+            { "id": "B", "text": "Therefore," },
+            { "id": "C", "text": "In addition," },
+            { "id": "D", "text": "For example," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«However» / «Unfortunately» dùng để chuyển sang điều trái ngược. Bài mẫu trong giáo trình dùng «However, that turned out to be wrong.»"
+        },
+        {
+          "type": "mcq",
+          "id": "t4-3-e7",
+          "question": "Bạn cần từ chối nhưng vẫn giữ được khách. Cách viết nào tốt nhất?",
+          "options": [
+            { "id": "A", "text": "Nêu tin xấu, rồi ngay sau đó đưa ra phương án thay thế" },
+            { "id": "B", "text": "Chỉ nêu tin xấu rồi kết thúc thư" },
+            { "id": "C", "text": "Không nhắc gì đến tin xấu" },
+            { "id": "D", "text": "Đổ lỗi cho khách hàng" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Kỹ thuật «tin xấu → However/Alternatively → phương án thay thế». Ví dụ: hết bảo hành, NHƯNG có thể tra cứu qua đăng ký online."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-3-e8",
+          "question": "Câu nào là câu HỎI LỊCH SỰ nhất?",
+          "options": [
+            { "id": "A", "text": "Could you tell me whether breakfast is included?" },
+            { "id": "B", "text": "Is breakfast included?" },
+            { "id": "C", "text": "Tell me if breakfast is included." },
+            { "id": "D", "text": "Breakfast included?" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Câu hỏi gián tiếp với «Could you tell me…» lịch sự nhất. C là câu mệnh lệnh, D là câu cụt — cả hai đều sai văn phong e-mail."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "type_blank",
+          "id": "t4-3-m1",
+          "sentence": "I would suggest that it would be ___ for you to move to another company.",
+          "answers": ["better"],
+          "vi": "Tôi cho rằng sẽ tốt hơn cho bạn nếu chuyển sang công ty khác.",
+          "explanation": "Khuôn E của mục Đề nghị/Gợi ý dùng dạng so sánh hơn «better», vì bạn đang so với tình trạng hiện tại."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-3-m2",
+          "sentence": "Our annual membership fee is 540 dollars, ___ can also be paid monthly.",
+          "answers": ["which"],
+          "vi": "Phí hội viên năm là 540 đô la, khoản này cũng có thể trả theo tháng.",
+          "explanation": "Mệnh đề quan hệ không xác định, sau dấu phẩy dùng «which» cho vật. Không dùng «that» sau dấu phẩy."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-3-m3",
+          "sentence": "Textbooks are not ___ in the fee, ___ they can be purchased at our reception.",
+          "answers": ["included", "but"],
+          "accepted": [[], ["although", "though"]],
+          "vi": "Sách giáo khoa không nằm trong học phí, nhưng có thể mua tại quầy lễ tân.",
+          "explanation": "«be included in + khoản phí». Từ nối tương phản «but» đứng giữa hai mệnh đề độc lập."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-3-m4",
+          "sentence": "___, the final bill was 90 dollars higher than the estimate.",
+          "answers": ["However"],
+          "accepted": [["Unfortunately"]],
+          "vi": "Tuy nhiên, hoá đơn cuối cùng cao hơn báo giá 90 đô la.",
+          "explanation": "«However» trung tính, «Unfortunately» thêm sắc thái đáng tiếc — hợp hơn khi bạn đang phàn nàn."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-3-m5",
+          "sentence": "The maintenance window ___ overlaps with the only time we can run our payroll.",
+          "answers": ["therefore"],
+          "accepted": [["thus", "consequently"]],
+          "vi": "Do đó, khung giờ bảo trì trùng với thời điểm duy nhất chúng tôi chạy được bảng lương.",
+          "explanation": "Từ nối chỉ kết quả đứng giữa câu, giữa chủ ngữ và động từ. Cả ba từ đều dùng được."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-3-m6",
+          "sentence": "You are ___ to bring your own sound equipment, ___ that it is set up before six.",
+          "answers": ["welcome", "provided"],
+          "vi": "Bạn có thể mang thiết bị âm thanh riêng, miễn là lắp đặt xong trước 6 giờ.",
+          "explanation": "«You are welcome to + V» = bạn cứ tự nhiên làm gì. «provided that» = miễn là, với điều kiện là."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-3-m7",
+          "sentence": "Payment must be made ___ advance.",
+          "answers": ["in"],
+          "vi": "Việc thanh toán phải được thực hiện trước.",
+          "explanation": "«in advance» = trước, trả trước. Cụm cố định, không dùng «on advance» hay «at advance»."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-3-m8",
+          "sentence": "There is no ___ charge for delivery.",
+          "answers": ["additional"],
+          "accepted": [["extra"]],
+          "vi": "Không có phụ phí nào cho việc giao hàng.",
+          "explanation": "Trước danh từ «charge» cần TÍNH TỪ. «additional» trang trọng hơn «extra» một chút."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "word_order",
+          "id": "t4-3-h1",
+          "tokens": ["In", "my", "opinion", "it", "would", "be", "good", "to", "start", "with", "the", "basic", "level"],
+          "answer": "In my opinion, it would be good to start with the basic level.",
+          "vi": "Theo ý tôi, nên bắt đầu từ trình độ cơ bản.",
+          "explanation": "«In my opinion» đứng đầu câu có dấu phẩy. Chủ ngữ giả «it» + «would be good to + V»."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-3-h2",
+          "tokens": ["I", "would", "appreciate", "it", "if", "you", "could", "look", "into", "this", "matter"],
+          "answer": "I would appreciate it if you could look into this matter.",
+          "vi": "Tôi sẽ rất biết ơn nếu bạn có thể xem xét vấn đề này.",
+          "explanation": "Bắt buộc có chữ «it» sau «appreciate» — thiếu nó là sai ngữ pháp. «look into» = xem xét, điều tra."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-3-h3",
+          "tokens": ["Could", "you", "tell", "me", "whether", "breakfast", "is", "included", "in", "the", "room", "rate"],
+          "answer": "Could you tell me whether breakfast is included in the room rate?",
+          "vi": "Bạn có thể cho tôi biết bữa sáng có nằm trong giá phòng không?",
+          "explanation": "«whether» dùng cho câu hỏi có/không trong dạng gián tiếp. Trật tự sau «whether» giữ nguyên S + V."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-3-h4",
+          "tokens": ["Please", "let", "me", "know", "which", "option", "you", "would", "prefer"],
+          "answer": "Please let me know which option you would prefer.",
+          "vi": "Xin cho tôi biết bạn thích phương án nào hơn.",
+          "explanation": "«let me know + mệnh đề hỏi gián tiếp». Sau «which option» giữ trật tự S + V («you would prefer»)."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-3-h5",
+          "tokens": ["We", "are", "willing", "to", "exchange", "the", "item", "free", "of", "charge"],
+          "answer": "We are willing to exchange the item free of charge.",
+          "vi": "Chúng tôi sẵn lòng đổi sản phẩm miễn phí.",
+          "explanation": "«be willing to + V» = sẵn lòng làm gì. «free of charge» = miễn phí, cụm cố định đứng cuối câu."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-3-h6",
+          "tokens": ["As", "December", "is", "our", "busiest", "month", "I", "would", "suggest", "booking", "as", "early", "as", "possible"],
+          "answer": "As December is our busiest month, I would suggest booking as early as possible.",
+          "vi": "Vì tháng Mười Hai là tháng đông khách nhất, tôi khuyên bạn nên đặt chỗ càng sớm càng tốt.",
+          "explanation": "«As + mệnh đề» chỉ lý do, đứng đầu câu có dấu phẩy. Sau «suggest» dùng V-ing («booking»), không dùng «to book»."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-3-h7",
+          "tokens": ["Would", "you", "be", "available", "for", "a", "second", "interview", "on", "May", "3"],
+          "answer": "Would you be available for a second interview on May 3?",
+          "vi": "Bạn có rảnh cho buổi phỏng vấn thứ hai vào ngày 3 tháng 5 không?",
+          "explanation": "«be available for + sự kiện» = có rảnh để làm gì. Giới từ «on» cho ngày cụ thể."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-3-h8",
+          "tokens": ["Please", "note", "that", "invoices", "can", "only", "be", "reissued", "within", "ninety", "days"],
+          "answer": "Please note that invoices can only be reissued within ninety days.",
+          "vi": "Xin lưu ý rằng hoá đơn chỉ được cấp lại trong vòng chín mươi ngày.",
+          "explanation": "«can only be + V3» — bị động với trạng từ «only» đứng giữa trợ động từ và «be». «within + khoảng thời gian»."
+        }
+      ]
+    }
+  ]
+}

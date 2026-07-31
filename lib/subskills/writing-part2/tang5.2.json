@@ -1,0 +1,196 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "translate",
+          "id": "t5-2-e1",
+          "vi": "Tôi muốn đặt một đơn hàng gồm mười chiếc ghế văn phòng.",
+          "hintWords": ["I would like to", "place an order", "for", "ten office chairs"],
+          "answer": "I would like to place an order for ten office chairs.",
+          "accepted": ["I'd like to place an order for ten office chairs."],
+          "explanation": "«place an order FOR + sản phẩm». Người Việt hay viết «order for» thiếu động từ «place»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-2-e2",
+          "vi": "Món hàng lẽ ra phải được giao từ một tuần trước.",
+          "hintWords": ["The item", "was supposed to be", "delivered", "a week ago"],
+          "answer": "The item was supposed to be delivered a week ago.",
+          "accepted": ["It was supposed to be delivered a week ago."],
+          "explanation": "«be supposed to be + V3» = lẽ ra phải được… Dạng bị động vì món hàng là đối tượng được giao."
+        },
+        {
+          "type": "translate",
+          "id": "t5-2-e3",
+          "vi": "Chúng tôi xin lỗi vì sự chậm trễ trong việc giao hàng.",
+          "hintWords": ["We apologize", "for the delay", "in shipping", "your order"],
+          "answer": "We apologize for the delay in shipping your order.",
+          "accepted": ["We apologize for the delay in delivering your order.", "We are sorry for the delay in shipping your order."],
+          "explanation": "«the delay IN + V-ing» — giới từ «in» chứ không phải «of». Đây là lỗi giới từ rất phổ biến."
+        },
+        {
+          "type": "translate",
+          "id": "t5-2-e4",
+          "vi": "Hiện tại chúng tôi đang hết hàng đối với sản phẩm đó.",
+          "hintWords": ["We are currently", "out of stock", "for that item"],
+          "answer": "We are currently out of stock for that item.",
+          "accepted": ["That item is currently out of stock.", "We're currently out of stock for that item."],
+          "explanation": "«out of stock» = hết hàng, cụm cố định không có mạo từ trước «stock»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-2-e5",
+          "vi": "Đơn hàng của bạn sẽ được gửi đi trong vòng ba ngày làm việc.",
+          "hintWords": ["Your order", "will be shipped", "within", "three business days"],
+          "answer": "Your order will be shipped within three business days.",
+          "accepted": ["Your order will be dispatched within three business days.", "Your order will be sent within three business days."],
+          "explanation": "«within + khoảng thời gian» = trong vòng. «business days» = ngày làm việc, không tính cuối tuần."
+        },
+        {
+          "type": "translate",
+          "id": "t5-2-e6",
+          "vi": "Khi nào tôi có thể nhận được kiện hàng?",
+          "hintWords": ["When can I", "expect", "the package", "to arrive"],
+          "answer": "When can I expect the package to arrive?",
+          "accepted": ["When can I expect to receive the package?", "When can I expect the parcel to arrive?"],
+          "explanation": "«expect + O + to V» = mong đợi cái gì xảy ra. Lịch sự hơn hẳn «When will it come?»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-2-e7",
+          "vi": "Xin vui lòng xác nhận rằng đơn hàng của tôi đã được nhận.",
+          "hintWords": ["Please confirm", "that my order", "has been received"],
+          "answer": "Please confirm that my order has been received.",
+          "accepted": ["Please confirm that you have received my order."],
+          "explanation": "«has been received» là bị động hiện tại hoàn thành. Có thể chuyển sang chủ động: «you have received my order»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-2-e8",
+          "vi": "Chúng tôi sẽ thay sản phẩm hoặc hoàn tiền toàn bộ cho bạn ngay lập tức.",
+          "hintWords": ["We will replace", "ordered items", "or give you", "a full refund", "instantly"],
+          "answer": "We will replace ordered items or give you a full refund instantly.",
+          "accepted": ["We will replace the ordered items or give you a full refund instantly."],
+          "explanation": "Hai động từ «replace» và «give» dùng chung «will». «a full refund» = hoàn tiền toàn bộ."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "translate",
+          "id": "t5-2-m1",
+          "vi": "Chúng tôi nhận được đơn hàng số 4471 sáng nay, nhưng tám trong hai mươi hộp bị hỏng nặng.",
+          "answer": "We received order number 4471 this morning, but eight of the twenty boxes were badly damaged.",
+          "accepted": ["We received order #4471 this morning, but eight of the twenty boxes were badly damaged."],
+          "explanation": "«eight of the twenty boxes» = tám trong số hai mươi hộp. «badly damaged» = hỏng nặng — trạng từ đứng trước tính từ."
+        },
+        {
+          "type": "translate",
+          "id": "t5-2-m2",
+          "vi": "Đây là lần thứ hai chuyện này xảy ra với một lô hàng từ công ty các bạn.",
+          "answer": "This is the second time this has happened with a shipment from your company.",
+          "accepted": ["This is the second time that this has happened with a shipment from your company."],
+          "explanation": "Sau «This is the second time» phải dùng HIỆN TẠI HOÀN THÀNH («has happened»), không dùng quá khứ đơn."
+        },
+        {
+          "type": "translate",
+          "id": "t5-2-m3",
+          "vi": "Chúng tôi cần hàng thay thế trước cuối tuần sau.",
+          "answer": "We need replacements before the end of next week.",
+          "accepted": ["We need replacements by the end of next week."],
+          "explanation": "«replacements» = hàng thay thế, danh từ số nhiều. «before/by the end of» đều dùng được cho hạn chót."
+        },
+        {
+          "type": "translate",
+          "id": "t5-2-m4",
+          "vi": "Chúng tôi phát hiện ra rằng pallet đã bị xếp sai cách tại kho của chúng tôi.",
+          "answer": "We found that the pallet had been stacked incorrectly at our warehouse.",
+          "accepted": ["We found that the pallet had been stacked incorrectly in our warehouse."],
+          "explanation": "«had been stacked» — quá khứ hoàn thành bị động, vì việc xếp sai xảy ra TRƯỚC khi phát hiện."
+        },
+        {
+          "type": "translate",
+          "id": "t5-2-m5",
+          "vi": "Bạn muốn chúng tôi gửi hàng thay thế hay xuất giấy báo có?",
+          "answer": "Would you like us to send replacements or issue a credit note?",
+          "accepted": ["Would you like us to send replacements or to issue a credit note?"],
+          "explanation": "«Would you like someone to + V» = bạn muốn ai làm gì. Đưa ra hai lựa chọn nối bằng «or»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-2-m6",
+          "vi": "Chúng tôi sẵn lòng đổi sản phẩm miễn phí cho bạn.",
+          "answer": "We are willing to exchange the item free of charge.",
+          "accepted": ["We're willing to exchange the item free of charge.", "We are willing to exchange the item at no cost."],
+          "explanation": "«be willing to + V» = sẵn lòng. «free of charge» = miễn phí, trang trọng hơn «for free»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-2-m7",
+          "vi": "Nếu bạn cho tôi chút thời gian, tôi sẽ xem xét vấn đề này.",
+          "answer": "If you give me some time, I will look into this matter.",
+          "accepted": ["If you give me some time, I'll look into this matter.", "If you give me some time, I will look into the matter."],
+          "explanation": "«look into» = xem xét, điều tra — khác «look at» (nhìn vào) và «look for» (tìm kiếm)."
+        },
+        {
+          "type": "translate",
+          "id": "t5-2-m8",
+          "vi": "Tôi có quyền được hoàn tiền toàn bộ không?",
+          "answer": "Am I entitled to a full refund?",
+          "accepted": ["Am I entitled to a full refund of my payment?"],
+          "explanation": "«be entitled TO + danh từ» = có quyền được hưởng. Đảo «Am I» vì là câu hỏi."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "translate",
+          "id": "t5-2-h1",
+          "vi": "Cảm ơn e-mail ngày 8 tháng 2 của bạn về đơn hàng số 4471. Tôi xin lỗi vì tám trong hai mươi hộp đã bị hỏng.",
+          "answer": "Thank you for your e-mail of February 8 concerning order number 4471. I would like to apologize for the damage to eight of the twenty boxes.",
+          "accepted": ["Thank you for your e-mail of February 8 regarding order number 4471. I would like to apologize for the damage to eight of the twenty boxes."],
+          "explanation": "«e-mail OF + ngày» hoặc «e-mail DATED + ngày» đều đúng. «damage TO + đối tượng» — giới từ «to», không phải «of»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-2-h2",
+          "vi": "Khi kiểm tra hồ sơ vận chuyển, chúng tôi phát hiện pallet đã bị xếp sai tại kho. Chúng tôi đảm bảo chuyện này sẽ không tái diễn.",
+          "answer": "When we checked the shipment records, we found that the pallet had been stacked incorrectly at our warehouse. We have full assurance that this will not happen again.",
+          "accepted": ["When we checked the shipment records, we found that the pallet had been stacked incorrectly at our warehouse. We have full assurance that it will not happen again."],
+          "explanation": "Khối giải thích + trấn an. Quá khứ hoàn thành «had been stacked» cho việc xảy ra trước, quá khứ đơn «checked/found» cho việc sau."
+        },
+        {
+          "type": "translate",
+          "id": "t5-2-h3",
+          "vi": "Bạn muốn chúng tôi gửi hàng thay thế bằng chuyển phát nhanh, hay xuất giấy báo có thay thế?",
+          "answer": "Would you like us to send replacements by express delivery, or issue a credit note instead?",
+          "accepted": ["Would you like us to send replacements by express delivery, or to issue a credit note instead?"],
+          "explanation": "«instead» cuối câu = thay vào đó. Đưa ra hai phương án rõ ràng giúp khách quyết định nhanh."
+        },
+        {
+          "type": "translate",
+          "id": "t5-2-h4",
+          "vi": "Tôi đặt hàng trên website của bạn hôm thứ Hai tuần trước. Bạn có thể xác nhận đơn hàng đã được nhận chưa?",
+          "answer": "I placed an order on your website last Monday. Could you confirm that my order has been received?",
+          "accepted": ["I placed an order on your website last Monday. Could you confirm whether my order has been received?"],
+          "explanation": "«last Monday» không có giới từ «on». «Could you confirm that/whether…» — cả hai đều đúng khi hỏi xác nhận."
+        },
+        {
+          "type": "translate",
+          "id": "t5-2-h5",
+          "vi": "Đơn hàng của bạn sẽ được gửi trong vòng ba ngày làm việc. Nếu còn thắc mắc, xin đừng ngần ngại liên hệ với tôi.",
+          "answer": "Your order will be shipped within three business days. If you have any further queries, please contact me without hesitation.",
+          "accepted": ["Your order will be shipped within three business days. If you have any further questions, please contact me without hesitation."],
+          "explanation": "Khối kết thư cung cấp thông tin: nêu mốc thời gian rồi mở đường cho khách hỏi thêm."
+        }
+      ]
+    }
+  ]
+}

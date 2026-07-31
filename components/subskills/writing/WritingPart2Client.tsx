@@ -11,6 +11,9 @@ import type {
   McqEx,
   LabelingEx,
   OrderingEx,
+  TypeBlankEx,
+  WordOrderEx,
+  TranslateEx,
 } from "@/lib/subskills/writing-part2";
 import { normP2, matchesAccepted, isNearMiss, dbPartW2 } from "@/lib/subskills/writing-part2";
 
@@ -53,6 +56,23 @@ function Explanation({ text }: { text: string }) {
   return (
     <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", margin: "0.5rem 0 0", lineHeight: 1.6 }}>{text}</p>
   );
+}
+
+/**
+ * Chỉ giữ những biến thể THẬT SỰ khác đáp án chính.
+ * Các biến thể chỉ khác ở viết tắt hoặc dấu câu đã được normP2 coi là như nhau
+ * nên vẫn được chấm đúng — hiển thị lại chúng chỉ làm rối người học.
+ */
+function distinctAlternatives(answer: string, accepted?: string[]): string[] {
+  const seen = new Set([normP2(answer)]);
+  const out: string[] = [];
+  for (const a of accepted ?? []) {
+    const n = normP2(a);
+    if (seen.has(n)) continue;
+    seen.add(n);
+    out.push(a);
+  }
+  return out;
 }
 
 function CheckButton({ onClick, disabled }: { onClick: () => void; disabled: boolean }) {
@@ -353,13 +373,13 @@ function RecallCard({ ex, onResult }: { ex: RecallEx; onResult: (score: number) 
           <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", margin: "0.55rem 0 0" }}>
             <strong>Đáp án:</strong> {ex.answer}
           </p>
-          {ex.accepted && ex.accepted.length > 0 && (
+          {distinctAlternatives(ex.answer, ex.accepted).length > 0 && (
             <details style={{ marginTop: 5 }}>
               <summary style={{ fontSize: "0.76rem", color: "var(--accent-primary)", cursor: "pointer", fontWeight: 600 }}>
-                Xem {ex.accepted.length} cách viết khác cũng được chấp nhận
+                Xem {distinctAlternatives(ex.answer, ex.accepted).length} cách viết khác cũng được chấp nhận
               </summary>
               <ul style={{ margin: "5px 0 0", paddingLeft: 20 }}>
-                {ex.accepted.map((a, i) => (
+                {distinctAlternatives(ex.answer, ex.accepted).map((a, i) => (
                   <li key={i} style={{ fontSize: "0.8rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>{a}</li>
                 ))}
               </ul>
@@ -576,6 +596,254 @@ function OrderingCard({ ex, onResult }: { ex: OrderingEx; onResult: (score: numb
 }
 
 // ─────────────────────────────────────
+// Tầng 3/4 — gõ từ vào chỗ trống
+// ─────────────────────────────────────
+
+function TypeBlankCard({ ex, onResult }: { ex: TypeBlankEx; onResult: (score: number) => void }) {
+  const [inputs, setInputs] = useState<string[]>(ex.answers.map(() => ""));
+  const [submitted, setSubmitted] = useState(false);
+  const parts = ex.sentence.split("___");
+
+  function isOk(i: number): boolean {
+    return matchesAccepted(inputs[i] ?? "", ex.answers[i], ex.accepted?.[i]);
+  }
+
+  function submit() {
+    const correct = ex.answers.filter((_, i) => isOk(i)).length;
+    setSubmitted(true);
+    onResult(Math.round((correct / ex.answers.length) * 100));
+  }
+
+  const allFilled = inputs.every((v) => v.trim());
+
+  return (
+    <div>
+      {ex.prompt && <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "0.7rem" }}>{ex.prompt}</p>}
+      {ex.vi && (
+        <p style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginBottom: "0.8rem", lineHeight: 1.55, fontStyle: "italic" }}>
+          {ex.vi}
+        </p>
+      )}
+
+      <div style={{ fontSize: "0.97rem", color: "var(--text-primary)", lineHeight: 2.3, marginBottom: "1rem", display: "flex", flexWrap: "wrap", alignItems: "center", gap: 2 }}>
+        {parts.map((part, i) => (
+          <span key={i} style={{ display: "inline-flex", alignItems: "center", gap: 2 }}>
+            <span>{part}</span>
+            {i < parts.length - 1 && (
+              <input
+                type="text"
+                value={inputs[i] ?? ""}
+                onChange={(e) => setInputs((prev) => { const n = [...prev]; n[i] = e.target.value; return n; })}
+                onKeyDown={(e) => { if (e.key === "Enter" && !submitted && allFilled) submit(); }}
+                disabled={submitted}
+                placeholder="…"
+                style={{ width: 118, padding: "3px 8px", fontSize: "0.92rem", fontWeight: 600, border: submitted ? `1.5px solid ${isOk(i) ? "rgba(34,197,94,0.55)" : "rgba(239,68,68,0.55)"}` : "1.5px solid var(--accent-primary)", borderRadius: 6, background: submitted ? (isOk(i) ? "rgba(34,197,94,0.1)" : "rgba(239,68,68,0.1)") : "var(--bg-secondary)", color: "var(--text-primary)", outline: "none", textAlign: "center", fontFamily: "inherit" }}
+              />
+            )}
+          </span>
+        ))}
+      </div>
+
+      {!submitted ? (
+        <CheckButton onClick={submit} disabled={!allFilled} />
+      ) : (
+        <div>
+          <ResultBadge score={Math.round((ex.answers.filter((_, i) => isOk(i)).length / ex.answers.length) * 100)} />
+          <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", margin: "0.55rem 0 0" }}>
+            <strong>Đáp án:</strong> {ex.answers.join(" · ")}
+          </p>
+          {ex.answers.flatMap((ans, i) => distinctAlternatives(ans, ex.accepted?.[i])).length > 0 && (
+            <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", margin: "3px 0 0" }}>
+              Cũng được chấp nhận: {ex.answers.flatMap((ans, i) => distinctAlternatives(ans, ex.accepted?.[i])).join(" · ")}
+            </p>
+          )}
+          <Explanation text={ex.explanation} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────
+// Tầng 4 hard — sắp xếp từ thành câu
+// ─────────────────────────────────────
+
+function WordOrderCard({ ex, onResult }: { ex: WordOrderEx; onResult: (score: number) => void }) {
+  const [picked, setPicked] = useState<number[]>([]);
+  const [submitted, setSubmitted] = useState(false);
+  const [correct, setCorrect] = useState(false);
+  const shuffled = seededShuffle(ex.tokens.map((t, i) => ({ t, i })), ex.id);
+
+  const built = picked.map((k) => shuffled[k].t).join(" ");
+
+  function submit() {
+    const c = matchesAccepted(built, ex.answer, ex.accepted);
+    setCorrect(c);
+    setSubmitted(true);
+    onResult(c ? 100 : 0);
+  }
+
+  const near = submitted && !correct ? isNearMiss(built, ex.answer, ex.accepted) : null;
+
+  return (
+    <div>
+      <p style={{ fontSize: "0.75rem", color: "var(--text-muted)", fontWeight: 600, letterSpacing: "0.06em", marginBottom: 4 }}>
+        SẮP XẾP THÀNH CÂU HOÀN CHỈNH
+      </p>
+      {ex.vi && (
+        <p style={{ fontSize: "0.92rem", color: "var(--text-primary)", fontWeight: 600, marginBottom: "0.85rem", lineHeight: 1.5 }}>{ex.vi}</p>
+      )}
+
+      {/* Vùng câu đang dựng */}
+      <div style={{ border: "1.5px dashed var(--border)", borderRadius: 10, padding: picked.length ? "0.7rem 0.9rem" : "1.1rem 0.9rem", marginBottom: "0.85rem", background: submitted ? (correct ? "rgba(34,197,94,0.07)" : "rgba(239,68,68,0.07)") : "var(--bg-secondary)", minHeight: 46 }}>
+        {picked.length === 0 ? (
+          <p style={{ margin: 0, textAlign: "center", fontSize: "0.8rem", color: "var(--text-muted)" }}>Bấm các từ bên dưới theo đúng thứ tự</p>
+        ) : (
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
+            {picked.map((k, pos) => (
+              <button
+                key={pos}
+                onClick={() => { if (!submitted) setPicked((prev) => prev.filter((_, j) => j !== pos)); }}
+                disabled={submitted}
+                style={{ padding: "4px 10px", fontSize: "0.9rem", fontWeight: 600, borderRadius: 6, border: "1.5px solid var(--accent-primary)", background: "rgba(59,130,246,0.12)", color: "var(--text-primary)", cursor: submitted ? "default" : "pointer", fontFamily: "inherit" }}
+              >
+                {shuffled[k].t}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Kho từ */}
+      {!submitted && (
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 5, marginBottom: "1rem" }}>
+          {shuffled.map((s, k) =>
+            picked.includes(k) ? null : (
+              <button
+                key={k}
+                onClick={() => setPicked((prev) => [...prev, k])}
+                style={{ padding: "5px 12px", fontSize: "0.9rem", fontWeight: 500, borderRadius: 6, border: "1.5px solid var(--border)", background: "var(--bg-primary)", color: "var(--text-primary)", cursor: "pointer", fontFamily: "inherit" }}
+              >
+                {s.t}
+              </button>
+            ),
+          )}
+        </div>
+      )}
+
+      {!submitted ? (
+        <CheckButton onClick={submit} disabled={picked.length !== ex.tokens.length} />
+      ) : (
+        <div>
+          {correct ? (
+            <ResultBadge score={100} />
+          ) : near?.near ? (
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: "0.78rem", fontWeight: 600, color: AMBER, background: "rgba(234,179,8,0.1)", border: "1px solid rgba(234,179,8,0.3)", borderRadius: 6, padding: "3px 10px" }}>
+              ⚠ Gần đúng — sai vị trí 1 từ
+            </span>
+          ) : (
+            <ResultBadge score={0} />
+          )}
+          <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", margin: "0.55rem 0 0" }}>
+            <strong>Đáp án:</strong> {ex.answer}
+          </p>
+          <Explanation text={ex.explanation} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────
+// Tầng 5 — dịch Việt → Anh
+// ─────────────────────────────────────
+
+function TranslateCard({ ex, onResult }: { ex: TranslateEx; onResult: (score: number) => void }) {
+  const [input, setInput] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const [correct, setCorrect] = useState(false);
+
+  function submit() {
+    if (!input.trim()) return;
+    const c = matchesAccepted(input, ex.answer, ex.accepted);
+    setCorrect(c);
+    setSubmitted(true);
+    onResult(c ? 100 : 0);
+  }
+
+  const near = submitted && !correct ? isNearMiss(input, ex.answer, ex.accepted) : null;
+  const isBlock = ex.answer.split(/[.?!]\s/).length > 1;
+
+  return (
+    <div>
+      <p style={{ fontSize: "0.75rem", color: "var(--text-muted)", fontWeight: 600, letterSpacing: "0.06em", marginBottom: 5 }}>
+        DỊCH SANG TIẾNG ANH
+      </p>
+      <p style={{ fontSize: "1rem", color: "var(--text-primary)", fontWeight: 600, marginBottom: "0.85rem", lineHeight: 1.6, padding: "10px 14px", background: "var(--bg-secondary)", borderRadius: 8, border: "1px solid var(--border)" }}>
+        {ex.vi}
+      </p>
+
+      {ex.hintWords && ex.hintWords.length > 0 && !submitted && (
+        <div style={{ marginBottom: "0.8rem" }}>
+          <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", fontWeight: 600, letterSpacing: "0.04em", marginBottom: 5 }}>
+            GỢI Ý — dùng các cụm này theo đúng thứ tự
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
+            {ex.hintWords.map((w, i) => (
+              <span key={i} style={{ padding: "3px 10px", fontSize: "0.82rem", borderRadius: 6, border: "1px dashed var(--accent-primary)", background: "rgba(59,130,246,0.07)", color: "var(--text-secondary)" }}>
+                {w}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <textarea
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey && !submitted && !isBlock) { e.preventDefault(); submit(); } }}
+        disabled={submitted}
+        rows={isBlock ? 4 : 2}
+        placeholder="Viết câu tiếng Anh…"
+        style={{ width: "100%", boxSizing: "border-box", padding: "10px 13px", fontSize: "0.93rem", border: submitted ? `1.5px solid ${correct ? "rgba(34,197,94,0.5)" : "rgba(239,68,68,0.5)"}` : "1.5px solid var(--border)", borderRadius: 8, background: "var(--bg-secondary)", color: "var(--text-primary)", outline: "none", resize: "vertical", fontFamily: "inherit", marginBottom: "0.65rem", lineHeight: 1.6 }}
+      />
+
+      {!submitted ? (
+        <CheckButton onClick={submit} disabled={!input.trim()} />
+      ) : (
+        <div>
+          {correct ? (
+            <ResultBadge score={100} />
+          ) : near?.near ? (
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: "0.78rem", fontWeight: 600, color: AMBER, background: "rgba(234,179,8,0.1)", border: "1px solid rgba(234,179,8,0.3)", borderRadius: 6, padding: "3px 10px" }}>
+              ⚠ Gần đúng — chỉ sai 1 từ
+            </span>
+          ) : (
+            <ResultBadge score={0} />
+          )}
+          <p style={{ fontSize: "0.88rem", color: "var(--text-secondary)", margin: "0.55rem 0 0", lineHeight: 1.6 }}>
+            <strong>Đáp án mẫu:</strong> {ex.answer}
+          </p>
+          {distinctAlternatives(ex.answer, ex.accepted).length > 0 && (
+            <details style={{ marginTop: 6 }}>
+              <summary style={{ fontSize: "0.77rem", color: "var(--accent-primary)", cursor: "pointer", fontWeight: 600 }}>
+                Xem {distinctAlternatives(ex.answer, ex.accepted).length} cách viết khác cũng được chấp nhận
+              </summary>
+              <ul style={{ margin: "5px 0 0", paddingLeft: 20 }}>
+                {distinctAlternatives(ex.answer, ex.accepted).map((a, i) => (
+                  <li key={i} style={{ fontSize: "0.82rem", color: "var(--text-secondary)", lineHeight: 1.65 }}>{a}</li>
+                ))}
+              </ul>
+            </details>
+          )}
+          <Explanation text={ex.explanation} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────
 // Dispatcher
 // ─────────────────────────────────────
 
@@ -587,6 +855,9 @@ function ExerciseCard({ ex, emails, onResult }: { ex: P2Exercise; emails: Record
     case "mcq": return <McqCard ex={ex} email={ex.emailRef ? emails[ex.emailRef] : undefined} onResult={onResult} />;
     case "labeling": return <LabelingCard ex={ex} onResult={onResult} />;
     case "ordering": return <OrderingCard ex={ex} onResult={onResult} />;
+    case "type_blank": return <TypeBlankCard ex={ex} onResult={onResult} />;
+    case "word_order": return <WordOrderCard ex={ex} onResult={onResult} />;
+    case "translate": return <TranslateCard ex={ex} onResult={onResult} />;
   }
 }
 

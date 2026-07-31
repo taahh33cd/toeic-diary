@@ -1,0 +1,196 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "translate",
+          "id": "t5-5-e1",
+          "vi": "Xin lưu ý rằng văn phòng sẽ đóng cửa sớm vào thứ Sáu.",
+          "hintWords": ["Please be informed", "that the office", "will close early", "on Friday"],
+          "answer": "Please be informed that the office will close early on Friday.",
+          "accepted": ["Please note that the office will close early on Friday."],
+          "explanation": "«Please be informed that…» — câu mệnh lệnh bị động, khuôn thông báo nội bộ trang trọng nhất."
+        },
+        {
+          "type": "translate",
+          "id": "t5-5-e2",
+          "vi": "Chúng tôi hân hạnh thông báo về việc khai trương chi nhánh mới.",
+          "hintWords": ["We are pleased", "to announce", "the opening", "of our new branch"],
+          "answer": "We are pleased to announce the opening of our new branch.",
+          "accepted": ["We're pleased to announce the opening of our new branch."],
+          "explanation": "«be pleased to announce» dùng cho tin vui. Sau «to» là V nguyên mẫu «announce», không phải danh từ «announcement»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-5-e3",
+          "vi": "Tất cả nhân viên đều được yêu cầu hoàn thành khoá đào tạo.",
+          "hintWords": ["All employees", "are required", "to complete", "the training"],
+          "answer": "All employees are required to complete the training.",
+          "accepted": ["All employees are required to complete the training course."],
+          "explanation": "«be required to + V» = được yêu cầu phải làm gì. Dạng bị động rất hay dùng trong thông báo nội bộ."
+        },
+        {
+          "type": "translate",
+          "id": "t5-5-e4",
+          "vi": "Tôi viết thư này để phàn nàn về dịch vụ kém mà tôi đã nhận được.",
+          "hintWords": ["I am writing", "to complain", "about", "the poor service I received"],
+          "answer": "I am writing to complain about the poor service I received.",
+          "accepted": ["I'm writing to complain about the poor service I received.", "I am writing to complain about the poor service that I received."],
+          "explanation": "«complain ABOUT» — không dùng «complain for». Mệnh đề quan hệ «that» có thể lược bỏ."
+        },
+        {
+          "type": "translate",
+          "id": "t5-5-e5",
+          "vi": "Đây là lần thứ hai tôi gặp phải vấn đề này.",
+          "hintWords": ["This is", "the second time", "I have had", "this problem"],
+          "answer": "This is the second time I have had this problem.",
+          "accepted": ["This is the second time that I have had this problem."],
+          "explanation": "Sau «This is the second time» bắt buộc dùng HIỆN TẠI HOÀN THÀNH, không dùng quá khứ đơn."
+        },
+        {
+          "type": "translate",
+          "id": "t5-5-e6",
+          "vi": "Thông tin chi tiết sẽ được thông báo vào một dịp sau.",
+          "hintWords": ["Further details", "will be announced", "at a later date"],
+          "answer": "Further details will be announced at a later date.",
+          "accepted": ["More details will be announced at a later date."],
+          "explanation": "«will be + V3» bị động tương lai. «at a later date» = vào một dịp sau, cụm cố định."
+        },
+        {
+          "type": "translate",
+          "id": "t5-5-e7",
+          "vi": "Cảm ơn quý khách đã mua chiếc màn hình LCD 19 inch của chúng tôi.",
+          "hintWords": ["Thank you for", "your recent purchase", "of", "a 19-inch LCD monitor"],
+          "answer": "Thank you for your recent purchase of a 19-inch LCD monitor.",
+          "accepted": ["Thank you for purchasing a 19-inch LCD monitor."],
+          "explanation": "«your recent purchase OF + sản phẩm». Có thể chuyển sang V-ing: «Thank you for purchasing…»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-5-e8",
+          "vi": "Nếu còn thắc mắc nào khác, xin đừng ngần ngại liên hệ với tôi.",
+          "hintWords": ["If you have", "any further queries", "please contact me", "without hesitation"],
+          "answer": "If you have any further queries, please contact me without hesitation.",
+          "accepted": ["If you have any further questions, please contact me without hesitation.", "If you have any further queries, please do not hesitate to contact me."],
+          "explanation": "«without hesitation» hoặc «do not hesitate to» — hai cách nói cùng nghĩa, đều dùng được làm câu kết."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "translate",
+          "id": "t5-5-m1",
+          "vi": "Tôi đặt bàn cho sáu người vào tối thứ Bảy lúc bảy giờ, nhưng chúng tôi phải đợi đến gần tám giờ.",
+          "answer": "I booked a table for six people at seven o'clock on Saturday, but we were not seated until almost eight.",
+          "accepted": ["I booked a table for six at seven o'clock on Saturday, but we were not seated until almost eight."],
+          "explanation": "«book a table FOR + số người». «be seated» = được xếp chỗ. «until» ở đây đúng vì nghĩa là «cho tới tận»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-5-m2",
+          "vi": "Hai trong số các món chúng tôi gọi bị nguội, và một món không đúng như chúng tôi đã yêu cầu.",
+          "answer": "Two of the dishes we ordered arrived cold, and one of them was not what we had asked for.",
+          "accepted": ["Two of the dishes we ordered arrived cold, and one was not what we had asked for."],
+          "explanation": "«arrive cold» = đến nơi thì đã nguội — tính từ sau động từ chỉ trạng thái. «what we had asked for» = điều chúng tôi đã yêu cầu."
+        },
+        {
+          "type": "translate",
+          "id": "t5-5-m3",
+          "vi": "Tôi sẽ rất biết ơn nếu bạn có thể xem xét vấn đề này.",
+          "answer": "I would appreciate it if you could look into this matter.",
+          "accepted": ["I would appreciate it if you could look into the matter."],
+          "explanation": "Bắt buộc có chữ «it» sau «appreciate» — thiếu là sai ngữ pháp. Đây là cách yêu cầu lịch sự nhất."
+        },
+        {
+          "type": "translate",
+          "id": "t5-5-m4",
+          "vi": "Tôi xin lỗi vì bạn đã phải chờ quá lâu mới được xếp bàn.",
+          "answer": "I would like to apologize for the long wait before your table was ready.",
+          "accepted": ["I would like to apologize for the long wait before you were seated.", "I apologize for the long wait before your table was ready."],
+          "explanation": "«the long wait» = việc phải chờ lâu, danh từ. Lời xin lỗi nhắm đúng vào lỗi cụ thể chứ không chung chung."
+        },
+        {
+          "type": "translate",
+          "id": "t5-5-m5",
+          "vi": "Để bù đắp sự bất tiện, chúng tôi muốn mời bạn một bữa tối miễn phí cho sáu người trong lần ghé thăm tới.",
+          "answer": "To compensate for the inconvenience, we would like to offer you a complimentary dinner for six on your next visit.",
+          "accepted": ["To compensate for the inconvenience, we would like to offer you a free dinner for six on your next visit."],
+          "explanation": "«complimentary» = miễn phí, tặng kèm — trang trọng hơn «free» trong ngành dịch vụ."
+        },
+        {
+          "type": "translate",
+          "id": "t5-5-m6",
+          "vi": "Chúng tôi rất trân trọng những khách hàng đã gắn bó với chúng tôi nhiều năm.",
+          "answer": "We greatly value customers who have been with us for many years.",
+          "accepted": ["We greatly appreciate customers who have been with us for many years."],
+          "explanation": "«have been with us for + khoảng thời gian» — hiện tại hoàn thành cho việc kéo dài từ quá khứ tới nay."
+        },
+        {
+          "type": "translate",
+          "id": "t5-5-m7",
+          "vi": "Nhà cung cấp đã báo với chúng tôi rằng một số ít áo khoác bị may sai chỉ.",
+          "answer": "Our supplier has informed us that a small number of jackets were stitched with the wrong thread.",
+          "accepted": ["Our supplier has told us that a small number of jackets were stitched with the wrong thread."],
+          "explanation": "«a small number of + danh từ số nhiều». Lý do cụ thể như thế này làm lời xin lỗi đáng tin hơn hẳn."
+        },
+        {
+          "type": "translate",
+          "id": "t5-5-m8",
+          "vi": "Chúng tôi sẽ đổi áo miễn phí, hoặc hoàn tiền toàn bộ ngay nếu bạn muốn.",
+          "answer": "We will replace the jacket free of charge, or give you a full refund instantly if you prefer.",
+          "accepted": ["We will replace the jacket free of charge, or give you a full refund immediately if you prefer."],
+          "explanation": "Hai phương án nối bằng «or». «if you prefer» = nếu bạn thích hơn — để khách tự chọn."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "translate",
+          "id": "t5-5-h1",
+          "vi": "Cảm ơn bạn đã dành thời gian viết thư cho chúng tôi về bữa tối thứ Bảy vừa rồi. Tôi xin lỗi vì bạn đã phải chờ quá lâu mới được xếp bàn.",
+          "answer": "Thank you for taking the time to write to us about your dinner last Saturday. I would like to apologize for the long wait before your table was ready.",
+          "accepted": ["Thank you for taking the time to write to us about your dinner last Saturday. I apologize for the long wait before your table was ready."],
+          "explanation": "Khối mở đầu thư xử lý khiếu nại: cảm ơn cụ thể + xin lỗi đúng lỗi. «take the time to + V» = dành thời gian làm gì."
+        },
+        {
+          "type": "translate",
+          "id": "t5-5-h2",
+          "vi": "Tôi cũng rất tiếc vì hai món ăn của bạn bị nguội và một món bị giao sai. Để bù đắp, chúng tôi muốn mời bạn một bữa tối miễn phí cho sáu người.",
+          "answer": "I am also very sorry that two of your dishes arrived cold and that one order was incorrect. To compensate, we would like to offer you a complimentary dinner for six.",
+          "accepted": ["I'm also very sorry that two of your dishes arrived cold and that one order was incorrect. To compensate, we would like to offer you a complimentary dinner for six."],
+          "explanation": "Lời xin lỗi thứ hai nhắm vào lỗi KHÁC lỗi thứ nhất — đó mới là hai mission riêng biệt. Sau đó là câu bồi thường."
+        },
+        {
+          "type": "translate",
+          "id": "t5-5-h3",
+          "vi": "Tôi viết thư này để phàn nàn về dịch vụ tại gara của bạn hôm 8 tháng 7. Tôi giao xe lúc tám giờ sáng và được hẹn xong trước trưa.",
+          "answer": "I am writing to complain about the service carried out at your garage on July 8. I left the car with you at eight in the morning and was told it would be ready by noon.",
+          "accepted": ["I am writing to complain about the service carried out at your garage on July 8. I left the car with you at eight in the morning and I was told it would be ready by noon."],
+          "explanation": "Nêu bối cảnh (giờ giao xe, giờ hẹn) TRƯỚC khi nêu vấn đề, nếu không người đọc không hiểu vì sao đó là lỗi."
+        },
+        {
+          "type": "translate",
+          "id": "t5-5-h4",
+          "vi": "Xe không xong cho tới bốn giờ rưỡi chiều, khiến tôi lỡ một cuộc hẹn quan trọng. Ngoài ra, hoá đơn cuối cùng cao hơn báo giá 90 đô la.",
+          "answer": "The car was not ready until half past four, which meant I missed an important appointment. In addition, the final bill was 90 dollars higher than the estimate.",
+          "accepted": ["The car was not ready until half past four, which meant that I missed an important appointment. In addition, the final bill was 90 dollars higher than the estimate."],
+          "explanation": "«which meant» nối hệ quả. «In addition» tách rõ vấn đề thứ hai — nhờ vậy giám khảo đếm được đủ 2 mission."
+        },
+        {
+          "type": "translate",
+          "id": "t5-5-h5",
+          "vi": "Tôi muốn yêu cầu một bản giải thích bằng văn bản về các khoản phụ phí. Tôi mong nhận được hồi âm trong vòng bảy ngày.",
+          "answer": "I would like to request a written explanation of the additional charges. I look forward to hearing from you within seven days.",
+          "accepted": ["I would like to request a written explanation of the extra charges. I look forward to hearing from you within seven days."],
+          "explanation": "Khối kết thư phàn nàn: nêu yêu cầu cụ thể + đặt hạn chót lịch sự. «within seven days» tạo áp lực mà không mất lịch sự."
+        }
+      ]
+    }
+  ]
+}

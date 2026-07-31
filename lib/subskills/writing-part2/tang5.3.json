@@ -1,0 +1,196 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "translate",
+          "id": "t5-3-e1",
+          "vi": "Tôi muốn đặt lịch hẹn với bác sĩ Lee.",
+          "hintWords": ["I would like to", "make an appointment", "with", "Dr. Lee"],
+          "answer": "I would like to make an appointment with Dr. Lee.",
+          "accepted": ["I'd like to make an appointment with Dr. Lee."],
+          "explanation": "«make an appointment WITH + người». Người Việt hay viết nhầm «appointment to»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-3-e2",
+          "vi": "Ba giờ chiều có tiện cho bạn không?",
+          "hintWords": ["Would three o'clock", "be convenient", "for you"],
+          "answer": "Would three o'clock be convenient for you?",
+          "accepted": ["Is three o'clock convenient for you?", "Would 3 o'clock be convenient for you?"],
+          "explanation": "«be convenient FOR someone» — giới từ «for», không phải «to» hay «with»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-3-e3",
+          "vi": "Tôi e rằng tôi phải dời lại cuộc họp của chúng ta.",
+          "hintWords": ["I am afraid", "I have to", "reschedule", "our meeting"],
+          "answer": "I am afraid I have to reschedule our meeting.",
+          "accepted": ["I'm afraid I have to reschedule our meeting.", "I am afraid that I have to reschedule our meeting."],
+          "explanation": "«I am afraid» là đệm lịch sự trước tin xấu. «reschedule» = dời lịch sang thời điểm khác."
+        },
+        {
+          "type": "translate",
+          "id": "t5-3-e4",
+          "vi": "Tôi xin lỗi vì bất kỳ bất tiện nào điều này có thể gây ra.",
+          "hintWords": ["I apologize", "for any inconvenience", "this may cause"],
+          "answer": "I apologize for any inconvenience this may cause.",
+          "accepted": ["I apologize for any inconvenience that this may cause.", "I am sorry for any inconvenience this may cause."],
+          "explanation": "«may cause» — dùng «may» vì bất tiện chưa chắc đã xảy ra. Câu đi kèm khi bạn thay đổi kế hoạch."
+        },
+        {
+          "type": "translate",
+          "id": "t5-3-e5",
+          "vi": "Cuộc họp sẽ được tổ chức tại Phòng họp B.",
+          "hintWords": ["The meeting", "will be held", "in", "Conference Room B"],
+          "answer": "The meeting will be held in Conference Room B.",
+          "accepted": ["The meeting will take place in Conference Room B."],
+          "explanation": "«be held» = được tổ chức (bị động). «take place» = diễn ra (chủ động) — cả hai đều đúng."
+        },
+        {
+          "type": "translate",
+          "id": "t5-3-e6",
+          "vi": "Chương trình họp được đính kèm trong thư này.",
+          "hintWords": ["The agenda", "is attached", "to this e-mail"],
+          "answer": "The agenda is attached to this e-mail.",
+          "accepted": ["The agenda is attached to this email.", "I have attached the agenda to this e-mail."],
+          "explanation": "«be attached TO this e-mail» — luôn dùng giới từ «to». Có thể viết chủ động «I have attached…»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-3-e7",
+          "vi": "Tôi có cần chuẩn bị gì trước không?",
+          "hintWords": ["Do I need to", "prepare", "anything", "in advance"],
+          "answer": "Do I need to prepare anything in advance?",
+          "accepted": ["Do I need to prepare anything beforehand?", "Should I prepare anything in advance?"],
+          "explanation": "«in advance» = trước, từ sớm. Trong câu hỏi phủ định/nghi vấn dùng «anything» chứ không phải «something»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-3-e8",
+          "vi": "Xin vui lòng xác nhận thông tin chi tiết sớm nhất có thể.",
+          "hintWords": ["Please confirm", "the details", "at your earliest", "convenience"],
+          "answer": "Please confirm the details at your earliest convenience.",
+          "accepted": ["Please confirm the details as soon as possible."],
+          "explanation": "«at your earliest convenience» trang trọng hơn «as soon as possible» — hợp với e-mail business."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "translate",
+          "id": "t5-3-m1",
+          "vi": "Xin lưu ý rằng buổi đào tạo đã được dời từ ngày 15 sang ngày 22 tháng 9.",
+          "answer": "Please be informed that the training has been moved from September 15 to September 22.",
+          "accepted": ["Please note that the training has been moved from September 15 to September 22."],
+          "explanation": "«move from A to B» = dời từ A sang B. «has been moved» — bị động hiện tại hoàn thành vì việc dời đã xong."
+        },
+        {
+          "type": "translate",
+          "id": "t5-3-m2",
+          "vi": "Nếu bạn không thể tham dự vào ngày mới, xin trả lời e-mail này.",
+          "answer": "If you are unable to attend on the new date, please reply to this e-mail.",
+          "accepted": ["If you cannot attend on the new date, please reply to this e-mail."],
+          "explanation": "«be unable to + V» trang trọng hơn «cannot». «reply TO + thư» — luôn có giới từ «to»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-3-m3",
+          "vi": "Xin cho chúng tôi biết bạn thích buổi sáng hay buổi chiều hơn.",
+          "answer": "Please let us know whether you would prefer a morning or an afternoon session.",
+          "accepted": ["Please let us know if you would prefer a morning or an afternoon session."],
+          "explanation": "«whether A or B» — dùng cho lựa chọn giữa hai phương án. Chú ý mạo từ: «a morning» nhưng «an afternoon»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-3-m4",
+          "vi": "Bạn có thể cho tôi biết cuộc họp sẽ diễn ra ở đâu không?",
+          "answer": "Could you tell me where the meeting will take place?",
+          "accepted": ["Could you tell me where the meeting will be held?", "Would you tell me where the meeting will take place?"],
+          "explanation": "Câu hỏi GIÁN TIẾP: «where the meeting WILL TAKE PLACE» — không đảo thành «where will the meeting take place»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-3-m5",
+          "vi": "Tôi vui mừng xác nhận rằng tôi sẽ tham dự buổi đào tạo vào ngày mới.",
+          "answer": "I am pleased to confirm that I will attend the session on the new date.",
+          "accepted": ["I'm pleased to confirm that I will attend the session on the new date.", "I am happy to confirm that I will attend the session on the new date."],
+          "explanation": "«be pleased to confirm that» — khuôn nhận lời trang trọng. Nhớ nhắc lại chi tiết («on the new date»)."
+        },
+        {
+          "type": "translate",
+          "id": "t5-3-m6",
+          "vi": "Có việc gấp phát sinh ở văn phòng nên tôi phải huỷ cuộc hẹn.",
+          "answer": "Something urgent has come up at the office, so I have to cancel our appointment.",
+          "accepted": ["Something urgent has come up at the office, so I need to cancel our appointment."],
+          "explanation": "«come up» = phát sinh. «Something urgent» — tính từ đứng SAU đại từ bất định, khác quy tắc thông thường."
+        },
+        {
+          "type": "translate",
+          "id": "t5-3-m7",
+          "vi": "Có thể dời cuộc họp sang thứ Năm được không?",
+          "answer": "Would it be possible to move the meeting to Thursday?",
+          "accepted": ["Would it be possible to reschedule the meeting to Thursday?", "Is it possible to move the meeting to Thursday?"],
+          "explanation": "«Would it be possible to + V?» — cách xin đổi lịch lịch sự nhất, nhẹ hơn nhiều so với «Can we move…?»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-3-m8",
+          "vi": "Tất cả trưởng bộ phận đều được yêu cầu tham dự.",
+          "answer": "All department heads are expected to attend.",
+          "accepted": ["All department heads are required to attend."],
+          "explanation": "«be expected to» (được mong đợi) nhẹ hơn «be required to» (bắt buộc). Cả hai đều dùng trong thông báo nội bộ."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "translate",
+          "id": "t5-3-h1",
+          "vi": "Cảm ơn đã báo cho chúng tôi biết buổi đào tạo đã dời sang ngày 22 tháng 9. Tôi xác nhận rằng tôi có thể tham dự vào ngày mới.",
+          "answer": "Thank you for letting us know that the training has been moved to September 22. I am writing to confirm that I will be able to attend on the new date.",
+          "accepted": ["Thank you for letting us know that the training has been moved to September 22. I would like to confirm that I will be able to attend on the new date."],
+          "explanation": "Khối mở đầu + mission xác nhận. «Thank you for + V-ing» rồi mới đến câu xác nhận."
+        },
+        {
+          "type": "translate",
+          "id": "t5-3-h2",
+          "vi": "Tôi e rằng tôi phải dời lại cuộc họp. Có việc gấp phát sinh ở văn phòng, và tôi xin lỗi vì bất kỳ bất tiện nào điều này có thể gây ra.",
+          "answer": "I am afraid I have to reschedule our meeting. Something urgent has come up at the office, and I apologize for any inconvenience this may cause.",
+          "accepted": ["I'm afraid I have to reschedule our meeting. Something urgent has come up at the office, and I apologize for any inconvenience this may cause."],
+          "explanation": "Khối báo tin xấu: đệm «I am afraid» → nêu việc → giải thích lý do → xin lỗi. Đủ bốn bước thì thư mới trọn vẹn."
+        },
+        {
+          "type": "translate",
+          "id": "t5-3-h3",
+          "vi": "Bạn có thể cho tôi biết cuộc họp diễn ra ở đâu không? Tôi cũng muốn biết liệu tôi có cần chuẩn bị gì trước không.",
+          "answer": "Could you tell me where the meeting will take place? I would also like to know whether I need to prepare anything in advance.",
+          "accepted": ["Could you tell me where the meeting will take place? I would also like to know if I need to prepare anything in advance."],
+          "explanation": "Hai câu hỏi dùng HAI khuôn khác nhau («Could you tell me…» và «I would also like to know…») — tránh lặp từ vựng."
+        },
+        {
+          "type": "translate",
+          "id": "t5-3-h4",
+          "vi": "Cuộc họp sẽ được tổ chức tại Phòng họp B và kéo dài khoảng ba tiếng. Chương trình họp được đính kèm trong thư này.",
+          "answer": "The meeting will be held in Conference Room B and should last about three hours. The agenda is attached to this e-mail.",
+          "accepted": ["The meeting will be held in Conference Room B and will last about three hours. The agenda is attached to this e-mail."],
+          "explanation": "«should last» = dự kiến kéo dài — nhẹ hơn «will last» vì thời lượng chỉ là ước tính."
+        },
+        {
+          "type": "translate",
+          "id": "t5-3-h5",
+          "vi": "Xin cho chúng tôi biết bạn thích buổi sáng hay buổi chiều hơn. Xin vui lòng xác nhận sớm nhất có thể.",
+          "answer": "Please let us know whether you would prefer a morning or an afternoon session. Please confirm at your earliest convenience.",
+          "accepted": ["Please let us know if you would prefer a morning or an afternoon session. Please confirm at your earliest convenience."],
+          "explanation": "Khối kết: hỏi lựa chọn rồi thúc nhẹ về thời gian trả lời. «at your earliest convenience» là mức lịch sự cao nhất."
+        }
+      ]
+    }
+  ]
+}

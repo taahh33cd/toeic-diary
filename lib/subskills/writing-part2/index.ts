@@ -78,7 +78,52 @@ export type OrderingEx = {
   explanation: string;
 };
 
-export type P2Exercise = MatchingEx | WordBankEx | RecallEx | McqEx | LabelingEx | OrderingEx;
+/** Tầng 3/4 — gõ từ vào chỗ trống (không có ngân hàng từ như Tầng 0) */
+export type TypeBlankEx = {
+  type: "type_blank";
+  id: string;
+  prompt?: string;
+  sentence: string; // dùng ___ cho mỗi chỗ trống
+  answers: string[];
+  /** biến thể chấp nhận được, chỉ số khớp với answers */
+  accepted?: string[][];
+  vi?: string;
+  explanation: string;
+};
+
+/** Tầng 4 hard — sắp xếp từ xáo trộn thành câu chức năng hoàn chỉnh */
+export type WordOrderEx = {
+  type: "word_order";
+  id: string;
+  tokens: string[];
+  answer: string;
+  accepted?: string[];
+  vi?: string;
+  explanation: string;
+};
+
+/** Tầng 5 — dịch Việt sang Anh */
+export type TranslateEx = {
+  type: "translate";
+  id: string;
+  vi: string;
+  answer: string;
+  accepted?: string[];
+  /** từ khoá gợi ý — chỉ dùng ở cấp easy cho người mới */
+  hintWords?: string[];
+  explanation: string;
+};
+
+export type P2Exercise =
+  | MatchingEx
+  | WordBankEx
+  | RecallEx
+  | McqEx
+  | LabelingEx
+  | OrderingEx
+  | TypeBlankEx
+  | WordOrderEx
+  | TranslateEx;
 
 export type P2Level = { difficulty: P2Difficulty; exercises: P2Exercise[] };
 export type P2TestData = {
@@ -133,7 +178,7 @@ export const WRITING_P2_SKILLS: P2SkillMeta[] = [
     label: "Salutations & Closings",
     description: "Chọn xưng hô đúng, điền câu mở đầu, ghép cặp mở–kết đúng mức trang trọng.",
     dbPartPrefix: "wp2-tang3",
-    active: false,
+    active: true,
   },
   {
     id: "tang4",
@@ -141,7 +186,7 @@ export const WRITING_P2_SKILLS: P2SkillMeta[] = [
     label: "Functional Phrases",
     description: "Cung cấp thông tin · Đề nghị · Xin lỗi · Hỏi thông tin · Câu kết.",
     dbPartPrefix: "wp2-tang4",
-    active: false,
+    active: true,
   },
   {
     id: "tang5",
@@ -149,7 +194,7 @@ export const WRITING_P2_SKILLS: P2SkillMeta[] = [
     label: "VI → EN Translation",
     description: "Dịch câu email sang tiếng Anh. Chấp nhận nhiều cách viết đúng.",
     dbPartPrefix: "wp2-tang5",
-    active: false,
+    active: true,
   },
   {
     id: "tang6",
@@ -260,6 +305,24 @@ import t2_3 from "./tang2.3.json";
 import t2_4 from "./tang2.4.json";
 import t2_5 from "./tang2.5.json";
 
+import t3_1 from "./tang3.1.json";
+import t3_2 from "./tang3.2.json";
+import t3_3 from "./tang3.3.json";
+import t3_4 from "./tang3.4.json";
+import t3_5 from "./tang3.5.json";
+
+import t4_1 from "./tang4.1.json";
+import t4_2 from "./tang4.2.json";
+import t4_3 from "./tang4.3.json";
+import t4_4 from "./tang4.4.json";
+import t4_5 from "./tang4.5.json";
+
+import t5_1 from "./tang5.1.json";
+import t5_2 from "./tang5.2.json";
+import t5_3 from "./tang5.3.json";
+import t5_4 from "./tang5.4.json";
+import t5_5 from "./tang5.5.json";
+
 type RawTest = {
   emails?: Record<string, EmailBlock>;
   levels: { difficulty: string; exercises: unknown[] }[];
@@ -282,6 +345,9 @@ const DATA: Record<string, P2TestData[]> = {
   tang0: [t0_1, t0_2, t0_3, t0_4, t0_5].map((r, i) => load(r, "tang0", i + 1)),
   tang1: [t1_1, t1_2, t1_3, t1_4, t1_5].map((r, i) => load(r, "tang1", i + 1)),
   tang2: [t2_1, t2_2, t2_3, t2_4, t2_5].map((r, i) => load(r, "tang2", i + 1)),
+  tang3: [t3_1, t3_2, t3_3, t3_4, t3_5].map((r, i) => load(r, "tang3", i + 1)),
+  tang4: [t4_1, t4_2, t4_3, t4_4, t4_5].map((r, i) => load(r, "tang4", i + 1)),
+  tang5: [t5_1, t5_2, t5_3, t5_4, t5_5].map((r, i) => load(r, "tang5", i + 1)),
 };
 
 export function getSkillTestsP2(skillId: string): P2TestData[] | undefined {

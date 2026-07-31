@@ -1,0 +1,256 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t4-4-e1",
+          "question": "Câu này thuộc nhóm chức năng nào? «I would like to let you know that the office will close early.»",
+          "options": [
+            { "id": "A", "text": "Cung cấp thông tin" },
+            { "id": "B", "text": "Xin lỗi" },
+            { "id": "C", "text": "Đề nghị / gợi ý" },
+            { "id": "D", "text": "Phàn nàn" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Khuôn E của mục Cung cấp thông tin: «I would like to let you know that…»"
+        },
+        {
+          "type": "mcq",
+          "id": "t4-4-e2",
+          "question": "Câu này thuộc nhóm chức năng nào? «Please accept my sincere apology.»",
+          "options": [
+            { "id": "A", "text": "Xin lỗi" },
+            { "id": "B", "text": "Câu kết chờ hồi âm" },
+            { "id": "C", "text": "Hỏi thông tin" },
+            { "id": "D", "text": "Xưng hô" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Câu xin lỗi ngắn gọn nhất, dùng được ở gần như mọi thư xin lỗi. Thường đứng ngay sau lời giải thích nguyên nhân."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-4-e3",
+          "question": "Directions ghi «answer the customer's questions». Bạn nên sắp xếp câu trả lời thế nào?",
+          "options": [
+            { "id": "A", "text": "Mỗi câu trả lời một câu riêng, theo đúng thứ tự khách đã hỏi" },
+            { "id": "B", "text": "Gộp tất cả vào một đoạn dài" },
+            { "id": "C", "text": "Trả lời theo thứ tự ngược lại" },
+            { "id": "D", "text": "Chỉ trả lời câu quan trọng nhất" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Giám khảo dò theo thứ tự câu hỏi trong đề. Giữ đúng thứ tự và tách câu là cách chắc chắn nhất để không bị tính sót mission."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-4-e4",
+          "question": "Câu nào phù hợp để mở đầu một PHƯƠNG ÁN THAY THẾ?",
+          "options": [
+            { "id": "A", "text": "Alternatively, we can transfer the amount to our February course." },
+            { "id": "B", "text": "In addition, the screen flickers." },
+            { "id": "C", "text": "Therefore, we closed the store." },
+            { "id": "D", "text": "For example, our summer program." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«Alternatively» và «Otherwise» đều báo hiệu phương án thứ hai. B là bổ sung, C là kết quả, D là ví dụ."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-4-e5",
+          "question": "Bạn vừa đưa ra HAI phương án cho khách. Câu tiếp theo nên là gì?",
+          "options": [
+            { "id": "A", "text": "Please let me know which option you would prefer." },
+            { "id": "B", "text": "We have full assurance that it will not happen again." },
+            { "id": "C", "text": "I am writing to inquire about your services." },
+            { "id": "D", "text": "Thank you for your e-mail dated June 5." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Đưa ra lựa chọn thì phải yêu cầu khách chọn, nếu không thư sẽ bỏ lửng và khách không biết làm gì tiếp."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-4-e6",
+          "question": "Câu nào KHÔNG phù hợp với vai NHÂN VIÊN trả lời khiếu nại?",
+          "options": [
+            { "id": "A", "text": "Why didn't you contact us earlier?" },
+            { "id": "B", "text": "I would like to apologize for the delay." },
+            { "id": "C", "text": "Could you tell me when you placed the order?" },
+            { "id": "D", "text": "We will replace the item free of charge." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«Why didn't you…?» mang giọng trách móc khách hàng — sai hoàn toàn văn phong dịch vụ, dù về ngữ pháp thì đúng."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-4-e7",
+          "question": "Câu hỏi nào KHÔNG nên đặt vì đề đã trả lời rồi?",
+          "options": [
+            { "id": "A", "text": "Hỏi lại địa điểm khi e-mail đề đã ghi «Conference Room B»" },
+            { "id": "B", "text": "Hỏi có cần mang laptop không" },
+            { "id": "C", "text": "Hỏi có tài liệu gửi trước không" },
+            { "id": "D", "text": "Hỏi có chỗ đỗ xe không" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Hỏi lại điều đề đã nêu là lỗi nặng — chứng tỏ bạn đọc lướt. Luôn rà lại e-mail đề trước khi chọn câu hỏi."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-4-e8",
+          "question": "Câu nào thể hiện QUYẾT ĐỊNH dứt khoát (mission «state your decision»)?",
+          "options": [
+            { "id": "A", "text": "I accept the new departure time of 6:15 a.m. on April 14." },
+            { "id": "B", "text": "I think it might be difficult, but I am not sure yet." },
+            { "id": "C", "text": "Please decide for me which option is better." },
+            { "id": "D", "text": "I will let you know my decision next week." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«State your decision» đòi hỏi câu trả lời DỨT KHOÁT, có nhắc lại chi tiết cụ thể. B, C, D đều né tránh quyết định."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "type_blank",
+          "id": "t4-4-m1",
+          "sentence": "I am pleased to ___ that I will attend the interview on April 12.",
+          "answers": ["confirm"],
+          "vi": "Tôi vui mừng xác nhận rằng tôi sẽ dự phỏng vấn vào ngày 12 tháng 4.",
+          "explanation": "«confirm that + mệnh đề» = xác nhận rằng. Nhớ nhắc lại NGÀY cụ thể để không ai hiểu nhầm."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-4-m2",
+          "sentence": "___, we can transfer the full amount to our February course.",
+          "answers": ["Alternatively"],
+          "accepted": [["Otherwise"]],
+          "vi": "Ngoài ra, chúng tôi có thể chuyển toàn bộ số tiền sang khoá học tháng Hai.",
+          "explanation": "Từ nối báo hiệu phương án thứ hai. Sau đó phải có câu yêu cầu khách chọn."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-4-m3",
+          "sentence": "I can ___ that I did make both transactions on July 1.",
+          "answers": ["confirm"],
+          "vi": "Tôi xác nhận rằng tôi đã thực hiện cả hai giao dịch vào ngày 1 tháng 7.",
+          "explanation": "«did make» là dạng nhấn mạnh của «made» — dùng khi bạn khẳng định lại điều người ta đang nghi ngờ."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-4-m4",
+          "sentence": "As our notice period is thirty days, the last payment will be ___ on September 30.",
+          "answers": ["taken"],
+          "accepted": [["charged", "collected"]],
+          "vi": "Vì thời gian báo trước là ba mươi ngày, khoản thanh toán cuối sẽ được thu vào ngày 30 tháng 9.",
+          "explanation": "«will be + V3» bị động tương lai. «take a payment» = thu tiền — cách nói tự nhiên của ngành dịch vụ."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-4-m5",
+          "sentence": "You do not ___ to return your access card; it will be ___ automatically.",
+          "answers": ["need", "deactivated"],
+          "vi": "Bạn không cần trả lại thẻ ra vào; thẻ sẽ tự động bị vô hiệu hoá.",
+          "explanation": "«do not need to + V». «deactivate» = vô hiệu hoá, dạng bị động vì thẻ là đối tượng chịu tác động."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-4-m6",
+          "sentence": "If you would ___, we can freeze your membership for six months at no cost.",
+          "answers": ["prefer"],
+          "vi": "Nếu bạn muốn, chúng tôi có thể tạm dừng thẻ hội viên sáu tháng miễn phí.",
+          "explanation": "«If you would prefer» = nếu bạn thích hơn — cách mở lời đề nghị nhẹ nhàng. «at no cost» = miễn phí."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-4-m7",
+          "sentence": "We have greatly ___ having you as a member for the past two years.",
+          "answers": ["valued"],
+          "accepted": [["appreciated", "enjoyed"]],
+          "vi": "Chúng tôi rất trân trọng việc bạn đã là hội viên trong hai năm qua.",
+          "explanation": "«value/appreciate + V-ing» — câu xã giao giữ chân khách, rất nên có khi khách đã gắn bó lâu."
+        },
+        {
+          "type": "type_blank",
+          "id": "t4-4-m8",
+          "sentence": "Our engineer will ___ on Wednesday ___ ten and twelve in the morning.",
+          "answers": ["visit", "between"],
+          "accepted": [["come", "call"], []],
+          "vi": "Kỹ thuật viên của chúng tôi sẽ đến vào thứ Tư trong khoảng từ 10 đến 12 giờ trưa.",
+          "explanation": "«between A and B» cho khoảng thời gian. Nêu khung giờ cụ thể là dấu hiệu của thư dịch vụ chuyên nghiệp."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "word_order",
+          "id": "t4-4-h1",
+          "tokens": ["I", "am", "pleased", "to", "confirm", "that", "I", "will", "attend", "the", "interview"],
+          "answer": "I am pleased to confirm that I will attend the interview.",
+          "vi": "Tôi vui mừng xác nhận rằng tôi sẽ dự buổi phỏng vấn.",
+          "explanation": "«be pleased to + V» cho tin vui, «confirm that + mệnh đề» cho lời xác nhận. Hai khuôn ghép lại thành câu nhận lời chuẩn."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-4-h2",
+          "tokens": ["Would", "you", "prefer", "delivery", "to", "your", "home", "address", "or", "collection", "from", "the", "store"],
+          "answer": "Would you prefer delivery to your home address or collection from the store?",
+          "vi": "Bạn thích giao đến nhà hay tự đến cửa hàng lấy?",
+          "explanation": "«prefer A or B» khi đưa ra hai lựa chọn. Dùng danh từ («delivery», «collection») cho câu ngắn gọn hơn dùng động từ."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-4-h3",
+          "tokens": ["We", "would", "like", "to", "offer", "you", "a", "free", "upgrade", "on", "your", "next", "stay"],
+          "answer": "We would like to offer you a free upgrade on your next stay.",
+          "vi": "Chúng tôi muốn tặng bạn một lần nâng hạng phòng miễn phí trong lần lưu trú tới.",
+          "explanation": "«offer someone something» — không có «to» ở giữa. Đây là khuôn bồi thường điển hình của ngành khách sạn."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-4-h4",
+          "tokens": ["Please", "make", "sure", "that", "the", "schedule", "is", "handed", "over", "before", "you", "leave"],
+          "answer": "Please make sure that the schedule is handed over before you leave.",
+          "vi": "Xin đảm bảo rằng lịch làm việc được bàn giao trước khi bạn nghỉ.",
+          "explanation": "«make sure that + mệnh đề» = đảm bảo rằng. «hand over» = bàn giao, ở đây dùng bị động."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-4-h5",
+          "tokens": ["Could", "you", "confirm", "who", "will", "cover", "the", "daily", "checks", "while", "you", "are", "away"],
+          "answer": "Could you confirm who will cover the daily checks while you are away?",
+          "vi": "Bạn xác nhận giúp ai sẽ đảm nhận việc kiểm tra hằng ngày khi bạn vắng mặt?",
+          "explanation": "«who will cover» — câu hỏi gián tiếp, «who» làm chủ ngữ nên giữ nguyên trật tự. «while you are away» = trong lúc bạn vắng."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-4-h6",
+          "tokens": ["The", "repair", "will", "be", "carried", "out", "at", "no", "cost", "to", "you"],
+          "answer": "The repair will be carried out at no cost to you.",
+          "vi": "Việc sửa chữa sẽ được thực hiện mà bạn không phải trả chi phí nào.",
+          "explanation": "«carry out» = thực hiện, ở dạng bị động «be carried out». «at no cost to you» = bạn không tốn đồng nào."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-4-h7",
+          "tokens": ["I", "would", "like", "to", "request", "five", "days", "of", "leave", "from", "August", "12"],
+          "answer": "I would like to request five days of leave from August 12.",
+          "vi": "Tôi muốn xin nghỉ phép năm ngày kể từ ngày 12 tháng 8.",
+          "explanation": "«request + danh từ» = xin, đề nghị. Luôn nêu SỐ NGÀY và NGÀY BẮT ĐẦU cụ thể trong đơn xin nghỉ."
+        },
+        {
+          "type": "word_order",
+          "id": "t4-4-h8",
+          "tokens": ["Thank", "you", "for", "your", "continued", "business", "over", "the", "past", "three", "years"],
+          "answer": "Thank you for your continued business over the past three years.",
+          "vi": "Cảm ơn quý vị đã tiếp tục hợp tác trong suốt ba năm qua.",
+          "explanation": "«your continued business» = việc bạn tiếp tục làm ăn với chúng tôi. «over the past + khoảng thời gian» đi với hiện tại hoàn thành hoặc câu cảm ơn."
+        }
+      ]
+    }
+  ]
+}

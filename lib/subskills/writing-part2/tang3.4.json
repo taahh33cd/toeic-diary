@@ -1,0 +1,255 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t3-4-e1",
+          "question": "Bạn trả lời một thư ký tên «Prof. Marcus Feld». Xưng hô nào đúng?",
+          "options": [
+            { "id": "A", "text": "Dear Prof. Feld," },
+            { "id": "B", "text": "Dear Mr. Marcus," },
+            { "id": "C", "text": "Dear Professor Marcus," },
+            { "id": "D", "text": "Dear Feld," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Học vị thay cho Mr./Ms., nhưng vẫn đi với HỌ. Không bao giờ dùng họ trần trụi («Dear Feld») trong e-mail lịch sự."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-4-e2",
+          "question": "Thư đề ký «Bookings Team — Ridgeway Community Centre». Xưng hô nào tốt nhất?",
+          "options": [
+            { "id": "A", "text": "Dear Bookings Team," },
+            { "id": "B", "text": "Dear Ridgeway," },
+            { "id": "C", "text": "Dear Mr. Bookings," },
+            { "id": "D", "text": "Hello Bookings," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Gọi đúng tên bộ phận đã ký. Không rút gọn thành tên tổ chức, cũng không biến tên bộ phận thành tên người."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-4-e3",
+          "question": "Câu nào dùng để mở đầu thư XIN LỖI?",
+          "options": [
+            { "id": "A", "text": "I am writing in relation to your recent complaint." },
+            { "id": "B", "text": "I would like to place an order for ten chairs." },
+            { "id": "C", "text": "Could you tell me how much the annual fee is?" },
+            { "id": "D", "text": "I suggest that you should book early." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«in relation to your recent complaint» báo ngay cho người đọc biết đây là thư phản hồi khiếu nại. B là đặt hàng, C là hỏi thông tin, D là gợi ý."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-4-e4",
+          "question": "Sau lời chào cuối «Sincerely,», dòng tiếp theo phải là gì?",
+          "options": [
+            { "id": "A", "text": "Tên bạn (và chức danh nếu có)" },
+            { "id": "B", "text": "Câu kết của thư" },
+            { "id": "C", "text": "Xưng hô người nhận" },
+            { "id": "D", "text": "Ngày tháng" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Cấu trúc cuối thư: câu kết → lời chào cuối → tên (+ chức danh). Trong bài thi, nhớ ký tên đúng vai được giao."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-4-e5",
+          "question": "Bạn đóng vai nhân viên khách sạn. Bạn nên ký tên thế nào?",
+          "options": [
+            { "id": "A", "text": "Sincerely, / Riverside Grand Hotel" },
+            { "id": "B", "text": "Sincerely, / Daniel Ortiz (tên khách)" },
+            { "id": "C", "text": "Sincerely, / Me" },
+            { "id": "D", "text": "Không cần ký tên" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Ký tên phải khớp VAI được giao. Ký tên khách hàng là lỗi nghiêm trọng — chứng tỏ bạn nhầm vai suốt cả bài."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-4-e6",
+          "question": "Câu nào nên đặt NGAY sau xưng hô trong thư trả lời khiếu nại?",
+          "options": [
+            { "id": "A", "text": "Thank you for taking the time to write to us about your order." },
+            { "id": "B", "text": "Sincerely yours," },
+            { "id": "C", "text": "We have full assurance that it will not happen again." },
+            { "id": "D", "text": "Would you give us a call or visit our store?" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Câu thứ hai luôn là câu cảm ơn kèm tóm tắt vấn đề. C là câu kết, D là mission ở giữa thư, B là lời chào cuối."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-4-e7",
+          "question": "Xếp thứ tự mức trang trọng từ THẤP đến CAO, câu nào đứng thấp nhất?",
+          "options": [
+            { "id": "A", "text": "Talk to you later!" },
+            { "id": "B", "text": "Best wishes," },
+            { "id": "C", "text": "Sincerely," },
+            { "id": "D", "text": "Cordially," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Thang trong giáo trình: Talk to you later! (casual) → Best wishes → Regards → Best regards → Sincerely → Sincerely yours → Yours truly → Cordially (formal)."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-4-e8",
+          "question": "E-mail của bạn có hạn chót cần khách trả lời. Câu kết nào phù hợp nhất?",
+          "options": [
+            { "id": "A", "text": "Please send your response by the end of November." },
+            { "id": "B", "text": "Hope to hear from you soon." },
+            { "id": "C", "text": "Thank you for pointing this matter out to us." },
+            { "id": "D", "text": "We have full assurance that it will not happen again." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Khi có hạn chót, phải nêu MỐC CỤ THỂ. «Hope to hear from you soon» quá mơ hồ, khách không biết bao giờ là muộn."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "type_blank",
+          "id": "t3-4-m1",
+          "sentence": "I am writing to ___ you know about our new opening hours.",
+          "answers": ["let"],
+          "vi": "Tôi viết thư này để báo cho bạn biết về giờ mở cửa mới của chúng tôi.",
+          "explanation": "«let someone know about» = cho ai biết về. Sau «to» là V nguyên mẫu, và «let» không bao giờ thêm «to» phía sau nó."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-4-m2",
+          "sentence": "I'd like to give you ___ on our summer programs.",
+          "answers": ["information"],
+          "vi": "Tôi muốn cung cấp cho bạn thông tin về các chương trình mùa hè.",
+          "explanation": "«information» là danh từ KHÔNG ĐẾM ĐƯỢC — không bao giờ viết «informations» hay «an information»."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-4-m3",
+          "sentence": "I ___ suggest that it would be better ___ you to book early.",
+          "answers": ["would", "for"],
+          "vi": "Tôi cho rằng sẽ tốt hơn cho bạn nếu đặt chỗ sớm.",
+          "explanation": "«I would suggest that it would be better FOR you TO + V» — khuôn gợi ý lịch sự nhất trong giáo trình."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-4-m4",
+          "sentence": "One thing I can ___ is our weekend class.",
+          "answers": ["recommend"],
+          "accepted": [["suggest"]],
+          "vi": "Một điều tôi có thể khuyên là lớp học cuối tuần của chúng tôi.",
+          "explanation": "Sau «can» là V nguyên mẫu. «recommend» và «suggest» thay thế được cho nhau trong khuôn này."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-4-m5",
+          "sentence": "In my ___, it would be good to start with the basic level.",
+          "answers": ["opinion"],
+          "accepted": [["view"]],
+          "vi": "Theo ý tôi, nên bắt đầu từ trình độ cơ bản.",
+          "explanation": "«In my opinion» hoặc «In my view» — cả hai đều là cụm cố định mở đầu lời khuyên."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-4-m6",
+          "sentence": "Thank you for ___ this matter ___ to us.",
+          "answers": ["pointing", "out"],
+          "vi": "Cảm ơn vì đã chỉ ra vấn đề này cho chúng tôi.",
+          "explanation": "«point out» tách được: «point this matter out» hoặc «point out this matter». Sau «Thank you for» dùng V-ing."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-4-m7",
+          "sentence": "We have full ___ that it will not happen again.",
+          "answers": ["assurance"],
+          "vi": "Chúng tôi đảm bảo chắc chắn rằng chuyện này sẽ không tái diễn.",
+          "explanation": "Sau tính từ «full» cần DANH TỪ → assurance (sự đảm bảo), không phải động từ «assure»."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-4-m8",
+          "sentence": "Please contact me at your earliest ___.",
+          "answers": ["convenience"],
+          "vi": "Xin liên hệ với tôi sớm nhất có thể.",
+          "explanation": "«at your earliest convenience» = sớm nhất có thể — trang trọng hơn «as soon as possible». Cần danh từ sau tính từ so sánh nhất «earliest»."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "matching",
+          "id": "t3-4-h1",
+          "prompt": "Ghép mỗi câu mở đầu với thông tin mà nó bắt buộc phải kèm theo.",
+          "pairs": [
+            { "left": "Thank you for your e-mail dated…", "right": "NGÀY ghi trên e-mail đề" },
+            { "left": "I've just received your e-mail regarding…", "right": "CHỦ ĐỀ của e-mail đề" },
+            { "left": "Thank you for your recent purchase of…", "right": "TÊN SẢN PHẨM khách đã mua" },
+            { "left": "I am writing in relation to…", "right": "SỰ VIỆC khách vừa khiếu nại" },
+            { "left": "I saw your advertisement in…", "right": "NƠI bạn nhìn thấy quảng cáo" }
+          ],
+          "explanation": "Câu mở đầu chỉ có sức nặng khi kèm chi tiết cụ thể lấy từ đề. Viết «Thank you for your e-mail» trống trơn thì giám khảo biết ngay bạn chưa đọc kỹ."
+        },
+        {
+          "type": "matching",
+          "id": "t3-4-h2",
+          "prompt": "Ghép mỗi vai được giao với cách ký tên đúng.",
+          "pairs": [
+            { "left": "Nhân viên hỗ trợ khách hàng của cửa hàng sách", "right": "Sincerely yours, / Customer Support" },
+            { "left": "Khách hàng tên Anna Vu", "right": "Best regards, / Anna Vu" },
+            { "left": "Nhân viên marketing tên Minh Tran", "right": "Best regards, / Minh Tran — Marketing" },
+            { "left": "Quản lý nhà hàng", "right": "Sincerely, / The Copper Kettle Restaurant" },
+            { "left": "Ứng viên xin việc tên Daniel Pham", "right": "Yours sincerely, / Daniel Pham" }
+          ],
+          "explanation": "Ký tên theo vai: đại diện tổ chức thì ký tên bộ phận hoặc tên tổ chức; cá nhân thì ký tên mình, thêm chức danh nếu là e-mail nội bộ."
+        },
+        {
+          "type": "matching",
+          "id": "t3-4-h3",
+          "prompt": "Ghép mỗi khuôn mở đầu với vai của người viết.",
+          "pairs": [
+            { "left": "Thank you for your recent purchase of…", "right": "Doanh nghiệp viết cho khách hàng" },
+            { "left": "I am writing to complain about…", "right": "Khách hàng viết cho doanh nghiệp" },
+            { "left": "Please be informed that…", "right": "Bộ phận nội bộ thông báo cho nhân viên" },
+            { "left": "Thank you for applying for the position…", "right": "Nhà tuyển dụng viết cho ứng viên" },
+            { "left": "Thank you for inviting me to an interview…", "right": "Ứng viên viết cho nhà tuyển dụng" }
+          ],
+          "explanation": "Mỗi khuôn mở đầu gắn chặt với một vai. Đọc Directions xác định vai xong, chọn khuôn tương ứng là câu đầu tiên viết ra đã đúng hướng."
+        },
+        {
+          "type": "matching",
+          "id": "t3-4-h4",
+          "prompt": "Ghép mỗi lỗi câu kết với cách sửa.",
+          "pairs": [
+            { "left": "I look forward to hear from you.", "right": "…to hearING from you." },
+            { "left": "An early reply would be greatly appreciate.", "right": "…greatly appreciateD." },
+            { "left": "Please send your response until November 30.", "right": "…BY November 30." },
+            { "left": "Hope to hearing from you soon.", "right": "Hope to HEAR from you soon." },
+            { "left": "Please contact me without hesitate.", "right": "…without hesitatION." }
+          ],
+          "explanation": "Bốn trong năm lỗi này là lỗi DẠNG TỪ sau giới từ. Quy tắc: sau giới từ (to trong «look forward to», without) dùng V-ing hoặc danh từ; sau «to» nguyên mẫu dùng V thường."
+        },
+        {
+          "type": "matching",
+          "id": "t3-4-h5",
+          "prompt": "Ghép mỗi mission với khuôn câu nên dùng.",
+          "pairs": [
+            { "left": "Make an apology", "right": "I would like to apologize for…" },
+            { "left": "Ask a question", "right": "Could you tell me whether…?" },
+            { "left": "Make a suggestion", "right": "One thing I can recommend is…" },
+            { "left": "Provide information", "right": "I am writing to let you know about…" },
+            { "left": "Make an offer", "right": "We would like to offer you…" }
+          ],
+          "explanation": "Nhớ đúng năm cặp mission ↔ khuôn câu này là bạn xử lý được gần như mọi Directions của Writing Part 2."
+        }
+      ]
+    }
+  ]
+}

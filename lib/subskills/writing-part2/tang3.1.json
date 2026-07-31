@@ -1,0 +1,256 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t3-1-e1",
+          "question": "E-mail đề ký tên «Kimberly Young». Xưng hô nào đúng?",
+          "options": [
+            { "id": "A", "text": "Dear Ms. Young," },
+            { "id": "B", "text": "Dear Kimberly," },
+            { "id": "C", "text": "Dear Ms. Kimberly," },
+            { "id": "D", "text": "To Whom It May Concern," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Quy tắc: Dear + Mr./Ms. + HỌ. «Young» là họ, «Kimberly» là tên riêng. Không bao giờ ghép Mr./Ms. với tên riêng."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-1-e2",
+          "question": "E-mail đề không ghi tên người gửi, chỉ ghi «Customer Service Department». Xưng hô nào đúng?",
+          "options": [
+            { "id": "A", "text": "To the Customer Service Department," },
+            { "id": "B", "text": "Dear Mr. Customer Service," },
+            { "id": "C", "text": "Hi Customer Service," },
+            { "id": "D", "text": "Dear Sir," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Chỉ biết tên bộ phận thì dùng «To the + tên bộ phận». Không bịa ra tên người, cũng không mặc định người nhận là nam («Dear Sir»)."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-1-e3",
+          "question": "Bạn viết thư gửi một công ty mà hoàn toàn không biết ai sẽ đọc. Xưng hô nào phù hợp nhất?",
+          "options": [
+            { "id": "A", "text": "To Whom It May Concern," },
+            { "id": "B", "text": "Dear Friend," },
+            { "id": "C", "text": "Hello there," },
+            { "id": "D", "text": "Dear Company," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«To Whom It May Concern» là khuôn chuẩn khi gửi cho một cơ quan mà không rõ ai đọc. «Dear Sir or Madam» cũng dùng được trong trường hợp này."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-1-e4",
+          "question": "E-mail đề ký «John Tucker — Sales representative». Bạn là khách hàng viết trả lời. Xưng hô nào đúng?",
+          "options": [
+            { "id": "A", "text": "Dear Mr. Tucker," },
+            { "id": "B", "text": "Dear Sales Representative," },
+            { "id": "C", "text": "Dear valued customers," },
+            { "id": "D", "text": "Hi John!" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Luôn nhìn xuống CHỮ KÝ cuối thư để tìm tên người nhận thật. «Dear valued customers» là cách họ gọi bạn — đừng nhại lại."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-1-e5",
+          "question": "Câu nào là câu chào hỏi mở đầu LỊCH SỰ, dùng được trong bài thi?",
+          "options": [
+            { "id": "A", "text": "Thank you for your e-mail dated August 29." },
+            { "id": "B", "text": "Hi! What's up?" },
+            { "id": "C", "text": "Good morning, buddy." },
+            { "id": "D", "text": "Long time no see!" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Câu chào lịch sự luôn nhắc lại ngày hoặc chủ đề e-mail của họ. Ba đáp án còn lại thuộc mức suồng sã, không dùng trong e-mail công việc."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-1-e6",
+          "question": "Bạn mở thư bằng «Dear Sir or Madam,». Lời chào cuối nào đúng theo chuẩn Anh-Anh?",
+          "options": [
+            { "id": "A", "text": "Yours faithfully," },
+            { "id": "B", "text": "Yours sincerely," },
+            { "id": "C", "text": "Talk to you later!" },
+            { "id": "D", "text": "See you soon," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Không biết tên → «Dear Sir or Madam» → «Yours faithfully». Biết tên → «Dear Mr. Kim» → «Yours sincerely». Đây là cặp cố định."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-1-e7",
+          "question": "Bạn mở thư bằng «Dear Mr. Kim,». Lời chào cuối nào đúng theo chuẩn Anh-Anh?",
+          "options": [
+            { "id": "A", "text": "Yours sincerely," },
+            { "id": "B", "text": "Yours faithfully," },
+            { "id": "C", "text": "Cheers," },
+            { "id": "D", "text": "Bye for now," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Đã biết tên cụ thể thì kết bằng «Yours sincerely». Nhớ mẹo: SINcerely đi với tên riêng, FAITHfully đi với Sir/Madam."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-1-e8",
+          "question": "Lời chào cuối nào KHÔNG dùng được trong e-mail gửi khách hàng?",
+          "options": [
+            { "id": "A", "text": "Talk to you later!" },
+            { "id": "B", "text": "Best regards," },
+            { "id": "C", "text": "Sincerely," },
+            { "id": "D", "text": "Yours truly," }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«Talk to you later!» nằm ở đầu casual của thang trang trọng, chỉ dùng với bạn bè. Ba đáp án còn lại đều an toàn trong e-mail công việc."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "type_blank",
+          "id": "t3-1-m1",
+          "sentence": "Thank you for your e-mail ___ June 5.",
+          "answers": ["dated"],
+          "vi": "Cảm ơn e-mail đề ngày 5 tháng 6 của bạn.",
+          "explanation": "«e-mail dated + ngày» = e-mail đề ngày. Đây là cụm cố định, không dùng «date» hay «dating»."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-1-m2",
+          "sentence": "I've just received your e-mail ___ the delivery problem.",
+          "answers": ["regarding"],
+          "accepted": [["concerning", "about"]],
+          "vi": "Tôi vừa nhận được e-mail của bạn về vấn đề giao hàng.",
+          "explanation": "Ba từ regarding / concerning / about đều đúng và thay thế được cho nhau. «Regarding» và «concerning» trang trọng hơn «about»."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-1-m3",
+          "sentence": "I am writing ___ relation to your recent complaint.",
+          "answers": ["in"],
+          "vi": "Tôi viết thư này liên quan đến khiếu nại gần đây của bạn.",
+          "explanation": "«in relation to» = liên quan đến. Cụm cố định, luôn dùng giới từ IN ở đầu."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-1-m4",
+          "sentence": "I was very ___ to learn about the problem you have had.",
+          "answers": ["concerned"],
+          "vi": "Tôi rất lo lắng khi biết về vấn đề mà bạn đã gặp phải.",
+          "explanation": "«be concerned to learn about...» — sau động từ «was» cần dạng V3/tính từ «concerned», không phải «concern» hay «concerning»."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-1-m5",
+          "sentence": "I just ___ your e-mail about the damaged package.",
+          "answers": ["got"],
+          "accepted": [["received", "read"]],
+          "vi": "Tôi vừa nhận được e-mail của bạn về kiện hàng bị hỏng.",
+          "explanation": "«just got / just received / just read» đều đúng. Chú ý thì quá khứ đơn vì «just» đi với hành động vừa xảy ra."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-1-m6",
+          "sentence": "Thank you for ___ the time to write to us.",
+          "answers": ["taking"],
+          "vi": "Cảm ơn bạn đã dành thời gian viết thư cho chúng tôi.",
+          "explanation": "«Thank you for + V-ing». «take the time to + V» = dành thời gian làm gì. Câu này rất hay dùng khi trả lời khiếu nại."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-1-m7",
+          "sentence": "To ___ It May Concern,",
+          "answers": ["Whom"],
+          "vi": "Kính gửi quý vị có liên quan,",
+          "explanation": "«To Whom It May Concern» — dùng «Whom» chứ không phải «Who», vì nó là tân ngữ của giới từ «To». Viết hoa cả bốn chữ."
+        },
+        {
+          "type": "type_blank",
+          "id": "t3-1-m8",
+          "sentence": "Dear Sir ___ Madam,",
+          "answers": ["or"],
+          "accepted": [["/"]],
+          "vi": "Kính gửi quý ông/quý bà,",
+          "explanation": "Viết «Dear Sir or Madam» hoặc «Dear Sir/Madam». Không dùng «and» vì người nhận chỉ là một người."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "matching",
+          "id": "t3-1-h1",
+          "prompt": "Ghép mỗi tình huống với cách xưng hô đúng.",
+          "pairs": [
+            { "left": "E-mail đề ký «Sandra Kim»", "right": "Dear Ms. Kim," },
+            { "left": "E-mail đề ký «Facilities Management»", "right": "Dear Facilities Management Team," },
+            { "left": "Gửi công ty, không rõ ai đọc", "right": "To Whom It May Concern," },
+            { "left": "Chỉ biết là Phòng Nhân sự", "right": "To the Human Resources Department," },
+            { "left": "Đồng nghiệp cùng phòng, đã thân", "right": "Hi Jenny," }
+          ],
+          "explanation": "Bốn tình huống đầu đều dùng mức trang trọng. Chỉ tình huống cuối mới được dùng «Hi + tên riêng» — và trong bài thi TOEIC thì gần như không bao giờ gặp."
+        },
+        {
+          "type": "matching",
+          "id": "t3-1-h2",
+          "prompt": "Ghép mỗi câu mở đầu với lời chào cuối đúng chuẩn Anh-Anh.",
+          "pairs": [
+            { "left": "Dear Sir or Madam,", "right": "Yours faithfully," },
+            { "left": "Dear Mr. Kim,", "right": "Yours sincerely," },
+            { "left": "To Whom It May Concern,", "right": "Yours faithfully, (không biết tên)" },
+            { "left": "Dear Ms. Young,", "right": "Yours sincerely, (biết rõ tên)" },
+            { "left": "Hi Jenny,", "right": "Best regards," }
+          ],
+          "explanation": "Nguyên tắc: KHÔNG biết tên → faithfully; BIẾT tên → sincerely. Đây là quy tắc Anh-Anh, và giám khảo TOEIC chấp nhận cả hai nếu bạn dùng nhất quán."
+        },
+        {
+          "type": "matching",
+          "id": "t3-1-h3",
+          "prompt": "Ghép mỗi câu mở đầu với loại mission mà nó báo hiệu.",
+          "pairs": [
+            { "left": "I am writing to complain about", "right": "Phàn nàn về sản phẩm/dịch vụ" },
+            { "left": "I am writing to inform you of", "right": "Cung cấp thông tin" },
+            { "left": "I was very concerned to learn about", "right": "Mở đầu thư xin lỗi khách" },
+            { "left": "I am writing to inquire about", "right": "Hỏi thông tin" },
+            { "left": "I suggest that you should", "right": "Đưa ra đề nghị / gợi ý" }
+          ],
+          "explanation": "Câu mở đầu báo trước cho người đọc biết thư này về việc gì. Chọn đúng khuôn mở đầu là đã hoàn thành một nửa mission."
+        },
+        {
+          "type": "matching",
+          "id": "t3-1-h4",
+          "prompt": "Ghép mỗi lời chào cuối với mức trang trọng của nó.",
+          "pairs": [
+            { "left": "Talk to you later!", "right": "Suồng sã — KHÔNG dùng trong bài thi" },
+            { "left": "Best wishes,", "right": "Thân mật — hợp với đồng nghiệp quen" },
+            { "left": "Best regards,", "right": "Trung tính — an toàn nhất" },
+            { "left": "Sincerely yours,", "right": "Trang trọng — hợp thư gửi khách hàng" },
+            { "left": "Cordially,", "right": "Rất trang trọng — thư nghi thức" }
+          ],
+          "explanation": "Nếu không chắc chọn gì, dùng «Best regards» hoặc «Sincerely» — hai câu này an toàn trong mọi tình huống của đề thi."
+        },
+        {
+          "type": "matching",
+          "id": "t3-1-h5",
+          "prompt": "Ghép mỗi tình huống với câu chào hỏi mở đầu phù hợp nhất.",
+          "pairs": [
+            { "left": "Trả lời thư khiếu nại của khách", "right": "I was very concerned to learn about your problem." },
+            { "left": "Trả lời thư có ghi rõ ngày gửi", "right": "Thank you for your e-mail dated August 29." },
+            { "left": "Bạn chủ động viết trước để hỏi", "right": "I am writing to inquire about your language courses." },
+            { "left": "Cảm ơn khách vừa mua hàng", "right": "Thank you for your recent purchase of a 19-inch monitor." },
+            { "left": "Trả lời thư về một sự cố cụ thể", "right": "I've just read your e-mail regarding the delivery problem." }
+          ],
+          "explanation": "Câu chào hỏi phải khớp với vai và mission. Dùng «I am writing to inquire» khi bạn CHỦ ĐỘNG viết trước — nếu đang trả lời thư thì phải mở bằng lời cảm ơn."
+        }
+      ]
+    }
+  ]
+}

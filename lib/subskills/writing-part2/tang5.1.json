@@ -1,0 +1,196 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "translate",
+          "id": "t5-1-e1",
+          "vi": "Cảm ơn e-mail đề ngày 5 tháng 6 của bạn.",
+          "hintWords": ["Thank you for", "e-mail", "dated", "June 5"],
+          "answer": "Thank you for your e-mail dated June 5.",
+          "accepted": ["Thank you for your e-mail dated June 5th.", "Thank you for your email dated June 5."],
+          "explanation": "«e-mail dated + ngày» là cụm cố định. Nhớ có «your» trước «e-mail» — thiếu sở hữu là lỗi rất hay gặp."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-e2",
+          "vi": "Tôi rất tiếc khi biết về vấn đề của bạn.",
+          "hintWords": ["I was very", "concerned", "to learn about", "your problem"],
+          "answer": "I was very concerned to learn about your problem.",
+          "accepted": ["I was very concerned to hear about your problem."],
+          "explanation": "Người Việt hay dịch thành «I am very sorry to know your problem». Câu chuẩn của e-mail business là «concerned to learn about»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-e3",
+          "vi": "Tôi xin lỗi vì sự bất tiện này.",
+          "hintWords": ["I would like to", "apologize", "for", "the inconvenience"],
+          "answer": "I would like to apologize for the inconvenience.",
+          "accepted": ["I apologize for the inconvenience.", "I would like to apologise for the inconvenience."],
+          "explanation": "«apologize FOR» — không bao giờ dùng «apologize about». «I would like to» làm câu trang trọng hơn «I apologize» trần trụi."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-e4",
+          "vi": "Xin hãy chấp nhận lời xin lỗi chân thành của tôi.",
+          "hintWords": ["Please accept", "my sincere", "apology"],
+          "answer": "Please accept my sincere apology.",
+          "accepted": ["Please accept my sincere apologies."],
+          "explanation": "Số ít hay số nhiều đều đúng. Đây là câu xin lỗi ngắn gọn nhất, dùng được ở mọi thư."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-e5",
+          "vi": "Tôi mong sớm nhận được hồi âm từ bạn.",
+          "hintWords": ["I look", "forward to", "hearing", "from you soon"],
+          "answer": "I look forward to hearing from you soon.",
+          "accepted": ["I am looking forward to hearing from you soon.", "I'm looking forward to hearing from you soon."],
+          "explanation": "Bẫy lớn nhất: «to hearing» chứ không phải «to hear». Chữ «to» ở đây là giới từ nên theo sau là V-ing."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-e6",
+          "vi": "Bạn có thể đợi thêm vài ngày nữa được không?",
+          "hintWords": ["Could you", "wait", "a few more days"],
+          "answer": "Could you wait a few more days?",
+          "accepted": ["Could you wait for a few more days?", "Would you wait a few more days?", "Can you wait a few more days?"],
+          "explanation": "«a few more days» = thêm vài ngày nữa. Nhớ dấu hỏi ở cuối — thiếu dấu hỏi thì mission «ask a question» không được tính."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-e7",
+          "vi": "Chúng tôi đảm bảo chắc chắn rằng chuyện này sẽ không tái diễn.",
+          "hintWords": ["We have", "full assurance", "that", "will not happen again"],
+          "answer": "We have full assurance that it will not happen again.",
+          "accepted": ["We have full assurance that it won't happen again."],
+          "explanation": "Sau tính từ «full» cần danh từ «assurance». Câu trấn an này đặc biệt cần khi sự cố đã lặp lại."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-e8",
+          "vi": "Xin vui lòng cho tôi biết quyết định của bạn.",
+          "hintWords": ["Please", "let me know", "your decision"],
+          "answer": "Please let me know your decision.",
+          "accepted": ["Please let me know about your decision.", "Please let me know what you decide."],
+          "explanation": "«let me know + thông tin» — không cần giới từ. Câu kết chuẩn khi bạn vừa đưa ra lựa chọn cho người đọc."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "translate",
+          "id": "t5-1-m1",
+          "vi": "Thay mặt cửa hàng, tôi xin lỗi về sự cố với cuốn sách của bạn.",
+          "answer": "On behalf of my store, I would like to apologize for the problem with your book.",
+          "accepted": ["On behalf of our store, I would like to apologize for the problem with your book.", "On behalf of my store, I apologize for the problem with your book."],
+          "explanation": "«On behalf of + tổ chức» biến lời xin lỗi cá nhân thành lời xin lỗi chính thức. Đây là câu trong bài mẫu của giáo trình."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-m2",
+          "vi": "Vào thời điểm bạn đặt hàng, hệ thống của chúng tôi báo là còn một cuốn.",
+          "answer": "At the time you placed an order, our computer showed that there was one book left.",
+          "accepted": ["At the time you placed the order, our computer showed that there was one book left.", "When you placed an order, our computer showed that there was one book left."],
+          "explanation": "«place an order» = đặt hàng. «one book left» = còn lại một cuốn — «left» đứng sau danh từ."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-m3",
+          "vi": "Bạn có thể gọi cho chúng tôi hoặc ghé cửa hàng nếu muốn được hoàn tiền không?",
+          "answer": "Would you give us a call or visit if you would like to receive a refund?",
+          "accepted": ["Would you give us a call or visit our store if you would like a refund?", "Could you give us a call or visit if you would like to receive a refund?"],
+          "explanation": "Hai hành động nối bằng «or» dùng chung «Would you» — không lặp lại. Đây là câu trong bài mẫu của giáo trình."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-m4",
+          "vi": "Nếu bạn cho tôi chút thời gian, tôi sẽ liên hệ nhà xuất bản.",
+          "answer": "If you give me some time, I will contact the publisher.",
+          "accepted": ["If you give me some time, I'll contact the publisher."],
+          "explanation": "Câu điều kiện loại 1: mệnh đề «If» dùng HIỆN TẠI («give»), mệnh đề chính dùng «will». Không viết «If you will give me»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-m5",
+          "vi": "Hiện tại chúng tôi không còn bản nào của cuốn sách này tại cửa hàng.",
+          "answer": "Currently, we don't have any more copies of the book at the store.",
+          "accepted": ["Currently, we do not have any more copies of the book at the store.", "At the moment, we don't have any more copies of the book at the store."],
+          "explanation": "«a copy of a book» = một bản sách. Sau «any more» dùng số nhiều «copies»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-m6",
+          "vi": "Để bù đắp sự bất tiện, chúng tôi muốn dành cho bạn mức giảm giá mười phần trăm.",
+          "answer": "To compensate for the inconvenience, we would like to offer you a ten percent discount.",
+          "accepted": ["To compensate for the inconvenience, we would like to offer you a 10 percent discount.", "To compensate for the inconvenience, we'd like to offer you a ten percent discount."],
+          "explanation": "«compensate FOR» + «offer someone something» (không có «to» ở giữa). Hai cụm này luôn đi cùng nhau trong câu bồi thường."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-m7",
+          "vi": "Cảm ơn vì đã chỉ ra vấn đề này cho chúng tôi.",
+          "answer": "Thank you for pointing this matter out to us.",
+          "accepted": ["Thank you for pointing out this matter to us.", "Thank you for bringing this matter to our attention."],
+          "explanation": "«point out» tách được nên cả hai trật tự đều đúng. «bring something to our attention» là cách nói trang trọng hơn."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-m8",
+          "vi": "Một lần nữa, mong bạn chấp nhận lời xin lỗi của tôi vì bất kỳ bất tiện nào tôi đã gây ra.",
+          "answer": "Once again, I hope you will accept my apologies for any inconvenience I may have caused.",
+          "accepted": ["Once again, I hope you will accept my apologies for any inconvenience that I may have caused."],
+          "explanation": "Câu kết trong bài mẫu của giáo trình. «may have caused» = có thể đã gây ra — cách nói khiêm tốn, không khẳng định chắc chắn."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "translate",
+          "id": "t5-1-h1",
+          "vi": "Cảm ơn e-mail đề ngày 5 tháng 6 của bạn. Tôi rất tiếc khi biết về vấn đề bạn gặp phải với đơn đặt sách.",
+          "answer": "Thank you for your e-mail dated June 5. I was very concerned to learn about the problem that you have with your book order.",
+          "accepted": ["Thank you for your e-mail dated June 5. I was very concerned to learn about the problem you have with your book order."],
+          "explanation": "Khối mở đầu chuẩn của thư trả lời khiếu nại: cảm ơn + tóm tắt vấn đề. Mệnh đề quan hệ «that» có thể lược bỏ."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-h2",
+          "vi": "Vào thời điểm bạn đặt hàng, hệ thống của chúng tôi báo là còn một cuốn. Tuy nhiên, hoá ra điều đó là sai.",
+          "answer": "At the time you placed an order, our computer showed that there was one book left. However, that turned out to be wrong.",
+          "accepted": ["At the time you placed the order, our computer showed that there was one book left. However, that turned out to be wrong."],
+          "explanation": "Khối giải thích nguyên nhân, đặt TRƯỚC lời xin lỗi. «turn out to be» = hoá ra là."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-h3",
+          "vi": "Hiện tại chúng tôi không còn bản nào tại cửa hàng. Bạn có thể gọi cho chúng tôi hoặc ghé qua nếu muốn được hoàn tiền không?",
+          "answer": "Currently, we don't have any more copies at the store. Would you give us a call or visit if you would like to receive a refund?",
+          "accepted": ["Currently, we do not have any more copies at the store. Would you give us a call or visit if you would like a refund?"],
+          "explanation": "Khối mission: nêu tình trạng rồi mới hỏi. Đưa thông tin trước khi hỏi giúp câu hỏi có ngữ cảnh."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-h4",
+          "vi": "Ngược lại, nếu bạn cho tôi chút thời gian, tôi sẽ liên hệ nhà xuất bản và tìm hiểu xem họ còn bản nào không.",
+          "answer": "Otherwise, if you give me some time, I will contact the publisher and find out if they still have any copies.",
+          "accepted": ["Otherwise, if you give me some time, I will contact the publisher and find out whether they still have any copies."],
+          "explanation": "«Otherwise» mở phương án thứ hai. «find out if/whether» = tìm hiểu xem có… không. Cả «if» và «whether» đều đúng."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-h5",
+          "vi": "Một lần nữa, tôi mong bạn chấp nhận lời xin lỗi vì bất kỳ bất tiện nào tôi đã gây ra. Trân trọng kính thư.",
+          "answer": "Once again, I hope you will accept my apologies for any inconvenience I may have caused. Sincerely yours,",
+          "accepted": ["Once again, I hope you will accept my apologies for any inconvenience that I may have caused. Sincerely yours,"],
+          "explanation": "Khối kết thư: câu kết + lời chào cuối. «Sincerely yours» là mức trang trọng phù hợp cho thư gửi khách hàng."
+        }
+      ]
+    }
+  ]
+}
