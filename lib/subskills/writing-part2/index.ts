@@ -114,6 +114,46 @@ export type TranslateEx = {
   explanation: string;
 };
 
+/** Tầng 6 easy — soi lỗi trong thư nháp */
+export type ErrorSpotEx = {
+  type: "error_spot";
+  id: string;
+  intro?: string;
+  directions?: string;
+  /** các dòng của bức thư nháp */
+  lines: string[];
+  /** chỉ số dòng có lỗi */
+  errorIndex: number;
+  /** tên lỗi */
+  errorLabel: string;
+  /** dòng đúng sau khi sửa */
+  fix: string;
+  explanation: string;
+};
+
+/** Tầng 6 medium — đối chiếu thư nháp với Directions, tìm mission còn thiếu */
+export type MissionAuditEx = {
+  type: "mission_audit";
+  id: string;
+  directions: string;
+  draft: string[];
+  missions: { text: string; done: boolean }[];
+  explanation: string;
+};
+
+/** Tầng 6 hard — so sánh 2 bản trả lời cùng một đề */
+export type CompareEx = {
+  type: "compare";
+  id: string;
+  directions: string;
+  versionA: string[];
+  versionB: string[];
+  better: "A" | "B";
+  reasons: { id: string; text: string }[];
+  correctReason: string;
+  explanation: string;
+};
+
 export type P2Exercise =
   | MatchingEx
   | WordBankEx
@@ -123,7 +163,10 @@ export type P2Exercise =
   | OrderingEx
   | TypeBlankEx
   | WordOrderEx
-  | TranslateEx;
+  | TranslateEx
+  | ErrorSpotEx
+  | MissionAuditEx
+  | CompareEx;
 
 export type P2Level = { difficulty: P2Difficulty; exercises: P2Exercise[] };
 export type P2TestData = {
@@ -202,7 +245,7 @@ export const WRITING_P2_SKILLS: P2SkillMeta[] = [
     label: "Error Correction",
     description: "Tìm lỗi trong email trả lời, đối chiếu với Directions, so sánh 2 bản.",
     dbPartPrefix: "wp2-tang6",
-    active: false,
+    active: true,
   },
 ];
 
@@ -323,6 +366,12 @@ import t5_3 from "./tang5.3.json";
 import t5_4 from "./tang5.4.json";
 import t5_5 from "./tang5.5.json";
 
+import t6_1 from "./tang6.1.json";
+import t6_2 from "./tang6.2.json";
+import t6_3 from "./tang6.3.json";
+import t6_4 from "./tang6.4.json";
+import t6_5 from "./tang6.5.json";
+
 type RawTest = {
   emails?: Record<string, EmailBlock>;
   levels: { difficulty: string; exercises: unknown[] }[];
@@ -348,6 +397,7 @@ const DATA: Record<string, P2TestData[]> = {
   tang3: [t3_1, t3_2, t3_3, t3_4, t3_5].map((r, i) => load(r, "tang3", i + 1)),
   tang4: [t4_1, t4_2, t4_3, t4_4, t4_5].map((r, i) => load(r, "tang4", i + 1)),
   tang5: [t5_1, t5_2, t5_3, t5_4, t5_5].map((r, i) => load(r, "tang5", i + 1)),
+  tang6: [t6_1, t6_2, t6_3, t6_4, t6_5].map((r, i) => load(r, "tang6", i + 1)),
 };
 
 export function getSkillTestsP2(skillId: string): P2TestData[] | undefined {

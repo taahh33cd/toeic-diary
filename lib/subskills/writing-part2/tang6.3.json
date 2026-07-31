@@ -1,0 +1,342 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "error_spot",
+          "id": "t6-3-e1",
+          "intro": "Thư trả lời khách hàng Sofia Marchetti. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Sir or Madam,",
+            "Thank you for letting us know about the business cards you collected yesterday.",
+            "I would like to apologize for printing your logo in the wrong colour.",
+            "We will reprint all five hundred cards free of charge by October 7.",
+            "Yours faithfully,"
+          ],
+          "errorIndex": 0,
+          "errorLabel": "Dùng «Dear Sir or Madam» dù đã biết rõ tên khách",
+          "fix": "Dear Ms. Marchetti,",
+          "explanation": "Khách ký tên Sofia Marchetti nên bạn hoàn toàn biết tên. «Dear Sir or Madam» chỉ dùng khi thật sự không biết ai đọc — dùng sai làm thư trông máy móc."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-3-e2",
+          "intro": "Thư trả lời nhà cung cấp. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Mr. Nowak,",
+            "Thank you for your e-mail of February 8 concerning order #4471.",
+            "I would like to apologize about the damage to eight of the twenty boxes.",
+            "Would you like us to send replacements or issue a credit note?",
+            "Yours sincerely,"
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Sai giới từ sau «apologize»",
+          "fix": "I would like to apologize for the damage to eight of the twenty boxes.",
+          "explanation": "«apologize FOR + sự cố» — không bao giờ dùng «apologize about». Đây là lỗi giới từ bị trừ điểm ngữ pháp."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-3-e3",
+          "intro": "Thư thông báo nội bộ. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear all,",
+            "Please be informed that the office will move to the Vernon Building on November 3.",
+            "All employees are required to packing their belongings by November 1.",
+            "Boxes will be delivered to each desk this Friday.",
+            "Best regards,"
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Sai dạng động từ sau «to»",
+          "fix": "All employees are required to pack their belongings by November 1.",
+          "explanation": "«be required TO + V nguyên mẫu». Chữ «to» ở đây là «to» nguyên mẫu, khác hẳn «to» giới từ trong «look forward to»."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-3-e4",
+          "intro": "Thư khách hàng gửi trường ngoại ngữ. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Sir or Madam,",
+            "I am writing to inquire for your evening courses.",
+            "Could you tell me how much the course fee is?",
+            "I would be grateful for an early reply.",
+            "Yours faithfully,"
+          ],
+          "errorIndex": 1,
+          "errorLabel": "Sai giới từ sau «inquire»",
+          "fix": "I am writing to inquire about your evening courses.",
+          "explanation": "«inquire ABOUT + chủ đề». Nhớ cùng nhóm: complain ABOUT, inform OF, in relation TO."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-3-e5",
+          "intro": "Thư trả lời quản lý vùng (cấp trên). Bấm vào dòng có lỗi.",
+          "lines": [
+            "Hi Victor,",
+            "Thank you for your e-mail of April 8 about the quarterly sales reports.",
+            "Sales in February fell by thirty percent because the store was closed for refurbishment.",
+            "Should the report include figures from our online sales channel?",
+            "Best regards,"
+          ],
+          "errorIndex": 0,
+          "errorLabel": "Xưng hô quá thân mật với cấp trên",
+          "fix": "Dear Mr. Lam,",
+          "explanation": "Victor Lam là quản lý vùng. Trong bài thi TOEIC, e-mail gửi cấp trên luôn dùng «Dear Mr./Ms. + họ», không gọi tên riêng."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-3-e6",
+          "intro": "Thư trả lời khách sạn. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Ms. Chandra,",
+            "Thank you for letting me know about the change to my outbound flight.",
+            "I think the new time might be difficult, but I am not sure yet.",
+            "Will the airline offer any compensation for the change?",
+            "Best regards,"
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Không nêu quyết định dứt khoát",
+          "fix": "I accept the new departure time of 6:15 a.m. on April 14.",
+          "explanation": "Mission «state your decision» đòi hỏi câu trả lời DỨT KHOÁT. Viết nước đôi kiểu «I am not sure yet» thì giám khảo tính là chưa hoàn thành mission."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "mission_audit",
+          "id": "t6-3-m1",
+          "directions": "Respond to the e-mail as if you were the manager of Halcyon Print Studio. In your e-mail, apologize, explain what you will do, and ask ONE question.",
+          "draft": [
+            "Dear Ms. Marchetti,",
+            "Thank you for letting us know about the business cards you collected yesterday.",
+            "I would like to apologize for printing your logo in the wrong colour.",
+            "We will reprint all five hundred cards in dark navy free of charge and have them ready by October 7.",
+            "Once again, please accept my sincere apology for the inconvenience caused.",
+            "Yours sincerely,",
+            "Halcyon Print Studio"
+          ],
+          "missions": [
+            { "text": "Xin lỗi khách hàng", "done": true },
+            { "text": "Nêu rõ bạn sẽ làm gì để khắc phục", "done": true },
+            { "text": "Đặt một câu hỏi", "done": false }
+          ],
+          "explanation": "Thư xin lỗi và nêu giải pháp rất tốt (có cả mốc thời gian trước hạn chót của khách), nhưng KHÔNG có câu hỏi nào. Cần thêm ví dụ: «Would you like us to deliver them or would you prefer to collect them?»"
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-3-m2",
+          "directions": "Respond to the e-mail as if you were an administrator at Milbrook Language School. In your e-mail, apologize, answer the question, and make ONE alternative offer. (Học viên hỏi: khi nào nhận lại được tiền?)",
+          "draft": [
+            "Dear Ms. Ihara,",
+            "Thank you for your e-mail of January 22 regarding the Advanced Business English course.",
+            "I would like to apologize for the fact that no one has contacted you about your refund.",
+            "Your payment of 480 dollars will be returned to your account within ten working days.",
+            "Please let me know if you need any further information.",
+            "Yours sincerely,",
+            "Milbrook Language School"
+          ],
+          "missions": [
+            { "text": "Xin lỗi học viên", "done": true },
+            { "text": "Trả lời câu hỏi «khi nào nhận lại tiền»", "done": true },
+            { "text": "Đưa ra một phương án thay thế", "done": false }
+          ],
+          "explanation": "Thư trả lời đúng câu hỏi bằng mốc cụ thể («within ten working days»), nhưng thiếu «alternative offer». Cần thêm: «Alternatively, we can transfer the full amount to our February evening course.»"
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-3-m3",
+          "directions": "Respond to the e-mail as if you were the bookings coordinator at Ridgeway Community Centre. In your e-mail, answer the customer's questions and make ONE suggestion. (Khách hỏi 3 điều: giá thuê theo giờ, có dịch vụ ăn uống tại chỗ không, có được mang thiết bị âm thanh riêng không.)",
+          "draft": [
+            "Dear Mr. Okoro,",
+            "Thank you for your interest in holding your company anniversary dinner at Ridgeway Community Centre.",
+            "Our main hall is available on December 12 at a rate of 120 dollars per hour.",
+            "Catering is available on site, and our kitchen can serve up to one hundred guests.",
+            "You are welcome to bring your own sound equipment, provided that it is set up before six in the evening.",
+            "As December is our busiest month, I would suggest booking as early as possible.",
+            "Best regards,",
+            "Ridgeway Community Centre"
+          ],
+          "missions": [
+            { "text": "Trả lời câu hỏi về giá thuê theo giờ", "done": true },
+            { "text": "Trả lời câu hỏi về dịch vụ ăn uống", "done": true },
+            { "text": "Trả lời câu hỏi về thiết bị âm thanh", "done": true },
+            { "text": "Đưa ra một gợi ý", "done": true }
+          ],
+          "explanation": "Thư hoàn hảo: đủ 4 mission, ba câu trả lời giữ ĐÚNG thứ tự khách hỏi, và gợi ý bám vào bối cảnh (tổ chức tháng 12). Đây là mẫu để bạn học theo."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-3-m4",
+          "directions": "Respond to the e-mail as if you were an employee. In your e-mail, describe ONE item that needs special handling and ask TWO questions about the relocation.",
+          "draft": [
+            "Dear Facilities Management Team,",
+            "Thank you for informing us about the office move to the Vernon Building on November 3.",
+            "I have one item that needs special handling: a large format printer that is too heavy to be carried by one person.",
+            "Can we access the new office over the weekend to set up before Monday?",
+            "I look forward to hearing from you.",
+            "Best regards,",
+            "Hoa Le"
+          ],
+          "missions": [
+            { "text": "Mô tả một món đồ cần xử lý đặc biệt", "done": true },
+            { "text": "Câu hỏi thứ nhất về việc chuyển văn phòng", "done": true },
+            { "text": "Câu hỏi thứ hai về việc chuyển văn phòng", "done": false }
+          ],
+          "explanation": "Chỉ có MỘT câu hỏi. Directions viết hoa chữ TWO — cần thêm một câu nữa, ví dụ «Will the company provide movers to help with heavy equipment?»"
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-3-m5",
+          "directions": "Respond to the e-mail as if you were Julia Sandoval. In your e-mail, state your decision and ask TWO questions about the change.",
+          "draft": [
+            "Dear Ms. Chandra,",
+            "Thank you for letting me know about the change to my outbound flight to Lisbon.",
+            "I accept the new departure time of 6:15 a.m. on April 14.",
+            "Will the airline offer any compensation for the change?",
+            "Is airport transfer available at that hour of the morning?",
+            "I would appreciate your reply before the end of the week.",
+            "Best regards,",
+            "Julia Sandoval"
+          ],
+          "missions": [
+            { "text": "Nêu quyết định dứt khoát", "done": true },
+            { "text": "Câu hỏi thứ nhất về thay đổi giờ bay", "done": true },
+            { "text": "Câu hỏi thứ hai về thay đổi giờ bay", "done": true }
+          ],
+          "explanation": "Đủ 3 mission. Quyết định được nêu dứt khoát và có nhắc lại giờ + ngày cụ thể — đây là cách chắc chắn nhất để giám khảo tick được mission."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "compare",
+          "id": "t6-3-h1",
+          "directions": "Respond as an administrator at Milbrook Language School. Apologize, answer the question (when will the refund arrive?), and make ONE alternative offer.",
+          "versionA": [
+            "Dear Ms. Ihara,",
+            "Thank you for your e-mail of January 22 regarding the Advanced Business English course.",
+            "I would like to apologize for the fact that no one has contacted you about your refund.",
+            "Your payment of 480 dollars will be returned to your account within ten working days.",
+            "Alternatively, we can transfer the full amount to our February evening course at no extra charge.",
+            "Please let me know which option you would like.",
+            "Yours sincerely,"
+          ],
+          "versionB": [
+            "Dear Ms. Ihara,",
+            "Thank you for your e-mail.",
+            "I am sorry about the refund problem.",
+            "You will get your money back soon.",
+            "We also have other courses if you are interested.",
+            "Yours sincerely,"
+          ],
+          "better": "A",
+          "reasons": [
+            { "id": "A", "text": "Bản A nêu số tiền và mốc thời gian cụ thể, phương án thay thế rõ ràng, và yêu cầu khách chọn" },
+            { "id": "B", "text": "Bản A có nhiều câu hơn nên được điểm cao hơn" },
+            { "id": "C", "text": "Bản B sai xưng hô ở dòng đầu" },
+            { "id": "D", "text": "Bản B thiếu lời xin lỗi" }
+          ],
+          "correctReason": "A",
+          "explanation": "Bản B có đủ ba mission trên danh nghĩa nhưng đều rỗng: «soon» không phải câu trả lời cho «khi nào», «other courses if you are interested» không phải một đề nghị cụ thể."
+        },
+        {
+          "type": "compare",
+          "id": "t6-3-h2",
+          "directions": "Respond as a customer service representative at Vertex Paper Company. Make an apology, explain why the problem happened, and ask ONE question.",
+          "versionA": [
+            "Dear Mr. Nowak,",
+            "Thank you for your e-mail of February 8 concerning order #4471.",
+            "I would like to apologize for the damage to eight of the twenty boxes.",
+            "The problem happened due to some issues at our warehouse.",
+            "Would you like us to send replacements by express delivery, or issue a credit note instead?",
+            "Yours sincerely,"
+          ],
+          "versionB": [
+            "Dear Mr. Nowak,",
+            "Thank you for your e-mail of February 8 concerning order #4471.",
+            "When we checked the shipment records, we found that the pallet had been stacked incorrectly at our warehouse.",
+            "I would like to apologize for the damage to eight of the twenty boxes.",
+            "Would you like us to send replacements by express delivery, or issue a credit note instead?",
+            "Yours sincerely,"
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B nêu nguyên nhân CỤ THỂ và đặt phần giải thích trước lời xin lỗi; bản A chỉ nói «some issues»" },
+            { "id": "B", "text": "Bản B thiếu một mission nên ngắn hơn" },
+            { "id": "C", "text": "Bản A dùng sai cặp mở–kết" },
+            { "id": "D", "text": "Bản B có câu hỏi lịch sự hơn" }
+          ],
+          "correctReason": "A",
+          "explanation": "«Due to some issues» là câu rỗng — giám khảo không tính là đã «explain why». Ngoài ra bản B đặt lời giải thích TRƯỚC lời xin lỗi, đúng trật tự của bài mẫu trong giáo trình."
+        },
+        {
+          "type": "compare",
+          "id": "t6-3-h3",
+          "directions": "Respond as a member of the marketing staff. State whether you can attend and ask TWO questions about the training.",
+          "versionA": [
+            "Dear Human Resources Team,",
+            "Thank you for letting us know that the software training has been moved to September 22.",
+            "I am writing to confirm that I will be able to attend the session on the new date.",
+            "Where will the training be held?",
+            "How long will the session last?",
+            "Best regards,"
+          ],
+          "versionB": [
+            "Dear Human Resources Team,",
+            "Thank you for letting us know that the software training has been moved to September 22.",
+            "I am writing to confirm that I will be able to attend the session on the new date.",
+            "Do I need to bring my own laptop to the session?",
+            "Will any materials be provided before the training?",
+            "Best regards,"
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Hai câu hỏi của bản A đã được e-mail đề trả lời rồi («Conference Room B», «about three hours»)" },
+            { "id": "B", "text": "Bản B có câu xác nhận rõ ràng hơn" },
+            { "id": "C", "text": "Bản A thiếu lời chào cuối" },
+            { "id": "D", "text": "Bản B dùng từ vựng khó hơn" }
+          ],
+          "correctReason": "A",
+          "explanation": "Hai bản chỉ khác hai câu hỏi. Hỏi lại điều đề đã nêu là lỗi nặng — vừa lãng phí mission vừa cho thấy bạn chưa đọc kỹ e-mail đề."
+        },
+        {
+          "type": "compare",
+          "id": "t6-3-h4",
+          "directions": "Respond as the bookings coordinator at Ridgeway Community Centre. Answer the customer's questions and make ONE suggestion. (Khách dự kiến khoảng 80 khách mời.)",
+          "versionA": [
+            "Dear Mr. Okoro,",
+            "Thank you for your interest in holding your dinner at Ridgeway Community Centre.",
+            "Our main hall is available on December 12 at a rate of 120 dollars per hour.",
+            "Catering is available on site, and our kitchen can serve up to one hundred guests.",
+            "You are welcome to bring your own sound equipment.",
+            "Could you tell me how many guests you are expecting?",
+            "Best regards,"
+          ],
+          "versionB": [
+            "Dear Mr. Okoro,",
+            "Thank you for your interest in holding your dinner at Ridgeway Community Centre.",
+            "Our main hall is available on December 12 at a rate of 120 dollars per hour.",
+            "Catering is available on site, and our kitchen can serve up to one hundred guests.",
+            "You are welcome to bring your own sound equipment.",
+            "As December is our busiest month, I would suggest booking as early as possible.",
+            "Best regards,"
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B có gợi ý đúng như Directions yêu cầu; bản A lại hỏi một điều khách đã nêu rõ trong đề" },
+            { "id": "B", "text": "Bản B trả lời được nhiều câu hỏi hơn" },
+            { "id": "C", "text": "Bản A sai giới từ ở câu về giá thuê" },
+            { "id": "D", "text": "Bản B trang trọng hơn ở lời chào cuối" }
+          ],
+          "correctReason": "A",
+          "explanation": "Bản A phạm HAI lỗi cùng lúc: thiếu mission «make ONE suggestion», và hỏi lại số khách mời trong khi đề đã ghi «around eighty guests»."
+        }
+      ]
+    }
+  ]
+}

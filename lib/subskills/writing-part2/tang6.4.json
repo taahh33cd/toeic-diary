@@ -1,0 +1,339 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "error_spot",
+          "id": "t6-4-e1",
+          "intro": "Thư gửi ngân hàng. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Mr. Cole,",
+            "Thank you for your e-mail of July 3 about the two transactions on my account.",
+            "I can confirm that I did make both transactions on July 1.",
+            "Will the suspension affect my direct debits?",
+            "Yours sincerely,"
+          ],
+          "errorIndex": 0,
+          "errorLabel": "Xưng hô bằng chính tên MÌNH thay vì tên người nhận",
+          "fix": "Dear Customer Support Team,",
+          "explanation": "Adrian Cole là BẠN, không phải người nhận. E-mail đề ký «Customer Support — Willowbank Bank» nên phải gọi theo tên bộ phận đó."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-4-e2",
+          "intro": "Thư cung cấp thông tin cho khách. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Ms. Hoang,",
+            "Thank you for your interest in the evening courses on our website.",
+            "The course fee is 320 dollars for a twelve-weeks term.",
+            "Textbooks are not included in the fee.",
+            "Best regards,"
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Tính từ ghép có gạch nối thì danh từ phải ở SỐ ÍT",
+          "fix": "The course fee is 320 dollars for a twelve-week term.",
+          "explanation": "«a twelve-week term», «a 19-inch monitor», «a three-hour session» — khi số + danh từ làm tính từ đứng trước danh từ khác thì luôn số ít."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-4-e3",
+          "intro": "Thư trả lời khách hàng. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Mr. Feld,",
+            "Thank you for your interest in Greenfield Fitness Centre.",
+            "I'd like to give you informations on our membership plans.",
+            "Our annual fee is 540 dollars.",
+            "Best regards,"
+          ],
+          "errorIndex": 2,
+          "errorLabel": "«information» là danh từ không đếm được",
+          "fix": "I'd like to give you information on our membership plans.",
+          "explanation": "Không bao giờ có «informations» hay «an information». Cùng nhóm không đếm được: advice, equipment, furniture, luggage."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-4-e4",
+          "intro": "Thư xin nghỉ phép gửi trưởng phòng. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Ms. Okafor,",
+            "I am writing in connection to the annual leave policy you circulated last month.",
+            "I would like to request some days of leave in August.",
+            "Please let me know whether these dates can be approved.",
+            "Best regards,"
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Không nêu ngày cụ thể",
+          "fix": "I would like to request five days of leave from August 12 to August 16.",
+          "explanation": "«some days in August» thì trưởng phòng không duyệt được. Mọi đề nghị liên quan đến thời gian đều phải có SỐ NGÀY và NGÀY CỤ THỂ."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-4-e5",
+          "intro": "Thư trả lời hội viên muốn huỷ thẻ. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Ms. Fischer,",
+            "Thank you for your e-mail of September 17 about cancelling your membership.",
+            "As our notice period is thirty days, the last payment will be taken on September 30.",
+            "You do not need to return your access card.",
+            "We are sorry you are leaving. Bye!"
+          ],
+          "errorIndex": 4,
+          "errorLabel": "Lời chào cuối suồng sã và thiếu ký tên",
+          "fix": "Best regards, / Ardent Fitness — Membership",
+          "explanation": "«Bye!» không bao giờ dùng trong e-mail công việc. Sau lời chào cuối phải có tên bạn hoặc tên bộ phận."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-4-e6",
+          "intro": "Thư khách hàng phàn nàn về dịch vụ sửa xe. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Service Manager,",
+            "I am writing in relation to the service carried out on my car on July 8.",
+            "The car was not ready until half past four, which meant I missed an appointment.",
+            "In addition, the final bill was much higher than the estimate.",
+            "Yours faithfully,"
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Thiếu con số cụ thể",
+          "fix": "In addition, the final bill was 90 dollars higher than the estimate.",
+          "explanation": "«much higher» là cảm nhận, «90 dollars higher» là dữ kiện. Thư phàn nàn chỉ có sức nặng khi dựa trên con số cụ thể."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "mission_audit",
+          "id": "t6-4-m1",
+          "directions": "Respond to the e-mail as if you were a registered participant. In your e-mail, provide the information requested and ask TWO questions about the forum. (Ban tổ chức hỏi bạn có yêu cầu gì về chế độ ăn không.)",
+          "draft": [
+            "Dear Ms. Sousa,",
+            "Thank you for the reminder about the Regional Business Forum on May 26.",
+            "Is parking available at the Fairmount Convention Centre?",
+            "Will the sessions be recorded for participants who cannot stay all day?",
+            "I look forward to the event.",
+            "Best regards,",
+            "Khanh Do"
+          ],
+          "missions": [
+            { "text": "Cung cấp thông tin về yêu cầu chế độ ăn", "done": false },
+            { "text": "Câu hỏi thứ nhất về diễn đàn", "done": true },
+            { "text": "Câu hỏi thứ hai về diễn đàn", "done": true }
+          ],
+          "explanation": "Hai câu hỏi rất tốt nhưng mission «provide the information requested» bị bỏ hẳn. Cần thêm: «I would like to let you know that I am vegetarian.»"
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-4-m2",
+          "directions": "Respond to the e-mail as if you were a member of staff. In your e-mail, confirm that you have completed the reset and ask TWO questions about the new policy.",
+          "draft": [
+            "Dear Mr. Barrett,",
+            "Thank you for your e-mail of June 9 about the new security policy.",
+            "I will reset my password before Friday.",
+            "How often will we be required to change our password from now on?",
+            "Does the new policy also apply to company mobile devices?",
+            "Best regards,",
+            "Linh Pham"
+          ],
+          "missions": [
+            { "text": "Xác nhận rằng bạn ĐÃ đổi mật khẩu xong", "done": false },
+            { "text": "Câu hỏi thứ nhất về chính sách mới", "done": true },
+            { "text": "Câu hỏi thứ hai về chính sách mới", "done": true }
+          ],
+          "explanation": "«I will reset my password» là việc SẼ làm, không phải xác nhận đã xong. Mission đòi hỏi thì hiện tại hoàn thành: «I have completed the password reset»."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-4-m3",
+          "directions": "Respond to the e-mail as if you were the property manager. In your e-mail, apologize for the delay and give TWO pieces of information about the repair.",
+          "draft": [
+            "Dear Ms. Reyes,",
+            "Thank you for your e-mail about the heating in apartment 12B.",
+            "I would like to apologize for the delay in responding to the call you made on Friday.",
+            "Our engineer will visit on Wednesday between ten and twelve in the morning.",
+            "The repair will be carried out at no cost to you.",
+            "Please let me know if that time is not convenient.",
+            "Sincerely,",
+            "Brookside Property Management"
+          ],
+          "missions": [
+            { "text": "Xin lỗi vì sự chậm trễ", "done": true },
+            { "text": "Thông tin thứ nhất về việc sửa chữa (thời gian)", "done": true },
+            { "text": "Thông tin thứ hai về việc sửa chữa (chi phí)", "done": true }
+          ],
+          "explanation": "Đủ 3 mission. Điểm đáng học: khung giờ được chọn khớp với lịch rảnh khách đã nêu («any weekday between nine and five») — chi tiết nhỏ này cho thấy bạn đọc kỹ đề."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-4-m4",
+          "directions": "Respond to the e-mail as if you were a staff member at Greenfield Fitness Centre. In your e-mail, provide the information the customer asked for and make ONE recommendation. (Khách hỏi 3 điều: phí hội viên năm, bể bơi mở cho ai, và giờ mở cửa.)",
+          "draft": [
+            "Dear Mr. Feld,",
+            "Thank you for your interest in Greenfield Fitness Centre following our newspaper advertisement.",
+            "Our annual membership fee is 540 dollars, which can also be paid monthly at 50 dollars per month.",
+            "The swimming pool is open to all members, although premium members may use it before seven in the morning as well.",
+            "Since you work until seven, I would recommend our premium plan.",
+            "Please e-mail me if you would like to arrange a visit.",
+            "Best regards,",
+            "Greenfield Fitness Centre"
+          ],
+          "missions": [
+            { "text": "Trả lời câu hỏi về phí hội viên năm", "done": true },
+            { "text": "Trả lời câu hỏi về bể bơi", "done": true },
+            { "text": "Cung cấp thông tin về giờ mở cửa", "done": false },
+            { "text": "Đưa ra một khuyến nghị", "done": true }
+          ],
+          "explanation": "Khách viết «I work until seven on weekdays, so your opening hours matter to me as well» — đó là một yêu cầu thông tin dù không có dấu hỏi. Thư thiếu hẳn câu về giờ mở cửa."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-4-m5",
+          "directions": "Respond to the e-mail as if you were a customer of Northgate Home Electronics. In your e-mail, describe TWO problems with your monitor and ask ONE question.",
+          "draft": [
+            "Dear Mr. Tucker,",
+            "Thank you for your e-mail of January 11 about the 19-inch widescreen LCD monitor.",
+            "Unfortunately, the screen flickers every time I turn the monitor on, and there are also several dead pixels in the corner.",
+            "Could you tell me whether the monitor can be exchanged for a new one?",
+            "An early reply would be greatly appreciated.",
+            "Best regards,",
+            "Anna Vu"
+          ],
+          "missions": [
+            { "text": "Vấn đề thứ nhất được nêu rõ ràng", "done": true },
+            { "text": "Vấn đề thứ hai được TÁCH thành câu riêng", "done": false },
+            { "text": "Một câu hỏi", "done": true }
+          ],
+          "explanation": "Cả hai vấn đề đều có mặt nhưng bị gộp vào MỘT câu. Về nội dung thì đủ, nhưng tách thành hai câu riêng (nối bằng «In addition») giúp giám khảo đếm được chắc chắn hơn."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "compare",
+          "id": "t6-4-h1",
+          "directions": "Respond as a member of staff. Confirm that you have completed the password reset and ask TWO questions about the new policy.",
+          "versionA": [
+            "Dear Mr. Barrett,",
+            "Thank you for your e-mail of June 9 about the new security policy.",
+            "I am writing to confirm that I have completed the password reset from the login screen.",
+            "How often will we be required to change our password from now on?",
+            "Does the new policy also apply to company mobile devices?",
+            "Best regards,"
+          ],
+          "versionB": [
+            "Dear Mr. Barrett,",
+            "Thank you for your e-mail of June 9 about the new security policy.",
+            "I am writing to confirm that I have completed the password reset from the login screen.",
+            "How long must the new password be?",
+            "What is the deadline for the reset?",
+            "Best regards,"
+          ],
+          "better": "A",
+          "reasons": [
+            { "id": "A", "text": "Hai câu hỏi của bản B đã được e-mail đề trả lời («at least twelve characters», «before Friday, June 13»)" },
+            { "id": "B", "text": "Bản A xác nhận rõ ràng hơn" },
+            { "id": "C", "text": "Bản B sai thì động từ ở câu xác nhận" },
+            { "id": "D", "text": "Bản A có lời chào cuối trang trọng hơn" }
+          ],
+          "correctReason": "A",
+          "explanation": "Hai bản giống hệt nhau trừ hai câu hỏi. Câu hỏi tốt phải nhắm vào khoảng trống đề CHƯA nói — hỏi lại điều đề đã nêu là tự vứt đi hai mission."
+        },
+        {
+          "type": "compare",
+          "id": "t6-4-h2",
+          "directions": "Respond as a registered participant. Provide the information requested (dietary requirements) and ask TWO questions about the forum.",
+          "versionA": [
+            "Dear Ms. Sousa,",
+            "Thank you for the reminder about the Regional Business Forum on May 26.",
+            "I would like to let you know that I am vegetarian and cannot eat dairy products.",
+            "Is parking available at the Fairmount Convention Centre?",
+            "Will the sessions be recorded for participants who cannot stay all day?",
+            "Best regards,"
+          ],
+          "versionB": [
+            "Dear participant,",
+            "Thank you for the reminder about the Regional Business Forum on May 26.",
+            "I have some dietary requirements.",
+            "Where is the forum being held?",
+            "What time does registration open?",
+            "Best regards,"
+          ],
+          "better": "A",
+          "reasons": [
+            { "id": "A", "text": "Bản B sai xưng hô, nêu thông tin chế độ ăn quá mơ hồ, và hỏi hai điều đề đã trả lời" },
+            { "id": "B", "text": "Bản A dài hơn nên đầy đủ hơn" },
+            { "id": "C", "text": "Bản B thiếu lời chào cuối" },
+            { "id": "D", "text": "Bản A dùng nhiều từ vựng khó hơn" }
+          ],
+          "correctReason": "A",
+          "explanation": "Bản B mắc ba lỗi cùng lúc: «Dear participant» là cách họ gọi bạn; «I have some dietary requirements» không cho ban tổ chức biết phải chuẩn bị gì; và cả hai câu hỏi đều đã có đáp án trong đề."
+        },
+        {
+          "type": "compare",
+          "id": "t6-4-h3",
+          "directions": "Respond as a branch supervisor. Describe ONE unusual result at your branch and ask TWO questions about the report.",
+          "versionA": [
+            "Dear Mr. Lam,",
+            "Thank you for your e-mail of April 8 about the quarterly sales reports.",
+            "Our sales were a bit unusual this quarter.",
+            "Should the report include figures from our online sales channel as well?",
+            "Who should we send the completed report to once it is finished?",
+            "Best regards,"
+          ],
+          "versionB": [
+            "Dear Mr. Lam,",
+            "Thank you for your e-mail of April 8 about the quarterly sales reports.",
+            "I would like to report one unusual result: sales in February fell by thirty percent because the store was closed for two weeks of refurbishment.",
+            "Should the report include figures from our online sales channel as well?",
+            "Who should we send the completed report to once it is finished?",
+            "Best regards,"
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B mô tả kết quả bất thường có số liệu và nguyên nhân; bản A chỉ nói «a bit unusual» nên không hoàn thành mission" },
+            { "id": "B", "text": "Bản B có thêm một câu hỏi nữa" },
+            { "id": "C", "text": "Bản A sai xưng hô với cấp trên" },
+            { "id": "D", "text": "Bản B dùng cặp mở–kết đúng hơn" }
+          ],
+          "correctReason": "A",
+          "explanation": "«Our sales were a bit unusual» không mô tả gì cả. Mission «describe» đòi hỏi nội dung cụ thể: cái gì bất thường, mức độ bao nhiêu, vì sao."
+        },
+        {
+          "type": "compare",
+          "id": "t6-4-h4",
+          "directions": "Respond as the property manager. Apologize for the delay and give TWO pieces of information about the repair. (Người thuê làm việc tại nhà, rảnh mọi ngày trong tuần từ 9 đến 5.)",
+          "versionA": [
+            "Dear Ms. Reyes,",
+            "Thank you for your e-mail about the heating in apartment 12B.",
+            "I would like to apologize for the delay in responding to the call you made on Friday.",
+            "Our engineer will visit on Saturday at seven in the evening.",
+            "The repair will be carried out at no cost to you.",
+            "Sincerely,"
+          ],
+          "versionB": [
+            "Dear Ms. Reyes,",
+            "Thank you for your e-mail about the heating in apartment 12B.",
+            "I would like to apologize for the delay in responding to the call you made on Friday.",
+            "Our engineer will visit on Wednesday between ten and twelve in the morning.",
+            "The repair will be carried out at no cost to you.",
+            "Sincerely,"
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B hẹn trong khung giờ người thuê đã báo là rảnh; bản A hẹn tối thứ Bảy, ngoài khung đó" },
+            { "id": "B", "text": "Bản B xin lỗi đúng lỗi hơn" },
+            { "id": "C", "text": "Bản A thiếu thông tin về chi phí" },
+            { "id": "D", "text": "Bản B có nhiều câu hơn" }
+          ],
+          "correctReason": "A",
+          "explanation": "Hai bản chỉ khác một dòng. Người thuê đã nói rõ rảnh «any weekday between nine and five» — hẹn ngoài khung đó chứng tỏ bạn không dùng dữ kiện đề cho sẵn."
+        }
+      ]
+    }
+  ]
+}

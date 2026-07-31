@@ -1,0 +1,337 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "error_spot",
+          "id": "t6-1-e1",
+          "intro": "Thư trả lời khách hàng Kimberly Young. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Ms. Kimberly,",
+            "Thank you for your e-mail dated June 5.",
+            "I would like to apologize for the delay in delivering your book.",
+            "Would you give us a call if you would like to receive a refund?",
+            "Sincerely yours,"
+          ],
+          "errorIndex": 0,
+          "errorLabel": "Ghép Ms. với TÊN RIÊNG thay vì họ",
+          "fix": "Dear Ms. Young,",
+          "explanation": "«Kimberly» là tên riêng, «Young» là họ. Công thức luôn là Dear + Mr./Ms. + HỌ. Đây là lỗi mất điểm ngay dòng đầu tiên."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-1-e2",
+          "intro": "Thư của cửa hàng gửi khách hàng khiếu nại. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Mr. Tucker,",
+            "Thank you for letting us know about the problem with your monitor.",
+            "I would like to apologize for the inconvenience caused.",
+            "We will replace the monitor free of charge.",
+            "Talk to you later!"
+          ],
+          "errorIndex": 4,
+          "errorLabel": "Lời chào cuối quá suồng sã cho e-mail công việc",
+          "fix": "Sincerely,",
+          "explanation": "«Talk to you later!» nằm ở đầu casual của thang trang trọng, chỉ dùng với bạn bè. Thư gửi khách hàng phải dùng Sincerely / Best regards / Yours sincerely."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-1-e3",
+          "intro": "Thư gửi một công ty mà người viết không biết tên ai. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Sir or Madam,",
+            "I am writing to complain about the poor service I received last week.",
+            "The technician arrived two hours late and did not fix the problem.",
+            "I would appreciate it if you could look into this matter.",
+            "Yours sincerely,"
+          ],
+          "errorIndex": 4,
+          "errorLabel": "Sai cặp mở–kết: không biết tên mà dùng «sincerely»",
+          "fix": "Yours faithfully,",
+          "explanation": "Quy tắc Anh-Anh: «Dear Sir or Madam» → «Yours faithfully». Chỉ dùng «Yours sincerely» khi mở thư bằng tên cụ thể."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-1-e4",
+          "intro": "Thư ứng viên gửi nhà tuyển dụng. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Ms. Kim,",
+            "Thank you for inviting me to an interview for the Marketing Assistant position.",
+            "I am pleased to confirm that I will attend on April 12.",
+            "I look forward to hear from you.",
+            "Yours sincerely,"
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Sau «look forward to» phải dùng V-ing",
+          "fix": "I look forward to hearing from you.",
+          "explanation": "Chữ «to» trong «look forward to» là GIỚI TỪ, không phải «to» nguyên mẫu. Đây là lỗi ngữ pháp phổ biến nhất của người Việt trong Writing Part 2."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-1-e5",
+          "intro": "Directions: bạn là KHÁCH HÀNG, hãy phàn nàn về sản phẩm. Bấm vào dòng có lỗi.",
+          "directions": "Respond to the e-mail as if you were a customer. In your e-mail, describe TWO problems with your monitor.",
+          "lines": [
+            "Dear Mr. Tucker,",
+            "Thank you for your e-mail of January 11 about the LCD monitor.",
+            "I would like to apologize for the problems with the monitor.",
+            "The screen flickers, and there are several dead pixels in the corner.",
+            "Best regards,"
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Sai vai — khách hàng lại đi xin lỗi",
+          "fix": "I am writing to complain about two problems with the monitor.",
+          "explanation": "Directions cho bạn vai KHÁCH HÀNG, tức là bên bị thiệt. Người phải xin lỗi là cửa hàng. Nhầm vai kiểu này làm hỏng toàn bộ bài."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-1-e6",
+          "intro": "Thư nhân viên trả lời khách khiếu nại giao hàng chậm. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Ms. Reyes,",
+            "Thank you for your e-mail about the delay in your delivery.",
+            "Why didn't you contact us earlier about this?",
+            "We will send a replacement by express delivery tomorrow.",
+            "Sincerely,"
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Giọng trách móc khách hàng",
+          "fix": "Could you tell me when you placed the order?",
+          "explanation": "Câu đúng ngữ pháp nhưng sai văn phong dịch vụ. Khi bạn là bên có lỗi, tuyệt đối không đặt câu hỏi mang giọng đổ lỗi cho khách."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "mission_audit",
+          "id": "t6-1-m1",
+          "directions": "Respond to the e-mail as if you were an employee at The World's Biggest Bookstore. In your e-mail, make an apology and ask TWO questions about the delivery problem.",
+          "draft": [
+            "Dear Ms. Young,",
+            "Thank you for your e-mail dated June 5.",
+            "On behalf of my store, I would like to apologize for the delay in delivering your book.",
+            "Would you give us a call if you would like to receive a refund?",
+            "Once again, please accept my sincere apology.",
+            "Sincerely yours,",
+            "Customer Support"
+          ],
+          "missions": [
+            { "text": "Xin lỗi khách hàng", "done": true },
+            { "text": "Câu hỏi thứ nhất về sự cố giao hàng", "done": true },
+            { "text": "Câu hỏi thứ hai về sự cố giao hàng", "done": false }
+          ],
+          "explanation": "Thư chỉ có MỘT câu hỏi. Directions viết hoa chữ TWO chính là để bạn đếm. Thiếu một câu hỏi là mất trọn một mission dù thư viết hay đến đâu."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-1-m2",
+          "directions": "Respond to the e-mail as if you were a customer of Northgate Home Electronics. In your e-mail, describe TWO problems that you have had with your monitor and ask ONE question.",
+          "draft": [
+            "Dear Mr. Tucker,",
+            "Thank you for your e-mail of January 11 about the 19-inch widescreen LCD monitor.",
+            "Unfortunately, the screen flickers every time I turn the monitor on.",
+            "In addition, there are several dead pixels in the bottom right corner.",
+            "Could you tell me whether the monitor can be exchanged for a new one?",
+            "An early reply would be greatly appreciated.",
+            "Best regards,",
+            "Anna Vu"
+          ],
+          "missions": [
+            { "text": "Vấn đề thứ nhất với màn hình", "done": true },
+            { "text": "Vấn đề thứ hai với màn hình", "done": true },
+            { "text": "Một câu hỏi", "done": true }
+          ],
+          "explanation": "Thư này hoàn thành đủ cả 3 mission. Chú ý hai vấn đề được tách thành HAI câu riêng, nối bằng «Unfortunately» và «In addition» — nhờ vậy giám khảo đếm được ngay."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-1-m3",
+          "directions": "Respond to the e-mail as if you were a staff member at Riverside Grand Hotel. In your e-mail, answer the guest's questions and make ONE suggestion. (Khách hỏi 3 điều: bữa sáng có trong giá phòng không, có xe đưa đón sân bay không, phòng có tiếp cận được cho xe lăn không.)",
+          "draft": [
+            "Dear Mr. Ortiz,",
+            "Thank you for your e-mail of March 3 regarding your booking for three rooms in May.",
+            "I am pleased to confirm that breakfast is included in the room rate.",
+            "We also provide a free airport shuttle every hour between six in the morning and ten at night.",
+            "I would suggest booking early, as May is one of our busiest months.",
+            "Please let me know if you need any further information.",
+            "Best regards,",
+            "Riverside Grand Hotel"
+          ],
+          "missions": [
+            { "text": "Trả lời câu hỏi về bữa sáng", "done": true },
+            { "text": "Trả lời câu hỏi về xe đưa đón sân bay", "done": true },
+            { "text": "Trả lời câu hỏi về phòng cho người dùng xe lăn", "done": false },
+            { "text": "Đưa ra một gợi ý", "done": true }
+          ],
+          "explanation": "Câu hỏi thứ ba nằm ở cuối thân e-mail đề và không có dấu hỏi («please let me know whether your rooms are accessible») — chính vì thế rất dễ bị bỏ sót."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-1-m4",
+          "directions": "Respond to the e-mail as if you were a member of the marketing staff. In your e-mail, state whether you can attend and ask TWO questions about the training.",
+          "draft": [
+            "Dear Human Resources Team,",
+            "Thank you for letting us know that the software training has been moved to September 22.",
+            "I will try to be there if my schedule allows.",
+            "Do I need to bring my own laptop to the session?",
+            "Will any materials be provided before the training?",
+            "Best regards,",
+            "Minh Tran"
+          ],
+          "missions": [
+            { "text": "Nói RÕ có tham dự được hay không", "done": false },
+            { "text": "Câu hỏi thứ nhất về buổi đào tạo", "done": true },
+            { "text": "Câu hỏi thứ hai về buổi đào tạo", "done": true }
+          ],
+          "explanation": "«I will try to be there if my schedule allows» là câu nước đôi. Mission «state whether you can attend» đòi hỏi câu dứt khoát: «I can attend» hoặc «I am unable to attend»."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-1-m5",
+          "directions": "Respond to the e-mail as if you were a customer service representative at Vertex Paper Company. In your e-mail, make an apology, explain why the problem happened, and ask ONE question.",
+          "draft": [
+            "Dear Mr. Nowak,",
+            "Thank you for your e-mail of February 8 concerning order #4471.",
+            "I would like to apologize for the damage to eight of the twenty boxes.",
+            "Would you like us to send replacements by express delivery, or issue a credit note instead?",
+            "We have full assurance that this will not happen again.",
+            "Yours sincerely,",
+            "Vertex Paper Company"
+          ],
+          "missions": [
+            { "text": "Xin lỗi khách hàng", "done": true },
+            { "text": "Giải thích vì sao sự cố xảy ra", "done": false },
+            { "text": "Đặt một câu hỏi", "done": true }
+          ],
+          "explanation": "Thư xin lỗi và hỏi rất tốt, nhưng KHÔNG hề nói vì sao tám hộp bị hỏng. Mission «explain why the problem happened» đòi hỏi một câu nêu nguyên nhân cụ thể."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "compare",
+          "id": "t6-1-h1",
+          "directions": "Respond as an employee at The World's Biggest Bookstore. Make an apology and ask TWO questions about the delivery problem.",
+          "versionA": [
+            "Dear Ms. Young,",
+            "Thank you for your e-mail dated June 5. I was very concerned to learn about the problem with your book order.",
+            "On behalf of my store, I would like to apologize for the delay.",
+            "Would you give us a call or visit if you would like to receive a refund?",
+            "Otherwise, could you wait a few more days while I contact the publisher?",
+            "Sincerely yours,"
+          ],
+          "versionB": [
+            "Dear Ms. Young,",
+            "Thank you for your e-mail. I am very sorry about everything that happened with your order.",
+            "I apologize again, and I am really sorry for the trouble. Please accept my apology.",
+            "Could you tell me what happened?",
+            "Sincerely yours,"
+          ],
+          "better": "A",
+          "reasons": [
+            { "id": "A", "text": "Bản A có đủ 2 câu hỏi, bản B chỉ có 1 và lặp lời xin lỗi ba lần" },
+            { "id": "B", "text": "Bản A dài hơn nên chắc chắn được điểm cao hơn" },
+            { "id": "C", "text": "Bản A dùng nhiều từ vựng khó hơn" },
+            { "id": "D", "text": "Bản B sai xưng hô ở dòng đầu" }
+          ],
+          "correctReason": "A",
+          "explanation": "Đếm mission là việc đầu tiên. Bản B lặp lời xin lỗi ba lần nhưng thiếu một câu hỏi — mất trọn một mission. Độ dài và từ vựng khó không tự động cho điểm cao; xưng hô của cả hai bản đều đúng."
+        },
+        {
+          "type": "compare",
+          "id": "t6-1-h2",
+          "directions": "Respond as a customer. Describe TWO problems with your 19-inch monitor and ask ONE question.",
+          "versionA": [
+            "Dear Mr. Tucker,",
+            "I am writing about my monitor. It is really bad and I am very angry about it.",
+            "The quality is terrible and I am disappointed with your company.",
+            "What are you going to do about this?",
+            "Best regards,"
+          ],
+          "versionB": [
+            "Dear Mr. Tucker,",
+            "Thank you for your e-mail of January 11 about the 19-inch widescreen LCD monitor.",
+            "Unfortunately, the screen flickers every time I turn the monitor on.",
+            "In addition, there are several dead pixels in the bottom right corner.",
+            "Could you tell me whether the monitor can be exchanged for a new one?",
+            "Best regards,"
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B nêu HAI vấn đề cụ thể, bản A chỉ bày tỏ cảm xúc mà không mô tả vấn đề nào" },
+            { "id": "B", "text": "Bản B dùng nhiều câu hơn" },
+            { "id": "C", "text": "Bản A sai thì động từ" },
+            { "id": "D", "text": "Bản B có lời chào cuối trang trọng hơn" }
+          ],
+          "correctReason": "A",
+          "explanation": "«It is really bad» và «the quality is terrible» là cảm xúc, không phải MÔ TẢ vấn đề. Mission «describe TWO problems» đòi hỏi hai sự cố cụ thể như «the screen flickers» và «dead pixels»."
+        },
+        {
+          "type": "compare",
+          "id": "t6-1-h3",
+          "directions": "Respond as the property manager. Apologize for the delay and give TWO pieces of information about the repair.",
+          "versionA": [
+            "Dear Ms. Reyes,",
+            "Thank you for your e-mail about the heating in apartment 12B.",
+            "I would like to apologize for the delay in responding to the call you made on Friday.",
+            "Our engineer will visit on Wednesday between ten and twelve in the morning.",
+            "The repair will be carried out at no cost to you.",
+            "Sincerely,"
+          ],
+          "versionB": [
+            "Dear Ms. Reyes,",
+            "Thank you for your e-mail about the heating in apartment 12B.",
+            "I am sorry about the problem with your radiator.",
+            "Someone will come to fix it soon.",
+            "Sincerely,"
+          ],
+          "better": "A",
+          "reasons": [
+            { "id": "A", "text": "Bản A xin lỗi đúng lỗi (chậm phản hồi) và cho HAI thông tin cụ thể; bản B xin lỗi sai chỗ và chỉ nói chung chung" },
+            { "id": "B", "text": "Bản A có nhiều câu hơn nên tốt hơn" },
+            { "id": "C", "text": "Bản B sai xưng hô" },
+            { "id": "D", "text": "Bản A dùng thì tương lai còn bản B dùng thì hiện tại" }
+          ],
+          "correctReason": "A",
+          "explanation": "Directions yêu cầu xin lỗi vì SỰ CHẬM TRỄ, không phải vì hỏng máy sưởi — bản B nhắm sai. Ngoài ra «Someone will come soon» không phải thông tin: thiếu ngày, giờ và chi phí."
+        },
+        {
+          "type": "compare",
+          "id": "t6-1-h4",
+          "directions": "Respond as a staff member at Halcyon Print Studio. Apologize, explain what you will do, and ask ONE question.",
+          "versionA": [
+            "Dear Ms. Marchetti,",
+            "Thank you for letting us know about the business cards you collected yesterday.",
+            "I would like to apologize for printing your logo in the wrong colour.",
+            "We will reprint the cards as soon as we can.",
+            "Would you like us to deliver them or would you prefer to collect them?",
+            "Yours sincerely,"
+          ],
+          "versionB": [
+            "Dear Ms. Marchetti,",
+            "Thank you for letting us know about the business cards you collected yesterday.",
+            "I would like to apologize for printing your logo in the wrong colour.",
+            "We will reprint all five hundred cards in dark navy free of charge and have them ready by October 7.",
+            "Would you like us to deliver them to your office, or would you prefer to collect them from the studio?",
+            "Yours sincerely,"
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B nêu số lượng, màu, chi phí và MỐC THỜI GIAN trước hạn chót của khách; bản A chỉ hứa «as soon as we can»" },
+            { "id": "B", "text": "Bản B xin lỗi chân thành hơn" },
+            { "id": "C", "text": "Bản A thiếu một mission" },
+            { "id": "D", "text": "Bản B dùng cặp mở–kết đúng hơn" }
+          ],
+          "correctReason": "A",
+          "explanation": "Cả hai bản đều đủ 3 mission và cùng cặp mở–kết. Khác biệt nằm ở CHẤT LƯỢNG: khách có hội nghị ngày 9 tháng 10, nên lời hứa phải có mốc trước ngày đó. «As soon as we can» là lời hứa suông."
+        }
+      ]
+    }
+  ]
+}

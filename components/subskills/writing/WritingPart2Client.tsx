@@ -14,6 +14,9 @@ import type {
   TypeBlankEx,
   WordOrderEx,
   TranslateEx,
+  ErrorSpotEx,
+  MissionAuditEx,
+  CompareEx,
 } from "@/lib/subskills/writing-part2";
 import { normP2, matchesAccepted, isNearMiss, dbPartW2 } from "@/lib/subskills/writing-part2";
 
@@ -844,6 +847,266 @@ function TranslateCard({ ex, onResult }: { ex: TranslateEx; onResult: (score: nu
 }
 
 // ─────────────────────────────────────
+// Tầng 6 easy — soi lỗi trong thư nháp
+// ─────────────────────────────────────
+
+function DirectionsBox({ text }: { text: string }) {
+  return (
+    <div style={{ padding: "9px 12px", borderRadius: 8, background: "rgba(234,179,8,0.09)", border: "1px solid rgba(234,179,8,0.3)", marginBottom: "0.85rem" }}>
+      <p style={{ margin: 0, fontSize: "0.8rem", lineHeight: 1.6, color: "var(--text-primary)", fontStyle: "italic" }}>
+        <strong style={{ fontStyle: "normal" }}>Directions:</strong> {text}
+      </p>
+    </div>
+  );
+}
+
+function ErrorSpotCard({ ex, onResult }: { ex: ErrorSpotEx; onResult: (score: number) => void }) {
+  const [picked, setPicked] = useState<number | null>(null);
+  const [submitted, setSubmitted] = useState(false);
+
+  function pick(i: number) {
+    if (submitted) return;
+    setPicked(i);
+    setSubmitted(true);
+    onResult(i === ex.errorIndex ? 100 : 0);
+  }
+
+  return (
+    <div>
+      {ex.intro && <p style={{ fontSize: "0.87rem", color: "var(--text-secondary)", marginBottom: "0.8rem", lineHeight: 1.55 }}>{ex.intro}</p>}
+      {ex.directions && <DirectionsBox text={ex.directions} />}
+
+      <div style={{ border: "1px solid var(--border)", borderRadius: 10, overflow: "hidden", marginBottom: "0.9rem" }}>
+        {ex.lines.map((line, i) => {
+          const isErr = i === ex.errorIndex;
+          const isPicked = picked === i;
+          let bg = i % 2 === 0 ? "var(--bg-secondary)" : "var(--bg-primary)";
+          let color = "var(--text-primary)";
+          if (submitted) {
+            if (isErr) { bg = "rgba(239,68,68,0.13)"; color = RED; }
+            else if (isPicked) { bg = "rgba(234,179,8,0.13)"; color = AMBER; }
+          }
+          return (
+            <button
+              key={i}
+              onClick={() => pick(i)}
+              disabled={submitted}
+              style={{ display: "flex", gap: 10, alignItems: "flex-start", width: "100%", padding: "9px 13px", background: bg, border: "none", borderBottom: i < ex.lines.length - 1 ? "1px solid var(--border)" : "none", cursor: submitted ? "default" : "pointer", textAlign: "left", fontFamily: "inherit", color }}
+            >
+              <span style={{ fontSize: "0.72rem", fontWeight: 700, color: "var(--text-muted)", minWidth: 16, flexShrink: 0, marginTop: 2 }}>{i + 1}</span>
+              <span style={{ fontSize: "0.87rem", lineHeight: 1.6, flex: 1 }}>{line}</span>
+              {submitted && isErr && <span style={{ flexShrink: 0, fontSize: "0.8rem" }}>✗</span>}
+            </button>
+          );
+        })}
+      </div>
+
+      {submitted && (
+        <div>
+          <ResultBadge score={picked === ex.errorIndex ? 100 : 0} />
+          <p style={{ fontSize: "0.84rem", color: RED, margin: "0.55rem 0 0", fontWeight: 600 }}>
+            Dòng {ex.errorIndex + 1} — {ex.errorLabel}
+          </p>
+          <p style={{ fontSize: "0.86rem", color: GREEN, margin: "3px 0 0", fontWeight: 600, lineHeight: 1.6 }}>
+            → {ex.fix}
+          </p>
+          <Explanation text={ex.explanation} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────
+// Tầng 6 medium — đối chiếu mission với Directions
+// ─────────────────────────────────────
+
+function MissionAuditCard({ ex, onResult }: { ex: MissionAuditEx; onResult: (score: number) => void }) {
+  const [marks, setMarks] = useState<(boolean | null)[]>(ex.missions.map(() => null));
+  const [submitted, setSubmitted] = useState(false);
+
+  function submit() {
+    const correct = ex.missions.filter((m, i) => marks[i] === m.done).length;
+    setSubmitted(true);
+    onResult(Math.round((correct / ex.missions.length) * 100));
+  }
+
+  const allMarked = marks.every((m) => m !== null);
+
+  return (
+    <div>
+      <DirectionsBox text={ex.directions} />
+
+      <p style={{ fontSize: "0.75rem", color: "var(--text-muted)", fontWeight: 600, letterSpacing: "0.05em", marginBottom: 5 }}>
+        THƯ NHÁP CỦA MỘT HỌC VIÊN
+      </p>
+      <div style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "11px 14px", background: "var(--bg-secondary)", marginBottom: "1.1rem" }}>
+        {ex.draft.map((line, i) => (
+          <p key={i} style={{ margin: i === 0 ? 0 : "0.45rem 0 0", fontSize: "0.86rem", lineHeight: 1.65, color: "var(--text-primary)" }}>{line}</p>
+        ))}
+      </div>
+
+      <p style={{ fontSize: "0.85rem", color: "var(--text-primary)", fontWeight: 600, marginBottom: "0.6rem" }}>
+        Thư này đã làm được mission nào?
+      </p>
+      <div style={{ display: "flex", flexDirection: "column", gap: 7, marginBottom: "1rem" }}>
+        {ex.missions.map((m, i) => {
+          const ok = submitted && marks[i] === m.done;
+          return (
+            <div
+              key={i}
+              style={{ display: "flex", alignItems: "center", gap: 9, padding: "8px 11px", borderRadius: 8, border: `1.5px solid ${submitted ? (ok ? "rgba(34,197,94,0.45)" : "rgba(239,68,68,0.45)") : "var(--border)"}`, background: submitted ? (ok ? "rgba(34,197,94,0.07)" : "rgba(239,68,68,0.07)") : "var(--bg-secondary)", flexWrap: "wrap" }}
+            >
+              <span style={{ flex: "1 1 160px", fontSize: "0.86rem", color: "var(--text-primary)", lineHeight: 1.5 }}>{m.text}</span>
+              <div style={{ display: "flex", gap: 5, flexShrink: 0 }}>
+                {([[true, "Đã làm"], [false, "Còn thiếu"]] as [boolean, string][]).map(([val, label]) => {
+                  const sel = marks[i] === val;
+                  return (
+                    <button
+                      key={label}
+                      onClick={() => { if (!submitted) setMarks((prev) => { const n = [...prev]; n[i] = val; return n; }); }}
+                      disabled={submitted}
+                      style={{ padding: "4px 12px", fontSize: "0.77rem", fontWeight: 600, borderRadius: 6, border: `1.5px solid ${sel ? "var(--accent-primary)" : "var(--border)"}`, background: sel ? "rgba(59,130,246,0.14)" : "transparent", color: sel ? "var(--accent-primary)" : "var(--text-muted)", cursor: submitted ? "default" : "pointer", fontFamily: "inherit" }}
+                    >
+                      {label}
+                    </button>
+                  );
+                })}
+              </div>
+              {submitted && !ok && (
+                <span style={{ flexBasis: "100%", fontSize: "0.76rem", color: "var(--text-muted)" }}>
+                  → thực tế: {m.done ? "Đã làm" : "Còn thiếu"}
+                </span>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {!submitted ? (
+        <CheckButton onClick={submit} disabled={!allMarked} />
+      ) : (
+        <div>
+          <ResultBadge score={Math.round((ex.missions.filter((m, i) => marks[i] === m.done).length / ex.missions.length) * 100)} />
+          <Explanation text={ex.explanation} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────
+// Tầng 6 hard — so sánh 2 bản trả lời
+// ─────────────────────────────────────
+
+function VersionBox({ label, lines, state }: { label: string; lines: string[]; state?: "better" | "worse" }) {
+  const border = state === "better" ? "rgba(34,197,94,0.5)" : state === "worse" ? "rgba(239,68,68,0.4)" : "var(--border)";
+  return (
+    <div style={{ flex: "1 1 260px", border: `1.5px solid ${border}`, borderRadius: 10, overflow: "hidden" }}>
+      <div style={{ padding: "6px 12px", background: state === "better" ? "rgba(34,197,94,0.12)" : state === "worse" ? "rgba(239,68,68,0.09)" : "var(--bg-elevated)", borderBottom: `1px solid ${border}`, fontSize: "0.78rem", fontWeight: 700, color: state === "better" ? GREEN : state === "worse" ? RED : "var(--text-secondary)" }}>
+        Bản {label}{state === "better" ? " ✓ tốt hơn" : ""}
+      </div>
+      <div style={{ padding: "10px 13px", background: "var(--bg-secondary)" }}>
+        {lines.map((l, i) => (
+          <p key={i} style={{ margin: i === 0 ? 0 : "0.4rem 0 0", fontSize: "0.83rem", lineHeight: 1.65, color: "var(--text-primary)" }}>{l}</p>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function CompareCard({ ex, onResult }: { ex: CompareEx; onResult: (score: number) => void }) {
+  const [choice, setChoice] = useState<"A" | "B" | null>(null);
+  const [reason, setReason] = useState<string | null>(null);
+  const [submitted, setSubmitted] = useState(false);
+
+  function submit() {
+    const s = (choice === ex.better ? 50 : 0) + (reason === ex.correctReason ? 50 : 0);
+    setSubmitted(true);
+    onResult(s);
+  }
+
+  const score = (choice === ex.better ? 50 : 0) + (reason === ex.correctReason ? 50 : 0);
+
+  return (
+    <div>
+      <DirectionsBox text={ex.directions} />
+
+      <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: "1.1rem" }}>
+        <VersionBox label="A" lines={ex.versionA} state={submitted ? (ex.better === "A" ? "better" : "worse") : undefined} />
+        <VersionBox label="B" lines={ex.versionB} state={submitted ? (ex.better === "B" ? "better" : "worse") : undefined} />
+      </div>
+
+      {/* Bước 1 */}
+      <p style={{ fontSize: "0.85rem", color: "var(--text-primary)", fontWeight: 600, marginBottom: "0.5rem" }}>
+        1. Bản nào tốt hơn?
+      </p>
+      <div style={{ display: "flex", gap: 8, marginBottom: "1.1rem" }}>
+        {(["A", "B"] as const).map((v) => {
+          const sel = choice === v;
+          const isAns = submitted && ex.better === v;
+          const wrong = submitted && sel && ex.better !== v;
+          return (
+            <button
+              key={v}
+              onClick={() => { if (!submitted) setChoice(v); }}
+              disabled={submitted}
+              style={{ padding: "8px 26px", fontSize: "0.88rem", fontWeight: 700, borderRadius: 8, border: `1.5px solid ${isAns ? "rgba(34,197,94,0.5)" : wrong ? "rgba(239,68,68,0.5)" : sel ? "var(--accent-primary)" : "var(--border)"}`, background: isAns ? "rgba(34,197,94,0.12)" : wrong ? "rgba(239,68,68,0.12)" : sel ? "rgba(59,130,246,0.12)" : "var(--bg-secondary)", color: isAns ? GREEN : wrong ? RED : sel ? "var(--accent-primary)" : "var(--text-primary)", cursor: submitted ? "default" : "pointer", fontFamily: "inherit" }}
+            >
+              Bản {v}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Bước 2 */}
+      <p style={{ fontSize: "0.85rem", color: "var(--text-primary)", fontWeight: 600, marginBottom: "0.5rem" }}>
+        2. Vì sao?
+      </p>
+      <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: "1rem" }}>
+        {ex.reasons.map((r) => {
+          const sel = reason === r.id;
+          const isAns = r.id === ex.correctReason;
+          let bg = "var(--bg-secondary)";
+          let border = "1.5px solid var(--border)";
+          let color = "var(--text-primary)";
+          if (submitted) {
+            if (isAns) { bg = "rgba(34,197,94,0.1)"; border = "1.5px solid rgba(34,197,94,0.4)"; color = GREEN; }
+            else if (sel) { bg = "rgba(239,68,68,0.1)"; border = "1.5px solid rgba(239,68,68,0.4)"; color = RED; }
+          } else if (sel) {
+            bg = "rgba(59,130,246,0.1)"; border = "1.5px solid var(--accent-primary)";
+          }
+          return (
+            <button
+              key={r.id}
+              onClick={() => { if (!submitted) setReason(r.id); }}
+              disabled={submitted}
+              style={{ display: "flex", alignItems: "flex-start", gap: 9, padding: "10px 13px", background: bg, border, borderRadius: 8, cursor: submitted ? "default" : "pointer", textAlign: "left", color, fontFamily: "inherit" }}
+            >
+              <span style={{ fontWeight: 700, fontSize: "0.83rem", minWidth: 16, flexShrink: 0 }}>{r.id}.</span>
+              <span style={{ fontSize: "0.86rem", lineHeight: 1.55 }}>{r.text}</span>
+              {submitted && isAns && <span style={{ marginLeft: "auto", flexShrink: 0 }}>✓</span>}
+            </button>
+          );
+        })}
+      </div>
+
+      {!submitted ? (
+        <CheckButton onClick={submit} disabled={choice === null || reason === null} />
+      ) : (
+        <div>
+          <ResultBadge score={score} />
+          <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", margin: "0.45rem 0 0" }}>
+            Chọn bản đúng: 50 điểm · chọn lý do đúng: 50 điểm
+          </p>
+          <Explanation text={ex.explanation} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────
 // Dispatcher
 // ─────────────────────────────────────
 
@@ -858,6 +1121,9 @@ function ExerciseCard({ ex, emails, onResult }: { ex: P2Exercise; emails: Record
     case "type_blank": return <TypeBlankCard ex={ex} onResult={onResult} />;
     case "word_order": return <WordOrderCard ex={ex} onResult={onResult} />;
     case "translate": return <TranslateCard ex={ex} onResult={onResult} />;
+    case "error_spot": return <ErrorSpotCard ex={ex} onResult={onResult} />;
+    case "mission_audit": return <MissionAuditCard ex={ex} onResult={onResult} />;
+    case "compare": return <CompareCard ex={ex} onResult={onResult} />;
   }
 }
 

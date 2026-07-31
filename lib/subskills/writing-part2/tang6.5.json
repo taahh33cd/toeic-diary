@@ -1,0 +1,341 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "error_spot",
+          "id": "t6-5-e1",
+          "intro": "Thư báo tin đơn hàng đã về. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Ms. Young,",
+            "Thank you for your patience since your e-mail of June 5.",
+            "I am afraid to inform you that two copies have arrived at our store.",
+            "One copy has been reserved in your name.",
+            "Sincerely yours,"
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Dùng khuôn báo TIN XẤU cho một tin vui",
+          "fix": "I am pleased to inform you that two copies have arrived at our store.",
+          "explanation": "«I am afraid…» dành cho tin không vui, «I am pleased…» cho tin vui. Dùng ngược làm câu văn mâu thuẫn với nội dung."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-5-e2",
+          "intro": "Thư gửi công ty phần mềm. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Cloudpoint Systems Team,",
+            "Thank you for informing us about the server upgrade scheduled for June 14.",
+            "The maintenance window overlaps with the only time we can run our payroll.",
+            "Would it be possible to move the upgrade to the following night",
+            "Best regards,"
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Câu hỏi thiếu dấu hỏi",
+          "fix": "Would it be possible to move the upgrade to the following night?",
+          "explanation": "Mission chính của thư này là ĐỀ NGHỊ dời lịch, được diễn đạt bằng một câu hỏi. Thiếu dấu hỏi làm mờ đi mission đó."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-5-e3",
+          "intro": "Thư xin lỗi khách vì giao hàng chậm. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Mr. Chen,",
+            "Thank you for contacting us about parcel number TR-88214.",
+            "We are very sorry about the delay in delivering your parcel.",
+            "Your parcel will arrive sometime next week maybe.",
+            "Sincerely,"
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Thông tin mơ hồ, không cho khách biết gì",
+          "fix": "Your parcel is scheduled for delivery before noon tomorrow.",
+          "explanation": "«sometime next week maybe» là câu vô dụng với khách. Trong thư xin lỗi giao chậm, điều khách cần nhất là MỐC GIAO HÀNG cụ thể."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-5-e4",
+          "intro": "Thư từ chối lời mời diễn thuyết. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Ms. Sousa,",
+            "Thank you very much for inviting me to speak at the Regional Business Forum.",
+            "No, I can't come.",
+            "I hope you will consider me for a future event.",
+            "Yours sincerely,"
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Từ chối cộc lốc, không có đệm và không nêu lý do",
+          "fix": "I am afraid I will not be able to attend, as I will be abroad on that date.",
+          "explanation": "Từ chối lịch sự cần đủ ba phần: đệm («I am afraid») + từ chối rõ ràng + lý do ngắn. «No, I can't come» sai hoàn toàn văn phong."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-5-e5",
+          "intro": "Thư kế toán gửi hoá đơn cho khách. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Mr. Ha,",
+            "Thank you for your e-mail about order reference KM-2201.",
+            "Please note that invoices can only be reissued within ninety days of purchase.",
+            "I am attaching the VAT invoice for that order to this e-mail.",
+            "Best regards,"
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Nêu điều kiện TRƯỚC khi đáp ứng yêu cầu",
+          "fix": "Chuyển dòng này xuống SAU dòng gửi hoá đơn",
+          "explanation": "Đáp ứng yêu cầu trước, nêu điều kiện sau. Đặt điều kiện lên trước làm thư có giọng gây khó dễ, dù nội dung không sai."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-5-e6",
+          "intro": "Thư thông báo tăng giá gửi khách hàng lâu năm. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Ms. Rivera,",
+            "I am writing to inform you of a five percent increase in the price of our lighting range.",
+            "The cost of the aluminium we use has risen sharply since January.",
+            "The new prices will take effect from July 1.",
+            "Best regards,"
+          ],
+          "errorIndex": 1,
+          "errorLabel": "Báo tin xấu ngay câu đầu, không có lời cảm ơn đệm trước",
+          "fix": "Thank you for your continued business over the past three years.",
+          "explanation": "Kỹ thuật báo tin xấu: cảm ơn trước → giải thích lý do → mới đến tin chính. Đâm thẳng vào việc tăng giá làm khách phản ứng ngay từ dòng đầu."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "mission_audit",
+          "id": "t6-5-m1",
+          "directions": "Respond to the e-mail as if you were a member of the Customer Care team at Halberd Appliances. In your e-mail, answer the customer's questions and make ONE suggestion. (Khách hỏi 2 điều: máy còn bảo hành không, và nên làm gì tiếp theo.)",
+          "draft": [
+            "Dear Mr. Ellison,",
+            "Thank you for your e-mail about the Halberd dishwasher you purchased from our Riverton branch.",
+            "As our standard warranty covers twelve months, your machine is unfortunately no longer under warranty.",
+            "However, because you registered the product on our website, we can retrieve your purchase record without the paper receipt.",
+            "Please let me know if you would like me to arrange an appointment.",
+            "Best regards,",
+            "Halberd Appliances"
+          ],
+          "missions": [
+            { "text": "Trả lời câu hỏi về bảo hành", "done": true },
+            { "text": "Trả lời câu hỏi «nên làm gì tiếp theo»", "done": false },
+            { "text": "Đưa ra một gợi ý", "done": false }
+          ],
+          "explanation": "Thư trả lời rõ về bảo hành nhưng không nói khách phải làm gì tiếp, cũng không có gợi ý cụ thể. Cần thêm: «I would suggest booking a technician visit, which costs 60 dollars.»"
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-5-m2",
+          "directions": "Respond to the e-mail as if you were Swiftline Courier. In your e-mail, apologize, explain why the delay happened, and make ONE offer.",
+          "draft": [
+            "Dear Mr. Chen,",
+            "Thank you for contacting us about parcel number TR-88214.",
+            "Severe weather closed the main highway for two days last week, and all parcels routed through our northern depot were held there.",
+            "We are very sorry for the delay in delivering your parcel.",
+            "Your parcel left the depot yesterday evening and is scheduled for delivery before noon tomorrow.",
+            "We hope that you will continue to use our services.",
+            "Sincerely,",
+            "Swiftline Courier"
+          ],
+          "missions": [
+            { "text": "Xin lỗi khách hàng", "done": true },
+            { "text": "Giải thích vì sao chậm trễ", "done": true },
+            { "text": "Đưa ra một đề nghị bồi thường", "done": false }
+          ],
+          "explanation": "Thư xin lỗi và giải thích rất tốt, thông tin về kiện hàng cũng cụ thể — nhưng thiếu «offer». Cần thêm: «We would like to refund the express delivery charge of 15 dollars.»"
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-5-m3",
+          "directions": "Respond to the e-mail as if you were a customer. In your e-mail, describe the problem the maintenance will cause and ask TWO questions.",
+          "draft": [
+            "Dear Cloudpoint Systems Team,",
+            "Thank you for informing us about the server upgrade scheduled for June 14.",
+            "Our accounting team processes payroll overnight on the fourteenth of every month.",
+            "The maintenance window therefore overlaps with the only time we can run our payroll.",
+            "Would it be possible to move the upgrade to the following night?",
+            "If not, can we export our data before ten in the evening and work offline?",
+            "Best regards,",
+            "Quang Ha"
+          ],
+          "missions": [
+            { "text": "Mô tả vấn đề mà lịch bảo trì gây ra", "done": true },
+            { "text": "Câu hỏi thứ nhất", "done": true },
+            { "text": "Câu hỏi thứ hai", "done": true }
+          ],
+          "explanation": "Đủ 3 mission. Điểm đáng học: bối cảnh («chạy lương đêm 14») được nêu TRƯỚC vấn đề, nhờ vậy người đọc hiểu ngay vì sao lịch bảo trì là chuyện lớn."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-5-m4",
+          "directions": "Respond to the e-mail as if you were the Events Team. In your e-mail, express regret, make ONE alternative offer, and ask ONE question.",
+          "draft": [
+            "Dear Ms. Vo,",
+            "Thank you for your reply about the Regional Business Forum on May 26.",
+            "We are sorry that you will not be able to join us this year.",
+            "Your talk last year was one of the most highly rated sessions of the forum.",
+            "Please let me know your decision by the end of next week.",
+            "Best regards,",
+            "Elena Sousa"
+          ],
+          "missions": [
+            { "text": "Thể hiện sự tiếc nuối", "done": true },
+            { "text": "Đưa ra một phương án thay thế", "done": false },
+            { "text": "Đặt một câu hỏi", "done": false }
+          ],
+          "explanation": "Thư có lời tiếc nuối và lời khen, nhưng thiếu cả phương án thay thế lẫn câu hỏi. Câu cuối «Please let me know your decision» là vô nghĩa vì chưa hề đưa ra lựa chọn nào để chọn."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-5-m5",
+          "directions": "Respond to the e-mail as if you were Brightlite Supplies. In your e-mail, announce the price increase, state when it takes effect, and make ONE offer to help the customer.",
+          "draft": [
+            "Dear Ms. Rivera,",
+            "Thank you for your continued business with Brightlite Supplies over the past three years.",
+            "The cost of the aluminium we use in our desk lamps has risen sharply since January.",
+            "I am writing to inform you of a five percent increase in the price of our lighting range.",
+            "The new prices will take effect from July 1.",
+            "To help you plan, we are happy to honour the current prices on any order placed before June 30.",
+            "Best regards,",
+            "Brightlite Supplies"
+          ],
+          "missions": [
+            { "text": "Thông báo việc tăng giá", "done": true },
+            { "text": "Nêu thời điểm áp dụng", "done": true },
+            { "text": "Đưa ra một đề nghị hỗ trợ khách", "done": true }
+          ],
+          "explanation": "Đủ 3 mission và đúng trật tự báo tin xấu: cảm ơn → giải thích lý do → tin chính → mốc áp dụng → biện pháp giảm nhẹ. Đây là mẫu để học theo."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "compare",
+          "id": "t6-5-h1",
+          "directions": "Respond as Swiftline Courier. Apologize, explain why the delay happened, and make ONE offer.",
+          "versionA": [
+            "Dear Mr. Chen,",
+            "Thank you for contacting us about parcel number TR-88214.",
+            "We are very sorry for the delay in delivering your parcel.",
+            "There were some problems with our delivery network last week.",
+            "We would like to refund the express delivery charge of 15 dollars to your account.",
+            "Sincerely,"
+          ],
+          "versionB": [
+            "Dear Mr. Chen,",
+            "Thank you for contacting us about parcel number TR-88214.",
+            "Severe weather closed the main highway for two days last week, and all parcels routed through our northern depot were held there.",
+            "We are very sorry for the delay in delivering your parcel.",
+            "We would like to refund the express delivery charge of 15 dollars to your account.",
+            "Sincerely,"
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B nêu nguyên nhân cụ thể và đặt giải thích trước lời xin lỗi; bản A chỉ nói «some problems»" },
+            { "id": "B", "text": "Bản B có thêm một mission nữa" },
+            { "id": "C", "text": "Bản A thiếu lời đề nghị bồi thường" },
+            { "id": "D", "text": "Bản B dùng lời chào cuối trang trọng hơn" }
+          ],
+          "correctReason": "A",
+          "explanation": "Cả hai bản đều có đủ 3 mission trên danh nghĩa. Khác biệt là CHẤT LƯỢNG của phần giải thích: «some problems with our delivery network» không cho khách biết gì và không được tính là đã «explain why»."
+        },
+        {
+          "type": "compare",
+          "id": "t6-5-h2",
+          "directions": "Respond as the Events Team. Express regret, make ONE alternative offer, and ask ONE question.",
+          "versionA": [
+            "Dear Ms. Vo,",
+            "Thank you for your reply about the Regional Business Forum on May 26.",
+            "We are sorry that you will not be able to join us this year.",
+            "Your talk last year was one of the most highly rated sessions of the forum.",
+            "If you would prefer, we could record a short video message from you to play during the opening session.",
+            "Would you be available for a fifteen-minute recording before you travel?",
+            "Best regards,"
+          ],
+          "versionB": [
+            "Dear Ms. Vo,",
+            "Thank you for your reply about the Regional Business Forum on May 26.",
+            "That is a shame. We were really hoping you would come.",
+            "Maybe you can join us next year instead.",
+            "Let us know what you think.",
+            "Best regards,"
+          ],
+          "better": "A",
+          "reasons": [
+            { "id": "A", "text": "Bản A có phương án thay thế cụ thể và câu hỏi rõ ràng; bản B chỉ nói «maybe next year» và «let us know what you think»" },
+            { "id": "B", "text": "Bản A dài hơn nên đầy đủ hơn" },
+            { "id": "C", "text": "Bản B sai xưng hô" },
+            { "id": "D", "text": "Bản A dùng thì tương lai chính xác hơn" }
+          ],
+          "correctReason": "A",
+          "explanation": "«Maybe you can join us next year» không phải một đề nghị — nó không yêu cầu người nhận làm gì cụ thể. «Let us know what you think» cũng không phải câu hỏi thật sự."
+        },
+        {
+          "type": "compare",
+          "id": "t6-5-h3",
+          "directions": "Respond as Brightlite Supplies. Announce the price increase, state when it takes effect, and make ONE offer to help the customer.",
+          "versionA": [
+            "Dear Ms. Rivera,",
+            "I am writing to inform you of a five percent increase in the price of our lighting range.",
+            "The new prices will take effect from July 1.",
+            "We are happy to honour the current prices on any order placed before June 30.",
+            "Best regards,"
+          ],
+          "versionB": [
+            "Dear Ms. Rivera,",
+            "Thank you for your continued business with Brightlite Supplies over the past three years.",
+            "The cost of the aluminium we use in our desk lamps has risen sharply since January.",
+            "I am writing to inform you of a five percent increase in the price of our lighting range.",
+            "The new prices will take effect from July 1.",
+            "To help you plan, we are happy to honour the current prices on any order placed before June 30.",
+            "Best regards,"
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B cảm ơn và giải thích lý do trước khi báo tin xấu; bản A đâm thẳng vào việc tăng giá ngay câu đầu" },
+            { "id": "B", "text": "Bản A thiếu một mission" },
+            { "id": "C", "text": "Bản B có lời chào cuối trang trọng hơn" },
+            { "id": "D", "text": "Bản A sai giới từ ở câu về ngày áp dụng" }
+          ],
+          "correctReason": "A",
+          "explanation": "Bản A có ĐỦ ba mission — về mặt đếm thì không thiếu gì. Nhưng thư báo tin xấu mà không có lời cảm ơn và lý do đệm trước sẽ làm khách phản ứng ngay, đó là điểm trừ về văn phong."
+        },
+        {
+          "type": "compare",
+          "id": "t6-5-h4",
+          "directions": "Respond as a member of the Customer Care team. Answer the customer's questions (is it under warranty? what should I do next?) and make ONE suggestion.",
+          "versionA": [
+            "Dear Mr. Ellison,",
+            "Thank you for your e-mail about the Halberd dishwasher.",
+            "As our standard warranty covers twelve months, your machine is no longer under warranty.",
+            "However, because you registered the product on our website, we can retrieve your purchase record without the paper receipt.",
+            "I would suggest booking a technician visit, which costs 60 dollars including the call-out fee.",
+            "Please let me know if you would like me to arrange an appointment.",
+            "Best regards,"
+          ],
+          "versionB": [
+            "Dear Mr. Ellison,",
+            "Thank you for your e-mail about the Halberd dishwasher.",
+            "I am afraid your machine may no longer be under warranty.",
+            "You should probably contact the store where you bought it.",
+            "I hope this helps.",
+            "Best regards,"
+          ],
+          "better": "A",
+          "reasons": [
+            { "id": "A", "text": "Bản A trả lời dứt khoát có kèm lý do, dùng dữ kiện đăng ký online, và gợi ý có giá cụ thể" },
+            { "id": "B", "text": "Bản A có lời xin lỗi còn bản B thì không" },
+            { "id": "C", "text": "Bản B sai xưng hô" },
+            { "id": "D", "text": "Bản A dùng nhiều từ vựng khó hơn" }
+          ],
+          "correctReason": "A",
+          "explanation": "«may no longer be under warranty» là câu nước đôi — khách vẫn không biết câu trả lời. Bản A nêu rõ chính sách 12 tháng, dùng chi tiết đăng ký online mà đề cài sẵn, và gợi ý có con số cụ thể."
+        }
+      ]
+    }
+  ]
+}

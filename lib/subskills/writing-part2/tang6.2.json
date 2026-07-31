@@ -1,0 +1,335 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "error_spot",
+          "id": "t6-2-e1",
+          "intro": "Thư trả lời phòng Nhân sự, người ký tên trong thư đề là Owen Barrett. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear colleagues,",
+            "Thank you for your e-mail of June 9 about the new security policy.",
+            "I am writing to confirm that I have completed the password reset.",
+            "How often will we be required to change our password from now on?",
+            "Best regards,"
+          ],
+          "errorIndex": 0,
+          "errorLabel": "Nhại lại cách người ta gọi mình thay vì gọi đúng người nhận",
+          "fix": "Dear Mr. Barrett,",
+          "explanation": "«Dear colleagues» là cách Owen Barrett gọi cả nhóm. Khi bạn trả lời RIÊNG cho anh ấy, phải gọi đích danh theo chữ ký cuối thư."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-2-e2",
+          "intro": "Thư khách hàng gửi công ty du lịch. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Ms. Chandra,",
+            "Thank you for letting me know about the change to my flight.",
+            "I accept the new departure time of 6:15 a.m. on April 14.",
+            "Will the airline offer any compensation for the change",
+            "Best regards,"
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Câu hỏi thiếu dấu hỏi",
+          "fix": "Will the airline offer any compensation for the change?",
+          "explanation": "Nghe thì vặt vãnh, nhưng mission «ask a question» được chấm dựa trên việc có câu hỏi thật hay không. Thiếu dấu hỏi là tự làm mờ mission của mình."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-2-e3",
+          "intro": "Thư nhân viên khách sạn trả lời khách. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Mr. Ortiz,",
+            "Thank you for your e-mail of March 3 regarding your booking.",
+            "They provide a free airport shuttle every hour.",
+            "I would suggest booking early, as May is one of our busiest months.",
+            "Best regards,"
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Dùng «they» trong khi mình đang thay mặt khách sạn",
+          "fix": "We provide a free airport shuttle every hour.",
+          "explanation": "Bạn đang sắm vai nhân viên của khách sạn, nên phải xưng «we/our». Dùng «they» là tự tách mình khỏi vai được giao."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-2-e4",
+          "intro": "Thư gửi phòng Nhân sự. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Human Resources Team,",
+            "Thank you for informing us about the office move on November 3.",
+            "I have one item that needs special handling: a large format printer.",
+            "When will the office move?",
+            "Best regards,"
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Hỏi lại điều e-mail đề đã trả lời",
+          "fix": "Will the company provide movers to help with heavy equipment?",
+          "explanation": "Chính dòng phía trên đã nhắc «the office move on November 3». Hỏi lại điều đề đã nêu chứng tỏ bạn đọc lướt — giám khảo trừ điểm ngay."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-2-e5",
+          "intro": "Thư trả lời khách hàng khiếu nại. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Dear Ms. Benson,",
+            "Thank you for taking the time to write to us about your dinner last Saturday.",
+            "I would like to apologize for the long wait before your table was ready.",
+            "I am also very sorry that the bill was calculated incorrectly.",
+            "Sincerely,"
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Xin lỗi về một lỗi KHÔNG có trong e-mail đề",
+          "fix": "I am also very sorry that two of your dishes arrived cold.",
+          "explanation": "Khách phàn nàn về việc chờ lâu, món nguội và món giao sai — không hề nhắc đến hoá đơn. Bịa thêm lỗi làm thư mất tin cậy và không tính là hoàn thành mission."
+        },
+        {
+          "type": "error_spot",
+          "id": "t6-2-e6",
+          "intro": "Thư gửi cho một cơ quan, không biết tên người nhận. Bấm vào dòng có lỗi.",
+          "lines": [
+            "To Who It May Concern,",
+            "I am writing to inquire about renting your main hall on December 12.",
+            "Could you tell me what the hourly rate is?",
+            "I would be grateful for an early reply.",
+            "Yours faithfully,"
+          ],
+          "errorIndex": 0,
+          "errorLabel": "Viết «Who» thay vì «Whom»",
+          "fix": "To Whom It May Concern,",
+          "explanation": "«Whom» là tân ngữ của giới từ «To». Cụm này viết hoa cả bốn chữ và không bao giờ đổi thành «Who»."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "mission_audit",
+          "id": "t6-2-m1",
+          "directions": "Respond to the e-mail as if you were the manager of The Copper Kettle Restaurant. In your e-mail, make TWO apologies and make ONE offer to the customer.",
+          "draft": [
+            "Dear Ms. Benson,",
+            "Thank you for taking the time to write to us about your dinner last Saturday.",
+            "I would like to apologize for the long wait before your table was ready.",
+            "I am also very sorry that two of your dishes arrived cold and that one order was incorrect.",
+            "We have full assurance that this will not happen again.",
+            "Sincerely,",
+            "The Copper Kettle Restaurant"
+          ],
+          "missions": [
+            { "text": "Lời xin lỗi thứ nhất (chờ bàn quá lâu)", "done": true },
+            { "text": "Lời xin lỗi thứ hai (món nguội / giao sai)", "done": true },
+            { "text": "Một đề nghị bồi thường cho khách", "done": false }
+          ],
+          "explanation": "Thư xin lỗi rất tốt nhưng KHÔNG có đề nghị nào. «We have full assurance that this will not happen again» là lời trấn an, không phải «offer». Cần thêm câu kiểu «we would like to offer you a complimentary dinner»."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-2-m2",
+          "directions": "Respond to the e-mail as if you were an applicant. In your e-mail, accept the invitation and ask TWO questions about the interview.",
+          "draft": [
+            "Dear Ms. Kim,",
+            "Thank you for inviting me to an interview for the Marketing Assistant position at Brightline Media.",
+            "I am pleased to confirm that I will attend the interview at your head office on April 12.",
+            "Could you tell me how long the interview is expected to last?",
+            "I would also like to know who will be conducting the interview.",
+            "I look forward to meeting you in person.",
+            "Yours sincerely,",
+            "Daniel Pham"
+          ],
+          "missions": [
+            { "text": "Chấp nhận lời mời phỏng vấn", "done": true },
+            { "text": "Câu hỏi thứ nhất về buổi phỏng vấn", "done": true },
+            { "text": "Câu hỏi thứ hai về buổi phỏng vấn", "done": true }
+          ],
+          "explanation": "Thư này đủ cả 3 mission. Điểm đáng học: hai câu hỏi dùng HAI khuôn khác nhau («Could you tell me…» và «I would also like to know…») thay vì lặp lại một khuôn."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-2-m3",
+          "directions": "Respond to the e-mail as if you were a member of the Ardent Fitness membership team. In your e-mail, answer the member's questions and make ONE offer. (Hội viên hỏi 2 điều: ngày cuối bị tính phí, và có phải trả lại thẻ ra vào không.)",
+          "draft": [
+            "Dear Ms. Fischer,",
+            "Thank you for your e-mail of September 17 about cancelling your membership.",
+            "As our notice period is thirty days, the last payment will be taken on September 30.",
+            "If you would prefer, we can freeze your membership for six months at no cost instead of cancelling it.",
+            "We have greatly valued having you as a member for the past two years.",
+            "Best regards,",
+            "Ardent Fitness"
+          ],
+          "missions": [
+            { "text": "Trả lời câu hỏi về ngày cuối bị tính phí", "done": true },
+            { "text": "Trả lời câu hỏi về việc trả lại thẻ ra vào", "done": false },
+            { "text": "Đưa ra một đề nghị", "done": true }
+          ],
+          "explanation": "Hội viên hỏi hai điều nhưng thư chỉ trả lời một. Câu về thẻ ra vào bị bỏ quên hoàn toàn — dạng sót này rất hay xảy ra khi hai câu hỏi nằm chung một câu văn trong đề."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-2-m4",
+          "directions": "Respond to the e-mail as if you were Adrian Cole. In your e-mail, confirm whether you made the transactions and ask TWO questions about your account.",
+          "draft": [
+            "Dear Customer Support Team,",
+            "Thank you for your e-mail of July 3 about the two transactions on my account.",
+            "I can confirm that I did make both transactions on July 1.",
+            "Could you tell me the exact amounts of the two transactions in question?",
+            "Will the suspension affect my direct debits and standing orders?",
+            "I would appreciate an early reply so that my card can be reactivated.",
+            "Yours sincerely,",
+            "Adrian Cole"
+          ],
+          "missions": [
+            { "text": "Xác nhận rõ CÓ hay KHÔNG thực hiện giao dịch", "done": true },
+            { "text": "Câu hỏi thứ nhất về tài khoản", "done": true },
+            { "text": "Câu hỏi thứ hai về tài khoản", "done": true }
+          ],
+          "explanation": "Đủ cả 3 mission. Điểm đáng học: câu xác nhận đứng TRƯỚC hai câu hỏi — trả lời điều người ta hỏi trước rồi mới hỏi lại, đúng trật tự lịch sự."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t6-2-m5",
+          "directions": "Respond to the e-mail as if you were a branch supervisor. In your e-mail, describe ONE unusual result at your branch and ask TWO questions about the report.",
+          "draft": [
+            "Dear Mr. Lam,",
+            "Thank you for your e-mail of April 8 about the quarterly sales reports.",
+            "Should the report include figures from our online sales channel as well?",
+            "Who should we send the completed report to once it is finished?",
+            "I will submit the report before the end of the month.",
+            "Best regards,",
+            "Son Vo"
+          ],
+          "missions": [
+            { "text": "Mô tả MỘT kết quả bất thường tại chi nhánh", "done": false },
+            { "text": "Câu hỏi thứ nhất về báo cáo", "done": true },
+            { "text": "Câu hỏi thứ hai về báo cáo", "done": true }
+          ],
+          "explanation": "Hai câu hỏi rất tốt nhưng mission ĐẦU TIÊN bị bỏ hẳn. Cần thêm câu kiểu «Sales in February fell by thirty percent because the store was closed for refurbishment»."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "compare",
+          "id": "t6-2-h1",
+          "directions": "Respond as an applicant. Accept the invitation and ask TWO questions about the interview.",
+          "versionA": [
+            "Hi Sandra,",
+            "Thanks for the invite! I'll definitely be there on the 12th.",
+            "How long is it gonna take? And who's doing the interview?",
+            "Talk to you later!"
+          ],
+          "versionB": [
+            "Dear Ms. Kim,",
+            "Thank you for inviting me to an interview for the Marketing Assistant position.",
+            "I am pleased to confirm that I will attend at your head office on April 12.",
+            "Could you tell me how long the interview is expected to last?",
+            "I would also like to know who will be conducting the interview.",
+            "Yours sincerely,"
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Cả hai bản đủ 3 mission, nhưng bản A sai văn phong: xưng hô suồng sã, viết tắt «gonna», chào cuối casual" },
+            { "id": "B", "text": "Bản B có nhiều mission hơn" },
+            { "id": "C", "text": "Bản A sai ngữ pháp ở mọi câu" },
+            { "id": "D", "text": "Bản B nhắc lại tên vị trí ứng tuyển" }
+          ],
+          "correctReason": "A",
+          "explanation": "Bản A thực ra ĐỦ mission: nhận lời + 2 câu hỏi. Nó mất điểm hoàn toàn ở văn phong — quan hệ nhà tuyển dụng ↔ ứng viên đòi hỏi mức trang trọng cao nhất."
+        },
+        {
+          "type": "compare",
+          "id": "t6-2-h2",
+          "directions": "Respond as the manager of The Copper Kettle Restaurant. Make TWO apologies and make ONE offer.",
+          "versionA": [
+            "Dear Ms. Benson,",
+            "Thank you for taking the time to write to us about your dinner last Saturday.",
+            "I would like to apologize for the long wait before your table was ready.",
+            "I am also very sorry that two of your dishes arrived cold and that one order was incorrect.",
+            "To compensate for the inconvenience, we would like to offer you a complimentary dinner for six on your next visit.",
+            "Sincerely,"
+          ],
+          "versionB": [
+            "Dear Ms. Benson,",
+            "Thank you for your e-mail.",
+            "I am very sorry for everything that went wrong during your visit last Saturday.",
+            "Please accept my sincere apologies once again.",
+            "To compensate for the inconvenience, we would like to offer you a complimentary dinner.",
+            "Sincerely,"
+          ],
+          "better": "A",
+          "reasons": [
+            { "id": "A", "text": "Bản A xin lỗi về HAI lỗi cụ thể tách riêng; bản B gộp thành một lời xin lỗi chung nên chỉ tính được 1 mission" },
+            { "id": "B", "text": "Bản B thiếu lời đề nghị bồi thường" },
+            { "id": "C", "text": "Bản A dùng cặp mở–kết đúng hơn" },
+            { "id": "D", "text": "Bản B sai xưng hô" }
+          ],
+          "correctReason": "A",
+          "explanation": "«I am very sorry for everything that went wrong» nghe như hai lời xin lỗi nhưng thực chất chỉ là MỘT. «Please accept my sincere apologies» là nhắc lại, không phải lỗi mới. Directions ghi TWO apologies nghĩa là hai lỗi khác nhau."
+        },
+        {
+          "type": "compare",
+          "id": "t6-2-h3",
+          "directions": "Respond as a staff member at Greenfield Fitness Centre. Provide the information the customer asked for and make ONE recommendation. (Khách làm việc đến 7 giờ tối các ngày trong tuần.)",
+          "versionA": [
+            "Dear Mr. Feld,",
+            "Thank you for your interest in Greenfield Fitness Centre.",
+            "Our annual membership fee is 540 dollars, or 50 dollars per month.",
+            "The swimming pool is open to all members, and we are open until eleven at night on weekdays.",
+            "I recommend that you visit our centre before seven o'clock, when it is quietest.",
+            "Best regards,"
+          ],
+          "versionB": [
+            "Dear Mr. Feld,",
+            "Thank you for your interest in Greenfield Fitness Centre.",
+            "Our annual membership fee is 540 dollars, or 50 dollars per month.",
+            "The swimming pool is open to all members, and we are open until eleven at night on weekdays.",
+            "Since you work until seven, I would recommend our premium plan, which gives you full pool access in the evening.",
+            "Best regards,"
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Khuyến nghị của bản B bám vào chi tiết của khách; bản A khuyên đến trước 7 giờ trong khi khách làm việc đến 7 giờ" },
+            { "id": "B", "text": "Bản B cung cấp nhiều thông tin hơn" },
+            { "id": "C", "text": "Bản A thiếu một mission" },
+            { "id": "D", "text": "Bản B dùng câu dài hơn nên trang trọng hơn" }
+          ],
+          "correctReason": "A",
+          "explanation": "Hai bản giống hệt nhau trừ câu cuối. Bản A đưa ra khuyến nghị MÂU THUẪN với hoàn cảnh khách vừa nêu — dấu hiệu rõ nhất của việc không đọc kỹ đề."
+        },
+        {
+          "type": "compare",
+          "id": "t6-2-h4",
+          "directions": "Respond as a member of staff at Halberd Appliances. Answer the customer's questions and make ONE suggestion. (Máy mua được 14 tháng; khách không còn hoá đơn giấy nhưng đã đăng ký sản phẩm online.)",
+          "versionA": [
+            "Dear Mr. Ellison,",
+            "Thank you for your e-mail about the Halberd dishwasher.",
+            "Unfortunately, we cannot help you because you do not have the receipt.",
+            "Please visit the store where you bought the machine.",
+            "Best regards,"
+          ],
+          "versionB": [
+            "Dear Mr. Ellison,",
+            "Thank you for your e-mail about the Halberd dishwasher you purchased from our Riverton branch.",
+            "As our standard warranty covers twelve months, your machine is unfortunately no longer under warranty.",
+            "However, because you registered the product on our website, we can retrieve your purchase record without the paper receipt.",
+            "I would suggest booking a technician visit, which costs 60 dollars including the call-out fee.",
+            "Best regards,"
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B dùng đúng dữ kiện đề cài sẵn (14 tháng, đăng ký online) và có gợi ý; bản A bỏ qua chúng và từ chối thẳng" },
+            { "id": "B", "text": "Bản B lịch sự hơn ở lời chào cuối" },
+            { "id": "C", "text": "Bản A sai ngữ pháp" },
+            { "id": "D", "text": "Bản B dài hơn nên đầy đủ hơn" }
+          ],
+          "correctReason": "A",
+          "explanation": "Đề TOEIC luôn cài sẵn «lối thoát» — ở đây là việc khách đã đăng ký online. Bản A bỏ qua chi tiết đó, từ chối khách, và cũng không đưa ra gợi ý nào nên thiếu luôn một mission."
+        }
+      ]
+    }
+  ]
+}
