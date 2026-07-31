@@ -3,6 +3,7 @@ import Link from "next/link";
 import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { WRITING_P2_SKILLS } from "@/lib/subskills/writing-part2";
+import { countPhrases } from "@/lib/subskills/writing-part2/theory";
 
 export const metadata: Metadata = { title: "Writing Part 2 — Subskills TOEIC" };
 
@@ -76,6 +77,40 @@ export default async function WritingPart2Page() {
       </div>
 
       <div style={{ height: 1, background: "var(--border)", marginBottom: "1.5rem" }} />
+
+      {/* Lý thuyết & kho mẫu câu */}
+      <Link
+        href="/subskills/writing/part2/ly-thuyet"
+        className="r-row"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "1.1rem",
+          padding: "1.2rem 1.5rem",
+          marginBottom: "1.5rem",
+          borderRadius: "var(--radius-lg)",
+          border: "1.5px solid var(--accent-primary)",
+          background: "linear-gradient(135deg, rgba(59,130,246,0.09), rgba(59,130,246,0.02))",
+          textDecoration: "none",
+          boxShadow: "var(--shadow-sm)",
+        }}
+      >
+        <span style={{ fontSize: "1.5rem", flexShrink: 0, lineHeight: 1 }}>📘</span>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.15rem" }}>
+            Lý thuyết &amp; kho mẫu câu
+          </div>
+          <p style={{ fontSize: "0.8rem", color: "var(--text-secondary)", lineHeight: 1.55, margin: 0 }}>
+            {countPhrases()} mẫu câu theo 7 nhóm chức năng: xưng hô · câu chào · cung cấp thông tin · đề nghị ·
+            xin lỗi · câu kết · lời chào cuối. Đọc xong làm quiz để kiểm tra đã thuộc chưa.
+          </p>
+        </div>
+        <span className="r-arrow" style={{ fontSize: "0.8rem", color: "var(--accent-primary)", flexShrink: 0 }}>→</span>
+      </Link>
+
+      <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 700, marginBottom: "0.6rem" }}>
+        Luyện tập theo tầng
+      </p>
 
       <div
         className="stagger-children animate-slide-up"
