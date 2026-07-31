@@ -1,0 +1,212 @@
+{
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "matching",
+          "id": "t0-1-e1",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu MỞ ĐẦU e-mail.",
+          "pairs": [
+            { "left": "Thank you for", "right": "your e-mail dated June 5." },
+            { "left": "I am writing to", "right": "let you know about the delay." },
+            { "left": "I have just received", "right": "your e-mail regarding the order." },
+            { "left": "I was very concerned", "right": "to learn about your problem." },
+            { "left": "This e-mail is to let you know", "right": "that I haven't received my book yet." }
+          ],
+          "explanation": "5 khuôn mở đầu hay gặp nhất. Nhớ: 'Thank you for your e-mail dated + ngày' và 'regarding/concerning/about + vấn đề' là cặp đi kèm cố định."
+        },
+        {
+          "type": "matching",
+          "id": "t0-1-e2",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu XIN LỖI.",
+          "pairs": [
+            { "left": "I would like to apologize", "right": "for the inconvenience." },
+            { "left": "Please accept", "right": "my sincere apology." },
+            { "left": "We are very sorry", "right": "for the delay in delivery." },
+            { "left": "On behalf of our store,", "right": "I would like to apologize." },
+            { "left": "Thank you for pointing", "right": "this matter out to us." }
+          ],
+          "explanation": "Sau 'apologize' và 'sorry' luôn là giới từ FOR. 'On behalf of...' dùng khi bạn xin lỗi thay mặt công ty — rất hợp với vai nhân viên."
+        },
+        {
+          "type": "matching",
+          "id": "t0-1-e3",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu HỎI & ĐỀ NGHỊ.",
+          "pairs": [
+            { "left": "Would you give us", "right": "a call or visit us?" },
+            { "left": "Could you wait", "right": "a few more days?" },
+            { "left": "I suggest that you should", "right": "come early from now on." },
+            { "left": "One thing I can recommend", "right": "is that we take the subway." },
+            { "left": "Why don't you", "right": "visit our store this weekend?" }
+          ],
+          "explanation": "Đây là các khuôn tạo câu hỏi lịch sự. 'Would you...?' và 'Could you...?' lịch sự hơn 'Can you...?' — trong e-mail business nên ưu tiên hai cái đầu."
+        },
+        {
+          "type": "matching",
+          "id": "t0-1-e4",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm CÂU KẾT.",
+          "pairs": [
+            { "left": "I look forward to", "right": "hearing from you soon." },
+            { "left": "Please let me know", "right": "your decision." },
+            { "left": "An early reply would be", "right": "greatly appreciated." },
+            { "left": "Please send your response", "right": "by the end of November." },
+            { "left": "If you have any further queries,", "right": "please contact me." }
+          ],
+          "explanation": "Câu kết cho e-mail đang chờ hồi âm. Chú ý 'look forward TO + V-ing' (hearing, chứ không phải hear) — đây là lỗi rất phổ biến."
+        },
+        {
+          "type": "matching",
+          "id": "t0-1-e5",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu BỒI THƯỜNG & TRẤN AN.",
+          "pairs": [
+            { "left": "To compensate for the inconvenience,", "right": "we would like to offer you a discount." },
+            { "left": "We will replace ordered items or", "right": "give you a full refund instantly." },
+            { "left": "We have full assurance that", "right": "it will not happen again." },
+            { "left": "We hope that you will", "right": "continue to use our services." },
+            { "left": "We expect that you will", "right": "continue shopping with us." }
+          ],
+          "explanation": "Khi đóng vai nhân viên phải xử lý khiếu nại, sau lời xin lỗi thường có một câu bồi thường. Nhóm này ghi nhớ được là viết mission 'xin lỗi' rất nhanh."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "word_bank",
+          "id": "t0-1-m1",
+          "sentence": "I am ___ to ___ you know about the delivery delay.",
+          "bank": ["writing", "let", "written", "letting", "write", "lets"],
+          "answers": ["writing", "let"],
+          "explanation": "'I am writing to...' là khuôn mở đầu chuẩn (thì hiện tại tiếp diễn). Sau 'to' luôn là động từ nguyên mẫu: to LET, không phải to letting."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-1-m2",
+          "sentence": "Thank you for your e-mail ___ June 5 ___ the delivery problem.",
+          "bank": ["dated", "regarding", "date", "regard", "dating", "regards"],
+          "answers": ["dated", "regarding"],
+          "explanation": "'e-mail dated + ngày' = e-mail đề ngày. 'regarding + vấn đề' = về việc gì. Cả hai đều là cụm cố định, học thuộc nguyên khối."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-1-m3",
+          "sentence": "I would like to ___ for the ___ caused.",
+          "bank": ["apologize", "inconvenience", "apology", "inconvenient", "apologizing", "inconveniently"],
+          "answers": ["apologize", "inconvenience"],
+          "explanation": "Sau 'would like to' là động từ nguyên mẫu → apologize (động từ), không phải apology (danh từ). Sau 'the' là danh từ → inconvenience."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-1-m4",
+          "sentence": "Please ___ my sincere ___.",
+          "bank": ["accept", "apology", "accepted", "apologize", "acceptance", "apologetic"],
+          "answers": ["accept", "apology"],
+          "explanation": "Câu mệnh lệnh lịch sự bắt đầu bằng 'Please + V nguyên mẫu'. Lần này cần DANH TỪ apology vì đứng sau tính từ 'sincere'."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-1-m5",
+          "sentence": "I look ___ to ___ from you soon.",
+          "bank": ["forward", "hearing", "forwards", "hear", "forwarded", "heard"],
+          "answers": ["forward", "hearing"],
+          "explanation": "Bẫy kinh điển: 'look forward to' — chữ 'to' ở đây là GIỚI TỪ, nên theo sau phải là V-ing (hearing), không phải 'hear'."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-1-m6",
+          "sentence": "An early ___ would be greatly ___.",
+          "bank": ["reply", "appreciated", "replied", "appreciate", "replying", "appreciation"],
+          "answers": ["reply", "appreciated"],
+          "explanation": "'An early reply' = một hồi âm sớm (danh từ sau mạo từ 'an'). 'would be appreciated' là câu bị động — cách nói lịch sự thay cho 'Reply soon!'."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-1-m7",
+          "sentence": "We will ___ the ordered items or give you a full ___.",
+          "bank": ["replace", "refund", "replaced", "refunded", "replacing", "refunds"],
+          "answers": ["replace", "refund"],
+          "explanation": "Sau 'will' là V nguyên mẫu → replace. 'a full refund' = hoàn tiền toàn bộ, danh từ số ít sau mạo từ 'a'."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-1-m8",
+          "sentence": "If you have any further ___, please ___ me without hesitation.",
+          "bank": ["queries", "contact", "query", "contacted", "querying", "contacting"],
+          "answers": ["queries", "contact"],
+          "explanation": "Sau 'any further' dùng danh từ số nhiều → queries. Sau 'please' là V nguyên mẫu → contact."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "recall",
+          "id": "t0-1-h1",
+          "hintVi": "Xin hãy chấp nhận lời xin lỗi chân thành của tôi.",
+          "answer": "Please accept my sincere apology.",
+          "accepted": ["Please accept my sincere apologies."],
+          "explanation": "Câu xin lỗi ngắn gọn, dùng được ở gần như mọi e-mail xin lỗi."
+        },
+        {
+          "type": "recall",
+          "id": "t0-1-h2",
+          "hintVi": "Tôi mong sớm nhận được hồi âm từ bạn.",
+          "answer": "I look forward to hearing from you soon.",
+          "accepted": ["I am looking forward to hearing from you soon.", "I'm looking forward to hearing from you soon."],
+          "explanation": "Nhớ: to + HEARING. Cả 'I look forward' và 'I am looking forward' đều đúng."
+        },
+        {
+          "type": "recall",
+          "id": "t0-1-h3",
+          "hintVi": "Cảm ơn vì đã chỉ ra vấn đề này cho chúng tôi.",
+          "answer": "Thank you for pointing this matter out to us.",
+          "accepted": ["Thank you for pointing out this matter to us."],
+          "explanation": "'point out' tách được: point this matter out = point out this matter. Cả hai đều đúng."
+        },
+        {
+          "type": "recall",
+          "id": "t0-1-h4",
+          "hintVi": "Xin vui lòng cho tôi biết quyết định của bạn.",
+          "answer": "Please let me know your decision.",
+          "accepted": ["Please let me know about your decision."],
+          "explanation": "'let me know + thông tin' — cực kỳ thông dụng làm câu kết khi bạn vừa đưa ra lựa chọn cho người nhận."
+        },
+        {
+          "type": "recall",
+          "id": "t0-1-h5",
+          "hintVi": "Tôi viết thư này để phàn nàn về chiếc máy photocopy.",
+          "answer": "I am writing to complain about the copier.",
+          "accepted": ["I'm writing to complain about the copier.", "I am writing to complain about the photocopier."],
+          "explanation": "'complain ABOUT + vấn đề'. Đây là câu mở đầu chuẩn khi bạn đóng vai khách hàng khiếu nại."
+        },
+        {
+          "type": "recall",
+          "id": "t0-1-h6",
+          "hintVi": "Chúng tôi đảm bảo chắc chắn rằng chuyện này sẽ không tái diễn.",
+          "answer": "We have full assurance that it will not happen again.",
+          "accepted": ["We have full assurance that it won't happen again."],
+          "explanation": "Câu trấn an khách hàng sau khi xin lỗi. Dùng khi mission là 'apologize'."
+        },
+        {
+          "type": "recall",
+          "id": "t0-1-h7",
+          "hintVi": "Bạn có thể đợi thêm vài ngày nữa được không?",
+          "answer": "Could you wait a few more days?",
+          "accepted": ["Could you wait for a few more days?", "Can you wait a few more days?", "Would you wait a few more days?"],
+          "explanation": "Câu hỏi lịch sự. 'a few more days' = thêm vài ngày nữa. Nhớ dấu hỏi ở cuối."
+        },
+        {
+          "type": "recall",
+          "id": "t0-1-h8",
+          "hintVi": "Chúng tôi hy vọng bạn sẽ tiếp tục sử dụng dịch vụ của chúng tôi.",
+          "answer": "We hope that you will continue to use our services.",
+          "accepted": ["We hope you will continue to use our services.", "We hope that you will continue using our services."],
+          "explanation": "Câu kết thiện chí của doanh nghiệp gửi khách hàng. 'that' có thể lược bỏ."
+        }
+      ]
+    }
+  ]
+}

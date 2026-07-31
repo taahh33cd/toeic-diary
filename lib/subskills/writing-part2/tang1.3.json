@@ -1,0 +1,411 @@
+{
+  "emails": {
+    "A": {
+      "from": "Peter Nowak — Purchasing, Alden Office Supplies",
+      "to": "Vertex Paper Company",
+      "subject": "Damaged shipment — order #4471",
+      "sent": "February 8, 2:15 p.m.",
+      "body": [
+        "Dear Sir or Madam,",
+        "We received order #4471 this morning, but eight of the twenty boxes were badly damaged and the paper inside is unusable. This is the second time this has happened with a shipment from your company. We need replacements before the end of next week, as we have already promised the stock to our own customers.",
+        "Yours faithfully,",
+        "Peter Nowak"
+      ],
+      "directions": "Respond to the e-mail as if you were a customer service representative at Vertex Paper Company. In your e-mail, make an apology, explain why the problem happened, and ask ONE question."
+    },
+    "B": {
+      "from": "Elena Sousa — Events Team",
+      "to": "Registered participants",
+      "subject": "Regional Business Forum — final reminder",
+      "sent": "May 19, 4:30 p.m.",
+      "body": [
+        "Dear participant,",
+        "This is a reminder that the Regional Business Forum will take place on May 26 at the Fairmount Convention Centre. Registration opens at eight thirty in the morning. Lunch will be provided, so please let us know if you have any dietary requirements. The full programme is attached to this e-mail.",
+        "Best regards,",
+        "Elena Sousa — Events Team"
+      ],
+      "directions": "Respond to the e-mail as if you were a registered participant. In your e-mail, provide the information requested and ask TWO questions about the forum."
+    },
+    "C": {
+      "from": "Hannah Reyes",
+      "to": "Brookside Property Management",
+      "subject": "Heating in apartment 12B",
+      "sent": "December 6, 7:55 a.m.",
+      "body": [
+        "Dear Property Manager,",
+        "The heating in my apartment has not worked properly since last Thursday. The radiator in the living room stays cold even when the thermostat is set to the maximum. I reported this by telephone on Friday but no one has come yet. I work from home, so I am available any weekday between nine and five.",
+        "Sincerely,",
+        "Hannah Reyes — Apartment 12B"
+      ],
+      "directions": "Respond to the e-mail as if you were the property manager. In your e-mail, apologize for the delay and give TWO pieces of information about the repair."
+    },
+    "D": {
+      "from": "Toby Ellison",
+      "to": "Halberd Appliances — Customer Care",
+      "subject": "Warranty on my dishwasher",
+      "sent": "August 30, 1:10 p.m.",
+      "body": [
+        "To Whom It May Concern,",
+        "I bought a Halberd dishwasher from your Riverton branch fourteen months ago. It has now stopped draining and the display shows an error code. I no longer have the paper receipt, but I paid by credit card and I registered the product on your website when I bought it. Is the machine still covered by the warranty, and what should I do next?",
+        "Best regards,",
+        "Toby Ellison"
+      ],
+      "directions": "Respond to the e-mail as if you were a member of the Customer Care team at Halberd Appliances. In your e-mail, answer the customer's questions and make ONE suggestion."
+    }
+  },
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t1-3-e1",
+          "emailRef": "A",
+          "question": "Directions yêu cầu bạn làm bao nhiêu mission?",
+          "options": [
+            { "id": "A", "text": "2 mission" },
+            { "id": "B", "text": "3 mission" },
+            { "id": "C", "text": "4 mission" },
+            { "id": "D", "text": "1 mission" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'make an apology' + 'explain why the problem happened' + 'ask ONE question' = 3 mission. Đây là dạng mission TỔNG HỢP: xin lỗi, giải thích, hỏi."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-e2",
+          "emailRef": "A",
+          "question": "Mission 2 yêu cầu bạn làm gì?",
+          "options": [
+            { "id": "A", "text": "Giải thích lý do xảy ra sự cố" },
+            { "id": "B", "text": "Hứa sẽ hoàn tiền" },
+            { "id": "C", "text": "Từ chối trách nhiệm" },
+            { "id": "D", "text": "Hỏi khách hai câu" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "'explain why the problem happened'. Bạn được phép TỰ NGHĨ RA lý do hợp lý — ví dụ lỗi khâu đóng gói hoặc hư hỏng trong quá trình vận chuyển."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-e3",
+          "emailRef": "B",
+          "question": "Directions yêu cầu bạn làm bao nhiêu mission?",
+          "options": [
+            { "id": "A", "text": "1 mission" },
+            { "id": "B", "text": "2 mission" },
+            { "id": "C", "text": "3 mission" },
+            { "id": "D", "text": "4 mission" }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "'provide the information requested' = 1 + 'ask TWO questions' = 2. Tổng 3 mission."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-e4",
+          "emailRef": "B",
+          "question": "'Provide the information requested' — e-mail đề đang xin thông tin gì ở bạn?",
+          "options": [
+            { "id": "A", "text": "Số điện thoại liên lạc" },
+            { "id": "B", "text": "Yêu cầu về chế độ ăn (dietary requirements)" },
+            { "id": "C", "text": "Số người đi cùng" },
+            { "id": "D", "text": "Địa chỉ nhận tài liệu" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'please let us know if you have any dietary requirements'. Đây là yêu cầu duy nhất trong thân thư — phải nêu rõ bạn ăn chay, dị ứng, hoặc không có yêu cầu gì."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-e5",
+          "emailRef": "C",
+          "question": "Directions yêu cầu bạn làm bao nhiêu mission?",
+          "options": [
+            { "id": "A", "text": "2 mission" },
+            { "id": "B", "text": "3 mission" },
+            { "id": "C", "text": "4 mission" },
+            { "id": "D", "text": "1 mission" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'apologize for the delay' = 1 + 'give TWO pieces of information' = 2. Tổng 3 mission."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-e6",
+          "emailRef": "C",
+          "question": "Bạn phải xin lỗi về điều gì cụ thể?",
+          "options": [
+            { "id": "A", "text": "Việc hệ thống sưởi bị hỏng" },
+            { "id": "B", "text": "Việc chậm cử người đến sửa" },
+            { "id": "C", "text": "Việc tăng tiền thuê nhà" },
+            { "id": "D", "text": "Việc nhân viên trả lời điện thoại thiếu lịch sự" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Directions ghi rõ 'apologize for THE DELAY'. Khách đã báo từ thứ Sáu mà chưa ai đến — lời xin lỗi phải nhắm đúng vào sự chậm trễ đó."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-e7",
+          "emailRef": "D",
+          "question": "Directions yêu cầu bạn làm gì ngoài việc trả lời câu hỏi của khách?",
+          "options": [
+            { "id": "A", "text": "Xin lỗi khách" },
+            { "id": "B", "text": "Đưa ra một gợi ý" },
+            { "id": "C", "text": "Hỏi khách hai câu" },
+            { "id": "D", "text": "Từ chối bảo hành" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'make ONE suggestion'. Ví dụ: gợi ý khách mang máy tới trung tâm bảo hành gần nhất, hoặc gợi ý đặt lịch kỹ thuật viên đến nhà."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-e8",
+          "emailRef": "D",
+          "question": "Khách hỏi bao nhiêu câu trong thân e-mail?",
+          "options": [
+            { "id": "A", "text": "1 câu" },
+            { "id": "B", "text": "2 câu" },
+            { "id": "C", "text": "3 câu" },
+            { "id": "D", "text": "Không có câu hỏi nào" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'Is the machine still covered by the warranty?' và 'what should I do next?' — hai câu hỏi nằm trong CÙNG một câu văn, nối bằng 'and'. Rất dễ đếm sót."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t1-3-m1",
+          "emailRef": "A",
+          "question": "Bạn đóng vai ai?",
+          "options": [
+            { "id": "A", "text": "Peter Nowak — bộ phận mua hàng của Alden" },
+            { "id": "B", "text": "Nhân viên chăm sóc khách hàng của Vertex Paper" },
+            { "id": "C", "text": "Nhân viên công ty vận chuyển" },
+            { "id": "D", "text": "Khách hàng của Alden Office Supplies" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'as if you were a customer service representative at Vertex Paper Company' — bạn là bên GÂY RA lỗi, nên phải xin lỗi và giải thích."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-m2",
+          "emailRef": "A",
+          "question": "E-mail đề mở bằng 'Dear Sir or Madam' và kết bằng 'Yours faithfully'. Cặp này cho biết điều gì?",
+          "options": [
+            { "id": "A", "text": "Người viết đang tức giận" },
+            { "id": "B", "text": "Đây là cặp mở–kết chuẩn của tiếng Anh-Anh khi không biết tên người nhận" },
+            { "id": "C", "text": "Người viết là cấp trên" },
+            { "id": "D", "text": "Đây là e-mail cá nhân, không phải công việc" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Quy tắc Anh-Anh: 'Dear Sir or Madam' → 'Yours faithfully'. Nếu mở bằng tên cụ thể ('Dear Mr. Nowak') thì kết bằng 'Yours sincerely'."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-m3",
+          "emailRef": "B",
+          "question": "Bạn đóng vai ai?",
+          "options": [
+            { "id": "A", "text": "Elena Sousa — ban tổ chức" },
+            { "id": "B", "text": "Một người đã đăng ký tham dự diễn đàn" },
+            { "id": "C", "text": "Diễn giả của diễn đàn" },
+            { "id": "D", "text": "Nhân viên trung tâm hội nghị Fairmount" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'as if you were a registered participant' — bạn là người ĐÃ đăng ký, nên không được hỏi 'làm sao để đăng ký'."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-m4",
+          "emailRef": "B",
+          "question": "Xưng hô nào phù hợp nhất cho e-mail trả lời?",
+          "options": [
+            { "id": "A", "text": "Dear participant," },
+            { "id": "B", "text": "Dear Ms. Sousa," },
+            { "id": "C", "text": "Hi Elena," },
+            { "id": "D", "text": "Dear Events," }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Người ký tên là Elena Sousa → 'Dear Ms. Sousa'. 'Dear participant' là cách họ gọi bạn — đừng nhại lại."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-m5",
+          "emailRef": "C",
+          "question": "Bạn đóng vai ai, và quan hệ giữa hai bên là gì?",
+          "options": [
+            { "id": "A", "text": "Người thuê nhà viết cho chủ nhà" },
+            { "id": "B", "text": "Quản lý toà nhà viết cho người thuê" },
+            { "id": "C", "text": "Thợ sửa chữa viết cho người thuê" },
+            { "id": "D", "text": "Hai người hàng xóm viết cho nhau" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'as if you were the property manager'. Quan hệ nhà cung cấp dịch vụ ↔ khách hàng, nên vẫn phải trang trọng và nhận trách nhiệm."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-m6",
+          "emailRef": "C",
+          "question": "Khách ký tên 'Hannah Reyes — Apartment 12B'. Xưng hô nào đúng?",
+          "options": [
+            { "id": "A", "text": "Dear Apartment 12B," },
+            { "id": "B", "text": "Dear Ms. Reyes," },
+            { "id": "C", "text": "Dear Hannah Reyes Madam," },
+            { "id": "D", "text": "Hi Hannah," }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'Reyes' là họ. Số căn hộ chỉ là thông tin định danh, không phải cách xưng hô. Không ghép 'Dear + họ tên đầy đủ + Madam'."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-m7",
+          "emailRef": "D",
+          "question": "E-mail đề mở bằng 'To Whom It May Concern'. Khi trả lời, bạn nên xưng hô thế nào?",
+          "options": [
+            { "id": "A", "text": "To Whom It May Concern," },
+            { "id": "B", "text": "Dear Mr. Ellison," },
+            { "id": "C", "text": "Dear Customer," },
+            { "id": "D", "text": "Hi Toby," }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Khách không biết tên bạn nên phải dùng 'To Whom It May Concern'. Nhưng BẠN biết tên khách (Toby Ellison) → dùng 'Dear Mr. Ellison'. Đừng nhại lại cách xưng hô của họ."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-m8",
+          "emailRef": "D",
+          "question": "Với vai nhân viên Customer Care, giọng văn nào phù hợp nhất?",
+          "options": [
+            { "id": "A", "text": "Ngắn gọn và cứng rắn, nêu thẳng quy định" },
+            { "id": "B", "text": "Lịch sự, chủ động hỗ trợ, xưng 'we' thay mặt công ty" },
+            { "id": "C", "text": "Thân mật như bạn bè để khách thấy dễ chịu" },
+            { "id": "D", "text": "Xin lỗi liên tục trong mọi câu" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Vai chăm sóc khách hàng cần lịch sự và giải quyết được việc. Xin lỗi quá nhiều làm loãng nội dung, còn cứng rắn quá thì sai văn phong dịch vụ."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t1-3-h1",
+          "emailRef": "A",
+          "question": "Câu hỏi duy nhất bạn được phép đặt nên nhắm vào đâu để hữu ích nhất?",
+          "options": [
+            { "id": "A", "text": "Would you like us to send replacements or issue a credit note?" },
+            { "id": "B", "text": "How many boxes did you order in total?" },
+            { "id": "C", "text": "Why did you not check the boxes on arrival?" },
+            { "id": "D", "text": "Have you ordered from us before?" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Chỉ có MỘT câu hỏi nên phải chọn câu giúp giải quyết vấn đề. B và D đã có sẵn trong e-mail đề (20 hộp, và 'this is the second time'). C đổ lỗi cho khách."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-h2",
+          "emailRef": "A",
+          "question": "Khách viết 'This is the second time this has happened'. Chi tiết này ảnh hưởng thế nào tới thư trả lời?",
+          "options": [
+            { "id": "A", "text": "Không ảnh hưởng gì, cứ viết như lần đầu" },
+            { "id": "B", "text": "Lời xin lỗi phải nặng hơn và nên hứa biện pháp ngăn tái diễn" },
+            { "id": "C", "text": "Bạn nên yêu cầu khách chứng minh lần trước" },
+            { "id": "D", "text": "Bạn nên từ chối vì khách hay khiếu nại" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Sự cố lặp lại đòi hỏi câu như 'We have full assurance that it will not happen again.' Bỏ qua chi tiết này là dấu hiệu rõ nhất của việc đọc lướt đề."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-h3",
+          "emailRef": "B",
+          "question": "Chọn HAI câu hỏi phù hợp nhất về diễn đàn.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Is parking available at the convention centre?" },
+            { "id": "B", "text": "Will the sessions be recorded for participants who arrive late?" },
+            { "id": "C", "text": "What time does registration open?" },
+            { "id": "D", "text": "Where will the forum be held?" }
+          ],
+          "correctAnswers": ["A", "B"],
+          "explanation": "C và D đã có trong đề ('eight thirty in the morning', 'Fairmount Convention Centre'). Câu hỏi tốt phải nhắm vào khoảng trống đề chưa nói."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-h4",
+          "emailRef": "B",
+          "question": "'The full programme is attached to this e-mail.' Câu này nên xử lý thế nào?",
+          "options": [
+            { "id": "A", "text": "Hỏi lại xin bản chương trình vì bạn chưa nhận được" },
+            { "id": "B", "text": "Cảm ơn về tài liệu đính kèm — không tạo mission mới" },
+            { "id": "C", "text": "Bỏ qua hoàn toàn, không được nhắc đến" },
+            { "id": "D", "text": "Yêu cầu họ gửi bản in qua bưu điện" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Đây là câu cung cấp thông tin, không phải yêu cầu. Cảm ơn một câu là đủ. Xin lại tài liệu họ vừa gửi là lỗi đọc hiểu rõ ràng."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-h5",
+          "emailRef": "C",
+          "question": "Chọn HAI thông tin về việc sửa chữa phù hợp nhất để đưa vào thư.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Kỹ thuật viên sẽ đến vào thứ Tư trong khoảng từ 10 giờ đến 12 giờ" },
+            { "id": "B", "text": "Việc sửa chữa hoàn toàn miễn phí cho người thuê" },
+            { "id": "C", "text": "Tiền thuê nhà tháng tới sẽ tăng" },
+            { "id": "D", "text": "Bạn nên tự mua một máy sưởi mới" }
+          ],
+          "correctAnswers": ["A", "B"],
+          "explanation": "Khách đã nói rảnh 'any weekday between nine and five' → A khớp hoàn hảo với chi tiết đó. B là thông tin khách quan tâm. C lạc đề, D là đùn đẩy trách nhiệm."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-h6",
+          "emailRef": "C",
+          "question": "Khách viết 'I reported this by telephone on Friday but no one has come yet.' Chi tiết này bắt buộc bạn phải làm gì?",
+          "options": [
+            { "id": "A", "text": "Yêu cầu khách gọi lại lần nữa" },
+            { "id": "B", "text": "Thừa nhận và xin lỗi cụ thể về việc không phản hồi cuộc gọi thứ Sáu" },
+            { "id": "C", "text": "Giải thích rằng khách đã gọi nhầm số" },
+            { "id": "D", "text": "Không cần đề cập vì Directions không nhắc tới" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Directions bảo 'apologize for the delay' — chính là sự chậm trễ này. Lời xin lỗi chung chung sẽ yếu; nhắc đúng 'your call on Friday' cho thấy bạn đọc kỹ."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-h7",
+          "emailRef": "D",
+          "question": "Máy mua được 14 tháng. Vì sao chi tiết này quan trọng?",
+          "options": [
+            { "id": "A", "text": "Không quan trọng, chỉ là thông tin nền" },
+            { "id": "B", "text": "Nó quyết định câu trả lời cho câu hỏi về bảo hành" },
+            { "id": "C", "text": "Nó cho biết khách là khách quen" },
+            { "id": "D", "text": "Nó cho biết máy đã hết hạn sử dụng" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Bảo hành thường 12 tháng → 14 tháng là đã quá hạn. Bạn phải trả lời dứt khoát (còn/hết bảo hành) rồi mới gợi ý phương án. Bỏ qua con số này là trả lời trống rỗng."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-h8",
+          "emailRef": "D",
+          "question": "Khách nói không còn hoá đơn giấy nhưng đã thanh toán bằng thẻ và đăng ký sản phẩm online. Bạn nên xử lý thế nào?",
+          "options": [
+            { "id": "A", "text": "Từ chối hỗ trợ vì không có hoá đơn" },
+            { "id": "B", "text": "Cho biết bản đăng ký online đủ để tra cứu, khách không cần hoá đơn giấy" },
+            { "id": "C", "text": "Yêu cầu khách tới cửa hàng xin cấp lại hoá đơn" },
+            { "id": "D", "text": "Bỏ qua chi tiết này vì Directions không nhắc" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Khách chủ động nêu chi tiết này chính là để bạn xử lý. Đề TOEIC luôn cài sẵn 'lối thoát' — nhận ra và dùng nó là dấu hiệu đọc hiểu tốt."
+        }
+      ]
+    }
+  ]
+}

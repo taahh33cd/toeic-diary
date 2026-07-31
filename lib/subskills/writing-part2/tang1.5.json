@@ -1,0 +1,412 @@
+{
+  "emails": {
+    "A": {
+      "from": "Customer Support — Willowbank Bank",
+      "to": "Mr. Adrian Cole",
+      "subject": "Unusual activity on your account",
+      "sent": "July 3, 10:02 a.m.",
+      "body": [
+        "Dear Mr. Cole,",
+        "We noticed two transactions on your account on July 1 that do not match your usual spending pattern. As a precaution, we have temporarily suspended your debit card. To restore it, please visit any branch with a form of photo identification. If you did make these transactions, simply reply to this e-mail and we will reactivate the card within one working day.",
+        "Sincerely,",
+        "Customer Support — Willowbank Bank"
+      ],
+      "directions": "Respond to the e-mail as if you were Adrian Cole. In your e-mail, confirm whether you made the transactions and ask TWO questions about your account."
+    },
+    "B": {
+      "from": "Naomi Fischer",
+      "to": "Ardent Fitness — Membership",
+      "subject": "Cancelling my membership",
+      "sent": "September 17, 9:25 p.m.",
+      "body": [
+        "Dear Membership Team,",
+        "I have been a member of your gym for two years, but I am moving to another city next month and would like to cancel my membership from October 1. I understand there may be a notice period. Please confirm the last date I will be charged and let me know whether I need to return my access card.",
+        "Best regards,",
+        "Naomi Fischer"
+      ],
+      "directions": "Respond to the e-mail as if you were a member of the Ardent Fitness membership team. In your e-mail, answer the member's questions and make ONE offer."
+    },
+    "C": {
+      "from": "Victor Lam — Regional Manager",
+      "to": "Branch Supervisors",
+      "subject": "Quarterly sales reports",
+      "sent": "April 8, 7:30 a.m.",
+      "body": [
+        "Dear Supervisors,",
+        "The quarterly sales reports are due by the end of this month. Please use the new template that was circulated in March, not the old spreadsheet. Reports should cover January through March and include a short note on any unusual results. If your branch has changed its opening hours during the quarter, mention this in your report as well.",
+        "Best regards,",
+        "Victor Lam — Regional Manager"
+      ],
+      "directions": "Respond to the e-mail as if you were a branch supervisor. In your e-mail, describe ONE unusual result at your branch and ask TWO questions about the report."
+    },
+    "D": {
+      "from": "Sofia Marchetti",
+      "to": "Halcyon Print Studio",
+      "subject": "Business cards — wrong colour",
+      "sent": "October 2, 4:48 p.m.",
+      "body": [
+        "Dear Sir or Madam,",
+        "I collected five hundred business cards from your studio yesterday. The logo was printed in light blue instead of the dark navy I approved in the proof. I have an important conference on October 9 and I need corrected cards before then. I still have the signed proof if you need to see it.",
+        "Yours faithfully,",
+        "Sofia Marchetti"
+      ],
+      "directions": "Respond to the e-mail as if you were the manager of Halcyon Print Studio. In your e-mail, apologize, explain what you will do, and ask ONE question."
+    }
+  },
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t1-5-e1",
+          "emailRef": "A",
+          "question": "Directions yêu cầu bạn làm bao nhiêu mission?",
+          "options": [
+            { "id": "A", "text": "1 mission" },
+            { "id": "B", "text": "2 mission" },
+            { "id": "C", "text": "3 mission" },
+            { "id": "D", "text": "4 mission" }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "'confirm whether you made the transactions' = 1 + 'ask TWO questions' = 2. Tổng 3 mission."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-e2",
+          "emailRef": "A",
+          "question": "Mission 1 yêu cầu bạn làm gì?",
+          "options": [
+            { "id": "A", "text": "Nói rõ bạn CÓ hay KHÔNG thực hiện hai giao dịch đó" },
+            { "id": "B", "text": "Yêu cầu ngân hàng hoàn tiền" },
+            { "id": "C", "text": "Phàn nàn về việc khoá thẻ" },
+            { "id": "D", "text": "Xin cấp lại thẻ mới" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "'confirm WHETHER' = xác nhận có hay không. Phải trả lời dứt khoát một trong hai, không được để mập mờ."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-e3",
+          "emailRef": "B",
+          "question": "Directions yêu cầu bạn làm bao nhiêu mission?",
+          "options": [
+            { "id": "A", "text": "2 mission" },
+            { "id": "B", "text": "3 mission" },
+            { "id": "C", "text": "4 mission" },
+            { "id": "D", "text": "1 mission" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Khách hỏi 2 điều ('answer the member's questions' = 2 mission) + 'make ONE offer' = 1. Tổng 3."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-e4",
+          "emailRef": "B",
+          "question": "'Make ONE offer' trong bối cảnh này nghĩa là gì?",
+          "options": [
+            { "id": "A", "text": "Đưa ra một đề nghị giữ chân hoặc hỗ trợ hội viên" },
+            { "id": "B", "text": "Xin lỗi vì hội viên phải chuyển đi" },
+            { "id": "C", "text": "Từ chối cho huỷ thẻ hội viên" },
+            { "id": "D", "text": "Hỏi hội viên một câu" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Ví dụ: đề nghị tạm dừng thay vì huỷ hẳn, hoặc giới thiệu chi nhánh ở thành phố mới. 'Offer' luôn là điều bạn CHO khách, không phải điều bạn xin."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-e5",
+          "emailRef": "C",
+          "question": "Directions yêu cầu bạn làm bao nhiêu mission?",
+          "options": [
+            { "id": "A", "text": "2 mission" },
+            { "id": "B", "text": "3 mission" },
+            { "id": "C", "text": "4 mission" },
+            { "id": "D", "text": "1 mission" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'describe ONE unusual result' = 1 + 'ask TWO questions' = 2. Tổng 3."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-e6",
+          "emailRef": "C",
+          "question": "Mission 1 yêu cầu bạn mô tả gì?",
+          "options": [
+            { "id": "A", "text": "Toàn bộ doanh số quý của chi nhánh" },
+            { "id": "B", "text": "Một kết quả bất thường tại chi nhánh của bạn" },
+            { "id": "C", "text": "Giờ mở cửa mới của chi nhánh" },
+            { "id": "D", "text": "Mẫu báo cáo mới khác gì mẫu cũ" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'describe ONE unusual result' — chỉ MỘT, và phải là kết quả BẤT THƯỜNG. Ví dụ: doanh số tháng Hai giảm 30% do sửa chữa cửa hàng."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-e7",
+          "emailRef": "D",
+          "question": "Directions yêu cầu bạn làm bao nhiêu mission?",
+          "options": [
+            { "id": "A", "text": "2 mission" },
+            { "id": "B", "text": "3 mission" },
+            { "id": "C", "text": "4 mission" },
+            { "id": "D", "text": "1 mission" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'apologize' + 'explain what you will do' + 'ask ONE question' = 3 mission. Dạng tổng hợp giống bài mẫu trong giáo trình."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-e8",
+          "emailRef": "D",
+          "question": "Mission 2 ('explain what you will do') yêu cầu bạn viết gì?",
+          "options": [
+            { "id": "A", "text": "Giải thích vì sao lỗi xảy ra" },
+            { "id": "B", "text": "Nêu rõ hành động bạn sẽ làm để khắc phục" },
+            { "id": "C", "text": "Hỏi khách muốn màu gì" },
+            { "id": "D", "text": "Xin lỗi thêm lần nữa" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'what you WILL DO' = hành động sắp tới, thì tương lai. Ví dụ: 'We will reprint all five hundred cards free of charge by October 7.'"
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t1-5-m1",
+          "emailRef": "A",
+          "question": "Bạn đóng vai ai?",
+          "options": [
+            { "id": "A", "text": "Nhân viên hỗ trợ khách hàng của ngân hàng" },
+            { "id": "B", "text": "Adrian Cole — chủ tài khoản" },
+            { "id": "C", "text": "Người thực hiện giao dịch đáng ngờ" },
+            { "id": "D", "text": "Quản lý chi nhánh Willowbank" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'as if you were Adrian Cole'. Bạn là khách hàng nhận thông báo, nên bạn xác nhận và hỏi lại, chứ không xin lỗi."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-m2",
+          "emailRef": "A",
+          "question": "E-mail đề ký tên 'Customer Support — Willowbank Bank', không có tên người. Nên xưng hô thế nào?",
+          "options": [
+            { "id": "A", "text": "Dear Mr. Support," },
+            { "id": "B", "text": "Dear Customer Support Team," },
+            { "id": "C", "text": "Hi there," },
+            { "id": "D", "text": "Dear Mr. Cole," }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Chỉ biết tên bộ phận thì dùng 'Dear + tên bộ phận + Team' hoặc 'To Whom It May Concern'. Đáp án D là tên CỦA BẠN — bẫy rất hay gặp khi làm nhanh."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-m3",
+          "emailRef": "B",
+          "question": "Bạn đóng vai ai?",
+          "options": [
+            { "id": "A", "text": "Naomi Fischer — hội viên muốn huỷ thẻ" },
+            { "id": "B", "text": "Nhân viên bộ phận hội viên của Ardent Fitness" },
+            { "id": "C", "text": "Huấn luyện viên cá nhân của Naomi" },
+            { "id": "D", "text": "Nhân viên phòng tập ở thành phố mới" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'as if you were a member of the Ardent Fitness membership team'. Bạn thay mặt phòng tập trả lời, xưng 'we'."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-m4",
+          "emailRef": "B",
+          "question": "Hội viên đã gắn bó hai năm. Chi tiết này nên ảnh hưởng thế nào tới giọng văn của bạn?",
+          "options": [
+            { "id": "A", "text": "Không ảnh hưởng, cứ trả lời khô khan theo quy định" },
+            { "id": "B", "text": "Nên cảm ơn vì hai năm gắn bó trước khi trả lời phần thủ tục" },
+            { "id": "C", "text": "Nên trách hội viên vì huỷ thẻ" },
+            { "id": "D", "text": "Nên từ chối cho huỷ vì hợp đồng dài hạn" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Chi tiết cảm xúc trong đề luôn là cơ hội ghi điểm văn phong. Một câu 'Thank you for being a member for the past two years' làm thư ấm hẳn lên."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-m5",
+          "emailRef": "C",
+          "question": "Quan hệ giữa hai bên là gì?",
+          "options": [
+            { "id": "A", "text": "Doanh nghiệp ↔ khách hàng" },
+            { "id": "B", "text": "Cấp trên ↔ cấp dưới trong cùng công ty" },
+            { "id": "C", "text": "Hai công ty đối tác" },
+            { "id": "D", "text": "Nhà tuyển dụng ↔ ứng viên" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Regional Manager gửi cho Branch Supervisors. Trả lời cấp trên cần trang trọng và rõ ràng, không dùng 'Hi Victor'."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-m6",
+          "emailRef": "C",
+          "question": "Xưng hô nào phù hợp nhất khi trả lời quản lý vùng?",
+          "options": [
+            { "id": "A", "text": "Dear Supervisors," },
+            { "id": "B", "text": "Dear Mr. Lam," },
+            { "id": "C", "text": "Hi Victor," },
+            { "id": "D", "text": "To Whom It May Concern," }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Người ký tên là Victor Lam → 'Dear Mr. Lam'. 'Dear Supervisors' là cách ông ấy gọi nhóm của bạn, không phải cách bạn gọi ông ấy."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-m7",
+          "emailRef": "D",
+          "question": "Bạn đóng vai ai?",
+          "options": [
+            { "id": "A", "text": "Sofia Marchetti — khách đặt in" },
+            { "id": "B", "text": "Quản lý xưởng in Halcyon" },
+            { "id": "C", "text": "Nhân viên thiết kế logo" },
+            { "id": "D", "text": "Ban tổ chức hội nghị ngày 9 tháng 10" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'as if you were the manager of Halcyon Print Studio'. Bạn là bên gây ra lỗi in sai màu, nên phải xin lỗi và khắc phục."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-m8",
+          "emailRef": "D",
+          "question": "Khách mở bằng 'Dear Sir or Madam' và kết bằng 'Yours faithfully'. Khi trả lời, bạn nên dùng cặp nào?",
+          "options": [
+            { "id": "A", "text": "Dear Sir or Madam, ... Yours faithfully," },
+            { "id": "B", "text": "Dear Ms. Marchetti, ... Yours sincerely," },
+            { "id": "C", "text": "Hi Sofia, ... Talk to you later!" },
+            { "id": "D", "text": "Dear Ms. Marchetti, ... Yours faithfully," }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Bạn ĐÃ biết tên khách nên mở bằng 'Dear Ms. Marchetti'. Theo quy tắc Anh-Anh, mở bằng tên cụ thể thì phải kết bằng 'Yours sincerely', không phải 'Yours faithfully'."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t1-5-h1",
+          "emailRef": "A",
+          "question": "Chọn HAI câu hỏi phù hợp nhất về tài khoản của bạn.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Can you tell me the amounts of the two transactions in question?" },
+            { "id": "B", "text": "Will this suspension affect my direct debits and standing orders?" },
+            { "id": "C", "text": "What should I bring to the branch to restore my card?" },
+            { "id": "D", "text": "How long will it take to reactivate my card?" }
+          ],
+          "correctAnswers": ["A", "B"],
+          "explanation": "C và D đã có trong đề ('a form of photo identification' và 'within one working day'). A rất hợp lý vì đề không nêu số tiền — bạn cần biết mới xác nhận được."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-h2",
+          "emailRef": "A",
+          "question": "E-mail đề cho hai cách khôi phục thẻ. Nếu bạn xác nhận CÓ thực hiện giao dịch, bạn cần làm gì?",
+          "options": [
+            { "id": "A", "text": "Ra chi nhánh mang theo giấy tờ tuỳ thân có ảnh" },
+            { "id": "B", "text": "Chỉ cần trả lời e-mail này là đủ" },
+            { "id": "C", "text": "Phải làm cả hai việc trên" },
+            { "id": "D", "text": "Không cần làm gì, thẻ sẽ tự mở lại" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Đọc kỹ: 'If you DID make these transactions, simply reply to this e-mail'. Việc ra chi nhánh là dành cho trường hợp bạn KHÔNG thực hiện. Đề cài hai nhánh, chọn nhánh sai là hỏng cả thư."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-h3",
+          "emailRef": "B",
+          "question": "Chọn TẤT CẢ nội dung bắt buộc phải có trong thư trả lời.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Ngày cuối cùng hội viên bị tính phí" },
+            { "id": "B", "text": "Hội viên có phải trả lại thẻ ra vào hay không" },
+            { "id": "C", "text": "Một đề nghị dành cho hội viên" },
+            { "id": "D", "text": "Hỏi hội viên chuyển đến thành phố nào" }
+          ],
+          "correctAnswers": ["A", "B", "C"],
+          "explanation": "A và B là hai câu hỏi của hội viên, C là mission trong Directions. D không phải mission — hỏi thêm chỉ tốn thời gian, trừ khi bạn dùng nó để giới thiệu chi nhánh mới."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-h4",
+          "emailRef": "B",
+          "question": "Hội viên viết 'I understand there may be a notice period.' Câu này ngụ ý gì?",
+          "options": [
+            { "id": "A", "text": "Hội viên đang phàn nàn về quy định báo trước" },
+            { "id": "B", "text": "Hội viên đã lường trước việc phải báo trước — bạn cần nêu rõ thời hạn cụ thể" },
+            { "id": "C", "text": "Hội viên yêu cầu miễn thời gian báo trước" },
+            { "id": "D", "text": "Câu này không liên quan đến mission nào" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Khách chủ động mở đường cho bạn nói về notice period. Đây chính là chỗ để trả lời câu hỏi 'ngày cuối cùng bị tính phí' một cách thuyết phục."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-h5",
+          "emailRef": "C",
+          "question": "Chọn HAI câu hỏi phù hợp nhất về báo cáo quý.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Should the report include figures from our online sales channel?" },
+            { "id": "B", "text": "Who should we send the completed report to?" },
+            { "id": "C", "text": "Which months does the report need to cover?" },
+            { "id": "D", "text": "Should we use the old spreadsheet or the new template?" }
+          ],
+          "correctAnswers": ["A", "B"],
+          "explanation": "C và D đã có trong đề ('January through March' và 'the new template, not the old spreadsheet'). D đặc biệt nguy hiểm vì hỏi lại đúng điều đề vừa nhấn mạnh."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-h6",
+          "emailRef": "C",
+          "question": "E-mail đề viết: 'If your branch has changed its opening hours during the quarter, mention this.' Đây là gì?",
+          "options": [
+            { "id": "A", "text": "Một yêu cầu có điều kiện — chỉ áp dụng nếu chi nhánh bạn có đổi giờ" },
+            { "id": "B", "text": "Một mission bắt buộc với mọi chi nhánh" },
+            { "id": "C", "text": "Một câu xã giao, không cần xử lý" },
+            { "id": "D", "text": "Một câu hỏi bạn phải trả lời trong e-mail" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Chữ 'If' làm nên tất cả. Đây là yêu cầu CÓ ĐIỀU KIỆN dành cho báo cáo, không phải mission của e-mail. Nhận diện được điều kiện giúp bạn không viết thừa."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-h7",
+          "emailRef": "D",
+          "question": "Câu hỏi duy nhất bạn được đặt nên nhắm vào đâu?",
+          "options": [
+            { "id": "A", "text": "Would you like us to deliver the corrected cards to your office or to the conference venue?" },
+            { "id": "B", "text": "How many cards did you order?" },
+            { "id": "C", "text": "When is your conference?" },
+            { "id": "D", "text": "Are you sure the proof said dark navy?" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "B và C đã có trong đề ('five hundred', 'October 9'). D chất vấn khách trong khi khách còn giữ bản duyệt có chữ ký — vừa sai văn phong vừa sai sự thật."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-h8",
+          "emailRef": "D",
+          "question": "Hạn chót ngày 9 tháng 10 ảnh hưởng thế nào tới mission 'explain what you will do'?",
+          "options": [
+            { "id": "A", "text": "Không ảnh hưởng — chỉ cần hứa sẽ in lại là đủ" },
+            { "id": "B", "text": "Lời hứa phải kèm mốc thời gian TRƯỚC ngày 9 tháng 10" },
+            { "id": "C", "text": "Bạn nên đề nghị khách dời hội nghị" },
+            { "id": "D", "text": "Bạn nên nói cần ít nhất hai tuần để in lại" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Khi đề cho một hạn chót cụ thể, giải pháp của bạn PHẢI nằm trong hạn đó. 'We will have the corrected cards ready by October 7' mới là câu trả lời hoàn chỉnh."
+        }
+      ]
+    }
+  ]
+}

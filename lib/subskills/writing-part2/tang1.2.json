@@ -1,0 +1,412 @@
+{
+  "emails": {
+    "A": {
+      "from": "Laura Benson",
+      "to": "The Copper Kettle Restaurant",
+      "subject": "Our dinner last Saturday",
+      "sent": "October 14, 8:20 p.m.",
+      "body": [
+        "Dear Manager,",
+        "I booked a table for six people last Saturday at seven o'clock, but we were not seated until almost eight. Two of the dishes we ordered arrived cold, and one of them was not what we had asked for. We have been coming to your restaurant for years, and this is the first time we have been disappointed. I would appreciate it if you could look into this matter.",
+        "Sincerely,",
+        "Laura Benson"
+      ],
+      "directions": "Respond to the e-mail as if you were the manager of The Copper Kettle Restaurant. In your e-mail, make TWO apologies and make ONE offer to the customer."
+    },
+    "B": {
+      "from": "Sandra Kim — Recruitment Team",
+      "to": "Applicants for the Marketing Assistant position",
+      "subject": "Interview invitation",
+      "sent": "April 2, 11:05 a.m.",
+      "body": [
+        "Dear Applicant,",
+        "Thank you for applying for the Marketing Assistant position at Brightline Media. We are pleased to invite you to an interview at our head office on April 12. Please bring a copy of your résumé and one form of identification. If April 12 is not convenient, let us know and we will try to arrange another date.",
+        "Best regards,",
+        "Sandra Kim — Recruitment Team"
+      ],
+      "directions": "Respond to the e-mail as if you were an applicant. In your e-mail, accept the invitation and ask TWO questions about the interview."
+    },
+    "C": {
+      "from": "Marcus Feld",
+      "to": "Greenfield Fitness Centre",
+      "subject": "Membership question",
+      "sent": "July 21, 6:40 p.m.",
+      "body": [
+        "To Whom It May Concern,",
+        "I saw your advertisement in yesterday's newspaper and I am interested in joining your fitness centre. Could you tell me how much the annual membership fee is? I would also like to know whether the swimming pool is open to all members or only to those with a premium plan. I work until seven on weekdays, so your opening hours matter to me as well.",
+        "Best regards,",
+        "Marcus Feld"
+      ],
+      "directions": "Respond to the e-mail as if you were a staff member at Greenfield Fitness Centre. In your e-mail, provide the information the customer asked for and make ONE recommendation."
+    },
+    "D": {
+      "from": "Facilities Management",
+      "to": "All Staff",
+      "subject": "Office relocation on November 3",
+      "sent": "October 20, 9:00 a.m.",
+      "body": [
+        "Dear all,",
+        "Please be informed that our office will move to the eighth floor of the Vernon Building on November 3. All employees are required to pack their personal belongings by November 1. Boxes will be delivered to each desk this Friday. If you have any large items that need special handling, please reply to this e-mail with a list. Further details about parking will be announced at a later date.",
+        "Best regards,",
+        "Facilities Management"
+      ],
+      "directions": "Respond to the e-mail as if you were an employee. In your e-mail, describe ONE item that needs special handling and ask TWO questions about the relocation."
+    }
+  },
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t1-2-e1",
+          "emailRef": "A",
+          "question": "Directions yêu cầu bạn làm bao nhiêu mission?",
+          "options": [
+            { "id": "A", "text": "2 mission" },
+            { "id": "B", "text": "3 mission" },
+            { "id": "C", "text": "4 mission" },
+            { "id": "D", "text": "1 mission" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'make TWO apologies' = 2 mission + 'make ONE offer' = 1 mission. Tổng 3. Hai lời xin lỗi phải là hai lỗi KHÁC NHAU, không phải nói lại một lỗi hai lần."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-e2",
+          "emailRef": "A",
+          "question": "Mission cuối cùng ('make ONE offer') là loại gì?",
+          "options": [
+            { "id": "A", "text": "Đặt câu hỏi cho khách" },
+            { "id": "B", "text": "Đề nghị bồi thường / ưu đãi cho khách" },
+            { "id": "C", "text": "Từ chối khiếu nại" },
+            { "id": "D", "text": "Cung cấp thông tin về thực đơn" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'offer' ở đây là đưa ra một đề nghị bù đắp: giảm giá, mời bữa ăn miễn phí, tặng voucher. Đây là phần bắt buộc sau khi xin lỗi."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-e3",
+          "emailRef": "B",
+          "question": "Directions yêu cầu bạn làm bao nhiêu mission?",
+          "options": [
+            { "id": "A", "text": "1 mission" },
+            { "id": "B", "text": "2 mission" },
+            { "id": "C", "text": "3 mission" },
+            { "id": "D", "text": "4 mission" }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "'accept the invitation' = 1 + 'ask TWO questions' = 2. Tổng 3 mission."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-e4",
+          "emailRef": "B",
+          "question": "Mission 1 yêu cầu bạn làm gì?",
+          "options": [
+            { "id": "A", "text": "Từ chối lời mời phỏng vấn" },
+            { "id": "B", "text": "Chấp nhận lời mời phỏng vấn" },
+            { "id": "C", "text": "Xin dời ngày phỏng vấn" },
+            { "id": "D", "text": "Hỏi về mức lương" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'accept the invitation' = chấp nhận. E-mail đề có nêu khả năng dời ngày, nhưng Directions bảo CHẤP NHẬN — phải làm theo Directions, không tự ý đổi."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-e5",
+          "emailRef": "C",
+          "question": "Directions yêu cầu bạn làm gì ngoài việc cung cấp thông tin khách hỏi?",
+          "options": [
+            { "id": "A", "text": "Đưa ra một lời khuyên / khuyến nghị" },
+            { "id": "B", "text": "Xin lỗi vì quảng cáo sai" },
+            { "id": "C", "text": "Hỏi khách hai câu" },
+            { "id": "D", "text": "Từ chối nhận hội viên mới" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "'make ONE recommendation' = đưa ra một khuyến nghị. Ví dụ: khuyên khách chọn gói premium, hoặc khuyên đến tập sau 7 giờ tối vì ít người."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-e6",
+          "emailRef": "C",
+          "question": "Loại mission chính của e-mail trả lời này là gì?",
+          "options": [
+            { "id": "A", "text": "Xin lỗi (apologizing)" },
+            { "id": "B", "text": "Phàn nàn (complaining)" },
+            { "id": "C", "text": "Cung cấp thông tin (providing information)" },
+            { "id": "D", "text": "Đặt hàng (ordering)" }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "'provide the information the customer asked for'. Bạn nên mở đầu bằng khuôn cung cấp thông tin: 'I am writing to let you know about...' hoặc 'I'd like to give you information on...'."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-e7",
+          "emailRef": "D",
+          "question": "Directions yêu cầu bạn làm bao nhiêu mission?",
+          "options": [
+            { "id": "A", "text": "2 mission" },
+            { "id": "B", "text": "3 mission" },
+            { "id": "C", "text": "4 mission" },
+            { "id": "D", "text": "5 mission" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'describe ONE item' = 1 + 'ask TWO questions' = 2. Tổng 3 mission."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-e8",
+          "emailRef": "D",
+          "question": "Mission 1 yêu cầu bạn mô tả gì?",
+          "options": [
+            { "id": "A", "text": "Vị trí bàn làm việc mới của bạn" },
+            { "id": "B", "text": "Một món đồ cần được xử lý đặc biệt khi chuyển văn phòng" },
+            { "id": "C", "text": "Lý do bạn không muốn chuyển văn phòng" },
+            { "id": "D", "text": "Toàn bộ đồ đạc cá nhân của bạn" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'describe ONE item that needs special handling' — chỉ MỘT món, và phải là món cần xử lý đặc biệt (ví dụ: máy in khổ lớn, tủ kính, cây cảnh lớn)."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t1-2-m1",
+          "emailRef": "A",
+          "question": "Bạn đóng vai ai trong e-mail trả lời?",
+          "options": [
+            { "id": "A", "text": "Laura Benson — khách hàng" },
+            { "id": "B", "text": "Quản lý nhà hàng The Copper Kettle" },
+            { "id": "C", "text": "Nhân viên phục vụ bàn" },
+            { "id": "D", "text": "Đầu bếp của nhà hàng" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'as if you were the manager'. Vai quản lý nên bạn xưng 'we' thay mặt nhà hàng và có quyền đưa ra ưu đãi bồi thường."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-m2",
+          "emailRef": "A",
+          "question": "Xưng hô nào phù hợp nhất?",
+          "options": [
+            { "id": "A", "text": "Dear Manager," },
+            { "id": "B", "text": "Dear Ms. Benson," },
+            { "id": "C", "text": "Hi Laura," },
+            { "id": "D", "text": "To Whom It May Concern," }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'Benson' là họ của khách. 'Dear Manager' là cách khách gọi BẠN, không phải cách bạn gọi khách — bẫy rất hay gặp."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-m3",
+          "emailRef": "B",
+          "question": "Quan hệ giữa hai bên là gì?",
+          "options": [
+            { "id": "A", "text": "Nhà tuyển dụng ↔ ứng viên" },
+            { "id": "B", "text": "Doanh nghiệp ↔ khách hàng" },
+            { "id": "C", "text": "Hai đồng nghiệp cùng phòng" },
+            { "id": "D", "text": "Nhà cung cấp ↔ đại lý" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Quan hệ tuyển dụng đòi hỏi mức trang trọng cao NHẤT — bạn đang muốn gây ấn tượng tốt. Tuyệt đối không viết suồng sã."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-m4",
+          "emailRef": "B",
+          "question": "Xưng hô nào phù hợp nhất cho e-mail trả lời?",
+          "options": [
+            { "id": "A", "text": "Dear Applicant," },
+            { "id": "B", "text": "Dear Ms. Kim," },
+            { "id": "C", "text": "Hi Sandra," },
+            { "id": "D", "text": "Dear Recruitment," }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Người ký tên là Sandra Kim → Dear Ms. Kim. 'Dear Applicant' là cách họ gọi bạn. Với nhà tuyển dụng, tuyệt đối không gọi bằng tên riêng."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-m5",
+          "emailRef": "C",
+          "question": "E-mail đề mở đầu bằng 'To Whom It May Concern'. Điều đó cho biết gì?",
+          "options": [
+            { "id": "A", "text": "Người gửi rất tức giận" },
+            { "id": "B", "text": "Người gửi không biết tên người sẽ đọc thư" },
+            { "id": "C", "text": "Người gửi là cấp trên của người nhận" },
+            { "id": "D", "text": "Đây là e-mail nội bộ trong công ty" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'To Whom It May Concern' dùng khi gửi cho một cơ quan mà không rõ ai đọc. Nhưng KHI TRẢ LỜI, bạn đã biết tên khách (Marcus Feld) nên phải dùng 'Dear Mr. Feld'."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-m6",
+          "emailRef": "C",
+          "question": "Bạn đóng vai nhân viên phòng tập. Đại từ nào nên dùng khi nói về phòng tập?",
+          "options": [
+            { "id": "A", "text": "I — vì bạn viết với tư cách cá nhân" },
+            { "id": "B", "text": "We / our — vì bạn nói thay mặt phòng tập" },
+            { "id": "C", "text": "They — vì phòng tập là bên thứ ba" },
+            { "id": "D", "text": "You — vì bạn đang nói với khách" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Khi sắm vai nhân viên của một tổ chức, dùng 'we/our' cho tổ chức ('Our annual fee is...') và 'I' cho hành động cá nhân ('I am attaching a brochure')."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-m7",
+          "emailRef": "D",
+          "question": "Bạn đóng vai ai và viết cho ai?",
+          "options": [
+            { "id": "A", "text": "Nhân viên Facilities viết cho toàn thể nhân viên" },
+            { "id": "B", "text": "Một nhân viên viết cho phòng Facilities Management" },
+            { "id": "C", "text": "Giám đốc viết cho phòng Facilities" },
+            { "id": "D", "text": "Chủ toà nhà Vernon viết cho công ty" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'as if you were an employee' — bạn là người nhận thông báo. Xưng hô hợp lý: 'Dear Facilities Management Team,' vì không có tên người cụ thể."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-m8",
+          "emailRef": "D",
+          "question": "E-mail đề không ký tên cá nhân, chỉ ghi 'Facilities Management'. Nên xưng hô thế nào?",
+          "options": [
+            { "id": "A", "text": "Dear Mr. Facilities," },
+            { "id": "B", "text": "Dear Facilities Management Team," },
+            { "id": "C", "text": "Hi guys," },
+            { "id": "D", "text": "Dear Sir," }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Khi chỉ biết tên bộ phận, dùng 'Dear + tên bộ phận + Team' hoặc 'To the Facilities Management Department'. Không bịa ra tên người."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t1-2-h1",
+          "emailRef": "A",
+          "question": "Directions yêu cầu HAI lời xin lỗi. Chọn HAI lỗi bạn phải xin lỗi, dựa trên e-mail đề.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Khách phải đợi gần một tiếng mới được xếp bàn" },
+            { "id": "B", "text": "Món ăn bị nguội và có món giao sai" },
+            { "id": "C", "text": "Nhà hàng tính tiền sai hoá đơn" },
+            { "id": "D", "text": "Nhà hàng đóng cửa sớm hơn thông báo" }
+          ],
+          "correctAnswers": ["A", "B"],
+          "explanation": "Chỉ được xin lỗi về những lỗi CÓ TRONG e-mail đề. C và D không hề được nhắc tới — bịa thêm lỗi là tự tạo mission sai và làm bài dài vô ích."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-h2",
+          "emailRef": "A",
+          "question": "Câu nào trong e-mail đề là chi tiết KHÔNG tạo mission, nhưng bạn NÊN nhắc lại để thư có sức thuyết phục?",
+          "options": [
+            { "id": "A", "text": "Two of the dishes we ordered arrived cold." },
+            { "id": "B", "text": "We have been coming to your restaurant for years." },
+            { "id": "C", "text": "I booked a table for six people." },
+            { "id": "D", "text": "I would appreciate it if you could look into this matter." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'Khách quen nhiều năm' không phải mission, nhưng nhắc lại ('As a valued customer of many years...') thể hiện bạn đã đọc kỹ và làm lời xin lỗi chân thành hơn."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-h3",
+          "emailRef": "B",
+          "question": "Chọn HAI câu hỏi phù hợp nhất về buổi phỏng vấn.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Could you tell me how long the interview will last?" },
+            { "id": "B", "text": "Who will be conducting the interview?" },
+            { "id": "C", "text": "What documents should I bring?" },
+            { "id": "D", "text": "Where is your head office located?" }
+          ],
+          "correctAnswers": ["A", "B"],
+          "explanation": "C là bẫy: e-mail đề đã ghi rõ 'a copy of your résumé and one form of identification'. D cũng hỏi thừa vì địa điểm đã nêu là head office — và nếu cần thì nên hỏi cụ thể hơn thế."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-h4",
+          "emailRef": "B",
+          "question": "E-mail đề viết: 'If April 12 is not convenient, let us know'. Với vai được giao, bạn xử lý câu này thế nào?",
+          "options": [
+            { "id": "A", "text": "Phải xin dời ngày, vì e-mail đề đã đề nghị như vậy" },
+            { "id": "B", "text": "Bỏ qua — Directions bảo CHẤP NHẬN, nên bạn xác nhận đi được ngày 12" },
+            { "id": "C", "text": "Phải hỏi lại xem có ngày nào khác không" },
+            { "id": "D", "text": "Phải vừa chấp nhận vừa xin dời để chắc ăn" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Nguyên tắc vàng: khi e-mail đề và Directions mâu thuẫn, LUÔN nghe Directions. Câu 'if not convenient' chỉ áp dụng nếu bạn từ chối — mà Directions bảo bạn chấp nhận."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-h5",
+          "emailRef": "C",
+          "question": "Trong thân e-mail C, khách hỏi bao nhiêu điều mà bạn phải trả lời?",
+          "options": [
+            { "id": "A", "text": "1 điều" },
+            { "id": "B", "text": "2 điều" },
+            { "id": "C", "text": "3 điều" },
+            { "id": "D", "text": "4 điều" }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "Phí hội viên năm · Bể bơi mở cho mọi hội viên hay chỉ gói premium · Giờ mở cửa. Điều thứ ba không có dấu hỏi — khách chỉ nói 'your opening hours matter to me' — nhưng vẫn là thông tin bắt buộc phải cung cấp."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-h6",
+          "emailRef": "C",
+          "question": "Khuyến nghị nào phù hợp nhất với hoàn cảnh cụ thể của khách?",
+          "options": [
+            { "id": "A", "text": "I recommend that you visit our centre before seven o'clock." },
+            { "id": "B", "text": "I recommend our premium plan, which gives you full pool access after work." },
+            { "id": "C", "text": "I recommend that you read our newspaper advertisement again." },
+            { "id": "D", "text": "I recommend that you cancel your plan to join." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Khách nói 'I work until seven on weekdays'. Khuyến nghị tốt phải bám vào chi tiết đó. A mâu thuẫn trực tiếp với lịch làm việc của khách."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-h7",
+          "emailRef": "D",
+          "question": "Chọn HAI câu hỏi phù hợp nhất về việc chuyển văn phòng.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Will the company provide help with moving heavy equipment?" },
+            { "id": "B", "text": "Can we access the new office over the weekend?" },
+            { "id": "C", "text": "When will the office move?" },
+            { "id": "D", "text": "By what date do we need to pack our belongings?" }
+          ],
+          "correctAnswers": ["A", "B"],
+          "explanation": "C và D là bẫy: e-mail đề đã trả lời rồi ('November 3' và 'by November 1'). Hỏi lại điều đã nêu là mất điểm."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-h8",
+          "emailRef": "D",
+          "question": "E-mail đề viết: 'Further details about parking will be announced at a later date.' Bạn có nên hỏi về chỗ đỗ xe không?",
+          "options": [
+            { "id": "A", "text": "Không — họ đã nói sẽ thông báo sau, hỏi lại là thừa" },
+            { "id": "B", "text": "Có — vì đó là thông tin quan trọng nhất" },
+            { "id": "C", "text": "Có — nhưng phải hỏi hai lần cho chắc" },
+            { "id": "D", "text": "Không — vì chỗ đỗ xe không liên quan đến văn phòng" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Khi e-mail đề đã hứa 'sẽ thông báo sau', hỏi lại chứng tỏ bạn không đọc kỹ. Hãy chọn hai câu hỏi về những gì đề CHƯA đề cập."
+        }
+      ]
+    }
+  ]
+}

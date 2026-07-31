@@ -1,0 +1,250 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "labeling",
+          "id": "t2-3-e1",
+          "intro": "Thư khách sạn xin lỗi khách về phòng bị đổi.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission chính", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Mr. Alvarez,", "label": "Chào hỏi" },
+            { "text": "Thank you for your e-mail about your stay with us last weekend.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "I would like to apologize for moving you to a smaller room without prior notice.", "label": "Mission chính" },
+            { "text": "We hope that you will give us another opportunity to serve you.", "label": "Câu kết" },
+            { "text": "Sincerely,\nLakeview Hotel", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Câu kết của thư xin lỗi khách sạn thường là lời mời quay lại. Nó vừa khép thư vừa giữ chân khách."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-3-e2",
+          "intro": "Thư thông báo nội bộ về việc thay đổi giờ làm việc.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission chính", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear all,", "label": "Chào hỏi" },
+            { "text": "As you know, we have been reviewing our working hours since the beginning of the year.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "Please be informed that from March 1 the office will open at eight thirty instead of nine.", "label": "Mission chính" },
+            { "text": "Further details will be announced at a later date.", "label": "Câu kết" },
+            { "text": "Best regards,\nHuman Resources Department", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Với thông báo gửi cả nhóm, dùng 'Dear all'. Câu thứ hai nêu bối cảnh ('As you know...') để thông báo không đến quá đột ngột."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-3-e3",
+          "intro": "Thư khách hàng hỏi về khoá học buổi tối.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission chính", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Sir or Madam,", "label": "Chào hỏi" },
+            { "text": "I am writing to inquire about the evening courses advertised on your website.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "Could you tell me how much the course fee is and whether textbooks are included?", "label": "Mission chính" },
+            { "text": "I would be grateful for an early reply.", "label": "Câu kết" },
+            { "text": "Yours faithfully,\nMai Hoang", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Khi mở bằng 'Dear Sir or Madam', theo tiếng Anh-Anh phải kết bằng 'Yours faithfully'. Cặp này luôn đi cùng nhau."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-3-e4",
+          "intro": "Thư nhà cung cấp xác nhận đơn hàng.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission chính", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Ms. Rivera,", "label": "Chào hỏi" },
+            { "text": "Thank you for your order of twenty desk lamps placed on May 4.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "I am writing to confirm that your order will be shipped within three business days.", "label": "Mission chính" },
+            { "text": "If you have any further queries, please contact me without hesitation.", "label": "Câu kết" },
+            { "text": "Best regards,\nBrightlite Supplies", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Câu kết 'If you have any further queries, please contact me' là khuôn an toàn nhất cho mọi e-mail cung cấp thông tin."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-3-e5",
+          "intro": "Thư nhân viên xin nghỉ phép.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission chính", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Ms. Okafor,", "label": "Chào hỏi" },
+            { "text": "I am writing in connection to the annual leave policy you circulated last month.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "I would like to request five days of leave from August 12 to August 16.", "label": "Mission chính" },
+            { "text": "Please let me know whether these dates can be approved.", "label": "Câu kết" },
+            { "text": "Best regards,\nBao Tran — Logistics", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "'I am writing in connection to...' là khuôn mở đầu khi bạn viết về một việc đã có sẵn bối cảnh. Mission nêu rõ NGÀY CỤ THỂ — không viết chung chung 'some days in August'."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "labeling",
+          "id": "t2-3-m1",
+          "intro": "Thư khách sạn xử lý khiếu nại đầy đủ 3 mission.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Nêu sự cố & giải thích lý do", "Mission 1: Xin lỗi", "Mission 2: Đề nghị bồi thường", "Mission 3: Đặt câu hỏi", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Mr. Alvarez,", "label": "Chào hỏi" },
+            { "text": "Thank you for taking the time to write to us about your stay last weekend.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "A burst pipe on the fourth floor forced us to close six rooms at short notice, including the one you had reserved.", "label": "Nêu sự cố & giải thích lý do" },
+            { "text": "I would like to apologize for moving you to a smaller room without letting you know in advance.", "label": "Mission 1: Xin lỗi" },
+            { "text": "To compensate for the inconvenience, we would like to offer you a free upgrade to a suite on your next stay.", "label": "Mission 2: Đề nghị bồi thường" },
+            { "text": "Would you like us to hold this offer for a specific date, or leave it open for the next twelve months?", "label": "Mission 3: Đặt câu hỏi" },
+            { "text": "Once again, please accept my sincere apology for the inconvenience caused.", "label": "Câu kết" },
+            { "text": "Sincerely,\nLakeview Hotel", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Lý do phải CỤ THỂ ('a burst pipe on the fourth floor') mới đáng tin. Lý do chung chung kiểu 'due to some problems' không thuyết phục được ai."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-3-m2",
+          "intro": "Thư trưởng phòng trả lời nhân viên xin nghỉ phép.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission 1: Trả lời yêu cầu", "Mission 2: Nêu điều kiện", "Mission 3: Đặt câu hỏi", "Câu xã giao (không bắt buộc)", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Mr. Tran,", "label": "Chào hỏi" },
+            { "text": "Thank you for your e-mail requesting leave from August 12 to August 16.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "I am pleased to approve your request for those five days.", "label": "Mission 1: Trả lời yêu cầu" },
+            { "text": "Please make sure that the shipping schedule for that week is handed over to Ms. Diaz before you leave.", "label": "Mission 2: Nêu điều kiện" },
+            { "text": "Could you confirm who will cover the daily inventory checks while you are away?", "label": "Mission 3: Đặt câu hỏi" },
+            { "text": "I hope you have a restful break.", "label": "Câu xã giao (không bắt buộc)" },
+            { "text": "Please reply by the end of this week so that I can update the department calendar.", "label": "Câu kết" },
+            { "text": "Best regards,\nNgozi Okafor — Logistics Manager", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Câu 'I hope you have a restful break' thuần xã giao. Câu kết lại có DEADLINE cụ thể — trong e-mail công việc, câu kết mạnh nhất là câu nêu rõ mốc thời gian."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-3-m3",
+          "intro": "Thư trường học trả lời phụ huynh hỏi về khoá học buổi tối.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission 1: Trả lời câu hỏi 1", "Mission 2: Trả lời câu hỏi 2", "Mission 3: Khuyến nghị", "Câu xã giao (không bắt buộc)", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Ms. Hoang,", "label": "Chào hỏi" },
+            { "text": "Thank you for your interest in the evening courses advertised on our website.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "The course fee is 320 dollars for a twelve-week term.", "label": "Mission 1: Trả lời câu hỏi 1" },
+            { "text": "Textbooks are not included in the fee, but they can be purchased at our reception for 45 dollars per set.", "label": "Mission 2: Trả lời câu hỏi 2" },
+            { "text": "One thing I can recommend is our trial lesson, which is free and takes place every Tuesday.", "label": "Mission 3: Khuyến nghị" },
+            { "text": "We currently have four places left in the evening class starting next month.", "label": "Câu xã giao (không bắt buộc)" },
+            { "text": "Please e-mail me as soon as possible if you would like to reserve a place.", "label": "Câu kết" },
+            { "text": "Best regards,\nMilbrook Language School", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Trả lời câu hỏi bằng SỐ LIỆU CỤ THỂ (320 dollars, 45 dollars, twelve weeks). Con số làm câu trả lời có sức nặng — đây là điểm phân biệt bài khá và bài giỏi."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-3-m4",
+          "intro": "Thư khách hàng phàn nàn về dịch vụ sửa xe.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Nêu sự cố & giải thích lý do", "Mission 1: Vấn đề thứ nhất", "Mission 2: Vấn đề thứ hai", "Mission 3: Yêu cầu giải quyết", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Service Manager,", "label": "Chào hỏi" },
+            { "text": "I am writing in relation to the service carried out on my car at your Eastgate garage on July 8.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "I left the car with you at eight in the morning and was told it would be ready by noon.", "label": "Nêu sự cố & giải thích lý do" },
+            { "text": "The car was not ready until half past four, which meant I missed an important appointment.", "label": "Mission 1: Vấn đề thứ nhất" },
+            { "text": "In addition, the final bill was 90 dollars higher than the estimate I was given on the telephone.", "label": "Mission 2: Vấn đề thứ hai" },
+            { "text": "I would like to request a written explanation of the additional charges and a refund of the difference.", "label": "Mission 3: Yêu cầu giải quyết" },
+            { "text": "I look forward to hearing from you within seven days.", "label": "Câu kết" },
+            { "text": "Yours faithfully,\nDuc Nguyen", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Thư phàn nàn hiệu quả luôn có ngày giờ và số tiền cụ thể. Câu kết đặt HẠN CHÓT ('within seven days') để tạo áp lực lịch sự."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-3-m5",
+          "intro": "Thư nhà cung cấp thông báo tăng giá.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Nêu sự cố & giải thích lý do", "Mission 1: Thông báo thay đổi", "Mission 2: Nêu thời điểm áp dụng", "Mission 3: Đề nghị hỗ trợ", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Ms. Rivera,", "label": "Chào hỏi" },
+            { "text": "Thank you for your continued business with Brightlite Supplies over the past three years.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "The cost of the aluminium we use in our desk lamps has risen sharply since January.", "label": "Nêu sự cố & giải thích lý do" },
+            { "text": "I am writing to inform you of a five percent increase in the price of our lighting range.", "label": "Mission 1: Thông báo thay đổi" },
+            { "text": "The new prices will take effect from July 1.", "label": "Mission 2: Nêu thời điểm áp dụng" },
+            { "text": "To help you plan, we are happy to honour the current prices on any order placed before June 30.", "label": "Mission 3: Đề nghị hỗ trợ" },
+            { "text": "Please contact me if you would like to discuss your requirements for the rest of the year.", "label": "Câu kết" },
+            { "text": "Best regards,\nBrightlite Supplies", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Thư báo tin không vui theo trật tự: cảm ơn → giải thích lý do → thông báo → mốc áp dụng → biện pháp giảm nhẹ. Đặt lời cảm ơn lên đầu làm tin xấu dễ chấp nhận hơn."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "ordering",
+          "id": "t2-3-h1",
+          "prompt": "Sắp xếp các câu thành e-mail hoàn chỉnh — thư khách sạn xin lỗi khách bị đổi phòng.",
+          "items": [
+            "Dear Mr. Alvarez,",
+            "Thank you for taking the time to write to us about your stay last weekend.",
+            "A burst pipe on the fourth floor forced us to close six rooms at short notice.",
+            "I would like to apologize for moving you to a smaller room without letting you know in advance.",
+            "To compensate for the inconvenience, we would like to offer you a free upgrade on your next stay.",
+            "Would you like us to hold this offer for a specific date, or leave it open for twelve months?",
+            "Sincerely,\nLakeview Hotel"
+          ],
+          "explanation": "Giải thích → xin lỗi → bồi thường → hỏi khách chọn. Nếu đảo lời xin lỗi lên trước phần giải thích, người đọc chưa hiểu chuyện gì đã phải nghe xin lỗi."
+        },
+        {
+          "type": "ordering",
+          "id": "t2-3-h2",
+          "prompt": "Sắp xếp các câu thành e-mail hoàn chỉnh — thư khách hàng phàn nàn về dịch vụ sửa xe.",
+          "items": [
+            "Dear Service Manager,",
+            "I am writing in relation to the service carried out on my car at your Eastgate garage on July 8.",
+            "I left the car with you at eight in the morning and was told it would be ready by noon.",
+            "The car was not ready until half past four, which meant I missed an important appointment.",
+            "In addition, the final bill was 90 dollars higher than the estimate I was given on the telephone.",
+            "I would like to request a written explanation of the additional charges.",
+            "Yours faithfully,\nDuc Nguyen"
+          ],
+          "explanation": "Bối cảnh (giao xe lúc 8 giờ, hẹn xong lúc trưa) phải đứng trước hai vấn đề, nếu không người đọc không hiểu vì sao 4 rưỡi là muộn."
+        },
+        {
+          "type": "ordering",
+          "id": "t2-3-h3",
+          "prompt": "Sắp xếp các câu thành e-mail hoàn chỉnh — thư nhà cung cấp thông báo tăng giá.",
+          "items": [
+            "Dear Ms. Rivera,",
+            "Thank you for your continued business with Brightlite Supplies over the past three years.",
+            "The cost of the aluminium we use in our desk lamps has risen sharply since January.",
+            "I am writing to inform you of a five percent increase in the price of our lighting range.",
+            "The new prices will take effect from July 1.",
+            "To help you plan, we are happy to honour the current prices on any order placed before June 30.",
+            "Best regards,\nBrightlite Supplies"
+          ],
+          "explanation": "Kỹ thuật báo tin xấu: cảm ơn trước, giải thích lý do, rồi mới đến tin chính, và luôn kết bằng một biện pháp giảm nhẹ cho khách."
+        },
+        {
+          "type": "ordering",
+          "id": "t2-3-h4",
+          "prompt": "Sắp xếp các câu thành e-mail hoàn chỉnh — thư trưởng phòng duyệt đơn xin nghỉ phép.",
+          "items": [
+            "Dear Mr. Tran,",
+            "Thank you for your e-mail requesting leave from August 12 to August 16.",
+            "I am pleased to approve your request for those five days.",
+            "Please make sure that the shipping schedule for that week is handed over to Ms. Diaz before you leave.",
+            "Could you confirm who will cover the daily inventory checks while you are away?",
+            "Please reply by the end of this week so that I can update the department calendar.",
+            "Best regards,\nNgozi Okafor — Logistics Manager"
+          ],
+          "explanation": "Duyệt trước, điều kiện sau. Nếu nêu điều kiện trước khi duyệt, nhân viên sẽ tưởng đơn bị từ chối."
+        },
+        {
+          "type": "ordering",
+          "id": "t2-3-h5",
+          "prompt": "Sắp xếp các câu thành e-mail hoàn chỉnh — thư trường ngoại ngữ trả lời câu hỏi về khoá học buổi tối.",
+          "items": [
+            "Dear Ms. Hoang,",
+            "Thank you for your interest in the evening courses advertised on our website.",
+            "The course fee is 320 dollars for a twelve-week term.",
+            "Textbooks are not included in the fee, but they can be purchased at our reception for 45 dollars per set.",
+            "One thing I can recommend is our trial lesson, which is free and takes place every Tuesday.",
+            "Please e-mail me as soon as possible if you would like to reserve a place.",
+            "Best regards,\nMilbrook Language School"
+          ],
+          "explanation": "Trả lời đúng thứ tự khách hỏi (học phí → sách), rồi mới đến khuyến nghị. Khuyến nghị luôn đứng sau khi đã trả lời hết câu hỏi."
+        }
+      ]
+    }
+  ]
+}

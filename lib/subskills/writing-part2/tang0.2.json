@@ -1,0 +1,212 @@
+{
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "matching",
+          "id": "t0-2-e1",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu ĐẶT HÀNG.",
+          "pairs": [
+            { "left": "I would like to place", "right": "an order for ten laptops." },
+            { "left": "I am interested in", "right": "purchasing your new model." },
+            { "left": "Could you send me", "right": "a price list?" },
+            { "left": "Please confirm", "right": "that my order has been received." },
+            { "left": "I placed an order", "right": "on your website last Monday." }
+          ],
+          "explanation": "'place an order FOR + sản phẩm' là cụm cố định. Chú ý 'interested in + V-ing' (purchasing, không phải purchase)."
+        },
+        {
+          "type": "matching",
+          "id": "t0-2-e2",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu về GIAO HÀNG.",
+          "pairs": [
+            { "left": "It was supposed to be delivered", "right": "a week ago." },
+            { "left": "The item has not arrived", "right": "yet." },
+            { "left": "Your order will be shipped", "right": "within three business days." },
+            { "left": "We will cover", "right": "the shipping cost." },
+            { "left": "Please find out what happened", "right": "to my order." }
+          ],
+          "explanation": "'be supposed to be delivered' = lẽ ra phải được giao. 'within three business days' = trong vòng 3 ngày làm việc — cụm rất hay gặp trong e-mail thương mại."
+        },
+        {
+          "type": "matching",
+          "id": "t0-2-e3",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu XIN LỖI về đơn hàng.",
+          "pairs": [
+            { "left": "We apologize for", "right": "the delay in shipping your order." },
+            { "left": "Our computer showed that", "right": "there was one book left." },
+            { "left": "Unfortunately,", "right": "that turned out to be wrong." },
+            { "left": "We are currently out of", "right": "stock for that item." },
+            { "left": "I will contact the publisher", "right": "and find out if they have any copies." }
+          ],
+          "explanation": "'out of stock' = hết hàng. 'turn out to be' = hoá ra là. Đây là bộ câu để giải thích lý do xảy ra sự cố — mission hay đi kèm với lời xin lỗi."
+        },
+        {
+          "type": "matching",
+          "id": "t0-2-e4",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu ĐỀ XUẤT GIẢI PHÁP.",
+          "pairs": [
+            { "left": "We would like to offer you", "right": "a ten percent discount." },
+            { "left": "If you give me some time,", "right": "I will look into the matter." },
+            { "left": "Otherwise, we can send you", "right": "a similar product instead." },
+            { "left": "We are willing to", "right": "exchange it free of charge." },
+            { "left": "Please let us know which option", "right": "you prefer." }
+          ],
+          "explanation": "'free of charge' = miễn phí. 'look into' = xem xét, điều tra. Nhóm này giúp bạn viết mission 'đề nghị/gợi ý' (suggesting)."
+        },
+        {
+          "type": "matching",
+          "id": "t0-2-e5",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu HỎI VỀ ĐƠN HÀNG.",
+          "pairs": [
+            { "left": "When can I expect", "right": "the package to arrive?" },
+            { "left": "Would you tell me", "right": "the exact delivery date?" },
+            { "left": "Am I entitled to", "right": "a full refund?" },
+            { "left": "How much do I have to pay", "right": "for express shipping?" },
+            { "left": "Is there any way", "right": "to track my order?" }
+          ],
+          "explanation": "Bộ câu hỏi dùng cho mission 'ask TWO questions'. Nhớ: 'entitled to + danh từ' = có quyền được hưởng."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "word_bank",
+          "id": "t0-2-m1",
+          "sentence": "I would like to ___ an order ___ ten office chairs.",
+          "bank": ["place", "for", "placing", "to", "placed", "of"],
+          "answers": ["place", "for"],
+          "explanation": "'place an order for + sản phẩm'. Sau 'would like to' là V nguyên mẫu."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-2-m2",
+          "sentence": "The book was ___ to be ___ a week ago.",
+          "bank": ["supposed", "delivered", "supposing", "delivering", "suppose", "deliver"],
+          "answers": ["supposed", "delivered"],
+          "explanation": "'be supposed to be + V3' = lẽ ra phải được... Đây là dạng bị động, nên cần 'delivered' chứ không phải 'deliver'."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-2-m3",
+          "sentence": "We are currently ___ of ___ for that item.",
+          "bank": ["out", "stock", "off", "stocks", "outside", "stocking"],
+          "answers": ["out", "stock"],
+          "explanation": "'out of stock' = hết hàng. Cụm cố định, 'stock' luôn ở dạng số ít không có mạo từ."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-2-m4",
+          "sentence": "Your order will be ___ ___ three business days.",
+          "bank": ["shipped", "within", "shipping", "during", "ship", "since"],
+          "answers": ["shipped", "within"],
+          "explanation": "'will be + V3' là bị động tương lai. 'within + khoảng thời gian' = trong vòng bao lâu."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-2-m5",
+          "sentence": "We are ___ to ___ the item free of charge.",
+          "bank": ["willing", "exchange", "will", "exchanging", "willingly", "exchanged"],
+          "answers": ["willing", "exchange"],
+          "explanation": "'be willing to + V nguyên mẫu' = sẵn lòng làm gì. Câu này rất hợp để đề nghị giải pháp cho khách."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-2-m6",
+          "sentence": "If you give me some time, I will ___ ___ the matter.",
+          "bank": ["look", "into", "looking", "in", "looked", "at"],
+          "answers": ["look", "into"],
+          "explanation": "'look into' = xem xét, điều tra. Khác với 'look at' (nhìn vào) và 'look for' (tìm kiếm)."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-2-m7",
+          "sentence": "Am I ___ to a full ___?",
+          "bank": ["entitled", "refund", "entitle", "refunded", "entitling", "refunds"],
+          "answers": ["entitled", "refund"],
+          "explanation": "'be entitled to + danh từ' = có quyền được nhận. Sau 'a full' cần danh từ số ít → refund."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-2-m8",
+          "sentence": "Is there any way to ___ my order, or should I ___ you again?",
+          "bank": ["track", "contact", "tracking", "contacting", "tracked", "contacted"],
+          "answers": ["track", "contact"],
+          "explanation": "Sau 'to' và sau 'should' đều dùng V nguyên mẫu. Câu này gộp được 2 câu hỏi vào một — tiết kiệm thời gian trong đề thi thật."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "recall",
+          "id": "t0-2-h1",
+          "hintVi": "Tôi muốn đặt một đơn hàng gồm mười chiếc ghế văn phòng.",
+          "answer": "I would like to place an order for ten office chairs.",
+          "accepted": ["I'd like to place an order for ten office chairs."],
+          "explanation": "Câu mở đầu chuẩn khi bạn đóng vai khách hàng đặt hàng."
+        },
+        {
+          "type": "recall",
+          "id": "t0-2-h2",
+          "hintVi": "Món hàng lẽ ra phải được giao từ một tuần trước.",
+          "answer": "The item was supposed to be delivered a week ago.",
+          "accepted": ["It was supposed to be delivered a week ago."],
+          "explanation": "Câu nêu sự cố — dùng khi bạn khiếu nại về việc giao hàng chậm."
+        },
+        {
+          "type": "recall",
+          "id": "t0-2-h3",
+          "hintVi": "Chúng tôi xin lỗi vì sự chậm trễ trong việc giao đơn hàng của quý khách.",
+          "answer": "We apologize for the delay in shipping your order.",
+          "accepted": ["We apologize for the delay in delivering your order.", "We are sorry for the delay in shipping your order."],
+          "explanation": "'apologize for the delay in + V-ing' — khuôn xin lỗi chuẩn của doanh nghiệp."
+        },
+        {
+          "type": "recall",
+          "id": "t0-2-h4",
+          "hintVi": "Chúng tôi muốn dành cho quý khách mức giảm giá mười phần trăm.",
+          "answer": "We would like to offer you a ten percent discount.",
+          "accepted": ["We'd like to offer you a ten percent discount.", "We would like to offer you a 10 percent discount."],
+          "explanation": "'offer someone something' — không cần 'to' ở giữa. Câu bồi thường điển hình."
+        },
+        {
+          "type": "recall",
+          "id": "t0-2-h5",
+          "hintVi": "Khi nào tôi có thể nhận được kiện hàng?",
+          "answer": "When can I expect the package to arrive?",
+          "accepted": ["When can I expect to receive the package?"],
+          "explanation": "'expect + O + to V' = mong đợi cái gì xảy ra. Đây là cách hỏi ngày giao hàng lịch sự hơn 'When will it come?'."
+        },
+        {
+          "type": "recall",
+          "id": "t0-2-h6",
+          "hintVi": "Chúng tôi hiện đang hết hàng đối với sản phẩm đó.",
+          "answer": "We are currently out of stock for that item.",
+          "accepted": ["We're currently out of stock for that item.", "That item is currently out of stock."],
+          "explanation": "'out of stock' — cụm cố định, không thêm mạo từ trước 'stock'."
+        },
+        {
+          "type": "recall",
+          "id": "t0-2-h7",
+          "hintVi": "Xin hãy cho chúng tôi biết bạn thích phương án nào hơn.",
+          "answer": "Please let us know which option you prefer.",
+          "accepted": ["Please let us know which option you would prefer."],
+          "explanation": "Câu kết khi bạn vừa đưa ra 2 lựa chọn cho khách — rất hợp làm câu chốt e-mail."
+        },
+        {
+          "type": "recall",
+          "id": "t0-2-h8",
+          "hintVi": "Xin vui lòng xác nhận rằng đơn hàng của tôi đã được nhận.",
+          "answer": "Please confirm that my order has been received.",
+          "accepted": ["Please confirm that you have received my order."],
+          "explanation": "'has been received' là bị động hiện tại hoàn thành. Có thể chuyển sang chủ động: 'you have received my order'."
+        }
+      ]
+    }
+  ]
+}

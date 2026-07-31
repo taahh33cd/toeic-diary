@@ -1,0 +1,212 @@
+{
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "matching",
+          "id": "t0-5-e1",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu XƯNG HÔ & CHÀO HỎI.",
+          "pairs": [
+            { "left": "Dear Ms. Young,", "right": "(khi biết rõ tên người nhận)" },
+            { "left": "Dear Sir or Madam,", "right": "(khi không biết tên người nhận)" },
+            { "left": "To Whom It May Concern,", "right": "(khi gửi cho một cơ quan, không rõ ai đọc)" },
+            { "left": "To the Human Resources Department,", "right": "(khi chỉ biết tên bộ phận)" },
+            { "left": "Hi Jenny,", "right": "(khi viết cho đồng nghiệp thân thiết)" }
+          ],
+          "explanation": "Xưng hô sai là mất điểm ngay từ dòng đầu. Nguyên tắc: e-mail đề có nêu tên → dùng Dear Mr./Ms. + HỌ. Không có tên → Dear Sir or Madam."
+        },
+        {
+          "type": "matching",
+          "id": "t0-5-e2",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu THÔNG BÁO NỘI BỘ.",
+          "pairs": [
+            { "left": "Please be informed that", "right": "the office will close early on Friday." },
+            { "left": "We are pleased to announce", "right": "the opening of our new branch." },
+            { "left": "This is a reminder that", "right": "the deadline is next Monday." },
+            { "left": "All employees are required", "right": "to complete the training." },
+            { "left": "Further details will be announced", "right": "at a later date." }
+          ],
+          "explanation": "'Please be informed that...' và 'This is a reminder that...' là hai khuôn thông báo trang trọng, dùng khi bạn đóng vai người của công ty."
+        },
+        {
+          "type": "matching",
+          "id": "t0-5-e3",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu PHÀN NÀN.",
+          "pairs": [
+            { "left": "I am writing to complain", "right": "about the poor service I received." },
+            { "left": "I am writing in connection", "right": "to a problem with the fax machine." },
+            { "left": "I am writing in relation", "right": "to your recent advertisement." },
+            { "left": "The product I bought", "right": "stopped working after two days." },
+            { "left": "This is the second time", "right": "I have had this problem." }
+          ],
+          "explanation": "Ba khuôn mở đầu khi khiếu nại: 'complain about', 'in connection to', 'in relation to'. Nêu sự cố ngay câu thứ hai."
+        },
+        {
+          "type": "matching",
+          "id": "t0-5-e4",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm LỜI CHÀO CUỐI THƯ.",
+          "pairs": [
+            { "left": "Yours faithfully,", "right": "(đi với 'Dear Sir or Madam,')" },
+            { "left": "Yours sincerely,", "right": "(đi với 'Dear Mr. Kim,')" },
+            { "left": "Best regards,", "right": "(trung tính, an toàn trong mọi e-mail business)" },
+            { "left": "Talk to you later!", "right": "(quá suồng sã — KHÔNG dùng trong bài thi)" },
+            { "left": "Sincerely yours,", "right": "(trang trọng, dùng được ở hầu hết mọi thư)" }
+          ],
+          "explanation": "Quy tắc Anh-Anh: mở bằng 'Dear Sir/Madam' → kết bằng 'Yours faithfully'. Mở bằng tên cụ thể → kết bằng 'Yours sincerely'."
+        },
+        {
+          "type": "matching",
+          "id": "t0-5-e5",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu CẢM ƠN & TÓM TẮT ĐẦU THƯ.",
+          "pairs": [
+            { "left": "Thank you for your recent purchase", "right": "of a 19-inch LCD monitor." },
+            { "left": "I just got your e-mail", "right": "about the damaged package." },
+            { "left": "I've just read your e-mail", "right": "of July 10th concerning the refund." },
+            { "left": "I was very concerned to learn", "right": "about the problem you have had." },
+            { "left": "Thank you for taking the time", "right": "to write to us." }
+          ],
+          "explanation": "Câu thứ hai của e-mail nên tóm tắt lại vấn đề người ta vừa nêu — vừa lịch sự, vừa chứng minh bạn đã đọc kỹ đề."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "word_bank",
+          "id": "t0-5-m1",
+          "sentence": "Please ___ ___ that the office will close early on Friday.",
+          "bank": ["be", "informed", "being", "informing", "been", "inform"],
+          "answers": ["be", "informed"],
+          "explanation": "'Please be informed that...' — câu mệnh lệnh ở thể bị động. Đây là khuôn thông báo trang trọng nhất."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-5-m2",
+          "sentence": "We are ___ to ___ the opening of our new branch.",
+          "bank": ["pleased", "announce", "pleasing", "announcing", "please", "announcement"],
+          "answers": ["pleased", "announce"],
+          "explanation": "'be pleased to + V' = hân hạnh được... Sau 'to' luôn là V nguyên mẫu → announce."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-5-m3",
+          "sentence": "All employees are ___ to ___ the training by June 30.",
+          "bank": ["required", "complete", "requiring", "completing", "require", "completion"],
+          "answers": ["required", "complete"],
+          "explanation": "'be required to + V' = được yêu cầu phải làm gì. Dạng bị động rất hay dùng trong thông báo nội bộ."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-5-m4",
+          "sentence": "I am writing to ___ about the poor service I ___ last week.",
+          "bank": ["complain", "received", "complaint", "receive", "complaining", "receiving"],
+          "answers": ["complain", "received"],
+          "explanation": "Sau 'to' cần V nguyên mẫu → complain (động từ), không phải complaint (danh từ). Sự việc đã qua → received."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-5-m5",
+          "sentence": "I am writing in ___ to a problem we have recently ___ with the fax machine.",
+          "bank": ["connection", "experienced", "connect", "experience", "connecting", "experiencing"],
+          "answers": ["connection", "experienced"],
+          "explanation": "'in connection to' = liên quan đến. Sau 'have recently' cần V3 → experienced (hiện tại hoàn thành)."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-5-m6",
+          "sentence": "I was very ___ to ___ about the problem you have had.",
+          "bank": ["concerned", "learn", "concerning", "learning", "concern", "learned"],
+          "answers": ["concerned", "learn"],
+          "explanation": "'be concerned to learn about...' = rất lo lắng khi biết về... Câu mở đầu chuẩn khi bạn đóng vai nhân viên nhận khiếu nại."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-5-m7",
+          "sentence": "Thank you for your recent ___ ___ a 19-inch widescreen LCD monitor.",
+          "bank": ["purchase", "of", "purchasing", "for", "purchased", "to"],
+          "answers": ["purchase", "of"],
+          "explanation": "Sau 'your recent' cần danh từ → purchase. 'purchase OF + sản phẩm'."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-5-m8",
+          "sentence": "Further details will be ___ ___ a later date.",
+          "bank": ["announced", "at", "announcing", "in", "announce", "on"],
+          "answers": ["announced", "at"],
+          "explanation": "'will be + V3' bị động → announced. 'at a later date' = vào một dịp sau — cụm cố định."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "recall",
+          "id": "t0-5-h1",
+          "hintVi": "Xin lưu ý rằng văn phòng sẽ đóng cửa sớm vào thứ Sáu.",
+          "answer": "Please be informed that the office will close early on Friday.",
+          "accepted": ["Please note that the office will close early on Friday."],
+          "explanation": "Khuôn thông báo nội bộ. Đổi phần sau 'that' là dùng được cho mọi tình huống."
+        },
+        {
+          "type": "recall",
+          "id": "t0-5-h2",
+          "hintVi": "Chúng tôi hân hạnh thông báo về việc khai trương chi nhánh mới.",
+          "answer": "We are pleased to announce the opening of our new branch.",
+          "accepted": ["We're pleased to announce the opening of our new branch."],
+          "explanation": "'be pleased to announce' — dùng khi báo tin vui thay mặt công ty."
+        },
+        {
+          "type": "recall",
+          "id": "t0-5-h3",
+          "hintVi": "Tôi viết thư này để phàn nàn về dịch vụ kém mà tôi đã nhận được.",
+          "answer": "I am writing to complain about the poor service I received.",
+          "accepted": ["I'm writing to complain about the poor service I received.", "I am writing to complain about the poor service that I received."],
+          "explanation": "Nhớ 'complain ABOUT'. Mệnh đề quan hệ 'I received' có thể thêm 'that' hoặc không."
+        },
+        {
+          "type": "recall",
+          "id": "t0-5-h4",
+          "hintVi": "Tôi rất lo lắng khi biết về vấn đề mà bạn đã gặp phải.",
+          "answer": "I was very concerned to learn about the problem you have had.",
+          "accepted": ["I was very concerned to learn about the problem that you have had.", "I was very concerned to learn about your problem."],
+          "explanation": "Câu này nằm ngay trong bảng Model Answer của giáo trình — thuộc là dùng được ngay."
+        },
+        {
+          "type": "recall",
+          "id": "t0-5-h5",
+          "hintVi": "Cảm ơn quý khách đã mua chiếc màn hình LCD 19 inch của chúng tôi.",
+          "answer": "Thank you for your recent purchase of a 19-inch LCD monitor.",
+          "accepted": ["Thank you for purchasing a 19-inch LCD monitor."],
+          "explanation": "Hai cách viết: danh từ 'your purchase of' hoặc V-ing 'purchasing'. Cả hai đều tự nhiên."
+        },
+        {
+          "type": "recall",
+          "id": "t0-5-h6",
+          "hintVi": "Tất cả nhân viên đều được yêu cầu hoàn thành khoá đào tạo.",
+          "answer": "All employees are required to complete the training.",
+          "accepted": ["All employees are required to complete the training course."],
+          "explanation": "'be required to + V' — câu thông báo nghĩa vụ, trang trọng hơn 'All employees must...'."
+        },
+        {
+          "type": "recall",
+          "id": "t0-5-h7",
+          "hintVi": "Đây là lần thứ hai tôi gặp phải vấn đề này.",
+          "answer": "This is the second time I have had this problem.",
+          "accepted": ["This is the second time that I have had this problem."],
+          "explanation": "Sau 'This is the second time' dùng hiện tại hoàn thành (have had), không dùng quá khứ đơn."
+        },
+        {
+          "type": "recall",
+          "id": "t0-5-h8",
+          "hintVi": "Thông tin chi tiết sẽ được thông báo vào một dịp sau.",
+          "answer": "Further details will be announced at a later date.",
+          "accepted": ["More details will be announced at a later date."],
+          "explanation": "Câu chốt cho e-mail thông báo khi bạn chưa có đủ thông tin để nói hết."
+        }
+      ]
+    }
+  ]
+}

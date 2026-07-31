@@ -1,0 +1,250 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "labeling",
+          "id": "t2-5-e1",
+          "intro": "Thư khách hàng hỏi về dịch vụ giao đồ ăn cho sự kiện.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission chính", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Sir or Madam,", "label": "Chào hỏi" },
+            { "text": "I am writing to inquire about your catering service for corporate events.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "Could you tell me whether you can cater for sixty people on a Saturday evening?", "label": "Mission chính" },
+            { "text": "Hope to hear from you soon.", "label": "Câu kết" },
+            { "text": "Yours faithfully,\nThao Bui", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "'Hope to hear from you soon' là câu kết ngắn gọn trong giáo trình, dùng được cho mọi e-mail đang chờ hồi âm."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-5-e2",
+          "intro": "Thư nhà sách trả lời khách về sách đặt trước.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission chính", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Ms. Young,", "label": "Chào hỏi" },
+            { "text": "Thank you for your patience while we contacted the publisher about your order.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "I am pleased to inform you that two copies have arrived and one has been reserved in your name.", "label": "Mission chính" },
+            { "text": "Please let me know when you would like to collect it.", "label": "Câu kết" },
+            { "text": "Sincerely yours,\nThe World's Biggest Bookstore", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "'I am pleased to inform you that...' dùng khi báo tin vui. So sánh với 'I am afraid...' dùng khi báo tin không vui."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-5-e3",
+          "intro": "Thư công ty phần mềm thông báo bảo trì hệ thống.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission chính", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear valued customers,", "label": "Chào hỏi" },
+            { "text": "As part of our ongoing improvements, we will be upgrading our servers this month.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "Please be informed that the system will be unavailable from ten at night on June 14 until six the next morning.", "label": "Mission chính" },
+            { "text": "We apologize for any inconvenience this may cause.", "label": "Câu kết" },
+            { "text": "Best regards,\nCloudpoint Systems", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "'Dear valued customers' dùng khi gửi cho nhiều khách hàng cùng lúc. Thông báo bảo trì phải nêu rõ MỐC BẮT ĐẦU và MỐC KẾT THÚC."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-5-e4",
+          "intro": "Thư khách hàng yêu cầu hoá đơn.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission chính", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Accounts Team,", "label": "Chào hỏi" },
+            { "text": "I placed an order on your website on August 3 under reference number KM-2201.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "Could you send me a VAT invoice for this order?", "label": "Mission chính" },
+            { "text": "An early reply would be greatly appreciated.", "label": "Câu kết" },
+            { "text": "Best regards,\nQuang Ha", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Khi chỉ biết tên bộ phận, dùng 'Dear + tên bộ phận + Team'. Luôn nêu mã đơn hàng ở câu thứ hai để họ tra cứu được ngay."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-5-e5",
+          "intro": "Thư từ chối lời mời dự sự kiện.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission chính", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Ms. Sousa,", "label": "Chào hỏi" },
+            { "text": "Thank you very much for inviting me to speak at the Regional Business Forum on May 26.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "I am afraid I will not be able to attend, as I will be abroad on that date.", "label": "Mission chính" },
+            { "text": "I hope you will consider me for a future event.", "label": "Câu kết" },
+            { "text": "Yours sincerely,\nHien Vo", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Thư từ chối: cảm ơn thật lòng trước, từ chối kèm lý do ngắn, rồi để ngỏ cho lần sau. Không bao giờ từ chối cụt lủn."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "labeling",
+          "id": "t2-5-m1",
+          "intro": "Thư nhà cung cấp dịch vụ ăn uống trả lời khách hỏi về sự kiện công ty.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission 1: Trả lời câu hỏi", "Mission 2: Nêu thông tin bổ sung", "Mission 3: Gợi ý", "Câu xã giao (không bắt buộc)", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Ms. Bui,", "label": "Chào hỏi" },
+            { "text": "Thank you for your interest in our catering service for corporate events.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "I am pleased to confirm that we can cater for sixty guests on a Saturday evening.", "label": "Mission 1: Trả lời câu hỏi" },
+            { "text": "Our set menu for that number costs 38 dollars per person, including service and table settings.", "label": "Mission 2: Nêu thông tin bổ sung" },
+            { "text": "One thing I can recommend is our seasonal menu, which changes every three months and is popular for evening events.", "label": "Mission 3: Gợi ý" },
+            { "text": "We have catered for several company anniversaries in your area this year.", "label": "Câu xã giao (không bắt buộc)" },
+            { "text": "Please e-mail me as soon as possible if you would like to arrange a tasting session.", "label": "Câu kết" },
+            { "text": "Best regards,\nHarvest Table Catering", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Sau khi trả lời câu hỏi chính, thêm một thông tin bổ sung có SỐ LIỆU (38 dollars per person) làm thư hữu ích hẳn — dù đề không bắt buộc."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-5-m2",
+          "intro": "Thư nhà sách báo tin sách đã về và xử lý phần hoàn tiền.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Nêu sự cố & giải thích lý do", "Mission 1: Báo tin", "Mission 2: Nêu phương án", "Mission 3: Đặt câu hỏi", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Ms. Young,", "label": "Chào hỏi" },
+            { "text": "Thank you for your patience since your e-mail of June 5 about your book order.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "The publisher had suspended printing of this title, which is why our system showed a copy that was no longer in stock.", "label": "Nêu sự cố & giải thích lý do" },
+            { "text": "I am pleased to inform you that two copies arrived at our store yesterday.", "label": "Mission 1: Báo tin" },
+            { "text": "One copy has been reserved in your name, and we will deliver it at no extra charge.", "label": "Mission 2: Nêu phương án" },
+            { "text": "Would you prefer delivery to your home address, or would you rather collect the book from the store?", "label": "Mission 3: Đặt câu hỏi" },
+            { "text": "Once again, I apologize for the inconvenience you have suffered.", "label": "Câu kết" },
+            { "text": "Sincerely yours,\nThe World's Biggest Bookstore", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Đây là thư TIẾP NỐI câu chuyện của bài mẫu trong giáo trình. Chú ý cách giải thích cụ thể vì sao hệ thống báo còn hàng — lý do rõ ràng làm khách nguôi giận."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-5-m3",
+          "intro": "Thư khách hàng phản hồi thông báo bảo trì hệ thống.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Nêu sự cố & giải thích lý do", "Mission 1: Nêu vấn đề", "Mission 2: Câu hỏi 1", "Mission 3: Câu hỏi 2", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Cloudpoint Systems Team,", "label": "Chào hỏi" },
+            { "text": "Thank you for informing us about the server upgrade scheduled for June 14.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "Our accounting team processes payroll overnight on the fourteenth of every month.", "label": "Nêu sự cố & giải thích lý do" },
+            { "text": "The maintenance window therefore overlaps with the only time we can run our payroll.", "label": "Mission 1: Nêu vấn đề" },
+            { "text": "Would it be possible to move the upgrade to the following night?", "label": "Mission 2: Câu hỏi 1" },
+            { "text": "If not, can we export our data before ten in the evening and work offline?", "label": "Mission 3: Câu hỏi 2" },
+            { "text": "I would appreciate a reply before the end of this week.", "label": "Câu kết" },
+            { "text": "Best regards,\nQuang Ha — Finance", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Nêu bối cảnh TRƯỚC vấn đề: người đọc phải biết bạn chạy lương vào đêm 14 thì mới hiểu vì sao lịch bảo trì là vấn đề. Đây là kỹ thuật lập luận cơ bản trong e-mail công việc."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-5-m4",
+          "intro": "Thư kế toán trả lời khách xin hoá đơn.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission 1: Trả lời yêu cầu", "Mission 2: Nêu điều kiện", "Mission 3: Đặt câu hỏi", "Câu xã giao (không bắt buộc)", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Mr. Ha,", "label": "Chào hỏi" },
+            { "text": "Thank you for your e-mail about order reference KM-2201 placed on August 3.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "I am attaching the VAT invoice for that order to this e-mail.", "label": "Mission 1: Trả lời yêu cầu" },
+            { "text": "Please note that invoices can only be reissued within ninety days of purchase.", "label": "Mission 2: Nêu điều kiện" },
+            { "text": "Could you confirm whether the company name on the invoice is correct?", "label": "Mission 3: Đặt câu hỏi" },
+            { "text": "You can also download past invoices at any time from your account page.", "label": "Câu xã giao (không bắt buộc)" },
+            { "text": "If you have any further queries, please contact me without hesitation.", "label": "Câu kết" },
+            { "text": "Best regards,\nAccounts Team", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Câu 'You can also download past invoices...' là thông tin thêm hữu ích, không nằm trong mission nào — dấu hiệu của một e-mail dịch vụ tốt."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-5-m5",
+          "intro": "Thư ban tổ chức trả lời người từ chối lời mời diễn thuyết.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission 1: Thể hiện sự tiếc nuối", "Mission 2: Đưa ra phương án thay thế", "Mission 3: Đặt câu hỏi", "Câu xã giao (không bắt buộc)", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Ms. Vo,", "label": "Chào hỏi" },
+            { "text": "Thank you for your reply about the Regional Business Forum on May 26.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "We are sorry that you will not be able to join us this year.", "label": "Mission 1: Thể hiện sự tiếc nuối" },
+            { "text": "If you would prefer, we could record a short video message from you to play during the opening session.", "label": "Mission 2: Đưa ra phương án thay thế" },
+            { "text": "Would you be available for a fifteen-minute recording before you travel?", "label": "Mission 3: Đặt câu hỏi" },
+            { "text": "Your talk last year was one of the most highly rated sessions of the forum.", "label": "Câu xã giao (không bắt buộc)" },
+            { "text": "Please let me know your decision by the end of next week.", "label": "Câu kết" },
+            { "text": "Best regards,\nElena Sousa — Events Team", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Khi bị từ chối, thư trả lời tốt không dừng lại ở tiếc nuối mà đưa ra PHƯƠNG ÁN THAY THẾ. Đây chính là mission 'suggesting' trong giáo trình."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "ordering",
+          "id": "t2-5-h1",
+          "prompt": "Sắp xếp các câu thành e-mail hoàn chỉnh — thư nhà sách báo tin sách đã về.",
+          "items": [
+            "Dear Ms. Young,",
+            "Thank you for your patience since your e-mail of June 5 about your book order.",
+            "The publisher had suspended printing of this title, which is why our system showed a copy that was no longer in stock.",
+            "I am pleased to inform you that two copies arrived at our store yesterday.",
+            "One copy has been reserved in your name, and we will deliver it at no extra charge.",
+            "Would you prefer delivery to your home address, or would you rather collect the book from the store?",
+            "Sincerely yours,\nThe World's Biggest Bookstore"
+          ],
+          "explanation": "Giải thích nguyên nhân đứng trước tin vui, để khách hiểu vì sao trước đó có sự cố. Câu hỏi cuối cho khách chọn giữa hai phương án cụ thể."
+        },
+        {
+          "type": "ordering",
+          "id": "t2-5-h2",
+          "prompt": "Sắp xếp các câu thành e-mail hoàn chỉnh — thư khách hàng phản hồi lịch bảo trì hệ thống.",
+          "items": [
+            "Dear Cloudpoint Systems Team,",
+            "Thank you for informing us about the server upgrade scheduled for June 14.",
+            "Our accounting team processes payroll overnight on the fourteenth of every month.",
+            "The maintenance window therefore overlaps with the only time we can run our payroll.",
+            "Would it be possible to move the upgrade to the following night?",
+            "If not, can we export our data before ten in the evening and work offline?",
+            "Best regards,\nQuang Ha — Finance"
+          ],
+          "explanation": "Bối cảnh → hệ quả → đề nghị chính → phương án dự phòng. Chữ 'therefore' và 'If not' làm mạch lập luận nhìn là hiểu."
+        },
+        {
+          "type": "ordering",
+          "id": "t2-5-h3",
+          "prompt": "Sắp xếp các câu thành e-mail hoàn chỉnh — thư kế toán gửi hoá đơn cho khách.",
+          "items": [
+            "Dear Mr. Ha,",
+            "Thank you for your e-mail about order reference KM-2201 placed on August 3.",
+            "I am attaching the VAT invoice for that order to this e-mail.",
+            "Please note that invoices can only be reissued within ninety days of purchase.",
+            "Could you confirm whether the company name on the invoice is correct?",
+            "If you have any further queries, please contact me without hesitation.",
+            "Best regards,\nAccounts Team"
+          ],
+          "explanation": "Đáp ứng yêu cầu trước, nêu điều kiện sau, rồi mới hỏi lại. Nếu nêu điều kiện trước khi gửi hoá đơn, thư sẽ có giọng gây khó dễ."
+        },
+        {
+          "type": "ordering",
+          "id": "t2-5-h4",
+          "prompt": "Sắp xếp các câu thành e-mail hoàn chỉnh — thư ban tổ chức trả lời người từ chối diễn thuyết.",
+          "items": [
+            "Dear Ms. Vo,",
+            "Thank you for your reply about the Regional Business Forum on May 26.",
+            "We are sorry that you will not be able to join us this year.",
+            "Your talk last year was one of the most highly rated sessions of the forum.",
+            "If you would prefer, we could record a short video message from you to play during the opening session.",
+            "Please let me know your decision by the end of next week.",
+            "Best regards,\nElena Sousa — Events Team"
+          ],
+          "explanation": "Lời khen đặt ngay trước phương án thay thế — nó làm cho lời đề nghị nghe chân thành chứ không phải cố vớt vát."
+        },
+        {
+          "type": "ordering",
+          "id": "t2-5-h5",
+          "prompt": "Sắp xếp các câu thành e-mail hoàn chỉnh — thư dịch vụ ăn uống trả lời khách hỏi về sự kiện.",
+          "items": [
+            "Dear Ms. Bui,",
+            "Thank you for your interest in our catering service for corporate events.",
+            "I am pleased to confirm that we can cater for sixty guests on a Saturday evening.",
+            "Our set menu for that number costs 38 dollars per person, including service and table settings.",
+            "One thing I can recommend is our seasonal menu, which is popular for evening events.",
+            "Please e-mail me as soon as possible if you would like to arrange a tasting session.",
+            "Best regards,\nHarvest Table Catering"
+          ],
+          "explanation": "Xác nhận làm được trước, giá sau, khuyến nghị cuối. Câu kết mời khách hành động tiếp ('arrange a tasting session') — mạnh hơn nhiều so với 'Hope to hear from you'."
+        }
+      ]
+    }
+  ]
+}

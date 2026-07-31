@@ -1,0 +1,412 @@
+{
+  "emails": {
+    "A": {
+      "from": "Grace Ihara",
+      "to": "Milbrook Language School",
+      "subject": "Refund for the cancelled course",
+      "sent": "January 22, 5:05 p.m.",
+      "body": [
+        "Dear Sir or Madam,",
+        "I enrolled in your Advanced Business English course starting on January 15 and paid the full fee of 480 dollars in December. Last week I was told that the course had been cancelled because too few people signed up. Nobody has contacted me about a refund since then. Could you tell me when I can expect my money back?",
+        "Yours faithfully,",
+        "Grace Ihara"
+      ],
+      "directions": "Respond to the e-mail as if you were an administrator at Milbrook Language School. In your e-mail, apologize, answer the question, and make ONE alternative offer."
+    },
+    "B": {
+      "from": "Owen Barrett — IT Support",
+      "to": "All Staff",
+      "subject": "Password reset required this week",
+      "sent": "June 9, 8:45 a.m.",
+      "body": [
+        "Dear colleagues,",
+        "As part of our new security policy, all staff must reset their network password before Friday, June 13. You can do this from the login screen or by visiting the IT help desk on the third floor. Passwords must be at least twelve characters long and cannot repeat any of your last five passwords. Please reply to this e-mail once you have completed the reset.",
+        "Best regards,",
+        "Owen Barrett — IT Support"
+      ],
+      "directions": "Respond to the e-mail as if you were a member of staff. In your e-mail, confirm that you have completed the reset and ask TWO questions about the new policy."
+    },
+    "C": {
+      "from": "Priya Chandra — Northgate Travel",
+      "to": "Ms. Julia Sandoval",
+      "subject": "Your booking to Lisbon",
+      "sent": "March 27, 12:30 p.m.",
+      "body": [
+        "Dear Ms. Sandoval,",
+        "Thank you for booking your trip to Lisbon with Northgate Travel. Unfortunately, the airline has changed the departure time of your outbound flight from 9:40 a.m. to 6:15 a.m. on April 14. Your hotel booking and return flight are unaffected. Please confirm whether the new time is acceptable, or let us know if you would prefer to travel a day earlier.",
+        "Best regards,",
+        "Priya Chandra — Northgate Travel"
+      ],
+      "directions": "Respond to the e-mail as if you were Julia Sandoval. In your e-mail, state your decision and ask TWO questions about the change."
+    },
+    "D": {
+      "from": "Daniel Okoro",
+      "to": "Ridgeway Community Centre",
+      "subject": "Renting the hall for a company event",
+      "sent": "November 4, 3:20 p.m.",
+      "body": [
+        "To Whom It May Concern,",
+        "I am writing to inquire about renting your main hall for a company anniversary dinner on December 12. We expect around eighty guests. Could you tell me what the hourly rate is and whether catering is available on site? We would also need to bring in our own sound equipment, so please let me know if that is permitted.",
+        "Best regards,",
+        "Daniel Okoro"
+      ],
+      "directions": "Respond to the e-mail as if you were the bookings coordinator at Ridgeway Community Centre. In your e-mail, answer the customer's questions and make ONE suggestion."
+    }
+  },
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t1-4-e1",
+          "emailRef": "A",
+          "question": "Directions yêu cầu bạn làm bao nhiêu mission?",
+          "options": [
+            { "id": "A", "text": "2 mission" },
+            { "id": "B", "text": "3 mission" },
+            { "id": "C", "text": "4 mission" },
+            { "id": "D", "text": "1 mission" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'apologize' + 'answer the question' + 'make ONE alternative offer' = 3 mission."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-e2",
+          "emailRef": "A",
+          "question": "'Make ONE alternative offer' nghĩa là gì?",
+          "options": [
+            { "id": "A", "text": "Đề nghị một phương án thay thế cho khách" },
+            { "id": "B", "text": "Xin lỗi thêm một lần nữa" },
+            { "id": "C", "text": "Hỏi khách một câu" },
+            { "id": "D", "text": "Từ chối hoàn tiền" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "'alternative' = phương án thay thế. Ví dụ: chuyển sang lớp khác, giữ tiền làm tín dụng học phí, hoặc học lớp online."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-e3",
+          "emailRef": "B",
+          "question": "Directions yêu cầu bạn làm bao nhiêu mission?",
+          "options": [
+            { "id": "A", "text": "1 mission" },
+            { "id": "B", "text": "2 mission" },
+            { "id": "C", "text": "3 mission" },
+            { "id": "D", "text": "4 mission" }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "'confirm that you have completed the reset' = 1 + 'ask TWO questions' = 2. Tổng 3."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-e4",
+          "emailRef": "B",
+          "question": "Mission 1 yêu cầu bạn làm gì?",
+          "options": [
+            { "id": "A", "text": "Xác nhận rằng bạn đã đổi mật khẩu xong" },
+            { "id": "B", "text": "Hỏi cách đổi mật khẩu" },
+            { "id": "C", "text": "Phàn nàn về chính sách mới" },
+            { "id": "D", "text": "Xin gia hạn thời gian đổi mật khẩu" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "'confirm that you HAVE COMPLETED the reset' — thì hiện tại hoàn thành cho biết việc đã xong. Đừng viết 'I will reset it soon'."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-e5",
+          "emailRef": "C",
+          "question": "Directions yêu cầu bạn làm bao nhiêu mission?",
+          "options": [
+            { "id": "A", "text": "2 mission" },
+            { "id": "B", "text": "3 mission" },
+            { "id": "C", "text": "4 mission" },
+            { "id": "D", "text": "1 mission" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'state your decision' = 1 + 'ask TWO questions' = 2. Tổng 3 mission."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-e6",
+          "emailRef": "C",
+          "question": "'State your decision' — bạn phải quyết định điều gì?",
+          "options": [
+            { "id": "A", "text": "Có huỷ toàn bộ chuyến đi hay không" },
+            { "id": "B", "text": "Chấp nhận giờ bay mới, hay bay sớm hơn một ngày" },
+            { "id": "C", "text": "Đổi khách sạn hay giữ nguyên" },
+            { "id": "D", "text": "Có mua bảo hiểm du lịch hay không" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "E-mail đề đưa ra đúng hai lựa chọn: 'confirm whether the new time is acceptable, or ... travel a day earlier'. Bạn phải chọn RÕ một trong hai."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-e7",
+          "emailRef": "D",
+          "question": "Directions yêu cầu bạn làm gì ngoài việc trả lời câu hỏi?",
+          "options": [
+            { "id": "A", "text": "Xin lỗi khách" },
+            { "id": "B", "text": "Đưa ra một gợi ý" },
+            { "id": "C", "text": "Hỏi khách hai câu" },
+            { "id": "D", "text": "Từ chối cho thuê hội trường" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'make ONE suggestion'. Ví dụ: gợi ý đặt cọc sớm vì tháng 12 đông khách, hoặc gợi ý thuê thêm giờ để có thời gian bày biện."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-e8",
+          "emailRef": "D",
+          "question": "Khách hỏi bao nhiêu điều trong thân e-mail?",
+          "options": [
+            { "id": "A", "text": "1 điều" },
+            { "id": "B", "text": "2 điều" },
+            { "id": "C", "text": "3 điều" },
+            { "id": "D", "text": "4 điều" }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "Giá thuê theo giờ · Có dịch vụ ăn uống tại chỗ không · Có được mang thiết bị âm thanh riêng vào không. Hai điều đầu nằm chung một câu nối bằng 'and whether'."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t1-4-m1",
+          "emailRef": "A",
+          "question": "Bạn đóng vai ai?",
+          "options": [
+            { "id": "A", "text": "Grace Ihara — học viên" },
+            { "id": "B", "text": "Nhân viên hành chính của trường Milbrook" },
+            { "id": "C", "text": "Giáo viên của khoá học bị huỷ" },
+            { "id": "D", "text": "Nhân viên ngân hàng xử lý hoàn tiền" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'as if you were an administrator at Milbrook Language School'. Bạn thay mặt trường, nên xưng 'we' và có quyền đưa ra phương án thay thế."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-m2",
+          "emailRef": "A",
+          "question": "Xưng hô nào phù hợp nhất?",
+          "options": [
+            { "id": "A", "text": "Dear Sir or Madam," },
+            { "id": "B", "text": "Dear Ms. Ihara," },
+            { "id": "C", "text": "Hi Grace," },
+            { "id": "D", "text": "Dear Student," }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Khách ký tên Grace Ihara → 'Ihara' là họ. Khách dùng 'Dear Sir or Madam' vì không biết tên bạn, nhưng bạn biết tên khách nên phải gọi đích danh."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-m3",
+          "emailRef": "B",
+          "question": "Quan hệ giữa hai bên là gì?",
+          "options": [
+            { "id": "A", "text": "Doanh nghiệp ↔ khách hàng" },
+            { "id": "B", "text": "Đồng nghiệp trong cùng công ty (nội bộ)" },
+            { "id": "C", "text": "Nhà cung cấp ↔ đại lý" },
+            { "id": "D", "text": "Nhà tuyển dụng ↔ ứng viên" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'Dear colleagues' và 'All Staff' cho biết đây là e-mail nội bộ. Mức trang trọng vừa phải — vẫn dùng 'Dear Mr. Barrett' và 'Best regards'."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-m4",
+          "emailRef": "B",
+          "question": "Xưng hô nào phù hợp nhất cho e-mail trả lời?",
+          "options": [
+            { "id": "A", "text": "Dear colleagues," },
+            { "id": "B", "text": "Dear Mr. Barrett," },
+            { "id": "C", "text": "To Whom It May Concern," },
+            { "id": "D", "text": "Dear IT," }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Người ký tên là Owen Barrett → 'Dear Mr. Barrett'. 'Dear colleagues' là cách gọi cả nhóm, không dùng khi trả lời riêng một người."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-m5",
+          "emailRef": "C",
+          "question": "Bạn đóng vai ai?",
+          "options": [
+            { "id": "A", "text": "Priya Chandra — nhân viên công ty du lịch" },
+            { "id": "B", "text": "Julia Sandoval — khách hàng đặt tour" },
+            { "id": "C", "text": "Nhân viên hãng hàng không" },
+            { "id": "D", "text": "Nhân viên khách sạn ở Lisbon" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'as if you were Julia Sandoval'. Bạn là KHÁCH, nên bạn là người quyết định, không phải người xin lỗi."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-m6",
+          "emailRef": "C",
+          "question": "Với vai khách hàng bị đổi giờ bay, giọng văn nào phù hợp nhất?",
+          "options": [
+            { "id": "A", "text": "Giận dữ, đòi bồi thường ngay lập tức" },
+            { "id": "B", "text": "Lịch sự, nêu rõ quyết định và hỏi thêm thông tin" },
+            { "id": "C", "text": "Xin lỗi vì đã làm phiền công ty du lịch" },
+            { "id": "D", "text": "Suồng sã vì đã quen nhân viên tư vấn" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Directions chỉ bảo 'state your decision' và 'ask TWO questions' — không có mission phàn nàn. Thêm giọng giận dữ là đi lệch đề và mất điểm văn phong."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-m7",
+          "emailRef": "D",
+          "question": "Bạn đóng vai ai?",
+          "options": [
+            { "id": "A", "text": "Daniel Okoro — người muốn thuê hội trường" },
+            { "id": "B", "text": "Điều phối viên đặt chỗ của trung tâm Ridgeway" },
+            { "id": "C", "text": "Nhà cung cấp dịch vụ ăn uống" },
+            { "id": "D", "text": "Khách mời trong bữa tiệc kỷ niệm" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'as if you were the bookings coordinator'. Bạn cung cấp thông tin về địa điểm, nên phải trả lời rõ ràng, có số liệu."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-m8",
+          "emailRef": "D",
+          "question": "Đại từ nào nên dùng khi nói về trung tâm Ridgeway?",
+          "options": [
+            { "id": "A", "text": "They — vì trung tâm là bên thứ ba" },
+            { "id": "B", "text": "We / our — vì bạn nói thay mặt trung tâm" },
+            { "id": "C", "text": "You — vì bạn đang nói với khách" },
+            { "id": "D", "text": "It — vì trung tâm là một địa điểm" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Sắm vai nhân viên của tổ chức thì dùng 'we/our': 'Our hourly rate is...', 'We do provide catering on site.' Dùng 'they' là tự tách mình khỏi vai được giao."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t1-4-h1",
+          "emailRef": "A",
+          "question": "'Answer the question' — câu hỏi cụ thể của khách là gì?",
+          "options": [
+            { "id": "A", "text": "Vì sao khoá học bị huỷ" },
+            { "id": "B", "text": "Khi nào khách nhận lại được tiền" },
+            { "id": "C", "text": "Có khoá học nào khác không" },
+            { "id": "D", "text": "Học phí là bao nhiêu" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'Could you tell me WHEN I can expect my money back?' Câu trả lời phải có MỐC THỜI GIAN cụ thể — 'within ten business days' chẳng hạn — chứ không phải 'soon'."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-h2",
+          "emailRef": "A",
+          "question": "Chi tiết nào trong e-mail đề bạn NÊN nhắc lại để chứng minh đã tra cứu hồ sơ?",
+          "options": [
+            { "id": "A", "text": "Tên khoá học và số tiền 480 đô la đã đóng" },
+            { "id": "B", "text": "Việc quá ít người đăng ký" },
+            { "id": "C", "text": "Việc khách viết thư lúc 5 giờ chiều" },
+            { "id": "D", "text": "Việc khách dùng 'Yours faithfully'" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Nhắc lại số tiền và tên khoá ('your payment of 480 dollars for the Advanced Business English course') cho thấy bạn đã kiểm tra hồ sơ thật — làm thư đáng tin hơn hẳn."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-h3",
+          "emailRef": "B",
+          "question": "Chọn HAI câu hỏi phù hợp nhất về chính sách mật khẩu mới.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "How often will we be required to change our password from now on?" },
+            { "id": "B", "text": "Does the new policy also apply to our mobile devices?" },
+            { "id": "C", "text": "How long must the new password be?" },
+            { "id": "D", "text": "What is the deadline for the reset?" }
+          ],
+          "correctAnswers": ["A", "B"],
+          "explanation": "C và D đã có trong đề ('at least twelve characters', 'before Friday, June 13'). Câu hỏi phải nhắm vào chỗ đề chưa nói."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-h4",
+          "emailRef": "B",
+          "question": "E-mail đề nói mật khẩu 'cannot repeat any of your last five passwords'. Chi tiết này có tạo mission không?",
+          "options": [
+            { "id": "A", "text": "Có — bạn phải liệt kê 5 mật khẩu cũ của mình" },
+            { "id": "B", "text": "Có — bạn phải hỏi lại 5 mật khẩu đó là gì" },
+            { "id": "C", "text": "Không — đây là quy định, chỉ cần tuân theo, không cần phản hồi" },
+            { "id": "D", "text": "Không — nhưng bạn phải phản đối vì quy định vô lý" }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "Phân biệt QUY ĐỊNH với YÊU CẦU PHẢN HỒI. Chỉ câu 'Please reply once you have completed the reset' mới tạo mission."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-h5",
+          "emailRef": "C",
+          "question": "Chọn HAI câu hỏi phù hợp nhất về việc đổi giờ bay.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Will the airline provide compensation for the earlier departure?" },
+            { "id": "B", "text": "Is airport transfer available at that hour of the morning?" },
+            { "id": "C", "text": "What is the new departure time?" },
+            { "id": "D", "text": "Has my hotel booking been changed as well?" }
+          ],
+          "correctAnswers": ["A", "B"],
+          "explanation": "C và D đã có trong đề ('6:15 a.m.' và 'Your hotel booking and return flight are unaffected'). D đặc biệt nguy hiểm vì trông rất hợp lý — nhưng đề đã trả lời rồi."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-h6",
+          "emailRef": "C",
+          "question": "Cách nêu quyết định nào hoàn thành mission tốt nhất?",
+          "options": [
+            { "id": "A", "text": "I think the new time might be difficult, but I am not sure yet." },
+            { "id": "B", "text": "I accept the new departure time of 6:15 a.m. on April 14." },
+            { "id": "C", "text": "Please decide for me which option is better." },
+            { "id": "D", "text": "I will let you know my decision next week." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "'State your decision' đòi hỏi câu trả lời DỨT KHOÁT. A, C, D đều né tránh quyết định — giám khảo sẽ tính là chưa hoàn thành mission."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-h7",
+          "emailRef": "D",
+          "question": "Chọn TẤT CẢ nội dung bắt buộc phải có trong thư trả lời.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Giá thuê theo giờ của hội trường" },
+            { "id": "B", "text": "Trung tâm có phục vụ ăn uống tại chỗ hay không" },
+            { "id": "C", "text": "Khách có được mang thiết bị âm thanh riêng vào hay không" },
+            { "id": "D", "text": "Hỏi lại khách dự kiến bao nhiêu người tham dự" }
+          ],
+          "correctAnswers": ["A", "B", "C"],
+          "explanation": "A, B, C là ba câu hỏi của khách. D sai vì khách đã nói rõ 'around eighty guests' — hỏi lại là lỗi đọc lướt."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-h8",
+          "emailRef": "D",
+          "question": "Gợi ý nào bám sát nhất vào chi tiết cụ thể của khách?",
+          "options": [
+            { "id": "A", "text": "I suggest that you book early, as December is our busiest month." },
+            { "id": "B", "text": "I suggest that you hold the event in the summer instead." },
+            { "id": "C", "text": "I suggest that you invite fewer guests." },
+            { "id": "D", "text": "I suggest that you contact another venue." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Khách tổ chức ngày 12 tháng 12 → gợi ý đặt sớm vì tháng 12 đông là hoàn toàn hợp lý. B, C, D đều phủ nhận yêu cầu của khách — trái với vai người bán dịch vụ."
+        }
+      ]
+    }
+  ]
+}

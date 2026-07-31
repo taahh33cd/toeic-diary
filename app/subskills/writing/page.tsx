@@ -11,7 +11,13 @@ const PARTS = [
     description: "5 tầng kỹ năng nền tảng · 5 bộ test mỗi tầng",
     active: true,
   },
-  { href: null, label: "Part 2", labelVi: "Email / Sentence completion", description: null, active: false },
+  {
+    href: "/subskills/writing/part2",
+    label: "Part 2",
+    labelVi: "Viết e-mail",
+    description: "7 tầng kỹ năng · 5 bộ test mỗi tầng · có Tầng 0 cho người mới bắt đầu",
+    active: true,
+  },
 ];
 
 export default function WritingHubPage() {

@@ -1,0 +1,250 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "labeling",
+          "id": "t2-4-e1",
+          "intro": "Thư ngân hàng thông báo giao dịch bất thường.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission chính", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Mr. Cole,", "label": "Chào hỏi" },
+            { "text": "We noticed two transactions on your account on July 1 that do not match your usual spending pattern.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "As a precaution, we have temporarily suspended your debit card.", "label": "Mission chính" },
+            { "text": "Please reply to this e-mail if you did make these transactions.", "label": "Câu kết" },
+            { "text": "Sincerely,\nCustomer Support — Willowbank Bank", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Trong thư chủ động thông báo, khối thứ hai nêu SỰ VIỆC thay cho lời cảm ơn. Bố cục 5 khối vẫn không đổi."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-4-e2",
+          "intro": "Thư ứng viên hỏi thêm thông tin sau phỏng vấn.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission chính", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Ms. Kim,", "label": "Chào hỏi" },
+            { "text": "Thank you for meeting me last Thursday to discuss the Marketing Assistant position.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "Could you tell me when I can expect to hear the result of the interview?", "label": "Mission chính" },
+            { "text": "I look forward to hearing from you soon.", "label": "Câu kết" },
+            { "text": "Yours sincerely,\nDaniel Pham", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Thư cảm ơn sau phỏng vấn: cảm ơn cụ thể (nêu ngày và vị trí), hỏi một câu, rồi chốt. Ngắn nhưng đủ 5 khối."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-4-e3",
+          "intro": "Thư cửa hàng trả lời khách hỏi về đổi trả hàng.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission chính", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Ms. Bell,", "label": "Chào hỏi" },
+            { "text": "Thank you for your e-mail about the jacket you bought at our Kingsway store.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "I would like to let you know that items can be exchanged within thirty days with the original receipt.", "label": "Mission chính" },
+            { "text": "Please do not hesitate to contact me if you need any further information.", "label": "Câu kết" },
+            { "text": "Best regards,\nKingsway Fashion", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "'I would like to let you know that...' — khuôn cung cấp thông tin trong giáo trình. Sau đó là điều kiện cụ thể (30 ngày, có hoá đơn gốc)."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-4-e4",
+          "intro": "Thư nhân viên báo nghỉ ốm.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission chính", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Ms. Okafor,", "label": "Chào hỏi" },
+            { "text": "I am afraid I woke up this morning with a high fever and my doctor has advised me to rest.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "I am writing to let you know that I will not be able to come to the office today.", "label": "Mission chính" },
+            { "text": "I will keep you informed about tomorrow.", "label": "Câu kết" },
+            { "text": "Best regards,\nBao Tran — Logistics", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "'I am afraid...' mở đầu tin không vui. Câu kết hứa cập nhật tiếp — quan trọng với thư nghỉ ốm vì người quản lý cần biết kế hoạch."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-4-e5",
+          "intro": "Thư công ty vận chuyển xin lỗi vì giao hàng chậm.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission chính", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Mr. Chen,", "label": "Chào hỏi" },
+            { "text": "Thank you for contacting us about parcel number TR-88214.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "We are very sorry for the delay in delivering your parcel, which was caused by severe weather in the region.", "label": "Mission chính" },
+            { "text": "We expect that you will continue to use our services.", "label": "Câu kết" },
+            { "text": "Sincerely,\nSwiftline Courier", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Nhắc mã đơn hàng ngay câu thứ hai giúp người đọc nhận ra ngay việc gì. Trong thư dịch vụ, luôn nhắc lại mã tham chiếu nếu đề có."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "labeling",
+          "id": "t2-4-m1",
+          "intro": "Thư khách hàng trả lời ngân hàng về giao dịch bất thường.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission 1: Xác nhận", "Mission 2: Câu hỏi 1", "Mission 3: Câu hỏi 2", "Nêu sự cố & giải thích lý do", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Customer Support Team,", "label": "Chào hỏi" },
+            { "text": "Thank you for your e-mail of July 3 about the two transactions on my account.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "I was travelling abroad at the beginning of the month, which is probably why the payments looked unusual.", "label": "Nêu sự cố & giải thích lý do" },
+            { "text": "I can confirm that I did make both transactions on July 1.", "label": "Mission 1: Xác nhận" },
+            { "text": "Could you tell me the exact amounts of the two transactions in question?", "label": "Mission 2: Câu hỏi 1" },
+            { "text": "Will the suspension affect my direct debits and standing orders?", "label": "Mission 3: Câu hỏi 2" },
+            { "text": "I would appreciate an early reply so that my card can be reactivated.", "label": "Câu kết" },
+            { "text": "Yours sincerely,\nAdrian Cole", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Câu giải thích ('I was travelling abroad') không bắt buộc nhưng làm lời xác nhận đáng tin hơn hẳn. Đây là cách 'ăn điểm' khi bạn còn thời gian."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-4-m2",
+          "intro": "Thư cửa hàng thời trang xử lý khiếu nại về áo khoác bị lỗi.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Nêu sự cố & giải thích lý do", "Mission 1: Xin lỗi", "Mission 2: Nêu giải pháp", "Mission 3: Đặt câu hỏi", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Ms. Bell,", "label": "Chào hỏi" },
+            { "text": "Thank you for letting us know about the jacket you bought at our Kingsway store last week.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "Our supplier has informed us that a small number of jackets from that batch were stitched with the wrong thread.", "label": "Nêu sự cố & giải thích lý do" },
+            { "text": "I would like to apologize for the poor quality of the item you received.", "label": "Mission 1: Xin lỗi" },
+            { "text": "We will replace the jacket free of charge, or give you a full refund instantly if you prefer.", "label": "Mission 2: Nêu giải pháp" },
+            { "text": "Would you give us a call or visit our store to let us know which you would like?", "label": "Mission 3: Đặt câu hỏi" },
+            { "text": "Once again, thank you for pointing this matter out to us.", "label": "Câu kết" },
+            { "text": "Best regards,\nKingsway Fashion", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Câu 'Thank you for pointing this matter out to us' là câu kết rất hay cho thư xử lý khiếu nại — biến lời phàn nàn thành sự đóng góp."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-4-m3",
+          "intro": "Thư trưởng phòng trả lời nhân viên báo nghỉ ốm.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission 1: Chấp thuận", "Mission 2: Hướng dẫn công việc", "Mission 3: Đặt câu hỏi", "Câu xã giao (không bắt buộc)", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Mr. Tran,", "label": "Chào hỏi" },
+            { "text": "Thank you for letting me know that you are unwell today.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "Please take the day off and rest as your doctor advised.", "label": "Mission 1: Chấp thuận" },
+            { "text": "I have asked Ms. Diaz to handle the afternoon delivery schedule in your absence.", "label": "Mission 2: Hướng dẫn công việc" },
+            { "text": "Could you let me know by this evening whether you expect to be in tomorrow?", "label": "Mission 3: Đặt câu hỏi" },
+            { "text": "I hope you feel better soon.", "label": "Câu xã giao (không bắt buộc)" },
+            { "text": "Please do not worry about work until you have recovered.", "label": "Câu kết" },
+            { "text": "Best regards,\nNgozi Okafor — Logistics Manager", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Với thư nghỉ ốm, câu xã giao ('I hope you feel better soon') gần như bắt buộc về mặt lịch sự, dù Directions không yêu cầu."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-4-m4",
+          "intro": "Thư công ty vận chuyển xử lý khiếu nại giao hàng chậm.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Nêu sự cố & giải thích lý do", "Mission 1: Xin lỗi", "Mission 2: Nêu thông tin mới", "Mission 3: Đề nghị bồi thường", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Mr. Chen,", "label": "Chào hỏi" },
+            { "text": "Thank you for contacting us about parcel number TR-88214.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "Severe weather closed the main highway for two days last week, and all parcels routed through our northern depot were held there.", "label": "Nêu sự cố & giải thích lý do" },
+            { "text": "We are very sorry for the delay in delivering your parcel.", "label": "Mission 1: Xin lỗi" },
+            { "text": "Your parcel left the depot yesterday evening and is scheduled for delivery before noon tomorrow.", "label": "Mission 2: Nêu thông tin mới" },
+            { "text": "We would like to refund the express delivery charge of 15 dollars to your account.", "label": "Mission 3: Đề nghị bồi thường" },
+            { "text": "We hope that you will continue to use our services.", "label": "Câu kết" },
+            { "text": "Sincerely,\nSwiftline Courier", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Thứ tự vàng của thư xin lỗi dịch vụ: lý do → xin lỗi → tình trạng hiện tại → bồi thường. Khách quan tâm nhất là 'bao giờ tôi nhận được hàng', nên thông tin đó phải rõ ràng."
+        },
+        {
+          "type": "labeling",
+          "id": "t2-4-m5",
+          "intro": "Thư nhà tuyển dụng trả lời ứng viên hỏi kết quả phỏng vấn.",
+          "labels": ["Chào hỏi", "Cảm ơn / tóm tắt vấn đề", "Mission 1: Trả lời câu hỏi", "Mission 2: Nêu bước tiếp theo", "Mission 3: Đặt câu hỏi", "Câu xã giao (không bắt buộc)", "Câu kết", "Lời chào cuối thư"],
+          "sentences": [
+            { "text": "Dear Mr. Pham,", "label": "Chào hỏi" },
+            { "text": "Thank you for your e-mail asking about the result of your interview on Thursday.", "label": "Cảm ơn / tóm tắt vấn đề" },
+            { "text": "We expect to make a final decision by the end of next week.", "label": "Mission 1: Trả lời câu hỏi" },
+            { "text": "Shortlisted candidates will be invited to a second interview with the marketing director.", "label": "Mission 2: Nêu bước tiếp theo" },
+            { "text": "Could you confirm whether you would be available for a second interview on May 3 or May 4?", "label": "Mission 3: Đặt câu hỏi" },
+            { "text": "The panel was impressed by the campaign examples you brought with you.", "label": "Câu xã giao (không bắt buộc)" },
+            { "text": "I look forward to your reply.", "label": "Câu kết" },
+            { "text": "Best regards,\nSandra Kim — Recruitment Team", "label": "Lời chào cuối thư" }
+          ],
+          "explanation": "Trả lời đúng câu người ta hỏi TRƯỚC ('by the end of next week'), rồi mới bổ sung thông tin thêm. Đừng bắt người đọc lội qua ba câu mới thấy câu trả lời."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "ordering",
+          "id": "t2-4-h1",
+          "prompt": "Sắp xếp các câu thành e-mail hoàn chỉnh — thư cửa hàng thời trang xử lý áo khoác lỗi.",
+          "items": [
+            "Dear Ms. Bell,",
+            "Thank you for letting us know about the jacket you bought at our Kingsway store last week.",
+            "Our supplier has informed us that a small number of jackets from that batch were stitched with the wrong thread.",
+            "I would like to apologize for the poor quality of the item you received.",
+            "We will replace the jacket free of charge, or give you a full refund instantly if you prefer.",
+            "Would you give us a call or visit our store to let us know which you would like?",
+            "Best regards,\nKingsway Fashion"
+          ],
+          "explanation": "Giải thích → xin lỗi → giải pháp → hỏi khách chọn. Khi bạn đưa ra hai phương án, câu hỏi cuối phải yêu cầu khách CHỌN một."
+        },
+        {
+          "type": "ordering",
+          "id": "t2-4-h2",
+          "prompt": "Sắp xếp các câu thành e-mail hoàn chỉnh — thư công ty vận chuyển xin lỗi vì giao hàng chậm.",
+          "items": [
+            "Dear Mr. Chen,",
+            "Thank you for contacting us about parcel number TR-88214.",
+            "Severe weather closed the main highway for two days last week.",
+            "We are very sorry for the delay in delivering your parcel.",
+            "Your parcel left the depot yesterday evening and is scheduled for delivery before noon tomorrow.",
+            "We would like to refund the express delivery charge of 15 dollars to your account.",
+            "Sincerely,\nSwiftline Courier"
+          ],
+          "explanation": "Thông tin về tình trạng hiện tại của kiện hàng phải đứng ngay sau lời xin lỗi — đó là điều khách muốn biết nhất."
+        },
+        {
+          "type": "ordering",
+          "id": "t2-4-h3",
+          "prompt": "Sắp xếp các câu thành e-mail hoàn chỉnh — thư trưởng phòng trả lời nhân viên nghỉ ốm.",
+          "items": [
+            "Dear Mr. Tran,",
+            "Thank you for letting me know that you are unwell today.",
+            "Please take the day off and rest as your doctor advised.",
+            "I have asked Ms. Diaz to handle the afternoon delivery schedule in your absence.",
+            "Could you let me know by this evening whether you expect to be in tomorrow?",
+            "I hope you feel better soon.",
+            "Best regards,\nNgozi Okafor — Logistics Manager"
+          ],
+          "explanation": "Câu xã giao ('I hope you feel better soon') đứng ngay trước lời chào cuối, đóng vai trò câu kết ấm áp cho thư cá nhân hơn."
+        },
+        {
+          "type": "ordering",
+          "id": "t2-4-h4",
+          "prompt": "Sắp xếp các câu thành e-mail hoàn chỉnh — thư nhà tuyển dụng trả lời ứng viên.",
+          "items": [
+            "Dear Mr. Pham,",
+            "Thank you for your e-mail asking about the result of your interview on Thursday.",
+            "We expect to make a final decision by the end of next week.",
+            "Shortlisted candidates will be invited to a second interview with the marketing director.",
+            "Could you confirm whether you would be available on May 3 or May 4?",
+            "The panel was impressed by the campaign examples you brought with you.",
+            "Best regards,\nSandra Kim — Recruitment Team"
+          ],
+          "explanation": "Câu trả lời trực tiếp đứng ngay sau câu tóm tắt. Lời khen ('The panel was impressed...') để cuối, làm câu chốt thiện chí."
+        },
+        {
+          "type": "ordering",
+          "id": "t2-4-h5",
+          "prompt": "Sắp xếp các câu thành e-mail hoàn chỉnh — thư ngân hàng thông báo giao dịch bất thường.",
+          "items": [
+            "Dear Mr. Cole,",
+            "We noticed two transactions on your account on July 1 that do not match your usual spending pattern.",
+            "As a precaution, we have temporarily suspended your debit card.",
+            "To restore it, please visit any branch with a form of photo identification.",
+            "If you did make these transactions, simply reply to this e-mail.",
+            "We will reactivate the card within one working day.",
+            "Sincerely,\nCustomer Support — Willowbank Bank"
+          ],
+          "explanation": "Sự việc → hành động đã làm → hướng dẫn cho từng trường hợp. Hai nhánh xử lý ('visit any branch' và 'simply reply') phải đứng liền nhau để người đọc so sánh được."
+        }
+      ]
+    }
+  ]
+}

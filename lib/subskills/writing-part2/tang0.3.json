@@ -1,0 +1,212 @@
+{
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "matching",
+          "id": "t0-3-e1",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu HẸN LỊCH.",
+          "pairs": [
+            { "left": "I would like to make", "right": "an appointment with Dr. Lee." },
+            { "left": "Are you available", "right": "on Tuesday morning?" },
+            { "left": "Would three o'clock", "right": "be convenient for you?" },
+            { "left": "I am writing to confirm", "right": "our meeting next Friday." },
+            { "left": "Please let me know", "right": "a time that suits you." }
+          ],
+          "explanation": "'make an appointment WITH + người'. 'be convenient for you' = có tiện cho bạn không — lịch sự hơn nhiều so với 'Is it OK?'."
+        },
+        {
+          "type": "matching",
+          "id": "t0-3-e2",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu ĐỔI / HUỶ LỊCH.",
+          "pairs": [
+            { "left": "I am afraid I have to", "right": "reschedule our meeting." },
+            { "left": "Something urgent has", "right": "come up at the office." },
+            { "left": "Would it be possible to", "right": "move it to Thursday?" },
+            { "left": "I apologize for any", "right": "inconvenience this may cause." },
+            { "left": "Unfortunately, I will not be able", "right": "to attend the conference." }
+          ],
+          "explanation": "'I am afraid...' là cách mở đầu tin xấu một cách lịch sự. 'come up' = phát sinh. 'reschedule' = dời lịch."
+        },
+        {
+          "type": "matching",
+          "id": "t0-3-e3",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu về CUỘC HỌP.",
+          "pairs": [
+            { "left": "The meeting will be held", "right": "in Conference Room B." },
+            { "left": "Please bring", "right": "a copy of the report." },
+            { "left": "The agenda is attached", "right": "to this e-mail." },
+            { "left": "All department heads are expected", "right": "to attend." },
+            { "left": "The session should last", "right": "about two hours." }
+          ],
+          "explanation": "'be held' = được tổ chức (bị động). 'attached to this e-mail' = đính kèm trong thư này — cụm bạn sẽ dùng rất nhiều."
+        },
+        {
+          "type": "matching",
+          "id": "t0-3-e4",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu HỎI VỀ CUỘC HỌP.",
+          "pairs": [
+            { "left": "Could you tell me", "right": "where the meeting will take place?" },
+            { "left": "Do I need to prepare", "right": "anything in advance?" },
+            { "left": "How long is the meeting", "right": "expected to last?" },
+            { "left": "Who else will be", "right": "attending the session?" },
+            { "left": "Should I bring", "right": "my own laptop?" }
+          ],
+          "explanation": "Chú ý câu hỏi gián tiếp: 'Could you tell me WHERE the meeting WILL TAKE PLACE?' — trật tự S + V bình thường, không đảo ngữ."
+        },
+        {
+          "type": "matching",
+          "id": "t0-3-e5",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu XÁC NHẬN & CẢM ƠN.",
+          "pairs": [
+            { "left": "Thank you for", "right": "arranging the meeting." },
+            { "left": "I have received", "right": "your invitation." },
+            { "left": "I will be there", "right": "on time." },
+            { "left": "I am looking forward to", "right": "meeting you in person." },
+            { "left": "Please confirm the details", "right": "at your earliest convenience." }
+          ],
+          "explanation": "'at your earliest convenience' = sớm nhất có thể — cách nói trang trọng thay cho 'as soon as possible'."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "word_bank",
+          "id": "t0-3-m1",
+          "sentence": "I would like to ___ an appointment ___ Dr. Lee.",
+          "bank": ["make", "with", "making", "to", "made", "for"],
+          "answers": ["make", "with"],
+          "explanation": "'make an appointment with + người'. Người Việt hay viết nhầm 'appointment to'."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-3-m2",
+          "sentence": "Would three o'clock be ___ ___ you?",
+          "bank": ["convenient", "for", "convenience", "to", "conveniently", "with"],
+          "answers": ["convenient", "for"],
+          "explanation": "'be convenient FOR someone'. Sau động từ 'be' cần tính từ → convenient, không phải danh từ convenience."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-3-m3",
+          "sentence": "I am afraid I have to ___ our meeting to ___ Thursday.",
+          "bank": ["reschedule", "next", "rescheduling", "last", "rescheduled", "ago"],
+          "answers": ["reschedule", "next"],
+          "explanation": "Sau 'have to' là V nguyên mẫu. Dời lịch thì phải dời tới tương lai → next Thursday."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-3-m4",
+          "sentence": "I apologize for any inconvenience this may ___, and I ___ your understanding.",
+          "bank": ["cause", "appreciate", "causes", "appreciated", "causing", "appreciating"],
+          "answers": ["cause", "appreciate"],
+          "explanation": "Sau 'may' là V nguyên mẫu → cause. 'I appreciate your understanding' = mong bạn thông cảm."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-3-m5",
+          "sentence": "The meeting will be ___ in Conference Room B ___ Tuesday.",
+          "bank": ["held", "on", "holding", "in", "hold", "at"],
+          "answers": ["held", "on"],
+          "explanation": "'will be + V3' bị động → held. Giới từ ON dùng cho thứ trong tuần (on Tuesday), IN cho tháng/năm, AT cho giờ."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-3-m6",
+          "sentence": "The agenda is ___ ___ this e-mail.",
+          "bank": ["attached", "to", "attaching", "on", "attach", "with"],
+          "answers": ["attached", "to"],
+          "explanation": "'be attached to this e-mail' = được đính kèm trong thư này. Cụm cố định, luôn dùng giới từ TO."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-3-m7",
+          "sentence": "Could you tell me where the meeting ___ ___ place?",
+          "bank": ["will", "take", "does", "takes", "is", "taking"],
+          "answers": ["will", "take"],
+          "explanation": "Câu hỏi gián tiếp giữ trật tự S + V bình thường: 'where the meeting will take place', KHÔNG viết 'where will the meeting take place'."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-3-m8",
+          "sentence": "Please confirm the details ___ your earliest ___.",
+          "bank": ["at", "convenience", "in", "convenient", "on", "conveniently"],
+          "answers": ["at", "convenience"],
+          "explanation": "'at your earliest convenience' — cụm cố định. Ở đây cần DANH TỪ convenience vì đứng sau tính từ 'earliest'."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "recall",
+          "id": "t0-3-h1",
+          "hintVi": "Tôi muốn đặt lịch hẹn với bác sĩ Lee.",
+          "answer": "I would like to make an appointment with Dr. Lee.",
+          "accepted": ["I'd like to make an appointment with Dr. Lee."],
+          "explanation": "Khuôn đặt lịch hẹn chuẩn. Đổi tên người là dùng được cho mọi đề."
+        },
+        {
+          "type": "recall",
+          "id": "t0-3-h2",
+          "hintVi": "Ba giờ chiều có tiện cho bạn không?",
+          "answer": "Would three o'clock be convenient for you?",
+          "accepted": ["Would 3 o'clock be convenient for you?", "Is three o'clock convenient for you?"],
+          "explanation": "Dùng 'Would' nghe lịch sự hơn 'Is'. Nhớ giới từ FOR."
+        },
+        {
+          "type": "recall",
+          "id": "t0-3-h3",
+          "hintVi": "Tôi e rằng tôi phải dời lại cuộc họp của chúng ta.",
+          "answer": "I am afraid I have to reschedule our meeting.",
+          "accepted": ["I'm afraid I have to reschedule our meeting.", "I am afraid that I have to reschedule our meeting."],
+          "explanation": "'I am afraid...' báo tin xấu một cách nhẹ nhàng — dùng trước khi huỷ hoặc dời lịch."
+        },
+        {
+          "type": "recall",
+          "id": "t0-3-h4",
+          "hintVi": "Tôi xin lỗi vì bất kỳ bất tiện nào điều này có thể gây ra.",
+          "answer": "I apologize for any inconvenience this may cause.",
+          "accepted": ["I apologize for any inconvenience that this may cause."],
+          "explanation": "Câu xin lỗi kèm theo khi bạn thay đổi kế hoạch. Học thuộc nguyên khối."
+        },
+        {
+          "type": "recall",
+          "id": "t0-3-h5",
+          "hintVi": "Bạn có thể cho tôi biết cuộc họp sẽ diễn ra ở đâu không?",
+          "answer": "Could you tell me where the meeting will take place?",
+          "accepted": ["Could you tell me where the meeting will be held?", "Would you tell me where the meeting will take place?"],
+          "explanation": "Bẫy lớn nhất: KHÔNG đảo ngữ trong câu hỏi gián tiếp. Sai phổ biến: 'where will the meeting take place'."
+        },
+        {
+          "type": "recall",
+          "id": "t0-3-h6",
+          "hintVi": "Tôi có cần chuẩn bị gì trước không?",
+          "answer": "Do I need to prepare anything in advance?",
+          "accepted": ["Do I need to prepare anything beforehand?"],
+          "explanation": "'in advance' = trước, từ sớm. Câu hỏi rất hợp cho mission 'ask a question' về cuộc họp."
+        },
+        {
+          "type": "recall",
+          "id": "t0-3-h7",
+          "hintVi": "Chương trình họp được đính kèm trong thư này.",
+          "answer": "The agenda is attached to this e-mail.",
+          "accepted": ["The agenda is attached to this email.", "I have attached the agenda to this e-mail."],
+          "explanation": "Có thể viết bị động (is attached) hoặc chủ động (I have attached). Cả hai đều tự nhiên."
+        },
+        {
+          "type": "recall",
+          "id": "t0-3-h8",
+          "hintVi": "Xin vui lòng xác nhận thông tin chi tiết sớm nhất có thể.",
+          "answer": "Please confirm the details at your earliest convenience.",
+          "accepted": ["Please confirm the details as soon as possible."],
+          "explanation": "'at your earliest convenience' trang trọng hơn 'as soon as possible' — hợp với e-mail business."
+        }
+      ]
+    }
+  ]
+}

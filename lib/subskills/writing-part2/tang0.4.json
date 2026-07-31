@@ -1,0 +1,212 @@
+{
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "matching",
+          "id": "t0-4-e1",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu HỎI THÔNG TIN.",
+          "pairs": [
+            { "left": "I am writing to inquire", "right": "about your language courses." },
+            { "left": "I would like more information", "right": "on your membership plans." },
+            { "left": "Could you tell me", "right": "how much the annual fee is?" },
+            { "left": "I saw your advertisement", "right": "in yesterday's newspaper." },
+            { "left": "Would you send me", "right": "a brochure by mail?" }
+          ],
+          "explanation": "'inquire ABOUT + chủ đề' và 'information ON/ABOUT + chủ đề'. Đây là bộ câu mở đầu khi bạn đóng vai khách hàng đi hỏi thông tin."
+        },
+        {
+          "type": "matching",
+          "id": "t0-4-e2",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu CUNG CẤP THÔNG TIN.",
+          "pairs": [
+            { "left": "I am writing to let you know", "right": "about our new opening hours." },
+            { "left": "I would like to inform you", "right": "of a change in our policy." },
+            { "left": "I'd like to give you information", "right": "on our summer programs." },
+            { "left": "I am attaching some information", "right": "on the products you asked about." },
+            { "left": "Here are the details", "right": "you requested." }
+          ],
+          "explanation": "Đúng 5 khuôn trong mục '01 Cung cấp thông tin' của giáo trình. Chú ý 'inform you OF' nhưng 'let you know ABOUT'."
+        },
+        {
+          "type": "matching",
+          "id": "t0-4-e3",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu VỀ GIÁ & THANH TOÁN.",
+          "pairs": [
+            { "left": "The membership fee is", "right": "fifty dollars per month." },
+            { "left": "We accept", "right": "both cash and credit cards." },
+            { "left": "There is no additional charge", "right": "for delivery." },
+            { "left": "Payment must be made", "right": "in advance." },
+            { "left": "A ten percent discount applies", "right": "to students." }
+          ],
+          "explanation": "'per month' = mỗi tháng. 'in advance' = trả trước. 'apply to + đối tượng' = áp dụng cho ai."
+        },
+        {
+          "type": "matching",
+          "id": "t0-4-e4",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm câu GỢI Ý & KHUYÊN.",
+          "pairs": [
+            { "left": "I suggest that you", "right": "sign up before the deadline." },
+            { "left": "I have a suggestion for you", "right": "about the course you plan to take." },
+            { "left": "In my opinion, it would be good to", "right": "start with the basic level." },
+            { "left": "One thing I can recommend", "right": "is our weekend class." },
+            { "left": "I would suggest that it would be better", "right": "for you to visit us first." }
+          ],
+          "explanation": "Đúng 5 khuôn trong mục '04 Đề nghị/Gợi ý' của giáo trình. 'suggest that you + V nguyên mẫu' — không thêm 's' vào động từ."
+        },
+        {
+          "type": "matching",
+          "id": "t0-4-e5",
+          "prompt": "Ghép nửa đầu với nửa sau — nhóm CÂU KẾT khi chờ thông tin.",
+          "pairs": [
+            { "left": "Please e-mail me", "right": "as soon as possible." },
+            { "left": "Hope to hear", "right": "from you soon." },
+            { "left": "I'm looking forward to receiving", "right": "your early reply." },
+            { "left": "Please send your response", "right": "by the end of November." },
+            { "left": "Thank you in advance", "right": "for your help." }
+          ],
+          "explanation": "Đúng nhóm câu kết trong mục '02' của giáo trình. Dùng khi e-mail của bạn có câu hỏi và đang chờ người ta trả lời."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "word_bank",
+          "id": "t0-4-m1",
+          "sentence": "I am writing to ___ ___ your language courses.",
+          "bank": ["inquire", "about", "inquiry", "for", "inquiring", "of"],
+          "answers": ["inquire", "about"],
+          "explanation": "Sau 'to' cần V nguyên mẫu → inquire (động từ), không phải inquiry (danh từ). 'inquire about + chủ đề'."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-4-m2",
+          "sentence": "I would like to ___ you ___ a change in our policy.",
+          "bank": ["inform", "of", "informed", "about", "informing", "on"],
+          "answers": ["inform", "of"],
+          "explanation": "'inform someone OF something' — cụm cố định. Đây là điểm khác biệt so với 'let someone know ABOUT something'."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-4-m3",
+          "sentence": "I am ___ some information ___ the products you asked about.",
+          "bank": ["attaching", "on", "attached", "in", "attach", "at"],
+          "answers": ["attaching", "on"],
+          "explanation": "'I am attaching...' = tôi đang đính kèm (hiện tại tiếp diễn). 'information on/about + chủ đề'."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-4-m4",
+          "sentence": "The membership fee is fifty dollars ___ month, and payment must be made ___ advance.",
+          "bank": ["per", "in", "for", "on", "each", "at"],
+          "answers": ["per", "in"],
+          "explanation": "'per month' = mỗi tháng. 'in advance' = trả trước — cả hai đều là cụm cố định."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-4-m5",
+          "sentence": "I suggest that you ___ up before the ___.",
+          "bank": ["sign", "deadline", "signs", "deadlines", "signing", "deadlining"],
+          "answers": ["sign", "deadline"],
+          "explanation": "Sau 'suggest that + chủ ngữ' dùng V NGUYÊN MẪU, kể cả với 'he/she' — không thêm 's'. Đây là dạng giả định (subjunctive)."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-4-m6",
+          "sentence": "In my ___, it would be good ___ start with the basic level.",
+          "bank": ["opinion", "to", "opinions", "for", "opine", "of"],
+          "answers": ["opinion", "to"],
+          "explanation": "'In my opinion' = theo ý tôi. 'it would be good TO + V' — cấu trúc gợi ý lịch sự."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-4-m7",
+          "sentence": "There is no ___ charge ___ delivery.",
+          "bank": ["additional", "for", "addition", "of", "additionally", "to"],
+          "answers": ["additional", "for"],
+          "explanation": "Trước danh từ 'charge' cần TÍNH TỪ → additional. 'charge for + dịch vụ' = phí cho việc gì."
+        },
+        {
+          "type": "word_bank",
+          "id": "t0-4-m8",
+          "sentence": "I'm looking forward to ___ your early ___.",
+          "bank": ["receiving", "reply", "receive", "replied", "received", "replying"],
+          "answers": ["receiving", "reply"],
+          "explanation": "Lại là bẫy 'look forward TO + V-ing' → receiving. Sau 'your early' cần danh từ → reply."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "recall",
+          "id": "t0-4-h1",
+          "hintVi": "Tôi viết thư này để hỏi về các khoá học ngoại ngữ của quý vị.",
+          "answer": "I am writing to inquire about your language courses.",
+          "accepted": ["I'm writing to inquire about your language courses.", "I am writing to ask about your language courses."],
+          "explanation": "Câu mở đầu chuẩn cho e-mail hỏi thông tin. 'inquire' trang trọng hơn 'ask'."
+        },
+        {
+          "type": "recall",
+          "id": "t0-4-h2",
+          "hintVi": "Tôi muốn thông báo với bạn về một thay đổi trong chính sách của chúng tôi.",
+          "answer": "I would like to inform you of a change in our policy.",
+          "accepted": ["I'd like to inform you of a change in our policy.", "I would like to inform you about a change in our policy."],
+          "explanation": "'inform you OF' là chuẩn nhất, nhưng 'inform you about' cũng được chấp nhận."
+        },
+        {
+          "type": "recall",
+          "id": "t0-4-h3",
+          "hintVi": "Tôi đính kèm một số thông tin về các sản phẩm mà bạn đã hỏi.",
+          "answer": "I am attaching some information on the products you asked about.",
+          "accepted": ["I'm attaching some information on the products you asked about.", "I am attaching some information about the products you asked about."],
+          "explanation": "Câu này dùng khi mission yêu cầu cung cấp thông tin — bạn nói mình gửi kèm tài liệu."
+        },
+        {
+          "type": "recall",
+          "id": "t0-4-h4",
+          "hintVi": "Bạn có thể cho tôi biết phí thường niên là bao nhiêu không?",
+          "answer": "Could you tell me how much the annual fee is?",
+          "accepted": ["Would you tell me how much the annual fee is?", "Could you tell me what the annual fee is?"],
+          "explanation": "Câu hỏi gián tiếp: 'how much the annual fee IS', không đảo thành 'how much is the annual fee'."
+        },
+        {
+          "type": "recall",
+          "id": "t0-4-h5",
+          "hintVi": "Tôi đề nghị bạn nên đăng ký trước hạn chót.",
+          "answer": "I suggest that you sign up before the deadline.",
+          "accepted": ["I suggest that you should sign up before the deadline."],
+          "explanation": "Cả 'you sign up' và 'you should sign up' đều đúng sau 'suggest that'."
+        },
+        {
+          "type": "recall",
+          "id": "t0-4-h6",
+          "hintVi": "Không có phụ phí nào cho việc giao hàng.",
+          "answer": "There is no additional charge for delivery.",
+          "accepted": ["There is no extra charge for delivery."],
+          "explanation": "'There is no + danh từ' — cách nói phủ định gọn gàng, hợp e-mail business."
+        },
+        {
+          "type": "recall",
+          "id": "t0-4-h7",
+          "hintVi": "Chúng tôi chấp nhận cả tiền mặt lẫn thẻ tín dụng.",
+          "answer": "We accept both cash and credit cards.",
+          "accepted": ["We accept both cash and credit card."],
+          "explanation": "'both A and B' = cả A lẫn B. Đây là câu trả lời gọn cho câu hỏi về hình thức thanh toán."
+        },
+        {
+          "type": "recall",
+          "id": "t0-4-h8",
+          "hintVi": "Xin gửi phản hồi của bạn trước cuối tháng Mười Một.",
+          "answer": "Please send your response by the end of November.",
+          "accepted": ["Please send your reply by the end of November."],
+          "explanation": "'BY + thời điểm' = trước, chậm nhất là. Khác với 'until' (cho tới tận)."
+        }
+      ]
+    }
+  ]
+}
