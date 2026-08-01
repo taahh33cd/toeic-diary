@@ -41,12 +41,62 @@ function toExamItem(it: StepItem): SpeakingItem {
   };
 }
 
-/** 47 ảnh (Easy → Medium → Hard) + 2 ảnh mẫu Unsplash ban đầu. */
-export const SPEAKING_Q3_4_ITEMS: SpeakingItem[] = [
-  ...getAllStepItems().map(toExamItem),
-  ...SAMPLE_EXTRA.map((s) => ({
-    ...s,
-    prepSeconds: Q34_PREP_SECONDS,
-    responseSeconds: Q34_RESPONSE_SECONDS,
-  })),
+// ─────────────────────────────────────
+// Chia thành các bộ đề 2 ảnh, theo 3 mức độ
+// ─────────────────────────────────────
+
+/** Mỗi lượt thi Q3-4 thật gồm 2 bức ảnh. */
+export const Q34_IMAGES_PER_TEST = 2;
+
+export type Q34Level = "easy" | "medium" | "hard";
+
+export type Q34Test = {
+  /** Slug trên URL, vd "easy-1" */
+  slug: string;
+  level: Q34Level;
+  /** Số thứ tự trong mức độ, bắt đầu từ 1 */
+  index: number;
+  items: SpeakingItem[];
+};
+
+export const Q34_LEVELS: { level: Q34Level; label: string; labelEn: string; hint: string }[] = [
+  { level: "easy", label: "Dễ", labelEn: "Easy", hint: "Ảnh ít chi tiết — tập nói đủ 30 giây mà không bí từ." },
+  { level: "medium", label: "Trung bình", labelEn: "Medium", hint: "Vài nhân vật/đồ vật — tập chọn 2–3 đối tượng chính để tả kỹ." },
+  { level: "hard", label: "Khó", labelEn: "Hard", hint: "Rất nhiều chi tiết — tập chọn lọc và phân bổ thời gian." },
 ];
+
+function chunk(items: SpeakingItem[], level: Q34Level): Q34Test[] {
+  const out: Q34Test[] = [];
+  for (let i = 0; i < items.length; i += Q34_IMAGES_PER_TEST) {
+    const index = out.length + 1;
+    out.push({ slug: `${level}-${index}`, level, index, items: items.slice(i, i + Q34_IMAGES_PER_TEST) });
+  }
+  return out;
+}
+
+const STEP_ITEMS = getAllStepItems();
+const byLevel = (lv: StepLevel) => STEP_ITEMS.filter((i) => i.level === lv).map(toExamItem);
+
+/**
+ * 25 bộ đề: Dễ 6 · Trung bình 12 · Khó 7.
+ * 2 ảnh mẫu Unsplash ban đầu xếp cuối nhóm Dễ.
+ */
+export const SPEAKING_Q34_TESTS: Q34Test[] = [
+  ...chunk(
+    [
+      ...byLevel("Easy"),
+      ...SAMPLE_EXTRA.map((s) => ({ ...s, prepSeconds: Q34_PREP_SECONDS, responseSeconds: Q34_RESPONSE_SECONDS })),
+    ],
+    "easy",
+  ),
+  ...chunk(byLevel("Medium"), "medium"),
+  ...chunk(byLevel("Hard"), "hard"),
+];
+
+export function getQ34Test(slug: string): Q34Test | undefined {
+  return SPEAKING_Q34_TESTS.find((t) => t.slug === slug);
+}
+
+export function getQ34Tests(level: Q34Level): Q34Test[] {
+  return SPEAKING_Q34_TESTS.filter((t) => t.level === level);
+}

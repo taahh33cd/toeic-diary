@@ -6,12 +6,11 @@ import { createClient } from "@/lib/supabase/server";
 import { SkillComingSoon } from "@/components/skills/SkillComingSoon";
 import { WritingSentenceClient } from "@/components/skills/WritingSentenceClient";
 import { McqExamClient } from "@/components/skills/exam/McqExamClient";
-import { SpeakingExamClient } from "@/components/skills/exam/SpeakingExamClient";
 import { PracticeTestList } from "@/components/skills/listening/PracticeTestList";
 import { listPracticeTests } from "@/lib/listening-practice";
 import { WRITING_Q1_5, Q15_PART_KEY } from "@/lib/skills/writing-q1-5";
 import { READING_PART5 } from "@/lib/skills/sample";
-import { SPEAKING_Q3_4_ITEMS } from "@/lib/skills/speaking-q3-4";
+import { SpeakingQ34TestList } from "@/components/skills/exam/SpeakingQ34TestList";
 
 type Props = { params: Promise<{ skill: string; unit: string }> };
 
@@ -46,8 +45,9 @@ export default async function SkillUnitPage({ params }: Props) {
   if (skill === "reading" && unit === "part5") {
     return <McqExamClient skill={found.skill} unit={found.unit} items={READING_PART5} mode="reading" totalSeconds={360} />;
   }
+  // Speaking Q3-4 đã chia bộ đề theo 3 mức độ → danh sách bộ đề
   if (skill === "speaking" && unit === "q3-4") {
-    return <SpeakingExamClient skill={found.skill} unit={found.unit} items={SPEAKING_Q3_4_ITEMS} />;
+    return <SpeakingQ34TestList skill={found.skill} unit={found.unit} />;
   }
 
   // Writing Q1-5 đã có bài tập thật → render trang làm bài

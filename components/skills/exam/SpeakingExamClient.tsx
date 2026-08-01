@@ -8,7 +8,18 @@ import type { SpeakingItem } from "@/lib/skills/sample";
 
 type Phase = "prep" | "respond" | "review";
 
-export function SpeakingExamClient({ skill, unit, items }: { skill: Skill; unit: SkillUnit; items: SpeakingItem[] }) {
+export function SpeakingExamClient({
+  skill,
+  unit,
+  items,
+  testTitle,
+}: {
+  skill: Skill;
+  unit: SkillUnit;
+  items: SpeakingItem[];
+  /** Có giá trị khi vào từ một bộ đề cụ thể → thoát về danh sách bộ đề. */
+  testTitle?: string;
+}) {
   const fam = skill.family;
   const color = FAMILY[fam];
   const [idx, setIdx] = useState(0);
@@ -91,8 +102,9 @@ export function SpeakingExamClient({ skill, unit, items }: { skill: Skill; unit:
 
   useEffect(() => () => stopRec(), [stopRec]);
 
-  const testName = `${skill.label} · ${unit.label}`;
-  const exitHref = `/skills/${skill.slug}`;
+  const listHref = `/skills/${skill.slug}/${unit.slug}`;
+  const testName = testTitle ? `${skill.label} · ${unit.label} · ${testTitle}` : `${skill.label} · ${unit.label}`;
+  const exitHref = testTitle ? listHref : `/skills/${skill.slug}`;
   const mmss = (s: number) => `00:${String(Math.max(0, s)).padStart(2, "0")}`;
 
   const nav =
@@ -100,7 +112,14 @@ export function SpeakingExamClient({ skill, unit, items }: { skill: Skill; unit:
       ? [{ label: "Trả lời ngay ▶", variant: "primary" as const, onClick: goRespond }]
       : phase === "respond"
       ? [{ label: "Kết thúc trả lời ✓", variant: "primary" as const, onClick: goReview }]
-      : [{ label: idx < total - 1 ? "Câu tiếp ▶" : "Làm lại từ đầu", variant: "primary" as const, onClick: nextItem }];
+      : idx < total - 1
+      ? [{ label: "Câu tiếp ▶", variant: "primary" as const, onClick: nextItem }]
+      : testTitle
+      ? [
+          { label: "Làm lại bộ đề", variant: "ghost" as const, onClick: nextItem },
+          { label: "Xong — chọn bộ đề khác ▶", variant: "primary" as const, href: listHref },
+        ]
+      : [{ label: "Làm lại từ đầu", variant: "primary" as const, onClick: nextItem }];
 
   return (
     <ExamShell family={fam} testName={testName} questionLabel={`${idx + 1} / ${total}`} exitHref={exitHref} nav={nav}>
