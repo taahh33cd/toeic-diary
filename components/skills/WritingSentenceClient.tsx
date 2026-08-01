@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { ExamShell, ExamDirHeading } from "@/components/skills/exam/ExamShell";
+import { SplitPane } from "@/components/skills/exam/SplitPane";
 import { FAMILY, EXAM } from "@/lib/skills/exam-theme";
 import type { Skill, SkillUnit } from "@/lib/skills/structure";
 import { type WritingQ15Exercise, type Q15Difficulty, Q15_LEVELS, Q15_PART_KEY, Q15_PASS, Q15_TEST_SIZE, keywordUsed, countWords } from "@/lib/skills/writing-q1-5";
@@ -27,6 +28,10 @@ type AiResult = {
   errors: string[];
 };
 
+/** Trạng thái riêng của từng câu trong test — giữ lại khi nhảy qua lại */
+type QState = { answer: string; submitted: boolean; ai: AiResult | null; aiFailed: boolean };
+const EMPTY_Q: QState = { answer: "", submitted: false, ai: null, aiFailed: false };
+
 const MIN_WORDS = 5;
 const TEST_SECONDS = 8 * 60;
 
@@ -45,12 +50,10 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
   const [phase, setPhase] = useState<Phase>("tests");
   const [activeTest, setActiveTest] = useState(0);
   const [idx, setIdx] = useState(0);
-  const [answer, setAnswer] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const [grading, setGrading] = useState(false);
-  const [ai, setAi] = useState<AiResult | null>(null);
-  const [aiFailed, setAiFailed] = useState(false);
-  const [imgError, setImgError] = useState(false);
+  const [maxIdx, setMaxIdx] = useState(0);
+  const [qs, setQs] = useState<Record<number, QState>>({});
+  const [gradingIdx, setGradingIdx] = useState<number | null>(null);
+  const [imgErrors, setImgErrors] = useState<Record<string, boolean>>({});
   const [sessionScores, setSessionScores] = useState<Record<number, number>>({});
   const [best, setBest] = useState<Record<string, Best>>(bestByExercise);
   const [timerOn, setTimerOn] = useState(true);
@@ -71,12 +74,18 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
   }, [phase, timerOn]);
   const timerStr = `${String(Math.floor(secondsLeft / 60)).padStart(2, "0")}:${String(secondsLeft % 60).padStart(2, "0")}`;
 
+  const q = qs[idx] ?? EMPTY_Q;
+  const { answer, submitted, ai, aiFailed } = q;
+  const grading = gradingIdx === idx;
+  const imgError = ex ? imgErrors[ex.id] === true : false;
+
   const kw0Used = submitted && ex ? keywordUsed(answer, ex.keywords[0]) : false;
   const kw1Used = submitted && ex ? keywordUsed(answer, ex.keywords[1]) : false;
   const enoughWords = countWords(answer) >= MIN_WORDS;
+  const answeredCount = Object.values(qs).filter((s) => s.submitted).length;
 
-  function resetQuestionState() {
-    setAnswer(""); setSubmitted(false); setGrading(false); setAi(null); setAiFailed(false); setImgError(false);
+  function patchQ(i: number, patch: Partial<QState>) {
+    setQs((prev) => ({ ...prev, [i]: { ...(prev[i] ?? EMPTY_Q), ...patch } }));
   }
 
   function pickLevel(l: Q15Difficulty) {
@@ -87,8 +96,11 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
   function startTest(t: number) {
     setActiveTest(t);
     setIdx(0);
+    setMaxIdx(0);
+    setQs({});
+    setGradingIdx(null);
+    setImgErrors({});
     setSessionScores({});
-    resetQuestionState();
     setSecondsLeft(TEST_SECONDS);
     setPhase("doing");
   }
@@ -108,23 +120,26 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
   }
 
   async function submit() {
-    if (!answer.trim() || grading || !ex) return;
-    setSubmitted(true); setGrading(true); setAiFailed(false);
+    if (!answer.trim() || gradingIdx !== null || !ex) return;
+    const i = idx;
+    const sentence = answer;
+    patchQ(i, { submitted: true, aiFailed: false });
+    setGradingIdx(i);
     try {
       const res = await fetch("/api/skills/writing-assess", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ sentence: answer, keywords: ex.keywords, modelAnswers: ex.modelAnswers }),
+        body: JSON.stringify({ sentence, keywords: ex.keywords, modelAnswers: ex.modelAnswers }),
       });
       if (!res.ok) throw new Error(String(res.status));
       const data = (await res.json()) as AiResult;
-      setAi(data);
-      setSessionScores((prev) => ({ ...prev, [idx]: data.score }));
+      patchQ(i, { ai: data });
+      setSessionScores((prev) => ({ ...prev, [i]: data.score }));
       saveAttempt(ex.id, data.score, data.score >= Q15_PASS);
     } catch {
-      setAiFailed(true);
+      patchQ(i, { aiFailed: true });
     } finally {
-      setGrading(false);
+      setGradingIdx((g) => (g === i ? null : g));
     }
   }
 
@@ -135,12 +150,16 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
     saveAttempt(ex.id, score, ok);
   }
 
+  function goTo(i: number) {
+    if (i < 0 || i > maxIdx || i === idx) return;
+    setIdx(i);
+  }
   function next() {
-    if (idx < totalInTest - 1) { setIdx(idx + 1); resetQuestionState(); }
+    if (idx < totalInTest - 1) { const n = idx + 1; setIdx(n); setMaxIdx((m) => Math.max(m, n)); }
     else setPhase("done");
   }
   function prev() {
-    if (idx > 0) { setIdx(idx - 1); resetQuestionState(); }
+    if (idx > 0) setIdx(idx - 1);
   }
 
   // ── Per-test progress cho màn danh sách ──
@@ -262,53 +281,96 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
   if (!ex) return null;
   const backBtn = idx > 0 ? [{ label: "Back", icon: "◀", onClick: prev }] : [];
   const nav: Parameters<typeof ExamShell>[0]["nav"] = !submitted
-    ? [...backBtn, { label: "Chấm điểm", variant: "primary", disabled: !answer.trim(), onClick: submit }]
+    ? [...backBtn, { label: "Chấm điểm", variant: "primary", disabled: !answer.trim() || gradingIdx !== null, onClick: submit }]
     : grading
-    ? [{ label: "Đang chấm…", variant: "primary", disabled: true }]
-    : [{ label: idx < totalInTest - 1 ? "Next ▶" : "Kết thúc ✓", variant: "primary", onClick: next }];
+    ? [...backBtn, { label: "Đang chấm…", variant: "primary", disabled: true }]
+    : [...backBtn, { label: idx < totalInTest - 1 ? "Next ▶" : "Kết thúc ✓", variant: "primary", onClick: next }];
 
-  return (
-    <ExamShell family={skill.family} testName={`${testName} · ${levelLabel} · Test ${activeTest + 1}`} questionLabel={`${idx + 1} / ${totalInTest}`} timer={timerOn ? timerStr : undefined} exitHref={exitHref} nav={nav}>
+  // Chấm điều hướng câu hỏi (chỉ nhảy được về câu đã mở)
+  const navLeft = (
+    <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+      <span style={{ fontSize: "0.78rem", color: EXAM.muted, whiteSpace: "nowrap" }}>
+        Đã trả lời {answeredCount}/{totalInTest}
+      </span>
+      <div style={{ display: "flex", gap: 6 }}>
+        {testExs.map((_, i) => {
+          const s = qs[i];
+          const isCurrent = i === idx;
+          const reachable = i <= maxIdx;
+          const bg = isCurrent ? color.primary : s?.submitted ? color.soft : "#fff";
+          return (
+            <button
+              key={i}
+              type="button"
+              onClick={() => goTo(i)}
+              disabled={!reachable}
+              title={s?.submitted ? `Câu ${i + 1} · đã chấm` : `Câu ${i + 1}`}
+              style={{
+                width: 28, height: 28, borderRadius: "50%", fontFamily: EXAM.sans,
+                fontSize: "0.8rem", fontWeight: 700, lineHeight: 1,
+                border: `1.5px solid ${reachable ? color.primary : EXAM.border}`,
+                background: bg,
+                color: isCurrent ? "#fff" : reachable ? color.primary : EXAM.muted,
+                opacity: reachable ? 1 : 0.5,
+                cursor: reachable && !isCurrent ? "pointer" : "default",
+              }}
+            >
+              {i + 1}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+
+  const leftPane = (
+    <>
       <ExamDirHeading family={skill.family}>Write a sentence based on a picture</ExamDirHeading>
 
-      <p style={{ fontSize: "0.95rem", color: EXAM.inkSoft, lineHeight: 1.6, margin: "0 0 14px" }}>
+      <p style={{ fontSize: "1rem", fontWeight: 800, color: EXAM.ink, margin: "0 0 8px" }}>Question {idx + 1}:</p>
+
+      <p style={{ fontSize: "0.86rem", color: EXAM.inkSoft, lineHeight: 1.55, margin: "0 0 14px" }}>
         <strong>Directions:</strong> Write ONE sentence that is based on the picture. With the picture,
         you are given TWO words that you must use in your sentence. You may change the forms of the words
         and use them in any order.
       </p>
 
       {/* image */}
-      <div style={{ border: `1px solid ${EXAM.border}`, borderRadius: 8, overflow: "hidden", background: EXAM.panel, marginBottom: ex.credit ? 4 : 14 }}>
+      <div style={{ border: `1px solid ${EXAM.border}`, borderRadius: 8, overflow: "hidden", background: EXAM.panel, marginBottom: ex.credit ? 4 : 14, maxWidth: 560, marginLeft: "auto", marginRight: "auto" }}>
         {!imgError ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={ex.imageUrl} alt={ex.imageAlt} onError={() => setImgError(true)} style={{ width: "100%", height: "auto", display: "block" }} />
+          <img src={ex.imageUrl} alt={ex.imageAlt} onError={() => setImgErrors((p) => ({ ...p, [ex.id]: true }))} style={{ width: "100%", height: "auto", display: "block" }} />
         ) : (
           <div style={{ padding: "2rem", textAlign: "center", color: EXAM.muted, fontSize: "0.85rem" }}>Không tải được ảnh 🖼️</div>
         )}
       </div>
       {ex.credit && (
-        <p style={{ fontSize: "0.66rem", color: EXAM.muted, textAlign: "right", margin: "0 0 12px" }}>Ảnh: {ex.credit.author}</p>
+        <p style={{ fontSize: "0.66rem", color: EXAM.muted, textAlign: "right", margin: "0 0 12px", maxWidth: 560, marginLeft: "auto", marginRight: "auto" }}>Ảnh: {ex.credit.author}</p>
       )}
 
       {/* Hai từ bắt buộc — dạng "word / word" dưới ảnh như đề thật */}
-      <p style={{ textAlign: "center", fontSize: "1.35rem", fontWeight: 700, color: EXAM.ink, margin: "2px 0 16px", fontFamily: EXAM.sans }}>
+      <p style={{ textAlign: "center", fontSize: "1.35rem", fontWeight: 700, color: EXAM.ink, margin: "2px 0 4px", fontFamily: EXAM.sans }}>
         {ex.keywords[0]} <span style={{ color: EXAM.muted, fontWeight: 400, margin: "0 6px" }}>/</span> {ex.keywords[1]}
       </p>
+    </>
+  );
+
+  const rightPane = (
+    <>
+      <p style={{ fontSize: "0.95rem", fontWeight: 800, color: EXAM.ink, margin: "0 0 8px" }}>Your answer:</p>
 
       {/* textarea */}
       <textarea
         value={answer}
-        onChange={(e) => setAnswer(e.target.value)}
+        onChange={(e) => patchQ(idx, { answer: e.target.value })}
         disabled={submitted}
-        rows={2}
         placeholder="Type your response here."
-        style={{ width: "100%", boxSizing: "border-box", padding: "12px 14px", fontSize: "1.05rem", border: `1.5px solid ${EXAM.border}`, borderRadius: 8, background: "#fff", color: EXAM.ink, outline: "none", resize: "vertical", fontFamily: EXAM.sans, lineHeight: 1.5 }}
+        style={{ width: "100%", boxSizing: "border-box", minHeight: "clamp(160px, 32vh, 320px)", padding: "12px 14px", fontSize: "1.05rem", border: `1.5px dashed ${EXAM.border}`, borderRadius: 8, background: "#fff", color: EXAM.ink, outline: "none", resize: "vertical", fontFamily: EXAM.sans, lineHeight: 1.5 }}
       />
-      {!submitted && (
-        <p style={{ fontSize: "0.82rem", color: EXAM.muted, margin: "6px 0 0" }}>
-          {countWords(answer)} từ{!enoughWords && answer.trim() ? " · nên viết câu đủ ý (≥ 5 từ)" : ""}
-        </p>
-      )}
+      <p style={{ fontSize: "0.82rem", color: EXAM.muted, margin: "6px 0 0" }}>
+        Word count: <strong style={{ color: EXAM.inkSoft }}>{countWords(answer)}</strong>
+        {!submitted && !enoughWords && answer.trim() ? " · nên viết câu đủ ý (≥ 5 từ)" : ""}
+      </p>
 
       {submitted && (
         <div style={{ marginTop: 14 }}>
@@ -360,6 +422,21 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
           )}
         </div>
       )}
+    </>
+  );
+
+  return (
+    <ExamShell
+      family={skill.family}
+      testName={`${testName} · ${levelLabel} · Test ${activeTest + 1}`}
+      questionLabel={`${idx + 1} / ${totalInTest}`}
+      timer={timerOn ? timerStr : undefined}
+      exitHref={exitHref}
+      nav={nav}
+      navLeft={navLeft}
+      fullBleed
+    >
+      <SplitPane left={leftPane} right={rightPane} />
     </ExamShell>
   );
 }

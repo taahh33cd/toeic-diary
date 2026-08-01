@@ -10,6 +10,9 @@ export type NavButton = {
   disabled?: boolean;
 };
 
+/** Chiều cao Header của app (class h-16) — dùng để khoá khung thi vừa đúng viewport */
+const HEADER_H = 64;
+
 export function ExamShell({
   family,
   testName,
@@ -18,6 +21,8 @@ export function ExamShell({
   exitHref,
   children,
   nav,
+  navLeft,
+  fullBleed,
 }: {
   family: Family;
   testName: string;
@@ -26,26 +31,40 @@ export function ExamShell({
   exitHref: string;
   children: React.ReactNode;
   nav?: NavButton[];
+  /** Nội dung phụ đặt bên trái thanh nav dưới (ví dụ: chấm điều hướng câu hỏi) */
+  navLeft?: React.ReactNode;
+  /** Khung tràn viền, cao bằng viewport; phần body tự lo scroll bên trong */
+  fullBleed?: boolean;
 }) {
   const fam = FAMILY[family];
 
   return (
     <div
-      style={{
-        maxWidth: 860,
-        margin: "0 auto",
-        padding: "clamp(1rem, 3vw, 2rem) clamp(0.75rem, 3vw, 1.5rem)",
-        fontFamily: EXAM.sans,
-      }}
+      style={
+        fullBleed
+          ? {
+              height: `calc(100dvh - ${HEADER_H}px)`,
+              display: "flex",
+              flexDirection: "column",
+              fontFamily: EXAM.sans,
+            }
+          : {
+              maxWidth: 860,
+              margin: "0 auto",
+              padding: "clamp(1rem, 3vw, 2rem) clamp(0.75rem, 3vw, 1.5rem)",
+              fontFamily: EXAM.sans,
+            }
+      }
     >
       <div
         style={{
-          border: `1px solid ${EXAM.border}`,
-          borderRadius: 12,
+          border: fullBleed ? "none" : `1px solid ${EXAM.border}`,
+          borderRadius: fullBleed ? 0 : 12,
           overflow: "hidden",
           background: EXAM.bg,
           color: EXAM.ink,
-          boxShadow: "0 18px 40px -24px rgba(20,40,90,.4)",
+          boxShadow: fullBleed ? "none" : "0 18px 40px -24px rgba(20,40,90,.4)",
+          ...(fullBleed ? { flex: 1, minHeight: 0, display: "flex", flexDirection: "column" } : null),
         }}
       >
         {/* Top bar */}
@@ -78,12 +97,26 @@ export function ExamShell({
         </div>
 
         {/* Body (white-locked) */}
-        <div style={{ padding: "18px 20px 12px", background: EXAM.bg }}>{children}</div>
+        <div
+          style={
+            fullBleed
+              ? { flex: 1, minHeight: 0, overflow: "hidden", background: EXAM.bg }
+              : { padding: "18px 20px 12px", background: EXAM.bg }
+          }
+        >
+          {children}
+        </div>
 
         {/* Bottom nav */}
-        {nav && nav.length > 0 && (
-          <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "11px 16px", background: EXAM.panelAlt, borderTop: `1px solid ${EXAM.border}`, flexWrap: "wrap" }}>
-            {nav.map((b, i) => {
+        {((nav && nav.length > 0) || navLeft) && (
+          <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "11px 16px", background: EXAM.panelAlt, borderTop: `1px solid ${EXAM.border}`, flexWrap: "wrap", flexShrink: 0 }}>
+            {fullBleed && (
+              <Link href={exitHref} style={{ fontSize: "0.82rem", color: EXAM.muted, textDecoration: "none", fontFamily: EXAM.sans, whiteSpace: "nowrap" }}>
+                ← Thoát
+              </Link>
+            )}
+            {navLeft}
+            {nav?.map((b, i) => {
               const isPrimary = b.variant === "primary";
               const isGhost = b.variant === "ghost";
               const style: React.CSSProperties = {
@@ -116,11 +149,13 @@ export function ExamShell({
       </div>
 
       {/* Exit link under the exam card */}
-      <div style={{ textAlign: "center", marginTop: "0.9rem" }}>
-        <Link href={exitHref} style={{ fontSize: "0.86rem", color: EXAM.muted, textDecoration: "none", fontFamily: EXAM.sans }}>
-          ← Thoát bài thi
-        </Link>
-      </div>
+      {!fullBleed && (
+        <div style={{ textAlign: "center", marginTop: "0.9rem" }}>
+          <Link href={exitHref} style={{ fontSize: "0.86rem", color: EXAM.muted, textDecoration: "none", fontFamily: EXAM.sans }}>
+            ← Thoát bài thi
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
