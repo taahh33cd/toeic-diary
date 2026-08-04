@@ -68,7 +68,6 @@ export default function SpeakingP2StepsClient({
   const total = items.length;
   const graded = gradedPerImage(difficulty);
   const produceMode = isProduceMode(difficulty);
-  const target = produceTarget(difficulty);
 
   // ── drafts ────────────────────────────────────────────────
   useEffect(() => {
@@ -145,7 +144,7 @@ export default function SpeakingP2StepsClient({
 
   // ── produce mode (Medium / Hard) ──────────────────────────
   function addFound(n: 1 | 2 | 3, phrase: string) {
-    const target = produceTarget(difficulty);
+    const target = produceTarget(difficulty, n);
     const cur = st[n];
     if (cur.revealed || cur.found.includes(phrase)) return;
     const next = [...cur.found, phrase];
@@ -155,7 +154,7 @@ export default function SpeakingP2StepsClient({
   }
 
   function revealStep(n: 1 | 2 | 3) {
-    const target = produceTarget(difficulty);
+    const target = produceTarget(difficulty, n);
     const cur = st[n];
     if (cur.revealed || cur.found.length >= target) return;
     awardPoints(cur.found.length / target);
@@ -214,8 +213,8 @@ export default function SpeakingP2StepsClient({
           </ol>
           <p style={{ margin: "0.75rem 0 0", fontSize: "0.82rem", color: "var(--text-muted)", lineHeight: 1.7 }}>
             <b>Easy</b> — {GRADED_PER_IMAGE} câu tự chấm (2 trắc nghiệm + 3 điền từ) để làm quen khung câu.<br />
-            <b>Medium</b> — bạn tự nghĩ ra {produceTarget("medium")} cụm từ cho mỗi bước, có gợi ý chữ cái đầu.<br />
-            <b>Hard</b> — bạn tự viết {produceTarget("hard")} câu hoàn chỉnh cho mỗi bước, không gợi ý.<br />
+            <b>Medium</b> — bạn tự nghĩ ra cụm từ cho mỗi bước ({[1, 2, 3].map((s) => produceTarget("medium", s as 1 | 2 | 3)).join(" · ")} cụm), có gợi ý chữ cái đầu.<br />
+            <b>Hard</b> — bạn tự viết câu hoàn chỉnh cho mỗi bước ({[1, 2, 3].map((s) => produceTarget("hard", s as 1 | 2 | 3)).join(" · ")} câu), không gợi ý.<br />
             Mức nào cũng có phần viết tự do kèm đáp án mẫu và phần ghi âm cả bài.
           </p>
           <p style={{ margin: "0.6rem 0 0", fontSize: "0.82rem" }}>
@@ -323,7 +322,7 @@ export default function SpeakingP2StepsClient({
 
   const stepDone = (n: 1 | 2 | 3) =>
     produceMode
-      ? st[n].found.length >= target || st[n].revealed
+      ? st[n].found.length >= produceTarget(difficulty, n) || st[n].revealed
       : n === 3 ? st[3].blankDone : st[n].mcqDone && st[n].blankDone;
 
   const stepComplete = stepDone(step);
@@ -396,6 +395,7 @@ export default function SpeakingP2StepsClient({
                 key={`${item.id}-${step}`}
                 bank={bank}
                 difficulty={difficulty}
+                step={step}
                 prompt={producePrompt}
                 placeholder={producePlaceholder}
                 found={sub.found}

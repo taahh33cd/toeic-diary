@@ -164,9 +164,20 @@ export function checkBlank(blank: StepBlank, input: string): boolean {
 // Free production (Medium / Hard)
 // ─────────────────────────────────────
 
-/** How many phrases/sentences the learner must produce per step. */
-export function produceTarget(difficulty: Difficulty): number {
-  return difficulty === "hard" ? 4 : 2;
+/**
+ * How many phrases/sentences the learner must produce, per step.
+ * Rises with the step because a picture has one location, a couple of focal
+ * points, and many details — asking for 4 different answers to "where was this
+ * taken?" would have no honest answer.
+ */
+const PRODUCE_TARGETS: Record<Difficulty, [number, number, number]> = {
+  easy: [1, 1, 1], // unused: Easy keeps the MCQ + blanks
+  medium: [1, 2, 3],
+  hard: [2, 3, 4],
+};
+
+export function produceTarget(difficulty: Difficulty, step: 1 | 2 | 3): number {
+  return PRODUCE_TARGETS[difficulty][step - 1];
 }
 
 /** Hard asks for full sentences, so a bare phrase is rejected. */
@@ -178,12 +189,41 @@ export function getProduceBank(itemId: string, step: 1 | 2 | 3): string[] {
 
 export type ProduceVerdict =
   | { ok: true; matched: string }
-  | { ok: false; reason: "short" | "duplicate" | "unknown" };
+  | { ok: false; reason: "short" | "duplicate" | "unknown" | "close" };
+
+/**
+ * Words that carry no meaning for this exercise. Articles and prepositions are
+ * dropped so "a blue shirt" can reach "a light blue shirt", and "office" can
+ * reach "in an office" — the learner is producing vocabulary here, not grammar.
+ */
+const FILLER = new Set([
+  "a", "an", "the",
+  "in", "on", "at", "of", "to", "into", "from", "with", "for", "by",
+  "next", "near", "beside", "behind", "under", "above", "over", "inside",
+  "outside", "along", "around", "across", "through", "up", "down",
+]);
+
+function contentTokens(s: string): string[] {
+  return normalize(s).split(" ").filter((t) => t && !FILLER.has(t));
+}
+
+/** Share of the bank entry's meaningful words that the learner also used. */
+function overlapRatio(entryTokens: string[], inputTokens: string[]): number {
+  if (entryTokens.length === 0) return 0;
+  const set = new Set(inputTokens);
+  return entryTokens.filter((t) => set.has(t)).length / entryTokens.length;
+}
+
+const MIN_OVERLAP = 0.6;
 
 /**
  * Check one thing the learner typed against the bank.
- * Accepts either direction: a sentence that *contains* a bank phrase (Hard), or a
- * shorter phrase that the bank entry contains (Medium typing "office" for "in an office").
+ *
+ * A bank entry matches when the learner used most of its meaningful words
+ * *including its head word* (the last one). That accepts "a blue shirt" for
+ * "a light blue shirt" and a whole Hard sentence that mentions it, while still
+ * rejecting "a yellow shirt" — which shares only one word with either
+ * "a yellow sweater" or "a light blue shirt".
  */
 export function checkProduce(
   bank: string[],
@@ -198,16 +238,34 @@ export function checkProduce(
     return { ok: false, reason: "short" };
   }
 
+  const inTok = contentTokens(input);
+  if (inTok.length === 0) return { ok: false, reason: "unknown" };
+
+  let partial = false;
   const hit = bank.find((phrase) => {
-    const p = normalize(phrase);
-    if (norm.includes(p)) return true;
-    // partial: only when the learner typed something substantial enough to be unambiguous
-    return p.includes(norm) && (norm.split(" ").length >= 2 || norm.length >= 5);
+    if (norm.includes(normalize(phrase))) return true;
+    const pTok = contentTokens(phrase);
+    if (pTok.length === 0) return false;
+    const head = pTok[pTok.length - 1];
+    const ratio = overlapRatio(pTok, inTok);
+    if (ratio >= MIN_OVERLAP && inTok.includes(head)) return true;
+    if (ratio > 0) partial = true;
+    return false;
   });
 
-  if (!hit) return { ok: false, reason: "unknown" };
+  if (!hit) return { ok: false, reason: partial ? "close" : "unknown" };
   if (alreadyMatched.includes(hit)) return { ok: false, reason: "duplicate" };
   return { ok: true, matched: hit };
+}
+
+/**
+ * Split what the learner typed into separate answers. Medium brainstorms in
+ * comma-separated phrases; Hard writes sentences, which may themselves contain
+ * commas, so those split on sentence punctuation instead.
+ */
+export function splitProduceInput(input: string, difficulty: Difficulty): string[] {
+  const parts = difficulty === "hard" ? input.split(/[.!?]+/) : input.split(/[,;\n]+/);
+  return parts.map((s) => s.trim()).filter(Boolean);
 }
 
 /** Slim shape for the free-practice page: everything it shows, nothing it doesn't. */

@@ -4,10 +4,18 @@ import { useState } from "react";
 import {
   type Difficulty,
   checkProduce,
+  splitProduceInput,
   maskPhrase,
   produceTarget,
   HARD_MIN_WORDS,
 } from "@/lib/subskills/speaking-p2-steps";
+
+const REJECT_REASON: Record<"short" | "duplicate" | "unknown" | "close", string> = {
+  short: `cần câu hoàn chỉnh ít nhất ${HARD_MIN_WORDS} từ`,
+  duplicate: "ý này bạn đã nêu rồi",
+  close: "gần đúng, sai một chi tiết — nhìn kỹ lại ảnh",
+  unknown: "chưa có trong danh sách gợi ý",
+};
 
 function PhraseList({ phrases }: { phrases: string[] }) {
   return (
@@ -28,6 +36,7 @@ const AMBER = "rgb(234,179,8)";
 interface Props {
   bank: string[];
   difficulty: Difficulty;
+  step: 1 | 2 | 3;
   prompt: string;
   placeholder: string;
   found: string[];
@@ -38,35 +47,47 @@ interface Props {
 }
 
 export function ProduceStepPanel({
-  bank, difficulty, prompt, placeholder, found, revealed, done, onFound, onReveal,
+  bank, difficulty, step, prompt, placeholder, found, revealed, done, onFound, onReveal,
 }: Props) {
   const [input, setInput] = useState("");
   const [msg, setMsg] = useState<{ text: string; tone: "ok" | "bad" | "warn" } | null>(null);
 
-  const target = produceTarget(difficulty);
+  const target = produceTarget(difficulty, step);
   const remaining = Math.max(0, target - found.length);
   const isHard = difficulty === "hard";
 
   function submit() {
     const raw = input.trim();
     if (!raw || revealed) return;
-    const verdict = checkProduce(bank, raw, difficulty, found);
 
-    if (verdict.ok) {
-      onFound(verdict.matched);
-      setInput("");
-      setMsg({ text: `✓ "${verdict.matched}" — chuẩn rồi!`, tone: "ok" });
-      return;
+    // The learner may enter several answers at once, so grade each and report per answer.
+    const parts = splitProduceInput(raw, difficulty);
+    const accepted: string[] = [];
+    const rejected: string[] = [];
+    const leftover: string[] = [];
+    const seen = [...found];
+
+    for (const part of parts) {
+      const verdict = checkProduce(bank, part, difficulty, seen);
+      if (verdict.ok) {
+        accepted.push(verdict.matched);
+        seen.push(verdict.matched);
+        onFound(verdict.matched);
+      } else {
+        rejected.push(`"${part}" — ${REJECT_REASON[verdict.reason]}`);
+        leftover.push(part);
+      }
     }
-    if (verdict.reason === "duplicate") {
-      setMsg({ text: "Ý này bạn đã nêu rồi — thử một ý khác nhé.", tone: "warn" });
-      return;
+
+    // Keep only what did not land, so the learner can fix it without retyping the rest.
+    setInput(leftover.join(difficulty === "hard" ? ". " : ", "));
+    if (accepted.length > 0 && rejected.length === 0) {
+      setMsg({ text: `✓ ${accepted.map((a) => `"${a}"`).join(", ")} — chuẩn rồi!`, tone: "ok" });
+    } else if (accepted.length > 0) {
+      setMsg({ text: `✓ Nhận ${accepted.length} ý. Còn lại: ${rejected.join(" · ")}`, tone: "warn" });
+    } else {
+      setMsg({ text: rejected.join(" · "), tone: "bad" });
     }
-    if (verdict.reason === "short") {
-      setMsg({ text: `Mức Hard cần câu hoàn chỉnh (ít nhất ${HARD_MIN_WORDS} từ), không phải cụm rời.`, tone: "warn" });
-      return;
-    }
-    setMsg({ text: "Chưa có trong danh sách gợi ý. Nhìn kỹ lại ảnh và thử cách diễn đạt khác.", tone: "bad" });
   }
 
   // Entries the learner has not produced yet — the source for hints and the reveal list.
@@ -79,8 +100,8 @@ export function ProduceStepPanel({
       </p>
       <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", margin: "0 0 0.85rem" }}>
         {isHard
-          ? `Viết ${target} câu hoàn chỉnh, mỗi lần một câu.`
-          : `Gõ ${target} cụm từ, mỗi lần một cụm.`}{" "}
+          ? `Viết ${target} câu hoàn chỉnh — nhiều câu một lượt cũng được, ngăn bằng dấu chấm.`
+          : `Gõ ${target} cụm từ — nhiều cụm một lượt cũng được, ngăn bằng dấu phẩy.`}{" "}
         {revealed
           ? "Đã xem đáp án."
           : done
