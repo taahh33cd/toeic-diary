@@ -122,19 +122,26 @@ export function ProduceStepPanel({
 
       {!revealed && (
         <>
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: "0.6rem" }}>
-            <input
+          {/* Textarea, not input: Hard sentences and the example placeholder need to wrap. */}
+          <div style={{ display: "flex", gap: 8, alignItems: "flex-start", marginBottom: "0.6rem" }}>
+            <textarea
               value={input}
               onChange={(e) => { setInput(e.target.value); setMsg(null); }}
-              onKeyDown={(e) => { if (e.key === "Enter") submit(); }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); submit(); }
+              }}
+              rows={isHard ? 3 : 2}
               placeholder={placeholder}
-              style={{ flex: "1 1 240px", padding: "0.6rem 0.85rem", borderRadius: 8, fontSize: "1rem", border: "1.5px solid var(--border)", background: "var(--bg-elevated)", color: "var(--text-primary)" }}
+              style={{ flex: "1 1 auto", minWidth: 0, boxSizing: "border-box", padding: "0.6rem 0.85rem", borderRadius: 8, fontSize: "1rem", lineHeight: 1.5, fontFamily: "inherit", resize: "vertical", border: "1.5px solid var(--border)", background: "var(--bg-elevated)", color: "var(--text-primary)" }}
             />
             <button onClick={submit} disabled={!input.trim()}
-              style={{ padding: "0.55rem 1.3rem", borderRadius: 8, border: "none", background: input.trim() ? "var(--accent-primary)" : "var(--bg-elevated)", color: input.trim() ? "#fff" : "var(--text-muted)", fontSize: "0.9rem", fontWeight: 600, cursor: input.trim() ? "pointer" : "not-allowed" }}>
+              style={{ flex: "0 0 auto", padding: "0.55rem 1.3rem", borderRadius: 8, border: "none", background: input.trim() ? "var(--accent-primary)" : "var(--bg-elevated)", color: input.trim() ? "#fff" : "var(--text-muted)", fontSize: "0.9rem", fontWeight: 600, cursor: input.trim() ? "pointer" : "not-allowed" }}>
               Thêm
             </button>
           </div>
+          <p style={{ margin: "-0.2rem 0 0.6rem", fontSize: "0.76rem", color: "var(--text-muted)" }}>
+            Enter để thêm · Shift+Enter để xuống dòng
+          </p>
 
           {msg && (
             <p style={{ margin: "0 0 0.7rem", fontSize: "0.87rem", lineHeight: 1.55, color: msg.tone === "ok" ? GREEN : msg.tone === "warn" ? AMBER : RED }}>

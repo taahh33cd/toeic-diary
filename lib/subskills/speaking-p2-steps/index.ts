@@ -264,7 +264,7 @@ export function checkProduce(
  * commas, so those split on sentence punctuation instead.
  */
 export function splitProduceInput(input: string, difficulty: Difficulty): string[] {
-  const parts = difficulty === "hard" ? input.split(/[.!?]+/) : input.split(/[,;\n]+/);
+  const parts = difficulty === "hard" ? input.split(/[.!?\n]+/) : input.split(/[,;\n]+/);
   return parts.map((s) => s.trim()).filter(Boolean);
 }
 
