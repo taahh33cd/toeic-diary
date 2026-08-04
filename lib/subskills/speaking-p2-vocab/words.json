@@ -198,8 +198,8 @@
       "stripy"
     ],
     "example": "A girl in a striped top is sitting on the floor.",
-    "photo": "",
-    "credit": ""
+    "photo": "photo-1720394494434-b405bbb3862a",
+    "credit": "Unsplash"
   },
   {
     "id": "checked",
@@ -212,8 +212,8 @@
       "plaid"
     ],
     "example": "Another man in a blue checked shirt is helping him.",
-    "photo": "",
-    "credit": ""
+    "photo": "photo-1611312449412-6cefac5dc3e4",
+    "credit": "Unsplash"
   },
   {
     "id": "patterned",
@@ -224,8 +224,8 @@
       "pattern"
     ],
     "example": "She is wearing a light patterned blouse.",
-    "photo": "",
-    "credit": ""
+    "photo": "photo-1613947327443-5e7ba688df4a",
+    "credit": "Unsplash"
   },
   {
     "id": "grey",
@@ -237,7 +237,8 @@
     ],
     "example": "The chef on the left is wearing a grey turtleneck.",
     "photo": "",
-    "credit": ""
+    "credit": "",
+    "swatch": "#9AA0A6"
   },
   {
     "id": "colourful",
@@ -249,7 +250,8 @@
     ],
     "example": "On the right there is a colourful sailing boat.",
     "photo": "",
-    "credit": ""
+    "credit": "",
+    "swatch": "linear-gradient(135deg,#EF4444,#F59E0B,#22C55E,#3B82F6,#A855F7)"
   },
   {
     "id": "bright",
@@ -259,7 +261,8 @@
     "forms": [],
     "example": "The child is wearing a bright green jacket.",
     "photo": "",
-    "credit": ""
+    "credit": "",
+    "swatch": "linear-gradient(135deg,#22C55E,#FACC15)"
   },
   {
     "id": "light-blue",
@@ -272,7 +275,8 @@
     ],
     "example": "A man in a light blue shirt is holding up a tablet.",
     "photo": "",
-    "credit": ""
+    "credit": "",
+    "swatch": "#A8CBE8"
   },
   {
     "id": "dark",
@@ -284,7 +288,8 @@
     ],
     "example": "Seven people in dark business suits are sitting around a table.",
     "photo": "",
-    "credit": ""
+    "credit": "",
+    "swatch": "#2B3038"
   },
   {
     "id": "navy",
@@ -296,7 +301,8 @@
     ],
     "example": "The woman in the middle has a navy wide-brimmed hat.",
     "photo": "",
-    "credit": ""
+    "credit": "",
+    "swatch": "#1B2A4A"
   },
   {
     "id": "beige",
@@ -306,7 +312,8 @@
     "forms": [],
     "example": "He is wearing a light blue shirt and beige trousers.",
     "photo": "",
-    "credit": ""
+    "credit": "",
+    "swatch": "#D8C8A9"
   },
   {
     "id": "cream",
@@ -318,7 +325,8 @@
     ],
     "example": "The mother is wearing a cream top with a bag over her shoulder.",
     "photo": "",
-    "credit": ""
+    "credit": "",
+    "swatch": "#F4EBD6"
   },
   {
     "id": "khaki",
@@ -328,7 +336,8 @@
     "forms": [],
     "example": "She is wearing an orange top with khaki trousers.",
     "photo": "",
-    "credit": ""
+    "credit": "",
+    "swatch": "#C3B091"
   },
   {
     "id": "olive-green",
@@ -340,7 +349,8 @@
     ],
     "example": "The mother is wearing an olive green top.",
     "photo": "",
-    "credit": ""
+    "credit": "",
+    "swatch": "#6B7B3A"
   },
   {
     "id": "turquoise",
@@ -352,7 +362,8 @@
     ],
     "example": "In the background I can see the turquoise sea.",
     "photo": "",
-    "credit": ""
+    "credit": "",
+    "swatch": "#40C4C4"
   },
   {
     "id": "magenta",
@@ -362,7 +373,8 @@
     "forms": [],
     "example": "She is wearing a patterned blouse and magenta trousers.",
     "photo": "",
-    "credit": ""
+    "credit": "",
+    "swatch": "#CE2D8B"
   },
   {
     "id": "standing",
@@ -416,8 +428,8 @@
       "leaning against"
     ],
     "example": "She is leaning against the railing and taking a photo.",
-    "photo": "",
-    "credit": ""
+    "photo": "photo-1487613870494-e1ef75630536",
+    "credit": "Unsplash"
   },
   {
     "id": "bending",
@@ -460,8 +472,8 @@
       "pointing at"
     ],
     "example": "She is bending down and pointing at the tablet with her finger.",
-    "photo": "",
-    "credit": ""
+    "photo": "photo-1516171376399-369bb30c382c",
+    "credit": "Unsplash"
   },
   {
     "id": "reaching",

@@ -24,6 +24,12 @@ export type VocabWord = {
   /** Unsplash photo id, e.g. "photo-1717700921740-a1440f3b89a4". Empty = text-only card. */
   photo: string;
   credit: string;
+  /**
+   * CSS colour or gradient, used instead of a photo for colour words. A photo of
+   * something beige and a photo of something cream are indistinguishable on a
+   * flashcard; a swatch names the colour exactly.
+   */
+  swatch?: string;
 };
 
 const WORDS = wordsData as VocabWord[];

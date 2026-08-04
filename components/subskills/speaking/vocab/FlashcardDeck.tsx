@@ -74,10 +74,15 @@ export default function FlashcardDeck({ words, label, onExit, onDone }: Props) {
           background: "var(--bg-secondary)", cursor: "pointer", overflow: "hidden", display: "block", textAlign: "center",
         }}
       >
-        {card.photo && (
-          /* eslint-disable-next-line @next/next/no-img-element */
-          <img src={UNSPLASH(card.photo)} alt="" style={{ width: "100%", maxHeight: 300, objectFit: "cover", display: "block" }} />
-        )}
+        {card.swatch ? (
+          <div style={{ width: "100%", height: 240, background: card.swatch }} />
+        ) : card.photo ? (
+          // contain, never cover: a cropped garment is exactly what the card must not show.
+          <div style={{ width: "100%", height: 260, background: "var(--bg-elevated)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={UNSPLASH(card.photo, 700)} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", display: "block" }} />
+          </div>
+        ) : null}
         <div style={{ padding: "1.6rem 1.3rem", minHeight: 120, display: "flex", flexDirection: "column", justifyContent: "center", gap: "0.5rem" }}>
           {!flipped ? (
             <>

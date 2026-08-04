@@ -107,10 +107,15 @@ export default function MemoryGame({ words, label, onExit }: Props) {
                 <span style={{ fontSize: "1.8rem", opacity: 0.35 }}>❓</span>
               ) : c.side === "prompt" ? (
                 <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column" }}>
-                  {c.word.photo ? (
+                  {c.word.swatch ? (
+                    <>
+                      <div style={{ width: "100%", flex: 1, background: c.word.swatch, minHeight: 0 }} />
+                      <div style={{ padding: "0.35rem", fontSize: "0.76rem", color: "var(--text-muted)" }}>{c.word.vi}</div>
+                    </>
+                  ) : c.word.photo ? (
                     <>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={UNSPLASH(c.word.photo, 300)} alt="" style={{ width: "100%", flex: 1, objectFit: "cover", minHeight: 0 }} />
+                      <img src={UNSPLASH(c.word.photo, 300)} alt="" style={{ width: "100%", flex: 1, objectFit: "contain", minHeight: 0 }} />
                       <div style={{ padding: "0.35rem", fontSize: "0.76rem", color: "var(--text-muted)" }}>{c.word.vi}</div>
                     </>
                   ) : (
