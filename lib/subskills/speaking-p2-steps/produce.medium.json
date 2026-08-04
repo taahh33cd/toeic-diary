@@ -1,0 +1,122 @@
+{
+  "m01": {
+    "1": ["in a supermarket car park", "in a car park", "at a car park", "in a parking lot", "outside a supermarket", "in front of a supermarket", "at a supermarket", "in a car park at a supermarket"],
+    "2": ["a man holding a paper bag of groceries", "a man holding a paper bag", "a couple loading their car", "a couple putting their shopping in the car", "a man carrying a bag of groceries", "a woman pushing a shopping trolley", "a couple after going shopping", "two people smiling"],
+    "3": ["a light blue shirt", "beige trousers", "a paper bag full of food", "a pineapple", "blonde hair", "a ponytail", "a yellow sweater", "jeans", "a shopping trolley", "the trunk of a white car", "an open car boot", "bottles", "a supermarket building", "a yellow sign", "parked cars"]
+  },
+  "m02": {
+    "1": ["on a shopping street", "in front of a shop window", "on a street", "outside a shop", "in a city centre", "on a pavement", "in front of a shop"],
+    "2": ["three women carrying shopping bags", "three women carrying a lot of shopping bags", "three friends looking at a shop window", "three women on a shopping trip", "a group of three women", "three women with shopping bags", "three friends shopping together"],
+    "3": ["hats", "warm coats", "a cream hat", "glasses", "a dark coat", "a checked scarf", "pointing at something", "a navy hat", "a wide-brimmed hat", "a red coat", "a blue paper bag", "a purple hat", "a green checked coat", "orange and blue bags", "a shop window", "mannequins", "a blurred street"]
+  },
+  "m03": {
+    "1": ["in an office break room", "in an office", "at a coffee counter", "in a break room", "in a canteen", "at an office coffee station"],
+    "2": ["a woman pouring coffee into a cup", "a woman pouring coffee", "three women taking a coffee break", "three colleagues at a coffee counter", "a woman filling a cup", "three women getting coffee", "a coffee break"],
+    "3": ["glasses", "a blue top", "black trousers", "looking at her phone", "a patterned blouse", "magenta trousers", "a coffee dispenser", "a black suit", "a plate of food", "two coffee urns", "a rack of snacks", "plates", "a red and gold wall decoration", "a green plant"]
+  },
+  "m04": {
+    "1": ["in a meeting room", "in an office", "at an office", "in a meeting room at an office", "in a modern office", "in a conference room"],
+    "2": ["two people shaking hands", "a man and a woman shaking hands", "two people greeting each other", "three colleagues at a business meeting", "a handshake", "two business people shaking hands"],
+    "3": ["formal business clothes", "dark hair", "sunglasses on their head", "reaching out to shake hands", "a dark suit", "a white shirt", "a light tie", "smiling", "a pearl necklace", "standing and watching", "a whiteboard", "a bright wall", "a modern office"]
+  },
+  "m05": {
+    "1": ["on a walkway next to the water", "next to the water", "by the sea", "on a promenade", "beside the water", "on a walkway", "near the water", "on a path by the sea"],
+    "2": ["a woman pushing a stroller", "a woman pushing a stroller with a child in it", "a mother taking her child for a walk", "two women walking by the water", "a woman with a pushchair", "two women enjoying a walk"],
+    "3": ["a pink top", "jeans", "leaning against the railing", "taking a photo", "a teal tank top", "a grey stroller", "a small child", "sunglasses", "calm blue water", "palm trees", "tall buildings", "a clear blue sky"]
+  },
+  "m06": {
+    "1": ["in a supermarket", "in the fruit section of a supermarket", "in the fruit section", "at a supermarket", "in a grocery store", "in the fruit and vegetable section"],
+    "2": ["a woman putting apples into a plastic bag", "a woman putting apples into a bag", "a mother and her children buying fruit", "a family shopping for groceries", "a woman picking up an apple", "a family buying fruit"],
+    "3": ["curly dark hair", "a pink sweater", "jeans", "a plastic bag", "a green apple", "a blue sweater", "a shopping list", "a small piece of paper", "a light blue cardigan", "leaning on the trolley", "a trolley full of vegetables", "shelves full of fruit", "a pile of oranges", "a metal scale"]
+  },
+  "m07": {
+    "1": ["at a vegetable market", "at a market", "at a market stall", "in a market", "at a greengrocer's", "at a fruit and vegetable market"],
+    "2": ["a woman picking up some leeks", "a woman choosing vegetables", "a customer choosing fresh vegetables", "a woman shopping at a market stall", "a woman buying vegetables", "a woman holding some leeks"],
+    "3": ["long fair hair", "a grey coat", "a bright blue scarf", "looking down", "a bunch of green leeks", "a beard", "a grey turtleneck", "a dark green apron", "a black plastic crate", "a shop assistant", "celery", "peppers", "apples", "price tags", "shelves of produce"]
+  },
+  "m08": {
+    "1": ["in a classroom", "in a kindergarten", "at a kindergarten", "in a classroom at a kindergarten", "in a music class", "at a nursery school"],
+    "2": ["a teacher playing the guitar", "a teacher playing the guitar with children", "four people making music together", "a music lesson for young children", "a teacher and three children", "children playing instruments"],
+    "3": ["long curly hair", "an orange top", "khaki trousers", "sitting on a small chair", "an acoustic guitar", "a white and grey shirt", "a red drum", "hitting it with his hands", "a green top", "two maracas", "smiling happily", "a khaki top", "a small guitar", "colourful shelves", "toys and books"]
+  },
+  "m09": {
+    "1": ["in a kitchen", "in a kitchen at home", "at home", "in the kitchen of a house", "in a family kitchen"],
+    "2": ["a woman cutting apples", "a woman cutting apples on a chopping board", "a mother preparing food", "a family cooking together", "a family of four in the kitchen", "a mother preparing food for her family"],
+    "3": ["dark hair tied up", "an olive green top", "smiling", "red apples", "a wooden chopping board", "an orange striped top", "looking up at her", "a dark red top", "lifting a small child", "a bowl of fruit", "a bowl of corn", "green vegetables", "white kitchen cabinets", "a cooker"]
+  },
+  "m10": {
+    "1": ["at an indoor fruit and vegetable market", "at a market", "at a fruit and vegetable market", "in a market hall", "at an indoor market", "in a market"],
+    "2": ["a long stall full of fruit and vegetables", "a long stall full of colourful fruit and vegetables", "a lot of fresh produce on display", "a busy market", "a market stall full of vegetables", "a lot of fruit and vegetables"],
+    "3": ["red peppers", "dark cherries", "orange apricots", "purple plums", "wooden boxes", "plastic boxes", "aubergines", "cabbages", "green lettuce", "two shoppers", "out of focus", "a blue shirt", "checked shorts", "a light dress", "more stalls", "sellers"]
+  },
+  "m11": {
+    "1": ["in a laboratory", "in a lab", "in a research laboratory", "at a laboratory", "in a science lab"],
+    "2": ["a man looking through a microscope", "two scientists examining something", "two researchers wearing white lab coats", "two scientists doing an experiment", "a man using a microscope", "two scientists working"],
+    "3": ["white lab coats", "hairnets", "face masks", "sitting at the table", "writing something", "a sheet of paper", "leaning forward", "a microscope", "petri dishes", "a tablet", "test tubes", "a shelf full of files", "a large window", "natural light"]
+  },
+  "m12": {
+    "1": ["in a shopping mall", "in a mall", "at a shopping centre", "in a shopping centre", "on an escalator in a mall", "inside a shopping mall"],
+    "2": ["a family standing on an escalator", "a family standing on an escalator with shopping bags", "a family of four going shopping", "a father carrying red shopping bags", "a family on an escalator", "four people on an escalator"],
+    "3": ["a grey knitted sweater", "two big red bags", "the word sale", "long blonde hair", "a cream top", "a bag over her shoulder", "a green dress", "looking up and smiling", "a blue jacket", "his arms open wide", "round columns", "ceiling lights", "shops on the lower floor"]
+  },
+  "m13": {
+    "1": ["in a park", "on the grass", "in a park on the grass", "outdoors in a park", "at a park", "in the park"],
+    "2": ["a group of friends having a picnic", "a group of people eating outdoors", "five people sitting on the grass", "a group of friends sitting on a blanket", "a picnic in the park", "a group of people having a picnic"],
+    "3": ["sitting in a circle", "a blanket", "two men talking", "a dark top", "a red top", "listening to the others", "a green shirt", "boxes of food", "some drinks", "a man standing behind the group", "large green trees", "open grass"]
+  },
+  "m14": {
+    "1": ["in a restaurant kitchen", "in a kitchen", "in a professional kitchen", "at a restaurant", "in the kitchen of a restaurant"],
+    "2": ["three chefs cutting vegetables", "three chefs preparing food", "three people wearing white chef uniforms", "three chefs working together", "three cooks preparing food", "three chefs in a kitchen"],
+    "3": ["white jackets", "black cuffs", "tall white chef hats", "glasses", "looking down", "cutting something on a board", "smiling", "slicing a red pepper", "a green chopping board", "hair tied back", "a knife", "a loaf of bread", "lemons", "carrots", "fresh herbs", "potatoes", "a white bowl of green vegetables", "a metal extractor hood", "dark wooden cabinets"]
+  },
+  "m15": {
+    "1": ["in an airport terminal", "at an airport", "in an airport", "at the airport", "in a departure hall", "in an airport departure lounge"],
+    "2": ["a woman pulling a blue suitcase", "three young people hurrying through an airport", "three travellers carrying their luggage", "three friends travelling together", "a woman pulling a suitcase", "three young travellers"],
+    "3": ["a white t-shirt", "a checked shirt tied around his waist", "a black backpack", "curly hair", "denim shorts", "smiling", "pulling a large blue suitcase", "an orange beanie", "a blue shirt", "brown trousers", "headphones around his neck", "a backpack on his shoulder", "rows of empty blue seats", "large windows", "in a hurry"]
+  },
+  "m16": {
+    "1": ["in a garden", "outdoors", "in a garden outdoors", "in a back garden", "outside in a garden", "in the garden of a house"],
+    "2": ["an older man grilling meat on a barbecue", "a man cooking outdoors", "a man using a barbecue", "an older man cooking", "a man wearing an apron", "a family barbecue"],
+    "3": ["grey hair", "a grey beard", "a yellow polo shirt", "a blue and white checked apron", "smiling", "a pair of tongs", "turning a piece of meat", "a black barbecue", "the lid open", "family members sitting at a table", "drinks and food", "out of focus", "green trees", "bushes", "a sunny summer day"]
+  },
+  "m17": {
+    "1": ["on a street", "next to a food truck", "on a city street", "in the street", "outside a food truck", "on a street next to a food truck"],
+    "2": ["a vendor handing food to a customer", "a woman buying snacks from a food truck", "a blue food truck", "a customer in front of a food truck", "a woman buying food", "a food truck with a customer"],
+    "3": ["dark blue", "a big sign", "snacks and drinks", "a cap", "an apron", "leaning out of the window", "a yellow top", "a navy skirt", "reaching up to take the food", "a grey blazer", "jeans", "waiting for his turn", "a small round table", "a chalkboard menu", "string lights"]
+  },
+  "m18": {
+    "1": ["in a modern office", "in an office", "at an office", "in a meeting room", "in an open-plan office"],
+    "2": ["a woman putting sticky notes on a wall", "three colleagues having a brainstorming session", "a woman presenting ideas", "a woman sticking a note on the wall", "a team meeting", "three colleagues working on a project"],
+    "3": ["a dark purple t-shirt", "jeans", "standing up", "a yellow note", "a notebook", "purple chairs", "a patterned top", "a tablet", "a blue hoodie", "listening to her", "yellow sticky notes", "printed photos", "a projector", "large windows"]
+  },
+  "m19": {
+    "1": ["on a ski slope", "in the snow", "on a mountain", "at a ski resort", "on a snowy slope", "on the slopes"],
+    "2": ["a man helping a child to ski", "a skiing lesson", "a child learning how to ski", "a man teaching a child to ski", "a skiing lesson on a snowy slope", "a man and a child skiing"],
+    "3": ["a navy and green ski jacket", "black trousers", "a black cap", "sunglasses", "bending forward", "holding the child's hand", "a bright green jacket", "blue trousers", "black gloves", "a helmet", "goggles", "smiling happily", "a pair of skis", "other skiers", "dark evergreen trees", "a white cloudy sky"]
+  },
+  "m20": {
+    "1": ["on a beach", "next to the sea", "on a beach next to the sea", "by the sea", "at the seaside", "on the sand"],
+    "2": ["a bride and groom standing under a flower arch", "a wedding ceremony", "a wedding ceremony on a beach", "a bride and groom getting married", "three people standing under an arch", "a beach wedding"],
+    "3": ["a wooden arch", "white flowers", "green leaves", "long white curtains", "a long white lace dress", "holding the groom's hands", "a light beige suit", "an open book", "leading the ceremony", "rows of white folding chairs", "a few guests", "a white carpet", "large rocks", "the blue sea", "white clouds"]
+  },
+  "m21": {
+    "1": ["on a path beside a river", "beside a river", "by the river", "on a riverside path", "next to a river", "along a river"],
+    "2": ["two people riding bicycles", "two people riding bicycles along the path", "some people enjoying a sunny day by the river", "a riverside path with cyclists and pedestrians", "two cyclists", "people walking and cycling beside a river"],
+    "3": ["a wide river", "calm blue water", "a low concrete wall", "a small group of people", "looking at the water", "a blue and white top", "a red jacket", "a child", "riding away from the camera", "a blue shirt", "tall trees", "white-painted trunks", "a road", "a yellow vehicle", "the buildings of a small town"]
+  },
+  "m22": {
+    "1": ["in a meeting room", "in an office", "at an office", "in a conference room", "in a meeting room at an office"],
+    "2": ["a woman drawing a graph on a whiteboard", "four women working together in a meeting", "a group of colleagues preparing a presentation", "a woman drawing on a whiteboard", "four women having a meeting", "a team preparing a presentation"],
+    "3": ["magenta trousers", "a black jacket over her arm", "a grey cardigan", "sheets of paper", "a pink top", "reaching up to draw a circle", "a whiteboard", "a line graph", "a black suit", "long dark hair", "looking down at some documents", "a black bag", "papers", "a cup", "cables", "teal office chairs"]
+  },
+  "m23": {
+    "1": ["in a co-working space", "in a cafe", "in a cafe or co-working space", "at a co-working space", "in a shared office", "in a relaxed office space"],
+    "2": ["a woman standing and holding a tablet", "three people working in a relaxed office space", "a yellow bicycle", "a woman holding a tablet", "three people working", "three colleagues working"],
+    "3": ["taken from above", "a green jacket", "glasses", "looking down at a tablet", "a mustard yellow jacket", "sitting on a chair", "using his phone", "a light shirt", "typing on a laptop", "a yellow bicycle", "a red brick wall", "a window", "a wooden table", "a notebook", "a small plant", "a mobile phone"]
+  },
+  "m24": {
+    "1": ["in a room of a new house", "in a new house", "at home", "in an empty room", "in a new home", "in a house"],
+    "2": ["a family unpacking cardboard boxes", "a family moving into a new home", "two men hanging a picture on the wall", "a family unpacking boxes", "a family moving in", "a family moving house"],
+    "3": ["a green top", "standing on a ladder", "hanging a picture", "a blue checked shirt", "helping him hold it", "a striped top", "sitting on the floor", "an open box", "a red checked shirt", "a white top", "leaning over a large cardboard box", "cardboard boxes", "a white door", "a fireplace", "an almost empty room"]
+  }
+}

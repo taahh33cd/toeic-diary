@@ -166,6 +166,7 @@ model Profile {
   ipaAttempts          IpaAttempt[]
   fullTestAttempts     FullTestAttempt[]
   coursePurchases      CoursePurchase[]
+  pictureNotes         PictureNote[]
 
   @@map("profiles")
 }
@@ -379,6 +380,24 @@ model SubskillAttempt {
   @@index([userId, part, questionWord])
   @@index([userId])
   @@map("subskill_attempts")
+}
+
+/// Free-practice notes for Speaking Part 2 "describe a picture in 3 steps".
+/// One row per (user, picture); the 3 fields mirror the 3 steps. No grading.
+model PictureNote {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  profile   Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  itemId    String   @map("item_id") // StepItem.id, e.g. "m01"
+  step1     String   @default("") @map("step1")
+  step2     String   @default("") @map("step2")
+  step3     String   @default("") @map("step3")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@unique([userId, itemId])
+  @@index([userId])
+  @@map("picture_notes")
 }
 
 model IpaAttempt {

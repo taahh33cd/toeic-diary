@@ -1,0 +1,72 @@
+{
+  "h01": {
+    "1": ["in a bright modern office", "in a modern office", "in an office", "at an office", "in a bright office", "in an office meeting room"],
+    "2": ["a man holding up a tablet", "five colleagues looking at a tablet", "a man holding up a tablet for the others to see", "a team discussing something on a screen", "a team of five colleagues", "five colleagues looking at a tablet together"],
+    "3": ["a blonde woman", "a light blue shirt", "leaning over the table", "smiling", "long fair hair", "pointing at the tablet", "a white shirt", "a dark tie", "sitting at the table", "long dark hair", "a grey jacket", "a white cup", "drinking coffee", "glasses", "a white tablet", "a laptop", "a glass of water", "sticky notes", "a notebook", "tall bright windows", "a flip chart"]
+  },
+  "h02": {
+    "1": ["on a busy city street", "on a city street", "on a street", "in a city", "on a busy street", "outside a shop"],
+    "2": ["a fish and chips shop with people outside it", "a lot of people walking on a busy street", "a corner restaurant", "a fish and chips shop", "a corner shop", "people walking on a city street"],
+    "3": ["a corner shop", "a big sign", "poppie's fish and chips", "a red open sign", "the pavement", "eight or nine people", "waiting to go inside", "riding a bicycle", "a yellow shirt", "an older man", "a white shirt", "dark trousers", "walking towards the camera", "brick buildings", "a narrow street", "an english flag"]
+  },
+  "h03": {
+    "1": ["in a boardroom", "in a boardroom on a high floor", "in a meeting room", "in an office", "in a conference room", "at an office"],
+    "2": ["a man standing and giving a presentation", "a man presenting a chart to his team", "a business presentation", "a man giving a presentation", "a business meeting with a presenter", "a man presenting sales results"],
+    "3": ["a dark blue suit", "a light blue patterned tie", "a large screen", "holding his glasses", "a bar chart", "quarterly sales performance", "dark suits", "sitting and listening", "blonde hair", "looking up at the screen", "writing notes", "notebooks", "a long wooden table", "laptops", "bottles of water", "paper cups of coffee", "printed documents", "floor-to-ceiling windows", "a view of the city"]
+  },
+  "h04": {
+    "1": ["in a meeting room", "in a meeting room at an office", "in an office", "at an office", "in a conference room", "in a modern office", "in a boardroom"],
+    "2": ["a woman showing a chart to the group", "seven colleagues having a business meeting", "a group of people sitting around a white table", "a business meeting around a table", "seven business people having a meeting", "a woman holding up a chart"],
+    "3": ["dark business suits", "a large white table", "an older man", "grey hair", "a laptop", "writing something", "blonde hair", "a dark jacket", "a sheet of paper", "a bar chart", "sitting and listening", "looking down at his documents", "paying attention", "colourful charts", "white cups of coffee", "a mobile phone", "everyone looks relaxed", "smiling"]
+  },
+  "h05": {
+    "1": ["on a tropical beach", "on a beach", "at the seaside", "at a beach resort", "by the sea", "on the sand"],
+    "2": ["a crowded beach with a colourful sailing boat", "a lot of tourists relaxing on the sand", "a busy beach resort", "a crowd of tourists", "a crowded beach", "a lot of tourists enjoying a beach"],
+    "3": ["tall palm trees", "yellow sun loungers", "white sand", "a large crowd of tourists", "walking along the beach", "a dark patterned shirt", "a cap", "walking towards the camera", "two women in swimsuits", "a colourful sailing boat", "a green and yellow sail", "shallow water", "the turquoise sea", "small boats", "a bright blue sky", "white clouds"]
+  },
+  "h06": {
+    "1": ["at a construction site", "on the roof of a building", "at a construction site on the roof of a building", "on a building site", "on a roof", "at a building site"],
+    "2": ["three workers wearing red hard hats", "three builders working on a wooden roof frame", "three men doing construction work", "three construction workers", "three workers on a roof", "three construction workers building a roof"],
+    "3": ["red hard hats", "a yellow t-shirt", "shorts", "kneeling down", "a long wooden plank", "a white t-shirt", "blue shorts", "his back to the camera", "a tool belt", "an orange t-shirt", "walking across the wooden frame", "carrying a tool", "wooden beams", "planks", "an electric saw", "the roofs of a small town", "green trees", "hills in the distance"]
+  },
+  "h07": {
+    "1": ["on a crowded street in a big city", "on a busy street", "on a city street", "in a big city", "on a shopping street", "on a crowded street"],
+    "2": ["a boy sitting on a man's shoulders", "a boy sitting on a man's shoulders and touching a sign", "a lot of people walking along a busy street", "a crowd of pedestrians", "a group of pedestrians", "a crowd of people on a city pavement"],
+    "3": ["red trousers", "a black backpack", "carrying a boy on his shoulders", "a blue top", "reaching up to touch a black shop sign", "richard james", "about ten pedestrians", "walking away from the camera", "the pavement", "jackets", "carrying bags", "a long brown coat", "a plastic container", "a black hoodie", "tracksuit trousers", "a white car", "old brick buildings", "an oyster bar", "tall modern glass towers", "a bright sunny day"]
+  },
+  "h08": {
+    "1": ["in a large park with a lake", "in a park", "at a park", "in a park with a lake", "by a lake", "outdoors in a park"],
+    "2": ["a family having a picnic on a red checked blanket", "a family having a picnic", "several people enjoying a sunny day in a park", "a family sitting on the grass with food", "a family picnic", "people doing different activities in a park"],
+    "3": ["a family of five", "a red and white checked blanket", "the grass", "three children", "plates of food", "some drinks", "a wicker picnic basket", "three or four cyclists", "riding along a path", "a red top", "a pink top", "walking a golden dog", "a lead", "a wooden bench", "a calm lake", "a few ducks", "tall green trees", "colourful flower beds", "orange and pink flowers"]
+  },
+  "h09": {
+    "1": ["inside a small coffee shop", "in a coffee shop", "in a cafe", "in a small coffee shop", "at a cafe", "in a cosy cafe"],
+    "2": ["two women talking and drinking coffee at a table", "several customers relaxing in a cosy cafe", "a barista making coffee behind the counter", "two women drinking coffee", "the customers and the barista", "customers relaxing in a coffee shop"],
+    "3": ["a white t-shirt", "a grey apron", "a wooden counter", "a large silver espresso machine", "a denim shirt", "holding a cup of coffee", "a grey top", "smiling at her", "a cream top", "a grey sweater", "sitting alone", "by the window", "working on a laptop", "hanging plants", "warm light bulbs", "wooden shelves", "jars and cups", "a cosy atmosphere"]
+  },
+  "h10": {
+    "1": ["in a museum", "at a museum", "inside a museum", "on a school trip to a museum", "in a museum gallery", "in an exhibition room", "at an exhibition"],
+    "2": ["a group of children looking at a display case", "a teacher explaining something to some children", "about six children visiting a museum", "a group of schoolchildren", "a school trip to a museum", "children looking at a display case"],
+    "3": ["about six schoolchildren", "a tall glass display case", "raising her hand high", "putting a hand up", "answering a question", "dark hair", "a dark jacket", "standing behind the children", "their teacher", "grey hair", "a light blue shirt", "his back to the camera", "talking to the group", "a museum guide", "ancient pottery", "bowls", "labels", "information panels"]
+  },
+  "h11": {
+    "1": ["at an outdoor market", "on a cobbled street", "at an outdoor market on a cobbled street", "at a street market", "in a european town", "at a market"],
+    "2": ["a long stall full of fruit and vegetables", "some people shopping at an outdoor market", "a busy street market", "the market stalls and the shoppers", "a market stall full of fruit", "people shopping at a market"],
+    "3": ["a long wooden stall", "a canopy", "bananas", "red tomatoes", "green lettuce", "oranges", "apples", "wooden crates", "a black t-shirt", "serving customers", "a set of scales", "two older women", "choosing fruit", "a pink top", "a light pink cardigan", "paper shopping bags", "a white t-shirt", "riding a bicycle", "the cobbled street", "old brick houses", "tiled roofs", "a shop sign", "big green trees", "a hanging basket of pink flowers"]
+  },
+  "h12": {
+    "1": ["at a large construction site", "at a construction site", "on a building site", "at a building site", "on a construction site", "outdoors at a construction site", "at a site where a building is going up"],
+    "2": ["two engineers looking at a large blueprint", "several workers wearing yellow hard hats", "a building site with a tall crane", "a group of workers and engineers", "two engineers looking at a blueprint", "engineers and workers at a construction site"],
+    "3": ["a yellow hard hat", "an orange high-visibility vest", "a folding table", "a large white blueprint", "bending over some long steel bars", "using tools", "a huge yellow tower crane", "standing high up on the top floor", "a concrete building under construction", "scaffolding", "steel rods", "columns", "a clear blue sky", "a hot sunny day"]
+  },
+  "h13": {
+    "1": ["in a factory", "at a factory", "in a modern factory", "on a production line", "in a manufacturing plant", "in a factory workshop"],
+    "2": ["workers in blue overalls working along an assembly line", "several people operating machines in a factory", "a long production line with workers beside it", "workers on a production line", "workers operating machines", "a modern factory with an assembly line"],
+    "3": ["blue overalls", "white hard hats", "gloves", "a large grey cnc machine", "holding a part in his hands", "the control panel", "a long roller conveyor", "checking the products", "blue shelves", "trolleys full of components", "yellow safety lines", "a grey floor", "a high ceiling", "bright fluorescent lights", "long windows near the roof", "daylight"]
+  },
+  "h14": {
+    "1": ["at the check-in counter of an airport", "at an airport", "in an airport", "at a check-in counter", "in an airport terminal", "at the check-in desk"],
+    "2": ["a line of passengers waiting with their suitcases", "a lot of people checking in at an airport", "a busy check-in counter with a long queue", "a queue of passengers", "passengers checking in", "a busy check-in area"],
+    "3": ["a dark navy uniform", "behind the check-in desk", "typing on a computer", "five or six passengers", "standing in a queue", "passports", "boarding passes", "a dark blue jacket", "a backpack", "handing his documents", "a beige jacket", "a grey sweater", "large black and red suitcases", "screens showing flight information", "a big black clock", "a yellow display board", "the bright terminal"]
+  }
+}

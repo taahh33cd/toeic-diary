@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Link from "next/link";
 import {
   type StepTest,
   type StepItem,
@@ -10,10 +11,15 @@ import {
   checkBlank,
   mcqOptions,
   dbPartSteps,
+  gradedPerImage,
+  isProduceMode,
+  produceTarget,
+  getProduceBank,
   GRADED_PER_IMAGE,
   STEPS_PASS_THRESHOLD as PASS,
 } from "@/lib/subskills/speaking-p2-steps";
 import { RecordingPanel } from "@/components/subskills/speaking/RecordingPanel";
+import { ProduceStepPanel } from "@/components/subskills/speaking/ProduceStepPanel";
 
 type Phase = "intro" | "practice" | "done";
 type BestMap = Record<string, { score: number; passed: boolean }>;
@@ -23,8 +29,12 @@ type DraftsMap = Record<number, DraftEntry>;
 const DIFFS: Difficulty[] = ["easy", "medium", "hard"];
 const DIFF_LABEL: Record<Difficulty, string> = { easy: "Easy", medium: "Medium", hard: "Hard" };
 
-type SubState = { pick: string | null; mcqDone: boolean; blank: string; blankDone: boolean };
-const emptySub = (): SubState => ({ pick: null, mcqDone: false, blank: "", blankDone: false });
+type SubState = {
+  pick: string | null; mcqDone: boolean; blank: string; blankDone: boolean;
+  // Medium/Hard: phrases the learner produced, and whether they gave up on this step.
+  found: string[]; revealed: boolean;
+};
+const emptySub = (): SubState => ({ pick: null, mcqDone: false, blank: "", blankDone: false, found: [], revealed: false });
 type StepStates = { 1: SubState; 2: SubState; 3: SubState };
 const emptyStates = (): StepStates => ({ 1: emptySub(), 2: emptySub(), 3: emptySub() });
 
@@ -56,7 +66,9 @@ export default function SpeakingP2StepsClient({
   const items: StepItem[] = test ? getStepItems(test, difficulty) : [];
   const item = items[imgIdx];
   const total = items.length;
-  const bestMap = difficulty === "easy" ? easyBest : difficulty === "medium" ? mediumBest : hardBest;
+  const graded = gradedPerImage(difficulty);
+  const produceMode = isProduceMode(difficulty);
+  const target = produceTarget(difficulty);
 
   // ── drafts ────────────────────────────────────────────────
   useEffect(() => {
@@ -85,7 +97,7 @@ export default function SpeakingP2StepsClient({
   // ── progress ──────────────────────────────────────────────
   const saveProgress = useCallback((newCorrect: number, t: number, diff: Difficulty, nItems: number) => {
     if (!userId || nItems === 0) return;
-    const score = Math.round((newCorrect / (nItems * GRADED_PER_IMAGE)) * 100);
+    const score = Math.round((newCorrect / (nItems * gradedPerImage(diff))) * 100);
     fetch("/api/subskills/attempt", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -120,11 +132,34 @@ export default function SpeakingP2StepsClient({
     setPhase("practice");
   }
 
-  function award(ok: boolean) {
-    if (!ok) return;
-    const next = correctCount + 1;
+  function awardPoints(pts: number) {
+    if (pts <= 0) return;
+    const next = correctCount + pts;
     setCorrect(next);
     saveProgress(next, testNum, difficulty, total);
+  }
+
+  function award(ok: boolean) {
+    awardPoints(ok ? 1 : 0);
+  }
+
+  // ── produce mode (Medium / Hard) ──────────────────────────
+  function addFound(n: 1 | 2 | 3, phrase: string) {
+    const target = produceTarget(difficulty);
+    const cur = st[n];
+    if (cur.revealed || cur.found.includes(phrase)) return;
+    const next = [...cur.found, phrase];
+    setSt((p) => ({ ...p, [n]: { ...p[n], found: next } }));
+    // Point is awarded once, when the target is first reached; extra ideas are welcome but free.
+    if (next.length === target) awardPoints(1);
+  }
+
+  function revealStep(n: 1 | 2 | 3) {
+    const target = produceTarget(difficulty);
+    const cur = st[n];
+    if (cur.revealed || cur.found.length >= target) return;
+    awardPoints(cur.found.length / target);
+    setSt((p) => ({ ...p, [n]: { ...p[n], revealed: true } }));
   }
 
   function submitMcq(n: 1 | 2) {
@@ -177,8 +212,17 @@ export default function SpeakingP2StepsClient({
             <li><b>Bước 2 — What can you see first?</b> Chủ thể nổi bật nhất + hành động (<i>V-ing</i>).</li>
             <li><b>Bước 3 — Describe left / right / background.</b> Vị trí, ngoại hình, trang phục, hành động, nền và tiền cảnh.</li>
           </ol>
-          <p style={{ margin: "0.75rem 0 0", fontSize: "0.82rem", color: "var(--text-muted)" }}>
-            Mỗi ảnh có {GRADED_PER_IMAGE} câu tự chấm (2 trắc nghiệm + 3 điền từ), một phần viết tự do có đáp án mẫu, và phần ghi âm cả bài.
+          <p style={{ margin: "0.75rem 0 0", fontSize: "0.82rem", color: "var(--text-muted)", lineHeight: 1.7 }}>
+            <b>Easy</b> — {GRADED_PER_IMAGE} câu tự chấm (2 trắc nghiệm + 3 điền từ) để làm quen khung câu.<br />
+            <b>Medium</b> — bạn tự nghĩ ra {produceTarget("medium")} cụm từ cho mỗi bước, có gợi ý chữ cái đầu.<br />
+            <b>Hard</b> — bạn tự viết {produceTarget("hard")} câu hoàn chỉnh cho mỗi bước, không gợi ý.<br />
+            Mức nào cũng có phần viết tự do kèm đáp án mẫu và phần ghi âm cả bài.
+          </p>
+          <p style={{ margin: "0.6rem 0 0", fontSize: "0.82rem" }}>
+            <Link href="/subskills/speaking/part2/mo-ta-buoc/tu-do" style={{ color: "var(--accent-primary)", fontWeight: 600, textDecoration: "none" }}>
+              ✎ Luyện tự do với kho ảnh →
+            </Link>{" "}
+            <span style={{ color: "var(--text-muted)" }}>— chọn ảnh bất kỳ, tự nháp từ vựng cho 3 bước, không chấm điểm.</span>
           </p>
         </div>
 
@@ -242,7 +286,7 @@ export default function SpeakingP2StepsClient({
   // DONE
   // ══════════════════════════════════════════════════════════
   if (phase === "done") {
-    const score = total > 0 ? Math.round((correctCount / (total * GRADED_PER_IMAGE)) * 100) : 0;
+    const score = total > 0 ? Math.round((correctCount / (total * graded)) * 100) : 0;
     const passed = score >= PASS;
     return (
       <div style={{ textAlign: "center", padding: "2.5rem 1.5rem", border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", background: "var(--bg-secondary)" }}>
@@ -252,7 +296,7 @@ export default function SpeakingP2StepsClient({
           {passed ? `Đạt ngưỡng ${PASS}% — bạn đã mở cấp độ tiếp theo!` : `Chưa đạt ngưỡng ${PASS}%. Làm lại để cải thiện nhé!`}
           <br />
           <span style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>
-            Đúng {correctCount}/{total * GRADED_PER_IMAGE} câu tự chấm · {total} ảnh
+            Đạt {Math.round(correctCount * 10) / 10}/{total * graded} điểm tự chấm · {total} ảnh
           </span>
         </p>
         <button onClick={() => { setPhase("intro"); setImgIdx(0); setCorrect(0); }}
@@ -277,7 +321,31 @@ export default function SpeakingP2StepsClient({
       ? "Bước 2 — What can you see first in this picture?"
       : "Bước 3 — Describe the left/right side and background";
 
-  const stepComplete = step === 3 ? sub.blankDone : sub.mcqDone && sub.blankDone;
+  const stepDone = (n: 1 | 2 | 3) =>
+    produceMode
+      ? st[n].found.length >= target || st[n].revealed
+      : n === 3 ? st[3].blankDone : st[n].mcqDone && st[n].blankDone;
+
+  const stepComplete = stepDone(step);
+  const bank = getProduceBank(item.id, step);
+
+  const producePrompt = step === 1
+    ? "Bức ảnh này được chụp ở đâu?"
+    : step === 2
+      ? "Bạn nhìn thấy gì ĐẦU TIÊN — chủ thể nổi bật đang làm gì?"
+      : "Mô tả chi tiết: trang phục, vị trí trái/phải/giữa, đồ vật và phần nền.";
+
+  const producePlaceholder = difficulty === "hard"
+    ? step === 1
+      ? "vd: This picture was taken in a bright modern office."
+      : step === 2
+        ? "vd: What I can see first is a man holding up a tablet."
+        : "vd: The woman on the right is wearing a grey jacket."
+    : step === 1
+      ? "vd: in an office"
+      : step === 2
+        ? "vd: a man holding a tablet"
+        : "vd: a white shirt";
 
   return (
     <div>
@@ -291,14 +359,14 @@ export default function SpeakingP2StepsClient({
           Bộ {testNum} · {DIFF_LABEL[difficulty]} · Ảnh {imgIdx + 1}/{total}
         </span>
         <span style={{ marginLeft: "auto", fontSize: "0.82rem", color: "var(--text-muted)" }}>
-          Đúng {correctCount}/{total * GRADED_PER_IMAGE}
+          Đạt {Math.round(correctCount * 10) / 10}/{total * graded}
         </span>
       </div>
 
       {/* Step tabs */}
       <div style={{ display: "flex", gap: 6, marginBottom: "0.9rem" }}>
         {([1, 2, 3] as const).map((n) => {
-          const done = n === 3 ? st[3].blankDone : st[n].mcqDone && st[n].blankDone;
+          const done = stepDone(n);
           const active = n === step;
           return (
             <div key={n} style={{ flex: 1, height: 4, borderRadius: 999, background: done ? "rgb(34,197,94)" : active ? "var(--accent-primary)" : "var(--border)" }} />
@@ -321,8 +389,26 @@ export default function SpeakingP2StepsClient({
             {stepTitle}
           </div>
 
+          {/* ── Tự sản xuất ngôn ngữ (Medium / Hard) ── */}
+          {produceMode && (
+            <div style={{ marginBottom: "1.1rem" }}>
+              <ProduceStepPanel
+                key={`${item.id}-${step}`}
+                bank={bank}
+                difficulty={difficulty}
+                prompt={producePrompt}
+                placeholder={producePlaceholder}
+                found={sub.found}
+                revealed={sub.revealed}
+                done={stepComplete}
+                onFound={(phrase) => addFound(step, phrase)}
+                onReveal={() => revealStep(step)}
+              />
+            </div>
+          )}
+
           {/* ── MCQ (steps 1 & 2) ── */}
-          {stepData && (
+          {!produceMode && stepData && (
             <>
               <p style={{ fontSize: "1.05rem", color: "var(--text-primary)", margin: "0 0 0.85rem", lineHeight: 1.55 }}>
                 {stepData.mcq.instruction}
@@ -358,8 +444,8 @@ export default function SpeakingP2StepsClient({
             </>
           )}
 
-          {/* ── Fill in the blank (all steps) ── */}
-          {(step === 3 || sub.mcqDone) && (
+          {/* ── Fill in the blank (Easy only) ── */}
+          {!produceMode && (step === 3 || sub.mcqDone) && (
             <>
               <p style={{ fontSize: "1.05rem", color: "var(--text-primary)", margin: "0 0 0.6rem", lineHeight: 1.55 }}>
                 {blank.instruction}
@@ -406,7 +492,7 @@ export default function SpeakingP2StepsClient({
           )}
 
           {/* ── Step 3: free writing + model answer ── */}
-          {step === 3 && st[3].blankDone && (
+          {step === 3 && stepDone(3) && (
             <div style={{ marginBottom: "1rem" }}>
               <p style={{ fontSize: "1.05rem", color: "var(--text-primary)", margin: "0 0 0.6rem", lineHeight: 1.55 }}>
                 {item.step3.freeWrite.instruction}
@@ -428,7 +514,7 @@ export default function SpeakingP2StepsClient({
           )}
 
           {/* ── Recording (after step 3 complete) ── */}
-          {step === 3 && st[3].blankDone && userId && (
+          {step === 3 && stepDone(3) && userId && (
             <div style={{ marginBottom: "1rem" }}>
               <div style={{ fontSize: "0.78rem", fontWeight: 700, color: "var(--text-muted)", letterSpacing: "0.05em", textTransform: "uppercase", marginBottom: "0.5rem" }}>
                 🎙 Nói lại cả bài mô tả
