@@ -220,6 +220,31 @@ export default async function SpeakingPart2Page() {
             </Link>
           );
         })()}
+
+        {/* Vocabulary reflex drill — feeds the two hardest steps of the description */}
+        <Link
+          href="/subskills/speaking/part2/tu-vung"
+          className="r-row"
+          style={{
+            display: "flex", alignItems: "flex-start", gap: "0.9rem", padding: "1.1rem 1.3rem",
+            textDecoration: "none", background: "var(--bg-secondary)", borderTop: "1px solid var(--border)",
+          }}
+        >
+          <span style={{ fontSize: "1.4rem", lineHeight: 1, marginTop: 2 }}>⚡</span>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap", marginBottom: 3 }}>
+              <span style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--text-primary)" }}>Phản xạ từ vựng</span>
+              <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", fontStyle: "italic" }}>Clothes &amp; Actions</span>
+              <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "rgb(234,179,8)", background: "rgba(234,179,8,0.12)", border: "1px solid rgba(234,179,8,0.35)", borderRadius: 4, padding: "1px 6px" }}>
+                Có tính giờ
+              </span>
+            </div>
+            <p style={{ margin: "0 0 0.4rem", fontSize: "0.82rem", color: "var(--text-muted)", lineHeight: 1.55 }}>
+              60 từ về trang phục và hành động — học thẻ, chơi lật thẻ ghi nhớ, rồi quét ảnh trong 45 giây để luyện bật ra từ.
+            </p>
+          </div>
+          <span className="r-arrow" style={{ fontSize: "0.8rem", color: "var(--accent-primary)", flexShrink: 0, marginTop: 6 }}>→</span>
+        </Link>
       </div>
 
       {/* Footer */}

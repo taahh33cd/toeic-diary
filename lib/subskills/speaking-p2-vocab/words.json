@@ -1,0 +1,795 @@
+[
+  {
+    "id": "shirt",
+    "group": "clothing-items",
+    "en": "shirt",
+    "vi": "áo sơ mi",
+    "forms": [
+      "shirts"
+    ],
+    "example": "The man in the middle is wearing a white shirt and a dark tie.",
+    "photo": "photo-1603252109612-24fa03d145c8",
+    "credit": "Unsplash"
+  },
+  {
+    "id": "t-shirt",
+    "group": "clothing-items",
+    "en": "T-shirt",
+    "vi": "áo phông",
+    "forms": [
+      "t-shirts",
+      "tshirt",
+      "tee"
+    ],
+    "example": "The worker on the left is wearing a yellow T-shirt and shorts.",
+    "photo": "photo-1581655353564-df123a1eb820",
+    "credit": "Unsplash"
+  },
+  {
+    "id": "jacket",
+    "group": "clothing-items",
+    "en": "jacket",
+    "vi": "áo khoác",
+    "forms": [
+      "jackets"
+    ],
+    "example": "The woman on the right is wearing a grey jacket.",
+    "photo": "photo-1611312449408-fcece27cdbb7",
+    "credit": "Unsplash"
+  },
+  {
+    "id": "coat",
+    "group": "clothing-items",
+    "en": "coat",
+    "vi": "áo khoác dài",
+    "forms": [
+      "coats"
+    ],
+    "example": "The woman on the left is wearing a dark coat and a checked scarf.",
+    "photo": "photo-1539533113208-f6df8cc8b543",
+    "credit": "Unsplash"
+  },
+  {
+    "id": "sweater",
+    "group": "clothing-items",
+    "en": "sweater",
+    "vi": "áo len",
+    "forms": [
+      "sweaters",
+      "jumper",
+      "jumpers"
+    ],
+    "example": "She is wearing a yellow sweater and jeans.",
+    "photo": "photo-1574201635302-388dd92a4c3f",
+    "credit": "Unsplash"
+  },
+  {
+    "id": "suit",
+    "group": "clothing-items",
+    "en": "suit",
+    "vi": "bộ vest",
+    "forms": [
+      "suits"
+    ],
+    "example": "The man on the right is wearing a dark suit with a white shirt.",
+    "photo": "photo-1603394151492-5e9b974b090b",
+    "credit": "Unsplash"
+  },
+  {
+    "id": "trousers",
+    "group": "clothing-items",
+    "en": "trousers",
+    "vi": "quần dài",
+    "forms": [
+      "pants"
+    ],
+    "example": "He is wearing a light blue shirt and beige trousers.",
+    "photo": "photo-1694447814836-c93ab70f7398",
+    "credit": "Unsplash"
+  },
+  {
+    "id": "jeans",
+    "group": "clothing-items",
+    "en": "jeans",
+    "vi": "quần bò",
+    "forms": [
+      "denim shorts"
+    ],
+    "example": "She is wearing a teal tank top and jeans.",
+    "photo": "photo-1714143136372-ddaf8b606da7",
+    "credit": "Unsplash"
+  },
+  {
+    "id": "apron",
+    "group": "clothing-items",
+    "en": "apron",
+    "vi": "tạp dề",
+    "forms": [
+      "aprons"
+    ],
+    "example": "The barista is wearing a white T-shirt and a grey apron.",
+    "photo": "photo-1717700921740-a1440f3b89a4",
+    "credit": "Unsplash"
+  },
+  {
+    "id": "uniform",
+    "group": "clothing-items",
+    "en": "uniform",
+    "vi": "đồng phục",
+    "forms": [
+      "uniforms",
+      "overalls"
+    ],
+    "example": "A woman in a dark navy uniform is standing behind the check-in desk.",
+    "photo": "photo-1774852609710-4b158117e45a",
+    "credit": "Unsplash"
+  },
+  {
+    "id": "hat",
+    "group": "clothing-items",
+    "en": "hat",
+    "vi": "mũ (vành)",
+    "forms": [
+      "hats"
+    ],
+    "example": "All three women are wearing hats and warm coats.",
+    "photo": "photo-1560815973-3f9c6b3aff3c",
+    "credit": "Unsplash"
+  },
+  {
+    "id": "cap",
+    "group": "clothing-items",
+    "en": "cap",
+    "vi": "mũ lưỡi trai",
+    "forms": [
+      "caps",
+      "beanie"
+    ],
+    "example": "The vendor is wearing a cap and an apron.",
+    "photo": "photo-1588850561407-ed78c282e89b",
+    "credit": "Unsplash"
+  },
+  {
+    "id": "hard-hat",
+    "group": "clothing-items",
+    "en": "hard hat",
+    "vi": "mũ bảo hộ",
+    "forms": [
+      "hard hats",
+      "helmet",
+      "helmets"
+    ],
+    "example": "All three workers are wearing red hard hats.",
+    "photo": "photo-1622612023350-b15f063eabe6",
+    "credit": "Unsplash"
+  },
+  {
+    "id": "tie",
+    "group": "clothing-items",
+    "en": "tie",
+    "vi": "cà vạt",
+    "forms": [
+      "ties"
+    ],
+    "example": "A man in a white shirt and a dark tie is sitting at the table.",
+    "photo": "photo-1598033129183-c4f50c736f10",
+    "credit": "Unsplash"
+  },
+  {
+    "id": "glasses",
+    "group": "clothing-items",
+    "en": "glasses",
+    "vi": "kính mắt",
+    "forms": [
+      "sunglasses",
+      "goggles"
+    ],
+    "example": "The woman on the left is wearing glasses and a blue top.",
+    "photo": "photo-1556306510-31ca015374b0",
+    "credit": "Unsplash"
+  },
+  {
+    "id": "striped",
+    "group": "clothing-style",
+    "en": "striped",
+    "vi": "kẻ sọc",
+    "forms": [
+      "stripes",
+      "stripy"
+    ],
+    "example": "A girl in a striped top is sitting on the floor.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "checked",
+    "group": "clothing-style",
+    "en": "checked",
+    "vi": "kẻ caro",
+    "forms": [
+      "check",
+      "checkered",
+      "plaid"
+    ],
+    "example": "Another man in a blue checked shirt is helping him.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "patterned",
+    "group": "clothing-style",
+    "en": "patterned",
+    "vi": "có hoạ tiết",
+    "forms": [
+      "pattern"
+    ],
+    "example": "She is wearing a light patterned blouse.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "grey",
+    "group": "clothing-style",
+    "en": "grey",
+    "vi": "màu xám",
+    "forms": [
+      "gray"
+    ],
+    "example": "The chef on the left is wearing a grey turtleneck.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "colourful",
+    "group": "clothing-style",
+    "en": "colourful",
+    "vi": "nhiều màu sắc",
+    "forms": [
+      "colorful"
+    ],
+    "example": "On the right there is a colourful sailing boat.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "bright",
+    "group": "clothing-style",
+    "en": "bright",
+    "vi": "sáng, rực",
+    "forms": [],
+    "example": "The child is wearing a bright green jacket.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "light-blue",
+    "group": "clothing-style",
+    "en": "light blue",
+    "vi": "xanh nhạt",
+    "forms": [
+      "light-blue",
+      "pale blue"
+    ],
+    "example": "A man in a light blue shirt is holding up a tablet.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "dark",
+    "group": "clothing-style",
+    "en": "dark",
+    "vi": "sẫm màu",
+    "forms": [
+      "dark-coloured"
+    ],
+    "example": "Seven people in dark business suits are sitting around a table.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "navy",
+    "group": "clothing-style",
+    "en": "navy",
+    "vi": "xanh tím than",
+    "forms": [
+      "navy blue"
+    ],
+    "example": "The woman in the middle has a navy wide-brimmed hat.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "beige",
+    "group": "clothing-style",
+    "en": "beige",
+    "vi": "màu be",
+    "forms": [],
+    "example": "He is wearing a light blue shirt and beige trousers.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "cream",
+    "group": "clothing-style",
+    "en": "cream",
+    "vi": "màu kem",
+    "forms": [
+      "off-white"
+    ],
+    "example": "The mother is wearing a cream top with a bag over her shoulder.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "khaki",
+    "group": "clothing-style",
+    "en": "khaki",
+    "vi": "màu kaki",
+    "forms": [],
+    "example": "She is wearing an orange top with khaki trousers.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "olive-green",
+    "group": "clothing-style",
+    "en": "olive green",
+    "vi": "xanh ô liu",
+    "forms": [
+      "olive"
+    ],
+    "example": "The mother is wearing an olive green top.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "turquoise",
+    "group": "clothing-style",
+    "en": "turquoise",
+    "vi": "xanh ngọc",
+    "forms": [
+      "teal"
+    ],
+    "example": "In the background I can see the turquoise sea.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "magenta",
+    "group": "clothing-style",
+    "en": "magenta",
+    "vi": "hồng sen",
+    "forms": [],
+    "example": "She is wearing a patterned blouse and magenta trousers.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "standing",
+    "group": "action-posture",
+    "en": "standing",
+    "vi": "đang đứng",
+    "forms": [
+      "stand",
+      "stands"
+    ],
+    "example": "A man in a green top is standing on a ladder.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "sitting",
+    "group": "action-posture",
+    "en": "sitting",
+    "vi": "đang ngồi",
+    "forms": [
+      "sit",
+      "sits",
+      "seated"
+    ],
+    "example": "Three colleagues are sitting and listening to him.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "walking",
+    "group": "action-posture",
+    "en": "walking",
+    "vi": "đang đi bộ",
+    "forms": [
+      "walk",
+      "walks"
+    ],
+    "example": "An older man is walking towards the camera along the pavement.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "leaning",
+    "group": "action-posture",
+    "en": "leaning",
+    "vi": "đang tựa / nghiêng người",
+    "forms": [
+      "lean",
+      "leans",
+      "leaning over",
+      "leaning against"
+    ],
+    "example": "She is leaning against the railing and taking a photo.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "bending",
+    "group": "action-posture",
+    "en": "bending",
+    "vi": "đang cúi người",
+    "forms": [
+      "bend",
+      "bends",
+      "bending down",
+      "bending forward",
+      "bending over"
+    ],
+    "example": "Two workers are bending over some long steel bars.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "kneeling",
+    "group": "action-posture",
+    "en": "kneeling",
+    "vi": "đang quỳ",
+    "forms": [
+      "kneel",
+      "kneels",
+      "kneeling down"
+    ],
+    "example": "He is kneeling down and holding a long wooden plank.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "pointing",
+    "group": "action-posture",
+    "en": "pointing",
+    "vi": "đang chỉ tay",
+    "forms": [
+      "point",
+      "points",
+      "pointing at"
+    ],
+    "example": "She is bending down and pointing at the tablet with her finger.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "reaching",
+    "group": "action-posture",
+    "en": "reaching",
+    "vi": "đang với tay",
+    "forms": [
+      "reach",
+      "reaches",
+      "reaching for",
+      "reaching up",
+      "reaching out"
+    ],
+    "example": "She is reaching up to take the food.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "raising",
+    "group": "action-posture",
+    "en": "raising a hand",
+    "vi": "đang giơ tay",
+    "forms": [
+      "raise",
+      "raises",
+      "raising",
+      "putting a hand up",
+      "raising her hand"
+    ],
+    "example": "One girl in the middle is raising her hand high.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "smiling",
+    "group": "action-posture",
+    "en": "smiling",
+    "vi": "đang mỉm cười",
+    "forms": [
+      "smile",
+      "smiles"
+    ],
+    "example": "He is smiling while shaking hands.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "looking",
+    "group": "action-posture",
+    "en": "looking at",
+    "vi": "đang nhìn vào",
+    "forms": [
+      "look",
+      "looks",
+      "looking",
+      "looking down",
+      "looking up"
+    ],
+    "example": "The woman on the left is looking down at her phone.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "talking",
+    "group": "action-posture",
+    "en": "talking",
+    "vi": "đang nói chuyện",
+    "forms": [
+      "talk",
+      "talks",
+      "speaking",
+      "talking to"
+    ],
+    "example": "Two men are sitting close together and talking.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "listening",
+    "group": "action-posture",
+    "en": "listening",
+    "vi": "đang lắng nghe",
+    "forms": [
+      "listen",
+      "listens",
+      "listening to"
+    ],
+    "example": "A man in a blue hoodie is listening to her.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "waiting",
+    "group": "action-posture",
+    "en": "waiting",
+    "vi": "đang chờ",
+    "forms": [
+      "wait",
+      "waits",
+      "waiting for"
+    ],
+    "example": "A man in a grey blazer is standing and waiting for his turn.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "queuing",
+    "group": "action-posture",
+    "en": "standing in a queue",
+    "vi": "đang xếp hàng",
+    "forms": [
+      "queue",
+      "queuing",
+      "queueing",
+      "in a queue",
+      "lining up",
+      "in a line"
+    ],
+    "example": "About six passengers are standing in a queue.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "holding",
+    "group": "action-object",
+    "en": "holding",
+    "vi": "đang cầm",
+    "forms": [
+      "hold",
+      "holds"
+    ],
+    "example": "He is holding a paper bag full of food.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "carrying",
+    "group": "action-object",
+    "en": "carrying",
+    "vi": "đang mang, xách",
+    "forms": [
+      "carry",
+      "carries"
+    ],
+    "example": "Three women are carrying a lot of shopping bags.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "pushing",
+    "group": "action-object",
+    "en": "pushing",
+    "vi": "đang đẩy",
+    "forms": [
+      "push",
+      "pushes"
+    ],
+    "example": "She is pushing a shopping trolley and smiling at the man.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "pulling",
+    "group": "action-object",
+    "en": "pulling",
+    "vi": "đang kéo",
+    "forms": [
+      "pull",
+      "pulls"
+    ],
+    "example": "She is pulling a large blue suitcase behind her.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "lifting",
+    "group": "action-object",
+    "en": "lifting",
+    "vi": "đang nhấc lên",
+    "forms": [
+      "lift",
+      "lifts",
+      "lifting up",
+      "picking up"
+    ],
+    "example": "The father is lifting a small child up in the air.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "handing",
+    "group": "action-object",
+    "en": "handing",
+    "vi": "đang đưa cho",
+    "forms": [
+      "hand",
+      "hands",
+      "handing over",
+      "passing"
+    ],
+    "example": "A vendor is handing food to a customer.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "using",
+    "group": "action-object",
+    "en": "using",
+    "vi": "đang sử dụng",
+    "forms": [
+      "use",
+      "uses",
+      "operating"
+    ],
+    "example": "The barista is using a large silver espresso machine.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "cutting",
+    "group": "action-object",
+    "en": "cutting",
+    "vi": "đang cắt, thái",
+    "forms": [
+      "cut",
+      "cuts",
+      "slicing",
+      "chopping"
+    ],
+    "example": "She is cutting red apples on a wooden chopping board.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "writing",
+    "group": "action-object",
+    "en": "writing",
+    "vi": "đang viết",
+    "forms": [
+      "write",
+      "writes",
+      "writing notes"
+    ],
+    "example": "Some of them are writing notes in their notebooks.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "typing",
+    "group": "action-object",
+    "en": "typing",
+    "vi": "đang gõ phím",
+    "forms": [
+      "type",
+      "types",
+      "typing on"
+    ],
+    "example": "She is standing behind the desk and typing on a computer.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "hanging",
+    "group": "action-object",
+    "en": "hanging",
+    "vi": "đang treo",
+    "forms": [
+      "hang",
+      "hangs",
+      "hanging up"
+    ],
+    "example": "A man is standing on a ladder and hanging a picture on the wall.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "pouring",
+    "group": "action-object",
+    "en": "pouring",
+    "vi": "đang rót",
+    "forms": [
+      "pour",
+      "pours",
+      "filling"
+    ],
+    "example": "A woman is pouring coffee into a cup.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "drinking",
+    "group": "action-object",
+    "en": "drinking",
+    "vi": "đang uống",
+    "forms": [
+      "drink",
+      "drinks"
+    ],
+    "example": "She is holding a white cup and drinking coffee.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "riding",
+    "group": "action-object",
+    "en": "riding",
+    "vi": "đang đi (xe đạp/xe máy)",
+    "forms": [
+      "ride",
+      "rides",
+      "cycling"
+    ],
+    "example": "A man in a white T-shirt is riding a bicycle along the street.",
+    "photo": "",
+    "credit": ""
+  },
+  {
+    "id": "shaking-hands",
+    "group": "action-object",
+    "en": "shaking hands",
+    "vi": "đang bắt tay",
+    "forms": [
+      "shake hands",
+      "handshake",
+      "shaking hands with"
+    ],
+    "example": "What I can see first is two people shaking hands.",
+    "photo": "",
+    "credit": ""
+  }
+]
