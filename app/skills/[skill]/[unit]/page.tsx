@@ -9,6 +9,8 @@ import { McqExamClient } from "@/components/skills/exam/McqExamClient";
 import { PracticeTestList } from "@/components/skills/listening/PracticeTestList";
 import { listPracticeTests } from "@/lib/listening-practice";
 import { WRITING_Q1_5, Q15_PART_KEY } from "@/lib/skills/writing-q1-5";
+import { Q67_PART_KEY } from "@/lib/skills/writing-q6-7";
+import { WritingEmailClient } from "@/components/skills/WritingEmailClient";
 import { READING_PART5 } from "@/lib/skills/sample";
 import { SpeakingQ34TestList } from "@/components/skills/exam/SpeakingQ34TestList";
 
@@ -80,6 +82,42 @@ export default async function SkillUnitPage({ params }: Props) {
         userId={user?.id ?? null}
         isTestUser={isTestUser}
         bestByExercise={bestByExercise}
+      />
+    );
+  }
+
+  // Writing Q6-7 — 15 đề e-mail chia 3 mức, tự chấm bằng Model Answer + checklist
+  if (skill === "writing" && unit === "q6-7") {
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+
+    const profile = user
+      ? await prisma.profile.findUnique({ where: { id: user.id }, select: { studentCode: true } }).catch(() => null)
+      : null;
+    const isTestUser = profile?.studentCode?.toUpperCase() === "TEST";
+
+    // Điểm tốt nhất của mỗi bộ đề — chỉ lấy bản ghi tổng kết (itemIdx = null)
+    const attempts = user
+      ? await prisma.subskillAttempt
+          .findMany({
+            where: { userId: user.id, part: Q67_PART_KEY, itemIdx: null },
+            select: { questionWord: true, score: true, passed: true },
+          })
+          .catch(() => [])
+      : [];
+    const bestByTest: Record<string, { score: number; passed: boolean }> = {};
+    for (const a of attempts) {
+      const cur = bestByTest[a.questionWord];
+      if (!cur || a.score > cur.score) bestByTest[a.questionWord] = { score: a.score, passed: a.passed };
+    }
+
+    return (
+      <WritingEmailClient
+        skill={found.skill}
+        unit={found.unit}
+        userId={user?.id ?? null}
+        isTestUser={isTestUser}
+        bestByTest={bestByTest}
       />
     );
   }
