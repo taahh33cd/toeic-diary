@@ -255,6 +255,58 @@ function ReviewCard({
   );
 }
 // ─────────────────────────────────────
+// Lưu nháp bài viết (localStorage)
+// ─────────────────────────────────────
+
+const DRAFT_PREFIX = "q67-draft:";
+const DRAFT_VERSION = 1;
+
+type Draft = {
+  v: number;
+  mode: Mode;
+  qIdx: number;
+  answers: string[];
+  locked: boolean[];
+  elapsed: number;
+  /** epoch ms — chỉ ở chế độ thi thử, để tải lại trang không làm đồng hồ chạy lại từ đầu */
+  deadlineAt?: number;
+  savedAt: number;
+};
+
+function readDrafts(): Record<string, Draft> {
+  const out: Record<string, Draft> = {};
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (!k || !k.startsWith(DRAFT_PREFIX)) continue;
+      const raw = localStorage.getItem(k);
+      if (!raw) continue;
+      const d = JSON.parse(raw) as Draft;
+      if (d?.v === DRAFT_VERSION && Array.isArray(d.answers)) out[k.slice(DRAFT_PREFIX.length)] = d;
+    }
+  } catch {
+    // localStorage bị chặn (chế độ riêng tư) — chỉ mất tính năng lưu nháp
+  }
+  return out;
+}
+
+function writeDraft(slug: string, d: Draft) {
+  try { localStorage.setItem(DRAFT_PREFIX + slug, JSON.stringify(d)); } catch { /* hết dung lượng hoặc bị chặn */ }
+}
+
+function clearDraft(slug: string) {
+  try { localStorage.removeItem(DRAFT_PREFIX + slug); } catch { /* bỏ qua */ }
+}
+
+function agoLabel(ms: number): string {
+  const s = Math.max(0, Math.floor((Date.now() - ms) / 1000));
+  if (s < 60) return "vừa xong";
+  if (s < 3600) return `${Math.floor(s / 60)} phút trước`;
+  if (s < 86400) return `${Math.floor(s / 3600)} giờ trước`;
+  return `${Math.floor(s / 86400)} ngày trước`;
+}
+
+// ─────────────────────────────────────
 // Main
 // ─────────────────────────────────────
 
@@ -269,28 +321,52 @@ export function WritingEmailClient({ skill, unit, userId, isTestUser, bestByTest
   const [locked, setLocked] = useState<boolean[]>([]);
   const [elapsed, setElapsed] = useState(0);
   const [qLeft, setQLeft] = useState(Q67_SECONDS_PER_QUESTION);
+  const [deadlineAt, setDeadlineAt] = useState<number | null>(null);
   const [missionMarks, setMissionMarks] = useState<boolean[][]>([]);
   const [formMarks, setFormMarks] = useState<boolean[][]>([]);
   const [saved, setSaved] = useState(false);
   const [reviewIdx, setReviewIdx] = useState(0);
   const [ratio, setRatio] = useState(0.5);
+  const [drafts, setDrafts] = useState<Record<string, Draft>>({});
+  const [draftAt, setDraftAt] = useState<number | null>(null);
   const dragRef = useRef(false);
+  const elapsedRef = useRef(0);
+  const elapsedBaseRef = useRef(0);
+  const sessionStartRef = useRef(0);
 
   const prompts = useMemo(() => (test ? promptsOfTest(test) : []), [test]);
   const current = prompts[qIdx];
 
-  // ── Đồng hồ ──
+  // ── Nạp nháp đã lưu (chỉ chạy ở client để tránh lệch hydration) ──
+  useEffect(() => { setDrafts(readDrafts()); }, []);
+
+  // ── Đồng hồ: tính theo mốc thời gian tuyệt đối nên không lệch khi tab chạy nền ──
   useEffect(() => {
     if (phase !== "doing") return;
-    const t = setInterval(() => {
-      setElapsed((e) => e + 1);
-      if (mode === "exam") setQLeft((s) => s - 1);
-    }, 1000);
+    const tick = () => {
+      const e = elapsedBaseRef.current + Math.floor((Date.now() - sessionStartRef.current) / 1000);
+      elapsedRef.current = e;
+      setElapsed(e);
+      if (mode === "exam" && deadlineAt) setQLeft(Math.ceil((deadlineAt - Date.now()) / 1000));
+    };
+    tick();
+    const t = setInterval(tick, 1000);
     return () => clearInterval(t);
-  }, [phase, mode]);
+  }, [phase, mode, deadlineAt]);
 
   const finish = useCallback(() => {
+    if (test) {
+      clearDraft(test.slug);
+      setDrafts((prev) => { const n = { ...prev }; delete n[test.slug]; return n; });
+    }
+    setDraftAt(null);
     setPhase("review");
+  }, [test]);
+
+  const startNextDeadline = useCallback(() => {
+    const dl = Date.now() + Q67_SECONDS_PER_QUESTION * 1000;
+    setDeadlineAt(dl);
+    setQLeft(Q67_SECONDS_PER_QUESTION);
   }, []);
 
   // ── Chế độ thi thử: hết 10 phút thì khoá câu và chuyển ──
@@ -299,11 +375,40 @@ export function WritingEmailClient({ skill, unit, userId, isTestUser, bestByTest
     setLocked((prev) => { const n = [...prev]; n[qIdx] = true; return n; });
     if (qIdx < prompts.length - 1) {
       setQIdx((i) => i + 1);
-      setQLeft(Q67_SECONDS_PER_QUESTION);
+      startNextDeadline();
     } else {
       finish();
     }
-  }, [qLeft, phase, mode, qIdx, prompts.length, finish]);
+  }, [qLeft, phase, mode, qIdx, prompts.length, finish, startNextDeadline]);
+
+  // ── Tự lưu nháp khi đang làm bài ──
+  useEffect(() => {
+    if (phase !== "doing" || !test) return;
+    const slug = test.slug;
+    // Chưa gõ chữ nào thì không tạo nháp; nếu học viên xoá sạch bài thì bỏ nháp cũ đi
+    if (!answers.some((a) => a.trim())) {
+      clearDraft(slug);
+      setDrafts((prev) => { if (!prev[slug]) return prev; const n = { ...prev }; delete n[slug]; return n; });
+      setDraftAt(null);
+      return;
+    }
+    const id = setTimeout(() => {
+      const d: Draft = {
+        v: DRAFT_VERSION,
+        mode,
+        qIdx,
+        answers,
+        locked,
+        elapsed: elapsedRef.current,
+        deadlineAt: deadlineAt ?? undefined,
+        savedAt: Date.now(),
+      };
+      writeDraft(test.slug, d);
+      setDrafts((prev) => ({ ...prev, [test.slug]: d }));
+      setDraftAt(d.savedAt);
+    }, 600);
+    return () => clearTimeout(id);
+  }, [phase, test, mode, qIdx, answers, locked, deadlineAt]);
 
   // ── Kéo thanh chia đôi màn hình ──
   useEffect(() => {
@@ -318,19 +423,40 @@ export function WritingEmailClient({ skill, unit, userId, isTestUser, bestByTest
     return () => { window.removeEventListener("pointermove", move); window.removeEventListener("pointerup", up); };
   }, []);
 
-  function start(t: Q67Test, m: Mode) {
+  /** `resume` = nháp đã lưu; bỏ trống thì bắt đầu bài mới và xoá nháp cũ. */
+  function start(t: Q67Test, m: Mode, resume?: Draft) {
     const ps = promptsOfTest(t);
+    // Nháp chỉ dùng được nếu số câu vẫn khớp — phòng trường hợp bộ đề đã đổi
+    const r = resume && resume.answers.length === ps.length && resume.locked?.length === ps.length ? resume : undefined;
+    const useMode = r?.mode ?? m;
+
+    if (!r) {
+      clearDraft(t.slug);
+      setDrafts((prev) => { const n = { ...prev }; delete n[t.slug]; return n; });
+    }
+
     setTest(t);
-    setMode(m);
-    setQIdx(0);
-    setAnswers(ps.map(() => ""));
-    setLocked(ps.map(() => false));
+    setMode(useMode);
+    setQIdx(r?.qIdx ?? 0);
+    setAnswers(r?.answers ?? ps.map(() => ""));
+    setLocked(r?.locked ?? ps.map(() => false));
     setMissionMarks(ps.map((p) => p.missions.map(() => false)));
     setFormMarks(ps.map(() => Q67_FORM_CHECKS.map(() => false)));
-    setElapsed(0);
-    setQLeft(Q67_SECONDS_PER_QUESTION);
+
+    const base = r?.elapsed ?? 0;
+    elapsedBaseRef.current = base;
+    elapsedRef.current = base;
+    sessionStartRef.current = Date.now();
+    setElapsed(base);
+
+    // Thi thử: giữ nguyên mốc hết giờ đã lưu, nên tải lại trang không được thêm thời gian
+    const dl = useMode === "exam" ? (r?.deadlineAt ?? Date.now() + Q67_SECONDS_PER_QUESTION * 1000) : null;
+    setDeadlineAt(dl);
+    setQLeft(dl ? Math.max(0, Math.ceil((dl - Date.now()) / 1000)) : Q67_SECONDS_PER_QUESTION);
+
     setSaved(false);
     setReviewIdx(0);
+    setDraftAt(r?.savedAt ?? null);
     setPhase("doing");
   }
 
@@ -344,7 +470,7 @@ export function WritingEmailClient({ skill, unit, userId, isTestUser, bestByTest
       setLocked((prev) => { const n = [...prev]; n[qIdx] = true; return n; });
       if (qIdx < prompts.length - 1) {
         setQIdx((i) => i + 1);
-        setQLeft(Q67_SECONDS_PER_QUESTION);
+        startNextDeadline();
       } else {
         finish();
       }
@@ -473,7 +599,12 @@ export function WritingEmailClient({ skill, unit, userId, isTestUser, bestByTest
       <div style={{ minHeight: "100vh", background: "var(--bg-primary)", display: "flex", flexDirection: "column" }}>
         {/* Thanh trên cùng */}
         <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "0.7rem clamp(0.8rem, 3vw, 1.6rem)", borderBottom: "1px solid var(--border)", background: "var(--bg-secondary)", flexWrap: "wrap" }}>
-          <button onClick={() => setPhase("list")} style={{ background: "none", border: "none", color: "var(--text-muted)", fontSize: "0.8rem", cursor: "pointer", padding: 0, flexShrink: 0 }}>← Thoát</button>
+          <button onClick={() => setPhase("list")} title="Bài viết đã được lưu nháp, thoát ra vẫn quay lại làm tiếp được" style={{ background: "none", border: "none", color: "var(--text-muted)", fontSize: "0.8rem", cursor: "pointer", padding: 0, flexShrink: 0 }}>← Thoát</button>
+          {draftAt && (
+            <span style={{ fontSize: "0.72rem", color: GREEN, fontWeight: 600, flexShrink: 0 }} title="Bài viết được tự lưu trên máy này">
+              ✓ đã lưu nháp
+            </span>
+          )}
           <span style={{ fontSize: "0.88rem", fontWeight: 800, color: "var(--text-primary)", letterSpacing: "-0.01em" }}>
             WRITING Q6-7: Respond to a written request
           </span>
@@ -628,6 +759,8 @@ export function WritingEmailClient({ skill, unit, userId, isTestUser, bestByTest
               {tests.map((t, ti) => {
                 const ps = promptsOfTest(t);
                 const best = bestByTest[t.slug];
+                const draft = drafts[t.slug];
+                const draftWords = draft ? draft.answers.reduce((a, x) => a + wordCount(x), 0) : 0;
                 return (
                   <div key={t.slug} style={{ display: "flex", alignItems: "center", gap: "1rem", padding: "0.9rem 1.2rem", borderBottom: ti < tests.length - 1 ? "1px solid var(--border)" : "none", background: ti % 2 === 0 ? "var(--bg-primary)" : "var(--bg-secondary)", flexWrap: "wrap" }}>
                     <div style={{ flex: "1 1 220px", minWidth: 0 }}>
@@ -637,6 +770,12 @@ export function WritingEmailClient({ skill, unit, userId, isTestUser, bestByTest
                       <div style={{ fontSize: "0.76rem", color: "var(--text-muted)", lineHeight: 1.5 }}>
                         {ps.map((p) => `Đề ${p.no}: ${p.email.subject}`).join(" · ")}
                       </div>
+                      {draft && (
+                        <div style={{ marginTop: 5, fontSize: "0.74rem", color: AMBER, fontWeight: 600 }}>
+                          ✎ Có bài viết dở · {draftWords} từ · lưu {agoLabel(draft.savedAt)}
+                          {draft.mode === "exam" ? " · chế độ Thi thử" : ""}
+                        </div>
+                      )}
                     </div>
                     {best ? (
                       <span style={{ fontSize: "0.8rem", fontWeight: 700, color: best.passed ? GREEN : AMBER, flexShrink: 0 }}>
@@ -645,12 +784,25 @@ export function WritingEmailClient({ skill, unit, userId, isTestUser, bestByTest
                     ) : (
                       <span style={{ fontSize: "0.76rem", color: "var(--text-muted)", flexShrink: 0 }}>Chưa làm</span>
                     )}
-                    <button
-                      onClick={() => start(t, mode)}
-                      style={{ flexShrink: 0, padding: "6px 18px", border: "1.5px solid var(--accent-primary)", background: "transparent", color: "var(--accent-primary)", borderRadius: 7, fontSize: "0.8rem", fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}
-                    >
-                      {best ? "Làm lại" : "Bắt đầu"}
-                    </button>
+                    <div style={{ display: "flex", gap: 7, flexShrink: 0 }}>
+                      {draft && (
+                        <button
+                          onClick={() => start(t, mode, draft)}
+                          style={{ padding: "6px 18px", border: "none", background: "var(--accent-primary)", color: "#fff", borderRadius: 7, fontSize: "0.8rem", fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}
+                        >
+                          Viết tiếp
+                        </button>
+                      )}
+                      <button
+                        onClick={() => {
+                          if (draft && !confirm("Bắt đầu lại sẽ xoá bài viết dở đang lưu. Tiếp tục?")) return;
+                          start(t, mode);
+                        }}
+                        style={{ padding: "6px 18px", border: "1.5px solid var(--accent-primary)", background: "transparent", color: "var(--accent-primary)", borderRadius: 7, fontSize: "0.8rem", fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}
+                      >
+                        {draft ? "Làm lại" : best ? "Làm lại" : "Bắt đầu"}
+                      </button>
+                    </div>
                   </div>
                 );
               })}
