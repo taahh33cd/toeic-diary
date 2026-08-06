@@ -23,6 +23,8 @@ export interface Q67Prompt {
   directions: string;
   /** từng mission tách rời — dùng làm checklist tự chấm */
   missions: string[];
+  /** chỉ số dòng trong modelAnswer ứng với từng mission (cùng thứ tự với `missions`) */
+  missionLines: number[];
   /** bài mẫu, mỗi phần tử một dòng */
   modelAnswer: string[];
   /** lưu ý của giáo viên về cái bẫy riêng của đề này */
@@ -133,6 +135,7 @@ export const Q67_PROMPTS: Q67Prompt[] = [
       "Thông tin thứ hai về một gói tour khác hoặc chi tiết khác",
       "Một lời gợi ý bám vào hoàn cảnh của khách",
     ],
+    missionLines: [2, 3, 4],
     modelAnswer: [
       "Dear Ms. Aniston,",
       "Thank you for your e-mail dated March 14 regarding our tour packages.",
@@ -169,6 +172,7 @@ export const Q67_PROMPTS: Q67Prompt[] = [
       "Một lời xin lỗi về đúng lỗi đã gây ra (giao sai vòi nước)",
       "Một lời gợi ý / phương án xử lý cho khách",
     ],
+    missionLines: [3, 4],
     modelAnswer: [
       "Dear Ms. McMaster,",
       "Thank you for letting us know about the faucet you received on February 10.",
@@ -205,6 +209,7 @@ export const Q67_PROMPTS: Q67Prompt[] = [
       "Thông tin thứ hai (vị trí, dịch vụ kèm theo…)",
       "Một câu hỏi cho khách",
     ],
+    missionLines: [2, 3, 4],
     modelAnswer: [
       "Dear Mr. Louise,",
       "Thank you for your e-mail of April 26 regarding a reservation for your family in July.",
@@ -241,6 +246,7 @@ export const Q67_PROMPTS: Q67Prompt[] = [
       "Một lời gợi ý / phương án khắc phục",
       "Một câu hỏi cho khách hàng",
     ],
+    missionLines: [3, 4, 5],
     modelAnswer: [
       "Dear Ellen's Style Team,",
       "Thank you for your e-mail of March 1 concerning the 'glamorous' dresses delivered last week.",
@@ -276,6 +282,7 @@ export const Q67_PROMPTS: Q67Prompt[] = [
       "Câu hỏi thứ hai về xe cũ",
       "Câu hỏi thứ ba về xe cũ",
     ],
+    missionLines: [3, 4, 5],
     modelAnswer: [
       "Dear Sir or Madam,",
       "I have just read your e-mail about buying a second-hand car through your website.",
@@ -312,6 +319,7 @@ export const Q67_PROMPTS: Q67Prompt[] = [
       "Lý do thứ hai, KHÁC lý do thứ nhất",
       "Một đề nghị (request) gửi cấp trên",
     ],
+    missionLines: [3, 4, 6],
     modelAnswer: [
       "Dear Mr. Hanson,",
       "Thank you for the reminder about the paperwork for paid sick leave.",
@@ -349,6 +357,7 @@ export const Q67_PROMPTS: Q67Prompt[] = [
       "Gợi ý thứ nhất để giải quyết vấn đề đó",
       "Gợi ý thứ hai, là một phương án KHÁC",
     ],
+    missionLines: [2, 3, 4],
     modelAnswer: [
       "Dear Mr. Pinkney,",
       "Thank you for your e-mail of April 12 about the Social Committee meeting.",
@@ -383,6 +392,7 @@ export const Q67_PROMPTS: Q67Prompt[] = [
       "Câu hỏi thứ hai về việc đăng ký",
       "Câu hỏi thứ ba về việc đăng ký",
     ],
+    missionLines: [3, 4, 5],
     modelAnswer: [
       "Dear Sir or Madam,",
       "I have just read your e-mail about subscribing to the Journal of Business News.",
@@ -418,6 +428,7 @@ export const Q67_PROMPTS: Q67Prompt[] = [
       "Câu hỏi thứ hai về câu lạc bộ",
       "Câu hỏi thứ ba về câu lạc bộ",
     ],
+    missionLines: [3, 4, 5],
     modelAnswer: [
       "Dear Ms. Rich,",
       "Thank you for your warm welcome to City Sports and Fitness Club.",
@@ -455,6 +466,7 @@ export const Q67_PROMPTS: Q67Prompt[] = [
       "Vấn đề thứ hai, KHÁC vấn đề thứ nhất",
       "Một đề nghị (request) gửi người thuê",
     ],
+    missionLines: [3, 4, 5],
     modelAnswer: [
       "Dear Ms. Andrews,",
       "Thank you for your e-mail regarding the lease for the office space at 151 South Main Street.",
@@ -491,6 +503,7 @@ export const Q67_PROMPTS: Q67Prompt[] = [
       "Câu hỏi thứ hai về thư viện",
       "Một đề nghị (request) — KHÔNG phải câu hỏi",
     ],
+    missionLines: [3, 4, 5],
     modelAnswer: [
       "Dear Ms. Mills,",
       "Thank you for letting us know that the neighborhood library is now open.",
@@ -528,6 +541,7 @@ export const Q67_PROMPTS: Q67Prompt[] = [
       "Vấn đề thứ hai, KHÁC loại với vấn đề thứ nhất",
       "Một lời gợi ý cho toà soạn",
     ],
+    missionLines: [3, 4, 5],
     modelAnswer: [
       "Dear Mr. Hamm,",
       "Thank you for your e-mail asking why I cancelled my subscription to World Economic News.",
@@ -563,6 +577,7 @@ export const Q67_PROMPTS: Q67Prompt[] = [
       "Câu hỏi thứ hai",
       "Câu hỏi thứ ba",
     ],
+    missionLines: [3, 4, 5],
     modelAnswer: [
       "Dear Mr. Van Eyk,",
       "Thank you for confirming my registration for the National Business Conference in Middletown on December 15-17.",
@@ -600,6 +615,7 @@ export const Q67_PROMPTS: Q67Prompt[] = [
       "Gợi ý thứ nhất để khắc phục",
       "Gợi ý thứ hai, là cách KHÁC để khắc phục",
     ],
+    missionLines: [2, 3, 4],
     modelAnswer: [
       "Dear Ms. Meyer,",
       "Thank you for your e-mail asking about the complaint form I filled out during my recent visit to the Stardust Restaurant.",
@@ -636,6 +652,7 @@ export const Q67_PROMPTS: Q67Prompt[] = [
       "Thông tin thứ hai (lịch học, học phí, nội dung lớp…)",
       "Một hướng dẫn (instruction) cho phụ huynh",
     ],
+    missionLines: [2, 3, 4],
     modelAnswer: [
       "Dear Mr. Caggia,",
       "Thank you for your e-mail of August 17 regarding art lessons for your son.",

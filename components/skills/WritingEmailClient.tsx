@@ -112,112 +112,148 @@ function PromptPanel({ prompt, index }: { prompt: Q67Prompt; index: number }) {
 // Màn tự chấm sau khi nộp
 // ─────────────────────────────────────
 
+/**
+ * Màu đánh dấu cho mission 1..4 trong Model Answer.
+ * Tránh tông xanh lá vì khung Model Answer đã viền xanh lá — dễ nhìn nhầm.
+ */
+const MISSION_COLORS = ["rgb(59,130,246)", "rgb(168,85,247)", "rgb(217,119,6)", "rgb(219,39,119)"];
+const CIRCLED = ["①", "②", "③", "④"];
+
+function tint(rgb: string, a: number): string {
+  return rgb.replace("rgb", "rgba").replace(")", `,${a})`);
+}
+
+function Pane({ title, accent, children }: { title: string; accent?: string; children: React.ReactNode }) {
+  return (
+    <div style={{ flex: "1 1 0", minWidth: 0, border: `1px solid ${accent ?? "var(--border)"}`, borderRadius: 9, overflow: "hidden", display: "flex", flexDirection: "column" }}>
+      <div style={{ padding: "5px 11px", background: accent ? tint(accent, 0.1) : "var(--bg-elevated)", borderBottom: `1px solid ${accent ?? "var(--border)"}`, fontSize: "0.68rem", fontWeight: 800, letterSpacing: "0.06em", color: accent ?? "var(--text-muted)" }}>
+        {title}
+      </div>
+      <div style={{ padding: "9px 12px", background: "var(--bg-secondary)", flex: 1 }}>{children}</div>
+    </div>
+  );
+}
+
 function ReviewCard({
   prompt,
-  index,
   answer,
   missionsDone,
   formDone,
   onToggleMission,
   onToggleForm,
+  narrow,
 }: {
   prompt: Q67Prompt;
-  index: number;
   answer: string;
   missionsDone: boolean[];
   formDone: boolean[];
   onToggleMission: (i: number) => void;
   onToggleForm: (i: number) => void;
+  narrow: boolean;
 }) {
-  const wrote = wordCount(answer) >= 10;
-  const score = computeQ67Score(missionsDone, formDone, wrote);
+  const words = wordCount(answer);
+  const score = computeQ67Score(missionsDone, formDone, words >= 10);
   const color = score.ets >= 4 ? GREEN : score.ets >= 2 ? AMBER : RED;
 
-  return (
-    <div style={{ border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", overflow: "hidden", marginBottom: "1.4rem", boxShadow: "var(--shadow-sm)" }}>
-      <div style={{ padding: "0.8rem 1.2rem", background: "var(--bg-secondary)", borderBottom: "1px solid var(--border)", display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-        <span style={{ fontSize: "0.92rem", fontWeight: 800, color: "var(--text-primary)" }}>Question {index + 1}</span>
-        <span style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>Đề {prompt.no}</span>
-        <span style={{ marginLeft: "auto", display: "inline-flex", alignItems: "center", gap: 7 }}>
-          <span style={{ fontSize: "0.72rem", color: "var(--text-muted)" }}>Điểm ETS</span>
-          <span style={{ fontSize: "1.15rem", fontWeight: 800, color, background: color.replace("rgb", "rgba").replace(")", ",0.12)"), border: `1.5px solid ${color.replace("rgb", "rgba").replace(")", ",0.4)")}`, borderRadius: 8, padding: "1px 13px" }}>
-            {score.ets}<span style={{ fontSize: "0.7rem", fontWeight: 600 }}>/4</span>
-          </span>
-        </span>
-      </div>
+  const lineMission = new Map<number, number>();
+  prompt.missionLines.forEach((ln, mi) => lineMission.set(ln, mi));
 
-      <div style={{ padding: "1.1rem 1.2rem" }}>
-        <div style={{ padding: "9px 12px", borderRadius: 8, background: "rgba(234,179,8,0.08)", border: "1px solid rgba(234,179,8,0.3)", marginBottom: "1rem" }}>
-          <p style={{ margin: 0, fontSize: "0.81rem", lineHeight: 1.6, color: "var(--text-primary)", fontStyle: "italic" }}>
+  return (
+    <div>
+      {/* Directions + điểm ETS trên cùng một hàng */}
+      <div style={{ display: "flex", gap: 12, alignItems: "stretch", marginBottom: "0.85rem", flexWrap: "wrap" }}>
+        <div style={{ flex: "1 1 320px", padding: "8px 12px", borderRadius: 8, background: "rgba(234,179,8,0.08)", border: "1px solid rgba(234,179,8,0.3)" }}>
+          <p style={{ margin: 0, fontSize: "0.8rem", lineHeight: 1.55, color: "var(--text-primary)", fontStyle: "italic" }}>
             <strong style={{ fontStyle: "normal" }}>Directions:</strong> {prompt.directions}
           </p>
         </div>
-
-        {/* Bài của học viên */}
-        <p style={{ fontSize: "0.75rem", color: "var(--text-muted)", fontWeight: 700, letterSpacing: "0.05em", marginBottom: 5 }}>BÀI CỦA BẠN · {wordCount(answer)} từ</p>
-        <div style={{ border: "1px solid var(--border)", borderRadius: 8, padding: "11px 14px", background: "var(--bg-secondary)", marginBottom: "1.2rem", whiteSpace: "pre-wrap", fontSize: "0.86rem", lineHeight: 1.75, color: "var(--text-primary)", minHeight: 44 }}>
-          {answer.trim() || <span style={{ color: "var(--text-muted)", fontStyle: "italic" }}>(bỏ trống)</span>}
+        <div style={{ flexShrink: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minWidth: 78, padding: "4px 14px", borderRadius: 8, background: tint(color, 0.1), border: `1.5px solid ${tint(color, 0.4)}` }}>
+          <span style={{ fontSize: "1.4rem", fontWeight: 800, color, lineHeight: 1.1 }}>
+            {score.ets}<span style={{ fontSize: "0.72rem", fontWeight: 600 }}>/4</span>
+          </span>
+          <span style={{ fontSize: "0.64rem", fontWeight: 700, color, letterSpacing: "0.04em" }}>{score.label}</span>
         </div>
+      </div>
 
-        {/* Model answer */}
-        <details open style={{ marginBottom: "1.2rem" }}>
-          <summary style={{ fontSize: "0.78rem", color: "var(--accent-primary)", cursor: "pointer", fontWeight: 700, letterSpacing: "0.04em", marginBottom: 6 }}>
-            MODEL ANSWER — bài mẫu để đối chiếu
-          </summary>
-          <div style={{ border: "1px solid rgba(34,197,94,0.35)", borderRadius: 8, padding: "11px 14px", background: "rgba(34,197,94,0.06)", marginTop: 6 }}>
-            {prompt.modelAnswer.map((l, i) => (
-              <p key={i} style={{ margin: i === 0 ? 0 : "0.45rem 0 0", fontSize: "0.86rem", lineHeight: 1.7, color: "var(--text-primary)" }}>{l}</p>
-            ))}
+      {/* Hai cột so sánh */}
+      <div style={{ display: "flex", gap: 10, flexDirection: narrow ? "column" : "row", marginBottom: "1rem", alignItems: "stretch" }}>
+        <Pane title={`BÀI CỦA BẠN · ${words} từ`}>
+          <div style={{ whiteSpace: "pre-wrap", fontSize: "0.84rem", lineHeight: 1.65, color: "var(--text-primary)" }}>
+            {answer.trim() || <span style={{ color: "var(--text-muted)", fontStyle: "italic" }}>(bỏ trống)</span>}
           </div>
-          <p style={{ margin: "0.6rem 0 0", fontSize: "0.79rem", color: "var(--text-muted)", lineHeight: 1.65 }}>
-            <strong style={{ color: "var(--text-secondary)" }}>Lưu ý của đề này:</strong> {prompt.note}
-          </p>
-        </details>
+        </Pane>
 
-        {/* Checklist mission */}
-        <p style={{ fontSize: "0.84rem", color: "var(--text-primary)", fontWeight: 700, marginBottom: "0.5rem" }}>
-          So bài của bạn với Model Answer — bạn đã làm được mission nào?
-        </p>
-        <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: "1.1rem" }}>
-          {prompt.missions.map((m, i) => (
+        <Pane title="MODEL ANSWER" accent={GREEN}>
+          {prompt.modelAnswer.map((l, i) => {
+            const mi = lineMission.get(i);
+            if (mi === undefined) {
+              return (
+                <p key={i} style={{ margin: 0, padding: "1px 0", fontSize: "0.84rem", lineHeight: 1.6, color: "var(--text-muted)" }}>{l}</p>
+              );
+            }
+            const c = MISSION_COLORS[mi % MISSION_COLORS.length];
+            return (
+              <p key={i} style={{ margin: "3px 0", padding: "3px 8px", fontSize: "0.84rem", lineHeight: 1.6, color: "var(--text-primary)", fontWeight: 500, background: tint(c, 0.09), borderLeft: `3px solid ${c}`, borderRadius: "0 5px 5px 0" }}>
+                <span style={{ color: c, fontWeight: 800, marginRight: 5 }}>{CIRCLED[mi] ?? mi + 1}</span>
+                {l}
+              </p>
+            );
+          })}
+        </Pane>
+      </div>
+
+      {/* Checklist mission */}
+      <p style={{ fontSize: "0.82rem", color: "var(--text-primary)", fontWeight: 700, marginBottom: "0.45rem" }}>
+        Bài của bạn làm được mission nào? <span style={{ fontWeight: 500, color: "var(--text-muted)" }}>— đối chiếu với các dòng được đánh số bên Model Answer</span>
+      </p>
+      <div style={{ display: "flex", flexDirection: "column", gap: 5, marginBottom: "0.85rem" }}>
+        {prompt.missions.map((m, i) => {
+          const c = MISSION_COLORS[i % MISSION_COLORS.length];
+          const on = missionsDone[i];
+          return (
             <button
               key={i}
               onClick={() => onToggleMission(i)}
-              style={{ display: "flex", alignItems: "flex-start", gap: 10, padding: "9px 12px", borderRadius: 8, border: `1.5px solid ${missionsDone[i] ? "rgba(34,197,94,0.45)" : "var(--border)"}`, background: missionsDone[i] ? "rgba(34,197,94,0.08)" : "var(--bg-secondary)", cursor: "pointer", textAlign: "left", fontFamily: "inherit" }}
+              style={{ display: "flex", alignItems: "center", gap: 9, padding: "7px 11px", borderRadius: 7, border: `1.5px solid ${on ? tint(GREEN, 0.5) : "var(--border)"}`, background: on ? tint(GREEN, 0.08) : "var(--bg-secondary)", cursor: "pointer", textAlign: "left", fontFamily: "inherit" }}
             >
-              <span style={{ flexShrink: 0, width: 18, height: 18, borderRadius: 4, border: `1.5px solid ${missionsDone[i] ? GREEN : "var(--border)"}`, background: missionsDone[i] ? GREEN : "transparent", color: "#fff", fontSize: "0.72rem", display: "flex", alignItems: "center", justifyContent: "center", marginTop: 1 }}>
-                {missionsDone[i] ? "✓" : ""}
+              <span style={{ flexShrink: 0, width: 17, height: 17, borderRadius: 4, border: `1.5px solid ${on ? GREEN : "var(--border)"}`, background: on ? GREEN : "transparent", color: "#fff", fontSize: "0.7rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                {on ? "✓" : ""}
               </span>
-              <span style={{ fontSize: "0.86rem", lineHeight: 1.55, color: "var(--text-primary)" }}>{m}</span>
+              <span style={{ flexShrink: 0, color: c, fontWeight: 800, fontSize: "0.85rem" }}>{CIRCLED[i] ?? i + 1}</span>
+              <span style={{ fontSize: "0.84rem", lineHeight: 1.5, color: "var(--text-primary)" }}>{m}</span>
             </button>
-          ))}
-        </div>
+          );
+        })}
+      </div>
 
-        {/* Checklist hình thức */}
-        <p style={{ fontSize: "0.84rem", color: "var(--text-primary)", fontWeight: 700, marginBottom: "0.5rem" }}>Khuôn thư business</p>
-        <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: "1rem" }}>
-          {Q67_FORM_CHECKS.map((c, i) => (
+      {/* Khuôn thư — chip nhỏ */}
+      <div style={{ display: "flex", alignItems: "center", gap: 7, flexWrap: "wrap", marginBottom: "0.85rem" }}>
+        <span style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--text-secondary)", flexShrink: 0 }}>Khuôn thư:</span>
+        {["Xưng hô", "Câu chào đầu", "Câu kết", "Chào cuối + ký tên"].map((short, i) => {
+          const on = formDone[i];
+          return (
             <button
               key={i}
               onClick={() => onToggleForm(i)}
-              style={{ display: "flex", alignItems: "flex-start", gap: 10, padding: "8px 12px", borderRadius: 8, border: `1.5px solid ${formDone[i] ? "rgba(34,197,94,0.45)" : "var(--border)"}`, background: formDone[i] ? "rgba(34,197,94,0.08)" : "var(--bg-secondary)", cursor: "pointer", textAlign: "left", fontFamily: "inherit" }}
+              title={Q67_FORM_CHECKS[i]}
+              style={{ padding: "3px 11px", fontSize: "0.76rem", fontWeight: 600, borderRadius: 999, border: `1.5px solid ${on ? tint(GREEN, 0.5) : "var(--border)"}`, background: on ? tint(GREEN, 0.1) : "var(--bg-secondary)", color: on ? GREEN : "var(--text-muted)", cursor: "pointer", fontFamily: "inherit" }}
             >
-              <span style={{ flexShrink: 0, width: 18, height: 18, borderRadius: 4, border: `1.5px solid ${formDone[i] ? GREEN : "var(--border)"}`, background: formDone[i] ? GREEN : "transparent", color: "#fff", fontSize: "0.72rem", display: "flex", alignItems: "center", justifyContent: "center", marginTop: 1 }}>
-                {formDone[i] ? "✓" : ""}
-              </span>
-              <span style={{ fontSize: "0.84rem", lineHeight: 1.55, color: "var(--text-secondary)" }}>{c}</span>
+              {on ? "✓ " : ""}{short}
             </button>
-          ))}
-        </div>
-
-        <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--text-muted)", lineHeight: 1.65 }}>
-          <strong style={{ color }}>{score.ets}/4 — {score.label}.</strong> {score.detail}
-        </p>
+          );
+        })}
       </div>
+
+      {/* Lưu ý riêng của đề */}
+      <details>
+        <summary style={{ fontSize: "0.76rem", color: "var(--accent-primary)", cursor: "pointer", fontWeight: 700 }}>
+          Bẫy riêng của đề này
+        </summary>
+        <p style={{ margin: "5px 0 0", fontSize: "0.79rem", color: "var(--text-muted)", lineHeight: 1.65 }}>{prompt.note}</p>
+      </details>
     </div>
   );
 }
-
 // ─────────────────────────────────────
 // Main
 // ─────────────────────────────────────
@@ -236,6 +272,7 @@ export function WritingEmailClient({ skill, unit, userId, isTestUser, bestByTest
   const [missionMarks, setMissionMarks] = useState<boolean[][]>([]);
   const [formMarks, setFormMarks] = useState<boolean[][]>([]);
   const [saved, setSaved] = useState(false);
+  const [reviewIdx, setReviewIdx] = useState(0);
   const [ratio, setRatio] = useState(0.5);
   const dragRef = useRef(false);
 
@@ -293,6 +330,7 @@ export function WritingEmailClient({ skill, unit, userId, isTestUser, bestByTest
     setElapsed(0);
     setQLeft(Q67_SECONDS_PER_QUESTION);
     setSaved(false);
+    setReviewIdx(0);
     setPhase("doing");
   }
 
@@ -360,29 +398,53 @@ export function WritingEmailClient({ skill, unit, userId, isTestUser, bestByTest
           </p>
         </div>
 
-        <div style={{ padding: "0.85rem 1.1rem", borderRadius: 10, border: "1px solid var(--border)", background: "var(--bg-secondary)", marginBottom: "1.6rem" }}>
-          <p style={{ margin: 0, fontSize: "0.82rem", lineHeight: 1.7, color: "var(--text-secondary)" }}>
-            Phần này <strong style={{ color: "var(--text-primary)" }}>không chấm tự động</strong>. Hãy đọc Model Answer, so với bài của bạn rồi tự tick từng mục —
-            điểm ETS bên dưới được tính lại theo đúng những gì bạn tick.
-            <br />
-            <span style={{ color: "var(--text-muted)" }}>
-              Quy tắc: đủ mission + đúng khuôn thư = 4 · đủ mission nhưng thiếu khuôn = 3 · làm được từ nửa số mission = 2 · dưới nửa = 1 · không mission nào = 0.
-            </span>
+        <details style={{ marginBottom: "1.1rem" }}>
+          <summary style={{ fontSize: "0.79rem", color: "var(--text-muted)", cursor: "pointer", textAlign: "center" }}>
+            Phần này <strong style={{ color: "var(--text-secondary)" }}>không chấm tự động</strong> — bạn tự tick, điểm tính theo đó. <span style={{ color: "var(--accent-primary)", fontWeight: 600 }}>Xem cách tính điểm</span>
+          </summary>
+          <p style={{ margin: "0.6rem auto 0", maxWidth: 620, fontSize: "0.79rem", lineHeight: 1.7, color: "var(--text-muted)", textAlign: "center" }}>
+            Đủ mission + đúng khuôn thư = <strong>4</strong> · đủ mission nhưng thiếu khuôn = <strong>3</strong> ·
+            làm được từ nửa số mission = <strong>2</strong> · dưới nửa = <strong>1</strong> · không mission nào = <strong>0</strong>.
           </p>
-        </div>
+        </details>
 
-        {prompts.map((p, i) => (
-          <ReviewCard
-            key={p.id}
-            prompt={p}
-            index={i}
-            answer={answers[i] ?? ""}
-            missionsDone={missionMarks[i] ?? []}
-            formDone={formMarks[i] ?? []}
-            onToggleMission={(k) => setMissionMarks((prev) => { const n = prev.map((r) => [...r]); n[i][k] = !n[i][k]; return n; })}
-            onToggleForm={(k) => setFormMarks((prev) => { const n = prev.map((r) => [...r]); n[i][k] = !n[i][k]; return n; })}
-          />
-        ))}
+        {/* Tab từng câu */}
+        {prompts.length > 1 && (
+          <div style={{ display: "flex", gap: 6, marginBottom: "1rem", borderBottom: "1px solid var(--border)", flexWrap: "wrap" }}>
+            {prompts.map((p, i) => {
+              const s = scores[i];
+              const on = i === reviewIdx;
+              const c = s.ets >= 4 ? GREEN : s.ets >= 2 ? AMBER : RED;
+              return (
+                <button
+                  key={p.id}
+                  onClick={() => setReviewIdx(i)}
+                  style={{ display: "inline-flex", alignItems: "center", gap: 7, padding: "8px 16px", border: "none", background: "none", borderBottom: `2px solid ${on ? "var(--accent-primary)" : "transparent"}`, color: on ? "var(--accent-primary)" : "var(--text-muted)", fontSize: "0.85rem", fontWeight: on ? 700 : 500, cursor: "pointer", fontFamily: "inherit", marginBottom: -1 }}
+                >
+                  Câu {i + 1}
+                  <span style={{ fontSize: "0.7rem", fontWeight: 800, color: c, background: c.replace("rgb", "rgba").replace(")", ",0.12)"), borderRadius: 4, padding: "1px 6px" }}>
+                    {s.ets}/4
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        )}
+
+        {prompts[reviewIdx] && (
+          <div style={{ border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", padding: "1.1rem 1.2rem", background: "var(--bg-elevated)", boxShadow: "var(--shadow-sm)", marginBottom: "1.2rem" }}>
+            <ReviewCard
+              key={prompts[reviewIdx].id}
+              prompt={prompts[reviewIdx]}
+              answer={answers[reviewIdx] ?? ""}
+              missionsDone={missionMarks[reviewIdx] ?? []}
+              formDone={formMarks[reviewIdx] ?? []}
+              onToggleMission={(k) => setMissionMarks((prev) => { const n = prev.map((r) => [...r]); n[reviewIdx][k] = !n[reviewIdx][k]; return n; })}
+              onToggleForm={(k) => setFormMarks((prev) => { const n = prev.map((r) => [...r]); n[reviewIdx][k] = !n[reviewIdx][k]; return n; })}
+              narrow={narrow}
+            />
+          </div>
+        )}
 
         <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap", marginTop: "1.5rem" }}>
           <button
