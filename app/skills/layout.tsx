@@ -2,6 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/db/prisma";
 import { Header } from "@/components/layout/Header";
+import { AnnotateLayer } from "@/components/annotate/AnnotateLayer";
 
 export const dynamic = "force-dynamic";
 
@@ -27,6 +28,7 @@ export default async function SkillsLayout({
     <div style={{ minHeight: "100vh", background: "var(--bg-primary)" }}>
       <Header userEmail={user.email} userDisplayName={profile?.displayName} bg={SKILLS_HEADER_BG} />
       {children}
+      <AnnotateLayer />
     </div>
   );
 }

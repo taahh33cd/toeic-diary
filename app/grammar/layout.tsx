@@ -2,6 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { redirect } from "next/navigation";
 import { GrammarShell } from "@/components/grammar/GrammarShell";
+import { AnnotateLayer } from "@/components/annotate/AnnotateLayer";
 
 export const dynamic = "force-dynamic";
 
@@ -27,6 +28,7 @@ export default async function GrammarLayout({
       userDisplayName={profile?.displayName}
     >
       {children}
+      <AnnotateLayer />
     </GrammarShell>
   );
 }

@@ -4,6 +4,7 @@ import { prisma } from "@/lib/db/prisma";
 import { ReadingBannerAndNav } from "@/components/reading/ReadingBannerAndNav";
 import { isUsageExempt } from "@/lib/access";
 import { UsageGate } from "@/components/shared/UsageGate";
+import { AnnotateLayer } from "@/components/annotate/AnnotateLayer";
 
 export const dynamic = "force-dynamic";
 
@@ -38,6 +39,7 @@ export default async function ReadingPracticeLayout({
         userDisplayName={profile?.displayName}
       />
       {children}
+      <AnnotateLayer />
     </div>
   );
 }

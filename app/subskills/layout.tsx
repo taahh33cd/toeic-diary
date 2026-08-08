@@ -2,6 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/db/prisma";
 import { SubskillsHeader } from "@/components/subskills/SubskillsHeader";
+import { AnnotateLayer } from "@/components/annotate/AnnotateLayer";
 
 export const dynamic = "force-dynamic";
 
@@ -33,6 +34,7 @@ export default async function SubskillsLayout({
         userDisplayName={profile?.displayName}
       />
       {children}
+      <AnnotateLayer />
     </div>
   );
 }

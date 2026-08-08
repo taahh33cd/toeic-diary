@@ -150,7 +150,7 @@ export function UsageGate({ initialSeconds, isExempt }: Props) {
         style={{
           position: "fixed",
           bottom: 24,
-          right: 24,
+          right: 84, // chừa góc phải dưới cho bubble annotate
           zIndex: 150,
           background: "#1e293b",
           color: "#fff",

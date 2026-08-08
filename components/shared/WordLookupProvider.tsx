@@ -1,8 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback, forwardRef, createContext, useContext } from "react";
+import { useEffect, useRef, useState, useCallback, useSyncExternalStore, forwardRef, createContext, useContext } from "react";
 import { createPortal } from "react-dom";
 import { useProfile } from "@/hooks/useProfile";
+import {
+  getWordLookupSuppressed,
+  subscribeWordLookupSuppressed,
+} from "./word-lookup-suppress";
 
 // ── Opt-in context (pages call <WordLookupActive /> to enable) ────────────────
 
@@ -135,6 +139,12 @@ export function WordLookupProvider({
   children: React.ReactNode;
 }) {
   const [active, setActive] = useState(false);
+  // Annotate đang cầm công cụ → nhả selection cho nó
+  const suppressed = useSyncExternalStore(
+    subscribeWordLookupSuppressed,
+    getWordLookupSuppressed,
+    () => false,
+  );
 
   const [sel, setSel] = useState<SelectionState | null>(null);
   const [popupOpen, setPopupOpen] = useState(false);
@@ -163,7 +173,7 @@ export function WordLookupProvider({
   }, []);
 
   useEffect(() => {
-    if (!mounted || !active) return;
+    if (!mounted || !active || suppressed) return;
 
     function tryCapture() {
       const s = window.getSelection();
@@ -214,17 +224,17 @@ export function WordLookupProvider({
       document.removeEventListener("keydown", onKeyDown);
       document.removeEventListener("scroll", onScroll, true);
     };
-  }, [mounted, active, dismiss]);
+  }, [mounted, active, suppressed, dismiss]);
 
   return (
     <SetActiveCtx.Provider value={setActive}>
       {children}
-      {mounted && sel && !popupOpen &&
+      {mounted && sel && !suppressed && !popupOpen &&
         createPortal(
           <LookupIcon ref={iconRef} sel={sel} onClick={() => setPopupOpen(true)} />,
           document.body,
         )}
-      {mounted && sel && popupOpen &&
+      {mounted && sel && !suppressed && popupOpen &&
         createPortal(
           <>
             {/* Backdrop: onMouseDown (not onClick) to dismiss before popup gets the click */}
