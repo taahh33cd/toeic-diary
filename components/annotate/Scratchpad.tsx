@@ -20,10 +20,8 @@ export function Scratchpad({ value, onChange, onClose }: Props) {
   return (
     <div
       style={{
-        position: "fixed",
-        right: 16,
-        bottom: 196,
         width: 340,
+        maxWidth: "calc(100vw - 32px)",
         display: "flex",
         flexDirection: "column",
         borderRadius: 14,
@@ -32,7 +30,6 @@ export function Scratchpad({ value, onChange, onClose }: Props) {
         border: "1px solid var(--border)",
         boxShadow: "var(--shadow-lg)",
         fontFamily: "var(--font-sans)",
-        zIndex: 9400,
       }}
     >
       <div

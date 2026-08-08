@@ -10,14 +10,17 @@ import { Scratchpad } from "./Scratchpad";
 import {
   COLORS,
   EMPTY_DOC,
+  loadBubblePos,
   loadDoc,
   measureAnchor,
   newId,
+  saveBubblePos,
   saveDoc,
   serializeRange,
   storageKey,
   type AnnotDoc,
   type Item,
+  type Point,
   type Rect,
   type ShapeItem,
   type ToolId,
@@ -26,6 +29,18 @@ import {
 const Z_OVERLAY = 9000;
 const Z_UI = 9500;
 const NOTE_W = 220;
+const BUBBLE = 52;
+/** Khoảng hở giữa bubble và thanh công cụ */
+const GAP = 8;
+/** Kéo quá ngần này mới tính là di chuyển, dưới đó coi như một cú bấm */
+const DRAG_SLOP = 4;
+
+function clampPos(p: Point, vw: number, vh: number): Point {
+  return {
+    x: Math.min(Math.max(8, p.x), Math.max(8, vw - BUBBLE - 8)),
+    y: Math.min(Math.max(8, p.y), Math.max(8, vh - BUBBLE - 8)),
+  };
+}
 
 const SHAPE_TOOLS: ToolId[] = ["rect", "ellipse", "line", "arrow"];
 const DRAW_TOOLS: ToolId[] = ["pen", "rect", "ellipse", "line", "arrow", "text", "eraser"];
@@ -83,6 +98,11 @@ export function AnnotateLayer() {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [hlRects, setHlRects] = useState<Record<string, Rect[]>>({});
   const [docSize, setDocSize] = useState({ w: 0, h: 0 });
+  const [viewport, setViewport] = useState({ w: 0, h: 0 });
+  const [bubblePos, setBubblePos] = useState<Point | null>(null);
+  const [dragging, setDragging] = useState(false);
+  const dragRef = useRef<{ dx: number; dy: number; moved: boolean } | null>(null);
+  const draggedRef = useRef(false);
 
   const historyRef = useRef<Item[][]>([]);
   const [canUndo, setCanUndo] = useState(false);
@@ -109,6 +129,21 @@ export function AnnotateLayer() {
     return () => clearTimeout(t);
   }, [doc, key, mounted]);
 
+  // ── Vị trí bubble: nhớ chỗ user thả, mặc định góc phải dưới ────────────────
+  useEffect(() => {
+    if (!mounted) return;
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const fallback = { x: vw - BUBBLE - 16, y: vh - BUBBLE - 16 };
+    setBubblePos(clampPos(loadBubblePos() ?? fallback, vw, vh));
+  }, [mounted]);
+
+  useEffect(() => {
+    if (!bubblePos) return;
+    const t = setTimeout(() => saveBubblePos(bubblePos), 300);
+    return () => clearTimeout(t);
+  }, [bubblePos]);
+
   // ── Kích thước document (canvas neo theo nội dung, cuộn cùng trang) ────────
   useEffect(() => {
     if (!mounted) return;
@@ -118,6 +153,11 @@ export function AnnotateLayer() {
         w: Math.max(de.scrollWidth, de.clientWidth),
         h: Math.max(de.scrollHeight, de.clientHeight),
       });
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+      setViewport({ w: vw, h: vh });
+      // giữ bubble trong khung nhìn khi cửa sổ đổi kích thước
+      setBubblePos((p) => (p ? clampPos(p, vw, vh) : p));
     };
     update();
     const ro = new ResizeObserver(update);
@@ -510,19 +550,36 @@ export function AnnotateLayer() {
   );
 
   const hasItems = doc.items.length > 0;
+  if (!bubblePos) return createPortal(overlay, document.body);
+
+  // Panel lật hướng theo nửa màn hình bubble đang đứng, để không tràn ra ngoài
+  const alignRight = bubblePos.x + BUBBLE / 2 > viewport.w / 2;
+  const above = bubblePos.y + BUBBLE / 2 > viewport.h / 2;
+  const panelAnchor: React.CSSProperties = {
+    ...(alignRight
+      ? { right: Math.max(8, viewport.w - (bubblePos.x + BUBBLE)) }
+      : { left: Math.max(8, bubblePos.x) }),
+    ...(above
+      ? { bottom: Math.max(8, viewport.h - bubblePos.y + GAP) }
+      : { top: Math.max(8, bubblePos.y + BUBBLE + GAP) }),
+  };
 
   const ui = (
     <div ref={uiRef}>
-      {open && scratchOpen && (
-        <Scratchpad
-          value={doc.scratch}
-          onChange={(scratch) => setDoc((d) => ({ ...d, scratch }))}
-          onClose={() => setScratchOpen(false)}
-        />
-      )}
-
       {open && (
-        <div style={{ position: "fixed", right: 16, bottom: 80, zIndex: Z_UI }}>
+        <div
+          style={{
+            position: "fixed",
+            zIndex: Z_UI,
+            display: "flex",
+            // column-reverse giữ thanh công cụ luôn nằm sát bubble
+            flexDirection: above ? "column-reverse" : "column",
+            alignItems: alignRight ? "flex-end" : "flex-start",
+            gap: 8,
+            maxHeight: `calc(100vh - ${BUBBLE + 32}px)`,
+            ...panelAnchor,
+          }}
+        >
           <Toolbar
             tool={tool}
             color={color}
@@ -546,13 +603,59 @@ export function AnnotateLayer() {
               setEditingId(null);
             }}
           />
+          {scratchOpen && (
+            <Scratchpad
+              value={doc.scratch}
+              onChange={(scratch) => setDoc((d) => ({ ...d, scratch }))}
+              onClose={() => setScratchOpen(false)}
+            />
+          )}
         </div>
       )}
 
       <button
         type="button"
-        title={open ? "Ẩn thanh ghi chú" : "Ghi chú & giấy nháp"}
+        title={
+          open
+            ? "Ẩn thanh ghi chú — kéo để đổi chỗ"
+            : "Ghi chú & giấy nháp — kéo để đổi chỗ"
+        }
+        onPointerDown={(e) => {
+          if (e.button !== 0) return;
+          e.currentTarget.setPointerCapture(e.pointerId);
+          dragRef.current = {
+            dx: e.clientX - bubblePos.x,
+            dy: e.clientY - bubblePos.y,
+            moved: false,
+          };
+        }}
+        onPointerMove={(e) => {
+          const d = dragRef.current;
+          if (!d) return;
+          const next = { x: e.clientX - d.dx, y: e.clientY - d.dy };
+          if (
+            !d.moved &&
+            Math.abs(next.x - bubblePos.x) + Math.abs(next.y - bubblePos.y) <= DRAG_SLOP
+          )
+            return;
+          d.moved = true;
+          setDragging(true);
+          setBubblePos(clampPos(next, viewport.w, viewport.h));
+        }}
+        onPointerUp={(e) => {
+          const d = dragRef.current;
+          dragRef.current = null;
+          setDragging(false);
+          if (e.currentTarget.hasPointerCapture(e.pointerId))
+            e.currentTarget.releasePointerCapture(e.pointerId);
+          // click phát sau pointerup — chặn nó nếu vừa kéo
+          draggedRef.current = !!d?.moved;
+        }}
         onClick={() => {
+          if (draggedRef.current) {
+            draggedRef.current = false;
+            return;
+          }
           setOpen((o) => {
             if (o) {
               setTool("off");
@@ -563,10 +666,10 @@ export function AnnotateLayer() {
         }}
         style={{
           position: "fixed",
-          right: 16,
-          bottom: 16,
-          width: 52,
-          height: 52,
+          left: bubblePos.x,
+          top: bubblePos.y,
+          width: BUBBLE,
+          height: BUBBLE,
           borderRadius: "50%",
           display: "grid",
           placeItems: "center",
@@ -574,7 +677,8 @@ export function AnnotateLayer() {
           background: open ? "var(--accent-primary)" : "var(--bg-elevated)",
           color: open ? "#fff" : "var(--text-secondary)",
           boxShadow: "var(--shadow-lg)",
-          cursor: "pointer",
+          cursor: dragging ? "grabbing" : "grab",
+          touchAction: "none",
           zIndex: Z_UI,
           padding: 0,
         }}

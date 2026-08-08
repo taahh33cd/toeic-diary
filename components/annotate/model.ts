@@ -123,6 +123,34 @@ export function saveDoc(key: string, doc: AnnotDoc): void {
   }
 }
 
+// ── Vị trí bubble (dùng chung mọi trang, không theo URL) ─────────────────────
+
+export interface Point {
+  x: number;
+  y: number;
+}
+
+const BUBBLE_KEY = "toeic-annot:v1:bubble";
+
+export function loadBubblePos(): Point | null {
+  try {
+    const raw = localStorage.getItem(BUBBLE_KEY);
+    if (!raw) return null;
+    const p = JSON.parse(raw) as Point;
+    return Number.isFinite(p?.x) && Number.isFinite(p?.y) ? p : null;
+  } catch {
+    return null;
+  }
+}
+
+export function saveBubblePos(p: Point): void {
+  try {
+    localStorage.setItem(BUBBLE_KEY, JSON.stringify(p));
+  } catch {
+    /* quota / private mode */
+  }
+}
+
 // ── Neo highlight vào text thật ──────────────────────────────────────────────
 
 /** Đường đi childNodes từ <body> tới node. null nếu node nằm ngoài body. */
