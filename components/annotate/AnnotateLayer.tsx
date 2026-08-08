@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { usePathname } from "next/navigation";
-import { PencilLine } from "lucide-react";
+import { GripHorizontal, PencilLine } from "lucide-react";
 import { setWordLookupSuppressed } from "@/components/shared/word-lookup-suppress";
 import { Toolbar } from "./Toolbar";
 import { Scratchpad } from "./Scratchpad";
@@ -103,6 +103,13 @@ export function AnnotateLayer() {
   const [dragging, setDragging] = useState(false);
   const dragRef = useRef<{ dx: number; dy: number; moved: boolean } | null>(null);
   const draggedRef = useRef(false);
+  const noteDragRef = useRef<{
+    id: string;
+    dx: number;
+    dy: number;
+    moved: boolean;
+    before: Item[];
+  } | null>(null);
 
   const historyRef = useRef<Item[][]>([]);
   const [canUndo, setCanUndo] = useState(false);
@@ -187,10 +194,15 @@ export function AnnotateLayer() {
   }, [open, tool]);
 
   // ── Lịch sử ────────────────────────────────────────────────────────────────
-  const pushHistory = useCallback(() => {
-    historyRef.current = [...historyRef.current.slice(-29), doc.items];
+  const pushHistoryItems = useCallback((items: Item[]) => {
+    historyRef.current = [...historyRef.current.slice(-29), items];
     setCanUndo(true);
-  }, [doc.items]);
+  }, []);
+
+  const pushHistory = useCallback(
+    () => pushHistoryItems(doc.items),
+    [doc.items, pushHistoryItems],
+  );
 
   const commit = useCallback(
     (item: Item) => {
@@ -496,7 +508,8 @@ export function AnnotateLayer() {
               width: it.w,
               pointerEvents: "auto",
               borderRadius: 8,
-              borderLeft: `4px solid ${it.color}`,
+              overflow: "hidden",
+              border: `1px solid ${it.color}55`,
               background: "#FFFDF3",
               boxShadow: "0 6px 18px rgba(0,0,0,0.18)",
               color: "#1A3040",
@@ -510,6 +523,61 @@ export function AnnotateLayer() {
               else if (editingId !== it.id) setEditingId(it.id);
             }}
           >
+            {/* Thanh nắm để kéo — tách khỏi vùng gõ để không phá thao tác bôi chữ */}
+            <div
+              title={eraserOn ? "Bấm để xoá ghi chú" : "Kéo để di chuyển ghi chú"}
+              onPointerDown={(e) => {
+                if (eraserOn || e.button !== 0) return;
+                e.stopPropagation(); // đừng để overlay hiểu nhầm là bắt đầu vẽ
+                e.currentTarget.setPointerCapture(e.pointerId);
+                noteDragRef.current = {
+                  id: it.id,
+                  dx: e.pageX - it.x,
+                  dy: e.pageY - it.y,
+                  moved: false,
+                  before: doc.items,
+                };
+              }}
+              onPointerMove={(e) => {
+                const d = noteDragRef.current;
+                if (!d || d.id !== it.id) return;
+                e.stopPropagation();
+                const x = Math.max(0, e.pageX - d.dx);
+                const y = Math.max(0, e.pageY - d.dy);
+                if (!d.moved) {
+                  if (Math.abs(x - it.x) + Math.abs(y - it.y) <= DRAG_SLOP) return;
+                  d.moved = true;
+                  pushHistoryItems(d.before); // chỉ ghi lịch sử khi thật sự dịch chuyển
+                }
+                setDoc((doc0) => ({
+                  ...doc0,
+                  items: doc0.items.map((x0) =>
+                    x0.id === it.id ? { ...x0, x, y } : x0,
+                  ),
+                }));
+              }}
+              onPointerUp={(e) => {
+                if (!noteDragRef.current) return;
+                e.stopPropagation();
+                noteDragRef.current = null;
+              }}
+              // bấm/kéo trên thanh nắm không mở ô gõ; riêng tẩy thì để click rơi xuống
+              onClick={(e) => {
+                if (!eraserOn) e.stopPropagation();
+              }}
+              style={{
+                height: 16,
+                display: "grid",
+                placeItems: "center",
+                background: `${it.color}26`,
+                borderBottom: `1px solid ${it.color}40`,
+                cursor: eraserOn ? "cell" : "grab",
+                touchAction: "none",
+              }}
+            >
+              <GripHorizontal size={12} color={it.color} />
+            </div>
+
             {editingId === it.id && !eraserOn ? (
               <textarea
                 autoFocus
