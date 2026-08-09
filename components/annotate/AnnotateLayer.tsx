@@ -552,6 +552,17 @@ export function AnnotateLayer() {
               if (eraserOn) erase(it.id);
               else if (editingId !== it.id) setEditingId(it.id);
             }}
+            // Đang cầm công cụ text: chặn sự kiện nổi lên overlay, nếu không
+            // mỗi lần bấm vào note có sẵn overlay lại đẻ thêm một note chồng lên.
+            // Công cụ khác vẫn cho nổi lên để còn vẽ đè lên note.
+            onPointerDown={(e) => {
+              if (tool !== "text") return;
+              textStartRef.current = null; // huỷ điểm đặt đang treo, tránh đặt lệch chỗ
+              e.stopPropagation();
+            }}
+            onPointerUp={(e) => {
+              if (tool === "text") e.stopPropagation();
+            }}
           >
             {/* Thanh nắm để kéo — tách khỏi vùng gõ để không phá thao tác bôi chữ */}
             <div
