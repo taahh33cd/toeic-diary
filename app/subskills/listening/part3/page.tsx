@@ -85,6 +85,36 @@ export default async function ListeningPart3Page() {
         </ul>
       </div>
 
+      {/* Lối vào chế độ Nghe sâu */}
+      <Link
+        href="/subskills/listening/part3/nghe-sau"
+        className="r-row"
+        style={{
+          display: "flex",
+          alignItems: "flex-start",
+          gap: "1rem",
+          padding: "1.1rem 1.4rem",
+          marginBottom: "1.5rem",
+          borderRadius: "var(--radius-lg, 12px)",
+          border: "1px solid var(--border)",
+          background: "var(--bg-elevated)",
+          textDecoration: "none",
+        }}
+      >
+        <span style={{ fontSize: "1.15rem", lineHeight: 1.2, flexShrink: 0 }}>🎧</span>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{ fontSize: "0.97rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.2rem" }}>
+            Nghe sâu — quy trình 5 bước
+          </div>
+          <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
+            230 đoạn nghe đầy đủ transcript và từ mới. Làm đề khi chưa biết gì, tra từ, nghe kèm
+            chữ và đọc theo, rồi nghe chay đến khi hiểu trọn. Đây là phần xây nền; các cấp độ bên
+            dưới là phần rèn phản xạ.
+          </p>
+        </div>
+        <span className="r-arrow" style={{ fontSize: "0.8rem", color: "var(--accent-primary)", flexShrink: 0, alignSelf: "center" }}>→</span>
+      </Link>
+
       {/* Danh sách cấp độ */}
       <div
         className="stagger-children animate-slide-up"
