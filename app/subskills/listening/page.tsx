@@ -17,19 +17,12 @@ const PARTS = [
   },
   {
     part: 3,
-    label: "Part 3 — Đoạn hội thoại",
-    description: "Nghe đoạn hội thoại giữa 2–3 người, trả lời 3 câu hỏi liên tiếp.",
-    href: null,
-    active: false,
-    detail: null,
-  },
-  {
-    part: 4,
-    label: "Part 4 — Bài nói độc thoại",
-    description: "Nghe bài nói một chiều (thông báo, bài phát biểu), trả lời 3 câu hỏi.",
-    href: null,
-    active: false,
-    detail: null,
+    label: "Part 3 & 4 — Hội thoại và bài nói",
+    description:
+      "Đoán trước dạng câu hỏi để bù cho 3 giây ít ỏi khi thi trên máy, rồi luyện bắt đáp án dù nó luôn được diễn đạt lại.",
+    href: "/subskills/listening/part3",
+    active: true,
+    detail: "5 cấp độ · 4 bài/cấp · dữ liệu từ 10 đề EST 2026",
   },
 ];
 
@@ -133,8 +126,8 @@ export default async function ListeningPage() {
             );
           }
 
-          // Active part — Part 2
-          const hasDone = doneExercises > 0;
+          // Chỉ Part 2 mới có sẵn số liệu tiến độ ở trang này
+          const hasDone = p.part === 2 && doneExercises > 0;
           const pct = Math.round((doneExercises / totalExercises) * 100);
 
           return (
