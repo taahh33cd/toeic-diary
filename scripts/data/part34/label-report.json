@@ -1,0 +1,132 @@
+{
+ "generatedFrom": "est-2026 test 1-10",
+ "groups": 230,
+ "questions": 690,
+ "groupsPart3": 130,
+ "groupsPart4": 100,
+ "groupsMissingTranscript": 0,
+ "groupsMissingAudio": 0,
+ "labelCoverage": {
+  "high": 454,
+  "medium": 236,
+  "low": 0,
+  "manual": 0,
+  "specificPct": 65.8
+ },
+ "byPosition": {
+  "first": {
+   "total": 230,
+   "followsTip": 139,
+   "followsTipPct": 60.4,
+   "labels": {
+    "detail": {
+     "count": 68,
+     "pct": 29.6
+    },
+    "place_business": {
+     "count": 67,
+     "pct": 29.1
+    },
+    "identity": {
+     "count": 41,
+     "pct": 17.8
+    },
+    "purpose": {
+     "count": 31,
+     "pct": 13.5
+    },
+    "next_action": {
+     "count": 12,
+     "pct": 5.2
+    },
+    "problem": {
+     "count": 6,
+     "pct": 2.6
+    },
+    "graphic": {
+     "count": 4,
+     "pct": 1.7
+    },
+    "implication": {
+     "count": 1,
+     "pct": 0.4
+    }
+   }
+  },
+  "middle": {
+   "total": 230,
+   "followsTip": 11,
+   "followsTipPct": 4.8,
+   "labels": {
+    "detail": {
+     "count": 100,
+     "pct": 43.5
+    },
+    "next_action": {
+     "count": 39,
+     "pct": 17
+    },
+    "graphic": {
+     "count": 30,
+     "pct": 13
+    },
+    "implication": {
+     "count": 30,
+     "pct": 13
+    },
+    "problem": {
+     "count": 11,
+     "pct": 4.8
+    },
+    "place_business": {
+     "count": 8,
+     "pct": 3.5
+    },
+    "identity": {
+     "count": 7,
+     "pct": 3
+    },
+    "purpose": {
+     "count": 5,
+     "pct": 2.2
+    }
+   }
+  },
+  "last": {
+   "total": 230,
+   "followsTip": 109,
+   "followsTipPct": 47.4,
+   "labels": {
+    "next_action": {
+     "count": 109,
+     "pct": 47.4
+    },
+    "detail": {
+     "count": 68,
+     "pct": 29.6
+    },
+    "implication": {
+     "count": 23,
+     "pct": 10
+    },
+    "graphic": {
+     "count": 16,
+     "pct": 7
+    },
+    "identity": {
+     "count": 9,
+     "pct": 3.9
+    },
+    "place_business": {
+     "count": 3,
+     "pct": 1.3
+    },
+    "problem": {
+     "count": 2,
+     "pct": 0.9
+    }
+   }
+  }
+ },
+ "needsManualLabel": []
+}
