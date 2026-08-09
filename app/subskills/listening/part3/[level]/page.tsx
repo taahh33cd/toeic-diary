@@ -24,6 +24,7 @@ const KIND_VI: Record<string, string> = {
   "listen-mcq": "Nghe hiểu",
   "full-set": "Trọn bộ 3 câu",
   evidence: "Paraphrase",
+  trap: "Bắt bẫy",
   "fill-blank": "Điền từ",
 };
 

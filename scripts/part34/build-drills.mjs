@@ -101,11 +101,27 @@ function isEnglish(s) {
   return /^[\x20-\x7E'’\-]+$/.test(s) && /[a-zA-Z]/.test(s) && !/[àáảãạăâđêôơưèéẹìíòóùúýỳ]/i.test(s);
 }
 
+/**
+ * Dòng lời thoại trong transcript.
+ * Transcript gốc gắn thêm danh sách câu hỏi ở cuối ("38. According to..."),
+ * phải loại ra kẻo lọt vào phương án nhiễu của bài truy ngược.
+ */
 function transcriptLines(group) {
-  return (group.transcript || "")
+  const keep = (s) => s.length >= 25 && !/^\d{1,3}[.)]\s/.test(s);
+
+  const raw = (group.transcript || "")
     .split("\n")
     .map((s) => s.trim())
-    .filter((s) => s.length >= 25);
+    .filter(keep);
+
+  // Part 4 là bài nói một người nên transcript thường là một khối liền,
+  // không có nhãn người nói để xuống dòng. Tách theo câu để vẫn dùng được.
+  if (raw.length >= 3) return raw;
+
+  return raw
+    .flatMap((block) => block.split(/(?<=[.!?])\s+(?=[A-Z"'“])/))
+    .map((s) => s.trim())
+    .filter(keep);
 }
 
 const STOP = new Set([
@@ -352,7 +368,7 @@ function drillListen(count, id, title, { positions, parts, labels }) {
 }
 
 /** Nghe trọn bộ 3 câu liên tiếp — mô phỏng đúng nhịp thi thật */
-function drillFullSet(count, id, title, { parts } = {}) {
+function drillFullSet(count, id, title, { parts, hideOptionsUntilPlayed = false } = {}) {
   const items = [];
 
   for (const g of shuffle(groups)) {
@@ -385,7 +401,10 @@ function drillFullSet(count, id, title, { parts } = {}) {
     id,
     kind: "full-set",
     title,
-    instruction: "Nghe hết đoạn rồi trả lời liên tiếp 3 câu, đúng nhịp đề thi thật.",
+    hideOptionsUntilPlayed,
+    instruction: hideOptionsUntilPlayed
+      ? "Phương án chỉ hiện sau khi bấm nghe — không đọc trước, đúng như thi trên máy."
+      : "Nghe hết đoạn rồi trả lời liên tiếp 3 câu, đúng nhịp đề thi thật.",
     items,
   };
 }
@@ -432,6 +451,73 @@ function drillEvidence(count, id, title) {
     instruction:
       "Cho sẵn đáp án đúng. Chọn câu trong bài nghe đã sinh ra đáp án đó. " +
       "Đây là bài tập trực diện cho bẫy paraphrase.",
+    items,
+  };
+}
+
+/**
+ * Bẫy lặp từ: trong 4 phương án, tìm phương án sai nhưng dùng lại nguyên từ
+ * nghe được trong bài. Đây là bẫy phổ biến nhất của Part 3/4.
+ *
+ * Chỉ giữ những câu mà đúng một phương án sai dính bẫy này, còn đáp án đúng
+ * thì không — nếu không thì câu hỏi có nhiều lời giải.
+ */
+function drillTrap(count, id, title) {
+  const items = [];
+
+  for (const g of shuffle(groups)) {
+    if (items.length >= count) break;
+
+    const lines = transcriptLines(g);
+    if (lines.length < 3) continue;
+    const heard = new Set(lines.flatMap(contentWords));
+
+    for (const q of g.questions) {
+      if (items.length >= count) break;
+      const keys = Object.keys(q.options);
+      if (keys.length < 4) continue;
+
+      // Tỉ lệ từ nội dung của phương án xuất hiện nguyên văn trong bài
+      const echo = (text) => {
+        const w = contentWords(text);
+        return w.length === 0 ? 0 : w.filter((x) => heard.has(x)).length / w.length;
+      };
+
+      const wrongEchoes = keys
+        .filter((k) => k !== q.answer)
+        .map((k) => ({ k, text: q.options[k], score: echo(q.options[k]) }))
+        .sort((a, b) => b.score - a.score);
+
+      const top = wrongEchoes[0];
+      const second = wrongEchoes[1];
+      // Một phương án sai lặp gần hết từ, các phương án sai khác thì không,
+      // và đáp án đúng không lặp từ ⇒ lời giải là duy nhất.
+      if (!top || top.score < 0.75 || (second && second.score >= 0.4) || echo(q.options[q.answer]) >= 0.4) continue;
+
+      const options = keys.map((k) => q.options[k]);
+      items.push({
+        id: `trap-${items.length}`,
+        question: `Nghe đoạn. Với câu hỏi "${q.prompt}", phương án nào lặp lại nguyên từ nghe được trong bài nhưng vẫn SAI?`,
+        context: null,
+        audioUrl: g.audioUrl,
+        transcript: g.transcript,
+        options,
+        correct: keys.indexOf(top.k),
+        explanation:
+          `Phương án này nhặt lại đúng từ trong bài nên nghe rất quen tai, nhưng đó chính là bẫy. ` +
+          `Đáp án đúng là "${q.options[q.answer]}" — diễn đạt lại, không lặp từ.\n\n` +
+          cleanReasoning(q.reasoning),
+        part: g.part,
+      });
+    }
+  }
+
+  return {
+    id,
+    kind: "trap",
+    title,
+    instruction:
+      "Phương án nghe quen tai nhất thường là bẫy. Tìm phương án dùng lại nguyên từ trong bài nhưng vẫn sai.",
     items,
   };
 }
@@ -534,6 +620,7 @@ const LEVELS = [
     config: { playbackRate: 1, transcriptPolicy: "after-submit", replayLimit: null },
     drills: [
       drillEvidence(14, "evidence", "Truy ngược câu sinh ra đáp án"),
+      drillTrap(12, "trap", "Bắt bẫy lặp từ"),
       drillPredictSet(8, "predict", "Nghe 8 giây đầu, đoán bộ câu hỏi", { withAudio: true }),
       drillFullSet(8, "fullset", "Nghe trọn bộ, trả lời 3 câu"),
       drillPosition(12, "position-all", "Đoán vị trí — cả câu khó", { binary: false, onlyPredictive: false }),
@@ -565,8 +652,8 @@ const LEVELS = [
     passThreshold: 85,
     config: { playbackRate: 1.15, transcriptPolicy: "never", replayLimit: 1 },
     drills: [
-      drillFullSet(12, "fullset-p3", "Nghe một lần — Part 3", { parts: [3] }),
-      drillFullSet(12, "fullset-p4", "Nghe một lần — Part 4", { parts: [4] }),
+      drillFullSet(12, "fullset-p3", "Nghe một lần — Part 3", { parts: [3], hideOptionsUntilPlayed: true }),
+      drillFullSet(12, "fullset-p4", "Nghe một lần — Part 4", { parts: [4], hideOptionsUntilPlayed: true }),
       drillListen(12, "mixed", "Trộn mọi dạng câu hỏi", {}),
       drillEvidence(12, "evidence", "Truy ngược không nghe lại"),
     ],

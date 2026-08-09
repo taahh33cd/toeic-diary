@@ -22,6 +22,7 @@ export type DrillKind =
   | "listen-mcq"
   | "full-set"
   | "evidence"
+  | "trap"
   | "fill-blank";
 
 export type DrillItem = {
@@ -51,6 +52,8 @@ export type Drill = {
   kind: DrillKind;
   title: string;
   instruction: string;
+  /** Giấu phương án đến khi bấm nghe — mô phỏng thi trên máy, không đọc trước */
+  hideOptionsUntilPlayed?: boolean;
   items: DrillItem[];
 };
 

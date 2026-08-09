@@ -45,6 +45,9 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
 
   const outOfPlays = replayLimit !== null && plays >= replayLimit;
 
+  // Ở cấp mô phỏng phòng thi, phương án chỉ hiện sau khi đã bấm nghe
+  const optionsHidden = !!drill.hideOptionsUntilPlayed && plays === 0;
+
   const transcriptAvailable =
     !!item?.transcript &&
     (transcriptPolicy === "always" ||
@@ -313,6 +316,22 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
       )}
 
       {/* Phương án */}
+      {optionsHidden ? (
+        <div
+          style={{
+            padding: "1.4rem 1rem",
+            textAlign: "center",
+            borderRadius: "var(--radius-md, 8px)",
+            border: "1px dashed var(--border)",
+            background: "var(--bg-secondary)",
+            fontSize: "0.82rem",
+            color: "var(--text-muted)",
+            marginBottom: "1.1rem",
+          }}
+        >
+          Bấm ▶ Nghe để hiện phương án. Thi trên máy cũng không cho đọc trước.
+        </div>
+      ) : (
       <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", marginBottom: "1.1rem" }}>
         {item.options.map((opt, i) => {
           const isChosen = choice === i;
@@ -372,6 +391,7 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
           );
         })}
       </div>
+      )}
 
       {/* Giải thích */}
       {locked && item.explanation && (
