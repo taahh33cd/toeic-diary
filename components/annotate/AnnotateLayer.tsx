@@ -56,6 +56,12 @@ const SHORTCUTS: Record<string, ToolId> = {
   e: "eraser",
 };
 
+/** Nhả focus khỏi ô gõ ghi chú để onBlur kịp dọn note rỗng. */
+function blurEditor(): void {
+  const el = document.activeElement;
+  if (el instanceof HTMLTextAreaElement) el.blur();
+}
+
 function isTypingTarget(el: EventTarget | null): boolean {
   const node = el as HTMLElement | null;
   if (!node?.tagName) return false;
@@ -103,6 +109,7 @@ export function AnnotateLayer() {
   const [dragging, setDragging] = useState(false);
   const dragRef = useRef<{ dx: number; dy: number; moved: boolean } | null>(null);
   const draggedRef = useRef(false);
+  const textStartRef = useRef<Point | null>(null);
   const noteDragRef = useRef<{
     id: string;
     dx: number;
@@ -281,6 +288,7 @@ export function AnnotateLayer() {
     if (!mounted || !open) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
+        blurEditor(); // để onBlur dọn note rỗng thay vì bỏ lại ô trống
         setTool("off");
         setEditingId(null);
         return;
@@ -308,10 +316,11 @@ export function AnnotateLayer() {
     const x = e.pageX;
     const y = e.pageY;
 
+    // Ghi chú dán tạo ở pointerup, KHÔNG phải pointerdown: mousedown mặc định
+    // của chuột fire ngay sau pointerdown và sẽ cướp focus khỏi textarea vừa
+    // mount, khiến onBlur xoá luôn note rỗng.
     if (tool === "text") {
-      const item: Item = { id: newId(), kind: "text", color, x, y, w: NOTE_W, text: "" };
-      commit(item);
-      setEditingId(item.id);
+      textStartRef.current = { x, y };
       return;
     }
     if (tool === "pen") {
@@ -346,7 +355,28 @@ export function AnnotateLayer() {
     });
   };
 
-  const onPointerUp = () => {
+  const onPointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
+    const start = textStartRef.current;
+    if (start) {
+      textStartRef.current = null;
+      // lỡ rê chuột thì bỏ qua, tránh đặt note ngoài ý muốn
+      if (
+        Math.abs(e.pageX - start.x) + Math.abs(e.pageY - start.y) <= DRAG_SLOP
+      ) {
+        const item: Item = {
+          id: newId(),
+          kind: "text",
+          color,
+          x: start.x,
+          y: start.y,
+          w: NOTE_W,
+          text: "",
+        };
+        commit(item);
+        setEditingId(item.id);
+      }
+      return;
+    }
     if (!draft) return;
     const d = draft;
     setDraft(null);
@@ -665,6 +695,7 @@ export function AnnotateLayer() {
             onClear={clearAll}
             onToggleScratch={() => setScratchOpen((s) => !s)}
             onClose={() => {
+              blurEditor();
               setOpen(false);
               setTool("off");
               setScratchOpen(false);
