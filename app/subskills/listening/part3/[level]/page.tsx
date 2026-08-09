@@ -23,7 +23,8 @@ const KIND_VI: Record<string, string> = {
   "predict-set": "Dự đoán",
   "listen-mcq": "Nghe hiểu",
   "full-set": "Trọn bộ 3 câu",
-  evidence: "Paraphrase",
+  evidence: "Truy ngược",
+  paraphrase: "Paraphrase",
   trap: "Bắt bẫy",
   "fill-blank": "Điền từ",
 };

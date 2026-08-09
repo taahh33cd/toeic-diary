@@ -456,6 +456,51 @@ function drillEvidence(count, id, title) {
 }
 
 /**
+ * Nhận diện paraphrase theo chiều của phòng thi: cho sẵn câu nghe được,
+ * chọn phương án diễn đạt lại đúng ý. Phương án nhiễu lấy nguyên 3 phương án
+ * sai của chính câu hỏi đó nên vẫn là bẫy thật của đề.
+ *
+ * Chỉ dùng câu có trích dẫn trong phần giải thích — đó mới là bằng chứng chắc
+ * chắn nằm gọn trong một câu.
+ */
+function drillParaphrase(count, id, title) {
+  const items = [];
+
+  for (const { group, q, ev } of shuffle(evidencePool)) {
+    if (items.length >= count) break;
+    if (ev.source !== "quote") continue;
+    // Câu hàm ý trích sẵn lời thoại trong đề nên không còn gì để nhận diện
+    if (q.label === "implication") continue;
+
+    const keys = Object.keys(q.options);
+    if (keys.length < 4) continue;
+
+    items.push({
+      id: `paraphrase-${items.length}`,
+      question: `Câu hỏi: ${q.prompt}`,
+      context: `Bạn nghe được: "${stripSpeaker(ev.line)}"`,
+      options: keys.map((k) => q.options[k]),
+      correct: keys.indexOf(q.answer),
+      explanation:
+        cleanReasoning(q.reasoning) +
+        "\n\nĐối chiếu từng chữ: đáp án đúng nói lại cùng một ý bằng từ khác, " +
+        "chứ không dùng lại từ vừa nghe.",
+      part: group.part,
+    });
+  }
+
+  return {
+    id,
+    kind: "paraphrase",
+    title,
+    instruction:
+      "Cho sẵn câu chứa đáp án. Chọn phương án diễn đạt lại đúng ý — đây là bước cuối cùng " +
+      "trong phòng thi, sau khi đã nghe ra được câu quan trọng.",
+    items,
+  };
+}
+
+/**
  * Bẫy lặp từ: trong 4 phương án, tìm phương án sai nhưng dùng lại nguyên từ
  * nghe được trong bài. Đây là bẫy phổ biến nhất của Part 3/4.
  *
@@ -606,6 +651,7 @@ const LEVELS = [
       ),
       drillPosition(12, "position", "Đoán vị trí trong bộ 3 câu", { binary: false }),
       drillPredictSet(8, "predict", "Đọc câu mở đầu, đoán bộ câu hỏi", { withAudio: false }),
+      drillParaphrase(12, "paraphrase", "Cho sẵn câu nghe được, chọn đáp án"),
       drillListen(12, "listen", "Nghe và trả lời câu đầu / câu cuối", { positions: ["first", "last"] }),
     ],
   },

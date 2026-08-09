@@ -22,6 +22,7 @@ export type DrillKind =
   | "listen-mcq"
   | "full-set"
   | "evidence"
+  | "paraphrase"
   | "trap"
   | "fill-blank";
 
