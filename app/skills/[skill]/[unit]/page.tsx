@@ -13,6 +13,7 @@ import { Q67_PART_KEY } from "@/lib/skills/writing-q6-7";
 import { WritingEmailClient } from "@/components/skills/WritingEmailClient";
 import { READING_PART5 } from "@/lib/skills/sample";
 import { SpeakingQ34TestList } from "@/components/skills/exam/SpeakingQ34TestList";
+import { isUsageExempt } from "@/lib/access";
 
 type Props = { params: Promise<{ skill: string; unit: string }> };
 
@@ -58,9 +59,12 @@ export default async function SkillUnitPage({ params }: Props) {
     const { data: { user } } = await supabase.auth.getUser();
 
     const profile = user
-      ? await prisma.profile.findUnique({ where: { id: user.id }, select: { studentCode: true } }).catch(() => null)
+      ? await prisma.profile
+          .findUnique({ where: { id: user.id }, select: { studentCode: true, role: true, enrolledCourses: true } })
+          .catch(() => null)
       : null;
     const isTestUser = profile?.studentCode?.toUpperCase() === "TEST";
+    const canSubmit = isUsageExempt(profile);
 
     // Best score per exercise (questionWord = exercise id, exerciseIndex = 0)
     const attempts = user
@@ -81,6 +85,7 @@ export default async function SkillUnitPage({ params }: Props) {
         exercises={WRITING_Q1_5}
         userId={user?.id ?? null}
         isTestUser={isTestUser}
+        canSubmit={canSubmit}
         bestByExercise={bestByExercise}
       />
     );
@@ -92,9 +97,12 @@ export default async function SkillUnitPage({ params }: Props) {
     const { data: { user } } = await supabase.auth.getUser();
 
     const profile = user
-      ? await prisma.profile.findUnique({ where: { id: user.id }, select: { studentCode: true } }).catch(() => null)
+      ? await prisma.profile
+          .findUnique({ where: { id: user.id }, select: { studentCode: true, role: true, enrolledCourses: true } })
+          .catch(() => null)
       : null;
     const isTestUser = profile?.studentCode?.toUpperCase() === "TEST";
+    const canSubmit = isUsageExempt(profile);
 
     // Điểm tốt nhất của mỗi bộ đề — chỉ lấy bản ghi tổng kết (itemIdx = null)
     const attempts = user
@@ -117,6 +125,7 @@ export default async function SkillUnitPage({ params }: Props) {
         unit={found.unit}
         userId={user?.id ?? null}
         isTestUser={isTestUser}
+        canSubmit={canSubmit}
         bestByTest={bestByTest}
       />
     );

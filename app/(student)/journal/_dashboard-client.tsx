@@ -12,7 +12,7 @@ import { useClasses } from "@/hooks/firebase/useClasses";
 import { useLocale } from "@/hooks/useLocale";
 import { LiveIndicator } from "@/components/shared/LiveIndicator";
 import { dayToNum } from "@/lib/schedule-day";
-import type { XpStats } from "./page";
+import type { XpStats, SwWorkStats } from "./page";
 import type { ScheduleItem, Goal, VocabWord, ToeicScore, SwScore } from "@/lib/firebase/types";
 import { EXAM_MAX, examScores, goalExamType, goalTotal } from "@/lib/exam-goal";
 
@@ -453,6 +453,61 @@ function FeedbackTile({ comments }: { comments?: Record<string, { text: string; 
             {t("Giáo viên", "Teacher")} ·{" "}
             {new Date(latest.ts).toLocaleDateString("vi-VN", { day: "numeric", month: "long" })}
           </p>
+        </>
+      )}
+    </Tile>
+  );
+}
+
+// ─── Speaking & Writing submissions tile ──────────────────────────────────────
+
+function SwWorkTile({ stats }: { stats: SwWorkStats }) {
+  const { t } = useLocale();
+  const empty = stats.pending === 0 && stats.graded === 0 && !stats.latest;
+
+  return (
+    <Tile className="col-span-12 md:col-span-6">
+      <div className="flex items-center justify-between mb-4">
+        <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)" }}>
+          {t("Bài Speaking & Writing", "Speaking & Writing")}
+        </p>
+        <Link href="/journal/submissions" className="text-xs font-medium hover:opacity-70 transition-opacity" style={{ color: "var(--orange)" }}>
+          {t("Xem tất cả →", "See all →")}
+        </Link>
+      </div>
+
+      {empty ? (
+        <div className="flex flex-col items-center justify-center h-20 text-center">
+          <span className="text-3xl mb-2 opacity-20">🎙️</span>
+          <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+            {t("Chưa lưu bài nói/viết nào", "No saved work yet")}
+          </p>
+        </div>
+      ) : (
+        <>
+          <div className="flex gap-6">
+            <div>
+              <div className="text-2xl font-bold leading-none" style={{ fontFamily: "'Lora', serif", color: "var(--orange)" }}>
+                {stats.pending}
+              </div>
+              <div className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>{t("chờ chấm", "awaiting")}</div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold leading-none" style={{ fontFamily: "'Lora', serif", color: "var(--sage, #15803d)" }}>
+                {stats.graded}
+              </div>
+              <div className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>{t("đã có nhận xét", "graded")}</div>
+            </div>
+          </div>
+          {stats.latest && (
+            <Link
+              href={`/journal/submissions/${stats.latest.id}`}
+              className="block mt-4 px-3 py-2 rounded-lg text-xs truncate no-underline"
+              style={{ background: "var(--bg-primary)", border: "1px solid var(--border)", color: "var(--text-secondary)" }}
+            >
+              {t("Gần nhất", "Latest")}: {stats.latest.title}
+            </Link>
+          )}
         </>
       )}
     </Tile>
@@ -1103,7 +1158,7 @@ function LoadingSkeleton() {
 
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
-export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }) {
+export default function DashboardClient({ xpStats, swWork }: { xpStats: XpStats | null; swWork?: SwWorkStats | null }) {
   const { profile, loading: profileLoading } = useProfile();
   const { student, loading: studentLoading } = useStudent(profile?.studentCode);
   const { homework } = useHomework(profile?.studentCode);
@@ -1211,6 +1266,9 @@ export default function DashboardClient({ xpStats }: { xpStats: XpStats | null }
         {/* Row 3: Schedule | Feedback */}
         <ScheduleTile schedule={mergedSchedule} />
         <FeedbackTile comments={student?.comments as Record<string, { text: string; ts: number }> | undefined} />
+
+        {/* Row 3b: Bài Speaking & Writing đã lưu/gửi chấm */}
+        {swWork && <SwWorkTile stats={swWork} />}
 
         {/* Row 4: Skill Progress */}
         <SkillProgressTile scores={scores} />

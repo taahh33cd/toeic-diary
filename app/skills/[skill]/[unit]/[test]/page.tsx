@@ -5,6 +5,9 @@ import { getPracticeEntry, loadPracticePart } from "@/lib/listening-practice";
 import { ListeningPracticeClient } from "@/components/skills/listening/ListeningPracticeClient";
 import { SpeakingExamClient } from "@/components/skills/exam/SpeakingExamClient";
 import { Q34_LEVELS, getQ34Test } from "@/lib/skills/speaking-q3-4";
+import { prisma } from "@/lib/db/prisma";
+import { createClient } from "@/lib/supabase/server";
+import { isUsageExempt } from "@/lib/access";
 
 type Props = { params: Promise<{ skill: string; unit: string; test: string }> };
 
@@ -45,7 +48,25 @@ export default async function SkillTestPage({ params }: Props) {
   if (!f) notFound();
 
   if (f.kind === "speaking-q34") {
-    return <SpeakingExamClient skill={f.skill} unit={f.unit} items={f.q34.items} testTitle={f.title} />;
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+    const profile = user
+      ? await prisma.profile
+          .findUnique({ where: { id: user.id }, select: { studentCode: true, role: true, enrolledCourses: true } })
+          .catch(() => null)
+      : null;
+
+    return (
+      <SpeakingExamClient
+        skill={f.skill}
+        unit={f.unit}
+        items={f.q34.items}
+        testTitle={f.title}
+        testKey={f.q34.slug}
+        signedIn={Boolean(user)}
+        canSubmit={isUsageExempt(profile)}
+      />
+    );
   }
 
   const loaded = await loadPracticePart(f.entry.testNumber, f.part);

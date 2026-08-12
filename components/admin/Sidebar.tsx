@@ -10,6 +10,7 @@ const NAV = [
   { href: "/admin",            icon: "dashboard",    label: "Dashboard",  exact: true },
   { href: "/admin/students",   icon: "group",        label: "Học viên" },
   { href: "/admin/homework",   icon: "assignment",   label: "Bài tập" },
+  { href: "/admin/grading",    icon: "rate_review",  label: "Chấm bài" },
   { href: "/admin/progress",   icon: "trending_up",  label: "Tiến độ" },
   { href: "/admin/classes",    icon: "school",       label: "Lớp học" },
   { href: "/admin/scores",     icon: "analytics",    label: "Điểm số" },

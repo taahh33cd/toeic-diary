@@ -5,20 +5,33 @@ import { ExamShell, ExamDirHeading } from "./ExamShell";
 import { FAMILY, EXAM } from "@/lib/skills/exam-theme";
 import type { Skill, SkillUnit } from "@/lib/skills/structure";
 import type { SpeakingItem } from "@/lib/skills/sample";
+import { SubmissionPanel } from "@/components/skills/SubmissionPanel";
+import { uploadToCloudinary } from "@/lib/cloudinary/upload";
+import type { SubmissionItem } from "@/lib/submissions";
 
 type Phase = "prep" | "respond" | "review";
+
+/** Bản ghi âm của một câu — giữ blob để còn upload khi lưu vào sổ tay. */
+type Rec = { url: string; blob: Blob };
 
 export function SpeakingExamClient({
   skill,
   unit,
   items,
   testTitle,
+  testKey = "",
+  signedIn = false,
+  canSubmit = false,
 }: {
   skill: Skill;
   unit: SkillUnit;
   items: SpeakingItem[];
   /** Có giá trị khi vào từ một bộ đề cụ thể → thoát về danh sách bộ đề. */
   testTitle?: string;
+  testKey?: string;
+  signedIn?: boolean;
+  /** HV đã đăng ký khoá học → được gửi bài cho giáo viên chấm. */
+  canSubmit?: boolean;
 }) {
   const fam = skill.family;
   const color = FAMILY[fam];
@@ -26,14 +39,19 @@ export function SpeakingExamClient({
   const [phase, setPhase] = useState<Phase>("prep");
   const [left, setLeft] = useState(items[0].prepSeconds);
   const [imgError, setImgError] = useState(false);
-  const [recUrl, setRecUrl] = useState<string | null>(null);
+  /** Ghi âm theo từng câu — giữ lại cả bộ để lưu vào sổ tay ở cuối. */
+  const [recs, setRecs] = useState<Record<number, Rec>>({});
   const [recording, setRecording] = useState(false);
 
   const item = items[idx];
   const total = items.length;
+  const recUrl = recs[idx]?.url ?? null;
   const mediaRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
   const streamRef = useRef<MediaStream | null>(null);
+  const idxRef = useRef(0);
+  idxRef.current = idx;
+  const uploadedRef = useRef<Record<number, { url: string; publicId: string }>>({});
 
   const stopRec = useCallback(() => {
     try { mediaRef.current?.state === "recording" && mediaRef.current.stop(); } catch { /* noop */ }
@@ -49,9 +67,14 @@ export function SpeakingExamClient({
       chunksRef.current = [];
       const mr = new MediaRecorder(stream);
       mr.ondataavailable = (e) => { if (e.data.size) chunksRef.current.push(e.data); };
+      const at = idxRef.current;
       mr.onstop = () => {
         const blob = new Blob(chunksRef.current, { type: "audio/webm" });
-        setRecUrl(URL.createObjectURL(blob));
+        if (!blob.size) return;
+        setRecs((prev) => {
+          if (prev[at]) URL.revokeObjectURL(prev[at].url);
+          return { ...prev, [at]: { url: URL.createObjectURL(blob), blob } };
+        });
       };
       mediaRef.current = mr;
       mr.start();
@@ -84,23 +107,56 @@ export function SpeakingExamClient({
     stopRec();
     setPhase("review");
   }
+  /** Sang câu kế — giữ nguyên các bản ghi âm để cuối bộ còn lưu vào sổ tay. */
   function nextItem() {
     stopRec();
-    if (recUrl) URL.revokeObjectURL(recUrl);
-    setRecUrl(null);
-    if (idx < total - 1) {
-      const n = idx + 1;
-      setIdx(n);
-      setPhase("prep");
-      setLeft(items[n].prepSeconds);
-      setImgError(false);
-    } else {
-      // quay lại đầu
-      setIdx(0); setPhase("prep"); setLeft(items[0].prepSeconds); setImgError(false);
-    }
+    const n = idx + 1;
+    setIdx(n);
+    setPhase("prep");
+    setLeft(items[n].prepSeconds);
+    setImgError(false);
+  }
+
+  /** Làm lại từ đầu — xoá hết bản ghi âm cũ. */
+  function restart() {
+    stopRec();
+    setRecs((prev) => {
+      Object.values(prev).forEach((r) => URL.revokeObjectURL(r.url));
+      return {};
+    });
+    uploadedRef.current = {};
+    setIdx(0);
+    setPhase("prep");
+    setLeft(items[0].prepSeconds);
+    setImgError(false);
   }
 
   useEffect(() => () => stopRec(), [stopRec]);
+
+  /**
+   * Upload từng bản ghi âm lên Cloudinary rồi trả về danh sách item để lưu.
+   * Cache lại theo câu để bấm "Lưu" rồi "Gửi chấm" không upload hai lần.
+   */
+  async function buildItems(): Promise<SubmissionItem[]> {
+    const out: SubmissionItem[] = [];
+    for (let i = 0; i < items.length; i++) {
+      const rec = recs[i];
+      let up = uploadedRef.current[i];
+      if (rec && !up) {
+        const file = new File([rec.blob], `speaking-${unit.slug}-${i + 1}.webm`, { type: "audio/webm" });
+        up = await uploadToCloudinary(file);
+        uploadedRef.current[i] = up;
+      }
+      out.push({
+        idx: i,
+        prompt: items[i].imageAlt,
+        imageUrl: items[i].imageUrl,
+        audioUrl: rec ? up?.url : undefined,
+        audioPublicId: rec ? up?.publicId : undefined,
+      });
+    }
+    return out;
+  }
 
   const listHref = `/skills/${skill.slug}/${unit.slug}`;
   const testName = testTitle ? `${skill.label} · ${unit.label} · ${testTitle}` : `${skill.label} · ${unit.label}`;
@@ -116,10 +172,10 @@ export function SpeakingExamClient({
       ? [{ label: "Câu tiếp ▶", variant: "primary" as const, onClick: nextItem }]
       : testTitle
       ? [
-          { label: "Làm lại bộ đề", variant: "ghost" as const, onClick: nextItem },
+          { label: "Làm lại bộ đề", variant: "ghost" as const, onClick: restart },
           { label: "Xong — chọn bộ đề khác ▶", variant: "primary" as const, href: listHref },
         ]
-      : [{ label: "Làm lại từ đầu", variant: "primary" as const, onClick: nextItem }];
+      : [{ label: "Làm lại từ đầu", variant: "primary" as const, onClick: restart }];
 
   return (
     <ExamShell family={fam} testName={testName} questionLabel={`${idx + 1} / ${total}`} exitHref={exitHref} nav={nav}>
@@ -165,6 +221,21 @@ export function SpeakingExamClient({
               {item.tips.map((t, i) => <li key={i} style={{ fontSize: "0.88rem", color: EXAM.inkSoft, lineHeight: 1.55, marginBottom: 4 }}>{t}</li>)}
             </ul>
           </div>
+
+          {/* Cuối bộ đề mới cho lưu — một bản nộp là trọn bộ, không phải từng câu */}
+          {signedIn && idx === total - 1 && Object.keys(recs).length > 0 && (
+            <div style={{ marginTop: 12 }}>
+              <SubmissionPanel
+                variant="exam"
+                skill={skill.slug}
+                unit={unit.slug}
+                testKey={testKey}
+                title={testName}
+                canSubmit={canSubmit}
+                buildItems={buildItems}
+              />
+            </div>
+          )}
         </div>
       )}
 

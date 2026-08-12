@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import type { Skill, SkillUnit } from "@/lib/skills/structure";
+import { SubmissionPanel } from "@/components/skills/SubmissionPanel";
 import {
   Q67_TESTS,
   Q67_DIFF_META,
@@ -31,6 +32,8 @@ type Props = {
   unit: SkillUnit;
   userId: string | null;
   isTestUser: boolean;
+  /** HV đã đăng ký khoá học → được gửi bài cho giáo viên chấm. */
+  canSubmit: boolean;
   bestByTest: BestMap;
 };
 
@@ -310,7 +313,7 @@ function agoLabel(ms: number): string {
 // Main
 // ─────────────────────────────────────
 
-export function WritingEmailClient({ skill, unit, userId, isTestUser, bestByTest }: Props) {
+export function WritingEmailClient({ skill, unit, userId, isTestUser, canSubmit, bestByTest }: Props) {
   const narrow = useIsNarrow();
 
   const [phase, setPhase] = useState<Phase>("list");
@@ -568,6 +571,25 @@ export function WritingEmailClient({ skill, unit, userId, isTestUser, bestByTest
               onToggleMission={(k) => setMissionMarks((prev) => { const n = prev.map((r) => [...r]); n[reviewIdx][k] = !n[reviewIdx][k]; return n; })}
               onToggleForm={(k) => setFormMarks((prev) => { const n = prev.map((r) => [...r]); n[reviewIdx][k] = !n[reviewIdx][k]; return n; })}
               narrow={narrow}
+            />
+          </div>
+        )}
+
+        {userId && (
+          <div style={{ marginBottom: "1.2rem" }}>
+            <SubmissionPanel
+              skill={skill.slug}
+              unit={unit.slug}
+              testKey={test.slug}
+              title={`${skill.label} ${unit.label} · ${Q67_DIFF_META[test.difficulty].label} ${test.label}`}
+              canSubmit={canSubmit}
+              buildItems={() =>
+                prompts.map((p, i) => ({
+                  idx: i,
+                  prompt: p.directions,
+                  text: answers[i] ?? "",
+                }))
+              }
             />
           </div>
         )}

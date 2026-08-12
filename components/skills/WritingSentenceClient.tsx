@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { ExamShell, ExamDirHeading } from "@/components/skills/exam/ExamShell";
 import { SplitPane } from "@/components/skills/exam/SplitPane";
+import { SubmissionPanel } from "@/components/skills/SubmissionPanel";
 import { FAMILY, EXAM } from "@/lib/skills/exam-theme";
 import type { Skill, SkillUnit } from "@/lib/skills/structure";
 import { type WritingQ15Exercise, type Q15Difficulty, Q15_LEVELS, Q15_PART_KEY, Q15_PASS, Q15_TEST_SIZE, keywordUsed, countWords } from "@/lib/skills/writing-q1-5";
@@ -15,6 +16,8 @@ type Props = {
   exercises: WritingQ15Exercise[];
   userId: string | null;
   isTestUser: boolean;
+  /** HV đã đăng ký khoá học → được gửi bài cho giáo viên chấm. */
+  canSubmit: boolean;
   bestByExercise: Record<string, Best>;
 };
 
@@ -41,7 +44,7 @@ function chunk<T>(arr: T[], n: number): T[][] {
   return out;
 }
 
-export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUser, bestByExercise }: Props) {
+export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUser, canSubmit, bestByExercise }: Props) {
   const color = FAMILY[skill.family];
 
   const [level, setLevel] = useState<Q15Difficulty>("easy");
@@ -273,6 +276,26 @@ export function WritingSentenceClient({ skill, unit, exercises, userId, isTestUs
             {userId && !isTestUser ? "Đã lưu tiến độ ✓" : "Đăng nhập để lưu tiến độ"}
           </p>
         </div>
+
+        {userId && (
+          <div style={{ marginTop: "1rem", textAlign: "left" }}>
+            <SubmissionPanel
+              variant="exam"
+              skill={skill.slug}
+              unit={unit.slug}
+              testKey={`${level}-${activeTest + 1}`}
+              title={`${skill.label} ${unit.label} · ${levelLabel} Test ${activeTest + 1}`}
+              canSubmit={canSubmit}
+              buildItems={() =>
+                testExs.map((e, i) => ({
+                  idx: i,
+                  prompt: `${e.keywords[0]} / ${e.keywords[1]}`,
+                  text: qs[i]?.answer ?? "",
+                }))
+              }
+            />
+          </div>
+        )}
       </ExamShell>
     );
   }

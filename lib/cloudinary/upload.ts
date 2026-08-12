@@ -6,7 +6,9 @@ export async function uploadToCloudinary(
   const preset = process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET;
   if (!cloudName || !preset) throw new Error("Cloudinary chưa được cấu hình");
 
-  const resourceType = file.type.startsWith("video/") ? "video" : "image";
+  // Cloudinary phục vụ audio dưới resource_type "video" — gửi "image" sẽ bị từ chối.
+  const isMedia = file.type.startsWith("video/") || file.type.startsWith("audio/");
+  const resourceType = isMedia ? "video" : "image";
 
   // Cloudinary free plan: hard cap 100 MB/file. Chặn sớm để báo lỗi rõ ràng.
   const MAX_BYTES = 100 * 1024 * 1024;

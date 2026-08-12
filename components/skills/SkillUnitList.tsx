@@ -11,7 +11,7 @@ const READY: Record<string, string> = {
   "writing/q1-5": "Đề mẫu",
 };
 
-export function SkillUnitList({ skill }: { skill: Skill }) {
+export function SkillUnitList({ skill, savedCount = 0 }: { skill: Skill; savedCount?: number }) {
   const fam = FAMILY[skill.family];
 
   return (
@@ -47,6 +47,26 @@ export function SkillUnitList({ skill }: { skill: Skill }) {
           Chọn phần thi để luyện theo đúng giao diện đề thi chính thức.
         </p>
       </div>
+
+      {/* Lối vào sổ tay — xem lại bài đã lưu/đã được chấm */}
+      {savedCount > 0 && (
+        <Link
+          href="/journal/submissions"
+          style={{
+            display: "flex", alignItems: "center", gap: 10, marginBottom: "1.25rem",
+            padding: "0.75rem 0.95rem", borderRadius: "var(--radius-lg)",
+            border: "1px solid var(--border)", background: "var(--bg-secondary)",
+            textDecoration: "none", color: "var(--text-primary)",
+          }}
+        >
+          <span style={{ fontSize: "1.15rem" }} aria-hidden="true">📒</span>
+          <span style={{ flex: 1, fontSize: "0.85rem", fontWeight: 600 }}>
+            Bài {skill.labelVi.toLowerCase()} đã lưu của bạn
+            <span style={{ fontWeight: 500, color: "var(--text-muted)" }}> · {savedCount} bài</span>
+          </span>
+          <span style={{ fontSize: "0.8rem", color: "var(--accent-primary)", fontWeight: 600 }}>Xem lại →</span>
+        </Link>
+      )}
 
       {/* Unit list */}
       <div className="stagger-children animate-slide-up" style={{ display: "flex", flexDirection: "column", gap: "1px", border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", overflow: "hidden", boxShadow: "var(--shadow-md)" }}>

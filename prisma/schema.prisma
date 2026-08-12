@@ -167,6 +167,7 @@ model Profile {
   fullTestAttempts     FullTestAttempt[]
   coursePurchases      CoursePurchase[]
   pictureNotes         PictureNote[]
+  skillSubmissions     SkillSubmission[] @relation("SubmissionAuthor")
 
   @@map("profiles")
 }
@@ -499,4 +500,41 @@ model FullTestAttempt {
   @@index([userId, testSlug])
   @@index([userId, status])
   @@map("full_test_attempts")
+}
+
+/// Bài làm Speaking/Writing học viên tự lưu vào sổ tay và (nếu đã đăng ký khoá)
+/// gửi cho giáo viên chấm. Một bản ghi = một lượt làm trọn một bộ đề.
+/// Khung chung cho mọi unit: chỉ cần (skill, unit, testKey) nên unit mới cắm vào là chạy.
+model SkillSubmission {
+  id       String  @id @default(uuid())
+  userId   String  @map("user_id")
+  profile  Profile @relation("SubmissionAuthor", fields: [userId], references: [id], onDelete: Cascade)
+
+  skill    String // "speaking" | "writing"
+  unit     String // "q3-4" | "q6-7" | "q1-5" | ...
+  testKey  String @map("test_key")   // slug bộ đề, vd "easy-1"; "" nếu unit không chia bộ
+  title    String                     // nhãn hiển thị, vd "Writing Q6-7 · Bộ 1 (Easy)"
+
+  /// "draft" = mới lưu vào sổ tay | "submitted" = đã gửi chấm | "graded" = đã có nhận xét
+  status   String @default("draft")
+
+  /// [{ idx, prompt, text?, audioUrl?, audioPublicId?, durationSec? }]
+  items    Json   @default("[]")
+
+  /// { items: [{ idx, score, comment, corrected }], overall?, audioUrl?, audioPublicId?, band? }
+  feedback Json?
+
+  submittedAt DateTime? @map("submitted_at")
+  gradedBy    String?   @map("graded_by") // Profile.id của giáo viên chấm
+  gradedAt    DateTime? @map("graded_at")
+  /// Điểm TOEIC ước lượng quy đổi từ rubric 0-5 — chỉ để hiện trong sổ tay
+  band        Int?
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([userId, skill, unit])
+  @@index([userId, status])
+  @@index([status, submittedAt])
+  @@map("skill_submissions")
 }
