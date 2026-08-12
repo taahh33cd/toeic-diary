@@ -21,6 +21,7 @@ type TabItem = {
 const TABS: TabItem[] = [
   { href: "/journal",           Icon: IconHome,     labelEn: "Home",       labelVi: "Tổng quan",   exact: true },
   { href: "/journal/scores",    Icon: IconScore,    labelEn: "Score",      labelVi: "Điểm số" },
+  { href: "/journal/submissions", Icon: IconJournal, labelEn: "Submissions", labelVi: "Bài nộp" },
   { href: "/journal/vocab",     Icon: IconVocab,    labelEn: "Vocabulary", labelVi: "Từ vựng" },
   { href: "/journal/missions",  Icon: IconTasks,    labelEn: "Tasks",      labelVi: "Nhiệm vụ" },
   { href: "/journal/schedule",  Icon: IconSchedule, labelEn: "Schedule",   labelVi: "Lịch học" },

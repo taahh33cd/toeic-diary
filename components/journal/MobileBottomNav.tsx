@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import {
   IconHome, IconScore, IconTasks, IconVocab,
-  IconSchedule, IconFee, IconSettings,
+  IconSchedule, IconFee, IconSettings, IconJournal,
 } from "@/components/journal/Icons";
 import { useNavBadges } from "@/hooks/firebase/useNavBadges";
 
@@ -19,6 +19,7 @@ const ITEMS: NavItem[] = [
 ];
 
 const MODAL_ITEMS: NavItem[] = [
+  { href: "/journal/submissions",  Icon: IconJournal,  label: "Bài nộp" },
   { href: "/journal/schedule",     Icon: IconSchedule, label: "Lịch học" },
   { href: "/journal/fee",          Icon: IconFee,      label: "Học phí" },
   { href: "/journal/settings",     Icon: IconSettings, label: "Cài đặt" },
