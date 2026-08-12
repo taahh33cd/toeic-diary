@@ -1,6 +1,7 @@
 // Chỉ dùng ở server: file này import JSON đề (~2.6MB tổng).
 // Component client phải import từ ./parts, ./scoring, ./types.
-import catalogJson from "./data/catalog.json";
+import catalog2026 from "./data/catalog-est-2026.json";
+import catalog2024 from "./data/catalog-est-2024.json";
 import type { Catalog, CatalogEntry, FullTest } from "./types";
 
 export * from "./types";
@@ -19,18 +20,21 @@ export interface ExamSet {
 
 export const EXAM_SETS: ExamSet[] = [
   { slug: "est-2026", title: "PRACTICE TEST EST 2026", subtitle: "10 đề · mới nhất", available: true },
-  { slug: "est-2024", title: "PRACTICE TEST EST 2024", subtitle: "10 đề", available: false },
+  { slug: "est-2024", title: "PRACTICE TEST EST 2024", subtitle: "10 đề", available: true },
   { slug: "new-economy", title: "PRACTICE TEST NEW ECONOMY", subtitle: "10 đề", available: false },
 ];
 
-export const catalog = catalogJson as Catalog;
+const CATALOGS: Record<string, Catalog> = {
+  "est-2026": catalog2026 as Catalog,
+  "est-2024": catalog2024 as Catalog,
+};
 
 export function getExamSet(slug: string): ExamSet | undefined {
   return EXAM_SETS.find((e) => e.slug === slug);
 }
 
 export function listTests(examSlug: string): CatalogEntry[] {
-  return examSlug === catalog.examSlug ? catalog.tests : [];
+  return CATALOGS[examSlug]?.tests ?? [];
 }
 
 export function getCatalogEntry(examSlug: string, testNumber: number): CatalogEntry | undefined {
@@ -52,6 +56,16 @@ const LOADERS: Record<string, () => Promise<{ default: unknown }>> = {
   "est-2026-test-8": () => import("./data/est-2026-test-8.json"),
   "est-2026-test-9": () => import("./data/est-2026-test-9.json"),
   "est-2026-test-10": () => import("./data/est-2026-test-10.json"),
+  "est-2024-test-1": () => import("./data/est-2024-test-1.json"),
+  "est-2024-test-2": () => import("./data/est-2024-test-2.json"),
+  "est-2024-test-3": () => import("./data/est-2024-test-3.json"),
+  "est-2024-test-4": () => import("./data/est-2024-test-4.json"),
+  "est-2024-test-5": () => import("./data/est-2024-test-5.json"),
+  "est-2024-test-6": () => import("./data/est-2024-test-6.json"),
+  "est-2024-test-7": () => import("./data/est-2024-test-7.json"),
+  "est-2024-test-8": () => import("./data/est-2024-test-8.json"),
+  "est-2024-test-9": () => import("./data/est-2024-test-9.json"),
+  "est-2024-test-10": () => import("./data/est-2024-test-10.json"),
 };
 
 export async function loadTest(slug: string): Promise<FullTest | null> {

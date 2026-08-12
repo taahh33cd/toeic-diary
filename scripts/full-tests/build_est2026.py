@@ -588,7 +588,7 @@ def main() -> int:
     ap.add_argument("--test", type=int, help="số đề (1-10)")
     ap.add_argument("--all", action="store_true", help="build cả 10 đề")
     ap.add_argument("--src", default=DEFAULT_SRC)
-    ap.add_argument("--image-map", default=str(OUT_DIR / "images.json"),
+    ap.add_argument("--image-map", default=str(OUT_DIR / "images-est-2026.json"),
                     help="JSON map 'testN/<stem>' → URL ảnh")
     args = ap.parse_args()
 
@@ -608,7 +608,7 @@ def main() -> int:
     targets = range(1, 11) if args.all else [args.test]
     rc = 0
     catalog: dict[int, dict] = {}
-    cat_file = OUT_DIR / "catalog.json"
+    cat_file = OUT_DIR / "catalog-est-2026.json"
     if cat_file.is_file():
         catalog = {int(e["testNumber"]): e for e in json.load(open(cat_file, encoding="utf-8"))["tests"]}
     for n in targets:

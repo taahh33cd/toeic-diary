@@ -22,9 +22,21 @@ import "dotenv/config";
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY!;
 const BUCKET = "audio";
-const PREFIX = "full-tests/est-2026";
-const DEFAULT_SRC = "D:/Compressed/ETS 2026-20260726T081737Z-1-001/ETS 2026";
-const MAP_FILE = path.join(process.cwd(), "lib", "full-tests", "data", "images.json");
+
+/** Mỗi bộ đề một cách đặt tên thư mục con khác nhau. */
+const EXAMS = {
+  "est-2026": {
+    defaultSrc: "D:/Compressed/ETS 2026-20260727T130940Z-1-001/ETS 2026",
+    lcNames: (n: number) => [`ETS 2026 LC/test ${n}`, `ETS 2026 LC/test${n}`],
+  },
+  "est-2024": {
+    // tên thư mục LC của bộ 2024 có dấu cách ở đầu
+    defaultSrc: "D:/ETS 2024",
+    lcNames: (n: number) => [` ETS 2024 LC/${n}`, `ETS 2024 LC/${n}`],
+  },
+} as const;
+
+type ExamSlug = keyof typeof EXAMS;
 
 if (!SUPABASE_URL || !SUPABASE_KEY) {
   console.error("Thiếu NEXT_PUBLIC_SUPABASE_URL hoặc SUPABASE_SERVICE_ROLE_KEY trong .env");
@@ -33,18 +45,26 @@ if (!SUPABASE_URL || !SUPABASE_KEY) {
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
-function lcDir(src: string, n: number): string {
-  for (const name of [`test ${n}`, `test${n}`]) {
-    const p = path.join(src, "ETS 2026 LC", name);
+function lcDir(exam: ExamSlug, src: string, n: number): string {
+  for (const rel of EXAMS[exam].lcNames(n)) {
+    const p = path.join(src, ...rel.split("/"));
     if (fs.existsSync(p)) return p;
   }
-  throw new Error(`không thấy folder LC của đề ${n}`);
+  throw new Error(`không thấy folder LC của đề ${n} (${exam})`);
 }
 
 async function main() {
   const args = process.argv.slice(2);
+  const examIdx = args.indexOf("--exam");
+  const exam = (examIdx >= 0 ? args[examIdx + 1] : "est-2026") as ExamSlug;
+  if (!EXAMS[exam]) {
+    console.error(`--exam phải là một trong: ${Object.keys(EXAMS).join(", ")}`);
+    process.exit(1);
+  }
+  const PREFIX = `full-tests/${exam}`;
+  const MAP_FILE = path.join(process.cwd(), "lib", "full-tests", "data", `images-${exam}.json`);
   const srcIdx = args.indexOf("--src");
-  const src = srcIdx >= 0 ? args[srcIdx + 1] : DEFAULT_SRC;
+  const src = srcIdx >= 0 ? args[srcIdx + 1] : EXAMS[exam].defaultSrc;
   const only = args.filter((a) => /^\d+$/.test(a)).map(Number);
   const tests = only.length ? only : Array.from({ length: 10 }, (_, i) => i + 1);
 
@@ -57,7 +77,7 @@ async function main() {
   let failed = 0;
 
   for (const n of tests) {
-    const dir = path.join(lcDir(src, n), "ảnh");
+    const dir = path.join(lcDir(exam, src, n), "ảnh");
     if (!fs.existsSync(dir)) {
       console.warn(`⚠ đề ${n}: không có folder ảnh`);
       continue;
@@ -93,7 +113,7 @@ async function main() {
   fs.writeFileSync(MAP_FILE, JSON.stringify(map, null, 1), "utf8");
   console.log(`\n✓ upload ${uploaded} · bỏ qua ${skipped} (đã có) · lỗi ${failed}`);
   console.log(`  map: ${MAP_FILE} (${Object.keys(map).length} ảnh)`);
-  console.log(`  chạy lại: python scripts/full-tests/build_est2026.py --all`);
+  console.log(`  chạy lại: python scripts/full-tests/build_${exam.replace("-", "")}.py --all`);
   if (failed) process.exit(1);
 }
 
