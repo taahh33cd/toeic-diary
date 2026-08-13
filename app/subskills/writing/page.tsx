@@ -15,7 +15,7 @@ const PARTS = [
     href: "/subskills/writing/part2",
     label: "Part 2",
     labelVi: "Viết e-mail",
-    description: "7 tầng kỹ năng · 5 bộ test mỗi tầng · có Tầng 0 cho người mới bắt đầu",
+    description: "10 tầng kỹ năng xếp theo band điểm · có Tầng 0 cho người mới và Tầng 9 nộp bài giáo viên chấm",
     active: true,
   },
 ];

@@ -17,6 +17,7 @@ import type {
   ErrorSpotEx,
   MissionAuditEx,
   CompareEx,
+  TrimEx,
 } from "@/lib/subskills/writing-part2";
 import { normP2, matchesAccepted, isNearMiss, dbPartW2 } from "@/lib/subskills/writing-part2";
 
@@ -1107,6 +1108,95 @@ function CompareCard({ ex, onResult }: { ex: CompareEx; onResult: (score: number
 }
 
 // ─────────────────────────────────────
+// Tầng 8 — bỏ bớt câu thừa khỏi thư nháp
+// ─────────────────────────────────────
+
+function TrimCard({ ex, onResult }: { ex: TrimEx; onResult: (score: number) => void }) {
+  const [cut, setCut] = useState<Set<number>>(new Set());
+  const [submitted, setSubmitted] = useState(false);
+
+  const shouldCut = new Set(ex.cutIndexes);
+  // Chấm theo từng dòng: giữ đúng cũng được điểm như bỏ đúng, nên đoán bừa "bỏ hết" không ăn được.
+  const correctLines = ex.lines.filter((_, i) => cut.has(i) === shouldCut.has(i)).length;
+  const score = Math.round((correctLines / ex.lines.length) * 100);
+
+  function toggle(i: number) {
+    if (submitted) return;
+    setCut((prev) => {
+      const next = new Set(prev);
+      if (next.has(i)) next.delete(i);
+      else next.add(i);
+      return next;
+    });
+  }
+
+  return (
+    <div>
+      <DirectionsBox text={ex.directions} />
+      {ex.intro && <p style={{ fontSize: "0.87rem", color: "var(--text-secondary)", marginBottom: "0.8rem", lineHeight: 1.55 }}>{ex.intro}</p>}
+
+      <p style={{ fontSize: "0.85rem", color: "var(--text-primary)", fontWeight: 600, marginBottom: "0.6rem" }}>
+        Bấm vào những câu <span style={{ color: RED }}>nên BỎ</span> khỏi thư nháp:
+      </p>
+
+      <div style={{ border: "1px solid var(--border)", borderRadius: 10, overflow: "hidden", marginBottom: "0.9rem" }}>
+        {ex.lines.map((line, i) => {
+          const picked = cut.has(i);
+          const mustCut = shouldCut.has(i);
+          const ok = picked === mustCut;
+
+          let bg = i % 2 === 0 ? "var(--bg-secondary)" : "var(--bg-primary)";
+          let border = "var(--border)";
+          if (submitted) {
+            bg = ok ? "rgba(34,197,94,0.08)" : "rgba(239,68,68,0.1)";
+            border = ok ? "rgba(34,197,94,0.4)" : "rgba(239,68,68,0.45)";
+          } else if (picked) {
+            bg = "rgba(239,68,68,0.1)";
+            border = "rgba(239,68,68,0.4)";
+          }
+
+          return (
+            <div key={i} style={{ borderBottom: i < ex.lines.length - 1 ? `1px solid ${border}` : "none" }}>
+              <button
+                onClick={() => toggle(i)}
+                disabled={submitted}
+                style={{ display: "flex", gap: 10, alignItems: "flex-start", width: "100%", padding: "9px 13px", background: bg, border: "none", cursor: submitted ? "default" : "pointer", textAlign: "left", fontFamily: "inherit", color: "var(--text-primary)" }}
+              >
+                <span style={{ fontSize: "0.72rem", fontWeight: 700, color: "var(--text-muted)", minWidth: 16, flexShrink: 0, marginTop: 2 }}>{i + 1}</span>
+                <span style={{ fontSize: "0.87rem", lineHeight: 1.6, flex: 1, textDecoration: picked ? "line-through" : "none", opacity: picked && !submitted ? 0.6 : 1 }}>
+                  {line}
+                </span>
+                <span style={{ flexShrink: 0, fontSize: "0.8rem", marginTop: 1 }}>
+                  {submitted ? (mustCut ? "✂" : "✓") : picked ? "✂" : ""}
+                </span>
+              </button>
+
+              {submitted && ex.reasons[String(i)] && (
+                <p style={{ margin: 0, padding: "0 13px 9px 39px", fontSize: "0.77rem", lineHeight: 1.55, color: mustCut ? RED : GREEN, background: bg }}>
+                  {mustCut ? "Bỏ — " : "Giữ — "}{ex.reasons[String(i)]}
+                </p>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {!submitted ? (
+        <CheckButton onClick={() => { setSubmitted(true); onResult(score); }} disabled={cut.size === 0} />
+      ) : (
+        <div>
+          <ResultBadge score={score} />
+          <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", margin: "0.45rem 0 0" }}>
+            Đúng {correctLines}/{ex.lines.length} dòng · phải bỏ {ex.cutIndexes.length} câu
+          </p>
+          <Explanation text={ex.explanation} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────
 // Dispatcher
 // ─────────────────────────────────────
 
@@ -1124,6 +1214,7 @@ function ExerciseCard({ ex, emails, onResult }: { ex: P2Exercise; emails: Record
     case "error_spot": return <ErrorSpotCard ex={ex} onResult={onResult} />;
     case "mission_audit": return <MissionAuditCard ex={ex} onResult={onResult} />;
     case "compare": return <CompareCard ex={ex} onResult={onResult} />;
+    case "trim": return <TrimCard ex={ex} onResult={onResult} />;
   }
 }
 

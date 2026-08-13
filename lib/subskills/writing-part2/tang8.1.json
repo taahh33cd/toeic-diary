@@ -1,0 +1,369 @@
+{
+  "emails": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "trim",
+          "id": "t8-1-e1",
+          "directions": "Respond to the invitation. In your e-mail, state whether you can attend and ask ONE question.",
+          "intro": "Thư nháp dưới đây làm đủ mission rồi, nhưng vẫn còn câu thừa. Câu thừa không được cộng điểm mà lại mở thêm cơ hội sai ngữ pháp.",
+          "lines": [
+            "Thank you for the invitation to the vendor workshop.",
+            "I am pleased to confirm that I will be able to attend on March 12.",
+            "Our department has been extremely busy this quarter because we are launching three new product lines, and many of my colleagues have been working overtime almost every evening.",
+            "Could you let me know whether lunch will be provided?",
+            "I have attended many workshops like this before and I always find them very useful for my professional development."
+          ],
+          "cutIndexes": [2, 4],
+          "reasons": {
+            "0": "câu đệm mở đầu, ngắn và an toàn, giúp thư không cộc lốc.",
+            "1": "mission 1, lại có ngày cụ thể nên rất chắc điểm.",
+            "2": "kể lể lý do không ai hỏi. Ba mệnh đề lồng nhau, thì hiện tại hoàn thành tiếp diễn — dài mà không cộng điểm nào.",
+            "3": "mission 2, đúng là câu hỏi thật.",
+            "4": "cảm nghĩ cá nhân. Ý này hợp với bài luận Q8 chứ không thuộc e-mail Q6-7."
+          },
+          "explanation": "Nguyên tắc của cả tầng: mỗi câu viết ra phải trả lời được «câu này phục vụ mission nào?». Không trả lời được thì bỏ. Hai câu bị cắt ở đây dài tổng cộng gần 50 từ mà không đem về điểm nào."
+        },
+        {
+          "type": "trim",
+          "id": "t8-1-e2",
+          "directions": "Respond to the customer's complaint. In your e-mail, make an apology and provide ONE piece of information.",
+          "lines": [
+            "We are very sorry that your order arrived three days later than promised.",
+            "Your replacement package was shipped this morning and should reach you by Thursday.",
+            "Our warehouse has been dealing with a shortage of drivers ever since one of our partners closed its depot last month, which is something we are still trying to solve.",
+            "Please accept our apologies once again for all the trouble this has caused you and your family during this busy period."
+          ],
+          "cutIndexes": [2, 3],
+          "reasons": {
+            "0": "mission 1 — xin lỗi, gọn và thẳng vào việc.",
+            "1": "mission 2 — thông tin cụ thể, có mốc thời gian.",
+            "2": "đổ lỗi cho đối tác. Khách không cần biết, mà câu còn có mệnh đề quan hệ «which» dễ viết sai.",
+            "3": "xin lỗi lần hai. Mission «make an apology» đã xong ở câu 1 rồi, lặp lại không được cộng thêm."
+          },
+          "explanation": "Hai lỗi rất hay gặp cùng lúc trong một thư: giải thích quá đà và xin lỗi hai lần. Mỗi mission chỉ cần một câu làm tốt là đủ."
+        },
+        {
+          "type": "trim",
+          "id": "t8-1-e3",
+          "directions": "Respond to the e-mail from the recruiter. In your e-mail, ask TWO questions.",
+          "lines": [
+            "Thank you for inviting me to the second interview.",
+            "What time should I arrive at your office on Monday?",
+            "I would recommend scheduling the interview in the morning because traffic gets heavy after eleven.",
+            "Should I bring a printed copy of my portfolio?",
+            "I studied graphic design for four years and worked at two agencies before applying for this position."
+          ],
+          "cutIndexes": [2, 4],
+          "reasons": {
+            "0": "câu đệm mở đầu, chấp nhận được.",
+            "1": "câu hỏi 1 — hỏi giờ, xin một dữ kiện.",
+            "2": "đề xuất. Directions chỉ giao «ask TWO questions», suggestion không được tính mà còn hơi vô duyên khi mình là ứng viên.",
+            "3": "câu hỏi 2 — Yes/No question hợp lệ.",
+            "4": "kể lại CV. Người tuyển dụng đã đọc hồ sơ rồi, câu này thừa hoàn toàn."
+          },
+          "explanation": "Cắt xong còn 3 câu, đủ mission và không câu nào có nguy cơ sai. Đề TOEIC Q6-7 chấm việc bạn LÀM ĐÚNG VIỆC, không chấm bạn viết được bao nhiêu chữ."
+        },
+        {
+          "type": "trim",
+          "id": "t8-1-e4",
+          "directions": "Respond to the tenant's e-mail. In your e-mail, make an apology and make ONE suggestion.",
+          "lines": [
+            "I am sorry to hear that the construction noise has been disturbing you in the mornings.",
+            "You might consider using the quiet study room on the second floor between 8 and 11 a.m.",
+            "The building owner told us that the renovation was approved by the city council in January, and the schedule was posted on the notice board near the lift last week.",
+            "If you want, I can also give you the phone number of the contractor so you can call them yourself and ask them how long the work will continue."
+          ],
+          "cutIndexes": [2, 3],
+          "reasons": {
+            "0": "mission 1 — xin lỗi đúng chuyện người ta than phiền.",
+            "1": "mission 2 — đề xuất cụ thể, có địa điểm và khung giờ.",
+            "2": "bào chữa bằng thủ tục hành chính. Dài, nhiều mệnh đề, mà người thuê nhà chẳng quan tâm.",
+            "3": "đẩy việc sang cho khách tự gọi. Đây thành đề xuất thứ hai, mà Directions chỉ giao MỘT."
+          },
+          "explanation": "Chú ý câu 4: nó không sai ngữ pháp, cũng không lạc đề — nhưng Directions ghi «ONE suggestion», viết hai cái không được cộng đôi. Thừa mission cũng là thừa."
+        },
+        {
+          "type": "trim",
+          "id": "t8-1-e5",
+          "directions": "Respond to the e-mail. In your e-mail, provide TWO pieces of information.",
+          "lines": [
+            "Thank you for your order of twelve office chairs.",
+            "The chairs will be delivered to your Hanoi office on October 3rd.",
+            "The total amount, including delivery, is 18,400,000 VND.",
+            "We hope you will be satisfied with the quality of our products, which are manufactured using sustainable materials sourced from certified suppliers across the region."
+          ],
+          "cutIndexes": [3],
+          "reasons": {
+            "0": "câu đệm mở đầu, ngắn gọn.",
+            "1": "thông tin 1 — ngày giao, địa điểm cụ thể.",
+            "2": "thông tin 2 — số tiền cụ thể.",
+            "3": "quảng cáo. Mệnh đề quan hệ + phân từ quá khứ + cụm giới từ nối đuôi nhau — một câu này chứa nhiều rủi ro ngữ pháp hơn cả ba câu trên cộng lại."
+          },
+          "explanation": "Bài này chỉ có một câu cần bỏ — chọn bừa cả bốn dòng thì mất điểm. Câu 4 nghe rất «Tây» nhưng đó chính là kiểu câu học viên hay chép từ mẫu rồi chia sai."
+        },
+        {
+          "type": "trim",
+          "id": "t8-1-e6",
+          "directions": "Respond to the survey invitation. In your e-mail, agree to participate and make ONE request.",
+          "lines": [
+            "I would be happy to take part in your customer survey.",
+            "Could you send the survey link to my personal e-mail address instead?",
+            "I have been a customer of your bank since 2019 and I have never had any serious problem with your service, apart from one incident at the branch downtown two years ago.",
+            "Please let me know the deadline for completing it."
+          ],
+          "cutIndexes": [2, 3],
+          "reasons": {
+            "0": "mission 1 — đồng ý tham gia.",
+            "1": "mission 2 — yêu cầu gửi link sang mail khác.",
+            "2": "kể chuyện cá nhân, lại còn tự khơi ra một sự cố cũ. Vừa thừa vừa tự tạo rắc rối cho chính mình.",
+            "3": "yêu cầu thứ hai. Directions chỉ giao MỘT request nên câu này không được cộng."
+          },
+          "explanation": "Câu 3 minh hoạ một rủi ro riêng: viết thêm là tự mở ra chủ đề mới mà mình không kiểm soát được. Trong phòng thi, mỗi ý mới là một cơ hội sai thì, sai giới từ, sai mệnh đề."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t8-1-m1",
+          "question": "Cùng một ý «tôi sẽ dự buổi họp sáng thứ Ba». Bản nào an toàn nhất trong phòng thi?",
+          "options": [
+            { "id": "A", "text": "I will attend the Tuesday morning session." },
+            { "id": "B", "text": "I am writing to inform you that I would like to let you know that I will be attending the session which will be held on Tuesday morning." },
+            { "id": "C", "text": "Attending the Tuesday morning session is what I have decided to do after considering my schedule." },
+            { "id": "D", "text": "It is my intention to be attending the session of Tuesday morning." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "(A) ✅ 7 từ, một chủ ngữ một động từ, không có chỗ nào sai được.\n(B) ❌ lặp «I am writing to inform you» và «I would like to let you know» — hai lần nói cùng một việc, lại thêm mệnh đề quan hệ thừa.\n(C) ❌ đảo thành cụm danh động từ làm chủ ngữ, câu vòng vo mà nghĩa vẫn thế.\n(D) ❌ «be attending» sau «my intention to» sai thì; «of Tuesday morning» sai giới từ.\nBài học: bản ngắn nhất thường là bản ít lỗi nhất."
+        },
+        {
+          "type": "mcq",
+          "id": "t8-1-m2",
+          "question": "Câu sau có lỗi gì? «The report which I sent you last week were reviewed by the manager who have already approved it.»",
+          "options": [
+            { "id": "A", "text": "Hai lỗi chia động từ: «were» phải là «was», «have» phải là «has»" },
+            { "id": "B", "text": "Chỉ sai «were» — «have» đúng vì đi với «who»" },
+            { "id": "C", "text": "Không sai gì, chỉ hơi dài" },
+            { "id": "D", "text": "Sai «which», phải dùng «that»" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Chủ ngữ thật là «The report» (số ít) → «was». Mệnh đề quan hệ «who» thay cho «the manager» (số ít) → «has».\nHai mệnh đề quan hệ lồng nhau đã đẩy chủ ngữ ra xa động từ, và đó chính là lúc người viết chia sai. Viết thành hai câu ngắn thì không ai sai: «I sent you the report last week. The manager has already approved it.»"
+        },
+        {
+          "type": "mcq",
+          "id": "t8-1-m3",
+          "question": "Directions ghi «make ONE request». Bản nào vừa xong mission vừa ít rủi ro nhất?",
+          "options": [
+            { "id": "A", "text": "Please send us the receipt by Friday." },
+            { "id": "B", "text": "I was wondering if it would be possible for you to consider sending us the receipt, if that is not too much trouble, by Friday at the latest." },
+            { "id": "C", "text": "The receipt should be sent by you before Friday comes." },
+            { "id": "D", "text": "We need you to be sending the receipt until Friday." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "(A) ✅ đủ lịch sự cho e-mail công việc, có mốc thời gian, 7 từ.\n(B) ❌ lịch sự quá hoá lê thê; càng nhiều mệnh đề chèn giữa càng dễ đứt mạch.\n(C) ❌ bị động không cần thiết, «before Friday comes» là dịch từng chữ từ tiếng Việt.\n(D) ❌ «be sending» sai thì, «until Friday» sai nghĩa (until = cho tới khi, phải là «by Friday»)."
+        },
+        {
+          "type": "mcq",
+          "id": "t8-1-m4",
+          "question": "Thư trả lời dài 190 từ, làm đủ 3 mission nhưng có 4 lỗi ngữ pháp. Thư khác dài 95 từ, đủ 3 mission, không lỗi nào. Thư nào điểm cao hơn?",
+          "options": [
+            { "id": "A", "text": "Thư 95 từ — đủ mission mà không lỗi" },
+            { "id": "B", "text": "Thư 190 từ — dài hơn thì thể hiện được nhiều vốn từ hơn" },
+            { "id": "C", "text": "Bằng điểm — vì cùng làm đủ 3 mission" },
+            { "id": "D", "text": "Thư 190 từ — vì Q6-7 chấm theo độ dài" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Rubric Q6-7 chấm ba thứ: đủ mission, ngữ pháp/từ vựng, và tổ chức thư. Đủ mission thì cả hai đều đạt, nhưng lỗi ngữ pháp thì chỉ thư dài bị trừ.\nLưu ý phân biệt: mẹo «viết dư một chút cho chắc» là mẹo của Q8 (bài luận, có yêu cầu độ dài ~300 từ). Q6-7 KHÔNG có yêu cầu độ dài — viết dài chỉ tăng rủi ro."
+        },
+        {
+          "type": "mcq",
+          "id": "t8-1-m5",
+          "question": "Trong bốn câu dưới đây, câu nào nên BỎ khỏi thư trả lời khách hàng khiếu nại giao hàng chậm?",
+          "options": [
+            { "id": "A", "text": "As you may know, the logistics industry across the whole region has been facing unprecedented difficulties since the beginning of the year." },
+            { "id": "B", "text": "We are sorry for the delay in your delivery." },
+            { "id": "C", "text": "Your package will arrive on Thursday." },
+            { "id": "D", "text": "Could you confirm your current address?" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "(A) ❌ nói chuyện vĩ mô, khách không quan tâm, mà câu lại dài và dùng từ khó («unprecedented») — rủi ro cao, lợi ích bằng không.\n(B), (C), (D) đều ngắn và mỗi câu gánh một mission rõ ràng.\nMẹo tự soi: câu nào bắt đầu bằng «As you may know…» hay «It is well known that…» thì gần như chắc chắn là câu thừa."
+        },
+        {
+          "type": "mcq",
+          "id": "t8-1-m6",
+          "question": "«Chia đôi câu dài» — bản nào là cách tách đúng cho câu này? «Because the shipment was delayed due to the storm which hit the port last Monday, we have decided to offer you a full refund.»",
+          "options": [
+            { "id": "A", "text": "The storm hit the port last Monday and delayed the shipment. We have decided to offer you a full refund." },
+            { "id": "B", "text": "Because the shipment was delayed. Due to the storm which hit the port last Monday. We have decided to offer you a full refund." },
+            { "id": "C", "text": "The shipment was delayed. Because of the storm. Which hit the port last Monday. We offer a refund." },
+            { "id": "D", "text": "Delaying the shipment, the storm hitting the port last Monday, we have decided to offer a full refund." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "(A) ✅ hai câu hoàn chỉnh, mỗi câu một chủ ngữ một động từ chính.\n(B) ❌ «Because the shipment was delayed.» là mệnh đề phụ đứng một mình → câu cụt.\n(C) ❌ «Which hit the port last Monday.» cũng là mệnh đề quan hệ đứng một mình → câu cụt.\n(D) ❌ hai cụm phân từ treo lơ lửng, không có chủ ngữ hợp lý.\nTách câu là kỹ năng, không phải cứ thấy dấu phẩy là chấm."
+        },
+        {
+          "type": "mcq",
+          "id": "t8-1-m7",
+          "question": "Directions ghi «provide ONE piece of information». Học viên viết đủ thông tin rồi viết thêm hai câu nữa cho dài. Điều gì xảy ra?",
+          "options": [
+            { "id": "A", "text": "Không được cộng điểm mission, và nếu hai câu đó có lỗi thì bị trừ" },
+            { "id": "B", "text": "Được cộng điểm vì viết nhiều hơn yêu cầu" },
+            { "id": "C", "text": "Bị trừ điểm ngay lập tức vì viết thừa" },
+            { "id": "D", "text": "Không ảnh hưởng gì cả, giám khảo chỉ đọc câu đầu" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Viết thừa không bị phạt riêng — nhưng cũng không được thưởng. Cái nguy là phần thừa vẫn nằm trong bài và vẫn bị soi ngữ pháp.\n(C) sai — không có luật trừ điểm vì dài.\n(D) sai — giám khảo đọc cả thư.\nNói cách khác: viết thêm là cá cược một chiều, thắng không được gì mà thua thì mất điểm."
+        },
+        {
+          "type": "mcq",
+          "id": "t8-1-m8",
+          "question": "Câu hỏi tự soi nào nên đặt ra cho TỪNG câu trước khi nộp bài Q6-7?",
+          "options": [
+            { "id": "A", "text": "«Câu này phục vụ mission nào trong Directions?» — không trả lời được thì xoá" },
+            { "id": "B", "text": "«Câu này đã đủ dài chưa?» — chưa đủ thì thêm mệnh đề" },
+            { "id": "C", "text": "«Câu này có từ vựng khó không?» — chưa có thì thay từ khó vào" },
+            { "id": "D", "text": "«Câu này nghe có giống người bản xứ không?»" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "(A) ✅ đây là bộ lọc duy nhất cần dùng cho Q6-7, và cũng là checklist bạn sẽ dùng ở Tầng 9.\n(B), (C) ❌ đi ngược lại toàn bộ tầng này — thêm mệnh đề và thay từ khó chính là hai nguồn sinh lỗi lớn nhất.\n(D) ❌ tiêu chí mơ hồ, không tự kiểm được trong 10 phút làm bài."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "trim",
+          "id": "t8-1-h1",
+          "directions": "Respond to the e-mail as if you were a hotel manager. In your e-mail, make an apology, provide ONE piece of information and make ONE suggestion.",
+          "intro": "Thư này dài 7 câu. Đủ mission rồi — hãy cắt phần thừa mà vẫn giữ nguyên 3 mission.",
+          "lines": [
+            "Dear Mr. Alvarez,",
+            "I sincerely apologize for the noise from the pool area during your stay last weekend.",
+            "The pool deck is being resurfaced and the work will be finished on November 20th.",
+            "For your next visit, you might consider requesting a room on the eighth floor, which faces the garden.",
+            "Our hotel has been serving business travellers for more than thirty years and we take every single comment from our valued guests extremely seriously.",
+            "Once again, I am truly sorry that your stay did not meet the standard you expected from us.",
+            "Sincerely, Daniel Pham"
+          ],
+          "cutIndexes": [4, 5],
+          "reasons": {
+            "0": "xưng hô đầu thư — bắt buộc phải có.",
+            "1": "mission 1 — xin lỗi, đúng chuyện, gọn.",
+            "2": "mission 2 — thông tin có mốc ngày cụ thể.",
+            "3": "mission 3 — đề xuất cụ thể (tầng 8, hướng vườn).",
+            "4": "quảng cáo khách sạn. Câu dài nhất thư, chứa «has been serving» + «every single» + «extremely» mà không gánh mission nào.",
+            "5": "xin lỗi lần hai — mission 1 đã xong ở câu 2.",
+            "6": "lời chào cuối + ký tên — bắt buộc phải có."
+          },
+          "explanation": "Bẫy của bài này là dòng 1 và dòng 7: xưng hô và chào cuối trông như «không phải mission» nhưng chúng thuộc phần tổ chức thư, thiếu là bị trừ. Chỉ cắt phần thân thư không phục vụ mission nào."
+        },
+        {
+          "type": "trim",
+          "id": "t8-1-h2",
+          "directions": "Respond to the e-mail as if you were an office administrator. In your e-mail, ask TWO questions and make ONE request.",
+          "intro": "Cẩn thận: có câu trông như hoàn thành mission nhưng thực ra sai LOẠI.",
+          "lines": [
+            "Thank you for letting us know that you will be visiting our office next month.",
+            "How many people will be travelling with you?",
+            "Could you send us the passport details of everyone in your group?",
+            "Would you like us to arrange transport from the airport?",
+            "Which dates work best for the factory tour?",
+            "We are looking forward to showing you around our new production facility, which we opened earlier this year after almost two years of construction."
+          ],
+          "cutIndexes": [3, 5],
+          "reasons": {
+            "0": "câu đệm mở đầu, ngắn và an toàn.",
+            "1": "câu hỏi 1 — xin một con số.",
+            "2": "request — thứ nhận về là hành động gửi giấy tờ.",
+            "3": "«Would you like us to…» là OFFER, không phải question cũng không phải request. Directions không giao mission này.",
+            "4": "câu hỏi 2 — xin một mốc thời gian.",
+            "5": "khoe cơ sở mới. Mệnh đề quan hệ + cụm thời gian dài, không gánh mission nào."
+          },
+          "explanation": "Dòng 4 là bài kiểm tra kép: bạn phải nhớ cả Tầng 7 (offer ≠ question) lẫn Tầng 8 (thừa thì cắt). Cắt xong còn đúng 5 câu, ba câu giữa gánh trọn ba mission."
+        },
+        {
+          "type": "trim",
+          "id": "t8-1-h3",
+          "directions": "Respond to the e-mail as if you were a training coordinator. In your e-mail, provide TWO pieces of information and make ONE suggestion.",
+          "intro": "Thư này có hai câu cùng nói về MỘT thông tin. Chỉ cần giữ câu nào nói rõ hơn.",
+          "lines": [
+            "Thank you for your interest in our project management course.",
+            "The next course begins on January 8th and runs for six weeks.",
+            "The course will start sometime early next year.",
+            "The full fee is 4,500,000 VND, including all materials.",
+            "If you are new to the field, it might be worth taking our one-day introduction workshop first.",
+            "We believe that continuous learning is the key to a successful career in any modern industry."
+          ],
+          "cutIndexes": [2, 5],
+          "reasons": {
+            "0": "câu đệm mở đầu.",
+            "1": "thông tin 1 — có ngày bắt đầu và thời lượng.",
+            "2": "trùng nội dung với dòng 2 nhưng mơ hồ hơn («sometime early next year»). Thông tin mơ hồ không được tính là «a piece of information».",
+            "3": "thông tin 2 — có số tiền cụ thể.",
+            "4": "mission suggestion — cụ thể, có điều kiện áp dụng rõ ràng.",
+            "5": "triết lý chung chung, không phục vụ mission nào."
+          },
+          "explanation": "Bài này dạy một kiểu thừa khác: thừa vì TRÙNG. Khi hai câu nói cùng một việc, giữ câu có số liệu cụ thể và bỏ câu mơ hồ — vừa gọn thư vừa chắc điểm mission."
+        },
+        {
+          "type": "trim",
+          "id": "t8-1-h4",
+          "directions": "Respond to the e-mail as if you were a supplier. In your e-mail, make an apology and make TWO suggestions.",
+          "intro": "Lần này Directions giao HAI suggestion. Đừng cắt nhầm.",
+          "lines": [
+            "Dear Ms. Okafor,",
+            "I am sorry that the blue fabric you ordered is currently out of stock.",
+            "One option would be to switch to the navy fabric, which is available immediately.",
+            "Alternatively, you could wait until March 5th, when the blue fabric arrives from our mill.",
+            "We have worked with this mill for over a decade and their delivery schedule has occasionally been affected by seasonal weather conditions in the highlands.",
+            "Please let me know which option you prefer.",
+            "Best regards, Trung Le"
+          ],
+          "cutIndexes": [4],
+          "reasons": {
+            "0": "xưng hô đầu thư.",
+            "1": "mission 1 — xin lỗi.",
+            "2": "suggestion 1 — đổi sang vải navy.",
+            "3": "suggestion 2 — chờ đến 5/3. Đây là mission thứ ba, KHÔNG được cắt.",
+            "4": "giải thích về nhà máy và thời tiết. Dài, có «has occasionally been affected» dễ chia sai, mà không gánh mission nào.",
+            "5": "câu kết mời phản hồi — thuộc phần tổ chức thư, giữ lại thì thư mới trọn vẹn.",
+            "6": "lời chào cuối + ký tên."
+          },
+          "explanation": "Chỉ đúng MỘT câu cần cắt. Ai quen tay cắt hai câu như các bài trước sẽ mất điểm ở dòng 4 hoặc dòng 6. Luôn đếm lại số mission trong Directions trước khi cầm kéo."
+        },
+        {
+          "type": "trim",
+          "id": "t8-1-h5",
+          "directions": "Respond to the e-mail as if you were a customer. In your e-mail, provide ONE piece of information and ask TWO questions.",
+          "intro": "Bài chốt. Thư dưới đây thừa tới ba câu.",
+          "lines": [
+            "Thank you for confirming my gym membership.",
+            "My membership number is GM-40928.",
+            "I signed up on a Saturday afternoon because that was the only free time I had that week.",
+            "What time does the pool open on weekdays?",
+            "I think the gym should open earlier so that people can exercise before work.",
+            "Do I need to book the yoga classes in advance?",
+            "I used to go to another gym near my house but it closed down last year."
+          ],
+          "cutIndexes": [2, 4, 6],
+          "reasons": {
+            "0": "câu đệm mở đầu.",
+            "1": "mission thông tin — số thẻ cụ thể.",
+            "2": "chi tiết vụn vặt không ai hỏi.",
+            "3": "câu hỏi 1.",
+            "4": "đây là SUGGESTION, không phải câu hỏi. Directions không giao mission này.",
+            "5": "câu hỏi 2.",
+            "6": "kể chuyện phòng gym cũ — hoàn toàn lạc đề."
+          },
+          "explanation": "Cắt xong còn 4 câu, gọn và đủ 3 mission. Ba câu bị bỏ đại diện cho ba kiểu thừa của cả tầng: chi tiết vụn (dòng 3), sai loại mission (dòng 5), và lạc đề (dòng 7)."
+        }
+      ]
+    }
+  ]
+}

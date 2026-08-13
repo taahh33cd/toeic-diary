@@ -15,7 +15,8 @@ import WritingPart2Client from "@/components/subskills/writing/WritingPart2Clien
 type Props = { params: Promise<{ skillId: string }> };
 
 export async function generateStaticParams() {
-  return WRITING_P2_SKILLS.filter((s) => s.active).map((s) => ({ skillId: s.id }));
+  // Tầng có `href` riêng (vd Tầng 9) nằm ở route tĩnh — không sinh param ở đây
+  return WRITING_P2_SKILLS.filter((s) => s.active && !s.href).map((s) => ({ skillId: s.id }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

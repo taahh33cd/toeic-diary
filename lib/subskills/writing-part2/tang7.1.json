@@ -1,0 +1,374 @@
+{
+  "emails": {
+    "A": {
+      "from": "Marion Delgado",
+      "to": "Hartwell Appliances — Customer Service",
+      "subject": "Blender stopped working after two weeks",
+      "sent": "September 8th, 9:14 a.m.",
+      "body": [
+        "Dear Customer Service:",
+        "I bought a Hartwell HX-200 blender from your online store two weeks ago, and it has already stopped turning on. I have tried a different outlet and the problem is the same. I still have the box and the receipt somewhere at home. I would like to know what I should do next.",
+        "Regards,",
+        "Marion Delgado"
+      ],
+      "directions": "Respond to the e-mail as if you were a customer service agent at Hartwell Appliances. In your e-mail, make ONE request and ask ONE question."
+    },
+    "B": {
+      "from": "Priya Raman, Operations Manager",
+      "to": "All warehouse staff",
+      "subject": "Safety training — pick your session",
+      "sent": "September 8th, 4:40 p.m.",
+      "body": [
+        "Dear team,",
+        "We are running the annual safety training in the last week of September. There are two sessions: Tuesday morning and Thursday afternoon. Please let me know which session you will attend and whether you need the materials in print. If you have ideas on how to make the session more useful, I would be glad to hear them.",
+        "Best,",
+        "Priya Raman"
+      ],
+      "directions": "Respond to the e-mail as if you were a warehouse employee. In your e-mail, provide TWO pieces of information and make ONE suggestion."
+    }
+  },
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t7-1-e1",
+          "question": "Câu này thuộc loại nào? «What is your product's serial number?»",
+          "options": [
+            { "id": "A", "text": "Thông tin — cho người ta biết một điều gì đó" },
+            { "id": "B", "text": "Đề xuất — gợi ý người ta nên làm gì" },
+            { "id": "C", "text": "Yêu cầu — bảo người ta LÀM một việc" },
+            { "id": "D", "text": "Câu hỏi — xin người ta một THÔNG TIN" }
+          ],
+          "correctAnswers": ["D"],
+          "explanation": "Bắt đầu bằng WH-word, kết thúc bằng dấu hỏi, và thứ mình muốn nhận về là một MẨU THÔNG TIN (dãy số) → đúng chuẩn câu hỏi. Nếu Directions ghi «ask ONE question» thì câu này ăn trọn điểm."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-e2",
+          "question": "Câu này thuộc loại nào? «Can you provide your product's serial number, so I can check whether it's eligible for an exchange?»",
+          "options": [
+            { "id": "A", "text": "Câu hỏi — vì có dấu hỏi ở cuối" },
+            { "id": "B", "text": "Yêu cầu — bảo người ta LÀM một việc" },
+            { "id": "C", "text": "Đề xuất — gợi ý người ta nên làm gì" },
+            { "id": "D", "text": "Thông tin — cho người ta biết chính sách đổi hàng" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Đây là bẫy kinh điển của Q6-7. Có dấu hỏi và mở đầu bằng «Can you…» nên trông y hệt câu hỏi, nhưng chức năng thật là YÊU CẦU: bảo người ta đi tìm và gửi số serial. So sánh: «What is your serial number?» mới là câu hỏi. Directions ghi «ask ONE question» mà viết câu này → không được tính.\n(A) sai — dấu hỏi không quyết định loại câu, chức năng mới quyết định."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-e3",
+          "question": "Câu này thuộc loại nào? «I would recommend visiting our branch on Fifth Avenue instead.»",
+          "options": [
+            { "id": "A", "text": "Đề xuất — gợi ý người ta nên làm gì" },
+            { "id": "B", "text": "Yêu cầu — bảo người ta LÀM một việc" },
+            { "id": "C", "text": "Thông tin — cho biết địa chỉ chi nhánh" },
+            { "id": "D", "text": "Câu hỏi — hỏi xem họ có muốn đến không" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«I would recommend…» là dấu hiệu ĐỀ XUẤT rõ nhất. Khác yêu cầu ở chỗ: đề xuất thì người ta được quyền từ chối, còn yêu cầu thì mình đang trông chờ họ làm.\n(C) sai — câu có chứa thông tin (Fifth Avenue) nhưng chức năng chính vẫn là khuyên nên đi đâu."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-e4",
+          "question": "Câu này thuộc loại nào? «Our office will be closed on July 4th for the national holiday.»",
+          "options": [
+            { "id": "A", "text": "Thông tin — cho người ta biết một điều gì đó" },
+            { "id": "B", "text": "Đề xuất — gợi ý người ta nên nghỉ" },
+            { "id": "C", "text": "Yêu cầu — bảo người ta đừng đến" },
+            { "id": "D", "text": "Câu hỏi" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Câu trần thuật thuần tuý, không đòi hỏi người nhận làm gì → THÔNG TIN. Directions ghi «provide ONE piece of information» thì đây là mẫu chuẩn.\n(C) sai — có thể suy ra ngụ ý «đừng đến», nhưng chấm bài chấm cái mình VIẾT RA, không chấm cái mình ngụ ý."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-e5",
+          "question": "Câu này thuộc loại nào? «Could you send me a copy of the receipt by Friday?»",
+          "options": [
+            { "id": "A", "text": "Yêu cầu — bảo người ta LÀM một việc" },
+            { "id": "B", "text": "Câu hỏi — xin một thông tin" },
+            { "id": "C", "text": "Đề xuất" },
+            { "id": "D", "text": "Thông tin — báo hạn chót là thứ Sáu" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«Could you send me…» — thứ mình muốn nhận về là một HÀNH ĐỘNG (gửi file), không phải một mẩu thông tin → YÊU CẦU. Mẹo phân biệt nhanh: trả lời được bằng một dữ kiện thì là câu hỏi; phải đứng dậy làm gì đó thì là yêu cầu."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-e6",
+          "question": "Câu này thuộc loại nào? «Where can I find the model number on the device?»",
+          "options": [
+            { "id": "A", "text": "Câu hỏi — xin người ta một THÔNG TIN" },
+            { "id": "B", "text": "Yêu cầu — bảo người ta chỉ đường" },
+            { "id": "C", "text": "Đề xuất" },
+            { "id": "D", "text": "Thông tin" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Trả lời được bằng một dữ kiện («On the bottom panel») → CÂU HỎI. Đây chính là cách chữa cho câu «Can you provide your product's serial number?» ở bài 2: đổi thành WH-question là thành question thật."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-e7",
+          "question": "Câu này thuộc loại nào? «Why don't you try resetting the router before calling technical support?»",
+          "options": [
+            { "id": "A", "text": "Đề xuất — gợi ý người ta nên làm gì" },
+            { "id": "B", "text": "Câu hỏi — vì có dấu hỏi và bắt đầu bằng Why" },
+            { "id": "C", "text": "Yêu cầu" },
+            { "id": "D", "text": "Thông tin" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Bẫy dấu hỏi thứ hai. «Why don't you…» không hề hỏi lý do — đó là khuôn ĐỀ XUẤT quen thuộc, đồng nghĩa với «I suggest you try…».\n(B) sai — nếu là câu hỏi thật thì người ta phải trả lời «Because…», nhưng ở đây câu trả lời tự nhiên là «OK, I'll try»."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-e8",
+          "question": "Câu này thuộc loại nào? «Please note that the refund will appear on your statement within five business days.»",
+          "options": [
+            { "id": "A", "text": "Thông tin — cho người ta biết một điều gì đó" },
+            { "id": "B", "text": "Yêu cầu — vì có chữ «Please»" },
+            { "id": "C", "text": "Đề xuất" },
+            { "id": "D", "text": "Câu hỏi" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Bẫy chữ «Please». «Please note that…» chỉ là cách nói lịch sự để mở đầu một THÔNG TIN, không bắt người ta làm gì cả. So sánh: «Please send us the receipt» mới là yêu cầu thật.\n(B) sai — «Please» đứng trước «note that» thì cả cụm chỉ có tác dụng nhấn mạnh, không tạo ra hành động nào cho người nhận."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t7-1-m1",
+          "emailRef": "A",
+          "question": "Directions ghi «ask ONE question». Câu nào hoàn thành ĐÚNG mission này?",
+          "options": [
+            { "id": "A", "text": "Can you provide your product's serial number, so I can check whether it's eligible for an exchange?" },
+            { "id": "B", "text": "What is the serial number printed on the bottom of your blender?" },
+            { "id": "C", "text": "Please send us a photo of the receipt at your earliest convenience." },
+            { "id": "D", "text": "I would recommend checking the serial number on the back of the device." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "(B) ✅ WH-question, thứ nhận về là một dãy số → câu hỏi thật.\n(A) ❌ Có dấu hỏi nhưng là YÊU CẦU (bảo khách đi lấy số rồi gửi). Đây là lỗi bị mất điểm nhiều nhất ở Q6-7.\n(C) ❌ Yêu cầu lộ liễu, không có dấu hỏi.\n(D) ❌ Đề xuất — lạc hẳn khỏi mission."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-m2",
+          "emailRef": "A",
+          "question": "Vẫn bộ câu đó, nhưng lần này Directions ghi «make ONE request». Chọn TẤT CẢ câu hoàn thành đúng mission.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Can you provide your product's serial number, so I can check whether it's eligible for an exchange?" },
+            { "id": "B", "text": "What is the serial number printed on the bottom of your blender?" },
+            { "id": "C", "text": "Please send us a photo of the receipt at your earliest convenience." },
+            { "id": "D", "text": "I would recommend checking the serial number on the back of the device." }
+          ],
+          "correctAnswers": ["A", "C"],
+          "explanation": "Cùng 4 câu, đổi Directions thì đáp án đảo ngược hoàn toàn — đó là lý do phải nhìn CHỨC NĂNG chứ không nhìn dấu hỏi.\n(A) ✅ và (C) ✅ đều bảo khách LÀM một việc → request.\n(B) ❌ Chỉ xin thông tin, khách trả lời một dòng là xong, không phải request.\n(D) ❌ Đề xuất."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-m3",
+          "emailRef": "B",
+          "question": "Directions ghi «make ONE suggestion». Câu nào hoàn thành đúng mission?",
+          "options": [
+            { "id": "A", "text": "I will attend the Tuesday morning session." },
+            { "id": "B", "text": "Could you print the materials for everyone in my team?" },
+            { "id": "C", "text": "It might be helpful to run a short hands-on demonstration after the slides." },
+            { "id": "D", "text": "How many people have signed up for the Thursday session?" }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "(C) ✅ «It might be helpful to…» — khuôn đề xuất chuẩn, êm tai và không ra lệnh cho cấp trên.\n(A) ❌ Thông tin (đúng mission khác của đề này, nhưng không phải suggestion).\n(B) ❌ Yêu cầu.\n(D) ❌ Câu hỏi."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-m4",
+          "emailRef": "B",
+          "question": "Directions ghi «provide TWO pieces of information». Chọn ĐÚNG HAI câu hoàn thành mission này.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "I will attend the Tuesday morning session." },
+            { "id": "B", "text": "I do not need the materials in print because I read them on my tablet." },
+            { "id": "C", "text": "Why don't we move the session to the afternoon instead?" },
+            { "id": "D", "text": "Could you confirm the room number before Monday?" }
+          ],
+          "correctAnswers": ["A", "B"],
+          "explanation": "E-mail đề hỏi đúng hai thứ: đi buổi nào, và có cần bản in không. (A) ✅ trả lời thứ nhất, (B) ✅ trả lời thứ hai — cả hai đều là câu trần thuật cung cấp dữ kiện.\n(C) ❌ Đề xuất.\n(D) ❌ Yêu cầu.\nMẹo: mission «provide information» hầu như luôn được hoàn thành bằng câu trần thuật, không phải câu có dấu hỏi."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-m5",
+          "question": "«Would you like me to reserve a seat for you in the Thursday session?» — Nếu Directions ghi «ask ONE question», câu này có được tính không?",
+          "options": [
+            { "id": "A", "text": "Có — vì nó là câu hỏi Yes/No hoàn chỉnh" },
+            { "id": "B", "text": "Không — vì đây là lời ĐỀ NGHỊ GIÚP (offer), không phải xin thông tin" },
+            { "id": "C", "text": "Không — vì câu hỏi bắt buộc phải bắt đầu bằng WH-word" },
+            { "id": "D", "text": "Có — vì bất kỳ câu nào có dấu hỏi cũng tính là question" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "«Would you like me to…» là khuôn OFFER — mình xin phép làm giúp một việc, chứ không xin thông tin từ họ.\n(C) sai — câu hỏi Yes/No vẫn được tính, ví dụ «Is the receipt still in the box?» hoàn toàn hợp lệ.\n(D) sai — dấu hỏi không quyết định loại câu."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-m6",
+          "emailRef": "A",
+          "question": "Directions ghi «ask TWO questions». Chọn ĐÚNG HAI câu được tính.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "When did you first notice that the blender would not turn on?" },
+            { "id": "B", "text": "Could you bring the blender to our service centre this week?" },
+            { "id": "C", "text": "Do you still have the original receipt?" },
+            { "id": "D", "text": "Would you like us to send a replacement right away?" }
+          ],
+          "correctAnswers": ["A", "C"],
+          "explanation": "(A) ✅ WH-question xin một mốc thời gian. (C) ✅ Yes/No question xin một dữ kiện — khách trả lời «Yes/No» là xong.\n(B) ❌ Yêu cầu: đòi khách phải đi lại, mang đồ đến.\n(D) ❌ Offer: mình đề nghị làm giúp.\nCả (B) và (D) đều có dấu hỏi — bẫy nằm ở đó."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-m7",
+          "emailRef": "A",
+          "question": "Directions của e-mail A chỉ yêu cầu ONE request + ONE question. Câu nào KHÔNG hoàn thành mission nào cả?",
+          "options": [
+            { "id": "A", "text": "We are very sorry that your new blender stopped working so soon." },
+            { "id": "B", "text": "Please send us a photo of the receipt." },
+            { "id": "C", "text": "What is the serial number on the bottom of the unit?" },
+            { "id": "D", "text": "Could you tell us which outlet you tested it with?" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "(A) ❌ là lời XIN LỖI. Câu này viết ra thì hay, nhưng Directions không giao mission «apologize» nên nó không được tính điểm mission.\n(B) ✅ request. (C) ✅ question. (D) ✅ cũng là question (xin một dữ kiện).\nBài học: viết thêm câu lịch sự thì không sao, nhưng đừng tưởng viết thêm là đã đủ mission."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-m8",
+          "question": "Cặp nào dưới đây là MỘT câu hỏi và MỘT yêu cầu, theo đúng thứ tự đó?",
+          "options": [
+            { "id": "A", "text": "«How long is the warranty period?» / «Please attach the warranty card to your reply.»" },
+            { "id": "B", "text": "«Could you attach the warranty card?» / «How long is the warranty period?»" },
+            { "id": "C", "text": "«Please attach the warranty card.» / «Could you attach it today?»" },
+            { "id": "D", "text": "«How long is the warranty period?» / «What does the warranty cover?»" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "(A) ✅ đúng thứ tự: hỏi thông tin trước, sau đó bảo họ làm một việc.\n(B) ❌ ngược thứ tự — request trước, question sau.\n(C) ❌ hai câu đều là request.\n(D) ❌ hai câu đều là question."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t7-1-h1",
+          "emailRef": "B",
+          "question": "Một học viên trả lời e-mail B như sau. Directions cần TWO pieces of information + ONE suggestion. Chọn TẤT CẢ câu KHÔNG hoàn thành mission nào.\n\n① I would like to thank you for organizing the training this year.\n② I will join the Thursday afternoon session.\n③ Could you let me know how long the session will last?\n④ A printed copy would be helpful for me.\n⑤ Perhaps we could end with a short question-and-answer segment.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "① — lời cảm ơn" },
+            { "id": "B", "text": "② — chọn buổi Thứ Năm" },
+            { "id": "C", "text": "③ — hỏi buổi học kéo dài bao lâu" },
+            { "id": "D", "text": "⑤ — gợi ý thêm phần hỏi đáp" }
+          ],
+          "correctAnswers": ["A", "C"],
+          "explanation": "Directions chỉ giao 3 mission: 2 thông tin + 1 đề xuất.\n① ❌ cảm ơn — câu đệm lịch sự, không phải mission nào.\n③ ❌ câu hỏi — Directions không hề yêu cầu hỏi gì cả, nên viết ra cũng không được cộng.\n② ✅ thông tin 1. ④ ✅ thông tin 2. ⑤ ✅ đề xuất.\nThư này vẫn đủ mission, nhưng ① và ③ là phần thừa — càng viết thừa càng nhiều cơ hội sai ngữ pháp."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-h2",
+          "question": "Một học viên viết ba câu có dấu hỏi. Directions ghi «ask ONE question». Câu nào thực sự được tính?\n\n① Could you please return the damaged item to our store?\n② Which branch is the most convenient for you to visit?\n③ Would you like us to arrange a pickup instead?",
+          "options": [
+            { "id": "A", "text": "Chỉ ①" },
+            { "id": "B", "text": "Chỉ ②" },
+            { "id": "C", "text": "Chỉ ③" },
+            { "id": "D", "text": "Cả ba, vì cả ba đều có dấu hỏi" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "② ✅ WH-question, khách trả lời bằng tên một chi nhánh → xin thông tin.\n① ❌ request (bảo khách mang đồ trả lại).\n③ ❌ offer (mình đề nghị làm giúp).\n(D) sai — ba câu, ba chức năng khác nhau, chỉ một câu đúng loại. Đây đúng là tình huống mất điểm oan: viết nhiều dấu hỏi mà không câu nào là question."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-h3",
+          "question": "Chọn TẤT CẢ câu là YÊU CẦU (request).",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Please forward the invoice to our accounting department." },
+            { "id": "B", "text": "I am writing to confirm that your order has been shipped." },
+            { "id": "C", "text": "Would you mind filling out the short survey attached below?" },
+            { "id": "D", "text": "You may want to keep the tracking number for your records." }
+          ],
+          "correctAnswers": ["A", "C"],
+          "explanation": "(A) ✅ «Please + V» — khuôn request thẳng nhất.\n(C) ✅ «Would you mind + V-ing» — request lịch sự; thứ nhận về là hành động điền khảo sát.\n(B) ❌ thông tin.\n(D) ❌ đề xuất — «You may want to…» chỉ khuyên, không trông chờ họ làm."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-h4",
+          "emailRef": "B",
+          "question": "Directions ghi «make ONE suggestion» và bạn đang viết cho CẤP TRÊN. Câu nào vừa đúng loại vừa đúng mức lịch sự?",
+          "options": [
+            { "id": "A", "text": "You should hold the session in the afternoon so that more people can come." },
+            { "id": "B", "text": "You must change the schedule because Tuesday morning is too busy." },
+            { "id": "C", "text": "It might be worth scheduling both sessions in the afternoon, since the morning shift is usually busiest." },
+            { "id": "D", "text": "Can you change the schedule to the afternoon?" }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "(C) ✅ «It might be worth + V-ing» — đúng loại đề xuất, lại đủ mềm để nói với quản lý, và có kèm lý do nên thuyết phục hơn.\n(A) ❌ đúng loại nhưng «You should» nói với cấp trên thì cộc.\n(B) ❌ «You must» là ra lệnh — sai cả loại lẫn vai.\n(D) ❌ đây là REQUEST chứ không phải suggestion."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-h5",
+          "question": "Directions ghi «ask ONE question and make ONE request». Học viên chỉ viết đúng một câu: «Could you tell me when the shipment arrived?» Kết quả thế nào?",
+          "options": [
+            { "id": "A", "text": "Được tính cả hai mission, vì câu này vừa hỏi vừa nhờ" },
+            { "id": "B", "text": "Chỉ được tính mission «ask ONE question» — vẫn thiếu một request" },
+            { "id": "C", "text": "Chỉ được tính mission «make ONE request» — vẫn thiếu một question" },
+            { "id": "D", "text": "Không được tính mission nào" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "«Could you tell me when…» tuy có vỏ «Could you» nhưng thứ nhận về là một MẨU THÔNG TIN → tính là câu hỏi (gián tiếp).\n(A) sai — một câu chỉ hoàn thành được một mission; đừng mong gộp hai mission vào một câu để tiết kiệm.\nCách chữa: viết thêm một request thật, ví dụ «Please send us the delivery confirmation.»"
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-h6",
+          "question": "Directions ghi «make TWO suggestions». Chọn ĐÚNG HAI câu được tính.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "You might consider booking the earlier flight to avoid the traffic." },
+            { "id": "B", "text": "Please book the earlier flight." },
+            { "id": "C", "text": "Another option would be to stay at the hotel next to the venue." },
+            { "id": "D", "text": "The venue is about forty minutes from the airport." }
+          ],
+          "correctAnswers": ["A", "C"],
+          "explanation": "(A) ✅ «You might consider…» và (C) ✅ «Another option would be…» — hai khuôn đề xuất chuẩn, lại khác nhau nên không bị lặp từ.\n(B) ❌ cùng nội dung với (A) nhưng «Please + V» biến nó thành REQUEST.\n(D) ❌ thông tin.\nSo sánh (A) với (B) để thấy: cùng một ý, chỉ đổi cách mở đầu là đổi luôn loại câu."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-h7",
+          "emailRef": "A",
+          "question": "Học viên viết: «I am writing to ask you to send us the receipt.» Câu này hoàn thành mission nào của e-mail A?",
+          "options": [
+            { "id": "A", "text": "«make ONE request» — vì thứ mình muốn là khách GỬI biên lai" },
+            { "id": "B", "text": "«ask ONE question» — vì trong câu có động từ «ask»" },
+            { "id": "C", "text": "Cả hai mission" },
+            { "id": "D", "text": "Không mission nào, vì câu này chỉ giới thiệu mục đích thư" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Bẫy từ vựng: có chữ «ask» trong câu không có nghĩa là câu đó thành question. «ask somebody to do something» = nhờ ai làm gì → REQUEST.\nĐối chiếu: «ask + WH-clause» («I would like to ask when you bought it») mới là hỏi thông tin.\n(D) sai — «I am writing to…» là câu mở đầu, nhưng phần sau vẫn chứa mission thật."
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-h8",
+          "question": "Bốn câu dưới đây, câu nào ĐỔI LOẠI nếu bỏ đúng một từ «Please» ở đầu?",
+          "options": [
+            { "id": "A", "text": "«Please send us the serial number.» → bỏ Please vẫn là yêu cầu" },
+            { "id": "B", "text": "«Please note that our office closes at 5 p.m.» → bỏ Please vẫn là thông tin" },
+            { "id": "C", "text": "«Please let me know which session you prefer.» → bỏ Please vẫn là yêu cầu" },
+            { "id": "D", "text": "Không câu nào đổi loại — «Please» chưa bao giờ quyết định loại câu" }
+          ],
+          "correctAnswers": ["D"],
+          "explanation": "Đây là bài chốt của cả tầng. «Please» chỉ làm câu lịch sự hơn, không tạo ra hay xoá đi chức năng nào. Cái quyết định loại câu luôn là: mình đang muốn nhận về THÔNG TIN (question), HÀNH ĐỘNG (request), hay chỉ đang ĐƯA RA dữ kiện (information) / gợi ý (suggestion).\nNhớ được điều này thì không còn nhầm «Can you provide…?» với câu hỏi nữa."
+        }
+      ]
+    }
+  ]
+}

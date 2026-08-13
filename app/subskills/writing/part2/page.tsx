@@ -2,12 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
-import { WRITING_P2_SKILLS } from "@/lib/subskills/writing-part2";
+import { WRITING_P2_SKILLS, P2_BANDS, countTestsP2 } from "@/lib/subskills/writing-part2";
 import { countPhrases } from "@/lib/subskills/writing-part2/theory";
 
 export const metadata: Metadata = { title: "Writing Part 2 — Subskills TOEIC" };
-
-const TESTS_PER_SKILL = 5;
 
 export default async function WritingPart2Page() {
   const supabase = await createClient();
@@ -65,14 +63,15 @@ export default async function WritingPart2Page() {
           Writing · Part 2
         </p>
         <h1 style={{ fontSize: "clamp(1.3rem, 3vw, 1.7rem)", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.02em", lineHeight: 1.2, margin: 0 }}>
-          Viết e-mail — 7 tầng kỹ năng
+          Viết e-mail — 10 tầng kỹ năng
         </h1>
         <p style={{ marginTop: "0.5rem", fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
-          Đi từ đọc hiểu đề → nắm bố cục → thuộc công thức câu → tự viết → tự phê bình.
-          Mỗi tầng có 5 bộ test, mỗi bộ gồm 3 cấp độ.
+          Đi từ đọc hiểu đề → nắm bố cục → thuộc công thức câu → viết đúng loại → cắt cho gọn → nộp bài thật.
+          Mỗi tầng chia thành nhiều bộ test, mỗi bộ gồm 3 cấp độ.
         </p>
         <p style={{ marginTop: "0.5rem", fontSize: "0.82rem", color: "var(--text-muted)", lineHeight: 1.6 }}>
-          Chưa viết được câu nào? Bắt đầu từ <strong style={{ color: "var(--text-secondary)" }}>Tầng 0</strong> — chỉ cần chọn và ghép, không phải tự nghĩ ra câu.
+          Các tầng được xếp theo <strong style={{ color: "var(--text-secondary)" }}>band điểm Writing</strong> —
+          vào đúng band đang mắc thì học nhanh hơn là làm tuần tự từ đầu.
         </p>
       </div>
 
@@ -109,19 +108,34 @@ export default async function WritingPart2Page() {
       </Link>
 
       <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 700, marginBottom: "0.6rem" }}>
-        Luyện tập theo tầng
+        Luyện tập theo band điểm
       </p>
+
+      {P2_BANDS.map((band) => {
+      const bandSkills = WRITING_P2_SKILLS.filter((s) => s.band === band.id);
+      if (bandSkills.length === 0) return null;
+
+      return (
+      <div key={band.id} style={{ marginBottom: "1.75rem" }}>
+      <div style={{ display: "flex", alignItems: "baseline", gap: "0.55rem", flexWrap: "wrap", marginBottom: "0.5rem" }}>
+        <span style={{ fontSize: "0.68rem", fontWeight: 800, letterSpacing: "0.08em", color: "var(--accent-primary)", background: "rgba(59,130,246,0.12)", border: "1px solid rgba(59,130,246,0.3)", borderRadius: 5, padding: "2px 8px" }}>
+          BAND {band.id} · {band.range}
+        </span>
+        <span style={{ fontSize: "0.92rem", fontWeight: 700, color: "var(--text-primary)" }}>{band.title}</span>
+        <span style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>{band.blurb}</span>
+      </div>
 
       <div
         className="stagger-children animate-slide-up"
         style={{ display: "flex", flexDirection: "column", gap: "1px", border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", overflow: "hidden", boxShadow: "var(--shadow-md)" }}
       >
-        {WRITING_P2_SKILLS.map((skill, idx) => {
+        {bandSkills.map((skill, idx) => {
+          const totalTests = countTestsP2(skill.id);
           const stats = statsMap[skill.id] ?? { passedTests: 0, doneTests: 0 };
-          const pct = Math.round((stats.doneTests / TESTS_PER_SKILL) * 100);
-          const allPassed = stats.passedTests === TESTS_PER_SKILL;
+          const pct = totalTests > 0 ? Math.round((stats.doneTests / totalTests) * 100) : 0;
+          const allPassed = totalTests > 0 && stats.passedTests === totalTests;
           const anyDone = stats.doneTests > 0;
-          const isLast = idx === WRITING_P2_SKILLS.length - 1;
+          const isLast = idx === bandSkills.length - 1;
           const bg = idx % 2 === 0 ? "var(--bg-primary)" : "var(--bg-secondary)";
           const borderBottom = isLast ? "none" : "1px solid var(--border)";
 
@@ -146,7 +160,7 @@ export default async function WritingPart2Page() {
                     <div style={{ flex: "1 1 100px", maxWidth: 120, height: 3, background: "var(--border)", borderRadius: 999 }}>
                       <div style={{ height: "100%", width: `${pct}%`, background: allPassed ? "rgb(34,197,94)" : "var(--accent-primary)", borderRadius: 999 }} />
                     </div>
-                    <span style={{ fontSize: "0.68rem", color: "var(--text-muted)" }}>{stats.doneTests}/{TESTS_PER_SKILL} test</span>
+                    <span style={{ fontSize: "0.68rem", color: "var(--text-muted)" }}>{stats.doneTests}/{totalTests} test</span>
                     <span style={{ fontSize: "0.68rem", color: "var(--text-muted)" }}>·</span>
                     <span style={{ fontSize: "0.68rem", color: stats.passedTests > 0 ? "rgb(34,197,94)" : "var(--text-muted)" }}>
                       {stats.passedTests} pass (Easy ≥ 80%)
@@ -168,7 +182,7 @@ export default async function WritingPart2Page() {
           return (
             <Link
               key={skill.id}
-              href={`/subskills/writing/part2/${skill.id}`}
+              href={skill.href ?? `/subskills/writing/part2/${skill.id}`}
               className="r-row"
               style={{ display: "flex", alignItems: "flex-start", gap: "1.25rem", padding: "1.3rem 1.6rem", background: bg, textDecoration: "none", borderBottom }}
             >
@@ -178,6 +192,9 @@ export default async function WritingPart2Page() {
           );
         })}
       </div>
+      </div>
+      );
+      })}
 
       <div style={{ width: "100%", marginTop: "3rem" }}>
         <div style={{ height: 1, background: "var(--border)" }} />

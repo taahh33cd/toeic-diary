@@ -141,6 +141,21 @@ export type MissionAuditEx = {
   explanation: string;
 };
 
+/** Tầng 8 — bỏ bớt câu thừa khỏi thư nháp (chọn nhiều dòng) */
+export type TrimEx = {
+  type: "trim";
+  id: string;
+  directions: string;
+  intro?: string;
+  /** các dòng của thư nháp */
+  lines: string[];
+  /** chỉ số các dòng nên BỎ */
+  cutIndexes: number[];
+  /** lý do bỏ / lý do giữ, key = chỉ số dòng */
+  reasons: Record<string, string>;
+  explanation: string;
+};
+
 /** Tầng 6 hard — so sánh 2 bản trả lời cùng một đề */
 export type CompareEx = {
   type: "compare";
@@ -166,7 +181,8 @@ export type P2Exercise =
   | TranslateEx
   | ErrorSpotEx
   | MissionAuditEx
-  | CompareEx;
+  | CompareEx
+  | TrimEx;
 
 export type P2Level = { difficulty: P2Difficulty; exercises: P2Exercise[] };
 export type P2TestData = {
@@ -178,8 +194,18 @@ export type P2TestData = {
 };
 
 // ─────────────────────────────────────
-// Skill metadata — 7 tầng
+// Skill metadata — 10 tầng, xếp theo band điểm
 // ─────────────────────────────────────
+
+/** Band điểm Writing (thang 0–200) mà tầng này nhắm tới */
+export type P2Band = "A" | "B" | "C" | "D";
+
+export const P2_BANDS: { id: P2Band; range: string; title: string; blurb: string }[] = [
+  { id: "A", range: "0–60", title: "Dựng câu", blurb: "Chưa viết nổi một câu e-mail hoàn chỉnh." },
+  { id: "B", range: "70–100", title: "Đúng loại yêu cầu", blurb: "Viết được rồi nhưng hay làm sai loại việc đề giao." },
+  { id: "C", range: "110–140", title: "Gọn và sạch lỗi", blurb: "Đúng loại rồi nhưng còn lan man nên sinh lỗi." },
+  { id: "D", range: "150+", title: "Viết thật", blurb: "Cần đề thật, đồng hồ thật và người chấm thật." },
+];
 
 export type P2SkillMeta = {
   id: string;
@@ -188,6 +214,9 @@ export type P2SkillMeta = {
   description: string;
   dbPartPrefix: string;
   active: boolean;
+  band: P2Band;
+  /** Tầng có route riêng (không đi qua [skillId] + không có bộ test tự chấm) */
+  href?: string;
 };
 
 export const WRITING_P2_SKILLS: P2SkillMeta[] = [
@@ -198,6 +227,7 @@ export const WRITING_P2_SKILLS: P2SkillMeta[] = [
     description: "Dành cho người chưa viết được câu nào. Ghép nửa câu, chọn từ có sẵn, gõ lại câu ngắn.",
     dbPartPrefix: "wp2-tang0",
     active: true,
+    band: "A",
   },
   {
     id: "tang1",
@@ -206,6 +236,7 @@ export const WRITING_P2_SKILLS: P2SkillMeta[] = [
     description: "Đọc email đề + Directions để xác định vai, quan hệ và đếm đủ mission phải làm.",
     dbPartPrefix: "wp2-tang1",
     active: true,
+    band: "B",
   },
   {
     id: "tang2",
@@ -214,6 +245,7 @@ export const WRITING_P2_SKILLS: P2SkillMeta[] = [
     description: "Gắn nhãn chức năng cho từng câu trong email mẫu, rồi tự dựng lại bố cục.",
     dbPartPrefix: "wp2-tang2",
     active: true,
+    band: "B",
   },
   {
     id: "tang3",
@@ -222,6 +254,7 @@ export const WRITING_P2_SKILLS: P2SkillMeta[] = [
     description: "Chọn xưng hô đúng, điền câu mở đầu, ghép cặp mở–kết đúng mức trang trọng.",
     dbPartPrefix: "wp2-tang3",
     active: true,
+    band: "A",
   },
   {
     id: "tang4",
@@ -230,6 +263,7 @@ export const WRITING_P2_SKILLS: P2SkillMeta[] = [
     description: "Cung cấp thông tin · Đề nghị · Xin lỗi · Hỏi thông tin · Câu kết.",
     dbPartPrefix: "wp2-tang4",
     active: true,
+    band: "B",
   },
   {
     id: "tang5",
@@ -238,6 +272,7 @@ export const WRITING_P2_SKILLS: P2SkillMeta[] = [
     description: "Dịch câu email sang tiếng Anh. Chấp nhận nhiều cách viết đúng.",
     dbPartPrefix: "wp2-tang5",
     active: true,
+    band: "C",
   },
   {
     id: "tang6",
@@ -246,6 +281,35 @@ export const WRITING_P2_SKILLS: P2SkillMeta[] = [
     description: "Tìm lỗi trong email trả lời, đối chiếu với Directions, so sánh 2 bản.",
     dbPartPrefix: "wp2-tang6",
     active: true,
+    band: "C",
+  },
+  {
+    id: "tang7",
+    labelVi: "Tầng 7: Đúng loại yêu cầu",
+    label: "Speech Acts",
+    description: "Phân biệt Thông tin · Đề xuất · Yêu cầu · Câu hỏi. Sai loại là mất điểm cả câu.",
+    dbPartPrefix: "wp2-tang7",
+    active: true,
+    band: "B",
+  },
+  {
+    id: "tang8",
+    labelVi: "Tầng 8: Cắt cho gọn",
+    label: "Trim the Fat",
+    description: "Càng bôi ra càng dễ sai. Tập bỏ câu thừa và chọn cách diễn đạt ít rủi ro nhất.",
+    dbPartPrefix: "wp2-tang8",
+    active: true,
+    band: "C",
+  },
+  {
+    id: "tang9",
+    labelVi: "Tầng 9: Viết thật & nộp chấm",
+    label: "The Real Thing",
+    description: "Đề thật, đồng hồ 10 phút, tự soi checklist rồi gửi giáo viên chấm.",
+    dbPartPrefix: "wp2-tang9",
+    active: true,
+    band: "D",
+    href: "/subskills/writing/part2/tang9",
   },
 ];
 
@@ -372,6 +436,10 @@ import t6_3 from "./tang6.3.json";
 import t6_4 from "./tang6.4.json";
 import t6_5 from "./tang6.5.json";
 
+// Tầng 7–8 mới — mỗi tầng đang có bộ 1, sẽ nhân bản lên 5 bộ sau khi duyệt
+import t7_1 from "./tang7.1.json";
+import t8_1 from "./tang8.1.json";
+
 type RawTest = {
   emails?: Record<string, EmailBlock>;
   levels: { difficulty: string; exercises: unknown[] }[];
@@ -398,7 +466,14 @@ const DATA: Record<string, P2TestData[]> = {
   tang4: [t4_1, t4_2, t4_3, t4_4, t4_5].map((r, i) => load(r, "tang4", i + 1)),
   tang5: [t5_1, t5_2, t5_3, t5_4, t5_5].map((r, i) => load(r, "tang5", i + 1)),
   tang6: [t6_1, t6_2, t6_3, t6_4, t6_5].map((r, i) => load(r, "tang6", i + 1)),
+  tang7: [t7_1].map((r, i) => load(r, "tang7", i + 1)),
+  tang8: [t8_1].map((r, i) => load(r, "tang8", i + 1)),
 };
+
+/** Số bộ test hiện có của một tầng — dùng cho thanh tiến độ ở trang danh sách */
+export function countTestsP2(skillId: string): number {
+  return DATA[skillId]?.length ?? 0;
+}
 
 export function getSkillTestsP2(skillId: string): P2TestData[] | undefined {
   return DATA[skillId];
