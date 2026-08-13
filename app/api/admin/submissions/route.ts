@@ -11,22 +11,28 @@ export async function GET(req: NextRequest) {
 
   const status = req.nextUrl.searchParams.get("status") ?? "submitted";
 
-  const submissions = await prisma.skillSubmission.findMany({
-    where: status === "all" ? { status: { in: ["submitted", "graded"] } } : { status },
-    orderBy: status === "graded" ? { gradedAt: "desc" } : { submittedAt: "asc" },
-    take: 200,
-    select: {
-      id: true,
-      skill: true,
-      unit: true,
-      title: true,
-      status: true,
-      band: true,
-      submittedAt: true,
-      gradedAt: true,
-      profile: { select: { id: true, displayName: true, studentCode: true } },
-    },
-  });
+  try {
+    const submissions = await prisma.skillSubmission.findMany({
+      where: status === "all" ? { status: { in: ["submitted", "graded"] } } : { status },
+      orderBy: status === "graded" ? { gradedAt: "desc" } : { submittedAt: "asc" },
+      take: 200,
+      select: {
+        id: true,
+        skill: true,
+        unit: true,
+        title: true,
+        status: true,
+        band: true,
+        submittedAt: true,
+        gradedAt: true,
+        profile: { select: { id: true, displayName: true, studentCode: true } },
+      },
+    });
 
-  return NextResponse.json({ submissions });
+    return NextResponse.json({ submissions });
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : String(e);
+    console.error("[admin/submissions GET]", msg);
+    return NextResponse.json({ error: `Lỗi máy chủ: ${msg}` }, { status: 500 });
+  }
 }

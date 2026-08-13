@@ -24,15 +24,26 @@ export default function GradingPage() {
   const [tab, setTab] = useState<"submitted" | "graded">("submitted");
   const [rows, setRows] = useState<Row[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   const load = useCallback(async (status: string) => {
     setLoading(true);
+    setError(null);
     try {
       const res = await fetch(`/api/admin/submissions?status=${status}`);
-      const data = await res.json();
+      const text = await res.text();
+      let data: { submissions?: Row[]; error?: string };
+      try {
+        data = JSON.parse(text);
+      } catch {
+        // Server trả HTML/text (500 chưa bắt được) — đừng để nó thành "không có bài".
+        throw new Error(`HTTP ${res.status} — ${text.slice(0, 300) || "(body rỗng)"}`);
+      }
+      if (!res.ok) throw new Error(data.error ?? `Lỗi ${res.status}`);
       setRows(data.submissions ?? []);
-    } catch {
+    } catch (e) {
       setRows([]);
+      setError(e instanceof Error ? e.message : "Không tải được danh sách");
     } finally {
       setLoading(false);
     }
@@ -74,6 +85,14 @@ export default function GradingPage() {
           {[0, 1, 2].map((i) => (
             <div key={i} className="h-16 rounded-xl" style={{ background: "var(--bg-elevated)" }} />
           ))}
+        </div>
+      ) : error ? (
+        <div
+          className="rounded-xl px-4 py-3 text-sm"
+          style={{ border: "1px solid rgba(220,38,38,0.35)", background: "rgba(220,38,38,0.08)", color: "rgb(220,38,38)" }}
+        >
+          <p className="font-semibold m-0 mb-1">Không tải được danh sách bài</p>
+          <p className="m-0 text-xs break-words" style={{ opacity: 0.85 }}>{error}</p>
         </div>
       ) : rows.length === 0 ? (
         <p className="text-sm py-8 text-center" style={{ color: "var(--text-muted)" }}>

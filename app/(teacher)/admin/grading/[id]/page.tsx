@@ -18,6 +18,19 @@ type Submission = {
   profile: { displayName: string | null; studentCode: string | null } | null;
 };
 
+/**
+ * Đọc body JSON, nhưng nếu server trả HTML/text (500 chưa bắt được, redirect...)
+ * thì ném kèm status + đoạn đầu body để còn biết hỏng ở đâu.
+ */
+async function readJson(res: Response): Promise<Record<string, unknown>> {
+  const text = await res.text();
+  try {
+    return JSON.parse(text) as Record<string, unknown>;
+  } catch {
+    throw new Error(`HTTP ${res.status} — ${text.slice(0, 300) || "(body rỗng)"}`);
+  }
+}
+
 const inputStyle: React.CSSProperties = {
   background: "var(--bg-primary)",
   borderColor: "var(--border)",
@@ -120,11 +133,10 @@ export default function GradeSubmissionPage() {
     let alive = true;
     (async () => {
       try {
-        const res = await fetch(`/api/admin/submissions/${id}`);
-        const data = await res.json();
+        const data = await readJson(await fetch(`/api/admin/submissions/${id}`));
         if (!alive) return;
         const s = data.submission as Submission | undefined;
-        if (!s) { setError(data?.error ?? "Không tìm thấy bài"); return; }
+        if (!s) { setError(String(data?.error ?? "Không tìm thấy bài")); return; }
         setSub(s);
         setOverall(s.feedback?.overall ?? "");
         setAudio(s.feedback?.audioUrl ? { url: s.feedback.audioUrl, publicId: s.feedback.audioPublicId ?? "" } : null);
@@ -140,8 +152,8 @@ export default function GradeSubmissionPage() {
             };
           })
         );
-      } catch {
-        if (alive) setError("Không tải được bài");
+      } catch (e) {
+        if (alive) setError(e instanceof Error ? e.message : "Không tải được bài");
       } finally {
         if (alive) setLoading(false);
       }
@@ -169,8 +181,8 @@ export default function GradeSubmissionPage() {
           },
         }),
       });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data?.error ?? `Lỗi ${res.status}`);
+      const data = await readJson(res);
+      if (!res.ok) throw new Error(String(data?.error ?? `Lỗi ${res.status}`));
       router.push("/admin/grading");
     } catch (e) {
       setError(e instanceof Error ? e.message : "Lưu thất bại");
