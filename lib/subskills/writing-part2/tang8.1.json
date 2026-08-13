@@ -285,7 +285,7 @@
             "4": "câu hỏi 2 — xin một mốc thời gian.",
             "5": "khoe cơ sở mới. Mệnh đề quan hệ + cụm thời gian dài, không gánh mission nào."
           },
-          "explanation": "Dòng 4 là bài kiểm tra kép: bạn phải nhớ cả Tầng 7 (offer ≠ question) lẫn Tầng 8 (thừa thì cắt). Cắt xong còn đúng 5 câu, ba câu giữa gánh trọn ba mission."
+          "explanation": "Dòng 4 là bài kiểm tra kép: bạn phải nhớ cả Tầng 5 (offer ≠ question) lẫn Tầng 8 (thừa thì cắt). Cắt xong còn đúng 5 câu, ba câu giữa gánh trọn ba mission."
         },
         {
           "type": "trim",

@@ -19,7 +19,7 @@ export type P2ComposeTask = {
 /** Đúng thời gian thật của Q6-7 trong phòng thi */
 export const COMPOSE_MINUTES = 10;
 
-/** Hai mục tự soi áp dụng cho mọi đề — rút ra từ Tầng 7 và Tầng 8 */
+/** Mục tự soi áp dụng cho mọi đề — rút ra từ tang7 (đúng loại) và tang8 (cắt gọn) */
 export const COMPOSE_CHECKS = [
   "Mỗi mission viết bằng ĐÚNG loại câu (thông tin / đề xuất / yêu cầu / câu hỏi)",
   "Không còn câu nào không phục vụ mission nào",

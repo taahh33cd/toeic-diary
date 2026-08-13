@@ -219,6 +219,22 @@ export type P2SkillMeta = {
   href?: string;
 };
 
+/**
+ * CHÚ Ý — `id` và số hiển thị KHÔNG trùng nhau.
+ *
+ * `id` (tang0…tang9) là khoá lịch sử: nó nằm trong URL và trong `dbPartPrefix`
+ * của mọi lượt làm bài đã lưu, nên vĩnh viễn không được đổi. Các comment
+ * `// Tầng N` rải trong file này và trong WritingPart2Client đều nói về `id`
+ * (khớp tên file dữ liệu tangN.x.json).
+ *
+ * Số học viên nhìn thấy nằm trong `labelVi`, và được đánh lại theo thứ tự band
+ * để đọc dọc trang là 0 → 9. Hiện đang lệch ở 6 tầng:
+ *   tang3 → "Tầng 1"   tang1 → "Tầng 2"   tang2 → "Tầng 3"
+ *   tang7 → "Tầng 5"   tang5 → "Tầng 6"   tang6 → "Tầng 7"
+ *
+ * Thứ tự phần tử trong mảng quyết định thứ tự hiển thị trong mỗi band —
+ * giữ mảng theo `id` tăng dần thì số ở `labelVi` cũng tự tăng dần trong band.
+ */
 export const WRITING_P2_SKILLS: P2SkillMeta[] = [
   {
     id: "tang0",
@@ -231,7 +247,7 @@ export const WRITING_P2_SKILLS: P2SkillMeta[] = [
   },
   {
     id: "tang1",
-    labelVi: "Tầng 1: Bóc tách đề bài",
+    labelVi: "Tầng 2: Bóc tách đề bài",
     label: "Reading the Prompt",
     description: "Đọc email đề + Directions để xác định vai, quan hệ và đếm đủ mission phải làm.",
     dbPartPrefix: "wp2-tang1",
@@ -240,7 +256,7 @@ export const WRITING_P2_SKILLS: P2SkillMeta[] = [
   },
   {
     id: "tang2",
-    labelVi: "Tầng 2: Bố cục email",
+    labelVi: "Tầng 3: Bố cục email",
     label: "Email Structure",
     description: "Gắn nhãn chức năng cho từng câu trong email mẫu, rồi tự dựng lại bố cục.",
     dbPartPrefix: "wp2-tang2",
@@ -249,7 +265,7 @@ export const WRITING_P2_SKILLS: P2SkillMeta[] = [
   },
   {
     id: "tang3",
-    labelVi: "Tầng 3: Xưng hô, câu mở & lời chào kết",
+    labelVi: "Tầng 1: Xưng hô, câu mở & lời chào kết",
     label: "Salutations & Closings",
     description: "Chọn xưng hô đúng, điền câu mở đầu, ghép cặp mở–kết đúng mức trang trọng.",
     dbPartPrefix: "wp2-tang3",
@@ -267,7 +283,7 @@ export const WRITING_P2_SKILLS: P2SkillMeta[] = [
   },
   {
     id: "tang5",
-    labelVi: "Tầng 5: Dịch Việt → Anh",
+    labelVi: "Tầng 6: Dịch Việt → Anh",
     label: "VI → EN Translation",
     description: "Dịch câu email sang tiếng Anh. Chấp nhận nhiều cách viết đúng.",
     dbPartPrefix: "wp2-tang5",
@@ -276,7 +292,7 @@ export const WRITING_P2_SKILLS: P2SkillMeta[] = [
   },
   {
     id: "tang6",
-    labelVi: "Tầng 6: Chữa lỗi & so sánh",
+    labelVi: "Tầng 7: Chữa lỗi & so sánh",
     label: "Error Correction",
     description: "Tìm lỗi trong email trả lời, đối chiếu với Directions, so sánh 2 bản.",
     dbPartPrefix: "wp2-tang6",
@@ -285,7 +301,7 @@ export const WRITING_P2_SKILLS: P2SkillMeta[] = [
   },
   {
     id: "tang7",
-    labelVi: "Tầng 7: Đúng loại yêu cầu",
+    labelVi: "Tầng 5: Đúng loại yêu cầu",
     label: "Speech Acts",
     description: "Phân biệt Thông tin · Đề xuất · Yêu cầu · Câu hỏi. Sai loại là mất điểm cả câu.",
     dbPartPrefix: "wp2-tang7",
