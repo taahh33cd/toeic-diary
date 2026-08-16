@@ -7,7 +7,7 @@ import { SkillComingSoon } from "@/components/skills/SkillComingSoon";
 import { WritingSentenceClient } from "@/components/skills/WritingSentenceClient";
 import { McqExamClient } from "@/components/skills/exam/McqExamClient";
 import { PracticeTestList } from "@/components/skills/listening/PracticeTestList";
-import { listPracticeTests } from "@/lib/listening-practice";
+import { FREE_PRACTICE_TESTS, listPracticeTests } from "@/lib/listening-practice";
 import { WRITING_Q1_5, Q15_PART_KEY } from "@/lib/skills/writing-q1-5";
 import { Q67_PART_KEY } from "@/lib/skills/writing-q6-7";
 import { WritingEmailClient } from "@/components/skills/WritingEmailClient";
@@ -34,12 +34,25 @@ export default async function SkillUnitPage({ params }: Props) {
 
   // Listening Part 1 / Part 2 đã có bộ đề thật → danh sách test
   if (skill === "listening" && (unit === "part1" || unit === "part2")) {
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+    const profile = user
+      ? await prisma.profile
+          .findUnique({
+            where: { id: user.id },
+            select: { role: true, studentCode: true, enrolledCourses: true, freeUsageSeconds: true },
+          })
+          .catch(() => null)
+      : null;
+
     return (
       <PracticeTestList
         skill={found.skill}
         unit={found.unit}
         part={unit === "part1" ? 1 : 2}
         tests={listPracticeTests()}
+        unlocked={isUsageExempt(profile)}
+        freeTests={FREE_PRACTICE_TESTS}
       />
     );
   }

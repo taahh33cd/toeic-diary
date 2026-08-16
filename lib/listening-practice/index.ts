@@ -15,6 +15,18 @@ export function getPracticeEntry(testNumber: number): PracticeCatalogEntry | und
   return catalog.tests.find((t) => t.testNumber === testNumber);
 }
 
+// ── Phân quyền ───────────────────────────────────────────────────────────────
+
+/**
+ * Đề mở cho mọi tài khoản. Luyện lẻ một part nhẹ hơn thi trọn đề nhiều nên mở
+ * rộng hơn /skills/full-tests (chỉ đề 1) để người mới thử được thật sự.
+ */
+export const FREE_PRACTICE_TESTS = [1, 2];
+
+export function isPracticeTestFree(testNumber: number): boolean {
+  return FREE_PRACTICE_TESTS.includes(testNumber);
+}
+
 /** Số câu của một test theo part */
 export function countByPart(entry: PracticeCatalogEntry, part: ListeningPart): number {
   return part === 1 ? entry.part1 : entry.part2;

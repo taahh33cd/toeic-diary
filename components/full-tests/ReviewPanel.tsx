@@ -29,6 +29,7 @@ function practiceHref(part: PartNumber) {
 
 export function ReviewPanel({
   test, config, answers, marked, skin, onToggleSkin, onRetry, canSaveVocab,
+  backHref = "/skills/full-tests",
 }: {
   test: FullTest;
   config: RunConfig;
@@ -38,6 +39,8 @@ export function ReviewPanel({
   onToggleSkin: () => void;
   onRetry: () => void;
   canSaveVocab: boolean;
+  /** Màn luyện một part quay về danh sách đề của part đó, không về /skills/full-tests */
+  backHref?: string;
 }) {
   const P = PALETTE[skin];
   const [filter, setFilter] = useState<Filter>("wrong");
@@ -141,7 +144,7 @@ export function ReviewPanel({
         <div style={{ flex: 1, minWidth: 0, display: "grid", gap: "1rem" }}>
 
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
-          <Link href="/skills/full-tests" style={{ fontSize: "0.86rem", color: P.muted, textDecoration: "none" }}>
+          <Link href={backHref} style={{ fontSize: "0.86rem", color: P.muted, textDecoration: "none" }}>
             ← Danh sách đề
           </Link>
           <button type="button" onClick={onToggleSkin} style={{ background: "transparent", border: `1px solid ${P.border}`, borderRadius: 999, padding: "5px 12px", color: P.inkSoft, fontSize: "0.8rem", cursor: "pointer", fontFamily: P.sans }}>

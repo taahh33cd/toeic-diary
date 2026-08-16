@@ -165,6 +165,7 @@ model Profile {
   recordingAttempts    SpeakingRecordingAttempt[]
   ipaAttempts          IpaAttempt[]
   fullTestAttempts     FullTestAttempt[]
+  partPracticeAttempts PartPracticeAttempt[]
   coursePurchases      CoursePurchase[]
   pictureNotes         PictureNote[]
   skillSubmissions     SkillSubmission[] @relation("SubmissionAuthor")
@@ -500,6 +501,36 @@ model FullTestAttempt {
   @@index([userId, testSlug])
   @@index([userId, status])
   @@map("full_test_attempts")
+}
+
+/// Lượt luyện một part đơn lẻ (/skills/listening/partN, /skills/reading/partN).
+/// Tách khỏi FullTestAttempt vì bài lẻ không quy đổi được thang điểm ETS và
+/// lịch sử không nên lẫn với thi thử trọn đề.
+model PartPracticeAttempt {
+  id          String    @id @default(uuid())
+  userId      String    @map("user_id")
+  profile     Profile   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  skill       String    // "listening" | "reading"
+  part        Int       // 1..7
+  testSlug    String    @map("test_slug") // "ca-test-1-part1"
+  status      String    @default("in_progress") // "in_progress" | "done"
+  config      Json      // { mode, parts, minutes, autoSubmit, instantFeedback }
+  answers     Json      @default("{}")
+  marked      Json      @default("[]")
+  secondsLeft Int?      @map("seconds_left")
+
+  // Điểm chỉ có khi đã nộp. Chấm ở server nên client không sửa được.
+  correct     Int?
+  gradable    Int?
+
+  startedAt   DateTime  @default(now()) @map("started_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+  completedAt DateTime? @map("completed_at")
+
+  @@index([userId, testSlug])
+  @@index([userId, status])
+  @@index([userId, skill, part])
+  @@map("part_practice_attempts")
 }
 
 /// Bài làm Speaking/Writing học viên tự lưu vào sổ tay và (nếu đã đăng ký khoá)

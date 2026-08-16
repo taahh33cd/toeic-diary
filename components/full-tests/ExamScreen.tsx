@@ -63,6 +63,7 @@ export function ExamScreen({
   initialMarked,
   saveState,
   onProgress,
+  realLabel = "Thi thật",
 }: {
   test: FullTest;
   config: RunConfig;
@@ -73,6 +74,8 @@ export function ExamScreen({
   initialMarked?: number[];
   saveState?: "idle" | "saving" | "saved" | "error";
   onProgress?: (answers: Record<number, string>, marked: number[], secondsLeft: number | null) => void;
+  /** Màn luyện một part gọi chế độ này là "Thi thử" thay vì "Thi thật" */
+  realLabel?: string;
 }) {
   const P = PALETTE[skin];
   const real = config.mode === "real";
@@ -299,7 +302,7 @@ export function ExamScreen({
         </span>
 
         <span style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "4px 11px", borderRadius: 8, fontSize: "0.85rem", fontWeight: 700, background: P.primarySoft, color: P.primary, border: `1px solid ${P.primary}` }}>
-          {real ? "Thi thật" : "Luyện tập"}
+          {real ? realLabel : "Luyện tập"}
           {real && <span style={{ fontWeight: 500, opacity: 0.85 }}>· {stage === "listening" ? "Listening" : "Reading"}</span>}
         </span>
 

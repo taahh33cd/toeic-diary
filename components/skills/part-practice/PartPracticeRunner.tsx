@@ -1,16 +1,21 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
-import type { FullTest } from "@/lib/full-tests/types";
-import { PALETTE, type Skin } from "./theme";
-import { SetupPanel, type RunConfig } from "./SetupPanel";
-import { ExamScreen } from "./ExamScreen";
-import { ReviewPanel } from "./ReviewPanel";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import type { FullTest, PartNumber } from "@/lib/full-tests/types";
+import { PALETTE, type Skin } from "@/components/full-tests/theme";
+import type { RunConfig } from "@/components/full-tests/SetupPanel";
+import { ExamScreen } from "@/components/full-tests/ExamScreen";
+import { ReviewPanel } from "@/components/full-tests/ReviewPanel";
 import { useAttempt, type AttemptRow } from "@/components/shared/useAttempt";
+import { PartSetupPanel } from "./PartSetupPanel";
 
 type Phase = "setup" | "exam" | "result";
 
+// Dùng chung khoá skin với full test — cùng một bộ máy làm bài, người dùng
+// chỉnh sáng/tối một lần là áp cho cả hai.
 const SKIN_KEY = "fulltest:skin";
+const MIRROR_KEY = "partpractice:mirror";
+const API_BASE = "/api/skills/part-practice/attempts";
 
 function toAnswerMap(raw: Record<string, string> | Record<number, string>): Record<number, string> {
   const out: Record<number, string> = {};
@@ -21,9 +26,21 @@ function toAnswerMap(raw: Record<string, string> | Record<number, string>): Reco
   return out;
 }
 
-export function FullTestRunner({
-  test, examSlug, canSaveVocab = false,
-}: { test: FullTest; examSlug: string; canSaveVocab?: boolean }) {
+/**
+ * Màn luyện một part: cùng bộ máy làm bài với /skills/full-tests
+ * (SetupPanel → ExamScreen → ReviewPanel), chỉ khác là part đã cố định theo URL
+ * và lượt làm ghi vào bảng riêng part_practice_attempts.
+ */
+export function PartPracticeRunner({
+  test, skill, part, backHref, canSaveVocab = false,
+}: {
+  test: FullTest;
+  skill: string;
+  part: PartNumber;
+  /** Danh sách đề của part này */
+  backHref: string;
+  canSaveVocab?: boolean;
+}) {
   const [skin, setSkin] = useState<Skin>("light");
   const [phase, setPhase] = useState<Phase>("setup");
   const [config, setConfig] = useState<RunConfig | null>(null);
@@ -33,10 +50,10 @@ export function FullTestRunner({
   const [busy, setBusy] = useState(false);
 
   const P = PALETTE[skin];
-  const identity = useMemo(() => ({ examSlug }), [examSlug]);
+  const identity = useMemo(() => ({ skill, part }), [skill, part]);
   const attempt = useAttempt({
-    basePath: "/api/full-tests/attempts",
-    mirrorKey: "fulltest:mirror",
+    basePath: API_BASE,
+    mirrorKey: MIRROR_KEY,
     testSlug: test.slug,
     identity,
   });
@@ -50,13 +67,19 @@ export function FullTestRunner({
   }, []);
   /* eslint-enable react-hooks/set-state-in-effect */
 
+  // Chỉ hỏi server một lần cho mỗi bộ đề: hook trả về object mới mỗi lần render
+  // nên nếu để [attempt] làm dep thì mỗi lần setResumable lại gọi fetch tiếp.
+  const asked = useRef<string | null>(null);
+  const fetchInProgress = attempt.fetchInProgress;
   useEffect(() => {
+    if (asked.current === test.slug) return;
+    asked.current = test.slug;
     let alive = true;
-    attempt.fetchInProgress().then((row) => {
+    fetchInProgress().then((row) => {
       if (alive && row) setResumable(row);
     });
     return () => { alive = false; };
-  }, [attempt]);
+  }, [test.slug, fetchInProgress]);
 
   const toggleSkin = useCallback(() => {
     setSkin((prev) => {
@@ -70,7 +93,7 @@ export function FullTestRunner({
     setBusy(true);
     const row = await attempt.start(cfg, !resume);
     setBusy(false);
-    setConfig(resume?.config ?? cfg);
+    setConfig((resume?.config as RunConfig) ?? cfg);
     setAnswers(resume ? toAnswerMap(resume.answers) : {});
     setMarked(resume?.marked ?? []);
     setResumable(null);
@@ -105,7 +128,7 @@ export function FullTestRunner({
               <button
                 type="button"
                 disabled={busy}
-                onClick={() => start(resumable.config, resumable)}
+                onClick={() => start(resumable.config as RunConfig, resumable)}
                 style={{ padding: "8px 16px", borderRadius: 8, border: "none", background: P.primary, color: P.onPrimary, fontWeight: 800, fontFamily: P.sans, fontSize: "0.85rem", cursor: busy ? "wait" : "pointer" }}
               >
                 Làm tiếp
@@ -121,9 +144,11 @@ export function FullTestRunner({
             </div>
           </div>
         )}
-        <SetupPanel
+        <PartSetupPanel
           title={test.title}
-          examSlug={examSlug}
+          part={part}
+          questionCount={test.stats.questions}
+          backHref={backHref}
           brokenQuestions={test.stats.brokenQuestions}
           skin={skin}
           onToggleSkin={toggleSkin}
@@ -145,6 +170,7 @@ export function FullTestRunner({
         initialMarked={marked}
         saveState={attempt.saveState}
         onProgress={attempt.save}
+        realLabel="Thi thử"
       />
     );
   }
@@ -159,6 +185,7 @@ export function FullTestRunner({
         skin={skin}
         onToggleSkin={toggleSkin}
         canSaveVocab={canSaveVocab}
+        backHref={backHref}
         onRetry={() => { setPhase("setup"); setAnswers({}); setMarked([]); }}
       />
     );

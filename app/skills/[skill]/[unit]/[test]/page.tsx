@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getUnit } from "@/lib/skills/structure";
-import { getPracticeEntry, loadPracticePart } from "@/lib/listening-practice";
-import { ListeningPracticeClient } from "@/components/skills/listening/ListeningPracticeClient";
+import { getPracticeEntry, isPracticeTestFree, loadPracticeTest } from "@/lib/listening-practice";
+import { toFullTest } from "@/lib/listening-practice/adapt";
+import { PartPracticeRunner } from "@/components/skills/part-practice/PartPracticeRunner";
+import { ContentLockModal } from "@/components/shared/ContentLockModal";
 import { SpeakingExamClient } from "@/components/skills/exam/SpeakingExamClient";
 import { Q34_LEVELS, getQ34Test } from "@/lib/skills/speaking-q3-4";
 import { prisma } from "@/lib/db/prisma";
@@ -69,16 +71,39 @@ export default async function SkillTestPage({ params }: Props) {
     );
   }
 
-  const loaded = await loadPracticePart(f.entry.testNumber, f.part);
-  if (!loaded || loaded.questions.length === 0) notFound();
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  const profile = user
+    ? await prisma.profile
+        .findUnique({
+          where: { id: user.id },
+          select: { role: true, studentCode: true, enrolledCourses: true, freeUsageSeconds: true },
+        })
+        .catch(() => null)
+    : null;
+
+  // Đề 1-2 mở cho mọi người; còn lại cần đã đăng ký khoá (hoặc là HV nội bộ/giáo viên).
+  if (!isPracticeTestFree(f.entry.testNumber) && !isUsageExempt(profile)) {
+    return <ContentLockModal />;
+  }
+
+  const practice = await loadPracticeTest(`test-${f.entry.testNumber}`);
+  if (!practice) notFound();
+
+  const fullTest = toFullTest(practice, f.part);
+  if (fullTest.groups.length === 0) notFound();
+
+  // Sổ từ vựng ghi theo studentCode trên Firebase, nên chỉ HV nội bộ mới lưu được.
+  const canSaveVocab = Boolean(profile?.studentCode)
+    || profile?.role === "teacher" || profile?.role === "admin";
 
   return (
-    <ListeningPracticeClient
-      skill={f.skill}
-      unit={f.unit}
+    <PartPracticeRunner
+      test={fullTest}
+      skill={skill}
       part={f.part}
-      testTitle={f.entry.title}
-      questions={loaded.questions}
+      backHref={`/skills/${skill}/${unit}`}
+      canSaveVocab={canSaveVocab}
     />
   );
 }

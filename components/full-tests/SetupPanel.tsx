@@ -332,7 +332,7 @@ export function SetupPanel({
   );
 }
 
-function Toggle({
+export function Toggle({
   P, checked, disabled, onChange, label, hint,
 }: {
   P: Palette;

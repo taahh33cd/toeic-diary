@@ -1,18 +1,28 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import type { RunConfig } from "./SetupPanel";
+// Chỉ lấy type (1..7) — file types.ts không nạp JSON đề nên client bundle không phình.
+import type { PartNumber } from "@/lib/full-tests/types";
 
 export type SaveState = "idle" | "saving" | "saved" | "error";
 
 export interface AttemptRow {
   id: string;
   testSlug: string;
-  config: RunConfig;
+  config: AttemptConfig;
   answers: Record<string, string>;
   marked: number[];
   secondsLeft: number | null;
   updatedAt: string;
+}
+
+/** Khớp RunConfig của cả full test lẫn luyện part — hook không cần biết chi tiết. */
+export interface AttemptConfig {
+  mode: "real" | "practice";
+  parts: PartNumber[];
+  minutes: number;
+  autoSubmit: boolean;
+  instantFeedback: boolean;
 }
 
 /** Bản sao cục bộ — chỉ dùng khi mất mạng lúc đang làm, DB vẫn là nguồn chính. */
@@ -23,29 +33,28 @@ interface LocalMirror {
   savedAt: number;
 }
 
-const MIRROR_KEY = "fulltest:mirror";
 const SAVE_DEBOUNCE_MS = 4000;
 
-function readMirror(): LocalMirror | null {
+function readMirror(key: string): LocalMirror | null {
   try {
-    const raw = localStorage.getItem(MIRROR_KEY);
+    const raw = localStorage.getItem(key);
     return raw ? (JSON.parse(raw) as LocalMirror) : null;
   } catch {
     return null;
   }
 }
 
-function writeMirror(m: LocalMirror) {
+function writeMirror(key: string, m: LocalMirror) {
   try {
-    localStorage.setItem(MIRROR_KEY, JSON.stringify(m));
+    localStorage.setItem(key, JSON.stringify(m));
   } catch {
     // hết quota thì thôi, không chặn người làm bài
   }
 }
 
-export function clearMirror() {
+function clearMirror(key: string) {
   try {
-    localStorage.removeItem(MIRROR_KEY);
+    localStorage.removeItem(key);
   } catch {
     // không sao
   }
@@ -54,8 +63,23 @@ export function clearMirror() {
 /**
  * Quản lý một lượt làm bài trên server: tạo/khôi phục, auto-save có debounce,
  * và nộp bài. Mọi lỗi mạng đều không chặn UI — bài vẫn ghi vào localStorage.
+ *
+ * `identity` được gộp vào body lúc tạo lượt mới (vd { examSlug } cho full test,
+ * { skill, part } cho luyện part). Truyền object đã memo hoá để deps ổn định.
  */
-export function useAttempt(examSlug: string, testSlug: string) {
+export function useAttempt({
+  basePath,
+  mirrorKey,
+  testSlug,
+  identity,
+}: {
+  /** Route lượt làm, vd "/api/full-tests/attempts" */
+  basePath: string;
+  /** Khoá localStorage riêng cho từng luồng, để hai luồng không ghi đè bản sao của nhau */
+  mirrorKey: string;
+  testSlug: string;
+  identity: Record<string, string | number>;
+}) {
   const [attemptId, setAttemptId] = useState<string | null>(null);
   const [saveState, setSaveState] = useState<SaveState>("idle");
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -65,13 +89,13 @@ export function useAttempt(examSlug: string, testSlug: string) {
   const fetchInProgress = useCallback(async (): Promise<AttemptRow | null> => {
     try {
       const r = await fetch(
-        `/api/full-tests/attempts?testSlug=${encodeURIComponent(testSlug)}&status=in_progress`,
+        `${basePath}?testSlug=${encodeURIComponent(testSlug)}&status=in_progress`,
       );
       if (!r.ok) return null;
       const { attempt } = (await r.json()) as { attempt: AttemptRow | null };
       if (!attempt) return null;
 
-      const mirror = readMirror();
+      const mirror = readMirror(mirrorKey);
       if (mirror?.attemptId === attempt.id && mirror.savedAt > Date.parse(attempt.updatedAt)) {
         return {
           ...attempt,
@@ -83,15 +107,15 @@ export function useAttempt(examSlug: string, testSlug: string) {
     } catch {
       return null;
     }
-  }, [testSlug]);
+  }, [basePath, mirrorKey, testSlug]);
 
   const start = useCallback(
-    async (config: RunConfig, restart: boolean): Promise<AttemptRow | null> => {
+    async (config: AttemptConfig, restart: boolean): Promise<AttemptRow | null> => {
       try {
-        const r = await fetch("/api/full-tests/attempts", {
+        const r = await fetch(basePath, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ examSlug, testSlug, config, restart }),
+          body: JSON.stringify({ ...identity, testSlug, config, restart }),
         });
         if (!r.ok) {
           setSaveState("error");
@@ -99,7 +123,7 @@ export function useAttempt(examSlug: string, testSlug: string) {
         }
         const { attempt } = (await r.json()) as { attempt: AttemptRow };
         setAttemptId(attempt.id);
-        if (restart) clearMirror();
+        if (restart) clearMirror(mirrorKey);
         return attempt;
       } catch {
         // Không tạo được lượt ⇒ không có gì để auto-save. Báo ngay thay vì im lặng.
@@ -107,7 +131,7 @@ export function useAttempt(examSlug: string, testSlug: string) {
         return null;
       }
     },
-    [examSlug, testSlug],
+    [basePath, mirrorKey, testSlug, identity],
   );
 
   const flush = useCallback(async () => {
@@ -117,7 +141,7 @@ export function useAttempt(examSlug: string, testSlug: string) {
     pending.current = null;
     setSaveState("saving");
     try {
-      const r = await fetch(`/api/full-tests/attempts/${id}`, {
+      const r = await fetch(`${basePath}/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
@@ -126,18 +150,18 @@ export function useAttempt(examSlug: string, testSlug: string) {
     } catch {
       setSaveState("error");
     }
-  }, [attemptId]);
+  }, [attemptId, basePath]);
 
   /** Gọi mỗi khi đáp án đổi; ghi localStorage ngay, đẩy lên server sau debounce. */
   const save = useCallback(
     (answers: Record<number, string>, marked: number[], secondsLeft: number | null) => {
       if (!attemptId) return;
-      writeMirror({ attemptId, answers, marked, savedAt: Date.now() });
+      writeMirror(mirrorKey, { attemptId, answers, marked, savedAt: Date.now() });
       pending.current = { answers, marked, secondsLeft };
       if (timer.current) clearTimeout(timer.current);
       timer.current = setTimeout(flush, SAVE_DEBOUNCE_MS);
     },
-    [attemptId, flush],
+    [attemptId, mirrorKey, flush],
   );
 
   const submit = useCallback(
@@ -146,19 +170,19 @@ export function useAttempt(examSlug: string, testSlug: string) {
       pending.current = null;
       if (!attemptId) return null;
       try {
-        const r = await fetch(`/api/full-tests/attempts/${attemptId}`, {
+        const r = await fetch(`${basePath}/${attemptId}`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ answers, marked }),
         });
-        clearMirror();
+        clearMirror(mirrorKey);
         if (!r.ok) return null;
         return (await r.json()) as { attempt: AttemptRow; result: unknown };
       } catch {
         return null;
       }
     },
-    [attemptId],
+    [attemptId, basePath, mirrorKey],
   );
 
   // Đóng tab / chuyển tab giữa chừng thì đẩy nốt lần lưu đang chờ.
@@ -170,7 +194,7 @@ export function useAttempt(examSlug: string, testSlug: string) {
       const body = pending.current;
       if (!id || !body || document.visibilityState !== "hidden") return;
       pending.current = null;
-      fetch(`/api/full-tests/attempts/${id}`, {
+      fetch(`${basePath}/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
@@ -179,7 +203,7 @@ export function useAttempt(examSlug: string, testSlug: string) {
     }
     document.addEventListener("visibilitychange", onHide);
     return () => document.removeEventListener("visibilitychange", onHide);
-  }, [attemptId]);
+  }, [attemptId, basePath]);
 
   useEffect(() => () => {
     if (timer.current) clearTimeout(timer.current);

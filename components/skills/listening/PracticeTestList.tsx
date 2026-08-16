@@ -7,11 +7,17 @@ export function PracticeTestList({
   unit,
   part,
   tests,
+  unlocked,
+  freeTests,
 }: {
   skill: Skill;
   unit: SkillUnit;
   part: ListeningPart;
   tests: PracticeCatalogEntry[];
+  /** Đã đăng ký khoá (hoặc HV nội bộ/giáo viên) ⇒ mở hết đề */
+  unlocked: boolean;
+  /** Số đề mở cho mọi tài khoản */
+  freeTests: number[];
 }) {
   return (
     <div
@@ -51,33 +57,49 @@ export function PracticeTestList({
       <div style={{ height: 1, background: "var(--border)", marginBottom: "1.5rem" }} />
 
       <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6, margin: "0 0 1.1rem" }}>
-        {tests.length} bộ đề · mỗi bộ {part === 1 ? "6" : "25"} câu. Làm bài như thi thật: chỉ nghe audio
-        {part === 1 ? " và xem ảnh" : ""}, không hiện chữ — script &amp; đáp án hiện sau khi nộp bài.
+        {tests.length} bộ đề · mỗi bộ {part === 1 ? "6" : "25"} câu. Mỗi bộ chọn được hai chế độ:{" "}
+        <strong>Thi thử</strong> (audio chạy liền một mạch, không tua) hoặc <strong>Luyện tập</strong>{" "}
+        (nghe lại, đổi tốc độ, không bấm giờ). Script &amp; đáp án hiện sau khi nộp bài.
       </p>
+
+      {!unlocked && (
+        <p style={{ fontSize: "0.8rem", color: "var(--text-muted)", lineHeight: 1.6, margin: "0 0 1.1rem" }}>
+          🔓 Đề {freeTests.join(" và ")} mở cho mọi tài khoản. Các đề còn lại cần đăng ký khoá học.
+        </p>
+      )}
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: "0.7rem" }}>
         {tests.map((t) => {
           // Part 1 luôn là câu 1..part1, phần còn lại là Part 2
           const missing = t.missingAudio.filter((n) => (part === 1 ? n <= t.part1 : n > t.part1)).length;
-          return (
-            <Link
-              key={t.slug}
-              href={`/skills/${skill.slug}/${unit.slug}/${t.testNumber}`}
-              style={{
-                display: "block",
-                padding: "0.85rem 0.95rem",
-                background: "var(--bg-secondary)",
-                border: "1px solid var(--border)",
-                borderRadius: 10,
-                textDecoration: "none",
-                color: "var(--text-primary)",
-              }}
-            >
-              <span style={{ display: "block", fontSize: "0.95rem", fontWeight: 700 }}>{t.title}</span>
-              <span style={{ display: "block", fontSize: "0.72rem", color: "var(--text-muted)", marginTop: 2 }}>
-                {part === 1 ? t.part1 : t.part2} câu
-                {missing > 0 ? ` · ${missing} câu thiếu audio` : ""}
+          const locked = !unlocked && !freeTests.includes(t.testNumber);
+          const box: React.CSSProperties = {
+            display: "block",
+            padding: "0.85rem 0.95rem",
+            background: "var(--bg-secondary)",
+            border: "1px solid var(--border)",
+            borderRadius: 10,
+            textDecoration: "none",
+            color: "var(--text-primary)",
+          };
+          const body = (
+            <>
+              <span style={{ display: "block", fontSize: "0.95rem", fontWeight: 700 }}>
+                {t.title}{locked ? " 🔒" : ""}
               </span>
+              <span style={{ display: "block", fontSize: "0.72rem", color: "var(--text-muted)", marginTop: 2 }}>
+                {locked ? "Cần đăng ký khoá" : `${part === 1 ? t.part1 : t.part2} câu`}
+                {!locked && missing > 0 ? ` · ${missing} câu thiếu audio` : ""}
+              </span>
+            </>
+          );
+
+          // Đề khoá vẫn hiện để thấy có gì phía sau, nhưng không bấm vào được.
+          return locked ? (
+            <div key={t.slug} style={{ ...box, opacity: 0.5, cursor: "not-allowed" }}>{body}</div>
+          ) : (
+            <Link key={t.slug} href={`/skills/${skill.slug}/${unit.slug}/${t.testNumber}`} style={box}>
+              {body}
             </Link>
           );
         })}
