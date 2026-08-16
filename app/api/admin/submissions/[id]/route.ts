@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/db/prisma";
 import { sendPushToUser } from "@/lib/push";
-import { estimateBand, sanitizeFeedback } from "@/lib/submissions";
+import { estimateBand, sanitizeFeedback, scaleFor } from "@/lib/submissions";
 import { requireGrader } from "@/lib/submissions/guard";
 
 export const dynamic = "force-dynamic";
@@ -45,7 +45,7 @@ export async function POST(req: Request, { params }: Ctx) {
   try {
     const existing = await prisma.skillSubmission.findUnique({
       where: { id },
-      select: { userId: true, title: true, status: true },
+      select: { userId: true, title: true, status: true, skill: true, unit: true },
     });
     if (!existing) return NextResponse.json({ error: "Not found" }, { status: 404 });
     if (existing.status === "draft") {
@@ -56,7 +56,7 @@ export async function POST(req: Request, { params }: Ctx) {
       where: { id },
       data: {
         feedback: feedback as unknown as Prisma.InputJsonValue,
-        band: estimateBand(feedback),
+        band: estimateBand(feedback, scaleFor(existing.skill, existing.unit)),
         status: "graded",
         gradedBy: gate.user.id,
         gradedAt: new Date(),
