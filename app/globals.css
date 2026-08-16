@@ -1561,3 +1561,21 @@ a[aria-disabled="true"] {
   font-weight: 600;
 }
 .skill-card-link:hover { border-color: var(--accent-primary) !important; box-shadow: var(--shadow-md) !important; }
+
+/* ── Bản in bài đã chấm ────────────────────────────────────────────────────────
+   Chỉ giữ tờ giấy: bỏ nav, tab bar, bottom nav và mọi thứ đánh dấu print:hidden.
+   Comment tự đổ xuống cuối bài (DocumentSheet nghe sự kiện beforeprint). */
+@media print {
+  header, nav, footer,
+  .topbar, [data-print-hide] {
+    display: none !important;
+  }
+  body {
+    background: #fff !important;
+  }
+  main {
+    padding: 0 !important;
+    max-width: none !important;
+  }
+  a[href]::after { content: none !important; }
+}

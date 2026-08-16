@@ -32,7 +32,7 @@ export default async function SubmissionsPage() {
   });
 
   return (
-    <div className="max-w-3xl mx-auto w-full">
+    <div className="max-w-4xl mx-auto w-full">
       <header className="mb-5">
         <h1 className="text-xl font-bold" style={{ color: "var(--text-primary)" }}>Bài Speaking &amp; Writing</h1>
         <p className="text-sm mt-1" style={{ color: "var(--text-muted)" }}>
@@ -41,44 +41,43 @@ export default async function SubmissionsPage() {
       </header>
 
       {submissions.length === 0 ? (
-        <div
-          className="rounded-2xl px-5 py-8 text-center"
-          style={{ border: "1px dashed var(--border)", background: "var(--bg-elevated)" }}
-        >
-          <p className="text-sm" style={{ color: "var(--text-muted)" }}>Chưa có bài nào được lưu.</p>
-          <div className="flex gap-3 justify-center mt-3 text-sm font-semibold">
+        <div className="py-12 text-center">
+          <p className="text-sm m-0" style={{ color: "var(--text-muted)" }}>Chưa có bài nào được lưu.</p>
+          <div className="flex gap-4 justify-center mt-2 text-sm font-semibold">
             <Link href="/skills/speaking" style={{ color: "var(--accent-primary)" }}>Luyện Speaking →</Link>
             <Link href="/skills/writing" style={{ color: "var(--accent-primary)" }}>Luyện Writing →</Link>
           </div>
         </div>
       ) : (
-        <ul className="flex flex-col gap-2.5 list-none p-0 m-0">
+        // Danh sách kiểu Drive: các dòng ngăn nhau bằng đường kẻ mảnh, không khung
+        <ul className="list-none p-0 m-0" style={{ borderTop: "1px solid var(--border)" }}>
           {submissions.map((s) => {
             const st = STATUS_STYLE[(s.status as SubmissionStatus)] ?? STATUS_STYLE.draft;
             return (
-              <li key={s.id}>
+              <li key={s.id} style={{ borderBottom: "1px solid var(--border)" }}>
                 <Link
                   href={`/journal/submissions/${s.id}`}
-                  className="flex items-center gap-3 rounded-xl px-4 py-3 no-underline"
-                  style={{ border: "1px solid var(--border)", background: "var(--bg-elevated)" }}
+                  className="flex items-center gap-3 px-2 py-3.5 no-underline transition-colors hover:brightness-95"
+                  style={{ color: "var(--text-primary)" }}
                 >
-                  <span className="text-xl" aria-hidden="true">{s.skill === "speaking" ? "🎙️" : "✍️"}</span>
+                  <span className="text-lg opacity-70" aria-hidden="true">{s.skill === "speaking" ? "🎙️" : "✍️"}</span>
                   <span className="flex-1 min-w-0">
-                    <span className="block text-sm font-semibold truncate" style={{ color: "var(--text-primary)" }}>
-                      {s.title}
-                    </span>
+                    <span className="block text-sm font-semibold truncate">{s.title}</span>
                     <span className="block text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
                       {s.status === "graded"
-                        ? `Chấm ngày ${fmt(s.gradedAt)}${s.band !== null ? ` · ước lượng ${s.band}/200` : ""}`
+                        ? `Chấm ngày ${fmt(s.gradedAt)}`
                         : s.status === "submitted"
                         ? `Gửi ngày ${fmt(s.submittedAt)}`
                         : `Lưu ngày ${fmt(s.updatedAt)}`}
                     </span>
                   </span>
-                  <span
-                    className="text-[11px] font-bold px-2 py-1 rounded-md whitespace-nowrap"
-                    style={{ background: st.bg, color: st.fg }}
-                  >
+                  {s.band !== null && (
+                    <span className="text-sm font-bold tabular-nums hidden sm:block" style={{ color: "var(--text-secondary)" }}>
+                      {s.band}<span className="text-xs font-normal" style={{ color: "var(--text-muted)" }}>/200</span>
+                    </span>
+                  )}
+                  <span className="text-[11px] font-bold px-2 py-1 rounded-md whitespace-nowrap"
+                    style={{ background: st.bg, color: st.fg }}>
                     {STATUS_LABEL[(s.status as SubmissionStatus)] ?? s.status}
                   </span>
                 </Link>

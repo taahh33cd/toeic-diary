@@ -4,7 +4,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { uploadToCloudinary } from "@/lib/cloudinary/upload";
-import { AnnotatedText } from "@/components/submissions/AnnotatedText";
+import { AnnotatedText, tint, type ViewMode } from "@/components/submissions/AnnotatedText";
+import { DocumentSheet, type RailCard } from "@/components/submissions/DocumentSheet";
 import { overlaps, selectionRange } from "@/lib/submissions/selection";
 import {
   ANNOTATION_LABELS,
@@ -31,10 +32,6 @@ type Submission = {
   profile: { displayName: string | null; studentCode: string | null } | null;
 };
 
-/**
- * Đọc body JSON, nhưng nếu server trả HTML/text (500 chưa bắt được, redirect...)
- * thì ném kèm status + đoạn đầu body để còn biết hỏng ở đâu.
- */
 async function readJson(res: Response): Promise<Record<string, unknown>> {
   const text = await res.text();
   try {
@@ -50,10 +47,11 @@ const inputStyle: React.CSSProperties = {
   color: "var(--text-primary)",
 };
 
-function tint(hex: string, alpha: number): string {
-  const n = parseInt(hex.slice(1), 16);
-  return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, ${alpha})`;
-}
+const MODES: { id: ViewMode; label: string }[] = [
+  { id: "compare", label: "Đối chiếu" },
+  { id: "edited", label: "Bản đã sửa" },
+  { id: "original", label: "Bài gốc" },
+];
 
 // ─── Ghi âm nhận xét ──────────────────────────────────────────────────────────
 
@@ -120,12 +118,9 @@ function AudioRecorder({ url, onChange }: { url?: string; onChange: (v: { url: s
           {uploading ? "Đang tải lên…" : recording ? "■ Dừng ghi âm" : "🎙️ Ghi âm nhận xét"}
         </button>
         {url && !recording && (
-          <button
-            type="button"
-            onClick={() => onChange(null)}
+          <button type="button" onClick={() => onChange(null)}
             className="px-3 py-1.5 rounded-lg text-xs"
-            style={{ border: "1px solid var(--border)", background: "none", color: "var(--text-muted)", cursor: "pointer" }}
-          >
+            style={{ border: "1px solid var(--border)", background: "none", color: "var(--text-muted)", cursor: "pointer" }}>
             Xoá
           </button>
         )}
@@ -136,9 +131,9 @@ function AudioRecorder({ url, onChange }: { url?: string; onChange: (v: { url: s
   );
 }
 
-// ─── Thẻ comment ở cột phải ───────────────────────────────────────────────────
+// ─── Thẻ comment sửa được ─────────────────────────────────────────────────────
 
-function CommentCard({
+function EditableCard({
   a, active, onFocus, onChange, onRemove,
 }: {
   a: Annotation;
@@ -151,18 +146,18 @@ function CommentCard({
   return (
     <div
       onClick={onFocus}
-      className="rounded-xl p-3"
+      className="rounded-lg px-3 py-2.5"
       style={{
+        background: "var(--bg-elevated)",
         border: `1px solid ${active ? meta.color : "var(--border)"}`,
-        background: active ? tint(meta.color, 0.06) : "var(--bg-elevated)",
-        boxShadow: active ? `0 0 0 2px ${tint(meta.color, 0.18)}` : "none",
+        boxShadow: active ? `0 2px 10px ${tint(meta.color, 0.22)}` : "var(--shadow-sm)",
       }}
     >
-      <div className="flex items-center gap-2 mb-2 flex-wrap">
+      <div className="flex items-center gap-2 mb-1.5">
         <select
           value={a.label}
           onChange={(e) => onChange({ label: e.target.value as AnnotationLabel })}
-          className="px-2 py-1 rounded-md text-[11px] font-bold border outline-none"
+          className="px-1.5 py-0.5 rounded text-[10px] font-bold border outline-none"
           style={{ background: tint(meta.color, 0.12), borderColor: meta.color, color: meta.color }}
         >
           {ANNOTATION_LABELS.map((l) => <option key={l.id} value={l.id}>{l.label}</option>)}
@@ -170,188 +165,31 @@ function CommentCard({
         <button
           type="button"
           onClick={(e) => { e.stopPropagation(); onRemove(); }}
-          className="ml-auto text-xs px-2 py-1 rounded"
-          style={{ color: "rgb(220,38,38)", background: "rgba(239,68,68,0.08)", border: "none", cursor: "pointer" }}
+          className="ml-auto text-[11px] px-1.5 py-0.5 rounded"
+          style={{ color: "rgb(220,38,38)", background: "none", border: "none", cursor: "pointer" }}
         >
           Xoá
         </button>
       </div>
 
-      <p
-        className="text-xs italic m-0 mb-2 line-clamp-2"
-        style={{ color: "var(--text-muted)", borderLeft: `3px solid ${meta.color}`, paddingLeft: 8 }}
-      >
-        “{a.quote}”
-      </p>
+      <p className="text-xs italic m-0 mb-1.5" style={{ color: "var(--text-muted)" }}>“{a.quote}”</p>
 
       <input
         value={a.suggestion ?? ""}
         onChange={(e) => onChange({ suggestion: e.target.value })}
-        placeholder="Sửa thành… (để trống nếu chỉ nhận xét)"
-        className="w-full px-2 py-1.5 rounded-lg text-sm border outline-none mb-2"
+        placeholder="Sửa thành…"
+        className="w-full px-2 py-1 rounded text-[13px] border outline-none mb-1.5"
         style={inputStyle}
       />
       <textarea
         value={a.comment ?? ""}
         onChange={(e) => onChange({ comment: e.target.value })}
         rows={2}
-        placeholder="Giải thích lỗi cho học viên…"
-        className="w-full px-2 py-1.5 rounded-lg text-sm border outline-none"
+        placeholder="Giải thích cho học viên…"
+        className="w-full px-2 py-1 rounded text-[13px] border outline-none"
         style={inputStyle}
       />
     </div>
-  );
-}
-
-// ─── Một câu: bài viết bên trái, comment bên phải ─────────────────────────────
-
-function ItemBlock({
-  item, max, fb, annotations, activeId,
-  onScore, onItemComment, onAddAnnotation, onPatchAnnotation, onRemoveAnnotation, onFocusAnnotation,
-}: {
-  item: SubmissionItem;
-  max: number;
-  fb?: FeedbackItem;
-  annotations: Annotation[];
-  activeId: string | null;
-  onScore: (v: number | undefined) => void;
-  onItemComment: (v: string) => void;
-  onAddAnnotation: (a: Annotation) => void;
-  onPatchAnnotation: (id: string, patch: Partial<Annotation>) => void;
-  onRemoveAnnotation: (id: string) => void;
-  onFocusAnnotation: (id: string) => void;
-}) {
-  const bodyRef = useRef<HTMLDivElement>(null);
-  const [hint, setHint] = useState<string | null>(null);
-
-  function addFromSelection() {
-    const el = bodyRef.current;
-    if (!el || !item.text) return;
-    const range = selectionRange(el);
-    if (!range) { setHint("Hãy bôi đen một đoạn chữ trong bài trước."); return; }
-    if (overlaps(annotations, range.start, range.end)) {
-      setHint("Đoạn này đã có nhận xét — chọn đoạn khác hoặc sửa nhận xét cũ.");
-      return;
-    }
-    const quote = item.text.slice(range.start, range.end);
-    if (!quote.trim()) { setHint("Vùng chọn rỗng."); return; }
-
-    const a: Annotation = {
-      id: `a${item.idx}-${range.start}-${range.end}`,
-      itemIdx: item.idx,
-      start: range.start,
-      end: range.end,
-      quote,
-      label: "grammar",
-    };
-    onAddAnnotation(a);
-    setHint(null);
-    window.getSelection()?.removeAllRanges();
-  }
-
-  return (
-    <section className="rounded-xl p-4" style={{ border: "1px solid var(--border)", background: "var(--bg-elevated)" }}>
-      <div className="flex items-center justify-between gap-3 mb-2 flex-wrap">
-        <span className="text-[11px] font-bold uppercase tracking-wider" style={{ color: "var(--text-muted)" }}>
-          Câu {item.idx + 1}
-        </span>
-        <label className="text-xs flex items-center gap-2" style={{ color: "var(--text-muted)" }}>
-          Điểm rubric ETS
-          <select
-            value={fb?.score ?? ""}
-            onChange={(e) => onScore(e.target.value === "" ? undefined : Number(e.target.value))}
-            className="px-2 py-1 rounded-lg text-xs border outline-none"
-            style={inputStyle}
-          >
-            <option value="">—</option>
-            {Array.from({ length: max + 1 }, (_, n) => (
-              <option key={n} value={n}>{n}/{max}</option>
-            ))}
-          </select>
-        </label>
-      </div>
-
-      {item.prompt && <p className="text-xs italic m-0 mb-2" style={{ color: "var(--text-secondary)" }}>{item.prompt}</p>}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      {item.imageUrl && <img src={item.imageUrl} alt="" className="w-full rounded-lg mb-3" />}
-
-      <div className="grid gap-4" style={{ gridTemplateColumns: "minmax(0,1.6fr) minmax(0,1fr)" }}>
-        {/* Bài viết */}
-        <div>
-          {item.text ? (
-            <>
-              <div
-                ref={bodyRef}
-                onMouseUp={() => setHint(null)}
-                className="rounded-lg px-3 py-3 text-sm whitespace-pre-wrap"
-                style={{ background: "var(--bg-primary)", border: "1px solid var(--border)", color: "var(--text-primary)", lineHeight: 1.9 }}
-              >
-                <AnnotatedText
-                  text={item.text}
-                  annotations={annotations}
-                  activeId={activeId}
-                  onSelectAnnotation={onFocusAnnotation}
-                />
-              </div>
-              <div className="flex items-center gap-2 mt-2 flex-wrap">
-                <button
-                  type="button"
-                  onClick={addFromSelection}
-                  className="px-3 py-1.5 rounded-lg text-xs font-semibold"
-                  style={{ border: "1px solid var(--accent-primary)", background: "none", color: "var(--accent-primary)", cursor: "pointer" }}
-                >
-                  💬 Thêm nhận xét vào đoạn đã bôi đen
-                </button>
-                {hint && <span className="text-xs" style={{ color: "rgb(220,38,38)" }}>{hint}</span>}
-              </div>
-            </>
-          ) : (
-            <p className="text-sm italic m-0" style={{ color: "var(--text-muted)" }}>Câu này không có bài viết.</p>
-          )}
-
-          {item.audioUrl && <audio controls src={item.audioUrl} className="w-full mt-3" />}
-
-          <label className="block mt-3">
-            <span className="block text-[11px] uppercase tracking-wider mb-1" style={{ color: "var(--text-muted)" }}>
-              Nhận xét chung cho câu này
-            </span>
-            <textarea
-              value={fb?.comment ?? ""}
-              onChange={(e) => onItemComment(e.target.value)}
-              rows={2}
-              placeholder="Điểm mạnh, lỗi lặp lại, hướng cải thiện…"
-              className="w-full px-3 py-2 rounded-lg text-sm border outline-none"
-              style={inputStyle}
-            />
-          </label>
-        </div>
-
-        {/* Cột comment */}
-        <div className="flex flex-col gap-2">
-          <span className="text-[11px] font-bold uppercase tracking-wider" style={{ color: "var(--text-muted)" }}>
-            Nhận xét theo đoạn ({annotations.length})
-          </span>
-          {annotations.length === 0 ? (
-            <p className="text-xs italic m-0" style={{ color: "var(--text-muted)" }}>
-              Bôi đen một đoạn trong bài rồi bấm “Thêm nhận xét”.
-            </p>
-          ) : (
-            [...annotations]
-              .sort((a, b) => a.start - b.start)
-              .map((a) => (
-                <CommentCard
-                  key={a.id}
-                  a={a}
-                  active={activeId === a.id}
-                  onFocus={() => onFocusAnnotation(a.id)}
-                  onChange={(patch) => onPatchAnnotation(a.id, patch)}
-                  onRemove={() => onRemoveAnnotation(a.id)}
-                />
-              ))
-          )}
-        </div>
-      </div>
-    </section>
   );
 }
 
@@ -366,10 +204,13 @@ export default function GradeSubmissionPage() {
   const [items, setItems] = useState<FeedbackItem[]>([]);
   const [annotations, setAnnotations] = useState<Annotation[]>([]);
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [mode, setMode] = useState<ViewMode>("compare");
   const [overall, setOverall] = useState("");
   const [audio, setAudio] = useState<{ url: string; publicId: string } | null>(null);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  /** Nút "thêm nhận xét" nổi cạnh vùng vừa bôi đen */
+  const [pop, setPop] = useState<{ x: number; y: number } | null>(null);
 
   useEffect(() => {
     let alive = true;
@@ -383,12 +224,10 @@ export default function GradeSubmissionPage() {
         setOverall(s.feedback?.overall ?? "");
         setAnnotations(s.feedback?.annotations ?? []);
         setAudio(s.feedback?.audioUrl ? { url: s.feedback.audioUrl, publicId: s.feedback.audioPublicId ?? "" } : null);
-        setItems(
-          s.items.map((it) => {
-            const prev = s.feedback?.items?.find((f) => f.idx === it.idx);
-            return { idx: it.idx, score: prev?.score, comment: prev?.comment ?? "", corrected: prev?.corrected };
-          })
-        );
+        setItems(s.items.map((it) => {
+          const prev = s.feedback?.items?.find((f) => f.idx === it.idx);
+          return { idx: it.idx, score: prev?.score, comment: prev?.comment ?? "", corrected: prev?.corrected };
+        }));
       } catch (e) {
         if (alive) setError(e instanceof Error ? e.message : "Không tải được bài");
       } finally {
@@ -399,19 +238,59 @@ export default function GradeSubmissionPage() {
   }, [id]);
 
   const max = sub ? scaleFor(sub.skill, sub.unit) : 5;
-  const band = useMemo(
-    () => estimateBand({ items, annotations }, max),
-    [items, annotations, max]
-  );
+  const band = useMemo(() => estimateBand({ items, annotations }, max), [items, annotations, max]);
   const stats = useMemo(() => countByLabel(annotations), [annotations]);
 
   function patchItem(idx: number, p: Partial<FeedbackItem>) {
     setItems((prev) => prev.map((f) => (f.idx === idx ? { ...f, ...p } : f)));
   }
 
-  function focusAnnotation(aid: string) {
+  function focus(aid: string) {
     setActiveId(aid);
-    document.querySelector(`[data-annotation-id="${aid}"]`)?.scrollIntoView({ block: "center", behavior: "smooth" });
+    document.querySelector(`[data-annotation-id="${CSS.escape(aid)}"]`)
+      ?.scrollIntoView({ block: "center", behavior: "smooth" });
+  }
+
+  /** Bôi đen xong thì hiện nút nổi ngay cuối vùng chọn. */
+  function onMouseUp(e: React.MouseEvent) {
+    const sel = window.getSelection();
+    if (!sel || sel.isCollapsed) { setPop(null); return; }
+    const node = sel.anchorNode;
+    const host = (node?.nodeType === 1 ? (node as Element) : node?.parentElement)?.closest("[data-item-idx]");
+    if (!host) { setPop(null); return; }
+    setPop({ x: e.clientX, y: e.clientY });
+  }
+
+  function addAnnotation() {
+    const sel = window.getSelection();
+    const node = sel?.anchorNode;
+    const host = (node?.nodeType === 1 ? (node as Element) : node?.parentElement)?.closest("[data-item-idx]") as HTMLElement | null;
+    if (!host || !sub) return;
+
+    const itemIdx = Number(host.dataset.itemIdx);
+    const item = sub.items.find((i) => i.idx === itemIdx);
+    const range = selectionRange(host);
+    if (!item?.text || !range) { setPop(null); return; }
+
+    const mine = annotations.filter((a) => a.itemIdx === itemIdx);
+    if (overlaps(mine, range.start, range.end)) {
+      setError("Đoạn này đã có nhận xét — sửa nhận xét cũ thay vì tạo mới.");
+      setPop(null);
+      return;
+    }
+
+    const quote = item.text.slice(range.start, range.end);
+    if (!quote.trim()) { setPop(null); return; }
+
+    const a: Annotation = {
+      id: `a${itemIdx}-${range.start}-${range.end}`,
+      itemIdx, start: range.start, end: range.end, quote, label: "grammar",
+    };
+    setAnnotations((prev) => [...prev, a]);
+    setActiveId(a.id);
+    setError(null);
+    setPop(null);
+    window.getSelection()?.removeAllRanges();
   }
 
   async function save() {
@@ -421,9 +300,7 @@ export default function GradeSubmissionPage() {
       const res = await fetch(`/api/admin/submissions/${id}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          feedback: { items, annotations, overall, audioUrl: audio?.url, audioPublicId: audio?.publicId },
-        }),
+        body: JSON.stringify({ feedback: { items, annotations, overall, audioUrl: audio?.url, audioPublicId: audio?.publicId } }),
       });
       const data = await readJson(res);
       if (!res.ok) throw new Error(String(data?.error ?? `Lỗi ${res.status}`));
@@ -435,88 +312,152 @@ export default function GradeSubmissionPage() {
     }
   }
 
-  if (loading) {
-    return <div className="h-40 rounded-xl animate-pulse" style={{ background: "var(--bg-elevated)" }} />;
-  }
-  if (!sub) {
-    return <p className="text-sm" style={{ color: "var(--text-muted)" }}>{error ?? "Không tìm thấy bài"}</p>;
-  }
+  if (loading) return <div className="h-40 rounded-xl animate-pulse" style={{ background: "var(--bg-elevated)" }} />;
+  if (!sub) return <p className="text-sm" style={{ color: "var(--text-muted)" }}>{error ?? "Không tìm thấy bài"}</p>;
+
+  const cards: RailCard[] = annotations
+    .slice()
+    .sort((a, b) => (a.itemIdx - b.itemIdx) || (a.start - b.start))
+    .map((a) => ({
+      id: a.id,
+      node: (
+        <EditableCard
+          a={a}
+          active={activeId === a.id}
+          onFocus={() => focus(a.id)}
+          onChange={(patch) => setAnnotations((prev) => prev.map((x) => (x.id === a.id ? { ...x, ...patch } : x)))}
+          onRemove={() => setAnnotations((prev) => prev.filter((x) => x.id !== a.id))}
+        />
+      ),
+    }));
+
+  const toolbar = (
+    <div className="flex items-center gap-3 flex-wrap px-3 md:px-6 py-2.5" style={{ borderBottom: "1px solid var(--border)" }}>
+      <Link href="/admin/grading" className="text-xs no-underline" style={{ color: "var(--text-muted)" }}>← Hàng chờ</Link>
+
+      <div className="flex rounded-lg overflow-hidden" style={{ border: "1px solid var(--border)" }}>
+        {MODES.map((m) => (
+          <button key={m.id} type="button" onClick={() => setMode(m.id)}
+            className="px-3 py-1.5 text-xs font-semibold"
+            style={{
+              background: mode === m.id ? "var(--accent-primary)" : "transparent",
+              color: mode === m.id ? "#fff" : "var(--text-muted)",
+              border: "none", cursor: "pointer",
+            }}>
+            {m.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="flex items-center gap-1.5 flex-wrap">
+        {stats.map((s) => (
+          <span key={s.id} className="text-[11px] font-semibold px-2 py-1 rounded-md"
+            style={{ background: tint(s.color, 0.12), color: s.color }}>
+            {s.label} {s.count}
+          </span>
+        ))}
+      </div>
+
+      <div className="ml-auto flex items-center gap-3">
+        <span className="text-sm font-bold" style={{ color: "var(--text-primary)" }}>
+          {band === null ? "— /200" : `~${band}/200`}
+        </span>
+        <button type="button" onClick={save} disabled={saving}
+          className="px-5 py-2 rounded-lg text-sm font-bold text-white"
+          style={{ background: saving ? "var(--border)" : "var(--accent-primary)", border: "none", cursor: saving ? "default" : "pointer" }}>
+          {saving ? "Đang lưu…" : sub.status === "graded" ? "Lưu lại" : "Gửi nhận xét"}
+        </button>
+      </div>
+    </div>
+  );
 
   return (
-    <div className="space-y-4">
-      <Link href="/admin/grading" className="text-xs no-underline" style={{ color: "var(--text-muted)" }}>
-        ← Hàng chờ chấm
-      </Link>
-
-      {/* Thanh tiêu đề dính trên cùng — luôn thấy điểm và nút lưu */}
-      <div
-        className="sticky top-0 z-10 flex items-center gap-3 flex-wrap py-3"
-        style={{ background: "var(--bg-primary)", borderBottom: "1px solid var(--border)" }}
-      >
-        <div className="min-w-0">
-          <h1 className="text-lg font-bold m-0 truncate" style={{ color: "var(--text-primary)" }}>{sub.title}</h1>
-          <p className="text-xs m-0" style={{ color: "var(--text-muted)" }}>
+    <div onMouseUp={onMouseUp}>
+      <DocumentSheet toolbar={toolbar} cards={cards} activeId={activeId}>
+        <header className="mb-7">
+          <h1 className="text-[1.6rem] font-bold m-0" style={{ color: "var(--text-primary)", fontFamily: "var(--font-admin-serif, Georgia, serif)" }}>
+            {sub.title}
+          </h1>
+          <p className="text-xs mt-1.5 m-0" style={{ color: "var(--text-muted)" }}>
             {sub.profile?.studentCode ?? sub.profile?.displayName ?? "—"}
             {sub.submittedAt && ` · gửi ${new Date(sub.submittedAt).toLocaleString("vi-VN")}`}
           </p>
-        </div>
+        </header>
 
-        <div className="ml-auto flex items-center gap-3 flex-wrap">
-          {stats.map((s) => (
-            <span key={s.id} className="text-[11px] font-semibold px-2 py-1 rounded-md"
-              style={{ background: tint(s.color, 0.12), color: s.color }}>
-              {s.label} {s.count}
-            </span>
-          ))}
-          <span className="text-sm font-bold" style={{ color: "var(--text-primary)" }}>
-            {band === null ? "— /200" : `~${band}/200`}
-          </span>
-          <button
-            type="button"
-            onClick={save}
-            disabled={saving}
-            className="px-5 py-2 rounded-lg text-sm font-bold text-white"
-            style={{ background: saving ? "var(--border)" : "var(--accent-primary)", border: "none", cursor: saving ? "default" : "pointer" }}
-          >
-            {saving ? "Đang lưu…" : sub.status === "graded" ? "Lưu lại" : "Gửi nhận xét"}
-          </button>
-        </div>
-      </div>
+        {sub.items.map((it, i) => {
+          const fb = items.find((f) => f.idx === it.idx);
+          const anns = annotations.filter((a) => a.itemIdx === it.idx);
+          return (
+            <section key={it.idx} className={i > 0 ? "mt-7 pt-7" : ""} style={i > 0 ? { borderTop: "1px solid var(--border)" } : undefined}>
+              <div className="flex items-baseline gap-2 mb-1.5 flex-wrap">
+                <h2 className="text-[11px] font-bold uppercase tracking-widest m-0" style={{ color: "var(--text-muted)" }}>
+                  Câu {it.idx + 1}
+                </h2>
+                {it.prompt && <span className="text-xs italic" style={{ color: "var(--text-secondary)" }}>{it.prompt}</span>}
+                <select
+                  value={fb?.score ?? ""}
+                  onChange={(e) => patchItem(it.idx, { score: e.target.value === "" ? undefined : Number(e.target.value) })}
+                  className="ml-auto px-2 py-0.5 rounded text-xs border outline-none"
+                  style={inputStyle}
+                >
+                  <option value="">— /{max}</option>
+                  {Array.from({ length: max + 1 }, (_, n) => <option key={n} value={n}>{n}/{max}</option>)}
+                </select>
+              </div>
 
-      {sub.items.map((it) => (
-        <ItemBlock
-          key={it.idx}
-          item={it}
-          max={max}
-          fb={items.find((f) => f.idx === it.idx)}
-          annotations={annotations.filter((a) => a.itemIdx === it.idx)}
-          activeId={activeId}
-          onScore={(v) => patchItem(it.idx, { score: v })}
-          onItemComment={(v) => patchItem(it.idx, { comment: v })}
-          onAddAnnotation={(a) => { setAnnotations((prev) => [...prev, a]); setActiveId(a.id); }}
-          onPatchAnnotation={(aid, patch) => setAnnotations((prev) => prev.map((x) => (x.id === aid ? { ...x, ...patch } : x)))}
-          onRemoveAnnotation={(aid) => setAnnotations((prev) => prev.filter((x) => x.id !== aid))}
-          onFocusAnnotation={focusAnnotation}
-        />
-      ))}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              {it.imageUrl && <img src={it.imageUrl} alt="" className="w-full rounded-md my-3" />}
 
-      <section className="rounded-xl p-4 space-y-3" style={{ border: "1px solid var(--border)", background: "var(--bg-elevated)" }}>
-        <label className="block">
-          <span className="block text-[11px] uppercase tracking-wider mb-1" style={{ color: "var(--text-muted)" }}>
+              {it.text ? (
+                <p data-item-idx={it.idx} className="text-[15px] whitespace-pre-wrap m-0"
+                  style={{ color: "var(--text-primary)", lineHeight: 2 }}>
+                  <AnnotatedText text={it.text} annotations={anns} activeId={activeId} onSelectAnnotation={focus} mode={mode} />
+                </p>
+              ) : (
+                <p className="text-sm italic m-0" style={{ color: "var(--text-muted)" }}>Câu này không có bài viết.</p>
+              )}
+              {it.audioUrl && <audio controls src={it.audioUrl} className="w-full mt-2" />}
+
+              <textarea
+                value={fb?.comment ?? ""}
+                onChange={(e) => patchItem(it.idx, { comment: e.target.value })}
+                rows={2}
+                placeholder="Nhận xét chung cho câu này…"
+                className="w-full mt-3 px-3 py-2 rounded-lg text-sm border outline-none"
+                style={inputStyle}
+              />
+            </section>
+          );
+        })}
+
+        <section className="mt-7 pt-7" style={{ borderTop: "1px solid var(--border)" }}>
+          <h2 className="text-[11px] font-bold uppercase tracking-widest m-0 mb-2" style={{ color: "var(--text-muted)" }}>
             Nhận xét chung cả bài
-          </span>
+          </h2>
           <textarea
             value={overall}
             onChange={(e) => setOverall(e.target.value)}
             rows={4}
-            className="w-full px-3 py-2 rounded-lg text-sm border outline-none"
+            className="w-full px-3 py-2 rounded-lg text-sm border outline-none mb-3"
             style={inputStyle}
           />
-        </label>
-        <AudioRecorder url={audio?.url} onChange={setAudio} />
-      </section>
+          <AudioRecorder url={audio?.url} onChange={setAudio} />
+          {error && <p className="text-sm mt-3 mb-0" style={{ color: "rgb(220,38,38)" }}>{error}</p>}
+        </section>
+      </DocumentSheet>
 
-      {error && <p className="text-sm" style={{ color: "rgb(220,38,38)" }}>{error}</p>}
+      {/* Nút nổi cạnh vùng bôi đen */}
+      {pop && (
+        <button
+          type="button"
+          onMouseDown={(e) => e.preventDefault()}
+          onClick={addAnnotation}
+          className="fixed z-50 px-3 py-1.5 rounded-lg text-xs font-bold text-white shadow-lg"
+          style={{ left: pop.x + 8, top: pop.y + 8, background: "var(--accent-primary)", border: "none", cursor: "pointer" }}
+        >
+          💬 Nhận xét
+        </button>
+      )}
     </div>
   );
 }

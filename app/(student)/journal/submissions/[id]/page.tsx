@@ -22,39 +22,20 @@ export default async function SubmissionDetailPage({ params }: Props) {
   const items = (submission.items ?? []) as unknown as SubmissionItem[];
   const feedback = (submission.feedback ?? null) as unknown as SubmissionFeedback | null;
 
+  const meta = [
+    STATUS_LABEL[submission.status as SubmissionStatus] ?? submission.status,
+    submission.band !== null ? `điểm ước lượng ${submission.band}/200` : null,
+    submission.gradedAt
+      ? `chấm ngày ${submission.gradedAt.toLocaleDateString("vi-VN", { day: "numeric", month: "numeric", year: "numeric" })}`
+      : null,
+  ].filter(Boolean).join(" · ");
+
   return (
-    <div className="max-w-3xl mx-auto w-full">
-      <Link href="/journal/submissions" className="text-xs no-underline" style={{ color: "var(--text-muted)" }}>
+    <div className="w-full">
+      <Link href="/journal/submissions" className="text-xs no-underline px-3 md:px-6 print:hidden" style={{ color: "var(--text-muted)" }}>
         ← Tất cả bài đã nộp
       </Link>
-
-      <header className="mt-2 mb-5">
-        <h1 className="text-xl font-bold" style={{ color: "var(--text-primary)" }}>{submission.title}</h1>
-        <p className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>
-          {STATUS_LABEL[submission.status as SubmissionStatus] ?? submission.status}
-          {submission.band !== null && ` · điểm ước lượng ${submission.band}/200`}
-        </p>
-      </header>
-
-      {/* Nhận xét chung của giáo viên */}
-      {feedback && (feedback.overall || feedback.audioUrl) && (
-        <section
-          className="rounded-2xl px-4 py-4 mb-4"
-          style={{ border: "1px solid var(--border)", background: "var(--accent-faint, var(--bg-elevated))" }}
-        >
-          <h2 className="text-[11px] font-bold uppercase tracking-wider m-0 mb-2" style={{ color: "var(--text-muted)" }}>
-            Nhận xét của giáo viên
-          </h2>
-          {feedback.overall && (
-            <p className="text-sm whitespace-pre-wrap m-0" style={{ color: "var(--text-primary)", lineHeight: 1.65 }}>
-              {feedback.overall}
-            </p>
-          )}
-          {feedback.audioUrl && <audio controls src={feedback.audioUrl} className="w-full mt-3" />}
-        </section>
-      )}
-
-      <GradedView items={items} feedback={feedback} max={scaleFor(submission.skill, submission.unit)} />
+      <GradedView items={items} feedback={feedback} max={scaleFor(submission.skill, submission.unit)} title={submission.title} meta={meta} />
     </div>
   );
 }
