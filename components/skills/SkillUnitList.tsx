@@ -8,6 +8,7 @@ const READY: Record<string, string> = {
   "listening/part2": "9 đề",
   "reading/part5": "Đề mẫu",
   "speaking/q3-4": "Đề mẫu",
+  "speaking/q8-10": "50 đề",
   "writing/q1-5": "Đề mẫu",
 };
 

@@ -7,6 +7,8 @@ import { PartPracticeRunner } from "@/components/skills/part-practice/PartPracti
 import { ContentLockModal } from "@/components/shared/ContentLockModal";
 import { SpeakingExamClient } from "@/components/skills/exam/SpeakingExamClient";
 import { Q34_LEVELS, getQ34Test } from "@/lib/skills/speaking-q3-4";
+import { SpeakingQ810Client } from "@/components/skills/exam/SpeakingQ810Client";
+import { getQ810Test, q810CategoryMeta } from "@/lib/skills/speaking-q8-10";
 import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { isUsageExempt } from "@/lib/access";
@@ -31,6 +33,13 @@ function parse(skill: string, unit: string, test: string) {
     if (!q34) return null;
     const level = Q34_LEVELS.find((l) => l.level === q34.level)!;
     return { kind: "speaking-q34" as const, ...found, q34, title: `${level.label} · Đề ${q34.index}` };
+  }
+
+  if (skill === "speaking" && unit === "q8-10") {
+    const q810 = getQ810Test(test);
+    if (!q810) return null;
+    const cat = q810CategoryMeta(q810.category);
+    return { kind: "speaking-q810" as const, ...found, q810, title: `${cat.label} · Đề ${q810.index}` };
   }
 
   return null;
@@ -67,6 +76,30 @@ export default async function SkillTestPage({ params }: Props) {
         testKey={f.q34.slug}
         signedIn={Boolean(user)}
         canSubmit={isUsageExempt(profile)}
+      />
+    );
+  }
+
+  if (f.kind === "speaking-q810") {
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+    const profile = user
+      ? await prisma.profile
+          .findUnique({ where: { id: user.id }, select: { studentCode: true, role: true, enrolledCourses: true } })
+          .catch(() => null)
+      : null;
+    const unlocked = isUsageExempt(profile);
+
+    // Mỗi thể loại mở 2 bộ đầu; còn lại cần đã đăng ký khoá.
+    if (!f.q810.free && !unlocked) return <ContentLockModal />;
+
+    return (
+      <SpeakingQ810Client
+        skill={f.skill}
+        unit={f.unit}
+        test={f.q810}
+        signedIn={Boolean(user)}
+        canSubmit={unlocked}
       />
     );
   }

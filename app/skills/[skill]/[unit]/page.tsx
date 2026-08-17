@@ -13,6 +13,7 @@ import { Q67_PART_KEY } from "@/lib/skills/writing-q6-7";
 import { WritingEmailClient } from "@/components/skills/WritingEmailClient";
 import { READING_PART5 } from "@/lib/skills/sample";
 import { SpeakingQ34TestList } from "@/components/skills/exam/SpeakingQ34TestList";
+import { SpeakingQ810TestList } from "@/components/skills/exam/SpeakingQ810TestList";
 import { isUsageExempt } from "@/lib/access";
 
 type Props = { params: Promise<{ skill: string; unit: string }> };
@@ -64,6 +65,19 @@ export default async function SkillUnitPage({ params }: Props) {
   // Speaking Q3-4 đã chia bộ đề theo 3 mức độ → danh sách bộ đề
   if (skill === "speaking" && unit === "q3-4") {
     return <SpeakingQ34TestList skill={found.skill} unit={found.unit} />;
+  }
+
+  // Speaking Q8-10 — 50 bộ đề chia theo loại bảng thông tin
+  if (skill === "speaking" && unit === "q8-10") {
+    const supabase = await createClient();
+    const { data: { user } } = await supabase.auth.getUser();
+    const profile = user
+      ? await prisma.profile
+          .findUnique({ where: { id: user.id }, select: { studentCode: true, role: true, enrolledCourses: true } })
+          .catch(() => null)
+      : null;
+
+    return <SpeakingQ810TestList skill={found.skill} unit={found.unit} unlocked={isUsageExempt(profile)} />;
   }
 
   // Writing Q1-5 đã có bài tập thật → render trang làm bài
