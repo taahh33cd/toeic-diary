@@ -33,6 +33,20 @@ function getPrisma() {
   return new PrismaClient({ adapter });
 }
 
+/**
+ * Quyền nằm ở HAI nơi: `app_metadata.role` của Supabase Auth (thứ cả app dùng để
+ * gác cổng /admin) và `profiles.role` trong Postgres. Khi hai nơi lệch nhau, lấy
+ * quyền CAO HƠN — nếu không, một bản ghi profile cũ sẽ âm thầm hạ quyền admin
+ * xuống student và Firebase Rules chặn hết dữ liệu học viên (đã xảy ra 16/08/2026).
+ */
+const ROLE_RANK: Record<string, number> = { student: 0, teacher: 1, admin: 2 };
+
+function highestRole(a: string | undefined, b: string | undefined): string {
+  const ra = ROLE_RANK[a ?? ""] ?? 0;
+  const rb = ROLE_RANK[b ?? ""] ?? 0;
+  return ra >= rb ? (a ?? "student") : (b ?? "student");
+}
+
 export async function POST(req: NextRequest) {
   try {
     // 1. Verify Supabase session
@@ -59,7 +73,7 @@ export async function POST(req: NextRequest) {
           select: { role: true, studentCode: true, teacherId: true },
         });
         if (profile) {
-          role = profile.role ?? role;
+          role = highestRole(role, profile.role ?? undefined);
           studentCode = profile.studentCode ?? null;
           teacherId = profile.teacherId ?? null;
         }
