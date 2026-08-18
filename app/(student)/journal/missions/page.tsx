@@ -299,6 +299,14 @@ function HwCard({
     const fbKey = `${hw.id}_${sec}_${i}`;
     const newVal = !checked[key];
     setChecked(prev => ({ ...prev, [key]: newVal }));
+    // Bỏ override thủ công để hướng dẫn bám lại trạng thái tick (tick xong thì thu lại)
+    setShowDescMap(prev => {
+      const descKey = `${key}-desc`;
+      if (!(descKey in prev)) return prev;
+      const next = { ...prev };
+      delete next[descKey];
+      return next;
+    });
     if (newVal) {
       saveSubmission(studentCode, fbKey, { ticked: true, updatedAt: new Date().toISOString() });
     } else {
@@ -574,7 +582,7 @@ function HwCard({
                         const key = `${sec}-${i}`;
                         const isChecked = checked[key] ?? false;
                         const descKey = `${key}-desc`;
-                        const showDesc = showDescMap[descKey] ?? false;
+                        const showDesc = showDescMap[descKey] ?? !isChecked;
                         return (
                           <div
                             key={key}
