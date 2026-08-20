@@ -1,0 +1,183 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "giu-nhip", "name": "Giữ nhịp 30 giây", "description": "Nói đủ thời lượng, không ngập ngừng, không hết ý giữa chừng." },
+  "test_number": 1,
+  "title": "Hồ sơ ứng viên — Résumé of Steve Bentley",
+  "source_slug": "mini-4",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/mini-4/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_gn_t1_e1",
+          "type": "multiple_choice",
+          "instruction": "Câu 10 cho 30 giây. Độ dài hợp lý của câu trả lời là bao nhiêu?",
+          "options": [
+            { "id": "A", "text": "Khoảng 10 – 15 từ, nói xong sớm cho chắc" },
+            { "id": "B", "text": "Khoảng 55 – 70 từ, dùng gần hết thời gian" },
+            { "id": "C", "text": "Càng nhiều từ càng tốt, nói thật nhanh" },
+            { "id": "D", "text": "Đúng 100 từ" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Tốc độ nói tự nhiên khoảng 2 từ mỗi giây, nên 30 giây rơi vào 55 – 70 từ. Dừng ở giây thứ mười là bỏ phí hai phần ba thời lượng."
+        },
+        {
+          "id": "p4_gn_t1_e2",
+          "type": "multiple_choice",
+          "instruction": "Nếu nói hết ý mà vẫn còn 8 giây, nên làm gì?",
+          "options": [
+            { "id": "A", "text": "Im lặng chờ hết giờ" },
+            { "id": "B", "text": "Nhắc lại thông tin quan trọng nhất rồi thêm câu chốt lịch sự" },
+            { "id": "C", "text": "Nói “um…” cho tới khi hết giờ" },
+            { "id": "D", "text": "Bịa thêm một mục không có trên hồ sơ" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "“Let me repeat that…” hoặc “Would you like me to repeat any of that?” lấp chỗ trống rất tự nhiên. Bịa thông tin thì mất điểm nội dung ngay."
+        },
+        {
+          "id": "p4_gn_t1_e3",
+          "type": "multiple_choice",
+          "instruction": "Ứng viên có mấy bằng cấp trong mục Education?",
+          "options": [
+            { "id": "A", "text": "Một" },
+            { "id": "B", "text": "Hai" },
+            { "id": "C", "text": "Ba" },
+            { "id": "D", "text": "Không ghi" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Bachelor's in culinary arts, Boston University (2013) và Associate's in hospitality management, Boston Community College (2009). Hai mục là vừa đủ cho 30 giây."
+        },
+        {
+          "id": "p4_gn_t1_e4",
+          "type": "multiple_choice",
+          "instruction": "Cách nào KHÔNG nên dùng để kéo dài câu trả lời?",
+          "options": [
+            { "id": "A", "text": "Nói đầy đủ tên trường thay vì nói tắt" },
+            { "id": "B", "text": "Thêm năm tốt nghiệp cho mỗi bằng" },
+            { "id": "C", "text": "Lặp đi lặp lại “and… and… and…”" },
+            { "id": "D", "text": "Thêm câu tổng quan mở đầu" }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "Lặp từ nối là dấu hiệu ngập ngừng, bị trừ điểm độ trôi chảy. Kéo dài phải bằng thông tin thật, không bằng từ đệm."
+        },
+        {
+          "id": "p4_gn_t1_e5",
+          "type": "multiple_choice",
+          "instruction": "Ứng viên đang làm công việc gì hiện tại?",
+          "options": [
+            { "id": "A", "text": "Apprentice tại Grill King Restaurant" },
+            { "id": "B", "text": "Line Chef tại Hotel Gresham" },
+            { "id": "C", "text": "Sous Chef tại Hotel Noir" },
+            { "id": "D", "text": "Sinh viên Boston University" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Line Chef, Hotel Gresham (2016-Present) — chữ “Present” là dấu hiệu công việc hiện tại. Sous Chef ở Hotel Noir mới là vị trí anh ấy đang ỨNG TUYỂN."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_gn_t1_m1",
+          "type": "essay_typing",
+          "instruction": "Điền câu tổng quan mở đầu — điền số bằng cấp bằng chữ.",
+          "content": "He has ______ qualifications listed in his education section.",
+          "options": [],
+          "correct_answers": ["two"],
+          "explanation": "Câu tổng quan vừa định hướng cho người nghe vừa mua cho bạn hai giây để nhớ lại nội dung."
+        },
+        {
+          "id": "p4_gn_t1_m2",
+          "type": "essay_typing",
+          "instruction": "Điền chuyên ngành bằng cử nhân (hai từ).",
+          "content": "He has a bachelor's degree in ______ ______ from Boston University.",
+          "options": [],
+          "correct_answers": ["culinary arts"],
+          "explanation": "“Bachelor's degree in culinary arts, Boston University (2013)”."
+        },
+        {
+          "id": "p4_gn_t1_m3",
+          "type": "essay_typing",
+          "instruction": "Điền năm lấy bằng cao đẳng (đọc theo cặp).",
+          "content": "He finished his associate's degree in ______.",
+          "options": [],
+          "correct_answers": ["two thousand nine", "twenty oh nine", "2009"],
+          "explanation": "Năm 2009 đọc là “two thousand nine” hoặc “twenty oh nine”. Từ 2010 trở đi thì đọc theo cặp: “twenty thirteen”."
+        },
+        {
+          "id": "p4_gn_t1_m4",
+          "type": "essay_typing",
+          "instruction": "Điền cụm dùng để lấp thời gian một cách lịch sự (hai từ còn thiếu).",
+          "content": "Let me ______ ______: he graduated from Boston University in twenty thirteen.",
+          "options": [],
+          "correct_answers": ["repeat that", "say that"],
+          "explanation": "“Let me repeat that” mua thêm khoảng 2 giây và nghe rất tự nhiên qua điện thoại — dùng khi bạn còn dư thời gian hoặc cần lấy lại nhịp."
+        },
+        {
+          "id": "p4_gn_t1_m5",
+          "type": "essay_typing",
+          "instruction": "Điền chứng chỉ thêm của ứng viên (hai từ).",
+          "content": "He also has a certification in ______ and ______.",
+          "options": [],
+          "correct_answers": ["baking pastry", "baking and pastry"],
+          "explanation": "“Certification in baking and pastry” nằm ở mục Additional Qualifications — chi tiết dự phòng rất tốt khi bạn cần thêm ý cho đủ 30 giây."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_gn_t1_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 rồi nói đủ 25 – 30 giây: câu tổng quan, hai bằng cấp đầy đủ, câu chốt.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/mini-4/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "He has two qualifications. First, a bachelor's degree in culinary arts from Boston University in twenty thirteen. Second, an associate's degree in hospitality management from Boston Community College in two thousand nine.",
+          "explanation": "Khoảng 40 từ. Nếu vẫn dư giờ, thêm: “He also has a certification in baking and pastry.” là vừa tròn 30 giây."
+        },
+        {
+          "id": "p4_gn_t1_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — vị trí ứng tuyển và số điện thoại.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/mini-4/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "He's applying for the sous chef position at Hotel Noir, and his phone number is four five six, two four four, five one four one.",
+          "explanation": "Số điện thoại đọc từng chữ số, ngắt theo nhóm. Đọc chậm phần số vì người nghe đang ghi lại."
+        },
+        {
+          "id": "p4_gn_t1_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 rồi đính chính — người gọi nhầm công việc cũ thành công việc hiện tại.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/mini-4/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that's not correct. He's currently a line chef at Hotel Gresham. He was an apprentice at Grill King until twenty fifteen.",
+          "explanation": "Mốc “2016-Present” là hiện tại, “2013-2015” đã kết thúc. Thì hiện tại cho việc đang làm, quá khứ cho việc đã qua."
+        },
+        {
+          "id": "p4_gn_t1_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to đoạn sau — luyện nói liền mạch khoảng 20 giây không ngắt quãng.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "He has two jobs listed. Currently he's a line chef at Hotel Gresham in New York, and before that he worked as an apprentice at Grill King Restaurant in Boston from twenty thirteen to twenty fifteen.",
+          "explanation": "Khoảng 40 từ. Ngắt hơi ở dấu phẩy, không ngắt giữa cụm — đó là khác biệt giữa nói trôi chảy và nói đứt đoạn."
+        },
+        {
+          "id": "p4_gn_t1_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — câu dự phòng khi còn dư thời gian.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "He also has a certification in baking and pastry, and references are available upon request.",
+          "explanation": "Hai chi tiết ở cuối hồ sơ, để dành cho lúc còn dư giây. Luôn chuẩn bị sẵn một câu dự phòng như thế này."
+        }
+      ]
+    }
+  ]
+}

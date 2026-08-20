@@ -7,6 +7,27 @@
 import soVaGio1 from "./so-va-gio.1.json";
 import soVaGio2 from "./so-va-gio.2.json";
 import soVaGio3 from "./so-va-gio.3.json";
+import quetBang1 from "./quet-bang.1.json";
+import quetBang2 from "./quet-bang.2.json";
+import quetBang3 from "./quet-bang.3.json";
+import batCauHoi1 from "./bat-cau-hoi.1.json";
+import batCauHoi2 from "./bat-cau-hoi.2.json";
+import batCauHoi3 from "./bat-cau-hoi.3.json";
+import traLoiNgan1 from "./tra-loi-ngan.1.json";
+import traLoiNgan2 from "./tra-loi-ngan.2.json";
+import traLoiNgan3 from "./tra-loi-ngan.3.json";
+import bangThanhCau1 from "./bang-thanh-cau.1.json";
+import bangThanhCau2 from "./bang-thanh-cau.2.json";
+import bangThanhCau3 from "./bang-thanh-cau.3.json";
+import dinhChinh1 from "./dinh-chinh.1.json";
+import dinhChinh2 from "./dinh-chinh.2.json";
+import dinhChinh3 from "./dinh-chinh.3.json";
+import lietKe1 from "./liet-ke.1.json";
+import lietKe2 from "./liet-ke.2.json";
+import lietKe3 from "./liet-ke.3.json";
+import giuNhip1 from "./giu-nhip.1.json";
+import giuNhip2 from "./giu-nhip.2.json";
+import giuNhip3 from "./giu-nhip.3.json";
 
 export const PART4_PASS_THRESHOLD = 80;
 
@@ -84,7 +105,7 @@ export const SPEAKING_P4_SKILLS: Part4SkillMeta[] = [
     description: "45 giây tìm đúng hàng/cột: Time × Session × Speaker, và những dòng có dấu sao.",
     band: "nen",
     part: "sp4-quet-bang",
-    ready: false,
+    ready: true,
   },
   {
     id: "so-va-gio",
@@ -102,7 +123,7 @@ export const SPEAKING_P4_SKILLS: Part4SkillMeta[] = [
     description: "What time / Who / How much / How long / Where — nhận ra dạng hỏi ngay lần nghe đầu.",
     band: "nen",
     part: "sp4-bat-cau-hoi",
-    ready: false,
+    ready: true,
   },
   {
     id: "tra-loi-ngan",
@@ -111,7 +132,7 @@ export const SPEAKING_P4_SKILLS: Part4SkillMeta[] = [
     description: "Trả lời trọn câu trong 15 giây, có chủ ngữ vị ngữ, không nói cụt lủn.",
     band: "trong-tam",
     part: "sp4-tra-loi-ngan",
-    ready: false,
+    ready: true,
   },
   {
     id: "bang-thanh-cau",
@@ -120,7 +141,7 @@ export const SPEAKING_P4_SKILLS: Part4SkillMeta[] = [
     description: "Cột Speaker → “It will be presented by…”; cột Location → “It takes place at…”.",
     band: "trong-tam",
     part: "sp4-bang-thanh-cau",
-    ready: false,
+    ready: true,
   },
   {
     id: "dinh-chinh",
@@ -129,7 +150,7 @@ export const SPEAKING_P4_SKILLS: Part4SkillMeta[] = [
     description: "Dòng gạch ngang, phiên bị dời giờ, chi tiết người gọi nhớ nhầm — bẫy cố định của câu 9.",
     band: "trong-tam",
     part: "sp4-dinh-chinh",
-    ready: false,
+    ready: true,
   },
   {
     id: "liet-ke",
@@ -138,7 +159,7 @@ export const SPEAKING_P4_SKILLS: Part4SkillMeta[] = [
     description: "First… After that… Finally… — gộp nhiều dòng bảng thành một đoạn liền mạch.",
     band: "nang-cao",
     part: "sp4-liet-ke",
-    ready: false,
+    ready: true,
   },
   {
     id: "giu-nhip",
@@ -147,7 +168,7 @@ export const SPEAKING_P4_SKILLS: Part4SkillMeta[] = [
     description: "Nói đủ thời lượng, không ngập ngừng, không hết ý ở giây thứ mười lăm.",
     band: "nang-cao",
     part: "sp4-giu-nhip",
-    ready: false,
+    ready: true,
   },
 ];
 
@@ -180,7 +201,14 @@ type RawTest = {
 };
 
 const RAW_MAP: Record<string, RawTest[]> = {
-  "so-va-gio": [soVaGio1 as RawTest, soVaGio2 as RawTest, soVaGio3 as RawTest],
+  "so-va-gio":      [soVaGio1 as RawTest, soVaGio2 as RawTest, soVaGio3 as RawTest],
+  "quet-bang":      [quetBang1 as RawTest, quetBang2 as RawTest, quetBang3 as RawTest],
+  "bat-cau-hoi":    [batCauHoi1 as RawTest, batCauHoi2 as RawTest, batCauHoi3 as RawTest],
+  "tra-loi-ngan":   [traLoiNgan1 as RawTest, traLoiNgan2 as RawTest, traLoiNgan3 as RawTest],
+  "bang-thanh-cau": [bangThanhCau1 as RawTest, bangThanhCau2 as RawTest, bangThanhCau3 as RawTest],
+  "dinh-chinh":     [dinhChinh1 as RawTest, dinhChinh2 as RawTest, dinhChinh3 as RawTest],
+  "liet-ke":        [lietKe1 as RawTest, lietKe2 as RawTest, lietKe3 as RawTest],
+  "giu-nhip":       [giuNhip1 as RawTest, giuNhip2 as RawTest, giuNhip3 as RawTest],
 };
 
 function normalize(raw: RawTest, skillId: string): Part4Test {

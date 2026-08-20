@@ -361,6 +361,8 @@ export default function SpeakingPart4Client({ skillId, tests, easyBest, mediumBe
             testNum={testNum}
             exerciseIndex={idx}
             userId={userId}
+            // Câu mẫu dài (kiểu câu 10) cần trọn 30 giây như thi thật
+            maxSeconds={(ex.reference_text ?? correctText).split(/\s+/).length > 25 ? 30 : 15}
           />
         </div>
       )}

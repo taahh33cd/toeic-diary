@@ -1,0 +1,182 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "tra-loi-ngan", "name": "Mẫu câu trả lời ngắn Q8-9", "description": "Trả lời trọn câu trong 15 giây, đủ chủ ngữ vị ngữ." },
+  "test_number": 3,
+  "title": "Họp nhân viên tuần — Bluebell Department Store",
+  "source_slug": "meeting-3",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/meeting-3/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_tn_t3_e1",
+          "type": "multiple_choice",
+          "instruction": "Người gọi hỏi cuộc họp bắt đầu và kết thúc lúc mấy giờ. Câu nào trả lời tốt nhất?",
+          "options": [
+            { "id": "A", "text": "Nine thirty to noon." },
+            { "id": "B", "text": "It starts at nine thirty a.m. and finishes at noon." },
+            { "id": "C", "text": "It starts in nine thirty and finish in noon." },
+            { "id": "D", "text": "The meeting is nine thirty until twelve o'clock noon time." }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Hai vế, hai động từ chia đúng ngôi (starts / finishes), giới từ AT cho cả hai mốc giờ. Đáp án A đúng thông tin nhưng không thành câu."
+        },
+        {
+          "id": "p4_tn_t3_e2",
+          "type": "multiple_choice",
+          "instruction": "Người gọi hỏi ai phụ trách phần Inventory Management. Câu nào đúng?",
+          "options": [
+            { "id": "A", "text": "Jude McGill from the Logistics Team is in charge of it." },
+            { "id": "B", "text": "Jude McGill in the Logistics Team is charge of it." },
+            { "id": "C", "text": "It is in charge by Jude McGill." },
+            { "id": "D", "text": "Jude McGill has charge it." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Cụm cố định: “be in charge of + việc”. Người thuộc bộ phận nào thì dùng “from the … Team”."
+        },
+        {
+          "id": "p4_tn_t3_e3",
+          "type": "multiple_choice",
+          "instruction": "Phần lúc 10 giờ sáng gồm hai nội dung. Câu trả lời nào nêu đủ?",
+          "options": [
+            { "id": "A", "text": "At ten, Lisa Wang covers announcements." },
+            { "id": "B", "text": "At ten, Lisa Wang covers announcements about upcoming sale events and new hires and promotions." },
+            { "id": "C", "text": "At ten there are announcements." },
+            { "id": "D", "text": "Lisa Wang talks at ten o'clock." }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Ô bảng có gạch đầu dòng nghĩa là dòng đó chứa NHIỀU ý — phải nói hết. Đây chính là chỗ ăn điểm “đủ thông tin”."
+        },
+        {
+          "id": "p4_tn_t3_e4",
+          "type": "multiple_choice",
+          "instruction": "Teresa Heinz thuộc bộ phận nào?",
+          "options": [
+            { "id": "A", "text": "Sales Team" },
+            { "id": "B", "text": "Management Team" },
+            { "id": "C", "text": "Customer Service Team" },
+            { "id": "D", "text": "Logistics Team" }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "Cột Organizer ghi cả tên lẫn bộ phận trong ngoặc. Bộ phận là thông tin câu 10 hay dùng để lọc, đừng bỏ qua."
+        },
+        {
+          "id": "p4_tn_t3_e5",
+          "type": "multiple_choice",
+          "instruction": "Cuộc họp diễn ra vào ngày nào? Chọn câu trả lời đúng và đủ.",
+          "options": [
+            { "id": "A", "text": "It's on Monday, July seventh." },
+            { "id": "B", "text": "It's in Monday, July seven." },
+            { "id": "C", "text": "It's at Monday, July seventh." },
+            { "id": "D", "text": "Monday." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Thứ và ngày đều đi với ON, ngày đọc số thứ tự. Trả lời mỗi “Monday” là thiếu — bảng có ghi ngày thì phải nói ngày."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_tn_t3_m1",
+          "type": "essay_typing",
+          "instruction": "Điền giờ kết thúc cuộc họp bằng một từ.",
+          "content": "The meeting starts at nine thirty and finishes at ______.",
+          "options": [],
+          "correct_answers": ["noon", "twelve"],
+          "explanation": "Bảng ghi “9:30 a.m. ~ Noon” → “noon”. Nói “twelve p.m.” cũng đúng nhưng “noon” gọn và tự nhiên hơn."
+        },
+        {
+          "id": "p4_tn_t3_m2",
+          "type": "essay_typing",
+          "instruction": "Điền cụm 3 từ chỉ việc phụ trách một phần họp.",
+          "content": "Tim Carlson is ______ ______ ______ the sales performance review.",
+          "options": [],
+          "correct_answers": ["in charge of"],
+          "explanation": "“in charge of” — cụm này xuất hiện trong chính câu hỏi 10 của đề, nên thuộc là nghe ra ngay."
+        },
+        {
+          "id": "p4_tn_t3_m3",
+          "type": "essay_typing",
+          "instruction": "Điền tên bộ phận của Jeff Barkley (một từ).",
+          "content": "Jeff Barkley is from the ______ Team.",
+          "options": [],
+          "correct_answers": ["Sales", "sales"],
+          "explanation": "Jeff Barkley (Sales Team) phụ trách Sales Employee Training lúc 11 giờ."
+        },
+        {
+          "id": "p4_tn_t3_m4",
+          "type": "essay_typing",
+          "instruction": "Điền giờ bắt đầu phần Customer Feedback Overview (viết như cách đọc).",
+          "content": "The customer feedback overview starts at ______.",
+          "options": [],
+          "correct_answers": ["ten thirty", "ten thirty a.m.", "half past ten"],
+          "explanation": "10:30 a.m. → “ten thirty”. Phần này do Teresa Heinz phụ trách, không phải Jude McGill."
+        },
+        {
+          "id": "p4_tn_t3_m5",
+          "type": "essay_typing",
+          "instruction": "Điền động từ đúng dạng cho câu trả lời.",
+          "content": "The meeting ______ at nine thirty in the morning.",
+          "options": [],
+          "correct_answers": ["starts", "begins"],
+          "explanation": "Chủ ngữ số ít “the meeting” → động từ thêm -s. Lỗi quên -s ở thì hiện tại đơn là lỗi ngữ pháp bị trừ điểm nhiều nhất."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_tn_t3_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — hai mốc giờ nằm ở tiêu đề, không nằm trong lưới.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/meeting-3/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The meeting starts at nine thirty a.m. and it's expected to finish at noon.",
+          "explanation": "Tiêu đề ghi “Monday, July 7th (9:30 a.m. ~ Noon)”. Dấu ngã trong ngoặc chính là khoảng thời gian cả buổi họp."
+        },
+        {
+          "id": "p4_tn_t3_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 rồi đính chính — người gọi gán nhầm người cho một phần họp.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/meeting-3/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that's not correct. Teresa Heinz leads the customer feedback overview at ten thirty. Jude McGill covers inventory management at eleven thirty.",
+          "explanation": "Giờ người gọi nêu là đúng, chỉ sai người. Nói rõ Jude McGill thực ra phụ trách phần nào để câu trả lời trọn vẹn."
+        },
+        {
+          "id": "p4_tn_t3_h3",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — mẫu trả lời cho câu hỏi về người phụ trách.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Lisa Wang from the management team is in charge of the announcements at ten.",
+          "explanation": "Ghép tên + bộ phận + việc + giờ trong một câu. Đây là khuôn dùng lại được cho mọi bảng lịch họp."
+        },
+        {
+          "id": "p4_tn_t3_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — nêu đủ hai gạch đầu dòng của một ô bảng.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The sales employee training covers finding a location and setting a schedule.",
+          "explanation": "Ô có hai gạch đầu dòng thì nói cả hai, nối bằng “and”. Bỏ một ý là mất một phần điểm nội dung."
+        },
+        {
+          "id": "p4_tn_t3_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — trả lời ngắn cho câu hỏi về ngày họp.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The weekly employee meeting is on Monday, July seventh.",
+          "explanation": "Nhắc lại tên đầy đủ của cuộc họp làm chủ ngữ khiến câu trả lời nghe chắc chắn và chuyên nghiệp hơn."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "liet-ke", "name": "Liệt kê nhiều mục cho câu 10", "description": "Gộp nhiều dòng bảng thành một đoạn nói liền mạch, có mở có kết." },
+  "test_number": 3,
+  "title": "Hội thảo bánh kẹo — Sweets & Snacks Conference",
+  "source_slug": "conference-5",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-5/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_lk_t3_e1",
+          "type": "multiple_choice",
+          "instruction": "Câu 10 hỏi về các phiên Workshop. Có bao nhiêu phiên như vậy?",
+          "options": [
+            { "id": "A", "text": "Một" },
+            { "id": "B", "text": "Hai" },
+            { "id": "C", "text": "Ba" },
+            { "id": "D", "text": "Bốn" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Workshop: Unusual Ingredients for Desserts (10:30) và Workshop: Making Healthier Dessert Choices (3:30). Hai phiên còn lại là Demonstration — khác loại, không được kể."
+        },
+        {
+          "id": "p4_lk_t3_e2",
+          "type": "multiple_choice",
+          "instruction": "Nếu chỉ nói được một trong hai workshop vì hết giờ, nên ưu tiên điều gì?",
+          "options": [
+            { "id": "A", "text": "Nói thật chi tiết một phiên rồi dừng" },
+            { "id": "B", "text": "Nói ngắn gọn cả hai phiên, mỗi phiên đủ giờ và tên" },
+            { "id": "C", "text": "Nói tên hai phiên, bỏ hết giờ giấc" },
+            { "id": "D", "text": "Im lặng vì không kịp" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Rubric chấm theo ĐỘ PHỦ thông tin. Hai mục mỗi mục hai chi tiết luôn được điểm cao hơn một mục với năm chi tiết."
+        },
+        {
+          "id": "p4_lk_t3_e3",
+          "type": "multiple_choice",
+          "instruction": "Workshop buổi sáng do ai phụ trách và lúc mấy giờ?",
+          "options": [
+            { "id": "A", "text": "Bill Martin, 10:30 – 11:30 a.m." },
+            { "id": "B", "text": "Amy Watts, 9:30 – 10:30 a.m." },
+            { "id": "C", "text": "Brian Wilson, 3:30 – 5:00 p.m." },
+            { "id": "D", "text": "Seth Bowers, 1:30 – 3:30 p.m." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "10:30 – 11:30, Workshop: Unusual Ingredients for Desserts, Bill Martin. Amy Watts phụ trách Demonstration chứ không phải Workshop."
+        },
+        {
+          "id": "p4_lk_t3_e4",
+          "type": "multiple_choice",
+          "instruction": "Cách nói nào giúp câu trả lời dài đủ 30 giây mà không lan man?",
+          "options": [
+            { "id": "A", "text": "Thêm chi tiết có thật từ bảng: giờ, tên người, tên phiên đầy đủ" },
+            { "id": "B", "text": "Lặp lại câu hỏi của người gọi hai lần" },
+            { "id": "C", "text": "Kể thêm ý kiến cá nhân về món tráng miệng" },
+            { "id": "D", "text": "Nói chậm hết mức có thể" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Kéo dài bằng THÔNG TIN THẬT thì vừa đủ giờ vừa được điểm nội dung. Bịa thêm ý kiến cá nhân là đi lạc yêu cầu đề."
+        },
+        {
+          "id": "p4_lk_t3_e5",
+          "type": "multiple_choice",
+          "instruction": "Phí tham dự nếu đăng ký tại chỗ là bao nhiêu?",
+          "options": [
+            { "id": "A", "text": "$50" },
+            { "id": "B", "text": "$75" },
+            { "id": "C", "text": "$125" },
+            { "id": "D", "text": "Miễn phí" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "$50 (Early) là đăng ký sớm, $75 (On-site) là đăng ký tại chỗ. Câu 8 của đề hỏi đúng mức On-site — đọc kỹ từ trong ngoặc."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_lk_t3_m1",
+          "type": "essay_typing",
+          "instruction": "Điền số phiên workshop (bằng chữ) để mở đầu câu 10.",
+          "content": "There are ______ workshop sessions that day.",
+          "options": [],
+          "correct_answers": ["two"],
+          "explanation": "Hai workshop, hai demonstration. Đếm đúng loại được hỏi trước khi mở miệng."
+        },
+        {
+          "id": "p4_lk_t3_m2",
+          "type": "essay_typing",
+          "instruction": "Điền chủ đề của workshop buổi sáng (hai từ).",
+          "content": "The morning workshop is on unusual ______ for ______.",
+          "options": [],
+          "correct_answers": ["ingredients desserts", "ingredients for desserts"],
+          "explanation": "“Unusual Ingredients for Desserts”. Chép đúng tên phiên như trên bảng, đừng tự rút gọn."
+        },
+        {
+          "id": "p4_lk_t3_m3",
+          "type": "essay_typing",
+          "instruction": "Điền tên người phụ trách workshop buổi chiều.",
+          "content": "The afternoon workshop is led by ______.",
+          "options": [],
+          "correct_answers": ["Brian Wilson"],
+          "explanation": "3:30 – 5:00 p.m., Workshop: Making Healthier Dessert Choices, Brian Wilson."
+        },
+        {
+          "id": "p4_lk_t3_m4",
+          "type": "essay_typing",
+          "instruction": "Điền từ nối mở đầu mục cuối cùng trong chuỗi liệt kê (một từ).",
+          "content": "First the morning workshop, and ______ the afternoon one at three thirty.",
+          "options": [],
+          "correct_answers": ["finally", "then", "second", "lastly"],
+          "explanation": "Với đúng hai mục thì “and finally” hoặc “and then” đều tự nhiên. Từ nối là thứ phân biệt một đoạn nói và một chuỗi câu rời."
+        },
+        {
+          "id": "p4_lk_t3_m5",
+          "type": "essay_typing",
+          "instruction": "Điền mức phí đăng ký sớm (bằng chữ, chỉ phần số).",
+          "content": "If you register early, the fee is only ______ dollars.",
+          "options": [],
+          "correct_answers": ["fifty"],
+          "explanation": "$50 (Early) so với $75 (On-site). Từ “only” làm nổi bật đây là mức rẻ hơn."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_lk_t3_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 rồi liệt kê đủ hai workshop: tên, giờ, người phụ trách.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-5/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "There are two workshops. First, Unusual Ingredients for Desserts with Bill Martin, from ten thirty to eleven thirty. And finally, Making Healthier Dessert Choices with Brian Wilson, from three thirty to five.",
+          "explanation": "Mỗi mục ba chi tiết: tên phiên, người phụ trách, khoảng giờ. Với 30 giây, hai mục ba chi tiết là vừa đẹp."
+        },
+        {
+          "id": "p4_lk_t3_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — địa điểm và mức phí đăng ký tại chỗ.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-5/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "It's at the Hempstead Hotel, and if you pay on site the fee is seventy-five dollars.",
+          "explanation": "Người gọi hỏi riêng mức On-site. Trả lời nhầm sang mức Early là sai thông tin, dù con số đó cũng có trên bảng."
+        },
+        {
+          "id": "p4_lk_t3_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 rồi đính chính — người gọi gán nhầm người cho phiên khai mạc.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-5/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that's not correct. Ethan Kurt gives the welcome speech at nine. Seth Bowers presents a demonstration at one thirty.",
+          "explanation": "Seth Bowers có thật trên bảng nhưng ở phiên buổi chiều. Luôn nói thêm “người đó thực ra làm gì” để câu trả lời trọn vẹn."
+        },
+        {
+          "id": "p4_lk_t3_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — liệt kê hai phiên Demonstration.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "There are two demonstrations: Reinventing Classic Desserts with Amy Watts at nine thirty, and Gluten-Free Dessert Ideas with Seth Bowers at one thirty.",
+          "explanation": "Cùng một khuôn liệt kê, chỉ đổi tiêu chí lọc từ Workshop sang Demonstration. Thuộc khuôn thì đổi đề nào cũng nói được."
+        },
+        {
+          "id": "p4_lk_t3_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — tổng quan cả ngày hội thảo kèm câu chốt.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The conference runs from nine a.m. to five p.m. on Saturday, October tenth. Would you like me to repeat any of that?",
+          "explanation": "Câu tổng quan cộng câu chốt là cách lấp nốt vài giây cuối của câu 10 mà vẫn nghe rất tự nhiên."
+        }
+      ]
+    }
+  ]
+}

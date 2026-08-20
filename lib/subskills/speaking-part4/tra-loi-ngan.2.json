@@ -1,0 +1,182 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "tra-loi-ngan", "name": "Mẫu câu trả lời ngắn Q8-9", "description": "Trả lời trọn câu trong 15 giây, đủ chủ ngữ vị ngữ." },
+  "test_number": 2,
+  "title": "Lớp hè miễn phí — Pasadena Art Center",
+  "source_slug": "class-2",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-2/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_tn_t2_e1",
+          "type": "multiple_choice",
+          "instruction": "Người gọi hỏi học phí. Bảng ghi “Free Summer Class”. Trả lời thế nào cho tự nhiên?",
+          "options": [
+            { "id": "A", "text": "Free." },
+            { "id": "B", "text": "It has no money." },
+            { "id": "C", "text": "The classes are completely free of charge." },
+            { "id": "D", "text": "You don't pay the class." }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "“Free of charge” là cách nói chuẩn. Đáp án A đúng nhưng cụt; B và D sai cấu trúc — “pay FOR the class” mới đúng."
+        },
+        {
+          "id": "p4_tn_t2_e2",
+          "type": "multiple_choice",
+          "instruction": "Người gọi hỏi chương trình kéo dài từ ngày nào tới ngày nào. Câu nào đúng?",
+          "options": [
+            { "id": "A", "text": "The program runs from July thirteenth to July seventeenth." },
+            { "id": "B", "text": "The program runs in July thirteen until July seventeen." },
+            { "id": "C", "text": "The program runs between July thirteenth to seventeenth." },
+            { "id": "D", "text": "The program is July 13-17." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Khoảng ngày dùng “from … to …” và đọc số thứ tự. Đáp án D là đọc y như trên bảng — nghe như đang đọc chứ không phải đang nói."
+        },
+        {
+          "id": "p4_tn_t2_e3",
+          "type": "multiple_choice",
+          "instruction": "Câu trả lời nào nêu đúng lớp học ngày 17/7?",
+          "options": [
+            { "id": "A", "text": "On July seventeenth, there's Sculpting with Matt Evans from one to three p.m." },
+            { "id": "B", "text": "On July seventeenth, there's Sculpting with Adam Jonson from one to three p.m." },
+            { "id": "C", "text": "On July seventh, there's Sculpting with Matt Evans." },
+            { "id": "D", "text": "Sculpting is at three p.m. on July seventeenth." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "July 17 (1 – 3 p.m.), Sculpting, Matt Evans. Đáp án D lấy nhầm giờ KẾT THÚC làm giờ bắt đầu."
+        },
+        {
+          "id": "p4_tn_t2_e4",
+          "type": "multiple_choice",
+          "instruction": "Lớp Drawing 3D Art bắt đầu lúc mấy giờ? Chọn câu trả lời đúng và đủ.",
+          "options": [
+            { "id": "A", "text": "At three." },
+            { "id": "B", "text": "It starts at three p.m. on July fourteenth." },
+            { "id": "C", "text": "It starts on three p.m." },
+            { "id": "D", "text": "Three o'clock July fourteen." }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Giờ đi với AT, ngày đi với ON, và ngày đọc số thứ tự. Thêm ngày vào cho chắc, vì hôm 14/7 có tới hai lớp."
+        },
+        {
+          "id": "p4_tn_t2_e5",
+          "type": "multiple_choice",
+          "instruction": "Người gọi hỏi ai dạy lớp Colored Pencil Drawing. Câu nào đúng?",
+          "options": [
+            { "id": "A", "text": "Jennifer Shiling teach it." },
+            { "id": "B", "text": "It is taught by Jennifer Shiling." },
+            { "id": "C", "text": "Jennifer Shiling is taught it." },
+            { "id": "D", "text": "It teaches Jennifer Shiling." }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Chủ động: “Jennifer Shiling teaches it.” Bị động: “It is taught by Jennifer Shiling.” Đừng trộn hai cấu trúc thành C hay D."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_tn_t2_m1",
+          "type": "essay_typing",
+          "instruction": "Điền cụm từ chỉ việc lớp học không mất tiền (3 từ).",
+          "content": "All the summer classes are ______ ______ ______.",
+          "options": [],
+          "correct_answers": ["free of charge"],
+          "explanation": "“Free of charge” = miễn phí hoàn toàn. Nghe trang trọng hơn hẳn so với chỉ nói “free”."
+        },
+        {
+          "id": "p4_tn_t2_m2",
+          "type": "essay_typing",
+          "instruction": "Điền giới từ để hoàn thiện câu về khoảng thời gian.",
+          "content": "The program runs ______ July thirteenth to July seventeenth.",
+          "options": [],
+          "correct_answers": ["from"],
+          "explanation": "Cặp cố định “from … to …”. Nói “between July 13th and 17th” cũng được, nhưng phải dùng AND chứ không dùng TO."
+        },
+        {
+          "id": "p4_tn_t2_m3",
+          "type": "essay_typing",
+          "instruction": "Điền tên giảng viên dạy lớp Sculpting.",
+          "content": "Sculpting on July seventeenth is taught by ______.",
+          "options": [],
+          "correct_answers": ["Matt Evans"],
+          "explanation": "Dòng cuối bảng: July 17 (1 – 3 p.m.), Sculpting, Matt Evans."
+        },
+        {
+          "id": "p4_tn_t2_m4",
+          "type": "essay_typing",
+          "instruction": "Lớp Abstract Painting dành cho trình độ nào? Điền một từ.",
+          "content": "Abstract Painting on July fourteenth is for ______.",
+          "options": [],
+          "correct_answers": ["beginners", "beginner"],
+          "explanation": "Bảng ghi “(Beginner)”. Khi nói thành câu, dùng số nhiều “for beginners” nghe tự nhiên hơn."
+        },
+        {
+          "id": "p4_tn_t2_m5",
+          "type": "essay_typing",
+          "instruction": "Điền động từ còn thiếu cho mẫu câu trả lời về lịch.",
+          "content": "Oil Pastel Portrait is ______ for July sixteenth, from two to four thirty.",
+          "options": [],
+          "correct_answers": ["scheduled"],
+          "explanation": "“is scheduled for” dùng được cho mọi dòng lịch. Học một mẫu, dùng cho cả năm mươi bộ đề."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_tn_t2_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — chú ý thông tin học phí nằm ngay ở tiêu đề bảng.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-2/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The classes are completely free of charge, and the program runs from July thirteenth to July seventeenth.",
+          "explanation": "Tiêu đề “Free Summer Class | July 13-17” chứa trọn cả hai câu trả lời. Đọc tiêu đề kỹ trong 45 giây là ăn điểm câu 8."
+        },
+        {
+          "id": "p4_tn_t2_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 — lớp người gọi định dự đã bị dời lịch. Báo lại cho họ.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-2/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that class has been rescheduled. Portrait Sketching is now on July fifteenth, from one to two p.m.",
+          "explanation": "Dấu * cạnh tên lớp dẫn xuống dòng chú thích “Rescheduled to July 15th from 1 p.m. to 2 p.m.”. Bỏ sót dấu sao là trả lời sai hoàn toàn."
+        },
+        {
+          "id": "p4_tn_t2_h3",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu trả lời sau — mẫu trả lời cho câu hỏi “ai dạy lớp này”.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "That class is taught by Donald Cook, and it runs from ten to eleven a.m.",
+          "explanation": "Bị động “is taught by” + khoảng giờ “from … to …”. Hai mẫu này ghép lại trả lời được rất nhiều câu 8."
+        },
+        {
+          "id": "p4_tn_t2_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — trả lời khi người gọi nói đúng.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Yes, that's correct. Drawing 3D Art is on July fourteenth, from three to four p.m.",
+          "explanation": "Xác nhận rồi nhắc lại đủ thông tin. Đây là dạng câu 9 “dễ thở” — đừng vì thấy dễ mà trả lời qua loa."
+        },
+        {
+          "id": "p4_tn_t2_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — nói về một thay đổi lịch đã được ghi chú.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Please note that Portrait Sketching has been moved to July fifteenth.",
+          "explanation": "“Please note that…” là cách mở đầu lịch sự khi báo tin thay đổi — dùng được cho mọi bảng có dòng rescheduled."
+        }
+      ]
+    }
+  ]
+}

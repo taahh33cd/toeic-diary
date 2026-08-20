@@ -1,0 +1,183 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "giu-nhip", "name": "Giữ nhịp 30 giây", "description": "Nói đủ thời lượng, không ngập ngừng, không hết ý giữa chừng." },
+  "test_number": 3,
+  "title": "Hội thảo khoa học — Young Scientists Conference",
+  "source_slug": "conference-17",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-17/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_gn_t3_e1",
+          "type": "multiple_choice",
+          "instruction": "Câu 10 hỏi các phiên về robot. Những phiên nào thoả?",
+          "options": [
+            { "id": "A", "text": "Engineering and robots; Robots in the future" },
+            { "id": "B", "text": "Chỉ Robots in the future" },
+            { "id": "C", "text": "Engineering and robots; Computer and information technology" },
+            { "id": "D", "text": "Tất cả các phiên buổi chiều" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Hai phiên có chữ “robots”: 10:30 – 11:30 am (Wang Wei) và 1:30 – 2:30 pm (David Fonteno). Quét theo TỪ KHOÁ trong tên phiên."
+        },
+        {
+          "id": "p4_gn_t3_e2",
+          "type": "multiple_choice",
+          "instruction": "Với hai mục và 30 giây, mỗi mục nên gồm những chi tiết nào?",
+          "options": [
+            { "id": "A", "text": "Chỉ tên phiên" },
+            { "id": "B", "text": "Tên phiên, khoảng giờ và người trình bày" },
+            { "id": "C", "text": "Chỉ giờ" },
+            { "id": "D", "text": "Tên phiên và cảm nghĩ của bạn về nó" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Ba chi tiết mỗi mục là mức chuẩn: khoảng 12 – 15 từ một mục, hai mục là 30 từ, cộng mở và chốt vừa tròn 30 giây."
+        },
+        {
+          "id": "p4_gn_t3_e3",
+          "type": "multiple_choice",
+          "instruction": "Phiên đầu tiên của hội thảo bắt đầu lúc mấy giờ?",
+          "options": [
+            { "id": "A", "text": "9:00 am" },
+            { "id": "B", "text": "9:30 am" },
+            { "id": "C", "text": "10:30 am" },
+            { "id": "D", "text": "11:30 am" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Dòng đầu là 9:30 – 10:30 am, Physical and chemical sciences, Jack Dividson. Câu 8 của đề hỏi đúng chi tiết này."
+        },
+        {
+          "id": "p4_gn_t3_e4",
+          "type": "multiple_choice",
+          "instruction": "Nếu đang nói mà quên mất mục tiếp theo, nên xử lý thế nào?",
+          "options": [
+            { "id": "A", "text": "Im lặng nhìn bảng cho tới khi nhớ ra" },
+            { "id": "B", "text": "Dùng một cụm nối để câu tiếp tục trong khi mắt dò bảng" },
+            { "id": "C", "text": "Nói “sorry, I forgot” rồi dừng" },
+            { "id": "D", "text": "Bắt đầu lại từ đầu" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Những cụm như “And after that…”, “Let me see…”, “There's also…” giúp bạn giữ tiếng nói trong lúc mắt tìm dòng tiếp theo. Khoảng lặng mới là thứ bị trừ điểm."
+        },
+        {
+          "id": "p4_gn_t3_e5",
+          "type": "multiple_choice",
+          "instruction": "Hội thảo có tất cả bao nhiêu phiên nội dung (không tính giờ nghỉ trưa)?",
+          "options": [
+            { "id": "A", "text": "Năm" },
+            { "id": "B", "text": "Sáu" },
+            { "id": "C", "text": "Bảy" },
+            { "id": "D", "text": "Tám" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Bảy dòng, trừ dòng Lunch còn sáu phiên có diễn giả. Con số này dùng được làm câu tổng quan mở đầu."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_gn_t3_m1",
+          "type": "essay_typing",
+          "instruction": "Điền số phiên về robot (bằng chữ) để mở đầu câu 10.",
+          "content": "There are ______ sessions covering robots.",
+          "options": [],
+          "correct_answers": ["two"],
+          "explanation": "Engineering and robots, và Robots in the future. Câu mở đầu nêu số lượng là bước một của mọi câu 10."
+        },
+        {
+          "id": "p4_gn_t3_m2",
+          "type": "essay_typing",
+          "instruction": "Điền tên người trình bày phiên 10:30 – 11:30 sáng.",
+          "content": "Engineering and robots is presented by ______.",
+          "options": [],
+          "correct_answers": ["Wang Wei"],
+          "explanation": "10:30 – 11:30 am → Wang Wei. Tên nước ngoài đọc chậm và rõ, đừng nuốt âm."
+        },
+        {
+          "id": "p4_gn_t3_m3",
+          "type": "essay_typing",
+          "instruction": "Điền cụm nối dùng để giữ nhịp khi chuyển sang mục sau (hai từ).",
+          "content": "And ______ ______, there's a session on robots in the future.",
+          "options": [],
+          "correct_answers": ["after that"],
+          "explanation": "“After that” vừa là từ nối vừa cho bạn một nhịp để mắt dò xuống dòng tiếp theo."
+        },
+        {
+          "id": "p4_gn_t3_m4",
+          "type": "essay_typing",
+          "instruction": "Điền giờ kết thúc phiên cuối cùng (viết như cách đọc).",
+          "content": "The last session finishes at ______.",
+          "options": [],
+          "correct_answers": ["four thirty", "four thirty pm", "4:30"],
+          "explanation": "Dòng cuối là 3:30 – 4:30 pm → kết thúc lúc “four thirty”. Nhớ lấy giờ KẾT THÚC, không phải giờ bắt đầu."
+        },
+        {
+          "id": "p4_gn_t3_m5",
+          "type": "essay_typing",
+          "instruction": "Điền ngày diễn ra hội thảo, dạng số thứ tự bằng chữ.",
+          "content": "The conference is on Sunday, October ______.",
+          "options": [],
+          "correct_answers": ["third", "3rd"],
+          "explanation": "October 3 → “third”. Thông tin ngày nằm ở phần tiêu đề, cùng chỗ với tên phòng."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_gn_t3_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 rồi nói đủ 30 giây: tổng quan, hai phiên đủ ba chi tiết, câu chốt.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-17/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "There are two sessions on robots. The first is Engineering and Robots, from ten thirty to eleven thirty, with Wang Wei. And after that, Robots in the Future, from one thirty to two thirty, with David Fonteno.",
+          "explanation": "Khoảng 45 từ, tương đương 23 giây. Thêm câu chốt “Would you like me to repeat that?” là tròn 30 giây."
+        },
+        {
+          "id": "p4_gn_t3_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — địa điểm và giờ phiên đầu tiên.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-17/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "It's in the Roseville conference room, and the first session begins at nine thirty a.m.",
+          "explanation": "Câu 8 chỉ có 15 giây nên một câu hai vế là vừa. Đừng cố nhồi thêm tên diễn giả nếu chưa chắc chắn."
+        },
+        {
+          "id": "p4_gn_t3_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 rồi đính chính — người gọi ghép nhầm người với phiên.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-17/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that's not correct. Jeff Goldblum presents Energy and Environment at two thirty. Earth and Space Sciences at three thirty is Mario Frieson.",
+          "explanation": "Cả tên lẫn giờ người gọi nêu đều có thật nhưng bị ghép sai cặp. Nêu đúng cả hai dòng để gỡ hẳn hiểu nhầm."
+        },
+        {
+          "id": "p4_gn_t3_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to đoạn sau — luyện nói liền mạch một chuỗi ba phiên.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "In the morning there are three sessions: physical and chemical sciences at nine thirty, engineering and robots at ten thirty, and computer and information technology at eleven thirty.",
+          "explanation": "Khoảng 30 từ. Ba mốc giờ liên tiếp — giữ đều nhịp, ngắt nhẹ sau mỗi mục, đừng tăng tốc dần."
+        },
+        {
+          "id": "p4_gn_t3_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — câu tổng quan cộng câu chốt, dùng để lấp những giây cuối.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "In total there are six sessions, from nine thirty in the morning until four thirty in the afternoon. Would you like me to repeat any of that?",
+          "explanation": "Bộ đôi tổng quan cộng câu chốt tốn khoảng 10 giây — đủ để cứu một câu trả lời sắp hụt thời lượng."
+        }
+      ]
+    }
+  ]
+}

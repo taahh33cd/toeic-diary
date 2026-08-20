@@ -1,0 +1,183 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "quet-bang", "name": "Quét bảng đúng ô", "description": "45 giây tìm đúng hàng/cột trước khi câu hỏi bắt đầu." },
+  "test_number": 3,
+  "title": "Lịch lớp học — Community Arts Center, April",
+  "source_slug": "class-3",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-3/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_qb_t3_e1",
+          "type": "multiple_choice",
+          "instruction": "Lớp học vào thứ Tư lúc 11 giờ sáng là lớp nào?",
+          "options": [
+            { "id": "A", "text": "Abstract Painting - Beginner" },
+            { "id": "B", "text": "Classic Watercolor - All levels" },
+            { "id": "C", "text": "Digital Photography - Beginner" },
+            { "id": "D", "text": "Watercolor - Advanced" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Bảng này xếp theo THỨ trong tuần chứ không theo ngày tháng — cột Time gộp cả thứ và giờ. Wednesdays, 11 a.m. → Abstract Painting - Beginner."
+        },
+        {
+          "id": "p4_qb_t3_e2",
+          "type": "multiple_choice",
+          "instruction": "Giảng viên nào dạy hai lớp khác nhau?",
+          "options": [
+            { "id": "A", "text": "Sally Baker" },
+            { "id": "B", "text": "Erica Wallace" },
+            { "id": "C", "text": "Randy Halls" },
+            { "id": "D", "text": "Suzanne Harney" }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "Randy Halls xuất hiện hai lần: Watercolor - Advanced (thứ Hai 7 p.m.) và Abstract Painting - Beginner (thứ Tư 11 a.m.). Tên lặp lại gần như chắc chắn sẽ là nội dung câu 10."
+        },
+        {
+          "id": "p4_qb_t3_e3",
+          "type": "multiple_choice",
+          "instruction": "Hạn chót đăng ký là ngày nào?",
+          "options": [
+            { "id": "A", "text": "March 21 (Sun)" },
+            { "id": "B", "text": "April 1 (Mon)" },
+            { "id": "C", "text": "March 12 (Tue)" },
+            { "id": "D", "text": "Bảng không ghi hạn đăng ký" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Hai dòng có dấu * ở CUỐI bảng chứa hạn đăng ký và học phí. Nhiều bạn đọc hết lưới là dừng, bỏ sót phần chú thích — đó là chỗ câu 8 hay nhắm vào."
+        },
+        {
+          "id": "p4_qb_t3_e4",
+          "type": "multiple_choice",
+          "instruction": "Học phí mỗi lớp là bao nhiêu?",
+          "options": [
+            { "id": "A", "text": "$16 mỗi lớp" },
+            { "id": "B", "text": "$60 mỗi lớp" },
+            { "id": "C", "text": "$60 cho cả khoá" },
+            { "id": "D", "text": "$21 mỗi lớp" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Chú thích ghi “Enrollment Fee: $60 / class” — dấu gạch chéo nghĩa là MỖI lớp, không phải trọn gói."
+        },
+        {
+          "id": "p4_qb_t3_e5",
+          "type": "multiple_choice",
+          "instruction": "Lớp Oil & Acrylic Painting dành cho trình độ nào?",
+          "options": [
+            { "id": "A", "text": "Beginner" },
+            { "id": "B", "text": "All levels" },
+            { "id": "C", "text": "Advanced" },
+            { "id": "D", "text": "Bảng không ghi trình độ" }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "Trình độ nằm ngay sau tên lớp, sau dấu gạch ngang: “Oil & Acrylic Painting - Advanced”. Câu 9 rất hay bẫy đúng chi tiết này."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_qb_t3_m1",
+          "type": "essay_typing",
+          "instruction": "Ai dạy lớp Digital Photography? Gõ đầy đủ họ tên.",
+          "content": "Digital Photography is taught by ______.",
+          "options": [],
+          "correct_answers": ["Sally Baker"],
+          "explanation": "Dòng đầu tiên: Mondays, 10 a.m. → Sally Baker."
+        },
+        {
+          "id": "p4_qb_t3_m2",
+          "type": "essay_typing",
+          "instruction": "Điền học phí bằng chữ (chỉ phần số).",
+          "content": "The enrollment fee is ______ dollars per class.",
+          "options": [],
+          "correct_answers": ["sixty"],
+          "explanation": "$60 → “sixty”. Cụm “per class” bắt buộc phải nói, vì đó chính là điểm khác biệt của bảng này."
+        },
+        {
+          "id": "p4_qb_t3_m3",
+          "type": "essay_typing",
+          "instruction": "Lớp Classic Watercolor học vào thứ mấy? Điền một từ (số nhiều như trên bảng).",
+          "content": "Classic Watercolor is on ______ at six thirty p.m.",
+          "options": [],
+          "correct_answers": ["Tuesdays", "Tuesday"],
+          "explanation": "Bảng ghi “Tuesdays” số nhiều vì lớp lặp lại hằng tuần — nói “on Tuesdays” là chuẩn nhất."
+        },
+        {
+          "id": "p4_qb_t3_m4",
+          "type": "essay_typing",
+          "instruction": "Hạn đăng ký là ngày mấy? Viết dạng số thứ tự bằng chữ.",
+          "content": "The registration deadline is March ______.",
+          "options": [],
+          "correct_answers": ["twenty-first", "twenty first", "21st"],
+          "explanation": "March 21 → “March twenty-first”. Lớp bắt đầu tháng Tư nhưng hạn đăng ký lại là tháng Ba — đọc kỹ kẻo trả lời nhầm tháng."
+        },
+        {
+          "id": "p4_qb_t3_m5",
+          "type": "essay_typing",
+          "instruction": "John Meehan dạy lớp gì? Điền từ còn thiếu.",
+          "content": "John Meehan teaches Painting from a ______.",
+          "options": [],
+          "correct_answers": ["Photograph", "photograph"],
+          "explanation": "“Painting from a Photograph - All levels”, thứ Năm 7 p.m."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_qb_t3_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — cả hai thông tin nằm ở phần chú thích cuối bảng.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-3/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The enrollment fee is sixty dollars per class, and the registration deadline is March twenty-first.",
+          "explanation": "Đúng như dự đoán: câu 8 nhắm vào hai dòng có dấu *. Khi đọc bảng, hãy liếc phần chú thích trước cả lưới."
+        },
+        {
+          "id": "p4_qb_t3_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 — người gọi nhầm trình độ của lớp. Đính chính.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-3/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, no. The Monday morning digital photography class is for beginners, not advanced students.",
+          "explanation": "Cấu trúc vàng để đính chính: “It's [đúng], not [sai]”. Ngắn, rõ, không vòng vo."
+        },
+        {
+          "id": "p4_qb_t3_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 — nêu đủ hai lớp của giảng viên được hỏi, kèm thứ, giờ và trình độ.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-3/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Randy Halls teaches two classes: Watercolor for advanced students on Mondays at seven p.m., and Abstract Painting for beginners on Wednesdays at eleven a.m.",
+          "explanation": "Mỗi lớp cần ba chi tiết: tên lớp, trình độ, thời gian. Thiếu trình độ là thiếu ý — bảng có ghi thì phải nói."
+        },
+        {
+          "id": "p4_qb_t3_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — tổng kết cả bảng bằng một câu.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "There are six classes a month, from Monday through Friday.",
+          "explanation": "Đếm số dòng trong lưới là ra tổng số lớp. Câu tổng kết kiểu này rất hữu ích để mở đầu câu 10."
+        },
+        {
+          "id": "p4_qb_t3_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — gom các lớp cùng trình độ lại với nhau.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The advanced classes are Watercolor on Mondays and Oil and Acrylic Painting on Fridays.",
+          "explanation": "Quét theo TRÌNH ĐỘ thay vì theo thứ — tập nhìn bảng theo nhiều chiều thì câu 10 hỏi kiểu nào cũng trả lời được."
+        }
+      ]
+    }
+  ]
+}

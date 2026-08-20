@@ -1,0 +1,183 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "bang-thanh-cau", "name": "Đọc bảng thành câu hoàn chỉnh", "description": "Biến một ô trong bảng thành câu nói tự nhiên, đúng cấu trúc." },
+  "test_number": 3,
+  "title": "Lịch phỏng vấn — New Employee Interview Schedule",
+  "source_slug": "interview-3",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/interview-3/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_bs_t3_e1",
+          "type": "multiple_choice",
+          "instruction": "Dòng bảng: “10 – 10:30 a.m. | Edith May | Salesperson | Shocker Electronics”. Câu nào diễn đạt đủ và đúng?",
+          "options": [
+            { "id": "A", "text": "At ten, Edith May is applying for the salesperson position. She currently works at Shocker Electronics." },
+            { "id": "B", "text": "Ten o'clock Edith May salesperson Shocker Electronics." },
+            { "id": "C", "text": "Edith May is a salesperson in Shocker Electronics at ten." },
+            { "id": "D", "text": "At ten, Edith May applies the salesperson." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Bảng phỏng vấn có bốn cột nên tách thành hai câu: câu một là giờ + tên + vị trí ứng tuyển, câu hai là nơi đang làm. “Apply FOR + vị trí”."
+        },
+        {
+          "id": "p4_bs_t3_e2",
+          "type": "multiple_choice",
+          "instruction": "Cột “Current Company” nên diễn đạt bằng cấu trúc nào?",
+          "options": [
+            { "id": "A", "text": "He is coming from Timely Logistics." },
+            { "id": "B", "text": "He currently works at Timely Logistics." },
+            { "id": "C", "text": "His current company has him." },
+            { "id": "D", "text": "He works Timely Logistics now." }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "“Currently works at + tên công ty”. Trạng từ “currently” cho thấy đây là nơi làm HIỆN TẠI, chưa nghỉ."
+        },
+        {
+          "id": "p4_bs_t3_e3",
+          "type": "multiple_choice",
+          "instruction": "Người gọi hỏi phỏng vấn tổ chức ở phòng nào. Câu nào đúng?",
+          "options": [
+            { "id": "A", "text": "The interviews will be held in Conference Room D." },
+            { "id": "B", "text": "The interviews will be held at Conference Room D." },
+            { "id": "C", "text": "The interviews hold in Conference Room D." },
+            { "id": "D", "text": "Conference Room D holds the interviews." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Phòng → IN, và sự kiện thì bị động “will be held”. Thông tin này nằm ở phần đầu bảng, cùng chỗ với tên người phỏng vấn."
+        },
+        {
+          "id": "p4_bs_t3_e4",
+          "type": "multiple_choice",
+          "instruction": "Hai ứng viên cùng ứng tuyển vị trí Salesperson. Câu nào gộp đúng?",
+          "options": [
+            { "id": "A", "text": "Two candidates are applying for the salesperson position: Edith May and Camden Ewing." },
+            { "id": "B", "text": "Two candidates apply the salesperson: Edith May and Camden Ewing." },
+            { "id": "C", "text": "Edith May and Camden Ewing is applying salesperson." },
+            { "id": "D", "text": "The salesperson has two candidates named Edith May, Camden Ewing." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Nêu SỐ LƯỢNG trước rồi mới liệt kê tên — người nghe biết ngay sắp có mấy ý. Đây là khuôn mở đầu rất mạnh cho câu 10."
+        },
+        {
+          "id": "p4_bs_t3_e5",
+          "type": "multiple_choice",
+          "instruction": "Bảng ghi người phỏng vấn là Amanda Cox. Câu nào đúng?",
+          "options": [
+            { "id": "A", "text": "Amanda Cox is the interviewer." },
+            { "id": "B", "text": "Amanda Cox is interviewed." },
+            { "id": "C", "text": "Amanda Cox is the interviewee." },
+            { "id": "D", "text": "Amanda Cox will be interviewed by candidates." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Phân biệt interviewER (người hỏi) và interviewEE (người được hỏi). Nhầm hai từ này là đảo ngược hoàn toàn thông tin."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_bs_t3_m1",
+          "type": "essay_typing",
+          "instruction": "Điền giới từ đúng sau động từ “apply”.",
+          "content": "Walker Robinson is applying ______ the warehouse manager position.",
+          "options": [],
+          "correct_answers": ["for"],
+          "explanation": "“Apply FOR a position / a job”. Còn “apply TO” dùng với công ty hoặc trường học."
+        },
+        {
+          "id": "p4_bs_t3_m2",
+          "type": "essay_typing",
+          "instruction": "Điền vị trí mà Adrian Delgado ứng tuyển.",
+          "content": "Adrian Delgado is applying for the ______ position.",
+          "options": [],
+          "correct_answers": ["custodian", "Custodian"],
+          "explanation": "12:30 – 1 p.m. → Adrian Delgado, Custodian. Người gọi ở câu 9 tưởng anh ấy ứng tuyển Warehouse Manager — đó là bẫy."
+        },
+        {
+          "id": "p4_bs_t3_m3",
+          "type": "essay_typing",
+          "instruction": "Điền trạng từ chỉ nơi làm hiện tại (một từ).",
+          "content": "Tobias Strong ______ works at Timely Logistics.",
+          "options": [],
+          "correct_answers": ["currently"],
+          "explanation": "“Currently” giúp phân biệt công ty đang làm với vị trí đang ứng tuyển — hai cột rất dễ nói lẫn."
+        },
+        {
+          "id": "p4_bs_t3_m4",
+          "type": "essay_typing",
+          "instruction": "Điền giờ bắt đầu buổi phỏng vấn đầu tiên trong ngày (bằng chữ).",
+          "content": "The first interview starts at ______ a.m.",
+          "options": [],
+          "correct_answers": ["ten"],
+          "explanation": "Dòng đầu là 10 – 10:30 a.m. Câu 8 của đề này hỏi đúng chi tiết đó."
+        },
+        {
+          "id": "p4_bs_t3_m5",
+          "type": "essay_typing",
+          "instruction": "Điền phòng tổ chức phỏng vấn (hai từ và một chữ cái).",
+          "content": "All the interviews are held in ______ ______ ______.",
+          "options": [],
+          "correct_answers": ["Conference Room D", "conference room D"],
+          "explanation": "Chữ cái phòng đọc rõ ràng: “Conference Room D”. Nếu sợ người nghe không rõ, nói thêm “D as in David”."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_bs_t3_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — phòng và giờ phỏng vấn đầu tiên.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/interview-3/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The interviews are in Conference Room D, and your first one starts at ten a.m. with Edith May.",
+          "explanation": "Thêm tên ứng viên đầu tiên là chi tiết “tặng thêm” — không bắt buộc nhưng cho thấy bạn nắm chắc bảng."
+        },
+        {
+          "id": "p4_bs_t3_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 rồi đính chính — người gọi ghép nhầm ứng viên với vị trí.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/interview-3/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that's not right. At twelve thirty, Adrian Delgado is interviewing for the custodian position. Walker Robinson is the warehouse manager candidate, at eleven.",
+          "explanation": "Giờ đúng, người đúng, nhưng vị trí sai. Kiểu bẫy “đúng hai phần ba” này chỉ lộ ra khi bạn dò đủ cả bốn cột."
+        },
+        {
+          "id": "p4_bs_t3_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 rồi nêu đủ các ứng viên đúng vị trí được hỏi.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/interview-3/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Two candidates are applying for customer service representative: Tobias Strong at one thirty, from Timely Logistics, and Allison Kaufmann at three thirty, from Shocker Electronics.",
+          "explanation": "Mỗi ứng viên cần ba chi tiết: tên, giờ, công ty hiện tại. Bảng có cột nào thì câu trả lời nên có ý đó."
+        },
+        {
+          "id": "p4_bs_t3_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — chuyển trọn một dòng bốn cột thành lời.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "At four thirty, Tiffany Giles is interviewing for the executive assistant position. She currently works at Timely Logistics.",
+          "explanation": "Tách thành hai câu ngắn dễ nói hơn nhiều so với nhồi bốn thông tin vào một câu dài."
+        },
+        {
+          "id": "p4_bs_t3_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — thông tin chung của cả buổi phỏng vấn.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "You have seven interviews on Tuesday, May fourteenth, and Amanda Cox is the interviewer.",
+          "explanation": "Đếm số dòng trong lưới là ra tổng số buổi phỏng vấn. Câu tổng quan kiểu này rất hợp để mở đầu câu 10."
+        }
+      ]
+    }
+  ]
+}

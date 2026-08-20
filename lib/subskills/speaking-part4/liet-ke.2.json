@@ -1,0 +1,183 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "liet-ke", "name": "Liệt kê nhiều mục cho câu 10", "description": "Gộp nhiều dòng bảng thành một đoạn nói liền mạch, có mở có kết." },
+  "test_number": 2,
+  "title": "Lịch nghỉ dưỡng — Vacation Schedule for Elisa Dixon",
+  "source_slug": "travel-2",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/travel-2/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_lk_t2_e1",
+          "type": "multiple_choice",
+          "instruction": "Câu 10 hỏi về các bữa buffet. Có bao nhiêu hoạt động “Socializing Buffet” trong lịch?",
+          "options": [
+            { "id": "A", "text": "Một" },
+            { "id": "B", "text": "Hai" },
+            { "id": "C", "text": "Ba" },
+            { "id": "D", "text": "Bốn" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Socializing Buffet Dinner (ngày 1) và Socializing Buffet Breakfast (ngày 3). Đếm đúng số mục trước khi nói là bước bắt buộc của câu 10."
+        },
+        {
+          "id": "p4_lk_t2_e2",
+          "type": "multiple_choice",
+          "instruction": "Khi liệt kê các hoạt động trải dài nhiều ngày, nên sắp xếp thế nào?",
+          "options": [
+            { "id": "A", "text": "Theo thứ tự thời gian, nói rõ ngày của từng mục" },
+            { "id": "B", "text": "Theo thứ tự bảng chữ cái" },
+            { "id": "C", "text": "Nói mục quan trọng nhất trước" },
+            { "id": "D", "text": "Nói gộp tất cả vào một câu dài" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Bảng lịch trình luôn xếp theo thời gian — cứ theo đó mà nói. Nhớ gắn ngày vào mỗi mục, vì các mục nằm ở những ngày khác nhau."
+        },
+        {
+          "id": "p4_lk_t2_e3",
+          "type": "multiple_choice",
+          "instruction": "Bữa buffet tối ngày đầu diễn ra khi nào và ở đâu?",
+          "options": [
+            { "id": "A", "text": "6 – 8 p.m., Emperor Dining Hall" },
+            { "id": "B", "text": "7 – 9 a.m., Emperor Dining Hall" },
+            { "id": "C", "text": "6 – 8 p.m., Emperor Ballroom" },
+            { "id": "D", "text": "3 p.m., Emperor Hotel" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Ngày 1, thứ Sáu 3/5: 6 – 8 p.m., Socializing Buffet Dinner, Emperor Dining Hall. Bữa 7 – 9 a.m. là buffet sáng của ngày 3."
+        },
+        {
+          "id": "p4_lk_t2_e4",
+          "type": "multiple_choice",
+          "instruction": "Câu nào nối hai mục buffet mượt nhất?",
+          "options": [
+            { "id": "A", "text": "There are two. The dinner. The breakfast." },
+            { "id": "B", "text": "There are two buffet events: a dinner on Friday, and a breakfast on Sunday." },
+            { "id": "C", "text": "Buffet dinner Friday buffet breakfast Sunday." },
+            { "id": "D", "text": "One buffet and also another buffet too." }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Nêu số lượng, dấu hai chấm, rồi liệt kê nối bằng “and”. Câu A đúng thông tin nhưng đứt quãng, mất điểm mạch lạc."
+        },
+        {
+          "id": "p4_lk_t2_e5",
+          "type": "multiple_choice",
+          "instruction": "Ngày thứ Bảy có mấy hoạt động?",
+          "options": [
+            { "id": "A", "text": "Hai" },
+            { "id": "B", "text": "Ba" },
+            { "id": "C", "text": "Bốn" },
+            { "id": "D", "text": "Năm" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Guided Trail Hike, Group Fishing Trip và Evening Dance Party. Đếm theo khối “Day 2” chứ đừng đếm cả bảng."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_lk_t2_m1",
+          "type": "essay_typing",
+          "instruction": "Điền số bữa buffet trong lịch (bằng chữ) để mở đầu câu 10.",
+          "content": "There are ______ socializing buffet events on your schedule.",
+          "options": [],
+          "correct_answers": ["two"],
+          "explanation": "Một buffet tối và một buffet sáng. Mở đầu bằng con số giúp câu trả lời có cấu trúc ngay từ giây đầu tiên."
+        },
+        {
+          "id": "p4_lk_t2_m2",
+          "type": "essay_typing",
+          "instruction": "Điền địa điểm của cả hai bữa buffet (ba từ).",
+          "content": "Both buffets are at the ______ ______ ______.",
+          "options": [],
+          "correct_answers": ["Emperor Dining Hall", "emperor dining hall"],
+          "explanation": "Cả hai đều ở Emperor Dining Hall — gộp bằng “both” là cách rút gọn thông minh, tiết kiệm thời gian cho các ý khác."
+        },
+        {
+          "id": "p4_lk_t2_m3",
+          "type": "essay_typing",
+          "instruction": "Điền hoạt động lúc 11 a.m. – 3 p.m. ngày thứ Bảy (hai từ).",
+          "content": "On Saturday there's a group ______ ______ at Flamingo Lake.",
+          "options": [],
+          "correct_answers": ["fishing trip"],
+          "explanation": "Group Fishing Trip — Flamingo Lake. Câu 9 của đề gài bẫy bằng cách đổi địa điểm thành Stoney Mountain."
+        },
+        {
+          "id": "p4_lk_t2_m4",
+          "type": "essay_typing",
+          "instruction": "Điền từ nối để kết thúc chuỗi liệt kê (một từ).",
+          "content": "First the trail hike, then the fishing trip, and ______ the dance party.",
+          "options": [],
+          "correct_answers": ["finally", "lastly"],
+          "explanation": "Bộ ba từ nối chuẩn: First… then… finally. Nghe thấy “finally” là người nghe biết bạn sắp kết thúc."
+        },
+        {
+          "id": "p4_lk_t2_m5",
+          "type": "essay_typing",
+          "instruction": "Điền giờ chuyến bay về (viết như cách đọc).",
+          "content": "Your returning flight leaves at ______ p.m. on Sunday.",
+          "options": [],
+          "correct_answers": ["seven twenty", "7:20"],
+          "explanation": "7:20 p.m. → “seven twenty”. Chuyến bay UL 721 từ Memphis Airport."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_lk_t2_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 rồi liệt kê đủ các bữa buffet: số lượng, ngày, giờ, địa điểm.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/travel-2/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "There are two. On Friday, a socializing buffet dinner from six to eight p.m., and on Sunday, a socializing buffet breakfast from seven to nine a.m. Both are in the Emperor Dining Hall.",
+          "explanation": "Ba câu: nêu số lượng, liệt kê hai mục theo thời gian, rồi gộp điểm chung bằng “both”. Đây là bố cục ăn điểm cao nhất của câu 10."
+        },
+        {
+          "id": "p4_lk_t2_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — giờ bay và sân bay.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/travel-2/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Your departing flight, UL three twenty-four, leaves at nine fifteen a.m. from Phoenix Airport.",
+          "explanation": "Số hiệu chuyến bay đọc theo nhóm: “UL three twenty-four”. Chen số hiệu vào giữa câu bằng hai dấu phẩy nghe rất chuyên nghiệp."
+        },
+        {
+          "id": "p4_lk_t2_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 rồi đính chính — người gọi nhầm địa điểm của hoạt động.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/travel-2/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that's not correct. The group fishing trip is at Flamingo Lake. Stoney Mountain is where the guided trail hike takes place.",
+          "explanation": "Hai địa điểm đều có trên bảng nhưng bị đổi chỗ. Nói rõ Stoney Mountain thực ra là của hoạt động nào."
+        },
+        {
+          "id": "p4_lk_t2_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — liệt kê trọn một ngày bằng chuỗi từ nối.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "On Saturday you have three activities: first a guided trail hike at nine, then a group fishing trip at eleven, and finally an evening dance party at nine p.m.",
+          "explanation": "First – then – finally cho ba mục. Chuỗi này giữ nhịp rất tốt và giúp bạn không quên mục nào."
+        },
+        {
+          "id": "p4_lk_t2_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — tổng quan cả chuyến đi.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Your trip runs from Friday, May third, through Sunday, May fifth, with the Arizona Travel Agency.",
+          "explanation": "“From … through …” bao trọn cả ngày cuối, rõ hơn “from … to …”. Câu tổng quan này rất hợp để mở đầu bất kỳ câu 10 nào về lịch trình."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "dinh-chinh", "name": "Xử lý thông tin sai · bị huỷ", "description": "Đính chính khi người gọi nhớ nhầm, và báo tin khi lịch đã bị huỷ." },
+  "test_number": 2,
+  "title": "Lịch phỏng vấn — Franklin Financial, August 20th",
+  "source_slug": "interview-5",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/interview-5/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_dc_t2_e1",
+          "type": "multiple_choice",
+          "instruction": "Dòng 11:30 ghi tên bị gạch kèm chữ “Canceled”. Buổi phỏng vấn với Veronica Jones ra sao?",
+          "options": [
+            { "id": "A", "text": "Vẫn diễn ra như bình thường" },
+            { "id": "B", "text": "Đã bị huỷ" },
+            { "id": "C", "text": "Được dời sang buổi chiều" },
+            { "id": "D", "text": "Đổi sang ứng viên khác" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Bảng này ghi rõ cả hai dấu hiệu: gạch ngang tên VÀ chữ “Canceled”. Không có thông tin dời lịch, nên đừng tự suy diễn thành “rescheduled”."
+        },
+        {
+          "id": "p4_dc_t2_e2",
+          "type": "multiple_choice",
+          "instruction": "Phân biệt hai tình huống. Câu nào dùng cho lịch BỊ HUỶ (không phải nhớ nhầm)?",
+          "options": [
+            { "id": "A", "text": "Actually, that's not correct." },
+            { "id": "B", "text": "I'm afraid that interview has been cancelled." },
+            { "id": "C", "text": "Yes, that's right." },
+            { "id": "D", "text": "You have the wrong time." }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Người gọi nhớ ĐÚNG (đúng tên, đúng giờ) — chỉ là buổi đó đã bị huỷ. Nói “that's not correct” là oan cho họ, và cũng không đúng bản chất sự việc."
+        },
+        {
+          "id": "p4_dc_t2_e3",
+          "type": "multiple_choice",
+          "instruction": "Có bao nhiêu buổi phỏng vấn còn hiệu lực trong ngày?",
+          "options": [
+            { "id": "A", "text": "Bốn" },
+            { "id": "B", "text": "Năm" },
+            { "id": "C", "text": "Sáu" },
+            { "id": "D", "text": "Ba" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Bảng có sáu dòng nhưng một dòng đã huỷ → còn năm. Khi đếm để trả lời câu 10, luôn trừ dòng bị gạch ra."
+        },
+        {
+          "id": "p4_dc_t2_e4",
+          "type": "multiple_choice",
+          "instruction": "Sau khi buổi 11:30 bị huỷ, buổi phỏng vấn kế tiếp là lúc nào?",
+          "options": [
+            { "id": "A", "text": "11 giờ sáng" },
+            { "id": "B", "text": "12 giờ trưa" },
+            { "id": "C", "text": "1 giờ chiều" },
+            { "id": "D", "text": "1 giờ 30 chiều" }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "1:00 pm — Edward Ricchi, Operation associate, ATC Co. Giữa 11:30 và 1 giờ không còn buổi nào, đó là khoảng trống mới xuất hiện sau khi huỷ."
+        },
+        {
+          "id": "p4_dc_t2_e5",
+          "type": "multiple_choice",
+          "instruction": "Vị trí “Human resources director” còn ứng viên nào không?",
+          "options": [
+            { "id": "A", "text": "Không còn ai" },
+            { "id": "B", "text": "Còn Harper Stone lúc 10:30" },
+            { "id": "C", "text": "Còn Hanna Park lúc 11:00" },
+            { "id": "D", "text": "Còn Annie Reynolds lúc 1:30" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Veronica Jones bị huỷ, nhưng Harper Stone (10:30, Edman Consulting) vẫn ứng tuyển cùng vị trí. Đọc kỹ cột Position mới thấy."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_dc_t2_m1",
+          "type": "essay_typing",
+          "instruction": "Điền tên ứng viên có buổi phỏng vấn bị huỷ.",
+          "content": "The eleven thirty interview with ______ has been cancelled.",
+          "options": [],
+          "correct_answers": ["Veronica Jones"],
+          "explanation": "Tên bị gạch nhưng vẫn đọc được — vẫn phải gọi đúng tên khi báo tin, đừng nói chung chung “that person”."
+        },
+        {
+          "id": "p4_dc_t2_m2",
+          "type": "essay_typing",
+          "instruction": "Điền tên ứng viên của buổi phỏng vấn kế tiếp sau khung bị huỷ.",
+          "content": "Your next interview is with ______ at one p.m.",
+          "options": [],
+          "correct_answers": ["Edward Ricchi"],
+          "explanation": "1:00 pm → Edward Ricchi. Câu bù thông tin này nên chuẩn bị sẵn ngay trong 45 giây đọc bảng."
+        },
+        {
+          "id": "p4_dc_t2_m3",
+          "type": "essay_typing",
+          "instruction": "Điền phòng tổ chức phỏng vấn (hai từ và một chữ cái).",
+          "content": "The interviews are held in ______ ______ ______.",
+          "options": [],
+          "correct_answers": ["Meeting room C", "meeting room C"],
+          "explanation": "Bảng ghi “Location: Meeting room C”. Đây là vế đầu của câu 8."
+        },
+        {
+          "id": "p4_dc_t2_m4",
+          "type": "essay_typing",
+          "instruction": "Điền số ứng viên còn lại trong ngày (bằng chữ).",
+          "content": "You have ______ interviews left on the schedule.",
+          "options": [],
+          "correct_answers": ["five"],
+          "explanation": "Sáu dòng trừ một dòng huỷ = năm. Nói được con số này cho thấy bạn đã xử lý dòng bị gạch chứ không bỏ qua nó."
+        },
+        {
+          "id": "p4_dc_t2_m5",
+          "type": "essay_typing",
+          "instruction": "Điền cụm 2 từ nghĩa là “thay vào đó” khi giới thiệu phương án khác.",
+          "content": "______ ______, you could speak with Harper Stone at ten thirty.",
+          "options": [],
+          "correct_answers": ["Instead of", "In place"],
+          "explanation": "Có thể dùng “Instead” (một từ, đứng riêng) hoặc “Instead of that”. Đề xuất phương án thay thế là điểm cộng lớn khi báo tin huỷ."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_dc_t2_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 — buổi phỏng vấn đã bị huỷ. Báo tin và gợi ý phương án thay thế.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/interview-5/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "I'm afraid that interview has been cancelled. But Harper Stone is also interviewing for that position, at ten thirty.",
+          "explanation": "Đây là câu trả lời hạng cao: báo huỷ, rồi giải quyết luôn nhu cầu thật của người gọi bằng một ứng viên cùng vị trí."
+        },
+        {
+          "id": "p4_dc_t2_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — phòng và giờ buổi đầu tiên.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/interview-5/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The interviews are in meeting room C, and your first one starts at ten a.m. with Pete Williams.",
+          "explanation": "Khuôn quen thuộc của mọi bảng phỏng vấn: phòng ở phần đầu bảng, giờ đầu tiên ở dòng đầu lưới."
+        },
+        {
+          "id": "p4_dc_t2_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 rồi nêu các ứng viên đúng vị trí được hỏi.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/interview-5/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Two candidates are interviewing for operations associate: Pete Williams at ten, from Morgan Financial, and Edward Ricchi at one, from ATC Company.",
+          "explanation": "“Co.” đọc là “Company”. Viết tắt trên bảng luôn phải đọc thành từ đầy đủ khi nói."
+        },
+        {
+          "id": "p4_dc_t2_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — nói về khoảng trống mới xuất hiện sau khi huỷ.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Since that interview was cancelled, you're free from eleven thirty until one.",
+          "explanation": "Mệnh đề “since …” nối nguyên nhân với hệ quả. Câu này thể hiện bạn hiểu bảng chứ không chỉ đọc lại bảng."
+        },
+        {
+          "id": "p4_dc_t2_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — tổng quan lịch sau khi đã trừ dòng bị huỷ.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "You have five interviews left today, from ten a.m. to one thirty p.m.",
+          "explanation": "Năm buổi, chứ không phải sáu. Đếm đúng sau khi trừ dòng huỷ là chi tiết phân biệt câu trả lời khá và câu trả lời tốt."
+        }
+      ]
+    }
+  ]
+}

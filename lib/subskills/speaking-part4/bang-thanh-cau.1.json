@@ -1,0 +1,183 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "bang-thanh-cau", "name": "Đọc bảng thành câu hoàn chỉnh", "description": "Biến một ô trong bảng thành câu nói tự nhiên, đúng cấu trúc." },
+  "test_number": 1,
+  "title": "Hội thảo lãnh đạo — 23rd National Seminar for Business Leaders",
+  "source_slug": "conference-2",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-2/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_bs_t1_e1",
+          "type": "multiple_choice",
+          "instruction": "Ô bảng ghi: “10:15 a.m. | Developing Outstanding Leadership Skills | Robert Clark”. Cách nói thành câu nào tốt nhất?",
+          "options": [
+            { "id": "A", "text": "Ten fifteen, Developing Outstanding Leadership Skills, Robert Clark." },
+            { "id": "B", "text": "At ten fifteen, Robert Clark presents Developing Outstanding Leadership Skills." },
+            { "id": "C", "text": "Robert Clark is ten fifteen leadership skills." },
+            { "id": "D", "text": "Developing Outstanding Leadership Skills has Robert Clark at ten fifteen." }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Công thức chuyển một dòng bảng thành câu: [At + giờ], [người] + [động từ] + [tên phiên]. Đọc trơ ba ô như đáp án A là lỗi phổ biến nhất ở câu 10."
+        },
+        {
+          "id": "p4_bs_t1_e2",
+          "type": "multiple_choice",
+          "instruction": "Cột Speaker nên chuyển thành câu bị động thế nào?",
+          "options": [
+            { "id": "A", "text": "The session will be presented by Sophia Garcia." },
+            { "id": "B", "text": "The session will present by Sophia Garcia." },
+            { "id": "C", "text": "The session is presenting Sophia Garcia." },
+            { "id": "D", "text": "Sophia Garcia will be presented the session." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Bị động = be + V3 (+ by ai). “Will be presented by Sophia Garcia”. Lỗi thiếu “be” như đáp án B rất hay gặp."
+        },
+        {
+          "id": "p4_bs_t1_e3",
+          "type": "multiple_choice",
+          "instruction": "Bảng ghi hội thảo ở “Harvey Convention Center (Main Conference Room, 2F)”. Nói thành câu thế nào?",
+          "options": [
+            { "id": "A", "text": "It's at the Harvey Convention Center, in the main conference room on the second floor." },
+            { "id": "B", "text": "It's in the Harvey Convention Center, at the main conference room in second floor." },
+            { "id": "C", "text": "It's on the Harvey Convention Center main conference room two floor." },
+            { "id": "D", "text": "Harvey Convention Center, Main Conference Room, 2F." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Ba giới từ khác nhau: AT toà nhà, IN phòng, ON tầng. “2F” phải đọc thành “on the second floor”, không đọc “two F”."
+        },
+        {
+          "id": "p4_bs_t1_e4",
+          "type": "multiple_choice",
+          "instruction": "Bảng ghi “Registration Fee: $120 (Lunch Included)”. Câu nào diễn đạt đúng?",
+          "options": [
+            { "id": "A", "text": "The fee is one hundred twenty dollars, and lunch is included." },
+            { "id": "B", "text": "The fee is one hundred twenty dollars including lunch inside." },
+            { "id": "C", "text": "One hundred twenty dollars with lunch included in it." },
+            { "id": "D", "text": "The fee includes by lunch." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "“Lunch is included” — bị động, ngắn gọn. Đây là câu trả lời mẫu cho dạng câu hỏi “whether lunch is included”."
+        },
+        {
+          "id": "p4_bs_t1_e5",
+          "type": "multiple_choice",
+          "instruction": "Phiên cuối ghi “Q&A Session & Closing”. Đọc thành lời thế nào?",
+          "options": [
+            { "id": "A", "text": "Q ampersand A session and closing" },
+            { "id": "B", "text": "Question and answer session and closing" },
+            { "id": "C", "text": "Q and A session and closing" },
+            { "id": "D", "text": "Cue A session closing" }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "“Q&A” đọc là “Q and A”. Dấu & trong tên phiên cũng đọc thành “and”, không bao giờ đọc “ampersand”."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_bs_t1_m1",
+          "type": "essay_typing",
+          "instruction": "Điền động từ để chuyển cột Speaker thành câu chủ động.",
+          "content": "At nine a.m., Isabella Jackson ______ the opening remarks.",
+          "options": [],
+          "correct_answers": ["gives", "delivers", "presents"],
+          "explanation": "Với “remarks / speech / comments” thì dùng give hoặc deliver. Với một phiên có nội dung thì dùng present hoặc lead."
+        },
+        {
+          "id": "p4_bs_t1_m2",
+          "type": "essay_typing",
+          "instruction": "Điền giới từ đúng cho tầng của phòng họp.",
+          "content": "The seminar is in the main conference room ______ the second floor.",
+          "options": [],
+          "correct_answers": ["on"],
+          "explanation": "Tầng luôn đi với ON (on the second floor). Phòng đi với IN, toà nhà đi với AT."
+        },
+        {
+          "id": "p4_bs_t1_m3",
+          "type": "essay_typing",
+          "instruction": "Điền tên người phụ trách phiên lúc 2:05 chiều.",
+          "content": "Improving Workplace Communications is led by ______.",
+          "options": [],
+          "correct_answers": ["Logan Brown"],
+          "explanation": "2:05 p.m. → Logan Brown. Isabella Jackson là phiên 9 giờ sáng — đây đúng là chỗ câu 9 gài bẫy."
+        },
+        {
+          "id": "p4_bs_t1_m4",
+          "type": "essay_typing",
+          "instruction": "Điền từ còn thiếu để nói về suất ăn trưa.",
+          "content": "Lunch is ______ in the registration fee.",
+          "options": [],
+          "correct_answers": ["included"],
+          "explanation": "“Included in the fee” = đã bao gồm trong phí. Ngược lại là “not included” hoặc “costs extra”."
+        },
+        {
+          "id": "p4_bs_t1_m5",
+          "type": "essay_typing",
+          "instruction": "Điền ngày diễn ra hội thảo, dạng số thứ tự bằng chữ.",
+          "content": "The seminar takes place on Thursday, February ______.",
+          "options": [],
+          "correct_answers": ["fifteenth", "15th"],
+          "explanation": "February 15th → “fifteenth”. “Takes place” là động từ thay thế rất tốt cho “is held”."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_bs_t1_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — vế thứ hai là câu hỏi có/không.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-2/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The registration fee is one hundred twenty dollars, and yes, lunch is included in that price.",
+          "explanation": "Vế hai hỏi “whether lunch is included” — phải trả lời rõ yes hoặc no. Thêm “in that price” để nối liền hai vế."
+        },
+        {
+          "id": "p4_bs_t1_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 rồi đính chính — người gọi gán nhầm diễn giả.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-2/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that's not right. Improving Workplace Communications is led by Logan Brown. Isabella Jackson gives the opening remarks at nine.",
+          "explanation": "Dùng bị động cho vế đính chính (“is led by”) rồi chủ động cho vế bổ sung (“gives”) — đổi cấu trúc làm câu trả lời bớt đơn điệu."
+        },
+        {
+          "id": "p4_bs_t1_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 rồi nêu đủ các phiên của diễn giả được hỏi.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-2/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Robert Clark is in charge of two sessions: Developing Outstanding Leadership Skills at ten fifteen, and the Q and A session and closing at four thirty.",
+          "explanation": "Ông ấy xuất hiện ở dòng thứ hai và dòng cuối. Quét hết cột Speaker mới dừng — câu 10 luôn hỏi tất cả."
+        },
+        {
+          "id": "p4_bs_t1_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — chuyển thông tin địa điểm trong ngoặc thành câu.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "It's at the Harvey Convention Center, in the main conference room on the second floor.",
+          "explanation": "Ba giới từ AT – IN – ON đi liền nhau. Đọc chậm, ngắt nhẹ ở mỗi dấu phẩy."
+        },
+        {
+          "id": "p4_bs_t1_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — chuyển một dòng có dấu sao thành câu.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "There's a socializing lunch at one p.m. with Riley Fisher, and it's covered by your registration fee.",
+          "explanation": "Dòng Lunch cũng là một phiên có người phụ trách. Dấu * dẫn xuống chú thích “Lunch Included” — gộp cả hai vào một câu."
+        }
+      ]
+    }
+  ]
+}

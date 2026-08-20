@@ -59,7 +59,8 @@ const scoreLabel = (s: number) =>
 const fmtTime = (s: number) =>
   `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`;
 
-const MAX_SECONDS = 15;
+/** Mặc định 15 giây như Part 1/2; Q8-10 câu 10 cần 30 giây nên truyền `maxSeconds`. */
+const DEFAULT_MAX_SECONDS = 15;
 
 // ── Component ─────────────────────────────────────────────────────────────────
 export function RecordingPanel({
@@ -68,12 +69,15 @@ export function RecordingPanel({
   testNum,
   exerciseIndex,
   userId,
+  maxSeconds = DEFAULT_MAX_SECONDS,
 }: {
   referenceText: string;
   skillId: string;
   testNum: number;
   exerciseIndex: number;
   userId: string;
+  /** Thời lượng ghi âm tối đa, giây. */
+  maxSeconds?: number;
 }) {
   const [state, setState] = useState<PanelState>("idle");
   const [scores, setScores] = useState<Scores | null>(null);
@@ -140,13 +144,13 @@ export function RecordingPanel({
       timerRef.current = setInterval(() => {
         elapsed += 1;
         setSeconds(elapsed);
-        if (elapsed >= MAX_SECONDS) stopRecorder();
+        if (elapsed >= maxSeconds) stopRecorder();
       }, 1000);
     } catch {
       setErrorMsg("Không thể truy cập micro. Vui lòng kiểm tra quyền truy cập.");
       setState("error");
     }
-  }, [submit, stopRecorder]);
+  }, [submit, stopRecorder, maxSeconds]);
 
   const reset = () => { setState("idle"); setScores(null); setSeconds(0); setErrorMsg(""); };
 
@@ -198,7 +202,7 @@ export function RecordingPanel({
             ● {fmtTime(seconds)}
           </span>
           <div style={{ flex: 1, height: 3, background: "var(--border)", borderRadius: 999 }}>
-            <div style={{ height: "100%", width: `${(seconds / MAX_SECONDS) * 100}%`, background: "rgb(239,68,68)", borderRadius: 999, transition: "width 0.9s linear" }} />
+            <div style={{ height: "100%", width: `${Math.min(100, (seconds / maxSeconds) * 100)}%`, background: "rgb(239,68,68)", borderRadius: 999, transition: "width 0.9s linear" }} />
           </div>
           <button
             onClick={stopRecorder}

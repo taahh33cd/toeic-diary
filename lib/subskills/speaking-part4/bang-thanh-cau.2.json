@@ -1,0 +1,183 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "bang-thanh-cau", "name": "Đọc bảng thành câu hoàn chỉnh", "description": "Biến một ô trong bảng thành câu nói tự nhiên, đúng cấu trúc." },
+  "test_number": 2,
+  "title": "Hội nghị nha khoa — London Dentistry Conference",
+  "source_slug": "conference-10",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-10/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_bs_t2_e1",
+          "type": "multiple_choice",
+          "instruction": "Bảng ghi “Diagnosing Gum Disease (Workshop)”. Cách nói nào tự nhiên nhất?",
+          "options": [
+            { "id": "A", "text": "There's a workshop on diagnosing gum disease." },
+            { "id": "B", "text": "There's a diagnosing gum disease workshop bracket." },
+            { "id": "C", "text": "Diagnosing gum disease is workshop." },
+            { "id": "D", "text": "It has workshop of diagnosing gum disease." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Chữ trong ngoặc cho biết LOẠI hoạt động. Mẫu chuẩn: “There's a workshop / lecture ON + chủ đề”. Không đọc dấu ngoặc thành lời."
+        },
+        {
+          "id": "p4_bs_t2_e2",
+          "type": "multiple_choice",
+          "instruction": "Phiên 10:30 – 11:30 là “Dental Floss Brands by Thickness (Lecture)”. Nói thành câu thế nào?",
+          "options": [
+            { "id": "A", "text": "From ten thirty to eleven thirty, there's a lecture on dental floss brands by thickness." },
+            { "id": "B", "text": "In ten thirty until eleven thirty is lecture dental floss." },
+            { "id": "C", "text": "Ten thirty eleven thirty dental floss brands lecture." },
+            { "id": "D", "text": "There's a lecture at ten thirty to eleven thirty." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Khoảng giờ mở đầu câu: “From … to …, there's a …”. Cách này giúp bạn liệt kê nhiều dòng liên tiếp mà không lặp cấu trúc."
+        },
+        {
+          "id": "p4_bs_t2_e3",
+          "type": "multiple_choice",
+          "instruction": "Ô Leader của dòng LUNCH BREAK ghi “N/A”. Nói thế nào?",
+          "options": [
+            { "id": "A", "text": "The leader is N slash A." },
+            { "id": "B", "text": "There's no leader for the lunch break." },
+            { "id": "C", "text": "The lunch break has N A leader." },
+            { "id": "D", "text": "Nobody is the lunch break." }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "“N/A” là ký hiệu, không đọc thành lời. Diễn đạt lại thành “there's no … listed” hoặc “there's no leader for …”."
+        },
+        {
+          "id": "p4_bs_t2_e4",
+          "type": "multiple_choice",
+          "instruction": "Bảng ghi hai mức phí: $70 (Regular) và $50 (Dental Association Member). Câu nào đúng?",
+          "options": [
+            { "id": "A", "text": "It's seventy dollars, or fifty dollars if you're a member of the Dental Association." },
+            { "id": "B", "text": "It's seventy dollars regular and fifty dollars member." },
+            { "id": "C", "text": "Seventy dollars or fifty dollars for the dental association members people." },
+            { "id": "D", "text": "The price is seventy fifty dollars." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Hai mức giá nối bằng “or”, kèm mệnh đề điều kiện “if you're a …”. Đây là khuôn dùng lại được cho mọi bảng có giá ưu đãi."
+        },
+        {
+          "id": "p4_bs_t2_e5",
+          "type": "multiple_choice",
+          "instruction": "Địa chỉ ghi “London Conference Center (1110 Baker Street, London)”. Đọc số nhà thế nào?",
+          "options": [
+            { "id": "A", "text": "one thousand one hundred ten Baker Street" },
+            { "id": "B", "text": "eleven ten Baker Street" },
+            { "id": "C", "text": "one one one zero Baker Street" },
+            { "id": "D", "text": "Cả B và C đều dùng được" }
+          ],
+          "correct_answers": ["D"],
+          "explanation": "Số nhà đọc theo cặp (“eleven ten”) hoặc từng chữ số (“one one one zero”), không đọc như số đếm. Cách đọc từng chữ số rõ ràng nhất khi qua điện thoại."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_bs_t2_m1",
+          "type": "essay_typing",
+          "instruction": "Điền loại hoạt động của phiên 2 – 3 giờ chiều (một từ).",
+          "content": "Wisdom Teeth: To Pull or Not To Pull is a ______.",
+          "options": [],
+          "correct_answers": ["workshop"],
+          "explanation": "Chữ trong ngoặc sau tên phiên chính là loại hoạt động — workshop hay lecture. Câu 10 của đề này lọc đúng theo tiêu chí đó."
+        },
+        {
+          "id": "p4_bs_t2_m2",
+          "type": "essay_typing",
+          "instruction": "Điền giới từ đúng cho chủ đề của một bài giảng.",
+          "content": "There's a lecture ______ toothpaste effectiveness by brand.",
+          "options": [],
+          "correct_answers": ["on", "about"],
+          "explanation": "“a lecture on / about + chủ đề”. Đừng dùng “of” — đó là lỗi dịch từng chữ từ tiếng Việt."
+        },
+        {
+          "id": "p4_bs_t2_m3",
+          "type": "essay_typing",
+          "instruction": "Điền tên người phụ trách phiên 9:30 – 10:30.",
+          "content": "Diagnosing Gum Disease is led by ______.",
+          "options": [],
+          "correct_answers": ["Oliver Lucero"],
+          "explanation": "9:30 – 10:30 → Oliver Lucero. Timothy Brock phụ trách phiên 1 giờ chiều — chính là bẫy của câu 9."
+        },
+        {
+          "id": "p4_bs_t2_m4",
+          "type": "essay_typing",
+          "instruction": "Điền mức phí ưu đãi cho hội viên (bằng chữ, chỉ phần số).",
+          "content": "Dental Association members pay only ______ dollars.",
+          "options": [],
+          "correct_answers": ["fifty"],
+          "explanation": "$50 cho hội viên, $70 cho khách thường. Từ “only” làm bật lên đây là mức ưu đãi."
+        },
+        {
+          "id": "p4_bs_t2_m5",
+          "type": "essay_typing",
+          "instruction": "Điền từ còn thiếu về suất ăn trưa (dấu * dẫn xuống chú thích).",
+          "content": "The lunch break is ______ in the registration fee.",
+          "options": [],
+          "correct_answers": ["included"],
+          "explanation": "Chú thích ghi “*Included in registration fee”. Dấu sao ở dòng LUNCH BREAK dẫn thẳng xuống đó."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_bs_t2_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — địa điểm và một câu hỏi có/không.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-10/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "It's at the London Conference Center on Baker Street, and yes, lunch is included in the registration fee.",
+          "explanation": "Có thể lược số nhà cho gọn nếu thời gian gấp, nhưng tên đường thì nên giữ. Vế hai vẫn phải trả lời rõ yes."
+        },
+        {
+          "id": "p4_bs_t2_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 rồi đính chính — chú ý cả tên lẫn giờ.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-10/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that's not correct. Oliver Lucero leads the gum disease workshop at nine thirty. Timothy Brock speaks at one p.m.",
+          "explanation": "Giờ đúng, người sai. Bổ sung giờ thật của Timothy Brock để người gọi không hỏi lại lần nữa."
+        },
+        {
+          "id": "p4_bs_t2_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 rồi nêu đủ các phiên đúng loại hình được hỏi.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-10/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "There are two workshops: Diagnosing Gum Disease at nine thirty with Oliver Lucero, and Wisdom Teeth: To Pull or Not To Pull at two with Annette Walker.",
+          "explanation": "Tiêu chí lọc là “hands-on”, tức là các phiên ghi (Workshop). Các phiên (Lecture) phải bỏ qua — chữ trong ngoặc quyết định câu trả lời."
+        },
+        {
+          "id": "p4_bs_t2_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — hai mức phí trong một câu.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Registration is seventy dollars, or fifty dollars if you're a Dental Association member.",
+          "explanation": "Ngắt hơi trước “or” để người nghe kịp nhận ra sắp có mức giá thứ hai."
+        },
+        {
+          "id": "p4_bs_t2_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — cách diễn đạt một ô ghi N/A.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "There's no leader listed for the lunch break — it runs from eleven thirty to one.",
+          "explanation": "Không có thông tin cũng là một câu trả lời hợp lệ. Nói rõ rồi bù bằng thông tin khác của cùng dòng."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "tra-loi-ngan", "name": "Mẫu câu trả lời ngắn Q8-9", "description": "Trả lời trọn câu trong 15 giây, đủ chủ ngữ vị ngữ." },
+  "test_number": 1,
+  "title": "Sự kiện thư viện — Jefferson Library, December",
+  "source_slug": "event-1",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/event-1/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_tn_t1_e1",
+          "type": "multiple_choice",
+          "instruction": "Người gọi hỏi: “What date is the mystery writing workshop?” Câu trả lời nào tốt nhất?",
+          "options": [
+            { "id": "A", "text": "December 19th." },
+            { "id": "B", "text": "It's on December nineteenth." },
+            { "id": "C", "text": "Nineteen December." },
+            { "id": "D", "text": "In December nineteenth." }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Đáp án A đúng thông tin nhưng cụt — rubric đòi câu hoàn chỉnh. Công thức an toàn: “It's on + ngày”. Ngày đi với ON, không phải IN."
+        },
+        {
+          "id": "p4_tn_t1_e2",
+          "type": "multiple_choice",
+          "instruction": "Người gọi hỏi phòng tổ chức workshop. Câu nào đúng nhất?",
+          "options": [
+            { "id": "A", "text": "It will be held in Room 201." },
+            { "id": "B", "text": "It will be held at Room 201." },
+            { "id": "C", "text": "Room 201 is held it." },
+            { "id": "D", "text": "It holds in Room 201." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Phòng đi với IN (in Room 201). Sự kiện thì bị động: “it will be HELD”, không phải “it holds”."
+        },
+        {
+          "id": "p4_tn_t1_e3",
+          "type": "multiple_choice",
+          "instruction": "Câu 8 hỏi hai thông tin: ngày và phòng. Câu trả lời nào đủ ý nhất?",
+          "options": [
+            { "id": "A", "text": "December nineteenth." },
+            { "id": "B", "text": "Room 201, December." },
+            { "id": "C", "text": "The mystery writing workshop is on December nineteenth, in Room 201." },
+            { "id": "D", "text": "It is December nineteenth and it is Room 201 too." }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "Một câu, hai thông tin, có chủ ngữ rõ ràng. Đáp án D tuy đủ ý nhưng lặp “it is” nghe rất vụng."
+        },
+        {
+          "id": "p4_tn_t1_e4",
+          "type": "multiple_choice",
+          "instruction": "Nên mở đầu câu trả lời cho câu 8 như thế nào?",
+          "options": [
+            { "id": "A", "text": "Well, let me think about that for a moment…" },
+            { "id": "B", "text": "Sure. The workshop is on December nineteenth." },
+            { "id": "C", "text": "I am not sure, but maybe December nineteenth." },
+            { "id": "D", "text": "According to my information which I have here in front of me right now…" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Chỉ có 15 giây. Một từ đệm ngắn (“Sure.”, “Of course.”) là đủ lịch sự. Đừng nói “I'm not sure” — bạn đang cầm bảng thông tin, bạn phải chắc chắn."
+        },
+        {
+          "id": "p4_tn_t1_e5",
+          "type": "multiple_choice",
+          "instruction": "Sự kiện Children's Story Time diễn ra ở đâu và ngày nào?",
+          "options": [
+            { "id": "A", "text": "It's on December fourth, in Room 102." },
+            { "id": "B", "text": "It's on December fourteenth, in Room 102." },
+            { "id": "C", "text": "It's on December fourth, in the Event Hall." },
+            { "id": "D", "text": "It's on December fourth, in Room 201." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Dec. 4th, Room 102. Chú ý phân biệt fourth (4) và fourteenth (14) — nói nhầm là sai hẳn thông tin."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_tn_t1_m1",
+          "type": "essay_typing",
+          "instruction": "Điền giới từ đúng để hoàn thiện câu trả lời về phòng.",
+          "content": "The mystery writing workshop will be held ______ Room 201.",
+          "options": [],
+          "correct_answers": ["in"],
+          "explanation": "Phòng cụ thể → IN. Nhưng toà nhà hoặc trung tâm hội nghị thì dùng AT (at the Event Hall cũng được chấp nhận vì đó là một khu vực)."
+        },
+        {
+          "id": "p4_tn_t1_m2",
+          "type": "essay_typing",
+          "instruction": "Điền động từ ở dạng bị động cho câu trả lời.",
+          "content": "The book signing event is ______ for December eleventh.",
+          "options": [],
+          "correct_answers": ["scheduled"],
+          "explanation": "“is scheduled for + ngày” là mẫu câu vàng của Q8-10 — dùng được cho hầu hết mọi loại bảng lịch."
+        },
+        {
+          "id": "p4_tn_t1_m3",
+          "type": "essay_typing",
+          "instruction": "Điền tên tác giả có buổi ký sách ngày 23/12.",
+          "content": "The December twenty-third book signing is with ______.",
+          "options": [],
+          "correct_answers": ["Arthur Wrights", "Arthur Wright"],
+          "explanation": "Dec. 23rd → Arthur Wrights (Event Hall). Kimberly Wayne là ngày 11/12 — hai buổi ký sách rất dễ lẫn."
+        },
+        {
+          "id": "p4_tn_t1_m4",
+          "type": "essay_typing",
+          "instruction": "Điền ngày của sự kiện Lunch Time Reading, dạng số thứ tự bằng chữ.",
+          "content": "Lunch Time Reading is on December ______.",
+          "options": [],
+          "correct_answers": ["twenty-seventh", "twenty seventh", "27th"],
+          "explanation": "Dec. 27th → “twenty-seventh”. Dòng này còn ghi “Lunch Provided” — chi tiết trong ngoặc luôn đáng nhắc tới."
+        },
+        {
+          "id": "p4_tn_t1_m5",
+          "type": "essay_typing",
+          "instruction": "Điền một từ để câu trả lời nghe lịch sự và sẵn sàng hơn.",
+          "content": "______, the workshop is on December nineteenth in Room 201.",
+          "options": [],
+          "correct_answers": ["Sure", "Certainly", "Of course", "Yes"],
+          "explanation": "Một từ mở đầu ngắn giúp câu trả lời tự nhiên như đang nói chuyện điện thoại thật, mà chỉ tốn chưa tới một giây."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_tn_t1_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời trọn câu, đủ cả ngày lẫn phòng.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/event-1/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Sure. The mystery writing workshop is on December nineteenth, and it's in Room 201.",
+          "explanation": "Mẫu chuẩn: [từ đệm] + [chủ ngữ đầy đủ] + [thông tin 1] + and + [thông tin 2]. Học thuộc khuôn này là trả lời được mọi câu 8."
+        },
+        {
+          "id": "p4_tn_t1_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 rồi trả lời — người gọi nhớ nhầm tác giả với ngày.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/event-1/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that's not quite right. Kimberly Wayne's book signing is on December eleventh. December twenty-third is Arthur Wrights.",
+          "explanation": "Cả hai buổi ký sách đều có thật, chỉ bị đổi chỗ ngày. Nêu đúng ngày cho người được hỏi, rồi nói thêm ngày kia là của ai."
+        },
+        {
+          "id": "p4_tn_t1_h3",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu trả lời sau — mẫu trả lời cho câu hỏi về địa điểm.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Both book signing events are held in the Event Hall.",
+          "explanation": "Khi hai dòng cùng một địa điểm, gộp lại bằng “both” — vừa gọn vừa cho thấy bạn đã đọc kỹ bảng."
+        },
+        {
+          "id": "p4_tn_t1_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu trả lời sau — trả lời câu hỏi có/không rồi bổ sung thông tin.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Yes, that's right. Children's Story Time is on December fourth in Room 102.",
+          "explanation": "Khi người gọi nói ĐÚNG, vẫn phải nhắc lại thông tin để chứng minh bạn đã kiểm tra — trả lời cụt lủn “Yes” là mất điểm."
+        },
+        {
+          "id": "p4_tn_t1_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — nêu một chi tiết kèm theo trong ngoặc trên bảng.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The mystery writing workshop provides materials, so you don't need to bring anything.",
+          "explanation": "“Materials Provided” trên bảng nên được diễn giải thành câu có ích cho người nghe, chứ không đọc trơ ra như đọc bảng."
+        }
+      ]
+    }
+  ]
+}

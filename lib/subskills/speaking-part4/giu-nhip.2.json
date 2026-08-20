@@ -1,0 +1,183 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "giu-nhip", "name": "Giữ nhịp 30 giây", "description": "Nói đủ thời lượng, không ngập ngừng, không hết ý giữa chừng." },
+  "test_number": 2,
+  "title": "Tour du lịch — Dream Tour, San Francisco",
+  "source_slug": "travel-1",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/travel-1/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_gn_t2_e1",
+          "type": "multiple_choice",
+          "instruction": "Câu 10 hỏi về các chuyến thăm bảo tàng. Có mấy mục?",
+          "options": [
+            { "id": "A", "text": "Một" },
+            { "id": "B", "text": "Hai" },
+            { "id": "C", "text": "Ba" },
+            { "id": "D", "text": "Bốn" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Museum tour, Museum of Modern Art (6/10, 3 p.m.) và Museum tour, Madame Tussauds (8/10, 11 a.m.). Hai mục thì mỗi mục cần nhiều chi tiết hơn mới đủ 30 giây."
+        },
+        {
+          "id": "p4_gn_t2_e2",
+          "type": "multiple_choice",
+          "instruction": "Chỉ có hai mục mà phải nói 30 giây. Cách kéo dài hợp lệ là gì?",
+          "options": [
+            { "id": "A", "text": "Thêm ngày, giờ và tên bảo tàng đầy đủ cho từng mục, cộng câu tổng quan và câu chốt" },
+            { "id": "B", "text": "Nói mỗi mục hai lần" },
+            { "id": "C", "text": "Kể thêm bảo tàng ngoài lịch trình" },
+            { "id": "D", "text": "Nói thật chậm từng từ" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Công thức đủ giờ: câu tổng quan + mỗi mục ba chi tiết + câu chốt. Tất cả đều là thông tin có thật trên bảng."
+        },
+        {
+          "id": "p4_gn_t2_e3",
+          "type": "multiple_choice",
+          "instruction": "Chuyến thăm Madame Tussauds diễn ra khi nào?",
+          "options": [
+            { "id": "A", "text": "8/10, 11 giờ sáng" },
+            { "id": "B", "text": "6/10, 3 giờ chiều" },
+            { "id": "C", "text": "7/10, 10 giờ sáng" },
+            { "id": "D", "text": "8/10, 5 giờ chiều" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "October 8th, 11:00 am, Museum tour, Madame Tussauds. Mục 5:00 pm cùng ngày là Walking tour ở Fisher's Wharf."
+        },
+        {
+          "id": "p4_gn_t2_e4",
+          "type": "multiple_choice",
+          "instruction": "Đâu là dấu hiệu của một câu trả lời BỊ hụt hơi?",
+          "options": [
+            { "id": "A", "text": "Ngắt hơi ở dấu phẩy" },
+            { "id": "B", "text": "Nhiều tiếng “um”, “ờ” và im lặng dài giữa các mục" },
+            { "id": "C", "text": "Dùng từ nối first, then, finally" },
+            { "id": "D", "text": "Nhắc lại thông tin quan trọng ở cuối" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Điểm độ trôi chảy bị trừ vì khoảng lặng và từ đệm vô nghĩa, chứ không phải vì nói chậm. Ngắt hơi đúng chỗ lại là điểm cộng."
+        },
+        {
+          "id": "p4_gn_t2_e5",
+          "type": "multiple_choice",
+          "instruction": "Giá tour đã bao gồm những gì?",
+          "options": [
+            { "id": "A", "text": "Vé máy bay và khách sạn" },
+            { "id": "B", "text": "Chỉ khách sạn" },
+            { "id": "C", "text": "Vé máy bay, khách sạn và tất cả các bữa ăn" },
+            { "id": "D", "text": "Bảng không ghi" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Phần đầu bảng ghi “Price: $1800 (Flight and hotel included)”. Bữa trưa ngày 6/10 có trong lịch nhưng bảng không nói là đã bao gồm giá."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_gn_t2_m1",
+          "type": "essay_typing",
+          "instruction": "Điền số chuyến thăm bảo tàng (bằng chữ) để mở đầu câu 10.",
+          "content": "There are ______ museum tours on your itinerary.",
+          "options": [],
+          "correct_answers": ["two"],
+          "explanation": "Hai chuyến, ở hai ngày khác nhau. Câu mở đầu này ngốn khoảng 3 giây — một khoản đầu tư tốt."
+        },
+        {
+          "id": "p4_gn_t2_m2",
+          "type": "essay_typing",
+          "instruction": "Điền tên bảo tàng thăm ngày 6/10 (bốn từ).",
+          "content": "On October sixth at three p.m., you'll visit the ______ ______ ______ ______.",
+          "options": [],
+          "correct_answers": ["Museum of Modern Art", "museum of modern art"],
+          "explanation": "Tên riêng dài thì đọc trọn vẹn — vừa chính xác vừa giúp câu trả lời dài ra một cách hợp lệ."
+        },
+        {
+          "id": "p4_gn_t2_m3",
+          "type": "essay_typing",
+          "instruction": "Điền giá tour bằng chữ (chỉ phần số).",
+          "content": "The trip costs ______ dollars.",
+          "options": [],
+          "correct_answers": ["one thousand eight hundred", "eighteen hundred", "one thousand eight hundred dollars"],
+          "explanation": "$1800 đọc là “one thousand eight hundred” hoặc gọn hơn “eighteen hundred” — cách thứ hai rất thông dụng khi nói về giá."
+        },
+        {
+          "id": "p4_gn_t2_m4",
+          "type": "essay_typing",
+          "instruction": "Điền hoạt động lúc 4 giờ chiều ngày 7/10 (hai từ).",
+          "content": "At four p.m. on October seventh, there's ______ ______ at San Francisco Bay.",
+          "options": [],
+          "correct_answers": ["whale watching"],
+          "explanation": "Whale watching — San Francisco Bay. Chi tiết dự phòng tốt khi bạn cần thêm ý."
+        },
+        {
+          "id": "p4_gn_t2_m5",
+          "type": "essay_typing",
+          "instruction": "Điền câu chốt để kết thúc phần trả lời (một từ còn thiếu).",
+          "content": "Would you like me to ______ any of those details?",
+          "options": [],
+          "correct_answers": ["repeat", "confirm"],
+          "explanation": "Câu chốt là công cụ giữ nhịp: dùng khi còn dư 3 – 5 giây, hoặc khi bạn cần kết thúc dứt khoát."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_gn_t2_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 rồi nói đủ 30 giây với chỉ hai mục — thêm câu tổng quan và câu chốt cho đủ giờ.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/travel-1/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "There are two museum tours. The first is on October sixth at three p.m., at the Museum of Modern Art. The second is on October eighth at eleven a.m., at Madame Tussauds.",
+          "explanation": "Khoảng 42 từ. Còn dư giờ thì thêm: “Would you like me to repeat any of those details?” — vừa tròn 30 giây."
+        },
+        {
+          "id": "p4_gn_t2_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — giá tour và những gì đã bao gồm.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/travel-1/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The total price is eighteen hundred dollars, and that includes both your flight and your hotel.",
+          "explanation": "“That includes both … and …” trả lời gọn vế thứ hai. Đừng bịa thêm là bao gồm cả bữa ăn — bảng không nói vậy."
+        },
+        {
+          "id": "p4_gn_t2_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 rồi đính chính — người gọi nhầm ngày của hoạt động.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/travel-1/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that's not correct. The Golden Gate Bridge sightseeing is on October seventh at ten a.m., not the eighth.",
+          "explanation": "Khuôn “X, not Y” lần nữa. Giờ người gọi nêu (buổi sáng) thì đúng, chỉ sai ngày — chỉ sửa phần sai."
+        },
+        {
+          "id": "p4_gn_t2_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to đoạn sau — luyện nói liền một mạch trọn một ngày lịch trình.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "On October eighth you have two activities: a museum tour at Madame Tussauds at eleven a.m., and then a walking tour at Fisherman's Wharf at five p.m.",
+          "explanation": "Khoảng 33 từ, tương đương 16 giây. Tập nói trọn đoạn này trong một hơi, chỉ ngắt ở dấu phẩy."
+        },
+        {
+          "id": "p4_gn_t2_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — câu tổng quan mở đầu cho mọi câu 10 về lịch trình.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Your trip to San Francisco runs from October sixth through the eighth, and the flight and hotel are already included.",
+          "explanation": "Câu tổng quan này dùng được cho hầu hết bảng lịch trình — chỉ cần thay tên thành phố và ngày."
+        }
+      ]
+    }
+  ]
+}

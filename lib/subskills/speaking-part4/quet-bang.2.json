@@ -1,0 +1,183 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "quet-bang", "name": "Quét bảng đúng ô", "description": "45 giây tìm đúng hàng/cột trước khi câu hỏi bắt đầu." },
+  "test_number": 2,
+  "title": "Hội nghị chủ doanh nghiệp — Conference of Business Owners",
+  "source_slug": "conference-13",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-13/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_qb_t2_e1",
+          "type": "multiple_choice",
+          "instruction": "Phiên diễn ra lúc 11:30 – 12:30 là phiên nào?",
+          "options": [
+            { "id": "A", "text": "Using various marketing options" },
+            { "id": "B", "text": "Social media advertising" },
+            { "id": "C", "text": "Print media advertising" },
+            { "id": "D", "text": "Allocating assets" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Bảng này dùng khung giờ lẻ (9:30, 10:45, 11:30…) nên phải dò kỹ. 11:30 – 12:30 → Social media advertising."
+        },
+        {
+          "id": "p4_qb_t2_e2",
+          "type": "multiple_choice",
+          "instruction": "Ai dẫn phần Orientation?",
+          "options": [
+            { "id": "A", "text": "James Moore" },
+            { "id": "B", "text": "Christina Wong" },
+            { "id": "C", "text": "Sebastian Pipers" },
+            { "id": "D", "text": "Katherine Garner" }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "Orientation là dòng đầu tiên (9:30 – 10:45) → Sebastian Pipers. Katherine Garner ở dòng cuối cùng."
+        },
+        {
+          "id": "p4_qb_t2_e3",
+          "type": "multiple_choice",
+          "instruction": "Phí tham dự hội nghị là bao nhiêu?",
+          "options": [
+            { "id": "A", "text": "$20 mỗi người" },
+            { "id": "B", "text": "$120 mỗi người" },
+            { "id": "C", "text": "$140 mỗi người" },
+            { "id": "D", "text": "Miễn phí" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Phí ghi ở phần đầu bảng: $120 per person. $20 là giá bữa trưa — hai con số nằm ở hai chỗ, rất dễ lẫn."
+        },
+        {
+          "id": "p4_qb_t2_e4",
+          "type": "multiple_choice",
+          "instruction": "Bữa trưa có nằm trong phí tham dự không?",
+          "options": [
+            { "id": "A", "text": "Có, đã bao gồm trong $120" },
+            { "id": "B", "text": "Không, tốn thêm $20" },
+            { "id": "C", "text": "Không, nhưng bảng không ghi giá" },
+            { "id": "D", "text": "Bảng không nhắc tới bữa trưa" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Dòng Lunch ghi kèm “(Price: $20)” — thông tin trong ngoặc luôn đáng đọc. Đây là kiểu chi tiết câu 8 hay hỏi."
+        },
+        {
+          "id": "p4_qb_t2_e5",
+          "type": "multiple_choice",
+          "instruction": "Hội nghị kết thúc lúc mấy giờ?",
+          "options": [
+            { "id": "A", "text": "3:30 p.m." },
+            { "id": "B", "text": "4:00 p.m." },
+            { "id": "C", "text": "4:30 p.m." },
+            { "id": "D", "text": "5:00 p.m." }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "Lấy giờ KẾT THÚC của dòng cuối (3:30 – 4:30) chứ không phải giờ bắt đầu. Nhầm chỗ này là mất trọn câu trả lời."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_qb_t2_m1",
+          "type": "essay_typing",
+          "instruction": "Jonathan Lee phụ trách phiên nào? Điền hai từ còn thiếu.",
+          "content": "Jonathan Lee leads the session on ______ ______ advertising.",
+          "options": [],
+          "correct_answers": ["print media"],
+          "explanation": "1:15 – 2:15 → Print media advertising. Đừng lẫn với social media advertising của Christina Wong."
+        },
+        {
+          "id": "p4_qb_t2_m2",
+          "type": "essay_typing",
+          "instruction": "Hội nghị diễn ra ngày nào? Viết dạng số thứ tự bằng chữ.",
+          "content": "The conference is on Saturday, April ______.",
+          "options": [],
+          "correct_answers": ["twenty-eighth", "twenty eighth", "28th"],
+          "explanation": "April 28th → “twenty-eighth”."
+        },
+        {
+          "id": "p4_qb_t2_m3",
+          "type": "essay_typing",
+          "instruction": "Điền phí tham dự bằng chữ (chỉ phần số).",
+          "content": "The fee is ______ dollars per person.",
+          "options": [],
+          "correct_answers": ["one hundred twenty", "one hundred and twenty", "a hundred and twenty"],
+          "explanation": "$120 → one hundred twenty. Cụm “per person” phải giữ lại, nếu không người nghe tưởng là giá cả nhóm."
+        },
+        {
+          "id": "p4_qb_t2_m4",
+          "type": "essay_typing",
+          "instruction": "Bữa trưa giá bao nhiêu? Điền bằng chữ.",
+          "content": "Lunch costs an extra ______ dollars.",
+          "options": [],
+          "correct_answers": ["twenty"],
+          "explanation": "$20 nằm trong ngoặc ở dòng Lunch. Thêm “an extra” để nói rõ là khoản tính thêm."
+        },
+        {
+          "id": "p4_qb_t2_m5",
+          "type": "essay_typing",
+          "instruction": "Phiên của Dan Murakami bắt đầu lúc mấy giờ? Điền giờ bằng chữ.",
+          "content": "Dan Murakami's session starts at ______.",
+          "options": [],
+          "correct_answers": ["two fifteen", "two fifteen p.m.", "a quarter past two"],
+          "explanation": "2:15 → “two fifteen”. Giờ lẻ đọc liền số giờ rồi số phút; “a quarter past two” cũng đúng nhưng dài hơn."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_qb_t2_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — cả hai thông tin đều nằm ngoài lưới bảng.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-13/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The fee is one hundred twenty dollars per person, and it's held at the Westwood Convention Center.",
+          "explanation": "Phí và địa điểm đều ở phần tiêu đề. Trong 45 giây đọc bảng, hãy đọc phần đầu TRƯỚC rồi mới tới lưới."
+        },
+        {
+          "id": "p4_qb_t2_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 — người gọi ghép nhầm người với phiên. Đính chính cả hai vế.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-13/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that's not correct. Christina Wong leads social media advertising at eleven thirty. Jonathan Lee covers print media advertising at one fifteen.",
+          "explanation": "Người gọi lẫn hai phiên có chữ “advertising”. Trả lời tốt nhất là tách bạch: ai làm phiên nào, mấy giờ."
+        },
+        {
+          "id": "p4_qb_t2_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 — tìm mọi phiên liên quan tới marketing và quảng cáo.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-13/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "There are three: using various marketing options at ten forty-five, social media advertising at eleven thirty, and print media advertising at one fifteen.",
+          "explanation": "Câu 10 hỏi theo CHỦ ĐỀ chứ không theo giờ — phải quét cả cột Session tìm từ khoá. Nêu số lượng trước rồi liệt kê."
+        },
+        {
+          "id": "p4_qb_t2_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — dòng bữa trưa có cả giờ lẫn giá.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Lunch is from twelve thirty to one fifteen, and it costs twenty dollars.",
+          "explanation": "Một dòng chứa hai loại thông tin thì nói thành hai vế, nối bằng “and”."
+        },
+        {
+          "id": "p4_qb_t2_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — khung giờ cả ngày, lấy từ dòng đầu và dòng cuối.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The conference starts at nine thirty in the morning and finishes at four thirty in the afternoon.",
+          "explanation": "Với giờ lẻ, thêm “in the morning / in the afternoon” nghe rõ ràng hơn là đọc a.m./p.m. liên tục."
+        }
+      ]
+    }
+  ]
+}

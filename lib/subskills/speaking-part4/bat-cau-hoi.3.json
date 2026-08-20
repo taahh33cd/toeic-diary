@@ -1,0 +1,191 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "bat-cau-hoi", "name": "Nghe bắt dạng câu hỏi", "description": "Nhận ra ngay câu hỏi đang hỏi gì, chỉ với một lần nghe." },
+  "test_number": 3,
+  "title": "Họp nhân viên — Monthly Staff Meeting",
+  "source_slug": "meeting-1",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/meeting-1/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_bc_t3_e1",
+          "type": "multiple_choice",
+          "instruction": "Nghe câu hỏi 8. Hai thông tin được hỏi là gì?",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/meeting-1/q8.mp3",
+          "options": [
+            { "id": "A", "text": "Địa điểm họp và ai bắt buộc phải dự" },
+            { "id": "B", "text": "Giờ họp và thời lượng" },
+            { "id": "C", "text": "Chủ đề họp và người chủ trì" },
+            { "id": "D", "text": "Địa điểm họp và chi phí" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "“Where the meeting will be held” + “who is required to attend”. Vế thứ hai nằm ở dòng chú thích cuối bảng: “Mandatory Participation for All Managers”."
+        },
+        {
+          "id": "p4_bc_t3_e2",
+          "type": "multiple_choice",
+          "instruction": "Nghe câu hỏi 9 thật kỹ. Người gọi nhắc tới tên nào?",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/meeting-1/q9.mp3",
+          "options": [
+            { "id": "A", "text": "Jeanne Harris" },
+            { "id": "B", "text": "Gene Harris" },
+            { "id": "C", "text": "Josh Garcia" },
+            { "id": "D", "text": "Adam Jackson" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Bẫy tên gần giống: bảng có “Jeanne Harris” nhưng người gọi nói “Gene Harris”. Nghe câu 9 phải bắt đúng tên — nghe loáng thoáng là đối chiếu nhầm dòng ngay."
+        },
+        {
+          "id": "p4_bc_t3_e3",
+          "type": "multiple_choice",
+          "instruction": "Nghe câu hỏi 10. Người gọi lọc thông tin theo tiêu chí nào?",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/meeting-1/q10.mp3",
+          "options": [
+            { "id": "A", "text": "Theo khung giờ" },
+            { "id": "B", "text": "Theo người trình bày" },
+            { "id": "C", "text": "Theo địa điểm" },
+            { "id": "D", "text": "Theo mức độ ưu tiên" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Câu 10 hỏi các phiên do Becky Fields dẫn. Ba tiêu chí lọc thường gặp: theo NGÀY, theo NGƯỜI, theo CHỦ ĐỀ — nhận ra tiêu chí là biết phải quét cột nào."
+        },
+        {
+          "id": "p4_bc_t3_e4",
+          "type": "multiple_choice",
+          "instruction": "Nghe lời dẫn. Người gọi là ai?",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/meeting-1/intro.mp3",
+          "options": [
+            { "id": "A", "text": "Một quản lý phải dự cuộc họp" },
+            { "id": "B", "text": "Một khách hàng của công ty" },
+            { "id": "C", "text": "Một nhân viên mới vào" },
+            { "id": "D", "text": "Một diễn giả được mời" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "“I am a manager who needs to attend…”. Biết vai người gọi thì trả lời mới đúng giọng — ở đây là đồng nghiệp nói với đồng nghiệp."
+        },
+        {
+          "id": "p4_bc_t3_e5",
+          "type": "multiple_choice",
+          "instruction": "Nếu bạn không nghe kịp trọn câu hỏi, cách xử lý tốt nhất là gì?",
+          "options": [
+            { "id": "A", "text": "Im lặng cho tới khi hết giờ" },
+            { "id": "B", "text": "Nói bừa một thông tin bất kỳ trên bảng" },
+            { "id": "C", "text": "Bám vào từ để hỏi nghe được và trả lời phần đó" },
+            { "id": "D", "text": "Xin người gọi nhắc lại câu hỏi" }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "Không ai nhắc lại câu 8 và 9 cho bạn. Chỉ cần bắt được “what time” hay “who” là đã trả lời đúng hướng và vẫn có điểm — im lặng thì chắc chắn không."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_bc_t3_m1",
+          "type": "essay_typing",
+          "instruction": "Nghe lại câu hỏi 8 rồi điền từ để hỏi của vế thứ hai.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/meeting-1/q8.mp3",
+          "content": "The caller also asks ______ is required to attend.",
+          "options": [],
+          "correct_answers": ["who"],
+          "explanation": "“Who is required to attend” — hỏi về NGƯỜI. Câu trả lời nằm ở dòng chú thích, không nằm trong lưới."
+        },
+        {
+          "id": "p4_bc_t3_m2",
+          "type": "essay_typing",
+          "instruction": "Nghe lại câu hỏi 9. Người gọi nói phiên đầu tiên bắt đầu lúc mấy giờ? Điền bằng chữ.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/meeting-1/q9.mp3",
+          "content": "The caller says the first session starts at ______ a.m.",
+          "options": [],
+          "correct_answers": ["nine"],
+          "explanation": "Giờ họ nêu (9 a.m.) là ĐÚNG, chỉ có tên người là sai. Bẫy nửa đúng nửa sai này rất hay gặp — phải kiểm cả hai chi tiết."
+        },
+        {
+          "id": "p4_bc_t3_m3",
+          "type": "essay_typing",
+          "instruction": "Nghe lại câu hỏi 10. Người gọi muốn biết các phiên do ai dẫn? Gõ đầy đủ họ tên.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/meeting-1/q10.mp3",
+          "content": "He wants all the details about the sessions led by ______.",
+          "options": [],
+          "correct_answers": ["Becky Fields"],
+          "explanation": "Becky Fields dẫn hai phiên. Bắt đúng tên ở câu 10 là điều kiện tiên quyết — sai tên thì cả câu trả lời thành vô nghĩa."
+        },
+        {
+          "id": "p4_bc_t3_m4",
+          "type": "essay_typing",
+          "instruction": "Điền từ để hỏi mở đầu vế thứ nhất của câu 8.",
+          "content": "______ will the meeting be held?",
+          "options": [],
+          "correct_answers": ["Where"],
+          "explanation": "“Where” hỏi địa điểm → Main Conference Room, tầng 2."
+        },
+        {
+          "id": "p4_bc_t3_m5",
+          "type": "essay_typing",
+          "instruction": "Nghe lại câu hỏi 9. Phiên đầu tiên nói về chủ đề gì? Điền một từ.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/meeting-1/q9.mp3",
+          "content": "The first session is about the ______ schedule.",
+          "options": [],
+          "correct_answers": ["promotion"],
+          "explanation": "“Promotion schedule - New Line of Products”, 9:00 – 9:30 AM, do Adam Jackson phụ trách."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_bc_t3_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — vế thứ hai nằm ở dòng chú thích cuối bảng.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/meeting-1/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The meeting is in the main conference room on the second floor, and it's mandatory for all managers.",
+          "explanation": "Nhiều bạn chỉ trả lời địa điểm rồi dừng vì không thấy “ai phải dự” trong lưới. Dòng chú thích luôn là một phần của bảng."
+        },
+        {
+          "id": "p4_bc_t3_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 rồi đính chính — chú ý bẫy tên gần giống.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/meeting-1/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that's not correct. Adam Jackson leads the promotion schedule session at nine. Jeanne Harris speaks at eleven thirty.",
+          "explanation": "Giờ thì đúng, người thì sai. Đính chính đúng phần sai, giữ nguyên phần đúng — đừng phủ định cả câu của người gọi."
+        },
+        {
+          "id": "p4_bc_t3_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 rồi nêu đủ hai phiên của người được hỏi.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/meeting-1/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Becky Fields leads two sessions: Tips for Improving Sales Skills at nine thirty, and How to Communicate with Customers at eleven.",
+          "explanation": "Quét cột người phụ trách từ trên xuống, đừng dừng ở dòng khớp đầu tiên — câu 10 hỏi “all the details”, tức là TẤT CẢ."
+        },
+        {
+          "id": "p4_bc_t3_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — khung giờ cả cuộc họp.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The meeting runs from nine a.m. to noon.",
+          "explanation": "Dòng cuối kết thúc lúc “Noon” — đọc là “noon”, đừng đọc “twelve p.m.” cho dài."
+        },
+        {
+          "id": "p4_bc_t3_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — cách diễn đạt một quy định bắt buộc.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Participation is mandatory for all managers.",
+          "explanation": "“Mandatory” = bắt buộc. Có thể nói cách khác: “All managers are required to attend.”"
+        }
+      ]
+    }
+  ]
+}

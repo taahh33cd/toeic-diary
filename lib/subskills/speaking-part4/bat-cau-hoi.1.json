@@ -1,0 +1,191 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "bat-cau-hoi", "name": "Nghe bắt dạng câu hỏi", "description": "Nhận ra ngay câu hỏi đang hỏi gì, chỉ với một lần nghe." },
+  "test_number": 1,
+  "title": "Hội thảo công nghệ — Annual Developing Technology Seminar",
+  "source_slug": "conference-4",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-4/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_bc_t1_e1",
+          "type": "multiple_choice",
+          "instruction": "Nghe lời dẫn tình huống. Người gọi gọi điện để làm gì?",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-4/intro.mp3",
+          "options": [
+            { "id": "A", "text": "Đăng ký tham dự hội thảo" },
+            { "id": "B", "text": "Hỏi lại thông tin vì làm mất bản lịch" },
+            { "id": "C", "text": "Huỷ chỗ đã đặt" },
+            { "id": "D", "text": "Phàn nàn về chất lượng hội thảo" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Gần như 100% đề Q8-10 mở đầu bằng đúng tình huống này: người gọi làm mất bản in và nhờ bạn tra giúp. Nghe được “misplaced my copy” là biết ngay vai của mình — người cầm bảng thông tin."
+        },
+        {
+          "id": "p4_bc_t1_e2",
+          "type": "multiple_choice",
+          "instruction": "Nghe câu hỏi 8. Câu này hỏi những thông tin nào?",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-4/q8.mp3",
+          "options": [
+            { "id": "A", "text": "Địa điểm và ngày tổ chức" },
+            { "id": "B", "text": "Giá vé và giờ bắt đầu" },
+            { "id": "C", "text": "Tên diễn giả và chủ đề" },
+            { "id": "D", "text": "Địa điểm và giá vé" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Hai từ khoá cần bắt: “where … held” và “what the dates … are”. Câu 8 hầu như luôn hỏi HAI thông tin — nghe thấy “and” ở giữa là phải chuẩn bị trả lời hai vế."
+        },
+        {
+          "id": "p4_bc_t1_e3",
+          "type": "multiple_choice",
+          "instruction": "Nghe câu hỏi 9. Đây là dạng câu hỏi gì?",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-4/q9.mp3",
+          "options": [
+            { "id": "A", "text": "Hỏi mở về nội dung một phiên" },
+            { "id": "B", "text": "Xác nhận một thông tin — đúng hay sai" },
+            { "id": "C", "text": "Yêu cầu liệt kê nhiều phiên" },
+            { "id": "D", "text": "Hỏi về chi phí" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Dấu hiệu nhận dạng: câu kết thúc bằng “Is that correct?” hoặc “Am I right?”. Nghe thấy đuôi này thì việc đầu tiên là đối chiếu bảng — thông tin người gọi nêu thường SAI."
+        },
+        {
+          "id": "p4_bc_t1_e4",
+          "type": "multiple_choice",
+          "instruction": "Nghe câu hỏi 10. Người gọi yêu cầu gì?",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-4/q10.mp3",
+          "options": [
+            { "id": "A", "text": "Chọn giúp phiên hay nhất" },
+            { "id": "B", "text": "Liệt kê toàn bộ các phiên của một ngày cụ thể" },
+            { "id": "C", "text": "So sánh hai ngày hội thảo" },
+            { "id": "D", "text": "Giới thiệu về các diễn giả" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Cụm khoá của câu 10: “give me all the details about…”. Vế trước đó nêu tiêu chí lọc — ở đây là “only … on Tuesday, November 10th”. Bắt được tiêu chí lọc là xong một nửa."
+        },
+        {
+          "id": "p4_bc_t1_e5",
+          "type": "multiple_choice",
+          "instruction": "Trong phần thi Q8-10, câu nào được đọc hai lần?",
+          "options": [
+            { "id": "A", "text": "Câu 8" },
+            { "id": "B", "text": "Câu 9" },
+            { "id": "C", "text": "Câu 10" },
+            { "id": "D", "text": "Cả ba câu" }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "Chỉ câu 10 được đọc hai lần — lần đầu nghe lấy tiêu chí lọc, lần hai nghe để chắc chắn. Câu 8 và 9 chỉ đọc một lần, nên phải bắt ngay từ đầu."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_bc_t1_m1",
+          "type": "essay_typing",
+          "instruction": "Nghe lại câu hỏi 8 rồi điền từ còn thiếu.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-4/q8.mp3",
+          "content": "Question 8 asks where the seminar is held and what the ______ are.",
+          "options": [],
+          "correct_answers": ["dates"],
+          "explanation": "“Dates” số nhiều vì hội thảo kéo dài hai ngày. Nghe được số nhiều là biết phải trả lời cả hai ngày."
+        },
+        {
+          "id": "p4_bc_t1_m2",
+          "type": "essay_typing",
+          "instruction": "Nghe lại câu hỏi 9. Người gọi cho rằng ai đọc bài phát biểu khai mạc?",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-4/q9.mp3",
+          "content": "The caller thinks the welcoming speech is given by ______.",
+          "options": [],
+          "correct_answers": ["Amber Wang"],
+          "explanation": "Nghe câu 9 phải bắt được TÊN và GIỜ người gọi nêu ra, vì đó chính là thứ bạn sắp đối chiếu với bảng."
+        },
+        {
+          "id": "p4_bc_t1_m3",
+          "type": "essay_typing",
+          "instruction": "Nghe lại câu hỏi 10. Người gọi chỉ dự được ngày nào? Viết dạng số thứ tự bằng chữ.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-4/q10.mp3",
+          "content": "The caller can only attend on Tuesday, November ______.",
+          "options": [],
+          "correct_answers": ["tenth", "10th"],
+          "explanation": "November 10th → “tenth”. Đây là tiêu chí lọc: chỉ nói các phiên của Day 2, tuyệt đối không kể phiên Day 1."
+        },
+        {
+          "id": "p4_bc_t1_m4",
+          "type": "essay_typing",
+          "instruction": "Điền từ để hỏi mở đầu vế thứ nhất của câu 8.",
+          "content": "______ is the seminar going to be held?",
+          "options": [],
+          "correct_answers": ["Where"],
+          "explanation": "Năm từ để hỏi cần thuộc nằm lòng: Where (địa điểm) · What time (giờ) · Who (người) · How much (giá) · How long (thời lượng)."
+        },
+        {
+          "id": "p4_bc_t1_m5",
+          "type": "essay_typing",
+          "instruction": "Nghe lại lời dẫn. Người gọi làm mất thứ gì?",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-4/intro.mp3",
+          "content": "The caller has misplaced his copy of the ______.",
+          "options": [],
+          "correct_answers": ["schedule"],
+          "explanation": "Tuỳ đề mà là schedule, agenda, itinerary, receipt hay résumé — nghe từ này là đoán được ngay bảng trước mặt thuộc loại nào."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_bc_t1_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 một lần duy nhất rồi trả lời ngay, đủ cả hai vế.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-4/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The seminar is at the Bridgestone Convention Center on November ninth and tenth.",
+          "explanation": "Một câu gọn gàng chứa cả địa điểm lẫn hai ngày. Không cần mở đầu dài dòng — 15 giây trôi rất nhanh."
+        },
+        {
+          "id": "p4_bc_t1_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9. Bắt lấy tên người gọi nêu, đối chiếu bảng rồi đính chính.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-4/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that's not correct. Ian Rust gives the welcoming speech on Monday morning. Amber Wang presents Developing New Technologies.",
+          "explanation": "Amber Wang có trong bảng thật, nhưng ở phiên khác — kiểu bẫy “đúng người, sai phiên”. Nói rõ cả hai để câu trả lời trọn vẹn."
+        },
+        {
+          "id": "p4_bc_t1_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 (đọc hai lần) rồi liệt kê các phiên đúng ngày được hỏi.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-4/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "On Tuesday there are three sessions: Benefits of Using New Technologies at nine, Software Design Service at one, and a Q and A at two thirty.",
+          "explanation": "Lần nghe thứ nhất bắt tiêu chí (Tuesday), lần thứ hai xác nhận. Q&A đọc là “Q and A”."
+        },
+        {
+          "id": "p4_bc_t1_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — dạng thông tin về phí mà câu 8 rất hay hỏi.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The fee is one hundred dollars for both days, or sixty-five dollars for one day.",
+          "explanation": "Bảng nào có hai mức giá thì gần như chắc chắn sẽ bị hỏi. Chuẩn bị sẵn câu này trong 45 giây đọc bảng."
+        },
+        {
+          "id": "p4_bc_t1_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — cách nhắc lại thông tin khi người nghe cần ghi chép.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Let me repeat that: the seminar runs on Monday and Tuesday, November ninth and tenth.",
+          "explanation": "“Let me repeat that” là câu chữa cháy cực hữu ích: vừa kéo dài thời lượng, vừa nghe rất tự nhiên, lại giúp bạn lấy lại nhịp nếu lỡ vấp."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "dinh-chinh", "name": "Xử lý thông tin sai · bị huỷ", "description": "Đính chính khi người gọi nhớ nhầm, và báo tin khi lịch đã bị huỷ." },
+  "test_number": 3,
+  "title": "Lịch phỏng vấn — Alpha Publishing, Nov 25",
+  "source_slug": "mini-5",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/mini-5/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_dc_t3_e1",
+          "type": "multiple_choice",
+          "instruction": "Dòng 12:00 P.M. bị gạch và ghi chữ “canceled” màu đỏ. Nên trả lời người gọi thế nào?",
+          "options": [
+            { "id": "A", "text": "Yes, Neil Wright is at twelve." },
+            { "id": "B", "text": "I'm afraid that interview has been cancelled." },
+            { "id": "C", "text": "Neil Wright is wrong." },
+            { "id": "D", "text": "That time is lunch only." }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Người gọi nhớ đúng cả tên, bộ phận lẫn giờ — vấn đề là buổi đó đã huỷ. Câu C xúc phạm người ta, câu D thì sai thông tin."
+        },
+        {
+          "id": "p4_dc_t3_e2",
+          "type": "multiple_choice",
+          "instruction": "Sau khi dòng 12:00 bị huỷ, khung giờ đó còn gì trên bảng?",
+          "options": [
+            { "id": "A", "text": "Một buổi phỏng vấn khác thế chỗ" },
+            { "id": "B", "text": "Giờ nghỉ trưa" },
+            { "id": "C", "text": "Không ghi gì cả" },
+            { "id": "D", "text": "Một cuộc họp nội bộ" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Ngay dưới dòng bị gạch là dòng “Lunch”. Nói thêm được chi tiết này khiến câu trả lời đầy đặn và hữu ích hơn."
+        },
+        {
+          "id": "p4_dc_t3_e3",
+          "type": "multiple_choice",
+          "instruction": "Người gọi hỏi các ứng viên có 6 năm kinh nghiệm. Ai thoả?",
+          "options": [
+            { "id": "A", "text": "Daniel Anderson và Gabriel Devlin" },
+            { "id": "B", "text": "Liam Moore và Emily Lewis" },
+            { "id": "C", "text": "Chỉ Liam Moore" },
+            { "id": "D", "text": "Neil Wright và Liam Moore" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Liam Moore (Marketing, 6 năm) và Emily Lewis (Legal, 6 năm). Neil Wright bị huỷ nên dù có thoả điều kiện cũng không được kể."
+        },
+        {
+          "id": "p4_dc_t3_e4",
+          "type": "multiple_choice",
+          "instruction": "Nếu người gọi hỏi một ứng viên vừa nhớ SAI GIỜ vừa đúng tên, bạn nên làm gì?",
+          "options": [
+            { "id": "A", "text": "Chỉ nói “No” rồi thôi" },
+            { "id": "B", "text": "Xác nhận phần đúng, sửa phần sai, nêu thông tin chính xác" },
+            { "id": "C", "text": "Đọc lại toàn bộ bảng cho chắc" },
+            { "id": "D", "text": "Bỏ qua phần sai để tiết kiệm thời gian" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Chỉ sửa đúng phần sai. Phủ định sạch trơn cả câu khiến người nghe không biết mình sai ở đâu, và cũng làm bạn mất thời gian nói lại từ đầu."
+        },
+        {
+          "id": "p4_dc_t3_e5",
+          "type": "multiple_choice",
+          "instruction": "Buổi phỏng vấn cuối cùng trong ngày là với ai?",
+          "options": [
+            { "id": "A", "text": "Liam Moore, 2:00 P.M." },
+            { "id": "B", "text": "Emily Lewis, 3:00 P.M." },
+            { "id": "C", "text": "Gabriel Devlin, 11:00 A.M." },
+            { "id": "D", "text": "Neil Wright, 12:00 P.M." }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Dòng cuối còn hiệu lực: 3:00 P.M., Emily Lewis, Legal, 6 năm kinh nghiệm."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_dc_t3_m1",
+          "type": "essay_typing",
+          "instruction": "Điền bộ phận mà Neil Wright ứng tuyển (một từ).",
+          "content": "The cancelled interview was for the ______ department.",
+          "options": [],
+          "correct_answers": ["editorial", "Editorial"],
+          "explanation": "Neil Wright — Editorial — 3 năm, 12:00 P.M., đã huỷ. Dùng thì quá khứ “was” vì buổi đó không còn nữa."
+        },
+        {
+          "id": "p4_dc_t3_m2",
+          "type": "essay_typing",
+          "instruction": "Điền tên ứng viên còn lại của bộ phận Editorial.",
+          "content": "______ is still interviewing for the editorial department at eleven.",
+          "options": [],
+          "correct_answers": ["Gabriel Devlin"],
+          "explanation": "11:00 A.M., Gabriel Devlin, Editorial, 2 năm. Đây là phương án thay thế bạn nên gợi ý sau khi báo huỷ."
+        },
+        {
+          "id": "p4_dc_t3_m3",
+          "type": "essay_typing",
+          "instruction": "Điền số năm kinh nghiệm của Liam Moore (bằng chữ).",
+          "content": "Liam Moore has ______ years of experience.",
+          "options": [],
+          "correct_answers": ["six"],
+          "explanation": "Cột Years of Experience: Liam Moore 6 năm. Cột này chính là tiêu chí lọc của câu 10 trong đề."
+        },
+        {
+          "id": "p4_dc_t3_m4",
+          "type": "essay_typing",
+          "instruction": "Điền trạng từ để nhấn rằng lịch vẫn còn hiệu lực (một từ).",
+          "content": "Your interview with Emily Lewis is ______ scheduled for three.",
+          "options": [],
+          "correct_answers": ["still"],
+          "explanation": "“Still scheduled” = vẫn còn trong lịch. Từ này rất hợp khi bảng có dòng bị huỷ và người gọi đang lo lắng."
+        },
+        {
+          "id": "p4_dc_t3_m5",
+          "type": "essay_typing",
+          "instruction": "Điền phòng tổ chức phỏng vấn (hai từ và một chữ cái).",
+          "content": "All interviews take place in ______ ______ ______.",
+          "options": [],
+          "correct_answers": ["Conference Room B", "conference room B"],
+          "explanation": "Phần đầu bảng: Nov. 25, Mon., Conference Room B."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_dc_t3_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 — buổi phỏng vấn đã bị huỷ. Báo tin, nêu phương án thay thế cùng bộ phận.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/mini-5/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "I'm afraid that interview has been cancelled. Gabriel Devlin is still interviewing for editorial, though, at eleven.",
+          "explanation": "Từ “though” đặt cuối câu mang nghĩa “tuy nhiên” — nghe rất tự nhiên trong hội thoại và giúp nối hai ý trái chiều."
+        },
+        {
+          "id": "p4_dc_t3_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — phòng và giờ buổi đầu tiên.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/mini-5/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The interviews are in Conference Room B, and the first one starts at ten a.m. with Daniel Anderson.",
+          "explanation": "Ba bảng phỏng vấn trong kỹ năng này đều hỏi câu 8 y hệt nhau. Học thuộc khuôn là trả lời được ngay, không cần nghĩ."
+        },
+        {
+          "id": "p4_dc_t3_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 rồi nêu các ứng viên thoả tiêu chí kinh nghiệm.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/mini-5/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Two candidates have six years of experience: Liam Moore from marketing at two, and Emily Lewis from legal at three.",
+          "explanation": "Tiêu chí lọc lần này nằm ở cột số năm kinh nghiệm. Quét theo cột được hỏi, đừng quét theo giờ như thói quen."
+        },
+        {
+          "id": "p4_dc_t3_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — nói rõ một lịch vẫn còn hiệu lực.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Yes, your interview with Emily Lewis is still scheduled for three p.m.",
+          "explanation": "Khi bảng có dòng bị huỷ, việc xác nhận “still scheduled” cho các dòng khác khiến người gọi yên tâm hẳn."
+        },
+        {
+          "id": "p4_dc_t3_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — tổng kết lịch trong ngày sau khi trừ dòng huỷ.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "You have four interviews today, with a lunch break at noon.",
+          "explanation": "Năm dòng phỏng vấn trừ một dòng huỷ còn bốn. Nhắc thêm giờ nghỉ trưa là chi tiết nhỏ nhưng cho thấy bạn đọc trọn bảng."
+        }
+      ]
+    }
+  ]
+}

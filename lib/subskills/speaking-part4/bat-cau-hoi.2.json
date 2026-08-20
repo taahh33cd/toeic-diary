@@ -1,0 +1,191 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "bat-cau-hoi", "name": "Nghe bắt dạng câu hỏi", "description": "Nhận ra ngay câu hỏi đang hỏi gì, chỉ với một lần nghe." },
+  "test_number": 2,
+  "title": "Workshop nghệ thuật — Crafters Marketplace, October",
+  "source_slug": "class-1",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-1/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_bc_t2_e1",
+          "type": "multiple_choice",
+          "instruction": "Nghe câu hỏi 8. Người gọi hỏi mấy thông tin?",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-1/q8.mp3",
+          "options": [
+            { "id": "A", "text": "Một — chỉ hỏi học phí" },
+            { "id": "B", "text": "Hai — học phí và có phải trả thêm tiền vật liệu không" },
+            { "id": "C", "text": "Ba — học phí, vật liệu và giảng viên" },
+            { "id": "D", "text": "Không hỏi gì, chỉ giới thiệu" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "“How much is the fee … and whether I need to pay extra for the materials” — hai vế nối bằng “and”. Trả lời thiếu vế vật liệu là mất nửa điểm câu 8."
+        },
+        {
+          "id": "p4_bc_t2_e2",
+          "type": "multiple_choice",
+          "instruction": "Nghe câu hỏi 9. Người gọi đang muốn xác nhận điều gì?",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-1/q9.mp3",
+          "options": [
+            { "id": "A", "text": "Giá của lớp Fabric Flowers" },
+            { "id": "B", "text": "Ngày diễn ra lớp Fabric Flowers" },
+            { "id": "C", "text": "Tên giảng viên lớp Fabric Flowers" },
+            { "id": "D", "text": "Địa điểm tổ chức workshop" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Người gọi nêu “Friday, October 15th”. Nghe câu 9 phải bắt được chi tiết CỤ THỂ họ đưa ra — đó luôn là thứ cần đối chiếu với bảng."
+        },
+        {
+          "id": "p4_bc_t2_e3",
+          "type": "multiple_choice",
+          "instruction": "Nghe câu hỏi 10. Tiêu chí lọc mà người gọi đưa ra là gì?",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-1/q10.mp3",
+          "options": [
+            { "id": "A", "text": "Các lớp buổi sáng" },
+            { "id": "B", "text": "Các lớp cuối tuần" },
+            { "id": "C", "text": "Các lớp dành cho người mới bắt đầu" },
+            { "id": "D", "text": "Các lớp rẻ nhất" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "“I am only available … in the morning” → chỉ nói các lớp bắt đầu trước 12 giờ trưa. Nói thừa lớp buổi chiều là trả lời sai yêu cầu."
+        },
+        {
+          "id": "p4_bc_t2_e4",
+          "type": "multiple_choice",
+          "instruction": "Nghe lời dẫn. Người gọi đang quan tâm tới việc gì?",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-1/intro.mp3",
+          "options": [
+            { "id": "A", "text": "Đăng ký workshop nghệ thuật tháng Mười" },
+            { "id": "B", "text": "Xin hoàn tiền một lớp đã đóng" },
+            { "id": "C", "text": "Đặt mua vật liệu vẽ" },
+            { "id": "D", "text": "Xin làm giảng viên" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Lời dẫn cho biết bối cảnh và giọng điệu cần dùng. Người gọi là khách quan tâm đăng ký, nên câu trả lời nên lịch sự và mời gọi."
+        },
+        {
+          "id": "p4_bc_t2_e5",
+          "type": "multiple_choice",
+          "instruction": "Khi câu hỏi có hai vế nối bằng “and”, bạn nên làm gì?",
+          "options": [
+            { "id": "A", "text": "Chọn vế dễ hơn để trả lời cho chắc" },
+            { "id": "B", "text": "Trả lời đủ cả hai vế, theo đúng thứ tự được hỏi" },
+            { "id": "C", "text": "Trả lời vế sau vì đó là ý chính" },
+            { "id": "D", "text": "Xin người gọi nhắc lại" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Rubric chấm theo lượng thông tin đúng. Giữ nguyên thứ tự câu hỏi giúp bạn không quên vế nào và người nghe dễ theo dõi."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_bc_t2_m1",
+          "type": "essay_typing",
+          "instruction": "Nghe lại câu hỏi 8 rồi điền từ còn thiếu.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-1/q8.mp3",
+          "content": "The caller asks whether he has to pay extra for the ______.",
+          "options": [],
+          "correct_answers": ["materials"],
+          "explanation": "“Materials” = vật liệu. Bảng ghi “Each Session: $25 (Including Materials)” nên câu trả lời là KHÔNG phải trả thêm."
+        },
+        {
+          "id": "p4_bc_t2_m2",
+          "type": "essay_typing",
+          "instruction": "Nghe lại câu hỏi 9. Người gọi tưởng lớp đó vào ngày nào? Viết số thứ tự bằng chữ.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-1/q9.mp3",
+          "content": "The caller thinks Fabric Flowers is on Friday, October ______.",
+          "options": [],
+          "correct_answers": ["fifteenth", "15th"],
+          "explanation": "October 15th → “fifteenth”. Ghi nhanh con số này ra nháp trong lúc nghe, rồi mới dò bảng."
+        },
+        {
+          "id": "p4_bc_t2_m3",
+          "type": "essay_typing",
+          "instruction": "Nghe lại câu hỏi 10 rồi điền tiêu chí lọc.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-1/q10.mp3",
+          "content": "He is only available to attend classes in the ______.",
+          "options": [],
+          "correct_answers": ["morning"],
+          "explanation": "Tiêu chí lọc của câu 10 luôn nằm ở vế ĐẦU, trước khi có cụm “Could you please give me all the details…”."
+        },
+        {
+          "id": "p4_bc_t2_m4",
+          "type": "essay_typing",
+          "instruction": "Điền từ để hỏi còn thiếu cho vế đầu của câu 8.",
+          "content": "______ much is the fee for each session?",
+          "options": [],
+          "correct_answers": ["How"],
+          "explanation": "“How much” hỏi giá. Nghe thấy cụm này là chuẩn bị đọc một con số — mà đọc số thì phải đọc cho chuẩn."
+        },
+        {
+          "id": "p4_bc_t2_m5",
+          "type": "essay_typing",
+          "instruction": "Nghe lại câu hỏi 10. Các lớp cần nêu phải bắt đầu trước thời điểm nào?",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-1/q10.mp3",
+          "content": "He wants the workshops that start before ______.",
+          "options": [],
+          "correct_answers": ["noon", "12 p.m.", "twelve"],
+          "explanation": "“Noon” = 12 giờ trưa. Ba lớp thoả điều kiện: 10 a.m., 9:30 a.m. và 9 a.m."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_bc_t2_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — nhớ trả lời cả câu hỏi có/không ở vế thứ hai.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-1/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Each session is twenty-five dollars, and that includes materials, so there's nothing extra to pay.",
+          "explanation": "Vế hai là câu hỏi có/không — phải trả lời dứt khoát. “So there's nothing extra to pay” chính là câu chốt ăn điểm."
+        },
+        {
+          "id": "p4_bc_t2_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 rồi đính chính — người gọi nhầm lớp với ngày.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-1/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that's not right. Fabric Flowers for Beginners is on Thursday, October twenty-eighth. October fifteenth is Painting with Acrylics.",
+          "explanation": "Ngày 15/10 có thật trên bảng nhưng là lớp khác. Nói rõ “ngày đó thực ra là lớp gì” giúp người gọi hiểu vì sao họ nhầm."
+        },
+        {
+          "id": "p4_bc_t2_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 rồi nêu đủ các lớp thoả tiêu chí buổi sáng.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/class-1/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Three workshops start before noon: Watercolor Intensive at ten, Art Buffet at nine thirty, and Sculpting at nine.",
+          "explanation": "Ba lớp buổi sáng: 5/10, 11/10 và 20/10. Hai lớp buổi chiều (2 p.m. và 1 p.m.) phải bỏ qua — nói thừa cũng bị trừ điểm."
+        },
+        {
+          "id": "p4_bc_t2_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — hạn đăng ký, thông tin nằm ở dòng chú thích.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The registration deadline is Thursday, September thirtieth.",
+          "explanation": "Workshop diễn ra tháng Mười nhưng hạn đăng ký lại là 30/9 — khác tháng, rất dễ trả lời nhầm."
+        },
+        {
+          "id": "p4_bc_t2_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — cách nói gọn về giá đã bao gồm vật liệu.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Every session costs twenty-five dollars, materials included.",
+          "explanation": "“Materials included” đặt cuối câu là cách nói gọn và tự nhiên, thay cho cả mệnh đề “which includes materials”."
+        }
+      ]
+    }
+  ]
+}

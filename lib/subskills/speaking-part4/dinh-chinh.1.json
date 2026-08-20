@@ -1,0 +1,183 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "dinh-chinh", "name": "Xử lý thông tin sai · bị huỷ", "description": "Đính chính khi người gọi nhớ nhầm, và báo tin khi lịch đã bị huỷ." },
+  "test_number": 1,
+  "title": "Lịch phỏng vấn — Weston Technology, May 7th",
+  "source_slug": "interview-2",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/interview-2/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_dc_t1_e1",
+          "type": "multiple_choice",
+          "instruction": "Dòng của Joseph Baldwin bị gạch ngang. Điều đó nghĩa là gì?",
+          "options": [
+            { "id": "A", "text": "Buổi phỏng vấn đó đã bị huỷ" },
+            { "id": "B", "text": "Ứng viên đó đã được nhận" },
+            { "id": "C", "text": "Buổi đó quan trọng nhất" },
+            { "id": "D", "text": "Buổi đó đã diễn ra xong" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Gạch ngang qua cả dòng = đã huỷ. Đây là quy ước cố định của đề Q8-10, và câu 9 gần như luôn hỏi đúng dòng bị gạch."
+        },
+        {
+          "id": "p4_dc_t1_e2",
+          "type": "multiple_choice",
+          "instruction": "Người gọi hỏi: “I have an interview with Joseph Baldwin at 2:30. Is that still on the schedule?” Trả lời thế nào?",
+          "options": [
+            { "id": "A", "text": "Yes, it is at two thirty." },
+            { "id": "B", "text": "I'm afraid that interview has been cancelled." },
+            { "id": "C", "text": "No." },
+            { "id": "D", "text": "Joseph Baldwin is not here today maybe." }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "“I'm afraid…” làm tin xấu nhẹ đi, “has been cancelled” là bị động hoàn thành — đúng cấu trúc cho việc vừa bị huỷ."
+        },
+        {
+          "id": "p4_dc_t1_e3",
+          "type": "multiple_choice",
+          "instruction": "Sau khi báo buổi phỏng vấn bị huỷ, nên nói thêm gì?",
+          "options": [
+            { "id": "A", "text": "Không nói gì thêm, chờ hết giờ" },
+            { "id": "B", "text": "Xin lỗi thật dài dòng" },
+            { "id": "C", "text": "Nêu buổi phỏng vấn kế tiếp để người gọi biết lịch tiếp theo" },
+            { "id": "D", "text": "Nói lại toàn bộ bảng từ đầu" }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "Còn dư thời gian thì bù bằng thông tin hữu ích. Câu 9 chỉ có 15 giây, nói thêm một ý là vừa đủ — thêm hai ý là hụt hơi."
+        },
+        {
+          "id": "p4_dc_t1_e4",
+          "type": "multiple_choice",
+          "instruction": "Buổi phỏng vấn đầu tiên trong ngày là với ai và lúc mấy giờ?",
+          "options": [
+            { "id": "A", "text": "Christopher Wise, 10:30 a.m." },
+            { "id": "B", "text": "Dave Madden, 11:15 a.m." },
+            { "id": "C", "text": "Margie Olsen, 1 p.m." },
+            { "id": "D", "text": "Joseph Baldwin, 2:30 p.m." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Dòng đầu tiên còn hiệu lực: 10:30 – 11 a.m., Christopher Wise, Network Administrator. Lưu ý lịch này bắt đầu lúc 10:30 chứ không phải 9 giờ."
+        },
+        {
+          "id": "p4_dc_t1_e5",
+          "type": "multiple_choice",
+          "instruction": "Cách nói nào KHÔNG phù hợp để báo một buổi đã bị huỷ?",
+          "options": [
+            { "id": "A", "text": "That interview has been cancelled." },
+            { "id": "B", "text": "That interview is no longer on the schedule." },
+            { "id": "C", "text": "That interview was removed from the list." },
+            { "id": "D", "text": "That interview is not correct." }
+          ],
+          "correct_answers": ["D"],
+          "explanation": "“Not correct” nghĩa là thông tin sai, không phải bị huỷ. Phải phân biệt hai tình huống: người gọi NHỚ NHẦM và lịch BỊ HUỶ."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_dc_t1_m1",
+          "type": "essay_typing",
+          "instruction": "Điền động từ ở dạng bị động hoàn thành (một từ).",
+          "content": "I'm afraid that interview has been ______.",
+          "options": [],
+          "correct_answers": ["cancelled", "canceled"],
+          "explanation": "Cả hai cách viết đều đúng: “cancelled” (Anh) và “canceled” (Mỹ). Phát âm giống nhau."
+        },
+        {
+          "id": "p4_dc_t1_m2",
+          "type": "essay_typing",
+          "instruction": "Điền cụm 3 từ nghĩa là “không còn nằm trong lịch nữa”.",
+          "content": "That appointment is ______ ______ ______ the schedule.",
+          "options": [],
+          "correct_answers": ["no longer on"],
+          "explanation": "“No longer on the schedule” — cách nói trang trọng, dùng thay cho “cancelled” khi muốn tránh lặp từ."
+        },
+        {
+          "id": "p4_dc_t1_m3",
+          "type": "essay_typing",
+          "instruction": "Điền tên ứng viên được phỏng vấn lúc 1 giờ chiều.",
+          "content": "At one p.m., you're interviewing ______.",
+          "options": [],
+          "correct_answers": ["Margie Olsen"],
+          "explanation": "1 – 1:30 p.m. → Margie Olsen, Hardware Specialist, Coastal Programming."
+        },
+        {
+          "id": "p4_dc_t1_m4",
+          "type": "essay_typing",
+          "instruction": "Điền giờ của buổi phỏng vấn ngay sau khung 2:30 đã bị huỷ (viết như cách đọc).",
+          "content": "Your next interview after that is at ______.",
+          "options": [],
+          "correct_answers": ["three thirty", "three thirty p.m."],
+          "explanation": "3:30 – 4 p.m. với Linda Moore. Sau khi báo huỷ, đây chính là thông tin nên nói bù."
+        },
+        {
+          "id": "p4_dc_t1_m5",
+          "type": "essay_typing",
+          "instruction": "Điền cụm mở đầu lịch sự khi phải báo tin không vui (hai từ).",
+          "content": "______ ______, that interview has been cancelled.",
+          "options": [],
+          "correct_answers": ["I'm afraid", "Im afraid", "I am afraid"],
+          "explanation": "“I'm afraid” = rất tiếc là. Cụm này khiến câu trả lời nghe chuyên nghiệp hơn hẳn so với nói thẳng “No, it's cancelled.”"
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_dc_t1_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 — buổi phỏng vấn người gọi hỏi đã bị gạch khỏi lịch. Báo lại và nói thêm lịch kế tiếp.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/interview-2/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "I'm afraid that interview has been cancelled. Your next one is with Linda Moore at three thirty.",
+          "explanation": "Hai câu ngắn vừa đúng 15 giây: câu một báo huỷ, câu hai bù thông tin hữu ích. Đây là khuôn trả lời chuẩn cho mọi dòng bị gạch."
+        },
+        {
+          "id": "p4_dc_t1_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — ai là buổi đầu tiên và mấy giờ.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/interview-2/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Your first interview is with Christopher Wise at ten thirty, for the network administrator position.",
+          "explanation": "Thêm vị trí ứng tuyển là chi tiết tặng thêm, giúp câu dài đủ 15 giây mà vẫn bám sát bảng."
+        },
+        {
+          "id": "p4_dc_t1_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 rồi nêu các ứng viên đúng vị trí — nhớ bỏ qua dòng bị gạch.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/interview-2/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Two candidates are interviewing for digital designer: Dave Madden at eleven fifteen, from DuWell Software, and Elizabeth Coleman at one forty-five, from Lionel Tech.",
+          "explanation": "Câu 10 chỉ tính các dòng CÒN HIỆU LỰC. Nếu dòng bị gạch trùng vị trí được hỏi thì phải nói rõ nó đã bị huỷ, đừng kể như bình thường."
+        },
+        {
+          "id": "p4_dc_t1_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — cách nói khác để báo một lịch không còn hiệu lực.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "That appointment is no longer on the schedule, so you're free at two thirty.",
+          "explanation": "Nói thêm hệ quả (“you're free at two thirty”) khiến câu trả lời hữu ích thật sự, chứ không chỉ đọc lại bảng."
+        },
+        {
+          "id": "p4_dc_t1_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — đính chính khi người gọi nhầm vị trí ứng tuyển.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, Christopher Wise is applying for network administrator, not hardware specialist.",
+          "explanation": "Khuôn “X, not Y” là cách đính chính ngắn gọn nhất. Nói phần đúng trước, phần sai sau."
+        }
+      ]
+    }
+  ]
+}

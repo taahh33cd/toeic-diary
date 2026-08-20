@@ -1,0 +1,183 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "quet-bang", "name": "Quét bảng đúng ô", "description": "45 giây tìm đúng hàng/cột trước khi câu hỏi bắt đầu." },
+  "test_number": 1,
+  "title": "Hội thảo giáo viên — Conference for Educators",
+  "source_slug": "conference-9",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-9/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_qb_t1_e1",
+          "type": "multiple_choice",
+          "instruction": "Dò cột Time xuống dòng 2 – 3 p.m. Phiên đó là phiên nào?",
+          "options": [
+            { "id": "A", "text": "Welcoming Class Environments" },
+            { "id": "B", "text": "Applying Child Psychology" },
+            { "id": "C", "text": "New Classroom Technologies" },
+            { "id": "D", "text": "Rewarding Good Behavior" }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "Cách quét: tìm mốc giờ ở cột trái trước, rồi mới trượt ngang sang cột Topic. 2 – 3 p.m. → New Classroom Technologies. “Rewarding Good Behavior” là 3 – 4 p.m."
+        },
+        {
+          "id": "p4_qb_t1_e2",
+          "type": "multiple_choice",
+          "instruction": "Ai phụ trách phiên “Closing Comments”?",
+          "options": [
+            { "id": "A", "text": "Tim Marsh" },
+            { "id": "B", "text": "Samantha Burns" },
+            { "id": "C", "text": "Nancy Freeman" },
+            { "id": "D", "text": "George Beckett" }
+          ],
+          "correct_answers": ["D"],
+          "explanation": "Lần này quét ngược: tìm tên phiên ở cột Topic rồi trượt sang cột Speaker. Closing Comments (4 – 5 p.m.) → George Beckett. Tim Marsh là người mở đầu, đừng nhầm hai đầu bảng."
+        },
+        {
+          "id": "p4_qb_t1_e3",
+          "type": "multiple_choice",
+          "instruction": "Hội thảo được tổ chức ở đâu?",
+          "options": [
+            { "id": "A", "text": "Diamond Hall, Port Royal Convention Center" },
+            { "id": "B", "text": "Port Royal Hall, Diamond Convention Center" },
+            { "id": "C", "text": "Diamond Convention Center, Room 29" },
+            { "id": "D", "text": "Bảng không ghi địa điểm" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Địa điểm và ngày luôn nằm ở PHẦN ĐẦU bảng, không nằm trong lưới. Câu 8 hỏi địa điểm rất thường xuyên — đọc kỹ hai dòng đầu ngay trong 45 giây."
+        },
+        {
+          "id": "p4_qb_t1_e4",
+          "type": "multiple_choice",
+          "instruction": "Dòng nào KHÔNG có tên người trình bày?",
+          "options": [
+            { "id": "A", "text": "Opening Comments" },
+            { "id": "B", "text": "Lunch (On your own)" },
+            { "id": "C", "text": "Applying Child Psychology" },
+            { "id": "D", "text": "Rewarding Good Behavior" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Ô trống cũng là thông tin. Dòng Lunch không có speaker và ghi thêm “On your own” — nghĩa là ăn trưa tự túc, chi tiết này hay bị hỏi ở câu 8."
+        },
+        {
+          "id": "p4_qb_t1_e5",
+          "type": "multiple_choice",
+          "instruction": "Bữa trưa diễn ra khi nào và do ai lo?",
+          "options": [
+            { "id": "A", "text": "12 – 1 p.m., ban tổ chức chuẩn bị" },
+            { "id": "B", "text": "1 – 2 p.m., ban tổ chức chuẩn bị" },
+            { "id": "C", "text": "1 – 2 p.m., người tham dự tự lo" },
+            { "id": "D", "text": "12 – 1 p.m., người tham dự tự lo" }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "1 – 2 p.m. và “On your own” = tự lo. Chú ý 12 – 1 p.m. là phiên Applying Child Psychology chứ không phải giờ ăn."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_qb_t1_m1",
+          "type": "essay_typing",
+          "instruction": "Ai trình bày “Applying Child Psychology”? Gõ đầy đủ họ tên.",
+          "content": "______ presents Applying Child Psychology at twelve.",
+          "options": [],
+          "correct_answers": ["George Beckett"],
+          "explanation": "12 – 1 p.m. → George Beckett. Gõ đúng cả họ và tên: câu trả lời nói trống họ tên nghe rất thiếu chuyên nghiệp."
+        },
+        {
+          "id": "p4_qb_t1_m2",
+          "type": "essay_typing",
+          "instruction": "Phiên lúc 11 a.m. – 12 p.m. tên là gì? Chép đúng như trên bảng.",
+          "content": "At eleven a.m., Nancy Freeman presents ______.",
+          "options": [],
+          "correct_answers": ["Welcoming Class Environments"],
+          "explanation": "Tên phiên phải đọc nguyên văn, không tự diễn đạt lại — giám khảo đối chiếu với bảng."
+        },
+        {
+          "id": "p4_qb_t1_m3",
+          "type": "essay_typing",
+          "instruction": "Hội thảo bắt đầu lúc mấy giờ? Điền bằng chữ.",
+          "content": "The conference officially starts at ______ a.m.",
+          "options": [],
+          "correct_answers": ["ten"],
+          "explanation": "Dòng đầu tiên của lưới là 10 – 11 a.m. → giờ bắt đầu là ten a.m. Đừng lấy nhầm giờ ghi ở phần tiêu đề."
+        },
+        {
+          "id": "p4_qb_t1_m4",
+          "type": "essay_typing",
+          "instruction": "Hội thảo diễn ra ngày nào? Viết dạng số thứ tự bằng chữ.",
+          "content": "The event takes place on Wednesday, May ______.",
+          "options": [],
+          "correct_answers": ["twenty-ninth", "twenty ninth", "29th"],
+          "explanation": "May 29th → “May twenty-ninth”. Thứ và ngày nằm ở dòng thứ hai của phần đầu bảng."
+        },
+        {
+          "id": "p4_qb_t1_m5",
+          "type": "essay_typing",
+          "instruction": "Nancy Freeman trình bày mấy phiên? Điền bằng chữ.",
+          "content": "Nancy Freeman is presenting ______ sessions.",
+          "options": [],
+          "correct_answers": ["two"],
+          "explanation": "Cô ấy xuất hiện hai lần: 11 a.m. và 2 p.m. Mẹo quét: khi đọc bảng, để ý tên nào lặp lại — câu 10 gần như luôn hỏi về người đó."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_qb_t1_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — hai thông tin nằm ở hai chỗ khác nhau trên bảng.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-9/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The conference is held in Diamond Hall at the Port Royal Convention Center, and it officially starts at ten a.m.",
+          "explanation": "Địa điểm lấy ở phần đầu bảng, giờ bắt đầu lấy ở dòng đầu của lưới. Câu 8 hay ghép một thông tin “ngoài lưới” với một thông tin “trong lưới”."
+        },
+        {
+          "id": "p4_qb_t1_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 — người gọi gán nhầm tên người cho phiên mở đầu. Đính chính.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-9/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that's not right. Tim Marsh gives the opening comments at ten a.m. Samantha Burns speaks at three p.m.",
+          "explanation": "Nêu người đúng trước, rồi nói thêm Samantha Burns thực ra nói lúc mấy giờ — trả lời đủ hai vế thì điểm cao hơn hẳn."
+        },
+        {
+          "id": "p4_qb_t1_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 — quét cả bảng tìm mọi dòng có tên người được hỏi.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-9/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Nancy Freeman is presenting twice. At eleven a.m., Welcoming Class Environments, and at two p.m., New Classroom Technologies.",
+          "explanation": "Mở đầu bằng SỐ LƯỢNG (“presenting twice”) để người nghe biết sắp nghe mấy ý — đây là mẹo ăn điểm mạch lạc ở câu 10."
+        },
+        {
+          "id": "p4_qb_t1_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — gộp dòng đầu và dòng cuối của bảng thành một câu.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The conference runs from ten a.m. to five p.m., with a lunch break from one to two.",
+          "explanation": "Nhìn dòng đầu và dòng cuối là ra khung giờ cả ngày. Câu này dùng lại được cho mọi bảng lịch hội thảo."
+        },
+        {
+          "id": "p4_qb_t1_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — cách diễn đạt một ô bỏ trống trên bảng.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "There's no speaker listed for lunch — it's on your own.",
+          "explanation": "Khi bảng để trống, đừng im lặng bỏ qua: nói rõ “there's no … listed” là cách xử lý an toàn và ghi điểm."
+        }
+      ]
+    }
+  ]
+}

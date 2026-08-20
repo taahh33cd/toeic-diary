@@ -1,0 +1,183 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "liet-ke", "name": "Liệt kê nhiều mục cho câu 10", "description": "Gộp nhiều dòng bảng thành một đoạn nói liền mạch, có mở có kết." },
+  "test_number": 1,
+  "title": "Hồ sơ ứng viên — Résumé of Philip Brown",
+  "source_slug": "resume-2",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/resume-2/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_lk_t1_e1",
+          "type": "multiple_choice",
+          "instruction": "Câu 10 hỏi về học vấn của ứng viên. Nên mở đầu phần liệt kê thế nào?",
+          "options": [
+            { "id": "A", "text": "He has two degrees." },
+            { "id": "B", "text": "Um, let me see, he studied somewhere…" },
+            { "id": "C", "text": "Education." },
+            { "id": "D", "text": "He went to school and university for many years." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Câu mở đầu nên nêu SỐ LƯỢNG ý sắp nói. Người nghe biết trước có hai mục thì theo dõi dễ hơn hẳn, và bạn cũng tự nhớ mình phải nói mấy ý."
+        },
+        {
+          "id": "p4_lk_t1_e2",
+          "type": "multiple_choice",
+          "instruction": "Khi liệt kê hai bằng cấp theo thứ tự, dùng cặp từ nối nào?",
+          "options": [
+            { "id": "A", "text": "First… Second…" },
+            { "id": "B", "text": "One… Two…" },
+            { "id": "C", "text": "Firstly… Lastly…" },
+            { "id": "D", "text": "Cả A và C đều dùng được" }
+          ],
+          "correct_answers": ["D"],
+          "explanation": "Với hai mục: “First… and…” hoặc “Firstly… Lastly…”. Với ba mục trở lên: “First… After that… Finally…”. Đọc trơ “One, Two” nghe như đang đếm hàng."
+        },
+        {
+          "id": "p4_lk_t1_e3",
+          "type": "multiple_choice",
+          "instruction": "Ứng viên học đại học nào và tốt nghiệp năm nào?",
+          "options": [
+            { "id": "A", "text": "California University, 2014" },
+            { "id": "B", "text": "Santa Monica Community College, 2014" },
+            { "id": "C", "text": "California University, 2010" },
+            { "id": "D", "text": "Los Angeles Tribune, 2016" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Bachelor of Visual Communication, California University, 2014. Đọc năm 2014 là “twenty fourteen”, không phải “two thousand and fourteen” khi nói nhanh."
+        },
+        {
+          "id": "p4_lk_t1_e4",
+          "type": "multiple_choice",
+          "instruction": "Câu 10 hỏi về HỌC VẤN. Mục nào KHÔNG được đưa vào câu trả lời?",
+          "options": [
+            { "id": "A", "text": "Bachelor of Visual Communication" },
+            { "id": "B", "text": "Associate of Journalism" },
+            { "id": "C", "text": "Design Director tại Los Angeles Tribune" },
+            { "id": "D", "text": "Năm tốt nghiệp 2010 và 2014" }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "Design Director thuộc mục Experience, không phải Education. Nói lạc mục là mất điểm dù thông tin có đúng trên hồ sơ."
+        },
+        {
+          "id": "p4_lk_t1_e5",
+          "type": "multiple_choice",
+          "instruction": "Nên kết thúc phần trả lời câu 10 bằng câu nào?",
+          "options": [
+            { "id": "A", "text": "That's all." },
+            { "id": "B", "text": "Would you like me to repeat any of that?" },
+            { "id": "C", "text": "OK bye." },
+            { "id": "D", "text": "I finished my answer now." }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Câu chốt lịch sự vừa kết thúc gọn gàng vừa lấp nốt vài giây cuối. Học thuộc một câu chốt và dùng cho mọi đề."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_lk_t1_m1",
+          "type": "essay_typing",
+          "instruction": "Điền số bằng cấp của ứng viên (bằng chữ) để mở đầu phần liệt kê.",
+          "content": "He has ______ degrees.",
+          "options": [],
+          "correct_answers": ["two"],
+          "explanation": "Mục Education có hai dòng. Câu mở đầu nêu số lượng là dấu hiệu của câu trả lời có tổ chức."
+        },
+        {
+          "id": "p4_lk_t1_m2",
+          "type": "essay_typing",
+          "instruction": "Điền từ nối để chuyển sang mục thứ hai (một từ).",
+          "content": "First, a bachelor's degree in 2014. ______, an associate's degree in 2010.",
+          "options": [],
+          "correct_answers": ["Second", "Then", "Next", "Secondly"],
+          "explanation": "Từ nối giúp người nghe biết bạn đang chuyển ý. Không có từ nối thì các mục dính vào nhau thành một chuỗi khó theo dõi."
+        },
+        {
+          "id": "p4_lk_t1_m3",
+          "type": "essay_typing",
+          "instruction": "Điền chuyên ngành của bằng cử nhân (hai từ).",
+          "content": "He has a bachelor's degree in ______ ______.",
+          "options": [],
+          "correct_answers": ["Visual Communication", "visual communication"],
+          "explanation": "“Bachelor of Visual Communication” → khi nói dùng “a bachelor's degree IN Visual Communication”."
+        },
+        {
+          "id": "p4_lk_t1_m4",
+          "type": "essay_typing",
+          "instruction": "Điền tên trường của bằng cao đẳng (ba từ).",
+          "content": "He earned his associate's degree at ______ ______ ______ College.",
+          "options": [],
+          "correct_answers": ["Santa Monica Community", "santa monica community"],
+          "explanation": "Santa Monica Community College, 2010. Tên riêng dài thì đọc chậm và rõ từng từ."
+        },
+        {
+          "id": "p4_lk_t1_m5",
+          "type": "essay_typing",
+          "instruction": "Điền câu chốt sau khi liệt kê xong (một từ còn thiếu).",
+          "content": "Would you like me to ______ any of that?",
+          "options": [],
+          "correct_answers": ["repeat"],
+          "explanation": "“Would you like me to repeat any of that?” — câu chốt vàng, dùng được cho mọi câu 10 và giúp bạn nói hết 30 giây."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_lk_t1_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 rồi liệt kê trọn phần học vấn: mở đầu bằng số lượng, có từ nối, có câu chốt.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/resume-2/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "He has two degrees. First, a bachelor's in Visual Communication from California University in twenty fourteen. Second, an associate's in Journalism from Santa Monica Community College in twenty ten.",
+          "explanation": "Cấu trúc ba phần: nêu số lượng → First → Second. Mỗi mục đủ ba chi tiết: bằng gì, trường nào, năm nào."
+        },
+        {
+          "id": "p4_lk_t1_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi trả lời — vị trí ứng tuyển và email liên hệ.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/resume-2/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "He's applying for a graphic designer position, and you can reach him at P brown at zmail dot com.",
+          "explanation": "Email đọc: chữ cái rời, “@” là “at”, “.” là “dot”. Đọc chậm phần địa chỉ vì người nghe đang ghi lại."
+        },
+        {
+          "id": "p4_lk_t1_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 rồi đính chính — người gọi nhầm công việc hiện tại với công việc cũ.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/resume-2/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that's not right. He's currently a design director at the Los Angeles Tribune. He was a web designer until twenty sixteen.",
+          "explanation": "Chữ “Present” trong mốc “2016 - Present” cho biết đâu là công việc hiện tại. Dòng còn lại đã kết thúc — dùng thì quá khứ."
+        },
+        {
+          "id": "p4_lk_t1_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — liệt kê phần kinh nghiệm làm việc, hai mục.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "He has two jobs listed. Currently he's a design director at the Los Angeles Tribune, and before that he was a web designer at the Santa Monica Weekly Magazine.",
+          "explanation": "Dùng “currently” cho mục đang làm và “before that” cho mục cũ — vừa liệt kê vừa thể hiện đúng dòng thời gian."
+        },
+        {
+          "id": "p4_lk_t1_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — liệt kê mục kỹ năng của hồ sơ.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "He's fluent in Korean and Spanish, and he's proficient in Mac and Microsoft systems as well as Adobe software.",
+          "explanation": "“As well as” là cách nối thứ ba, dùng xen kẽ với “and” để câu không bị lặp — điểm cộng về từ vựng."
+        }
+      ]
+    }
+  ]
+}
