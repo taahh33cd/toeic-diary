@@ -1,0 +1,183 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "so-va-gio", "name": "Đọc số & thời gian thành lời", "description": "Chuyển con số trong bảng thành lời nói tự nhiên: giờ, ngày, giá tiền, số hiệu." },
+  "test_number": 1,
+  "title": "Lịch hội thảo — National Teachers' Conference",
+  "source_slug": "conference-1",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-1/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_sg_t1_e1",
+          "type": "multiple_choice",
+          "instruction": "Phiên “Technology Integration” bắt đầu lúc 10 a.m. Cách đọc nào đúng?",
+          "options": [
+            { "id": "A", "text": "at ten hours" },
+            { "id": "B", "text": "at ten a.m." },
+            { "id": "C", "text": "at ten clock" },
+            { "id": "D", "text": "at ten of the morning" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Giờ tròn đọc là “ten a.m.” hoặc “ten o'clock in the morning”. Tiếng Anh KHÔNG nói “ten hours” (đó là khoảng 10 tiếng), cũng không có “ten clock” — phải đủ “ten o'clock”."
+        },
+        {
+          "id": "p4_sg_t1_e2",
+          "type": "multiple_choice",
+          "instruction": "Trên bảng ghi “July 14th”. Khi nói ra, bạn đọc thế nào?",
+          "options": [
+            { "id": "A", "text": "July fourteen" },
+            { "id": "B", "text": "July the fourteen" },
+            { "id": "C", "text": "July fourteenth" },
+            { "id": "D", "text": "July four teen" }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "Ngày trong tháng luôn đọc bằng SỐ THỨ TỰ: 14th → fourteenth. Nói “July fourteen” là lỗi rất phổ biến và giám khảo nghe ra ngay."
+        },
+        {
+          "id": "p4_sg_t1_e3",
+          "type": "multiple_choice",
+          "instruction": "Phí tham dự cả hai ngày là $250. Đọc thế nào cho đúng?",
+          "options": [
+            { "id": "A", "text": "two hundred fifty dollar" },
+            { "id": "B", "text": "two hundreds fifty dollars" },
+            { "id": "C", "text": "two hundred and fifty dollars" },
+            { "id": "D", "text": "two fifty dollar" }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "“hundred” đứng sau số đếm thì KHÔNG thêm -s (two hundred, không phải two hundreds); còn “dollar” phải có -s vì hơn 1 đô. Cả “two hundred fifty dollars” (Mỹ) lẫn “two hundred and fifty dollars” đều được chấp nhận."
+        },
+        {
+          "id": "p4_sg_t1_e4",
+          "type": "multiple_choice",
+          "instruction": "Chọn câu đúng ngữ pháp cho ý “Phiên đầu tiên bắt đầu lúc 9 giờ sáng”.",
+          "options": [
+            { "id": "A", "text": "It starts at nine a.m." },
+            { "id": "B", "text": "It starts in nine a.m." },
+            { "id": "C", "text": "It starts on nine a.m." },
+            { "id": "D", "text": "It starts at nine hours." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Giờ đi với giới từ AT (at nine a.m.). IN dùng cho buổi/tháng/năm (in the morning), ON dùng cho ngày (on Friday)."
+        },
+        {
+          "id": "p4_sg_t1_e5",
+          "type": "multiple_choice",
+          "instruction": "Bảng ghi “July 15th (Sat)”. Cách nói trọn vẹn cả thứ và ngày là gì?",
+          "options": [
+            { "id": "A", "text": "on Saturday, July fifteenth" },
+            { "id": "B", "text": "in Saturday, July fifteen" },
+            { "id": "C", "text": "at Saturday, July fifteenth" },
+            { "id": "D", "text": "on Saturday, the July fifteen" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Thứ và ngày đi với ON, ngày đọc số thứ tự: “on Saturday, July fifteenth”. Đây là cụm bạn sẽ dùng đi dùng lại ở câu 10."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_sg_t1_m1",
+          "type": "essay_typing",
+          "instruction": "Nhìn bảng, điền GIỜ bằng chữ (một từ) vào chỗ trống.",
+          "content": "The first session on Friday starts at ______ a.m.",
+          "options": [],
+          "correct_answers": ["nine"],
+          "explanation": "Phiên đầu ngày 14/7 là 9 a.m. → “nine”. Viết ra chữ trước thì lúc nói sẽ trôi hơn."
+        },
+        {
+          "id": "p4_sg_t1_m2",
+          "type": "essay_typing",
+          "instruction": "“Educational Games” diễn ra lúc mấy giờ? Điền bằng chữ.",
+          "content": "Educational Games is scheduled for ______ a.m.",
+          "options": [],
+          "correct_answers": ["eleven"],
+          "explanation": "11 a.m. → “eleven”. Đừng đọc thành “eleven hours”."
+        },
+        {
+          "id": "p4_sg_t1_m3",
+          "type": "essay_typing",
+          "instruction": "Viết SỐ TIỀN bằng chữ (chỉ phần số, không viết “dollars”).",
+          "content": "The registration fee for one day is ______ dollars.",
+          "options": [],
+          "correct_answers": ["one hundred fifty", "one hundred and fifty", "a hundred and fifty"],
+          "explanation": "$150 → “one hundred fifty” (Mỹ) hoặc “one hundred and fifty” (Anh). Cả hai đều được chấp nhận."
+        },
+        {
+          "id": "p4_sg_t1_m4",
+          "type": "essay_typing",
+          "instruction": "Điền NGÀY bằng chữ, đúng dạng số thứ tự.",
+          "content": "Multilingualism takes place on Saturday, July ______.",
+          "options": [],
+          "correct_answers": ["fifteenth", "15th"],
+          "explanation": "15th → “fifteenth”. Nhớ đuôi -th; “fifteen” là số đếm, dùng cho ngày là sai."
+        },
+        {
+          "id": "p4_sg_t1_m5",
+          "type": "essay_typing",
+          "instruction": "Điền số tiền cho người tham dự cả hai ngày (viết bằng chữ).",
+          "content": "If you attend both days, the fee is ______ dollars.",
+          "options": [],
+          "correct_answers": ["two hundred fifty", "two hundred and fifty"],
+          "explanation": "$250 → “two hundred fifty” / “two hundred and fifty”. Không thêm -s vào “hundred”."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_sg_t1_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 rồi tự trả lời thành tiếng. Xong bấm “Xem câu mẫu” để đối chiếu và luyện đọc lại.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-1/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "If you attend for one day only, the registration fee is one hundred fifty dollars.",
+          "explanation": "Trọng tâm: đọc rõ “one hundred fifty dollars”. Trả lời trọn câu, đừng chỉ nói “one fifty”."
+        },
+        {
+          "id": "p4_sg_t1_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 — người gọi nói SAI thông tin. Hãy đính chính, nhớ đọc đúng giờ và ngày.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-1/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that's not quite right. Technology Integration is at ten a.m. on Friday, July fourteenth.",
+          "explanation": "Người gọi tưởng phiên đó vào sáng thứ Bảy, thực tế là 10 a.m. thứ Sáu 14/7. Mở đầu bằng “Actually, that's not quite right” rồi nêu thông tin đúng."
+        },
+        {
+          "id": "p4_sg_t1_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 rồi liệt kê đủ các phiên của ngày được hỏi. Đọc rõ từng mốc giờ.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-1/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "On Saturday there are three sessions: Personality Development at nine a.m., Students and Teachers Relationships at ten, and Multilingualism at eleven.",
+          "explanation": "Câu 10 cho 30 giây — đủ để nói cả ba mốc. Mẹo: nói “at ten”, “at eleven” (bỏ a.m. lặp lại) cho gọn và tự nhiên."
+        },
+        {
+          "id": "p4_sg_t1_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau, chú ý cách nói một KHOẢNG giờ (from … to …).",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "The sessions run from nine a.m. to eleven a.m. on both days.",
+          "explanation": "Khoảng thời gian dùng “from … to …”. Đừng nói “from nine to eleven hours”."
+        },
+        {
+          "id": "p4_sg_t1_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — hai mức giá trong cùng một câu.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "It's two hundred fifty dollars for both days, or one hundred fifty dollars for just one day.",
+          "explanation": "Ngắt hơi nhẹ sau “for both days” để người nghe phân biệt được hai mức giá."
+        }
+      ]
+    }
+  ]
+}

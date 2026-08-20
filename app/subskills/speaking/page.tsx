@@ -4,17 +4,19 @@ import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { SPEAKING_SKILLS } from "@/lib/subskills/speaking";
 import { SPEAKING_P2_SKILLS } from "@/lib/subskills/speaking-part2";
+import { SPEAKING_P4_SKILLS } from "@/lib/subskills/speaking-part4";
 
 export const metadata: Metadata = { title: "Speaking — Subskills TOEIC" };
 
 const P1_TESTS_PER_SKILL = 20;
 const P2_TESTS_PER_SKILL = 5;
+const P4_TESTS_PER_SKILL = 3;
 
 export default async function SpeakingPage() {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
-  const [p1Attempts, p2Attempts, recordingRows] = user
+  const [p1Attempts, p2Attempts, p4Attempts, recordingRows] = user
     ? await Promise.all([
         prisma.subskillAttempt
           .findMany({ where: { userId: user.id, part: { startsWith: "sp1-" } }, select: { part: true, questionWord: true, score: true, passed: true } })
@@ -22,10 +24,13 @@ export default async function SpeakingPage() {
         prisma.subskillAttempt
           .findMany({ where: { userId: user.id, part: { startsWith: "sp2-" } }, select: { part: true, questionWord: true, score: true, passed: true } })
           .catch(() => []),
+        prisma.subskillAttempt
+          .findMany({ where: { userId: user.id, part: { startsWith: "sp4-" } }, select: { part: true, questionWord: true, score: true, passed: true } })
+          .catch(() => []),
         (prisma.$queryRaw`SELECT overall_score FROM speaking_recording_attempts WHERE user_id = ${user.id}` as Promise<{ overall_score: number }[]>)
           .catch(() => [] as { overall_score: number }[]),
       ])
-    : [[], [], [] as { overall_score: number }[]];
+    : [[], [], [], [] as { overall_score: number }[]];
 
   // Part 1 stats
   let p1SkillsDone = 0;
@@ -53,6 +58,22 @@ export default async function SpeakingPage() {
       if (a.score > prev) best[a.questionWord] = a.score;
     }
     p2TestsPassed += Object.values(best).filter((s) => s >= 80).length;
+  }
+
+  // Part 4 stats — chỉ tính các kỹ năng đã có bài tập
+  const p4Ready = SPEAKING_P4_SKILLS.filter((s) => s.ready);
+  let p4SkillsDone = 0;
+  let p4TestsPassed = 0;
+  for (const skill of p4Ready) {
+    const skillAttempts = p4Attempts.filter((a) => a.part === skill.part || a.part.startsWith(`${skill.part}-`));
+    if (skillAttempts.length > 0) p4SkillsDone++;
+    const best: Record<string, number> = {};
+    for (const a of skillAttempts) {
+      const key = `${a.part}:${a.questionWord}`;
+      const prev = best[key] ?? 0;
+      if (a.score > prev) best[key] = a.score;
+    }
+    p4TestsPassed += Object.values(best).filter((s) => s >= 80).length;
   }
 
   const recordingCount = recordingRows.length;
@@ -111,6 +132,18 @@ export default async function SpeakingPage() {
       totalSkills: 0,
       testsPassed: 0,
       totalTestsAll: 0,
+    },
+    {
+      part: 4,
+      label: "Part 4 — Trả lời theo thông tin cho trước",
+      description: "Đọc bảng lịch, đơn hàng hay CV rồi trả lời 3 câu hỏi. Luyện đọc số, đính chính thông tin sai và liệt kê cho câu 10.",
+      href: "/subskills/speaking/part4",
+      active: true,
+      detail: `${p4Ready.length}/${SPEAKING_P4_SKILLS.length} kỹ năng · ${P4_TESTS_PER_SKILL} bộ test/kỹ năng · 3 cấp độ · có ghi âm`,
+      skillsDone: p4SkillsDone,
+      totalSkills: p4Ready.length,
+      testsPassed: p4TestsPassed,
+      totalTestsAll: p4Ready.length * P4_TESTS_PER_SKILL,
     },
   ];
 

@@ -1,0 +1,183 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "so-va-gio", "name": "Đọc số & thời gian thành lời", "description": "Chuyển con số trong bảng thành lời nói tự nhiên: giờ, ngày, giá tiền, số hiệu." },
+  "test_number": 2,
+  "title": "Đơn hàng — Olivia's Flower Shop",
+  "source_slug": "order-1",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/order-1/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_sg_t2_e1",
+          "type": "multiple_choice",
+          "instruction": "Tổng đơn hàng là $137.50. Cách đọc chuẩn nhất là gì?",
+          "options": [
+            { "id": "A", "text": "one hundred thirty-seven point fifty dollars" },
+            { "id": "B", "text": "one hundred thirty-seven dollars and fifty cents" },
+            { "id": "C", "text": "one hundred thirty-seven dollars fifty" },
+            { "id": "D", "text": "one hundred thirty-seven and a half dollar" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Tiền lẻ sau dấu chấm là CENTS: $137.50 → “one hundred thirty-seven dollars and fifty cents”. Người bản xứ cũng nói tắt “a hundred thirty-seven fifty”, nhưng trong bài thi nên đọc đủ cho rõ."
+        },
+        {
+          "id": "p4_sg_t2_e2",
+          "type": "multiple_choice",
+          "instruction": "Giờ mở cửa ghi “11:00 A.M. – 7:00 P.M.”. Nói thành câu thế nào?",
+          "options": [
+            { "id": "A", "text": "from eleven a.m. to seven p.m." },
+            { "id": "B", "text": "from eleven a.m. until seven a.m." },
+            { "id": "C", "text": "between eleven to seven" },
+            { "id": "D", "text": "at eleven a.m. to seven p.m." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Khoảng thời gian dùng “from … to …” (hoặc “between … and …”). Chú ý giữ đúng a.m. / p.m. — đọc nhầm thành 7 a.m. là sai hẳn thông tin."
+        },
+        {
+          "id": "p4_sg_t2_e3",
+          "type": "multiple_choice",
+          "instruction": "Khách đặt “1 dozen” hoa hướng dương. Vậy là bao nhiêu bông?",
+          "options": [
+            { "id": "A", "text": "ten" },
+            { "id": "B", "text": "twelve" },
+            { "id": "C", "text": "fifteen" },
+            { "id": "D", "text": "twenty" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "A dozen = 12. Câu 10 hay hỏi số lượng, nên nhớ đổi “a dozen” thành “twelve” khi cần nói rõ."
+        },
+        {
+          "id": "p4_sg_t2_e4",
+          "type": "multiple_choice",
+          "instruction": "Hoa cúc giá $37.50. Đọc thế nào?",
+          "options": [
+            { "id": "A", "text": "thirty-seven fifty cents" },
+            { "id": "B", "text": "thirty-seven dollars fifty" },
+            { "id": "C", "text": "thirty-seven dollars and fifty cents" },
+            { "id": "D", "text": "thirty-seven point five dollars" }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "Cùng công thức: [số] dollars and [số] cents. Đọc “point five” là cách đọc số thập phân thường, không dùng cho tiền."
+        },
+        {
+          "id": "p4_sg_t2_e5",
+          "type": "multiple_choice",
+          "instruction": "Số đơn hàng là 2019110205. Khi đọc lên, cách nào đúng?",
+          "options": [
+            { "id": "A", "text": "two billion nineteen million one hundred ten thousand two hundred five" },
+            { "id": "B", "text": "two-zero-one-nine-one-one-zero-two-zero-five" },
+            { "id": "C", "text": "twenty nineteen eleven zero two zero five" },
+            { "id": "D", "text": "two thousand nineteen, one hundred ten, two hundred five" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "Mã số (số đơn, số điện thoại, số hiệu chuyến bay) đọc TỪNG CHỮ SỐ, không đọc như số đếm. Số 0 đọc “zero” hoặc “oh”."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_sg_t2_m1",
+          "type": "essay_typing",
+          "instruction": "Điền phần số của tổng tiền bằng chữ.",
+          "content": "Your order comes to ______ dollars and fifty cents.",
+          "options": [],
+          "correct_answers": ["one hundred thirty-seven", "one hundred and thirty-seven", "a hundred and thirty-seven"],
+          "explanation": "$137.50 → “one hundred thirty-seven dollars and fifty cents”. Số hàng chục có gạch nối: thirty-seven."
+        },
+        {
+          "id": "p4_sg_t2_m2",
+          "type": "essay_typing",
+          "instruction": "“1 dozen” là bao nhiêu? Điền bằng chữ.",
+          "content": "You ordered ______ sunflowers.",
+          "options": [],
+          "correct_answers": ["twelve", "a dozen", "twelve (12)"],
+          "explanation": "A dozen = twelve. Nói “twelve sunflowers” hoặc “a dozen sunflowers” đều được."
+        },
+        {
+          "id": "p4_sg_t2_m3",
+          "type": "essay_typing",
+          "instruction": "Điền giờ mở cửa bằng chữ.",
+          "content": "The shop is open from ______ a.m. to seven p.m. every day.",
+          "options": [],
+          "correct_answers": ["eleven"],
+          "explanation": "11:00 A.M. → “eleven”. Cụm “every day” nghĩa là mở cả tuần — chi tiết hay bị bỏ sót."
+        },
+        {
+          "id": "p4_sg_t2_m4",
+          "type": "essay_typing",
+          "instruction": "Điền giá hoa cúc (phần số, bằng chữ).",
+          "content": "The daisies cost ______ dollars and fifty cents.",
+          "options": [],
+          "correct_answers": ["thirty-seven", "thirty seven"],
+          "explanation": "$37.50 → thirty-seven dollars and fifty cents."
+        },
+        {
+          "id": "p4_sg_t2_m5",
+          "type": "essay_typing",
+          "instruction": "Điền số lượng hoa hồng vàng bằng chữ.",
+          "content": "You also ordered ______ yellow roses for thirty dollars.",
+          "options": [],
+          "correct_answers": ["ten"],
+          "explanation": "Bảng ghi Qty 10 → “ten”. Câu 10 yêu cầu nêu cả số lượng lẫn giá, nên tập ghép hai con số trong một câu."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_sg_t2_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 — người gọi hỏi hai thông tin cùng lúc. Trả lời đủ cả hai.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/order-1/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Your total is one hundred thirty-seven dollars and fifty cents, and we're open from eleven a.m. to seven p.m. every day.",
+          "explanation": "Câu hỏi có hai vế (tổng tiền + giờ mở cửa) thì câu trả lời cũng phải có hai vế, nối bằng “and”. Thiếu một vế là mất điểm."
+        },
+        {
+          "id": "p4_sg_t2_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 — người gọi nhớ nhầm hình thức thanh toán. Hãy đính chính.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/order-1/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, no. Your order is marked as payment upon pickup, not in advance.",
+          "explanation": "Trên phiếu, dấu tích nằm ở “upon pickup”, không phải “in advance”. Trả lời phải nêu rõ cái đúng VÀ phủ định cái sai."
+        },
+        {
+          "id": "p4_sg_t2_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 rồi kể lại toàn bộ đơn hàng — đủ tên hoa, số lượng và giá.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/order-1/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "You ordered a dozen sunflowers for seventy dollars, ten yellow roses for thirty, and fifteen daisies for thirty-seven fifty.",
+          "explanation": "Ba dòng, ba cụm, nối bằng “and” ở cụm cuối. Khi đã nói “dollars” ở cụm đầu thì các cụm sau nói tắt được — nghe tự nhiên hơn nhiều."
+        },
+        {
+          "id": "p4_sg_t2_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to số đơn hàng — luyện đọc mã số từng chữ số.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Your order number is two, zero, one, nine, one, one, zero, two, zero, five.",
+          "explanation": "Đọc chậm, tách rõ từng chữ số, hơi lên giọng ở nhóm cuối. Đây là kiểu câu hay gặp khi người gọi muốn ghi lại."
+        },
+        {
+          "id": "p4_sg_t2_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau, chú ý cặp a.m. / p.m.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "We open at eleven a.m. and close at seven p.m., seven days a week.",
+          "explanation": "Nhấn nhẹ vào “a.m.” và “p.m.” để người nghe phân biệt. “Seven days a week” = every day."
+        }
+      ]
+    }
+  ]
+}

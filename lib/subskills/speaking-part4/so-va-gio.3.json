@@ -1,0 +1,183 @@
+{
+  "part": "TOEIC Speaking Questions 8-10",
+  "skill": { "id": "so-va-gio", "name": "Đọc số & thời gian thành lời", "description": "Chuyển con số trong bảng thành lời nói tự nhiên: giờ, ngày, giá tiền, số hiệu." },
+  "test_number": 3,
+  "title": "Lịch trình bay — Travel Itinerary for Jim Morris",
+  "source_slug": "travel-3",
+  "image_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/travel-3/info.png",
+  "levels": [
+    {
+      "level": "Easy",
+      "exercises": [
+        {
+          "id": "p4_sg_t3_e1",
+          "type": "multiple_choice",
+          "instruction": "Chuyến bay đầu tiên khởi hành “August 9th”. Đọc ngày này thế nào?",
+          "options": [
+            { "id": "A", "text": "August nine" },
+            { "id": "B", "text": "August ninth" },
+            { "id": "C", "text": "August the nine" },
+            { "id": "D", "text": "August nineth" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "9th → “ninth” (bỏ chữ e của nine). Viết “nineth” là sai chính tả, nói “August nine” là sai dạng số."
+        },
+        {
+          "id": "p4_sg_t3_e2",
+          "type": "multiple_choice",
+          "instruction": "Ở nhà máy Maintal, khách đến 10 a.m. và rời lúc 4 p.m. Nói khoảng thời gian đó thế nào?",
+          "options": [
+            { "id": "A", "text": "from ten a.m. to four p.m." },
+            { "id": "B", "text": "from ten a.m. until four a.m." },
+            { "id": "C", "text": "between ten a.m. to four p.m." },
+            { "id": "D", "text": "at ten a.m. to four p.m." }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "“from … to …” là cặp chuẩn. “between” phải đi với “and”, không đi với “to”."
+        },
+        {
+          "id": "p4_sg_t3_e3",
+          "type": "multiple_choice",
+          "instruction": "Chuyến bay về ghi ngày “August 21st”. Đọc thế nào?",
+          "options": [
+            { "id": "A", "text": "August twenty-one" },
+            { "id": "B", "text": "August twenty-first" },
+            { "id": "C", "text": "August the twenty-one" },
+            { "id": "D", "text": "August twentyfirst" }
+          ],
+          "correct_answers": ["B"],
+          "explanation": "21st → “twenty-first”. Ba đuôi cần thuộc: -st (1st, 21st), -nd (2nd, 22nd), -rd (3rd, 23rd), còn lại -th."
+        },
+        {
+          "id": "p4_sg_t3_e4",
+          "type": "multiple_choice",
+          "instruction": "Chuyến đi trong ngày tới nhà máy diễn ra “August 24th”. Đọc thế nào?",
+          "options": [
+            { "id": "A", "text": "August twenty-four" },
+            { "id": "B", "text": "August twenty-fours" },
+            { "id": "C", "text": "August twenty-fourth" },
+            { "id": "D", "text": "August the twenty-four" }
+          ],
+          "correct_answers": ["C"],
+          "explanation": "24th → “twenty-fourth”. Không bao giờ thêm -s vào ngày."
+        },
+        {
+          "id": "p4_sg_t3_e5",
+          "type": "multiple_choice",
+          "instruction": "Ghế trên chuyến đi là “Seat A15”. Cách đọc tự nhiên nhất là gì?",
+          "options": [
+            { "id": "A", "text": "seat A fifteen" },
+            { "id": "B", "text": "seat A fifteenth" },
+            { "id": "C", "text": "seat A the fifteen" },
+            { "id": "D", "text": "seat fifteen A" }
+          ],
+          "correct_answers": ["A"],
+          "explanation": "Số ghế đọc đúng thứ tự chữ rồi số, dùng số đếm: “A fifteen” (hoặc tách chữ số “A one five” khi cần đọc thật rõ). Số ghế không dùng số thứ tự."
+        }
+      ]
+    },
+    {
+      "level": "Medium",
+      "exercises": [
+        {
+          "id": "p4_sg_t3_m1",
+          "type": "essay_typing",
+          "instruction": "Điền giờ khởi hành chuyến bay đầu tiên (bằng chữ).",
+          "content": "Your first flight departs Accra at ______ a.m.",
+          "options": [],
+          "correct_answers": ["seven"],
+          "explanation": "Bảng ghi 7 a.m. August 9th → “seven”."
+        },
+        {
+          "id": "p4_sg_t3_m2",
+          "type": "essay_typing",
+          "instruction": "Điền giờ hạ cánh ở Frankfurt (bằng chữ).",
+          "content": "You arrive in Frankfurt at ______ a.m. on August ninth.",
+          "options": [],
+          "correct_answers": ["nine"],
+          "explanation": "9 a.m. → “nine”. Bay 7 a.m. đến 9 a.m. là hai tiếng — dạng thông tin câu 10 hay hỏi."
+        },
+        {
+          "id": "p4_sg_t3_m3",
+          "type": "essay_typing",
+          "instruction": "Điền NGÀY bay về, dạng số thứ tự bằng chữ.",
+          "content": "The return flight leaves Frankfurt on August ______.",
+          "options": [],
+          "correct_answers": ["twenty-first", "twenty first", "21st"],
+          "explanation": "21st → “twenty-first”."
+        },
+        {
+          "id": "p4_sg_t3_m4",
+          "type": "essay_typing",
+          "instruction": "Điền giờ đến nhà máy (bằng chữ).",
+          "content": "You arrive at the Maintal factory at ______ a.m. and leave at four p.m.",
+          "options": [],
+          "correct_answers": ["ten"],
+          "explanation": "10 a.m. → “ten”. Cả câu là mẫu trả lời chuẩn cho câu 10 về chuyến đi trong ngày."
+        },
+        {
+          "id": "p4_sg_t3_m5",
+          "type": "essay_typing",
+          "instruction": "Điền ngày của chuyến đi trong ngày (dạng số thứ tự, bằng chữ).",
+          "content": "The day trip to the factory is on August ______.",
+          "options": [],
+          "correct_answers": ["twenty-fourth", "twenty fourth", "24th"],
+          "explanation": "24th → “twenty-fourth”."
+        }
+      ]
+    },
+    {
+      "level": "Hard",
+      "exercises": [
+        {
+          "id": "p4_sg_t3_h1",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 8 — hai thông tin được hỏi cùng lúc. Trả lời đủ cả hai.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/travel-3/q8.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "You'll be staying at the Savoy Hotel in Frankfurt, and your first flight leaves Accra at seven a.m. on August ninth.",
+          "explanation": "Khách sạn + giờ bay = hai vế. Nối bằng “and”, giữ nguyên thứ tự câu hỏi cho dễ theo dõi."
+        },
+        {
+          "id": "p4_sg_t3_h2",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 9 — người gọi nhớ nhầm GIỜ bay về. Hãy đính chính bằng đúng con số trên bảng.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/travel-3/q9.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Actually, that's not correct. Your return flight departs Frankfurt at eight a.m. and arrives in Accra at four p.m.",
+          "explanation": "Người gọi nhầm giờ ĐẾN (4 p.m.) thành giờ KHỞI HÀNH. Bẫy kinh điển: hai con số cùng nằm trên một dòng. Phải nêu rõ cả hai để đính chính trọn vẹn."
+        },
+        {
+          "id": "p4_sg_t3_h3",
+          "type": "speak_aloud",
+          "instruction": "Nghe câu hỏi 10 rồi nêu đủ chi tiết chuyến đi trong ngày: ngày, giờ đến, giờ về, phương tiện.",
+          "audio_url": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/travel-3/q10.mp3",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Your trip to the Maintal factory is on August twenty-fourth. You arrive at ten a.m. and depart at four p.m. A taxi has been reserved.",
+          "explanation": "Bốn chi tiết, ba câu ngắn. Câu 10 không cần câu phức — cần ĐỦ thông tin và số đọc rõ."
+        },
+        {
+          "id": "p4_sg_t3_h4",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — số hiệu chuyến bay và số ghế trong cùng một câu.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "Your outbound flight is Blue Airways seven fifty-two, seat A fifteen.",
+          "explanation": "Số hiệu chuyến bay đọc theo nhóm (“seven fifty-two”) hoặc từng chữ số (“seven-five-two”), số ghế đọc số đếm."
+        },
+        {
+          "id": "p4_sg_t3_h5",
+          "type": "speak_aloud",
+          "instruction": "Đọc to câu sau — hai mốc giờ và một ngày trong cùng một câu.",
+          "options": [],
+          "correct_answers": [],
+          "reference_text": "You depart Accra at seven a.m. and arrive in Frankfurt at nine a.m. on August ninth.",
+          "explanation": "Giữ nhịp đều, đừng nuốt “a.m.”. Đây là câu mẫu dùng lại được cho mọi đề lịch trình bay."
+        }
+      ]
+    }
+  ]
+}
