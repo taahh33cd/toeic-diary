@@ -8458,9 +8458,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Ở phía sau có chữ 'and' (và) liên kết giữa 'personal' và 'business'. Cặp liên từ nối đôi kinh điển là 'Both... and...' mang ý nghĩa cả cái này và cái kia.",
-    "explanation_grammar": "Cặp liên từ tương quan: Both A and B.",
-    "translation": "Cửa hàng của chúng tôi cung cấp đầy đủ các chuỗi bộ phận mềm máy tính dành cho CẢ dân dùng cá nhân VÀ thương mại.",
+    "explanation_reason": "Sau chỗ trống có 'and' nối 'personal' với 'business'. Cặp liên từ tương quan 'both A and B' (cả A lẫn B) là lựa chọn duy nhất phù hợp: 'either' và 'whether' phải đi với 'or', còn 'every' là từ hạn định.",
+    "explanation_grammar": "Cặp liên từ tương quan: both A and B.",
+    "translation": "Cửa hàng chúng tôi cung cấp đầy đủ các dòng phần mềm máy tính dành cho cả nhu cầu cá nhân lẫn nhu cầu doanh nghiệp.",
     "core_vocabulary": [
       {
         "word": "software package",
@@ -8485,9 +8485,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Vế trước bảo báo cáo ĐÃ gửi, vế sau sếp lại bẩu CHƯA thấy bản cứng đâu. Sự đối lập tương phản giữa hai hành động tạo ra mối cơ duyên cho chữ 'but' (nhưng) thò vào.",
-    "explanation_grammar": "But: liên từ kết vị (coordinating conjunction) dùng để nối hai mệnh đề đối lập ý.",
-    "translation": "Bộ báo cáo thường niên đã được đăng tải xổng lên trên mạng trực tuyến, NHƯNG văn phòng ban giám đốc thì vẫn cứ dậm chân chưa thấy nhận hổi được một bản in tay in cốt nào.",
+    "explanation_reason": "Vế trước nói báo cáo đã được đăng tải trực tuyến, vế sau nói văn phòng giám đốc vẫn chưa nhận được bản in. Hai ý đối lập nhau nên dùng 'but' (nhưng).",
+    "explanation_grammar": "But: liên từ kết hợp (coordinating conjunction) nối hai mệnh đề đối lập.",
+    "translation": "Báo cáo thường niên đã được đăng tải trực tuyến, nhưng văn phòng giám đốc vẫn chưa nhận được bản in.",
     "core_vocabulary": [
       {
         "word": "printed copy",
@@ -8507,9 +8507,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Mệnh đề sau 'please back up...' là hệ quả cầu khiến xuất phát từ cái mệnh đề trước 'có nâng cấp vảo ngày mai'. Do đó nó tạo thành tính quan hệ nhân-quả 'Vì có việc A -> SO (vì vây / cho nên) mới làm việc B'.",
-    "explanation_grammar": "So: liên từ kết nối chỉ kết quả/ hệ lụy.",
-    "translation": "Vào rạng ngời mai thì sẽ có một đợt làm mới phiên phần mềm, VÌ THẾ xin quý vị vui lòng trích cất lưu trữ sao chép y ấn mọi dòng tài liệu tệp nào được gán mác là quan trọng mà đang còn giắt găm nán ở trên con máy nhụ.",
+    "explanation_reason": "Mệnh đề sau là hệ quả của mệnh đề trước: vì ngày mai có nâng cấp phần mềm nên mới cần sao lưu tệp. Quan hệ nhân - quả này dùng 'so' (vì vậy).",
+    "explanation_grammar": "So: liên từ kết hợp chỉ kết quả.",
+    "translation": "Ngày mai sẽ có một đợt nâng cấp phần mềm, vì vậy vui lòng sao lưu mọi tệp quan trọng mà bạn đang lưu trên máy chủ.",
     "core_vocabulary": [
       {
         "word": "back up",
@@ -8534,9 +8534,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Sát phạt với từ 'neither' thì chỉ có 1 ứng viên đi kèm duy nhất trong tiếng Anh. Đó là 'nor' mang hàm ý KHÔNG CÁI NÀY CŨNG KHÔNG cái nớ.",
-    "explanation_grammar": "Cặp liên từ: Neither A nor B.",
-    "translation": "Thật là rợn hết biết chuyện ngược đời khi mà cả cô Chen đúc lẩn thẩn với ngài Cụ Gillespie ấy vậy mà lại chẳng một ai được giật bẩm đánh tiếng báo cáo cho biết là cài kỳ họp bàn lãnh đạo cấp cao của ban quan trị bộ đồng đã hủy tự tàn.",
+    "explanation_reason": "'Neither' ở vế trước bắt buộc đi với 'nor' để tạo cặp liên từ tương quan 'neither A nor B' (không A cũng không B).",
+    "explanation_grammar": "Cặp liên từ tương quan: neither A nor B.",
+    "translation": "Đáng chú ý là cả bà Chen lẫn ông Gillespie đều không được thông báo rằng cuộc họp hội đồng quản trị đã bị hủy.",
     "core_vocabulary": [
       {
         "word": "remarkably",
@@ -8561,9 +8561,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Kẹp đôi song sát có một chân rết là chữ 'OR' (hoặc). Mà 'Or' thì luốn gá đôi cặp với 'Either' tạo thành Cặp 'Hoặc là... hoặc sẽ là...'.",
-    "explanation_grammar": "Cặp liên từ song sinh: Either A or B.",
-    "translation": "Một bộ đa phần đại bộ phận của đám người tiêu dùng đi mua sắm cái món diện thoại Sasaki - những gã đã hoàn thành bấm cái bảng dò khảo điền sát thì đều đồng tình bấm chuông thả hạng chám điện thoại Sasaki HOẶC là ở hàng mức tốt HOẶC bét cũng phải hàng cực phẩm tuyệt xảo.",
+    "explanation_reason": "Sau chỗ trống có 'or' nối 'good' và 'excellent'. 'Or' đi cặp với 'either' tạo thành 'either A or B' (hoặc A hoặc B).",
+    "explanation_grammar": "Cặp liên từ tương quan: either A or B.",
+    "translation": "Phần lớn khách hàng đã hoàn thành khảo sát đánh giá điện thoại Sasaki ở mức hoặc tốt hoặc xuất sắc.",
     "core_vocabulary": [
       {
         "word": "majority",
@@ -8574,7 +8574,7 @@ export const grammarQuestions = [
   },
   {
     "id": "q0196",
-    "question": "Our most recent survey was sent to clients just last weeks, ______ it is too soon to send another one.",
+    "question": "Our most recent survey was sent to clients just last week, ______ it is too soon to send another one.",
     "options": {
       "A": "when",
       "B": "finally",
@@ -8583,9 +8583,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Vế trước đưa ra tình huống 'survey đã được phát hồi tuần trước', vế sau là hệ quả suy ra 'do đó quá sớm để gửi tiếp một cái nữa'. So phù hợp nhất.",
-    "explanation_grammar": "Mệnh đề nguyên nhân, SO + mệnh đề kết quả.",
-    "translation": "Bài mẫu form khảo sát diện gần gặn gũi sấp nút nhất gần đây nhất của tụi này thì đã mới vừa đem phát trao gửi tới khách tận tụy ngay hồi độ dịp tuần trước, CHO NÊN việc gởi trút thêm một bản khảo sát khác dồn vô lúc này e là quá chừng vội vàng dồn đi.",
+    "explanation_reason": "Vế trước nêu tình huống (khảo sát vừa được gửi tuần trước), vế sau là hệ quả (quá sớm để gửi tiếp). Dùng 'so' (vì vậy) để chỉ kết quả.",
+    "explanation_grammar": "So: liên từ kết hợp chỉ kết quả.",
+    "translation": "Bản khảo sát gần đây nhất của chúng tôi vừa được gửi tới khách hàng tuần trước, vì vậy hiện giờ còn quá sớm để gửi thêm một bản nữa.",
     "core_vocabulary": [
       {
         "word": "survey",
@@ -8605,9 +8605,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Nửa vế trước xuất hiện điểm nhấn 'not only' (không những). Nó yêu cầu dứt khoác phải có 'but also' (mà còn) làm vế đối xứng phía sau để khép vòng câu trúc kinh điển.",
-    "explanation_grammar": "Not only + clause/phrase + but also + clause/phrase tương đương.",
-    "translation": "Khu bộ Thư viện Greenville đã phát lệnh cõng cho mướn thêm đệ tay một phụ tá phòng làm việc KHÔNG CHỈ để giúp sức đỡ đần dọn sạch khối lượng thao tác giấy văn việc lặt vặt phổ cập MÀ CÒN muốn ngắm vào việc gánh hộ lưng làm điểm tự lưng bệ phóng hỗ trọ thúc đẩy cho cái con dốc dự luận án khải dự án quy mô hoành tráng trỗi đặc biệt.",
+    "explanation_reason": "Vế trước có 'not only', bắt buộc phải có 'but also' ở vế sau để hoàn tất cặp liên từ tương quan 'not only A but also B'.",
+    "explanation_grammar": "Cặp liên từ tương quan: not only A but also B.",
+    "translation": "Thư viện Greenville đã tuyển một trợ lý văn phòng không chỉ để đảm nhiệm các công việc hành chính thông thường mà còn để hỗ trợ một dự án đặc biệt đang triển khai.",
     "core_vocabulary": [
       {
         "word": "perform",
@@ -8627,9 +8627,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Tương tự như câu số 5, đâm phòi ra chữ 'or' dính liền sau nó thì trước đó là mảnh khuyết để ráp nối nhét thêm mảnh ghép song phương 'either'.",
-    "explanation_grammar": "Either .... or ....",
-    "translation": "Hội chúng con nhang đệ tự trẩy hội tham diện có thể lựa đường nước chèo di rước lết xác chạy tới Khách sạn Wyatt bằng phưng tiện HOẶC là xình xịch tàu lửa HOẶC là con bọ xe điện buýt.",
+    "explanation_reason": "Sau chỗ trống có 'or' nối 'by train' và 'by bus', nên cần 'either' để tạo cặp liên từ tương quan 'either A or B'.",
+    "explanation_grammar": "Cặp liên từ tương quan: either A or B.",
+    "translation": "Người tham dự hội nghị có thể đến Khách sạn Wyatt bằng tàu hỏa hoặc bằng xe buýt.",
     "core_vocabulary": [
       {
         "word": "participant",
@@ -8649,9 +8649,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Nửa vế kế tiếp xuất hiện cái cùi chỏ 'nor' ngáng lại. Phía trước nó tất lẹ tạo phom phải là cọng dính líu 'Neither'.",
-    "explanation_grammar": "Neither... nor...",
-    "translation": "Cả hai phe hai mặt gồm cái bà Chang lẫn lão ông Kao thì thảy chẳng một ai vớt nhận vớ vẩn rớt nhặt được bãi nào cái mẫu thư dòng tin e-mail điểm vớt vác sườn tóm lược múa múa về phần bảng nội dung đề xướng khai trình cái dóc đồ dự án.",
+    "explanation_reason": "Vế sau có 'nor', nên chỗ trống ở đầu câu phải là 'Neither' để tạo cặp 'neither A nor B'. 'None' và 'Whoever' không đi được với 'nor'.",
+    "explanation_grammar": "Cặp liên từ tương quan: neither A nor B.",
+    "translation": "Cả bà Chang lẫn ông Kao đều không nhận được email trình bày sơ lược về bản đề xuất dự án.",
     "core_vocabulary": [
       {
         "word": "outline",
@@ -8671,9 +8671,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Trạng từ 'and' liên kết management và employees, tạo cơ hội cho 'Both' tham gia trước cả hai tạo thành một khối liên từ đẳng lập gộp (Cả hai bên đều...).",
-    "explanation_grammar": "Both A and B.",
-    "translation": "Hậu qua cái cuộc gặp đấu đàm phán mài bóp mồm thảo luận về các dòng điểm đề điều mục thỏa khoản trong khung tệp hồ sơ bản hợp đồng giao kèo phúc lợi hưởng ích đền đáp an sinh sức khỏe y vãn bảo hộ mới, CẢ HAI vế của phe chóp não ban điều vận quản lý LẪN cả tệp đám con ăn lình làm công nhân viên thì đều vỗ tay dạt gật lủng ngực ra ý thoả mãn đã đời rất gật gù sảng khoái đắc đồng.",
+    "explanation_reason": "'And' nối 'management' với 'employees', nên chỗ trống cần 'both' để tạo cặp liên từ tương quan 'both A and B' (cả A lẫn B).",
+    "explanation_grammar": "Cặp liên từ tương quan: both A and B.",
+    "translation": "Sau khi thảo luận các điều khoản của hợp đồng phúc lợi sức khỏe mới, cả ban quản lý lẫn nhân viên đều hài lòng.",
     "core_vocabulary": [
       {
         "word": "satisfy",
@@ -8693,9 +8693,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Chỉ thời điểm gắn vế của sự kiện (Khai trương đại lý mới). Liên từ phụ thuộc 'When' có nghĩa 'khi' khớp lệnh thời gian diễn ra là tự nhiên nhất.",
-    "explanation_grammar": "When + Cụm chủ vị (Mệnh đề chỉ thời gian).",
-    "translation": "KHI MÀ hãng phay Jemburger tiến nhịp kéo băng phất bảng phô diễn khánh thành tiệm điểm đánh cửa hàng đứt quyền franchise nhượng chuỗi nhượng quyền mở cõi điểm chi rẽ mới nhất điểm nhất, thì 100 ông nhõi ông khách đặt đít lướt tới điểm hẹn điểm điền đến mua xóm hàng sớm nhất trót vót đều đã được tụi tiệm này móc ra biếu free 100 mảng miếng bánh bò bánh hambuger chả tốn có nhặt đồng xu cắc bạc cắc tỉu nào lót lòng.",
+    "explanation_reason": "Chỗ trống nối hai mệnh đề và chỉ thời điểm sự việc xảy ra, nên dùng liên từ 'When' (khi). 'As if', 'Now', 'After all' đều không phù hợp về nghĩa.",
+    "explanation_grammar": "When + mệnh đề (mệnh đề chỉ thời gian).",
+    "translation": "Khi Jemburger khai trương cửa hàng nhượng quyền mới nhất, 100 khách hàng đầu tiên đã được tặng hamburger miễn phí.",
     "core_vocabulary": [
       {
         "word": "franchise",
@@ -8715,9 +8715,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Liên từ",
-    "explanation_reason": "'Once' lúc này mang chức năng làm liên từ có nghĩa là 'một khi / ngay khi'. Thể hiện điều kiện hoàn thành việc A thì việc B sẽ diễn ra liền kề sau đó.",
-    "explanation_grammar": "Once + Clause (Ngay khi mà, Một khi).",
-    "translation": "Kênh trang tụ mạng lướt mạng đăng tỉ mỉ mục nghề chơi nhiếp ảo hình ảnh của lão quái nhiếp ảnh giá cái bang Andrzej Ptak chớ hồi đó đấy chả sẽ sớm có tung bản hiện ngời rỡ điểm danh phủ mặt online ngầy lấm lét MỘT KHI CHÚNG TỚ đã thực mần xử ép quất dội xong đoạn đắp điếm thu vén thu dọn sắp loại dốc tổng chỉnh lên đồ đánh danh dập mục lục tươm tất dâng mâm mọi món hạng thành tác phẩm tác của ổng đồ đó ra đấy phơi phới cho rập đời coi.",
+    "explanation_reason": "'Once' ở đây là liên từ, nghĩa 'một khi / ngay khi': sắp xếp và lập mục lục xong thì trang web mới hoạt động.",
+    "explanation_grammar": "Once + mệnh đề (một khi, ngay khi).",
+    "translation": "Trang web ảnh của Andrzej Ptak sẽ hoạt động trực tuyến một khi chúng tôi sắp xếp và lập mục lục xong các tác phẩm của ông.",
     "core_vocabulary": [
       {
         "word": "cataloging",
@@ -8737,9 +8737,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Mệnh đề quy luật 'Bất cứ khi nào... thì việc khác sẽ xảy ra'. 'Whenever' là liên từ phù hợp diễn tả 'mỗi lần / bất cứ dịp nào'.",
-    "explanation_grammar": "Whenever + Clause (Bất kể khoảnh khắc thời điểm nào khi có chuyện gì xảy tới).",
-    "translation": "BẤT KỲ CỨ ĐỘ KHI NÀO có trúng vô mà lại vô phước có một ngày kĩ nghỉ đại lễ trọng kỉ quốc dân rớt đúng điểm chạm nhằm xáp trúng vô cái ngày thứ Năm chéo que, thì thể nào bọn Công ty Barstow này cũng sẽ ra mặt thoáng cho thả xổng đám tay sai xả lính xõa mướt được mượn quyền phéc lờ được vác bụng xả xui bùng mướn nhót để cho tụi nó cúp máy cúp ca được lỉnh cút tút đi luồn lách được giũ phép nghỉ tiếp tục nốt thả giàn sập sàn thả phanh luôn trong cho cái trọn ráo ngày thứ 6 cho phơi phới cả thể đi đó mờ.",
+    "explanation_reason": "Mệnh đề diễn tả một quy luật lặp lại nên dùng 'Whenever' (bất cứ khi nào). 'Nearly', 'Even', 'For' đều không nối được mệnh đề.",
+    "explanation_grammar": "Whenever + mệnh đề (bất cứ khi nào).",
+    "translation": "Bất cứ khi nào một ngày lễ quốc gia rơi vào thứ Năm, Công ty Barstow đều cho phép nhân viên nghỉ luôn thứ Sáu.",
     "core_vocabulary": [
       {
         "word": "whenever",
@@ -8759,9 +8759,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Vế nối đằng sau là một mệnh đề hoàn chỉnh gồm có Cấu trúc (our mechanics) + Verb (complete). 'While' là liên từ đi kèm dùng để nói về lúc trong khi mà hành động kia diễn ra. (Lưu ý: During cũng là 'trong lúc' nhưng đi kèm với danh từ).",
-    "explanation_grammar": "While + Clause (S+V) >><< During + Noun.",
-    "translation": "Quý zị bạn hàng ân khách phước ôi có rảnh có thể an khang thảnh tọa chồm chờ cắm chốt lụi nán lại ở phòng tại phía trong của cụm ban tiếp khu sảnh đón khách ban quầy TRONG KHI bộ ban đám rặt một đống lũ phường đội kỹ dân dão thợ thiết thiếc tuốt tu bộ máy kĩ sư động chế của xưởng tháo thay bộ nhà chúng vọc xóc làm bít vốc tuốt miết nhét xú dốc giũa vót rũa xử chắp dặm ráp đắp cho nó xong sớm cái sườn sửa giũ chiếc cộ xe hơi thồ của xịn quý zị đây gập đó nhé cưng.",
+    "explanation_reason": "Sau chỗ trống là một mệnh đề đầy đủ (our mechanics complete...) nên phải dùng liên từ 'while'. 'During' là giới từ, chỉ đi với danh từ.",
+    "explanation_grammar": "While + mệnh đề (S + V) >< During + danh từ.",
+    "translation": "Khách hàng có thể ngồi đợi ở khu vực lễ tân trong khi thợ máy của chúng tôi hoàn tất việc sửa xe.",
     "core_vocabulary": [
       {
         "word": "mechanic",
@@ -8781,9 +8781,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Diễn dịch điều kiện áp dụng liên thời gian 'Bất cứ khi nào bạn...'. 'Whenever' là một liên từ nối mạch điệu hoàn hảo trong văn cảnh quảng cáo.",
-    "explanation_grammar": "Whenever + Clause.",
-    "translation": "Lụm nạp tiết ngay tiết trần chắt kiệm tiết kiệu thọt gom tiết đẻ được bòn mót giắt gập sụp giữ bớt đút êm nhét bỏ cất chém giá bơn cho giữ rịt được tới cỡ tận khoảng 25 cái trăm 25% chục cục xiềng rớt xõa trền giảm khứa trên cái móc phôi mua xào trả độ bắt vạc bất cứ con máy móc sộp khò sừng in điệu rợn cạc dợn dập xáp phun con máy phẩy photo phun quỷ bắt in dập in mẫu đập bất kì cục vạc chóp ngọn hạng hãng máy ấn bẩy ơ máy in nào cũng dính ráo BẤT KHI RÁO KÌ LÚC NÀO miễn là hễ bác cứ lỡ trót vạc xóc nhấc điệu móc tay dúng quẹt lấy đánh nhặt hốt quất thả bộ nhét giỏ thêm nhặt mớ tóm thả thêm mua 1 tay một chiết cỗ laptop vi giàn mỏng máy vi xử trạm xách kẹp nách tay gánh di đánh điểm xọc kẹp tại cái quán cửa tiệm cơ giới điện khu điện xưởng Diego's Electronics chốn đại xá bọn này nè bác ơi.",
+    "explanation_reason": "Chỗ trống nối hai mệnh đề và nêu điều kiện lặp lại của chương trình khuyến mãi, nên dùng 'whenever' (bất cứ khi nào).",
+    "explanation_grammar": "Whenever + mệnh đề.",
+    "translation": "Tiết kiệm 25% cho bất kỳ máy in nào bất cứ khi nào bạn mua một máy tính xách tay tại Diego's Electronics.",
     "core_vocabulary": [
       {
         "word": "whenever",
@@ -8803,9 +8803,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
-    "explanation_reason": "'while' có thể nối trực tiếp một tính từ danh từ dạng V_ing mang hàm ý nói 'trong khi' ở tình trạng lược bỏ từ giống mệnh đề trước. 'while (also) reducing...'",
-    "explanation_grammar": "While/When + V_ing (rút gọn đồng nghĩa chủ ngữ).",
-    "translation": "Ông TNHH Tập còi Kovox Ltd này thì lăm le để mắt đang chú sáp mục đích móc tiêu chỉ nhằm mút một ngòi muốn phẩy làm trọn vẹn điểm đỉnh tối cực nhất đẩy ưu tăng trịch tối khốc ưu bãi hóa cho trọn độ châm vẹn dầy phẩm chát độ cực ngon chất lượng lượng, TRONG KHI SONG SONG ĐÓ lúc thì tụi nó cũng tính ngả mượn đà cho cắt xén giảm chặt bóp phách kìm gọt giảm tỉ độ gây mức thương kham đâm khốc giáng mức cướp giật tác cạp sập tác hại dội động mạnh thốc tới làm dơ hại trên mảnh lớp đắp chóp môi nền sinh mốc trường.",
+    "explanation_reason": "'While' có thể đi trực tiếp với V-ing khi hai vế cùng chủ ngữ, đây là dạng rút gọn của 'while it reduces...'.",
+    "explanation_grammar": "While + V-ing (rút gọn khi hai mệnh đề cùng chủ ngữ).",
+    "translation": "Kovox Ltd. đặt mục tiêu tối ưu hóa chất lượng trong khi vẫn giảm thiểu tác động lên môi trường.",
     "core_vocabulary": [
       {
         "word": "optimize",
@@ -8825,9 +8825,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Chỉ mốc thời gian hoàn tất 'cho đến khi'. Liên từ 'until' là cây cầu nối để diễn giải về việc theo dõi (monitored) sẽ kéo dài mãi cho đến lúc có kết quả.",
-    "explanation_grammar": "Until + Clause.",
-    "translation": "Tình điểm chất lưới truyền dẫn đường đâm cột nối kết truy rọc gắt truy nối trồi mạng tuyến dẫn Internet sẽ liên lụy bị giam chốt gài phéc áp ấp chặt để gò giám thính dập tăm xét dọa khâm soi chặt dỏ lăm khóc nới lỏng nới thít sát sao theo dỏi dõi bám cắn sát không dứt miết rát sàn sạt CHO MIẾT ĐẾN TẬN ĐẾN CÁI LÚC KẾT ĐỈNH KHI MÀ cái mối cái điểm cái nọc điểm chóp gốc tích lọt lõi cái ngòi xốc nọc xít điểm nguồn cội chóp điểm phát nổ nguồn rễ mạch gốc cớ phất của cái cơn dông mâm cái vụ tụt quẩy sút máy tuột pin thụt giật chạy cùi khựng chạy dề quề rù chập khấc chậm lì cùi phanh sự ịch ạch xị chững lại này đây thì sẽ rứt thóp đứt sụt bắt quả đặng cấn vớ trảo lọt tra dặm bị tóm được khất được nhận xác điểm minh quả rỏ định đích đánh chính xác tỏ nhận.",
+    "explanation_reason": "'Until' (cho đến khi) chỉ việc giám sát sẽ kéo dài cho tới thời điểm xác định được nguyên nhân.",
+    "explanation_grammar": "Until + mệnh đề.",
+    "translation": "Kết nối Internet sẽ được giám sát chặt chẽ cho đến khi xác định được nguyên nhân của tình trạng mạng chậm.",
     "core_vocabulary": [
       {
         "word": "slowdown",
@@ -8847,9 +8847,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Hai vế hành động diễn ra nối tiếp nhau (hoàn thành xong bản mẫu -> người khác phê bình). 'After' (sau khi) thể hiện logic trình tự thời gian này một cách mạch lạc tuyệt hảo.",
-    "explanation_grammar": "After + Clause chỉ hành động xảy ra trước.",
-    "translation": "SAU CÁI ĐOẠN ĐỈNH DỐC LÚC KHI là có đọt dại một tên tay chuyên hoạ ngõ hình thiết họa nét thiết trác tác kế một thằng khất thợ designer đã ngoắn bóc đẽo chấm trổ nặn xắt cắt ngọc xọng ngắm vốt nặn bóp bồi tô làm vạch nhọc cho đã móc xong mọc xẻng hoàn một công bản mẫu khuôn hàng phẩm nháp bản mộc phôi đúc chóp thử nháp phôi nguyên định mẫu sản điệp định dạng thô nguyên rạp phẩm nháp nào đó xong vứt, đó lúc này khúc đuôi đám cái đám cái lùi bầy phần rơi sót phần nài lẵng còn mứa tót phới lại ở lở lấp nấp trong gậm đội ban thành hội lũ nhom cái rập nhóm sẽ mới lại được móc trịch hô sênh hào hú thét lên loa gõ điệu điểm lệnh lệnh họi được cấn vời triệu thính triệu kéo đít sênh réo mời tham mời ra vô tới dự để cạ mõm nhọn mồm chĩa điểm xoi châm móc ban vạch chĩa soi mói trổ kháy gạch khía đưa đâm bới chọc gạch ra trổ phê soi lỗi bắt điểm đánh mổ xẻ đóng ném ném đánh phê bóp bình phẩm giá trị cho chửi rủa cái con khỉ món đó.",
+    "explanation_reason": "Hai hành động diễn ra nối tiếp: hoàn thành sản phẩm mẫu trước, cả nhóm góp ý sau. 'After' (sau khi) thể hiện đúng trình tự này.",
+    "explanation_grammar": "After + mệnh đề chỉ hành động xảy ra trước.",
+    "translation": "Sau khi một nhà thiết kế hoàn thành sản phẩm mẫu, những thành viên còn lại trong nhóm sẽ được mời đến góp ý.",
     "core_vocabulary": [
       {
         "word": "critique",
@@ -8869,9 +8869,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Cũng mang tính điều kiện và thời gian, 'once' nối với mệnh đề thể hiện sự bắt đầu làm lại cái gì 'ngay khi / một khi' cái khác hoàn tất.",
-    "explanation_grammar": "Once + Clause (có chức năng như as soon as hoặc when).",
-    "translation": "Phân Bộ khối Uỷ Hội Viện quan ủy viên cái tráp tệp cái mâm tiểu hội hội đồng sẽ rề nổ máy làm rục khới khởi mào lên đèn làm nọc bóp chạy rúc múc nhích phục bốc phất tút khươi động vọc lại cho nổ gượng diễn tiếp nổ cho tiếp tái nẫng tụ khởi nhú diễn bốc trạc tiếp tục sự cho diễn tái phục tục vụ lại mấy trác cái tệp đống buổi mớ phiên trào vọc họp xới đàm nghị rít hằng điệu giao ca đều cuộn hàng quay mần mỗi độ rải tuấn lịch kỳ tuần cọc đàng của mình MỘT CHỚP KHI / VỪA CHẠM NGAY LÚC cái bà cái bóng mẹ Sếp trùm Khú là quý bà Cheon mụ đó đáp bến cập sải đạp chân trở tạt rút dẹp về cố chảo đáo bổ từ mạn cõi xa xôi rạt khu rặng mạn vùng Scotland về ngay đúng vô lúc dọng đúng điếm phóc vô trong cữ ngày chạp lọt mốc 17 rơi tháng 9.",
+    "explanation_reason": "'Once' (một khi / ngay khi) nối mệnh đề chỉ mốc thời gian: bà Cheon trở về thì các cuộc họp mới được nối lại.",
+    "explanation_grammar": "Once + mệnh đề (tương đương as soon as / when).",
+    "translation": "Ủy ban sẽ nối lại các cuộc họp hàng tuần một khi bà Cheon trở về từ Scotland vào ngày 17 tháng 9.",
     "core_vocabulary": [
       {
         "word": "resume",
@@ -8891,9 +8891,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Đứng đầu câu làm liên từ phụ thuộc để nói về điều kiện xảy ra tức thời. 'As soon as' diễn giải 'ngay khi'.",
-    "explanation_grammar": "As soon as + S + V... thì mệnh đề chánh mới được thi hành.",
-    "translation": "RẤT CỰC KỲ NHANH V CÀ CHỚP RẤT MAU LẸ MỘT NGAY LIỀN KHI LÚC VỪA MỚI mà cái xưởng đám tụi cái mảng phòng Tạp báo Tập Bộ Phận chuyên việc Mảng Ban Tạp Chí Soạn rọc dũa dập tin xé báo Biên Dịch xoá nháp mảng Tập vừa tay chộp lụm vớ chộp ôm mới vớ được chộp có nhận rập liền kề được trọc cái bản hịch trích án đóng chốt thư phíc cái nếp thư cái khấc lệnh đóng khuôn nhấp gật lắc chốt ngọn đầu ấn dập rụp cho lời gật đầu chốt chóp cuối đồng dập y xì ý khép màn chấp đục chung chấp gật mổ thuận chóp của phía bọc bên đầu ngót thằng ngòi bút gốc nhà xướng bút người viết tay tác ông tác vị giả sáng soạn giả, thì thì thôi rồi cái mớ khối xấp tệp tập cái loại tập cục tệp giẻ cuộn mâm rổ giỏ cuốn tệp mớ xấp bản cuộn bản tráp chép tàn tay dậm chép bản thảo lờ xờ bản mộc chữ đánh chữ đó sập lập liền xực tốc khắc quất sẽ phải bị chịu tống đực ép tút gồng thốc mút lùa chuyển phóng tốc nhét gạc được tước quăng gạc phải ục tống điệu tiễn được phải tuồng nện nhét đưa dập bưng chuyển tút đi tống tới xưởng nọc cơ mảng tọt đi qua cho phòng chỗ cơ đám nhà phay bọn bên thợ sành vặt dập cục rập dũa nhà xưởng điểm cái rập ấn móc máy cho điểm máy in dập điểm.",
+    "explanation_reason": "'As soon as' (ngay khi) là liên từ phụ thuộc đứng đầu câu, chỉ hành động diễn ra ngay sau khi mệnh đề kia hoàn tất.",
+    "explanation_grammar": "As soon as + S + V, mệnh đề chính.",
+    "translation": "Ngay khi Phòng Biên tập nhận được phê duyệt cuối cùng của tác giả, bản thảo sẽ được gửi đến nhà in.",
     "core_vocabulary": [
       {
         "word": "as soon as",
@@ -9079,7 +9079,7 @@ export const grammarQuestions = [
     "grammar_type": "Liên từ",
     "explanation_reason": "Ta cần một cấu trúc giả định phòng ngừa: THẬM CHÍ NẾU (cho dù) ngày mai trời không mưa, lều bạt vẫn sẽ được dựng lên.",
     "explanation_grammar": "Even if + Condition clause (Dẫu cho...).",
-    "translation": "Thậm chí nếu như ngày mai trời không hề mưa, thì những chiếc lều vẫn sẽ được dựng lên để đối phó chuẩn bị cho bất kỳ sự kiện ngoài trời nào theo như lịch trình.",
+    "translation": "Thậm chí nếu ngày mai trời không mưa, lều bạt vẫn sẽ được dựng cho mọi sự kiện ngoài trời đã lên lịch.",
     "core_vocabulary": [
       {
         "word": "even if",
@@ -9101,7 +9101,7 @@ export const grammarQuestions = [
     "grammar_type": "Liên từ",
     "explanation_reason": "Thì quá khứ hoàn thành (had been presented) thể hiện hành động diễn ra và kết thúc TRƯỚC việc bà Ryu nói lời tri ân (quá khứ đơn - acknowledged). Dùng After (sau khi xong A, làm tiếp B).",
     "explanation_grammar": "After + Past Perfect Clause (Hành động chốt hoàn tất trước ở trong quá khứ).",
-    "translation": "Sau khi giải thưởng cuối cùng đã được trao thưởng xong xuôi, bà Ryu mới cất lời tri ân sự hỗ trợ của các nhà tài trợ sự kiện.",
+    "translation": "Sau khi giải thưởng cuối cùng được trao, bà Ryu đã cảm ơn sự hỗ trợ của các nhà tài trợ sự kiện.",
     "core_vocabulary": [
       {
         "word": "acknowledge",
@@ -9145,7 +9145,7 @@ export const grammarQuestions = [
     "grammar_type": "Liên từ",
     "explanation_reason": "Sử dụng 'but' để thể hiện sự đối lập: Trụ sở tại Wales NHƯNG vẫn có các chi nhánh khác trải rộng.",
     "explanation_grammar": "But nối hai mệnh đề độc lập.",
-    "translation": "Trụ sở chính của Ngân hàng RBN được thu lại nằm ở xứ Wales, nhưng nó lại có dàn vòi chi nhánh mọc lên xuyên khắp Liên hiệp Vương quốc Anh.",
+    "translation": "Trụ sở chính của Ngân hàng RBN đặt tại xứ Wales, nhưng ngân hàng còn có nhiều chi nhánh khác trên khắp Vương quốc Anh.",
     "core_vocabulary": [
       {
         "word": "headquarters",
@@ -9165,9 +9165,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Unless có nghĩa bằng với lF NOT (Nếu không). Tức là nếu kiện hàng không được dán đúng nhãn, họ sẽ không chịu trách nhiệm bảo đảm ngày tới.",
+    "explanation_reason": "'Unless' có nghĩa tương đương 'if not' (nếu không). Nếu kiện hàng không được dán nhãn đúng, Harris Mailers sẽ không bảo đảm ngày giao đến.",
     "explanation_grammar": "Unless + Mệnh đề Khẳng định = If + Mệnh đề Phủ Định.",
-    "translation": "TRỪ KHI kiện hàng được dán nhãn ghi mác một cách cẩn trọng chuẩn chỉ, bằng không thì Hãng gửi bưu phẩm Harris Mailers sẽ không đời nào chịu trách nhiệm bảo đảm ngày tới nơi của nó đâu.",
+    "translation": "Trừ khi kiện hàng được dán nhãn chính xác, Harris Mailers không thể bảo đảm ngày hàng đến nơi.",
     "core_vocabulary": [
       {
         "word": "unless",
@@ -9189,7 +9189,7 @@ export const grammarQuestions = [
     "grammar_type": "Liên từ",
     "explanation_reason": "Sự việc sẽ xảy ra khi một điều kiện khác diễn ra. 'When' (Khi mà) nối hai mệnh đề cực chuẩn nghĩa.",
     "explanation_grammar": "When + clause.",
-    "translation": "Chủ nhà có thể bắt đầu tiết kiệm được một lượng tiền kha khá KHI MÀ họ thay thế dàn máy lò sưởi nhiệt của họ bằng dòng máy lò sưởi siêu cấp vô địch tiết kiệm nhiên liệu TD Ultra của chúng tôi.",
+    "translation": "Chủ nhà có thể tiết kiệm tiền khi họ thay lò sưởi cũ bằng dòng TD Ultra siêu tiết kiệm của chúng tôi.",
     "core_vocabulary": [
       {
         "word": "super-efficient",
@@ -9211,7 +9211,7 @@ export const grammarQuestions = [
     "grammar_type": "Liên từ",
     "explanation_reason": "Mở rộng giờ nhằm MỤC ĐÍCH 'để có thể duy trì được tính cạnh tranh'. Cấu trúc chỉ mục đích.",
     "explanation_grammar": "So that/ In order that + Mệnh đề thể hiện mục đích.",
-    "translation": "Boutique Parkano đã quyết tâm nới lỏng kéo giãn ra thêm giờ mở cửa làm việc mỗi ngày ĐỂ MÀ nó có thể bĩu môi mà cạnh tranh gồng sức được với các hộ kinh doanh địa phương khác chung quanh vùng.",
+    "translation": "Parkano Boutique đã mở rộng giờ mở cửa để có thể duy trì sức cạnh tranh với các doanh nghiệp địa phương khác.",
     "core_vocabulary": [
       {
         "word": "so that",
@@ -9236,9 +9236,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Đứng sau một động từ mang nghĩa Tường Thuật/Yêu Cầu (như request, ask) thì cần liên từ 'that' (như thế nào/rằng) để mở ra nối tiếp ý phụ.",
-    "explanation_grammar": "Verb tường thuật + that + Clause.",
-    "translation": "Khu bộ phận quản trị yêu cầu RẰNG tất cả mọi bác tài nên mau tự giác mà gửi nộp biên lai phiếu đổ xăng dầu quý 3 vào trước đợt cữ 5 giờ trưa ngày 30 tháng 10.",
+    "explanation_reason": "Sau động từ tường thuật/yêu cầu như 'request' hay 'ask' cần liên từ 'that' để dẫn vào mệnh đề tân ngữ.",
+    "explanation_grammar": "Động từ tường thuật + that + mệnh đề.",
+    "translation": "Ban quản lý yêu cầu rằng tất cả tài xế phải nộp biên lai nhiên liệu quý ba trước 5 giờ chiều ngày 30 tháng 10.",
     "core_vocabulary": [
       {
         "word": "request that",
@@ -9253,14 +9253,14 @@ export const grammarQuestions = [
     "options": {
       "A": "either",
       "B": "both",
-      "C": "either",
+      "C": "neither",
       "D": "nor"
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Gặp lại cặp bài trùng, vế sau có nhúng chữ 'and', điền ngay chữ 'both' để chặp đủ nhịp tạo thành cặp liên từ 'Both... and...'. Điệu này là ẵm trọn CẢ A LẪN B.",
-    "explanation_grammar": "Both ... and ... (Cả ... lẫn ...).",
-    "translation": "Bà Murai có vẻ nghiêng ưng thuận muốn các bác quản lý sếp cần phải ló mặt tham dự CẢ hai buổi họp trong tháng Ba VÀ THÊM CẢ cái workshop huấn luyện trong tháng Tư.",
+    "explanation_reason": "Sau chỗ trống có 'and' nối hai tân ngữ, nên cần 'both' để tạo cặp liên từ tương quan 'both A and B' (cả A lẫn B).",
+    "explanation_grammar": "Cặp liên từ tương quan: both A and B.",
+    "translation": "Bà Murai muốn các quản lý tham dự cả buổi họp vào tháng Ba lẫn buổi hội thảo vào tháng Tư.",
     "core_vocabulary": [
       {
         "word": "workshop",
@@ -9280,9 +9280,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Hàng câu này lật ngược lại chút y như câu 226 bên trên. Vế đầu cho chữ 'Both', vế sau điền 'and'. Không trật đường ray đi đâu được.",
-    "explanation_grammar": "Both + A + and + B.",
-    "translation": "Các buổi hội thảo phát triển lộ trình sự nghiệp được tạo ra ban ân dành ráo trọi cho CẢ 2 bên là đám lính làm xoay ca (part-time) VÀ cả phe nhân viên làm toàn thời gian (full-time).",
+    "explanation_reason": "Vế trước đã có 'both', nên chỗ trống phải là 'and' để hoàn tất cặp liên từ tương quan 'both A and B'.",
+    "explanation_grammar": "Cặp liên từ tương quan: both A and B.",
+    "translation": "Các buổi hội thảo phát triển sự nghiệp mở cho cả nhân viên bán thời gian lẫn nhân viên toàn thời gian.",
     "core_vocabulary": [
       {
         "word": "both A and B",
@@ -9302,9 +9302,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Liên từ 'but' đóng chức năng nối 2 cụm động từ đối nghịch. Sắp bị bốc đi giao NHƯNG có lúc vẫn có thể bị bạn làm lệnh huỷ ngay được trót lọt.",
-    "explanation_grammar": "But nối từ hai vế đẳng lập (verb-verb / phrase-phrase).",
-    "translation": "Mẫu lệnh đơn hàng đặt phôi của ngài đây thì dạo chuẩn bị được phái xe chở giao đến mốc rồi NHƯNG thật ra thì nó vẫn nhọc nhõn còn có thể bị hoãn nhịp dừng hủy bỏ thao tác cho đến hạn giờ khung giờ tròn nhịp 2 P.M. chiều ngày hôm nay.",
+    "explanation_reason": "'But' nối hai cụm động từ mang ý đối lập: đơn hàng sắp được giao nhưng vẫn có thể hủy.",
+    "explanation_grammar": "But nối hai vế đẳng lập (cụm động từ - cụm động từ).",
+    "translation": "Đơn hàng của bạn sắp được giao nhưng vẫn có thể hủy cho đến 2 giờ chiều hôm nay.",
     "core_vocabulary": [
       {
         "word": "be about to",
@@ -9324,9 +9324,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Gặp lại anh bạn 'OR' bên kia vế, điền chữ 'Either' để chốt trọn liên từ đẳng lập Hoặc Một Trong Hai ('hoặc là a, hoặc là b').",
-    "explanation_grammar": "Either X or Y.",
-    "translation": "Bà Jung đã lên tiếng mớm sườn đề xuất là HOẶC nỏ cha nội Mr. Tesler HOẶC nỏ thì bà thím Ms. Sato ắt nên tham trẩy trọn cái hội nghị mâm khánh thành diễn vào dịp tháng sau.",
+    "explanation_reason": "Vế sau có 'or', nên chỗ trống cần 'either' để tạo cặp liên từ tương quan 'either A or B'.",
+    "explanation_grammar": "Cặp liên từ tương quan: either A or B.",
+    "translation": "Bà Jung đã đề xuất rằng hoặc ông Tesler hoặc bà Sato nên tham dự hội nghị vào tháng tới.",
     "core_vocabulary": [
       {
         "word": "suggest",
@@ -9346,9 +9346,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Liên từ",
-    "explanation_reason": "Việc công bố lịch diễn người đọc bài phát biểu nên đặt ở TRƯỚC (Before) khoảnh khắc hội nghị bắt đầu chạy (began).",
-    "explanation_grammar": "Before + Mệnh đề chỉ mốc thời gian diễn ra sau.",
-    "translation": "Lùi lùi TRƯỚC khi cái hội nghị này kịp nổ súng chóp phát trào bắt đầu chạy, Tổng thư bục MOSA vị là bà Yolanda Gris đã oang mõm ra đọc thông lệnh loan báo danh sách trình người phát ngôn.",
+    "explanation_reason": "Việc công bố danh sách diễn giả diễn ra trước thời điểm hội nghị bắt đầu, nên dùng 'Before' (trước khi).",
+    "explanation_grammar": "Before + mệnh đề chỉ mốc thời gian diễn ra sau.",
+    "translation": "Trước khi hội nghị bắt đầu, Chủ tịch MOSA Yolanda Gris đã công bố lịch trình các diễn giả.",
     "core_vocabulary": [
       {
         "word": "announce",
@@ -32194,7 +32194,18 @@ export const grammarQuestions = [
   "explanation_reason": "Dùng 'Unless' (trừ khi) để chỉ điều kiện phủ định: 'Trừ khi ông ấy đến trong 10 phút nữa (nếu không ông ấy sẽ trễ)'.",
   "explanation_grammar": "Negative Condition (Unless).",
   "translation": "Trừ khi ông ấy đến sân bay trong mười phút nữa, ông Santini sẽ phải đi chuyến bay muộn hơn.",
-  "core_vocabulary": []
+  "core_vocabulary": [
+    {
+      "word": "arrive",
+      "type": "v.",
+      "meaning": "đến, tới nơi"
+    },
+    {
+      "word": "flight",
+      "type": "n.",
+      "meaning": "chuyến bay"
+    }
+  ]
 },
 {
   "id": "q1226",
@@ -32401,7 +32412,18 @@ export const grammarQuestions = [
   "explanation_reason": "Cấu trúc 'both A and B' (cả A và B).",
   "explanation_grammar": "Correlative Conjunction (Both...and).",
   "translation": "Chính sách của công ty cho phép đi công tác bằng cả tàu hỏa và máy bay.",
-  "core_vocabulary": []
+  "core_vocabulary": [
+    {
+      "word": "policy",
+      "type": "n.",
+      "meaning": "chính sách"
+    },
+    {
+      "word": "business travel",
+      "type": "n.",
+      "meaning": "công tác, đi làm việc xa"
+    }
+  ]
 },
 {
   "id": "q1235",
@@ -33729,7 +33751,7 @@ export const grammarQuestions = [
 },
 {
   "id": "q1287",
-  "question": "The security system will be upgraded next weekend ______ unauthorized access to the server room can be prevented.",
+  "question": "Employees will not receive reimbursement for travel expenses ______ they provide original receipts.",
   "options": {
     "A": "unless",
     "B": "therefore",
@@ -33738,7 +33760,7 @@ export const grammarQuestions = [
   },
   "correct_answer": "A",
   "grammar_type": "Liên từ",
-  "explanation_reason": "'Unless' (trừ khi) dùng để đưa ra điều kiện loại trừ.",
+  "explanation_reason": "'Unless' (trừ khi) = 'if not', nêu điều kiện bắt buộc: không nộp hóa đơn gốc thì không được hoàn tiền. 'Except' và 'without' là giới từ, 'therefore' là trạng từ liên kết, đều không nối được mệnh đề.",
   "explanation_grammar": "Conditional Conjunction.",
   "translation": "Nhân viên sẽ không nhận được tiền hoàn trả cho các chi phí đi lại trừ khi họ cung cấp các hóa đơn gốc.",
   "core_vocabulary": [
@@ -34022,7 +34044,7 @@ export const grammarQuestions = [
   "grammar_type": "Liên từ",
   "explanation_reason": "'If' (nếu) đưa ra điều kiện cho chuyến thăm.",
   "explanation_grammar": "Conditional Conjunction.",
-  "translation": "Quản lý khu vực sẽ đến thăm cơ sở mới ở Seattle nếu bà ấy có thể tìm được mộ chuyến bay phù hợp vào Thứ Hai tới.",
+  "translation": "Quản lý khu vực sẽ đến thăm cơ sở mới ở Seattle nếu bà ấy có thể tìm được một chuyến bay phù hợp vào Thứ Hai tới.",
   "core_vocabulary": [
     {
       "word": "facility",
@@ -34154,7 +34176,7 @@ export const grammarQuestions = [
   "grammar_type": "Liên từ",
   "explanation_reason": "'So that' (để mà) dùng để chỉ mục đích, đứng trước một mệnh đề.",
   "explanation_grammar": "Conjunction of Purpose.",
-  "translation": "Kỹ thuật viên CNTT đã cài đặt một bản nâng cấp tường lửa để các dữ liêu bảo mật của công ty có thể được bảo vệ tốt hơn.",
+  "translation": "Kỹ thuật viên CNTT đã cài đặt một bản nâng cấp tường lửa để dữ liệu bảo mật của công ty có thể được bảo vệ tốt hơn.",
   "core_vocabulary": [
     {
       "word": "confidential",
@@ -34414,7 +34436,7 @@ export const grammarQuestions = [
   },
   "correct_answer": "B",
   "grammar_type": "Liên từ",
-  "explanation_reason": "'Until' (cho đến khi) chỉ mốc thời gian môt trạng thái kết thúc.",
+  "explanation_reason": "'Until' (cho đến khi) chỉ mốc thời gian một trạng thái kết thúc.",
   "explanation_grammar": "Conjunction of Time.",
   "translation": "Buổi định hướng nhân viên mới sẽ không bắt đầu cho đến khi tất cả những người tham gia đã đăng ký đều đã đến đông đủ.",
   "core_vocabulary": [
@@ -34669,7 +34691,7 @@ export const grammarQuestions = [
   },
   "correct_answer": "A",
   "grammar_type": "Liên từ",
-  "explanation_reason": "'Since' (vA) nối mệnh đề chỉ nguyên nhân khởi đầu câu.",
+  "explanation_reason": "'Since' (vì) nối mệnh đề chỉ nguyên nhân, đứng ở đầu câu.",
   "explanation_grammar": "Conjunction of Cause.",
   "translation": "Vì thiết kế ban đầu đã bị khách hàng từ chối, cả nhóm đã phải làm việc muộn để tạo ra một đề xuất mới.",
   "core_vocabulary": [
@@ -34747,7 +34769,7 @@ export const grammarQuestions = [
   "grammar_type": "Liên từ",
   "explanation_reason": "'Because' (vì) nối hai mệnh đề chỉ nguyên nhân.",
   "explanation_grammar": "Conjunction of Cause.",
-  "translation": "Ban quản lý đã quyết định trì hoãn việc tung ra sản phẩm vì các vật liệu quảng bá vẫn chưa được chuẩn bị đầy đủ.",
+  "translation": "Ban quản lý đã quyết định trì hoãn việc tung ra sản phẩm vì các tài liệu quảng bá vẫn chưa được chuẩn bị đầy đủ.",
   "core_vocabulary": [
     {
       "word": "promotional materials",
@@ -34838,7 +34860,7 @@ export const grammarQuestions = [
   },
   "correct_answer": "B",
   "grammar_type": "Liên từ",
-  "explanation_reason": "'Now that' (vì giờ đây) dùng để chỉ nguyên nhân từ môt tình trạng vừa mới thay đổi.",
+  "explanation_reason": "'Now that' (vì giờ đây) dùng để chỉ nguyên nhân từ một tình trạng vừa mới thay đổi.",
   "explanation_grammar": "Conjunction of Cause.",
   "translation": "Vì giờ đây ngân sách hàng năm đã được phê duyệt, bộ phận có thể bắt đầu mua sắm các đồ dùng văn phòng mới.",
   "core_vocabulary": [
@@ -63992,16 +64014,16 @@ export const grammarQuestions = [
     "id": "q_conjunction_test13_118",
     "question": "______ the experimental treatment showed promising results in the first phase, more research is needed to ensure its long-term safety.",
     "options": {
-      "A": "Even if",
+      "A": "Even though",
       "B": "Despite",
       "C": "Because of",
       "D": "As for"
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
-    "explanation_reason": "'Even if' ở đây chỉ sự nhượng bộ (ngay cả khi/mặc dù). Lưu ý: Thường dùng 'Even though' cho sự thật đã xảy ra, nhưng 'Even if' cũng được chấp nhận trong ngữ cảnh này để nhấn mạnh.",
+    "explanation_reason": "Mệnh đề sau chỗ trống nêu một sự thật đã xảy ra (showed promising results) nên phải dùng 'Even though' (mặc dù). 'Despite', 'Because of', 'As for' đều là giới từ, phải đi với cụm danh từ.",
     "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
-    "translation": "Ngay cả khi phương pháp điều trị thử nghiệm cho thấy kết quả hứa hẹn trong giai đoạn đầu, vẫn cần nhiều nghiên cứu hơn để đảm bảo tính an toàn lâu dài của nó.",
+    "translation": "Mặc dù phương pháp điều trị thử nghiệm cho thấy kết quả hứa hẹn trong giai đoạn đầu, vẫn cần nhiều nghiên cứu hơn để đảm bảo tính an toàn lâu dài của nó.",
     "core_vocabulary": [
       {
         "word": "promising",
