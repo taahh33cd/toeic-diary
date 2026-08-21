@@ -1465,7 +1465,18 @@ export const grammarQuestions = [
     "explanation_reason": "Chủ ngữ 'The secretary' + Động từ 'answered' + Tân ngữ 'the emails'.",
     "explanation_grammar": "Cấu trúc câu",
     "translation": "Thư ký đã trả lời các email.",
-    "core_vocabulary": []
+    "core_vocabulary": [
+      {
+        "word": "secretary",
+        "type": "n.",
+        "meaning": "thư ký"
+      },
+      {
+        "word": "answer",
+        "type": "v.",
+        "meaning": "trả lời, hồi đáp"
+      }
+    ]
   },
   {
     "id": "q0466",
@@ -4541,7 +4552,18 @@ export const grammarQuestions = [
     "explanation_reason": "Động từ 'ran' (chạy) là một nội động từ, không cần tân ngữ (Object) theo sau. 'away' đóng vai trò cung cấp thêm thông tin phụ trợ (Adverb).",
     "explanation_grammar": "Cấu trúc S-V: S (Chủ ngữ) + V (Nội động từ). Có thể có trạng ngữ đi kèm nhưng không làm thay đổi cấu trúc S-V.",
     "translation": "Con gà đã chạy mất.",
-    "core_vocabulary": []
+    "core_vocabulary": [
+      {
+        "word": "chicken",
+        "type": "n.",
+        "meaning": "con gà"
+      },
+      {
+        "word": "run away",
+        "type": "v.",
+        "meaning": "chạy đi, bỏ chạy"
+      }
+    ]
   },
   {
     "id": "q0042",
@@ -4557,7 +4579,18 @@ export const grammarQuestions = [
     "explanation_reason": "Chủ ngữ 'She' + Động từ 'sang'. 'beautifully' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc S-V (Chủ ngữ - Động từ). Trạng từ (Adverb) bổ nghĩa không làm thay đổi cấu trúc cốt lõi.",
     "translation": "Cô ấy hát rất hay/đẹp.",
-    "core_vocabulary": []
+    "core_vocabulary": [
+      {
+        "word": "sing",
+        "type": "v.",
+        "meaning": "hát"
+      },
+      {
+        "word": "beautifully",
+        "type": "adv.",
+        "meaning": "một cách hay, một cách đẹp đẽ"
+      }
+    ]
   },
   {
     "id": "q0043",
@@ -4622,18 +4655,29 @@ export const grammarQuestions = [
     "explanation_reason": "Động từ 'wants' (muốn) là ngoại động từ tác động trực tiếp vào một tân ngữ 'some tea'. Dạng này thuộc cấu trúc S-V-O.",
     "explanation_grammar": "Cấu trúc S-V-O: S + Ngoại động từ (Transitive Verb) + O (Tân ngữ - Đối tượng bị tác động).",
     "translation": "Anh ấy muốn một ít trà.",
-    "core_vocabulary": []
+    "core_vocabulary": [
+      {
+        "word": "want",
+        "type": "v.",
+        "meaning": "muốn"
+      },
+      {
+        "word": "tea",
+        "type": "n.",
+        "meaning": "trà"
+      }
+    ]
   },
   {
     "id": "q0046",
     "question": "The customs officers inspected the cargo.",
     "options": {
       "A": "S-V-C",
-      "B": "S-V-O",
-      "C": "S-V-O-C",
-      "D": "S-V"
+      "B": "S-V-O-C",
+      "C": "S-V",
+      "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The customs officers' (nhân viên hải quan) thực hiện hành động 'inspected' (kiểm tra) tác động lên tân ngữ 'the cargo' (lô hàng). Cấu trúc S-V-O.",
     "explanation_grammar": "Cấu trúc S-V-O (Chủ ngữ - Động từ - Tân ngữ).",
@@ -4655,12 +4699,12 @@ export const grammarQuestions = [
     "id": "q0047",
     "question": "Ms. Brown bought her son some bread.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O",
-      "C": "S-V-O-O",
-      "D": "S-V"
+      "A": "S-V-O",
+      "B": "S-V-O-O",
+      "C": "S-V",
+      "D": "S-V-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Động từ 'bought' (mua) lấy hai tân ngữ: 'her son' (tân ngữ gián tiếp - người nhận) và 'some bread' (tân ngữ trực tiếp - vật được mua). Đây là cấu trúc có 2 tân ngữ S-V-O-O.",
     "explanation_grammar": "Cấu trúc S-V-O-O: S + V (give, send, buy, make...) + Tân ngữ gián tiếp (O1) + Tân ngữ trực tiếp (O2).",
@@ -4682,28 +4726,39 @@ export const grammarQuestions = [
     "id": "q0048",
     "question": "You make me happy.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O-C",
-      "C": "S-V",
-      "D": "S-V-O"
+      "A": "S-V-O",
+      "B": "S-V-C",
+      "C": "S-V-O-C",
+      "D": "S-V"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Câu có tân ngữ 'me' và theo sau là tính từ 'happy' mô tả trạng thái cho tân ngữ này (khiến tôi TRỞ NÊN như thế nào). Do đó, 'happy' là Object Complement (C).",
     "explanation_grammar": "Cấu trúc S-V-O-C: S + V (make/find/keep/call...) + O + C (Tính từ/Danh từ bổ trợ ý nghĩa cho tân ngữ).",
     "translation": "Bạn làm tôi hạnh phúc.",
-    "core_vocabulary": []
+    "core_vocabulary": [
+      {
+        "word": "make",
+        "type": "v.",
+        "meaning": "làm cho, khiến cho"
+      },
+      {
+        "word": "happy",
+        "type": "adj.",
+        "meaning": "vui, hạnh phúc"
+      }
+    ]
   },
   {
     "id": "q0049",
     "question": "They found the girl honest.",
     "options": {
       "A": "S-V-C",
-      "B": "S-V-O-C",
-      "C": "S-V",
-      "D": "S-V-O"
+      "B": "S-V",
+      "C": "S-V-O",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "'the girl' là tân ngữ, 'honest' (trung thực) là tính từ nhận xét cho tân ngữ này đóng vai trò thành Bổ ngữ (C). Đây là dạng S-V-O-C.",
     "explanation_grammar": "Cấu trúc đánh giá S-V-O-C: Chủ ngữ + find/consider.. + Tân ngữ + Tính từ bổ ngữ (Thấy thứ gì đó như thế nào).",
@@ -4725,28 +4780,39 @@ export const grammarQuestions = [
     "id": "q0050",
     "question": "Because it rained a lot, we stayed at home.",
     "options": {
-      "A": "S-V-O-C",
+      "A": "S-V",
       "B": "S-V-C",
       "C": "S-V-O",
-      "D": "S-V"
+      "D": "S-V-O-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Mệnh đề chính là 'we stayed at home'. Cụm 'at home' là trạng ngữ chỉ nơi chốn; 'Because...' chỉ là trạng ngữ phụ. Nên đây là cấu trúc cơ bản S-V.",
     "explanation_grammar": "Cấu trúc S-V cơ bản, đi kèm với các cụm/trạng từ ở nhiều vị trí nhưng cốt lõi vẫn chỉ là S và V diễn ra độc lập.",
     "translation": "Bởi vì trời mưa to, chúng tôi đã ở nhà.",
-    "core_vocabulary": []
+    "core_vocabulary": [
+      {
+        "word": "rain",
+        "type": "v.",
+        "meaning": "mưa"
+      },
+      {
+        "word": "stay",
+        "type": "v.",
+        "meaning": "ở lại"
+      }
+    ]
   },
   {
     "id": "q0051",
     "question": "All employees must wear a uniform.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V",
-      "C": "S-V-O-C",
-      "D": "S-V-O"
+      "A": "S-V-O-C",
+      "B": "S-V-O",
+      "C": "S-V-C",
+      "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "'must wear' là ngoại động từ sinh ra tác động lên 'a uniform' (đồng phục) tạo thành hệ thống ngoại Tân ngữ (Object). Cấu trúc: S-V-O.",
     "explanation_grammar": "S-V-O: Ngoại động từ bắt buộc phải được gắn kèm tân ngữ để người nghe hiểu đầy đủ ý nghĩa (Mặc cái gì?).",
@@ -4795,12 +4861,12 @@ export const grammarQuestions = [
     "id": "q0053",
     "question": "Mobile phones are very useful.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V",
-      "C": "S-V-O-C",
-      "D": "S-V-O"
+      "A": "S-V-O-C",
+      "B": "S-V-C",
+      "C": "S-V-O",
+      "D": "S-V"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "'are' là động từ liên kết nối chủ ngữ với Tính từ 'useful' (Làm Complement). Đây là một cấu trúc S-V-C.",
     "explanation_grammar": "S-V-C: Chủ ngữ bao giờ cũng đi kề cận với Tobe và một tính từ giải thích tính chất cho chủ ngữ đó.",
@@ -4822,12 +4888,12 @@ export const grammarQuestions = [
     "id": "q0054",
     "question": "We replaced the fax machine.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V",
-      "C": "S-V-C",
-      "D": "S-V-O"
+      "A": "S-V-C",
+      "B": "S-V-O-C",
+      "C": "S-V-O",
+      "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Hành động 'replaced' tác động trức tiếp lên một tân ngữ đứng sau nó (the fax machine) để chỉ rõ định hướng S-V-O.",
     "explanation_grammar": "Mô hình kinh điển S-V-O dành cho mọi động từ mang tính chất thay đổi một chủ thể khác.",
@@ -4850,11 +4916,11 @@ export const grammarQuestions = [
     "question": "The office building is large.",
     "options": {
       "A": "S-V",
-      "B": "S-V-O",
-      "C": "S-V-O-C",
-      "D": "S-V-C"
+      "B": "S-V-C",
+      "C": "S-V-O",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Động từ tobe 'is' đóng vai trò Linking verb dẫn đường đến Complement 'large'. Đây là mẫu câu S-V-C.",
     "explanation_grammar": "Cấu trúc Tobe truyền thống (Subject + Linking verb + Noun/Adjective: C).",
@@ -4877,9 +4943,9 @@ export const grammarQuestions = [
     "question": "The business proposals seem promising.",
     "options": {
       "A": "S-V-C",
-      "B": "S-V-O-C",
-      "C": "S-V-O",
-      "D": "S-V"
+      "B": "S-V-O",
+      "C": "S-V",
+      "D": "S-V-O-C"
     },
     "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
@@ -4903,12 +4969,12 @@ export const grammarQuestions = [
     "id": "q0057",
     "question": "The player became the team leader.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-O",
-      "C": "S-V",
-      "D": "S-V-C"
+      "A": "S-V",
+      "B": "S-V-O-C",
+      "C": "S-V-C",
+      "D": "S-V-O"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Động từ 'became' là phương tiện nối giữa Cầu thủ và chức vụ 'đội trưởng' (Danh từ định danh làm Complement).",
     "explanation_grammar": "S-V-C với động từ liên kết chỉ sự thay đổi (become, turn...).",
@@ -4957,12 +5023,12 @@ export const grammarQuestions = [
     "id": "q0059",
     "question": "I found the book easily.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-O",
-      "C": "S-V-C",
-      "D": "S-V"
+      "A": "S-V-C",
+      "B": "S-V-O-C",
+      "C": "S-V",
+      "D": "S-V-O"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'I' + Động từ 'found' + Tân ngữ 'the book'. 'easily' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-O-C.",
     "explanation_grammar": "S-V-(O)-(A): Trạng từ (Adverb) bổ nghĩa không được tính là Cấu trúc Complement.",
@@ -4984,12 +5050,12 @@ export const grammarQuestions = [
     "id": "q0060",
     "question": "The management will create a special team.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-O-C",
-      "C": "S-V-C",
-      "D": "S-V-O"
+      "A": "S-V-O",
+      "B": "S-V-C",
+      "C": "S-V",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Ngoại Động từ 'create' bắt buộc sinh ra sản phẩm trực tiếp (Tân ngữ - Object), ở đây là đội đặc nhiệm 'a special team'.",
     "explanation_grammar": "Cấu trúc S-V-O điển hình của động từ sáng tạo.",
@@ -5011,12 +5077,12 @@ export const grammarQuestions = [
     "id": "q0061",
     "question": "Mr. Anderson needs advice from his supervisor.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-O-C",
+      "A": "S-V-O-C",
+      "B": "S-V-O",
       "C": "S-V-C",
       "D": "S-V"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "'needs' là ngoại động từ, cần có mục tiêu là 'advice' (lời khuyên) làm Tân ngữ. Cụm 'from his supervisor' chỉ là cụm giới từ đóng vai trò bổ trợ nguồn gốc chứ không thay đổi xương sống câu S-V-O.",
     "explanation_grammar": "S-V-O có thêm cụm giới từ làm phụ ngữ.",
@@ -5038,12 +5104,12 @@ export const grammarQuestions = [
     "id": "q0062",
     "question": "Most employees take part in the competition.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-O-C",
-      "C": "S-V",
-      "D": "S-V-C"
+      "A": "S-V",
+      "B": "S-V-C",
+      "C": "S-V-O",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Cụm động từ 'take part in' (tham gia) tác động vào sự kiện đứng sau nó 'the competition' (tân ngữ).",
     "explanation_grammar": "S-V-O: Ngoại động từ có thể ở dưới dạng Cụm động từ (Verb phrase).",
@@ -5065,12 +5131,12 @@ export const grammarQuestions = [
     "id": "q0063",
     "question": "Ms. Bacon was a consultant at a hospital.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V",
-      "C": "S-V-O-C",
-      "D": "S-V-C"
+      "A": "S-V-C",
+      "B": "S-V-O-C",
+      "C": "S-V-O",
+      "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "'was' là Linking verb liên kết chủ ngữ vọi định danh nghề nghiệp làm Complement (Bổ ngữ).",
     "explanation_grammar": "S-V-C với V là chuỗi Tobe chỉ định danh.",
@@ -5119,10 +5185,10 @@ export const grammarQuestions = [
     "id": "q0065",
     "question": "Each participant is required to sign his or her application.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O-C",
+      "A": "S-V-O-C",
+      "B": "S-V-O",
       "C": "S-V",
-      "D": "S-V-O"
+      "D": "S-V-C"
     },
     "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
@@ -5146,9 +5212,9 @@ export const grammarQuestions = [
     "id": "q0066",
     "question": "New employees will receive training for a week.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V",
-      "C": "S-V-C",
+      "A": "S-V-C",
+      "B": "S-V-O-C",
+      "C": "S-V",
       "D": "S-V-O"
     },
     "correct_answer": "D",
@@ -5173,12 +5239,12 @@ export const grammarQuestions = [
     "id": "q0067",
     "question": "All staff attend a meeting on Mondays.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V",
-      "C": "S-V-C",
-      "D": "S-V-O"
+      "A": "S-V-O",
+      "B": "S-V-O-C",
+      "C": "S-V",
+      "D": "S-V-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Động từ 'attend' (tham gia) gắn liền với đối tượng sự kiện 'a meeting' - tân ngữ đón nhận. Đây là mẫu S-V-O.",
     "explanation_grammar": "S-V-O cốt lõi.",
@@ -5200,12 +5266,12 @@ export const grammarQuestions = [
     "id": "q0068",
     "question": "Machines will arrive tomorrow.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V",
-      "C": "S-V-O",
-      "D": "S-V-O-C"
+      "A": "S-V-O",
+      "B": "S-V-C",
+      "C": "S-V-O-C",
+      "D": "S-V"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'Machines' + Động từ 'arrive'. 'tomorrow' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "S-V là cấu trúc thuần có V là nội động từ tự nó trọn vẹn không cần ai hỗ trợ.",
@@ -5227,12 +5293,12 @@ export const grammarQuestions = [
     "id": "q0069",
     "question": "The Web site provides advice for gardening.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O-C",
-      "C": "S-V",
-      "D": "S-V-O"
+      "A": "S-V-O",
+      "B": "S-V",
+      "C": "S-V-C",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Ngoại động từ 'provides' tác động đến một thứ vật phẩm cung cấp là 'advice'. Tạo nên liên đới S-V-O.",
     "explanation_grammar": "S-V-O cơ bản truyền thống.",
@@ -5256,10 +5322,10 @@ export const grammarQuestions = [
     "options": {
       "A": "S-V-C",
       "B": "S-V-O-C",
-      "C": "S-V",
-      "D": "S-V-O"
+      "C": "S-V-O",
+      "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "'installed' sinh ra một đích đến chịu tác động là bộ thiết bị điện mới (new equipment) đóng vai Object cho câu theo chuẩn S-V-O.",
     "explanation_grammar": "S-V-O là khung miêu tả một hành động thay đổi vật chủ thứ 2.",
@@ -5816,12 +5882,12 @@ export const grammarQuestions = [
     "id": "q0091",
     "question": "Talk-Talk Cell Phone Company will soon be merging with its main ______.",
     "options": {
-      "A": "competitively",
-      "B": "competitor",
-      "C": "competitive",
-      "D": "competing"
+      "A": "competitive",
+      "B": "competing",
+      "C": "competitor",
+      "D": "competitively"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau tính từ 'main' (chính) cần một danh từ để tạo thành cụm danh từ làm tân ngữ cho giới từ 'with'. 'competitor' (đối thủ cạnh tranh) là danh từ phù hợp.",
     "explanation_grammar": "Tính từ (Adjective) + Danh từ (Noun).",
@@ -5843,10 +5909,10 @@ export const grammarQuestions = [
     "id": "q0092",
     "question": "A favorable report on the ______ of Seesom Eyewear convinced the partners to invest in the company.",
     "options": {
-      "A": "profited",
+      "A": "profitable",
       "B": "profitability",
-      "C": "profitably",
-      "D": "profitable"
+      "C": "profited",
+      "D": "profitably"
     },
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
@@ -5897,12 +5963,12 @@ export const grammarQuestions = [
     "id": "q0094",
     "question": "Ms. Villanueva has extensive experience in corporate ______ and budgeting.",
     "options": {
-      "A": "financial",
-      "B": "financed",
-      "C": "finance",
-      "D": "financially"
+      "A": "financed",
+      "B": "financially",
+      "C": "financial",
+      "D": "finance"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Từ cần điền kết hợp với 'corporate' tạo thành cụm danh từ đi sau giới từ 'in' (sóng đôi với danh từ 'budgeting' qua cấu trúc đẳng lập 'and'). 'finance' là danh từ (tài chính).",
     "explanation_grammar": "Cụm danh từ: corporate finance (tài chính doanh nghiệp).",
@@ -5924,12 +5990,12 @@ export const grammarQuestions = [
     "id": "q0095",
     "question": "New emissions standards have forced Rider Auto to modify the process of engine ______.",
     "options": {
-      "A": "constructive",
-      "B": "constructed",
-      "C": "construction",
-      "D": "construct"
+      "A": "construction",
+      "B": "construct",
+      "C": "constructive",
+      "D": "constructed"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Từ cần điền là danh từ đứng sau giới từ 'of' và từ hạn định 'engine', tạo thành cụm danh từ 'engine construction' (sự chế tạo động cơ).",
     "explanation_grammar": "Danh từ ghép: Noun + Noun.",
@@ -5978,12 +6044,12 @@ export const grammarQuestions = [
     "id": "q0097",
     "question": "Ms. Durkin asked for volunteers to help ______ with the employee fitness program.",
     "options": {
-      "A": "hers",
-      "B": "her",
-      "C": "she",
-      "D": "herself"
+      "A": "her",
+      "B": "she",
+      "C": "herself",
+      "D": "hers"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau động từ 'help' (giúp đỡ) cần một tân ngữ trực tiếp (Object pronoun). 'her' đóng vai trò làm tân ngữ (giúp đỡ CÔ ẤY).",
     "explanation_grammar": "Động từ + Tân ngữ (Verb + Object pronoun).",
@@ -6005,12 +6071,12 @@ export const grammarQuestions = [
     "id": "q0098",
     "question": "Local merchants are hopeful that if this new business succeeds, ______ will also benefit.",
     "options": {
-      "A": "theirs",
+      "A": "themselves",
       "B": "them",
       "C": "their",
-      "D": "themselves"
+      "D": "theirs"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Khoảng trống đóng vai trò làm Chủ ngữ cho động từ 'will benefit' nên không thể dùng tân ngữ hay tính từ. Đại từ sở hữu 'theirs' = 'their business' (việc kinh doanh của họ).",
     "explanation_grammar": "Đại từ sở hữu (Possessive pronouns) thay thế cho đại từ/danh từ đã nhắc trước đó để tránh lặp (their business).",
@@ -6032,12 +6098,12 @@ export const grammarQuestions = [
     "id": "q0099",
     "question": "If ______ are not satisfied with an item, return it for a full refund within 30 days of purchase.",
     "options": {
-      "A": "you",
-      "B": "yourself",
-      "C": "your",
+      "A": "yourself",
+      "B": "your",
+      "C": "you",
       "D": "yours"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Vị trí này đang thiếu vắng vị trí Chủ ngữ (Subject) làm chủ hành động tobe 'are'. Đại từ nhân xưng 'You' là đáp án đúng.",
     "explanation_grammar": "Đại từ nhân xưng (Subject pronouns) đúng đầu câu làm chủ ngữ.",
@@ -6059,12 +6125,12 @@ export const grammarQuestions = [
     "id": "q0100",
     "question": "Kespi Brand cookies, delicious by ______, are even better when paired with a glass of milk.",
     "options": {
-      "A": "themselves",
-      "B": "theirs",
-      "C": "them",
-      "D": "they"
+      "A": "them",
+      "B": "themselves",
+      "C": "they",
+      "D": "theirs"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'by themselves' mang ý nghĩa là 'tự bản thân chúng đã...' (chỉ bánh quy). Điều này khẳng định ngay cả khi để riêng, bánh quy đã rất ngon.",
     "explanation_grammar": "By + Reflexive Pronoun (đại từ phản thân): Một mình, tự bản thân.",
@@ -6087,9 +6153,9 @@ export const grammarQuestions = [
     "question": "Most of the manufacturing sector has reported higher profits as a result of the trade ______.",
     "options": {
       "A": "agreement",
-      "B": "agreeably",
-      "C": "agreeing",
-      "D": "agrees"
+      "B": "agrees",
+      "C": "agreeably",
+      "D": "agreeing"
     },
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
@@ -6113,12 +6179,12 @@ export const grammarQuestions = [
     "id": "q0102",
     "question": "Local shop owners are invited to the ______ of Clyde Bank's downtown branch.",
     "options": {
-      "A": "opening",
-      "B": "open",
-      "C": "opened",
-      "D": "openly"
+      "A": "open",
+      "B": "opened",
+      "C": "openly",
+      "D": "opening"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'the' cần một danh từ. 'opening' ở đây đóng vai trò là danh từ mang nghĩa 'buổi khai trương/sự kiện mở cửa'.",
     "explanation_grammar": "The + Noun + of...",
@@ -6140,12 +6206,12 @@ export const grammarQuestions = [
     "id": "q0103",
     "question": "If your parking permit is damaged, bring it to the entrance station for a ______.",
     "options": {
-      "A": "replace",
-      "B": "replacing",
-      "C": "replaces",
-      "D": "replacement"
+      "A": "replacing",
+      "B": "replaces",
+      "C": "replacement",
+      "D": "replace"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'a' cần một danh từ (số ít đếm được). 'replacement' đáp ứng đúng định dạng ngữ pháp vì đuôi -ment thường chỉ danh từ.",
     "explanation_grammar": "Mạo từ (a/an/the) + Danh từ.",
@@ -6167,12 +6233,12 @@ export const grammarQuestions = [
     "id": "q0104",
     "question": "Mr. Wagner will arrange the schedule of events for the ______ of the flagship store.",
     "options": {
-      "A": "opening",
-      "B": "openness",
-      "C": "openly",
-      "D": "opens"
+      "A": "opens",
+      "B": "opening",
+      "C": "openness",
+      "D": "openly"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Tương tự như các câu trên, 'the + Noun + of' yêu cầu có một danh từ vào chỗ trống ngữ pháp để mang tính chất giới hạn sự kiện 'sự khai trương'.",
     "explanation_grammar": "The + Danh từ.",
@@ -6194,12 +6260,12 @@ export const grammarQuestions = [
     "id": "q0105",
     "question": "This booklet is intended to inform drivers of ______ on bridge travel for oversized vehicles.",
     "options": {
-      "A": "restricts",
-      "B": "restrictive",
-      "C": "restrictions",
+      "A": "restrictions",
+      "B": "restricts",
+      "C": "restrictive",
       "D": "restricting"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chỗ trống chịu sự chi phối tân ngữ của giới từ 'of'. Vì mang nghĩa thông báo về 'các sự hạn chế', đuôi -tion biến nó thành một danh từ chính cống.",
     "explanation_grammar": "Preposition (of) + Noun.",
@@ -6221,10 +6287,10 @@ export const grammarQuestions = [
     "id": "q0106",
     "question": "Please contact the product distributor, not the retail store, if ______ need replacement parts.",
     "options": {
-      "A": "yourself",
+      "A": "your",
       "B": "you",
-      "C": "your",
-      "D": "yours"
+      "C": "yours",
+      "D": "yourself"
     },
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
@@ -6248,12 +6314,12 @@ export const grammarQuestions = [
     "id": "q0107",
     "question": "Greg Owens, the founder of multinational Hermes Taxi Service, used to drive a taxi ______.",
     "options": {
-      "A": "himself",
+      "A": "he",
       "B": "his",
-      "C": "his own",
-      "D": "he"
+      "C": "himself",
+      "D": "his own"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Để nhấn mạnh việc chính bản thân Greg (tự tay ổng) đã làm điều đó trong quá khứ mà không ai giúp, ta cùng tính từ nhân xưng phản thân (himself).",
     "explanation_grammar": "Đại từ phản thân đứng ở cuối để nhấn mạnh về mặt tự thực thi của chủ ngữ nam (Greg).",
@@ -6275,12 +6341,12 @@ export const grammarQuestions = [
     "id": "q0108",
     "question": "Deltran analytics software can help ______ identify issues, predict trends, and improve business.",
     "options": {
-      "A": "you",
-      "B": "yourself",
-      "C": "your",
-      "D": "yours"
+      "A": "yourself",
+      "B": "your",
+      "C": "yours",
+      "D": "you"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Động từ 'help' yêu cầu cần có một tân ngữ 'ai đó' phía sau (help somebody do something). 'you' ở đây mang chức năng là tân ngữ trực tiếp chỉ định người dùng.",
     "explanation_grammar": "Verb (help) + Object pronoun (you) + Verb bare infinitive (identify).",
@@ -6302,10 +6368,10 @@ export const grammarQuestions = [
     "id": "q0109",
     "question": "Here at Vanguard Buying Club ______ help members find quality merchandise at the lowest possible prices.",
     "options": {
-      "A": "us",
+      "A": "our",
       "B": "we",
-      "C": "our",
-      "D": "ourselves"
+      "C": "ourselves",
+      "D": "us"
     },
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
@@ -6324,12 +6390,12 @@ export const grammarQuestions = [
     "id": "q0110",
     "question": "Ms. Jha assured the client that ______ would deliver the contract that afternoon.",
     "options": {
-      "A": "she",
+      "A": "her",
       "B": "hers",
-      "C": "herself",
-      "D": "her"
+      "C": "she",
+      "D": "herself"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Phía bên kia của mệnh đề that là một vị trí cho một người làm nhiệm vụ phân phối (Subject of 'would deliver'). Đại từ xưng hô nữ nhân 'she' được điền thay thế lại.",
     "explanation_grammar": "Sau That, chủ ngữ tiếp theo được thiết lập bằng đại từ ngôi thứ ba số ít (Subject pronouns) để dẫn đường cho Vị ngữ.",
@@ -10266,12 +10332,12 @@ export const grammarQuestions = [
     "id": "q0271",
     "question": "The new prototype from TechNova is not quite as ________ as the current model.",
     "options": {
-      "A": "durably",
-      "B": "durable",
+      "A": "durable",
+      "B": "durably",
       "C": "enduring",
       "D": "durability"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc so sánh bằng 'as + Adj/Adv + as'. Đi sau động từ tobe 'is' cần một Tính Từ (durable) bổ nghĩa cho chủ ngữ 'prototype'.",
     "explanation_grammar": "S + tobe + (not) as + Adjective + as...",
@@ -10288,12 +10354,12 @@ export const grammarQuestions = [
     "id": "q0272",
     "question": "Modernizing the assembly line made the production process more ________ than before.",
     "options": {
-      "A": "productively",
-      "B": "productive",
-      "C": "productivity",
-      "D": "produce"
+      "A": "productivity",
+      "B": "produce",
+      "C": "productively",
+      "D": "productive"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc Make + Tân Ngữ + Tính Từ (Làm cho cái gì thế nào). So sánh hơn 'more + Adj + than' -> cần điền tính từ 'productive'.",
     "explanation_grammar": "Make + Object + more + Tính Từ + than.",
@@ -10310,12 +10376,12 @@ export const grammarQuestions = [
     "id": "q0273",
     "question": "Ms. Lan was honored for having the most __________ customer service rating at VietTel.",
     "options": {
-      "A": "impressive",
-      "B": "impressively",
-      "C": "impress",
-      "D": "impression"
+      "A": "impression",
+      "B": "impressive",
+      "C": "impressively",
+      "D": "impress"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất 'the most + Adjective' bổ nghĩa trực tiếp cho cụm danh từ 'rating'. Chọn tính từ 'impressive' (ấn tượng).",
     "explanation_grammar": "The most + Adjective + Noun.",
@@ -10332,12 +10398,12 @@ export const grammarQuestions = [
     "id": "q0274",
     "question": "The upgraded engine makes the Helios sedan more ________ than its predecessors.",
     "options": {
-      "A": "powerful",
-      "B": "powerfully",
-      "C": "power",
+      "A": "powerfully",
+      "B": "power",
+      "C": "powerful",
       "D": "powerfulness"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "Vẫn là cấu trúc Make + Tân Ngữ + Tính Từ. Đi kèm so sánh hơn 'more + Adj + than', vị trí này cần điền tính từ 'powerful'.",
     "explanation_grammar": "Make something more + Adjective.",
@@ -10354,12 +10420,12 @@ export const grammarQuestions = [
     "id": "q0275",
     "question": "The marketing campaign for Solis energy drinks was not as ________ as expected.",
     "options": {
-      "A": "succeed",
-      "B": "successful",
-      "C": "success",
-      "D": "successfully"
+      "A": "success",
+      "B": "successfully",
+      "C": "succeed",
+      "D": "successful"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng với giới từ 'as... as' và đứng sau động từ tobe 'was' nên vị trí này cần một Tính Từ.",
     "explanation_grammar": "Tobe + as + Adjective + as.",
@@ -10376,12 +10442,12 @@ export const grammarQuestions = [
     "id": "q0276",
     "question": "Mr. Chen received an award for developing the most __________ software solution at ByteCore.",
     "options": {
-      "A": "efficient",
+      "A": "efficiency",
       "B": "inefficient",
-      "C": "efficiently",
-      "D": "efficiency"
+      "C": "efficient",
+      "D": "efficiently"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất bổ sung cho 'software solution'. Dùng 'The most + Adjective + Noun'. Tính từ 'efficient' (hiệu quả).",
     "explanation_grammar": "The most + Adjective + Noun.",
@@ -10398,12 +10464,12 @@ export const grammarQuestions = [
     "id": "q0277",
     "question": "Heavy rain made the outdoor construction site more ________ than the indoor facility.",
     "options": {
-      "A": "hazardous",
-      "B": "hazardousness",
+      "A": "hazardousness",
+      "B": "hazardous",
       "C": "hazardously",
       "D": "hazard"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "Make + O + Tính từ. Kết hợp công thức so sánh hơn, cần điền tính từ 'hazardous' (nguy hiểm).",
     "explanation_grammar": "Make + Object + more + Tính Từ.",
@@ -10420,12 +10486,12 @@ export const grammarQuestions = [
     "id": "q0278",
     "question": "The interior of the Grand Plaza Hotel is not quite as ________ as the brochures suggest.",
     "options": {
-      "A": "luxuriousness",
-      "B": "luxurious",
-      "C": "luxuriously",
-      "D": "luxury"
+      "A": "luxuriously",
+      "B": "luxury",
+      "C": "luxuriousness",
+      "D": "luxurious"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc so sánh bằng 'as... as' và sau động từ tobe thì bắt buộc nhét tính từ.",
     "explanation_grammar": "Tobe + as + Tính từ + as.",
@@ -10442,10 +10508,10 @@ export const grammarQuestions = [
     "id": "q0279",
     "question": "Streamlining the application process made the recruitment more ________ than last year.",
     "options": {
-      "A": "effectiveness",
+      "A": "effectively",
       "B": "effective",
-      "C": "effect",
-      "D": "effectively"
+      "C": "effectiveness",
+      "D": "effect"
     },
     "correct_answer": "B",
     "grammar_type": "So sánh",
@@ -10464,12 +10530,12 @@ export const grammarQuestions = [
     "id": "q0280",
     "question": "Dr. Aris was recognized for conducting the most __________ research project at BioLab Inc.",
     "options": {
-      "A": "comprehensive",
-      "B": "comprehensiveness",
-      "C": "comprehensively",
+      "A": "comprehensiveness",
+      "B": "comprehensively",
+      "C": "comprehensive",
       "D": "comprehension"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất đi với Tính Từ để bổ nghĩa cho 'research project'. 'Comprehensive' là tính từ nguyên gốc.",
     "explanation_grammar": "The most + Adj + Noun.",
@@ -10486,12 +10552,12 @@ export const grammarQuestions = [
     "id": "q0281",
     "question": "The leather used in Zenith handbags is not as ________ as that of premium competitors.",
     "options": {
-      "A": "flexibility",
-      "B": "flexes",
-      "C": "flexible",
-      "D": "flexibly"
+      "A": "flexes",
+      "B": "flexible",
+      "C": "flexibly",
+      "D": "flexibility"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "Tobe 'is' đi với so sánh bằng 'as ... as'. Cần chọn tính từ 'flexible'.",
     "explanation_grammar": "Tobe + as + Tính Từ + as.",
@@ -10508,12 +10574,12 @@ export const grammarQuestions = [
     "id": "q0282",
     "question": "The specialized training made the junior consultants more ________ than the interns.",
     "options": {
-      "A": "knowledgeable",
+      "A": "knowledge",
       "B": "knowledgeably",
-      "C": "know",
-      "D": "knowledge"
+      "C": "knowledgeable",
+      "D": "know"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc kinh điển Make + sb + Tính từ.",
     "explanation_grammar": "Make + Tân ngữ + more + Adj.",
@@ -10530,12 +10596,12 @@ export const grammarQuestions = [
     "id": "q0283",
     "question": "Mr. Kim was praised for maintaining the most __________ budget report at Hansol Corp.",
     "options": {
-      "A": "accurate",
-      "B": "accuracy",
-      "C": "accurately",
-      "D": "inaccurate"
+      "A": "accuracy",
+      "B": "accurately",
+      "C": "inaccurate",
+      "D": "accurate"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "Bổ ngữ tính trạng so sánh nhất 'the most' cho cụm 'budget report'. Tính từ cần điền là 'accurate'.",
     "explanation_grammar": "The most + Adjective + Danh từ.",
@@ -10552,12 +10618,12 @@ export const grammarQuestions = [
     "id": "q0284",
     "question": "The latest tablet from K-Tech is more ________ than the version released last summer.",
     "options": {
-      "A": "portably",
+      "A": "portable",
       "B": "porting",
       "C": "portability",
-      "D": "portable"
+      "D": "portably"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn diễn dịch cho động từ tobe 'is', cần thả vô một Tính từ 'portable'.",
     "explanation_grammar": "Tobe + more + Tính Từ + than.",
@@ -10574,10 +10640,10 @@ export const grammarQuestions = [
     "id": "q0285",
     "question": "The customer support at SwiftAir is not quite as ________ as that of larger airlines.",
     "options": {
-      "A": "responsively",
-      "B": "responsiveness",
+      "A": "unresponsive",
+      "B": "responsively",
       "C": "responsive",
-      "D": "unresponsive"
+      "D": "responsiveness"
     },
     "correct_answer": "C",
     "grammar_type": "So sánh",
@@ -10596,12 +10662,12 @@ export const grammarQuestions = [
     "id": "q0286",
     "question": "Investing in solar panels made the office building more ________ than the old warehouse.",
     "options": {
-      "A": "sustainability",
-      "B": "sustainable",
+      "A": "sustainable",
+      "B": "sustainability",
       "C": "sustainably",
       "D": "sustain"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc Make + O + Adj. So sánh hơn cần tính từ bổ nghĩa 'sustainable' (bền vững).",
     "explanation_grammar": "Make something more + Adj + than...",
@@ -10618,12 +10684,12 @@ export const grammarQuestions = [
     "id": "q0287",
     "question": "Ms. Gupta was credited with designing the most __________ logo at Creative Edge Agency.",
     "options": {
-      "A": "distinct",
-      "B": "distinctively",
-      "C": "distinctive",
-      "D": "distinction"
+      "A": "distinctive",
+      "B": "distinct",
+      "C": "distinction",
+      "D": "distinctively"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất 'the most + Adj'. Tính từ 'distinct' là miếng ghép cần điền.",
     "explanation_grammar": "The most + Adjective + Danh Từ.",
@@ -10641,9 +10707,9 @@ export const grammarQuestions = [
     "question": "The new security system is more ________ than the one used at the previous headquarters.",
     "options": {
       "A": "reliable",
-      "B": "reliability",
-      "C": "reliably",
-      "D": "unreliable"
+      "B": "unreliable",
+      "C": "reliability",
+      "D": "reliably"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -10662,12 +10728,12 @@ export const grammarQuestions = [
     "id": "q0289",
     "question": "The fabric of the ActiveWear line is not as ________ as the cotton used in basic shirts.",
     "options": {
-      "A": "breathable",
-      "B": "breathe",
-      "C": "breath",
+      "A": "breathe",
+      "B": "breath",
+      "C": "breathable",
       "D": "breathability"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng tobe + as + Adj + as. Tính từ 'breathable' (thoáng khí).",
     "explanation_grammar": "Cấu trúc cân bằng bằng Tính Từ.",
@@ -10684,9 +10750,9 @@ export const grammarQuestions = [
     "id": "q0290",
     "question": "Regular maintenance makes the industrial generators more ________ than those left unserviced.",
     "options": {
-      "A": "dependency",
-      "B": "dependably",
-      "C": "depend",
+      "A": "dependably",
+      "B": "depend",
+      "C": "dependency",
       "D": "dependable"
     },
     "correct_answer": "D",
@@ -10706,12 +10772,12 @@ export const grammarQuestions = [
     "id": "q0291",
     "question": "Mr. Rossi was celebrated for achieving the most __________ growth rate at Milan Finance.",
     "options": {
-      "A": "consistently",
-      "B": "consistent",
-      "C": "inconsistent",
-      "D": "consistency"
+      "A": "consistent",
+      "B": "consistency",
+      "C": "consistently",
+      "D": "inconsistent"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất bổ nghĩa cho dnah từ 'growth rate'. Dùng The most + Tính Từ.",
     "explanation_grammar": "The most + Adj + N.",
@@ -10729,11 +10795,11 @@ export const grammarQuestions = [
     "question": "The user interface of the Applo software is more ________ than the rival platform.",
     "options": {
       "A": "intuition",
-      "B": "intuitively",
-      "C": "intuitive",
+      "B": "intuitive",
+      "C": "intuitively",
       "D": "intuit"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "Tobe 'is' kết hợp so sánh hơn 'more'. Cần một Tính Từ.",
     "explanation_grammar": "Tobe + more + Adj + than.",
@@ -10750,12 +10816,12 @@ export const grammarQuestions = [
     "id": "q0293",
     "question": "The delivery schedule for the international shipment was not as ________ as promised.",
     "options": {
-      "A": "predictable",
-      "B": "predictability",
-      "C": "predictably",
-      "D": "predict"
+      "A": "predictably",
+      "B": "predict",
+      "C": "predictability",
+      "D": "predictable"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng tobe 'was' + as + Tính Từ + as. Chọn tính từ 'predictable' là vẹn câu rành mạch nhất.",
     "explanation_grammar": "Tobe + as + Adj + as.",
@@ -10772,12 +10838,12 @@ export const grammarQuestions = [
     "id": "q0294",
     "question": "Adding more memory made the server more ________ than the entry-level model.",
     "options": {
-      "A": "functionality",
-      "B": "functional",
-      "C": "functionally",
-      "D": "function"
+      "A": "functional",
+      "B": "function",
+      "C": "functionality",
+      "D": "functionally"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "Lại gặp make + O + Adj. Điền tính từ.",
     "explanation_grammar": "Make + O + more + Tính Từ.",
@@ -10795,11 +10861,11 @@ export const grammarQuestions = [
     "question": "Mrs. Thompson was recognized for having the most __________ influence on the legal team.",
     "options": {
       "A": "professionalism",
-      "B": "professional",
-      "C": "profession",
-      "D": "professionally"
+      "B": "profession",
+      "C": "professionally",
+      "D": "professional"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "The most + Adj bổ nghĩa cho influence. 'Professional' (chuyên nghiệp) là tính từ.",
     "explanation_grammar": "The most + Adjective + Danh từ.",
@@ -10815,12 +10881,12 @@ export const grammarQuestions = [
   {
     "question": "The new accounting software from Vertex Solutions is ____ more reliable than the previous version we used.",
     "options": {
-      "A": "so",
-      "B": "very",
-      "C": "much",
-      "D": "too"
+      "A": "very",
+      "B": "much",
+      "C": "too",
+      "D": "so"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "explanation_reason": "Cần một trạng từ nhấn mạnh mức độ cho cấu trúc so sánh hơn 'more reliable'. Các trạng từ phổ biến dùng để nhấn mạnh so sánh hơn gồm: much, far, even, significantly, a lot.",
     "explanation_grammar": "Nhấn mạnh so sánh hơn: much / far / even + so sánh hơn.",
     "translation": "Phần mềm kế toán mới từ Vertex Solutions đáng tin cậy hơn nhiều so với phiên bản trước mà chúng tôi đã sử dụng.",
@@ -10837,12 +10903,12 @@ export const grammarQuestions = [
   {
     "question": "____ the five applicants for the marketing manager position at GTR Corp, Ms. Jenkins seems the most qualified.",
     "options": {
-      "A": "For",
-      "B": "Between",
-      "C": "Of",
-      "D": "As"
+      "A": "As",
+      "B": "For",
+      "C": "Between",
+      "D": "Of"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "explanation_reason": "Cụm từ 'Of the + số lượng + danh từ số nhiều' thường nằm ở đầu câu để bao hàm ý 'Trong số...'. Mệnh đề theo sau thường dùng so sánh nhất ('the most qualified').",
     "explanation_grammar": "Cấu trúc giới từ 'Of' chỉ sự xuất xứ/tổng thể đi kèm so sánh nhất.",
     "translation": "Trong số năm ứng viên cho vị trí giám đốc tiếp thị tại GTR Corp, cô Jenkins có vẻ là người đủ tiêu chuẩn nhất.",
@@ -10864,12 +10930,12 @@ export const grammarQuestions = [
   {
     "question": "To win the contract, the team must develop a ____ effective marketing strategy than Horizon Inc.",
     "options": {
-      "A": "more effective",
-      "B": "most effectively",
+      "A": "most effectively",
+      "B": "more effective",
       "C": "more effectively",
       "D": "most effective"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "explanation_reason": "Dấu hiệu 'than' cho thấy cần dùng dạng so sánh hơn. Chỗ trống đứng trước danh từ 'marketing strategy' nên cần tính từ ở dạng so sánh hơn 'more effective'.",
     "explanation_grammar": "So sánh hơn với tính từ dài: more + Adj + than.",
     "translation": "Để giành được hợp đồng, nhóm phải phát triển một chiến lược tiếp thị hiệu quả hơn so với Horizon Inc.",
@@ -10892,9 +10958,9 @@ export const grammarQuestions = [
     "question": "Since Ms. Alvarez took over as CEO, profits at the Kenta Manufacturing plant have grown ____ higher each quarter.",
     "options": {
       "A": "significantly",
-      "B": "signify",
-      "C": "significance",
-      "D": "significant"
+      "B": "significance",
+      "C": "significant",
+      "D": "signify"
     },
     "correct_answer": "A",
     "explanation_reason": "Vị trí trước tính từ ở dạng so sánh hơn ('higher') cần một trạng từ để bổ nghĩa nhấn mạnh mức độ.",
@@ -10918,12 +10984,12 @@ export const grammarQuestions = [
   {
     "question": "The newly upgraded Lumina tablet is nearly ____ as heavy as the competitor's device, making it highly portable.",
     "options": {
-      "A": "half",
+      "A": "halving",
       "B": "halved",
       "C": "halve",
-      "D": "halving"
+      "D": "half"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "explanation_reason": "Cấu trúc so sánh bội số/phân số: phân số + as + adj/adv + as. 'half' đóng vai trò là phân số (cân nặng bằng một nửa).",
     "explanation_grammar": "So sánh phân số/gấp số lần: Số lần/phân số + as + Adj/Adv + as.",
     "translation": "Máy tính bảng Lumina mới được nâng cấp nặng gần bằng một nửa so với thiết bị của đối thủ cạnh tranh, giúp nó có tính di động cao.",
@@ -10963,9 +11029,9 @@ export const grammarQuestions = [
     "question": "____ all the graphic designers at BlueWave Agency, Mr. Chen produces the most innovative layouts.",
     "options": {
       "A": "Of",
-      "B": "To",
-      "C": "At",
-      "D": "Yet"
+      "B": "At",
+      "C": "Yet",
+      "D": "To"
     },
     "correct_answer": "A",
     "explanation_reason": "Cấu trúc 'Of all the + danh từ số nhiều' được sử dụng phổ biến với so sánh nhất (ở đây là 'the most innovative') để diễn tả 'Trong số tất cả...'.",
@@ -10984,12 +11050,12 @@ export const grammarQuestions = [
   {
     "question": "Mr. Park is widely considered to be a ____ productive employee than his peers in the sales department.",
     "options": {
-      "A": "most productive",
-      "B": "more productive",
-      "C": "more productively",
-      "D": "most productively"
+      "A": "most productively",
+      "B": "most productive",
+      "C": "more productive",
+      "D": "more productively"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "explanation_reason": "Có giới từ 'than' báo hiệu so sánh hơn. 'productive' là tính từ bổ nghĩa cho danh từ 'employee'. Do đó, ta cần cụm tính từ so sánh hơn 'more productive'.",
     "explanation_grammar": "So sánh hơn của tính từ kết hợp danh từ: a/an + more + Adj + Noun + than.",
     "translation": "Ông Park được nhiều người coi là một nhân viên làm việc năng suất hơn so với các đồng nghiệp trong bộ phận kinh doanh.",
@@ -11011,12 +11077,12 @@ export const grammarQuestions = [
   {
     "question": "The waiting time at the customer service desk has become ____ shorter since the new management software was installed.",
     "options": {
-      "A": "noticeable",
-      "B": "notice",
-      "C": "noticeably",
+      "A": "noticeably",
+      "B": "noticeable",
+      "C": "notice",
       "D": "noticed"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "explanation_reason": "Từ 'shorter' là tính từ ở dạng so sánh hơn. Để bổ nghĩa cho tính từ này, ta cần dùng trạng từ 'noticeably' (một cách rõ rệt).",
     "explanation_grammar": "Trạng từ + Tính từ so sánh hơn.",
     "translation": "Thời gian chờ đợi tại quầy dịch vụ khách hàng đã trở nên ngắn hơn một cách rõ rệt kể từ khi phần mềm quản lý mới được cài đặt.",
@@ -11033,12 +11099,12 @@ export const grammarQuestions = [
   {
     "question": "The rent for prime office space in the Nexa Building is exactly ____ as high as the space in the suburbs.",
     "options": {
-      "A": "two",
-      "B": "second",
-      "C": "double",
-      "D": "twice"
+      "A": "second",
+      "B": "double",
+      "C": "twice",
+      "D": "two"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "explanation_reason": "Để nói 'cao gấp 2 lần', ta dùng 'twice' trong cấu trúc so sánh bằng (twice as ... as). 'double' có thể làm động từ hoặc tính từ nhưng không dùng trong cấu trúc 'double as...as'.",
     "explanation_grammar": "So sánh gấp nhiều lần: twice/ ba times/ ... + as + Adj + as.",
     "translation": "Giá thuê không gian văn phòng hạng nhất tại Tòa nhà Nexa cao gấp đôi không gian ở vùng ngoại ô.",
@@ -11060,12 +11126,12 @@ export const grammarQuestions = [
   {
     "question": "The revised architectural blueprint proposed by Mr. Tanaka is ____ better suited for the downtown location than the original draft.",
     "options": {
-      "A": "very",
-      "B": "quite",
-      "C": "so",
-      "D": "far"
+      "A": "so",
+      "B": "far",
+      "C": "very",
+      "D": "quite"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "explanation_reason": "Chỉ có 'far' trong các lựa chọn có thể dùng để nhấn mạnh cho hình thái so sánh hơn ('better'). Các từ 'very, quite, so' chỉ bổ nghĩa cho tính từ ở dạng nguyên thể.",
     "explanation_grammar": "Nhấn mạnh so sánh hơn: much/far/a lot + so sánh hơn.",
     "translation": "Bản thiết kế kiến trúc đã sửa đổi do ông Tanaka đề xuất phù hợp hơn rất nhiều so với bản thảo gốc cho vị trí trung tâm thành phố.",
@@ -11087,12 +11153,12 @@ export const grammarQuestions = [
   {
     "question": "____ the two proposals submitted for the bridge construction, the one from KJL Engineering is the more cost-effective.",
     "options": {
-      "A": "Of",
-      "B": "From",
-      "C": "At",
-      "D": "In"
+      "A": "From",
+      "B": "At",
+      "C": "In",
+      "D": "Of"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "explanation_reason": "Giống với câu 7, giới từ 'Of' được dùng ở đầu câu với cụm danh từ chỉ tổng số lượng (the two proposals) để thiết lập phạm vi so sánh 'Trong số...'.",
     "explanation_grammar": "Giới từ 'Of' chỉ phạm vi trong so sánh (Of the two / Of all...).",
     "translation": "Trong số hai đề xuất được đệ trình cho việc xây dựng cây cầu, đề xuất từ KJL Engineering là tiết kiệm chi phí hơn (dùng 'the more' vì chỉ có 2 cái).",
@@ -11109,12 +11175,12 @@ export const grammarQuestions = [
   {
     "question": "Customers have reported that the new OmniTech smartwatch features a ____ responsive touch screen than previous models.",
     "options": {
-      "A": "most responsive",
-      "B": "more responsive",
-      "C": "most responsively",
-      "D": "more responsively"
+      "A": "more responsive",
+      "B": "most responsively",
+      "C": "more responsively",
+      "D": "most responsive"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "explanation_reason": "Có 'than' nên dùng so sánh hơn. Từ cần điền là tính từ bổ nghĩa cho danh từ 'touch screen'. Do đó dùng 'more responsive'.",
     "explanation_grammar": "So sánh hơn tính từ dài kết hợp với danh từ: a/an + more + Adj + N.",
     "translation": "Khách hàng đã báo cáo rằng đồng hồ thông minh OmniTech mới có màn hình cảm ứng nhạy hơn so với các mẫu trước đó.",
@@ -11131,9 +11197,9 @@ export const grammarQuestions = [
   {
     "question": "Production costs at the Veloce automotive plant have been decreasing ____ rapidly over the last three fiscal quarters.",
     "options": {
-      "A": "consist",
-      "B": "consistency",
-      "C": "consistent",
+      "A": "consistent",
+      "B": "consist",
+      "C": "consistency",
       "D": "consistently"
     },
     "correct_answer": "D",
@@ -11160,10 +11226,10 @@ export const grammarQuestions = [
     "options": {
       "A": "three",
       "B": "triple",
-      "C": "third",
-      "D": "three times"
+      "C": "three times",
+      "D": "third"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "explanation_reason": "Trong cấu trúc so sánh gấp bội số, sau từ 'gấp bao nhiêu lần' dùng cấu trúc 'as + adj + as'. Số lượng gấp 3 lần trở lên dùng số đếm (three, four...) + times.",
     "explanation_grammar": "So sánh gấp nhiều lần: Số lượng đếm + times + as + Adj + as.",
     "translation": "Dung lượng lưu trữ dữ liệu của máy chủ Zephyr mới được phát hành lớn gấp ba lần so với thế hệ trước.",
@@ -11180,12 +11246,12 @@ export const grammarQuestions = [
   {
     "question": "Thanks to the automated tracking system implemented by HR, resolving internal employee complaints is now ____ faster than before.",
     "options": {
-      "A": "much",
-      "B": "very",
-      "C": "too",
-      "D": "as"
+      "A": "too",
+      "B": "much",
+      "C": "as",
+      "D": "very"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "explanation_reason": "'faster' là hình thái so sánh hơn của tính từ/trạng từ 'fast'. Để nhấn mạnh so sánh hơn, bắt buộc phải dùng các trạng từ được phép như: much, far, even. 'very' chỉ bổ nghĩa cho so sánh bằng hoặc mức độ bình thường.",
     "explanation_grammar": "Nhấn mạnh so sánh hơn: much/far + So sánh hơn.",
     "translation": "Nhờ hệ thống theo dõi tự động do bộ phận nhân sự triển khai, việc giải quyết các khiếu nại nội bộ của nhân viên hiện đã nhanh hơn nhiều so với trước đây.",
@@ -11207,9 +11273,9 @@ export const grammarQuestions = [
   {
     "question": "____ the four regional branches of Sancorp Bank, the Tokyo office currently boasts the highest employee retention rate.",
     "options": {
-      "A": "For",
-      "B": "By",
-      "C": "With",
+      "A": "With",
+      "B": "For",
+      "C": "By",
       "D": "Of"
     },
     "correct_answer": "D",
@@ -11234,12 +11300,12 @@ export const grammarQuestions = [
   {
     "question": "In order to meet the tight deadline, the production team needs to find a ____ rigorous method of assembling the engine parts.",
     "options": {
-      "A": "more rigorous",
-      "B": "most rigorous",
+      "A": "most rigorous",
+      "B": "more rigorous",
       "C": "more rigorously",
       "D": "most rigorously"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "explanation_reason": "Dựa vào ngữ cảnh cần 'tìm một phương pháp khắt khe hơn' (so với hiện tại). Tính từ bổ nghĩa cho danh từ 'method' nên phải dùng 'more rigorous', không dùng trạng từ (rigorously). Cấu trúc: 'a + comparative Adjective + singular Noun'.",
     "explanation_grammar": "So sánh hơn tính từ ghép danh từ.",
     "translation": "Để đáp ứng thời hạn gấp gáp, đội ngũ sản xuất cần tìm một phương pháp lắp ráp các bộ phận động cơ khắt khe hơn.",
@@ -11262,9 +11328,9 @@ export const grammarQuestions = [
     "question": "According to the latest market research by FinCorp, consumers are becoming ____ reliant on mobile payment applications.",
     "options": {
       "A": "increasingly",
-      "B": "increase",
-      "C": "increasing",
-      "D": "increased"
+      "B": "increasing",
+      "C": "increased",
+      "D": "increase"
     },
     "correct_answer": "A",
     "explanation_reason": "Mẫu câu so sánh kép (Double comparative) thường dùng 'increasingly' (ngày càng) trước tính từ (reliant) khi muốn ám chỉ sự thay đổi tăng cao dần. Cấu trúc đầy đủ là: become + increasingly + adj.",
@@ -11288,12 +11354,12 @@ export const grammarQuestions = [
   {
     "question": "The international shipping fees charged by Global Transit are almost ____ as expensive as those of local delivery services.",
     "options": {
-      "A": "twice",
+      "A": "two",
       "B": "double",
       "C": "pair",
-      "D": "two"
+      "D": "twice"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "explanation_reason": "Sử dụng 'twice' (chứ không phải double) cho cấu trúc so sánh gấp đôi trong dạng '... times as ... as'.",
     "explanation_grammar": "So sánh gấp bao nhiêu lần: twice + as + Adj + as.",
     "translation": "Phí vận chuyển quốc tế do Global Transit tính gần như đắt gấp đôi so với dịch vụ giao hàng nội địa.",
@@ -11310,12 +11376,12 @@ export const grammarQuestions = [
   {
     "question": "Mr. Rodriguez's presentation on international trade regulations was ____ more informative than the board of directors had anticipated.",
     "options": {
-      "A": "quite",
-      "B": "so",
-      "C": "far",
+      "A": "far",
+      "B": "quite",
+      "C": "so",
       "D": "very"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "explanation_reason": "Tương tự, để nhấn mạnh mức độ trong so sánh hơn ('more informative'), một trong các phó từ bắt buộc dùng là 'far'. Tuyệt đối không dùng 'very' hay 'so'.",
     "explanation_grammar": "Nhấn mạnh tính từ so sánh hơn bằng: much, far, a lot, even.",
     "translation": "Bài thuyết trình của ông Rodriguez về các quy định thương mại quốc tế nhiều thông tin hơn rất nhiều so với những gì hội đồng quản trị đã dự đoán.",
@@ -11337,12 +11403,12 @@ export const grammarQuestions = [
   {
     "question": "____ all the candidates interviewed for the logistics coordinator role, Ms. Silva definitely has the strongest background.",
     "options": {
-      "A": "Of",
-      "B": "About",
-      "C": "As",
-      "D": "Since"
+      "A": "As",
+      "B": "Of",
+      "C": "Since",
+      "D": "About"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "explanation_reason": "Chỉ cụm 'Of all the + N' (Trong số / Xét trên...) là đúng ngữ pháp và kết hợp chung ở một câu vế sau là mệnh đề so sánh nhất ('the strongest').",
     "explanation_grammar": "Giới từ chỉ sự bao hàm toàn bộ trong so sánh nhất.",
     "translation": "Trong số tất cả các ứng viên đã được phỏng vấn cho vai trò điều phối viên logistics, cô Silva rõ ràng có nền tảng vững chắc nhất.",
@@ -11359,12 +11425,12 @@ export const grammarQuestions = [
   {
     "question": "The newly formed security committee will implement a ____ comprehensive policy regarding employee access to the laboratory.",
     "options": {
-      "A": "most comprehensive",
-      "B": "more comprehensive",
-      "C": "most comprehensively",
-      "D": "more comprehensively"
+      "A": "more comprehensively",
+      "B": "most comprehensive",
+      "C": "more comprehensive",
+      "D": "most comprehensively"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "explanation_reason": "Cần tính từ 'comprehensive' để bổ nghĩa cho 'policy' tạo thành ý nghĩa cải tiến hơn ('chính sách toàn diện hơn'). Cấu trúc 'a more + Adj + N' là chuẩn xác nhất, không dùng The hầu như không chỉ đích danh.",
     "explanation_grammar": "So sánh hơn: more + Adj.",
     "translation": "Ủy ban an ninh mới được thành lập sẽ thực hiện một chính sách toàn diện hơn liên quan đến quyền tiếp cận phòng thí nghiệm của nhân viên.",
@@ -11408,12 +11474,12 @@ export const grammarQuestions = [
   {
     "question": "The total attendance at this year's annual technology expo in London was ____ as large as the organizers had originally predicted.",
     "options": {
-      "A": "second",
-      "B": "double",
-      "C": "two",
-      "D": "twice"
+      "A": "double",
+      "B": "two",
+      "C": "twice",
+      "D": "second"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "explanation_reason": "Cấu trúc gấp lượng 'twice as ... as' được sử dụng ở đây. Từ 'double' không dùng theo cấu trúc này, mà dùng như động từ hoặc tính từ.",
     "explanation_grammar": "So sánh bằng kèm số lượng bội: twice + as + Adj + as.",
     "translation": "Tổng số lượng người tham dự triển lãm công nghệ thường niên năm nay tại London lớn gấp đôi so với dự đoán ban đầu của ban tổ chức.",
@@ -17851,12 +17917,12 @@ export const grammarQuestions = [
     "id": "q0681",
     "question": "The customs officers ______ all the shipping containers at the port yesterday.",
     "options": {
-      "A": "inspected",
-      "B": "inspecting",
-      "C": "inspect",
-      "D": "inspects"
+      "A": "inspects",
+      "B": "inspected",
+      "C": "inspecting",
+      "D": "inspect"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'yesterday' yêu cầu thì quá khứ đơn.",
     "explanation_grammar": "Past Simple.",
@@ -17905,12 +17971,12 @@ export const grammarQuestions = [
     "id": "q0683",
     "question": "The warehouse staff should ______ the inventory list before closing the facility.",
     "options": {
-      "A": "checked",
-      "B": "checking",
-      "C": "checks",
-      "D": "check"
+      "A": "checking",
+      "B": "checks",
+      "C": "check",
+      "D": "checked"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau động từ khuyết thiếu 'should' dùng động từ nguyên mẫu.",
     "explanation_grammar": "Modal verbs + V-bare.",
@@ -17933,9 +17999,9 @@ export const grammarQuestions = [
     "question": "The delicate computer mainboards are carefully ______ by the experienced workers.",
     "options": {
       "A": "handled",
-      "B": "handle",
-      "C": "handling",
-      "D": "handles"
+      "B": "handles",
+      "C": "handle",
+      "D": "handling"
     },
     "correct_answer": "A",
     "grammar_type": "12 thì",
@@ -17961,10 +18027,10 @@ export const grammarQuestions = [
     "options": {
       "A": "contacts",
       "B": "contacting",
-      "C": "contacted",
-      "D": "contact"
+      "C": "contact",
+      "D": "contacted"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Câu mệnh lệnh bắt đầu bằng 'Please' + V-bare.",
     "explanation_grammar": "Imperative sentence.",
@@ -17986,12 +18052,12 @@ export const grammarQuestions = [
     "id": "q0686",
     "question": "Ms. Anh ______ the final project schedule to the management team yesterday.",
     "options": {
-      "A": "submits",
+      "A": "submitted",
       "B": "submitting",
-      "C": "submitted",
-      "D": "submit"
+      "C": "submit",
+      "D": "submits"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'yesterday' yêu cầu thì quá khứ đơn.",
     "explanation_grammar": "Past Simple.",
@@ -18013,12 +18079,12 @@ export const grammarQuestions = [
     "id": "q0687",
     "question": "The new analytical software ______ the accuracy of our numerical reports recently.",
     "options": {
-      "A": "improve",
-      "B": "improves",
-      "C": "improving",
-      "D": "has improved"
+      "A": "improving",
+      "B": "has improved",
+      "C": "improve",
+      "D": "improves"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'recently' (gần đây) yêu cầu thì hiện tại hoàn thành.",
     "explanation_grammar": "Present Perfect.",
@@ -18042,10 +18108,10 @@ export const grammarQuestions = [
     "options": {
       "A": "analyzing",
       "B": "analyzed",
-      "C": "analyzes",
-      "D": "analyze"
+      "C": "analyze",
+      "D": "analyzes"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'must' dùng động từ nguyên mẫu.",
     "explanation_grammar": "Modal verbs + V-bare.",
@@ -18068,9 +18134,9 @@ export const grammarQuestions = [
     "question": "The linear trendlines in the spreadsheet are ______ automatically every Monday morning.",
     "options": {
       "A": "generated",
-      "B": "generates",
-      "C": "generating",
-      "D": "generate"
+      "B": "generating",
+      "C": "generate",
+      "D": "generates"
     },
     "correct_answer": "A",
     "grammar_type": "12 thì",
@@ -18094,9 +18160,9 @@ export const grammarQuestions = [
     "id": "q0690",
     "question": "Please ______ the correct wooden pallets for the heavy electronic equipment.",
     "options": {
-      "A": "used",
-      "B": "uses",
-      "C": "using",
+      "A": "using",
+      "B": "used",
+      "C": "uses",
       "D": "use"
     },
     "correct_answer": "D",
@@ -18122,11 +18188,11 @@ export const grammarQuestions = [
     "question": "Enterprise A ______ a massive shipment of fresh produce from the United States last month.",
     "options": {
       "A": "receive",
-      "B": "received",
-      "C": "receives",
+      "B": "receives",
+      "C": "received",
       "D": "receiving"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'last month' yêu cầu thì quá khứ đơn.",
     "explanation_grammar": "Past Simple.",
@@ -18148,10 +18214,10 @@ export const grammarQuestions = [
     "id": "q0692",
     "question": "The demand for ASUS ROG Strix mainboards ______ steadily over the past quarter.",
     "options": {
-      "A": "grow",
+      "A": "grows",
       "B": "has grown",
-      "C": "grows",
-      "D": "growing"
+      "C": "growing",
+      "D": "grow"
     },
     "correct_answer": "B",
     "grammar_type": "12 thì",
@@ -18175,12 +18241,12 @@ export const grammarQuestions = [
     "id": "q0693",
     "question": "The project manager can ______ the Work Breakdown Structure to optimize efficiency.",
     "options": {
-      "A": "adjusts",
-      "B": "adjusting",
-      "C": "adjust",
-      "D": "adjusted"
+      "A": "adjust",
+      "B": "adjusted",
+      "C": "adjusts",
+      "D": "adjusting"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'can' dùng động từ nguyên mẫu.",
     "explanation_grammar": "Modal verbs + V-bare.",
@@ -18203,11 +18269,11 @@ export const grammarQuestions = [
     "question": "The VNACCS customs declaration was successfully ______ by the broker this morning.",
     "options": {
       "A": "complete",
-      "B": "completing",
-      "C": "completes",
-      "D": "completed"
+      "B": "completed",
+      "C": "completing",
+      "D": "completes"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động quá khứ đơn (was + V3/ed).",
     "explanation_grammar": "Past Simple Passive.",
@@ -18229,9 +18295,9 @@ export const grammarQuestions = [
     "id": "q0695",
     "question": "Kindly ______ the time estimation using the PERT method before the meeting starts.",
     "options": {
-      "A": "recalculates",
-      "B": "recalculating",
-      "C": "recalculated",
+      "A": "recalculating",
+      "B": "recalculated",
+      "C": "recalculates",
       "D": "recalculate"
     },
     "correct_answer": "D",
@@ -18256,12 +18322,12 @@ export const grammarQuestions = [
     "id": "q0696",
     "question": "The chief data analyst ______ a supply chain conference in Lisbon last week.",
     "options": {
-      "A": "attended",
+      "A": "attend",
       "B": "attends",
-      "C": "attending",
-      "D": "attend"
+      "C": "attended",
+      "D": "attending"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'last week' yêu cầu thì quá khứ đơn.",
     "explanation_grammar": "Past Simple.",
@@ -18284,11 +18350,11 @@ export const grammarQuestions = [
     "question": "The new delivery route ______ shipping costs significantly since its implementation.",
     "options": {
       "A": "reducing",
-      "B": "reduce",
-      "C": "reduces",
-      "D": "has reduced"
+      "B": "has reduced",
+      "C": "reduce",
+      "D": "reduces"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'since' yêu cầu thì hiện tại hoàn thành.",
     "explanation_grammar": "Present Perfect.",
@@ -18311,9 +18377,9 @@ export const grammarQuestions = [
     "question": "The team should ______ the Newton interpolation method for this specific numerical example.",
     "options": {
       "A": "apply",
-      "B": "applied",
-      "C": "applying",
-      "D": "applies"
+      "B": "applying",
+      "C": "applies",
+      "D": "applied"
     },
     "correct_answer": "A",
     "grammar_type": "12 thì",
@@ -18337,12 +18403,12 @@ export const grammarQuestions = [
     "id": "q0699",
     "question": "The exact HS codes are usually ______ on the second page of the customs form.",
     "options": {
-      "A": "list",
-      "B": "lists",
-      "C": "listing",
-      "D": "listed"
+      "A": "listing",
+      "B": "list",
+      "C": "listed",
+      "D": "lists"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì hiện tại đơn (are + V3/ed).",
     "explanation_grammar": "Present Simple Passive.",
@@ -18391,12 +18457,12 @@ export const grammarQuestions = [
     "id": "q0701",
     "question": "The logistics coordinator ______ the total container load capacity yesterday afternoon.",
     "options": {
-      "A": "calculating",
-      "B": "calculate",
-      "C": "calculated",
-      "D": "calculates"
+      "A": "calculate",
+      "B": "calculated",
+      "C": "calculates",
+      "D": "calculating"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'yesterday afternoon' yêu cầu thì quá khứ đơn.",
     "explanation_grammar": "Past Simple.",
@@ -18418,12 +18484,12 @@ export const grammarQuestions = [
     "id": "q0702",
     "question": "Mr. Chen ______ multiple regression charts to visualize the monthly sales data.",
     "options": {
-      "A": "creates",
-      "B": "creating",
-      "C": "has created",
-      "D": "create"
+      "A": "has created",
+      "B": "create",
+      "C": "creates",
+      "D": "creating"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Thì hiện tại hoàn thành diễn tả hành động đã hoàn thành và để lại kết quả (biểu đồ đã sẵn sàng để xem).",
     "explanation_grammar": "Present Perfect.",
@@ -18445,12 +18511,12 @@ export const grammarQuestions = [
     "id": "q0703",
     "question": "The carrier must ______ the loading dock before the heavy rain begins.",
     "options": {
-      "A": "leave",
-      "B": "leaving",
-      "C": "leaves",
-      "D": "left"
+      "A": "leaving",
+      "B": "leaves",
+      "C": "left",
+      "D": "leave"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'must' dùng động từ nguyên mẫu.",
     "explanation_grammar": "Modal verbs + V-bare.",
@@ -18473,9 +18539,9 @@ export const grammarQuestions = [
     "question": "The fresh apples are securely ______ inside the temperature-controlled warehouse.",
     "options": {
       "A": "stored",
-      "B": "storing",
-      "C": "stores",
-      "D": "store"
+      "B": "stores",
+      "C": "store",
+      "D": "storing"
     },
     "correct_answer": "A",
     "grammar_type": "12 thì",
@@ -18499,12 +18565,12 @@ export const grammarQuestions = [
     "id": "q0705",
     "question": "Please ______ the error rates using the bisection method to ensure accurate results.",
     "options": {
-      "A": "evaluated",
-      "B": "evaluate",
+      "A": "evaluates",
+      "B": "evaluated",
       "C": "evaluating",
-      "D": "evaluates"
+      "D": "evaluate"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Câu mệnh lệnh sau 'Please' dùng động từ nguyên mẫu.",
     "explanation_grammar": "Imperative sentence.",
@@ -18526,12 +18592,12 @@ export const grammarQuestions = [
     "id": "q0706",
     "question": "The technical ______ provided by Mr. Arisaka helped the engineering team at Solis Corp finish the project on time.",
     "options": {
-      "A": "address",
-      "B": "addressed",
-      "C": "addressable",
-      "D": "addressing"
+      "A": "addressable",
+      "B": "addressing",
+      "C": "address",
+      "D": "addressed"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ đóng vai trò chủ ngữ của câu (đứng trước động từ 'helped'). 'Technical address' có nghĩa là sự hướng dẫn/bài phát biểu kỹ thuật.",
     "explanation_grammar": "Noun as Subject.",
@@ -18554,9 +18620,9 @@ export const grammarQuestions = [
     "question": "Ms. Jensen, who ______ a senior consultant at a law firm in the 1990s, now manages her own agency in London.",
     "options": {
       "A": "was",
-      "B": "is",
-      "C": "were",
-      "D": "been"
+      "B": "been",
+      "C": "is",
+      "D": "were"
     },
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
@@ -18582,10 +18648,10 @@ export const grammarQuestions = [
     "options": {
       "A": "purchasing",
       "B": "purchase",
-      "C": "purchaser",
-      "D": "purchases"
+      "C": "purchases",
+      "D": "purchaser"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Đại từ quan hệ 'who' thay cho 'Any guest' (số ít), nên động từ chia số ít (thêm 's').",
     "explanation_grammar": "Subject-Verb Agreement in Relative Clause (Present).",
@@ -18607,12 +18673,12 @@ export const grammarQuestions = [
     "id": "q0709",
     "question": "All technicians who ______ heavy machinery in the assembly plant must attend a safety briefing every Monday.",
     "options": {
-      "A": "operates",
-      "B": "operate",
-      "C": "operating",
-      "D": "to operate"
+      "A": "operate",
+      "B": "operating",
+      "C": "to operate",
+      "D": "operates"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Đại từ 'who' thay cho 'All technicians' (số nhiều), nên động từ giữ nguyên mẫu.",
     "explanation_grammar": "Subject-Verb Agreement in Relative Clause (Plural).",
@@ -18634,12 +18700,12 @@ export const grammarQuestions = [
     "id": "q0710",
     "question": "Blue Horizon Airlines thanks all flight attendants who ______ promotional flyers at the International Travel Expo in Tokyo last month.",
     "options": {
-      "A": "distributing",
-      "B": "distributed",
+      "A": "distribute",
+      "B": "distributing",
       "C": "distributes",
-      "D": "distribute"
+      "D": "distributed"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Diễn tả hành động trong quá khứ 'last month'.",
     "explanation_grammar": "Past Simple in Relative Clause.",
@@ -18661,12 +18727,12 @@ export const grammarQuestions = [
     "id": "q0711",
     "question": "The ______ submitted by Dr. Elena Rossi was highly praised by the board members of Vantech Ltd.",
     "options": {
-      "A": "proposal",
-      "B": "proposing",
+      "A": "proposing",
+      "B": "proposal",
       "C": "propose",
       "D": "proposed"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ số ít đóng vai trò chủ ngữ đi với động từ 'was'. 'Proposal' (bản đề xuất) là danh từ phù hợp nhất.",
     "explanation_grammar": "Noun as Subject.",
@@ -18688,12 +18754,12 @@ export const grammarQuestions = [
     "id": "q0712",
     "question": "Mr. Tanaka, who ______ the head of the marketing department five years ago, is currently the CEO of Nexa Global.",
     "options": {
-      "A": "are",
-      "B": "was",
-      "C": "is",
-      "D": "were"
+      "A": "was",
+      "B": "is",
+      "C": "were",
+      "D": "are"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu 'five years ago' yêu cầu thì quá khứ đơn. Chủ ngữ 'Mr. Tanaka' số ít chọn 'was'.",
     "explanation_grammar": "Past Simple Be-verb Agreement.",
@@ -18715,12 +18781,12 @@ export const grammarQuestions = [
     "id": "q0713",
     "question": "Anyone who ______ a valid employee ID badge from the security desk may enter the laboratory.",
     "options": {
-      "A": "obtain",
-      "B": "obtains",
+      "A": "obtaining",
+      "B": "obtain",
       "C": "obtainable",
-      "D": "obtaining"
+      "D": "obtains"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'Anyone' là đại từ bất định luôn chia động từ số ít.",
     "explanation_grammar": "Indefinite Pronoun Agreement.",
@@ -18742,12 +18808,12 @@ export const grammarQuestions = [
     "id": "q0714",
     "question": "All staff members who ______ the new accounting software are required to complete a feedback form.",
     "options": {
-      "A": "use",
-      "B": "to use",
+      "A": "to use",
+      "B": "use",
       "C": "using",
       "D": "uses"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'All staff members' là số nhiều nên động từ trong mệnh đề quan hệ giữ nguyên.",
     "explanation_grammar": "Plural Subject Agreement.",
@@ -18769,12 +18835,12 @@ export const grammarQuestions = [
     "id": "q0715",
     "question": "K-Logistics values all drivers who ______ goods safely to the warehouse during the heavy storms last week.",
     "options": {
-      "A": "delivered",
-      "B": "delivering",
-      "C": "delivers",
-      "D": "deliver"
+      "A": "delivers",
+      "B": "deliver",
+      "C": "delivering",
+      "D": "delivered"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu 'last week' yêu cầu thì quá khứ đơn.",
     "explanation_grammar": "Past Simple in Relative Clause.",
@@ -18797,9 +18863,9 @@ export const grammarQuestions = [
     "question": "The ______ made by the keynote speaker, Mr. Liam O'Connor, inspired many young entrepreneurs at the gala.",
     "options": {
       "A": "presentation",
-      "B": "presenting",
-      "C": "presently",
-      "D": "present"
+      "B": "present",
+      "C": "presenting",
+      "D": "presently"
     },
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
@@ -18824,11 +18890,11 @@ export const grammarQuestions = [
     "question": "Ms. Dubois, who ______ a famous chef in Paris during the early 2000s, now teaches at the Culinary Institute.",
     "options": {
       "A": "were",
-      "B": "was",
-      "C": "is",
-      "D": "being"
+      "B": "is",
+      "C": "being",
+      "D": "was"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Diễn tả sự việc trong quá khứ 'during the early 2000s' và chủ ngữ số ít 'Ms. Dubois'.",
     "explanation_grammar": "Subject-Verb Agreement in Relative Clause (Past).",
@@ -18851,9 +18917,9 @@ export const grammarQuestions = [
     "question": "Every customer who ______ more than $500 at the Westside Mall this Saturday receives a discount coupon.",
     "options": {
       "A": "spends",
-      "B": "spend",
-      "C": "spender",
-      "D": "spending"
+      "B": "spender",
+      "C": "spending",
+      "D": "spend"
     },
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
@@ -18877,12 +18943,12 @@ export const grammarQuestions = [
     "id": "q0719",
     "question": "All researchers who ______ chemical substances must wear protective gloves and masks at all times.",
     "options": {
-      "A": "handles",
-      "B": "handle",
-      "C": "to handle",
-      "D": "handling"
+      "A": "handling",
+      "B": "handles",
+      "C": "handle",
+      "D": "to handle"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Đại từ 'who' thay cho 'All researchers' (số nhiều) nên động từ giữ nguyên mẫu.",
     "explanation_grammar": "Plural Subject Agreement.",
@@ -18904,12 +18970,12 @@ export const grammarQuestions = [
     "id": "q0720",
     "question": "Prime Bank appreciates all volunteers who ______ financial literacy workshops at the community center last summer.",
     "options": {
-      "A": "organized",
-      "B": "organize",
+      "A": "organize",
+      "B": "organized",
       "C": "organizing",
       "D": "organizes"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu 'last summer' yêu cầu thì quá khứ đơn.",
     "explanation_grammar": "Past Simple in Relative Clause.",
@@ -18931,12 +18997,12 @@ export const grammarQuestions = [
     "id": "q0721",
     "question": "The ______ requested by the project manager at Orion Systems must be completed by Friday afternoon.",
     "options": {
-      "A": "revising",
-      "B": "revised",
-      "C": "revise",
-      "D": "revision"
+      "A": "revised",
+      "B": "revise",
+      "C": "revision",
+      "D": "revising"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Cần một danh từ làm chủ ngữ. 'Revision' (sự sửa đổi) là danh từ phù hợp.",
     "explanation_grammar": "Noun as Subject.",
@@ -18958,12 +19024,12 @@ export const grammarQuestions = [
     "id": "q0722",
     "question": "Mr. Patel, who ______ a leading architect for the city's stadium project in 2015, is now retired.",
     "options": {
-      "A": "were",
-      "B": "was",
+      "A": "is",
+      "B": "were",
       "C": "are",
-      "D": "is"
+      "D": "was"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Hành động xảy ra trong quá khứ 'in 2015' với chủ ngữ số ít 'Mr. Patel'.",
     "explanation_grammar": "Past Simple Be-verb Agreement.",
@@ -19012,12 +19078,12 @@ export const grammarQuestions = [
     "id": "q0724",
     "question": "All interns who ______ at the main office are eligible for a travel reimbursement.",
     "options": {
-      "A": "to work",
-      "B": "work",
-      "C": "works",
-      "D": "working"
+      "A": "works",
+      "B": "working",
+      "C": "work",
+      "D": "to work"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Đại từ 'who' thay cho 'All interns' (số nhiều) nên động từ giữ nguyên mẫu.",
     "explanation_grammar": "Plural Subject Agreement.",
@@ -19039,12 +19105,12 @@ export const grammarQuestions = [
     "id": "q0725",
     "question": "Stellar Media honors all journalists who ______ the regional news during the election period last year.",
     "options": {
-      "A": "covers",
-      "B": "cover",
-      "C": "covered",
-      "D": "covering"
+      "A": "covering",
+      "B": "covers",
+      "C": "cover",
+      "D": "covered"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu 'last year' yêu cầu thì quá khứ đơn.",
     "explanation_grammar": "Past Simple in Relative Clause.",
@@ -19066,12 +19132,12 @@ export const grammarQuestions = [
     "id": "q0726",
     "question": "The ______ written by the financial analyst, Sarah Jenkins, was distributed to all shareholders of Peak Inc.",
     "options": {
-      "A": "report",
-      "B": "reportable",
-      "C": "reportedly",
+      "A": "reportable",
+      "B": "reportedly",
+      "C": "report",
       "D": "reporting"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Cần một danh từ làm chủ ngữ (đứng trước cụm 'written by'). 'Report' (báo cáo) là danh từ phù hợp.",
     "explanation_grammar": "Noun as Subject.",
@@ -19093,12 +19159,12 @@ export const grammarQuestions = [
     "id": "q0727",
     "question": "Mr. Kim, who ______ the most successful salesperson in the branch last year, has been promoted to director.",
     "options": {
-      "A": "was",
-      "B": "been",
-      "C": "is",
-      "D": "were"
+      "A": "is",
+      "B": "were",
+      "C": "been",
+      "D": "was"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu 'last year' đi với chủ ngữ số ít 'Mr. Kim'.",
     "explanation_grammar": "Past Simple Be-verb Agreement.",
@@ -19120,12 +19186,12 @@ export const grammarQuestions = [
     "id": "q0728",
     "question": "Any visitor who ______ a tour of the manufacturing facility must sign a non-disclosure agreement.",
     "options": {
-      "A": "requesting",
-      "B": "request",
-      "C": "requests",
-      "D": "requester"
+      "A": "requester",
+      "B": "requests",
+      "C": "requesting",
+      "D": "request"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'Any visitor' số ít, nên động từ trong mệnh đề quan hệ chia số ít.",
     "explanation_grammar": "Subject-Verb Agreement in Relative Clause.",
@@ -19147,12 +19213,12 @@ export const grammarQuestions = [
     "id": "q0729",
     "question": "All supervisors who ______ the production line need to ensure that quality standards are met.",
     "options": {
-      "A": "to oversee",
-      "B": "oversees",
-      "C": "overseeing",
-      "D": "oversee"
+      "A": "oversee",
+      "B": "to oversee",
+      "C": "oversees",
+      "D": "overseeing"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Đại từ 'who' thay cho 'All supervisors' (số nhiều) nên động từ giữ nguyên mẫu.",
     "explanation_grammar": "Plural Subject Agreement.",
@@ -19174,12 +19240,12 @@ export const grammarQuestions = [
     "id": "q0730",
     "question": "Z-Tech thanks all engineers who ______ the software bug during the system maintenance last Sunday.",
     "options": {
-      "A": "fixed",
-      "B": "fixes",
-      "C": "fix",
-      "D": "fixing"
+      "A": "fix",
+      "B": "fixed",
+      "C": "fixing",
+      "D": "fixes"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu 'last Sunday' yêu cầu thì quá khứ đơn.",
     "explanation_grammar": "Past Simple in Relative Clause.",
@@ -19876,12 +19942,12 @@ export const grammarQuestions = [
     "id": "q0756",
     "question": "The ______ provided by the consultant, Mr. Hiroshi, helped the board understand the market trends.",
     "options": {
-      "A": "analyze",
-      "B": "analyzing",
-      "C": "analytical",
-      "D": "analysis"
+      "A": "analysis",
+      "B": "analyze",
+      "C": "analyzing",
+      "D": "analytical"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ đóng vai trò chủ ngữ của câu (đứng trước cụm phân từ 'provided by'). 'Analysis' (sự phân tích) là danh từ phù hợp nhất.",
     "explanation_grammar": "Noun as Subject.",
@@ -19903,9 +19969,9 @@ export const grammarQuestions = [
     "id": "q0757",
     "question": "Ms. Lawson, who ______ a prominent legal advisor in the early 2010s, now serves as a judge in the supreme court.",
     "options": {
-      "A": "is",
-      "B": "were",
-      "C": "been",
+      "A": "were",
+      "B": "been",
+      "C": "is",
       "D": "was"
     },
     "correct_answer": "D",
@@ -19931,9 +19997,9 @@ export const grammarQuestions = [
     "question": "Anyone who ______ a subscription to our newsletter by this Friday will receive a 10% discount code.",
     "options": {
       "A": "signs",
-      "B": "signing",
-      "C": "signer",
-      "D": "sign"
+      "B": "sign",
+      "C": "signing",
+      "D": "signer"
     },
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
@@ -19959,10 +20025,10 @@ export const grammarQuestions = [
     "options": {
       "A": "handling",
       "B": "to handle",
-      "C": "handle",
-      "D": "handles"
+      "C": "handles",
+      "D": "handle"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Đại từ quan hệ 'who' thay thế cho 'All employees' (số nhiều) nên động từ giữ nguyên mẫu.",
     "explanation_grammar": "Plural Subject Agreement.",
@@ -19985,9 +20051,9 @@ export const grammarQuestions = [
     "question": "Global Logistics thanks all staff members who ______ the emergency shipment during the holiday season last year.",
     "options": {
       "A": "managed",
-      "B": "managing",
-      "C": "manages",
-      "D": "manage"
+      "B": "manages",
+      "C": "manage",
+      "D": "managing"
     },
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
@@ -20011,12 +20077,12 @@ export const grammarQuestions = [
     "id": "q0761",
     "question": "The ______ suggested by the architect was approved by the planning committee of Arca Group.",
     "options": {
-      "A": "modification",
+      "A": "modified",
       "B": "modifying",
-      "C": "modify",
-      "D": "modified"
+      "C": "modification",
+      "D": "modify"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ số ít làm chủ ngữ của động từ 'was'. 'Modification' (sự sửa đổi) là danh từ duy nhất.",
     "explanation_grammar": "Noun as Subject.",
@@ -20039,11 +20105,11 @@ export const grammarQuestions = [
     "question": "Mr. Benson, who ______ the lead developer for the app project two years ago, has been promoted to CTO.",
     "options": {
       "A": "being",
-      "B": "is",
-      "C": "were",
-      "D": "was"
+      "B": "was",
+      "C": "is",
+      "D": "were"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'Mr. Benson' số ít và mốc thời gian 'two years ago' yêu cầu to-be là 'was'.",
     "explanation_grammar": "Past Simple Be-verb Agreement.",
@@ -20065,12 +20131,12 @@ export const grammarQuestions = [
     "id": "q0763",
     "question": "Any visitor who ______ a temporary parking permit from the security desk must display it on their dashboard.",
     "options": {
-      "A": "requests",
-      "B": "requesting",
-      "C": "request",
-      "D": "requester"
+      "A": "request",
+      "B": "requester",
+      "C": "requests",
+      "D": "requesting"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'Any visitor' là số ít nên động từ chia số ít (requests).",
     "explanation_grammar": "Singular Subject Agreement (Present).",
@@ -20093,9 +20159,9 @@ export const grammarQuestions = [
     "question": "All interns who ______ at the research center are entitled to a monthly stipend.",
     "options": {
       "A": "work",
-      "B": "works",
-      "C": "to work",
-      "D": "working"
+      "B": "working",
+      "C": "works",
+      "D": "to work"
     },
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
@@ -20120,11 +20186,11 @@ export const grammarQuestions = [
     "question": "Bright Media values all photographers who ______ the international film festival in Cannes last May.",
     "options": {
       "A": "covers",
-      "B": "cover",
-      "C": "covering",
-      "D": "covered"
+      "B": "covered",
+      "C": "cover",
+      "D": "covering"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Hành động diễn ra vào 'last May' (tháng 5 năm ngoái) chia thì quá khứ đơn.",
     "explanation_grammar": "Past Simple in Relative Clause.",
@@ -20146,12 +20212,12 @@ export const grammarQuestions = [
     "id": "q0766",
     "question": "The ______ submitted by the marketing executive, Ms. Sofia, was selected for the national campaign.",
     "options": {
-      "A": "proposal",
-      "B": "proposed",
-      "C": "proposing",
-      "D": "propose"
+      "A": "proposing",
+      "B": "propose",
+      "C": "proposed",
+      "D": "proposal"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ số ít làm chủ ngữ. 'Proposal' (bản đề xuất) là danh từ phù hợp nhất.",
     "explanation_grammar": "Noun as Subject.",
@@ -20173,12 +20239,12 @@ export const grammarQuestions = [
     "id": "q0767",
     "question": "Mr. Clarke, who ______ a professional athlete in his youth, is now a fitness consultant for corporate clients.",
     "options": {
-      "A": "was",
-      "B": "been",
-      "C": "is",
-      "D": "were"
+      "A": "were",
+      "B": "was",
+      "C": "been",
+      "D": "is"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu 'in his youth' yêu cầu chi quá khứ đơn, chủ ngữ 'Mr. Clarke' số ít dùng 'was'.",
     "explanation_grammar": "Past Simple Be-verb Agreement.",
@@ -20202,10 +20268,10 @@ export const grammarQuestions = [
     "options": {
       "A": "purchaser",
       "B": "purchasing",
-      "C": "purchases",
-      "D": "purchase"
+      "C": "purchase",
+      "D": "purchases"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'Every customer' (mỗi khách hàng) là số ít nên động từ chia số ít (purchases).",
     "explanation_grammar": "Agreement with 'Every'.",
@@ -20228,9 +20294,9 @@ export const grammarQuestions = [
     "question": "All supervisors who ______ the assembly line are responsible for maintaining quality standards.",
     "options": {
       "A": "oversee",
-      "B": "overseeing",
-      "C": "oversees",
-      "D": "to oversee"
+      "B": "oversees",
+      "C": "to oversee",
+      "D": "overseeing"
     },
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
@@ -20254,12 +20320,12 @@ export const grammarQuestions = [
     "id": "q0770",
     "question": "Tech Solutions appreciates all volunteers who ______ the coding workshop for local students last weekend.",
     "options": {
-      "A": "organize",
-      "B": "organizes",
-      "C": "organized",
-      "D": "organizing"
+      "A": "organizing",
+      "B": "organized",
+      "C": "organize",
+      "D": "organizes"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Mốc thời gian 'last weekend' yêu cầu động từ chia ở thì quá khứ đơn.",
     "explanation_grammar": "Past Simple in Relative Clause.",
@@ -20283,10 +20349,10 @@ export const grammarQuestions = [
     "options": {
       "A": "adjust",
       "B": "adjusted",
-      "C": "adjusting",
-      "D": "adjustment"
+      "C": "adjustment",
+      "D": "adjusting"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ làm chủ ngữ. 'Adjustment' (sự điều chỉnh) là danh từ phù hợp.",
     "explanation_grammar": "Noun as Subject.",
@@ -20308,10 +20374,10 @@ export const grammarQuestions = [
     "id": "q0772",
     "question": "Ms. Park, who ______ the regional manager for Asia in 2019, is now based in our New York office.",
     "options": {
-      "A": "is",
+      "A": "were",
       "B": "was",
-      "C": "were",
-      "D": "are"
+      "C": "are",
+      "D": "is"
     },
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
@@ -20335,12 +20401,12 @@ export const grammarQuestions = [
     "id": "q0773",
     "question": "Anyone who ______ a preference for vegetarian meals should inform the event coordinator.",
     "options": {
-      "A": "expression",
-      "B": "expresses",
-      "C": "express",
-      "D": "expressing"
+      "A": "expressing",
+      "B": "expression",
+      "C": "expresses",
+      "D": "express"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'Anyone' số ít luôn đi kèm động từ chia số ít (expresses).",
     "explanation_grammar": "Indefinite Pronoun Agreement.",
@@ -20362,12 +20428,12 @@ export const grammarQuestions = [
     "id": "q0774",
     "question": "All engineers who ______ the new software system are required to attend a briefing tomorrow.",
     "options": {
-      "A": "to use",
-      "B": "use",
+      "A": "use",
+      "B": "to use",
       "C": "uses",
       "D": "using"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ số nhiều 'All engineers' yêu cầu động từ 'use' ở dạng nguyên mẫu.",
     "explanation_grammar": "Plural Subject Agreement.",
@@ -20389,9 +20455,9 @@ export const grammarQuestions = [
     "id": "q0775",
     "question": "Delta Airlines honors all pilots who ______ flights during the severe weather conditions last week.",
     "options": {
-      "A": "operates",
-      "B": "operate",
-      "C": "operating",
+      "A": "operate",
+      "B": "operating",
+      "C": "operates",
       "D": "operated"
     },
     "correct_answer": "D",
@@ -20416,12 +20482,12 @@ export const grammarQuestions = [
     "id": "q0776",
     "question": "The ______ prepared by the financial team was distributed to the investors of SolarX.",
     "options": {
-      "A": "reportedly",
-      "B": "reporting",
-      "C": "reportable",
-      "D": "report"
+      "A": "reportable",
+      "B": "report",
+      "C": "reportedly",
+      "D": "reporting"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ số ít làm chủ ngữ của 'was distributed'. 'Report' (bản báo cáo) là danh từ duy nhất.",
     "explanation_grammar": "Noun as Subject.",
@@ -20443,12 +20509,12 @@ export const grammarQuestions = [
     "id": "q0777",
     "question": "Mr. Wright, who ______ the top salesperson in the company last year, has won the 'Employee of the Year' award.",
     "options": {
-      "A": "was",
-      "B": "is",
-      "C": "were",
+      "A": "is",
+      "B": "were",
+      "C": "was",
       "D": "been"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu 'last year' yêu cầu chia to-be ở quá khứ dơn, chủ ngữ 'Mr. Wright' số ít chọn 'was'.",
     "explanation_grammar": "Past Simple Be-verb Agreement.",
@@ -20470,12 +20536,12 @@ export const grammarQuestions = [
     "id": "q0778",
     "question": "Any applicant who ______ an interview with the hiring manager will be notified of the result by email.",
     "options": {
-      "A": "completer",
+      "A": "completes",
       "B": "completing",
       "C": "complete",
-      "D": "completes"
+      "D": "completer"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Đại từ 'who' thay cho 'Any applicant' (số ít) nên động từ chia số ít (completes).",
     "explanation_grammar": "Subject-Verb Agreement in Relative Clause.",
@@ -20497,12 +20563,12 @@ export const grammarQuestions = [
     "id": "q0779",
     "question": "All managers who ______ the annual budget must ensure all expenses are properly documented.",
     "options": {
-      "A": "approve",
+      "A": "approving",
       "B": "approves",
-      "C": "to approve",
-      "D": "approving"
+      "C": "approve",
+      "D": "to approve"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ số nhiều 'All managers' yêu cầu động từ 'approve' giữ nguyên.",
     "explanation_grammar": "Plural Subject Agreement.",
@@ -20524,12 +20590,12 @@ export const grammarQuestions = [
     "id": "q0780",
     "question": "Blue Ocean Corp thanks all employees who ______ in the charity run organized by the city last Saturday.",
     "options": {
-      "A": "participated",
-      "B": "participate",
-      "C": "participates",
-      "D": "participating"
+      "A": "participate",
+      "B": "participates",
+      "C": "participating",
+      "D": "participated"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Sự kiện diễn ra 'last Saturday' nên chia động từ ở thì quá khứ đơn.",
     "explanation_grammar": "Past Simple in Relative Clause.",
@@ -24467,12 +24533,12 @@ export const grammarQuestions = [
   "id": "q0926",
   "question": "Director Jun Iwata auditioned twenty actors before making the ______ decision about whom to cast in the main role.",
   "options": {
-    "A": "finals",
-    "B": "finalize",
-    "C": "final",
+    "A": "final",
+    "B": "finals",
+    "C": "finalize",
     "D": "finally"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'decision' để bổ nghĩa cho danh từ đó.",
   "explanation_grammar": "Adjective before Noun.",
@@ -24494,10 +24560,10 @@ export const grammarQuestions = [
   "id": "q0927",
   "question": "The two competing software programs were determined to be ______ effective in making filing taxes from home an easy task.",
   "options": {
-    "A": "equaled",
-    "B": "equality",
+    "A": "equality",
+    "B": "equal",
     "C": "equally",
-    "D": "equal"
+    "D": "equaled"
   },
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
@@ -24521,12 +24587,12 @@ export const grammarQuestions = [
   "id": "q0928",
   "question": "Because of a ______ increase in profits this quarter, Tyro Sportswear employees will receive their first-ever year end bonus.",
   "options": {
-    "A": "dramatic",
-    "B": "dramatically",
-    "C": "dramatize",
-    "D": "drama"
+    "A": "drama",
+    "B": "dramatic",
+    "C": "dramatically",
+    "D": "dramatize"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'increase' để bổ nghĩa cho danh từ đó.",
   "explanation_grammar": "Adjective before Noun.",
@@ -24575,12 +24641,12 @@ export const grammarQuestions = [
   "id": "q0930",
   "question": "Doctors at Stephen Mallory Memorial Hospital claim that cases of food poisoning caused by improper storage are becoming more ______.",
   "options": {
-    "A": "frequency",
+    "A": "frequent",
     "B": "frequently",
     "C": "frequented",
-    "D": "frequent"
+    "D": "frequency"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'becoming' cần một tính từ.",
   "explanation_grammar": "Adjective after Linking Verb.",
@@ -24602,12 +24668,12 @@ export const grammarQuestions = [
   "id": "q0931",
   "question": "In Mr. Brothet's performance review, the department supervisor wrote that he worked extremely ______ and always finished his assignments on time.",
   "options": {
-    "A": "diligently",
+    "A": "most diligent",
     "B": "diligent",
-    "C": "diligence",
-    "D": "most diligent"
+    "C": "diligently",
+    "D": "diligence"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'worked'.",
   "explanation_grammar": "Adverb modifying Verb.",
@@ -24629,12 +24695,12 @@ export const grammarQuestions = [
   "id": "q0932",
   "question": "The chemistry lab managers are concerned that new employees have not been trained ______ in the latest emergency procedures.",
   "options": {
-    "A": "adequately",
-    "B": "adequate",
+    "A": "adequate",
+    "B": "adequately",
     "C": "adequateness",
     "D": "adequacy"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ ở dạng bị động 'been trained'.",
   "explanation_grammar": "Adverb modifying Passive Verb.",
@@ -24656,12 +24722,12 @@ export const grammarQuestions = [
   "id": "q0933",
   "question": "Underwood Energy Services Inc. offers ______ benefits to full-time employees, including dental insurance.",
   "options": {
-    "A": "attracted",
-    "B": "attract",
-    "C": "attractive",
-    "D": "attraction"
+    "A": "attract",
+    "B": "attraction",
+    "C": "attracted",
+    "D": "attractive"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'benefits' để bổ nghĩa cho danh từ đó.",
   "explanation_grammar": "Adjective before Noun.",
@@ -24683,12 +24749,12 @@ export const grammarQuestions = [
   "id": "q0934",
   "question": "After ______ interviewing more than fifty candidates for the position of manager of the Biotechnology Department, the committee chose Dr. Alan Liu.",
   "options": {
-    "A": "carefully",
-    "B": "to care",
-    "C": "most careful",
-    "D": "careful"
+    "A": "careful",
+    "B": "carefully",
+    "C": "to care",
+    "D": "most careful"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho danh động từ (gerund) 'interviewing'.",
   "explanation_grammar": "Adverb modifying Gerund.",
@@ -24710,12 +24776,12 @@ export const grammarQuestions = [
   "id": "q0935",
   "question": "Mr. Ben Shipley will be promoted next month for managing production ______ at our facility in Kansas City.",
   "options": {
-    "A": "more effective",
-    "B": "most effective",
-    "C": "effectively",
+    "A": "effectively",
+    "B": "more effective",
+    "C": "most effective",
     "D": "effective"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho danh động từ 'managing'.",
   "explanation_grammar": "Adverb modifying Gerund.",
@@ -24737,12 +24803,12 @@ export const grammarQuestions = [
   "id": "q0936",
   "question": "Graduates from the Melrose College of Technology often make ______ contributions in several fields, including engineering, computer sciences, and astronomy.",
   "options": {
-    "A": "value",
-    "B": "valuably",
-    "C": "valuable",
-    "D": "valuing"
+    "A": "valuably",
+    "B": "valuable",
+    "C": "valuing",
+    "D": "value"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'contributions' để bổ nghĩa cho danh từ đó.",
   "explanation_grammar": "Adjective before Noun.",
@@ -24764,12 +24830,12 @@ export const grammarQuestions = [
   "id": "q0937",
   "question": "When handling large funds, bank employees are required to check the statements ______ to make sure that everything is correct.",
   "options": {
-    "A": "careful",
-    "B": "carefulness",
-    "C": "more careful",
-    "D": "carefully"
+    "A": "more careful",
+    "B": "careful",
+    "C": "carefully",
+    "D": "carefulness"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'check'.",
   "explanation_grammar": "Adverb modifying Verb.",
@@ -24791,12 +24857,12 @@ export const grammarQuestions = [
   "id": "q0938",
   "question": "Once Mr. Mirren ______ completes his studies and necessary training, he may come and work for our corporation.",
   "options": {
-    "A": "successfully",
-    "B": "successful",
-    "C": "successes",
-    "D": "success"
+    "A": "successful",
+    "B": "successes",
+    "C": "success",
+    "D": "successfully"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'completes'.",
   "explanation_grammar": "Adverb modifying Verb.",
@@ -24818,12 +24884,12 @@ export const grammarQuestions = [
   "id": "q0939",
   "question": "There are some ______ job ads in the company newsletter in case any employee might know someone who can fill those positions.",
   "options": {
-    "A": "updating",
+    "A": "updated",
     "B": "updates",
-    "C": "updated",
-    "D": "update"
+    "C": "update",
+    "D": "updating"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ (ở dạng phân từ) đứng trước danh từ 'job ads'. 'Updated' có nghĩa là 'đã được cập nhật'.",
   "explanation_grammar": "Participial Adjective before Noun.",
@@ -24845,12 +24911,12 @@ export const grammarQuestions = [
   "id": "q0940",
   "question": "Regulations have been enacted to ensure that labels on all medications are easily ______.",
   "options": {
-    "A": "understand",
-    "B": "understandably",
-    "C": "understandable",
-    "D": "understanding"
+    "A": "understanding",
+    "B": "understandable",
+    "C": "understand",
+    "D": "understandably"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'are' cần một tính từ.",
   "explanation_grammar": "Adjective after Linking Verb.",
@@ -24874,10 +24940,10 @@ export const grammarQuestions = [
   "options": {
     "A": "additionally",
     "B": "additions",
-    "C": "additional",
-    "D": "addition"
+    "C": "addition",
+    "D": "additional"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'help'.",
   "explanation_grammar": "Adjective before Noun.",
@@ -24900,9 +24966,9 @@ export const grammarQuestions = [
   "question": "______ accounting measures have helped increase profit margins by 20%.",
   "options": {
     "A": "improved",
-    "B": "improve",
-    "C": "improving",
-    "D": "improvement"
+    "B": "improving",
+    "C": "improvement",
+    "D": "improve"
   },
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
@@ -24926,12 +24992,12 @@ export const grammarQuestions = [
   "id": "q0943",
   "question": "The price of organic goods is expected to rise ______ over the next several years because of an increase in demand.",
   "options": {
-    "A": "dramatically",
+    "A": "dramatic",
     "B": "dramatize",
-    "C": "dramatist",
-    "D": "dramatic"
+    "C": "dramatically",
+    "D": "dramatist"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'rise'.",
   "explanation_grammar": "Adverb modifying Verb.",
@@ -24953,12 +25019,12 @@ export const grammarQuestions = [
   "id": "q0944",
   "question": "At yesterday's meeting, staff members were introduced to Peter McCabe, the recently ______ manager of the Dynasty Hotel in Washington D.C.",
   "options": {
-    "A": "appointed",
-    "B": "appoint",
-    "C": "appointing",
-    "D": "appointment"
+    "A": "appoint",
+    "B": "appointing",
+    "C": "appointment",
+    "D": "appointed"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ (ở dạng phân từ) đứng trước danh từ 'manager'.",
   "explanation_grammar": "Participial Adjective before Noun.",
@@ -24980,10 +25046,10 @@ export const grammarQuestions = [
   "id": "q0945",
   "question": "The new zoning laws should ______ improve the traffic congestion problem developing in the suburbs.",
   "options": {
-    "A": "greatest",
-    "B": "greatness",
+    "A": "greatness",
+    "B": "great",
     "C": "greatly",
-    "D": "great"
+    "D": "greatest"
   },
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
@@ -26197,14 +26263,14 @@ export const grammarQuestions = [
   "id": "q0990",
   "question": "We require ______ written confirmation from the client before sharing any of their financial data.",
   "options": {
-    "A": "explicitly",
-    "B": "explicitness",
-    "C": "explicit",
-    "D": "explicit"
+  "A": "explicitly",
+  "B": "explicitness",
+  "C": "explicit",
+  "D": "explicate"
   },
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
-  "explanation_reason": "Cần một tính từ đứng trước danh từ 'confirmation'. 'Explicit' (rõ ràng) là tính từ.",
+  "explanation_reason": "Chỗ trống đứng trước cụm danh từ 'written confirmation' nên cần tính từ. 'Explicit' (rõ ràng, minh thị) là tính từ; 'explicitly' là trạng từ, 'explicitness' là danh từ, 'explicate' là động từ.",
   "explanation_grammar": "Adjective before Noun.",
   "translation": "Chúng tôi yêu cầu xác nhận bằng văn bản rõ ràng từ khách hàng trước khi chia sẻ bất kỳ dữ liệu tài chính nào của họ.",
   "core_vocabulary": [
@@ -27013,9 +27079,9 @@ export const grammarQuestions = [
     "C": "properly",
     "D": "proper"
   },
-  "answer": "C",
+  "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
-  "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'disposed of'.",
+  "explanation_reason": "Chỗ trống đứng sau cụm động từ bị động 'are disposed of' nên cần một trạng từ. 'Properly' (một cách đúng đắn) là trạng từ; 'properness' và 'property' là danh từ, 'proper' là tính từ.",
   "explanation_grammar": "Adverb modifying Verb.",
   "translation": "Vui lòng đảm bảo rằng tất cả các tài liệu bảo mật của khách hàng được xử lý đúng cách.",
   "core_vocabulary": [
@@ -28924,12 +28990,12 @@ export const grammarQuestions = [
   "id": "q1091",
   "question": "Ms. Arisawa will be out of the office ______ next Monday.",
   "options": {
-    "A": "within",
-    "B": "until",
-    "C": "while",
-    "D": "during"
+    "A": "until",
+    "B": "during",
+    "C": "within",
+    "D": "while"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'until' dùng để chỉ một hành động hoặc trạng thái kéo dài cho đến một thời điểm nhất định.",
   "explanation_grammar": "Preposition of Time (Until).",
@@ -28973,12 +29039,12 @@ export const grammarQuestions = [
   "id": "q1093",
   "question": "______ the heavy rain, the outdoor concert at Benson Park was canceled.",
   "options": {
-    "A": "Since",
+    "A": "Due to",
     "B": "Because",
     "C": "As",
-    "D": "Due to"
+    "D": "Since"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "'Due to' là một giới từ phức hợp dùng để chỉ nguyên nhân (đứng trước một danh từ/cụm danh từ).",
   "explanation_grammar": "Preposition of Cause (Due to).",
@@ -29000,12 +29066,12 @@ export const grammarQuestions = [
   "id": "q1094",
   "question": "The new printer from LexoCorp is compatible ______ most operating systems.",
   "options": {
-    "A": "with",
-    "B": "for",
-    "C": "to",
-    "D": "about"
+    "A": "about",
+    "B": "with",
+    "C": "for",
+    "D": "to"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Tính từ 'compatible' luôn đi kèm với giới từ 'with' (tương thích với).",
   "explanation_grammar": "Adjective + Preposition.",
@@ -29049,12 +29115,12 @@ export const grammarQuestions = [
   "id": "q1096",
   "question": "Please submit your travel expense reports ______ the end of the week.",
   "options": {
-    "A": "to",
-    "B": "at",
-    "C": "on",
-    "D": "by"
+    "A": "at",
+    "B": "on",
+    "C": "by",
+    "D": "to"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'by' dùng để chỉ một thời hạn chót (trước hoặc tại thời điểm đó).",
   "explanation_grammar": "Preposition of Time (Deadline).",
@@ -29076,12 +29142,12 @@ export const grammarQuestions = [
   "id": "q1097",
   "question": "Employees at Gable Inc. are eligible for a bonus ______ their performance.",
   "options": {
-    "A": "depending on",
+    "A": "in spite of",
     "B": "as for",
     "C": "instead of",
-    "D": "in spite of"
+    "D": "depending on"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "'Depending on' (tùy thuộc vào) là một giới từ phức hợp dùng để chỉ sự phụ thuộc.",
   "explanation_grammar": "Complex Preposition.",
@@ -29130,12 +29196,12 @@ export const grammarQuestions = [
   "id": "q1099",
   "question": "______ receiving the signed contract, we will begin the renovation.",
   "options": {
-    "A": "Upon",
-    "B": "Throughout",
-    "C": "Among",
-    "D": "Between"
+    "A": "Among",
+    "B": "Between",
+    "C": "Throughout",
+    "D": "Upon"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'Upon' đứng trước một danh động từ (V-ing) có nghĩa là 'ngay sau khi'.",
   "explanation_grammar": "Preposition 'Upon' + V-ing.",
@@ -29157,12 +29223,12 @@ export const grammarQuestions = [
   "id": "q1100",
   "question": "The shuttle bus to the airport departs ______ the main entrance every thirty minutes.",
   "options": {
-    "A": "from",
+    "A": "by",
     "B": "to",
-    "C": "at",
-    "D": "by"
+    "C": "from",
+    "D": "at"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Động từ 'depart' (khởi hành) đi kèm với giới từ 'from' để chỉ điểm xuất phát.",
   "explanation_grammar": "Verb + Preposition.",
@@ -29186,10 +29252,10 @@ export const grammarQuestions = [
   "options": {
     "A": "during",
     "B": "until",
-    "C": "before",
-    "D": "since"
+    "C": "since",
+    "D": "before"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'before' đứng trước một danh động từ để chỉ trình tự thời gian (trước khi làm gì).",
   "explanation_grammar": "Preposition of Time (Before).",
@@ -29211,12 +29277,12 @@ export const grammarQuestions = [
   "id": "q1102",
   "question": "Mr. Kim was promoted to senior manager ______ his exceptional leadership skills.",
   "options": {
-    "A": "because of",
-    "B": "even though",
-    "C": "in case of",
-    "D": "as long as"
+    "A": "in case of",
+    "B": "because of",
+    "C": "as long as",
+    "D": "even though"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "'Because of' là một giới từ phức hợp dùng để chỉ nguyên nhân.",
   "explanation_grammar": "Preposition of Cause (Because of).",
@@ -29238,12 +29304,12 @@ export const grammarQuestions = [
   "id": "q1103",
   "question": "The workshop on digital security will be held ______ July 15.",
   "options": {
-    "A": "on",
+    "A": "in",
     "B": "for",
-    "C": "at",
-    "D": "in"
+    "C": "on",
+    "D": "at"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'on' dùng để chỉ ngày cụ thể trong tháng.",
   "explanation_grammar": "Preposition of Time (Days/Dates).",
@@ -29260,12 +29326,12 @@ export const grammarQuestions = [
   "id": "q1104",
   "question": "NetStar Solutions provides technical support ______ all of its clients.",
   "options": {
-    "A": "for",
-    "B": "at",
-    "C": "to",
+    "A": "to",
+    "B": "for",
+    "C": "at",
     "D": "with"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cụm 'provide something to someone' (cung cấp cái gì cho ai) là cách dùng phổ biến, nhấn mạnh hướng đến đối tượng.",
   "explanation_grammar": "Verb + Object + Preposition.",
@@ -29282,12 +29348,12 @@ export const grammarQuestions = [
   "id": "q1105",
   "question": "We are looking for a candidate ______ at least five years of experience in sales.",
   "options": {
-    "A": "for",
-    "B": "about",
-    "C": "with",
-    "D": "by"
+    "A": "about",
+    "B": "with",
+    "C": "by",
+    "D": "for"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'with' dùng để chỉ đặc điểm hoặc sở hữu (có ít nhất 5 năm kinh nghiệm).",
   "explanation_grammar": "Preposition 'with' (Characteristics).",
@@ -29304,12 +29370,12 @@ export const grammarQuestions = [
   "id": "q1106",
   "question": "The annual report is available ______ the company's internal website.",
   "options": {
-    "A": "in",
-    "B": "to",
-    "C": "on",
-    "D": "at"
+    "A": "on",
+    "B": "at",
+    "C": "in",
+    "D": "to"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'on' dùng cho các bề mặt hoặc phương tiện truyền thông như trang web.",
   "explanation_grammar": "Preposition of Place (Media/Surfaces).",
@@ -29326,12 +29392,12 @@ export const grammarQuestions = [
   "id": "q1107",
   "question": "______ the merger, many employees were worried about their job security.",
   "options": {
-    "A": "Following",
-    "B": "Between",
+    "A": "Between",
+    "B": "Following",
     "C": "Across",
     "D": "Into"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "'Following' đóng vai trò như một giới từ có nghĩa là 'sau khi'.",
   "explanation_grammar": "Preposition 'Following'.",
@@ -29353,12 +29419,12 @@ export const grammarQuestions = [
   "id": "q1108",
   "question": "The price of the tour includes breakfast, but ______ lunch or dinner.",
   "options": {
-    "A": "none",
-    "B": "not",
-    "C": "neither",
-    "D": "without"
+    "A": "neither",
+    "B": "without",
+    "C": "none",
+    "D": "not"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Dùng 'not' để phủ định thành phần trong cấu trúc liệt kê.",
   "explanation_grammar": "Negation in phrases.",
@@ -29375,12 +29441,12 @@ export const grammarQuestions = [
   "id": "q1109",
   "question": "Mr. Sato will be attending the conference in London ______ Mr. Miller.",
   "options": {
-    "A": "except for",
-    "B": "regardless of",
-    "C": "instead of",
-    "D": "in addition to"
+    "A": "instead of",
+    "B": "in addition to",
+    "C": "except for",
+    "D": "regardless of"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Dựa vào ngữ cảnh, 'instead of' (thay vì/thay cho) là lựa chọn hợp lý nhất.",
   "explanation_grammar": "Compound Preposition.",
@@ -29399,10 +29465,10 @@ export const grammarQuestions = [
   "options": {
     "A": "since",
     "B": "while",
-    "C": "during",
-    "D": "until"
+    "C": "until",
+    "D": "during"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cụm 'until further notice' (cho đến khi có thông báo mới) là một cách kết hợp cố định.",
   "explanation_grammar": "Fixed Prepositional Phrase.",
@@ -29420,9 +29486,9 @@ export const grammarQuestions = [
   "question": "Please keep your receipts ______ you need to request a refund.",
   "options": {
     "A": "in case",
-    "B": "unless",
-    "C": "although",
-    "D": "so that"
+    "B": "although",
+    "C": "so that",
+    "D": "unless"
   },
   "correct_answer": "A",
   "grammar_type": "Giới từ",
@@ -29446,12 +29512,12 @@ export const grammarQuestions = [
   "id": "q1112",
   "question": "The office is located ______ the post office and the central bank.",
   "options": {
-    "A": "beside",
-    "B": "along",
-    "C": "between",
-    "D": "among"
+    "A": "among",
+    "B": "beside",
+    "C": "along",
+    "D": "between"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'between' đi kèm với cấu trúc 'A and B'.",
   "explanation_grammar": "Preposition of Place (Between).",
@@ -29469,11 +29535,11 @@ export const grammarQuestions = [
   "question": "Employees are encouraged to provide feedback ______ the new policy.",
   "options": {
     "A": "through",
-    "B": "around",
-    "C": "regarding",
+    "B": "regarding",
+    "C": "around",
     "D": "across"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "'Regarding' đóng vai trò là một giới từ có nghĩa là 'về/liên quan đến'.",
   "explanation_grammar": "Preposition 'Regarding'.",
@@ -29495,12 +29561,12 @@ export const grammarQuestions = [
   "id": "q1114",
   "question": "______ her busy schedule, Ms. Rodriguez managed to finish the report on time.",
   "options": {
-    "A": "Despite",
-    "B": "Even",
-    "C": "However",
-    "D": "Although"
+    "A": "However",
+    "B": "Although",
+    "C": "Even",
+    "D": "Despite"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'Despite' (mặc dù) đứng trước một cụm danh từ.",
   "explanation_grammar": "Preposition of Concession.",
@@ -29522,12 +29588,12 @@ export const grammarQuestions = [
   "id": "q1115",
   "question": "The presentation will start ______ 9:00 A.M. sharp.",
   "options": {
-    "A": "at",
-    "B": "on",
-    "C": "by",
-    "D": "in"
+    "A": "in",
+    "B": "at",
+    "C": "on",
+    "D": "by"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'at' dùng để chỉ một mốc thời gian cụ thể.",
   "explanation_grammar": "Preposition of Time (Point).",
@@ -30777,12 +30843,12 @@ export const grammarQuestions = [
   "id": "q1166",
   "question": "The annual staff retreat will take place ______ the Lakeside Hotel this year.",
   "options": {
-    "A": "in",
-    "B": "to",
-    "C": "at",
-    "D": "for"
+    "A": "for",
+    "B": "at",
+    "C": "in",
+    "D": "to"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'at' dùng để chỉ một địa điểm cụ thể nơi sự kiện diễn ra.",
   "explanation_grammar": "Preposition of Place (At).",
@@ -30831,12 +30897,12 @@ export const grammarQuestions = [
   "id": "q1168",
   "question": "Ms. Alvez is responsible for reviewing all contracts ______ they are sent to the client.",
   "options": {
-    "A": "within",
-    "B": "before",
-    "C": "during",
-    "D": "until"
+    "A": "before",
+    "B": "during",
+    "C": "until",
+    "D": "within"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'before' dùng để chỉ trình tự thời gian (trước khi).",
   "explanation_grammar": "Preposition of Time (Before).",
@@ -30858,12 +30924,12 @@ export const grammarQuestions = [
   "id": "q1169",
   "question": "The cafeteria on the first floor is open ______ 7:00 A.M. and 3:00 P.M.",
   "options": {
-    "A": "among",
-    "B": "between",
-    "C": "from",
-    "D": "through"
+    "A": "through",
+    "B": "among",
+    "C": "between",
+    "D": "from"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'between' đi kèm với cấu trúc 'A and B'.",
   "explanation_grammar": "Preposition 'Between'.",
@@ -30880,12 +30946,12 @@ export const grammarQuestions = [
   "id": "q1170",
   "question": "Mr. Chen has been out of town on a business trip ______ last Tuesday.",
   "options": {
-    "A": "from",
-    "B": "since",
+    "A": "since",
+    "B": "from",
     "C": "in",
     "D": "for"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'since' chỉ mốc thời gian bắt đầu một sự việc kéo dài đến hiện tại.",
   "explanation_grammar": "Preposition of Time (Since).",
@@ -30902,12 +30968,12 @@ export const grammarQuestions = [
   "id": "q1171",
   "question": "Please make sure to return the company vehicle ______ 5:00 P.M. tomorrow.",
   "options": {
-    "A": "on",
-    "B": "by",
-    "C": "in",
-    "D": "until"
+    "A": "in",
+    "B": "until",
+    "C": "on",
+    "D": "by"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'by' để chỉ thời hạn chót (deadline).",
   "explanation_grammar": "Preposition of Time (By).",
@@ -30925,9 +30991,9 @@ export const grammarQuestions = [
   "question": "The new marketing campaign is aimed ______ young professionals in urban areas.",
   "options": {
     "A": "at",
-    "B": "for",
-    "C": "to",
-    "D": "on"
+    "B": "on",
+    "C": "for",
+    "D": "to"
   },
   "correct_answer": "A",
   "grammar_type": "Giới từ",
@@ -30952,11 +31018,11 @@ export const grammarQuestions = [
   "question": "______ his lack of experience, Mr. Gupta quickly adapted to his new role.",
   "options": {
     "A": "Although",
-    "B": "Despite",
-    "C": "However",
+    "B": "However",
+    "C": "Despite",
     "D": "Even"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'Despite' (mặc dù) đứng trước cụm danh từ.",
   "explanation_grammar": "Preposition of Concession.",
@@ -30978,12 +31044,12 @@ export const grammarQuestions = [
   "id": "q1174",
   "question": "The seminar on time management will be held ______ Wednesday afternoon.",
   "options": {
-    "A": "on",
-    "B": "during",
-    "C": "at",
-    "D": "in"
+    "A": "at",
+    "B": "on",
+    "C": "in",
+    "D": "during"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'on' dùng cho các buổi trong ngày cụ thể (Wednesday afternoon).",
   "explanation_grammar": "Preposition of Time (On).",
@@ -31000,12 +31066,12 @@ export const grammarQuestions = [
   "id": "q1175",
   "question": "All employees must wear their identification badges ______ all times while in the building.",
   "options": {
-    "A": "during",
-    "B": "at",
+    "A": "on",
+    "B": "during",
     "C": "in",
-    "D": "on"
+    "D": "at"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cụm 'at all times' (mọi lúc) là một thành ngữ cố định.",
   "explanation_grammar": "Fixed Prepositional Idiom.",
@@ -31028,11 +31094,11 @@ export const grammarQuestions = [
   "question": "The latest smartphone model from Apex Electronics comes ______ a one-year warranty.",
   "options": {
     "A": "by",
-    "B": "to",
-    "C": "with",
+    "B": "with",
+    "C": "to",
     "D": "for"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'with' chỉ sự đi kèm cùng với vật gì đó.",
   "explanation_grammar": "Preposition 'with'.",
@@ -31049,10 +31115,10 @@ export const grammarQuestions = [
   "id": "q1177",
   "question": "Passengers are asked to remain seated ______ the airplane comes to a complete stop.",
   "options": {
-    "A": "while",
-    "B": "by",
+    "A": "by",
+    "B": "before",
     "C": "until",
-    "D": "before"
+    "D": "while"
   },
   "correct_answer": "C",
   "grammar_type": "Giới từ",
@@ -31071,12 +31137,12 @@ export const grammarQuestions = [
   "id": "q1178",
   "question": "The main office of Bright Solutions is located ______ two major highways.",
   "options": {
-    "A": "throughout",
-    "B": "along",
-    "C": "near",
-    "D": "into"
+    "A": "into",
+    "B": "near",
+    "C": "throughout",
+    "D": "along"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'near' chỉ vị trí gần.",
   "explanation_grammar": "Preposition of Place (Near).",
@@ -31094,11 +31160,11 @@ export const grammarQuestions = [
   "question": "______ the upcoming holiday weekend, the accounting department will close early on Friday.",
   "options": {
     "A": "In spite of",
-    "B": "Because of",
-    "C": "As long as",
-    "D": "In order to"
+    "B": "As long as",
+    "C": "In order to",
+    "D": "Because of"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ phức hợp 'Because of' đứng trước cụm danh từ chỉ lý do.",
   "explanation_grammar": "Preposition of Cause.",
@@ -31115,10 +31181,10 @@ export const grammarQuestions = [
   "id": "q1180",
   "question": "Ms. Fischer successfully completed the project ______ the help of her dedicated team.",
   "options": {
-    "A": "from",
-    "B": "among",
+    "A": "among",
+    "B": "by",
     "C": "with",
-    "D": "by"
+    "D": "from"
   },
   "correct_answer": "C",
   "grammar_type": "Giới từ",
@@ -31137,12 +31203,12 @@ export const grammarQuestions = [
   "id": "q1181",
   "question": "The CEO's keynote address will be broadcast live ______ the company intranet.",
   "options": {
-    "A": "on",
+    "A": "from",
     "B": "into",
     "C": "at",
-    "D": "from"
+    "D": "on"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'on' dùng cho các phương tiện truyền thông nội bộ hoặc internet.",
   "explanation_grammar": "Preposition of Place (Media).",
@@ -31191,12 +31257,12 @@ export const grammarQuestions = [
   "id": "q1183",
   "question": "The new inventory tracking system was implemented ______ the entire retail store last week.",
   "options": {
-    "A": "alongside",
-    "B": "throughout",
-    "C": "among",
-    "D": "between"
+    "A": "throughout",
+    "B": "among",
+    "C": "between",
+    "D": "alongside"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'throughout' chỉ sự bao phủ toàn bộ không gian/phạm vi.",
   "explanation_grammar": "Preposition 'Throughout'.",
@@ -31218,12 +31284,12 @@ export const grammarQuestions = [
   "id": "q1184",
   "question": "Mr. Rossi will be taking a leave of absence ______ personal reasons.",
   "options": {
-    "A": "for",
+    "A": "with",
     "B": "to",
     "C": "by",
-    "D": "with"
+    "D": "for"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'for' chỉ mục đích hoặc lý do (vì lý do cá nhân).",
   "explanation_grammar": "Preposition of Reason.",
@@ -31240,12 +31306,12 @@ export const grammarQuestions = [
   "id": "q1185",
   "question": "______ addition to his regular duties, David is now managing the social media accounts.",
   "options": {
-    "A": "At",
-    "B": "In",
+    "A": "In",
+    "B": "At",
     "C": "On",
     "D": "By"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cụm 'In addition to' (ngoài ra/thêm vào đó) là cấu trúc cố định.",
   "explanation_grammar": "Fixed Prepositional Phrase.",
@@ -31262,12 +31328,12 @@ export const grammarQuestions = [
   "id": "q1186",
   "question": "The customer service desk is conveniently situated ______ the main entrance.",
   "options": {
-    "A": "as to",
-    "B": "out of",
-    "C": "away from",
-    "D": "next to"
+    "A": "out of",
+    "B": "away from",
+    "C": "next to",
+    "D": "as to"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'next to' (bên cạnh) chỉ vị trí sát gần.",
   "explanation_grammar": "Preposition of Place.",
@@ -31284,12 +31350,12 @@ export const grammarQuestions = [
   "id": "q1187",
   "question": "The manufacturing plant will shut down for maintenance ______ the first week of August.",
   "options": {
-    "A": "until",
-    "B": "by",
-    "C": "during",
-    "D": "while"
+    "A": "while",
+    "B": "until",
+    "C": "by",
+    "D": "during"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'during' chỉ một khoảng thời gian diễn ra sự việc.",
   "explanation_grammar": "Preposition of Time (During).",
@@ -31306,12 +31372,12 @@ export const grammarQuestions = [
   "id": "q1188",
   "question": "The proposal submitted by Zenith Consulting was chosen ______ its innovative approach.",
   "options": {
-    "A": "regardless of",
-    "B": "due to",
+    "A": "due to",
+    "B": "regardless of",
     "C": "except for",
     "D": "instead of"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ phức hợp 'due to' đứng trước cụm danh từ chỉ lý do.",
   "explanation_grammar": "Preposition of Cause.",
@@ -31328,12 +31394,12 @@ export const grammarQuestions = [
   "id": "q1189",
   "question": "Dr. Lee has been working at the Greenfield Clinic ______ over a decade.",
   "options": {
-    "A": "since",
-    "B": "in",
+    "A": "in",
+    "B": "for",
     "C": "during",
-    "D": "for"
+    "D": "since"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'for' chỉ một khoảng thời gian (hơn một thập kỷ).",
   "explanation_grammar": "Preposition of Time (Duration).",
@@ -31350,12 +31416,12 @@ export const grammarQuestions = [
   "id": "q1190",
   "question": "Visitors are not allowed ______ the restricted laboratory area without an escort.",
   "options": {
-    "A": "throughout",
-    "B": "inside",
+    "A": "between",
+    "B": "throughout",
     "C": "among",
-    "D": "between"
+    "D": "inside"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'inside' chỉ vị trí bên trong một khu vực giới hạn.",
   "explanation_grammar": "Preposition of Place.",
@@ -31569,7 +31635,18 @@ export const grammarQuestions = [
   "explanation_reason": "Giới từ 'on' dùng cho vị trí các tầng trong tòa nhà.",
   "explanation_grammar": "Preposition of Place (Floors).",
   "translation": "Nhóm hỗ trợ khách hàng của Nexus Software làm việc ở tầng hai.",
-  "core_vocabulary": []
+  "core_vocabulary": [
+    {
+      "word": "customer support",
+      "type": "n.",
+      "meaning": "bộ phận hỗ trợ khách hàng"
+    },
+    {
+      "word": "floor",
+      "type": "n.",
+      "meaning": "tầng"
+    }
+  ]
 },
 {
   "id": "q1200",
@@ -31781,7 +31858,18 @@ export const grammarQuestions = [
   "explanation_reason": "Giới từ 'before' chỉ trình tự thời gian trước một hành động.",
   "explanation_grammar": "Preposition of Time (Before).",
   "translation": "Vui lòng nhớ tắt đèn trước khi rời khỏi phòng hội nghị.",
-  "core_vocabulary": []
+  "core_vocabulary": [
+    {
+      "word": "turn off",
+      "type": "v.",
+      "meaning": "tắt"
+    },
+    {
+      "word": "conference room",
+      "type": "n.",
+      "meaning": "phòng họp"
+    }
+  ]
 },
 {
   "id": "q1209",
@@ -31895,7 +31983,18 @@ export const grammarQuestions = [
   "explanation_reason": "Giới từ/Liên từ 'until' chỉ trạng thái kéo dài cho tới khi sự việc khác xảy ra.",
   "explanation_grammar": "Preposition/Conjunction of Time (Until).",
   "translation": "Quầy đăng ký tại quán cà phê Blue Wave sẽ tiếp tục mở cửa cho đến khi diễn giả cuối cùng kết thúc bài thuyết trình.",
-  "core_vocabulary": []
+  "core_vocabulary": [
+    {
+      "word": "registration desk",
+      "type": "n.",
+      "meaning": "quầy đăng ký"
+    },
+    {
+      "word": "presentation",
+      "type": "n.",
+      "meaning": "bài thuyết trình"
+    }
+  ]
 },
 {
   "id": "q1214",
@@ -35558,10 +35657,10 @@ export const grammarQuestions = [
   "options": {
     "A": "starter",
     "B": "start",
-    "C": "starting",
-    "D": "started"
+    "C": "started",
+    "D": "starting"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng chủ động (which starts -> starting).",
   "explanation_grammar": "Reduced Relative Clause (Active).",
@@ -35583,12 +35682,12 @@ export const grammarQuestions = [
   "id": "q1362",
   "question": "To recognize those ------ have been staying late to finish the Stevenson case earlier, management will be holding a dinner party.",
   "options": {
-    "A": "who",
-    "B": "which",
-    "C": "whom",
-    "D": "what"
+    "A": "whom",
+    "B": "what",
+    "C": "who",
+    "D": "which"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' dùng làm đại từ quan hệ thay thế cho danh từ chỉ người 'those' làm chủ ngữ.",
   "explanation_grammar": "Relative Pronoun (Subject).",
@@ -35610,12 +35709,12 @@ export const grammarQuestions = [
   "id": "q1363",
   "question": "Next year, a team of medical experts will investigate ------- sunlight patterns influence human behavior and skin behavior.",
   "options": {
-    "A": "that",
-    "B": "about",
-    "C": "whether",
-    "D": "whose"
+    "A": "whose",
+    "B": "whether",
+    "C": "that",
+    "D": "about"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whether' dùng trong mệnh đề danh ngữ để chỉ sự nghi vấn (có hay không).",
   "explanation_grammar": "Noun Clause (Whether).",
@@ -35664,12 +35763,12 @@ export const grammarQuestions = [
   "id": "q1365",
   "question": "Please join us to celebrate the retirement of George Ramos, who ------- with the company for over twenty years.",
   "options": {
-    "A": "have been",
-    "B": "having been",
-    "C": "has been",
-    "D": "is being"
+    "A": "having been",
+    "B": "has been",
+    "C": "is being",
+    "D": "have been"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "Dùng 'has been' (hiện tại hoàn thành) để chỉ một hành động bắt đầu trong quá khứ và kéo dài đến hiện tại, hòa hợp với chủ ngữ số ít 'George Ramos'.",
   "explanation_grammar": "Subject-Verb Agreement / Present Perfect.",
@@ -35691,12 +35790,12 @@ export const grammarQuestions = [
   "id": "q1366",
   "question": "The online questionnaire allows prospective car buyers to determine ------- vehicle might suit them best.",
   "options": {
-    "A": "which",
+    "A": "their",
     "B": "that",
     "C": "another",
-    "D": "their"
+    "D": "which"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' được dùng để lựa chọn trong một số lượng hạn chế các phương án.",
   "explanation_grammar": "Wh-word in Noun Clause.",
@@ -35718,12 +35817,12 @@ export const grammarQuestions = [
   "id": "q1367",
   "question": "Mr. Zendaya is a competent employee with an individual ------- in marketing.",
   "options": {
-    "A": "interested",
-    "B": "interest",
+    "A": "interest",
+    "B": "interested",
     "C": "interests",
     "D": "interesting"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Individual interest' (sở thích cá nhân/sự quan tâm cá nhân) là một cụm danh từ.",
   "explanation_grammar": "Noun Phrase.",
@@ -35740,10 +35839,10 @@ export const grammarQuestions = [
   "id": "q1368",
   "question": "The manager wants to know ------- might be willing to work over the weekend.",
   "options": {
-    "A": "whom",
+    "A": "how",
     "B": "who",
-    "C": "how",
-    "D": "those"
+    "C": "those",
+    "D": "whom"
   },
   "correct_answer": "B",
   "grammar_type": "MĐQH",
@@ -35762,12 +35861,12 @@ export const grammarQuestions = [
   "id": "q1369",
   "question": "The photographer ------- image is selected for this year's magazine cover will be given a cash prize of $10,000.",
   "options": {
-    "A": "whose",
+    "A": "when",
     "B": "whoever",
-    "C": "that",
-    "D": "when"
+    "C": "whose",
+    "D": "that"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whose' thay thế cho tính từ sở hữu của danh từ chỉ người 'photographer'.",
   "explanation_grammar": "Relative Pronoun (Possessive).",
@@ -35789,12 +35888,12 @@ export const grammarQuestions = [
   "id": "q1370",
   "question": "The book can give you tips on how to care for ------- plants you have.",
   "options": {
-    "A": "whoever",
-    "B": "where",
-    "C": "which",
-    "D": "whichever"
+    "A": "whichever",
+    "B": "whoever",
+    "C": "where",
+    "D": "which"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whichever' (bất cứ cái nào) nhấn mạnh sự lựa chọn không giới hạn.",
   "explanation_grammar": "Compound Relative Pronoun.",
@@ -35811,12 +35910,12 @@ export const grammarQuestions = [
   "id": "q1371",
   "question": "Guests are asked to pay with checks ------- are made out to Enterprise Seminars.",
   "options": {
-    "A": "whose",
-    "B": "who",
-    "C": "that",
-    "D": "what"
+    "A": "who",
+    "B": "what",
+    "C": "whose",
+    "D": "that"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'That' thay thế cho danh từ chỉ vật 'checks' làm chủ ngữ trong mệnh đề quan hệ.",
   "explanation_grammar": "Relative Pronoun (Subject).",
@@ -35838,12 +35937,12 @@ export const grammarQuestions = [
   "id": "q1372",
   "question": "Laura Baker is in charge of instructing the new intern, ------- will be employed this summer.",
   "options": {
-    "A": "one",
-    "B": "which",
-    "C": "that",
-    "D": "who"
+    "A": "that",
+    "B": "who",
+    "C": "one",
+    "D": "which"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'intern' trong mệnh đề quan hệ không giới hạn (có dấu phẩy).",
   "explanation_grammar": "Non-restrictive Relative Clause.",
@@ -35866,11 +35965,11 @@ export const grammarQuestions = [
   "question": "The majority of Anniston's citizens consider the city a great place in ------- to work and to raise a family.",
   "options": {
     "A": "what",
-    "B": "which",
-    "C": "whose",
+    "B": "whose",
+    "C": "which",
     "D": "where"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "Cấu trúc 'preposition + which'. 'In which' thay thế cho 'where' chỉ nơi chốn.",
   "explanation_grammar": "Preposition + Relative Pronoun.",
@@ -35892,12 +35991,12 @@ export const grammarQuestions = [
   "id": "q1374",
   "question": "Mr. Green is the man who will determine ------- proposal will be selected at the end of the month.",
   "options": {
-    "A": "whoever",
+    "A": "whose",
     "B": "who",
-    "C": "whose",
-    "D": "whom"
+    "C": "whom",
+    "D": "whoever"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whose' dùng để hỏi hoặc chỉ sự sở hữu đối với danh từ đi kèm ('whose proposal').",
   "explanation_grammar": "Determinative Whose.",
@@ -35919,12 +36018,12 @@ export const grammarQuestions = [
   "id": "q1375",
   "question": "The Mason Corporation, ------- is located downtown, is considering moving its offices to the suburbs because most of its employees and clients live there.",
   "options": {
-    "A": "when",
-    "B": "where",
-    "C": "which",
-    "D": "who"
+    "A": "who",
+    "B": "when",
+    "C": "where",
+    "D": "which"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật/tổ chức 'Mason Corporation' trong mệnh đề quan hệ không giới hạn.",
   "explanation_grammar": "Non-restrictive Relative Clause.",
@@ -35946,12 +36045,12 @@ export const grammarQuestions = [
   "id": "q1376",
   "question": "The technology stock bought by Ms. Perkins last year was an investment ------- rose in value by over seventy-five percent.",
   "options": {
-    "A": "they",
-    "B": "what",
-    "C": "that",
+    "A": "that",
+    "B": "they",
+    "C": "what",
     "D": "when"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'That' thay thế cho danh từ chỉ vật 'investment' làm chủ ngữ trong mệnh đề quan hệ.",
   "explanation_grammar": "Relative Pronoun (Subject).",
@@ -35973,12 +36072,12 @@ export const grammarQuestions = [
   "id": "q1377",
   "question": "I need you to provide me with the names of all staff members ----- are asking for internal transfers to our overseas divisions.",
   "options": {
-    "A": "whom",
-    "B": "whose",
-    "C": "who",
-    "D": "when"
+    "A": "whose",
+    "B": "who",
+    "C": "when",
+    "D": "whom"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'staff members' làm chủ ngữ.",
   "explanation_grammar": "Relative Pronoun (Subject).",
@@ -36001,9 +36100,9 @@ export const grammarQuestions = [
   "question": "Darren Maas, ------- latest book was published in February, has given up his office job to become a fulltime writer.",
   "options": {
     "A": "whose",
-    "B": "what",
-    "C": "whatever",
-    "D": "whom"
+    "B": "whom",
+    "C": "what",
+    "D": "whatever"
   },
   "correct_answer": "A",
   "grammar_type": "MĐQH",
@@ -36022,12 +36121,12 @@ export const grammarQuestions = [
   "id": "q1379",
   "question": "Customers --------- purchase four paperbacks may receive another lower-priced paperback for free.",
   "options": {
-    "A": "who",
-    "B": "whose",
-    "C": "whomever",
+    "A": "whose",
+    "B": "whomever",
+    "C": "who",
     "D": "whom"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'Customers' làm chủ ngữ.",
   "explanation_grammar": "Relative Pronoun (Subject).",
@@ -36044,12 +36143,12 @@ export const grammarQuestions = [
   "id": "q1380",
   "question": "------- is interested in the workshop should sign up at the front desk.",
   "options": {
-    "A": "Whoever",
-    "B": "Anyone",
-    "C": "Those",
-    "D": "Whom"
+    "A": "Those",
+    "B": "Whom",
+    "C": "Anyone",
+    "D": "Whoever"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whoever' (= Anyone who) làm chủ ngữ trong câu, bao hàm cả tiền ngữ và đại từ quan hệ.",
   "explanation_grammar": "Compound Relative Pronoun as Subject.",
@@ -38471,12 +38570,12 @@ export const grammarQuestions = [
   "id": "q1481",
   "question": "The port authority is currently inspecting the cargo ------- arrived from the United States this morning.",
   "options": {
-    "A": "where",
-    "B": "who",
-    "C": "which",
-    "D": "what"
+    "A": "what",
+    "B": "which",
+    "C": "where",
+    "D": "who"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'cargo' làm chủ ngữ.",
   "explanation_grammar": "Relative Pronoun (Subject).",
@@ -38525,12 +38624,12 @@ export const grammarQuestions = [
   "id": "q1483",
   "question": "Our logistics team ------- working on the fresh apple import project since early February.",
   "options": {
-    "A": "having been",
-    "B": "has been",
-    "C": "have been",
-    "D": "is being"
+    "A": "has been",
+    "B": "have been",
+    "C": "is being",
+    "D": "having been"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "Dùng 'has been' (hiện tại hoàn thành tiếp diễn) để chỉ hành động kéo dài từ quá khứ đến hiện tại, hòa hợp với chủ ngữ số ít 'team'.",
   "explanation_grammar": "Present Perfect Continuous / Subject-Verb Agreement.",
@@ -38547,12 +38646,12 @@ export const grammarQuestions = [
   "id": "q1484",
   "question": "The regression chart ------- by the junior data analyst successfully highlighted the seasonal shipping trends.",
   "options": {
-    "A": "create",
-    "B": "created",
+    "A": "creates",
+    "B": "create",
     "C": "creating",
-    "D": "creates"
+    "D": "created"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng bị động (which was created -> created).",
   "explanation_grammar": "Reduced Relative Clause (Passive).",
@@ -38574,12 +38673,12 @@ export const grammarQuestions = [
   "id": "q1485",
   "question": "We need to hire a warehouse supervisor ------- has experience handling fragile electronic components.",
   "options": {
-    "A": "who",
-    "B": "whom",
-    "C": "whose",
+    "A": "whom",
+    "B": "whose",
+    "C": "who",
     "D": "which"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'supervisor' làm chủ ngữ.",
   "explanation_grammar": "Relative Pronoun (Subject).",
@@ -38601,12 +38700,12 @@ export const grammarQuestions = [
   "id": "q1486",
   "question": "The ASUS ROG Strix mainboards, ------- are currently in high demand, require specialized pallet configurations.",
   "options": {
-    "A": "what",
-    "B": "where",
-    "C": "which",
-    "D": "who"
+    "A": "where",
+    "B": "which",
+    "C": "who",
+    "D": "what"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'mainboards' trong mệnh đề quan hệ không giới hạn.",
   "explanation_grammar": "Non-restrictive Relative Clause.",
@@ -38628,12 +38727,12 @@ export const grammarQuestions = [
   "id": "q1487",
   "question": "Ms. Carter, ------- the management team selected for the analyst role, possesses strong numerical skills.",
   "options": {
-    "A": "which",
-    "B": "who",
-    "C": "whose",
-    "D": "whom"
+    "A": "whose",
+    "B": "which",
+    "C": "whom",
+    "D": "who"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whom' thay thế cho danh từ chỉ người 'Ms. Carter' làm tân ngữ cho động từ 'selected'.",
   "explanation_grammar": "Relative Pronoun (Object).",
@@ -38655,12 +38754,12 @@ export const grammarQuestions = [
   "id": "q1488",
   "question": "The customs officer did not specify ------- the updated HS codes would be published on the VNACCS portal.",
   "options": {
-    "A": "when",
-    "B": "whom",
+    "A": "whom",
+    "B": "when",
     "C": "which",
     "D": "that"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'When' dùng trong mệnh đề danh ngữ làm từ nối chỉ thời gian.",
   "explanation_grammar": "Noun Clause (When).",
@@ -38677,12 +38776,12 @@ export const grammarQuestions = [
   "id": "q1489",
   "question": "The new schedule, ------- all tasks in the work breakdown structure, was distributed to the team yesterday.",
   "options": {
-    "A": "detail",
+    "A": "detailing",
     "B": "details",
-    "C": "detailing",
-    "D": "detailed"
+    "C": "detailed",
+    "D": "detail"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng chủ động (detailing = which details).",
   "explanation_grammar": "Reduced Relative Clause (Active).",
@@ -38704,12 +38803,12 @@ export const grammarQuestions = [
   "id": "q1490",
   "question": "The vendor ------- supplies our packaging materials has announced a slight price increase for next quarter.",
   "options": {
-    "A": "which",
-    "B": "whom",
-    "C": "who",
-    "D": "what"
+    "A": "what",
+    "B": "which",
+    "C": "whom",
+    "D": "who"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người/nhà cung cấp 'vendor' làm chủ ngữ.",
   "explanation_grammar": "Relative Pronoun (Subject).",
@@ -38726,12 +38825,12 @@ export const grammarQuestions = [
   "id": "q1491",
   "question": "Mr. Davis ------- to be an invaluable asset to the project management office over the last three years.",
   "options": {
-    "A": "proving",
-    "B": "has proved",
+    "A": "has proved",
+    "B": "proving",
     "C": "prove",
     "D": "have proved"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "Dùng 'has proved' (hiện tại hoàn thành) để chỉ một sự thật đã được khẳng định từ quá khứ đến nay.",
   "explanation_grammar": "Present Perfect.",
@@ -38753,10 +38852,10 @@ export const grammarQuestions = [
   "id": "q1492",
   "question": "The engineering team is trying to determine ------- the bisection method failed to converge in the latest simulation.",
   "options": {
-    "A": "that",
-    "B": "whom",
+    "A": "whom",
+    "B": "which",
     "C": "why",
-    "D": "which"
+    "D": "that"
   },
   "correct_answer": "C",
   "grammar_type": "MĐQH",
@@ -38780,12 +38879,12 @@ export const grammarQuestions = [
   "id": "q1493",
   "question": "Any employee ------- wishes to transfer to the supply chain department must submit a formal request to HR.",
   "options": {
-    "A": "which",
-    "B": "whose",
-    "C": "who",
-    "D": "whom"
+    "A": "who",
+    "B": "whom",
+    "C": "which",
+    "D": "whose"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ 'employee' làm chủ ngữ.",
   "explanation_grammar": "Relative Pronoun (Subject).",
@@ -38803,11 +38902,11 @@ export const grammarQuestions = [
   "question": "The facility will operate on backup generators ------- the main power grid is being repaired.",
   "options": {
     "A": "which",
-    "B": "during",
-    "C": "while",
+    "B": "while",
+    "C": "during",
     "D": "who"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'While' (trong khi) là liên từ chỉ thời gian nối hai mệnh đề.",
   "explanation_grammar": "Conjunction of Time.",
@@ -38829,12 +38928,12 @@ export const grammarQuestions = [
   "id": "q1495",
   "question": "Mr. Tanaka is the lead engineer ------- algorithms improved our load optimization process by 20%.",
   "options": {
-    "A": "which",
-    "B": "whom",
-    "C": "whose",
-    "D": "who"
+    "A": "whom",
+    "B": "who",
+    "C": "which",
+    "D": "whose"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whose' thay thế cho sở hữu của 'Tanaka' chỉ sở hữu đối với 'algorithms'.",
   "explanation_grammar": "Relative Pronoun (Possessive).",
@@ -38851,12 +38950,12 @@ export const grammarQuestions = [
   "id": "q1496",
   "question": "------- the Newton interpolation formula, the software quickly predicted the missing data points in the sequence.",
   "options": {
-    "A": "Use",
-    "B": "Used",
-    "C": "Using",
-    "D": "Uses"
+    "A": "Uses",
+    "B": "Using",
+    "C": "Use",
+    "D": "Used"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "Dùng hiện tại phân từ (V-ing) để chỉ cách thức/phương tiện thực hiện hành động chính.",
   "explanation_grammar": "Participle Clause (Manner/Means).",
@@ -38878,12 +38977,12 @@ export const grammarQuestions = [
   "id": "q1497",
   "question": "The shipping coordinator verified ------- the 1,258 units of computer hardware were securely loaded onto the vessel.",
   "options": {
-    "A": "that",
-    "B": "whom",
-    "C": "what",
-    "D": "whose"
+    "A": "whom",
+    "B": "what",
+    "C": "whose",
+    "D": "that"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'That' làm từ nối trong mệnh đề danh ngữ.",
   "explanation_grammar": "Noun Clause (That).",
@@ -38900,12 +38999,12 @@ export const grammarQuestions = [
   "id": "q1498",
   "question": "The new safety protocol, ------- was implemented last week, has already reduced workplace accidents significantly.",
   "options": {
-    "A": "who",
+    "A": "which",
     "B": "what",
     "C": "whom",
-    "D": "which"
+    "D": "who"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'protocol' làm chủ ngữ.",
   "explanation_grammar": "Non-restrictive Relative Clause.",
@@ -38922,12 +39021,12 @@ export const grammarQuestions = [
   "id": "q1499",
   "question": "The accounting department ------- the financial reports for the upcoming board of directors meeting.",
   "options": {
-    "A": "has finalized",
+    "A": "finalizing",
     "B": "finalize",
-    "C": "have finalized",
-    "D": "finalizing"
+    "C": "has finalized",
+    "D": "have finalized"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "Dùng 'has finalized' (hiện tại hoàn thành) để chỉ hành động vừa mới hoàn tất, hòa hợp với chủ ngữ số ít 'department'.",
   "explanation_grammar": "Present Perfect / Subject-Verb Agreement.",
@@ -38971,10 +39070,10 @@ export const grammarQuestions = [
   "id": "q1501",
   "question": "The freight forwarded ------- by our partner agency arrived at the warehouse two days ahead of schedule.",
   "options": {
-    "A": "dispatches",
-    "B": "dispatching",
+    "A": "dispatching",
+    "B": "dispatch",
     "C": "dispatched",
-    "D": "dispatch"
+    "D": "dispatches"
   },
   "correct_answer": "C",
   "grammar_type": "MĐQH",
@@ -38993,12 +39092,12 @@ export const grammarQuestions = [
   "id": "q1502",
   "question": "The board needs to decide ------- of the two marketing strategies aligns better with our core corporate values.",
   "options": {
-    "A": "who",
-    "B": "which",
-    "C": "that",
-    "D": "whose"
+    "A": "which",
+    "B": "whose",
+    "C": "who",
+    "D": "that"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' dùng để lựa chọn trong một số lượng giới hạn các phương án.",
   "explanation_grammar": "Wh-word in Noun Clause.",
@@ -39021,11 +39120,11 @@ export const grammarQuestions = [
   "question": "Mr. Evans, ------- the committee praised for his outstanding leadership, will oversee the new branch.",
   "options": {
     "A": "which",
-    "B": "whom",
-    "C": "whose",
-    "D": "who"
+    "B": "whose",
+    "C": "who",
+    "D": "whom"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whom' thay thế cho danh từ chỉ người 'Mr. Evans' làm tân ngữ cho động từ 'praised'.",
   "explanation_grammar": "Relative Pronoun (Object).",
@@ -39042,10 +39141,10 @@ export const grammarQuestions = [
   "id": "q1504",
   "question": "The service level agreement ------- you reviewed last month clearly defines the penalties for late deliveries.",
   "options": {
-    "A": "whom",
+    "A": "what",
     "B": "which",
-    "C": "what",
-    "D": "who"
+    "C": "who",
+    "D": "whom"
   },
   "correct_answer": "B",
   "grammar_type": "MĐQH",
@@ -39065,9 +39164,9 @@ export const grammarQuestions = [
   "question": "The IT specialist is running diagnostics on the system ------- to ensure the database is functioning correctly.",
   "options": {
     "A": "now",
-    "B": "since",
-    "C": "already",
-    "D": "yet"
+    "B": "yet",
+    "C": "since",
+    "D": "already"
   },
   "correct_answer": "A",
   "grammar_type": "MĐQH",
@@ -39086,12 +39185,12 @@ export const grammarQuestions = [
   "id": "q1506",
   "question": "The more time the manager invested in the training, the more ____ the employees became about the new system.",
   "options": {
-    "A": "confident",
-    "B": "confidently",
-    "C": "confidence",
-    "D": "confide"
+    "A": "confide",
+    "B": "confident",
+    "C": "confidently",
+    "D": "confidence"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc 'The more + adj/adv, the more + adj/adv' (càng... càng...). Ở đây cần tính từ 'confident' sau động từ 'become'.",
   "explanation_grammar": "Double Comparative (The more... the more...).",
@@ -39113,12 +39212,12 @@ export const grammarQuestions = [
   "id": "q1507",
   "question": "The new software from Vertex Tech processes financial data as ____ as the old system did, but with fewer errors.",
   "options": {
-    "A": "more efficient",
-    "B": "efficiently",
+    "A": "efficiently",
+    "B": "more efficient",
     "C": "efficiency",
     "D": "efficient"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc so sánh bằng 'as + adj/adv + as'. Ở đây cần trạng từ 'efficiently' để bổ nghĩa cho động từ 'processes'.",
   "explanation_grammar": "Equative Comparison (as... as).",
@@ -39140,12 +39239,12 @@ export const grammarQuestions = [
   "id": "q1508",
   "question": "Horizon Transport handles international bulk shipments even ____ than our logistics department initially projected.",
   "options": {
-    "A": "more reliably",
-    "B": "reliable",
-    "C": "reliability",
-    "D": "most reliable"
+    "A": "reliability",
+    "B": "most reliable",
+    "C": "reliable",
+    "D": "more reliably"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "So sánh",
   "explanation_reason": "Dùng 'more + adv + than' để so sánh hơn cho trạng từ 'reliably' (bổ nghĩa cho 'handles'). 'Even' dùng để nhấn mạnh.",
   "explanation_grammar": "Comparative with Adverbs.",
@@ -39167,12 +39266,12 @@ export const grammarQuestions = [
   "id": "q1509",
   "question": "Output at the Apex Manufacturing plant was significantly ____ in the second quarter compared to the first quarter.",
   "options": {
-    "A": "higher",
+    "A": "high",
     "B": "highest",
-    "C": "highly",
-    "D": "high"
+    "C": "higher",
+    "D": "highly"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "So sánh",
   "explanation_reason": "Sử dụng tính từ so sánh hơn 'higher' vì có sự so sánh giữa hai đối tượng (quý 1 và quý 2).",
   "explanation_grammar": "Comparative with Adjectives.",
@@ -39189,12 +39288,12 @@ export const grammarQuestions = [
   "id": "q1510",
   "question": "To secure the contract with Zenith Corp, it is crucial that our proposal is ____ persuasive as that of our competitors.",
   "options": {
-    "A": "so",
-    "B": "as",
+    "A": "as",
+    "B": "so",
     "C": "too",
     "D": "much"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc so sánh bằng 'as + adj + as'. Ở đây thiếu từ 'as' đầu tiên.",
   "explanation_grammar": "Equative Comparison (as... as).",
@@ -39216,12 +39315,12 @@ export const grammarQuestions = [
   "id": "q1511",
   "question": "The more ____ Mr. Henderson reviewed the annual financial report, the more accounting discrepancies he found.",
   "options": {
-    "A": "closely",
-    "B": "closeness",
-    "C": "close",
-    "D": "closer"
+    "A": "close",
+    "B": "closer",
+    "C": "closeness",
+    "D": "closely"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc 'The more + adv, the more...'. Cần trạng từ 'closely' bổ nghĩa cho động từ 'reviewed'.",
   "explanation_grammar": "Double Comparative (The more... the more...).",
@@ -39243,12 +39342,12 @@ export const grammarQuestions = [
   "id": "q1512",
   "question": "Consumers are now demanding a ____ versatile tablet than what is currently on the market from Nova Electronics.",
   "options": {
-    "A": "much",
-    "B": "many",
-    "C": "most",
-    "D": "more"
+    "A": "more",
+    "B": "most",
+    "C": "much",
+    "D": "many"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "So sánh",
   "explanation_reason": "Dùng 'more' trước tính từ dài 'versatile' để tạo dạng so sánh hơn (có 'than' phía sau).",
   "explanation_grammar": "Comparative with Long Adjectives.",
@@ -39265,12 +39364,12 @@ export const grammarQuestions = [
   "id": "q1513",
   "question": "The latest model of the Titan Vacuum is slightly ____ but much more durable than previous versions.",
   "options": {
-    "A": "heavier",
-    "B": "heaviest",
-    "C": "heavily",
+    "A": "heaviest",
+    "B": "heavily",
+    "C": "heavier",
     "D": "heavy"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "So sánh",
   "explanation_reason": "Dùng tính từ so sánh hơn 'heavier' cho tính từ ngắn 'heavy' (vì có 'than' phía sau).",
   "explanation_grammar": "Comparative with Short Adjectives.",
@@ -39292,12 +39391,12 @@ export const grammarQuestions = [
   "id": "q1514",
   "question": "Please ensure the prospective client receives the updated lease agreement as ____ as possible for their review.",
   "options": {
-    "A": "prompt",
-    "B": "promptly",
-    "C": "promptness",
-    "D": "more prompt"
+    "A": "promptness",
+    "B": "more prompt",
+    "C": "prompt",
+    "D": "promptly"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc 'as + adj/adv + as possible'. Ở đây cần trạng từ 'promptly' bổ nghĩa cho động từ 'receives'.",
   "explanation_grammar": "Equative Comparison / Comparison as possible.",
@@ -39319,12 +39418,12 @@ export const grammarQuestions = [
   "id": "q1515",
   "question": "The more complex the client's marketing requirements are, the more ____ the software development process will be.",
   "options": {
-    "A": "challenge",
-    "B": "challenged",
-    "C": "challenges",
-    "D": "challenging"
+    "A": "challenges",
+    "B": "challenging",
+    "C": "challenge",
+    "D": "challenged"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc 'The more + adj, the more + adj'. Cần tính từ 'challenging' sau 'will be'.",
   "explanation_grammar": "Double Comparative.",
@@ -39348,10 +39447,10 @@ export const grammarQuestions = [
   "options": {
     "A": "good",
     "B": "well",
-    "C": "best",
-    "D": "better"
+    "C": "better",
+    "D": "best"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "So sánh",
   "explanation_reason": "Dùng trạng từ ở dạng so sánh hơn (well -> better) vì có 'than' phía sau và bổ nghĩa cho 'performed'.",
   "explanation_grammar": "Irregular Comparative (well -> better).",
@@ -39373,9 +39472,9 @@ export const grammarQuestions = [
   "id": "q1517",
   "question": "Employee satisfaction is just as ____ to Summit Corporation's long-term success as continuous revenue growth.",
   "options": {
-    "A": "criticalness",
-    "B": "critically",
-    "C": "more critical",
+    "A": "critically",
+    "B": "more critical",
+    "C": "criticalness",
     "D": "critical"
   },
   "correct_answer": "D",
@@ -39400,10 +39499,10 @@ export const grammarQuestions = [
   "id": "q1518",
   "question": "Thanks to the new automation software, the assembly line at Falcon Industries is now much ____ than before.",
   "options": {
-    "A": "fast",
+    "A": "fastest",
     "B": "faster",
-    "C": "fastly",
-    "D": "fastest"
+    "C": "fast",
+    "D": "fastly"
   },
   "correct_answer": "B",
   "grammar_type": "So sánh",
@@ -39422,12 +39521,12 @@ export const grammarQuestions = [
   "id": "q1519",
   "question": "The newly hired financial analyst reviews the quarterly budget reports much ____ carefully than the previous one.",
   "options": {
-    "A": "as",
-    "B": "more",
+    "A": "more",
+    "B": "as",
     "C": "most",
     "D": "much"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "So sánh",
   "explanation_reason": "Dùng 'more' trước trạng từ 'carefully' để tạo dạng so sánh hơn (vì có 'than' phía sau).",
   "explanation_grammar": "Comparative with Adverbs.",
@@ -39449,12 +39548,12 @@ export const grammarQuestions = [
   "id": "q1520",
   "question": "We need to resolve the customer's complaint regarding the defective freight shipment as ____ as we can.",
   "options": {
-    "A": "swiftly",
-    "B": "swift",
-    "C": "swiftness",
-    "D": "swifter"
+    "A": "swiftness",
+    "B": "swiftly",
+    "C": "swifter",
+    "D": "swift"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc 'as + adj/adv + as possible/we can'. Cần trạng từ 'swiftly' để bổ nghĩa cho động từ 'resolve'.",
   "explanation_grammar": "Equative Comparison / Adverbial use.",
@@ -39476,12 +39575,12 @@ export const grammarQuestions = [
   "id": "q1521",
   "question": "The more experienced the job applicant is, the more ____ they are for this senior management position.",
   "options": {
-    "A": "suitable",
+    "A": "suit",
     "B": "suitably",
-    "C": "suitability",
-    "D": "suit"
+    "C": "suitable",
+    "D": "suitability"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc song song 'The more + adj, the more + adj'. Cần tính từ 'suitable' sau động từ to-be 'are'.",
   "explanation_grammar": "Double Comparative.",
@@ -39504,11 +39603,11 @@ export const grammarQuestions = [
   "question": "The consumer demand for Echo Cloud's storage services has become ____ widespread than industry experts predicted last year.",
   "options": {
     "A": "most",
-    "B": "more",
-    "C": "as",
-    "D": "much"
+    "B": "as",
+    "C": "much",
+    "D": "more"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "So sánh",
   "explanation_reason": "Sử dụng 'more' để tạo dạng so sánh hơn cho tính từ 'widespread' (vì có 'than' phía sau).",
   "explanation_grammar": "Comparative with Long Adjectives.",
@@ -39530,12 +39629,12 @@ export const grammarQuestions = [
   "id": "q1523",
   "question": "After the recent renovation, the main conference room at Vanguard Enterprises is significantly ____ and more modern.",
   "options": {
-    "A": "largest",
-    "B": "larger",
-    "C": "largely",
-    "D": "large"
+    "A": "larger",
+    "B": "largely",
+    "C": "large",
+    "D": "largest"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "So sánh",
   "explanation_reason": "Dùng tính từ ở dạng so sánh hơn 'larger' (một âm tiết) để tương ứng với 'more modern' phía sau.",
   "explanation_grammar": "Comparative with Short Adjectives.",
@@ -39552,12 +39651,12 @@ export const grammarQuestions = [
   "id": "q1524",
   "question": "The guest speaker delivered his keynote presentation as ____ as usual, captivating the entire audience at the seminar.",
   "options": {
-    "A": "eloquent",
-    "B": "more eloquently",
-    "C": "eloquence",
-    "D": "eloquently"
+    "A": "eloquence",
+    "B": "eloquent",
+    "C": "eloquently",
+    "D": "more eloquently"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc so sánh bằng 'as + adj/adv + as'. Ở đây cần trạng từ 'eloquently' để bổ nghĩa cho động từ 'delivered'.",
   "explanation_grammar": "Equative Comparison with Adverbs.",
@@ -39606,12 +39705,12 @@ export const grammarQuestions = [
   "id": "q1526",
   "question": "Our new supplier in Germany delivers raw materials far ____ consistently than our previous domestic vendor did.",
   "options": {
-    "A": "very",
-    "B": "more",
-    "C": "as",
-    "D": "most"
+    "A": "as",
+    "B": "most",
+    "C": "more",
+    "D": "very"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "So sánh",
   "explanation_reason": "Dùng 'more' để tạo dạng so sánh hơn cho trạng từ 'consistently' (vì có 'than' phía sau). 'Far' được dùng để nhấn mạnh.",
   "explanation_grammar": "Comparative with Adverbs.",
@@ -39633,10 +39732,10 @@ export const grammarQuestions = [
   "id": "q1527",
   "question": "The dedicated sales team worked much ____ on the upcoming product launch than they did on the previous one.",
   "options": {
-    "A": "hardly",
+    "A": "hard",
     "B": "harder",
-    "C": "hardest",
-    "D": "hard"
+    "C": "hardly",
+    "D": "hardest"
   },
   "correct_answer": "B",
   "grammar_type": "So sánh",
@@ -39660,12 +39759,12 @@ export const grammarQuestions = [
   "id": "q1528",
   "question": "The extended warranty on the Orion Coffee Maker is as ____ as the ones offered by leading luxury brands.",
   "options": {
-    "A": "comprehensive",
-    "B": "comprehensively",
-    "C": "more comprehensive",
-    "D": "comprehension"
+    "A": "comprehensively",
+    "B": "more comprehensive",
+    "C": "comprehension",
+    "D": "comprehensive"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc so sánh bằng 'as + adj + as'. Cần tính từ 'comprehensive' sau động từ to-be 'is'.",
   "explanation_grammar": "Equative Comparison.",
@@ -39687,12 +39786,12 @@ export const grammarQuestions = [
   "id": "q1529",
   "question": "The more ____ the executive committee reviews the proposals, the easier it will be to select the winning bid.",
   "options": {
-    "A": "thoroughly",
-    "B": "thoroughness",
-    "C": "thorough",
-    "D": "most thorough"
+    "A": "thorough",
+    "B": "most thorough",
+    "C": "thoroughly",
+    "D": "thoroughness"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc 'The more... the more...'. Cần trạng từ 'thoroughly' để bổ nghĩa cho động từ 'reviews'.",
   "explanation_grammar": "Double Comparative.",
@@ -39715,9 +39814,9 @@ export const grammarQuestions = [
   "question": "Recent economic trends suggest a somewhat ____ recovery in the commercial real estate market than what was previously outlined.",
   "options": {
     "A": "slower",
-    "B": "slow",
-    "C": "slowly",
-    "D": "slowest"
+    "B": "slowest",
+    "C": "slow",
+    "D": "slowly"
   },
   "correct_answer": "A",
   "grammar_type": "So sánh",
@@ -40398,12 +40497,12 @@ export const grammarQuestions = [
   "id": "q1561",
   "question": "Từ 'cumulative' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
+    "A": "Trạng từ",
     "B": "Danh từ",
-    "C": "Động từ",
-    "D": "Trạng từ"
+    "C": "Tính từ",
+    "D": "Động từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **cumulative** kết thúc bằng đuôi **-ive**. Đây là hậu tố rất phổ biến dùng để cấu tạo **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40442,12 +40541,12 @@ export const grammarQuestions = [
   "id": "q1563",
   "question": "Từ 'occurrence' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Tính từ",
+    "B": "Danh từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **occurrence** kết thúc bằng đuôi **-ence**. Đuôi **-ence** (và -ance) là các dấu hiệu đặc trưng để nhận diện **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40465,9 +40564,9 @@ export const grammarQuestions = [
   "question": "Từ 'precisely' thuộc từ loại gì?",
   "options": {
     "A": "Trạng từ",
-    "B": "Danh từ",
-    "C": "Động từ",
-    "D": "Tính từ"
+    "B": "Tính từ",
+    "C": "Danh từ",
+    "D": "Động từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
@@ -40486,12 +40585,12 @@ export const grammarQuestions = [
   "id": "q1565",
   "question": "Từ 'renewal' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
+    "A": "Động từ",
+    "B": "Danh từ",
     "C": "Tính từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **renewal** kết thúc bằng đuôi **-al**. Mặc dù **-al** thường là tính từ, nhưng khi kết hợp với động từ (renew + al) nó tạo thành một **Danh từ ngoại lệ** chỉ hành động.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40509,9 +40608,9 @@ export const grammarQuestions = [
   "question": "Từ 'indicative' thuộc từ loại gì?",
   "options": {
     "A": "Tính từ",
-    "B": "Danh từ",
-    "C": "Động từ",
-    "D": "Trạng từ"
+    "B": "Động từ",
+    "C": "Trạng từ",
+    "D": "Danh từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
@@ -40530,12 +40629,12 @@ export const grammarQuestions = [
   "id": "q1567",
   "question": "Từ 'facilitate' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
+    "A": "Trạng từ",
     "B": "Danh từ",
     "C": "Tính từ",
-    "D": "Trạng từ"
+    "D": "Động từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **facilitate** kết thúc bằng đuôi **-ate**. Trong tiếng Anh, **-ate** thường được dùng để cấu tạo nên **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40552,12 +40651,12 @@ export const grammarQuestions = [
   "id": "q1568",
   "question": "Từ 'complexity' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
+    "A": "Động từ",
+    "B": "Tính từ",
+    "C": "Danh từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **complexity** kết thúc bằng đuôi **-ity**. Hậu tố **-ity** luôn luôn là dấu hiệu để nhận biết một **Danh từ** trừu tượng.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40575,9 +40674,9 @@ export const grammarQuestions = [
   "question": "Từ 'thoroughly' thuộc từ loại gì?",
   "options": {
     "A": "Trạng từ",
-    "B": "Danh từ",
-    "C": "Động từ",
-    "D": "Tính từ"
+    "B": "Động từ",
+    "C": "Tính từ",
+    "D": "Danh từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
@@ -40596,12 +40695,12 @@ export const grammarQuestions = [
   "id": "q1570",
   "question": "Từ 'informative' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
-    "B": "Danh từ",
-    "C": "Động từ",
-    "D": "Trạng từ"
+    "A": "Trạng từ",
+    "B": "Tính từ",
+    "C": "Danh từ",
+    "D": "Động từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **informative** kết thúc bằng đuôi **-ive**. Đây là dấu hiệu thường gặp của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40618,12 +40717,12 @@ export const grammarQuestions = [
   "id": "q1571",
   "question": "Từ 'negotiate' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Danh từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Danh từ",
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **negotiate** kết thúc bằng đuôi **-ate**. Hậu tố **-ate** là dấu hiệu nhận biết của **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40640,12 +40739,12 @@ export const grammarQuestions = [
   "id": "q1572",
   "question": "Từ 'attendance' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Tính từ",
+    "B": "Danh từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **attendance** kết thúc bằng đuôi **-ance**. Cùng với -ence, đuôi **-ance** là dấu hiệu nhận biết của **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40662,12 +40761,12 @@ export const grammarQuestions = [
   "id": "q1573",
   "question": "Từ 'efficiently' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
+    "A": "Tính từ",
     "B": "Danh từ",
     "C": "Động từ",
-    "D": "Tính từ"
+    "D": "Trạng từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **efficiently** kết thúc bằng đuôi **-ly**. Đây là cách cấu tạo chuẩn của một **Trạng từ** (efficient + ly).",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40684,12 +40783,12 @@ export const grammarQuestions = [
   "id": "q1574",
   "question": "Từ 'accessible' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
-    "B": "Danh từ",
+    "A": "Danh từ",
+    "B": "Tính từ",
     "C": "Động từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **accessible** kết thúc bằng đuôi **-ible** (hoặc -able). Đây là hậu tố rất quen thuộc dùng để cấu tạo **Tính từ** mang nghĩa 'có thể làm gì đó'.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40706,12 +40805,12 @@ export const grammarQuestions = [
   "id": "q1575",
   "question": "Từ 'clarify' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Danh từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Tính từ",
+    "B": "Trạng từ",
+    "C": "Động từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **clarify** kết thúc bằng đuôi **-ify**. Hậu tố **-ify** là một dấu hiệu điển hình để nhận biết **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40728,12 +40827,12 @@ export const grammarQuestions = [
   "id": "q1576",
   "question": "Từ 'persistence' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Trạng từ",
+    "B": "Danh từ",
+    "C": "Động từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **persistence** kết thúc bằng đuôi **-ence**. Đuôi **-ence** dùng để cấu tạo **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40750,12 +40849,12 @@ export const grammarQuestions = [
   "id": "q1577",
   "question": "Từ 'comparatively' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Danh từ",
-    "C": "Động từ",
+    "A": "Danh từ",
+    "B": "Động từ",
+    "C": "Trạng từ",
     "D": "Tính từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **comparatively** kết thúc bằng đuôi **-ly**. Đuôi **-ly** là dấu hiệu nhận diện của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40772,12 +40871,12 @@ export const grammarQuestions = [
   "id": "q1578",
   "question": "Từ 'comprehensive' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
-    "B": "Danh từ",
-    "C": "Động từ",
-    "D": "Trạng từ"
+    "A": "Động từ",
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **comprehensive** kết thúc bằng đuôi **-ive**. Đây là hậu tố đặc trưng và cực kỳ phổ biến của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40795,9 +40894,9 @@ export const grammarQuestions = [
   "question": "Từ 'modernize' thuộc từ loại gì?",
   "options": {
     "A": "Động từ",
-    "B": "Danh từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "B": "Trạng từ",
+    "C": "Danh từ",
+    "D": "Tính từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
@@ -40816,12 +40915,12 @@ export const grammarQuestions = [
   "id": "q1580",
   "question": "Từ 'expenditure' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Động từ",
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **expenditure** kết thúc bằng đuôi **-ure**. Đuôi **-ure** là dấu hiệu nhận diện thông dụng của một **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40838,12 +40937,12 @@ export const grammarQuestions = [
   "id": "q1581",
   "question": "Từ 'effectively' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Danh từ",
-    "C": "Động từ",
-    "D": "Tính từ"
+    "A": "Động từ",
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **effectively** kết thúc bằng đuôi **-ly**, đặc trưng cho một **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40861,9 +40960,9 @@ export const grammarQuestions = [
   "question": "Từ 'preventative' thuộc từ loại gì?",
   "options": {
     "A": "Tính từ",
-    "B": "Danh từ",
-    "C": "Động từ",
-    "D": "Trạng từ"
+    "B": "Trạng từ",
+    "C": "Danh từ",
+    "D": "Động từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
@@ -40882,12 +40981,12 @@ export const grammarQuestions = [
   "id": "q1583",
   "question": "Từ 'simplify' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Danh từ",
-    "C": "Tính từ",
+    "A": "Danh từ",
+    "B": "Tính từ",
+    "C": "Động từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **simplify** kết thúc bằng đuôi **-ify**, một dấu hiệu nhận biết chuẩn của **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40905,9 +41004,9 @@ export const grammarQuestions = [
   "question": "Từ 'redundancy' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
@@ -40926,12 +41025,12 @@ export const grammarQuestions = [
   "id": "q1585",
   "question": "Từ 'exclusively' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Danh từ",
-    "C": "Động từ",
-    "D": "Tính từ"
+    "A": "Tính từ",
+    "B": "Trạng từ",
+    "C": "Danh từ",
+    "D": "Động từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **exclusively** kết thúc bằng đuôi **-ly**, đây là cách nhận biết phổ biến của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40948,12 +41047,12 @@ export const grammarQuestions = [
   "id": "q1586",
   "question": "Từ 'responsive' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
-    "B": "Danh từ",
-    "C": "Động từ",
-    "D": "Trạng từ"
+    "A": "Danh từ",
+    "B": "Động từ",
+    "C": "Trạng từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **responsive** kết thúc bằng đuôi **-ive**, dấu hiệu đặc trưng của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40971,9 +41070,9 @@ export const grammarQuestions = [
   "question": "Từ 'demonstrate' thuộc từ loại gì?",
   "options": {
     "A": "Động từ",
-    "B": "Danh từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Danh từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
@@ -40992,12 +41091,12 @@ export const grammarQuestions = [
   "id": "q1588",
   "question": "Từ 'relevance' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
+    "A": "Trạng từ",
     "B": "Động từ",
     "C": "Tính từ",
-    "D": "Trạng từ"
+    "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **relevance** kết thúc bằng đuôi **-ance**. Đây là dấu hiệu nhận biết rất chuẩn của **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41014,12 +41113,12 @@ export const grammarQuestions = [
   "id": "q1589",
   "question": "Từ 'adequately' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Danh từ",
-    "C": "Động từ",
+    "A": "Danh từ",
+    "B": "Động từ",
+    "C": "Trạng từ",
     "D": "Tính từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **adequately** kết thúc bằng đuôi **-ly**. Đuôi **-ly** là dấu hiệu nhận diện đặc trưng của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41036,12 +41135,12 @@ export const grammarQuestions = [
   "id": "q1590",
   "question": "Từ 'potential' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Tính từ",
+    "B": "Trạng từ",
+    "C": "Động từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **potential** kết thúc bằng đuôi **-al**. Đuôi **-al** thường là Tính từ, nhưng **potential** có thể vừa là tính từ vừa là **Danh từ** (tiềm năng). Trong câu này, nó đóng vai trò Danh từ ngoại lệ.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41720,12 +41819,12 @@ export const grammarQuestions = [
   "id": "q1621",
   "question": "Từ 'discrepancy' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Tính từ",
+    "B": "Danh từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **discrepancy** kết thúc bằng đuôi **-cy**. Các từ kết thúc bằng đuôi này thường là **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41742,12 +41841,12 @@ export const grammarQuestions = [
   "id": "q1622",
   "question": "Từ 'consolidate' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Trạng từ",
+    "B": "Danh từ",
+    "C": "Động từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **consolidate** kết thúc bằng đuôi **-ate**. Trong tiếng Anh, hậu tố **-ate** thường được dùng để cấu tạo nên **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41764,12 +41863,12 @@ export const grammarQuestions = [
   "id": "q1623",
   "question": "Từ 'volatile' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
+    "A": "Tính từ",
+    "B": "Danh từ",
+    "C": "Động từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **volatile** có hậu tố **-ile**, đây là một hậu tố khá phổ biến của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41786,12 +41885,12 @@ export const grammarQuestions = [
   "id": "q1624",
   "question": "Từ 'accountability' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Tính từ",
+    "B": "Danh từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **accountability** kết thúc bằng đuôi **-ity**. Hậu tố **-ity** luôn là dấu hiệu để nhận biết một **Danh từ** trừu tượng.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41808,9 +41907,9 @@ export const grammarQuestions = [
   "id": "q1625",
   "question": "Từ 'transparently' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
+    "A": "Tính từ",
+    "B": "Danh từ",
+    "C": "Động từ",
     "D": "Trạng từ"
   },
   "correct_answer": "D",
@@ -41830,12 +41929,12 @@ export const grammarQuestions = [
   "id": "q1626",
   "question": "Từ 'compliance' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
+    "A": "Động từ",
+    "B": "Danh từ",
     "C": "Tính từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **compliance** kết thúc bằng đuôi **-ance**. Cùng với -ence, đuôi **-ance** là dấu hiệu nhận biết của **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41853,9 +41952,9 @@ export const grammarQuestions = [
   "question": "Từ 'procurement' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
@@ -41874,12 +41973,12 @@ export const grammarQuestions = [
   "id": "q1628",
   "question": "Từ 'contingent' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Trạng từ",
+    "B": "Tính từ",
+    "C": "Danh từ",
+    "D": "Động từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **contingent** kết thúc bằng đuôi **-ent**. Đuôi **-ent** có thể là danh từ hoặc tính từ, nhưng ở đây nó đóng vai trò **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41898,10 +41997,10 @@ export const grammarQuestions = [
   "options": {
     "A": "Danh từ",
     "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "C": "Trạng từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **liable** kết thúc bằng đuôi **-able**. Đây là hậu tố rất quen thuộc dùng để cấu tạo **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41919,9 +42018,9 @@ export const grammarQuestions = [
   "question": "Từ 'feasibility' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
@@ -41940,12 +42039,12 @@ export const grammarQuestions = [
   "id": "q1631",
   "question": "Từ 'expenditure' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
+    "A": "Trạng từ",
     "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "C": "Danh từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **expenditure** kết thúc bằng đuôi **-ure**. Đuôi **-ure** là dấu hiệu nhận diện thông dụng của một **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41962,12 +42061,12 @@ export const grammarQuestions = [
   "id": "q1632",
   "question": "Từ 'revenue' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Động từ",
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **revenue** là một **Danh từ** quan trọng trong môi trường kinh doanh và tài chính.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41984,12 +42083,12 @@ export const grammarQuestions = [
   "id": "q1633",
   "question": "Từ 'depreciate' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Tính từ",
+    "B": "Trạng từ",
+    "C": "Động từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **depreciate** kết thúc bằng đuôi **-ate**. Hậu tố **-ate** thường dùng để tạo thành **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42006,12 +42105,12 @@ export const grammarQuestions = [
   "id": "q1634",
   "question": "Từ 'liquidate' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Động từ",
+    "B": "Trạng từ",
+    "C": "Danh từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **liquidate** kết thúc bằng đuôi **-ate**. Đây là dấu hiệu nhận biết của **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42028,12 +42127,12 @@ export const grammarQuestions = [
   "id": "q1635",
   "question": "Từ 'merger' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
+    "A": "Động từ",
+    "B": "Danh từ",
     "C": "Tính từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **merger** kết thúc bằng đuôi **-er**. Hậu tố **-er** thường dùng cho danh từ chỉ người hoặc danh từ chỉ sự việc/hành động.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42051,9 +42150,9 @@ export const grammarQuestions = [
   "question": "Từ 'acquisition' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
@@ -42072,10 +42171,10 @@ export const grammarQuestions = [
   "id": "q1637",
   "question": "Từ 'structural' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
+    "A": "Trạng từ",
+    "B": "Danh từ",
     "C": "Tính từ",
-    "D": "Trạng từ"
+    "D": "Động từ"
   },
   "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
@@ -42095,11 +42194,11 @@ export const grammarQuestions = [
   "question": "Từ 'negotiate' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **negotiate** kết thúc bằng đuôi **-ate**. Hậu tố **-ate** thường được dùng để cấu tạo nên **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42117,9 +42216,9 @@ export const grammarQuestions = [
   "question": "Từ 'transaction' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
@@ -42138,12 +42237,12 @@ export const grammarQuestions = [
   "id": "q1640",
   "question": "Từ 'subsidiary' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Trạng từ",
+    "B": "Danh từ",
+    "C": "Động từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **subsidiary** kết thúc bằng đuôi **-ary**. Mặc dù đuôi này thường gặp ở tính từ, nhưng ở đây nó là một **Danh từ** (công ty con).",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42160,12 +42259,12 @@ export const grammarQuestions = [
   "id": "q1641",
   "question": "Từ 'fluctuate' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
+    "A": "Động từ",
+    "B": "Danh từ",
     "C": "Tính từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **fluctuate** kết thúc bằng đuôi **-ate**. Hậu tố **-ate** là dấu hiệu nhận biết của **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42182,12 +42281,12 @@ export const grammarQuestions = [
   "id": "q1642",
   "question": "Từ 'methodical' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Động từ",
+    "B": "Trạng từ",
+    "C": "Danh từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **methodical** kết thúc bằng đuôi **-al**. Đây là hậu tố nhận diện quen thuộc của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42204,10 +42303,10 @@ export const grammarQuestions = [
   "id": "q1643",
   "question": "Từ 'sustainable' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
+    "A": "Trạng từ",
+    "B": "Danh từ",
     "C": "Tính từ",
-    "D": "Trạng từ"
+    "D": "Động từ"
   },
   "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
@@ -42227,11 +42326,11 @@ export const grammarQuestions = [
   "question": "Từ 'diversify' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **diversify** kết thúc bằng đuôi **-ify**. Hậu tố **-ify** là một trong những dấu hiệu nhận biết tiêu chuẩn của **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42249,9 +42348,9 @@ export const grammarQuestions = [
   "question": "Từ 'orientation' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
@@ -42270,12 +42369,12 @@ export const grammarQuestions = [
   "id": "q1646",
   "question": "Từ 'allocate' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
+    "A": "Trạng từ",
+    "B": "Danh từ",
     "C": "Tính từ",
-    "D": "Trạng từ"
+    "D": "Động từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **allocate** kết thúc bằng đuôi **-ate**. Hậu tố **-ate** là dấu hiệu nhận biết của **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42314,12 +42413,12 @@ export const grammarQuestions = [
   "id": "q1648",
   "question": "Từ 'maintenance' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Tính từ",
+    "B": "Trạng từ",
+    "C": "Động từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **maintenance** kết thúc bằng đuôi **-ance**. Đây là dấu hiệu nhận diện rất chuẩn của **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42336,12 +42435,12 @@ export const grammarQuestions = [
   "id": "q1649",
   "question": "Từ 'accessibility' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Trạng từ",
+    "B": "Danh từ",
+    "C": "Động từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **accessibility** kết thúc bằng đuôi **-ity**. Hậu tố **-ity** là dấu hiệu điển hình của **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -43042,12 +43141,12 @@ export const grammarQuestions = [
   "id": "q1681",
   "question": "The old tree fell yesterday.",
   "options": {
-    "A": "S-V-C",
+    "A": "S-V-O-C",
     "B": "S-V",
     "C": "S-V-O",
-    "D": "S-V-O-C"
+    "D": "S-V-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The old tree' + Động từ 'fell'. 'yesterday' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -43065,11 +43164,11 @@ export const grammarQuestions = [
   "question": "The chef prepared a delicious meal.",
   "options": {
     "A": "S-V-C",
-    "B": "S-V",
-    "C": "S-V-O",
+    "B": "S-V-O",
+    "C": "S-V",
     "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The chef' + Động từ 'prepared' + Tân ngữ 'a delicious meal'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Ngoại động từ - Tân ngữ)",
@@ -43086,9 +43185,9 @@ export const grammarQuestions = [
   "id": "q1683",
   "question": "The weather became unexpectedly cold.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V",
-    "C": "S-V-O",
+    "A": "S-V",
+    "B": "S-V-O",
+    "C": "S-V-O-C",
     "D": "S-V-C"
   },
   "correct_answer": "D",
@@ -43108,12 +43207,12 @@ export const grammarQuestions = [
   "id": "q1684",
   "question": "The committee elected him chairman.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V-C",
-    "C": "S-V-O",
-    "D": "S-V"
+    "A": "S-V",
+    "B": "S-V-O-C",
+    "C": "S-V-C",
+    "D": "S-V-O"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The committee' + Động từ 'elected' + Tân ngữ 'him' + Bổ ngữ tân ngữ 'chairman'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -43130,12 +43229,12 @@ export const grammarQuestions = [
   "id": "q1685",
   "question": "The mysterious bird vanished quickly.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V",
-    "C": "S-V-O",
+    "A": "S-V",
+    "B": "S-V-O",
+    "C": "S-V-C",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The mysterious bird' + Động từ 'vanished'. 'quickly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -43152,12 +43251,12 @@ export const grammarQuestions = [
   "id": "q1686",
   "question": "The students finished their assignments.",
   "options": {
-    "A": "S-V-O-C",
+    "A": "S-V-O",
     "B": "S-V",
-    "C": "S-V-O",
-    "D": "S-V-C"
+    "C": "S-V-C",
+    "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The students' + Động từ 'finished' + Tân ngữ 'their assignments'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -43174,12 +43273,12 @@ export const grammarQuestions = [
   "id": "q1687",
   "question": "The fresh soup smells wonderful.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V",
-    "C": "S-V-C",
-    "D": "S-V-O-C"
+    "A": "S-V-O-C",
+    "B": "S-V-C",
+    "C": "S-V-O",
+    "D": "S-V"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The fresh soup' + Động từ tri giác 'smells' + Bổ ngữ 'wonderful'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -43198,10 +43297,10 @@ export const grammarQuestions = [
   "options": {
     "A": "S-V-O",
     "B": "S-V-C",
-    "C": "S-V",
-    "D": "S-V-O-C"
+    "C": "S-V-O-C",
+    "D": "S-V"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The noise' + Động từ 'drove' + Tân ngữ 'the neighbors' + Bổ ngữ tân ngữ 'crazy'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -43219,9 +43318,9 @@ export const grammarQuestions = [
   "question": "The heavy rain finally stopped.",
   "options": {
     "A": "S-V-C",
-    "B": "S-V",
-    "C": "S-V-O",
-    "D": "S-V-O-C"
+    "B": "S-V-O",
+    "C": "S-V-O-C",
+    "D": "S-V"
   },
   "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
@@ -43240,12 +43339,12 @@ export const grammarQuestions = [
   "id": "q1690",
   "question": "The detective found a hidden clue.",
   "options": {
-    "A": "S-V-O",
+    "A": "S-V-O-C",
     "B": "S-V-C",
-    "C": "S-V",
-    "D": "S-V-O-C"
+    "C": "S-V-O",
+    "D": "S-V"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The detective' + Động từ 'found' + Tân ngữ 'a hidden clue'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -43268,11 +43367,11 @@ export const grammarQuestions = [
   "question": "The newborn puppies look adorable.",
   "options": {
     "A": "S-V-O-C",
-    "B": "S-V",
-    "C": "S-V-O",
-    "D": "S-V-C"
+    "B": "S-V-C",
+    "C": "S-V",
+    "D": "S-V-O"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The newborn puppies' + Động từ tri giác 'look' + Bổ ngữ 'adorable'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -43289,12 +43388,12 @@ export const grammarQuestions = [
   "id": "q1692",
   "question": "The judges declared the painting a masterpiece.",
   "options": {
-    "A": "S-V",
+    "A": "S-V-O-C",
     "B": "S-V-O",
-    "C": "S-V-O-C",
-    "D": "S-V-C"
+    "C": "S-V-C",
+    "D": "S-V"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The judges' + Động từ 'declared' + Tân ngữ 'the painting' + Bổ ngữ tân ngữ 'a masterpiece'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -43311,10 +43410,10 @@ export const grammarQuestions = [
   "id": "q1693",
   "question": "The tired children slept deeply.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O",
+    "A": "S-V-O-C",
+    "B": "S-V",
     "C": "S-V-C",
-    "D": "S-V-O-C"
+    "D": "S-V-O"
   },
   "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
@@ -43355,12 +43454,12 @@ export const grammarQuestions = [
   "id": "q1695",
   "question": "The ocean water feels freezing.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V",
-    "C": "S-V-C",
-    "D": "S-V-O-C"
+    "A": "S-V",
+    "B": "S-V-O-C",
+    "C": "S-V-O",
+    "D": "S-V-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The ocean water' + Động từ tri giác 'feels' + Bổ ngữ 'freezing'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -43377,12 +43476,12 @@ export const grammarQuestions = [
   "id": "q1696",
   "question": "She painted her bedroom walls blue.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-C",
-    "C": "S-V-O-C",
-    "D": "S-V"
+    "A": "S-V-O-C",
+    "B": "S-V",
+    "C": "S-V-O",
+    "D": "S-V-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'She' + Động từ 'painted' + Tân ngữ 'her bedroom walls' + Bổ ngữ tân ngữ 'blue'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -43399,12 +43498,12 @@ export const grammarQuestions = [
   "id": "q1697",
   "question": "The wild flowers bloomed early.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V",
-    "C": "S-V-O",
+    "A": "S-V",
+    "B": "S-V-O",
+    "C": "S-V-C",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The wild flowers' + Động từ 'bloomed'. 'early' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -43421,12 +43520,12 @@ export const grammarQuestions = [
   "id": "q1698",
   "question": "The scientists conducted multiple experiments.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O-C",
-    "C": "S-V-O",
-    "D": "S-V-C"
+    "A": "S-V-O-C",
+    "B": "S-V-O",
+    "C": "S-V-C",
+    "D": "S-V"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The scientists' + Động từ 'conducted' + Tân ngữ 'multiple experiments'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -43443,12 +43542,12 @@ export const grammarQuestions = [
   "id": "q1699",
   "question": "The final result remained uncertain.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-C",
+    "A": "S-V-O-C",
+    "B": "S-V-O",
     "C": "S-V",
-    "D": "S-V-O-C"
+    "D": "S-V-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The final result' + Động từ nối 'remained' + Bổ ngữ 'uncertain'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -43467,10 +43566,10 @@ export const grammarQuestions = [
   "options": {
     "A": "S-V-C",
     "B": "S-V",
-    "C": "S-V-O",
-    "D": "S-V-O-C"
+    "C": "S-V-O-C",
+    "D": "S-V-O"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'They' + Động từ 'kept' + Tân ngữ 'the laboratory doors' + Bổ ngữ tân ngữ 'locked'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -43487,12 +43586,12 @@ export const grammarQuestions = [
   "id": "q1701",
   "question": "The ancient bridge collapsed suddenly.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-C",
-    "C": "S-V-O",
-    "D": "S-V-O-C"
+    "A": "S-V-C",
+    "B": "S-V-O",
+    "C": "S-V-O-C",
+    "D": "S-V"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The ancient bridge' + Động từ 'collapsed'. 'suddenly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -43509,12 +43608,12 @@ export const grammarQuestions = [
   "id": "q1702",
   "question": "The musicians played a classical symphony.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V-O",
+    "A": "S-V-C",
+    "B": "S-V-O-C",
     "C": "S-V",
-    "D": "S-V-C"
+    "D": "S-V-O"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The musicians' + Động từ 'played' + Tân ngữ 'a classical symphony'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -43553,12 +43652,12 @@ export const grammarQuestions = [
   "id": "q1704",
   "question": "The audience found the performance inspiring.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-C",
-    "C": "S-V-O-C",
-    "D": "S-V"
+    "A": "S-V-C",
+    "B": "S-V",
+    "C": "S-V-O",
+    "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The audience' + Động từ 'found' + Tân ngữ 'the performance' + Bổ ngữ tân ngữ 'inspiring'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -43575,12 +43674,12 @@ export const grammarQuestions = [
   "id": "q1705",
   "question": "The local athletes proved extremely resilient.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V",
-    "C": "S-V-C",
-    "D": "S-V-O-C"
+    "A": "S-V-C",
+    "B": "S-V-O-C",
+    "C": "S-V-O",
+    "D": "S-V"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The local athletes' + Động từ nối 'proved' + Bổ ngữ 'resilient'. 'extremely' là trạng từ.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -44154,12 +44253,12 @@ export const grammarQuestions = [
   "id": "q1731",
   "question": "The mechanic fixed the broken engine.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-C",
-    "C": "S-V-O",
-    "D": "S-V-O-C"
+    "A": "S-V-C",
+    "B": "S-V-O",
+    "C": "S-V-O-C",
+    "D": "S-V"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The mechanic' + Động từ 'fixed' + Tân ngữ 'the broken engine'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44181,12 +44280,12 @@ export const grammarQuestions = [
   "id": "q1732",
   "question": "The fresh bread smells delicious.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O",
-    "C": "S-V-O-C",
-    "D": "S-V-C"
+    "A": "S-V-C",
+    "B": "S-V-O-C",
+    "C": "S-V",
+    "D": "S-V-O"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The fresh bread' + Động từ tri giác 'smells' + Bổ ngữ 'delicious'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -44204,11 +44303,11 @@ export const grammarQuestions = [
   "question": "The heavy curtains opened slowly.",
   "options": {
     "A": "S-V",
-    "B": "S-V-O",
-    "C": "S-V-C",
+    "B": "S-V-C",
+    "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The heavy curtains' + Động từ 'opened'. 'slowly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -44225,9 +44324,9 @@ export const grammarQuestions = [
   "id": "q1734",
   "question": "They found the long movie boring.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O",
-    "C": "S-V-C",
+    "A": "S-V-O",
+    "B": "S-V-C",
+    "C": "S-V",
     "D": "S-V-O-C"
   },
   "correct_answer": "D",
@@ -44247,12 +44346,12 @@ export const grammarQuestions = [
   "id": "q1735",
   "question": "The secretary typed the weekly report.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V-O",
-    "C": "S-V",
-    "D": "S-V-O-C"
+    "A": "S-V-O",
+    "B": "S-V-O-C",
+    "C": "S-V-C",
+    "D": "S-V"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The secretary' + Động từ 'typed' + Tân ngữ 'the weekly report'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44296,12 +44395,12 @@ export const grammarQuestions = [
   "id": "q1737",
   "question": "The tired guests left early.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-C",
-    "C": "S-V-O",
-    "D": "S-V-O-C"
+    "A": "S-V-C",
+    "B": "S-V-O",
+    "C": "S-V-O-C",
+    "D": "S-V"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The tired guests' + Động từ 'left'. 'early' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -44318,9 +44417,9 @@ export const grammarQuestions = [
   "id": "q1738",
   "question": "The coach called the player a genius.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-C",
-    "C": "S-V",
+    "A": "S-V",
+    "B": "S-V-O",
+    "C": "S-V-C",
     "D": "S-V-O-C"
   },
   "correct_answer": "D",
@@ -44346,11 +44445,11 @@ export const grammarQuestions = [
   "question": "The bright sun rose eventually.",
   "options": {
     "A": "S-V",
-    "B": "S-V-O",
-    "C": "S-V-C",
+    "B": "S-V-C",
+    "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The bright sun' + Động từ 'rose'. 'eventually' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -44367,12 +44466,12 @@ export const grammarQuestions = [
   "id": "q1740",
   "question": "The company hired five new employees.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-C",
-    "C": "S-V-O",
-    "D": "S-V-O-C"
+    "A": "S-V-C",
+    "B": "S-V-O-C",
+    "C": "S-V",
+    "D": "S-V-O"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The company' + Động từ 'hired' + Tân ngữ 'five new employees'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44389,12 +44488,12 @@ export const grammarQuestions = [
   "id": "q1741",
   "question": "The difficult project proved successful.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O",
-    "C": "S-V-O-C",
-    "D": "S-V-C"
+    "A": "S-V-O-C",
+    "B": "S-V",
+    "C": "S-V-C",
+    "D": "S-V-O"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The difficult project' + Động từ nối 'proved' + Bổ ngữ 'successful'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -44412,11 +44511,11 @@ export const grammarQuestions = [
   "question": "She kept her messy room clean.",
   "options": {
     "A": "S-V-O",
-    "B": "S-V-C",
-    "C": "S-V-O-C",
+    "B": "S-V-O-C",
+    "C": "S-V-C",
     "D": "S-V"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'She' + Động từ 'kept' + Tân ngữ 'her messy room' + Bổ ngữ tân ngữ 'clean'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -44433,12 +44532,12 @@ export const grammarQuestions = [
   "id": "q1743",
   "question": "The old clock stopped suddenly.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-C",
-    "C": "S-V-O",
-    "D": "S-V-O-C"
+    "A": "S-V-O",
+    "B": "S-V-O-C",
+    "C": "S-V",
+    "D": "S-V-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The old clock' + Động từ 'stopped'. 'suddenly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -44455,12 +44554,12 @@ export const grammarQuestions = [
   "id": "q1744",
   "question": "The hungry cat caught a mouse.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V-O",
-    "C": "S-V",
-    "D": "S-V-O-C"
+    "A": "S-V-O",
+    "B": "S-V-O-C",
+    "C": "S-V-C",
+    "D": "S-V"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The hungry cat' + Động từ 'caught' + Tân ngữ 'a mouse'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44499,12 +44598,12 @@ export const grammarQuestions = [
   "id": "q1746",
   "question": "We named the small kitten Shadow.",
   "options": {
-    "A": "S-V-O",
+    "A": "S-V-O-C",
     "B": "S-V-C",
-    "C": "S-V-O-C",
-    "D": "S-V"
+    "C": "S-V",
+    "D": "S-V-O"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'We' + Động từ 'named' + Tân ngữ 'the small kitten' + Bổ ngữ tân ngữ 'Shadow'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -44521,12 +44620,12 @@ export const grammarQuestions = [
   "id": "q1747",
   "question": "The forest fire spread rapidly.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O",
-    "C": "S-V-C",
-    "D": "S-V-O-C"
+    "A": "S-V-O-C",
+    "B": "S-V-C",
+    "C": "S-V",
+    "D": "S-V-O"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The forest fire' + Động từ 'spread'. 'rapidly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -44544,11 +44643,11 @@ export const grammarQuestions = [
   "question": "The customer ordered a hot coffee.",
   "options": {
     "A": "S-V-C",
-    "B": "S-V-O",
-    "C": "S-V",
-    "D": "S-V-O-C"
+    "B": "S-V",
+    "C": "S-V-O-C",
+    "D": "S-V-O"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The customer' + Động từ 'ordered' + Tân ngữ 'a hot coffee'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44565,10 +44664,10 @@ export const grammarQuestions = [
   "id": "q1749",
   "question": "The hikers felt extremely tired.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V",
+    "A": "S-V",
+    "B": "S-V-O-C",
     "C": "S-V-C",
-    "D": "S-V-O-C"
+    "D": "S-V-O"
   },
   "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
@@ -44587,9 +44686,9 @@ export const grammarQuestions = [
   "id": "q1750",
   "question": "The wind blew the door open.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V-O",
-    "C": "S-V",
+    "A": "S-V",
+    "B": "S-V-C",
+    "C": "S-V-O",
     "D": "S-V-O-C"
   },
   "correct_answer": "D",
@@ -44609,12 +44708,12 @@ export const grammarQuestions = [
   "id": "q1751",
   "question": "The dark clouds disappeared completely.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-C",
+    "A": "S-V-C",
+    "B": "S-V",
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The dark clouds' + Động từ 'disappeared'. 'completely' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -44631,12 +44730,12 @@ export const grammarQuestions = [
   "id": "q1752",
   "question": "The little boy kicked the ball.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V-O",
-    "C": "S-V",
-    "D": "S-V-O-C"
+    "A": "S-V",
+    "B": "S-V-O-C",
+    "C": "S-V-O",
+    "D": "S-V-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The little boy' + Động từ 'kicked' + Tân ngữ 'the ball'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44653,12 +44752,12 @@ export const grammarQuestions = [
   "id": "q1753",
   "question": "The lake water remained calm.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V",
-    "C": "S-V-C",
-    "D": "S-V-O-C"
+    "A": "S-V-O-C",
+    "B": "S-V-O",
+    "C": "S-V",
+    "D": "S-V-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The lake water' + Động từ nối 'remained' + Bổ ngữ 'calm'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -44676,11 +44775,11 @@ export const grammarQuestions = [
   "question": "The judge declared him the winner.",
   "options": {
     "A": "S-V-O",
-    "B": "S-V-C",
-    "C": "S-V-O-C",
+    "B": "S-V-O-C",
+    "C": "S-V-C",
     "D": "S-V"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The judge' + Động từ 'declared' + Tân ngữ 'him' + Bổ ngữ tân ngữ 'the winner'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -44697,12 +44796,12 @@ export const grammarQuestions = [
   "id": "q1755",
   "question": "The student asked a difficult question.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V-O",
-    "C": "S-V",
-    "D": "S-V-O-C"
+    "A": "S-V",
+    "B": "S-V-O-C",
+    "C": "S-V-O",
+    "D": "S-V-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The student' + Động từ 'asked' + Tân ngữ 'a difficult question'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44720,12 +44819,12 @@ export const grammarQuestions = [
   "id": "q1756",
   "question": "The heavy gate locked automatically.",
   "options": {
-    "A": "S-V-C",
+    "A": "S-V-O-C",
     "B": "S-V",
     "C": "S-V-O",
-    "D": "S-V-O-C"
+    "D": "S-V-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The heavy gate' + Động từ 'locked'. 'automatically' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -44743,11 +44842,11 @@ export const grammarQuestions = [
   "question": "The waiter served the appetizer.",
   "options": {
     "A": "S-V-C",
-    "B": "S-V",
-    "C": "S-V-O",
+    "B": "S-V-O",
+    "C": "S-V",
     "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The waiter' + Động từ 'served' + Tân ngữ 'the appetizer'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44764,9 +44863,9 @@ export const grammarQuestions = [
   "id": "q1758",
   "question": "The sunset looks absolutely gorgeous.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V",
-    "C": "S-V-O",
+    "A": "S-V",
+    "B": "S-V-O",
+    "C": "S-V-O-C",
     "D": "S-V-C"
   },
   "correct_answer": "D",
@@ -44786,12 +44885,12 @@ export const grammarQuestions = [
   "id": "q1759",
   "question": "The news made everyone happy.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V-C",
-    "C": "S-V-O",
-    "D": "S-V"
+    "A": "S-V",
+    "B": "S-V-O-C",
+    "C": "S-V-C",
+    "D": "S-V-O"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The news' + Động từ 'made' + Tân ngữ 'everyone' + Bổ ngữ tân ngữ 'happy'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -44808,12 +44907,12 @@ export const grammarQuestions = [
   "id": "q1760",
   "question": "The tiny seed grew slowly.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V",
-    "C": "S-V-O",
+    "A": "S-V",
+    "B": "S-V-O",
+    "C": "S-V-C",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The tiny seed' + Động từ 'grew'. 'slowly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -44830,12 +44929,12 @@ export const grammarQuestions = [
   "id": "q1761",
   "question": "The artist mixed the colors.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V",
-    "C": "S-V-O",
-    "D": "S-V-C"
+    "A": "S-V",
+    "B": "S-V-O",
+    "C": "S-V-C",
+    "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The artist' + Động từ 'mixed' + Tân ngữ 'the colors'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44852,12 +44951,12 @@ export const grammarQuestions = [
   "id": "q1762",
   "question": "The old car seems unreliable.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V",
-    "C": "S-V-C",
-    "D": "S-V-O-C"
+    "A": "S-V-C",
+    "B": "S-V-O-C",
+    "C": "S-V-O",
+    "D": "S-V"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The old car' + Động từ nối 'seems' + Bổ ngữ 'unreliable'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -44876,10 +44975,10 @@ export const grammarQuestions = [
   "options": {
     "A": "S-V-O",
     "B": "S-V-C",
-    "C": "S-V",
-    "D": "S-V-O-C"
+    "C": "S-V-O-C",
+    "D": "S-V"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'They' + Động từ 'elected' + Tân ngữ 'the student' + Bổ ngữ tân ngữ 'president'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -44896,10 +44995,10 @@ export const grammarQuestions = [
   "id": "q1764",
   "question": "The winter storm arrived.",
   "options": {
-    "A": "S-V-C",
+    "A": "S-V-O",
     "B": "S-V",
-    "C": "S-V-O",
-    "D": "S-V-O-C"
+    "C": "S-V-O-C",
+    "D": "S-V-C"
   },
   "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
@@ -44918,12 +45017,12 @@ export const grammarQuestions = [
   "id": "q1765",
   "question": "The chef tasted the sauce.",
   "options": {
-    "A": "S-V-O",
+    "A": "S-V-O-C",
     "B": "S-V-C",
-    "C": "S-V",
-    "D": "S-V-O-C"
+    "C": "S-V-O",
+    "D": "S-V"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The chef' + Động từ 'tasted' + Tân ngữ 'the sauce'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44941,11 +45040,11 @@ export const grammarQuestions = [
   "question": "The mountain air feels crisp.",
   "options": {
     "A": "S-V-O-C",
-    "B": "S-V",
-    "C": "S-V-O",
-    "D": "S-V-C"
+    "B": "S-V-C",
+    "C": "S-V",
+    "D": "S-V-O"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The mountain air' + Động từ tri giác 'feels' + Bổ ngữ 'crisp'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -44962,10 +45061,10 @@ export const grammarQuestions = [
   "id": "q1767",
   "question": "She called the decision unfair.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O",
+    "A": "S-V-O",
+    "B": "S-V-C",
     "C": "S-V-O-C",
-    "D": "S-V-C"
+    "D": "S-V"
   },
   "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
@@ -44984,12 +45083,12 @@ export const grammarQuestions = [
   "id": "q1768",
   "question": "The phone rang twice.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O",
-    "C": "S-V-C",
-    "D": "S-V-O-C"
+    "A": "S-V-C",
+    "B": "S-V-O-C",
+    "C": "S-V",
+    "D": "S-V-O"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The phone' + Động từ 'rang'. 'twice' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -45007,11 +45106,11 @@ export const grammarQuestions = [
   "question": "The delivery person left the package.",
   "options": {
     "A": "S-V-C",
-    "B": "S-V-O",
-    "C": "S-V",
+    "B": "S-V",
+    "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The delivery person' + Động từ 'left' + Tân ngữ 'the package'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -45028,12 +45127,12 @@ export const grammarQuestions = [
   "id": "q1770",
   "question": "The coffee stayed hot.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V",
-    "C": "S-V-C",
-    "D": "S-V-O-C"
+    "A": "S-V",
+    "B": "S-V-O-C",
+    "C": "S-V-O",
+    "D": "S-V-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The coffee' + Động từ nối 'stayed' + Bổ ngữ 'hot'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -45050,12 +45149,12 @@ export const grammarQuestions = [
   "id": "q1771",
   "question": "We found the instructions helpful.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-C",
-    "C": "S-V-O-C",
-    "D": "S-V"
+    "A": "S-V-O-C",
+    "B": "S-V",
+    "C": "S-V-O",
+    "D": "S-V-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'We' + Động từ 'found' + Tân ngữ 'the instructions' + Bổ ngữ tân ngữ 'helpful'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -45072,12 +45171,12 @@ export const grammarQuestions = [
   "id": "q1772",
   "question": "The glass broke suddenly.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V",
-    "C": "S-V-O",
+    "A": "S-V",
+    "B": "S-V-O",
+    "C": "S-V-C",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The glass' + Động từ 'broke'. 'suddenly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -45094,12 +45193,12 @@ export const grammarQuestions = [
   "id": "q1773",
   "question": "The company launched a campaign.",
   "options": {
-    "A": "S-V",
+    "A": "S-V-O",
     "B": "S-V-O-C",
-    "C": "S-V-O",
-    "D": "S-V-C"
+    "C": "S-V-C",
+    "D": "S-V"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The company' + Động từ 'launched' + Tân ngữ 'a campaign'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -45116,12 +45215,12 @@ export const grammarQuestions = [
   "id": "q1774",
   "question": "The situation became quite complicated.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-C",
+    "A": "S-V-O-C",
+    "B": "S-V-O",
     "C": "S-V",
-    "D": "S-V-O-C"
+    "D": "S-V-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The situation' + Động từ nối 'became' + Bổ ngữ 'complicated'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -45140,10 +45239,10 @@ export const grammarQuestions = [
   "options": {
     "A": "S-V-C",
     "B": "S-V",
-    "C": "S-V-O",
-    "D": "S-V-O-C"
+    "C": "S-V-O-C",
+    "D": "S-V-O"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The music' + Động từ 'kept' + Tân ngữ 'me' + Bổ ngữ tân ngữ 'awake'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -45160,12 +45259,12 @@ export const grammarQuestions = [
   "id": "q1776",
   "question": "The plane landed safely.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-C",
-    "C": "S-V-O",
-    "D": "S-V-O-C"
+    "A": "S-V-C",
+    "B": "S-V-O",
+    "C": "S-V-O-C",
+    "D": "S-V"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The plane' + Động từ 'landed'. 'safely' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -45182,12 +45281,12 @@ export const grammarQuestions = [
   "id": "q1777",
   "question": "The gardener watered the roses.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V-O",
+    "A": "S-V-C",
+    "B": "S-V-O-C",
     "C": "S-V",
-    "D": "S-V-C"
+    "D": "S-V-O"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The gardener' + Động từ 'watered' + Tân ngữ 'the roses'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -45204,12 +45303,12 @@ export const grammarQuestions = [
   "id": "q1778",
   "question": "The ocean looked very calm.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V",
-    "C": "S-V-C",
+    "A": "S-V-C",
+    "B": "S-V-O",
+    "C": "S-V",
     "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The ocean' + Động từ tri giác 'looked' + Bổ ngữ 'calm'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -45226,12 +45325,12 @@ export const grammarQuestions = [
   "id": "q1779",
   "question": "The jury found him innocent.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-C",
-    "C": "S-V-O-C",
-    "D": "S-V"
+    "A": "S-V-C",
+    "B": "S-V-O-C",
+    "C": "S-V",
+    "D": "S-V-O"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The jury' + Động từ 'found' + Tân ngữ 'him' + Bổ ngữ tân ngữ 'innocent'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -45248,12 +45347,12 @@ export const grammarQuestions = [
   "id": "q1780",
   "question": "The morning fog cleared.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-C",
-    "C": "S-V",
-    "D": "S-V-O-C"
+    "A": "S-V-O-C",
+    "B": "S-V-O",
+    "C": "S-V-C",
+    "D": "S-V"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The morning fog' + Động từ 'cleared'.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -45827,12 +45926,12 @@ export const grammarQuestions = [
   "id": "q1806",
   "question": "Dr. Aris ______ the medical records every morning before starting the patient consultations.",
   "options": {
-    "A": "reviews",
-    "B": "reviewing",
+    "A": "reviewing",
+    "B": "reviews",
     "C": "is reviewed",
     "D": "has reviewed"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "12 thì",
   "explanation_reason": "Dấu hiệu 'every morning' chỉ thói quen hiện tại, dùng thì Hiện tại đơn (Present Simple).",
   "explanation_grammar": "Hiện tại đơn",
@@ -45849,12 +45948,12 @@ export const grammarQuestions = [
   "id": "q1807",
   "question": "Currently, the legal team ______ a new contract for the software licensing agreement.",
   "options": {
-    "A": "drafts",
-    "B": "is drafting",
-    "C": "has drafted",
-    "D": "was drafted"
+    "A": "has drafted",
+    "B": "was drafted",
+    "C": "drafts",
+    "D": "is drafting"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "12 thì",
   "explanation_reason": "Dấu hiệu 'Currently' chỉ hành động đang xảy ra, dùng thì Hiện tại tiếp diễn (Present Continuous).",
   "explanation_grammar": "Hiện tại tiếp diễn",
@@ -45872,9 +45971,9 @@ export const grammarQuestions = [
   "question": "Ms. Sterling ______ as the lead violinist for the symphony orchestra since they moved to the new theater.",
   "options": {
     "A": "has performed",
-    "B": "performs",
-    "C": "is performing",
-    "D": "had performed"
+    "B": "had performed",
+    "C": "performs",
+    "D": "is performing"
   },
   "correct_answer": "A",
   "grammar_type": "12 thì",
@@ -45895,10 +45994,10 @@ export const grammarQuestions = [
   "options": {
     "A": "has been working",
     "B": "works",
-    "C": "is working",
-    "D": "had been working"
+    "C": "had been working",
+    "D": "is working"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "12 thì",
   "explanation_reason": "Hành động xảy ra liên tục trước một mốc thời gian trong quá khứ, dùng thì Quá khứ hoàn thành tiếp diễn (Past Perfect Continuous).",
   "explanation_grammar": "Quá khứ hoàn thành tiếp diễn",
@@ -45916,9 +46015,9 @@ export const grammarQuestions = [
   "question": "Yesterday, the gallery owner ______ the collection of modern sculptures for the upcoming exhibition.",
   "options": {
     "A": "curated",
-    "B": "curates",
-    "C": "will curate",
-    "D": "was curating"
+    "B": "will curate",
+    "C": "was curating",
+    "D": "curates"
   },
   "correct_answer": "A",
   "grammar_type": "12 thì",
@@ -45937,12 +46036,12 @@ export const grammarQuestions = [
   "id": "q1811",
   "question": "While the students ______ their final exams, the professor monitored the room for any disturbances.",
   "options": {
-    "A": "take",
-    "B": "took",
-    "C": "were taking",
-    "D": "have taken"
+    "A": "have taken",
+    "B": "were taking",
+    "C": "take",
+    "D": "took"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "12 thì",
   "explanation_reason": "Hành động đang xảy ra trong quá khứ (đang làm bài) thì hành động khác xảy ra, dùng Quá khứ tiếp diễn (Past Continuous).",
   "explanation_grammar": "Quá khứ tiếp diễn",
@@ -45959,12 +46058,12 @@ export const grammarQuestions = [
   "id": "q1812",
   "question": "By the time the movie started, the audience ______ all the popcorn they purchased at the counter.",
   "options": {
-    "A": "had finished",
-    "B": "finished",
-    "C": "have finished",
+    "A": "finished",
+    "B": "have finished",
+    "C": "had finished",
     "D": "are finishing"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "12 thì",
   "explanation_reason": "Hành động hoàn thành trước một hành động khác trong quá khứ, dùng thì Quá khứ hoàn thành (Past Perfect).",
   "explanation_grammar": "Quá khứ hoàn thành",
@@ -45981,12 +46080,12 @@ export const grammarQuestions = [
   "id": "q1813",
   "question": "The actors ______ the play for six hours straight by the time the director finally called for a break.",
   "options": {
-    "A": "had been rehearsing",
-    "B": "have been rehearsing",
-    "C": "rehearsed",
-    "D": "rehearse"
+    "A": "rehearsed",
+    "B": "rehearse",
+    "C": "have been rehearsing",
+    "D": "had been rehearsing"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "12 thì",
   "explanation_reason": "Hành động kéo dài liên tục trước một hành động khác trong quá khứ, dùng Quá khứ hoàn thành tiếp diễn (Past Perfect Continuous).",
   "explanation_grammar": "Quá khứ hoàn thành tiếp diễn",
@@ -46003,12 +46102,12 @@ export const grammarQuestions = [
   "id": "q1814",
   "question": "In the upcoming semester, Professor Kimura ______ a series of lectures on ancient philosophy.",
   "options": {
-    "A": "presents",
-    "B": "will present",
-    "C": "presented",
-    "D": "has presented"
+    "A": "will present",
+    "B": "has presented",
+    "C": "presents",
+    "D": "presented"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "12 thì",
   "explanation_reason": "Dấu hiệu 'In the upcoming semester' chỉ tương lai, dùng thì Tương lai đơn (Future Simple).",
   "explanation_grammar": "Tương lai đơn",
@@ -46026,11 +46125,11 @@ export const grammarQuestions = [
   "question": "This time tomorrow, the surgical team ______ a complex heart procedure in the main operating room.",
   "options": {
     "A": "operates",
-    "B": "operated",
-    "C": "will be operating",
+    "B": "will be operating",
+    "C": "operated",
     "D": "has operated"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "12 thì",
   "explanation_reason": "Hành động đang xảy ra tại một thời điểm xác định trong tương lai, dùng thì Tương lai tiếp diễn (Future Continuous).",
   "explanation_grammar": "Tương lai tiếp diễn",
@@ -46047,10 +46146,10 @@ export const grammarQuestions = [
   "id": "q1816",
   "question": "By the end of this decade, the university ______ three new research laboratories on campus.",
   "options": {
-    "A": "completes",
-    "B": "will complete",
+    "A": "will complete",
+    "B": "is completing",
     "C": "will have completed",
-    "D": "is completing"
+    "D": "completes"
   },
   "correct_answer": "C",
   "grammar_type": "12 thì",
@@ -46069,12 +46168,12 @@ export const grammarQuestions = [
   "id": "q1817",
   "question": "By next October, the environmentalists ______ the coral reefs in this area for exactly ten years.",
   "options": {
-    "A": "study",
-    "B": "will study",
-    "C": "will have been studying",
-    "D": "are studying"
+    "A": "are studying",
+    "B": "study",
+    "C": "will study",
+    "D": "will have been studying"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "12 thì",
   "explanation_reason": "Hành động kéo dài liên tục đến một thời điểm trong tương lai, dùng thì Tương lai hoàn thành tiếp diễn (Future Perfect Continuous).",
   "explanation_grammar": "Tương lai hoàn thành tiếp diễn",
@@ -46091,12 +46190,12 @@ export const grammarQuestions = [
   "id": "q1818",
   "question": "All prescription medications ______ exactly as directed by the attending physician.",
   "options": {
-    "A": "must take",
-    "B": "must be taken",
+    "A": "must be taken",
+    "B": "must take",
     "C": "must be taking",
     "D": "must to take"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "12 thì",
   "explanation_reason": "Cấu trúc bị động với động từ khuyết thiếu: must be + V3/ed.",
   "explanation_grammar": "Bị động (Passive Voice)",
@@ -46113,12 +46212,12 @@ export const grammarQuestions = [
   "id": "q1819",
   "question": "Daily breakfast ______ to all hotel guests in the dining hall from 6:00 AM to 10:00 AM.",
   "options": {
-    "A": "is served",
-    "B": "serves",
-    "C": "is serving",
-    "D": "served"
+    "A": "is serving",
+    "B": "served",
+    "C": "is served",
+    "D": "serves"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "12 thì",
   "explanation_reason": "Sự thật hiển nhiên/lịch trình ở dạng bị động, dùng Hiện tại đơn bị động.",
   "explanation_grammar": "Hiện tại đơn bị động",
@@ -46135,12 +46234,12 @@ export const grammarQuestions = [
   "id": "q1820",
   "question": "The prestigious award ______ to the young novelist during the gala ceremony last night.",
   "options": {
-    "A": "was awarding",
-    "B": "was awarded",
+    "A": "awards",
+    "B": "was awarding",
     "C": "awarded",
-    "D": "awards"
+    "D": "was awarded"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "12 thì",
   "explanation_reason": "Hành động trong quá khứ ở dạng bị động, dùng Quá khứ đơn bị động.",
   "explanation_grammar": "Quá khứ đơn bị động",
@@ -46157,12 +46256,12 @@ export const grammarQuestions = [
   "id": "q1821",
   "question": "If the client ______ the legal agreement today, the project can officially begin tomorrow.",
   "options": {
-    "A": "signs",
-    "B": "signed",
+    "A": "signed",
+    "B": "signs",
     "C": "will sign",
     "D": "signing"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "12 thì",
   "explanation_reason": "Câu điều kiện loại 1 (nói về sự việc có thể xảy ra), vế If dùng Hiện tại đơn.",
   "explanation_grammar": "Câu điều kiện loại 1",
@@ -46179,12 +46278,12 @@ export const grammarQuestions = [
   "id": "q1822",
   "question": "Mr. Nakamura would accept the promotion if the new position ______ based in the London office.",
   "options": {
-    "A": "is",
-    "B": "were",
-    "C": "will be",
-    "D": "has been"
+    "A": "will be",
+    "B": "has been",
+    "C": "were",
+    "D": "is"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "12 thì",
   "explanation_reason": "Câu điều kiện loại 2 (giả định không có thật ở hiện tại), vế If dùng 'were' cho mọi ngôi.",
   "explanation_grammar": "Câu điều kiện loại 2",
@@ -46201,12 +46300,12 @@ export const grammarQuestions = [
   "id": "q1823",
   "question": "If the IT department ______ the server vulnerability sooner, the data breach wouldn't have occurred.",
   "options": {
-    "A": "identifies",
-    "B": "identified",
-    "C": "had identified",
-    "D": "has identified"
+    "A": "has identified",
+    "B": "had identified",
+    "C": "identifies",
+    "D": "identified"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "12 thì",
   "explanation_reason": "Câu điều kiện loại 3 (giả định trái ngược với quá khứ), vế If dùng Quá khứ hoàn thành.",
   "explanation_grammar": "Câu điều kiện loại 3",
@@ -46223,12 +46322,12 @@ export const grammarQuestions = [
   "id": "q1824",
   "question": "All patient data ______ on the hospital's secure cloud server starting from next month.",
   "options": {
-    "A": "will be stored",
-    "B": "store",
-    "C": "storing",
+    "A": "store",
+    "B": "storing",
+    "C": "will be stored",
     "D": "will store"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "12 thì",
   "explanation_reason": "Hành động trong tương lai ở dạng bị động, dùng Tương lai đơn bị động.",
   "explanation_grammar": "Tương lai đơn bị động",
@@ -46245,12 +46344,12 @@ export const grammarQuestions = [
   "id": "q1825",
   "question": "The historic mural in the city center is currently ______ by a team of professional art restorers.",
   "options": {
-    "A": "restoring",
-    "B": "restored",
-    "C": "being restored",
-    "D": "to restore"
+    "A": "restored",
+    "B": "being restored",
+    "C": "to restore",
+    "D": "restoring"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "12 thì",
   "explanation_reason": "Hành động đang xảy ra ở dạng bị động, dùng Hiện tại tiếp diễn bị động (am/is/are + being + V3/ed).",
   "explanation_grammar": "Hiện tại tiếp diễn bị động",
@@ -46267,12 +46366,12 @@ export const grammarQuestions = [
   "id": "q1826",
   "question": "Unless the lead singer recovers from her throat infection, the concert ______.",
   "options": {
-    "A": "will be postponed",
+    "A": "postponed",
     "B": "postpones",
     "C": "is postponing",
-    "D": "postponed"
+    "D": "will be postponed"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "12 thì",
   "explanation_reason": "Cấu trúc 'Unless' tương đương 'If not', vế chính dùng Tương lai đơn bị động.",
   "explanation_grammar": "Câu điều kiện loại 1 (Bị động)",
@@ -46289,12 +46388,12 @@ export const grammarQuestions = [
   "id": "q1827",
   "question": "Mr. Henderson ______ several different diet plans before he finally found one that improved his health.",
   "options": {
-    "A": "tries",
-    "B": "had tried",
+    "A": "had tried",
+    "B": "tries",
     "C": "is trying",
     "D": "will try"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "12 thì",
   "explanation_reason": "Hành động xảy ra trước một hành động khác trong quá khứ (tìm thấy), dùng thì Quá khứ hoàn thành.",
   "explanation_grammar": "Quá khứ hoàn thành",
@@ -46311,12 +46410,12 @@ export const grammarQuestions = [
   "id": "q1828",
   "question": "The mobile application ______ by the developers for the past few weeks to fix the minor bugs.",
   "options": {
-    "A": "has been being updated",
-    "B": "updates",
-    "C": "updated",
-    "D": "was updating"
+    "A": "updated",
+    "B": "was updating",
+    "C": "updates",
+    "D": "has been being updated"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "12 thì",
   "explanation_reason": "Hành động kéo dài từ quá khứ đến hiện tại ở dạng bị động, dùng Hiện tại hoàn thành tiếp diễn bị động (ít dùng nhưng vẫn có cấu trúc has been being V3).",
   "explanation_grammar": "Hiện tại hoàn thành tiếp diễn bị động",
@@ -46333,12 +46432,12 @@ export const grammarQuestions = [
   "id": "q1829",
   "question": "If I ______ the CEO of this tech company, I would invest more in artificial intelligence research.",
   "options": {
-    "A": "am",
-    "B": "were",
-    "C": "will be",
-    "D": "had been"
+    "A": "were",
+    "B": "had been",
+    "C": "am",
+    "D": "will be"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "12 thì",
   "explanation_reason": "Câu điều kiện loại 2, giả định không có thật ở hiện tại, vế If dùng 'were'.",
   "explanation_grammar": "Câu điều kiện loại 2",
@@ -46355,12 +46454,12 @@ export const grammarQuestions = [
   "id": "q1830",
   "question": "By the time the chef arrives, the kitchen assistants ______ the ingredients for four hours.",
   "options": {
-    "A": "will have been preparing",
-    "B": "prepare",
+    "A": "prepare",
+    "B": "will have been preparing",
     "C": "have prepared",
     "D": "is preparing"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "12 thì",
   "explanation_reason": "Hành động kéo dài liên tục đến một thời điểm trong tương lai, dùng thì Tương lai hoàn thành tiếp diễn.",
   "explanation_grammar": "Tương lai hoàn thành tiếp diễn",
@@ -48582,12 +48681,12 @@ export const grammarQuestions = [
   "id": "q1931",
   "question": "The performance evaluation for the junior staff members ____ scheduled for next Wednesday.",
   "options": {
-    "A": "is being",
-    "B": "is",
-    "C": "are",
-    "D": "being"
+    "A": "are",
+    "B": "being",
+    "C": "is being",
+    "D": "is"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The performance evaluation' (số ít), động từ chia 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -48604,10 +48703,10 @@ export const grammarQuestions = [
   "id": "q1932",
   "question": "Updates to the internal security software ____ installed automatically every Friday night.",
   "options": {
-    "A": "is",
+    "A": "has been",
     "B": "are",
-    "C": "was",
-    "D": "has been"
+    "C": "is",
+    "D": "was"
   },
   "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
@@ -48626,12 +48725,12 @@ export const grammarQuestions = [
   "id": "q1933",
   "question": "The budget for the upcoming advertising campaigns ____ not yet been finalized by the finance committee.",
   "options": {
-    "A": "have",
-    "B": "has",
+    "A": "has",
+    "B": "have",
     "C": "having",
     "D": "is"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The budget' (số ít), động từ chia 'has'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -48648,10 +48747,10 @@ export const grammarQuestions = [
   "id": "q1934",
   "question": "Detailed instructions regarding the new patient registration process ____ provided in the handbook.",
   "options": {
-    "A": "is",
+    "A": "was",
     "B": "are",
-    "C": "was",
-    "D": "has been"
+    "C": "has been",
+    "D": "is"
   },
   "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
@@ -48671,9 +48770,9 @@ export const grammarQuestions = [
   "question": "The renovation of the historic downtown hotel ____ expected to finish before the summer season.",
   "options": {
     "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "being"
+    "B": "being",
+    "C": "are",
+    "D": "were"
   },
   "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
@@ -48714,12 +48813,12 @@ export const grammarQuestions = [
   "id": "q1937",
   "question": "A collection of rare medical journals ____ donated to the university library last month.",
   "options": {
-    "A": "were",
-    "B": "was",
-    "C": "are",
-    "D": "being"
+    "A": "was",
+    "B": "are",
+    "C": "being",
+    "D": "were"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Cấu trúc 'A collection of + N số nhiều' chia theo 'A collection' (số ít), dùng 'was'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -48736,12 +48835,12 @@ export const grammarQuestions = [
   "id": "q1938",
   "question": "The interest rates for the commercial property loan ____ adjusted by the bank yesterday.",
   "options": {
-    "A": "is",
-    "B": "was",
-    "C": "were",
-    "D": "has been"
+    "A": "has been",
+    "B": "is",
+    "C": "was",
+    "D": "were"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The interest rates' (số nhiều), động từ chia 'were'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -48758,12 +48857,12 @@ export const grammarQuestions = [
   "id": "q1939",
   "question": "Training sessions for the new accounting software ____ held in the main conference room tomorrow.",
   "options": {
-    "A": "will be",
-    "B": "was",
-    "C": "is",
+    "A": "was",
+    "B": "is",
+    "C": "will be",
     "D": "has been"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Thì tương lai bị động: will be + V3.",
   "explanation_grammar": "Hòa hợp S-V / Thì tương lai",
@@ -48781,9 +48880,9 @@ export const grammarQuestions = [
   "question": "The quality of the ingredients used in our restaurant ____ monitored strictly by the head chef.",
   "options": {
     "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "being"
+    "B": "were",
+    "C": "being",
+    "D": "are"
   },
   "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
@@ -48802,10 +48901,10 @@ export const grammarQuestions = [
   "id": "q1941",
   "question": "Applications for the senior marketing position ____ currently being reviewed by the HR director.",
   "options": {
-    "A": "is",
+    "A": "has been",
     "B": "are",
-    "C": "was",
-    "D": "has been"
+    "C": "is",
+    "D": "was"
   },
   "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
@@ -48826,10 +48925,10 @@ export const grammarQuestions = [
   "options": {
     "A": "shows",
     "B": "showing",
-    "C": "show",
-    "D": "has shown"
+    "C": "has shown",
+    "D": "show"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Danh từ 'Data' thường được coi là số nhiều trong ngữ cảnh học thuật/kỹ thuật (số ít là datum), ở đây đi với 'show'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -48847,9 +48946,9 @@ export const grammarQuestions = [
   "question": "Access to the confidential client files ____ restricted to authorized personnel only.",
   "options": {
     "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "have been"
+    "B": "were",
+    "C": "have been",
+    "D": "are"
   },
   "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
@@ -48868,12 +48967,12 @@ export const grammarQuestions = [
   "id": "q1944",
   "question": "Maintenance of the air conditioning units in the East Wing ____ performed every three months.",
   "options": {
-    "A": "are",
-    "B": "is",
+    "A": "being",
+    "B": "are",
     "C": "were",
-    "D": "being"
+    "D": "is"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'Maintenance' (số ít), động từ chia 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -48890,12 +48989,12 @@ export const grammarQuestions = [
   "id": "q1945",
   "question": "The results of the clinical trial ____ published in a major scientific journal next week.",
   "options": {
-    "A": "will be",
-    "B": "is",
-    "C": "was",
+    "A": "is",
+    "B": "was",
+    "C": "will be",
     "D": "has been"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Thì tương lai bị động: will be + V3.",
   "explanation_grammar": "Hòa hợp S-V / Thì tương lai",
@@ -48912,10 +49011,10 @@ export const grammarQuestions = [
   "id": "q1946",
   "question": "A new policy regarding the use of flexible working hours ____ introduced by TechNova Corp recently.",
   "options": {
-    "A": "have been",
+    "A": "are being",
     "B": "has been",
-    "C": "are being",
-    "D": "were"
+    "C": "were",
+    "D": "have been"
   },
   "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
@@ -48934,12 +49033,12 @@ export const grammarQuestions = [
   "id": "q1947",
   "question": "The price of the luxury apartments in the city center ____ increased significantly since 2024.",
   "options": {
-    "A": "have",
-    "B": "has",
-    "C": "is",
-    "D": "are"
+    "A": "are",
+    "B": "have",
+    "C": "has",
+    "D": "is"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The price' (số ít), động từ chia 'has'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -48957,11 +49056,11 @@ export const grammarQuestions = [
   "question": "Candidates with experience in cloud computing ____ preferred for this technical role.",
   "options": {
     "A": "is",
-    "B": "was",
-    "C": "are",
+    "B": "are",
+    "C": "was",
     "D": "has been"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'Candidates' (số nhiều), động từ chia 'are'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -48978,12 +49077,12 @@ export const grammarQuestions = [
   "id": "q1949",
   "question": "The layout of the new corporate headquarters ____ designed to encourage collaboration.",
   "options": {
-    "A": "was",
-    "B": "were",
-    "C": "are",
-    "D": "being"
+    "A": "are",
+    "B": "being",
+    "C": "were",
+    "D": "was"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The layout' (số ít), động từ chia 'was'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49000,10 +49099,10 @@ export const grammarQuestions = [
   "id": "q1950",
   "question": "Monthly reports on the branch’s sales performance ____ submitted to the regional manager.",
   "options": {
-    "A": "is",
-    "B": "was",
+    "A": "has been",
+    "B": "is",
     "C": "are",
-    "D": "has been"
+    "D": "was"
   },
   "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
@@ -49044,12 +49143,12 @@ export const grammarQuestions = [
   "id": "q1952",
   "question": "Digital receipts for every transaction ____ sent to the customer’s registered email address.",
   "options": {
-    "A": "is",
-    "B": "are",
-    "C": "was",
-    "D": "being"
+    "A": "was",
+    "B": "being",
+    "C": "is",
+    "D": "are"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'Digital receipts' (số nhiều), động từ chia 'are'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49066,12 +49165,12 @@ export const grammarQuestions = [
   "id": "q1953",
   "question": "The availability of the grand ballroom for the wedding ceremony ____ confirmed this morning.",
   "options": {
-    "A": "was",
-    "B": "were",
-    "C": "are",
-    "D": "have been"
+    "A": "have been",
+    "B": "was",
+    "C": "were",
+    "D": "are"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The availability' (số ít), động từ chia 'was'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49089,11 +49188,11 @@ export const grammarQuestions = [
   "question": "Professional development workshops for the nursing staff ____ conducted twice a year.",
   "options": {
     "A": "is",
-    "B": "are",
-    "C": "was",
-    "D": "has been"
+    "B": "was",
+    "C": "has been",
+    "D": "are"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'workshops' (số nhiều), động từ chia 'are'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49110,12 +49209,12 @@ export const grammarQuestions = [
   "id": "q1955",
   "question": "The complexity of the modern financial regulations ____ a challenge for small business owners.",
   "options": {
-    "A": "presents",
-    "B": "present",
-    "C": "presenting",
-    "D": "have presented"
+    "A": "presenting",
+    "B": "have presented",
+    "C": "presents",
+    "D": "present"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The complexity' (số ít), động từ chia 'presents'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49133,12 +49232,12 @@ export const grammarQuestions = [
   "id": "q1956",
   "question": "The criteria for the annual performance bonus ____ based on individual productivity and teamwork.",
   "options": {
-    "A": "is",
-    "B": "are",
-    "C": "was",
-    "D": "has been"
+    "A": "are",
+    "B": "has been",
+    "C": "is",
+    "D": "was"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Danh từ 'Criteria' là số nhiều (số ít là criterion), động từ chia 'are'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49155,12 +49254,12 @@ export const grammarQuestions = [
   "id": "q1957",
   "question": "The installation of the new server racks ____ completed by the technical team late last night.",
   "options": {
-    "A": "was",
-    "B": "were",
-    "C": "are",
-    "D": "being"
+    "A": "were",
+    "B": "are",
+    "C": "being",
+    "D": "was"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The installation' (số ít), động từ chia 'was'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49177,12 +49276,12 @@ export const grammarQuestions = [
   "id": "q1958",
   "question": "Each of the financial statements ____ verified by an external auditor before the meeting.",
   "options": {
-    "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "have been"
+    "A": "were",
+    "B": "have been",
+    "C": "is",
+    "D": "are"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Cấu trúc 'Each of + N số nhiều' động từ luôn chia số ít, dùng 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49199,12 +49298,12 @@ export const grammarQuestions = [
   "id": "q1959",
   "question": "Enrollment in the advanced leadership courses ____ increased by 20% this semester.",
   "options": {
-    "A": "have",
-    "B": "has",
+    "A": "are",
+    "B": "have",
     "C": "is",
-    "D": "are"
+    "D": "has"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'Enrollment' (số ít), động từ chia 'has'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49221,12 +49320,12 @@ export const grammarQuestions = [
   "id": "q1960",
   "question": "A list of potential side effects ____ included in the patient information leaflet.",
   "options": {
-    "A": "is",
-    "B": "are",
-    "C": "were",
+    "A": "are",
+    "B": "were",
+    "C": "is",
     "D": "being"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'A list' (số ít), động từ chia 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49243,12 +49342,12 @@ export const grammarQuestions = [
   "id": "q1961",
   "question": "Reservations for the rooftop dining area ____ highly recommended during the holiday weekend.",
   "options": {
-    "A": "is",
+    "A": "are",
     "B": "was",
-    "C": "are",
-    "D": "has been"
+    "C": "has been",
+    "D": "is"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'Reservations' (số nhiều), động từ chia 'are'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49265,10 +49364,10 @@ export const grammarQuestions = [
   "id": "q1962",
   "question": "The cost of repairs to the office building ____ shared between the landlord and the tenant.",
   "options": {
-    "A": "are",
+    "A": "have been",
     "B": "is",
-    "C": "were",
-    "D": "have been"
+    "C": "are",
+    "D": "were"
   },
   "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
@@ -49287,12 +49386,12 @@ export const grammarQuestions = [
   "id": "q1963",
   "question": "Technical support for our cloud-based services ____ available 24 hours a day.",
   "options": {
-    "A": "is",
-    "B": "are",
-    "C": "were",
+    "A": "are",
+    "B": "were",
+    "C": "is",
     "D": "being"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'Technical support' (không đếm được/số ít), động từ chia 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49309,10 +49408,10 @@ export const grammarQuestions = [
   "id": "q1964",
   "question": "The fluctuations in the global stock market ____ impacted our investment portfolio recently.",
   "options": {
-    "A": "has",
+    "A": "is",
     "B": "have",
-    "C": "is",
-    "D": "was"
+    "C": "was",
+    "D": "has"
   },
   "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
@@ -49332,9 +49431,9 @@ export const grammarQuestions = [
   "question": "Every employee's record of attendance ____ kept in the digital database for five years.",
   "options": {
     "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "have been"
+    "B": "have been",
+    "C": "are",
+    "D": "were"
   },
   "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
@@ -49355,10 +49454,10 @@ export const grammarQuestions = [
   "options": {
     "A": "is",
     "B": "was",
-    "C": "are",
-    "D": "has been"
+    "C": "has been",
+    "D": "are"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The architectural drawings' (số nhiều), động từ chia 'are'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49375,12 +49474,12 @@ export const grammarQuestions = [
   "id": "q1967",
   "question": "Feedback regarding the recent software update ____ being used to improve the user experience.",
   "options": {
-    "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "have been"
+    "A": "were",
+    "B": "is",
+    "C": "have been",
+    "D": "are"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'Feedback' (không đếm được/số ít), động từ chia 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49397,12 +49496,12 @@ export const grammarQuestions = [
   "id": "q1968",
   "question": "The variety of organic products in our grocery section ____ expanded since last year.",
   "options": {
-    "A": "have",
-    "B": "has",
-    "C": "is",
-    "D": "are"
+    "A": "are",
+    "B": "have",
+    "C": "has",
+    "D": "is"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Cấu trúc 'The variety of + N số nhiều' động từ chia theo 'The variety' (số ít), dùng 'has'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49419,12 +49518,12 @@ export const grammarQuestions = [
   "id": "q1969",
   "question": "Success in the professional certification exams ____ a high level of dedication and study.",
   "options": {
-    "A": "requires",
-    "B": "require",
+    "A": "require",
+    "B": "requires",
     "C": "requiring",
     "D": "have required"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'Success' (số ít), động từ chia 'requires'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49441,12 +49540,12 @@ export const grammarQuestions = [
   "id": "q1970",
   "question": "The benefits package for full-time employees ____ health insurance and retirement plans.",
   "options": {
-    "A": "include",
-    "B": "includes",
-    "C": "including",
-    "D": "has included"
+    "A": "includes",
+    "B": "including",
+    "C": "has included",
+    "D": "include"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The benefits package' (số ít), động từ chia 'includes'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49463,10 +49562,10 @@ export const grammarQuestions = [
   "id": "q1971",
   "question": "Taxes on the imported luxury goods ____ calculated at the point of sale.",
   "options": {
-    "A": "is",
-    "B": "was",
+    "A": "has been",
+    "B": "is",
     "C": "are",
-    "D": "has been"
+    "D": "was"
   },
   "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
@@ -49485,12 +49584,12 @@ export const grammarQuestions = [
   "id": "q1972",
   "question": "A representative from the local branch offices ____ attending the national conference today.",
   "options": {
-    "A": "is",
-    "B": "are",
+    "A": "are",
+    "B": "is",
     "C": "were",
     "D": "have been"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'A representative' (số ít), động từ chia 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49507,12 +49606,12 @@ export const grammarQuestions = [
   "id": "q1973",
   "question": "The reliability of these new laptops ____ proved to be better than the previous model.",
   "options": {
-    "A": "have",
-    "B": "has",
-    "C": "is",
-    "D": "are"
+    "A": "is",
+    "B": "are",
+    "C": "has",
+    "D": "have"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The reliability' (số ít), động từ chia 'has'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49529,12 +49628,12 @@ export const grammarQuestions = [
   "id": "q1974",
   "question": "The amenities at the GreenLeaf Resort ____ a private spa and a heated swimming pool.",
   "options": {
-    "A": "include",
+    "A": "has included",
     "B": "includes",
     "C": "including",
-    "D": "has included"
+    "D": "include"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The amenities' (số nhiều), động từ chia 'include'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49573,12 +49672,12 @@ export const grammarQuestions = [
   "id": "q1976",
   "question": "The total amount of the unpaid invoices ____ exceeded ten thousand dollars.",
   "options": {
-    "A": "have",
-    "B": "has",
-    "C": "is",
-    "D": "are"
+    "A": "has",
+    "B": "is",
+    "C": "are",
+    "D": "have"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Cấu trúc 'The total amount of + N số nhiều' chia theo 'The total amount' (số ít), dùng 'has'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49595,12 +49694,12 @@ export const grammarQuestions = [
   "id": "q1977",
   "question": "The photos for the new product catalog ____ taken by a professional photographer.",
   "options": {
-    "A": "is",
-    "B": "was",
-    "C": "were",
-    "D": "has been"
+    "A": "has been",
+    "B": "is",
+    "C": "was",
+    "D": "were"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The photos' (số nhiều), động từ chia 'were'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49617,12 +49716,12 @@ export const grammarQuestions = [
   "id": "q1978",
   "question": "Appointment times for the dental clinic ____ confirmed via text message two days in advance.",
   "options": {
-    "A": "is",
-    "B": "was",
-    "C": "are",
+    "A": "are",
+    "B": "is",
+    "C": "was",
     "D": "has been"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'Appointment times' (số nhiều), động từ chia 'are'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49639,12 +49738,12 @@ export const grammarQuestions = [
   "id": "q1979",
   "question": "Findings from the latest consumer behavior study ____ presented at the marketing summit.",
   "options": {
-    "A": "was",
-    "B": "is",
-    "C": "were",
-    "D": "has been"
+    "A": "is",
+    "B": "has been",
+    "C": "was",
+    "D": "were"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Danh từ 'Findings' (các kết quả tìm thấy) là số nhiều, động từ chia 'were'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49662,9 +49761,9 @@ export const grammarQuestions = [
   "question": "The threat of cyberattacks on our network ____ a significant concern for the IT department.",
   "options": {
     "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "being"
+    "B": "being",
+    "C": "are",
+    "D": "were"
   },
   "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
@@ -49684,12 +49783,12 @@ export const grammarQuestions = [
   "id": "q1981",
   "question": "The interest on these savings accounts ____ calculated on a monthly basis.",
   "options": {
-    "A": "is",
-    "B": "are",
-    "C": "were",
+    "A": "are",
+    "B": "were",
+    "C": "is",
     "D": "being"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The interest' (không đếm được/số ít), động từ chia 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49706,10 +49805,10 @@ export const grammarQuestions = [
   "id": "q1982",
   "question": "Detailed records of every financial transaction ____ maintained by the accounting department.",
   "options": {
-    "A": "is",
+    "A": "was",
     "B": "are",
-    "C": "was",
-    "D": "has been"
+    "C": "has been",
+    "D": "is"
   },
   "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
@@ -49728,12 +49827,12 @@ export const grammarQuestions = [
   "id": "q1983",
   "question": "The transition to the new digital payroll system ____ expected to take three months.",
   "options": {
-    "A": "is",
+    "A": "being",
     "B": "are",
     "C": "were",
-    "D": "being"
+    "D": "is"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The transition' (số ít), động từ chia 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49772,12 +49871,12 @@ export const grammarQuestions = [
   "id": "q1985",
   "question": "Changes to the current legal framework ____ discussed during the international conference.",
   "options": {
-    "A": "was",
-    "B": "is",
-    "C": "were",
-    "D": "has been"
+    "A": "is",
+    "B": "has been",
+    "C": "was",
+    "D": "were"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'Changes' (số nhiều), động từ chia 'were'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49795,9 +49894,9 @@ export const grammarQuestions = [
   "question": "The collection of data for the market research project ____ completed yesterday.",
   "options": {
     "A": "was",
-    "B": "were",
-    "C": "are",
-    "D": "being"
+    "B": "being",
+    "C": "were",
+    "D": "are"
   },
   "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
@@ -49839,9 +49938,9 @@ export const grammarQuestions = [
   "question": "The safety of our employees in the construction zones ____ our top priority.",
   "options": {
     "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "being"
+    "B": "were",
+    "C": "being",
+    "D": "are"
   },
   "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
@@ -49860,12 +49959,12 @@ export const grammarQuestions = [
   "id": "q1989",
   "question": "Each of the participants in the medical study ____ required to sign a consent form.",
   "options": {
-    "A": "is",
+    "A": "have been",
     "B": "are",
-    "C": "were",
-    "D": "have been"
+    "C": "is",
+    "D": "were"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Cấu trúc 'Each of + N số nhiều' động từ chia số ít, dùng 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49904,12 +50003,12 @@ export const grammarQuestions = [
   "id": "q1991",
   "question": "New features for the company’s mobile app ____ released every two weeks.",
   "options": {
-    "A": "is",
-    "B": "are",
-    "C": "was",
-    "D": "has been"
+    "A": "are",
+    "B": "was",
+    "C": "has been",
+    "D": "is"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'New features' (số nhiều), động từ chia 'are'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49926,12 +50025,12 @@ export const grammarQuestions = [
   "id": "q1992",
   "question": "The use of corporate credit cards for personal expenses ____ strictly prohibited.",
   "options": {
-    "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "being"
+    "A": "being",
+    "B": "is",
+    "C": "are",
+    "D": "were"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The use' (số ít), động từ chia 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49948,12 +50047,12 @@ export const grammarQuestions = [
   "id": "q1993",
   "question": "Feedback from the recent teacher training workshops ____ been very positive.",
   "options": {
-    "A": "have",
-    "B": "has",
+    "A": "has",
+    "B": "have",
     "C": "is",
     "D": "are"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'Feedback' (không đếm được/số ít), động từ chia 'has'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49970,12 +50069,12 @@ export const grammarQuestions = [
   "id": "q1994",
   "question": "The primary goal of these new marketing initiatives ____ to increase brand awareness.",
   "options": {
-    "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "being"
+    "A": "were",
+    "B": "being",
+    "C": "are",
+    "D": "is"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The primary goal' (số ít), động từ chia 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -49992,10 +50091,10 @@ export const grammarQuestions = [
   "id": "q1995",
   "question": "The windows in the main auditorium ____ cleaned early this morning.",
   "options": {
-    "A": "was",
-    "B": "is",
+    "A": "has been",
+    "B": "was",
     "C": "were",
-    "D": "has been"
+    "D": "is"
   },
   "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
@@ -50014,12 +50113,12 @@ export const grammarQuestions = [
   "id": "q1996",
   "question": "A new series of professional development seminars ____ scheduled for the fall semester.",
   "options": {
-    "A": "is",
-    "B": "are",
+    "A": "are",
+    "B": "is",
     "C": "were",
     "D": "being"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'A new series' (số ít), động từ chia 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50037,9 +50136,9 @@ export const grammarQuestions = [
   "question": "The total cost of the insurance premiums ____ covered by the employer.",
   "options": {
     "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "being"
+    "B": "were",
+    "C": "being",
+    "D": "are"
   },
   "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
@@ -50058,12 +50157,12 @@ export const grammarQuestions = [
   "id": "q1998",
   "question": "Statistics regarding the local unemployment rate ____ published by the government today.",
   "options": {
-    "A": "is",
-    "B": "was",
-    "C": "are",
-    "D": "has been"
+    "A": "has been",
+    "B": "is",
+    "C": "was",
+    "D": "are"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Danh từ 'Statistics' khi mang nghĩa 'số liệu thống kê' là số nhiều, động từ chia 'are'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50080,12 +50179,12 @@ export const grammarQuestions = [
   "id": "q1999",
   "question": "The renovation of the hospital's emergency room ____ completed ahead of schedule.",
   "options": {
-    "A": "was",
-    "B": "were",
-    "C": "are",
+    "A": "were",
+    "B": "are",
+    "C": "was",
     "D": "being"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The renovation' (số ít), động từ chia 'was'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50102,12 +50201,12 @@ export const grammarQuestions = [
   "id": "q2000",
   "question": "Candidates with a background in data science ____ highly sought after in today's job market.",
   "options": {
-    "A": "is",
-    "B": "was",
-    "C": "are",
-    "D": "has been"
+    "A": "was",
+    "B": "has been",
+    "C": "is",
+    "D": "are"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'Candidates' (số nhiều), động từ chia 'are'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50124,12 +50223,12 @@ export const grammarQuestions = [
   "id": "q2001",
   "question": "The expansion of the software development team ____ announced at the meeting.",
   "options": {
-    "A": "was",
+    "A": "being",
     "B": "were",
-    "C": "are",
-    "D": "being"
+    "C": "was",
+    "D": "are"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The expansion' (số ít), động từ chia 'was'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50148,10 +50247,10 @@ export const grammarQuestions = [
   "options": {
     "A": "show",
     "B": "showing",
-    "C": "shows",
-    "D": "has shown"
+    "C": "has shown",
+    "D": "shows"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Dù là 'Results' (số nhiều) nhưng ở đây câu gốc dùng 'shows' (có thể coi là 'The fact that...' hoặc lỗi đề bài, nhưng mình sẽ gán 'shows' theo đáp án user chọn). Thực tế 'Results' đi với 'show' là chuẩn nhất, nhưng user chọn ==shows nên mình theo.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50168,10 +50267,10 @@ export const grammarQuestions = [
   "id": "q2003",
   "question": "The terms and conditions of the lease agreement ____ explained by the real estate agent.",
   "options": {
-    "A": "was",
-    "B": "is",
+    "A": "is",
+    "B": "has been",
     "C": "were",
-    "D": "has been"
+    "D": "was"
   },
   "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
@@ -50190,12 +50289,12 @@ export const grammarQuestions = [
   "id": "q2004",
   "question": "Access to the building after working hours ____ a valid security badge.",
   "options": {
-    "A": "require",
-    "B": "requires",
-    "C": "requiring",
-    "D": "have required"
+    "A": "requires",
+    "B": "have required",
+    "C": "require",
+    "D": "requiring"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'Access' (số ít), động từ chia 'requires'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50212,12 +50311,12 @@ export const grammarQuestions = [
   "id": "q2005",
   "question": "The quality of the water in the municipal system ____ tested every twenty-four hours.",
   "options": {
-    "A": "is",
-    "B": "are",
+    "A": "are",
+    "B": "is",
     "C": "were",
     "D": "being"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The quality' (số ít), động từ chia 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50235,12 +50334,12 @@ export const grammarQuestions = [
   "id": "q2006",
   "question": "The schedule for the upcoming leadership training sessions ____ still being finalized.",
   "options": {
-    "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "being"
+    "A": "were",
+    "B": "being",
+    "C": "are",
+    "D": "is"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The schedule' (số ít), động từ chia 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50257,10 +50356,10 @@ export const grammarQuestions = [
   "id": "q2007",
   "question": "Applications from qualified candidates for the marketing role ____ being processed.",
   "options": {
-    "A": "is",
+    "A": "has been",
     "B": "are",
-    "C": "was",
-    "D": "has been"
+    "C": "is",
+    "D": "was"
   },
   "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
@@ -50301,12 +50400,12 @@ export const grammarQuestions = [
   "id": "q2009",
   "question": "Urgent repairs to the leaking roof in the main warehouse ____ completed last night.",
   "options": {
-    "A": "was",
-    "B": "is",
-    "C": "were",
-    "D": "has been"
+    "A": "is",
+    "B": "has been",
+    "C": "was",
+    "D": "were"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'Urgent repairs' (số nhiều), động từ chia 'were'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50323,12 +50422,12 @@ export const grammarQuestions = [
   "id": "q2010",
   "question": "The risk of data breaches in our cloud systems ____ minimized through advanced encryption.",
   "options": {
-    "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "being"
+    "A": "being",
+    "B": "is",
+    "C": "are",
+    "D": "were"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The risk' (số ít), động từ chia 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50346,11 +50445,11 @@ export const grammarQuestions = [
   "question": "Positive reviews from our most recent book launch ____ boosted our sales significantly.",
   "options": {
     "A": "has",
-    "B": "have",
-    "C": "is",
-    "D": "are"
+    "B": "is",
+    "C": "are",
+    "D": "have"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'Positive reviews' (số nhiều), động từ chia 'have'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50367,12 +50466,12 @@ export const grammarQuestions = [
   "id": "q2012",
   "question": "The impact of the recent policy changes ____ expected to be seen by the end of the year.",
   "options": {
-    "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "being"
+    "A": "were",
+    "B": "is",
+    "C": "being",
+    "D": "are"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The impact' (số ít), động từ chia 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50389,12 +50488,12 @@ export const grammarQuestions = [
   "id": "q2013",
   "question": "Profits from the sale of the new eco-friendly products ____ allocated to environmental research.",
   "options": {
-    "A": "is",
-    "B": "was",
-    "C": "are",
-    "D": "has been"
+    "A": "are",
+    "B": "has been",
+    "C": "is",
+    "D": "was"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'Profits' (số nhiều), động từ chia 'are'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50411,12 +50510,12 @@ export const grammarQuestions = [
   "id": "q2014",
   "question": "The committee of expert judges ____ currently evaluating the final design entries.",
   "options": {
-    "A": "is",
-    "B": "are",
+    "A": "are",
+    "B": "is",
     "C": "were",
     "D": "being"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The committee' (danh từ tập hợp, ở đây nhấn mạnh vào một đơn vị), động từ chia 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50433,10 +50532,10 @@ export const grammarQuestions = [
   "id": "q2015",
   "question": "Samples of the contaminated water from the local river ____ sent to the laboratory for testing.",
   "options": {
-    "A": "was",
-    "B": "is",
+    "A": "is",
+    "B": "has been",
     "C": "were",
-    "D": "has been"
+    "D": "was"
   },
   "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
@@ -50455,12 +50554,12 @@ export const grammarQuestions = [
   "id": "q2016",
   "question": "The cost of raw materials for our furniture line ____ increased due to inflation.",
   "options": {
-    "A": "have",
-    "B": "has",
-    "C": "is",
-    "D": "are"
+    "A": "has",
+    "B": "are",
+    "C": "have",
+    "D": "is"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The cost' (số ít), động từ chia 'has'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50499,12 +50598,12 @@ export const grammarQuestions = [
   "id": "q2018",
   "question": "The frequency of the department meetings ____ been reduced from weekly to bi-weekly.",
   "options": {
-    "A": "have",
-    "B": "has",
-    "C": "is",
-    "D": "are"
+    "A": "has",
+    "B": "is",
+    "C": "are",
+    "D": "have"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The frequency' (số ít), động từ chia 'has'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50521,10 +50620,10 @@ export const grammarQuestions = [
   "id": "q2019",
   "question": "Candidates for the temporary receptionist position ____ required to have at least two years of experience.",
   "options": {
-    "A": "is",
-    "B": "was",
+    "A": "has been",
+    "B": "is",
     "C": "are",
-    "D": "has been"
+    "D": "was"
   },
   "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
@@ -50543,12 +50642,12 @@ export const grammarQuestions = [
   "id": "q2020",
   "question": "The quality of the customer services at our downtown branch ____ praised by many clients.",
   "options": {
-    "A": "was",
-    "B": "were",
-    "C": "are",
-    "D": "being"
+    "A": "were",
+    "B": "are",
+    "C": "being",
+    "D": "was"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The quality' (số ít), động từ chia 'was'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50565,12 +50664,12 @@ export const grammarQuestions = [
   "id": "q2021",
   "question": "Subscriptions to the monthly business magazine ____ doubled over the past six months.",
   "options": {
-    "A": "has",
-    "B": "have",
-    "C": "is",
-    "D": "are"
+    "A": "have",
+    "B": "is",
+    "C": "are",
+    "D": "has"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'Subscriptions' (số nhiều), động từ chia 'have'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50587,12 +50686,12 @@ export const grammarQuestions = [
   "id": "q2022",
   "question": "The deadline for all project proposals ____ set for Friday at 5:00 PM.",
   "options": {
-    "A": "is",
+    "A": "being",
     "B": "are",
-    "C": "were",
-    "D": "being"
+    "C": "is",
+    "D": "were"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The deadline' (số ít), động từ chia 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50611,10 +50710,10 @@ export const grammarQuestions = [
   "options": {
     "A": "is",
     "B": "was",
-    "C": "are",
-    "D": "has been"
+    "C": "has been",
+    "D": "are"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'Expenses' (số nhiều), động từ chia 'are'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50631,12 +50730,12 @@ export const grammarQuestions = [
   "id": "q2024",
   "question": "The number of registered participants for the workshop ____ reached the maximum limit.",
   "options": {
-    "A": "have",
-    "B": "has",
-    "C": "is",
-    "D": "are"
+    "A": "has",
+    "B": "is",
+    "C": "are",
+    "D": "have"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Cấu trúc 'The number of + N số nhiều' động từ chia số ít, dùng 'has'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50653,10 +50752,10 @@ export const grammarQuestions = [
   "id": "q2025",
   "question": "Annual inspections of the manufacturing facility ____ conducted by a third-party agency.",
   "options": {
-    "A": "is",
-    "B": "was",
+    "A": "has been",
+    "B": "is",
     "C": "are",
-    "D": "has been"
+    "D": "was"
   },
   "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
@@ -50675,12 +50774,12 @@ export const grammarQuestions = [
   "id": "q2026",
   "question": "The scent of fresh flowers in the hotel lobby ____ a welcoming atmosphere for guests.",
   "options": {
-    "A": "creates",
-    "B": "create",
+    "A": "create",
+    "B": "creates",
     "C": "creating",
     "D": "have created"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The scent' (số ít), động từ chia 'creates'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50697,10 +50796,10 @@ export const grammarQuestions = [
   "id": "q2027",
   "question": "Emergency procedures for a power failure ____ clearly outlined in the employee safety manual.",
   "options": {
-    "A": "is",
-    "B": "was",
+    "A": "was",
+    "B": "has been",
     "C": "are",
-    "D": "has been"
+    "D": "is"
   },
   "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
@@ -50719,12 +50818,12 @@ export const grammarQuestions = [
   "id": "q2028",
   "question": "The maintenance of the office elevators ____ scheduled for the first weekend of every month.",
   "options": {
-    "A": "is",
+    "A": "being",
     "B": "are",
     "C": "were",
-    "D": "being"
+    "D": "is"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The maintenance' (số ít), động từ chia 'is'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50763,12 +50862,12 @@ export const grammarQuestions = [
   "id": "q2030",
   "question": "The efficiency of the new production processes ____ improved our overall output.",
   "options": {
-    "A": "have",
-    "B": "has",
-    "C": "is",
-    "D": "are"
+    "A": "has",
+    "B": "is",
+    "C": "are",
+    "D": "have"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ là 'The efficiency' (số ít), động từ chia 'has'.",
   "explanation_grammar": "Hòa hợp S-V",
@@ -50785,12 +50884,12 @@ export const grammarQuestions = [
   "id": "q2031",
   "question": "The renovation of the local community centers ____ funded by a government grant.",
   "options": {
-    "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "being"
+    "A": "being",
+    "B": "is",
+    "C": "are",
+    "D": "were"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ chính là 'The renovation' (số ít), nên động từ to be chia ở số ít là 'is'.",
   "explanation_grammar": "Sự hòa hợp chủ vị (Subject-Verb Agreement)",
@@ -50814,10 +50913,10 @@ export const grammarQuestions = [
   "options": {
     "A": "indicate",
     "B": "indicating",
-    "C": "indicates",
-    "D": "have indicated"
+    "C": "have indicated",
+    "D": "indicates"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ chính là 'Feedback' (danh từ không đếm được, số ít), nên động từ chia ở số ít là 'indicates'.",
   "explanation_grammar": "Sự hòa hợp chủ vị (Subject-Verb Agreement)",
@@ -50839,12 +50938,12 @@ export const grammarQuestions = [
   "id": "q2033",
   "question": "The list of requirements for the business loan ____ available on the bank's website.",
   "options": {
-    "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "being"
+    "A": "were",
+    "B": "is",
+    "C": "being",
+    "D": "are"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ chính là 'The list' (số ít), nên động từ to be chia ở số ít là 'is'.",
   "explanation_grammar": "Sự hòa hợp chủ vị (Subject-Verb Agreement)",
@@ -50866,12 +50965,12 @@ export const grammarQuestions = [
   "id": "q2034",
   "question": "Prices of the new medical devices ____ expected to drop by the end of the fiscal year.",
   "options": {
-    "A": "is",
-    "B": "was",
-    "C": "are",
-    "D": "has been"
+    "A": "are",
+    "B": "has been",
+    "C": "is",
+    "D": "was"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ chính là 'Prices' (số nhiều), nên động từ to be chia ở số nhiều là 'are'.",
   "explanation_grammar": "Sự hòa hợp chủ vị (Subject-Verb Agreement)",
@@ -50893,12 +50992,12 @@ export const grammarQuestions = [
   "id": "q2035",
   "question": "The design for the high-rise apartments ____ inspired by modern European architecture.",
   "options": {
-    "A": "was",
-    "B": "were",
-    "C": "are",
-    "D": "being"
+    "A": "were",
+    "B": "are",
+    "C": "being",
+    "D": "was"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ chính là 'The design' (số ít). Câu ở thể bị động 'was inspired' (được lấy cảm hứng).",
   "explanation_grammar": "Sự hòa hợp chủ vị (Subject-Verb Agreement)",
@@ -50920,12 +51019,12 @@ export const grammarQuestions = [
   "id": "q2036",
   "question": "Members of the research committee ____ meeting today to discuss the project’s progress.",
   "options": {
-    "A": "is",
-    "B": "was",
-    "C": "are",
-    "D": "has been"
+    "A": "was",
+    "B": "are",
+    "C": "has been",
+    "D": "is"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ chính là 'Members' (số nhiều), nên động từ to be chia ở số nhiều là 'are' (thì hiện tại tiếp diễn 'are meeting').",
   "explanation_grammar": "Sự hòa hợp chủ vị (Subject-Verb Agreement)",
@@ -50942,12 +51041,12 @@ export const grammarQuestions = [
   "id": "q2037",
   "question": "The quality of the interior decorations ____ essential for the hotel’s luxury branding.",
   "options": {
-    "A": "is",
+    "A": "being",
     "B": "are",
     "C": "were",
-    "D": "being"
+    "D": "is"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ chính là 'The quality' (số ít), nên động từ to be chia ở số ít là 'is'.",
   "explanation_grammar": "Sự hòa hợp chủ vị (Subject-Verb Agreement)",
@@ -50970,11 +51069,11 @@ export const grammarQuestions = [
   "question": "Results from the market survey ____ that consumers prefer eco-friendly packaging.",
   "options": {
     "A": "suggests",
-    "B": "suggesting",
-    "C": "suggest",
+    "B": "suggest",
+    "C": "suggesting",
     "D": "has suggested"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ chính là 'Results' (số nhiều), nên động từ chia ở số nhiều là 'suggest'.",
   "explanation_grammar": "Sự hòa hợp chủ vị (Subject-Verb Agreement)",
@@ -50996,12 +51095,12 @@ export const grammarQuestions = [
   "id": "q2039",
   "question": "Each of the laboratory assistants ____ responsible for maintaining the equipment.",
   "options": {
-    "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "have been"
+    "A": "were",
+    "B": "have been",
+    "C": "is",
+    "D": "are"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Đại từ 'Each' (mỗi người) luôn đóng vai trò là chủ ngữ số ít, nên động từ to be chia ở số ít là 'is'.",
   "explanation_grammar": "Sự hòa hợp chủ vị (Subject-Verb Agreement)",
@@ -51024,9 +51123,9 @@ export const grammarQuestions = [
   "question": "The purpose of the new security protocols ____ to prevent unauthorized data access.",
   "options": {
     "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "being"
+    "B": "being",
+    "C": "are",
+    "D": "were"
   },
   "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
@@ -51051,11 +51150,11 @@ export const grammarQuestions = [
   "question": "Updates to the client database ____ performed every night at 2:00 AM.",
   "options": {
     "A": "is",
-    "B": "are",
-    "C": "was",
+    "B": "was",
+    "C": "are",
     "D": "has been"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ chính là 'Updates' (số nhiều), nên động từ to be chia ở số nhiều là 'are'.",
   "explanation_grammar": "Sự hòa hợp chủ vị (Subject-Verb Agreement)",
@@ -51078,9 +51177,9 @@ export const grammarQuestions = [
   "question": "The cost of living in the corporate housing ____ covered by the relocation package.",
   "options": {
     "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "being"
+    "B": "were",
+    "C": "being",
+    "D": "are"
   },
   "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
@@ -51104,12 +51203,12 @@ export const grammarQuestions = [
   "id": "q2043",
   "question": "Applications for the annual scholarship ____ being accepted until next Monday.",
   "options": {
-    "A": "is",
-    "B": "are",
-    "C": "was",
-    "D": "has been"
+    "A": "has been",
+    "B": "is",
+    "C": "are",
+    "D": "was"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ chính là 'Applications' (số nhiều), nên động từ to be chia ở số nhiều là 'are' (thì hiện tại tiếp diễn bị động).",
   "explanation_grammar": "Sự hòa hợp chủ vị (Subject-Verb Agreement)",
@@ -51153,12 +51252,12 @@ export const grammarQuestions = [
   "id": "q2045",
   "question": "Responses to the customer satisfaction poll ____ been overwhelmingly positive.",
   "options": {
-    "A": "has",
-    "B": "have",
-    "C": "is",
-    "D": "are"
+    "A": "is",
+    "B": "are",
+    "C": "has",
+    "D": "have"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ chính là 'Responses' (số nhiều), nên trợ động từ chia ở số nhiều là 'have' (thì hiện tại hoàn thành).",
   "explanation_grammar": "Sự hòa hợp chủ vị (Subject-Verb Agreement)",
@@ -51181,9 +51280,9 @@ export const grammarQuestions = [
   "question": "The development of new educational tools ____ a priority for the school board.",
   "options": {
     "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "being"
+    "B": "being",
+    "C": "are",
+    "D": "were"
   },
   "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
@@ -51207,12 +51306,12 @@ export const grammarQuestions = [
   "id": "q2047",
   "question": "A summary of the audit findings ____ presented to the board of directors.",
   "options": {
-    "A": "was",
-    "B": "were",
-    "C": "are",
+    "A": "were",
+    "B": "are",
+    "C": "was",
     "D": "being"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ chính là 'A summary' (số ít). Câu diễn tả sự việc đã xảy ra nên dùng quá khứ 'was'.",
   "explanation_grammar": "Sự hòa hợp chủ vị (Subject-Verb Agreement)",
@@ -51234,10 +51333,10 @@ export const grammarQuestions = [
   "id": "q2048",
   "question": "The frequency of the technical glitches ____ decreased after the system reboot.",
   "options": {
-    "A": "have",
+    "A": "is",
     "B": "has",
-    "C": "is",
-    "D": "are"
+    "C": "are",
+    "D": "have"
   },
   "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
@@ -51261,12 +51360,12 @@ export const grammarQuestions = [
   "id": "q2049",
   "question": "Candidates for the regional manager position ____ invited to a second round of interviews.",
   "options": {
-    "A": "is",
-    "B": "was",
-    "C": "are",
-    "D": "has been"
+    "A": "has been",
+    "B": "is",
+    "C": "was",
+    "D": "are"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ chính là 'Candidates' (số nhiều), nên động từ to be chia ở số nhiều là 'are'.",
   "explanation_grammar": "Sự hòa hợp chủ vị (Subject-Verb Agreement)",
@@ -51288,12 +51387,12 @@ export const grammarQuestions = [
   "id": "q2050",
   "question": "The installation of the smart lighting systems ____ completed across all floors.",
   "options": {
-    "A": "has been",
-    "B": "have been",
+    "A": "have been",
+    "B": "has been",
     "C": "are being",
     "D": "were"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ chính là 'The installation' (số ít), nên cấu trúc hiện tại hoàn thành bị động là 'has been'.",
   "explanation_grammar": "Sự hòa hợp chủ vị (Subject-Verb Agreement)",
@@ -51310,10 +51409,10 @@ export const grammarQuestions = [
   "id": "q2051",
   "question": "Detailed plans for the office expansion ____ finalized by the architects last week.",
   "options": {
-    "A": "was",
-    "B": "is",
+    "A": "is",
+    "B": "has been",
     "C": "were",
-    "D": "has been"
+    "D": "was"
   },
   "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
@@ -51333,9 +51432,9 @@ export const grammarQuestions = [
   "question": "The durability of the new office chairs ____ tested in our quality control lab.",
   "options": {
     "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "being"
+    "B": "being",
+    "C": "are",
+    "D": "were"
   },
   "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
@@ -51361,10 +51460,10 @@ export const grammarQuestions = [
   "options": {
     "A": "was",
     "B": "is",
-    "C": "were",
-    "D": "has been"
+    "C": "has been",
+    "D": "were"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ chính là 'Comments' (số nhiều). Việc này đã diễn ra nên dùng quá khứ 'were'.",
   "explanation_grammar": "Sự hòa hợp chủ vị (Subject-Verb Agreement)",
@@ -51387,9 +51486,9 @@ export const grammarQuestions = [
   "question": "The introduction of the new tax laws ____ affecting small businesses in the area.",
   "options": {
     "A": "is",
-    "B": "are",
-    "C": "were",
-    "D": "being"
+    "B": "were",
+    "C": "being",
+    "D": "are"
   },
   "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
@@ -51413,12 +51512,12 @@ export const grammarQuestions = [
   "id": "q2055",
   "question": "Availability of the weekend shifts ____ limited due to the high number of volunteers.",
   "options": {
-    "A": "is",
+    "A": "being",
     "B": "are",
-    "C": "were",
-    "D": "being"
+    "C": "is",
+    "D": "were"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Hoà hợp S-V",
   "explanation_reason": "Chủ ngữ chính là 'Availability' (số ít, không đếm được), nên động từ to be chia ở số ít là 'is'.",
   "explanation_grammar": "Sự hòa hợp chủ vị (Subject-Verb Agreement)",
@@ -52113,11 +52212,11 @@ export const grammarQuestions = [
     "question": "The Grand Hotel requires a minimum of 24 hours' ______ for any room cancellations.",
     "options": {
       "A": "notify",
-      "B": "notice",
-      "C": "noticeable",
+      "B": "noticeable",
+      "C": "notice",
       "D": "noticeably"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau sở hữu cách '24 hours'' cần một danh từ. 'notice' (sự thông báo) là danh từ phù hợp nhất.",
     "explanation_grammar": "Danh từ",
@@ -52139,12 +52238,12 @@ export const grammarQuestions = [
     "id": "q_test10_02",
     "question": "Dr. Miller asked the nurses to update ______ patient records by the end of the shift.",
     "options": {
-      "A": "they",
+      "A": "their",
       "B": "them",
-      "C": "their",
-      "D": "themselves"
+      "C": "themselves",
+      "D": "they"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước cụm danh từ 'patient records' cần một tính từ sở hữu. 'their' dùng để chỉ sự sở hữu của 'the nurses'.",
     "explanation_grammar": "Đại từ sở hữu",
@@ -52166,12 +52265,12 @@ export const grammarQuestions = [
     "id": "q_test10_03",
     "question": "Professor Higgins will give a brief ______ of the syllabus during the first history lecture.",
     "options": {
-      "A": "summarize",
-      "B": "summary",
+      "A": "summarily",
+      "B": "summarize",
       "C": "summarized",
-      "D": "summarily"
+      "D": "summary"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'a' và tính từ 'brief' cần một danh từ để làm tân ngữ. 'summary' (bản tóm tắt) là danh từ.",
     "explanation_grammar": "Danh từ",
@@ -52220,12 +52319,12 @@ export const grammarQuestions = [
     "id": "q_test10_05",
     "question": "The director of Starburst Studios expressed her ______ for the crew's hard work on the film.",
     "options": {
-      "A": "appreciate",
-      "B": "appreciative",
-      "C": "appreciation",
-      "D": "appreciatively"
+      "A": "appreciative",
+      "B": "appreciatively",
+      "C": "appreciate",
+      "D": "appreciation"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau tính từ sở hữu 'her' cần một danh từ làm tân ngữ cho động từ 'expressed'.",
     "explanation_grammar": "Danh từ",
@@ -52247,12 +52346,12 @@ export const grammarQuestions = [
     "id": "q_test10_06",
     "question": "While Mr. Chen is on vacation, all urgent financial inquiries will be forwarded to ______ assistant.",
     "options": {
-      "A": "he",
-      "B": "his",
-      "C": "him",
-      "D": "himself"
+      "A": "his",
+      "B": "himself",
+      "C": "he",
+      "D": "him"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước danh từ 'assistant' cần tính từ sở hữu chỉ sự sở hữu của 'Mr. Chen'.",
     "explanation_grammar": "Đại từ sở hữu",
@@ -52275,11 +52374,11 @@ export const grammarQuestions = [
     "question": "TechCore Inc. has reported a significant ______ in software subscriptions this quarter.",
     "options": {
       "A": "grow",
-      "B": "growth",
-      "C": "grew",
+      "B": "grew",
+      "C": "growth",
       "D": "growing"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'a' và tính từ 'significant' cần một danh từ. 'growth' (sự tăng trưởng) là đáp án đúng.",
     "explanation_grammar": "Danh từ",
@@ -52301,12 +52400,12 @@ export const grammarQuestions = [
     "id": "q_test10_08",
     "question": "To ensure ______ spot in the photography workshop, please register online before Friday.",
     "options": {
-      "A": "you",
-      "B": "yours",
-      "C": "your",
-      "D": "yourself"
+      "A": "yours",
+      "B": "your",
+      "C": "yourself",
+      "D": "you"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước danh từ 'spot' cần một tính từ sở hữu. 'your' là tính từ sở hữu tương ứng.",
     "explanation_grammar": "Đại từ sở hữu",
@@ -52328,12 +52427,12 @@ export const grammarQuestions = [
     "id": "q_test10_09",
     "question": "The Chief of Surgery at Mercy Hospital oversees the ______ of all new medical interns.",
     "options": {
-      "A": "supervise",
-      "B": "supervisory",
-      "C": "supervision",
-      "D": "supervised"
+      "A": "supervision",
+      "B": "supervised",
+      "C": "supervise",
+      "D": "supervisory"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'the' và trước giới từ 'of' cần một danh từ.",
     "explanation_grammar": "Danh từ",
@@ -52382,12 +52481,12 @@ export const grammarQuestions = [
     "id": "q_test10_11",
     "question": "Analysts predict that the new tax policy will bring significant ______ to small retail businesses.",
     "options": {
-      "A": "beneficial",
-      "B": "benefits",
-      "C": "benefited",
-      "D": "beneficially"
+      "A": "benefits",
+      "B": "benefited",
+      "C": "beneficially",
+      "D": "beneficial"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau động từ 'bring' và tính từ 'significant' cần một danh từ làm tân ngữ. 'benefits' (những lợi ích) là danh từ.",
     "explanation_grammar": "Danh từ",
@@ -52409,12 +52508,12 @@ export const grammarQuestions = [
     "id": "q_test10_12",
     "question": "Welcome to Seaside Resort; we hope you enjoy ______ stay with us this weekend.",
     "options": {
-      "A": "you",
-      "B": "your",
-      "C": "yours",
-      "D": "yourself"
+      "A": "yourself",
+      "B": "you",
+      "C": "your",
+      "D": "yours"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước danh từ 'stay' (kỳ nghỉ/sự lưu trú) cần một tính từ sở hữu.",
     "explanation_grammar": "Đại từ sở hữu",
@@ -52433,10 +52532,10 @@ export const grammarQuestions = [
     "options": {
       "A": "absent",
       "B": "absently",
-      "C": "absence",
-      "D": "absentee"
+      "C": "absentee",
+      "D": "absence"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'The' và tính từ 'sudden' cần một danh từ. 'absence' (sự vắng mặt) phù hợp với ngữ cảnh.",
     "explanation_grammar": "Danh từ",
@@ -52458,12 +52557,12 @@ export const grammarQuestions = [
     "id": "q_test10_14",
     "question": "The marketing team at Zenith Corp is proud of ______ recent successful advertising campaign.",
     "options": {
-      "A": "them",
-      "B": "they",
+      "A": "they",
+      "B": "their",
       "C": "themselves",
-      "D": "their"
+      "D": "them"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước cụm danh từ 'recent successful advertising campaign' cần tính từ sở hữu. Nhóm (team) đóng vai trò là danh từ tập hợp, dùng 'their'.",
     "explanation_grammar": "Đại từ sở hữu",
@@ -52485,12 +52584,12 @@ export const grammarQuestions = [
     "id": "q_test10_15",
     "question": "CyberSafe Solutions offers excellent ______ for clients dealing with complex data breaches.",
     "options": {
-      "A": "guide",
-      "B": "guidance",
-      "C": "guidable",
-      "D": "guiding"
+      "A": "guiding",
+      "B": "guide",
+      "C": "guidance",
+      "D": "guidable"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau tính từ 'excellent' cần một danh từ để làm tân ngữ cho động từ 'offers'.",
     "explanation_grammar": "Danh từ",
@@ -52539,12 +52638,12 @@ export const grammarQuestions = [
     "id": "q_test10_17",
     "question": "Admission to the City Art Museum includes entry to the special ______ of Renaissance paintings.",
     "options": {
-      "A": "exhibit",
-      "B": "exhibition",
-      "C": "exhibited",
-      "D": "exhibitionist"
+      "A": "exhibited",
+      "B": "exhibitionist",
+      "C": "exhibition",
+      "D": "exhibit"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'the' và tính từ 'special' cần một danh từ. 'exhibition' (cuộc triển lãm) là phù hợp nhất.",
     "explanation_grammar": "Danh từ",
@@ -52566,12 +52665,12 @@ export const grammarQuestions = [
     "id": "q_test10_18",
     "question": "Patients at Oakridge Dental Clinic are reminded to schedule ______ next cleaning appointment before leaving.",
     "options": {
-      "A": "they",
-      "B": "them",
-      "C": "their",
-      "D": "themselves"
+      "A": "themselves",
+      "B": "their",
+      "C": "they",
+      "D": "them"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước cụm danh từ 'next cleaning appointment' cần một tính từ sở hữu chỉ sự sở hữu của 'Patients'.",
     "explanation_grammar": "Đại từ sở hữu",
@@ -52594,11 +52693,11 @@ export const grammarQuestions = [
     "question": "The accounting firm, Ledger & Co., is currently conducting a detailed ______ of the company's expenses.",
     "options": {
       "A": "analyze",
-      "B": "analysis",
-      "C": "analyst",
+      "B": "analyst",
+      "C": "analysis",
       "D": "analytical"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'a' và tính từ 'detailed' cần một danh từ chỉ hành động hoặc sự việc. 'analysis' (sự phân tích) là đáp án đúng.",
     "explanation_grammar": "Danh từ",
@@ -52620,10 +52719,10 @@ export const grammarQuestions = [
     "id": "q_test10_20",
     "question": "If you have any questions about the rental lease, please contact ______ property manager immediately.",
     "options": {
-      "A": "you",
+      "A": "yours",
       "B": "your",
-      "C": "yours",
-      "D": "yourself"
+      "C": "yourself",
+      "D": "you"
     },
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
@@ -52647,12 +52746,12 @@ export const grammarQuestions = [
     "id": "q_test10_21",
     "question": "The head chef at Bella Napoli Restaurant makes careful ______ of all fresh ingredients every morning.",
     "options": {
-      "A": "select",
-      "B": "selections",
+      "A": "selectively",
+      "B": "select",
       "C": "selective",
-      "D": "selectively"
+      "D": "selections"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau tính từ 'careful' cần một danh từ để làm tân ngữ cho 'makes'.",
     "explanation_grammar": "Danh từ",
@@ -52675,11 +52774,11 @@ export const grammarQuestions = [
     "question": "Mr. Davies was asked to bring ______ laptop to the IT department for a mandatory software update.",
     "options": {
       "A": "he",
-      "B": "him",
-      "C": "his",
+      "B": "his",
+      "C": "him",
       "D": "himself"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước danh từ 'laptop' cần tính từ sở hữu thay thế cho 'Mr. Davies'.",
     "explanation_grammar": "Đại từ sở hữu",
@@ -52701,12 +52800,12 @@ export const grammarQuestions = [
     "id": "q_test10_23",
     "question": "Tickets for the Symphony Orchestra's opening ______ will go on sale starting next Monday.",
     "options": {
-      "A": "perform",
-      "B": "performance",
-      "C": "performer",
-      "D": "performed"
+      "A": "performer",
+      "B": "performed",
+      "C": "performance",
+      "D": "perform"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau tính từ 'opening' cần một danh từ chỉ sự việc, hành động. 'performance' (buổi biểu diễn) là phù hợp nhất.",
     "explanation_grammar": "Danh từ",
@@ -52728,12 +52827,12 @@ export const grammarQuestions = [
     "id": "q_test10_24",
     "question": "Ms. Rivera encourages all of the students in the chemistry lab to wear ______ safety goggles.",
     "options": {
-      "A": "they",
-      "B": "their",
+      "A": "theirs",
+      "B": "they",
       "C": "them",
-      "D": "theirs"
+      "D": "their"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước cụm danh từ 'safety goggles' cần tính từ sở hữu thay thế cho 'all of the students' (số nhiều).",
     "explanation_grammar": "Đại từ sở hữu",
@@ -52755,12 +52854,12 @@ export const grammarQuestions = [
     "id": "q_test10_25",
     "question": "FutureTech Electronics provides a full two-year ______ on all newly purchased smart home devices.",
     "options": {
-      "A": "warrant",
-      "B": "warranty",
+      "A": "warranty",
+      "B": "warrant",
       "C": "warranted",
       "D": "warranting"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau cụm tính từ 'a full two-year' cần một danh từ. 'warranty' (sự bảo hành) là đáp án đúng.",
     "explanation_grammar": "Danh từ",
@@ -52783,12 +52882,12 @@ export const grammarQuestions = [
     "id": "q_test11_26",
     "question": "The HR director at Summit Solutions requested a formal ______ regarding the new office policy.",
     "options": {
-      "A": "explain",
-      "B": "explanation",
-      "C": "explanatory",
-      "D": "explained"
+      "A": "explanatory",
+      "B": "explained",
+      "C": "explain",
+      "D": "explanation"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'a' và tính từ 'formal' cần một danh từ để làm tân ngữ cho động từ 'requested'. 'explanation' (lời giải thích) là danh từ.",
     "explanation_grammar": "Danh từ",
@@ -52810,12 +52909,12 @@ export const grammarQuestions = [
     "id": "q_test11_27",
     "question": "Ms. Yamaguchi asked the IT department to install the new software on ______ laptop by noon.",
     "options": {
-      "A": "she",
-      "B": "herself",
-      "C": "her",
-      "D": "hers"
+      "A": "hers",
+      "B": "her",
+      "C": "she",
+      "D": "herself"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước danh từ 'laptop' cần tính từ sở hữu. 'her' là tính từ sở hữu chỉ sự sở hữu của 'Ms. Yamaguchi'.",
     "explanation_grammar": "Đại từ sở hữu",
@@ -52837,12 +52936,12 @@ export const grammarQuestions = [
     "id": "q_test11_28",
     "question": "Increased ______ among local bakeries has led to lower prices and better quality for customers.",
     "options": {
-      "A": "compete",
-      "B": "competition",
+      "A": "competition",
+      "B": "compete",
       "C": "competitive",
       "D": "competitively"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Đứng làm chủ ngữ cho động từ 'has led' và đi sau tính từ 'Increased' cần một danh từ. 'competition' (sự cạnh tranh) là đáp án đúng.",
     "explanation_grammar": "Danh từ",
@@ -52864,12 +52963,12 @@ export const grammarQuestions = [
     "id": "q_test11_29",
     "question": "All staff members at Blue Water Aquarium must wear ______ identification badges at all times.",
     "options": {
-      "A": "they",
-      "B": "themselves",
-      "C": "them",
-      "D": "their"
+      "A": "themselves",
+      "B": "them",
+      "C": "their",
+      "D": "they"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước cụm danh từ 'identification badges' (thẻ căn cước/bảng tên) cần tính từ sở hữu. 'their' dùng để thay thế cho 'All staff members' (số nhiều).",
     "explanation_grammar": "Đại từ sở hữu",
@@ -52891,12 +52990,12 @@ export const grammarQuestions = [
     "id": "q_test11_30",
     "question": "The ______ of the new community center in Oak Village is scheduled for early next month.",
     "options": {
-      "A": "construct",
-      "B": "constructed",
-      "C": "construction",
-      "D": "constructive"
+      "A": "constructive",
+      "B": "construct",
+      "C": "constructed",
+      "D": "construction"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'The' và trước giới từ 'of' cần một danh từ. 'construction' (sự xây dựng) là phù hợp nhất.",
     "explanation_grammar": "Danh từ",
@@ -52918,12 +53017,12 @@ export const grammarQuestions = [
     "id": "q_test11_31",
     "question": "Mr. Thompson was asked to present ______ findings to the board of directors at the Friday meeting.",
     "options": {
-      "A": "he",
-      "B": "him",
-      "C": "his",
+      "A": "his",
+      "B": "he",
+      "C": "him",
       "D": "himself"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước danh từ 'findings' cần tính từ sở hữu để thay thế cho 'Mr. Thompson'.",
     "explanation_grammar": "Đại từ sở hữu",
@@ -52945,12 +53044,12 @@ export const grammarQuestions = [
     "id": "q_test11_32",
     "question": "After a long negotiation, the partners at Sterling Law reached an ______ on the merger terms.",
     "options": {
-      "A": "agree",
-      "B": "agreement",
-      "C": "agreeable",
-      "D": "agreed"
+      "A": "agreeable",
+      "B": "agreed",
+      "C": "agree",
+      "D": "agreement"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'an' cần một danh từ. Cụm 'reach an agreement' mang nghĩa là 'đạt được thỏa thuận'.",
     "explanation_grammar": "Danh từ",
@@ -52972,10 +53071,10 @@ export const grammarQuestions = [
     "id": "q_test11_33",
     "question": "Students at the Rivera School of Music are expected to bring ______ own instruments to every class.",
     "options": {
-      "A": "they",
-      "B": "them",
+      "A": "themselves",
+      "B": "they",
       "C": "their",
-      "D": "themselves"
+      "D": "them"
     },
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
@@ -53026,12 +53125,12 @@ export const grammarQuestions = [
     "id": "q_test11_35",
     "question": "Ms. Foster reminded the marketing team to submit ______ expense reports before the end of the week.",
     "options": {
-      "A": "they",
-      "B": "their",
-      "C": "them",
-      "D": "theirs"
+      "A": "them",
+      "B": "theirs",
+      "C": "their",
+      "D": "they"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước cụm danh từ 'expense reports' cần tính từ sở hữu. 'the marketing team' mang nghĩa tập thể nên dùng 'their'.",
     "explanation_grammar": "Đại từ sở hữu",
@@ -53053,12 +53152,12 @@ export const grammarQuestions = [
     "id": "q_test11_36",
     "question": "High-quality ______ is essential for the long-term success of any luxury hotel like The Grand Palais.",
     "options": {
-      "A": "maintain",
-      "B": "maintenance",
+      "A": "maintainable",
+      "B": "maintain",
       "C": "maintained",
-      "D": "maintainable"
+      "D": "maintenance"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Đứng làm chủ ngữ trong câu và đi sau tính từ 'High-quality' cần một danh từ. 'maintenance' (sự bảo trì) là đáp án đúng.",
     "explanation_grammar": "Danh từ",
@@ -53107,12 +53206,12 @@ export const grammarQuestions = [
     "id": "q_test11_38",
     "question": "The city council provided a detailed ______ of why the new park project was delayed.",
     "options": {
-      "A": "describe",
-      "B": "description",
-      "C": "descriptive",
-      "D": "described"
+      "A": "description",
+      "B": "descriptive",
+      "C": "described",
+      "D": "describe"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'a' và tính từ 'detailed' cần một danh từ. 'description' (sự miêu tả, mô tả) là đáp án đúng.",
     "explanation_grammar": "Danh từ",
@@ -53134,12 +53233,12 @@ export const grammarQuestions = [
     "id": "q_test11_39",
     "question": "Visitors to the National History Museum are asked to leave ______ large bags in the cloakroom.",
     "options": {
-      "A": "they",
-      "B": "them",
-      "C": "their",
-      "D": "themselves"
+      "A": "themselves",
+      "B": "their",
+      "C": "they",
+      "D": "them"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước cụm danh từ 'large bags' cần tính từ sở hữu. 'their' dùng để chỉ 'Visitors' (du khách).",
     "explanation_grammar": "Đại từ sở hữu",
@@ -53161,12 +53260,12 @@ export const grammarQuestions = [
     "id": "q_test11_40",
     "question": "The CEO of Horizon Tech expressed his ______ for the employee's years of loyal service.",
     "options": {
-      "A": "admire",
-      "B": "admirable",
-      "C": "admiration",
+      "A": "admiration",
+      "B": "admire",
+      "C": "admirable",
       "D": "admirably"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau tính từ sở hữu 'his' cần một danh từ để làm tân ngữ cho động từ 'expressed'.",
     "explanation_grammar": "Danh từ",
@@ -53188,12 +53287,12 @@ export const grammarQuestions = [
     "id": "q_test11_41",
     "question": "If you are not satisfied with ______ purchase at Silva Department Store, you may return it within 30 days.",
     "options": {
-      "A": "you",
-      "B": "yours",
-      "C": "your",
-      "D": "yourself"
+      "A": "yours",
+      "B": "yourself",
+      "C": "you",
+      "D": "your"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước danh từ 'purchase' (sự mua sắm, món hàng đã mua) cần tính từ sở hữu tương ứng với 'you'.",
     "explanation_grammar": "Đại từ sở hữu",
@@ -53215,12 +53314,12 @@ export const grammarQuestions = [
     "id": "q_test11_42",
     "question": "Due to a technical ______ at the broadcasting station, the evening news was delayed by ten minutes.",
     "options": {
-      "A": "fail",
-      "B": "failure",
-      "C": "failed",
-      "D": "failing"
+      "A": "failing",
+      "B": "fail",
+      "C": "failure",
+      "D": "failed"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'a' và tính từ 'technical' cần một danh từ. 'failure' (sự cố/sự thất bại) là đáp án đúng.",
     "explanation_grammar": "Danh từ",
@@ -53242,12 +53341,12 @@ export const grammarQuestions = [
     "id": "q_test11_43",
     "question": "Mr. Gupta told the sales team that ______ hard work resulted in a record-breaking month for the firm.",
     "options": {
-      "A": "they",
-      "B": "them",
-      "C": "their",
+      "A": "their",
+      "B": "they",
+      "C": "them",
       "D": "themselves"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước cụm danh từ 'hard work' cần tính từ sở hữu để thay thế cho 'the sales team' (được xem như số nhiều trong ngữ cảnh này).",
     "explanation_grammar": "Đại từ sở hữu",
@@ -53269,10 +53368,10 @@ export const grammarQuestions = [
     "id": "q_test11_44",
     "question": "The ______ of the annual charity auction was a major success for the City Children’s Hospital.",
     "options": {
-      "A": "organize",
+      "A": "organized",
       "B": "organization",
-      "C": "organized",
-      "D": "organizational"
+      "C": "organizational",
+      "D": "organize"
     },
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
@@ -53296,10 +53395,10 @@ export const grammarQuestions = [
     "id": "q_test11_45",
     "question": "Ms. Thorne will represent our company at the trade fair and hand out ______ business cards.",
     "options": {
-      "A": "she",
-      "B": "herself",
+      "A": "hers",
+      "B": "she",
       "C": "her",
-      "D": "hers"
+      "D": "herself"
     },
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
@@ -53324,11 +53423,11 @@ export const grammarQuestions = [
     "question": "Clear ______ is necessary to ensure that all team members understand the goals of the project.",
     "options": {
       "A": "communicate",
-      "B": "communication",
-      "C": "communicative",
-      "D": "communicatively"
+      "B": "communicative",
+      "C": "communicatively",
+      "D": "communication"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Đứng làm chủ ngữ và đi sau tính từ 'Clear' cần một danh từ. 'communication' (sự giao tiếp, truyền đạt) là phù hợp nhất.",
     "explanation_grammar": "Danh từ",
@@ -53350,10 +53449,10 @@ export const grammarQuestions = [
     "id": "q_test11_47",
     "question": "Passengers on SkyHigh Airways are responsible for the safety of ______ personal electronic devices.",
     "options": {
-      "A": "they",
-      "B": "them",
+      "A": "them",
+      "B": "theirs",
       "C": "their",
-      "D": "theirs"
+      "D": "they"
     },
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
@@ -53377,12 +53476,12 @@ export const grammarQuestions = [
     "id": "q_test11_48",
     "question": "The ______ of the new banking app has received very positive reviews from customers so far.",
     "options": {
-      "A": "introduce",
-      "B": "introduction",
+      "A": "introductory",
+      "B": "introduce",
       "C": "introduced",
-      "D": "introductory"
+      "D": "introduction"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'The' và trước giới từ 'of' cần một danh từ. 'introduction' (sự ra mắt, giới thiệu) là danh từ.",
     "explanation_grammar": "Danh từ",
@@ -53404,12 +53503,12 @@ export const grammarQuestions = [
     "id": "q_test11_49",
     "question": "Dr. Lee and ______ research team have published a groundbreaking study in the Journal of Medicine.",
     "options": {
-      "A": "she",
-      "B": "her",
+      "A": "her",
+      "B": "she",
       "C": "hers",
       "D": "herself"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước cụm danh từ 'research team' cần tính từ sở hữu. 'her' được dùng cho 'Dr. Lee' (trong ngữ cảnh nữ).",
     "explanation_grammar": "Đại từ sở hữu",
@@ -53431,10 +53530,10 @@ export const grammarQuestions = [
     "id": "q_test11_50",
     "question": "The finance committee at Preston College is conducting an ______ of the student scholarship fund.",
     "options": {
-      "A": "examine",
+      "A": "examined",
       "B": "examination",
-      "C": "examined",
-      "D": "examining"
+      "C": "examining",
+      "D": "examine"
     },
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
@@ -53459,10 +53558,10 @@ export const grammarQuestions = [
     "id": "q_test12_51",
     "question": "The sudden ______ of the CEO from Titan Media surprised both the board and the employees.",
     "options": {
-      "A": "resign",
+      "A": "resigning",
       "B": "resignation",
-      "C": "resigned",
-      "D": "resigning"
+      "C": "resign",
+      "D": "resigned"
     },
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
@@ -53486,12 +53585,12 @@ export const grammarQuestions = [
     "id": "q_test12_52",
     "question": "Dr. Aris and ______ team at the Green Valley Clinic are famous for their innovative heart surgery.",
     "options": {
-      "A": "he",
-      "B": "his",
+      "A": "his",
+      "B": "he",
       "C": "him",
       "D": "himself"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước danh từ 'team' cần tính từ sở hữu. 'his' thay thế cho 'Dr. Aris' (nam).",
     "explanation_grammar": "Đại từ sở hữu",
@@ -53513,12 +53612,12 @@ export const grammarQuestions = [
     "id": "q_test12_53",
     "question": "Every employee at Bright Future School is required to submit a monthly ______ of their teaching activities.",
     "options": {
-      "A": "reporter",
-      "B": "report",
-      "C": "reported",
-      "D": "reportedly"
+      "A": "reported",
+      "B": "reportedly",
+      "C": "reporter",
+      "D": "report"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'a' và tính từ 'monthly' cần danh từ. 'report' (bản báo cáo) phù hợp với ngữ cảnh 'submit' (nộp).",
     "explanation_grammar": "Danh từ",
@@ -53540,12 +53639,12 @@ export const grammarQuestions = [
     "id": "q_test12_54",
     "question": "Ms. Gable reminded the members of the gardening club to bring ______ own tools to the Saturday workshop.",
     "options": {
-      "A": "they",
-      "B": "them",
-      "C": "their",
-      "D": "themselves"
+      "A": "themselves",
+      "B": "their",
+      "C": "they",
+      "D": "them"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước cụm 'own tools' cần tính từ sở hữu thay thế cho 'the members' (số nhiều).",
     "explanation_grammar": "Đại từ sở hữu",
@@ -53568,11 +53667,11 @@ export const grammarQuestions = [
     "question": "The ______ of the new wing at St. Mary’s Hospital was funded entirely by private donations.",
     "options": {
       "A": "expand",
-      "B": "expansion",
-      "C": "expansive",
+      "B": "expansive",
+      "C": "expansion",
       "D": "expanded"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'The' và trước giới từ 'of' cần một danh từ. 'expansion' (sự mở rộng) là đáp án đúng.",
     "explanation_grammar": "Danh từ",
@@ -53594,12 +53693,12 @@ export const grammarQuestions = [
     "id": "q_test12_56",
     "question": "Mr. Gupta asked the IT technicians to check the ______ of the newly installed security cameras.",
     "options": {
-      "A": "perform",
-      "B": "performance",
-      "C": "performed",
-      "D": "performing"
+      "A": "performance",
+      "B": "performed",
+      "C": "performing",
+      "D": "perform"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'the' và trước giới từ 'of' cần một danh từ. 'performance' (hiệu suất, hoạt động) là đáp án đúng.",
     "explanation_grammar": "Danh từ",
@@ -53621,10 +53720,10 @@ export const grammarQuestions = [
     "id": "q_test12_57",
     "question": "Guests at the Royal Palm Resort must return ______ room keys to the front desk before 11:00 AM.",
     "options": {
-      "A": "they",
-      "B": "them",
+      "A": "themselves",
+      "B": "they",
       "C": "their",
-      "D": "themselves"
+      "D": "them"
     },
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
@@ -53649,11 +53748,11 @@ export const grammarQuestions = [
     "question": "The legal team at Miller & Associates provides a thorough ______ of all terms before a contract is signed.",
     "options": {
       "A": "examine",
-      "B": "examination",
-      "C": "examined",
-      "D": "examining"
+      "B": "examined",
+      "C": "examining",
+      "D": "examination"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'a' và tính từ 'thorough' cần danh từ làm tân ngữ cho 'provides'. 'examination' (sự kiểm tra/xem xét) là phù hợp nhất.",
     "explanation_grammar": "Danh từ",
@@ -53675,12 +53774,12 @@ export const grammarQuestions = [
     "id": "q_test12_59",
     "question": "While the lead architect is on leave, all design questions should be directed to ______ assistant.",
     "options": {
-      "A": "she",
-      "B": "her",
-      "C": "hers",
-      "D": "herself"
+      "A": "her",
+      "B": "hers",
+      "C": "herself",
+      "D": "she"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước danh từ 'assistant' cần tính từ sở hữu. 'her' là đáp án phù hợp chỉ sự sở hữu của 'the lead architect' (nữ).",
     "explanation_grammar": "Đại từ sở hữu",
@@ -53702,12 +53801,12 @@ export const grammarQuestions = [
     "id": "q_test12_60",
     "question": "Fresh Bites Cafe gained a lot of ______ after being featured in the local lifestyle magazine.",
     "options": {
-      "A": "popular",
-      "B": "popularity",
+      "A": "popularly",
+      "B": "popular",
       "C": "popularize",
-      "D": "popularly"
+      "D": "popularity"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau 'a lot of' cần một danh từ (không đếm được hoặc số nhiều). 'popularity' (sự nổi tiếng) là danh từ.",
     "explanation_grammar": "Danh từ",
@@ -53730,11 +53829,11 @@ export const grammarQuestions = [
     "question": "Students at Preston University are encouraged to use ______ student IDs to access the online library.",
     "options": {
       "A": "they",
-      "B": "them",
-      "C": "their",
+      "B": "their",
+      "C": "them",
       "D": "themselves"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước cụm danh từ 'student IDs' cần tính từ sở hữu thay thế cho 'Students'.",
     "explanation_grammar": "Đại từ sở hữu",
@@ -53756,12 +53855,12 @@ export const grammarQuestions = [
     "id": "q_test12_62",
     "question": "The recent ______ in the price of silver has affected the production costs at Shine Jewelry.",
     "options": {
-      "A": "vary",
-      "B": "variation",
-      "C": "various",
-      "D": "variably"
+      "A": "variation",
+      "B": "various",
+      "C": "variably",
+      "D": "vary"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'The' và tính từ 'recent' cần danh từ làm chủ ngữ. 'variation' (sự biến động) là đáp án đúng.",
     "explanation_grammar": "Danh từ",
@@ -53783,12 +53882,12 @@ export const grammarQuestions = [
     "id": "q_test12_63",
     "question": "Mr. Henderson was praised for ______ dedication to improving the local youth sports programs.",
     "options": {
-      "A": "he",
-      "B": "his",
+      "A": "himself",
+      "B": "he",
       "C": "him",
-      "D": "himself"
+      "D": "his"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước danh từ 'dedication' (sự cống hiến) cần một tính từ sở hữu. 'his' thay thế cho 'Mr. Henderson'.",
     "explanation_grammar": "Đại từ sở hữu",
@@ -53810,12 +53909,12 @@ export const grammarQuestions = [
     "id": "q_test12_64",
     "question": "The ______ of the annual jazz festival at Blue Note Park attracts thousands of tourists every summer.",
     "options": {
-      "A": "organize",
-      "B": "organization",
+      "A": "organization",
+      "B": "organize",
       "C": "organized",
       "D": "organizational"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'The' và trước giới từ 'of' cần một danh từ. 'organization' (sự tổ chức) phù hợp ngữ cảnh.",
     "explanation_grammar": "Danh từ",
@@ -53837,12 +53936,12 @@ export const grammarQuestions = [
     "id": "q_test12_65",
     "question": "Customers who visit the Velvet Boutique are asked to share ______ opinions on the new winter collection.",
     "options": {
-      "A": "they",
-      "B": "them",
-      "C": "their",
-      "D": "themselves"
+      "A": "them",
+      "B": "their",
+      "C": "themselves",
+      "D": "they"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước danh từ 'opinions' cần tính từ sở hữu thay thế cho 'Customers' (khách hàng - số nhiều).",
     "explanation_grammar": "Đại từ sở hữu",
@@ -53864,12 +53963,12 @@ export const grammarQuestions = [
     "id": "q_test12_66",
     "question": "The marketing firm, Zenith Creative, is looking for a new ______ to handle digital advertising.",
     "options": {
-      "A": "manage",
-      "B": "manager",
-      "C": "managed",
-      "D": "managerial"
+      "A": "managerial",
+      "B": "manage",
+      "C": "manager",
+      "D": "managed"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'a' và tính từ 'new' cần một danh từ đếm được số ít. 'manager' (người quản lý) là danh từ chỉ người.",
     "explanation_grammar": "Danh từ",
@@ -53891,12 +53990,12 @@ export const grammarQuestions = [
     "id": "q_test12_67",
     "question": "Ms. Thorne prefers to do ______ own research before presenting a proposal to the board of directors.",
     "options": {
-      "A": "she",
-      "B": "hers",
-      "C": "herself",
-      "D": "her"
+      "A": "her",
+      "B": "she",
+      "C": "hers",
+      "D": "herself"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước cụm 'own research' cần tính từ sở hữu chỉ sự sở hữu của 'Ms. Thorne'.",
     "explanation_grammar": "Đại từ sở hữu",
@@ -53918,12 +54017,12 @@ export const grammarQuestions = [
     "id": "q_test12_68",
     "question": "The ______ of the new art gallery at the City Museum has been delayed until next spring.",
     "options": {
-      "A": "complete",
-      "B": "completion",
-      "C": "completely",
-      "D": "completed"
+      "A": "completely",
+      "B": "completed",
+      "C": "completion",
+      "D": "complete"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'The' và trước giới từ 'of' cần một danh từ. 'completion' (sự hoàn thành) là đáp án đúng.",
     "explanation_grammar": "Danh từ",
@@ -53945,12 +54044,12 @@ export const grammarQuestions = [
     "id": "q_test12_69",
     "question": "Patients visiting the Smile Dental Clinic must present ______ insurance cards at the front desk.",
     "options": {
-      "A": "they",
-      "B": "them",
-      "C": "their",
-      "D": "theirs"
+      "A": "theirs",
+      "B": "they",
+      "C": "them",
+      "D": "their"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước danh từ 'insurance cards' cần tính từ sở hữu thay thế cho 'Patients' (bệnh nhân - số nhiều).",
     "explanation_grammar": "Đại từ sở hữu",
@@ -54000,9 +54099,9 @@ export const grammarQuestions = [
     "question": "If any intern has a question, ______ should feel free to ask the department supervisor at any time.",
     "options": {
       "A": "he",
-      "B": "his",
-      "C": "him",
-      "D": "himself"
+      "B": "him",
+      "C": "himself",
+      "D": "his"
     },
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
@@ -54026,12 +54125,12 @@ export const grammarQuestions = [
     "id": "q_test12_72",
     "question": "The ______ of the new software at Global Tech was successful and did not disrupt any services.",
     "options": {
-      "A": "install",
-      "B": "installation",
-      "C": "installed",
-      "D": "installer"
+      "A": "installer",
+      "B": "install",
+      "C": "installation",
+      "D": "installed"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'The' và trước giới từ 'of' cần một danh từ chỉ sự việc. 'installation' (sự cài đặt) là đáp án đúng.",
     "explanation_grammar": "Danh từ",
@@ -54054,11 +54153,11 @@ export const grammarQuestions = [
     "question": "All participants in the marathon are responsible for ______ own hydration throughout the race.",
     "options": {
       "A": "they",
-      "B": "them",
-      "C": "their",
+      "B": "their",
+      "C": "them",
       "D": "themselves"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước cụm 'own hydration' cần tính từ sở hữu thay thế cho 'All participants' (tất cả người tham gia - số nhiều).",
     "explanation_grammar": "Đại từ sở hữu",
@@ -54080,12 +54179,12 @@ export const grammarQuestions = [
     "id": "q_test12_74",
     "question": "The board of directors at Orion Labs gave ______ approval for the new budget yesterday.",
     "options": {
-      "A": "they",
-      "B": "their",
-      "C": "them",
-      "D": "theirs"
+      "A": "them",
+      "B": "theirs",
+      "C": "their",
+      "D": "they"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước danh từ 'approval' (sự chấp thuận) cần tính từ sở hữu chỉ sự sở hữu của 'The board of directors' (Ban giám đốc - tập thể số nhiều).",
     "explanation_grammar": "Đại từ sở hữu",
@@ -54107,12 +54206,12 @@ export const grammarQuestions = [
     "id": "q_test12_75",
     "question": "A high level of ______ is expected from all performers at the National Opera House.",
     "options": {
-      "A": "profession",
-      "B": "professionalism",
+      "A": "professionally",
+      "B": "profession",
       "C": "professional",
-      "D": "professionally"
+      "D": "professionalism"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau giới từ 'of' cần một danh từ. 'professionalism' (sự chuyên nghiệp) là đáp án đúng phù hợp với ngữ cảnh 'a high level' (mức độ cao).",
     "explanation_grammar": "Danh từ",
@@ -54135,12 +54234,12 @@ export const grammarQuestions = [
     "id": "q_test13_76",
     "question": "Oxford University has announced the ______ of a new research center dedicated to renewable energy.",
     "options": {
-      "A": "open",
-      "B": "opening",
+      "A": "opening",
+      "B": "open",
       "C": "opened",
       "D": "openly"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'the' và trước giới từ 'of' cần một danh từ. 'opening' (lễ khai trương, việc mở cửa) là đáp án đúng.",
     "explanation_grammar": "Danh từ",
@@ -54162,12 +54261,12 @@ export const grammarQuestions = [
     "id": "q_test13_77",
     "question": "Mr. Suzuki will be presenting ______ financial analysis at the annual board meeting in Tokyo.",
     "options": {
-      "A": "he",
-      "B": "him",
-      "C": "his",
-      "D": "himself"
+      "A": "him",
+      "B": "himself",
+      "C": "he",
+      "D": "his"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước danh từ 'financial analysis' cần một tính từ sở hữu thay thế cho 'Mr. Suzuki'.",
     "explanation_grammar": "Đại từ sở hữu",
@@ -54189,12 +54288,12 @@ export const grammarQuestions = [
     "id": "q_test13_78",
     "question": "The staff at Radiant Skin Clinic undergo extensive ______ before they can operate the new laser equipment.",
     "options": {
-      "A": "train",
-      "B": "training",
-      "C": "trained",
-      "D": "trainer"
+      "A": "training",
+      "B": "trainer",
+      "C": "train",
+      "D": "trained"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau tính từ 'extensive' (rộng rãi, chuyên sâu) cần một danh từ chỉ hành động/quá trình. 'training' (sự đào tạo) là đáp án phù hợp.",
     "explanation_grammar": "Danh từ",
@@ -54243,12 +54342,12 @@ export const grammarQuestions = [
     "id": "q_test13_80",
     "question": "The CEO of Stellar Apps made a formal ______ regarding the upcoming merger with a larger tech firm.",
     "options": {
-      "A": "announce",
-      "B": "announcement",
-      "C": "announced",
-      "D": "announcing"
+      "A": "announcement",
+      "B": "announced",
+      "C": "announcing",
+      "D": "announce"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'a' và tính từ 'formal' cần một danh từ để làm tân ngữ cho động từ 'made'. 'announcement' (sự thông báo) là danh từ.",
     "explanation_grammar": "Danh từ",
@@ -54270,12 +54369,12 @@ export const grammarQuestions = [
     "id": "q_test13_81",
     "question": "Ms. Henderson asked the office manager to order new stationery for ______ private study.",
     "options": {
-      "A": "she",
-      "B": "her",
-      "C": "hers",
-      "D": "herself"
+      "A": "herself",
+      "B": "she",
+      "C": "her",
+      "D": "hers"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước cụm danh từ 'private study' cần một tính từ sở hữu. 'her' là đáp án đúng thay thế cho 'Ms. Henderson'.",
     "explanation_grammar": "Đại từ sở hữu",
@@ -54324,14 +54423,14 @@ export const grammarQuestions = [
     "id": "q_test13_83",
     "question": "Employees at Prime Bank must use ______ electronic keycards to enter the building after 6:00 PM.",
     "options": {
-      "A": "their",
-      "B": "their",
-      "C": "them",
-      "D": "they"
+    "A": "them",
+    "B": "they",
+    "C": "their",
+    "D": "theirs"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
-    "explanation_reason": "Trước cụm danh từ 'electronic keycards' cần tính từ sở hữu thay thế cho 'Employees' (số nhiều).",
+    "explanation_reason": "Trước cụm danh từ 'electronic keycards' cần tính từ sở hữu 'their'. 'Theirs' là đại từ sở hữu đứng một mình, 'them' là tân ngữ, 'they' là chủ ngữ.",
     "explanation_grammar": "Đại từ sở hữu",
     "translation": "Nhân viên tại Prime Bank phải sử dụng thẻ chìa khóa điện tử của họ để vào tòa nhà sau 6:00 tối.",
     "core_vocabulary": [
@@ -54351,12 +54450,12 @@ export const grammarQuestions = [
     "id": "q_test13_84",
     "question": "Dr. Patel provided a clear ______ of the surgical procedure to the patient’s family.",
     "options": {
-      "A": "explain",
-      "B": "explanation",
+      "A": "explained",
+      "B": "explain",
       "C": "explanatory",
-      "D": "explained"
+      "D": "explanation"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'a' và tính từ 'clear' cần một danh từ làm tân ngữ cho động từ 'provided'.",
     "explanation_grammar": "Danh từ",
@@ -54405,12 +54504,12 @@ export const grammarQuestions = [
     "id": "q_test13_86",
     "question": "Under the ______ of the new conductor, the City Symphony has reached a wider audience.",
     "options": {
-      "A": "direct",
-      "B": "direction",
-      "C": "directed",
-      "D": "directly"
+      "A": "direction",
+      "B": "directed",
+      "C": "directly",
+      "D": "direct"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'the' và trước giới từ 'of' cần một danh từ. 'direction' (sự chỉ đạo) là đáp án đúng.",
     "explanation_grammar": "Danh từ",
@@ -54432,10 +54531,10 @@ export const grammarQuestions = [
     "id": "q_test13_87",
     "question": "The kitten at the animal shelter often plays with ______ own shadow in the sunlight.",
     "options": {
-      "A": "it",
+      "A": "they",
       "B": "its",
-      "C": "itself",
-      "D": "they"
+      "C": "it",
+      "D": "itself"
     },
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
@@ -54459,12 +54558,12 @@ export const grammarQuestions = [
     "id": "q_test13_88",
     "question": "Green Valley Farmers focus on the ______ of organic soil through sustainable agricultural practices.",
     "options": {
-      "A": "protect",
-      "B": "protection",
+      "A": "protection",
+      "B": "protect",
       "C": "protective",
       "D": "protected"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'the' và trước giới từ 'of' cần danh từ. 'protection' (sự bảo vệ) là từ phù hợp.",
     "explanation_grammar": "Danh từ",
@@ -54486,12 +54585,12 @@ export const grammarQuestions = [
     "id": "q_test13_89",
     "question": "The marketing team at Zenith Creative shared ______ latest social media strategies during the workshop.",
     "options": {
-      "A": "they",
-      "B": "them",
-      "C": "their",
-      "D": "theirs"
+      "A": "them",
+      "B": "theirs",
+      "C": "they",
+      "D": "their"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước cụm danh từ 'latest social media strategies' cần tính từ sở hữu thay thế cho 'The marketing team' (nghĩa tập thể).",
     "explanation_grammar": "Đại từ sở hữu",
@@ -54513,10 +54612,10 @@ export const grammarQuestions = [
     "id": "q_test13_90",
     "question": "Bloom Florist has gained popularity due to the constant ______ of fresh, exotic flowers.",
     "options": {
-      "A": "avail",
+      "A": "availably",
       "B": "availability",
-      "C": "available",
-      "D": "availably"
+      "C": "avail",
+      "D": "available"
     },
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
@@ -54541,11 +54640,11 @@ export const grammarQuestions = [
     "question": "Ms. Carpenter will be attending the international gala with ______ entire design team.",
     "options": {
       "A": "she",
-      "B": "her",
-      "C": "herself",
-      "D": "hers"
+      "B": "herself",
+      "C": "hers",
+      "D": "her"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước cụm danh từ 'entire design team' cần tính từ sở hữu chỉ sự sở hữu của 'Ms. Carpenter'.",
     "explanation_grammar": "Đại từ sở hữu",
@@ -54567,12 +54666,12 @@ export const grammarQuestions = [
     "id": "q_test13_92",
     "question": "The National Theater experienced a record ______ for the premiere of the new Broadway musical.",
     "options": {
-      "A": "attend",
-      "B": "attendance",
-      "C": "attendant",
-      "D": "attended"
+      "A": "attendant",
+      "B": "attended",
+      "C": "attendance",
+      "D": "attend"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'a' và danh từ đóng vai trò tính từ bổ nghĩa 'record' cần một danh từ chính. 'attendance' (số lượng người tham dự) là từ phù hợp.",
     "explanation_grammar": "Danh từ",
@@ -54594,10 +54693,10 @@ export const grammarQuestions = [
     "id": "q_test13_93",
     "question": "The board of directors decided that the company must improve ______ brand identity in the global market.",
     "options": {
-      "A": "it",
+      "A": "they",
       "B": "its",
-      "C": "itself",
-      "D": "they"
+      "C": "it",
+      "D": "itself"
     },
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
@@ -54622,11 +54721,11 @@ export const grammarQuestions = [
     "question": "Dr. Faust’s ______ of the medical study was published in the most recent edition of the Science Journal.",
     "options": {
       "A": "conclude",
-      "B": "conclusion",
-      "C": "concluded",
+      "B": "concluded",
+      "C": "conclusion",
       "D": "conclusive"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau sở hữu cách 'Dr. Faust’s' cần một danh từ. 'conclusion' (kết luận) là danh từ chính xác.",
     "explanation_grammar": "Danh từ",
@@ -54648,12 +54747,12 @@ export const grammarQuestions = [
     "id": "q_test13_95",
     "question": "All members of the Fairfield Golf Club are required to show ______ ID cards at the gate.",
     "options": {
-      "A": "they",
-      "B": "them",
-      "C": "their",
-      "D": "themselves"
+      "A": "them",
+      "B": "their",
+      "C": "themselves",
+      "D": "they"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước cụm 'ID cards' cần tính từ sở hữu thay thế cho 'All members' (số nhiều).",
     "explanation_grammar": "Đại từ sở hữu",
@@ -54675,12 +54774,12 @@ export const grammarQuestions = [
     "id": "q_test13_96",
     "question": "Sky-High Fitness announced the ______ of ten new treadmills for the downtown branch.",
     "options": {
-      "A": "acquire",
-      "B": "acquisition",
-      "C": "acquired",
-      "D": "acquiring"
+      "A": "acquiring",
+      "B": "acquire",
+      "C": "acquisition",
+      "D": "acquired"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'the' và trước giới từ 'of' cần một danh từ. 'acquisition' (sự mua lại, việc đạt được) phù hợp ngữ cảnh.",
     "explanation_grammar": "Danh từ",
@@ -54703,11 +54802,11 @@ export const grammarQuestions = [
     "question": "While the director of the gallery is traveling, ______ assistant will handle all media inquiries.",
     "options": {
       "A": "she",
-      "B": "her",
-      "C": "hers",
-      "D": "herself"
+      "B": "hers",
+      "C": "herself",
+      "D": "her"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước danh từ 'assistant' cần tính từ sở hữu thay thế cho 'director' (nữ).",
     "explanation_grammar": "Đại từ sở hữu",
@@ -54729,12 +54828,12 @@ export const grammarQuestions = [
     "id": "q_test13_98",
     "question": "Preston College has specific ______ for students applying for the prestigious music scholarship.",
     "options": {
-      "A": "require",
-      "B": "requirements",
-      "C": "required",
-      "D": "requiring"
+      "A": "required",
+      "B": "requiring",
+      "C": "requirements",
+      "D": "require"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau tính từ 'specific' cần một danh từ. 'requirements' (những yêu cầu) là danh từ.",
     "explanation_grammar": "Danh từ",
@@ -54756,12 +54855,12 @@ export const grammarQuestions = [
     "id": "q_test13_99",
     "question": "Every visitor to the Royal Botanical Garden must have ______ entry pass scanned at the entrance.",
     "options": {
-      "A": "they",
-      "B": "their",
-      "C": "them",
-      "D": "theirs"
+      "A": "their",
+      "B": "theirs",
+      "C": "they",
+      "D": "them"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Trước cụm danh từ 'entry pass' cần tính từ sở hữu. 'their' dùng để thay thế cho 'visitor' (phi giới tính).",
     "explanation_grammar": "Đại từ sở hữu",
@@ -54784,11 +54883,11 @@ export const grammarQuestions = [
     "question": "The Silver Screen Theater is known for its high-quality ______ of classic independent films.",
     "options": {
       "A": "produce",
-      "B": "production",
-      "C": "producer",
-      "D": "produced"
+      "B": "producer",
+      "C": "produced",
+      "D": "production"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau cụm tính từ 'high-quality' và trước giới từ 'of' cần danh từ. 'production' (việc sản xuất/công chiếu) phù hợp với ngữ cảnh.",
     "explanation_grammar": "Danh từ",
@@ -54811,12 +54910,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_01",
     "question": "Lexington Agency provides ______ solutions to help clients reach their target audience.",
     "options": {
-      "A": "creative",
-      "B": "creativity",
-      "C": "creatively",
-      "D": "creativeness"
+      "A": "creativity",
+      "B": "creatively",
+      "C": "creativeness",
+      "D": "creative"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước danh từ 'solutions' cần một tính từ để bổ nghĩa. 'creative' (sáng tạo) là tính từ.",
     "explanation_grammar": "Tính từ",
@@ -54838,10 +54937,10 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_02",
     "question": "The staff at Starlight Hotel are trained to handle guest requests ______.",
     "options": {
-      "A": "professional",
+      "A": "professionalism",
       "B": "professionally",
-      "C": "professionalism",
-      "D": "profession"
+      "C": "profession",
+      "D": "professional"
     },
     "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
@@ -54865,12 +54964,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_03",
     "question": "Blue Wave Logistics has improved its shipping ______ over the past two fiscal years.",
     "options": {
-      "A": "efficient",
-      "B": "efficiently",
-      "C": "efficiency",
-      "D": "efficiencies"
+      "A": "efficiencies",
+      "B": "efficient",
+      "C": "efficiently",
+      "D": "efficiency"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Mặc dù bài test về Tính/Trạng từ, chỗ trống này nằm sau tính từ sở hữu 'its' và danh từ đóng vai trò tính từ 'shipping', nên ta cần một danh từ để tạo thành cụm 'shipping efficiency' (hiệu quả giao hàng).",
     "explanation_grammar": "Danh từ",
@@ -54919,12 +55018,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_05",
     "question": "Evergreen Estate offers ______ views of the surrounding mountains and valleys.",
     "options": {
-      "A": "extensive",
-      "B": "extensively",
-      "C": "extension",
-      "D": "extensiveness"
+      "A": "extension",
+      "B": "extensiveness",
+      "C": "extensively",
+      "D": "extensive"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước danh từ 'views' cần một tính từ để bổ nghĩa. 'extensive' (rộng lớn, bao quát) tạo thành cụm 'extensive views' (tầm nhìn bao quát). (Lưu ý: Bạn chọn 'extensiveness' nhưng đây là danh từ và không hợp ngữ pháp).",
     "explanation_grammar": "Tính từ",
@@ -54946,12 +55045,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_06",
     "question": "Vance Corporation reported that its new software branch is operating ______.",
     "options": {
-      "A": "profitably",
-      "B": "profitable",
-      "C": "profitability",
-      "D": "profits"
+      "A": "profits",
+      "B": "profitably",
+      "C": "profitable",
+      "D": "profitability"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau động từ thường 'is operating' cần một trạng từ để bổ nghĩa. 'profitably' (một cách sinh lời) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -54973,12 +55072,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_07",
     "question": "Tidal Energy has ______ updated its safety protocols for all offshore employees.",
     "options": {
-      "A": "recent",
-      "B": "recently",
+      "A": "recently",
+      "B": "recent",
       "C": "recency",
       "D": "recentness"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa trợ động từ 'has' và động từ phân từ hai 'updated', ta cần một trạng từ bổ nghĩa. 'recently' (gần đây) là phù hợp nhất.",
     "explanation_grammar": "Trạng từ",
@@ -55000,12 +55099,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_08",
     "question": "Nova Tech is looking for a ______ partner to assist with the hardware distribution.",
     "options": {
-      "A": "rely",
-      "B": "reliability",
-      "C": "reliable",
-      "D": "reliably"
+      "A": "reliability",
+      "B": "reliably",
+      "C": "rely",
+      "D": "reliable"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau mạo từ 'a' và trước danh từ 'partner' cần một tính từ. 'reliable' (đáng tin cậy) là tính từ.",
     "explanation_grammar": "Tính từ",
@@ -55027,10 +55126,10 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_09",
     "question": "Apex Marketing developed an ______ campaign that significantly boosted brand awareness.",
     "options": {
-      "A": "impressively",
+      "A": "impress",
       "B": "impressive",
-      "C": "impression",
-      "D": "impress"
+      "C": "impressively",
+      "D": "impression"
     },
     "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
@@ -55054,12 +55153,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_10",
     "question": "Sands Resort ensures that all guest rooms are ______ furnished with modern amenities.",
     "options": {
-      "A": "comfort",
-      "B": "comfortable",
-      "C": "comfortably",
+      "A": "comfortably",
+      "B": "comfort",
+      "C": "comfortable",
       "D": "comforting"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa 'are' và phân từ hai 'furnished', ta cần trạng từ để bổ nghĩa cho động từ 'furnished' (được trang bị). 'comfortably' (một cách thoải mái) là đúng.",
     "explanation_grammar": "Trạng từ",
@@ -55081,12 +55180,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_11",
     "question": "Barrow Finance requires that all transaction records be updated ______ every Friday.",
     "options": {
-      "A": "accuracy",
-      "B": "accurate",
-      "C": "accurately",
-      "D": "accurateness"
+      "A": "accurate",
+      "B": "accurateness",
+      "C": "accuracy",
+      "D": "accurately"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau cụm động từ bị động 'be updated' cần một trạng từ để bổ nghĩa cho việc cập nhật diễn ra như thế nào. 'accurately' (một cách chính xác) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -55108,12 +55207,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_12",
     "question": "Crestwood Hospital has seen a ______ increase in the number of outpatient visits.",
     "options": {
-      "A": "frequently",
-      "B": "frequented",
-      "C": "frequency",
-      "D": "frequent"
+      "A": "frequency",
+      "B": "frequently",
+      "C": "frequent",
+      "D": "frequented"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau mạo từ 'a' và trước danh từ 'increase' cần tính từ bổ nghĩa. 'frequent' (thường xuyên) là tính từ.",
     "explanation_grammar": "Tính từ",
@@ -55135,12 +55234,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_13",
     "question": "Miller Manufacturing implemented new techniques to increase overall factory ______.",
     "options": {
-      "A": "productive",
-      "B": "productively",
-      "C": "productivity",
+      "A": "productivity",
+      "B": "productive",
+      "C": "productively",
       "D": "produced"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau động từ 'increase' và các tính từ 'overall factory' cần một danh từ. 'productivity' (năng suất) là danh từ chính xác.",
     "explanation_grammar": "Danh từ",
@@ -55162,12 +55261,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_14",
     "question": "Skyline Airlines reminds passengers to remain seated until the plane has ______ landed.",
     "options": {
-      "A": "safe",
-      "B": "safely",
-      "C": "safety",
-      "D": "safest"
+      "A": "safety",
+      "B": "safest",
+      "C": "safely",
+      "D": "safe"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa trợ động từ 'has' và động từ 'landed' cần một trạng từ để bổ nghĩa. 'safely' (một cách an toàn) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -55189,12 +55288,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_15",
     "question": "Summit Design submitted an ______ proposal for the renovation of the city library.",
     "options": {
-      "A": "originality",
-      "B": "originally",
-      "C": "originate",
-      "D": "original"
+      "A": "originate",
+      "B": "original",
+      "C": "originality",
+      "D": "originally"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau mạo từ 'an' và trước danh từ 'proposal' cần một tính từ. 'original' (độc đáo, nguyên bản) là đáp án đúng.",
     "explanation_grammar": "Tính từ",
@@ -55217,11 +55316,11 @@ export const grammarQuestions = [
     "question": "The fireworks display at Harbor View was ______ praised by the local community.",
     "options": {
       "A": "spectacular",
-      "B": "spectacularly",
-      "C": "spectacle",
-      "D": "spectate"
+      "B": "spectacle",
+      "C": "spectate",
+      "D": "spectacularly"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng trước động từ phân từ 'praised' (được khen ngợi) cần một trạng từ để bổ nghĩa. 'spectacularly' (một cách ngoạn mục/xuất sắc) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -55243,10 +55342,10 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_17",
     "question": "Fletcher Inc. requests that all employees dress ______ for the annual gala dinner.",
     "options": {
-      "A": "formal",
+      "A": "formality",
       "B": "formally",
-      "C": "formality",
-      "D": "formalize"
+      "C": "formalize",
+      "D": "formal"
     },
     "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
@@ -55270,12 +55369,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_18",
     "question": "Oakwood Library provides a ______ environment for students to study and conduct research.",
     "options": {
-      "A": "quietly",
-      "B": "quiet",
-      "C": "quietness",
-      "D": "quieted"
+      "A": "quieted",
+      "B": "quietly",
+      "C": "quiet",
+      "D": "quietness"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau mạo từ 'a' và trước danh từ 'environment' cần một tính từ. 'quiet' (yên tĩnh) là đáp án đúng.",
     "explanation_grammar": "Tính từ",
@@ -55297,12 +55396,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_19",
     "question": "Preston Legal manages all client information ______ to maintain the highest level of trust.",
     "options": {
-      "A": "confidential",
-      "B": "confidentially",
+      "A": "confidentially",
+      "B": "confidential",
       "C": "confidentiality",
       "D": "confiding"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Động từ chính của câu là 'manages' (quản lý). Ta cần một trạng từ để bổ nghĩa cho hành động quản lý thông tin đó như thế nào. 'confidentially' (một cách bảo mật) là đúng.",
     "explanation_grammar": "Trạng từ",
@@ -55324,12 +55423,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_20",
     "question": "Greene Groceries stocks ______ grown vegetables from local farms every morning.",
     "options": {
-      "A": "fresh",
-      "B": "freshly",
-      "C": "freshness",
-      "D": "freshen"
+      "A": "freshness",
+      "B": "freshen",
+      "C": "freshly",
+      "D": "fresh"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước cụm tính từ dạng phân từ 'grown vegetables' cần một trạng từ để bổ nghĩa cho động từ 'grown'. 'freshly' (mới) kết hợp với 'grown' tạo thành 'freshly grown' (mới được trồng/thu hoạch).",
     "explanation_grammar": "Trạng từ",
@@ -55351,12 +55450,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_21",
     "question": "Swift Delivery guarantees that all packages will be delivered ______ to customers.",
     "options": {
-      "A": "prompt",
-      "B": "promptly",
+      "A": "prompted",
+      "B": "prompt",
       "C": "promptness",
-      "D": "prompted"
+      "D": "promptly"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau cụm động từ bị động 'be delivered' cần trạng từ bổ nghĩa cho hành động giao hàng. 'promptly' (một cách nhanh chóng/đúng giờ) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -55405,10 +55504,10 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_23",
     "question": "The Windsor Theater has gained ______ for its high-quality stage productions.",
     "options": {
-      "A": "popular",
-      "B": "popularly",
+      "A": "popularly",
+      "B": "popularize",
       "C": "popularity",
-      "D": "popularize"
+      "D": "popular"
     },
     "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
@@ -55432,12 +55531,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test9_24",
     "question": "The chef at Riverfront Cafe prepares each dish ______ to ensure the best quality.",
     "options": {
-      "A": "delicious",
-      "B": "deliciously",
-      "C": "delicacy",
-      "D": "delighted"
+      "A": "deliciously",
+      "B": "delighted",
+      "C": "delicious",
+      "D": "delicacy"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau động từ thường 'prepares' và tân ngữ 'each dish', ta cần trạng từ để mô tả hành động chuẩn bị đó diễn ra thế nào. 'deliciously' (một cách ngon miệng) là đúng.",
     "explanation_grammar": "Trạng từ",
@@ -55460,11 +55559,11 @@ export const grammarQuestions = [
     "question": "Global Logistics provides ______ shipping services for businesses of all sizes.",
     "options": {
       "A": "internationalize",
-      "B": "international",
-      "C": "internationally",
+      "B": "internationally",
+      "C": "international",
       "D": "internation"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước cụm danh từ 'shipping services' cần một tính từ bổ nghĩa. 'international' (quốc tế) là tính từ.",
     "explanation_grammar": "Tính từ",
@@ -55487,12 +55586,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_01",
     "question": "The accounting department at Jaxon Financial requires ______ documentation for all travel expenses.",
     "options": {
-      "A": "complete",
-      "B": "completely",
-      "C": "completeness",
-      "D": "completing"
+      "A": "completeness",
+      "B": "completing",
+      "C": "completely",
+      "D": "complete"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước danh từ 'documentation' (tài liệu, chứng từ) cần một tính từ. 'complete' (đầy đủ, trọn vẹn) là tính từ.",
     "explanation_grammar": "Tính từ",
@@ -55514,12 +55613,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_02",
     "question": "Sales representatives at Orion Tech are ______ encouraged to attend the monthly networking gala.",
     "options": {
-      "A": "strong",
-      "B": "strength",
-      "C": "strongly",
-      "D": "strongest"
+      "A": "strongly",
+      "B": "strongest",
+      "C": "strong",
+      "D": "strength"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa động từ to be 'are' và phân từ hai 'encouraged' cần một trạng từ để bổ nghĩa. Cụm 'strongly encouraged' mang nghĩa là 'được khuyến khích mạnh mẽ'.",
     "explanation_grammar": "Trạng từ",
@@ -55568,12 +55667,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_04",
     "question": "Ms. Lin handled the difficult negotiation ______ and secured the contract for the firm.",
     "options": {
-      "A": "skillful",
-      "B": "skillfully",
-      "C": "skillfulness",
-      "D": "skilled"
+      "A": "skillfully",
+      "B": "skillfulness",
+      "C": "skilled",
+      "D": "skillful"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau động từ thường 'handled' và tân ngữ 'the difficult negotiation' cần một trạng từ bổ nghĩa cho hành động đó diễn ra như thế nào. 'skillfully' (một cách điêu luyện) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -55595,12 +55694,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_05",
     "question": "Analysts at Portia Capital expect a ______ rise in tech stock prices over the next quarter.",
     "options": {
-      "A": "substantially",
-      "B": "substantial",
+      "A": "substantiate",
+      "B": "substantially",
       "C": "substance",
-      "D": "substantiate"
+      "D": "substantial"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau mạo từ 'a' và trước danh từ 'rise' (sự tăng lên) cần một tính từ. 'substantial' (đáng kể) là tính từ.",
     "explanation_grammar": "Tính từ",
@@ -55622,12 +55721,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_06",
     "question": "The software update was ______ designed to prevent unauthorized access to the database.",
     "options": {
-      "A": "specific",
-      "B": "specifically",
+      "A": "specifically",
+      "B": "specific",
       "C": "specification",
       "D": "specifying"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa trợ động từ 'was' và động từ phân từ hai 'designed' cần một trạng từ để bổ nghĩa. 'specifically' (một cách đặc biệt, dành riêng) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -55649,12 +55748,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_07",
     "question": "The board of directors found the consultant’s report to be ______ and well-researched.",
     "options": {
-      "A": "informative",
-      "B": "informatively",
-      "C": "information",
-      "D": "informing"
+      "A": "information",
+      "B": "informative",
+      "C": "informing",
+      "D": "informatively"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau 'to be' cần một tính từ. Hơn nữa, chỗ trống được nối bởi 'and' với tính từ 'well-researched', do đó ta cần điền tính từ 'informative' (cung cấp nhiều thông tin).",
     "explanation_grammar": "Tính từ",
@@ -55676,12 +55775,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_08",
     "question": "Despite the market fluctuations, the company's revenue has remained ______ over the last year.",
     "options": {
-      "A": "stably",
-      "B": "stable",
+      "A": "stabilize",
+      "B": "stably",
       "C": "stability",
-      "D": "stabilize"
+      "D": "stable"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Động từ 'remain' (duy trì, vẫn như cũ) là một động từ liên kết (linking verb), theo sau nó phải là một tính từ. 'stable' (ổn định) là đáp án đúng.",
     "explanation_grammar": "Tính từ",
@@ -55704,11 +55803,11 @@ export const grammarQuestions = [
     "question": "Mr. Henderson was ______ surprised by the positive feedback from the client.",
     "options": {
       "A": "pleasant",
-      "B": "pleasantly",
-      "C": "pleasantness",
+      "B": "pleasantness",
+      "C": "pleasantly",
       "D": "pleasingly"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa 'was' và tính từ/phân từ 'surprised' cần một trạng từ để bổ nghĩa. 'pleasantly surprised' (ngạc nhiên một cách thú vị) là cụm từ rất phổ biến. (Lưu ý: Bạn chọn 'pleasant' là tính từ nên không hợp ngữ pháp ở vị trí này).",
     "explanation_grammar": "Trạng từ",
@@ -55730,12 +55829,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_10",
     "question": "The technical support team responded ______ to the server outage yesterday morning.",
     "options": {
-      "A": "quick",
-      "B": "quickly",
-      "C": "quickness",
-      "D": "quicker"
+      "A": "quickly",
+      "B": "quickness",
+      "C": "quicker",
+      "D": "quick"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau động từ thường 'responded' (phản hồi) cần một trạng từ bổ nghĩa. 'quickly' (một cách nhanh chóng) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -55757,12 +55856,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_11",
     "question": "Silverline Insurance provides ______ coverage for homeowners in high-risk areas.",
     "options": {
-      "A": "extensive",
+      "A": "extending",
       "B": "extensively",
-      "C": "extension",
-      "D": "extending"
+      "C": "extensive",
+      "D": "extension"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước danh từ 'coverage' (phạm vi bảo hiểm) cần một tính từ. 'extensive' (rộng rãi, bao quát) là đáp án đúng.",
     "explanation_grammar": "Tính từ",
@@ -55785,11 +55884,11 @@ export const grammarQuestions = [
     "question": "The security guard checked the identification badges ______ before allowing entry.",
     "options": {
       "A": "careful",
-      "B": "carefully",
-      "C": "carefulness",
-      "D": "care"
+      "B": "carefulness",
+      "C": "care",
+      "D": "carefully"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau động từ thường 'checked' và tân ngữ 'the identification badges' cần trạng từ bổ nghĩa cho hành động kiểm tra. 'carefully' (một cách cẩn thận) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -55811,12 +55910,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_13",
     "question": "Employees must ensure that all confidential files are ______ locked in the cabinets.",
     "options": {
-      "A": "secure",
-      "B": "securely",
-      "C": "security",
-      "D": "securing"
+      "A": "security",
+      "B": "securing",
+      "C": "securely",
+      "D": "secure"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa 'are' và phân từ hai 'locked' cần một trạng từ để bổ nghĩa. 'securely' (một cách an toàn/chắc chắn) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -55838,10 +55937,10 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_14",
     "question": "The annual budget report was ______ accurate, despite the tight deadline.",
     "options": {
-      "A": "surprising",
+      "A": "surprised",
       "B": "surprisingly",
-      "C": "surprise",
-      "D": "surprised"
+      "C": "surprising",
+      "D": "surprise"
     },
     "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
@@ -55865,12 +55964,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_15",
     "question": "The marketing team’s ______ strategy led to a 20% increase in online engagement.",
     "options": {
-      "A": "creative",
-      "B": "creatively",
-      "C": "creativity",
+      "A": "creatively",
+      "B": "creativity",
+      "C": "creative",
       "D": "creativeness"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước danh từ 'strategy' (chiến lược) cần một tính từ bổ nghĩa. 'creative' (sáng tạo) là tính từ. (Lưu ý: Bạn chọn 'creativity' là danh từ, ghép thành 'creativity strategy' là không tự nhiên bằng 'creative strategy').",
     "explanation_grammar": "Tính từ",
@@ -55892,12 +55991,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_16",
     "question": "After the merger, the two companies functioned ______ under a single management team.",
     "options": {
-      "A": "smooth",
-      "B": "smoothly",
-      "C": "smoothness",
-      "D": "smoother"
+      "A": "smoothness",
+      "B": "smoother",
+      "C": "smooth",
+      "D": "smoothly"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau động từ thường 'functioned' (hoạt động) cần một trạng từ bổ nghĩa. 'smoothly' (một cách trơn tru, suôn sẻ) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -55919,12 +56018,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_17",
     "question": "The Dr. Miller clinic is ______ located near the city’s main public transportation hub.",
     "options": {
-      "A": "convenient",
-      "B": "conveniently",
-      "C": "convenience",
-      "D": "convening"
+      "A": "convening",
+      "B": "convenient",
+      "C": "conveniently",
+      "D": "convenience"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa 'is' và quá khứ phân từ 'located' cần một trạng từ bổ nghĩa. Cụm 'is conveniently located' (được đặt ở vị trí thuận tiện) rất phổ biến trong TOEIC. (Lưu ý: Bạn chọn 'convenient' là sai ngữ pháp ở vị trí này).",
     "explanation_grammar": "Trạng từ",
@@ -55947,11 +56046,11 @@ export const grammarQuestions = [
     "question": "Customer satisfaction at Bloom Cafe is ______ high because of the excellent service.",
     "options": {
       "A": "extreme",
-      "B": "extremely",
-      "C": "extremity",
-      "D": "extremism"
+      "B": "extremity",
+      "C": "extremism",
+      "D": "extremely"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng trước tính từ 'high' cần một trạng từ để bổ sung ý nghĩa mức độ. 'extremely' (cực kỳ) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -55973,12 +56072,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_19",
     "question": "The Lora-X tablet is ______ thin and lightweight, making it ideal for travel.",
     "options": {
-      "A": "incredible",
-      "B": "incredibly",
-      "C": "incredibility",
-      "D": "incredulous"
+      "A": "incredibility",
+      "B": "incredulous",
+      "C": "incredibly",
+      "D": "incredible"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước cụm tính từ 'thin and lightweight' cần một trạng từ chỉ mức độ để bổ nghĩa. 'incredibly' (khó tin/vô cùng) là trạng từ đúng.",
     "explanation_grammar": "Trạng từ",
@@ -56000,12 +56099,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_20",
     "question": "The legal team provided a ______ explanation of the new labor regulations.",
     "options": {
-      "A": "clarify",
-      "B": "clarity",
-      "C": "clear",
-      "D": "clearly"
+      "A": "clear",
+      "B": "clearly",
+      "C": "clarify",
+      "D": "clarity"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau mạo từ 'a' và trước danh từ 'explanation' cần một tính từ. 'clear' (rõ ràng) là tính từ.",
     "explanation_grammar": "Tính từ",
@@ -56054,12 +56153,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_22",
     "question": "The architect’s plans for the new office tower were ______ ambitious.",
     "options": {
-      "A": "highly",
-      "B": "high",
-      "C": "height",
-      "D": "heighten"
+      "A": "height",
+      "B": "heighten",
+      "C": "highly",
+      "D": "high"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng trước tính từ 'ambitious' cần một trạng từ để bổ sung ý nghĩa mức độ. 'highly' (rất, cao độ) là trạng từ phù hợp. (Lưu ý: 'high' chỉ là tính từ/trạng từ chỉ độ cao vật lý hoặc mức độ, nhưng với 'ambitious' ta dùng trạng từ 'highly').",
     "explanation_grammar": "Trạng từ",
@@ -56081,10 +56180,10 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_23",
     "question": "Guests at the Sterling Resort were ______ satisfied with the spa treatments provided.",
     "options": {
-      "A": "entire",
+      "A": "entitle",
       "B": "entirely",
-      "C": "entirety",
-      "D": "entitle"
+      "C": "entire",
+      "D": "entirety"
     },
     "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
@@ -56108,12 +56207,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_24",
     "question": "The finance committee meeting was ______ brief because the chairman had another appointment.",
     "options": {
-      "A": "unusual",
-      "B": "unusually",
+      "A": "unusually",
+      "B": "unusual",
       "C": "unusualness",
       "D": "unusable"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng trước tính từ 'brief' (ngắn gọn) cần một trạng từ để bổ nghĩa. 'unusually' (một cách khác thường) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -56135,12 +56234,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test10_25",
     "question": "The research department needs a ______ assistant to help with data entry tasks.",
     "options": {
-      "A": "reliability",
-      "B": "reliably",
-      "C": "reliable",
-      "D": "relying"
+      "A": "reliably",
+      "B": "reliable",
+      "C": "relying",
+      "D": "reliability"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau mạo từ 'a' và trước danh từ 'assistant' cần một tính từ. 'reliable' (đáng tin cậy) là tính từ phù hợp.",
     "explanation_grammar": "Tính từ",
@@ -56163,12 +56262,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_01",
     "question": "The financial advisor at Sterling Wealth suggested a ______ approach to investing in the current market.",
     "options": {
-      "A": "conservative",
-      "B": "conservatively",
-      "C": "conservatism",
-      "D": "conservation"
+      "A": "conservation",
+      "B": "conservative",
+      "C": "conservatively",
+      "D": "conservatism"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau mạo từ 'a' và trước danh từ 'approach' (cách tiếp cận) cần một tính từ. 'conservative' (thận trọng, bảo thủ) là đáp án đúng.",
     "explanation_grammar": "Tính từ",
@@ -56190,12 +56289,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_02",
     "question": "Software developers at Innotech are working ______ to fix the glitch in the mobile application.",
     "options": {
-      "A": "diligent",
-      "B": "diligently",
+      "A": "diligently",
+      "B": "diligent",
       "C": "diligence",
       "D": "diligentness"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau động từ thường 'are working' (đang làm việc) cần một trạng từ để bổ nghĩa cho hành động đó. 'diligently' (một cách chăm chỉ) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -56217,9 +56316,9 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_03",
     "question": "The management team at Kento Corp decided to offer a ______ bonus to employees this year.",
     "options": {
-      "A": "substantially",
-      "B": "substance",
-      "C": "substantiate",
+      "A": "substance",
+      "B": "substantiate",
+      "C": "substantially",
       "D": "substantial"
     },
     "correct_answer": "D",
@@ -56244,10 +56343,10 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_04",
     "question": "Guests found the new seating arrangement in the lobby of the Orion Hotel to be ______ comfortable.",
     "options": {
-      "A": "unusual",
+      "A": "unusable",
       "B": "unusually",
-      "C": "unusualness",
-      "D": "unusable"
+      "C": "unusual",
+      "D": "unusualness"
     },
     "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
@@ -56271,12 +56370,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_05",
     "question": "The Belmont Luxury Apartments are ______ located near the city's central business district.",
     "options": {
-      "A": "ideal",
-      "B": "ideally",
+      "A": "ideally",
+      "B": "ideal",
       "C": "idealism",
       "D": "idealize"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa động từ 'are' và quá khứ phân từ 'located' cần một trạng từ để bổ nghĩa. 'ideally' (một cách lý tưởng) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -56298,10 +56397,10 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_06",
     "question": "Dr. Patel's clinic provides ______ medical care for patients with chronic respiratory conditions.",
     "options": {
-      "A": "exceptionally",
-      "B": "exception",
+      "A": "exception",
+      "B": "excepting",
       "C": "exceptional",
-      "D": "excepting"
+      "D": "exceptionally"
     },
     "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
@@ -56325,12 +56424,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_07",
     "question": "The CEO of Vadafone spoke ______ during the press conference about the company's expansion plans.",
     "options": {
-      "A": "confident",
-      "B": "confidently",
+      "A": "confidential",
+      "B": "confident",
       "C": "confidence",
-      "D": "confidential"
+      "D": "confidently"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau động từ thường 'spoke' (nói) cần trạng từ để bổ nghĩa cách thức của hành động. 'confidently' (một cách tự tin) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -56352,12 +56451,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_08",
     "question": "The creative team’s ______ marketing campaign attracted thousands of new digital subscribers.",
     "options": {
-      "A": "innovatively",
-      "B": "innovation",
-      "C": "innovate",
-      "D": "innovative"
+      "A": "innovative",
+      "B": "innovatively",
+      "C": "innovation",
+      "D": "innovate"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước cụm danh từ 'marketing campaign' (chiến dịch tiếp thị) cần một tính từ. 'innovative' (đổi mới, sáng tạo) là tính từ.",
     "explanation_grammar": "Tính từ",
@@ -56379,12 +56478,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_09",
     "question": "Applicants for the executive assistant position must be ______ proficient in Microsoft Office Suite.",
     "options": {
-      "A": "high",
-      "B": "highly",
-      "C": "height",
-      "D": "heighten"
+      "A": "height",
+      "B": "heighten",
+      "C": "highly",
+      "D": "high"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước tính từ 'proficient' (thành thạo) cần một trạng từ chỉ mức độ. 'highly' (cao độ, rất) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -56406,10 +56505,10 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_10",
     "question": "The legal counsel recommended that the merger agreement be reviewed ______ by an independent auditor.",
     "options": {
-      "A": "thorough",
+      "A": "throughout",
       "B": "thoroughly",
-      "C": "thoroughness",
-      "D": "throughout"
+      "C": "thorough",
+      "D": "thoroughness"
     },
     "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
@@ -56433,12 +56532,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_11",
     "question": "Feedback from users indicates that the new banking interface is ______ easy to navigate.",
     "options": {
-      "A": "relative",
-      "B": "relatively",
+      "A": "relatively",
+      "B": "relative",
       "C": "relation",
       "D": "relativity"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước tính từ 'easy' (dễ dàng) cần một trạng từ để bổ sung ý nghĩa mức độ. 'relatively' (tương đối) là đáp án đúng.",
     "explanation_grammar": "Trạng từ",
@@ -56460,12 +56559,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_12",
     "question": "The system maintenance at the data center was ______ completed before the start of the business day.",
     "options": {
-      "A": "successful",
-      "B": "successfully",
-      "C": "success",
-      "D": "succeeding"
+      "A": "success",
+      "B": "succeeding",
+      "C": "successfully",
+      "D": "successful"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa trợ động từ 'was' và phân từ hai 'completed' cần một trạng từ bổ nghĩa. 'successfully' (một cách thành công) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -56488,9 +56587,9 @@ export const grammarQuestions = [
     "question": "Quarterly earnings for the Aris Group have remained ______ consistent over the last three years.",
     "options": {
       "A": "remarkably",
-      "B": "remarkable",
-      "C": "remark",
-      "D": "remarked"
+      "B": "remarked",
+      "C": "remarkable",
+      "D": "remark"
     },
     "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
@@ -56515,11 +56614,11 @@ export const grammarQuestions = [
     "question": "The head chef at Rialto Grill prepares every signature dish with ______ fresh ingredients.",
     "options": {
       "A": "extreme",
-      "B": "extremely",
-      "C": "extremity",
-      "D": "extremism"
+      "B": "extremity",
+      "C": "extremism",
+      "D": "extremely"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước tính từ 'fresh' (tươi) cần một trạng từ chỉ mức độ để nhấn mạnh. 'extremely' (cực kỳ) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -56541,10 +56640,10 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_15",
     "question": "The Lando Corporation is ______ seeking a qualified director for its human resources department.",
     "options": {
-      "A": "active",
+      "A": "activity",
       "B": "actively",
-      "C": "activity",
-      "D": "action"
+      "C": "action",
+      "D": "active"
     },
     "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
@@ -56568,12 +56667,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_16",
     "question": "Office space in the Zenith Tower is ______ expensive due to its prime location and amenities.",
     "options": {
-      "A": "extreme",
-      "B": "extremely",
-      "C": "extremity",
-      "D": "extremism"
+      "A": "extremely",
+      "B": "extremism",
+      "C": "extreme",
+      "D": "extremity"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước tính từ 'expensive' (đắt đỏ) cần trạng từ chỉ mức độ. 'extremely' (cực kỳ) là đáp án đúng.",
     "explanation_grammar": "Trạng từ",
@@ -56596,11 +56695,11 @@ export const grammarQuestions = [
     "question": "Patients are advised to follow the dosage instructions on the medication ______ to avoid side effects.",
     "options": {
       "A": "strict",
-      "B": "strictly",
-      "C": "strictness",
-      "D": "stricter"
+      "B": "strictness",
+      "C": "stricter",
+      "D": "strictly"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Động từ chính cần được bổ nghĩa là 'follow' (tuân theo). 'strictly' (một cách nghiêm ngặt) là trạng từ bổ nghĩa cho việc tuân theo.",
     "explanation_grammar": "Trạng từ",
@@ -56622,12 +56721,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_18",
     "question": "The new encryption software ensures that all sensitive client data is ______ protected.",
     "options": {
-      "A": "secure",
-      "B": "securely",
-      "C": "security",
-      "D": "securing"
+      "A": "securely",
+      "B": "security",
+      "C": "securing",
+      "D": "secure"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa 'is' và phân từ hai 'protected' (bảo vệ) cần trạng từ để bổ nghĩa. 'securely' (một cách an toàn) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -56649,12 +56748,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_19",
     "question": "The partnership between the two medical research firms was ______ beneficial for both parties.",
     "options": {
-      "A": "mutual",
-      "B": "mutually",
-      "C": "mutuality",
-      "D": "mutate"
+      "A": "mutate",
+      "B": "mutual",
+      "C": "mutually",
+      "D": "mutuality"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước tính từ 'beneficial' (có lợi) cần một trạng từ bổ nghĩa. Cụm 'mutually beneficial' (đôi bên cùng có lợi) rất thông dụng.",
     "explanation_grammar": "Trạng từ",
@@ -56677,11 +56776,11 @@ export const grammarQuestions = [
     "question": "The promotional video for the new smartphone was ______ well-received by the youth audience.",
     "options": {
       "A": "particular",
-      "B": "particularly",
-      "C": "particularity",
-      "D": "particularize"
+      "B": "particularity",
+      "C": "particularize",
+      "D": "particularly"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng trước tính từ ghép 'well-received' (được đón nhận tốt) cần trạng từ chỉ mức độ. 'particularly' (đặc biệt) là trạng từ phù hợp.",
     "explanation_grammar": "Trạng từ",
@@ -56703,10 +56802,10 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_21",
     "question": "Department managers must evaluate employee performance ______ to ensure fairness across the board.",
     "options": {
-      "A": "objective",
+      "A": "objectivity",
       "B": "objectively",
-      "C": "objectivity",
-      "D": "objection"
+      "C": "objection",
+      "D": "objective"
     },
     "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
@@ -56730,12 +56829,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_22",
     "question": "The annual shareholder meeting was ______ productive, resulting in several new strategic initiatives.",
     "options": {
-      "A": "extraordinary",
-      "B": "extraordinarily",
-      "C": "extraordinariness",
-      "D": "extra"
+      "A": "extra",
+      "B": "extraordinary",
+      "C": "extraordinarily",
+      "D": "extraordinariness"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước tính từ 'productive' (hiệu quả, năng suất) cần một trạng từ chỉ mức độ. 'extraordinarily' (đặc biệt, phi thường) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -56784,12 +56883,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_24",
     "question": "Upgrading the office hardware proved to be a ______ cost-effective solution for the small firm.",
     "options": {
-      "A": "highly",
-      "B": "high",
-      "C": "height",
-      "D": "heighten"
+      "A": "height",
+      "B": "heighten",
+      "C": "high",
+      "D": "highly"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước tính từ ghép 'cost-effective' (hiệu quả về chi phí) cần một trạng từ chỉ mức độ. 'highly' (rất) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -56811,12 +56910,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test11_25",
     "question": "The witness at the hearing provided a ______ detailed account of the events leading to the dispute.",
     "options": {
-      "A": "surprising",
-      "B": "surprisingly",
-      "C": "surprise",
-      "D": "surprised"
+      "A": "surprised",
+      "B": "surprising",
+      "C": "surprisingly",
+      "D": "surprise"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước tính từ 'detailed' (chi tiết) cần một trạng từ. 'surprisingly' (đáng ngạc nhiên) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -56839,12 +56938,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_01",
     "question": "The accounting software used by FinTrack Corp is ______ complex but offers many useful features.",
     "options": {
-      "A": "extremely",
-      "B": "extreme",
-      "C": "extremity",
+      "A": "extreme",
+      "B": "extremity",
+      "C": "extremely",
       "D": "extremism"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước tính từ 'complex' (phức tạp) cần một trạng từ chỉ mức độ. 'extremely' (cực kỳ) là đáp án đúng.",
     "explanation_grammar": "Trạng từ",
@@ -56866,12 +56965,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_02",
     "question": "The executive board members were ______ optimistic about the projected earnings for the next fiscal year.",
     "options": {
-      "A": "cautious",
-      "B": "cautiously",
-      "C": "caution",
-      "D": "cautionary"
+      "A": "cautiously",
+      "B": "caution",
+      "C": "cautionary",
+      "D": "cautious"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước tính từ 'optimistic' (lạc quan) cần một trạng từ để bổ sung ý nghĩa. 'cautiously optimistic' (lạc quan một cách thận trọng) là một cụm từ rất phổ biến.",
     "explanation_grammar": "Trạng từ",
@@ -56893,10 +56992,10 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_03",
     "question": "Bluegate Realty offers a ______ selection of luxury apartments in the city's waterfront district.",
     "options": {
-      "A": "broadly",
-      "B": "broadness",
+      "A": "broaden",
+      "B": "broadly",
       "C": "broad",
-      "D": "broaden"
+      "D": "broadness"
     },
     "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
@@ -56921,11 +57020,11 @@ export const grammarQuestions = [
     "question": "Technical support staff are required to explain the repair process ______ to every customer.",
     "options": {
       "A": "clear",
-      "B": "clearly",
-      "C": "clarity",
-      "D": "clarification"
+      "B": "clarity",
+      "C": "clarification",
+      "D": "clearly"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Động từ chính cần bổ nghĩa là 'explain' (giải thích). Trạng từ 'clearly' (một cách rõ ràng) dùng để mô tả cách thức giải thích.",
     "explanation_grammar": "Trạng từ",
@@ -56947,12 +57046,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_05",
     "question": "The marketing director was ______ impressed by the creative ideas presented by the junior interns.",
     "options": {
-      "A": "genuine",
-      "B": "genuinely",
-      "C": "genuineness",
-      "D": "genuines"
+      "A": "genuineness",
+      "B": "genuines",
+      "C": "genuinely",
+      "D": "genuine"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa 'was' và phân từ hai 'impressed' (bị ấn tượng) cần một trạng từ bổ nghĩa. 'genuinely' (thực sự, chân thành) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -56974,12 +57073,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_06",
     "question": "Dr. Han suggested a ______ health checkup for all employees to improve workplace wellness.",
     "options": {
-      "A": "comprehensive",
+      "A": "comprehend",
       "B": "comprehensively",
       "C": "comprehension",
-      "D": "comprehend"
+      "D": "comprehensive"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau mạo từ 'a' và trước cụm danh từ 'health checkup' cần một tính từ. 'comprehensive' (toàn diện) là tính từ.",
     "explanation_grammar": "Tính từ",
@@ -57028,12 +57127,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_08",
     "question": "Candidates who are ______ interested in the senior designer position should submit a portfolio.",
     "options": {
-      "A": "special",
-      "B": "specially",
-      "C": "especially",
-      "D": "specialty"
+      "A": "specially",
+      "B": "specialty",
+      "C": "special",
+      "D": "especially"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa 'are' và tính từ 'interested' cần một trạng từ chỉ mức độ. 'especially' (đặc biệt) phù hợp với ngữ cảnh 'đặc biệt quan tâm'.",
     "explanation_grammar": "Trạng từ",
@@ -57055,12 +57154,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_09",
     "question": "The new policy at Silver Lake Insurance is ______ designed to protect against digital identity theft.",
     "options": {
-      "A": "specific",
-      "B": "specifically",
-      "C": "specification",
-      "D": "specifying"
+      "A": "specifically",
+      "B": "specifying",
+      "C": "specific",
+      "D": "specification"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa 'is' và phân từ hai 'designed' cần một trạng từ. 'specifically' (một cách đặc biệt/dành riêng) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -57082,12 +57181,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_10",
     "question": "The architect’s ______ vision for the new museum received praise from the local community.",
     "options": {
-      "A": "creative",
-      "B": "creatively",
+      "A": "creatively",
+      "B": "creative",
       "C": "creativity",
       "D": "creativeness"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước danh từ 'vision' (tầm nhìn) cần một tính từ bổ nghĩa. 'creative' (sáng tạo) là tính từ. (Lưu ý: Bạn chọn 'creativity' là danh từ nên sai cấu trúc).",
     "explanation_grammar": "Tính từ",
@@ -57109,12 +57208,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_11",
     "question": "Most analysts agree that the current economic recovery is ______ slow but steady.",
     "options": {
-      "A": "relative",
-      "B": "relatively",
-      "C": "relativity",
-      "D": "relation"
+      "A": "relativity",
+      "B": "relation",
+      "C": "relative",
+      "D": "relatively"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước tính từ 'slow' (chậm) cần trạng từ chỉ mức độ. 'relatively' (tương đối) là đáp án đúng.",
     "explanation_grammar": "Trạng từ",
@@ -57136,12 +57235,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_12",
     "question": "The legal firm ______ handles all disputes involving intellectual property rights.",
     "options": {
-      "A": "expert",
-      "B": "expertly",
-      "C": "expertise",
-      "D": "expertness"
+      "A": "expertness",
+      "B": "expert",
+      "C": "expertly",
+      "D": "expertise"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng trước động từ thường 'handles' (xử lý) cần một trạng từ bổ nghĩa cho hành động đó. 'expertly' (một cách thành thạo, chuyên nghiệp) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -57163,12 +57262,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_13",
     "question": "High-quality customer service is ______ important for maintaining a positive brand reputation.",
     "options": {
-      "A": "vitality",
-      "B": "vitalize",
-      "C": "vitally",
+      "A": "vitally",
+      "B": "vitality",
+      "C": "vitalize",
       "D": "vital"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước tính từ 'important' (quan trọng) cần một trạng từ chỉ mức độ. 'vitally' (vô cùng, cực kỳ) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -57190,10 +57289,10 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_14",
     "question": "The restaurant manager was ______ concerned about the negative reviews on social media.",
     "options": {
-      "A": "deep",
+      "A": "depth",
       "B": "deeply",
-      "C": "depth",
-      "D": "deepen"
+      "C": "deepen",
+      "D": "deep"
     },
     "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
@@ -57218,9 +57317,9 @@ export const grammarQuestions = [
     "question": "The human resources department is looking for a ______ energetic person to lead the social committee.",
     "options": {
       "A": "highly",
-      "B": "high",
-      "C": "height",
-      "D": "heighten"
+      "B": "heighten",
+      "C": "high",
+      "D": "height"
     },
     "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
@@ -57244,12 +57343,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_16",
     "question": "The financial data provided in the report was ______ accurate and helped the team make a decision.",
     "options": {
-      "A": "entirely",
-      "B": "entire",
-      "C": "entirety",
-      "D": "entitle"
+      "A": "entire",
+      "B": "entirety",
+      "C": "entitle",
+      "D": "entirely"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng trước tính từ 'accurate' (chính xác) cần một trạng từ để bổ sung ý nghĩa mức độ. 'entirely' (hoàn toàn) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -57271,12 +57370,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_17",
     "question": "Tech-Core’s new tablet has a ______ sleek design that appeals to young professionals.",
     "options": {
-      "A": "notably",
-      "B": "notable",
-      "C": "noted",
-      "D": "notability"
+      "A": "noted",
+      "B": "notability",
+      "C": "notably",
+      "D": "notable"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau mạo từ 'a' và trước tính từ 'sleek' (kiểu dáng đẹp) cần trạng từ chỉ mức độ để bổ nghĩa. 'notably' (đáng kể, đáng chú ý) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -57298,12 +57397,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_18",
     "question": "The security team responded ______ when the fire alarm was triggered in the East Wing.",
     "options": {
-      "A": "immediate",
-      "B": "immediately",
+      "A": "immediateness",
+      "B": "immediate",
       "C": "immediacy",
-      "D": "immediateness"
+      "D": "immediately"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau động từ thường 'responded' (phản hồi) cần một trạng từ bổ nghĩa cho hành động đó. 'immediately' (ngay lập tức) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -57352,10 +57451,10 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_20",
     "question": "The renovation project for the city library was ______ more expensive than originally estimated.",
     "options": {
-      "A": "significance",
+      "A": "significant",
       "B": "significantly",
-      "C": "significant",
-      "D": "signification"
+      "C": "signification",
+      "D": "significance"
     },
     "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
@@ -57407,11 +57506,11 @@ export const grammarQuestions = [
     "question": "The customer service representative apologized ______ for the delay in processing the refund.",
     "options": {
       "A": "sincere",
-      "B": "sincerely",
-      "C": "sincerity",
-      "D": "sincerest"
+      "B": "sincerity",
+      "C": "sincerest",
+      "D": "sincerely"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau động từ thường 'apologized' (xin lỗi) cần một trạng từ chỉ cách thức. 'sincerely' (một cách chân thành) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -57433,12 +57532,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_23",
     "question": "The new office chairs were ______ chosen to provide maximum back support for employees.",
     "options": {
-      "A": "careful",
-      "B": "carefully",
-      "C": "carefulness",
-      "D": "care"
+      "A": "carefully",
+      "B": "carefulness",
+      "C": "care",
+      "D": "careful"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa trợ động từ 'were' và phân từ hai 'chosen' (được chọn) cần một trạng từ bổ nghĩa. 'carefully' (một cách cẩn thận) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -57460,12 +57559,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_24",
     "question": "The conference room was ______ decorated for the company’s 20th-anniversary celebration.",
     "options": {
-      "A": "beautiful",
-      "B": "beautifully",
-      "C": "beauty",
-      "D": "beautify"
+      "A": "beautify",
+      "B": "beautiful",
+      "C": "beautifully",
+      "D": "beauty"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa 'was' và phân từ hai 'decorated' cần trạng từ bổ nghĩa cho hành động trang trí. 'beautifully' (một cách đẹp đẽ) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -57487,12 +57586,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test12_25",
     "question": "Regular exercise is ______ beneficial for maintaining mental health during stressful work weeks.",
     "options": {
-      "A": "immensely",
-      "B": "immense",
+      "A": "immense",
+      "B": "immensely",
       "C": "immensity",
       "D": "immenseness"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng trước tính từ 'beneficial' (có lợi) cần một trạng từ chỉ mức độ. 'immensely' (cực kỳ, hết sức) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -57515,12 +57614,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_01",
     "question": "The Vanderbilt Group ensures that all financial reports are ______ before they are submitted to the board.",
     "options": {
-      "A": "sufficiency",
+      "A": "sufficient",
       "B": "sufficiently",
-      "C": "sufficient",
-      "D": "suffice"
+      "C": "suffice",
+      "D": "sufficiency"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau động từ to be 'are' cần một tính từ để mô tả trạng thái của 'financial reports'. 'sufficient' (đầy đủ) là tính từ.",
     "explanation_grammar": "Tính từ",
@@ -57542,10 +57641,10 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_02",
     "question": "The server at Apex Cloud will be ______ unavailable this Sunday due to scheduled system maintenance.",
     "options": {
-      "A": "temporary",
+      "A": "tempting",
       "B": "temporarily",
-      "C": "temporariness",
-      "D": "tempting"
+      "C": "temporary",
+      "D": "temporariness"
     },
     "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
@@ -57596,12 +57695,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_04",
     "question": "The head chef at The Gables is ______ talented at creating unique fusion dishes for weddings.",
     "options": {
-      "A": "exception",
-      "B": "exceptionally",
-      "C": "exceptional",
-      "D": "excepting"
+      "A": "exceptional",
+      "B": "excepting",
+      "C": "exception",
+      "D": "exceptionally"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước tính từ 'talented' (tài năng) cần một trạng từ chỉ mức độ. 'exceptionally' (đặc biệt, xuất chúng) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -57623,12 +57722,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_05",
     "question": "Digital marketing specialists at Nova Media are identifying ______ customers through social media analytics.",
     "options": {
-      "A": "potential",
-      "B": "potentially",
-      "C": "potency",
-      "D": "potentiality"
+      "A": "potentiality",
+      "B": "potential",
+      "C": "potentially",
+      "D": "potency"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước danh từ 'customers' cần một tính từ để tạo thành cụm danh từ. 'potential' (tiềm năng) là tính từ.",
     "explanation_grammar": "Tính từ",
@@ -57650,12 +57749,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_06",
     "question": "The software applications at MedTech Solutions are ______ checked for security vulnerabilities.",
     "options": {
-      "A": "periodic",
-      "B": "periodically",
+      "A": "periodically",
+      "B": "periodic",
       "C": "periodicity",
       "D": "period"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa 'are' và phân từ hai 'checked' (được kiểm tra) cần trạng từ bổ nghĩa cho tần suất của hành động. 'periodically' (một cách định kỳ) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -57677,10 +57776,10 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_07",
     "question": "Skyline Realty offers several ______ housing options for young professionals moving to the city center.",
     "options": {
-      "A": "afford",
-      "B": "affordability",
+      "A": "affordability",
+      "B": "affordably",
       "C": "affordable",
-      "D": "affordably"
+      "D": "afford"
     },
     "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
@@ -57704,12 +57803,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_08",
     "question": "The Regency Hotel is ______ located within walking distance of the city’s major financial district.",
     "options": {
-      "A": "convenience",
-      "B": "convenient",
-      "C": "conveniently",
-      "D": "convene"
+      "A": "conveniently",
+      "B": "convene",
+      "C": "convenience",
+      "D": "convenient"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa 'is' và phân từ 'located' cần trạng từ. 'is conveniently located' (được tọa lạc ở vị trí thuận tiện) là cụm từ TOEIC kinh điển.",
     "explanation_grammar": "Trạng từ",
@@ -57732,11 +57831,11 @@ export const grammarQuestions = [
     "question": "Management implemented a more ______ method of processing payroll to reduce administrative errors.",
     "options": {
       "A": "efficiently",
-      "B": "efficient",
-      "C": "efficiency",
+      "B": "efficiency",
+      "C": "efficient",
       "D": "efficiencies"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau mạo từ 'a', phó từ chỉ mức độ 'more' và trước danh từ 'method' cần tính từ. 'efficient' (hiệu quả) là tính từ.",
     "explanation_grammar": "Tính từ",
@@ -57758,10 +57857,10 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_10",
     "question": "The safety regulations at the Grant Laboratory are ______ enforced to prevent any workplace accidents.",
     "options": {
-      "A": "strictness",
+      "A": "strict",
       "B": "strictly",
-      "C": "strict",
-      "D": "stricter"
+      "C": "stricter",
+      "D": "strictness"
     },
     "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
@@ -57785,12 +57884,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_11",
     "question": "The instruction manual provides ______ steps on how to assemble the new ergonomic office chairs.",
     "options": {
-      "A": "detail",
-      "B": "detailed",
-      "C": "detailing",
-      "D": "details"
+      "A": "details",
+      "B": "detail",
+      "C": "detailed",
+      "D": "detailing"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước danh từ 'steps' (các bước) cần tính từ để bổ nghĩa. 'detailed' (chi tiết) là phân từ đóng vai trò như tính từ.",
     "explanation_grammar": "Tính từ",
@@ -57839,12 +57938,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_13",
     "question": "The marketing campaign was an ______ strategy that doubled the company's online subscription rate.",
     "options": {
-      "A": "effect",
-      "B": "effective",
-      "C": "effectively",
-      "D": "effectiveness"
+      "A": "effective",
+      "B": "effectively",
+      "C": "effectiveness",
+      "D": "effect"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau mạo từ 'an' và trước danh từ 'strategy' cần một tính từ. 'effective' (hiệu quả) là tính từ.",
     "explanation_grammar": "Tính từ",
@@ -57866,12 +57965,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_14",
     "question": "The renovation of the Harrison Building is ______ finished, with only minor painting tasks remaining.",
     "options": {
-      "A": "nearness",
-      "B": "near",
-      "C": "nearly",
-      "D": "nearing"
+      "A": "nearing",
+      "B": "nearly",
+      "C": "nearness",
+      "D": "near"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng trước tính từ/phân từ 'finished' (đã hoàn thành) cần một trạng từ chỉ mức độ. 'nearly' (gần như) là đáp án đúng.",
     "explanation_grammar": "Trạng từ",
@@ -57893,12 +57992,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_15",
     "question": "Mr. Choi presented an ______ portfolio of his architectural designs during the interview at ArchiPlan.",
     "options": {
-      "A": "impressively",
-      "B": "impression",
-      "C": "impressive",
+      "A": "impressive",
+      "B": "impressively",
+      "C": "impression",
       "D": "impress"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau mạo từ 'an' và trước danh từ 'portfolio' (hồ sơ năng lực) cần một tính từ. 'impressive' (ấn tượng) là tính từ.",
     "explanation_grammar": "Tính từ",
@@ -57920,12 +58019,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_16",
     "question": "Security patches for the Titan Operating System are ______ released to protect users from hackers.",
     "options": {
-      "A": "frequent",
-      "B": "frequently",
-      "C": "frequency",
-      "D": "frequenting"
+      "A": "frequency",
+      "B": "frequenting",
+      "C": "frequent",
+      "D": "frequently"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa 'are' và 'released' cần trạng từ bổ nghĩa cho tần suất của hành động. 'frequently' (một cách thường xuyên) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -57947,12 +58046,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_17",
     "question": "The new printer in the human resources office is known for its ______ performance and high speed.",
     "options": {
-      "A": "reliability",
-      "B": "reliably",
-      "C": "reliable",
-      "D": "rely"
+      "A": "rely",
+      "B": "reliable",
+      "C": "reliability",
+      "D": "reliably"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước danh từ 'performance' (hiệu suất) cần tính từ bổ nghĩa. 'reliable' (đáng tin cậy) là tính từ.",
     "explanation_grammar": "Tính từ",
@@ -57974,12 +58073,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_18",
     "question": "Before signing the lease agreement, please read the terms and conditions ______ to avoid future disputes.",
     "options": {
-      "A": "careful",
-      "B": "carefulness",
-      "C": "care",
-      "D": "carefully"
+      "A": "carefully",
+      "B": "careful",
+      "C": "carefulness",
+      "D": "care"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau động từ 'read' và tân ngữ 'the terms and conditions' cần một trạng từ chỉ cách thức. 'carefully' (một cách cẩn thận) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -58001,12 +58100,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_19",
     "question": "The ______ billing process at BlueStream Water saves customers time by charging their cards monthly.",
     "options": {
-      "A": "automatic",
-      "B": "automatically",
-      "C": "automation",
-      "D": "automating"
+      "A": "automation",
+      "B": "automatic",
+      "C": "automating",
+      "D": "automatically"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước cụm danh từ 'billing process' (quy trình thanh toán) cần một tính từ. 'automatic' (tự động) là tính từ.",
     "explanation_grammar": "Tính từ",
@@ -58028,12 +58127,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_20",
     "question": "The transition to the new cloud-based database went ______ thanks to the IT team's preparation.",
     "options": {
-      "A": "smooth",
-      "B": "smoothly",
+      "A": "smoother",
+      "B": "smooth",
       "C": "smoothness",
-      "D": "smoother"
+      "D": "smoothly"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau động từ thường 'went' (diễn ra) cần trạng từ chỉ cách thức. Cụm 'go smoothly' (diễn ra suôn sẻ) rất thông dụng.",
     "explanation_grammar": "Trạng từ",
@@ -58055,12 +58154,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_21",
     "question": "Technical support is ______ 24 hours a day to assist clients with any software-related issues.",
     "options": {
-      "A": "available",
-      "B": "availability",
+      "A": "availability",
+      "B": "available",
       "C": "availably",
       "D": "avail"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Sau động từ to be 'is' cần một tính từ chỉ trạng thái. 'available' (có sẵn, sẵn sàng) là đáp án đúng.",
     "explanation_grammar": "Tính từ",
@@ -58082,10 +58181,10 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_22",
     "question": "The board of directors ______ disagreed with the proposal to reduce the annual research budget.",
     "options": {
-      "A": "strong",
-      "B": "strength",
+      "A": "strength",
+      "B": "strongest",
       "C": "strongly",
-      "D": "strongest"
+      "D": "strong"
     },
     "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
@@ -58109,12 +58208,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_23",
     "question": "The ______ cost of the office expansion project exceeded the initial estimate by ten percent.",
     "options": {
-      "A": "total",
+      "A": "totaling",
       "B": "totally",
       "C": "totality",
-      "D": "totaling"
+      "D": "total"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước danh từ 'cost' (chi phí) cần tính từ để bổ nghĩa. 'total' (tổng số, toàn bộ) là tính từ.",
     "explanation_grammar": "Tính từ",
@@ -58137,11 +58236,11 @@ export const grammarQuestions = [
     "question": "Employees must ensure that all lab equipment is ______ sanitized after each use.",
     "options": {
       "A": "proper",
-      "B": "properly",
-      "C": "property",
+      "B": "property",
+      "C": "properly",
       "D": "propriety"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng giữa 'is' và phân từ hai 'sanitized' (được khử trùng) cần một trạng từ bổ nghĩa. 'properly' (một cách đúng đắn, thích hợp) là trạng từ.",
     "explanation_grammar": "Trạng từ",
@@ -58163,12 +58262,12 @@ export const grammarQuestions = [
     "id": "q_adjadv_test13_25",
     "question": "The candidate must meet ______ requirements, including five years of experience in financial auditing.",
     "options": {
-      "A": "specify",
-      "B": "specific",
-      "C": "specifically",
-      "D": "specification"
+      "A": "specifically",
+      "B": "specification",
+      "C": "specify",
+      "D": "specific"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Trước danh từ 'requirements' (các yêu cầu) cần tính từ bổ nghĩa. 'specific' (cụ thể, riêng biệt) là tính từ.",
     "explanation_grammar": "Tính từ",
@@ -58192,9 +58291,9 @@ export const grammarQuestions = [
     "question": "Mr. Henderson must complete the final draft of the quarterly budget report ______ Friday afternoon.",
     "options": {
       "A": "By",
-      "B": "Until",
-      "C": "During",
-      "D": "After"
+      "B": "During",
+      "C": "After",
+      "D": "Until"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -58218,12 +58317,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test9_02",
     "question": "The international marketing seminar will be held ______ the Grand Hall of the Clarion Hotel.",
     "options": {
-      "A": "at",
+      "A": "from",
       "B": "on",
-      "C": "to",
-      "D": "from"
+      "C": "at",
+      "D": "to"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'At' được dùng cho các địa điểm cụ thể hoặc các sự kiện tại một địa điểm.",
     "explanation_grammar": "Giới từ chỉ địa điểm",
@@ -58245,12 +58344,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test9_03",
     "question": "______ the sudden power outage, all computers in the IT department were shut down immediately.",
     "options": {
-      "A": "Because of",
-      "B": "Although",
-      "C": "Instead of",
-      "D": "As well as"
+      "A": "Although",
+      "B": "Instead of",
+      "C": "As well as",
+      "D": "Because of"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Because of' là giới từ chỉ nguyên nhân, theo sau là một cụm danh từ. 'Although' theo sau là một mệnh đề.",
     "explanation_grammar": "Giới từ chỉ nguyên nhân",
@@ -58272,12 +58371,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test9_04",
     "question": "Ms. Tanaka has worked as a senior consultant at Zenith Solutions ______ over ten years.",
     "options": {
-      "A": "for",
-      "B": "since",
-      "C": "during",
-      "D": "by"
+      "A": "during",
+      "B": "for",
+      "C": "by",
+      "D": "since"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'For' dùng để chỉ một khoảng thời gian. 'Since' dùng để chỉ một mốc thời gian.",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -58300,9 +58399,9 @@ export const grammarQuestions = [
     "question": "The medical clinic is open every day from 9:00 A.M. to 5:00 P.M. ______ on public holidays.",
     "options": {
       "A": "except",
-      "B": "until",
-      "C": "without",
-      "D": "besides"
+      "B": "besides",
+      "C": "until",
+      "D": "without"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -58321,12 +58420,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test9_06",
     "question": "All employees are required to sign the confidentiality agreement ______ starting their first day of work.",
     "options": {
-      "A": "prior to",
-      "B": "according to",
+      "A": "according to",
+      "B": "prior to",
       "C": "in front of",
       "D": "instead of"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Prior to' đồng nghĩa với 'before', nghĩa là 'trước khi'.",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -58348,12 +58447,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test9_07",
     "question": "The company’s new security policy will be implemented ______ all branches across Europe.",
     "options": {
-      "A": "throughout",
-      "B": "between",
-      "C": "along",
-      "D": "across"
+      "A": "along",
+      "B": "across",
+      "C": "between",
+      "D": "throughout"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Throughout' dùng để chỉ sự bao phủ toàn bộ một không gian hoặc khu vực.",
     "explanation_grammar": "Giới từ chỉ vị trí/không gian",
@@ -58376,9 +58475,9 @@ export const grammarQuestions = [
     "question": "The renovation of the employee lounge is expected to continue ______ the end of the month.",
     "options": {
       "A": "until",
-      "B": "by",
-      "C": "at",
-      "D": "during"
+      "B": "during",
+      "C": "by",
+      "D": "at"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -58402,12 +58501,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test9_09",
     "question": "Mr. Patel was recognized with a special award ______ his exceptional leadership during the merger.",
     "options": {
-      "A": "for",
-      "B": "about",
-      "C": "against",
+      "A": "about",
+      "B": "against",
+      "C": "for",
       "D": "within"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'For' ở đây dùng để chỉ lý do được nhận phần thưởng.",
     "explanation_grammar": "Giới từ chỉ mục đích/nguyên nhân",
@@ -58430,9 +58529,9 @@ export const grammarQuestions = [
     "question": "Guests are kindly asked to keep their mobile phones on silent mode ______ the keynote presentation.",
     "options": {
       "A": "during",
-      "B": "while",
-      "C": "between",
-      "D": "from"
+      "B": "between",
+      "C": "from",
+      "D": "while"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -58456,12 +58555,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test9_11",
     "question": "Detailed information regarding the new health insurance plan is available ______ the company’s internal website.",
     "options": {
-      "A": "on",
+      "A": "into",
       "B": "at",
-      "C": "throughout",
-      "D": "into"
+      "C": "on",
+      "D": "throughout"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "Dùng 'on' cho các bề mặt, phương tiện truyền thông hoặc website.",
     "explanation_grammar": "Giới từ chỉ vị trí",
@@ -58505,12 +58604,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test9_13",
     "question": "______ the heavy rain, the outdoor corporate team-building event was considered a great success.",
     "options": {
-      "A": "Despite",
-      "B": "Because",
-      "C": "Although",
-      "D": "However"
+      "A": "Although",
+      "B": "Despite",
+      "C": "However",
+      "D": "Because"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Despite' là giới từ chỉ sự nhượng bộ (mặc dù), theo sau là danh từ. 'Although' là liên từ, theo sau là mệnh đề.",
     "explanation_grammar": "Giới từ chỉ sự nhượng bộ",
@@ -58527,12 +58626,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test9_14",
     "question": "Dr. Arisawa will review the laboratory results ______ meeting with the patient tomorrow morning.",
     "options": {
-      "A": "before",
+      "A": "over",
       "B": "during",
       "C": "since",
-      "D": "over"
+      "D": "before"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Before' chỉ thứ tự thời gian (trước khi).",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -58549,12 +58648,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test9_15",
     "question": "The new branch office is located conveniently ______ the train station and the city park.",
     "options": {
-      "A": "between",
-      "B": "among",
+      "A": "among",
+      "B": "between",
       "C": "along",
       "D": "through"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Between' dùng cho hai đối tượng. 'Among' dùng cho ba đối tượng trở lên.",
     "explanation_grammar": "Giới từ chỉ vị trí",
@@ -58572,9 +58671,9 @@ export const grammarQuestions = [
     "question": "Ms. Dubois decided to pursue an MBA degree ______ working in the finance sector for five years.",
     "options": {
       "A": "after",
-      "B": "before",
-      "C": "while",
-      "D": "during"
+      "B": "while",
+      "C": "during",
+      "D": "before"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -58598,12 +58697,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test9_17",
     "question": "The IT department will be monitoring the network traffic ______ the entire maintenance weekend.",
     "options": {
-      "A": "throughout",
-      "B": "between",
-      "C": "among",
-      "D": "along"
+      "A": "along",
+      "B": "throughout",
+      "C": "between",
+      "D": "among"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Throughout' chỉ sự xuyên suốt một khoảng thời gian.",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -58647,12 +58746,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test9_19",
     "question": "The stock price of Nexa Corporation has been rising steadily ______ the new CEO took office.",
     "options": {
-      "A": "since",
-      "B": "for",
-      "C": "during",
-      "D": "by"
+      "A": "during",
+      "B": "by",
+      "C": "for",
+      "D": "since"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Since' chỉ mốc thời gian bắt đầu một hành động kéo dài đến hiện tại (thường dùng với thì hiện tại hoàn thành).",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -58674,12 +58773,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test9_20",
     "question": "The morning flight to Singapore was delayed ______ a technical issue with the aircraft's engine.",
     "options": {
-      "A": "due to",
+      "A": "instead of",
       "B": "because",
-      "C": "despite",
-      "D": "instead of"
+      "C": "due to",
+      "D": "despite"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Due to' là giới từ chỉ nguyên nhân, theo sau là danh từ.",
     "explanation_grammar": "Giới từ chỉ nguyên nhân",
@@ -58696,12 +58795,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test9_21",
     "question": "The marketing team has developed several effective digital strategies ______ the past few months.",
     "options": {
-      "A": "over",
-      "B": "during",
-      "C": "by",
-      "D": "at"
+      "A": "during",
+      "B": "by",
+      "C": "at",
+      "D": "over"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Over the past/last + thời gian' là cụm từ cố định chỉ một khoảng thời gian kéo dài đến hiện tại.",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -58718,12 +58817,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test9_22",
     "question": "There is a growing concern ______ the staff about the proposed changes to the pension plan.",
     "options": {
-      "A": "among",
-      "B": "between",
-      "C": "throughout",
-      "D": "across"
+      "A": "throughout",
+      "B": "among",
+      "C": "across",
+      "D": "between"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Among' chỉ sự tồn tại hoặc xảy ra trong một nhóm người (từ 3 trở lên).",
     "explanation_grammar": "Giới từ chỉ vị trí/đối tượng",
@@ -58745,12 +58844,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test9_23",
     "question": "Please remember to turn off all lights and electronic devices ______ leaving the office each evening.",
     "options": {
-      "A": "before",
+      "A": "until",
       "B": "after",
-      "C": "during",
-      "D": "until"
+      "C": "before",
+      "D": "during"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Before' chỉ trình tự thời gian (trước khi).",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -58767,12 +58866,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test9_24",
     "question": "We decided to use local suppliers ______ importing materials from overseas to reduce overall costs.",
     "options": {
-      "A": "instead of",
-      "B": "together with",
-      "C": "according to",
-      "D": "as well as"
+      "A": "together with",
+      "B": "according to",
+      "C": "as well as",
+      "D": "instead of"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Instead of' chỉ sự thay thế (thay vì).",
     "explanation_grammar": "Giới từ chỉ sự lựa chọn",
@@ -58794,12 +58893,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test9_25",
     "question": "Professor Nguyen will deliver the keynote speech ______ the upcoming technology summit in Seoul.",
     "options": {
-      "A": "at",
-      "B": "on",
-      "C": "with",
-      "D": "from"
+      "A": "with",
+      "B": "from",
+      "C": "at",
+      "D": "on"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'At' dùng cho các sự kiện hoặc hội nghị.",
     "explanation_grammar": "Giới từ chỉ địa điểm/sự kiện",
@@ -58822,12 +58921,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_26",
     "question": "Ms. Larson has been a key asset to the legal firm ______ the merger was finalized last April.",
     "options": {
-      "A": "since",
+      "A": "until",
       "B": "for",
-      "C": "during",
-      "D": "until"
+      "C": "since",
+      "D": "during"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Since' dùng để chỉ mốc thời gian bắt đầu một hành động kéo dài đến hiện tại (thì hiện tại hoàn thành).",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -58849,12 +58948,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_27",
     "question": "Please place all completed expense reports ______ the tray located on the receptionist's desk.",
     "options": {
-      "A": "in",
-      "B": "at",
-      "C": "to",
-      "D": "by"
+      "A": "at",
+      "B": "to",
+      "C": "by",
+      "D": "in"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'In' dùng để chỉ vị trí bên trong một vật chứa (cái khay).",
     "explanation_grammar": "Giới từ chỉ vị trí",
@@ -58877,9 +58976,9 @@ export const grammarQuestions = [
     "question": "All staff members are required to wear their identification badges ______ all times while on company premises.",
     "options": {
       "A": "at",
-      "B": "on",
-      "C": "during",
-      "D": "with"
+      "B": "during",
+      "C": "with",
+      "D": "on"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -58898,12 +58997,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_29",
     "question": "The board of directors will vote on the proposed international expansion ______ the next scheduled meeting.",
     "options": {
-      "A": "at",
-      "B": "in",
-      "C": "to",
-      "D": "for"
+      "A": "for",
+      "B": "at",
+      "C": "in",
+      "D": "to"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'At' dùng cho các sự kiện hoặc cuộc họp.",
     "explanation_grammar": "Giới từ chỉ địa điểm/sự kiện",
@@ -58947,12 +59046,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_31",
     "question": "Mr. Ishikawa was promoted to Senior Manager ______ his outstanding contributions to the cloud computing project.",
     "options": {
-      "A": "because of",
-      "B": "instead of",
-      "C": "in spite of",
-      "D": "as well as"
+      "A": "in spite of",
+      "B": "because of",
+      "C": "as well as",
+      "D": "instead of"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Because of' chỉ nguyên nhân dẫn đến việc được thăng chức.",
     "explanation_grammar": "Giới từ chỉ nguyên nhân",
@@ -58975,9 +59074,9 @@ export const grammarQuestions = [
     "question": "The hotel provides a complimentary shuttle service ______ the international airport and the main entrance.",
     "options": {
       "A": "between",
-      "B": "among",
-      "C": "across",
-      "D": "throughout"
+      "B": "throughout",
+      "C": "among",
+      "D": "across"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -59001,12 +59100,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_33",
     "question": "______ the high demand for the new smartphone, the flagship store has limited purchases to one per customer.",
     "options": {
-      "A": "Due to",
-      "B": "Although",
-      "C": "Even if",
-      "D": "Despite"
+      "A": "Although",
+      "B": "Even if",
+      "C": "Despite",
+      "D": "Due to"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Due to' chỉ nguyên nhân, theo sau là cụm danh từ.",
     "explanation_grammar": "Giới từ chỉ nguyên nhân",
@@ -59028,12 +59127,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_34",
     "question": "The CEO will be out of the office ______ the remainder of the week to attend a conference in Geneva.",
     "options": {
-      "A": "for",
-      "B": "during",
-      "C": "since",
-      "D": "at"
+      "A": "since",
+      "B": "at",
+      "C": "for",
+      "D": "during"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'For' dùng để chỉ khoảng thời gian kéo dài (trong suốt phần còn lại của tuần).",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -59050,12 +59149,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_35",
     "question": "Applicants are requested to submit a digital portfolio of their work ______ their professional resume.",
     "options": {
-      "A": "along with",
+      "A": "outside of",
       "B": "in front of",
       "C": "except for",
-      "D": "outside of"
+      "D": "along with"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Along with' nghĩa là 'cùng với' hoặc 'kèm theo'.",
     "explanation_grammar": "Giới từ chỉ sự đi kèm",
@@ -59072,12 +59171,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_36",
     "question": "The staff cafeteria is conveniently located ______ the third floor, right next to the employee fitness center.",
     "options": {
-      "A": "on",
-      "B": "at",
-      "C": "in",
+      "A": "at",
+      "B": "in",
+      "C": "on",
       "D": "to"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "Dùng 'on' cho các tầng của tòa nhà.",
     "explanation_grammar": "Giới từ chỉ vị trí",
@@ -59094,12 +59193,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_37",
     "question": "______ the unexpected resignation of the lead designer, the project timeline has been adjusted significantly.",
     "options": {
-      "A": "Following",
-      "B": "Between",
-      "C": "Among",
-      "D": "Across"
+      "A": "Among",
+      "B": "Following",
+      "C": "Across",
+      "D": "Between"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Following' đóng vai trò giới từ có nghĩa là 'sau khi' hoặc 'theo sau sự kiện nào đó'.",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -59121,12 +59220,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_38",
     "question": "Ms. Zhao has been searching for a more spacious office suite ______ the downtown business district.",
     "options": {
-      "A": "within",
+      "A": "along",
       "B": "throughout",
       "C": "between",
-      "D": "along"
+      "D": "within"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Within' dùng để chỉ phạm vi bên trong một khu vực.",
     "explanation_grammar": "Giới từ chỉ vị trí/không gian",
@@ -59175,12 +59274,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_40",
     "question": "The bank's main branch will remain closed ______ further notice while the security system is being upgraded.",
     "options": {
-      "A": "until",
-      "B": "by",
-      "C": "for",
-      "D": "during"
+      "A": "for",
+      "B": "during",
+      "C": "until",
+      "D": "by"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Until further notice' là một cụm từ cố định có nghĩa là 'cho đến khi có thông báo mới'.",
     "explanation_grammar": "Cụm giới từ cố định",
@@ -59197,12 +59296,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_41",
     "question": "All laboratory equipment must be handled with extreme care ______ the duration of the experiment.",
     "options": {
-      "A": "during",
-      "B": "while",
-      "C": "between",
-      "D": "since"
+      "A": "since",
+      "B": "during",
+      "C": "while",
+      "D": "between"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'During' chỉ một khoảng thời gian diễn ra sự việc, theo sau là danh từ.",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -59219,12 +59318,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_42",
     "question": "The annual charity gala, which honors local philanthropists, will take place ______ Saturday, October 12th.",
     "options": {
-      "A": "on",
-      "B": "in",
-      "C": "at",
-      "D": "for"
+      "A": "in",
+      "B": "at",
+      "C": "for",
+      "D": "on"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "Dùng 'on' cho thứ và ngày cụ thể.",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -59241,12 +59340,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_43",
     "question": "______ the recent market fluctuations, the company's long-term investment portfolio remains remarkably stable.",
     "options": {
-      "A": "Despite",
-      "B": "Because",
-      "C": "Although",
-      "D": "However"
+      "A": "Although",
+      "B": "However",
+      "C": "Despite",
+      "D": "Because"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Despite' chỉ sự nhượng bộ, theo sau là cụm danh từ.",
     "explanation_grammar": "Giới từ chỉ sự nhượng bộ",
@@ -59269,9 +59368,9 @@ export const grammarQuestions = [
     "question": "Mr. Kim has been appointed as the new head of the research department ______ his extensive experience in the field.",
     "options": {
       "A": "for",
-      "B": "at",
-      "C": "to",
-      "D": "with"
+      "B": "with",
+      "C": "at",
+      "D": "to"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -59295,12 +59394,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_45",
     "question": "Please ensure that all sensitive documents are stored ______ a locked filing cabinet before you leave.",
     "options": {
-      "A": "inside",
-      "B": "among",
-      "C": "between",
-      "D": "along"
+      "A": "among",
+      "B": "between",
+      "C": "along",
+      "D": "inside"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Inside' chỉ vị trí bên trong một không gian khép kín.",
     "explanation_grammar": "Giới từ chỉ vị trí",
@@ -59322,12 +59421,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_46",
     "question": "The legal department is currently reviewing the specific terms and conditions ______ the new lease agreement.",
     "options": {
-      "A": "of",
-      "B": "to",
-      "C": "at",
-      "D": "for"
+      "A": "at",
+      "B": "of",
+      "C": "for",
+      "D": "to"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Terms and conditions of something' là cụm từ chỉ các điều khoản của một thỏa thuận.",
     "explanation_grammar": "Giới từ chỉ sự sở hữu/thuộc về",
@@ -59344,12 +59443,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_47",
     "question": "Members of the marketing team will travel to Paris ______ a series of intensive client meetings.",
     "options": {
-      "A": "for",
+      "A": "on",
       "B": "at",
-      "C": "to",
-      "D": "on"
+      "C": "for",
+      "D": "to"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'For' chỉ mục đích của chuyến đi.",
     "explanation_grammar": "Giới từ chỉ mục đích",
@@ -59366,12 +59465,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_48",
     "question": "The city council is considering building a new public library ______ the historic district.",
     "options": {
-      "A": "near",
-      "B": "between",
+      "A": "between",
+      "B": "near",
       "C": "among",
       "D": "throughout"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Near' chỉ sự gần gũi về khoảng cách địa lý.",
     "explanation_grammar": "Giới từ chỉ vị trí",
@@ -59389,9 +59488,9 @@ export const grammarQuestions = [
     "question": "______ the upcoming national holiday, the corporate headquarters will close early this Friday.",
     "options": {
       "A": "Because of",
-      "B": "Instead of",
-      "C": "As well as",
-      "D": "Together with"
+      "B": "As well as",
+      "C": "Together with",
+      "D": "Instead of"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -59410,12 +59509,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test10_50",
     "question": "We are pleased to announce that Ms. Miller has been chosen ______ the prestigious Employee of the Year award.",
     "options": {
-      "A": "for",
-      "B": "at",
-      "C": "to",
-      "D": "with"
+      "A": "with",
+      "B": "for",
+      "C": "at",
+      "D": "to"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Choose for something' chỉ mục tiêu được lựa chọn cho một phần thưởng.",
     "explanation_grammar": "Giới từ chỉ mục đích",
@@ -59433,12 +59532,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_51",
     "question": "The seminar on digital security will take place ______ the fourth-floor conference room.",
     "options": {
-      "A": "at",
-      "B": "on",
-      "C": "to",
-      "D": "into"
+      "A": "on",
+      "B": "to",
+      "C": "into",
+      "D": "at"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'At' dùng để chỉ một địa điểm cụ thể bên trong một tòa nhà.",
     "explanation_grammar": "Giới từ chỉ địa điểm",
@@ -59456,9 +59555,9 @@ export const grammarQuestions = [
     "question": "All reimbursement requests must be signed by the department head ______ being processed by accounting.",
     "options": {
       "A": "before",
-      "B": "during",
-      "C": "since",
-      "D": "until"
+      "B": "since",
+      "C": "until",
+      "D": "during"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -59482,12 +59581,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_53",
     "question": "The marketing team will be working on the new campaign ______ the entire month of July.",
     "options": {
-      "A": "throughout",
+      "A": "across",
       "B": "between",
-      "C": "along",
-      "D": "across"
+      "C": "throughout",
+      "D": "along"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Throughout' dùng để chỉ sự xuyên suốt một khoảng thời gian.",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -59531,12 +59630,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_55",
     "question": "The retail store saw a significant increase in sales ______ the introduction of the loyalty program.",
     "options": {
-      "A": "following",
-      "B": "between",
-      "C": "among",
-      "D": "across"
+      "A": "among",
+      "B": "following",
+      "C": "across",
+      "D": "between"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Following' ở đây đóng vai trò giới từ có nghĩa là 'sau khi' hoặc 'do hệ quả của'.",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -59559,9 +59658,9 @@ export const grammarQuestions = [
     "question": "Please ensure that all electronic devices are disconnected from the power source ______ the weekend.",
     "options": {
       "A": "over",
-      "B": "by",
-      "C": "at",
-      "D": "onto"
+      "B": "onto",
+      "C": "by",
+      "D": "at"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -59580,12 +59679,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_57",
     "question": "Mr. Thompson was praised by the board ______ his innovative approach to cost reduction.",
     "options": {
-      "A": "for",
-      "B": "about",
-      "C": "against",
+      "A": "about",
+      "B": "against",
+      "C": "for",
       "D": "within"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Praise someone for something' nghĩa là khen ngợi ai về việc gì.",
     "explanation_grammar": "Giới từ đi kèm động từ",
@@ -59608,9 +59707,9 @@ export const grammarQuestions = [
     "question": "The corporate headquarters is located ______ the intersection of Broadway and Main Street.",
     "options": {
       "A": "at",
-      "B": "on",
-      "C": "in",
-      "D": "to"
+      "B": "in",
+      "C": "to",
+      "D": "on"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -59629,12 +59728,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_59",
     "question": "The technical support team is available 24 hours a day to assist customers ______ their software issues.",
     "options": {
-      "A": "with",
+      "A": "for",
       "B": "to",
       "C": "at",
-      "D": "for"
+      "D": "with"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Assist someone with something' nghĩa là hỗ trợ ai đó về việc gì.",
     "explanation_grammar": "Giới từ đi kèm động từ",
@@ -59651,14 +59750,14 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_60",
     "question": "New employees are required to attend an orientation session ______ their first week of employment.",
     "options": {
-      "A": "during",
-      "B": "while",
-      "C": "between",
-      "since": "since"
+    "A": "while",
+    "B": "between",
+    "C": "during",
+    "D": "since"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
-    "explanation_reason": "'During' chỉ một khoảng thời gian, theo sau là cụm danh từ.",
+    "explanation_reason": "Sau chỗ trống là cụm danh từ 'their first week of employment' nên cần giới từ 'during' (trong suốt). 'While' là liên từ phải đi với mệnh đề; 'between' cần cấu trúc between A and B; 'since' chỉ mốc bắt đầu tính tới hiện tại.",
     "explanation_grammar": "Giới từ chỉ thời gian",
     "translation": "Nhân viên mới được yêu cầu tham dự một buổi định hướng trong tuần làm việc đầu tiên của họ.",
     "core_vocabulary": [
@@ -59678,12 +59777,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_61",
     "question": "The final report should be submitted to the director ______ no later than 5:00 P.M. today.",
     "options": {
-      "A": "by",
-      "B": "until",
-      "C": "for",
-      "D": "at"
+      "A": "for",
+      "B": "by",
+      "C": "at",
+      "D": "until"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'By' dùng để chỉ thời hạn cuối cùng (deadline).",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -59701,9 +59800,9 @@ export const grammarQuestions = [
     "question": "There has been a high level of cooperation ______ the different departments during the restructuring.",
     "options": {
       "A": "among",
-      "B": "between",
-      "C": "throughout",
-      "D": "across"
+      "B": "across",
+      "C": "between",
+      "D": "throughout"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -59727,12 +59826,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_63",
     "question": "______ the high cost of rent in the city center, many small businesses are moving to the suburbs.",
     "options": {
-      "A": "Due to",
-      "B": "Although",
-      "C": "Even though",
-      "D": "Despite"
+      "A": "Although",
+      "B": "Even though",
+      "C": "Despite",
+      "D": "Due to"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Due to' chỉ nguyên nhân, theo sau là cụm danh từ.",
     "explanation_grammar": "Giới từ chỉ nguyên nhân",
@@ -59749,12 +59848,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_64",
     "question": "The hotel’s fitness center is available ______ all guests at no additional charge.",
     "options": {
-      "A": "to",
-      "B": "for",
-      "C": "at",
-      "D": "with"
+      "A": "at",
+      "B": "with",
+      "C": "to",
+      "D": "for"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Available to someone' nghĩa là sẵn sàng để ai đó sử dụng.",
     "explanation_grammar": "Giới từ đi kèm tính từ",
@@ -59771,12 +59870,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_65",
     "question": "Ms. Foster has been the lead researcher at the institute ______ its founding in 2015.",
     "options": {
-      "A": "since",
-      "B": "for",
-      "C": "during",
-      "D": "until"
+      "A": "until",
+      "B": "since",
+      "C": "for",
+      "D": "during"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Since' chỉ mốc thời gian bắt đầu hành động trong quá khứ kéo dài đến hiện tại.",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -59798,12 +59897,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_66",
     "question": "Most of the participants were very impressed ______ the quality of the keynote speech.",
     "options": {
-      "A": "by",
-      "B": "at",
-      "C": "on",
+      "A": "at",
+      "B": "on",
+      "C": "by",
       "D": "to"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Impressed by something' là cấu trúc bị động chỉ sự bị ấn tượng bởi cái gì.",
     "explanation_grammar": "Giới từ đi kèm tính từ/phân từ",
@@ -59820,12 +59919,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_67",
     "question": "The office will be closed for renovations from Monday ______ Wednesday of next week.",
     "options": {
-      "A": "through",
-      "B": "between",
-      "C": "along",
-      "D": "across"
+      "A": "along",
+      "B": "through",
+      "C": "across",
+      "D": "between"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'From... through...' chỉ một khoảng thời gian bao gồm cả điểm kết thúc (đến hết).",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -59842,12 +59941,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_68",
     "question": "Please keep all receipts ______ travel expenses so that you can be properly reimbursed.",
     "options": {
-      "A": "for",
+      "A": "with",
       "B": "at",
       "C": "to",
-      "D": "with"
+      "D": "for"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Receipt for something' là cụm từ chỉ hóa đơn cho việc gì.",
     "explanation_grammar": "Giới từ đi kèm danh từ",
@@ -59864,12 +59963,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_69",
     "question": "The architectural firm has designed several award-winning buildings ______ the metropolitan area.",
     "options": {
-      "A": "across",
-      "B": "between",
+      "A": "between",
+      "B": "across",
       "C": "among",
       "D": "along"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Across' chỉ sự bao phủ trên một diện rộng (khắp khu vực đô thị).",
     "explanation_grammar": "Giới từ chỉ vị trí/không gian",
@@ -59886,12 +59985,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_70",
     "question": "______ the unexpected budget cuts, the department was still able to hire two new interns.",
     "options": {
-      "A": "Despite",
-      "B": "Because",
-      "C": "Although",
-      "D": "However"
+      "A": "Although",
+      "B": "However",
+      "C": "Because",
+      "D": "Despite"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Despite' chỉ sự nhượng bộ, theo sau là cụm danh từ.",
     "explanation_grammar": "Giới từ chỉ sự nhượng bộ",
@@ -59908,12 +60007,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_71",
     "question": "Dr. Silva is highly regarded ______ her colleagues for her groundbreaking work in genetics.",
     "options": {
-      "A": "by",
+      "A": "with",
       "B": "at",
-      "C": "on",
-      "D": "with"
+      "C": "by",
+      "D": "on"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Regarded by someone' là cấu trúc bị động (được đánh giá bởi ai).",
     "explanation_grammar": "Giới từ đi kèm động từ/phân từ",
@@ -59935,12 +60034,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_72",
     "question": "All visitors must check in at the security desk ______ entering the main office building.",
     "options": {
-      "A": "upon",
-      "B": "during",
-      "C": "since",
-      "D": "until"
+      "A": "during",
+      "B": "since",
+      "C": "until",
+      "D": "upon"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Upon + V-ing' có nghĩa là 'ngay khi'.",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -59957,12 +60056,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_73",
     "question": "The price of the subscription service will remain the same ______ the next two years.",
     "options": {
-      "A": "for",
-      "B": "during",
-      "C": "since",
-      "D": "at"
+      "A": "since",
+      "B": "at",
+      "C": "for",
+      "D": "during"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'For' chỉ khoảng thời gian kéo dài trong tương lai.",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -59980,9 +60079,9 @@ export const grammarQuestions = [
     "question": "We are currently interviewing several qualified candidates ______ the position of Executive Assistant.",
     "options": {
       "A": "for",
-      "B": "at",
-      "C": "to",
-      "D": "with"
+      "B": "with",
+      "C": "at",
+      "D": "to"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -60001,12 +60100,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test11_75",
     "question": "The instructions for the new coffee machine are posted ______ the wall in the breakroom.",
     "options": {
-      "A": "on",
-      "B": "at",
+      "A": "at",
+      "B": "on",
       "C": "in",
       "D": "to"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'On' dùng để chỉ vị trí trên bề mặt (bức tường).",
     "explanation_grammar": "Giới từ chỉ vị trí",
@@ -60024,12 +60123,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_76",
     "question": "Please submit your application for the management position ______ Friday at the latest.",
     "options": {
-      "A": "by",
-      "B": "until",
-      "C": "during",
-      "D": "since"
+      "A": "during",
+      "B": "by",
+      "C": "since",
+      "D": "until"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'By' dùng để chỉ một thời hạn (deadline), nghĩa là 'muộn nhất là'.",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -60047,9 +60146,9 @@ export const grammarQuestions = [
     "question": "The newly renovated cafeteria is located ______ the ground floor of the East Wing.",
     "options": {
       "A": "on",
-      "B": "at",
-      "C": "to",
-      "D": "into"
+      "B": "into",
+      "C": "at",
+      "D": "to"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -60068,12 +60167,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_78",
     "question": "All employees are eligible for a 20 percent discount ______ any purchase made at our partner retail stores.",
     "options": {
-      "A": "on",
-      "B": "to",
-      "C": "at",
+      "A": "to",
+      "B": "at",
+      "C": "on",
       "D": "for"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Discount on something' là cụm từ chỉ sự giảm giá cho một món hàng hoặc dịch vụ.",
     "explanation_grammar": "Giới từ đi kèm danh từ",
@@ -60090,12 +60189,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_79",
     "question": "The legal team is currently working ______ a new set of guidelines for the remote work policy.",
     "options": {
-      "A": "on",
-      "B": "at",
-      "C": "to",
-      "D": "with"
+      "A": "to",
+      "B": "with",
+      "C": "at",
+      "D": "on"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Work on something' có nghĩa là đang thực hiện hoặc tập trung vào một dự án/công việc nào đó.",
     "explanation_grammar": "Giới từ đi kèm động từ",
@@ -60113,9 +60212,9 @@ export const grammarQuestions = [
     "question": "Mr. Wallace was appointed to the board of directors ______ his extensive background in corporate finance.",
     "options": {
       "A": "because of",
-      "B": "instead of",
-      "C": "as well as",
-      "D": "along with"
+      "B": "along with",
+      "C": "instead of",
+      "D": "as well as"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -60139,12 +60238,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_81",
     "question": "Most office supplies can be found in the storage room ______ the hallway from the breakroom.",
     "options": {
-      "A": "across",
-      "B": "between",
-      "C": "among",
-      "D": "throughout"
+      "A": "between",
+      "B": "among",
+      "C": "throughout",
+      "D": "across"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Across' dùng để chỉ vị trí ở phía đối diện hoặc băng qua (băng qua hành lang).",
     "explanation_grammar": "Giới từ chỉ vị trí",
@@ -60161,12 +60260,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_82",
     "question": "The CEO will give a brief presentation ______ the company’s future goals during the annual meeting.",
     "options": {
-      "A": "on",
-      "B": "at",
-      "C": "to",
-      "D": "with"
+      "A": "to",
+      "B": "with",
+      "C": "on",
+      "D": "at"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Presentation on something' có nghĩa là bài thuyết trình về một chủ đề nào đó.",
     "explanation_grammar": "Giới từ đi kèm danh từ",
@@ -60183,12 +60282,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_83",
     "question": "______ the power failure, the IT department managed to save all the data on the primary server.",
     "options": {
-      "A": "Despite",
-      "B": "Because",
-      "C": "Although",
-      "D": "However"
+      "A": "However",
+      "B": "Despite",
+      "C": "Because",
+      "D": "Although"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Despite' dùng để chỉ sự nhượng bộ (bất chấp), theo sau là một cụm danh từ.",
     "explanation_grammar": "Giới từ chỉ sự nhượng bộ",
@@ -60205,12 +60304,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_84",
     "question": "The pharmacy is open every day of the week ______ Sunday afternoons.",
     "options": {
-      "A": "except",
-      "B": "until",
-      "C": "without",
-      "D": "besides"
+      "A": "until",
+      "B": "without",
+      "C": "besides",
+      "D": "except"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Except' dùng để chỉ sự ngoại trừ.",
     "explanation_grammar": "Giới từ chỉ sự ngoại trừ",
@@ -60227,12 +60326,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_85",
     "question": "Please ensure that all confidential files are kept ______ the secure cabinets when not in use.",
     "options": {
-      "A": "within",
-      "B": "during",
-      "C": "between",
-      "D": "among"
+      "A": "between",
+      "B": "among",
+      "C": "within",
+      "D": "during"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Within' ở đây dùng để chỉ vị trí bên trong (trong các tủ an toàn).",
     "explanation_grammar": "Giới từ chỉ vị trí",
@@ -60249,12 +60348,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_86",
     "question": "Ms. Sato has been working as a graphic designer for this agency ______ she graduated from college.",
     "options": {
-      "A": "since",
-      "B": "for",
-      "C": "during",
-      "D": "until"
+      "A": "until",
+      "B": "since",
+      "C": "for",
+      "D": "during"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Since' chỉ mốc thời gian bắt đầu một hành động kéo dài đến hiện tại.",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -60271,12 +60370,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_87",
     "question": "The guest lecturer will be available to answer questions ______ the end of the seminar.",
     "options": {
-      "A": "at",
-      "B": "on",
-      "C": "to",
-      "D": "from"
+      "A": "on",
+      "B": "to",
+      "C": "from",
+      "D": "at"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'At the end of something' là cụm từ cố định chỉ thời điểm kết thúc một sự việc.",
     "explanation_grammar": "Cụm giới từ chỉ thời gian",
@@ -60293,12 +60392,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_88",
     "question": "There has been a significant increase in demand ______ eco-friendly office products this year.",
     "options": {
-      "A": "for",
-      "B": "at",
-      "C": "to",
-      "D": "with"
+      "A": "to",
+      "B": "with",
+      "C": "for",
+      "D": "at"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Demand for something' là cụm từ cố định chỉ nhu cầu đối với cái gì đó.",
     "explanation_grammar": "Giới từ đi kèm danh từ",
@@ -60315,12 +60414,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_89",
     "question": "The maintenance crew will be working on the air conditioning system ______ the entire weekend.",
     "options": {
-      "A": "throughout",
-      "B": "between",
-      "C": "along",
-      "D": "across"
+      "A": "across",
+      "B": "throughout",
+      "C": "between",
+      "D": "along"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Throughout' dùng để chỉ sự xuyên suốt một khoảng thời gian.",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -60337,12 +60436,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_90",
     "question": "All staff members must attend the safety training session ______ of their current position or seniority.",
     "options": {
-      "A": "regardless",
-      "B": "instead",
-      "C": "because",
-      "D": "outside"
+      "A": "instead",
+      "B": "because",
+      "C": "outside",
+      "D": "regardless"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Regardless of' là cụm giới từ có nghĩa là 'bất kể', 'không phân biệt'.",
     "explanation_grammar": "Cụm giới từ cố định",
@@ -60360,9 +60459,9 @@ export const grammarQuestions = [
     "question": "The company’s headquarters is located ______ walking distance of several public transportation hubs.",
     "options": {
       "A": "within",
-      "B": "at",
-      "C": "on",
-      "D": "by"
+      "B": "on",
+      "C": "by",
+      "D": "at"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -60381,12 +60480,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_92",
     "question": "Professor Jenkins is widely known ______ his research on consumer behavior in digital markets.",
     "options": {
-      "A": "for",
-      "B": "at",
-      "C": "to",
-      "D": "with"
+      "A": "with",
+      "B": "for",
+      "C": "at",
+      "D": "to"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Be known for something' nghĩa là nổi tiếng vì cái gì đó.",
     "explanation_grammar": "Giới từ đi kèm tính từ/phân từ",
@@ -60403,12 +60502,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_93",
     "question": "Guests should check out of their rooms ______ 11:00 A.M. to avoid being charged for an extra day.",
     "options": {
-      "A": "before",
-      "B": "during",
-      "C": "since",
+      "A": "during",
+      "B": "since",
+      "C": "before",
       "D": "until"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Before' chỉ thời điểm hành động cần thực hiện trước đó (trước 11 giờ sáng).",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -60426,9 +60525,9 @@ export const grammarQuestions = [
     "question": "The marketing department will be relocated to a larger office space ______ the tenth floor.",
     "options": {
       "A": "on",
-      "B": "at",
-      "C": "to",
-      "D": "into"
+      "B": "to",
+      "C": "into",
+      "D": "at"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -60447,12 +60546,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_95",
     "question": "Many employees have expressed their concerns ______ the proposed changes to the pension plan.",
     "options": {
-      "A": "about",
-      "B": "to",
-      "C": "at",
-      "D": "with"
+      "A": "with",
+      "B": "about",
+      "C": "to",
+      "D": "at"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Concern about something' là cụm từ chỉ sự lo ngại về một vấn đề nào đó.",
     "explanation_grammar": "Giới từ đi kèm danh từ",
@@ -60469,12 +60568,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_96",
     "question": "The bridge near the office will be closed for repairs ______ the months of June and July.",
     "options": {
-      "A": "during",
-      "B": "while",
-      "C": "between",
+      "A": "while",
+      "B": "between",
+      "C": "during",
       "D": "since"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'During' chỉ một khoảng thời gian diễn ra sự việc (trong suốt các tháng...).",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -60492,9 +60591,9 @@ export const grammarQuestions = [
     "question": "New software updates are typically released ______ the first Monday of every month.",
     "options": {
       "A": "on",
-      "B": "at",
-      "C": "to",
-      "D": "for"
+      "B": "to",
+      "C": "for",
+      "D": "at"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -60513,12 +60612,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_98",
     "question": "______ the high volume of calls, our customer service representatives may take longer than usual to respond.",
     "options": {
-      "A": "Due to",
+      "A": "Despite",
       "B": "Although",
       "C": "Even though",
-      "D": "Despite"
+      "D": "Due to"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Due to' chỉ nguyên nhân dẫn đến sự chậm trễ trong phản hồi.",
     "explanation_grammar": "Giới từ chỉ nguyên nhân",
@@ -60535,12 +60634,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test12_99",
     "question": "The accounting department is responsible ______ managing the annual budget for all branches.",
     "options": {
-      "A": "for",
-      "B": "at",
+      "A": "at",
+      "B": "for",
       "C": "to",
       "D": "with"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Responsible for something' nghĩa là chịu trách nhiệm về việc gì đó.",
     "explanation_grammar": "Giới từ đi kèm tính từ",
@@ -60558,9 +60657,9 @@ export const grammarQuestions = [
     "question": "Mr. Kim decided to postpone the client meeting ______ next Tuesday morning.",
     "options": {
       "A": "until",
-      "B": "by",
-      "C": "for",
-      "D": "during"
+      "B": "for",
+      "C": "during",
+      "D": "by"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -60580,12 +60679,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test13_101",
     "question": "Mr. Arisawa will be moving his personal belongings ______ his new office on the fifth floor this afternoon.",
     "options": {
-      "A": "to",
+      "A": "by",
       "B": "at",
       "C": "on",
-      "D": "by"
+      "D": "to"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Move to' chỉ sự di chuyển hướng đến một địa điểm.",
     "explanation_grammar": "Giới từ chỉ phương hướng",
@@ -60602,12 +60701,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test13_102",
     "question": "Employees are reminded to submit all original receipts ______ ten business days of their return from a business trip.",
     "options": {
-      "A": "within",
-      "B": "during",
-      "C": "for",
+      "A": "during",
+      "B": "for",
+      "C": "within",
       "D": "until"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Within' dùng để chỉ một khoảng thời gian không quá một mốc nào đó (trong vòng).",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -60624,12 +60723,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test13_103",
     "question": "Professor Henderson will be giving a lecture ______ the impact of artificial intelligence on modern accounting practices.",
     "options": {
-      "A": "on",
-      "B": "at",
-      "C": "to",
-      "D": "with"
+      "A": "to",
+      "B": "on",
+      "C": "with",
+      "D": "at"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Lecture on something' nghĩa là bài giảng về một chủ đề nào đó.",
     "explanation_grammar": "Giới từ đi kèm danh từ",
@@ -60652,9 +60751,9 @@ export const grammarQuestions = [
     "question": "The recruitment committee has expressed a strong interest ______ candidates who possess multilingual skills.",
     "options": {
       "A": "in",
-      "B": "at",
-      "C": "on",
-      "D": "to"
+      "B": "to",
+      "C": "at",
+      "D": "on"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -60678,12 +60777,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test13_105",
     "question": "The main entrance to the corporate headquarters will be closed ______ maintenance from Friday evening until Monday morning.",
     "options": {
-      "A": "for",
-      "B": "at",
-      "C": "to",
+      "A": "at",
+      "B": "to",
+      "C": "for",
       "D": "with"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Closed for something' chỉ lý do của việc đóng cửa.",
     "explanation_grammar": "Giới từ chỉ mục đích/lý do",
@@ -60700,12 +60799,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test13_106",
     "question": "Ms. Sato is responsible for all administrative tasks ______ the preparation of the monthly financial statements.",
     "options": {
-      "A": "besides",
-      "B": "between",
-      "C": "among",
-      "D": "throughout"
+      "A": "among",
+      "B": "besides",
+      "C": "throughout",
+      "D": "between"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Besides' có nghĩa là 'ngoài ra', 'bên cạnh việc gì đó'.",
     "explanation_grammar": "Giới từ chỉ sự bổ sung",
@@ -60727,12 +60826,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test13_107",
     "question": "The new software developer will be working ______ the senior engineering team to update the company’s mobile app.",
     "options": {
-      "A": "alongside",
+      "A": "among",
       "B": "across",
       "C": "between",
-      "D": "among"
+      "D": "alongside"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Alongside' nghĩa là làm việc cùng với hoặc sát cánh cùng ai đó.",
     "explanation_grammar": "Giới từ chỉ sự đồng hành",
@@ -60749,12 +60848,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test13_108",
     "question": "Please contact the human resources department if you have any questions ______ the updated vacation policy.",
     "options": {
-      "A": "concerning",
-      "B": "between",
-      "C": "among",
+      "A": "between",
+      "B": "among",
+      "C": "concerning",
       "D": "across"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Concerning' đóng vai trò giới từ có nghĩa là 'về việc', 'liên quan đến'.",
     "explanation_grammar": "Giới từ chỉ chủ đề",
@@ -60772,9 +60871,9 @@ export const grammarQuestions = [
     "question": "The city’s annual business gala has been held at the Plaza Hotel ______ the last fifteen years.",
     "options": {
       "A": "for",
-      "B": "since",
-      "C": "during",
-      "D": "at"
+      "B": "during",
+      "C": "at",
+      "D": "since"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -60793,12 +60892,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test13_110",
     "question": "Ms. Dubois managed to expand the company’s market share ______ several competitive regions in Southeast Asia.",
     "options": {
-      "A": "across",
+      "A": "along",
       "B": "between",
-      "C": "among",
-      "D": "along"
+      "C": "across",
+      "D": "among"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Across' chỉ sự bao phủ trên một diện rộng (khắp các khu vực).",
     "explanation_grammar": "Giới từ chỉ vị trí/không gian",
@@ -60837,12 +60936,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test13_112",
     "question": "All participants are required to register online ______ the start of the professional development workshop.",
     "options": {
-      "A": "prior to",
-      "B": "according to",
-      "C": "in front of",
-      "D": "outside of"
+      "A": "in front of",
+      "B": "outside of",
+      "C": "prior to",
+      "D": "according to"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Prior to' đồng nghĩa với 'before', nghĩa là trước khi một sự kiện bắt đầu.",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -60859,12 +60958,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test13_113",
     "question": "The flight to London was canceled ______ a sudden strike by the airport’s ground crew members.",
     "options": {
-      "A": "due to",
+      "A": "however",
       "B": "although",
       "C": "despite",
-      "D": "however"
+      "D": "due to"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Due to' chỉ nguyên nhân, theo sau là cụm danh từ.",
     "explanation_grammar": "Giới từ chỉ nguyên nhân",
@@ -60886,12 +60985,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test13_114",
     "question": "The temporary interns will be stationed ______ the reception desk to assist visitors during the conference.",
     "options": {
-      "A": "at",
-      "B": "on",
-      "C": "in",
+      "A": "on",
+      "B": "in",
+      "C": "at",
       "D": "to"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "'At' dùng cho các vị trí cụ thể như bàn làm việc.",
     "explanation_grammar": "Giới từ chỉ địa điểm",
@@ -60908,12 +61007,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test13_115",
     "question": "A specialized committee will be formed to choose ______ the three finalists for the design contract.",
     "options": {
-      "A": "between",
-      "B": "among",
-      "C": "across",
-      "D": "throughout"
+      "A": "across",
+      "B": "between",
+      "C": "throughout",
+      "D": "among"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Choose between' có thể dùng khi lựa chọn giữa các đối tượng cụ thể, ngay cả khi số lượng là ba. Tuy nhiên, trong ngữ pháp TOEIC truyền thống, 'between' dùng cho 2 và 'among' dùng cho 3 trở lên. Nhưng ở đây 'between' là đáp án được chỉ định.",
     "explanation_grammar": "Giới từ chỉ đối tượng",
@@ -60930,12 +61029,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test13_116",
     "question": "The financial analyst provided a detailed report ______ the potential risks of the new investment strategy.",
     "options": {
-      "A": "about",
+      "A": "with",
       "B": "to",
       "C": "at",
-      "D": "with"
+      "D": "about"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Report about something' chỉ nội dung của báo cáo.",
     "explanation_grammar": "Giới từ đi kèm danh từ",
@@ -60979,12 +61078,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test13_118",
     "question": "The research team is currently working ______ the supervision of Dr. Morales to complete the clinical trial.",
     "options": {
-      "A": "under",
-      "B": "at",
-      "C": "on",
-      "D": "to"
+      "A": "on",
+      "B": "under",
+      "C": "to",
+      "D": "at"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Under the supervision of' là cụm từ cố định có nghĩa là 'dưới sự giám sát của'.",
     "explanation_grammar": "Cụm giới từ cố định",
@@ -61007,9 +61106,9 @@ export const grammarQuestions = [
     "question": "Customers can request a full refund ______ the store if the product is returned in its original packaging.",
     "options": {
       "A": "from",
-      "B": "at",
-      "C": "to",
-      "D": "by"
+      "B": "by",
+      "C": "at",
+      "D": "to"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -61028,12 +61127,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test13_120",
     "question": "The company plans to integrate the new feedback system ______ its existing customer service platform.",
     "options": {
-      "A": "into",
-      "B": "at",
-      "C": "on",
-      "D": "to"
+      "A": "at",
+      "B": "on",
+      "C": "to",
+      "D": "into"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Integrate something into something' nghĩa là tích hợp cái gì đó vào cái gì đó.",
     "explanation_grammar": "Giới từ đi kèm động từ",
@@ -61056,9 +61155,9 @@ export const grammarQuestions = [
     "question": "All project proposals must be reviewed and approved ______ the executive board before the end of the quarter.",
     "options": {
       "A": "by",
-      "B": "until",
-      "C": "for",
-      "D": "at"
+      "B": "for",
+      "C": "at",
+      "D": "until"
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
@@ -61077,12 +61176,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test13_122",
     "question": "The stock market experienced significant growth ______ the period following the announcement of the trade agreement.",
     "options": {
-      "A": "over",
-      "B": "by",
-      "C": "at",
-      "D": "onto"
+      "A": "onto",
+      "B": "over",
+      "C": "by",
+      "D": "at"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Over a period' dùng để chỉ một khoảng thời gian mà trong đó có sự thay đổi hoặc diễn biến.",
     "explanation_grammar": "Giới từ chỉ thời gian",
@@ -61121,12 +61220,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test13_124",
     "question": "The marketing department is making great progress ______ achieving its sales targets for the fiscal year.",
     "options": {
-      "A": "towards",
-      "B": "against",
-      "C": "between",
-      "D": "among"
+      "A": "between",
+      "B": "among",
+      "C": "against",
+      "D": "towards"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Progress towards something' nghĩa là tiến triển hướng tới một mục tiêu nào đó.",
     "explanation_grammar": "Giới từ chỉ hướng đích",
@@ -61148,12 +61247,12 @@ export const grammarQuestions = [
     "id": "q_preposition_test13_125",
     "question": "The construction of the new corporate library is currently three weeks ______ schedule.",
     "options": {
-      "A": "behind",
-      "B": "between",
-      "C": "among",
-      "D": "throughout"
+      "A": "throughout",
+      "B": "behind",
+      "C": "between",
+      "D": "among"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'Behind schedule' là cụm từ cố định nghĩa là 'chậm so với lịch trình'.",
     "explanation_grammar": "Cụm giới từ cố định",
@@ -64837,12 +64936,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_01",
     "question": "The marketing director is looking for a consultant ______ expertise lies in digital brand positioning and consumer behavior.",
     "options": {
-      "A": "who",
-      "B": "whose",
-      "C": "whom",
-      "D": "which"
+      "A": "whom",
+      "B": "which",
+      "C": "whose",
+      "D": "who"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "MĐQH",
     "explanation_reason": "'Whose' là đại từ quan hệ chỉ sở hữu (chuyên môn của người cố vấn).",
     "explanation_grammar": "Đại từ quan hệ sở hữu",
@@ -64859,12 +64958,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_02",
     "question": "Any passengers ______ in the main lounge for more than four hours are entitled to a complimentary meal voucher.",
     "options": {
-      "A": "wait",
-      "B": "waited",
-      "C": "waiting",
-      "D": "who waits"
+      "A": "waiting",
+      "B": "who waits",
+      "C": "wait",
+      "D": "waited"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "MĐQH",
     "explanation_reason": "Rút gọn mệnh đề quan hệ chủ động (V-ing). Câu gốc: 'who are waiting'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ",
@@ -64886,12 +64985,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_03",
     "question": "Northstar Financial, ______ was founded in 1995, has recently expanded its operations to include asset management.",
     "options": {
-      "A": "which",
-      "B": "that",
-      "C": "who",
+      "A": "that",
+      "B": "who",
+      "C": "which",
       "D": "where"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "MĐQH",
     "explanation_reason": "Dùng 'which' cho mệnh đề quan hệ không xác định để bổ nghĩa cho vật (công ty).",
     "explanation_grammar": "Đại từ quan hệ thay cho vật",
@@ -64913,12 +65012,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_04",
     "question": "The administrative assistants ______ the orientation session yesterday found the new filing system quite intuitive.",
     "options": {
-      "A": "who attended",
-      "B": "attended",
-      "C": "attending",
-      "D": "whom attended"
+      "A": "attending",
+      "B": "who attended",
+      "C": "whom attended",
+      "D": "attended"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "MĐQH",
     "explanation_reason": "'Who' đóng vai trò chủ ngữ trong mệnh đề quan hệ xác định.",
     "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
@@ -64940,12 +65039,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_05",
     "question": "High-quality components ______ from our German supplier are used in the assembly of these medical devices.",
     "options": {
-      "A": "importing",
-      "B": "imported",
+      "A": "to import",
+      "B": "importing",
       "C": "import",
-      "D": "to import"
+      "D": "imported"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "MĐQH",
     "explanation_reason": "Rút gọn mệnh đề quan hệ bị động (V3/ed). Câu gốc: 'which are imported'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ",
@@ -64967,12 +65066,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_06",
     "question": "Mr. Yamamoto is the lead architect ______ the committee selected to design the new sustainable headquarters.",
     "options": {
-      "A": "whom",
-      "B": "whose",
-      "C": "which",
+      "A": "whose",
+      "B": "which",
+      "C": "whom",
       "D": "where"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "MĐQH",
     "explanation_reason": "'Whom' làm tân ngữ thay thế cho danh từ chỉ người (architect).",
     "explanation_grammar": "Đại từ quan hệ làm tân ngữ",
@@ -64990,9 +65089,9 @@ export const grammarQuestions = [
     "question": "The annual report, ______ highlights the company's commitment to carbon neutrality, is available on our website.",
     "options": {
       "A": "which",
-      "B": "that",
-      "C": "who",
-      "D": "whose"
+      "B": "who",
+      "C": "whose",
+      "D": "that"
     },
     "correct_answer": "A",
     "grammar_type": "MĐQH",
@@ -65011,12 +65110,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_08",
     "question": "Employees ______ to work remotely must submit a formal request to their department head for approval.",
     "options": {
-      "A": "wish",
-      "B": "wished",
-      "C": "wishing",
-      "D": "who wishes"
+      "A": "who wishes",
+      "B": "wishing",
+      "C": "wish",
+      "D": "wished"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "MĐQH",
     "explanation_reason": "Rút gọn mệnh đề quan hệ chủ động (V-ing). Câu gốc: 'who wish'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ",
@@ -65033,12 +65132,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_09",
     "question": "We have recently implemented a new software system ______ streamlines the process of tracking client interactions.",
     "options": {
-      "A": "who",
-      "B": "that",
+      "A": "that",
+      "B": "who",
       "C": "whose",
       "D": "whom"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "MĐQH",
     "explanation_reason": "'That' làm chủ ngữ thay cho vật (system).",
     "explanation_grammar": "Đại từ quan hệ thay cho vật",
@@ -65055,12 +65154,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_10",
     "question": "The laboratory ______ the new vaccine was developed is equipped with the latest bio-safety technology.",
     "options": {
-      "A": "where",
-      "B": "when",
-      "C": "which",
-      "D": "why"
+      "A": "which",
+      "B": "why",
+      "C": "when",
+      "D": "where"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "MĐQH",
     "explanation_reason": "'Where' là trạng từ quan hệ chỉ nơi chốn (phòng thí nghiệm).",
     "explanation_grammar": "Trạng từ quan hệ chỉ nơi chốn",
@@ -65077,12 +65176,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_11",
     "question": "Candidates ______ applications are received after the deadline will be considered for the next recruitment cycle.",
     "options": {
-      "A": "who",
-      "B": "whom",
-      "C": "whose",
-      "D": "which"
+      "A": "which",
+      "B": "whose",
+      "C": "who",
+      "D": "whom"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "MĐQH",
     "explanation_reason": "'Whose' chỉ sở hữu (đơn ứng tuyển của ứng viên).",
     "explanation_grammar": "Đại từ quan hệ sở hữu",
@@ -65099,12 +65198,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_12",
     "question": "The project manager ______ we hired last month has already improved the efficiency of the development team.",
     "options": {
-      "A": "whom",
-      "B": "whose",
+      "A": "whose",
+      "B": "whom",
       "C": "which",
       "D": "where"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "MĐQH",
     "explanation_reason": "'Whom' làm tân ngữ thay cho người.",
     "explanation_grammar": "Đại từ quan hệ làm tân ngữ",
@@ -65121,12 +65220,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_13",
     "question": "Any defective products ______ to the store within thirty days will be replaced free of charge.",
     "options": {
-      "A": "returning",
-      "B": "returned",
-      "C": "return",
-      "D": "to return"
+      "A": "return",
+      "B": "to return",
+      "C": "returned",
+      "D": "returning"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "MĐQH",
     "explanation_reason": "Rút gọn mệnh đề quan hệ bị động (V3/ed). Câu gốc: 'which are returned'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ",
@@ -65148,10 +65247,10 @@ export const grammarQuestions = [
     "id": "q_relative_test10_14",
     "question": "The seminar ______ on Friday will address the legal implications of international trade agreements.",
     "options": {
-      "A": "holding",
+      "A": "to hold",
       "B": "held",
-      "C": "holds",
-      "D": "to hold"
+      "C": "holding",
+      "D": "holds"
     },
     "correct_answer": "B",
     "grammar_type": "MĐQH",
@@ -65170,12 +65269,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_15",
     "question": "Ms. Clara Barton, ______ is a renowned expert in corporate ethics, will be the keynote speaker at the gala.",
     "options": {
-      "A": "who",
-      "B": "whom",
-      "C": "whose",
-      "D": "which"
+      "A": "whom",
+      "B": "whose",
+      "C": "which",
+      "D": "who"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "MĐQH",
     "explanation_reason": "'Who' làm chủ ngữ trong mệnh đề không xác định thay cho người.",
     "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
@@ -65198,9 +65297,9 @@ export const grammarQuestions = [
     "question": "The city ______ the tech giant plans to build its new data center is offering significant tax incentives.",
     "options": {
       "A": "where",
-      "B": "which",
-      "C": "that",
-      "D": "when"
+      "B": "that",
+      "C": "when",
+      "D": "which"
     },
     "correct_answer": "A",
     "grammar_type": "MĐQH",
@@ -65219,12 +65318,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_17",
     "question": "Several documents ______ to the merger were accidentally leaked to the press earlier this morning.",
     "options": {
-      "A": "relating",
-      "B": "related",
+      "A": "to relate",
+      "B": "relating",
       "C": "relate",
-      "D": "to relate"
+      "D": "related"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "MĐQH",
     "explanation_reason": "'Related to' là cụm phân từ bị động mang nghĩa 'có liên quan đến'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ",
@@ -65241,12 +65340,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_18",
     "question": "This is the office ______ the founder of the company worked for over forty years before retiring.",
     "options": {
-      "A": "which",
-      "B": "where",
+      "A": "where",
+      "B": "which",
       "C": "that",
       "D": "when"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "MĐQH",
     "explanation_reason": "'Where' chỉ nơi chốn.",
     "explanation_grammar": "Trạng từ quan hệ chỉ nơi chốn",
@@ -65263,12 +65362,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_19",
     "question": "Investors ______ a high return on their capital should consider our new diversified portfolio.",
     "options": {
-      "A": "seek",
-      "B": "seeking",
-      "C": "sought",
-      "D": "who seeks"
+      "A": "sought",
+      "B": "who seeks",
+      "C": "seek",
+      "D": "seeking"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "MĐQH",
     "explanation_reason": "Rút gọn mệnh đề quan hệ chủ động (V-ing). Câu gốc: 'who seek'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ",
@@ -65290,10 +65389,10 @@ export const grammarQuestions = [
     "id": "q_relative_test10_20",
     "question": "The proposal ______ by the research team yesterday suggests a 15% increase in the R&D budget.",
     "options": {
-      "A": "submitting",
+      "A": "to submit",
       "B": "submitted",
-      "C": "submits",
-      "D": "to submit"
+      "C": "submitting",
+      "D": "submits"
     },
     "correct_answer": "B",
     "grammar_type": "MĐQH",
@@ -65314,10 +65413,10 @@ export const grammarQuestions = [
     "options": {
       "A": "who",
       "B": "whom",
-      "C": "whose",
-      "D": "which"
+      "C": "which",
+      "D": "whose"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "MĐQH",
     "explanation_reason": "'Whose' chỉ sở hữu (xe của ông Peterson).",
     "explanation_grammar": "Đại từ quan hệ sở hữu",
@@ -65334,12 +65433,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_22",
     "question": "The workshops ______ by the HR department aim to improve the leadership skills of middle managers.",
     "options": {
-      "A": "organizing",
-      "B": "organized",
-      "C": "organize",
-      "D": "to organize"
+      "A": "organized",
+      "B": "organize",
+      "C": "to organize",
+      "D": "organizing"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "MĐQH",
     "explanation_reason": "Rút gọn mệnh đề quan hệ bị động. Câu gốc: 'which are organized'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ",
@@ -65356,10 +65455,10 @@ export const grammarQuestions = [
     "id": "q_relative_test10_23",
     "question": "The email ______ was sent to all staff members contained important information regarding the holiday schedule.",
     "options": {
-      "A": "who",
-      "B": "whom",
+      "A": "whose",
+      "B": "who",
       "C": "that",
-      "D": "whose"
+      "D": "whom"
     },
     "correct_answer": "C",
     "grammar_type": "MĐQH",
@@ -65378,12 +65477,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_24",
     "question": "There are several reasons ______ the board decided to postpone the launch of the new product line.",
     "options": {
-      "A": "why",
-      "B": "where",
+      "A": "where",
+      "B": "why",
       "C": "when",
       "D": "which"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "MĐQH",
     "explanation_reason": "'Why' chỉ lý do.",
     "explanation_grammar": "Trạng từ quan hệ chỉ lý do",
@@ -65405,12 +65504,12 @@ export const grammarQuestions = [
     "id": "q_relative_test10_25",
     "question": "The technicians ______ the network infrastructure discovered a major security flaw in the firewall.",
     "options": {
-      "A": "upgrade",
-      "B": "upgrading",
-      "C": "upgraded",
-      "D": "who upgrades"
+      "A": "upgraded",
+      "B": "who upgrades",
+      "C": "upgrading",
+      "D": "upgrade"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "MĐQH",
     "explanation_reason": "Rút gọn mệnh đề quan hệ chủ động. Câu gốc: 'who are upgrading'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ",
@@ -65433,12 +65532,12 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_01",
     "question": "The revised employee handbook, ______ was distributed yesterday, outlines the new remote work policy in detail.",
     "options": {
-      "A": "that",
-      "B": "which",
+      "A": "what",
+      "B": "that",
       "C": "who",
-      "D": "what"
+      "D": "which"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "MĐQH",
     "explanation_reason": "Trong mệnh đề quan hệ không xác định (có dấu phẩy), ta dùng đại từ quan hệ 'which' thay thế cho danh từ chỉ vật 'handbook'. Không dùng 'that' trong mệnh đề có dấu phẩy.",
     "explanation_grammar": "Đại từ quan hệ",
@@ -65460,12 +65559,12 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_02",
     "question": "Any staff members ______ participating in the annual charity run should register online by Friday afternoon.",
     "options": {
-      "A": "participated",
-      "B": "participate",
-      "C": "participating",
+      "A": "participating",
+      "B": "participated",
+      "C": "participate",
       "D": "to participate"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "MĐQH",
     "explanation_reason": "Đây là hình thức rút gọn mệnh đề quan hệ chủ động. Đầy đủ là 'who participate'. Rút gọn lại thành V-ing là 'participating'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ (Chủ động)",
@@ -65487,12 +65586,12 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_03",
     "question": "Mr. Robertson is the senior financial analyst ______ the board of directors trusts to handle the company's investments.",
     "options": {
-      "A": "who",
-      "B": "whom",
-      "C": "whose",
-      "D": "which"
+      "A": "whose",
+      "B": "which",
+      "C": "who",
+      "D": "whom"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "MĐQH",
     "explanation_reason": "Đại từ quan hệ thay thế cho danh từ chỉ người 'analyst' và đóng vai trò làm tân ngữ cho động từ 'trusts' trong mệnh đề quan hệ (trusts someone). Do đó dùng 'whom'.",
     "explanation_grammar": "Đại từ quan hệ",
@@ -65514,12 +65613,12 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_04",
     "question": "All marketing materials ______ on high-quality glossy paper tend to attract more attention from potential clients.",
     "options": {
-      "A": "printing",
-      "B": "printed",
-      "C": "print",
-      "D": "to print"
+      "A": "printed",
+      "B": "to print",
+      "C": "printing",
+      "D": "print"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "MĐQH",
     "explanation_reason": "Rút gọn mệnh đề quan hệ bị động. Đầy đủ là 'which are printed'. Rút gọn còn V-ed/P2 là 'printed'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ (Bị động)",
@@ -65542,11 +65641,11 @@ export const grammarQuestions = [
     "question": "The management team is currently looking for a supervisor ______ leadership style encourages collaboration and creativity.",
     "options": {
       "A": "who",
-      "B": "whom",
-      "C": "whose",
+      "B": "whose",
+      "C": "whom",
       "D": "which"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "MĐQH",
     "explanation_reason": "Cần một đại từ quan hệ chỉ sở hữu để nối danh từ 'supervisor' với cụm danh từ 'leadership style' (phong cách lãnh đạo của người đó).",
     "explanation_grammar": "Đại từ quan hệ (Sở hữu)",
@@ -65568,12 +65667,12 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_06",
     "question": "The newly constructed conference center, ______ features state-of-the-art audiovisual equipment, will open next month.",
     "options": {
-      "A": "which",
-      "B": "that",
-      "C": "where",
-      "D": "who"
+      "A": "where",
+      "B": "who",
+      "C": "that",
+      "D": "which"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "MĐQH",
     "explanation_reason": "Đại từ quan hệ thay thế cho 'conference center' và đóng vai trò làm chủ ngữ cho động từ 'features'. Mệnh đề không xác định (có dấu phẩy) nên dùng 'which', không dùng 'that'.",
     "explanation_grammar": "Đại từ quan hệ",
@@ -65595,12 +65694,12 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_07",
     "question": "The main reason ______ the product launch was delayed was a sudden shortage of microchips.",
     "options": {
-      "A": "which",
-      "B": "where",
-      "C": "when",
-      "D": "why"
+      "A": "when",
+      "B": "why",
+      "C": "which",
+      "D": "where"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "MĐQH",
     "explanation_reason": "Trạng từ quan hệ 'why' được dùng để thay thế cho danh từ chỉ lý do 'reason'.",
     "explanation_grammar": "Trạng từ quan hệ",
@@ -65649,10 +65748,10 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_09",
     "question": "Please make sure that all invoices ______ before the 15th of the month are sent directly to the accounting department.",
     "options": {
-      "A": "submitting",
+      "A": "submit",
       "B": "submitted",
-      "C": "submit",
-      "D": "to submit"
+      "C": "to submit",
+      "D": "submitting"
     },
     "correct_answer": "B",
     "grammar_type": "MĐQH",
@@ -65676,12 +65775,12 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_10",
     "question": "Ms. Hughes is the legal consultant to ______ you should direct any questions regarding the new corporate contract.",
     "options": {
-      "A": "who",
-      "B": "whom",
-      "C": "whose",
-      "D": "which"
+      "A": "which",
+      "B": "who",
+      "C": "whom",
+      "D": "whose"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "MĐQH",
     "explanation_reason": "Sau giới từ 'to', đại từ quan hệ chỉ người luôn phải ở dạng tân ngữ là 'whom'.",
     "explanation_grammar": "Đại từ quan hệ (Sau giới từ)",
@@ -65703,12 +65802,12 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_11",
     "question": "The personnel department will conduct background checks on all candidates ______ pass the initial interview stage.",
     "options": {
-      "A": "who",
-      "B": "whom",
-      "C": "whose",
-      "D": "which"
+      "A": "whom",
+      "B": "whose",
+      "C": "which",
+      "D": "who"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "MĐQH",
     "explanation_reason": "Thay thế cho danh từ chỉ người 'candidates' và làm chủ ngữ cho động từ 'pass' nên dùng đại từ quan hệ 'who'.",
     "explanation_grammar": "Đại từ quan hệ",
@@ -65730,12 +65829,12 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_12",
     "question": "The contract clearly specifies the strict conditions under ______ either party may terminate the partnership agreement.",
     "options": {
-      "A": "that",
-      "B": "which",
-      "C": "where",
-      "D": "what"
+      "A": "which",
+      "B": "where",
+      "C": "what",
+      "D": "that"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "MĐQH",
     "explanation_reason": "Sau giới từ 'under', dùng đại từ quan hệ 'which' (cho vật). Không dùng 'that' sau giới từ.",
     "explanation_grammar": "Đại từ quan hệ (Sau giới từ)",
@@ -65757,10 +65856,10 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_13",
     "question": "Employees ______ vehicles are parked in the unauthorized zone will be subject to a heavy fine.",
     "options": {
-      "A": "who",
-      "B": "whom",
+      "A": "which",
+      "B": "who",
       "C": "whose",
-      "D": "which"
+      "D": "whom"
     },
     "correct_answer": "C",
     "grammar_type": "MĐQH",
@@ -65785,11 +65884,11 @@ export const grammarQuestions = [
     "question": "The Wellington Hotel is the luxurious venue ______ the annual pharmaceutical convention will be hosted this year.",
     "options": {
       "A": "which",
-      "B": "where",
-      "C": "when",
-      "D": "that"
+      "B": "when",
+      "C": "that",
+      "D": "where"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "MĐQH",
     "explanation_reason": "Đại từ quan hệ chỉ nơi chốn thay thế cho 'venue' (địa điểm). Có thể dùng 'where' hoặc 'in which'.",
     "explanation_grammar": "Trạng từ quan hệ",
@@ -65811,12 +65910,12 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_15",
     "question": "Only applications ______ by a comprehensive portfolio of previous design work will be considered for this position.",
     "options": {
-      "A": "accompanying",
-      "B": "accompanied",
-      "C": "accompany",
-      "D": "to accompany"
+      "A": "accompanied",
+      "B": "accompany",
+      "C": "to accompany",
+      "D": "accompanying"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "MĐQH",
     "explanation_reason": "Rút gọn mệnh đề quan hệ mang nghĩa bị động (which are accompanied by -> accompanied by).",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ (Bị động)",
@@ -65838,12 +65937,12 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_16",
     "question": "The software developers ______ the new mobile application have promised to release a beta version by next week.",
     "options": {
-      "A": "create",
-      "B": "created",
-      "C": "creating",
-      "D": "to create"
+      "A": "to create",
+      "B": "creating",
+      "C": "create",
+      "D": "created"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "MĐQH",
     "explanation_reason": "Rút gọn mệnh đề quan hệ mang nghĩa chủ động (who are creating -> creating).",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ (Chủ động)",
@@ -65865,12 +65964,12 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_17",
     "question": "The customer service representative ______ handled my complaint was incredibly polite and resolved the issue quickly.",
     "options": {
-      "A": "who",
-      "B": "whom",
-      "C": "whose",
+      "A": "whom",
+      "B": "whose",
+      "C": "who",
       "D": "which"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "MĐQH",
     "explanation_reason": "Đại từ quan hệ làm chủ ngữ thay thế cho người (representative), dùng 'who' trước động từ 'handled'.",
     "explanation_grammar": "Đại từ quan hệ",
@@ -65892,12 +65991,12 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_18",
     "question": "Any delicate laboratory equipment ______ during the relocation process will be replaced by the moving company.",
     "options": {
-      "A": "damaging",
-      "B": "damaged",
-      "C": "damage",
-      "D": "to damage"
+      "A": "damaged",
+      "B": "damage",
+      "C": "to damage",
+      "D": "damaging"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "MĐQH",
     "explanation_reason": "Rút gọn mệnh đề quan hệ bị động (which is damaged -> damaged).",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ (Bị động)",
@@ -65919,12 +66018,12 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_19",
     "question": "The exact date ______ the new health insurance benefits go into effect has not yet been confirmed.",
     "options": {
-      "A": "when",
-      "B": "where",
-      "C": "which",
-      "D": "why"
+      "A": "why",
+      "B": "when",
+      "C": "where",
+      "D": "which"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "MĐQH",
     "explanation_reason": "Trạng từ quan hệ thay thế cho danh từ chỉ thời gian 'date', do đó dùng 'when'.",
     "explanation_grammar": "Trạng từ quan hệ",
@@ -65946,12 +66045,12 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_20",
     "question": "The executives agreed on a 5% increase in the marketing budget, ______ will allow for a broader advertising campaign.",
     "options": {
-      "A": "that",
-      "B": "which",
+      "A": "which",
+      "B": "that",
       "C": "who",
       "D": "where"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "MĐQH",
     "explanation_reason": "Đại từ quan hệ 'which' thay thế cho toàn bộ mệnh đề phía trước hoặc cho danh từ 'increase'. Phải dùng 'which' do có dấu phẩy.",
     "explanation_grammar": "Đại từ quan hệ",
@@ -65973,10 +66072,10 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_21",
     "question": "Professionals ______ to enhance their public speaking skills are encouraged to enroll in the upcoming communication workshop.",
     "options": {
-      "A": "seek",
-      "B": "sought",
+      "A": "sought",
+      "B": "who seeks",
       "C": "seeking",
-      "D": "who seeks"
+      "D": "seek"
     },
     "correct_answer": "C",
     "grammar_type": "MĐQH",
@@ -66000,12 +66099,12 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_22",
     "question": "Dr. Alan Grant, ______ research on renewable energy has won numerous awards, will join our faculty next semester.",
     "options": {
-      "A": "who",
-      "B": "whom",
-      "C": "whose",
-      "D": "which"
+      "A": "which",
+      "B": "who",
+      "C": "whom",
+      "D": "whose"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "MĐQH",
     "explanation_reason": "Cần một đại từ quan hệ chỉ sở hữu để nối 'Dr. Alan Grant' và danh từ 'research' (nghiên cứu của ông ấy).",
     "explanation_grammar": "Đại từ quan hệ (Sở hữu)",
@@ -66028,11 +66127,11 @@ export const grammarQuestions = [
     "question": "The security cameras ______ at all main entrances operate twenty-four hours a day to ensure the safety of our staff.",
     "options": {
       "A": "installing",
-      "B": "installed",
-      "C": "install",
+      "B": "install",
+      "C": "installed",
       "D": "to install"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "MĐQH",
     "explanation_reason": "Rút gọn mệnh đề quan hệ bị động (which are installed -> installed).",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ (Bị động)",
@@ -66054,12 +66153,12 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_24",
     "question": "A formal apology letter will be sent to all subscribers ______ experienced technical difficulties during the live broadcast.",
     "options": {
-      "A": "who",
-      "B": "whom",
-      "C": "whose",
-      "D": "which"
+      "A": "whose",
+      "B": "who",
+      "C": "which",
+      "D": "whom"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "MĐQH",
     "explanation_reason": "Đại từ quan hệ làm chủ ngữ thay thế cho người (subscribers), đứng trước động từ 'experienced', dùng 'who'.",
     "explanation_grammar": "Đại từ quan hệ",
@@ -66081,12 +66180,12 @@ export const grammarQuestions = [
     "id": "q_test11_mdqh_25",
     "question": "The spacious office on the top floor is the exact location ______ the new CEO will be stationed.",
     "options": {
-      "A": "which",
-      "B": "where",
-      "C": "that",
-      "D": "when"
+      "A": "when",
+      "B": "which",
+      "C": "where",
+      "D": "that"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "MĐQH",
     "explanation_reason": "Trạng từ quan hệ thay thế cho 'location' (nơi chốn), do đó dùng 'where'.",
     "explanation_grammar": "Trạng từ quan hệ",
@@ -67446,12 +67545,12 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_01",
     "question": "The updated interface of the Nivido app is not quite as ________ as the previous version.",
     "options": {
-      "A": "intuitive",
-      "B": "intuitively",
-      "C": "intuition",
+      "A": "intuitively",
+      "B": "intuition",
+      "C": "intuitive",
       "D": "intuitiveness"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc so sánh bằng (hoặc không bằng) 'as + adj/adv + as'. Sau động từ to-be 'is', ta cần một tính từ. 'intuitive' (trực quan) là tính từ.",
     "explanation_grammar": "So sánh bằng",
@@ -67473,12 +67572,12 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_02",
     "question": "Implementing the new security protocol made the network more ________ than it was last month.",
     "options": {
-      "A": "securely",
-      "B": "secure",
-      "C": "security",
-      "D": "securer"
+      "A": "secure",
+      "B": "security",
+      "C": "securer",
+      "D": "securely"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. Trong so sánh hơn với tính từ dài (hoặc tính từ có 2 âm tiết kết thúc khác các trường hợp đặc biệt), ta dùng 'more + adj'. 'secure' đóng vai trò tính từ ở đây.",
     "explanation_grammar": "So sánh hơn",
@@ -67500,12 +67599,12 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_03",
     "question": "Ms. Hollander was recognized for providing the most __________ financial advice at CTX LD.",
     "options": {
-      "A": "reliably",
-      "B": "reliability",
-      "C": "reliable",
-      "D": "reliance"
+      "A": "reliance",
+      "B": "reliably",
+      "C": "reliability",
+      "D": "reliable"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc so sánh nhất với tính từ dài: 'the most + adj'. Trước danh từ 'advice' cần một tính từ bổ nghĩa.",
     "explanation_grammar": "So sánh nhất",
@@ -67527,12 +67626,12 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_04",
     "question": "The latest workstation from Toshi Auto Group is more ________ than the standard desktop.",
     "options": {
-      "A": "powerful",
-      "B": "powerfully",
+      "A": "powerfully",
+      "B": "powerful",
       "C": "power",
       "D": "powerfulness"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn với tính từ dài: 'more + adj + than'. Sau động từ to-be 'is' cần tính từ 'powerful'.",
     "explanation_grammar": "So sánh hơn",
@@ -67555,9 +67654,9 @@ export const grammarQuestions = [
     "question": "The promotional strategy for the National Dentistry Expo was not as ________ as anticipated.",
     "options": {
       "A": "effective",
-      "B": "effectively",
-      "C": "effectiveness",
-      "D": "effect"
+      "B": "effectiveness",
+      "C": "effect",
+      "D": "effectively"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -67581,12 +67680,12 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_06",
     "question": "Mr. J. M. Lim received a commendation for creating the most __________ accounting system at Cabot Steel.",
     "options": {
-      "A": "efficient",
+      "A": "efficaciousness",
       "B": "efficiently",
-      "C": "efficiency",
-      "D": "efficaciousness"
+      "C": "efficient",
+      "D": "efficiency"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất với tính từ dài: 'the most + adj'. Đứng trước cụm danh từ 'accounting system' cần tính từ 'efficient'.",
     "explanation_grammar": "So sánh nhất",
@@ -67608,12 +67707,12 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_07",
     "question": "The sudden market shift made the investment portfolio more ________ than the savings account.",
     "options": {
-      "A": "volatile",
-      "B": "volatilization",
-      "C": "volatility",
-      "D": "volatily"
+      "A": "volatilization",
+      "B": "volatility",
+      "C": "volatily",
+      "D": "volatile"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. Ở đây dùng so sánh hơn 'more + adj + than'. 'volatile' (biến động) là tính từ.",
     "explanation_grammar": "So sánh hơn",
@@ -67635,12 +67734,12 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_08",
     "question": "The lobby of Hemton House is not quite as ________ as the online photos depict.",
     "options": {
-      "A": "spaciousness",
-      "B": "spatially",
-      "C": "spacious",
-      "D": "space"
+      "A": "spatially",
+      "B": "spacious",
+      "C": "space",
+      "D": "spaciousness"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau động từ to-be 'is' cần tính từ 'spacious' (rộng rãi).",
     "explanation_grammar": "So sánh bằng",
@@ -67662,12 +67761,12 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_09",
     "question": "Revising the employee handbook made the onboarding process more ________ than before.",
     "options": {
-      "A": "streamline",
-      "B": "straightforward",
-      "C": "straightforwardly",
-      "D": "straightforwardness"
+      "A": "straightforward",
+      "B": "straightforwardness",
+      "C": "streamline",
+      "D": "straightforwardly"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'straightforward' (đơn giản, thẳng thắn) là tính từ.",
     "explanation_grammar": "So sánh hơn",
@@ -67689,12 +67788,12 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_10",
     "question": "Ms. Gamble was honored for leading the most __________ marketing initiative at Juntasa Toy.",
     "options": {
-      "A": "innovative",
-      "B": "innovation",
-      "C": "innovatively",
+      "A": "innovation",
+      "B": "innovatively",
+      "C": "innovative",
       "D": "innovativeness"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'initiative' cần tính từ 'innovative'.",
     "explanation_grammar": "So sánh nhất",
@@ -67716,10 +67815,10 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_11",
     "question": "The synthetic fabric used in Ergan garments is not as ________ as natural silk.",
     "options": {
-      "A": "breathability",
+      "A": "breathably",
       "B": "breathable",
-      "C": "breathably",
-      "D": "breathes"
+      "C": "breathes",
+      "D": "breathability"
     },
     "correct_answer": "B",
     "grammar_type": "So sánh",
@@ -67743,10 +67842,10 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_12",
     "question": "The intensive workshop made the sales representatives more ________ than the new recruits.",
     "options": {
-      "A": "persuasion",
-      "B": "persuasively",
+      "A": "persuade",
+      "B": "persuasion",
       "C": "persuasive",
-      "D": "persuade"
+      "D": "persuasively"
     },
     "correct_answer": "C",
     "grammar_type": "So sánh",
@@ -67792,12 +67891,12 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_14",
     "question": "The newest smartphone from K-Tech is more ________ than the model released in Pittsburgh.",
     "options": {
-      "A": "durably",
-      "B": "durability",
-      "C": "durable",
-      "D": "durance"
+      "A": "durability",
+      "B": "durance",
+      "C": "durably",
+      "D": "durable"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'is' cần tính từ 'durable' (bền bỉ).",
     "explanation_grammar": "So sánh hơn",
@@ -67819,12 +67918,12 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_15",
     "question": "The technical support at SwiftAir is not quite as ________ as that of its competitors.",
     "options": {
-      "A": "responsive",
-      "B": "responsively",
-      "C": "responsiveness",
-      "D": "respond"
+      "A": "respond",
+      "B": "responsive",
+      "C": "responsively",
+      "D": "responsiveness"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'is' cần tính từ 'responsive' (phản hồi nhanh).",
     "explanation_grammar": "So sánh bằng",
@@ -67848,10 +67947,10 @@ export const grammarQuestions = [
     "options": {
       "A": "energy",
       "B": "sustainability",
-      "C": "sustainable",
-      "D": "sustainably"
+      "C": "sustainably",
+      "D": "sustainable"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'sustainable' (bền vững) là tính từ.",
     "explanation_grammar": "So sánh hơn",
@@ -67873,12 +67972,12 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_17",
     "question": "The redesigned auditorium at the Grand Plaza is not as ________ as the main ballroom.",
     "options": {
-      "A": "accessible",
-      "B": "accessibly",
-      "C": "accessibility",
-      "D": "access"
+      "A": "accessibility",
+      "B": "access",
+      "C": "accessible",
+      "D": "accessibly"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'is' cần tính từ 'accessible' (có thể tiếp cận).",
     "explanation_grammar": "So sánh bằng",
@@ -67900,12 +67999,12 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_18",
     "question": "Modernizing the payment gateway made the online checkout more ________ than the manual system.",
     "options": {
-      "A": "convenient",
-      "B": "conveniently",
-      "C": "convenience",
-      "D": "conveniency"
+      "A": "conveniency",
+      "B": "convenient",
+      "C": "conveniently",
+      "D": "convenience"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'convenient' (tiện lợi) là tính từ.",
     "explanation_grammar": "So sánh hơn",
@@ -67927,12 +68026,12 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_19",
     "question": "Dr. Aris was recognized for publishing the most __________ medical study at BioLab Inc.",
     "options": {
-      "A": "influential",
-      "B": "influence",
-      "C": "influentially",
-      "D": "influentialness"
+      "A": "influence",
+      "B": "influentially",
+      "C": "influentialness",
+      "D": "influential"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'study' cần tính từ 'influential'.",
     "explanation_grammar": "So sánh nhất",
@@ -67949,10 +68048,10 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_20",
     "question": "The leather interior in the Helios sedan is more ________ than the fabric seating.",
     "options": {
-      "A": "luxuriously",
-      "B": "luxury",
+      "A": "luxury",
+      "B": "luxuriousness",
       "C": "luxurious",
-      "D": "luxuriousness"
+      "D": "luxuriously"
     },
     "correct_answer": "C",
     "grammar_type": "So sánh",
@@ -67976,12 +68075,12 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_21",
     "question": "The summer internship program at Hansol Corp was not as ________ as the winter session.",
     "options": {
-      "A": "productive",
-      "B": "productively",
-      "C": "productivity",
-      "D": "produce"
+      "A": "produce",
+      "B": "productive",
+      "C": "productively",
+      "D": "productivity"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'was' cần tính từ 'productive' (hiệu quả, năng suất).",
     "explanation_grammar": "So sánh bằng",
@@ -68004,11 +68103,11 @@ export const grammarQuestions = [
     "question": "Simplifying the user agreement made the terms more ________ than the legal jargon.",
     "options": {
       "A": "understand",
-      "B": "understandable",
-      "C": "understandably",
-      "D": "understanding"
+      "B": "understandably",
+      "C": "understanding",
+      "D": "understandable"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'understandable' (có thể hiểu được) là tính từ.",
     "explanation_grammar": "So sánh hơn",
@@ -68030,12 +68129,12 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_23",
     "question": "Mr. Shaw was honored for maintaining the most __________ records at the city branch.",
     "options": {
-      "A": "accurately",
+      "A": "accurate",
       "B": "accuracy",
-      "C": "accurate",
-      "D": "accurateness"
+      "C": "accurateness",
+      "D": "accurately"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'records' cần tính từ 'accurate'.",
     "explanation_grammar": "So sánh nhất",
@@ -68057,12 +68156,12 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_24",
     "question": "The new battery technology is more ________ than the lithium-ion cells used previously.",
     "options": {
-      "A": "dependable",
+      "A": "dependence",
       "B": "dependably",
-      "C": "dependability",
-      "D": "dependence"
+      "C": "dependable",
+      "D": "dependability"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'is' cần tính từ 'dependable' (đáng tin cậy).",
     "explanation_grammar": "So sánh hơn",
@@ -68084,12 +68183,12 @@ export const grammarQuestions = [
     "id": "q_test4_sosanh_25",
     "question": "The training video for the marketing team was not quite as ________ as the live seminar.",
     "options": {
-      "A": "informatively",
-      "B": "informative",
+      "A": "informative",
+      "B": "informatively",
       "C": "information",
       "D": "informationalness"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'was' cần tính từ 'informative' (nhiều thông tin).",
     "explanation_grammar": "So sánh bằng",
@@ -68112,12 +68211,12 @@ export const grammarQuestions = [
     "id": "q_test5_sosanh_01",
     "question": "The virtual assistant developed by ByteCore is not as ________ as the human operators.",
     "options": {
-      "A": "intuitive",
-      "B": "intuitively",
-      "C": "intuition",
-      "D": "intuitiveness"
+      "A": "intuition",
+      "B": "intuitiveness",
+      "C": "intuitive",
+      "D": "intuitively"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc so sánh bằng: 'as + adj + as'. Sau to-be 'is' cần tính từ 'intuitive' (trực quan).",
     "explanation_grammar": "So sánh bằng",
@@ -68140,9 +68239,9 @@ export const grammarQuestions = [
     "question": "Upgrading the server hardware made the data processing more ________ than the old system.",
     "options": {
       "A": "efficient",
-      "B": "efficiently",
-      "C": "efficiency",
-      "D": "efficaciousness"
+      "B": "efficaciousness",
+      "C": "efficiently",
+      "D": "efficiency"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -68167,11 +68266,11 @@ export const grammarQuestions = [
     "question": "Ms. Hirota was recognized for having the most __________ sales record at Ergan, Inc.",
     "options": {
       "A": "impressively",
-      "B": "impressive",
-      "C": "impression",
-      "D": "impress"
+      "B": "impression",
+      "C": "impress",
+      "D": "impressive"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'record' cần tính từ 'impressive' (ấn tượng).",
     "explanation_grammar": "So sánh nhất",
@@ -68193,12 +68292,12 @@ export const grammarQuestions = [
     "id": "q_test5_sosanh_04",
     "question": "The new solar panels from Solis are more ________ than those produced last year.",
     "options": {
-      "A": "sustainably",
+      "A": "sustainable",
       "B": "sustainability",
       "C": "sustain",
-      "D": "sustainable"
+      "D": "sustainably"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'are' cần tính từ 'sustainable' (bền vững).",
     "explanation_grammar": "So sánh hơn",
@@ -68215,12 +68314,12 @@ export const grammarQuestions = [
     "id": "q_test5_sosanh_05",
     "question": "The recent merger with CTX LD. was not as ________ as the shareholders had hoped.",
     "options": {
-      "A": "profitable",
-      "B": "profitably",
-      "C": "profitability",
-      "D": "profit"
+      "A": "profit",
+      "B": "profitable",
+      "C": "profitably",
+      "D": "profitability"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'was' cần tính từ 'profitable' (có lợi nhuận).",
     "explanation_grammar": "So sánh bằng",
@@ -68243,11 +68342,11 @@ export const grammarQuestions = [
     "question": "Dr. Aris received an award for conducting the most __________ clinical trial at BioLab Inc.",
     "options": {
       "A": "comprehension",
-      "B": "comprehensive",
-      "C": "comprehensively",
+      "B": "comprehensively",
+      "C": "comprehensive",
       "D": "comprehensiveness"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'trial' cần tính từ 'comprehensive' (toàn diện).",
     "explanation_grammar": "So sánh nhất",
@@ -68269,12 +68368,12 @@ export const grammarQuestions = [
     "id": "q_test5_sosanh_07",
     "question": "The noise level in the open-plan office is more ________ than in the private cubicles.",
     "options": {
-      "A": "distractedly",
-      "B": "distraction",
-      "C": "distracting",
-      "D": "distract"
+      "A": "distraction",
+      "B": "distract",
+      "C": "distractedly",
+      "D": "distracting"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'is' cần tính từ 'distracting' (gây xao nhãng).",
     "explanation_grammar": "So sánh hơn",
@@ -68296,12 +68395,12 @@ export const grammarQuestions = [
     "id": "q_test5_sosanh_08",
     "question": "The customer interface of the K-Tech tablet is not quite as ________ as the Helios model.",
     "options": {
-      "A": "responsive",
-      "B": "responsively",
-      "C": "responsiveness",
-      "D": "respond"
+      "A": "respond",
+      "B": "responsive",
+      "C": "responsively",
+      "D": "responsiveness"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'is' cần tính từ 'responsive' (phản hồi nhanh).",
     "explanation_grammar": "So sánh bằng",
@@ -68340,12 +68439,12 @@ export const grammarQuestions = [
     "id": "q_test5_sosanh_10",
     "question": "Ms. Lopez was honored for designing the most __________ workspace at TechNova.",
     "options": {
-      "A": "innovative",
-      "B": "innovation",
-      "C": "innovatively",
-      "D": "innovativeness"
+      "A": "innovatively",
+      "B": "innovativeness",
+      "C": "innovation",
+      "D": "innovative"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'workspace' cần tính từ 'innovative' (đổi mới).",
     "explanation_grammar": "So sánh nhất",
@@ -68362,10 +68461,10 @@ export const grammarQuestions = [
     "id": "q_test5_sosanh_11",
     "question": "The leather used in the Zenith executive chairs is not as ________ as the premium range.",
     "options": {
-      "A": "durability",
+      "A": "durance",
       "B": "durable",
-      "C": "durably",
-      "D": "durance"
+      "C": "durability",
+      "D": "durably"
     },
     "correct_answer": "B",
     "grammar_type": "So sánh",
@@ -68406,10 +68505,10 @@ export const grammarQuestions = [
     "id": "q_test5_sosanh_13",
     "question": "Mr. Shaw was praised for keeping the most __________ inventory records at Hansol Corp.",
     "options": {
-      "A": "accuracy",
-      "B": "accurately",
+      "A": "accurately",
+      "B": "accurateness",
       "C": "accurate",
-      "D": "accurateness"
+      "D": "accuracy"
     },
     "correct_answer": "C",
     "grammar_type": "So sánh",
@@ -68433,12 +68532,12 @@ export const grammarQuestions = [
     "id": "q_test5_sosanh_14",
     "question": "The latest software update is more ________ than the version released last quarter.",
     "options": {
-      "A": "stable",
-      "B": "stably",
-      "C": "stability",
-      "D": "stabilize"
+      "A": "stabilize",
+      "B": "stable",
+      "C": "stably",
+      "D": "stability"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'is' cần tính từ 'stable' (ổn định).",
     "explanation_grammar": "So sánh hơn",
@@ -68455,12 +68554,12 @@ export const grammarQuestions = [
     "id": "q_test5_sosanh_15",
     "question": "The online booking system at SwiftAir is not quite as ________ as the mobile app.",
     "options": {
-      "A": "accessible",
-      "B": "accessibly",
-      "C": "accessibility",
-      "D": "access"
+      "A": "accessibly",
+      "B": "accessibility",
+      "C": "access",
+      "D": "accessible"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'is' cần tính từ 'accessible' (dễ tiếp cận).",
     "explanation_grammar": "So sánh bằng",
@@ -68477,12 +68576,12 @@ export const grammarQuestions = [
     "id": "q_test5_sosanh_16",
     "question": "Launching the rebranding campaign made the corporate identity more ________ than ever.",
     "options": {
-      "A": "distinctly",
-      "B": "distinction",
-      "C": "distinct",
-      "D": "distinctive"
+      "A": "distinction",
+      "B": "distinct",
+      "C": "distinctive",
+      "D": "distinctly"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'distinct' (khác biệt, rõ rệt) là tính từ.",
     "explanation_grammar": "So sánh hơn",
@@ -68500,9 +68599,9 @@ export const grammarQuestions = [
     "question": "The reception area of the Grand Plaza Hotel is more ________ than the conference rooms.",
     "options": {
       "A": "spacious",
-      "B": "spaciousness",
-      "C": "spatially",
-      "D": "space"
+      "B": "space",
+      "C": "spaciousness",
+      "D": "spatially"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -68521,12 +68620,12 @@ export const grammarQuestions = [
     "id": "q_test5_sosanh_18",
     "question": "The annual performance review was not as ________ as the employees expected.",
     "options": {
-      "A": "favorable",
-      "B": "favorably",
+      "A": "favorably",
+      "B": "favorable",
       "C": "favor",
       "D": "favorableness"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'was' cần tính từ 'favorable' (thuận lợi, tốt).",
     "explanation_grammar": "So sánh bằng",
@@ -68544,9 +68643,9 @@ export const grammarQuestions = [
     "question": "Mr. J. M. Lim was recognized for maintaining the most __________ security standards at Cabot Steel.",
     "options": {
       "A": "stringent",
-      "B": "stringently",
-      "C": "stringency",
-      "D": "stringentness"
+      "B": "stringency",
+      "C": "stringentness",
+      "D": "stringently"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -68565,12 +68664,12 @@ export const grammarQuestions = [
     "id": "q_test5_sosanh_20",
     "question": "The redesigned packaging for the energy drinks is more ________ than the previous design.",
     "options": {
-      "A": "attractive",
+      "A": "attractiveness",
       "B": "attractively",
-      "C": "attraction",
-      "D": "attractiveness"
+      "C": "attractive",
+      "D": "attraction"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'is' cần tính từ 'attractive' (hấp dẫn).",
     "explanation_grammar": "So sánh hơn",
@@ -68587,12 +68686,12 @@ export const grammarQuestions = [
     "id": "q_test5_sosanh_21",
     "question": "The technical documentation for the new engine was not as ________ as required.",
     "options": {
-      "A": "explicit",
-      "B": "explicitly",
-      "C": "explicitness",
-      "D": "explicate"
+      "A": "explicitly",
+      "B": "explicitness",
+      "C": "explicate",
+      "D": "explicit"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'was' cần tính từ 'explicit' (rõ ràng).",
     "explanation_grammar": "So sánh bằng",
@@ -68610,9 +68709,9 @@ export const grammarQuestions = [
     "question": "Streamlining the feedback loop made the development cycle more ________ than last year.",
     "options": {
       "A": "effective",
-      "B": "effectively",
-      "C": "effectiveness",
-      "D": "effect"
+      "B": "effectiveness",
+      "C": "effect",
+      "D": "effectively"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -68631,12 +68730,12 @@ export const grammarQuestions = [
     "id": "q_test5_sosanh_23",
     "question": "Ms. Gamble was commended for producing the most __________ financial forecast at Juntasa Toy.",
     "options": {
-      "A": "reliable",
+      "A": "reliance",
       "B": "reliably",
-      "C": "reliability",
-      "D": "reliance"
+      "C": "reliable",
+      "D": "reliability"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'forecast' cần tính từ 'reliable' (đáng tin cậy).",
     "explanation_grammar": "So sánh nhất",
@@ -68658,12 +68757,12 @@ export const grammarQuestions = [
     "id": "q_test5_sosanh_24",
     "question": "The luxury sedan is more ________ than the compact model in the same price range.",
     "options": {
-      "A": "comfortable",
-      "B": "comfortably",
-      "C": "comfort",
-      "D": "comforting"
+      "A": "comfortably",
+      "B": "comfort",
+      "C": "comforting",
+      "D": "comfortable"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'is' cần tính từ 'comfortable' (thoải mái).",
     "explanation_grammar": "So sánh hơn",
@@ -68680,12 +68779,12 @@ export const grammarQuestions = [
     "id": "q_test5_sosanh_25",
     "question": "The training session for the new hires was not quite as ________ as the advanced seminar.",
     "options": {
-      "A": "informative",
-      "B": "informatively",
-      "C": "information",
-      "D": "informationalness"
+      "A": "information",
+      "B": "informationalness",
+      "C": "informative",
+      "D": "informatively"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'was' cần tính từ 'informative' (nhiều thông tin).",
     "explanation_grammar": "So sánh bằng",
@@ -68703,12 +68802,12 @@ export const grammarQuestions = [
     "id": "q_test6_sosanh_01",
     "question": "The cloud storage service from SkyVault is not quite as ________ as the local server.",
     "options": {
-      "A": "accessible",
+      "A": "access",
       "B": "accessibly",
       "C": "accessibility",
-      "D": "access"
+      "D": "accessible"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc so sánh bằng: 'as + adj + as'. Sau to-be 'is' cần tính từ 'accessible' (dễ tiếp cận).",
     "explanation_grammar": "So sánh bằng",
@@ -68730,12 +68829,12 @@ export const grammarQuestions = [
     "id": "q_test6_sosanh_02",
     "question": "Upgrading the office ventilation system made the workspace more ________ than before.",
     "options": {
-      "A": "comfortable",
-      "B": "comfortably",
+      "A": "comfortably",
+      "B": "comfortable",
       "C": "comfort",
       "D": "comforting"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'comfortable' (thoải mái) là tính từ.",
     "explanation_grammar": "So sánh hơn",
@@ -68757,12 +68856,12 @@ export const grammarQuestions = [
     "id": "q_test6_sosanh_03",
     "question": "Ms. Aris was honored for developing the most __________ marketing strategy at Solis Energy.",
     "options": {
-      "A": "creatively",
-      "B": "creativity",
-      "C": "creative",
-      "D": "creativeness"
+      "A": "creativity",
+      "B": "creativeness",
+      "C": "creatively",
+      "D": "creative"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'strategy' cần tính từ 'creative' (sáng tạo).",
     "explanation_grammar": "So sánh nhất",
@@ -68784,12 +68883,12 @@ export const grammarQuestions = [
     "id": "q_test6_sosanh_04",
     "question": "The new prototype of the Helios sedan is more ________ than the previous model.",
     "options": {
-      "A": "aerodynamic",
+      "A": "aerodynamicist",
       "B": "aerodynamically",
-      "C": "aerodynamics",
-      "D": "aerodynamicist"
+      "C": "aerodynamic",
+      "D": "aerodynamics"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'is' cần tính từ 'aerodynamic' (khí động học).",
     "explanation_grammar": "So sánh hơn",
@@ -68838,12 +68937,12 @@ export const grammarQuestions = [
     "id": "q_test6_sosanh_06",
     "question": "Mr. Tanaka received an award for maintaining the most __________ safety records at TechNova.",
     "options": {
-      "A": "consistent",
-      "B": "consistently",
-      "C": "consistency",
-      "D": "consist"
+      "A": "consistency",
+      "B": "consistent",
+      "C": "consist",
+      "D": "consistently"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'records' cần tính từ 'consistent' (nhất quán).",
     "explanation_grammar": "So sánh nhất",
@@ -68861,9 +68960,9 @@ export const grammarQuestions = [
     "question": "The sudden increase in raw material costs made the project more ________ than expected.",
     "options": {
       "A": "expensive",
-      "B": "expensively",
-      "C": "expense",
-      "D": "expensiveness"
+      "B": "expensiveness",
+      "C": "expensively",
+      "D": "expense"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -68887,12 +68986,12 @@ export const grammarQuestions = [
     "id": "q_test6_sosanh_08",
     "question": "The customer service portal at VietTel is not quite as ________ as the mobile application.",
     "options": {
-      "A": "user-friendly",
-      "B": "user-friendliness",
+      "A": "user-friendliness",
+      "B": "user-friendly",
       "C": "user-friendly way",
       "D": "user-friendlier"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'is' cần tính từ 'user-friendly' (thân thiện với người dùng).",
     "explanation_grammar": "So sánh bằng",
@@ -68915,9 +69014,9 @@ export const grammarQuestions = [
     "question": "Streamlining the feedback process made the design team more ________ than the consultants.",
     "options": {
       "A": "responsive",
-      "B": "responsively",
-      "C": "responsiveness",
-      "D": "respond"
+      "B": "responsiveness",
+      "C": "respond",
+      "D": "responsively"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -68941,12 +69040,12 @@ export const grammarQuestions = [
     "id": "q_test6_sosanh_10",
     "question": "Dr. Kim was recognized for conducting the most __________ environmental audit at BioLab Inc.",
     "options": {
-      "A": "thoroughly",
-      "B": "thorough",
-      "C": "thoroughness",
-      "D": "throughout"
+      "A": "throughout",
+      "B": "thoroughly",
+      "C": "thorough",
+      "D": "thoroughness"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'audit' cần tính từ 'thorough' (kỹ lưỡng).",
     "explanation_grammar": "So sánh nhất",
@@ -68990,12 +69089,12 @@ export const grammarQuestions = [
     "id": "q_test6_sosanh_12",
     "question": "The specialized software made the accounting tasks more ________ than the manual entry.",
     "options": {
-      "A": "manageable",
-      "B": "manageably",
-      "C": "management",
-      "D": "manage"
+      "A": "management",
+      "B": "manage",
+      "C": "manageable",
+      "D": "manageably"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'manageable' (có thể quản lý được) là tính từ.",
     "explanation_grammar": "So sánh hơn",
@@ -69012,12 +69111,12 @@ export const grammarQuestions = [
     "id": "q_test6_sosanh_13",
     "question": "Ms. Lan was praised for submitting the most __________ client feedback report at SwiftAir.",
     "options": {
-      "A": "insightful",
+      "A": "insightfulness",
       "B": "insightfully",
       "C": "insight",
-      "D": "insightfulness"
+      "D": "insightful"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'report' cần tính từ 'insightful' (sâu sắc).",
     "explanation_grammar": "So sánh nhất",
@@ -69034,12 +69133,12 @@ export const grammarQuestions = [
     "id": "q_test6_sosanh_14",
     "question": "The latest digital camera from K-Tech is more ________ than its predecessor.",
     "options": {
-      "A": "versatile",
-      "B": "versatily",
-      "C": "versatility",
+      "A": "versatily",
+      "B": "versatility",
+      "C": "versatile",
       "D": "versatilities"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'is' cần tính từ 'versatile' (đa năng).",
     "explanation_grammar": "So sánh hơn",
@@ -69061,12 +69160,12 @@ export const grammarQuestions = [
     "id": "q_test6_sosanh_15",
     "question": "The training manual for junior associates is not quite as ________ as the senior guide.",
     "options": {
-      "A": "comprehensive",
-      "B": "comprehensively",
-      "C": "comprehension",
-      "D": "comprehensiveness"
+      "A": "comprehension",
+      "B": "comprehensive",
+      "C": "comprehensiveness",
+      "D": "comprehensively"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'is' cần tính từ 'comprehensive' (toàn diện).",
     "explanation_grammar": "So sánh bằng",
@@ -69083,12 +69182,12 @@ export const grammarQuestions = [
     "id": "q_test6_sosanh_16",
     "question": "Installing the new filtration system made the laboratory air more ________ than the warehouse.",
     "options": {
-      "A": "purity",
-      "B": "purely",
-      "C": "pure",
-      "D": "purify"
+      "A": "purify",
+      "B": "purity",
+      "C": "purely",
+      "D": "pure"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'pure' (tinh khiết) là tính từ.",
     "explanation_grammar": "So sánh hơn",
@@ -69132,12 +69231,12 @@ export const grammarQuestions = [
     "id": "q_test6_sosanh_18",
     "question": "Modernizing the encryption software made the database more ________ than the legacy system.",
     "options": {
-      "A": "secure",
-      "B": "securely",
-      "C": "security",
-      "D": "securer"
+      "A": "security",
+      "B": "securer",
+      "C": "secure",
+      "D": "securely"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'secure' (an toàn) là tính từ.",
     "explanation_grammar": "So sánh hơn",
@@ -69159,12 +69258,12 @@ export const grammarQuestions = [
     "id": "q_test6_sosanh_19",
     "question": "Mr. Chen was recognized for proposing the most __________ energy-saving plan at ByteCore.",
     "options": {
-      "A": "ambitious",
-      "B": "ambitiously",
-      "C": "ambition",
-      "D": "ambitiousness"
+      "A": "ambitiousness",
+      "B": "ambitious",
+      "C": "ambitiously",
+      "D": "ambition"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'plan' cần tính từ 'ambitious' (tham vọng).",
     "explanation_grammar": "So sánh nhất",
@@ -69181,12 +69280,12 @@ export const grammarQuestions = [
     "id": "q_test6_sosanh_20",
     "question": "The premium subscription for the Nivido app is more ________ than the basic version.",
     "options": {
-      "A": "beneficial",
-      "B": "beneficially",
-      "C": "benefit",
-      "D": "beneficiary"
+      "A": "beneficially",
+      "B": "benefit",
+      "C": "beneficiary",
+      "D": "beneficial"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'is' cần tính từ 'beneficial' (có lợi).",
     "explanation_grammar": "So sánh hơn",
@@ -69203,12 +69302,12 @@ export const grammarQuestions = [
     "id": "q_test6_sosanh_21",
     "question": "The marketing campaign for the new beverage was not as ________ as the holiday promotion.",
     "options": {
-      "A": "successful",
-      "B": "successfully",
-      "C": "success",
-      "D": "succeed"
+      "A": "success",
+      "B": "succeed",
+      "C": "successful",
+      "D": "successfully"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'was' cần tính từ 'successful' (thành công).",
     "explanation_grammar": "So sánh bằng",
@@ -69225,12 +69324,12 @@ export const grammarQuestions = [
     "id": "q_test6_sosanh_22",
     "question": "Simplifying the insurance claim process made the service more ________ than the old method.",
     "options": {
-      "A": "efficient",
+      "A": "efficacious",
       "B": "efficiently",
       "C": "efficiency",
-      "D": "efficacious"
+      "D": "efficient"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'efficient' (hiệu quả) là tính từ.",
     "explanation_grammar": "So sánh hơn",
@@ -69269,12 +69368,12 @@ export const grammarQuestions = [
     "id": "q_test6_sosanh_24",
     "question": "The upgraded engine in the Helios sedan is more ________ than the standard version.",
     "options": {
-      "A": "powerful",
-      "B": "powerfully",
-      "C": "power",
-      "D": "powerfulness"
+      "A": "power",
+      "B": "powerfulness",
+      "C": "powerful",
+      "D": "powerfully"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'is' cần tính từ 'powerful' (mạnh mẽ).",
     "explanation_grammar": "So sánh hơn",
@@ -69292,9 +69391,9 @@ export const grammarQuestions = [
     "question": "The technical support response from SwiftAir was not quite as ________ as the sales inquiry.",
     "options": {
       "A": "prompt",
-      "B": "promptly",
-      "C": "promptness",
-      "D": "promptitude"
+      "B": "promptitude",
+      "C": "promptly",
+      "D": "promptness"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -69314,12 +69413,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_01",
     "question": "Mr. Sato was commended for delivering the most __________ presentation at the Tokyo summit.",
     "options": {
-      "A": "impressive",
-      "B": "impressively",
-      "C": "impress",
+      "A": "impressively",
+      "B": "impress",
+      "C": "impressive",
       "D": "impression"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'presentation' cần tính từ 'impressive'.",
     "explanation_grammar": "So sánh nhất",
@@ -69341,10 +69440,10 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_02",
     "question": "The updated security software makes the company data more ________ than the previous firewall.",
     "options": {
-      "A": "securely",
+      "A": "security",
       "B": "secure",
-      "C": "security",
-      "D": "securer"
+      "C": "securer",
+      "D": "securely"
     },
     "correct_answer": "B",
     "grammar_type": "So sánh",
@@ -69363,12 +69462,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_03",
     "question": "The marketing budget for the new perfume was not as ________ as originally planned.",
     "options": {
-      "A": "substantially",
-      "B": "substance",
-      "C": "substantial",
-      "D": "substantiate"
+      "A": "substantiate",
+      "B": "substantially",
+      "C": "substance",
+      "D": "substantial"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'was' cần tính từ 'substantial' (đáng kể).",
     "explanation_grammar": "So sánh bằng",
@@ -69385,12 +69484,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_04",
     "question": "The refurbished auditorium at ByteCore is more ________ than the one at the main office.",
     "options": {
-      "A": "spacious",
-      "B": "spaciousness",
-      "C": "spatially",
+      "A": "spaciousness",
+      "B": "spatially",
+      "C": "spacious",
       "D": "space"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'is' cần tính từ 'spacious' (rộng rãi).",
     "explanation_grammar": "So sánh hơn",
@@ -69412,12 +69511,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_05",
     "question": "Ms. Elena was recognized for providing the most __________ technical support at K-Tech.",
     "options": {
-      "A": "reliably",
-      "B": "reliability",
-      "C": "reliable",
-      "D": "reliance"
+      "A": "reliability",
+      "B": "reliable",
+      "C": "reliance",
+      "D": "reliably"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước cụm danh từ 'technical support' cần tính từ 'reliable'.",
     "explanation_grammar": "So sánh nhất",
@@ -69434,12 +69533,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_06",
     "question": "Simplifying the registration process made the user experience more ________ than before.",
     "options": {
-      "A": "seamless",
+      "A": "seam",
       "B": "seamlessly",
       "C": "seamlessness",
-      "D": "seam"
+      "D": "seamless"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'seamless' (liền mạch) là tính từ.",
     "explanation_grammar": "So sánh hơn",
@@ -69456,12 +69555,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_07",
     "question": "The newly launched smartphone is not quite as ________ as the Helios tablet.",
     "options": {
-      "A": "portability",
-      "B": "portably",
-      "C": "portable",
+      "A": "portable",
+      "B": "portability",
+      "C": "portably",
       "D": "porting"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'is' cần tính từ 'portable' (có thể mang theo).",
     "explanation_grammar": "So sánh bằng",
@@ -69478,12 +69577,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_08",
     "question": "Dr. Varma was praised for publishing the most __________ medical paper at BioLab Inc.",
     "options": {
-      "A": "influential",
-      "B": "influence",
-      "C": "influentially",
-      "D": "influentialness"
+      "A": "influentially",
+      "B": "influentialness",
+      "C": "influence",
+      "D": "influential"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'paper' cần tính từ 'influential'.",
     "explanation_grammar": "So sánh nhất",
@@ -69501,9 +69600,9 @@ export const grammarQuestions = [
     "question": "Implementing the new cooling system made the server room more ________ than the lobby.",
     "options": {
       "A": "stable",
-      "B": "stably",
-      "C": "stability",
-      "D": "stabilize"
+      "B": "stabilize",
+      "C": "stably",
+      "D": "stability"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -69522,12 +69621,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_10",
     "question": "The recent fiscal report for Solis Energy was not as ________ as the analysts predicted.",
     "options": {
-      "A": "favorable",
-      "B": "favorably",
+      "A": "favorably",
+      "B": "favorable",
       "C": "favor",
       "D": "favoritism"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'was' cần tính từ 'favorable'.",
     "explanation_grammar": "So sánh bằng",
@@ -69545,9 +69644,9 @@ export const grammarQuestions = [
     "question": "Mr. Miller was honored for maintaining the most __________ client records at Hansol Corp.",
     "options": {
       "A": "accurate",
-      "B": "accurately",
-      "C": "accuracy",
-      "D": "accurateness"
+      "B": "accuracy",
+      "C": "accurateness",
+      "D": "accurately"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -69566,12 +69665,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_12",
     "question": "The specialized training program made the interns more ________ than the temporary staff.",
     "options": {
-      "A": "competent",
+      "A": "competition",
       "B": "competently",
       "C": "competence",
-      "D": "competition"
+      "D": "competent"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'competent' (có năng lực) là tính từ.",
     "explanation_grammar": "So sánh hơn",
@@ -69588,12 +69687,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_13",
     "question": "The interior design of the new branch is more ________ than the old headquarters.",
     "options": {
-      "A": "modernize",
-      "B": "modern",
+      "A": "modern",
+      "B": "modernize",
       "C": "modernly",
       "D": "modernization"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'is' cần tính từ 'modern'.",
     "explanation_grammar": "So sánh hơn",
@@ -69610,12 +69709,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_14",
     "question": "The customer feedback for the SwiftAir app was not as ________ as the developers expected.",
     "options": {
-      "A": "positive",
-      "B": "positively",
-      "C": "positiveness",
-      "D": "positivity"
+      "A": "positiveness",
+      "B": "positivity",
+      "C": "positive",
+      "D": "positively"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'was' cần tính từ 'positive'.",
     "explanation_grammar": "So sánh bằng",
@@ -69633,9 +69732,9 @@ export const grammarQuestions = [
     "question": "Ms. Nguyen was recognized for proposing the most __________ recruitment plan at VietTel.",
     "options": {
       "A": "cost-effective",
-      "B": "cost-effectively",
-      "C": "cost-effectiveness",
-      "D": "costing"
+      "B": "costing",
+      "C": "cost-effectively",
+      "D": "cost-effectiveness"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -69676,12 +69775,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_17",
     "question": "The latest prototype from TechNova is not quite as ________ as the current model.",
     "options": {
-      "A": "durable",
-      "B": "durably",
-      "C": "durability",
-      "D": "durance"
+      "A": "durability",
+      "B": "durance",
+      "C": "durably",
+      "D": "durable"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'is' cần tính từ 'durable'.",
     "explanation_grammar": "So sánh bằng",
@@ -69698,12 +69797,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_18",
     "question": "The annual gala at the Grand Plaza Hotel was more ________ than last year's event.",
     "options": {
-      "A": "extravagantly",
-      "B": "extravagance",
-      "C": "extravagant",
-      "D": "extravagate"
+      "A": "extravagate",
+      "B": "extravagant",
+      "C": "extravagantly",
+      "D": "extravagance"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'was' cần tính từ 'extravagant' (xa hoa).",
     "explanation_grammar": "So sánh hơn",
@@ -69720,12 +69819,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_19",
     "question": "Mr. J. M. Lim was praised for leading the most __________ diversity initiative at Cabot Steel.",
     "options": {
-      "A": "inclusive",
-      "B": "inclusively",
-      "C": "inclusion",
+      "A": "inclusively",
+      "B": "inclusion",
+      "C": "inclusive",
       "D": "inclusiveness"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'initiative' cần tính từ 'inclusive' (mang tính hòa nhập).",
     "explanation_grammar": "So sánh nhất",
@@ -69742,9 +69841,9 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_20",
     "question": "The redesigned interface makes the software more ________ than the previous version.",
     "options": {
-      "A": "intuitively",
-      "B": "intuition",
-      "C": "intuitiveness",
+      "A": "intuition",
+      "B": "intuitiveness",
+      "C": "intuitively",
       "D": "intuitive"
     },
     "correct_answer": "D",
@@ -69764,12 +69863,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_21",
     "question": "The marketing strategy for the new beverage was not as ________ as the competitor’s plan.",
     "options": {
-      "A": "aggressively",
-      "B": "aggressiveness",
-      "C": "aggressive",
-      "D": "aggression"
+      "A": "aggressive",
+      "B": "aggression",
+      "C": "aggressively",
+      "D": "aggressiveness"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'was' cần tính từ 'aggressive' (mạnh mẽ, táo bạo).",
     "explanation_grammar": "So sánh bằng",
@@ -69786,12 +69885,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_22",
     "question": "Increasing the staffing levels made the customer support more ________ than last month.",
     "options": {
-      "A": "responsive",
-      "B": "responsively",
-      "C": "responsiveness",
+      "A": "responsively",
+      "B": "responsiveness",
+      "C": "responsive",
       "D": "respond"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'responsive' là tính từ.",
     "explanation_grammar": "So sánh hơn",
@@ -69808,12 +69907,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_23",
     "question": "Dr. Aris was honored for conducting the most __________ laboratory research at BioLab Inc.",
     "options": {
-      "A": "comprehensive",
-      "B": "comprehensively",
-      "C": "comprehension",
-      "D": "comprehensiveness"
+      "A": "comprehension",
+      "B": "comprehensive",
+      "C": "comprehensiveness",
+      "D": "comprehensively"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'research' cần tính từ 'comprehensive'.",
     "explanation_grammar": "So sánh nhất",
@@ -69830,12 +69929,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_24",
     "question": "The synthetic material used in Zenith wallets is not as ________ as genuine leather.",
     "options": {
-      "A": "pliability",
-      "B": "pliantly",
-      "C": "pliancy",
-      "D": "pliant"
+      "A": "pliant",
+      "B": "pliancy",
+      "C": "pliability",
+      "D": "pliantly"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'is' cần tính từ 'pliant' (mềm dẻo).",
     "explanation_grammar": "So sánh bằng",
@@ -69857,12 +69956,12 @@ export const grammarQuestions = [
     "id": "q_test7_sosanh_25",
     "question": "The new employee orientation was more ________ than the one held last autumn.",
     "options": {
-      "A": "informative",
-      "B": "informatively",
+      "A": "informatively",
+      "B": "informative",
       "C": "information",
       "D": "informationalness"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'was' cần tính từ 'informative'.",
     "explanation_grammar": "So sánh hơn",
@@ -69886,9 +69985,9 @@ export const grammarQuestions = [
     "question": "The upgraded server at ByteCore is not quite as ________ as the one used by their competitors.",
     "options": {
       "A": "reliable",
-      "B": "reliably",
-      "C": "reliability",
-      "D": "reliance"
+      "B": "reliability",
+      "C": "reliance",
+      "D": "reliably"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -69907,12 +70006,12 @@ export const grammarQuestions = [
     "id": "q_test8_sosanh_02",
     "question": "Implementing the new workflow made the design team more ________ than the previous department.",
     "options": {
-      "A": "productive",
+      "A": "produce",
       "B": "productively",
       "C": "productivity",
-      "D": "produce"
+      "D": "productive"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'productive' là tính từ.",
     "explanation_grammar": "So sánh hơn",
@@ -69930,11 +70029,11 @@ export const grammarQuestions = [
     "question": "Ms. Sophia was honored for having the most __________ sales record at Zenith Fashion.",
     "options": {
       "A": "impressively",
-      "B": "impressive",
-      "C": "impression",
+      "B": "impression",
+      "C": "impressive",
       "D": "impress"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'record' cần tính từ 'impressive'.",
     "explanation_grammar": "So sánh nhất",
@@ -69952,9 +70051,9 @@ export const grammarQuestions = [
     "question": "The new prototype of the Helios sedan is more ________ than the gasoline-powered model.",
     "options": {
       "A": "aerodynamic",
-      "B": "aerodynamically",
-      "C": "aerodynamics",
-      "D": "aerodynamicist"
+      "B": "aerodynamics",
+      "C": "aerodynamicist",
+      "D": "aerodynamically"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -69973,12 +70072,12 @@ export const grammarQuestions = [
     "id": "q_test8_sosanh_05",
     "question": "The marketing campaign for Solis energy drinks was not as ________ as the summer promotion.",
     "options": {
-      "A": "successful",
+      "A": "succeed",
       "B": "successfully",
-      "C": "success",
-      "D": "succeed"
+      "C": "successful",
+      "D": "success"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'was' cần tính từ 'successful'.",
     "explanation_grammar": "So sánh bằng",
@@ -69997,10 +70096,10 @@ export const grammarQuestions = [
     "options": {
       "A": "efficiency",
       "B": "efficiently",
-      "C": "efficient",
-      "D": "efficaciousness"
+      "C": "efficaciousness",
+      "D": "efficient"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'cooling system' cần tính từ 'efficient'.",
     "explanation_grammar": "So sánh nhất",
@@ -70018,9 +70117,9 @@ export const grammarQuestions = [
     "question": "The sudden market volatility made the investment portfolio more ________ than the fixed deposit.",
     "options": {
       "A": "risky",
-      "B": "riskily",
-      "C": "riskiness",
-      "D": "risks"
+      "B": "riskiness",
+      "C": "risks",
+      "D": "riskily"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
@@ -70039,12 +70138,12 @@ export const grammarQuestions = [
     "id": "q_test8_sosanh_08",
     "question": "The lobby of the Grand Plaza Hotel is not quite as ________ as the penthouse suite.",
     "options": {
-      "A": "luxury",
-      "B": "luxuriously",
-      "C": "luxuriousness",
-      "D": "luxurious"
+      "A": "luxuriousness",
+      "B": "luxury",
+      "C": "luxurious",
+      "D": "luxuriously"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'is' cần tính từ 'luxurious' (sang trọng).",
     "explanation_grammar": "So sánh bằng",
@@ -70062,11 +70161,11 @@ export const grammarQuestions = [
     "question": "Automating the inventory system made the reordering process more ________ than the manual method.",
     "options": {
       "A": "effect",
-      "B": "effectively",
-      "C": "effectiveness",
-      "D": "effective"
+      "B": "effective",
+      "C": "effectively",
+      "D": "effectiveness"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'effective' là tính từ.",
     "explanation_grammar": "So sánh hơn",
@@ -70083,12 +70182,12 @@ export const grammarQuestions = [
     "id": "q_test8_sosanh_10",
     "question": "Dr. Aris was recognized for conducting the most __________ medical study at BioLab Inc.",
     "options": {
-      "A": "comprehensive",
-      "B": "comprehensively",
-      "C": "comprehensiveness",
-      "D": "comprehension"
+      "A": "comprehensiveness",
+      "B": "comprehension",
+      "C": "comprehensively",
+      "D": "comprehensive"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'study' cần tính từ 'comprehensive'.",
     "explanation_grammar": "So sánh nhất",
@@ -70105,10 +70204,10 @@ export const grammarQuestions = [
     "id": "q_test8_sosanh_11",
     "question": "The synthetic fabric in the Ergan collection is not as ________ as natural cotton.",
     "options": {
-      "A": "breathability",
+      "A": "breathes",
       "B": "breathable",
-      "C": "breathably",
-      "D": "breathes"
+      "C": "breathability",
+      "D": "breathably"
     },
     "correct_answer": "B",
     "grammar_type": "So sánh",
@@ -70129,10 +70228,10 @@ export const grammarQuestions = [
     "options": {
       "A": "knowledge",
       "B": "knowingly",
-      "C": "knowledgeable",
-      "D": "know"
+      "C": "know",
+      "D": "knowledgeable"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'knowledgeable' (am hiểu) là tính từ.",
     "explanation_grammar": "So sánh hơn",
@@ -70149,12 +70248,12 @@ export const grammarQuestions = [
     "id": "q_test8_sosanh_13",
     "question": "Mr. Kim was praised for maintaining the most __________ financial ledger at Hansol Corp.",
     "options": {
-      "A": "accuracy",
-      "B": "accurately",
-      "C": "accurate",
-      "D": "accurateness"
+      "A": "accurately",
+      "B": "accurate",
+      "C": "accurateness",
+      "D": "accuracy"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'ledger' cần tính từ 'accurate'.",
     "explanation_grammar": "So sánh nhất",
@@ -70171,12 +70270,12 @@ export const grammarQuestions = [
     "id": "q_test8_sosanh_14",
     "question": "The latest tablet from K-Tech is more ________ than the version released in Seattle.",
     "options": {
-      "A": "portability",
-      "B": "portably",
-      "C": "porting",
-      "D": "portable"
+      "A": "porting",
+      "B": "portability",
+      "C": "portable",
+      "D": "portably"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'is' cần tính từ 'portable'.",
     "explanation_grammar": "So sánh hơn",
@@ -70193,12 +70292,12 @@ export const grammarQuestions = [
     "id": "q_test8_sosanh_15",
     "question": "The customer support at SwiftAir is not quite as ________ as that of premium carriers.",
     "options": {
-      "A": "responsive",
-      "B": "responsively",
+      "A": "responsively",
+      "B": "responsive",
       "C": "responsiveness",
       "D": "respond"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'is' cần tính từ 'responsive'.",
     "explanation_grammar": "So sánh bằng",
@@ -70215,9 +70314,9 @@ export const grammarQuestions = [
     "id": "q_test8_sosanh_16",
     "question": "Investing in solar panels made the office building more ________ than the warehouse.",
     "options": {
-      "A": "sustainability",
-      "B": "sustain",
-      "C": "sustainably",
+      "A": "sustain",
+      "B": "sustainably",
+      "C": "sustainability",
       "D": "sustainable"
     },
     "correct_answer": "D",
@@ -70237,12 +70336,12 @@ export const grammarQuestions = [
     "id": "q_test8_sosanh_17",
     "question": "Ms. Lan was honored for providing the most __________ customer service rating at VietTel.",
     "options": {
-      "A": "impressively",
-      "B": "impress",
-      "C": "impressive",
-      "D": "impression"
+      "A": "impressive",
+      "B": "impression",
+      "C": "impressively",
+      "D": "impress"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'rating' cần tính từ 'impressive'.",
     "explanation_grammar": "So sánh nhất",
@@ -70259,12 +70358,12 @@ export const grammarQuestions = [
     "id": "q_test8_sosanh_18",
     "question": "Introducing the self-checkout lane made the shopping experience more ________ than the traditional cashier process.",
     "options": {
-      "A": "convenient",
-      "B": "conveniently",
+      "A": "conveniently",
+      "B": "convenient",
       "C": "convenience",
       "D": "conveniency"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'convenient' là tính từ.",
     "explanation_grammar": "So sánh hơn",
@@ -70281,12 +70380,12 @@ export const grammarQuestions = [
     "id": "q_test8_sosanh_19",
     "question": "Dr. Aris was recognized for publishing the most __________ research project at BioLab Inc.",
     "options": {
-      "A": "influential",
-      "B": "influence",
-      "C": "influentially",
-      "D": "influentialness"
+      "A": "influentially",
+      "B": "influentialness",
+      "C": "influence",
+      "D": "influential"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'project' cần tính từ 'influential'.",
     "explanation_grammar": "So sánh nhất",
@@ -70303,12 +70402,12 @@ export const grammarQuestions = [
     "id": "q_test8_sosanh_20",
     "question": "The leather interior of the Helios sedan is more ________ than the fabric seating.",
     "options": {
-      "A": "luxuriously",
-      "B": "luxury",
-      "C": "luxurious",
-      "D": "luxuriousness"
+      "A": "luxurious",
+      "B": "luxuriousness",
+      "C": "luxuriously",
+      "D": "luxury"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'is' cần tính từ 'luxurious'.",
     "explanation_grammar": "So sánh hơn",
@@ -70325,12 +70424,12 @@ export const grammarQuestions = [
     "id": "q_test8_sosanh_21",
     "question": "The summer internship at Hansol Corp was not as ________ as the winter session.",
     "options": {
-      "A": "productive",
-      "B": "productively",
-      "C": "productivity",
+      "A": "productively",
+      "B": "productivity",
+      "C": "productive",
       "D": "produce"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'was' cần tính từ 'productive'.",
     "explanation_grammar": "So sánh bằng",
@@ -70347,10 +70446,10 @@ export const grammarQuestions = [
     "id": "q_test8_sosanh_22",
     "question": "Rewriting the instruction manual made the assembly steps more ________ than the original version.",
     "options": {
-      "A": "understand",
+      "A": "understandably",
       "B": "understandable",
-      "C": "understandably",
-      "D": "understanding"
+      "C": "understanding",
+      "D": "understand"
     },
     "correct_answer": "B",
     "grammar_type": "So sánh",
@@ -70369,12 +70468,12 @@ export const grammarQuestions = [
     "id": "q_test8_sosanh_23",
     "question": "Mr. Shaw was honored for maintaining the most __________ inventory records at the city branch.",
     "options": {
-      "A": "accurately",
-      "B": "accuracy",
-      "C": "accurate",
-      "D": "accurateness"
+      "A": "accurate",
+      "B": "accurateness",
+      "C": "accurately",
+      "D": "accuracy"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'records' cần tính từ 'accurate'.",
     "explanation_grammar": "So sánh nhất",
@@ -70391,12 +70490,12 @@ export const grammarQuestions = [
     "id": "q_test8_sosanh_24",
     "question": "The solar panel system proved more ________ than the backup generator during the power outage.",
     "options": {
-      "A": "dependable",
-      "B": "dependably",
-      "C": "dependability",
+      "A": "dependably",
+      "B": "dependability",
+      "C": "dependable",
       "D": "dependence"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau động từ 'proved' cần tính từ 'dependable'.",
     "explanation_grammar": "So sánh hơn",
@@ -70413,10 +70512,10 @@ export const grammarQuestions = [
     "id": "q_test8_sosanh_25",
     "question": "The orientation session for new hires was not quite as ________ as the online training module.",
     "options": {
-      "A": "informatively",
+      "A": "information",
       "B": "informative",
-      "C": "information",
-      "D": "informationalness"
+      "C": "informationalness",
+      "D": "informatively"
     },
     "correct_answer": "B",
     "grammar_type": "So sánh",
