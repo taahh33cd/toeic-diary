@@ -9188,7 +9188,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Liên từ",
     "explanation_reason": "Sự việc sẽ xảy ra khi một điều kiện khác diễn ra. 'When' (Khi mà) nối hai mệnh đề cực chuẩn nghĩa.",
-    "explanation_grammar": "When + clause.",
+    "explanation_grammar": "Liên từ chỉ thời gian",
     "translation": "Chủ nhà có thể tiết kiệm tiền khi họ thay lò sưởi cũ bằng dòng TD Ultra siêu tiết kiệm của chúng tôi.",
     "core_vocabulary": [
       {
@@ -31959,7 +31959,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "Liên từ 'unless' (trừ khi) dùng để chỉ một điều kiện cần thiết để hành động chính xảy ra.",
-  "explanation_grammar": "Conditional Conjunction (Unless).",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Bàn Pentular không thể được vận chuyển trừ khi đơn đặt hàng được ký bởi người quản lý.",
   "core_vocabulary": [
     {
@@ -31986,7 +31986,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "Liên từ 'once' (ngay khi) chỉ một thời điểm mà một hành động khác sẽ bắt đầu.",
-  "explanation_grammar": "Temporal Conjunction (Once).",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Chúng tôi sẽ bắt đầu xử lý đơn xin vay vốn của ông Vallejo ngay khi chúng tôi nhận được các tài liệu hỗ trợ.",
   "core_vocabulary": [
     {
@@ -32013,7 +32013,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "Liên từ 'Even though' (mặc dù) dùng để kết nối hai mệnh đề có sự tương phản.",
-  "explanation_grammar": "Concessive Conjunction (Even though).",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Mặc dù chi phí nhân công thấp hơn đáng kể trong quý trước, Enex, Inc. vẫn không thể có lãi.",
   "core_vocabulary": [
     {
@@ -32045,7 +32045,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "Liên từ 'so that' (để mà) dùng để chỉ mục đích của hành động phía trước.",
-  "explanation_grammar": "Purpose Conjunction (So that).",
+  "explanation_grammar": "Liên từ chỉ mục đích",
   "translation": "Các hồ sơ vật lý cũ hơn một năm nên được cho vào hộp để chúng có thể được chuyển đến cơ sở lưu trữ.",
   "core_vocabulary": [
     {
@@ -32067,7 +32067,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "Liên từ 'so that' dùng để chỉ mục đích phía sau.",
-  "explanation_grammar": "Purpose Conjunction (So that).",
+  "explanation_grammar": "Liên từ chỉ mục đích",
   "translation": "Cửa hàng tạp hóa Cosima cung cấp cho khách hàng những mẹo nấu ăn thực tế để họ có thể tận dụng tối đa các loại thực phẩm mình mua.",
   "core_vocabulary": [
     {
@@ -32094,7 +32094,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "Liên từ 'because' (bởi vì) dẫn đầu mệnh đề nguyên nhân.",
-  "explanation_grammar": "Causal Conjunction (Because).",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Phòng nhân sự đã sửa lại chính sách nghỉ phép vì nhiều nhân viên thấy phiên bản cũ gây nhầm lẫn.",
   "core_vocabulary": [
     {
@@ -32121,7 +32121,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "Dùng 'even though' để chỉ sự tương phản bất ngờ giữa hai mệnh đề.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Varangia Marketing Services đã trở thành công ty đi đầu trong lĩnh vực quảng cáo doanh nghiệp, mặc dù họ mới chỉ hoạt động được bốn năm.",
   "core_vocabulary": [
     {
@@ -32143,7 +32143,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "Liên từ 'provided that' (với điều kiện là) chỉ một điều kiện bắt buộc.",
-  "explanation_grammar": "Conditional Conjunction (Provided that).",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Người thuê nhà có thể chơi các nhạc cụ với điều kiện là âm nhạc không làm phiền những cư dân khác trong tòa nhà.",
   "core_vocabulary": [
     {
@@ -32170,7 +32170,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "Liên từ 'before' chỉ trình tự thời gian.",
-  "explanation_grammar": "Temporal Conjunction.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Việc dọn dẹp thảm đã được lên lịch vào cuối tuần này, vì vậy vui lòng dọn dẹp các đồ vật khỏi sàn văn phòng trước khi bạn về vào hôm nay.",
   "core_vocabulary": [
     {
@@ -32192,7 +32192,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "Dùng 'Unless' (trừ khi) để chỉ điều kiện phủ định: 'Trừ khi ông ấy đến trong 10 phút nữa (nếu không ông ấy sẽ trễ)'.",
-  "explanation_grammar": "Negative Condition (Unless).",
+  "explanation_grammar": "Liên từ chỉ điều kiện phủ định",
   "translation": "Trừ khi ông ấy đến sân bay trong mười phút nữa, ông Santini sẽ phải đi chuyến bay muộn hơn.",
   "core_vocabulary": [
     {
@@ -32219,7 +32219,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "Liên từ 'after' (sau khi) chỉ trình tự các dự án.",
-  "explanation_grammar": "Temporal Conjunction.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Bà Charisse sẽ tiếp nhận một tài khoản khách hàng mới sau khi bà hoàn thành dự án Morrison.",
   "core_vocabulary": [
     {
@@ -32241,7 +32241,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "Dùng 'when' trước một V-ing rút gọn khi hai vế cùng chủ ngữ.",
-  "explanation_grammar": "Conjunction (When + V-ing).",
+  "explanation_grammar": "Liên từ + V-ing (dạng rút gọn)",
   "translation": "Hãy nhớ nộp biên lai để được hoàn tiền khi bạn trở về sau chuyến công tác.",
   "core_vocabulary": [
     {
@@ -32263,7 +32263,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "Liên từ 'While' chỉ một khoảng thời gian hành động diễn ra đồng thời.",
-  "explanation_grammar": "Temporal Conjunction.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Trong khi đơn hàng của bạn đang được xử lý, vui lòng gọi cho bộ phận dịch vụ khách hàng nếu có bất kỳ câu hỏi nào.",
   "core_vocabulary": [
     {
@@ -32285,7 +32285,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "Cấu trúc 'not... until' (phải đến khi... mới).",
-  "explanation_grammar": "Temporal Conjunction/Phrase.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Bà Sampson sẽ không đến Hội nghị cho đến tận sau bài thuyết trình của nhóm chúng tôi.",
   "core_vocabulary": [
     {
@@ -32307,7 +32307,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "Liên từ 'even though' chỉ sự nhượng bộ/tương phản giữa chất lượng và giá thầu.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Chúng tôi đã thuê Okafor Construction để thực hiện việc cải tạo mặc dù họ không phải là bên đấu giá thấp nhất cho dự án.",
   "core_vocabulary": [
     {
@@ -32334,7 +32334,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "Dùng 'but' để liên kết hai hành động tương phản về thời gian hoặc kết quả.",
-  "explanation_grammar": "Coordinating Conjunction (But).",
+  "explanation_grammar": "Liên từ kết hợp",
   "translation": "Các biên tập viên bản thảo của chúng tôi sẽ xem xét bản thảo nhưng sẽ không gửi lại cho đến cuối tuần sau.",
   "core_vocabulary": [
     {
@@ -32361,7 +32361,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "Liên từ 'Although' (mặc dù) đứng đầu câu để chỉ sự tương phản.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Mặc dù tổ chức đã nỗ lực tiếp cận cộng đồng gấp đôi, nhưng vẫn chưa thấy sự gia tăng khách hàng mới.",
   "core_vocabulary": [
     {
@@ -32388,7 +32388,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "Liên từ 'in case' (phòng khi) chỉ mục đích dự phòng.",
-  "explanation_grammar": "Conjunction of Condition/Precaution.",
+  "explanation_grammar": "Liên từ chỉ điều kiện dự phòng",
   "translation": "Vui lòng cung cấp số điện thoại của bạn phòng khi tài xế giao hàng cần liên hệ với bạn.",
   "core_vocabulary": [
     {
@@ -32410,7 +32410,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "Cấu trúc 'both A and B' (cả A và B).",
-  "explanation_grammar": "Correlative Conjunction (Both...and).",
+  "explanation_grammar": "Liên từ tương quan",
   "translation": "Chính sách của công ty cho phép đi công tác bằng cả tàu hỏa và máy bay.",
   "core_vocabulary": [
     {
@@ -32437,7 +32437,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "Liên từ 'though' (mặc dù) đứng sau dấu phẩy để chỉ sự tương phản.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Sự kiện gây quỹ cho thư viện đã thành công, mặc dù buổi đọc sách của tác giả đã bị hủy bỏ.",
   "core_vocabulary": [
     {
@@ -32459,7 +32459,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "Dùng liên từ 'before' để chỉ thời gian trước khi một hành động khác xảy ra.",
-  "explanation_grammar": "Conjunction of Time (Before).",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Cô Tanaka cần xem xét đề xuất tiếp thị trước khi nó được gửi cho khách hàng.",
   "core_vocabulary": [
     {
@@ -32486,7 +32486,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Provided that' (miễn là) dùng để đưa ra một điều kiện.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Nhân viên có thể làm việc tại nhà vào các ngày Thứ Sáu miễn là họ đã hoàn thành các nhiệm vụ hàng tuần của mình.",
   "core_vocabulary": [
     {
@@ -32513,7 +32513,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Although' (mặc dù) dùng để chỉ sự nhượng bộ/tương phản giữa hai vế.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Mặc dù phần mềm mới rất đắt, Zenith Corp vẫn quyết định mua nó cho tất cả các phòng ban.",
   "core_vocabulary": [
     {
@@ -32540,7 +32540,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'So that' (để mà) dùng để chỉ mục đích, theo sau là một mệnh đề.",
-  "explanation_grammar": "Conjunction of Purpose.",
+  "explanation_grammar": "Liên từ chỉ mục đích",
   "translation": "Ông Henderson đã đặt phòng họp sớm để ông ấy có thể lắp đặt máy chiếu.",
   "core_vocabulary": [
     {
@@ -32567,7 +32567,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Since' ở đây đóng vai trò là liên từ chỉ nguyên nhân (vì).",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Căng tin sẽ đóng cửa để sửa chữa vào ngày mai vì hệ thống ống nước cần được sửa chữa ngay lập tức.",
   "core_vocabulary": [
     {
@@ -32594,7 +32594,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Until' (cho đến khi) chỉ mốc thời gian kết thúc của một trạng thái.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Báo cáo tài chính không thể được hoàn tất cho đến khi quản lý khu vực trở về từ chuyến công tác.",
   "core_vocabulary": [
     {
@@ -32621,7 +32621,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Unless' (trừ khi) tương đương với 'If not', dùng để đưa ra điều kiện tiên quyết.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Trừ khi khách hàng trình ra hóa đơn hợp lệ, họ không thể nhận được tiền hoàn lại đầy đủ cho các món hàng đã trả lại.",
   "core_vocabulary": [
     {
@@ -32648,7 +32648,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'As' (khi/vừa lúc) dùng để chỉ hai hành động xảy ra đồng thời.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Vui lòng đảm bảo tất cả các đèn đều được tắt khi bạn rời khỏi tòa nhà tối nay.",
   "core_vocabulary": [
     {
@@ -32670,7 +32670,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'After' (sau khi) chỉ trình tự thời gian của hai hành động.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Orion Tech sẽ công bố chiến dịch quảng bá mới sau khi ban giám đốc phê duyệt ngân sách.",
   "core_vocabulary": [
     {
@@ -32697,7 +32697,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'So that' (để mà) dùng để nối với một mệnh đề chỉ mục đích.",
-  "explanation_grammar": "Conjunction of Purpose.",
+  "explanation_grammar": "Liên từ chỉ mục đích",
   "translation": "Phòng nhân sự đã cập nhật sổ tay nhân viên để nhân viên mới có thể dễ dàng hiểu các chính sách của công ty.",
   "core_vocabulary": [
     {
@@ -32724,7 +32724,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'While' (trong khi/mặc dù) dùng để chỉ sự tương phản giữa hai ý trong cùng một câu.",
-  "explanation_grammar": "Concessive/Contrast Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự tương phản",
   "translation": "Trong khi ông Schmidt thích các cuộc họp trực tiếp, các đồng nghiệp của ông thường liên lạc qua email.",
   "core_vocabulary": [
     {
@@ -32751,7 +32751,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'If' (nếu) dùng để đưa ra một giả định hoặc điều kiện.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Sự kiện xây dựng đội ngũ ngoài trời sẽ bị hoãn sang tuần tới nếu trời mưa to vào sáng mai.",
   "core_vocabulary": [
     {
@@ -32773,7 +32773,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Because' (bởi vì) dùng để nối hai mệnh đề chỉ nguyên nhân - kết quả.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Nova Retailers đã thấy một sự gia tăng đáng kể trong doanh số bán hàng tháng trước bởi vì họ đã khởi động một chiến dịch quảng cáo trực tuyến thành công.",
   "core_vocabulary": [
     {
@@ -32800,7 +32800,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'As soon as' (ngay khi) chỉ một hành động xảy ra ngay sau một hành động khác.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Chúng tôi sẽ thông báo cho bạn qua email ngay khi lịch đào tạo cập nhật có sẵn trên cổng thông tin công ty.",
   "core_vocabulary": [
     {
@@ -32827,7 +32827,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Even though' (mặc dù) dùng trước một mệnh đề để chỉ sự tương phản.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Mặc dù thời hạn đang đến gần rất nhanh, nhóm thiết kế vẫn tự tin về việc hoàn thành dự án.",
   "core_vocabulary": [
     {
@@ -32854,7 +32854,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'As long as' (miễn là) dùng để đưa ra điều kiện.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Bạn có thể mượn máy tính xách tay của công ty cho bài thuyết trình của mình miễn là bạn trả lại nó vào cuối ngày.",
   "core_vocabulary": [
     {
@@ -32881,7 +32881,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Once' (một khi) ở đây đóng vai trò là liên từ chỉ thời gian.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Bảo hành trên máy xay Lumina có hiệu lực ngay khi khách hàng đăng ký sản phẩm trực tuyến.",
   "core_vocabulary": [
     {
@@ -32908,7 +32908,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Now that' (vì giờ đây) dùng để giải thích lý do dựa trên một tình huống mới xảy ra.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Vì giờ đây cuộc kiểm toán hàng năm đã hoàn tất, nhân viên kế toán có thể tiếp tục các nhiệm vụ hàng ngày thường xuyên của họ.",
   "core_vocabulary": [
     {
@@ -32935,7 +32935,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Unless' (trừ khi) nối với một mệnh đề chỉ điều kiện phủ định.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Ban quản lý sẽ không phê duyệt việc tăng ngân sách được yêu cầu trừ khi các giải trình tài chính chi tiết được cung cấp.",
   "core_vocabulary": [
     {
@@ -32957,7 +32957,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'So that' (để mà) dùng để chỉ mục đích, theo sau là mệnh đề.",
-  "explanation_grammar": "Conjunction of Purpose.",
+  "explanation_grammar": "Liên từ chỉ mục đích",
   "translation": "Cô Garcia đã lên lịch một buổi đào tạo cho nhân viên mới để họ có thể học cách sử dụng phần mềm lập lịch.",
   "core_vocabulary": [
     {
@@ -32979,7 +32979,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Before' (trước khi) là liên từ phù hợp nhất để nối với một mệnh đề.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Trước khi bạn ký hợp đồng lao động, vui lòng đọc tất cả các điều khoản và điều kiện thật cẩn thận.",
   "core_vocabulary": [
     {
@@ -33006,7 +33006,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Although' (mặc dù) dùng để chỉ sự nhượng bộ giữa hai mệnh đề.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Mặc dù nguyên mẫu ban đầu cho thấy một số khiếm khuyết nhỏ, Apex Industries vẫn quyết định tiến tới sản xuất.",
   "core_vocabulary": [
     {
@@ -33033,7 +33033,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Since' (vì) dùng để giải thích lý do cho mệnh đề trước.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Việc bảo trì máy chủ theo lịch trình đã bị trì hoãn vì bộ phận CNTT đã trải qua một sự cố mất điện bất ngờ.",
   "core_vocabulary": [
     {
@@ -33060,7 +33060,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Until' (cho đến khi) chỉ mốc thời gian hành động ở mệnh đề chính có thể thực hiện.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Vui lòng không phân phối biên bản cuộc họp cho nhân viên cho đến khi bà Robinson xem xét chúng để đảm bảo tính chính xác.",
   "core_vocabulary": [
     {
@@ -33087,7 +33087,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'So that' (để mà) dùng để chỉ mục đích của hành động phía trước.",
-  "explanation_grammar": "Conjunction of Purpose.",
+  "explanation_grammar": "Liên từ chỉ mục đích",
   "translation": "Clearstar Agency cung cấp giờ làm việc linh hoạt để nhân viên có thể duy trì sự cân bằng giữa công việc và cuộc sống lành mạnh.",
   "core_vocabulary": [
     {
@@ -33114,7 +33114,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Once' (một khi/ngay khi) dùng làm liên từ chỉ thời gian, nối hai mệnh đề.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Bà Kim sẽ hoàn thiện ngân sách hàng năm ngay khi các trưởng bộ phận nộp báo cáo chi tiêu cuối cùng của họ.",
   "core_vocabulary": [
     {
@@ -33141,7 +33141,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'So that' (để mà) dùng để chỉ mục đích, theo sau là một mệnh đề.",
-  "explanation_grammar": "Conjunction of Purpose.",
+  "explanation_grammar": "Liên từ chỉ mục đích",
   "translation": "Hệ thống an ninh sẽ được nâng cấp vào cuối tuần tới để có thể ngăn chặn việc truy cập trái phép vào phòng máy chủ.",
   "core_vocabulary": [
     {
@@ -33168,7 +33168,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Even though' (mặc dù) dùng để chỉ sự nhượng bộ, theo sau là một mệnh đề.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Mặc dù dự báo thời tiết dự đoán sẽ có tuyết rơi dày, buổi tiệc gala của công ty vẫn sẽ diễn ra như lịch trình tại khách sạn Grand.",
   "core_vocabulary": [
     {
@@ -33195,7 +33195,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'In case' (phòng khi) dùng để chuẩn bị cho một tình huống có thể xảy ra.",
-  "explanation_grammar": "Conjunction of Condition.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Vui lòng lưu một bản sao bài thuyết trình của bạn vào ổ flash phòng khi kết nối internet bị lỗi trong cuộc họp.",
   "core_vocabulary": [
     {
@@ -33222,7 +33222,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Until' (cho đến khi) chỉ mốc thời gian kết thúc của việc trì hoãn.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Lô hàng nội thất văn phòng sẽ bị trì hoãn cho đến khi nhà cung cấp làm rõ thông tin còn thiếu trên hóa đơn.",
   "core_vocabulary": [
     {
@@ -33249,7 +33249,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Because' (bởi vì) nối hai mệnh đề chỉ nguyên nhân - kết quả.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Bởi vì ông Patel đã có hơn mười năm kinh nghiệm trong lĩnh vực kế toán, ông đã được thăng chức lên Chuyên viên Phân tích Tài chính Cấp cao.",
   "core_vocabulary": [
     {
@@ -33276,7 +33276,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Provided that' (miễn là/với điều kiện là) đưa ra một điều kiện.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Bạn có thể sử dụng phòng chờ điều hành miễn là bạn là thành viên của chương trình khách hàng thân thiết hạng vàng của công ty.",
   "core_vocabulary": [
     {
@@ -33303,7 +33303,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Before' (trước khi) là liên từ chỉ thời gian nối hai mệnh đề.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Việc in ấn các tài liệu quảng cáo phải được hoàn thành trước khi đội tiếp thị lên đường tham dự triển lãm thương mại.",
   "core_vocabulary": [
     {
@@ -33330,7 +33330,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Although' (mặc dù) dùng để chỉ sự tương phản giữa hai mệnh đề.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Mặc dù buổi đào tạo là bắt buộc đối với tất cả nhân viên, một vài người đã không thể tham dự do có các cam kết trước đó.",
   "core_vocabulary": [
     {
@@ -33357,7 +33357,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'As soon as' (ngay khi) chỉ một hành động xảy ra ngay sau một hành động khác.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Chúng tôi sẽ bắt đầu cuộc họp video ngay khi mọi người đã đến phòng họp chính.",
   "core_vocabulary": [
     {
@@ -33379,7 +33379,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'So that' (để mà) dùng trước một mệnh đề chỉ mục đích.",
-  "explanation_grammar": "Conjunction of Purpose.",
+  "explanation_grammar": "Liên từ chỉ mục đích",
   "translation": "Văn phòng sẽ vẫn mở cửa cho đến 8 giờ tối để nhân viên có thể hoàn thành báo cáo cuối quý của họ.",
   "core_vocabulary": [
     {
@@ -33401,7 +33401,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Since' (vì) đóng vai trò liên từ chỉ nguyên nhân.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Vì thang máy đang được sửa chữa, vui lòng sử dụng cầu thang bộ ở cuối hành lang.",
   "core_vocabulary": [
     {
@@ -33423,7 +33423,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'If' (nếu) dùng để đưa ra điều kiện cho hành động ở mệnh đề chính.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Hợp đồng sẽ chính thức được ký kết nếu cả hai đội ngũ pháp lý đồng ý về các điều khoản và điều kiện cuối cùng.",
   "core_vocabulary": [
     {
@@ -33450,7 +33450,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'In spite of' (mặc dù) dùng trước một danh từ/cụm danh từ chỉ sự nhượng bộ.",
-  "explanation_grammar": "Concessive Phrase.",
+  "explanation_grammar": "Cụm giới từ chỉ sự nhượng bộ",
   "translation": "Mặc dù chi phí của thiết bị mới rất cao, ban giám đốc vẫn quyết định phê duyệt việc mua sắm.",
   "core_vocabulary": [
     {
@@ -33477,7 +33477,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'As long as' (miễn là) dùng để đưa ra điều kiện tiên quyết.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Phòng chờ của nhân viên sẵn sàng để sử dụng miễn là bạn tự dọn dẹp sau khi dùng xong trước khi rời đi.",
   "core_vocabulary": [
     {
@@ -33499,7 +33499,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Now that' (vì giờ đây) dùng để chỉ nguyên nhân từ một sự kiện vừa mới xảy ra.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Vì giờ đây sự sáp nhập đã được công bố hôm qua, các nhân viên đã và đang đặt nhiều câu hỏi về vai trò tương lai của họ.",
   "core_vocabulary": [
     {
@@ -33521,7 +33521,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Unless' (trừ khi) dùng cho điều kiện phủ định, theo sau là mệnh đề.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Bạn không nên ký bất kỳ tài liệu nào trừ khi bạn đã đọc kỹ chúng và hiểu tất cả các điều khoản.",
   "core_vocabulary": [
     {
@@ -33548,7 +33548,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'While' (trong khi) dùng để nối hai mệnh đề chỉ hành động xảy ra đồng thời.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Ông Lee sẽ xử lý tất cả các yêu cầu của khách hàng trong khi quản lý đi vắng tại hội nghị quốc tế.",
   "core_vocabulary": [
     {
@@ -33575,7 +33575,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Because' (bởi vì) giải thích nguyên nhân cho hành động ở mệnh đề chính.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Bởi vì công việc sửa chữa rất ồn ào, ban quản lý đã cung cấp tai nghe chống ồn cho tất cả nhân viên.",
   "core_vocabulary": [
     {
@@ -33597,7 +33597,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'If' (nếu) đưa ra điều kiện đơn giản nhất cho ưu đãi.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Căng tin giảm giá 10% cho nhân viên nếu họ xuất trình thẻ nhân viên tại quầy thu ngân.",
   "core_vocabulary": [
     {
@@ -33619,7 +33619,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Since' (vì/bởi vì) dùng để bắt đầu một mệnh đề chỉ nguyên nhân.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Vì dự án đã được hoàn thành trước lịch trình, nhóm đã được thưởng một khoản tiền nhỏ cho sự làm việc chăm chỉ của họ.",
   "core_vocabulary": [
     {
@@ -33646,7 +33646,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'In case' (trong trường hợp/phòng khi) dùng để chỉ tình huống có thể phát sinh.",
-  "explanation_grammar": "Conjunction of Condition.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Vui lòng thông báo cho nhân viên lễ tân phòng khi bạn gặp bất kỳ vấn đề nào với thẻ khóa điện tử của mình.",
   "core_vocabulary": [
     {
@@ -33668,7 +33668,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Unless' (trừ khi) có nghĩa là 'nếu không...', dùng cho điều kiện phủ định.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Hội thảo sẽ bị hủy trừ khi có ít nhất mười người đăng ký vào cuối ngày làm việc.",
   "core_vocabulary": [
     {
@@ -33690,7 +33690,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Even though' (mặc dù) nối với một mệnh đề chỉ sự nhượng bộ.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Mặc dù quản lý tiếp thị rất bận rộn, bà vẫn dành thời gian để nói chuyện với các thực tập sinh mới.",
   "core_vocabulary": [
     {
@@ -33712,7 +33712,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'After' (sau khi) chỉ trình tự thời gian, nối hai mệnh đề.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Phần mềm mới sẽ được cài đặt trên tất cả các máy tính sau khi bộ phận CNTT hoàn tất việc kiểm tra hệ thống.",
   "core_vocabulary": [
     {
@@ -33734,7 +33734,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Before' (trước khi) là liên từ chỉ thời gian nối hai mệnh đề.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Nhóm kế toán cần xem xét tất cả các báo cáo chi phí trước khi chúng được nộp cho giám đốc tài chính.",
   "core_vocabulary": [
     {
@@ -33761,7 +33761,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Unless' (trừ khi) = 'if not', nêu điều kiện bắt buộc: không nộp hóa đơn gốc thì không được hoàn tiền. 'Except' và 'without' là giới từ, 'therefore' là trạng từ liên kết, đều không nối được mệnh đề.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Nhân viên sẽ không nhận được tiền hoàn trả cho các chi phí đi lại trừ khi họ cung cấp các hóa đơn gốc.",
   "core_vocabulary": [
     {
@@ -33788,7 +33788,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Although' (mặc dù) dùng để chỉ sự nhượng bộ, đứng trước một mệnh đề.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Mặc dù chiến dịch tiếp thị mới được tung ra muộn, nó vẫn tạo ra một lượng truy cập trực tuyến đáng kể.",
   "core_vocabulary": [
     {
@@ -33815,7 +33815,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Now that' (vì giờ đây) giải thích nguyên nhân dựa trên một tình trạng mới.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Vì giờ đây mùa lễ cao điểm đã qua, nhân viên bán lẻ có thể nghỉ những ngày phép đã tích lũy của họ.",
   "core_vocabulary": [
     {
@@ -33842,7 +33842,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Provided that' (miễn là) dùng để đưa ra điều kiện.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Bạn có thể yêu cầu chuyển đến chi nhánh ở Tokyo miễn là bạn đã làm việc ở đây ít nhất hai năm.",
   "core_vocabulary": [
     {
@@ -33869,7 +33869,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'As soon as' (ngay khi) chỉ mốc thời gian hành động xảy ra ngay lập tức.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Ông Clark sẽ liên lạc với nhà cung cấp bán buôn ngay sau khi ông nhận được số lượng hàng tồn kho đã cập nhật.",
   "core_vocabulary": [
     {
@@ -33896,7 +33896,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Until' (cho đến khi) chỉ mốc thời gian hành động chính có thể bắt đầu.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Việc xây dựng nhà kho mới sẽ không bắt đầu cho đến khi hội đồng thành phố phê duyệt giấy phép xây dựng.",
   "core_vocabulary": [
     {
@@ -33923,7 +33923,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'So that' (để mà) dùng trước một mệnh đề để chỉ mục đích.",
-  "explanation_grammar": "Conjunction of Purpose.",
+  "explanation_grammar": "Liên từ chỉ mục đích",
   "translation": "Phòng nhân sự đã gửi một email nhắc nhở để tất cả nhân viên sẽ nhớ về buổi hội thảo chăm sóc sức khỏe sắp tới.",
   "core_vocabulary": [
     {
@@ -33950,7 +33950,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Even though' (mặc dù) chỉ sự tương phản giữa hai mệnh đề.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Mặc dù cô Gomez là thành viên mới nhất của nhóm, cô ấy đã đóng góp được một vài ý tưởng đổi mới.",
   "core_vocabulary": [
     {
@@ -33972,7 +33972,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Once' (một khi/ngay khi) là liên từ chỉ thời gian phù hợp nối hai mệnh đề.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Hệ thống lập hóa đơn tự động sẽ tạo ra một hóa đơn ngay khi khách hàng hoàn thành giao dịch trực tuyến.",
   "core_vocabulary": [
     {
@@ -33999,7 +33999,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Because' (vì) nối hai mệnh đề chỉ nguyên nhân.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "BrightStar Tech đã quyết định mở rộng đội ngũ hỗ trợ khách hàng vì số lượng các yêu cầu hàng ngày đã tăng lên.",
   "core_vocabulary": [
     {
@@ -34021,7 +34021,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'While' (trong khi) chỉ hai hành động xảy ra song song.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Trong khi các kỹ sư phần mềm đang khắc phục sự cố máy chủ, đội ngũ bán hàng sẽ tiếp tục sử dụng cơ sở dữ liệu ngoại tuyến.",
   "core_vocabulary": [
     {
@@ -34043,7 +34043,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'If' (nếu) đưa ra điều kiện cho chuyến thăm.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Quản lý khu vực sẽ đến thăm cơ sở mới ở Seattle nếu bà ấy có thể tìm được một chuyến bay phù hợp vào Thứ Hai tới.",
   "core_vocabulary": [
     {
@@ -34065,7 +34065,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'After' (sau khi) chỉ trình tự thời gian giữa hai hành động.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Nhân viên phải khóa chặt các máy trạm của họ sau khi họ rời văn phòng vào cuối ngày.",
   "core_vocabulary": [
     {
@@ -34087,7 +34087,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'In case' (phòng khi) chuẩn bị cho một tình huống giả định có thể xảy ra.",
-  "explanation_grammar": "Conjunction of Condition.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Vui lòng giữ một bản in của bài thuyết trình phòng khi máy chiếu bị hỏng trong cuộc họp với khách hàng.",
   "core_vocabulary": [
     {
@@ -34109,7 +34109,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'As long as' (miễn là) đưa ra điều kiện để sử dụng dịch vụ.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Khách có thể sử dụng hồ bơi và trung tâm thể hình của khách sạn miễn là họ xuất trình thẻ khóa phòng của mình.",
   "core_vocabulary": [
     {
@@ -34131,7 +34131,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Since' (vì) dùng làm liên từ chỉ nguyên nhân khởi đầu câu.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Vì cổng chính hiện đang được sửa chữa, tất cả khách tham quan phải sử dụng các cửa phụ.",
   "core_vocabulary": [
     {
@@ -34153,7 +34153,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Before' (trước khi) là liên từ phù hợp nối hai mệnh đề.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Cô Lin cần hoàn thành báo cáo ngân sách hàng quý trước khi cô ấy lên đường đi nghỉ hàng năm vào tuần tới.",
   "core_vocabulary": [
     {
@@ -34175,7 +34175,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'So that' (để mà) dùng để chỉ mục đích, đứng trước một mệnh đề.",
-  "explanation_grammar": "Conjunction of Purpose.",
+  "explanation_grammar": "Liên từ chỉ mục đích",
   "translation": "Kỹ thuật viên CNTT đã cài đặt một bản nâng cấp tường lửa để dữ liệu bảo mật của công ty có thể được bảo vệ tốt hơn.",
   "core_vocabulary": [
     {
@@ -34197,7 +34197,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Unless' (trừ khi) đưa ra điều kiện tiên quyết.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Công ty vận chuyển không thể đảm bảo giao hàng qua đêm trừ khi kiện hàng được gửi trước 5 giờ chiều.",
   "core_vocabulary": [
     {
@@ -34219,7 +34219,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Although' (mặc dù) chỉ sự tương phản giữa hai mệnh đề.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Mặc dù các số liệu doanh số bán hàng ban đầu hơi đáng thất vọng, sản phẩm cuối cùng đã trở thành một sản phẩm bán chạy nhất.",
   "core_vocabulary": [
     {
@@ -34246,7 +34246,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Until' (cho đến khi) chỉ mốc thời gian kết thúc của lệnh cấm.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Vui lòng không khởi động lại máy tính của bạn cho đến khi quá trình cài đặt phần mềm đạt tới 100%.",
   "core_vocabulary": [
     {
@@ -34268,7 +34268,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Provided that' (miễn là/với điều kiện là) đưa ra điều kiện cho ưu đãi.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Bạn sẽ được giảm giá 15% cho lần mua hàng tiếp theo miễn là bạn đăng ký nhận bản tin hàng tuần của chúng tôi.",
   "core_vocabulary": [
     {
@@ -34290,7 +34290,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Because' (vì) nối mệnh đề chỉ nguyên nhân.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Buổi dã ngoại ngoài trời của công ty đã được chuyển vào căng tin trong nhà vì có dự báo về các cơn giông bão lớn.",
   "core_vocabulary": [
     {
@@ -34312,7 +34312,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Once' (một khi/ngay khi) chỉ mốc thời gian hành động sẽ diễn ra.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Người giám sát dự án sẽ giao các nhiệm vụ cụ thể cho từng thành viên trong nhóm ngay khi khách hàng phê duyệt thiết kế cuối cùng.",
   "core_vocabulary": [
     {
@@ -34334,7 +34334,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Once' (một khi/ngay khi) chỉ mốc thời gian hành động sẽ xảy ra sau khi một hành động khác hoàn tất.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Nhóm tiếp thị sẽ xem xét ngân sách quảng cáo ngay sau khi giám đốc trở về từ chuyến nghỉ phép của mình.",
   "core_vocabulary": [
     {
@@ -34361,7 +34361,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Since' (vì) dùng làm liên từ chỉ nguyên nhân, đứng đầu câu nối hai mệnh đề.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Vì máy in ở văn phòng chính bị hỏng, vui lòng sử dụng máy in ở tầng hai.",
   "core_vocabulary": [
     {
@@ -34383,7 +34383,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'If' (nếu) dùng để đưa ra điều kiện hoặc giả định.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Nhân viên được khuyến khích nghỉ ngơi một lúc nếu họ cảm thấy mệt mỏi trong ca làm việc của mình.",
   "core_vocabulary": [
     {
@@ -34410,7 +34410,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Because' (vì) nối hai mệnh đề chỉ nguyên nhân.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Cô Jenkins đã đặt một phòng họp lớn hơn vì có nhiều người đăng ký tham gia hội thảo hơn dự kiến.",
   "core_vocabulary": [
     {
@@ -34437,7 +34437,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Until' (cho đến khi) chỉ mốc thời gian một trạng thái kết thúc.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Buổi định hướng nhân viên mới sẽ không bắt đầu cho đến khi tất cả những người tham gia đã đăng ký đều đã đến đông đủ.",
   "core_vocabulary": [
     {
@@ -34464,7 +34464,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Even though' (mặc dù) dùng để chỉ sự nhượng bộ, đứng trước một mệnh đề.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Mặc dù lợi nhuận hàng quý thấp hơn dự kiến, công ty vẫn không cắt giảm nhân sự.",
   "core_vocabulary": [
     {
@@ -34491,7 +34491,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'So that' (để mà) dùng trước mệnh đề chỉ mục đích.",
-  "explanation_grammar": "Conjunction of Purpose.",
+  "explanation_grammar": "Liên từ chỉ mục đích",
   "translation": "Bạn phải nộp yêu cầu nghỉ phép của mình trước ít nhất hai tuần để quản lý của bạn có thể điều chỉnh lịch trình.",
   "core_vocabulary": [
     {
@@ -34518,7 +34518,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'While' (mặc dù/trong khi) dùng để chỉ sự tương phản giữa hai ý trong cùng một câu.",
-  "explanation_grammar": "Contrast/Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự tương phản",
   "translation": "Mặc dù ông Takahashi làm việc ở bộ phận kế toán, ông thường xuyên cộng tác với nhóm bán hàng.",
   "core_vocabulary": [
     {
@@ -34540,7 +34540,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Provided that' (miễn là/với điều kiện là) dùng để đưa ra điều kiện.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Cửa hàng sẽ hoàn tiền đầy đủ miễn là món hàng bị trả lại vẫn còn nguyên trong bao bì gốc của nó.",
   "core_vocabulary": [
     {
@@ -34567,7 +34567,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Before' (trước khi) là liên từ chỉ thời gian nối hai mệnh đề.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Vui lòng đảm bảo sao lưu tất cả các tệp quan trọng của bạn trước khi quá trình cập nhật phần mềm bắt đầu.",
   "core_vocabulary": [
     {
@@ -34589,7 +34589,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Because' (vì) nối mệnh đề chỉ nguyên nhân.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Thực đơn của căng tin sẽ có nhiều lựa chọn món chay hơn vào tháng tới vì một vài nhân viên đã yêu cầu chúng.",
   "core_vocabulary": [
     {
@@ -34611,7 +34611,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'In case' (trong trường hợp/phòng khi) dùng để đưa ra giả định tình huống có thể xảy ra.",
-  "explanation_grammar": "Conjunction of Condition.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Trong trường hợp bạn cần hỗ trợ với máy photocopy mới, vui lòng liên hệ với trợ lý hành chính.",
   "core_vocabulary": [
     {
@@ -34638,7 +34638,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Since' (vì) đứng ở giữa câu để giải thích nguyên nhân.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Sunrise Cafe sẽ tặng bánh ngọt miễn phí vào sáng mai vì họ đang kỷ niệm một năm ngày thành lập.",
   "core_vocabulary": [
     {
@@ -34665,7 +34665,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Before' (trước khi) chỉ mốc thời gian hành động xảy ra.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Đội ngũ bảo trì sẽ kiểm tra các đơn vị điều hòa không khí trước khi mùa hè chính thức bắt đầu.",
   "core_vocabulary": [
     {
@@ -34692,7 +34692,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Since' (vì) nối mệnh đề chỉ nguyên nhân, đứng ở đầu câu.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Vì thiết kế ban đầu đã bị khách hàng từ chối, cả nhóm đã phải làm việc muộn để tạo ra một đề xuất mới.",
   "core_vocabulary": [
     {
@@ -34714,7 +34714,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Unless' (trừ khi) đưa ra điều kiện tiên quyết cho việc được phép vào.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Bạn sẽ không được phép đi vào khu vực phòng thí nghiệm an ninh trừ khi bạn xuất trình thẻ nhận dạng hợp lệ.",
   "core_vocabulary": [
     {
@@ -34741,7 +34741,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'After' (sau khi) chỉ trình tự thời gian giữa hai hành động.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Sau khi buổi kiểm tra báo cháy kết thúc, nhân viên đã trở lại bàn làm việc để tiếp tục làm việc.",
   "core_vocabulary": [
     {
@@ -34768,7 +34768,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Because' (vì) nối hai mệnh đề chỉ nguyên nhân.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Ban quản lý đã quyết định trì hoãn việc tung ra sản phẩm vì các tài liệu quảng bá vẫn chưa được chuẩn bị đầy đủ.",
   "core_vocabulary": [
     {
@@ -34790,7 +34790,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Although' (mặc dù) đứng trước một mệnh đề chỉ sự nhượng bộ.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Mặc dù phần mềm lập hóa đơn mới rất phức tạp, các nhân viên đã học cách sử dụng nó khá nhanh.",
   "core_vocabulary": [
     {
@@ -34817,7 +34817,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'As soon as' (ngay khi) chỉ mốc thời gian hành động xảy ra ngay lập tức.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Ông Rossi sẽ gửi một email cập nhật cho tất cả các phòng ban ngay khi hội đồng quản trị đưa ra quyết định cuối cùng.",
   "core_vocabulary": [
     {
@@ -34839,7 +34839,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'So that' (để mà) dùng để chỉ mục đích, đứng trước một mệnh đề.",
-  "explanation_grammar": "Conjunction of Purpose.",
+  "explanation_grammar": "Liên từ chỉ mục đích",
   "translation": "Phòng nhân sự đang cập nhật sổ tay nhân viên để các thành viên mới có thể dễ dàng tìm thấy các chính sách của công ty.",
   "core_vocabulary": [
     {
@@ -34861,7 +34861,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Now that' (vì giờ đây) dùng để chỉ nguyên nhân từ một tình trạng vừa mới thay đổi.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Vì giờ đây ngân sách hàng năm đã được phê duyệt, bộ phận có thể bắt đầu mua sắm các đồ dùng văn phòng mới.",
   "core_vocabulary": [
     {
@@ -34883,7 +34883,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Until' (cho đến khi) chỉ mốc thời gian hành động ở mệnh đề chính kết thúc.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Nhân viên lễ tân tại quầy lễ tân sẽ giữ các gói hàng của bạn cho đến khi bạn sẵn sàng tới lấy chúng.",
   "core_vocabulary": [
     {
@@ -34905,7 +34905,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'As long as' (miễn là) đưa ra điều kiện để sử dụng dịch vụ.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Nhân viên có thể sử dụng trung tâm thể hình của công ty miễn là họ ký giấy miễn trừ trách nhiệm tại quầy lễ tân.",
   "core_vocabulary": [
     {
@@ -34927,7 +34927,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Even though' (mặc dù) đứng đầu câu chỉ sự tương phản.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Mặc dù bà Chen có một lịch trình rất bận rộn, bà vẫn luôn dành thời gian để cố vấn cho các chuyên viên phân tích cấp dưới.",
   "core_vocabulary": [
     {
@@ -34954,7 +34954,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Once' (một khi/ngay khi) dùng làm liên từ chỉ thời gian, nối hai mệnh đề.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Đội ngũ bảo trì sẽ sửa chữa thang máy bị hỏng ngay khi tòa nhà trống người tối nay.",
   "core_vocabulary": [
     {
@@ -34981,7 +34981,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Even though' (mặc dù) dùng để chỉ sự nhượng bộ, đứng trước một mệnh đề.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Mặc dù các điều kiện thời tiết rất xấu, sự kiện xây dựng đội ngũ ngoài trời đã rất thành công.",
   "core_vocabulary": [
     {
@@ -35008,7 +35008,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Unless' (trừ khi) dùng cho điều kiện phủ định, theo sau là mệnh đề.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Vui lòng không chia sẻ thông tin đăng nhập của bạn trừ khi một người giám sát yêu cầu bạn làm như vậy một cách rõ ràng.",
   "core_vocabulary": [
     {
@@ -35035,7 +35035,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Until' (cho đến khi) chỉ mốc thời gian một trạng thái thay đổi.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Khách hàng sẽ không ký hợp đồng cho đến khi chúng tôi sửa đổi các điều khoản thanh toán trong bản thỏa thuận.",
   "core_vocabulary": [
     {
@@ -35062,7 +35062,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Since' (vì/bởi vì) giải thích nguyên nhân, đứng trước một mệnh đề.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Vì bà Alcott đang dẫn dắt dự án, cả nhóm cảm thấy rất tự tin về việc hoàn thành đúng thời hạn.",
   "core_vocabulary": [
     {
@@ -35089,7 +35089,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'So that' (để mà) dùng để chỉ mục đích, đứng trước một mệnh đề.",
-  "explanation_grammar": "Conjunction of Purpose.",
+  "explanation_grammar": "Liên từ chỉ mục đích",
   "translation": "Đường dây nóng hỗ trợ khách hàng sẽ mở cửa vào cuối tuần để những người mua sắm có thể nhận được sự giúp đỡ bất cứ lúc nào.",
   "core_vocabulary": [
     {
@@ -35111,7 +35111,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'After' (sau khi) chỉ trình tự thời gian giữa hai sự kiện.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Sau khi các quy định mới được công bố hôm qua, bộ phận pháp lý đã trở nên cực kỳ bận rộn.",
   "core_vocabulary": [
     {
@@ -35138,7 +35138,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Provided that' (miễn là) dùng để đưa ra điều kiện tiên quyết.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Bạn có thể nghỉ trưa thêm 15 phút miễn là bạn làm bù thêm thời gian đó vào cuối ngày.",
   "core_vocabulary": [
     {
@@ -35160,7 +35160,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Although' (mặc dù) nối hai mệnh đề chỉ sự nhượng bộ.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Mặc dù nhà máy đã trải qua một sự chậm trễ nhỏ, lô hàng vẫn sẽ đến đúng lịch trình.",
   "core_vocabulary": [
     {
@@ -35187,7 +35187,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'As long as' (miễn là) dùng để đưa ra điều kiện.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Công ty sẽ chi trả các khoản chi phí đi lại của bạn miễn là bạn giữ lại tất cả các hóa đơn gốc.",
   "core_vocabulary": [
     {
@@ -35209,7 +35209,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Before' (trước khi) là liên từ phù hợp nối hai mệnh đề.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Vui lòng nhớ tắt máy tính của bạn trước khi bạn rời văn phòng tối nay.",
   "core_vocabulary": [
     {
@@ -35231,7 +35231,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'While' (trong khi) chỉ hai hành động/sự kiện xảy ra đồng thời.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Trong khi ông Dawson đang trình bày các con số doanh thu, máy chiếu đột nhiên ngừng hoạt động.",
   "core_vocabulary": [
     {
@@ -35253,7 +35253,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'So that' (để mà) dùng để chỉ mục đích của hành động phía trước.",
-  "explanation_grammar": "Conjunction of Purpose.",
+  "explanation_grammar": "Liên từ chỉ mục đích",
   "translation": "Quản lý nhân sự sẽ xem xét các sơ yếu lý lịch hôm nay để bà ấy có thể chọn ra những ứng viên tốt nhất cho buổi phỏng vấn.",
   "core_vocabulary": [
     {
@@ -35280,7 +35280,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Even though' (mặc dù) đứng trước một mệnh đề để chỉ sự tương phản.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Mặc dù có giao thông đông đúc trên xa lộ, xe tải giao hàng vẫn đến nhà kho đúng giờ.",
   "core_vocabulary": [
     {
@@ -35302,7 +35302,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'After' (sau khi) chỉ trình tự thời gian sau một sự kiện đã hoàn tất.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Bạn sẽ nhận được một email xác nhận tự động sau khi thanh toán của bạn đã được xử lý thành công.",
   "core_vocabulary": [
     {
@@ -35329,7 +35329,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Now that' (vì giờ đây) dùng để giải thích lý do dựa trên tình huống hiện tại.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Vì giờ đây hội nghị hàng năm đã kết thúc, chúng ta có thể tập trung vào việc phát triển chiến lược tiếp thị mới của mình.",
   "core_vocabulary": [
     {
@@ -35351,7 +35351,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Whenever' (bất cứ khi nào) chỉ sự lặp lại của một hành động cần thiết.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Người giám sát đã nhắc nhở mọi người đeo kính bảo hộ bất cứ khi nào họ đi vào khu vực sản xuất.",
   "core_vocabulary": [
     {
@@ -35378,7 +35378,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Once' (một khi) dùng làm liên từ chỉ thời gian, nối hai mệnh đề.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Một khi đề xuất ngân sách được phê duyệt, chúng tôi sẽ ngay lập tức bắt đầu tuyển dụng các nhà phát triển phần mềm mới.",
   "core_vocabulary": [
     {
@@ -35400,7 +35400,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Liên từ",
   "explanation_reason": "'If' (nếu) dùng để đưa ra điều kiện cho yêu cầu đặc biệt.",
-  "explanation_grammar": "Conditional Conjunction.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Dịch vụ cung cấp đồ ăn sẽ chuẩn bị các bữa ăn chay nếu chúng được yêu cầu trước.",
   "core_vocabulary": [
     {
@@ -35422,7 +35422,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Because' (vì) dùng ở đầu câu nối mệnh đề chỉ nguyên nhân.",
-  "explanation_grammar": "Conjunction of Cause.",
+  "explanation_grammar": "Liên từ chỉ nguyên nhân",
   "translation": "Bởi vì các thử nghiệm ban đầu cho thấy kết quả khả quan, đội ngũ nghiên cứu đã quyết định tiến hành các thử nghiệm tiếp theo.",
   "core_vocabulary": [
     {
@@ -35449,7 +35449,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'In case' (trong trường hợp) chuẩn bị cho một tình huống giả định.",
-  "explanation_grammar": "Conjunction of Condition.",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Vui lòng xem kỹ tài liệu đính kèm trong trường hợp bạn có bất kỳ câu hỏi nào trước cuộc họp.",
   "core_vocabulary": [
     {
@@ -35471,7 +35471,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Until' (cho đến khi) chỉ mốc thời gian hành động chính có thể diễn ra.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Ban giám đốc sẽ không phê duyệt việc sáp nhập cho đến khi tất cả các rủi ro tài chính được đánh giá kỹ lưỡng.",
   "core_vocabulary": [
     {
@@ -35498,7 +35498,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Liên từ",
   "explanation_reason": "'After' (sau khi) chỉ trình tự thời gian nối hai mệnh đề.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Sau khi hệ thống kiểm kê mới được cài đặt, nhân viên sẽ cần trải qua một buổi đào tạo ngắn.",
   "core_vocabulary": [
     {
@@ -35520,7 +35520,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'So that' (để mà) chỉ mục đích, đứng trước một mệnh đề.",
-  "explanation_grammar": "Conjunction of Purpose.",
+  "explanation_grammar": "Liên từ chỉ mục đích",
   "translation": "Cửa hàng bán lẻ sẽ mở cửa sớm vào ngày mai để khách hàng có thể tận dụng đợt giảm giá ngày lễ.",
   "core_vocabulary": [
     {
@@ -35542,7 +35542,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Liên từ",
   "explanation_reason": "'Although' (mặc dù) chỉ sự nhượng bộ, đứng đầu câu nối mệnh đề.",
-  "explanation_grammar": "Concessive Conjunction.",
+  "explanation_grammar": "Liên từ chỉ sự nhượng bộ",
   "translation": "Mặc dù Giám đốc điều hành rất bận rộn, ông vẫn tham dự bữa tiệc nghỉ hưu cho kế toán viên cấp cao.",
   "core_vocabulary": [
     {
@@ -61174,7 +61174,7 @@ export const grammarQuestions = [
       "A": "and",
       "B": "or",
       "C": "nor",
-      "D": "along"
+      "D": "but"
     },
     "correct_answer": "C",
     "grammar_type": "Liên từ",
@@ -61280,9 +61280,9 @@ export const grammarQuestions = [
     "question": "______ a staff member encounters a technical problem with the cloud server, they should contact the IT help desk immediately.",
     "options": {
       "A": "Whenever",
-      "B": "Nearly",
+      "B": "During",
       "C": "Whatever",
-      "D": "During"
+      "D": "In case of"
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
@@ -61409,8 +61409,8 @@ export const grammarQuestions = [
     "id": "q_conjunction_test9_10",
     "question": "The architect will monitor the construction site closely ______ the foundation of the new office complex is being poured.",
     "options": {
-      "A": "because",
-      "B": "which",
+      "A": "during",
+      "B": "because",
       "C": "while",
       "D": "unless"
     },
@@ -61436,10 +61436,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test9_11",
     "question": "The annual report has been finalized and uploaded to the portal, ______ the printed versions will not be available until next Tuesday.",
     "options": {
-      "A": "why",
+      "A": "however",
       "B": "but",
-      "C": "with",
-      "D": "once"
+      "C": "therefore",
+      "D": "moreover"
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
@@ -61463,9 +61463,9 @@ export const grammarQuestions = [
     "id": "q_conjunction_test9_12",
     "question": "Security personnel must remain at their designated stations ______ the evening shift supervisor arrives to relieve them.",
     "options": {
-      "A": "just as",
-      "B": "due to",
-      "C": "why",
+      "A": "due to",
+      "B": "just as",
+      "C": "during",
       "D": "until"
     },
     "correct_answer": "D",
@@ -61517,10 +61517,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test9_14",
     "question": "Mr. Garcia’s presentation was rescheduled ______ he had to attend an urgent meeting with the board of directors in London.",
     "options": {
-      "A": "so",
+      "A": "due to",
       "B": "because",
-      "C": "while",
-      "D": "rather"
+      "C": "so",
+      "D": "while"
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
@@ -61566,9 +61566,9 @@ export const grammarQuestions = [
     "id": "q_conjunction_test9_16",
     "question": "Remarkably, neither Ms. Dubois ______ Mr. Tanaka was invited to participate in the final round of the architectural competition.",
     "options": {
-      "A": "and",
-      "B": "with",
-      "C": "or",
+      "A": "or",
+      "B": "and",
+      "C": "either",
       "D": "nor"
     },
     "correct_answer": "D",
@@ -61589,9 +61589,9 @@ export const grammarQuestions = [
     "question": "______ the manuscript has been thoroughly reviewed by the editorial board, it will be sent to the publisher for final formatting.",
     "options": {
       "A": "Once",
-      "B": "How",
-      "C": "Not only",
-      "D": "So too"
+      "B": "During",
+      "C": "Upon",
+      "D": "Following"
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
@@ -61637,10 +61637,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test9_19",
     "question": "______ a national holiday falls on a Tuesday, the Nexa Tech Company typically allows its employees to work from home on Monday.",
     "options": {
-      "A": "For",
+      "A": "During",
       "B": "Whenever",
-      "C": "Nearly",
-      "D": "Even"
+      "C": "However",
+      "D": "Owing to"
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
@@ -61659,14 +61659,14 @@ export const grammarQuestions = [
     "id": "q_conjunction_test9_20",
     "question": "The research team aims to maximize the efficiency of the new vaccine ______ minimizing the potential side effects for patients.",
     "options": {
-      "A": "which",
-      "B": "unless",
-      "C": "because",
+      "A": "during",
+      "B": "because",
+      "C": "whereas",
       "D": "while"
     },
     "correct_answer": "D",
     "grammar_type": "Liên từ",
-    "explanation_reason": "'While' dùng để nối hai hành động song song (trong khi).",
+    "explanation_reason": "'While' + V-ing là dạng rút gọn khi hai vế cùng chủ ngữ, chỉ hai việc diễn ra song song. 'During' là giới từ đi với danh từ, 'because' và 'whereas' đều phải theo sau bằng một mệnh đề đầy đủ.",
     "explanation_grammar": "Liên từ chỉ thời gian/song song",
     "translation": "Nhóm nghiên cứu đặt mục tiêu tối đa hóa hiệu quả của loại vắc-xin mới trong khi giảm thiểu các tác dụng phụ tiềm ẩn cho bệnh nhân.",
     "core_vocabulary": [
@@ -61740,10 +61740,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test9_23",
     "question": "The training workshop on workplace diversity was very informative, ______ all department heads are encouraged to share the materials with their staff.",
     "options": {
-      "A": "rather",
+      "A": "because",
       "B": "so",
-      "C": "while",
-      "D": "because"
+      "C": "therefore",
+      "D": "while"
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
@@ -61767,9 +61767,9 @@ export const grammarQuestions = [
     "id": "q_conjunction_test9_24",
     "question": "______ a graphic designer has finished the initial prototype, the client will be invited to the studio to provide feedback.",
     "options": {
-      "A": "Whether",
-      "B": "So that",
-      "C": "From",
+      "A": "So that",
+      "B": "Prior to",
+      "C": "Whether",
       "D": "After"
     },
     "correct_answer": "D",
@@ -61812,10 +61812,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test10_26",
     "question": "______ the lead architect has approved the structural blueprints, the construction crew can begin the foundation work on the new medical center.",
     "options": {
-      "A": "So too",
+      "A": "During",
       "B": "Once",
-      "C": "Not only",
-      "D": "During"
+      "C": "Owing to",
+      "D": "Prior to"
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
@@ -61888,10 +61888,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test10_29",
     "question": "Mr. Sato decided to postpone the annual performance reviews ______ several members of the management team were traveling for a seminar.",
     "options": {
-      "A": "so",
-      "B": "while",
+      "A": "owing to",
+      "B": "so",
       "C": "because",
-      "D": "rather"
+      "D": "while"
     },
     "correct_answer": "C",
     "grammar_type": "Liên từ",
@@ -62019,8 +62019,8 @@ export const grammarQuestions = [
     "question": "Remarkably, neither the Chief Executive Officer ______ the board members expected the merger to be finalized so quickly.",
     "options": {
       "A": "and",
-      "B": "with",
-      "C": "or",
+      "B": "or",
+      "C": "neither",
       "D": "nor"
     },
     "correct_answer": "D",
@@ -62106,10 +62106,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test10_38",
     "question": "______ a customer submits a formal complaint via the online portal, a service representative is required to respond within twenty-four hours.",
     "options": {
-      "A": "Nearly",
-      "B": "Even",
+      "A": "During",
+      "B": "Whatever",
       "C": "Whenever",
-      "D": "During"
+      "D": "Because of"
     },
     "correct_answer": "C",
     "grammar_type": "Liên từ",
@@ -62227,9 +62227,9 @@ export const grammarQuestions = [
     "question": "The investment firm aims to optimize portfolio returns ______ strictly adhering to the latest government financial regulations.",
     "options": {
       "A": "while",
-      "B": "because",
-      "C": "which",
-      "D": "unless"
+      "B": "during",
+      "C": "rather than",
+      "D": "because"
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
@@ -62303,9 +62303,9 @@ export const grammarQuestions = [
     "question": "The accounting department has finalized the budget, ______ the finalized figures have not yet been distributed to the regional managers.",
     "options": {
       "A": "but",
-      "B": "once",
-      "C": "why",
-      "D": "with"
+      "B": "nevertheless",
+      "C": "thus",
+      "D": "besides"
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
@@ -62346,10 +62346,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test10_48",
     "question": "There will be a mandatory system upgrade tomorrow evening, ______ please ensure that you save all open files before leaving.",
     "options": {
-      "A": "while",
-      "B": "because",
+      "A": "because",
+      "B": "thus",
       "C": "so",
-      "D": "rather"
+      "D": "although"
     },
     "correct_answer": "C",
     "grammar_type": "Liên từ",
@@ -62451,9 +62451,9 @@ export const grammarQuestions = [
     "question": "The new health insurance policy is comprehensive, ______ employees must still pay a small deductible for certain specialized treatments.",
     "options": {
       "A": "so",
-      "B": "once",
+      "B": "however",
       "C": "yet",
-      "D": "with"
+      "D": "because"
     },
     "correct_answer": "C",
     "grammar_type": "Liên từ",
@@ -62505,9 +62505,9 @@ export const grammarQuestions = [
     "question": "______ the hospital’s main server is undergoing a mandatory security update, medical staff must use paper charts for the next four hours.",
     "options": {
       "A": "Because",
-      "B": "While",
-      "C": "Rather",
-      "D": "So"
+      "B": "Due to",
+      "C": "Owing to",
+      "D": "Therefore"
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
@@ -62576,9 +62576,9 @@ export const grammarQuestions = [
     "question": "The senior partner will be reviewing the court transcripts ______ the junior associates prepare the closing arguments for the trial.",
     "options": {
       "A": "while",
-      "B": "unless",
+      "B": "meanwhile",
       "C": "because",
-      "D": "which"
+      "D": "unless"
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
@@ -62602,10 +62602,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test11_58",
     "question": "______ you have completed the mandatory cybersecurity training module, please print out your certificate for the HR department.",
     "options": {
-      "A": "So too",
+      "A": "Upon",
       "B": "Once",
-      "C": "How",
-      "D": "Not only"
+      "C": "During",
+      "D": "Following"
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
@@ -62624,10 +62624,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test11_59",
     "question": "Remarkably, neither the head chef ______ the restaurant manager was aware that the health inspector was visiting today.",
     "options": {
-      "A": "with",
+      "A": "and",
       "B": "or",
       "C": "nor",
-      "D": "and"
+      "D": "but"
     },
     "correct_answer": "C",
     "grammar_type": "Liên từ",
@@ -62647,9 +62647,9 @@ export const grammarQuestions = [
     "question": "______ a client requests a refund, the customer service representative must document the reason in the official database.",
     "options": {
       "A": "Whenever",
-      "B": "Even",
-      "C": "During",
-      "D": "Nearly"
+      "B": "During",
+      "C": "However",
+      "D": "In case of"
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
@@ -62700,10 +62700,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test11_62",
     "question": "The training session on workplace ergonomics was very practical, ______ many employees have already begun adjusting their office chair settings.",
     "options": {
-      "A": "rather",
+      "A": "because",
       "B": "so",
-      "C": "while",
-      "D": "because"
+      "C": "consequently",
+      "D": "while"
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
@@ -62728,9 +62728,9 @@ export const grammarQuestions = [
     "question": "Please wait in the waiting room ______ the nurse calls your name for your scheduled dental examination.",
     "options": {
       "A": "until",
-      "B": "just as",
-      "C": "due to",
-      "D": "why"
+      "B": "due to",
+      "C": "just as",
+      "D": "throughout"
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
@@ -62923,10 +62923,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test11_71",
     "question": "The data provided in the quarterly report is accurate, ______ the formatting of the charts needs to be improved before the presentation.",
     "options": {
-      "A": "why",
+      "A": "however",
       "B": "but",
-      "C": "with",
-      "D": "once"
+      "C": "consequently",
+      "D": "furthermore"
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
@@ -62945,10 +62945,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test11_72",
     "question": "______ the merger between the two pharmaceutical companies was finalized, the stock prices of both firms rose significantly.",
     "options": {
-      "A": "Whether",
-      "B": "So that",
+      "A": "So that",
+      "B": "Following",
       "C": "After",
-      "D": "From"
+      "D": "Whether"
     },
     "correct_answer": "C",
     "grammar_type": "Liên từ",
@@ -63022,9 +63022,9 @@ export const grammarQuestions = [
     "question": "Ms. Garcia will be taking notes ______ the guest speaker delivers the keynote address on sustainable urban planning.",
     "options": {
       "A": "while",
-      "B": "unless",
-      "C": "because",
-      "D": "which"
+      "B": "throughout",
+      "C": "during",
+      "D": "unless"
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
@@ -63046,8 +63046,8 @@ export const grammarQuestions = [
     "options": {
       "A": "Once",
       "B": "During",
-      "C": "So too",
-      "D": "Not only"
+      "C": "Prior to",
+      "D": "Owing to"
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
@@ -63093,9 +63093,9 @@ export const grammarQuestions = [
     "id": "q_conjunction_test12_78",
     "question": "The software engineers are debugging the system ______ the quality assurance team performs final security checks.",
     "options": {
-      "A": "unless",
-      "B": "because",
-      "C": "which",
+      "A": "meanwhile",
+      "B": "during",
+      "C": "unless",
       "D": "while"
     },
     "correct_answer": "D",
@@ -63120,10 +63120,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test12_79",
     "question": "The customer service department has received the feedback, ______ they have not yet had the opportunity to respond to every individual query.",
     "options": {
-      "A": "once",
-      "B": "why",
+      "A": "therefore",
+      "B": "nonetheless",
       "C": "but",
-      "D": "with"
+      "D": "likewise"
     },
     "correct_answer": "C",
     "grammar_type": "Liên từ",
@@ -63147,10 +63147,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test12_80",
     "question": "Neither Ms. Cohen ______ Mr. Ivanov was able to attend the emergency board meeting regarding the budget deficit.",
     "options": {
-      "A": "with",
+      "A": "or",
       "B": "nor",
-      "C": "or",
-      "D": "and"
+      "C": "and",
+      "D": "either"
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
@@ -63192,9 +63192,9 @@ export const grammarQuestions = [
     "question": "______ a tenant reports a maintenance issue, the property management firm is obligated to address it within 48 hours.",
     "options": {
       "A": "During",
-      "B": "Nearly",
+      "B": "Whatever",
       "C": "Whenever",
-      "D": "Even"
+      "D": "Owing to"
     },
     "correct_answer": "C",
     "grammar_type": "Liên từ",
@@ -63365,10 +63365,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test12_89",
     "question": "______ the interior designer finished the color palette, the client requested several major changes to the office layout.",
     "options": {
-      "A": "From",
+      "A": "Following",
       "B": "After",
-      "C": "Whether",
-      "D": "So that"
+      "C": "So that",
+      "D": "Whether"
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
@@ -63393,9 +63393,9 @@ export const grammarQuestions = [
     "question": "The insurance policy covers accidental damage, ______ most employees feel much more secure using the new mobile equipment.",
     "options": {
       "A": "so",
-      "B": "while",
-      "C": "because",
-      "D": "rather"
+      "B": "because",
+      "C": "hence",
+      "D": "although"
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
@@ -63650,10 +63650,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test13_101",
     "question": "Neither the managing partner ______ the senior associates expected the court to reach a verdict so early in the afternoon.",
     "options": {
-      "A": "with",
+      "A": "and",
       "B": "or",
       "C": "nor",
-      "D": "and"
+      "D": "neither"
     },
     "correct_answer": "C",
     "grammar_type": "Liên từ",
@@ -63700,9 +63700,9 @@ export const grammarQuestions = [
     "question": "______ the technical team has completed the data migration, the new client portal will be accessible to all account holders.",
     "options": {
       "A": "Once",
-      "B": "During",
-      "C": "So too",
-      "D": "Not only"
+      "B": "Following",
+      "C": "During",
+      "D": "Upon"
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
@@ -63802,10 +63802,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test13_107",
     "question": "______ a staff member notices a security breach in the system, they are required to report it to the IT department immediately.",
     "options": {
-      "A": "Nearly",
+      "A": "During",
       "B": "Whenever",
-      "C": "Whatever",
-      "D": "During"
+      "C": "However",
+      "D": "Because of"
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
@@ -63873,10 +63873,10 @@ export const grammarQuestions = [
     "id": "q_conjunction_test13_110",
     "question": "The financial report has been finalized and signed, ______ the actual distribution to the shareholders will be delayed until next Monday.",
     "options": {
-      "A": "why",
+      "A": "moreover",
       "B": "but",
-      "C": "with",
-      "D": "once"
+      "C": "hence",
+      "D": "instead"
     },
     "correct_answer": "B",
     "grammar_type": "Liên từ",
@@ -63923,9 +63923,9 @@ export const grammarQuestions = [
     "question": "Ms. Dubois will be conducting the final interviews ______ the human resources manager reviews the candidates' professional references.",
     "options": {
       "A": "while",
-      "B": "because",
-      "C": "which",
-      "D": "unless"
+      "B": "during",
+      "C": "meanwhile",
+      "D": "because"
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
@@ -64096,9 +64096,9 @@ export const grammarQuestions = [
     "id": "q_conjunction_test13_119",
     "question": "______ the architect presented the revised floor plans, the board of directors approved the budget for the new corporate headquarters.",
     "options": {
-      "A": "From",
-      "B": "Whether",
-      "C": "So that",
+      "A": "Prior to",
+      "B": "So that",
+      "C": "Whether",
       "D": "After"
     },
     "correct_answer": "D",
@@ -64119,9 +64119,9 @@ export const grammarQuestions = [
     "question": "The investment portfolio is performing exceptionally well, ______ the financial advisor suggests diversifying to minimize potential risks.",
     "options": {
       "A": "yet",
-      "B": "with",
-      "C": "so",
-      "D": "once"
+      "B": "so",
+      "C": "nevertheless",
+      "D": "since"
     },
     "correct_answer": "A",
     "grammar_type": "Liên từ",
@@ -64172,9 +64172,9 @@ export const grammarQuestions = [
     "id": "q_conjunction_test13_122",
     "question": "The hospital upgraded its patient records system ______ the previous software was no longer compatible with modern security standards.",
     "options": {
-      "A": "so",
-      "B": "while",
-      "C": "rather",
+      "A": "due to",
+      "B": "so",
+      "C": "whereas",
       "D": "because"
     },
     "correct_answer": "D",
