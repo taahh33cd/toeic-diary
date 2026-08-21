@@ -702,7 +702,7 @@ export const grammarQuestions = [
   },
   {
     "id": "q0487",
-    "question": "The customs officers inspected the cargo.",
+    "question": "The technician replaced the faulty sensor.",
     "options": {
       "A": "S-V-C",
       "B": "S-V-O-C",
@@ -711,19 +711,19 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The customs officers' + Động từ 'inspected' + Tân ngữ 'the cargo'. Đây là cấu trúc S-V-O.",
+    "explanation_reason": "Chủ ngữ 'The technician' + Động từ 'replaced' + Tân ngữ 'the faulty sensor'.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Nhân viên hải quan đã kiểm tra hàng hóa.",
+    "translation": "Kỹ thuật viên đã thay chiếc cảm biến bị lỗi.",
     "core_vocabulary": [
       {
-        "word": "inspector",
+        "word": "technician",
         "type": "n.",
-        "meaning": "người kiểm tra"
+        "meaning": "kỹ thuật viên"
       },
       {
-        "word": "cargo",
-        "type": "n.",
-        "meaning": "hàng hóa"
+        "word": "faulty",
+        "type": "adj.",
+        "meaning": "bị lỗi, hỏng"
       }
     ]
   },
@@ -4670,7 +4670,7 @@ export const grammarQuestions = [
   },
   {
     "id": "q0046",
-    "question": "The customs officers inspected the cargo.",
+    "question": "The chef prepared a special menu.",
     "options": {
       "A": "S-V-C",
       "B": "S-V-O-C",
@@ -4679,19 +4679,19 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The customs officers' (nhân viên hải quan) thực hiện hành động 'inspected' (kiểm tra) tác động lên tân ngữ 'the cargo' (lô hàng). Cấu trúc S-V-O.",
+    "explanation_reason": "Chủ ngữ 'The chef' + Động từ 'prepared' + Tân ngữ 'a special menu'.",
     "explanation_grammar": "Cấu trúc S-V-O (Chủ ngữ - Động từ - Tân ngữ).",
-    "translation": "Nhân viên hải quan kiểm tra lô hàng.",
+    "translation": "Đầu bếp đã chuẩn bị một thực đơn đặc biệt.",
     "core_vocabulary": [
       {
-        "word": "inspector",
+        "word": "chef",
         "type": "n.",
-        "meaning": "người kiểm tra"
+        "meaning": "đầu bếp"
       },
       {
-        "word": "cargo",
-        "type": "n.",
-        "meaning": "hàng hóa"
+        "word": "prepare",
+        "type": "v.",
+        "meaning": "chuẩn bị"
       }
     ]
   },
@@ -6187,7 +6187,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'the' cần một danh từ. 'opening' ở đây đóng vai trò là danh từ mang nghĩa 'buổi khai trương/sự kiện mở cửa'.",
-    "explanation_grammar": "The + Noun + of...",
+    "explanation_grammar": "Danh từ trung tâm của cụm danh từ",
     "translation": "Các chủ cửa hàng địa phương được mời tham dự buổi khai trương chi nhánh trung tâm thành phố của Clyde Bank.",
     "core_vocabulary": [
       {
@@ -6268,7 +6268,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chỗ trống chịu sự chi phối tân ngữ của giới từ 'of'. Vì mang nghĩa thông báo về 'các sự hạn chế', đuôi -tion biến nó thành một danh từ chính cống.",
-    "explanation_grammar": "Preposition (of) + Noun.",
+    "explanation_grammar": "Danh từ sau giới từ",
     "translation": "Cuốn sách nhỏ này nhằm mục đích để thông báo cho những người lái xe về những lệnh cấm hạn chế về việc di chuyển trên cầu đối với các loại xe quá khổ.",
     "core_vocabulary": [
       {
@@ -6295,7 +6295,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Bắt đầu mệnh đề IF cần có Chủ ngữ (Subject). 'You' đại diện cho người nghe trực tiếp trong một câu mệnh lệnh.",
-    "explanation_grammar": "If + Subject + Verb.",
+    "explanation_grammar": "Mệnh đề điều kiện với 'if'",
     "translation": "Vui lòng liên hệ với nhà phân phối trực tiếp sản phẩm, không phải cửa hàng bán lẻ, nếu bạn cần các bộ phận linh kiện thay thế.",
     "core_vocabulary": [
       {
@@ -6349,7 +6349,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Động từ 'help' yêu cầu cần có một tân ngữ 'ai đó' phía sau (help somebody do something). 'you' ở đây mang chức năng là tân ngữ trực tiếp chỉ định người dùng.",
-    "explanation_grammar": "Verb (help) + Object pronoun (you) + Verb bare infinitive (identify).",
+    "explanation_grammar": "Đại từ tân ngữ",
     "translation": "Phần mềm phân tích hệ thống Deltran có thể giúp BẠN dễ dàng xác định được các vấn đề, dự đoán đúng xu hướng và cải thiện năng lực kinh doanh.",
     "core_vocabulary": [
       {
@@ -6879,7 +6879,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Giữa trợ động từ 'has' và phân từ 'increased' cần một trạng từ. 'Consistently' nghĩa là một cách ổn định, đều đặn.",
-    "explanation_grammar": "Have/Has/Had + Adv + V3/Ed.",
+    "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
     "translation": "Hệ thống đóng chai sữa đã nâng cấp của Khoury Dairy đã giúp năng suất tại nhà máy Tallahassee tăng lên một cách ổn định.",
     "core_vocabulary": [
       {
@@ -7041,7 +7041,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng sau động từ tobe 'is' và trạng từ 'still' cần có một Tính từ làm bổ ngữ (Complement). Tính từ 'functional' chỉ khả năng hoạt động tốt.",
-    "explanation_grammar": "Tobe + Adverb + Adjective.",
+    "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
     "translation": "Mặc dù cái bàn đã bị hư hại sứt mẻ đôi chút trong quá trình lắp ráp nhưng nó vẫn hoạt động đầy đủ chức năng trơn tru.",
     "core_vocabulary": [
       {
@@ -7122,7 +7122,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Lùi lại sát cụm 'short amount of time', ta thấy cần một bổ nghĩa Trạng từ cho tính từ 'short'. 'surprisingly short' (ngắn một cách đầy kinh ngạc).",
-    "explanation_grammar": "A/an + Adverb + Adjective + Noun.",
+    "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
     "translation": "Cây cầu Cullingford tiêu tốn một khoản lượng thời lượng sửa chứa có thể nói là ngắn ngủi đến đáng kinh ngạc.",
     "core_vocabulary": [
       {
@@ -7733,7 +7733,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "Trước danh từ 'the deadline' (hạn chót) cần một giới từ chỉ thời điểm. 'Before' nghĩa là trước.",
-    "explanation_grammar": "Before / By + the deadline.",
+    "explanation_grammar": "Giới từ chỉ hạn chót",
     "translation": "Bà Amari đã rà soát các hồ sơ xin tài trợ, và chúng sẽ được nộp trước hạn chót.",
     "core_vocabulary": [
       {
@@ -7782,7 +7782,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Giới từ",
     "explanation_reason": "'The conference' là một sự kiện, nên dùng giới từ 'at' để chỉ nơi diễn ra sự kiện đó.",
-    "explanation_grammar": "At + event.",
+    "explanation_grammar": "Giới từ (dùng cố định)",
     "translation": "Giáo sư Benguigui sẽ trình bày bài nghiên cứu của mình tại hội nghị lịch sử tự nhiên vào ngày mai.",
     "core_vocabulary": [
       {
@@ -7809,7 +7809,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "Câu nêu khung giờ mở cửa hằng ngày nhưng loại trừ Chủ nhật, nên cần giới từ 'except' (ngoại trừ).",
-    "explanation_grammar": "Except (for) + Noun / Prepositional Phrase.",
+    "explanation_grammar": "Cụm giới từ cố định",
     "translation": "Các quầy giao dịch của ngân hàng mở cửa hằng ngày từ 8 giờ sáng đến 4 giờ chiều, trừ Chủ nhật.",
     "core_vocabulary": [
       {
@@ -7863,7 +7863,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "Cấu trúc cố định 'receive an award for something' — giới từ 'for' chỉ lý do nhận giải.",
-    "explanation_grammar": "receive something FOR something.",
+    "explanation_grammar": "Động từ + giới từ (cụm cố định)",
     "translation": "Bà Tillinghast đã nhận được nhiều giải thưởng nhờ những ý tưởng đổi mới của mình.",
     "core_vocabulary": [
       {
@@ -7890,7 +7890,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Giới từ",
     "explanation_reason": "Sau chỗ trống có 'to Berlin', nên cần 'from' để tạo cấu trúc 'from A to B' (từ A đến B).",
-    "explanation_grammar": "From ... TO ...",
+    "explanation_grammar": "Cấu trúc 'from A to B'",
     "translation": "Bắt đầu từ tháng Tám này, Gavelton Bike Tours sẽ tổ chức các chuyến đạp xe theo nhóm từ Paris đến Berlin.",
     "core_vocabulary": [
       {
@@ -7912,7 +7912,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "Trước danh từ 'the roads' cần giới từ 'on' để chỉ vị trí trên bề mặt đường.",
-    "explanation_grammar": "On + the roads/ streets / surfaces.",
+    "explanation_grammar": "Giới từ (dùng cố định)",
     "translation": "Các chuyến xe buýt rời bến trung tâm thành phố đã bị hoãn do băng giá trên mặt đường.",
     "core_vocabulary": [
       {
@@ -8270,7 +8270,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Giới từ",
     "explanation_reason": "Theo trình tự thời gian, việc kiểm tra quy định trang phục diễn ra trước khi đến thăm, nên dùng giới từ 'before'.",
-    "explanation_grammar": "Before + V-ing.",
+    "explanation_grammar": "Giới từ + V-ing",
     "translation": "Nên kiểm tra quy định trang phục của một công ty trước khi đến thăm trụ sở chính của họ.",
     "core_vocabulary": [
       {
@@ -8346,7 +8346,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "Sau chỗ trống có 'to lost luggage', nên cần 'from' để tạo cấu trúc 'from A to B' (từ A đến B).",
-    "explanation_grammar": "From Noun_A to Noun_B.",
+    "explanation_grammar": "Cấu trúc 'from A to B'",
     "translation": "Nhân viên hãng hàng không phải xử lý nhiều vấn đề của hành khách, từ lỡ chuyến nối chuyến đến thất lạc hành lý.",
     "core_vocabulary": [
       {
@@ -8422,7 +8422,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Giới từ",
     "explanation_reason": "Để chỉ vị trí trải dài dọc theo một con sông, ta dùng giới từ 'along' (dọc theo).",
-    "explanation_grammar": "Along + River / Road...",
+    "explanation_grammar": "Giới từ (dùng cố định)",
     "translation": "Tour tham quan cao cấp trong ngày của chúng tôi đưa du khách đến các di tích lịch sử dọc theo sông Aprico.",
     "core_vocabulary": [
       {
@@ -8503,7 +8503,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Giới từ",
     "explanation_reason": "Trước danh động từ 'entering' cần một giới từ. 'Before entering' nghĩa là trước khi bước vào.",
-    "explanation_grammar": "Before + V-ing.",
+    "explanation_grammar": "Giới từ + V-ing",
     "translation": "Tại bàn đăng ký, hãy nhớ nhận thẻ tên của bạn trước khi vào hội nghị.",
     "core_vocabulary": [
       {
@@ -10340,7 +10340,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc so sánh bằng 'as + Adj/Adv + as'. Đi sau động từ tobe 'is' cần một Tính Từ (durable) bổ nghĩa cho chủ ngữ 'prototype'.",
-    "explanation_grammar": "S + tobe + (not) as + Adjective + as...",
+    "explanation_grammar": "So sánh bằng (as… as)",
     "translation": "Bản mẫu thử nghiệm mới đến từ hãng TechNova thì không hoàn toàn được bền bỉ chắc chắn cho bằng dòng sản phẩm hiện tại.",
     "core_vocabulary": [
       {
@@ -10384,7 +10384,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất 'the most + Adjective' bổ nghĩa trực tiếp cho cụm danh từ 'rating'. Chọn tính từ 'impressive' (ấn tượng).",
-    "explanation_grammar": "The most + Adjective + Noun.",
+    "explanation_grammar": "So sánh nhất",
     "translation": "Chị Lan đã được vinh danh khen thưởng vì đã đạt được thứ hạng đánh giá dịch vụ chăm sóc khách hàng ấn tượng nhất tại VietTel.",
     "core_vocabulary": [
       {
@@ -10406,7 +10406,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "Vẫn là cấu trúc Make + Tân Ngữ + Tính Từ. Đi kèm so sánh hơn 'more + Adj + than', vị trí này cần điền tính từ 'powerful'.",
-    "explanation_grammar": "Make something more + Adjective.",
+    "explanation_grammar": "So sánh hơn với tính từ",
     "translation": "Cỗ động cơ được nâng cấp đã làm cho chiếc xe sedan Helios trở nên mạnh mẽ uy lực hơn hẳn so với những dòng xe đời tiền nhiệm.",
     "core_vocabulary": [
       {
@@ -10428,7 +10428,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng với giới từ 'as... as' và đứng sau động từ tobe 'was' nên vị trí này cần một Tính Từ.",
-    "explanation_grammar": "Tobe + as + Adjective + as.",
+    "explanation_grammar": "So sánh bằng (as… as)",
     "translation": "Chiến dịch quảng cáo cho dòng nước tăng lực Solis đã không có được mức độ thành công bùng nổ như đợt kỳ vọng xuất ra.",
     "core_vocabulary": [
       {
@@ -10450,7 +10450,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất bổ sung cho 'software solution'. Dùng 'The most + Adjective + Noun'. Tính từ 'efficient' (hiệu quả).",
-    "explanation_grammar": "The most + Adjective + Noun.",
+    "explanation_grammar": "So sánh nhất",
     "translation": "Ông Chen đã được trao tặng một phần thưởng nhờ công đã tự tay phát triển ra một giải pháp phần mềm có hiệu suất cao nhất tại công ty ByteCore.",
     "core_vocabulary": [
       {
@@ -10538,7 +10538,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất đi với Tính Từ để bổ nghĩa cho 'research project'. 'Comprehensive' là tính từ nguyên gốc.",
-    "explanation_grammar": "The most + Adj + Noun.",
+    "explanation_grammar": "So sánh nhất",
     "translation": "Tiến sĩ Aris đã được ghi nhận công lao vì đã làm chủ thầu một đề án nghiên cứu có tính bao quát toàn diện nhất tại tập đoàn BioLab Inc.",
     "core_vocabulary": [
       {
@@ -10670,7 +10670,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc Make + O + Adj. So sánh hơn cần tính từ bổ nghĩa 'sustainable' (bền vững).",
-    "explanation_grammar": "Make something more + Adj + than...",
+    "explanation_grammar": "So sánh hơn với tính từ",
     "translation": "Việc dốc tiền đầu tư vào bộ pin năng lượng mặt trời làm cho tòa nhà văn phòng sinh thái bền vững hơn hẳn so với nhà kho cũ.",
     "core_vocabulary": [
       {
@@ -10780,7 +10780,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất bổ nghĩa cho dnah từ 'growth rate'. Dùng The most + Tính Từ.",
-    "explanation_grammar": "The most + Adj + N.",
+    "explanation_grammar": "So sánh nhất",
     "translation": "Ông Rossi đã được tuyên dương vì đạt tốc độ tăng trưởng ổn định nhất tại Milan Finance.",
     "core_vocabulary": [
       {
@@ -10802,7 +10802,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "So sánh",
     "explanation_reason": "Tobe 'is' kết hợp so sánh hơn 'more'. Cần một Tính Từ.",
-    "explanation_grammar": "Tobe + more + Adj + than.",
+    "explanation_grammar": "So sánh hơn với tính từ",
     "translation": "Giao diện người dùng của phần mềm Applo trực quan hơn so với nền tảng của đối thủ.",
     "core_vocabulary": [
       {
@@ -10824,7 +10824,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng tobe 'was' + as + Tính Từ + as. Chọn tính từ 'predictable' là vẹn câu rành mạch nhất.",
-    "explanation_grammar": "Tobe + as + Adj + as.",
+    "explanation_grammar": "So sánh bằng (as… as)",
     "translation": "Lịch giao hàng của lô hàng quốc tế đã không đúng như dự kiến ban đầu.",
     "core_vocabulary": [
       {
@@ -12849,7 +12849,7 @@ export const grammarQuestions = [
     },
     "correct_answer": "B",
     "explanation_reason": "Chủ ngữ chính là 'Candidates' (được thêm -s tương ứng số nhiều). Theo đó động từ phải chia dạng số nhiều, chỉ có 'are' là phương án chính xác trong 4 đáp án (các đáp án còn lại đều ở dạng số ít).",
-    "explanation_grammar": "S (plural Noun) -> Verb (plural).",
+    "explanation_grammar": "Hoà hợp với chủ ngữ số nhiều",
     "translation": "Các ứng cử viên cho vị trí quản lý bị trống được yêu cầu nộp hồ sơ năng lực.",
     "core_vocabulary": [
       {
@@ -13426,7 +13426,7 @@ export const grammarQuestions = [
     },
     "correct_answer": "B",
     "explanation_reason": "Chủ ngữ 'Passengers' (những hành khách) là số nhiều. Động từ cần chia ở hình thức số nhiều. Trong các phân án, chỉ 'were' đáp ứng yêu cầu hòa hợp S-V.",
-    "explanation_grammar": "N(plural) -> V(plural: are/were/have...).",
+    "explanation_grammar": "Hoà hợp với chủ ngữ số nhiều",
     "translation": "Những hành khách trên chuyến bay bị hoãn đã được hãng hàng không cung cấp các phiếu ăn uống miễn phí.",
     "core_vocabulary": [
       {
@@ -14685,7 +14685,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau động từ khuyết thiếu 'should' là động từ nguyên mẫu không 'to'.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Trước khi bắt đầu kinh doanh, các doanh nhân nên hiểu mọi khía cạnh của ngành công nghiệp mà họ đã chọn.",
     "core_vocabulary": [
       {
@@ -14712,7 +14712,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Đây là câu mệnh lệnh bắt đầu bằng 'Please', yêu cầu động từ nguyên mẫu.",
-    "explanation_grammar": "Imperative sentence.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng thông báo cho đại lý du lịch Konel của bạn về bất kỳ yêu cầu đặc biệt nào trước khi đặt chỗ.",
     "core_vocabulary": [
       {
@@ -14739,7 +14739,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động (is + V3/ed) mô tả trạng thái của hàng hóa.",
-    "explanation_grammar": "Passive voice (Present Simple).",
+    "explanation_grammar": "Thì hiện tại đơn, thể bị động",
     "translation": "Tất cả hàng hóa được buộc chặt an toàn trước khi phương tiện vận chuyển rời khỏi bến bốc hàng.",
     "core_vocabulary": [
       {
@@ -14766,7 +14766,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Diễn tả một sự thay đổi/kết quả kéo dài đến hiện tại.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Số lượng độc giả của tạp chí đã tăng gần 20% trong vòng ba tháng.",
     "core_vocabulary": [
       {
@@ -14793,7 +14793,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'last month' cho biết hành động đã xảy ra và kết thúc trong quá khứ.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Cô Rodriguez sẽ nói về một hội nghị ngân hàng mà cô ấy đã tham dự tại Lisbon vào tháng trước.",
     "core_vocabulary": [
       {
@@ -14820,7 +14820,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì hiện tại tiếp diễn (are being + V3/ed).",
-    "explanation_grammar": "Present Continuous Passive.",
+    "explanation_grammar": "Thì hiện tại tiếp diễn, thể bị động",
     "translation": "Các sản phẩm chăm sóc tóc mới của Waveby đang được tiếp thị cho cả nam và nữ.",
     "core_vocabulary": [
       {
@@ -14847,7 +14847,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc 'By the time + Past Simple, Past Perfect'. Hành động bắt đầu hoạt động dưới tên mới xảy ra trước một hành động khác trong quá khứ.",
-    "explanation_grammar": "Past Perfect.",
+    "explanation_grammar": "Thì quá khứ hoàn thành",
     "translation": "Vào thời điểm việc sáp nhập được công bố, Công ty Trexler đã bắt đầu hoạt động dưới cái tên mới.",
     "core_vocabulary": [
       {
@@ -14874,7 +14874,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Chủ ngữ là vật nên cần bị động. 'Frequently' chỉ thói quen lặp lại ở hiện tại.",
-    "explanation_grammar": "Present Simple Passive.",
+    "explanation_grammar": "Thì hiện tại đơn, thể bị động",
     "translation": "Các điều kiện trong phòng thí nghiệm được theo dõi thường xuyên để đảm bảo sự ổn định của nhiệt độ.",
     "core_vocabulary": [
       {
@@ -14901,7 +14901,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'shortly' (trong thời gian ngắn tới) chỉ tương lai.",
-    "explanation_grammar": "Future Simple.",
+    "explanation_grammar": "Thì tương lai đơn",
     "translation": "Dịch vụ của Công ty Xe buýt Milldell kết nối hai sân bay của thành phố sẽ sớm bắt đầu hoạt động.",
     "core_vocabulary": [
       {
@@ -14928,7 +14928,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau động từ khuyết thiếu 'may' là động từ nguyên mẫu không 'to'.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Hội đồng thẩm định tài chính đã tuyên bố rằng không có đề xuất ngân sách nào được vượt quá mười trang.",
     "core_vocabulary": [
       {
@@ -14955,7 +14955,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Diễn tả hành động sẽ đang diễn ra liên tục đến một thời điểm trong tương lai.",
-    "explanation_grammar": "Future Continuous.",
+    "explanation_grammar": "Thì tương lai tiếp diễn",
     "translation": "Bộ phận Giải trí Tyneside sẽ tiếp nhận các gợi ý cho các chương trình mới cho đến cuối tháng này.",
     "core_vocabulary": [
       {
@@ -14982,7 +14982,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc 'A number of + danh từ số nhiều + động từ số nhiều'.",
-    "explanation_grammar": "Subject-Verb Agreement.",
+    "explanation_grammar": "Hoà hợp chủ ngữ - động từ",
     "translation": "Một số lượng xe cộ bị đỗ trái phép mỗi đêm bất chấp các quy định nghiêm ngặt.",
     "core_vocabulary": [
       {
@@ -15009,7 +15009,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Chủ ngữ là vật nên cần bị động. 'Will be built' chỉ một kế hoạch tương lai.",
-    "explanation_grammar": "Future Simple Passive.",
+    "explanation_grammar": "Thì tương lai đơn, thể bị động",
     "translation": "Khu phức hợp văn phòng sẽ được xây dựng ở ngoại ô khu mua sắm dành cho người đi bộ.",
     "core_vocabulary": [
       {
@@ -15036,7 +15036,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'yesterday' chỉ quá khứ đơn.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Các doanh nghiệp đã đóng cửa sớm vào ngày hôm qua để công nhân lát lại đường.",
     "core_vocabulary": [
       {
@@ -15063,7 +15063,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Diễn tả một hành động đang diễn ra trong quá khứ thì một hành động khác xen vào.",
-    "explanation_grammar": "Past Continuous.",
+    "explanation_grammar": "Thì quá khứ tiếp diễn",
     "translation": "Khi Tập đoàn Paxton đang tái cơ cấu bộ phận dệt may, một vài quản lý đã bị sa thải.",
     "core_vocabulary": [
       {
@@ -15090,7 +15090,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'in the last five years' là dấu hiệu của thì hiện tại hoàn thành.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Nhiều sinh viên đã tham gia vào các kỳ thực tập trong 5 năm qua hơn bao giờ hết.",
     "core_vocabulary": [
       {
@@ -15117,7 +15117,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Động từ 'suggested' là quá khứ, 'has examined' phù hợp để chỉ chuỗi hành động vừa hoàn thành.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Thủ quỹ của Câu lạc bộ Salisbury đã kiểm tra và đề xuất các sửa đổi cho ngân sách.",
     "core_vocabulary": [
       {
@@ -15144,7 +15144,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Chủ ngữ là vật nên cần bị động. Diễn tả sự việc đã thực hiện xong.",
-    "explanation_grammar": "Past Simple Passive.",
+    "explanation_grammar": "Thì quá khứ đơn, thể bị động",
     "translation": "Sách hướng dẫn kỹ thuật cho Máy in Ảnh True đã được các nhà thầu dịch sang tiếng Tây Ban Nha.",
     "core_vocabulary": [
       {
@@ -15171,7 +15171,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động (được yêu cầu). Quy định chung ở hiện tại.",
-    "explanation_grammar": "Present Simple Passive.",
+    "explanation_grammar": "Thì hiện tại đơn, thể bị động",
     "translation": "Tất cả hành khách được yêu cầu ngồi yên tại chỗ khi xe buýt đang di chuyển.",
     "core_vocabulary": [
       {
@@ -15198,7 +15198,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'must be' là V3/ed trong cấu trúc bị động với động từ khuyết thiếu.",
-    "explanation_grammar": "Passive with Modal Verbs.",
+    "explanation_grammar": "Thể bị động với động từ khuyết thiếu",
     "translation": "Bất kỳ yêu cầu xin nghỉ phép nào cũng phải được nộp cho giám sát bộ phận trước ít nhất hai tuần.",
     "core_vocabulary": [
       {
@@ -15225,7 +15225,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau động từ khuyết thiếu 'should' là động từ nguyên mẫu không 'to'.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Đội ngũ hậu cần nên tính toán khả năng chịu tải của container trước khi gửi các bo mạch chủ ASUS.",
     "core_vocabulary": [
       {
@@ -15252,7 +15252,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau động từ khuyết thiếu 'must' là động từ nguyên mẫu.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Các quản lý dự án phải tạo ra một Cấu trúc phân chia công việc (WBS) chi tiết để đảm bảo thực hiện suôn sẻ.",
     "core_vocabulary": [
       {
@@ -15279,7 +15279,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau trợ động từ 'will' là động từ nguyên mẫu.",
-    "explanation_grammar": "Future Simple: Will + V-bare.",
+    "explanation_grammar": "Thì tương lai đơn",
     "translation": "Người môi giới hải quan sẽ nộp tờ khai VNACCS cho hàng hóa nhập khẩu vào ngày mai.",
     "core_vocabulary": [
       {
@@ -15306,7 +15306,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'should' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Để tối ưu hóa chi phí vận chuyển, chúng ta nên lựa chọn loại pallet chính xác cho các linh kiện điện tử.",
     "core_vocabulary": [
       {
@@ -15333,7 +15333,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'can' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Nhà phân tích dữ liệu có thể cập nhật biểu đồ hồi quy để xác định các xu hướng vận chuyển dài hạn một cách dễ dàng.",
     "core_vocabulary": [
       {
@@ -15360,7 +15360,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'Please' dùng động từ nguyên mẫu để tạo câu mệnh lệnh.",
-    "explanation_grammar": "Imperative sentence.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng xem lại tất cả các yêu cầu vận chuyển quốc tế trước khi xuất khẩu hàng hóa sang Lisbon.",
     "core_vocabulary": [
       {
@@ -15387,7 +15387,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Câu mệnh lệnh bắt đầu bằng 'Please' + V-bare.",
-    "explanation_grammar": "Imperative sentence.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng cung cấp chính xác mã HS trên tờ khai hải quan để tránh bất kỳ sự chậm trễ ngoài dự kiến nào.",
     "core_vocabulary": [
       {
@@ -15414,7 +15414,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "'Kindly' tương tự 'Please', theo sau là động từ nguyên mẫu.",
-    "explanation_grammar": "Polite Request/Imperative.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng kiểm tra tỷ lệ lỗi bằng phương pháp chia đôi cho báo cáo số liệu hàng tuần của chúng tôi.",
     "core_vocabulary": [
       {
@@ -15441,7 +15441,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Câu mệnh lệnh dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Imperative sentence.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng tính toán lại thời gian ước tính cho các nhiệm vụ dự án này bằng phương pháp PERT.",
     "core_vocabulary": [
       {
@@ -15468,7 +15468,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Câu mệnh lệnh dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Imperative sentence.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng liên hệ với quản lý kho trước khi bốc hàng nông sản tươi vào thiết bị làm lạnh.",
     "core_vocabulary": [
       {
@@ -15495,7 +15495,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì quá khứ đơn (was + V3/ed).",
-    "explanation_grammar": "Past Simple Passive.",
+    "explanation_grammar": "Thì quá khứ đơn, thể bị động",
     "translation": "Phần mềm VNACCS mới đã được cài đặt thành công trên tất cả các máy tính của công ty vào cuối tuần trước.",
     "core_vocabulary": [
       {
@@ -15522,7 +15522,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì hiện tại đơn (are + V3/ed).",
-    "explanation_grammar": "Present Simple Passive.",
+    "explanation_grammar": "Thì hiện tại đơn, thể bị động",
     "translation": "Tất cả 1.258 bộ bo mạch chủ ASUS ROG Strix đều được xếp cẩn thận lên các tấm pallet gỗ.",
     "core_vocabulary": [
       {
@@ -15549,7 +15549,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì hiện tại đơn (are + V3/ed).",
-    "explanation_grammar": "Present Simple Passive.",
+    "explanation_grammar": "Thì hiện tại đơn, thể bị động",
     "translation": "Những quả táo tươi từ Hoa Kỳ được lưu kho an toàn trong cơ sở kiểm soát nhiệt độ.",
     "core_vocabulary": [
       {
@@ -15576,7 +15576,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì hiện tại đơn (is + V3/ed).",
-    "explanation_grammar": "Present Simple Passive.",
+    "explanation_grammar": "Thì hiện tại đơn, thể bị động",
     "translation": "Lịch trình dự án được điều chỉnh thường xuyên để cân bằng 'tam giác sắt' gồm chi phí, tiến độ và chất lượng.",
     "core_vocabulary": [
       {
@@ -15603,7 +15603,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động hiện tại đơn (are + V3/ed).",
-    "explanation_grammar": "Present Simple Passive.",
+    "explanation_grammar": "Thì hiện tại đơn, thể bị động",
     "translation": "Các đường xu hướng tuyến tính trong Google Sheets được tạo tự động khi dữ liệu số mới được nhập vào.",
     "core_vocabulary": [
       {
@@ -15630,7 +15630,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Thì hiện tại hoàn thành (has + V3) diễn tả một sự thay đổi/tiến bộ tính đến thời điểm hiện tại.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Công ty vận chuyển đã cải thiện các tuyến đường giao hàng để tối ưu hóa khả năng chịu tải trong năm nay.",
     "core_vocabulary": [
       {
@@ -15657,7 +15657,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'recently' (gần đây) là đặc trưng của thì hiện tại hoàn thành.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Nhà phân tích dữ liệu mới của chúng tôi đã tạo ra một vài biểu đồ hồi quy để theo dõi mức tiêu thụ nhiên liệu gần đây.",
     "core_vocabulary": [
       {
@@ -15684,7 +15684,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'over the past decade' (trong thập kỷ qua) đi với thì hiện tại hoàn thành.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Khối lượng nhập khẩu nông sản tươi vào Việt Nam đã tăng đáng kể trong thập kỷ qua.",
     "core_vocabulary": [
       {
@@ -15711,7 +15711,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc 'since + quá khứ đơn', mệnh đề còn lại chia hiện tại hoàn thành.",
-    "explanation_grammar": "Present Perfect with Since.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Cô Anh đã mở rộng đáng kể vốn từ vựng tiếng Anh thương mại của mình kể từ khi chương trình đào tạo bắt đầu.",
     "core_vocabulary": [
       {
@@ -15738,7 +15738,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Diễn tả một hành động đã thực hiện và để lại kết quả hoặc kinh nghiệm ở hiện tại.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Chúng tôi đã áp dụng phương pháp nội suy Newton để giải các ví dụ số phức tạp này một cách hiệu quả.",
     "core_vocabulary": [
       {
@@ -15765,7 +15765,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'yesterday' (hôm qua) yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Các nhân viên hải quan đã kiểm tra lô hàng linh kiện điện tử tại cảng chính vào ngày hôm qua.",
     "core_vocabulary": [
       {
@@ -15792,7 +15792,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'last week' (tuần trước) yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Doanh nghiệp A đã nhập khẩu một lô hàng lớn táo tươi từ Hoa Kỳ vào tuần trước.",
     "core_vocabulary": [
       {
@@ -15819,7 +15819,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu thời gian cụ thể trong quá khứ 'on Monday morning' yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Nhóm dự án đã chia các nhiệm vụ phức tạp thành các hoạt động có thể quản lý được vào sáng thứ Hai.",
     "core_vocabulary": [
       {
@@ -15846,7 +15846,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Diễn tả một sự việc đã xảy ra và kết thúc trong quá khứ.",
-    "explanation_grammar": "Past Simple (Irregular verb: leave - left).",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Phương tiện vận chuyển đã rời bến bốc hàng sớm hơn dự kiến do điều kiện thời tiết quang đãng.",
     "core_vocabulary": [
       {
@@ -15873,7 +15873,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'last month' (tháng trước) yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Quản lý đã tham dự một hội nghị ngân hàng tại Lisbon để thảo luận về tài chính chuỗi cung ứng vào tháng trước.",
     "core_vocabulary": [
       {
@@ -15900,7 +15900,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động đi kèm động từ khuyết thiếu (must be + V3/ed).",
-    "explanation_grammar": "Passive with Modal Verbs.",
+    "explanation_grammar": "Thể bị động với động từ khuyết thiếu",
     "translation": "Nông sản tươi nhập khẩu từ Hoa Kỳ phải được kiểm tra cẩn thận tại biên giới.",
     "core_vocabulary": [
       {
@@ -15927,7 +15927,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'should' dùng động từ nguyên mẫu không 'to'.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Nhóm phân tích nên đánh giá mô hình hồi quy mới trước cuộc họp ngày mai.",
     "core_vocabulary": [
       {
@@ -15954,7 +15954,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Thì hiện tại hoàn thành diễn tả hành động vừa mới hoàn thành và có kết quả ở hiện tại.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Cô Anh đã hoàn thành Cấu trúc phân chia công việc (WBS) cho dự án chuỗi cung ứng sắp tới.",
     "core_vocabulary": [
       {
@@ -15981,7 +15981,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Câu mệnh lệnh bắt đầu bằng 'Please' + V-bare.",
-    "explanation_grammar": "Imperative sentence.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng sử dụng mã HS chính xác khi nộp hồ sơ cho các bộ phận điện tử.",
     "core_vocabulary": [
       {
@@ -16008,7 +16008,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì hiện tại tiếp diễn (are being + V3/ed).",
-    "explanation_grammar": "Present Continuous Passive.",
+    "explanation_grammar": "Thì hiện tại tiếp diễn, thể bị động",
     "translation": "Các bo mạch chủ máy tính dễ vỡ hiện đang được bốc xếp lên các tấm pallet gỗ tiêu chuẩn.",
     "core_vocabulary": [
       {
@@ -16035,7 +16035,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau cấu trúc 'need to' là động từ nguyên mẫu.",
-    "explanation_grammar": "To-infinitive after 'need'.",
+    "explanation_grammar": "Động từ nguyên thể có 'to'",
     "translation": "Chúng ta cần áp dụng phương pháp chia đôi để tìm nghiệm của phương trình phi tuyến này.",
     "core_vocabulary": [
       {
@@ -16062,7 +16062,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Diễn tả một hành động đã xảy ra và kết thúc trong quá khứ (liên hệ để đặt vé).",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Điều phối viên hậu cần đã liên hệ với đại lý Konel Travel để đặt vé máy bay cho hội nghị.",
     "core_vocabulary": [
       {
@@ -16089,7 +16089,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'since last January' yêu cầu thì hiện tại hoàn thành.",
-    "explanation_grammar": "Present Perfect with Since.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Lượng độc giả của tạp chí chuỗi cung ứng hàng tháng của chúng tôi đã tăng trưởng đều đặn kể từ tháng Giêng năm ngoái.",
     "core_vocabulary": [
       {
@@ -16116,7 +16116,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì quá khứ đơn (was + V3/ed).",
-    "explanation_grammar": "Past Simple Passive.",
+    "explanation_grammar": "Thì quá khứ đơn, thể bị động",
     "translation": "Ngân sách dự án đã được điều chỉnh để duy trì sự cân bằng giữa chi phí, tiến độ và chất lượng.",
     "core_vocabulary": [
       {
@@ -16143,7 +16143,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Câu mệnh lệnh bắt đầu với 'Please' + V-bare.",
-    "explanation_grammar": "Imperative sentence.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng tính toán các điểm dữ liệu bằng phương pháp nội suy Newton để dự báo nhu cầu tháng tới.",
     "core_vocabulary": [
       {
@@ -16170,7 +16170,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau cấu trúc giả định 'It is necessary to' là động từ nguyên mẫu.",
-    "explanation_grammar": "To-infinitive.",
+    "explanation_grammar": "Động từ nguyên thể có 'to'",
     "translation": "Cần phải truy cập hệ thống VNACCS sớm để tránh sự chậm trễ trong thông quan hải quan.",
     "core_vocabulary": [
       {
@@ -16197,7 +16197,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Diễn tả hành động đã xảy ra trong quá khứ liên quan đến một sự kiện cụ thể.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Ông Chen đã tham dự một hội nghị ngân hàng quan trọng tại Lisbon để thảo luận về tài trợ thương mại.",
     "core_vocabulary": [
       {
@@ -16224,7 +16224,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động với động từ khuyết thiếu 'must be' + V3/ed.",
-    "explanation_grammar": "Passive with Modal Verbs.",
+    "explanation_grammar": "Thể bị động với động từ khuyết thiếu",
     "translation": "Tất cả hàng hóa phải được buộc chặt an toàn trước khi phương tiện vận chuyển khởi hành khỏi bến bốc hàng.",
     "core_vocabulary": [
       {
@@ -16251,7 +16251,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'should' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Trước khi bắt đầu một dự án mới, các doanh nhân nên nghiên cứu kỹ các điều kiện thị trường.",
     "core_vocabulary": [
       {
@@ -16278,7 +16278,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Thì hiện tại hoàn thành diễn tả kinh nghiệm hoặc sự thay đổi trong khoảng thời gian bao gồm cả hiện tại (this year).",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Nhà phân tích mới đã cải thiện đáng kể các kỹ năng của mình trong các phương pháp toán học số học trong năm nay.",
     "core_vocabulary": [
       {
@@ -16305,7 +16305,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'plans to' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "To-infinitive.",
+    "explanation_grammar": "Động từ nguyên thể có 'to'",
     "translation": "Giám sát kho hàng có kế hoạch đo đạc khả năng chịu tải của container vào chiều thứ Sáu.",
     "core_vocabulary": [
       {
@@ -16332,7 +16332,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động quá khứ đơn (was + V3/ed).",
-    "explanation_grammar": "Past Simple Passive.",
+    "explanation_grammar": "Thì quá khứ đơn, thể bị động",
     "translation": "Việc ước tính thời gian xây dựng cơ sở mới đã được xác định bằng phương pháp PERT.",
     "core_vocabulary": [
       {
@@ -16359,7 +16359,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "'Kindly' là cách yêu cầu lịch sự, theo sau là V-bare.",
-    "explanation_grammar": "Imperative/Polite request.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng xác minh các yêu cầu vận chuyển trước khi xuất khẩu hàng hóa sang thị trường Châu Âu.",
     "core_vocabulary": [
       {
@@ -16386,7 +16386,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Thì hiện tại hoàn thành diễn tả hành động đã diễn ra dẫn đến kết quả hiện tại.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Doanh nghiệp A đã giao một vài lô hàng táo tươi đến kho hàng tại Việt Nam.",
     "core_vocabulary": [
       {
@@ -16413,7 +16413,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'yesterday' yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Nhóm nghiên cứu đã tạo ra một đường xu hướng chi tiết trong Google Sheets để trình bày dự báo doanh số ngày hôm qua.",
     "core_vocabulary": [
       {
@@ -16440,7 +16440,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì hiện tại đơn (are + V3/ed).",
-    "explanation_grammar": "Present Simple Passive.",
+    "explanation_grammar": "Thì hiện tại đơn, thể bị động",
     "translation": "Tỷ lệ lỗi hàng tháng được tính toán tự động bằng hệ thống phần mềm mới được cài đặt.",
     "core_vocabulary": [
       {
@@ -16467,7 +16467,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'wants to' là động từ nguyên mẫu.",
-    "explanation_grammar": "To-infinitive.",
+    "explanation_grammar": "Động từ nguyên thể có 'to'",
     "translation": "Quản lý muốn chia công việc phức tạp thành các nhiệm vụ hàng ngày nhỏ hơn và dễ quản lý hơn.",
     "core_vocabulary": [
       {
@@ -16494,7 +16494,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Thì hiện tại hoàn thành diễn tả kết quả của việc tối ưu hóa tính đến nay.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Công ty vận chuyển đã giảm thời gian giao hàng bằng cách tối ưu hóa các tuyến vận tải chính.",
     "core_vocabulary": [
       {
@@ -16521,7 +16521,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động quá khứ đơn (were + V3/ed).",
-    "explanation_grammar": "Past Simple Passive.",
+    "explanation_grammar": "Thì quá khứ đơn, thể bị động",
     "translation": "Hơn 1.000 bộ bo mạch chủ ASUS ROG Strix đã được vận chuyển đến nhà bán lẻ vào sáng nay.",
     "core_vocabulary": [
       {
@@ -16548,7 +16548,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Câu mệnh lệnh sau 'Please' + V-bare.",
-    "explanation_grammar": "Imperative sentence.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng thông báo cho đại lý du lịch của bạn ngay lập tức nếu có bất kỳ thay đổi nào liên quan đến việc đặt chỗ.",
     "core_vocabulary": [
       {
@@ -16575,7 +16575,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau động từ khuyết thiếu 'must' dùng động từ nguyên mẫu không 'to'.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Nhà phân tích dữ liệu hậu cần phải phân tích dữ liệu lô hàng mới trước cuối ngày.",
     "core_vocabulary": [
       {
@@ -16602,7 +16602,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động đi với động từ khuyết thiếu (should be + V3/ed).",
-    "explanation_grammar": "Passive with Modal Verbs.",
+    "explanation_grammar": "Thể bị động với động từ khuyết thiếu",
     "translation": "Mức sai số trong phương pháp chia đôi nên được nhóm tính toán cẩn thận.",
     "core_vocabulary": [
       {
@@ -16629,7 +16629,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Thì hiện tại hoàn thành diễn tả hành động đã xảy ra trong khoảng thời gian bao gồm hiện tại (this month).",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Doanh nghiệp A đã nhập khẩu ba đợt táo tươi từ Hoa Kỳ trong tháng này.",
     "core_vocabulary": [
       {
@@ -16656,7 +16656,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Câu mệnh lệnh sau 'Please' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Imperative sentence.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng xem lại Cấu trúc phân chia công việc (WBS) trước khi cuộc họp dự án chính bắt đầu.",
     "core_vocabulary": [
       {
@@ -16683,7 +16683,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'should' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Các nhà môi giới hải quan nên hiểu kỹ các hướng dẫn hệ thống VNACCS để tránh sai sót.",
     "core_vocabulary": [
       {
@@ -16710,7 +16710,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì hiện tại đơn (are + V3/ed).",
-    "explanation_grammar": "Present Simple Passive.",
+    "explanation_grammar": "Thì hiện tại đơn, thể bị động",
     "translation": "Tất cả các linh kiện điện tử đều được bốc xếp an toàn lên các pallet được chỉ định để tránh hư hỏng.",
     "core_vocabulary": [
       {
@@ -16737,7 +16737,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Thì hiện tại hoàn thành diễn tả một hành động vừa thực hiện xong và để lại kết quả.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Cô Trang Anh đã tạo một đường xu hướng mới trong Google Sheets cho báo cáo hiệu suất hàng tuần.",
     "core_vocabulary": [
       {
@@ -16764,7 +16764,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'yesterday' yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Quản lý kho đã xác minh mã HS cho các bo mạch chủ ASUS mới vào ngày hôm qua.",
     "core_vocabulary": [
       {
@@ -16791,7 +16791,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau cấu trúc 'It is crucial to' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "To-infinitive.",
+    "explanation_grammar": "Động từ nguyên thể có 'to'",
     "translation": "Điều cốt yếu là phải cân bằng 'tam giác sắt' của quản lý dự án trong giai đoạn thực thi.",
     "core_vocabulary": [
       {
@@ -16818,7 +16818,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'needs to' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "To-infinitive.",
+    "explanation_grammar": "Động từ nguyên thể có 'to'",
     "translation": "Nhóm kỹ thuật cần áp dụng nội suy Newton để ước tính các điểm dữ liệu còn thiếu.",
     "core_vocabulary": [
       {
@@ -16845,7 +16845,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì quá khứ đơn (was + V3/ed) với dấu hiệu 'last week'.",
-    "explanation_grammar": "Past Simple Passive.",
+    "explanation_grammar": "Thì quá khứ đơn, thể bị động",
     "translation": "Khả năng chịu tải của container đã được tối ưu hóa bởi phần mềm hậu cần mới vào tuần trước.",
     "core_vocabulary": [
       {
@@ -16872,7 +16872,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "'Kindly' dùng trong yêu cầu lịch sự, theo sau là động từ nguyên mẫu.",
-    "explanation_grammar": "Imperative/Polite request.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng gửi các tài liệu vận chuyển bắt buộc cho hãng vận tải trước 5 giờ chiều nay.",
     "core_vocabulary": [
       {
@@ -16899,7 +16899,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Thì hiện tại hoàn thành diễn tả hành động đã làm và có kết quả giúp ích cho phân tích hiện tại.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Chúng tôi đã tạo ra một vài biểu đồ hồi quy để phân tích thời gian giao hàng quốc tế một cách hiệu quả.",
     "core_vocabulary": [
       {
@@ -16926,7 +16926,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau trợ động từ 'will' là động từ nguyên mẫu.",
-    "explanation_grammar": "Future Simple.",
+    "explanation_grammar": "Thì tương lai đơn",
     "translation": "Đại lý vận chuyển đã ký hợp đồng sẽ sớm xác nhận các yêu cầu vận chuyển quốc tế.",
     "core_vocabulary": [
       {
@@ -16953,7 +16953,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì quá khứ đơn (was + V3/ed).",
-    "explanation_grammar": "Past Simple Passive.",
+    "explanation_grammar": "Thì quá khứ đơn, thể bị động",
     "translation": "Ước tính thời gian tổng thể cho dự án đã được tính toán chính xác bằng kỹ thuật PERT.",
     "core_vocabulary": [
       {
@@ -16980,7 +16980,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Thì hiện tại hoàn thành diễn tả một sự thay đổi kéo dài trong suốt quý này.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Nhu cầu thị trường đối với bo mạch chủ ASUS ROG Strix đã tăng đáng kể trong quý này.",
     "core_vocabulary": [
       {
@@ -17007,7 +17007,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'yesterday' yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Đại lý du lịch đã xác nhận việc đặt phòng khách sạn cho hội nghị hậu cần tại Lisbon vào ngày hôm qua.",
     "core_vocabulary": [
       {
@@ -17034,7 +17034,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'routinely' (thường xuyên/theo quy trình) yêu cầu thì hiện tại đơn cho chủ ngữ số nhiều.",
-    "explanation_grammar": "Present Simple.",
+    "explanation_grammar": "Thì hiện tại đơn",
     "translation": "Các nhà phân tích dữ liệu thường xuyên kiểm tra các tập dữ liệu lớn để tìm ra những điểm không hiệu quả tiềm ẩn trong chuỗi cung ứng.",
     "core_vocabulary": [
       {
@@ -17061,7 +17061,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động đi kèm động từ khuyết thiếu (must be + V3/ed). Động từ 'keep' có dạng V3 là 'kept'.",
-    "explanation_grammar": "Passive with Modal Verbs.",
+    "explanation_grammar": "Thể bị động với động từ khuyết thiếu",
     "translation": "Nông sản tươi nhập khẩu phải được cất giữ trong kho lưu trữ kiểm soát nhiệt độ.",
     "core_vocabulary": [
       {
@@ -17088,7 +17088,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Diễn tả hành động đã xảy ra và dẫn đến kết quả thành công.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Nhóm nghiên cứu đã sử dụng phương pháp chia đôi để giải phương trình phi tuyến phức tạp một cách thành công.",
     "core_vocabulary": [
       {
@@ -17115,7 +17115,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'should' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Các quản lý dự án nên phân rã các nhiệm vụ phức tạp thành các nhiệm vụ con có thể quản lý được để theo dõi tốt hơn.",
     "core_vocabulary": [
       {
@@ -17142,7 +17142,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'recently' yêu cầu thì hiện tại hoàn thành.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Cục hải quan quốc gia đã công bố quy định nhập khẩu mới cho các mặt hàng điện tử gần đây.",
     "core_vocabulary": [
       {
@@ -17169,7 +17169,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'yesterday' yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Phần mềm phân tích mới đã phát hiện ra các tỷ lệ lỗi nhỏ trong báo cáo số liệu vào ngày hôm qua.",
     "core_vocabulary": [
       {
@@ -17196,7 +17196,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Câu mệnh lệnh sau 'Please' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Imperative sentence.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng đảm bảo rằng tất cả hàng hóa dễ vỡ đều được buộc chặt an toàn trước khi xe tải khởi hành.",
     "core_vocabulary": [
       {
@@ -17223,7 +17223,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì quá khứ đơn (was + V3/ed) với dấu hiệu 'last Monday morning'.",
-    "explanation_grammar": "Past Simple Passive.",
+    "explanation_grammar": "Thì quá khứ đơn, thể bị động",
     "translation": "Chiến lược kinh doanh cập nhật đã được hội đồng quản trị phê duyệt vào sáng thứ Hai tuần trước.",
     "core_vocabulary": [
       {
@@ -17250,7 +17250,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'yesterday' yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Cục hải quan đã cập nhật hệ thống VNACCS cho tất cả các lô hàng quốc tế vào ngày hôm qua.",
     "core_vocabulary": [
       {
@@ -17277,7 +17277,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động đi kèm động từ khuyết thiếu (must be + V3/ed).",
-    "explanation_grammar": "Passive with Modal Verbs.",
+    "explanation_grammar": "Thể bị động với động từ khuyết thiếu",
     "translation": "Tất cả các chứng từ vận chuyển phải được kiểm tra cẩn thận trước khi hàng hóa rời cảng.",
     "core_vocabulary": [
       {
@@ -17304,7 +17304,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'this morning' (trong ngữ cảnh này là một sự việc đã hoàn thành sáng nay) yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Doanh nghiệp A đã cung cấp mã HS chính xác cho người môi giới hải quan vào sáng nay.",
     "core_vocabulary": [
       {
@@ -17331,7 +17331,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì hiện tại đơn (is + V3/ed).",
-    "explanation_grammar": "Present Simple Passive.",
+    "explanation_grammar": "Thì hiện tại đơn, thể bị động",
     "translation": "Nông sản tươi từ Hoa Kỳ được duy trì ở nhiệt độ cụ thể trong suốt hành trình.",
     "core_vocabulary": [
       {
@@ -17358,7 +17358,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Diễn tả một thói quen hoặc quy trình làm việc ở hiện tại.",
-    "explanation_grammar": "Present Simple.",
+    "explanation_grammar": "Thì hiện tại đơn",
     "translation": "Để tính toán chính xác khả năng chịu tải của container, nhà phân tích sử dụng một công cụ phần mềm mới.",
     "core_vocabulary": [
       {
@@ -17385,7 +17385,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'should' dùng động từ nguyên mẫu không 'to'.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Quản lý dự án nên hoàn thiện Cấu trúc phân chia công việc (WBS) trước khi giao nhiệm vụ.",
     "core_vocabulary": [
       {
@@ -17412,7 +17412,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động quá khứ đơn (was + V3/ed) với dấu hiệu 'last week'.",
-    "explanation_grammar": "Past Simple Passive.",
+    "explanation_grammar": "Thì quá khứ đơn, thể bị động",
     "translation": "Việc ước tính thời gian cho giai đoạn này đã được tính toán chính xác bằng phương pháp PERT vào tuần trước.",
     "core_vocabulary": [
       {
@@ -17439,7 +17439,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Diễn tả hành động theo dõi thường xuyên (thói quen công việc) ở hiện tại.",
-    "explanation_grammar": "Present Simple.",
+    "explanation_grammar": "Thì hiện tại đơn",
     "translation": "Cô Trang Anh theo dõi sát sao lịch trình dự án để tránh bất kỳ sự chậm trễ ngoài dự kiến nào.",
     "core_vocabulary": [
       {
@@ -17466,7 +17466,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Câu mệnh lệnh bắt đầu bằng 'Please' + V-bare.",
-    "explanation_grammar": "Imperative sentence.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng cập nhật các đường xu hướng tuyến tính trong bảng tính sau khi chèn dữ liệu mới.",
     "core_vocabulary": [
       {
@@ -17493,7 +17493,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'recently' (gần đây) yêu cầu thì hiện tại hoàn thành.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Nhóm nghiên cứu đã chia dự án phức tạp thành các gói công việc nhỏ hơn thành công gần đây.",
     "core_vocabulary": [
       {
@@ -17520,7 +17520,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Thì hiện tại hoàn thành diễn tả hành động đã thực hiện và có kết quả cho báo cáo hiện tại.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Đội ngũ hậu cần của chúng tôi đã tạo ra nhiều biểu đồ hồi quy cho báo cáo hiệu suất hàng tháng.",
     "core_vocabulary": [
       {
@@ -17547,7 +17547,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì quá khứ đơn (was + V3/ed).",
-    "explanation_grammar": "Past Simple Passive.",
+    "explanation_grammar": "Thì quá khứ đơn, thể bị động",
     "translation": "Phương pháp nội suy Newton đã được sử dụng để dự đoán các giá trị số còn thiếu.",
     "core_vocabulary": [
       {
@@ -17574,7 +17574,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'can' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Bằng cách sử dụng phương pháp chia đôi, nhà phân tích có thể giảm đáng kể mức sai số.",
     "core_vocabulary": [
       {
@@ -17601,7 +17601,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'over the last year' (trong suốt năm qua) yêu cầu thì hiện tại hoàn thành.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Nhà phân tích dữ liệu đã chỉ ra sự gia tăng đều đặn của chi phí vận chuyển trong năm qua.",
     "core_vocabulary": [
       {
@@ -17628,7 +17628,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Câu mệnh lệnh dùng động từ nguyên mẫu sau 'Please'.",
-    "explanation_grammar": "Imperative sentence.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng nhập tất cả các dữ liệu số cần thiết vào hệ thống trước 3 giờ chiều.",
     "core_vocabulary": [
       {
@@ -17655,7 +17655,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'already' (đã... rồi) yêu cầu thì hiện tại hoàn thành.",
-    "explanation_grammar": "Present Perfect with Already.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Đại lý Konel Travel đã đặt vé máy bay cho hội nghị Lisbon rồi.",
     "core_vocabulary": [
       {
@@ -17682,7 +17682,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'must' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Trước khi ký hợp đồng, các doanh nhân phải xem xét tất cả các điều khoản và điều kiện pháp lý.",
     "core_vocabulary": [
       {
@@ -17709,7 +17709,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'since May' yêu cầu thì hiện tại hoàn thành.",
-    "explanation_grammar": "Present Perfect with Since.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Lượng độc giả của tạp chí chuỗi cung ứng hàng tuần đã tăng 15% kể từ tháng Năm.",
     "core_vocabulary": [
       {
@@ -17736,7 +17736,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'next month' yêu cầu thì tương lai đơn.",
-    "explanation_grammar": "Future Simple: Will + V-bare.",
+    "explanation_grammar": "Thì tương lai đơn",
     "translation": "Ông Lee sẽ tham dự hội nghị ngân hàng quốc tế tại Lisbon để thảo luận về thương mại vào tháng tới.",
     "core_vocabulary": [
       {
@@ -17763,7 +17763,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'should' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Nhân viên nên thông báo cho cấp trên của họ về bất kỳ thay đổi nào đối với lịch giao hàng.",
     "core_vocabulary": [
       {
@@ -17790,7 +17790,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động quá khứ đơn (were + V3/ed) với dấu hiệu 'yesterday'.",
-    "explanation_grammar": "Past Simple Passive.",
+    "explanation_grammar": "Thì quá khứ đơn, thể bị động",
     "translation": "Hơn 1.258 bộ bo mạch chủ ASUS ROG Strix đã được giao cho nhà phân phối vào ngày hôm qua.",
     "core_vocabulary": [
       {
@@ -17817,7 +17817,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'must' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Nhân viên kho phải chọn đúng các tấm pallet gỗ cho các linh kiện điện tử nặng.",
     "core_vocabulary": [
       {
@@ -17844,7 +17844,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì hiện tại đơn (is + V3/ed).",
-    "explanation_grammar": "Present Simple Passive.",
+    "explanation_grammar": "Thì hiện tại đơn, thể bị động",
     "translation": "Để tránh hư hỏng, lô hàng máy tính nhạy cảm được buộc chặt an toàn vào pallet.",
     "core_vocabulary": [
       {
@@ -17871,7 +17871,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Diễn tả một hành động sẽ xảy ra trong tương lai ('tomorrow').",
-    "explanation_grammar": "Future Simple.",
+    "explanation_grammar": "Thì tương lai đơn",
     "translation": "Phương tiện vận chuyển sẽ rời bến bốc hàng ngay khi container cuối cùng được niêm phong vào ngày mai.",
     "core_vocabulary": [
       {
@@ -17898,7 +17898,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'multiple times' (nhiều lần) cho biết số lần thực hiện hành động tính tới hiện tại, yêu cầu thì hiện tại hoàn thành.",
-    "explanation_grammar": "Present Perfect (Frequency).",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Doanh nghiệp đã nhập khẩu táo tươi từ Hoa Kỳ vào Việt Nam nhiều lần.",
     "core_vocabulary": [
       {
@@ -17925,7 +17925,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'yesterday' yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Các nhân viên hải quan đã kiểm tra tất cả các container vận chuyển tại cảng ngày hôm qua.",
     "core_vocabulary": [
       {
@@ -17952,7 +17952,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'since last year' yêu cầu thì hiện tại hoàn thành.",
-    "explanation_grammar": "Present Perfect with Since.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Đội ngũ hậu cần của chúng tôi đã mở rộng đáng kể năng lực hoạt động kể từ năm ngoái.",
     "core_vocabulary": [
       {
@@ -17979,7 +17979,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau động từ khuyết thiếu 'should' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Nhân viên kho nên kiểm tra danh mục hàng tồn kho trước khi đóng cửa cơ sở.",
     "core_vocabulary": [
       {
@@ -18006,7 +18006,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì hiện tại đơn (are + V3/ed).",
-    "explanation_grammar": "Present Simple Passive.",
+    "explanation_grammar": "Thì hiện tại đơn, thể bị động",
     "translation": "Các bo mạch chủ máy tính nhạy cảm được xử lý cẩn thận bởi các công nhân giàu kinh nghiệm.",
     "core_vocabulary": [
       {
@@ -18033,7 +18033,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Câu mệnh lệnh bắt đầu bằng 'Please' + V-bare.",
-    "explanation_grammar": "Imperative sentence.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng liên hệ với đại lý Konel Travel để điều chỉnh chuyến bay đến Lisbon của bạn.",
     "core_vocabulary": [
       {
@@ -18060,7 +18060,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'yesterday' yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Cô Anh đã nộp lịch trình dự án cuối cùng cho ban quản lý vào ngày hôm qua.",
     "core_vocabulary": [
       {
@@ -18087,7 +18087,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'recently' (gần đây) yêu cầu thì hiện tại hoàn thành.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Phần mềm phân tích mới đã cải thiện tính chính xác cho các báo cáo số liệu của chúng tôi gần đây.",
     "core_vocabulary": [
       {
@@ -18114,7 +18114,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'must' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Tất cả các doanh nhân phải phân tích xu hướng thị trường trước khi tung ra sản phẩm mới.",
     "core_vocabulary": [
       {
@@ -18141,7 +18141,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì hiện tại đơn (are + V3/ed).",
-    "explanation_grammar": "Present Simple Passive.",
+    "explanation_grammar": "Thì hiện tại đơn, thể bị động",
     "translation": "Các đường xu hướng tuyến tính trong bảng tính được tạo tự động vào mỗi sáng thứ Hai.",
     "core_vocabulary": [
       {
@@ -18168,7 +18168,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Câu mệnh lệnh sau 'Please' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Imperative sentence.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng sử dụng các tấm pallet gỗ chính xác cho thiết bị điện tử nặng.",
     "core_vocabulary": [
       {
@@ -18195,7 +18195,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'last month' yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Doanh nghiệp A đã nhận một lô hàng nông sản tươi khổng lồ từ Hoa Kỳ vào tháng trước.",
     "core_vocabulary": [
       {
@@ -18222,7 +18222,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'over the past quarter' (trong quý vừa qua) yêu cầu thì hiện tại hoàn thành.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Nhu cầu đối với bo mạch chủ ASUS ROG Strix đã tăng trưởng đều đặn trong quý vừa qua.",
     "core_vocabulary": [
       {
@@ -18249,7 +18249,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'can' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Quản lý dự án có thể điều chỉnh Cấu trúc phân chia công việc (WBS) để tối ưu hóa hiệu quả.",
     "core_vocabulary": [
       {
@@ -18276,7 +18276,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động quá khứ đơn (was + V3/ed).",
-    "explanation_grammar": "Past Simple Passive.",
+    "explanation_grammar": "Thì quá khứ đơn, thể bị động",
     "translation": "Tờ khai hải quan VNACCS đã được người môi giới hoàn thành thành công vào sáng nay.",
     "core_vocabulary": [
       {
@@ -18303,7 +18303,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "'Kindly' dùng trong câu yêu cầu/mệnh lệnh lịch sự, theo sau là V-bare.",
-    "explanation_grammar": "Polite Request/Imperative.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng tính toán lại thời gian ước tính bằng phương pháp PERT trước khi cuộc họp bắt đầu.",
     "core_vocabulary": [
       {
@@ -18330,7 +18330,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'last week' yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Trưởng phòng phân tích dữ liệu đã tham dự một hội nghị chuỗi cung ứng tại Lisbon vào tuần trước.",
     "core_vocabulary": [
       {
@@ -18357,7 +18357,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'since' yêu cầu thì hiện tại hoàn thành.",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Tuyến đường giao hàng mới đã giảm đáng kể chi phí vận chuyển kể từ khi triển khai.",
     "core_vocabulary": [
       {
@@ -18384,7 +18384,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'should' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Nhóm nghiên cứu nên áp dụng phương pháp nội suy Newton cho ví dụ số học cụ thể này.",
     "core_vocabulary": [
       {
@@ -18411,7 +18411,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì hiện tại đơn (are + V3/ed).",
-    "explanation_grammar": "Present Simple Passive.",
+    "explanation_grammar": "Thì hiện tại đơn, thể bị động",
     "translation": "Các mã HS chính xác thường được liệt kê ở trang thứ hai của tờ khai hải quan.",
     "core_vocabulary": [
       {
@@ -18438,7 +18438,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Câu mệnh lệnh dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Imperative sentence.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng thông báo cho tất cả khách hàng quốc tế về những thay đổi sắp tới đối với chính sách vận chuyển của chúng tôi.",
     "core_vocabulary": [
       {
@@ -18465,7 +18465,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "12 thì",
     "explanation_reason": "Dấu hiệu 'yesterday afternoon' yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Điều phối viên hậu cần đã tính toán tổng khả năng chịu tải của container vào chiều hôm qua.",
     "core_vocabulary": [
       {
@@ -18492,7 +18492,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Thì hiện tại hoàn thành diễn tả hành động đã hoàn thành và để lại kết quả (biểu đồ đã sẵn sàng để xem).",
-    "explanation_grammar": "Present Perfect.",
+    "explanation_grammar": "Thì hiện tại hoàn thành",
     "translation": "Ông Chen đã tạo ra nhiều biểu đồ hồi quy để trực quan hóa dữ liệu doanh số hàng tháng.",
     "core_vocabulary": [
       {
@@ -18519,7 +18519,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Sau 'must' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Modal verbs + V-bare.",
+    "explanation_grammar": "Động từ khuyết thiếu + động từ nguyên thể",
     "translation": "Hãng vận tải phải rời bến bốc hàng trước khi trời mưa to.",
     "core_vocabulary": [
       {
@@ -18546,7 +18546,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "12 thì",
     "explanation_reason": "Cấu trúc bị động ở thì hiện tại đơn (are + V3/ed).",
-    "explanation_grammar": "Present Simple Passive.",
+    "explanation_grammar": "Thì hiện tại đơn, thể bị động",
     "translation": "Những quả táo tươi được lưu kho an toàn bên trong nhà kho kiểm soát nhiệt độ.",
     "core_vocabulary": [
       {
@@ -18573,7 +18573,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "12 thì",
     "explanation_reason": "Câu mệnh lệnh sau 'Please' dùng động từ nguyên mẫu.",
-    "explanation_grammar": "Imperative sentence.",
+    "explanation_grammar": "Câu mệnh lệnh / đề nghị lịch sự",
     "translation": "Vui lòng đánh giá tỷ lệ lỗi bằng phương pháp chia đôi để đảm bảo kết quả chính xác.",
     "core_vocabulary": [
       {
@@ -18600,7 +18600,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ đóng vai trò chủ ngữ của câu (đứng trước động từ 'helped'). 'Technical address' có nghĩa là sự hướng dẫn/bài phát biểu kỹ thuật.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự hướng dẫn kỹ thuật được cung cấp bởi ông Arisaka đã giúp đội ngũ kỹ sư tại Solis Corp hoàn thành dự án đúng hạn.",
     "core_vocabulary": [
       {
@@ -18627,7 +18627,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Động từ chia theo chủ ngữ 'Ms. Jensen' (số ít) và diễn tả sự việc trong quá khứ 'in the 1990s'.",
-    "explanation_grammar": "Subject-Verb Agreement in Relative Clause (Past).",
+    "explanation_grammar": "Hoà hợp S-V trong mệnh đề quan hệ",
     "translation": "Bà Jensen, người từng là cố vấn cấp cao tại một công ty luật vào những năm 1990, hiện đang điều hành đại lý riêng của mình tại London.",
     "core_vocabulary": [
       {
@@ -18654,7 +18654,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Đại từ quan hệ 'who' thay cho 'Any guest' (số ít), nên động từ chia số ít (thêm 's').",
-    "explanation_grammar": "Subject-Verb Agreement in Relative Clause (Present).",
+    "explanation_grammar": "Hoà hợp S-V trong mệnh đề quan hệ",
     "translation": "Bất kỳ khách hàng nào đăng ký thành viên cao cấp tại Sparkle Fitness Center trong tháng này sẽ được tặng một túi tập gym miễn phí.",
     "core_vocabulary": [
       {
@@ -18681,7 +18681,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Đại từ 'who' thay cho 'All technicians' (số nhiều), nên động từ giữ nguyên mẫu.",
-    "explanation_grammar": "Subject-Verb Agreement in Relative Clause (Plural).",
+    "explanation_grammar": "Hoà hợp S-V trong mệnh đề quan hệ",
     "translation": "Tất cả các kỹ thuật viên vận hành máy móc hạng nặng trong nhà máy lắp ráp phải tham dự buổi hướng dẫn an toàn vào mỗi thứ Hai hàng tuần.",
     "core_vocabulary": [
       {
@@ -18708,7 +18708,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Diễn tả hành động trong quá khứ 'last month'.",
-    "explanation_grammar": "Past Simple in Relative Clause.",
+    "explanation_grammar": "Thì quá khứ đơn trong mệnh đề quan hệ",
     "translation": "Hãng hàng không Blue Horizon cảm ơn tất cả các tiếp viên hàng không đã phát tờ rơi quảng cáo tại Hội chợ Triển lãm Du lịch Quốc tế tại Tokyo vào tháng trước.",
     "core_vocabulary": [
       {
@@ -18735,7 +18735,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ số ít đóng vai trò chủ ngữ đi với động từ 'was'. 'Proposal' (bản đề xuất) là danh từ phù hợp nhất.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Bản đề xuất được đệ trình bởi Tiến sĩ Elena Rossi đã được các thành viên hội đồng quản trị của Vantech Ltd khen ngợi hết lời.",
     "core_vocabulary": [
       {
@@ -18762,7 +18762,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu 'five years ago' yêu cầu thì quá khứ đơn. Chủ ngữ 'Mr. Tanaka' số ít chọn 'was'.",
-    "explanation_grammar": "Past Simple Be-verb Agreement.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Ông Tanaka, người từng là trưởng phòng marketing 5 năm trước, hiện đang là Giám đốc điều hành của Nexa Global.",
     "core_vocabulary": [
       {
@@ -18789,7 +18789,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'Anyone' là đại từ bất định luôn chia động từ số ít.",
-    "explanation_grammar": "Indefinite Pronoun Agreement.",
+    "explanation_grammar": "Hoà hợp với đại từ bất định",
     "translation": "Bất kỳ ai nhận được thẻ nhân viên hợp lệ từ bàn bảo vệ đều có thể vào phòng thí nghiệm.",
     "core_vocabulary": [
       {
@@ -18816,7 +18816,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'All staff members' là số nhiều nên động từ trong mệnh đề quan hệ giữ nguyên.",
-    "explanation_grammar": "Plural Subject Agreement.",
+    "explanation_grammar": "Hoà hợp với chủ ngữ số nhiều",
     "translation": "Tất cả các nhân viên sử dụng phần mềm kế toán mới đều được yêu cầu hoàn thành mẫu ý kiến phản hồi.",
     "core_vocabulary": [
       {
@@ -18843,7 +18843,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu 'last week' yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple in Relative Clause.",
+    "explanation_grammar": "Thì quá khứ đơn trong mệnh đề quan hệ",
     "translation": "K-Logistics trân trọng tất cả các tài xế đã giao hàng an toàn đến kho hàng trong những trận bão lớn vào tuần trước.",
     "core_vocabulary": [
       {
@@ -18870,7 +18870,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Cần một danh từ làm chủ ngữ. 'Presentation' (bài thuyết trình) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Bài thuyết trình của diễn giả chính, ông Liam O'Connor, đã truyền cảm hứng cho nhiều doanh nhân trẻ tại buổi gala.",
     "core_vocabulary": [
       {
@@ -18897,7 +18897,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Diễn tả sự việc trong quá khứ 'during the early 2000s' và chủ ngữ số ít 'Ms. Dubois'.",
-    "explanation_grammar": "Subject-Verb Agreement in Relative Clause (Past).",
+    "explanation_grammar": "Hoà hợp S-V trong mệnh đề quan hệ",
     "translation": "Bà Dubois, người từng là một đầu bếp nổi tiếng ở Paris vào đầu những năm 2000, hiện đang giảng dạy tại Học viện Ẩm thực.",
     "core_vocabulary": [
       {
@@ -18924,7 +18924,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "'Every' + danh từ số ít luôn đi kèm động từ số ít.",
-    "explanation_grammar": "Agreement with 'Every'.",
+    "explanation_grammar": "Hoà hợp với 'every'",
     "translation": "Mọi khách hàng chi tiêu trên 500 đô la tại trung tâm thương mại Westside vào thứ Bảy này sẽ nhận được mã giảm giá.",
     "core_vocabulary": [
       {
@@ -18951,7 +18951,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Đại từ 'who' thay cho 'All researchers' (số nhiều) nên động từ giữ nguyên mẫu.",
-    "explanation_grammar": "Plural Subject Agreement.",
+    "explanation_grammar": "Hoà hợp với chủ ngữ số nhiều",
     "translation": "Tất cả các nhà nghiên cứu xử lý các chất hóa học phải đeo găng tay và khẩu trang bảo hộ mọi lúc.",
     "core_vocabulary": [
       {
@@ -18978,7 +18978,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu 'last summer' yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple in Relative Clause.",
+    "explanation_grammar": "Thì quá khứ đơn trong mệnh đề quan hệ",
     "translation": "Ngân hàng Prime đánh giá cao tất cả các tình nguyện viên đã tổ chức các buổi hội thảo về kiến thức tài chính tại trung tâm cộng đồng vào mùa hè năm ngoái.",
     "core_vocabulary": [
       {
@@ -19005,7 +19005,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Cần một danh từ làm chủ ngữ. 'Revision' (sự sửa đổi) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Bản sửa đổi được yêu cầu bởi quản lý dự án tại Orion Systems phải được hoàn thành trước chiều thứ Sáu.",
     "core_vocabulary": [
       {
@@ -19032,7 +19032,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Hành động xảy ra trong quá khứ 'in 2015' với chủ ngữ số ít 'Mr. Patel'.",
-    "explanation_grammar": "Past Simple Be-verb Agreement.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Ông Patel, người từng là kiến trúc sư hàng đầu cho dự án sân vận động của thành phố vào năm 2015, hiện đã nghỉ hưu.",
     "core_vocabulary": [
       {
@@ -19059,7 +19059,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'Anyone' (đại từ bất định) luôn chia động từ số ít.",
-    "explanation_grammar": "Indefinite Pronoun Agreement.",
+    "explanation_grammar": "Hoà hợp với đại từ bất định",
     "translation": "Bất kỳ ai quan tâm đến vị trí quản lý đang còn trống nên liên hệ với phòng nhân sự.",
     "core_vocabulary": [
       {
@@ -19086,7 +19086,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Đại từ 'who' thay cho 'All interns' (số nhiều) nên động từ giữ nguyên mẫu.",
-    "explanation_grammar": "Plural Subject Agreement.",
+    "explanation_grammar": "Hoà hợp với chủ ngữ số nhiều",
     "translation": "Tất cả các thực tập sinh làm việc tại văn phòng chính đều đủ điều kiện để được bồi hoàn chi phí đi lại.",
     "core_vocabulary": [
       {
@@ -19113,7 +19113,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu 'last year' yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple in Relative Clause.",
+    "explanation_grammar": "Thì quá khứ đơn trong mệnh đề quan hệ",
     "translation": "Stellar Media vinh danh tất cả các phóng viên đã đưa tin tức khu vực trong kỳ bầu cử năm ngoái.",
     "core_vocabulary": [
       {
@@ -19140,7 +19140,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Cần một danh từ làm chủ ngữ (đứng trước cụm 'written by'). 'Report' (báo cáo) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Bản báo cáo được viết bởi nhà phân tích tài chính, Sarah Jenkins, đã được gửi đến tất cả các cổ đông của Peak Inc.",
     "core_vocabulary": [
       {
@@ -19167,7 +19167,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu 'last year' đi với chủ ngữ số ít 'Mr. Kim'.",
-    "explanation_grammar": "Past Simple Be-verb Agreement.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Ông Kim, người từng là nhân viên bán hàng thành công nhất chi nhánh vào năm ngoái, đã được thăng chức lên giám đốc.",
     "core_vocabulary": [
       {
@@ -19194,7 +19194,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'Any visitor' số ít, nên động từ trong mệnh đề quan hệ chia số ít.",
-    "explanation_grammar": "Subject-Verb Agreement in Relative Clause.",
+    "explanation_grammar": "Hoà hợp S-V trong mệnh đề quan hệ",
     "translation": "Bất kỳ khách thăm quan nào yêu cầu một chuyến tham quan cơ sở sản xuất đều phải ký thỏa thuận bảo mật.",
     "core_vocabulary": [
       {
@@ -19221,7 +19221,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Đại từ 'who' thay cho 'All supervisors' (số nhiều) nên động từ giữ nguyên mẫu.",
-    "explanation_grammar": "Plural Subject Agreement.",
+    "explanation_grammar": "Hoà hợp với chủ ngữ số nhiều",
     "translation": "Tất cả các giám sát viên giám sát dây chuyền sản xuất cần đảm bảo rằng các tiêu chuẩn chất lượng được đáp ứng.",
     "core_vocabulary": [
       {
@@ -19248,7 +19248,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu 'last Sunday' yêu cầu thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple in Relative Clause.",
+    "explanation_grammar": "Thì quá khứ đơn trong mệnh đề quan hệ",
     "translation": "Z-Tech cảm ơn tất cả các kỹ sư đã sửa lỗi phần mềm trong đợt bảo trì hệ thống vào Chủ nhật tuần trước.",
     "core_vocabulary": [
       {
@@ -19275,7 +19275,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ để đóng vai trò làm chủ ngữ chính của câu (đứng trước cụm phân từ 'delivered by'). 'Speech' (bài phát biểu) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Bài phát biểu của Giám đốc điều hành Julian Thorne đã được truyền hình trực tiếp đến tất cả các văn phòng khu vực của Tập đoàn Zenith.",
     "core_vocabulary": [
       {
@@ -19302,7 +19302,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Động từ to-be chia theo chủ ngữ 'Mr. Henderson' (số ít) và diễn tả nghề nghiệp trong quá khứ 'in the 1990s'.",
-    "explanation_grammar": "Subject-Verb Agreement in Relative Clause (Past).",
+    "explanation_grammar": "Hoà hợp S-V trong mệnh đề quan hệ",
     "translation": "Ông Henderson, người từng là giám đốc tài chính tại một chuỗi bán lẻ vào những năm 1990, hiện đang cung cấp các dịch vụ tư vấn tư nhân.",
     "core_vocabulary": [
       {
@@ -19329,7 +19329,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Mệnh đề quan hệ bổ nghĩa cho 'Anyone' (đại từ bất định số ít), nên động từ chia số ít (thêm 's').",
-    "explanation_grammar": "Indefinite Pronoun Agreement.",
+    "explanation_grammar": "Hoà hợp với đại từ bất định",
     "translation": "Bất kỳ ai đăng ký thuê bao hàng năm của Tạp chí Tài chính Toàn cầu trong tuần này sẽ nhận được một cuốn sổ kế hoạch bọc da.",
     "core_vocabulary": [
       {
@@ -19356,7 +19356,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Đại từ quan hệ 'who' thay thế cho 'All operators' (số nhiều), nên động từ trong mệnh đề quan hệ giữ nguyên mẫu.",
-    "explanation_grammar": "Plural Subject Agreement.",
+    "explanation_grammar": "Hoà hợp với chủ ngữ số nhiều",
     "translation": "Tất cả các nhân viên vận hành máy in phải kiểm tra mức mực trước khi bắt đầu ca làm việc của mình.",
     "core_vocabulary": [
       {
@@ -19383,7 +19383,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu thời gian 'last month' yêu cầu động từ chia ở thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple in Relative Clause.",
+    "explanation_grammar": "Thì quá khứ đơn trong mệnh đề quan hệ",
     "translation": "Green-Tech Solutions cảm ơn tất cả các nhà nghiên cứu đã trình bày những phát hiện của họ tại Hội nghị Thượng đỉnh Năng lượng Tái tạo ở Oslo vào tháng trước.",
     "core_vocabulary": [
       {
@@ -19410,7 +19410,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ số ít làm chủ ngữ của động từ 'was'. 'Arrangement' (sự sắp xếp/bố trí) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự sắp xếp được gợi ý bởi tư vấn thiết kế, bà Clara Vance, đã được đội ngũ marketing tại Veridia Inc áp dụng.",
     "core_vocabulary": [
       {
@@ -19437,7 +19437,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'Ms. Sato' số ít và mốc thời gian 'three years ago' yêu cầu to-be là 'was'.",
-    "explanation_grammar": "Past Simple Be-verb Agreement.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Bà Sato, người từng là nhà nghiên cứu cấp cao tại Phòng thí nghiệm Công nghệ sinh học Kyoto ba năm trước, hiện đang dẫn dắt bộ phận này.",
     "core_vocabulary": [
       {
@@ -19464,7 +19464,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'Any employee' là danh từ số ít nên động từ chia số ít (files).",
-    "explanation_grammar": "Singular Subject Agreement (Present).",
+    "explanation_grammar": "Hoà hợp với chủ ngữ số ít",
     "translation": "Bất kỳ nhân viên nào nộp đơn khiếu nại chính thức qua cổng thông tin trực tuyến sẽ nhận được phản hồi trong vòng 24 giờ.",
     "core_vocabulary": [
       {
@@ -19491,7 +19491,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'All participants' là số nhiều nên động từ 'attend' giữ nguyên mẫu.",
-    "explanation_grammar": "Plural Subject Agreement.",
+    "explanation_grammar": "Hoà hợp với chủ ngữ số nhiều",
     "translation": "Tất cả những người tham gia hội thảo lãnh đạo nâng cao đều được yêu cầu nộp một dự án cuối khóa.",
     "core_vocabulary": [
       {
@@ -19518,7 +19518,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Hành động diễn ra vào 'last December' (tháng 12 năm ngoái) nên chia thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple in Relative Clause.",
+    "explanation_grammar": "Thì quá khứ đơn trong mệnh đề quan hệ",
     "translation": "Tập đoàn Giao hàng Nhanh vinh danh tất cả các nhân viên giao hàng đã giao hơn 1.000 kiện hàng trong đợt cao điểm lễ hội tháng 12 năm ngoái.",
     "core_vocabulary": [
       {
@@ -19545,7 +19545,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ làm chủ ngữ. 'Advice' (lời khuyên) là danh từ, phân biệt với 'advise' (v) khuyên bảo.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Lời khuyên được cung cấp bởi cố vấn pháp lý, ông Samuel Choi, là thiết yếu cho việc sáp nhập của Altius và NexGen.",
     "core_vocabulary": [
       {
@@ -19572,7 +19572,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu 'in the 1980s' yêu cầu chia quá khứ đơn, chủ ngữ 'Mr. Rossi' số ít nên dùng 'was'.",
-    "explanation_grammar": "Past Simple Be-verb Agreement.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Ông Rossi, người từng là vận động viên chuyên nghiệp vào những năm 1980, hiện là bình luận viên thường xuyên của Mạng lưới Thể thao Quốc gia.",
     "core_vocabulary": [
       {
@@ -19599,7 +19599,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ chứa 'Every' luôn đi với danh từ số ít và động từ số ít.",
-    "explanation_grammar": "Agreement with 'Every'.",
+    "explanation_grammar": "Hoà hợp với 'every'",
     "translation": "Mọi chủ nhà mua máy sưởi tiết kiệm năng lượng từ Công ty Solray trong mùa đông này đều đủ điều kiện được hoàn thuế.",
     "core_vocabulary": [
       {
@@ -19626,7 +19626,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ số nhiều 'All staff members' yêu cầu động từ 'access' ở dạng nguyên mẫu.",
-    "explanation_grammar": "Plural Subject Agreement.",
+    "explanation_grammar": "Hoà hợp với chủ ngữ số nhiều",
     "translation": "Tất cả nhân viên truy cập dữ liệu bảo mật của khách hàng phải tuân thủ các giao thức an ninh mới.",
     "core_vocabulary": [
       {
@@ -19653,7 +19653,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Sự kiện đã diễn ra 'last Tuesday' nên chia động từ ở thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple in Relative Clause.",
+    "explanation_grammar": "Thì quá khứ đơn trong mệnh đề quan hệ",
     "translation": "Hội đồng thành phố cảm ơn tất cả cư dân đã tham gia cuộc khảo sát quy hoạch đô thị được tổ chức vào thứ Ba tuần trước.",
     "core_vocabulary": [
       {
@@ -19680,7 +19680,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ làm chủ ngữ. 'Description' (bản mô tả) là danh từ duy nhất.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Bản mô tả được viết bởi kỹ sư trưởng, Tiến sĩ Aris, đã được ủy ban an toàn tại Petro-Tech xem xét.",
     "core_vocabulary": [
       {
@@ -19707,7 +19707,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Hành động diễn ra tại mốc thời gian xác định 'in 2018', chủ ngữ 'Ms. Gupta' số ít dùng 'was'.",
-    "explanation_grammar": "Past Simple Be-verb Agreement.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Bà Gupta, người từng là trưởng phòng nhân sự vào năm 2018, hiện đã chuyển sang một vai trò mới tại London.",
     "core_vocabulary": [
       {
@@ -19734,7 +19734,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'Anyone' số ít luôn đi kèm động từ chia số ít (wants).",
-    "explanation_grammar": "Indefinite Pronoun Agreement.",
+    "explanation_grammar": "Hoà hợp với đại từ bất định",
     "translation": "Bất kỳ ai muốn tham quan tòa nhà lịch sử Ergan đều phải đăng ký tại quầy lễ tân.",
     "core_vocabulary": [
       {
@@ -19761,7 +19761,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'All associates' số nhiều nên động từ trong mệnh đề quan hệ giữ nguyên.",
-    "explanation_grammar": "Plural Subject Agreement.",
+    "explanation_grammar": "Hoà hợp với chủ ngữ số nhiều",
     "translation": "Tất cả các cộng tác viên làm việc với khách hàng quốc tế đều được kỳ vọng sẽ thông thạo ít nhất hai ngôn ngữ.",
     "core_vocabulary": [
       {
@@ -19788,7 +19788,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Cụm thời gian 'last night' yêu cầu động từ chia ở thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple in Relative Clause.",
+    "explanation_grammar": "Thì quá khứ đơn trong mệnh đề quan hệ",
     "translation": "Nova Pharma đánh giá cao tất cả các kỹ thuật viên đã giám sát thiết bị phòng thí nghiệm trong lúc mất điện đêm qua.",
     "core_vocabulary": [
       {
@@ -19815,7 +19815,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ số ít làm chủ ngữ của 'was sent'. 'Statement' (bản thông báo/tuyên bố) là danh từ duy nhất.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Thông báo được phát đi từ hội đồng quản trị đã được gửi đến tất cả nhân viên của Silverline Ltd.",
     "core_vocabulary": [
       {
@@ -19842,7 +19842,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu 'last year' yêu cầu chia to-be ở quá khứ dơn, chủ ngữ 'Mr. Wallace' số ít chọn 'was'.",
-    "explanation_grammar": "Past Simple Be-verb Agreement.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Ông Wallace, người từng là nhân viên môi giới bất động sản xuất sắc nhất năm ngoái, hiện đang mở công ty riêng tại Seattle.",
     "core_vocabulary": [
       {
@@ -19869,7 +19869,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Đại từ 'who' thay cho 'Any traveler' (số ít) nên động từ chia số ít (thêm 's').",
-    "explanation_grammar": "Subject-Verb Agreement in Relative Clause.",
+    "explanation_grammar": "Hoà hợp S-V trong mệnh đề quan hệ",
     "translation": "Bất kỳ du khách nào đặt ghế hạng sang trên chuyến bay của North-Air đều được hưởng dịch vụ phòng chờ miễn phí.",
     "core_vocabulary": [
       {
@@ -19896,7 +19896,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ số nhiều 'All mechanics' yêu cầu động từ 'inspect' giữ nguyên.",
-    "explanation_grammar": "Plural Subject Agreement.",
+    "explanation_grammar": "Hoà hợp với chủ ngữ số nhiều",
     "translation": "Tất cả các thợ máy kiểm tra đội xe tải giao hàng phải ghi lại công việc của mình vào nhật ký bảo trì.",
     "core_vocabulary": [
       {
@@ -19923,7 +19923,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Sự kiện diễn ra 'last week' nên chia động từ ở thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple in Relative Clause.",
+    "explanation_grammar": "Thì quá khứ đơn trong mệnh đề quan hệ",
     "translation": "Bảo tàng Nghệ thuật cảm ơn tất cả các khách hàng quen đã quyên góp các bức tranh gốc cho phòng trưng bày trong buổi triển lãm tuần trước.",
     "core_vocabulary": [
       {
@@ -19950,7 +19950,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ đóng vai trò chủ ngữ của câu (đứng trước cụm phân từ 'provided by'). 'Analysis' (sự phân tích) là danh từ phù hợp nhất.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự phân tích được cung cấp bởi tư vấn viên, ông Hiroshi, đã giúp hội đồng quản trị hiểu được các xu hướng thị trường.",
     "core_vocabulary": [
       {
@@ -19977,7 +19977,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Động từ to-be chia theo chủ ngữ 'Ms. Lawson' (số ít) và diễn tả sự việc trong quá khứ 'in the early 2010s'.",
-    "explanation_grammar": "Subject-Verb Agreement in Relative Clause (Past).",
+    "explanation_grammar": "Hoà hợp S-V trong mệnh đề quan hệ",
     "translation": "Bà Lawson, người từng là một cố vấn pháp lý lỗi lạc vào đầu những năm 2010, hiện đang phục vụ với tư cách là thẩm phán tại tòa án tối cao.",
     "core_vocabulary": [
       {
@@ -20004,7 +20004,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'Anyone' là đại từ bất định số ít nên động từ chia số ít (signs).",
-    "explanation_grammar": "Indefinite Pronoun Agreement.",
+    "explanation_grammar": "Hoà hợp với đại từ bất định",
     "translation": "Bất kỳ ai đăng ký nhận bản tin của chúng tôi trước thứ Sáu này sẽ được nhận mã giảm giá 10%.",
     "core_vocabulary": [
       {
@@ -20031,7 +20031,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Đại từ quan hệ 'who' thay thế cho 'All employees' (số nhiều) nên động từ giữ nguyên mẫu.",
-    "explanation_grammar": "Plural Subject Agreement.",
+    "explanation_grammar": "Hoà hợp với chủ ngữ số nhiều",
     "translation": "Tất cả các nhân viên xử lý hóa chất phòng thí nghiệm phải hoàn thành một khóa đào tạo chuyên biệt.",
     "core_vocabulary": [
       {
@@ -20058,7 +20058,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu thời gian 'last year' yêu cầu động từ chia ở thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple in Relative Clause.",
+    "explanation_grammar": "Thì quá khứ đơn trong mệnh đề quan hệ",
     "translation": "Global Logistics cảm ơn tất cả các nhân viên đã quản lý lô hàng khẩn cấp trong kỳ nghỉ lễ năm ngoái.",
     "core_vocabulary": [
       {
@@ -20085,7 +20085,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ số ít làm chủ ngữ của động từ 'was'. 'Modification' (sự sửa đổi) là danh từ duy nhất.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự sửa đổi được gợi ý bởi kiến trúc sư đã được hội đồng quy hoạch của Tập đoàn Arca thông qua.",
     "core_vocabulary": [
       {
@@ -20112,7 +20112,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'Mr. Benson' số ít và mốc thời gian 'two years ago' yêu cầu to-be là 'was'.",
-    "explanation_grammar": "Past Simple Be-verb Agreement.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Ông Benson, người từng là nhà phát triển chính cho dự án ứng dụng hai năm trước, đã được thăng chức lên Giám đốc Công nghệ (CTO).",
     "core_vocabulary": [
       {
@@ -20139,7 +20139,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'Any visitor' là số ít nên động từ chia số ít (requests).",
-    "explanation_grammar": "Singular Subject Agreement (Present).",
+    "explanation_grammar": "Hoà hợp với chủ ngữ số ít",
     "translation": "Bất kỳ khách thăm quan nào yêu cầu giấy phép đậu xe tạm thời từ bàn bảo vệ phải dán nó lên bảng điều khiển xe.",
     "core_vocabulary": [
       {
@@ -20166,7 +20166,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'All interns' số nhiều nên động từ 'work' giữ nguyên mẫu.",
-    "explanation_grammar": "Plural Subject Agreement.",
+    "explanation_grammar": "Hoà hợp với chủ ngữ số nhiều",
     "translation": "Tất cả các thực tập sinh làm việc tại trung tâm nghiên cứu đều có quyền nhận trợ cấp hàng tháng.",
     "core_vocabulary": [
       {
@@ -20193,7 +20193,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Hành động diễn ra vào 'last May' (tháng 5 năm ngoái) chia thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple in Relative Clause.",
+    "explanation_grammar": "Thì quá khứ đơn trong mệnh đề quan hệ",
     "translation": "Bright Media đánh giá cao tất cả các nhiếp ảnh gia đã đưa tin về liên hoan phim quốc tế tại Cannes vào tháng 5 năm ngoái.",
     "core_vocabulary": [
       {
@@ -20220,7 +20220,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ số ít làm chủ ngữ. 'Proposal' (bản đề xuất) là danh từ phù hợp nhất.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Bản đề xuất được trình bởi chuyên viên marketing, cô Sofia, đã được chọn cho chiến dịch quốc gia.",
     "core_vocabulary": [
       {
@@ -20247,7 +20247,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu 'in his youth' yêu cầu chi quá khứ đơn, chủ ngữ 'Mr. Clarke' số ít dùng 'was'.",
-    "explanation_grammar": "Past Simple Be-verb Agreement.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Ông Clarke, người từng là vận động viên chuyên nghiệp thời trẻ, hiện là tư vấn viên thể hình cho các khách hàng doanh nghiệp.",
     "core_vocabulary": [
       {
@@ -20274,7 +20274,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'Every customer' (mỗi khách hàng) là số ít nên động từ chia số ít (purchases).",
-    "explanation_grammar": "Agreement with 'Every'.",
+    "explanation_grammar": "Hoà hợp với 'every'",
     "translation": "Mỗi khách hàng mua gói bảo hành mở rộng cho thiết bị của mình sẽ nhận được một bộ dụng cụ bảo trì miễn phí.",
     "core_vocabulary": [
       {
@@ -20301,7 +20301,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ số nhiều 'All supervisors' yêu cầu động từ 'oversee' ở dạng nguyên mẫu.",
-    "explanation_grammar": "Plural Subject Agreement.",
+    "explanation_grammar": "Hoà hợp với chủ ngữ số nhiều",
     "translation": "Tất cả các giám sát viên giám sát dây chuyền lắp ráp đều có trách nhiệm duy trì các tiêu chuẩn chất lượng.",
     "core_vocabulary": [
       {
@@ -20328,7 +20328,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Mốc thời gian 'last weekend' yêu cầu động từ chia ở thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple in Relative Clause.",
+    "explanation_grammar": "Thì quá khứ đơn trong mệnh đề quan hệ",
     "translation": "Tech Solutions đánh giá cao tất cả các tình nguyện viên đã tổ chức buổi hội thảo lập trình cho học sinh địa phương vào cuối tuần trước.",
     "core_vocabulary": [
       {
@@ -20355,7 +20355,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ làm chủ ngữ. 'Adjustment' (sự điều chỉnh) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự điều chỉnh được yêu cầu bởi trưởng bộ phận phải được triển khai trước kỳ kiểm toán tiếp theo.",
     "core_vocabulary": [
       {
@@ -20382,7 +20382,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Hành động diễn ra tại mốc thời gian xác định 'in 2019', chủ ngữ 'Ms. Park' số ít dùng 'was'.",
-    "explanation_grammar": "Past Simple Be-verb Agreement.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Bà Park, người từng là quản lý khu vực châu Á vào năm 2019, hiện đang làm việc tại văn phòng New York của chúng tôi.",
     "core_vocabulary": [
       {
@@ -20409,7 +20409,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ 'Anyone' số ít luôn đi kèm động từ chia số ít (expresses).",
-    "explanation_grammar": "Indefinite Pronoun Agreement.",
+    "explanation_grammar": "Hoà hợp với đại từ bất định",
     "translation": "Bất kỳ ai muốn dùng bữa chay nên thông báo cho điều phối viên sự kiện.",
     "core_vocabulary": [
       {
@@ -20436,7 +20436,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ số nhiều 'All engineers' yêu cầu động từ 'use' ở dạng nguyên mẫu.",
-    "explanation_grammar": "Plural Subject Agreement.",
+    "explanation_grammar": "Hoà hợp với chủ ngữ số nhiều",
     "translation": "Tất cả các kỹ sư sử dụng hệ thống phần mềm mới đều được yêu cầu tham dự một buổi hướng dẫn vào ngày mai.",
     "core_vocabulary": [
       {
@@ -20463,7 +20463,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Cụm thời gian 'last week' yêu cầu động từ chia ở thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple in Relative Clause.",
+    "explanation_grammar": "Thì quá khứ đơn trong mệnh đề quan hệ",
     "translation": "Delta Airlines vinh danh tất cả các phi công đã điều hành các chuyến bay trong điều kiện thời tiết khắc nghiệt tuần trước.",
     "core_vocabulary": [
       {
@@ -20490,7 +20490,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chỗ trống cần một danh từ số ít làm chủ ngữ của 'was distributed'. 'Report' (bản báo cáo) là danh từ duy nhất.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Bản báo cáo được chuẩn bị bởi nhóm tài chính đã được gửi đến các nhà đầu tư của SolarX.",
     "core_vocabulary": [
       {
@@ -20517,7 +20517,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Dấu hiệu 'last year' yêu cầu chia to-be ở quá khứ dơn, chủ ngữ 'Mr. Wright' số ít chọn 'was'.",
-    "explanation_grammar": "Past Simple Be-verb Agreement.",
+    "explanation_grammar": "Thì quá khứ đơn",
     "translation": "Ông Wright, người từng là nhân viên bán hàng xuất sắc nhất công ty năm ngoái, đã giành được giải thưởng 'Nhân viên của năm'.",
     "core_vocabulary": [
       {
@@ -20544,7 +20544,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Đại từ 'who' thay cho 'Any applicant' (số ít) nên động từ chia số ít (completes).",
-    "explanation_grammar": "Subject-Verb Agreement in Relative Clause.",
+    "explanation_grammar": "Hoà hợp S-V trong mệnh đề quan hệ",
     "translation": "Bất kỳ ứng viên nào hoàn thành cuộc phỏng vấn với quản lý tuyển dụng sẽ được thông báo kết quả qua email.",
     "core_vocabulary": [
       {
@@ -20571,7 +20571,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Chủ ngữ số nhiều 'All managers' yêu cầu động từ 'approve' giữ nguyên.",
-    "explanation_grammar": "Plural Subject Agreement.",
+    "explanation_grammar": "Hoà hợp với chủ ngữ số nhiều",
     "translation": "Tất cả các quản lý phê duyệt ngân sách hàng năm phải đảm bảo mọi chi phí đều được ghi chép đầy đủ.",
     "core_vocabulary": [
       {
@@ -20598,7 +20598,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Hoà hợp S-V",
     "explanation_reason": "Sự kiện diễn ra 'last Saturday' nên chia động từ ở thì quá khứ đơn.",
-    "explanation_grammar": "Past Simple in Relative Clause.",
+    "explanation_grammar": "Thì quá khứ đơn trong mệnh đề quan hệ",
     "translation": "Tập đoàn Blue Ocean cảm ơn tất cả các nhân viên đã tham gia cuộc chạy bộ từ thiện do thành phố tổ chức vào thứ Bảy tuần trước.",
     "core_vocabulary": [
       {
@@ -20625,7 +20625,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chỗ trống cần một danh từ đóng vai trò tân ngữ của động từ 'include'. 'Representatives' (người đại diện) là danh từ chỉ người ở số nhiều phù hợp với ngữ cảnh.",
-    "explanation_grammar": "Noun as Object (Person/Plural).",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Ban giám khảo cho cuộc thi kịch bản năm nay bao gồm những người đại diện từ Hanovi Studios.",
     "core_vocabulary": [
       {
@@ -20652,7 +20652,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'a leading + Noun'. 'Supplier' (nhà cung cấp) là danh từ chỉ người/tổ chức phù hợp nhất.",
-    "explanation_grammar": "Noun as Complement (Person/Organization).",
+    "explanation_grammar": "Danh từ làm bổ ngữ",
     "translation": "Liao Uniform Services là nhà cung cấp trang phục y tế hàng đầu trong hơn 30 năm qua.",
     "core_vocabulary": [
       {
@@ -20679,7 +20679,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "'Much' đi kèm với danh từ không đếm được. 'Interest' (sự quan tâm) là danh từ không đếm được phù hợp.",
-    "explanation_grammar": "Uncountable Noun with Quantifiers.",
+    "explanation_grammar": "Danh từ đi với từ chỉ lượng",
     "translation": "Gian hàng của Klassin Group tại Triển lãm Kiến trúc Liberty đã thu hút được nhiều sự quan tâm.",
     "core_vocabulary": [
       {
@@ -20706,7 +20706,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Tính từ sở hữu 'Our' cần đi kèm một danh từ làm chủ ngữ. 'Division' (phòng/ban/bộ phận) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Bộ phận của chúng tôi chịu trách nhiệm thực hiện các đánh giá kiểm soát chất lượng trong quá trình sản xuất.",
     "core_vocabulary": [
       {
@@ -20733,7 +20733,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'go into + Noun' (bắt đầu được đưa vào...). 'Production' (sự sản xuất) là danh từ phù hợp nhất.",
-    "explanation_grammar": "Noun after Preposition.",
+    "explanation_grammar": "Danh từ sau giới từ",
     "translation": "Trước khi thiết kế cập nhật có thể được đưa vào sản xuất, nó phải được ban quản lý phê duyệt.",
     "core_vocabulary": [
       {
@@ -20760,7 +20760,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "'A number of' đi với danh từ số nhiều. 'Shipments' (các lô hàng) là danh từ số nhiều phù hợp.",
-    "explanation_grammar": "Plural Noun with Quantifiers.",
+    "explanation_grammar": "Danh từ đi với từ chỉ lượng",
     "translation": "Một số lượng kỷ lục các lô hàng thiết bị gia dụng đã cập cảng Reece vào tháng trước.",
     "core_vocabulary": [
       {
@@ -20787,7 +20787,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Tính từ 'business' bổ nghĩa cho một danh từ. 'Agreement' (thỏa thuận/hợp đồng) là danh từ.",
-    "explanation_grammar": "Noun as Head of Noun Phrase.",
+    "explanation_grammar": "Danh từ trung tâm của cụm danh từ",
     "translation": "KCLN Associates sẽ ký kết một thỏa thuận kinh doanh với nhà thầu ngay khi một số điều khoản được đàm phán lại.",
     "core_vocabulary": [
       {
@@ -20814,7 +20814,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chủ ngữ của câu cần là một danh từ chỉ người vì có hành động 'receive... responses'. 'Applicants' (những người nộp đơn) là phù hợp.",
-    "explanation_grammar": "Noun as Subject (Person).",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Những người nộp đơn xin đưa tin về lễ hội âm nhạc sẽ nhận được phản hồi chính thức trước ngày 30 tháng 6.",
     "core_vocabulary": [
       {
@@ -20841,7 +20841,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần một danh từ chung để chỉ đồ dùng. 'Equipment' (thiết bị) là danh từ không đếm được phổ biến.",
-    "explanation_grammar": "Uncountable Noun.",
+    "explanation_grammar": "Danh từ không đếm được",
     "translation": "Chúng ta có thể mua thiết bị văn phòng như bàn làm việc và máy in từ bất kỳ nhà cung cấp nào đã được công ty phê duyệt.",
     "core_vocabulary": [
       {
@@ -20868,7 +20868,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chỗ trống cần một danh từ song hành với 'shipping methods'. 'Preservation' (sự bảo quản) là danh từ.",
-    "explanation_grammar": "Noun in Compound/Parallel structure.",
+    "explanation_grammar": "Cấu trúc song song",
     "translation": "World Fish Supply giao những con cá tươi nhất có thể nhờ vào các phương pháp bảo quản và vận chuyển tiên tiến.",
     "core_vocabulary": [
       {
@@ -20895,7 +20895,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần một tính từ sở hữu đứng trước danh từ 'meeting'.",
-    "explanation_grammar": "Possessive Adjectives.",
+    "explanation_grammar": "Tính từ sở hữu",
     "translation": "Vì cô ấy đang đi muộn cho cuộc họp của mình ở trung tâm thành phố, cô Joyce sẽ phải bắt taxi.",
     "core_vocabulary": [
       {
@@ -20922,7 +20922,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'by + reflexive pronoun' (tự mình làm gì). 'Themselves' phù hợp với chủ ngữ 'Workers'.",
-    "explanation_grammar": "Reflexive Pronouns.",
+    "explanation_grammar": "Đại từ phản thân",
     "translation": "Các công nhân được khuyên không nên tự mình vận hành một số loại máy móc nhất định.",
     "core_vocabulary": [
       {
@@ -20949,7 +20949,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần một đại từ tân ngữ thay thế cho danh từ 'booklet' (số ít).",
-    "explanation_grammar": "Object Pronoun (Referring to Thing).",
+    "explanation_grammar": "Đại từ tân ngữ",
     "translation": "Sinh viên mới tại Cao đẳng Khoa học Máy tính Staford được khuyên nên lấy một cuốn sổ tay hướng dẫn sinh viên miễn phí và xem lại nó một cách kỹ lưỡng.",
     "core_vocabulary": [
       {
@@ -20976,7 +20976,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần tính từ sở hữu đứng trước cụm danh từ 'daily routine'.",
-    "explanation_grammar": "Possessive Adjectives.",
+    "explanation_grammar": "Tính từ sở hữu",
     "translation": "Cô Woolner đang hy vọng thay đổi thói quen hàng ngày của mình để có lợi hơn cho lối sống lành mạnh.",
     "core_vocabulary": [
       {
@@ -21003,7 +21003,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần đại từ tân ngữ để thay thế cho 'the farmers' sau giới từ 'from'.",
-    "explanation_grammar": "Object Pronoun after Preposition.",
+    "explanation_grammar": "Danh từ sau giới từ",
     "translation": "Hầu hết các nông dân trong khu vực này phụ thuộc vào các siêu thị và nhà hàng địa phương, những nơi mua trái cây và rau củ từ họ.",
     "core_vocabulary": [
       {
@@ -21030,7 +21030,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần tính từ sở hữu đứng trước danh từ 'success'. 'Its' thay cho 'the marketing department'.",
-    "explanation_grammar": "Possessive Adjectives (Referring to Organization).",
+    "explanation_grammar": "Tính từ sở hữu",
     "translation": "Trưởng phòng marketing đã quy kết thành công của bộ phận tại thị trường nước ngoài cho những nhân viên có động lực và làm việc chăm chỉ.",
     "core_vocabulary": [
       {
@@ -21057,7 +21057,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'make + object + adjective'. 'Her' là đại từ tân ngữ thay cho Susan.",
-    "explanation_grammar": "Object Pronoun.",
+    "explanation_grammar": "Đại từ tân ngữ",
     "translation": "Khi được phỏng vấn, Susan giải thích rằng bản tính tò mò khi còn nhỏ đã khiến cô ấy quan tâm đến việc học ngành báo chí.",
     "core_vocabulary": [
       {
@@ -21084,7 +21084,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần tính từ sở hữu đứng trước danh từ 'revision'.",
-    "explanation_grammar": "Possessive Adjectives.",
+    "explanation_grammar": "Tính từ sở hữu",
     "translation": "Cô Goldberry đã đánh dấu bản sửa đổi của mình bằng mực đỏ trước khi trả lại bản thảo cho tác giả.",
     "core_vocabulary": [
       {
@@ -21111,7 +21111,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần tính từ sở hữu đứng trước 'usual, affable manner'.",
-    "explanation_grammar": "Possessive Adjectives.",
+    "explanation_grammar": "Tính từ sở hữu",
     "translation": "Tại buổi định hướng năm nay, tổng quản lý đã dành thời gian để đích thân chào đón tất cả các tân binh theo phong cách niềm nở, thân thiện thường thấy của cô ấy.",
     "core_vocabulary": [
       {
@@ -21138,7 +21138,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần đại từ tân ngữ để thay thế cho 'Susan Hardy' sau giới từ 'to'.",
-    "explanation_grammar": "Object Pronoun.",
+    "explanation_grammar": "Đại từ tân ngữ",
     "translation": "Susan Hardy sẽ lãnh đạo ủy ban kế hoạch và tất cả các thành viên tham gia vào dự án mới sẽ báo cáo lại cho cô ấy.",
     "core_vocabulary": [
       {
@@ -21165,7 +21165,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chỗ trống cần một danh từ sau mạo từ 'the' để hoàn thiện cụm danh từ. 'Distribution' (sự phân phối/giao hàng) là danh từ phù hợp nhất.",
-    "explanation_grammar": "Noun as Object (Action/Process).",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Horizon Imports đang phối hợp việc phân phối nông sản tươi đến kho hàng địa phương của chúng tôi.",
     "core_vocabulary": [
       {
@@ -21192,7 +21192,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần một danh từ số nhiều đứng sau tính từ 'detailed'. 'Instructions' (các hướng dẫn) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Object (Instruction/Manual).",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Sách hướng dẫn cập nhật cung cấp các chỉ dẫn chi tiết để phân loại vận tải quốc tế một cách chính xác bằng các mã tiêu chuẩn.",
     "core_vocabulary": [
       {
@@ -21219,7 +21219,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'a leading + Noun'. 'Provider' (nhà cung cấp) là danh từ chỉ đơn vị kinh doanh phù hợp nhất.",
-    "explanation_grammar": "Noun as Complement (Entity/Person).",
+    "explanation_grammar": "Danh từ làm bổ ngữ",
     "translation": "Titan Freight là nhà cung cấp hàng đầu các tấm pallet gỗ chuyên dụng cho các linh kiện máy tính nhạy cảm.",
     "core_vocabulary": [
       {
@@ -21246,7 +21246,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chỗ trống cần một danh từ làm chủ ngữ. 'Representation' (sự trình bày/thể hiện) là danh từ phù hợp với ngữ cảnh phân tích dữ liệu.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Một sự thể hiện rõ ràng của dữ liệu vận chuyển giúp các nhà phân tích xác định các lĩnh vực tiềm năng để giảm chi phí.",
     "core_vocabulary": [
       {
@@ -21273,7 +21273,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần một danh từ sau mạo từ 'a' và tính từ 'clear'. 'Division' (sự phân chia) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Đội ngũ xây dựng Vanguard cần một sự phân chia rõ ràng các nhiệm vụ dự án trước khi bắt đầu công việc.",
     "core_vocabulary": [
       {
@@ -21300,7 +21300,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau giới từ 'of' cần một danh từ. 'Precision' (độ chính xác) là danh từ chuẩn trong lĩnh vực kỹ thuật/tính toán.",
-    "explanation_grammar": "Noun after Preposition.",
+    "explanation_grammar": "Danh từ sau giới từ",
     "translation": "Đối với các mô hình dữ liệu phức tạp, phần mềm đảm bảo độ chính xác cao trong các tính toán của mình.",
     "core_vocabulary": [
       {
@@ -21327,7 +21327,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'the + Noun'. 'Capacity' (sức chứa/dung tích) là danh từ phù hợp nhất cho container.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Quản lý kho đã tính toán sức chứa tối đa của các container vận chuyển để tối ưu hóa không gian hàng hóa.",
     "core_vocabulary": [
       {
@@ -21354,7 +21354,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần một danh từ làm chủ ngữ. 'Prediction' (sự dự báo) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Dự báo tài chính được đưa ra bởi Meridian Group cho thấy một quý mạnh mẽ cho lĩnh vực xuất khẩu quốc tế.",
     "core_vocabulary": [
       {
@@ -21381,7 +21381,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'an annual + Noun'. 'Inspection' (sự kiểm tra/thanh tra) là danh từ chỉ quá trình.",
-    "explanation_grammar": "Noun as Object of 'undergo'.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Nhà máy sản xuất Zenith sẽ trải qua đợt kiểm tra hàng năm bởi một cơ quan quản lý độc lập.",
     "core_vocabulary": [
       {
@@ -21408,7 +21408,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần một danh từ sau tính từ 'formal'. 'Proposal' (bản đề xuất) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Các nhân viên tại Summit Tech được khuyến khích nộp bản đề xuất chính thức cho dự án mới.",
     "core_vocabulary": [
       {
@@ -21435,7 +21435,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chỗ trống cần một danh từ đóng vai trò chủ ngữ. 'Management' (việc quản lý) là danh từ chỉ hoạt động.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc quản lý hiệu quả các chuyến hàng quốc tế là thiết yếu để đạt được các mục tiêu giao hàng quý của công ty.",
     "core_vocabulary": [
       {
@@ -21462,7 +21462,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'a comprehensive + Noun'. 'Summary' (bản tóm tắt/sơ lược) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Quản lý dự án đã tạo ra một bản tóm tắt toàn diện để minh họa trình tự của các nhiệm vụ sắp tới.",
     "core_vocabulary": [
       {
@@ -21489,7 +21489,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần một danh từ sau mạo từ 'a' và tính từ 'temporary'. 'Disruption' (sự gián đoạn) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Hãng tàu Omega đã thông báo về sự gián đoạn tạm thời trong lịch trình giao hàng quốc tế tiêu chuẩn của mình.",
     "core_vocabulary": [
       {
@@ -21516,7 +21516,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'reach + a/an + Adj + Noun'. 'Agreement' (thỏa thuận) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Trước khi ký hợp đồng cuối cùng, cả hai bên phải đạt được một thỏa thuận chung về các điều khoản.",
     "core_vocabulary": [
       {
@@ -21543,7 +21543,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần một danh từ sau mạo từ 'the'. 'Decoration' (việc trang trí) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Bộ phận marketing yêu cầu phê duyệt trước khi hoàn tất việc trang trí gian hàng của chúng ta tại triển lãm.",
     "core_vocabulary": [
       {
@@ -21570,7 +21570,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'a significant + Noun'. 'Improvement' (sự cải thiện) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Bản cập nhật phần mềm gần đây đã dẫn đến một sự cải thiện đáng kể trong năng suất xử lý dữ liệu tổng thể.",
     "core_vocabulary": [
       {
@@ -21597,7 +21597,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chỗ trống cần một danh từ làm tân ngữ của giới từ 'for'. 'Storage' (việc lưu kho) là danh từ chỉ hoạt động/không gian.",
-    "explanation_grammar": "Noun as Object of Preposition.",
+    "explanation_grammar": "Danh từ sau giới từ",
     "translation": "Các biện pháp an ninh nghiêm ngặt là cần thiết để lưu kho an toàn các mặt hàng điện tử giá trị từ nước ngoài.",
     "core_vocabulary": [
       {
@@ -21624,7 +21624,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau giới từ 'for' cần một danh từ. 'Collaboration' (sự cộng tác) là danh từ phù hợp.",
-    "explanation_grammar": "Noun after Preposition.",
+    "explanation_grammar": "Danh từ sau giới từ",
     "translation": "Triển lãm Thương mại Liberty mang lại cơ hội tuyệt vời để cộng tác với các chuyên gia trong ngành toàn cầu.",
     "core_vocabulary": [
       {
@@ -21651,7 +21651,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần một danh từ sau tính từ 'reliable'. 'Delivery' (việc giao hàng) là danh từ.",
-    "explanation_grammar": "Noun as Head of Noun Phrase.",
+    "explanation_grammar": "Danh từ trung tâm của cụm danh từ",
     "translation": "Tập đoàn Apex Logistics được đánh giá cao nhờ việc giao các thiết bị điện tử dễ vỡ một cách đáng tin cậy.",
     "core_vocabulary": [
       {
@@ -21678,7 +21678,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chỗ trống làm chủ ngữ của câu nên cần một danh từ. 'Evaluation' (sự đánh giá) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Một sự đánh giá kỹ lưỡng về các xu hướng thị trường mới nhất là yêu cầu cần thiết trước khi triển khai dịch vụ phân tích.",
     "core_vocabulary": [
       {
@@ -21705,7 +21705,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau 'of' cần một danh từ. 'Excellence' (sự xuất sắc/ưu tú) là danh từ.",
-    "explanation_grammar": "Noun after Preposition.",
+    "explanation_grammar": "Danh từ sau giới từ",
     "translation": "Các tiêu chuẩn cao về sự xuất sắc được duy trì nghiêm ngặt trong suốt quá trình sản xuất của chuỗi cung ứng.",
     "core_vocabulary": [
       {
@@ -21732,7 +21732,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "'Every' đi với danh từ số ít. 'Inquiry' (yêu cầu/thắc mắc) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Đội ngũ dịch vụ khách hàng tại Vertex Solutions xử lý mọi thắc mắc với sự chuyên nghiệp và chu đáo cao nhất.",
     "core_vocabulary": [
       {
@@ -21759,7 +21759,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần một danh từ sau tính từ 'new'. 'Equipment' (thiết bị) là danh từ không đếm được.",
-    "explanation_grammar": "Uncountable Noun.",
+    "explanation_grammar": "Danh từ không đếm được",
     "translation": "Nexus Logistics gần đây đã mua thiết bị mới để bốc xếp các hàng hóa dễ vỡ lên các tấm pallet vận chuyển một cách an toàn.",
     "core_vocabulary": [
       {
@@ -21786,7 +21786,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cụm danh từ 'financial statement' (báo cáo tài chính). 'Statement' là danh từ.",
-    "explanation_grammar": "Noun in Compound Noun Phrase.",
+    "explanation_grammar": "Danh từ trong cụm danh từ ghép",
     "translation": "Vui lòng chuyển báo cáo tài chính đã sửa đổi cho bộ phận kế toán công ty trước chiều thứ Sáu.",
     "core_vocabulary": [
       {
@@ -21813,7 +21813,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'the' và tính từ 'prompt' cần một danh từ. 'Shipment' (lô hàng/sự giao hàng) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Orion Uniforms đảm bảo việc giao hàng nhanh chóng các trang phục bảo hộ cho tất cả các công nhân nhà máy.",
     "core_vocabulary": [
       {
@@ -21840,7 +21840,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chỗ trống cần một danh từ đóng vai trò chủ ngữ của câu. 'Maintenance' (sự bảo trì) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc bảo trì định kỳ các xe nâng trong kho được lên lịch vào ngày thứ Sáu cuối cùng của mỗi tháng.",
     "core_vocabulary": [
       {
@@ -21867,7 +21867,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần một danh từ sau tính từ 'final'. 'Approval' (sự phê duyệt) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Ngân sách đề xuất cho chiến dịch marketing mới yêu cầu sự phê duyệt cuối cùng từ hội đồng quản trị.",
     "core_vocabulary": [
       {
@@ -21894,7 +21894,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau giới từ 'of' và tính từ 'intense' cần một danh từ. 'Negotiation' (sự đàm phán) là danh từ chỉ quá trình.",
-    "explanation_grammar": "Noun after Preposition.",
+    "explanation_grammar": "Danh từ sau giới từ",
     "translation": "Sau nhiều tuần đàm phán căng thẳng, cả hai công ty cuối cùng đã đồng ý với các điều khoản của vụ sáp nhập.",
     "core_vocabulary": [
       {
@@ -21921,7 +21921,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cụm 'A detailed + Noun' làm chủ ngữ. 'Analysis' (sự phân tích) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Một bản phân tích chi tiết về phản hồi của khách hàng đã giúp đội ngũ thiết kế cải thiện ứng dụng di động mới.",
     "core_vocabulary": [
       {
@@ -21948,7 +21948,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chỗ trống cần một danh từ ghép với 'Employee' để làm chủ ngữ. 'Attendance' (sự có mặt/tham dự) là phù hợp.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc tham dự của nhân viên tại buổi hội thảo đào tạo an toàn hàng năm là bắt buộc đối với tất cả nhân sự nhà máy.",
     "core_vocabulary": [
       {
@@ -21975,7 +21975,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cụm 'Strict + Noun'. 'Compliance' (sự tuân thủ) là danh từ thường đi với giới từ 'with'.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự tuân thủ nghiêm ngặt các quy định vận chuyển quốc tế là yêu cầu bắt buộc để tránh sự chậm trễ tại các trạm kiểm soát hải quan.",
     "core_vocabulary": [
       {
@@ -22002,7 +22002,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau tính từ 'recent' cần một danh từ. 'Expansion' (sự mở rộng) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự mở rộng mạng lưới phân phối gần đây của chúng tôi đã làm tăng đáng kể thị phần tại châu Á.",
     "core_vocabulary": [
       {
@@ -22029,7 +22029,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần một danh từ sau tính từ 'outstanding'. 'Contribution' (sự đóng góp) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Giám đốc điều hành đã bày tỏ lòng biết ơn đối với sự đóng góp xuất sắc của nhóm cho thành công chung của dự án.",
     "core_vocabulary": [
       {
@@ -22056,7 +22056,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'a substantial + Noun'. 'Investment' (khoản đầu tư) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Một khoản đầu tư đáng kể vào các nguồn năng lượng tái tạo là một phần của kế hoạch phát thải bền vững dài hạn của công ty.",
     "core_vocabulary": [
       {
@@ -22083,7 +22083,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau tính từ sở hữu 'your' cần một danh từ. 'Signature' (chữ ký) là danh từ.",
-    "explanation_grammar": "Noun as Subject of 'is'.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Vui lòng đảm bảo chữ ký của bạn có trên cả ba bản sao của hợp đồng thuê thương mại.",
     "core_vocabulary": [
       {
@@ -22110,7 +22110,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau 'The corporate' cần một danh từ làm chủ ngữ. 'Relocation' (sự di dời) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự di dời của tập đoàn đến cơ sở mới ở trung tâm thành phố sẽ diễn ra vào cuối tuần tới.",
     "core_vocabulary": [
       {
@@ -22137,7 +22137,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần một danh từ sau 'consumer'. 'Preference' (sự ưu tiên/sở thích) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Theo cuộc khảo sát, sở thích của người tiêu dùng đang chuyển dịch sang các vật liệu đóng gói thân thiện với môi trường.",
     "core_vocabulary": [
       {
@@ -22164,7 +22164,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần danh từ làm chủ ngữ. 'Registration' (sự đăng ký) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc đăng ký sớm cho Hội nghị Thượng đỉnh Logistics Toàn cầu đảm bảo mức phí ưu đãi cho chỗ ở.",
     "core_vocabulary": [
       {
@@ -22191,7 +22191,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau tính từ sở hữu 'Your' cần một danh từ. 'Subscription' (thuê bao/sự đăng ký) là danh từ chỉ vật.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Thuê bao hàng năm của bạn cho bản tin ngành sẽ tự động gia hạn vào cuối tháng 12.",
     "core_vocabulary": [
       {
@@ -22218,7 +22218,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'the' cần một danh từ. 'Reservation' (sự đặt chỗ) là danh từ phù hợp nhất.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Điều phối viên du lịch đã xác nhận việc đặt chỗ cho chuyến bay sắp tới của đội ngũ điều hành đến Tokyo.",
     "core_vocabulary": [
       {
@@ -22245,7 +22245,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần danh từ làm chủ ngữ. 'Assessment' (sự đánh giá) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Một bản đánh giá độc lập về tác động môi trường của nhà máy đã được thực hiện bởi một công ty tư vấn chuyên môn.",
     "core_vocabulary": [
       {
@@ -22272,7 +22272,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau tính từ 'immediate' cần một danh từ. 'Assistance' (sự hỗ trợ) là danh từ trừu tượng phù hợp.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Bộ phận CNTT cung cấp sự hỗ trợ ngay lập tức cho các nhân viên gặp khó khăn kỹ thuật với phần mềm mới.",
     "core_vocabulary": [
       {
@@ -22299,7 +22299,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau 'receiving' (động từ dạng V-ing) cần một danh từ đóng vai trò tân ngữ. 'Confirmation' (sự xác nhận) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Sau khi nhận được sự xác nhận thanh toán của bạn, chúng tôi sẽ ngay lập tức gửi hàng từ kho của mình.",
     "core_vocabulary": [
       {
@@ -22326,7 +22326,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần danh từ làm chủ ngữ. 'Implementation' (sự triển khai) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự triển khai thành công hệ thống quản lý kho mới đã làm giảm sự chênh lệch hàng tồn kho xuống 20%.",
     "core_vocabulary": [
       {
@@ -22353,7 +22353,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cụm danh từ 'text message notification' (thông báo tin nhắn văn bản). 'Notification' là danh từ.",
-    "explanation_grammar": "Noun in Compound Noun.",
+    "explanation_grammar": "Danh từ trong cụm danh từ ghép",
     "translation": "Khách hàng sẽ nhận được một thông báo qua tin nhắn văn bản ngay khi kiện hàng của họ đã sẵn sàng để lấy.",
     "core_vocabulary": [
       {
@@ -22380,7 +22380,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'a' và tính từ 'significant' cần một danh từ. 'Reduction' (sự sụt giảm) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Quản lý hậu cần đã đề xuất một chiến lược mới nhằm giảm đáng kể chi phí vận chuyển.",
     "core_vocabulary": [
       {
@@ -22407,7 +22407,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau 'a strict' cần một danh từ làm bổ ngữ. 'Requirement' (yêu cầu) là danh từ.",
-    "explanation_grammar": "Noun as Complement.",
+    "explanation_grammar": "Danh từ làm bổ ngữ",
     "translation": "Thông thạo ít nhất hai ngoại ngữ là một yêu cầu nghiêm ngặt đối với vị trí bán hàng quốc tế này.",
     "core_vocabulary": [
       {
@@ -22434,7 +22434,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau 'a free' cần một danh từ. 'Replacement' (sự thay thế/đồ thay thế) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Nếu thiết bị của bạn bị lỗi trong thời gian bảo hành, chúng tôi sẽ cung cấp một bản thay thế miễn phí ngay lập tức.",
     "core_vocabulary": [
       {
@@ -22461,7 +22461,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau 'The automatic' cần một danh từ làm chủ ngữ. 'Renewal' (sự gia hạn) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc tự động gia hạn bản quyền phần mềm đảm bảo việc truy cập không gián đoạn vào các dịch vụ lưu trữ đám mây của chúng tôi.",
     "core_vocabulary": [
       {
@@ -22488,7 +22488,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau cụm 'high-level security' cần một danh từ bổ nghĩa. 'Authorization' (sự cấp phép/quyền hạn) là danh từ.",
-    "explanation_grammar": "Noun as Head of Noun Phrase.",
+    "explanation_grammar": "Danh từ trung tâm của cụm danh từ",
     "translation": "Chỉ nhân sự có quyền hạn bảo mật cấp cao mới được phép vào trung tâm xử lý dữ liệu.",
     "core_vocabulary": [
       {
@@ -22515,7 +22515,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau tính từ 'immediate' (ngay lập tức) cần một danh từ. 'Submission' (sự nộp/đệ trình) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Hệ thống tự động yêu cầu việc nộp ngay lập tức tất cả các chứng từ nhập khẩu vào cơ sơ dữ liệu hải quan.",
     "core_vocabulary": [
       {
@@ -22542,7 +22542,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chỗ trống cần một danh từ đóng vai trò chủ ngữ của câu. 'Classification' (sự phân loại) là danh từ đúng.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc phân loại chính xác hàng hóa nhập khẩu bằng cách sử dụng mã HS phù hợp là rất quan trọng để tránh bị phạt nặng.",
     "core_vocabulary": [
       {
@@ -22569,7 +22569,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'a' và tính từ 'large' cần một danh từ. 'Consignment' (lô hàng ký gửi) là danh từ chỉ vật.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Global Harvest Co. đang mong đợi một lô hàng táo tươi lớn từ Hoa Kỳ vào tuần tới.",
     "core_vocabulary": [
       {
@@ -22596,7 +22596,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'The + Noun'. 'Packaging' (việc đóng gói/bao bì) là danh từ (gerund/noun) phù hợp để làm chủ ngữ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc đóng gói an toàn các bo mạch chủ máy tính dễ vỡ là ưu tiên hàng đầu của chúng tôi trong quá trình vận chuyển.",
     "core_vocabulary": [
       {
@@ -22623,7 +22623,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sở hữu cách 'analyst's' yêu cầu một danh từ. 'Interpretation' (sự diễn giải/giải thích) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự diễn giải của nhà phân tích về biểu đồ hồi quy mới nhất đã tiết lộ xu hướng tăng đáng kể trong chi phí vận chuyển.",
     "core_vocabulary": [
       {
@@ -22650,7 +22650,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'A thorough + Noun'. 'Analysis' (sự phân tích) là danh từ đúng ngữ pháp hơn 'analyzing' trong trường hợp này.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Một bản phân tích thấu đáo các nhiệm vụ dự án bằng phương pháp WBS giúp duy trì tiến độ dự án.",
     "core_vocabulary": [
       {
@@ -22677,7 +22677,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau 'container' (danh từ bổ nghĩa) cần một danh từ chính để tạo cụm danh từ. 'Arrangement' (sự sắp xếp) là phù hợp nhất.",
-    "explanation_grammar": "Noun in Compound Noun Phrase.",
+    "explanation_grammar": "Danh từ trong cụm danh từ ghép",
     "translation": "Việc tối ưu hóa sự sắp xếp container có thể giúp giảm tổng chi phí vận tải quốc tế.",
     "core_vocabulary": [
       {
@@ -22704,7 +22704,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần một danh từ sau sở hữu cách. 'Estimation' (sự ước tính/đánh giá) là danh từ chỉ hành động.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự ước tính của đội ngũ hậu cần về dòng thời gian giao hàng dựa trên các công thức PERT tiêu chuẩn.",
     "core_vocabulary": [
       {
@@ -22731,7 +22731,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cụm danh từ cố định 'margin of error' (sai số).",
-    "explanation_grammar": "Noun after Preposition.",
+    "explanation_grammar": "Danh từ sau giới từ",
     "translation": "Phần mềm phân tích tiên tiến tính toán sai số khi áp dụng các phương pháp dự báo số học.",
     "core_vocabulary": [
       {
@@ -22758,7 +22758,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'a strong + Noun'. 'Reputation' (uy tín/danh tiếng) là danh từ thường gặp.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Sunrise Logistics đã xây dựng được uy tín vững chắc trong việc giao các loại hàng hóa nhạy cảm với nhiệt độ đúng hạn.",
     "core_vocabulary": [
       {
@@ -22785,7 +22785,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Động từ 'present' cần một tân ngữ là danh từ. 'Identification' (giấy tờ định danh/sự nhận dạng) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Tất cả tài xế xe tải phải xuất trình giấy tờ định danh phù hợp tại cổng nhà ga trước khi dỡ các tấm pallet.",
     "core_vocabulary": [
       {
@@ -22812,7 +22812,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'The strict + Noun'. 'Inspection' (sự kiểm tra/thanh tra) là danh từ chỉ quá trình.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự kiểm tra nghiêm ngặt các tấm pallet mới đảm bảo rằng chúng có thể chống đỡ an toàn các linh kiện điện tử nặng.",
     "core_vocabulary": [
       {
@@ -22839,7 +22839,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cụm danh từ 'career development' (phát triển sự nghiệp).",
-    "explanation_grammar": "Noun as Head of Noun Phrase.",
+    "explanation_grammar": "Danh từ trung tâm của cụm danh từ",
     "translation": "Một sự phát triển nghề nghiệp thành công sang vai trò nhà phân tích dữ liệu đòi hỏi kiến thức nâng cao về hệ thống hậu cần.",
     "core_vocabulary": [
       {
@@ -22866,7 +22866,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau tính từ 'safety' cần một danh từ số nhiều để chỉ các quy định chung. 'Regulations' (các quy định) là danh từ số nhiều.",
-    "explanation_grammar": "Noun as Object of Preposition.",
+    "explanation_grammar": "Danh từ sau giới từ",
     "translation": "Việc tuân thủ các quy định an toàn nghiêm ngặt là bắt buộc đối với tất cả các hãng vận tải biển quốc tế.",
     "core_vocabulary": [
       {
@@ -22893,7 +22893,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'a brilliant + Noun'. 'Solution' (giải pháp) là danh từ thường đi với giới từ 'to'.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Nhóm dữ liệu đã trình bày một giải pháp tuyệt vời cho vấn đề điểm nghẽn chuỗi cung ứng đang diễn ra.",
     "core_vocabulary": [
       {
@@ -22920,7 +22920,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cụm 'customs clearance' (thông quan). 'Clearance' là danh từ phù hợp đứng sau 'swift'.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc thông quan hàng hóa nhanh chóng qua hệ thống hải quan VNACCS đã cho phép giao hàng sớm.",
     "core_vocabulary": [
       {
@@ -22947,7 +22947,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chỗ trống làm chủ ngữ của câu nên cần một danh từ. 'Evaluation' (sự đánh giá) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc đánh giá định kỳ các mức tồn kho là trách nhiệm chính của điều phối viên chuỗi cung ứng.",
     "core_vocabulary": [
       {
@@ -22974,7 +22974,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Động từ 'express' cần một tân ngữ là danh từ. 'Satisfaction' (sự hài lòng) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Nhà tài trợ dự án bày tỏ sự hài lòng cao đối với khả năng cân bằng giữa chi phí và chất lượng của nhóm.",
     "core_vocabulary": [
       {
@@ -23001,7 +23001,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'The careful + Noun'. 'Selection' (sự lựa chọn) là danh từ phù hợp nhất.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự lựa chọn cẩn thận loại pallet phù hợp giúp ngăn ngừa hư hại đối với các lô hàng giá trị cao.",
     "core_vocabulary": [
       {
@@ -23028,7 +23028,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần danh từ làm chủ ngữ. 'Presentation' (sự trình bày/thuyết trình) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự trình bày trực quan về các lộ trình vận chuyển đã giúp ủy ban đưa ra quyết định nhanh chóng dựa trên dữ liệu.",
     "core_vocabulary": [
       {
@@ -23055,7 +23055,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần danh từ làm chủ ngữ. 'Optimization' (sự tối ưu hóa) là danh từ phù hợp nhất.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự tối ưu hóa chiến lược các lộ trình giao hàng đã làm giảm đáng kể mức tiêu thụ nhiên liệu của phương tiện.",
     "core_vocabulary": [
       {
@@ -23082,7 +23082,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần danh từ làm chủ ngữ. 'Agreement' (thỏa thuận/hợp đồng) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Thỏa thuận vừa được ký kết đảm bảo nguồn cung cấp ổn định các vật liệu đóng gói tiêu chuẩn trong ba năm.",
     "core_vocabulary": [
       {
@@ -23109,7 +23109,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần một danh từ sau mạo từ 'the'. 'Preservation' (sự bảo quản) là danh từ.",
-    "explanation_grammar": "Noun as Object of Preposition.",
+    "explanation_grammar": "Danh từ sau giới từ",
     "translation": "Kiểm soát nhiệt độ là tối quan trọng cho việc bảo quản các sản phẩm nông nghiệp tươi sống trong quá trình vận chuyển đường biển.",
     "core_vocabulary": [
       {
@@ -23136,7 +23136,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'The successful + Noun'. 'Completion' (sự hoàn thành) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự hoàn thành thành công trung tâm phân phối mới đã được toàn thể ban điều hành chúc mừng.",
     "core_vocabulary": [
       {
@@ -23163,7 +23163,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần danh từ làm chủ ngữ. 'Education' (giáo dục/đào tạo) là danh từ phù hợp nhất trong bối cảnh này.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc đào tạo liên tục về phần mềm theo dõi dữ liệu mới nhất được khuyến khích mạnh mẽ cho tất cả các nhân viên.",
     "core_vocabulary": [
       {
@@ -23190,7 +23190,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau tính từ 'recent' (gần đây) cần một danh từ làm chủ ngữ. 'Implementation' (sự triển khai/thi hành) là danh từ hoàn thiện cấu trúc câu.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc thi hành các loại thuế nhập khẩu mới gần đây sẽ ảnh hưởng đến ngân sách hàng quý của công ty chúng tôi.",
     "core_vocabulary": [
       {
@@ -23217,7 +23217,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'a valid + Noun'. 'Reproduction' (bản sao/sự sao chép lại) là danh từ phù hợp để đóng vai trò tân ngữ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Pacific Freight yêu cầu một bản sao hợp lệ của hóa đơn thương mại trước khi gửi hàng đi.",
     "core_vocabulary": [
       {
@@ -23244,7 +23244,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cụm 'a comprehensive + Noun'. 'Explanation' (sự giải thích) là danh từ đóng vai trò tân ngữ của động từ 'provide'.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Nhà phân tích dữ liệu đã cung cấp một bản giải thích toàn diện về các xu hướng thị trường sử dụng các mô hình hồi quy.",
     "core_vocabulary": [
       {
@@ -23271,7 +23271,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chỗ trống cần một danh từ làm chủ ngữ. 'Utilization' (sự sử dụng/tận dụng) là danh từ phù hợp nhất.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc tận dụng không gian kho bãi hợp lý là rất quan trọng để chứa các nông sản tươi sắp nhập về.",
     "core_vocabulary": [
       {
@@ -23298,7 +23298,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'the successful + Noun'. 'Creation' (sự tạo ra/sáng tạo) là danh từ phù hợp để chỉ kết quả quá trình.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Việc chia nhỏ dự án thành các nhiệm vụ nhỏ hơn sẽ đảm bảo sự tạo ra thành công của các sản phẩm bàn giao cuối cùng.",
     "core_vocabulary": [
       {
@@ -23325,7 +23325,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần danh từ làm chủ ngữ. 'Transmission' (sự truyền đi/truyền dữ liệu) là danh từ chỉ hành động kỹ thuật.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc truyền điện tử tờ khai hải quan giúp đẩy nhanh đáng kể quá trình thông quan VNACCS.",
     "core_vocabulary": [
       {
@@ -23352,7 +23352,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'the' cần một danh từ. 'Protection' (sự bảo vệ/bảo quản) là danh từ phù hợp.",
-    "explanation_grammar": "Noun after 'the'.",
+    "explanation_grammar": "Danh từ sau từ hạn định / tính từ",
     "translation": "Duy trì nhiệt độ kho bãi chính xác là cần thiết để bảo quản các loại táo tươi nhập khẩu.",
     "core_vocabulary": [
       {
@@ -23379,7 +23379,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'the precise + Noun'. 'Interpolation' (sự nội suy/tính toán điểm dữ liệu) là danh từ kỹ thuật phù hợp.",
-    "explanation_grammar": "Noun as Object of Preposition.",
+    "explanation_grammar": "Danh từ sau giới từ",
     "translation": "Phần mềm mới cho phép tính toán (nội suy) chính xác các điểm dữ liệu bị thiếu trong các hồ sơ vận chuyển.",
     "core_vocabulary": [
       {
@@ -23406,7 +23406,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chủ ngữ của câu cần một danh từ. 'Calculation' (sự tính toán) là danh từ chỉ hành động.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc tính toán chính xác thời gian dự án đòi hỏi sự đóng góp ý kiến từ tất cả các trưởng bộ phận chuỗi cung ứng.",
     "core_vocabulary": [
       {
@@ -23433,7 +23433,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'a' và tính từ 'record-breaking' cần một danh từ. 'Participation' (sự tham gia) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Triển lãm Thương mại Toàn cầu đã chứng kiến sự tham gia kỷ lục của các công ty hậu cần quốc tế trong năm nay.",
     "core_vocabulary": [
       {
@@ -23460,7 +23460,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau từ định lượng 'any' cần một danh từ làm tân ngữ. 'Destruction' (sự phá hủy/hư hại) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Việc đóng gói an toàn ngăn ngừa bất kỳ sự hư hại nào đối với các bo mạch chủ máy tính nhạy cảm trong quá trình vận chuyển đường biển.",
     "core_vocabulary": [
       {
@@ -23487,7 +23487,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'review the + Noun'. 'Revision' (bản sửa đổi) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Nhóm pháp lý của công ty hiện đang xem xét bản sửa đổi của hợp đồng vận tải quốc tế mới.",
     "core_vocabulary": [
       {
@@ -23514,7 +23514,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'the' cần một danh từ làm tân ngữ. 'Maximization' (sự tối đa hóa) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Lựa chọn loại pallet phù hợp đảm bảo việc tối đa hóa không gian container hàng hóa.",
     "core_vocabulary": [
       {
@@ -23541,7 +23541,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cụm danh từ 'career transition' (sự chuyển đổi nghề nghiệp). 'Transition' là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Công ty cung cấp các khóa đào tạo sâu rộng cho các nhân viên đang tìm kiếm một sự chuyển đổi nghề nghiệp sang lĩnh vực phân tích dữ liệu.",
     "core_vocabulary": [
       {
@@ -23568,7 +23568,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chủ ngữ của câu cần một danh từ. 'Communication' (sự liên lạc/trao đổi thông tin) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự liên lạc hiệu quả giữa các bên đối tác trong chuỗi cung ứng giúp giảm tổng thời gian chờ quốc tế.",
     "core_vocabulary": [
       {
@@ -23595,7 +23595,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Động từ 'require' cần một tân ngữ là danh từ. 'Calibration' (sự hiệu chuẩn/điều chỉnh thông số) là danh từ kỹ thuật.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Các máy móc kho bãi hạng nặng yêu cầu hiệu chuẩn định kỳ để duy trì hiệu suất nâng tối ưu.",
     "core_vocabulary": [
       {
@@ -23622,7 +23622,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'a detailed + Noun'. 'Description' (bản mô tả/chi tiết) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Bộ phận tài chính cần một bản mô tả chi tiết tất cả các chi phí liên quan đến quá trình nhập khẩu.",
     "core_vocabulary": [
       {
@@ -23649,7 +23649,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chỗ trống cần danh từ chỉ tổ chức/thực thể. 'Contractor' (nhà thầu/đơn vị hợp đồng) là danh từ chỉ người/entity.",
-    "explanation_grammar": "Noun as Complement.",
+    "explanation_grammar": "Danh từ làm bổ ngữ",
     "translation": "Alpha Logistics là nhà thầu chính của chúng tôi cho tất cả các dịch vụ giao nhận vận tải trong nước và quốc tế.",
     "core_vocabulary": [
       {
@@ -23676,7 +23676,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'guarantee the + Noun'. 'Security' (sự an toàn/bảo mật) là danh từ trừu tượng.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Nhóm đảm bảo chất lượng đảm bảo sự an toàn của tất cả các linh kiện mạng điện tử xuất xưởng.",
     "core_vocabulary": [
       {
@@ -23703,7 +23703,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'a more realistic + Noun'. 'Projection' (sự dự phóng/ước tính tương lai) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Áp dụng phương pháp PERT cung cấp một sự dự phóng thực tế hơn về tổng thể tiến độ dự án.",
     "core_vocabulary": [
       {
@@ -23730,7 +23730,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'ensure the swift + Noun'. 'Resolution' (sự giải quyết) là danh từ chỉ kết quả hành động.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Đội ngũ hỗ trợ tận tâm của chúng tôi đảm bảo việc giải quyết nhanh chóng tất cả các thắc mắc của khách hàng quốc tế.",
     "core_vocabulary": [
       {
@@ -23757,7 +23757,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chủ ngữ cần một danh từ. 'Retention' (sự lưu giữ/giữ lại) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc lưu giữ nghiêm ngặt các dữ liệu vận chuyển nhạy cảm của khách hàng là bắt buộc theo các quy định mới của ngành.",
     "core_vocabulary": [
       {
@@ -23784,7 +23784,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'a new + Noun'. 'Promotion' (chương trình quảng bá/khuyến mãi) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Nhóm marketing của công ty đang chuẩn bị một chương trình quảng bá mới để thu hút các khách hàng vận chuyển quốc tế.",
     "core_vocabulary": [
       {
@@ -23811,7 +23811,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Động từ 'submit' cần tân ngữ danh từ. 'Application' (đơn ứng tuyển) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Tất cả các ứng viên cho vị trí nhà phân tích dữ liệu hậu cần phải nộp đơn ứng tuyển chính thức trước thứ Sáu.",
     "core_vocabulary": [
       {
@@ -23838,7 +23838,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'a major + Noun'. 'Interruption' (sự gián đoạn) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Các vụ đóng cửa đường cao tốc gần đây đã gây ra sự gián đoạn lớn trong việc giao các mặt hàng điện tử.",
     "core_vocabulary": [
       {
@@ -23865,7 +23865,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chỗ trống cần một danh từ đóng vai trò tân ngữ. 'Transportation' (việc vận chuyển) là danh từ phù hợp nhất.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Tập đoàn Global Harvest đã hoàn thành thành công việc vận chuyển táo tươi từ Hoa Kỳ đến Việt Nam.",
     "core_vocabulary": [
       {
@@ -23892,7 +23892,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau cụm 'the careful' (mạo từ + tính từ) cần một danh từ. 'Placement' (việc đặt/sắp đặt) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Nhân viên kho phải đảm bảo việc sắp đặt cẩn thận 1.258 bo mạch chủ máy tính lên các tấm pallet gỗ.",
     "core_vocabulary": [
       {
@@ -23919,7 +23919,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'a clear + Noun'. 'Illustration' (sự minh họa/hình minh họa) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Nhà phân tích dữ liệu đã trình bày một bản minh họa rõ ràng về các xu hướng chi phí vận chuyển bằng một biểu đồ hồi quy tiên tiến.",
     "core_vocabulary": [
       {
@@ -23946,7 +23946,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chỗ trống cần một danh từ làm bổ ngữ sau động từ 'is'. 'Requirement' (yêu cầu) là danh từ.",
-    "explanation_grammar": "Noun as Complement.",
+    "explanation_grammar": "Danh từ làm bổ ngữ",
     "translation": "Việc tạo ra một cấu trúc phân chia công việc chi tiết là một yêu cầu quan trọng để quản lý các dự án hậu cần phức tạp một cách hiệu quả.",
     "core_vocabulary": [
       {
@@ -23973,7 +23973,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau mạo từ 'the' và tính từ 'accurate' cần một danh từ. 'Calculation' (sự tính toán) là danh từ.",
-    "explanation_grammar": "Noun as Object of Preposition.",
+    "explanation_grammar": "Danh từ sau giới từ",
     "translation": "Nhóm dự án đã dựa vào phương pháp PERT để tính toán chính xác tổng thời gian giao hàng.",
     "core_vocabulary": [
       {
@@ -24000,7 +24000,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chỗ trống cần một danh từ đóng vai trò chủ ngữ. 'Declaration' (sự khai báo) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc khai báo điện tử thông qua hệ thống VNACCS đã làm giảm mạnh thời gian chờ đợi tại các trạm kiểm soát biên giới.",
     "core_vocabulary": [
       {
@@ -24027,7 +24027,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'ensure the + Noun'. 'Precision' (độ chính xác) là danh từ chuyên dụng.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Phần mềm áp dụng phương pháp chia đôi để đảm bảo độ chính xác của các tính toán trọng lượng hàng hóa tự động.",
     "core_vocabulary": [
       {
@@ -24054,7 +24054,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau cụm 'a reliable' cần một danh từ. 'Prediction' (sự dự báo) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Thuật toán mới của chúng tôi sử dụng phép nội suy Newton để đưa ra dự báo đáng tin cậy về nhu cầu lưu kho trong tương lai.",
     "core_vocabulary": [
       {
@@ -24081,7 +24081,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Động từ 'require' cần tân ngữ danh từ. 'Supervision' (sự giám sát) là danh từ phù hợp.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Cân bằng chi phí, tiến độ và chất lượng đòi hỏi sự giám sát liên tục từ toàn bộ nhóm quản lý chuỗi cung ứng.",
     "core_vocabulary": [
       {
@@ -24108,7 +24108,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần một danh từ sau mạo từ 'the'. 'Recruitment' (việc tuyển dụng) là danh từ chỉ quá trình.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Ban điều hành đã phê duyệt việc tuyển dụng một nhà phân tích dữ liệu mới để tối ưu hóa các tuyến vận chuyển quốc tế của chúng tôi.",
     "core_vocabulary": [
       {
@@ -24135,7 +24135,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'a written + Noun'. 'Confirmation' (sự xác nhận) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Trước khi hoàn tất lịch trình nhập khẩu, quản lý cần một bản xác nhận bằng văn bản từ đối tác vận chuyển nước ngoài.",
     "core_vocabulary": [
       {
@@ -24162,7 +24162,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chủ ngữ của câu cần một danh từ. 'Categorization' (sự phân loại/nhóm) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc phân loại không đúng các linh kiện điện tử bằng cách sử dụng sai mã HS có thể dẫn đến các khoản phạt hải quan nghiêm trọng.",
     "core_vocabulary": [
       {
@@ -24189,7 +24189,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau tính từ 'recent' cần một danh từ làm chủ ngữ. 'Fluctuation' (sự biến động) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự biến động gần đây của giá nhiên liệu toàn cầu đã tác động trực tiếp đến ngân sách vận tải hàng quý của công ty.",
     "core_vocabulary": [
       {
@@ -24216,7 +24216,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'the maximum + Noun'. 'Utilization' (sự tận dụng) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Phần mềm tối ưu hóa tải tải nâng cao đảm bảo việc tận dụng tối đa từng container vận chuyển rời cảng.",
     "core_vocabulary": [
       {
@@ -24243,7 +24243,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần một danh từ sau tính từ sở hữu 'their'. 'Registration' (sự đăng ký) là phù hợp.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Triển lãm Kiến trúc Liberty yêu cầu tất cả các nhà cung cấp phải nộp đơn đăng ký gian hàng trước cuối tháng 10.",
     "core_vocabulary": [
       {
@@ -24270,7 +24270,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'a strong + Noun'. 'Partnership' (quan hệ đối tác) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Duy trì mối quan hệ đối tác vững chắc với các nhà cung cấp quốc tế đáng tin cậy là điều thiết yếu đối với thành công của bộ phận sản xuất của chúng tôi.",
     "core_vocabulary": [
       {
@@ -24297,7 +24297,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần danh từ làm chủ ngữ. 'Growth' (sự tăng trưởng) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự tăng trưởng nhanh chóng của ngành thương mại điện tử đã tạo ra những thách thức mới cho hậu cần giao hàng đô thị.",
     "core_vocabulary": [
       {
@@ -24324,7 +24324,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Sau tính từ sở hữu 'their' cần một danh từ. 'Safety' (sự an toàn) là danh từ không đếm được.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Tất cả nhân viên kho phải mặc đồ bảo hộ để đảm bảo an toàn cho họ trong quá trình bốc xếp.",
     "core_vocabulary": [
       {
@@ -24351,7 +24351,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'a new + Noun'. 'Proposal' (bản đề xuất) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Hội đồng quản trị đang xem xét một bản đề xuất mới nhằm mở rộng các hoạt động vận tải của chúng tôi sang Đông Nam Á.",
     "core_vocabulary": [
       {
@@ -24378,7 +24378,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần danh từ làm chủ ngữ. 'Disruption' (sự gián đoạn) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Sự gián đoạn bất ngờ trong chuỗi cung ứng đã gây ra một sự chậm trễ đáng kể trong việc giao các mặt hàng bán lẻ.",
     "core_vocabulary": [
       {
@@ -24405,7 +24405,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cấu trúc 'a thorough + Noun'. 'Evaluation' (sự đánh giá) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Nhóm kiểm soát chất lượng thực hiện một cuộc đánh giá kỹ lưỡng tất cả các lô hàng xuất đi để ngăn ngừa khiếu nại của khách hàng.",
     "core_vocabulary": [
       {
@@ -24432,7 +24432,7 @@ export const grammarQuestions = [
     "correct_answer": "B",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cụm danh từ 'professional development programs' (các chương trình phát triển chuyên môn).",
-    "explanation_grammar": "Noun in Compound Noun Phrase.",
+    "explanation_grammar": "Danh từ trong cụm danh từ ghép",
     "translation": "Các nhân viên tìm kiếm sự chuyển đổi nghề nghiệp nên tận dụng các chương trình phát triển chuyên môn của công ty.",
     "core_vocabulary": [
       {
@@ -24459,7 +24459,7 @@ export const grammarQuestions = [
     "correct_answer": "D",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Chủ ngữ của câu cần một danh từ. 'Adherence' (sự tuân thủ/bám sát) là danh từ thường đi với giới từ 'to'.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc tuân thủ nghiêm ngặt các quy định thương mại quốc tế được giám sát chặt chẽ bởi bộ phận pháp lý của công ty.",
     "core_vocabulary": [
       {
@@ -24486,7 +24486,7 @@ export const grammarQuestions = [
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cụm 'a detailed + Noun'. 'Breakdown' (bản kê chi tiết/sự phân tích nhỏ) là danh từ.",
-    "explanation_grammar": "Noun as Object.",
+    "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Bộ phận tài chính đã yêu cầu một bản kê chi tiết các chi phí hàng quý cho dự án hậu cần.",
     "core_vocabulary": [
       {
@@ -24513,7 +24513,7 @@ export const grammarQuestions = [
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
     "explanation_reason": "Cần danh từ làm chủ ngữ. 'Management' (việc quản lý) là danh từ.",
-    "explanation_grammar": "Noun as Subject.",
+    "explanation_grammar": "Danh từ làm chủ ngữ",
     "translation": "Việc quản lý hiệu quả các chứng từ hải quan giúp ngăn chặn các sự chậm trễ không cần thiết tại cảng đích.",
     "core_vocabulary": [
       {
@@ -24541,7 +24541,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'decision' để bổ nghĩa cho danh từ đó.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Đạo diễn Jun Iwata đã thử vai hai mươi diễn viên trước khi đưa ra quyết định cuối cùng về việc giao vai chính cho ai.",
   "core_vocabulary": [
     {
@@ -24568,7 +24568,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ đứng trước tính từ 'effective' để bổ nghĩa cho tính từ đó.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Hai chương trình phần mềm cạnh tranh được xác định là có hiệu quả ngang nhau trong việc giúp việc khai thuế tại nhà trở thành một nhiệm vụ dễ dàng.",
   "core_vocabulary": [
     {
@@ -24595,7 +24595,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'increase' để bổ nghĩa cho danh từ đó.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Vì lợi nhuận tăng mạnh trong quý này, nhân viên của Tyro Sportswear sẽ nhận được tiền thưởng cuối năm lần đầu tiên.",
   "core_vocabulary": [
     {
@@ -24622,7 +24622,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ đứng trước tính từ 'responsible' để bổ nghĩa cho tính từ đó.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Bà Maria Perreira chịu trách nhiệm phần lớn cho một số chiến dịch tiếp thị thành công nhất của công ty chúng tôi.",
   "core_vocabulary": [
     {
@@ -24649,7 +24649,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'becoming' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Các bác sĩ tại Bệnh viện Tưởng niệm Stephen Mallory khẳng định rằng các trường hợp ngộ độc thực phẩm do bảo quản không đúng cách đang trở nên thường xuyên hơn.",
   "core_vocabulary": [
     {
@@ -24676,7 +24676,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'worked'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Trong bản đánh giá năng lực của ông Brothet, người giám sát bộ phận đã viết rằng ông đã làm việc cực kỳ siêng năng và luôn hoàn thành nhiệm vụ đúng hạn.",
   "core_vocabulary": [
     {
@@ -24703,7 +24703,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ ở dạng bị động 'been trained'.",
-  "explanation_grammar": "Adverb modifying Passive Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ bị động",
   "translation": "Các quản lý phòng thí nghiệm hóa học lo ngại rằng các nhân viên mới chưa được đào tạo đầy đủ về các quy trình khẩn cấp mới nhất.",
   "core_vocabulary": [
     {
@@ -24730,7 +24730,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'benefits' để bổ nghĩa cho danh từ đó.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Underwood Energy Services Inc. cung cấp các phúc lợi hấp dẫn cho nhân viên toàn thời gian, bao gồm cả bảo hiểm nha khoa.",
   "core_vocabulary": [
     {
@@ -24757,7 +24757,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho danh động từ (gerund) 'interviewing'.",
-  "explanation_grammar": "Adverb modifying Gerund.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho danh động từ",
   "translation": "Sau khi phỏng vấn kỹ lưỡng hơn năm mươi ứng viên cho vị trí quản lý Bộ phận Công nghệ sinh học, ủy ban đã chọn Tiến sĩ Alan Liu.",
   "core_vocabulary": [
     {
@@ -24784,7 +24784,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho danh động từ 'managing'.",
-  "explanation_grammar": "Adverb modifying Gerund.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho danh động từ",
   "translation": "Ông Ben Shipley sẽ được thăng chức vào tháng tới vì đã quản lý sản xuất một cách hiệu quả tại cơ sở của chúng tôi ở Thành phố Kansas.",
   "core_vocabulary": [
     {
@@ -24811,7 +24811,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'contributions' để bổ nghĩa cho danh từ đó.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Sinh viên tốt nghiệp từ Cao đẳng Công nghệ Melrose thường có những đóng góp giá trị trong nhiều lĩnh vực, bao gồm kỹ thuật, khoa học máy tính và thiên văn học.",
   "core_vocabulary": [
     {
@@ -24838,7 +24838,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'check'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Khi xử lý các khoản quỹ lớn, nhân viên ngân hàng được yêu cầu kiểm tra các sao kê một cách cẩn thận để đảm bảo mọi thứ đều chính xác.",
   "core_vocabulary": [
     {
@@ -24865,7 +24865,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'completes'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Sau khi ông Mirren hoàn tất thành công việc học và đào tạo cần thiết, ông có thể đến làm việc cho tập đoàn của chúng tôi.",
   "core_vocabulary": [
     {
@@ -24892,7 +24892,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ (ở dạng phân từ) đứng trước danh từ 'job ads'. 'Updated' có nghĩa là 'đã được cập nhật'.",
-  "explanation_grammar": "Participial Adjective before Noun.",
+  "explanation_grammar": "Phân từ làm tính từ đứng trước danh từ",
   "translation": "Có một số quảng cáo việc làm đã được cập nhật trong bản tin công ty phòng trường hợp có nhân viên nào biết ai đó có thể đảm nhận các vị trí đó.",
   "core_vocabulary": [
     {
@@ -24919,7 +24919,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'are' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Các quy định đã được ban hành để đảm bảo rằng nhãn trên tất cả các loại thuốc đều dễ hiểu.",
   "core_vocabulary": [
     {
@@ -24946,7 +24946,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'help'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Nếu bạn cần thuê thêm trợ giúp cho doanh nghiệp đang phát triển của mình, các chuyên gia của chúng tôi có thể hỗ trợ quy trình tuyển dụng từ đầu đến cuối.",
   "core_vocabulary": [
     {
@@ -24973,7 +24973,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ (ở dạng phân từ) để bổ nghĩa cho danh từ 'accounting measures'.",
-  "explanation_grammar": "Participial Adjective before Noun.",
+  "explanation_grammar": "Phân từ làm tính từ đứng trước danh từ",
   "translation": "Các biện pháp kế toán được cải thiện đã giúp tăng tỷ suất lợi nhuận lên 20%.",
   "core_vocabulary": [
     {
@@ -25000,7 +25000,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'rise'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Giá của hàng hóa hữu cơ dự kiến sẽ tăng mạnh trong vài năm tới do nhu cầu tăng cao.",
   "core_vocabulary": [
     {
@@ -25027,7 +25027,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ (ở dạng phân từ) đứng trước danh từ 'manager'.",
-  "explanation_grammar": "Participial Adjective before Noun.",
+  "explanation_grammar": "Phân từ làm tính từ đứng trước danh từ",
   "translation": "Tại cuộc họp ngày hôm qua, các nhân viên đã được giới thiệu với Peter McCabe, quản lý mới được bổ nhiệm gần đây của Khách sạn Dynasty ở Washington D.C.",
   "core_vocabulary": [
     {
@@ -25054,7 +25054,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'improve'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Các luật phân vùng mới sẽ giúp cải thiện đáng kể vấn đề tắc nghẽn giao thông đang phát triển ở vùng ngoại ô.",
   "core_vocabulary": [
     {
@@ -25082,7 +25082,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ đứng trước tính từ 'impressed' để nhấn mạnh mức độ.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Ủy ban tuyển dụng đã rất ấn tượng trước danh mục hồ sơ năng lực sâu rộng và kỹ năng giao tiếp của ứng viên.",
   "core_vocabulary": [
     {
@@ -25109,7 +25109,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một động từ sau 'needs to'. 'Finalize' là dạng động từ.",
-  "explanation_grammar": "Verb after 'need to'.",
+  "explanation_grammar": "Động từ nguyên thể có 'to'",
   "translation": "Ông Chen cần hoàn thiện báo cáo ngân sách hàng quý trước khi trình lên ban giám đốc.",
   "core_vocabulary": [
     {
@@ -25136,7 +25136,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho tính từ 'successful'.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Chiến dịch quảng cáo mới đã cực kỳ thành công trong việc tiếp cận nhóm nhân khẩu học trẻ tuổi trên khắp các mạng xã hội.",
   "core_vocabulary": [
     {
@@ -25163,7 +25163,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ 'handle'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Nhân viên được nhắc nhở xử lý máy sao chép mới lắp đặt một cách cẩn thận, vì nó dễ bị kẹt giấy.",
   "core_vocabulary": [
     {
@@ -25190,7 +25190,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'check-ups'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Bệnh nhân tại Phòng khám Riverdale được khuyên nên lên lịch kiểm tra thường xuyên để theo dõi huyết áp.",
   "core_vocabulary": [
     {
@@ -25217,7 +25217,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'decrease'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Quản lý cửa hàng đã nhận thấy một sự sụt giảm mạnh trong doanh số bán lẻ trong cơn bão mùa đông bất ngờ.",
   "core_vocabulary": [
     {
@@ -25244,7 +25244,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho tính từ 'easy'.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Bản cập nhật phần mềm mới nhất giúp việc đồng bộ hóa các tệp trên nhiều thiết bị di động trở nên dễ dàng đến bất ngờ.",
   "core_vocabulary": [
     {
@@ -25271,7 +25271,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho tính từ 'responsible'.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Bà Evans chịu trách nhiệm duy nhất cho việc tổ chức buổi tiệc từ thiện hàng năm và phối hợp với các nhà cung cấp.",
   "core_vocabulary": [
     {
@@ -25298,7 +25298,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ 'responded'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Các nhà đầu tư đã phản ứng tích cực trước thông báo bất ngờ của CEO về việc sáp nhập với Apex Industries.",
   "core_vocabulary": [
     {
@@ -25325,7 +25325,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ cụm 'dress code'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Sổ tay nhân viên nêu rõ quy định về trang phục chính thức cho tất cả các nhân viên khi tương tác với khách hàng.",
   "core_vocabulary": [
     {
@@ -25352,7 +25352,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau trạng từ 'fully' và động từ nối 'is' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Kỹ thuật viên đảm bảo với chúng tôi rằng máy điều hòa ở sảnh chính hiện đã hoạt động đầy đủ.",
   "core_vocabulary": [
     {
@@ -25379,7 +25379,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'remain' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Để duy trì khả năng cạnh tranh, đại lý tiếp thị phải liên tục thích nghi với xu hướng tiêu dùng đang thay đổi.",
   "core_vocabulary": [
     {
@@ -25406,7 +25406,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho tính từ 'risky'.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Các thành viên hội đồng quản trị đồng ý rằng việc đề xuất mở rộng sang thị trường châu Âu có tiềm ẩn rủi ro vào thời điểm này.",
   "core_vocabulary": [
     {
@@ -25433,7 +25433,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ dạng bị động 'are addressed'.",
-  "explanation_grammar": "Adverb modifying Passive Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ bị động",
   "translation": "Vui lòng đảm bảo rằng tất cả khiếu nại của khách hàng liên quan đến sản phẩm bị lỗi đều được giải quyết kịp thời.",
   "core_vocabulary": [
     {
@@ -25460,7 +25460,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'worker'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Trợ lý hành chính mới được thuê đã chứng minh là một nhân viên hiệu quả cao khi chịu áp lực.",
   "core_vocabulary": [
     {
@@ -25487,7 +25487,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'summary'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Giám đốc Park yêu cầu một bản tóm tắt ngắn gọn về cuộc họp buổi sáng trên bàn làm việc của mình trước 2 giờ chiều.",
   "core_vocabulary": [
     {
@@ -25514,7 +25514,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho tính từ 'reliable'.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Bộ phận kế toán nhận thấy phần mềm kê khai thuế mới hoạt động ổn định và đáng tin cậy.",
   "core_vocabulary": [
     {
@@ -25541,7 +25541,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'portions'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Công ty cung cấp dịch vụ ăn uống đã cung cấp những khẩu phần ăn thịnh soạn cho tất cả các khách mời tham dự bữa tiệc công ty.",
   "core_vocabulary": [
     {
@@ -25568,7 +25568,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ ở dạng bị động 'should be taken'.",
-  "explanation_grammar": "Adverb modifying Passive Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ bị động",
   "translation": "Dược sĩ tại Nhà thuốc Westside giải thích rằng thuốc nên được uống thường xuyên.",
   "core_vocabulary": [
     {
@@ -25595,7 +25595,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho tính từ so sánh 'larger'.",
-  "explanation_grammar": "Adverb modifying Comparative Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ so sánh",
   "translation": "Không gian văn phòng mới được cải tạo ở tầng ba lớn hơn đáng kể so với trụ sở trước đây của chúng tôi.",
   "core_vocabulary": [
     {
@@ -25622,7 +25622,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho tính từ 'appealing'.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Nhóm thiết kế đồ họa đã tạo ra một logo hấp dẫn về mặt thị giác cho buổi ra mắt tái định vị thương hiệu của công ty khởi nghiệp công nghệ.",
   "core_vocabulary": [
     {
@@ -25649,7 +25649,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'training session'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Tất cả các nhân viên phải tham gia buổi đào tạo bắt buộc về an toàn nơi làm việc và các quy trình khẩn cấp.",
   "core_vocabulary": [
     {
@@ -25676,7 +25676,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ 'working'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Quản trị viên mạng đang làm việc không mệt mỏi để khôi phục máy chủ chính sau sự cố mất điện bất ngờ.",
   "core_vocabulary": [
     {
@@ -25703,7 +25703,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'increase'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Giám sát viên nhà máy đã báo cáo một sự gia tăng đáng chú ý trong năng suất tổng thể kể từ khi các máy móc mới được lắp đặt.",
   "core_vocabulary": [
     {
@@ -25730,7 +25730,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho tính từ (ở dạng phân từ) 'locked'.",
-  "explanation_grammar": "Adverb modifying Participial Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho phân từ làm tính từ",
   "translation": "Vui lòng giữ tất cả các tài liệu bảo mật của khách hàng trong tủ được khóa an toàn khi bạn rời khỏi văn phòng.",
   "core_vocabulary": [
     {
@@ -25758,7 +25758,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'approved'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Hội đồng quản trị đã nhất trí thông qua ngân sách đề xuất cho năm tài chính sắp tới.",
   "core_vocabulary": [
     {
@@ -25785,7 +25785,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'email address'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Khách hàng phải cung cấp địa chỉ email hợp lệ để nhận biên lai điện tử và cập nhật giao hàng.",
   "core_vocabulary": [
     {
@@ -25812,7 +25812,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho tính từ 'complicated'.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Các hướng dẫn lắp ráp đồ nội thất văn phòng mới phức tạp một cách không cần thiết.",
   "core_vocabulary": [
     {
@@ -25839,7 +25839,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cụm từ 'abundantly clear' là một lối diễn đạt phổ biến (collocation), nghĩa là 'rất rõ ràng'.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Rõ ràng là công ty cần phải thuê thêm nhiều nhân viên dịch vụ khách hàng.",
   "core_vocabulary": [
     {
@@ -25866,7 +25866,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ phân từ 'attached'.",
-  "explanation_grammar": "Adverb modifying Participial Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho phân từ làm tính từ",
   "translation": "Lịch trình cho chuyến nghỉ dưỡng hàng năm của nhân viên được đính kèm thuận tiện trong email này.",
   "core_vocabulary": [
     {
@@ -25893,7 +25893,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cấu trúc song song 'both informative and [adjective]'. 'Inspiring' là tính từ.",
-  "explanation_grammar": "Parallel Structure (Adjective).",
+  "explanation_grammar": "Cấu trúc song song",
   "translation": "Nhiều người tham dự nhận thấy bài trình bày của diễn giả chính vừa đầy đủ thông tin vừa đầy cảm hứng.",
   "core_vocabulary": [
     {
@@ -25920,7 +25920,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'review'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Vui lòng xem lại hợp đồng lao động đính kèm một cách cẩn thận trước khi ký vào trang cuối cùng.",
   "core_vocabulary": [
     {
@@ -25947,7 +25947,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'analysis'. 'Detailed' là tính từ nghĩa là 'chi tiết'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Quản lý đã yêu cầu một bản phân tích chi tiết về các xu hướng thị trường hiện tại trước thứ Sáu tới.",
   "core_vocabulary": [
     {
@@ -25974,7 +25974,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho tính từ 'lightweight'.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Mẫu điện thoại thông minh mới do TechNova phát hành nhẹ một cách đáng kể so với các phiên bản trước.",
   "core_vocabulary": [
     {
@@ -26001,7 +26001,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'is' và trạng từ 'highly' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "CEO rất lạc quan về sự tăng trưởng tiềm năng trong lĩnh vực năng lượng tái tạo trong năm nay.",
   "core_vocabulary": [
     {
@@ -26028,7 +26028,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ 'dress'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Tất cả nhân viên được khuyến khích ăn mặc phù hợp trong chương trình \"Thứ Sáu Tự Do\" của công ty.",
   "core_vocabulary": [
     {
@@ -26055,7 +26055,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'inspections'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Đội bảo trì tiến hành kiểm tra định kỳ các thang máy của tòa nhà hàng tháng.",
   "core_vocabulary": [
     {
@@ -26082,7 +26082,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ đứng ở đầu câu để bổ nghĩa cho cả câu.",
-  "explanation_grammar": "Sentence Adverb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cả câu",
   "translation": "May mắn thay, lô hàng văn phòng phẩm đã đến sớm hơn hai ngày so với ước tính ban đầu.",
   "core_vocabulary": [
     {
@@ -26109,7 +26109,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'remained' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Mặc dù kinh tế suy thoái gần đây, doanh số bán hàng hàng quý của chúng tôi vẫn duy trì ổn định.",
   "core_vocabulary": [
     {
@@ -26136,7 +26136,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ 'resolved'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Nhà phát triển phần mềm đã nhanh chóng khắc phục lỗi trong hệ thống xử lý thanh toán trực tuyến.",
   "core_vocabulary": [
     {
@@ -26163,7 +26163,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'recommendation'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Ủy ban cố vấn sẽ đưa ra một khuyến nghị chính thức cho chủ tịch vào sáng mai.",
   "core_vocabulary": [
     {
@@ -26190,7 +26190,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho tính từ 'expensive'.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Dịch vụ ăn uống cho sự kiện kỷ niệm ngày thành lập công ty tốn kém một cách đáng ngạc nhiên.",
   "core_vocabulary": [
     {
@@ -26217,7 +26217,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau trạng từ 'very' và động từ nối 'is' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Sách hướng dẫn khắc phục sự cố đi kèm với máy in không dây mới không hữu ích lắm.",
   "core_vocabulary": [
     {
@@ -26244,7 +26244,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'donated'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Bà Taylor đã hào phóng quyên góp một phần đáng kể tiền thưởng cuối năm của mình cho một tổ chức từ thiện địa phương.",
   "core_vocabulary": [
     {
@@ -26271,7 +26271,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Chỗ trống đứng trước cụm danh từ 'written confirmation' nên cần tính từ. 'Explicit' (rõ ràng, minh thị) là tính từ; 'explicitly' là trạng từ, 'explicitness' là danh từ, 'explicate' là động từ.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Chúng tôi yêu cầu xác nhận bằng văn bản rõ ràng từ khách hàng trước khi chia sẻ bất kỳ dữ liệu tài chính nào của họ.",
   "core_vocabulary": [
     {
@@ -26298,7 +26298,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho tính từ phân từ 'experienced'.",
-  "explanation_grammar": "Adverb modifying Participial Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho phân từ làm tính từ",
   "translation": "Trưởng chi nhánh mới được bổ nhiệm có kinh nghiệm dày dặn về tài chính doanh nghiệp quốc tế.",
   "core_vocabulary": [
     {
@@ -26325,7 +26325,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ cụm 'breakfast buffet'. 'Complimentary' nghĩa là 'miễn phí'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Khách sạn cung cấp bữa sáng tự chọn miễn phí cho tất cả khách nghỉ tại các phòng cao cấp của họ.",
   "core_vocabulary": [
     {
@@ -26352,7 +26352,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ 'visits'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Giám đốc khu vực định kỳ đến thăm các văn phòng chi nhánh để đảm bảo các hoạt động diễn ra trôi chảy và hiệu quả.",
   "core_vocabulary": [
     {
@@ -26379,7 +26379,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau trạng từ 'very' và động từ nối 'were' cần một tính từ. 'Encouraging' (khích lệ) là tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Kết quả của cuộc khảo sát mức độ hài lòng của khách hàng gần đây rất đáng khích lệ cho toàn bộ đội ngũ hỗ trợ.",
   "core_vocabulary": [
     {
@@ -26406,7 +26406,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho tính từ 'impressive'.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Danh mục hồ sơ năng lực của công ty kiến trúc về các thiết kế tòa nhà đương đại thực sự ấn tượng.",
   "core_vocabulary": [
     {
@@ -26434,7 +26434,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'handled'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Nhân viên dịch vụ khách hàng đã giải quyết khách hàng đang tức giận một cách rất chuyên nghiệp.",
   "core_vocabulary": [
     {
@@ -26461,7 +26461,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'be' và trạng từ 'highly' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Ủy ban nhận thấy mốc thời gian đề xuất cho việc triển khai phần mềm là rất thực tế.",
   "core_vocabulary": [
     {
@@ -26488,7 +26488,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cụm từ 'remain seated' (vẫn ở tư thế ngồi) là một lối diễn đạt phổ biến.",
-  "explanation_grammar": "Adjective after Linking Verb (Participial Adjective).",
+  "explanation_grammar": "Phân từ làm tính từ sau động từ nối",
   "translation": "Tất cả hành khách phải ngồi yên tại chỗ trong khi máy bay đang lăn bánh vào cổng.",
   "core_vocabulary": [
     {
@@ -26515,7 +26515,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'candidate'. 'Qualified' (có đủ năng lực) là tính từ.",
-  "explanation_grammar": "Adjective (Participial) before Noun.",
+  "explanation_grammar": "Phân từ làm tính từ đứng trước danh từ",
   "translation": "Phòng nhân sự đang tìm kiếm một ứng viên có đủ năng lực cho vị trí quản lý.",
   "core_vocabulary": [
     {
@@ -26542,7 +26542,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'increase'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Do chi phí nguyên liệu thô tăng đáng kể, nhà máy sẽ tăng giá vào tháng tới.",
   "core_vocabulary": [
     {
@@ -26569,7 +26569,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ 'worked'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Các kỹ thuật viên đã làm việc nhanh chóng để sửa chữa máy chủ trước khi ngày làm việc bắt đầu.",
   "core_vocabulary": [
     {
@@ -26596,7 +26596,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ ở dạng bị động 'was appointed'.",
-  "explanation_grammar": "Adverb modifying Passive Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ bị động",
   "translation": "Bà Rodriguez đã được bổ nhiệm làm người đứng đầu mới của bộ phận tiếp thị gần đây.",
   "core_vocabulary": [
     {
@@ -26623,7 +26623,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ dạng phân từ (participle) 'written'.",
-  "explanation_grammar": "Adverb modifying Participial Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho phân từ làm tính từ",
   "translation": "Các hướng dẫn trên bao bì được viết rõ ràng và khách hàng dễ dàng làm theo.",
   "core_vocabulary": [
     {
@@ -26650,7 +26650,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cấu trúc bị động 'It is [adverb] [past participle]'. 'Prohibited' (bị cấm) là dạng phân từ cột 3.",
-  "explanation_grammar": "Passive voice / Participial Adjective.",
+  "explanation_grammar": "Phân từ làm tính từ / thể bị động",
   "translation": "Nghiêm cấm đỗ xe trong các vị trí dành riêng cho nhân viên điều hành.",
   "core_vocabulary": [
     {
@@ -26677,7 +26677,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'overview'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Cố vấn tài chính đã cung cấp một cái nhìn tổng quan toàn diện về các cơ hội đầu tư hiện tại.",
   "core_vocabulary": [
     {
@@ -26704,7 +26704,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ 'change'. 'Annually' (hàng năm) là trạng từ.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Giao thức bảo mật mới yêu cầu tất cả nhân viên thay đổi mật khẩu của họ hàng năm.",
   "core_vocabulary": [
     {
@@ -26731,7 +26731,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cụm 'pleasantly surprised' (ngạc nhiên một cách vui sướng) là một lối diễn đạt phổ biến.",
-  "explanation_grammar": "Adverb modifying Participial Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho phân từ làm tính từ",
   "translation": "Các nhà tổ chức đã vô cùng ngạc nhiên và vui mừng trước số lượng người tham dự đông đảo tại hội trợ thương mại hàng năm.",
   "core_vocabulary": [
     {
@@ -26758,7 +26758,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho tính từ phân từ 'drafted'.",
-  "explanation_grammar": "Adverb modifying Participial Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho phân từ làm tính từ",
   "translation": "Một hợp đồng được soạn thảo cẩn thận sẽ bảo vệ công ty khỏi những tranh chấp pháp lý tiềm tàng.",
   "core_vocabulary": [
     {
@@ -26785,7 +26785,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ 'apologized'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Quản lý nhà hàng đã xin lỗi rối rít vì sự chậm trễ trong việc phục vụ món chính.",
   "core_vocabulary": [
     {
@@ -26812,7 +26812,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'are' và trạng từ 'highly' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Kết quả của nghiên cứu thị trường gần đây rất có liên quan đến việc ra mắt sản phẩm mới của chúng tôi.",
   "core_vocabulary": [
     {
@@ -26839,7 +26839,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ 'reviews'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Nhóm biên tập xem xét tất cả các bài báo một cách thấu đáo để đảm bảo các tiêu chuẩn báo chí cao.",
   "core_vocabulary": [
     {
@@ -26866,7 +26866,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'is' và trạng từ 'highly' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Nhu cầu thị trường đối với các mặt hàng xa xỉ nhập khẩu này rất dễ dự đoán.",
   "core_vocabulary": [
     {
@@ -26893,7 +26893,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đóng vai trò là bổ ngữ sau động từ nối 'was'.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Bài phát biểu của CEO tại bữa tiệc công ty cực kỳ truyền cảm hứng và thúc đẩy tinh thần.",
   "core_vocabulary": [
     {
@@ -26920,7 +26920,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cụm 'heavily discounted' (được giảm giá sâu) là một cách kết hợp thông dụng.",
-  "explanation_grammar": "Adverb modifying Participial Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho phân từ làm tính từ",
   "translation": "Công ty du lịch cung cấp mức giá chiết khấu mạnh cho các lượt đặt chỗ theo nhóm từ mười người trở lên.",
   "core_vocabulary": [
     {
@@ -26947,7 +26947,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ (dạng quá khứ phân từ) đứng trước danh từ 'resume'.",
-  "explanation_grammar": "Participial Adjective before Noun.",
+  "explanation_grammar": "Phân từ làm tính từ đứng trước danh từ",
   "translation": "Tất cả các ứng viên phải nộp một bản sơ yếu lý lịch đã được cập nhật cùng với ba thư giới thiệu.",
   "core_vocabulary": [
     {
@@ -26974,7 +26974,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ ở dạng bị động 'were rewarded'.",
-  "explanation_grammar": "Adverb modifying Passive Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ bị động",
   "translation": "Các đại diện bán hàng đã được khen thưởng hào phóng vì đã vượt mục tiêu hàng quý của họ.",
   "core_vocabulary": [
     {
@@ -27001,7 +27001,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ 'seeking'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Chúng tôi hiện đang tích cực tìm kiếm một nhà phát triển web có kinh nghiệm để gia nhập bộ phận CNTT đang phát triển của mình.",
   "core_vocabulary": [
     {
@@ -27028,7 +27028,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho tính từ 'seamless' (không có lỗi, liền mạch).",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Quá trình chuyển đổi sang phần mềm kế toán mới diễn ra tương đối liền mạch nhờ có đội ngũ CNTT.",
   "core_vocabulary": [
     {
@@ -27055,7 +27055,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'improvement'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Người giám sát đã nhận thấy một sự cải thiện đáng kể trong tinh thần nhân viên sau sự kiện xây dựng đội ngũ.",
   "core_vocabulary": [
     {
@@ -27082,7 +27082,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Chỗ trống đứng sau cụm động từ bị động 'are disposed of' nên cần một trạng từ. 'Properly' (một cách đúng đắn) là trạng từ; 'properness' và 'property' là danh từ, 'proper' là tính từ.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Vui lòng đảm bảo rằng tất cả các tài liệu bảo mật của khách hàng được xử lý đúng cách.",
   "core_vocabulary": [
     {
@@ -27110,7 +27110,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho tính từ 'accessible'.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Lối vào chính của trụ sở công ty có thể dễ dàng tiếp cận cho tất cả khách tham quan và nhân viên.",
   "core_vocabulary": [
     {
@@ -27137,7 +27137,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'reject'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Ban quản lý đã quyết định chính thức từ chối đề xuất của nhà cung cấp do những hạn chế ngân sách bất ngờ.",
   "core_vocabulary": [
     {
@@ -27164,7 +27164,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'followed'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Tất cả các quy trình an toàn trong phòng thí nghiệm phải được tuân thủ nghiêm ngặt để ngăn ngừa bất kỳ tai nạn lao động nào.",
   "core_vocabulary": [
     {
@@ -27191,7 +27191,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cụm 'work closely with' (hợp tác chặt chẽ với) là một lối diễn đạt phổ biến.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Nhóm tiếp thị đã làm việc chặt chẽ với bộ phận thiết kế để khởi động chiến dịch quảng cáo mới.",
   "core_vocabulary": [
     {
@@ -27218,7 +27218,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'was' và trạng từ 'highly' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Thông tin được cung cấp trong buổi định hướng nhân viên ban đầu rất hữu ích.",
   "core_vocabulary": [
     {
@@ -27245,7 +27245,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'is' và trạng từ 'highly' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Báo cáo thu nhập hàng quý cho thấy dòng phần mềm mới mang lại lợi nhuận rất cao.",
   "core_vocabulary": [
     {
@@ -27272,7 +27272,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ ở dạng bị động 'are expected'.",
-  "explanation_grammar": "Adverb modifying Passive Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ bị động",
   "translation": "Nhân viên thường được kỳ vọng sẽ tham dự các cuộc họp đánh giá hàng quý trừ khi họ đang trong kỳ nghỉ đã được phê duyệt.",
   "core_vocabulary": [
     {
@@ -27299,7 +27299,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho tính từ 'brilliant'.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Cố vấn tài chính đã cung cấp một chiến lược xuất sắc đến mức đặc biệt để mở rộng kinh doanh ra nước ngoài.",
   "core_vocabulary": [
     {
@@ -27326,7 +27326,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ phân từ 'used'.",
-  "explanation_grammar": "Adverb modifying Participial Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho phân từ làm tính từ",
   "translation": "Phần mềm kế toán do TechCore tạo ra được sử dụng rộng rãi bởi các doanh nghiệp sản xuất quy mô vừa.",
   "core_vocabulary": [
     {
@@ -27353,7 +27353,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ phân từ 'written'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Thỏa thuận không tiết lộ thông tin đã được viết một cách thận trọng để tránh bất kỳ sự mơ hồ về pháp lý tiềm ẩn nào.",
   "core_vocabulary": [
     {
@@ -27380,7 +27380,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'be' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Các nhà đầu tư được khuyên nên thận trọng khi đối phó với các thị trường mới nổi có tính biến động cao.",
   "core_vocabulary": [
     {
@@ -27407,7 +27407,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'depends'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Sự thành công của vụ sáp nhập công ty được đề xuất phụ thuộc phần lớn vào sự hợp tác của cả hai ban điều hành.",
   "core_vocabulary": [
     {
@@ -27434,7 +27434,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ đứng trước tính từ 'beneficial' để bổ nghĩa cho nó.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Hai công ty đối thủ cuối cùng đã đạt được một thỏa thuận có lợi cho cả hai bên liên quan đến phân phối sản phẩm.",
   "core_vocabulary": [
     {
@@ -27461,7 +27461,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ ở dạng bị động 'is designed'.",
-  "explanation_grammar": "Adverb modifying Passive Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ bị động",
   "translation": "Chương trình đào tạo chuyên sâu được thiết kế chủ yếu cho những nhân viên mới tuyển dụng tại bộ phận bán hàng khu vực.",
   "core_vocabulary": [
     {
@@ -27488,7 +27488,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho tính từ 'imperative' (cấp bách, bắt buộc).",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Việc kiểm toán tài chính hàng năm phải được hoàn thành vào cuối tuần là điều tuyệt đối cấp bách.",
   "core_vocabulary": [
     {
@@ -27515,7 +27515,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ ở dạng bị động 'are located'.",
-  "explanation_grammar": "Adverb modifying Passive Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ bị động",
   "translation": "Các cửa hàng hàng đầu mới của chuỗi bán lẻ được đặt ở vị trí chiến lược tại các trung tâm đô thị đông dân cư.",
   "core_vocabulary": [
     {
@@ -27542,7 +27542,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'seems' và trạng từ 'very' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Nhóm thực tập sinh mới có vẻ rất háo hức tìm hiểu về các hoạt động hậu cần nội bộ của công ty.",
   "core_vocabulary": [
     {
@@ -27569,7 +27569,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'phase'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Giai đoạn ban đầu của dự án phát triển phần mềm sẽ tập trung vào việc thu thập các yêu cầu của người dùng.",
   "core_vocabulary": [
     {
@@ -27596,7 +27596,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'changes'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Bất kỳ thay đổi tiếp theo nào đối với lịch trình hội nghị sẽ được thông báo cho những người tham dự qua email.",
   "core_vocabulary": [
     {
@@ -27623,7 +27623,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'were' và trạng từ 'initially' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Một số nhân viên cấp cao ban đầu đã miễn cưỡng áp dụng hệ thống kiểm kho dựa trên đám mây mới.",
   "core_vocabulary": [
     {
@@ -27650,7 +27650,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'is' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Bảo hành của nhà sản xuất chỉ có hiệu lực nếu thiết bị được bảo trì bởi kỹ thuật viên được ủy quyền.",
   "core_vocabulary": [
     {
@@ -27677,7 +27677,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho cụm động từ 'is undergoing'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Cổng thông tin dịch vụ khách hàng tự động hiện đang được bảo trì máy chủ định kỳ.",
   "core_vocabulary": [
     {
@@ -27704,7 +27704,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cấu trúc song song 'polite and [adjective]'. 'Courteous' (lịch sự) là tính từ.",
-  "explanation_grammar": "Parallel Structure (Adjective after Linking Verb).",
+  "explanation_grammar": "Cấu trúc song song",
   "translation": "Nhân viên hỗ trợ khách hàng được đánh giá cao vì thái độ lịch sự và nhã nhặn.",
   "core_vocabulary": [
     {
@@ -27731,7 +27731,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cấu trúc song song 'both engaging and [adjective]'.",
-  "explanation_grammar": "Parallel Structure (Adjective).",
+  "explanation_grammar": "Cấu trúc song song",
   "translation": "Hội thảo về bảo vệ dữ liệu vừa hấp dẫn vừa mang tính giáo dục cao đối với các nhân viên CNTT.",
   "core_vocabulary": [
     {
@@ -27758,7 +27758,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ phân từ 'handled'.",
-  "explanation_grammar": "Adverb modifying Participial Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho phân từ làm tính từ",
   "translation": "Vui lòng đảm bảo rằng các thành phần thủy tinh dễ vỡ được xử lý nhẹ nhàng trong quá trình đóng gói.",
   "core_vocabulary": [
     {
@@ -27786,7 +27786,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho tính từ phân từ 'reserved'.",
-  "explanation_grammar": "Adverb modifying Participial Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho phân từ làm tính từ",
   "translation": "Phòng chờ VIP tại sân bay được dành riêng cho những người có vé hạng nhất và hạng thương gia.",
   "core_vocabulary": [
     {
@@ -27813,7 +27813,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'is' và trạng từ 'highly' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Giao diện phần mềm mới rất trực quan và người mới bắt đầu dễ dàng điều hướng mà không cần sách hướng dẫn.",
   "core_vocabulary": [
     {
@@ -27840,7 +27840,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cụm 'conveniently located' (được đặt ở vị trí thuận tiện) là một lối diễn đạt phổ biến.",
-  "explanation_grammar": "Adverb modifying Participial Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho phân từ làm tính từ",
   "translation": "Địa điểm tổ chức hội nghị công nghệ sắp tới nằm ở vị trí thuận tiện gần ga tàu trung tâm.",
   "core_vocabulary": [
     {
@@ -27867,7 +27867,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một danh từ sau tính từ 'prior' (trước đó). 'Approval' là danh từ.",
-  "explanation_grammar": "Noun after Adjective.",
+  "explanation_grammar": "Danh từ sau từ hạn định / tính từ",
   "translation": "Nhân viên phải có được sự chấp thuận trước từ người giám sát của họ trước khi nghỉ phép dài ngày.",
   "core_vocabulary": [
     {
@@ -27894,7 +27894,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'strategy'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Nhóm tiếp thị đã trình bày một chiến lược toàn diện để tăng doanh số bán hàng trực tuyến trong quý tới.",
   "core_vocabulary": [
     {
@@ -27921,7 +27921,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'handle'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Vui lòng xử lý các thiết bị phòng thí nghiệm tinh vi một cách cẩn thận để tránh bất kỳ hư hỏng tốn kém nào.",
   "core_vocabulary": [
     {
@@ -27948,7 +27948,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'remains' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Bất chấp chiến dịch tiếp thị rầm rộ của các đối thủ cạnh tranh, thị phần của chúng tôi vẫn ổn định.",
   "core_vocabulary": [
     {
@@ -27975,7 +27975,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ đứng trước tính từ 'positive' để bổ nghĩa cho nó.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Phản hồi từ nhóm tập trung là cực kỳ tích cực liên quan đến thiết kế bao bì mới.",
   "core_vocabulary": [
     {
@@ -28002,7 +28002,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'deadlines'. 'Respective' nghĩa là 'tương ứng (của mỗi người)'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Quản lý dự án chịu trách nhiệm đảm bảo rằng tất cả các thành viên trong nhóm hoàn thành thời hạn tương ứng của họ.",
   "core_vocabulary": [
     {
@@ -28029,7 +28029,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một danh từ sau tính từ 'any'. 'Inconvenience' là danh từ.",
-  "explanation_grammar": "Noun after 'any'.",
+  "explanation_grammar": "Danh từ sau từ hạn định / tính từ",
   "translation": "Chúng tôi xin lỗi vì bất kỳ sự bất tiện nào gây ra bởi việc tạm thời đóng cửa thang máy chính.",
   "core_vocabulary": [
     {
@@ -28056,7 +28056,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'reviews'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Hội đồng quản trị xem xét kỹ lưỡng hiệu quả tài chính của công ty mỗi quý.",
   "core_vocabulary": [
     {
@@ -28083,7 +28083,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cấu trúc 'It is [adverb] [adjective] that...'. 'Probable' (có khả năng) là tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Rất có khả năng các quy định mới sẽ có hiệu lực vào cuối năm tài chính.",
   "core_vocabulary": [
     {
@@ -28110,7 +28110,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ để bổ nghĩa cho động từ 'contributed'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Ông Harris đã đóng góp đáng kể vào việc phát triển ứng dụng di động từng đoạt giải thưởng.",
   "core_vocabulary": [
     {
@@ -28137,7 +28137,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'seems' và trạng từ 'perfectly' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Giải pháp đề xuất cho nút thắt của chuỗi cung ứng có vẻ hoàn toàn hợp lý đối với đội ngũ điều hành.",
   "core_vocabulary": [
     {
@@ -28164,7 +28164,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một động từ nguyên thể sau 'to'. 'Encourage' là động từ.",
-  "explanation_grammar": "Verb in to-infinitive.",
+  "explanation_grammar": "Động từ nguyên thể có 'to'",
   "translation": "Mục tiêu chính của buổi hội thảo là khuyến khích nhân viên đảm nhận các vai trò lãnh đạo.",
   "core_vocabulary": [
     {
@@ -28191,7 +28191,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ 'adjusts'.",
-  "explanation_grammar": "Adverb modifying Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ",
   "translation": "Hệ thống sưởi ấm trong tòa nhà văn phòng tự động điều chỉnh dựa trên nhiệt độ bên ngoài.",
   "core_vocabulary": [
     {
@@ -28218,7 +28218,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'increase'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Công ty đã chứng kiến sự gia tăng đều đặn các đơn hàng quốc tế trong sáu tháng qua.",
   "core_vocabulary": [
     {
@@ -28245,7 +28245,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho tính từ 'excellent'.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Dịch vụ khách hàng do nhân viên khách sạn cung cấp trong suốt kỳ nghỉ của chúng tôi cực kỳ xuất sắc.",
   "core_vocabulary": [
     {
@@ -28272,7 +28272,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Sau động từ nối 'remain' cần một tính từ.",
-  "explanation_grammar": "Adjective after Linking Verb.",
+  "explanation_grammar": "Tính từ sau động từ nối",
   "translation": "Các đại diện hỗ trợ của chúng tôi được đào tạo để giữ bình tĩnh ngay cả khi đối phó với những khách hàng bực bội.",
   "core_vocabulary": [
     {
@@ -28299,7 +28299,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một danh từ sau tính từ 'deep'. 'Appreciation' là danh từ.",
-  "explanation_grammar": "Noun after Adjective.",
+  "explanation_grammar": "Danh từ sau từ hạn định / tính từ",
   "translation": "Người quản lý bày tỏ lòng biết ơn sâu sắc đối với sự làm việc chăm chỉ của cả nhóm trong đợt cao điểm lễ hội.",
   "core_vocabulary": [
     {
@@ -28326,7 +28326,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ dạng bị động 'be paid'.",
-  "explanation_grammar": "Adverb modifying Passive Verb.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho động từ bị động",
   "translation": "Hợp đồng thuê nhà quy định rằng tiền thuê nhà phải được thanh toán đúng hạn vào ngày đầu tiên của mỗi tháng.",
   "core_vocabulary": [
     {
@@ -28353,7 +28353,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'overview'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Giám đốc sẽ cung cấp một cái nhìn tổng quan ngắn gọn về luật thuế mới trước khi buổi họp bắt đầu.",
   "core_vocabulary": [
     {
@@ -28380,7 +28380,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ bổ nghĩa cho động từ dạng phân từ (participle) 'recognized'.",
-  "explanation_grammar": "Adverb modifying Participial Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho phân từ làm tính từ",
   "translation": "Công ty kiến trúc được công nhận rộng rãi nhờ các thiết kế tòa nhà sáng tạo và bền vững.",
   "core_vocabulary": [
     {
@@ -28407,7 +28407,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một tính từ đứng trước danh từ 'work environment'.",
-  "explanation_grammar": "Adjective before Noun.",
+  "explanation_grammar": "Tính từ đứng trước danh từ",
   "translation": "Quản lý nhân sự nhấn mạnh tầm quan trọng của việc duy trì môi trường làm việc năng suất.",
   "core_vocabulary": [
     {
@@ -28434,7 +28434,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Tính từ & Trạng từ",
   "explanation_reason": "Cần một trạng từ đứng trước tính từ 'beneficial' để bổ nghĩa cho nó.",
-  "explanation_grammar": "Adverb modifying Adjective.",
+  "explanation_grammar": "Trạng từ bổ nghĩa cho tính từ",
   "translation": "Bản cập nhật phần mềm gần đây rất có lợi cho những người dùng thường xuyên làm việc với các bộ dữ liệu lớn.",
   "core_vocabulary": [
     {
@@ -28462,7 +28462,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'in' dùng để chỉ vị trí bên trong một không gian (công viên).",
-  "explanation_grammar": "Preposition of Place.",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Buổi dã ngoại cộng đồng sẽ được tổ chức tại công viên phía sau Thư viện Công cộng Seltzer.",
   "core_vocabulary": [
     {
@@ -28489,7 +28489,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "'Including' được dùng như một giới từ có nghĩa là 'bao gồm'.",
-  "explanation_grammar": "Preposition 'including'.",
+  "explanation_grammar": "Giới từ 'including'",
   "translation": "Máy quay video Kitsuna mới hiện đang được giảm giá còn 375 đô la, chưa bao gồm thuế.",
   "core_vocabulary": [
     {
@@ -28516,7 +28516,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cụm 'under the direction' (dưới sự chỉ đạo/hướng dẫn của) là một cách kết hợp từ cố định.",
-  "explanation_grammar": "Prepositional Phrase.",
+  "explanation_grammar": "Cụm giới từ cố định",
   "translation": "Các quản lý khu vực của PKTM làm việc dưới sự chỉ đạo của phó chủ tịch.",
   "core_vocabulary": [
     {
@@ -28543,7 +28543,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "'Owing to' là một giới từ phức hợp nghĩa là 'bởi vì / do'.",
-  "explanation_grammar": "Complex Preposition.",
+  "explanation_grammar": "Giới từ ghép",
   "translation": "Do nhu cầu tăng mạnh gần đây, Vanita's Catering đang thuê thêm bốn nhân viên phục vụ.",
   "core_vocabulary": [
     {
@@ -28570,7 +28570,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'for' dùng để chỉ một khoảng thời gian (sáu năm).",
-  "explanation_grammar": "Preposition of Time (Duration).",
+  "explanation_grammar": "Giới từ chỉ khoảng thời gian",
   "translation": "Ông Barrientos đã làm việc tại công ty được sáu năm.",
   "core_vocabulary": [
     {
@@ -28592,7 +28592,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'as' dùng để chỉ vai trò hoặc vị trí công việc.",
-  "explanation_grammar": "Preposition 'as'.",
+  "explanation_grammar": "Giới từ 'as'",
   "translation": "Ông Louden đã được mời làm vị trí toàn thời gian tại Tập đoàn Fortelio với tư cách là quản lý bộ phận.",
   "core_vocabulary": [
     {
@@ -28619,7 +28619,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'on' dùng sau 'presentation' để chỉ chủ đề của bài thuyết trình.",
-  "explanation_grammar": "Preposition of Topic.",
+  "explanation_grammar": "Giới từ chỉ chủ đề",
   "translation": "Bà Najjar sẽ có bài thuyết trình về các quy định tại nơi làm việc vào buổi trưa.",
   "core_vocabulary": [
     {
@@ -28646,7 +28646,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'within' dùng để chỉ một khoảng thời gian mà hành động phải xảy ra.",
-  "explanation_grammar": "Preposition of Time (Within).",
+  "explanation_grammar": "Giới từ chỉ khoảng thời gian",
   "translation": "Vui lòng đăng nhập vào tài khoản vãng lai trực tuyến của bạn trong vòng 30 ngày tới để duy trì hoạt động của tài khoản.",
   "core_vocabulary": [
     {
@@ -28673,7 +28673,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'Despite' (mặc dù) dùng để chỉ sự nhượng bộ, trái ngược.",
-  "explanation_grammar": "Preposition of Concession.",
+  "explanation_grammar": "Giới từ chỉ sự nhượng bộ",
   "translation": "Bất chấp những nỗ lực tốt nhất của những người tổ chức sự kiện, họ vẫn không thể thu hút đủ tình nguyện viên trong mùa xuân này.",
   "core_vocabulary": [
     {
@@ -28700,7 +28700,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'for' dùng để chỉ mục đích hoặc đối tượng hướng tới (cho bản cập nhật).",
-  "explanation_grammar": "Preposition of Purpose/Target.",
+  "explanation_grammar": "Giới từ chỉ mục đích",
   "translation": "Các lập trình viên có một danh sách các thay đổi cho bản cập nhật phần mềm tiếp theo.",
   "core_vocabulary": [
     {
@@ -28727,7 +28727,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'at' dùng để chỉ một thời điểm cụ thể.",
-  "explanation_grammar": "Preposition of Time (Point).",
+  "explanation_grammar": "Giới từ chỉ thời gian",
   "translation": "Các đơn đặt hàng nội thất theo yêu cầu đòi hỏi phải đặt cọc 50% tại thời điểm đặt hàng.",
   "core_vocabulary": [
     {
@@ -28754,7 +28754,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'over' dùng sau 'debate' để chỉ chủ đề đang được tranh luận.",
-  "explanation_grammar": "Preposition after 'debate'.",
+  "explanation_grammar": "Động từ + giới từ (cụm cố định)",
   "translation": "Hội đồng quản trị đã tranh luận hàng giờ về các chính sách tuyển dụng đã được sửa đổi.",
   "core_vocabulary": [
     {
@@ -28781,7 +28781,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'for' dùng để chỉ khoảng thời gian hoặc đối tượng mà mục tiêu hướng tới (cho năm hiện tại).",
-  "explanation_grammar": "Preposition 'for'.",
+  "explanation_grammar": "Giới từ 'for'",
   "translation": "Dựa trên dữ liệu năm ngoái, Công ty Paik đã tăng dự báo doanh số bán hàng cho năm hiện tại.",
   "core_vocabulary": [
     {
@@ -28808,7 +28808,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'during' dùng để chỉ một khoảng thời gian mà hành động diễn ra.",
-  "explanation_grammar": "Preposition of Time (During).",
+  "explanation_grammar": "Giới từ chỉ khoảng thời gian",
   "translation": "Cửa hàng bách hóa Harbison phỏng vấn các ứng viên trong giờ làm việc tiêu chuẩn.",
   "core_vocabulary": [
     {
@@ -28835,7 +28835,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'over' dùng để chỉ một giai đoạn thời gian.",
-  "explanation_grammar": "Preposition of Time (Over).",
+  "explanation_grammar": "Giới từ chỉ khoảng thời gian",
   "translation": "Mặc dù thị trường nhà đất chậm lại trong các tháng hè, doanh số bán hàng đã bắt đầu tăng trở lại vào mùa thu.",
   "core_vocabulary": [
     {
@@ -28862,7 +28862,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'Besides' có nghĩa là 'ngoài ra, bên cạnh đó'.",
-  "explanation_grammar": "Preposition 'besides'.",
+  "explanation_grammar": "Giới từ 'besides'",
   "translation": "Ngoài những cuốn sách bán chạy nhất, Booksters còn cung cấp nhiều lựa chọn sách kinh điển và tiểu sử.",
   "core_vocabulary": [
     {
@@ -28889,7 +28889,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cấu trúc 'none of [noun/pronoun]' dùng để chỉ không có cái gì trong số đó.",
-  "explanation_grammar": "Pronoun 'none' with preposition 'of'.",
+  "explanation_grammar": "Đại từ 'none' + giới từ 'of'",
   "translation": "Mỗi thanh đồ ăn nhẹ Genutria chứa lượng protein tương đương với hai quả trứng, và không chứa chất béo hay cholesterol nào.",
   "core_vocabulary": [
     {
@@ -28916,7 +28916,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'by' dùng để chỉ một thời hạn chót (trước hoặc tại thời điểm đó).",
-  "explanation_grammar": "Preposition of Time (Deadline).",
+  "explanation_grammar": "Giới từ chỉ hạn chót",
   "translation": "Ủy ban dự kiến sẽ hoàn thành các cuộc đàm phán trước 4 giờ chiều.",
   "core_vocabulary": [
     {
@@ -28943,7 +28943,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'Aside from' có nghĩa là 'ngoài ra, ngoại trừ'.",
-  "explanation_grammar": "Complex Preposition 'aside from'.",
+  "explanation_grammar": "Giới từ ghép",
   "translation": "Ngoài chi phí đi lại, chi phí tham dự hội nghị là hợp lý.",
   "core_vocabulary": [
     {
@@ -28970,7 +28970,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'within' dùng để chỉ một giới hạn về thời gian.",
-  "explanation_grammar": "Preposition of Time (Within).",
+  "explanation_grammar": "Giới từ chỉ khoảng thời gian",
   "translation": "Gateway Electronics sẽ hủy bất kỳ đơn hàng nào không được nhận trong vòng năm ngày.",
   "core_vocabulary": [
     {
@@ -28998,7 +28998,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'until' dùng để chỉ một hành động hoặc trạng thái kéo dài cho đến một thời điểm nhất định.",
-  "explanation_grammar": "Preposition of Time (Until).",
+  "explanation_grammar": "Giới từ chỉ hạn chót",
   "translation": "Bà Arisawa sẽ vắng mặt tại văn phòng cho đến thứ Hai tới.",
   "core_vocabulary": [
     {
@@ -29025,7 +29025,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'in' dùng để chỉ vị trí bên trong một căn phòng hoặc tòa nhà.",
-  "explanation_grammar": "Preposition of Place.",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Nhóm tiếp thị đang họp tại phòng hội nghị trên tầng ba.",
   "core_vocabulary": [
     {
@@ -29047,7 +29047,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "'Due to' là một giới từ phức hợp dùng để chỉ nguyên nhân (đứng trước một danh từ/cụm danh từ).",
-  "explanation_grammar": "Preposition of Cause (Due to).",
+  "explanation_grammar": "Giới từ chỉ nguyên nhân",
   "translation": "Do trời mưa to, buổi hòa nhạc ngoài trời tại Công viên Benson đã bị hủy bỏ.",
   "core_vocabulary": [
     {
@@ -29074,7 +29074,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Tính từ 'compatible' luôn đi kèm với giới từ 'with' (tương thích với).",
-  "explanation_grammar": "Adjective + Preposition.",
+  "explanation_grammar": "Tính từ + giới từ (cụm cố định)",
   "translation": "Máy in mới của LexoCorp tương thích với hầu hết các hệ điều hành.",
   "core_vocabulary": [
     {
@@ -29101,7 +29101,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'for' dùng để chỉ một khoảng thời gian (10 năm).",
-  "explanation_grammar": "Preposition of Time (Duration).",
+  "explanation_grammar": "Giới từ chỉ khoảng thời gian",
   "translation": "Ông Henderson đã là nhà thiết kế chính trong mười năm qua.",
   "core_vocabulary": [
     {
@@ -29123,7 +29123,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'by' dùng để chỉ một thời hạn chót (trước hoặc tại thời điểm đó).",
-  "explanation_grammar": "Preposition of Time (Deadline).",
+  "explanation_grammar": "Giới từ chỉ hạn chót",
   "translation": "Vui lòng nộp báo cáo chi phí đi lại của bạn trước cuối tuần.",
   "core_vocabulary": [
     {
@@ -29150,7 +29150,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "'Depending on' (tùy thuộc vào) là một giới từ phức hợp dùng để chỉ sự phụ thuộc.",
-  "explanation_grammar": "Complex Preposition.",
+  "explanation_grammar": "Giới từ ghép",
   "translation": "Nhân viên tại Gable Inc. đủ điều kiện nhận tiền thưởng tùy thuộc vào hiệu suất làm việc của họ.",
   "core_vocabulary": [
     {
@@ -29177,7 +29177,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cụm 'work on something' có nghĩa là đang sửa chữa hoặc thực hiện một việc gì đó.",
-  "explanation_grammar": "Verb + Preposition.",
+  "explanation_grammar": "Động từ + giới từ (cụm cố định)",
   "translation": "Kỹ thuật viên hiện đang làm việc với máy chủ trong tầng hầm.",
   "core_vocabulary": [
     {
@@ -29204,7 +29204,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'Upon' đứng trước một danh động từ (V-ing) có nghĩa là 'ngay sau khi'.",
-  "explanation_grammar": "Preposition 'Upon' + V-ing.",
+  "explanation_grammar": "Giới từ + V-ing",
   "translation": "Ngay sau khi nhận được hợp đồng đã ký, chúng tôi sẽ bắt đầu công việc cải tạo.",
   "core_vocabulary": [
     {
@@ -29231,7 +29231,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Động từ 'depart' (khởi hành) đi kèm với giới từ 'from' để chỉ điểm xuất phát.",
-  "explanation_grammar": "Verb + Preposition.",
+  "explanation_grammar": "Động từ + giới từ (cụm cố định)",
   "translation": "Xe đưa đón đến sân bay khởi hành từ cổng chính cứ sau mỗi ba mươi phút.",
   "core_vocabulary": [
     {
@@ -29258,7 +29258,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'before' đứng trước một danh động từ để chỉ trình tự thời gian (trước khi làm gì).",
-  "explanation_grammar": "Preposition of Time (Before).",
+  "explanation_grammar": "Giới từ chỉ hạn chót",
   "translation": "Tất cả khách tham quan phải ký tên tại quầy lễ tân trước khi vào tòa nhà.",
   "core_vocabulary": [
     {
@@ -29285,7 +29285,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "'Because of' là một giới từ phức hợp dùng để chỉ nguyên nhân.",
-  "explanation_grammar": "Preposition of Cause (Because of).",
+  "explanation_grammar": "Giới từ chỉ nguyên nhân",
   "translation": "Ông Kim đã được thăng chức lên quản lý cấp cao nhờ vào kỹ năng lãnh đạo xuất sắc của mình.",
   "core_vocabulary": [
     {
@@ -29312,7 +29312,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'on' dùng để chỉ ngày cụ thể trong tháng.",
-  "explanation_grammar": "Preposition of Time (Days/Dates).",
+  "explanation_grammar": "Giới từ chỉ thời gian",
   "translation": "Buổi hội thảo về bảo mật kỹ thuật số sẽ được tổ chức vào ngày 15 tháng 7.",
   "core_vocabulary": [
     {
@@ -29334,7 +29334,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cụm 'provide something to someone' (cung cấp cái gì cho ai) là cách dùng phổ biến, nhấn mạnh hướng đến đối tượng.",
-  "explanation_grammar": "Verb + Object + Preposition.",
+  "explanation_grammar": "Động từ + tân ngữ + giới từ",
   "translation": "NetStar Solutions cung cấp hỗ trợ kỹ thuật cho tất cả các khách hàng của mình.",
   "core_vocabulary": [
     {
@@ -29356,7 +29356,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'with' dùng để chỉ đặc điểm hoặc sở hữu (có ít nhất 5 năm kinh nghiệm).",
-  "explanation_grammar": "Preposition 'with' (Characteristics).",
+  "explanation_grammar": "Giới từ 'with'",
   "translation": "Chúng tôi đang tìm kiếm một ứng viên có ít nhất năm năm kinh nghiệm trong lĩnh vực bán hàng.",
   "core_vocabulary": [
     {
@@ -29378,7 +29378,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'on' dùng cho các bề mặt hoặc phương tiện truyền thông như trang web.",
-  "explanation_grammar": "Preposition of Place (Media/Surfaces).",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Báo cáo thường niên có sẵn trên trang web nội bộ của công ty.",
   "core_vocabulary": [
     {
@@ -29400,7 +29400,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "'Following' đóng vai trò như một giới từ có nghĩa là 'sau khi'.",
-  "explanation_grammar": "Preposition 'Following'.",
+  "explanation_grammar": "Giới từ 'following'",
   "translation": "Sau vụ sáp nhập, nhiều nhân viên đã lo lắng về sự ổn định công việc của họ.",
   "core_vocabulary": [
     {
@@ -29427,7 +29427,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Dùng 'not' để phủ định thành phần trong cấu trúc liệt kê.",
-  "explanation_grammar": "Negation in phrases.",
+  "explanation_grammar": "Cụm giới từ phủ định",
   "translation": "Giá của chuyến tham quan bao gồm bữa sáng, nhưng không bao gồm bữa trưa hoặc bữa tối.",
   "core_vocabulary": [
     {
@@ -29449,7 +29449,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Dựa vào ngữ cảnh, 'instead of' (thay vì/thay cho) là lựa chọn hợp lý nhất.",
-  "explanation_grammar": "Compound Preposition.",
+  "explanation_grammar": "Giới từ ghép",
   "translation": "Ông Sato sẽ tham dự hội nghị tại London thay cho ông Miller.",
   "core_vocabulary": [
     {
@@ -29471,7 +29471,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cụm 'until further notice' (cho đến khi có thông báo mới) là một cách kết hợp cố định.",
-  "explanation_grammar": "Fixed Prepositional Phrase.",
+  "explanation_grammar": "Cụm giới từ cố định",
   "translation": "Cửa hàng sẽ tiếp tục đóng cửa cho đến khi có thông báo mới.",
   "core_vocabulary": [
     {
@@ -29493,7 +29493,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "'In case' (phòng khi) dẫn đầu một mệnh đề trạng ngữ chỉ mục đích/phòng ngừa.",
-  "explanation_grammar": "Conjunction (loosely grouped under prepositions in some contexts).",
+  "explanation_grammar": "Liên từ",
   "translation": "Vui lòng giữ lại biên lai phòng khi bạn cần yêu cầu hoàn tiền.",
   "core_vocabulary": [
     {
@@ -29520,7 +29520,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'between' đi kèm với cấu trúc 'A and B'.",
-  "explanation_grammar": "Preposition of Place (Between).",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Văn phòng nằm ở giữa bưu điện và ngân hàng trung ương.",
   "core_vocabulary": [
     {
@@ -29542,7 +29542,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "'Regarding' đóng vai trò là một giới từ có nghĩa là 'về/liên quan đến'.",
-  "explanation_grammar": "Preposition 'Regarding'.",
+  "explanation_grammar": "Giới từ 'regarding'",
   "translation": "Nhân viên được khuyến khích cung cấp phản hồi liên quan đến chính sách mới.",
   "core_vocabulary": [
     {
@@ -29569,7 +29569,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'Despite' (mặc dù) đứng trước một cụm danh từ.",
-  "explanation_grammar": "Preposition of Concession.",
+  "explanation_grammar": "Giới từ chỉ sự nhượng bộ",
   "translation": "Bất chấp lịch trình bận rộn của mình, bà Rodriguez đã cố gắng hoàn thành báo cáo đúng hạn.",
   "core_vocabulary": [
     {
@@ -29596,7 +29596,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'at' dùng để chỉ một mốc thời gian cụ thể.",
-  "explanation_grammar": "Preposition of Time (Point).",
+  "explanation_grammar": "Giới từ chỉ thời gian",
   "translation": "Bài thuyết trình sẽ bắt đầu lúc đúng 9 giờ sáng.",
   "core_vocabulary": [
     {
@@ -29619,7 +29619,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'for' dùng để chỉ một khoảng thời gian (2 năm).",
-  "explanation_grammar": "Preposition of Time (Duration).",
+  "explanation_grammar": "Giới từ chỉ khoảng thời gian",
   "translation": "Máy pha cà phê espresso mới của Kaffea được bảo hành trong hai năm.",
   "core_vocabulary": [
     {
@@ -29641,7 +29641,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cấu trúc 'present something to someone' (trình bày cái gì cho ai).",
-  "explanation_grammar": "Verb + Object + Preposition.",
+  "explanation_grammar": "Động từ + tân ngữ + giới từ",
   "translation": "Bà Jenkins sẽ trình bày báo cáo tài chính hàng quý cho các thành viên hội đồng quản trị.",
   "core_vocabulary": [
     {
@@ -29668,7 +29668,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'During' dùng để chỉ một khoảng thời gian diễn ra sự kiện.",
-  "explanation_grammar": "Preposition of Time (During).",
+  "explanation_grammar": "Giới từ chỉ khoảng thời gian",
   "translation": "Trong bữa tiệc từ thiện hàng năm, những người tham dự có thể tham gia vào một cuộc đấu giá im lặng.",
   "core_vocabulary": [
     {
@@ -29695,7 +29695,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'on' dùng để chỉ vị trí trên một tầng của tòa nhà.",
-  "explanation_grammar": "Preposition of Place (Floors).",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Phòng nhân sự nằm ở tầng hai của Tòa nhà Nexus.",
   "core_vocabulary": [
     {
@@ -29717,7 +29717,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ phức hợp 'due to' đứng trước cụm danh từ để chỉ nguyên nhân.",
-  "explanation_grammar": "Preposition of Cause (Due to).",
+  "explanation_grammar": "Giới từ chỉ nguyên nhân",
   "translation": "Khu vực chỗ ngồi ngoài trời tại Bella's Cafe bị đóng cửa do nhiệt độ đóng băng.",
   "core_vocabulary": [
     {
@@ -29744,7 +29744,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'by' để chỉ thời hạn chót (deadline).",
-  "explanation_grammar": "Preposition of Time (By).",
+  "explanation_grammar": "Giới từ chỉ hạn chót",
   "translation": "Tất cả các yêu cầu cập nhật phần mềm phải được nộp cho bàn CNTT trước trưa thứ Sáu.",
   "core_vocabulary": [
     {
@@ -29766,7 +29766,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'near' chỉ vị trí gần một địa điểm.",
-  "explanation_grammar": "Preposition of Place (Near).",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Một chi nhánh mới của Ngân hàng Apex vừa mới mở gần ga tàu điện ngầm trung tâm.",
   "core_vocabulary": [
     {
@@ -29788,7 +29788,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'Despite' (mặc dù) đứng trước cụm danh từ.",
-  "explanation_grammar": "Preposition of Concession.",
+  "explanation_grammar": "Giới từ chỉ sự nhượng bộ",
   "translation": "Bất chấp ngân sách quảng cáo hạn hẹp, điện thoại thông minh Orion vẫn bán chạy một cách đặc biệt.",
   "core_vocabulary": [
     {
@@ -29815,7 +29815,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "'Including' được dùng như giới từ nghĩa là 'bao gồm'.",
-  "explanation_grammar": "Preposition 'including'.",
+  "explanation_grammar": "Giới từ 'including'",
   "translation": "Phí thành viên trung tâm thể dục tại CoreGym có giá 40 đô la một tháng, chưa bao gồm phí gia nhập.",
   "core_vocabulary": [
     {
@@ -29837,7 +29837,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'since' dùng để chỉ một mốc thời gian bắt đầu hành động kéo dài đến hiện tại.",
-  "explanation_grammar": "Preposition of Time (Since).",
+  "explanation_grammar": "Giới từ chỉ thời gian",
   "translation": "Ông Tanaka đã là giám đốc quan hệ công chúng từ năm 2018.",
   "core_vocabulary": [
     {
@@ -29859,7 +29859,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cụm 'under the supervision of' (dưới sự giám sát của) là cấu trúc cố định.",
-  "explanation_grammar": "Prepositional Phrase.",
+  "explanation_grammar": "Cụm giới từ cố định",
   "translation": "Nhóm thiết kế làm việc dưới sự giám sát của giám đốc sáng tạo, bà Lewis.",
   "core_vocabulary": [
     {
@@ -29886,7 +29886,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'among' dùng cho nhóm từ ba người/vật trở lên.",
-  "explanation_grammar": "Preposition 'Among'.",
+  "explanation_grammar": "Giới từ 'among'",
   "translation": "Đề xuất từ Vertex Solutions là đề xuất hiệu quả về chi phí nhất trong số ba gói thầu chúng tôi nhận được.",
   "core_vocabulary": [
     {
@@ -29913,7 +29913,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Dựa trên ngữ cảnh 'who is on leave' (người đang nghỉ phép), chọn 'instead of' (thay cho).",
-  "explanation_grammar": "Compound Preposition.",
+  "explanation_grammar": "Giới từ ghép",
   "translation": "Ông Patel sẽ dẫn dắt buổi định hướng cho nhân viên mới thay cho bà Garcia, người đang xin nghỉ phép.",
   "core_vocabulary": [
     {
@@ -29940,7 +29940,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "'In case' (phòng khi) dùng để chuẩn bị cho một khả năng có thể xảy ra.",
-  "explanation_grammar": "Conjunction (Adverbial Clause of Condition).",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Vui lòng mang theo ô phòng khi trời mưa trong chuyến tham quan cơ sở vật chất ngoài trời.",
   "core_vocabulary": [
     {
@@ -29962,7 +29962,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'After' đứng trước danh động từ chỉ thứ tự hành động (Sau khi xem xét).",
-  "explanation_grammar": "Preposition of Time (After).",
+  "explanation_grammar": "Giới từ chỉ thời gian",
   "translation": "Sau khi xem xét sơ yếu lý lịch của ứng viên, người quản lý đã quyết định lên lịch phỏng vấn.",
   "core_vocabulary": [
     {
@@ -29984,7 +29984,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cấu trúc 'from [place] to [place]'.",
-  "explanation_grammar": "Preposition from...to...",
+  "explanation_grammar": "Cấu trúc 'from A to B'",
   "translation": "Dịch vụ đưa đón miễn phí chạy thẳng từ Khách sạn Grand đến trung tâm hội nghị.",
   "core_vocabulary": [
     {
@@ -30011,7 +30011,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cụm 'vote for' nghĩa là bỏ phiếu ủng hộ một cái gì đó.",
-  "explanation_grammar": "Verb + Preposition.",
+  "explanation_grammar": "Động từ + giới từ (cụm cố định)",
   "translation": "Hội đồng thành phố đã nhất trí bỏ phiếu ủng hộ đề xuất cải tạo công viên công cộng.",
   "core_vocabulary": [
     {
@@ -30038,7 +30038,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'except' (ngoại trừ) dùng để chỉ sự loại trừ.",
-  "explanation_grammar": "Preposition 'Except'.",
+  "explanation_grammar": "Giới từ 'except'",
   "translation": "Tất cả nhân viên phải tham gia hội thảo an toàn, ngoại trừ những người đã hoàn thành học phần trực tuyến.",
   "core_vocabulary": [
     {
@@ -30060,7 +30060,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'throughout' có nghĩa là toàn bộ thời gian của một giai đoạn.",
-  "explanation_grammar": "Preposition of Time (Throughout).",
+  "explanation_grammar": "Giới từ chỉ khoảng thời gian",
   "translation": "Nhà ăn sẽ đóng cửa để tu sửa trong suốt cả tháng Tám.",
   "core_vocabulary": [
     {
@@ -30082,7 +30082,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'with' dùng để chỉ sự đi kèm cùng với vật gì đó.",
-  "explanation_grammar": "Preposition 'with'.",
+  "explanation_grammar": "Giới từ 'with'",
   "translation": "Khách hàng mua máy tính xách tay sẽ nhận được một chuột không dây miễn phí kèm theo đơn đặt hàng của họ.",
   "core_vocabulary": [
     {
@@ -30104,7 +30104,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'in' dùng để chỉ vị trí bên trong (trong khay).",
-  "explanation_grammar": "Preposition of Place.",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Vui lòng đặt các tài liệu đã ký vào khay trên bàn của lễ tân.",
   "core_vocabulary": [
     {
@@ -30131,7 +30131,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cần một giới từ chỉ lý do trước cụm danh từ phía sau.",
-  "explanation_grammar": "Preposition of Cause.",
+  "explanation_grammar": "Giới từ chỉ nguyên nhân",
   "translation": "Nhiều doanh nghiệp địa phương tài trợ cho lễ hội mùa hè vì sự quảng bá cộng đồng tuyệt vời mà nó mang lại.",
   "core_vocabulary": [
     {
@@ -30158,7 +30158,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'across' dùng để chỉ sự lan rộng hoặc phân bố trên toàn bộ một phạm vi.",
-  "explanation_grammar": "Preposition 'Across'.",
+  "explanation_grammar": "Giới từ 'across'",
   "translation": "Sổ tay nhân viên đã cập nhật được phân phát trong toàn bộ tổ chức vào ngày hôm qua.",
   "core_vocabulary": [
     {
@@ -30180,7 +30180,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cụm 'work with someone' là cấu trúc thông dụng.",
-  "explanation_grammar": "Verb + Preposition.",
+  "explanation_grammar": "Động từ + giới từ (cụm cố định)",
   "translation": "Tiến sĩ Evans đang làm việc chặt chẽ với các nhà nghiên cứu từ đại học bang về nghiên cứu này.",
   "core_vocabulary": [
     {
@@ -30202,7 +30202,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'for' dùng để chỉ một khoảng thời gian hiệu lực.",
-  "explanation_grammar": "Preposition of Time (Duration).",
+  "explanation_grammar": "Giới từ chỉ khoảng thời gian",
   "translation": "Mã giảm giá đặc biệt cho hiệu sách trực tuyến chỉ có giá trị trong ba ngày.",
   "core_vocabulary": [
     {
@@ -30225,7 +30225,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'at' dùng để chỉ một địa điểm cụ thể nơi sự kiện diễn ra.",
-  "explanation_grammar": "Preposition of Place (At).",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Hội nghị lãnh đạo hàng năm sẽ được tổ chức tại Trung tâm Grand Horizon mới được cải tạo.",
   "core_vocabulary": [
     {
@@ -30252,7 +30252,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ phức hợp 'Due to' đứng trước cụm danh từ để chỉ nguyên nhân.",
-  "explanation_grammar": "Preposition of Cause (Due to).",
+  "explanation_grammar": "Giới từ chỉ nguyên nhân",
   "translation": "Do sự trùng lặp về lịch trình, bà Lin đã phải hủy bỏ các cuộc hẹn buổi chiều với khách hàng.",
   "core_vocabulary": [
     {
@@ -30279,7 +30279,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'by' để chỉ thời hạn chót (trước hoặc tại thời điểm đó).",
-  "explanation_grammar": "Preposition of Time (Deadline).",
+  "explanation_grammar": "Giới từ chỉ hạn chót",
   "translation": "Tất cả nhân viên phải nộp các yêu cầu nghỉ phép đã hoàn tất trước cuối tháng.",
   "core_vocabulary": [
     {
@@ -30306,7 +30306,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'with' chỉ sự đi kèm cùng với vật gì đó.",
-  "explanation_grammar": "Preposition 'with'.",
+  "explanation_grammar": "Giới từ 'with'",
   "translation": "Mẫu điện thoại thông minh mới nhất của TechNova đi kèm với một bộ sạc không dây miễn phí.",
   "core_vocabulary": [
     {
@@ -30333,7 +30333,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'in' chỉ vị trí bên trong (trong giỏ).",
-  "explanation_grammar": "Preposition of Place.",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Vui lòng đặt tất cả các thư gửi đi vào giỏ màu xanh trên bàn của lễ tân.",
   "core_vocabulary": [
     {
@@ -30355,7 +30355,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'since' chỉ mốc thời gian bắt đầu một sự việc kéo dài đến nay.",
-  "explanation_grammar": "Preposition of Time (Since).",
+  "explanation_grammar": "Giới từ chỉ thời gian",
   "translation": "Ông Dubois đã là kiến trúc sư trưởng tại BuildCorp kể từ khi công ty được thành lập vào năm 2015.",
   "core_vocabulary": [
     {
@@ -30382,7 +30382,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'Despite' (mặc dù) đứng trước cụm danh từ.",
-  "explanation_grammar": "Preposition of Concession.",
+  "explanation_grammar": "Giới từ chỉ sự nhượng bộ",
   "translation": "Bất chấp tình hình giao thông đông đúc trên đường cao tốc, ông Garcia vẫn đến buổi họp hội đồng quản trị đúng giờ.",
   "core_vocabulary": [
     {
@@ -30409,7 +30409,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'near' chỉ vị trí gần.",
-  "explanation_grammar": "Preposition of Place (Near).",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Một quán cà phê hữu cơ mới, Bean & Leaf, vừa mới mở gần tòa nhà văn phòng chính của chúng tôi.",
   "core_vocabulary": [
     {
@@ -30431,7 +30431,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'during' chỉ một khoảng thời gian diễn ra sự kiện/hành động khác.",
-  "explanation_grammar": "Preposition of Time (During).",
+  "explanation_grammar": "Giới từ chỉ khoảng thời gian",
   "translation": "Vui lòng nhớ tắt điện thoại di động của bạn trong suốt bài thuyết trình đào tạo.",
   "core_vocabulary": [
     {
@@ -30453,7 +30453,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cấu trúc 'send something to someone' (gửi cái gì cho ai).",
-  "explanation_grammar": "Verb + Object + Preposition.",
+  "explanation_grammar": "Động từ + tân ngữ + giới từ",
   "translation": "Bản ghi nhớ chính thức về quy định trang phục đã cập nhật đã được gửi đến tất cả các trưởng bộ phận vào ngày hôm qua.",
   "core_vocabulary": [
     {
@@ -30475,7 +30475,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'except' (ngoại trừ) chỉ sự loại trừ khỏi một nhóm.",
-  "explanation_grammar": "Preposition 'Except'.",
+  "explanation_grammar": "Giới từ 'except'",
   "translation": "Tất cả các bộ phận đều đạt được mục tiêu doanh số bán hàng hàng quý ngoại trừ bộ phận bán lẻ.",
   "core_vocabulary": [
     {
@@ -30502,7 +30502,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cụm 'under the supervision of' (dưới sự giám sát của) là cách dùng cố định.",
-  "explanation_grammar": "Prepositional Phrase.",
+  "explanation_grammar": "Cụm giới từ cố định",
   "translation": "Nhóm dự án hiện đang làm việc dưới sự giám sát chặt chẽ của quản lý cấp cao, bà Patel.",
   "core_vocabulary": [
     {
@@ -30524,7 +30524,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'by' chỉ phương tiện/cách thức liên lạc.",
-  "explanation_grammar": "Preposition of Means.",
+  "explanation_grammar": "Giới từ chỉ phương tiện",
   "translation": "Bạn có thể liên hệ với bộ phận dịch vụ khách hàng tại NexaMart qua điện thoại hoặc email.",
   "core_vocabulary": [
     {
@@ -30546,7 +30546,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'in' + khoảng thời gian dùng để chỉ một việc sẽ hoàn thành sau bao nhiêu lâu (trong tương lai).",
-  "explanation_grammar": "Preposition of Time (In).",
+  "explanation_grammar": "Giới từ chỉ thời gian",
   "translation": "Việc xây dựng kho hậu cần mới tại Đà Nẵng sẽ được hoàn thành trong sáu tháng nữa.",
   "core_vocabulary": [
     {
@@ -30573,7 +30573,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'about' thường đi sau 'question' để chỉ chủ đề thắc mắc.",
-  "explanation_grammar": "Preposition of Topic/About.",
+  "explanation_grammar": "Giới từ chỉ chủ đề",
   "translation": "Nếu bạn có bất kỳ câu hỏi nào về phần mềm kế toán mới, vui lòng liên hệ với bộ phận hỗ trợ CNTT.",
   "core_vocabulary": [
     {
@@ -30595,7 +30595,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'to' chỉ phương hướng đến một địa điểm.",
-  "explanation_grammar": "Preposition of Direction.",
+  "explanation_grammar": "Giới từ chỉ hướng",
   "translation": "CEO của Zenith Corp sẽ tới Tokyo vào tuần tới để tham dự hội nghị thượng đỉnh kinh doanh toàn cầu.",
   "core_vocabulary": [
     {
@@ -30617,7 +30617,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'instead of' (thay cho/thay vì) là lựa chọn hợp lý nhất theo ngữ cảnh công việc.",
-  "explanation_grammar": "Compound Preposition.",
+  "explanation_grammar": "Giới từ ghép",
   "translation": "Ông Thompson sẽ tham dự hội thảo tiếp thị ở Berlin thay mặt cho giám đốc khu vực.",
   "core_vocabulary": [
     {
@@ -30639,7 +30639,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'between' dùng để nhắm tới hai đối tượng cụ thể (Apex Industries và Horizon Group).",
-  "explanation_grammar": "Preposition 'Between'.",
+  "explanation_grammar": "Giới từ 'between'",
   "translation": "Cuộc đàm phán hợp đồng giữa Apex Industries và Tập đoàn Horizon đã kéo dài trong ba giờ.",
   "core_vocabulary": [
     {
@@ -30661,7 +30661,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ phức hợp 'because of' đứng trước cụm danh từ chỉ lý do.",
-  "explanation_grammar": "Preposition of Cause.",
+  "explanation_grammar": "Giới từ chỉ nguyên nhân",
   "translation": "Sự kiện xây dựng đội ngũ ngoài trời của công ty đã bị trì hoãn vì cơn dông đột ngột.",
   "core_vocabulary": [
     {
@@ -30688,7 +30688,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'According to' (theo như) đứng đầu câu để trích dẫn nguồn thông tin/quy định.",
-  "explanation_grammar": "Preposition 'According to'.",
+  "explanation_grammar": "Giới từ 'according to'",
   "translation": "Theo các điều khoản của thỏa thuận, cả hai bên phải phê duyệt mọi thay đổi lịch trình bằng văn bản.",
   "core_vocabulary": [
     {
@@ -30715,7 +30715,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'before' chỉ trình tự trước một hành động khác.",
-  "explanation_grammar": "Preposition of Time (Before).",
+  "explanation_grammar": "Giới từ chỉ hạn chót",
   "translation": "Vui lòng đảm bảo tất cả các tệp bảo mật được lưu an toàn trước khi tắt máy tính của bạn trong ngày.",
   "core_vocabulary": [
     {
@@ -30742,7 +30742,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'on' để chỉ chủ đề (về cái gì).",
-  "explanation_grammar": "Preposition of Topic/On.",
+  "explanation_grammar": "Giới từ chỉ chủ đề",
   "translation": "Bà Nguyễn đã trình bày một bài thuyết trình rất chi tiết về chiến lược mở rộng quốc tế sắp tới.",
   "core_vocabulary": [
     {
@@ -30769,7 +30769,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'throughout' chỉ sự bao quát toàn bộ một không gian.",
-  "explanation_grammar": "Preposition of Place (Throughout).",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Có các trạm rửa tay sát khuẩn tự động nằm khắp cơ sở sản xuất để đảm bảo an toàn cho bạn.",
   "core_vocabulary": [
     {
@@ -30796,7 +30796,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'for' dùng để chỉ khoảng thời gian hiệu lực.",
-  "explanation_grammar": "Preposition of Time (Duration).",
+  "explanation_grammar": "Giới từ chỉ khoảng thời gian",
   "translation": "Chế độ bảo hành của nhà sản xuất đối với máy tính xách tay Zephyr có giá trị trong ba năm liên tiếp.",
   "core_vocabulary": [
     {
@@ -30823,7 +30823,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ phức hợp 'In addition to' (ngoài ra/thêm vào đó) chỉ sự bổ sung.",
-  "explanation_grammar": "Preposition 'In addition to'.",
+  "explanation_grammar": "Giới từ 'in addition to'",
   "translation": "Ngoài mức lương cạnh tranh cao, Tập đoàn Orion còn cung cấp các quyền lợi về y tế và nha khoa tuyệt vời.",
   "core_vocabulary": [
     {
@@ -30851,7 +30851,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'at' dùng để chỉ một địa điểm cụ thể nơi sự kiện diễn ra.",
-  "explanation_grammar": "Preposition of Place (At).",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Chuyến nghỉ dưỡng hàng năm của nhân viên sẽ diễn ra tại Khách sạn Lakeside vào năm nay.",
   "core_vocabulary": [
     {
@@ -30878,7 +30878,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "'Following' đóng vai trò là một giới từ có nghĩa là 'sau khi'.",
-  "explanation_grammar": "Preposition 'Following'.",
+  "explanation_grammar": "Giới từ 'following'",
   "translation": "Sau bản cập nhật phần mềm gần đây, một số người dùng đã gặp phải sự cố đăng nhập.",
   "core_vocabulary": [
     {
@@ -30905,7 +30905,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'before' dùng để chỉ trình tự thời gian (trước khi).",
-  "explanation_grammar": "Preposition of Time (Before).",
+  "explanation_grammar": "Giới từ chỉ hạn chót",
   "translation": "Bà Alvez chịu trách nhiệm xem xét tất cả các hợp đồng trước khi chúng được gửi cho khách hàng.",
   "core_vocabulary": [
     {
@@ -30932,7 +30932,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'between' đi kèm với cấu trúc 'A and B'.",
-  "explanation_grammar": "Preposition 'Between'.",
+  "explanation_grammar": "Giới từ 'between'",
   "translation": "Căng tin ở tầng một mở cửa từ 7 giờ sáng đến 3 giờ chiều.",
   "core_vocabulary": [
     {
@@ -30954,7 +30954,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'since' chỉ mốc thời gian bắt đầu một sự việc kéo dài đến hiện tại.",
-  "explanation_grammar": "Preposition of Time (Since).",
+  "explanation_grammar": "Giới từ chỉ thời gian",
   "translation": "Ông Chen đã đi công tác khỏi thành phố kể từ thứ Ba tuần trước.",
   "core_vocabulary": [
     {
@@ -30976,7 +30976,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'by' để chỉ thời hạn chót (deadline).",
-  "explanation_grammar": "Preposition of Time (By).",
+  "explanation_grammar": "Giới từ chỉ hạn chót",
   "translation": "Vui lòng đảm bảo trả lại xe của công ty trước 5 giờ chiều ngày mai.",
   "core_vocabulary": [
     {
@@ -30998,7 +30998,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cụm 'aimed at' (nhắm vào/hướng đến) là cấu trúc cố định.",
-  "explanation_grammar": "Verb + Preposition.",
+  "explanation_grammar": "Động từ + giới từ (cụm cố định)",
   "translation": "Chiến dịch tiếp thị mới nhắm vào các chuyên gia trẻ ở các khu vực đô thị.",
   "core_vocabulary": [
     {
@@ -31025,7 +31025,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'Despite' (mặc dù) đứng trước cụm danh từ.",
-  "explanation_grammar": "Preposition of Concession.",
+  "explanation_grammar": "Giới từ chỉ sự nhượng bộ",
   "translation": "Bất chấp sự thiếu kinh nghiệm của mình, ông Gupta đã nhanh chóng thích nghi với vai trò mới.",
   "core_vocabulary": [
     {
@@ -31052,7 +31052,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'on' dùng cho các buổi trong ngày cụ thể (Wednesday afternoon).",
-  "explanation_grammar": "Preposition of Time (On).",
+  "explanation_grammar": "Giới từ chỉ thời gian",
   "translation": "Buổi hội thảo về quản lý thời gian sẽ được tổ chức vào chiều thứ Tư.",
   "core_vocabulary": [
     {
@@ -31074,7 +31074,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cụm 'at all times' (mọi lúc) là một thành ngữ cố định.",
-  "explanation_grammar": "Fixed Prepositional Idiom.",
+  "explanation_grammar": "Cụm giới từ cố định",
   "translation": "Tất cả nhân viên phải đeo thẻ nhận dạng của họ mọi lúc khi ở trong tòa nhà.",
   "core_vocabulary": [
     {
@@ -31101,7 +31101,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'with' chỉ sự đi kèm cùng với vật gì đó.",
-  "explanation_grammar": "Preposition 'with'.",
+  "explanation_grammar": "Giới từ 'with'",
   "translation": "Mẫu điện thoại thông minh mới nhất của Apex Electronics đi kèm với chế độ bảo hành một năm.",
   "core_vocabulary": [
     {
@@ -31123,7 +31123,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ/Liên từ 'until' chỉ sự tiếp diễn của một trạng thái cho đến một thời điểm cụ thể.",
-  "explanation_grammar": "Preposition of Time (Until).",
+  "explanation_grammar": "Giới từ chỉ hạn chót",
   "translation": "Hành khách được yêu cầu ngồi yên tại chỗ cho đến khi máy bay dừng hẳn.",
   "core_vocabulary": [
     {
@@ -31145,7 +31145,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'near' chỉ vị trí gần.",
-  "explanation_grammar": "Preposition of Place (Near).",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Văn phòng chính của Bright Solutions nằm gần hai con đường cao tốc lớn.",
   "core_vocabulary": [
     {
@@ -31167,7 +31167,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ phức hợp 'Because of' đứng trước cụm danh từ chỉ lý do.",
-  "explanation_grammar": "Preposition of Cause.",
+  "explanation_grammar": "Giới từ chỉ nguyên nhân",
   "translation": "Vì kỳ nghỉ cuối tuần sắp tới, bộ phận kế toán sẽ đóng cửa sớm vào thứ Sáu.",
   "core_vocabulary": [
     {
@@ -31189,7 +31189,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'with' chỉ phương tiện hoặc cách thức đạt được điều gì đó (với sự giúp đỡ).",
-  "explanation_grammar": "Preposition 'with'.",
+  "explanation_grammar": "Giới từ 'with'",
   "translation": "Bà Fischer đã hoàn thành dự án thành công với sự giúp đỡ của đội ngũ tận tâm của mình.",
   "core_vocabulary": [
     {
@@ -31211,7 +31211,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'on' dùng cho các phương tiện truyền thông nội bộ hoặc internet.",
-  "explanation_grammar": "Preposition of Place (Media).",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Bài phát biểu chính của CEO sẽ được phát trực tiếp trên mạng nội bộ của công ty.",
   "core_vocabulary": [
     {
@@ -31238,7 +31238,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "'Prior to' là giới từ phức hợp có nghĩa là 'trước khi'.",
-  "explanation_grammar": "Preposition 'Prior to'.",
+  "explanation_grammar": "Giới từ 'prior to'",
   "translation": "Vui lòng xem lại tài liệu đính kèm trước khi đưa ra phê duyệt cuối cùng.",
   "core_vocabulary": [
     {
@@ -31265,7 +31265,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'throughout' chỉ sự bao phủ toàn bộ không gian/phạm vi.",
-  "explanation_grammar": "Preposition 'Throughout'.",
+  "explanation_grammar": "Giới từ 'throughout'",
   "translation": "Hệ thống theo dõi hàng tồn kho mới đã được triển khai trong toàn bộ cửa hàng bán lẻ vào tuần trước.",
   "core_vocabulary": [
     {
@@ -31292,7 +31292,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'for' chỉ mục đích hoặc lý do (vì lý do cá nhân).",
-  "explanation_grammar": "Preposition of Reason.",
+  "explanation_grammar": "Giới từ chỉ nguyên nhân",
   "translation": "Ông Rossi sẽ nghỉ phép vì lý do cá nhân.",
   "core_vocabulary": [
     {
@@ -31314,7 +31314,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cụm 'In addition to' (ngoài ra/thêm vào đó) là cấu trúc cố định.",
-  "explanation_grammar": "Fixed Prepositional Phrase.",
+  "explanation_grammar": "Cụm giới từ cố định",
   "translation": "Ngoài các công việc thường xuyên của mình, David hiện đang quản lý các tài khoản mạng xã hội.",
   "core_vocabulary": [
     {
@@ -31336,7 +31336,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'next to' (bên cạnh) chỉ vị trí sát gần.",
-  "explanation_grammar": "Preposition of Place.",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Quầy dịch vụ khách hàng nằm ở vị trí thuận tiện ngay bên cạnh cổng chính.",
   "core_vocabulary": [
     {
@@ -31358,7 +31358,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'during' chỉ một khoảng thời gian diễn ra sự việc.",
-  "explanation_grammar": "Preposition of Time (During).",
+  "explanation_grammar": "Giới từ chỉ khoảng thời gian",
   "translation": "Nhà máy sản xuất sẽ tạm dừng hoạt động để bảo trì trong tuần đầu tiên của tháng Tám.",
   "core_vocabulary": [
     {
@@ -31380,7 +31380,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ phức hợp 'due to' đứng trước cụm danh từ chỉ lý do.",
-  "explanation_grammar": "Preposition of Cause.",
+  "explanation_grammar": "Giới từ chỉ nguyên nhân",
   "translation": "Đề xuất do Zenith Consulting nộp đã được chọn nhờ cách tiếp cận sáng tạo của nó.",
   "core_vocabulary": [
     {
@@ -31402,7 +31402,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'for' chỉ một khoảng thời gian (hơn một thập kỷ).",
-  "explanation_grammar": "Preposition of Time (Duration).",
+  "explanation_grammar": "Giới từ chỉ khoảng thời gian",
   "translation": "Tiến sĩ Lee đã làm việc tại Phòng khám Greenfield trong hơn một thập kỷ.",
   "core_vocabulary": [
     {
@@ -31424,7 +31424,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'inside' chỉ vị trí bên trong một khu vực giới hạn.",
-  "explanation_grammar": "Preposition of Place.",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Khách tham quan không được phép vào bên trong khu vực phòng thí nghiệm hạn chế nếu không có người đi kèm.",
   "core_vocabulary": [
     {
@@ -31452,7 +31452,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'at' dùng để chỉ một địa điểm cụ thể (tên quán cà phê).",
-  "explanation_grammar": "Preposition of Place (At).",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Bà Tanaka thường xem xét các báo cáo tài chính tại quán Cà phê Starburst trên đường Main.",
   "core_vocabulary": [
     {
@@ -31474,7 +31474,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'for' dùng để chỉ một khoảng thời gian (3 tháng).",
-  "explanation_grammar": "Preposition of Time (Duration).",
+  "explanation_grammar": "Giới từ chỉ khoảng thời gian",
   "translation": "Nhóm tiếp thị tại K-Tech Industries đã thực hiện chiến dịch này trong ba tháng.",
   "core_vocabulary": [
     {
@@ -31496,7 +31496,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ phức hợp 'Because of' đứng trước cụm danh từ chỉ lý do.",
-  "explanation_grammar": "Preposition of Cause.",
+  "explanation_grammar": "Giới từ chỉ nguyên nhân",
   "translation": "Do cơn tuyết rơi dày đặc, ông Reynolds đã quyết định làm việc tại nhà vào thứ Ba.",
   "core_vocabulary": [
     {
@@ -31518,7 +31518,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'inside' (bên trong) chỉ vị trí trong một không gian lớn hơn.",
-  "explanation_grammar": "Preposition of Place.",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Trung tâm thể dục mới nằm ở vị trí thuận tiện bên trong trung tâm mua sắm Horizon Plaza.",
   "core_vocabulary": [
     {
@@ -31540,7 +31540,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'by' để chỉ thời hạn chót (trước hoặc tại thời điểm đó).",
-  "explanation_grammar": "Preposition of Time (By).",
+  "explanation_grammar": "Giới từ chỉ hạn chót",
   "translation": "Tiến sĩ Singh cần tất cả các biểu mẫu đánh giá bệnh nhân được hoàn thành trước cuối ngày.",
   "core_vocabulary": [
     {
@@ -31562,7 +31562,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "'Except for' là giới từ phức hợp chỉ sự loại trừ.",
-  "explanation_grammar": "Preposition 'Except for'.",
+  "explanation_grammar": "Giới từ 'except for'",
   "translation": "Tất cả các chuyến bay nội địa của Stellar Airlines đã được đặt hết chỗ, ngoại trừ chuyến khởi hành lúc 8 giờ tối.",
   "core_vocabulary": [
     {
@@ -31589,7 +31589,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cụm 'coordinate with' có nghĩa là phối hợp cùng với ai/bộ phận nào.",
-  "explanation_grammar": "Verb + Preposition.",
+  "explanation_grammar": "Động từ + giới từ (cụm cố định)",
   "translation": "Ông O'Connor sẽ phối hợp tổ chức sự kiện từ thiện sắp tới cùng với bộ phận quan hệ công chúng.",
   "core_vocabulary": [
     {
@@ -31611,7 +31611,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'during' chỉ một khoảng thời gian diễn ra sự việc (trong suốt chuyến tham quan).",
-  "explanation_grammar": "Preposition of Time (During).",
+  "explanation_grammar": "Giới từ chỉ khoảng thời gian",
   "translation": "Vui lòng đeo thẻ khách của bạn mọi lúc trong suốt chuyến tham quan cơ sở vật chất.",
   "core_vocabulary": [
     {
@@ -31633,7 +31633,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'on' dùng cho vị trí các tầng trong tòa nhà.",
-  "explanation_grammar": "Preposition of Place (Floors).",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Nhóm hỗ trợ khách hàng của Nexus Software làm việc ở tầng hai.",
   "core_vocabulary": [
     {
@@ -31660,7 +31660,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'Despite' đứng trước cụm danh từ để chỉ sự nhượng bộ (mặc dù).",
-  "explanation_grammar": "Preposition of Concession.",
+  "explanation_grammar": "Giới từ chỉ sự nhượng bộ",
   "translation": "Bất chấp lịch trình bận rộn, bà Dubois vẫn tham dự bữa tiệc nghỉ hưu của đồng nghiệp mình.",
   "core_vocabulary": [
     {
@@ -31687,7 +31687,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'to' chỉ hướng đến một đối tượng nhận.",
-  "explanation_grammar": "Preposition of Direction.",
+  "explanation_grammar": "Giới từ chỉ hướng",
   "translation": "Vui lòng gửi các tài liệu thuế đã ký trực tiếp đến văn phòng kế toán.",
   "core_vocabulary": [
     {
@@ -31709,7 +31709,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ phức hợp 'due to' chỉ lý do (nhờ vào/do).",
-  "explanation_grammar": "Preposition of Cause.",
+  "explanation_grammar": "Giới từ chỉ nguyên nhân",
   "translation": "Ông Park đã được chọn cho giải thưởng lãnh đạo nhờ vào đóng góp xuất sắc của ông cho dự án.",
   "core_vocabulary": [
     {
@@ -31736,7 +31736,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'regarding' có nghĩa là 'về/liên quan đến'.",
-  "explanation_grammar": "Preposition 'Regarding'.",
+  "explanation_grammar": "Giới từ 'regarding'",
   "translation": "Người quản lý đã nhận được một số phàn nàn liên quan đến bố cục khó hiểu của trang web mới.",
   "core_vocabulary": [
     {
@@ -31763,7 +31763,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ/Liên từ 'since' dùng để chỉ mốc thời gian bắt đầu hành động.",
-  "explanation_grammar": "Preposition of Time (Since).",
+  "explanation_grammar": "Giới từ chỉ thời gian",
   "translation": "Bà Silva đã giữ chức quản lý chi nhánh kể từ khi giám đốc tiền nhiệm nghỉ hưu.",
   "core_vocabulary": [
     {
@@ -31785,7 +31785,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "Giới từ",
   "explanation_reason": "Cấu trúc 'between A and B'.",
-  "explanation_grammar": "Preposition 'Between'.",
+  "explanation_grammar": "Giới từ 'between'",
   "translation": "Chi nhánh mới của Summit Electronics sẽ mở cửa nằm giữa hiệu sách và hiệu thuốc.",
   "core_vocabulary": [
     {
@@ -31807,7 +31807,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ phức hợp 'instead of' (thay cho) phù hợp với ngữ cảnh phân công công việc.",
-  "explanation_grammar": "Compound Preposition.",
+  "explanation_grammar": "Giới từ ghép",
   "translation": "Ông Wagner sẽ thay mặt chủ tịch công ty đọc diễn văn chào mừng vào ngày hôm nay.",
   "core_vocabulary": [
     {
@@ -31829,7 +31829,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'throughout' chỉ sự áp dụng trên toàn bộ phạm vi.",
-  "explanation_grammar": "Preposition 'Throughout'.",
+  "explanation_grammar": "Giới từ 'throughout'",
   "translation": "Các quy định an toàn đã cập nhật sẽ được thực thi trong toàn bộ nhà máy bắt đầu từ tuần tới.",
   "core_vocabulary": [
     {
@@ -31856,7 +31856,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'before' chỉ trình tự thời gian trước một hành động.",
-  "explanation_grammar": "Preposition of Time (Before).",
+  "explanation_grammar": "Giới từ chỉ hạn chót",
   "translation": "Vui lòng nhớ tắt đèn trước khi rời khỏi phòng hội nghị.",
   "core_vocabulary": [
     {
@@ -31883,7 +31883,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ phức hợp 'According to' (theo như) dùng để trích dẫn quy định.",
-  "explanation_grammar": "Preposition 'According to'.",
+  "explanation_grammar": "Giới từ 'according to'",
   "translation": "Theo chính sách của công ty, tất cả các báo cáo chi phí phải bao gồm biên lai gốc.",
   "core_vocabulary": [
     {
@@ -31910,7 +31910,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "'In case' (phòng khi) dùng để chuẩn bị cho một tình huống có thể xảy ra.",
-  "explanation_grammar": "Conjunction (Adverbial Clause of Condition).",
+  "explanation_grammar": "Liên từ chỉ điều kiện",
   "translation": "Vui lòng giữ lại email xác nhận này phòng khi bạn cần thay đổi thông tin đặt chỗ.",
   "core_vocabulary": [
     {
@@ -31937,7 +31937,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'near' chỉ vị trí gần.",
-  "explanation_grammar": "Preposition of Place (Near).",
+  "explanation_grammar": "Giới từ chỉ nơi chốn",
   "translation": "Buổi dã ngoại hàng năm của công ty sẽ được tổ chức tại nhà lều gần cổng chính của Công viên Green Valley.",
   "core_vocabulary": [
     {
@@ -31959,7 +31959,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ phức hợp 'In addition to' (ngoài ra/thêm vào đó) chỉ sự bổ sung trách nhiệm.",
-  "explanation_grammar": "Preposition 'In addition to'.",
+  "explanation_grammar": "Giới từ 'in addition to'",
   "translation": "Bên cạnh vai trò là nhà thiết kế chính, bà Bennett còn đào tạo các thực tập sinh mới.",
   "core_vocabulary": [
     {
@@ -31981,7 +31981,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ/Liên từ 'until' chỉ trạng thái kéo dài cho tới khi sự việc khác xảy ra.",
-  "explanation_grammar": "Preposition/Conjunction of Time (Until).",
+  "explanation_grammar": "Giới từ chỉ hạn chót",
   "translation": "Quầy đăng ký tại quán cà phê Blue Wave sẽ tiếp tục mở cửa cho đến khi diễn giả cuối cùng kết thúc bài thuyết trình.",
   "core_vocabulary": [
     {
@@ -32008,7 +32008,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'from' chỉ điểm xuất phát/nguồn gốc.",
-  "explanation_grammar": "Preposition 'From'.",
+  "explanation_grammar": "Giới từ 'from'",
   "translation": "Ông Clark gần đây đã chuyển đến trụ sở chính của chúng tôi từ văn phòng khu vực ở Chicago.",
   "core_vocabulary": [
     {
@@ -32035,7 +32035,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "Giới từ",
   "explanation_reason": "Giới từ 'on' dùng cho các ngày trong tuần.",
-  "explanation_grammar": "Preposition of Time (On).",
+  "explanation_grammar": "Giới từ chỉ thời gian",
   "translation": "Triển lãm nhiếp ảnh đặc biệt tại Bảo tàng Nghệ thuật Metro sẽ chính thức khai mạc vào thứ Sáu.",
   "core_vocabulary": [
     {
@@ -35663,7 +35663,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng chủ động (which starts -> starting).",
-  "explanation_grammar": "Reduced Relative Clause (Active).",
+  "explanation_grammar": "Mệnh đề quan hệ rút gọn (chủ động)",
   "translation": "Chúng tôi sẽ mở cửa trở lại sau hai tháng cải tạo với một đợt giảm giá lớn bắt đầu vào ngày 29.",
   "core_vocabulary": [
     {
@@ -35690,7 +35690,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' dùng làm đại từ quan hệ thay thế cho danh từ chỉ người 'those' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Để ghi nhận những người đã ở lại muộn để hoàn thành vụ Stevenson sớm hơn, ban quản lý sẽ tổ chức một bữa tiệc tối.",
   "core_vocabulary": [
     {
@@ -35717,7 +35717,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whether' dùng trong mệnh đề danh ngữ để chỉ sự nghi vấn (có hay không).",
-  "explanation_grammar": "Noun Clause (Whether).",
+  "explanation_grammar": "Mệnh đề danh ngữ với 'whether'",
   "translation": "Năm tới, một nhóm chuyên gia y tế sẽ nghiên cứu xem liệu các mô hình ánh sáng mặt trời có ảnh hưởng đến hành vi của con người và hành vi của da hay không.",
   "core_vocabulary": [
     {
@@ -35744,7 +35744,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'issue' làm tân ngữ cho động từ 'discuss'.",
-  "explanation_grammar": "Relative Pronoun (Object).",
+  "explanation_grammar": "Đại từ quan hệ làm tân ngữ",
   "translation": "Việc các quản lý sử dụng xe công ty là một vấn đề mà Giám đốc tài chính (CFO) đã định thảo luận với ông Carey.",
   "core_vocabulary": [
     {
@@ -35771,7 +35771,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "Dùng 'has been' (hiện tại hoàn thành) để chỉ một hành động bắt đầu trong quá khứ và kéo dài đến hiện tại, hòa hợp với chủ ngữ số ít 'George Ramos'.",
-  "explanation_grammar": "Subject-Verb Agreement / Present Perfect.",
+  "explanation_grammar": "Thì hiện tại hoàn thành",
   "translation": "Hãy cùng chúng tôi kỷ niệm sự nghỉ hưu của George Ramos, người đã làm việc với công ty trong hơn hai mươi năm.",
   "core_vocabulary": [
     {
@@ -35798,7 +35798,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' được dùng để lựa chọn trong một số lượng hạn chế các phương án.",
-  "explanation_grammar": "Wh-word in Noun Clause.",
+  "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
   "translation": "Bảng câu hỏi trực tuyến cho phép những người mua xe tiềm năng xác định chiếc xe nào có thể phù hợp với họ nhất.",
   "core_vocabulary": [
     {
@@ -35825,7 +35825,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Individual interest' (sở thích cá nhân/sự quan tâm cá nhân) là một cụm danh từ.",
-  "explanation_grammar": "Noun Phrase.",
+  "explanation_grammar": "Cụm danh từ",
   "translation": "Ông Zendaya là một nhân viên giỏi với sự quan tâm cá nhân đối với lĩnh vực tiếp thị.",
   "core_vocabulary": [
     {
@@ -35847,7 +35847,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' đóng vai trò chủ ngữ trong mệnh đề danh ngữ sau 'know'.",
-  "explanation_grammar": "Noun Clause (Who).",
+  "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
   "translation": "Quản lý muốn biết ai có thể sẵn lòng làm việc vào cuối tuần.",
   "core_vocabulary": [
     {
@@ -35869,7 +35869,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whose' thay thế cho tính từ sở hữu của danh từ chỉ người 'photographer'.",
-  "explanation_grammar": "Relative Pronoun (Possessive).",
+  "explanation_grammar": "Đại từ quan hệ sở hữu",
   "translation": "Nhiếp ảnh gia có hình ảnh được chọn cho trang bìa tạp chí năm nay sẽ được trao giải thưởng tiền mặt trị giá 10.000 đô la.",
   "core_vocabulary": [
     {
@@ -35896,7 +35896,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whichever' (bất cứ cái nào) nhấn mạnh sự lựa chọn không giới hạn.",
-  "explanation_grammar": "Compound Relative Pronoun.",
+  "explanation_grammar": "Đại từ quan hệ kép (whoever, whatever…)",
   "translation": "Cuốn sách có thể cung cấp cho bạn các mẹo về cách chăm sóc bất kỳ loại cây nào bạn có.",
   "core_vocabulary": [
     {
@@ -35918,7 +35918,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'That' thay thế cho danh từ chỉ vật 'checks' làm chủ ngữ trong mệnh đề quan hệ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Khách được yêu cầu thanh toán bằng séc được viết cho Enterprise Seminars.",
   "core_vocabulary": [
     {
@@ -35945,7 +35945,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'intern' trong mệnh đề quan hệ không giới hạn (có dấu phẩy).",
-  "explanation_grammar": "Non-restrictive Relative Clause.",
+  "explanation_grammar": "Mệnh đề quan hệ không xác định",
   "translation": "Laura Baker chịu trách nhiệm hướng dẫn thực tập sinh mới, người sẽ được tuyển dụng vào mùa hè này.",
   "core_vocabulary": [
     {
@@ -35972,7 +35972,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "Cấu trúc 'preposition + which'. 'In which' thay thế cho 'where' chỉ nơi chốn.",
-  "explanation_grammar": "Preposition + Relative Pronoun.",
+  "explanation_grammar": "Giới từ + đại từ quan hệ",
   "translation": "Đa số người dân Anniston coi thành phố này là một nơi tuyệt vời để làm việc và nuôi dạy gia đình.",
   "core_vocabulary": [
     {
@@ -35999,7 +35999,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whose' dùng để hỏi hoặc chỉ sự sở hữu đối với danh từ đi kèm ('whose proposal').",
-  "explanation_grammar": "Determinative Whose.",
+  "explanation_grammar": "Đại từ quan hệ sở hữu",
   "translation": "Ông Green là người sẽ quyết định đề xuất của ai sẽ được chọn vào cuối tháng.",
   "core_vocabulary": [
     {
@@ -36026,7 +36026,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật/tổ chức 'Mason Corporation' trong mệnh đề quan hệ không giới hạn.",
-  "explanation_grammar": "Non-restrictive Relative Clause.",
+  "explanation_grammar": "Mệnh đề quan hệ không xác định",
   "translation": "Tập đoàn Mason, nằm ở trung tâm thành phố, đang xem xét việc chuyển văn phòng ra vùng ngoại ô vì hầu hết nhân viên và khách hàng của họ sống ở đó.",
   "core_vocabulary": [
     {
@@ -36053,7 +36053,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'That' thay thế cho danh từ chỉ vật 'investment' làm chủ ngữ trong mệnh đề quan hệ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Cổ phiếu công nghệ mà bà Perkins mua năm ngoái là một khoản đầu tư đã tăng giá trị hơn bảy mươi lăm phần trăm.",
   "core_vocabulary": [
     {
@@ -36080,7 +36080,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'staff members' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Tôi cần bạn cung cấp cho tôi tên của tất cả các nhân viên đang yêu cầu thuyên chuyển nội bộ sang các bộ phận ở nước ngoài của chúng ta.",
   "core_vocabulary": [
     {
@@ -36107,7 +36107,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whose' thay thế cho tính từ sở hữu của 'Darren Maas'.",
-  "explanation_grammar": "Relative Pronoun (Possessive).",
+  "explanation_grammar": "Đại từ quan hệ sở hữu",
   "translation": "Darren Maas, người có cuốn sách mới nhất được xuất bản vào tháng Hai, đã từ bỏ công việc văn phòng của mình để trở thành một nhà văn toàn thời gian.",
   "core_vocabulary": [
     {
@@ -36129,7 +36129,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'Customers' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Khách hàng mua bốn cuốn sách bìa mềm có thể nhận thêm một cuốn sách bìa mềm khác có giá thấp hơn miễn phí.",
   "core_vocabulary": [
     {
@@ -36151,7 +36151,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whoever' (= Anyone who) làm chủ ngữ trong câu, bao hàm cả tiền ngữ và đại từ quan hệ.",
-  "explanation_grammar": "Compound Relative Pronoun as Subject.",
+  "explanation_grammar": "Đại từ quan hệ kép làm chủ ngữ",
   "translation": "Bất cứ ai quan tâm đến buổi hội thảo nên đăng ký tại quầy lễ tân.",
   "core_vocabulary": [
     {
@@ -36173,7 +36173,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'consultant' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Giám đốc tiếp thị đang tìm kiếm một tư vấn viên có thể giúp cải thiện sự hiện diện trên mạng xã hội của thương hiệu.",
   "core_vocabulary": [
     {
@@ -36200,7 +36200,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'seminar' trong mệnh đề quan hệ không giới hạn.",
-  "explanation_grammar": "Non-restrictive Relative Clause.",
+  "explanation_grammar": "Mệnh đề quan hệ không xác định",
   "translation": "Buổi hội thảo sắp tới về hậu cần chuỗi cung ứng, vốn ban đầu được lên lịch vào thứ Ba, đã được chuyển sang thứ Sáu.",
   "core_vocabulary": [
     {
@@ -36227,7 +36227,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whether' dùng trong mệnh đề danh ngữ để chỉ sự lựa chọn/nghi vấn (có hay không).",
-  "explanation_grammar": "Noun Clause (Whether).",
+  "explanation_grammar": "Mệnh đề danh ngữ với 'whether'",
   "translation": "Hội đồng quản trị sẽ quyết định xem liệu việc sáp nhập được đề xuất với Zenith Corp có khả thi về mặt tài chính hay không.",
   "core_vocabulary": [
     {
@@ -36254,7 +36254,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "Dùng hiện tại phân từ (V-ing) để chỉ kết quả của hành động đứng trước.",
-  "explanation_grammar": "Participle Clause for Result.",
+  "explanation_grammar": "Mệnh đề phân từ chỉ kết quả",
   "translation": "Sau mười năm làm việc, bà Lin đã quyết định từ chức, để lại một khoảng trống lãnh đạo đáng kể cho bộ phận.",
   "core_vocabulary": [
     {
@@ -36281,7 +36281,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'Employees' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Những nhân viên muốn đăng ký chương trình hoàn trả học phí phải nộp đơn trước cuối tháng.",
   "core_vocabulary": [
     {
@@ -36308,7 +36308,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng chủ động (which starts -> starting).",
-  "explanation_grammar": "Reduced Relative Clause (Active).",
+  "explanation_grammar": "Mệnh đề quan hệ rút gọn (chủ động)",
   "translation": "Đội bảo trì sẽ bắt đầu sửa chữa thang máy bắt đầu vào lúc 9 giờ sáng mai.",
   "core_vocabulary": [
     {
@@ -36330,7 +36330,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'Mr. Henderson' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Ông Henderson, người đã quản lý văn phòng khu vực từ năm 2015, sẽ được thăng chức thành Phó Chủ tịch.",
   "core_vocabulary": [
     {
@@ -36352,7 +36352,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'How' dùng trong mệnh đề danh ngữ để chỉ cách thức một sự việc xảy ra.",
-  "explanation_grammar": "Noun Clause (How).",
+  "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
   "translation": "Nhóm pháp lý vẫn đang điều tra cách thức vụ rò rỉ dữ liệu xảy ra bất chấp các giao thức bảo mật mới.",
   "core_vocabulary": [
     {
@@ -36379,7 +36379,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'partnership' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Chúng tôi vui mừng thông báo một mối quan hệ đối tác mới sẽ cho phép chúng tôi mở rộng dịch vụ vào Đông Nam Á.",
   "core_vocabulary": [
     {
@@ -36401,7 +36401,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whom' thay thế cho danh từ chỉ người 'investors' làm tân ngữ cho động từ 'invited'.",
-  "explanation_grammar": "Relative Pronoun (Object).",
+  "explanation_grammar": "Đại từ quan hệ làm tân ngữ",
   "translation": "Giám đốc điều hành hiện đang trong một cuộc họp với các nhà đầu tư mà bà đã mời đến tham quan nhà máy sản xuất mới.",
   "core_vocabulary": [
     {
@@ -36423,7 +36423,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng bị động (which was prepared -> prepared).",
-  "explanation_grammar": "Reduced Relative Clause (Passive).",
+  "explanation_grammar": "Mệnh đề quan hệ rút gọn (bị động)",
   "translation": "Báo cáo thường niên được chuẩn bị bởi bộ phận kế toán cho thấy lợi nhuận ròng tăng 15%.",
   "core_vocabulary": [
     {
@@ -36445,7 +36445,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whether' dùng để hỏi xem liệu việc đó có xảy ra hay không.",
-  "explanation_grammar": "Noun Clause (Whether).",
+  "explanation_grammar": "Mệnh đề danh ngữ với 'whether'",
   "translation": "Vui lòng thông báo cho bộ phận nhân sự liệu bạn có thể tham gia buổi đào tạo an toàn bắt buộc hay không.",
   "core_vocabulary": [
     {
@@ -36467,7 +36467,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'While' (trong khi) là liên từ chỉ thời gian nối hai mệnh đề.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Khách sạn phong cách sẽ đóng cửa trong ba tuần trong khi sảnh đang được sơn lại.",
   "core_vocabulary": [
     {
@@ -36489,7 +36489,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whose' thay thế cho tính từ sở hữu của 'Thompson' chỉ sở hữu đối với 'designs'.",
-  "explanation_grammar": "Relative Pronoun (Possessive).",
+  "explanation_grammar": "Đại từ quan hệ sở hữu",
   "translation": "Ông Thompson là kiến trúc sư cao cấp có các thiết kế cho trụ sở mới đã giành chiến thắng trong cuộc thi quốc tế.",
   "core_vocabulary": [
     {
@@ -36511,7 +36511,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho 'those' (chỉ người) làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Để thưởng cho những người đã liên tục đạt được mục tiêu doanh số hàng tháng, công ty đang tặng một chuyến đi nghỉ dưỡng cuối tuần.",
   "core_vocabulary": [
     {
@@ -36538,7 +36538,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng bị động (which was written -> written).",
-  "explanation_grammar": "Reduced Relative Clause (Passive).",
+  "explanation_grammar": "Mệnh đề quan hệ rút gọn (bị động)",
   "translation": "Bài nghiên cứu được viết bởi Tiến sĩ Arisaka cung cấp những hiểu biết mới về hành vi của người tiêu dùng trong kỷ nguyên kỹ thuật số.",
   "core_vocabulary": [
     {
@@ -36560,7 +36560,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'When' đóng vai trò là từ nối chỉ thời gian trong mệnh đề danh ngữ.",
-  "explanation_grammar": "Noun Clause (When).",
+  "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
   "translation": "Khách hàng muốn biết khi nào lô hàng linh kiện điện tử sẽ đến kho.",
   "core_vocabulary": [
     {
@@ -36582,7 +36582,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'update' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Bản cập nhật phần mềm được phát hành đêm qua đã gây ra một số vấn đề kỹ thuật với hệ thống trả lương.",
   "core_vocabulary": [
     {
@@ -36604,7 +36604,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'That' làm từ nối trong mệnh đề danh ngữ đóng vai trò tân ngữ.",
-  "explanation_grammar": "Noun Clause (That).",
+  "explanation_grammar": "Mệnh đề danh ngữ với 'that'",
   "translation": "Trước khi tung ra sản phẩm, chúng ta phải xác nhận rằng tất cả các quy định an toàn đã được tuân thủ nghiêm ngặt.",
   "core_vocabulary": [
     {
@@ -36626,7 +36626,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'receptionist' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Công ty đang tìm kiếm một nhân viên lễ tân song ngữ thành thạo cả tiếng Anh và tiếng Nhật.",
   "core_vocabulary": [
     {
@@ -36653,7 +36653,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng bị động (which was given -> given).",
-  "explanation_grammar": "Reduced Relative Clause (Passive).",
+  "explanation_grammar": "Mệnh đề quan hệ rút gọn (bị động)",
   "translation": "Bài thuyết trình được trình bày bởi người quản lý dự án ngày hôm qua đã được các bên liên quan đón nhận rất nồng nhiệt.",
   "core_vocabulary": [
     {
@@ -36675,7 +36675,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' dùng để lựa chọn trong một số lượng giới hạn các phương án.",
-  "explanation_grammar": "Wh-word in Noun Clause.",
+  "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
   "translation": "Người quản lý cần xác định xem ai trong số hai ứng viên phù hợp hơn cho vai trò hậu cần.",
   "core_vocabulary": [
     {
@@ -36697,7 +36697,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whom' thay thế cho danh từ chỉ người 'Ms. Park' làm tân ngữ cho động từ 'selected'.",
-  "explanation_grammar": "Relative Pronoun (Object).",
+  "explanation_grammar": "Đại từ quan hệ làm tân ngữ",
   "translation": "Bà Park, người mà ủy ban đã chọn làm diễn giả chính, có hơn ba mươi năm kinh nghiệm trong lĩnh vực tài chính.",
   "core_vocabulary": [
     {
@@ -36719,7 +36719,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'contract' làm tân ngữ cho động từ 'signed'.",
-  "explanation_grammar": "Relative Pronoun (Object).",
+  "explanation_grammar": "Đại từ quan hệ làm tân ngữ",
   "translation": "Hợp đồng mà bạn đã ký tuần trước nêu rõ các điều khoản của gói trợ cấp thôi việc.",
   "core_vocabulary": [
     {
@@ -36741,7 +36741,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Now' là trạng từ chỉ thời gian phù hợp với thì hiện tại tiếp diễn.",
-  "explanation_grammar": "Adverb of Time.",
+  "explanation_grammar": "Trạng từ chỉ thời gian",
   "translation": "Kỹ thuật viên đang kiểm tra máy chủ ngay bây giờ để xác định nguyên nhân của các vụ sập hệ thống gần đây.",
   "core_vocabulary": [
     {
@@ -36768,7 +36768,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'analyst' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Giám đốc chuỗi cung ứng đang tìm kiếm một nhà phân tích dữ liệu có thể giúp tối ưu hóa các tuyến vận chuyển quốc tế của chúng tôi.",
   "core_vocabulary": [
     {
@@ -36795,7 +36795,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'software' trong mệnh đề quan hệ không giới hạn.",
-  "explanation_grammar": "Non-restrictive Relative Clause.",
+  "explanation_grammar": "Mệnh đề quan hệ không xác định",
   "translation": "Phần mềm khai báo hải quan mới, vốn thường mất hai giờ để xử lý, đã được cập nhập để chạy trong vài phút.",
   "core_vocabulary": [
     {
@@ -36817,7 +36817,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whether' dùng trong mệnh đề danh ngữ để chỉ sự lựa chọn/nghi vấn (có hay không).",
-  "explanation_grammar": "Noun Clause (Whether).",
+  "explanation_grammar": "Mệnh đề danh ngữ với 'whether'",
   "translation": "Ban quản lý cần đánh giá xem liệu việc tích hợp VNACCS/VCIS mới có cải thiện năng suất thông quan tổng thể hay không.",
   "core_vocabulary": [
     {
@@ -36844,7 +36844,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "Dùng hiện tại phân từ (V-ing) để chỉ kết quả của hành động đứng trước.",
-  "explanation_grammar": "Participle Clause for Result.",
+  "explanation_grammar": "Mệnh đề phân từ chỉ kết quả",
   "translation": "Sau khi xem xét ngân sách vận chuyển, bà Albright đã quyết định hợp nhất hàng hóa, giúp giảm đáng kể chi phí vận chuyển.",
   "core_vocabulary": [
     {
@@ -36871,7 +36871,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'coordinators' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Các điều phối viên hậu cần cần gia hạn thời gian xếp hàng lên container phải liên hệ ngay với chính quyền cảng.",
   "core_vocabulary": [
     {
@@ -36898,7 +36898,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng chủ động (which starts -> starting).",
-  "explanation_grammar": "Reduced Relative Clause (Active).",
+  "explanation_grammar": "Mệnh đề quan hệ rút gọn (chủ động)",
   "translation": "Đội ngũ kho bãi sẽ bắt đầu xếp 1.258 bo mạch chủ máy tính lên các pallet bắt đầu lúc 9 giờ sáng mai.",
   "core_vocabulary": [
     {
@@ -36925,7 +36925,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'Dr. Robertson' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Tiến sĩ Robertson, người đã nghiên cứu về tính bền vững của chuỗi cung ứng từ năm 2010, sẽ dẫn dắt sáng kiến mới này.",
   "core_vocabulary": [
     {
@@ -36952,7 +36952,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Why' dùng trong mệnh đề danh ngữ để giải thích lý do/nguyên nhân.",
-  "explanation_grammar": "Noun Clause (Why).",
+  "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
   "translation": "Nhóm phân tích dữ liệu đang cố gắng tìm ra lý do tại sao tỷ lệ lỗi lại tăng vọt trong quá trình nội suy Newton.",
   "core_vocabulary": [
     {
@@ -36979,7 +36979,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'tool' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Chúng tôi rất hào hứng giới thiệu một công cụ tối ưu hóa tải trọng mới sẽ giúp tinh giản quy trình đóng hàng vào container của chúng tôi.",
   "core_vocabulary": [
     {
@@ -37006,7 +37006,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whom' thay thế cho danh từ chỉ người 'candidates' làm tân ngữ cho động từ 'recommended'.",
-  "explanation_grammar": "Relative Pronoun (Object).",
+  "explanation_grammar": "Đại từ quan hệ làm tân ngữ",
   "translation": "Người quản lý dự án hiện đang phỏng vấn các ứng viên mà công ty tuyển dụng đã đề xuất cho vai trò điều phối viên WBS.",
   "core_vocabulary": [
     {
@@ -37033,7 +37033,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng bị động (which was calculated -> calculated).",
-  "explanation_grammar": "Reduced Relative Clause (Passive).",
+  "explanation_grammar": "Mệnh đề quan hệ rút gọn (bị động)",
   "translation": "Báo cáo ước tính thời gian được tính toán bởi nhóm dự án chỉ ra rằng đường găng sẽ mất ba tuần.",
   "core_vocabulary": [
     {
@@ -37060,7 +37060,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'That' làm từ nối trong mệnh đề danh ngữ đóng vai trò tân ngữ để truyền đạt một thông tin/sự thật.",
-  "explanation_grammar": "Noun Clause (That).",
+  "explanation_grammar": "Mệnh đề danh ngữ với 'that'",
   "translation": "Vui lòng cho bộ phận thu mua biết rằng lô hàng táo tươi từ Mỹ yêu cầu kho lạnh.",
   "core_vocabulary": [
     {
@@ -37087,7 +37087,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'While' (trong khi) là liên từ chỉ thời gian nối hai mệnh đề.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Trung tâm phân phối chính sẽ không hoạt động trong hai ngày trong khi thiết bị phân loại tự động đang được nâng cấp.",
   "core_vocabulary": [
     {
@@ -37114,7 +37114,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whose' thay thế cho tính từ sở hữu của 'Gomez' chỉ sở hữu đối với 'regression chart'.",
-  "explanation_grammar": "Relative Pronoun (Possessive).",
+  "explanation_grammar": "Đại từ quan hệ sở hữu",
   "translation": "Bà Gomez là nhà phân tích cao cấp có biểu đồ hồi quy đã dự đoán chính xác sự tăng vọt nhu cầu theo mùa.",
   "core_vocabulary": [
     {
@@ -37141,7 +37141,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho 'those' (chỉ người) làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Để ghi nhận những người đã quản lý thành công 'tam giác sắt' gồm chi phí, tiến độ và chất lượng, Giám đốc điều hành đang tổ chức một bữa tiệc gala.",
   "core_vocabulary": [
     {
@@ -37163,7 +37163,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng bị động (which was developed -> developed).",
-  "explanation_grammar": "Reduced Relative Clause (Passive).",
+  "explanation_grammar": "Mệnh đề quan hệ rút gọn (bị động)",
   "translation": "Cấu trúc phân chia công việc được thiết lập bởi nhóm kỹ thuật phác thảo một trình tự các nhiệm vụ hợp lý hơn.",
   "core_vocabulary": [
     {
@@ -37185,7 +37185,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'When' dùng trong mệnh đề danh ngữ làm từ nối chỉ thời gian.",
-  "explanation_grammar": "Noun Clause (When).",
+  "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
   "translation": "Các khách hàng muốn làm rõ khi nào mã HS mới cho đồ điện tử nhập khẩu sẽ có hiệu lực tại thị trường địa phương.",
   "core_vocabulary": [
     {
@@ -37212,7 +37212,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'schedule' trong mệnh đề quan hệ không giới hạn.",
-  "explanation_grammar": "Non-restrictive Relative Clause.",
+  "explanation_grammar": "Mệnh đề quan hệ không xác định",
   "translation": "Lịch vận chuyển đã sửa đổi, vốn được phân phát vào tuần trước, có chứa các hướng dẫn cập nhật cho vận tải quốc tế.",
   "core_vocabulary": [
     {
@@ -37239,7 +37239,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'That' làm từ nối trong mệnh đề danh ngữ đóng vai trò tân ngữ.",
-  "explanation_grammar": "Noun Clause (That).",
+  "explanation_grammar": "Mệnh đề danh ngữ với 'that'",
   "translation": "Trước khi hoàn thiện biểu đồ PERT, chúng ta cần đảm bảo rằng tất cả các phụ thuộc công việc đã được vạch ra một cách chính xác.",
   "core_vocabulary": [
     {
@@ -37266,7 +37266,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'specialist' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Công ty đang tìm kiếm một chuyên gia hậu cần người quen thuộc với cả các quy định vận tải hàng không và vận tải đường biển.",
   "core_vocabulary": [
     {
@@ -37293,7 +37293,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng bị động (which was delivered -> delivered).",
-  "explanation_grammar": "Reduced Relative Clause (Passive).",
+  "explanation_grammar": "Mệnh đề quan hệ rút gọn (bị động)",
   "translation": "Bài diễn văn chính về chuỗi cung ứng dựa trên dữ liệu được trình bày bởi người sáng lập của chúng tôi đã truyền cảm hứng cho nhiều nhà phân tích trẻ trong khán phòng.",
   "core_vocabulary": [
     {
@@ -37320,7 +37320,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' dùng để lựa chọn trong một số lượng giới hạn các phương án.",
-  "explanation_grammar": "Wh-word in Noun Clause.",
+  "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
   "translation": "Người quản lý phải quyết định loại pallet nào trong hai loại là phù hợp nhất để cố định các linh kiện điện tử dễ vỡ.",
   "core_vocabulary": [
     {
@@ -37342,7 +37342,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whom' thay thế cho danh từ chỉ người 'Mr. Zhao' làm tân ngữ cho động từ 'appointed'.",
-  "explanation_grammar": "Relative Pronoun (Object).",
+  "explanation_grammar": "Đại từ quan hệ làm tân ngữ",
   "translation": "Ông Zhao, người mà hội đồng quản trị đã chỉ định làm giám đốc hậu cần tạm thời, có kinh nghiệm sâu rộng trong việc tính toán khả năng chịu tải.",
   "core_vocabulary": [
     {
@@ -37369,7 +37369,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'agreement' làm tân ngữ cho động từ 'signed'.",
-  "explanation_grammar": "Relative Pronoun (Object).",
+  "explanation_grammar": "Đại từ quan hệ làm tân ngữ",
   "translation": "Thỏa thuận bảo mật mà bạn đã ký khi được tuyển dụng cấm việc chia sẻ các tài liệu hải quan nội bộ.",
   "core_vocabulary": [
     {
@@ -37396,7 +37396,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Now' là trạng từ chỉ thời gian phù hợp với thì hiện tại tiếp diễn.",
-  "explanation_grammar": "Adverb of Time.",
+  "explanation_grammar": "Trạng từ chỉ thời gian",
   "translation": "Nhà phân tích dữ liệu đang kiểm tra cơ sở dữ liệu ngay bây giờ để xác định nguyên nhân của các sai lệch hàng tồn kho gần đây.",
   "core_vocabulary": [
     {
@@ -37408,556 +37408,676 @@ export const grammarQuestions = [
 },
 {
   "id": "q1431",
-  "question": "The supply chain director is looking for a data analyst ------- can help optimize our international shipping routes.",
+  "question": "The publishing house is seeking an editor ------- can manage both print and digital titles.",
   "options": {
-    "A": "who",
-    "B": "which",
-    "C": "whom",
-    "D": "what"
+  "A": "which",
+  "B": "whom",
+  "C": "who",
+  "D": "what"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'analyst' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
-  "translation": "Giám đốc chuỗi cung ứng đang tìm kiếm một nhà phân tích dữ liệu có thể giúp tối ưu hóa các tuyến vận chuyển quốc tế của chúng tôi.",
+  "explanation_reason": "Chỗ trống làm chủ ngữ cho động từ 'can manage' và thay cho người (an editor), nên dùng đại từ quan hệ 'who'.",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ (người)",
+  "translation": "Nhà xuất bản đang tìm một biên tập viên có thể phụ trách cả ấn phẩm in lẫn ấn phẩm số.",
   "core_vocabulary": [
     {
-      "word": "shipping route",
+      "word": "publishing house",
       "type": "n.",
-      "meaning": "tuyến vận chuyển"
+      "meaning": "nhà xuất bản"
     },
     {
-      "word": "optimize",
-      "type": "v.",
-      "meaning": "tối ưu hóa"
+      "word": "title",
+      "type": "n.",
+      "meaning": "đầu sách, ấn phẩm"
     }
   ]
 },
 {
   "id": "q1432",
-  "question": "The new customs declaration software, ------- usually takes two hours to process, has been updated to run in minutes.",
+  "question": "The online booking system, ------- normally handles fifty reservations an hour, was upgraded over the weekend.",
   "options": {
-    "A": "what",
-    "B": "which",
-    "C": "where",
-    "D": "who"
+  "A": "which",
+  "B": "what",
+  "C": "where",
+  "D": "who"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'software' trong mệnh đề quan hệ không giới hạn.",
-  "explanation_grammar": "Non-restrictive Relative Clause.",
-  "translation": "Phần mềm khai báo hải quan mới, vốn thường mất hai giờ để xử lý, đã được cập nhật để chạy trong vài phút.",
+  "explanation_reason": "Mệnh đề quan hệ không xác định (đặt giữa hai dấu phẩy) bổ nghĩa cho vật 'system' và làm chủ ngữ, nên dùng 'which'. 'That' không dùng trong mệnh đề không xác định.",
+  "explanation_grammar": "Mệnh đề quan hệ không xác định (vật)",
+  "translation": "Hệ thống đặt chỗ trực tuyến, vốn thường xử lý năm mươi lượt đặt mỗi giờ, đã được nâng cấp vào cuối tuần qua.",
   "core_vocabulary": [
     {
-      "word": "customs declaration",
+      "word": "reservation",
       "type": "n.",
-      "meaning": "khai báo hải quan"
+      "meaning": "lượt đặt chỗ"
+    },
+    {
+      "word": "upgrade",
+      "type": "v.",
+      "meaning": "nâng cấp"
     }
   ]
 },
 {
   "id": "q1433",
-  "question": "Management needs to evaluate ------- the new VNACCS/VCIS integration will improve overall clearance productivity.",
+  "question": "The finance team is still debating ------- to lease or to purchase the new delivery vans.",
   "options": {
-    "A": "whose",
-    "B": "that",
-    "C": "whether",
-    "D": "about"
+  "A": "whose",
+  "B": "about",
+  "C": "that",
+  "D": "whether"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'Whether' dùng trong mệnh đề danh ngữ để chỉ sự lựa chọn/nghi vấn.",
-  "explanation_grammar": "Noun Clause (Whether).",
-  "translation": "Ban quản lý cần đánh giá xem liệu việc tích hợp VNACCS/VCIS mới có cải thiện năng suất thông quan tổng thể hay không.",
+  "explanation_reason": "Cấu trúc 'whether + to V ... or to V' dùng để nêu sự lựa chọn giữa hai phương án. 'That' không đi được với động từ nguyên mẫu, 'about' là giới từ.",
+  "explanation_grammar": "Mệnh đề danh ngữ với 'whether'",
+  "translation": "Bộ phận tài chính vẫn đang cân nhắc nên thuê hay nên mua những chiếc xe tải giao hàng mới.",
   "core_vocabulary": [
     {
-      "word": "clearance",
+      "word": "lease",
+      "type": "v.",
+      "meaning": "thuê (dài hạn)"
+    },
+    {
+      "word": "delivery van",
       "type": "n.",
-      "meaning": "thông quan"
+      "meaning": "xe tải giao hàng"
     }
   ]
 },
 {
   "id": "q1434",
-  "question": "After reviewing the shipping budget, Ms. Albright decided to consolidate the cargo, ------- transportation costs significantly.",
+  "question": "After renegotiating the supplier contract, Mr. Alvarez cut the annual material budget, ------- overall production costs by twelve percent.",
   "options": {
-    "A": "to be reduced",
-    "B": "reducing",
-    "C": "reduce",
-    "D": "reduced"
+  "A": "reduce",
+  "B": "reducing",
+  "C": "to be reduced",
+  "D": "reduced"
   },
   "correct_answer": "B",
   "grammar_type": "MĐQH",
-  "explanation_reason": "Dùng hiện tại phân từ (V-ing) để chỉ kết quả của hành động đứng trước.",
-  "explanation_grammar": "Participle Clause for Result.",
-  "translation": "Sau khi xem xét ngân sách vận chuyển, bà Albright đã quyết định hợp nhất hàng hóa, giúp giảm đáng kể chi phí vận chuyển.",
+  "explanation_reason": "Mệnh đề quan hệ rút gọn chỉ kết quả, chủ ngữ ngầm là cả hành động phía trước và mang nghĩa chủ động, nên dùng V-ing 'reducing'.",
+  "explanation_grammar": "Mệnh đề rút gọn dạng V-ing (chủ động)",
+  "translation": "Sau khi đàm phán lại hợp đồng với nhà cung cấp, ông Alvarez đã cắt giảm ngân sách vật tư hằng năm, qua đó giảm tổng chi phí sản xuất mười hai phần trăm.",
   "core_vocabulary": [
     {
-      "word": "consolidate",
+      "word": "renegotiate",
       "type": "v.",
-      "meaning": "hợp nhất/gom hàng"
+      "meaning": "đàm phán lại"
+    },
+    {
+      "word": "production cost",
+      "type": "n.",
+      "meaning": "chi phí sản xuất"
     }
   ]
 },
 {
   "id": "q1435",
-  "question": "Logistics coordinators ------- require an extension on their container loading times must contact the port authority immediately.",
+  "question": "Employees ------- need an extension on the compliance training must notify their supervisor by Friday.",
   "options": {
-    "A": "whose",
-    "B": "who",
-    "C": "whom",
-    "D": "which"
+  "A": "who",
+  "B": "whom",
+  "C": "whose",
+  "D": "which"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'coordinators' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
-  "translation": "Các điều phối viên hậu cần cần gia hạn thời gian xếp hàng lên container phải liên hệ ngay với chính quyền cảng.",
+  "explanation_reason": "Chỗ trống làm chủ ngữ cho động từ 'need' và thay cho người (Employees), nên dùng 'who'. 'Whom' làm tân ngữ, 'whose' chỉ sở hữu.",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ (người)",
+  "translation": "Những nhân viên cần gia hạn khoá đào tạo tuân thủ phải báo cho quản lý của mình trước thứ Sáu.",
   "core_vocabulary": [
     {
       "word": "extension",
       "type": "n.",
       "meaning": "sự gia hạn"
+    },
+    {
+      "word": "compliance",
+      "type": "n.",
+      "meaning": "sự tuân thủ"
     }
   ]
 },
 {
   "id": "q1436",
-  "question": "The warehouse crew will begin loading the 1,258 computer mainboards onto the pallets ------- at 9:00 AM tomorrow.",
+  "question": "The renovation team will begin installing the new lighting fixtures in the east wing ------- at 7:00 A.M. on Monday.",
   "options": {
-    "A": "starter",
-    "B": "starting",
-    "C": "start",
-    "D": "started"
+  "A": "start",
+  "B": "started",
+  "C": "starting",
+  "D": "starter"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "MĐQH",
-  "explanation_reason": "Rút gọn mệnh đề quan hệ dạng chủ động (starting).",
-  "explanation_grammar": "Reduced Relative Clause.",
-  "translation": "Đội ngũ kho bãi sẽ bắt đầu xếp 1.258 bo mạch chủ máy tính lên các pallet bắt đầu lúc 9 giờ sáng mai.",
+  "explanation_reason": "'Starting + mốc thời gian' là cụm phân từ cố định, nghĩa là 'bắt đầu từ'. Các dạng còn lại không tạo được cụm chỉ thời gian.",
+  "explanation_grammar": "Cụm phân từ chỉ thời gian",
+  "translation": "Đội cải tạo sẽ bắt đầu lắp hệ thống đèn mới ở cánh phía đông kể từ 7 giờ sáng thứ Hai.",
   "core_vocabulary": [
     {
-      "word": "mainboard",
+      "word": "lighting fixture",
       "type": "n.",
-      "meaning": "bo mạch chủ"
+      "meaning": "thiết bị chiếu sáng"
+    },
+    {
+      "word": "wing",
+      "type": "n.",
+      "meaning": "cánh (của toà nhà)"
     }
   ]
 },
 {
   "id": "q1437",
-  "question": "Dr. Robertson, ------- has been researching supply chain sustainability since 2010, will lead the new initiative.",
+  "question": "Dr. Feldman, ------- has been studying urban air quality since 2008, will chair the environmental panel.",
   "options": {
-    "A": "whose",
-    "B": "whom",
-    "C": "which",
-    "D": "who"
+  "A": "whose",
+  "B": "whom",
+  "C": "which",
+  "D": "who"
   },
   "correct_answer": "D",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'Dr. Robertson' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
-  "translation": "Tiến sĩ Robertson, người đã nghiên cứu về tính bền vững của chuỗi cung ứng từ năm 2010, sẽ dẫn dắt sáng kiến mới này.",
+  "explanation_reason": "Mệnh đề quan hệ không xác định bổ nghĩa cho người và làm chủ ngữ cho 'has been studying', nên dùng 'who'.",
+  "explanation_grammar": "Mệnh đề quan hệ không xác định (người)",
+  "translation": "Tiến sĩ Feldman, người đã nghiên cứu chất lượng không khí đô thị từ năm 2008, sẽ chủ trì hội đồng môi trường.",
   "core_vocabulary": [
     {
-      "word": "sustainability",
+      "word": "chair",
+      "type": "v.",
+      "meaning": "chủ trì"
+    },
+    {
+      "word": "panel",
       "type": "n.",
-      "meaning": "tính bền vững"
+      "meaning": "hội đồng, ban chuyên môn"
     }
   ]
 },
 {
   "id": "q1438",
-  "question": "The data analytics team is trying to figure out ------- the error rates spiked during the Newton interpolation process.",
+  "question": "The quality team is trying to determine ------- the defect rate rose sharply during the night shift.",
   "options": {
-    "A": "which",
-    "B": "whom",
-    "C": "why",
-    "D": "that"
+  "A": "whom",
+  "B": "why",
+  "C": "whose",
+  "D": "which"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'Why' dùng trong mệnh đề danh ngữ để giải thích lý do.",
-  "explanation_grammar": "Noun Clause (Why).",
-  "translation": "Nhóm phân tích dữ liệu đang cố gắng tìm ra lý do tại sao tỷ lệ lỗi lại tăng vọt trong quá trình nội suy Newton.",
+  "explanation_reason": "Mệnh đề danh ngữ làm tân ngữ cho 'determine' và nêu lý do, nên dùng từ để hỏi 'why'. Ba lựa chọn còn lại không hợp nghĩa.",
+  "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
+  "translation": "Bộ phận chất lượng đang cố xác định vì sao tỷ lệ lỗi tăng vọt trong ca đêm.",
   "core_vocabulary": [
     {
-      "word": "interpolation",
+      "word": "defect rate",
       "type": "n.",
-      "meaning": "nội suy"
+      "meaning": "tỷ lệ lỗi"
+    },
+    {
+      "word": "night shift",
+      "type": "n.",
+      "meaning": "ca đêm"
     }
   ]
 },
 {
   "id": "q1439",
-  "question": "We are excited to introduce a new load optimization tool ------- will streamline our container packing workflow.",
+  "question": "We are pleased to launch a new scheduling tool ------- will simplify shift planning for store managers.",
   "options": {
-    "A": "which",
-    "B": "what",
-    "C": "whom",
-    "D": "who"
+  "A": "whom",
+  "B": "who",
+  "C": "which",
+  "D": "what"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'tool' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
-  "translation": "Chúng tôi rất hào hứng giới thiệu một công cụ tối ưu hóa tải trọng mới sẽ giúp tinh giản quy trình đóng hàng vào container của chúng tôi.",
+  "explanation_reason": "Chỗ trống làm chủ ngữ cho 'will simplify' và thay cho vật (tool), nên dùng 'which'. 'What' không dùng làm đại từ quan hệ.",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ (vật)",
+  "translation": "Chúng tôi rất vui được ra mắt một công cụ lập lịch mới giúp đơn giản hoá việc sắp ca cho quản lý cửa hàng.",
   "core_vocabulary": [
     {
-      "word": "streamline",
+      "word": "simplify",
       "type": "v.",
-      "meaning": "tinh giản"
+      "meaning": "đơn giản hoá"
+    },
+    {
+      "word": "shift",
+      "type": "n.",
+      "meaning": "ca làm việc"
     }
   ]
 },
 {
   "id": "q1440",
-  "question": "The project manager is currently interviewing the candidates ------- the recruitment agency recommended for the WBS coordinator role.",
+  "question": "The three finalists, all of ------- hold advanced degrees, will present their proposals next Tuesday.",
   "options": {
-    "A": "who",
-    "B": "whose",
-    "C": "which",
-    "D": "whom"
+  "A": "whom",
+  "B": "who",
+  "C": "whose",
+  "D": "which"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'Whom' thay thế cho danh từ chỉ người 'candidates' làm tân ngữ.",
-  "explanation_grammar": "Relative Pronoun (Object).",
-  "translation": "Người quản lý dự án hiện đang phỏng vấn các ứng viên mà công ty tuyển dụng đã đề xuất cho vai trò điều phối viên WBS.",
+  "explanation_reason": "Sau giới từ 'of' bắt buộc dùng dạng tân ngữ 'whom' khi thay cho người. Cấu trúc 'all of whom' rất hay gặp trong Part 5.",
+  "explanation_grammar": "Giới từ + whom",
+  "translation": "Ba ứng viên vào vòng chung kết, tất cả đều có bằng sau đại học, sẽ trình bày đề xuất của mình vào thứ Ba tới.",
   "core_vocabulary": [
     {
-      "word": "recruitment agency",
+      "word": "finalist",
       "type": "n.",
-      "meaning": "công ty tuyển dụng"
+      "meaning": "ứng viên vào vòng chung kết"
+    },
+    {
+      "word": "advanced degree",
+      "type": "n.",
+      "meaning": "bằng sau đại học"
     }
   ]
 },
 {
   "id": "q1441",
-  "question": "The time estimation report ------- by the project team indicates that the critical path will take three weeks.",
+  "question": "The feasibility study ------- by the external consultants concludes that the site is suitable for expansion.",
   "options": {
-    "A": "calculate",
-    "B": "calculated",
-    "C": "calculating",
-    "D": "calculates"
+  "A": "prepares",
+  "B": "preparing",
+  "C": "prepare",
+  "D": "prepared"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "MĐQH",
-  "explanation_reason": "Rút gọn mệnh đề quan hệ dạng bị động (calculated).",
-  "explanation_grammar": "Reduced Relative Clause (Passive).",
-  "translation": "Báo cáo ước tính thời gian được tính toán bởi nhóm dự án chỉ ra rằng đường găng sẽ mất ba tuần.",
+  "explanation_reason": "Mệnh đề quan hệ rút gọn dạng bị động: 'the study which was prepared by...' rút thành 'the study prepared by...'. Dùng phân từ quá khứ.",
+  "explanation_grammar": "Mệnh đề rút gọn dạng V3 (bị động)",
+  "translation": "Bản nghiên cứu khả thi do các chuyên gia tư vấn bên ngoài thực hiện kết luận rằng địa điểm này phù hợp để mở rộng.",
   "core_vocabulary": [
     {
-      "word": "critical path",
+      "word": "feasibility study",
       "type": "n.",
-      "meaning": "đường găng"
+      "meaning": "nghiên cứu khả thi"
+    },
+    {
+      "word": "expansion",
+      "type": "n.",
+      "meaning": "sự mở rộng"
     }
   ]
 },
 {
   "id": "q1442",
-  "question": "Please let the procurement department know ------- the fresh apple shipment from the US requires refrigerated storage.",
+  "question": "Please remind the catering manager ------- the reception will now begin an hour earlier than planned.",
   "options": {
-    "A": "whose",
-    "B": "whether",
-    "C": "that",
-    "D": "which"
+  "A": "whose",
+  "B": "that",
+  "C": "whether",
+  "D": "which"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'That' làm từ nối trong mệnh đề danh ngữ.",
-  "explanation_grammar": "Noun Clause (That).",
-  "translation": "Vui lòng cho bộ phận thu mua biết rằng lô hàng táo tươi từ Mỹ yêu cầu kho lạnh.",
+  "explanation_reason": "Cấu trúc 'remind somebody that + mệnh đề' dùng để nhắc ai đó về một thông tin đã xác định. 'Remind somebody whether' là sai.",
+  "explanation_grammar": "Mệnh đề danh ngữ với 'that'",
+  "translation": "Vui lòng nhắc quản lý bộ phận tiệc rằng buổi chiêu đãi sẽ bắt đầu sớm hơn một tiếng so với dự kiến.",
   "core_vocabulary": [
     {
-      "word": "refrigerated storage",
+      "word": "catering",
       "type": "n.",
-      "meaning": "kho lạnh"
+      "meaning": "dịch vụ ăn uống, tiệc"
+    },
+    {
+      "word": "reception",
+      "type": "n.",
+      "meaning": "buổi chiêu đãi"
     }
   ]
 },
 {
   "id": "q1443",
-  "question": "The main distribution center will be unavailable for two days ------- the automated sorting equipment is being upgraded.",
+  "question": "The main lobby will be closed to visitors for three days ------- the marble flooring is being replaced.",
   "options": {
-    "A": "during",
-    "B": "which",
-    "C": "while",
-    "D": "who"
+  "A": "while",
+  "B": "which",
+  "C": "who",
+  "D": "during"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'While' (trong khi) là liên từ chỉ thời gian.",
-  "explanation_grammar": "Conjunction of Time.",
-  "translation": "Trung tâm phân phối chính sẽ không hoạt động trong hai ngày trong khi thiết bị phân loại tự động đang được nâng cấp.",
+  "explanation_reason": "Sau chỗ trống là một mệnh đề đầy đủ nên cần liên từ 'while' (trong khi). 'During' là giới từ phải đi với danh từ; 'which' và 'who' là đại từ quan hệ.",
+  "explanation_grammar": "Liên từ vs đại từ quan hệ",
+  "translation": "Sảnh chính sẽ đóng cửa với khách trong ba ngày trong khi lớp sàn đá hoa được thay mới.",
   "core_vocabulary": [
     {
-      "word": "distribution center",
+      "word": "lobby",
       "type": "n.",
-      "meaning": "trung tâm phân phối"
+      "meaning": "sảnh"
+    },
+    {
+      "word": "flooring",
+      "type": "n.",
+      "meaning": "lớp sàn, vật liệu lát sàn"
     }
   ]
 },
 {
   "id": "q1444",
-  "question": "Ms. Gomez is the senior analyst ------- regression chart accurately predicted the seasonal demand spike.",
+  "question": "Ms. Okonkwo is the researcher ------- climate model correctly forecast last year's drought.",
   "options": {
-    "A": "whom",
-    "B": "whose",
-    "C": "which",
-    "D": "who"
+  "A": "whose",
+  "B": "who",
+  "C": "whom",
+  "D": "which"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'Whose' thay thế cho sở hữu của 'Gomez'.",
-  "explanation_grammar": "Relative Pronoun (Possessive).",
-  "translation": "Bà Gomez là nhà phân tích cao cấp có biểu đồ hồi quy đã dự đoán chính xác sự tăng vọt nhu cầu theo mùa.",
+  "explanation_reason": "Sau chỗ trống là danh từ 'climate model' không có mạo từ, cho thấy cần đại từ quan hệ sở hữu 'whose' (mô hình của người đó).",
+  "explanation_grammar": "Đại từ quan hệ sở hữu 'whose'",
+  "translation": "Bà Okonkwo là nhà nghiên cứu có mô hình khí hậu đã dự báo chính xác đợt hạn hán năm ngoái.",
   "core_vocabulary": [
     {
-      "word": "regression chart",
+      "word": "forecast",
+      "type": "v.",
+      "meaning": "dự báo"
+    },
+    {
+      "word": "drought",
       "type": "n.",
-      "meaning": "biểu đồ hồi quy"
+      "meaning": "hạn hán"
     }
   ]
 },
 {
   "id": "q1445",
-  "question": "To acknowledge those ------- have successfully managed the \"iron triangle\" of cost, schedule, and quality, the CEO is hosting a gala.",
+  "question": "To honour those ------- have volunteered more than one hundred hours this year, the foundation will hold a dinner.",
   "options": {
-    "A": "what",
-    "B": "who",
-    "C": "which",
-    "D": "whom"
+  "A": "what",
+  "B": "which",
+  "C": "whom",
+  "D": "who"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'Who' thay thế cho 'those' (người) làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
-  "translation": "Để ghi nhận những người đã quản lý thành công 'tam giác sắt' gồm chi phí, tiến độ và chất lượng, Giám đốc điều hành đang tổ chức một bữa tiệc gala.",
+  "explanation_reason": "'Those' thay cho nhóm người, và chỗ trống làm chủ ngữ cho 'have volunteered', nên dùng 'who'. Cụm 'those who' rất phổ biến.",
+  "explanation_grammar": "Cấu trúc 'those who'",
+  "translation": "Để vinh danh những người đã tình nguyện hơn một trăm giờ trong năm nay, quỹ sẽ tổ chức một bữa tiệc tối.",
   "core_vocabulary": [
     {
-      "word": "iron triangle",
-      "type": "n.",
-      "meaning": "tam giác sắt"
+      "word": "honour",
+      "type": "v.",
+      "meaning": "vinh danh"
+    },
+    {
+      "word": "volunteer",
+      "type": "v.",
+      "meaning": "làm tình nguyện"
     }
   ]
 },
 {
   "id": "q1446",
-  "question": "The workflow breakdown structure ------- by the engineering team outlines a more logical sequence of tasks.",
+  "question": "The training curriculum ------- by the learning and development team covers both compliance and leadership skills.",
   "options": {
-    "A": "developed",
-    "B": "developing",
-    "C": "develop",
-    "D": "develops"
+  "A": "designs",
+  "B": "designed",
+  "C": "design",
+  "D": "designing"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "MĐQH",
-  "explanation_reason": "Rút gọn mệnh đề quan hệ dạng bị động (developed).",
-  "explanation_grammar": "Reduced Relative Clause (Passive).",
-  "translation": "Cấu trúc phân chia công việc được thiết lập bởi nhóm kỹ thuật phác thảo một trình tự các nhiệm vụ hợp lý hơn.",
+  "explanation_reason": "Rút gọn của 'the curriculum which was designed by...'. Chủ ngữ chịu tác động nên dùng phân từ quá khứ 'designed'.",
+  "explanation_grammar": "Mệnh đề rút gọn dạng V3 (bị động)",
+  "translation": "Chương trình đào tạo do bộ phận học tập và phát triển thiết kế bao gồm cả kỹ năng tuân thủ lẫn kỹ năng lãnh đạo.",
   "core_vocabulary": [
     {
-      "word": "sequence",
+      "word": "curriculum",
       "type": "n.",
-      "meaning": "trình tự"
+      "meaning": "chương trình đào tạo"
+    },
+    {
+      "word": "leadership",
+      "type": "n.",
+      "meaning": "khả năng lãnh đạo"
     }
   ]
 },
 {
   "id": "q1447",
-  "question": "The clients want to clarify ------- the new HS codes for imported electronics will take effect in the local market.",
+  "question": "Retailers want to know ------- the new packaging regulations will come into force nationwide.",
   "options": {
-    "A": "which",
-    "B": "when",
-    "C": "that",
-    "D": "who"
+  "A": "which",
+  "B": "whose",
+  "C": "when",
+  "D": "who"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'When' dùng trong mệnh đề danh ngữ chỉ thời gian.",
-  "explanation_grammar": "Noun Clause (When).",
-  "translation": "Các khách hàng muốn làm rõ khi nào mã HS mới cho đồ điện tử nhập khẩu sẽ có hiệu lực tại thị trường địa phương.",
+  "explanation_reason": "Mệnh đề danh ngữ làm tân ngữ cho 'know' và hỏi về thời điểm, nên dùng 'when'. Ba lựa chọn còn lại không hợp nghĩa.",
+  "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
+  "translation": "Các nhà bán lẻ muốn biết khi nào quy định mới về bao bì sẽ có hiệu lực trên toàn quốc.",
   "core_vocabulary": [
     {
-      "word": "HS code",
+      "word": "packaging",
       "type": "n.",
-      "meaning": "mã HS"
+      "meaning": "bao bì"
+    },
+    {
+      "word": "come into force",
+      "type": "v.",
+      "meaning": "có hiệu lực"
     }
   ]
 },
 {
   "id": "q1448",
-  "question": "The revised shipping schedule, ------- was distributed last week, contains updated guidelines for international freight.",
+  "question": "The revised employee handbook, ------- was circulated last Thursday, includes a new remote-work policy.",
   "options": {
-    "A": "which",
-    "B": "what",
-    "C": "who",
-    "D": "whom"
+  "A": "which",
+  "B": "whom",
+  "C": "what",
+  "D": "who"
   },
   "correct_answer": "A",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'Which' thay thế cho 'schedule' trong mệnh đề không giới hạn.",
-  "explanation_grammar": "Non-restrictive Relative Clause.",
-  "translation": "Lịch vận chuyển đã sửa đổi, vốn được phân phát vào tuần trước, có chứa các hướng dẫn cập nhật cho vận tải quốc tế.",
+  "explanation_reason": "Mệnh đề quan hệ không xác định bổ nghĩa cho vật 'handbook' và làm chủ ngữ, nên dùng 'which'.",
+  "explanation_grammar": "Mệnh đề quan hệ không xác định (vật)",
+  "translation": "Sổ tay nhân viên đã sửa đổi, được lưu hành hôm thứ Năm tuần trước, có thêm chính sách làm việc từ xa.",
   "core_vocabulary": [
     {
-      "word": "freight",
+      "word": "circulate",
+      "type": "v.",
+      "meaning": "lưu hành, phát đi"
+    },
+    {
+      "word": "remote work",
       "type": "n.",
-      "meaning": "vận tải"
+      "meaning": "làm việc từ xa"
     }
   ]
 },
 {
   "id": "q1449",
-  "question": "Before finalizing the PERT chart, we need to ensure ------- all task dependencies have been accurately mapped out.",
+  "question": "Before submitting the grant application, we must ensure ------- every supporting document has been signed.",
   "options": {
-    "A": "which",
-    "B": "that",
-    "C": "whether",
-    "D": "whose"
+  "A": "whose",
+  "B": "that",
+  "C": "which",
+  "D": "whether"
   },
   "correct_answer": "B",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'That' làm từ nối trong mệnh đề danh ngữ.",
-  "explanation_grammar": "Noun Clause (That).",
-  "translation": "Trước khi hoàn thiện biểu đồ PERT, chúng ta cần đảm bảo rằng tất cả các phụ thuộc công việc đã được vạch ra một cách chính xác.",
+  "explanation_reason": "'Ensure' đi với mệnh đề danh ngữ bắt đầu bằng 'that' để khẳng định một điều kiện. 'Ensure whether' là cấu trúc sai.",
+  "explanation_grammar": "Mệnh đề danh ngữ với 'that'",
+  "translation": "Trước khi nộp hồ sơ xin tài trợ, chúng ta phải bảo đảm rằng mọi tài liệu kèm theo đều đã được ký.",
   "core_vocabulary": [
     {
-      "word": "dependency",
+      "word": "grant",
       "type": "n.",
-      "meaning": "phụ thuộc"
+      "meaning": "khoản tài trợ"
+    },
+    {
+      "word": "supporting document",
+      "type": "n.",
+      "meaning": "tài liệu kèm theo"
     }
   ]
 },
 {
   "id": "q1450",
-  "question": "The agency is looking for a logistics specialist ------- is familiar with both air freight and ocean freight regulations.",
+  "question": "The clinic is recruiting a nurse practitioner ------- is licensed in both paediatrics and family medicine.",
   "options": {
-    "A": "which",
-    "B": "what",
-    "C": "whom",
-    "D": "who"
+  "A": "which",
+  "B": "whom",
+  "C": "what",
+  "D": "who"
   },
   "correct_answer": "D",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'Who' thay thế cho 'specialist' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
-  "translation": "Công ty đang tìm kiếm một chuyên gia hậu cần người quen thuộc với cả các quy định vận tải hàng không và vận tải đường biển.",
+  "explanation_reason": "Chỗ trống làm chủ ngữ cho 'is licensed' và thay cho người, nên dùng 'who'.",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ (người)",
+  "translation": "Phòng khám đang tuyển một điều dưỡng viên cao cấp có chứng chỉ hành nghề cả nhi khoa lẫn y học gia đình.",
   "core_vocabulary": [
     {
-      "word": "air freight",
-      "type": "n.",
-      "meaning": "vận tải hàng không"
+      "word": "recruit",
+      "type": "v.",
+      "meaning": "tuyển dụng"
+    },
+    {
+      "word": "licensed",
+      "type": "adj.",
+      "meaning": "được cấp phép hành nghề"
     }
   ]
 },
 {
   "id": "q1451",
-  "question": "The keynote speech on data-driven supply chains ------- by our founder inspired many young analysts in the audience.",
+  "question": "The closing address ------- by the festival's founder moved much of the audience to tears.",
   "options": {
-    "A": "deliver",
-    "B": "delivers",
-    "C": "delivered",
-    "D": "delivering"
+  "A": "deliver",
+  "B": "delivering",
+  "C": "delivered",
+  "D": "delivers"
   },
   "correct_answer": "C",
   "grammar_type": "MĐQH",
-  "explanation_reason": "Rút gọn mệnh đề quan hệ dạng bị động (delivered).",
-  "explanation_grammar": "Reduced Relative Clause (Passive).",
-  "translation": "Bài diễn văn chính về chuỗi cung ứng dựa trên dữ liệu được trình bày bởi người sáng lập của chúng tôi đã truyền cảm hứng cho nhiều nhà phân tích trẻ trong khán phòng.",
+  "explanation_reason": "Rút gọn của 'the address which was delivered by...'. Bài phát biểu là đối tượng chịu tác động nên dùng phân từ quá khứ.",
+  "explanation_grammar": "Mệnh đề rút gọn dạng V3 (bị động)",
+  "translation": "Bài phát biểu bế mạc do người sáng lập lễ hội trình bày đã khiến phần lớn khán giả rơi nước mắt.",
   "core_vocabulary": [
     {
-      "word": "data-driven",
-      "type": "adj.",
-      "meaning": "dựa trên dữ liệu"
+      "word": "closing address",
+      "type": "n.",
+      "meaning": "bài phát biểu bế mạc"
+    },
+    {
+      "word": "founder",
+      "type": "n.",
+      "meaning": "người sáng lập"
     }
   ]
 },
 {
   "id": "q1452",
-  "question": "The manager must decide ------- of the two pallet types is best suited for securing the fragile electronic components.",
+  "question": "The committee must decide ------- of the two proposed venues better suits a three-day conference.",
   "options": {
-    "A": "who",
-    "B": "that",
-    "C": "whose",
-    "D": "which"
+  "A": "which",
+  "B": "who",
+  "C": "whose",
+  "D": "that"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'Which' dùng để lựa chọn.",
-  "explanation_grammar": "Wh-word in Noun Clause.",
-  "translation": "Người quản lý phải quyết định loại pallet nào trong hai loại là phù hợp nhất để cố định các linh kiện điện tử dễ vỡ.",
+  "explanation_reason": "Khi chọn giữa một số lựa chọn đã xác định, ta dùng 'which of + danh từ'. 'Who' dùng cho người, 'that' không đứng trước 'of'.",
+  "explanation_grammar": "Mệnh đề danh ngữ với 'which of'",
+  "translation": "Uỷ ban phải quyết định địa điểm nào trong hai địa điểm được đề xuất phù hợp hơn cho một hội nghị ba ngày.",
   "core_vocabulary": [
     {
-      "word": "fragile",
-      "type": "adj.",
-      "meaning": "dễ vỡ"
+      "word": "venue",
+      "type": "n.",
+      "meaning": "địa điểm tổ chức"
+    },
+    {
+      "word": "suit",
+      "type": "v.",
+      "meaning": "phù hợp với"
     }
   ]
 },
 {
   "id": "q1453",
-  "question": "Mr. Zhao, ------- the board appointed as the interim director of logistics, has extensive experience in load capacity calculation.",
+  "question": "Mr. Haddad, ------- the trustees appointed as interim head of research, previously ran the Geneva laboratory.",
   "options": {
-    "A": "which",
-    "B": "whom",
-    "C": "whose",
-    "D": "who"
+  "A": "which",
+  "B": "whose",
+  "C": "who",
+  "D": "whom"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'Whom' thay thế cho 'Mr. Zhao' làm tân ngữ.",
-  "explanation_grammar": "Relative Pronoun (Object).",
-  "translation": "Ông Zhao, người mà hội đồng quản trị đã chỉ định làm giám đốc hậu cần tạm thời, có kinh nghiệm sâu rộng trong việc tính toán khả năng chịu tải.",
+  "explanation_reason": "Trong mệnh đề quan hệ, 'the trustees' đã là chủ ngữ và 'appointed' là động từ, nên chỗ trống làm tân ngữ và phải dùng 'whom'.",
+  "explanation_grammar": "Đại từ quan hệ làm tân ngữ (người)",
+  "translation": "Ông Haddad, người được hội đồng quản trị bổ nhiệm làm trưởng bộ phận nghiên cứu tạm quyền, trước đây từng điều hành phòng thí nghiệm Geneva.",
   "core_vocabulary": [
     {
-      "word": "load capacity",
+      "word": "trustee",
       "type": "n.",
-      "meaning": "khả năng chịu tải"
+      "meaning": "thành viên hội đồng quản trị"
+    },
+    {
+      "word": "interim",
+      "type": "adj.",
+      "meaning": "tạm quyền, lâm thời"
     }
   ]
 },
 {
   "id": "q1454",
-  "question": "The confidentiality agreement ------- you signed upon hiring prohibits the sharing of internal customs documentation.",
+  "question": "The non-disclosure agreement ------- you signed on your first day covers all unpublished financial data.",
   "options": {
-    "A": "which",
-    "B": "who",
-    "C": "whom",
-    "D": "what"
+  "A": "who",
+  "B": "which",
+  "C": "whom",
+  "D": "what"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'Which' thay thế cho 'agreement' làm tân ngữ.",
-  "explanation_grammar": "Relative Pronoun (Object).",
-  "translation": "Thỏa thuận bảo mật mà bạn đã ký khi được tuyển dụng cấm việc chia sẻ các tài liệu hải quan nội bộ.",
+  "explanation_reason": "Chỗ trống làm tân ngữ cho 'signed' và thay cho vật (agreement), nên dùng 'which'. 'Whom' dùng cho người, 'what' không phải đại từ quan hệ.",
+  "explanation_grammar": "Đại từ quan hệ làm tân ngữ (vật)",
+  "translation": "Thoả thuận bảo mật mà bạn đã ký trong ngày làm việc đầu tiên bao gồm toàn bộ dữ liệu tài chính chưa công bố.",
   "core_vocabulary": [
     {
-      "word": "confidentiality agreement",
+      "word": "non-disclosure agreement",
       "type": "n.",
-      "meaning": "thỏa thuận bảo mật"
+      "meaning": "thoả thuận bảo mật"
+    },
+    {
+      "word": "unpublished",
+      "type": "adj.",
+      "meaning": "chưa công bố"
     }
   ]
 },
 {
   "id": "q1455",
-  "question": "The data analyst is checking the database ------- to identify the cause of the recent inventory discrepancies.",
+  "question": "The conference will be held at the Brenton Centre, ------- the association held its first annual meeting in 1994.",
   "options": {
-    "A": "now",
-    "B": "yet",
-    "C": "already",
-    "D": "since"
+  "A": "which",
+  "B": "that",
+  "C": "where",
+  "D": "what"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "MĐQH",
-  "explanation_reason": "'Now' phù hợp với thì hiện tại tiếp diễn.",
-  "explanation_grammar": "Adverb of Time.",
-  "translation": "Nhà phân tích dữ liệu đang kiểm tra cơ sở dữ liệu ngay bây giờ để xác định nguyên nhân của các sai lệch hàng tồn kho gần đây.",
+  "explanation_reason": "Sau chỗ trống là một mệnh đề đầy đủ (the association held...) và ta cần chỉ nơi chốn, nên dùng trạng từ quan hệ 'where'. 'Which' chỉ dùng khi mệnh đề còn thiếu chủ ngữ hoặc tân ngữ.",
+  "explanation_grammar": "Trạng từ quan hệ chỉ nơi chốn 'where'",
+  "translation": "Hội nghị sẽ được tổ chức tại Trung tâm Brenton, nơi hiệp hội đã họp thường niên lần đầu vào năm 1994.",
   "core_vocabulary": [
     {
-      "word": "discrepancy",
+      "word": "association",
       "type": "n.",
-      "meaning": "sai lệch"
+      "meaning": "hiệp hội"
+    },
+    {
+      "word": "annual meeting",
+      "type": "n.",
+      "meaning": "cuộc họp thường niên"
     }
   ]
 },
@@ -37973,7 +38093,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'data scientist' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Phòng nhân sự đang phỏng vấn nhà khoa học dữ liệu người đã phát triển mô hình dự đoán mới cho hàng tồn kho trong kho.",
   "core_vocabulary": [
     {
@@ -38000,7 +38120,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whether' dùng để hỏi xem liệu việc đó có xảy ra/không (có tuân thủ hay không).",
-  "explanation_grammar": "Noun Clause (Whether).",
+  "explanation_grammar": "Mệnh đề danh ngữ với 'whether'",
   "translation": "Nhân viên môi giới hải quan cần xác minh xem liệu các thiết bị điện tử nhập khẩu có tuân thủ các quy định VNACCS mới nhất hay không.",
   "core_vocabulary": [
     {
@@ -38027,7 +38147,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'policies' trong mệnh đề quan hệ không giới hạn.",
-  "explanation_grammar": "Non-restrictive Relative Clause.",
+  "explanation_grammar": "Mệnh đề quan hệ không xác định",
   "translation": "Những thay đổi gần đây đối với các chính sách vận chuyển quốc tế, vốn sẽ có hiệu lực vào thứ Hai tới, sẽ ảnh hưởng đến lịch giao hàng của chúng tôi.",
   "core_vocabulary": [
     {
@@ -38054,7 +38174,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "Dùng hiện tại phân từ (V-ing) để chỉ kết quả của hành động đứng trước.",
-  "explanation_grammar": "Participle Clause for Result.",
+  "explanation_grammar": "Mệnh đề phân từ chỉ kết quả",
   "translation": "Quản lý dự án đã điều chỉnh biểu đồ PERT, cung cấp cho cả nhóm một mốc thời gian thực tế hơn cho việc triển khai phần mềm.",
   "core_vocabulary": [
     {
@@ -38081,7 +38201,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'Employees' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Những nhân viên muốn tham dự buổi hội thảo về các phương pháp toán học số nên đăng ký trước thứ Sáu.",
   "core_vocabulary": [
     {
@@ -38103,7 +38223,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng chủ động (starting).",
-  "explanation_grammar": "Reduced Relative Clause.",
+  "explanation_grammar": "Mệnh đề quan hệ rút gọn",
   "translation": "Hệ thống phân loại tự động mới sẽ hoạt động đầy đủ bắt đầu từ đầu quý tài chính tiếp theo.",
   "core_vocabulary": [
     {
@@ -38125,7 +38245,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'Ms. Tran' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Bà Tran, người đã phân tích dữ liệu hậu cần trong ba năm, sẽ trình bày những phát hiện của mình tại hội nghị.",
   "core_vocabulary": [
     {
@@ -38147,7 +38267,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'How' dùng trong mệnh đề danh ngữ làm từ nối chỉ cách thức.",
-  "explanation_grammar": "Noun Clause (How).",
+  "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
   "translation": "Nhóm kỹ thuật đang điều tra cách thức áp dụng phương pháp chia đôi để tối ưu hóa thuật toán đóng gói.",
   "core_vocabulary": [
     {
@@ -38174,7 +38294,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'system' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Chúng tôi đang triển khai một hệ thống theo dõi container mới sẽ cho phép khách hàng giám sát các lô hàng của họ theo thời gian thực.",
   "core_vocabulary": [
     {
@@ -38201,7 +38321,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whom' thay thế cho danh từ chỉ người 'suppliers' làm tân ngữ cho động từ 'met'.",
-  "explanation_grammar": "Relative Pronoun (Object).",
+  "explanation_grammar": "Đại từ quan hệ làm tân ngữ",
   "translation": "Giám đốc khu vực đang họp với các nhà cung cấp mà ông đã gặp tại triển lãm thương mại ở Frankfurt vào tháng trước.",
   "core_vocabulary": [
     {
@@ -38223,7 +38343,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng bị động (prepared).",
-  "explanation_grammar": "Reduced Relative Clause (Passive).",
+  "explanation_grammar": "Mệnh đề quan hệ rút gọn (bị động)",
   "translation": "Báo cáo ngân sách được chuẩn bị bởi nhóm tài chính làm nổi bật các khoản tiết kiệm chi phí từ dự án tối ưu hóa pallet gần đây.",
   "core_vocabulary": [
     {
@@ -38250,7 +38370,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whether' dùng để hỏi xem liệu việc đó có hay không.",
-  "explanation_grammar": "Noun Clause (Whether).",
+  "explanation_grammar": "Mệnh đề danh ngữ với 'whether'",
   "translation": "Vui lòng hỏi giám sát kho xem liệu có đủ chỗ để lưu trữ lô hàng nông sản tươi mới sắp về hay không.",
   "core_vocabulary": [
     {
@@ -38272,7 +38392,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'While' (trong khi) là liên từ chỉ thời gian nối hai mệnh đề.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Máy chủ chính sẽ được ngoại tuyến để bảo trì trong khi bộ phận CNTT cài đặt bản vá bảo mật mới nhất.",
   "core_vocabulary": [
     {
@@ -38294,7 +38414,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whose' thay thế cho sở hữu của 'Sato' chỉ sở hữu đối với 'model'.",
-  "explanation_grammar": "Relative Pronoun (Possessive).",
+  "explanation_grammar": "Đại từ quan hệ sở hữu",
   "translation": "Ông Sato là nhà phân tích cao cấp có mô hình hồi quy dự báo đã dự đoán chính xác sự tăng vọt nhu cầu trong kỳ nghỉ.",
   "core_vocabulary": [
     {
@@ -38321,7 +38441,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ 'those' (chỉ người) làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Để khen ngợi những người đã làm thêm giờ để giải quyết tình trạng tồn đọng của hải quan, ban quản lý đang tổ chức một bữa tiệc trưa đặc biệt.",
   "core_vocabulary": [
     {
@@ -38348,7 +38468,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng bị động (approved).",
-  "explanation_grammar": "Reduced Relative Clause (Passive).",
+  "explanation_grammar": "Mệnh đề quan hệ rút gọn (bị động)",
   "translation": "Cấu trúc phân chia công việc đã sửa đổi được phê duyệt bởi ban chỉ đạo sẽ được gửi đến tất cả các trưởng bộ phận vào ngày mai.",
   "core_vocabulary": [
     {
@@ -38370,7 +38490,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'When' dùng trong mệnh đề danh ngữ làm từ nối chỉ thời gian.",
-  "explanation_grammar": "Noun Clause (When).",
+  "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
   "translation": "Khách hàng đã gọi sáng nay để hỏi khi nào 500 đơn vị bo mạch chủ máy tính sẽ được giao đến cơ sở của họ.",
   "core_vocabulary": [
     {
@@ -38392,7 +38512,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'review' làm chủ ngữ.",
-  "explanation_grammar": "Non-restrictive Relative Clause.",
+  "explanation_grammar": "Mệnh đề quan hệ không xác định",
   "translation": "Đợt đánh giá hiệu suất hàng quý, vốn đã bị hoãn do việc sáp nhập, đã được lên lịch lại vào thứ Năm tới.",
   "core_vocabulary": [
     {
@@ -38419,7 +38539,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'That' làm từ nối trong mệnh đề danh ngữ.",
-  "explanation_grammar": "Noun Clause (That).",
+  "explanation_grammar": "Mệnh đề danh ngữ với 'that'",
   "translation": "Trước khi hoàn thiện hợp đồng, chúng ta phải đảm bảo rằng tất cả các tiêu chuẩn tuân thủ thương mại quốc tế đều được đáp ứng.",
   "core_vocabulary": [
     {
@@ -38441,7 +38561,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'coordinator' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Công ty hiện đang tuyển dụng một điều phối viên chuỗi cung ứng người thông thạo cả tiếng Anh và tiếng Quan Thoại.",
   "core_vocabulary": [
     {
@@ -38463,7 +38583,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng bị động (presented).",
-  "explanation_grammar": "Reduced Relative Clause (Passive).",
+  "explanation_grammar": "Mệnh đề quan hệ rút gọn (bị động)",
   "translation": "Bảng điều khiển trực quan hóa dữ liệu được trình bày bởi nhóm phân tích hôm qua cung cấp một cái nhìn tổng quan rõ ràng về các nút thắt trong vận hành của chúng tôi.",
   "core_vocabulary": [
     {
@@ -38490,7 +38610,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' dùng để lựa chọn trong một số lượng giới hạn các phương án.",
-  "explanation_grammar": "Wh-word in Noun Clause.",
+  "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
   "translation": "Giám đốc vận hành cần xác định tuyến đường vận chuyển nào trong ba tuyến được đề xuất mang lại giải pháp tiết kiệm chi phí nhất.",
   "core_vocabulary": [
     {
@@ -38512,7 +38632,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whom' thay thế cho danh từ chỉ người 'Ms. Nguyen' làm tân ngữ cho động từ 'appointed'.",
-  "explanation_grammar": "Relative Pronoun (Object).",
+  "explanation_grammar": "Đại từ quan hệ làm tân ngữ",
   "translation": "Bà Nguyen, người mà hội đồng quản trị gần đây đã bổ nhiệm làm trưởng bộ phận hậu cần, sẽ giám sát trung tâm phân phối mới tại Thành phố Hồ Chí Minh.",
   "core_vocabulary": [
     {
@@ -38534,7 +38654,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'agreement' làm tân ngữ cho động từ 'signed'.",
-  "explanation_grammar": "Relative Pronoun (Object).",
+  "explanation_grammar": "Đại từ quan hệ làm tân ngữ",
   "translation": "Thỏa thuận không tiết lộ mà bạn đã ký năm ngoái vẫn có hiệu lực ngay cả khi bạn chuyển sang môt vai trò mới.",
   "core_vocabulary": [
     {
@@ -38556,7 +38676,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Now' phù hợp với thì hiện tại tiếp diễn.",
-  "explanation_grammar": "Adverb of Time.",
+  "explanation_grammar": "Trạng từ chỉ thời gian",
   "translation": "Kỹ thuật viên đang xem xét nhật ký máy chủ ngay bây giờ để xác định nguyên nhân gốc rễ của lỗi đồng bộ hóa cơ sở dữ liệu.",
   "core_vocabulary": [
     {
@@ -38578,7 +38698,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'cargo' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Cảng vụ hiện đang kiểm tra lô hàng vừa cập cảng từ Hoa Kỳ sáng nay.",
   "core_vocabulary": [
     {
@@ -38605,7 +38725,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whether' dùng trong mệnh đề danh ngữ để chỉ sự nghi vấn/giả định.",
-  "explanation_grammar": "Noun Clause (Whether).",
+  "explanation_grammar": "Mệnh đề danh ngữ với 'whether'",
   "translation": "Nhà tài trợ dự án muốn biết liệu sự chậm trễ trong biểu đồ PERT có ảnh hưởng đến ngày giao hàng cuối cùng hay không.",
   "core_vocabulary": [
     {
@@ -38632,7 +38752,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "Dùng 'has been' (hiện tại hoàn thành tiếp diễn) để chỉ hành động kéo dài từ quá khứ đến hiện tại, hòa hợp với chủ ngữ số ít 'team'.",
-  "explanation_grammar": "Present Perfect Continuous / Subject-Verb Agreement.",
+  "explanation_grammar": "Thì hiện tại hoàn thành tiếp diễn",
   "translation": "Đội ngũ hậu cần của chúng tôi đã đang thực hiện dự án nhập khẩu táo tươi từ đầu tháng Hai.",
   "core_vocabulary": [
     {
@@ -38654,7 +38774,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng bị động (which was created -> created).",
-  "explanation_grammar": "Reduced Relative Clause (Passive).",
+  "explanation_grammar": "Mệnh đề quan hệ rút gọn (bị động)",
   "translation": "Biểu đồ hồi quy được tạo bởi nhà phân tích dữ liệu cấp dưới đã làm nổi bật thành công các xu hướng vận chuyển theo mùa.",
   "core_vocabulary": [
     {
@@ -38681,7 +38801,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'supervisor' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Chúng tôi cần thuê một giám sát kho người có kinh nghiệm xử lý các linh kiện điện tử dễ vỡ.",
   "core_vocabulary": [
     {
@@ -38708,7 +38828,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'mainboards' trong mệnh đề quan hệ không giới hạn.",
-  "explanation_grammar": "Non-restrictive Relative Clause.",
+  "explanation_grammar": "Mệnh đề quan hệ không xác định",
   "translation": "Các bo mạch chủ ASUS ROG Strix, vốn hiện đang có nhu cầu cao, yêu cầu các cấu hình pallet chuyên dụng.",
   "core_vocabulary": [
     {
@@ -38735,7 +38855,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whom' thay thế cho danh từ chỉ người 'Ms. Carter' làm tân ngữ cho động từ 'selected'.",
-  "explanation_grammar": "Relative Pronoun (Object).",
+  "explanation_grammar": "Đại từ quan hệ làm tân ngữ",
   "translation": "Bà Carter, người mà ban quản lý đã chọn cho vai trò nhà phân tích, sở hữu các kỹ năng tính toán mạnh mẽ.",
   "core_vocabulary": [
     {
@@ -38762,7 +38882,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'When' dùng trong mệnh đề danh ngữ làm từ nối chỉ thời gian.",
-  "explanation_grammar": "Noun Clause (When).",
+  "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
   "translation": "Nhân viên hải quan đã không nêu rõ khi nào các mã HS cập nhật sẽ được công bố trên cổng thông tin VNACCS.",
   "core_vocabulary": [
     {
@@ -38784,7 +38904,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng chủ động (detailing = which details).",
-  "explanation_grammar": "Reduced Relative Clause (Active).",
+  "explanation_grammar": "Mệnh đề quan hệ rút gọn (chủ động)",
   "translation": "Lịch trình mới, nêu chi tiết tất cả các nhiệm vụ trong cấu trúc phân chia công việc, đã được gửi đến cả nhóm vào ngày hôm qua.",
   "core_vocabulary": [
     {
@@ -38811,7 +38931,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người/nhà cung cấp 'vendor' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Nhà cung cấp vật liệu đóng gói cho chúng tôi đã thông báo tăng giá nhẹ cho quý tới.",
   "core_vocabulary": [
     {
@@ -38833,7 +38953,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "Dùng 'has proved' (hiện tại hoàn thành) để chỉ một sự thật đã được khẳng định từ quá khứ đến nay.",
-  "explanation_grammar": "Present Perfect.",
+  "explanation_grammar": "Thì hiện tại hoàn thành",
   "translation": "Ông Davis đã chứng tỏ là một tài sản vô giá đối với văn phòng quản lý dự án trong ba năm qua.",
   "core_vocabulary": [
     {
@@ -38860,7 +38980,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Why' dùng trong mệnh đề danh ngữ để giải thích lý do.",
-  "explanation_grammar": "Noun Clause (Why).",
+  "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
   "translation": "Nhóm kỹ thuật đang cố gắng xác định lý do tại sao phương pháp chia đôi không hội tụ được trong mô phỏng mới nhất.",
   "core_vocabulary": [
     {
@@ -38887,7 +39007,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ 'employee' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Bất kỳ nhân viên nào muốn chuyển sang bộ phận chuỗi cung ứng phải nộp một yêu cầu chính thức cho phòng nhân sự.",
   "core_vocabulary": [
     {
@@ -38909,7 +39029,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'While' (trong khi) là liên từ chỉ thời gian nối hai mệnh đề.",
-  "explanation_grammar": "Conjunction of Time.",
+  "explanation_grammar": "Liên từ chỉ thời gian",
   "translation": "Cơ sở này sẽ hoạt động bằng máy phát điện dự phòng trong khi lưới điện chính đang được sửa chữa.",
   "core_vocabulary": [
     {
@@ -38936,7 +39056,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whose' thay thế cho sở hữu của 'Tanaka' chỉ sở hữu đối với 'algorithms'.",
-  "explanation_grammar": "Relative Pronoun (Possessive).",
+  "explanation_grammar": "Đại từ quan hệ sở hữu",
   "translation": "Ông Tanaka là kỹ sư trưởng người có các thuật toán đã cải thiện quy trình tối ưu hóa tải trọng của chúng tôi thêm 20%.",
   "core_vocabulary": [
     {
@@ -38958,7 +39078,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "Dùng hiện tại phân từ (V-ing) để chỉ cách thức/phương tiện thực hiện hành động chính.",
-  "explanation_grammar": "Participle Clause (Manner/Means).",
+  "explanation_grammar": "Mệnh đề phân từ",
   "translation": "Bằng cách sử dụng công thức nội suy Newton, phần mềm đã nhanh chóng dự đoán các điểm dữ liệu còn thiếu trong chuỗi.",
   "core_vocabulary": [
     {
@@ -38985,7 +39105,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'That' làm từ nối trong mệnh đề danh ngữ.",
-  "explanation_grammar": "Noun Clause (That).",
+  "explanation_grammar": "Mệnh đề danh ngữ với 'that'",
   "translation": "Điều phối viên vận chuyển đã xác nhận rằng 1.258 đơn vị phần cứng máy tính đã được xếp lên tàu một cách an toàn.",
   "core_vocabulary": [
     {
@@ -39007,7 +39127,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'protocol' làm chủ ngữ.",
-  "explanation_grammar": "Non-restrictive Relative Clause.",
+  "explanation_grammar": "Mệnh đề quan hệ không xác định",
   "translation": "Giao thức an toàn mới, vốn được triển khai vào tuần trước, đã giảm đáng kể các tai nạn tại nơi làm việc.",
   "core_vocabulary": [
     {
@@ -39029,7 +39149,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "Dùng 'has finalized' (hiện tại hoàn thành) để chỉ hành động vừa mới hoàn tất, hòa hợp với chủ ngữ số ít 'department'.",
-  "explanation_grammar": "Present Perfect / Subject-Verb Agreement.",
+  "explanation_grammar": "Thì hiện tại hoàn thành",
   "translation": "Phòng kế toán đã hoàn thiện các báo cáo tài chính cho cuộc họp hội đồng quản trị sắp tới.",
   "core_vocabulary": [
     {
@@ -39051,7 +39171,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Who' thay thế cho danh từ chỉ người 'consultant' làm chủ ngữ.",
-  "explanation_grammar": "Relative Pronoun (Subject).",
+  "explanation_grammar": "Đại từ quan hệ làm chủ ngữ",
   "translation": "Công ty đang tìm kiếm một tư vấn viên người quen thuộc với cả các quy trình hải quan trong nước và quốc tế.",
   "core_vocabulary": [
     {
@@ -39078,7 +39198,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "MĐQH",
   "explanation_reason": "Rút gọn mệnh đề quan hệ dạng bị động (dispatched = which was dispatched).",
-  "explanation_grammar": "Reduced Relative Clause (Passive).",
+  "explanation_grammar": "Mệnh đề quan hệ rút gọn (bị động)",
   "translation": "Lô hàng được gửi bởi đại lý đối tác của chúng tôi đã đến kho sớm hơn hai ngày so với lịch trình.",
   "core_vocabulary": [
     {
@@ -39100,7 +39220,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' dùng để lựa chọn trong một số lượng giới hạn các phương án.",
-  "explanation_grammar": "Wh-word in Noun Clause.",
+  "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
   "translation": "Hội đồng quản trị cần quyết định chiến lược tiếp thị nào trong hai chiến lược phù hợp hơn với các giá trị cốt lõi của công ty chúng ta.",
   "core_vocabulary": [
     {
@@ -39127,7 +39247,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Whom' thay thế cho danh từ chỉ người 'Mr. Evans' làm tân ngữ cho động từ 'praised'.",
-  "explanation_grammar": "Relative Pronoun (Object).",
+  "explanation_grammar": "Đại từ quan hệ làm tân ngữ",
   "translation": "Ông Evans, người mà ủy ban đã ca ngợi vì sự lãnh đạo xuất sắc của mình, sẽ giám sát chi nhánh mới.",
   "core_vocabulary": [
     {
@@ -39149,7 +39269,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Which' thay thế cho danh từ chỉ vật 'agreement' làm tân ngữ cho động từ 'reviewed'.",
-  "explanation_grammar": "Relative Pronoun (Object).",
+  "explanation_grammar": "Đại từ quan hệ làm tân ngữ",
   "translation": "Thỏa thuận mức độ dịch vụ mà bạn đã xem xét vào tháng trước nêu rõ các hình phạt cho việc giao hàng trễ.",
   "core_vocabulary": [
     {
@@ -39171,7 +39291,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "MĐQH",
   "explanation_reason": "'Now' phù hợp với thì hiện tại tiếp diễn.",
-  "explanation_grammar": "Adverb of Time.",
+  "explanation_grammar": "Trạng từ chỉ thời gian",
   "translation": "Chuyên gia CNTT đang chạy chẩn đoán trên hệ thống ngay bây giờ để đảm bảo cơ sở dữ liệu đang hoạt động chính xác.",
   "core_vocabulary": [
     {
@@ -39193,7 +39313,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc 'The more + adj/adv, the more + adj/adv' (càng... càng...). Ở đây cần tính từ 'confident' sau động từ 'become'.",
-  "explanation_grammar": "Double Comparative (The more... the more...).",
+  "explanation_grammar": "So sánh kép (càng… càng…)",
   "translation": "Người quản lý càng đầu tư nhiều thời gian vào việc đào tạo, các nhân viên càng trở nên tự tin hơn về hệ thống mới.",
   "core_vocabulary": [
     {
@@ -39220,7 +39340,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc so sánh bằng 'as + adj/adv + as'. Ở đây cần trạng từ 'efficiently' để bổ nghĩa cho động từ 'processes'.",
-  "explanation_grammar": "Equative Comparison (as... as).",
+  "explanation_grammar": "So sánh bằng (as… as)",
   "translation": "Phần mềm mới từ Vertex Tech xử lý dữ liệu tài chính hiệu quả như hệ thống cũ, nhưng ít lỗi hơn.",
   "core_vocabulary": [
     {
@@ -39247,7 +39367,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "So sánh",
   "explanation_reason": "Dùng 'more + adv + than' để so sánh hơn cho trạng từ 'reliably' (bổ nghĩa cho 'handles'). 'Even' dùng để nhấn mạnh.",
-  "explanation_grammar": "Comparative with Adverbs.",
+  "explanation_grammar": "So sánh hơn với trạng từ",
   "translation": "Horizon Transport xử lý các lô hàng rời quốc tế thậm chí còn đáng tin cậy hơn so với những gì bộ phận hậu cần của chúng tôi dự kiến ban đầu.",
   "core_vocabulary": [
     {
@@ -39274,7 +39394,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "So sánh",
   "explanation_reason": "Sử dụng tính từ so sánh hơn 'higher' vì có sự so sánh giữa hai đối tượng (quý 1 và quý 2).",
-  "explanation_grammar": "Comparative with Adjectives.",
+  "explanation_grammar": "So sánh hơn với tính từ",
   "translation": "Sản lượng tại nhà máy Apex Manufacturing cao hơn đáng kể trong quý hai so với quý một.",
   "core_vocabulary": [
     {
@@ -39296,7 +39416,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc so sánh bằng 'as + adj + as'. Ở đây thiếu từ 'as' đầu tiên.",
-  "explanation_grammar": "Equative Comparison (as... as).",
+  "explanation_grammar": "So sánh bằng (as… as)",
   "translation": "Để đảm bảo hợp đồng với Zenith Corp, điều quan trọng là đề xuất của chúng tôi phải thuyết phục như đề xuất của các đối thủ cạnh tranh.",
   "core_vocabulary": [
     {
@@ -39323,7 +39443,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc 'The more + adv, the more...'. Cần trạng từ 'closely' bổ nghĩa cho động từ 'reviewed'.",
-  "explanation_grammar": "Double Comparative (The more... the more...).",
+  "explanation_grammar": "So sánh kép (càng… càng…)",
   "translation": "Ông Henderson càng xem xét kỹ báo cáo tài chính hàng năm, ông càng tìm thấy nhiều điểm sai lệch trong kế toán.",
   "core_vocabulary": [
     {
@@ -39350,7 +39470,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "So sánh",
   "explanation_reason": "Dùng 'more' trước tính từ dài 'versatile' để tạo dạng so sánh hơn (có 'than' phía sau).",
-  "explanation_grammar": "Comparative with Long Adjectives.",
+  "explanation_grammar": "So sánh hơn với tính từ dài",
   "translation": "Người tiêu dùng hiện đang yêu cầu một chiếc máy tính bảng linh hoạt hơn so với những gì hiện có trên thị trường từ Nova Electronics.",
   "core_vocabulary": [
     {
@@ -39372,7 +39492,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "So sánh",
   "explanation_reason": "Dùng tính từ so sánh hơn 'heavier' cho tính từ ngắn 'heavy' (vì có 'than' phía sau).",
-  "explanation_grammar": "Comparative with Short Adjectives.",
+  "explanation_grammar": "So sánh hơn với tính từ ngắn",
   "translation": "Mẫu máy hút bụi Titan mới nhất hơi nặng hơn một chút nhưng bền hơn nhiều so với các phiên bản trước đó.",
   "core_vocabulary": [
     {
@@ -39399,7 +39519,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc 'as + adj/adv + as possible'. Ở đây cần trạng từ 'promptly' bổ nghĩa cho động từ 'receives'.",
-  "explanation_grammar": "Equative Comparison / Comparison as possible.",
+  "explanation_grammar": "So sánh bằng (as… as)",
   "translation": "Vui lòng đảm bảo khách hàng tiềm năng nhận được thỏa thuận thuê đã cập nhật sớm nhất có thể để họ xem xét.",
   "core_vocabulary": [
     {
@@ -39426,7 +39546,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc 'The more + adj, the more + adj'. Cần tính từ 'challenging' sau 'will be'.",
-  "explanation_grammar": "Double Comparative.",
+  "explanation_grammar": "So sánh kép (càng… càng…)",
   "translation": "Các yêu cầu tiếp thị của khách hàng càng phức tạp, quá trình phát triển phần mềm sẽ càng đầy thử thách.",
   "core_vocabulary": [
     {
@@ -39453,7 +39573,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "So sánh",
   "explanation_reason": "Dùng trạng từ ở dạng so sánh hơn (well -> better) vì có 'than' phía sau và bổ nghĩa cho 'performed'.",
-  "explanation_grammar": "Irregular Comparative (well -> better).",
+  "explanation_grammar": "So sánh hơn bất quy tắc",
   "translation": "Chiến dịch quảng cáo trực tuyến cho Đồng hồ thông minh Lunar đã hoạt động tốt hơn nhiều so với dự đoán của hội đồng quản trị.",
   "core_vocabulary": [
     {
@@ -39480,7 +39600,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc so sánh bằng 'as + adj + as'. Cần tính từ 'critical' đứng sau động từ to-be 'is'.",
-  "explanation_grammar": "Equative Comparison.",
+  "explanation_grammar": "So sánh bằng (as… as)",
   "translation": "Sự hài lòng của nhân viên cũng quan trọng đối với thành công lâu dài của Tập đoàn Summit như sự tăng trưởng doanh thu liên tục.",
   "core_vocabulary": [
     {
@@ -39507,7 +39627,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "So sánh",
   "explanation_reason": "Dùng tính từ so sánh hơn 'faster' cho tính từ ngắn (vì có 'than' phía sau).",
-  "explanation_grammar": "Comparative with Short Adjectives.",
+  "explanation_grammar": "So sánh hơn với tính từ ngắn",
   "translation": "Nhờ phần mềm tự động hóa mới, dây chuyền lắp ráp tại Falcon Industries giờ đây nhanh hơn nhiều so với trước đây.",
   "core_vocabulary": [
     {
@@ -39529,7 +39649,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "So sánh",
   "explanation_reason": "Dùng 'more' trước trạng từ 'carefully' để tạo dạng so sánh hơn (vì có 'than' phía sau).",
-  "explanation_grammar": "Comparative with Adverbs.",
+  "explanation_grammar": "So sánh hơn với trạng từ",
   "translation": "Chuyên gia phân tích tài chính mới được thuê xem xét các báo cáo ngân sách hàng quý cẩn thận hơn nhiều so với người trước đó.",
   "core_vocabulary": [
     {
@@ -39556,7 +39676,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc 'as + adj/adv + as possible/we can'. Cần trạng từ 'swiftly' để bổ nghĩa cho động từ 'resolve'.",
-  "explanation_grammar": "Equative Comparison / Adverbial use.",
+  "explanation_grammar": "So sánh bằng (as… as)",
   "translation": "Chúng tôi cần giải quyết khiếu nại của khách hàng liên quan đến lô hàng vận tải bị lỗi nhanh nhất có thể.",
   "core_vocabulary": [
     {
@@ -39583,7 +39703,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc song song 'The more + adj, the more + adj'. Cần tính từ 'suitable' sau động từ to-be 'are'.",
-  "explanation_grammar": "Double Comparative.",
+  "explanation_grammar": "So sánh kép (càng… càng…)",
   "translation": "Ứng viên xin việc càng có nhiều kinh nghiệm, họ càng phù hợp cho vị trí quản lý cấp cao này.",
   "core_vocabulary": [
     {
@@ -39610,7 +39730,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "So sánh",
   "explanation_reason": "Sử dụng 'more' để tạo dạng so sánh hơn cho tính từ 'widespread' (vì có 'than' phía sau).",
-  "explanation_grammar": "Comparative with Long Adjectives.",
+  "explanation_grammar": "So sánh hơn với tính từ dài",
   "translation": "Nhu cầu của người tiêu dùng đối với dịch vụ lưu trữ của Echo Cloud đã trở nên phổ biến hơn so với những gì các chuyên gia trong ngành dự đoán vào năm ngoái.",
   "core_vocabulary": [
     {
@@ -39637,7 +39757,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "So sánh",
   "explanation_reason": "Dùng tính từ ở dạng so sánh hơn 'larger' (một âm tiết) để tương ứng với 'more modern' phía sau.",
-  "explanation_grammar": "Comparative with Short Adjectives.",
+  "explanation_grammar": "So sánh hơn với tính từ ngắn",
   "translation": "Sau cuộc đại tu gần đây, phòng hội nghị chính tại Vanguard Enterprises lớn hơn và hiện đại hơn đáng kể.",
   "core_vocabulary": [
     {
@@ -39659,7 +39779,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc so sánh bằng 'as + adj/adv + as'. Ở đây cần trạng từ 'eloquently' để bổ nghĩa cho động từ 'delivered'.",
-  "explanation_grammar": "Equative Comparison with Adverbs.",
+  "explanation_grammar": "So sánh bằng (as… as)",
   "translation": "Diễn giả khách mời đã trình bày bài diễn thuyết chính của mình một cách hùng hồn như thường lệ, thu hút toàn bộ khán giả tại buổi hội thảo.",
   "core_vocabulary": [
     {
@@ -39686,7 +39806,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc 'The more... the more...'. Cần tính từ 'innovative' để bổ nghĩa cho 'companies' sau động từ to-be 'be'.",
-  "explanation_grammar": "Double Comparative.",
+  "explanation_grammar": "So sánh kép (càng… càng…)",
   "translation": "Thị trường bán lẻ càng trở nên cạnh tranh, các công ty càng phải trở nên đổi mới và sáng tạo để thu hút và giữ chân khách hàng.",
   "core_vocabulary": [
     {
@@ -39713,7 +39833,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "So sánh",
   "explanation_reason": "Dùng 'more' để tạo dạng so sánh hơn cho trạng từ 'consistently' (vì có 'than' phía sau). 'Far' được dùng để nhấn mạnh.",
-  "explanation_grammar": "Comparative with Adverbs.",
+  "explanation_grammar": "So sánh hơn với trạng từ",
   "translation": "Nhà cung cấp mới của chúng tôi tại Đức cung cấp nguyên liệu thô nhất quán hơn nhiều so với nhà cung cấp trong nước trước đây của chúng tôi.",
   "core_vocabulary": [
     {
@@ -39740,7 +39860,7 @@ export const grammarQuestions = [
   "correct_answer": "B",
   "grammar_type": "So sánh",
   "explanation_reason": "Dùng dạng so sánh hơn của trạng từ 'hard' là 'harder' (vì có 'than' phía sau).",
-  "explanation_grammar": "Comparative of Adverb 'hard'.",
+  "explanation_grammar": "So sánh hơn với trạng từ",
   "translation": "Đội ngũ bán hàng tận tâm đã làm việc chăm chỉ hơn nhiều cho đợt ra mắt sản phẩm sắp tới so với lần trước đó.",
   "core_vocabulary": [
     {
@@ -39767,7 +39887,7 @@ export const grammarQuestions = [
   "correct_answer": "D",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc so sánh bằng 'as + adj + as'. Cần tính từ 'comprehensive' sau động từ to-be 'is'.",
-  "explanation_grammar": "Equative Comparison.",
+  "explanation_grammar": "So sánh bằng (as… as)",
   "translation": "Gói bảo hành mở rộng cho Máy pha cà phê Orion cũng toàn diện như các gói được cung cấp bởi các thương hiệu xa xỉ hàng đầu.",
   "core_vocabulary": [
     {
@@ -39794,7 +39914,7 @@ export const grammarQuestions = [
   "correct_answer": "C",
   "grammar_type": "So sánh",
   "explanation_reason": "Cấu trúc 'The more... the more...'. Cần trạng từ 'thoroughly' để bổ nghĩa cho động từ 'reviews'.",
-  "explanation_grammar": "Double Comparative.",
+  "explanation_grammar": "So sánh kép (càng… càng…)",
   "translation": "Ủy ban điều hành càng xem xét kỹ các đề xuất, việc lựa chọn hồ sơ thắng thầu sẽ càng dễ dàng hơn.",
   "core_vocabulary": [
     {
@@ -39821,7 +39941,7 @@ export const grammarQuestions = [
   "correct_answer": "A",
   "grammar_type": "So sánh",
   "explanation_reason": "Dùng tính từ so sánh hơn 'slower' cho tính từ ngắn 'slow' (vì có 'than' phía sau).",
-  "explanation_grammar": "Comparative with Short Adjectives.",
+  "explanation_grammar": "So sánh hơn với tính từ ngắn",
   "translation": "Các xu hướng kinh tế gần đây cho thấy sự phục hồi hơi chậm hơn của thị trường bất động sản thương mại so với những gì đã được phác thảo trước đó.",
   "core_vocabulary": [
     {
@@ -40869,7 +40989,7 @@ export const grammarQuestions = [
 },
   {
   "id": "q1578",
-  "question": "Từ 'comprehensive' thuộc từ loại gì?",
+  "question": "Từ 'preliminary' thuộc từ loại gì?",
   "options": {
     "A": "Động từ",
     "B": "Tính từ",
@@ -40878,14 +40998,14 @@ export const grammarQuestions = [
   },
   "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **comprehensive** kết thúc bằng đuôi **-ive**. Đây là hậu tố đặc trưng và cực kỳ phổ biến của **Tính từ**.",
+  "explanation_reason": "Từ **preliminary** kết thúc bằng đuôi **-ary**. Đuôi **-ary** thường là dấu hiệu của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'comprehensive' (adj.) có nghĩa là: toàn diện.",
+  "translation": "Từ 'preliminary' (adj.) có nghĩa là: sơ bộ, ban đầu.",
   "core_vocabulary": [
     {
-      "word": "comprehensive",
+      "word": "preliminary",
       "type": "adj.",
-      "meaning": "toàn diện"
+      "meaning": "sơ bộ, ban đầu"
     }
   ]
 },
@@ -41133,7 +41253,7 @@ export const grammarQuestions = [
 },
   {
   "id": "q1590",
-  "question": "Từ 'potential' thuộc từ loại gì?",
+  "question": "Từ 'reimbursement' thuộc từ loại gì?",
   "options": {
     "A": "Tính từ",
     "B": "Trạng từ",
@@ -41142,14 +41262,14 @@ export const grammarQuestions = [
   },
   "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **potential** kết thúc bằng đuôi **-al**. Đuôi **-al** thường là Tính từ, nhưng **potential** có thể vừa là tính từ vừa là **Danh từ** (tiềm năng). Trong câu này, nó đóng vai trò Danh từ ngoại lệ.",
+  "explanation_reason": "Từ **reimbursement** kết thúc bằng đuôi **-ment**. Đuôi **-ment** là dấu hiệu điển hình của **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'potential' (n.) có nghĩa là: tiềm năng.",
+  "translation": "Từ 'reimbursement' (n.) có nghĩa là: sự hoàn trả, tiền hoàn lại.",
   "core_vocabulary": [
     {
-      "word": "potential",
+      "word": "reimbursement",
       "type": "n.",
-      "meaning": "tiềm năng"
+      "meaning": "sự hoàn trả, tiền hoàn lại"
     }
   ]
 }
@@ -41464,7 +41584,7 @@ export const grammarQuestions = [
 },
   {
   "id": "q1605",
-  "question": "Từ 'efficiently' thuộc từ loại gì?",
+  "question": "Từ 'consistently' thuộc từ loại gì?",
   "options": {
     "A": "Trạng từ",
     "B": "Danh từ",
@@ -41473,14 +41593,14 @@ export const grammarQuestions = [
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **efficiently** kết thúc bằng đuôi **-ly**. Đây là cách cấu tạo đặc trưng của **Trạng từ**.",
+  "explanation_reason": "Từ **consistently** kết thúc bằng đuôi **-ly** gắn vào tính từ 'consistent'. Đuôi **-ly** là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'efficiently' (adv.) có nghĩa là: một cách hiệu quả.",
+  "translation": "Từ 'consistently' (adv.) có nghĩa là: một cách nhất quán, đều đặn.",
   "core_vocabulary": [
     {
-      "word": "efficiently",
+      "word": "consistently",
       "type": "adv.",
-      "meaning": "một cách hiệu quả"
+      "meaning": "một cách nhất quán, đều đặn"
     }
   ]
 },
@@ -42037,7 +42157,7 @@ export const grammarQuestions = [
 },
   {
   "id": "q1631",
-  "question": "Từ 'expenditure' thuộc từ loại gì?",
+  "question": "Từ 'itinerary' thuộc từ loại gì?",
   "options": {
     "A": "Trạng từ",
     "B": "Động từ",
@@ -42046,14 +42166,14 @@ export const grammarQuestions = [
   },
   "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **expenditure** kết thúc bằng đuôi **-ure**. Đuôi **-ure** là dấu hiệu nhận diện thông dụng của một **Danh từ**.",
+  "explanation_reason": "Từ **itinerary** kết thúc bằng đuôi **-ary** nhưng ở đây là danh từ chỉ vật, nghĩa 'lịch trình', nên là **Danh từ**. Cần phân biệt với 'preliminary' (tính từ) cùng đuôi.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'expenditure' (n.) có nghĩa là: chi phí, sự chi tiêu.",
+  "translation": "Từ 'itinerary' (n.) có nghĩa là: lịch trình chuyến đi.",
   "core_vocabulary": [
     {
-      "word": "expenditure",
+      "word": "itinerary",
       "type": "n.",
-      "meaning": "chi phí, sự chi tiêu"
+      "meaning": "lịch trình chuyến đi"
     }
   ]
 },
@@ -42191,7 +42311,7 @@ export const grammarQuestions = [
 },
   {
   "id": "q1638",
-  "question": "Từ 'negotiate' thuộc từ loại gì?",
+  "question": "Từ 'postpone' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
     "B": "Tính từ",
@@ -42200,14 +42320,14 @@ export const grammarQuestions = [
   },
   "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **negotiate** kết thúc bằng đuôi **-ate**. Hậu tố **-ate** thường được dùng để cấu tạo nên **Động từ**.",
+  "explanation_reason": "Từ **postpone** không mang hậu tố danh từ hay tính từ nào, và mang nghĩa hành động 'hoãn lại', nên là **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'negotiate' (v.) có nghĩa là: đàm phán.",
+  "translation": "Từ 'postpone' (v.) có nghĩa là: hoãn lại, dời lịch.",
   "core_vocabulary": [
     {
-      "word": "negotiate",
+      "word": "postpone",
       "type": "v.",
-      "meaning": "đàm phán"
+      "meaning": "hoãn lại, dời lịch"
     }
   ]
 },
@@ -42323,7 +42443,7 @@ export const grammarQuestions = [
 },
   {
   "id": "q1644",
-  "question": "Từ 'diversify' thuộc từ loại gì?",
+  "question": "Từ 'streamline' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
     "B": "Tính từ",
@@ -42332,14 +42452,14 @@ export const grammarQuestions = [
   },
   "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **diversify** kết thúc bằng đuôi **-ify**. Hậu tố **-ify** là một trong những dấu hiệu nhận biết tiêu chuẩn của **Động từ**.",
+  "explanation_reason": "Từ **streamline** không mang hậu tố danh từ hay tính từ nào, và mang nghĩa hành động 'tinh gọn hoá quy trình', nên là **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'diversify' (v.) có nghĩa là: đa dạng hóa.",
+  "translation": "Từ 'streamline' (v.) có nghĩa là: tinh gọn, đơn giản hoá quy trình.",
   "core_vocabulary": [
     {
-      "word": "diversify",
+      "word": "streamline",
       "type": "v.",
-      "meaning": "đa dạng hóa"
+      "meaning": "tinh gọn, đơn giản hoá quy trình"
     }
   ]
 },
@@ -42411,7 +42531,7 @@ export const grammarQuestions = [
 },
   {
   "id": "q1648",
-  "question": "Từ 'maintenance' thuộc từ loại gì?",
+  "question": "Từ 'warranty' thuộc từ loại gì?",
   "options": {
     "A": "Tính từ",
     "B": "Trạng từ",
@@ -42420,14 +42540,14 @@ export const grammarQuestions = [
   },
   "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **maintenance** kết thúc bằng đuôi **-ance**. Đây là dấu hiệu nhận diện rất chuẩn của **Danh từ**.",
+  "explanation_reason": "Từ **warranty** kết thúc bằng đuôi **-ty**. Đuôi **-ty** là dấu hiệu điển hình của **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'maintenance' (n.) có nghĩa là: sự bảo trì.",
+  "translation": "Từ 'warranty' (n.) có nghĩa là: sự bảo hành, giấy bảo hành.",
   "core_vocabulary": [
     {
-      "word": "maintenance",
+      "word": "warranty",
       "type": "n.",
-      "meaning": "sự bảo trì"
+      "meaning": "sự bảo hành"
     }
   ]
 },
@@ -42455,7 +42575,7 @@ export const grammarQuestions = [
 },
   {
   "id": "q1650",
-  "question": "Từ 'innovative' thuộc từ loại gì?",
+  "question": "Từ 'mandatory' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
     "B": "Động từ",
@@ -42464,14 +42584,14 @@ export const grammarQuestions = [
   },
   "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **innovative** kết thúc bằng đuôi **-ive**. Đây là dấu hiệu nhận diện quen thuộc của một **Tính từ**.",
+  "explanation_reason": "Từ **mandatory** kết thúc bằng đuôi **-ory**. Đuôi **-ory** thường là dấu hiệu của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'innovative' (adj.) có nghĩa là: đổi mới.",
+  "translation": "Từ 'mandatory' (adj.) có nghĩa là: bắt buộc.",
   "core_vocabulary": [
     {
-      "word": "innovative",
+      "word": "mandatory",
       "type": "adj.",
-      "meaning": "đổi mới"
+      "meaning": "bắt buộc"
     }
   ]
 }
