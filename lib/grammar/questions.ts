@@ -6507,7 +6507,7 @@ export const grammarQuestions = [
     "grammar_type": "Tính từ & Trạng từ",
     "explanation_reason": "Đứng trước danh từ gốc 'interest' (sự quan tâm), ta cần tính từ 'substantial' để hợp thành cụm danh từ tân ngữ 'substantial interest' (Sự chú ý đáng kể).",
     "explanation_grammar": "Tính từ chỉ đặc điểm theo sau danh từ chính.",
-    "translation": "Chiến dịch quảng cáo kỹ thuật số đã tạo ra được sự quan tâm đáng kể dành cho dòng quần áo này.',",
+    "translation": "Chiến dịch quảng cáo kỹ thuật số đã tạo ra sự quan tâm đáng kể dành cho dòng quần áo này.",
     "core_vocabulary": [
       {
         "word": "substantial",
@@ -6716,9 +6716,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Giữa cấu trúc bị động 'be... processed' (được xử lý), từ đứng vào chỉ có thể là một Trạng từ giúp tăng thêm sức biểu cảm cho hành động vây quanh nó.",
+    "explanation_reason": "Giữa trợ động từ bị động 'be' và phân từ 'processed' cần một trạng từ. 'Relevantly' (một cách phù hợp) bổ nghĩa cho hành động xử lý hồ sơ.",
     "explanation_grammar": "Tobe + Trạng từ + V_ed (quá khứ phân từ).",
-    "translation": "Trước khi công việc chính thức đi vào hoạt động ở công trường, các đề xuất cấp phép cũng phải được xử lý một cách hợp tính thích đáng.",
+    "translation": "Trước khi công việc tại công trường có thể bắt đầu, các đơn xin cấp phép phải được xử lý một cách phù hợp.",
     "core_vocabulary": [
       {
         "word": "permit",
@@ -6743,9 +6743,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Sau mạo từ 'a', bổ trợ cho danh từ 'estimate' (sự ước tính) sẽ yêu cầu một tính từ đứng trước đó. 'conservative' trong trường hợp này mang nghĩa khiêm tốn / cẩn trọng / không nói lố.",
+    "explanation_reason": "Sau mạo từ 'a' và trước danh từ 'estimate' cần một tính từ. 'Conservative' ở đây mang nghĩa dè dặt, thận trọng, không phóng đại.",
     "explanation_grammar": "Mạo từ + Tính từ + Danh từ.",
-    "translation": "Chúng tôi đã tự lập ra một con số ước đoán an toàn về lượng du khách kỳ vọng sẽ trẩy mùa trong cái tháng sắp tới.",
+    "translation": "Chúng tôi đã đưa ra một ước tính dè dặt về lượng khách du lịch dự kiến trong tháng tới.",
     "core_vocabulary": [
       {
         "word": "conservative",
@@ -6770,9 +6770,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Vẫn giống hệt quy tắc kinh điển, 'way' (cách thức/đường hướng) là Danh từ nên bị kiểm soát bởi một Tính từ bổ nghĩa phía trước nó 'successful' (thành công).",
+    "explanation_reason": "Danh từ 'way' (cách thức) cần một tính từ đứng trước bổ nghĩa. 'Successful' (thành công) là lựa chọn phù hợp.",
     "explanation_grammar": "A/An + Tính từ + Danh từ.",
-    "translation": "Hãng Chunto Consultancy Service đã đề bạt xuất lên một cách thức thành thành công vượt trội nhằm trung hòa và cân đối kinh phí tài chính thường niên.",
+    "translation": "Chunto Consultancy Service đã đề xuất một cách thức hiệu quả để cân đối ngân sách hằng năm.",
     "core_vocabulary": [
       {
         "word": "recommend",
@@ -6797,9 +6797,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Cụm danh từ 'client base' (mạng lưới tệp khách hàng) cần tính từ lấp vào đằng trước để sinh ra cụm hoàn thiện 'một mạng lưới khách hàng ấn tượng'. Tận cùng -ive là đại diện tiêu biểu của Tính từ.",
+    "explanation_reason": "Cụm danh từ 'client base' (tệp khách hàng) cần một tính từ đứng trước. Đuôi -ive là dấu hiệu đặc trưng của tính từ.",
     "explanation_grammar": "An + Tính từ + Noun Phrase.",
-    "translation": "Norvo Financial đã tự vun đắp bồi thực lên một tệp khách hàng ấn tượng dẫu chỉ trong một thời điểm thời gian vô cùng vắn tắt.",
+    "translation": "Norvo Financial đã xây dựng được một tệp khách hàng ấn tượng chỉ trong một thời gian ngắn.",
     "core_vocabulary": [
       {
         "word": "impressive",
@@ -6824,9 +6824,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Bám đuôi giới từ Tobe 'was' để dẫn lối sang phân từ 'hired' (được thuê mướn) bắt buộc phải là liên hiệp chèn giữa của một Trạng từ (originally) nhằm phụ nghĩa thêm sự tình.",
+    "explanation_reason": "Giữa động từ 'was' và phân từ 'hired' cần một trạng từ. 'Originally' (ban đầu) bổ nghĩa cho thời điểm được tuyển dụng.",
     "explanation_grammar": "Tobe + Trạng từ + V(P.P - Động từ quá khứ chỉ thể Bị Động).",
-    "translation": "Anh chàng Walter Keegan này lúc thuở ban đầu cũng chỉ rặt được thuê làm một tay bán hàng nhưng chớp nhoáng sau đó ông đã vụt lên trở thành đại đầu mục của toàn bộ khối phận phòng tiếp thị.",
+    "translation": "Walter Keegan ban đầu được tuyển vào làm nhân viên bán hàng, nhưng chẳng bao lâu sau ông đã trở thành trưởng phòng tiếp thị.",
     "core_vocabulary": [
       {
         "word": "originally",
@@ -6851,9 +6851,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Phía sau là Động từ 'increases' (gia tăng) nên phía trước nó cần nhét một Trạng từ vô để mô tả tốc độ hay dung lượng của hành động đó 'greatly' (triệt phá cực kỳ lớn lao).",
+    "explanation_reason": "Giữa chủ ngữ và động từ 'increases' cần một trạng từ. 'Greatly' (rất nhiều, đáng kể) bổ nghĩa cho mức độ tăng.",
     "explanation_grammar": "Trạng từ đứng trước Động Từ để thâm xâu bổ nghĩa về tốc độ quy mô.",
-    "translation": "Tin học thống bộ hóa hồ sơ lưu khám y tế đã vô hình chung làm tăng lên một cách chóng mặt khả năng chuyên trị bệnh tật của các ngài viện trưởng.",
+    "translation": "Việc tin học hóa hồ sơ bệnh án làm tăng đáng kể khả năng chẩn đoán và điều trị bệnh nhân của bác sĩ.",
     "core_vocabulary": [
       {
         "word": "diagnose",
@@ -6878,9 +6878,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "B",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Chen chân giữa trợ động từ chia 'has' ứng cứu V3/Ed 'increased' (đã tăng) luôn được đặc cách cho một Trạng từ (Adv). Cụm này có nghĩa 'đã gia tăng một cách nhất quán trường kỳ'.",
+    "explanation_reason": "Giữa trợ động từ 'has' và phân từ 'increased' cần một trạng từ. 'Consistently' nghĩa là một cách ổn định, đều đặn.",
     "explanation_grammar": "Have/Has/Had + Adv + V3/Ed.",
-    "translation": "Dây chuyền hệ sinh thái đóng chai siêu cấp của trang trại Khoury Dairy đã thúc tăng lực năng chuỗi cung ứng một cách đều dặn đồng điệu tại riêng cái công xưởng Tallahassee.",
+    "translation": "Hệ thống đóng chai sữa đã nâng cấp của Khoury Dairy đã giúp năng suất tại nhà máy Tallahassee tăng lên một cách ổn định.",
     "core_vocabulary": [
       {
         "word": "productivity",
@@ -6905,9 +6905,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Đứng giữa chủ thể (Boutique) và hành động (hosts) thường trực có các từ chỉ tuần suất làm Trạng từ bổ nghĩa gạch nối mốc thời gian diễn ra. 'Occasionally' (ngẫu nhiên thỉnh thoảng).",
+    "explanation_reason": "Giữa chủ ngữ và động từ 'hosts' cần một trạng từ chỉ tần suất. 'Occasionally' nghĩa là thỉnh thoảng.",
     "explanation_grammar": "Chủ ngữ (Subject) + Trạng từ tuần suất thời gian (Freq Adv) + Động từ (Verb).",
-    "translation": "Buôn phỉnh Olayinka Boutique có vài đôi lượt thi thoảng cũng lại hay chịu chơi tổ chức các màn event đấu giỏ hàng cho quý tịnh hội viên khối khách hàng trung thành cốt lỏi của nó.",
+    "translation": "Olayinka Boutique thỉnh thoảng tổ chức các sự kiện mua sắm đặc biệt dành cho thành viên câu lạc bộ khách hàng thân thiết.",
     "core_vocabulary": [
       {
         "word": "loyalty",
@@ -6932,9 +6932,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Ngay giữa lằn ranh Tobe bị động 'be' và phần phụ họa 'reviewed' thì trạng từ -ly là từ loại có thẻ kim bào để bổ chèn chen đứng vào. (extensively - kỹ lưỡng sâu nặng)",
+    "explanation_reason": "Giữa trợ động từ bị động 'be' và phân từ 'reviewed' cần một trạng từ. 'Extensively' nghĩa là một cách kỹ lưỡng, trên diện rộng.",
     "explanation_grammar": "Be + Trang Từ (Adv) + Động tính quá khứ hoàn (V_ed/3).",
-    "translation": "100% tất thảy cơ sở sắc luật điều lệ an toàn quan mạng đều sẽ được trích xuất kiểm định gắt gao trên diện cực rộng bởi ngõ khối Bộ Phần Xã Hội Nhân Sự trước khi chính thống phát bản tấu chương trình làng.",
+    "translation": "Toàn bộ chính sách an toàn sẽ được Phòng Nhân sự xem xét kỹ lưỡng trước khi ban hành.",
     "core_vocabulary": [
       {
         "word": "publication",
@@ -7170,9 +7170,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Trống đứng ngay sau mệnh đề Tobe 'is' bổ trợ hoàn chỉnh cảm thán của toàn bộ cụm danh từ đằng sau 'understandably' (có thể hiểu được).",
+    "explanation_reason": "Giữa động từ 'is' và cụm danh từ 'a difficult decision' cần một trạng từ. 'Understandably' nghĩa là một cách dễ hiểu, có thể thông cảm được.",
     "explanation_grammar": "Tobe + Trạng từ + Danh từ nhóm (N_phrase).",
-    "translation": "Phải chuyển nhà di dời vì tính chất công việc điều chuyển là một lựa chọn - có thể hiểu được - rất khó nhằn, nhưng sau ngần ấy nó có thể đi kèm sự đền đáp xứng đáng.",
+    "translation": "Chuyển chỗ ở vì công việc dễ hiểu là một quyết định khó khăn, nhưng nó có thể mang lại thành quả xứng đáng.",
     "core_vocabulary": [
       {
         "word": "understandably",
@@ -7197,9 +7197,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Quá khứ phân từ 'known' (được biết mặt chỉ tên) cần ghép ngay liền kề một Trạng từ đứng trước biểu chỉ cực đại 'widely known' (được giới mộ điệu biết đến rộng rãi).",
+    "explanation_reason": "Trước phân từ 'known' cần một trạng từ. 'Widely known' nghĩa là được biết đến rộng rãi.",
     "explanation_grammar": "Trạng từ + Tính từ quá khứ phân từ P.P.",
-    "translation": "Hội Nghị Kinh doanh thương mại cõi Đông Nam Á năm nay sẽ điểm trúng tiêu điểm quy tụ các vị Lãnh đạo cấp cao lão làng với danh tiếng bay xa cực lớn đến từ mọi quốc gia vùng lãnh",
+    "translation": "Hội nghị Doanh nghiệp Đông Nam Á sẽ quy tụ những nhà lãnh đạo được biết đến rộng rãi và được kính trọng từ các quốc gia trong khu vực.",
     "core_vocabulary": [
       {
         "word": "widely",
@@ -7224,9 +7224,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Thuận ngôn 'make it clear' đã trở thành kinh điển. 'clear' phải chia dưới dạng Tính từ theo sau make it.",
+    "explanation_reason": "Cấu trúc cố định 'make it + tính từ + that...'. Sau 'made it absolutely' cần một tính từ, ở đây là 'clear' (rõ ràng).",
     "explanation_grammar": "Cấu trúc S-V-O-C: make + it + adjective + that + Clause.",
-    "translation": "Chị Đại Kwon đã lập rõ một quy ước rõ như ban ngày là ván bài tuyển nhân viên mới bất di bất dịch phải đi lướt qua cái gật đầu của cấy.",
+    "translation": "Bà Kwon đã nói rõ rằng mọi quyết định tuyển dụng đều phải được bà phê duyệt.",
     "core_vocabulary": [
       {
         "word": "clear",
@@ -7251,9 +7251,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Cụm danh từ 'argument' (luận biện) phải được theo sau Tính từ mang dạng V_ing chủ động 'convincing' (có sứ thuyết phục). Làm thành một luận điểm.",
+    "explanation_reason": "Trước danh từ 'argument' cần một tính từ. 'Convincing' (có sức thuyết phục) là tính từ dạng V-ing mang nghĩa chủ động.",
     "explanation_grammar": "A/an + Tính từ V_ing (chỉ tính chất vật)+ Noun.",
-    "translation": "Ngay giữa lúc trên chiếc bàn tròn thảo luận, bà trùm Yang đã buông thả lời làm tung bay một chuỗi các luận cứ đanh thép thuyết phục 100% dành trọn cho phe tập quán thân nhân môi trường.",
+    "translation": "Tại buổi tọa đàm, bà Yang đã đưa ra một lập luận đầy thuyết phục ủng hộ các thông lệ kinh doanh có trách nhiệm với môi trường.",
     "core_vocabulary": [
       {
         "word": "convincing",
@@ -7278,9 +7278,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Đứng sát thủ theo sau động giới Tobe 'was not' của quý tài chính bắt buộc dùng Tính Từ. 'Profitable' (sinh lời) là sự ăn khớp nhất.",
+    "explanation_reason": "Sau động từ 'was not' cần một tính từ làm bổ ngữ. 'Profitable' (sinh lời) phù hợp với chủ ngữ là một quý tài chính.",
     "explanation_grammar": "Cấu trúc Tobe + Tính từ miêu tả diễn tiến sự tình.",
-    "translation": "Bất chấp luôn việc nhịp lợi nhuận trong chặng đi quý II của cơ sở điên tử Smithton chả gặt hái đủ sâu đầy, cả doanh chủ này vẫn quyết chi tất tay lượng mỏ vàng vào việc công cứu kỹ thuật.",
+    "translation": "Mặc dù quý hai của Smithton Electronics không có lãi, công ty vẫn dự định đầu tư những khoản lớn vào nghiên cứu.",
     "core_vocabulary": [
       {
         "word": "profitable",
@@ -7332,9 +7332,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Nhóm đông từ giác nối (appeared: tỏ ra là..) có chức năng tương đương chữ tobe sinh ra Tính từ theo liền 'agreeable' (bằng lòng).",
+    "explanation_reason": "'Appeared' là động từ nối, sau nó cần một tính từ làm bổ ngữ. 'Agreeable to something' nghĩa là đồng tình với điều gì.",
     "explanation_grammar": "Nhóm Linking Verbs (appear/look/feel) + Tính từ tính thế bổ ngữ.",
-    "translation": "Qua chuổi ngày đàm phán mài sắt, mảng nhóm giạ đốc đã có cái mòi chịu khuất phục đồng lòng với cái sáng kiến giật tăng tiền lường lao động.",
+    "translation": "Trong quá trình đàm phán, ban quản lý tỏ ra đồng tình với đề xuất tăng lương cho nhân viên.",
     "core_vocabulary": [
       {
         "word": "agreeable",
@@ -7359,9 +7359,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Một trạng từ -ly mang chức hiệu 'fully' đi đứng ngay phía đằng trước tính từ gốc 'refundable' để tạo bổ nghĩa cực cấp (hồi nguyên phần 100%).",
+    "explanation_reason": "Trước tính từ 'refundable' cần một trạng từ chỉ mức độ. 'Fully' nghĩa là hoàn toàn, toàn bộ.",
     "explanation_grammar": "Tobe + Trạng Từ (fully) + Tính từ chính quy (refundable).",
-    "translation": "Nguồn viện phí ghi danh ấy sẽ được back phục hoàn lại đẩy tủ trước khi cái buổi lễ ra hội kia chẵn tròn 2 tuần điếm ngược.",
+    "translation": "Phí đăng ký được hoàn lại toàn bộ nếu hủy trước ngày diễn ra hội nghị ít nhất hai tuần.",
     "core_vocabulary": [
       {
         "word": "fully",
@@ -7386,9 +7386,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Thêm gia vào trong cụm cao nhất (superlative format) thì từ 'easily' là trợ thủ Trạng Từ khét tiếng lấp nhét vào đặng nhâm trúng độ nhấn mạnh tuyệt đối.",
+    "explanation_reason": "Trong cấu trúc so sánh nhất, trạng từ 'easily' được dùng để nhấn mạnh (rõ ràng là, hơn hẳn).",
     "explanation_grammar": "Trạng từ lót ổ chen giữa trước cụm tính từ So sánh bậc cao (best).",
-    "translation": "Quả đạn quay thương mại chiếu sóng cho rạp Cafe cậu Zhou không nói ngoa khi ngiễm nhiêm trở thành cú gáo nước đệ nhất phô trương ngon lành cành đào nhất năm trời của nhánh Công ty Sunn.",
+    "translation": "Đoạn quảng cáo cho Zhou's Cafe rõ ràng là mẫu quảng cáo hay nhất trong năm của Sunn Agency.",
     "core_vocabulary": [
       {
         "word": "easily",
@@ -7413,9 +7413,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Đuôi câu cuối thì của Tường Hiện Tại Hoàn Thành thường hay có dính 1 trạng từ chỉ mốc thời gian vát mép hiện tại (lately = gần đây dạo).",
+    "explanation_reason": "Cuối câu ở thì hiện tại hoàn thành thường có một trạng từ chỉ thời gian. 'Lately' nghĩa là gần đây, dạo này.",
     "explanation_grammar": "Trạng từ 'lately' đặt làm chuông neo chốt ý câu tiếp nối diễn mạn hiện tại.",
-    "translation": "Bên mạng dịch vụ chuyển ảo số trên trang nhà của Ngân hàng Ashburn đang hứng một luồng bão lũ tìm kiếm rà sát rất rầm rộ vào dạo ít lâu hiện gần đây.",
+    "translation": "Dịch vụ trực tuyến của Ngân hàng Ashburn dạo gần đây có nhu cầu rất cao.",
     "core_vocabulary": [
       {
         "word": "lately",
@@ -7440,9 +7440,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Khỏa chổ đứng kẹp nằm trong giữa mào từ tobe ranh giới với kết cục 'the result of'. Một trạng từ lấp váng 'partly' điên đảo ý diễn: Là nguyên nhân 1 bộ phần đóng góp.",
+    "explanation_reason": "Giữa động từ 'was' và cụm danh từ 'the result of' cần một trạng từ. 'Partly' nghĩa là một phần.",
     "explanation_grammar": "Tobe + Trạng từ + Nguồn danh ngữ (the Noun).",
-    "translation": "Ngay cả vị phó đà CEO chủ trì cũng đành ngác nhắm mắt đồng thanh cái cú giật gân bàn đào của Prasma Designs chính một tay nguyên khôi một khoảng một phần do dồn dập vào cái giờ vàng thiên lộc số nhọ.",
+    "translation": "Ngay cả giám đốc điều hành cũng phải thừa nhận rằng chiến thắng của Prasma Designs một phần là nhờ gặp đúng thời điểm.",
     "core_vocabulary": [
       {
         "word": "partly",
@@ -7467,9 +7467,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Tính từ & Trạng từ",
-    "explanation_reason": "Luât chung khi chạm trán 1 Tính Từ (lightweight), để lôi dãn sức hấp diễn cực hạng ta điền ngập trạng từ 'exceptionally' (rất ư là, vô cùng xảo).",
+    "explanation_reason": "Trước tính từ 'lightweight' cần một trạng từ chỉ mức độ. 'Exceptionally' nghĩa là đặc biệt, vô cùng.",
     "explanation_grammar": "An + Trang từ Cường điệu (Adv) + Tính từ (Adj) + Noun.",
-    "translation": "Cuỗm cái mảng bộ kính viễn của hãng Yerrow Cameras dẫu có khả năng thọc ống nhóm cực xa tăm tít thò lò như thế nhưng mang trên đầu lại là một lớp phủ vỏ ngoài bóp nhẹ tênh tênh sái cổ phi thường.",
+    "translation": "Ống kính của Yerrow Cameras có tầm chụp xa nhưng lại có lớp vỏ đặc biệt nhẹ.",
     "core_vocabulary": [
       {
         "word": "exceptionally",
@@ -7631,7 +7631,7 @@ export const grammarQuestions = [
     "grammar_type": "Giới từ",
     "explanation_reason": "Vế sau có từ 'finally' (cuối cùng thì), nên vế trước cần một giới từ nói về một chuỗi thời gian đã xảy ra để tạo sự tương phản. 'After' (sau nhiều tháng) là từ logic nhất.",
     "explanation_grammar": "After + Noun Phrase (thường diễn tả thời gian đã qua).",
-    "translation": "Sau chuỗi nhiều tháng trời cố gắng chào bán Tòa nhà Apton, thì người môi giới cuối cùng cũng chốt deal thành công vào tuần trước.",
+    "translation": "Sau nhiều tháng nỗ lực rao bán Tòa nhà Apton, người môi giới cuối cùng đã thành công vào tuần trước.",
     "core_vocabulary": [
       {
         "word": "realtor",
@@ -7732,9 +7732,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "B",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Đứng trước danh từ 'the deadline' (hạn chót) dùng để nói về hạn chót một cách logic nhất, thì giới từ hoàn mĩ là 'before' (trước hạn).",
+    "explanation_reason": "Trước danh từ 'the deadline' (hạn chót) cần một giới từ chỉ thời điểm. 'Before' nghĩa là trước.",
     "explanation_grammar": "Before / By + the deadline.",
-    "translation": "Cô Amari lúc này đã rà soát lại cẩn thận các hồ sơ xin tiền tài trợ, và mớ đơn đó sẽ được đệ trình nộp gửi đi trước khi tới hạn chót chốt sổ.",
+    "translation": "Bà Amari đã rà soát các hồ sơ xin tài trợ, và chúng sẽ được nộp trước hạn chót.",
     "core_vocabulary": [
       {
         "word": "grant",
@@ -7759,9 +7759,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Đứng trước danh từ chỉ không gian khu vực châu lục (Asia), ta dùng 'throughout' (khắp mọi nơi/toàn bộ) để thể hiện sự rải rác quy mô về không gian.",
+    "explanation_reason": "Trước danh từ chỉ khu vực rộng như một châu lục, dùng 'throughout' (khắp, trên toàn) để chỉ phạm vi bao phủ.",
     "explanation_grammar": "Throughout + Place (Xuyên suốt nơi nào đó).",
-    "translation": "North River Linens phát hứa hẹn chính sách giao hàng ship trong ngày hôm sau rải quanh khắp toàn cõi khu vực mảng Châu Á.",
+    "translation": "North River Linens cam kết giao hàng vào ngày hôm sau trên khắp châu Á.",
     "core_vocabulary": [
       {
         "word": "shipping",
@@ -7781,9 +7781,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "B",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Tương tự như câu số 4 (at a luncheon), 'the conference' (hội nghị) cũng là một sự kiện hội đông, ta dùng giới từ 'at' để chỉ địa điểm tụ tập.",
+    "explanation_reason": "'The conference' là một sự kiện, nên dùng giới từ 'at' để chỉ nơi diễn ra sự kiện đó.",
     "explanation_grammar": "At + event.",
-    "translation": "Vị Giáo sư đầu ngành Benguigui sẽ tiến hành làm thuyết trình bản bài tiểu luận nghiên cứu của ổng tại đại hội đồng lịch sử hình thái tự nhiên vào ngày hôm sau.",
+    "translation": "Giáo sư Benguigui sẽ trình bày bài nghiên cứu của mình tại hội nghị lịch sử tự nhiên vào ngày mai.",
     "core_vocabulary": [
       {
         "word": "present",
@@ -7808,9 +7808,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Ý câu cung cấp khoảng thời gian mở rộ mỗi ngày (daily) nhưng phải chừa ra ngày chủ nhật. Giới từ 'except' mang ý nghĩa 'ngoại trừ'.",
+    "explanation_reason": "Câu nêu khung giờ mở cửa hằng ngày nhưng loại trừ Chủ nhật, nên cần giới từ 'except' (ngoại trừ).",
     "explanation_grammar": "Except (for) + Noun / Prepositional Phrase.",
-    "translation": "Quày gửi tiền của ngân hàng được mở cửa múc liên tục thường nhật từ cữ 8 giờ sáng bảnh mắt tới 4 giờ chìu tà, trừ ngày Chủ Nhật.",
+    "translation": "Các quầy giao dịch của ngân hàng mở cửa hằng ngày từ 8 giờ sáng đến 4 giờ chiều, trừ Chủ nhật.",
     "core_vocabulary": [
       {
         "word": "cashier window",
@@ -7835,9 +7835,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Vế đằng sau 'customers are buying...' là chỉ kết quả hệ lụy. Nguyên nhân chỉ bới cụm danh từ đằng trước 'high cost of fuel'. 'Because of' (Bởi vì) nối lại vô cùng logic.",
+    "explanation_reason": "Sau chỗ trống là cụm danh từ 'the high cost of fuel' chỉ nguyên nhân, nên cần giới từ 'because of' (bởi vì).",
     "explanation_grammar": "Because of + Noun Phrase (Lý do dẫn đến nguyên nhân).",
-    "translation": "Vì lý do mức giá chi phí chất đốt nhiên liệu bị kích nâng lên cao, người đi mua dần có xu hướng chốt mua các kiểu xe bé hơn với hiệu suất vượt ích lợi hơn.",
+    "translation": "Vì giá nhiên liệu cao, khách hàng đang chuyển sang mua những chiếc xe nhỏ hơn và tiết kiệm hơn.",
     "core_vocabulary": [
       {
         "word": "cost of fuel",
@@ -7862,9 +7862,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Để chỉ nguyên nhân (lý do) nhận giải thưởng thì giới từ 'for' (dành cho / về cái gì) là một cấu trúc chuyên biệt với cụm từ 'receive an award for...'.",
+    "explanation_reason": "Cấu trúc cố định 'receive an award for something' — giới từ 'for' chỉ lý do nhận giải.",
     "explanation_grammar": "receive something FOR something.",
-    "translation": "Cô nàng Tillinghast đã đạt tay ôm về mấy danh hiệu phần thưởng vinh quy dành cho các tư duy sáng tạo ý niệm mới mẻ của cô.",
+    "translation": "Bà Tillinghast đã nhận được nhiều giải thưởng nhờ những ý tưởng đổi mới của mình.",
     "core_vocabulary": [
       {
         "word": "award",
@@ -7889,9 +7889,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Đứng trước đoạn 'Paris TO Berlin'. Sự cấu trúc kinh viện là 'from A to B' (Từ đâu đến đâu).",
+    "explanation_reason": "Sau chỗ trống có 'to Berlin', nên cần 'from' để tạo cấu trúc 'from A to B' (từ A đến B).",
     "explanation_grammar": "From ... TO ...",
-    "translation": "Mở cung khai mạc từ độ tháng Tháng Tám độ này về đi, dịch vụ Gavelton Bike Tours sẽ bắt đầu xuất kỳ phát tuyến cho các chuyến đạp xe hội nhóm xuất phái từ Pháp tới tận thành Bá Linh Tây Đúc.",
+    "translation": "Bắt đầu từ tháng Tám này, Gavelton Bike Tours sẽ tổ chức các chuyến đạp xe theo nhóm từ Paris đến Berlin.",
     "core_vocabulary": [
       {
         "word": "cycling",
@@ -7911,9 +7911,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Đứng ngay sát danh từ định điểm 'the roads' (con đường). Trạng từ 'on' (trên bề mặt) đặc sệt là của nó.",
+    "explanation_reason": "Trước danh từ 'the roads' cần giới từ 'on' để chỉ vị trí trên bề mặt đường.",
     "explanation_grammar": "On + the roads/ streets / surfaces.",
-    "translation": "Bầy các tàu buýt bến rời khỏi trạm điệu terminal thành thị đều đã bị hoãn trễ tuyến chỉ tại điều kiện băng giá kẹt kín nằm trải đầy trên lòng đường.",
+    "translation": "Các chuyến xe buýt rời bến trung tâm thành phố đã bị hoãn do băng giá trên mặt đường.",
     "core_vocabulary": [
       {
         "word": "terminal",
@@ -7938,9 +7938,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Để nói một thứ nổi tiếng / phổ cập 'trong số' một cộng đồng/nhóm độ tuổi, người ta mặc định xài 'among' (giữa một bày đàn, trong số những người).",
+    "explanation_reason": "Để nói một thứ được ưa chuộng 'trong số' một nhóm người, ta dùng giới từ 'among'.",
     "explanation_grammar": "Among + Plural Nouns (nhiều người / nhóm đối tượng).",
-    "translation": "Bộ phim chưởng Lửa Diện (Wearing Fire) đang gánh ngôi vương chương trình kênh TV ăn khách bật phát nhất lan tỏa trong lòng quý vị khán thính giả phụ nữ chặng tuổi đời độ 18-34 phơi phới.",
+    "translation": "Wearing Fire là chương trình truyền hình được yêu thích nhất trong nhóm phụ nữ từ 18 đến 34 tuổi.",
     "core_vocabulary": [
       {
         "word": "popular",
@@ -7960,9 +7960,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Giới từ",
-    "explanation_reason": "'district' (vi hạt, vùng thị tứ) là một khoảng đất/vùng không gian rộng bao hàm có ranh giới rõ nên ta dùng 'in'. (nằm trong khu vực trung tâm).",
+    "explanation_reason": "'District' là một khu vực có ranh giới rõ ràng, nên dùng giới từ 'in' để chỉ vị trí nằm bên trong.",
     "explanation_grammar": "In + Khu vực địa chính (city, state, district, country).",
-    "translation": "Đơn vị chi nhánh của chúng tôi tại Portview được tọa lạc nằm chễm chệ ngay trong lòng khu thương phố thương mại ở ngay giữa lòng khúc giao của Đại lộ Burnside và nhánh đường con Everett.",
+    "translation": "Chi nhánh Portview của chúng tôi nằm trong khu trung tâm thương mại, giữa Đại lộ Burnside và Phố Everett.",
     "core_vocabulary": [
       {
         "word": "be located in",
@@ -7982,9 +7982,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Thành ngữ chỉ mốc khung thời khắc cuối cụm cố định 'at the end of' (vào đoạn cuối của cái thời lượng gì).",
+    "explanation_reason": "Cụm cố định 'at the end of' (vào cuối của) dùng để chỉ thời điểm kết thúc một khoảng thời gian.",
     "explanation_grammar": "at the end OF + Noun Phrase (khoảng thời gian / sự kiện).",
-    "translation": "Đám chuyên viên phân xưởng công xưởng bắt nguồn rập khuân việc cứ cuối đoạn ca làm trực ca của mình là găm đều lại một phôi bản thanh tra tường trình đưa phệt lên cấp trên.",
+    "translation": "Quản lý phân xưởng phải nộp báo cáo kiểm tra vào cuối ca làm việc của mình.",
     "core_vocabulary": [
       {
         "word": "inspection report",
@@ -8033,7 +8033,7 @@ export const grammarQuestions = [
     "grammar_type": "Giới từ",
     "explanation_reason": "Nguyên nhân khiến giá cà chua giảm 10% là 'do/bởi vì' vụ mùa bội thu (a big harvest). Giới từ 'due to' (bởi vì) cực kỳ hợp lý đứng sau hệ quả.",
     "explanation_grammar": "Due to + Noun phrase (chỉ lý do/ nguyên nhân).",
-    "translation": "Bảng giá gốc cà chua hiện đang được dự kiến sẽ lao dốc tuột giá chừng khoảng 10 phần trăm chính là do cái vụ mùa vụ thu hoạch khổng lồ hồi đầu năm nay.",
+    "translation": "Giá cà chua dự kiến sẽ giảm gần 10 phần trăm do một vụ thu hoạch lớn hồi đầu năm nay.",
     "core_vocabulary": [
       {
         "word": "harvest",
@@ -8060,7 +8060,7 @@ export const grammarQuestions = [
     "grammar_type": "Giới từ",
     "explanation_reason": "Thì hiện tại hoàn thành (have grown) cần liên kết với mốc thời gian trong quá khứ thông qua giới từ 'since' (kể từ khi).",
     "explanation_grammar": "Thì hiện tại hoàn thành + since + Noun phrase (mốc điểm thời gian quá khứ).",
-    "translation": "Chuyến số lượt ghé thăm viện Bảo tàng Văn hóa Bridgevale đã tự đội tăng sinh tăng vọt gấp đôi kể từ cái lúc khai mạc mở sảnh cánh phòng Nghệ thuật Ai Cập cổ đại.",
+    "translation": "Lượt tham quan Bảo tàng Văn hóa Bridgevale đã tăng gấp đôi kể từ khi khu trưng bày Nghệ thuật Ai Cập cổ đại mở cửa.",
     "core_vocabulary": [
       {
         "word": "twofold",
@@ -8085,9 +8085,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Một mốc một giai đoạn của mùa vụ (the summer sales season) kéo dài yêu cầu giới từ 'during' (khoảng trong suốt) đứng trước.",
+    "explanation_reason": "'The summer sales season' là một khoảng thời gian kéo dài, nên dùng giới từ 'during' (trong suốt).",
     "explanation_grammar": "During + Noun (giai đoạn, khoảng thời gian dài).",
-    "translation": "Khu quầy hàng lưu niệm Ada's Gift Shop sẽ rình rập duy trì khung giờ cửa rào đến tận khuya lúc 10h đêm ở trong suốt cả chuỗi mùa sale xả hàng của hè này.",
+    "translation": "Ada's Gift Shop sẽ mở cửa đến 10 giờ tối trong suốt mùa khuyến mãi hè.",
     "core_vocabulary": [
       {
         "word": "sales season",
@@ -8107,9 +8107,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Từ 'regarding' (có liên quan tới / về vấn đề...) tuy lấy đuôi -ing nhưng hoạt động như một cụm Giới Từ (Tương thích với 'about').",
+    "explanation_reason": "'Regarding' tuy có đuôi -ing nhưng hoạt động như một giới từ, nghĩa là 'liên quan đến, về vấn đề' (tương đương 'about').",
     "explanation_grammar": "Regarding + Noun (Danh từ chủ thể gặp vấn đề).",
-    "translation": "Làm ơn hoan hỷ châm chiếu tự động xin bấm số kết nối với trạm hỗ trợ hỏi đáp qua mạng nối đuôi 555-0191 để xử tất tần tật mọi khúc mắc liên can tới bộ đôi xập xình máy phô tô rởm hay lũ máy in.",
+    "translation": "Vui lòng liên hệ bộ phận hỗ trợ theo số 555-0191 nếu có bất kỳ sự cố nào liên quan đến máy photocopy hoặc máy in.",
     "core_vocabulary": [
       {
         "word": "regarding",
@@ -8134,9 +8134,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Vế thứ hai là kết quả (tái khai trương lại) sau khi hoàn thành xong một chuỗi quá trình ở vế trước. Do đó giới từ 'after' (sau một năm) trỏ đúng trình tự thời gian.",
+    "explanation_reason": "Vế sau là kết quả diễn ra sau khi hoàn tất quá trình ở vế trước, nên dùng giới từ 'after' (sau).",
     "explanation_grammar": "After + Khoảng thời gian đã kết thúc ở vế khuyết.",
-    "translation": "Sau chuỗi ngày dài đúng kỉ niệm tròng trọc một năm mài mặt tu sửa lại trang thiết bị khối chóp của ẻm, Trung tâm chuỗi bách hóa Bendell Store sẽ nhẩy cóc tổ chức lễ khánh thành bung cửa dọn nhà hoành tráng vào cái ngày định mệnh ngày 17 tháng 10 này.",
+    "translation": "Sau một năm cải tạo cơ sở, Bendell Department Store sẽ tổ chức lễ khai trương trở lại vào ngày 17 tháng 10.",
     "core_vocabulary": [
       {
         "word": "renovation",
@@ -8161,9 +8161,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Thì hiện tại hoàn thiện (has increased) thường chạy cặp bài trùng với các liên từ chỉ giai điệu kéo dài. 'During the past...' (Trong suốt bao lâu qua) diễn giải cực mượt hành động tăng tiến đó.",
+    "explanation_reason": "Thì hiện tại hoàn thành (has increased) đi với một khoảng thời gian kéo dài. 'During the past two months' nghĩa là trong hai tháng qua.",
     "explanation_grammar": "During/ in / over + the past / the last + khoảng chừng thời gian.",
-    "translation": "Nép trong xuyên suốt tận cái chép tháng hai tháng 2 ròng rã dạo gần đây đổ lại, tần số những vị khách lữ tới xem xuất rạp ở Ổ kịch Ejime đã leo thang đục trần phá cản lên mạnh sốc.",
+    "translation": "Trong hai tháng qua, lượng khán giả đến Nhà hát Ejime đã tăng mạnh.",
     "core_vocabulary": [
       {
         "word": "attendance",
@@ -8188,9 +8188,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Staff được coi như một khối từ đại tập hợp lượng nhân sự tập thể. 'among' (vây trong nội bộ) diễn tả quy mô nhắm vào giữa nhóm đó.",
+    "explanation_reason": "'Staff' là một tập thể nhiều người, nên dùng 'among' để chỉ phạm vi trong nội bộ nhóm đó.",
     "explanation_grammar": "Among + Collective Noun / Plural Noun (Giữa một đám cộng đồng nội thể).",
-    "translation": "Giữ chức là nằm chốt trong ngạch các nhóm một mẩu mục tiêu tôn chỉ của Thống bộ công ty Area Corporation là muốn kích cầu năng đẩy mức độ khai thác tư chất tiến trình chuyên môn cá thể hóa cho thâm nhập ở trong giới bao bọc toàn hàng nội bộ tổng số lính lác thành viên nhân sự ruột làm công.",
+    "translation": "Một trong những mục tiêu chính của Area Corporation là thúc đẩy phát triển chuyên môn cá nhân trong toàn thể nhân viên.",
     "core_vocabulary": [
       {
         "word": "promote",
@@ -8215,9 +8215,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Nói về khu vực kéo dài thông thốc xuyên qua rìa phía bắc, 'through' (xuyên từ mặt này băng vào đi ngang thọc sang nơi khác).",
+    "explanation_reason": "Để nói một khu vực trải dài xuyên qua một điểm, ta dùng giới từ 'through' (xuyên qua).",
     "explanation_grammar": "Extend through: kéo băng thông ngóc xuyên qua mảng...",
-    "translation": "Trải thảm Phân khu Quần thể Hồ nước đâm duỗi vươn mình ra xuyên từ bìa tận mép rìa đỉnh điểm miền Cực Bắc của cái miếng bản đồ thảm xanh công viên kia để rồi luồn trọc dốc ngược tít lên đến độ mấp mé chân rặng núi Rodger.",
+    "translation": "Vùng Hồ trải dài từ rìa phía bắc của công viên xuyên lên tận chân núi Rodger.",
     "core_vocabulary": [
       {
         "word": "extend",
@@ -8242,9 +8242,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Khoảng định kì năm khởi nghiệp đầu tiên (initial year) là khoảng thời gian đếm khung 12 tháng. Vì vậy giới từ đính vào là 'during' (trong khuông độ mùa đó).",
+    "explanation_reason": "'Their initial year of business' là một khoảng thời gian kéo dài, nên dùng giới từ 'during' (trong suốt).",
     "explanation_grammar": "During + specific continuous stage phrase (N_phrase chỉ khoảng năm tháng ngày mốc).",
-    "translation": "Tổ thương điếm Trung tâm giao dịch commerce xóm Elmwood móc túi chi xõa hỗ trợ tung xách bao gói gói hàng xịn nhọc phục vụ cho cái đám chủ bãi thương điểm mới tinh tươm mở sạp được nương tựa ròng rã kéo dài trong ròng lướt hết suốt cái trễ độ chóp năm trời ròng khởi nghiệp đinh chốt ban đầu của bọn chúng.",
+    "translation": "Trung tâm thương mại Elmwood cung cấp dịch vụ hỗ trợ cho các chủ cửa hàng mới trong suốt năm kinh doanh đầu tiên của họ.",
     "core_vocabulary": [
       {
         "word": "commerce",
@@ -8269,9 +8269,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Theo dòng tính logic mạch thời điểm, bạn phải kiểm tra lệ quy phục trang 'trước khi' tới thăm. Giới từ 'before'.",
+    "explanation_reason": "Theo trình tự thời gian, việc kiểm tra quy định trang phục diễn ra trước khi đến thăm, nên dùng giới từ 'before'.",
     "explanation_grammar": "Before + V-ing.",
-    "translation": "Cũng quả thực là một chước nước tính toán khôn ngoan thôi khi bạn chủ đích tự soi dò kiểm định xem thử coi cái hệ mảng lề lối quy chế đồng phục gắt gao của một hãng công sở như một bước nằm ngay trước dạo định vác cái thân qua rề trúng cổng qua đại bản doanh sở hội bộ đầu của nó.",
+    "translation": "Nên kiểm tra quy định trang phục của một công ty trước khi đến thăm trụ sở chính của họ.",
     "core_vocabulary": [
       {
         "word": "dress code",
@@ -8296,9 +8296,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "B",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Kỳ đăng ký mở và chốt ở một thời điểm. Dùng 'until' (cho đến tận...).",
+    "explanation_reason": "Kỳ đăng ký kéo dài cho tới một thời điểm kết thúc, nên dùng giới từ 'until' (cho đến).",
     "explanation_grammar": "until + thời khắc định vị của chốt hạn mút.",
-    "translation": "Kỳ cổng tiếp ghi danh đăng tuyển phái gửi vào cái cuộc Đại Hội thảo rùm beng Liên minh Thương thuyết Bán hàng thì nay đương đã được lệnh kéo banh ra chờ đợi khách dốc thẳng đến chót qua tận cái mùng 30 của độ chênh chếch lịch kỳ rụng của mùa Thu tháng 9 gắt gao.",
+    "translation": "Việc đăng ký tham dự Hội nghị Liên minh Tiếp thị hiện đã mở cho đến ngày 30 tháng 9.",
     "core_vocabulary": [
       {
         "word": "registration",
@@ -8323,9 +8323,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Cụm 'the month of August' đóng vai trò là một kỳ thời khoảng. Vậy có thể dùng 'in' hoặc 'during'. Đáp án 'during' là chuẩn xác nhất.",
+    "explanation_reason": "'The month of August' là một khoảng thời gian, nên dùng giới từ 'during' (trong suốt).",
     "explanation_grammar": "During + Tháng năm định danh N.",
-    "translation": "Những tay chơi quý tộc khệ nệ mang kim thẻ lách cách danh hiệu chớp lướt mác thành viên kỳ tụ lạc bộ Lêhua Chơi Du Hú hè Câu lạc bộ nọ sẽ còn được bú ốp liếm thêm liều nhịp nhân hai lốp lượng số điểm trúng tuyển trọn ổ xuyên suốt trong cái gắt cái nắng chói của khung cữ tháng 8 mốc tại phần lớn vô vàn đa các cụm cơ sở nhà kính khách sạn sang xịn có mang theo tay đồng chầu nhúng tham liên đới gia vào đường dây này.",
+    "translation": "Thành viên Lehua Vacation Club sẽ được nhận điểm thưởng gấp đôi trong suốt tháng Tám tại các khách sạn tham gia chương trình.",
     "core_vocabulary": [
       {
         "word": "participating",
@@ -8345,9 +8345,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Sóng đôi thành đôi cập rập từ trước ra sau (từ cái này đến cái nọ): Cấu trúc liên hồi ngữ 'FROM [missed...] TO [lost...]'.",
+    "explanation_reason": "Sau chỗ trống có 'to lost luggage', nên cần 'from' để tạo cấu trúc 'from A to B' (từ A đến B).",
     "explanation_grammar": "From Noun_A to Noun_B.",
-    "translation": "Nhân mạng đặc phái nhân diện diện làm mặt tiền gương chiếu chốt rốn cho đường hàng không vãng lai buộc thắt ống phải nắm ngọn bóp đầu khư lừ thâu tóm nhúng ôm đờm đủ xâu rộng thấu triệt vô kể hàng mớ lô xích xông bao chùm toàn các vấn dề lỗi lỗi lặt vặt giời ơi phát sinh của lũ khách lưu điềm tàu, trải dài từ những xấp xịt ca lỡ chệ độ đấu nhịp dây quá cảnh trung chuyển điểm nối tiếp khứ hồi chèo tuyến cho kéo giất tuột đến tới dạt tuốt luốt rách toạc các xớ vụ vớ vẩn rải nhầm quăng lạc lỡ mớ rớt kiện hàng lô vác đẩy hành lý hèn kí gửi.",
+    "translation": "Nhân viên hãng hàng không phải xử lý nhiều vấn đề của hành khách, từ lỡ chuyến nối chuyến đến thất lạc hành lý.",
     "core_vocabulary": [
       {
         "word": "representative",
@@ -8372,9 +8372,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Closure (đóng cửa) là sự kiện là lý do. 'In light of' có nghĩa 'Dựa trên thực tế về tình hình gì/ Do mường tượng bởi do vì...'.",
+    "explanation_reason": "'In light of' là cụm giới từ, nghĩa là 'xét theo, do tình hình'. Việc đóng cửa là lý do dẫn tới hành động ở vế sau.",
     "explanation_grammar": "In light of + Danh từ nguyên nhân.",
-    "translation": "Chiếu rọi soi xét lên bởi bắt nguồn điểm nút gẫy từ ngay cái động cơ chập dập tắt lò xưởng rút bảng hiệu gập quầy cửa đóng xế bãi đỗ của mạn Đội Nhóm dịch dịch trung chuyển Vận vác tải Verdigold Transport Service nên đâm ra giờ đây đội vác chúng ta mới lại phải cong khòng đít lọ mọ nhào đi cất cái mỏ đi điếm tìm ngó soi lựa sang đổi một bè gót công ty đối trọng xịn trâu khác mang gánh thế vai chở hàng hộ ship mướn chuyên.",
+    "translation": "Do Verdigold Transport Services đã ngừng hoạt động, chúng tôi đang tìm một công ty vận chuyển mới.",
     "core_vocabulary": [
       {
         "word": "closure",
@@ -8399,9 +8399,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Travel to a place (Di chuyển tới địa điểm).",
+    "explanation_reason": "Cấu trúc 'travel to + địa điểm' (đi tới một nơi).",
     "explanation_grammar": "Travel + to + Noun điểm đến.",
-    "translation": "Quý ngài trọc Peterson sẽ hạ giáng sải cuốc bay ngàn nghìn dặm đánh cắp sang thẳng đến chóp cơ chấn tổng hành dinh bão thành Tokyo để tụ đại trảo dự đánh kỳ vào mâm buổi yến thiết họp kín tụ kỳ bang giao của độ mỗi niên hàng năm.",
+    "translation": "Ông Peterson sẽ đến văn phòng Tokyo để dự cuộc họp thường niên.",
     "core_vocabulary": [
       {
         "word": "annual meeting",
@@ -8421,9 +8421,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Giới từ",
-    "explanation_reason": "'dọc theo bờ con sông' xài preposition 'along'.",
+    "explanation_reason": "Để chỉ vị trí trải dài dọc theo một con sông, ta dùng giới từ 'along' (dọc theo).",
     "explanation_grammar": "Along + River / Road...",
-    "translation": "Chuỗi cuốc tua vãn cảnh lượn ngày thượng vàng hạng cao VIP chót vót kim cương tinh khiết xịn chuẩn chỉ phết của bọn hội chúng đây sẽ đánh móc túm đai bốc lấy các vị du lữ thập khách cưỡi đi điểm mốc đánh dấu chao lượn rẽ tạt vào những cái bãi khoảnh đất địa danh sặc mùi tàn tích cổ xưa của trang dài lịch sử lẫm liệt oai hùng phô trải dài chập chùng dạt dào bám theo dọc bờ của rìa mé lạch thủy con khê mương sông thủy lực ngầm Aprico River.",
+    "translation": "Tour tham quan cao cấp trong ngày của chúng tôi đưa du khách đến các di tích lịch sử dọc theo sông Aprico.",
     "core_vocabulary": [
       {
         "word": "premium",
@@ -8448,9 +8448,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "D",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Cấu trúc nối 2 mệnh đề với nét nghĩa: tiếp nhận dự án/hợp đồng (taking on...) 'sau khi' hoàn thành dự án cũ. Dùng After.",
+    "explanation_reason": "Hai hành động diễn ra nối tiếp: nhận hợp đồng mới sau khi hoàn thành dự án cũ, nên dùng 'after' (sau khi).",
     "explanation_grammar": "After + Clause mệnh đề thứ hai hành động khóa đuôi xảy đến trước đo.",
-    "translation": "Madam Charisse cao thủ đang tính nước chốt sẽ thâu tóm nhúng tay vào ẵm rọn bao tiếp quất ngầu thêm luôn quản thầu rạch ròi một cái dự kiến thương vụ hời mối mẻ mới toanh tinh sương ngay liền sau cái dịp mốc độ điềm cữ phút giây ả rứt cọc hạ xong đo ván vớt gút tàn kén kén cho mớ mòn mỏi ngán ngẩm tồn mốc chắp của cái mớ hạng mục ốc ác chết dẫm Morrison đợt cũ xưa kia lặn.",
+    "translation": "Bà Charisse sẽ tiếp nhận một khách hàng mới sau khi bà hoàn thành dự án Morrison.",
     "core_vocabulary": [
       {
         "word": "take on",
@@ -8475,9 +8475,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Chỉ 'dựa theo/chiếu theo luật' - 'According to'.",
+    "explanation_reason": "'According to' là cụm giới từ, nghĩa là 'theo, chiếu theo' — ở đây là chiếu theo nội quy.",
     "explanation_grammar": "According to + rules/laws/document (chiếu theo văn bản).",
-    "translation": "Răm rắp áp đúng xâu y hệt như như theo chiếu dội của cái bộ sách biên chép đống điều luật xâu chuỗi lệ cấm, trò múa tay đậu đánh chui để bãi đỗ quăng xe lại ở ngoài lỳ suốt qua vắt trong bóng vạng xuyên ròng màn đêm mù mịt là tuyệt nhiên một cái phốt điều luật tuyệt cấm bị bắt bọc tuyệt đối phật ý cho không có phép nhượng nhịn rớ được bãi du di ở nằm trong khuông vực cụm khu của cái tụ dinh bãi khối sảnh cơ sở nhà đón khách điểm của tụ họp câu đài giao lạc bộ clubhouse đàng bệ kia đâu ná.",
+    "translation": "Theo nội quy, việc đỗ xe qua đêm không được phép tại khu nhà câu lạc bộ.",
     "core_vocabulary": [
       {
         "word": "overnight",
@@ -8502,9 +8502,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Giới từ",
-    "explanation_reason": "Quy tắc ngữ pháp khi gộp 2 chủ thể vế bằng Danh động từ rút gọn '-ing'. 'Before entering' (trước khi vào).",
+    "explanation_reason": "Trước danh động từ 'entering' cần một giới từ. 'Before entering' nghĩa là trước khi bước vào.",
     "explanation_grammar": "Before + V-ing.",
-    "translation": "Ghé nán lại dậm chân ngay tại cái thềm bàn đàm phán thủ tục nộp đón khách bàn ghi ấn danh tiếp rước lúc khởi nguồn, xin đừng quên cố để khắc hằn vô là bạn nhớ bảo đảo phải có làm chốt cất chắc chắn vơ hươi nhận lấy thu lượm bỏ tay cầm chộp túi lấy cho đủ cái mẩu mác tấm thẻ giấy phù hiệu thêu điền định danh ghi rạch ròi dán trích tên họ tú mục mác rờn của chính bản thân bản vị các bạn đi giùm, trước khi bước đơm dứt khoát rảo quẳng chân lọt hỏm vô cửa vượt sâu lọt trỏng tham dự vào đắm mình vào bồn cái chậu buổi Đại Hùng họp hội nghị nhen.",
+    "translation": "Tại bàn đăng ký, hãy nhớ nhận thẻ tên của bạn trước khi vào hội nghị.",
     "core_vocabulary": [
       {
         "word": "name tag",
@@ -10737,7 +10737,7 @@ export const grammarQuestions = [
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng tobe + as + Adj + as. Tính từ 'breathable' (thoáng khí).",
     "explanation_grammar": "Cấu trúc cân bằng bằng Tính Từ.",
-    "translation": "Chất lượng vải của dòng thể thao ActiveWear không mang lại độ thông thoáng thoát khí mát mẻ bằng so với chất vải thô bông cotton hay xài vào may áo phông thường.",
+    "translation": "Chất vải của dòng ActiveWear không thoáng khí bằng chất cotton dùng để may áo sơ mi thông thường.",
     "core_vocabulary": [
       {
         "word": "breathable",
@@ -10759,7 +10759,7 @@ export const grammarQuestions = [
     "grammar_type": "So sánh",
     "explanation_reason": "Cấu trúc Make + danh từ tân ngữ + more + Tính từ. 'Dependable' là từ thích hợp.",
     "explanation_grammar": "Make + O + more + Tính Từ.",
-    "translation": "Công tác tu bổ bảo dưỡng theo chu kỳ sẽ làm cho bộ máy phát điện công nghiệp trở nên mượt và đáng đáng tin dùng dựa cậy hơn so với mấy cục thiết bị nằm không bị lãng quên bảo trì.",
+    "translation": "Việc bảo dưỡng định kỳ giúp các máy phát điện công nghiệp đáng tin cậy hơn so với những máy không được bảo trì.",
     "core_vocabulary": [
       {
         "word": "dependable",
@@ -10781,7 +10781,7 @@ export const grammarQuestions = [
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh nhất bổ nghĩa cho dnah từ 'growth rate'. Dùng The most + Tính Từ.",
     "explanation_grammar": "The most + Adj + N.",
-    "translation": "Trưởng phòng Rossi đã được xướng ca trong lễ tuyên dương vì đã gặt được cột mốc tỉ số tăng trưởng ổn định vững bền nhất tại Milan Finance.",
+    "translation": "Ông Rossi đã được tuyên dương vì đạt tốc độ tăng trưởng ổn định nhất tại Milan Finance.",
     "core_vocabulary": [
       {
         "word": "consistent",
@@ -10803,7 +10803,7 @@ export const grammarQuestions = [
     "grammar_type": "So sánh",
     "explanation_reason": "Tobe 'is' kết hợp so sánh hơn 'more'. Cần một Tính Từ.",
     "explanation_grammar": "Tobe + more + Adj + than.",
-    "translation": "Giao diện dùng để thao tác tương tác chạm vuốt trên phần mềm hệ Applo có tính trực quan và dễ xài hơn so với mặt bằng nền cạnh tranh của các xưởng đối thủ.",
+    "translation": "Giao diện người dùng của phần mềm Applo trực quan hơn so với nền tảng của đối thủ.",
     "core_vocabulary": [
       {
         "word": "intuitive",
@@ -10825,7 +10825,7 @@ export const grammarQuestions = [
     "grammar_type": "So sánh",
     "explanation_reason": "So sánh bằng tobe 'was' + as + Tính Từ + as. Chọn tính từ 'predictable' là vẹn câu rành mạch nhất.",
     "explanation_grammar": "Tobe + as + Adj + as.",
-    "translation": "Lịch hẹn mốc giao hàng của các đường vận xả hàng quốc tế thường thì không hề diễn ra suôn sẻ chuẩn đoán và đúng mốc như những dòng hứa hẹn tụi nó phán trước.",
+    "translation": "Lịch giao hàng của lô hàng quốc tế đã không đúng như dự kiến ban đầu.",
     "core_vocabulary": [
       {
         "word": "predictable",
@@ -10847,7 +10847,7 @@ export const grammarQuestions = [
     "grammar_type": "So sánh",
     "explanation_reason": "Lại gặp make + O + Adj. Điền tính từ.",
     "explanation_grammar": "Make + O + more + Tính Từ.",
-    "translation": "Kỹ thuật cắm bo bo nhét ram nhớ lớn hơn khiến cho con hệ bệ máy server trạm chủ đạt hiệu năng đa dụng chức năng phong phú hơn hẳn so với dòng cơ bản mặc định thường dùng.",
+    "translation": "Việc lắp thêm bộ nhớ giúp máy chủ hoạt động tốt hơn so với mẫu cơ bản.",
     "core_vocabulary": [
       {
         "word": "functional",
@@ -10869,7 +10869,7 @@ export const grammarQuestions = [
     "grammar_type": "So sánh",
     "explanation_reason": "The most + Adj bổ nghĩa cho influence. 'Professional' (chuyên nghiệp) là tính từ.",
     "explanation_grammar": "The most + Adjective + Danh từ.",
-    "translation": "Cô Thompson đã vinh dự được xướng nhận diện là người có mức độ phong cách năng lực trình nghiệp độ cực kì uyên thâm nghề chuẩn đẳng cấp tạo ảnh hưởng nhất đối với toàn bộ hệ thống đội luật pháp quy chế.",
+    "translation": "Bà Thompson được ghi nhận là người có ảnh hưởng chuyên môn lớn nhất đối với đội ngũ pháp lý.",
     "core_vocabulary": [
       {
         "word": "professional",
