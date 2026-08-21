@@ -70648,5 +70648,1625 @@ export const grammarQuestions = [
         "meaning": "nhiều thông tin, hữu ích"
       }
     ]
+  },
+  {
+    "id": "q_cond_t1_01",
+    "question": "If the shipment ______ tomorrow, we will notify the client immediately.",
+    "options": {
+      "A": "arrived",
+      "B": "arrives",
+      "C": "will arrive",
+      "D": "had arrived"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Câu điều kiện loại 1: If + hiện tại đơn, mệnh đề chính dùng 'will + V'. Vế 'if' không bao giờ dùng 'will'.",
+    "explanation_grammar": "Câu điều kiện loại 1",
+    "translation": "Nếu lô hàng đến vào ngày mai, chúng tôi sẽ thông báo cho khách hàng ngay lập tức.",
+    "core_vocabulary": [
+      {
+        "word": "shipment",
+        "type": "n.",
+        "meaning": "lô hàng"
+      },
+      {
+        "word": "notify",
+        "type": "v.",
+        "meaning": "thông báo"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_02",
+    "question": "If the weather improves, the outdoor ceremony ______ as scheduled.",
+    "options": {
+      "A": "would proceed",
+      "B": "proceeded",
+      "C": "had proceeded",
+      "D": "will proceed"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Vế 'if' dùng hiện tại đơn (improves) nên đây là điều kiện loại 1; mệnh đề chính dùng 'will + V'.",
+    "explanation_grammar": "Câu điều kiện loại 1",
+    "translation": "Nếu thời tiết tốt lên, buổi lễ ngoài trời sẽ diễn ra theo đúng lịch.",
+    "core_vocabulary": [
+      {
+        "word": "ceremony",
+        "type": "n.",
+        "meaning": "buổi lễ"
+      },
+      {
+        "word": "proceed",
+        "type": "v.",
+        "meaning": "diễn ra, tiến hành"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_03",
+    "question": "If our department had a larger budget, we ______ two more designers.",
+    "options": {
+      "A": "would hire",
+      "B": "will hire",
+      "C": "hire",
+      "D": "would have hired"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Vế 'if' dùng quá khứ đơn (had) để nói điều trái với hiện tại nên là điều kiện loại 2; mệnh đề chính dùng 'would + V'.",
+    "explanation_grammar": "Câu điều kiện loại 2",
+    "translation": "Nếu bộ phận của chúng tôi có ngân sách lớn hơn, chúng tôi sẽ tuyển thêm hai nhà thiết kế.",
+    "core_vocabulary": [
+      {
+        "word": "budget",
+        "type": "n.",
+        "meaning": "ngân sách"
+      },
+      {
+        "word": "hire",
+        "type": "v.",
+        "meaning": "tuyển dụng"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_04",
+    "question": "If I ______ you, I would ask for a written confirmation before paying.",
+    "options": {
+      "A": "am",
+      "B": "will be",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Trong câu điều kiện loại 2, động từ 'to be' ở vế 'if' dùng 'were' cho mọi ngôi, kể cả 'I'.",
+    "explanation_grammar": "Câu điều kiện loại 2 với 'were'",
+    "translation": "Nếu tôi là bạn, tôi sẽ yêu cầu xác nhận bằng văn bản trước khi thanh toán.",
+    "core_vocabulary": [
+      {
+        "word": "confirmation",
+        "type": "n.",
+        "meaning": "sự xác nhận"
+      },
+      {
+        "word": "written",
+        "type": "adj.",
+        "meaning": "bằng văn bản"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_05",
+    "question": "If water ______ to 100 degrees Celsius, it boils.",
+    "options": {
+      "A": "is heated",
+      "B": "will be heated",
+      "C": "would be heated",
+      "D": "had been heated"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Câu điều kiện loại 0 diễn tả một sự thật hiển nhiên: cả hai vế đều dùng thì hiện tại đơn.",
+    "explanation_grammar": "Câu điều kiện loại 0",
+    "translation": "Nếu nước được đun đến 100 độ C, nó sẽ sôi.",
+    "core_vocabulary": [
+      {
+        "word": "heat",
+        "type": "v.",
+        "meaning": "đun nóng"
+      },
+      {
+        "word": "boil",
+        "type": "v.",
+        "meaning": "sôi"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_06",
+    "question": "______ the supplier confirms the order today, production cannot begin next week.",
+    "options": {
+      "A": "If",
+      "B": "When",
+      "C": "Unless",
+      "D": "Provided"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'Unless' tương đương 'if ... not' (nếu không). Nhà cung cấp không xác nhận thì không thể bắt đầu sản xuất.",
+    "explanation_grammar": "Câu điều kiện với 'unless'",
+    "translation": "Trừ khi nhà cung cấp xác nhận đơn hàng hôm nay, việc sản xuất không thể bắt đầu vào tuần tới.",
+    "core_vocabulary": [
+      {
+        "word": "supplier",
+        "type": "n.",
+        "meaning": "nhà cung cấp"
+      },
+      {
+        "word": "production",
+        "type": "n.",
+        "meaning": "việc sản xuất"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_07",
+    "question": "If you need any assistance with the software, ______ the help desk at any time.",
+    "options": {
+      "A": "contacting",
+      "B": "to contact",
+      "C": "contacted",
+      "D": "contact"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Câu điều kiện loại 1 có thể dùng câu mệnh lệnh ở mệnh đề chính: If + hiện tại đơn, động từ nguyên thể không 'to'.",
+    "explanation_grammar": "Câu điều kiện loại 1 với câu mệnh lệnh",
+    "translation": "Nếu bạn cần hỗ trợ về phần mềm, hãy liên hệ bộ phận trợ giúp bất cứ lúc nào.",
+    "core_vocabulary": [
+      {
+        "word": "assistance",
+        "type": "n.",
+        "meaning": "sự hỗ trợ"
+      },
+      {
+        "word": "help desk",
+        "type": "n.",
+        "meaning": "bộ phận trợ giúp"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_08",
+    "question": "If the board approved the proposal, the new branch ______ by next spring.",
+    "options": {
+      "A": "will open",
+      "B": "would open",
+      "C": "opens",
+      "D": "had opened"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Vế 'if' dùng quá khứ đơn (approved) nên là điều kiện loại 2; mệnh đề chính dùng 'would + V'.",
+    "explanation_grammar": "Câu điều kiện loại 2",
+    "translation": "Nếu hội đồng quản trị phê duyệt đề xuất, chi nhánh mới sẽ mở cửa vào mùa xuân tới.",
+    "core_vocabulary": [
+      {
+        "word": "board",
+        "type": "n.",
+        "meaning": "hội đồng quản trị"
+      },
+      {
+        "word": "branch",
+        "type": "n.",
+        "meaning": "chi nhánh"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_09",
+    "question": "If the company ______ more flexible hours, fewer employees would resign.",
+    "options": {
+      "A": "will offer",
+      "B": "has offered",
+      "C": "offered",
+      "D": "would offer"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Mệnh đề chính dùng 'would resign' nên đây là điều kiện loại 2; vế 'if' phải dùng quá khứ đơn.",
+    "explanation_grammar": "Câu điều kiện loại 2",
+    "translation": "Nếu công ty áp dụng giờ làm linh hoạt hơn, sẽ có ít nhân viên nghỉ việc hơn.",
+    "core_vocabulary": [
+      {
+        "word": "flexible",
+        "type": "adj.",
+        "meaning": "linh hoạt"
+      },
+      {
+        "word": "resign",
+        "type": "v.",
+        "meaning": "nghỉ việc, từ chức"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_10",
+    "question": "If the technician ______ the fault today, the machine will be back in service tomorrow.",
+    "options": {
+      "A": "locates",
+      "B": "will locate",
+      "C": "located",
+      "D": "would locate"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Câu điều kiện loại 1: vế 'if' dùng hiện tại đơn, tuyệt đối không dùng 'will'.",
+    "explanation_grammar": "Câu điều kiện loại 1",
+    "translation": "Nếu kỹ thuật viên tìm ra lỗi hôm nay, chiếc máy sẽ hoạt động trở lại vào ngày mai.",
+    "core_vocabulary": [
+      {
+        "word": "fault",
+        "type": "n.",
+        "meaning": "lỗi, chỗ hỏng"
+      },
+      {
+        "word": "in service",
+        "type": "adj.",
+        "meaning": "đang hoạt động"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_11",
+    "question": "Visitors will not be admitted to the laboratory ______ they wear protective goggles.",
+    "options": {
+      "A": "if",
+      "B": "when",
+      "C": "so that",
+      "D": "unless"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'Unless' nêu điều kiện loại trừ: không đeo kính bảo hộ thì không được vào. Dùng 'if' sẽ đảo ngược nghĩa.",
+    "explanation_grammar": "Câu điều kiện với 'unless'",
+    "translation": "Khách tham quan sẽ không được vào phòng thí nghiệm trừ khi họ đeo kính bảo hộ.",
+    "core_vocabulary": [
+      {
+        "word": "admit",
+        "type": "v.",
+        "meaning": "cho vào, cho phép vào"
+      },
+      {
+        "word": "goggles",
+        "type": "n.",
+        "meaning": "kính bảo hộ"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_12",
+    "question": "If the office were closer to the station, more staff ______ public transport.",
+    "options": {
+      "A": "will use",
+      "B": "would use",
+      "C": "used",
+      "D": "have used"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'Were' ở vế 'if' cho thấy đây là điều kiện loại 2; mệnh đề chính dùng 'would + V'.",
+    "explanation_grammar": "Câu điều kiện loại 2",
+    "translation": "Nếu văn phòng gần ga hơn, nhiều nhân viên sẽ đi phương tiện công cộng hơn.",
+    "core_vocabulary": [
+      {
+        "word": "public transport",
+        "type": "n.",
+        "meaning": "phương tiện công cộng"
+      },
+      {
+        "word": "station",
+        "type": "n.",
+        "meaning": "nhà ga"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_13",
+    "question": "If you ______ the deadline, please inform your supervisor as soon as possible.",
+    "options": {
+      "A": "cannot meet",
+      "B": "will not meet",
+      "C": "would not meet",
+      "D": "had not met"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Điều kiện loại 1 cho phép dùng động từ khuyết thiếu ở vế 'if' (cannot), mệnh đề chính là câu mệnh lệnh.",
+    "explanation_grammar": "Câu điều kiện loại 1 với động từ khuyết thiếu",
+    "translation": "Nếu bạn không thể kịp hạn chót, vui lòng báo cho quản lý của bạn sớm nhất có thể.",
+    "core_vocabulary": [
+      {
+        "word": "meet a deadline",
+        "type": "v.",
+        "meaning": "kịp hạn chót"
+      },
+      {
+        "word": "supervisor",
+        "type": "n.",
+        "meaning": "người quản lý"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_14",
+    "question": "If the samples ______ properly, they last for up to six months.",
+    "options": {
+      "A": "will store",
+      "B": "would be stored",
+      "C": "are stored",
+      "D": "had been stored"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Câu điều kiện loại 0 nêu quy luật chung: cả hai vế dùng hiện tại đơn, ở đây vế 'if' ở thể bị động.",
+    "explanation_grammar": "Câu điều kiện loại 0",
+    "translation": "Nếu các mẫu vật được bảo quản đúng cách, chúng giữ được tới sáu tháng.",
+    "core_vocabulary": [
+      {
+        "word": "sample",
+        "type": "n.",
+        "meaning": "mẫu vật"
+      },
+      {
+        "word": "store",
+        "type": "v.",
+        "meaning": "bảo quản, lưu trữ"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_15",
+    "question": "If we had a second warehouse, we ______ store the seasonal inventory more easily.",
+    "options": {
+      "A": "can",
+      "B": "could",
+      "C": "will be able to",
+      "D": "had been able to"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Điều kiện loại 2 dùng 'could + V' ở mệnh đề chính để nói về khả năng giả định.",
+    "explanation_grammar": "Câu điều kiện loại 2 với 'could'",
+    "translation": "Nếu chúng tôi có nhà kho thứ hai, chúng tôi có thể lưu trữ hàng theo mùa dễ dàng hơn.",
+    "core_vocabulary": [
+      {
+        "word": "warehouse",
+        "type": "n.",
+        "meaning": "nhà kho"
+      },
+      {
+        "word": "inventory",
+        "type": "n.",
+        "meaning": "hàng tồn kho"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_16",
+    "question": "If the client requests a refund, the finance team ______ it within five business days.",
+    "options": {
+      "A": "processed",
+      "B": "would process",
+      "C": "had processed",
+      "D": "will process"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Vế 'if' dùng hiện tại đơn nên là điều kiện loại 1; mệnh đề chính dùng 'will + V'.",
+    "explanation_grammar": "Câu điều kiện loại 1",
+    "translation": "Nếu khách hàng yêu cầu hoàn tiền, bộ phận tài chính sẽ xử lý trong vòng năm ngày làm việc.",
+    "core_vocabulary": [
+      {
+        "word": "refund",
+        "type": "n.",
+        "meaning": "khoản hoàn tiền"
+      },
+      {
+        "word": "process",
+        "type": "v.",
+        "meaning": "xử lý"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_17",
+    "question": "______ you submit the form before Friday, your application will be reviewed this month.",
+    "options": {
+      "A": "Unless",
+      "B": "Although",
+      "C": "If",
+      "D": "Despite"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Mệnh đề nêu điều kiện thuận (nộp đúng hạn thì được xét) nên dùng 'if'. 'Unless' sẽ đảo ngược nghĩa, 'despite' là giới từ.",
+    "explanation_grammar": "Câu điều kiện loại 1",
+    "translation": "Nếu bạn nộp biểu mẫu trước thứ Sáu, hồ sơ của bạn sẽ được xét trong tháng này.",
+    "core_vocabulary": [
+      {
+        "word": "submit",
+        "type": "v.",
+        "meaning": "nộp"
+      },
+      {
+        "word": "application",
+        "type": "n.",
+        "meaning": "hồ sơ đăng ký"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_18",
+    "question": "If the equipment ______ regularly, it would not break down so often.",
+    "options": {
+      "A": "were serviced",
+      "B": "is serviced",
+      "C": "will be serviced",
+      "D": "has been serviced"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Mệnh đề chính dùng 'would not break down' nên là điều kiện loại 2; vế 'if' dùng quá khứ đơn, ở đây là bị động 'were serviced'.",
+    "explanation_grammar": "Câu điều kiện loại 2, thể bị động",
+    "translation": "Nếu thiết bị được bảo trì thường xuyên, nó đã không hỏng thường xuyên đến vậy.",
+    "core_vocabulary": [
+      {
+        "word": "service",
+        "type": "v.",
+        "meaning": "bảo trì"
+      },
+      {
+        "word": "break down",
+        "type": "v.",
+        "meaning": "hỏng, trục trặc"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_19",
+    "question": "The warranty will be void ______ the product is repaired by an authorized technician.",
+    "options": {
+      "A": "if",
+      "B": "when",
+      "C": "provided",
+      "D": "unless"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'Unless' nghĩa là 'nếu không': bảo hành mất hiệu lực nếu sản phẩm KHÔNG được sửa bởi kỹ thuật viên được uỷ quyền.",
+    "explanation_grammar": "Câu điều kiện với 'unless'",
+    "translation": "Bảo hành sẽ mất hiệu lực trừ khi sản phẩm được sửa bởi kỹ thuật viên được uỷ quyền.",
+    "core_vocabulary": [
+      {
+        "word": "void",
+        "type": "adj.",
+        "meaning": "vô hiệu, mất hiệu lực"
+      },
+      {
+        "word": "authorized",
+        "type": "adj.",
+        "meaning": "được uỷ quyền"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t1_20",
+    "question": "If the delegates arrive early, they ______ join the welcome reception.",
+    "options": {
+      "A": "had better to",
+      "B": "may",
+      "C": "would have",
+      "D": "had"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Điều kiện loại 1 cho phép dùng động từ khuyết thiếu 'may' ở mệnh đề chính để chỉ khả năng được phép.",
+    "explanation_grammar": "Câu điều kiện loại 1 với động từ khuyết thiếu",
+    "translation": "Nếu các đại biểu đến sớm, họ có thể tham dự buổi tiệc chào mừng.",
+    "core_vocabulary": [
+      {
+        "word": "delegate",
+        "type": "n.",
+        "meaning": "đại biểu"
+      },
+      {
+        "word": "reception",
+        "type": "n.",
+        "meaning": "buổi tiệc chiêu đãi"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_01",
+    "question": "If the supplier had shipped the parts on time, we ______ the deadline.",
+    "options": {
+      "A": "will meet",
+      "B": "would meet",
+      "C": "met",
+      "D": "would have met"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Câu điều kiện loại 3 nói về điều trái với quá khứ: If + quá khứ hoàn thành, mệnh đề chính dùng 'would have + V3'.",
+    "explanation_grammar": "Câu điều kiện loại 3",
+    "translation": "Nếu nhà cung cấp giao linh kiện đúng hạn, chúng tôi đã kịp hạn chót.",
+    "core_vocabulary": [
+      {
+        "word": "ship",
+        "type": "v.",
+        "meaning": "giao hàng, vận chuyển"
+      },
+      {
+        "word": "part",
+        "type": "n.",
+        "meaning": "linh kiện"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_02",
+    "question": "If the marketing team ______ the survey results earlier, they would have changed the campaign.",
+    "options": {
+      "A": "had reviewed",
+      "B": "reviewed",
+      "C": "has reviewed",
+      "D": "would review"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Mệnh đề chính dùng 'would have changed' nên là điều kiện loại 3; vế 'if' phải dùng quá khứ hoàn thành.",
+    "explanation_grammar": "Câu điều kiện loại 3",
+    "translation": "Nếu đội tiếp thị xem lại kết quả khảo sát sớm hơn, họ đã thay đổi chiến dịch.",
+    "core_vocabulary": [
+      {
+        "word": "survey",
+        "type": "n.",
+        "meaning": "cuộc khảo sát"
+      },
+      {
+        "word": "campaign",
+        "type": "n.",
+        "meaning": "chiến dịch"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_03",
+    "question": "The project would have finished on schedule if the contractor ______ enough workers.",
+    "options": {
+      "A": "hires",
+      "B": "would hire",
+      "C": "had hired",
+      "D": "has hired"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Mệnh đề chính là 'would have finished' nên vế 'if' phải ở quá khứ hoàn thành — công thức của điều kiện loại 3.",
+    "explanation_grammar": "Câu điều kiện loại 3",
+    "translation": "Dự án đã hoàn thành đúng tiến độ nếu nhà thầu tuyển đủ công nhân.",
+    "core_vocabulary": [
+      {
+        "word": "contractor",
+        "type": "n.",
+        "meaning": "nhà thầu"
+      },
+      {
+        "word": "on schedule",
+        "type": "adv.",
+        "meaning": "đúng tiến độ"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_04",
+    "question": "If the invoice ______ correctly, the payment would not have been delayed.",
+    "options": {
+      "A": "was issued",
+      "B": "had been issued",
+      "C": "is issued",
+      "D": "would be issued"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Điều kiện loại 3 ở thể bị động: vế 'if' dùng 'had been + V3'.",
+    "explanation_grammar": "Câu điều kiện loại 3, thể bị động",
+    "translation": "Nếu hoá đơn được lập chính xác, khoản thanh toán đã không bị chậm.",
+    "core_vocabulary": [
+      {
+        "word": "invoice",
+        "type": "n.",
+        "meaning": "hoá đơn"
+      },
+      {
+        "word": "issue",
+        "type": "v.",
+        "meaning": "lập, phát hành"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_05",
+    "question": "If Ms. Ito had not missed her connecting flight, she ______ the opening session.",
+    "options": {
+      "A": "attends",
+      "B": "would attend",
+      "C": "would have attended",
+      "D": "had attended"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Vế 'if' ở quá khứ hoàn thành nên mệnh đề chính phải là 'would have + V3'.",
+    "explanation_grammar": "Câu điều kiện loại 3",
+    "translation": "Nếu bà Ito không lỡ chuyến bay nối chuyến, bà đã tham dự phiên khai mạc.",
+    "core_vocabulary": [
+      {
+        "word": "connecting flight",
+        "type": "n.",
+        "meaning": "chuyến bay nối chuyến"
+      },
+      {
+        "word": "session",
+        "type": "n.",
+        "meaning": "phiên họp"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_06",
+    "question": "If we had installed the new server last year, the system ______ so slow now.",
+    "options": {
+      "A": "would not be",
+      "B": "would not have been",
+      "C": "will not be",
+      "D": "was not"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Câu điều kiện hỗn hợp: điều kiện thuộc quá khứ (had installed) nhưng kết quả thuộc hiện tại ('now'), nên mệnh đề chính dùng 'would + V'.",
+    "explanation_grammar": "Câu điều kiện hỗn hợp (quá khứ - hiện tại)",
+    "translation": "Nếu chúng ta lắp máy chủ mới từ năm ngoái, hệ thống bây giờ đã không chậm đến vậy.",
+    "core_vocabulary": [
+      {
+        "word": "install",
+        "type": "v.",
+        "meaning": "lắp đặt, cài đặt"
+      },
+      {
+        "word": "server",
+        "type": "n.",
+        "meaning": "máy chủ"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_07",
+    "question": "If Mr. Dubois ______ more organized, he would not have lost the contract file.",
+    "options": {
+      "A": "is",
+      "B": "will be",
+      "C": "would be",
+      "D": "were"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Câu điều kiện hỗn hợp: điều kiện là đặc điểm ở hiện tại (were organized) nhưng kết quả thuộc quá khứ, nên vế 'if' dùng 'were'.",
+    "explanation_grammar": "Câu điều kiện hỗn hợp (hiện tại - quá khứ)",
+    "translation": "Nếu ông Dubois ngăn nắp hơn, ông đã không làm mất tập hồ sơ hợp đồng.",
+    "core_vocabulary": [
+      {
+        "word": "organized",
+        "type": "adj.",
+        "meaning": "ngăn nắp, có tổ chức"
+      },
+      {
+        "word": "contract",
+        "type": "n.",
+        "meaning": "hợp đồng"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_08",
+    "question": "The team wishes the deadline ______ less tight.",
+    "options": {
+      "A": "is",
+      "B": "were",
+      "C": "will be",
+      "D": "has been"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Sau 'wish' để nói điều trái với hiện tại, ta lùi một thì và động từ 'to be' dùng 'were' cho mọi ngôi.",
+    "explanation_grammar": "Câu ước với 'wish' (hiện tại)",
+    "translation": "Cả nhóm ước gì hạn chót bớt gấp gáp hơn.",
+    "core_vocabulary": [
+      {
+        "word": "tight",
+        "type": "adj.",
+        "meaning": "gấp, sát sao"
+      },
+      {
+        "word": "deadline",
+        "type": "n.",
+        "meaning": "hạn chót"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_09",
+    "question": "Ms. Farah wishes she ______ the earlier train to the conference.",
+    "options": {
+      "A": "had taken",
+      "B": "took",
+      "C": "takes",
+      "D": "would take"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'Wish + quá khứ hoàn thành' diễn tả điều tiếc nuối về một việc đã xảy ra trong quá khứ.",
+    "explanation_grammar": "Câu ước với 'wish' (quá khứ)",
+    "translation": "Bà Farah ước gì mình đã đi chuyến tàu sớm hơn tới hội nghị.",
+    "core_vocabulary": [
+      {
+        "word": "conference",
+        "type": "n.",
+        "meaning": "hội nghị"
+      },
+      {
+        "word": "earlier",
+        "type": "adj.",
+        "meaning": "sớm hơn"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_10",
+    "question": "If only the printer ______ before the presentation started.",
+    "options": {
+      "A": "has not failed",
+      "B": "does not fail",
+      "C": "had not failed",
+      "D": "will not fail"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'If only' dùng như 'wish'; nói về điều tiếc nuối trong quá khứ thì dùng quá khứ hoàn thành.",
+    "explanation_grammar": "Câu ước với 'if only' (quá khứ)",
+    "translation": "Giá như chiếc máy in đã không hỏng trước khi buổi thuyết trình bắt đầu.",
+    "core_vocabulary": [
+      {
+        "word": "fail",
+        "type": "v.",
+        "meaning": "hỏng, ngừng hoạt động"
+      },
+      {
+        "word": "presentation",
+        "type": "n.",
+        "meaning": "buổi thuyết trình"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_11",
+    "question": "If the budget had been approved sooner, the renovation ______ already.",
+    "options": {
+      "A": "would begin",
+      "B": "would have begun",
+      "C": "had begun",
+      "D": "will begin"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Vế 'if' ở quá khứ hoàn thành nên mệnh đề chính dùng 'would have + V3' — công thức điều kiện loại 3.",
+    "explanation_grammar": "Câu điều kiện loại 3",
+    "translation": "Nếu ngân sách được duyệt sớm hơn, việc cải tạo đã bắt đầu rồi.",
+    "core_vocabulary": [
+      {
+        "word": "approve",
+        "type": "v.",
+        "meaning": "phê duyệt"
+      },
+      {
+        "word": "renovation",
+        "type": "n.",
+        "meaning": "việc cải tạo"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_12",
+    "question": "If the alarm ______, the fire would have spread much further.",
+    "options": {
+      "A": "has not sounded",
+      "B": "does not sound",
+      "C": "would not sound",
+      "D": "had not sounded"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Mệnh đề chính dùng 'would have spread' nên vế 'if' phải ở quá khứ hoàn thành, dạng phủ định 'had not sounded'.",
+    "explanation_grammar": "Câu điều kiện loại 3",
+    "translation": "Nếu chuông báo cháy không kêu, đám cháy đã lan rộng hơn nhiều.",
+    "core_vocabulary": [
+      {
+        "word": "alarm",
+        "type": "n.",
+        "meaning": "chuông báo động"
+      },
+      {
+        "word": "spread",
+        "type": "v.",
+        "meaning": "lan rộng"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_13",
+    "question": "We ______ the venue if we had known about the schedule change.",
+    "options": {
+      "A": "will change",
+      "B": "change",
+      "C": "would have changed",
+      "D": "had changed"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Vế 'if' ở quá khứ hoàn thành nên mệnh đề chính dùng 'would have + V3'.",
+    "explanation_grammar": "Câu điều kiện loại 3",
+    "translation": "Chúng tôi đã đổi địa điểm nếu chúng tôi biết về việc thay đổi lịch trình.",
+    "core_vocabulary": [
+      {
+        "word": "venue",
+        "type": "n.",
+        "meaning": "địa điểm tổ chức"
+      },
+      {
+        "word": "schedule",
+        "type": "n.",
+        "meaning": "lịch trình"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_14",
+    "question": "I wish the client ______ us more notice about the cancellation.",
+    "options": {
+      "A": "had given",
+      "B": "gives",
+      "C": "would give",
+      "D": "has given"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Việc huỷ đã xảy ra rồi, nên câu ước tiếc nuối về quá khứ dùng 'wish + had + V3'.",
+    "explanation_grammar": "Câu ước với 'wish' (quá khứ)",
+    "translation": "Tôi ước gì khách hàng đã báo trước cho chúng tôi sớm hơn về việc huỷ.",
+    "core_vocabulary": [
+      {
+        "word": "notice",
+        "type": "n.",
+        "meaning": "sự báo trước"
+      },
+      {
+        "word": "cancellation",
+        "type": "n.",
+        "meaning": "việc huỷ bỏ"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_15",
+    "question": "The shipment would not have been delayed ______ the port had gone on strike.",
+    "options": {
+      "A": "if",
+      "B": "when",
+      "C": "provided",
+      "D": "unless"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'Unless' = 'nếu không có việc': lô hàng chỉ chậm vì cảng đình công. Dùng 'if' sẽ đảo ngược nghĩa.",
+    "explanation_grammar": "Câu điều kiện với 'unless'",
+    "translation": "Lô hàng đã không bị chậm nếu cảng không đình công.",
+    "core_vocabulary": [
+      {
+        "word": "port",
+        "type": "n.",
+        "meaning": "cảng"
+      },
+      {
+        "word": "go on strike",
+        "type": "v.",
+        "meaning": "đình công"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_16",
+    "question": "The supplier agreed to lower the price ______ that we doubled the order quantity.",
+    "options": {
+      "A": "unless",
+      "B": "provided",
+      "C": "even",
+      "D": "despite"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'Provided that' (với điều kiện là) nêu điều kiện kèm theo của thoả thuận.",
+    "explanation_grammar": "Câu điều kiện với 'provided that'",
+    "translation": "Nhà cung cấp đồng ý giảm giá với điều kiện là chúng tôi tăng gấp đôi số lượng đặt hàng.",
+    "core_vocabulary": [
+      {
+        "word": "quantity",
+        "type": "n.",
+        "meaning": "số lượng"
+      },
+      {
+        "word": "lower",
+        "type": "v.",
+        "meaning": "hạ, giảm"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_17",
+    "question": "If the safety inspection had been thorough, the accident ______ avoided.",
+    "options": {
+      "A": "could have been",
+      "B": "can be",
+      "C": "will be",
+      "D": "would be"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Điều kiện loại 3 có thể dùng 'could have been + V3' ở mệnh đề chính để nói về khả năng đã có thể xảy ra trong quá khứ.",
+    "explanation_grammar": "Câu điều kiện loại 3 với 'could have'",
+    "translation": "Nếu cuộc kiểm tra an toàn được thực hiện kỹ lưỡng, tai nạn đã có thể được ngăn chặn.",
+    "core_vocabulary": [
+      {
+        "word": "thorough",
+        "type": "adj.",
+        "meaning": "kỹ lưỡng"
+      },
+      {
+        "word": "avoid",
+        "type": "v.",
+        "meaning": "tránh, ngăn chặn"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_18",
+    "question": "If the software were easier to use, the training last month ______ so long.",
+    "options": {
+      "A": "will not take",
+      "B": "does not take",
+      "C": "would not have taken",
+      "D": "had not taken"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Câu điều kiện hỗn hợp: điều kiện là đặc điểm ở hiện tại (were easier) nhưng kết quả thuộc quá khứ ('last month'), nên mệnh đề chính dùng 'would have + V3'.",
+    "explanation_grammar": "Câu điều kiện hỗn hợp (hiện tại - quá khứ)",
+    "translation": "Nếu phần mềm dễ dùng hơn, khoá đào tạo tháng trước đã không mất nhiều thời gian đến vậy.",
+    "core_vocabulary": [
+      {
+        "word": "training",
+        "type": "n.",
+        "meaning": "khoá đào tạo"
+      },
+      {
+        "word": "take",
+        "type": "v.",
+        "meaning": "mất (thời gian)"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_19",
+    "question": "The insurer would have covered the damage ______ the policy had been renewed on time.",
+    "options": {
+      "A": "unless",
+      "B": "if",
+      "C": "despite",
+      "D": "although"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Hai vế cùng theo công thức điều kiện loại 3 và mang nghĩa thuận (gia hạn đúng hạn thì được bồi thường), nên dùng 'if'.",
+    "explanation_grammar": "Câu điều kiện loại 3",
+    "translation": "Công ty bảo hiểm đã chi trả cho thiệt hại nếu hợp đồng được gia hạn đúng hạn.",
+    "core_vocabulary": [
+      {
+        "word": "insurer",
+        "type": "n.",
+        "meaning": "công ty bảo hiểm"
+      },
+      {
+        "word": "renew",
+        "type": "v.",
+        "meaning": "gia hạn"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t2_20",
+    "question": "If the two departments had communicated better, the duplicate order ______.",
+    "options": {
+      "A": "will not occur",
+      "B": "does not occur",
+      "C": "would not occur",
+      "D": "would not have occurred"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Vế 'if' ở quá khứ hoàn thành và kết quả cũng thuộc quá khứ, nên mệnh đề chính dùng 'would not have + V3'.",
+    "explanation_grammar": "Câu điều kiện loại 3",
+    "translation": "Nếu hai bộ phận phối hợp tốt hơn, đơn hàng trùng lặp đã không xảy ra.",
+    "core_vocabulary": [
+      {
+        "word": "duplicate",
+        "type": "adj.",
+        "meaning": "trùng lặp"
+      },
+      {
+        "word": "occur",
+        "type": "v.",
+        "meaning": "xảy ra"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_01",
+    "question": "______ the merger to proceed, both companies would need shareholder approval.",
+    "options": {
+      "A": "Were",
+      "B": "If",
+      "C": "Should",
+      "D": "Had"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Đảo ngữ của điều kiện loại 2 dạng 'If the merger were to proceed' là 'Were the merger to proceed'.",
+    "explanation_grammar": "Đảo ngữ điều kiện loại 2 với 'were ... to'",
+    "translation": "Nếu thương vụ sáp nhập được tiến hành, cả hai công ty sẽ cần sự chấp thuận của cổ đông.",
+    "core_vocabulary": [
+      {
+        "word": "merger",
+        "type": "n.",
+        "meaning": "thương vụ sáp nhập"
+      },
+      {
+        "word": "shareholder",
+        "type": "n.",
+        "meaning": "cổ đông"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_02",
+    "question": "______ the manager checked the figures, the error would have been spotted.",
+    "options": {
+      "A": "If",
+      "B": "Were",
+      "C": "Had",
+      "D": "Should"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Đảo ngữ của điều kiện loại 3: 'If the manager had checked' rút thành 'Had the manager checked'.",
+    "explanation_grammar": "Đảo ngữ điều kiện loại 3 với 'had'",
+    "translation": "Nếu người quản lý kiểm tra các con số, lỗi sai đã được phát hiện.",
+    "core_vocabulary": [
+      {
+        "word": "figure",
+        "type": "n.",
+        "meaning": "con số"
+      },
+      {
+        "word": "spot",
+        "type": "v.",
+        "meaning": "phát hiện"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_03",
+    "question": "______ you require further information, please contact our regional office.",
+    "options": {
+      "A": "Were",
+      "B": "Should",
+      "C": "Had",
+      "D": "If"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Đảo ngữ trang trọng của điều kiện loại 1: 'If you should require' rút thành 'Should you require'.",
+    "explanation_grammar": "Đảo ngữ điều kiện loại 1 với 'should'",
+    "translation": "Nếu quý vị cần thêm thông tin, vui lòng liên hệ văn phòng khu vực của chúng tôi.",
+    "core_vocabulary": [
+      {
+        "word": "require",
+        "type": "v.",
+        "meaning": "cần, yêu cầu"
+      },
+      {
+        "word": "regional",
+        "type": "adj.",
+        "meaning": "thuộc khu vực"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_04",
+    "question": "______ the terms more favourable, we would sign the agreement today.",
+    "options": {
+      "A": "Should",
+      "B": "Had",
+      "C": "If",
+      "D": "Were"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Đảo ngữ của điều kiện loại 2 với động từ 'to be': 'If the terms were more favourable' rút thành 'Were the terms more favourable'.",
+    "explanation_grammar": "Đảo ngữ điều kiện loại 2 với 'were'",
+    "translation": "Nếu các điều khoản có lợi hơn, chúng tôi sẽ ký thoả thuận ngay hôm nay.",
+    "core_vocabulary": [
+      {
+        "word": "terms",
+        "type": "n.",
+        "meaning": "các điều khoản"
+      },
+      {
+        "word": "favourable",
+        "type": "adj.",
+        "meaning": "có lợi, thuận lợi"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_05",
+    "question": "If the factory ______ to close, more than three hundred jobs would be lost.",
+    "options": {
+      "A": "is",
+      "B": "were",
+      "C": "will be",
+      "D": "had been"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Cấu trúc 'If + S + were to + V' dùng để nêu một giả định ít có khả năng xảy ra trong tương lai.",
+    "explanation_grammar": "Câu điều kiện với 'were to'",
+    "translation": "Nếu nhà máy đóng cửa, hơn ba trăm việc làm sẽ mất đi.",
+    "core_vocabulary": [
+      {
+        "word": "factory",
+        "type": "n.",
+        "meaning": "nhà máy"
+      },
+      {
+        "word": "job",
+        "type": "n.",
+        "meaning": "việc làm"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_06",
+    "question": "The order must be placed before noon; ______, it will ship the following day.",
+    "options": {
+      "A": "otherwise",
+      "B": "therefore",
+      "C": "moreover",
+      "D": "however"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'Otherwise' (nếu không thì) thay cho cả một mệnh đề điều kiện phủ định: nếu không đặt trước trưa thì hàng đi vào ngày hôm sau.",
+    "explanation_grammar": "Điều kiện ngầm với 'otherwise'",
+    "translation": "Đơn hàng phải được đặt trước buổi trưa; nếu không, hàng sẽ được gửi vào ngày hôm sau.",
+    "core_vocabulary": [
+      {
+        "word": "place an order",
+        "type": "v.",
+        "meaning": "đặt hàng"
+      },
+      {
+        "word": "following",
+        "type": "adj.",
+        "meaning": "kế tiếp"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_07",
+    "question": "______ the contract been signed earlier, the project could have started in March.",
+    "options": {
+      "A": "If",
+      "B": "Should",
+      "C": "Had",
+      "D": "Were"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Đảo ngữ điều kiện loại 3 ở thể bị động: 'If the contract had been signed' rút thành 'Had the contract been signed'.",
+    "explanation_grammar": "Đảo ngữ điều kiện loại 3 với 'had'",
+    "translation": "Nếu hợp đồng được ký sớm hơn, dự án đã có thể khởi động vào tháng Ba.",
+    "core_vocabulary": [
+      {
+        "word": "sign",
+        "type": "v.",
+        "meaning": "ký kết"
+      },
+      {
+        "word": "start",
+        "type": "v.",
+        "meaning": "khởi động, bắt đầu"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_08",
+    "question": "The council approved the permit ______ that the developer preserve the original facade.",
+    "options": {
+      "A": "unless",
+      "B": "although",
+      "C": "despite",
+      "D": "on condition"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'On condition that' (với điều kiện là) nêu điều kiện ràng buộc kèm theo quyết định.",
+    "explanation_grammar": "Câu điều kiện với 'on condition that'",
+    "translation": "Hội đồng đã phê duyệt giấy phép với điều kiện là chủ đầu tư giữ nguyên mặt tiền ban đầu.",
+    "core_vocabulary": [
+      {
+        "word": "permit",
+        "type": "n.",
+        "meaning": "giấy phép"
+      },
+      {
+        "word": "preserve",
+        "type": "v.",
+        "meaning": "giữ nguyên, bảo tồn"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_09",
+    "question": "______ the quick response of the maintenance crew, the leak would have damaged the entire floor.",
+    "options": {
+      "A": "Unless",
+      "B": "Despite",
+      "C": "But for",
+      "D": "Even if"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'But for + danh từ' nghĩa là 'nếu không nhờ', tương đương 'if it had not been for'. Mệnh đề chính ở dạng điều kiện loại 3.",
+    "explanation_grammar": "Điều kiện với 'but for'",
+    "translation": "Nếu không nhờ phản ứng nhanh của đội bảo trì, chỗ rò rỉ đã làm hỏng cả tầng.",
+    "core_vocabulary": [
+      {
+        "word": "leak",
+        "type": "n.",
+        "meaning": "chỗ rò rỉ"
+      },
+      {
+        "word": "maintenance crew",
+        "type": "n.",
+        "meaning": "đội bảo trì"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_10",
+    "question": "If it ______ not for the sponsor's donation, the festival would be cancelled this year.",
+    "options": {
+      "A": "is",
+      "B": "were",
+      "C": "had been",
+      "D": "will be"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Cấu trúc 'If it were not for + danh từ' nói về điều kiện trái với hiện tại; mệnh đề chính dùng 'would + V'.",
+    "explanation_grammar": "Điều kiện với 'if it were not for'",
+    "translation": "Nếu không nhờ khoản tài trợ của nhà tài trợ, lễ hội năm nay đã bị huỷ.",
+    "core_vocabulary": [
+      {
+        "word": "sponsor",
+        "type": "n.",
+        "meaning": "nhà tài trợ"
+      },
+      {
+        "word": "donation",
+        "type": "n.",
+        "meaning": "khoản quyên góp"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_11",
+    "question": "If it had not been for the backup generator, the data centre ______ offline for hours.",
+    "options": {
+      "A": "would have gone",
+      "B": "would go",
+      "C": "will go",
+      "D": "had gone"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'If it had not been for' nêu điều kiện trái với quá khứ, nên mệnh đề chính dùng 'would have + V3'.",
+    "explanation_grammar": "Điều kiện với 'if it had not been for'",
+    "translation": "Nếu không nhờ máy phát điện dự phòng, trung tâm dữ liệu đã ngừng hoạt động nhiều giờ.",
+    "core_vocabulary": [
+      {
+        "word": "generator",
+        "type": "n.",
+        "meaning": "máy phát điện"
+      },
+      {
+        "word": "offline",
+        "type": "adj.",
+        "meaning": "ngừng kết nối, ngừng hoạt động"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_12",
+    "question": "______ the negotiations fail, what would our next step be?",
+    "options": {
+      "A": "Unless",
+      "B": "Despite",
+      "C": "Suppose",
+      "D": "Whereas"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'Suppose' (giả sử) mở đầu một mệnh đề giả định, tương đương 'what if'.",
+    "explanation_grammar": "Điều kiện với 'suppose'",
+    "translation": "Giả sử cuộc đàm phán thất bại, bước tiếp theo của chúng ta sẽ là gì?",
+    "core_vocabulary": [
+      {
+        "word": "negotiation",
+        "type": "n.",
+        "meaning": "cuộc đàm phán"
+      },
+      {
+        "word": "step",
+        "type": "n.",
+        "meaning": "bước đi"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_13",
+    "question": "______ any discrepancies arise, the auditor will be notified immediately.",
+    "options": {
+      "A": "Were",
+      "B": "Had",
+      "C": "If only",
+      "D": "Should"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Đảo ngữ trang trọng của điều kiện loại 1: 'If any discrepancies should arise' rút thành 'Should any discrepancies arise'.",
+    "explanation_grammar": "Đảo ngữ điều kiện loại 1 với 'should'",
+    "translation": "Nếu có bất kỳ sai lệch nào phát sinh, kiểm toán viên sẽ được thông báo ngay lập tức.",
+    "core_vocabulary": [
+      {
+        "word": "discrepancy",
+        "type": "n.",
+        "meaning": "sự sai lệch"
+      },
+      {
+        "word": "auditor",
+        "type": "n.",
+        "meaning": "kiểm toán viên"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_14",
+    "question": "Please confirm your attendance by Thursday, ______ your seat will be released.",
+    "options": {
+      "A": "or else",
+      "B": "so that",
+      "C": "in case",
+      "D": "as long as"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'Or else' (nếu không thì) nêu hệ quả của việc không thực hiện điều kiện phía trước.",
+    "explanation_grammar": "Điều kiện ngầm với 'or else'",
+    "translation": "Vui lòng xác nhận việc tham dự trước thứ Năm, nếu không chỗ ngồi của bạn sẽ bị nhả ra.",
+    "core_vocabulary": [
+      {
+        "word": "attendance",
+        "type": "n.",
+        "meaning": "việc tham dự"
+      },
+      {
+        "word": "release",
+        "type": "v.",
+        "meaning": "nhả ra, giải phóng"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_15",
+    "question": "Had the team started earlier, the prototype ______ ready for tomorrow's demonstration.",
+    "options": {
+      "A": "will be",
+      "B": "would be",
+      "C": "had been",
+      "D": "is"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "Câu điều kiện hỗn hợp dạng đảo ngữ: điều kiện thuộc quá khứ (Had ... started) nhưng kết quả thuộc hiện tại/tương lai, nên dùng 'would + V'.",
+    "explanation_grammar": "Đảo ngữ điều kiện hỗn hợp",
+    "translation": "Nếu cả nhóm bắt đầu sớm hơn, bản mẫu bây giờ đã sẵn sàng cho buổi trình diễn ngày mai.",
+    "core_vocabulary": [
+      {
+        "word": "prototype",
+        "type": "n.",
+        "meaning": "bản mẫu"
+      },
+      {
+        "word": "demonstration",
+        "type": "n.",
+        "meaning": "buổi trình diễn"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_16",
+    "question": "______ the funding is approved, the laboratory cannot open before September.",
+    "options": {
+      "A": "Unless",
+      "B": "Provided",
+      "C": "As long as",
+      "D": "Even if"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'Even if' (ngay cả khi) nêu giả định mà kết quả vẫn không đổi. 'Unless', 'provided', 'as long as' đều làm câu mâu thuẫn về nghĩa.",
+    "explanation_grammar": "Câu điều kiện với 'even if'",
+    "translation": "Ngay cả khi khoản tài trợ được phê duyệt, phòng thí nghiệm cũng không thể mở cửa trước tháng Chín.",
+    "core_vocabulary": [
+      {
+        "word": "funding",
+        "type": "n.",
+        "meaning": "khoản tài trợ"
+      },
+      {
+        "word": "laboratory",
+        "type": "n.",
+        "meaning": "phòng thí nghiệm"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_17",
+    "question": "Employees may work remotely ______ they attend the weekly team meeting in person.",
+    "options": {
+      "A": "unless",
+      "B": "even if",
+      "C": "as long as",
+      "D": "in case"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'As long as' (miễn là) nêu điều kiện bắt buộc để được hưởng quyền lợi phía trước.",
+    "explanation_grammar": "Câu điều kiện với 'as long as'",
+    "translation": "Nhân viên có thể làm việc từ xa miễn là họ dự họp nhóm hằng tuần trực tiếp.",
+    "core_vocabulary": [
+      {
+        "word": "remotely",
+        "type": "adv.",
+        "meaning": "từ xa"
+      },
+      {
+        "word": "in person",
+        "type": "adv.",
+        "meaning": "trực tiếp"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_18",
+    "question": "Were the company to relocate its head office, employees ______ relocation assistance.",
+    "options": {
+      "A": "would receive",
+      "B": "will receive",
+      "C": "received",
+      "D": "would have received"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'Were + S + to V' là đảo ngữ của điều kiện loại 2, nên mệnh đề chính dùng 'would + V'.",
+    "explanation_grammar": "Đảo ngữ điều kiện loại 2 với 'were ... to'",
+    "translation": "Nếu công ty chuyển trụ sở chính, nhân viên sẽ được hỗ trợ chuyển chỗ ở.",
+    "core_vocabulary": [
+      {
+        "word": "relocate",
+        "type": "v.",
+        "meaning": "chuyển địa điểm"
+      },
+      {
+        "word": "head office",
+        "type": "n.",
+        "meaning": "trụ sở chính"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_19",
+    "question": "But for the delay at customs, the goods ______ on Monday.",
+    "options": {
+      "A": "will arrive",
+      "B": "arrive",
+      "C": "would arrive",
+      "D": "would have arrived"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'But for + danh từ' ở đây nói về quá khứ (sự chậm trễ đã xảy ra), nên mệnh đề chính dùng 'would have + V3'.",
+    "explanation_grammar": "Điều kiện với 'but for' (quá khứ)",
+    "translation": "Nếu không vì sự chậm trễ ở hải quan, hàng đã đến vào thứ Hai.",
+    "core_vocabulary": [
+      {
+        "word": "customs",
+        "type": "n.",
+        "meaning": "hải quan"
+      },
+      {
+        "word": "goods",
+        "type": "n.",
+        "meaning": "hàng hoá"
+      }
+    ]
+  },
+  {
+    "id": "q_cond_t3_20",
+    "question": "If not for the strict deadline, the design team ______ more time on the concept.",
+    "options": {
+      "A": "will spend",
+      "B": "would spend",
+      "C": "had spent",
+      "D": "spends"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu điều kiện",
+    "explanation_reason": "'If not for + danh từ' nêu điều kiện trái với hiện tại, nên mệnh đề chính dùng 'would + V'.",
+    "explanation_grammar": "Điều kiện với 'if not for'",
+    "translation": "Nếu không vì hạn chót gấp gáp, đội thiết kế đã dành nhiều thời gian hơn cho ý tưởng.",
+    "core_vocabulary": [
+      {
+        "word": "strict",
+        "type": "adj.",
+        "meaning": "nghiêm ngặt, gấp"
+      },
+      {
+        "word": "concept",
+        "type": "n.",
+        "meaning": "ý tưởng, phương án"
+      }
+    ]
   }
 ] as any[] as GrammarQuestion[];
