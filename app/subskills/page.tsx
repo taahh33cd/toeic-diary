@@ -32,6 +32,14 @@ const SKILLS = [
     comingSoon: false,
   },
   {
+    key: "translation",
+    emoji: "🌐",
+    label: "Dịch Anh–Việt",
+    href: "/subskills/translation",
+    description: "Chữa 11 phản xạ dịch hỏng · 6 levels mỗi nhóm · level cao có AI chấm",
+    comingSoon: false,
+  },
+  {
     key: "verbs",
     emoji: "🔁",
     label: "Động từ bất quy tắc",

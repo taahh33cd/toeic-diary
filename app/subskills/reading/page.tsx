@@ -23,10 +23,11 @@ const PARTS = [
   },
   {
     part: "Part 7",
-    slug: null,
-    title: "Đọc hiểu",
-    description: "Chiến lược đọc nhanh, tìm thông tin, suy luận.",
-    available: false,
+    slug: "part7",
+    title: "Đọc & Dịch",
+    description: "Chữa từng kiểu hiểu lệch khi đọc câu dài — cụm danh từ, từ đa nghĩa, tham chiếu, hàm ý.",
+    available: true,
+    totalTenses: 7,
   },
 ];
 
