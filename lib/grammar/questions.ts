@@ -7,12 +7,12 @@ export const grammarQuestions = [
     "id": "q0511",
     "question": "The architect designed the building.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-O",
+      "A": "S-V-O",
+      "B": "S-V-O-C",
       "C": "S-V",
       "D": "S-V-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The architect' + Động từ 'designed' + Tân ngữ 'the building'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -34,10 +34,10 @@ export const grammarQuestions = [
     "id": "q0512",
     "question": "The budget seems tight.",
     "options": {
-      "A": "S-V-O-C",
+      "A": "S-V-O",
       "B": "S-V-C",
-      "C": "S-V-O",
-      "D": "S-V"
+      "C": "S-V",
+      "D": "S-V-O-C"
     },
     "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
@@ -59,28 +59,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q0513",
-    "question": "The cargo arrived late.",
+    "question": "The cargo arrived at the port.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V",
-      "C": "S-V-C",
-      "D": "S-V-O-C"
+      "A": "S-V-O-C",
+      "B": "S-V-O",
+      "C": "S-V",
+      "D": "S-V-C"
     },
     "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The cargo' + Động từ 'arrived'. 'late' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The cargo' + Động từ 'arrived'. Cụm giới từ 'at the port' là trạng ngữ bổ trợ, không phải thành phần chính, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Lô hàng đã đến muộn.",
+    "translation": "Lô hàng đã đến cảng.",
     "core_vocabulary": [
       {
         "word": "cargo",
         "type": "n.",
-        "meaning": "hàng hóa/lô hàng"
+        "meaning": "hàng hoá vận chuyển"
       },
       {
-        "word": "arrive",
-        "type": "v.",
-        "meaning": "đến nơi"
+        "word": "port",
+        "type": "n.",
+        "meaning": "cảng"
       }
     ]
   },
@@ -115,12 +115,12 @@ export const grammarQuestions = [
     "id": "q0515",
     "question": "The contractor signed the agreement.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-C",
+      "A": "S-V-C",
+      "B": "S-V-O",
       "C": "S-V",
-      "D": "S-V-O"
+      "D": "S-V-O-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The contractor' + Động từ 'signed' + Tân ngữ 'the agreement'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -142,12 +142,12 @@ export const grammarQuestions = [
     "id": "q0516",
     "question": "The tax rate dropped.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V",
-      "C": "S-V-C",
-      "D": "S-V-O-C"
+      "A": "S-V",
+      "B": "S-V-O-C",
+      "C": "S-V-O",
+      "D": "S-V-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The tax rate' + Động từ 'dropped'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -169,12 +169,12 @@ export const grammarQuestions = [
     "id": "q0517",
     "question": "The customs officer checked the passport.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-O-C",
+      "A": "S-V-O-C",
+      "B": "S-V-O",
       "C": "S-V-C",
       "D": "S-V"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The customs officer' + Động từ 'checked' + Tân ngữ 'the passport'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -196,12 +196,12 @@ export const grammarQuestions = [
     "id": "q0518",
     "question": "The schedule remains unchanged.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-C",
-      "C": "S-V-O",
-      "D": "S-V-O-C"
+      "A": "S-V-O",
+      "B": "S-V-O-C",
+      "C": "S-V",
+      "D": "S-V-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The schedule' + Động từ 'remains' + Bổ ngữ 'unchanged'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -223,12 +223,12 @@ export const grammarQuestions = [
     "id": "q0519",
     "question": "They made her team leader.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-O",
-      "C": "S-V-C",
-      "D": "S-V-O-C"
+      "A": "S-V-C",
+      "B": "S-V-O-C",
+      "C": "S-V",
+      "D": "S-V-O"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'They' + Động từ 'made' + Tân ngữ 'her' + Bổ ngữ tân ngữ 'team leader'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -246,11 +246,11 @@ export const grammarQuestions = [
     "question": "The data analyst exported the file.",
     "options": {
       "A": "S-V-O-C",
-      "B": "S-V-O",
-      "C": "S-V-C",
-      "D": "S-V"
+      "B": "S-V-C",
+      "C": "S-V",
+      "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The data analyst' + Động từ 'exported' + Tân ngữ 'the file'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -270,18 +270,18 @@ export const grammarQuestions = [
   },
   {
     "id": "q0521",
-    "question": "The economy recovered slowly.",
+    "question": "The economy recovered after the recession.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-C",
-      "C": "S-V-O",
-      "D": "S-V-O-C"
+      "A": "S-V-O",
+      "B": "S-V-O-C",
+      "C": "S-V",
+      "D": "S-V-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The economy' + Động từ 'recovered'. 'slowly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The economy' + Động từ 'recovered'. Cụm giới từ 'after the recession' chỉ là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Nền kinh tế phục hồi chậm.",
+    "translation": "Nền kinh tế đã phục hồi sau đợt suy thoái.",
     "core_vocabulary": [
       {
         "word": "economy",
@@ -289,9 +289,9 @@ export const grammarQuestions = [
         "meaning": "nền kinh tế"
       },
       {
-        "word": "recover",
-        "type": "v.",
-        "meaning": "phục hồi"
+        "word": "recession",
+        "type": "n.",
+        "meaning": "suy thoái kinh tế"
       }
     ]
   },
@@ -300,9 +300,9 @@ export const grammarQuestions = [
     "question": "The new regulations appear strict.",
     "options": {
       "A": "S-V-C",
-      "B": "S-V-O-C",
-      "C": "S-V",
-      "D": "S-V-O"
+      "B": "S-V-O",
+      "C": "S-V-O-C",
+      "D": "S-V"
     },
     "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
@@ -328,10 +328,10 @@ export const grammarQuestions = [
     "options": {
       "A": "S-V-C",
       "B": "S-V-O-C",
-      "C": "S-V-O",
-      "D": "S-V"
+      "C": "S-V",
+      "D": "S-V-O"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The supervisor' + Động từ 'found' + Tân ngữ 'the error'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -354,9 +354,9 @@ export const grammarQuestions = [
     "question": "The client considered the cost high.",
     "options": {
       "A": "S-V-O-C",
-      "B": "S-V",
-      "C": "S-V-C",
-      "D": "S-V-O"
+      "B": "S-V-C",
+      "C": "S-V-O",
+      "D": "S-V"
     },
     "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
@@ -380,12 +380,12 @@ export const grammarQuestions = [
     "id": "q0525",
     "question": "The workers started early.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-O-C",
-      "C": "S-V",
-      "D": "S-V-C"
+      "A": "S-V",
+      "B": "S-V-O",
+      "C": "S-V-C",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The workers' + Động từ 'started'. 'early' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
@@ -402,12 +402,12 @@ export const grammarQuestions = [
     "id": "q0526",
     "question": "The accountant verified the invoice.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-O-C",
-      "C": "S-V-C",
-      "D": "S-V"
+      "A": "S-V-C",
+      "B": "S-V-O",
+      "C": "S-V",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The accountant' + Động từ 'verified' + Tân ngữ 'the invoice'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -434,12 +434,12 @@ export const grammarQuestions = [
     "id": "q0527",
     "question": "The shipment looks heavy.",
     "options": {
-      "A": "S-V-C",
+      "A": "S-V",
       "B": "S-V-O-C",
-      "C": "S-V-O",
-      "D": "S-V"
+      "C": "S-V-C",
+      "D": "S-V-O"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The shipment' + Động từ 'looks' + Bổ ngữ 'heavy'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -481,18 +481,18 @@ export const grammarQuestions = [
   },
   {
     "id": "q0529",
-    "question": "The market crashed suddenly.",
+    "question": "The market crashed in early March.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-O",
+      "A": "S-V-O",
+      "B": "S-V",
       "C": "S-V-C",
-      "D": "S-V"
+      "D": "S-V-O-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The market' + Động từ 'crashed'. 'suddenly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The market' + Động từ 'crashed'. Cụm giới từ 'in early March' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Thị trường sụp đổ đột ngột.",
+    "translation": "Thị trường đã sụp đổ vào đầu tháng Ba.",
     "core_vocabulary": [
       {
         "word": "market",
@@ -502,7 +502,7 @@ export const grammarQuestions = [
       {
         "word": "crash",
         "type": "v.",
-        "meaning": "sụp đổ/va chạm"
+        "meaning": "sụp đổ, lao dốc"
       }
     ]
   },
@@ -510,12 +510,12 @@ export const grammarQuestions = [
     "id": "q0530",
     "question": "The system processed the data.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O",
+      "A": "S-V-O-C",
+      "B": "S-V-C",
       "C": "S-V",
-      "D": "S-V-O-C"
+      "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The system' + Động từ 'processed' + Tân ngữ 'the data'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -539,10 +539,10 @@ export const grammarQuestions = [
     "options": {
       "A": "S-V-O",
       "B": "S-V-O-C",
-      "C": "S-V",
-      "D": "S-V-C"
+      "C": "S-V-C",
+      "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The delivery' + Động từ 'proved' + Bổ ngữ 'difficult'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -564,12 +564,12 @@ export const grammarQuestions = [
     "id": "q0532",
     "question": "The board kept the strategy secret.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V",
-      "C": "S-V-O",
-      "D": "S-V-C"
+      "A": "S-V-O",
+      "B": "S-V-O-C",
+      "C": "S-V-C",
+      "D": "S-V"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The board' + Động từ 'kept' + Tân ngữ 'the strategy' + Bổ ngữ tân ngữ 'secret'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -596,12 +596,12 @@ export const grammarQuestions = [
     "id": "q0533",
     "question": "The import duties increased.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-C",
-      "C": "S-V-O-C",
-      "D": "S-V"
+      "A": "S-V",
+      "B": "S-V-O-C",
+      "C": "S-V-O",
+      "D": "S-V-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The import duties' + Động từ 'increased'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -624,11 +624,11 @@ export const grammarQuestions = [
     "question": "The investors reviewed the portfolio.",
     "options": {
       "A": "S-V-O-C",
-      "B": "S-V-O",
-      "C": "S-V",
-      "D": "S-V-C"
+      "B": "S-V",
+      "C": "S-V-C",
+      "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The investors' + Động từ 'reviewed' + Tân ngữ 'the portfolio'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -650,12 +650,12 @@ export const grammarQuestions = [
     "id": "q0535",
     "question": "The project became successful.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O-C",
-      "C": "S-V-O",
-      "D": "S-V"
+      "A": "S-V-O",
+      "B": "S-V",
+      "C": "S-V-C",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The project' + Động từ nối 'became' + Bổ ngữ 'successful'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -677,12 +677,12 @@ export const grammarQuestions = [
     "id": "q0486",
     "question": "The customs officers inspected the cargo.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-C",
-      "C": "S-V",
-      "D": "S-V-O"
+      "A": "S-V-O",
+      "B": "S-V",
+      "C": "S-V-O-C",
+      "D": "S-V-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Động từ 'inspected' là động từ chuyển tiếp, yêu cầu tân ngữ 'the cargo', vì vậy câu có cấu trúc S-V-O (Chủ ngữ + Động từ + Tân ngữ).",
     "explanation_grammar": "Cấu trúc câu",
@@ -731,12 +731,12 @@ export const grammarQuestions = [
     "id": "q0488",
     "question": "The tax policy remains unchanged.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O",
-      "C": "S-V-O-C",
-      "D": "S-V"
+      "A": "S-V-O-C",
+      "B": "S-V-C",
+      "C": "S-V",
+      "D": "S-V-O"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The tax policy' + Động từ nối 'remains' + Bổ ngữ 'unchanged'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -756,18 +756,18 @@ export const grammarQuestions = [
   },
   {
     "id": "q0489",
-    "question": "The algorithm ran smoothly.",
+    "question": "The algorithm ran without errors.",
     "options": {
-      "A": "S-V",
+      "A": "S-V-O-C",
       "B": "S-V-O",
-      "C": "S-V-C",
-      "D": "S-V-O-C"
+      "C": "S-V",
+      "D": "S-V-C"
     },
     "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The algorithm' + Động từ 'ran'. 'smoothly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The algorithm' + Động từ 'ran'. Cụm giới từ 'without errors' là trạng ngữ bổ trợ, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Thuật toán đã vận hành trôi chảy.",
+    "translation": "Thuật toán đã chạy mà không có lỗi.",
     "core_vocabulary": [
       {
         "word": "algorithm",
@@ -775,9 +775,9 @@ export const grammarQuestions = [
         "meaning": "thuật toán"
       },
       {
-        "word": "smoothly",
-        "type": "adv.",
-        "meaning": "một cách trôi chảy"
+        "word": "error",
+        "type": "n.",
+        "meaning": "lỗi"
       }
     ]
   },
@@ -785,12 +785,12 @@ export const grammarQuestions = [
     "id": "q0490",
     "question": "The project manager called the schedule unrealistic.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-C",
-      "C": "S-V-O-C",
+      "A": "S-V-O-C",
+      "B": "S-V",
+      "C": "S-V-C",
       "D": "S-V-O"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The project manager' + Động từ 'called' + Tân ngữ 'the schedule' + Bổ ngữ tân ngữ 'unrealistic'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -807,9 +807,9 @@ export const grammarQuestions = [
     "id": "q0491",
     "question": "The engineers analyzed the data.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V",
-      "C": "S-V-C",
+      "A": "S-V-C",
+      "B": "S-V-O-C",
+      "C": "S-V",
       "D": "S-V-O"
     },
     "correct_answer": "D",
@@ -834,12 +834,12 @@ export const grammarQuestions = [
     "id": "q0492",
     "question": "The construction site looks hazardous.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-C",
+      "A": "S-V-C",
+      "B": "S-V",
       "C": "S-V-O",
       "D": "S-V-O-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The construction site' + Động từ nối 'looks' + Bổ ngữ 'hazardous'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -861,10 +861,10 @@ export const grammarQuestions = [
     "id": "q0493",
     "question": "The team considered the import successful.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V",
+      "A": "S-V",
+      "B": "S-V-O",
       "C": "S-V-O-C",
-      "D": "S-V-O"
+      "D": "S-V-C"
     },
     "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
@@ -886,18 +886,18 @@ export const grammarQuestions = [
   },
   {
     "id": "q0494",
-    "question": "The fresh apples arrived yesterday.",
+    "question": "The fresh apples arrived from Da Lat.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V",
-      "C": "S-V-O",
-      "D": "S-V-C"
+      "A": "S-V",
+      "B": "S-V-C",
+      "C": "S-V-O-C",
+      "D": "S-V-O"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The fresh apples' + Động từ 'arrived'. 'yesterday' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The fresh apples' + Động từ 'arrived'. Cụm giới từ 'from Da Lat' là trạng ngữ chỉ nơi chốn, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Những quả táo tươi đã đến vào ngày hôm qua.",
+    "translation": "Những quả táo tươi đã được chuyển đến từ Đà Lạt.",
     "core_vocabulary": [
       {
         "word": "fresh",
@@ -907,7 +907,7 @@ export const grammarQuestions = [
       {
         "word": "arrive",
         "type": "v.",
-        "meaning": "đến"
+        "meaning": "đến nơi"
       }
     ]
   },
@@ -916,11 +916,11 @@ export const grammarQuestions = [
     "question": "The supply chain became disrupted.",
     "options": {
       "A": "S-V-O",
-      "B": "S-V",
-      "C": "S-V-C",
+      "B": "S-V-C",
+      "C": "S-V",
       "D": "S-V-O-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The supply chain' + Động từ 'became' + Bổ ngữ 'disrupted'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -940,18 +940,18 @@ export const grammarQuestions = [
   },
   {
     "id": "q0496",
-    "question": "The inventory decreased steadily.",
+    "question": "The inventory decreased over the quarter.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V",
-      "C": "S-V-O-C",
-      "D": "S-V-O"
+      "A": "S-V-O-C",
+      "B": "S-V-O",
+      "C": "S-V-C",
+      "D": "S-V"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The inventory' + Động từ 'decreased'. 'steadily' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The inventory' + Động từ 'decreased'. Cụm giới từ 'over the quarter' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Hàng tồn kho đã giảm dần đều.",
+    "translation": "Lượng hàng tồn kho đã giảm trong suốt quý.",
     "core_vocabulary": [
       {
         "word": "inventory",
@@ -959,9 +959,9 @@ export const grammarQuestions = [
         "meaning": "hàng tồn kho"
       },
       {
-        "word": "steadily",
-        "type": "adv.",
-        "meaning": "đều đặn/vững chắc"
+        "word": "decrease",
+        "type": "v.",
+        "meaning": "giảm"
       }
     ]
   },
@@ -969,12 +969,12 @@ export const grammarQuestions = [
     "id": "q0497",
     "question": "The software generated a visual chart.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V",
-      "C": "S-V-C",
-      "D": "S-V-O-C"
+      "A": "S-V-O-C",
+      "B": "S-V-O",
+      "C": "S-V",
+      "D": "S-V-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The software' + Động từ 'generated' + Tân ngữ 'a visual chart'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -996,12 +996,12 @@ export const grammarQuestions = [
     "id": "q0498",
     "question": "The directors appointed him lead analyst.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V",
-      "C": "S-V-O",
-      "D": "S-V-C"
+      "A": "S-V",
+      "B": "S-V-O",
+      "C": "S-V-C",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The directors' + Động từ 'appointed' + Tân ngữ 'him' + Bổ ngữ tân ngữ 'lead analyst'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1021,23 +1021,23 @@ export const grammarQuestions = [
   },
   {
     "id": "q0499",
-    "question": "The freight train departed early.",
+    "question": "The freight train departed from platform two.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-O-C",
-      "C": "S-V-C",
-      "D": "S-V-O"
+      "A": "S-V-C",
+      "B": "S-V-O",
+      "C": "S-V",
+      "D": "S-V-O-C"
     },
     "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The freight train' + Động từ 'departed'. 'early' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The freight train' + Động từ 'departed'. Cụm giới từ 'from platform two' là trạng ngữ chỉ nơi chốn, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Tàu chở hàng đã khởi hành sớm.",
+    "translation": "Chuyến tàu hàng đã khởi hành từ sân ga số hai.",
     "core_vocabulary": [
       {
-        "word": "freight train",
+        "word": "freight",
         "type": "n.",
-        "meaning": "tàu chở hàng"
+        "meaning": "hàng hoá vận tải"
       },
       {
         "word": "depart",
@@ -1050,12 +1050,12 @@ export const grammarQuestions = [
     "id": "q0500",
     "question": "The economic forecast seems pessimistic.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-O",
-      "C": "S-V-C",
-      "D": "S-V"
+      "A": "S-V",
+      "B": "S-V-C",
+      "C": "S-V-O-C",
+      "D": "S-V-O"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The economic forecast' + Động từ nối 'seems' + Bổ ngữ 'pessimistic'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1075,18 +1075,18 @@ export const grammarQuestions = [
   },
   {
     "id": "q0501",
-    "question": "The import tax increased slightly.",
+    "question": "The import tax increased in January.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O-C",
-      "C": "S-V-O",
-      "D": "S-V"
+      "A": "S-V",
+      "B": "S-V-C",
+      "C": "S-V-O-C",
+      "D": "S-V-O"
     },
     "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The import tax' + Động từ 'increased'. 'slightly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The import tax' + Động từ 'increased'. Cụm giới từ 'in January' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Thuế nhập khẩu đã tăng nhẹ.",
+    "translation": "Thuế nhập khẩu đã tăng vào tháng Một.",
     "core_vocabulary": [
       {
         "word": "import tax",
@@ -1094,9 +1094,9 @@ export const grammarQuestions = [
         "meaning": "thuế nhập khẩu"
       },
       {
-        "word": "slightly",
-        "type": "adv.",
-        "meaning": "một cách nhẹ nhàng/không đáng kể"
+        "word": "increase",
+        "type": "v.",
+        "meaning": "tăng"
       }
     ]
   },
@@ -1104,12 +1104,12 @@ export const grammarQuestions = [
     "id": "q0502",
     "question": "The inspectors found the goods damaged.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-O",
-      "C": "S-V-C",
-      "D": "S-V-O-C"
+      "A": "S-V-O",
+      "B": "S-V-C",
+      "C": "S-V-O-C",
+      "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The inspectors' + Động từ 'found' + Tân ngữ 'the goods' + Bổ ngữ tân ngữ 'damaged'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1129,28 +1129,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q0503",
-    "question": "The business expanded rapidly.",
+    "question": "The business expanded into three countries.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-C",
-      "C": "S-V-O",
+      "A": "S-V-O",
+      "B": "S-V-O-C",
+      "C": "S-V-C",
       "D": "S-V"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The business' + Động từ 'expanded'. 'rapidly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The business' + Động từ 'expanded'. Cụm giới từ 'into three countries' là trạng ngữ bổ trợ, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Doanh nghiệp đã mở rộng nhanh chóng.",
+    "translation": "Doanh nghiệp đã mở rộng sang ba quốc gia.",
     "core_vocabulary": [
+      {
+        "word": "business",
+        "type": "n.",
+        "meaning": "doanh nghiệp"
+      },
       {
         "word": "expand",
         "type": "v.",
         "meaning": "mở rộng"
-      },
-      {
-        "word": "rapidly",
-        "type": "adv.",
-        "meaning": "một cách nhanh chóng"
       }
     ]
   },
@@ -1158,12 +1158,12 @@ export const grammarQuestions = [
     "id": "q0504",
     "question": "The logistics team solved the problem.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V",
-      "C": "S-V-O-C",
+      "A": "S-V",
+      "B": "S-V-O-C",
+      "C": "S-V-O",
       "D": "S-V-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The logistics team' + Động từ 'solved' + Tân ngữ 'the problem'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1185,9 +1185,9 @@ export const grammarQuestions = [
     "id": "q0505",
     "question": "The database works efficiently.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V",
-      "C": "S-V-O",
+      "A": "S-V",
+      "B": "S-V-O",
+      "C": "S-V-O-C",
       "D": "S-V-C"
     },
     "correct_answer": "D",
@@ -1212,10 +1212,10 @@ export const grammarQuestions = [
     "id": "q0506",
     "question": "The supervisor made the rules clear.",
     "options": {
-      "A": "S-V-O",
+      "A": "S-V",
       "B": "S-V-O-C",
-      "C": "S-V-C",
-      "D": "S-V"
+      "C": "S-V-O",
+      "D": "S-V-C"
     },
     "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
@@ -1239,12 +1239,12 @@ export const grammarQuestions = [
     "id": "q0507",
     "question": "The analysts predicted a market shift.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-C",
-      "C": "S-V",
+      "A": "S-V-C",
+      "B": "S-V",
+      "C": "S-V-O",
       "D": "S-V-O-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The analysts' + Động từ 'predicted' + Tân ngữ 'a market shift'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1267,9 +1267,9 @@ export const grammarQuestions = [
     "question": "The workflow appears logical.",
     "options": {
       "A": "S-V-C",
-      "B": "S-V",
-      "C": "S-V-O-C",
-      "D": "S-V-O"
+      "B": "S-V-O-C",
+      "C": "S-V-O",
+      "D": "S-V"
     },
     "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
@@ -1293,12 +1293,12 @@ export const grammarQuestions = [
     "id": "q0509",
     "question": "The port authority approved the shipment.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-C",
-      "C": "S-V",
-      "D": "S-V-O-C"
+      "A": "S-V-O-C",
+      "B": "S-V-O",
+      "C": "S-V-C",
+      "D": "S-V"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The port authority' + Động từ 'approved' + Tân ngữ 'the shipment'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1321,11 +1321,11 @@ export const grammarQuestions = [
     "question": "The customs procedure proved complicated.",
     "options": {
       "A": "S-V-O",
-      "B": "S-V-C",
-      "C": "S-V",
+      "B": "S-V",
+      "C": "S-V-C",
       "D": "S-V-O-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The customs procedure' + Động từ nối 'proved' + Bổ ngữ 'complicated'. Đây là cấu trúc S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1347,9 +1347,9 @@ export const grammarQuestions = [
     "id": "q0461",
     "question": "The investors bought the shares.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-C",
-      "C": "S-V",
+      "A": "S-V-C",
+      "B": "S-V",
+      "C": "S-V-O-C",
       "D": "S-V-O"
     },
     "correct_answer": "D",
@@ -1374,12 +1374,12 @@ export const grammarQuestions = [
     "id": "q0462",
     "question": "The cargo plane departed safely.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O",
-      "C": "S-V",
-      "D": "S-V-O-C"
+      "A": "S-V-O-C",
+      "B": "S-V-C",
+      "C": "S-V-O",
+      "D": "S-V"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The cargo plane' + Động từ 'departed'. 'safely' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1428,12 +1428,12 @@ export const grammarQuestions = [
     "id": "q0464",
     "question": "They considered the policy unfair.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-O",
-      "C": "S-V-C",
-      "D": "S-V-O-C"
+      "A": "S-V-O",
+      "B": "S-V-C",
+      "C": "S-V-O-C",
+      "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'They' + Động từ 'considered' + Tân ngữ 'the policy' + Bổ ngữ tân ngữ 'unfair'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1455,12 +1455,12 @@ export const grammarQuestions = [
     "id": "q0465",
     "question": "The secretary answered the emails.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-C",
-      "C": "S-V-O-C",
-      "D": "S-V-O"
+      "A": "S-V-O",
+      "B": "S-V-O-C",
+      "C": "S-V",
+      "D": "S-V-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The secretary' + Động từ 'answered' + Tân ngữ 'the emails'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1480,18 +1480,18 @@ export const grammarQuestions = [
   },
   {
     "id": "q0466",
-    "question": "The new equipment works perfectly.",
+    "question": "The new equipment works without supervision.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-C",
-      "C": "S-V",
+      "A": "S-V",
+      "B": "S-V-O-C",
+      "C": "S-V-C",
       "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The new equipment' + Động từ 'works'. 'perfectly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The new equipment' + Động từ 'works'. Cụm giới từ 'without supervision' là trạng ngữ bổ trợ, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Thiết bị mới hoạt động hoàn hảo.",
+    "translation": "Thiết bị mới vận hành mà không cần giám sát.",
     "core_vocabulary": [
       {
         "word": "equipment",
@@ -1499,9 +1499,9 @@ export const grammarQuestions = [
         "meaning": "thiết bị"
       },
       {
-        "word": "perfectly",
-        "type": "adv.",
-        "meaning": "hoàn hảo"
+        "word": "supervision",
+        "type": "n.",
+        "meaning": "sự giám sát"
       }
     ]
   },
@@ -1509,12 +1509,12 @@ export const grammarQuestions = [
     "id": "q0467",
     "question": "The office remains quiet today.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-C",
-      "C": "S-V-O-C",
-      "D": "S-V-O"
+      "A": "S-V-O-C",
+      "B": "S-V-O",
+      "C": "S-V-C",
+      "D": "S-V"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The office' + Động từ nối 'remains' + Bổ ngữ 'quiet'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1536,12 +1536,12 @@ export const grammarQuestions = [
     "id": "q0468",
     "question": "The board elected her CEO.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-O",
-      "C": "S-V-C",
-      "D": "S-V-O-C"
+      "A": "S-V-C",
+      "B": "S-V-O-C",
+      "C": "S-V",
+      "D": "S-V-O"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The board' + Động từ 'elected' + Tân ngữ 'her' + Bổ ngữ tân ngữ 'CEO'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1563,12 +1563,12 @@ export const grammarQuestions = [
     "id": "q0469",
     "question": "The team achieved the goal.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V",
-      "C": "S-V-O-C",
-      "D": "S-V-O"
+      "A": "S-V-O",
+      "B": "S-V-C",
+      "C": "S-V",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The team' + Động từ 'achieved' + Tân ngữ 'the goal'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1588,18 +1588,18 @@ export const grammarQuestions = [
   },
   {
     "id": "q0470",
-    "question": "The shipping costs increased rapidly.",
+    "question": "The shipping costs increased after the fuel surcharge.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V",
-      "C": "S-V-O-C",
-      "D": "S-V-O"
+      "A": "S-V-O-C",
+      "B": "S-V-O",
+      "C": "S-V-C",
+      "D": "S-V"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The shipping costs' + Động từ 'increased'. 'rapidly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The shipping costs' + Động từ 'increased'. Cụm giới từ 'after the fuel surcharge' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Chi phí vận chuyển tăng nhanh.",
+    "translation": "Chi phí vận chuyển đã tăng sau khi có phụ phí nhiên liệu.",
     "core_vocabulary": [
       {
         "word": "shipping cost",
@@ -1607,9 +1607,9 @@ export const grammarQuestions = [
         "meaning": "chi phí vận chuyển"
       },
       {
-        "word": "rapidly",
-        "type": "adv.",
-        "meaning": "nhanh chóng"
+        "word": "surcharge",
+        "type": "n.",
+        "meaning": "phụ phí"
       }
     ]
   },
@@ -1617,12 +1617,12 @@ export const grammarQuestions = [
     "id": "q0471",
     "question": "The proposal sounds very interesting.",
     "options": {
-      "A": "S-V-C",
+      "A": "S-V",
       "B": "S-V-O-C",
-      "C": "S-V-O",
-      "D": "S-V"
+      "C": "S-V-C",
+      "D": "S-V-O"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The proposal' + Động từ nối 'sounds' + Bổ ngữ 'very interesting'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1644,12 +1644,12 @@ export const grammarQuestions = [
     "id": "q0472",
     "question": "The manager found the report incomplete.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-O",
-      "C": "S-V-C",
-      "D": "S-V"
+      "A": "S-V-O",
+      "B": "S-V-C",
+      "C": "S-V",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The manager' + Động từ 'found' + Tân ngữ 'the report' + Bổ ngữ tân ngữ 'incomplete'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1672,9 +1672,9 @@ export const grammarQuestions = [
     "question": "We signed the lease agreement.",
     "options": {
       "A": "S-V-O",
-      "B": "S-V",
-      "C": "S-V-C",
-      "D": "S-V-O-C"
+      "B": "S-V-C",
+      "C": "S-V-O-C",
+      "D": "S-V"
     },
     "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
@@ -1698,12 +1698,12 @@ export const grammarQuestions = [
     "id": "q0474",
     "question": "The power failed again.",
     "options": {
-      "A": "S-V-C",
+      "A": "S-V",
       "B": "S-V-O",
       "C": "S-V-O-C",
-      "D": "S-V"
+      "D": "S-V-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The power' + Động từ 'failed'. 'again' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1725,12 +1725,12 @@ export const grammarQuestions = [
     "id": "q0475",
     "question": "The current situation appears stable.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V",
+      "A": "S-V",
+      "B": "S-V-C",
       "C": "S-V-O",
       "D": "S-V-O-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The current situation' + Động từ nối 'appears' + Bổ ngữ 'stable'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1753,9 +1753,9 @@ export const grammarQuestions = [
     "question": "The committee named him director.",
     "options": {
       "A": "S-V-O-C",
-      "B": "S-V",
-      "C": "S-V-C",
-      "D": "S-V-O"
+      "B": "S-V-C",
+      "C": "S-V-O",
+      "D": "S-V"
     },
     "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
@@ -1779,12 +1779,12 @@ export const grammarQuestions = [
     "id": "q0477",
     "question": "The department hired new staff.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-O",
+      "A": "S-V-C",
+      "B": "S-V",
       "C": "S-V-O-C",
-      "D": "S-V-C"
+      "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The department' + Động từ 'hired' + Tân ngữ 'new staff'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1804,28 +1804,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q0478",
-    "question": "The negotiations continued peacefully.",
+    "question": "The negotiations continued for three days.",
     "options": {
       "A": "S-V-O-C",
-      "B": "S-V-O",
-      "C": "S-V-C",
-      "D": "S-V"
+      "B": "S-V",
+      "C": "S-V-O",
+      "D": "S-V-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The negotiations' + Động từ 'continued'. 'peacefully' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The negotiations' + Động từ 'continued'. Cụm giới từ 'for three days' là trạng ngữ chỉ thời lượng, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Các cuộc đàm phán tiếp tục trong hòa bình.",
+    "translation": "Cuộc đàm phán đã kéo dài suốt ba ngày.",
     "core_vocabulary": [
       {
         "word": "negotiation",
         "type": "n.",
-        "meaning": "sự đàm phán"
+        "meaning": "cuộc đàm phán"
       },
       {
-        "word": "peacefully",
-        "type": "adv.",
-        "meaning": "hòa bình"
+        "word": "continue",
+        "type": "v.",
+        "meaning": "tiếp tục, kéo dài"
       }
     ]
   },
@@ -1833,12 +1833,12 @@ export const grammarQuestions = [
     "id": "q0479",
     "question": "The final decision was difficult.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O",
-      "C": "S-V",
-      "D": "S-V-O-C"
+      "A": "S-V",
+      "B": "S-V-O-C",
+      "C": "S-V-O",
+      "D": "S-V-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The final decision' + Động từ nối 'was' + Bổ ngữ 'difficult'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1860,12 +1860,12 @@ export const grammarQuestions = [
     "id": "q0480",
     "question": "The delay made the passengers furious.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-O-C",
-      "C": "S-V-C",
-      "D": "S-V-O"
+      "A": "S-V-O-C",
+      "B": "S-V-O",
+      "C": "S-V",
+      "D": "S-V-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The delay' + Động từ 'made' + Tân ngữ 'the passengers' + Bổ ngữ tân ngữ 'furious'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1888,11 +1888,11 @@ export const grammarQuestions = [
     "question": "The accountant prepared the invoices.",
     "options": {
       "A": "S-V-C",
-      "B": "S-V-O",
-      "C": "S-V-O-C",
+      "B": "S-V-O-C",
+      "C": "S-V-O",
       "D": "S-V"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The accountant' + Động từ 'prepared' + Tân ngữ 'the invoices'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1912,28 +1912,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q0482",
-    "question": "The alarm rang loudly.",
+    "question": "The alarm rang at midnight.",
     "options": {
       "A": "S-V",
-      "B": "S-V-C",
-      "C": "S-V-O-C",
-      "D": "S-V-O"
+      "B": "S-V-O-C",
+      "C": "S-V-O",
+      "D": "S-V-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The alarm' + Động từ 'rang'. 'loudly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The alarm' + Động từ 'rang'. Cụm giới từ 'at midnight' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Chuông báo vang lên ồn ào.",
+    "translation": "Chuông báo động đã reo lúc nửa đêm.",
     "core_vocabulary": [
       {
         "word": "alarm",
         "type": "n.",
-        "meaning": "chuông báo"
+        "meaning": "chuông báo động"
       },
       {
-        "word": "loudly",
-        "type": "adv.",
-        "meaning": "ồn ào"
+        "word": "midnight",
+        "type": "n.",
+        "meaning": "nửa đêm"
       }
     ]
   },
@@ -1941,12 +1941,12 @@ export const grammarQuestions = [
     "id": "q0483",
     "question": "The new software is reliable.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-C",
-      "C": "S-V-O-C",
-      "D": "S-V"
+      "A": "S-V",
+      "B": "S-V-O",
+      "C": "S-V-C",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The new software' + Động từ nối 'is' + Bổ ngữ 'reliable'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1969,11 +1969,11 @@ export const grammarQuestions = [
     "question": "They proved the theory wrong.",
     "options": {
       "A": "S-V",
-      "B": "S-V-O",
-      "C": "S-V-C",
-      "D": "S-V-O-C"
+      "B": "S-V-O-C",
+      "C": "S-V-O",
+      "D": "S-V-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'They' + Động từ 'proved' + Tân ngữ 'the theory' + Bổ ngữ tân ngữ 'wrong'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -1995,12 +1995,12 @@ export const grammarQuestions = [
     "id": "q0485",
     "question": "The workers cleaned the warehouse.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V",
-      "C": "S-V-C",
-      "D": "S-V-O"
+      "A": "S-V",
+      "B": "S-V-C",
+      "C": "S-V-O",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The workers' + Động từ 'cleaned' + Tân ngữ 'the warehouse'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2022,12 +2022,12 @@ export const grammarQuestions = [
     "id": "q0436",
     "question": "The CEO approved the budget.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O-C",
-      "C": "S-V-O",
-      "D": "S-V"
+      "A": "S-V",
+      "B": "S-V-O",
+      "C": "S-V-C",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The CEO' + Động từ 'approved' + Tân ngữ 'the budget'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2047,23 +2047,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q0437",
-    "question": "The supplier called yesterday.",
+    "question": "The supplier called during the audit.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-C",
-      "C": "S-V-O-C",
+      "A": "S-V-C",
+      "B": "S-V-O-C",
+      "C": "S-V",
       "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The supplier' + Động từ 'called'. 'yesterday' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The supplier' + Động từ 'called'. Cụm giới từ 'during the audit' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Nhà cung cấp đã gọi hôm qua.",
+    "translation": "Nhà cung cấp đã gọi trong lúc kiểm toán.",
     "core_vocabulary": [
       {
         "word": "supplier",
         "type": "n.",
         "meaning": "nhà cung cấp"
+      },
+      {
+        "word": "audit",
+        "type": "n.",
+        "meaning": "cuộc kiểm toán"
       }
     ]
   },
@@ -2071,12 +2076,12 @@ export const grammarQuestions = [
     "id": "q0438",
     "question": "The new office looks spacious.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-C",
-      "C": "S-V-O",
-      "D": "S-V-O-C"
+      "A": "S-V-O",
+      "B": "S-V-O-C",
+      "C": "S-V",
+      "D": "S-V-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The new office' + Động từ nối 'looks' + Bổ ngữ 'spacious'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2093,10 +2098,10 @@ export const grammarQuestions = [
     "id": "q0439",
     "question": "The committee made him chairman.",
     "options": {
-      "A": "S-V",
+      "A": "S-V-C",
       "B": "S-V-O-C",
-      "C": "S-V-O",
-      "D": "S-V-C"
+      "C": "S-V",
+      "D": "S-V-O"
     },
     "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
@@ -2147,9 +2152,9 @@ export const grammarQuestions = [
     "id": "q0441",
     "question": "The receptionist answered the phone.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-O-C",
-      "C": "S-V-C",
+      "A": "S-V-O-C",
+      "B": "S-V-C",
+      "C": "S-V",
       "D": "S-V-O"
     },
     "correct_answer": "D",
@@ -2169,12 +2174,12 @@ export const grammarQuestions = [
     "id": "q0442",
     "question": "The financial report is accurate.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-O-C",
-      "C": "S-V",
-      "D": "S-V-C"
+      "A": "S-V-C",
+      "B": "S-V",
+      "C": "S-V-O",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The financial report' + Động từ nối 'is' + Bổ ngữ 'accurate'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2198,10 +2203,10 @@ export const grammarQuestions = [
     "options": {
       "A": "S-V",
       "B": "S-V-C",
-      "C": "S-V-O",
-      "D": "S-V-O-C"
+      "C": "S-V-O-C",
+      "D": "S-V-O"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The training' + Động từ 'made' + Tân ngữ 'the staff' + Bổ ngữ tân ngữ 'confident'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2223,9 +2228,9 @@ export const grammarQuestions = [
     "id": "q0444",
     "question": "We signed the contract.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-C",
-      "C": "S-V",
+      "A": "S-V-C",
+      "B": "S-V",
+      "C": "S-V-O-C",
       "D": "S-V-O"
     },
     "correct_answer": "D",
@@ -2248,18 +2253,18 @@ export const grammarQuestions = [
   },
   {
     "id": "q0445",
-    "question": "The system crashed suddenly.",
+    "question": "The system crashed during the update.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-C",
+      "A": "S-V-O",
+      "B": "S-V-O-C",
       "C": "S-V",
-      "D": "S-V-O"
+      "D": "S-V-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The system' + Động từ 'crashed'. 'suddenly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The system' + Động từ 'crashed'. Cụm giới từ 'during the update' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Hệ thống sụp đổ đột ngột.",
+    "translation": "Hệ thống đã sập trong lúc cập nhật.",
     "core_vocabulary": [
       {
         "word": "system",
@@ -2267,9 +2272,9 @@ export const grammarQuestions = [
         "meaning": "hệ thống"
       },
       {
-        "word": "crash",
-        "type": "v.",
-        "meaning": "sụp đổ"
+        "word": "update",
+        "type": "n.",
+        "meaning": "bản cập nhật"
       }
     ]
   },
@@ -2278,11 +2283,11 @@ export const grammarQuestions = [
     "question": "The marketing strategy seems successful.",
     "options": {
       "A": "S-V-O",
-      "B": "S-V-C",
-      "C": "S-V-O-C",
-      "D": "S-V"
+      "B": "S-V-O-C",
+      "C": "S-V",
+      "D": "S-V-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The marketing strategy' + Động từ nối 'seems' + Bổ ngữ 'successful'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2304,12 +2309,12 @@ export const grammarQuestions = [
     "id": "q0447",
     "question": "They appointed her manager.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O-C",
-      "C": "S-V-O",
-      "D": "S-V"
+      "A": "S-V-O-C",
+      "B": "S-V-O",
+      "C": "S-V",
+      "D": "S-V-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'They' + Động từ 'appointed' + Tân ngữ 'her' + Bổ ngữ tân ngữ 'manager'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2331,12 +2336,12 @@ export const grammarQuestions = [
     "id": "q0448",
     "question": "The client accepted the offer.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V",
-      "C": "S-V-C",
-      "D": "S-V-O"
+      "A": "S-V-C",
+      "B": "S-V-O-C",
+      "C": "S-V-O",
+      "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The client' + Động từ 'accepted' + Tân ngữ 'the offer'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2356,18 +2361,18 @@ export const grammarQuestions = [
   },
   {
     "id": "q0449",
-    "question": "The factory operates smoothly.",
+    "question": "The factory operates around the clock.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-C",
+      "A": "S-V-C",
+      "B": "S-V",
       "C": "S-V-O",
       "D": "S-V-O-C"
     },
     "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The factory' + Động từ 'operates'. 'smoothly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The factory' + Động từ 'operates'. Cụm giới từ 'around the clock' là trạng ngữ bổ trợ, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Nhà máy vận hành trôi chảy.",
+    "translation": "Nhà máy hoạt động suốt ngày đêm.",
     "core_vocabulary": [
       {
         "word": "factory",
@@ -2375,9 +2380,9 @@ export const grammarQuestions = [
         "meaning": "nhà máy"
       },
       {
-        "word": "operate",
-        "type": "v.",
-        "meaning": "vận hành"
+        "word": "around the clock",
+        "type": "adv.",
+        "meaning": "suốt ngày đêm"
       }
     ]
   },
@@ -2385,12 +2390,12 @@ export const grammarQuestions = [
     "id": "q0450",
     "question": "The materials are expensive.",
     "options": {
-      "A": "S-V-O-C",
+      "A": "S-V-C",
       "B": "S-V-O",
-      "C": "S-V-C",
-      "D": "S-V"
+      "C": "S-V",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The materials' + Động từ nối 'are' + Bổ ngữ 'expensive'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2412,12 +2417,12 @@ export const grammarQuestions = [
     "id": "q0451",
     "question": "The delay drove the customer crazy.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V",
-      "C": "S-V-O",
-      "D": "S-V-O-C"
+      "A": "S-V-O",
+      "B": "S-V-C",
+      "C": "S-V-O-C",
+      "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The delay' + Động từ 'drove' + Tân ngữ 'the customer' + Bổ ngữ tân ngữ 'crazy'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2466,10 +2471,10 @@ export const grammarQuestions = [
     "id": "q0453",
     "question": "The stock price fell.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O-C",
+      "A": "S-V-O-C",
+      "B": "S-V-O",
       "C": "S-V",
-      "D": "S-V-O"
+      "D": "S-V-C"
     },
     "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
@@ -2493,12 +2498,12 @@ export const grammarQuestions = [
     "id": "q0454",
     "question": "The presentation was impressive.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-O",
-      "C": "S-V-C",
-      "D": "S-V"
+      "A": "S-V",
+      "B": "S-V-O-C",
+      "C": "S-V-O",
+      "D": "S-V-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The presentation' + Động từ nối 'was' + Bổ ngữ 'impressive'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2520,12 +2525,12 @@ export const grammarQuestions = [
     "id": "q0455",
     "question": "The manager kept the team motivated.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-O-C",
+      "A": "S-V-O-C",
+      "B": "S-V-O",
       "C": "S-V-C",
       "D": "S-V"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The manager' + Động từ 'kept' + Tân ngữ 'the team' + Bổ ngữ tân ngữ 'motivated'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2547,12 +2552,12 @@ export const grammarQuestions = [
     "id": "q0456",
     "question": "The secretary typed the letter.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-C",
-      "C": "S-V",
-      "D": "S-V-O-C"
+      "A": "S-V",
+      "B": "S-V-O",
+      "C": "S-V-O-C",
+      "D": "S-V-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The secretary' + Động từ 'typed' + Tân ngữ 'the letter'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2572,28 +2577,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q0457",
-    "question": "The meeting ended early.",
+    "question": "The meeting ended before lunch.",
     "options": {
       "A": "S-V",
-      "B": "S-V-C",
-      "C": "S-V-O-C",
-      "D": "S-V-O"
+      "B": "S-V-O",
+      "C": "S-V-C",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The meeting' + Động từ 'ended'. 'early' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The meeting' + Động từ 'ended'. Cụm giới từ 'before lunch' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Cuộc họp kết thúc sớm.",
+    "translation": "Cuộc họp đã kết thúc trước bữa trưa.",
     "core_vocabulary": [
+      {
+        "word": "meeting",
+        "type": "n.",
+        "meaning": "cuộc họp"
+      },
       {
         "word": "end",
         "type": "v.",
         "meaning": "kết thúc"
-      },
-      {
-        "word": "early",
-        "type": "adv.",
-        "meaning": "sớm"
       }
     ]
   },
@@ -2602,11 +2607,11 @@ export const grammarQuestions = [
     "question": "The new rules sound strict.",
     "options": {
       "A": "S-V-O",
-      "B": "S-V-C",
-      "C": "S-V-O-C",
+      "B": "S-V-O-C",
+      "C": "S-V-C",
       "D": "S-V"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The new rules' + Động từ nối 'sound' + Bổ ngữ 'strict'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2628,12 +2633,12 @@ export const grammarQuestions = [
     "id": "q0459",
     "question": "They voted him president.",
     "options": {
-      "A": "S-V-C",
+      "A": "S-V-O-C",
       "B": "S-V",
       "C": "S-V-O",
-      "D": "S-V-O-C"
+      "D": "S-V-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'They' + Động từ 'voted' + Tân ngữ 'him' + Bổ ngữ tân ngữ 'president'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2655,9 +2660,9 @@ export const grammarQuestions = [
     "id": "q0460",
     "question": "The company bought new laptops.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V",
-      "C": "S-V-C",
+      "A": "S-V-C",
+      "B": "S-V-O-C",
+      "C": "S-V",
       "D": "S-V-O"
     },
     "correct_answer": "D",
@@ -2683,11 +2688,11 @@ export const grammarQuestions = [
     "question": "The manager reviewed the data.",
     "options": {
       "A": "S-V",
-      "B": "S-V-O-C",
-      "C": "S-V-O",
+      "B": "S-V-O",
+      "C": "S-V-O-C",
       "D": "S-V-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The manager' + Động từ 'reviewed' + Tân ngữ 'the data'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2709,12 +2714,12 @@ export const grammarQuestions = [
     "id": "q0412",
     "question": "The shipment arrived safely.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-C",
-      "C": "S-V",
-      "D": "S-V-O-C"
+      "A": "S-V",
+      "B": "S-V-O-C",
+      "C": "S-V-O",
+      "D": "S-V-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The shipment' + Động từ 'arrived'. 'safely' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2736,12 +2741,12 @@ export const grammarQuestions = [
     "id": "q0413",
     "question": "The new policy seems effective.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V",
-      "C": "S-V-O",
-      "D": "S-V-C"
+      "A": "S-V-O",
+      "B": "S-V-C",
+      "C": "S-V-O-C",
+      "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The new policy' + Động từ nối 'seems' + Bổ ngữ 'effective'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2790,10 +2795,10 @@ export const grammarQuestions = [
     "id": "q0415",
     "question": "The tax rate increased.",
     "options": {
-      "A": "S-V-O-C",
+      "A": "S-V-C",
       "B": "S-V",
-      "C": "S-V-C",
-      "D": "S-V-O"
+      "C": "S-V-O",
+      "D": "S-V-O-C"
     },
     "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
@@ -2817,12 +2822,12 @@ export const grammarQuestions = [
     "id": "q0416",
     "question": "The analysts checked the report.",
     "options": {
-      "A": "S-V-O",
+      "A": "S-V-O-C",
       "B": "S-V",
       "C": "S-V-C",
-      "D": "S-V-O-C"
+      "D": "S-V-O"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The analysts' + Động từ 'checked' + Tân ngữ 'the report'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2845,11 +2850,11 @@ export const grammarQuestions = [
     "question": "The customs process is strict.",
     "options": {
       "A": "S-V-O",
-      "B": "S-V-O-C",
-      "C": "S-V",
-      "D": "S-V-C"
+      "B": "S-V-C",
+      "C": "S-V-O-C",
+      "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The customs process' + Động từ nối 'is' + Bổ ngữ 'strict'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2871,12 +2876,12 @@ export const grammarQuestions = [
     "id": "q0418",
     "question": "The delays made the clients angry.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-O-C",
-      "C": "S-V-C",
-      "D": "S-V-O"
+      "A": "S-V-C",
+      "B": "S-V-O",
+      "C": "S-V-O-C",
+      "D": "S-V"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The delays' + Động từ 'made' + Tân ngữ 'the clients' + Bổ ngữ tân ngữ 'angry'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2898,12 +2903,12 @@ export const grammarQuestions = [
     "id": "q0419",
     "question": "We ordered fresh apples.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-C",
-      "C": "S-V",
-      "D": "S-V-O-C"
+      "A": "S-V-O-C",
+      "B": "S-V-O",
+      "C": "S-V-C",
+      "D": "S-V"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'We' + Động từ 'ordered' + Tân ngữ 'fresh apples'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2925,12 +2930,12 @@ export const grammarQuestions = [
     "id": "q0420",
     "question": "The logistics plan became complicated.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O-C",
-      "C": "S-V-O",
-      "D": "S-V"
+      "A": "S-V-O-C",
+      "B": "S-V-O",
+      "C": "S-V",
+      "D": "S-V-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The logistics plan' + Động từ nối 'became' + Bổ ngữ 'complicated'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -2950,18 +2955,18 @@ export const grammarQuestions = [
   },
   {
     "id": "q0421",
-    "question": "The warehouse opened early.",
+    "question": "The warehouse opened in September.",
     "options": {
-      "A": "S-V-O-C",
+      "A": "S-V",
       "B": "S-V-C",
       "C": "S-V-O",
-      "D": "S-V"
+      "D": "S-V-O-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The warehouse' + Động từ 'opened'. 'early' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The warehouse' + Động từ 'opened'. Cụm giới từ 'in September' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Nhà kho đã mở cửa sớm.",
+    "translation": "Nhà kho đã mở cửa vào tháng Chín.",
     "core_vocabulary": [
       {
         "word": "warehouse",
@@ -2979,12 +2984,12 @@ export const grammarQuestions = [
     "id": "q0422",
     "question": "The team found the system useful.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-C",
-      "C": "S-V-O",
-      "D": "S-V-O-C"
+      "A": "S-V-O",
+      "B": "S-V-O-C",
+      "C": "S-V",
+      "D": "S-V-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The team' + Động từ 'found' + Tân ngữ 'the system' + Bổ ngữ tân ngữ 'useful'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -3038,12 +3043,12 @@ export const grammarQuestions = [
     "id": "q0424",
     "question": "The final results look promising.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-O-C",
-      "C": "S-V-O",
-      "D": "S-V-C"
+      "A": "S-V-O-C",
+      "B": "S-V-O",
+      "C": "S-V-C",
+      "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The final results' + Động từ nối 'look' + Bổ ngữ 'promising'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -3063,34 +3068,34 @@ export const grammarQuestions = [
   },
   {
     "id": "q0425",
-    "question": "The meeting started late.",
+    "question": "The meeting started without the director.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-O",
-      "C": "S-V-C",
+      "A": "S-V-C",
+      "B": "S-V-O-C",
+      "C": "S-V-O",
       "D": "S-V"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The meeting' + Động từ 'started'. 'late' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The meeting' + Động từ 'started'. Cụm giới từ 'without the director' là trạng ngữ bổ trợ, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Cuộc họp bắt đầu muộn.",
+    "translation": "Cuộc họp đã bắt đầu mà không có giám đốc.",
     "core_vocabulary": [
       {
-        "word": "start",
-        "type": "v.",
-        "meaning": "bắt đầu"
+        "word": "meeting",
+        "type": "n.",
+        "meaning": "cuộc họp"
       },
       {
-        "word": "late",
-        "type": "adv.",
-        "meaning": "muộn"
+        "word": "director",
+        "type": "n.",
+        "meaning": "giám đốc"
       }
     ]
   },
   {
     "id": "q0426",
-    "question": "They elected the man president.",
+    "question": "The board elected her chairperson.",
     "options": {
       "A": "S-V-O",
       "B": "S-V-O-C",
@@ -3099,19 +3104,19 @@ export const grammarQuestions = [
     },
     "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'They' + Động từ 'elected' + Tân ngữ 'the man' + Bổ ngữ tân ngữ 'president'.",
+    "explanation_reason": "Chủ ngữ 'The board' + Động từ 'elected' + Tân ngữ 'her' + Bổ ngữ tân ngữ 'chairperson'.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Họ bầu người đàn ông làm tổng thống/chủ tịch.",
+    "translation": "Hội đồng đã bầu bà ấy làm chủ tịch.",
     "core_vocabulary": [
       {
-        "word": "elect",
-        "type": "v.",
-        "meaning": "bầu chọn"
+        "word": "board",
+        "type": "n.",
+        "meaning": "hội đồng quản trị"
       },
       {
-        "word": "president",
+        "word": "chairperson",
         "type": "n.",
-        "meaning": "chủ tịch/tổng thống"
+        "meaning": "chủ tịch"
       }
     ]
   },
@@ -3119,12 +3124,12 @@ export const grammarQuestions = [
     "id": "q0427",
     "question": "The accountant calculated the costs.",
     "options": {
-      "A": "S-V",
+      "A": "S-V-O",
       "B": "S-V-O-C",
       "C": "S-V-C",
-      "D": "S-V-O"
+      "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The accountant' + Động từ 'calculated' + Tân ngữ 'the costs'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -3144,28 +3149,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q0428",
-    "question": "The negotiations failed completely.",
+    "question": "The negotiations failed over pricing.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-O-C",
-      "C": "S-V-C",
-      "D": "S-V"
+      "A": "S-V-C",
+      "B": "S-V-O",
+      "C": "S-V",
+      "D": "S-V-O-C"
     },
     "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The negotiations' + Động từ 'failed'. 'completely' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The negotiations' + Động từ 'failed'. Cụm giới từ 'over pricing' là trạng ngữ chỉ nguyên nhân, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Cuộc đàm phán thất bại hoàn toàn.",
+    "translation": "Cuộc đàm phán đã thất bại vì vấn đề giá cả.",
     "core_vocabulary": [
       {
         "word": "negotiation",
         "type": "n.",
-        "meaning": "sự đàm phán"
+        "meaning": "cuộc đàm phán"
       },
       {
-        "word": "fail",
-        "type": "v.",
-        "meaning": "thất bại"
+        "word": "pricing",
+        "type": "n.",
+        "meaning": "việc định giá"
       }
     ]
   },
@@ -3173,12 +3178,12 @@ export const grammarQuestions = [
     "id": "q0429",
     "question": "The project manager remains optimistic.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O",
+      "A": "S-V-O",
+      "B": "S-V-C",
       "C": "S-V-O-C",
       "D": "S-V"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The project manager' + Động từ nối 'remains' + Bổ ngữ 'optimistic'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -3200,12 +3205,12 @@ export const grammarQuestions = [
     "id": "q0430",
     "question": "The supervisor called the idea brilliant.",
     "options": {
-      "A": "S-V-C",
+      "A": "S-V-O-C",
       "B": "S-V-O",
-      "C": "S-V-O-C",
-      "D": "S-V"
+      "C": "S-V",
+      "D": "S-V-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The supervisor' + Động từ 'called' + Tân ngữ 'the idea' + Bổ ngữ tân ngữ 'brilliant'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -3227,12 +3232,12 @@ export const grammarQuestions = [
     "id": "q0431",
     "question": "The workers loaded the trucks.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O",
+      "A": "S-V",
+      "B": "S-V-C",
       "C": "S-V-O-C",
-      "D": "S-V"
+      "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The workers' + Động từ 'loaded' + Tân ngữ 'the trucks'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -3252,28 +3257,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q0432",
-    "question": "The prices dropped suddenly.",
+    "question": "The prices dropped after the announcement.",
     "options": {
       "A": "S-V",
       "B": "S-V-C",
       "C": "S-V-O",
       "D": "S-V-O-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The prices' + Động từ 'dropped'. 'suddenly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The prices' + Động từ 'dropped'. Cụm giới từ 'after the announcement' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Giá cả giảm đột ngột.",
+    "translation": "Giá cả đã giảm sau thông báo.",
     "core_vocabulary": [
       {
         "word": "price",
         "type": "n.",
-        "meaning": "giá cả"
+        "meaning": "giá"
       },
       {
-        "word": "drop",
-        "type": "v.",
-        "meaning": "giảm xuống"
+        "word": "announcement",
+        "type": "n.",
+        "meaning": "thông báo"
       }
     ]
   },
@@ -3281,12 +3286,12 @@ export const grammarQuestions = [
     "id": "q0433",
     "question": "The document appears authentic.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-C",
-      "C": "S-V",
-      "D": "S-V-O"
+      "A": "S-V",
+      "B": "S-V-O",
+      "C": "S-V-C",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The document' + Động từ nối 'appears' + Bổ ngữ 'authentic'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -3308,9 +3313,9 @@ export const grammarQuestions = [
     "id": "q0434",
     "question": "She considered the task finished.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O",
-      "C": "S-V",
+      "A": "S-V",
+      "B": "S-V-C",
+      "C": "S-V-O",
       "D": "S-V-O-C"
     },
     "correct_answer": "D",
@@ -3337,10 +3342,10 @@ export const grammarQuestions = [
     "options": {
       "A": "S-V-C",
       "B": "S-V",
-      "C": "S-V-O-C",
-      "D": "S-V-O"
+      "C": "S-V-O",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'He' + Động từ 'presented' + Tân ngữ 'the new strategy'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -4542,12 +4547,12 @@ export const grammarQuestions = [
     "id": "q0041",
     "question": "The chicken ran away.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-O-C",
-      "C": "S-V-C",
-      "D": "S-V-O"
+      "A": "S-V-C",
+      "B": "S-V-O",
+      "C": "S-V-O-C",
+      "D": "S-V"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Động từ 'ran' (chạy) là một nội động từ, không cần tân ngữ (Object) theo sau. 'away' đóng vai trò cung cấp thêm thông tin phụ trợ (Adverb).",
     "explanation_grammar": "Cấu trúc S-V: S (Chủ ngữ) + V (Nội động từ). Có thể có trạng ngữ đi kèm nhưng không làm thay đổi cấu trúc S-V.",
@@ -4569,12 +4574,12 @@ export const grammarQuestions = [
     "id": "q0042",
     "question": "She sang beautifully.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-O",
-      "C": "S-V-C",
-      "D": "S-V-O-C"
+      "A": "S-V-C",
+      "B": "S-V-O-C",
+      "C": "S-V",
+      "D": "S-V-O"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'She' + Động từ 'sang'. 'beautifully' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc S-V (Chủ ngữ - Động từ). Trạng từ (Adverb) bổ nghĩa không làm thay đổi cấu trúc cốt lõi.",
@@ -4618,12 +4623,12 @@ export const grammarQuestions = [
     "id": "q0044",
     "question": "Lucy became a teacher.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-O",
-      "C": "S-V-C",
-      "D": "S-V-O-C"
+      "A": "S-V-O",
+      "B": "S-V-C",
+      "C": "S-V-O-C",
+      "D": "S-V"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Động từ 'became' (trở thành) là linking verb kết nối chủ ngữ với bổ ngữ 'a teacher' nhằm đinh danh cho chủ ngữ Lucy.",
     "explanation_grammar": "Cấu trúc S-V-C: S + Linking Verb (become/get/seem...) + Noun (Bổ ngữ cung cấp thông tin cho chủ ngữ).",
@@ -4645,9 +4650,9 @@ export const grammarQuestions = [
     "id": "q0045",
     "question": "He wants some tea.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-C",
-      "C": "S-V-O-C",
+      "A": "S-V-O-C",
+      "B": "S-V",
+      "C": "S-V-C",
       "D": "S-V-O"
     },
     "correct_answer": "D",
@@ -4697,28 +4702,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q0047",
-    "question": "Ms. Brown bought her son some bread.",
+    "question": "Ms. Brown became the branch manager.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-O-O",
-      "C": "S-V",
-      "D": "S-V-C"
+      "A": "S-V-O-O",
+      "B": "S-V",
+      "C": "S-V-C",
+      "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Động từ 'bought' (mua) lấy hai tân ngữ: 'her son' (tân ngữ gián tiếp - người nhận) và 'some bread' (tân ngữ trực tiếp - vật được mua). Đây là cấu trúc có 2 tân ngữ S-V-O-O.",
+    "explanation_reason": "Chủ ngữ 'Ms. Brown' + Động từ nối 'became' + Bổ ngữ 'the branch manager' (danh từ định danh cho chủ ngữ).",
     "explanation_grammar": "Cấu trúc S-V-O-O: S + V (give, send, buy, make...) + Tân ngữ gián tiếp (O1) + Tân ngữ trực tiếp (O2).",
-    "translation": "Bà Brown mua cho con trai một ít bánh mì.",
+    "translation": "Bà Brown đã trở thành quản lý chi nhánh.",
     "core_vocabulary": [
       {
-        "word": "buy",
+        "word": "become",
         "type": "v.",
-        "meaning": "mua"
+        "meaning": "trở thành"
       },
       {
-        "word": "bread",
+        "word": "branch",
         "type": "n.",
-        "meaning": "bánh mì"
+        "meaning": "chi nhánh"
       }
     ]
   },
@@ -4726,12 +4731,12 @@ export const grammarQuestions = [
     "id": "q0048",
     "question": "You make me happy.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-C",
-      "C": "S-V-O-C",
-      "D": "S-V"
+      "A": "S-V",
+      "B": "S-V-O-C",
+      "C": "S-V-O",
+      "D": "S-V-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Câu có tân ngữ 'me' và theo sau là tính từ 'happy' mô tả trạng thái cho tân ngữ này (khiến tôi TRỞ NÊN như thế nào). Do đó, 'happy' là Object Complement (C).",
     "explanation_grammar": "Cấu trúc S-V-O-C: S + V (make/find/keep/call...) + O + C (Tính từ/Danh từ bổ trợ ý nghĩa cho tân ngữ).",
@@ -4753,12 +4758,12 @@ export const grammarQuestions = [
     "id": "q0049",
     "question": "They found the girl honest.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V",
-      "C": "S-V-O",
-      "D": "S-V-O-C"
+      "A": "S-V-O-C",
+      "B": "S-V-C",
+      "C": "S-V",
+      "D": "S-V-O"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "'the girl' là tân ngữ, 'honest' (trung thực) là tính từ nhận xét cho tân ngữ này đóng vai trò thành Bổ ngữ (C). Đây là dạng S-V-O-C.",
     "explanation_grammar": "Cấu trúc đánh giá S-V-O-C: Chủ ngữ + find/consider.. + Tân ngữ + Tính từ bổ ngữ (Thấy thứ gì đó như thế nào).",
@@ -4780,12 +4785,12 @@ export const grammarQuestions = [
     "id": "q0050",
     "question": "Because it rained a lot, we stayed at home.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-C",
-      "C": "S-V-O",
-      "D": "S-V-O-C"
+      "A": "S-V-O",
+      "B": "S-V-O-C",
+      "C": "S-V",
+      "D": "S-V-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Mệnh đề chính là 'we stayed at home'. Cụm 'at home' là trạng ngữ chỉ nơi chốn; 'Because...' chỉ là trạng ngữ phụ. Nên đây là cấu trúc cơ bản S-V.",
     "explanation_grammar": "Cấu trúc S-V cơ bản, đi kèm với các cụm/trạng từ ở nhiều vị trí nhưng cốt lõi vẫn chỉ là S và V diễn ra độc lập.",
@@ -4807,10 +4812,10 @@ export const grammarQuestions = [
     "id": "q0051",
     "question": "All employees must wear a uniform.",
     "options": {
-      "A": "S-V-O-C",
+      "A": "S-V",
       "B": "S-V-O",
-      "C": "S-V-C",
-      "D": "S-V"
+      "C": "S-V-O-C",
+      "D": "S-V-C"
     },
     "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
@@ -4836,10 +4841,10 @@ export const grammarQuestions = [
     "options": {
       "A": "S-V-C",
       "B": "S-V-O",
-      "C": "S-V-O-C",
-      "D": "S-V"
+      "C": "S-V",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "'was delayed' (bị hoãn) là cụm động từ bị động đứng im làm vị ngữ, hoàn toàn không cần thêm tân ngữ. Nên cấu trúc của câu chỉ là S-V dạng bị động.",
     "explanation_grammar": "Các câu chia ở thể bị động đầy đủ (không tính bổ ngữ bởi By Object) đều gói gọn lại trên phương thức Chủ ngữ (Subject) và Động từ dạng bị động (Verb).",
@@ -4861,12 +4866,12 @@ export const grammarQuestions = [
     "id": "q0053",
     "question": "Mobile phones are very useful.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-C",
-      "C": "S-V-O",
-      "D": "S-V"
+      "A": "S-V-O",
+      "B": "S-V",
+      "C": "S-V-O-C",
+      "D": "S-V-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "'are' là động từ liên kết nối chủ ngữ với Tính từ 'useful' (Làm Complement). Đây là một cấu trúc S-V-C.",
     "explanation_grammar": "S-V-C: Chủ ngữ bao giờ cũng đi kề cận với Tobe và một tính từ giải thích tính chất cho chủ ngữ đó.",
@@ -4886,28 +4891,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q0054",
-    "question": "We replaced the fax machine.",
+    "question": "We appointed Ms. Lee the project lead.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O-C",
-      "C": "S-V-O",
-      "D": "S-V"
+      "A": "S-V",
+      "B": "S-V-C",
+      "C": "S-V-O-C",
+      "D": "S-V-O"
     },
     "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Hành động 'replaced' tác động trức tiếp lên một tân ngữ đứng sau nó (the fax machine) để chỉ rõ định hướng S-V-O.",
+    "explanation_reason": "Chủ ngữ 'We' + Động từ 'appointed' + Tân ngữ 'Ms. Lee' + Bổ ngữ tân ngữ 'the project lead'.",
     "explanation_grammar": "Mô hình kinh điển S-V-O dành cho mọi động từ mang tính chất thay đổi một chủ thể khác.",
-    "translation": "Chúng tôi đã thay thế máy fax.",
+    "translation": "Chúng tôi đã bổ nhiệm bà Lee làm trưởng dự án.",
     "core_vocabulary": [
       {
-        "word": "replace",
+        "word": "appoint",
         "type": "v.",
-        "meaning": "thay thế"
+        "meaning": "bổ nhiệm"
       },
       {
-        "word": "fax machine",
+        "word": "project lead",
         "type": "n.",
-        "meaning": "máy fax"
+        "meaning": "trưởng dự án"
       }
     ]
   },
@@ -4943,9 +4948,9 @@ export const grammarQuestions = [
     "question": "The business proposals seem promising.",
     "options": {
       "A": "S-V-C",
-      "B": "S-V-O",
-      "C": "S-V",
-      "D": "S-V-O-C"
+      "B": "S-V",
+      "C": "S-V-O-C",
+      "D": "S-V-O"
     },
     "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
@@ -4969,12 +4974,12 @@ export const grammarQuestions = [
     "id": "q0057",
     "question": "The player became the team leader.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-O-C",
-      "C": "S-V-C",
-      "D": "S-V-O"
+      "A": "S-V-O",
+      "B": "S-V",
+      "C": "S-V-O-C",
+      "D": "S-V-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Động từ 'became' là phương tiện nối giữa Cầu thủ và chức vụ 'đội trưởng' (Danh từ định danh làm Complement).",
     "explanation_grammar": "S-V-C với động từ liên kết chỉ sự thay đổi (become, turn...).",
@@ -4998,10 +5003,10 @@ export const grammarQuestions = [
     "options": {
       "A": "S-V-C",
       "B": "S-V-O",
-      "C": "S-V",
-      "D": "S-V-O-C"
+      "C": "S-V-O-C",
+      "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "'made' là ngoại động từ tác động lên màn biểu diễn 'the performance'. Tính từ 'impressive' bổ sung ý nghĩa mô tả cho chính trải nghiệm màn biểu diễn đó.",
     "explanation_grammar": "S-V-O-C: Diễn tả làm thứ gì đó trở nên như thế nào.",
@@ -5023,12 +5028,12 @@ export const grammarQuestions = [
     "id": "q0059",
     "question": "I found the book easily.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O-C",
-      "C": "S-V",
-      "D": "S-V-O"
+      "A": "S-V",
+      "B": "S-V-O",
+      "C": "S-V-C",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'I' + Động từ 'found' + Tân ngữ 'the book'. 'easily' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-O-C.",
     "explanation_grammar": "S-V-(O)-(A): Trạng từ (Adverb) bổ nghĩa không được tính là Cấu trúc Complement.",
@@ -5051,9 +5056,9 @@ export const grammarQuestions = [
     "question": "The management will create a special team.",
     "options": {
       "A": "S-V-O",
-      "B": "S-V-C",
-      "C": "S-V",
-      "D": "S-V-O-C"
+      "B": "S-V-O-C",
+      "C": "S-V-C",
+      "D": "S-V"
     },
     "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
@@ -5078,11 +5083,11 @@ export const grammarQuestions = [
     "question": "Mr. Anderson needs advice from his supervisor.",
     "options": {
       "A": "S-V-O-C",
-      "B": "S-V-O",
-      "C": "S-V-C",
-      "D": "S-V"
+      "B": "S-V-C",
+      "C": "S-V",
+      "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "'needs' là ngoại động từ, cần có mục tiêu là 'advice' (lời khuyên) làm Tân ngữ. Cụm 'from his supervisor' chỉ là cụm giới từ đóng vai trò bổ trợ nguồn gốc chứ không thay đổi xương sống câu S-V-O.",
     "explanation_grammar": "S-V-O có thêm cụm giới từ làm phụ ngữ.",
@@ -5104,10 +5109,10 @@ export const grammarQuestions = [
     "id": "q0062",
     "question": "Most employees take part in the competition.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-C",
+      "A": "S-V-C",
+      "B": "S-V-O-C",
       "C": "S-V-O",
-      "D": "S-V-O-C"
+      "D": "S-V"
     },
     "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
@@ -5131,12 +5136,12 @@ export const grammarQuestions = [
     "id": "q0063",
     "question": "Ms. Bacon was a consultant at a hospital.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O-C",
-      "C": "S-V-O",
-      "D": "S-V"
+      "A": "S-V",
+      "B": "S-V-C",
+      "C": "S-V-O-C",
+      "D": "S-V-O"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "'was' là Linking verb liên kết chủ ngữ vọi định danh nghề nghiệp làm Complement (Bổ ngữ).",
     "explanation_grammar": "S-V-C với V là chuỗi Tobe chỉ định danh.",
@@ -5158,12 +5163,12 @@ export const grammarQuestions = [
     "id": "q0064",
     "question": "Candidates should meet the qualifications for the job.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-C",
-      "C": "S-V-O-C",
-      "D": "S-V-O"
+      "A": "S-V-O",
+      "B": "S-V",
+      "C": "S-V-C",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "'meet' mang nghĩa đáp ứng yêu cầu (ngoại động từ) đi kèm tân ngữ nhận tác động là 'qualifications' (các tiêu chuẩn). Theo sau là phần mở rộng.",
     "explanation_grammar": "S-V-O truyền thống.",
@@ -5185,10 +5190,10 @@ export const grammarQuestions = [
     "id": "q0065",
     "question": "Each participant is required to sign his or her application.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-O",
+      "A": "S-V-O",
+      "B": "S-V-C",
       "C": "S-V",
-      "D": "S-V-C"
+      "D": "S-V-O-C"
     },
     "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
@@ -5212,12 +5217,12 @@ export const grammarQuestions = [
     "id": "q0066",
     "question": "New employees will receive training for a week.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O-C",
-      "C": "S-V",
-      "D": "S-V-O"
+      "A": "S-V-O",
+      "B": "S-V",
+      "C": "S-V-C",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ (employees) thực thi hành động 'receive' lên đối tượng 'training' (S-V-O). Cụm chỉ thời gian là trạng ngữ phụ trợ.",
     "explanation_grammar": "S-V-O tiêu chuẩn.",
@@ -5237,18 +5242,18 @@ export const grammarQuestions = [
   },
   {
     "id": "q0067",
-    "question": "All staff attend a meeting on Mondays.",
+    "question": "All staff gather on Mondays.",
     "options": {
       "A": "S-V-O",
-      "B": "S-V-O-C",
-      "C": "S-V",
+      "B": "S-V",
+      "C": "S-V-O-C",
       "D": "S-V-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Động từ 'attend' (tham gia) gắn liền với đối tượng sự kiện 'a meeting' - tân ngữ đón nhận. Đây là mẫu S-V-O.",
+    "explanation_reason": "Chủ ngữ 'All staff' + Động từ 'gather'. Cụm giới từ 'on Mondays' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
     "explanation_grammar": "S-V-O cốt lõi.",
-    "translation": "Tất cả nhân viên tham gia cuộc họp vào thứ Hai.",
+    "translation": "Toàn thể nhân viên tập trung vào các ngày thứ Hai.",
     "core_vocabulary": [
       {
         "word": "staff",
@@ -5256,26 +5261,26 @@ export const grammarQuestions = [
         "meaning": "nhân viên"
       },
       {
-        "word": "meeting",
-        "type": "n.",
-        "meaning": "cuộc họp"
+        "word": "gather",
+        "type": "v.",
+        "meaning": "tập trung, tụ họp"
       }
     ]
   },
   {
     "id": "q0068",
-    "question": "Machines will arrive tomorrow.",
+    "question": "Machines will arrive by freight.",
     "options": {
-      "A": "S-V-O",
+      "A": "S-V",
       "B": "S-V-C",
       "C": "S-V-O-C",
-      "D": "S-V"
+      "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'Machines' + Động từ 'arrive'. 'tomorrow' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'Machines' + Động từ 'will arrive'. Cụm giới từ 'by freight' là trạng ngữ chỉ phương tiện, nên cấu trúc là S-V.",
     "explanation_grammar": "S-V là cấu trúc thuần có V là nội động từ tự nó trọn vẹn không cần ai hỗ trợ.",
-    "translation": "Máy móc sẽ đến vào ngày mai.",
+    "translation": "Máy móc sẽ được chuyển đến bằng đường vận tải hàng hoá.",
     "core_vocabulary": [
       {
         "word": "machine",
@@ -5283,9 +5288,9 @@ export const grammarQuestions = [
         "meaning": "máy móc"
       },
       {
-        "word": "arrive",
-        "type": "v.",
-        "meaning": "đến"
+        "word": "freight",
+        "type": "n.",
+        "meaning": "vận tải hàng hoá"
       }
     ]
   },
@@ -5293,12 +5298,12 @@ export const grammarQuestions = [
     "id": "q0069",
     "question": "The Web site provides advice for gardening.",
     "options": {
-      "A": "S-V-O",
+      "A": "S-V-O-C",
       "B": "S-V",
       "C": "S-V-C",
-      "D": "S-V-O-C"
+      "D": "S-V-O"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Ngoại động từ 'provides' tác động đến một thứ vật phẩm cung cấp là 'advice'. Tạo nên liên đới S-V-O.",
     "explanation_grammar": "S-V-O cơ bản truyền thống.",
@@ -5318,23 +5323,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q0070",
-    "question": "Power Gym installed new equipment.",
+    "question": "Power Gym named Mr. Diaz head trainer.",
     "options": {
       "A": "S-V-C",
       "B": "S-V-O-C",
       "C": "S-V-O",
       "D": "S-V"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "'installed' sinh ra một đích đến chịu tác động là bộ thiết bị điện mới (new equipment) đóng vai Object cho câu theo chuẩn S-V-O.",
+    "explanation_reason": "Chủ ngữ 'Power Gym' + Động từ 'named' + Tân ngữ 'Mr. Diaz' + Bổ ngữ tân ngữ 'head trainer'.",
     "explanation_grammar": "S-V-O là khung miêu tả một hành động thay đổi vật chủ thứ 2.",
-    "translation": "Trung tâm thể hình Power Gym đã lắp đặt thiết bị mới.",
+    "translation": "Power Gym đã bổ nhiệm ông Diaz làm huấn luyện viên trưởng.",
     "core_vocabulary": [
       {
-        "word": "equipment",
+        "word": "name",
+        "type": "v.",
+        "meaning": "bổ nhiệm, chỉ định"
+      },
+      {
+        "word": "trainer",
         "type": "n.",
-        "meaning": "thiết bị"
+        "meaning": "huấn luyện viên"
       }
     ]
   },
@@ -13087,12 +13097,12 @@ export const grammarQuestions = [
     "id": "q0536",
     "question": "The team analyzed the dataset.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-O",
-      "C": "S-V-C",
-      "D": "S-V"
+      "A": "S-V-C",
+      "B": "S-V",
+      "C": "S-V-O-C",
+      "D": "S-V-O"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The team' + Động từ 'analyzed' + Tân ngữ 'the dataset'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -13112,28 +13122,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q0537",
-    "question": "The construction stopped immediately.",
+    "question": "The construction stopped for safety reasons.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O-C",
+      "A": "S-V-O",
+      "B": "S-V-C",
       "C": "S-V",
-      "D": "S-V-O"
+      "D": "S-V-O-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The construction' + Động từ 'stopped'. 'immediately' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The construction' + Động từ 'stopped'. Cụm giới từ 'for safety reasons' là trạng ngữ chỉ lý do, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Công trình xây dựng đã dừng lại ngay lập tức.",
+    "translation": "Việc thi công đã dừng lại vì lý do an toàn.",
     "core_vocabulary": [
       {
         "word": "construction",
         "type": "n.",
-        "meaning": "việc xây dựng/công trình"
+        "meaning": "việc thi công"
       },
       {
-        "word": "immediately",
-        "type": "adv.",
-        "meaning": "ngay lập tức"
+        "word": "safety",
+        "type": "n.",
+        "meaning": "sự an toàn"
       }
     ]
   },
@@ -13169,9 +13179,9 @@ export const grammarQuestions = [
     "question": "The manager considered the project complete.",
     "options": {
       "A": "S-V-O-C",
-      "B": "S-V",
-      "C": "S-V-C",
-      "D": "S-V-O"
+      "B": "S-V-C",
+      "C": "S-V-O",
+      "D": "S-V"
     },
     "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
@@ -13195,9 +13205,9 @@ export const grammarQuestions = [
     "id": "q0540",
     "question": "The customs agent stamped the form.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V",
-      "C": "S-V-O-C",
+      "A": "S-V-O-C",
+      "B": "S-V-C",
+      "C": "S-V",
       "D": "S-V-O"
     },
     "correct_answer": "D",
@@ -13223,11 +13233,11 @@ export const grammarQuestions = [
     "question": "The inflation rate decreased.",
     "options": {
       "A": "S-V-O-C",
-      "B": "S-V-C",
-      "C": "S-V-O",
-      "D": "S-V"
+      "B": "S-V",
+      "C": "S-V-C",
+      "D": "S-V-O"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The inflation rate' + Động từ 'decreased'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -13249,9 +13259,9 @@ export const grammarQuestions = [
     "id": "q0542",
     "question": "The economic model seems flawed.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-O",
-      "C": "S-V",
+      "A": "S-V-O",
+      "B": "S-V",
+      "C": "S-V-O-C",
       "D": "S-V-C"
     },
     "correct_answer": "D",
@@ -13276,12 +13286,12 @@ export const grammarQuestions = [
     "id": "q0543",
     "question": "They appointed her chief economist.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-C",
-      "C": "S-V-O-C",
-      "D": "S-V-O"
+      "A": "S-V-O-C",
+      "B": "S-V-O",
+      "C": "S-V",
+      "D": "S-V-C"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'They' + Động từ 'appointed' + Tân ngữ 'her' + Bổ ngữ tân ngữ 'chief economist'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -13303,12 +13313,12 @@ export const grammarQuestions = [
     "id": "q0544",
     "question": "The software updated the records.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-O-C",
-      "C": "S-V-C",
-      "D": "S-V"
+      "A": "S-V-O-C",
+      "B": "S-V-C",
+      "C": "S-V",
+      "D": "S-V-O"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The software' + Động từ 'updated' + Tân ngữ 'the records'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -13331,9 +13341,9 @@ export const grammarQuestions = [
     "question": "The supply chain collapsed.",
     "options": {
       "A": "S-V",
-      "B": "S-V-C",
-      "C": "S-V-O",
-      "D": "S-V-O-C"
+      "B": "S-V-O",
+      "C": "S-V-O-C",
+      "D": "S-V-C"
     },
     "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
@@ -13357,12 +13367,12 @@ export const grammarQuestions = [
     "id": "q0546",
     "question": "The safety regulations look rigorous.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-O-C",
-      "C": "S-V",
-      "D": "S-V-C"
+      "A": "S-V",
+      "B": "S-V-C",
+      "C": "S-V-O",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The safety regulations' + Động từ nối 'look' + Bổ ngữ 'rigorous'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -13384,12 +13394,12 @@ export const grammarQuestions = [
     "id": "q0547",
     "question": "The delay made the investors nervous.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-C",
-      "C": "S-V-O-C",
+      "A": "S-V-O-C",
+      "B": "S-V",
+      "C": "S-V-C",
       "D": "S-V-O"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The delay' + Động từ 'made' + Tân ngữ 'the investors' + Bổ ngữ tân ngữ 'nervous'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -13416,10 +13426,10 @@ export const grammarQuestions = [
     "id": "q0548",
     "question": "The analyst optimized the query.",
     "options": {
-      "A": "S-V",
+      "A": "S-V-O-C",
       "B": "S-V-O",
-      "C": "S-V-O-C",
-      "D": "S-V-C"
+      "C": "S-V-C",
+      "D": "S-V"
     },
     "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
@@ -13441,18 +13451,18 @@ export const grammarQuestions = [
   },
   {
     "id": "q0549",
-    "question": "The application crashed unexpectedly.",
+    "question": "The application crashed during peak hours.",
     "options": {
-      "A": "S-V-C",
-      "B": "S-V-O-C",
-      "C": "S-V-O",
-      "D": "S-V"
+      "A": "S-V-O",
+      "B": "S-V-C",
+      "C": "S-V",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The application' + Động từ 'crashed'. 'unexpectedly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The application' + Động từ 'crashed'. Cụm giới từ 'during peak hours' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Ứng dụng đã bị treo đột ngột.",
+    "translation": "Ứng dụng đã bị sập trong giờ cao điểm.",
     "core_vocabulary": [
       {
         "word": "application",
@@ -13460,9 +13470,9 @@ export const grammarQuestions = [
         "meaning": "ứng dụng"
       },
       {
-        "word": "unexpectedly",
-        "type": "adv.",
-        "meaning": "một cách bất ngờ/đột ngột"
+        "word": "peak hours",
+        "type": "n.",
+        "meaning": "giờ cao điểm"
       }
     ]
   },
@@ -13502,12 +13512,12 @@ export const grammarQuestions = [
     "id": "q0551",
     "question": "The board named him lead developer.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-O",
-      "C": "S-V",
-      "D": "S-V-C"
+      "A": "S-V",
+      "B": "S-V-C",
+      "C": "S-V-O-C",
+      "D": "S-V-O"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The board' + Động từ 'named' + Tân ngữ 'him' + Bổ ngữ tân ngữ 'lead developer'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -13529,12 +13539,12 @@ export const grammarQuestions = [
     "id": "q0552",
     "question": "The architect revised the blueprint.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-O-C",
-      "C": "S-V-C",
-      "D": "S-V-O"
+      "A": "S-V-O",
+      "B": "S-V-C",
+      "C": "S-V",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The architect' + Động từ 'revised' + Tân ngữ 'the blueprint'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -13559,33 +13569,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q0553",
-    "question": "The negotiations concluded successfully.",
+    "question": "The negotiations concluded on Friday.",
     "options": {
       "A": "S-V-O",
       "B": "S-V-C",
       "C": "S-V-O-C",
       "D": "S-V"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Chủ ngữ 'The negotiations' + Động từ 'concluded'. 'successfully' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+    "explanation_reason": "Chủ ngữ 'The negotiations' + Động từ 'concluded'. Cụm giới từ 'on Friday' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
     "explanation_grammar": "Cấu trúc câu",
-    "translation": "Cuộc đàm phán đã kết thúc thành công.",
+    "translation": "Cuộc đàm phán đã kết thúc vào thứ Sáu.",
     "core_vocabulary": [
       {
         "word": "negotiation",
         "type": "n.",
-        "meaning": "sự đàm phán"
+        "meaning": "cuộc đàm phán"
       },
       {
         "word": "conclude",
         "type": "v.",
         "meaning": "kết thúc"
-      },
-      {
-        "word": "successfully",
-        "type": "adv.",
-        "meaning": "một cách thành công"
       }
     ]
   },
@@ -13593,10 +13598,10 @@ export const grammarQuestions = [
     "id": "q0554",
     "question": "The transport cost is high.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-O",
+      "A": "S-V-O",
+      "B": "S-V",
       "C": "S-V-C",
-      "D": "S-V"
+      "D": "S-V-O-C"
     },
     "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
@@ -13615,12 +13620,12 @@ export const grammarQuestions = [
     "id": "q0555",
     "question": "The team found the software intuitive.",
     "options": {
-      "A": "S-V",
-      "B": "S-V-O",
-      "C": "S-V-O-C",
-      "D": "S-V-C"
+      "A": "S-V-C",
+      "B": "S-V-O-C",
+      "C": "S-V",
+      "D": "S-V-O"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The team' + Động từ 'found' + Tân ngữ 'the software' + Bổ ngữ tân ngữ 'intuitive'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -13637,12 +13642,12 @@ export const grammarQuestions = [
     "id": "q0556",
     "question": "The contractor ordered the materials.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V-O-C",
-      "C": "S-V",
+      "A": "S-V-O-C",
+      "B": "S-V",
+      "C": "S-V-O",
       "D": "S-V-C"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The contractor' + Động từ 'ordered' + Tân ngữ 'the materials'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -13664,12 +13669,12 @@ export const grammarQuestions = [
     "id": "q0557",
     "question": "The new factory opened today.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V",
-      "C": "S-V-C",
-      "D": "S-V-O-C"
+      "A": "S-V",
+      "B": "S-V-C",
+      "C": "S-V-O-C",
+      "D": "S-V-O"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The new factory' + Động từ 'opened'. 'today' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
     "explanation_grammar": "Cấu trúc câu",
@@ -13691,12 +13696,12 @@ export const grammarQuestions = [
     "id": "q0558",
     "question": "The financial forecast sounds positive.",
     "options": {
-      "A": "S-V-O",
-      "B": "S-V",
-      "C": "S-V-O-C",
-      "D": "S-V-C"
+      "A": "S-V-O-C",
+      "B": "S-V-O",
+      "C": "S-V-C",
+      "D": "S-V"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The financial forecast' + Động từ nối 'sounds' + Bổ ngữ 'positive'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -13719,11 +13724,11 @@ export const grammarQuestions = [
     "question": "She kept the database secure.",
     "options": {
       "A": "S-V",
-      "B": "S-V-O-C",
-      "C": "S-V-O",
-      "D": "S-V-C"
+      "B": "S-V-O",
+      "C": "S-V-C",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'She' + Động từ 'kept' + Tân ngữ 'the database' + Bổ ngữ tân ngữ 'secure'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -13745,12 +13750,12 @@ export const grammarQuestions = [
     "id": "q0560",
     "question": "The manager scheduled the meeting.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-O",
-      "C": "S-V",
-      "D": "S-V-C"
+      "A": "S-V-O",
+      "B": "S-V",
+      "C": "S-V-C",
+      "D": "S-V-O-C"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Cấu trúc câu",
     "explanation_reason": "Chủ ngữ 'The manager' + Động từ 'scheduled' + Tân ngữ 'the meeting'.",
     "explanation_grammar": "Cấu trúc câu",
@@ -39051,12 +39056,12 @@ export const grammarQuestions = [
   "id": "q1531",
   "question": "Từ 'incentive' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Danh từ",
+    "A": "Danh từ",
+    "B": "Trạng từ",
     "C": "Động từ",
     "D": "Tính từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **incentive** kết thúc bằng đuôi **-ive**. Thông thường, đuôi **-ive** là dấu hiệu của **Tính từ** (như active, creative). Tuy nhiên, **incentive** (động lực) là một **ngoại lệ** phổ biến và đóng vai trò là một **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39071,89 +39076,89 @@ export const grammarQuestions = [
 },
   {
   "id": "q1532",
-  "question": "Từ 'alternative' thuộc từ loại gì?",
+  "question": "Từ 'promptly' thuộc từ loại gì?",
+  "options": {
+    "A": "Động từ",
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Danh từ"
+  },
+  "correct_answer": "C",
+  "grammar_type": "Nhận dạng hậu tố",
+  "explanation_reason": "Từ **promptly** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
+  "explanation_grammar": "Nhận dạng hậu tố từ loại",
+  "translation": "Từ 'promptly' (adv.) có nghĩa là: một cách nhanh chóng, kịp thời.",
+  "core_vocabulary": [
+    {
+      "word": "promptly",
+      "type": "adv.",
+      "meaning": "một cách nhanh chóng, kịp thời"
+    }
+  ]
+},
+  {
+  "id": "q1533",
+  "question": "Từ 'formerly' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
     "B": "Động từ",
     "C": "Tính từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **alternative** kết thúc bằng đuôi **-ive**. Thông thường, đuôi **-ive** là dấu hiệu của **Tính từ**. Tuy nhiên, **alternative** (sự thay thế) là một **ngoại lệ** rất hay gặp trong TOEIC và đóng vai trò là một **Danh từ**.",
+  "explanation_reason": "Từ **formerly** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'alternative' (n.) có nghĩa là: sự thay thế, phương án thay thế.",
+  "translation": "Từ 'formerly' (adv.) có nghĩa là: trước đây, trước kia.",
   "core_vocabulary": [
     {
-      "word": "alternative",
-      "type": "n.",
-      "meaning": "sự thay thế, phương án thay thế"
-    }
-  ]
-},
-  {
-  "id": "q1533",
-  "question": "Từ 'representative' thuộc từ loại gì?",
-  "options": {
-    "A": "Động từ",
-    "B": "Tính từ",
-    "C": "Danh từ",
-    "D": "Trạng từ"
-  },
-  "correct_answer": "C",
-  "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **representative** kết thúc bằng đuôi **-ive**. Thông thường, đuôi **-ive** là dấu hiệu của **Tính từ**. Tuy nhiên, **representative** (người đại diện) là một **ngoại lệ** chỉ người, đóng vai trò là một **Danh từ**.",
-  "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'representative' (n.) có nghĩa là: người đại diện.",
-  "core_vocabulary": [
-    {
-      "word": "representative",
-      "type": "n.",
-      "meaning": "người đại diện"
+      "word": "formerly",
+      "type": "adv.",
+      "meaning": "trước đây, trước kia"
     }
   ]
 },
   {
   "id": "q1534",
-  "question": "Từ 'perspective' thuộc từ loại gì?",
+  "question": "Từ 'respectively' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Động từ",
+    "A": "Động từ",
+    "B": "Trạng từ",
     "C": "Danh từ",
     "D": "Tính từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **perspective** kết thúc bằng đuôi **-ive**. Mặc dù đuôi **-ive** thường là của **Tính từ**, **perspective** (góc nhìn/quan điểm) lại là một **Danh từ ngoại lệ**.",
+  "explanation_reason": "Từ **respectively** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'perspective' (n.) có nghĩa là: góc nhìn, quan điểm.",
+  "translation": "Từ 'respectively' (adv.) có nghĩa là: lần lượt, theo thứ tự.",
   "core_vocabulary": [
     {
-      "word": "perspective",
-      "type": "n.",
-      "meaning": "góc nhìn, quan điểm"
+      "word": "respectively",
+      "type": "adv.",
+      "meaning": "lần lượt, theo thứ tự"
     }
   ]
 },
   {
   "id": "q1535",
-  "question": "Từ 'objective' thuộc từ loại gì?",
+  "question": "Từ 'primarily' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
-    "B": "Danh từ",
+    "A": "Danh từ",
+    "B": "Động từ",
     "C": "Trạng từ",
-    "D": "Động từ"
+    "D": "Tính từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **objective** kết thúc bằng đuôi **-ive**. Dù đuôi **-ive** thường đi với **Tính từ**, nhưng **objective** mang nghĩa 'mục tiêu' là một **Danh từ ngoại lệ** cần đặc biệt ghi nhớ.",
+  "explanation_reason": "Từ **primarily** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'objective' (n.) có nghĩa là: mục tiêu.",
+  "translation": "Từ 'primarily' (adv.) có nghĩa là: chủ yếu.",
   "core_vocabulary": [
     {
-      "word": "objective",
-      "type": "n.",
-      "meaning": "mục tiêu"
+      "word": "primarily",
+      "type": "adv.",
+      "meaning": "chủ yếu"
     }
   ]
 },
@@ -39161,12 +39166,12 @@ export const grammarQuestions = [
   "id": "q1536",
   "question": "Từ 'proposal' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Tính từ",
-    "C": "Danh từ",
-    "D": "Trạng từ"
+    "A": "Danh từ",
+    "B": "Trạng từ",
+    "C": "Động từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **proposal** kết thúc bằng đuôi **-al**. Mặc dù **-al** thường là đuôi của Tính từ (như natural, national), nhưng khi thêm vào sau động từ (propose + al) nó tạo thành **Danh từ** chỉ sự việc (bản đề xuất).",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39203,23 +39208,23 @@ export const grammarQuestions = [
 },
   {
   "id": "q1538",
-  "question": "Từ 'professional' thuộc từ loại gì?",
+  "question": "Từ 'initially' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Động từ",
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **professional** kết thúc bằng đuôi **-al**. Tuy **-al** thường là đuôi của Tính từ, nhưng **professional** (chuyên gia) là một **Danh từ ngoại lệ** dùng để chỉ người.",
+  "explanation_reason": "Từ **initially** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'professional' (n.) có nghĩa là: chuyên gia.",
+  "translation": "Từ 'initially' (adv.) có nghĩa là: ban đầu.",
   "core_vocabulary": [
     {
-      "word": "professional",
-      "type": "n.",
-      "meaning": "chuyên gia"
+      "word": "initially",
+      "type": "adv.",
+      "meaning": "ban đầu"
     }
   ]
 },
@@ -39227,12 +39232,12 @@ export const grammarQuestions = [
   "id": "q1539",
   "question": "Từ 'potential' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Danh từ"
+    "A": "Tính từ",
+    "B": "Danh từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **potential** kết thúc bằng đuôi **-al**. Đuôi **-al** thường là Tính từ, nhưng **potential** có thể vừa là tính từ vừa là **Danh từ** (tiềm năng). Trong bối cảnh câu hỏi này, nó được nhấn mạnh ở vai trò Danh từ.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39247,23 +39252,23 @@ export const grammarQuestions = [
 },
   {
   "id": "q1540",
-  "question": "Từ 'characteristic' thuộc từ loại gì?",
+  "question": "Từ 'temporarily' thuộc từ loại gì?",
   "options": {
     "A": "Động từ",
     "B": "Danh từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "C": "Trạng từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **characteristic** kết thúc bằng đuôi **-ic**. Đuôi **-ic** thường là dấu hiệu của **Tính từ** (như economic, historic). Tuy nhiên, **characteristic** (đặc điểm) lại là một **Danh từ ngoại lệ**.",
+  "explanation_reason": "Từ **temporarily** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'characteristic' (n.) có nghĩa là: đặc điểm.",
+  "translation": "Từ 'temporarily' (adv.) có nghĩa là: tạm thời.",
   "core_vocabulary": [
     {
-      "word": "characteristic",
-      "type": "n.",
-      "meaning": "đặc điểm"
+      "word": "temporarily",
+      "type": "adv.",
+      "meaning": "tạm thời"
     }
   ]
 },
@@ -39271,12 +39276,12 @@ export const grammarQuestions = [
   "id": "q1541",
   "question": "Từ 'implementation' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Tính từ",
-    "C": "Động từ",
-    "D": "Trạng từ"
+    "A": "Động từ",
+    "B": "Trạng từ",
+    "C": "Tính từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **implementation** kết thúc bằng đuôi **-tion**. Đây là một hậu tố vô cùng phổ biến, luôn luôn dùng để nhận biết một **Danh từ** chỉ hành động hoặc trạng thái (sự thực thi).",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39293,10 +39298,10 @@ export const grammarQuestions = [
   "id": "q1542",
   "question": "Từ 'analytical' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Trạng từ",
+    "A": "Động từ",
+    "B": "Danh từ",
     "C": "Tính từ",
-    "D": "Động từ"
+    "D": "Trạng từ"
   },
   "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
@@ -39316,11 +39321,11 @@ export const grammarQuestions = [
   "question": "Từ 'diversify' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
-    "B": "Tính từ",
-    "C": "Trạng từ",
-    "D": "Động từ"
+    "B": "Động từ",
+    "C": "Tính từ",
+    "D": "Trạng từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **diversify** kết thúc bằng đuôi **-ify**. Hậu tố **-ify** là một trong những dấu hiệu phổ biến nhất để nhận biết **Động từ** (ví dụ khác: clarify, simplify).",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39337,12 +39342,12 @@ export const grammarQuestions = [
   "id": "q1544",
   "question": "Từ 'strategic' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
-    "B": "Trạng từ",
-    "C": "Danh từ",
-    "D": "Động từ"
+    "A": "Danh từ",
+    "B": "Động từ",
+    "C": "Trạng từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **strategic** kết thúc bằng đuôi **-ic**. Đây là hậu tố rất phổ biến của **Tính từ** (ví dụ khác: economic, historic).",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39357,67 +39362,67 @@ export const grammarQuestions = [
 },
   {
   "id": "q1545",
-  "question": "Từ 'sustainability' thuộc từ loại gì?",
+  "question": "Từ 'subsequently' thuộc từ loại gì?",
   "options": {
     "A": "Trạng từ",
-    "B": "Tính từ",
-    "C": "Danh từ",
-    "D": "Động từ"
+    "B": "Động từ",
+    "C": "Tính từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **sustainability** kết thúc bằng đuôi **-ity**. Hậu tố **-ity** luôn luôn là dấu hiệu để nhận diện một **Danh từ** trừu tượng (chỉ tính chất, trạng thái).",
+  "explanation_reason": "Từ **subsequently** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'sustainability' (n.) có nghĩa là: sự bền vững.",
+  "translation": "Từ 'subsequently' (adv.) có nghĩa là: sau đó.",
   "core_vocabulary": [
     {
-      "word": "sustainability",
-      "type": "n.",
-      "meaning": "sự bền vững"
+      "word": "subsequently",
+      "type": "adv.",
+      "meaning": "sau đó"
     }
   ]
 },
   {
   "id": "q1546",
-  "question": "Từ 'optimization' thuộc từ loại gì?",
+  "question": "Từ 'prioritize' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
     "B": "Động từ",
     "C": "Tính từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **optimization** kết thúc bằng đuôi **-tion**. Hậu tố **-tion** là dấu hiệu đặc trưng và phổ biến nhất của **Danh từ**.",
+  "explanation_reason": "Từ **prioritize** kết thúc bằng đuôi **-ize**, là dấu hiệu điển hình của **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'optimization' (n.) có nghĩa là: sự tối ưu hóa.",
+  "translation": "Từ 'prioritize' (v.) có nghĩa là: ưu tiên, xếp thứ tự ưu tiên.",
   "core_vocabulary": [
     {
-      "word": "optimization",
-      "type": "n.",
-      "meaning": "sự tối ưu hóa"
+      "word": "prioritize",
+      "type": "v.",
+      "meaning": "ưu tiên, xếp thứ tự ưu tiên"
     }
   ]
 },
   {
   "id": "q1547",
-  "question": "Từ 'authorization' thuộc từ loại gì?",
+  "question": "Từ 'authenticate' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
+    "A": "Động từ",
     "B": "Trạng từ",
     "C": "Danh từ",
-    "D": "Động từ"
+    "D": "Tính từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **authorization** kết thúc bằng đuôi **-tion**. Hậu tố **-tion** là dấu hiệu nhận biết tiêu chuẩn của **Danh từ**.",
+  "explanation_reason": "Từ **authenticate** kết thúc bằng đuôi **-ate**, là dấu hiệu điển hình của **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'authorization' (n.) có nghĩa là: sự ủy quyền, sự cho phép.",
+  "translation": "Từ 'authenticate' (v.) có nghĩa là: xác thực.",
   "core_vocabulary": [
     {
-      "word": "authorization",
-      "type": "n.",
-      "meaning": "sự ủy quyền, sự cho phép"
+      "word": "authenticate",
+      "type": "v.",
+      "meaning": "xác thực"
     }
   ]
 },
@@ -39425,10 +39430,10 @@ export const grammarQuestions = [
   "id": "q1548",
   "question": "Từ 'collaborate' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Tính từ",
+    "A": "Trạng từ",
+    "B": "Danh từ",
     "C": "Động từ",
-    "D": "Trạng từ"
+    "D": "Tính từ"
   },
   "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
@@ -39447,12 +39452,12 @@ export const grammarQuestions = [
   "id": "q1549",
   "question": "Từ 'comprehensive' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
-    "B": "Danh từ",
-    "C": "Động từ",
-    "D": "Trạng từ"
+    "A": "Danh từ",
+    "B": "Động từ",
+    "C": "Trạng từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **comprehensive** kết thúc bằng đuôi **-ive**. Đây là hậu tố đặc trưng và cực kỳ phổ biến của **Tính từ** (chỉ tính chất toàn diện).",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39467,23 +39472,23 @@ export const grammarQuestions = [
 },
   {
   "id": "q1550",
-  "question": "Từ 'reliability' thuộc từ loại gì?",
+  "question": "Từ 'designate' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Danh từ",
+    "A": "Danh từ",
+    "B": "Động từ",
     "C": "Tính từ",
-    "D": "Động từ"
+    "D": "Trạng từ"
   },
   "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **reliability** kết thúc bằng đuôi **-ity**. Hậu tố **-ity** là dấu hiệu chuẩn xác của **Danh từ** trừu tượng.",
+  "explanation_reason": "Từ **designate** kết thúc bằng đuôi **-ate**, là dấu hiệu điển hình của **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'reliability' (n.) có nghĩa là: sự đáng tin cậy.",
+  "translation": "Từ 'designate' (v.) có nghĩa là: chỉ định, bổ nhiệm.",
   "core_vocabulary": [
     {
-      "word": "reliability",
-      "type": "n.",
-      "meaning": "sự đáng tin cậy"
+      "word": "designate",
+      "type": "v.",
+      "meaning": "chỉ định, bổ nhiệm"
     }
   ]
 },
@@ -39491,9 +39496,9 @@ export const grammarQuestions = [
   "id": "q1551",
   "question": "Từ 'innovative' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Trạng từ",
-    "C": "Danh từ",
+    "A": "Danh từ",
+    "B": "Động từ",
+    "C": "Trạng từ",
     "D": "Tính từ"
   },
   "correct_answer": "D",
@@ -39533,23 +39538,23 @@ export const grammarQuestions = [
 },
   {
   "id": "q1553",
-  "question": "Từ 'negotiation' thuộc từ loại gì?",
+  "question": "Từ 'feasible' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Tính từ",
-    "C": "Danh từ",
-    "D": "Trạng từ"
+    "A": "Danh từ",
+    "B": "Trạng từ",
+    "C": "Động từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **negotiation** kết thúc bằng đuôi **-tion**. Đây là hậu tố cơ bản để nhận biết **Danh từ**.",
+  "explanation_reason": "Từ **feasible** kết thúc bằng đuôi **-ible**, là dấu hiệu điển hình của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'negotiation' (n.) có nghĩa là: sự đàm phán.",
+  "translation": "Từ 'feasible' (adj.) có nghĩa là: khả thi.",
   "core_vocabulary": [
     {
-      "word": "negotiation",
-      "type": "n.",
-      "meaning": "sự đàm phán"
+      "word": "feasible",
+      "type": "adj.",
+      "meaning": "khả thi"
     }
   ]
 },
@@ -39557,12 +39562,12 @@ export const grammarQuestions = [
   "id": "q1554",
   "question": "Từ 'procedure' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
-    "B": "Trạng từ",
-    "C": "Động từ",
-    "D": "Danh từ"
+    "A": "Động từ",
+    "B": "Danh từ",
+    "C": "Tính từ",
+    "D": "Trạng từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **procedure** kết thúc bằng đuôi **-ure**. Đuôi **-ure** là một hậu tố khá thông dụng của **Danh từ** (chỉ quy trình, thủ tục).",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39577,23 +39582,23 @@ export const grammarQuestions = [
 },
   {
   "id": "q1555",
-  "question": "Từ 'qualification' thuộc từ loại gì?",
+  "question": "Từ 'negotiable' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
     "B": "Động từ",
     "C": "Tính từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **qualification** kết thúc bằng đuôi **-tion**. Hậu tố **-tion** luôn luôn là dấu hiệu của **Danh từ**.",
+  "explanation_reason": "Từ **negotiable** kết thúc bằng đuôi **-able**, là dấu hiệu điển hình của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'qualification' (n.) có nghĩa là: trình độ, bằng cấp.",
+  "translation": "Từ 'negotiable' (adj.) có nghĩa là: có thể thương lượng.",
   "core_vocabulary": [
     {
-      "word": "qualification",
-      "type": "n.",
-      "meaning": "trình độ, bằng cấp"
+      "word": "negotiable",
+      "type": "adj.",
+      "meaning": "có thể thương lượng"
     }
   ]
 },
@@ -39601,12 +39606,12 @@ export const grammarQuestions = [
   "id": "q1556",
   "question": "Từ 'recognize' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
+    "A": "Động từ",
     "B": "Tính từ",
-    "C": "Động từ",
-    "D": "Trạng từ"
+    "C": "Trạng từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **recognize** kết thúc bằng đuôi **-ize**. Đuôi **-ize** (hoặc **-ise** trong Anh-Anh) là hậu tố cực kỳ phổ biến để tạo thành **Động từ** (ví dụ: organize, realize).",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39623,12 +39628,12 @@ export const grammarQuestions = [
   "id": "q1557",
   "question": "Từ 'substantial' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
+    "A": "Động từ",
     "B": "Trạng từ",
     "C": "Danh từ",
-    "D": "Động từ"
+    "D": "Tính từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **substantial** kết thúc bằng đuôi **-al**. Đây là một hậu tố chuẩn để nhận diện **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39643,23 +39648,23 @@ export const grammarQuestions = [
 },
   {
   "id": "q1558",
-  "question": "Từ 'termination' thuộc từ loại gì?",
+  "question": "Từ 'profitable' thuộc từ loại gì?",
   "options": {
     "A": "Trạng từ",
     "B": "Danh từ",
     "C": "Tính từ",
     "D": "Động từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **termination** kết thúc bằng đuôi **-tion**. Đuôi **-tion** là đặc trưng cơ bản của **Danh từ**.",
+  "explanation_reason": "Từ **profitable** kết thúc bằng đuôi **-able**, là dấu hiệu điển hình của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'termination' (n.) có nghĩa là: sự chấm dứt.",
+  "translation": "Từ 'profitable' (adj.) có nghĩa là: sinh lời, có lãi.",
   "core_vocabulary": [
     {
-      "word": "termination",
-      "type": "n.",
-      "meaning": "sự chấm dứt"
+      "word": "profitable",
+      "type": "adj.",
+      "meaning": "sinh lời, có lãi"
     }
   ]
 },
@@ -39667,12 +39672,12 @@ export const grammarQuestions = [
   "id": "q1559",
   "question": "Từ 'utilize' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Động từ",
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **utilize** kết thúc bằng đuôi **-ize**. Đuôi **-ize** là dấu hiệu phổ biến của **Động từ** mang ý nghĩa 'làm cho/ biến thành'.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39689,12 +39694,12 @@ export const grammarQuestions = [
   "id": "q1560",
   "question": "Từ 'withdrawal' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
+    "A": "Trạng từ",
     "B": "Tính từ",
     "C": "Động từ",
-    "D": "Trạng từ"
+    "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **withdrawal** kết thúc bằng đuôi **-al**. Mặc dù **-al** thường tạo Tính từ, nhưng khi kết hợp với động từ (withdraw + al), nó tạo ra một **Danh từ** ngoại lệ chỉ hành động.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39712,10 +39717,10 @@ export const grammarQuestions = [
   "id": "q1561",
   "question": "Từ 'cumulative' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Danh từ",
+    "A": "Danh từ",
+    "B": "Động từ",
     "C": "Tính từ",
-    "D": "Động từ"
+    "D": "Trạng từ"
   },
   "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
@@ -39734,12 +39739,12 @@ export const grammarQuestions = [
   "id": "q1562",
   "question": "Từ 'notify' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Danh từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Trạng từ",
+    "B": "Động từ",
+    "C": "Danh từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **notify** kết thúc bằng đuôi **-ify**. Hậu tố **-ify** là một trong những dấu hiệu nhận biết tiêu chuẩn của **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39754,23 +39759,23 @@ export const grammarQuestions = [
 },
   {
   "id": "q1563",
-  "question": "Từ 'occurrence' thuộc từ loại gì?",
+  "question": "Từ 'reputable' thuộc từ loại gì?",
   "options": {
     "A": "Tính từ",
     "B": "Danh từ",
     "C": "Trạng từ",
     "D": "Động từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **occurrence** kết thúc bằng đuôi **-ence**. Đuôi **-ence** (và -ance) là các dấu hiệu đặc trưng để nhận diện **Danh từ**.",
+  "explanation_reason": "Từ **reputable** kết thúc bằng đuôi **-able**, là dấu hiệu điển hình của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'occurrence' (n.) có nghĩa là: sự việc, sự xuất hiện.",
+  "translation": "Từ 'reputable' (adj.) có nghĩa là: có uy tín.",
   "core_vocabulary": [
     {
-      "word": "occurrence",
-      "type": "n.",
-      "meaning": "sự việc, sự xuất hiện"
+      "word": "reputable",
+      "type": "adj.",
+      "meaning": "có uy tín"
     }
   ]
 },
@@ -39778,12 +39783,12 @@ export const grammarQuestions = [
   "id": "q1564",
   "question": "Từ 'precisely' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Tính từ",
-    "C": "Danh từ",
-    "D": "Động từ"
+    "A": "Danh từ",
+    "B": "Động từ",
+    "C": "Tính từ",
+    "D": "Trạng từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **precisely** kết thúc bằng đuôi **-ly**. Đuôi **-ly** là dấu hiệu nhận biết phổ biến nhất của **Trạng từ** (được cấu tạo từ Tính từ + ly).",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39800,10 +39805,10 @@ export const grammarQuestions = [
   "id": "q1565",
   "question": "Từ 'renewal' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
+    "A": "Trạng từ",
     "B": "Danh từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "C": "Động từ",
+    "D": "Tính từ"
   },
   "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
@@ -39822,12 +39827,12 @@ export const grammarQuestions = [
   "id": "q1566",
   "question": "Từ 'indicative' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
-    "B": "Động từ",
-    "C": "Trạng từ",
+    "A": "Động từ",
+    "B": "Trạng từ",
+    "C": "Tính từ",
     "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **indicative** kết thúc bằng đuôi **-ive**. Đây là dấu hiệu cơ bản để nhận biết một **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39844,12 +39849,12 @@ export const grammarQuestions = [
   "id": "q1567",
   "question": "Từ 'facilitate' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Danh từ",
+    "A": "Danh từ",
+    "B": "Động từ",
     "C": "Tính từ",
-    "D": "Động từ"
+    "D": "Trạng từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **facilitate** kết thúc bằng đuôi **-ate**. Trong tiếng Anh, **-ate** thường được dùng để cấu tạo nên **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39866,12 +39871,12 @@ export const grammarQuestions = [
   "id": "q1568",
   "question": "Từ 'complexity' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Tính từ",
-    "C": "Danh từ",
-    "D": "Trạng từ"
+    "A": "Danh từ",
+    "B": "Trạng từ",
+    "C": "Động từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **complexity** kết thúc bằng đuôi **-ity**. Hậu tố **-ity** luôn luôn là dấu hiệu để nhận biết một **Danh từ** trừu tượng.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39888,12 +39893,12 @@ export const grammarQuestions = [
   "id": "q1569",
   "question": "Từ 'thoroughly' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Động từ",
+    "A": "Động từ",
+    "B": "Trạng từ",
     "C": "Tính từ",
     "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **thoroughly** kết thúc bằng đuôi **-ly**. Hậu tố **-ly** đặc trưng cho **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39910,12 +39915,12 @@ export const grammarQuestions = [
   "id": "q1570",
   "question": "Từ 'informative' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Tính từ",
-    "C": "Danh từ",
-    "D": "Động từ"
+    "A": "Danh từ",
+    "B": "Động từ",
+    "C": "Tính từ",
+    "D": "Trạng từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **informative** kết thúc bằng đuôi **-ive**. Đây là dấu hiệu thường gặp của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39932,12 +39937,12 @@ export const grammarQuestions = [
   "id": "q1571",
   "question": "Từ 'negotiate' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Tính từ",
-    "C": "Trạng từ",
-    "D": "Động từ"
+    "A": "Trạng từ",
+    "B": "Động từ",
+    "C": "Danh từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **negotiate** kết thúc bằng đuôi **-ate**. Hậu tố **-ate** là dấu hiệu nhận biết của **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39955,11 +39960,11 @@ export const grammarQuestions = [
   "question": "Từ 'attendance' thuộc từ loại gì?",
   "options": {
     "A": "Tính từ",
-    "B": "Danh từ",
-    "C": "Trạng từ",
-    "D": "Động từ"
+    "B": "Trạng từ",
+    "C": "Động từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **attendance** kết thúc bằng đuôi **-ance**. Cùng với -ence, đuôi **-ance** là dấu hiệu nhận biết của **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39976,12 +39981,12 @@ export const grammarQuestions = [
   "id": "q1573",
   "question": "Từ 'efficiently' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
+    "A": "Trạng từ",
     "B": "Danh từ",
     "C": "Động từ",
-    "D": "Trạng từ"
+    "D": "Tính từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **efficiently** kết thúc bằng đuôi **-ly**. Đây là cách cấu tạo chuẩn của một **Trạng từ** (efficient + ly).",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -39998,12 +40003,12 @@ export const grammarQuestions = [
   "id": "q1574",
   "question": "Từ 'accessible' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Tính từ",
-    "C": "Động từ",
-    "D": "Trạng từ"
+    "A": "Trạng từ",
+    "B": "Danh từ",
+    "C": "Tính từ",
+    "D": "Động từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **accessible** kết thúc bằng đuôi **-ible** (hoặc -able). Đây là hậu tố rất quen thuộc dùng để cấu tạo **Tính từ** mang nghĩa 'có thể làm gì đó'.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40020,12 +40025,12 @@ export const grammarQuestions = [
   "id": "q1575",
   "question": "Từ 'clarify' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
-    "B": "Trạng từ",
-    "C": "Động từ",
+    "A": "Động từ",
+    "B": "Tính từ",
+    "C": "Trạng từ",
     "D": "Danh từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **clarify** kết thúc bằng đuôi **-ify**. Hậu tố **-ify** là một dấu hiệu điển hình để nhận biết **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40042,12 +40047,12 @@ export const grammarQuestions = [
   "id": "q1576",
   "question": "Từ 'persistence' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Danh từ",
-    "C": "Động từ",
-    "D": "Tính từ"
+    "A": "Động từ",
+    "B": "Tính từ",
+    "C": "Danh từ",
+    "D": "Trạng từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **persistence** kết thúc bằng đuôi **-ence**. Đuôi **-ence** dùng để cấu tạo **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40064,12 +40069,12 @@ export const grammarQuestions = [
   "id": "q1577",
   "question": "Từ 'comparatively' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Trạng từ",
-    "D": "Tính từ"
+    "A": "Tính từ",
+    "B": "Danh từ",
+    "C": "Động từ",
+    "D": "Trạng từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **comparatively** kết thúc bằng đuôi **-ly**. Đuôi **-ly** là dấu hiệu nhận diện của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40087,11 +40092,11 @@ export const grammarQuestions = [
   "question": "Từ 'preliminary' thuộc từ loại gì?",
   "options": {
     "A": "Động từ",
-    "B": "Tính từ",
-    "C": "Trạng từ",
+    "B": "Trạng từ",
+    "C": "Tính từ",
     "D": "Danh từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **preliminary** kết thúc bằng đuôi **-ary**. Đuôi **-ary** thường là dấu hiệu của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40109,9 +40114,9 @@ export const grammarQuestions = [
   "question": "Từ 'modernize' thuộc từ loại gì?",
   "options": {
     "A": "Động từ",
-    "B": "Trạng từ",
-    "C": "Danh từ",
-    "D": "Tính từ"
+    "B": "Danh từ",
+    "C": "Tính từ",
+    "D": "Trạng từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
@@ -40130,12 +40135,12 @@ export const grammarQuestions = [
   "id": "q1580",
   "question": "Từ 'expenditure' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Tính từ",
-    "C": "Trạng từ",
-    "D": "Danh từ"
+    "A": "Trạng từ",
+    "B": "Danh từ",
+    "C": "Động từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **expenditure** kết thúc bằng đuôi **-ure**. Đuôi **-ure** là dấu hiệu nhận diện thông dụng của một **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40154,10 +40159,10 @@ export const grammarQuestions = [
   "options": {
     "A": "Động từ",
     "B": "Tính từ",
-    "C": "Trạng từ",
-    "D": "Danh từ"
+    "C": "Danh từ",
+    "D": "Trạng từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **effectively** kết thúc bằng đuôi **-ly**, đặc trưng cho một **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40175,9 +40180,9 @@ export const grammarQuestions = [
   "question": "Từ 'preventative' thuộc từ loại gì?",
   "options": {
     "A": "Tính từ",
-    "B": "Trạng từ",
-    "C": "Danh từ",
-    "D": "Động từ"
+    "B": "Danh từ",
+    "C": "Động từ",
+    "D": "Trạng từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
@@ -40196,12 +40201,12 @@ export const grammarQuestions = [
   "id": "q1583",
   "question": "Từ 'simplify' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Tính từ",
-    "C": "Động từ",
-    "D": "Trạng từ"
+    "A": "Trạng từ",
+    "B": "Động từ",
+    "C": "Danh từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **simplify** kết thúc bằng đuôi **-ify**, một dấu hiệu nhận biết chuẩn của **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40218,12 +40223,12 @@ export const grammarQuestions = [
   "id": "q1584",
   "question": "Từ 'redundancy' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Tính từ",
-    "C": "Trạng từ",
-    "D": "Động từ"
+    "A": "Tính từ",
+    "B": "Trạng từ",
+    "C": "Động từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **redundancy** kết thúc bằng đuôi **-cy**. Các từ có đuôi -cy (hoặc -ce) thường là **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40240,12 +40245,12 @@ export const grammarQuestions = [
   "id": "q1585",
   "question": "Từ 'exclusively' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
-    "B": "Trạng từ",
-    "C": "Danh từ",
-    "D": "Động từ"
+    "A": "Danh từ",
+    "B": "Động từ",
+    "C": "Trạng từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **exclusively** kết thúc bằng đuôi **-ly**, đây là cách nhận biết phổ biến của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40262,12 +40267,12 @@ export const grammarQuestions = [
   "id": "q1586",
   "question": "Từ 'responsive' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Trạng từ",
-    "D": "Tính từ"
+    "A": "Tính từ",
+    "B": "Trạng từ",
+    "C": "Danh từ",
+    "D": "Động từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **responsive** kết thúc bằng đuôi **-ive**, dấu hiệu đặc trưng của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40284,12 +40289,12 @@ export const grammarQuestions = [
   "id": "q1587",
   "question": "Từ 'demonstrate' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Tính từ",
+    "A": "Tính từ",
+    "B": "Động từ",
     "C": "Trạng từ",
     "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **demonstrate** kết thúc bằng đuôi **-ate**. Hậu tố **-ate** thường được dùng để tạo thành **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40306,9 +40311,9 @@ export const grammarQuestions = [
   "id": "q1588",
   "question": "Từ 'relevance' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Động từ",
-    "C": "Tính từ",
+    "A": "Động từ",
+    "B": "Tính từ",
+    "C": "Trạng từ",
     "D": "Danh từ"
   },
   "correct_answer": "D",
@@ -40328,10 +40333,10 @@ export const grammarQuestions = [
   "id": "q1589",
   "question": "Từ 'adequately' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
+    "A": "Tính từ",
+    "B": "Danh từ",
     "C": "Trạng từ",
-    "D": "Tính từ"
+    "D": "Động từ"
   },
   "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
@@ -40371,89 +40376,89 @@ export const grammarQuestions = [
 ,
   {
   "id": "q1591",
-  "question": "Từ 'appraisal' thuộc từ loại gì?",
+  "question": "Từ 'considerably' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Tính từ",
-    "C": "Danh từ",
-    "D": "Trạng từ"
+    "A": "Danh từ",
+    "B": "Trạng từ",
+    "C": "Động từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **appraisal** kết thúc bằng đuôi **-al**. Mặc dù **-al** thường dùng cho Tính từ, nhưng khi ghép sau động từ (appraise + al), nó tạo thành một **Danh từ ngoại lệ** chỉ hành động.",
+  "explanation_reason": "Từ **considerably** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'appraisal' (n.) có nghĩa là: sự đánh giá.",
+  "translation": "Từ 'considerably' (adv.) có nghĩa là: một cách đáng kể.",
   "core_vocabulary": [
     {
-      "word": "appraisal",
-      "type": "n.",
-      "meaning": "sự đánh giá"
+      "word": "considerably",
+      "type": "adv.",
+      "meaning": "một cách đáng kể"
     }
   ]
 },
   {
   "id": "q1592",
-  "question": "Từ 'terminal' thuộc từ loại gì?",
+  "question": "Từ 'significantly' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
     "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "C": "Trạng từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **terminal** kết thúc bằng đuôi **-al**. Đây là một **Danh từ ngoại lệ** quen thuộc (thay vì là tính từ như bình thường).",
+  "explanation_reason": "Từ **significantly** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'terminal' (n.) có nghĩa là: nhà ga, thiết bị đầu cuối.",
+  "translation": "Từ 'significantly' (adv.) có nghĩa là: một cách đáng kể, rõ rệt.",
   "core_vocabulary": [
     {
-      "word": "terminal",
-      "type": "n.",
-      "meaning": "nhà ga, thiết bị đầu cuối"
+      "word": "significantly",
+      "type": "adv.",
+      "meaning": "một cách đáng kể, rõ rệt"
     }
   ]
 },
   {
   "id": "q1593",
-  "question": "Từ 'disposal' thuộc từ loại gì?",
+  "question": "Từ 'approximately' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Danh từ",
-    "C": "Tính từ",
+    "A": "Danh từ",
+    "B": "Tính từ",
+    "C": "Động từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **disposal** kết thúc bằng đuôi **-al**. Được cấu tạo từ động từ dispose + al, đây là một **Danh từ ngoại lệ** chỉ sự việc/hành động.",
+  "explanation_reason": "Từ **approximately** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'disposal' (n.) có nghĩa là: sự vứt bỏ.",
+  "translation": "Từ 'approximately' (adv.) có nghĩa là: khoảng chừng, xấp xỉ.",
   "core_vocabulary": [
     {
-      "word": "disposal",
-      "type": "n.",
-      "meaning": "sự vứt bỏ"
+      "word": "approximately",
+      "type": "adv.",
+      "meaning": "khoảng chừng, xấp xỉ"
     }
   ]
 },
   {
   "id": "q1594",
-  "question": "Từ 'directive' thuộc từ loại gì?",
+  "question": "Từ 'particularly' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Tính từ",
+    "B": "Trạng từ",
+    "C": "Danh từ",
+    "D": "Động từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **directive** kết thúc bằng đuôi **-ive**. Đuôi **-ive** thường là của Tính từ, nhưng **directive** lại là một **Danh từ ngoại lệ** mang nghĩa 'chỉ thị'.",
+  "explanation_reason": "Từ **particularly** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'directive' (n.) có nghĩa là: chỉ thị.",
+  "translation": "Từ 'particularly' (adv.) có nghĩa là: đặc biệt là.",
   "core_vocabulary": [
     {
-      "word": "directive",
-      "type": "n.",
-      "meaning": "chỉ thị"
+      "word": "particularly",
+      "type": "adv.",
+      "meaning": "đặc biệt là"
     }
   ]
 },
@@ -40481,45 +40486,45 @@ export const grammarQuestions = [
 },
   {
   "id": "q1596",
-  "question": "Từ 'shortage' thuộc từ loại gì?",
+  "question": "Từ 'gradually' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
+    "A": "Động từ",
+    "B": "Trạng từ",
     "C": "Tính từ",
-    "D": "Trạng từ"
+    "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **shortage** kết thúc bằng đuôi **-age**. Hậu tố **-age** luôn là dấu hiệu nhận biết của **Danh từ**.",
+  "explanation_reason": "Từ **gradually** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'shortage' (n.) có nghĩa là: sự thiếu hụt.",
+  "translation": "Từ 'gradually' (adv.) có nghĩa là: dần dần.",
   "core_vocabulary": [
     {
-      "word": "shortage",
-      "type": "n.",
-      "meaning": "sự thiếu hụt"
+      "word": "gradually",
+      "type": "adv.",
+      "meaning": "dần dần"
     }
   ]
 },
   {
   "id": "q1597",
-  "question": "Từ 'storage' thuộc từ loại gì?",
+  "question": "Từ 'reconcile' thuộc từ loại gì?",
   "options": {
     "A": "Động từ",
-    "B": "Tính từ",
-    "C": "Trạng từ",
-    "D": "Danh từ"
+    "B": "Danh từ",
+    "C": "Tính từ",
+    "D": "Trạng từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **storage** kết thúc bằng đuôi **-age**. Hậu tố **-age** là đặc trưng cơ bản của **Danh từ**.",
+  "explanation_reason": "Từ **reconcile** không mang hậu tố danh từ hay tính từ nào và diễn tả một hành động, nên là **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'storage' (n.) có nghĩa là: kho lưu trữ.",
+  "translation": "Từ 'reconcile' (v.) có nghĩa là: đối chiếu, hoà giải.",
   "core_vocabulary": [
     {
-      "word": "storage",
-      "type": "n.",
-      "meaning": "kho lưu trữ"
+      "word": "reconcile",
+      "type": "v.",
+      "meaning": "đối chiếu, hoà giải"
     }
   ]
 },
@@ -40528,11 +40533,11 @@ export const grammarQuestions = [
   "question": "Từ 'specify' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
+    "B": "Tính từ",
+    "C": "Động từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **specify** kết thúc bằng đuôi **-ify**. Đây là một trong những hậu tố phổ biến nhất để tạo thành **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40549,12 +40554,12 @@ export const grammarQuestions = [
   "id": "q1599",
   "question": "Từ 'specification' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Tính từ",
+    "B": "Danh từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **specification** kết thúc bằng đuôi **-tion**. Đuôi **-tion** là dấu hiệu nhận diện đặc trưng của **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40569,23 +40574,23 @@ export const grammarQuestions = [
 },
   {
   "id": "q1600",
-  "question": "Từ 'beneficiary' thuộc từ loại gì?",
+  "question": "Từ 'expedite' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Tính từ",
-    "C": "Động từ",
-    "D": "Danh từ"
+    "A": "Động từ",
+    "B": "Danh từ",
+    "C": "Trạng từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **beneficiary** kết thúc bằng đuôi **-ary**. Mặc dù đuôi này thường gặp ở tính từ (necessary), nhưng ở đây nó là một **Danh từ ngoại lệ** chỉ người.",
+  "explanation_reason": "Từ **expedite** kết thúc bằng đuôi **-ite**, là dấu hiệu điển hình của **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'beneficiary' (n.) có nghĩa là: người thụ hưởng.",
+  "translation": "Từ 'expedite' (v.) có nghĩa là: đẩy nhanh, xúc tiến.",
   "core_vocabulary": [
     {
-      "word": "beneficiary",
-      "type": "n.",
-      "meaning": "người thụ hưởng"
+      "word": "expedite",
+      "type": "v.",
+      "meaning": "đẩy nhanh, xúc tiến"
     }
   ]
 },
@@ -40594,11 +40599,11 @@ export const grammarQuestions = [
   "question": "Từ 'administrative' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
-    "B": "Tính từ",
-    "C": "Động từ",
+    "B": "Động từ",
+    "C": "Tính từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **administrative** kết thúc bằng đuôi **-ive**. Đây là hậu tố cực kỳ phổ biến của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40613,23 +40618,23 @@ export const grammarQuestions = [
 },
   {
   "id": "q1602",
-  "question": "Từ 'administrator' thuộc từ loại gì?",
+  "question": "Từ 'disclose' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Động từ",
-    "C": "Danh từ",
-    "D": "Tính từ"
+    "A": "Danh từ",
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **administrator** kết thúc bằng đuôi **-or**. Đuôi **-or** (giống như -er) dùng để cấu tạo **Danh từ chỉ người**.",
+  "explanation_reason": "Từ **disclose** không mang hậu tố danh từ hay tính từ nào và diễn tả một hành động, nên là **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'administrator' (n.) có nghĩa là: quản trị viên.",
+  "translation": "Từ 'disclose' (v.) có nghĩa là: tiết lộ, công bố.",
   "core_vocabulary": [
     {
-      "word": "administrator",
-      "type": "n.",
-      "meaning": "quản trị viên"
+      "word": "disclose",
+      "type": "v.",
+      "meaning": "tiết lộ, công bố"
     }
   ]
 },
@@ -40637,12 +40642,12 @@ export const grammarQuestions = [
   "id": "q1603",
   "question": "Từ 'logistical' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Tính từ",
+    "B": "Trạng từ",
+    "C": "Danh từ",
+    "D": "Động từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **logistical** kết thúc bằng đuôi **-al**. Đây là một hậu tố chuẩn để nhận diện **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40660,11 +40665,11 @@ export const grammarQuestions = [
   "question": "Từ 'efficiency' thuộc từ loại gì?",
   "options": {
     "A": "Tính từ",
-    "B": "Trạng từ",
-    "C": "Động từ",
-    "D": "Danh từ"
+    "B": "Danh từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **efficiency** kết thúc bằng đuôi **-cy**. Các từ kết thúc bằng -cy hoặc -ce thường là **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40681,12 +40686,12 @@ export const grammarQuestions = [
   "id": "q1605",
   "question": "Từ 'consistently' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Danh từ",
-    "C": "Động từ",
-    "D": "Tính từ"
+    "A": "Động từ",
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **consistently** kết thúc bằng đuôi **-ly** gắn vào tính từ 'consistent'. Đuôi **-ly** là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40701,45 +40706,45 @@ export const grammarQuestions = [
 },
   {
   "id": "q1606",
-  "question": "Từ 'shipment' thuộc từ loại gì?",
+  "question": "Từ 'reimburse' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
+    "A": "Trạng từ",
     "B": "Tính từ",
     "C": "Danh từ",
-    "D": "Trạng từ"
+    "D": "Động từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **shipment** kết thúc bằng đuôi **-ment**. Hậu tố **-ment** là một dấu hiệu cực kỳ phổ biến của **Danh từ**.",
+  "explanation_reason": "Từ **reimburse** không mang hậu tố danh từ hay tính từ nào và diễn tả một hành động, nên là **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'shipment' (n.) có nghĩa là: lô hàng.",
+  "translation": "Từ 'reimburse' (v.) có nghĩa là: hoàn trả chi phí.",
   "core_vocabulary": [
     {
-      "word": "shipment",
-      "type": "n.",
-      "meaning": "lô hàng"
+      "word": "reimburse",
+      "type": "v.",
+      "meaning": "hoàn trả chi phí"
     }
   ]
 },
   {
   "id": "q1607",
-  "question": "Từ 'consultancy' thuộc từ loại gì?",
+  "question": "Từ 'endorse' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
+    "B": "Tính từ",
+    "C": "Động từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **consultancy** kết thúc bằng đuôi **-cy**. Đuôi **-cy** giúp ta nhận biết đây là một **Danh từ**.",
+  "explanation_reason": "Từ **endorse** không mang hậu tố danh từ hay tính từ nào và diễn tả một hành động, nên là **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'consultancy' (n.) có nghĩa là: công ty tư vấn.",
+  "translation": "Từ 'endorse' (v.) có nghĩa là: tán thành, ký hậu.",
   "core_vocabulary": [
     {
-      "word": "consultancy",
-      "type": "n.",
-      "meaning": "công ty tư vấn"
+      "word": "endorse",
+      "type": "v.",
+      "meaning": "tán thành, ký hậu"
     }
   ]
 },
@@ -40747,12 +40752,12 @@ export const grammarQuestions = [
   "id": "q1608",
   "question": "Từ 'consultant' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
+    "A": "Danh từ",
     "B": "Trạng từ",
-    "C": "Danh từ",
-    "D": "Động từ"
+    "C": "Động từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **consultant** kết thúc bằng đuôi **-ant**. Hậu tố **-ant** thường được dùng để cấu tạo **Danh từ chỉ người**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40769,12 +40774,12 @@ export const grammarQuestions = [
   "id": "q1609",
   "question": "Từ 'analyst' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Danh từ",
+    "A": "Trạng từ",
+    "B": "Động từ",
     "C": "Tính từ",
-    "D": "Trạng từ"
+    "D": "Danh từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **analyst** kết thúc bằng đuôi **-st**. Hậu tố **-ist** hoặc **-st** là dấu hiệu điển hình của **Danh từ chỉ người**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40813,12 +40818,12 @@ export const grammarQuestions = [
   "id": "q1611",
   "question": "Từ 'accuracy' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Tính từ",
+    "A": "Tính từ",
+    "B": "Danh từ",
     "C": "Động từ",
-    "D": "Danh từ"
+    "D": "Trạng từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **accuracy** kết thúc bằng đuôi **-cy**. Cùng với -ce, đuôi **-cy** luôn là biểu hiện của **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40835,9 +40840,9 @@ export const grammarQuestions = [
   "id": "q1612",
   "question": "Từ 'accurately' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
+    "A": "Tính từ",
+    "B": "Danh từ",
+    "C": "Động từ",
     "D": "Trạng từ"
   },
   "correct_answer": "D",
@@ -40855,23 +40860,23 @@ export const grammarQuestions = [
 },
   {
   "id": "q1613",
-  "question": "Từ 'operator' thuộc từ loại gì?",
+  "question": "Từ 'tentative' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
+    "A": "Tính từ",
+    "B": "Danh từ",
+    "C": "Động từ",
     "D": "Trạng từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **operator** kết thúc bằng đuôi **-or**. Đây là hậu tố phổ biến của **Danh từ chỉ người**.",
+  "explanation_reason": "Từ **tentative** kết thúc bằng đuôi **-ive**, là dấu hiệu điển hình của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'operator' (n.) có nghĩa là: người vận hành.",
+  "translation": "Từ 'tentative' (adj.) có nghĩa là: tạm thời, chưa chính thức.",
   "core_vocabulary": [
     {
-      "word": "operator",
-      "type": "n.",
-      "meaning": "người vận hành"
+      "word": "tentative",
+      "type": "adj.",
+      "meaning": "tạm thời, chưa chính thức"
     }
   ]
 },
@@ -40879,12 +40884,12 @@ export const grammarQuestions = [
   "id": "q1614",
   "question": "Từ 'operational' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Động từ",
+    "B": "Trạng từ",
+    "C": "Danh từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **operational** kết thúc bằng đuôi **-al**, là hậu tố nhận biết quen thuộc của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40901,12 +40906,12 @@ export const grammarQuestions = [
   "id": "q1615",
   "question": "Từ 'inventory' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Trạng từ",
+    "B": "Danh từ",
+    "C": "Động từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **inventory** kết thúc bằng đuôi **-ory**. Dù đuôi này có lúc là tính từ, nhưng **inventory** là một **Danh từ** rất quen thuộc trong môi trường công sở.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40921,45 +40926,45 @@ export const grammarQuestions = [
 },
   {
   "id": "q1616",
-  "question": "Từ 'capacity' thuộc từ loại gì?",
+  "question": "Từ 'subsequent' thuộc từ loại gì?",
   "options": {
     "A": "Trạng từ",
     "B": "Danh từ",
     "C": "Động từ",
     "D": "Tính từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **capacity** kết thúc bằng đuôi **-ity**. Hậu tố **-ity** luôn luôn là **Danh từ** trừu tượng.",
+  "explanation_reason": "Từ **subsequent** kết thúc bằng đuôi **-ent**, là dấu hiệu điển hình của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'capacity' (n.) có nghĩa là: sức chứa, năng lực.",
+  "translation": "Từ 'subsequent' (adj.) có nghĩa là: tiếp theo, sau đó.",
   "core_vocabulary": [
     {
-      "word": "capacity",
-      "type": "n.",
-      "meaning": "sức chứa, năng lực"
+      "word": "subsequent",
+      "type": "adj.",
+      "meaning": "tiếp theo, sau đó"
     }
   ]
 },
   {
   "id": "q1617",
-  "question": "Từ 'utilization' thuộc từ loại gì?",
+  "question": "Từ 'applicable' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
+    "A": "Tính từ",
     "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "C": "Trạng từ",
+    "D": "Danh từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **utilization** kết thúc bằng đuôi **-tion**. Đuôi **-tion** là dấu hiệu nhận diện cơ bản của **Danh từ**.",
+  "explanation_reason": "Từ **applicable** kết thúc bằng đuôi **-able**, là dấu hiệu điển hình của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'utilization' (n.) có nghĩa là: sự tận dụng.",
+  "translation": "Từ 'applicable' (adj.) có nghĩa là: có thể áp dụng.",
   "core_vocabulary": [
     {
-      "word": "utilization",
-      "type": "n.",
-      "meaning": "sự tận dụng"
+      "word": "applicable",
+      "type": "adj.",
+      "meaning": "có thể áp dụng"
     }
   ]
 },
@@ -40967,12 +40972,12 @@ export const grammarQuestions = [
   "id": "q1618",
   "question": "Từ 'productive' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Trạng từ",
-    "D": "Tính từ"
+    "A": "Trạng từ",
+    "B": "Danh từ",
+    "C": "Tính từ",
+    "D": "Động từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **productive** kết thúc bằng đuôi **-ive**. Đây là hậu tố phổ biến dùng để cấu tạo **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -40989,12 +40994,12 @@ export const grammarQuestions = [
   "id": "q1619",
   "question": "Từ 'productivity' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
+    "A": "Động từ",
+    "B": "Danh từ",
     "C": "Tính từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **productivity** kết thúc bằng đuôi **-ity**. Hậu tố **-ity** là đặc điểm điển hình của **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41011,12 +41016,12 @@ export const grammarQuestions = [
   "id": "q1620",
   "question": "Từ 'productively' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
+    "A": "Trạng từ",
     "B": "Động từ",
     "C": "Tính từ",
-    "D": "Trạng từ"
+    "D": "Danh từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **productively** kết thúc bằng đuôi **-ly**, đặc trưng cho một **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41032,23 +41037,23 @@ export const grammarQuestions = [
 ,
   {
   "id": "q1621",
-  "question": "Từ 'discrepancy' thuộc từ loại gì?",
+  "question": "Từ 'currently' thuộc từ loại gì?",
   "options": {
     "A": "Tính từ",
     "B": "Danh từ",
-    "C": "Trạng từ",
-    "D": "Động từ"
+    "C": "Động từ",
+    "D": "Trạng từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **discrepancy** kết thúc bằng đuôi **-cy**. Các từ kết thúc bằng đuôi này thường là **Danh từ**.",
+  "explanation_reason": "Từ **currently** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'discrepancy' (n.) có nghĩa là: sự khác biệt, sự không nhất quán.",
+  "translation": "Từ 'currently' (adv.) có nghĩa là: hiện tại, hiện nay.",
   "core_vocabulary": [
     {
-      "word": "discrepancy",
-      "type": "n.",
-      "meaning": "sự khác biệt, sự không nhất quán"
+      "word": "currently",
+      "type": "adv.",
+      "meaning": "hiện tại, hiện nay"
     }
   ]
 },
@@ -41056,12 +41061,12 @@ export const grammarQuestions = [
   "id": "q1622",
   "question": "Từ 'consolidate' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
+    "A": "Động từ",
     "B": "Danh từ",
-    "C": "Động từ",
-    "D": "Tính từ"
+    "C": "Tính từ",
+    "D": "Trạng từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **consolidate** kết thúc bằng đuôi **-ate**. Trong tiếng Anh, hậu tố **-ate** thường được dùng để cấu tạo nên **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41078,12 +41083,12 @@ export const grammarQuestions = [
   "id": "q1623",
   "question": "Từ 'volatile' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
-    "B": "Danh từ",
-    "C": "Động từ",
-    "D": "Trạng từ"
+    "A": "Trạng từ",
+    "B": "Tính từ",
+    "C": "Danh từ",
+    "D": "Động từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **volatile** có hậu tố **-ile**, đây là một hậu tố khá phổ biến của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41098,29 +41103,7 @@ export const grammarQuestions = [
 },
   {
   "id": "q1624",
-  "question": "Từ 'accountability' thuộc từ loại gì?",
-  "options": {
-    "A": "Tính từ",
-    "B": "Danh từ",
-    "C": "Trạng từ",
-    "D": "Động từ"
-  },
-  "correct_answer": "B",
-  "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **accountability** kết thúc bằng đuôi **-ity**. Hậu tố **-ity** luôn là dấu hiệu để nhận biết một **Danh từ** trừu tượng.",
-  "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'accountability' (n.) có nghĩa là: trách nhiệm giải trình.",
-  "core_vocabulary": [
-    {
-      "word": "accountability",
-      "type": "n.",
-      "meaning": "trách nhiệm giải trình"
-    }
-  ]
-},
-  {
-  "id": "q1625",
-  "question": "Từ 'transparently' thuộc từ loại gì?",
+  "question": "Từ 'previously' thuộc từ loại gì?",
   "options": {
     "A": "Tính từ",
     "B": "Danh từ",
@@ -41128,6 +41111,28 @@ export const grammarQuestions = [
     "D": "Trạng từ"
   },
   "correct_answer": "D",
+  "grammar_type": "Nhận dạng hậu tố",
+  "explanation_reason": "Từ **previously** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
+  "explanation_grammar": "Nhận dạng hậu tố từ loại",
+  "translation": "Từ 'previously' (adv.) có nghĩa là: trước đó.",
+  "core_vocabulary": [
+    {
+      "word": "previously",
+      "type": "adv.",
+      "meaning": "trước đó"
+    }
+  ]
+},
+  {
+  "id": "q1625",
+  "question": "Từ 'transparently' thuộc từ loại gì?",
+  "options": {
+    "A": "Trạng từ",
+    "B": "Danh từ",
+    "C": "Động từ",
+    "D": "Tính từ"
+  },
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **transparently** kết thúc bằng đuôi **-ly**. Đuôi **-ly** là dấu hiệu nhận diện đặc trưng của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41142,45 +41147,45 @@ export const grammarQuestions = [
 },
   {
   "id": "q1626",
-  "question": "Từ 'compliance' thuộc từ loại gì?",
+  "question": "Từ 'mutually' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Danh từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Tính từ",
+    "B": "Trạng từ",
+    "C": "Động từ",
+    "D": "Danh từ"
   },
   "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **compliance** kết thúc bằng đuôi **-ance**. Cùng với -ence, đuôi **-ance** là dấu hiệu nhận biết của **Danh từ**.",
+  "explanation_reason": "Từ **mutually** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'compliance' (n.) có nghĩa là: sự tuân thủ.",
+  "translation": "Từ 'mutually' (adv.) có nghĩa là: một cách đôi bên, lẫn nhau.",
   "core_vocabulary": [
     {
-      "word": "compliance",
-      "type": "n.",
-      "meaning": "sự tuân thủ"
+      "word": "mutually",
+      "type": "adv.",
+      "meaning": "một cách đôi bên, lẫn nhau"
     }
   ]
 },
   {
   "id": "q1627",
-  "question": "Từ 'procurement' thuộc từ loại gì?",
+  "question": "Từ 'favorably' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
     "B": "Tính từ",
-    "C": "Trạng từ",
-    "D": "Động từ"
+    "C": "Động từ",
+    "D": "Trạng từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **procurement** kết thúc bằng đuôi **-ment**. Hậu tố **-ment** là một dấu hiệu cực kỳ phổ biến của **Danh từ**.",
+  "explanation_reason": "Từ **favorably** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'procurement' (n.) có nghĩa là: sự thu mua.",
+  "translation": "Từ 'favorably' (adv.) có nghĩa là: một cách thuận lợi, tích cực.",
   "core_vocabulary": [
     {
-      "word": "procurement",
-      "type": "n.",
-      "meaning": "sự thu mua"
+      "word": "favorably",
+      "type": "adv.",
+      "meaning": "một cách thuận lợi, tích cực"
     }
   ]
 },
@@ -41188,12 +41193,12 @@ export const grammarQuestions = [
   "id": "q1628",
   "question": "Từ 'contingent' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Tính từ",
-    "C": "Danh từ",
-    "D": "Động từ"
+    "A": "Tính từ",
+    "B": "Danh từ",
+    "C": "Động từ",
+    "D": "Trạng từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **contingent** kết thúc bằng đuôi **-ent**. Đuôi **-ent** có thể là danh từ hoặc tính từ, nhưng ở đây nó đóng vai trò **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41210,12 +41215,12 @@ export const grammarQuestions = [
   "id": "q1629",
   "question": "Từ 'liable' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Trạng từ",
-    "D": "Tính từ"
+    "A": "Trạng từ",
+    "B": "Danh từ",
+    "C": "Tính từ",
+    "D": "Động từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **liable** kết thúc bằng đuôi **-able**. Đây là hậu tố rất quen thuộc dùng để cấu tạo **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41230,23 +41235,23 @@ export const grammarQuestions = [
 },
   {
   "id": "q1630",
-  "question": "Từ 'feasibility' thuộc từ loại gì?",
+  "question": "Từ 'reasonably' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Tính từ",
-    "C": "Trạng từ",
+    "A": "Trạng từ",
+    "B": "Danh từ",
+    "C": "Tính từ",
     "D": "Động từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **feasibility** kết thúc bằng đuôi **-ity**. Hậu tố **-ity** là dấu hiệu chuẩn xác của một **Danh từ**.",
+  "explanation_reason": "Từ **reasonably** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'feasibility' (n.) có nghĩa là: tính khả thi.",
+  "translation": "Từ 'reasonably' (adv.) có nghĩa là: một cách hợp lý.",
   "core_vocabulary": [
     {
-      "word": "feasibility",
-      "type": "n.",
-      "meaning": "tính khả thi"
+      "word": "reasonably",
+      "type": "adv.",
+      "meaning": "một cách hợp lý"
     }
   ]
 },
@@ -41254,10 +41259,10 @@ export const grammarQuestions = [
   "id": "q1631",
   "question": "Từ 'itinerary' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Động từ",
+    "A": "Động từ",
+    "B": "Tính từ",
     "C": "Danh từ",
-    "D": "Tính từ"
+    "D": "Trạng từ"
   },
   "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
@@ -41274,23 +41279,23 @@ export const grammarQuestions = [
 },
   {
   "id": "q1632",
-  "question": "Từ 'revenue' thuộc từ loại gì?",
+  "question": "Từ 'immediately' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Tính từ",
-    "C": "Trạng từ",
-    "D": "Danh từ"
+    "A": "Danh từ",
+    "B": "Động từ",
+    "C": "Tính từ",
+    "D": "Trạng từ"
   },
   "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **revenue** là một **Danh từ** quan trọng trong môi trường kinh doanh và tài chính.",
+  "explanation_reason": "Từ **immediately** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'revenue' (n.) có nghĩa là: doanh thu.",
+  "translation": "Từ 'immediately' (adv.) có nghĩa là: ngay lập tức.",
   "core_vocabulary": [
     {
-      "word": "revenue",
-      "type": "n.",
-      "meaning": "doanh thu"
+      "word": "immediately",
+      "type": "adv.",
+      "meaning": "ngay lập tức"
     }
   ]
 },
@@ -41299,11 +41304,11 @@ export const grammarQuestions = [
   "question": "Từ 'depreciate' thuộc từ loại gì?",
   "options": {
     "A": "Tính từ",
-    "B": "Trạng từ",
-    "C": "Động từ",
+    "B": "Động từ",
+    "C": "Trạng từ",
     "D": "Danh từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **depreciate** kết thúc bằng đuôi **-ate**. Hậu tố **-ate** thường dùng để tạo thành **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41321,9 +41326,9 @@ export const grammarQuestions = [
   "question": "Từ 'liquidate' thuộc từ loại gì?",
   "options": {
     "A": "Động từ",
-    "B": "Trạng từ",
-    "C": "Danh từ",
-    "D": "Tính từ"
+    "B": "Danh từ",
+    "C": "Tính từ",
+    "D": "Trạng từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
@@ -41340,23 +41345,23 @@ export const grammarQuestions = [
 },
   {
   "id": "q1635",
-  "question": "Từ 'merger' thuộc từ loại gì?",
+  "question": "Từ 'undertake' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
+    "A": "Trạng từ",
     "B": "Danh từ",
     "C": "Tính từ",
-    "D": "Trạng từ"
+    "D": "Động từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **merger** kết thúc bằng đuôi **-er**. Hậu tố **-er** thường dùng cho danh từ chỉ người hoặc danh từ chỉ sự việc/hành động.",
+  "explanation_reason": "Từ **undertake** không mang hậu tố danh từ hay tính từ nào và diễn tả một hành động, nên là **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'merger' (n.) có nghĩa là: sự sáp nhập.",
+  "translation": "Từ 'undertake' (v.) có nghĩa là: đảm nhận, tiến hành.",
   "core_vocabulary": [
     {
-      "word": "merger",
-      "type": "n.",
-      "meaning": "sự sáp nhập"
+      "word": "undertake",
+      "type": "v.",
+      "meaning": "đảm nhận, tiến hành"
     }
   ]
 },
@@ -41364,12 +41369,12 @@ export const grammarQuestions = [
   "id": "q1636",
   "question": "Từ 'acquisition' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Tính từ",
-    "C": "Trạng từ",
+    "A": "Tính từ",
+    "B": "Trạng từ",
+    "C": "Danh từ",
     "D": "Động từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **acquisition** kết thúc bằng đuôi **-tion**. Hậu tố **-tion** là dấu hiệu nhận biết tiêu chuẩn của **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41386,12 +41391,12 @@ export const grammarQuestions = [
   "id": "q1637",
   "question": "Từ 'structural' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
+    "A": "Tính từ",
     "B": "Danh từ",
-    "C": "Tính từ",
-    "D": "Động từ"
+    "C": "Động từ",
+    "D": "Trạng từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **structural** kết thúc bằng đuôi **-al**. Đây là hậu tố nhận diện quen thuộc của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41408,12 +41413,12 @@ export const grammarQuestions = [
   "id": "q1638",
   "question": "Từ 'postpone' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Tính từ",
-    "C": "Trạng từ",
-    "D": "Động từ"
+    "A": "Trạng từ",
+    "B": "Danh từ",
+    "C": "Động từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **postpone** không mang hậu tố danh từ hay tính từ nào, và mang nghĩa hành động 'hoãn lại', nên là **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41430,12 +41435,12 @@ export const grammarQuestions = [
   "id": "q1639",
   "question": "Từ 'transaction' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Tính từ",
+    "A": "Tính từ",
+    "B": "Danh từ",
     "C": "Trạng từ",
     "D": "Động từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **transaction** kết thúc bằng đuôi **-tion**. Hậu tố **-tion** là dấu hiệu nhận diện cơ bản của **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41452,12 +41457,12 @@ export const grammarQuestions = [
   "id": "q1640",
   "question": "Từ 'subsidiary' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Danh từ",
-    "C": "Động từ",
-    "D": "Tính từ"
+    "A": "Động từ",
+    "B": "Tính từ",
+    "C": "Danh từ",
+    "D": "Trạng từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **subsidiary** kết thúc bằng đuôi **-ary**. Mặc dù đuôi này thường gặp ở tính từ, nhưng ở đây nó là một **Danh từ** (công ty con).",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41475,9 +41480,9 @@ export const grammarQuestions = [
   "question": "Từ 'fluctuate' thuộc từ loại gì?",
   "options": {
     "A": "Động từ",
-    "B": "Danh từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "B": "Trạng từ",
+    "C": "Danh từ",
+    "D": "Tính từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
@@ -41497,11 +41502,11 @@ export const grammarQuestions = [
   "question": "Từ 'methodical' thuộc từ loại gì?",
   "options": {
     "A": "Động từ",
-    "B": "Trạng từ",
-    "C": "Danh từ",
-    "D": "Tính từ"
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **methodical** kết thúc bằng đuôi **-al**. Đây là hậu tố nhận diện quen thuộc của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41518,12 +41523,12 @@ export const grammarQuestions = [
   "id": "q1643",
   "question": "Từ 'sustainable' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Danh từ",
-    "C": "Tính từ",
-    "D": "Động từ"
+    "A": "Danh từ",
+    "B": "Động từ",
+    "C": "Trạng từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **sustainable** kết thúc bằng đuôi **-able**. Đây là hậu tố cực kỳ phổ biến của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41540,12 +41545,12 @@ export const grammarQuestions = [
   "id": "q1644",
   "question": "Từ 'streamline' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Tính từ",
-    "C": "Trạng từ",
-    "D": "Động từ"
+    "A": "Trạng từ",
+    "B": "Danh từ",
+    "C": "Động từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **streamline** không mang hậu tố danh từ hay tính từ nào, và mang nghĩa hành động 'tinh gọn hoá quy trình', nên là **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41562,12 +41567,12 @@ export const grammarQuestions = [
   "id": "q1645",
   "question": "Từ 'orientation' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Tính từ",
+    "A": "Tính từ",
+    "B": "Danh từ",
     "C": "Trạng từ",
     "D": "Động từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **orientation** kết thúc bằng đuôi **-tion**. Đuôi **-tion** luôn là dấu hiệu của **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41584,9 +41589,9 @@ export const grammarQuestions = [
   "id": "q1646",
   "question": "Từ 'allocate' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Danh từ",
-    "C": "Tính từ",
+    "A": "Danh từ",
+    "B": "Tính từ",
+    "C": "Trạng từ",
     "D": "Động từ"
   },
   "correct_answer": "D",
@@ -41606,12 +41611,12 @@ export const grammarQuestions = [
   "id": "q1647",
   "question": "Từ 'specific' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Trạng từ",
+    "B": "Tính từ",
+    "C": "Danh từ",
+    "D": "Động từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **specific** kết thúc bằng đuôi **-ic**. Đây là hậu tố rất phổ biến của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41650,12 +41655,12 @@ export const grammarQuestions = [
   "id": "q1649",
   "question": "Từ 'accessibility' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Danh từ",
-    "C": "Động từ",
-    "D": "Tính từ"
+    "A": "Động từ",
+    "B": "Tính từ",
+    "C": "Danh từ",
+    "D": "Trạng từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **accessibility** kết thúc bằng đuôi **-ity**. Hậu tố **-ity** là dấu hiệu điển hình của **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41672,12 +41677,12 @@ export const grammarQuestions = [
   "id": "q1650",
   "question": "Từ 'mandatory' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Trạng từ",
+    "B": "Tính từ",
+    "C": "Danh từ",
+    "D": "Động từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **mandatory** kết thúc bằng đuôi **-ory**. Đuôi **-ory** thường là dấu hiệu của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41693,67 +41698,67 @@ export const grammarQuestions = [
 ,
   {
   "id": "q1651",
-  "question": "Từ 'consignment' thuộc từ loại gì?",
+  "question": "Từ 'extensively' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Danh từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Danh từ",
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **consignment** kết thúc bằng đuôi **-ment**. Đây là một hậu tố cực kỳ phổ biến dùng để cấu tạo nên **Danh từ**.",
+  "explanation_reason": "Từ **extensively** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'consignment' (n.) có nghĩa là: lô hàng, việc gửi hàng.",
+  "translation": "Từ 'extensively' (adv.) có nghĩa là: một cách rộng rãi, sâu rộng.",
   "core_vocabulary": [
     {
-      "word": "consignment",
-      "type": "n.",
-      "meaning": "lô hàng, việc gửi hàng"
+      "word": "extensively",
+      "type": "adv.",
+      "meaning": "một cách rộng rãi, sâu rộng"
     }
   ]
 },
   {
   "id": "q1652",
-  "question": "Từ 'clearance' thuộc từ loại gì?",
+  "question": "Từ 'routinely' thuộc từ loại gì?",
   "options": {
     "A": "Trạng từ",
-    "B": "Tính từ",
-    "C": "Động từ",
-    "D": "Danh từ"
+    "B": "Danh từ",
+    "C": "Tính từ",
+    "D": "Động từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **clearance** kết thúc bằng đuôi **-ance**. Cùng với -ence, đuôi **-ance** là dấu hiệu nhận biết chắc chắn của một **Danh từ**.",
+  "explanation_reason": "Từ **routinely** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'clearance' (n.) có nghĩa là: sự giải tỏa, sự thanh lý.",
+  "translation": "Từ 'routinely' (adv.) có nghĩa là: một cách thường lệ.",
   "core_vocabulary": [
     {
-      "word": "clearance",
-      "type": "n.",
-      "meaning": "sự giải tỏa, sự thanh lý"
+      "word": "routinely",
+      "type": "adv.",
+      "meaning": "một cách thường lệ"
     }
   ]
 },
   {
   "id": "q1653",
-  "question": "Từ 'insurance' thuộc từ loại gì?",
+  "question": "Từ 'jointly' thuộc từ loại gì?",
   "options": {
     "A": "Danh từ",
     "B": "Tính từ",
-    "C": "Động từ",
-    "D": "Trạng từ"
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **insurance** có hậu tố **-ance**, một dấu hiệu nhận diện đặc trưng của **Danh từ**.",
+  "explanation_reason": "Từ **jointly** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'insurance' (n.) có nghĩa là: bảo hiểm.",
+  "translation": "Từ 'jointly' (adv.) có nghĩa là: một cách chung, phối hợp.",
   "core_vocabulary": [
     {
-      "word": "insurance",
-      "type": "n.",
-      "meaning": "bảo hiểm"
+      "word": "jointly",
+      "type": "adv.",
+      "meaning": "một cách chung, phối hợp"
     }
   ]
 },
@@ -41761,12 +41766,12 @@ export const grammarQuestions = [
   "id": "q1654",
   "question": "Từ 'exempt' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
+    "A": "Tính từ",
     "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "C": "Trạng từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **exempt** đóng vai trò là một **Tính từ** (hoặc động từ), mang nghĩa là được miễn trừ một nghĩa vụ nào đó.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41783,10 +41788,10 @@ export const grammarQuestions = [
   "id": "q1655",
   "question": "Từ 'hazardous' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Danh từ",
+    "A": "Động từ",
+    "B": "Trạng từ",
     "C": "Tính từ",
-    "D": "Động từ"
+    "D": "Danh từ"
   },
   "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
@@ -41803,23 +41808,23 @@ export const grammarQuestions = [
 },
   {
   "id": "q1656",
-  "question": "Từ 'outsourcing' thuộc từ loại gì?",
+  "question": "Từ 'briefly' thuộc từ loại gì?",
   "options": {
     "A": "Tính từ",
     "B": "Động từ",
     "C": "Danh từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **outsourcing** là một danh động từ (gerund) đóng vai trò như một **Danh từ** chỉ hoạt động thuê nguồn lực bên ngoài.",
+  "explanation_reason": "Từ **briefly** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'outsourcing' (n.) có nghĩa là: thuê ngoài.",
+  "translation": "Từ 'briefly' (adv.) có nghĩa là: một cách ngắn gọn.",
   "core_vocabulary": [
     {
-      "word": "outsourcing",
-      "type": "n.",
-      "meaning": "thuê ngoài"
+      "word": "briefly",
+      "type": "adv.",
+      "meaning": "một cách ngắn gọn"
     }
   ]
 },
@@ -41827,12 +41832,12 @@ export const grammarQuestions = [
   "id": "q1657",
   "question": "Từ 'regulatory' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
-    "B": "Danh từ",
-    "C": "Động từ",
-    "D": "Trạng từ"
+    "A": "Động từ",
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **regulatory** kết thúc bằng đuôi **-ory**. Hậu tố **-ory** thường dùng để cấu tạo nên **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41849,12 +41854,12 @@ export const grammarQuestions = [
   "id": "q1658",
   "question": "Từ 'legislative' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Tính từ",
+    "A": "Trạng từ",
+    "B": "Động từ",
     "C": "Danh từ",
-    "D": "Trạng từ"
+    "D": "Tính từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **legislative** kết thúc bằng đuôi **-ive**, đây là dấu hiệu nhận biết quen thuộc của một **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41869,67 +41874,67 @@ export const grammarQuestions = [
 },
   {
   "id": "q1659",
-  "question": "Từ 'solvency' thuộc từ loại gì?",
+  "question": "Từ 'readily' thuộc từ loại gì?",
   "options": {
     "A": "Tính từ",
     "B": "Trạng từ",
     "C": "Động từ",
     "D": "Danh từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **solvency** kết thúc bằng đuôi **-cy**. Các từ kết thúc bằng đuôi này thường là **Danh từ**.",
+  "explanation_reason": "Từ **readily** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'solvency' (n.) có nghĩa là: khả năng thanh toán.",
+  "translation": "Từ 'readily' (adv.) có nghĩa là: một cách sẵn sàng, dễ dàng.",
   "core_vocabulary": [
     {
-      "word": "solvency",
-      "type": "n.",
-      "meaning": "khả năng thanh toán"
+      "word": "readily",
+      "type": "adv.",
+      "meaning": "một cách sẵn sàng, dễ dàng"
     }
   ]
 },
   {
   "id": "q1660",
-  "question": "Từ 'deficit' thuộc từ loại gì?",
+  "question": "Từ 'strictly' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
+    "A": "Trạng từ",
     "B": "Động từ",
     "C": "Tính từ",
-    "D": "Trạng từ"
+    "D": "Danh từ"
   },
   "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **deficit** là một **Danh từ** quan trọng trong lĩnh vực kinh tế và tài chính.",
+  "explanation_reason": "Từ **strictly** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'deficit' (n.) có nghĩa là: sự thâm hụt.",
+  "translation": "Từ 'strictly' (adv.) có nghĩa là: một cách nghiêm ngặt.",
   "core_vocabulary": [
     {
-      "word": "deficit",
-      "type": "n.",
-      "meaning": "sự thâm hụt"
+      "word": "strictly",
+      "type": "adv.",
+      "meaning": "một cách nghiêm ngặt"
     }
   ]
 },
   {
   "id": "q1661",
-  "question": "Từ 'integration' thuộc từ loại gì?",
+  "question": "Từ 'virtually' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Tính từ",
-    "C": "Động từ",
-    "D": "Trạng từ"
+    "A": "Động từ",
+    "B": "Trạng từ",
+    "C": "Danh từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **integration** kết thúc bằng đuôi **-tion**. Đuôi **-tion** luôn là dấu hiệu đặc trưng của một **Danh từ**.",
+  "explanation_reason": "Từ **virtually** kết thúc bằng đuôi **-ly**, là dấu hiệu điển hình của **Trạng từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'integration' (n.) có nghĩa là: sự tích hợp, sự hội nhập.",
+  "translation": "Từ 'virtually' (adv.) có nghĩa là: gần như, hầu như.",
   "core_vocabulary": [
     {
-      "word": "integration",
-      "type": "n.",
-      "meaning": "sự tích hợp, sự hội nhập"
+      "word": "virtually",
+      "type": "adv.",
+      "meaning": "gần như, hầu như"
     }
   ]
 },
@@ -41937,12 +41942,12 @@ export const grammarQuestions = [
   "id": "q1662",
   "question": "Từ 'interact' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
+    "A": "Động từ",
+    "B": "Danh từ",
     "C": "Tính từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **interact** là một **Động từ** chỉ hành động tác động qua lại lẫn nhau.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41959,12 +41964,12 @@ export const grammarQuestions = [
   "id": "q1663",
   "question": "Từ 'compatible' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Tính từ",
-    "C": "Danh từ",
-    "D": "Động từ"
+    "A": "Danh từ",
+    "B": "Động từ",
+    "C": "Trạng từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **compatible** kết thúc bằng đuôi **-ible**. Hậu tố **-ible** (hoặc -able) dùng để cấu tạo **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -41981,12 +41986,12 @@ export const grammarQuestions = [
   "id": "q1664",
   "question": "Từ 'troubleshoot' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
+    "A": "Trạng từ",
     "B": "Danh từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "C": "Động từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **troubleshoot** là một **Động từ** thường dùng trong lĩnh vực kỹ thuật và công nghệ.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42001,23 +42006,23 @@ export const grammarQuestions = [
 },
   {
   "id": "q1665",
-  "question": "Từ 'encryption' thuộc từ loại gì?",
+  "question": "Từ 'comply' thuộc từ loại gì?",
   "options": {
     "A": "Trạng từ",
-    "B": "Động từ",
-    "C": "Danh từ",
-    "D": "Tính từ"
+    "B": "Danh từ",
+    "C": "Tính từ",
+    "D": "Động từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
-  "explanation_reason": "Từ **encryption** kết thúc bằng đuôi **-tion**, dấu hiệu nhận biết tiêu chuẩn của một **Danh từ**.",
+  "explanation_reason": "Từ **comply** không mang hậu tố danh từ hay tính từ nào và diễn tả một hành động, nên là **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
-  "translation": "Từ 'encryption' (n.) có nghĩa là: sự mã hóa.",
+  "translation": "Từ 'comply' (v.) có nghĩa là: tuân thủ.",
   "core_vocabulary": [
     {
-      "word": "encryption",
-      "type": "n.",
-      "meaning": "sự mã hóa"
+      "word": "comply",
+      "type": "v.",
+      "meaning": "tuân thủ"
     }
   ]
 },
@@ -42025,12 +42030,12 @@ export const grammarQuestions = [
   "id": "q1666",
   "question": "Từ 'advertise' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Danh từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Tính từ",
+    "B": "Động từ",
+    "C": "Trạng từ",
+    "D": "Danh từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **advertise** kết thúc bằng đuôi **-ise** (hoặc -ize). Đây là hậu tố đặc trưng để tạo thành **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42047,12 +42052,12 @@ export const grammarQuestions = [
   "id": "q1667",
   "question": "Từ 'visibility' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
-    "B": "Động từ",
-    "C": "Danh từ",
-    "D": "Trạng từ"
+    "A": "Danh từ",
+    "B": "Trạng từ",
+    "C": "Tính từ",
+    "D": "Động từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **visibility** kết thúc bằng đuôi **-ity**. Hậu tố **-ity** là dấu hiệu điển hình của một **Danh từ** trừu tượng.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42069,12 +42074,12 @@ export const grammarQuestions = [
   "id": "q1668",
   "question": "Từ 'penetrate' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Danh từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Danh từ",
+    "B": "Tính từ",
+    "C": "Trạng từ",
+    "D": "Động từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **penetrate** kết thúc bằng đuôi **-ate**. Hậu tố **-ate** thường được dùng để cấu tạo nên **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42091,12 +42096,12 @@ export const grammarQuestions = [
   "id": "q1669",
   "question": "Từ 'persuasive' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
+    "A": "Tính từ",
     "B": "Trạng từ",
     "C": "Động từ",
-    "D": "Tính từ"
+    "D": "Danh từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **persuasive** kết thúc bằng đuôi **-ive**. Đây là hậu tố phổ biến dùng để cấu tạo **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42113,12 +42118,12 @@ export const grammarQuestions = [
   "id": "q1670",
   "question": "Từ 'segmentation' thuộc từ loại gì?",
   "options": {
-    "A": "Động từ",
-    "B": "Tính từ",
-    "C": "Danh từ",
-    "D": "Trạng từ"
+    "A": "Trạng từ",
+    "B": "Danh từ",
+    "C": "Động từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **segmentation** kết thúc bằng đuôi **-tion**, một dấu hiệu nhận diện cơ bản của **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42135,12 +42140,12 @@ export const grammarQuestions = [
   "id": "q1671",
   "question": "Từ 'recruitment' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Tính từ",
-    "C": "Động từ",
+    "A": "Tính từ",
+    "B": "Động từ",
+    "C": "Danh từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **recruitment** kết thúc bằng đuôi **-ment**. Hậu tố **-ment** là dấu hiệu nhận biết quen thuộc của **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42157,9 +42162,9 @@ export const grammarQuestions = [
   "id": "q1672",
   "question": "Từ 'attrition' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Tính từ",
-    "C": "Động từ",
+    "A": "Tính từ",
+    "B": "Động từ",
+    "C": "Trạng từ",
     "D": "Danh từ"
   },
   "correct_answer": "D",
@@ -42179,12 +42184,12 @@ export const grammarQuestions = [
   "id": "q1673",
   "question": "Từ 'severance' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
+    "A": "Trạng từ",
     "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "C": "Danh từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **severance** kết thúc bằng đuôi **-ance**, dấu hiệu nhận biết rất chuẩn của một **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42202,11 +42207,11 @@ export const grammarQuestions = [
   "question": "Từ 'eligible' thuộc từ loại gì?",
   "options": {
     "A": "Động từ",
-    "B": "Danh từ",
-    "C": "Tính từ",
+    "B": "Tính từ",
+    "C": "Danh từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **eligible** kết thúc bằng đuôi **-ible**. Đây là hậu tố nhận diện quen thuộc của một **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42223,12 +42228,12 @@ export const grammarQuestions = [
   "id": "q1675",
   "question": "Từ 'supervise' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Tính từ",
-    "C": "Động từ",
-    "D": "Trạng từ"
+    "A": "Tính từ",
+    "B": "Trạng từ",
+    "C": "Danh từ",
+    "D": "Động từ"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **supervise** là một **Động từ** chỉ hành động quản lý và theo dõi công việc của người khác.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42245,12 +42250,12 @@ export const grammarQuestions = [
   "id": "q1676",
   "question": "Từ 'vacancy' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
-    "B": "Động từ",
-    "C": "Trạng từ",
-    "D": "Danh từ"
+    "A": "Danh từ",
+    "B": "Trạng từ",
+    "C": "Tính từ",
+    "D": "Động từ"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **vacancy** kết thúc bằng đuôi **-cy**. Đuôi **-cy** giúp ta nhận biết đây là một **Danh từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42267,12 +42272,12 @@ export const grammarQuestions = [
   "id": "q1677",
   "question": "Từ 'versatile' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
-    "B": "Danh từ",
-    "C": "Động từ",
+    "A": "Danh từ",
+    "B": "Động từ",
+    "C": "Tính từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **versatile** kết thúc bằng đuôi **-ile**, đây là một hậu tố khá phổ biến của **Tính từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42289,9 +42294,9 @@ export const grammarQuestions = [
   "id": "q1678",
   "question": "Từ 'remuneration' thuộc từ loại gì?",
   "options": {
-    "A": "Trạng từ",
-    "B": "Động từ",
-    "C": "Tính từ",
+    "A": "Động từ",
+    "B": "Tính từ",
+    "C": "Trạng từ",
     "D": "Danh từ"
   },
   "correct_answer": "D",
@@ -42311,12 +42316,12 @@ export const grammarQuestions = [
   "id": "q1679",
   "question": "Từ 'stipulate' thuộc từ loại gì?",
   "options": {
-    "A": "Danh từ",
-    "B": "Động từ",
-    "C": "Tính từ",
-    "D": "Trạng từ"
+    "A": "Trạng từ",
+    "B": "Danh từ",
+    "C": "Động từ",
+    "D": "Tính từ"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **stipulate** kết thúc bằng đuôi **-ate**. Hậu tố **-ate** là dấu hiệu nhận biết của **Động từ**.",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42333,12 +42338,12 @@ export const grammarQuestions = [
   "id": "q1680",
   "question": "Từ 'redundant' thuộc từ loại gì?",
   "options": {
-    "A": "Tính từ",
-    "B": "Danh từ",
+    "A": "Danh từ",
+    "B": "Tính từ",
     "C": "Động từ",
     "D": "Trạng từ"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Nhận dạng hậu tố",
   "explanation_reason": "Từ **redundant** kết thúc bằng đuôi **-ant**. Hậu tố **-ant** thường dùng để cấu tạo nên **Tính từ** (hoặc danh từ chỉ người).",
   "explanation_grammar": "Nhận dạng hậu tố từ loại",
@@ -42354,23 +42359,28 @@ export const grammarQuestions = [
 ,
 {
   "id": "q1681",
-  "question": "The old tree fell yesterday.",
+  "question": "The old tree fell during the storm.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V",
+    "A": "S-V-C",
+    "B": "S-V-O-C",
     "C": "S-V-O",
-    "D": "S-V-C"
+    "D": "S-V"
   },
   "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The old tree' + Động từ 'fell'. 'yesterday' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The old tree' + Động từ 'fell'. Cụm giới từ 'during the storm' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Cây cổ thụ đã đổ vào ngày hôm qua.",
+  "translation": "Cây cổ thụ đã đổ trong cơn bão.",
   "core_vocabulary": [
     {
       "word": "fall",
       "type": "v.",
-      "meaning": "ngã, đổ"
+      "meaning": "đổ, ngã"
+    },
+    {
+      "word": "storm",
+      "type": "n.",
+      "meaning": "cơn bão"
     }
   ]
 },
@@ -42379,11 +42389,11 @@ export const grammarQuestions = [
   "question": "The chef prepared a delicious meal.",
   "options": {
     "A": "S-V-C",
-    "B": "S-V-O",
-    "C": "S-V",
+    "B": "S-V",
+    "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The chef' + Động từ 'prepared' + Tân ngữ 'a delicious meal'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Ngoại động từ - Tân ngữ)",
@@ -42400,12 +42410,12 @@ export const grammarQuestions = [
   "id": "q1683",
   "question": "The weather became unexpectedly cold.",
   "options": {
-    "A": "S-V",
+    "A": "S-V-C",
     "B": "S-V-O",
     "C": "S-V-O-C",
-    "D": "S-V-C"
+    "D": "S-V"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The weather' + Động từ nối 'became' + Bổ ngữ 'cold'. 'unexpectedly' là trạng từ bổ nghĩa cho cold.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -42422,10 +42432,10 @@ export const grammarQuestions = [
   "id": "q1684",
   "question": "The committee elected him chairman.",
   "options": {
-    "A": "S-V",
+    "A": "S-V-O",
     "B": "S-V-O-C",
-    "C": "S-V-C",
-    "D": "S-V-O"
+    "C": "S-V",
+    "D": "S-V-C"
   },
   "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
@@ -42442,23 +42452,28 @@ export const grammarQuestions = [
 },
 {
   "id": "q1685",
-  "question": "The mysterious bird vanished quickly.",
+  "question": "The mysterious bird vanished into the fog.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O",
-    "C": "S-V-C",
+    "A": "S-V-O",
+    "B": "S-V-C",
+    "C": "S-V",
     "D": "S-V-O-C"
   },
   "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The mysterious bird' + Động từ 'vanished'. 'quickly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The mysterious bird' + Động từ 'vanished'. Cụm giới từ 'into the fog' là trạng ngữ chỉ nơi chốn, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Con chim bí ẩn đã biến mất một cách nhanh chóng.",
+  "translation": "Con chim bí ẩn đã biến mất vào trong màn sương.",
   "core_vocabulary": [
     {
       "word": "vanish",
       "type": "v.",
       "meaning": "biến mất"
+    },
+    {
+      "word": "fog",
+      "type": "n.",
+      "meaning": "sương mù"
     }
   ]
 },
@@ -42467,9 +42482,9 @@ export const grammarQuestions = [
   "question": "The students finished their assignments.",
   "options": {
     "A": "S-V-O",
-    "B": "S-V",
-    "C": "S-V-C",
-    "D": "S-V-O-C"
+    "B": "S-V-C",
+    "C": "S-V-O-C",
+    "D": "S-V"
   },
   "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
@@ -42488,10 +42503,10 @@ export const grammarQuestions = [
   "id": "q1687",
   "question": "The fresh soup smells wonderful.",
   "options": {
-    "A": "S-V-O-C",
+    "A": "S-V",
     "B": "S-V-C",
-    "C": "S-V-O",
-    "D": "S-V"
+    "C": "S-V-O-C",
+    "D": "S-V-O"
   },
   "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
@@ -42510,12 +42525,12 @@ export const grammarQuestions = [
   "id": "q1688",
   "question": "The noise drove the neighbors crazy.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-C",
-    "C": "S-V-O-C",
+    "A": "S-V-O-C",
+    "B": "S-V-O",
+    "C": "S-V-C",
     "D": "S-V"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The noise' + Động từ 'drove' + Tân ngữ 'the neighbors' + Bổ ngữ tân ngữ 'crazy'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -42532,12 +42547,12 @@ export const grammarQuestions = [
   "id": "q1689",
   "question": "The heavy rain finally stopped.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V-O",
-    "C": "S-V-O-C",
-    "D": "S-V"
+    "A": "S-V-O-C",
+    "B": "S-V",
+    "C": "S-V-C",
+    "D": "S-V-O"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The heavy rain' + Động từ 'stopped'. 'finally' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -42554,12 +42569,12 @@ export const grammarQuestions = [
   "id": "q1690",
   "question": "The detective found a hidden clue.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V-C",
-    "C": "S-V-O",
-    "D": "S-V"
+    "A": "S-V",
+    "B": "S-V-O-C",
+    "C": "S-V-C",
+    "D": "S-V-O"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The detective' + Động từ 'found' + Tân ngữ 'a hidden clue'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -42582,11 +42597,11 @@ export const grammarQuestions = [
   "question": "The newborn puppies look adorable.",
   "options": {
     "A": "S-V-O-C",
-    "B": "S-V-C",
-    "C": "S-V",
+    "B": "S-V",
+    "C": "S-V-C",
     "D": "S-V-O"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The newborn puppies' + Động từ tri giác 'look' + Bổ ngữ 'adorable'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -42603,12 +42618,12 @@ export const grammarQuestions = [
   "id": "q1692",
   "question": "The judges declared the painting a masterpiece.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V-O",
-    "C": "S-V-C",
-    "D": "S-V"
+    "A": "S-V-C",
+    "B": "S-V",
+    "C": "S-V-O",
+    "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The judges' + Động từ 'declared' + Tân ngữ 'the painting' + Bổ ngữ tân ngữ 'a masterpiece'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -42623,23 +42638,28 @@ export const grammarQuestions = [
 },
 {
   "id": "q1693",
-  "question": "The tired children slept deeply.",
+  "question": "The tired children slept through the night.",
   "options": {
-    "A": "S-V-O-C",
+    "A": "S-V-O",
     "B": "S-V",
-    "C": "S-V-C",
-    "D": "S-V-O"
+    "C": "S-V-O-C",
+    "D": "S-V-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The tired children' + Động từ 'slept'. 'deeply' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The tired children' + Động từ 'slept'. Cụm giới từ 'through the night' là trạng ngữ chỉ thời lượng, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Những đứa trẻ mệt mỏi đã ngủ say.",
+  "translation": "Lũ trẻ mệt lử đã ngủ suốt đêm.",
   "core_vocabulary": [
     {
-      "word": "deeply",
-      "type": "adv.",
-      "meaning": "sâu, say (ngủ)"
+      "word": "tired",
+      "type": "adj.",
+      "meaning": "mệt"
+    },
+    {
+      "word": "sleep",
+      "type": "v.",
+      "meaning": "ngủ"
     }
   ]
 },
@@ -42648,11 +42668,11 @@ export const grammarQuestions = [
   "question": "The author published a new novel.",
   "options": {
     "A": "S-V-C",
-    "B": "S-V-O",
-    "C": "S-V",
-    "D": "S-V-O-C"
+    "B": "S-V",
+    "C": "S-V-O-C",
+    "D": "S-V-O"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The author' + Động từ 'published' + Tân ngữ 'a new novel'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -42669,12 +42689,12 @@ export const grammarQuestions = [
   "id": "q1695",
   "question": "The ocean water feels freezing.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O-C",
-    "C": "S-V-O",
-    "D": "S-V-C"
+    "A": "S-V-O-C",
+    "B": "S-V-O",
+    "C": "S-V-C",
+    "D": "S-V"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The ocean water' + Động từ tri giác 'feels' + Bổ ngữ 'freezing'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -42691,12 +42711,12 @@ export const grammarQuestions = [
   "id": "q1696",
   "question": "She painted her bedroom walls blue.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V",
-    "C": "S-V-O",
-    "D": "S-V-C"
+    "A": "S-V-C",
+    "B": "S-V-O-C",
+    "C": "S-V",
+    "D": "S-V-O"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'She' + Động từ 'painted' + Tân ngữ 'her bedroom walls' + Bổ ngữ tân ngữ 'blue'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -42711,23 +42731,28 @@ export const grammarQuestions = [
 },
 {
   "id": "q1697",
-  "question": "The wild flowers bloomed early.",
+  "question": "The wild flowers bloomed along the riverbank.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O",
-    "C": "S-V-C",
-    "D": "S-V-O-C"
+    "A": "S-V-O",
+    "B": "S-V-C",
+    "C": "S-V-O-C",
+    "D": "S-V"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The wild flowers' + Động từ 'bloomed'. 'early' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The wild flowers' + Động từ 'bloomed'. Cụm giới từ 'along the riverbank' là trạng ngữ chỉ nơi chốn, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Những bông hoa dại đã nở sớm.",
+  "translation": "Những bông hoa dại đã nở dọc bờ sông.",
   "core_vocabulary": [
     {
       "word": "bloom",
       "type": "v.",
       "meaning": "nở hoa"
+    },
+    {
+      "word": "riverbank",
+      "type": "n.",
+      "meaning": "bờ sông"
     }
   ]
 },
@@ -42735,12 +42760,12 @@ export const grammarQuestions = [
   "id": "q1698",
   "question": "The scientists conducted multiple experiments.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V-O",
-    "C": "S-V-C",
-    "D": "S-V"
+    "A": "S-V-O",
+    "B": "S-V-C",
+    "C": "S-V",
+    "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The scientists' + Động từ 'conducted' + Tân ngữ 'multiple experiments'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -42757,9 +42782,9 @@ export const grammarQuestions = [
   "id": "q1699",
   "question": "The final result remained uncertain.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V-O",
-    "C": "S-V",
+    "A": "S-V",
+    "B": "S-V-O-C",
+    "C": "S-V-O",
     "D": "S-V-C"
   },
   "correct_answer": "D",
@@ -42780,11 +42805,11 @@ export const grammarQuestions = [
   "question": "They kept the laboratory doors locked.",
   "options": {
     "A": "S-V-C",
-    "B": "S-V",
-    "C": "S-V-O-C",
+    "B": "S-V-O-C",
+    "C": "S-V",
     "D": "S-V-O"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'They' + Động từ 'kept' + Tân ngữ 'the laboratory doors' + Bổ ngữ tân ngữ 'locked'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -42799,23 +42824,28 @@ export const grammarQuestions = [
 },
 {
   "id": "q1701",
-  "question": "The ancient bridge collapsed suddenly.",
+  "question": "The ancient bridge collapsed under the weight.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V-O",
-    "C": "S-V-O-C",
-    "D": "S-V"
+    "A": "S-V-O",
+    "B": "S-V-O-C",
+    "C": "S-V",
+    "D": "S-V-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The ancient bridge' + Động từ 'collapsed'. 'suddenly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The ancient bridge' + Động từ 'collapsed'. Cụm giới từ 'under the weight' là trạng ngữ chỉ nguyên nhân, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Cây cầu cổ đã sụp đổ đột ngột.",
+  "translation": "Cây cầu cổ đã sập dưới sức nặng.",
   "core_vocabulary": [
     {
       "word": "collapse",
       "type": "v.",
-      "meaning": "sụp đổ"
+      "meaning": "sập, đổ"
+    },
+    {
+      "word": "weight",
+      "type": "n.",
+      "meaning": "sức nặng"
     }
   ]
 },
@@ -42823,12 +42853,12 @@ export const grammarQuestions = [
   "id": "q1702",
   "question": "The musicians played a classical symphony.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V-O-C",
-    "C": "S-V",
-    "D": "S-V-O"
+    "A": "S-V-O",
+    "B": "S-V",
+    "C": "S-V-C",
+    "D": "S-V-O-C"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The musicians' + Động từ 'played' + Tân ngữ 'a classical symphony'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -42846,11 +42876,11 @@ export const grammarQuestions = [
   "question": "The chocolate cake tasted incredibly sweet.",
   "options": {
     "A": "S-V-O",
-    "B": "S-V",
-    "C": "S-V-C",
+    "B": "S-V-C",
+    "C": "S-V",
     "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The chocolate cake' + Động từ tri giác 'tasted' + Bổ ngữ 'sweet'. 'incredibly' là trạng từ.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -42867,9 +42897,9 @@ export const grammarQuestions = [
   "id": "q1704",
   "question": "The audience found the performance inspiring.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V",
-    "C": "S-V-O",
+    "A": "S-V",
+    "B": "S-V-O",
+    "C": "S-V-C",
     "D": "S-V-O-C"
   },
   "correct_answer": "D",
@@ -42890,9 +42920,9 @@ export const grammarQuestions = [
   "question": "The local athletes proved extremely resilient.",
   "options": {
     "A": "S-V-C",
-    "B": "S-V-O-C",
-    "C": "S-V-O",
-    "D": "S-V"
+    "B": "S-V",
+    "C": "S-V-O-C",
+    "D": "S-V-O"
   },
   "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
@@ -42910,28 +42940,28 @@ export const grammarQuestions = [
 ,
 {
   "id": "q1706",
-  "question": "The energetic puppy barked loudly.",
+  "question": "The energetic puppy barked at the postman.",
   "options": {
     "A": "S-V-C",
-    "B": "S-V",
-    "C": "S-V-O",
+    "B": "S-V-O",
+    "C": "S-V",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The energetic puppy' + Động từ 'barked'. 'loudly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The energetic puppy' + Động từ 'barked'. Cụm giới từ 'at the postman' là trạng ngữ bổ trợ, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Chú chó con năng động sủa rất to.",
+  "translation": "Chú cún hiếu động đã sủa người đưa thư.",
   "core_vocabulary": [
-    {
-      "word": "energetic",
-      "type": "adj.",
-      "meaning": "năng động"
-    },
     {
       "word": "bark",
       "type": "v.",
       "meaning": "sủa"
+    },
+    {
+      "word": "postman",
+      "type": "n.",
+      "meaning": "người đưa thư"
     }
   ]
 },
@@ -42939,12 +42969,12 @@ export const grammarQuestions = [
   "id": "q1707",
   "question": "My sister bought a vintage camera.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V",
-    "C": "S-V-O",
-    "D": "S-V-O-C"
+    "A": "S-V",
+    "B": "S-V-O",
+    "C": "S-V-O-C",
+    "D": "S-V-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'My sister' + Động từ 'bought' + Tân ngữ 'a vintage camera'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -42961,12 +42991,12 @@ export const grammarQuestions = [
   "id": "q1708",
   "question": "The vegetable soup tasted quite salty.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V",
-    "C": "S-V-O",
-    "D": "S-V-C"
+    "A": "S-V-C",
+    "B": "S-V-O",
+    "C": "S-V-O-C",
+    "D": "S-V"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The vegetable soup' + Động từ tri giác 'tasted' + Bổ ngữ 'salty'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -42983,12 +43013,12 @@ export const grammarQuestions = [
   "id": "q1709",
   "question": "The news made the citizens anxious.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V-C",
-    "C": "S-V-O",
+    "A": "S-V-C",
+    "B": "S-V-O",
+    "C": "S-V-O-C",
     "D": "S-V"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The news' + Động từ 'made' + Tân ngữ 'the citizens' + Bổ ngữ tân ngữ 'anxious'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -43003,23 +43033,28 @@ export const grammarQuestions = [
 },
 {
   "id": "q1710",
-  "question": "The morning train arrived late.",
+  "question": "The morning train arrived at platform six.",
   "options": {
-    "A": "S-V-C",
+    "A": "S-V-O",
     "B": "S-V",
-    "C": "S-V-O",
-    "D": "S-V-O-C"
+    "C": "S-V-O-C",
+    "D": "S-V-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The morning train' + Động từ 'arrived'. 'late' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The morning train' + Động từ 'arrived'. Cụm giới từ 'at platform six' là trạng ngữ chỉ nơi chốn, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Chuyến tàu sáng đã đến muộn.",
+  "translation": "Chuyến tàu buổi sáng đã vào sân ga số sáu.",
   "core_vocabulary": [
     {
-      "word": "arrive",
-      "type": "v.",
-      "meaning": "đến nơi"
+      "word": "train",
+      "type": "n.",
+      "meaning": "tàu hoả"
+    },
+    {
+      "word": "platform",
+      "type": "n.",
+      "meaning": "sân ga"
     }
   ]
 },
@@ -43027,10 +43062,10 @@ export const grammarQuestions = [
   "id": "q1711",
   "question": "The gardener planted several trees.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V",
+    "A": "S-V-C",
+    "B": "S-V-O-C",
     "C": "S-V-O",
-    "D": "S-V-C"
+    "D": "S-V"
   },
   "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
@@ -43050,11 +43085,11 @@ export const grammarQuestions = [
   "question": "The cloudy sky turned orange.",
   "options": {
     "A": "S-V-O",
-    "B": "S-V",
-    "C": "S-V-C",
+    "B": "S-V-C",
+    "C": "S-V",
     "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The cloudy sky' + Động từ nối 'turned' + Bổ ngữ 'orange'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -43071,12 +43106,12 @@ export const grammarQuestions = [
   "id": "q1713",
   "question": "The voters elected the woman president.",
   "options": {
-    "A": "S-V-O",
+    "A": "S-V-O-C",
     "B": "S-V-C",
     "C": "S-V",
-    "D": "S-V-O-C"
+    "D": "S-V-O"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The voters' + Động từ 'elected' + Tân ngữ 'the woman' + Bổ ngữ tân ngữ 'president'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -43091,23 +43126,28 @@ export const grammarQuestions = [
 },
 {
   "id": "q1714",
-  "question": "The heavy door closed slowly.",
+  "question": "The heavy door closed behind us.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V",
-    "C": "S-V-O",
-    "D": "S-V-O-C"
+    "A": "S-V-O-C",
+    "B": "S-V-C",
+    "C": "S-V",
+    "D": "S-V-O"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The heavy door' + Động từ 'closed'. 'slowly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The heavy door' + Động từ 'closed'. Cụm giới từ 'behind us' là trạng ngữ chỉ nơi chốn, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Cánh cửa nặng nề đã đóng lại một cách chậm chạp.",
+  "translation": "Cánh cửa nặng đã đóng lại sau lưng chúng tôi.",
   "core_vocabulary": [
     {
-      "word": "slowly",
-      "type": "adv.",
-      "meaning": "chậm chạp"
+      "word": "heavy",
+      "type": "adj.",
+      "meaning": "nặng"
+    },
+    {
+      "word": "close",
+      "type": "v.",
+      "meaning": "đóng"
     }
   ]
 },
@@ -43115,12 +43155,12 @@ export const grammarQuestions = [
   "id": "q1715",
   "question": "The expert repaired the machine.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-C",
+    "A": "S-V-C",
+    "B": "S-V-O",
     "C": "S-V",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The expert' + Động từ 'repaired' + Tân ngữ 'the machine'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -43137,9 +43177,9 @@ export const grammarQuestions = [
   "id": "q1716",
   "question": "The milk stayed fresh daily.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V",
-    "C": "S-V-O",
+    "A": "S-V",
+    "B": "S-V-O",
+    "C": "S-V-O-C",
     "D": "S-V-C"
   },
   "correct_answer": "D",
@@ -43159,12 +43199,12 @@ export const grammarQuestions = [
   "id": "q1717",
   "question": "The judge found the man guilty.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O",
-    "C": "S-V-O-C",
-    "D": "S-V-C"
+    "A": "S-V-O-C",
+    "B": "S-V-C",
+    "C": "S-V",
+    "D": "S-V-O"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The judge' + Động từ 'found' + Tân ngữ 'the man' + Bổ ngữ tân ngữ 'guilty'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -43182,11 +43222,11 @@ export const grammarQuestions = [
   "question": "The bright stars shine tonight.",
   "options": {
     "A": "S-V",
-    "B": "S-V-O",
-    "C": "S-V-C",
+    "B": "S-V-C",
+    "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The bright stars' + Động từ 'shine'. 'tonight' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -43203,12 +43243,12 @@ export const grammarQuestions = [
   "id": "q1719",
   "question": "The artist drew a portrait.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V-O",
-    "C": "S-V",
-    "D": "S-V-O-C"
+    "A": "S-V-O",
+    "B": "S-V",
+    "C": "S-V-O-C",
+    "D": "S-V-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The artist' + Động từ 'drew' + Tân ngữ 'a portrait'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -43225,12 +43265,12 @@ export const grammarQuestions = [
   "id": "q1720",
   "question": "The old man looked tired.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V",
-    "C": "S-V-C",
-    "D": "S-V-O-C"
+    "A": "S-V-O-C",
+    "B": "S-V-O",
+    "C": "S-V",
+    "D": "S-V-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The old man' + Động từ tri giác 'looked' + Bổ ngữ 'tired'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -43247,12 +43287,12 @@ export const grammarQuestions = [
   "id": "q1721",
   "question": "Everyone considers the plan effective.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-C",
-    "C": "S-V-O-C",
+    "A": "S-V-O-C",
+    "B": "S-V-O",
+    "C": "S-V-C",
     "D": "S-V"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'Everyone' + Động từ 'considers' + Tân ngữ 'the plan' + Bổ ngữ tân ngữ 'effective'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -43267,23 +43307,28 @@ export const grammarQuestions = [
 },
 {
   "id": "q1722",
-  "question": "The cold water boiled eventually.",
+  "question": "The cold water boiled on the stove.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V",
-    "C": "S-V-O",
-    "D": "S-V-O-C"
+    "A": "S-V-O",
+    "B": "S-V-O-C",
+    "C": "S-V-C",
+    "D": "S-V"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The cold water' + Động từ 'boiled'. 'eventually' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The cold water' + Động từ 'boiled'. Cụm giới từ 'on the stove' là trạng ngữ chỉ nơi chốn, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Nước lạnh cuối cùng cũng đã sôi.",
+  "translation": "Nước lạnh đã sôi trên bếp.",
   "core_vocabulary": [
     {
-      "word": "eventually",
-      "type": "adv.",
-      "meaning": "cuối cùng"
+      "word": "boil",
+      "type": "v.",
+      "meaning": "sôi"
+    },
+    {
+      "word": "stove",
+      "type": "n.",
+      "meaning": "bếp"
     }
   ]
 },
@@ -43291,12 +43336,12 @@ export const grammarQuestions = [
   "id": "q1723",
   "question": "The child wrote a letter.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O-C",
-    "C": "S-V-O",
-    "D": "S-V-C"
+    "A": "S-V-C",
+    "B": "S-V-O",
+    "C": "S-V",
+    "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The child' + Động từ 'wrote' + Tân ngữ 'a letter'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -43314,11 +43359,11 @@ export const grammarQuestions = [
   "question": "The long movie seemed endless.",
   "options": {
     "A": "S-V-O",
-    "B": "S-V-C",
-    "C": "S-V",
+    "B": "S-V",
+    "C": "S-V-C",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The long movie' + Động từ nối 'seemed' + Bổ ngữ 'endless'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -43335,9 +43380,9 @@ export const grammarQuestions = [
   "id": "q1725",
   "question": "The storm left the city ruined.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V",
-    "C": "S-V-O",
+    "A": "S-V",
+    "B": "S-V-O",
+    "C": "S-V-C",
     "D": "S-V-O-C"
   },
   "correct_answer": "D",
@@ -43357,12 +43402,12 @@ export const grammarQuestions = [
   "id": "q1726",
   "question": "The alarm clock rang early.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-C",
-    "C": "S-V-O",
-    "D": "S-V-O-C"
+    "A": "S-V-C",
+    "B": "S-V-O-C",
+    "C": "S-V",
+    "D": "S-V-O"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The alarm clock' + Động từ 'rang'. 'early' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -43380,11 +43425,11 @@ export const grammarQuestions = [
   "question": "The player kicked the ball.",
   "options": {
     "A": "S-V-O-C",
-    "B": "S-V-O",
-    "C": "S-V",
+    "B": "S-V",
+    "C": "S-V-O",
     "D": "S-V-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The player' + Động từ 'kicked' + Tân ngữ 'the ball'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -43401,12 +43446,12 @@ export const grammarQuestions = [
   "id": "q1728",
   "question": "The white flowers smell sweet.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V",
-    "C": "S-V-C",
-    "D": "S-V-O-C"
+    "A": "S-V",
+    "B": "S-V-O-C",
+    "C": "S-V-O",
+    "D": "S-V-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The white flowers' + Động từ tri giác 'smell' + Bổ ngữ 'sweet'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -43423,12 +43468,12 @@ export const grammarQuestions = [
   "id": "q1729",
   "question": "They appointed the man director.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-C",
-    "C": "S-V-O-C",
-    "D": "S-V"
+    "A": "S-V-O-C",
+    "B": "S-V",
+    "C": "S-V-O",
+    "D": "S-V-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'They' + Động từ 'appointed' + Tân ngữ 'the man' + Bổ ngữ tân ngữ 'director'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -43443,23 +43488,28 @@ export const grammarQuestions = [
 },
 {
   "id": "q1730",
-  "question": "The autumn leaves fell silently.",
+  "question": "The autumn leaves fell onto the path.",
   "options": {
     "A": "S-V-O",
     "B": "S-V-C",
-    "C": "S-V",
-    "D": "S-V-O-C"
+    "C": "S-V-O-C",
+    "D": "S-V"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The autumn leaves' + Động từ 'fell'. 'silently' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The autumn leaves' + Động từ 'fell'. Cụm giới từ 'onto the path' là trạng ngữ chỉ nơi chốn, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Lá thu rơi trong im lặng.",
+  "translation": "Lá thu đã rụng xuống lối đi.",
   "core_vocabulary": [
     {
-      "word": "silently",
-      "type": "adv.",
-      "meaning": "một cách im lặng"
+      "word": "autumn",
+      "type": "n.",
+      "meaning": "mùa thu"
+    },
+    {
+      "word": "path",
+      "type": "n.",
+      "meaning": "lối đi"
     }
   ]
 }
@@ -43468,12 +43518,12 @@ export const grammarQuestions = [
   "id": "q1731",
   "question": "The mechanic fixed the broken engine.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V-O",
-    "C": "S-V-O-C",
-    "D": "S-V"
+    "A": "S-V-O-C",
+    "B": "S-V",
+    "C": "S-V-C",
+    "D": "S-V-O"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The mechanic' + Động từ 'fixed' + Tân ngữ 'the broken engine'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -43496,9 +43546,9 @@ export const grammarQuestions = [
   "question": "The fresh bread smells delicious.",
   "options": {
     "A": "S-V-C",
-    "B": "S-V-O-C",
-    "C": "S-V",
-    "D": "S-V-O"
+    "B": "S-V-O",
+    "C": "S-V-O-C",
+    "D": "S-V"
   },
   "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
@@ -43515,23 +43565,28 @@ export const grammarQuestions = [
 },
 {
   "id": "q1733",
-  "question": "The heavy curtains opened slowly.",
+  "question": "The heavy curtains opened at sunrise.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-C",
+    "A": "S-V-C",
+    "B": "S-V",
     "C": "S-V-O",
     "D": "S-V-O-C"
   },
   "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The heavy curtains' + Động từ 'opened'. 'slowly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The heavy curtains' + Động từ 'opened'. Cụm giới từ 'at sunrise' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Những tấm rèm dày đã mở ra một cách chậm chạp.",
+  "translation": "Những tấm rèm nặng đã mở ra lúc bình minh.",
   "core_vocabulary": [
     {
       "word": "curtain",
       "type": "n.",
-      "meaning": "tấm rèm"
+      "meaning": "rèm cửa"
+    },
+    {
+      "word": "sunrise",
+      "type": "n.",
+      "meaning": "bình minh"
     }
   ]
 },
@@ -43539,12 +43594,12 @@ export const grammarQuestions = [
   "id": "q1734",
   "question": "They found the long movie boring.",
   "options": {
-    "A": "S-V-O",
+    "A": "S-V-O-C",
     "B": "S-V-C",
     "C": "S-V",
-    "D": "S-V-O-C"
+    "D": "S-V-O"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'They' + Động từ 'found' + Tân ngữ 'the long movie' + Bổ ngữ tân ngữ 'boring'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -43561,12 +43616,12 @@ export const grammarQuestions = [
   "id": "q1735",
   "question": "The secretary typed the weekly report.",
   "options": {
-    "A": "S-V-O",
+    "A": "S-V",
     "B": "S-V-O-C",
     "C": "S-V-C",
-    "D": "S-V"
+    "D": "S-V-O"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The secretary' + Động từ 'typed' + Tân ngữ 'the weekly report'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -43589,11 +43644,11 @@ export const grammarQuestions = [
   "question": "The milk turned sour quickly.",
   "options": {
     "A": "S-V-O",
-    "B": "S-V",
-    "C": "S-V-C",
+    "B": "S-V-C",
+    "C": "S-V",
     "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The milk' + Động từ nối 'turned' + Bổ ngữ 'sour'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -43608,23 +43663,28 @@ export const grammarQuestions = [
 },
 {
   "id": "q1737",
-  "question": "The tired guests left early.",
+  "question": "The tired guests left after midnight.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V-O",
-    "C": "S-V-O-C",
-    "D": "S-V"
+    "A": "S-V-O",
+    "B": "S-V-O-C",
+    "C": "S-V",
+    "D": "S-V-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The tired guests' + Động từ 'left'. 'early' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The tired guests' + Động từ 'left'. Cụm giới từ 'after midnight' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Những vị khách mệt mỏi đã rời đi sớm.",
+  "translation": "Những vị khách mệt mỏi đã ra về sau nửa đêm.",
   "core_vocabulary": [
     {
       "word": "guest",
       "type": "n.",
-      "meaning": "vị khách"
+      "meaning": "khách"
+    },
+    {
+      "word": "leave",
+      "type": "v.",
+      "meaning": "rời đi"
     }
   ]
 },
@@ -43632,12 +43692,12 @@ export const grammarQuestions = [
   "id": "q1738",
   "question": "The coach called the player a genius.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O",
-    "C": "S-V-C",
-    "D": "S-V-O-C"
+    "A": "S-V-O-C",
+    "B": "S-V-C",
+    "C": "S-V",
+    "D": "S-V-O"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The coach' + Động từ 'called' + Tân ngữ 'the player' + Bổ ngữ tân ngữ 'a genius'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -43657,23 +43717,28 @@ export const grammarQuestions = [
 },
 {
   "id": "q1739",
-  "question": "The bright sun rose eventually.",
+  "question": "The bright sun rose above the hills.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-C",
-    "C": "S-V-O",
+    "A": "S-V-C",
+    "B": "S-V-O",
+    "C": "S-V",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The bright sun' + Động từ 'rose'. 'eventually' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The bright sun' + Động từ 'rose'. Cụm giới từ 'above the hills' là trạng ngữ chỉ nơi chốn, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Mặt trời rực rỡ cuối cùng cũng đã mọc.",
+  "translation": "Mặt trời rực rỡ đã nhô lên trên những ngọn đồi.",
   "core_vocabulary": [
     {
       "word": "rise",
       "type": "v.",
-      "meaning": "mọc (mặt trời)"
+      "meaning": "mọc, nhô lên"
+    },
+    {
+      "word": "hill",
+      "type": "n.",
+      "meaning": "ngọn đồi"
     }
   ]
 },
@@ -43681,12 +43746,12 @@ export const grammarQuestions = [
   "id": "q1740",
   "question": "The company hired five new employees.",
   "options": {
-    "A": "S-V-C",
+    "A": "S-V-O",
     "B": "S-V-O-C",
     "C": "S-V",
-    "D": "S-V-O"
+    "D": "S-V-C"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The company' + Động từ 'hired' + Tân ngữ 'five new employees'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -43703,10 +43768,10 @@ export const grammarQuestions = [
   "id": "q1741",
   "question": "The difficult project proved successful.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V",
+    "A": "S-V-O",
+    "B": "S-V-O-C",
     "C": "S-V-C",
-    "D": "S-V-O"
+    "D": "S-V"
   },
   "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
@@ -43726,11 +43791,11 @@ export const grammarQuestions = [
   "question": "She kept her messy room clean.",
   "options": {
     "A": "S-V-O",
-    "B": "S-V-O-C",
-    "C": "S-V-C",
-    "D": "S-V"
+    "B": "S-V-C",
+    "C": "S-V",
+    "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'She' + Động từ 'kept' + Tân ngữ 'her messy room' + Bổ ngữ tân ngữ 'clean'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -43745,23 +43810,28 @@ export const grammarQuestions = [
 },
 {
   "id": "q1743",
-  "question": "The old clock stopped suddenly.",
+  "question": "The old clock stopped at noon.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-O-C",
+    "A": "S-V-O-C",
+    "B": "S-V-C",
     "C": "S-V",
-    "D": "S-V-C"
+    "D": "S-V-O"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The old clock' + Động từ 'stopped'. 'suddenly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The old clock' + Động từ 'stopped'. Cụm giới từ 'at noon' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Chiếc đồng hồ cũ đã dừng lại đột ngột.",
+  "translation": "Chiếc đồng hồ cũ đã dừng lại vào lúc trưa.",
   "core_vocabulary": [
     {
-      "word": "suddenly",
-      "type": "adv.",
-      "meaning": "đột ngột"
+      "word": "clock",
+      "type": "n.",
+      "meaning": "đồng hồ"
+    },
+    {
+      "word": "noon",
+      "type": "n.",
+      "meaning": "buổi trưa"
     }
   ]
 },
@@ -43770,9 +43840,9 @@ export const grammarQuestions = [
   "question": "The hungry cat caught a mouse.",
   "options": {
     "A": "S-V-O",
-    "B": "S-V-O-C",
-    "C": "S-V-C",
-    "D": "S-V"
+    "B": "S-V",
+    "C": "S-V-O-C",
+    "D": "S-V-C"
   },
   "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
@@ -43813,12 +43883,12 @@ export const grammarQuestions = [
   "id": "q1746",
   "question": "We named the small kitten Shadow.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V-C",
-    "C": "S-V",
-    "D": "S-V-O"
+    "A": "S-V",
+    "B": "S-V-O-C",
+    "C": "S-V-O",
+    "D": "S-V-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'We' + Động từ 'named' + Tân ngữ 'the small kitten' + Bổ ngữ tân ngữ 'Shadow'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -43833,23 +43903,28 @@ export const grammarQuestions = [
 },
 {
   "id": "q1747",
-  "question": "The forest fire spread rapidly.",
+  "question": "The forest fire spread across the valley.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V-C",
+    "A": "S-V-O",
+    "B": "S-V-O-C",
     "C": "S-V",
-    "D": "S-V-O"
+    "D": "S-V-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The forest fire' + Động từ 'spread'. 'rapidly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The forest fire' + Động từ 'spread'. Cụm giới từ 'across the valley' là trạng ngữ chỉ nơi chốn, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Đám cháy rừng lan rộng nhanh chóng.",
+  "translation": "Đám cháy rừng đã lan khắp thung lũng.",
   "core_vocabulary": [
     {
-      "word": "rapidly",
-      "type": "adv.",
-      "meaning": "nhanh chóng"
+      "word": "spread",
+      "type": "v.",
+      "meaning": "lan rộng"
+    },
+    {
+      "word": "valley",
+      "type": "n.",
+      "meaning": "thung lũng"
     }
   ]
 },
@@ -43858,11 +43933,11 @@ export const grammarQuestions = [
   "question": "The customer ordered a hot coffee.",
   "options": {
     "A": "S-V-C",
-    "B": "S-V",
-    "C": "S-V-O-C",
-    "D": "S-V-O"
+    "B": "S-V-O",
+    "C": "S-V",
+    "D": "S-V-O-C"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The customer' + Động từ 'ordered' + Tân ngữ 'a hot coffee'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -43879,12 +43954,12 @@ export const grammarQuestions = [
   "id": "q1749",
   "question": "The hikers felt extremely tired.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O-C",
-    "C": "S-V-C",
-    "D": "S-V-O"
+    "A": "S-V-O-C",
+    "B": "S-V-O",
+    "C": "S-V",
+    "D": "S-V-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The hikers' + Động từ tri giác 'felt' + Bổ ngữ 'tired'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -43901,12 +43976,12 @@ export const grammarQuestions = [
   "id": "q1750",
   "question": "The wind blew the door open.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-C",
-    "C": "S-V-O",
-    "D": "S-V-O-C"
+    "A": "S-V-O",
+    "B": "S-V",
+    "C": "S-V-O-C",
+    "D": "S-V-C"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The wind' + Động từ 'blew' + Tân ngữ 'the door' + Bổ ngữ tân ngữ 'open'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -43923,12 +43998,12 @@ export const grammarQuestions = [
   "id": "q1751",
   "question": "The dark clouds disappeared completely.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V",
-    "C": "S-V-O",
-    "D": "S-V-O-C"
+    "A": "S-V",
+    "B": "S-V-O",
+    "C": "S-V-O-C",
+    "D": "S-V-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The dark clouds' + Động từ 'disappeared'. 'completely' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -43945,12 +44020,12 @@ export const grammarQuestions = [
   "id": "q1752",
   "question": "The little boy kicked the ball.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O-C",
-    "C": "S-V-O",
-    "D": "S-V-C"
+    "A": "S-V-O-C",
+    "B": "S-V-O",
+    "C": "S-V-C",
+    "D": "S-V"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The little boy' + Động từ 'kicked' + Tân ngữ 'the ball'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -43967,12 +44042,12 @@ export const grammarQuestions = [
   "id": "q1753",
   "question": "The lake water remained calm.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V-O",
-    "C": "S-V",
-    "D": "S-V-C"
+    "A": "S-V-C",
+    "B": "S-V",
+    "C": "S-V-O-C",
+    "D": "S-V-O"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The lake water' + Động từ nối 'remained' + Bổ ngữ 'calm'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -43990,11 +44065,11 @@ export const grammarQuestions = [
   "question": "The judge declared him the winner.",
   "options": {
     "A": "S-V-O",
-    "B": "S-V-O-C",
-    "C": "S-V-C",
-    "D": "S-V"
+    "B": "S-V-C",
+    "C": "S-V",
+    "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The judge' + Động từ 'declared' + Tân ngữ 'him' + Bổ ngữ tân ngữ 'the winner'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -44011,12 +44086,12 @@ export const grammarQuestions = [
   "id": "q1755",
   "question": "The student asked a difficult question.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O-C",
-    "C": "S-V-O",
-    "D": "S-V-C"
+    "A": "S-V-O-C",
+    "B": "S-V-O",
+    "C": "S-V-C",
+    "D": "S-V"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The student' + Động từ 'asked' + Tân ngữ 'a difficult question'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44032,23 +44107,28 @@ export const grammarQuestions = [
 ,
 {
   "id": "q1756",
-  "question": "The heavy gate locked automatically.",
+  "question": "The heavy gate locked at closing time.",
   "options": {
-    "A": "S-V-O-C",
+    "A": "S-V-C",
     "B": "S-V",
-    "C": "S-V-O",
-    "D": "S-V-C"
+    "C": "S-V-O-C",
+    "D": "S-V-O"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The heavy gate' + Động từ 'locked'. 'automatically' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The heavy gate' + Động từ 'locked'. Cụm giới từ 'at closing time' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Cánh cổng nặng nề tự động khóa lại.",
+  "translation": "Cánh cổng nặng đã khoá lại vào giờ đóng cửa.",
   "core_vocabulary": [
     {
-      "word": "automatically",
-      "type": "adv.",
-      "meaning": "tự động"
+      "word": "gate",
+      "type": "n.",
+      "meaning": "cổng"
+    },
+    {
+      "word": "lock",
+      "type": "v.",
+      "meaning": "khoá"
     }
   ]
 },
@@ -44056,12 +44136,12 @@ export const grammarQuestions = [
   "id": "q1757",
   "question": "The waiter served the appetizer.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V-O",
+    "A": "S-V-O",
+    "B": "S-V-C",
     "C": "S-V",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The waiter' + Động từ 'served' + Tân ngữ 'the appetizer'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44078,12 +44158,12 @@ export const grammarQuestions = [
   "id": "q1758",
   "question": "The sunset looks absolutely gorgeous.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O",
-    "C": "S-V-O-C",
-    "D": "S-V-C"
+    "A": "S-V-O",
+    "B": "S-V-O-C",
+    "C": "S-V-C",
+    "D": "S-V"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The sunset' + Động từ tri giác 'looks' + Bổ ngữ 'gorgeous'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -44100,12 +44180,12 @@ export const grammarQuestions = [
   "id": "q1759",
   "question": "The news made everyone happy.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O-C",
+    "A": "S-V-O",
+    "B": "S-V",
     "C": "S-V-C",
-    "D": "S-V-O"
+    "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The news' + Động từ 'made' + Tân ngữ 'everyone' + Bổ ngữ tân ngữ 'happy'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -44120,23 +44200,28 @@ export const grammarQuestions = [
 },
 {
   "id": "q1760",
-  "question": "The tiny seed grew slowly.",
+  "question": "The tiny seed grew into a tall tree.",
   "options": {
     "A": "S-V",
     "B": "S-V-O",
     "C": "S-V-C",
     "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The tiny seed' + Động từ 'grew'. 'slowly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The tiny seed' + Động từ 'grew'. Cụm giới từ 'into a tall tree' là trạng ngữ bổ trợ, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Hạt giống nhỏ bé lớn lên một cách chậm chạp.",
+  "translation": "Hạt giống bé nhỏ đã lớn lên thành một cái cây cao.",
   "core_vocabulary": [
     {
-      "word": "tiny",
-      "type": "adj.",
-      "meaning": "nhỏ bé"
+      "word": "seed",
+      "type": "n.",
+      "meaning": "hạt giống"
+    },
+    {
+      "word": "grow",
+      "type": "v.",
+      "meaning": "lớn lên"
     }
   ]
 },
@@ -44144,10 +44229,10 @@ export const grammarQuestions = [
   "id": "q1761",
   "question": "The artist mixed the colors.",
   "options": {
-    "A": "S-V",
+    "A": "S-V-C",
     "B": "S-V-O",
-    "C": "S-V-C",
-    "D": "S-V-O-C"
+    "C": "S-V-O-C",
+    "D": "S-V"
   },
   "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
@@ -44167,9 +44252,9 @@ export const grammarQuestions = [
   "question": "The old car seems unreliable.",
   "options": {
     "A": "S-V-C",
-    "B": "S-V-O-C",
-    "C": "S-V-O",
-    "D": "S-V"
+    "B": "S-V",
+    "C": "S-V-O-C",
+    "D": "S-V-O"
   },
   "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
@@ -44210,12 +44295,12 @@ export const grammarQuestions = [
   "id": "q1764",
   "question": "The winter storm arrived.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V",
-    "C": "S-V-O-C",
-    "D": "S-V-C"
+    "A": "S-V-O-C",
+    "B": "S-V-C",
+    "C": "S-V-O",
+    "D": "S-V"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The winter storm' + Động từ 'arrived'.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -44232,12 +44317,12 @@ export const grammarQuestions = [
   "id": "q1765",
   "question": "The chef tasted the sauce.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V-C",
-    "C": "S-V-O",
-    "D": "S-V"
+    "A": "S-V",
+    "B": "S-V-O",
+    "C": "S-V-O-C",
+    "D": "S-V-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The chef' + Động từ 'tasted' + Tân ngữ 'the sauce'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44254,12 +44339,12 @@ export const grammarQuestions = [
   "id": "q1766",
   "question": "The mountain air feels crisp.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V-C",
+    "A": "S-V-C",
+    "B": "S-V-O-C",
     "C": "S-V",
     "D": "S-V-O"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The mountain air' + Động từ tri giác 'feels' + Bổ ngữ 'crisp'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -44276,12 +44361,12 @@ export const grammarQuestions = [
   "id": "q1767",
   "question": "She called the decision unfair.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-C",
-    "C": "S-V-O-C",
-    "D": "S-V"
+    "A": "S-V-C",
+    "B": "S-V",
+    "C": "S-V-O",
+    "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'She' + Động từ 'called' + Tân ngữ 'the decision' + Bổ ngữ tân ngữ 'unfair'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -44298,12 +44383,12 @@ export const grammarQuestions = [
   "id": "q1768",
   "question": "The phone rang twice.",
   "options": {
-    "A": "S-V-C",
+    "A": "S-V-O",
     "B": "S-V-O-C",
-    "C": "S-V",
-    "D": "S-V-O"
+    "C": "S-V-C",
+    "D": "S-V"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The phone' + Động từ 'rang'. 'twice' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -44321,11 +44406,11 @@ export const grammarQuestions = [
   "question": "The delivery person left the package.",
   "options": {
     "A": "S-V-C",
-    "B": "S-V",
-    "C": "S-V-O",
+    "B": "S-V-O",
+    "C": "S-V",
     "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The delivery person' + Động từ 'left' + Tân ngữ 'the package'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44342,12 +44427,12 @@ export const grammarQuestions = [
   "id": "q1770",
   "question": "The coffee stayed hot.",
   "options": {
-    "A": "S-V",
+    "A": "S-V-C",
     "B": "S-V-O-C",
     "C": "S-V-O",
-    "D": "S-V-C"
+    "D": "S-V"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The coffee' + Động từ nối 'stayed' + Bổ ngữ 'hot'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -44364,12 +44449,12 @@ export const grammarQuestions = [
   "id": "q1771",
   "question": "We found the instructions helpful.",
   "options": {
-    "A": "S-V-O-C",
+    "A": "S-V-C",
     "B": "S-V",
-    "C": "S-V-O",
-    "D": "S-V-C"
+    "C": "S-V-O-C",
+    "D": "S-V-O"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'We' + Động từ 'found' + Tân ngữ 'the instructions' + Bổ ngữ tân ngữ 'helpful'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -44384,23 +44469,28 @@ export const grammarQuestions = [
 },
 {
   "id": "q1772",
-  "question": "The glass broke suddenly.",
+  "question": "The glass broke during transport.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O",
-    "C": "S-V-C",
-    "D": "S-V-O-C"
+    "A": "S-V-O",
+    "B": "S-V-C",
+    "C": "S-V-O-C",
+    "D": "S-V"
   },
-  "correct_answer": "C",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The glass' + Động từ 'broke'. 'suddenly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The glass' + Động từ 'broke'. Cụm giới từ 'during transport' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Tấm kính đã vỡ đột ngột.",
+  "translation": "Tấm kính đã vỡ trong quá trình vận chuyển.",
   "core_vocabulary": [
     {
-      "word": "suddenly",
-      "type": "adv.",
-      "meaning": "đột ngột"
+      "word": "glass",
+      "type": "n.",
+      "meaning": "kính"
+    },
+    {
+      "word": "transport",
+      "type": "n.",
+      "meaning": "việc vận chuyển"
     }
   ]
 },
@@ -44408,12 +44498,12 @@ export const grammarQuestions = [
   "id": "q1773",
   "question": "The company launched a campaign.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-O-C",
-    "C": "S-V-C",
-    "D": "S-V"
+    "A": "S-V-C",
+    "B": "S-V-O",
+    "C": "S-V",
+    "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The company' + Động từ 'launched' + Tân ngữ 'a campaign'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44430,12 +44520,12 @@ export const grammarQuestions = [
   "id": "q1774",
   "question": "The situation became quite complicated.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V-O",
-    "C": "S-V",
-    "D": "S-V-C"
+    "A": "S-V-C",
+    "B": "S-V",
+    "C": "S-V-O-C",
+    "D": "S-V-O"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The situation' + Động từ nối 'became' + Bổ ngữ 'complicated'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -44474,12 +44564,12 @@ export const grammarQuestions = [
   "id": "q1776",
   "question": "The plane landed safely.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V-O",
-    "C": "S-V-O-C",
-    "D": "S-V"
+    "A": "S-V-O-C",
+    "B": "S-V",
+    "C": "S-V-O",
+    "D": "S-V-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The plane' + Động từ 'landed'. 'safely' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -44496,12 +44586,12 @@ export const grammarQuestions = [
   "id": "q1777",
   "question": "The gardener watered the roses.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V-O-C",
-    "C": "S-V",
-    "D": "S-V-O"
+    "A": "S-V",
+    "B": "S-V-C",
+    "C": "S-V-O",
+    "D": "S-V-O-C"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The gardener' + Động từ 'watered' + Tân ngữ 'the roses'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44540,12 +44630,12 @@ export const grammarQuestions = [
   "id": "q1779",
   "question": "The jury found him innocent.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V-O-C",
-    "C": "S-V",
-    "D": "S-V-O"
+    "A": "S-V",
+    "B": "S-V-O",
+    "C": "S-V-C",
+    "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The jury' + Động từ 'found' + Tân ngữ 'him' + Bổ ngữ tân ngữ 'innocent'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -44562,12 +44652,12 @@ export const grammarQuestions = [
   "id": "q1780",
   "question": "The morning fog cleared.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V-O",
-    "C": "S-V-C",
-    "D": "S-V"
+    "A": "S-V-C",
+    "B": "S-V",
+    "C": "S-V-O-C",
+    "D": "S-V-O"
   },
-  "correct_answer": "D",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The morning fog' + Động từ 'cleared'.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -44586,11 +44676,11 @@ export const grammarQuestions = [
   "question": "The technician installed the new software.",
   "options": {
     "A": "S-V-C",
-    "B": "S-V-O",
-    "C": "S-V",
+    "B": "S-V",
+    "C": "S-V-O",
     "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The technician' + Động từ 'installed' + Tân ngữ 'the new software'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44610,19 +44700,24 @@ export const grammarQuestions = [
 },
 {
   "id": "q1782",
-  "question": "The ancient volcano erupted violently.",
+  "question": "The ancient volcano erupted in 1815.",
   "options": {
-    "A": "S-V-O",
+    "A": "S-V",
     "B": "S-V-C",
     "C": "S-V-O-C",
-    "D": "S-V"
+    "D": "S-V-O"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The ancient volcano' + Động từ 'erupted'. 'violently' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The ancient volcano' + Động từ 'erupted'. Cụm giới từ 'in 1815' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Núi lửa cổ đại đã phun trào dữ dội.",
+  "translation": "Ngọn núi lửa cổ đã phun trào vào năm 1815.",
   "core_vocabulary": [
+    {
+      "word": "volcano",
+      "type": "n.",
+      "meaning": "núi lửa"
+    },
     {
       "word": "erupt",
       "type": "v.",
@@ -44634,12 +44729,12 @@ export const grammarQuestions = [
   "id": "q1783",
   "question": "The fresh strawberries taste incredibly sweet.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-C",
+    "A": "S-V",
+    "B": "S-V-O",
     "C": "S-V-O-C",
-    "D": "S-V"
+    "D": "S-V-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The fresh strawberries' + Động từ tri giác 'taste' + Bổ ngữ 'sweet'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -44676,19 +44771,24 @@ export const grammarQuestions = [
 },
 {
   "id": "q1785",
-  "question": "The snow melted quickly.",
+  "question": "The snow melted by noon.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O",
-    "C": "S-V-C",
-    "D": "S-V-O-C"
+    "A": "S-V-C",
+    "B": "S-V-O-C",
+    "C": "S-V",
+    "D": "S-V-O"
   },
   "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The snow' + Động từ 'melted'. 'quickly' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The snow' + Động từ 'melted'. Cụm giới từ 'by noon' là trạng ngữ chỉ thời gian, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Tuyết đã tan nhanh chóng.",
+  "translation": "Tuyết đã tan hết trước buổi trưa.",
   "core_vocabulary": [
+    {
+      "word": "snow",
+      "type": "n.",
+      "meaning": "tuyết"
+    },
     {
       "word": "melt",
       "type": "v.",
@@ -44700,12 +44800,12 @@ export const grammarQuestions = [
   "id": "q1786",
   "question": "The energetic children played a game.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O",
-    "C": "S-V-O-C",
-    "D": "S-V-C"
+    "A": "S-V-O",
+    "B": "S-V-C",
+    "C": "S-V",
+    "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The energetic children' + Động từ 'played' + Tân ngữ 'a game'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44723,11 +44823,11 @@ export const grammarQuestions = [
   "question": "The old recipe proved quite useful.",
   "options": {
     "A": "S-V-O",
-    "B": "S-V-O-C",
-    "C": "S-V-C",
+    "B": "S-V-C",
+    "C": "S-V-O-C",
     "D": "S-V"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The old recipe' + Động từ nối 'proved' + Bổ ngữ 'useful'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -44744,12 +44844,12 @@ export const grammarQuestions = [
   "id": "q1788",
   "question": "They consider the proposal highly risky.",
   "options": {
-    "A": "S-V-C",
+    "A": "S-V-O-C",
     "B": "S-V-O",
     "C": "S-V",
-    "D": "S-V-O-C"
+    "D": "S-V-C"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'They' + Động từ 'consider' + Tân ngữ 'the proposal' + Bổ ngữ tân ngữ 'risky'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -44764,23 +44864,28 @@ export const grammarQuestions = [
 },
 {
   "id": "q1789",
-  "question": "The wild horses ran freely.",
+  "question": "The wild horses ran across the plain.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V-O",
-    "C": "S-V",
-    "D": "S-V-C"
+    "A": "S-V-C",
+    "B": "S-V-O-C",
+    "C": "S-V-O",
+    "D": "S-V"
   },
   "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The wild horses' + Động từ 'ran'. 'freely' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The wild horses' + Động từ 'ran'. Cụm giới từ 'across the plain' là trạng ngữ chỉ nơi chốn, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Những con ngựa hoang chạy tự do.",
+  "translation": "Đàn ngựa hoang đã phi qua đồng bằng.",
   "core_vocabulary": [
     {
-      "word": "freely",
-      "type": "adv.",
-      "meaning": "tự do"
+      "word": "wild",
+      "type": "adj.",
+      "meaning": "hoang dã"
+    },
+    {
+      "word": "plain",
+      "type": "n.",
+      "meaning": "đồng bằng"
     }
   ]
 },
@@ -44789,11 +44894,11 @@ export const grammarQuestions = [
   "question": "The clever student solved the puzzle.",
   "options": {
     "A": "S-V",
-    "B": "S-V-C",
-    "C": "S-V-O",
+    "B": "S-V-O",
+    "C": "S-V-C",
     "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The clever student' + Động từ 'solved' + Tân ngữ 'the puzzle'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44810,12 +44915,12 @@ export const grammarQuestions = [
   "id": "q1791",
   "question": "The wooden floor feels very smooth.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V-O",
-    "C": "S-V",
-    "D": "S-V-O-C"
+    "A": "S-V",
+    "B": "S-V-O-C",
+    "C": "S-V-C",
+    "D": "S-V-O"
   },
-  "correct_answer": "A",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The wooden floor' + Động từ tri giác 'feels' + Bổ ngữ 'smooth'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -44832,12 +44937,12 @@ export const grammarQuestions = [
   "id": "q1792",
   "question": "The unexpected news left them speechless.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V-O-C",
+    "A": "S-V",
+    "B": "S-V-C",
     "C": "S-V-O",
-    "D": "S-V"
+    "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The unexpected news' + Động từ 'left' + Tân ngữ 'them' + Bổ ngữ tân ngữ 'speechless'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -44852,23 +44957,28 @@ export const grammarQuestions = [
 },
 {
   "id": "q1793",
-  "question": "The morning meeting started late.",
+  "question": "The morning meeting started in the boardroom.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V",
+    "A": "S-V",
+    "B": "S-V-O",
     "C": "S-V-C",
     "D": "S-V-O-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The morning meeting' + Động từ 'started'. 'late' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The morning meeting' + Động từ 'started'. Cụm giới từ 'in the boardroom' là trạng ngữ chỉ nơi chốn, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Cuộc họp sáng đã bắt đầu muộn.",
+  "translation": "Cuộc họp buổi sáng đã bắt đầu trong phòng họp hội đồng.",
   "core_vocabulary": [
     {
-      "word": "meeting",
+      "word": "boardroom",
       "type": "n.",
-      "meaning": "cuộc họp"
+      "meaning": "phòng họp hội đồng"
+    },
+    {
+      "word": "start",
+      "type": "v.",
+      "meaning": "bắt đầu"
     }
   ]
 },
@@ -44876,12 +44986,12 @@ export const grammarQuestions = [
   "id": "q1794",
   "question": "The famous author signed the book.",
   "options": {
-    "A": "S-V-C",
-    "B": "S-V",
-    "C": "S-V-O",
-    "D": "S-V-O-C"
+    "A": "S-V",
+    "B": "S-V-O",
+    "C": "S-V-O-C",
+    "D": "S-V-C"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The famous author' + Động từ 'signed' + Tân ngữ 'the book'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44898,12 +45008,12 @@ export const grammarQuestions = [
   "id": "q1795",
   "question": "The final decision remains completely unknown.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O",
-    "C": "S-V-O-C",
-    "D": "S-V-C"
+    "A": "S-V-O-C",
+    "B": "S-V",
+    "C": "S-V-C",
+    "D": "S-V-O"
   },
-  "correct_answer": "D",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The final decision' + Động từ nối 'remains' + Bổ ngữ 'unknown'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -44920,12 +45030,12 @@ export const grammarQuestions = [
   "id": "q1796",
   "question": "The community elected the doctor mayor.",
   "options": {
-    "A": "S-V-O-C",
-    "B": "S-V-O",
+    "A": "S-V-O",
+    "B": "S-V-O-C",
     "C": "S-V-C",
     "D": "S-V"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The community' + Động từ 'elected' + Tân ngữ 'the doctor' + Bổ ngữ tân ngữ 'mayor'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -44942,12 +45052,12 @@ export const grammarQuestions = [
   "id": "q1797",
   "question": "The bright moon appeared tonight.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-C",
-    "C": "S-V",
-    "D": "S-V-O-C"
+    "A": "S-V",
+    "B": "S-V-O-C",
+    "C": "S-V-O",
+    "D": "S-V-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The bright moon' + Động từ 'appeared'. 'tonight' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
@@ -44964,12 +45074,12 @@ export const grammarQuestions = [
   "id": "q1798",
   "question": "The brave firefighter rescued the cat.",
   "options": {
-    "A": "S-V",
-    "B": "S-V-O",
-    "C": "S-V-C",
-    "D": "S-V-O-C"
+    "A": "S-V-O-C",
+    "B": "S-V",
+    "C": "S-V-O",
+    "D": "S-V-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "C",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The brave firefighter' + Động từ 'rescued' + Tân ngữ 'the cat'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -44987,11 +45097,11 @@ export const grammarQuestions = [
   "question": "The tropical fruit smells rather strange.",
   "options": {
     "A": "S-V-O-C",
-    "B": "S-V-O",
-    "C": "S-V-C",
+    "B": "S-V-C",
+    "C": "S-V-O",
     "D": "S-V"
   },
-  "correct_answer": "C",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The tropical fruit' + Động từ tri giác 'smells' + Bổ ngữ 'strange'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -45008,12 +45118,12 @@ export const grammarQuestions = [
   "id": "q1800",
   "question": "The hot sun painted the sky red.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-O-C",
-    "C": "S-V-C",
-    "D": "S-V"
+    "A": "S-V-C",
+    "B": "S-V",
+    "C": "S-V-O",
+    "D": "S-V-O-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The hot sun' + Động từ 'painted' + Tân ngữ 'the sky' + Bổ ngữ tân ngữ 'red'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
@@ -45028,23 +45138,28 @@ export const grammarQuestions = [
 },
 {
   "id": "q1801",
-  "question": "The old engine failed eventually.",
+  "question": "The old engine failed on the highway.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-C",
-    "C": "S-V-O-C",
-    "D": "S-V"
+    "A": "S-V",
+    "B": "S-V-O-C",
+    "C": "S-V-O",
+    "D": "S-V-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
-  "explanation_reason": "Chủ ngữ 'The old engine' + Động từ 'failed'. 'eventually' là trạng từ đóng vai trò bổ ngữ, nên cấu trúc là S-V-C.",
+  "explanation_reason": "Chủ ngữ 'The old engine' + Động từ 'failed'. Cụm giới từ 'on the highway' là trạng ngữ chỉ nơi chốn, nên cấu trúc là S-V.",
   "explanation_grammar": "S-V (Chủ ngữ - Nội động từ)",
-  "translation": "Động cơ cũ cuối cùng cũng đã hỏng.",
+  "translation": "Động cơ cũ đã hỏng trên đường cao tốc.",
   "core_vocabulary": [
     {
-      "word": "fail",
-      "type": "v.",
-      "meaning": "thất bại/hỏng"
+      "word": "engine",
+      "type": "n.",
+      "meaning": "động cơ"
+    },
+    {
+      "word": "highway",
+      "type": "n.",
+      "meaning": "đường cao tốc"
     }
   ]
 },
@@ -45052,12 +45167,12 @@ export const grammarQuestions = [
   "id": "q1802",
   "question": "The talented photographer captured a smile.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V",
+    "A": "S-V",
+    "B": "S-V-O",
     "C": "S-V-C",
     "D": "S-V-O-C"
   },
-  "correct_answer": "A",
+  "correct_answer": "B",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The talented photographer' + Động từ 'captured' + Tân ngữ 'a smile'.",
   "explanation_grammar": "S-V-O (Chủ ngữ - Động từ - Tân ngữ)",
@@ -45074,12 +45189,12 @@ export const grammarQuestions = [
   "id": "q1803",
   "question": "The loud music sounded terrible.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V-C",
-    "C": "S-V-O-C",
-    "D": "S-V"
+    "A": "S-V-O-C",
+    "B": "S-V",
+    "C": "S-V-O",
+    "D": "S-V-C"
   },
-  "correct_answer": "B",
+  "correct_answer": "D",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'The loud music' + Động từ tri giác 'sounded' + Bổ ngữ 'terrible'.",
   "explanation_grammar": "S-V-C (Chủ ngữ - Hệ từ - Bổ ngữ)",
@@ -45096,12 +45211,12 @@ export const grammarQuestions = [
   "id": "q1804",
   "question": "She found the empty house spooky.",
   "options": {
-    "A": "S-V-O",
-    "B": "S-V",
-    "C": "S-V-C",
-    "D": "S-V-O-C"
+    "A": "S-V-O-C",
+    "B": "S-V-C",
+    "C": "S-V-O",
+    "D": "S-V"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Cấu trúc câu",
   "explanation_reason": "Chủ ngữ 'She' + Động từ 'found' + Tân ngữ 'the empty house' + Bổ ngữ tân ngữ 'spooky'.",
   "explanation_grammar": "S-V-O-C (Chủ ngữ - Động từ - Tân ngữ - Bổ ngữ tân ngữ)",
