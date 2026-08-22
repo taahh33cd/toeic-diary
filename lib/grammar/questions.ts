@@ -6321,7 +6321,7 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
-    "explanation_reason": "Để nhấn mạnh việc chính bản thân Greg (tự tay ổng) đã làm điều đó trong quá khứ mà không ai giúp, ta cùng tính từ nhân xưng phản thân (himself).",
+    "explanation_reason": "Để nhấn mạnh rằng chính Greg tự làm việc đó mà không cần ai giúp, ta dùng đại từ phản thân 'himself'.",
     "explanation_grammar": "Đại từ phản thân đứng ở cuối để nhấn mạnh về mặt tự thực thi của chủ ngữ nam (Greg).",
     "translation": "Greg Owens, nhà sáng lập kiêm cha đẻ của công ty Đa quốc gia Dịch vụ Taxi Hermes, đã từng có dạo tự mình lái chính chiếc xe taxi.",
     "core_vocabulary": [
@@ -10023,7 +10023,7 @@ export const grammarQuestions = [
     "grammar_type": "So sánh"
   },
   {
-    "question": "To win the contract, the team must develop a ____ effective marketing strategy than Horizon Inc.",
+    "question": "To win the contract, the team must develop a ____ marketing strategy than Horizon Inc.",
     "options": {
       "A": "most effectively",
       "B": "more effective",
@@ -10143,7 +10143,7 @@ export const grammarQuestions = [
     "grammar_type": "So sánh"
   },
   {
-    "question": "Mr. Park is widely considered to be a ____ productive employee than his peers in the sales department.",
+    "question": "Mr. Park is widely considered to be a ____ employee than his peers in the sales department.",
     "options": {
       "A": "most productively",
       "B": "most productive",
@@ -10268,7 +10268,7 @@ export const grammarQuestions = [
     "grammar_type": "So sánh"
   },
   {
-    "question": "Customers have reported that the new OmniTech smartwatch features a ____ responsive touch screen than previous models.",
+    "question": "Customers have reported that the new OmniTech smartwatch features a ____ touch screen than previous models.",
     "options": {
       "A": "more responsive",
       "B": "most responsively",
@@ -10393,7 +10393,7 @@ export const grammarQuestions = [
     "grammar_type": "So sánh"
   },
   {
-    "question": "In order to meet the tight deadline, the production team needs to find a ____ rigorous method of assembling the engine parts.",
+    "question": "In order to meet the tight deadline, the production team needs to find a ____ method of assembling the engine parts.",
     "options": {
       "A": "most rigorous",
       "B": "more rigorous",
@@ -10518,7 +10518,7 @@ export const grammarQuestions = [
     "grammar_type": "So sánh"
   },
   {
-    "question": "The newly formed security committee will implement a ____ comprehensive policy regarding employee access to the laboratory.",
+    "question": "The newly formed security committee will implement a ____ policy regarding employee access to the laboratory.",
     "options": {
       "A": "more comprehensively",
       "B": "most comprehensive",
@@ -10526,7 +10526,7 @@ export const grammarQuestions = [
       "D": "most comprehensively"
     },
     "correct_answer": "C",
-    "explanation_reason": "Cần tính từ 'comprehensive' để bổ nghĩa cho 'policy' tạo thành ý nghĩa cải tiến hơn ('chính sách toàn diện hơn'). Cấu trúc 'a more + Adj + N' là chuẩn xác nhất, không dùng The hầu như không chỉ đích danh.",
+    "explanation_reason": "Chỗ trống đứng giữa mạo từ 'a' và danh từ 'policy' nên cần một tính từ. Ngữ cảnh so sánh với chính sách hiện hành nên dùng dạng so sánh hơn 'more comprehensive'; 'most comprehensive' phải đi với 'the'.",
     "explanation_grammar": "So sánh hơn: more + Adj.",
     "translation": "Ủy ban an ninh mới được thành lập sẽ thực hiện một chính sách toàn diện hơn liên quan đến quyền tiếp cận phòng thí nghiệm của nhân viên.",
     "core_vocabulary": [
@@ -11127,7 +11127,7 @@ export const grammarQuestions = [
     "grammar_type": "MĐQH"
   },
   {
-    "question": "Factory personnel------- job is to operate industrial machinery must attend a safety course once a year.",
+    "question": "Factory personnel ------- job is to operate industrial machinery must attend a safety course once a year.",
     "options": {
       "A": "that",
       "B": "whose",
@@ -11154,7 +11154,7 @@ export const grammarQuestions = [
     "grammar_type": "MĐQH"
   },
   {
-    "question": "ZG Dental thanks all staff members who --- ---- marketing materials at last week's National Dentistry Expo in Pittsburgh.",
+    "question": "ZG Dental thanks all staff members who ------- marketing materials at last week's National Dentistry Expo in Pittsburgh.",
     "options": {
       "A": "distributed",
       "B": "distributing",
@@ -11321,7 +11321,7 @@ export const grammarQuestions = [
     "grammar_type": "MĐQH"
   },
   {
-    "question": "The product development team cannot say --- --the new line of products will be released.",
+    "question": "The product development team cannot say ------- the new line of products will be released.",
     "options": {
       "A": "what",
       "B": "when",
@@ -20390,11 +20390,11 @@ export const grammarQuestions = [
       "A": "precisely",
       "B": "precise",
       "C": "precision",
-      "D": "preciseness"
+      "D": "more precise"
     },
     "correct_answer": "C",
     "grammar_type": "Danh từ & Đại từ",
-    "explanation_reason": "Sau giới từ 'of' cần một danh từ. 'Precision' (độ chính xác) là danh từ chuẩn trong lĩnh vực kỹ thuật/tính toán.",
+    "explanation_reason": "Sau giới từ 'of' cần một danh từ. 'Precision' (độ chính xác) là danh từ; 'precisely' là trạng từ, còn 'precise' và 'more precise' là tính từ.",
     "explanation_grammar": "Danh từ sau giới từ",
     "translation": "Đối với các mô hình dữ liệu phức tạp, phần mềm đảm bảo độ chính xác cao trong các tính toán của mình.",
     "core_vocabulary": [
@@ -20901,13 +20901,13 @@ export const grammarQuestions = [
     "question": "Orion Uniforms guarantees the prompt ______ of protective safety apparel to all factory workers.",
     "options": {
       "A": "shipment",
-      "B": "shipping",
+      "B": "to ship",
       "C": "shipped",
       "D": "ship"
     },
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
-    "explanation_reason": "Sau mạo từ 'the' và tính từ 'prompt' cần một danh từ. 'Shipment' (lô hàng/sự giao hàng) là danh từ phù hợp.",
+    "explanation_reason": "Sau mạo từ 'the' và tính từ 'prompt' cần một danh từ chỉ hành động. 'Shipment' (việc giao hàng) là danh từ phù hợp; 'ship' là danh từ chỉ con tàu nên sai nghĩa, còn 'to ship' và 'shipped' là dạng động từ.",
     "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Orion Uniforms đảm bảo việc giao hàng nhanh chóng các trang phục bảo hộ cho tất cả các công nhân nhà máy.",
     "core_vocabulary": [
@@ -23116,12 +23116,12 @@ export const grammarQuestions = [
     "options": {
       "A": "precision",
       "B": "precise",
-      "C": "preciseness",
+      "C": "more precise",
       "D": "precisely"
     },
     "correct_answer": "A",
     "grammar_type": "Danh từ & Đại từ",
-    "explanation_reason": "Cấu trúc 'ensure the + Noun'. 'Precision' (độ chính xác) là danh từ chuyên dụng.",
+    "explanation_reason": "Cấu trúc 'ensure the + danh từ'. 'Precision' (độ chính xác) là danh từ; 'precise' và 'more precise' là tính từ, 'precisely' là trạng từ.",
     "explanation_grammar": "Danh từ làm tân ngữ",
     "translation": "Phần mềm áp dụng phương pháp chia đôi để đảm bảo độ chính xác của các tính toán trọng lượng hàng hóa tự động.",
     "core_vocabulary": [
@@ -49465,10 +49465,10 @@ export const grammarQuestions = [
     "C": "has shown",
     "D": "shows"
   },
-  "correct_answer": "D",
+  "correct_answer": "A",
   "grammar_type": "Hoà hợp S-V",
-  "explanation_reason": "Dù là 'Results' (số nhiều) nhưng ở đây câu gốc dùng 'shows' (có thể coi là 'The fact that...' hoặc lỗi đề bài, nhưng mình sẽ gán 'shows' theo đáp án user chọn). Thực tế 'Results' đi với 'show' là chuẩn nhất, nhưng user chọn ==shows nên mình theo.",
-  "explanation_grammar": "Hòa hợp S-V",
+  "explanation_reason": "Chủ ngữ là 'Results' (số nhiều), bổ ngữ 'from the quarterly customer satisfaction survey' không làm đổi số của chủ ngữ. Vì vậy động từ phải chia số nhiều: 'show'.",
+  "explanation_grammar": "Hoà hợp với chủ ngữ số nhiều",
   "translation": "Kết quả từ khảo sát mức độ hài lòng của khách hàng hàng quý cho thấy sự giảm sút về lòng trung thành.",
   "core_vocabulary": [
     {
@@ -64772,7 +64772,7 @@ export const grammarQuestions = [
   },
   {
     "id": "q_test11_mdqh_02",
-    "question": "Any staff members ______ participating in the annual charity run should register online by Friday afternoon.",
+    "question": "Any staff members ------- in the annual charity run should register online by Friday afternoon.",
     "options": {
       "A": "participating",
       "B": "participated",
@@ -64781,7 +64781,7 @@ export const grammarQuestions = [
     },
     "correct_answer": "A",
     "grammar_type": "MĐQH",
-    "explanation_reason": "Đây là hình thức rút gọn mệnh đề quan hệ chủ động. Đầy đủ là 'who participate'. Rút gọn lại thành V-ing là 'participating'.",
+    "explanation_reason": "Mệnh đề quan hệ rút gọn dạng chủ động: 'who are participating' rút thành 'participating'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ (Chủ động)",
     "translation": "Bất kỳ nhân viên nào tham gia cuộc chạy bộ từ thiện hàng năm nên đăng ký trực tuyến trước chiều thứ Sáu.",
     "core_vocabulary": [
@@ -66627,7 +66627,7 @@ export const grammarQuestions = [
   },
   {
     "id": "q_test13_mdqh_21",
-    "question": "Passengers ______ the 5:30 train to the capital should proceed to platform four immediately for boarding.",
+    "question": "Passengers ------- the 5:30 train to the capital should proceed to platform four immediately.",
     "options": {
       "A": "board",
       "B": "boarded",
@@ -66638,7 +66638,7 @@ export const grammarQuestions = [
     "grammar_type": "MĐQH",
     "explanation_reason": "Rút gọn mệnh đề quan hệ ở dạng chủ động (passengers who are boarding).",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ (Chủ động)",
-    "translation": "Hành khách lên tàu lúc 5:30 đến thủ đô nên tiến đến sân ga số bốn ngay lập tức để lên tàu.",
+    "translation": "Hành khách lên chuyến tàu 5:30 đi thủ đô nên di chuyển ngay đến sân ga số bốn.",
     "core_vocabulary": [
       {
         "word": "proceed",
@@ -66752,911 +66752,6 @@ export const grammarQuestions = [
         "word": "requirement",
         "type": "n.",
         "meaning": "yêu cầu"
-      }
-    ]
-  },
-  {
-    "id": "q0231",
-    "question": "Zypo properties has just signed a lease agreement with the law firm ______ offices are on the third floor.",
-    "options": {
-      "A": "how",
-      "B": "whose",
-      "C": "what",
-      "D": "wherever"
-    },
-    "correct_answer": "B",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Chỗ khoảng trống cần điền một đại từ quan hệ dùng làm từ hạn định sở hữu cách. 'whose offices' (những văn phòng CỦA HỌ).",
-    "explanation_grammar": "Đại từ quan hệ sở hữu",
-    "translation": "Hãng bất động sản Zypo Properties vừa mới ký một hợp đồng cho thuê với công ty luật, nơi mà có các văn phòng nằm trên tầng 3.",
-    "core_vocabulary": [
-      {
-        "word": "lease agreement",
-        "type": "n.",
-        "meaning": "hợp đồng cho thuê"
-      },
-      {
-        "word": "firm",
-        "type": "n.",
-        "meaning": "công ty/ tổ chức"
-      }
-    ]
-  },
-  {
-    "id": "q0232",
-    "question": "Most of the people ______ attended yesterday’s workshop have already submitted their feedback.",
-    "options": {
-      "A": "whose",
-      "B": "some",
-      "C": "those",
-      "D": "who"
-    },
-    "correct_answer": "D",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Đại từ quan hệ thay thế làm chủ ngữ chỉ người cho 'the people'. Do đó dùng 'who'.",
-    "explanation_grammar": "Đại từ quan hệ làm chủ ngữ (người)",
-    "translation": "Hầu hết những người mà đã tham dự hội thảo ngày hôm qua thì đều đã nộp lại phản hồi của họ.",
-    "core_vocabulary": [
-      {
-        "word": "feedback",
-        "type": "n.",
-        "meaning": "sự phản hồi"
-      }
-    ]
-  },
-  {
-    "id": "q0233",
-    "question": "Next year, our team will have a new task, ______ is to review design portfolios.",
-    "options": {
-      "A": "which",
-      "B": "although",
-      "C": "after",
-      "D": "because"
-    },
-    "correct_answer": "A",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Dấu phẩy báo hiệu mệnh đề quan hệ không xác định, kết hợp với ý bổ nghĩa cho 'a new task' (chỉ sự vật). Đại từ 'which' sẽ được dùng.",
-    "explanation_grammar": "Mệnh đề quan hệ không xác định",
-    "translation": "Vào năm tới, nhóm của chúng ta sẽ có một nhiệm vụ mới, đó là duyệt lại các tập hồ sơ thiết kế.",
-    "core_vocabulary": [
-      {
-        "word": "portfolio",
-        "type": "n.",
-        "meaning": "tập hồ sơ năng lực"
-      }
-    ]
-  },
-  {
-    "id": "q0234",
-    "question": "Hemlin Corporation is looking for a sales representative ______ primary role will be expanding business in the northwest region.",
-    "options": {
-      "A": "that",
-      "B": "which",
-      "C": "whose",
-      "D": "who"
-    },
-    "correct_answer": "C",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Quan hệ giữa 'người đại diện' và 'vai trò chính' là quan hệ sở hữu, nên ta dùng 'whose primary role' (vai trò CỦA NGƯỜI ĐÓ).",
-    "explanation_grammar": "Đại từ quan hệ sở hữu",
-    "translation": "Tập đoàn Hemlin đang tìm kiếm một đại diện bán hàng mà vai trò chính của người đó sẽ là mở rộng kinh doanh tại khu vực tây bắc.",
-    "core_vocabulary": [
-      {
-        "word": "representative",
-        "type": "n.",
-        "meaning": "người đại diện"
-      }
-    ]
-  },
-  {
-    "id": "q0235",
-    "question": "Customers ______ wish to return a defective item may do so within twenty days of the date of purchase.",
-    "options": {
-      "A": "which",
-      "B": "who",
-      "C": "whichever",
-      "D": "whose"
-    },
-    "correct_answer": "B",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "'Customers' là danh từ chỉ người đóng vai trò Chủ ngữ của câu -> Dùng đại từ 'who'.",
-    "explanation_grammar": "Đại từ quan hệ làm chủ ngữ (người)",
-    "translation": "Những quý khách hàng nào có mong muốn trả lại món hàng bị lỗi thì có quyền làm vậy trong vòng 20 ngày kể từ ngày mua hàng.",
-    "core_vocabulary": [
-      {
-        "word": "defective",
-        "type": "adj.",
-        "meaning": "lỗi, hỏng hóc"
-      }
-    ]
-  },
-  {
-    "id": "q0236",
-    "question": "Travelers _______ the local airport in Hopkins complain that there is an urgent need for more parking.",
-    "options": {
-      "A": "using",
-      "B": "used",
-      "C": "use",
-      "D": "will use"
-    },
-    "correct_answer": "A",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Mẫu câu rút gọn mệnh đề quan hệ dạng Chủ động. Câu đầy đủ: Travelers [who use] the local airport... -> Rút gọn lại thành: Travelers [using]...",
-    "explanation_grammar": "Mệnh đề quan hệ rút gọn (chủ động)",
-    "translation": "Những du khách sử dụng sân bay địa phương ở Hopkins phàn nàn rằng đang có một nhu cầu cấp thiết về việc mở rộng bãi đỗ xe.",
-    "core_vocabulary": [
-      {
-        "word": "complain",
-        "type": "v.",
-        "meaning": "phàn nàn, khiếu nại"
-      }
-    ]
-  },
-  {
-    "id": "q0237",
-    "question": "Orders _______ the weight limit are subject to additional shipping fees.",
-    "options": {
-      "A": "exceeded",
-      "B": "excessive",
-      "C": "exceed",
-      "D": "exceeding"
-    },
-    "correct_answer": "D",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Rút gọn mệnh đề quan hệ Chủ động. 'Orders' tự động thực hiện việc 'vượt quá' (exceed): Orders [which exceed] -> Orders exceeding...",
-    "explanation_grammar": "Mệnh đề quan hệ rút gọn (chủ động)",
-    "translation": "Các đơn hàng vượt quá giới hạn trọng lượng cho phép sẽ phải chịu thêm các khoản phí vận chuyển phụ thu.",
-    "core_vocabulary": [
-      {
-        "word": "are subject to",
-        "type": "phr.",
-        "meaning": "phải chịu, phải phụ thuộc vào"
-      }
-    ]
-  },
-  {
-    "id": "q0238",
-    "question": "A thunderstorm _______ by gusty winds is expected to arrive in the northeast region by late afternoon.",
-    "options": {
-      "A": "will accompany",
-      "B": "to accompany",
-      "C": "accompanied",
-      "D": "accompanying"
-    },
-    "correct_answer": "C",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Mệnh đề quan hệ rút gọn thể Bị Động 'cơn bão được theo kèm bởi'. Dấu hiệu nhận biết là giới từ 'by'. A thunderstorm [which is accompanied by] -> A thunderstorm accompanied by...",
-    "explanation_grammar": "Mệnh đề quan hệ rút gọn (bị động)",
-    "translation": "Một cơn bão lớn đi kèm theo những trận gió giật mạnh được dự báo sẽ ập tới khu vực đông bắc vào khoảng đầu giờ chiều muộn.",
-    "core_vocabulary": [
-      {
-        "word": "accompany",
-        "type": "v.",
-        "meaning": "đi kèm, hộ tống"
-      }
-    ]
-  },
-  {
-    "id": "q0239",
-    "question": "Adequate storage space is very important to companies _______ large quantities of materials.",
-    "options": {
-      "A": "produces",
-      "B": "produce",
-      "C": "produced",
-      "D": "producing"
-    },
-    "correct_answer": "D",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Rút gọn Mệnh đề quan hệ Chủ Động (các Công ty ĐANG SẢN XUẤT): Companies [which produce] large quantities... -> Companies producing...",
-    "explanation_grammar": "Mệnh đề quan hệ rút gọn (chủ động)",
-    "translation": "Không gian lưu trữ kho bãi đầy đủ là một điều rất quan trọng đối với các công ty sản xuất nguyên vật liệu với số lượng lớn.",
-    "core_vocabulary": [
-      {
-        "word": "produce",
-        "type": "v.",
-        "meaning": "sản xuất"
-      }
-    ]
-  },
-  {
-    "id": "q0240",
-    "question": "Employees _______ in joining the company's sports teams should contact Meredith Lo by May 1.",
-    "options": {
-      "A": "interests",
-      "B": "interested",
-      "C": "interest",
-      "D": "interesting"
-    },
-    "correct_answer": "B",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Rút gọn Bị động kinh điển của tính từ chỉ tính chất thụ động: Employees [who are interested in] -> Employees interested in.",
-    "explanation_grammar": "Mệnh đề quan hệ rút gọn (bị động)",
-    "translation": "Những nhân viên nào có hứng thú với việc tham gia vào các đội thể thao của công ty thì nên liên hệ cho Meredith Lo trước ngày mùng 1 tháng 5.",
-    "core_vocabulary": [
-      {
-        "word": "be interested in",
-        "type": "phr.",
-        "meaning": "có hứng thú/ quan tâm tới"
-      }
-    ]
-  },
-  {
-    "id": "q0241",
-    "question": "Times-Gazette subscribers ------- do not receive their newspapers by 7:00 A.M. should call the Customer Service Center.",
-    "options": {
-      "A": "they",
-      "B": "you",
-      "C": "who",
-      "D": "all"
-    },
-    "correct_answer": "C",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Danh từ 'subscribers' đứng ngay trước khoảng trống. Quan hệ từ trỏ chỉ nhóm Người đóng vai trò chủ ngữ -> 'who' (Những ai mà...).",
-    "explanation_grammar": "Đại từ quan hệ làm chủ ngữ (người)",
-    "translation": "Những người dùng đăng ký theo dõi tòa báo Times-Gazette mà không nhận được báo của họ gửi tới nhà trước 7:00 sáng thì nên gọi cho Trung tâm Dịch vụ Chăm sóc Khách hàng.",
-    "core_vocabulary": [
-      {
-        "word": "subscriber",
-        "type": "n.",
-        "meaning": "người đăng ký theo dõi"
-      }
-    ]
-  },
-  {
-    "id": "q0242",
-    "question": "For a list of cleaning services ------ our company offers, please check the last page of this brochure.",
-    "options": {
-      "A": "that",
-      "B": "anyone",
-      "C": "much",
-      "D": "who"
-    },
-    "correct_answer": "A",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Bổ nghĩa cho 'cleaning services' (vật/dịch vụ). Dùng 'which' hoặc 'that' đóng vai trò tân ngữ.",
-    "explanation_grammar": "Đại từ quan hệ làm chủ ngữ (vật)",
-    "translation": "Để tham khảo danh sách các dịch vụ dọn dẹp mà công ty chúng tôi cung cấp, vui lòng kiểm tra tại trang cuối cùng của cuốn sách tài liệu nhỏ này.",
-    "core_vocabulary": [
-      {
-        "word": "brochure",
-        "type": "n.",
-        "meaning": "tờ gấp/ sách mỏng in thông tin"
-      }
-    ]
-  },
-  {
-    "id": "q0243",
-    "question": "Members of the planning committee are expected to attend all meetings, ------- occur on the first Tuesday of the month.",
-    "options": {
-      "A": "each",
-      "B": "which",
-      "C": "who",
-      "D": "whoever"
-    },
-    "correct_answer": "B",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Mệnh đề quan hệ không xác định cách ngăn bởi dấu phẩy, dùng thay thế cho vật (all meetings). Ta dùng Which làm chủ ngữ.",
-    "explanation_grammar": "Mệnh đề quan hệ không xác định",
-    "translation": "Các thành viên của ủy ban kế hoạch được kỳ vọng là sẽ tham dự mọi cuộc họp, những buổi mà thường sẽ diễn ra vào ngày thứ Ba đầu tiên của tháng.",
-    "core_vocabulary": [
-      {
-        "word": "occur",
-        "type": "v.",
-        "meaning": "diễn ra, xảy ra"
-      }
-    ]
-  },
-  {
-    "id": "q0244",
-    "question": "There are multiple places along the Sayulita Scenic Roadway at ------- drivers can stop and enjoy the scenery.",
-    "options": {
-      "A": "anyone",
-      "B": "many",
-      "C": "those",
-      "D": "which"
-    },
-    "correct_answer": "D",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Cấu trúc 'Giới từ + Which' dùng để thay thế cho trạng từ quan hệ. At which = where (tại cái nơi đó mà).",
-    "explanation_grammar": "Giới từ + đại từ quan hệ",
-    "translation": "Có rất nhiều địa điểm nằm dọc theo Cung đường ngắm cảnh Sayulita, tại nơi đó các tài xế có thể dừng xe lại và tận hưởng cảnh quan.",
-    "core_vocabulary": [
-      {
-        "word": "scenery",
-        "type": "n.",
-        "meaning": "phong cảnh, quang cảnh"
-      }
-    ]
-  },
-  {
-    "id": "q0245",
-    "question": "All employees who ------- drilling equipment must wear safety glasses.",
-    "options": {
-      "A": "operates",
-      "B": "to operate",
-      "C": "operate",
-      "D": "is operated"
-    },
-    "correct_answer": "C",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Mệnh đề 'who' thay cho 'All employees' (số nhiều), nên động từ theo sau phải bám sát thì hiện tại đơn ở dạng số nhiều nguyên mẫu.",
-    "explanation_grammar": "Hoà hợp S-V trong mệnh đề quan hệ",
-    "translation": "Tất cả các nhân viên mà có thao tác vận hành trên các thiết bị máy khoan thì đều bắt buộc phải mang đeo kính bảo hộ an toàn.",
-    "core_vocabulary": [
-      {
-        "word": "operate",
-        "type": "v.",
-        "meaning": "thao tác vận hành"
-      }
-    ]
-  },
-  {
-    "id": "q0246",
-    "question": "Many of the candidates ------- applied for the administrative assistant position at Ferber Systems were highly qualified.",
-    "options": {
-      "A": "who",
-      "B": "which",
-      "C": "when",
-      "D": "what"
-    },
-    "correct_answer": "A",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Cần một đại từ để thay thay thế cho 'candidates' (Ứng cử viên). Do đây là danh từ chỉ người đứng làm chủ ngữ của động từ apply. Chắc chắn là Who.",
-    "explanation_grammar": "Đại từ quan hệ làm chủ ngữ (người)",
-    "translation": "Rất nhiều ứng cử viên, những người mà đã nộp đơn ứng tuyển cho vị trí trợ lý phòng hành chính tại Ferber Systems thì đều có năng lực đạt chuẩn chất lượng rất cao.",
-    "core_vocabulary": [
-      {
-        "word": "highly qualified",
-        "type": "adj.",
-        "meaning": "đạt trình độ tiêu chuẩn cao"
-      }
-    ]
-  },
-  {
-    "id": "q0247",
-    "question": "Skytown Airlines apologized to the passengers for the delays ------- experienced.",
-    "options": {
-      "A": "them",
-      "B": "they",
-      "C": "this",
-      "D": "their"
-    },
-    "correct_answer": "B",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Dạng rút gọn đại từ (That/Which) trong mệnh đề quan hệ khi đại từ làm Tân Ngữ. Câu đầy đủ: The delays [which] they experienced. -> Rút gọn đi thành: The delays they experienced.",
-    "explanation_grammar": "Lược bỏ đại từ quan hệ làm tân ngữ",
-    "translation": "Skytown Airlines đã xin lỗi hành khách về những chuyến chậm trễ mà họ phải chịu.",
-    "core_vocabulary": [
-      {
-        "word": "apologize",
-        "type": "v.",
-        "meaning": "xin lỗi, tạ lỗi"
-      }
-    ]
-  },
-  {
-    "id": "q0248",
-    "question": "Hemton House on Main Street, ----- served as Lunburgh's first schoolhouse, has been designated a historical landmark.",
-    "options": {
-      "A": "when",
-      "B": "where",
-      "C": "who",
-      "D": "which"
-    },
-    "correct_answer": "D",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Hemton House là một vật thể đóng vai trò Chủ Ngữ ở vế tiếp theo và đứng sau dấu phẩy. Từ đại diện chỉ sự vật là 'which'.",
-    "explanation_grammar": "Mệnh đề quan hệ không xác định",
-    "translation": "Tòa nhà Hemton House nằm trên tuyến phố Main Street, cái tòa nhà mà cũng đồng thời từng là trường học đầu tiên của Lunburgh, nay đã chính thức được thiết định trở thành một cột mốc di tích mang tính lịch sử.",
-    "core_vocabulary": [
-      {
-        "word": "schoolhouse",
-        "type": "n.",
-        "meaning": "ngôi trường, trường học"
-      }
-    ]
-  },
-  {
-    "id": "q0249",
-    "question": "The keynote speaker was J. M. Lim, ------ research on wind power has helped shape the alternative energy industry.",
-    "options": {
-      "A": "which",
-      "B": "of",
-      "C": "whose",
-      "D": "from"
-    },
-    "correct_answer": "C",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Có danh từ 'research' đứng ngay sau khoảng trống tạo ra mối quan hệ sở hữu đối với 'J. M. Lim': 'Nghiên cứu CỦA AI ĐÓ' -> whose research.",
-    "explanation_grammar": "Đại từ quan hệ sở hữu",
-    "translation": "Diễn giả chính là ông J.M. Lim, người mà với những bài luận nghiên cứu của mình về năng lượng gió đó đã phụ giúp định hình nên một cả ngành công nghiệp năng lượng thay thế.",
-    "core_vocabulary": [
-      {
-        "word": "keynote speaker",
-        "type": "n.",
-        "meaning": "diễn giả chính"
-      }
-    ]
-  },
-  {
-    "id": "q0250",
-    "question": "Factory personnel ------- job is to operate industrial machinery must attend a safety course once a year.",
-    "options": {
-      "A": "whose",
-      "B": "whom",
-      "C": "that",
-      "D": "they"
-    },
-    "correct_answer": "A",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Tương tự như câu 249, đây lại là một dạng sở hữu cách thông qua chữ 'job'. Job này ám chỉ CÔNG VIỆC CỦA NHỮNG CÔNG NHÂN ('personnel'). Điền ngay 'whose job'.",
-    "explanation_grammar": "Đại từ quan hệ sở hữu",
-    "translation": "Nhân viên nhà máy có công việc là vận hành máy móc công nghiệp phải tham dự khoá đào tạo an toàn mỗi năm một lần.",
-    "core_vocabulary": [
-      {
-        "word": "industrial machinery",
-        "type": "n.",
-        "meaning": "hệ thống máy móc chuyên dụng trong nghiệp"
-      }
-    ]
-  },
-  {
-    "id": "q0251",
-    "question": "ZG Dental thanks all staff members who ------- marketing materials at last week's National Dentistry Expo in Pittsburgh.",
-    "options": {
-      "A": "distributing",
-      "B": "distributes",
-      "C": "distributed",
-      "D": "distribute"
-    },
-    "correct_answer": "C",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Đại từ quan hệ 'who' thay cho 'staff members' làm chủ ngữ mở ra mệnh đề. Xét dấu hiệu nhận biết 'last week' (tuần trước), động từ phải chia ở thì Quá khứ đơn.",
-    "explanation_grammar": "Hoà hợp S-V trong mệnh đề quan hệ",
-    "translation": "Phòng khám nha khoa ZG Dental xin gửi lời cảm tạ đến tất cả những thành viên nhân viên - những người mà đã tham gia để phát ấn phẩm tiếp thị tại Triển lãm Nha khoa Quốc gia tổ chức ở Pittsburgh vào tuần trước.",
-    "core_vocabulary": [
-      {
-        "word": "distribute",
-        "type": "v.",
-        "meaning": "phân phát, tung ra"
-      },
-      {
-        "word": "marketing materials",
-        "type": "n.",
-        "meaning": "vật liệu quảng cáo/ấn phẩm tiếp thị"
-      }
-    ]
-  },
-  {
-    "id": "q0252",
-    "question": "Of all the business plans ------- by the marketing manager, Mr. Martin's idea is the most impressive.",
-    "options": {
-      "A": "reviewed",
-      "B": "are reviewed",
-      "C": "which reviewed",
-      "D": "review"
-    },
-    "correct_answer": "A",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Đây là mẫu Rút gọn mệnh đề quan hệ dạng bị động. 'Những bản kế hoạch được xem xét (bởi ông quản lý)': plans [which were reviewed by] -> plans [reviewed by].",
-    "explanation_grammar": "Mệnh đề quan hệ rút gọn (bị động)",
-    "translation": "Trong số tất cả các bản kế hoạch kinh doanh mà đã được xét duyệt qua bởi vị giám đốc tiếp thị, thì ý tưởng của ông Martin chính là thứ mang lại cảm giác ấn tượng nhất.",
-    "core_vocabulary": [
-      {
-        "word": "impressive",
-        "type": "adj.",
-        "meaning": "đầy ấn tượng sâu sắc"
-      }
-    ]
-  },
-  {
-    "id": "q0253",
-    "question": "The Cork County Council has approved an airport expansion project that ------- to better accommodate travelers.",
-    "options": {
-      "A": "would have promised",
-      "B": "promising",
-      "C": "will be promised",
-      "D": "promises"
-    },
-    "correct_answer": "D",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Đại từ 'that' thay thế cho một danh từ số ít là 'project' (dự án). Do đó động từ vế sau phải chia thêm s/es theo chủ ngữ số ít (promises).",
-    "explanation_grammar": "Hoà hợp S-V trong mệnh đề quan hệ",
-    "translation": "Hội đồng hạt Cork đã chính thức phê duyệt một dự án mở rộng quy mô sân bay mà dự án này hứa hẹn sẽ đáp ứng phục vụ nhu cầu của du khách được tốt hơn.",
-    "core_vocabulary": [
-      {
-        "word": "expansion project",
-        "type": "n.",
-        "meaning": "dự án công trình mở rộng"
-      },
-      {
-        "word": "accommodate",
-        "type": "v.",
-        "meaning": "cung ứng/ đáp ứng/ chứa chấp"
-      }
-    ]
-  },
-  {
-    "id": "q0254",
-    "question": "Primo Publishing has not yet decided ----- they will introduce their new software's features.",
-    "options": {
-      "A": "what",
-      "B": "when",
-      "C": "which",
-      "D": "who"
-    },
-    "correct_answer": "B",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Đây là dạng Mệnh đề danh ngữ đứng sau động từ. Nghĩa của câu: Chưa quyết định LÚC NÀO (when). Các từ 'which/who/what' khi đặt vào sẽ gây lủng củng ngữ nghĩa.",
-    "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
-    "translation": "Hãng xuất bản Primo Publishing vẫn chưa thể chốt quyết định xem là KHI NÀO thì họ mới tung ra giới thiệu các tính năng của dòng phần mềm mới.",
-    "core_vocabulary": [
-      {
-        "word": "introduce",
-        "type": "v.",
-        "meaning": "trình làng, giới thiệu"
-      }
-    ]
-  },
-  {
-    "id": "q0255",
-    "question": "----- responds to the restaurant survey will receive a $10 gift certificate to the Rangely Cafe.",
-    "options": {
-      "A": "Everyone",
-      "B": "Whose",
-      "C": "Someone",
-      "D": "Whoever"
-    },
-    "correct_answer": "D",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Cần một đại từ đóng vai trò vừa làm chủ ngữ cho 'responds', vừa điều khiển cả cụm Mệnh đề danh ngữ [Whoever responds] làm chủ ngữ lớn của 'will receive'. Whoever = Bất kỳ ai.",
-    "explanation_grammar": "Đại từ quan hệ kép (whoever, whatever…)",
-    "translation": "Bất kì vị nào mà có làm động tác trả lời các câu khảo sát của nhà hàng này thì đều sẽ lãnh được một phiếu phiếu quà tặng trị giá 10 đô la tại cơ sở Rangely Cafe.",
-    "core_vocabulary": [
-      {
-        "word": "gift certificate",
-        "type": "n.",
-        "meaning": "phiếu chứng nhận tặng quà/ voucher"
-      }
-    ]
-  },
-  {
-    "id": "q0256",
-    "question": "The board of directors is discussing ------- they will maintain their core technology.",
-    "options": {
-      "A": "who",
-      "B": "which",
-      "C": "how",
-      "D": "what"
-    },
-    "correct_answer": "C",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Mệnh đề danh ngữ đứng sau 'discussing'. Ban lãnh đạo đang thảo luận về CÁCH THỨC - LÀM THẾ NÀO (how) để bảo trì.",
-    "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
-    "translation": "Bên phía Ban giám đốc hiện đang ngồi đàm đạo để tìm cách định đoạt xem LÀM NHƯ THẾ NÀO để hệ thống của họ sẽ duy trì được nền tảng công nghệ cốt lõi.",
-    "core_vocabulary": [
-      {
-        "word": "maintain",
-        "type": "v.",
-        "meaning": "duy tu bảo dưỡng/duy trì"
-      },
-      {
-        "word": "core technology",
-        "type": "n.",
-        "meaning": "công nghệ nền lõi"
-      }
-    ]
-  },
-  {
-    "id": "q0257",
-    "question": "The product development team cannot say ------- the new line of products will be released.",
-    "options": {
-      "A": "which",
-      "B": "when",
-      "C": "who",
-      "D": "what"
-    },
-    "correct_answer": "B",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Tương tự nhóm mệnh đề danh ngữ đóng vai trò tân ngữ: Không thể nói được 'KHI NÀO' (when).",
-    "explanation_grammar": "Mệnh đề danh ngữ với từ để hỏi",
-    "translation": "Đội phát triển sản phẩm chưa thể nói khi nào dòng sản phẩm mới sẽ được tung ra.",
-    "core_vocabulary": [
-      {
-        "word": "release",
-        "type": "v.",
-        "meaning": "xuất xưởng, phát hành giải phóng"
-      }
-    ]
-  },
-  {
-    "id": "q0258",
-    "question": "------- arrives first to the grand opening of Dimkin's Ice Cream Shop will receive a free T-shirt.",
-    "options": {
-      "A": "whoever",
-      "B": "What",
-      "C": "That",
-      "D": "Who"
-    },
-    "correct_answer": "A",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Cả cụm [Whoever arrives first...] sẽ đóng vai trò làm Chủ Ngữ khổng lồ. Từ 'Whoever' (Bất kì ai) mang yếu tố không xác định sẽ rất hợp lý trong trường hợp ai đó đến để tặng áo.",
-    "explanation_grammar": "Đại từ quan hệ kép (whoever, whatever…)",
-    "translation": "Bất luận là ai, cho dù người nào có đặt chân đến sớm nhất vào ngày lễ khai trương quy mô của Tiệm kem Dimkin thì đều cũng sẽ nhận được một chiếc áo phông miễn phí.",
-    "core_vocabulary": [
-      {
-        "word": "grand opening",
-        "type": "n.",
-        "meaning": "lễ hội khai trương tưng bừng"
-      }
-    ]
-  },
-  {
-    "id": "q0259",
-    "question": "A report in the Journal of the Agricultural Society suggests that consumers are increasingly concerned about ------- their produce is grown.",
-    "options": {
-      "A": "that",
-      "B": "what",
-      "C": "where",
-      "D": "it"
-    },
-    "correct_answer": "C",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Mệnh đề danh ngữ đứng sau giới từ (about). Người tiêu dùng quan tâm NƠI MÀ nông sản được trồng. Chỗ này cần 'where' (ở đâu/nơi nào).",
-    "explanation_grammar": "Giới từ + đại từ quan hệ",
-    "translation": "Một báo cáo trong tờ Tạp chí của Hiệp hội Nông nghiệp uy tín đã chỉ ra rằng người tiêu dùng hiện nay đang ngày một dấy lên mối bận tâm về khu vực NƠI TRỐN MÀ loại nông sản của họ được mang đi ươm trồng.",
-    "core_vocabulary": [
-      {
-        "word": "produce",
-        "type": "n.",
-        "meaning": "nông sản thu hoạch"
-      },
-      {
-        "word": "concerned about",
-        "type": "phr.",
-        "meaning": "lo ngại, bận tâm lưu ý tới"
-      }
-    ]
-  },
-  {
-    "id": "q0260",
-    "question": "The corporate officers have requested that Ms. Nguyen ------- all available options for reducing costs at the Hanoi factory.",
-    "options": {
-      "A": "investigate",
-      "B": "has investigated",
-      "C": "to investigate",
-      "D": "is investigating"
-    },
-    "correct_answer": "A",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Đây là mẫu cấu trúc của Thể Giả Định (Subjunctive). Trọng điểm nằm ở động từ 'requested'. Đi sau động từ yêu cầu (request, ask, demand...) kết hợp mệnh đề 'that', động từ ở vế sau hoàn toàn không cần chia thì, giữ nguyên gốc (Bare Infinitive).",
-    "explanation_grammar": "Mệnh đề danh ngữ với 'that' (thức giả định)",
-    "translation": "Bộ ngũ hội đồng các giám đốc điều hành của tập đoàn đã vạch gửi yêu cầu RẰNG cô Nguyễn phải đi điều tra xem xét mọi giải pháp sẵn có để cắt giảm ngân chi tại chi nhánh nhà máy ở Hà Nội.",
-    "core_vocabulary": [
-      {
-        "word": "investigate",
-        "type": "v.",
-        "meaning": "mò tìm, thực địa điều tra"
-      }
-    ]
-  },
-  {
-    "id": "q0261",
-    "question": "The sequel to last year's film Galactic Express made $400 million worldwide, ------- is more than the first movie earned.",
-    "options": {
-      "A": "whose",
-      "B": "what",
-      "C": "this",
-      "D": "which"
-    },
-    "correct_answer": "D",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Đại từ 'which' thay thế cho vế câu hoặc số tiền ngay phía trước đó, dùng trong mệnh đề bổ sung ngăn bằng dấu phẩy.",
-    "explanation_grammar": "Mệnh đề quan hệ không xác định",
-    "translation": "Phần tiếp theo của bộ phim Galactic Express năm ngoái đã thu về 400 triệu đô la trên toàn thế giới, nhiều hơn số tiền phần đầu kiếm được.",
-    "core_vocabulary": [
-      {
-        "word": "sequel",
-        "type": "n.",
-        "meaning": "tập tiếp nối / phụ bản / phần kéo sau"
-      }
-    ]
-  },
-  {
-    "id": "q0262",
-    "question": "Eight sports venues, five of ------- are located in California, have been chosen to host the West Coast Soccer Tournament.",
-    "options": {
-      "A": "them",
-      "B": "which",
-      "C": "those",
-      "D": "what"
-    },
-    "correct_answer": "B",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Số lượng + of + whom / which (để thể hiện số phần trong tổng số sự vật/hoặc tập người). California là nơi có mặt của 5 sân vân động (vật), nên chỉ dùng 'which'.",
-    "explanation_grammar": "Từ chỉ lượng + of + which/whom",
-    "translation": "Tám địa điểm sân bãi tổ hợp thể thao, MÀ TRONG SỐ NÀY ẮT CÓ tóm trọn năm chỗ là được ngự đóng tại tiểu bang California, thì đã đều được phê chọn để tham dự đóng nốc đăng cai trận Giải đấu Bóng đá Vùng Bờ Tây.",
-    "core_vocabulary": [
-      {
-        "word": "venue",
-        "type": "n.",
-        "meaning": "đại bản doanh/điểm tụ nơi thi đấu"
-      }
-    ]
-  },
-  {
-    "id": "q0263",
-    "question": "------- wishing to work overtime this month is reminded to advise the supervisor before the end of the week.",
-    "options": {
-      "A": "Anyone",
-      "B": "All",
-      "C": "Whoever",
-      "D": "Those"
-    },
-    "correct_answer": "A",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Rút gọn mệnh đề quan hệ bằng V-ing [Anyone who wishes = Anyone wishing]. Nếu dùng 'Those' (số nhiều) thì V sau phải chia 'are reminded', nhưng câu lại là 'is reminded'.",
-    "explanation_grammar": "Đại từ bất định + mệnh đề rút gọn",
-    "translation": "BẤT KÌ NGƯỜI NÀO MÀ CÓ ấp ủ nguyện vọng muốn bung sức làm lăng tăng ca vào tháng này thì đều bị nhắc nhở phải trình đệ báo lời tới đội ngũ giám sát trước tầm điểm thời khắc kết tuần cuối.",
-    "core_vocabulary": [
-      {
-        "word": "overtime",
-        "type": "n.",
-        "meaning": "tăng cường giờ/làm thêm ca"
-      }
-    ]
-  },
-  {
-    "id": "q0264",
-    "question": "Management was unimpressed with the advertising campaign designed by Blue Creative, a company ------- work is often praised as being unique and ahead of its time.",
-    "options": {
-      "A": "what",
-      "B": "who",
-      "C": "whose",
-      "D": "that"
-    },
-    "correct_answer": "C",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Đại từ dùng làm từ sở hữu: các TÁC PHẨM ('work') của CÔNG TY (a company) -> whose work.",
-    "explanation_grammar": "Đại từ quan hệ sở hữu",
-    "translation": "Ban quản lý không mấy ấn tượng với chiến dịch quảng cáo do Blue Creative thiết kế, một công ty mà tác phẩm của họ thường được khen là độc đáo và đi trước thời đại.",
-    "core_vocabulary": [
-      {
-        "word": "unimpressed",
-        "type": "adj.",
-        "meaning": "chẳng chút bận tâm/ 0 mảy may ấn tượng"
-      }
-    ]
-  },
-  {
-    "id": "q0265",
-    "question": "All new employees are encouraged to read the company history book, which ------- the philosophical foundation of the corporation.",
-    "options": {
-      "A": "detail",
-      "B": "detailed",
-      "C": "detailing",
-      "D": "details"
-    },
-    "correct_answer": "D",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "'Which' thay cho danh từ số ít 'the company history book'. Do đó động từ 'detail' (làm rõ chi tiết - chức năng Động từ) phải được chia s/es.",
-    "explanation_grammar": "Hoà hợp S-V trong mệnh đề quan hệ",
-    "translation": "Tất cả nhân viên mới được khuyến khích đọc cuốn sách lịch sử công ty, cuốn sách trình bày chi tiết nền tảng triết lý của tập đoàn.",
-    "core_vocabulary": [
-      {
-        "word": "philosophical",
-        "type": "adj.",
-        "meaning": "mang tư chất đạo triết học suy luận"
-      }
-    ]
-  },
-  {
-    "id": "q0266",
-    "question": "The company president frequently updates all staff on the merger with the Star Entertainment Group, ------- will take place in a few weeks' time.",
-    "options": {
-      "A": "who",
-      "B": "which",
-      "C": "whose",
-      "D": "how"
-    },
-    "correct_answer": "B",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Thay thế cho 'the merger' (vụ sáp nhập) ở vế trước dấu phẩy, dùng 'which' đóng vai trò Chủ ngữ (cái mà sẽ diễn ra...).",
-    "explanation_grammar": "Mệnh đề quan hệ không xác định",
-    "translation": "Chủ tịch công ty thường xuyên cập nhật cho toàn thể nhân viên về thương vụ sáp nhập với Star Entertainment Group, thương vụ sẽ diễn ra trong vài tuần tới.",
-    "core_vocabulary": [
-      {
-        "word": "merger",
-        "type": "n.",
-        "meaning": "cuộc thâu gộp ôm sáp hòa vụ nhập mảng"
-      }
-    ]
-  },
-  {
-    "id": "q0267",
-    "question": "We need to seriously consider the fact ------- the public perceives us to be an environmentally-friendly company, as our packaging is recyclable.",
-    "options": {
-      "A": "which",
-      "B": "whereas",
-      "C": "what",
-      "D": "that"
-    },
-    "correct_answer": "D",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Cụm danh ngữ kinh điển 'the fact that' (Sự thật là / Rằng vế thực tế là...).",
-    "explanation_grammar": "Mệnh đề danh ngữ với 'that'",
-    "translation": "Chúng ta cần nghiêm túc cân nhắc thực tế rằng công chúng xem chúng ta là một công ty thân thiện với môi trường, vì bao bì của chúng ta có thể tái chế.",
-    "core_vocabulary": [
-      {
-        "word": "perceive",
-        "type": "v.",
-        "meaning": "hiểu cảm góc nhìn /nhận giác thức lấy"
-      }
-    ]
-  },
-  {
-    "id": "q0268",
-    "question": "Morgan Inc.'s acquisition of a foreign firm will bring about a variety of drastic changes to the way the company -------.",
-    "options": {
-      "A": "operates",
-      "B": "operated",
-      "C": "to operate",
-      "D": "operation"
-    },
-    "correct_answer": "A",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Lược lược bỏ đại từ 'that' trong cấu trúc the way (that)... => the way the company operates (cách mà họ hoạt động - chia số ít hiện tại vì the company).",
-    "explanation_grammar": "Mệnh đề quan hệ với 'the way'",
-    "translation": "Việc Morgan Inc. thâu tóm một công ty nước ngoài sẽ mang lại nhiều thay đổi lớn cho cách công ty vận hành.",
-    "core_vocabulary": [
-      {
-        "word": "acquisition",
-        "type": "n.",
-        "meaning": "vụ mác cuộc xáp mua tụ thâu túm nhích thâu tóm gom ngạch"
-      }
-    ]
-  },
-  {
-    "id": "q0269",
-    "question": "The desserts ------- in the company cafeteria are not only incredibly delicious, but healthy and beautifully presented, too.",
-    "options": {
-      "A": "to offer",
-      "B": "offering",
-      "C": "offered",
-      "D": "offers"
-    },
-    "correct_answer": "C",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Rút gọn mệnh đề dạng Bị động. Câu đầy đủ: The desserts [which are offered] -> The desserts [offered].",
-    "explanation_grammar": "Mệnh đề quan hệ rút gọn (bị động)",
-    "translation": "Các món tráng miệng được phục vụ tại căng tin công ty không chỉ vô cùng ngon miệng mà còn tốt cho sức khoẻ và được trình bày đẹp mắt.",
-    "core_vocabulary": [
-      {
-        "word": "cafeteria",
-        "type": "n.",
-        "meaning": "nhà khu mạc căng tin xưởng ăn điểm nội rập trạm bộ phẩu ăn"
-      }
-    ]
-  },
-  {
-    "id": "q0270",
-    "question": "After months of negotiations, Mr. Kenneth has reached an agreement with JM Logistics Co., ------- support is crucial for his business's economic recovery.",
-    "options": {
-      "A": "which",
-      "B": "whose",
-      "C": "what",
-      "D": "that"
-    },
-    "correct_answer": "B",
-    "grammar_type": "MĐQH",
-    "explanation_reason": "Là đại từ sở hữu của 'JM Logistics Co'. 'Support' (sự ủng hộ, hỗ trợ) CỦA HỌ.",
-    "explanation_grammar": "Đại từ quan hệ sở hữu",
-    "translation": "Sau nhiều tháng đàm phán, ông Kenneth đã đạt được thoả thuận với JM Logistics Co., công ty mà sự hỗ trợ của họ có ý nghĩa then chốt đối với việc phục hồi kinh tế của doanh nghiệp ông.",
-    "core_vocabulary": [
-      {
-        "word": "crucial",
-        "type": "adj.",
-        "meaning": "then chốt, quan trọng cốt tử"
       }
     ]
   },
@@ -69892,23 +68987,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q_test7_sosanh_17",
-    "question": "The latest prototype from TechNova is not quite as ________ as the current model.",
+    "question": "The replacement filter is not as ________ as the original one supplied by the manufacturer.",
     "options": {
-      "A": "durability",
-      "B": "durance",
-      "C": "durably",
-      "D": "durable"
+      "A": "efficiency",
+      "B": "efficiently",
+      "C": "efficacy",
+      "D": "efficient"
     },
     "correct_answer": "D",
     "grammar_type": "So sánh",
-    "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'is' cần tính từ 'durable'.",
-    "explanation_grammar": "So sánh bằng",
-    "translation": "Nguyên mẫu mới nhất từ TechNova không bền bỉ bằng mẫu hiện tại.",
+    "explanation_reason": "So sánh bằng 'as + tính từ + as' sau động từ 'to be' cần một tính từ. 'Efficient' là tính từ; 'efficiency' và 'efficacy' là danh từ, 'efficiently' là trạng từ.",
+    "explanation_grammar": "So sánh bằng (as… as)",
+    "translation": "Bộ lọc thay thế không hiệu quả bằng bộ lọc gốc do nhà sản xuất cung cấp.",
     "core_vocabulary": [
       {
-        "word": "durable",
-        "type": "adj.",
-        "meaning": "bền bỉ"
+        "word": "filter",
+        "type": "n.",
+        "meaning": "bộ lọc"
+      },
+      {
+        "word": "manufacturer",
+        "type": "n.",
+        "meaning": "nhà sản xuất"
       }
     ]
   },
@@ -70299,23 +69399,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q_test8_sosanh_10",
-    "question": "Dr. Aris was recognized for conducting the most __________ medical study at BioLab Inc.",
+    "question": "The auditor was commended for delivering the most ________ financial report in the firm's history.",
     "options": {
-      "A": "comprehensiveness",
-      "B": "comprehension",
-      "C": "comprehensively",
-      "D": "comprehensive"
+      "A": "transparency",
+      "B": "transparently",
+      "C": "transparence",
+      "D": "transparent"
     },
     "correct_answer": "D",
     "grammar_type": "So sánh",
-    "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'study' cần tính từ 'comprehensive'.",
+    "explanation_reason": "So sánh nhất 'the most + tính từ' bổ nghĩa cho cụm danh từ 'financial report'. 'Transparent' là tính từ; 'transparency' và 'transparence' là danh từ, 'transparently' là trạng từ.",
     "explanation_grammar": "So sánh nhất",
-    "translation": "Tiến sĩ Aris đã được ghi nhận vì đã thực hiện nghiên cứu y học toàn diện nhất tại BioLab Inc.",
+    "translation": "Kiểm toán viên được khen ngợi vì đã lập bản báo cáo tài chính minh bạch nhất trong lịch sử công ty.",
     "core_vocabulary": [
       {
-        "word": "comprehensive",
-        "type": "adj.",
-        "meaning": "toàn diện"
+        "word": "auditor",
+        "type": "n.",
+        "meaning": "kiểm toán viên"
+      },
+      {
+        "word": "commend",
+        "type": "v.",
+        "meaning": "khen ngợi"
       }
     ]
   },
@@ -70343,23 +69448,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q_test8_sosanh_12",
-    "question": "The specialized training made the junior consultants more ________ than the new interns.",
+    "question": "The new onboarding programme has made recent hires more ________ than those trained last year.",
     "options": {
-      "A": "knowledge",
-      "B": "knowingly",
-      "C": "know",
-      "D": "knowledgeable"
+      "A": "confidence",
+      "B": "confidently",
+      "C": "confide",
+      "D": "confident"
     },
     "correct_answer": "D",
     "grammar_type": "So sánh",
-    "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'knowledgeable' (am hiểu) là tính từ.",
-    "explanation_grammar": "So sánh hơn",
-    "translation": "Việc đào tạo chuyên biệt đã làm cho các nhà tư vấn cấp dưới am hiểu hơn so với các thực tập sinh mới.",
+    "explanation_reason": "Cấu trúc 'make + tân ngữ + tính từ' kết hợp so sánh hơn 'more ... than' nên cần tính từ 'confident'.",
+    "explanation_grammar": "So sánh hơn với tính từ",
+    "translation": "Chương trình hội nhập mới đã giúp nhân viên mới tự tin hơn so với những người được đào tạo năm ngoái.",
     "core_vocabulary": [
       {
-        "word": "knowledgeable",
-        "type": "adj.",
-        "meaning": "có kiến thức, am hiểu"
+        "word": "onboarding",
+        "type": "n.",
+        "meaning": "quá trình hội nhập nhân viên mới"
+      },
+      {
+        "word": "hire",
+        "type": "n.",
+        "meaning": "nhân viên mới tuyển"
       }
     ]
   },
@@ -70431,45 +69541,55 @@ export const grammarQuestions = [
   },
   {
     "id": "q_test8_sosanh_16",
-    "question": "Investing in solar panels made the office building more ________ than the warehouse.",
+    "question": "Switching to recycled packaging has made the product line more ________ than its competitors.",
     "options": {
-      "A": "sustain",
-      "B": "sustainably",
-      "C": "sustainability",
-      "D": "sustainable"
+      "A": "afford",
+      "B": "affordably",
+      "C": "affordability",
+      "D": "affordable"
     },
     "correct_answer": "D",
     "grammar_type": "So sánh",
-    "explanation_reason": "Cấu trúc 'make + object + adj'. So sánh hơn 'more + adj + than'. 'sustainable' là tính từ.",
-    "explanation_grammar": "So sánh hơn",
-    "translation": "Đầu tư vào các tấm pin mặt trời đã làm cho tòa nhà văn phòng bền vững hơn so với nhà kho.",
+    "explanation_reason": "Cấu trúc 'make + tân ngữ + tính từ' đi với so sánh hơn 'more ... than' cần tính từ 'affordable'.",
+    "explanation_grammar": "So sánh hơn với tính từ",
+    "translation": "Việc chuyển sang bao bì tái chế đã giúp dòng sản phẩm có giá dễ tiếp cận hơn so với các đối thủ.",
     "core_vocabulary": [
       {
-        "word": "sustainable",
-        "type": "adj.",
-        "meaning": "bền vững"
+        "word": "packaging",
+        "type": "n.",
+        "meaning": "bao bì"
+      },
+      {
+        "word": "competitor",
+        "type": "n.",
+        "meaning": "đối thủ cạnh tranh"
       }
     ]
   },
   {
     "id": "q_test8_sosanh_17",
-    "question": "Ms. Lan was honored for providing the most __________ customer service rating at VietTel.",
+    "question": "Mr. Ortiz received an award for designing the most ________ workspace layout in the company.",
     "options": {
-      "A": "impressive",
-      "B": "impression",
-      "C": "impressively",
-      "D": "impress"
+      "A": "functional",
+      "B": "function",
+      "C": "functionally",
+      "D": "functionality"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
-    "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'rating' cần tính từ 'impressive'.",
+    "explanation_reason": "So sánh nhất 'the most + tính từ' bổ nghĩa cho cụm danh từ 'workspace layout'. 'Functional' là tính từ; 'function' và 'functionality' là danh từ, 'functionally' là trạng từ.",
     "explanation_grammar": "So sánh nhất",
-    "translation": "Cô Lan đã được vinh danh vì cung cấp chỉ số hài lòng khách hàng ấn tượng nhất tại VietTel.",
+    "translation": "Ông Ortiz đã nhận giải thưởng nhờ thiết kế bố cục không gian làm việc tiện dụng nhất công ty.",
     "core_vocabulary": [
       {
-        "word": "impressive",
-        "type": "adj.",
-        "meaning": "ấn tượng"
+        "word": "layout",
+        "type": "n.",
+        "meaning": "bố cục"
+      },
+      {
+        "word": "workspace",
+        "type": "n.",
+        "meaning": "không gian làm việc"
       }
     ]
   },
@@ -70497,67 +69617,82 @@ export const grammarQuestions = [
   },
   {
     "id": "q_test8_sosanh_19",
-    "question": "Dr. Aris was recognized for publishing the most __________ research project at BioLab Inc.",
+    "question": "The panel selected the most ________ proposal among the twelve submitted this quarter.",
     "options": {
-      "A": "influentially",
-      "B": "influentialness",
-      "C": "influence",
-      "D": "influential"
+      "A": "persuasively",
+      "B": "persuasion",
+      "C": "persuade",
+      "D": "persuasive"
     },
     "correct_answer": "D",
     "grammar_type": "So sánh",
-    "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'project' cần tính từ 'influential'.",
+    "explanation_reason": "So sánh nhất 'the most + tính từ' bổ nghĩa cho danh từ 'proposal'. 'Persuasive' là tính từ; 'persuasion' là danh từ, 'persuade' là động từ, 'persuasively' là trạng từ.",
     "explanation_grammar": "So sánh nhất",
-    "translation": "Tiến sĩ Aris đã được ghi nhận vì đã xuất bản dự án nghiên cứu có sức ảnh hưởng nhất tại BioLab Inc.",
+    "translation": "Hội đồng đã chọn bản đề xuất thuyết phục nhất trong số mười hai bản nộp trong quý này.",
     "core_vocabulary": [
       {
-        "word": "influential",
-        "type": "adj.",
-        "meaning": "có sức ảnh hưởng"
+        "word": "panel",
+        "type": "n.",
+        "meaning": "hội đồng"
+      },
+      {
+        "word": "proposal",
+        "type": "n.",
+        "meaning": "bản đề xuất"
       }
     ]
   },
   {
     "id": "q_test8_sosanh_20",
-    "question": "The leather interior of the Helios sedan is more ________ than the fabric seating.",
+    "question": "The ceramic coating on the new cookware is more ________ than the coating used previously.",
     "options": {
-      "A": "luxurious",
-      "B": "luxuriousness",
-      "C": "luxuriously",
-      "D": "luxury"
+      "A": "resistant",
+      "B": "resistance",
+      "C": "resisted",
+      "D": "resist"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
-    "explanation_reason": "So sánh hơn: 'more + adj + than'. Sau to-be 'is' cần tính từ 'luxurious'.",
-    "explanation_grammar": "So sánh hơn",
-    "translation": "Nội thất da của chiếc sedan Helios sang trọng hơn so với ghế bọc vải.",
+    "explanation_reason": "Sau 'is more ... than' cần một tính từ. 'Resistant' (có khả năng chống chịu) là tính từ; 'resistance' là danh từ, 'resisted' và 'resist' là dạng động từ.",
+    "explanation_grammar": "So sánh hơn với tính từ",
+    "translation": "Lớp phủ gốm trên bộ nồi mới có khả năng chống chịu tốt hơn lớp phủ dùng trước đây.",
     "core_vocabulary": [
       {
-        "word": "luxurious",
-        "type": "adj.",
-        "meaning": "sang trọng"
+        "word": "coating",
+        "type": "n.",
+        "meaning": "lớp phủ"
+      },
+      {
+        "word": "cookware",
+        "type": "n.",
+        "meaning": "bộ nồi chảo"
       }
     ]
   },
   {
     "id": "q_test8_sosanh_21",
-    "question": "The summer internship at Hansol Corp was not as ________ as the winter session.",
+    "question": "The autumn trade fair in Osaka was not as ________ as the organizers had hoped.",
     "options": {
-      "A": "productively",
-      "B": "productivity",
-      "C": "productive",
-      "D": "produce"
+      "A": "profitably",
+      "B": "profitability",
+      "C": "profitable",
+      "D": "profit"
     },
     "correct_answer": "C",
     "grammar_type": "So sánh",
-    "explanation_reason": "So sánh bằng: 'as + adj + as'. Sau to-be 'was' cần tính từ 'productive'.",
-    "explanation_grammar": "So sánh bằng",
-    "translation": "Kỳ thực tập mùa hè tại Hansol Corp không hiệu quả như kỳ thực tập mùa đông.",
+    "explanation_reason": "So sánh bằng 'as + tính từ + as' sau động từ 'to be' cần tính từ 'profitable'; 'profitability' và 'profit' là danh từ, 'profitably' là trạng từ.",
+    "explanation_grammar": "So sánh bằng (as… as)",
+    "translation": "Hội chợ thương mại mùa thu ở Osaka không sinh lời như ban tổ chức kỳ vọng.",
     "core_vocabulary": [
       {
-        "word": "productive",
-        "type": "adj.",
-        "meaning": "hiệu quả, năng suất"
+        "word": "trade fair",
+        "type": "n.",
+        "meaning": "hội chợ thương mại"
+      },
+      {
+        "word": "organizer",
+        "type": "n.",
+        "meaning": "ban tổ chức"
       }
     ]
   },
@@ -70585,23 +69720,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q_test8_sosanh_23",
-    "question": "Mr. Shaw was honored for maintaining the most __________ inventory records at the city branch.",
+    "question": "The committee praised Ms. Bakr for drafting the most ________ safety guidelines to date.",
     "options": {
-      "A": "accurate",
-      "B": "accurateness",
-      "C": "accurately",
-      "D": "accuracy"
+      "A": "practical",
+      "B": "practically",
+      "C": "practice",
+      "D": "practicality"
     },
     "correct_answer": "A",
     "grammar_type": "So sánh",
-    "explanation_reason": "So sánh nhất: 'the most + adj'. Đứng trước danh từ 'records' cần tính từ 'accurate'.",
+    "explanation_reason": "So sánh nhất 'the most + tính từ' bổ nghĩa cho cụm danh từ 'safety guidelines'. 'Practical' là tính từ; 'practice' và 'practicality' là danh từ, 'practically' là trạng từ.",
     "explanation_grammar": "So sánh nhất",
-    "translation": "Ông Shaw đã được vinh danh vì đã duy trì hồ sơ kiểm kê chính xác nhất tại chi nhánh thành phố.",
+    "translation": "Uỷ ban đã khen bà Bakr vì soạn ra bộ hướng dẫn an toàn thiết thực nhất từ trước đến nay.",
     "core_vocabulary": [
       {
-        "word": "accurate",
-        "type": "adj.",
-        "meaning": "chính xác"
+        "word": "draft",
+        "type": "v.",
+        "meaning": "soạn thảo"
+      },
+      {
+        "word": "guideline",
+        "type": "n.",
+        "meaning": "hướng dẫn, quy định"
       }
     ]
   },

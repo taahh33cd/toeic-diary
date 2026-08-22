@@ -61,7 +61,7 @@ export const TOPICS: TopicConfig[] = [
     id: "MĐQH",
     slug: "mdqh",
     name: "Mệnh đề quan hệ",
-    testSizes: [20, 20, 20, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 20, 20],
+    testSizes: [20, 20, 20, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25],
     emoji: "🔀",
     color: "#f97316",
   },
