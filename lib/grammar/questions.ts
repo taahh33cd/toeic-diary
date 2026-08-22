@@ -4780,14 +4780,14 @@ export const grammarQuestions = [
     "id": "q0050",
     "question": "Because it rained a lot, we stayed at home.",
     "options": {
-      "A": "S-V-O-C",
-      "B": "S-V-C",
-      "C": "S-V",
-      "D": "S-V-O"
+      "A": "S-V, S-V-C",
+      "B": "S-V-C, S-V",
+      "C": "S-V-C, S-V-C",
+      "D": "S-V, S-V"
     },
     "correct_answer": "C",
     "grammar_type": "Cấu trúc câu",
-    "explanation_reason": "Mệnh đề chính là 'we stayed at home'. Cụm 'at home' là trạng ngữ chỉ nơi chốn; 'Because...' chỉ là trạng ngữ phụ. Nên đây là cấu trúc cơ bản S-V.",
+    "explanation_reason": "Đây là câu phức gồm hai mệnh đề nên phải phân tích từng mệnh đề. Mệnh đề phụ 'Because it rained a lot': chủ ngữ 'it' + động từ 'rained' + trạng từ 'a lot' làm bổ ngữ → S-V-C. Mệnh đề chính 'we stayed at home': chủ ngữ 'we' + động từ 'stayed' + cụm chỉ nơi chốn 'at home' làm bổ ngữ → S-V-C.",
     "explanation_grammar": "Cấu trúc S-V cơ bản, đi kèm với các cụm/trạng từ ở nhiều vị trí nhưng cốt lõi vẫn chỉ là S và V diễn ra độc lập.",
     "translation": "Bởi vì trời mưa to, chúng tôi đã ở nhà.",
     "core_vocabulary": [
