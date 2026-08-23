@@ -19,6 +19,7 @@ import type {
   TransLevelSlug,
 } from "@/lib/subskills/translation/types";
 import { VOCAB_KIND_LABELS, vocabKey } from "@/lib/subskills/translation/types";
+import { FS, CONTAINER, PAD_X, FILL_SCREEN } from "@/components/grammar/scale";
 
 const GREEN = "#16a34a";
 const RED = "#ef4444";
@@ -88,7 +89,7 @@ function KindTag({ entry }: { entry: VocabEntry }) {
         borderRadius: 99,
         background: "var(--bg-secondary)",
         border: "1px solid var(--border)",
-        fontSize: "0.65rem",
+        fontSize: FS.xs,
         fontWeight: 600,
         color: "var(--text-muted)",
         whiteSpace: "nowrap",
@@ -126,18 +127,18 @@ function ListMode({
             <div style={{ display: "flex", alignItems: "flex-start", gap: "0.6rem" }}>
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.45rem", flexWrap: "wrap" }}>
-                  <span style={{ fontSize: "0.98rem", fontWeight: 700, color: "var(--text-primary)" }}>
+                  <span style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)" }}>
                     {e.en}
                   </span>
                   <KindTag entry={e} />
                 </div>
-                <p style={{ fontSize: "0.88rem", color: "var(--text-primary)", margin: "0.25rem 0 0" }}>
+                <p style={{ fontSize: FS.sm, color: "var(--text-primary)", margin: "0.25rem 0 0" }}>
                   {e.vi}
                 </p>
                 {e.example && (
                   <p
                     style={{
-                      fontSize: "0.78rem",
+                      fontSize: FS.xs,
                       color: "var(--text-muted)",
                       fontStyle: "italic",
                       margin: "0.35rem 0 0",
@@ -149,7 +150,7 @@ function ListMode({
                   </p>
                 )}
                 {e.note && (
-                  <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", margin: "0.35rem 0 0" }}>
+                  <p style={{ fontSize: FS.xs, color: "var(--text-muted)", margin: "0.35rem 0 0" }}>
                     ⚠ {e.note}
                   </p>
                 )}
@@ -207,7 +208,7 @@ function FlashcardMode({
 
   return (
     <div>
-      <div style={{ fontSize: "0.78rem", color: "var(--text-muted)", textAlign: "center", marginBottom: "0.6rem" }}>
+      <div style={{ fontSize: FS.xs, color: "var(--text-muted)", textAlign: "center", marginBottom: "0.6rem" }}>
         Thẻ {idx + 1}/{entries.length}
       </div>
 
@@ -232,20 +233,20 @@ function FlashcardMode({
       >
         {!flipped ? (
           <>
-            <span style={{ fontSize: "1.4rem", fontWeight: 700, color: "var(--text-primary)" }}>{e.en}</span>
+            <span style={{ fontSize: FS.lg, fontWeight: 700, color: "var(--text-primary)" }}>{e.en}</span>
             <KindTag entry={e} />
-            <span style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>Bấm để lật</span>
+            <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>Bấm để lật</span>
           </>
         ) : (
           <>
-            <span style={{ fontSize: "1.15rem", fontWeight: 600, color: "var(--text-primary)" }}>{e.vi}</span>
+            <span style={{ fontSize: FS.lg, fontWeight: 600, color: "var(--text-primary)" }}>{e.vi}</span>
             {e.example && (
-              <span style={{ fontSize: "0.82rem", color: "var(--text-muted)", fontStyle: "italic" }}>
+              <span style={{ fontSize: FS.sm, color: "var(--text-muted)", fontStyle: "italic" }}>
                 {e.example}
               </span>
             )}
             {e.note && (
-              <span style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>⚠ {e.note}</span>
+              <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>⚠ {e.note}</span>
             )}
           </>
         )}
@@ -278,7 +279,7 @@ function FlashcardMode({
             background: known ? "rgba(22,163,74,0.1)" : "transparent",
             color: known ? "#15803d" : "var(--text-secondary)",
             fontWeight: 600,
-            fontSize: "0.85rem",
+            fontSize: FS.sm,
             cursor: "pointer",
             fontFamily: "var(--font-sans)",
           }}
@@ -338,8 +339,8 @@ function QuizMode({
     const pct = Math.round((score / order.length) * 100);
     return (
       <div style={{ ...card, textAlign: "center", padding: "2rem 1.25rem" }}>
-        <div style={{ fontSize: "2.6rem", fontWeight: 800, color: pct >= 80 ? GREEN : "#d97706" }}>{pct}%</div>
-        <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", margin: "0.3rem 0 1.1rem" }}>
+        <div style={{ fontSize: FS.xl, fontWeight: 800, color: pct >= 80 ? GREEN : "#d97706" }}>{pct}%</div>
+        <p style={{ fontSize: FS.sm, color: "var(--text-muted)", margin: "0.3rem 0 1.1rem" }}>
           {score}/{order.length} từ đúng
         </p>
         <button
@@ -359,7 +360,7 @@ function QuizMode({
             background: "var(--accent-primary)",
             color: "#fff",
             fontWeight: 700,
-            fontSize: "0.85rem",
+            fontSize: FS.sm,
             cursor: "pointer",
             fontFamily: "var(--font-sans)",
           }}
@@ -374,12 +375,12 @@ function QuizMode({
 
   return (
     <div>
-      <div style={{ fontSize: "0.78rem", color: "var(--text-muted)", marginBottom: "0.6rem" }}>
+      <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginBottom: "0.6rem" }}>
         Câu {idx + 1}/{order.length}
       </div>
 
       <div style={{ ...card, marginBottom: "0.9rem", textAlign: "center" }}>
-        <div style={{ fontSize: "1.2rem", fontWeight: 700, color: "var(--text-primary)" }}>{e.en}</div>
+        <div style={{ fontSize: FS.lg, fontWeight: 700, color: "var(--text-primary)" }}>{e.en}</div>
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
@@ -418,7 +419,7 @@ function QuizMode({
                 border,
                 background: bg,
                 color: "var(--text-primary)",
-                fontSize: "0.87rem",
+                fontSize: FS.sm,
                 lineHeight: 1.5,
                 cursor: answered ? "default" : "pointer",
                 fontFamily: "var(--font-sans)",
@@ -448,7 +449,7 @@ function QuizMode({
             background: "var(--accent-primary)",
             color: "#fff",
             fontWeight: 700,
-            fontSize: "0.87rem",
+            fontSize: FS.sm,
             cursor: "pointer",
             fontFamily: "var(--font-sans)",
           }}
@@ -485,8 +486,8 @@ function FillMode({
     const pct = Math.round((score / order.length) * 100);
     return (
       <div style={{ ...card, textAlign: "center", padding: "2rem 1.25rem" }}>
-        <div style={{ fontSize: "2.6rem", fontWeight: 800, color: pct >= 80 ? GREEN : "#d97706" }}>{pct}%</div>
-        <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", margin: "0.3rem 0 1.1rem" }}>
+        <div style={{ fontSize: FS.xl, fontWeight: 800, color: pct >= 80 ? GREEN : "#d97706" }}>{pct}%</div>
+        <p style={{ fontSize: FS.sm, color: "var(--text-muted)", margin: "0.3rem 0 1.1rem" }}>
           {score}/{order.length} từ viết đúng
         </p>
         <button
@@ -507,7 +508,7 @@ function FillMode({
             background: "var(--accent-primary)",
             color: "#fff",
             fontWeight: 700,
-            fontSize: "0.85rem",
+            fontSize: FS.sm,
             cursor: "pointer",
             fontFamily: "var(--font-sans)",
           }}
@@ -541,12 +542,12 @@ function FillMode({
 
   return (
     <div>
-      <div style={{ fontSize: "0.78rem", color: "var(--text-muted)", marginBottom: "0.6rem" }}>
+      <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginBottom: "0.6rem" }}>
         Câu {idx + 1}/{order.length} · gõ tiếng Anh
       </div>
 
       <div style={{ ...card, marginBottom: "0.9rem", textAlign: "center" }}>
-        <div style={{ fontSize: "1.05rem", fontWeight: 600, color: "var(--text-primary)" }}>{e.vi}</div>
+        <div style={{ fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)" }}>{e.vi}</div>
         <div style={{ marginTop: "0.4rem" }}>
           <KindTag entry={e} />
         </div>
@@ -574,7 +575,7 @@ function FillMode({
           }`,
           background: "var(--bg-elevated)",
           color: "var(--text-primary)",
-          fontSize: "0.95rem",
+          fontSize: FS.md,
           fontFamily: "var(--font-sans)",
         }}
       />
@@ -587,7 +588,7 @@ function FillMode({
             borderRadius: 8,
             background: "var(--bg-secondary)",
             borderLeft: `3px solid ${state === "right" ? GREEN : RED}`,
-            fontSize: "0.85rem",
+            fontSize: FS.sm,
             color: "var(--text-primary)",
             display: "flex",
             alignItems: "center",
@@ -614,7 +615,7 @@ function FillMode({
             state === "typing" && !value.trim() ? "var(--bg-secondary)" : "var(--accent-primary)",
           color: state === "typing" && !value.trim() ? "var(--text-muted)" : "#fff",
           fontWeight: 700,
-          fontSize: "0.87rem",
+          fontSize: FS.sm,
           cursor: state === "typing" && !value.trim() ? "default" : "pointer",
           fontFamily: "var(--font-sans)",
         }}
@@ -697,15 +698,16 @@ export function VocabScreen({
   };
 
   return (
-    <div style={{ minHeight: "100%", background: "var(--bg-primary)", padding: "clamp(1.25rem, 4vw, 2rem)" }}>
-      <div style={{ maxWidth: 700, margin: "0 auto" }}>
-        <p style={{ fontSize: "0.75rem", color: "var(--text-muted)", margin: "0 0 0.3rem" }}>
+    <div style={{ ...CONTAINER, ...FILL_SCREEN, background: "var(--bg-primary)", fontFamily: "var(--font-sans)" }}>
+      <div style={{ flex: 1, padding: `clamp(1.25rem, 3vw, 2.25rem) ${PAD_X}` }}>
+      <div style={{ maxWidth: 720, margin: "0 auto" }}>
+        <p style={{ fontSize: FS.xs, color: "var(--text-muted)", margin: "0 0 0.3rem" }}>
           {topicName} · {levelName}
         </p>
-        <h1 style={{ fontSize: "1.3rem", fontWeight: 700, color: "var(--text-primary)", margin: "0 0 0.35rem" }}>
+        <h1 style={{ fontSize: FS.lg, fontWeight: 700, color: "var(--text-primary)", margin: "0 0 0.35rem" }}>
           {heading ?? "Từ vựng của bài"}
         </h1>
-        <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.65, margin: "0 0 0.9rem" }}>
+        <p style={{ fontSize: FS.sm, color: "var(--text-muted)", lineHeight: 1.65, margin: "0 0 0.9rem" }}>
           {subheading ??
             `${entries.length} mục từ rút từ chính ngữ liệu của level này. Nắm trước thì lúc dịch đỡ phải đoán.`}
         </p>
@@ -723,7 +725,7 @@ export function VocabScreen({
               }}
             />
           </div>
-          <span style={{ fontSize: "0.76rem", color: "var(--text-muted)", whiteSpace: "nowrap" }}>
+          <span style={{ fontSize: FS.xs, color: "var(--text-muted)", whiteSpace: "nowrap" }}>
             Đã thuộc {knownCount}/{entries.length}
           </span>
         </div>
@@ -746,7 +748,7 @@ export function VocabScreen({
                   border: `1px solid ${active ? "var(--accent-primary)" : "var(--border)"}`,
                   background: active ? "var(--accent-primary)" : "transparent",
                   color: active ? "#fff" : "var(--text-secondary)",
-                  fontSize: "0.8rem",
+                  fontSize: FS.sm,
                   fontWeight: active ? 700 : 500,
                   cursor: "pointer",
                   fontFamily: "var(--font-sans)",
@@ -785,7 +787,7 @@ export function VocabScreen({
             background: "var(--accent-primary)",
             color: "#fff",
             fontWeight: 700,
-            fontSize: "0.92rem",
+            fontSize: FS.md,
             cursor: "pointer",
             fontFamily: "var(--font-sans)",
           }}
@@ -793,6 +795,7 @@ export function VocabScreen({
           <Play size={15} /> Bắt đầu làm bài ({questionCount} câu)
         </button>
         )}
+      </div>
       </div>
     </div>
   );

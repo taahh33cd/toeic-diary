@@ -26,6 +26,7 @@ import type {
 import { ERROR_TAG_LABELS } from "@/lib/subskills/translation/types";
 import type { VocabEntry, VocabProgressMap } from "@/lib/subskills/translation/types";
 import { VocabScreen } from "./VocabScreen";
+import { FS, CONTAINER, PAD_X, FILL_SCREEN } from "@/components/grammar/scale";
 
 interface Props {
   topicSlug: string;
@@ -146,7 +147,7 @@ const sourceBox: React.CSSProperties = {
   borderRadius: 8,
   background: "var(--bg-secondary)",
   borderLeft: "3px solid var(--accent-primary)",
-  fontSize: "0.95rem",
+  fontSize: FS.md,
   lineHeight: 1.65,
   color: "var(--text-primary)",
   whiteSpace: "pre-wrap",
@@ -166,7 +167,7 @@ function ExplainBox({ ok, title, children }: { ok: boolean; title: string; child
     >
       <div
         style={{
-          fontSize: "0.7rem",
+          fontSize: FS.xs,
           fontWeight: 700,
           textTransform: "uppercase",
           letterSpacing: "0.06em",
@@ -176,7 +177,7 @@ function ExplainBox({ ok, title, children }: { ok: boolean; title: string; child
       >
         {title}
       </div>
-      <div style={{ fontSize: "0.82rem", color: "var(--text-primary)", lineHeight: 1.65 }}>{children}</div>
+      <div style={{ fontSize: FS.sm, color: "var(--text-primary)", lineHeight: 1.65 }}>{children}</div>
     </div>
   );
 }
@@ -203,7 +204,7 @@ function HighlightView({
 
   return (
     <div>
-      <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", fontWeight: 600, marginBottom: "0.9rem" }}>
+      <p style={{ fontSize: FS.sm, color: "var(--text-secondary)", fontWeight: 600, marginBottom: "0.9rem" }}>
         {q.instruction}
       </p>
 
@@ -244,7 +245,7 @@ function HighlightView({
                 border,
                 background: bg,
                 color,
-                fontSize: "0.92rem",
+                fontSize: FS.md,
                 fontWeight: isSelected || (settled && isCorrect) ? 600 : 400,
                 cursor: settled ? "default" : "pointer",
                 fontFamily: "var(--font-sans)",
@@ -267,7 +268,7 @@ function HighlightView({
             background: ans.length === 0 ? "var(--bg-secondary)" : "var(--accent-primary)",
             color: ans.length === 0 ? "var(--text-muted)" : "#fff",
             fontWeight: 700,
-            fontSize: "0.85rem",
+            fontSize: FS.sm,
             cursor: ans.length === 0 ? "default" : "pointer",
             fontFamily: "var(--font-sans)",
           }}
@@ -351,7 +352,7 @@ function CompareView({
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontSize: "0.75rem",
+                    fontSize: FS.xs,
                     fontWeight: 700,
                     background: settled && isCorrect ? GREEN : settled && isPicked ? RED : "var(--bg-secondary)",
                     color: settled && (isCorrect || isPicked) ? "#fff" : "var(--text-muted)",
@@ -359,7 +360,7 @@ function CompareView({
                 >
                   {String.fromCharCode(65 + slot)}
                 </span>
-                <span style={{ fontSize: "0.88rem", color: "var(--text-primary)", lineHeight: 1.55 }}>{opt}</span>
+                <span style={{ fontSize: FS.sm, color: "var(--text-primary)", lineHeight: 1.55 }}>{opt}</span>
               </div>
 
               {settled && (
@@ -367,7 +368,7 @@ function CompareView({
                   style={{
                     marginTop: "0.5rem",
                     marginLeft: "2.1rem",
-                    fontSize: "0.78rem",
+                    fontSize: FS.xs,
                     color: isCorrect ? "#15803d" : "var(--text-muted)",
                     lineHeight: 1.55,
                   }}
@@ -423,7 +424,7 @@ function OrderView({
             display: "flex",
             alignItems: "center",
             gap: "0.4rem",
-            fontSize: "0.78rem",
+            fontSize: FS.xs,
             color: "var(--text-muted)",
             marginBottom: "0.9rem",
           }}
@@ -448,7 +449,7 @@ function OrderView({
         }}
       >
         {picked.length === 0 && (
-          <span style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>Bấm các mảnh bên dưới để ghép câu…</span>
+          <span style={{ fontSize: FS.sm, color: "var(--text-muted)" }}>Bấm các mảnh bên dưới để ghép câu…</span>
         )}
         {picked.map((chunk, i) => {
           const rightHere = settled && q.chunks[i] === chunk;
@@ -465,7 +466,7 @@ function OrderView({
                   : "1.5px solid var(--accent-primary)",
                 background: settled ? (rightHere ? "#dcfce7" : "#fee2e2") : "rgba(1,62,55,0.1)",
                 color: settled ? (rightHere ? "#15803d" : "#b91c1c") : "var(--accent-primary)",
-                fontSize: "0.86rem",
+                fontSize: FS.sm,
                 fontWeight: 600,
                 cursor: settled ? "default" : "pointer",
                 fontFamily: "var(--font-sans)",
@@ -490,7 +491,7 @@ function OrderView({
                 border: "1px solid var(--border)",
                 background: "var(--bg-elevated)",
                 color: "var(--text-primary)",
-                fontSize: "0.86rem",
+                fontSize: FS.sm,
                 cursor: "pointer",
                 fontFamily: "var(--font-sans)",
               }}
@@ -512,7 +513,7 @@ function OrderView({
             background: picked.length === 0 ? "var(--bg-secondary)" : "var(--accent-primary)",
             color: picked.length === 0 ? "var(--text-muted)" : "#fff",
             fontWeight: 700,
-            fontSize: "0.85rem",
+            fontSize: FS.sm,
             cursor: picked.length === 0 ? "default" : "pointer",
             fontFamily: "var(--font-sans)",
           }}
@@ -561,7 +562,7 @@ function RepairView({
       {/* Bản dịch có chỗ trống */}
       <p
         style={{
-          fontSize: "0.95rem",
+          fontSize: FS.md,
           lineHeight: 2.1,
           color: "var(--text-primary)",
           marginBottom: "1rem",
@@ -599,7 +600,7 @@ function RepairView({
                       : "#b91c1c"
                     : "var(--text-primary)",
                   fontWeight: 600,
-                  fontSize: "0.88rem",
+                  fontSize: FS.sm,
                 }}
               >
                 {choices[i] != null ? q.blanks[i].options[choices[i] as number] : `chỗ trống ${i + 1}`}
@@ -614,7 +615,7 @@ function RepairView({
         <div key={bi} style={{ marginBottom: "0.9rem" }}>
           <div
             style={{
-              fontSize: "0.72rem",
+              fontSize: FS.xs,
               fontWeight: 700,
               textTransform: "uppercase",
               letterSpacing: "0.06em",
@@ -658,7 +659,7 @@ function RepairView({
                     border,
                     background: bg,
                     color,
-                    fontSize: "0.84rem",
+                    fontSize: FS.sm,
                     fontWeight: isPicked || (settled && isCorrect) ? 600 : 400,
                     cursor: settled ? "default" : "pointer",
                     fontFamily: "var(--font-sans)",
@@ -670,7 +671,7 @@ function RepairView({
             })}
           </div>
           {settled && (
-            <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", margin: "0.4rem 0 0", lineHeight: 1.55 }}>
+            <p style={{ fontSize: FS.xs, color: "var(--text-muted)", margin: "0.4rem 0 0", lineHeight: 1.55 }}>
               {blank.note}
             </p>
           )}
@@ -688,7 +689,7 @@ function RepairView({
             background: allChosen ? "var(--accent-primary)" : "var(--bg-secondary)",
             color: allChosen ? "#fff" : "var(--text-muted)",
             fontWeight: 700,
-            fontSize: "0.85rem",
+            fontSize: FS.sm,
             cursor: allChosen ? "pointer" : "default",
             fontFamily: "var(--font-sans)",
           }}
@@ -713,7 +714,7 @@ function CriterionBar({ label, value }: { label: string; value: number }) {
   const color = pct >= 80 ? GREEN : pct >= 60 ? "#d97706" : RED;
   return (
     <div style={{ marginBottom: "0.5rem" }}>
-      <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.75rem", marginBottom: 3 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", fontSize: FS.xs, marginBottom: 3 }}>
         <span style={{ color: "var(--text-secondary)" }}>{label}</span>
         <span style={{ color, fontWeight: 700 }}>{value}/25</span>
       </div>
@@ -770,7 +771,7 @@ function FreeView({
           border: "1px solid var(--border)",
           background: "var(--bg-elevated)",
           color: "var(--text-primary)",
-          fontSize: "0.9rem",
+          fontSize: FS.md,
           lineHeight: 1.65,
           fontFamily: "var(--font-sans)",
           resize: "vertical",
@@ -781,7 +782,7 @@ function FreeView({
       {/* Câu hỏi hiểu ý — trả lời TRƯỚC khi chấm */}
       {q.comprehension && (
         <div style={{ ...cardBox, marginBottom: "0.9rem" }}>
-          <p style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--text-primary)", margin: "0 0 0.6rem" }}>
+          <p style={{ fontSize: FS.sm, fontWeight: 600, color: "var(--text-primary)", margin: "0 0 0.6rem" }}>
             {q.comprehension.question}
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
@@ -814,7 +815,7 @@ function FreeView({
                     border,
                     background: bg,
                     color: "var(--text-primary)",
-                    fontSize: "0.84rem",
+                    fontSize: FS.sm,
                     lineHeight: 1.5,
                     cursor: result ? "default" : "pointer",
                     fontFamily: "var(--font-sans)",
@@ -826,7 +827,7 @@ function FreeView({
             })}
           </div>
           {result && (
-            <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", margin: "0.6rem 0 0", lineHeight: 1.6 }}>
+            <p style={{ fontSize: FS.xs, color: "var(--text-muted)", margin: "0.6rem 0 0", lineHeight: 1.6 }}>
               {q.comprehension.explanation}
             </p>
           )}
@@ -847,7 +848,7 @@ function FreeView({
             background: canGrade ? "var(--accent-primary)" : "var(--bg-secondary)",
             color: canGrade ? "#fff" : "var(--text-muted)",
             fontWeight: 700,
-            fontSize: "0.85rem",
+            fontSize: FS.sm,
             cursor: canGrade ? "pointer" : "default",
             fontFamily: "var(--font-sans)",
           }}
@@ -858,7 +859,7 @@ function FreeView({
       )}
 
       {error && (
-        <p style={{ fontSize: "0.8rem", color: RED, marginTop: "0.6rem" }}>
+        <p style={{ fontSize: FS.sm, color: RED, marginTop: "0.6rem" }}>
           {error}
         </p>
       )}
@@ -866,7 +867,7 @@ function FreeView({
       {result && (
         <div style={{ marginTop: "0.5rem" }}>
           <div style={{ ...cardBox, marginBottom: "0.75rem" }}>
-            <div style={{ fontSize: "0.72rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.6rem" }}>
+            <div style={{ fontSize: FS.xs, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.6rem" }}>
               Điểm bản dịch: {result.score}/100
             </div>
             <CriterionBar label="Đủ ý" value={result.criteria.completeness} />
@@ -877,10 +878,10 @@ function FreeView({
 
           {result.feedback && (
             <div style={{ ...cardBox, marginBottom: "0.75rem" }}>
-              <div style={{ fontSize: "0.72rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.4rem" }}>
+              <div style={{ fontSize: FS.xs, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.4rem" }}>
                 Nhận xét
               </div>
-              <p style={{ fontSize: "0.85rem", color: "var(--text-primary)", lineHeight: 1.65, margin: 0 }}>
+              <p style={{ fontSize: FS.sm, color: "var(--text-primary)", lineHeight: 1.65, margin: 0 }}>
                 {result.feedback}
               </p>
             </div>
@@ -888,7 +889,7 @@ function FreeView({
 
           {result.errors.length > 0 && (
             <div style={{ ...cardBox, marginBottom: "0.75rem" }}>
-              <div style={{ fontSize: "0.72rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.5rem" }}>
+              <div style={{ fontSize: FS.xs, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.5rem" }}>
                 Lỗi cụ thể
               </div>
               {result.errors.map((e, i) => (
@@ -901,7 +902,7 @@ function FreeView({
                         borderRadius: 99,
                         background: "var(--bg-secondary)",
                         border: "1px solid var(--border)",
-                        fontSize: "0.7rem",
+                        fontSize: FS.xs,
                         fontWeight: 600,
                         color: "var(--text-muted)",
                       }}
@@ -909,29 +910,29 @@ function FreeView({
                       {ERROR_TAG_LABELS[e.tag]}
                     </span>
                   )}
-                  <span style={{ fontSize: "0.82rem", color: "var(--text-primary)", lineHeight: 1.6 }}>{e.detail}</span>
+                  <span style={{ fontSize: FS.sm, color: "var(--text-primary)", lineHeight: 1.6 }}>{e.detail}</span>
                 </div>
               ))}
             </div>
           )}
 
           <div style={{ ...cardBox, marginBottom: "0.75rem" }}>
-            <div style={{ fontSize: "0.72rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.4rem" }}>
+            <div style={{ fontSize: FS.xs, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.4rem" }}>
               Bản dịch của bạn sau khi sửa
             </div>
-            <p style={{ fontSize: "0.85rem", color: "var(--text-primary)", lineHeight: 1.7, margin: 0, whiteSpace: "pre-wrap" }}>
+            <p style={{ fontSize: FS.sm, color: "var(--text-primary)", lineHeight: 1.7, margin: 0, whiteSpace: "pre-wrap" }}>
               {result.corrected}
             </p>
           </div>
 
           <div style={{ ...cardBox, marginBottom: "0.75rem" }}>
-            <div style={{ fontSize: "0.72rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.4rem" }}>
+            <div style={{ fontSize: FS.xs, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.4rem" }}>
               Bản dịch mẫu
             </div>
-            <p style={{ fontSize: "0.85rem", color: "var(--text-primary)", lineHeight: 1.7, margin: 0, whiteSpace: "pre-wrap" }}>
+            <p style={{ fontSize: FS.sm, color: "var(--text-primary)", lineHeight: 1.7, margin: 0, whiteSpace: "pre-wrap" }}>
               {q.model}
             </p>
-            <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", lineHeight: 1.6, margin: "0.6rem 0 0" }}>
+            <p style={{ fontSize: FS.xs, color: "var(--text-muted)", lineHeight: 1.6, margin: "0.6rem 0 0" }}>
               <strong>Trọng tâm:</strong> {q.focus}
             </p>
           </div>
@@ -1136,17 +1137,17 @@ export function TranslationLevelClient({
     return (
       <div
         style={{
-          minHeight: "100%",
-          display: "flex",
+          ...CONTAINER,
+          ...FILL_SCREEN,
           alignItems: "center",
           justifyContent: "center",
-          padding: "2rem 1.5rem",
+          padding: `2rem ${PAD_X}`,
           background: "var(--bg-primary)",
         }}
       >
         <div style={{ ...cardBox, maxWidth: 440, width: "100%", textAlign: "center", padding: "2.5rem 2rem" }}>
-          <div style={{ fontSize: "3.5rem", fontWeight: 800, color, lineHeight: 1 }}>{score}%</div>
-          <div style={{ fontSize: "0.82rem", color: "var(--text-muted)", margin: "0.35rem 0 1.25rem" }}>
+          <div style={{ fontSize: FS.xl, fontWeight: 800, color, lineHeight: 1 }}>{score}%</div>
+          <div style={{ fontSize: FS.sm, color: "var(--text-muted)", margin: "0.35rem 0 1.25rem" }}>
             {levelName} · {topicName}
           </div>
 
@@ -1160,7 +1161,7 @@ export function TranslationLevelClient({
               background: passed ? "#dcfce7" : "#fee2e2",
               color: passed ? "#15803d" : "#b91c1c",
               fontWeight: 700,
-              fontSize: "0.82rem",
+              fontSize: FS.sm,
               marginBottom: "1.5rem",
             }}
           >
@@ -1173,7 +1174,7 @@ export function TranslationLevelClient({
           </div>
 
           {savedBest && savedBest.score > score && (
-            <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", marginBottom: "1rem" }}>
+            <p style={{ fontSize: FS.xs, color: "var(--text-muted)", marginBottom: "1rem" }}>
               Best trước: {savedBest.score}%
             </p>
           )}
@@ -1192,7 +1193,7 @@ export function TranslationLevelClient({
                 background: "var(--accent-primary)",
                 color: "#fff",
                 fontWeight: 700,
-                fontSize: "0.88rem",
+                fontSize: FS.sm,
                 cursor: "pointer",
                 fontFamily: "var(--font-sans)",
               }}
@@ -1211,7 +1212,7 @@ export function TranslationLevelClient({
                 border: "1px solid var(--border)",
                 color: "var(--text-secondary)",
                 fontWeight: 500,
-                fontSize: "0.88rem",
+                fontSize: FS.sm,
                 textDecoration: "none",
               }}
             >
@@ -1228,8 +1229,9 @@ export function TranslationLevelClient({
   const freeAns = ans?.kind === "free" ? ans : null;
 
   return (
-    <div style={{ minHeight: "100%", background: "var(--bg-primary)", padding: "clamp(1.25rem, 4vw, 2rem)" }}>
-      <div style={{ maxWidth: 760, margin: "0 auto" }}>
+    <div style={{ ...CONTAINER, ...FILL_SCREEN, background: "var(--bg-primary)", fontFamily: "var(--font-sans)" }}>
+      <div style={{ flex: 1, padding: `clamp(1.25rem, 3vw, 2.25rem) ${PAD_X}` }}>
+      <div style={{ maxWidth: 720, margin: "0 auto" }}>
         {/* Header */}
         <Link
           href={`/subskills/translation/${topicSlug}`}
@@ -1237,7 +1239,7 @@ export function TranslationLevelClient({
             display: "inline-flex",
             alignItems: "center",
             gap: "0.35rem",
-            fontSize: "0.8rem",
+            fontSize: FS.sm,
             color: "var(--text-muted)",
             textDecoration: "none",
             marginBottom: "1rem",
@@ -1246,10 +1248,10 @@ export function TranslationLevelClient({
           <ArrowLeft size={14} /> {topicName}
         </Link>
 
-        <h1 style={{ fontSize: "1.35rem", fontWeight: 700, color: "var(--text-primary)", margin: "0 0 0.35rem" }}>
+        <h1 style={{ fontSize: FS.lg, fontWeight: 700, color: "var(--text-primary)", margin: "0 0 0.35rem" }}>
           {levelName}
         </h1>
-        <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.6, margin: "0 0 1.25rem" }}>
+        <p style={{ fontSize: FS.sm, color: "var(--text-muted)", lineHeight: 1.6, margin: "0 0 1.25rem" }}>
           {levelInstruction}
         </p>
 
@@ -1266,7 +1268,7 @@ export function TranslationLevelClient({
               }}
             />
           </div>
-          <span style={{ fontSize: "0.78rem", color: "var(--text-muted)", whiteSpace: "nowrap" }}>
+          <span style={{ fontSize: FS.xs, color: "var(--text-muted)", whiteSpace: "nowrap" }}>
             Câu {idx + 1}/{total}
           </span>
         </div>
@@ -1342,7 +1344,7 @@ export function TranslationLevelClient({
               border: "1px solid var(--border)",
               background: "transparent",
               color: idx === 0 ? "var(--text-muted)" : "var(--text-secondary)",
-              fontSize: "0.83rem",
+              fontSize: FS.sm,
               cursor: idx === 0 ? "default" : "pointer",
               fontFamily: "var(--font-sans)",
             }}
@@ -1362,7 +1364,7 @@ export function TranslationLevelClient({
                 border: "none",
                 background: settled ? "var(--accent-primary)" : "var(--bg-secondary)",
                 color: settled ? "#fff" : "var(--text-muted)",
-                fontSize: "0.83rem",
+                fontSize: FS.sm,
                 fontWeight: 600,
                 cursor: "pointer",
                 fontFamily: "var(--font-sans)",
@@ -1380,7 +1382,7 @@ export function TranslationLevelClient({
                 border: "none",
                 background: settledCount === 0 ? "var(--bg-secondary)" : "var(--accent-primary)",
                 color: settledCount === 0 ? "var(--text-muted)" : "#fff",
-                fontSize: "0.83rem",
+                fontSize: FS.sm,
                 fontWeight: 700,
                 cursor: settledCount === 0 || saving ? "default" : "pointer",
                 fontFamily: "var(--font-sans)",
@@ -1392,10 +1394,11 @@ export function TranslationLevelClient({
         </div>
 
         {settledCount < total && idx === total - 1 && (
-          <p style={{ fontSize: "0.75rem", color: "var(--text-muted)", textAlign: "center", marginTop: "0.75rem" }}>
+          <p style={{ fontSize: FS.xs, color: "var(--text-muted)", textAlign: "center", marginTop: "0.75rem" }}>
             Còn {total - settledCount} câu chưa làm — nộp luôn thì các câu đó tính 0 điểm.
           </p>
         )}
+      </div>
       </div>
     </div>
   );

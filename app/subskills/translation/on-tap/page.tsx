@@ -8,6 +8,7 @@ import { TOPIC_METAS } from "@/lib/subskills/translation";
 import { TOPIC_VOCAB } from "@/lib/subskills/translation/vocab";
 import { vocabKey, type VocabEntry, type VocabProgressMap } from "@/lib/subskills/translation/types";
 import { VocabScreen } from "@/components/subskills/translation/VocabScreen";
+import { CONTAINER, PAD_X } from "@/components/grammar/scale";
 
 export const metadata: Metadata = { title: "Ôn từ chưa thuộc — Dịch Anh–Việt" };
 
@@ -58,11 +59,10 @@ export default async function TranslationVocabReviewPage() {
     return (
       <div
         style={{
+          ...CONTAINER,
           minHeight: "100%",
           background: "var(--bg-primary)",
-          padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.25rem, 5vw, 3rem)",
-          maxWidth: 700,
-          margin: "0 auto",
+          padding: `clamp(1.5rem, 4vw, 2.5rem) ${PAD_X}`,
           boxSizing: "border-box",
         }}
       >
@@ -107,7 +107,8 @@ export default async function TranslationVocabReviewPage() {
 
   return (
     <>
-      <div style={{ maxWidth: 700, margin: "0 auto", padding: "1.25rem 1.25rem 0" }}>
+      <div style={{ ...CONTAINER, padding: `1.25rem ${PAD_X} 0` }}>
+        <div style={{ maxWidth: 720, margin: "0 auto" }}>
         <Link
           href="/subskills/translation"
           style={{
@@ -121,6 +122,7 @@ export default async function TranslationVocabReviewPage() {
         >
           <ArrowLeft size={14} /> Dịch Anh–Việt
         </Link>
+        </div>
       </div>
 
       <VocabScreen
