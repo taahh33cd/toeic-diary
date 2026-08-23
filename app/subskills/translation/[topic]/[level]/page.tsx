@@ -3,7 +3,13 @@ import { notFound, redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { getTopicConfig, isLevelUnlocked } from "@/lib/subskills/translation";
-import { topicToPartKey, type TransLevelSlug, type BestScore } from "@/lib/subskills/translation/types";
+import {
+  topicToPartKey,
+  vocabKey,
+  type TransLevelSlug,
+  type BestScore,
+  type VocabProgressMap,
+} from "@/lib/subskills/translation/types";
 import { TranslationLevelClient } from "@/components/subskills/translation/TranslationLevelClient";
 
 type Props = { params: Promise<{ topic: string; level: string }> };
@@ -59,6 +65,22 @@ export default async function TranslationLevelPage({ params }: Props) {
     redirect(`/subskills/translation/${topic}`);
   }
 
+  // Tiến độ từ vựng — chỉ lấy đúng các từ của level này
+  const words = levelConfig.vocab.map((v) => vocabKey(v.en));
+  const vocabRows = words.length
+    ? await prisma.translationVocabProgress
+        .findMany({
+          where: { userId: user.id, word: { in: words } },
+          select: { word: true, known: true, wrongCount: true, seenCount: true },
+        })
+        .catch(() => [])
+    : [];
+
+  const vocabProgress: VocabProgressMap = {};
+  for (const r of vocabRows) {
+    vocabProgress[r.word] = { known: r.known, wrongCount: r.wrongCount, seenCount: r.seenCount };
+  }
+
   return (
     <TranslationLevelClient
       topicSlug={topic}
@@ -70,6 +92,8 @@ export default async function TranslationLevelPage({ params }: Props) {
       questions={levelConfig.questions}
       passThreshold={levelConfig.passThreshold}
       initialBest={best[levelSlug] ?? null}
+      vocab={levelConfig.vocab}
+      vocabProgress={vocabProgress}
     />
   );
 }

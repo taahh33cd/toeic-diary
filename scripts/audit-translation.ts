@@ -39,6 +39,7 @@ const bump = (k: string, i: number) => {
 const sentences = new Map<string, string[]>();
 
 let totalQ = 0;
+let vocabCount = 0;
 
 for (const meta of TOPIC_METAS) {
   const cfg = getTopicConfig(meta.slug);
@@ -146,6 +147,29 @@ for (const meta of TOPIC_METAS) {
     }
   });
 
+  // ── Từ vựng ──
+  const allWords = new Set<string>();
+  cfg.levels.forEach((lv) => {
+    const v = lv.vocab;
+    if (v.length === 0) { W(`${meta.slug}/${lv.slug}: chưa có bộ từ vựng`); return; }
+    if (v.length < 4) E(`${meta.slug}/${lv.slug}: chỉ ${v.length} mục từ — chế độ trắc nghiệm cần ≥4 để có đủ phương án nhiễu`);
+    const seenHere = new Set<string>();
+    for (const e of v) {
+      const k = e.en.trim().toLowerCase();
+      if (!e.en.trim()) E(`${meta.slug}/${lv.slug}: mục từ rỗng`);
+      if (!e.vi.trim()) E(`${meta.slug}/${lv.slug}/${e.en}: thiếu nghĩa tiếng Việt`);
+      if (seenHere.has(k)) E(`${meta.slug}/${lv.slug}: từ "${e.en}" lặp trong cùng level`);
+      seenHere.add(k);
+      if (allWords.has(k)) W(`${meta.slug}: từ "${e.en}" lặp giữa các level`);
+      allWords.add(k);
+      vocabCount++;
+    }
+    // nghia trung nhau -> trac nghiem co 2 dap an dung
+    const vis = v.map((e) => e.vi.trim().toLowerCase());
+    if (new Set(vis).size !== vis.length)
+      E(`${meta.slug}/${lv.slug}: có hai mục từ trùng nghĩa tiếng Việt — trắc nghiệm sẽ có 2 đáp án đúng`);
+  });
+
   const expect = ["highlight", "compare", "order", "repair", "free", "free"];
   kindsByLevel.forEach((k, i) => {
     if (k !== expect[i]) E(`${meta.slug}/L${i + 1}: kind "${k}", mong đợi "${expect[i]}"`);
@@ -167,7 +191,7 @@ for (const [k, d] of Object.entries(answerDist)) {
   console.log(`  ${k.padEnd(14)} A/B/C = ${d.join(" / ")}  (${pct})  n=${t}`);
 }
 
-console.log(`\nTổng: ${TOPIC_METAS.length} nhóm, ${totalQ} câu, ${ids.size} id duy nhất`);
+console.log(`\nTổng: ${TOPIC_METAS.length} nhóm, ${totalQ} câu, ${ids.size} id duy nhất, ${vocabCount} mục từ vựng`);
 if (TEXT_MODE) {
 for (const meta of TOPIC_METAS) {
   const cfg = getTopicConfig(meta.slug);

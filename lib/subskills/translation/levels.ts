@@ -4,7 +4,8 @@ import type { TransLevel } from "./types";
 // Tách khỏi index.ts để data/*.ts import được mà không tạo vòng lặp.
 
 export function buildLevelMeta(): Omit<TransLevel, "questions">[] {
-  return [
+  // `vocab: []` là mặc định — mỗi file data override bằng bộ từ của level đó.
+  return ([
     {
       level: 1,
       slug: "l1",
@@ -71,5 +72,5 @@ export function buildLevelMeta(): Omit<TransLevel, "questions">[] {
       difficulty: "hard",
       passThreshold: 75,
     },
-  ];
+    ] as Omit<TransLevel, "questions" | "vocab">[]).map((l) => ({ ...l, vocab: [] }));
 }

@@ -88,6 +88,32 @@ export type TransQuestion =
   | TransRepair
   | TransFree;
 
+// ── Từ vựng ──────────────────────────────────────────────────────────────────
+
+/** Loại mục từ — quyết định cách hiển thị và cách ra đề luyện */
+export type VocabKind = "word" | "phrase" | "phrasal" | "formula";
+
+export type VocabEntry = {
+  /** Mặt tiếng Anh; cũng là khoá lưu tiến độ (so khớp sau khi lowercase) */
+  en: string;
+  kind: VocabKind;
+  /** Từ loại rút gọn: n, v, adj, adv, prep… Bỏ trống với cụm/công thức */
+  pos?: string;
+  /** Nghĩa tiếng Việt trong ĐÚNG ngữ cảnh của level này */
+  vi: string;
+  /** Câu ví dụ lấy từ chính ngữ liệu của level (không bắt buộc) */
+  example?: string;
+  /** Mẹo phân biệt / bẫy hay gặp (không bắt buộc) */
+  note?: string;
+};
+
+export const VOCAB_KIND_LABELS: Record<VocabKind, string> = {
+  word: "Từ đơn",
+  phrase: "Cụm cố định",
+  phrasal: "Phrasal verb",
+  formula: "Công thức email",
+};
+
 // ── Level config ─────────────────────────────────────────────────────────────
 
 export type TransLevelSlug = "l1" | "l2" | "l3" | "l4" | "l5" | "l6";
@@ -104,6 +130,8 @@ export type TransLevel = {
   /** 80 cho L1–L4 (tự chấm), 75 cho L5–L6 (AI chấm) */
   passThreshold: number;
   questions: TransQuestion[];
+  /** Bộ từ của level, hiện ở màn học từ trước khi vào bài */
+  vocab: VocabEntry[];
 };
 
 // ── Topic config ─────────────────────────────────────────────────────────────
@@ -135,6 +163,19 @@ export function topicToPartKey(topicSlug: string): string {
 }
 
 export type BestScore = { score: number; passed: boolean };
+
+/** Tiến độ một từ, khoá theo `en` đã lowercase */
+export type VocabProgress = {
+  known: boolean;
+  wrongCount: number;
+  seenCount: number;
+};
+
+export type VocabProgressMap = Record<string, VocabProgress>;
+
+export function vocabKey(en: string): string {
+  return en.trim().toLowerCase();
+}
 
 // ── AI grading contract ──────────────────────────────────────────────────────
 

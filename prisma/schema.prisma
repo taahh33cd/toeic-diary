@@ -162,6 +162,7 @@ model Profile {
   readingAttempts      ReadingAttempt[]
   postReadingAttempts  PostReadingAttempt[]
   subskillAttempts     SubskillAttempt[]
+  translationVocab     TranslationVocabProgress[]
   recordingAttempts    SpeakingRecordingAttempt[]
   ipaAttempts          IpaAttempt[]
   fullTestAttempts     FullTestAttempt[]
@@ -382,6 +383,27 @@ model SubskillAttempt {
   @@index([userId, part, questionWord])
   @@index([userId])
   @@map("subskill_attempts")
+}
+
+/// Tiến độ học từ vựng của khu Dịch Anh–Việt (/subskills/translation).
+/// Mỗi dòng = 1 từ của 1 học viên. `word` là khoá tự nhiên (đã lowercase).
+model TranslationVocabProgress {
+  id         String   @id @default(uuid())
+  userId     String   @map("user_id")
+  profile    Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  topicSlug  String   @map("topic_slug")  // "cum-danh-tu"
+  levelSlug  String   @map("level_slug")  // "l1".."l6"
+  word       String                        // đã lowercase, dùng làm khoá
+  known      Boolean  @default(false)      // học viên đã đánh dấu thuộc
+  wrongCount Int      @default(0) @map("wrong_count") // số lần trả lời sai trong quiz/điền từ
+  seenCount  Int      @default(0) @map("seen_count")
+  updatedAt  DateTime @updatedAt @map("updated_at")
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@unique([userId, word])
+  @@index([userId, topicSlug])
+  @@index([userId, known])
+  @@map("translation_vocab_progress")
 }
 
 /// Free-practice notes for Speaking Part 2 "describe a picture in 3 steps".

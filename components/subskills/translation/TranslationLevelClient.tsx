@@ -24,6 +24,8 @@ import type {
   BestScore,
 } from "@/lib/subskills/translation/types";
 import { ERROR_TAG_LABELS } from "@/lib/subskills/translation/types";
+import type { VocabEntry, VocabProgressMap } from "@/lib/subskills/translation/types";
+import { VocabScreen } from "./VocabScreen";
 
 interface Props {
   topicSlug: string;
@@ -35,6 +37,8 @@ interface Props {
   questions: TransQuestion[];
   passThreshold: number;
   initialBest: BestScore | null;
+  vocab: VocabEntry[];
+  vocabProgress: VocabProgressMap;
 }
 
 // ── State ────────────────────────────────────────────────────────────────────
@@ -46,7 +50,7 @@ type Answer =
   | { kind: "repair"; choices: (number | null)[] }
   | { kind: "free"; text: string; comp: number | null; result: TransAssessResult | null };
 
-type Screen = "quiz" | "result";
+type Screen = "vocab" | "quiz" | "result";
 
 const GREEN = "#16a34a";
 const RED = "#ef4444";
@@ -949,8 +953,11 @@ export function TranslationLevelClient({
   questions,
   passThreshold,
   initialBest,
+  vocab,
+  vocabProgress,
 }: Props) {
-  const [screen, setScreen] = useState<Screen>("quiz");
+  // Có bộ từ thì học từ trước, chưa soạn thì vào thẳng bài
+  const [screen, setScreen] = useState<Screen>(vocab.length > 0 ? "vocab" : "quiz");
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<Record<string, Answer>>({});
   const [confirmed, setConfirmed] = useState<Set<string>>(new Set());
@@ -1104,6 +1111,23 @@ export function TranslationLevelClient({
     setConfirmed(new Set());
     setGradeError(null);
   }, []);
+
+  // ── Màn học từ vựng ────────────────────────────────────────────────────────
+
+  if (screen === "vocab") {
+    return (
+      <VocabScreen
+        entries={vocab}
+        topicSlug={topicSlug}
+        topicName={topicName}
+        levelSlug={levelSlug}
+        levelName={levelName}
+        questionCount={total}
+        initialProgress={vocabProgress}
+        onStart={() => setScreen("quiz")}
+      />
+    );
+  }
 
   // ── Màn kết quả ────────────────────────────────────────────────────────────
 

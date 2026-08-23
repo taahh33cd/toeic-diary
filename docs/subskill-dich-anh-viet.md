@@ -156,3 +156,52 @@ phân tích thành phần ở L1 rồi gặp lại chính câu đó khi chọn b
 (không phải lỗi) để lần sau còn nhận ra nếu vô tình lặp.
 
 Hai nhóm làm đầu tiên được chọn cố ý khác loại nhau — một nhóm **cấu trúc**, một nhóm **từ vựng** — để kiểm chứng khuôn 6 level chịu được cả hai kiểu nội dung. Khuôn đứng vững nên ba nhóm sau nhân bản thẳng, không phải sửa code.
+
+---
+
+## Phần 3 — Từ vựng & flashcard
+
+Mô hình theo `/grammar` nhưng có thêm **lưu tiến độ từng từ**.
+
+### 3.1 Dữ liệu
+
+`lib/subskills/translation/vocab/<slug>.ts` — mỗi nhóm một file, khai theo level:
+
+```ts
+{ en: "outstanding", kind: "word", pos: "adj", vi: "còn tồn đọng, chưa thanh toán",
+  note: "Trong hoá đơn KHÔNG có nghĩa “xuất sắc”" }
+```
+
+`kind` gồm 4 loại đúng như phạm vi đã chốt: `word` (từ đơn TOEIC) · `phrase` (cụm cố định &
+collocation) · `phrasal` (phrasal verb) · `formula` (công thức email/thông báo).
+
+Từ được rút từ **chính ngữ liệu của level đó**, nghĩa ghi theo đúng ngữ cảnh xuất hiện — nên
+`address` ở nhóm từ đa nghĩa là "giải quyết", không phải nghĩa từ điển số 1.
+
+Tách khỏi file câu hỏi và gắn vào trong `getTopicConfig()`, nên thêm bộ từ mới không phải
+động tới data câu hỏi. Nhóm chưa soạn thì `vocab: []` và màn học từ tự động bị bỏ qua.
+
+**Tổng: 618 mục từ / 66 level.**
+
+### 3.2 Luồng & 4 chế độ
+
+Vào `/subskills/translation/<nhóm>/<level>` → hiện màn từ vựng trước, bấm **Bắt đầu làm bài**
+mới vào phần dịch. Bốn chế độ: **Danh sách** (có nút đánh dấu đã thuộc) · **Flashcard** (lật thẻ)
+· **Trắc nghiệm** (Anh → Việt) · **Điền từ** (Việt → Anh, gõ tay).
+
+### 3.3 Tiến độ
+
+Bảng `translation_vocab_progress` (migration `006`, đã áp dụng): mỗi dòng là một từ của một
+học viên, khoá `(user_id, word)`; lưu `known`, `wrong_count`, `seen_count`.
+
+- Thay đổi được **gom lại rồi gửi một lượt** khi rời màn học từ, không gọi API mỗi lần bấm.
+- `/subskills/translation/on-tap` gom mọi từ `known = false` **hoặc** từng trả lời sai, xếp
+  từ sai nhiều nhất lên đầu, tối đa 60 từ.
+- Màn ôn tập gửi `topic="on-tap"`, nên API **cố ý không cập nhật** `topic_slug`/`level_slug`
+  khi upsert — nếu ghi đè thì mất thông tin từ đó vốn thuộc nhóm nào.
+
+### 3.4 QC từ vựng
+
+`scripts/audit-translation.ts` kiểm thêm: level có <4 mục từ (chế độ trắc nghiệm cần ≥4 để đủ
+phương án nhiễu) · hai mục trùng nghĩa tiếng Việt trong cùng level (sẽ có 2 đáp án đúng) · từ
+lặp trong cùng level · thiếu nghĩa · từ lặp giữa các level (chỉ cảnh báo).

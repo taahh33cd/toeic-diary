@@ -11,6 +11,9 @@ import { thamChieuLevels } from "./data/tham-chieu";
 import { tuNoiLevels } from "./data/tu-noi";
 import { sacThaiLevels } from "./data/sac-thai";
 import { hamYLevels } from "./data/ham-y";
+import { getLevelVocab } from "./vocab";
+
+export { getLevelVocab } from "./vocab";
 
 // ── Danh mục 11 nhóm vấn đề ──────────────────────────────────────────────────
 
@@ -225,7 +228,11 @@ export function getTopicConfig(slug: string): TransTopicConfig | null {
   const levels = TOPIC_LEVELS[slug];
   if (!meta || !levels) return null;
   const { available: _available, ...rest } = meta;
-  return { ...rest, levels };
+  // Gắn bộ từ vựng của từng level (nhóm chưa soạn thì mảng rỗng)
+  return {
+    ...rest,
+    levels: levels.map((l) => ({ ...l, vocab: getLevelVocab(slug, l.slug) })),
+  };
 }
 
 // ── Mở khoá level ────────────────────────────────────────────────────────────

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, Lock, Languages } from "lucide-react";
+import { ArrowLeft, Lock, Languages, Layers, ChevronRight } from "lucide-react";
 import { TOPIC_METAS } from "@/lib/subskills/translation";
 
 export const metadata: Metadata = { title: "Dịch Anh–Việt — Subskills" };
@@ -42,6 +42,32 @@ export default function TranslationHubPage() {
         Hiểu tiếng Anh không đồng nghĩa với dịch được. Mỗi nhóm dưới đây chữa một phản xạ hỏng cụ thể, đi từ nhận
         diện đến tự dịch cả đoạn — và cùng lúc luyện đúng kỹ năng đọc mà Part 7 đo.
       </p>
+
+      <Link
+        href="/subskills/translation/on-tap"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "0.6rem",
+          padding: "0.8rem 1rem",
+          borderRadius: 10,
+          border: "1px solid var(--border)",
+          background: "var(--bg-elevated)",
+          textDecoration: "none",
+          marginBottom: "1.5rem",
+        }}
+      >
+        <Layers size={17} style={{ color: "var(--accent-primary)", flexShrink: 0 }} />
+        <span style={{ flex: 1, minWidth: 0 }}>
+          <span style={{ display: "block", fontSize: "0.9rem", fontWeight: 700, color: "var(--text-primary)" }}>
+            Ôn từ chưa thuộc
+          </span>
+          <span style={{ display: "block", fontSize: "0.78rem", color: "var(--text-muted)", marginTop: 2 }}>
+            Gom mọi từ bạn đánh dấu chưa thuộc hoặc từng trả lời sai, ở tất cả các nhóm
+          </span>
+        </span>
+        <ChevronRight size={16} style={{ color: "var(--text-muted)", flexShrink: 0 }} />
+      </Link>
 
       <div
         style={{
