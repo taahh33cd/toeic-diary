@@ -50,7 +50,8 @@ const STOPWORDS = new Set([
   "almost", "usually", "normally", "often", "always", "never", "sometimes",
   "believe", "heard", "hear", "think", "know", "want", "need", "like", "liked",
   "read", "say", "said", "tell", "told", "see", "saw", "look", "give", "gave",
-  "next month", "next week", "this morning",
+  "next month", "next week", "this morning", "right now", "sometime", "last",
+  "very good", "very soon", "usually best", "buy", "buys", "bought",
 ]);
 
 /** A trailing number means the model grabbed an identifier (e.g. "flight 48"). */
