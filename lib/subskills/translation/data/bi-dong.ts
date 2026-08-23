@@ -163,7 +163,7 @@ export const biDongLevels: TransLevel[] = [
         optionNotes: [
           "“bị duyệt” sai sắc thái — được duyệt là tin vui.",
           "Đúng — đã có người thực hiện rõ ràng thì đưa họ lên làm chủ ngữ, câu gọn và tự nhiên.",
-          "Đúng nghĩa nhưng chữ “bởi” làm câu nặng; tiếng Việt ít dùng.",
+          "Không sai nghĩa, nhưng chữ “bởi” làm câu nặng; tiếng Việt ít dùng.",
         ],
         explanation:
           "Nguyên tắc: khi câu tiếng Anh nêu rõ “by + ai”, cách dịch tự nhiên nhất là ĐẢO sang chủ động.",
@@ -220,7 +220,7 @@ export const biDongLevels: TransLevel[] = [
           "Mất bị động nên đảo vai: hệ thống cũ thành kẻ đi thay thứ khác.",
         ],
         explanation:
-          "Phương án 3 nguy hiểm nhất: câu vẫn xuôi tai, nhưng ai làm gì đã bị đảo ngược hoàn toàn.",
+          "Bản dịch bỏ mất bị động (“Hệ thống cũ đã thay thế…”) là nguy hiểm nhất: câu vẫn xuôi tai, nhưng ai làm gì đã bị đảo ngược hoàn toàn.",
       },
       {
         kind: "compare",

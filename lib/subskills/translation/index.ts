@@ -5,6 +5,12 @@ import { tuDaNghiaLevels } from "./data/tu-da-nghia";
 import { cumDongTuLevels } from "./data/cum-dong-tu";
 import { thiVaThoiLevels } from "./data/thi-va-thoi";
 import { biDongLevels } from "./data/bi-dong";
+import { menhDeQuanHeLevels } from "./data/menh-de-quan-he";
+import { danhTuHoaLevels } from "./data/danh-tu-hoa";
+import { thamChieuLevels } from "./data/tham-chieu";
+import { tuNoiLevels } from "./data/tu-noi";
+import { sacThaiLevels } from "./data/sac-thai";
+import { hamYLevels } from "./data/ham-y";
 
 // ── Danh mục 11 nhóm vấn đề ──────────────────────────────────────────────────
 
@@ -111,7 +117,7 @@ export const TOPIC_METAS: TransTopicMeta[] = [
     },
     importance: 2,
     part7: true,
-    available: false,
+    available: true,
   },
   {
     slug: "danh-tu-hoa",
@@ -127,7 +133,7 @@ export const TOPIC_METAS: TransTopicMeta[] = [
     },
     importance: 2,
     part7: true,
-    available: false,
+    available: true,
   },
   {
     slug: "tham-chieu",
@@ -143,7 +149,7 @@ export const TOPIC_METAS: TransTopicMeta[] = [
     },
     importance: 3,
     part7: true,
-    available: false,
+    available: true,
   },
   {
     slug: "tu-noi",
@@ -158,7 +164,7 @@ export const TOPIC_METAS: TransTopicMeta[] = [
     },
     importance: 2,
     part7: true,
-    available: false,
+    available: true,
   },
   {
     slug: "sac-thai",
@@ -174,7 +180,7 @@ export const TOPIC_METAS: TransTopicMeta[] = [
     },
     importance: 2,
     part7: true,
-    available: false,
+    available: true,
   },
   {
     slug: "ham-y",
@@ -190,7 +196,7 @@ export const TOPIC_METAS: TransTopicMeta[] = [
     },
     importance: 3,
     part7: true,
-    available: false,
+    available: true,
   },
 ];
 
@@ -202,6 +208,12 @@ const TOPIC_LEVELS: Record<string, TransLevel[]> = {
   "cum-dong-tu": cumDongTuLevels,
   "thi-va-thoi": thiVaThoiLevels,
   "bi-dong": biDongLevels,
+  "menh-de-quan-he": menhDeQuanHeLevels,
+  "danh-tu-hoa": danhTuHoaLevels,
+  "tham-chieu": thamChieuLevels,
+  "tu-noi": tuNoiLevels,
+  "sac-thai": sacThaiLevels,
+  "ham-y": hamYLevels,
 };
 
 export function getTopicMeta(slug: string): TransTopicMeta | null {

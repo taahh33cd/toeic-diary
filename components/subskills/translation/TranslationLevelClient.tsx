@@ -73,6 +73,15 @@ function seededShuffle<T>(items: T[], seed: string): T[] {
   return out;
 }
 
+/** Thứ tự hiển thị các phương án: trả về mảng chỉ số GỐC theo vị trí hiển thị.
+ *  Nhờ vậy đáp án đúng không luôn nằm ở ô A, mà state vẫn lưu chỉ số gốc. */
+function displayOrder(n: number, seed: string): number[] {
+  return seededShuffle(
+    Array.from({ length: n }, (_, i) => i),
+    seed,
+  );
+}
+
 /** Điểm 0–100 của một câu; null = chưa làm xong */
 function itemScore(q: TransQuestion, ans: Answer | undefined): number | null {
   if (!ans) return null;
@@ -285,12 +294,15 @@ function CompareView({
   settled: boolean;
   onSelect: (i: number) => void;
 }) {
+  const order = useMemo(() => displayOrder(q.options.length, q.id), [q.options.length, q.id]);
+
   return (
     <div>
       <div style={sourceBox}>{q.sentence}</div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: "0.55rem" }}>
-        {q.options.map((opt, i) => {
+        {order.map((i, slot) => {
+          const opt = q.options[i];
           const isCorrect = i === q.correct;
           const isPicked = choice === i;
 
@@ -341,7 +353,7 @@ function CompareView({
                     color: settled && (isCorrect || isPicked) ? "#fff" : "var(--text-muted)",
                   }}
                 >
-                  {String.fromCharCode(65 + i)}
+                  {String.fromCharCode(65 + slot)}
                 </span>
                 <span style={{ fontSize: "0.88rem", color: "var(--text-primary)", lineHeight: 1.55 }}>{opt}</span>
               </div>
@@ -531,6 +543,10 @@ function RepairView({
   onConfirm: () => void;
 }) {
   const parts = q.draft.split("___");
+  const orders = useMemo(
+    () => q.blanks.map((b, bi) => displayOrder(b.options.length, `${q.id}#${bi}`)),
+    [q.blanks, q.id],
+  );
   const allChosen = q.blanks.every((_, i) => choices[i] != null);
   const ok = settled && q.blanks.every((b, i) => choices[i] === b.correct);
 
@@ -605,7 +621,8 @@ function RepairView({
             Chỗ trống {bi + 1}
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
-            {blank.options.map((opt, oi) => {
+            {orders[bi].map((oi) => {
+              const opt = blank.options[oi];
               const isPicked = choices[bi] === oi;
               const isCorrect = oi === blank.correct;
               let border = "1px solid var(--border)";
@@ -725,6 +742,10 @@ function FreeView({
   onGrade: () => void;
 }) {
   const needComp = Boolean(q.comprehension);
+  const compOrder = useMemo(
+    () => displayOrder(q.comprehension?.options.length ?? 0, `${q.id}-comp`),
+    [q.comprehension?.options.length, q.id],
+  );
   const canGrade = text.trim().length > 0 && (!needComp || comp != null) && !grading;
 
   return (
@@ -760,7 +781,8 @@ function FreeView({
             {q.comprehension.question}
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
-            {q.comprehension.options.map((opt, i) => {
+            {compOrder.map((i) => {
+              const opt = q.comprehension!.options[i];
               const isPicked = comp === i;
               const isCorrect = i === q.comprehension!.correct;
               let border = "1px solid var(--border)";

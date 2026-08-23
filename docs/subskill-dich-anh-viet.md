@@ -117,16 +117,42 @@ app/api/subskills/translate-assess/route.ts   # Gemini chấm L5/L6
 
 ### 2.4 Trạng thái triển khai
 
-| Nhóm | Trạng thái |
-|---|---|
-| `cum-danh-tu` | ✅ Đủ 6 level, 40 câu (khuôn cấu trúc) |
-| `tu-da-nghia` | ✅ Đủ 6 level, 40 câu (khuôn từ vựng) |
-| `cum-dong-tu` | ✅ Đủ 6 level, 40 câu |
-| `thi-va-thoi` | ✅ Đủ 6 level, 40 câu |
-| `bi-dong` | ✅ Đủ 6 level, 40 câu |
-| 6 nhóm còn lại (`menh-de-quan-he`, `danh-tu-hoa`, `tham-chieu`, `tu-noi`, `sac-thai`, `ham-y`) | ⏳ Chưa soạn |
+**Hoàn tất cả 11 nhóm — 6 level mỗi nhóm, 440 câu.**
 
-Xong trọn **vùng nền tảng (nhóm 1–5)** phục vụ học viên mất gốc → 450: tổng 200 câu.
-Sáu nhóm còn lại thuộc vùng 450 → 700+ và gắn chặt hơn với kỹ năng đọc Part 7.
+| Vùng | Nhóm | Số câu |
+|---|---|---|
+| Mất gốc → 450 | `cum-danh-tu`, `tu-da-nghia`, `cum-dong-tu`, `thi-va-thoi`, `bi-dong` | 200 |
+| 450 → 700+ | `menh-de-quan-he`, `danh-tu-hoa`, `tham-chieu`, `tu-noi`, `sac-thai`, `ham-y` | 240 |
+
+Mỗi nhóm: L1 8 câu · L2 8 · L3 8 · L4 8 · L5 5 · L6 3 (đều kèm câu hỏi hiểu ý).
+
+### 2.5 QC — công cụ và các lỗi đã chặn
+
+```bash
+npx tsx scripts/audit-translation.ts          # kiểm tra cấu trúc + chất lượng
+npx tsx scripts/audit-translation.ts --text   # in câu ghép L3 / bản vá L4 để rà bằng mắt
+```
+
+Script chặn được các lỗi sau, tất cả đều đã từng xuất hiện thật trong data:
+
+| Kiểm tra | Vì sao cần |
+|---|---|
+| Phân bố đáp án sau khi client xáo | Bản nháp đầu có **129/129 đáp án L4 nằm ở ô A** — bấm A là 100% điểm |
+| `optionNotes[correct]` phải mở đầu bằng "Đúng" | Bắt trường hợp gán nhầm phương án đúng |
+| Chỉ chip đúng mang dấu phẩy cuối | Học sinh nhìn dấu câu là đoán ra đáp án |
+| Khoảng trắng trước dấu câu trong câu ghép / bản vá | Ra chuỗi kiểu `"…chúng tôi , khai trương…"` |
+| Từ trong `correctWords` xuất hiện >1 lần | Bấm chữ nào cũng được tính đúng |
+| Số `___` khớp số blank; option/chunk/distractor không trùng | Lỗi cấu trúc làm vỡ màn luyện |
+| Đúng thứ tự kind theo level | Data lệch khuôn 6 level |
+
+**Vị trí đáp án được xáo ở client**, không xáo trong data: `displayOrder()` trong
+`TranslationLevelClient.tsx` hoán vị theo seed lấy từ `id` câu hỏi. Nhờ vậy data giữ quy ước
+"viết phương án đúng trước cho dễ bảo trì", còn học sinh thấy A/B/C đều 33%. Hệ quả: **không
+được nhắc tới vị trí phương án** ("phương án 3 sai vì…") trong `explanation` — hãy mô tả theo
+nội dung bản dịch.
+
+**Ngữ liệu lặp giữa L1 và L2 là chủ ý.** 14 câu tiếng Anh xuất hiện ở cả hai level: học sinh
+phân tích thành phần ở L1 rồi gặp lại chính câu đó khi chọn bản dịch ở L2. Script báo cảnh báo
+(không phải lỗi) để lần sau còn nhận ra nếu vô tình lặp.
 
 Hai nhóm làm đầu tiên được chọn cố ý khác loại nhau — một nhóm **cấu trúc**, một nhóm **từ vựng** — để kiểm chứng khuôn 6 level chịu được cả hai kiểu nội dung. Khuôn đứng vững nên ba nhóm sau nhân bản thẳng, không phải sửa code.

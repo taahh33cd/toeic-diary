@@ -73,11 +73,11 @@ export const thiVaThoiLevels: TransLevel[] = [
       {
         kind: "highlight",
         id: "tvt-l1-7",
-        sentence: "By the time you read this, the deadline will have passed.",
+        sentence: "By the time you arrive, we will have finished loading.",
         instruction: "Bấm vào cụm đặt mốc cho câu:",
         correctWords: ["By", "the", "time"],
         explanation:
-          "By the time + mệnh đề = đến lúc… thì. Vế sau ở tương lai hoàn thành: tới lúc đó việc kia đã xong.",
+          "By the time + mệnh đề = đến lúc… thì. Vế sau ở tương lai hoàn thành: tới lúc bạn tới nơi, việc xếp hàng đã xong.",
       },
       {
         kind: "highlight",
@@ -215,7 +215,7 @@ export const thiVaThoiLevels: TransLevel[] = [
         correct: 2,
         optionNotes: [
           "“đang luôn luôn” là câu dịch máy, tiếng Việt không nói vậy.",
-          "Đúng nghĩa nhưng mất sắc thái — câu gốc có ý bực mình.",
+          "Không sai nghĩa nhưng mất sắc thái — câu gốc có ý bực mình.",
           "Đúng — always + tiếp diễn mang sắc thái khó chịu, “lúc nào cũng… ca cẩm” giữ được điều đó.",
         ],
         explanation:
@@ -280,8 +280,8 @@ export const thiVaThoiLevels: TransLevel[] = [
         kind: "order",
         id: "tvt-l3-4",
         sentence: "Our records show that the invoice was paid last Thursday.",
-        chunks: ["Theo hồ sơ của chúng tôi", "hoá đơn đã được thanh toán", "hôm thứ Năm tuần trước"],
-        distractors: ["hoá đơn sẽ được thanh toán", "vào thứ Năm tới"],
+        chunks: ["Theo hồ sơ của chúng tôi,", "hoá đơn đã được thanh toán", "hôm thứ Năm tuần trước"],
+        distractors: ["Theo lời nhà cung cấp,", "hoá đơn sẽ được thanh toán vào thứ Năm tới"],
         hint: "last Thursday là mốc quá khứ đã xác định.",
         explanation:
           "Khi đã có mốc quá khứ rõ ràng (last Thursday), chữ “đã” là cần thiết chứ không thừa.",
@@ -300,8 +300,8 @@ export const thiVaThoiLevels: TransLevel[] = [
         kind: "order",
         id: "tvt-l3-6",
         sentence: "I have just sent you the updated file.",
-        chunks: ["Tôi vừa gửi cho anh", "bản cập nhật", "xong"],
-        distractors: ["sẽ gửi cho anh", "từ lâu rồi"],
+        chunks: ["Tôi vừa gửi", "cho anh", "bản cập nhật mới nhất"],
+        distractors: ["Tôi sẽ gửi", "từ lâu rồi"],
         hint: "just trong hiện tại hoàn thành = vừa mới.",
         explanation:
           "just = vừa mới, nhấn vào chuyện việc mới xảy ra tức thì. Bỏ chữ “vừa” là mất thông tin.",
@@ -461,9 +461,9 @@ export const thiVaThoiLevels: TransLevel[] = [
         draft: "Doanh số ___ giảm ___ ba quý liên tiếp.",
         blanks: [
           {
-            options: ["liên tục", "đã từng", "sắp"],
+            options: ["vẫn", "đã từng", "sắp"],
             correct: 0,
-            note: "Hiện tại hoàn thành tiếp diễn = kéo dài tới hiện tại và còn đang tiếp tục.",
+            note: "Hiện tại hoàn thành tiếp diễn = kéo dài tới hiện tại và còn đang tiếp tục — chữ “vẫn” giữ được ý đó.",
           },
           {
             options: ["suốt", "vào", "kể từ sau"],

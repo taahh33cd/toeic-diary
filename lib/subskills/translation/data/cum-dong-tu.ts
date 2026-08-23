@@ -233,7 +233,7 @@ export const cumDongTuLevels: TransLevel[] = [
           "Hiểu count thành “tính toán” — làm mất hẳn sắc thái tin tưởng, giao phó.",
         ],
         explanation:
-          "Phương án 3 là kiểu sai nguy hiểm nhất: câu vẫn đọc trôi, nhưng thái độ của người viết bị đảo từ tin tưởng sang nghi ngờ.",
+          "Bản dịch “đang tính toán xem nhóm anh có kịp không” là kiểu sai nguy hiểm nhất: câu vẫn đọc trôi, nhưng thái độ người viết bị đảo từ tin tưởng sang nghi ngờ.",
       },
     ],
   },
@@ -581,7 +581,7 @@ export const cumDongTuLevels: TransLevel[] = [
           ],
           correct: 1,
           explanation:
-            "“leave things as they are … no need to undo any work” — để nguyên chứ KHÔNG khôi phục. Phương án 1 là bẫy dành cho người đọc lướt qua chữ “undo”.",
+            "“leave things as they are … no need to undo any work” — để nguyên chứ KHÔNG khôi phục. Đáp án “khôi phục lại nguyên trạng” là bẫy dành cho người đọc lướt qua chữ “undo”.",
         },
       },
       {
@@ -636,7 +636,7 @@ export const cumDongTuLevels: TransLevel[] = [
           ],
           correct: 0,
           explanation:
-            "“short-staffed over the holiday” là nguyên nhân. Phương án 3 lấy đúng chi tiết “hai tài xế” nhưng đảo ngược nó — họ được TUYỂN THÊM, không phải nghỉ việc.",
+            "“short-staffed over the holiday” là nguyên nhân. Đáp án nói “hai tài xế đã nghỉ việc” lấy đúng chi tiết nhưng đảo ngược nó — họ được TUYỂN THÊM.",
         },
       },
     ],

@@ -178,7 +178,7 @@ export const tuDaNghiaLevels: TransLevel[] = [
           "“Vận hành” dùng cho máy móc; “trong sự vắng mặt của tôi” là câu dịch máy.",
         ],
         explanation:
-          "Phương án 3 cho thấy một lỗi khác: chọn được nghĩa gần đúng nhưng vẫn giữ nguyên khung câu tiếng Anh nên nghe rất cứng.",
+          "Bản dịch “vận hành buổi đào tạo trong sự vắng mặt của tôi” cho thấy một lỗi khác: chọn được nghĩa gần đúng nhưng vẫn giữ nguyên khung câu tiếng Anh nên nghe rất cứng.",
       },
       {
         kind: "compare",

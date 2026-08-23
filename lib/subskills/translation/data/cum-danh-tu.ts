@@ -300,10 +300,11 @@ export const cumDanhTuLevels: TransLevel[] = [
         kind: "order",
         id: "cdt-l3-5",
         sentence: "an updated list of approved travel expense categories",
-        chunks: ["danh sách", "các hạng mục chi phí đi lại", "được duyệt", "đã cập nhật"],
+        chunks: ["danh sách cập nhật", "các hạng mục chi phí đi lại", "được duyệt"],
+        distractors: ["sự cập nhật của danh sách", "được phê chuẩn du lịch"],
         hint: "Danh từ chính là list.",
         explanation:
-          "list ra đầu; of approved travel expense categories là bổ ngữ; updated đẩy xuống cuối vì nó mô tả chính cái danh sách.",
+          "list ra đầu (kèm luôn “cập nhật” cho gọn), rồi tới of approved travel expense categories. Bóc ngược: categories ← expense ← travel ← approved.",
       },
       {
         kind: "order",
@@ -458,21 +459,21 @@ export const cumDanhTuLevels: TransLevel[] = [
         kind: "repair",
         id: "cdt-l4-6",
         sentence: "We are looking for an experienced part-time warehouse supervisor.",
-        draft: "Chúng tôi đang tìm ___ ___.",
+        draft: "Chúng tôi đang tìm ___, ___.",
         blanks: [
           {
             options: [
-              "một giám sát kho hàng làm bán thời gian",
-              "một kho hàng giám sát bán thời gian",
-              "một người bán thời gian của kho giám sát",
+              "một giám sát viên kho hàng có kinh nghiệm",
+              "một kho hàng giám sát có kinh nghiệm",
+              "một người từng trải nghiệm việc giám sát kho",
             ],
             correct: 0,
-            note: "supervisor là người; part-time mô tả hình thức làm việc của người đó.",
+            note: "supervisor là người, nên danh từ chính phải là “giám sát viên”; experienced = có kinh nghiệm.",
           },
           {
-            options: ["có kinh nghiệm", "được trải nghiệm", "đã từng thử"],
+            options: ["làm bán thời gian", "làm toàn thời gian", "làm thời vụ theo mùa"],
             correct: 0,
-            note: "experienced = có kinh nghiệm, không phải “được trải nghiệm”.",
+            note: "part-time = bán thời gian. Nó mô tả hình thức làm việc, nên tiếng Việt tách hẳn ra sau dấu phẩy.",
           },
         ],
         explanation:
@@ -514,7 +515,7 @@ export const cumDanhTuLevels: TransLevel[] = [
           },
         ],
         explanation:
-          "Phương án 2 nghe xuôi tai nhưng dịch sai nghĩa hai từ: “reference letter” không phải “thư tham khảo”, và “professional” không mô tả chất lượng lá thư.",
+          "Bản dịch “lá thư tham khảo chuyên nghiệp” nghe xuôi tai nhưng sai nghĩa hai từ: “reference letter” không phải “thư tham khảo”, và “professional” không mô tả chất lượng lá thư.",
       },
     ],
   },
