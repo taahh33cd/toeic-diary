@@ -52,10 +52,33 @@ const STOPWORDS = new Set([
   "read", "say", "said", "tell", "told", "see", "saw", "look", "give", "gave",
   "next month", "next week", "this morning", "right now", "sometime", "last",
   "very good", "very soon", "usually best", "buy", "buys", "bought",
+  // Time fillers and bare adjectives — nothing to study on a card
+  "at the moment", "about an hour", "about two hours", "at eight o'clock",
+  "eight-thirty", "on monday", "see you then", "good idea", "latest", "sixteen",
+  "try", "stay", "enjoyed", "just a few",
 ]);
 
 /** A trailing number means the model grabbed an identifier (e.g. "flight 48"). */
 const HAS_DIGIT = /\d/;
+
+/** The model sometimes returns a split phrase, e.g. "leave ... on" — not a usable card. */
+const HAS_ELLIPSIS = /\.\.\.|…/;
+
+/** A finite be-verb means it returned a clause ("manager is new", "isn't it"). */
+const BE_VERB = /\b(is|are|was|were|isn't|aren't|wasn't|weren't)\b/;
+
+/** Ending on a pronoun leaves nothing to learn ("have it", "either one"). */
+const TRAILING_PRONOUN = /\b(it|them|one|me|you|us|him|her|its|they)$/;
+
+/** An item made only of these carries no meaning to study. */
+const FUNCTION_WORDS = new Set([
+  "a", "an", "the", "at", "in", "on", "of", "to", "for", "by", "up", "out",
+  "so", "as", "at the", "much", "many", "few", "some", "any", "every", "all",
+  "yet", "already", "still", "soon", "then", "there", "here", "back", "well",
+  "how", "what", "when", "where", "why", "who", "which", "that", "this",
+  "do", "did", "does", "be", "been", "have", "has", "had", "will", "would",
+  "can", "could", "should", "just", "only", "quite", "rather", "too", "very",
+]);
 
 async function extractOnce(transcript: string): Promise<VocabItem[]> {
   const prompt = `You are a TOEIC Part 2 coach. Below is one short Question-Response item: a question plus three answer options.
@@ -78,6 +101,9 @@ Rules:
 - Never pick a proper noun: no person names, city names, hotel/company/brand names.
 - Never pick extremely common words (the, is, go, yes, name, afternoon, ...).
 - Prefer items that carry the meaning of the question or of the correct answer.
+- Never use an ellipsis to join separated words: return "leave on", not "leave ... on".
+- Return a dictionary item, never a clause or a sentence fragment: no "manager is new", no "isn't it".
+- Never pick a bare time expression or number ("eight-thirty", "about an hour", "sixteen").
 
 Return ONLY a valid JSON array, no explanation:
 [{"word":"...","ipa":"...","partOfSpeech":"...","meaning":"...","example":"..."}]`;
@@ -123,8 +149,13 @@ function clean(items: VocabItem[], transcript: string): VocabItem[] {
     if (seen.has(lower)) continue;
     if (STOPWORDS.has(lower)) continue;
     if (HAS_DIGIT.test(lower)) continue;
+    if (HAS_ELLIPSIS.test(lower)) continue;
+    if (BE_VERB.test(lower)) continue;
+    if (TRAILING_PRONOUN.test(lower)) continue;
     if (lower.length < 3) continue;
-    if (w.split(/\s+/).length > 3) continue;
+    const tokens = w.split(/\s+/);
+    if (tokens.length > 3) continue;
+    if (tokens.every((t) => FUNCTION_WORDS.has(t.toLowerCase()))) continue;
     // A capitalised word that is not sentence-initial in the transcript is a proper noun.
     if (/^[A-Z]/.test(w) && !haystack.includes(`\n${lower}`) && !haystack.startsWith(lower)) continue;
     if (!haystack.includes(lower.split(/\s+/)[0])) continue;
