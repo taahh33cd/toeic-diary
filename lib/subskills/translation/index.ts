@@ -2,6 +2,9 @@ import type { TransLevel, TransLevelSlug, TransTopicConfig, BestScore } from "./
 export { buildLevelMeta } from "./levels";
 import { cumDanhTuLevels } from "./data/cum-danh-tu";
 import { tuDaNghiaLevels } from "./data/tu-da-nghia";
+import { cumDongTuLevels } from "./data/cum-dong-tu";
+import { thiVaThoiLevels } from "./data/thi-va-thoi";
+import { biDongLevels } from "./data/bi-dong";
 
 // ── Danh mục 11 nhóm vấn đề ──────────────────────────────────────────────────
 
@@ -58,7 +61,7 @@ export const TOPIC_METAS: TransTopicMeta[] = [
     },
     importance: 3,
     part7: false,
-    available: false,
+    available: true,
   },
   {
     slug: "thi-va-thoi",
@@ -75,7 +78,7 @@ export const TOPIC_METAS: TransTopicMeta[] = [
     },
     importance: 3,
     part7: false,
-    available: false,
+    available: true,
   },
   {
     slug: "bi-dong",
@@ -92,7 +95,7 @@ export const TOPIC_METAS: TransTopicMeta[] = [
     },
     importance: 3,
     part7: false,
-    available: false,
+    available: true,
   },
   {
     slug: "menh-de-quan-he",
@@ -196,6 +199,9 @@ export const TOPIC_METAS: TransTopicMeta[] = [
 const TOPIC_LEVELS: Record<string, TransLevel[]> = {
   "cum-danh-tu": cumDanhTuLevels,
   "tu-da-nghia": tuDaNghiaLevels,
+  "cum-dong-tu": cumDongTuLevels,
+  "thi-va-thoi": thiVaThoiLevels,
+  "bi-dong": biDongLevels,
 };
 
 export function getTopicMeta(slug: string): TransTopicMeta | null {

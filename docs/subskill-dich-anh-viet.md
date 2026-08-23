@@ -119,8 +119,14 @@ app/api/subskills/translate-assess/route.ts   # Gemini chấm L5/L6
 
 | Nhóm | Trạng thái |
 |---|---|
-| `cum-danh-tu` | ✅ Đủ 6 level (mẫu khuôn cấu trúc) |
-| `tu-da-nghia` | ✅ Đủ 6 level (mẫu khuôn từ vựng) |
-| 9 nhóm còn lại | ⏳ Chờ duyệt khuôn rồi nhân bản |
+| `cum-danh-tu` | ✅ Đủ 6 level, 40 câu (khuôn cấu trúc) |
+| `tu-da-nghia` | ✅ Đủ 6 level, 40 câu (khuôn từ vựng) |
+| `cum-dong-tu` | ✅ Đủ 6 level, 40 câu |
+| `thi-va-thoi` | ✅ Đủ 6 level, 40 câu |
+| `bi-dong` | ✅ Đủ 6 level, 40 câu |
+| 6 nhóm còn lại (`menh-de-quan-he`, `danh-tu-hoa`, `tham-chieu`, `tu-noi`, `sac-thai`, `ham-y`) | ⏳ Chưa soạn |
 
-Hai nhóm mẫu được chọn cố ý khác loại nhau — một nhóm **cấu trúc**, một nhóm **từ vựng** — để kiểm chứng khuôn 6 level chịu được cả hai kiểu nội dung trước khi nhân bản.
+Xong trọn **vùng nền tảng (nhóm 1–5)** phục vụ học viên mất gốc → 450: tổng 200 câu.
+Sáu nhóm còn lại thuộc vùng 450 → 700+ và gắn chặt hơn với kỹ năng đọc Part 7.
+
+Hai nhóm làm đầu tiên được chọn cố ý khác loại nhau — một nhóm **cấu trúc**, một nhóm **từ vựng** — để kiểm chứng khuôn 6 level chịu được cả hai kiểu nội dung. Khuôn đứng vững nên ba nhóm sau nhân bản thẳng, không phải sửa code.
