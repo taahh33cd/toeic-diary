@@ -150,8 +150,8 @@
     "title": "International Tourism Seminar",
     "imageUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-6/info.png",
     "introAudioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-6/intro.mp3",
-    "introDuration": 7.03,
-    "introTranscript": "I was told that Mason Bailey will be giving the keynote speech at 9 a.m. to kick off the event. Is that correct?",
+    "introDuration": 12.43,
+    "introTranscript": "Hello! I am planning to attend the International Tourism Seminar this Sunday, but I seem to have misplaced my copy of the schedule. Could you please check your program and answer a few questions for me?",
     "questions": [
       {
         "n": 8,
@@ -162,14 +162,14 @@
       {
         "n": 9,
         "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-6/q9.mp3",
-        "audioDuration": 7.61,
-        "transcript": "I am particularly interested in learning from Angela Cling. Could you please give me all the details about the sessions she will be leading?"
+        "audioDuration": 7.03,
+        "transcript": "I was told that Mason Bailey will be giving the keynote speech at 9 a.m. to kick off the event. Is that correct?"
       },
       {
         "n": 10,
         "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-6/q10.mp3",
-        "audioDuration": 12.43,
-        "transcript": "Hello! I am planning to attend the International Tourism Seminar this Sunday, but I seem to have misplaced my copy of the schedule. Could you please check your program and answer a few questions for me?"
+        "audioDuration": 7.61,
+        "transcript": "I am particularly interested in learning from Angela Cling. Could you please give me all the details about the sessions she will be leading?"
       }
     ]
   },

@@ -4,7 +4,7 @@
   { "slug": "conference-3",  "dir": "4",                      "category": "conference", "title": "National Teachers' Conference (bản 2)" },
   { "slug": "conference-4",  "dir": "5",                      "category": "conference", "title": "Annual Developing Technology Seminar" },
   { "slug": "conference-5",  "dir": "6",                      "category": "conference", "title": "Sweets & Snacks Conference" },
-  { "slug": "conference-6",  "dir": "7",                      "category": "conference", "title": "International Tourism Seminar" },
+  { "slug": "conference-6",  "dir": "7",                      "category": "conference", "title": "International Tourism Seminar", "audioMap": { "intro": "10", "9": "1", "10": "9" } },
   { "slug": "conference-7",  "dir": "8",                      "category": "conference", "title": "Software Product Development Seminar" },
   { "slug": "conference-8",  "dir": "10",                     "category": "conference", "title": "Toronto Fashion Conference" },
   { "slug": "conference-9",  "dir": "15",                     "category": "conference", "title": "Conference for Educators" },

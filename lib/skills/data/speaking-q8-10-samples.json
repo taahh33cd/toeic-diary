@@ -5,9 +5,18 @@
       "translation": "Vâng. Nếu bạn chỉ dự một ngày thì phí đăng ký là 150 đô. Còn nếu muốn dự cả hai ngày thì là 250 đô.",
       "source": "Dòng chú thích cuối bảng: *Registration Fee: $250 (Both days), $150 (One day).",
       "phrases": [
-        { "en": "the registration fee is …", "vi": "phí đăng ký là…" },
-        { "en": "if you attend for just one day", "vi": "nếu bạn chỉ dự một ngày" },
-        { "en": "if you'd like to …", "vi": "nếu bạn muốn…" }
+        {
+          "en": "the registration fee is …",
+          "vi": "phí đăng ký là…"
+        },
+        {
+          "en": "if you attend for just one day",
+          "vi": "nếu bạn chỉ dự một ngày"
+        },
+        {
+          "en": "if you'd like to …",
+          "vi": "nếu bạn muốn…"
+        }
       ]
     },
     "9": {
@@ -15,9 +24,18 @@
       "translation": "Thật ra thì chưa chính xác. Phiên Technology Integration diễn ra lúc 10 giờ sáng thứ Sáu ngày 14 tháng 7, không phải thứ Bảy. Người trình bày là Amy Fisher.",
       "source": "Dòng thứ hai của khối July 14th (Fri): 10 a.m. – Technology Integration – Amy Fisher.",
       "phrases": [
-        { "en": "Actually, that's not quite right.", "vi": "Thật ra thì chưa chính xác." },
-        { "en": "is scheduled for …", "vi": "được xếp lịch vào…" },
-        { "en": "…, not Saturday", "vi": "…, chứ không phải thứ Bảy" }
+        {
+          "en": "Actually, that's not quite right.",
+          "vi": "Thật ra thì chưa chính xác."
+        },
+        {
+          "en": "is scheduled for …",
+          "vi": "được xếp lịch vào…"
+        },
+        {
+          "en": "…, not Saturday",
+          "vi": "…, chứ không phải thứ Bảy"
+        }
       ]
     },
     "10": {
@@ -25,55 +43,1986 @@
       "translation": "Có ba phiên vào thứ Bảy ngày 15 tháng 7. Đầu tiên, lúc 9 giờ sáng là Personality Development do Miriam Loya trình bày. Tiếp theo lúc 10 giờ là Students and Teachers Relationships với Diana Caldwell. Và cuối cùng lúc 11 giờ là Multilingualism với Vincent Dunn.",
       "source": "Trọn khối July 15th (Sat) — ba dòng 9, 10 và 11 giờ sáng, lấy cả cột Session lẫn cột Speaker.",
       "phrases": [
-        { "en": "There are three sessions on …", "vi": "Có ba phiên vào…" },
-        { "en": "First… Then… And finally…", "vi": "chuỗi từ nối để liệt kê ba mục" },
-        { "en": "… with + tên người", "vi": "…do ai trình bày" }
+        {
+          "en": "There are three sessions on …",
+          "vi": "Có ba phiên vào…"
+        },
+        {
+          "en": "First… Then… And finally…",
+          "vi": "chuỗi từ nối để liệt kê ba mục"
+        },
+        {
+          "en": "… with + tên người",
+          "vi": "…do ai trình bày"
+        }
       ]
     }
   },
-
-  "order-1": {
+  "conference-2": {
     "8": {
-      "answer": "Your order comes to one hundred thirty-seven dollars and fifty cents. We're open from eleven a.m. to seven p.m., every day, so you can come by any time.",
-      "translation": "Đơn hàng của bạn tổng cộng 137 đô 50 xu. Cửa hàng mở cửa từ 11 giờ sáng đến 7 giờ tối, tất cả các ngày, nên bạn ghé lúc nào cũng được.",
-      "source": "Dòng Total của bảng ($137.50) và dòng Business hours ở phần đầu (11:00 A.M. – 7:00 P.M., every day).",
+      "answer": "The registration fee is one hundred twenty dollars, and yes, lunch is included in that price. It's a socializing lunch at one p.m.",
+      "translation": "Phí đăng ký là 120 đô, và vâng, bữa trưa đã bao gồm trong giá đó. Đó là bữa trưa giao lưu lúc 1 giờ chiều.",
+      "source": "Dòng chú thích cuối bảng: *Registration Fee: $120 (Lunch Included*), và dòng 1 p.m. Socializing Lunch.",
       "phrases": [
-        { "en": "Your order comes to …", "vi": "Đơn hàng của bạn tổng cộng…" },
-        { "en": "… dollars and … cents", "vi": "…đô và…xu (cách đọc tiền lẻ)" },
-        { "en": "come by", "vi": "ghé qua (cửa hàng)" }
+        {
+          "en": "lunch is included in that price",
+          "vi": "bữa trưa đã bao gồm trong giá đó"
+        },
+        {
+          "en": "and yes, …",
+          "vi": "và vâng,… (trả lời dứt khoát cho vế hỏi có/không)"
+        },
+        {
+          "en": "a socializing lunch",
+          "vi": "bữa trưa giao lưu"
+        }
       ]
     },
     "9": {
-      "answer": "Actually, no. Your order is marked as payment upon pickup, not in advance, so you'll pay when you come to collect the flowers.",
-      "translation": "Thật ra thì không. Đơn của bạn được đánh dấu là thanh toán khi nhận hàng, không phải trả trước, nên bạn sẽ trả tiền lúc đến lấy hoa.",
-      "source": "Dòng Payment cuối phiếu: dấu tích nằm ở ô (✓) upon pickup, ô ( ) in advance để trống.",
+      "answer": "Actually, that's not correct. Improving Workplace Communications is led by Logan Brown at two oh five. Isabella Jackson gives the opening remarks at nine.",
+      "translation": "Thật ra thì không đúng. Phiên Improving Workplace Communications do Logan Brown phụ trách lúc 2 giờ 05. Isabella Jackson là người đọc lời khai mạc lúc 9 giờ.",
+      "source": "Dòng 2:05 p.m. (Logan Brown) và dòng 9:00 a.m. (Isabella Jackson) trong cột Speaker.",
       "phrases": [
-        { "en": "is marked as …", "vi": "được đánh dấu là…" },
-        { "en": "payment upon pickup", "vi": "thanh toán khi nhận hàng" },
-        { "en": "in advance", "vi": "trả trước" }
+        {
+          "en": "is led by …",
+          "vi": "do…phụ trách"
+        },
+        {
+          "en": "two oh five",
+          "vi": "2 giờ 05 (cách đọc giờ có số 0 ở hàng chục phút)"
+        },
+        {
+          "en": "gives the opening remarks",
+          "vi": "đọc lời khai mạc"
+        }
       ]
     },
     "10": {
-      "answer": "You ordered three items. First, a dozen sunflowers for seventy dollars. Second, ten yellow roses for thirty dollars. And finally, fifteen daisies for thirty-seven dollars and fifty cents.",
-      "translation": "Bạn đã đặt ba món. Thứ nhất, một tá hoa hướng dương giá 70 đô. Thứ hai, mười bông hồng vàng giá 30 đô. Và cuối cùng, mười lăm bông cúc giá 37 đô 50 xu.",
-      "source": "Ba dòng của bảng Item – Qty. – Price, đọc lần lượt từ trên xuống.",
+      "answer": "Robert Clark is in charge of two sessions. First, Developing Outstanding Leadership Skills at ten fifteen. And second, the Q and A session and closing at four thirty.",
+      "translation": "Robert Clark phụ trách hai phiên. Thứ nhất là Developing Outstanding Leadership Skills lúc 10 giờ 15. Thứ hai là phiên hỏi đáp và bế mạc lúc 4 giờ 30.",
+      "source": "Quét cột Speaker tìm tên Robert Clark: dòng 10:15 a.m. và dòng 4:30 p.m.",
       "phrases": [
-        { "en": "You ordered three items.", "vi": "Bạn đã đặt ba món. (câu mở đầu nêu số lượng)" },
-        { "en": "a dozen", "vi": "một tá — 12 cái" },
-        { "en": "First… Second… And finally…", "vi": "chuỗi từ nối để liệt kê" }
+        {
+          "en": "is in charge of two sessions",
+          "vi": "phụ trách hai phiên"
+        },
+        {
+          "en": "First… And second…",
+          "vi": "chuỗi từ nối cho hai mục"
+        },
+        {
+          "en": "Q and A",
+          "vi": "cách đọc chữ viết tắt Q&A"
+        }
       ]
     }
   },
-
+  "conference-4": {
+    "8": {
+      "answer": "The seminar is at the Bridgestone Convention Center, and it runs for two days, on November ninth and tenth.",
+      "translation": "Hội thảo tổ chức tại Bridgestone Convention Center, kéo dài hai ngày, mùng 9 và mùng 10 tháng 11.",
+      "source": "Dòng tiêu đề: Bridgestone Convention Center | November 9 - 10.",
+      "phrases": [
+        {
+          "en": "it runs for two days",
+          "vi": "kéo dài hai ngày"
+        },
+        {
+          "en": "on November ninth and tenth",
+          "vi": "vào ngày 9 và 10 tháng 11"
+        },
+        {
+          "en": "is at + tên địa điểm",
+          "vi": "tổ chức tại…"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not right. Ian Rust gives the welcoming speech on Monday morning. Amber Wang presents Developing New Technologies at ten.",
+      "translation": "Thật ra thì không đúng. Ian Rust mới là người đọc diễn văn chào mừng sáng thứ Hai. Amber Wang trình bày phiên Developing New Technologies lúc 10 giờ.",
+      "source": "Khối Day 1 (Monday, November 9th): dòng 9:00 – 10:30 a.m. là Ian Rust, dòng 10:00 – 11:30 a.m. là Amber Wang.",
+      "phrases": [
+        {
+          "en": "gives the welcoming speech",
+          "vi": "đọc diễn văn chào mừng"
+        },
+        {
+          "en": "Actually, that's not right.",
+          "vi": "Thật ra thì không đúng."
+        },
+        {
+          "en": "presents + tên phiên",
+          "vi": "trình bày phiên…"
+        }
+      ]
+    },
+    "10": {
+      "answer": "There are three sessions on Tuesday. First, Benefits of Using New Technologies at nine with Emma Evans. Then Software Design Service at one with Lori Ostin. And finally a Q and A session at two thirty with Eric Moser.",
+      "translation": "Thứ Ba có ba phiên. Đầu tiên là Benefits of Using New Technologies lúc 9 giờ với Emma Evans. Tiếp theo là Software Design Service lúc 1 giờ với Lori Ostin. Và cuối cùng là phiên hỏi đáp lúc 2 giờ 30 với Eric Moser.",
+      "source": "Trọn khối Day 2 (Tuesday, November 10th) — ba dòng, lấy cả tên phiên lẫn diễn giả.",
+      "phrases": [
+        {
+          "en": "There are three sessions on Tuesday.",
+          "vi": "Thứ Ba có ba phiên. (câu mở đầu nêu số lượng)"
+        },
+        {
+          "en": "First… Then… And finally…",
+          "vi": "chuỗi từ nối cho ba mục"
+        },
+        {
+          "en": "with + tên diễn giả",
+          "vi": "do ai trình bày"
+        }
+      ]
+    }
+  },
+  "conference-5": {
+    "8": {
+      "answer": "It's at the Hempstead Hotel. If you pay on site, the participation fee is seventy-five dollars, but it's only fifty if you register early.",
+      "translation": "Hội thảo tổ chức tại khách sạn Hempstead. Nếu bạn đóng tại chỗ thì phí tham dự là 75 đô, còn đăng ký sớm thì chỉ 50 đô.",
+      "source": "Dòng tiêu đề (Oct 10, Hempstead Hotel) và chú thích *Participation Fee: $50 (Early), $75 (On-site).",
+      "phrases": [
+        {
+          "en": "if you pay on site",
+          "vi": "nếu bạn đóng tại chỗ"
+        },
+        {
+          "en": "it's only fifty if you register early",
+          "vi": "chỉ 50 đô nếu đăng ký sớm"
+        },
+        {
+          "en": "participation fee",
+          "vi": "phí tham dự"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. Ethan Kurt gives the welcome speech at nine. Seth Bowers presents a demonstration on gluten-free dessert ideas at one thirty.",
+      "translation": "Thật ra thì không đúng. Ethan Kurt mới là người đọc diễn văn chào mừng lúc 9 giờ. Seth Bowers trình diễn phần Gluten-Free Dessert Ideas lúc 1 giờ 30.",
+      "source": "Dòng 9:00 – 9:30 a.m. (Ethan Kurt) và dòng 1:30 – 3:30 p.m. (Seth Bowers).",
+      "phrases": [
+        {
+          "en": "gives the welcome speech",
+          "vi": "đọc diễn văn chào mừng"
+        },
+        {
+          "en": "presents a demonstration on …",
+          "vi": "trình diễn phần…"
+        },
+        {
+          "en": "gluten-free",
+          "vi": "không chứa gluten"
+        }
+      ]
+    },
+    "10": {
+      "answer": "There are two workshops. First, Unusual Ingredients for Desserts with Bill Martin, from ten thirty to eleven thirty. And second, Making Healthier Dessert Choices with Brian Wilson, from three thirty to five.",
+      "translation": "Có hai buổi thực hành. Thứ nhất là Unusual Ingredients for Desserts với Bill Martin, từ 10 giờ 30 đến 11 giờ 30. Thứ hai là Making Healthier Dessert Choices với Brian Wilson, từ 3 giờ 30 đến 5 giờ.",
+      "source": "Hai dòng có chữ Workshop trong cột Session — bỏ qua hai dòng Demonstration.",
+      "phrases": [
+        {
+          "en": "There are two workshops.",
+          "vi": "Có hai buổi thực hành."
+        },
+        {
+          "en": "from … to …",
+          "vi": "từ…đến… (khoảng thời gian)"
+        },
+        {
+          "en": "hands-on",
+          "vi": "thực hành trực tiếp — từ khoá của câu hỏi để nhận ra là hỏi workshop"
+        }
+      ]
+    }
+  },
+  "conference-6": {
+    "8": {
+      "answer": "The seminar is at the Trenton Convention Center, in the main auditorium. For non-members, the participation fee is one hundred fifty dollars.",
+      "translation": "Hội thảo tổ chức tại Trenton Convention Center, ở hội trường chính. Với người không phải hội viên thì phí tham dự là 150 đô.",
+      "source": "Dòng tiêu đề (Trenton Convention Center, Main Auditorium) và chú thích *Participation Fee: $100 (Members), $150 (Non-members).",
+      "phrases": [
+        {
+          "en": "in the main auditorium",
+          "vi": "ở hội trường chính"
+        },
+        {
+          "en": "for non-members",
+          "vi": "với người không phải hội viên"
+        },
+        {
+          "en": "members / non-members",
+          "vi": "hội viên / không phải hội viên"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. Peter Baker gives the keynote speech at nine. Mason Bailey presents Latest Trends in Tourism at ten.",
+      "translation": "Thật ra thì không đúng. Peter Baker mới là người đọc bài phát biểu chính lúc 9 giờ. Mason Bailey trình bày phiên Latest Trends in Tourism lúc 10 giờ.",
+      "source": "Dòng 9 – 10 AM (Peter Baker, Keynote Speech) và dòng 10 – 11 AM (Mason Bailey).",
+      "phrases": [
+        {
+          "en": "the keynote speech",
+          "vi": "bài phát biểu chính"
+        },
+        {
+          "en": "to kick off the event",
+          "vi": "để mở màn sự kiện"
+        },
+        {
+          "en": "latest trends",
+          "vi": "xu hướng mới nhất"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Angela Kling is leading two sessions. First, a workshop on how to develop the tourism industry, from eleven to twelve. And second, a presentation on travelers from different cultures, from one thirty to two thirty.",
+      "translation": "Angela Kling phụ trách hai phiên. Thứ nhất là buổi thực hành về cách phát triển ngành du lịch, từ 11 giờ đến 12 giờ. Thứ hai là bài trình bày về du khách từ các nền văn hoá khác nhau, từ 1 giờ 30 đến 2 giờ 30.",
+      "source": "Quét cột Speaker tìm Angela Kling: dòng 11 – 12 PM (Workshop) và dòng 1:30 – 2:30 PM (Presentation).",
+      "phrases": [
+        {
+          "en": "is leading two sessions",
+          "vi": "phụ trách hai phiên"
+        },
+        {
+          "en": "a workshop on …",
+          "vi": "buổi thực hành về…"
+        },
+        {
+          "en": "a presentation on …",
+          "vi": "bài trình bày về…"
+        }
+      ]
+    }
+  },
+  "conference-7": {
+    "8": {
+      "answer": "The seminar is at the Hunter Convention Center, in Auditorium B. If you pay at the door, the registration fee is seventy-five dollars.",
+      "translation": "Hội thảo tổ chức tại Hunter Convention Center, hội trường B. Nếu bạn đóng tại cửa thì phí đăng ký là 75 đô.",
+      "source": "Dòng tiêu đề (Hunter Convention Center, Auditorium B) và chú thích Registration Fee: $50 (in advance, online), $75 (at the door).",
+      "phrases": [
+        {
+          "en": "at the door",
+          "vi": "đóng tại cửa, tức đóng ngay hôm diễn ra"
+        },
+        {
+          "en": "in advance",
+          "vi": "đóng trước"
+        },
+        {
+          "en": "Auditorium B",
+          "vi": "hội trường B (đọc rõ chữ cái)"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not right. Gabriel Brown gives the keynote speech at nine. Charlotte Jones presents Alternative Software Development at eleven.",
+      "translation": "Thật ra thì không đúng. Gabriel Brown mới là người đọc bài phát biểu chính lúc 9 giờ. Charlotte Jones trình bày phiên Alternative Software Development lúc 11 giờ.",
+      "source": "Dòng 9 – 10 AM (Gabriel Brown, Keynote Speech) và dòng 11 – Noon (Charlotte Jones).",
+      "phrases": [
+        {
+          "en": "gives the keynote speech",
+          "vi": "đọc bài phát biểu chính"
+        },
+        {
+          "en": "alternative",
+          "vi": "thay thế, khác biệt"
+        },
+        {
+          "en": "at eleven",
+          "vi": "lúc 11 giờ"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Eva Fields is leading two sessions. First, Mobile Social Application Development from ten to eleven. And second, Software Design and Process from one to two.",
+      "translation": "Eva Fields phụ trách hai phiên. Thứ nhất là Mobile Social Application Development từ 10 đến 11 giờ. Thứ hai là Software Design and Process từ 1 đến 2 giờ chiều.",
+      "source": "Quét cột Speaker tìm Eva Fields: dòng 10 – 11 AM và dòng 1 – 2 PM.",
+      "phrases": [
+        {
+          "en": "is leading two sessions",
+          "vi": "phụ trách hai phiên"
+        },
+        {
+          "en": "from ten to eleven",
+          "vi": "từ 10 đến 11 giờ"
+        },
+        {
+          "en": "design and process",
+          "vi": "thiết kế và quy trình"
+        }
+      ]
+    }
+  },
+  "conference-8": {
+    "8": {
+      "answer": "Yes, lunch will be provided, from twelve to one p.m. It's catered by the Italian Garden Restaurant.",
+      "translation": "Vâng, có phục vụ bữa trưa, từ 12 giờ đến 1 giờ chiều. Do nhà hàng Italian Garden lo phần ăn.",
+      "source": "Dòng 12:00 – 13:00 PM (Lunch Time – Provided*) và chú thích *Catered by Italian Garden Restaurant.",
+      "phrases": [
+        {
+          "en": "lunch will be provided",
+          "vi": "có phục vụ bữa trưa"
+        },
+        {
+          "en": "is catered by …",
+          "vi": "do…lo phần ăn"
+        },
+        {
+          "en": "and if so, …",
+          "vi": "và nếu có thì… (cụm nối trong chính câu hỏi)"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. Aden Hurst gives the opening speech at nine thirty. Julian Boyer presents Future of Fashion at ten.",
+      "translation": "Thật ra thì không đúng. Aden Hurst mới là người đọc diễn văn khai mạc lúc 9 giờ 30. Julian Boyer trình bày phiên Future of Fashion lúc 10 giờ.",
+      "source": "Dòng 9:30 – 10:00 AM (Aden Hurst) và dòng 10:00 – 11:00 AM (Julian Boyer).",
+      "phrases": [
+        {
+          "en": "kicking off the event",
+          "vi": "mở màn sự kiện"
+        },
+        {
+          "en": "gives the opening speech",
+          "vi": "đọc diễn văn khai mạc"
+        },
+        {
+          "en": "at nine thirty",
+          "vi": "lúc 9 giờ 30"
+        }
+      ]
+    },
+    "10": {
+      "answer": "There are two workshops. First, Influencer Marketing Strategies with Eva Ochoa, from eleven to noon. And second, Collaboration Marketing Approach with Kemp Morin, from two to three p.m.",
+      "translation": "Có hai buổi thực hành. Thứ nhất là Influencer Marketing Strategies với Eva Ochoa, từ 11 giờ đến 12 giờ trưa. Thứ hai là Collaboration Marketing Approach với Kemp Morin, từ 2 đến 3 giờ chiều.",
+      "source": "Hai dòng có chữ Workshops trong cột Sessions: 11:00 – Noon và 14:00 – 15:00 PM.",
+      "phrases": [
+        {
+          "en": "interactive sessions",
+          "vi": "các phiên có tương tác — từ khoá để nhận ra là hỏi workshop"
+        },
+        {
+          "en": "from eleven to noon",
+          "vi": "từ 11 giờ đến 12 giờ trưa"
+        },
+        {
+          "en": "marketing strategies",
+          "vi": "chiến lược tiếp thị"
+        }
+      ]
+    }
+  },
+  "conference-9": {
+    "8": {
+      "answer": "The conference is held in Diamond Hall, at the Port Royal Convention Center, and it officially starts at ten a.m.",
+      "translation": "Hội thảo tổ chức ở Diamond Hall, thuộc Port Royal Convention Center, và chính thức bắt đầu lúc 10 giờ sáng.",
+      "source": "Hai dòng đầu bảng (Venue, Date) và dòng đầu tiên của lưới: 10 – 11 a.m.",
+      "phrases": [
+        {
+          "en": "is held in …",
+          "vi": "được tổ chức tại…"
+        },
+        {
+          "en": "officially starts at …",
+          "vi": "chính thức bắt đầu lúc…"
+        },
+        {
+          "en": "convention center",
+          "vi": "trung tâm hội nghị"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not right. Tim Marsh gives the opening comments at ten a.m. Samantha Burns speaks at three, on rewarding good behavior.",
+      "translation": "Thật ra thì không đúng. Tim Marsh mới là người phát biểu mở đầu lúc 10 giờ sáng. Samantha Burns nói lúc 3 giờ, về chủ đề khen thưởng hành vi tốt.",
+      "source": "Dòng 10 – 11 a.m. (Tim Marsh) và dòng 3 – 4 p.m. (Samantha Burns).",
+      "phrases": [
+        {
+          "en": "the opening comments",
+          "vi": "lời phát biểu mở đầu"
+        },
+        {
+          "en": "rewarding good behavior",
+          "vi": "khen thưởng hành vi tốt"
+        },
+        {
+          "en": "speaks at three",
+          "vi": "phát biểu lúc 3 giờ"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Nancy Freeman is presenting twice. First, Welcoming Class Environments at eleven a.m. And second, New Classroom Technologies at two p.m.",
+      "translation": "Nancy Freeman trình bày hai lần. Thứ nhất là Welcoming Class Environments lúc 11 giờ sáng. Thứ hai là New Classroom Technologies lúc 2 giờ chiều.",
+      "source": "Quét cột Speaker tìm Nancy Freeman: dòng 11 a.m. – 12 p.m. và dòng 2 – 3 p.m.",
+      "phrases": [
+        {
+          "en": "is presenting twice",
+          "vi": "trình bày hai lần"
+        },
+        {
+          "en": "classroom environments",
+          "vi": "môi trường lớp học"
+        },
+        {
+          "en": "First… And second…",
+          "vi": "chuỗi từ nối cho hai mục"
+        }
+      ]
+    }
+  },
+  "conference-10": {
+    "8": {
+      "answer": "It's at the London Conference Center, on Baker Street. And yes, the lunch break is included in the registration fee.",
+      "translation": "Hội nghị ở London Conference Center, trên đường Baker. Và vâng, bữa trưa đã bao gồm trong phí đăng ký.",
+      "source": "Dòng tiêu đề (London Conference Center, 1110 Baker Street) và dấu * ở dòng LUNCH BREAK dẫn xuống chú thích *Included in registration fee.",
+      "phrases": [
+        {
+          "en": "on Baker Street",
+          "vi": "trên đường Baker"
+        },
+        {
+          "en": "is included in the registration fee",
+          "vi": "đã bao gồm trong phí đăng ký"
+        },
+        {
+          "en": "lunch break",
+          "vi": "giờ nghỉ trưa"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. Oliver Lucero leads the workshop on diagnosing gum disease at nine thirty. Timothy Brock speaks at one p.m., on toothpaste effectiveness.",
+      "translation": "Thật ra thì không đúng. Oliver Lucero mới là người dẫn buổi thực hành về chẩn đoán bệnh nướu lúc 9 giờ 30. Timothy Brock nói lúc 1 giờ chiều, về hiệu quả của kem đánh răng.",
+      "source": "Dòng 9:30 – 10:30 a.m. (Oliver Lucero) và dòng 1 – 2 p.m. (Timothy Brock).",
+      "phrases": [
+        {
+          "en": "gum disease",
+          "vi": "bệnh nướu răng"
+        },
+        {
+          "en": "leads the workshop on …",
+          "vi": "dẫn buổi thực hành về…"
+        },
+        {
+          "en": "effectiveness",
+          "vi": "hiệu quả"
+        }
+      ]
+    },
+    "10": {
+      "answer": "There are two workshops. First, Diagnosing Gum Disease with Oliver Lucero, from nine thirty to ten thirty. And second, Wisdom Teeth: To Pull or Not To Pull with Annette Walker, from two to three.",
+      "translation": "Có hai buổi thực hành. Thứ nhất là Diagnosing Gum Disease với Oliver Lucero, từ 9 giờ 30 đến 10 giờ 30. Thứ hai là Wisdom Teeth: To Pull or Not To Pull với Annette Walker, từ 2 đến 3 giờ.",
+      "source": "Hai dòng ghi (Workshop) trong cột Session — các dòng ghi (Lecture) không tính.",
+      "phrases": [
+        {
+          "en": "hands-on",
+          "vi": "thực hành trực tiếp — từ khoá cho biết đang hỏi workshop"
+        },
+        {
+          "en": "wisdom teeth",
+          "vi": "răng khôn"
+        },
+        {
+          "en": "to pull or not to pull",
+          "vi": "nhổ hay không nhổ"
+        }
+      ]
+    }
+  },
+  "conference-11": {
+    "8": {
+      "answer": "The seminar is at the Amherst Convention Center, at one forty-nine Memorial Drive, and it officially starts at nine a.m.",
+      "translation": "Hội thảo tổ chức tại Amherst Convention Center, số 149 Memorial Drive, và chính thức bắt đầu lúc 9 giờ sáng.",
+      "source": "Hai dòng đầu bảng (địa chỉ, ngày) và dòng đầu của lưới: 9 – 9:30 a.m.",
+      "phrases": [
+        {
+          "en": "one forty-nine Memorial Drive",
+          "vi": "số 149 Memorial Drive (số nhà đọc theo cặp)"
+        },
+        {
+          "en": "officially starts at …",
+          "vi": "chính thức bắt đầu lúc…"
+        },
+        {
+          "en": "Memorial Drive",
+          "vi": "tên đường — đọc rõ, đừng nuốt"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. Tommy Rice leads that session at nine thirty. George Simmons speaks at one thirty, on advertising on social media.",
+      "translation": "Thật ra thì không đúng. Tommy Rice mới là người dẫn phiên đó lúc 9 giờ 30. George Simmons nói lúc 1 giờ 30, về quảng cáo trên mạng xã hội.",
+      "source": "Dòng 9:30 – 10:30 a.m. (Tommy Rice) và dòng 1:30 – 2:30 p.m. (George Simmons).",
+      "phrases": [
+        {
+          "en": "automating inventory systems",
+          "vi": "tự động hoá hệ thống kho hàng"
+        },
+        {
+          "en": "leads that session",
+          "vi": "dẫn phiên đó"
+        },
+        {
+          "en": "advertising on social media",
+          "vi": "quảng cáo trên mạng xã hội"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Tommy Rice is presenting two sessions. First, Benefits of Automating Inventory Systems at nine thirty. And second, Smart Hiring and Training Practices at two thirty.",
+      "translation": "Tommy Rice trình bày hai phiên. Thứ nhất là Benefits of Automating Inventory Systems lúc 9 giờ 30. Thứ hai là Smart Hiring and Training Practices lúc 2 giờ 30.",
+      "source": "Quét cột Speaker tìm Tommy Rice: dòng 9:30 – 10:30 a.m. và dòng 2:30 – 3:30 p.m.",
+      "phrases": [
+        {
+          "en": "is presenting two sessions",
+          "vi": "trình bày hai phiên"
+        },
+        {
+          "en": "hiring and training practices",
+          "vi": "cách tuyển dụng và đào tạo"
+        },
+        {
+          "en": "work smarter not harder",
+          "vi": "làm thông minh hơn chứ không vất vả hơn"
+        }
+      ]
+    }
+  },
+  "conference-12": {
+    "8": {
+      "answer": "The participation fee is fifteen dollars, and yes, lunch is included. There's a socializing lunch in the Business Lounge from twelve to one.",
+      "translation": "Phí tham dự là 15 đô, và vâng, đã bao gồm bữa trưa. Có bữa trưa giao lưu ở Business Lounge từ 12 giờ đến 1 giờ.",
+      "source": "Dòng chú thích cuối bảng: Participation fee: $15 (Lunch included), và dòng 12 – 1 p.m. Socializing lunch (Business Lounge).",
+      "phrases": [
+        {
+          "en": "participation fee",
+          "vi": "phí tham dự"
+        },
+        {
+          "en": "lunch is included",
+          "vi": "đã bao gồm bữa trưa"
+        },
+        {
+          "en": "Business Lounge",
+          "vi": "phòng chờ doanh nhân"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not right. Garry Hyde gives the opening speech at ten. Melissa Jordan speaks at two, on setting the best curriculum for learners.",
+      "translation": "Thật ra thì không đúng. Garry Hyde mới là người đọc diễn văn khai mạc lúc 10 giờ. Melissa Jordan nói lúc 2 giờ, về cách xây chương trình học tốt nhất cho người học.",
+      "source": "Dòng 10 – 11 a.m. (Garry Hyde) và dòng 2 – 3 p.m. (Melissa Jordan).",
+      "phrases": [
+        {
+          "en": "curriculum",
+          "vi": "chương trình học"
+        },
+        {
+          "en": "gives the opening speech",
+          "vi": "đọc diễn văn khai mạc"
+        },
+        {
+          "en": "learners",
+          "vi": "người học"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Garry Hyde is leading two sessions, and they're at the very start and the very end of the day. The opening speech from ten to eleven, and the closing speech from three to four.",
+      "translation": "Garry Hyde phụ trách hai phiên, đúng đầu và cuối chương trình. Diễn văn khai mạc từ 10 đến 11 giờ, và diễn văn bế mạc từ 3 đến 4 giờ chiều.",
+      "source": "Quét cột Speaker tìm Garry Hyde: dòng đầu tiên (10 – 11 a.m.) và dòng cuối cùng (3 – 4 p.m.).",
+      "phrases": [
+        {
+          "en": "at the very start and the very end",
+          "vi": "đúng đầu và cuối chương trình"
+        },
+        {
+          "en": "the closing speech",
+          "vi": "diễn văn bế mạc"
+        },
+        {
+          "en": "is leading two sessions",
+          "vi": "phụ trách hai phiên"
+        }
+      ]
+    }
+  },
+  "conference-13": {
+    "8": {
+      "answer": "The fee is one hundred twenty dollars per person, and it's held at the Westwood Convention Center.",
+      "translation": "Phí tham dự là 120 đô một người, và hội nghị tổ chức tại Westwood Convention Center.",
+      "source": "Ba dòng tiêu đề đầu bảng: tên hội nghị, địa điểm và ngày, rồi Fee: $120 per person.",
+      "phrases": [
+        {
+          "en": "per person",
+          "vi": "một người, tính theo đầu người"
+        },
+        {
+          "en": "it's held at …",
+          "vi": "được tổ chức tại…"
+        },
+        {
+          "en": "one hundred twenty dollars",
+          "vi": "120 đô"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. Christina Wong leads social media advertising at eleven thirty. Jonathan Lee covers print media advertising at one fifteen.",
+      "translation": "Thật ra thì không đúng. Christina Wong mới là người dẫn phiên quảng cáo trên mạng xã hội lúc 11 giờ 30. Jonathan Lee phụ trách quảng cáo trên báo in lúc 1 giờ 15.",
+      "source": "Dòng 11:30 – 12:30 (Christina Wong) và dòng 1:15 – 2:15 (Jonathan Lee).",
+      "phrases": [
+        {
+          "en": "social media advertising",
+          "vi": "quảng cáo trên mạng xã hội"
+        },
+        {
+          "en": "print media advertising",
+          "vi": "quảng cáo trên báo in"
+        },
+        {
+          "en": "covers + tên phiên",
+          "vi": "phụ trách nội dung…"
+        }
+      ]
+    },
+    "10": {
+      "answer": "There are three sessions on marketing and advertising. First, Using Various Marketing Options at ten forty-five with James Moore. Then Social Media Advertising at eleven thirty with Christina Wong. And finally Print Media Advertising at one fifteen with Jonathan Lee.",
+      "translation": "Có ba phiên về tiếp thị và quảng cáo. Đầu tiên là Using Various Marketing Options lúc 10 giờ 45 với James Moore. Tiếp theo là Social Media Advertising lúc 11 giờ 30 với Christina Wong. Và cuối cùng là Print Media Advertising lúc 1 giờ 15 với Jonathan Lee.",
+      "source": "Quét cột Session tìm các dòng có chữ marketing hoặc advertising: 10:45, 11:30 và 1:15.",
+      "phrases": [
+        {
+          "en": "expanding my business's reach",
+          "vi": "mở rộng độ phủ của doanh nghiệp — cụm trong câu hỏi"
+        },
+        {
+          "en": "various marketing options",
+          "vi": "các lựa chọn tiếp thị khác nhau"
+        },
+        {
+          "en": "First… Then… And finally…",
+          "vi": "chuỗi từ nối cho ba mục"
+        }
+      ]
+    }
+  },
+  "conference-14": {
+    "8": {
+      "answer": "The regular fee is one hundred dollars. Members do get a discount — it's eighty dollars for them.",
+      "translation": "Phí thường là 100 đô. Hội viên có ưu đãi — chỉ 80 đô.",
+      "source": "Dòng tiêu đề thứ hai: Sunday, April 27th, Fee: $100 (members: $80).",
+      "phrases": [
+        {
+          "en": "the regular fee",
+          "vi": "phí thường, phí tiêu chuẩn"
+        },
+        {
+          "en": "Members do get a discount",
+          "vi": "Hội viên có được ưu đãi (dùng \"do\" để nhấn mạnh)"
+        },
+        {
+          "en": "it's eighty dollars for them",
+          "vi": "với họ thì là 80 đô"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. The workshop on the US-China trade war starts at noon, not two. At two there's a lecture on currency denomination.",
+      "translation": "Thật ra thì không đúng. Buổi thực hành về chiến tranh thương mại Mỹ - Trung bắt đầu lúc 12 giờ trưa, không phải 2 giờ. Lúc 2 giờ là bài giảng về mệnh giá tiền tệ.",
+      "source": "Dòng Noon – 1 pm (Workshop: US-China trade war) và dòng 2 – 3 pm (Lecture: currency denomination).",
+      "phrases": [
+        {
+          "en": "starts at noon, not two",
+          "vi": "bắt đầu lúc 12 giờ trưa, không phải 2 giờ"
+        },
+        {
+          "en": "trade war",
+          "vi": "chiến tranh thương mại"
+        },
+        {
+          "en": "currency denomination",
+          "vi": "mệnh giá tiền tệ"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Jack Martin is leading two sessions. First, a workshop on new fixed income models, from nine to ten. And second, a lecture on the benefits and disadvantages of currency denomination, from two to three.",
+      "translation": "Jack Martin phụ trách hai phiên. Thứ nhất là buổi thực hành về các mô hình thu nhập cố định mới, từ 9 đến 10 giờ. Thứ hai là bài giảng về ưu và nhược điểm của mệnh giá tiền tệ, từ 2 đến 3 giờ chiều.",
+      "source": "Quét cột Speaker tìm Jack Martin: dòng 9 – 10 am và dòng 2 – 3 pm.",
+      "phrases": [
+        {
+          "en": "fixed income models",
+          "vi": "mô hình thu nhập cố định"
+        },
+        {
+          "en": "the benefits and disadvantages of …",
+          "vi": "ưu và nhược điểm của…"
+        },
+        {
+          "en": "a workshop on … / a lecture on …",
+          "vi": "buổi thực hành về… / bài giảng về…"
+        }
+      ]
+    }
+  },
+  "conference-15": {
+    "8": {
+      "answer": "The conference is at the Sunshine Exhibition Hall, on August twenty-first, and the welcome address begins at nine fifteen a.m.",
+      "translation": "Hội nghị tổ chức tại Sunshine Exhibition Hall, ngày 21 tháng 8, và lời chào mừng bắt đầu lúc 9 giờ 15 sáng.",
+      "source": "Hai dòng tiêu đề đầu bảng và dòng đầu của lưới: 9:15 – 9:30 am, Welcome address.",
+      "phrases": [
+        {
+          "en": "the welcome address",
+          "vi": "lời chào mừng, diễn văn chào mừng"
+        },
+        {
+          "en": "exhibition hall",
+          "vi": "hội trường triển lãm"
+        },
+        {
+          "en": "begins at nine fifteen",
+          "vi": "bắt đầu lúc 9 giờ 15"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. Leo Ricci's presentation is before lunch, from ten thirty to eleven thirty. At one p.m. it's Jessica Parker, on design skills for mobile applications.",
+      "translation": "Thật ra thì không đúng. Bài trình bày của Leo Ricci diễn ra trước bữa trưa, từ 10 giờ 30 đến 11 giờ 30. Lúc 1 giờ chiều là Jessica Parker, nói về kỹ năng thiết kế cho ứng dụng di động.",
+      "source": "Dòng 10:30 – 11:30 am (Leo Ricci) nằm TRƯỚC dòng 11:30 am – 1 pm (Catered lunch); dòng 1 – 2 pm là Jessica Parker.",
+      "phrases": [
+        {
+          "en": "is before lunch",
+          "vi": "diễn ra trước bữa trưa"
+        },
+        {
+          "en": "right after …",
+          "vi": "ngay sau… (cụm trong câu hỏi cần nghe kỹ)"
+        },
+        {
+          "en": "catered lunch",
+          "vi": "bữa trưa do bên ngoài phục vụ"
+        }
+      ]
+    },
+    "10": {
+      "answer": "There are two sessions on web design. First, Trends and Issues in Web Design with Mina Park, from nine thirty to ten thirty. And second, Popular Web Design twenty nineteen with Eric Jones, from two to three.",
+      "translation": "Có hai phiên về thiết kế web. Thứ nhất là Trends and Issues in Web Design với Mina Park, từ 9 giờ 30 đến 10 giờ 30. Thứ hai là Popular Web Design 2019 với Eric Jones, từ 2 đến 3 giờ chiều.",
+      "source": "Quét cột Session tìm chữ Web design: dòng 9:30 – 10:30 am và dòng 2 – 3 pm.",
+      "phrases": [
+        {
+          "en": "I specialize in …",
+          "vi": "Tôi chuyên về… (cụm trong câu hỏi)"
+        },
+        {
+          "en": "trends and issues",
+          "vi": "xu hướng và vấn đề"
+        },
+        {
+          "en": "twenty nineteen",
+          "vi": "cách đọc năm 2019"
+        }
+      ]
+    }
+  },
+  "conference-16": {
+    "8": {
+      "answer": "The conference is at the Philly Convention Center on September twenty-second. If you pay on site, the registration fee is one hundred eighty dollars.",
+      "translation": "Hội nghị tổ chức tại Philly Convention Center ngày 22 tháng 9. Nếu bạn đóng tại chỗ thì phí đăng ký là 180 đô.",
+      "source": "Ba dòng tiêu đề: tên hội nghị, địa điểm và ngày, rồi Registration fee: $150 in advance, $180 on site.",
+      "phrases": [
+        {
+          "en": "on site",
+          "vi": "tại chỗ, ngay tại sự kiện"
+        },
+        {
+          "en": "in advance",
+          "vi": "đóng trước"
+        },
+        {
+          "en": "one hundred eighty dollars",
+          "vi": "180 đô"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. Marie Donovan presents African superfoods at eleven. Joshua Selman speaks at ten, on the interaction between science and cooking.",
+      "translation": "Thật ra thì không đúng. Marie Donovan mới là người trình bày phần African superfoods lúc 11 giờ. Joshua Selman nói lúc 10 giờ, về mối liên hệ giữa khoa học và nấu ăn.",
+      "source": "Dòng 11 am – Noon (Marie Donovan) và dòng 10 – 11 am (Joshua Selman).",
+      "phrases": [
+        {
+          "en": "superfoods",
+          "vi": "siêu thực phẩm"
+        },
+        {
+          "en": "the interaction between … and …",
+          "vi": "mối liên hệ giữa…và…"
+        },
+        {
+          "en": "presents … at eleven",
+          "vi": "trình bày…lúc 11 giờ"
+        }
+      ]
+    },
+    "10": {
+      "answer": "There are two sessions on superfoods. First, African superfoods with Marie Donovan, from eleven to noon. And second, Asian superfoods with Edward Park, from one to two p.m.",
+      "translation": "Có hai phiên về siêu thực phẩm. Thứ nhất là African superfoods với Marie Donovan, từ 11 giờ đến 12 giờ trưa. Thứ hai là Asian superfoods với Edward Park, từ 1 đến 2 giờ chiều.",
+      "source": "Quét cột Session tìm chữ superfoods: dòng 11 am – Noon và dòng 1 – 2 pm.",
+      "phrases": [
+        {
+          "en": "nutritious ingredients",
+          "vi": "nguyên liệu giàu dinh dưỡng — cụm trong câu hỏi"
+        },
+        {
+          "en": "incorporating … into my menus",
+          "vi": "đưa…vào thực đơn"
+        },
+        {
+          "en": "from one to two p.m.",
+          "vi": "từ 1 đến 2 giờ chiều"
+        }
+      ]
+    }
+  },
+  "conference-17": {
+    "8": {
+      "answer": "It's in the Roseville conference room, and the first session begins at nine thirty a.m., on physical and chemical sciences.",
+      "translation": "Hội thảo ở phòng hội nghị Roseville, và phiên đầu tiên bắt đầu lúc 9 giờ 30 sáng, về khoa học vật lý và hoá học.",
+      "source": "Hai dòng tiêu đề (Roseville conference room, Sunday October 3) và dòng đầu của lưới: 9:30 – 10:30 am.",
+      "phrases": [
+        {
+          "en": "the first session begins at …",
+          "vi": "phiên đầu tiên bắt đầu lúc…"
+        },
+        {
+          "en": "physical and chemical sciences",
+          "vi": "khoa học vật lý và hoá học"
+        },
+        {
+          "en": "conference room",
+          "vi": "phòng hội nghị"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. Mario Frieson presents Earth and Space Sciences at three thirty. Jeff Goldblum speaks at two thirty, on energy and environment.",
+      "translation": "Thật ra thì không đúng. Mario Frieson mới là người trình bày phần Earth and Space Sciences lúc 3 giờ 30. Jeff Goldblum nói lúc 2 giờ 30, về năng lượng và môi trường.",
+      "source": "Dòng 3:30 – 4:30 pm (Mario Frieson) và dòng 2:30 – 3:30 pm (Jeff Goldblum).",
+      "phrases": [
+        {
+          "en": "Earth and space sciences",
+          "vi": "khoa học trái đất và vũ trụ"
+        },
+        {
+          "en": "energy and environment",
+          "vi": "năng lượng và môi trường"
+        },
+        {
+          "en": "at three thirty",
+          "vi": "lúc 3 giờ 30"
+        }
+      ]
+    },
+    "10": {
+      "answer": "There are two sessions on robots. First, Engineering and Robots with Wang Wei, from ten thirty to eleven thirty. And second, Robots in the Future with David Fonteno, from one thirty to two thirty.",
+      "translation": "Có hai phiên về robot. Thứ nhất là Engineering and Robots với Wang Wei, từ 10 giờ 30 đến 11 giờ 30. Thứ hai là Robots in the Future với David Fonteno, từ 1 giờ 30 đến 2 giờ 30.",
+      "source": "Quét cột Session tìm chữ robots: dòng 10:30 – 11:30 am và dòng 1:30 – 2:30 pm.",
+      "phrases": [
+        {
+          "en": "the field of robotics",
+          "vi": "lĩnh vực robot học — cụm trong câu hỏi"
+        },
+        {
+          "en": "engineering",
+          "vi": "kỹ thuật, cơ khí"
+        },
+        {
+          "en": "in the future",
+          "vi": "trong tương lai"
+        }
+      ]
+    }
+  },
+  "conference-18": {
+    "8": {
+      "answer": "The convention is at the Rainbow Conference Center, on Saturday, May thirty-first, and the opening remarks begin at nine a.m.",
+      "translation": "Hội nghị tổ chức tại Rainbow Conference Center, thứ Bảy ngày 31 tháng 5, và lời khai mạc bắt đầu lúc 9 giờ sáng.",
+      "source": "Dòng tiêu đề (Rainbow Conference Center, Saturday May 31) và dòng đầu của lưới: 9:00 am, Opening remarks.",
+      "phrases": [
+        {
+          "en": "the opening remarks",
+          "vi": "lời khai mạc"
+        },
+        {
+          "en": "May thirty-first",
+          "vi": "ngày 31 tháng 5"
+        },
+        {
+          "en": "convention",
+          "vi": "hội nghị lớn, đại hội"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. At nine thirty it's Paul Walker, on influencer marketing in fashion. Jun Yoshimaki's lecture on sustainability is at noon.",
+      "translation": "Thật ra thì không đúng. Lúc 9 giờ 30 là Paul Walker, nói về tiếp thị qua người ảnh hưởng trong thời trang. Bài giảng của Jun Yoshimaki về tính bền vững diễn ra lúc 12 giờ trưa.",
+      "source": "Dòng 9:30 am (Paul Walker) và dòng Noon (Jun Yoshimaki, Lecture: fashion sustainability).",
+      "phrases": [
+        {
+          "en": "influencer marketing",
+          "vi": "tiếp thị qua người có ảnh hưởng"
+        },
+        {
+          "en": "sustainability",
+          "vi": "tính bền vững"
+        },
+        {
+          "en": "right after the opening remarks",
+          "vi": "ngay sau lời khai mạc — cụm cần nghe kỹ ở câu 9"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Paul Walker is leading two sessions. First, Influencer Marketing in Fashion at nine thirty. And second, How to Start a Fashion Brand at two thirty.",
+      "translation": "Paul Walker phụ trách hai phiên. Thứ nhất là Influencer Marketing: Fashion lúc 9 giờ 30. Thứ hai là How to Start a Fashion Brand lúc 2 giờ 30.",
+      "source": "Quét cột Presenter tìm Paul Walker: dòng 9:30 am và dòng 2:30 pm.",
+      "phrases": [
+        {
+          "en": "is leading two sessions",
+          "vi": "phụ trách hai phiên"
+        },
+        {
+          "en": "how to start a fashion brand",
+          "vi": "cách khởi tạo một thương hiệu thời trang"
+        },
+        {
+          "en": "I'm a big fan of …",
+          "vi": "Tôi rất hâm mộ… (cụm trong câu hỏi)"
+        }
+      ]
+    }
+  },
+  "class-1": {
+    "8": {
+      "answer": "Each session is twenty-five dollars, and that already includes materials, so there's nothing extra to pay.",
+      "translation": "Mỗi buổi là 25 đô, và đã bao gồm vật liệu rồi, nên bạn không phải trả thêm gì cả.",
+      "source": "Dòng tiêu đề: Each Session: $25 (Including Materials).",
+      "phrases": [
+        {
+          "en": "that already includes materials",
+          "vi": "đã bao gồm vật liệu rồi"
+        },
+        {
+          "en": "there's nothing extra to pay",
+          "vi": "không phải trả thêm gì cả"
+        },
+        {
+          "en": "each session",
+          "vi": "mỗi buổi"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not right. Fabric Flowers for Beginners is on Thursday, October twenty-eighth, from one to three. October fifteenth is Painting with Acrylics.",
+      "translation": "Thật ra thì không đúng. Lớp Fabric Flowers for Beginners diễn ra thứ Năm ngày 28 tháng 10, từ 1 đến 3 giờ. Ngày 15 tháng 10 là lớp Painting with Acrylics.",
+      "source": "Dòng October 28th (Thurs) và dòng October 15th (Fri) trong cột Date.",
+      "phrases": [
+        {
+          "en": "fabric flowers",
+          "vi": "hoa vải"
+        },
+        {
+          "en": "for beginners",
+          "vi": "dành cho người mới bắt đầu"
+        },
+        {
+          "en": "painting with acrylics",
+          "vi": "vẽ bằng màu acrylic"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Three workshops start before noon. First, Watercolor Intensive at ten with Teresa Huxley. Then Art Buffet at nine thirty with Amber Greene. And finally Sculpting at nine with Michelle Clark.",
+      "translation": "Có ba buổi bắt đầu trước trưa. Đầu tiên là Watercolor Intensive lúc 10 giờ với Teresa Huxley. Tiếp theo là Art Buffet lúc 9 giờ 30 với Amber Greene. Và cuối cùng là Sculpting lúc 9 giờ với Michelle Clark.",
+      "source": "Ba dòng có giờ bắt đầu trước 12 giờ: October 5th (10 a.m.), October 11th (9:30 a.m.) và October 20th (9 a.m.).",
+      "phrases": [
+        {
+          "en": "start before noon",
+          "vi": "bắt đầu trước 12 giờ trưa"
+        },
+        {
+          "en": "watercolor intensive",
+          "vi": "lớp màu nước chuyên sâu"
+        },
+        {
+          "en": "I'm only available in the morning",
+          "vi": "Tôi chỉ rảnh buổi sáng — tiêu chí lọc của câu hỏi"
+        }
+      ]
+    }
+  },
+  "class-2": {
+    "8": {
+      "answer": "The classes are completely free of charge, and the program runs from July thirteenth to July seventeenth.",
+      "translation": "Các lớp hoàn toàn miễn phí, và chương trình kéo dài từ ngày 13 đến ngày 17 tháng 7.",
+      "source": "Dòng tiêu đề: Pasadena Art Center — Free Summer Class | July 13-17.",
+      "phrases": [
+        {
+          "en": "free of charge",
+          "vi": "miễn phí hoàn toàn"
+        },
+        {
+          "en": "the program runs from … to …",
+          "vi": "chương trình kéo dài từ…đến…"
+        },
+        {
+          "en": "summer class",
+          "vi": "lớp hè"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that class has been rescheduled. Portrait Sketching is now on July fifteenth, from one to two p.m., not Monday morning.",
+      "translation": "Thật ra lớp đó đã bị dời lịch. Portrait Sketching giờ chuyển sang ngày 15 tháng 7, từ 1 đến 2 giờ chiều, không phải sáng thứ Hai nữa.",
+      "source": "Dấu * cạnh Portrait Sketching dẫn xuống chú thích: *Rescheduled to July 15th from 1 p.m. to 2 p.m.",
+      "phrases": [
+        {
+          "en": "has been rescheduled",
+          "vi": "đã bị dời lịch"
+        },
+        {
+          "en": "is now on …",
+          "vi": "giờ chuyển sang…"
+        },
+        {
+          "en": "portrait sketching",
+          "vi": "vẽ phác chân dung"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Tim Sanders teaches two classes. First, Abstract Painting for beginners on July fourteenth, from one to two thirty. And second, Oil Pastel Portrait for advanced students on July sixteenth, from two to four thirty.",
+      "translation": "Tim Sanders dạy hai lớp. Thứ nhất là Abstract Painting cho người mới, ngày 14 tháng 7, từ 1 giờ đến 2 giờ 30. Thứ hai là Oil Pastel Portrait cho trình độ nâng cao, ngày 16 tháng 7, từ 2 giờ đến 4 giờ 30.",
+      "source": "Quét cột Instructors tìm Tim Sanders: dòng July 14 (1 – 2:30 p.m.) và dòng July 16 (2 – 4:30 p.m.).",
+      "phrases": [
+        {
+          "en": "abstract painting",
+          "vi": "tranh trừu tượng"
+        },
+        {
+          "en": "oil pastel",
+          "vi": "màu sáp dầu"
+        },
+        {
+          "en": "for advanced students",
+          "vi": "cho học viên trình độ nâng cao"
+        }
+      ]
+    }
+  },
+  "class-3": {
+    "8": {
+      "answer": "The enrollment fee is sixty dollars per class, and the registration deadline is March twenty-first, which is a Sunday.",
+      "translation": "Học phí là 60 đô mỗi lớp, và hạn đăng ký là ngày 21 tháng 3, nhằm Chủ nhật.",
+      "source": "Hai dòng chú thích có dấu * ở cuối bảng: Registration Deadline: March 21 (Sun) và Enrollment Fee: $60 / class.",
+      "phrases": [
+        {
+          "en": "enrollment fee",
+          "vi": "học phí ghi danh"
+        },
+        {
+          "en": "per class",
+          "vi": "mỗi lớp"
+        },
+        {
+          "en": "registration deadline",
+          "vi": "hạn chót đăng ký"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, no. The Monday morning digital photography class is for beginners, not advanced students. It's taught by Sally Baker at ten a.m.",
+      "translation": "Thật ra thì không. Lớp nhiếp ảnh số sáng thứ Hai dành cho người mới bắt đầu, không phải trình độ nâng cao. Do Sally Baker dạy lúc 10 giờ sáng.",
+      "source": "Dòng Mondays, 10 a.m. — Digital Photography - Beginner — Sally Baker.",
+      "phrases": [
+        {
+          "en": "is for beginners, not advanced students",
+          "vi": "dành cho người mới, không phải trình độ nâng cao"
+        },
+        {
+          "en": "digital photography",
+          "vi": "nhiếp ảnh số"
+        },
+        {
+          "en": "is taught by …",
+          "vi": "do…giảng dạy"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Randy Halls teaches two classes. First, Watercolor for advanced students on Mondays at seven p.m. And second, Abstract Painting for beginners on Wednesdays at eleven a.m.",
+      "translation": "Randy Halls dạy hai lớp. Thứ nhất là Watercolor cho trình độ nâng cao, thứ Hai lúc 7 giờ tối. Thứ hai là Abstract Painting cho người mới, thứ Tư lúc 11 giờ sáng.",
+      "source": "Quét cột Instructor tìm Randy Halls: dòng Mondays, 7 p.m. và dòng Wednesdays, 11 a.m.",
+      "phrases": [
+        {
+          "en": "teaches two classes",
+          "vi": "dạy hai lớp"
+        },
+        {
+          "en": "on Mondays at seven p.m.",
+          "vi": "thứ Hai hằng tuần lúc 7 giờ tối"
+        },
+        {
+          "en": "all levels",
+          "vi": "mọi trình độ"
+        }
+      ]
+    }
+  },
+  "class-4": {
+    "8": {
+      "answer": "The registration fee is one hundred twenty-five dollars per class, and the deadline to register is March twenty-fifth, which is a Monday.",
+      "translation": "Phí đăng ký là 125 đô mỗi lớp, và hạn đăng ký là ngày 25 tháng 3, nhằm thứ Hai.",
+      "source": "Hai dòng cuối bảng: Registration Deadline: March 25 (Mon) và Registration Fee: $125 / class.",
+      "phrases": [
+        {
+          "en": "the deadline to register",
+          "vi": "hạn chót đăng ký"
+        },
+        {
+          "en": "one hundred twenty-five dollars",
+          "vi": "125 đô"
+        },
+        {
+          "en": "which is a Monday",
+          "vi": "nhằm thứ Hai (thêm thứ cho người nghe dễ hình dung)"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. Marketing Strategies is on Mondays, from ten to eleven a.m. On Wednesday afternoons from three to four, it's Managing a Hair Salon.",
+      "translation": "Thật ra thì không đúng. Lớp Marketing Strategies học thứ Hai, từ 10 đến 11 giờ sáng. Còn chiều thứ Tư từ 3 đến 4 giờ là lớp Managing a Hair Salon.",
+      "source": "Dòng Mondays, 10 – 11 a.m. (Marketing Strategies) và dòng Wednesdays, 3 – 4 p.m. (Managing a Hair Salon).",
+      "phrases": [
+        {
+          "en": "marketing strategies",
+          "vi": "chiến lược tiếp thị"
+        },
+        {
+          "en": "on Wednesday afternoons",
+          "vi": "vào các chiều thứ Tư"
+        },
+        {
+          "en": "managing a hair salon",
+          "vi": "quản lý tiệm tóc"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Three classes run from ten to eleven a.m. First, Marketing Strategies on Mondays with Rylee Ritter. Then New Styling Ideas on Thursdays with Billy Shelton. And finally Managing Multiple Hairdressers on Saturdays with Sebastian Blankenship.",
+      "translation": "Có ba lớp học từ 10 đến 11 giờ sáng. Đầu tiên là Marketing Strategies vào thứ Hai với Rylee Ritter. Tiếp theo là New Styling Ideas vào thứ Năm với Billy Shelton. Và cuối cùng là Managing Multiple Hairdressers vào thứ Bảy với Sebastian Blankenship.",
+      "source": "Ba dòng có cột Time ghi 10 – 11 a.m.: Mondays, Thursdays và Saturdays.",
+      "phrases": [
+        {
+          "en": "run from ten to eleven",
+          "vi": "diễn ra từ 10 đến 11 giờ"
+        },
+        {
+          "en": "new styling ideas",
+          "vi": "ý tưởng tạo kiểu mới"
+        },
+        {
+          "en": "multiple hairdressers",
+          "vi": "nhiều thợ làm tóc"
+        }
+      ]
+    }
+  },
+  "class-5": {
+    "8": {
+      "answer": "The registration deadline is February twenty-seventh, and all the classes are held in Greenville Center, Room A.",
+      "translation": "Hạn đăng ký là ngày 27 tháng 2, và tất cả các lớp đều học ở Greenville Center, phòng A.",
+      "source": "Ba dòng tiêu đề đầu bảng: Spring Art Session March 3 – April 25, Registration deadline February 27, Location Greenville Center Room A.",
+      "phrases": [
+        {
+          "en": "the registration deadline is …",
+          "vi": "hạn đăng ký là…"
+        },
+        {
+          "en": "are held in …",
+          "vi": "được tổ chức tại…"
+        },
+        {
+          "en": "Room A",
+          "vi": "phòng A (đọc rõ chữ cái)"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not quite right. Most classes are two hundred dollars, but the Saturday classes cost two hundred fifty.",
+      "translation": "Thật ra thì chưa chính xác. Phần lớn các lớp là 200 đô, nhưng lớp thứ Bảy thì 250 đô.",
+      "source": "Dòng giá cuối bảng: Price: $200 / class ($250 Saturday classes).",
+      "phrases": [
+        {
+          "en": "a flat rate",
+          "vi": "giá đồng hạng — cụm trong câu hỏi"
+        },
+        {
+          "en": "most classes are …",
+          "vi": "phần lớn các lớp là…"
+        },
+        {
+          "en": "regardless of …",
+          "vi": "bất kể… (cụm trong câu hỏi)"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Two classes are designed for beginners. First, Introduction to Oil Painting on Mondays, from five to seven p.m. And second, Basic Drawing and Watercolor on Fridays, from six to nine p.m.",
+      "translation": "Có hai lớp dành riêng cho người mới bắt đầu. Thứ nhất là Introduction to Oil Painting vào thứ Hai, từ 5 đến 7 giờ tối. Thứ hai là Basic Drawing and Watercolor vào thứ Sáu, từ 6 đến 9 giờ tối.",
+      "source": "Quét cột Session tìm chữ Beginners: dòng Introduction to oil painting và dòng Basic drawing and watercolor.",
+      "phrases": [
+        {
+          "en": "are designed for beginners",
+          "vi": "được thiết kế cho người mới bắt đầu"
+        },
+        {
+          "en": "no prior experience",
+          "vi": "chưa có kinh nghiệm gì trước đó — cụm trong câu hỏi"
+        },
+        {
+          "en": "introductory courses",
+          "vi": "các khoá nhập môn"
+        }
+      ]
+    }
+  },
+  "meeting-1": {
+    "8": {
+      "answer": "The meeting is in the main conference room, on the second floor, and participation is mandatory for all managers.",
+      "translation": "Cuộc họp diễn ra ở phòng họp chính, tầng 2, và tất cả quản lý đều bắt buộc phải dự.",
+      "source": "Dòng tiêu đề (Main Conference Room, 2nd Floor) và dòng chú thích cuối bảng: Mandatory Participation for All Managers.",
+      "phrases": [
+        {
+          "en": "on the second floor",
+          "vi": "ở tầng 2"
+        },
+        {
+          "en": "participation is mandatory",
+          "vi": "bắt buộc phải tham dự"
+        },
+        {
+          "en": "is required to attend",
+          "vi": "được yêu cầu phải có mặt"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. Adam Jackson leads the promotion schedule session at nine. Jeanne Harris speaks at eleven thirty, on social media marketing.",
+      "translation": "Thật ra thì không đúng. Adam Jackson mới là người dẫn phiên về lịch khuyến mãi lúc 9 giờ. Jeanne Harris nói lúc 11 giờ 30, về tiếp thị mạng xã hội.",
+      "source": "Dòng 9:00 – 9:30 AM (Adam Jackson) và dòng 11:30 AM – Noon (Jeanne Harris). Chú ý tên trong bảng là Jeanne Harris, không phải Gene Harris.",
+      "phrases": [
+        {
+          "en": "promotion schedule",
+          "vi": "lịch khuyến mãi"
+        },
+        {
+          "en": "leads the session",
+          "vi": "dẫn phiên họp"
+        },
+        {
+          "en": "new line of products",
+          "vi": "dòng sản phẩm mới"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Becky Fields leads two sessions. First, Tips for Improving Sales Skills at nine thirty. And second, How to Communicate with Customers at eleven.",
+      "translation": "Becky Fields dẫn hai phiên. Thứ nhất là Tips for Improving Sales Skills lúc 9 giờ 30. Thứ hai là How to Communicate with Customers lúc 11 giờ.",
+      "source": "Quét cột Leader tìm Becky Fields: dòng 9:30 – 10:30 AM và dòng 11:00 – 11:30 AM.",
+      "phrases": [
+        {
+          "en": "improving sales skills",
+          "vi": "nâng cao kỹ năng bán hàng"
+        },
+        {
+          "en": "communicate with customers",
+          "vi": "giao tiếp với khách hàng"
+        },
+        {
+          "en": "leads two sessions",
+          "vi": "dẫn hai phiên"
+        }
+      ]
+    }
+  },
+  "meeting-2": {
+    "8": {
+      "answer": "The book signing event starts at seven p.m., and it takes place at Harley's Book Store.",
+      "translation": "Buổi ký tặng sách bắt đầu lúc 7 giờ tối, và diễn ra tại nhà sách Harley's.",
+      "source": "Dòng cuối cùng của bảng: 7 p.m. — Book signing Event - Harley's Book store.",
+      "phrases": [
+        {
+          "en": "book signing event",
+          "vi": "buổi ký tặng sách"
+        },
+        {
+          "en": "takes place at …",
+          "vi": "diễn ra tại…"
+        },
+        {
+          "en": "starts at seven p.m.",
+          "vi": "bắt đầu lúc 7 giờ tối"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that interview has been postponed. It's been moved to Wednesday, July seventh, at nine a.m.",
+      "translation": "Thật ra buổi phỏng vấn đó đã bị hoãn. Đã dời sang thứ Tư ngày 7 tháng 7, lúc 9 giờ sáng.",
+      "source": "Dấu * cạnh dòng 9 a.m. Interview dẫn xuống chú thích: *Postponed: July 7 (Wed), 9 a.m.",
+      "phrases": [
+        {
+          "en": "has been postponed",
+          "vi": "đã bị hoãn"
+        },
+        {
+          "en": "it's been moved to …",
+          "vi": "đã dời sang…"
+        },
+        {
+          "en": "going ahead as planned",
+          "vi": "vẫn diễn ra như dự kiến — cụm trong câu hỏi"
+        }
+      ]
+    },
+    "10": {
+      "answer": "There are two publisher meetings, back to back. The first is from ten to eleven, on reissue and update planning. The second is from eleven to noon, on the new book release schedule.",
+      "translation": "Có hai cuộc họp với nhà xuất bản, nối tiếp nhau. Cuộc thứ nhất từ 10 đến 11 giờ, về kế hoạch tái bản và cập nhật. Cuộc thứ hai từ 11 giờ đến 12 giờ trưa, về lịch phát hành sách mới.",
+      "source": "Hai dòng Publisher Meeting 1 (10 – 11 a.m.) và Publisher Meeting 2 (11 a.m. – Noon).",
+      "phrases": [
+        {
+          "en": "back to back",
+          "vi": "nối tiếp nhau, sát nhau"
+        },
+        {
+          "en": "reissue and update planning",
+          "vi": "kế hoạch tái bản và cập nhật"
+        },
+        {
+          "en": "book release schedule",
+          "vi": "lịch phát hành sách"
+        }
+      ]
+    }
+  },
+  "meeting-3": {
+    "8": {
+      "answer": "The meeting starts at nine thirty a.m., and it's expected to finish at noon.",
+      "translation": "Cuộc họp bắt đầu lúc 9 giờ 30 sáng, và dự kiến kết thúc vào 12 giờ trưa.",
+      "source": "Dòng tiêu đề: Monday, July 7th (9:30 a.m. ~ Noon).",
+      "phrases": [
+        {
+          "en": "is expected to finish at …",
+          "vi": "dự kiến kết thúc vào…"
+        },
+        {
+          "en": "at noon",
+          "vi": "vào 12 giờ trưa"
+        },
+        {
+          "en": "weekly employee meeting",
+          "vi": "họp nhân viên hằng tuần"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. Teresa Heinz from customer service leads the customer feedback overview at ten thirty. Jude McGill covers inventory management at eleven thirty.",
+      "translation": "Thật ra thì không đúng. Teresa Heinz bên chăm sóc khách hàng mới là người dẫn phần tổng quan phản hồi khách hàng lúc 10 giờ 30. Jude McGill phụ trách quản lý kho lúc 11 giờ 30.",
+      "source": "Dòng 10:30 a.m. (Teresa Heinz, Customer Service Team) và dòng 11:30 a.m. (Jude McGill, Logistics Team).",
+      "phrases": [
+        {
+          "en": "customer feedback overview",
+          "vi": "tổng quan phản hồi khách hàng"
+        },
+        {
+          "en": "inventory management",
+          "vi": "quản lý kho hàng"
+        },
+        {
+          "en": "from customer service",
+          "vi": "bên bộ phận chăm sóc khách hàng"
+        }
+      ]
+    },
+    "10": {
+      "answer": "The sales team is in charge of two sessions. First, the Sales Performance Review at nine thirty, with Tim Carlson. And second, Sales Employee Training at eleven, with Jeff Barkley.",
+      "translation": "Bộ phận kinh doanh phụ trách hai phần. Thứ nhất là Sales Performance Review lúc 9 giờ 30, với Tim Carlson. Thứ hai là Sales Employee Training lúc 11 giờ, với Jeff Barkley.",
+      "source": "Quét cột Organizer tìm chữ (Sales Team): dòng 9:30 a.m. và dòng 11 a.m.",
+      "phrases": [
+        {
+          "en": "is in charge of two sessions",
+          "vi": "phụ trách hai phần"
+        },
+        {
+          "en": "sales performance review",
+          "vi": "đánh giá kết quả kinh doanh"
+        },
+        {
+          "en": "employee training",
+          "vi": "đào tạo nhân viên"
+        }
+      ]
+    }
+  },
+  "meeting-4": {
+    "8": {
+      "answer": "The orientation is at the Convention Center on July eleventh, and the very first session begins at nine thirty a.m., with the opening remarks.",
+      "translation": "Buổi định hướng tổ chức tại Convention Center ngày 11 tháng 7, và phiên đầu tiên bắt đầu lúc 9 giờ 30 sáng, với phần khai mạc.",
+      "source": "Dòng tiêu đề (NEW EMPLOYEE ORIENTATION, CONVENTION CENTER, JULY 11) và dòng đầu của lưới: 9:30 – 10 am.",
+      "phrases": [
+        {
+          "en": "orientation",
+          "vi": "buổi định hướng cho nhân viên mới"
+        },
+        {
+          "en": "the very first session",
+          "vi": "phiên đầu tiên"
+        },
+        {
+          "en": "opening remarks",
+          "vi": "lời khai mạc"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. Peter Williams from marketing leads the industry insights session at one. John East introduces the company at ten.",
+      "translation": "Thật ra thì không đúng. Peter Williams bên tiếp thị mới là người dẫn phần Industry Insights lúc 1 giờ. John East giới thiệu về công ty lúc 10 giờ.",
+      "source": "Dòng 1 – 2 pm (Peter Williams, Marketing) và dòng 10 – 11am (John East, Vice President).",
+      "phrases": [
+        {
+          "en": "industry insights",
+          "vi": "góc nhìn về ngành"
+        },
+        {
+          "en": "introduces the company",
+          "vi": "giới thiệu về công ty"
+        },
+        {
+          "en": "vice president",
+          "vi": "phó chủ tịch"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Two sessions are led by human resources. First, Company Benefits with Lisa Yang, from eleven to noon. And second, Company Regulations with Bella Carlucci, from two to three.",
+      "translation": "Có hai phần do bộ phận nhân sự phụ trách. Thứ nhất là Company Benefits với Lisa Yang, từ 11 giờ đến 12 giờ trưa. Thứ hai là Company Regulations với Bella Carlucci, từ 2 đến 3 giờ chiều.",
+      "source": "Quét cột người trình bày tìm chữ Human Resources: dòng 11 – Noon (Lisa Yang) và dòng 2 – 3 pm (Bella Carlucci).",
+      "phrases": [
+        {
+          "en": "employment perks",
+          "vi": "phúc lợi khi làm việc — cụm trong câu hỏi"
+        },
+        {
+          "en": "company benefits",
+          "vi": "phúc lợi công ty"
+        },
+        {
+          "en": "company regulations",
+          "vi": "quy định công ty"
+        }
+      ]
+    }
+  },
+  "event-1": {
+    "8": {
+      "answer": "The mystery writing workshop is on December nineteenth, and it's held in Room 201. Materials are provided, by the way.",
+      "translation": "Buổi workshop viết truyện trinh thám diễn ra ngày 19 tháng 12, ở phòng 201. Nhân tiện, vật liệu đã được cung cấp sẵn.",
+      "source": "Dòng Dec. 19th — Mystery Writing Workshop – Materials Provided — Room 201.",
+      "phrases": [
+        {
+          "en": "is held in Room 201",
+          "vi": "được tổ chức ở phòng 201"
+        },
+        {
+          "en": "materials are provided",
+          "vi": "vật liệu được cung cấp sẵn"
+        },
+        {
+          "en": "by the way",
+          "vi": "nhân tiện (thêm thông tin phụ)"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not quite right. Kimberly Wayne's book signing is on December eleventh. December twenty-third is Arthur Wrights.",
+      "translation": "Thật ra thì chưa chính xác. Buổi ký sách của Kimberly Wayne là ngày 11 tháng 12. Ngày 23 tháng 12 là của Arthur Wrights.",
+      "source": "Dòng Dec. 11th (Kimberly Wayne) và dòng Dec. 23rd (Arthur Wrights), cả hai đều ở Event Hall.",
+      "phrases": [
+        {
+          "en": "book signing",
+          "vi": "buổi ký tặng sách"
+        },
+        {
+          "en": "I have it written down that …",
+          "vi": "Tôi ghi lại là… (cách người gọi nêu thông tin ở câu 9)"
+        },
+        {
+          "en": "December twenty-third",
+          "vi": "ngày 23 tháng 12"
+        }
+      ]
+    },
+    "10": {
+      "answer": "There are two book signing events, and both are in the Event Hall. The first is on December eleventh with Kimberly Wayne. The second is on December twenty-third with Arthur Wrights.",
+      "translation": "Có hai buổi ký tặng sách, cả hai đều ở Event Hall. Buổi thứ nhất ngày 11 tháng 12 với Kimberly Wayne. Buổi thứ hai ngày 23 tháng 12 với Arthur Wrights.",
+      "source": "Quét cột Event tìm chữ Book Signing Event: dòng Dec. 11th và dòng Dec. 23rd.",
+      "phrases": [
+        {
+          "en": "both are in the Event Hall",
+          "vi": "cả hai đều ở Event Hall (gộp điểm chung)"
+        },
+        {
+          "en": "meeting the authors",
+          "vi": "gặp gỡ các tác giả — cụm trong câu hỏi"
+        },
+        {
+          "en": "The first… The second…",
+          "vi": "chuỗi từ nối cho hai mục"
+        }
+      ]
+    }
+  },
+  "event-2": {
+    "8": {
+      "answer": "You have two options. You can buy tickets on the Internet, or you can get them in person at the ticket counter.",
+      "translation": "Bạn có hai lựa chọn. Có thể mua vé trên mạng, hoặc đến mua trực tiếp tại quầy vé.",
+      "source": "Dòng tiêu đề thứ ba: Ticket purchase: on the Internet, at the ticket counter.",
+      "phrases": [
+        {
+          "en": "You have two options.",
+          "vi": "Bạn có hai lựa chọn."
+        },
+        {
+          "en": "in person",
+          "vi": "trực tiếp, đến tận nơi"
+        },
+        {
+          "en": "the ticket counter",
+          "vi": "quầy bán vé"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. The jazz concert with Ji-young Lee is on March thirtieth. March twenty-fourth is the musical, Phantom of the Opera.",
+      "translation": "Thật ra thì không đúng. Buổi hoà nhạc jazz với Ji-young Lee diễn ra ngày 30 tháng 3. Ngày 24 tháng 3 là vở nhạc kịch Phantom of the Opera.",
+      "source": "Dòng March 30th (Jazz concert, Pianist: Ji-young Lee) và dòng March 24th (Musical: Phantom of opera).",
+      "phrases": [
+        {
+          "en": "jazz concert",
+          "vi": "buổi hoà nhạc jazz"
+        },
+        {
+          "en": "pianist",
+          "vi": "nghệ sĩ dương cầm"
+        },
+        {
+          "en": "March thirtieth",
+          "vi": "ngày 30 tháng 3"
+        }
+      ]
+    },
+    "10": {
+      "answer": "There are two musicals this month. First, The Lion King on March third, from six to eight p.m. And second, Phantom of the Opera on March twenty-fourth, from six to eight thirty.",
+      "translation": "Tháng này có hai vở nhạc kịch. Thứ nhất là The Lion King ngày 3 tháng 3, từ 6 đến 8 giờ tối. Thứ hai là Phantom of the Opera ngày 24 tháng 3, từ 6 giờ đến 8 giờ 30 tối.",
+      "source": "Quét cột nội dung tìm chữ Musical: dòng March 3rd và dòng March 24th. Các dòng Opera, Play, concert không tính.",
+      "phrases": [
+        {
+          "en": "There are two musicals this month.",
+          "vi": "Tháng này có hai vở nhạc kịch."
+        },
+        {
+          "en": "a huge fan of …",
+          "vi": "rất hâm mộ… (cụm trong câu hỏi)"
+        },
+        {
+          "en": "from six to eight thirty",
+          "vi": "từ 6 giờ đến 8 giờ 30"
+        }
+      ]
+    }
+  },
+  "event-3": {
+    "8": {
+      "answer": "Yes, all events require helmets. For more information, you can visit our website at www dot lancasterbicycleclub dot com.",
+      "translation": "Vâng, tất cả sự kiện đều bắt buộc đội mũ bảo hiểm. Để biết thêm thông tin, bạn có thể vào website www.lancasterbicycleclub.com.",
+      "source": "Dòng in nghiêng trên lưới (All events require helmets) và dòng cuối bảng có địa chỉ website.",
+      "phrases": [
+        {
+          "en": "require helmets",
+          "vi": "bắt buộc đội mũ bảo hiểm"
+        },
+        {
+          "en": "safety gear",
+          "vi": "đồ bảo hộ"
+        },
+        {
+          "en": "www dot … dot com",
+          "vi": "cách đọc địa chỉ website thành lời"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. The Ride-a-thon on May thirteenth takes place in Downtown Lancaster, not at the main campus. It's a twenty-five kilometer ride.",
+      "translation": "Thật ra thì không đúng. Sự kiện Ride-a-thon ngày 13 tháng 5 diễn ra ở trung tâm Lancaster, không phải ở khuôn viên chính. Đó là quãng đường 25 ki-lô-mét.",
+      "source": "Dòng May 13 (Sun) — Ride-a-thon — Downtown Lancaster — 25 kilometers.",
+      "phrases": [
+        {
+          "en": "takes place in Downtown Lancaster",
+          "vi": "diễn ra ở trung tâm Lancaster"
+        },
+        {
+          "en": "…, not at the main campus",
+          "vi": "…, không phải ở khuôn viên chính"
+        },
+        {
+          "en": "a twenty-five kilometer ride",
+          "vi": "quãng đường đạp 25 ki-lô-mét"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Two rides are at Heavenly Park. First, Meet and Ride on Saturday, May twelfth — that's ten kilometers. And second, the Family Ride on Saturday, May nineteenth, which is seven kilometers.",
+      "translation": "Có hai sự kiện ở Heavenly Park. Thứ nhất là Meet & Ride vào thứ Bảy ngày 12 tháng 5, quãng đường 10 ki-lô-mét. Thứ hai là Family Ride vào thứ Bảy ngày 19 tháng 5, quãng đường 7 ki-lô-mét.",
+      "source": "Quét cột Location tìm Heavenly Park: dòng May 12 (Sat) và dòng May 19 (Sat).",
+      "phrases": [
+        {
+          "en": "Two rides are at …",
+          "vi": "Có hai sự kiện đạp xe ở…"
+        },
+        {
+          "en": "that's ten kilometers",
+          "vi": "quãng đường là 10 ki-lô-mét"
+        },
+        {
+          "en": "I live right next to …",
+          "vi": "Tôi ở ngay cạnh… (cụm trong câu hỏi)"
+        }
+      ]
+    }
+  },
+  "travel-1": {
+    "8": {
+      "answer": "The total price is eighteen hundred dollars, and that includes both your flight and your hotel.",
+      "translation": "Tổng giá tour là 1800 đô, đã bao gồm cả vé máy bay lẫn khách sạn.",
+      "source": "Phần tiêu đề: Price: $1800 (Flight and hotel included).",
+      "phrases": [
+        {
+          "en": "eighteen hundred dollars",
+          "vi": "1800 đô (cách đọc gọn cho số tiền)"
+        },
+        {
+          "en": "that includes both … and …",
+          "vi": "đã bao gồm cả…lẫn…"
+        },
+        {
+          "en": "the total price",
+          "vi": "tổng giá"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. The Golden Gate Bridge sightseeing is on October seventh at ten a.m., not the eighth.",
+      "translation": "Thật ra thì không đúng. Phần tham quan cầu Cổng Vàng diễn ra ngày 7 tháng 10 lúc 10 giờ sáng, không phải ngày 8.",
+      "source": "Khối October 7th: 10:00 am — Sight seeing — Golden Gate Bridge.",
+      "phrases": [
+        {
+          "en": "sightseeing",
+          "vi": "tham quan ngắm cảnh"
+        },
+        {
+          "en": "…, not the eighth",
+          "vi": "…, không phải ngày mùng 8"
+        },
+        {
+          "en": "the Golden Gate Bridge",
+          "vi": "cầu Cổng Vàng"
+        }
+      ]
+    },
+    "10": {
+      "answer": "There are two museum tours. The first is on October sixth at three p.m., at the Museum of Modern Art. The second is on October eighth at eleven a.m., at Madame Tussauds.",
+      "translation": "Có hai chuyến thăm bảo tàng. Chuyến thứ nhất ngày 6 tháng 10 lúc 3 giờ chiều, tại Museum of Modern Art. Chuyến thứ hai ngày 8 tháng 10 lúc 11 giờ sáng, tại Madame Tussauds.",
+      "source": "Quét cả lịch tìm chữ Museum tour: dòng October 6th, 3:00 pm và dòng October 8th, 11:00 am.",
+      "phrases": [
+        {
+          "en": "museum tours",
+          "vi": "các chuyến thăm bảo tàng"
+        },
+        {
+          "en": "the Museum of Modern Art",
+          "vi": "Bảo tàng Nghệ thuật Hiện đại"
+        },
+        {
+          "en": "I absolutely love …",
+          "vi": "Tôi cực kỳ thích… (cụm trong câu hỏi)"
+        }
+      ]
+    }
+  },
+  "travel-2": {
+    "8": {
+      "answer": "Your departing flight, UL three twenty-four, leaves at nine fifteen a.m. from Phoenix Airport.",
+      "translation": "Chuyến bay đi của bạn, UL 324, khởi hành lúc 9 giờ 15 sáng từ sân bay Phoenix.",
+      "source": "Khối Day 1 (Friday, May 3): 9:15 a.m. — Departing Flight UL 324 — Phoenix Airport.",
+      "phrases": [
+        {
+          "en": "your departing flight",
+          "vi": "chuyến bay đi của bạn"
+        },
+        {
+          "en": "UL three twenty-four",
+          "vi": "cách đọc số hiệu chuyến bay theo nhóm"
+        },
+        {
+          "en": "leaves at nine fifteen",
+          "vi": "khởi hành lúc 9 giờ 15"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. The group fishing trip is at Flamingo Lake. Stoney Mountain is where the guided trail hike takes place, from nine to ten.",
+      "translation": "Thật ra thì không đúng. Chuyến câu cá theo nhóm diễn ra ở hồ Flamingo. Còn núi Stoney là nơi có buổi đi bộ đường mòn có hướng dẫn, từ 9 đến 10 giờ.",
+      "source": "Khối Day 2 (Saturday, May 4): dòng 11 a.m. – 3 p.m. (Flamingo Lake) và dòng 9 – 10 a.m. (Stoney Mountain).",
+      "phrases": [
+        {
+          "en": "group fishing trip",
+          "vi": "chuyến câu cá theo nhóm"
+        },
+        {
+          "en": "guided trail hike",
+          "vi": "đi bộ đường mòn có hướng dẫn"
+        },
+        {
+          "en": "is where … takes place",
+          "vi": "là nơi…diễn ra"
+        }
+      ]
+    },
+    "10": {
+      "answer": "There are two. On Friday, a socializing buffet dinner from six to eight p.m. And on Sunday, a socializing buffet breakfast from seven to nine a.m. Both are in the Emperor Dining Hall.",
+      "translation": "Có hai bữa. Thứ Sáu có bữa tối buffet giao lưu từ 6 đến 8 giờ tối. Chủ nhật có bữa sáng buffet giao lưu từ 7 đến 9 giờ sáng. Cả hai đều ở Emperor Dining Hall.",
+      "source": "Quét cả ba khối ngày tìm chữ Socializing Buffet: Day 1 (6 – 8 p.m.) và Day 3 (7 – 9 a.m.).",
+      "phrases": [
+        {
+          "en": "socializing buffet dinner",
+          "vi": "bữa tối buffet giao lưu"
+        },
+        {
+          "en": "Both are in …",
+          "vi": "Cả hai đều ở… (gộp điểm chung)"
+        },
+        {
+          "en": "the meals provided",
+          "vi": "các bữa ăn được phục vụ — cụm trong câu hỏi"
+        }
+      ]
+    }
+  },
+  "travel-3": {
+    "8": {
+      "answer": "You'll be staying at the Savoy Hotel in Frankfurt, and your first flight leaves Accra at seven a.m. on August ninth.",
+      "translation": "Bạn sẽ ở khách sạn Savoy tại Frankfurt, và chuyến bay đầu tiên rời Accra lúc 7 giờ sáng ngày 9 tháng 8.",
+      "source": "Mục Hotel information (Savoy hotel, Frankfurt) và dòng đầu mục Flight information: Depart Accra, 7 a.m. August 9th.",
+      "phrases": [
+        {
+          "en": "You'll be staying at …",
+          "vi": "Bạn sẽ ở tại…"
+        },
+        {
+          "en": "leaves Accra at seven a.m.",
+          "vi": "rời Accra lúc 7 giờ sáng"
+        },
+        {
+          "en": "your first flight",
+          "vi": "chuyến bay đầu tiên của bạn"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. Your return flight departs Frankfurt at eight a.m. on August twenty-first, and it arrives in Accra at four p.m.",
+      "translation": "Thật ra thì không đúng. Chuyến bay về khởi hành từ Frankfurt lúc 8 giờ sáng ngày 21 tháng 8, và hạ cánh ở Accra lúc 4 giờ chiều.",
+      "source": "Dòng Depart Frankfurt, Blue Airways 778, 8 a.m. August 21st và dòng Arrive Accra, 4 p.m. August 21st.",
+      "phrases": [
+        {
+          "en": "your return flight",
+          "vi": "chuyến bay về của bạn"
+        },
+        {
+          "en": "departs … and arrives …",
+          "vi": "khởi hành…và hạ cánh…"
+        },
+        {
+          "en": "at four p.m.",
+          "vi": "lúc 4 giờ chiều"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Your trip to the Maintal factory is on August twenty-fourth. You arrive at ten a.m. and depart at four p.m. A taxi service has already been reserved for you.",
+      "translation": "Chuyến đi tới nhà máy Maintal diễn ra ngày 24 tháng 8. Bạn đến lúc 10 giờ sáng và rời đi lúc 4 giờ chiều. Đã đặt sẵn dịch vụ taxi cho bạn.",
+      "source": "Trọn mục Day trip information: Maintal factory (Taxi service reserved), August 24th, arrive 10 a.m., depart 4 p.m.",
+      "phrases": [
+        {
+          "en": "day trip",
+          "vi": "chuyến đi trong ngày"
+        },
+        {
+          "en": "has already been reserved",
+          "vi": "đã được đặt sẵn"
+        },
+        {
+          "en": "taxi service",
+          "vi": "dịch vụ taxi"
+        }
+      ]
+    }
+  },
+  "travel-4": {
+    "8": {
+      "answer": "You'll be staying at the W by Sheraton Hotel, at three eighteen Newcastle Avenue, for two nights.",
+      "translation": "Bạn sẽ ở khách sạn W by Sheraton, số 318 Newcastle Avenue, trong hai đêm.",
+      "source": "Mục Hotel Information: W by Sheraton Hotel, 318 Newcastle Avenue (2 Nights).",
+      "phrases": [
+        {
+          "en": "three eighteen Newcastle Avenue",
+          "vi": "số 318 Newcastle Avenue (số nhà đọc theo cặp)"
+        },
+        {
+          "en": "for two nights",
+          "vi": "trong hai đêm"
+        },
+        {
+          "en": "its address is …",
+          "vi": "địa chỉ của nó là…"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. Your return flight departs Munich at six forty a.m. It arrives in Paris at eight fifty-five.",
+      "translation": "Thật ra thì không đúng. Chuyến bay về của bạn khởi hành từ Munich lúc 6 giờ 40 sáng. Nó hạ cánh ở Paris lúc 8 giờ 55.",
+      "source": "Dòng Oct. 14 của mục Flight Information: khởi hành Munich 6:40 a.m., đến Paris 8:55 a.m., Euro Wings EW 9406.",
+      "phrases": [
+        {
+          "en": "departs Munich at six forty",
+          "vi": "khởi hành từ Munich lúc 6 giờ 40"
+        },
+        {
+          "en": "It arrives in Paris at …",
+          "vi": "Nó hạ cánh ở Paris lúc…"
+        },
+        {
+          "en": "return flight",
+          "vi": "chuyến bay về"
+        }
+      ]
+    },
+    "10": {
+      "answer": "You have two activities. On October twelfth, a workshop on Living in a High-Tech World at Munich University. And on October thirteenth, a one-day field trip to Rosenheim, with a free shuttle bus provided.",
+      "translation": "Bạn có hai hoạt động. Ngày 12 tháng 10 là buổi workshop Living in a High-Tech World tại Đại học Munich. Ngày 13 tháng 10 là chuyến đi thực tế một ngày tới Rosenheim, có xe buýt đưa đón miễn phí.",
+      "source": "Trọn mục Description of Activity: hai dòng Oct. 12 và Oct. 13.",
+      "phrases": [
+        {
+          "en": "a one-day field trip",
+          "vi": "chuyến đi thực tế một ngày"
+        },
+        {
+          "en": "a free shuttle bus",
+          "vi": "xe buýt đưa đón miễn phí"
+        },
+        {
+          "en": "high-tech world",
+          "vi": "thế giới công nghệ cao"
+        }
+      ]
+    }
+  },
+  "interview-1": {
+    "8": {
+      "answer": "Your first interview is with Erin Davis at ten a.m. She's applying for the marketer position, and she currently works at the Marconi Group.",
+      "translation": "Buổi phỏng vấn đầu tiên là với Erin Davis lúc 10 giờ sáng. Cô ấy ứng tuyển vị trí marketer, hiện đang làm ở Marconi Group.",
+      "source": "Dòng đầu tiên của bảng: 10 a.m., Erin Davis, Marketer, Marconi Group.",
+      "phrases": [
+        {
+          "en": "Your first interview is with …",
+          "vi": "Buổi phỏng vấn đầu tiên của bạn là với…"
+        },
+        {
+          "en": "is applying for the … position",
+          "vi": "đang ứng tuyển vị trí…"
+        },
+        {
+          "en": "currently works at …",
+          "vi": "hiện đang làm việc tại…"
+        }
+      ]
+    },
+    "9": {
+      "answer": "I'm afraid that interview has been cancelled. Your next one is with Abigail Howard at two thirty, for the manager position.",
+      "translation": "Rất tiếc là buổi phỏng vấn đó đã bị huỷ. Buổi tiếp theo là với Abigail Howard lúc 2 giờ 30, cho vị trí quản lý.",
+      "source": "Dòng 2 p.m. của Liam Turner bị gạch ngang toàn bộ. Dòng kế tiếp là 2:30 p.m., Abigail Howard.",
+      "phrases": [
+        {
+          "en": "has been cancelled",
+          "vi": "đã bị huỷ"
+        },
+        {
+          "en": "Is that still on the schedule?",
+          "vi": "Cái đó còn trong lịch không? — câu hỏi báo hiệu dòng bị gạch"
+        },
+        {
+          "en": "Your next one is with …",
+          "vi": "Buổi tiếp theo là với…"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Two candidates are interviewing for photographer. First, Rubi Cox at ten thirty — she's from HD Network. And second, Alexis Gray at one thirty, from The Look Agency.",
+      "translation": "Có hai ứng viên phỏng vấn vị trí nhiếp ảnh gia. Thứ nhất là Rubi Cox lúc 10 giờ 30, đến từ HD Network. Thứ hai là Alexis Gray lúc 1 giờ 30, từ The Look Agency.",
+      "source": "Quét cột Position tìm chữ Photographer: dòng 10:30 a.m. và dòng 1:30 p.m.",
+      "phrases": [
+        {
+          "en": "Two candidates are interviewing for …",
+          "vi": "Có hai ứng viên phỏng vấn vị trí…"
+        },
+        {
+          "en": "she's from …",
+          "vi": "cô ấy đến từ… (cách nói gọn về công ty hiện tại)"
+        },
+        {
+          "en": "urgently looking to fill …",
+          "vi": "đang gấp rút tuyển… — cụm trong câu hỏi"
+        }
+      ]
+    }
+  },
   "interview-2": {
     "8": {
       "answer": "Your first interview is with Christopher Wise at ten thirty a.m. He's applying for the network administrator position, and he currently works at Compton Corp.",
       "translation": "Buổi phỏng vấn đầu tiên của bạn là với Christopher Wise lúc 10 giờ 30 sáng. Anh ấy ứng tuyển vị trí quản trị mạng và hiện đang làm ở Compton Corp.",
       "source": "Dòng đầu tiên còn hiệu lực của bảng: 10:30 – 11 a.m., Christopher Wise, Network Administrator, Compton Corp.",
       "phrases": [
-        { "en": "Your first interview is with …", "vi": "Buổi phỏng vấn đầu tiên của bạn là với…" },
-        { "en": "is applying for the … position", "vi": "đang ứng tuyển vị trí…" },
-        { "en": "currently works at …", "vi": "hiện đang làm việc tại…" }
+        {
+          "en": "Your first interview is with …",
+          "vi": "Buổi phỏng vấn đầu tiên của bạn là với…"
+        },
+        {
+          "en": "is applying for the … position",
+          "vi": "đang ứng tuyển vị trí…"
+        },
+        {
+          "en": "currently works at …",
+          "vi": "hiện đang làm việc tại…"
+        }
       ]
     },
     "9": {
@@ -81,9 +2030,18 @@
       "translation": "Rất tiếc là buổi phỏng vấn đó đã bị huỷ. Buổi tiếp theo sau đó là với Linda Moore lúc 3 giờ 30, cho vị trí quản trị mạng.",
       "source": "Dòng 2:30 – 3 p.m. của Joseph Baldwin bị gạch ngang toàn bộ — dấu hiệu buổi đó đã huỷ. Dòng kế tiếp là 3:30 – 4 p.m., Linda Moore.",
       "phrases": [
-        { "en": "I'm afraid …", "vi": "Rất tiếc là… (mở đầu khi báo tin không vui)" },
-        { "en": "has been cancelled", "vi": "đã bị huỷ" },
-        { "en": "Your next one after that is …", "vi": "Buổi tiếp theo sau đó là…" }
+        {
+          "en": "I'm afraid …",
+          "vi": "Rất tiếc là… (mở đầu khi báo tin không vui)"
+        },
+        {
+          "en": "has been cancelled",
+          "vi": "đã bị huỷ"
+        },
+        {
+          "en": "Your next one after that is …",
+          "vi": "Buổi tiếp theo sau đó là…"
+        }
       ]
     },
     "10": {
@@ -91,9 +2049,844 @@
       "translation": "Có hai ứng viên phỏng vấn cho vị trí thiết kế số. Thứ nhất là Dave Madden lúc 11 giờ 15, hiện đang làm ở DuWell Software. Thứ hai là Elizabeth Coleman lúc 1 giờ 45, đến từ Lionel Tech.",
       "source": "Quét cột Position tìm chữ Digital Designer: hai dòng 11:15 – 11:45 a.m. và 1:45 – 2:15 p.m.",
       "phrases": [
-        { "en": "Two candidates are interviewing for …", "vi": "Có hai ứng viên phỏng vấn cho vị trí…" },
-        { "en": "from + tên công ty", "vi": "đến từ… (cách nói gọn thay cho \"currently works at\")" },
-        { "en": "First… And second…", "vi": "chuỗi từ nối cho hai mục" }
+        {
+          "en": "Two candidates are interviewing for …",
+          "vi": "Có hai ứng viên phỏng vấn cho vị trí…"
+        },
+        {
+          "en": "from + tên công ty",
+          "vi": "đến từ… (cách nói gọn thay cho \"currently works at\")"
+        },
+        {
+          "en": "First… And second…",
+          "vi": "chuỗi từ nối cho hai mục"
+        }
+      ]
+    }
+  },
+  "interview-3": {
+    "8": {
+      "answer": "The interviews are in Conference Room D, and your first one starts at ten a.m., with Edith May.",
+      "translation": "Các buổi phỏng vấn diễn ra ở phòng họp D, và buổi đầu tiên bắt đầu lúc 10 giờ sáng, với Edith May.",
+      "source": "Dòng Location: Conference Room D ở phần đầu và dòng đầu của lưới: 10 – 10:30 a.m.",
+      "phrases": [
+        {
+          "en": "Conference Room D",
+          "vi": "phòng họp D (đọc rõ chữ cái)"
+        },
+        {
+          "en": "your first one starts at …",
+          "vi": "buổi đầu tiên của bạn bắt đầu lúc…"
+        },
+        {
+          "en": "the interviews are in …",
+          "vi": "các buổi phỏng vấn diễn ra ở…"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not right. At twelve thirty, Adrian Delgado is interviewing for the custodian position. Walker Robinson is the warehouse manager candidate, at eleven.",
+      "translation": "Thật ra thì không đúng. Lúc 12 giờ 30, Adrian Delgado phỏng vấn cho vị trí lao công. Walker Robinson mới là ứng viên vị trí quản lý kho, lúc 11 giờ.",
+      "source": "Dòng 12:30 – 1 (Adrian Delgado, Custodian) và dòng 11 – 11:30 a.m. (Walker Robinson, Warehouse Manager).",
+      "phrases": [
+        {
+          "en": "custodian",
+          "vi": "nhân viên lao công, bảo trì"
+        },
+        {
+          "en": "warehouse manager",
+          "vi": "quản lý kho"
+        },
+        {
+          "en": "is the … candidate",
+          "vi": "là ứng viên vị trí…"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Two candidates are applying for customer service representative. First, Tobias Strong at one thirty, from Timely Logistics. And second, Allison Kaufmann at three thirty, from Shocker Electronics.",
+      "translation": "Có hai ứng viên nộp vị trí nhân viên chăm sóc khách hàng. Thứ nhất là Tobias Strong lúc 1 giờ 30, từ Timely Logistics. Thứ hai là Allison Kaufmann lúc 3 giờ 30, từ Shocker Electronics.",
+      "source": "Quét cột Position tìm Customer Service Representative: dòng 1:30 – 2 và dòng 3:30 – 4.",
+      "phrases": [
+        {
+          "en": "customer service representative",
+          "vi": "nhân viên chăm sóc khách hàng"
+        },
+        {
+          "en": "customer support roles",
+          "vi": "các vị trí hỗ trợ khách hàng — cụm trong câu hỏi"
+        },
+        {
+          "en": "from + tên công ty",
+          "vi": "đến từ…"
+        }
+      ]
+    }
+  },
+  "interview-4": {
+    "8": {
+      "answer": "The interviews are held in the office room, and your first one starts at nine a.m., with Emily Ratakowski.",
+      "translation": "Các buổi phỏng vấn diễn ra ở phòng làm việc, và buổi đầu tiên bắt đầu lúc 9 giờ sáng, với Emily Ratakowski.",
+      "source": "Dòng tiêu đề (Location: office room) và dòng đầu của lưới: 9:00 – 9:30 am.",
+      "phrases": [
+        {
+          "en": "are held in the office room",
+          "vi": "diễn ra ở phòng làm việc"
+        },
+        {
+          "en": "your very first interview",
+          "vi": "buổi phỏng vấn đầu tiên của bạn"
+        },
+        {
+          "en": "starts at nine a.m.",
+          "vi": "bắt đầu lúc 9 giờ sáng"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. Jack Williams is interviewing for the deliveryman position at nine thirty. The cashier candidates are Jenna Stone and Melissa Parker.",
+      "translation": "Thật ra thì không đúng. Jack Williams phỏng vấn cho vị trí giao hàng lúc 9 giờ 30. Ứng viên vị trí thu ngân là Jenna Stone và Melissa Parker.",
+      "source": "Dòng 9:30 – 10:00 (Jack Williams, Deliveryman) và hai dòng có Position là Cashier: 10:00 và 11:30.",
+      "phrases": [
+        {
+          "en": "deliveryman",
+          "vi": "nhân viên giao hàng"
+        },
+        {
+          "en": "cashier",
+          "vi": "thu ngân"
+        },
+        {
+          "en": "the … candidates are …",
+          "vi": "ứng viên vị trí…là…"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Two candidates are interviewing for assistant manager. First, Emily Ratakowski at nine, from Kim's Deli. And second, Tom Johnson at ten thirty, from Bloomingdale Furniture Store.",
+      "translation": "Có hai ứng viên phỏng vấn vị trí trợ lý quản lý. Thứ nhất là Emily Ratakowski lúc 9 giờ, từ Kim's Deli. Thứ hai là Tom Johnson lúc 10 giờ 30, từ Bloomingdale Furniture Store.",
+      "source": "Quét cột Position tìm Assistant manager: dòng 9:00 – 9:30 và dòng 10:30 – 11:00.",
+      "phrases": [
+        {
+          "en": "assistant manager",
+          "vi": "trợ lý quản lý"
+        },
+        {
+          "en": "current employer",
+          "vi": "nơi làm việc hiện tại"
+        },
+        {
+          "en": "review those candidates' files",
+          "vi": "xem hồ sơ các ứng viên đó — cụm trong câu hỏi"
+        }
+      ]
+    }
+  },
+  "interview-5": {
+    "8": {
+      "answer": "The interviews are in meeting room C, and your first one starts at ten a.m., with Pete Williams.",
+      "translation": "Các buổi phỏng vấn ở phòng họp C, và buổi đầu tiên bắt đầu lúc 10 giờ sáng, với Pete Williams.",
+      "source": "Dòng tiêu đề (Location: Meeting room C) và dòng đầu của lưới: 10 am, Pete Williams.",
+      "phrases": [
+        {
+          "en": "meeting room C",
+          "vi": "phòng họp C"
+        },
+        {
+          "en": "your first one",
+          "vi": "buổi đầu tiên của bạn"
+        },
+        {
+          "en": "job interviews schedule",
+          "vi": "lịch phỏng vấn tuyển dụng"
+        }
+      ]
+    },
+    "9": {
+      "answer": "I'm afraid that interview has been cancelled. But Harper Stone is also interviewing for human resources director, at ten thirty.",
+      "translation": "Rất tiếc là buổi phỏng vấn đó đã bị huỷ. Nhưng Harper Stone cũng phỏng vấn vị trí giám đốc nhân sự, lúc 10 giờ 30.",
+      "source": "Dòng 11:30 am của Veronica Jones bị gạch và ghi Canceled. Dòng 10:30 am là Harper Stone, cùng vị trí Human resources director.",
+      "phrases": [
+        {
+          "en": "has been cancelled",
+          "vi": "đã bị huỷ"
+        },
+        {
+          "en": "But … is also interviewing for …",
+          "vi": "Nhưng…cũng phỏng vấn vị trí…"
+        },
+        {
+          "en": "human resources director",
+          "vi": "giám đốc nhân sự"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Two candidates are interviewing for operations associate. First, Pete Williams at ten, from Morgan Financial. And second, Edward Ricchi at one, from ATC Company.",
+      "translation": "Có hai ứng viên phỏng vấn vị trí chuyên viên vận hành. Thứ nhất là Pete Williams lúc 10 giờ, từ Morgan Financial. Thứ hai là Edward Ricchi lúc 1 giờ chiều, từ công ty ATC.",
+      "source": "Quét cột Position tìm Operation associate: dòng 10 am và dòng 1:00 pm.",
+      "phrases": [
+        {
+          "en": "operations associate",
+          "vi": "chuyên viên vận hành"
+        },
+        {
+          "en": "ATC Company",
+          "vi": "chữ viết tắt Co. phải đọc đủ là Company"
+        },
+        {
+          "en": "from Morgan Financial",
+          "vi": "từ Morgan Financial"
+        }
+      ]
+    }
+  },
+  "interview-6": {
+    "8": {
+      "answer": "The interviews are in meeting room B, and your first one starts at nine a.m., with Eva Sanchez.",
+      "translation": "Các buổi phỏng vấn ở phòng họp B, và buổi đầu tiên bắt đầu lúc 9 giờ sáng, với Eva Sanchez.",
+      "source": "Dòng tiêu đề (Meeting room B, Thursday May 29th) và dòng đầu của lưới: 9:00 am, Eva Sanchez.",
+      "phrases": [
+        {
+          "en": "meeting room B",
+          "vi": "phòng họp B"
+        },
+        {
+          "en": "schedule of job interviews",
+          "vi": "lịch phỏng vấn tuyển dụng"
+        },
+        {
+          "en": "at nine a.m.",
+          "vi": "lúc 9 giờ sáng"
+        }
+      ]
+    },
+    "9": {
+      "answer": "I'm afraid that interview has been cancelled. Your next one is with Carla Wilson at ten, for administrative assistant.",
+      "translation": "Rất tiếc là buổi phỏng vấn đó đã bị huỷ. Buổi tiếp theo là với Carla Wilson lúc 10 giờ, cho vị trí trợ lý hành chính.",
+      "source": "Dòng 9:30 am của Yan Han bị gạch và ghi Canceled. Dòng kế tiếp là 10:00 am, Carla Wilson.",
+      "phrases": [
+        {
+          "en": "administrative assistant",
+          "vi": "trợ lý hành chính"
+        },
+        {
+          "en": "office manager",
+          "vi": "quản lý văn phòng"
+        },
+        {
+          "en": "Your next one is …",
+          "vi": "Buổi tiếp theo là…"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Two candidates are interviewing for operating manager. First, Eva Sanchez at nine, with three years of experience. And second, Lisa Choi at eleven thirty, with one year.",
+      "translation": "Có hai ứng viên phỏng vấn vị trí quản lý vận hành. Thứ nhất là Eva Sanchez lúc 9 giờ, có 3 năm kinh nghiệm. Thứ hai là Lisa Choi lúc 11 giờ 30, có 1 năm.",
+      "source": "Quét cột Position applied for tìm Operating manager: dòng 9:00 am và dòng 11:30 am, lấy kèm cột Years of experience.",
+      "phrases": [
+        {
+          "en": "operating manager",
+          "vi": "quản lý vận hành"
+        },
+        {
+          "en": "with three years of experience",
+          "vi": "có 3 năm kinh nghiệm"
+        },
+        {
+          "en": "years of experience",
+          "vi": "số năm kinh nghiệm"
+        }
+      ]
+    }
+  },
+  "resume-1": {
+    "8": {
+      "answer": "Her email is venessa at tmail dot com, and her phone number is six one eight, nine four three two.",
+      "translation": "Email của cô ấy là venessa@tmail.com, và số điện thoại là 618-9432.",
+      "source": "Hai dòng ngay dưới tên ở đầu hồ sơ: E-mail và Phone.",
+      "phrases": [
+        {
+          "en": "at … dot com",
+          "vi": "cách đọc dấu @ và dấu chấm trong email"
+        },
+        {
+          "en": "six one eight, nine four three two",
+          "vi": "số điện thoại đọc từng chữ số, ngắt theo nhóm"
+        },
+        {
+          "en": "reach her at …",
+          "vi": "liên hệ cô ấy qua…"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. She's currently a software engineer at Georgetown Tech Corporation. She was an intern at the Student Center until twenty sixteen.",
+      "translation": "Thật ra thì không đúng. Hiện cô ấy là kỹ sư phần mềm tại Georgetown Tech Corporation. Cô ấy làm thực tập ở Student Center đến năm 2016 thì thôi.",
+      "source": "Mục Work Experience: Georgetown Tech Corporation (2016 – Present) và University of Virginia Student Center (2014 – 2016).",
+      "phrases": [
+        {
+          "en": "she's currently a …",
+          "vi": "hiện cô ấy là…"
+        },
+        {
+          "en": "she was an intern until …",
+          "vi": "cô ấy làm thực tập đến…"
+        },
+        {
+          "en": "Present",
+          "vi": "đến nay — dấu hiệu cho biết đâu là công việc hiện tại"
+        }
+      ]
+    },
+    "10": {
+      "answer": "She has two degrees, both from the University of Virginia. First, a master's in software engineering in twenty sixteen. And second, a bachelor's in computer science in twenty fourteen.",
+      "translation": "Cô ấy có hai bằng, đều từ Đại học Virginia. Thứ nhất là bằng thạc sĩ kỹ thuật phần mềm năm 2016. Thứ hai là bằng cử nhân khoa học máy tính năm 2014.",
+      "source": "Trọn mục Education: hai dòng University of Virginia (2016) và University of Virginia (2014).",
+      "phrases": [
+        {
+          "en": "both from …",
+          "vi": "cả hai đều từ… (gộp điểm chung)"
+        },
+        {
+          "en": "a master's in …",
+          "vi": "bằng thạc sĩ ngành…"
+        },
+        {
+          "en": "twenty sixteen",
+          "vi": "cách đọc năm 2016"
+        }
+      ]
+    }
+  },
+  "resume-2": {
+    "8": {
+      "answer": "He's applying for a graphic designer position, and you can reach him at P brown at zmail dot com.",
+      "translation": "Anh ấy ứng tuyển vị trí thiết kế đồ hoạ, và bạn có thể liên hệ qua email Pbrown@zmail.com.",
+      "source": "Dòng Position Sought (Graphic Designer) và dòng email ở đầu hồ sơ.",
+      "phrases": [
+        {
+          "en": "position sought",
+          "vi": "vị trí ứng tuyển"
+        },
+        {
+          "en": "you can reach him at …",
+          "vi": "bạn có thể liên hệ anh ấy qua…"
+        },
+        {
+          "en": "graphic designer",
+          "vi": "nhà thiết kế đồ hoạ"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not right. He's currently a design director at the Los Angeles Tribune. He was a web designer until twenty sixteen.",
+      "translation": "Thật ra thì không đúng. Hiện anh ấy là giám đốc thiết kế tại Los Angeles Tribune. Anh ấy làm web designer đến năm 2016 thì thôi.",
+      "source": "Mục Experience: Design Director, Los Angeles Tribune (2016 - Present) và Web Designer, The Santa Monica Weekly Magazine (2014 - 2016).",
+      "phrases": [
+        {
+          "en": "design director",
+          "vi": "giám đốc thiết kế"
+        },
+        {
+          "en": "he was a … until …",
+          "vi": "anh ấy làm…cho đến…"
+        },
+        {
+          "en": "2016 - Present",
+          "vi": "từ 2016 đến nay — mốc cho biết việc đang làm"
+        }
+      ]
+    },
+    "10": {
+      "answer": "He has two degrees. First, a bachelor's in Visual Communication from California University in twenty fourteen. And second, an associate's in Journalism from Santa Monica Community College in twenty ten.",
+      "translation": "Anh ấy có hai bằng. Thứ nhất là bằng cử nhân Truyền thông Thị giác từ Đại học California năm 2014. Thứ hai là bằng cao đẳng Báo chí từ Santa Monica Community College năm 2010.",
+      "source": "Trọn mục Education: hai dòng năm 2014 và 2010.",
+      "phrases": [
+        {
+          "en": "an associate's degree",
+          "vi": "bằng cao đẳng"
+        },
+        {
+          "en": "visual communication",
+          "vi": "truyền thông thị giác"
+        },
+        {
+          "en": "academic background",
+          "vi": "học vấn, nền tảng học thuật"
+        }
+      ]
+    }
+  },
+  "order-1": {
+    "8": {
+      "answer": "Your order comes to one hundred thirty-seven dollars and fifty cents. We're open from eleven a.m. to seven p.m., every day, so you can come by any time.",
+      "translation": "Đơn hàng của bạn tổng cộng 137 đô 50 xu. Cửa hàng mở cửa từ 11 giờ sáng đến 7 giờ tối, tất cả các ngày, nên bạn ghé lúc nào cũng được.",
+      "source": "Dòng Total của bảng ($137.50) và dòng Business hours ở phần đầu (11:00 A.M. – 7:00 P.M., every day).",
+      "phrases": [
+        {
+          "en": "Your order comes to …",
+          "vi": "Đơn hàng của bạn tổng cộng…"
+        },
+        {
+          "en": "… dollars and … cents",
+          "vi": "…đô và…xu (cách đọc tiền lẻ)"
+        },
+        {
+          "en": "come by",
+          "vi": "ghé qua (cửa hàng)"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, no. Your order is marked as payment upon pickup, not in advance, so you'll pay when you come to collect the flowers.",
+      "translation": "Thật ra thì không. Đơn của bạn được đánh dấu là thanh toán khi nhận hàng, không phải trả trước, nên bạn sẽ trả tiền lúc đến lấy hoa.",
+      "source": "Dòng Payment cuối phiếu: dấu tích nằm ở ô (✓) upon pickup, ô ( ) in advance để trống.",
+      "phrases": [
+        {
+          "en": "is marked as …",
+          "vi": "được đánh dấu là…"
+        },
+        {
+          "en": "payment upon pickup",
+          "vi": "thanh toán khi nhận hàng"
+        },
+        {
+          "en": "in advance",
+          "vi": "trả trước"
+        }
+      ]
+    },
+    "10": {
+      "answer": "You ordered three items. First, a dozen sunflowers for seventy dollars. Second, ten yellow roses for thirty dollars. And finally, fifteen daisies for thirty-seven dollars and fifty cents.",
+      "translation": "Bạn đã đặt ba món. Thứ nhất, một tá hoa hướng dương giá 70 đô. Thứ hai, mười bông hồng vàng giá 30 đô. Và cuối cùng, mười lăm bông cúc giá 37 đô 50 xu.",
+      "source": "Ba dòng của bảng Item – Qty. – Price, đọc lần lượt từ trên xuống.",
+      "phrases": [
+        {
+          "en": "You ordered three items.",
+          "vi": "Bạn đã đặt ba món. (câu mở đầu nêu số lượng)"
+        },
+        {
+          "en": "a dozen",
+          "vi": "một tá — 12 cái"
+        },
+        {
+          "en": "First… Second… And finally…",
+          "vi": "chuỗi từ nối để liệt kê"
+        }
+      ]
+    }
+  },
+  "order-2": {
+    "8": {
+      "answer": "The hotel is at four seventy-three Bloomfield Avenue in San Diego. Reservations are online only, at www dot rosegarden dot com.",
+      "translation": "Khách sạn ở số 473 Bloomfield Avenue, San Diego. Việc đặt chỗ chỉ nhận trực tuyến, tại www.rosegarden.com.",
+      "source": "Dòng địa chỉ dưới tiêu đề và chú thích *Online reservations only (www.rosegarden.com).",
+      "phrases": [
+        {
+          "en": "reservations are online only",
+          "vi": "chỉ nhận đặt chỗ trực tuyến"
+        },
+        {
+          "en": "four seventy-three Bloomfield Avenue",
+          "vi": "số 473 Bloomfield Avenue"
+        },
+        {
+          "en": "how am I supposed to …",
+          "vi": "tôi phải làm thế nào để… (cụm trong câu hỏi)"
+        }
+      ]
+    },
+    "9": {
+      "answer": "I'm afraid not. We're not accepting any reservations for March or April, because the hall is being renovated.",
+      "translation": "Rất tiếc là không được. Chúng tôi không nhận đặt chỗ cho tháng 3 và tháng 4, vì hội trường đang được sửa chữa.",
+      "source": "Chú thích cuối bảng: *No reservations accepted for March and April due to renovations.",
+      "phrases": [
+        {
+          "en": "I'm afraid not.",
+          "vi": "Rất tiếc là không được."
+        },
+        {
+          "en": "we're not accepting any reservations",
+          "vi": "chúng tôi không nhận đặt chỗ"
+        },
+        {
+          "en": "is being renovated",
+          "vi": "đang được sửa chữa"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Three days are still available that week. Tuesday, February twenty-fourth. Friday, February twenty-seventh. And Saturday, February twenty-eighth.",
+      "translation": "Tuần đó còn ba ngày trống. Thứ Ba ngày 24 tháng 2. Thứ Sáu ngày 27 tháng 2. Và thứ Bảy ngày 28 tháng 2.",
+      "source": "Quét cột Event tìm chữ Available: các dòng Tues Feb. 24, Fri Feb. 27 và Sat Feb. 28.",
+      "phrases": [
+        {
+          "en": "are still available",
+          "vi": "vẫn còn trống"
+        },
+        {
+          "en": "my schedule is quite flexible",
+          "vi": "lịch của tôi khá linh hoạt — cụm trong câu hỏi"
+        },
+        {
+          "en": "work around your open dates",
+          "vi": "sắp xếp theo những ngày trống của bên bạn"
+        }
+      ]
+    }
+  },
+  "mini-1": {
+    "8": {
+      "answer": "The seminar is on Saturday, May eighth, and it costs fifty dollars per person. Group rates are available too.",
+      "translation": "Hội thảo diễn ra thứ Bảy ngày 8 tháng 5, và giá là 50 đô một người. Cũng có giá ưu đãi cho nhóm.",
+      "source": "Dòng tiêu đề (Saturday, May 8) và dòng giá cuối bảng: Price: $50.00 per person (group rates available).",
+      "phrases": [
+        {
+          "en": "per person",
+          "vi": "một người"
+        },
+        {
+          "en": "group rates are available",
+          "vi": "có giá ưu đãi cho nhóm"
+        },
+        {
+          "en": "Saturday, May eighth",
+          "vi": "thứ Bảy ngày 8 tháng 5"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. Lunch isn't catered. There are several restaurants within walking distance of the academy, so you'd eat out.",
+      "translation": "Thật ra thì không đúng. Bữa trưa không có phục vụ sẵn. Có vài nhà hàng cách học viện một quãng đi bộ, nên bạn sẽ ra ngoài ăn.",
+      "source": "Dòng 12:00 P.M. Lunch (several restaurants within walking distance of academy) — không hề nhắc tới catered lunch.",
+      "phrases": [
+        {
+          "en": "isn't catered",
+          "vi": "không có phục vụ ăn sẵn"
+        },
+        {
+          "en": "within walking distance",
+          "vi": "cách một quãng đi bộ"
+        },
+        {
+          "en": "eat out",
+          "vi": "ra ngoài ăn"
+        }
+      ]
+    },
+    "10": {
+      "answer": "From one to four p.m. there are workshops, and you choose one area of interest. There are three options: retail goods, wholesale products, and services.",
+      "translation": "Từ 1 đến 4 giờ chiều là các buổi thực hành, và bạn chọn một lĩnh vực mình quan tâm. Có ba lựa chọn: hàng bán lẻ, hàng bán sỉ, và dịch vụ.",
+      "source": "Dòng 1:00-4:00 P.M. Workshops (please choose one area of interest) với ba gạch đầu dòng bên dưới.",
+      "phrases": [
+        {
+          "en": "choose one area of interest",
+          "vi": "chọn một lĩnh vực mình quan tâm"
+        },
+        {
+          "en": "retail goods / wholesale products",
+          "vi": "hàng bán lẻ / hàng bán sỉ"
+        },
+        {
+          "en": "There are three options:",
+          "vi": "Có ba lựa chọn:"
+        }
+      ]
+    }
+  },
+  "mini-2": {
+    "8": {
+      "answer": "Your first flight departs Denver at eight thirty p.m. on May twenty-ninth, and you'll be flying with Paradise Airlines, flight three seventy.",
+      "translation": "Chuyến bay đầu tiên rời Denver lúc 8 giờ 30 tối ngày 29 tháng 5, và bạn sẽ bay với Paradise Airlines, chuyến 370.",
+      "source": "Dòng đầu tiên: Paradise Airlines 370 — Depart Denver 8:30 P.M. May 29.",
+      "phrases": [
+        {
+          "en": "you'll be flying with …",
+          "vi": "bạn sẽ bay với hãng…"
+        },
+        {
+          "en": "flight three seventy",
+          "vi": "chuyến bay số 370"
+        },
+        {
+          "en": "departs Denver at …",
+          "vi": "rời Denver lúc…"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. The train departs Seattle King Station at seven thirty a.m. Eleven twenty is when it arrives at Portland Union Station.",
+      "translation": "Thật ra thì không đúng. Tàu khởi hành từ ga Seattle King lúc 7 giờ 30 sáng. 11 giờ 20 mới là giờ đến ga Portland Union.",
+      "source": "Dòng Q-trak train thứ nhất: Depart Seattle King Station 7:30 A.M. May 30 / Arrive at Portland Union Station 11:20 A.M. May 30.",
+      "phrases": [
+        {
+          "en": "departs … at …",
+          "vi": "khởi hành từ…lúc…"
+        },
+        {
+          "en": "is when it arrives",
+          "vi": "mới là giờ nó đến nơi"
+        },
+        {
+          "en": "King Station / Union Station",
+          "vi": "tên ga tàu — đọc rõ để không lẫn"
+        }
+      ]
+    },
+    "10": {
+      "answer": "You have two train trips. On May thirtieth, you leave Seattle King Station at seven thirty a.m. and reach Portland Union Station at eleven twenty. On June first, you leave Portland at four forty p.m. and get back to Seattle at eight ten.",
+      "translation": "Bạn có hai chặng tàu. Ngày 30 tháng 5, rời ga Seattle King lúc 7 giờ 30 sáng và tới ga Portland Union lúc 11 giờ 20. Ngày 1 tháng 6, rời Portland lúc 4 giờ 40 chiều và về tới Seattle lúc 8 giờ 10 tối.",
+      "source": "Hai dòng Q-trak train của bảng, mỗi dòng gồm cả giờ đi lẫn giờ đến.",
+      "phrases": [
+        {
+          "en": "ground transportation",
+          "vi": "phương tiện đi lại trên mặt đất — cụm trong câu hỏi"
+        },
+        {
+          "en": "reach / get back to",
+          "vi": "tới nơi / quay về tới"
+        },
+        {
+          "en": "at four forty p.m.",
+          "vi": "lúc 4 giờ 40 chiều"
+        }
+      ]
+    }
+  },
+  "mini-3": {
+    "8": {
+      "answer": "Each class costs twenty dollars. For more information, you can visit our website at www dot powergym dot com.",
+      "translation": "Mỗi buổi tập là 20 đô. Để biết thêm thông tin, bạn có thể vào website www.powergym.com.",
+      "source": "Dòng Price: $20 per class ở phần đầu và dòng chú thích website ở cuối bảng.",
+      "phrases": [
+        {
+          "en": "each class costs …",
+          "vi": "mỗi buổi tập có giá…"
+        },
+        {
+          "en": "visit our website at …",
+          "vi": "vào website của chúng tôi tại…"
+        },
+        {
+          "en": "www dot … dot com",
+          "vi": "cách đọc địa chỉ web thành lời"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. Pilates is on Thursdays, from two to three p.m. On Wednesdays at noon it's Yoga, with Chris Stark.",
+      "translation": "Thật ra thì không đúng. Lớp Pilates học thứ Năm, từ 2 đến 3 giờ chiều. Thứ Tư lúc 12 giờ trưa là lớp Yoga, với Chris Stark.",
+      "source": "Dòng Pilates (Thursdays, 2:00 – 3:00 P.M.) và dòng Yoga (Wednesdays, 12:00 P.M. – 1:00 P.M.).",
+      "phrases": [
+        {
+          "en": "is on Thursdays",
+          "vi": "học vào thứ Năm hằng tuần"
+        },
+        {
+          "en": "at noon",
+          "vi": "lúc 12 giờ trưa"
+        },
+        {
+          "en": "fitness classes",
+          "vi": "các lớp thể dục"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Two classes start at noon. First, Aerobics on Mondays with Barbara Berners. And second, Yoga on Wednesdays with Chris Stark. Both run for one hour.",
+      "translation": "Có hai lớp bắt đầu lúc 12 giờ trưa. Thứ nhất là Aerobics vào thứ Hai với Barbara Berners. Thứ hai là Yoga vào thứ Tư với Chris Stark. Cả hai đều kéo dài một tiếng.",
+      "source": "Quét cột Time tìm các dòng bắt đầu 12:00 P.M.: dòng Aerobics và dòng Yoga.",
+      "phrases": [
+        {
+          "en": "start at noon",
+          "vi": "bắt đầu lúc 12 giờ trưa"
+        },
+        {
+          "en": "Both run for one hour.",
+          "vi": "Cả hai đều kéo dài một tiếng."
+        },
+        {
+          "en": "get a workout in",
+          "vi": "tranh thủ tập một buổi — cụm trong câu hỏi"
+        }
+      ]
+    }
+  },
+  "mini-4": {
+    "8": {
+      "answer": "He's applying for the sous chef position at Hotel Noir, and his phone number is four five six, two four four, five one four one.",
+      "translation": "Anh ấy ứng tuyển vị trí bếp phó tại khách sạn Noir, và số điện thoại là 456-244-5141.",
+      "source": "Dòng Position Desired (Sous Chef at Hotel Noir) và dòng Phone ở đầu hồ sơ.",
+      "phrases": [
+        {
+          "en": "sous chef",
+          "vi": "bếp phó"
+        },
+        {
+          "en": "position desired",
+          "vi": "vị trí mong muốn"
+        },
+        {
+          "en": "four five six, two four four, …",
+          "vi": "số điện thoại đọc từng chữ số theo nhóm"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not correct. He's currently a line chef at Hotel Gresham in New York. He was an apprentice at Grill King until twenty fifteen.",
+      "translation": "Thật ra thì không đúng. Hiện anh ấy là đầu bếp chính tuyến tại khách sạn Gresham, New York. Anh ấy làm học việc ở Grill King đến năm 2015 thì thôi.",
+      "source": "Mục Employment: Line Chef, Hotel Gresham (2016-Present) và Apprentice, Grill King Restaurant (2013-2015).",
+      "phrases": [
+        {
+          "en": "line chef",
+          "vi": "đầu bếp phụ trách một khâu"
+        },
+        {
+          "en": "apprentice",
+          "vi": "người học việc"
+        },
+        {
+          "en": "until twenty fifteen",
+          "vi": "cho đến năm 2015"
+        }
+      ]
+    },
+    "10": {
+      "answer": "He has two degrees. First, a bachelor's in culinary arts from Boston University in twenty thirteen. And second, an associate's in hospitality management from Boston Community College in two thousand nine.",
+      "translation": "Anh ấy có hai bằng. Thứ nhất là bằng cử nhân nghệ thuật ẩm thực từ Đại học Boston năm 2013. Thứ hai là bằng cao đẳng quản trị khách sạn từ Boston Community College năm 2009.",
+      "source": "Trọn mục Education: hai dòng năm 2013 và 2009.",
+      "phrases": [
+        {
+          "en": "culinary arts",
+          "vi": "nghệ thuật ẩm thực"
+        },
+        {
+          "en": "hospitality management",
+          "vi": "quản trị nhà hàng khách sạn"
+        },
+        {
+          "en": "two thousand nine",
+          "vi": "cách đọc năm 2009"
+        }
+      ]
+    }
+  },
+  "mini-5": {
+    "8": {
+      "answer": "The interviews are in Conference Room B, and the first one starts at ten a.m., with Daniel Anderson from sales.",
+      "translation": "Các buổi phỏng vấn ở phòng họp B, và buổi đầu tiên bắt đầu lúc 10 giờ sáng, với Daniel Anderson bên kinh doanh.",
+      "source": "Dòng tiêu đề (Nov. 25, Mon., Conference Room B) và dòng đầu của lưới: 10:00 A.M., Daniel Anderson, Sales.",
+      "phrases": [
+        {
+          "en": "Conference Room B",
+          "vi": "phòng họp B"
+        },
+        {
+          "en": "from sales",
+          "vi": "bên bộ phận kinh doanh"
+        },
+        {
+          "en": "the first one starts at …",
+          "vi": "buổi đầu tiên bắt đầu lúc…"
+        }
+      ]
+    },
+    "9": {
+      "answer": "I'm afraid that interview has been cancelled. Gabriel Devlin is still interviewing for editorial, though, at eleven.",
+      "translation": "Rất tiếc là buổi phỏng vấn đó đã bị huỷ. Tuy nhiên Gabriel Devlin vẫn phỏng vấn cho bộ phận biên tập, lúc 11 giờ.",
+      "source": "Dòng 12:00 P.M. của Neil Wright bị gạch và ghi canceled. Dòng 11:00 A.M. là Gabriel Devlin, cùng bộ phận Editorial.",
+      "phrases": [
+        {
+          "en": "editorial",
+          "vi": "bộ phận biên tập"
+        },
+        {
+          "en": "is still interviewing",
+          "vi": "vẫn còn phỏng vấn"
+        },
+        {
+          "en": "…, though",
+          "vi": "…, tuy nhiên (đặt cuối câu, rất tự nhiên khi nói)"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Two candidates have six years of experience. First, Liam Moore from marketing, at two p.m. And second, Emily Lewis from legal, at three p.m.",
+      "translation": "Có hai ứng viên có 6 năm kinh nghiệm. Thứ nhất là Liam Moore bên tiếp thị, lúc 2 giờ chiều. Thứ hai là Emily Lewis bên pháp chế, lúc 3 giờ chiều.",
+      "source": "Quét cột Years of Experience tìm số 6: dòng 2:00 P.M. (Liam Moore) và dòng 3:00 P.M. (Emily Lewis).",
+      "phrases": [
+        {
+          "en": "have six years of experience",
+          "vi": "có 6 năm kinh nghiệm"
+        },
+        {
+          "en": "highly experienced candidates",
+          "vi": "ứng viên nhiều kinh nghiệm — cụm trong câu hỏi"
+        },
+        {
+          "en": "legal",
+          "vi": "bộ phận pháp chế"
+        }
+      ]
+    }
+  },
+  "mini-6": {
+    "8": {
+      "answer": "You reserved a full-size sedan. It's thirty dollars a day for seven days, so the total comes to two hundred ten dollars.",
+      "translation": "Bạn đã đặt một chiếc sedan cỡ lớn. Giá 30 đô một ngày cho 7 ngày, nên tổng cộng là 210 đô.",
+      "source": "Dòng Vehicle (Full-size sedan) và dòng Rate: $30/day X 7 days = $210.",
+      "phrases": [
+        {
+          "en": "a full-size sedan",
+          "vi": "xe sedan cỡ lớn"
+        },
+        {
+          "en": "thirty dollars a day",
+          "vi": "30 đô một ngày"
+        },
+        {
+          "en": "the total comes to …",
+          "vi": "tổng cộng là…"
+        }
+      ]
+    },
+    "9": {
+      "answer": "Yes, I'm afraid there would be. Any change to the reservation, including the pick-up date, has an additional charge of fifteen dollars.",
+      "translation": "Vâng, rất tiếc là có. Mọi thay đổi với đơn đặt xe, kể cả ngày nhận xe, đều bị tính thêm phí 15 đô.",
+      "source": "Dòng Note cuối bảng: Additional charges ($15) may apply for any changes to the reservation, including changes to the pick-up/drop-off date or location.",
+      "phrases": [
+        {
+          "en": "an additional charge",
+          "vi": "khoản phí phát sinh thêm"
+        },
+        {
+          "en": "any change to the reservation",
+          "vi": "mọi thay đổi với đơn đặt"
+        },
+        {
+          "en": "I'm afraid there would be",
+          "vi": "rất tiếc là có (trả lời tế nhị cho tin không vui)"
+        }
+      ]
+    },
+    "10": {
+      "answer": "Pick-up is on Monday, July twenty-sixth at ten a.m., at Cleveland International Airport. Drop-off is on Thursday, August first at three p.m., at Dayton International Airport.",
+      "translation": "Nhận xe vào thứ Hai ngày 26 tháng 7 lúc 10 giờ sáng, tại sân bay quốc tế Cleveland. Trả xe vào thứ Năm ngày 1 tháng 8 lúc 3 giờ chiều, tại sân bay quốc tế Dayton.",
+      "source": "Hai dòng Pick-up và Drop-off của bảng, mỗi dòng có đủ ngày, giờ và địa điểm.",
+      "phrases": [
+        {
+          "en": "pick-up / drop-off",
+          "vi": "nhận xe / trả xe"
+        },
+        {
+          "en": "Cleveland International Airport",
+          "vi": "sân bay quốc tế Cleveland"
+        },
+        {
+          "en": "coordinate my flights with …",
+          "vi": "khớp lịch bay với… — cụm trong câu hỏi"
+        }
       ]
     }
   }

@@ -38,7 +38,20 @@ const MANIFEST = path.join(DATA_DIR, "manifest.json");
 const TRANSCRIPTS = path.join(DATA_DIR, "transcripts.json");
 const OUT = path.join(__dirname, "..", "lib", "skills", "data", "speaking-q8-10.json");
 
-type ManifestEntry = { slug: string; dir: string; category: string; title: string };
+type ManifestEntry = {
+  slug: string;
+  dir: string;
+  category: string;
+  title: string;
+  /**
+   * Vài thư mục nguồn bị gán lệch vai trò file (vd conference-6: 1.mp3 lại là câu 9).
+   * Map "vai trò → tên file gốc (không đuôi)" để chữa mà không phải đổi tên file nguồn.
+   */
+  audioMap?: { intro?: string; "8"?: string; "9"?: string; "10"?: string };
+};
+
+/** transcripts.json đánh khoá theo vai trò MẶC ĐỊNH của từng file gốc. */
+const TRANSCRIPT_KEY: Record<string, keyof Transcript> = { "1": "intro", "8": "q8", "9": "q9", "10": "q10" };
 type Transcript = { intro?: string; q8?: string; q9?: string; q10?: string };
 
 type OutQuestion = { n: 8 | 9 | 10; audioUrl: string; audioDuration: number; transcript: string };
@@ -113,6 +126,10 @@ async function main() {
     }
 
     const tr = transcripts[entry.dir] ?? {};
+    const srcFor = (role: "intro" | "8" | "9" | "10") =>
+      entry.audioMap?.[role] ?? (role === "intro" ? "1" : role);
+    /** Transcript đi theo FILE, không theo vai trò — nên phải tra qua audioMap. */
+    const textFor = (role: "intro" | "8" | "9" | "10") => (tr[TRANSCRIPT_KEY[srcFor(role)]] ?? "").trim();
     process.stdout.write(`  ${entry.slug.padEnd(14)} ${entry.title.slice(0, 46).padEnd(48)}`);
 
     const base = `speaking/q8-10/${entry.slug}`;
@@ -120,14 +137,14 @@ async function main() {
       ? `${base}/info.png`
       : await upload(png, `${base}/info.png`, "image/png");
 
-    const intro = path.join(dir, "1.mp3");
+    const intro = path.join(dir, `${srcFor("intro")}.mp3`);
     const introUrl = dry ? `${base}/intro.mp3` : await upload(intro, `${base}/intro.mp3`, "audio/mpeg");
 
     const questions: OutQuestion[] = [];
     for (const n of [8, 9, 10] as const) {
-      const file = path.join(dir, `${n}.mp3`);
+      const file = path.join(dir, `${srcFor(String(n) as "8" | "9" | "10")}.mp3`);
       const url = dry ? `${base}/q${n}.mp3` : await upload(file, `${base}/q${n}.mp3`, "audio/mpeg");
-      const transcript = (tr[`q${n}` as const] ?? "").trim();
+      const transcript = textFor(String(n) as "8" | "9" | "10");
       if (!transcript) missingTranscript++;
       questions.push({ n, audioUrl: url, audioDuration: duration(file), transcript });
     }
@@ -139,7 +156,7 @@ async function main() {
       imageUrl,
       introAudioUrl: introUrl,
       introDuration: duration(intro),
-      introTranscript: (tr.intro ?? "").trim(),
+      introTranscript: textFor("intro"),
       questions,
     });
     console.log("✓");
