@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { ExamShell, ExamDirHeading } from "./ExamShell";
 import { FAMILY, EXAM } from "@/lib/skills/exam-theme";
 import type { Skill, SkillUnit } from "@/lib/skills/structure";
-import { Q810_PREP_SECONDS, Q810_READ_SECONDS, type Q810Test } from "@/lib/skills/speaking-q8-10";
+import { Q810_PREP_SECONDS, Q810_READ_SECONDS, type Q810Sample, type Q810Test } from "@/lib/skills/speaking-q8-10";
 import { SubmissionPanel } from "@/components/skills/SubmissionPanel";
 import { uploadToCloudinary } from "@/lib/cloudinary/upload";
 import type { SubmissionItem } from "@/lib/submissions";
@@ -288,6 +288,8 @@ export function SpeakingQ810Client({
                       </>
                     )}
                   </div>
+
+                  {item.sample && <SampleAnswer sample={item.sample} color={color.primary} />}
                 </div>
               ))}
 
@@ -309,6 +311,63 @@ export function SpeakingQ810Client({
         </>
       )}
     </ExamShell>
+  );
+}
+
+/**
+ * Bài nói mẫu — chỉ hiện ở màn xem lại, sau khi học viên đã tự nói xong.
+ * Mặc định gấp lại để lần đầu vào màn này học viên vẫn nghe lại bài mình trước.
+ */
+function SampleAnswer({ sample, color }: { sample: Q810Sample; color: string }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div style={{ marginTop: 10, border: `1px solid ${open ? color : EXAM.border}`, borderRadius: 8, background: "#fff", overflow: "hidden" }}>
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        style={{
+          width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8,
+          padding: "9px 12px", background: open ? "#eef3fc" : "transparent", border: "none",
+          cursor: "pointer", fontFamily: "inherit", color: EXAM.ink,
+        }}
+      >
+        <span style={{ fontSize: "0.78rem", fontWeight: 800, letterSpacing: "0.04em", textTransform: "uppercase", color }}>
+          📝 Bài nói mẫu
+        </span>
+        <span style={{ fontSize: "0.74rem", color: EXAM.muted }}>{open ? "Thu gọn ▲" : "Xem mẫu ▼"}</span>
+      </button>
+
+      {open && (
+        <div style={{ padding: "12px 14px", borderTop: `1px solid ${EXAM.border}` }}>
+          <p style={{ margin: "0 0 8px", fontSize: "1.02rem", lineHeight: 1.65, color: EXAM.ink, fontWeight: 600 }}>
+            {sample.answer}
+          </p>
+          <p style={{ margin: "0 0 10px", fontSize: "0.88rem", lineHeight: 1.6, color: EXAM.inkSoft, fontStyle: "italic" }}>
+            {sample.translation}
+          </p>
+
+          <div style={{ background: EXAM.panel, borderRadius: 6, padding: "8px 10px", marginBottom: 10 }}>
+            <span style={{ fontSize: "0.7rem", fontWeight: 800, color: EXAM.muted, textTransform: "uppercase", letterSpacing: "0.05em" }}>
+              Lấy từ đâu
+            </span>
+            <p style={{ margin: "3px 0 0", fontSize: "0.84rem", lineHeight: 1.55, color: EXAM.inkSoft }}>{sample.source}</p>
+          </div>
+
+          <span style={{ fontSize: "0.7rem", fontWeight: 800, color: EXAM.muted, textTransform: "uppercase", letterSpacing: "0.05em" }}>
+            Cụm đáng học
+          </span>
+          <ul style={{ margin: "5px 0 0", paddingLeft: "1.1rem" }}>
+            {sample.phrases.map((p) => (
+              <li key={p.en} style={{ fontSize: "0.86rem", lineHeight: 1.6, color: EXAM.ink, marginBottom: 2 }}>
+                <strong>{p.en}</strong>
+                <span style={{ color: EXAM.inkSoft }}> — {p.vi}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
   );
 }
 

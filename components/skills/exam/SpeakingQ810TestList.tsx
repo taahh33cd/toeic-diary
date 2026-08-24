@@ -69,7 +69,8 @@ export function SpeakingQ810TestList({
       <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6, margin: "0 0 0.9rem" }}>
         {SPEAKING_Q810_TESTS.length} bộ đề, chia theo loại bảng thông tin. Mỗi bộ chạy đúng nhịp thi thật:
         45 giây đọc bảng · 3 giây chuẩn bị mỗi câu · trả lời 15 giây (câu 8, 9) và 30 giây (câu 10).
-        Bài nói được ghi âm để nghe lại và gửi giáo viên chấm.
+        Bài nói được ghi âm để nghe lại và gửi giáo viên chấm; đề nào có nhãn 📝 thì
+        cuối bài còn kèm bài nói mẫu, bản dịch và các cụm đáng học.
       </p>
 
       {!unlocked && (
@@ -120,6 +121,11 @@ export function SpeakingQ810TestList({
                       <span style={{ display: "block", fontSize: "0.9rem", fontWeight: 700, lineHeight: 1.35, marginTop: 2 }}>
                         {t.title}
                       </span>
+                      {t.hasSamples && !locked && (
+                        <span style={{ display: "inline-block", marginTop: 5, fontSize: "0.66rem", fontWeight: 700, letterSpacing: "0.04em", color: "#1e419a", background: "rgba(30,65,154,0.1)", border: "1px solid rgba(30,65,154,0.25)", borderRadius: 4, padding: "1px 6px" }}>
+                          📝 Có bài mẫu
+                        </span>
+                      )}
                       {locked && (
                         <span style={{ display: "block", fontSize: "0.72rem", color: "var(--text-muted)", marginTop: 4 }}>
                           Cần đăng ký khoá

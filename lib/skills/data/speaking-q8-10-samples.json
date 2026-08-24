@@ -1,0 +1,100 @@
+{
+  "conference-1": {
+    "8": {
+      "answer": "Sure. If you attend for just one day, the registration fee is one hundred fifty dollars. It's two hundred fifty dollars if you'd like to come both days.",
+      "translation": "Vâng. Nếu bạn chỉ dự một ngày thì phí đăng ký là 150 đô. Còn nếu muốn dự cả hai ngày thì là 250 đô.",
+      "source": "Dòng chú thích cuối bảng: *Registration Fee: $250 (Both days), $150 (One day).",
+      "phrases": [
+        { "en": "the registration fee is …", "vi": "phí đăng ký là…" },
+        { "en": "if you attend for just one day", "vi": "nếu bạn chỉ dự một ngày" },
+        { "en": "if you'd like to …", "vi": "nếu bạn muốn…" }
+      ]
+    },
+    "9": {
+      "answer": "Actually, that's not quite right. Technology Integration is scheduled for ten a.m. on Friday, July fourteenth, not Saturday. It's presented by Amy Fisher.",
+      "translation": "Thật ra thì chưa chính xác. Phiên Technology Integration diễn ra lúc 10 giờ sáng thứ Sáu ngày 14 tháng 7, không phải thứ Bảy. Người trình bày là Amy Fisher.",
+      "source": "Dòng thứ hai của khối July 14th (Fri): 10 a.m. – Technology Integration – Amy Fisher.",
+      "phrases": [
+        { "en": "Actually, that's not quite right.", "vi": "Thật ra thì chưa chính xác." },
+        { "en": "is scheduled for …", "vi": "được xếp lịch vào…" },
+        { "en": "…, not Saturday", "vi": "…, chứ không phải thứ Bảy" }
+      ]
+    },
+    "10": {
+      "answer": "There are three sessions on Saturday, July fifteenth. First, at nine a.m., Personality Development with Miriam Loya. Then at ten, Students and Teachers Relationships with Diana Caldwell. And finally at eleven, Multilingualism with Vincent Dunn.",
+      "translation": "Có ba phiên vào thứ Bảy ngày 15 tháng 7. Đầu tiên, lúc 9 giờ sáng là Personality Development do Miriam Loya trình bày. Tiếp theo lúc 10 giờ là Students and Teachers Relationships với Diana Caldwell. Và cuối cùng lúc 11 giờ là Multilingualism với Vincent Dunn.",
+      "source": "Trọn khối July 15th (Sat) — ba dòng 9, 10 và 11 giờ sáng, lấy cả cột Session lẫn cột Speaker.",
+      "phrases": [
+        { "en": "There are three sessions on …", "vi": "Có ba phiên vào…" },
+        { "en": "First… Then… And finally…", "vi": "chuỗi từ nối để liệt kê ba mục" },
+        { "en": "… with + tên người", "vi": "…do ai trình bày" }
+      ]
+    }
+  },
+
+  "order-1": {
+    "8": {
+      "answer": "Your order comes to one hundred thirty-seven dollars and fifty cents. We're open from eleven a.m. to seven p.m., every day, so you can come by any time.",
+      "translation": "Đơn hàng của bạn tổng cộng 137 đô 50 xu. Cửa hàng mở cửa từ 11 giờ sáng đến 7 giờ tối, tất cả các ngày, nên bạn ghé lúc nào cũng được.",
+      "source": "Dòng Total của bảng ($137.50) và dòng Business hours ở phần đầu (11:00 A.M. – 7:00 P.M., every day).",
+      "phrases": [
+        { "en": "Your order comes to …", "vi": "Đơn hàng của bạn tổng cộng…" },
+        { "en": "… dollars and … cents", "vi": "…đô và…xu (cách đọc tiền lẻ)" },
+        { "en": "come by", "vi": "ghé qua (cửa hàng)" }
+      ]
+    },
+    "9": {
+      "answer": "Actually, no. Your order is marked as payment upon pickup, not in advance, so you'll pay when you come to collect the flowers.",
+      "translation": "Thật ra thì không. Đơn của bạn được đánh dấu là thanh toán khi nhận hàng, không phải trả trước, nên bạn sẽ trả tiền lúc đến lấy hoa.",
+      "source": "Dòng Payment cuối phiếu: dấu tích nằm ở ô (✓) upon pickup, ô ( ) in advance để trống.",
+      "phrases": [
+        { "en": "is marked as …", "vi": "được đánh dấu là…" },
+        { "en": "payment upon pickup", "vi": "thanh toán khi nhận hàng" },
+        { "en": "in advance", "vi": "trả trước" }
+      ]
+    },
+    "10": {
+      "answer": "You ordered three items. First, a dozen sunflowers for seventy dollars. Second, ten yellow roses for thirty dollars. And finally, fifteen daisies for thirty-seven dollars and fifty cents.",
+      "translation": "Bạn đã đặt ba món. Thứ nhất, một tá hoa hướng dương giá 70 đô. Thứ hai, mười bông hồng vàng giá 30 đô. Và cuối cùng, mười lăm bông cúc giá 37 đô 50 xu.",
+      "source": "Ba dòng của bảng Item – Qty. – Price, đọc lần lượt từ trên xuống.",
+      "phrases": [
+        { "en": "You ordered three items.", "vi": "Bạn đã đặt ba món. (câu mở đầu nêu số lượng)" },
+        { "en": "a dozen", "vi": "một tá — 12 cái" },
+        { "en": "First… Second… And finally…", "vi": "chuỗi từ nối để liệt kê" }
+      ]
+    }
+  },
+
+  "interview-2": {
+    "8": {
+      "answer": "Your first interview is with Christopher Wise at ten thirty a.m. He's applying for the network administrator position, and he currently works at Compton Corp.",
+      "translation": "Buổi phỏng vấn đầu tiên của bạn là với Christopher Wise lúc 10 giờ 30 sáng. Anh ấy ứng tuyển vị trí quản trị mạng và hiện đang làm ở Compton Corp.",
+      "source": "Dòng đầu tiên còn hiệu lực của bảng: 10:30 – 11 a.m., Christopher Wise, Network Administrator, Compton Corp.",
+      "phrases": [
+        { "en": "Your first interview is with …", "vi": "Buổi phỏng vấn đầu tiên của bạn là với…" },
+        { "en": "is applying for the … position", "vi": "đang ứng tuyển vị trí…" },
+        { "en": "currently works at …", "vi": "hiện đang làm việc tại…" }
+      ]
+    },
+    "9": {
+      "answer": "I'm afraid that interview has been cancelled. Your next one after that is with Linda Moore at three thirty, for the network administrator position.",
+      "translation": "Rất tiếc là buổi phỏng vấn đó đã bị huỷ. Buổi tiếp theo sau đó là với Linda Moore lúc 3 giờ 30, cho vị trí quản trị mạng.",
+      "source": "Dòng 2:30 – 3 p.m. của Joseph Baldwin bị gạch ngang toàn bộ — dấu hiệu buổi đó đã huỷ. Dòng kế tiếp là 3:30 – 4 p.m., Linda Moore.",
+      "phrases": [
+        { "en": "I'm afraid …", "vi": "Rất tiếc là… (mở đầu khi báo tin không vui)" },
+        { "en": "has been cancelled", "vi": "đã bị huỷ" },
+        { "en": "Your next one after that is …", "vi": "Buổi tiếp theo sau đó là…" }
+      ]
+    },
+    "10": {
+      "answer": "Two candidates are interviewing for digital designer. First, Dave Madden at eleven fifteen — he currently works at DuWell Software. And second, Elizabeth Coleman at one forty-five, from Lionel Tech.",
+      "translation": "Có hai ứng viên phỏng vấn cho vị trí thiết kế số. Thứ nhất là Dave Madden lúc 11 giờ 15, hiện đang làm ở DuWell Software. Thứ hai là Elizabeth Coleman lúc 1 giờ 45, đến từ Lionel Tech.",
+      "source": "Quét cột Position tìm chữ Digital Designer: hai dòng 11:15 – 11:45 a.m. và 1:45 – 2:15 p.m.",
+      "phrases": [
+        { "en": "Two candidates are interviewing for …", "vi": "Có hai ứng viên phỏng vấn cho vị trí…" },
+        { "en": "from + tên công ty", "vi": "đến từ… (cách nói gọn thay cho \"currently works at\")" },
+        { "en": "First… And second…", "vi": "chuỗi từ nối cho hai mục" }
+      ]
+    }
+  }
+}
