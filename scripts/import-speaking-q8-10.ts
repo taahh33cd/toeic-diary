@@ -48,6 +48,8 @@ type ManifestEntry = {
    * Map "vai trò → tên file gốc (không đuôi)" để chữa mà không phải đổi tên file nguồn.
    */
   audioMap?: { intro?: string; "8"?: string; "9"?: string; "10"?: string };
+  /** Có giá trị = ẩn khỏi web; nội dung là lý do ẩn. */
+  hidden?: string;
 };
 
 /** transcripts.json đánh khoá theo vai trò MẶC ĐỊNH của từng file gốc. */
@@ -114,6 +116,10 @@ async function main() {
   let missingTranscript = 0;
 
   for (const entry of manifest) {
+    if (entry.hidden) {
+      console.log(`  ${entry.slug.padEnd(14)} — ẩn: ${entry.hidden}`);
+      continue;
+    }
     const dir = path.join(sourceBase, entry.dir.replace(/\//g, path.sep));
     if (!fs.existsSync(dir)) {
       console.warn(`⚠  Không thấy thư mục: ${entry.dir}`);

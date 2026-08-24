@@ -58,35 +58,6 @@
     ]
   },
   {
-    "slug": "conference-3",
-    "category": "conference",
-    "title": "National Teachers' Conference (bản 2)",
-    "imageUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-3/info.png",
-    "introAudioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-3/intro.mp3",
-    "introDuration": 11.2,
-    "introTranscript": "Hello, I am planning to sign up for some activities at the Bailey Community Center this December, but I seem to have lost my copy of the schedule. Could you please answer a few questions for me?",
-    "questions": [
-      {
-        "n": 8,
-        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-3/q8.mp3",
-        "audioDuration": 4.32,
-        "transcript": "Can you tell me exactly where all of these classes will be taking place?"
-      },
-      {
-        "n": 9,
-        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-3/q9.mp3",
-        "audioDuration": 5.52,
-        "transcript": "I heard that the Slow Flow Yoga class is scheduled for Wednesday morning. Am I correct?"
-      },
-      {
-        "n": 10,
-        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q8-10/conference-3/q10.mp3",
-        "audioDuration": 8.32,
-        "transcript": "I am highly interested in the classes instructed by Mary Donnelly. Could you please give me all the details about the classes she will be teaching?"
-      }
-    ]
-  },
-  {
     "slug": "conference-4",
     "category": "conference",
     "title": "Annual Developing Technology Seminar",

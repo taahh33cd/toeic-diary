@@ -143,6 +143,9 @@ type RawTest = {
 
 const ORDER = new Map(Q810_CATEGORIES.map((c, i) => [c.id, i]));
 
+/** Đếm số bộ đã phát trong mỗi thể loại, để đánh lại số đề cho liên tục. */
+const seenPerCategory = new Map<Q810Category, number>();
+
 export const SPEAKING_Q810_TESTS: Q810Test[] = (RAW as RawTest[])
   .map((t) => {
     const index = Number(t.slug.split("-").pop()) || 1;
@@ -166,7 +169,14 @@ export const SPEAKING_Q810_TESTS: Q810Test[] = (RAW as RawTest[])
       free: index <= Q810_FREE_PER_CATEGORY,
     };
   })
-  .sort((a, b) => (ORDER.get(a.category)! - ORDER.get(b.category)!) || a.index - b.index);
+  .sort((a, b) => (ORDER.get(a.category)! - ORDER.get(b.category)!) || a.index - b.index)
+  // Số trong slug chỉ dùng để sắp xếp. Số hiển thị đánh lại liên tục theo thể loại,
+  // để bộ nào bị ẩn (xem `hidden` trong manifest) không để lại lỗ hổng giữa danh sách.
+  .map((t) => {
+    const index = (seenPerCategory.get(t.category) ?? 0) + 1;
+    seenPerCategory.set(t.category, index);
+    return { ...t, index, free: index <= Q810_FREE_PER_CATEGORY };
+  });
 
 export function getQ810Test(slug: string): Q810Test | undefined {
   return SPEAKING_Q810_TESTS.find((t) => t.slug === slug);
