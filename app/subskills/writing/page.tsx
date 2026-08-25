@@ -18,6 +18,13 @@ const PARTS = [
     description: "10 tầng kỹ năng xếp theo band điểm · có Tầng 0 cho người mới và Tầng 9 nộp bài giáo viên chấm",
     active: true,
   },
+  {
+    href: "/subskills/writing/part3",
+    label: "Part 3",
+    labelVi: "Viết luận",
+    description: "14 tầng xếp theo band điểm, mỗi tầng nhắm vào một trục trong thang chấm 0–5 · đang mở Tầng 1–4",
+    active: true,
+  },
 ];
 
 export default function WritingHubPage() {

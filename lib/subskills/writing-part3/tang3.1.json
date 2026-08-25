@@ -1,0 +1,225 @@
+{
+  "passages": {
+    "claim1": {
+      "kind": "paragraph",
+      "title": "Luận điểm cần chống đỡ",
+      "body": ["Working in a small company helps a new employee learn faster."]
+    },
+    "claim2": {
+      "kind": "paragraph",
+      "title": "Luận điểm cần chống đỡ",
+      "body": ["Free public transport reduces the number of cars on city roads."]
+    },
+    "claim3": {
+      "kind": "paragraph",
+      "title": "Luận điểm cần chống đỡ",
+      "body": ["Letting staff choose their own hours makes a company harder to run."]
+    },
+    "claim4": {
+      "kind": "paragraph",
+      "title": "Luận điểm cần chống đỡ",
+      "body": ["Studying with other people keeps a learner motivated."]
+    },
+    "claim5": {
+      "kind": "paragraph",
+      "title": "Luận điểm cần chống đỡ",
+      "body": ["Reading film reviews before watching a film can spoil the experience."]
+    }
+  },
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "matching",
+          "id": "t3-1-e1",
+          "prompt": "Ghép mỗi lý do với ví dụ chống đỡ nó. Chủ đề: giờ làm việc linh hoạt.",
+          "pairs": [
+            { "left": "Flexible hours let people work when they concentrate best", "right": "A colleague of mine writes his reports at six in the morning and finishes before the office opens." },
+            { "left": "Flexible hours cut the time lost in traffic", "right": "Staff who leave home at ten avoid the rush hour and arrive twenty minutes earlier than they used to." },
+            { "left": "Flexible hours help a company keep experienced staff", "right": "A designer on my team stayed after her second child was born because she could start at eleven." },
+            { "left": "Flexible hours make meetings harder to arrange", "right": "Our weekly review had to be moved three times last month before everyone could attend." }
+          ],
+          "explanation": "Ví dụ tốt luôn có một chi tiết mà người khác không đoán được: một giờ cụ thể, một con số, một người cụ thể. «Six in the morning», «twenty minutes», «three times» — bỏ những chi tiết đó đi thì câu ví dụ tụt xuống thành câu khái quát thứ hai."
+        },
+        {
+          "type": "matching",
+          "id": "t3-1-e2",
+          "prompt": "Ghép mỗi lý do với ví dụ chống đỡ nó. Chủ đề: sống ở thị trấn nhỏ.",
+          "pairs": [
+            { "left": "Housing costs much less in a small town", "right": "My cousin pays half the rent I do for an apartment twice the size of mine." },
+            { "left": "Neighbours are easier to get to know", "right": "When my grandmother fell last winter, three people from her street were at the door within ten minutes." },
+            { "left": "Daily travel takes far less time", "right": "My uncle walks to his office in eight minutes, while I spend an hour on the metro." },
+            { "left": "There are fewer choices for evening entertainment", "right": "The town where I grew up has one cinema, and it shows the same film for a fortnight." }
+          ],
+          "explanation": "Chú ý ví dụ cuối: nó chống đỡ một Ý BẤT LỢI, và vẫn cụ thể như những ví dụ kia. Nhiều người viết rất chăm chút phần lợi rồi để phần bất lợi trôi tuột thành một câu chung chung — trong khi cả hai đều bị chấm bằng một thước đo."
+        },
+        {
+          "type": "matching",
+          "id": "t3-1-e3",
+          "prompt": "Ghép mỗi lý do với ví dụ chống đỡ nó. Chủ đề: học ngoại ngữ.",
+          "pairs": [
+            { "left": "Children absorb pronunciation more easily than adults", "right": "My niece moved to Canada at six and now nobody can hear where she is from." },
+            { "left": "Adults can study grammar more systematically", "right": "A friend of mine learned the whole conditional system in one weekend by comparing it with his own language." },
+            { "left": "Adults often have less time to practise", "right": "After work and two children, my sister manages about fifteen minutes of study a day." },
+            { "left": "Children are less afraid of making mistakes", "right": "My son happily talks to tourists in broken English while I stand behind him saying nothing." }
+          ],
+          "explanation": "Bốn ví dụ này đều là chuyện có thật kể bằng một câu. Bạn không cần số liệu nghiên cứu — TOEIC chấm «reasons and/or examples», và một tình huống cụ thể từ đời sống được tính là ví dụ đầy đủ."
+        },
+        {
+          "type": "matching",
+          "id": "t3-1-e4",
+          "prompt": "Ghép mỗi lý do với ví dụ chống đỡ nó. Chủ đề: làm việc tại nhà.",
+          "pairs": [
+            { "left": "Employees save money they used to spend on commuting", "right": "I no longer buy a monthly train pass, which used to cost me the price of a good dinner every week." },
+            { "left": "New staff learn much less from those around them", "right": "A junior who joined our team in March has still never watched anyone handle a difficult client." },
+            { "left": "Home offices are often not designed for long working days", "right": "For four months I worked from a kitchen chair, and my back has not been the same since." },
+            { "left": "Teams lose the short conversations that solve small problems", "right": "A question that once took thirty seconds across a desk now becomes a chain of eight e-mails." }
+          ],
+          "explanation": "Ví dụ cuối làm một việc rất đáng học: nó ĐỐI CHIẾU trước và sau («thirty seconds» so với «eight e-mails»). Đối chiếu là cách nhanh nhất để một ví dụ tự chứng minh điều nó được đưa ra để chứng minh."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-1-e5",
+          "passageRef": "claim1",
+          "question": "Câu nào chống đỡ được luận điểm trên?",
+          "options": [
+            { "id": "A", "text": "This is because small companies are better places for new employees to learn." },
+            { "id": "B", "text": "Small companies are an important part of every national economy." },
+            { "id": "C", "text": "In my first job at a firm of nine people, I answered the phone, wrote invoices and met clients in the same week." },
+            { "id": "D", "text": "Many young people today are looking for jobs in small companies." }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "A chỉ nói lại luận điểm bằng chữ khác — đây là cái bẫy phổ biến nhất, vì đọc lên nghe rất giống một lời giải thích. B và D là sự thật nhưng không liên quan tới việc học nhanh hay chậm. C cho thấy CHUYỆN GÌ ĐÃ XẢY RA, và người đọc tự rút ra kết luận."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t3-1-m1",
+          "passageRef": "claim2",
+          "question": "Câu nào là ví dụ CỤ THỂ, không phải câu khái quát thứ hai?",
+          "options": [
+            { "id": "A", "text": "As a result, fewer people choose to drive their cars into the city centre." },
+            { "id": "B", "text": "When Tallinn stopped charging residents for buses, car traffic in the centre fell noticeably within the first year." },
+            { "id": "C", "text": "Traffic is one of the most serious problems facing cities today." },
+            { "id": "D", "text": "This shows that free transport really does reduce the number of cars." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "A và D đều chỉ nói lại luận điểm — D còn nguy hiểm hơn vì nó mở đầu bằng «This shows that», khiến người viết tưởng mình vừa chứng minh xong. C là câu dẫn nhập chung. Chỉ B có một nơi chốn và một khoảng thời gian."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-1-m2",
+          "passageRef": "claim3",
+          "question": "Câu nào là ví dụ CỤ THỂ, không phải câu khái quát thứ hai?",
+          "options": [
+            { "id": "A", "text": "Managing a team becomes more complicated when everyone follows a different schedule." },
+            { "id": "B", "text": "Last quarter my manager needed eleven days to find a two-hour slot when all six of us were free." },
+            { "id": "C", "text": "Companies need to think carefully before introducing flexible working hours." },
+            { "id": "D", "text": "It is difficult for managers to organise their teams under such conditions." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "A và D nói cùng một điều với luận điểm, chỉ đổi chữ. C là lời khuyên, không phải bằng chứng. B có «eleven days», «two-hour», «six of us» — ba con số biến một lời than chung chung thành một chuyện đã xảy ra."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-1-m3",
+          "passageRef": "claim4",
+          "question": "Câu nào là ví dụ CỤ THỂ, không phải câu khái quát thứ hai?",
+          "options": [
+            { "id": "A", "text": "Studying alone can be discouraging over a long period." },
+            { "id": "B", "text": "Motivation is the key to success in any kind of learning." },
+            { "id": "C", "text": "I gave up learning Japanese twice on my own, then finished a whole textbook with two classmates who met me every Tuesday." },
+            { "id": "D", "text": "That is why learning in a group is more effective than learning by yourself." }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "C mạnh vì nó có ĐỐI CHIẾU: hai lần bỏ cuộc một mình so với một quyển sách học xong cùng bạn. Cấu trúc «tôi đã thất bại theo cách A, rồi thành công theo cách B» tự nó là một lập luận, không cần câu kết luận nào thêm."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-1-m4",
+          "passageRef": "claim5",
+          "question": "Câu nào là ví dụ CỤ THỂ, không phải câu khái quát thứ hai?",
+          "options": [
+            { "id": "A", "text": "Knowing too much about a film in advance takes away the pleasure of watching it." },
+            { "id": "B", "text": "A review I read last summer mentioned the ending in its second paragraph, and I spent the whole film waiting for something I already knew." },
+            { "id": "C", "text": "Film reviews are written by critics who watch films professionally." },
+            { "id": "D", "text": "For this reason, many people prefer not to read reviews before going to the cinema." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "A là chính luận điểm viết lại. C là thông tin nền không phục vụ gì. D nói người khác làm gì, không chứng minh việc đó có hại. B kể đúng một lần đã xảy ra, và đó là tất cả những gì cần."
+        },
+        {
+          "type": "mcq",
+          "id": "t3-1-m5",
+          "question": "Một đoạn thân bài đủ chuẩn gồm những gì, theo đúng thứ tự?",
+          "options": [
+            { "id": "A", "text": "Ví dụ cụ thể → luận điểm → lời khuyên" },
+            { "id": "B", "text": "Câu chủ đề nêu lý do → giải thích vì sao lý do đó đúng → ví dụ cụ thể" },
+            { "id": "C", "text": "Câu chủ đề → hai ba câu khái quát nữa cho dài → câu kết" },
+            { "id": "D", "text": "Câu hỏi tu từ → luận điểm → câu hỏi tu từ khác" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "C chính là cái bẫy làm rơi bài xuống mốc 2: ETS mô tả mốc đó là «nêu nhận định khái quát mà thiếu ví dụ hay giải thích thích đáng để minh hoạ». Thêm câu khái quát chỉ làm bài dài ra chứ không làm nó sâu hơn. Chuỗi B mới là thứ nâng điểm."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "ordering",
+          "id": "t3-1-h1",
+          "prompt": "Dựng lại một đoạn thân bài hoàn chỉnh. Chủ đề: vì sao nên chọn công ty nhỏ.",
+          "items": [
+            "The first reason I would choose a small company is that it lets a newcomer see the whole business.",
+            "In a firm with only a few employees, nobody can afford to do just one narrow task.",
+            "In my first job at a company of nine people, I answered client calls, prepared invoices and sat in on a contract meeting all in my first week.",
+            "Within three months I understood how money actually moved through the company, something a friend at a large bank still could not explain after a year."
+          ],
+          "explanation": "Bốn câu, bốn việc khác nhau: nêu lý do → giải thích cơ chế → ví dụ cụ thể → hệ quả có đối chiếu. Câu cuối là thứ hay bị bỏ, nhưng nó chính là chỗ biến một mẩu chuyện thành bằng chứng, bằng cách đặt nó cạnh một trường hợp trái ngược."
+        },
+        {
+          "type": "ordering",
+          "id": "t3-1-h2",
+          "prompt": "Dựng lại đoạn thân bài. Chủ đề: bất lợi của việc làm tại nhà.",
+          "items": [
+            "The main drawback of working from home is that new employees learn far less from the people around them.",
+            "Much of what a beginner needs to know is never written down anywhere.",
+            "A junior who joined our team in March has still never heard anyone handle an angry client on the phone.",
+            "When she finally faced one herself in July, she had nothing to copy and the call ended badly."
+          ],
+          "explanation": "Cùng khuôn với bài trước, nhưng dùng cho một ý BẤT LỢI — chứng tỏ khuôn này không phụ thuộc vào việc bạn đang khen hay chê. Câu «Much of what a beginner needs to know is never written down» là câu giải thích cơ chế: nó nói VÌ SAO điều đó xảy ra, trước khi ví dụ cho thấy nó xảy ra thế nào."
+        },
+        {
+          "type": "ordering",
+          "id": "t3-1-h3",
+          "prompt": "Dựng lại đoạn thân bài. Chủ đề: vì sao nên miễn phí phương tiện công cộng.",
+          "items": [
+            "A second argument in favour of free transport is that it helps the people who need it most.",
+            "For households on low incomes, the monthly fare is not a small line in the budget but a real burden.",
+            "A cleaner in my building used to spend nearly a tenth of her wages simply getting to work and back.",
+            "Since the city removed fares last year, that money has stayed in her pocket every single month."
+          ],
+          "explanation": "«A second argument in favour of…» là cách nối đoạn rẻ tiền mà hiệu quả: người chấm biết ngay bạn đang ở lý do thứ mấy. Chuỗi vẫn giữ nguyên bốn nhịp, và ví dụ vẫn là một người cụ thể chứ không phải «nhiều người nghèo»."
+        },
+        {
+          "type": "ordering",
+          "id": "t3-1-h4",
+          "prompt": "Dựng lại đoạn thân bài. Chủ đề: vì sao trẻ em học phát âm dễ hơn người lớn.",
+          "items": [
+            "Children have one clear advantage over adults: they copy sounds without judging them.",
+            "An adult learner hears a strange sound and immediately compares it with the nearest sound in their own language.",
+            "My niece moved to Canada at the age of six and within two years no one could tell where she was from.",
+            "Her father, who arrived on the same flight, still orders coffee in an accent everyone notices."
+          ],
+          "explanation": "Câu cuối là kiểu ví dụ mạnh nhất trong bài luận: hai người, cùng hoàn cảnh, khác đúng một biến số (tuổi). Khi ví dụ tự loại trừ được cách giải thích khác thì nó không còn là mẩu chuyện nữa mà thành bằng chứng."
+        }
+      ]
+    }
+  ]
+}

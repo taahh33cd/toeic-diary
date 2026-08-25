@@ -1,0 +1,312 @@
+{
+  "passages": {
+    "p1": {
+      "kind": "prompt",
+      "body": [
+        "Some managers believe that employees work better when they are allowed to choose their own working hours. Do you agree or disagree with this statement? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p2": {
+      "kind": "prompt",
+      "body": [
+        "Some people prefer to work for a large company with many departments. Others prefer to work for a small company where everyone knows each other. Which do you prefer? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p3": {
+      "kind": "prompt",
+      "body": [
+        "Many companies now allow their staff to work from home several days a week. What are the advantages and disadvantages of this arrangement? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p4": {
+      "kind": "prompt",
+      "body": [
+        "A company wants to thank its staff after a successful year. It is considering three options: a cash bonus, five extra vacation days, or a company trip abroad. Which option should the company choose? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p5": {
+      "kind": "prompt",
+      "body": [
+        "In your opinion, what is the most effective way for a new employee to learn how a company works? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p6": {
+      "kind": "prompt",
+      "body": [
+        "Some schools have decided to place vending machines in their hallways so that students can buy snacks between classes. Do you think schools should do this? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p7": {
+      "kind": "prompt",
+      "body": [
+        "Public libraries have existed for hundreds of years. Today, however, almost any book or article can be found online in a few seconds. Should cities continue to spend money on public libraries? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p8": {
+      "kind": "prompt",
+      "body": [
+        "Learning a second language takes years of effort. Some people start as children, while others begin only as adults. Which age do you think is better for beginning a second language? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p9": {
+      "kind": "prompt",
+      "body": [
+        "Many employees now receive most of their work instructions by e-mail rather than in face-to-face meetings. What are the advantages and disadvantages of communicating in this way? Give reasons or examples to support your opinion."
+      ]
+    }
+  },
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t1-1-e1",
+          "passageRef": "p1",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Dấu hiệu là cụm «Do you agree or disagree with this statement?» đi kèm một câu khẳng định đặt trước nó. Khuôn đúng: chọn dứt khoát một phe ngay ở mở bài, rồi 2–3 lý do, mỗi lý do một ví dụ. Đứng giữa hai phe cho an toàn là cách chắc chắn nhất để cả bài không có luận điểm nào."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-1-e2",
+          "passageRef": "p2",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Khuôn «Some people… Others… Which do you prefer?» luôn là chọn 1 trong 2. Bẫy của dạng này là tả đều cả hai bên như một bài so sánh rồi quên mất phải chọn. Bài đúng phải nghiêng hẳn về một bên, và dành đúng một câu nhượng bộ để nói vì sao bên kia kém hơn."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-1-e3",
+          "passageRef": "p3",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["D"],
+          "explanation": "«What are the advantages and disadvantages…» KHÔNG yêu cầu bạn chọn phe ngay. Đây là dạng bị làm hỏng nhiều nhất: phản xạ «chọn phe» kéo người viết tuyên bố lập trường ngay mở bài, thế là mất luôn nửa nội dung đề đòi. Đúng khuôn là một đoạn ưu, một đoạn nhược, rồi mới ngả về một bên ở kết bài."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-1-e4",
+          "passageRef": "p4",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "Đề liệt kê đúng ba lựa chọn rồi hỏi chọn cái nào. Khác chọn-1-trong-2 ở chỗ: bạn phải LOẠI BỎ hai cái còn lại có lý do, không được lờ chúng đi. Bài chỉ khen lựa chọn của mình mà không đụng tới hai cái kia sẽ bị đọc thành «không đọc kỹ đề»."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-1-e5",
+          "passageRef": "p5",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["E"],
+          "explanation": "«What is the most effective way…» không cho sẵn lựa chọn nào. Đây là dạng làm nhiều người đứng hình mấy phút đầu rồi hết giờ trước khi đủ 300 từ. Cách gỡ: tự đặt ra 2–3 hạng mục trước (ví dụ: học từ đồng nghiệp · đọc tài liệu nội bộ · làm thử việc thật), rồi chọn một hạng mục và chống đỡ nó."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-1-e6",
+          "passageRef": "p6",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["F"],
+          "explanation": "«Do you think schools should do this?» hỏi về một chính sách, không hỏi cảm nghĩ. Dạng này rất dễ viết mỏng nếu chỉ nói «tôi thấy tiện». Cách làm dày: lập luận theo từng bên chịu tác động — nhà trường, phụ huynh, học sinh — mỗi bên là một lý do riêng."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "labeling",
+          "id": "t1-1-m1",
+          "intro": "Đề TOEIC Q8 gần như luôn có ba phần. Gắn đúng nhãn cho từng câu.",
+          "labels": ["Bối cảnh", "Câu hỏi chính", "Yêu cầu chứng minh"],
+          "sentences": [
+            { "text": "Public libraries have existed for hundreds of years. Today, however, almost any book or article can be found online in a few seconds.", "label": "Bối cảnh" },
+            { "text": "Should cities continue to spend money on public libraries?", "label": "Câu hỏi chính" },
+            { "text": "Give reasons or examples to support your opinion.", "label": "Yêu cầu chứng minh" }
+          ],
+          "explanation": "Bối cảnh chỉ để dựng sân khấu, KHÔNG phải câu hỏi — chép lại nó vào mở bài là phí chữ. Câu hỏi chính quyết định khuôn bài. Câu «Give reasons or examples» là mệnh lệnh chấm điểm: ETS chấm riêng «ý kiến có được chống đỡ bằng lý do hoặc ví dụ không», nên câu này tương đương một tiêu chí."
+        },
+        {
+          "type": "labeling",
+          "id": "t1-1-m2",
+          "intro": "Cùng ba nhãn, đề khác. Chú ý câu bối cảnh lần này dài hơn.",
+          "labels": ["Bối cảnh", "Câu hỏi chính", "Yêu cầu chứng minh"],
+          "sentences": [
+            { "text": "Learning a second language takes years of effort. Some people start as children, while others begin only as adults.", "label": "Bối cảnh" },
+            { "text": "Which age do you think is better for beginning a second language?", "label": "Câu hỏi chính" },
+            { "text": "Give reasons or examples to support your opinion.", "label": "Yêu cầu chứng minh" }
+          ],
+          "explanation": "Câu bối cảnh ở đây có nhắc tới hai lựa chọn (trẻ em / người lớn) nhưng nó vẫn chỉ là bối cảnh — câu hỏi chính mới là chỗ ra lệnh «chọn một». Đọc lướt rồi tưởng đề bảo so sánh hai độ tuổi là cách rơi vào bẫy của dạng chọn-1-trong-2."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-1-m3",
+          "passageRef": "p9",
+          "question": "Đề này giao cho bạn những việc nào? Chọn tất cả.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Nêu các mặt lợi của việc nhận chỉ đạo qua e-mail" },
+            { "id": "B", "text": "Nêu các mặt hại của việc nhận chỉ đạo qua e-mail" },
+            { "id": "C", "text": "Chống đỡ mỗi ý bằng lý do hoặc ví dụ" },
+            { "id": "D", "text": "Tuyên bố ngay ở mở bài rằng e-mail tốt hơn họp trực tiếp" },
+            { "id": "E", "text": "Đề xuất một cách liên lạc thứ ba" }
+          ],
+          "correctAnswers": ["A", "B", "C"],
+          "explanation": "Ba việc: ưu, nhược, và chống đỡ. D là bẫy chính của dạng ưu–nhược — tuyên bố lập trường ngay mở bài sẽ kéo cả bài lệch về một phía và bỏ mất nửa yêu cầu. E là việc đề không giao; thêm vào chỉ tốn chữ mà không được điểm nào."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-1-m4",
+          "passageRef": "p4",
+          "question": "Đề này giao cho bạn những việc nào? Chọn tất cả.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Chọn đúng một trong ba phương án" },
+            { "id": "B", "text": "Nói vì sao hai phương án còn lại kém hơn" },
+            { "id": "C", "text": "Chống đỡ lựa chọn bằng lý do hoặc ví dụ" },
+            { "id": "D", "text": "Tính toán chi phí của từng phương án" },
+            { "id": "E", "text": "Mô tả kỹ cả ba phương án với thời lượng ngang nhau" }
+          ],
+          "correctAnswers": ["A", "B", "C"],
+          "explanation": "B là việc dễ bị bỏ quên nhất ở dạng chọn-1-trong-3, dù nó chính là thứ phân biệt dạng này với chọn-1-trong-2. D là việc đề không hỏi. E sai vì mô tả đều ba phương án tức là chưa chọn — mà chọn mới là việc đề giao."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-1-m5",
+          "passageRef": "p7",
+          "question": "Bài nào dưới đây trả lời ĐÚNG việc đề giao?",
+          "options": [
+            { "id": "A", "text": "Một bài kể lại lịch sử thư viện công cộng và giải thích vì sao chúng từng quan trọng." },
+            { "id": "B", "text": "Một bài lập luận rằng thành phố nên tiếp tục chi tiền cho thư viện, với ba lý do có ví dụ." },
+            { "id": "C", "text": "Một bài so sánh sách giấy với sách điện tử về giá và độ tiện." },
+            { "id": "D", "text": "Một bài liệt kê các dịch vụ mà thư viện hiện đại đang cung cấp." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Cả bốn bài đều nói về thư viện, nhưng chỉ B trả lời câu hỏi «có nên tiếp tục chi tiền không». A, C, D đúng chủ đề mà lệch việc — đây chính là thứ ETS gọi là «mức độ đáp ứng nhiệm vụ đáng ngờ» ở mốc 1. Một bài tiếng Anh khá vẫn rơi xuống 1–2 nếu mắc lỗi này."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "mission_audit",
+          "id": "t1-1-h1",
+          "directions": "Many companies now allow their staff to work from home several days a week. What are the advantages and disadvantages of this arrangement? Give reasons or examples to support your opinion.",
+          "draft": [
+            "Working from home is clearly better than working in an office, and I strongly support it.",
+            "First, employees save the time they would spend travelling. My cousin used to spend two hours a day on the bus, and now she uses that time to sleep and cook.",
+            "Second, people can work in a quiet room instead of a noisy office, so they finish tasks faster.",
+            "For these reasons, every company should let its staff work from home."
+          ],
+          "missions": [
+            { "text": "Nêu các mặt lợi", "done": true },
+            { "text": "Nêu các mặt hại", "done": false },
+            { "text": "Chống đỡ ý bằng lý do hoặc ví dụ", "done": true }
+          ],
+          "explanation": "Bài nháp này viết khá trôi chảy nhưng bỏ trắng đúng một nửa đề. Câu mở bài «clearly better… I strongly support it» đã biến bài ưu–nhược thành bài đồng ý/phản đối ngay từ dòng đầu, và mọi thứ sau đó chỉ còn đi một chiều. Tiếng Anh tốt không cứu được lỗi này."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t1-1-h2",
+          "directions": "A company wants to thank its staff after a successful year. It is considering three options: a cash bonus, five extra vacation days, or a company trip abroad. Which option should the company choose? Give reasons or examples to support your opinion.",
+          "draft": [
+            "A cash bonus is the best of the three options.",
+            "Money is flexible: one employee may need it for rent, while another may want to buy a laptop.",
+            "For example, a colleague of mine used his bonus to pay for an evening course that later helped him get promoted.",
+            "A company trip sounds exciting, but staff with small children often cannot travel, so the reward would not reach everyone.",
+            "In conclusion, the company should give a cash bonus."
+          ],
+          "missions": [
+            { "text": "Chọn đúng một trong ba phương án", "done": true },
+            { "text": "Nói vì sao phương án «du lịch công ty» kém hơn", "done": true },
+            { "text": "Nói vì sao phương án «thêm ngày nghỉ» kém hơn", "done": false },
+            { "text": "Chống đỡ lựa chọn bằng lý do hoặc ví dụ", "done": true }
+          ],
+          "explanation": "Bài này làm khá tốt: có chọn, có ví dụ cụ thể, có loại bỏ một phương án. Nhưng nó bỏ quên phương án «thêm ngày nghỉ» — ở dạng chọn-1-trong-3, mỗi phương án bị lờ đi là một mảng đề không được đụng tới. Sửa chỉ tốn một câu, mà không sửa thì mất điểm ở trục «trả lời đúng việc»."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t1-1-h3",
+          "directions": "Some managers believe that employees work better when they are allowed to choose their own working hours. Do you agree or disagree with this statement? Give reasons or examples to support your opinion.",
+          "draft": [
+            "There are good arguments on both sides of this question.",
+            "On the one hand, flexible hours let people work when they concentrate best.",
+            "On the other hand, a team whose members arrive at different times may find it hard to hold meetings.",
+            "Both arrangements have their place, and it depends on the company."
+          ],
+          "missions": [
+            { "text": "Nêu rõ mình đồng ý hay phản đối", "done": false },
+            { "text": "Đưa ra lý do", "done": true },
+            { "text": "Chống đỡ lý do bằng ví dụ cụ thể", "done": false }
+          ],
+          "explanation": "«It depends» nghe có vẻ chín chắn nhưng ở dạng đồng ý/phản đối thì đó là không trả lời. Bài không có luận điểm nào để chống đỡ, nên hai lý do bên trên cũng chẳng phục vụ ai. Thêm nữa, cả hai lý do đều dừng ở mức khái quát, không có một ví dụ cụ thể nào — đúng thứ ETS mô tả ở mốc 2."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t1-1-h4",
+          "directions": "In your opinion, what is the most effective way for a new employee to learn how a company works? Give reasons or examples to support your opinion.",
+          "draft": [
+            "In my opinion, the most effective way is to work beside an experienced colleague for the first few weeks.",
+            "Reading the staff handbook is useful, and attending training sessions helps too, but neither shows a newcomer how decisions are really made.",
+            "Sitting next to someone who has been there for years lets a new employee hear real phone calls and watch real problems being solved.",
+            "When I joined my current company, I learned more in one afternoon of listening to my manager negotiate with a supplier than in three days of orientation slides."
+          ],
+          "missions": [
+            { "text": "Nêu rõ một cách được cho là hiệu quả nhất", "done": true },
+            { "text": "Tự đặt ra và cân nhắc vài phương án khác", "done": true },
+            { "text": "Chống đỡ bằng lý do hoặc ví dụ cụ thể", "done": true },
+            { "text": "Kết lại bằng một câu khẳng định lựa chọn", "done": false }
+          ],
+          "explanation": "Ba việc đầu bài này làm rất tốt, và đáng chú ý ở chỗ nó tự dựng ra ba hạng mục (kèm người có kinh nghiệm · đọc sổ tay · dự buổi đào tạo) dù đề không cho sẵn lựa chọn nào — đó chính là cách gỡ dạng câu hỏi mở. Nhưng bài dừng ngay sau ví dụ, không có câu kết nào. Bài luận kết thúc bằng một mẩu chuyện khiến người chấm phải tự rút ra kết luận thay bạn, và ETS xếp «tổ chức bài» thành một tiêu chí riêng."
+        }
+      ]
+    }
+  ]
+}

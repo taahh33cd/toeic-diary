@@ -1,0 +1,231 @@
+{
+  "passages": {
+    "essay1": {
+      "kind": "essay",
+      "title": "Bài mẫu — đề: nên sống ở thành phố lớn hay thị trấn nhỏ?",
+      "body": [
+        "Where to live is one of the first big decisions people make once they finish their studies. I would choose a small town, mainly because of what it costs and what it gives back.",
+        "The clearest advantage is money. Rent in a small town is a fraction of what a city charges for the same space. My cousin pays half what I do for an apartment twice the size of mine, and the difference covers a holiday every year.",
+        "The second advantage is harder to measure but matters more. In a small town people actually know their neighbours. When my grandmother fell last winter, three people from her street were at her door within ten minutes.",
+        "A city offers more restaurants and more concerts, and I understand why that attracts people. For me, however, a lower rent and a street where someone would notice if I disappeared are worth more than a wider choice of Friday evenings."
+      ]
+    },
+    "para1": {
+      "kind": "paragraph",
+      "title": "Một đoạn thân bài",
+      "body": [
+        "Free transport also changes who can move around the city. For people on low incomes, the monthly fare is not a small line in the budget but a real burden. A cleaner in my building used to spend nearly a tenth of her wages simply getting to work and back. Since the city removed fares last year, that money has stayed in her pocket."
+      ]
+    },
+    "para2": {
+      "kind": "paragraph",
+      "title": "Một đoạn thân bài",
+      "body": [
+        "New employees are the ones who lose most when a team works from home. Much of what a beginner needs to know is never written down anywhere. A junior who joined our team in March has still never heard anyone handle an angry client on the phone. When she faced one herself in July, she had nothing to copy."
+      ]
+    }
+  },
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "labeling",
+          "id": "t4-1-e1",
+          "intro": "Đây là mở bài và một đoạn thân bài. Gắn chức năng cho từng câu.",
+          "labels": ["Bối cảnh", "Luận điểm", "Câu chủ đề của đoạn", "Ví dụ cụ thể"],
+          "sentences": [
+            { "text": "Where to live is one of the first big decisions people make once they finish their studies.", "label": "Bối cảnh" },
+            { "text": "I would choose a small town, mainly because of what it costs and what it gives back.", "label": "Luận điểm" },
+            { "text": "The clearest advantage is money.", "label": "Câu chủ đề của đoạn" },
+            { "text": "My cousin pays half what I do for an apartment twice the size of mine.", "label": "Ví dụ cụ thể" }
+          ],
+          "explanation": "Bốn chức năng, bốn công việc khác nhau. Câu bối cảnh chỉ mở cửa cho người đọc bước vào; câu luận điểm mới là chỗ bạn cam kết một lập trường. Nhiều bài mất điểm vì viết ba câu bối cảnh rồi hết chỗ cho luận điểm."
+        },
+        {
+          "type": "labeling",
+          "id": "t4-1-e2",
+          "intro": "Đoạn thân bài thứ hai của cùng bài luận đó.",
+          "labels": ["Câu chủ đề của đoạn", "Giải thích", "Ví dụ cụ thể"],
+          "sentences": [
+            { "text": "The second advantage is harder to measure but matters more.", "label": "Câu chủ đề của đoạn" },
+            { "text": "In a small town people actually know their neighbours.", "label": "Giải thích" },
+            { "text": "When my grandmother fell last winter, three people from her street were at her door within ten minutes.", "label": "Ví dụ cụ thể" }
+          ],
+          "explanation": "Chú ý câu chủ đề ở đây không nói nội dung lợi ích là gì, nó chỉ báo rằng sắp có lợi ích thứ hai. Câu giải thích mới nói nội dung. Cách này giữ được mạch giữa hai đoạn — người đọc biết mình đang ở lý do thứ mấy trước khi biết lý do đó là gì."
+        },
+        {
+          "type": "labeling",
+          "id": "t4-1-e3",
+          "intro": "Kết bài của cùng bài luận. Gắn chức năng cho từng câu.",
+          "labels": ["Nhượng bộ phía bên kia", "Nhắc lại lập trường"],
+          "sentences": [
+            { "text": "A city offers more restaurants and more concerts, and I understand why that attracts people.", "label": "Nhượng bộ phía bên kia" },
+            { "text": "For me, however, a lower rent and a street where someone would notice if I disappeared are worth more than a wider choice of Friday evenings.", "label": "Nhắc lại lập trường" }
+          ],
+          "explanation": "Kết bài mạnh nhất không phải kết bài tóm tắt lại ba đoạn trên. Kiểu này thừa nhận bên kia có lý rồi mới khẳng định lại lựa chọn của mình — nó cho thấy bạn cân nhắc chứ không phiến diện, mà vẫn không hề đứng giữa hai phe."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-1-e4",
+          "passageRef": "para1",
+          "question": "Câu nào là câu chủ đề của đoạn này?",
+          "options": [
+            { "id": "A", "text": "Free transport also changes who can move around the city." },
+            { "id": "B", "text": "For people on low incomes, the monthly fare is not a small line in the budget but a real burden." },
+            { "id": "C", "text": "A cleaner in my building used to spend nearly a tenth of her wages simply getting to work and back." },
+            { "id": "D", "text": "Since the city removed fares last year, that money has stayed in her pocket." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Câu chủ đề là câu bao trùm cả đoạn và nối đoạn này với đoạn trước — chữ «also» làm đúng việc nối đó. B giải thích, C là ví dụ, D là hệ quả. Một đoạn thiếu câu chủ đề vẫn đọc hiểu được, nhưng người chấm sẽ thấy các đoạn rời rạc, đúng thứ ETS gọi là «nối ý bị che khuất» ở mốc 3."
+        },
+        {
+          "type": "mcq",
+          "id": "t4-1-e5",
+          "passageRef": "para2",
+          "question": "Câu nào là câu chủ đề của đoạn này?",
+          "options": [
+            { "id": "A", "text": "Much of what a beginner needs to know is never written down anywhere." },
+            { "id": "B", "text": "New employees are the ones who lose most when a team works from home." },
+            { "id": "C", "text": "A junior who joined our team in March has still never heard anyone handle an angry client on the phone." },
+            { "id": "D", "text": "When she faced one herself in July, she had nothing to copy." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "B nêu ra ý của cả đoạn: ai là người thiệt nhất. A nghe cũng giống câu bao quát, nhưng nó chỉ giải thích cơ chế đằng sau ý ở B. Thử bỏ từng câu đi rồi đọc lại — bỏ B thì đoạn mất phương hướng, bỏ A thì đoạn vẫn đứng được."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "ordering",
+          "id": "t4-1-m1",
+          "prompt": "Xếp lại dàn ý bốn đoạn. Đề: có nên miễn phí phương tiện công cộng không?",
+          "items": [
+            "Mở bài — nêu bối cảnh vài thành phố đã bỏ vé, rồi khẳng định các thành phố khác cũng nên làm theo",
+            "Thân bài 1 — ít xe cá nhân hơn, kèm ví dụ một thành phố cụ thể",
+            "Thân bài 2 — giúp đúng nhóm người cần nhất, kèm ví dụ một người cụ thể",
+            "Kết bài — thừa nhận ngân sách thành phố sẽ chịu áp lực, rồi khẳng định lại lợi ích lớn hơn"
+          ],
+          "explanation": "Khung bốn đoạn cho một bài 300 từ: mở bài ngắn, hai đoạn thân bài mỗi đoạn một lý do, kết bài có nhượng bộ. Đừng làm ba đoạn thân bài trong 30 phút — hai đoạn được đào sâu ăn điểm hơn ba đoạn hời hợt, vì ETS chấm độ khai triển chứ không đếm số lý do."
+        },
+        {
+          "type": "ordering",
+          "id": "t4-1-m2",
+          "prompt": "Xếp lại dàn ý. Đề ƯU & NHƯỢC: làm việc tại nhà vài ngày mỗi tuần.",
+          "items": [
+            "Mở bài — nêu bối cảnh, báo trước rằng bài sẽ xét cả hai mặt, KHÔNG chọn phe",
+            "Thân bài 1 — các mặt lợi, kèm ví dụ cụ thể",
+            "Thân bài 2 — các mặt hại, kèm ví dụ cụ thể",
+            "Kết bài — đây mới là chỗ ngả về một bên"
+          ],
+          "explanation": "Khung của dạng ưu–nhược khác đúng hai chỗ so với dạng đồng ý/phản đối: mở bài KHÔNG chọn phe, và kết bài mới chọn. Nhớ được hai chỗ này là tránh được cái bẫy lớn nhất của dạng đề bị làm hỏng nhiều nhất."
+        },
+        {
+          "type": "ordering",
+          "id": "t4-1-m3",
+          "prompt": "Xếp lại dàn ý. Đề CHỌN 1 TRONG 3: công ty nên thưởng nhân viên bằng cách nào?",
+          "items": [
+            "Mở bài — nhắc rằng có ba phương án, rồi nêu rõ mình chọn phương án nào",
+            "Thân bài 1 — lý do chính khiến phương án đã chọn là tốt nhất, kèm ví dụ",
+            "Thân bài 2 — vì sao hai phương án còn lại kém hơn, mỗi phương án ít nhất một câu",
+            "Kết bài — khẳng định lại lựa chọn"
+          ],
+          "explanation": "Thân bài 2 là chỗ dạng chọn-1-trong-3 khác hẳn mọi dạng khác. Bỏ đoạn này thì bài vẫn trôi chảy, nhưng hai phần ba đề bị lờ đi. Không cần mỗi phương án một đoạn — một câu cho mỗi phương án đã đủ để chứng minh bạn đọc kỹ đề."
+        },
+        {
+          "type": "labeling",
+          "id": "t4-1-m4",
+          "intro": "Một mở bài đủ chuẩn có ba nhịp. Gắn nhãn cho từng câu.",
+          "labels": ["Bối cảnh", "Thu hẹp về đúng câu hỏi", "Luận điểm kèm hé lộ lý do"],
+          "sentences": [
+            { "text": "Almost every company now uses e-mail to send instructions that were once given face to face.", "label": "Bối cảnh" },
+            { "text": "Whether this saves time or simply creates new problems is not obvious.", "label": "Thu hẹp về đúng câu hỏi" },
+            { "text": "In my view the change has helped more than it has hurt, both because instructions can be checked later and because quiet staff get a fairer hearing.", "label": "Luận điểm kèm hé lộ lý do" }
+          ],
+          "explanation": "Nhịp giữa là nhịp hay bị bỏ nhất, nhưng nó làm việc quan trọng: kéo người đọc từ chủ đề rộng về đúng câu hỏi của đề. Câu luận điểm cuối hé sẵn hai lý do, nên người chấm biết trước bài sẽ đi đâu — chính là thứ ETS gọi là «có tiến triển»."
+        },
+        {
+          "type": "labeling",
+          "id": "t4-1-m5",
+          "intro": "Bốn câu này lấy từ bốn đoạn khác nhau của cùng một bài. Gắn nhãn đoạn cho từng câu.",
+          "labels": ["Mở bài", "Thân bài 1", "Thân bài 2", "Kết bài"],
+          "sentences": [
+            { "text": "In my view, children have the clear advantage when it comes to starting a second language.", "label": "Mở bài" },
+            { "text": "The first reason is that children copy sounds without judging them.", "label": "Thân bài 1" },
+            { "text": "A second and less obvious reason is that children are not embarrassed by their mistakes.", "label": "Thân bài 2" },
+            { "text": "Adults certainly study grammar more efficiently, but an accent formed in childhood is something no amount of grammar can replace.", "label": "Kết bài" }
+          ],
+          "explanation": "Bốn câu này nhận ra được nhờ tín hiệu ngôn ngữ chứ không nhờ nội dung: «In my view» mở lập trường, «The first reason» và «A second… reason» đánh số, «certainly… but» là khuôn nhượng bộ của kết bài. Người chấm cũng đọc theo đúng những tín hiệu đó."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "ordering",
+          "id": "t4-1-h1",
+          "prompt": "Dựng lại toàn bộ bài luận từ các câu xáo trộn. Đề: thành phố lớn hay thị trấn nhỏ?",
+          "items": [
+            "Where to live is one of the first big decisions people make once they finish their studies.",
+            "I would choose a small town, mainly because of what it costs and what it gives back.",
+            "The clearest advantage is money.",
+            "My cousin pays half what I do for an apartment twice the size of mine, and the difference covers a holiday every year.",
+            "The second advantage is harder to measure but matters more.",
+            "When my grandmother fell last winter, three people from her street were at her door within ten minutes.",
+            "A city offers more restaurants and more concerts, and I understand why that attracts people.",
+            "For me, however, a lower rent and a street where someone would notice if I disappeared are worth more than a wider choice of Friday evenings."
+          ],
+          "explanation": "Tám câu, bốn đoạn, hai câu mỗi đoạn — đây là khung gọn nhất còn đủ điểm. Để ý mỗi cặp câu đều theo nhịp «nêu ý rồi chứng minh ngay», không có câu nào chỉ để lấp chỗ. Trong 30 phút, khung này an toàn hơn nhiều so với việc cố viết ba đoạn thân bài."
+        },
+        {
+          "type": "ordering",
+          "id": "t4-1-h2",
+          "prompt": "Dựng lại bài luận dạng ƯU & NHƯỢC. Đề: nhận chỉ đạo công việc qua e-mail.",
+          "items": [
+            "Almost every company now uses e-mail to send instructions that were once given face to face.",
+            "This change has brought real gains, but it has also created problems that are easy to overlook.",
+            "The main benefit is that a written instruction can be checked again later.",
+            "Last month I reread a message from my manager and found a deadline I had completely forgotten during our conversation.",
+            "The main drawback is that tone disappears from written messages.",
+            "A short reply meaning simply that a colleague was busy was read by our whole team as anger, and two people spent a day avoiding him.",
+            "On balance I would keep e-mail for anything with a date or a number in it, and keep the difficult conversations for a room with people in it."
+          ],
+          "explanation": "Chú ý câu thứ hai KHÔNG chọn phe, còn câu cuối thì có — và nó chọn theo kiểu tinh tế hơn «cái này tốt hơn cái kia»: nó phân chia phạm vi dùng cho từng cái. Kết bài kiểu này rất hợp dạng ưu–nhược vì nó ngả về một bên mà không phủ nhận nửa còn lại của bài."
+        },
+        {
+          "type": "ordering",
+          "id": "t4-1-h3",
+          "prompt": "Dựng lại bài luận dạng CHỌN 1 TRONG 3. Đề: công ty nên cải tạo phần nào của văn phòng?",
+          "items": [
+            "A company with money to spend on its office has to decide where that money will do the most good.",
+            "Of the three options, I believe a quiet room for focused work would change the most for the most people.",
+            "The reason is simple: our office has plenty of places to talk and nowhere at all to think.",
+            "Last quarter I wrote an entire report sitting in a stairwell because it was the only silent place in the building.",
+            "New chairs and desks would certainly be welcome, but a comfortable seat in a noisy room does not help anyone concentrate.",
+            "Rebuilding the meeting rooms would help even less, since the rooms we already have stand empty half of every afternoon.",
+            "A quiet room is the only one of the three that gives us something the building does not already have."
+          ],
+          "explanation": "Bài này dành đúng hai câu để loại bỏ hai phương án còn lại, và mỗi câu loại bỏ đều có lý do riêng chứ không chỉ nói «kém hơn». Câu kết cũng không lặp lại mở bài mà nêu ra tiêu chí chung đằng sau lựa chọn — đó là cách kết bài thoát khỏi kiểu chép lại."
+        },
+        {
+          "type": "ordering",
+          "id": "t4-1-h4",
+          "prompt": "Dựng lại bài luận dạng CHÍNH SÁCH. Đề: trường học có nên lắp máy bán hàng tự động?",
+          "items": [
+            "Vending machines in school hallways look like a small convenience, but they affect more people than they first appear to.",
+            "In my opinion schools should not install them, because the cost falls on students while the benefit falls on the machine's owner.",
+            "For students, the machines quietly replace meals with snacks.",
+            "The school nearest my house put in two machines, and within a term the queue at the canteen had visibly shortened at lunchtime.",
+            "For parents, the machines turn every school day into a small negotiation about money.",
+            "A neighbour told me she now sends her son to school with no coins at all, simply to end the daily argument.",
+            "A school that wants students to eat properly should not place the alternative in the corridor outside the classroom."
+          ],
+          "explanation": "Đây là bài lập luận theo TỪNG BÊN LIÊN QUAN — học sinh một đoạn, phụ huynh một đoạn — thay vì chỉ nói cảm nghĩ cá nhân. Đó là cách làm dày một bài dạng chính sách, và nó cho bạn sẵn hai đoạn thân bài mà không cần nghĩ thêm lý do nào."
+        }
+      ]
+    }
+  ]
+}

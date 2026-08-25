@@ -1,0 +1,233 @@
+{
+  "passages": {
+    "p1": {
+      "kind": "prompt",
+      "body": [
+        "Some managers believe that employees work better when they are allowed to choose their own working hours. Do you agree or disagree with this statement? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p2": {
+      "kind": "prompt",
+      "body": [
+        "Some people prefer to live in a large city. Others prefer to live in a small town. Which do you prefer? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p3": {
+      "kind": "prompt",
+      "body": [
+        "Many companies now allow their staff to work from home several days a week. What are the advantages and disadvantages of this arrangement? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p4": {
+      "kind": "prompt",
+      "body": [
+        "A company has money to improve one part of its office. It could rebuild the meeting rooms, buy new chairs and desks, or create a quiet room for focused work. Which should the company choose? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p5": {
+      "kind": "prompt",
+      "body": [
+        "Some cities have made their public transport free for everyone. Do you think other cities should do the same? Give reasons or examples to support your opinion."
+      ]
+    }
+  },
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t2-1-e1",
+          "passageRef": "p1",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Some managers believe that employees work better when they choose their own working hours." },
+            { "id": "B", "text": "There are many things to say about working hours in modern companies." },
+            { "id": "C", "text": "I agree that employees work better when they can choose their own working hours." },
+            { "id": "D", "text": "Flexible working hours can be good for some people and bad for others." }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "A chép lại nguyên câu đề — tốn chữ mà không nêu lập trường nào. B nói suông, không cho biết bạn nghĩ gì. D đứng giữa hai phe, tức là chưa trả lời. Chỉ C nói rõ «tôi đồng ý» và nhắc lại nội dung để người chấm thấy bạn hiểu đúng đề."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-1-e2",
+          "passageRef": "p2",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Both large cities and small towns have advantages and disadvantages." },
+            { "id": "B", "text": "I would rather live in a small town, mainly because of the cost of living and the sense of community." },
+            { "id": "C", "text": "Living in a large city is very expensive nowadays." },
+            { "id": "D", "text": "This is a difficult question because it depends on each person's situation." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "A và D đều là kiểu «tuỳ người» — với dạng chọn-1-trong-2 thì đó là không chọn. C nêu một nhận định về thành phố lớn nhưng không cho biết bạn thích sống ở đâu. B vừa chọn dứt khoát, vừa hé ra hai lý do sẽ triển khai — người chấm đọc một câu đã hình dung được cả bài."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-1-e3",
+          "passageRef": "p3",
+          "question": "Câu mở bài nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Working from home is clearly the better arrangement, and companies should adopt it everywhere." },
+            { "id": "B", "text": "Working from home has become common, and it brings both real benefits and real difficulties." },
+            { "id": "C", "text": "I disagree with the idea that people should be allowed to work from home." },
+            { "id": "D", "text": "Working from home means doing your job in your house instead of in an office." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Đây là dạng ưu–nhược, KHÔNG đòi chọn phe ở mở bài. A và C đều chọn phe ngay, thế là nửa còn lại của đề bị bỏ. D chỉ định nghĩa lại khái niệm, không đưa được bài đi đâu. B báo trước rằng bài sẽ đi cả hai chiều — đúng thứ đề giao."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-1-e4",
+          "passageRef": "p4",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "New chairs and desks would make the office much more comfortable for everyone." },
+            { "id": "B", "text": "Of the three options, I believe the company should create a quiet room for focused work." },
+            { "id": "C", "text": "All three options would improve the office in different ways." },
+            { "id": "D", "text": "The company should think carefully before spending money on the office." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "B là câu duy nhất vừa chọn, vừa cho thấy người viết biết có ba phương án — cụm «Of the three options» chính là tín hiệu bạn đã đọc kỹ đề. A có chọn nhưng nói như thể chỉ có một phương án tồn tại. C không chọn. D né hẳn câu hỏi."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-1-e5",
+          "passageRef": "p5",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Free public transport is an interesting idea that many cities are discussing today." },
+            { "id": "B", "text": "Public transport in my city is often crowded and arrives late." },
+            { "id": "C", "text": "Yes, I think so, because it is good for everyone." },
+            { "id": "D", "text": "Other cities should indeed make public transport free, because the benefits reach residents, businesses and the environment alike." }
+          ],
+          "correctAnswers": ["D"],
+          "explanation": "C tuy có trả lời nhưng «good for everyone» rỗng tới mức không chống đỡ được gì. A và B lạc khỏi câu hỏi «có nên hay không». D vừa trả lời dứt khoát, vừa nêu ba bên chịu tác động — đó là cách làm dày một bài dạng chính sách, thay vì chỉ nói cảm nghĩ cá nhân."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "type_blank",
+          "id": "t2-1-m1",
+          "prompt": "Khuôn luận điểm cho dạng ĐỒNG Ý / PHẢN ĐỐI",
+          "vi": "Tôi hoàn toàn đồng tình với ý kiến rằng nhân viên nên được chọn giờ làm việc của mình.",
+          "sentence": "I strongly ___ with the idea that employees should be allowed to choose their own working hours.",
+          "answers": ["agree"],
+          "explanation": "Động từ «agree» đi với giới từ «with» khi theo sau là một ý kiến. Đừng viết «I strongly agree that…» rồi thêm «with» — chỉ dùng một trong hai. Cụm «strongly» làm lập trường rõ hơn, và ở dạng này thì rõ luôn tốt hơn là dè dặt."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-1-m2",
+          "prompt": "Khuôn luận điểm cho dạng CHỌN 1 TRONG 2",
+          "vi": "Dù cả hai lựa chọn đều có cái hay, tôi thích làm cho một công ty nhỏ hơn.",
+          "sentence": "Although both options have their merits, I would ___ ___ work for a small company.",
+          "answers": ["prefer", "to"],
+          "accepted": [["rather"], ["to"]],
+          "explanation": "Hai khuôn đều đúng: «would prefer to work» hoặc «would rather work» (không có «to»). Mệnh đề nhượng bộ mở đầu «Although both options have their merits» cho thấy bạn có cân nhắc bên kia — nhưng nó phải đứng TRƯỚC lựa chọn, chứ không thay thế cho lựa chọn."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-1-m3",
+          "prompt": "Khuôn mở bài cho dạng ƯU & NHƯỢC",
+          "vi": "Làm việc tại nhà mang lại những lợi ích rõ rệt, nhưng nó cũng tạo ra những bất lợi thật sự.",
+          "sentence": "Working from home brings clear ___, but it also creates real ___.",
+          "answers": ["advantages", "disadvantages"],
+          "accepted": [["benefits"], ["drawbacks", "problems", "difficulties"]],
+          "explanation": "Câu này báo trước cấu trúc hai chiều của bài mà không hé lộ bạn nghiêng bên nào — đúng thứ dạng ưu–nhược cần. Chỗ ngả về một bên là kết bài, không phải mở bài."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-1-m4",
+          "prompt": "Khuôn luận điểm cho dạng CHỌN 1 TRONG 3",
+          "vi": "Trong ba phương án, tiền thưởng là lựa chọn tốt nhất.",
+          "sentence": "Of the three options, a cash bonus is ___ ___ choice.",
+          "answers": ["the", "best"],
+          "explanation": "So sánh nhất luôn cần mạo từ «the». Cụm mở đầu «Of the three options» tuy nhỏ nhưng làm được một việc quan trọng: nó chứng minh bạn biết đề có ba phương án, trước cả khi bạn kịp loại bỏ hai cái kia ở thân bài."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-1-m5",
+          "prompt": "Khuôn luận điểm cho dạng NÊN / KHÔNG NÊN",
+          "vi": "Theo tôi, trường học không nên lắp máy bán hàng tự động ở hành lang.",
+          "sentence": "In my view, schools ___ ___ install vending machines in their hallways.",
+          "answers": ["should", "not"],
+          "accepted": [["should"], ["not"]],
+          "explanation": "Dạng chính sách hỏi «nên hay không nên» thì luận điểm phải chứa đúng chữ «should» hoặc «should not» — trả lời bằng «I don't like it» là lệch loại. Viết «shouldn't» cũng đúng, nhưng bài luận thi nên tránh viết tắt."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "error_spot",
+          "id": "t2-1-h1",
+          "intro": "Mở bài cho một đề ĐỒNG Ý / PHẢN ĐỐI. Bấm vào dòng làm hỏng cả bài.",
+          "directions": "Some managers believe that employees work better when they are allowed to choose their own working hours. Do you agree or disagree with this statement?",
+          "lines": [
+            "The way we organise the working day has changed a great deal in the last ten years.",
+            "One question that now divides many managers is whether staff should set their own hours.",
+            "Personally, I can see strong arguments on both sides of this debate.",
+            "In the paragraphs below I will explain what I think about this issue."
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Không chọn phe ở dạng bắt buộc phải chọn",
+          "fix": "Personally, I agree that staff produce better work when they set their own hours.",
+          "explanation": "«Strong arguments on both sides» nghe khách quan và chín chắn, nhưng ở dạng đồng ý/phản đối thì đó là chưa trả lời. Không có luận điểm thì các đoạn thân bài không có gì để chống đỡ, và ETS chấm riêng một tiêu chí về việc ý kiến có được chống đỡ hay không."
+        },
+        {
+          "type": "error_spot",
+          "id": "t2-1-h2",
+          "intro": "Mở bài cho một đề ƯU & NHƯỢC. Bấm vào dòng làm hỏng cả bài.",
+          "directions": "Many companies now allow their staff to work from home several days a week. What are the advantages and disadvantages of this arrangement?",
+          "lines": [
+            "Remote work was once rare, but today millions of people do their jobs from home.",
+            "This change has brought benefits that few people expected ten years ago.",
+            "It has also created difficulties that many companies are still trying to solve.",
+            "Overall, working from home is far better than working in an office, and I will prove it."
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Chọn phe ở dạng KHÔNG đòi chọn phe",
+          "fix": "This essay will look at both sides before reaching a conclusion.",
+          "explanation": "Ba dòng đầu dựng đúng khuôn hai chiều, rồi dòng cuối phá hỏng tất cả. Một khi đã hứa «I will prove it», cả bài sẽ đi một chiều và phần nhược điểm teo lại thành một câu chiếu lệ — mất đúng nửa nội dung đề yêu cầu."
+        },
+        {
+          "type": "error_spot",
+          "id": "t2-1-h3",
+          "intro": "Mở bài cho một đề CHỌN 1 TRONG 2. Bấm vào dòng hỏng.",
+          "directions": "Some people prefer to live in a large city. Others prefer to live in a small town. Which do you prefer?",
+          "lines": [
+            "Where to live is one of the biggest decisions a young person makes.",
+            "Some people prefer to live in a large city, while others prefer to live in a small town.",
+            "I would choose a small town, mainly because of the lower cost of living.",
+            "A quieter place also makes it easier to keep in touch with neighbours and family."
+          ],
+          "errorIndex": 1,
+          "errorLabel": "Chép lại nguyên văn câu đề",
+          "fix": "Both choices attract people for very different reasons.",
+          "explanation": "Chép nguyên si câu đề không được tính là chữ của bạn, và với một bài chỉ 300 từ thì mỗi câu phí là một câu bị mất. ETS còn nói rõ ở mốc 0 rằng bài «chỉ chép lại chữ trong đề» không được điểm — chép một câu chưa tới mức đó, nhưng cũng không đem lại gì."
+        },
+        {
+          "type": "error_spot",
+          "id": "t2-1-h4",
+          "intro": "Mở bài cho một đề CHÍNH SÁCH. Bấm vào dòng hỏng.",
+          "directions": "Some cities have made their public transport free for everyone. Do you think other cities should do the same?",
+          "lines": [
+            "A few cities around the world now let passengers ride buses and trains without paying.",
+            "The idea sounds generous, but it raises hard questions about who pays in the end.",
+            "In my opinion, public transport in my city is slow, crowded and badly maintained.",
+            "Even so, I believe other cities should follow this example, for three reasons."
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Luận điểm nói sang chuyện khác với câu hỏi",
+          "fix": "In my opinion, the benefits of free transport outweigh the cost to the city budget.",
+          "explanation": "Dòng 3 là một nhận xét về chất lượng phương tiện, trong khi đề hỏi «có nên miễn phí không». Đúng chủ đề mà lệch câu hỏi — ETS gọi đây là «mức độ đáp ứng nhiệm vụ đáng ngờ» và xếp nó ở mốc 1. Dòng 4 có trả lời, nhưng người chấm đã đọc dòng 3 trước và thấy bạn trả lời nhầm câu hỏi."
+        }
+      ]
+    }
+  ]
+}
