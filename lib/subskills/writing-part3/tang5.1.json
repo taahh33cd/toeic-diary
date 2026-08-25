@@ -1,0 +1,254 @@
+{
+  "passages": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "compare",
+          "id": "t5-1-e1",
+          "directions": "Hai bản cùng chống đỡ một luận điểm: làm việc tại nhà giúp tiết kiệm thời gian.",
+          "versionA": [
+            "Working from home saves a lot of time.",
+            "People do not have to travel, so they have more time for other things.",
+            "This is a big advantage for many workers."
+          ],
+          "versionB": [
+            "Working from home saves a lot of time.",
+            "My cousin used to leave the house at half past six to reach her office by eight.",
+            "She now starts work at eight from her kitchen table and sleeps until seven."
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B dài hơn nên được nhiều điểm hơn." },
+            { "id": "B", "text": "Bản B thay hai câu khái quát bằng một tình huống có giờ giấc cụ thể." },
+            { "id": "C", "text": "Bản B dùng nhiều từ vựng khó hơn." }
+          ],
+          "correctReason": "B",
+          "explanation": "Hai bản gần bằng nhau về số chữ — cái khác là bản A nói lại luận điểm ba lần bằng ba cách, còn bản B kể một chuyện. «Half past six», «by eight», «until seven» là những chi tiết người khác không đoán ra được, và đó chính là dấu hiệu của ví dụ thật."
+        },
+        {
+          "type": "compare",
+          "id": "t5-1-e2",
+          "directions": "Hai bản cùng chống đỡ: công ty nhỏ giúp nhân viên mới học nhanh hơn.",
+          "versionA": [
+            "In a small company, a new employee learns quickly.",
+            "In my first job at a firm of nine people, I answered client calls in my first week.",
+            "By the third month I had also prepared invoices and sat in on a contract meeting."
+          ],
+          "versionB": [
+            "In a small company, a new employee learns quickly.",
+            "There are fewer people, so everyone has to do many different things.",
+            "This means new staff get experience faster than they would elsewhere."
+          ],
+          "better": "A",
+          "reasons": [
+            { "id": "A", "text": "Bản A kể ra những việc cụ thể đã làm và mốc thời gian đã xảy ra." },
+            { "id": "B", "text": "Bản A có câu mở đầu tốt hơn." },
+            { "id": "C", "text": "Bản A tránh được lỗi ngữ pháp." }
+          ],
+          "correctReason": "A",
+          "explanation": "Bản B không sai gì cả — nó giải thích cơ chế rất hợp lý. Nhưng giải thích không thay được ví dụ: ETS chấm riêng việc bạn có «ví dụ, giải thích hoặc chi tiết thích đáng để minh hoạ» hay không. Bản A có cả cơ chế lẫn bằng chứng."
+        },
+        {
+          "type": "compare",
+          "id": "t5-1-e3",
+          "directions": "Hai bản cùng chống đỡ: phương tiện công cộng miễn phí giúp người thu nhập thấp.",
+          "versionA": [
+            "Free transport helps people who do not earn much.",
+            "For them, the cost of tickets is a serious problem every month.",
+            "Removing fares would make their lives much easier in many ways."
+          ],
+          "versionB": [
+            "Free transport helps people who do not earn much.",
+            "A cleaner in my building used to spend nearly a tenth of her wages getting to work and back.",
+            "Since the city removed fares last year, that money has stayed in her pocket."
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B nêu một người cụ thể và một tỉ lệ đo được." },
+            { "id": "B", "text": "Bản B nghe cảm động hơn." },
+            { "id": "C", "text": "Bản B có cấu trúc câu phức tạp hơn." }
+          ],
+          "correctReason": "A",
+          "explanation": "«Many ways» ở cuối bản A là dấu hiệu cảnh báo: khi bạn viết «nhiều cách» mà không kể ra cách nào, tức là bạn đang hứa chứ chưa chứng minh. Bản B chỉ nêu MỘT người, nhưng một người có thật thắng «nhiều người» nói chung."
+        },
+        {
+          "type": "compare",
+          "id": "t5-1-e4",
+          "directions": "Hai bản cùng chống đỡ: giờ làm linh hoạt khiến việc quản lý khó hơn.",
+          "versionA": [
+            "Flexible hours make a manager's job harder.",
+            "It is difficult to organise a team when people come and go at different times.",
+            "Managers often complain about this problem."
+          ],
+          "versionB": [
+            "Flexible hours make a manager's job harder.",
+            "Last quarter my manager needed eleven days to find a two-hour slot when all six of us were free.",
+            "The meeting finally happened after the deadline it was meant to prepare for."
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B có ba con số và một hậu quả đã xảy ra." },
+            { "id": "B", "text": "Bản B viết ở thì quá khứ nên trang trọng hơn." },
+            { "id": "C", "text": "Bản B ngắn gọn hơn." }
+          ],
+          "correctReason": "A",
+          "explanation": "Câu cuối bản B làm thêm một việc mà bản A không làm: nó cho thấy HẬU QUẢ. Một ví dụ dừng ở chỗ «khó sắp lịch» mới chỉ mô tả; ví dụ đi tiếp tới «họp xong thì đã quá hạn» mới chứng minh được rằng cái khó đó có giá."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "compare",
+          "id": "t5-1-m1",
+          "directions": "Cả hai bản đều có chi tiết cụ thể. Bản nào dùng chi tiết ĐÚNG CHỖ?",
+          "versionA": [
+            "Reading reviews before a film can spoil the experience.",
+            "Last summer I went to a cinema on Nguyen Hue street with two friends on a rainy Saturday.",
+            "We bought popcorn and sat in the fourth row."
+          ],
+          "versionB": [
+            "Reading reviews before a film can spoil the experience.",
+            "A review I read last summer mentioned the ending in its second paragraph.",
+            "I spent the whole film waiting for something I already knew was coming."
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B có nhiều chi tiết hơn." },
+            { "id": "B", "text": "Chi tiết của bản B chứng minh đúng luận điểm, còn chi tiết bản A chỉ là trang trí." },
+            { "id": "C", "text": "Bản A dùng sai thì." }
+          ],
+          "correctReason": "B",
+          "explanation": "Đây là bẫy tinh vi hơn «chung chung so với cụ thể»: bản A RẤT cụ thể — có tên phố, có thời tiết, có số hàng ghế — nhưng không chi tiết nào trong đó liên quan tới việc đọc bài đánh giá. Chi tiết chỉ có giá trị khi nó phục vụ luận điểm; còn lại là tốn chữ trong một bài chỉ 300 từ."
+        },
+        {
+          "type": "compare",
+          "id": "t5-1-m2",
+          "directions": "Cả hai bản đều kể chuyện thật. Bản nào chống đỡ được luận điểm?",
+          "versionA": [
+            "Learning with other people keeps a learner motivated.",
+            "I gave up learning Japanese twice on my own.",
+            "Then I finished a whole textbook with two classmates who met me every Tuesday."
+          ],
+          "versionB": [
+            "Learning with other people keeps a learner motivated.",
+            "I studied Japanese with a group of classmates for two years.",
+            "Japanese is a difficult language with three writing systems."
+          ],
+          "better": "A",
+          "reasons": [
+            { "id": "A", "text": "Bản A đối chiếu học một mình với học cùng người khác, đúng thứ luận điểm nói." },
+            { "id": "B", "text": "Bản A nhắc tới thứ Ba nên cụ thể hơn." },
+            { "id": "C", "text": "Bản B sai vì tiếng Nhật không có ba hệ chữ." }
+          ],
+          "correctReason": "A",
+          "explanation": "Bản B kể chuyện thật nhưng không có mốc so sánh: học nhóm hai năm rồi sao? Câu cuối còn lạc hẳn sang độ khó của tiếng Nhật. Bản A mạnh vì có ĐỐI CHIẾU — thất bại theo cách A, thành công theo cách B — nên tự nó là một lập luận."
+        },
+        {
+          "type": "compare",
+          "id": "t5-1-m3",
+          "directions": "Bản nào khai triển ý đủ sâu cho một đoạn thân bài?",
+          "versionA": [
+            "New employees learn less when the team works from home.",
+            "Much of what a beginner needs to know is never written down anywhere.",
+            "A junior who joined in March has still never heard anyone handle an angry client.",
+            "When she faced one herself in July, she had nothing to copy."
+          ],
+          "versionB": [
+            "New employees learn less when the team works from home.",
+            "They cannot see their colleagues, so they cannot learn from them.",
+            "Training materials are not enough to replace this.",
+            "Companies should think about this problem carefully."
+          ],
+          "better": "A",
+          "reasons": [
+            { "id": "A", "text": "Bản A đi đủ bốn nhịp: nêu ý, giải thích cơ chế, ví dụ, hậu quả." },
+            { "id": "B", "text": "Bản A có câu kết luận rõ ràng hơn." },
+            { "id": "C", "text": "Bản A dùng nhiều từ nối hơn." }
+          ],
+          "correctReason": "A",
+          "explanation": "Bản B có bốn câu, đúng bằng bản A, nhưng ba câu sau chỉ là ba cách nói lại câu đầu, rồi kết bằng một lời khuyên không ai cần. Bản A cũng bốn câu mà đi được từ nhận định tới một hậu quả cụ thể. Độ dài như nhau, độ sâu khác nhau — ETS chấm cái sau."
+        },
+        {
+          "type": "compare",
+          "id": "t5-1-m4",
+          "directions": "Bản nào là ví dụ, bản nào chỉ là luận điểm viết lại lần nữa?",
+          "versionA": [
+            "Children are less afraid of making mistakes than adults are.",
+            "This is why they are willing to try even when they are not sure.",
+            "Adults, on the other hand, worry too much about being wrong."
+          ],
+          "versionB": [
+            "Children are less afraid of making mistakes than adults are.",
+            "My son happily asks tourists for directions in broken English.",
+            "I stand two steps behind him, rehearsing a sentence I never say out loud."
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B đưa ra hai người trong cùng một tình huống, khác nhau đúng ở tuổi." },
+            { "id": "B", "text": "Bản B dùng thì hiện tại nên sinh động hơn." },
+            { "id": "C", "text": "Bản A có lỗi dùng «on the other hand»." }
+          ],
+          "correctReason": "A",
+          "explanation": "Bản A nghe rất trôi chảy và đúng ngữ pháp, nhưng cả ba câu cùng nói một điều. Bản B đặt hai người cạnh nhau trong cùng một tình huống và chỉ khác nhau ở tuổi — kiểu ví dụ này mạnh vì nó tự loại trừ được các cách giải thích khác."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "translate",
+          "id": "t5-1-h1",
+          "vi": "Anh họ tôi từng dành hai tiếng mỗi ngày trên xe buýt.",
+          "answer": "My cousin used to spend two hours a day on the bus.",
+          "accepted": [
+            "My cousin used to spend two hours per day on the bus.",
+            "My cousin used to spend two hours every day on the bus."
+          ],
+          "hintWords": ["My cousin", "used to spend", "two hours a day", "on the bus"],
+          "explanation": "«Used to + V» là khuôn xương sống của ví dụ đối chiếu quá khứ với hiện tại — nó ngầm báo rằng chuyện đó nay đã khác. Chú ý «spend + thời gian + V-ing / on + danh từ», không phải «spend for»."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-h2",
+          "vi": "Chị ấy tiêu gần một phần mười tiền lương chỉ để đi làm và về nhà.",
+          "answer": "She spent nearly a tenth of her wages just getting to work and back.",
+          "accepted": [
+            "She spent nearly a tenth of her wages just to get to work and back.",
+            "She spent almost a tenth of her wages just getting to work and back."
+          ],
+          "hintWords": ["She spent", "nearly a tenth of her wages", "just getting to work and back"],
+          "explanation": "«A tenth of» là cách nói phân số tự nhiên hơn «ten percent» trong văn viết thường ngày. Chữ «just» nhỏ xíu nhưng làm cả câu nặng thêm: nó nhấn rằng số tiền đó chưa mua được gì cả, mới chỉ để di chuyển."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-h3",
+          "vi": "Quý trước quản lý của tôi mất mười một ngày mới tìm được một khung giờ mà cả sáu người đều rảnh.",
+          "answer": "Last quarter my manager needed eleven days to find a slot when all six of us were free.",
+          "accepted": [
+            "Last quarter my manager took eleven days to find a slot when all six of us were free.",
+            "Last quarter my manager needed eleven days to find a time when all six of us were free."
+          ],
+          "hintWords": ["Last quarter", "my manager needed eleven days", "to find a slot", "when all six of us were free"],
+          "explanation": "Ba con số trong một câu — «last quarter», «eleven days», «all six of us» — biến một lời than chung chung thành bằng chứng. Đây là mật độ chi tiết bạn nên nhắm tới ở câu ví dụ, và chỉ cần một câu như vậy cho mỗi lý do."
+        },
+        {
+          "type": "translate",
+          "id": "t5-1-h4",
+          "vi": "Cháu gái tôi chuyển sang Canada năm sáu tuổi và giờ không ai đoán được cháu từ đâu tới.",
+          "answer": "My niece moved to Canada at the age of six and now nobody can tell where she is from.",
+          "accepted": [
+            "My niece moved to Canada at six and now nobody can tell where she is from.",
+            "My niece moved to Canada at the age of six and now no one can tell where she is from."
+          ],
+          "hintWords": ["My niece moved to Canada", "at the age of six", "and now nobody can tell", "where she is from"],
+          "explanation": "«Nobody can tell where she is from» tự nhiên hơn nhiều so với dịch sát «nobody can guess her origin». Và «tell» ở đây nghĩa là nhận ra, không phải kể — một trong những động từ mà người học Việt hay bỏ sót nghĩa này."
+        }
+      ]
+    }
+  ]
+}

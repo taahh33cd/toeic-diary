@@ -1,0 +1,187 @@
+{
+  "passages": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "timed_write",
+          "id": "t9-1-e1",
+          "prompt": "Viết MỘT đoạn thân bài chống đỡ luận điểm: «Working from home saves employees a great deal of time.»",
+          "scaffold": [
+            "Câu chủ đề — nêu lý do",
+            "Một câu giải thích vì sao lý do đó đúng",
+            "Một ví dụ cụ thể có giờ giấc hoặc con số",
+            "Một câu chốt buộc ví dụ vào luận điểm"
+          ],
+          "minWords": 60,
+          "seconds": 300,
+          "checks": [
+            "Có ít nhất một con số hoặc mốc thời gian cụ thể",
+            "Không có câu nào chỉ nói lại câu chủ đề bằng chữ khác",
+            "Mọi động từ đã chia đúng ngôi và đúng thì"
+          ],
+          "explanation": "60 từ trong 5 phút là 12 từ mỗi phút — chậm hơn nhiều so với nhịp cần cho bài thi thật. Mục đích của cấp này chỉ là làm quen với việc vừa nghĩ vừa gõ dưới đồng hồ. Điểm chỉ tính số từ đạt được; chất lượng thì checklist bên dưới và Tầng 13 lo."
+        },
+        {
+          "type": "timed_write",
+          "id": "t9-1-e2",
+          "prompt": "Viết MỘT đoạn thân bài chống đỡ luận điểm: «Living in a small town costs far less than living in a city.»",
+          "scaffold": [
+            "Câu chủ đề — nêu lý do",
+            "Một câu giải thích",
+            "Một ví dụ cụ thể (tiền thuê nhà, đi lại, ăn uống…)",
+            "Một câu chốt"
+          ],
+          "minWords": 60,
+          "seconds": 300,
+          "checks": [
+            "Ví dụ nói về MỘT người hoặc MỘT trường hợp cụ thể, không phải «nhiều người»",
+            "Có ít nhất một con số",
+            "Đoạn không có câu nào lạc khỏi chuyện chi phí"
+          ],
+          "explanation": "Nếu bạn hết ý trước khi đủ 60 từ, gần như chắc chắn là vì ví dụ còn chung chung. Một ví dụ có người thật, số thật tự nó chiếm 25–30 từ. Đó cũng là lý do Tầng 5 phải làm trước tầng này."
+        },
+        {
+          "type": "timed_write",
+          "id": "t9-1-e3",
+          "prompt": "Viết MỘT đoạn thân bài chống đỡ luận điểm: «New employees learn much less when their team works from home.»",
+          "scaffold": [
+            "Câu chủ đề",
+            "Giải thích cơ chế — vì sao chuyện đó xảy ra",
+            "Ví dụ cụ thể",
+            "Hậu quả của ví dụ"
+          ],
+          "minWords": 60,
+          "seconds": 300,
+          "checks": [
+            "Có câu giải thích cơ chế, không nhảy thẳng từ luận điểm sang ví dụ",
+            "Ví dụ có mốc thời gian",
+            "Câu cuối cho thấy HẬU QUẢ chứ không chỉ mô tả"
+          ],
+          "explanation": "Đây là luận điểm về mặt BẤT LỢI. Nhiều người viết mặt lợi rất trôi rồi tới mặt hại thì hụt hơi, vì họ chỉ luyện một chiều. Khuôn bốn nhịp không đổi dù bạn đang khen hay chê."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "timed_write",
+          "id": "t9-1-m1",
+          "prompt": "Viết MỞ BÀI cho đề: «Some cities have made public transport free for everyone. Do you think other cities should do the same?»",
+          "scaffold": [
+            "Bối cảnh — một câu",
+            "Thu hẹp về đúng câu hỏi — một câu",
+            "Luận điểm kèm hé lộ lý do — một câu"
+          ],
+          "minWords": 80,
+          "seconds": 360,
+          "checks": [
+            "Không chép lại nguyên văn câu nào của đề",
+            "Luận điểm nói rõ NÊN hay KHÔNG NÊN, không đứng giữa",
+            "Không có câu sáo kiểu «Ngày nay xã hội phát triển rất nhanh»"
+          ],
+          "explanation": "80 từ trong 6 phút cho riêng phần mở bài nghe có vẻ thoải mái, nhưng trong bài thi thật bạn chỉ được dành khoảng 4 phút cho mở bài nếu muốn còn đủ giờ cho hai đoạn thân bài và kết bài. Cấp này luyện đúng cái nhịp đó."
+        },
+        {
+          "type": "timed_write",
+          "id": "t9-1-m2",
+          "prompt": "Viết MỘT đoạn thân bài đầy đủ cho đề: «Which age is better for beginning a second language: childhood or adulthood?»",
+          "scaffold": [
+            "Câu chủ đề nêu lý do thứ nhất",
+            "Giải thích cơ chế",
+            "Ví dụ cụ thể",
+            "Ví dụ đối chiếu hoặc hậu quả"
+          ],
+          "minWords": 80,
+          "seconds": 360,
+          "checks": [
+            "Đã chọn hẳn một độ tuổi, không viết kiểu «tuỳ người»",
+            "Có ít nhất một chi tiết mà người khác không đoán được",
+            "Không có câu nào lặp lại câu chủ đề"
+          ],
+          "explanation": "80 từ là độ dài thật của một đoạn thân bài trong bài 300 chữ: mở bài khoảng 60, hai thân bài mỗi đoạn 90, kết bài 60. Viết quen ở mức này thì tới phòng thi bạn không phải đoán mình đã đủ chữ chưa."
+        },
+        {
+          "type": "timed_write",
+          "id": "t9-1-m3",
+          "prompt": "Viết KẾT BÀI cho đề: «Do you agree that employees work better when they choose their own working hours?» Giả sử bạn đã ĐỒNG Ý ở mở bài.",
+          "scaffold": [
+            "Một câu nhượng bộ — thừa nhận phía bên kia có lý",
+            "Một câu khẳng định lại lập trường bằng chữ MỚI",
+            "Một câu nâng vấn đề lên hoặc chỉ ra điều gì thật sự quan trọng"
+          ],
+          "minWords": 80,
+          "seconds": 360,
+          "checks": [
+            "Không có cụm «As I said above» hay «In my introduction»",
+            "Không tóm tắt lại từng đoạn thân bài",
+            "Câu nhượng bộ không làm mờ lập trường"
+          ],
+          "explanation": "Kết bài là chỗ dễ ăn điểm mạch bài nhất mà cũng dễ phí nhất. Khuôn nhượng bộ rồi khẳng định lại cho thấy bạn có cân nhắc chứ không phiến diện — trong khi kiểu tóm tắt chỉ lặp lại những gì người chấm vừa đọc hai phút trước."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "timed_write",
+          "id": "t9-1-h1",
+          "prompt": "Viết HAI đoạn thân bài liền nhau cho đề: «What are the advantages and disadvantages of receiving most work instructions by e-mail?» Một đoạn ưu, một đoạn nhược.",
+          "scaffold": [
+            "Đoạn 1 — câu chủ đề mặt lợi, giải thích, ví dụ",
+            "Đoạn 2 — câu chủ đề mặt hại, giải thích, ví dụ",
+            "Đoạn 2 phải mở bằng một từ nối báo hiệu đổi chiều"
+          ],
+          "minWords": 100,
+          "seconds": 360,
+          "checks": [
+            "Hai đoạn cân nhau về độ dài, không đoạn nào bị viết vội",
+            "Mỗi đoạn có ví dụ riêng, không dùng chung một ví dụ",
+            "Chưa ngả về bên nào — chỗ đó dành cho kết bài"
+          ],
+          "explanation": "100 từ trong 6 phút là gần 17 từ mỗi phút, tức là nhịp thật của phòng thi khi bạn đã có dàn ý. Bài này khó vì phải đổi chiều giữa chừng mà vẫn giữ được độ dài cân nhau — đoạn nhược bị viết vội là lỗi kinh điển của dạng ưu–nhược."
+        },
+        {
+          "type": "timed_write",
+          "id": "t9-1-h2",
+          "prompt": "Viết MỘT đoạn loại bỏ hai phương án còn lại cho đề: «A company can reward its staff with a cash bonus, five extra vacation days, or a company trip abroad. Which should it choose?» Giả sử bạn đã chọn TIỀN THƯỞNG.",
+          "scaffold": [
+            "Một câu nêu vì sao phương án du lịch kém hơn, kèm lý do",
+            "Một câu nêu vì sao phương án thêm ngày nghỉ kém hơn, kèm lý do",
+            "Một câu chốt buộc cả hai lại với lựa chọn của bạn"
+          ],
+          "minWords": 100,
+          "seconds": 360,
+          "checks": [
+            "Cả HAI phương án còn lại đều được đụng tới",
+            "Mỗi lý do loại bỏ là một lý do riêng, không phải cùng một lý do nói hai lần",
+            "Không quay lại khen phương án vừa loại bỏ"
+          ],
+          "explanation": "Đây là đoạn đặc trưng của dạng chọn-1-trong-3 và cũng là đoạn hay bị bỏ nhất. 100 từ cho hai phương án nghĩa là mỗi phương án chỉ có khoảng 45 từ — vừa đủ một lý do và một chi tiết, không đủ để lan man."
+        },
+        {
+          "type": "timed_write",
+          "id": "t9-1-h3",
+          "prompt": "Viết MỘT đoạn thân bài lập luận theo BÊN LIÊN QUAN cho đề: «Should schools install vending machines in their hallways?» Chọn một bên (học sinh, phụ huynh, hoặc nhà trường) và khai triển.",
+          "scaffold": [
+            "Câu chủ đề nêu rõ bạn đang nói về bên nào",
+            "Giải thích tác động lên bên đó",
+            "Ví dụ cụ thể",
+            "Hậu quả"
+          ],
+          "minWords": 100,
+          "seconds": 360,
+          "checks": [
+            "Đoạn nói rõ đang xét bên liên quan nào",
+            "Lập luận là về TÁC ĐỘNG lên bên đó, không phải cảm nghĩ cá nhân",
+            "Có ví dụ cụ thể chứ không chỉ suy đoán"
+          ],
+          "explanation": "Lập luận theo bên liên quan là cách làm dày một bài dạng chính sách mà không cần nghĩ thêm lý do: mỗi bên tự thành một đoạn thân bài. Viết quen một đoạn kiểu này thì trong phòng thi bạn có sẵn hai đoạn chỉ bằng cách đổi bên."
+        }
+      ]
+    }
+  ]
+}

@@ -56,6 +56,42 @@ for (const f of fs.readdirSync(dir).filter(f => f.endsWith(".json"))) {
           if (ex.missions.every(m => m.done)) err(id, "mọi mission đều done — bài không dạy được gì");
           break;
         }
+        case "word_bank": {
+          const blanks = ex.sentence.split("___").length - 1;
+          if (blanks !== ex.answers.length) err(id, `${blanks} chỗ trống nhưng ${ex.answers.length} đáp án`);
+          if (new Set(ex.bank).size !== ex.bank.length) err(id, "ngân hàng từ có phần tử trùng — bấm chọn sẽ nhầm ô");
+          for (const a of ex.answers) if (!ex.bank.includes(a)) err(id, `đáp án "${a}" không có trong ngân hàng từ`);
+          if (ex.bank.length < ex.answers.length) err(id, "ngân hàng ít hơn số chỗ trống");
+          break;
+        }
+        case "translate": {
+          if (!ex.vi || !ex.answer) err(id, "thiếu vi hoặc answer");
+          if (ex.accepted?.includes(ex.answer)) err(id, "accepted lặp lại chính answer");
+          break;
+        }
+        case "compare": {
+          if (ex.better !== "A" && ex.better !== "B") err(id, `better "${ex.better}" phải là A hoặc B`);
+          const rids = ex.reasons.map(r => r.id);
+          if (new Set(rids).size !== rids.length) err(id, "reason id trùng nhau");
+          if (!rids.includes(ex.correctReason)) err(id, `correctReason "${ex.correctReason}" không có trong reasons`);
+          if (!ex.versionA?.length || !ex.versionB?.length) err(id, "thiếu versionA hoặc versionB");
+          break;
+        }
+        case "trim": {
+          if (!ex.cutIndexes?.length) err(id, "không có câu nào phải bỏ — bấm bừa 'không bỏ gì' sẽ ăn 100%");
+          if (ex.cutIndexes.length >= ex.lines.length) err(id, "bỏ hết mọi dòng");
+          for (const i of ex.cutIndexes) if (i < 0 || i >= ex.lines.length) err(id, `cutIndex ${i} ngoài phạm vi ${ex.lines.length} dòng`);
+          if (new Set(ex.cutIndexes).size !== ex.cutIndexes.length) err(id, "cutIndexes có phần tử trùng");
+          for (let i = 0; i < ex.lines.length; i++) if (!ex.reasons?.[String(i)]) err(id, `thiếu reasons["${i}"] — dòng này sẽ không có giải thích`);
+          break;
+        }
+        case "timed_write": {
+          if (!(ex.minWords > 0)) err(id, "minWords phải > 0");
+          if (!(ex.seconds > 0)) err(id, "seconds phải > 0");
+          if (!ex.checks?.length) err(id, "không có mục tự soi");
+          if (!ex.prompt) err(id, "thiếu prompt");
+          break;
+        }
         default: err(id, `type "${ex.type}" chưa có renderer`);
       }
       if (!ex.explanation || ex.explanation.length < 40) err(id, "explanation thiếu hoặc quá ngắn");

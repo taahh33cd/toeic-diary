@@ -22,7 +22,7 @@ const PARTS = [
     href: "/subskills/writing/part3",
     label: "Part 3",
     labelVi: "Viết luận",
-    description: "14 tầng xếp theo band điểm, mỗi tầng nhắm vào một trục trong thang chấm 0–5 · đang mở Tầng 1–4",
+    description: "14 tầng xếp theo band điểm, mỗi tầng nhắm vào một trục trong thang chấm 0–5 · đang mở Tầng 1–9",
     active: true,
   },
 ];

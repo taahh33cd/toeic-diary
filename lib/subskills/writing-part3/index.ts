@@ -2,7 +2,7 @@
 // Writing Part 3 — Question 8, Write an Opinion Essay
 //
 // Thiết kế đầy đủ: docs/writing-part3-rnd.md
-// Phase 1 mở Tầng 1–4 (band 100–130). Các tầng khác đã khai báo sẵn
+// Phase 1–2 mở Tầng 1–9 (band 100–160). Các tầng khác đã khai báo sẵn
 // metadata nhưng `active: false` cho tới khi có data.
 //
 // Data JSON viết thẳng ở dạng chuẩn hoá (không cần normalizer như Part 1).
@@ -89,7 +89,7 @@ export type PassageBlock = {
 };
 
 // ─────────────────────────────────────
-// Các loại bài tập — Phase 1 dùng 7 loại
+// Các loại bài tập — 12 loại, `timed_write` là loại duy nhất phải viết renderer mới
 // ─────────────────────────────────────
 
 /** Trắc nghiệm trên đề hoặc trên đoạn văn (một hoặc nhiều đáp án) */
@@ -170,6 +170,76 @@ export type P3MissionAuditEx = {
   explanation: string;
 };
 
+/** Điền từ nối vào chỗ trống bằng ngân hàng từ cho sẵn */
+export type P3WordBankEx = {
+  type: "word_bank";
+  id: string;
+  prompt?: string;
+  sentence: string; // dùng ___ cho mỗi chỗ trống
+  bank: string[];
+  answers: string[];
+  explanation: string;
+};
+
+/** Dịch một câu ví dụ cụ thể sang tiếng Anh */
+export type P3TranslateEx = {
+  type: "translate";
+  id: string;
+  vi: string;
+  answer: string;
+  accepted?: string[];
+  /** Cụm gợi ý theo đúng thứ tự — giữ đáp án trong tầm so khớp được */
+  hintWords?: string[];
+  explanation: string;
+};
+
+/** Đặt hai bản cạnh nhau: bản nào tốt hơn, và vì sao */
+export type P3CompareEx = {
+  type: "compare";
+  id: string;
+  directions: string;
+  versionA: string[];
+  versionB: string[];
+  better: "A" | "B";
+  reasons: { id: string; text: string }[];
+  correctReason: string;
+  explanation: string;
+};
+
+/** Bỏ bớt câu thừa khỏi một đoạn văn (chọn nhiều dòng) */
+export type P3TrimEx = {
+  type: "trim";
+  id: string;
+  directions: string;
+  intro?: string;
+  lines: string[];
+  /** chỉ số các dòng nên BỎ */
+  cutIndexes: number[];
+  /** lý do bỏ / lý do giữ, key = chỉ số dòng */
+  reasons: Record<string, string>;
+  explanation: string;
+};
+
+/**
+ * Tầng 9 — viết một đoạn dưới đồng hồ.
+ *
+ * Chấm phần KHÁCH QUAN duy nhất chấm được bằng máy: có đủ số từ trước khi
+ * hết giờ hay không. Checklist bên dưới là để tự soi, không tính vào điểm —
+ * chất lượng câu chữ phải đợi Tầng 13 và người chấm thật.
+ */
+export type P3TimedWriteEx = {
+  type: "timed_write";
+  id: string;
+  prompt: string;
+  /** Dàn ý gợi ý cho đoạn, hiện trước khi bấm giờ */
+  scaffold?: string[];
+  minWords: number;
+  seconds: number;
+  /** Mục tự soi sau khi nộp — không tính điểm */
+  checks: string[];
+  explanation: string;
+};
+
 export type P3Exercise =
   | P3McqEx
   | P3LabelingEx
@@ -177,7 +247,12 @@ export type P3Exercise =
   | P3MatchingEx
   | P3TypeBlankEx
   | P3ErrorSpotEx
-  | P3MissionAuditEx;
+  | P3MissionAuditEx
+  | P3WordBankEx
+  | P3TranslateEx
+  | P3CompareEx
+  | P3TrimEx
+  | P3TimedWriteEx;
 
 export type P3Level = { difficulty: P3Difficulty; exercises: P3Exercise[] };
 
@@ -366,7 +441,7 @@ export const WRITING_P3_SKILLS: P3SkillMeta[] = [
     label: "Getting Specific",
     description: "Nâng ví dụ mờ thành ví dụ có tình huống, con số, trải nghiệm.",
     dbPartPrefix: "wp3-tang5",
-    active: false,
+    active: true,
     band: "C",
     axis: "Phát triển & ví dụ",
   },
@@ -376,7 +451,7 @@ export const WRITING_P3_SKILLS: P3SkillMeta[] = [
     label: "Cohesion",
     description: "Chọn từ nối đúng quan hệ, nối ý giữa các đoạn.",
     dbPartPrefix: "wp3-tang6",
-    active: false,
+    active: true,
     band: "C",
     axis: "Mạch bài",
   },
@@ -386,7 +461,7 @@ export const WRITING_P3_SKILLS: P3SkillMeta[] = [
     label: "Trim the Fat",
     description: "Bấm bỏ câu thừa. Mốc 4 vẫn được phép lặp ý, mốc 5 thì không.",
     dbPartPrefix: "wp3-tang7",
-    active: false,
+    active: true,
     band: "C",
     axis: "Mạch bài",
   },
@@ -396,7 +471,7 @@ export const WRITING_P3_SKILLS: P3SkillMeta[] = [
     label: "Accuracy Under Load",
     description: "Lỗi điển hình người Việt: chia thì, hoà hợp chủ–vị, mạo từ, danh từ đếm được.",
     dbPartPrefix: "wp3-tang8",
-    active: false,
+    active: true,
     band: "C",
     axis: "Độ chính xác",
   },
@@ -406,7 +481,7 @@ export const WRITING_P3_SKILLS: P3SkillMeta[] = [
     label: "Writing Speed",
     description: "Viết một đoạn 80–100 từ trong 6 phút, đếm từ thời gian thực.",
     dbPartPrefix: "wp3-tang9",
-    active: false,
+    active: true,
     band: "C",
     axis: "Đủ 300 từ trong 30 phút",
   },
@@ -518,14 +593,41 @@ export function matchesAcceptedP3(input: string, answer: string, accepted?: stri
   return (accepted ?? []).some((a) => normP3(a) === n);
 }
 
+/**
+ * Trả về true nếu chỉ sai đúng 1 từ so với đáp án gần nhất
+ * (báo "Gần đúng" thay vì "Sai" — đỡ nản khi câu dài).
+ */
+export function isNearMissP3(input: string, answer: string, accepted?: string[]): { near: boolean; wrongIdx: number; target: string } {
+  const inWords = normP3(input).split(" ").filter(Boolean);
+  const candidates = [answer, ...(accepted ?? [])];
+  for (const cand of candidates) {
+    const cw = normP3(cand).split(" ").filter(Boolean);
+    if (cw.length !== inWords.length) continue;
+    const diffs: number[] = [];
+    for (let i = 0; i < cw.length; i++) if (cw[i] !== inWords[i]) diffs.push(i);
+    if (diffs.length === 1) return { near: true, wrongIdx: diffs[0], target: cand };
+  }
+  return { near: false, wrongIdx: -1, target: answer };
+}
+
+/** Đếm từ — dùng cho timed_write */
+export function countWords(text: string): number {
+  return text.trim().split(/\s+/).filter(Boolean).length;
+}
+
 // ─────────────────────────────────────
-// Static data — Phase 1: mỗi tầng 1 bộ test, nhân lên 5 bộ ở phase sau
+// Static data — mỗi tầng đang có 1 bộ test, nhân lên 5 bộ ở phase sau
 // ─────────────────────────────────────
 
 import t1_1 from "./tang1.1.json";
 import t2_1 from "./tang2.1.json";
 import t3_1 from "./tang3.1.json";
 import t4_1 from "./tang4.1.json";
+import t5_1 from "./tang5.1.json";
+import t6_1 from "./tang6.1.json";
+import t7_1 from "./tang7.1.json";
+import t8_1 from "./tang8.1.json";
+import t9_1 from "./tang9.1.json";
 
 type RawTest = {
   passages?: Record<string, PassageBlock>;
@@ -550,6 +652,11 @@ const DATA: Record<string, P3TestData[]> = {
   tang2: [t2_1].map((r, i) => load(r, "tang2", i + 1)),
   tang3: [t3_1].map((r, i) => load(r, "tang3", i + 1)),
   tang4: [t4_1].map((r, i) => load(r, "tang4", i + 1)),
+  tang5: [t5_1].map((r, i) => load(r, "tang5", i + 1)),
+  tang6: [t6_1].map((r, i) => load(r, "tang6", i + 1)),
+  tang7: [t7_1].map((r, i) => load(r, "tang7", i + 1)),
+  tang8: [t8_1].map((r, i) => load(r, "tang8", i + 1)),
+  tang9: [t9_1].map((r, i) => load(r, "tang9", i + 1)),
 };
 
 /** Số bộ test hiện có của một tầng — dùng cho thanh tiến độ ở trang danh sách */

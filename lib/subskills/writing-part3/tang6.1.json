@@ -1,0 +1,174 @@
+{
+  "passages": {
+    "para1": {
+      "kind": "paragraph",
+      "title": "Đoạn thân bài đang thiếu từ nối",
+      "body": [
+        "Free transport helps the people who need it most. ___ , a cleaner in my building used to spend nearly a tenth of her wages getting to work. ___ the city removed fares last year, that money has stayed in her pocket."
+      ]
+    }
+  },
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "word_bank",
+          "id": "t6-1-e1",
+          "prompt": "Điền từ nối vào đoạn. Chú ý quan hệ giữa các câu.",
+          "sentence": "Working from home saves money. ___ , I no longer buy a monthly train pass. ___ , I spend more on heating my flat during the day.",
+          "bank": ["For example", "However", "Therefore", "In addition"],
+          "answers": ["For example", "However"],
+          "explanation": "Câu hai là ví dụ cho câu một nên cần «For example». Câu ba đi ngược lại ý tiết kiệm nên cần từ đối lập «However». Chọn nhầm «In addition» ở chỗ thứ ba là lỗi rất hay gặp — nó báo hiệu «thêm một ý cùng chiều», trong khi ý này ngược chiều."
+        },
+        {
+          "type": "word_bank",
+          "id": "t6-1-e2",
+          "prompt": "Điền từ nối vào đoạn.",
+          "sentence": "Small companies give new staff a wide view of the business. ___ there are fewer people, everyone has to do several jobs. ___ , a newcomer sees how money moves through the company within months.",
+          "bank": ["Because", "As a result", "Although", "For instance"],
+          "answers": ["Because", "As a result"],
+          "explanation": "Chỗ đầu cần liên từ chỉ nguyên nhân đứng trước mệnh đề đầy đủ — «Because there are fewer people». Chỗ sau là hệ quả nên dùng «As a result». Nếu bạn định dùng «Because of» ở chỗ đầu thì sai ngay: sau nó phải là danh từ, không phải mệnh đề."
+        },
+        {
+          "type": "word_bank",
+          "id": "t6-1-e3",
+          "prompt": "Điền từ nối vào đoạn.",
+          "sentence": "Children pick up pronunciation more easily than adults. ___ , adults usually study grammar more systematically. ___ , each age has its own advantage.",
+          "bank": ["On the other hand", "In short", "Similarly", "Because of"],
+          "answers": ["On the other hand", "In short"],
+          "explanation": "«On the other hand» đánh dấu mặt đối lập, «In short» đóng lại bằng một câu tổng kết. «Similarly» sai vì hai vế không giống nhau mà ngược nhau — đây là lỗi chọn từ nối theo cảm giác chứ không theo quan hệ logic."
+        },
+        {
+          "type": "word_bank",
+          "id": "t6-1-e4",
+          "prompt": "Điền từ nối vào đoạn.",
+          "sentence": "Vending machines look harmless. ___ their low price, they quietly replace proper meals. ___ , the school nearest my house saw its canteen queue shrink within one term.",
+          "bank": ["Because of", "Indeed", "Despite", "Whereas"],
+          "answers": ["Because of", "Indeed"],
+          "explanation": "Sau «Because of» là cụm danh từ «their low price» — đúng khuôn. «Indeed» dẫn vào bằng chứng củng cố điều vừa nói. Nếu bạn chọn «Despite» thì câu thành «bất chấp giá rẻ, chúng thay thế bữa ăn», đọc lên vô lý vì chính giá rẻ mới là nguyên nhân."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t6-1-m1",
+          "question": "Chọn cách viết ĐÚNG NGỮ PHÁP.",
+          "options": [
+            { "id": "A", "text": "Despite the office was noisy, I finished the report." },
+            { "id": "B", "text": "Despite the noise in the office, I finished the report." },
+            { "id": "C", "text": "Despite of the noise in the office, I finished the report." },
+            { "id": "D", "text": "Despite that the office was noisy, I finished the report." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "«Despite» là giới từ nên theo sau phải là danh từ hoặc V-ing, không phải mệnh đề. Và nó KHÔNG có «of» — «in spite of» mới có. Muốn giữ mệnh đề thì đổi sang «Although the office was noisy». Đây là cặp bẫy kinh điển của TOEIC, và nó cũng làm hỏng nhiều bài luận."
+        },
+        {
+          "type": "mcq",
+          "id": "t6-1-m2",
+          "question": "Chọn cách viết ĐÚNG NGỮ PHÁP.",
+          "options": [
+            { "id": "A", "text": "The meeting was cancelled because of the manager was ill." },
+            { "id": "B", "text": "The meeting was cancelled because the manager was ill." },
+            { "id": "C", "text": "The meeting was cancelled due to the manager was ill." },
+            { "id": "D", "text": "The meeting was cancelled owing the manager was ill." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "«Because» + mệnh đề; «because of» / «due to» / «owing to» + danh từ. Muốn dùng nhóm giới từ thì phải đổi vế sau thành danh từ: «due to the manager's illness». Trộn lẫn hai nhóm là lỗi phổ biến nhất trong bài luận của người học Việt."
+        },
+        {
+          "type": "mcq",
+          "id": "t6-1-m3",
+          "question": "Chọn câu chấm câu ĐÚNG.",
+          "options": [
+            { "id": "A", "text": "Rent is cheaper in a small town, however the choice of jobs is smaller." },
+            { "id": "B", "text": "Rent is cheaper in a small town. However, the choice of jobs is smaller." },
+            { "id": "C", "text": "Rent is cheaper in a small town however, the choice of jobs is smaller." },
+            { "id": "D", "text": "Rent is cheaper in a small town, however, the choice of jobs is smaller." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "«However» là trạng từ nối, không phải liên từ, nên nó KHÔNG nối được hai mệnh đề bằng dấu phẩy. Phải có dấu chấm hoặc chấm phẩy trước nó. Bản A và D là lỗi nối câu bằng dấu phẩy — lỗi này xuất hiện dày đặc trong bài luận và kéo tụt trục độ chính xác."
+        },
+        {
+          "type": "mcq",
+          "id": "t6-1-m4",
+          "passageRef": "para1",
+          "question": "Cặp từ nối nào điền đúng vào hai chỗ trống trong đoạn trên?",
+          "options": [
+            { "id": "A", "text": "For example … Since" },
+            { "id": "B", "text": "However … Although" },
+            { "id": "C", "text": "In contrast … Because of" },
+            { "id": "D", "text": "Therefore … Despite" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Chỗ đầu dẫn vào ví dụ minh hoạ cho câu trước, nên «For example». Chỗ sau nêu mốc thời gian kiêm nguyên nhân trước một mệnh đề đầy đủ, nên «Since». Các phương án còn lại đều báo sai quan hệ, và người chấm đọc từ nối để lần theo mạch bài — báo sai quan hệ là làm mạch bài rối."
+        },
+        {
+          "type": "mcq",
+          "id": "t6-1-m5",
+          "question": "Câu nào nối ĐOẠN mới với đoạn trước tốt nhất, khi đoạn trước vừa nói về lợi ích tiết kiệm tiền?",
+          "options": [
+            { "id": "A", "text": "Another thing is about the neighbours in a small town." },
+            { "id": "B", "text": "The second advantage is harder to measure but matters more." },
+            { "id": "C", "text": "Also, small towns have friendly neighbours." },
+            { "id": "D", "text": "Moreover, I want to talk about neighbours now." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Câu chủ đề tốt vừa đánh số vừa cho biết quan hệ với ý trước — «the second», và «harder to measure but matters more» đặt nó cạnh lợi ích tiền bạc vừa nói. A và C nối bằng từ nối rời rạc, còn D thì tự thuật về việc mình sắp viết gì, kiểu «I want to talk about» nên tránh trong bài luận."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "word_bank",
+          "id": "t6-1-h1",
+          "prompt": "Điền bốn từ nối vào một đoạn hoàn chỉnh.",
+          "sentence": "E-mail has changed how instructions reach us. ___ a written message can be checked again later, nothing is lost when memory fails. ___ , I reread a message last month and found a deadline I had forgotten. ___ , tone disappears from written text. A short reply meaning only that a colleague was busy was read as anger; ___ , two people avoided him for a day.",
+          "bank": ["Since", "For instance", "On the other hand", "as a result", "Although"],
+          "answers": ["Since", "For instance", "On the other hand", "as a result"],
+          "explanation": "Bốn quan hệ khác nhau trong một đoạn: nguyên nhân, ví dụ, đối lập, hệ quả. Ngân hàng có năm từ nên «Although» là mồi nhử — nó cũng đứng trước mệnh đề được, nhưng đặt vào chỗ đầu thì đảo ngược logic. Đọc lại cả đoạn sau khi điền là cách duy nhất để bắt lỗi kiểu này."
+        },
+        {
+          "type": "word_bank",
+          "id": "t6-1-h2",
+          "prompt": "Điền bốn từ nối. Chú ý dấu câu quanh chỗ trống.",
+          "sentence": "Small towns attract people for practical reasons. ___ , housing costs a fraction of city prices. ___ the rent is lower, families can save for other things. City life offers more entertainment; ___ , it demands a much higher salary to enjoy it. ___ , the choice depends on what a person values most.",
+          "bank": ["First", "Because", "however", "In the end", "Despite"],
+          "answers": ["First", "Because", "however", "In the end"],
+          "explanation": "Chú ý «however» ở đây viết thường vì đứng sau dấu chấm phẩy, khác với «However» đầu câu. «Despite» là mồi nhử: nó không đứng trước mệnh đề «the rent is lower» được. Dấu chấm phẩy cộng trạng từ nối là cách nối hai câu gần nhau mà vẫn đúng ngữ pháp — dùng được vài lần trong bài là dấu hiệu của độ đa dạng."
+        },
+        {
+          "type": "mcq",
+          "id": "t6-1-h3",
+          "question": "Đoạn nào có mạch nối tốt hơn?",
+          "options": [
+            { "id": "A", "text": "Free transport cuts car use. Also it helps poor people. Also it is good for air quality. Also the city becomes quieter." },
+            { "id": "B", "text": "Free transport cuts car use. More importantly, it reaches the households that struggle most with monthly costs. The cleaner air that follows is a benefit the whole city shares." },
+            { "id": "C", "text": "Free transport cuts car use, it helps poor people, it is good for air quality, the city becomes quieter." },
+            { "id": "D", "text": "Free transport cuts car use. Because it helps poor people. Because it is good for air quality." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "A xâu chuỗi bằng «Also» bốn lần, nên bốn ý nằm ngang hàng và không ý nào được ưu tiên. C là lỗi nối câu bằng dấu phẩy. D dùng «Because» mở đầu những mảnh câu cụt. B xếp hạng các ý bằng «More importantly» và nối ý cuối vào ý trước bằng «that follows» — đó là mạch bài chứ không chỉ là từ nối."
+        },
+        {
+          "type": "mcq",
+          "id": "t6-1-h4",
+          "question": "Câu nào KHÔNG nên dùng để mở một đoạn thân bài trong bài luận thi?",
+          "options": [
+            { "id": "A", "text": "The first reason I would choose a small town is the cost of living." },
+            { "id": "B", "text": "A second and less obvious advantage concerns the people next door." },
+            { "id": "C", "text": "Now I will explain my second reason to you in this paragraph." },
+            { "id": "D", "text": "Cost is not the only thing that makes a small town attractive." }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "C là kiểu «tự thuật về bài viết» — nó tiêu một câu để thông báo rằng sắp có một câu. A, B, D đều vừa nối vừa mang nội dung. Trong bài chỉ 300 từ, mỗi câu chỉ làm nhiệm vụ dẫn đường mà không chở ý nào là một câu bị phí."
+        }
+      ]
+    }
+  ]
+}

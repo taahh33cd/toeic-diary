@@ -1,0 +1,205 @@
+{
+  "passages": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "error_spot",
+          "id": "t8-1-e1",
+          "intro": "Bấm vào dòng có lỗi ngữ pháp.",
+          "lines": [
+            "The clearest advantage of a small town is the cost of living.",
+            "My cousin pay half what I do for an apartment twice the size of mine.",
+            "The difference covers a family holiday every year.",
+            "Housing is the largest bill most young people face."
+          ],
+          "errorIndex": 1,
+          "errorLabel": "Thiếu «s» ở ngôi thứ ba số ít",
+          "fix": "My cousin pays half what I do for an apartment twice the size of mine.",
+          "explanation": "Tiếng Việt không chia động từ theo ngôi nên đây là lỗi bám dai nhất. Nguy hiểm ở chỗ nó không cản nghĩa, nên người viết đọc lại vẫn thấy xuôi — mà ETS thì đếm nó vào trục độ chính xác. Rà riêng một lượt chỉ nhìn động từ là cách bắt hiệu quả nhất."
+        },
+        {
+          "type": "error_spot",
+          "id": "t8-1-e2",
+          "intro": "Bấm vào dòng có lỗi ngữ pháp.",
+          "lines": [
+            "Working from home brings clear benefits.",
+            "Employees save the time they used to spend travelling.",
+            "They also save money that they would spend for train tickets.",
+            "My cousin no longer buys a monthly pass."
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Sai giới từ đi với «spend»",
+          "fix": "They also save money that they would spend on train tickets.",
+          "explanation": "«Spend money ON something» hoặc «spend time V-ing». «Spend for» là dịch thẳng từ «chi tiền cho». Nhóm động từ đi kèm giới từ cố định là chỗ bài luận lộ ra tiếng mẹ đẻ rõ nhất."
+        },
+        {
+          "type": "error_spot",
+          "id": "t8-1-e3",
+          "intro": "Bấm vào dòng có lỗi ngữ pháp.",
+          "lines": [
+            "New employees learn less when a team works from home.",
+            "Much of what a beginner needs to know is never written down.",
+            "A junior who joined in March has still never heard anyone handles an angry client.",
+            "When she faced one herself, she had nothing to copy."
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Sai dạng động từ sau «hear someone»",
+          "fix": "…has still never heard anyone handle an angry client.",
+          "explanation": "Sau các động từ tri giác như hear, see, watch thì tân ngữ đi với động từ nguyên thể không «to» (nghe trọn vẹn sự việc) hoặc V-ing (nghe đang diễn ra) — không bao giờ chia theo ngôi. «Anyone handles» là phản xạ chia động từ sai chỗ."
+        },
+        {
+          "type": "error_spot",
+          "id": "t8-1-e4",
+          "intro": "Bấm vào dòng có lỗi ngữ pháp.",
+          "lines": [
+            "Free transport helps the households that struggle most.",
+            "A cleaner in my building used to spend a tenth of her wages on travel.",
+            "Since the city removed fares, she keeps that money.",
+            "The city also benefits because there are less cars on the road."
+          ],
+          "errorIndex": 3,
+          "errorLabel": "«less» dùng cho danh từ đếm được",
+          "fix": "…because there are fewer cars on the road.",
+          "explanation": "«Fewer» đi với danh từ đếm được số nhiều (cars, people, hours), «less» đi với không đếm được (traffic, time, money). Đây là lỗi mà người bản ngữ cũng mắc, nhưng trong bài thi thì nó vẫn bị tính vào trục độ chính xác."
+        },
+        {
+          "type": "error_spot",
+          "id": "t8-1-e5",
+          "intro": "Bấm vào dòng có lỗi ngữ pháp.",
+          "lines": [
+            "I would choose a small town for two reasons.",
+            "First, rent is much lower than in a city.",
+            "Second, people know their neighbours.",
+            "These two reasons is why I prefer a quieter place."
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Hoà hợp chủ ngữ số nhiều với động từ số ít",
+          "fix": "These two reasons are why I prefer a quieter place.",
+          "explanation": "Chủ ngữ «These two reasons» số nhiều nên động từ phải là «are». Lỗi này hay xuất hiện ở câu cuối đoạn, khi người viết đã mệt và chủ ngữ dài. Đó cũng là lý do nên rà động từ ở lượt riêng chứ đừng vừa viết vừa sửa."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "type_blank",
+          "id": "t8-1-m1",
+          "prompt": "Điền dạng đúng của động từ trong ngoặc.",
+          "vi": "Từ khi thành phố bỏ vé năm ngoái, số tiền đó vẫn nằm trong túi chị ấy.",
+          "sentence": "Since the city removed fares last year, that money ___ ___ in her pocket.",
+          "answers": ["has", "stayed"],
+          "explanation": "«Since + mốc quá khứ» kéo theo thì hiện tại hoàn thành ở mệnh đề chính, vì hành động bắt đầu trong quá khứ và còn kéo dài tới nay. Viết «that money stayed» sẽ ngụ ý chuyện đã kết thúc — sai ý và sai cả thì."
+        },
+        {
+          "type": "type_blank",
+          "id": "t8-1-m2",
+          "prompt": "Điền mạo từ hoặc để trống bằng dấu gạch nếu không cần.",
+          "vi": "Thư viện gần căn hộ của tôi luôn đầy sinh viên vào các buổi chiều mùa đông.",
+          "sentence": "___ library near my flat is always full of students on winter afternoons.",
+          "answers": ["The"],
+          "explanation": "Dùng «The» vì mệnh đề «near my flat» đã xác định rõ đó là thư viện nào. Tiếng Việt không có mạo từ nên đây là lỗi dày đặc nhất trong bài luận của người học Việt. Quy tắc gọn: đã xác định được là cái nào thì dùng «the»."
+        },
+        {
+          "type": "type_blank",
+          "id": "t8-1-m3",
+          "prompt": "Điền dạng đúng của động từ.",
+          "vi": "Nhiều công ty giờ cho phép nhân viên làm việc tại nhà vài ngày mỗi tuần.",
+          "sentence": "Many companies now allow their staff ___ ___ from home several days a week.",
+          "answers": ["to", "work"],
+          "explanation": "«Allow somebody TO DO something» — có «to». So sánh với «let somebody DO something» thì không có «to», và «make somebody DO something» cũng không. Ba động từ cùng nghĩa cho phép nhưng khác khuôn, và đề TOEIC rất hay thử chỗ này."
+        },
+        {
+          "type": "type_blank",
+          "id": "t8-1-m4",
+          "prompt": "Điền dạng đúng của động từ sau giới từ.",
+          "vi": "Anh ấy học được nhiều hơn nhờ ngồi cạnh một đồng nghiệp giàu kinh nghiệm.",
+          "sentence": "He learned more by ___ ___ an experienced colleague.",
+          "answers": ["sitting", "beside"],
+          "accepted": [["sitting"], ["beside", "next to"]],
+          "explanation": "Sau giới từ luôn là V-ing, không bao giờ là nguyên thể — «by sitting», không phải «by sit» hay «by to sit». Đây là quy tắc không có ngoại lệ, nên rà lại mọi chỗ có giới từ là bắt được cả loạt lỗi cùng lúc."
+        },
+        {
+          "type": "type_blank",
+          "id": "t8-1-m5",
+          "prompt": "Điền dạng so sánh đúng.",
+          "vi": "Chi phí thuê nhà ở thị trấn nhỏ thấp hơn nhiều so với ở thành phố.",
+          "sentence": "Rent in a small town is much ___ ___ it is in a city.",
+          "answers": ["lower", "than"],
+          "explanation": "«Much + so sánh hơn» là cách nhấn mạnh chuẩn; «very lower» thì sai. Và so sánh hơn luôn cần «than» — bỏ quên «than» là lỗi hay gặp khi vế sau dài. Câu này cũng là mẫu để dựng ví dụ có đối chiếu ở Tầng 5."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "error_spot",
+          "id": "t8-1-h1",
+          "intro": "Đoạn dài hơn, lỗi kín hơn. Bấm vào dòng có lỗi.",
+          "lines": [
+            "Almost every company now sends instructions by e-mail rather than in meetings.",
+            "This change has brought real gains, but it has also created problems.",
+            "The main benefit is that a written instruction can be checked again later.",
+            "Last month I reread a message from my manager and found a deadline which I had completely forgot.",
+            "Tone, on the other hand, disappears from written messages."
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Sai phân từ quá khứ trong thì quá khứ hoàn thành",
+          "fix": "…and found a deadline which I had completely forgotten.",
+          "explanation": "Sau «had» phải là phân từ quá khứ «forgotten», không phải quá khứ đơn «forgot». Động từ bất quy tắc ba cột là chỗ dễ trượt khi câu dài và có trạng từ chen vào giữa — «had completely forgot» nghe trôi nên càng khó bắt."
+        },
+        {
+          "type": "error_spot",
+          "id": "t8-1-h2",
+          "intro": "Bấm vào dòng có lỗi.",
+          "lines": [
+            "Of the three options, a quiet room would change the most for the most people.",
+            "Our office has plenty of places to talk and nowhere at all to think.",
+            "Last quarter I wrote an entire report sitting in a stairwell.",
+            "New chairs would be welcome, but a comfortable seat in a noisy room do not help anyone concentrate.",
+            "A quiet room is the only option that gives us something the building lacks."
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Chia động từ theo danh từ gần nhất thay vì theo chủ ngữ",
+          "fix": "…but a comfortable seat in a noisy room does not help anyone concentrate.",
+          "explanation": "Chủ ngữ là «a comfortable seat» số ít, nhưng cụm «in a noisy room» chen vào khiến người viết chia theo «room». Chủ ngữ càng xa động từ thì lỗi này càng dễ xảy ra — mẹo là tạm che cụm giới từ đi rồi đọc lại."
+        },
+        {
+          "type": "error_spot",
+          "id": "t8-1-h3",
+          "intro": "Bấm vào dòng có lỗi.",
+          "lines": [
+            "Children have one advantage that adults can never recover.",
+            "They copy sounds without judging them.",
+            "An adult hears a strange sound and immediately compares it with the nearest sound in his own language.",
+            "My niece moved to Canada at six, and within two years nobody could tell where was she from.",
+            "Her father arrived on the same flight and still has a noticeable accent."
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Đảo ngữ nghi vấn trong mệnh đề tường thuật",
+          "fix": "…nobody could tell where she was from.",
+          "explanation": "Mệnh đề danh từ sau «tell», «know», «wonder» giữ trật tự khẳng định chủ ngữ trước động từ, không đảo như câu hỏi. «Where was she from» chỉ đúng khi đó là câu hỏi trực tiếp. Lỗi này rất hay xuất hiện khi câu đã dài và người viết mất dấu."
+        },
+        {
+          "type": "error_spot",
+          "id": "t8-1-h4",
+          "intro": "Bấm vào dòng có lỗi.",
+          "lines": [
+            "A school that wants students to eat properly should think twice about vending machines.",
+            "The machines quietly replace meals with snacks.",
+            "The school nearest my house put in two machines last year.",
+            "Within a term, the queue at the canteen had visibly shorten at lunchtime.",
+            "A neighbour now sends her son to school with no coins at all."
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Thiếu «-ed» ở phân từ quá khứ",
+          "fix": "…the queue at the canteen had visibly shortened at lunchtime.",
+          "explanation": "«Shorten» là động từ nguyên thể; sau «had» cần «shortened». Với động từ có quy tắc thì lỗi này chỉ là thiếu hai chữ cái, nên mắt rất dễ lướt qua. Rà một lượt riêng cho mọi chỗ có «had» và «have» là bắt được cả nhóm."
+        }
+      ]
+    }
+  ]
+}

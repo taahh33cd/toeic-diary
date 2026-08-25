@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import type {
   P3TestData,
   P3Exercise,
@@ -12,8 +12,13 @@ import type {
   P3TypeBlankEx,
   P3ErrorSpotEx,
   P3MissionAuditEx,
+  P3WordBankEx,
+  P3TranslateEx,
+  P3CompareEx,
+  P3TrimEx,
+  P3TimedWriteEx,
 } from "@/lib/subskills/writing-part3";
-import { normP3, matchesAcceptedP3, dbPartW3 } from "@/lib/subskills/writing-part3";
+import { normP3, matchesAcceptedP3, isNearMissP3, countWords, dbPartW3 } from "@/lib/subskills/writing-part3";
 
 type BestMap = Record<string, { score: number; passed: boolean }>;
 type Difficulty = "easy" | "medium" | "hard";
@@ -618,6 +623,546 @@ function MissionAuditCard({ ex, onResult }: { ex: P3MissionAuditEx; onResult: (s
 }
 
 // ─────────────────────────────────────
+// Tầng 6 — điền từ nối từ ngân hàng từ
+// ─────────────────────────────────────
+
+function WordBankCard({ ex, onResult }: { ex: P3WordBankEx; onResult: (score: number) => void }) {
+  const [picks, setPicks] = useState<string[]>(ex.answers.map(() => ""));
+  const [submitted, setSubmitted] = useState(false);
+  const parts = ex.sentence.split("___");
+  const bank = seededShuffle(ex.bank, ex.id);
+
+  function correctCount(): number {
+    return ex.answers.filter((a, i) => normP3(picks[i]) === normP3(a)).length;
+  }
+
+  function submit() {
+    setSubmitted(true);
+    onResult(Math.round((correctCount() / ex.answers.length) * 100));
+  }
+
+  const allPicked = picks.every((p) => p);
+
+  return (
+    <div>
+      {ex.prompt && <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "0.7rem" }}>{ex.prompt}</p>}
+
+      <div style={{ fontSize: "0.93rem", color: "var(--text-primary)", lineHeight: 2.2, marginBottom: "1rem" }}>
+        {parts.map((part, i) => (
+          <span key={i}>
+            {part}
+            {i < parts.length - 1 && (
+              <span
+                style={{
+                  display: "inline-block",
+                  minWidth: 104,
+                  textAlign: "center",
+                  padding: "2px 10px",
+                  margin: "0 3px",
+                  borderRadius: 6,
+                  fontWeight: 600,
+                  border: submitted
+                    ? `1.5px solid ${normP3(picks[i]) === normP3(ex.answers[i]) ? "rgba(34,197,94,0.5)" : "rgba(239,68,68,0.5)"}`
+                    : "1.5px solid var(--accent-primary)",
+                  background: submitted
+                    ? normP3(picks[i]) === normP3(ex.answers[i]) ? "rgba(34,197,94,0.1)" : "rgba(239,68,68,0.1)"
+                    : "var(--bg-secondary)",
+                  color: picks[i] ? "var(--text-primary)" : "var(--text-muted)",
+                }}
+              >
+                {picks[i] || "___"}
+              </span>
+            )}
+          </span>
+        ))}
+      </div>
+
+      {!submitted && (
+        <>
+          <p style={{ fontSize: "0.73rem", color: "var(--text-muted)", marginBottom: 6, fontWeight: 700, letterSpacing: "0.05em" }}>
+            NGÂN HÀNG TỪ — bấm để điền vào chỗ trống đầu tiên còn rỗng
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: "1rem" }}>
+            {bank.map((w) => {
+              const used = picks.includes(w);
+              return (
+                <button
+                  key={w}
+                  onClick={() => {
+                    setPicks((prev) => {
+                      const n = [...prev];
+                      const idx = n.indexOf(w);
+                      if (idx !== -1) { n[idx] = ""; return n; }
+                      const empty = n.indexOf("");
+                      if (empty !== -1) n[empty] = w;
+                      return n;
+                    });
+                  }}
+                  style={{ padding: "5px 12px", fontSize: "0.85rem", fontWeight: 500, borderRadius: 6, border: used ? "1.5px solid var(--accent-primary)" : "1.5px solid var(--border)", background: used ? "rgba(59,130,246,0.12)" : "var(--bg-secondary)", color: used ? "var(--accent-primary)" : "var(--text-primary)", cursor: "pointer", fontFamily: "inherit" }}
+                >
+                  {w}
+                </button>
+              );
+            })}
+          </div>
+        </>
+      )}
+
+      {!submitted ? (
+        <CheckButton onClick={submit} disabled={!allPicked} />
+      ) : (
+        <div>
+          <ResultBadge score={Math.round((correctCount() / ex.answers.length) * 100)} />
+          <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", margin: "0.5rem 0 0" }}>
+            <strong>Đáp án:</strong> {ex.answers.join(" · ")}
+          </p>
+          <Explanation text={ex.explanation} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────
+// Tầng 5 hard — dịch câu ví dụ sang tiếng Anh
+// ─────────────────────────────────────
+
+function TranslateCard({ ex, onResult }: { ex: P3TranslateEx; onResult: (score: number) => void }) {
+  const [input, setInput] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const [correct, setCorrect] = useState(false);
+
+  function submit() {
+    if (!input.trim()) return;
+    const c = matchesAcceptedP3(input, ex.answer, ex.accepted);
+    setCorrect(c);
+    setSubmitted(true);
+    onResult(c ? 100 : 0);
+  }
+
+  const near = submitted && !correct ? isNearMissP3(input, ex.answer, ex.accepted) : null;
+  const alts = distinctAlternatives(ex.answer, ex.accepted);
+
+  return (
+    <div>
+      <p style={{ fontSize: "0.73rem", color: "var(--text-muted)", fontWeight: 700, letterSpacing: "0.06em", marginBottom: 5 }}>
+        DỊCH SANG TIẾNG ANH
+      </p>
+      <p style={{ fontSize: "1rem", color: "var(--text-primary)", fontWeight: 600, marginBottom: "0.85rem", lineHeight: 1.6, padding: "10px 14px", background: "var(--bg-secondary)", borderRadius: 8, border: "1px solid var(--border)" }}>
+        {ex.vi}
+      </p>
+
+      {ex.hintWords && ex.hintWords.length > 0 && !submitted && (
+        <div style={{ marginBottom: "0.8rem" }}>
+          <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", fontWeight: 600, letterSpacing: "0.04em", marginBottom: 5 }}>
+            GỢI Ý — dùng các cụm này theo đúng thứ tự
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
+            {ex.hintWords.map((w, i) => (
+              <span key={i} style={{ padding: "3px 10px", fontSize: "0.82rem", borderRadius: 6, border: "1px dashed var(--accent-primary)", background: "rgba(59,130,246,0.07)", color: "var(--text-secondary)" }}>
+                {w}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <textarea
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey && !submitted) { e.preventDefault(); submit(); } }}
+        disabled={submitted}
+        rows={2}
+        placeholder="Viết câu tiếng Anh…"
+        style={{ width: "100%", boxSizing: "border-box", padding: "10px 13px", fontSize: "0.93rem", border: submitted ? `1.5px solid ${correct ? "rgba(34,197,94,0.5)" : "rgba(239,68,68,0.5)"}` : "1.5px solid var(--border)", borderRadius: 8, background: "var(--bg-secondary)", color: "var(--text-primary)", outline: "none", resize: "vertical", fontFamily: "inherit", marginBottom: "0.65rem", lineHeight: 1.6 }}
+      />
+
+      {!submitted ? (
+        <CheckButton onClick={submit} disabled={!input.trim()} />
+      ) : (
+        <div>
+          {correct ? (
+            <ResultBadge score={100} />
+          ) : near?.near ? (
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: "0.78rem", fontWeight: 600, color: AMBER, background: "rgba(234,179,8,0.1)", border: "1px solid rgba(234,179,8,0.3)", borderRadius: 6, padding: "3px 10px" }}>
+              ⚠ Gần đúng — chỉ sai 1 từ
+            </span>
+          ) : (
+            <ResultBadge score={0} />
+          )}
+          <p style={{ fontSize: "0.88rem", color: "var(--text-secondary)", margin: "0.55rem 0 0", lineHeight: 1.6 }}>
+            <strong>Đáp án mẫu:</strong> {ex.answer}
+          </p>
+          {alts.length > 0 && (
+            <details style={{ marginTop: 6 }}>
+              <summary style={{ fontSize: "0.77rem", color: "var(--accent-primary)", cursor: "pointer", fontWeight: 600 }}>
+                Xem {alts.length} cách viết khác cũng được chấp nhận
+              </summary>
+              <ul style={{ margin: "5px 0 0", paddingLeft: 20 }}>
+                {alts.map((a, i) => (
+                  <li key={i} style={{ fontSize: "0.82rem", color: "var(--text-secondary)", lineHeight: 1.65 }}>{a}</li>
+                ))}
+              </ul>
+            </details>
+          )}
+          <Explanation text={ex.explanation} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────
+// Tầng 5 — đặt hai bản cạnh nhau
+// ─────────────────────────────────────
+
+function VersionBox({ label, lines, state }: { label: string; lines: string[]; state?: "better" | "worse" }) {
+  const border = state === "better" ? "rgba(34,197,94,0.5)" : state === "worse" ? "rgba(239,68,68,0.4)" : "var(--border)";
+  return (
+    <div style={{ flex: "1 1 260px", border: `1.5px solid ${border}`, borderRadius: 10, overflow: "hidden" }}>
+      <div style={{ padding: "6px 12px", background: state === "better" ? "rgba(34,197,94,0.12)" : state === "worse" ? "rgba(239,68,68,0.09)" : "var(--bg-elevated)", borderBottom: `1px solid ${border}`, fontSize: "0.78rem", fontWeight: 700, color: state === "better" ? GREEN : state === "worse" ? RED : "var(--text-secondary)" }}>
+        Bản {label}{state === "better" ? " ✓ tốt hơn" : ""}
+      </div>
+      <div style={{ padding: "10px 13px", background: "var(--bg-secondary)" }}>
+        {lines.map((l, i) => (
+          <p key={i} style={{ margin: i === 0 ? 0 : "0.4rem 0 0", fontSize: "0.83rem", lineHeight: 1.7, color: "var(--text-primary)" }}>{l}</p>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function CompareCard({ ex, onResult }: { ex: P3CompareEx; onResult: (score: number) => void }) {
+  const [choice, setChoice] = useState<"A" | "B" | null>(null);
+  const [reason, setReason] = useState<string | null>(null);
+  const [submitted, setSubmitted] = useState(false);
+
+  const score = (choice === ex.better ? 50 : 0) + (reason === ex.correctReason ? 50 : 0);
+
+  return (
+    <div>
+      <DirectionsBox text={ex.directions} />
+
+      <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: "1.1rem" }}>
+        <VersionBox label="A" lines={ex.versionA} state={submitted ? (ex.better === "A" ? "better" : "worse") : undefined} />
+        <VersionBox label="B" lines={ex.versionB} state={submitted ? (ex.better === "B" ? "better" : "worse") : undefined} />
+      </div>
+
+      <p style={{ fontSize: "0.85rem", color: "var(--text-primary)", fontWeight: 600, marginBottom: "0.5rem" }}>
+        1. Bản nào tốt hơn?
+      </p>
+      <div style={{ display: "flex", gap: 8, marginBottom: "1.1rem" }}>
+        {(["A", "B"] as const).map((v) => {
+          const sel = choice === v;
+          const isAns = submitted && ex.better === v;
+          const wrong = submitted && sel && ex.better !== v;
+          return (
+            <button
+              key={v}
+              onClick={() => { if (!submitted) setChoice(v); }}
+              disabled={submitted}
+              style={{ padding: "8px 26px", fontSize: "0.88rem", fontWeight: 700, borderRadius: 8, border: `1.5px solid ${isAns ? "rgba(34,197,94,0.5)" : wrong ? "rgba(239,68,68,0.5)" : sel ? "var(--accent-primary)" : "var(--border)"}`, background: isAns ? "rgba(34,197,94,0.12)" : wrong ? "rgba(239,68,68,0.12)" : sel ? "rgba(59,130,246,0.12)" : "var(--bg-secondary)", color: isAns ? GREEN : wrong ? RED : sel ? "var(--accent-primary)" : "var(--text-primary)", cursor: submitted ? "default" : "pointer", fontFamily: "inherit" }}
+            >
+              Bản {v}
+            </button>
+          );
+        })}
+      </div>
+
+      <p style={{ fontSize: "0.85rem", color: "var(--text-primary)", fontWeight: 600, marginBottom: "0.5rem" }}>
+        2. Vì sao?
+      </p>
+      <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: "1rem" }}>
+        {ex.reasons.map((r) => {
+          const sel = reason === r.id;
+          const isAns = r.id === ex.correctReason;
+          let bg = "var(--bg-secondary)";
+          let border = "1.5px solid var(--border)";
+          let color = "var(--text-primary)";
+          if (submitted) {
+            if (isAns) { bg = "rgba(34,197,94,0.1)"; border = "1.5px solid rgba(34,197,94,0.4)"; color = GREEN; }
+            else if (sel) { bg = "rgba(239,68,68,0.1)"; border = "1.5px solid rgba(239,68,68,0.4)"; color = RED; }
+          } else if (sel) {
+            bg = "rgba(59,130,246,0.1)"; border = "1.5px solid var(--accent-primary)";
+          }
+          return (
+            <button
+              key={r.id}
+              onClick={() => { if (!submitted) setReason(r.id); }}
+              disabled={submitted}
+              style={{ display: "flex", alignItems: "flex-start", gap: 9, padding: "10px 13px", background: bg, border, borderRadius: 8, cursor: submitted ? "default" : "pointer", textAlign: "left", color, fontFamily: "inherit" }}
+            >
+              <span style={{ fontWeight: 700, fontSize: "0.83rem", minWidth: 16, flexShrink: 0 }}>{r.id}.</span>
+              <span style={{ fontSize: "0.86rem", lineHeight: 1.55 }}>{r.text}</span>
+              {submitted && isAns && <span style={{ marginLeft: "auto", flexShrink: 0 }}>✓</span>}
+            </button>
+          );
+        })}
+      </div>
+
+      {!submitted ? (
+        <CheckButton onClick={() => { setSubmitted(true); onResult(score); }} disabled={choice === null || reason === null} />
+      ) : (
+        <div>
+          <ResultBadge score={score} />
+          <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", margin: "0.45rem 0 0" }}>
+            Chọn bản đúng: 50 điểm · chọn lý do đúng: 50 điểm
+          </p>
+          <Explanation text={ex.explanation} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────
+// Tầng 7 — bỏ câu thừa khỏi đoạn
+// ─────────────────────────────────────
+
+function TrimCard({ ex, onResult }: { ex: P3TrimEx; onResult: (score: number) => void }) {
+  const [cut, setCut] = useState<Set<number>>(new Set());
+  const [submitted, setSubmitted] = useState(false);
+
+  const shouldCut = new Set(ex.cutIndexes);
+  // Chấm theo từng dòng: giữ đúng cũng được điểm như bỏ đúng, nên "bỏ hết" không ăn được.
+  const correctLines = ex.lines.filter((_, i) => cut.has(i) === shouldCut.has(i)).length;
+  const score = Math.round((correctLines / ex.lines.length) * 100);
+
+  function toggle(i: number) {
+    if (submitted) return;
+    setCut((prev) => {
+      const next = new Set(prev);
+      if (next.has(i)) next.delete(i);
+      else next.add(i);
+      return next;
+    });
+  }
+
+  return (
+    <div>
+      <DirectionsBox text={ex.directions} />
+      {ex.intro && <p style={{ fontSize: "0.87rem", color: "var(--text-secondary)", marginBottom: "0.8rem", lineHeight: 1.55 }}>{ex.intro}</p>}
+
+      <p style={{ fontSize: "0.85rem", color: "var(--text-primary)", fontWeight: 600, marginBottom: "0.6rem" }}>
+        Bấm vào những câu <span style={{ color: RED }}>nên BỎ</span> khỏi đoạn:
+      </p>
+
+      <div style={{ border: "1px solid var(--border)", borderRadius: 10, overflow: "hidden", marginBottom: "0.9rem" }}>
+        {ex.lines.map((line, i) => {
+          const picked = cut.has(i);
+          const mustCut = shouldCut.has(i);
+          const ok = picked === mustCut;
+
+          let bg = i % 2 === 0 ? "var(--bg-secondary)" : "var(--bg-primary)";
+          let border = "var(--border)";
+          if (submitted) {
+            bg = ok ? "rgba(34,197,94,0.08)" : "rgba(239,68,68,0.1)";
+            border = ok ? "rgba(34,197,94,0.4)" : "rgba(239,68,68,0.45)";
+          } else if (picked) {
+            bg = "rgba(239,68,68,0.1)";
+            border = "rgba(239,68,68,0.4)";
+          }
+
+          return (
+            <div key={i} style={{ borderBottom: i < ex.lines.length - 1 ? `1px solid ${border}` : "none" }}>
+              <button
+                onClick={() => toggle(i)}
+                disabled={submitted}
+                style={{ display: "flex", gap: 10, alignItems: "flex-start", width: "100%", padding: "9px 13px", background: bg, border: "none", cursor: submitted ? "default" : "pointer", textAlign: "left", fontFamily: "inherit", color: "var(--text-primary)" }}
+              >
+                <span style={{ fontSize: "0.72rem", fontWeight: 700, color: "var(--text-muted)", minWidth: 16, flexShrink: 0, marginTop: 3 }}>{i + 1}</span>
+                <span style={{ fontSize: "0.87rem", lineHeight: 1.65, flex: 1, textDecoration: picked ? "line-through" : "none", opacity: picked && !submitted ? 0.6 : 1 }}>
+                  {line}
+                </span>
+                <span style={{ flexShrink: 0, fontSize: "0.8rem", marginTop: 2 }}>
+                  {submitted ? (mustCut ? "✂" : "✓") : picked ? "✂" : ""}
+                </span>
+              </button>
+
+              {submitted && ex.reasons[String(i)] && (
+                <p style={{ margin: 0, padding: "0 13px 9px 39px", fontSize: "0.77rem", lineHeight: 1.55, color: mustCut ? RED : GREEN, background: bg }}>
+                  {mustCut ? "Bỏ — " : "Giữ — "}{ex.reasons[String(i)]}
+                </p>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {!submitted ? (
+        <CheckButton onClick={() => { setSubmitted(true); onResult(score); }} disabled={cut.size === 0} />
+      ) : (
+        <div>
+          <ResultBadge score={score} />
+          <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", margin: "0.45rem 0 0" }}>
+            Đúng {correctLines}/{ex.lines.length} dòng · phải bỏ {ex.cutIndexes.length} câu
+          </p>
+          <Explanation text={ex.explanation} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────
+// Tầng 9 — viết một đoạn dưới đồng hồ
+//
+// Chấm phần khách quan duy nhất máy chấm được: đủ số từ trước khi hết giờ.
+// Checklist bên dưới để tự soi, KHÔNG tính điểm.
+// ─────────────────────────────────────
+
+function fmtTime(sec: number): string {
+  const m = Math.floor(sec / 60);
+  const s = sec % 60;
+  return `${m}:${String(s).padStart(2, "0")}`;
+}
+
+function TimedWriteCard({ ex, onResult }: { ex: P3TimedWriteEx; onResult: (score: number) => void }) {
+  const [started, setStarted] = useState(false);
+  const [submittedEarly, setSubmittedEarly] = useState(false);
+  const [text, setText] = useState("");
+  const [left, setLeft] = useState(ex.seconds);
+  const [ticked, setTicked] = useState<Set<number>>(new Set());
+  const areaRef = useRef<HTMLTextAreaElement>(null);
+  /** Chốt để onResult chỉ chạy đúng một lần, dù nộp sớm hay hết giờ */
+  const reportedRef = useRef(false);
+
+  const words = countWords(text);
+  const score = Math.min(100, Math.round((words / ex.minWords) * 100));
+
+  // `submitted` là giá trị dẫn xuất — hết giờ không cần setState nào cả
+  const timeUp = left === 0;
+  const submitted = submittedEarly || timeUp;
+
+  useEffect(() => {
+    if (started && !submitted) areaRef.current?.focus();
+  }, [started, submitted]);
+
+  useEffect(() => {
+    if (!started || submitted) return;
+    const id = setInterval(() => setLeft((l) => Math.max(0, l - 1)), 1000);
+    return () => clearInterval(id);
+  }, [started, submitted]);
+
+  // Hết giờ thì báo điểm. Chỉ còn tác dụng phụ, không còn setState.
+  useEffect(() => {
+    if (!started || !timeUp || reportedRef.current) return;
+    reportedRef.current = true;
+    onResult(score);
+  }, [started, timeUp, score, onResult]);
+
+  function submitEarly() {
+    if (reportedRef.current) return;
+    reportedRef.current = true;
+    setSubmittedEarly(true);
+    onResult(score);
+  }
+
+  const lowTime = left <= Math.max(30, Math.round(ex.seconds * 0.2));
+  const timeColor = submitted ? "var(--text-muted)" : lowTime ? RED : "var(--text-primary)";
+  const wordColor = words >= ex.minWords ? GREEN : "var(--text-muted)";
+
+  return (
+    <div>
+      <p style={{ fontSize: "0.93rem", color: "var(--text-primary)", fontWeight: 600, marginBottom: "0.8rem", lineHeight: 1.6 }}>
+        {ex.prompt}
+      </p>
+
+      {ex.scaffold && ex.scaffold.length > 0 && (
+        <div style={{ border: "1px dashed var(--border)", borderRadius: 9, padding: "10px 14px", marginBottom: "1rem", background: "var(--bg-secondary)" }}>
+          <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", fontWeight: 700, letterSpacing: "0.05em", margin: "0 0 6px" }}>DÀN Ý GỢI Ý</p>
+          <ol style={{ margin: 0, paddingLeft: 18 }}>
+            {ex.scaffold.map((s, i) => (
+              <li key={i} style={{ fontSize: "0.82rem", color: "var(--text-secondary)", lineHeight: 1.65 }}>{s}</li>
+            ))}
+          </ol>
+        </div>
+      )}
+
+      {!started ? (
+        <div style={{ textAlign: "center", padding: "1.2rem 0 0.4rem" }}>
+          <p style={{ fontSize: "0.84rem", color: "var(--text-secondary)", margin: "0 0 0.9rem" }}>
+            Tối thiểu <strong style={{ color: "var(--text-primary)" }}>{ex.minWords} từ</strong> trong{" "}
+            <strong style={{ color: "var(--text-primary)" }}>{fmtTime(ex.seconds)}</strong>. Đồng hồ chạy ngay khi bạn bấm.
+          </p>
+          <button
+            onClick={() => setStarted(true)}
+            style={{ padding: "9px 28px", border: "none", background: "var(--accent-primary)", color: "#fff", borderRadius: 8, fontSize: "0.9rem", fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}
+          >
+            Bắt đầu tính giờ
+          </button>
+        </div>
+      ) : (
+        <>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, marginBottom: 7, flexWrap: "wrap" }}>
+            <span style={{ fontSize: "0.95rem", fontWeight: 700, color: timeColor, fontVariantNumeric: "tabular-nums" }}>
+              ⏱ {fmtTime(left)}
+            </span>
+            <span style={{ fontSize: "0.82rem", fontWeight: 600, color: wordColor, fontVariantNumeric: "tabular-nums" }}>
+              {words}/{ex.minWords} từ{words >= ex.minWords ? " ✓" : ""}
+            </span>
+          </div>
+
+          <div style={{ height: 4, background: "var(--border)", borderRadius: 999, marginBottom: "0.7rem" }}>
+            <div style={{ height: "100%", width: `${Math.min(100, (words / ex.minWords) * 100)}%`, background: words >= ex.minWords ? GREEN : "var(--accent-primary)", borderRadius: 999, transition: "width 0.2s" }} />
+          </div>
+
+          <textarea
+            ref={areaRef}
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            disabled={submitted}
+            rows={9}
+            placeholder="Viết đoạn văn của bạn…"
+            style={{ width: "100%", boxSizing: "border-box", padding: "12px 14px", fontSize: "0.92rem", border: "1.5px solid var(--border)", borderRadius: 8, background: "var(--bg-secondary)", color: "var(--text-primary)", outline: "none", resize: "vertical", fontFamily: "inherit", lineHeight: 1.75, marginBottom: "0.8rem" }}
+          />
+
+          {!submitted ? (
+            <button
+              onClick={submitEarly}
+              disabled={words === 0}
+              style={{ background: words === 0 ? "var(--bg-elevated)" : "var(--accent-primary)", color: words === 0 ? "var(--text-muted)" : "#fff", border: "none", borderRadius: 8, padding: "8px 20px", fontSize: "0.85rem", fontWeight: 600, cursor: words === 0 ? "not-allowed" : "pointer", fontFamily: "inherit" }}
+            >
+              Nộp sớm
+            </button>
+          ) : (
+            <div>
+              <ResultBadge score={score} />
+              <p style={{ fontSize: "0.83rem", color: "var(--text-secondary)", margin: "0.55rem 0 0" }}>
+                {words} từ{left === 0 ? " · hết giờ" : ` · còn dư ${fmtTime(left)}`}
+              </p>
+
+              <div style={{ marginTop: "1rem", border: "1px solid var(--border)", borderRadius: 9, padding: "12px 14px", background: "var(--bg-secondary)" }}>
+                <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", fontWeight: 700, letterSpacing: "0.05em", margin: "0 0 8px" }}>
+                  TỰ SOI — không tính vào điểm
+                </p>
+                <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
+                  {ex.checks.map((c, i) => {
+                    const on = ticked.has(i);
+                    return (
+                      <button
+                        key={i}
+                        onClick={() => setTicked((prev) => { const n = new Set(prev); if (n.has(i)) n.delete(i); else n.add(i); return n; })}
+                        style={{ display: "flex", gap: 9, alignItems: "flex-start", padding: "7px 10px", borderRadius: 7, border: `1.5px solid ${on ? "rgba(34,197,94,0.45)" : "var(--border)"}`, background: on ? "rgba(34,197,94,0.08)" : "var(--bg-primary)", cursor: "pointer", textAlign: "left", fontFamily: "inherit" }}
+                      >
+                        <span style={{ flexShrink: 0, fontSize: "0.85rem", color: on ? GREEN : "var(--text-muted)" }}>{on ? "☑" : "☐"}</span>
+                        <span style={{ fontSize: "0.83rem", lineHeight: 1.55, color: "var(--text-primary)" }}>{c}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <Explanation text={ex.explanation} />
+            </div>
+          )}
+        </>
+      )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────
 // Điều phối
 // ─────────────────────────────────────
 
@@ -630,6 +1175,11 @@ function ExerciseCard({ ex, passages, onResult }: { ex: P3Exercise; passages: Re
     case "type_blank": return <TypeBlankCard ex={ex} onResult={onResult} />;
     case "error_spot": return <ErrorSpotCard ex={ex} onResult={onResult} />;
     case "mission_audit": return <MissionAuditCard ex={ex} onResult={onResult} />;
+    case "word_bank": return <WordBankCard ex={ex} onResult={onResult} />;
+    case "translate": return <TranslateCard ex={ex} onResult={onResult} />;
+    case "compare": return <CompareCard ex={ex} onResult={onResult} />;
+    case "trim": return <TrimCard ex={ex} onResult={onResult} />;
+    case "timed_write": return <TimedWriteCard ex={ex} onResult={onResult} />;
   }
 }
 

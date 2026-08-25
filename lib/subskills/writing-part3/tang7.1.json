@@ -1,0 +1,280 @@
+{
+  "passages": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "trim",
+          "id": "t7-1-e1",
+          "directions": "Some people prefer to live in a large city. Others prefer to live in a small town. Which do you prefer?",
+          "intro": "Đoạn thân bài này khai triển lý do «chi phí thấp». Bỏ những câu không phục vụ lý do đó.",
+          "lines": [
+            "The clearest advantage of a small town is what it costs to live there.",
+            "My cousin pays half what I do for an apartment twice the size of mine.",
+            "The difference covers a family holiday every single year.",
+            "Cities are also very crowded during rush hour, especially on the metro.",
+            "Housing is simply the largest bill most young people pay, and a small town cuts it in half."
+          ],
+          "cutIndexes": [3],
+          "reasons": {
+            "0": "câu chủ đề của đoạn",
+            "1": "ví dụ cụ thể chống đỡ đúng lý do chi phí",
+            "2": "hệ quả của ví dụ, vẫn nằm trong lý do chi phí",
+            "3": "nói về tắc đường, không liên quan tới chi phí — đây là lạc ý",
+            "4": "câu chốt buộc lại đúng lý do chi phí"
+          },
+          "explanation": "Câu 4 không sai và cũng không dở, nó chỉ nằm nhầm đoạn. ETS mô tả mốc 4 là bài «vẫn liền mạch nhưng có lạc ý vặt»; mốc 5 thì không có. Nghĩa là chặng cuối không phải viết hay hơn mà là bỏ đi những câu đúng nhưng lạc chỗ."
+        },
+        {
+          "type": "trim",
+          "id": "t7-1-e2",
+          "directions": "Many companies now allow their staff to work from home. What are the advantages and disadvantages?",
+          "intro": "Đoạn này nói về mặt LỢI. Bỏ câu lặp ý và câu lạc.",
+          "lines": [
+            "The clearest benefit of working from home is the time it gives back.",
+            "Employees no longer lose hours travelling to an office.",
+            "Workers save a lot of time because they do not have to commute.",
+            "My cousin used to leave home at half past six and now starts work at eight from her kitchen.",
+            "Of course, some jobs such as nursing can never be done from home."
+          ],
+          "cutIndexes": [2, 4],
+          "reasons": {
+            "0": "câu chủ đề",
+            "1": "giải thích cơ chế",
+            "2": "nói y hệt câu 2, chỉ đổi chữ — lặp ý",
+            "3": "ví dụ cụ thể",
+            "4": "chuyển sang mặt hạn chế, thuộc đoạn sau chứ không phải đoạn này"
+          },
+          "explanation": "Câu 3 là kiểu lặp nguy hiểm nhất: nó đổi đủ nhiều chữ để người viết tưởng mình vừa thêm một ý mới. Cách thử nhanh là bỏ câu đó đi rồi đọc lại — nếu đoạn không mất gì thì nó là câu lặp."
+        },
+        {
+          "type": "trim",
+          "id": "t7-1-e3",
+          "directions": "In your opinion, what is the most effective way for a new employee to learn how a company works?",
+          "intro": "Bỏ câu thừa khỏi đoạn mở bài này.",
+          "lines": [
+            "Every new employee faces the same problem in the first weeks: everyone else already knows how things work.",
+            "In my opinion, the fastest way to learn is to sit beside an experienced colleague.",
+            "Nowadays, companies are changing very quickly because of new technology and globalisation.",
+            "Handbooks and training sessions help, but neither shows how decisions are actually made."
+          ],
+          "cutIndexes": [2],
+          "reasons": {
+            "0": "bối cảnh, dẫn vào đúng câu hỏi",
+            "1": "luận điểm",
+            "2": "câu mở bài sáo rỗng kiểu «ngày nay xã hội phát triển» — không phục vụ gì",
+            "3": "cân nhắc các phương án khác, đúng khuôn dạng câu hỏi mở"
+          },
+          "explanation": "Câu «Nowadays… technology and globalisation» là kiểu câu mở bài học thuộc mà rất nhiều bài dùng. Nó không sai ngữ pháp nhưng cũng không nói gì về đề, và người chấm đã đọc nó hàng nghìn lần. Trong bài 300 từ, đó là hơn một phần mười số chữ bị phí."
+        },
+        {
+          "type": "trim",
+          "id": "t7-1-e4",
+          "directions": "Do you think schools should install vending machines in their hallways?",
+          "intro": "Bỏ câu thừa khỏi đoạn kết bài này.",
+          "lines": [
+            "Vending machines certainly make life easier for students who arrive without lunch.",
+            "As I said in the introduction, schools should not install vending machines.",
+            "As I explained in my first paragraph, they replace meals with snacks.",
+            "A school that wants its students to eat properly should not place the alternative in the corridor outside the classroom."
+          ],
+          "cutIndexes": [1, 2],
+          "reasons": {
+            "0": "câu nhượng bộ, mở kết bài rất tốt",
+            "1": "chỉ chép lại luận điểm và còn tự thuật về bài viết",
+            "2": "tóm tắt lại đoạn thân bài, không thêm gì mới",
+            "3": "khẳng định lại lập trường bằng cách diễn đạt mới"
+          },
+          "explanation": "Kết bài kiểu «như tôi đã nói ở trên» là kết bài tóm tắt — nó chỉ hợp với bài dài hàng nghìn chữ mà người đọc có thể quên mất đoạn đầu. Trong một bài 300 từ, người chấm vừa đọc mở bài xong hai phút trước. Kết bài mạnh là nhượng bộ rồi khẳng định lại bằng chữ mới."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "trim",
+          "id": "t7-1-m1",
+          "directions": "Some managers believe employees work better when they choose their own hours. Do you agree or disagree?",
+          "intro": "Đoạn dài hơn, có cả lặp ý lẫn lạc ý. Bỏ tất cả những câu thừa.",
+          "lines": [
+            "The strongest argument for flexible hours is that people differ in when they concentrate.",
+            "Some of us think most clearly early in the morning, others only after lunch.",
+            "People are not all the same, and everyone has their own rhythm.",
+            "A colleague of mine writes his reports at six and finishes before the office opens.",
+            "He is also one of the friendliest people on our floor.",
+            "Forcing him to start at nine would simply waste his best three hours."
+          ],
+          "cutIndexes": [2, 4],
+          "reasons": {
+            "0": "câu chủ đề",
+            "1": "giải thích cơ chế bằng chi tiết",
+            "2": "nói lại câu 2 bằng chữ mơ hồ hơn — lặp ý",
+            "3": "ví dụ cụ thể",
+            "4": "tính cách của đồng nghiệp không liên quan tới giờ tập trung — lạc ý",
+            "5": "chốt lại, buộc ví dụ vào luận điểm"
+          },
+          "explanation": "Hai câu bị bỏ minh hoạ hai bệnh khác nhau. Câu 3 lặp và còn tệ hơn bản gốc vì mơ hồ hơn. Câu 5 là chi tiết trang trí — nó cụ thể, có thật, nhưng không chứng minh gì cho luận điểm. Chi tiết chỉ có giá khi nó phục vụ ý."
+        },
+        {
+          "type": "trim",
+          "id": "t7-1-m2",
+          "directions": "What are the advantages and disadvantages of reading film reviews before watching a film?",
+          "intro": "Đoạn nói về mặt HẠI. Bỏ những câu thừa.",
+          "lines": [
+            "The main risk of reading a review first is that it takes away surprise.",
+            "A review I read last summer mentioned the ending in its second paragraph.",
+            "I spent the whole film waiting for something I already knew was coming.",
+            "That cinema on Nguyen Hue street has very comfortable seats.",
+            "Critics are professionals who watch hundreds of films every year.",
+            "Once you know where a story is going, you watch it instead of living it."
+          ],
+          "cutIndexes": [3, 4],
+          "reasons": {
+            "0": "câu chủ đề",
+            "1": "ví dụ cụ thể",
+            "2": "hậu quả của ví dụ",
+            "3": "ghế rạp thoải mái là chi tiết trang trí, không phục vụ luận điểm",
+            "4": "thông tin nền về giới phê bình, không nói gì về việc mất bất ngờ",
+            "5": "câu chốt khái quát lại ví dụ"
+          },
+          "explanation": "Câu 5 khó bỏ hơn vì nghe có vẻ liên quan tới chủ đề bài đánh giá. Nhưng đoạn này đang chứng minh «mất bất ngờ», mà việc nhà phê bình xem bao nhiêu phim thì chẳng liên quan gì tới điều đó. Thử hỏi từng câu: câu này phục vụ CÂU CHỦ ĐỀ nào?"
+        },
+        {
+          "type": "trim",
+          "id": "t7-1-m3",
+          "directions": "Of a cash bonus, extra vacation days, or a company trip, which should a company choose to reward staff?",
+          "intro": "Đoạn loại bỏ hai phương án còn lại. Bỏ những câu thừa.",
+          "lines": [
+            "A company trip sounds exciting, but it cannot reach everyone.",
+            "Staff with small children often simply cannot travel for several days.",
+            "Travelling abroad is expensive these days because of rising airfares.",
+            "Extra vacation days help only those whose workload can wait.",
+            "In my team, unused leave from last year is still sitting in the system.",
+            "A trip is fun, and fun is important for morale in every workplace."
+          ],
+          "cutIndexes": [2, 5],
+          "reasons": {
+            "0": "loại bỏ phương án du lịch, có lý do",
+            "1": "chi tiết chống đỡ việc loại bỏ",
+            "2": "giá vé máy bay là lý do về chi phí công ty, lệch khỏi lập luận «không tới được mọi người»",
+            "3": "loại bỏ phương án ngày nghỉ",
+            "4": "chi tiết chống đỡ",
+            "5": "quay lại khen phương án vừa loại bỏ — làm loãng chính lập luận của mình"
+          },
+          "explanation": "Câu 6 là lỗi tinh vi: sau khi đã loại bỏ phương án du lịch, người viết lại quay ra khen nó. Bài luận không cần công bằng với mọi phương án, nó cần nhất quán. Nhượng bộ thì để ở kết bài, chứ đừng đặt ngay sau câu vừa bác bỏ."
+        },
+        {
+          "type": "trim",
+          "id": "t7-1-m4",
+          "directions": "Which age is better for beginning a second language: childhood or adulthood?",
+          "intro": "Bỏ những câu thừa khỏi đoạn này.",
+          "lines": [
+            "Children have one advantage adults can never recover: they copy sounds without judging them.",
+            "An adult hears a strange sound and immediately matches it to the nearest sound at home.",
+            "Adults compare new sounds with sounds from their own language.",
+            "My niece moved to Canada at six and within two years no one could place her accent.",
+            "Her father arrived on the same flight and still orders coffee in an accent everyone notices.",
+            "Canada is a country where many languages are spoken every day."
+          ],
+          "cutIndexes": [2, 5],
+          "reasons": {
+            "0": "câu chủ đề",
+            "1": "giải thích cơ chế",
+            "2": "nói lại câu 2 bằng chữ khác — lặp ý",
+            "3": "ví dụ",
+            "4": "ví dụ đối chiếu, mạnh nhất trong đoạn",
+            "5": "thông tin nền về Canada, không phục vụ luận điểm"
+          },
+          "explanation": "Bỏ được cả hai câu là bạn giữ lại đúng bốn nhịp: nêu ý, giải thích, ví dụ, đối chiếu. Đoạn ngắn hơn nhưng chặt hơn. Cắt không làm bài yếu đi vì số từ — bài vẫn phải đủ 300 chữ, chỉ là chữ đó nên nằm ở đoạn khác đang thiếu ví dụ."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t7-1-h1",
+          "question": "Bài đang thừa 40 từ và cần cắt. Nên cắt câu nào TRƯỚC?",
+          "options": [
+            { "id": "A", "text": "Một ví dụ cụ thể ở đoạn thân bài thứ hai." },
+            { "id": "B", "text": "Câu mở bài kiểu «Ngày nay xã hội phát triển rất nhanh»." },
+            { "id": "C", "text": "Câu nhượng bộ ở kết bài." },
+            { "id": "D", "text": "Câu chủ đề của đoạn thân bài thứ nhất." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Thứ tự cắt luôn là: câu sáo rỗng trước, rồi câu lặp, rồi câu lạc ý, và ví dụ thì cắt sau cùng. A, C, D đều đang được chấm điểm — ví dụ ăn điểm ở trục khai triển, nhượng bộ và câu chủ đề ăn điểm ở trục mạch bài. Câu B thì không ăn điểm ở đâu cả."
+        },
+        {
+          "type": "trim",
+          "id": "t7-1-h2",
+          "directions": "Should cities continue to spend money on public libraries?",
+          "intro": "Một bài luận rút gọn còn tám câu. Bỏ ba câu thừa mà không làm hỏng bố cục.",
+          "lines": [
+            "Almost any article can now be found online in seconds, which makes some people ask whether libraries still earn their budget.",
+            "In my view cities should keep funding them, because a library is no longer mainly about books.",
+            "Nowadays technology is developing faster than ever before in human history.",
+            "For many residents the library is the only warm, quiet room they can use without paying.",
+            "The branch near my flat is full every winter afternoon with students who have no desk at home.",
+            "Libraries also lend books, which is their traditional purpose and still matters to readers.",
+            "A city that closes its libraries does not save money so much as move the cost onto the people with the least space.",
+            "Books are of course still available in bookshops for those who can afford them."
+          ],
+          "cutIndexes": [2, 5, 7],
+          "reasons": {
+            "0": "bối cảnh, dẫn thẳng vào câu hỏi",
+            "1": "luận điểm",
+            "2": "câu sáo rỗng, không nói gì về thư viện",
+            "3": "câu chủ đề của lý do chính",
+            "4": "ví dụ cụ thể",
+            "5": "nhắc lại chức năng hiển nhiên, làm loãng lập luận «không còn chủ yếu về sách»",
+            "6": "câu chốt mạnh, nêu lại lập trường bằng góc nhìn mới",
+            "7": "lạc sang hiệu sách, chẳng phục vụ câu hỏi nào"
+          },
+          "explanation": "Câu 6 đáng chú ý: nó đúng sự thật nhưng MÂU THUẪN với luận điểm ở câu 2 vốn nói thư viện «không còn chủ yếu về sách». Câu thừa nguy hiểm nhất không phải câu vô nghĩa mà là câu tự phản bác lập luận của chính mình."
+        },
+        {
+          "type": "trim",
+          "id": "t7-1-h3",
+          "directions": "Do you agree that employees work better when they choose their own working hours?",
+          "intro": "Bài rút gọn còn bảy câu. Bỏ những câu thừa — có thể nhiều hoặc ít hơn bạn đoán.",
+          "lines": [
+            "Few workplace questions divide managers as sharply as the one about who sets the clock.",
+            "I agree that staff produce better work when they choose their own hours.",
+            "There are many reasons why this is true, and I will explain them below.",
+            "People differ in when they concentrate, and forcing everyone into the same window wastes the best hours of half the team.",
+            "A colleague of mine writes his reports at six and finishes before the office opens.",
+            "Everyone has a different rhythm and works best at different times of the day.",
+            "The real question is not when people sit at their desks but what they produce while they are there."
+          ],
+          "cutIndexes": [2, 5],
+          "reasons": {
+            "0": "bối cảnh",
+            "1": "luận điểm",
+            "2": "tự thuật về bài viết, không chở ý nào",
+            "3": "lý do kèm giải thích",
+            "4": "ví dụ cụ thể",
+            "5": "nói lại câu 4 bằng chữ mơ hồ hơn — lặp ý",
+            "6": "câu chốt, nâng vấn đề lên một mức"
+          },
+          "explanation": "Chỉ có hai câu cần bỏ. Bài chấm theo từng dòng — giữ đúng được điểm ngang bỏ đúng — nên bấm bỏ thêm một câu đang ăn điểm sẽ bị trừ. Đừng đếm cho tròn số, hãy xét từng câu một: câu này phục vụ câu chủ đề nào?"
+        },
+        {
+          "type": "mcq",
+          "id": "t7-1-h4",
+          "question": "Câu nào dưới đây là LẶP Ý chứ không phải khai triển?",
+          "options": [
+            { "id": "A", "text": "Luận điểm: Small towns are cheaper. → Tiếp: My cousin pays half my rent for twice the space." },
+            { "id": "B", "text": "Luận điểm: Small towns are cheaper. → Tiếp: Living costs less outside big cities." },
+            { "id": "C", "text": "Luận điểm: Small towns are cheaper. → Tiếp: Housing is the largest bill most young people pay." },
+            { "id": "D", "text": "Luận điểm: Small towns are cheaper. → Tiếp: The money saved covers a holiday every year." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "B đổi chữ nhưng không thêm thông tin nào — đó là định nghĩa của lặp ý. A là ví dụ, C là giải thích vì sao chênh lệch đó quan trọng, D là hệ quả. Thử nghiệm nhanh: câu sau có nói điều gì mà câu trước chưa nói không? Nếu không, xoá."
+        }
+      ]
+    }
+  ]
+}

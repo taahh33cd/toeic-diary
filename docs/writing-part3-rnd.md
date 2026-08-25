@@ -3,7 +3,8 @@
 Bản đầy đủ có phân tích: artifact `Bản đồ tầng Writing Part 3`
 https://claude.ai/code/artifact/38567fed-8807-4ed7-a579-68cb9cb44413
 
-Trạng thái: blueprint đã chốt, chưa code. `/subskills/writing/part3` chưa tồn tại.
+Trạng thái: Phase 1–2 đã xong. Tầng 1–9 đang mở, 117 bài tập tự chấm.
+Còn lại: Phase 3 = T10–T12 · Phase 4 = T13 + bộ đề + 6 cặp bài mẫu.
 
 ## Quyết định đã chốt
 
@@ -103,6 +104,32 @@ Nộp bài dùng lại `SkillSubmission` + `/journal/submissions` + `/admin/grad
 | Đoạn văn nền (T5–T8, T12) | ~40 | bản nháp cài lỗi sẵn |
 
 Phase: (1) khung + T1–T4 · (2) T5–T9 · (3) T10–T12 · (4) T13 + bộ đề.
+
+### Đã dựng (Phase 1–2)
+
+Mỗi tầng hiện có **1 bộ test**, nhân lên 5 bộ ở phase sau.
+
+| Tầng | Bài | easy / medium / hard |
+|---|---|---|
+| T1 Giải mã đề | 15 | 6 · 5 · 4 |
+| T2 Chọn phe & luận điểm | 14 | 5 · 5 · 4 |
+| T3 Chuỗi lý do–ví dụ | 14 | 5 · 5 · 4 |
+| T4 Khung bốn đoạn | 14 | 5 · 5 · 4 |
+| T5 Chung chung → cụ thể | 12 | 4 · 4 · 4 |
+| T6 Mạch nối | 13 | 4 · 5 · 4 |
+| T7 Cắt lặp và lạc ý | 12 | 4 · 4 · 4 |
+| T8 Sạch lỗi bài dài | 14 | 5 · 5 · 4 |
+| T9 Tốc độ sản xuất | 9 | 3 · 3 · 3 |
+
+Sai lệch so với blueprint, đều là cố ý:
+
+- **T5 bỏ `type_blank`**, dùng `compare` ở cả easy lẫn medium. Medium là biến thể khó hơn: cả hai bản đều có chi tiết cụ thể, nhưng một bản dùng chi tiết TRANG TRÍ không phục vụ luận điểm. Phân biệt này đáng giá hơn điền chỗ trống.
+- **T6 KHÔNG import module Liên từ.** `ConnGroupConfig` có `connectors` + `levels` gắn với UI riêng của nó; import vào sẽ kéo theo cả cấu trúc level. Ngân hàng từ viết thẳng trong JSON, dùng lại đúng các bẫy của module đó (because vs because of, despite vs although, chấm câu quanh however).
+- **T9 chấm bằng số từ đạt được trong thời gian cho.** Đó là phần khách quan duy nhất máy chấm được; checklist tự soi hiện sau khi nộp và KHÔNG tính điểm.
+
+`timed_write` dùng `submitted` dẫn xuất (`submittedEarly || left === 0`) chứ không phải state riêng —
+eslint `react-hooks/set-state-in-effect` và `react-hooks/refs` chặn cả hai cách làm quen thuộc.
+`reportedRef` chốt để `onResult` chỉ chạy một lần dù nộp sớm hay hết giờ.
 
 ## Bản quyền
 
