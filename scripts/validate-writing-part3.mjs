@@ -64,6 +64,16 @@ for (const f of fs.readdirSync(dir).filter(f => f.endsWith(".json"))) {
           if (ex.bank.length < ex.answers.length) err(id, "ngân hàng ít hơn số chỗ trống");
           break;
         }
+        case "word_order": {
+          const joined = ex.tokens.join(" ");
+          const norm = t => t.toLowerCase().replace(/[.,!?;:"']/g, "").replace(/\s+/g, " ").trim();
+          if (norm(joined) !== norm(ex.answer)) err(id, `ghép tokens theo thứ tự khai báo KHÔNG ra answer:
+      tokens -> "${joined}"
+      answer -> "${ex.answer}"`);
+          if (new Set(ex.tokens).size !== ex.tokens.length) err(id, "token trùng nhau — vùng chờ sẽ xoá nhầm");
+          if (ex.tokens.length < 3) err(id, "ít hơn 3 cụm thì không còn là bài sắp xếp");
+          break;
+        }
         case "translate": {
           if (!ex.vi || !ex.answer) err(id, "thiếu vi hoặc answer");
           if (ex.accepted?.includes(ex.answer)) err(id, "accepted lặp lại chính answer");

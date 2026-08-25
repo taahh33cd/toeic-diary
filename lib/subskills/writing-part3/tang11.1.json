@@ -1,0 +1,181 @@
+{
+  "passages": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "word_bank",
+          "id": "t11-1-e1",
+          "prompt": "Điền động từ đi đúng với danh từ theo sau. Mỗi từ dùng một lần.",
+          "sentence": "Before the meeting the board had to ___ a decision, ___ research into three suppliers, and ___ responsibility for the result.",
+          "bank": ["make", "carry out", "take", "do"],
+          "answers": ["make", "carry out", "take"],
+          "explanation": "«Make a decision», «carry out research», «take responsibility» — ba kết hợp cố định, không hoán đổi được. «Do a decision» hay «make research» đọc lên là biết ngay người viết dịch từ tiếng mẹ đẻ. Kết hợp từ là thứ ETS chấm ở trục từ vựng."
+        },
+        {
+          "type": "word_bank",
+          "id": "t11-1-e2",
+          "prompt": "Điền từ đúng vào chỗ trống.",
+          "sentence": "Free transport would ___ a heavy burden on the city budget, but it would also ___ living costs for thousands of households and ___ pressure on the road network.",
+          "bank": ["place", "cut", "ease", "put down"],
+          "answers": ["place", "cut", "ease"],
+          "explanation": "«Place a burden on», «cut costs», «ease pressure on». Chú ý «ease» — nó vừa là động từ vừa gọn hơn «make less», và những động từ chính xác kiểu này là thứ phân biệt mốc 4 với mốc 5 ở trục từ vựng."
+        },
+        {
+          "type": "word_bank",
+          "id": "t11-1-e3",
+          "prompt": "Điền từ đúng vào chỗ trống.",
+          "sentence": "Working from home can ___ productivity for some staff, but it can also ___ isolation and ___ the informal learning that new employees depend on.",
+          "bank": ["boost", "breed", "erode", "grow up"],
+          "answers": ["boost", "breed", "erode"],
+          "explanation": "«Boost productivity», «breed isolation», «erode learning». Ba động từ này thay được cho «increase / create / reduce» nhưng mỗi từ mang thêm một sắc thái: boost là nâng nhanh, breed là sinh sôi âm thầm, erode là bào mòn dần."
+        },
+        {
+          "type": "word_bank",
+          "id": "t11-1-e4",
+          "prompt": "Điền từ đúng vào chỗ trống.",
+          "sentence": "The two arguments ___ equal weight, so I will ___ the case for each before I ___ a conclusion.",
+          "bank": ["carry", "set out", "reach", "make"],
+          "answers": ["carry", "set out", "reach"],
+          "explanation": "«Carry weight», «set out the case», «reach a conclusion». «Make a conclusion» là lỗi rất phổ biến — kết luận thì «reach» hoặc «draw», không «make». Ba cụm này dùng được ở gần như mọi bài luận nên đáng thuộc."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t11-1-m1",
+          "question": "Thay «This is a very good thing for the company» bằng câu nào?",
+          "options": [
+            { "id": "A", "text": "This is a really good thing for the company." },
+            { "id": "B", "text": "This arrangement benefits the company in several concrete ways." },
+            { "id": "C", "text": "This is a very very good thing for the company." },
+            { "id": "D", "text": "This is a beneficial thing for the company." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Vấn đề không nằm ở chữ «very» mà ở chữ «thing» — nó không cho biết cái gì đang tốt. B thay «thing» bằng «arrangement» và thay «is good for» bằng động từ «benefits». Chữa từ mơ hồ phải chữa danh từ trước, trạng từ sau."
+        },
+        {
+          "type": "mcq",
+          "id": "t11-1-m2",
+          "question": "Câu nào hợp với giọng văn của một bài luận thi?",
+          "options": [
+            { "id": "A", "text": "Lots of companies are kind of okay with this stuff nowadays." },
+            { "id": "B", "text": "A growing number of companies now accept this practice." },
+            { "id": "C", "text": "Tons of companies are totally fine with it these days." },
+            { "id": "D", "text": "Companies are, like, mostly fine with this now." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "«Lots of», «tons of», «kind of», «stuff», «like» đều thuộc giọng nói chuyện. Bài luận TOEIC không cần trang trọng tới mức cứng nhắc, nhưng phải ở giọng trung tính. «A growing number of» còn cho thêm thông tin về xu hướng mà «lots of» không có."
+        },
+        {
+          "type": "mcq",
+          "id": "t11-1-m3",
+          "question": "Thay «The situation was very bad for new employees» bằng câu nào?",
+          "options": [
+            { "id": "A", "text": "The situation was extremely bad for new employees." },
+            { "id": "B", "text": "New employees were left without anyone to learn from." },
+            { "id": "C", "text": "The situation was not good at all for new employees." },
+            { "id": "D", "text": "It was a bad situation for the new employees who worked there." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "A, C, D đều loay hoay quanh chữ «bad» mà không nói bad ở chỗ nào. B bỏ hẳn tính từ đánh giá và nói ra sự việc — người đọc tự kết luận là xấu. Đây cũng chính là bài học của Tầng 5, lần này ở cấp độ chọn từ."
+        },
+        {
+          "type": "mcq",
+          "id": "t11-1-m4",
+          "question": "Từ nào KHÔNG nên dùng trong bài luận thi?",
+          "options": [
+            { "id": "A", "text": "considerable" },
+            { "id": "B", "text": "gonna" },
+            { "id": "C", "text": "nevertheless" },
+            { "id": "D", "text": "substantial" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "«Gonna», «wanna», «kinda» là dạng viết của lời nói, không bao giờ dùng trong văn viết công việc. Cũng nên tránh viết tắt kiểu «don't», «it's» — không sai, nhưng bài luận thi dùng dạng đầy đủ thì giọng chắc hơn."
+        },
+        {
+          "type": "mcq",
+          "id": "t11-1-m5",
+          "question": "Câu nào dùng từ CHÍNH XÁC nhất?",
+          "options": [
+            { "id": "A", "text": "The number of cars in the centre went down a lot after the change." },
+            { "id": "B", "text": "The number of cars in the centre fell sharply after the change." },
+            { "id": "C", "text": "The number of cars in the centre became less after the change." },
+            { "id": "D", "text": "The number of cars in the centre reduced down after the change." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "«Fell sharply» là cặp động từ–trạng từ chuẩn khi mô tả số liệu giảm mạnh. A không sai nhưng nhạt. C sai kết hợp — «became less» không đi với «number». D thừa «down» sau «reduced», và «reduce» thường là ngoại động từ cần tân ngữ."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "error_spot",
+          "id": "t11-1-h1",
+          "intro": "Bấm vào dòng có lỗi KẾT HỢP TỪ (ngữ pháp thì không sai).",
+          "lines": [
+            "Free transport places a heavy burden on the city budget.",
+            "Supporters argue that it cuts living costs for the poorest households.",
+            "Opponents make the conclusion that the money would be better spent on schools.",
+            "Both sides carry weight, and the choice depends on what a city values."
+          ],
+          "errorIndex": 2,
+          "errorLabel": "«make a conclusion» sai kết hợp",
+          "fix": "Opponents draw the conclusion that the money would be better spent on schools.",
+          "explanation": "Kết luận thì «draw» hoặc «reach», không «make». Câu này đúng ngữ pháp hoàn toàn nên máy chấm ngữ pháp không bắt được, nhưng người chấm bắt ngay — và nó nằm ở trục từ vựng, một trong bốn tiêu chí ETS ghi trên màn hình."
+        },
+        {
+          "type": "error_spot",
+          "id": "t11-1-h2",
+          "intro": "Bấm vào dòng lệch GIỌNG VĂN so với phần còn lại.",
+          "lines": [
+            "A growing number of schools have installed vending machines in their corridors.",
+            "Supporters point to the convenience for students who arrive without lunch.",
+            "But honestly the whole idea is kind of a mess if you think about it.",
+            "Critics reply that convenience is bought at the cost of proper meals."
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Rơi xuống giọng nói chuyện giữa một đoạn trung tính",
+          "fix": "Critics, however, regard the arrangement as a poor trade.",
+          "explanation": "«Honestly», «kind of a mess», «if you think about it» đều là giọng nói. Lệch giọng giữa chừng còn hại hơn là viết giản dị suốt bài, vì nó cho thấy người viết không kiểm soát được sắc thái — đúng thứ mốc 5 đòi hỏi."
+        },
+        {
+          "type": "error_spot",
+          "id": "t11-1-h3",
+          "intro": "Bấm vào dòng dùng từ MƠ HỒ nhất.",
+          "lines": [
+            "Working beside an experienced colleague teaches a newcomer how decisions are really made.",
+            "A handbook lists the rules but never shows how they bend in practice.",
+            "This thing is a very good thing for new people in the company.",
+            "Within three months a new employee can read the room as well as the manual."
+          ],
+          "errorIndex": 2,
+          "errorLabel": "«thing… good thing… people» — ba danh từ rỗng trong một câu",
+          "fix": "This kind of learning is what a new employee needs most.",
+          "explanation": "Ba câu còn lại đều có động từ mạnh và danh từ cụ thể. Câu này dùng «thing» hai lần và «people» một lần mà không nói gì. Trong bài 300 từ, một câu rỗng như vậy vừa phí chữ vừa kéo tụt trục từ vựng."
+        },
+        {
+          "type": "error_spot",
+          "id": "t11-1-h4",
+          "intro": "Bấm vào dòng có lỗi kết hợp từ.",
+          "lines": [
+            "Flexible hours can boost productivity for staff who concentrate early.",
+            "They can also breed confusion when nobody knows who is available.",
+            "Last quarter my manager spent eleven days to find a slot that suited everyone.",
+            "The arrangement eased pressure on some people and placed it on others."
+          ],
+          "errorIndex": 2,
+          "errorLabel": "«spend + thời gian» phải đi với V-ing, không phải «to + V»",
+          "fix": "…spent eleven days finding a slot that suited everyone.",
+          "explanation": "«Spend time DOING something», không phải «spend time to do». Đây là lỗi lai giữa hai khuôn: «take time TO DO» thì đúng, nên nhiều người chuyển nhầm sang «spend». Cùng một câu, đổi «spent» thành «took» thì «to find» lại thành đúng."
+        }
+      ]
+    }
+  ]
+}

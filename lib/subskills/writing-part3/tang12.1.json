@@ -1,0 +1,238 @@
+{
+  "passages": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "compare",
+          "id": "t12-1-e1",
+          "directions": "Hai MỞ BÀI cho đề: Should cities continue to spend money on public libraries?",
+          "versionA": [
+            "Nowadays, society is developing faster than ever before.",
+            "Technology has changed many aspects of our daily lives in recent years.",
+            "In this essay I will discuss whether libraries are still needed today."
+          ],
+          "versionB": [
+            "Almost any article can now be found online in seconds.",
+            "That fact has led several city councils to ask whether a building full of shelves still earns its budget.",
+            "In my view it does, because a library long ago stopped being mainly about books."
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B đi thẳng vào đúng câu hỏi và kết bằng một luận điểm có hé lộ lý do." },
+            { "id": "B", "text": "Bản B dùng nhiều từ vựng khó hơn." },
+            { "id": "C", "text": "Bản B dài hơn nên đủ 300 từ nhanh hơn." }
+          ],
+          "correctReason": "A",
+          "explanation": "Bản A tiêu ba câu mà chưa nói gì về thư viện: hai câu sáo và một câu tự thuật «In this essay I will discuss». Bản B cũng ba câu nhưng đi đúng ba nhịp — bối cảnh, thu hẹp về câu hỏi, luận điểm. Trong bài 300 từ, mở bài kiểu A đã phí một phần sáu số chữ."
+        },
+        {
+          "type": "compare",
+          "id": "t12-1-e2",
+          "directions": "Hai KẾT BÀI cho đề: Do you agree that employees work better when they choose their own hours?",
+          "versionA": [
+            "In conclusion, as I said in my introduction, I agree with flexible hours.",
+            "As I explained in my first paragraph, people concentrate at different times.",
+            "As I explained in my second paragraph, it helps companies keep good staff.",
+            "So flexible hours are good."
+          ],
+          "versionB": [
+            "Coordinating a team across scattered schedules is genuinely harder, and I do not pretend otherwise.",
+            "But the real question is not when people sit at their desks; it is what they produce while they are there."
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B nhượng bộ phía bên kia rồi khẳng định lại bằng chữ mới thay vì tóm tắt." },
+            { "id": "B", "text": "Bản B ngắn hơn nên tiết kiệm thời gian." },
+            { "id": "C", "text": "Bản B không dùng «In conclusion» nên tự nhiên hơn." }
+          ],
+          "correctReason": "A",
+          "explanation": "Bản A không nói gì mà người chấm chưa đọc hai phút trước, lại còn tự thuật về bố cục bài ba lần. Kết bài tóm tắt chỉ hợp với bài hàng nghìn chữ. Bản B thừa nhận điểm mạnh của phía bên kia rồi định nghĩa lại vấn đề — vừa cho thấy cân nhắc, vừa không hề lung lay lập trường."
+        },
+        {
+          "type": "compare",
+          "id": "t12-1-e3",
+          "directions": "Hai MỞ BÀI cho một đề ƯU & NHƯỢC: What are the advantages and disadvantages of working from home?",
+          "versionA": [
+            "Remote work was rare ten years ago and is now ordinary.",
+            "The change has brought gains that few people predicted, along with costs that are easy to overlook.",
+            "This essay looks at both before reaching a conclusion."
+          ],
+          "versionB": [
+            "Remote work was rare ten years ago and is now ordinary.",
+            "In my opinion working from home is far better than working in an office.",
+            "I will prove this with two strong reasons."
+          ],
+          "better": "A",
+          "reasons": [
+            { "id": "A", "text": "Bản A báo trước bài sẽ đi cả hai chiều, đúng thứ dạng ưu–nhược yêu cầu." },
+            { "id": "B", "text": "Bản A tránh dùng đại từ «I»." },
+            { "id": "C", "text": "Bản A có câu mở đầu hay hơn." }
+          ],
+          "correctReason": "A",
+          "explanation": "Hai bản có chung câu đầu, khác nhau ở hai câu sau. Bản B chọn phe ngay mở bài — với dạng ưu–nhược thì đó là tự cắt mất nửa nội dung đề đòi. Đây là bài học của Tầng 1 và Tầng 2 quay lại ở cấp độ câu chữ."
+        },
+        {
+          "type": "compare",
+          "id": "t12-1-e4",
+          "directions": "Hai KẾT BÀI cho một đề ƯU & NHƯỢC: instructions by e-mail.",
+          "versionA": [
+            "In conclusion, e-mail has advantages and disadvantages.",
+            "Every company must decide for itself which matters more."
+          ],
+          "versionB": [
+            "On balance I would keep e-mail for anything carrying a date or a number.",
+            "The conversations that can go wrong belong in a room with people in it."
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B ngả về một bên bằng cách phân chia phạm vi dùng cho từng cái." },
+            { "id": "B", "text": "Bản B không dùng cụm «In conclusion»." },
+            { "id": "C", "text": "Bản B có hai câu dài hơn." }
+          ],
+          "correctReason": "A",
+          "explanation": "Bản A đúng nhưng rỗng — nói «có lợi có hại, tuỳ công ty» chính là không kết luận gì. Ở dạng ưu–nhược, kết bài LÀ chỗ phải ngả về một bên. Bản B ngả theo kiểu tinh tế: không phủ nhận nửa nào, mà chia phạm vi dùng cho từng thứ."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "error_spot",
+          "id": "t12-1-m1",
+          "intro": "Bấm vào câu làm hỏng kết bài này.",
+          "lines": [
+            "A city offers more restaurants and more concerts, and I understand the appeal.",
+            "For me, however, a lower rent and a street where someone would notice my absence weigh more.",
+            "As I mentioned in my introduction, I would choose a small town.",
+            "The choice is really about what a person wants to be surrounded by."
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Tự thuật về bố cục bài và chép lại luận điểm",
+          "fix": "Bỏ hẳn câu này — câu 2 đã khẳng định lập trường rồi.",
+          "explanation": "«As I mentioned in my introduction» làm hai việc dở cùng lúc: nhắc người chấm rằng bạn đang lặp lại, và tiêu một câu mà không thêm ý nào. Câu 2 đã nêu lập trường, câu 4 đã nâng vấn đề lên — câu 3 chỉ nằm chắn giữa."
+        },
+        {
+          "type": "error_spot",
+          "id": "t12-1-m2",
+          "intro": "Bấm vào câu làm hỏng mở bài này.",
+          "lines": [
+            "Every new employee meets the same wall in the first week: everyone else already knows how things work.",
+            "How quickly that wall comes down depends almost entirely on how the newcomer spends those first days.",
+            "Nowadays technology is developing very fast and the world is changing every day.",
+            "In my view the fastest route is to sit beside someone who has been there for years."
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Câu sáo rỗng chen vào giữa mạch",
+          "fix": "Bỏ hẳn câu này — mở bài ba câu đã đủ ba nhịp.",
+          "explanation": "Ba câu còn lại đã đi đủ bối cảnh → thu hẹp → luận điểm. Câu «Nowadays technology…» không nói gì về đề, và người chấm đã đọc nó hàng nghìn lần. Đây là câu tốn chữ nhất trong mọi bài luận TOEIC."
+        },
+        {
+          "type": "error_spot",
+          "id": "t12-1-m3",
+          "intro": "Bấm vào câu làm hỏng kết bài này.",
+          "lines": [
+            "Removing fares would certainly put pressure on a city budget already stretched thin.",
+            "Yet the households that gain most are exactly those with the least room to absorb a monthly fare.",
+            "Actually, now that I think about it, maybe both approaches have their merits.",
+            "A city that charges for buses is quietly choosing who gets to move around it."
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Bỏ lập trường ngay ở kết bài",
+          "fix": "Bỏ hẳn câu này — câu 2 và 4 đã giữ lập trường rất chắc.",
+          "explanation": "Câu nhượng bộ ở dòng 1 là đúng khuôn. Nhưng dòng 3 đi xa hơn nhượng bộ: nó rút lại lập trường. Nhượng bộ là «bên kia có lý ở điểm X, nhưng tôi vẫn chọn Y»; còn «cả hai đều có cái hay» là quay về đứng giữa, thứ mà cả bài đã tránh."
+        },
+        {
+          "type": "error_spot",
+          "id": "t12-1-m4",
+          "intro": "Bấm vào câu làm hỏng mở bài này.",
+          "lines": [
+            "Schools have started putting vending machines where students queue between classes.",
+            "The convenience is obvious; the cost is less so.",
+            "In my view schools should not install them, because the benefit and the cost fall on different people.",
+            "First of all, I will explain my first reason, and after that I will explain my second reason."
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Tự thuật về bố cục thay vì viết nội dung",
+          "fix": "Bỏ hẳn câu này — câu chủ đề của mỗi đoạn đã tự đánh số rồi.",
+          "explanation": "Câu này tiêu chữ để thông báo rằng sắp có chữ. Các câu chủ đề ở thân bài («The first reason…», «A second and less obvious…») đã làm việc dẫn đường rồi. Mở bài ba câu là đủ; câu thứ tư gần như luôn là câu thừa."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "compare",
+          "id": "t12-1-h1",
+          "directions": "Hai KẾT BÀI, cả hai đều tránh được lỗi tóm tắt. Bản nào mạnh hơn?",
+          "versionA": [
+            "Adults certainly study grammar more efficiently than children do.",
+            "But an accent formed before the age of ten is something no amount of grammar can replace."
+          ],
+          "versionB": [
+            "Adults have advantages too, such as better study habits and more discipline.",
+            "Still, I believe childhood is the better time to begin a second language."
+          ],
+          "better": "A",
+          "reasons": [
+            { "id": "A", "text": "Bản A nêu ra ĐIỀU KHÔNG THỂ ĐẢO NGƯỢC, nên câu nhượng bộ không làm lung lay lập trường." },
+            { "id": "B", "text": "Bản A dùng cấu trúc câu phức tạp hơn." },
+            { "id": "C", "text": "Bản A không lặp lại chữ trong đề." }
+          ],
+          "correctReason": "A",
+          "explanation": "Cả hai đều đúng khuôn nhượng bộ rồi khẳng định. Nhưng bản B khẳng định bằng «Still, I believe» — chỉ là nhắc lại ý kiến. Bản A đưa ra một lý do MỚI ở chính câu cuối: giọng hình thành trước mười tuổi thì không học lại được. Kết bài mạnh nhất là kết bài còn giữ một quân bài."
+        },
+        {
+          "type": "compare",
+          "id": "t12-1-h2",
+          "directions": "Hai MỞ BÀI cho một đề CHỌN 1 TRONG 3. Bản nào mạnh hơn?",
+          "versionA": [
+            "A company with money to spend on its office has to decide where that money will do the most good.",
+            "Of the three options, I believe a quiet room for focused work would change the most for the most people."
+          ],
+          "versionB": [
+            "Companies often have money to improve their offices in various ways.",
+            "I think a quiet room is the best choice among the options available."
+          ],
+          "better": "A",
+          "reasons": [
+            { "id": "A", "text": "Bản A nêu ra tiêu chí đánh giá, nên hai đoạn thân bài đã có sẵn thước đo." },
+            { "id": "B", "text": "Bản A nhắc tới ba lựa chọn nên chứng minh đã đọc đề." },
+            { "id": "C", "text": "Bản A dùng câu dài hơn nên đa dạng hơn." }
+          ],
+          "correctReason": "A",
+          "explanation": "Lý do B cũng đúng — «Of the three options» thật sự chứng minh đã đọc kỹ đề — nhưng nó không phải điểm mạnh LỚN NHẤT. Bản A đặt ra tiêu chí «where that money will do the most good», nên cả bài chỉ việc đo từng phương án theo tiêu chí đó. Mở bài nêu được tiêu chí là mở bài tự viết sẵn dàn ý cho mình."
+        },
+        {
+          "type": "mcq",
+          "id": "t12-1-h3",
+          "question": "Trong bài 300 từ, mở bài nên dài khoảng bao nhiêu?",
+          "options": [
+            { "id": "A", "text": "Khoảng 100 từ, để dựng bối cảnh cho kỹ." },
+            { "id": "B", "text": "Khoảng 50–60 từ, đủ ba nhịp: bối cảnh, thu hẹp, luận điểm." },
+            { "id": "C", "text": "Khoảng 20 từ, chỉ cần một câu luận điểm." },
+            { "id": "D", "text": "Càng dài càng tốt vì phải đủ 300 từ." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Phân bổ hợp lý cho bài 300 từ: mở bài 50–60, hai đoạn thân bài mỗi đoạn 90–100, kết bài 50–60. Mở bài 100 từ ăn mất phần khai triển, mà khai triển mới là chỗ ETS chấm nặng nhất. Mở bài 20 từ thì thiếu nhịp thu hẹp và bài vào đề gấp gáp."
+        },
+        {
+          "type": "mcq",
+          "id": "t12-1-h4",
+          "question": "Cách nào KHÔNG phải là cách kết bài tốt?",
+          "options": [
+            { "id": "A", "text": "Nhượng bộ phía bên kia rồi khẳng định lại bằng một lý do mới." },
+            { "id": "B", "text": "Định nghĩa lại vấn đề: điều thật sự quan trọng không phải X mà là Y." },
+            { "id": "C", "text": "Với dạng ưu–nhược, chia phạm vi dùng cho từng bên." },
+            { "id": "D", "text": "Nhắc lại lần lượt luận điểm của từng đoạn thân bài." }
+          ],
+          "correctAnswers": ["D"],
+          "explanation": "D là kết bài tóm tắt — nó chỉ hợp với bài dài hàng nghìn chữ, nơi người đọc có thể đã quên đoạn đầu. Trong bài 300 từ, người chấm vừa đọc xong hai phút trước. Ba cách còn lại đều thêm giá trị mới cho bài trong khi vẫn đóng lại được lập trường."
+        }
+      ]
+    }
+  ]
+}

@@ -17,6 +17,7 @@ import type {
   P3CompareEx,
   P3TrimEx,
   P3TimedWriteEx,
+  P3WordOrderEx,
 } from "@/lib/subskills/writing-part3";
 import { normP3, matchesAcceptedP3, isNearMissP3, countWords, dbPartW3 } from "@/lib/subskills/writing-part3";
 
@@ -813,6 +814,96 @@ function TranslateCard({ ex, onResult }: { ex: P3TranslateEx; onResult: (score: 
 }
 
 // ─────────────────────────────────────
+// Tầng 10 — dựng câu có cấu trúc nâng cao
+// ─────────────────────────────────────
+
+function WordOrderCard({ ex, onResult }: { ex: P3WordOrderEx; onResult: (score: number) => void }) {
+  const [picked, setPicked] = useState<number[]>([]);
+  const [submitted, setSubmitted] = useState(false);
+  const [correct, setCorrect] = useState(false);
+  const shuffled = seededShuffle(ex.tokens.map((t, i) => ({ t, i })), ex.id);
+
+  const built = picked.map((k) => shuffled[k].t).join(" ");
+
+  function submit() {
+    const c = matchesAcceptedP3(built, ex.answer, ex.accepted);
+    setCorrect(c);
+    setSubmitted(true);
+    onResult(c ? 100 : 0);
+  }
+
+  const near = submitted && !correct ? isNearMissP3(built, ex.answer, ex.accepted) : null;
+
+  return (
+    <div>
+      <p style={{ fontSize: "0.73rem", color: "var(--text-muted)", fontWeight: 700, letterSpacing: "0.06em", marginBottom: 4 }}>
+        SẮP XẾP THÀNH CÂU HOÀN CHỈNH
+      </p>
+      {ex.vi && (
+        <p style={{ fontSize: "0.92rem", color: "var(--text-primary)", fontWeight: 600, marginBottom: "0.85rem", lineHeight: 1.55 }}>{ex.vi}</p>
+      )}
+
+      {/* Vùng câu đang dựng */}
+      <div style={{ border: "1.5px dashed var(--border)", borderRadius: 10, padding: picked.length ? "0.7rem 0.9rem" : "1.1rem 0.9rem", marginBottom: "0.85rem", background: submitted ? (correct ? "rgba(34,197,94,0.07)" : "rgba(239,68,68,0.07)") : "var(--bg-secondary)", minHeight: 46 }}>
+        {picked.length === 0 ? (
+          <p style={{ margin: 0, textAlign: "center", fontSize: "0.8rem", color: "var(--text-muted)" }}>Bấm các cụm bên dưới theo đúng thứ tự</p>
+        ) : (
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
+            {picked.map((k, pos) => (
+              <button
+                key={pos}
+                onClick={() => { if (!submitted) setPicked((prev) => prev.filter((_, j) => j !== pos)); }}
+                disabled={submitted}
+                style={{ padding: "4px 10px", fontSize: "0.89rem", fontWeight: 600, borderRadius: 6, border: "1.5px solid var(--accent-primary)", background: "rgba(59,130,246,0.12)", color: "var(--text-primary)", cursor: submitted ? "default" : "pointer", fontFamily: "inherit" }}
+              >
+                {shuffled[k].t}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Kho cụm từ */}
+      {!submitted && (
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 5, marginBottom: "1rem" }}>
+          {shuffled.map((s, k) =>
+            picked.includes(k) ? null : (
+              <button
+                key={k}
+                onClick={() => setPicked((prev) => [...prev, k])}
+                style={{ padding: "5px 12px", fontSize: "0.89rem", fontWeight: 500, borderRadius: 6, border: "1.5px solid var(--border)", background: "var(--bg-primary)", color: "var(--text-primary)", cursor: "pointer", fontFamily: "inherit" }}
+              >
+                {s.t}
+              </button>
+            ),
+          )}
+        </div>
+      )}
+
+      {!submitted ? (
+        <CheckButton onClick={submit} disabled={picked.length !== ex.tokens.length} />
+      ) : (
+        <div>
+          {correct ? (
+            <ResultBadge score={100} />
+          ) : near?.near ? (
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: "0.78rem", fontWeight: 600, color: AMBER, background: "rgba(234,179,8,0.1)", border: "1px solid rgba(234,179,8,0.3)", borderRadius: 6, padding: "3px 10px" }}>
+              ⚠ Gần đúng — sai vị trí 1 cụm
+            </span>
+          ) : (
+            <ResultBadge score={0} />
+          )}
+          <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", margin: "0.55rem 0 0", lineHeight: 1.6 }}>
+            <strong>Đáp án:</strong> {ex.answer}
+          </p>
+          <Explanation text={ex.explanation} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────
 // Tầng 5 — đặt hai bản cạnh nhau
 // ─────────────────────────────────────
 
@@ -1180,6 +1271,7 @@ function ExerciseCard({ ex, passages, onResult }: { ex: P3Exercise; passages: Re
     case "compare": return <CompareCard ex={ex} onResult={onResult} />;
     case "trim": return <TrimCard ex={ex} onResult={onResult} />;
     case "timed_write": return <TimedWriteCard ex={ex} onResult={onResult} />;
+    case "word_order": return <WordOrderCard ex={ex} onResult={onResult} />;
   }
 }
 

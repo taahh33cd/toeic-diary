@@ -1,0 +1,192 @@
+{
+  "passages": {},
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "compare",
+          "id": "t10-1-e1",
+          "directions": "Hai bản cùng nội dung, cùng không có lỗi ngữ pháp nào. Bản nào được chấm cao hơn?",
+          "versionA": [
+            "Rent is lower in a small town. The choice of jobs is smaller.",
+            "People accept this. They want to save money.",
+            "My cousin did this. He moved last year."
+          ],
+          "versionB": [
+            "Although rent is lower in a small town, the choice of jobs is smaller.",
+            "People who want to save money accept this trade, and my cousin made it last year."
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B ngắn hơn nên đỡ tốn thời gian viết." },
+            { "id": "B", "text": "Bản B nối các ý bằng mệnh đề nhượng bộ và mệnh đề quan hệ, thay vì xếp câu đơn cạnh nhau." },
+            { "id": "C", "text": "Bản B dùng từ vựng học thuật hơn." }
+          ],
+          "correctReason": "B",
+          "explanation": "Bản A hoàn toàn đúng ngữ pháp — và đó chính là vấn đề. ETS mô tả mốc 3 là «đúng nhưng hạn hẹp về cấu trúc câu và từ vựng». Sáu câu đơn liên tiếp chặn bài ở mốc 3 dù không sai chữ nào. Bản B nói cùng nội dung nhưng cho thấy bạn điều khiển được quan hệ giữa các ý."
+        },
+        {
+          "type": "compare",
+          "id": "t10-1-e2",
+          "directions": "Bản nào được chấm cao hơn?",
+          "versionA": [
+            "New employees lose the most when a team works from home.",
+            "They cannot watch anyone. They cannot copy anyone.",
+            "A junior joined in March. She had never heard a difficult call.",
+            "She faced one in July. She had nothing to copy."
+          ],
+          "versionB": [
+            "It is new employees who lose the most when a team works from home.",
+            "Unable to watch anyone, they have nothing to copy.",
+            "A junior who joined our team in March had never heard a difficult call until she faced one herself in July."
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B dùng cấu trúc chẻ, phân từ mở đầu và mệnh đề quan hệ — ba kiểu câu khác nhau." },
+            { "id": "B", "text": "Bản B có ít câu hơn nên mạch lạc hơn." },
+            { "id": "C", "text": "Bản B kể chuyện hấp dẫn hơn." }
+          ],
+          "correctReason": "A",
+          "explanation": "«It is new employees who…» là cấu trúc chẻ, dùng để nhấn vào chủ thể. «Unable to watch anyone…» là cụm phân từ mở đầu. «A junior who joined…» là mệnh đề quan hệ. Ba kiểu trong ba câu — đó chính là thứ ETS gọi là «đa dạng cú pháp» ở mốc 4 và 5."
+        },
+        {
+          "type": "compare",
+          "id": "t10-1-e3",
+          "directions": "Bản nào được chấm cao hơn? Chú ý: bản dài hơn chưa chắc đã hơn.",
+          "versionA": [
+            "Notwithstanding the fact that the aforementioned cost of rental accommodation is of a lower magnitude, the totality of employment opportunities available is diminished."
+          ],
+          "versionB": [
+            "Although rent is lower, there are fewer jobs to choose from."
+          ],
+          "better": "B",
+          "reasons": [
+            { "id": "A", "text": "Bản B đúng ngữ pháp còn bản A thì sai." },
+            { "id": "B", "text": "Bản A đa dạng hơn nên đáng lẽ phải hơn, nhưng nó dài dòng tới mức làm mờ nghĩa." },
+            { "id": "C", "text": "Bản B ngắn hơn nên luôn tốt hơn." }
+          ],
+          "correctReason": "B",
+          "explanation": "Bản A không sai ngữ pháp câu nào, nhưng ETS chấm «chọn từ phù hợp» và «rõ nghĩa», chứ không chấm độ khó của từ. Đa dạng cú pháp KHÔNG có nghĩa là làm mọi câu nặng hơn — nó có nghĩa là mỗi câu dùng đúng cấu trúc mà ý đó cần. Đây là cái bẫy của chính tầng này."
+        },
+        {
+          "type": "compare",
+          "id": "t10-1-e4",
+          "directions": "Bản nào được chấm cao hơn?",
+          "versionA": [
+            "Having worked from home for two years, I know exactly what it costs.",
+            "The hours I once lost on a bus are now mine, but so is the silence.",
+            "What I miss is not the office itself but the thirty-second conversations it made possible."
+          ],
+          "versionB": [
+            "I have worked from home for two years. I know exactly what it costs.",
+            "I do not lose hours on a bus now. But it is very silent.",
+            "I do not miss the office. I miss the thirty-second conversations."
+          ],
+          "better": "A",
+          "reasons": [
+            { "id": "A", "text": "Bản A mở đầu bằng phân từ, dùng đối lập trong một câu, và kết bằng cấu trúc chẻ với what." },
+            { "id": "B", "text": "Bản A dùng thì hiện tại hoàn thành nên trang trọng hơn." },
+            { "id": "C", "text": "Bản A có nhiều từ hơn nên đủ 300 từ nhanh hơn." }
+          ],
+          "correctReason": "A",
+          "explanation": "Hai bản nói y hệt nhau. Bản B là sáu câu đơn — mốc 3. Bản A gói cùng nội dung vào ba câu, mỗi câu một cấu trúc khác. Chú ý «What I miss is not X but Y» ở cuối: cấu trúc chẻ với «what» là cách rẻ nhất để nâng một câu tổng kết."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "word_order",
+          "id": "t10-1-m1",
+          "vi": "Dù chi phí thuê nhà thấp hơn, thị trấn nhỏ lại có ít lựa chọn việc làm hơn.",
+          "tokens": ["Although", "rent is lower,", "a small town", "offers", "fewer jobs."],
+          "answer": "Although rent is lower, a small town offers fewer jobs.",
+          "explanation": "Mệnh đề nhượng bộ đặt trước làm hai ý đối lập nằm gọn trong một câu, thay vì hai câu đơn rời. Nhớ dấu phẩy sau mệnh đề phụ khi nó đứng đầu — bỏ dấu phẩy là lỗi rất hay gặp."
+        },
+        {
+          "type": "word_order",
+          "id": "t10-1-m2",
+          "vi": "Vì đã làm việc tại nhà suốt hai năm, tôi biết rõ cái giá phải trả.",
+          "tokens": ["Having worked", "from home", "for two years,", "I know", "exactly", "what it costs."],
+          "answer": "Having worked from home for two years, I know exactly what it costs.",
+          "explanation": "Cụm phân từ hoàn thành «Having + V3» thay cho cả một mệnh đề «Because I have worked…». Điều kiện bắt buộc: chủ ngữ của cụm phân từ phải TRÙNG với chủ ngữ mệnh đề chính — ở đây cùng là «I». Sai điều kiện này thành lỗi phân từ treo."
+        },
+        {
+          "type": "word_order",
+          "id": "t10-1-m3",
+          "vi": "Quyết định bỏ vé của thành phố đã thay đổi thói quen hằng ngày của chị ấy.",
+          "tokens": ["The city's decision", "to remove fares", "changed", "her daily routine."],
+          "answer": "The city's decision to remove fares changed her daily routine.",
+          "explanation": "Danh hoá: biến hành động «the city removed fares» thành danh từ «the city's decision to remove fares», rồi dùng nó làm chủ ngữ. Cách này nén được cả một mệnh đề vào chủ ngữ, và nó là dấu hiệu văn viết trưởng thành."
+        },
+        {
+          "type": "word_order",
+          "id": "t10-1-m4",
+          "vi": "Những nhân viên làm việc tại nhà thường bỏ lỡ các cuộc trò chuyện ngắn.",
+          "tokens": ["Employees", "working from home", "often miss", "the short conversations."],
+          "answer": "Employees working from home often miss the short conversations.",
+          "explanation": "Mệnh đề quan hệ rút gọn: «Employees who work from home» rút thành «Employees working from home». Bỏ được hai chữ mà câu chặt hơn hẳn. Đây là cấu trúc dễ dùng nhất trong nhóm nâng cao, nên tập nó trước."
+        },
+        {
+          "type": "word_order",
+          "id": "t10-1-m5",
+          "vi": "Chính những nhân viên mới mới là người thiệt nhất.",
+          "tokens": ["It is", "new employees", "who lose", "the most."],
+          "answer": "It is new employees who lose the most.",
+          "explanation": "Cấu trúc chẻ «It is X who/that…» dùng để nhấn vào X. So với «New employees lose the most» thì nghĩa không đổi, nhưng trọng tâm được đẩy hẳn về phía nhân viên mới. Dùng một lần trong bài là đủ; dùng nhiều thành sáo."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "translate",
+          "id": "t10-1-h1",
+          "vi": "Làm việc tại nhà không chỉ tiết kiệm thời gian mà còn tiết kiệm tiền.",
+          "answer": "Not only does working from home save time, but it also saves money.",
+          "accepted": [
+            "Not only does working from home save time, it also saves money."
+          ],
+          "hintWords": ["Not only does", "…save time", "but it also"],
+          "explanation": "«Not only» đứng đầu câu bắt buộc đảo ngữ: mượn trợ động từ «does» rồi để động từ chính ở nguyên thể «save». Viết «Not only working from home saves time» là quên đảo — lỗi phổ biến nhất với cấu trúc này."
+        },
+        {
+          "type": "translate",
+          "id": "t10-1-h2",
+          "vi": "Chỉ khi tự viết dưới đồng hồ, bạn mới nhận ra mình chậm đến mức nào.",
+          "answer": "Only when you write under the clock do you realise how slow you are.",
+          "accepted": [
+            "Only when you write under the clock do you realize how slow you are."
+          ],
+          "hintWords": ["Only when you", "write under the clock", "do you realise"],
+          "explanation": "«Only when + mệnh đề» ở đầu câu cũng bắt đảo ngữ, nhưng đảo ở MỆNH ĐỀ CHÍNH chứ không phải mệnh đề «when». Vậy nên «you write» giữ nguyên còn «do you realise» mới đảo. Đây là chỗ hầu hết người học làm ngược."
+        },
+        {
+          "type": "translate",
+          "id": "t10-1-h3",
+          "vi": "Điều quan trọng không phải là bạn ngồi ở đâu mà là bạn làm ra được gì.",
+          "answer": "What matters is not where you sit but what you produce.",
+          "accepted": [
+            "What matters is not where you sit, but what you produce."
+          ],
+          "hintWords": ["What matters is", "not where you sit", "but what you produce"],
+          "explanation": "Cấu trúc chẻ với «what» là vũ khí tốt nhất cho câu kết bài: nó vừa nâng cấp trúc, vừa buộc bạn phải nói ra điều gì thật sự quan trọng. Khuôn «not A but B» bên trong còn tạo thêm một tầng đối lập nữa."
+        },
+        {
+          "type": "translate",
+          "id": "t10-1-h4",
+          "vi": "Dù thừa nhận rằng chi phí sẽ tăng, tôi vẫn tin lợi ích lớn hơn.",
+          "answer": "While admitting that costs will rise, I still believe the benefits are greater.",
+          "accepted": [
+            "While admitting that costs will rise, I still believe that the benefits are greater."
+          ],
+          "hintWords": ["While admitting that", "costs will rise", "I still believe"],
+          "explanation": "Ghép hai kỹ thuật: nhượng bộ («While») và phân từ («admitting»). Chủ ngữ ngầm của «admitting» là «I», trùng với mệnh đề chính — đúng điều kiện. Đây chính là câu mở kết bài lý tưởng: nhượng bộ rồi khẳng định lại, gói trong một câu."
+        }
+      ]
+    }
+  ]
+}

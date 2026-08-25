@@ -3,8 +3,9 @@
 Bản đầy đủ có phân tích: artifact `Bản đồ tầng Writing Part 3`
 https://claude.ai/code/artifact/38567fed-8807-4ed7-a579-68cb9cb44413
 
-Trạng thái: Phase 1–2 đã xong. Tầng 1–9 đang mở, 117 bài tập tự chấm.
-Còn lại: Phase 3 = T10–T12 · Phase 4 = T13 + bộ đề + 6 cặp bài mẫu.
+Trạng thái: Phase 1–3 đã xong. Tầng 1–12 đang mở, 155 bài tập tự chấm qua 13 loại.
+Còn lại: Phase 4 = T13 (viết thật 30 phút, nộp giáo viên chấm) + 24 đề + 6 cặp bài mẫu mốc-3/mốc-5.
+Tầng 0 vẫn `active: false` — band ≤90 chỉ có on-ramp, chưa cấp thiết.
 
 ## Quyết định đã chốt
 
@@ -105,7 +106,7 @@ Nộp bài dùng lại `SkillSubmission` + `/journal/submissions` + `/admin/grad
 
 Phase: (1) khung + T1–T4 · (2) T5–T9 · (3) T10–T12 · (4) T13 + bộ đề.
 
-### Đã dựng (Phase 1–2)
+### Đã dựng (Phase 1–3)
 
 Mỗi tầng hiện có **1 bộ test**, nhân lên 5 bộ ở phase sau.
 
@@ -120,12 +121,17 @@ Mỗi tầng hiện có **1 bộ test**, nhân lên 5 bộ ở phase sau.
 | T7 Cắt lặp và lạc ý | 12 | 4 · 4 · 4 |
 | T8 Sạch lỗi bài dài | 14 | 5 · 5 · 4 |
 | T9 Tốc độ sản xuất | 9 | 3 · 3 · 3 |
+| T10 Đa dạng cấu trúc | 13 | 4 · 5 · 4 |
+| T11 Chọn từ | 13 | 4 · 5 · 4 |
+| T12 Mở bài & kết bài | 12 | 4 · 4 · 4 |
 
 Sai lệch so với blueprint, đều là cố ý:
 
 - **T5 bỏ `type_blank`**, dùng `compare` ở cả easy lẫn medium. Medium là biến thể khó hơn: cả hai bản đều có chi tiết cụ thể, nhưng một bản dùng chi tiết TRANG TRÍ không phục vụ luận điểm. Phân biệt này đáng giá hơn điền chỗ trống.
 - **T6 KHÔNG import module Liên từ.** `ConnGroupConfig` có `connectors` + `levels` gắn với UI riêng của nó; import vào sẽ kéo theo cả cấu trúc level. Ngân hàng từ viết thẳng trong JSON, dùng lại đúng các bẫy của module đó (because vs because of, despite vs although, chấm câu quanh however).
 - **T9 chấm bằng số từ đạt được trong thời gian cho.** Đó là phần khách quan duy nhất máy chấm được; checklist tự soi hiện sau khi nộp và KHÔNG tính điểm.
+
+**T10 có một bài cố tình bẫy ngược** (`t10-1-e3`): bản "đa dạng" hơn lại là bản thua, vì nó dài dòng tới mức làm mờ nghĩa. Không có bài này thì học viên rút ra bài học sai là "cứ chọn bản nặng nề hơn". ETS chấm "chọn từ phù hợp", không chấm độ khó của từ.
 
 `timed_write` dùng `submitted` dẫn xuất (`submittedEarly || left === 0`) chứ không phải state riêng —
 eslint `react-hooks/set-state-in-effect` và `react-hooks/refs` chặn cả hai cách làm quen thuộc.

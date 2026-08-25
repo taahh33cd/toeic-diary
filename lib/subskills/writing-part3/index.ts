@@ -2,7 +2,7 @@
 // Writing Part 3 — Question 8, Write an Opinion Essay
 //
 // Thiết kế đầy đủ: docs/writing-part3-rnd.md
-// Phase 1–2 mở Tầng 1–9 (band 100–160). Các tầng khác đã khai báo sẵn
+// Phase 1–3 mở Tầng 1–12. Tầng 0 và 13 đã khai báo sẵn
 // metadata nhưng `active: false` cho tới khi có data.
 //
 // Data JSON viết thẳng ở dạng chuẩn hoá (không cần normalizer như Part 1).
@@ -89,7 +89,7 @@ export type PassageBlock = {
 };
 
 // ─────────────────────────────────────
-// Các loại bài tập — 12 loại, `timed_write` là loại duy nhất phải viết renderer mới
+// Các loại bài tập — 13 loại, `timed_write` là loại duy nhất phải viết renderer mới
 // ─────────────────────────────────────
 
 /** Trắc nghiệm trên đề hoặc trên đoạn văn (một hoặc nhiều đáp án) */
@@ -193,6 +193,17 @@ export type P3TranslateEx = {
   explanation: string;
 };
 
+/** Sắp xếp từ xáo trộn thành câu có cấu trúc nâng cao */
+export type P3WordOrderEx = {
+  type: "word_order";
+  id: string;
+  tokens: string[];
+  answer: string;
+  accepted?: string[];
+  vi?: string;
+  explanation: string;
+};
+
 /** Đặt hai bản cạnh nhau: bản nào tốt hơn, và vì sao */
 export type P3CompareEx = {
   type: "compare";
@@ -252,7 +263,8 @@ export type P3Exercise =
   | P3TranslateEx
   | P3CompareEx
   | P3TrimEx
-  | P3TimedWriteEx;
+  | P3TimedWriteEx
+  | P3WordOrderEx;
 
 export type P3Level = { difficulty: P3Difficulty; exercises: P3Exercise[] };
 
@@ -491,7 +503,7 @@ export const WRITING_P3_SKILLS: P3SkillMeta[] = [
     label: "Syntactic Variety",
     description: "Nâng câu đơn thành mệnh đề nhượng bộ, phân từ, danh hoá, bị động có mục đích. Đây là thứ chặn bài sạch lỗi ở mốc 3.",
     dbPartPrefix: "wp3-tang10",
-    active: false,
+    active: true,
     band: "D",
     axis: "Độ đa dạng",
   },
@@ -501,7 +513,7 @@ export const WRITING_P3_SKILLS: P3SkillMeta[] = [
     label: "Word Choice",
     description: "Kết hợp từ, sắc thái trang trọng, thay good / bad / thing bằng từ chính xác.",
     dbPartPrefix: "wp3-tang11",
-    active: false,
+    active: true,
     band: "D",
     axis: "Độ đa dạng",
   },
@@ -511,7 +523,7 @@ export const WRITING_P3_SKILLS: P3SkillMeta[] = [
     label: "Openings and Closings",
     description: "Kết bài không được chỉ chép lại mở bài.",
     dbPartPrefix: "wp3-tang12",
-    active: false,
+    active: true,
     band: "D",
     axis: "Mạch bài · Độ đa dạng",
   },
@@ -628,6 +640,9 @@ import t6_1 from "./tang6.1.json";
 import t7_1 from "./tang7.1.json";
 import t8_1 from "./tang8.1.json";
 import t9_1 from "./tang9.1.json";
+import t10_1 from "./tang10.1.json";
+import t11_1 from "./tang11.1.json";
+import t12_1 from "./tang12.1.json";
 
 type RawTest = {
   passages?: Record<string, PassageBlock>;
@@ -657,6 +672,9 @@ const DATA: Record<string, P3TestData[]> = {
   tang7: [t7_1].map((r, i) => load(r, "tang7", i + 1)),
   tang8: [t8_1].map((r, i) => load(r, "tang8", i + 1)),
   tang9: [t9_1].map((r, i) => load(r, "tang9", i + 1)),
+  tang10: [t10_1].map((r, i) => load(r, "tang10", i + 1)),
+  tang11: [t11_1].map((r, i) => load(r, "tang11", i + 1)),
+  tang12: [t12_1].map((r, i) => load(r, "tang12", i + 1)),
 };
 
 /** Số bộ test hiện có của một tầng — dùng cho thanh tiến độ ở trang danh sách */
