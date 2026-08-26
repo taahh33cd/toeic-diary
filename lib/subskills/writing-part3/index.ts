@@ -41,7 +41,7 @@ export const P3_ESSAY_TYPES: { id: P3EssayType; labelVi: string; label: string; 
     id: "choice_3",
     labelVi: "Chọn 1 trong 3",
     label: "Three-way Choice",
-    skeleton: "Chọn 1 → loại bỏ 2 cái kia có lý do → chống đỡ lựa chọn của mình",
+    skeleton: "Chọn 1 → loại bỏ 2 cái kia có lý do → bảo vệ lựa chọn của mình",
     trap: "Quên hẳn hai lựa chọn còn lại, giám khảo đọc thành «không đọc kỹ đề»",
   },
   {
@@ -125,7 +125,7 @@ export type P3OrderingEx = {
   explanation: string;
 };
 
-/** Ghép luận điểm với ví dụ chống đỡ nó */
+/** Ghép luận điểm với ví dụ minh hoạ cho nó */
 export type P3MatchingEx = {
   type: "matching";
   id: string;
@@ -303,23 +303,23 @@ export const P3_BANDS: { id: P3Band; range: string; title: string; blurb: string
   {
     id: "B",
     range: "100–130",
-    title: "Có ý, chưa chống đỡ",
+    title: "Có ý, chưa chứng minh",
     blurb: "Viết được nhưng hay lệch việc đề giao, nêu khái quát rồi bỏ lửng.",
-    goal: "Thoát mốc 1–2, chạm mốc 3",
+    goal: "Thoát mức 1–2, chạm mức 3",
   },
   {
     id: "C",
     range: "140–160",
     title: "Đủ ý, thiếu độ sâu",
     blurb: "Bám đề và có ý, nhưng dẫn chứng chung chung và nối ý mờ.",
-    goal: "Mốc 3 → 4",
+    goal: "Mức 3 → 4",
   },
   {
     id: "D",
     range: "170+",
     title: "Đủ chuẩn, thiếu đa dạng",
     blurb: "Bài đúng và sạch, nhưng câu đơn điệu và còn lặp ý.",
-    goal: "Mốc 4 → 5",
+    goal: "Mức 4 → 5",
   },
 ];
 
@@ -354,7 +354,7 @@ export function suggestBandP3(signal: P3BandSignal): P3BandSuggestion {
     if (signal.rubric === 3) {
       return { band: "C", why: "Bài luận gần nhất được 3/5 — đã bám đề, cần thêm độ sâu và mạch nối." };
     }
-    return { band: "B", why: `Bài luận gần nhất được ${signal.rubric}/5 — cần chống đỡ ý kiến trước đã.` };
+    return { band: "B", why: `Bài luận gần nhất được ${signal.rubric}/5 — cần học cách chứng minh cho ý kiến trước đã.` };
   }
 
   if (signal.source === "writing-other") {
@@ -366,7 +366,7 @@ export function suggestBandP3(signal: P3BandSignal): P3BandSuggestion {
     if (signal.band >= 140) {
       return { band: "C", why: `Điểm Writing ước lượng ${signal.band} — bài luận là thứ đang giữ bạn lại.` };
     }
-    return { band: "B", why: `Điểm Writing ước lượng ${signal.band} — bắt đầu từ khâu chống đỡ ý kiến.` };
+    return { band: "B", why: `Điểm Writing ước lượng ${signal.band} — bắt đầu từ khâu chứng minh cho ý kiến.` };
   }
 
   return { band: "B", why: "Chưa có bài Writing nào được chấm — mở sẵn band phổ biến nhất." };
@@ -411,7 +411,7 @@ export const WRITING_P3_SKILLS: P3SkillMeta[] = [
     id: "tang1",
     labelVi: "Tầng 1: Giải mã đề",
     label: "Reading the Prompt",
-    description: "Nhận ra đề thuộc dạng nào trong 6 dạng, rồi đếm đủ số việc đề giao. Lệch việc là rơi xuống mốc 1–2 dù tiếng Anh khá.",
+    description: "Nhận ra đề thuộc dạng nào trong 6 dạng, rồi đếm đủ số việc đề giao. Lệch việc là rơi xuống mức 1–2 dù tiếng Anh khá.",
     dbPartPrefix: "wp3-tang1",
     active: true,
     band: "B",
@@ -431,7 +431,7 @@ export const WRITING_P3_SKILLS: P3SkillMeta[] = [
     id: "tang3",
     labelVi: "Tầng 3: Chuỗi lý do – ví dụ",
     label: "Claim, Reason, Example",
-    description: "Luận điểm → vì sao → ví dụ cụ thể. Mốc 2 chết vì nêu khái quát rồi bỏ lửng, không phải vì thiếu ý.",
+    description: "Luận điểm → vì sao → ví dụ cụ thể. Mức 2 chết vì nêu khái quát rồi bỏ lửng, không phải vì thiếu ý.",
     dbPartPrefix: "wp3-tang3",
     active: true,
     band: "B",
@@ -471,7 +471,7 @@ export const WRITING_P3_SKILLS: P3SkillMeta[] = [
     id: "tang7",
     labelVi: "Tầng 7: Cắt lặp và lạc ý",
     label: "Trim the Fat",
-    description: "Bấm bỏ câu thừa. Mốc 4 vẫn được phép lặp ý, mốc 5 thì không.",
+    description: "Bấm bỏ câu thừa. Mức 4 vẫn được phép lặp ý, mức 5 thì không.",
     dbPartPrefix: "wp3-tang7",
     active: true,
     band: "C",
@@ -501,7 +501,7 @@ export const WRITING_P3_SKILLS: P3SkillMeta[] = [
     id: "tang10",
     labelVi: "Tầng 10: Đa dạng cấu trúc",
     label: "Syntactic Variety",
-    description: "Nâng câu đơn thành mệnh đề nhượng bộ, phân từ, danh hoá, bị động có mục đích. Đây là thứ chặn bài sạch lỗi ở mốc 3.",
+    description: "Nâng câu đơn thành mệnh đề nhượng bộ, phân từ, danh hoá, bị động có mục đích. Đây là thứ chặn bài sạch lỗi ở mức 3.",
     dbPartPrefix: "wp3-tang10",
     active: true,
     band: "D",

@@ -8,7 +8,7 @@
           "type": "trim",
           "id": "t7-1-e1",
           "directions": "Some people prefer to live in a large city. Others prefer to live in a small town. Which do you prefer?",
-          "intro": "Đoạn thân bài này khai triển lý do «chi phí thấp». Bỏ những câu không phục vụ lý do đó.",
+          "intro": "Đoạn thân bài này triển khai lý do «chi phí thấp». Bỏ những câu không phục vụ lý do đó.",
           "lines": [
             "The clearest advantage of a small town is what it costs to live there.",
             "My cousin pays half what I do for an apartment twice the size of mine.",
@@ -19,12 +19,12 @@
           "cutIndexes": [3],
           "reasons": {
             "0": "câu chủ đề của đoạn",
-            "1": "ví dụ cụ thể chống đỡ đúng lý do chi phí",
+            "1": "ví dụ cụ thể đúng cho lý do chi phí",
             "2": "hệ quả của ví dụ, vẫn nằm trong lý do chi phí",
             "3": "nói về tắc đường, không liên quan tới chi phí — đây là lạc ý",
-            "4": "câu chốt buộc lại đúng lý do chi phí"
+            "4": "câu chốt quay về đúng lý do chi phí"
           },
-          "explanation": "Câu 4 không sai và cũng không dở, nó chỉ nằm nhầm đoạn. ETS mô tả mốc 4 là bài «vẫn liền mạch nhưng có lạc ý vặt»; mốc 5 thì không có. Nghĩa là chặng cuối không phải viết hay hơn mà là bỏ đi những câu đúng nhưng lạc chỗ."
+          "explanation": "Câu 4 không sai và cũng không dở, nó chỉ nằm nhầm đoạn. ETS mô tả mức 4 là bài «vẫn liền mạch nhưng có vài chỗ lạc ý»; mức 5 thì không có. Nghĩa là chặng cuối không phải viết hay hơn mà là bỏ đi những câu đúng nhưng lạc chỗ."
         },
         {
           "type": "trim",
@@ -113,7 +113,7 @@
             "2": "nói lại câu 2 bằng chữ mơ hồ hơn — lặp ý",
             "3": "ví dụ cụ thể",
             "4": "tính cách của đồng nghiệp không liên quan tới giờ tập trung — lạc ý",
-            "5": "chốt lại, buộc ví dụ vào luận điểm"
+            "5": "chốt lại, gắn ví dụ trở lại luận điểm"
           },
           "explanation": "Hai câu bị bỏ minh hoạ hai bệnh khác nhau. Câu 3 lặp và còn tệ hơn bản gốc vì mơ hồ hơn. Câu 5 là chi tiết trang trí — nó cụ thể, có thật, nhưng không chứng minh gì cho luận điểm. Chi tiết chỉ có giá khi nó phục vụ ý."
         },
@@ -157,10 +157,10 @@
           "cutIndexes": [2, 5],
           "reasons": {
             "0": "loại bỏ phương án du lịch, có lý do",
-            "1": "chi tiết chống đỡ việc loại bỏ",
+            "1": "chi tiết làm rõ vì sao loại bỏ",
             "2": "giá vé máy bay là lý do về chi phí công ty, lệch khỏi lập luận «không tới được mọi người»",
             "3": "loại bỏ phương án ngày nghỉ",
-            "4": "chi tiết chống đỡ",
+            "4": "chi tiết làm rõ thêm",
             "5": "quay lại khen phương án vừa loại bỏ — làm loãng chính lập luận của mình"
           },
           "explanation": "Câu 6 là lỗi tinh vi: sau khi đã loại bỏ phương án du lịch, người viết lại quay ra khen nó. Bài luận không cần công bằng với mọi phương án, nó cần nhất quán. Nhượng bộ thì để ở kết bài, chứ đừng đặt ngay sau câu vừa bác bỏ."
@@ -187,7 +187,7 @@
             "4": "ví dụ đối chiếu, mạnh nhất trong đoạn",
             "5": "thông tin nền về Canada, không phục vụ luận điểm"
           },
-          "explanation": "Bỏ được cả hai câu là bạn giữ lại đúng bốn nhịp: nêu ý, giải thích, ví dụ, đối chiếu. Đoạn ngắn hơn nhưng chặt hơn. Cắt không làm bài yếu đi vì số từ — bài vẫn phải đủ 300 chữ, chỉ là chữ đó nên nằm ở đoạn khác đang thiếu ví dụ."
+          "explanation": "Bỏ được cả hai câu là bạn giữ lại đúng bốn nhịp: nêu ý, giải thích, ví dụ, đối chiếu. Đoạn ngắn hơn nhưng chặt hơn. Cắt không làm bài yếu đi vì thiếu chữ — bài vẫn phải đủ 300 chữ, chỉ là chữ đó nên nằm ở đoạn khác đang thiếu ví dụ."
         }
       ]
     },
@@ -205,7 +205,7 @@
             { "id": "D", "text": "Câu chủ đề của đoạn thân bài thứ nhất." }
           ],
           "correctAnswers": ["B"],
-          "explanation": "Thứ tự cắt luôn là: câu sáo rỗng trước, rồi câu lặp, rồi câu lạc ý, và ví dụ thì cắt sau cùng. A, C, D đều đang được chấm điểm — ví dụ ăn điểm ở trục khai triển, nhượng bộ và câu chủ đề ăn điểm ở trục mạch bài. Câu B thì không ăn điểm ở đâu cả."
+          "explanation": "Thứ tự cắt luôn là: câu sáo rỗng trước, rồi câu lặp, rồi câu lạc ý, và ví dụ thì cắt sau cùng. A, C, D đều đang được chấm điểm — ví dụ ăn điểm ở trục triển khai ý, nhượng bộ và câu chủ đề ăn điểm ở trục mạch bài. Câu B thì không ăn điểm ở đâu cả."
         },
         {
           "type": "trim",
@@ -253,7 +253,7 @@
           "reasons": {
             "0": "bối cảnh",
             "1": "luận điểm",
-            "2": "tự thuật về bài viết, không chở ý nào",
+            "2": "tự thuật về bài viết, không mang ý nào",
             "3": "lý do kèm giải thích",
             "4": "ví dụ cụ thể",
             "5": "nói lại câu 4 bằng chữ mơ hồ hơn — lặp ý",
@@ -264,7 +264,7 @@
         {
           "type": "mcq",
           "id": "t7-1-h4",
-          "question": "Câu nào dưới đây là LẶP Ý chứ không phải khai triển?",
+          "question": "Câu nào dưới đây là LẶP Ý chứ không phải triển khai?",
           "options": [
             { "id": "A", "text": "Luận điểm: Small towns are cheaper. → Tiếp: My cousin pays half my rent for twice the space." },
             { "id": "B", "text": "Luận điểm: Small towns are cheaper. → Tiếp: Living costs less outside big cities." },

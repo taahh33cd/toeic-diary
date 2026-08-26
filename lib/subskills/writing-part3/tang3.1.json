@@ -2,27 +2,27 @@
   "passages": {
     "claim1": {
       "kind": "paragraph",
-      "title": "Luận điểm cần chống đỡ",
+      "title": "Luận điểm cần chứng minh",
       "body": ["Working in a small company helps a new employee learn faster."]
     },
     "claim2": {
       "kind": "paragraph",
-      "title": "Luận điểm cần chống đỡ",
+      "title": "Luận điểm cần chứng minh",
       "body": ["Free public transport reduces the number of cars on city roads."]
     },
     "claim3": {
       "kind": "paragraph",
-      "title": "Luận điểm cần chống đỡ",
+      "title": "Luận điểm cần chứng minh",
       "body": ["Letting staff choose their own hours makes a company harder to run."]
     },
     "claim4": {
       "kind": "paragraph",
-      "title": "Luận điểm cần chống đỡ",
+      "title": "Luận điểm cần chứng minh",
       "body": ["Studying with other people keeps a learner motivated."]
     },
     "claim5": {
       "kind": "paragraph",
-      "title": "Luận điểm cần chống đỡ",
+      "title": "Luận điểm cần chứng minh",
       "body": ["Reading film reviews before watching a film can spoil the experience."]
     }
   },
@@ -33,7 +33,7 @@
         {
           "type": "matching",
           "id": "t3-1-e1",
-          "prompt": "Ghép mỗi lý do với ví dụ chống đỡ nó. Chủ đề: giờ làm việc linh hoạt.",
+          "prompt": "Ghép mỗi lý do với ví dụ minh hoạ cho nó. Chủ đề: giờ làm việc linh hoạt.",
           "pairs": [
             { "left": "Flexible hours let people work when they concentrate best", "right": "A colleague of mine writes his reports at six in the morning and finishes before the office opens." },
             { "left": "Flexible hours cut the time lost in traffic", "right": "Staff who leave home at ten avoid the rush hour and arrive twenty minutes earlier than they used to." },
@@ -45,19 +45,19 @@
         {
           "type": "matching",
           "id": "t3-1-e2",
-          "prompt": "Ghép mỗi lý do với ví dụ chống đỡ nó. Chủ đề: sống ở thị trấn nhỏ.",
+          "prompt": "Ghép mỗi lý do với ví dụ minh hoạ cho nó. Chủ đề: sống ở thị trấn nhỏ.",
           "pairs": [
             { "left": "Housing costs much less in a small town", "right": "My cousin pays half the rent I do for an apartment twice the size of mine." },
             { "left": "Neighbours are easier to get to know", "right": "When my grandmother fell last winter, three people from her street were at the door within ten minutes." },
             { "left": "Daily travel takes far less time", "right": "My uncle walks to his office in eight minutes, while I spend an hour on the metro." },
             { "left": "There are fewer choices for evening entertainment", "right": "The town where I grew up has one cinema, and it shows the same film for a fortnight." }
           ],
-          "explanation": "Chú ý ví dụ cuối: nó chống đỡ một Ý BẤT LỢI, và vẫn cụ thể như những ví dụ kia. Nhiều người viết rất chăm chút phần lợi rồi để phần bất lợi trôi tuột thành một câu chung chung — trong khi cả hai đều bị chấm bằng một thước đo."
+          "explanation": "Chú ý ví dụ cuối: nó minh hoạ cho một Ý BẤT LỢI, và vẫn cụ thể như những ví dụ kia. Nhiều người viết rất chăm chút phần lợi rồi để phần bất lợi trôi tuột thành một câu chung chung — trong khi cả hai đều bị chấm bằng một thước đo."
         },
         {
           "type": "matching",
           "id": "t3-1-e3",
-          "prompt": "Ghép mỗi lý do với ví dụ chống đỡ nó. Chủ đề: học ngoại ngữ.",
+          "prompt": "Ghép mỗi lý do với ví dụ minh hoạ cho nó. Chủ đề: học ngoại ngữ.",
           "pairs": [
             { "left": "Children absorb pronunciation more easily than adults", "right": "My niece moved to Canada at six and now nobody can hear where she is from." },
             { "left": "Adults can study grammar more systematically", "right": "A friend of mine learned the whole conditional system in one weekend by comparing it with his own language." },
@@ -69,20 +69,20 @@
         {
           "type": "matching",
           "id": "t3-1-e4",
-          "prompt": "Ghép mỗi lý do với ví dụ chống đỡ nó. Chủ đề: làm việc tại nhà.",
+          "prompt": "Ghép mỗi lý do với ví dụ minh hoạ cho nó. Chủ đề: làm việc tại nhà.",
           "pairs": [
             { "left": "Employees save money they used to spend on commuting", "right": "I no longer buy a monthly train pass, which used to cost me the price of a good dinner every week." },
             { "left": "New staff learn much less from those around them", "right": "A junior who joined our team in March has still never watched anyone handle a difficult client." },
             { "left": "Home offices are often not designed for long working days", "right": "For four months I worked from a kitchen chair, and my back has not been the same since." },
             { "left": "Teams lose the short conversations that solve small problems", "right": "A question that once took thirty seconds across a desk now becomes a chain of eight e-mails." }
           ],
-          "explanation": "Ví dụ cuối làm một việc rất đáng học: nó ĐỐI CHIẾU trước và sau («thirty seconds» so với «eight e-mails»). Đối chiếu là cách nhanh nhất để một ví dụ tự chứng minh điều nó được đưa ra để chứng minh."
+          "explanation": "Ví dụ cuối làm một việc rất đáng học: nó ĐỐI CHIẾU trước và sau («thirty seconds» so với «eight e-mails»). Đối chiếu là cách nhanh nhất để một ví dụ tự nói lên điều nó cần nói."
         },
         {
           "type": "mcq",
           "id": "t3-1-e5",
           "passageRef": "claim1",
-          "question": "Câu nào chống đỡ được luận điểm trên?",
+          "question": "Câu nào chứng minh được luận điểm trên?",
           "options": [
             { "id": "A", "text": "This is because small companies are better places for new employees to learn." },
             { "id": "B", "text": "Small companies are an important part of every national economy." },
@@ -164,7 +164,7 @@
             { "id": "D", "text": "Câu hỏi tu từ → luận điểm → câu hỏi tu từ khác" }
           ],
           "correctAnswers": ["B"],
-          "explanation": "C chính là cái bẫy làm rơi bài xuống mốc 2: ETS mô tả mốc đó là «nêu nhận định khái quát mà thiếu ví dụ hay giải thích thích đáng để minh hoạ». Thêm câu khái quát chỉ làm bài dài ra chứ không làm nó sâu hơn. Chuỗi B mới là thứ nâng điểm."
+          "explanation": "C chính là cái bẫy làm rơi bài xuống mức 2: ETS mô tả mức đó là «nêu nhận định khái quát mà thiếu ví dụ hay giải thích thích đáng để minh hoạ». Thêm câu khái quát chỉ làm bài dài ra chứ không làm nó sâu hơn. Chuỗi B mới là thứ nâng điểm."
         }
       ]
     },
@@ -205,7 +205,7 @@
             "A cleaner in my building used to spend nearly a tenth of her wages simply getting to work and back.",
             "Since the city removed fares last year, that money has stayed in her pocket every single month."
           ],
-          "explanation": "«A second argument in favour of…» là cách nối đoạn rẻ tiền mà hiệu quả: người chấm biết ngay bạn đang ở lý do thứ mấy. Chuỗi vẫn giữ nguyên bốn nhịp, và ví dụ vẫn là một người cụ thể chứ không phải «nhiều người nghèo»."
+          "explanation": "«A second argument in favour of…» là cách nối đoạn đơn giản mà hiệu quả: người chấm biết ngay bạn đang ở lý do thứ mấy. Chuỗi vẫn giữ nguyên bốn nhịp, và ví dụ vẫn là một người cụ thể chứ không phải «nhiều người nghèo»."
         },
         {
           "type": "ordering",

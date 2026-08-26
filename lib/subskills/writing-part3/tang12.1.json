@@ -217,7 +217,7 @@
             { "id": "D", "text": "Càng dài càng tốt vì phải đủ 300 từ." }
           ],
           "correctAnswers": ["B"],
-          "explanation": "Phân bổ hợp lý cho bài 300 từ: mở bài 50–60, hai đoạn thân bài mỗi đoạn 90–100, kết bài 50–60. Mở bài 100 từ ăn mất phần khai triển, mà khai triển mới là chỗ ETS chấm nặng nhất. Mở bài 20 từ thì thiếu nhịp thu hẹp và bài vào đề gấp gáp."
+          "explanation": "Phân bổ hợp lý cho bài 300 từ: mở bài 50–60, hai đoạn thân bài mỗi đoạn 90–100, kết bài 50–60. Mở bài 100 từ ăn mất phần triển khai ý, mà đó mới là chỗ ETS chấm nặng nhất. Mở bài 20 từ thì thiếu nhịp thu hẹp và bài vào đề gấp gáp."
         },
         {
           "type": "mcq",

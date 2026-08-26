@@ -7,7 +7,7 @@
         {
           "type": "compare",
           "id": "t5-1-e1",
-          "directions": "Hai bản cùng chống đỡ một luận điểm: làm việc tại nhà giúp tiết kiệm thời gian.",
+          "directions": "Hai bản cùng chứng minh cho một luận điểm: làm việc tại nhà giúp tiết kiệm thời gian.",
           "versionA": [
             "Working from home saves a lot of time.",
             "People do not have to travel, so they have more time for other things.",
@@ -30,7 +30,7 @@
         {
           "type": "compare",
           "id": "t5-1-e2",
-          "directions": "Hai bản cùng chống đỡ: công ty nhỏ giúp nhân viên mới học nhanh hơn.",
+          "directions": "Hai bản cùng chứng minh cho ý: công ty nhỏ giúp nhân viên mới học nhanh hơn.",
           "versionA": [
             "In a small company, a new employee learns quickly.",
             "In my first job at a firm of nine people, I answered client calls in my first week.",
@@ -53,7 +53,7 @@
         {
           "type": "compare",
           "id": "t5-1-e3",
-          "directions": "Hai bản cùng chống đỡ: phương tiện công cộng miễn phí giúp người thu nhập thấp.",
+          "directions": "Hai bản cùng chứng minh cho ý: phương tiện công cộng miễn phí giúp người thu nhập thấp.",
           "versionA": [
             "Free transport helps people who do not earn much.",
             "For them, the cost of tickets is a serious problem every month.",
@@ -76,7 +76,7 @@
         {
           "type": "compare",
           "id": "t5-1-e4",
-          "directions": "Hai bản cùng chống đỡ: giờ làm linh hoạt khiến việc quản lý khó hơn.",
+          "directions": "Hai bản cùng chứng minh cho ý: giờ làm linh hoạt khiến việc quản lý khó hơn.",
           "versionA": [
             "Flexible hours make a manager's job harder.",
             "It is difficult to organise a team when people come and go at different times.",
@@ -127,7 +127,7 @@
         {
           "type": "compare",
           "id": "t5-1-m2",
-          "directions": "Cả hai bản đều kể chuyện thật. Bản nào chống đỡ được luận điểm?",
+          "directions": "Cả hai bản đều kể chuyện thật. Bản nào chứng minh được cho luận điểm?",
           "versionA": [
             "Learning with other people keeps a learner motivated.",
             "I gave up learning Japanese twice on my own.",
@@ -150,7 +150,7 @@
         {
           "type": "compare",
           "id": "t5-1-m3",
-          "directions": "Bản nào khai triển ý đủ sâu cho một đoạn thân bài?",
+          "directions": "Bản nào triển khai ý đủ sâu cho một đoạn thân bài?",
           "versionA": [
             "New employees learn less when the team works from home.",
             "Much of what a beginner needs to know is never written down anywhere.",

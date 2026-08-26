@@ -20,7 +20,7 @@
           "sentence": "Free transport would ___ a heavy burden on the city budget, but it would also ___ living costs for thousands of households and ___ pressure on the road network.",
           "bank": ["place", "cut", "ease", "put down"],
           "answers": ["place", "cut", "ease"],
-          "explanation": "«Place a burden on», «cut costs», «ease pressure on». Chú ý «ease» — nó vừa là động từ vừa gọn hơn «make less», và những động từ chính xác kiểu này là thứ phân biệt mốc 4 với mốc 5 ở trục từ vựng."
+          "explanation": "«Place a burden on», «cut costs», «ease pressure on». Chú ý «ease» — nó là một động từ đơn, gọn hơn hẳn «make less», và những động từ chính xác kiểu này là thứ phân biệt mức 4 với mức 5 ở trục từ vựng."
         },
         {
           "type": "word_bank",
@@ -143,7 +143,7 @@
           "errorIndex": 2,
           "errorLabel": "Rơi xuống giọng nói chuyện giữa một đoạn trung tính",
           "fix": "Critics, however, regard the arrangement as a poor trade.",
-          "explanation": "«Honestly», «kind of a mess», «if you think about it» đều là giọng nói. Lệch giọng giữa chừng còn hại hơn là viết giản dị suốt bài, vì nó cho thấy người viết không kiểm soát được sắc thái — đúng thứ mốc 5 đòi hỏi."
+          "explanation": "«Honestly», «kind of a mess», «if you think about it» đều là giọng nói. Lệch giọng giữa chừng còn hại hơn là viết giản dị suốt bài, vì nó cho thấy người viết không kiểm soát được sắc thái — đúng thứ mức 5 đòi hỏi."
         },
         {
           "type": "error_spot",

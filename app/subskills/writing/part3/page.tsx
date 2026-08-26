@@ -43,7 +43,7 @@ export default async function WritingPart3Page() {
 
   // ── Gợi ý band ──────────────────────────────────────────────
   // Đọc điểm rubric THÔ của bài Q8, KHÔNG đọc trường `band`: estimateBand()
-  // quy đổi rubric của riêng một câu ra thang 200 (Q8 mốc 2 → 80đ), nên dùng nó
+  // quy đổi rubric của riêng một câu ra thang 200 (Q8 mức 2 → 80đ), nên dùng nó
   // sẽ đẩy người yếu bài luận xuống band "chưa tới lượt" — ngược thứ ETS nói.
   // Trường `band` chỉ dùng khi chưa có bài Q8 nào, lúc đó nó là proxy nền chung.
   const submissions = user
@@ -120,7 +120,7 @@ export default async function WritingPart3Page() {
         </h1>
         <p style={{ marginTop: "0.5rem", fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
           Một câu duy nhất, 30 phút, tối thiểu 300 từ, chấm trên thang 0–5. Đi từ đọc đúng đề → chọn phe →
-          chống đỡ bằng ví dụ → dựng khung bài → làm sâu → tinh chỉnh → nộp bài thật.
+          chứng minh bằng ví dụ → dựng khung bài → làm sâu → tinh chỉnh → nộp bài thật.
         </p>
         <p style={{ marginTop: "0.5rem", fontSize: "0.82rem", color: "var(--text-muted)", lineHeight: 1.6 }}>
           Mỗi tầng nhắm vào <strong style={{ color: "var(--text-secondary)" }}>đúng một trục trong thang chấm</strong> —

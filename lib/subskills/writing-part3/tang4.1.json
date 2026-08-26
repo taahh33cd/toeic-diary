@@ -77,7 +77,7 @@
             { "id": "D", "text": "Since the city removed fares last year, that money has stayed in her pocket." }
           ],
           "correctAnswers": ["A"],
-          "explanation": "Câu chủ đề là câu bao trùm cả đoạn và nối đoạn này với đoạn trước — chữ «also» làm đúng việc nối đó. B giải thích, C là ví dụ, D là hệ quả. Một đoạn thiếu câu chủ đề vẫn đọc hiểu được, nhưng người chấm sẽ thấy các đoạn rời rạc, đúng thứ ETS gọi là «nối ý bị che khuất» ở mốc 3."
+          "explanation": "Câu chủ đề là câu bao trùm cả đoạn và nối đoạn này với đoạn trước — chữ «also» làm đúng việc nối đó. B giải thích, C là ví dụ, D là hệ quả. Một đoạn thiếu câu chủ đề vẫn đọc hiểu được, nhưng người chấm sẽ thấy các đoạn rời rạc, đúng thứ ETS gọi là «nối ý bị che khuất» ở mức 3."
         },
         {
           "type": "mcq",
@@ -108,7 +108,7 @@
             "Thân bài 2 — giúp đúng nhóm người cần nhất, kèm ví dụ một người cụ thể",
             "Kết bài — thừa nhận ngân sách thành phố sẽ chịu áp lực, rồi khẳng định lại lợi ích lớn hơn"
           ],
-          "explanation": "Khung bốn đoạn cho một bài 300 từ: mở bài ngắn, hai đoạn thân bài mỗi đoạn một lý do, kết bài có nhượng bộ. Đừng làm ba đoạn thân bài trong 30 phút — hai đoạn được đào sâu ăn điểm hơn ba đoạn hời hợt, vì ETS chấm độ khai triển chứ không đếm số lý do."
+          "explanation": "Khung bốn đoạn cho một bài 300 từ: mở bài ngắn, hai đoạn thân bài mỗi đoạn một lý do, kết bài có nhượng bộ. Đừng làm ba đoạn thân bài trong 30 phút — hai đoạn được đào sâu ăn điểm hơn ba đoạn hời hợt, vì ETS chấm độ sâu của ý chứ không đếm số lý do."
         },
         {
           "type": "ordering",

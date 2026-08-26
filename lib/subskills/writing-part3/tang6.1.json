@@ -166,7 +166,7 @@
             { "id": "D", "text": "Cost is not the only thing that makes a small town attractive." }
           ],
           "correctAnswers": ["C"],
-          "explanation": "C là kiểu «tự thuật về bài viết» — nó tiêu một câu để thông báo rằng sắp có một câu. A, B, D đều vừa nối vừa mang nội dung. Trong bài chỉ 300 từ, mỗi câu chỉ làm nhiệm vụ dẫn đường mà không chở ý nào là một câu bị phí."
+          "explanation": "C là kiểu «tự thuật về bài viết» — nó tiêu một câu để thông báo rằng sắp có một câu. A, B, D đều vừa nối vừa mang nội dung. Trong bài chỉ 300 từ, mỗi câu chỉ làm nhiệm vụ dẫn đường mà không mang ý nào là một câu bị phí."
         }
       ]
     }

@@ -24,7 +24,7 @@
             { "id": "C", "text": "Bản B dùng từ vựng học thuật hơn." }
           ],
           "correctReason": "B",
-          "explanation": "Bản A hoàn toàn đúng ngữ pháp — và đó chính là vấn đề. ETS mô tả mốc 3 là «đúng nhưng hạn hẹp về cấu trúc câu và từ vựng». Sáu câu đơn liên tiếp chặn bài ở mốc 3 dù không sai chữ nào. Bản B nói cùng nội dung nhưng cho thấy bạn điều khiển được quan hệ giữa các ý."
+          "explanation": "Bản A hoàn toàn đúng ngữ pháp — và đó chính là vấn đề. ETS mô tả mức 3 là «đúng nhưng hạn hẹp về cấu trúc câu và từ vựng». Sáu câu đơn liên tiếp chặn bài ở mức 3 dù không sai chữ nào. Bản B nói cùng nội dung nhưng cho thấy bạn làm chủ được quan hệ giữa các ý."
         },
         {
           "type": "compare",
@@ -48,7 +48,7 @@
             { "id": "C", "text": "Bản B kể chuyện hấp dẫn hơn." }
           ],
           "correctReason": "A",
-          "explanation": "«It is new employees who…» là cấu trúc chẻ, dùng để nhấn vào chủ thể. «Unable to watch anyone…» là cụm phân từ mở đầu. «A junior who joined…» là mệnh đề quan hệ. Ba kiểu trong ba câu — đó chính là thứ ETS gọi là «đa dạng cú pháp» ở mốc 4 và 5."
+          "explanation": "«It is new employees who…» là cấu trúc chẻ, dùng để nhấn vào chủ thể. «Unable to watch anyone…» là cụm phân từ mở đầu. «A junior who joined…» là mệnh đề quan hệ. Ba kiểu trong ba câu — đó chính là thứ ETS gọi là «đa dạng cú pháp» ở mức 4 và 5."
         },
         {
           "type": "compare",
@@ -90,7 +90,7 @@
             { "id": "C", "text": "Bản A có nhiều từ hơn nên đủ 300 từ nhanh hơn." }
           ],
           "correctReason": "A",
-          "explanation": "Hai bản nói y hệt nhau. Bản B là sáu câu đơn — mốc 3. Bản A gói cùng nội dung vào ba câu, mỗi câu một cấu trúc khác. Chú ý «What I miss is not X but Y» ở cuối: cấu trúc chẻ với «what» là cách rẻ nhất để nâng một câu tổng kết."
+          "explanation": "Hai bản nói y hệt nhau. Bản B là sáu câu đơn — mức 3. Bản A gói cùng nội dung vào ba câu, mỗi câu một cấu trúc khác. Chú ý «What I miss is not X but Y» ở cuối: cấu trúc chẻ với «what» là cách rẻ nhất để nâng một câu tổng kết."
         }
       ]
     },
@@ -119,7 +119,7 @@
           "vi": "Quyết định bỏ vé của thành phố đã thay đổi thói quen hằng ngày của chị ấy.",
           "tokens": ["The city's decision", "to remove fares", "changed", "her daily routine."],
           "answer": "The city's decision to remove fares changed her daily routine.",
-          "explanation": "Danh hoá: biến hành động «the city removed fares» thành danh từ «the city's decision to remove fares», rồi dùng nó làm chủ ngữ. Cách này nén được cả một mệnh đề vào chủ ngữ, và nó là dấu hiệu văn viết trưởng thành."
+          "explanation": "Danh hoá: biến hành động «the city removed fares» thành danh từ «the city's decision to remove fares», rồi dùng nó làm chủ ngữ. Cách này nén được cả một mệnh đề vào chủ ngữ, và nó là dấu hiệu của văn viết chững chạc."
         },
         {
           "type": "word_order",
@@ -173,7 +173,7 @@
             "What matters is not where you sit, but what you produce."
           ],
           "hintWords": ["What matters is", "not where you sit", "but what you produce"],
-          "explanation": "Cấu trúc chẻ với «what» là vũ khí tốt nhất cho câu kết bài: nó vừa nâng cấp trúc, vừa buộc bạn phải nói ra điều gì thật sự quan trọng. Khuôn «not A but B» bên trong còn tạo thêm một tầng đối lập nữa."
+          "explanation": "Cấu trúc chẻ với «what» là vũ khí tốt nhất cho câu kết bài: nó vừa nâng cấu trúc câu, vừa buộc bạn phải nói ra điều gì thật sự quan trọng. Khuôn «not A but B» bên trong còn tạo thêm một tầng đối lập nữa."
         },
         {
           "type": "translate",

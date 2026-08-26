@@ -17,7 +17,7 @@
           "errorIndex": 1,
           "errorLabel": "Thiếu «s» ở ngôi thứ ba số ít",
           "fix": "My cousin pays half what I do for an apartment twice the size of mine.",
-          "explanation": "Tiếng Việt không chia động từ theo ngôi nên đây là lỗi bám dai nhất. Nguy hiểm ở chỗ nó không cản nghĩa, nên người viết đọc lại vẫn thấy xuôi — mà ETS thì đếm nó vào trục độ chính xác. Rà riêng một lượt chỉ nhìn động từ là cách bắt hiệu quả nhất."
+          "explanation": "Tiếng Việt không chia động từ theo ngôi nên đây là lỗi bám dai nhất. Nguy hiểm ở chỗ nó không cản trở việc hiểu, nên người viết đọc lại vẫn thấy xuôi — mà ETS thì đếm nó vào trục độ chính xác. Rà riêng một lượt chỉ nhìn động từ là cách bắt hiệu quả nhất."
         },
         {
           "type": "error_spot",

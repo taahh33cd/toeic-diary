@@ -7,12 +7,12 @@
         {
           "type": "timed_write",
           "id": "t9-1-e1",
-          "prompt": "Viết MỘT đoạn thân bài chống đỡ luận điểm: «Working from home saves employees a great deal of time.»",
+          "prompt": "Viết MỘT đoạn thân bài chứng minh cho luận điểm: «Working from home saves employees a great deal of time.»",
           "scaffold": [
             "Câu chủ đề — nêu lý do",
             "Một câu giải thích vì sao lý do đó đúng",
             "Một ví dụ cụ thể có giờ giấc hoặc con số",
-            "Một câu chốt buộc ví dụ vào luận điểm"
+            "Một câu chốt gắn ví dụ trở lại luận điểm"
           ],
           "minWords": 60,
           "seconds": 300,
@@ -26,7 +26,7 @@
         {
           "type": "timed_write",
           "id": "t9-1-e2",
-          "prompt": "Viết MỘT đoạn thân bài chống đỡ luận điểm: «Living in a small town costs far less than living in a city.»",
+          "prompt": "Viết MỘT đoạn thân bài chứng minh cho luận điểm: «Living in a small town costs far less than living in a city.»",
           "scaffold": [
             "Câu chủ đề — nêu lý do",
             "Một câu giải thích",
@@ -45,7 +45,7 @@
         {
           "type": "timed_write",
           "id": "t9-1-e3",
-          "prompt": "Viết MỘT đoạn thân bài chống đỡ luận điểm: «New employees learn much less when their team works from home.»",
+          "prompt": "Viết MỘT đoạn thân bài chứng minh cho luận điểm: «New employees learn much less when their team works from home.»",
           "scaffold": [
             "Câu chủ đề",
             "Giải thích cơ chế — vì sao chuyện đó xảy ra",
@@ -151,7 +151,7 @@
           "scaffold": [
             "Một câu nêu vì sao phương án du lịch kém hơn, kèm lý do",
             "Một câu nêu vì sao phương án thêm ngày nghỉ kém hơn, kèm lý do",
-            "Một câu chốt buộc cả hai lại với lựa chọn của bạn"
+            "Một câu chốt nối cả hai về lựa chọn của bạn"
           ],
           "minWords": 100,
           "seconds": 360,
@@ -165,7 +165,7 @@
         {
           "type": "timed_write",
           "id": "t9-1-h3",
-          "prompt": "Viết MỘT đoạn thân bài lập luận theo BÊN LIÊN QUAN cho đề: «Should schools install vending machines in their hallways?» Chọn một bên (học sinh, phụ huynh, hoặc nhà trường) và khai triển.",
+          "prompt": "Viết MỘT đoạn thân bài lập luận theo BÊN LIÊN QUAN cho đề: «Should schools install vending machines in their hallways?» Chọn một bên (học sinh, phụ huynh, hoặc nhà trường) và triển khai.",
           "scaffold": [
             "Câu chủ đề nêu rõ bạn đang nói về bên nào",
             "Giải thích tác động lên bên đó",

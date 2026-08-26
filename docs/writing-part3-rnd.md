@@ -4,20 +4,20 @@ Bản đầy đủ có phân tích: artifact `Bản đồ tầng Writing Part 3`
 https://claude.ai/code/artifact/38567fed-8807-4ed7-a579-68cb9cb44413
 
 Trạng thái: Phase 1–3 đã xong. Tầng 1–12 đang mở, 155 bài tập tự chấm qua 13 loại.
-Còn lại: Phase 4 = T13 (viết thật 30 phút, nộp giáo viên chấm) + 24 đề + 6 cặp bài mẫu mốc-3/mốc-5.
+Còn lại: Phase 4 = T13 (viết thật 30 phút, nộp giáo viên chấm) + 24 đề + 6 cặp bài mẫu mức-3/mức-5.
 Tầng 0 vẫn `active: false` — band ≤90 chỉ có on-ramp, chưa cấp thiết.
 
 ## Quyết định đã chốt
 
 1. **Giữ nguyên 14 tầng**, không gộp.
 2. **Người ≤90: gợi ý, không chặn** — mở đủ tầng, thêm dòng "nên làm Part 2 trước sẽ lên điểm nhanh hơn".
-3. **Bài mẫu làm theo cặp** — 6 cặp mốc-3/mốc-5, mỗi dạng đề một cặp, hai bài cùng trả lời một đề.
+3. **Bài mẫu làm theo cặp** — 6 cặp mức-3/mức-5, mỗi dạng đề một cặp, hai bài cùng trả lời một đề.
 4. **Hệ thống gợi ý band** từ điểm đã chấm; học viên vẫn đổi được.
 
 ## Sự thật từ ETS
 
 - 1 câu duy nhất, 30 phút, tối thiểu ~300 từ, chấm 0–5.
-- 4 tiêu chí trên màn hình: ý kiến có được chống đỡ bằng lý do/ví dụ · ngữ pháp · từ vựng · tổ chức bài.
+- 4 tiêu chí trên màn hình: ý kiến có được chứng minh bằng lý do/ví dụ · ngữ pháp · từ vựng · tổ chức bài.
 - Nguồn: Examinee Handbook tr.30–31 (directions + scoring guide), Score User Guide tr.14–16 (mô tả năng lực theo dải điểm 0–200), Sample Tests (đề mẫu).
 
 ## Thang chấm tách thành 5 trục
@@ -25,17 +25,17 @@ Tầng 0 vẫn `active: false` — band ≤90 chỉ có on-ramp, chưa cấp thi
 | Mốc | Trả lời đúng việc | Phát triển & ví dụ | Mạch bài | Độ chính xác | Độ đa dạng |
 |---|---|---|---|---|---|
 | 5 | trúng | xác đáng, đầy đủ | thống nhất, liền mạch | ổn định | đa dạng cú pháp + chất bản ngữ |
-| 4 | trúng, vài ý chưa sâu | đủ | **còn lặp/lạc ý vặt/nối mờ** | lỗi nhỏ không cản nghĩa | có đa dạng |
+| 4 | trúng, vài ý chưa sâu | đủ | **còn lặp ý, vài chỗ lạc ý, nối ý mờ** | lỗi nhỏ không cản trở việc hiểu | có đa dạng |
 | 3 | trúng | lưng chừng | có chỗ nối bị che | không đều | **đúng nhưng hạn hẹp** |
 | 2 | bám đề | **khái quát mà thiếu ví dụ** | tổ chức không đạt | lỗi tích tụ | — |
 | 1 | **đáng ngờ, lệch việc** | rất ít chi tiết | rối loạn | lỗi nặng và dày | — |
 
 Bốn phát hiện chi phối thiết kế:
 
-1. **3→4 là bài toán ĐỘ ĐA DẠNG, không phải sửa lỗi.** Mốc 3 = "đúng nhưng hạn hẹp". Bài sạch lỗi vẫn bị chặn ở 3 nếu toàn câu đơn.
-2. **Mốc 2 chết vì thiếu ví dụ**, không phải thiếu ý. Cần tầng riêng cho chuỗi luận điểm → vì sao → ví dụ cụ thể.
-3. **4→5 là CẮT, không phải viết thêm.** Mốc 4 vẫn được phép lặp/lạc ý; mốc 5 thì không.
-4. **Mốc 1 là lỗi đọc đề.** Tầng đầu tiên phải là giải mã đề.
+1. **3→4 là bài toán ĐỘ ĐA DẠNG, không phải sửa lỗi.** Mức 3 = "đúng nhưng hạn hẹp". Bài sạch lỗi vẫn bị chặn ở 3 nếu toàn câu đơn.
+2. **Mức 2 chết vì thiếu ví dụ**, không phải thiếu ý. Cần tầng riêng cho chuỗi luận điểm → vì sao → ví dụ cụ thể.
+3. **4→5 là CẮT, không phải viết thêm.** Mức 4 vẫn được phép lặp/lạc ý; mức 5 thì không.
+4. **Mức 1 là lỗi đọc đề.** Tầng đầu tiên phải là giải mã đề.
 
 ## Band map (dịch lên so với Part 2)
 
@@ -44,9 +44,9 @@ ETS: bài luận là thứ ngăn cách 140–160 với 170–200; người dư�
 | Band | Trạng thái | Đích | Tầng |
 |---|---|---|---|
 | ≤90 | chưa tới lượt | on-ramp | T0 |
-| 100–130 | có ý, chưa chống đỡ | thoát 1–2, chạm mốc 3 | T1–T4 |
-| 140–160 | đủ ý, thiếu độ sâu | mốc 3 → 4 | T5–T9 |
-| 170+ | đủ chuẩn, thiếu đa dạng | mốc 4 → 5 | T10–T12 |
+| 100–130 | có ý, chưa chứng minh | thoát 1–2, chạm mức 3 | T1–T4 |
+| 140–160 | đủ ý, thiếu độ sâu | mức 3 → 4 | T5–T9 |
+| 170+ | đủ chuẩn, thiếu đa dạng | mức 4 → 5 | T10–T12 |
 
 ## 6 dạng đề (không phải 4)
 
@@ -54,7 +54,7 @@ ETS: bài luận là thứ ngăn cách 140–160 với 170–200; người dư�
 |---|---|---|---|
 | `agree_disagree` | Đồng ý / phản đối | chọn 1 phe → 2–3 lý do → mỗi lý do 1 ví dụ | đứng giữa, không có luận điểm |
 | `choice_2` | Chọn 1 trong 2 | chọn A → lý do → 1 câu nhượng bộ vì sao B kém | tả đều cả hai, quên chọn |
-| `choice_3` | Chọn 1 trong 3+ | chọn 1 → **loại bỏ 2 cái kia có lý do** → chống đỡ | quên hai lựa chọn còn lại |
+| `choice_3` | Chọn 1 trong 3+ | chọn 1 → **loại bỏ 2 cái kia có lý do** → bảo vệ lựa chọn | quên hai lựa chọn còn lại |
 | `pros_cons` | Ưu & nhược | đoạn ưu → đoạn nhược → **kết bài mới ngả bên** | biến thành agree/disagree ngay mở bài |
 | `open_q` | Câu hỏi mở (best way / what qualities) | **tự đặt 2–3 hạng mục** rồi chọn/xếp hạng | đứng hình 5–8 phút, không kịp 300 từ |
 | `policy` | Nên / không nên | lập luận theo từng bên liên quan | chỉ nói cảm nghĩ cá nhân, ý mỏng |
@@ -101,7 +101,7 @@ Nộp bài dùng lại `SkillSubmission` + `/journal/submissions` + `/admin/grad
 |---|---|---|
 | Bài tập tự chấm | ~195 | 13 tầng × 3 cấp × 5 bài |
 | Đề viết thật T13 | 24 | 6 dạng × 4 đề |
-| Bài mẫu | 12 | **6 cặp mốc-3/mốc-5**, mỗi dạng một cặp cùng chung một đề |
+| Bài mẫu | 12 | **6 cặp mức-3/mức-5**, mỗi dạng một cặp cùng chung một đề |
 | Đoạn văn nền (T5–T8, T12) | ~40 | bản nháp cài lỗi sẵn |
 
 Phase: (1) khung + T1–T4 · (2) T5–T9 · (3) T10–T12 · (4) T13 + bộ đề.
@@ -155,7 +155,7 @@ Công viết gấp đôi nhưng thu về 3 lần dùng, và tự sinh sẵn data
 
 `SkillSubmission.band` do `estimateBand()` ghi khi giáo viên chấm, công thức
 `điểm rubric ÷ thang × 200` ([lib/submissions/index.ts:209](../lib/submissions/index.ts)).
-Với Q8 thang 5 → mốc 2 ra **80 điểm**.
+Với Q8 thang 5 → mức 2 ra **80 điểm**.
 
 **KHÔNG lấy thẳng `band` của bài Q8 để chọn band Part 3.** Học viên được 2/5 sẽ rơi vào
 "≤90 · chưa tới lượt", trong khi ETS nói người yếu bài luận thường là người tổng 140–160.

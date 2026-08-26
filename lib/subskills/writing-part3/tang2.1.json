@@ -103,7 +103,7 @@
             { "id": "D", "text": "Other cities should indeed make public transport free, because the benefits reach residents, businesses and the environment alike." }
           ],
           "correctAnswers": ["D"],
-          "explanation": "C tuy có trả lời nhưng «good for everyone» rỗng tới mức không chống đỡ được gì. A và B lạc khỏi câu hỏi «có nên hay không». D vừa trả lời dứt khoát, vừa nêu ba bên chịu tác động — đó là cách làm dày một bài dạng chính sách, thay vì chỉ nói cảm nghĩ cá nhân."
+          "explanation": "C tuy có trả lời nhưng «good for everyone» rỗng tới mức không chứng minh được gì. A và B lạc khỏi câu hỏi «có nên hay không». D vừa trả lời dứt khoát, vừa nêu ba bên chịu tác động — đó là cách làm dày một bài dạng chính sách, thay vì chỉ nói cảm nghĩ cá nhân."
         }
       ]
     },
@@ -177,7 +177,7 @@
           "errorIndex": 2,
           "errorLabel": "Không chọn phe ở dạng bắt buộc phải chọn",
           "fix": "Personally, I agree that staff produce better work when they set their own hours.",
-          "explanation": "«Strong arguments on both sides» nghe khách quan và chín chắn, nhưng ở dạng đồng ý/phản đối thì đó là chưa trả lời. Không có luận điểm thì các đoạn thân bài không có gì để chống đỡ, và ETS chấm riêng một tiêu chí về việc ý kiến có được chống đỡ hay không."
+          "explanation": "«Strong arguments on both sides» nghe khách quan và chín chắn, nhưng ở dạng đồng ý/phản đối thì đó là chưa trả lời. Không có luận điểm thì các đoạn thân bài không có gì để chứng minh, và ETS chấm riêng một tiêu chí về việc ý kiến có được chứng minh hay không."
         },
         {
           "type": "error_spot",
@@ -209,7 +209,7 @@
           "errorIndex": 1,
           "errorLabel": "Chép lại nguyên văn câu đề",
           "fix": "Both choices attract people for very different reasons.",
-          "explanation": "Chép nguyên si câu đề không được tính là chữ của bạn, và với một bài chỉ 300 từ thì mỗi câu phí là một câu bị mất. ETS còn nói rõ ở mốc 0 rằng bài «chỉ chép lại chữ trong đề» không được điểm — chép một câu chưa tới mức đó, nhưng cũng không đem lại gì."
+          "explanation": "Chép nguyên si câu đề không được tính là chữ của bạn, và với một bài chỉ 300 từ thì mỗi câu phí là một câu bị mất. ETS còn nói rõ ở mức 0 rằng bài «chỉ chép lại chữ trong đề» không được điểm — chép một câu chưa tới mức đó, nhưng cũng không đem lại gì."
         },
         {
           "type": "error_spot",
@@ -225,7 +225,7 @@
           "errorIndex": 2,
           "errorLabel": "Luận điểm nói sang chuyện khác với câu hỏi",
           "fix": "In my opinion, the benefits of free transport outweigh the cost to the city budget.",
-          "explanation": "Dòng 3 là một nhận xét về chất lượng phương tiện, trong khi đề hỏi «có nên miễn phí không». Đúng chủ đề mà lệch câu hỏi — ETS gọi đây là «mức độ đáp ứng nhiệm vụ đáng ngờ» và xếp nó ở mốc 1. Dòng 4 có trả lời, nhưng người chấm đã đọc dòng 3 trước và thấy bạn trả lời nhầm câu hỏi."
+          "explanation": "Dòng 3 là một nhận xét về chất lượng phương tiện, trong khi đề hỏi «có nên miễn phí không». Đúng chủ đề mà lệch câu hỏi — ETS gọi đây là «mức độ đáp ứng nhiệm vụ đáng ngờ» và xếp nó ở mức 1. Dòng 4 có trả lời, nhưng người chấm đã đọc dòng 3 trước và thấy bạn trả lời nhầm câu hỏi."
         }
       ]
     }
