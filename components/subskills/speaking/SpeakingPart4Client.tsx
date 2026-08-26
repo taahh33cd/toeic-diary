@@ -12,6 +12,7 @@ import {
   PART4_PASS_THRESHOLD,
 } from "@/lib/subskills/speaking-part4";
 import { RecordingPanel } from "@/components/subskills/speaking/RecordingPanel";
+import { FS } from "@/lib/ui/scale";
 
 type Phase = "intro" | "quiz" | "done";
 type BestMap = Record<string, { score: number; passed: boolean }>;
@@ -118,14 +119,14 @@ export default function SpeakingPart4Client({ skillId, tests, easyBest, mediumBe
                 borderColor: difficulty === d ? "var(--accent-primary)" : "var(--border)",
                 background: difficulty === d ? "rgba(59,130,246,0.1)" : "var(--bg-elevated)",
                 color: difficulty === d ? "var(--accent-primary)" : "var(--text-muted)",
-                fontSize: "0.78rem", fontWeight: 600, cursor: "pointer",
+                fontSize: FS.xs, fontWeight: 600, cursor: "pointer",
               }}
             >
               {DIFF_LABEL[d]}
             </button>
           ))}
         </div>
-        <p style={{ margin: "0 0 1.25rem", fontSize: "0.82rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
+        <p style={{ margin: "0 0 1.25rem", fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.6 }}>
           {DIFF_HINT[difficulty]}
         </p>
 
@@ -149,15 +150,15 @@ export default function SpeakingPart4Client({ skillId, tests, easyBest, mediumBe
                   <img src={t.imageUrl} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} />
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontSize: "0.72rem", color: "var(--text-muted)", fontWeight: 600 }}>Bộ {t.testNum}</div>
-                  <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-primary)", lineHeight: 1.35 }}>{t.title}</div>
+                  <div style={{ fontSize: FS.xs, color: "var(--text-muted)", fontWeight: 600 }}>Bộ {t.testNum}</div>
+                  <div style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)", lineHeight: 1.35 }}>{t.title}</div>
                   {best && (
-                    <div style={{ fontSize: "0.7rem", color: passed ? "rgb(34,197,94)" : "var(--text-muted)", marginTop: 2 }}>
+                    <div style={{ fontSize: FS.xs, color: passed ? "rgb(34,197,94)" : "var(--text-muted)", marginTop: 2 }}>
                       Điểm tốt nhất: {best.score}%{passed ? " ✓" : ""}
                     </div>
                   )}
                 </div>
-                <span style={{ fontSize: "0.8rem", color: "var(--accent-primary)", flexShrink: 0 }}>→</span>
+                <span style={{ fontSize: FS.sm, color: "var(--accent-primary)", flexShrink: 0 }}>→</span>
               </button>
             );
           })}
@@ -172,11 +173,11 @@ export default function SpeakingPart4Client({ skillId, tests, easyBest, mediumBe
     const passed = score >= PART4_PASS_THRESHOLD;
     return (
       <div style={{ textAlign: "center", padding: "2rem 1rem" }}>
-        <div style={{ fontSize: "2.4rem", marginBottom: "0.5rem" }}>{passed ? "🎉" : "💪"}</div>
-        <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "var(--text-primary)", margin: "0 0 0.35rem" }}>
+        <div style={{ fontSize: FS.xl, marginBottom: "0.5rem" }}>{passed ? "🎉" : "💪"}</div>
+        <h2 style={{ fontSize: FS.lg, fontWeight: 700, color: "var(--text-primary)", margin: "0 0 0.35rem" }}>
           {difficulty === "hard" ? "Xong phần luyện nói" : passed ? "Đạt rồi!" : "Làm lại nhé"}
         </h2>
-        <p style={{ fontSize: "0.9rem", color: "var(--text-secondary)", margin: "0 0 1.5rem" }}>
+        <p style={{ fontSize: FS.sm, color: "var(--text-secondary)", margin: "0 0 1.5rem" }}>
           {difficulty === "hard"
             ? `Bạn đã luyện ${total} câu nói với bảng “${test.title}”. Điểm phát âm nằm ở từng bảng ghi âm phía trên.`
             : `${correctCount}/${total} câu đúng · ${score}%`}
@@ -185,19 +186,19 @@ export default function SpeakingPart4Client({ skillId, tests, easyBest, mediumBe
         <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
           <button
             onClick={() => startTest(testNum, difficulty)}
-            style={{ padding: "0.6rem 1.3rem", borderRadius: 8, border: "1.5px solid var(--border)", background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: "0.85rem", fontWeight: 600, cursor: "pointer", fontFamily: "inherit" }}
+            style={{ padding: "0.6rem 1.3rem", borderRadius: 8, border: "1.5px solid var(--border)", background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: FS.sm, fontWeight: 600, cursor: "pointer", fontFamily: "inherit" }}
           >
             Làm lại bộ này
           </button>
           <button
             onClick={() => setPhase("intro")}
-            style={{ padding: "0.6rem 1.3rem", borderRadius: 8, border: "none", background: "var(--accent-primary)", color: "#fff", fontSize: "0.85rem", fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}
+            style={{ padding: "0.6rem 1.3rem", borderRadius: 8, border: "none", background: "var(--accent-primary)", color: "#fff", fontSize: FS.sm, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}
           >
             Chọn bộ khác
           </button>
         </div>
 
-        <p style={{ marginTop: "1.5rem", fontSize: "0.82rem", color: "var(--text-muted)" }}>
+        <p style={{ marginTop: "1.5rem", fontSize: FS.sm, color: "var(--text-muted)" }}>
           Thử sức với đề đầy đủ dùng đúng bảng này:{" "}
           <Link href={`/skills/speaking/q8-10/${test.sourceSlug}`} style={{ color: "var(--accent-primary)", fontWeight: 600 }}>
             làm đề Q8-10 →
@@ -221,17 +222,17 @@ export default function SpeakingPart4Client({ skillId, tests, easyBest, mediumBe
       {/* Progress */}
       <div style={{ marginBottom: "1rem" }}>
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 5 }}>
-          <span style={{ fontSize: "0.72rem", color: "var(--text-muted)" }}>Bộ {testNum} · {DIFF_LABEL[difficulty]}</span>
-          <span style={{ fontSize: "0.72rem", color: "var(--text-muted)" }}>{idx + 1} / {total}</span>
+          <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>Bộ {testNum} · {DIFF_LABEL[difficulty]}</span>
+          <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>{idx + 1} / {total}</span>
         </div>
         <div style={{ height: 4, background: "var(--border)", borderRadius: 999 }}>
           <div style={{ height: "100%", width: `${((idx + 1) / total) * 100}%`, background: "var(--accent-primary)", borderRadius: 999, transition: "width 0.3s" }} />
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", marginTop: 3 }}>
-          <span style={{ fontSize: "0.65rem", color: "var(--text-muted)" }}>
+          <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>
             {difficulty === "hard" ? `${correctCount} câu đã luyện` : `${correctCount} đúng`}
           </span>
-          <button onClick={() => setPhase("intro")} style={{ fontSize: "0.65rem", color: "var(--text-muted)", background: "none", border: "none", cursor: "pointer", padding: 0 }}>
+          <button onClick={() => setPhase("intro")} style={{ fontSize: FS.xs, color: "var(--text-muted)", background: "none", border: "none", cursor: "pointer", padding: 0 }}>
             ← Thoát
           </button>
         </div>
@@ -243,8 +244,8 @@ export default function SpeakingPart4Client({ skillId, tests, easyBest, mediumBe
           onClick={() => setShowTable((v) => !v)}
           style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, padding: "0.6rem 0.9rem", background: "var(--bg-elevated)", border: "none", borderBottom: showTable ? "1px solid var(--border)" : "none", cursor: "pointer", fontFamily: "inherit" }}
         >
-          <span style={{ fontSize: "0.76rem", fontWeight: 700, color: "var(--text-secondary)" }}>📋 {test.title}</span>
-          <span style={{ fontSize: "0.7rem", color: "var(--text-muted)" }}>{showTable ? "Thu gọn ▲" : "Mở bảng ▼"}</span>
+          <span style={{ fontSize: FS.xs, fontWeight: 700, color: "var(--text-secondary)" }}>📋 {test.title}</span>
+          <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>{showTable ? "Thu gọn ▲" : "Mở bảng ▼"}</span>
         </button>
         {showTable && (
           <div style={{ background: "#fff", display: "flex", justifyContent: "center" }}>
@@ -256,14 +257,14 @@ export default function SpeakingPart4Client({ skillId, tests, easyBest, mediumBe
 
       {/* Bài tập */}
       <div style={{ border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", padding: "1.3rem 1.5rem", marginBottom: "1rem" }}>
-        <p style={{ margin: "0 0 1rem", fontSize: "1.02rem", fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.55 }}>
+        <p style={{ margin: "0 0 1rem", fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.55 }}>
           {ex.instruction}
         </p>
 
         {/* Audio câu hỏi thật của đề */}
         {ex.audio_url && (
           <div style={{ marginBottom: "1rem" }}>
-            <div style={{ fontSize: "0.7rem", color: "var(--text-muted)", fontWeight: 700, marginBottom: 4 }}>Câu hỏi trong đề</div>
+            <div style={{ fontSize: FS.xs, color: "var(--text-muted)", fontWeight: 700, marginBottom: 4 }}>Câu hỏi trong đề</div>
             <audio controls src={ex.audio_url} style={{ width: "100%" }} />
           </div>
         )}
@@ -291,7 +292,7 @@ export default function SpeakingPart4Client({ skillId, tests, easyBest, mediumBe
                     display: "flex", alignItems: "flex-start", gap: "0.75rem",
                     padding: "0.8rem 1.05rem", borderRadius: 8,
                     border: `1.5px solid ${borderColor}`, background: bg, color: textColor,
-                    fontSize: "0.96rem", textAlign: "left", cursor: submitted ? "default" : "pointer",
+                    fontSize: FS.md, textAlign: "left", cursor: submitted ? "default" : "pointer",
                     fontFamily: "inherit",
                   }}
                 >
@@ -306,7 +307,7 @@ export default function SpeakingPart4Client({ skillId, tests, easyBest, mediumBe
         {ex.type === "essay_typing" && (
           <div>
             {ex.content && (
-              <div style={{ marginBottom: "0.8rem", padding: "0.8rem 1.05rem", background: "var(--bg-elevated)", borderRadius: 8, border: "1px solid var(--border)", fontSize: "1rem", color: "var(--text-primary)", lineHeight: 1.65 }}>
+              <div style={{ marginBottom: "0.8rem", padding: "0.8rem 1.05rem", background: "var(--bg-elevated)", borderRadius: 8, border: "1px solid var(--border)", fontSize: FS.md, color: "var(--text-primary)", lineHeight: 1.65 }}>
                 {ex.content}
               </div>
             )}
@@ -321,14 +322,14 @@ export default function SpeakingPart4Client({ skillId, tests, easyBest, mediumBe
                 width: "100%", padding: "0.72rem 1rem", borderRadius: 8,
                 border: submitted ? `1.5px solid ${isCorrect ? "rgba(34,197,94,0.5)" : "rgba(239,68,68,0.4)"}` : "1.5px solid var(--border)",
                 background: submitted ? (isCorrect ? "rgba(34,197,94,0.08)" : "rgba(239,68,68,0.06)") : "var(--bg-primary)",
-                color: "var(--text-primary)", fontSize: "1rem", boxSizing: "border-box", outline: "none", fontFamily: "inherit",
+                color: "var(--text-primary)", fontSize: FS.md, boxSizing: "border-box", outline: "none", fontFamily: "inherit",
               }}
             />
           </div>
         )}
 
         {ex.type === "speak_aloud" && !submitted && (
-          <p style={{ margin: 0, fontSize: "0.86rem", color: "var(--text-secondary)", lineHeight: 1.6, padding: "0.8rem 1rem", background: "var(--bg-elevated)", border: "1px dashed var(--border)", borderRadius: 8 }}>
+          <p style={{ margin: 0, fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.6, padding: "0.8rem 1rem", background: "var(--bg-elevated)", border: "1px dashed var(--border)", borderRadius: 8 }}>
             Nói câu trả lời của bạn thành tiếng trước đã — đừng đọc câu mẫu ngay. Xong rồi bấm <strong>Xem câu mẫu</strong> để đối chiếu và ghi âm luyện lại.
           </p>
         )}
@@ -338,15 +339,15 @@ export default function SpeakingPart4Client({ skillId, tests, easyBest, mediumBe
           <div style={{ marginTop: "0.85rem", padding: "0.85rem 1.1rem", borderRadius: 8, background: ex.type === "speak_aloud" ? "rgba(59,130,246,0.08)" : isCorrect ? "rgba(34,197,94,0.08)" : "rgba(239,68,68,0.06)", border: `1px solid ${ex.type === "speak_aloud" ? "rgba(59,130,246,0.25)" : isCorrect ? "rgba(34,197,94,0.25)" : "rgba(239,68,68,0.2)"}` }}>
             {ex.type === "speak_aloud" ? (
               <>
-                <div style={{ fontWeight: 700, color: "var(--accent-primary)", marginBottom: 5, fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>Câu mẫu</div>
-                <div style={{ fontSize: "1.02rem", color: "var(--text-primary)", lineHeight: 1.6, marginBottom: 8 }}>{ex.reference_text}</div>
+                <div style={{ fontWeight: 700, color: "var(--accent-primary)", marginBottom: 5, fontSize: FS.sm, textTransform: "uppercase", letterSpacing: "0.05em" }}>Câu mẫu</div>
+                <div style={{ fontSize: FS.md, color: "var(--text-primary)", lineHeight: 1.6, marginBottom: 8 }}>{ex.reference_text}</div>
               </>
             ) : (
-              <div style={{ fontWeight: 700, color: isCorrect ? "rgb(34,197,94)" : "rgb(239,68,68)", marginBottom: 5, fontSize: "0.95rem" }}>
+              <div style={{ fontWeight: 700, color: isCorrect ? "rgb(34,197,94)" : "rgb(239,68,68)", marginBottom: 5, fontSize: FS.md }}>
                 {isCorrect ? "✓ Chính xác!" : `✗ Sai — Đáp án đúng: ${correctText}`}
               </div>
             )}
-            <div style={{ fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>{ex.explanation}</div>
+            <div style={{ fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.6 }}>{ex.explanation}</div>
           </div>
         )}
       </div>
@@ -377,7 +378,7 @@ export default function SpeakingPart4Client({ skillId, tests, easyBest, mediumBe
               padding: "0.65rem 1.6rem", borderRadius: 8, border: "none",
               background: canCheck ? "var(--accent-primary)" : "var(--bg-elevated)",
               color: canCheck ? "#fff" : "var(--text-muted)",
-              fontSize: "0.88rem", fontWeight: 700, cursor: canCheck ? "pointer" : "not-allowed", fontFamily: "inherit",
+              fontSize: FS.sm, fontWeight: 700, cursor: canCheck ? "pointer" : "not-allowed", fontFamily: "inherit",
             }}
           >
             {ex.type === "speak_aloud" ? "Xem câu mẫu" : "Kiểm tra"}
@@ -385,7 +386,7 @@ export default function SpeakingPart4Client({ skillId, tests, easyBest, mediumBe
         ) : (
           <button
             onClick={handleNext}
-            style={{ padding: "0.65rem 1.6rem", borderRadius: 8, border: "none", background: "var(--accent-primary)", color: "#fff", fontSize: "0.88rem", fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}
+            style={{ padding: "0.65rem 1.6rem", borderRadius: 8, border: "none", background: "var(--accent-primary)", color: "#fff", fontSize: FS.sm, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}
           >
             {idx + 1 >= total ? "Hoàn thành" : "Câu tiếp →"}
           </button>

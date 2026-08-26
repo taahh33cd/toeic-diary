@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { listPassages, passageLabel, DEEP_STEPS } from "@/lib/subskills/part3/passages";
 import DeepListenList, { type DeepListRow } from "@/components/subskills/DeepListenList";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 
 export const metadata: Metadata = { title: "Nghe sâu — Listening Part 3 & 4" };
 
@@ -35,7 +36,7 @@ export default async function NgheSauPage({ searchParams }: Props) {
         style={{
           padding: "0.35rem 0.75rem",
           borderRadius: 999,
-          fontSize: "0.72rem",
+          fontSize: FS.xs,
           fontWeight: active ? 700 : 500,
           textDecoration: "none",
           border: `1px solid ${active ? "var(--accent-primary)" : "var(--border)"}`,
@@ -61,16 +62,16 @@ export default async function NgheSauPage({ searchParams }: Props) {
   return (
     <div
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 900,
+        padding: `${PAD_Y} ${PAD_X}`,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         width: "100%",
         boxSizing: "border-box",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: "0.8rem", color: "var(--text-muted)", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: FS.sm, color: "var(--text-muted)", flexWrap: "wrap" }}>
         <Link href="/subskills/listening" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Listening</Link>
         <span>›</span>
         <Link href="/subskills/listening/part3" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Part 3 &amp; 4</Link>
@@ -82,7 +83,7 @@ export default async function NgheSauPage({ searchParams }: Props) {
         <h1 style={{ fontSize: "clamp(1.25rem, 3vw, 1.6rem)", fontWeight: 700, color: "var(--text-primary)", lineHeight: 1.2, margin: "0 0 0.5rem" }}>
           Nghe sâu — quy trình 5 bước
         </h1>
-        <p style={{ margin: 0, fontSize: "0.87rem", color: "var(--text-secondary)", lineHeight: 1.7 }}>
+        <p style={{ margin: 0, fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.7 }}>
           Bài trắc nghiệm rèn phản xạ, còn khu này rèn nền. Mỗi đoạn đi hết một vòng: làm đề
           khi chưa biết gì, tra từ, nghe kèm chữ và đọc theo nhiều lượt, rồi nghe chay đến khi
           hiểu trọn. Tiến độ lưu ngay trên máy, thoát giữa chừng không mất.
@@ -96,7 +97,7 @@ export default async function NgheSauPage({ searchParams }: Props) {
           borderRadius: "var(--radius-lg, 12px)",
           border: "1px solid var(--border)",
           background: "var(--bg-elevated)",
-          fontSize: "0.8rem",
+          fontSize: FS.sm,
           color: "var(--text-secondary)",
           lineHeight: 1.8,
         }}
@@ -121,9 +122,9 @@ export default async function NgheSauPage({ searchParams }: Props) {
 
       <DeepListenList rows={rows} />
 
-      <div style={{ width: "100%", marginTop: "3rem" }}>
+      <div style={{ width: "100%", marginTop: "auto", paddingTop: "3rem" }}>
         <div style={{ height: 1, background: "var(--border)" }} />
-        <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.08em" }}>
+        <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.08em" }}>
           TOEIC DICTATION DIARY
         </p>
       </div>

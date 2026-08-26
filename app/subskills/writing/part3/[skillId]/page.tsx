@@ -11,6 +11,7 @@ import {
   dbPartW3,
 } from "@/lib/subskills/writing-part3";
 import WritingPart3Client from "@/components/subskills/writing/WritingPart3Client";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 
 type Props = { params: Promise<{ skillId: string }> };
 
@@ -88,16 +89,16 @@ export default async function WritingP3SkillPage({ params }: Props) {
   return (
     <div
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 860,
+        padding: `${PAD_Y} ${PAD_X}`,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         width: "100%",
         boxSizing: "border-box",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: "0.8rem", color: "var(--text-muted)", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: FS.sm, color: "var(--text-muted)", flexWrap: "wrap" }}>
         <Link href="/subskills" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Subskills</Link>
         <span>›</span>
         <Link href="/subskills/writing" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Writing</Link>
@@ -108,13 +109,13 @@ export default async function WritingP3SkillPage({ params }: Props) {
       </div>
 
       <div style={{ marginBottom: "1.5rem" }}>
-        <p style={{ fontSize: "0.68rem", color: "var(--accent-primary)", letterSpacing: "0.09em", textTransform: "uppercase", fontWeight: 700, marginBottom: "0.35rem" }}>
+        <p style={{ fontSize: FS.xs, color: "var(--accent-primary)", letterSpacing: "0.09em", textTransform: "uppercase", fontWeight: 700, marginBottom: "0.35rem" }}>
           Nhắm vào · {skill.axis}
         </p>
         <h1 style={{ fontSize: "clamp(1.4rem, 3vw, 1.8rem)", fontWeight: 800, color: "var(--text-primary)", margin: "0 0 4px" }}>
           {skill.labelVi}
         </h1>
-        <p style={{ margin: 0, fontSize: "0.88rem", color: "var(--text-muted)", fontStyle: "italic" }}>
+        <p style={{ margin: 0, fontSize: FS.sm, color: "var(--text-muted)", fontStyle: "italic" }}>
           {skill.label} · {skill.description}
         </p>
       </div>
@@ -130,8 +131,8 @@ export default async function WritingP3SkillPage({ params }: Props) {
         passThreshold={PASS_THRESHOLD_P3}
       />
 
-      <div style={{ marginTop: "3rem", height: 1, background: "var(--border)" }} />
-      <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.08em" }}>TOEIC DICTATION DIARY</p>
+      <div style={{ marginTop: "auto", height: 1, background: "var(--border)" }} />
+      <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.08em" }}>TOEIC DICTATION DIARY</p>
     </div>
   );
 }

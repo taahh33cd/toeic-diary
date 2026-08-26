@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { VERB_GROUPS, VERBS } from "@/lib/subskills/verbs";
 import { groupToPartKey } from "@/lib/subskills/verbs/types";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 
 export const metadata: Metadata = { title: "Động từ bất quy tắc — Subskills" };
 
@@ -41,16 +42,16 @@ export default async function VerbsGroupListPage() {
   return (
     <div
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 1100,
+        padding: `${PAD_Y} ${PAD_X}`,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         boxSizing: "border-box",
       }}
     >
       {/* Breadcrumb */}
-      <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "1.5rem", fontSize: "0.78rem", color: "var(--text-muted)" }}>
+      <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "1.5rem", fontSize: FS.xs, color: "var(--text-muted)" }}>
         <Link href="/subskills" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Subskills</Link>
         <span>/</span>
         <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>Động từ bất quy tắc</span>
@@ -58,10 +59,10 @@ export default async function VerbsGroupListPage() {
 
       {/* Header */}
       <div style={{ marginBottom: "1.25rem" }}>
-        <h1 style={{ fontSize: "1.4rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.35rem" }}>
+        <h1 style={{ fontSize: FS.lg, fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.35rem" }}>
           Động từ bất quy tắc — {VERBS.length} từ trọng tâm
         </h1>
-        <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.6 }}>
+        <p style={{ fontSize: FS.sm, color: "var(--text-muted)", lineHeight: 1.6 }}>
           Học theo 6 nhóm quy luật biến đổi. Mỗi nhóm có 6 levels: nhận diện dạng → gõ V2 → gõ V3 → gõ cả hai → điền vào câu → đề thi thật.
         </p>
       </div>
@@ -75,15 +76,15 @@ export default async function VerbsGroupListPage() {
         padding: "0.9rem 1.1rem",
         marginBottom: "2rem",
       }}>
-        <div style={{ fontSize: "0.72rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--accent-primary)", marginBottom: "0.5rem" }}>
+        <div style={{ fontSize: FS.xs, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--accent-primary)", marginBottom: "0.5rem" }}>
           Cách học hiệu quả
         </div>
-        <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", lineHeight: 1.7, margin: 0 }}>
+        <p style={{ fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.7, margin: 0 }}>
           Ở đây bạn phải <strong>tự gõ đáp án</strong>, không chọn A/B/C/D. Chọn đáp án chỉ cần <em>nhận ra</em>,
           nhưng khi đi thi bạn phải <em>tự nhớ ra</em> — đó là lý do gõ lại giúp nhớ lâu hơn hẳn.
           Các động từ được nhóm theo quy luật biến đổi để bạn nhớ theo cụm thay vì học vẹt từng từ.
         </p>
-        <div style={{ marginTop: "0.75rem", fontSize: "0.8rem", color: "var(--text-muted)" }}>
+        <div style={{ marginTop: "0.75rem", fontSize: FS.sm, color: "var(--text-muted)" }}>
           Đã pass <strong style={{ color: "var(--text-primary)" }}>{totalPassed}</strong>/{VERB_GROUPS.length * TOTAL_LEVELS} levels
         </div>
       </div>
@@ -117,10 +118,10 @@ export default async function VerbsGroupListPage() {
             >
               <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "0.5rem" }}>
                 <div>
-                  <div style={{ fontWeight: 700, fontSize: "0.95rem", color: "var(--text-primary)", lineHeight: 1.25 }}>
+                  <div style={{ fontWeight: 700, fontSize: FS.md, color: "var(--text-primary)", lineHeight: 1.25 }}>
                     {group.name}
                   </div>
-                  <div style={{ fontSize: "0.72rem", color: "var(--text-muted)", marginTop: "0.15rem" }}>
+                  <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginTop: "0.15rem" }}>
                     {group.verbs.length} động từ
                   </div>
                 </div>
@@ -138,7 +139,7 @@ export default async function VerbsGroupListPage() {
 
               <span style={{
                 alignSelf: "flex-start",
-                fontSize: "0.78rem",
+                fontSize: FS.xs,
                 fontFamily: "var(--font-mono, monospace)",
                 fontWeight: 700,
                 background: "var(--bg-secondary)",
@@ -151,7 +152,7 @@ export default async function VerbsGroupListPage() {
               </span>
 
               <div>
-                <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.68rem", color: "var(--text-muted)", marginBottom: "0.3rem" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", fontSize: FS.xs, color: "var(--text-muted)", marginBottom: "0.3rem" }}>
                   <span>{passedLevels}/{TOTAL_LEVELS} levels passed</span>
                   <span>{pct}%</span>
                 </div>

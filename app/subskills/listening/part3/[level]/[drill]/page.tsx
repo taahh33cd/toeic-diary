@@ -4,6 +4,7 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { PART3_LEVELS, getPart3Level } from "@/lib/subskills/part3";
 import Part3DrillClient from "@/components/subskills/Part3DrillClient";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 
 type Props = { params: Promise<{ level: string; drill: string }> };
 
@@ -35,16 +36,16 @@ export default async function Part3DrillPage({ params }: Props) {
   return (
     <div
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 760,
+        padding: `${PAD_Y} ${PAD_X}`,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         width: "100%",
         boxSizing: "border-box",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.25rem", fontSize: "0.78rem", color: "var(--text-muted)", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.25rem", fontSize: FS.xs, color: "var(--text-muted)", flexWrap: "wrap" }}>
         <Link href="/subskills/listening/part3" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Part 3 &amp; 4</Link>
         <span>›</span>
         <Link href={`/subskills/listening/part3/${lv.level}`} style={{ color: "var(--text-muted)", textDecoration: "none" }}>{lv.title}</Link>
@@ -56,7 +57,7 @@ export default async function Part3DrillPage({ params }: Props) {
         <h1 style={{ fontSize: "clamp(1.15rem, 2.6vw, 1.4rem)", fontWeight: 700, color: "var(--text-primary)", lineHeight: 1.25, margin: "0 0 0.4rem" }}>
           {d.title}
         </h1>
-        <p style={{ margin: 0, fontSize: "0.83rem", color: "var(--text-secondary)", lineHeight: 1.65 }}>{d.instruction}</p>
+        <p style={{ margin: 0, fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.65 }}>{d.instruction}</p>
       </div>
 
       <div style={{ height: 1, background: "var(--border)", marginBottom: "1.5rem" }} />

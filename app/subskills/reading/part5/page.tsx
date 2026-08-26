@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { TENSES } from "@/lib/subskills/reading";
 import { tenseToPartKey } from "@/lib/subskills/reading/types";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 
 export const metadata: Metadata = { title: "Part 5 — Reading Subskills" };
 
@@ -49,16 +50,16 @@ export default async function Part5TenseListPage() {
   return (
     <div
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 1100,
+        padding: `${PAD_Y} ${PAD_X}`,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         boxSizing: "border-box",
       }}
     >
       {/* Breadcrumb */}
-      <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "1.5rem", fontSize: "0.78rem", color: "var(--text-muted)" }}>
+      <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "1.5rem", fontSize: FS.xs, color: "var(--text-muted)" }}>
         <Link href="/subskills" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Subskills</Link>
         <span>/</span>
         <Link href="/subskills/reading" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Reading</Link>
@@ -68,10 +69,10 @@ export default async function Part5TenseListPage() {
 
       {/* Header */}
       <div style={{ marginBottom: "0.5rem" }}>
-        <h1 style={{ fontSize: "1.4rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.35rem" }}>
+        <h1 style={{ fontSize: FS.lg, fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.35rem" }}>
           Part 5 — Ngữ pháp: 12 Thì
         </h1>
-        <p style={{ fontSize: "0.85rem", color: "var(--text-muted)" }}>
+        <p style={{ fontSize: FS.sm, color: "var(--text-muted)" }}>
           Mỗi thì có 6 levels (L1–L6) từ nhận diện đến luyện đề TOEIC thật · Unlock bằng cách pass level trước ≥ 80%.
         </p>
       </div>
@@ -83,7 +84,7 @@ export default async function Part5TenseListPage() {
           { label: "L3–L4", color: "#d97706", bg: "#fef9c3", text: "Medium — unlock khi L2 ≥ 80%" },
           { label: "L5–L6", color: "#dc2626", bg: "#fee2e2", text: "Hard — unlock khi L4 ≥ 80%" },
         ].map((d) => (
-          <div key={d.label} style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.72rem" }}>
+          <div key={d.label} style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: FS.xs }}>
             <span style={{ display: "inline-block", padding: "1px 7px", borderRadius: 99, background: d.bg, color: d.color, fontWeight: 700 }}>
               {d.label}
             </span>
@@ -170,10 +171,10 @@ function TenseCardContent({
       {/* Top row: name + importance stars */}
       <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "0.5rem" }}>
         <div>
-          <div style={{ fontWeight: 700, fontSize: "0.95rem", color: "var(--text-primary)", lineHeight: 1.2 }}>
+          <div style={{ fontWeight: 700, fontSize: FS.md, color: "var(--text-primary)", lineHeight: 1.2 }}>
             {tense.name}
           </div>
-          <div style={{ fontSize: "0.72rem", color: "var(--text-muted)", marginTop: "0.15rem" }}>
+          <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginTop: "0.15rem" }}>
             {tense.nameEn}
           </div>
         </div>
@@ -192,7 +193,7 @@ function TenseCardContent({
       {/* Formula */}
       <div style={{ display: "flex", flexWrap: "wrap", gap: "0.35rem" }}>
         <span style={{
-          fontSize: "0.72rem",
+          fontSize: FS.xs,
           fontFamily: "var(--font-mono, monospace)",
           background: "var(--bg-secondary)",
           border: "1px solid var(--border)",
@@ -204,7 +205,7 @@ function TenseCardContent({
         </span>
         {tense.formulaPassive && (
           <span style={{
-            fontSize: "0.72rem",
+            fontSize: FS.xs,
             fontFamily: "var(--font-mono, monospace)",
             background: "#f0f9ff",
             border: "1px solid #bae6fd",
@@ -220,7 +221,7 @@ function TenseCardContent({
       {/* Progress or coming soon */}
       {comingSoon ? (
         <span style={{
-          fontSize: "0.6rem",
+          fontSize: FS.xs,
           fontWeight: 700,
           letterSpacing: "0.08em",
           textTransform: "uppercase",
@@ -235,7 +236,7 @@ function TenseCardContent({
         </span>
       ) : (
         <div>
-          <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.68rem", color: "var(--text-muted)", marginBottom: "0.3rem" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", fontSize: FS.xs, color: "var(--text-muted)", marginBottom: "0.3rem" }}>
             <span>{passedLevels}/{TOTAL_LEVELS} levels passed</span>
             <span>{pct}%</span>
           </div>

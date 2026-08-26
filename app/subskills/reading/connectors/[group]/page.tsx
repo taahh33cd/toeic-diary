@@ -5,6 +5,7 @@ import { Lock, CheckCircle2, Star } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { getGroupConfig, buildLevelMeta, isLevelUnlocked } from "@/lib/subskills/connectors";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 import {
   groupToPartKey,
   CONN_KIND_LABEL,
@@ -76,16 +77,16 @@ export default async function ConnectorGroupPage({ params }: Props) {
   return (
     <div
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 900,
+        padding: `${PAD_Y} ${PAD_X}`,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         boxSizing: "border-box",
       }}
     >
       {/* Breadcrumb */}
-      <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "1.5rem", fontSize: "0.75rem", color: "var(--text-muted)", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "1.5rem", fontSize: FS.xs, color: "var(--text-muted)", flexWrap: "wrap" }}>
         <Link href="/subskills" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Subskills</Link>
         <span>/</span>
         <Link href="/subskills/reading" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Reading</Link>
@@ -108,7 +109,7 @@ export default async function ConnectorGroupPage({ params }: Props) {
         <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "1rem", flexWrap: "wrap" }}>
           <div style={{ flex: 1, minWidth: 240 }}>
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.3rem" }}>
-              <h1 style={{ fontSize: "1.35rem", fontWeight: 800, color: "var(--text-primary)" }}>
+              <h1 style={{ fontSize: FS.lg, fontWeight: 800, color: "var(--text-primary)" }}>
                 {config.name}
               </h1>
               <div style={{ display: "flex", gap: "2px" }}>
@@ -117,24 +118,24 @@ export default async function ConnectorGroupPage({ params }: Props) {
                 ))}
               </div>
             </div>
-            <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.6 }}>
+            <div style={{ fontSize: FS.sm, color: "var(--text-muted)", lineHeight: 1.6 }}>
               {config.nameEn} · {config.description}
             </div>
           </div>
 
           <div style={{ textAlign: "center", flexShrink: 0 }}>
-            <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--text-primary)", lineHeight: 1 }}>
+            <div style={{ fontSize: FS.xl, fontWeight: 800, color: "var(--text-primary)", lineHeight: 1 }}>
               {LEVEL_SLUGS.filter((l) => best[l]?.passed).length}
-              <span style={{ fontSize: "1rem", color: "var(--text-muted)", fontWeight: 500 }}>/6</span>
+              <span style={{ fontSize: FS.md, color: "var(--text-muted)", fontWeight: 500 }}>/6</span>
             </div>
-            <div style={{ fontSize: "0.68rem", color: "var(--text-muted)", marginTop: "0.2rem" }}>levels passed</div>
+            <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginTop: "0.2rem" }}>levels passed</div>
           </div>
         </div>
       </div>
 
       {/* Theory table — connectors grouped by grammatical kind */}
       <div style={{ marginBottom: "1.75rem" }}>
-        <h2 style={{ fontSize: "0.9rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.75rem" }}>
+        <h2 style={{ fontSize: FS.sm, fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.75rem" }}>
           Bảng từ nối của nhóm này
         </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
@@ -156,7 +157,7 @@ export default async function ConnectorGroupPage({ params }: Props) {
                 <div style={{
                   background: col.bg,
                   padding: "0.5rem 0.9rem",
-                  fontSize: "0.72rem",
+                  fontSize: FS.xs,
                   fontWeight: 700,
                   color: col.color,
                 }}>
@@ -166,16 +167,16 @@ export default async function ConnectorGroupPage({ params }: Props) {
                   {items.map((c) => (
                     <div key={c.word} style={{ display: "flex", gap: "0.6rem", alignItems: "baseline", flexWrap: "wrap" }}>
                       <span style={{
-                        fontSize: "0.82rem",
+                        fontSize: FS.sm,
                         fontWeight: 700,
                         color: col.color,
                         minWidth: 132,
                       }}>
                         {c.word}
                       </span>
-                      <span style={{ fontSize: "0.8rem", color: "var(--text-primary)" }}>{c.vi}</span>
+                      <span style={{ fontSize: FS.sm, color: "var(--text-primary)" }}>{c.vi}</span>
                       {c.note && (
-                        <span style={{ fontSize: "0.72rem", color: "var(--text-muted)", fontStyle: "italic" }}>
+                        <span style={{ fontSize: FS.xs, color: "var(--text-muted)", fontStyle: "italic" }}>
                           — {c.note}
                         </span>
                       )}
@@ -189,11 +190,11 @@ export default async function ConnectorGroupPage({ params }: Props) {
       </div>
 
       {/* Level cards */}
-      <h2 style={{ fontSize: "0.9rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.75rem" }}>
+      <h2 style={{ fontSize: FS.sm, fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.75rem" }}>
         6 Levels
       </h2>
       {!hasContent ? (
-        <div style={{ textAlign: "center", padding: "2.5rem 1rem", color: "var(--text-muted)", fontSize: "0.875rem", border: "1px dashed var(--border)", borderRadius: 10 }}>
+        <div style={{ textAlign: "center", padding: "2.5rem 1rem", color: "var(--text-muted)", fontSize: FS.sm, border: "1px dashed var(--border)", borderRadius: 10 }}>
           Nội dung bài tập đang được soạn thảo. Bảng lý thuyết phía trên đã dùng được.
         </div>
       ) : (
@@ -257,7 +258,7 @@ function LevelCard({
         alignItems: "center",
         justifyContent: "center",
         fontWeight: 800,
-        fontSize: "0.85rem",
+        fontSize: FS.sm,
         flexShrink: 0,
       }}>
         {meta.level}
@@ -265,11 +266,11 @@ function LevelCard({
 
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap" }}>
-          <span style={{ fontWeight: 700, fontSize: "0.9rem", color: "var(--text-primary)" }}>
+          <span style={{ fontWeight: 700, fontSize: FS.sm, color: "var(--text-primary)" }}>
             {meta.name}
           </span>
           <span style={{
-            fontSize: "0.58rem",
+            fontSize: FS.xs,
             fontWeight: 700,
             padding: "1px 6px",
             borderRadius: 99,
@@ -281,12 +282,12 @@ function LevelCard({
             {diff.label}
           </span>
           {comingSoon && (
-            <span style={{ fontSize: "0.58rem", fontWeight: 700, padding: "1px 6px", borderRadius: 99, background: "#f3f4f6", color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+            <span style={{ fontSize: FS.xs, fontWeight: 700, padding: "1px 6px", borderRadius: 99, background: "#f3f4f6", color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.06em" }}>
               Sắp có
             </span>
           )}
         </div>
-        <div style={{ fontSize: "0.75rem", color: "var(--text-muted)", marginTop: "0.15rem" }}>
+        <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginTop: "0.15rem" }}>
           {meta.description}
         </div>
       </div>
@@ -297,13 +298,13 @@ function LevelCard({
         ) : best ? (
           <div>
             {best.passed && <CheckCircle2 size={14} style={{ color: "#16a34a", marginBottom: 2 }} />}
-            <div style={{ fontSize: "1.1rem", fontWeight: 800, color: best.passed ? "#16a34a" : "var(--text-primary)", lineHeight: 1 }}>
+            <div style={{ fontSize: FS.md, fontWeight: 800, color: best.passed ? "#16a34a" : "var(--text-primary)", lineHeight: 1 }}>
               {best.score}%
             </div>
-            <div style={{ fontSize: "0.6rem", color: "var(--text-muted)" }}>best</div>
+            <div style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>best</div>
           </div>
         ) : (
-          <span style={{ fontSize: "0.78rem", color: "var(--accent-primary)", fontWeight: 600 }}>Bắt đầu →</span>
+          <span style={{ fontSize: FS.xs, color: "var(--accent-primary)", fontWeight: 600 }}>Bắt đầu →</span>
         )}
       </div>
     </div>

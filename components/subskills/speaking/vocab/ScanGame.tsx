@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import { FS } from "@/lib/ui/scale";
 import {
   type ScanPoolId, type VocabWord,
   SCAN_POOLS, getScanPool, scanPictures, matchTypedWord, seededShuffle, SCAN_SECONDS,
@@ -132,11 +133,11 @@ export default function ScanGame({ pool, userId, onExit }: Props) {
     <div>
       <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", flexWrap: "wrap", marginBottom: "0.9rem" }}>
         <button onClick={onExit} style={btnGhost}>← Thoát</button>
-        <span style={{ fontSize: "0.82rem", color: "var(--text-muted)" }}>
+        <span style={{ fontSize: FS.sm, color: "var(--text-muted)" }}>
           {meta.icon} Quét ảnh · {meta.label} · Lượt {round + 1}
         </span>
         {best > 0 && (
-          <span style={{ marginLeft: "auto", fontSize: "0.78rem", color: AMBER, fontWeight: 700 }}>
+          <span style={{ marginLeft: "auto", fontSize: FS.xs, color: AMBER, fontWeight: 700 }}>
             ★ Kỷ lục {best} từ
           </span>
         )}
@@ -157,23 +158,23 @@ export default function ScanGame({ pool, userId, onExit }: Props) {
           <img src={current.item.image} alt="" style={{ maxWidth: "100%", height: "auto", display: "block", filter: phase === "ready" ? "blur(14px)" : "none" }} />
           {phase === "ready" && (
             <div style={overlay}>
-              <div style={{ fontSize: "2.6rem", marginBottom: "0.4rem" }}>{meta.icon}</div>
-              <div style={{ fontSize: "1.05rem", fontWeight: 800, color: "#fff", marginBottom: "0.3rem", textAlign: "center", padding: "0 1rem" }}>
+              <div style={{ fontSize: FS.xl, marginBottom: "0.4rem" }}>{meta.icon}</div>
+              <div style={{ fontSize: FS.md, fontWeight: 800, color: "#fff", marginBottom: "0.3rem", textAlign: "center", padding: "0 1rem" }}>
                 {meta.ask}
               </div>
-              <div style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.8)", marginBottom: "1rem" }}>
+              <div style={{ fontSize: FS.sm, color: "rgba(255,255,255,0.8)", marginBottom: "1rem" }}>
                 {SCAN_SECONDS} giây · có {total} từ trong ảnh này
               </div>
               <button onClick={start} style={btnPrimaryBig}>Bắt đầu →</button>
             </div>
           )}
           {phase === "playing" && (
-            <div style={{ position: "absolute", top: 10, right: 12, background: "rgba(0,0,0,0.55)", color: "#fff", padding: "3px 12px", borderRadius: 999, fontSize: "1.05rem", fontWeight: 800, fontVariantNumeric: "tabular-nums" }}>
+            <div style={{ position: "absolute", top: 10, right: 12, background: "rgba(0,0,0,0.55)", color: "#fff", padding: "3px 12px", borderRadius: 999, fontSize: FS.md, fontWeight: 800, fontVariantNumeric: "tabular-nums" }}>
               {Math.max(0, left)}s
             </div>
           )}
           {phase === "playing" && combo >= 3 && (
-            <div style={{ position: "absolute", top: 10, left: 12, background: AMBER, color: "#000", padding: "3px 12px", borderRadius: 999, fontSize: "0.85rem", fontWeight: 800 }}>
+            <div style={{ position: "absolute", top: 10, left: 12, background: AMBER, color: "#000", padding: "3px 12px", borderRadius: 999, fontSize: FS.sm, fontWeight: 800 }}>
               🔥 {combo} liên tiếp
             </div>
           )}
@@ -191,7 +192,7 @@ export default function ScanGame({ pool, userId, onExit }: Props) {
                   placeholder="Gõ một từ rồi Enter…"
                   autoComplete="off"
                   style={{
-                    flex: 1, minWidth: 0, padding: "0.65rem 0.9rem", borderRadius: 8, fontSize: "1.05rem",
+                    flex: 1, minWidth: 0, padding: "0.65rem 0.9rem", borderRadius: 8, fontSize: FS.md,
                     background: "var(--bg-elevated)", color: "var(--text-primary)",
                     border: `2px solid ${flash === "hit" ? GREEN : flash === "miss" ? RED : flash === "dupe" ? AMBER : "var(--border)"}`,
                     transition: "border-color 0.15s",
@@ -204,7 +205,7 @@ export default function ScanGame({ pool, userId, onExit }: Props) {
                 <div style={{ flex: 1, height: 6, borderRadius: 999, background: "var(--border)", overflow: "hidden" }}>
                   <div style={{ height: "100%", width: `${pct}%`, background: GREEN, transition: "width 0.25s" }} />
                 </div>
-                <span style={{ fontSize: "0.8rem", fontWeight: 700, color: "var(--text-primary)", fontVariantNumeric: "tabular-nums" }}>
+                <span style={{ fontSize: FS.sm, fontWeight: 700, color: "var(--text-primary)", fontVariantNumeric: "tabular-nums" }}>
                   {found.length}/{total}
                 </span>
               </div>
@@ -219,11 +220,11 @@ export default function ScanGame({ pool, userId, onExit }: Props) {
 
           {phase === "over" && (
             <div style={{ textAlign: "center" }}>
-              <div style={{ fontSize: "2.4rem" }}>{pct >= 80 ? "🏆" : pct >= 50 ? "🎉" : "💪"}</div>
-              <div style={{ fontSize: "1.6rem", fontWeight: 800, color: pct >= 50 ? GREEN : "var(--text-primary)" }}>
+              <div style={{ fontSize: FS.xl }}>{pct >= 80 ? "🏆" : pct >= 50 ? "🎉" : "💪"}</div>
+              <div style={{ fontSize: FS.lg, fontWeight: 800, color: pct >= 50 ? GREEN : "var(--text-primary)" }}>
                 {found.length}/{total}
               </div>
-              <p style={{ fontSize: "0.86rem", color: "var(--text-muted)", margin: "0.3rem 0 1rem" }}>
+              <p style={{ fontSize: FS.sm, color: "var(--text-muted)", margin: "0.3rem 0 1rem" }}>
                 {pct >= 80 ? "Phản xạ rất nhanh!" : pct >= 50 ? "Khá ổn — làm lại sẽ nhanh hơn." : "Ôn lại thẻ rồi quay lại nhé."}
               </p>
 
@@ -235,12 +236,12 @@ export default function ScanGame({ pool, userId, onExit }: Props) {
 
               {missed.length > 0 && (
                 <div style={{ textAlign: "left", background: "rgba(239,68,68,0.06)", border: "1px solid rgba(239,68,68,0.25)", borderRadius: 8, padding: "0.8rem 1rem", marginBottom: "1rem" }}>
-                  <div style={{ fontSize: "0.76rem", fontWeight: 700, color: RED, marginBottom: "0.45rem" }}>
+                  <div style={{ fontSize: FS.xs, fontWeight: 700, color: RED, marginBottom: "0.45rem" }}>
                     Bỏ sót {missed.length} từ
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
                     {missed.map((w) => (
-                      <div key={w.id} style={{ fontSize: "0.9rem", color: "var(--text-primary)" }}>
+                      <div key={w.id} style={{ fontSize: FS.sm, color: "var(--text-primary)" }}>
                         <b>{w.en}</b> <span style={{ color: "var(--text-muted)" }}>— {w.vi}</span>
                       </div>
                     ))}
@@ -267,15 +268,15 @@ const overlay: React.CSSProperties = {
 };
 const btnPrimary: React.CSSProperties = {
   padding: "0.6rem 1.3rem", borderRadius: 8, border: "none", background: "var(--accent-primary)",
-  color: "#fff", fontSize: "0.92rem", fontWeight: 700, cursor: "pointer",
+  color: "#fff", fontSize: FS.md, fontWeight: 700, cursor: "pointer",
 };
-const btnPrimaryBig: React.CSSProperties = { ...btnPrimary, padding: "0.7rem 2rem", fontSize: "1rem" };
+const btnPrimaryBig: React.CSSProperties = { ...btnPrimary, padding: "0.7rem 2rem", fontSize: FS.md };
 const btnGhost: React.CSSProperties = {
   padding: "0.55rem 1.1rem", borderRadius: 8, border: "1.5px solid var(--border)",
-  background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: "0.88rem",
+  background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: FS.sm,
   fontWeight: 600, cursor: "pointer",
 };
 const chipGreen: React.CSSProperties = {
-  fontSize: "0.86rem", padding: "4px 10px", borderRadius: 999, fontWeight: 600,
+  fontSize: FS.sm, padding: "4px 10px", borderRadius: 999, fontWeight: 600,
   background: "rgba(34,197,94,0.14)", border: "1px solid rgba(34,197,94,0.42)", color: GREEN,
 };

@@ -6,6 +6,7 @@ import { prisma } from "@/lib/db/prisma";
 import { getGroupConfig, isLevelUnlocked } from "@/lib/subskills/connectors";
 import { groupToPartKey, type LevelSlug, type BestScore } from "@/lib/subskills/connectors/types";
 import { ConnectorsLevelClient } from "@/components/subskills/reading/ConnectorsLevelClient";
+import { FILL_SCREEN, FS } from "@/lib/ui/scale";
 
 type Props = { params: Promise<{ group: string; level: string }> };
 
@@ -108,12 +109,12 @@ function Notice({ emoji, message, group, groupName }: {
   groupName: string;
 }) {
   return (
-    <div style={{ minHeight: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "3rem 1.5rem", gap: "1rem" }}>
-      <div style={{ fontSize: "2rem" }}>{emoji}</div>
-      <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", textAlign: "center" }}>{message}</p>
+    <div style={{ ...FILL_SCREEN, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "3rem 1.5rem", gap: "1rem" }}>
+      <div style={{ fontSize: FS.xl }}>{emoji}</div>
+      <p style={{ fontSize: FS.sm, color: "var(--text-muted)", textAlign: "center" }}>{message}</p>
       <Link
         href={`/subskills/reading/connectors/${group}`}
-        style={{ fontSize: "0.82rem", color: "var(--accent-primary)", textDecoration: "none", fontWeight: 600 }}
+        style={{ fontSize: FS.sm, color: "var(--accent-primary)", textDecoration: "none", fontWeight: 600 }}
       >
         ← Quay lại {groupName}
       </Link>

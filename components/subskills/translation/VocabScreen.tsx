@@ -20,6 +20,7 @@ import type {
 } from "@/lib/subskills/translation/types";
 import { VOCAB_KIND_LABELS, vocabKey } from "@/lib/subskills/translation/types";
 import { FS, CONTAINER, PAD_X, FILL_SCREEN } from "@/components/grammar/scale";
+import { CONTAINER_MAX } from "@/lib/ui/scale";
 
 const GREEN = "#16a34a";
 const RED = "#ef4444";
@@ -700,7 +701,7 @@ export function VocabScreen({
   return (
     <div style={{ ...CONTAINER, ...FILL_SCREEN, background: "var(--bg-primary)", fontFamily: "var(--font-sans)" }}>
       <div style={{ flex: 1, padding: `clamp(1.25rem, 3vw, 2.25rem) ${PAD_X}` }}>
-      <div style={{ maxWidth: 720, margin: "0 auto" }}>
+      <div style={{ maxWidth: CONTAINER_MAX, margin: "0 auto" }}>
         <p style={{ fontSize: FS.xs, color: "var(--text-muted)", margin: "0 0 0.3rem" }}>
           {topicName} · {levelName}
         </p>

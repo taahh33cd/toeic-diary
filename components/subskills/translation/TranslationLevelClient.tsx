@@ -27,6 +27,7 @@ import { ERROR_TAG_LABELS } from "@/lib/subskills/translation/types";
 import type { VocabEntry, VocabProgressMap } from "@/lib/subskills/translation/types";
 import { VocabScreen } from "./VocabScreen";
 import { FS, CONTAINER, PAD_X, FILL_SCREEN } from "@/components/grammar/scale";
+import { CONTAINER_MAX } from "@/lib/ui/scale";
 
 interface Props {
   topicSlug: string;
@@ -1231,7 +1232,7 @@ export function TranslationLevelClient({
   return (
     <div style={{ ...CONTAINER, ...FILL_SCREEN, background: "var(--bg-primary)", fontFamily: "var(--font-sans)" }}>
       <div style={{ flex: 1, padding: `clamp(1.25rem, 3vw, 2.25rem) ${PAD_X}` }}>
-      <div style={{ maxWidth: 720, margin: "0 auto" }}>
+      <div style={{ maxWidth: CONTAINER_MAX, margin: "0 auto" }}>
         {/* Header */}
         <Link
           href={`/subskills/translation/${topicSlug}`}

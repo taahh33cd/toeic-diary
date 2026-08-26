@@ -4,6 +4,7 @@ import { useState, useCallback, useEffect } from "react";
 import Link from "next/link";
 import { CheckCircle2, XCircle, ChevronLeft, ChevronRight, ArrowLeft, RotateCcw } from "lucide-react";
 import type { GrammarQuestion, GrammarMCQ, GrammarHighlight, LevelSlug, BestScore } from "@/lib/subskills/reading/types";
+import { CONTAINER_MAX, FILL_SCREEN, FS } from "@/lib/ui/scale";
 
 // ── Props ──────────────────────────────────────────────────────────────────────
 
@@ -88,7 +89,7 @@ function MCQQuestion({
       {/* Grammar hint */}
       {showGrammarHint && q.grammarHint && (
         <div style={{
-          fontSize: "0.72rem",
+          fontSize: FS.xs,
           background: "rgba(1,62,55,0.06)",
           border: "1px solid rgba(1,62,55,0.15)",
           borderRadius: 6,
@@ -103,7 +104,7 @@ function MCQQuestion({
 
       {/* Sentence */}
       <p style={{
-        fontSize: "1rem",
+        fontSize: FS.md,
         lineHeight: 1.8,
         color: "var(--text-primary)",
         marginBottom: "0.4rem",
@@ -115,7 +116,7 @@ function MCQQuestion({
       {/* Translation */}
       {showTranslation && q.translation && (
         <p style={{
-          fontSize: "0.9rem",
+          fontSize: FS.sm,
           color: "var(--text-muted)",
           fontStyle: "italic",
           marginBottom: "1.25rem",
@@ -127,7 +128,7 @@ function MCQQuestion({
       )}
 
       {/* Question text */}
-      <p style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--text-secondary)", marginBottom: "0.75rem" }}>
+      <p style={{ fontSize: FS.sm, fontWeight: 600, color: "var(--text-secondary)", marginBottom: "0.75rem" }}>
         {q.question}
       </p>
 
@@ -173,14 +174,14 @@ function MCQQuestion({
                 alignItems: "center",
                 justifyContent: "center",
                 fontWeight: 700,
-                fontSize: "0.78rem",
+                fontSize: FS.xs,
                 flexShrink: 0,
                 background: correct ? "#16a34a" : wrong ? "#ef4444" : selected ? "var(--accent-primary)" : "var(--bg-secondary)",
                 color: (correct || wrong || selected) ? "#fff" : "var(--text-muted)",
               }}>
                 {key}
               </span>
-              <span style={{ fontSize: "0.88rem", color, fontWeight: selected || correct ? 600 : 400 }}>
+              <span style={{ fontSize: FS.sm, color, fontWeight: selected || correct ? 600 : 400 }}>
                 {q.options[key]}
               </span>
               {correct && <CheckCircle2 size={15} style={{ color: "#16a34a", marginLeft: "auto", flexShrink: 0 }} />}
@@ -199,14 +200,14 @@ function MCQQuestion({
           background: "var(--bg-secondary)",
           borderLeft: `3px solid ${answer === q.correct ? "#16a34a" : "#ef4444"}`,
         }}>
-          <div style={{ fontSize: "0.7rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.35rem" }}>
+          <div style={{ fontSize: FS.xs, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.35rem" }}>
             Giải thích
           </div>
-          <p style={{ fontSize: "0.82rem", color: "var(--text-primary)", lineHeight: 1.6, margin: 0 }}>
+          <p style={{ fontSize: FS.sm, color: "var(--text-primary)", lineHeight: 1.6, margin: 0 }}>
             {q.explanation}
           </p>
           {q.explanationVi && (
-            <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", fontStyle: "italic", margin: "0.4rem 0 0" }}>
+            <p style={{ fontSize: FS.xs, color: "var(--text-muted)", fontStyle: "italic", margin: "0.4rem 0 0" }}>
               {q.explanationVi}
             </p>
           )}
@@ -235,13 +236,13 @@ function HighlightQuestion({
 
   return (
     <div>
-      <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", marginBottom: "0.75rem", fontWeight: 600 }}>
+      <p style={{ fontSize: FS.sm, color: "var(--text-secondary)", marginBottom: "0.75rem", fontWeight: 600 }}>
         {q.instruction}
       </p>
 
       {/* Translation */}
       <p style={{
-        fontSize: "0.9rem",
+        fontSize: FS.sm,
         color: "var(--text-muted)",
         fontStyle: "italic",
         marginBottom: "1rem",
@@ -287,7 +288,7 @@ function HighlightQuestion({
                 border,
                 background: bg,
                 color,
-                fontSize: "0.9rem",
+                fontSize: FS.sm,
                 fontWeight: isSelected || (answered && isCorrectWord) ? 600 : 400,
                 cursor,
                 transition: "all 0.1s",
@@ -308,17 +309,17 @@ function HighlightQuestion({
           background: "var(--bg-secondary)",
           borderLeft: `3px solid ${scoreHighlight(q, selected) ? "#16a34a" : "#ef4444"}`,
         }}>
-          <div style={{ fontSize: "0.7rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.35rem" }}>
+          <div style={{ fontSize: FS.xs, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.35rem" }}>
             Dấu hiệu đúng
           </div>
-          <div style={{ fontSize: "0.82rem", color: "var(--text-primary)", marginBottom: "0.35rem" }}>
+          <div style={{ fontSize: FS.sm, color: "var(--text-primary)", marginBottom: "0.35rem" }}>
             {q.correctWords.map((w) => (
-              <span key={w} style={{ display: "inline-block", margin: "2px", padding: "2px 8px", borderRadius: 99, background: "#dcfce7", border: "1px solid #86efac", color: "#15803d", fontWeight: 600, fontSize: "0.78rem" }}>
+              <span key={w} style={{ display: "inline-block", margin: "2px", padding: "2px 8px", borderRadius: 99, background: "#dcfce7", border: "1px solid #86efac", color: "#15803d", fontWeight: 600, fontSize: FS.xs }}>
                 {w}
               </span>
             ))}
           </div>
-          <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", margin: "0.4rem 0 0", lineHeight: 1.6 }}>
+          <p style={{ fontSize: FS.sm, color: "var(--text-muted)", margin: "0.4rem 0 0", lineHeight: 1.6 }}>
             {q.explanation}
           </p>
         </div>
@@ -428,7 +429,7 @@ export function Part5LevelClient({
 
     return (
       <div style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -447,10 +448,10 @@ export function Part5LevelClient({
           boxShadow: "var(--shadow-md)",
         }}>
           {/* Score */}
-          <div style={{ fontSize: "3.5rem", fontWeight: 800, color: scoreColor, lineHeight: 1, marginBottom: "0.25rem" }}>
+          <div style={{ fontSize: FS.xl, fontWeight: 800, color: scoreColor, lineHeight: 1, marginBottom: "0.25rem" }}>
             {score}%
           </div>
-          <div style={{ fontSize: "0.82rem", color: "var(--text-muted)", marginBottom: "1.25rem" }}>
+          <div style={{ fontSize: FS.sm, color: "var(--text-muted)", marginBottom: "1.25rem" }}>
             {correctCount}/{total} câu đúng &nbsp;·&nbsp; {levelName}
           </div>
 
@@ -464,7 +465,7 @@ export function Part5LevelClient({
             background: passed ? "#dcfce7" : "#fee2e2",
             color: passed ? "#15803d" : "#b91c1c",
             fontWeight: 700,
-            fontSize: "0.82rem",
+            fontSize: FS.sm,
             marginBottom: "1.5rem",
           }}>
             {passed ? <CheckCircle2 size={15} /> : <XCircle size={15} />}
@@ -478,7 +479,7 @@ export function Part5LevelClient({
 
           {/* Best score note */}
           {savedBest && savedBest.score > score && (
-            <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", marginBottom: "1rem" }}>
+            <p style={{ fontSize: FS.xs, color: "var(--text-muted)", marginBottom: "1rem" }}>
               Best trước: {savedBest.score}% · điểm lần này không cao hơn
             </p>
           )}
@@ -498,7 +499,7 @@ export function Part5LevelClient({
                 background: "var(--accent-primary)",
                 color: "#fff",
                 fontWeight: 700,
-                fontSize: "0.88rem",
+                fontSize: FS.sm,
                 cursor: "pointer",
                 fontFamily: "var(--font-sans)",
               }}
@@ -518,7 +519,7 @@ export function Part5LevelClient({
                 background: "transparent",
                 color: "var(--text-secondary)",
                 fontWeight: 500,
-                fontSize: "0.85rem",
+                fontSize: FS.sm,
                 textDecoration: "none",
               }}
             >
@@ -541,7 +542,7 @@ export function Part5LevelClient({
 
   return (
     <div style={{
-      minHeight: "100%",
+      ...FILL_SCREEN,
       background: "var(--bg-primary)",
       display: "flex",
       flexDirection: "column",
@@ -561,17 +562,17 @@ export function Part5LevelClient({
       }}>
         <Link
           href={`/subskills/reading/part5/${tenseSlug}`}
-          style={{ display: "flex", alignItems: "center", gap: "0.35rem", color: "rgba(255,255,255,0.75)", fontSize: "0.78rem", textDecoration: "none", whiteSpace: "nowrap" }}
+          style={{ display: "flex", alignItems: "center", gap: "0.35rem", color: "rgba(255,255,255,0.75)", fontSize: FS.xs, textDecoration: "none", whiteSpace: "nowrap" }}
         >
           <ArrowLeft size={13} /> {tenseName}
         </Link>
 
-        <span style={{ fontSize: "0.78rem", fontWeight: 600, color: "#FFD66B", whiteSpace: "nowrap" }}>
+        <span style={{ fontSize: FS.xs, fontWeight: 600, color: "#FFD66B", whiteSpace: "nowrap" }}>
           {levelName}
         </span>
 
         <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-          <span style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.75)", whiteSpace: "nowrap" }}>
+          <span style={{ fontSize: FS.xs, color: "rgba(255,255,255,0.75)", whiteSpace: "nowrap" }}>
             {confirmedCount}/{total} đã trả lời
           </span>
           <button
@@ -583,7 +584,7 @@ export function Part5LevelClient({
               border: "1.5px solid rgba(255,239,179,0.5)",
               background: allAnswered ? "rgba(255,255,255,0.15)" : "transparent",
               color: allAnswered ? "#FFD66B" : "rgba(255,239,179,0.35)",
-              fontSize: "0.75rem",
+              fontSize: FS.xs,
               fontWeight: 700,
               cursor: allAnswered && !saving ? "pointer" : "not-allowed",
               whiteSpace: "nowrap",
@@ -601,7 +602,7 @@ export function Part5LevelClient({
           background: "var(--bg-secondary)",
           borderBottom: "1px solid var(--border)",
           padding: "0.6rem 1.5rem",
-          fontSize: "0.72rem",
+          fontSize: FS.xs,
           color: "var(--text-muted)",
         }}>
           {levelInstruction}
@@ -611,7 +612,7 @@ export function Part5LevelClient({
       {/* Question area */}
       <div style={{
         flex: 1,
-        maxWidth: 720,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         width: "100%",
         padding: "1.75rem 1.5rem 1rem",
@@ -619,10 +620,10 @@ export function Part5LevelClient({
       }}>
         {/* Question number */}
         <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "1.25rem" }}>
-          <span style={{ fontSize: "1.5rem", fontWeight: 800, color: "var(--accent-primary)", lineHeight: 1 }}>
+          <span style={{ fontSize: FS.lg, fontWeight: 800, color: "var(--accent-primary)", lineHeight: 1 }}>
             {currentIdx + 1}.
           </span>
-          <span style={{ fontSize: "0.7rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-muted)" }}>
+          <span style={{ fontSize: FS.xs, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-muted)" }}>
             {q.kind === "highlight" ? "Time Markers" : q.kind === "mcq" ? "" : ""}
           </span>
         </div>
@@ -657,7 +658,7 @@ export function Part5LevelClient({
                   background: "var(--accent-primary)",
                   color: "#fff",
                   fontWeight: 700,
-                  fontSize: "0.82rem",
+                  fontSize: FS.sm,
                   cursor: "pointer",
                   fontFamily: "var(--font-sans)",
                 }}
@@ -691,7 +692,7 @@ export function Part5LevelClient({
             border: "1px solid var(--border)",
             background: "transparent",
             color: currentIdx === 0 ? "var(--text-muted)" : "var(--text-secondary)",
-            fontSize: "0.75rem",
+            fontSize: FS.xs,
             fontWeight: 600,
             cursor: currentIdx === 0 ? "not-allowed" : "pointer",
             whiteSpace: "nowrap",
@@ -716,7 +717,7 @@ export function Part5LevelClient({
                   height: 26,
                   borderRadius: 3,
                   border: "1px solid var(--border)",
-                  fontSize: "0.6rem",
+                  fontSize: FS.xs,
                   fontWeight: 700,
                   background: isActive
                     ? "var(--accent-primary)"
@@ -747,7 +748,7 @@ export function Part5LevelClient({
             border: "1px solid var(--border)",
             background: "transparent",
             color: currentIdx === total - 1 ? "var(--text-muted)" : "var(--text-secondary)",
-            fontSize: "0.75rem",
+            fontSize: FS.xs,
             fontWeight: 600,
             cursor: currentIdx === total - 1 ? "not-allowed" : "pointer",
             whiteSpace: "nowrap",

@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { UserAvatarMenu } from "@/components/layout/UserAvatarMenu";
 import { useUIStore } from "@/stores/uiStore";
+import { CONTAINER_MAX, FS } from "@/lib/ui/scale";
 
 const TOPBAR_H    = 64;
 const BG          = "#1E5F8E";
@@ -77,7 +78,7 @@ export function SubskillsHeader({
     >
       <div
         style={{
-          maxWidth: 1400,
+          maxWidth: CONTAINER_MAX,
           margin: "0 auto",
           height: TOPBAR_H,
           display: "flex",
@@ -90,7 +91,7 @@ export function SubskillsHeader({
         <Link
           href="/subskills"
           style={{
-            fontSize: "1rem",
+            fontSize: FS.md,
             fontWeight: 700,
             color: TEXT_ACTIVE,
             textDecoration: "none",
@@ -151,7 +152,7 @@ export function SubskillsHeader({
                   padding: "0 0.85rem",
                   paddingBottom: "1px",
                   height: TOPBAR_H,
-                  fontSize: "0.875rem",
+                  fontSize: FS.sm,
                   fontWeight: 500,
                   color: on ? TEXT_ACTIVE : TEXT_INACTIVE,
                   textDecoration: "none",
@@ -186,7 +187,7 @@ export function SubskillsHeader({
                 padding: "0 0.85rem",
                 paddingBottom: "1px",
                 height: TOPBAR_H,
-                fontSize: "0.875rem",
+                fontSize: FS.sm,
                 fontWeight: 500,
                 color: TEXT_EXTERNAL,
                 textDecoration: "none",
@@ -292,7 +293,7 @@ export function SubskillsHeader({
                 gap: "0.55rem",
                 padding: "0.65rem 0.85rem",
                 borderRadius: 6,
-                fontSize: "0.875rem",
+                fontSize: FS.sm,
                 fontWeight: 500,
                 color: TEXT_INACTIVE,
                 background: "transparent",
@@ -315,7 +316,7 @@ export function SubskillsHeader({
                     gap: "0.55rem",
                     padding: "0.65rem 0.85rem",
                     borderRadius: 6,
-                    fontSize: "0.875rem",
+                    fontSize: FS.sm,
                     fontWeight: on ? 600 : 500,
                     color: on ? TEXT_ACTIVE : TEXT_INACTIVE,
                     background: on ? "rgba(255,255,255,0.12)" : "transparent",
@@ -339,7 +340,7 @@ export function SubskillsHeader({
                   gap: "0.55rem",
                   padding: "0.65rem 0.85rem",
                   borderRadius: 6,
-                  fontSize: "0.875rem",
+                  fontSize: FS.sm,
                   color: TEXT_EXTERNAL,
                   textDecoration: "none",
                 }}

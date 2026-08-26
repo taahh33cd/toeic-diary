@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { type VocabWord, UNSPLASH } from "@/lib/subskills/speaking-p2-vocab";
+import { FS } from "@/lib/ui/scale";
 
 const GREEN = "rgb(34,197,94)";
 const AMBER = "rgb(234,179,8)";
@@ -38,11 +39,11 @@ export default function FlashcardDeck({ words, label, onExit, onDone }: Props) {
   if (!card) {
     return (
       <div style={{ textAlign: "center", padding: "2.5rem 1.5rem", border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", background: "var(--bg-secondary)" }}>
-        <div style={{ fontSize: "2.6rem" }}>🎓</div>
-        <div style={{ fontSize: "1.3rem", fontWeight: 800, color: GREEN, marginTop: "0.3rem" }}>
+        <div style={{ fontSize: FS.xl }}>🎓</div>
+        <div style={{ fontSize: FS.lg, fontWeight: 800, color: GREEN, marginTop: "0.3rem" }}>
           Xong {words.length} thẻ!
         </div>
-        <p style={{ fontSize: "0.86rem", color: "var(--text-muted)", margin: "0.4rem 0 1.2rem" }}>
+        <p style={{ fontSize: FS.sm, color: "var(--text-muted)", margin: "0.4rem 0 1.2rem" }}>
           {again > 0 ? `Bạn đã lật lại ${again} lần — giờ thử phản xạ xem nhớ được bao nhiêu.` : "Không phải lật lại lần nào. Sang phần luyện phản xạ thôi!"}
         </p>
         <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap" }}>
@@ -57,8 +58,8 @@ export default function FlashcardDeck({ words, label, onExit, onDone }: Props) {
     <div>
       <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", flexWrap: "wrap", marginBottom: "0.9rem" }}>
         <button onClick={onExit} style={btnGhostSm}>← Thoát</button>
-        <span style={{ fontSize: "0.82rem", color: "var(--text-muted)" }}>Học thẻ · {label}</span>
-        <span style={{ marginLeft: "auto", fontSize: "0.82rem", color: "var(--text-muted)" }}>
+        <span style={{ fontSize: FS.sm, color: "var(--text-muted)" }}>Học thẻ · {label}</span>
+        <span style={{ marginLeft: "auto", fontSize: FS.sm, color: "var(--text-muted)" }}>
           {done}/{words.length} thuộc
         </span>
       </div>
@@ -86,17 +87,17 @@ export default function FlashcardDeck({ words, label, onExit, onDone }: Props) {
         <div style={{ padding: "1.6rem 1.3rem", minHeight: 120, display: "flex", flexDirection: "column", justifyContent: "center", gap: "0.5rem" }}>
           {!flipped ? (
             <>
-              <div style={{ fontSize: "1.5rem", fontWeight: 800, color: "var(--text-primary)" }}>{card.vi}</div>
-              <div style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>Bấm để xem tiếng Anh</div>
+              <div style={{ fontSize: FS.lg, fontWeight: 800, color: "var(--text-primary)" }}>{card.vi}</div>
+              <div style={{ fontSize: FS.sm, color: "var(--text-muted)" }}>Bấm để xem tiếng Anh</div>
             </>
           ) : (
             <>
-              <div style={{ fontSize: "1.7rem", fontWeight: 800, color: "var(--accent-primary)" }}>{card.en}</div>
-              <div style={{ fontSize: "0.92rem", color: "var(--text-secondary)", lineHeight: 1.6, fontStyle: "italic" }}>
+              <div style={{ fontSize: FS.xl, fontWeight: 800, color: "var(--accent-primary)" }}>{card.en}</div>
+              <div style={{ fontSize: FS.md, color: "var(--text-secondary)", lineHeight: 1.6, fontStyle: "italic" }}>
                 “{card.example}”
               </div>
               {card.forms.length > 0 && (
-                <div style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>
+                <div style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>
                   cũng chấp nhận: {card.forms.join(", ")}
                 </div>
               )}
@@ -121,11 +122,11 @@ export default function FlashcardDeck({ words, label, onExit, onDone }: Props) {
 
 const btnPrimary: React.CSSProperties = {
   padding: "0.65rem 1.3rem", borderRadius: 8, border: "none", background: "var(--accent-primary)",
-  color: "#fff", fontSize: "0.92rem", fontWeight: 700, cursor: "pointer",
+  color: "#fff", fontSize: FS.md, fontWeight: 700, cursor: "pointer",
 };
 const btnGhost: React.CSSProperties = {
   padding: "0.65rem 1.2rem", borderRadius: 8, border: "1.5px solid var(--border)",
-  background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: "0.9rem",
+  background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: FS.sm,
   fontWeight: 600, cursor: "pointer",
 };
-const btnGhostSm: React.CSSProperties = { ...btnGhost, padding: "4px 10px", fontSize: "0.75rem", color: "var(--text-muted)" };
+const btnGhostSm: React.CSSProperties = { ...btnGhost, padding: "4px 10px", fontSize: FS.xs, color: "var(--text-muted)" };

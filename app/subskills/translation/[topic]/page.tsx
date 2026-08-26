@@ -6,6 +6,7 @@ import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { getTopicConfig, isLevelUnlocked } from "@/lib/subskills/translation";
 import { topicToPartKey, type BestScore } from "@/lib/subskills/translation/types";
+import { CONTAINER_MAX, FILL_SCREEN, FS } from "@/lib/ui/scale";
 
 type Props = { params: Promise<{ topic: string }> };
 
@@ -48,10 +49,10 @@ export default async function TranslationTopicPage({ params }: Props) {
   return (
     <div
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
         padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.25rem, 5vw, 3rem)",
-        maxWidth: 860,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         boxSizing: "border-box",
       }}
@@ -62,7 +63,7 @@ export default async function TranslationTopicPage({ params }: Props) {
           display: "inline-flex",
           alignItems: "center",
           gap: "0.35rem",
-          fontSize: "0.8rem",
+          fontSize: FS.sm,
           color: "var(--text-muted)",
           textDecoration: "none",
           marginBottom: "1.25rem",
@@ -71,10 +72,10 @@ export default async function TranslationTopicPage({ params }: Props) {
         <ArrowLeft size={14} /> Dịch Anh–Việt
       </Link>
 
-      <h1 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text-primary)", margin: "0 0 0.4rem" }}>
+      <h1 style={{ fontSize: FS.lg, fontWeight: 700, color: "var(--text-primary)", margin: "0 0 0.4rem" }}>
         {config.name}
       </h1>
-      <p style={{ fontSize: "0.87rem", color: "var(--text-muted)", lineHeight: 1.7, margin: "0 0 1.25rem" }}>
+      <p style={{ fontSize: FS.sm, color: "var(--text-muted)", lineHeight: 1.7, margin: "0 0 1.25rem" }}>
         {config.problem}
       </p>
 
@@ -90,12 +91,12 @@ export default async function TranslationTopicPage({ params }: Props) {
       >
         <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", marginBottom: "0.6rem" }}>
           <Sparkles size={15} style={{ color: "var(--accent-primary)" }} />
-          <span style={{ fontSize: "0.82rem", fontWeight: 700, color: "var(--text-primary)" }}>Nguyên tắc</span>
+          <span style={{ fontSize: FS.sm, fontWeight: 700, color: "var(--text-primary)" }}>Nguyên tắc</span>
         </div>
-        <p style={{ fontSize: "0.87rem", color: "var(--text-primary)", lineHeight: 1.7, margin: "0 0 0.9rem" }}>
+        <p style={{ fontSize: FS.sm, color: "var(--text-primary)", lineHeight: 1.7, margin: "0 0 0.9rem" }}>
           {config.principle}
         </p>
-        <div style={{ padding: "0.7rem 0.8rem", borderRadius: 8, background: "var(--bg-secondary)", fontSize: "0.8rem", lineHeight: 1.7 }}>
+        <div style={{ padding: "0.7rem 0.8rem", borderRadius: 8, background: "var(--bg-secondary)", fontSize: FS.sm, lineHeight: 1.7 }}>
           <div style={{ color: "var(--text-secondary)", fontStyle: "italic" }}>{config.sample.en}</div>
           <div style={{ color: "#b91c1c" }}>✗ {config.sample.wrong}</div>
           <div style={{ color: "#15803d" }}>✓ {config.sample.right}</div>
@@ -132,7 +133,7 @@ export default async function TranslationTopicPage({ params }: Props) {
                   alignItems: "center",
                   justifyContent: "center",
                   fontWeight: 800,
-                  fontSize: "0.85rem",
+                  fontSize: FS.sm,
                   background: record?.passed ? "#dcfce7" : "var(--bg-secondary)",
                   color: record?.passed ? "#15803d" : "var(--text-muted)",
                 }}
@@ -142,7 +143,7 @@ export default async function TranslationTopicPage({ params }: Props) {
 
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.45rem", flexWrap: "wrap" }}>
-                  <span style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-primary)" }}>
+                  <span style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)" }}>
                     {level.name}
                   </span>
                   {aiGraded && (
@@ -152,7 +153,7 @@ export default async function TranslationTopicPage({ params }: Props) {
                         borderRadius: 99,
                         background: "rgba(1,62,55,0.08)",
                         color: "var(--accent-primary)",
-                        fontSize: "0.63rem",
+                        fontSize: FS.xs,
                         fontWeight: 700,
                       }}
                     >
@@ -160,7 +161,7 @@ export default async function TranslationTopicPage({ params }: Props) {
                     </span>
                   )}
                 </div>
-                <p style={{ fontSize: "0.79rem", color: "var(--text-muted)", lineHeight: 1.55, margin: "0.2rem 0 0" }}>
+                <p style={{ fontSize: FS.xs, color: "var(--text-muted)", lineHeight: 1.55, margin: "0.2rem 0 0" }}>
                   {level.description}
                 </p>
               </div>
@@ -173,7 +174,7 @@ export default async function TranslationTopicPage({ params }: Props) {
                     {record.passed && <CheckCircle2 size={14} style={{ color: "#16a34a" }} />}
                     <span
                       style={{
-                        fontSize: "0.82rem",
+                        fontSize: FS.sm,
                         fontWeight: 700,
                         color: record.passed ? "#15803d" : "var(--text-muted)",
                       }}
@@ -182,7 +183,7 @@ export default async function TranslationTopicPage({ params }: Props) {
                     </span>
                   </div>
                 ) : (
-                  <span style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>
+                  <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>
                     {level.questions.length} câu
                   </span>
                 )}

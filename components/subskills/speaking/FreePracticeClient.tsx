@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import type { FreeItem, StepLevel } from "@/lib/subskills/speaking-p2-steps";
 import { RecordingPanel } from "@/components/subskills/speaking/RecordingPanel";
+import { FS } from "@/lib/ui/scale";
 
 type Note = { step1: string; step2: string; step3: string };
 type NotesMap = Record<string, Note>;
@@ -99,7 +100,7 @@ export default function FreePracticeClient({ items, initialNotes, userId }: Prop
         <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: "1.1rem" }}>
           {LEVELS.map((l) => (
             <button key={l} onClick={() => setLevel(l)}
-              style={{ padding: "5px 14px", borderRadius: 8, fontSize: "0.82rem", fontWeight: 600, cursor: "pointer",
+              style={{ padding: "5px 14px", borderRadius: 8, fontSize: FS.sm, fontWeight: 600, cursor: "pointer",
                 background: level === l ? "var(--accent-primary)" : "var(--bg-elevated)",
                 color: level === l ? "#fff" : "var(--text-primary)",
                 border: `1.5px solid ${level === l ? "var(--accent-primary)" : "var(--border)"}` }}>
@@ -109,7 +110,7 @@ export default function FreePracticeClient({ items, initialNotes, userId }: Prop
         </div>
 
         {!userId && (
-          <p style={{ fontSize: "0.83rem", color: "rgb(234,179,8)", background: "rgba(234,179,8,0.1)", border: "1px solid rgba(234,179,8,0.3)", borderRadius: 8, padding: "0.6rem 0.85rem", marginBottom: "1.1rem" }}>
+          <p style={{ fontSize: FS.sm, color: "rgb(234,179,8)", background: "rgba(234,179,8,0.1)", border: "1px solid rgba(234,179,8,0.3)", borderRadius: 8, padding: "0.6rem 0.85rem", marginBottom: "1.1rem" }}>
             Bạn chưa đăng nhập — vẫn luyện được bình thường, nhưng ghi chú sẽ mất khi tải lại trang.
           </p>
         )}
@@ -125,17 +126,17 @@ export default function FreePracticeClient({ items, initialNotes, userId }: Prop
                   style={{ width: "100%", aspectRatio: "4 / 3", objectFit: "cover", display: "block" }} />
                 <div style={{ padding: "0.6rem 0.75rem" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 3 }}>
-                    <span style={{ fontSize: "0.66rem", fontWeight: 700, color: LEVEL_COLOR[it.level], letterSpacing: "0.05em" }}>
+                    <span style={{ fontSize: FS.xs, fontWeight: 700, color: LEVEL_COLOR[it.level], letterSpacing: "0.05em" }}>
                       {it.level.toUpperCase()}
                     </span>
-                    <span style={{ fontSize: "0.66rem", color: "var(--text-muted)" }}>Bộ {it.test}</span>
+                    <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>Bộ {it.test}</span>
                     {n > 0 && (
-                      <span style={{ marginLeft: "auto", fontSize: "0.65rem", color: "var(--accent-primary)", fontWeight: 600 }}>
+                      <span style={{ marginLeft: "auto", fontSize: FS.xs, color: "var(--accent-primary)", fontWeight: 600 }}>
                         ✎ {n}/3
                       </span>
                     )}
                   </div>
-                  <div style={{ fontSize: "0.82rem", fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.4 }}>
+                  <div style={{ fontSize: FS.sm, fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.4 }}>
                     {it.title}
                   </div>
                 </div>
@@ -157,13 +158,13 @@ export default function FreePracticeClient({ items, initialNotes, userId }: Prop
     <div>
       <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", flexWrap: "wrap", marginBottom: "0.9rem" }}>
         <button onClick={() => select(null)}
-          style={{ padding: "4px 10px", borderRadius: 6, border: "1px solid var(--border)", background: "var(--bg-elevated)", color: "var(--text-muted)", fontSize: "0.75rem", cursor: "pointer" }}>
+          style={{ padding: "4px 10px", borderRadius: 6, border: "1px solid var(--border)", background: "var(--bg-elevated)", color: "var(--text-muted)", fontSize: FS.xs, cursor: "pointer" }}>
           ← Chọn ảnh khác
         </button>
-        <span style={{ fontSize: "0.82rem", color: "var(--text-muted)" }}>
+        <span style={{ fontSize: FS.sm, color: "var(--text-muted)" }}>
           {selected.title} · {selected.level} · Bộ {selected.test}
         </span>
-        <span style={{ marginLeft: "auto", fontSize: "0.75rem", color: saveState === "error" ? "rgb(239,68,68)" : "var(--text-muted)" }}>
+        <span style={{ marginLeft: "auto", fontSize: FS.xs, color: saveState === "error" ? "rgb(239,68,68)" : "var(--text-muted)" }}>
           {saveState === "saving" ? "Đang lưu…" : saveState === "saved" ? "✓ Đã lưu" : saveState === "error" ? "Lưu lỗi — thử gõ tiếp" : ""}
         </span>
       </div>
@@ -177,21 +178,21 @@ export default function FreePracticeClient({ items, initialNotes, userId }: Prop
         <div style={{ padding: "1.35rem 1.6rem" }}>
           {stepKeys.map((key, i) => (
             <div key={key} style={{ marginBottom: "1.4rem" }}>
-              <div style={{ fontSize: "0.72rem", letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 700, color: "var(--accent-primary)", marginBottom: "0.2rem" }}>
+              <div style={{ fontSize: FS.xs, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 700, color: "var(--accent-primary)", marginBottom: "0.2rem" }}>
                 {STEP_TITLE[i]}
               </div>
-              <p style={{ fontSize: "0.83rem", color: "var(--text-muted)", margin: "0 0 0.5rem" }}>{STEP_HELP[i]}</p>
+              <p style={{ fontSize: FS.sm, color: "var(--text-muted)", margin: "0 0 0.5rem" }}>{STEP_HELP[i]}</p>
 
               <textarea
                 value={note[key]}
                 onChange={(e) => edit(selected.id, key, e.target.value)}
                 rows={4}
                 placeholder="Nháp từ vựng, cụm từ hoặc câu của bạn ở đây…"
-                style={{ width: "100%", boxSizing: "border-box", padding: "0.7rem 0.9rem", borderRadius: 8, border: "1.5px solid var(--border)", background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: "1rem", lineHeight: 1.65, fontFamily: "inherit", resize: "vertical" }}
+                style={{ width: "100%", boxSizing: "border-box", padding: "0.7rem 0.9rem", borderRadius: 8, border: "1.5px solid var(--border)", background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: FS.md, lineHeight: 1.65, fontFamily: "inherit", resize: "vertical" }}
               />
 
               <button onClick={() => setOpenHint(openHint === i ? null : i)}
-                style={{ marginTop: "0.5rem", padding: "0.35rem 0.9rem", borderRadius: 6, border: "1px solid var(--border)", background: "transparent", color: "var(--text-muted)", fontSize: "0.8rem", cursor: "pointer" }}>
+                style={{ marginTop: "0.5rem", padding: "0.35rem 0.9rem", borderRadius: 6, border: "1px solid var(--border)", background: "transparent", color: "var(--text-muted)", fontSize: FS.sm, cursor: "pointer" }}>
                 {openHint === i ? "Ẩn gợi ý" : "Đối chiếu gợi ý"}
               </button>
 
@@ -199,12 +200,12 @@ export default function FreePracticeClient({ items, initialNotes, userId }: Prop
                 <div style={{ marginTop: "0.6rem", background: "rgba(59,130,246,0.06)", border: "1px solid rgba(59,130,246,0.25)", borderRadius: 8, padding: "0.8rem 1rem" }}>
                   {selected.hints[i].length > 0 && (
                     <>
-                      <div style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--accent-primary)", marginBottom: "0.45rem" }}>
+                      <div style={{ fontSize: FS.xs, fontWeight: 700, color: "var(--accent-primary)", marginBottom: "0.45rem" }}>
                         Từ vựng / cụm từ
                       </div>
                       <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: i < 2 ? "0.8rem" : 0 }}>
                         {selected.hints[i].map((h) => (
-                          <span key={h} style={{ fontSize: "0.86rem", padding: "3px 9px", borderRadius: 6, background: "var(--bg-elevated)", border: "1px solid var(--border)", color: "var(--text-primary)" }}>
+                          <span key={h} style={{ fontSize: FS.sm, padding: "3px 9px", borderRadius: 6, background: "var(--bg-elevated)", border: "1px solid var(--border)", color: "var(--text-primary)" }}>
                             {h}
                           </span>
                         ))}
@@ -213,19 +214,19 @@ export default function FreePracticeClient({ items, initialNotes, userId }: Prop
                   )}
                   {i < 2 ? (
                     <>
-                      <div style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--accent-primary)", marginBottom: "0.35rem" }}>
+                      <div style={{ fontSize: FS.xs, fontWeight: 700, color: "var(--accent-primary)", marginBottom: "0.35rem" }}>
                         Mẫu câu
                       </div>
-                      <ol style={{ margin: 0, paddingLeft: "1.15rem", fontSize: "0.92rem", color: "var(--text-primary)", lineHeight: 1.7 }}>
+                      <ol style={{ margin: 0, paddingLeft: "1.15rem", fontSize: FS.md, color: "var(--text-primary)", lineHeight: 1.7 }}>
                         {(selected.models[i] as string[]).map((m) => <li key={m}>{m}</li>)}
                       </ol>
                     </>
                   ) : (
                     <>
-                      <div style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--accent-primary)", marginBottom: "0.35rem" }}>
+                      <div style={{ fontSize: FS.xs, fontWeight: 700, color: "var(--accent-primary)", marginBottom: "0.35rem" }}>
                         Đoạn mẫu
                       </div>
-                      <p style={{ margin: 0, fontSize: "0.92rem", color: "var(--text-primary)", lineHeight: 1.75 }}>
+                      <p style={{ margin: 0, fontSize: FS.md, color: "var(--text-primary)", lineHeight: 1.75 }}>
                         {selected.models[2] as string}
                       </p>
                     </>
@@ -236,19 +237,19 @@ export default function FreePracticeClient({ items, initialNotes, userId }: Prop
           ))}
 
           <button onClick={() => setShowFull((v) => !v)}
-            style={{ padding: "0.5rem 1.1rem", borderRadius: 8, border: "1.5px solid var(--accent-primary)", background: "transparent", color: "var(--accent-primary)", fontSize: "0.88rem", fontWeight: 600, cursor: "pointer" }}>
+            style={{ padding: "0.5rem 1.1rem", borderRadius: 8, border: "1.5px solid var(--accent-primary)", background: "transparent", color: "var(--accent-primary)", fontSize: FS.sm, fontWeight: 600, cursor: "pointer" }}>
             {showFull ? "Ẩn bài mẫu hoàn chỉnh" : "Xem bài mẫu hoàn chỉnh"}
           </button>
 
           {showFull && (
             <div style={{ marginTop: "0.7rem", background: "rgba(34,197,94,0.07)", border: "1px solid rgba(34,197,94,0.3)", borderRadius: 8, padding: "0.85rem 1rem" }}>
-              <p style={{ margin: 0, fontSize: "0.97rem", color: "var(--text-primary)", lineHeight: 1.8 }}>{selected.fullModel}</p>
+              <p style={{ margin: 0, fontSize: FS.md, color: "var(--text-primary)", lineHeight: 1.8 }}>{selected.fullModel}</p>
             </div>
           )}
 
           {userId && (
             <div style={{ marginTop: "1.4rem" }}>
-              <div style={{ fontSize: "0.78rem", fontWeight: 700, color: "var(--text-muted)", letterSpacing: "0.05em", textTransform: "uppercase", marginBottom: "0.5rem" }}>
+              <div style={{ fontSize: FS.xs, fontWeight: 700, color: "var(--text-muted)", letterSpacing: "0.05em", textTransform: "uppercase", marginBottom: "0.5rem" }}>
                 🎙 Nói lại cả bài mô tả
               </div>
               <RecordingPanel

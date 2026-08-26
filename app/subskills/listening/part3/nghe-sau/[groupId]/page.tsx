@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getPassage, passageLabel } from "@/lib/subskills/part3/passages";
 import DeepListenClient from "@/components/subskills/DeepListenClient";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 
 type Props = { params: Promise<{ groupId: string }> };
 
@@ -20,16 +21,16 @@ export default async function NgheSauPassagePage({ params }: Props) {
   return (
     <div
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 800,
+        padding: `${PAD_Y} ${PAD_X}`,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         width: "100%",
         boxSizing: "border-box",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.25rem", fontSize: "0.78rem", color: "var(--text-muted)", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.25rem", fontSize: FS.xs, color: "var(--text-muted)", flexWrap: "wrap" }}>
         <Link href="/subskills/listening/part3" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Part 3 &amp; 4</Link>
         <span>›</span>
         <Link href="/subskills/listening/part3/nghe-sau" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Nghe sâu</Link>

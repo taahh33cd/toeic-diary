@@ -4,6 +4,7 @@ import { useState, useCallback, useRef, useEffect } from "react";
 import type { SpeakingTestData, SpeakingExercise } from "@/lib/subskills/speaking";
 import { checkMcqAnswer, checkEssayAnswer, PASS_THRESHOLD } from "@/lib/subskills/speaking";
 import { RecordingPanel } from "@/components/subskills/speaking/RecordingPanel";
+import { FS } from "@/lib/ui/scale";
 
 // ─────────────────────────────────────
 // Types
@@ -69,7 +70,7 @@ function TtsButton({ text, speak, loading }: { text: string; speak: (t: string) 
       onClick={() => speak(text)}
       disabled={loading}
       title="Nghe phát âm"
-      style={{ background: "none", border: "1px solid var(--border)", borderRadius: 6, padding: "3px 8px", cursor: loading ? "wait" : "pointer", fontSize: "0.85rem", color: "var(--accent-primary)", flexShrink: 0, lineHeight: 1 }}
+      style={{ background: "none", border: "1px solid var(--border)", borderRadius: 6, padding: "3px 8px", cursor: loading ? "wait" : "pointer", fontSize: FS.sm, color: "var(--accent-primary)", flexShrink: 0, lineHeight: 1 }}
     >
       {loading ? "…" : "🔊"}
     </button>
@@ -79,7 +80,7 @@ function TtsButton({ text, speak, loading }: { text: string; speak: (t: string) 
 function ResultBadge({ correct }: { correct: boolean }) {
   return (
     <div style={{
-      display: "inline-flex", alignItems: "center", gap: 6, padding: "6px 14px", borderRadius: 20, fontSize: "0.82rem", fontWeight: 600,
+      display: "inline-flex", alignItems: "center", gap: 6, padding: "6px 14px", borderRadius: 20, fontSize: FS.sm, fontWeight: 600,
       background: correct ? "rgba(34,197,94,0.12)" : "rgba(239,68,68,0.10)",
       color: correct ? "rgb(34,197,94)" : "rgb(239,68,68)",
       border: `1px solid ${correct ? "rgba(34,197,94,0.35)" : "rgba(239,68,68,0.3)"}`,
@@ -112,8 +113,8 @@ function McqPanel({
         else if (isSelected) { border = "var(--accent-primary)"; bg = "rgba(59,130,246,0.08)"; }
         return (
           <button key={opt.id} onClick={() => { if (!submitted && !isDisabled) onSelect(opt.id); }}
-            style={{ display: "flex", alignItems: "center", gap: 12, padding: "10px 16px", borderRadius: 8, border: `1.5px solid ${border}`, background: bg, cursor, textAlign: "left", color, fontSize: "0.9rem", opacity, transition: "opacity 0.15s" }}>
-            <span style={{ fontWeight: 700, color: "var(--text-muted)", fontSize: "0.78rem", minWidth: 16 }}>{opt.id}</span>
+            style={{ display: "flex", alignItems: "center", gap: 12, padding: "10px 16px", borderRadius: 8, border: `1.5px solid ${border}`, background: bg, cursor, textAlign: "left", color, fontSize: FS.sm, opacity, transition: "opacity 0.15s" }}>
+            <span style={{ fontWeight: 700, color: "var(--text-muted)", fontSize: FS.xs, minWidth: 16 }}>{opt.id}</span>
             {opt.text}
           </button>
         );
@@ -135,13 +136,13 @@ function EssayPanel({
       <input type="text" value={input} onChange={(e) => !submitted && onChange(e.target.value)} disabled={submitted}
         placeholder="Gõ câu trả lời..." onKeyDown={(e) => { if (e.key === "Enter" && !submitted && input.trim()) onSubmit?.(); }}
         autoComplete="off" autoCorrect="off" spellCheck={false}
-        style={{ width: "100%", padding: "10px 14px", borderRadius: 8, border: `1.5px solid ${submitted ? (isCorrect ? "rgba(34,197,94,0.5)" : "rgba(239,68,68,0.45)") : "var(--border)"}`, background: submitted ? (isCorrect ? "rgba(34,197,94,0.06)" : "rgba(239,68,68,0.05)") : "var(--bg-secondary)", color: "var(--text-primary)", fontSize: "0.92rem", outline: "none", boxSizing: "border-box", cursor: submitted ? "default" : "text", fontFamily: "inherit" }} />
+        style={{ width: "100%", padding: "10px 14px", borderRadius: 8, border: `1.5px solid ${submitted ? (isCorrect ? "rgba(34,197,94,0.5)" : "rgba(239,68,68,0.45)") : "var(--border)"}`, background: submitted ? (isCorrect ? "rgba(34,197,94,0.06)" : "rgba(239,68,68,0.05)") : "var(--bg-secondary)", color: "var(--text-primary)", fontSize: FS.md, outline: "none", boxSizing: "border-box", cursor: submitted ? "default" : "text", fontFamily: "inherit" }} />
       {submitted && (
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           <ResultBadge correct={isCorrect} />
           {!isCorrect && (
-            <div style={{ padding: "10px 14px", background: "var(--bg-elevated)", borderRadius: 8, fontSize: "0.82rem", color: "var(--text-secondary)", borderLeft: "3px solid rgba(34,197,94,0.4)" }}>
-              <span style={{ fontSize: "0.72rem", color: "var(--text-muted)", display: "block", marginBottom: 4 }}>ĐÁP ÁN CHẤP NHẬN</span>
+            <div style={{ padding: "10px 14px", background: "var(--bg-elevated)", borderRadius: 8, fontSize: FS.sm, color: "var(--text-secondary)", borderLeft: "3px solid rgba(34,197,94,0.4)" }}>
+              <span style={{ fontSize: FS.xs, color: "var(--text-muted)", display: "block", marginBottom: 4 }}>ĐÁP ÁN CHẤP NHẬN</span>
               <strong style={{ color: "var(--text-primary)" }}>{exercise.correct_answers[0]}</strong>
             </div>
           )}
@@ -156,8 +157,8 @@ function ScoreCircle({ score, passed }: { score: number; passed: boolean }) {
   return (
     <div style={{ width: 120, height: 120, borderRadius: "50%", background: `conic-gradient(${color} ${score * 3.6}deg, var(--bg-elevated) 0deg)`, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 0 0 8px var(--bg-primary)" }}>
       <div style={{ width: 90, height: 90, borderRadius: "50%", background: "var(--bg-primary)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-        <span style={{ fontSize: "1.6rem", fontWeight: 800, color, lineHeight: 1 }}>{score}%</span>
-        <span style={{ fontSize: "0.65rem", color: "var(--text-muted)", letterSpacing: "0.05em" }}>ĐIỂM</span>
+        <span style={{ fontSize: FS.lg, fontWeight: 800, color, lineHeight: 1 }}>{score}%</span>
+        <span style={{ fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.05em" }}>ĐIỂM</span>
       </div>
     </div>
   );
@@ -219,7 +220,7 @@ function IntroPanel({
             <div style={{
               width: 30, height: 30, borderRadius: "50%", flexShrink: 0,
               display: "flex", alignItems: "center", justifyContent: "center",
-              fontSize: "0.8rem", fontWeight: 700,
+              fontSize: FS.sm, fontWeight: 700,
               background: easyPassed ? "rgba(34,197,94,0.15)" : anyDone ? "rgba(234,179,8,0.13)" : "var(--bg-elevated)",
               color: easyPassed ? "rgb(34,197,94)" : anyDone ? "rgb(234,179,8)" : "var(--text-muted)",
               border: `1.5px solid ${easyPassed ? "rgba(34,197,94,0.4)" : anyDone ? "rgba(234,179,8,0.4)" : "var(--border)"}`,
@@ -230,31 +231,31 @@ function IntroPanel({
             {/* Info */}
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 2, flexWrap: "wrap" }}>
-                <span style={{ fontSize: "0.88rem", fontWeight: 600, color: "var(--text-primary)" }}>Bộ {testNum}</span>
+                <span style={{ fontSize: FS.sm, fontWeight: 600, color: "var(--text-primary)" }}>Bộ {testNum}</span>
                 {hasDraft && (
-                  <span style={{ fontSize: "0.65rem", fontWeight: 600, padding: "2px 7px", borderRadius: 10, background: "rgba(234,179,8,0.15)", color: "rgb(161,117,0)", border: "1px solid rgba(234,179,8,0.4)", whiteSpace: "nowrap" }}>
+                  <span style={{ fontSize: FS.xs, fontWeight: 600, padding: "2px 7px", borderRadius: 10, background: "rgba(234,179,8,0.15)", color: "rgb(161,117,0)", border: "1px solid rgba(234,179,8,0.4)", whiteSpace: "nowrap" }}>
                     đang làm · câu {draft.idx + 1}/{totalQ}
                   </span>
                 )}
               </div>
               <div style={{ display: "flex", gap: 6, flexWrap: "wrap", alignItems: "center" }}>
                 {easyScore !== null && (
-                  <span style={{ fontSize: "0.7rem", color: easyPassed ? "rgb(34,197,94)" : "var(--text-muted)" }}>
+                  <span style={{ fontSize: FS.xs, color: easyPassed ? "rgb(34,197,94)" : "var(--text-muted)" }}>
                     🟢 {easyScore}%{easyPassed ? " ✓" : ` (cần ${PASS_THRESHOLD}%)`}
                   </span>
                 )}
                 {mediumScore !== null && (
-                  <span style={{ fontSize: "0.7rem", color: mediumPassed ? "rgb(234,179,8)" : "var(--text-muted)" }}>
+                  <span style={{ fontSize: FS.xs, color: mediumPassed ? "rgb(234,179,8)" : "var(--text-muted)" }}>
                     · 🟡 {mediumScore}%{mediumPassed ? " ✓" : ""}
                   </span>
                 )}
                 {hardScore !== null && (
-                  <span style={{ fontSize: "0.7rem", color: hardPassed ? "rgb(239,68,68)" : "var(--text-muted)" }}>
+                  <span style={{ fontSize: FS.xs, color: hardPassed ? "rgb(239,68,68)" : "var(--text-muted)" }}>
                     · 🔴 {hardScore}%{hardPassed ? " ✓" : ""}
                   </span>
                 )}
                 {!anyDone && !hasDraft && (
-                  <span style={{ fontSize: "0.72rem", color: "var(--text-muted)" }}>Chưa làm</span>
+                  <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>Chưa làm</span>
                 )}
               </div>
             </div>
@@ -263,7 +264,7 @@ function IntroPanel({
             <button
               onClick={() => onStart(testNum, bestDiff, hasDraft)}
               style={{
-                padding: "7px 18px", borderRadius: 6, fontSize: "0.82rem", fontWeight: 600, cursor: "pointer", flexShrink: 0,
+                padding: "7px 18px", borderRadius: 6, fontSize: FS.sm, fontWeight: 600, cursor: "pointer", flexShrink: 0,
                 background: hasDraft ? "rgba(234,179,8,0.85)" : anyDone ? "var(--bg-elevated)" : "var(--accent-primary)",
                 color: hasDraft ? "#fff" : anyDone ? "var(--text-secondary)" : "#fff",
                 border: hasDraft ? "none" : anyDone ? "1px solid var(--border)" : "none",
@@ -285,17 +286,17 @@ function IntroPanel({
 function DonePanel({ score, passed, onBack }: { score: number; passed: boolean; onBack: () => void }) {
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 24, padding: "32px 16px", textAlign: "center" }}>
-      <div style={{ fontSize: "2.5rem" }}>{passed ? "🏆" : "📝"}</div>
+      <div style={{ fontSize: FS.xl }}>{passed ? "🏆" : "📝"}</div>
       <ScoreCircle score={score} passed={passed} />
       <div>
-        <div style={{ fontSize: "1.2rem", fontWeight: 700, color: passed ? "rgb(34,197,94)" : "var(--text-primary)", marginBottom: 6 }}>
+        <div style={{ fontSize: FS.lg, fontWeight: 700, color: passed ? "rgb(34,197,94)" : "var(--text-primary)", marginBottom: 6 }}>
           {passed ? "Xuất sắc! Đạt yêu cầu 🎉" : "Cần cố gắng thêm"}
         </div>
-        <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)" }}>
+        <div style={{ fontSize: FS.sm, color: "var(--text-secondary)" }}>
           {passed ? `${score}% — đạt ngưỡng ${PASS_THRESHOLD}%` : `${score}% — chưa đạt ngưỡng ${PASS_THRESHOLD}%. Thử lại để cải thiện!`}
         </div>
       </div>
-      <button onClick={onBack} style={{ padding: "10px 26px", borderRadius: 8, fontSize: "0.9rem", fontWeight: 600, cursor: "pointer", background: "var(--accent-primary)", color: "#fff", border: "none" }}>
+      <button onClick={onBack} style={{ padding: "10px 26px", borderRadius: 8, fontSize: FS.sm, fontWeight: 600, cursor: "pointer", background: "var(--accent-primary)", color: "#fff", border: "none" }}>
         ← Quay lại
       </button>
     </div>
@@ -584,7 +585,7 @@ export default function SpeakingExerciseClient({
       {/* Back to list */}
       <button
         onClick={() => { setPhase("intro"); setIdx(0); setCorrect(0); resetItem(); }}
-        style={{ alignSelf: "flex-start", background: "none", border: "none", color: "var(--text-muted)", cursor: "pointer", fontSize: "0.85rem", padding: 0 }}
+        style={{ alignSelf: "flex-start", background: "none", border: "none", color: "var(--text-muted)", cursor: "pointer", fontSize: FS.sm, padding: 0 }}
       >
         ← Danh sách bộ
       </button>
@@ -601,7 +602,7 @@ export default function SpeakingExerciseClient({
           if (locked) {
             return (
               <div key={diff} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
-                <div title={`Cần Easy ≥ ${PASS_THRESHOLD}% để mở`} style={{ padding: "6px 14px", borderRadius: 8, fontSize: "0.82rem", fontWeight: 500, background: "var(--bg-elevated)", color: "var(--text-muted)", border: "1.5px solid var(--border)", cursor: "not-allowed", opacity: 0.5 }}>
+                <div title={`Cần Easy ≥ ${PASS_THRESHOLD}% để mở`} style={{ padding: "6px 14px", borderRadius: 8, fontSize: FS.sm, fontWeight: 500, background: "var(--bg-elevated)", color: "var(--text-muted)", border: "1.5px solid var(--border)", cursor: "not-allowed", opacity: 0.5 }}>
                   🔒 {label.split(" ")[1]}
                 </div>
               </div>
@@ -612,24 +613,24 @@ export default function SpeakingExerciseClient({
             <div key={diff} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
               <button
                 onClick={() => { if (!isActive) { setDiff(diff); setIdx(0); setCorrect(0); resetItem(); clearDraft(testNum); } }}
-                style={{ padding: "6px 14px", borderRadius: 8, fontSize: "0.82rem", fontWeight: isActive ? 700 : 500, cursor: isActive ? "default" : "pointer", textDecoration: "none", border: `1.5px solid ${isActive ? "var(--accent-primary)" : "var(--border)"}`, background: isActive ? "var(--accent-primary)" : "var(--bg-elevated)", color: isActive ? "#fff" : "var(--text-primary)" }}
+                style={{ padding: "6px 14px", borderRadius: 8, fontSize: FS.sm, fontWeight: isActive ? 700 : 500, cursor: isActive ? "default" : "pointer", textDecoration: "none", border: `1.5px solid ${isActive ? "var(--accent-primary)" : "var(--border)"}`, background: isActive ? "var(--accent-primary)" : "var(--bg-elevated)", color: isActive ? "#fff" : "var(--text-primary)" }}
               >
                 {label}
               </button>
               {bestScore !== undefined && (
-                <span style={{ fontSize: "0.62rem", color: bestScore >= PASS_THRESHOLD ? "rgb(34,197,94)" : "var(--text-muted)" }}>
+                <span style={{ fontSize: FS.xs, color: bestScore >= PASS_THRESHOLD ? "rgb(34,197,94)" : "var(--text-muted)" }}>
                   {bestScore}%{bestScore >= PASS_THRESHOLD ? " ✓" : ""}
                 </span>
               )}
             </div>
           );
         })}
-        <span style={{ fontSize: "0.8rem", color: "var(--text-muted)", alignSelf: "center", marginLeft: 6 }}>— Bộ {testNum}</span>
+        <span style={{ fontSize: FS.sm, color: "var(--text-muted)", alignSelf: "center", marginLeft: 6 }}>— Bộ {testNum}</span>
       </div>
 
       {/* Progress bar */}
       <div>
-        <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.75rem", color: "var(--text-muted)", marginBottom: 6 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", fontSize: FS.xs, color: "var(--text-muted)", marginBottom: 6 }}>
           <span>Câu {idx + 1}/{total}</span>
           <span>{levelLabel} · Bộ {testNum}</span>
         </div>
@@ -639,7 +640,7 @@ export default function SpeakingExerciseClient({
       </div>
 
       {/* Instruction */}
-      <div style={{ padding: "12px 16px", background: "rgba(59,130,246,0.06)", border: "1px solid rgba(59,130,246,0.18)", borderLeft: "3px solid var(--accent-primary)", borderRadius: 8, fontSize: "0.95rem", fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.5 }}>
+      <div style={{ padding: "12px 16px", background: "rgba(59,130,246,0.06)", border: "1px solid rgba(59,130,246,0.18)", borderLeft: "3px solid var(--accent-primary)", borderRadius: 8, fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.5 }}>
         {ex.instruction}
       </div>
 
@@ -647,10 +648,10 @@ export default function SpeakingExerciseClient({
       <div style={{ padding: "14px 18px", background: "var(--bg-secondary)", borderRadius: 10, borderLeft: "3px solid var(--accent-primary)", display: "flex", alignItems: "flex-start", gap: 10 }}>
         <div style={{ flex: 1 }}>
           {isEssay && essayEx?.content && (
-            <p style={{ margin: 0, fontSize: "1rem", fontWeight: 600, color: "var(--text-primary)" }}>{essayEx.content}</p>
+            <p style={{ margin: 0, fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)" }}>{essayEx.content}</p>
           )}
           {isMcq && ex.tts_text && (
-            <p style={{ margin: 0, fontSize: "1rem", fontWeight: 600, color: "var(--text-primary)" }}>{ex.tts_text}</p>
+            <p style={{ margin: 0, fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)" }}>{ex.tts_text}</p>
           )}
         </div>
         <TtsButton text={ex.tts_text} speak={speak} loading={ttsLoading} />
@@ -672,16 +673,16 @@ export default function SpeakingExerciseClient({
 
       {/* Retry banner */}
       {retryCount > 0 && !submitted && (
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "8px 14px", borderRadius: 8, background: "rgba(239,68,68,0.07)", border: "1px solid rgba(239,68,68,0.22)", fontSize: "0.82rem" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "8px 14px", borderRadius: 8, background: "rgba(239,68,68,0.07)", border: "1px solid rgba(239,68,68,0.22)", fontSize: FS.sm }}>
           <span style={{ color: "rgb(210,50,50)", fontWeight: 600 }}>✗ Chưa đúng — thử lại lần {retryCount + 1}/3{retryCount === MAX_RETRIES ? " (lần cuối)" : ""}</span>
-          <span style={{ color: "var(--text-muted)", fontSize: "0.74rem" }}>{retryCount === 1 ? "đúng lần này: 50%" : "đúng lần này: 0%"}</span>
+          <span style={{ color: "var(--text-muted)", fontSize: FS.xs }}>{retryCount === 1 ? "đúng lần này: 50%" : "đúng lần này: 0%"}</span>
         </div>
       )}
 
       {/* Explanation */}
       {submitted && ex.explanation && (
-        <div style={{ padding: "10px 14px", background: "var(--bg-elevated)", borderRadius: 8, fontSize: "0.8rem", color: "var(--text-secondary)", borderLeft: "3px solid rgba(99,179,237,0.5)" }}>
-          <span style={{ fontSize: "0.72rem", color: "var(--text-muted)", display: "block", marginBottom: 4 }}>GIẢI THÍCH</span>
+        <div style={{ padding: "10px 14px", background: "var(--bg-elevated)", borderRadius: 8, fontSize: FS.sm, color: "var(--text-secondary)", borderLeft: "3px solid rgba(99,179,237,0.5)" }}>
+          <span style={{ fontSize: FS.xs, color: "var(--text-muted)", display: "block", marginBottom: 4 }}>GIẢI THÍCH</span>
           {ex.explanation}
         </div>
       )}
@@ -702,12 +703,12 @@ export default function SpeakingExerciseClient({
       <div style={{ display: "flex", justifyContent: "flex-end", gap: 10 }}>
         {!submitted ? (
           <button onClick={handleCheck} disabled={!canCheck}
-            style={{ padding: "10px 28px", borderRadius: 8, fontWeight: 600, fontSize: "0.9rem", cursor: canCheck ? "pointer" : "not-allowed", background: canCheck ? "var(--accent-primary)" : "var(--bg-elevated)", color: canCheck ? "#fff" : "var(--text-muted)", border: canCheck ? "none" : "1px solid var(--border)", transition: "all 0.15s" }}>
+            style={{ padding: "10px 28px", borderRadius: 8, fontWeight: 600, fontSize: FS.sm, cursor: canCheck ? "pointer" : "not-allowed", background: canCheck ? "var(--accent-primary)" : "var(--bg-elevated)", color: canCheck ? "#fff" : "var(--text-muted)", border: canCheck ? "none" : "1px solid var(--border)", transition: "all 0.15s" }}>
             Kiểm tra
           </button>
         ) : (
           <button onClick={handleNext}
-            style={{ padding: "10px 28px", borderRadius: 8, fontWeight: 600, fontSize: "0.9rem", cursor: "pointer", background: "var(--accent-primary)", color: "#fff", border: "none" }}>
+            style={{ padding: "10px 28px", borderRadius: 8, fontWeight: 600, fontSize: FS.sm, cursor: "pointer", background: "var(--accent-primary)", color: "#fff", border: "none" }}>
             {idx < total - 1 ? "Câu tiếp →" : "Xem kết quả →"}
           </button>
         )}

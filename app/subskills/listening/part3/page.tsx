@@ -3,6 +3,7 @@ import Link from "next/link";
 import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { PART3_LEVELS, TRANSCRIPT_POLICY_VI, part3AttemptKey } from "@/lib/subskills/part3";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 
 export const metadata: Metadata = { title: "Listening Part 3 & 4 — Subskills TOEIC" };
 
@@ -31,17 +32,17 @@ export default async function ListeningPart3Page() {
   return (
     <div
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 1000,
+        padding: `${PAD_Y} ${PAD_X}`,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         width: "100%",
         boxSizing: "border-box",
       }}
     >
       {/* Breadcrumb */}
-      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: "0.8rem", color: "var(--text-muted)", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: FS.sm, color: "var(--text-muted)", flexWrap: "wrap" }}>
         <Link href="/subskills" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Subskills</Link>
         <span>›</span>
         <Link href="/subskills/listening" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Listening</Link>
@@ -51,13 +52,13 @@ export default async function ListeningPart3Page() {
 
       {/* Header */}
       <div style={{ marginBottom: "1.5rem" }}>
-        <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: "0.3rem" }}>
+        <p style={{ fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: "0.3rem" }}>
           Listening · Part 3 &amp; 4
         </p>
         <h1 style={{ fontSize: "clamp(1.3rem, 3vw, 1.7rem)", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.02em", lineHeight: 1.2, margin: "0 0 0.6rem" }}>
           Hội thoại &amp; bài nói — 5 cấp độ
         </h1>
-        <p style={{ margin: 0, fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.65 }}>
+        <p style={{ margin: 0, fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.65 }}>
           Thi trên máy không cho đọc câu hỏi trước, chỉ có khoảng 3 giây. Cả 5 cấp độ dưới đây
           luyện đúng hai thứ bù lại điều đó: đoán trước đề bài sắp hỏi gì, và bắt được đáp án
           dù nó luôn được diễn đạt lại chứ không lặp từ trong bài.
@@ -74,10 +75,10 @@ export default async function ListeningPart3Page() {
           marginBottom: "1.75rem",
         }}
       >
-        <p style={{ margin: "0 0 0.5rem", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--text-muted)" }}>
+        <p style={{ margin: "0 0 0.5rem", fontSize: FS.xs, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--text-muted)" }}>
           Đo trên 230 bộ đề EST 2026
         </p>
-        <ul style={{ margin: 0, paddingLeft: "1.1rem", fontSize: "0.82rem", color: "var(--text-secondary)", lineHeight: 1.75 }}>
+        <ul style={{ margin: 0, paddingLeft: "1.1rem", fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.75 }}>
           <li>Câu 1 hỏi nơi chốn / nghề nghiệp / mục đích trong <strong>60%</strong> số bộ.</li>
           <li>Câu 3 hỏi hành động tiếp theo hoặc yêu cầu trong <strong>47%</strong> số bộ.</li>
           <li>Câu 2 rải đều mọi dạng — <strong>đừng đoán câu giữa</strong>, dồn sức nghe.</li>
@@ -101,18 +102,18 @@ export default async function ListeningPart3Page() {
           textDecoration: "none",
         }}
       >
-        <span style={{ fontSize: "1.15rem", lineHeight: 1.2, flexShrink: 0 }}>🎧</span>
+        <span style={{ fontSize: FS.lg, lineHeight: 1.2, flexShrink: 0 }}>🎧</span>
         <div style={{ flex: 1, minWidth: 0 }}>
-          <div style={{ fontSize: "0.97rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.2rem" }}>
+          <div style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.2rem" }}>
             Nghe sâu — quy trình 5 bước
           </div>
-          <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
+          <p style={{ margin: 0, fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.6 }}>
             230 đoạn nghe đầy đủ transcript và từ mới. Làm đề khi chưa biết gì, tra từ, nghe kèm
             chữ và đọc theo, rồi nghe chay đến khi hiểu trọn. Đây là phần xây nền; các cấp độ bên
             dưới là phần rèn phản xạ.
           </p>
         </div>
-        <span className="r-arrow" style={{ fontSize: "0.8rem", color: "var(--accent-primary)", flexShrink: 0, alignSelf: "center" }}>→</span>
+        <span className="r-arrow" style={{ fontSize: FS.sm, color: "var(--accent-primary)", flexShrink: 0, alignSelf: "center" }}>→</span>
       </Link>
 
       {/* Danh sách cấp độ */}
@@ -161,7 +162,7 @@ export default async function ListeningPart3Page() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: "0.72rem",
+                  fontSize: FS.xs,
                   fontWeight: 800,
                   color: passedAll && done > 0 ? "rgb(34,197,94)" : "var(--text-muted)",
                 }}
@@ -171,10 +172,10 @@ export default async function ListeningPart3Page() {
 
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", flexWrap: "wrap", marginBottom: "0.2rem" }}>
-                  <span style={{ fontSize: "1.03rem", fontWeight: 700, color: "var(--text-primary)" }}>{lv.title}</span>
+                  <span style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)" }}>{lv.title}</span>
                   <span
                     style={{
-                      fontSize: "0.65rem",
+                      fontSize: FS.xs,
                       fontWeight: 700,
                       color: "var(--accent-primary)",
                       background: "var(--bg-elevated)",
@@ -186,10 +187,10 @@ export default async function ListeningPart3Page() {
                     {lv.band}
                   </span>
                 </div>
-                <p style={{ margin: "0 0 0.55rem", fontSize: "0.8rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
+                <p style={{ margin: "0 0 0.55rem", fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.6 }}>
                   {lv.goal}
                 </p>
-                <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", fontSize: "0.68rem", color: "var(--text-muted)" }}>
+                <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", fontSize: FS.xs, color: "var(--text-muted)" }}>
                   <span style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 4, padding: "2px 7px" }}>
                     {lv.drills.length} bài · {totalItems} câu
                   </span>
@@ -219,7 +220,7 @@ export default async function ListeningPart3Page() {
                       width: 20,
                       height: 20,
                       borderRadius: 4,
-                      fontSize: "0.58rem",
+                      fontSize: FS.xs,
                       fontWeight: 700,
                       background: m?.passed ? "rgba(34,197,94,0.18)" : m ? "rgba(239,68,68,0.13)" : "var(--bg-elevated)",
                       color: m?.passed ? "rgb(34,197,94)" : m ? "rgb(239,68,68)" : "var(--text-muted)",
@@ -231,15 +232,15 @@ export default async function ListeningPart3Page() {
                 ))}
               </div>
 
-              <span className="r-arrow" style={{ fontSize: "0.8rem", color: "var(--accent-primary)", flexShrink: 0, marginTop: 6 }}>→</span>
+              <span className="r-arrow" style={{ fontSize: FS.sm, color: "var(--accent-primary)", flexShrink: 0, marginTop: 6 }}>→</span>
             </Link>
           );
         })}
       </div>
 
-      <div style={{ width: "100%", marginTop: "3rem" }}>
+      <div style={{ width: "100%", marginTop: "auto", paddingTop: "3rem" }}>
         <div style={{ height: 1, background: "var(--border)" }} />
-        <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.08em" }}>
+        <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.08em" }}>
           TOEIC DICTATION DIARY
         </p>
       </div>

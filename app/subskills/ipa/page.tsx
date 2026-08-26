@@ -4,6 +4,7 @@ import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { PhonemicChart } from "@/components/subskills/ipa/PhonemicChart";
 import { ipaSectionTotal } from "@/lib/subskills/ipa";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 
 export const metadata: Metadata = { title: "IPA / Pronunciation — Subskills TOEIC" };
 
@@ -36,17 +37,17 @@ export default async function IpaPage() {
   return (
     <div
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 860,
+        padding: `${PAD_Y} ${PAD_X}`,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         width: "100%",
         boxSizing: "border-box",
       }}
     >
       {/* Breadcrumb */}
-      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: "0.8rem", color: "var(--text-muted)", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: FS.sm, color: "var(--text-muted)", flexWrap: "wrap" }}>
         <Link href="/subskills" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Subskills</Link>
         <span>›</span>
         <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>IPA / Pronunciation</span>
@@ -54,13 +55,13 @@ export default async function IpaPage() {
 
       {/* Header */}
       <div style={{ marginBottom: "1.75rem" }}>
-        <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: "0.3rem" }}>
+        <p style={{ fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: "0.3rem" }}>
           🔤 IPA / Pronunciation
         </p>
         <h1 style={{ fontSize: "clamp(1.3rem, 3vw, 1.7rem)", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.02em", lineHeight: 1.2, margin: "0 0 0.5rem" }}>
           Luyện phát âm theo IPA
         </h1>
-        <p style={{ margin: 0, fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
+        <p style={{ margin: 0, fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.6 }}>
           Khám phá bảng phiên âm tương tác (giọng Mỹ), sau đó luyện tập từng nhóm âm theo cấp độ Easy → Medium → Hard.
         </p>
       </div>
@@ -69,7 +70,7 @@ export default async function IpaPage() {
 
       {/* Section 1 — Interactive Phonemic Chart (placeholder, Phase 2) */}
       <section style={{ marginBottom: "2.5rem" }}>
-        <h2 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)", margin: "0 0 0.75rem" }}>
+        <h2 style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)", margin: "0 0 0.75rem" }}>
           Interactive Phonemic Chart
         </h2>
         <PhonemicChart />
@@ -77,7 +78,7 @@ export default async function IpaPage() {
 
       {/* Section 2 — Exercises by group (placeholder, Phase 3-4) */}
       <section>
-        <h2 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)", margin: "0 0 0.75rem" }}>
+        <h2 style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)", margin: "0 0 0.75rem" }}>
           Bài tập theo nhóm âm
         </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: "1px", border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", overflow: "hidden", boxShadow: "var(--shadow-md)" }}>
@@ -95,14 +96,14 @@ export default async function IpaPage() {
               }}
             >
               <div style={{ flex: 1 }}>
-                <div style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.2rem" }}>{s.label}</div>
-                <p style={{ margin: "0 0 0.35rem", fontSize: "0.8rem", color: "var(--text-secondary)", lineHeight: 1.5 }}>{s.desc}</p>
+                <div style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.2rem" }}>{s.label}</div>
+                <p style={{ margin: "0 0 0.35rem", fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.5 }}>{s.desc}</p>
                 {(() => {
                   const total = ipaSectionTotal(s.key);
                   const done = doneBySection[s.key]?.size ?? 0;
                   const passed = passBySection[s.key]?.size ?? 0;
                   return (
-                    <span style={{ fontSize: "0.68rem", color: "var(--text-muted)", background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 4, padding: "2px 8px" }}>
+                    <span style={{ fontSize: FS.xs, color: "var(--text-muted)", background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 4, padding: "2px 8px" }}>
                       {done > 0 ? `${done}/${total} bài · ${passed} đạt` : `${total} bài · 3 cấp độ`}
                     </span>
                   );
@@ -114,9 +115,9 @@ export default async function IpaPage() {
         </div>
       </section>
 
-      <div style={{ width: "100%", marginTop: "3rem" }}>
+      <div style={{ width: "100%", marginTop: "auto", paddingTop: "3rem" }}>
         <div style={{ height: 1, background: "var(--border)" }} />
-        <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.08em" }}>TOEIC DICTATION DIARY</p>
+        <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.08em" }}>TOEIC DICTATION DIARY</p>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { getTenseConfig, buildLevelMeta, isLevelUnlocked } from "@/lib/subskills/reading";
 import { tenseToPartKey, type LevelSlug, type BestScore } from "@/lib/subskills/reading/types";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 
 type Props = { params: Promise<{ tense: string }> };
 
@@ -63,16 +64,16 @@ export default async function TensePage({ params }: Props) {
   return (
     <div
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 900,
+        padding: `${PAD_Y} ${PAD_X}`,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         boxSizing: "border-box",
       }}
     >
       {/* Breadcrumb */}
-      <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "1.5rem", fontSize: "0.75rem", color: "var(--text-muted)" }}>
+      <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "1.5rem", fontSize: FS.xs, color: "var(--text-muted)" }}>
         <Link href="/subskills" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Subskills</Link>
         <span>/</span>
         <Link href="/subskills/reading" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Reading</Link>
@@ -95,7 +96,7 @@ export default async function TensePage({ params }: Props) {
         <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "1rem", flexWrap: "wrap" }}>
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.3rem" }}>
-              <h1 style={{ fontSize: "1.35rem", fontWeight: 800, color: "var(--text-primary)" }}>
+              <h1 style={{ fontSize: FS.lg, fontWeight: 800, color: "var(--text-primary)" }}>
                 {config.name}
               </h1>
               <div style={{ display: "flex", gap: "2px" }}>
@@ -104,7 +105,7 @@ export default async function TensePage({ params }: Props) {
                 ))}
               </div>
             </div>
-            <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "0.75rem" }}>
+            <div style={{ fontSize: FS.sm, color: "var(--text-muted)", marginBottom: "0.75rem" }}>
               {config.nameEn} · {config.description}
             </div>
 
@@ -118,7 +119,7 @@ export default async function TensePage({ params }: Props) {
 
             {/* Time markers */}
             <div>
-              <span style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginRight: "0.5rem" }}>
+              <span style={{ fontSize: FS.xs, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginRight: "0.5rem" }}>
                 Dấu hiệu:
               </span>
               {config.timeMarkers.slice(0, 8).map((m) => (
@@ -127,7 +128,7 @@ export default async function TensePage({ params }: Props) {
                   style={{
                     display: "inline-block",
                     margin: "2px",
-                    fontSize: "0.68rem",
+                    fontSize: FS.xs,
                     padding: "2px 7px",
                     borderRadius: 99,
                     background: "rgba(var(--accent-primary-rgb, 1,62,55), 0.06)",
@@ -140,7 +141,7 @@ export default async function TensePage({ params }: Props) {
                 </span>
               ))}
               {config.timeMarkers.length > 8 && (
-                <span style={{ fontSize: "0.68rem", color: "var(--text-muted)", marginLeft: 4 }}>
+                <span style={{ fontSize: FS.xs, color: "var(--text-muted)", marginLeft: 4 }}>
                   +{config.timeMarkers.length - 8} nữa
                 </span>
               )}
@@ -149,18 +150,18 @@ export default async function TensePage({ params }: Props) {
 
           {/* Progress summary */}
           <div style={{ textAlign: "center", flexShrink: 0 }}>
-            <div style={{ fontSize: "2rem", fontWeight: 800, color: "var(--text-primary)", lineHeight: 1 }}>
+            <div style={{ fontSize: FS.xl, fontWeight: 800, color: "var(--text-primary)", lineHeight: 1 }}>
               {LEVEL_SLUGS.filter((l) => best[l]?.passed).length}
-              <span style={{ fontSize: "1rem", color: "var(--text-muted)", fontWeight: 500 }}>/6</span>
+              <span style={{ fontSize: FS.md, color: "var(--text-muted)", fontWeight: 500 }}>/6</span>
             </div>
-            <div style={{ fontSize: "0.68rem", color: "var(--text-muted)", marginTop: "0.2rem" }}>levels passed</div>
+            <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginTop: "0.2rem" }}>levels passed</div>
           </div>
         </div>
       </div>
 
       {/* Level cards */}
       {!hasContent ? (
-        <div style={{ textAlign: "center", padding: "3rem 1rem", color: "var(--text-muted)", fontSize: "0.875rem" }}>
+        <div style={{ textAlign: "center", padding: "3rem 1rem", color: "var(--text-muted)", fontSize: FS.sm }}>
           Nội dung đang được soạn thảo. Vui lòng quay lại sau.
         </div>
       ) : (
@@ -207,9 +208,9 @@ export default async function TensePage({ params }: Props) {
 function FormulaTag({ label, formula, color, bg, border }: { label: string; formula: string; color: string; bg: string; border: string }) {
   return (
     <div style={{ display: "flex", alignItems: "center", gap: "0.35rem" }}>
-      <span style={{ fontSize: "0.6rem", fontWeight: 700, textTransform: "uppercase", color, opacity: 0.8 }}>{label}:</span>
+      <span style={{ fontSize: FS.xs, fontWeight: 700, textTransform: "uppercase", color, opacity: 0.8 }}>{label}:</span>
       <span style={{
-        fontSize: "0.72rem",
+        fontSize: FS.xs,
         fontFamily: "var(--font-mono, monospace)",
         background: bg,
         border: `1px solid ${border}`,
@@ -267,7 +268,7 @@ function LevelCard({
         alignItems: "center",
         justifyContent: "center",
         fontWeight: 800,
-        fontSize: "0.85rem",
+        fontSize: FS.sm,
         flexShrink: 0,
       }}>
         {meta.level}
@@ -276,11 +277,11 @@ function LevelCard({
       {/* Info */}
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap" }}>
-          <span style={{ fontWeight: 700, fontSize: "0.9rem", color: "var(--text-primary)" }}>
+          <span style={{ fontWeight: 700, fontSize: FS.sm, color: "var(--text-primary)" }}>
             {meta.name}
           </span>
           <span style={{
-            fontSize: "0.58rem",
+            fontSize: FS.xs,
             fontWeight: 700,
             padding: "1px 6px",
             borderRadius: 99,
@@ -292,12 +293,12 @@ function LevelCard({
             {diff.label}
           </span>
           {comingSoon && (
-            <span style={{ fontSize: "0.58rem", fontWeight: 700, padding: "1px 6px", borderRadius: 99, background: "#f3f4f6", color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+            <span style={{ fontSize: FS.xs, fontWeight: 700, padding: "1px 6px", borderRadius: 99, background: "#f3f4f6", color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.06em" }}>
               Sắp có
             </span>
           )}
         </div>
-        <div style={{ fontSize: "0.75rem", color: "var(--text-muted)", marginTop: "0.15rem" }}>
+        <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginTop: "0.15rem" }}>
           {meta.description}
         </div>
       </div>
@@ -309,13 +310,13 @@ function LevelCard({
         ) : best ? (
           <div>
             {best.passed && <CheckCircle2 size={14} style={{ color: "#16a34a", marginBottom: 2 }} />}
-            <div style={{ fontSize: "1.1rem", fontWeight: 800, color: best.passed ? "#16a34a" : "var(--text-primary)", lineHeight: 1 }}>
+            <div style={{ fontSize: FS.md, fontWeight: 800, color: best.passed ? "#16a34a" : "var(--text-primary)", lineHeight: 1 }}>
               {best.score}%
             </div>
-            <div style={{ fontSize: "0.6rem", color: "var(--text-muted)" }}>best</div>
+            <div style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>best</div>
           </div>
         ) : (
-          <span style={{ fontSize: "0.78rem", color: "var(--accent-primary)", fontWeight: 600 }}>Bắt đầu →</span>
+          <span style={{ fontSize: FS.xs, color: "var(--accent-primary)", fontWeight: 600 }}>Bắt đầu →</span>
         )}
       </div>
     </div>

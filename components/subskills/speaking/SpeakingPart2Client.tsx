@@ -9,6 +9,7 @@ import {
   dbPart2,
 } from "@/lib/subskills/speaking-part2";
 import { RecordingPanel } from "@/components/subskills/speaking/RecordingPanel";
+import { FS } from "@/lib/ui/scale";
 
 // ─────────────────────────────────────
 // Types
@@ -186,7 +187,7 @@ export default function SpeakingPart2Client({
                 borderColor: difficulty === d ? "var(--accent-primary)" : "var(--border)",
                 background: difficulty === d ? "rgba(59,130,246,0.1)" : "var(--bg-elevated)",
                 color: difficulty === d ? "var(--accent-primary)" : "var(--text-muted)",
-                fontSize: "0.78rem", fontWeight: 600, cursor: "pointer",
+                fontSize: FS.xs, fontWeight: 600, cursor: "pointer",
               }}
             >
               {DIFF_LABEL[d]}
@@ -221,7 +222,7 @@ export default function SpeakingPart2Client({
                   width: 28, height: 28, borderRadius: "50%", flexShrink: 0,
                   background: passed ? "rgba(34,197,94,0.15)" : anyDone ? "rgba(234,179,8,0.15)" : "var(--bg-elevated)",
                   border: `1.5px solid ${passed ? "rgba(34,197,94,0.5)" : anyDone ? "rgba(234,179,8,0.5)" : "var(--border)"}`,
-                  display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.8rem",
+                  display: "flex", alignItems: "center", justifyContent: "center", fontSize: FS.sm,
                 }}>
                   {passed ? "✓" : anyDone ? "…" : "○"}
                 </div>
@@ -229,21 +230,21 @@ export default function SpeakingPart2Client({
                 {/* Info */}
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap" }}>
-                    <span style={{ fontWeight: 700, fontSize: "0.95rem", color: "var(--text-primary)" }}>
+                    <span style={{ fontWeight: 700, fontSize: FS.md, color: "var(--text-primary)" }}>
                       Test {tNum}
                     </span>
                     {hasDraft && (
-                      <span style={{ fontSize: "0.65rem", fontWeight: 600, color: "var(--accent-primary)", background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.3)", borderRadius: 4, padding: "1px 6px" }}>
+                      <span style={{ fontSize: FS.xs, fontWeight: 600, color: "var(--accent-primary)", background: "rgba(59,130,246,0.1)", border: "1px solid rgba(59,130,246,0.3)", borderRadius: 4, padding: "1px 6px" }}>
                         đang làm · câu {draft.idx + 1}/{total || 25}
                       </span>
                     )}
                     {score !== null && (
-                      <span style={{ fontSize: "0.68rem", color: passed ? "rgb(34,197,94)" : "rgb(234,179,8)" }}>
+                      <span style={{ fontSize: FS.xs, color: passed ? "rgb(34,197,94)" : "rgb(234,179,8)" }}>
                         {score}%
                       </span>
                     )}
                   </div>
-                  <div style={{ fontSize: "0.72rem", color: "var(--text-muted)", marginTop: 2 }}>
+                  <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginTop: 2 }}>
                     25 câu · {DIFF_LABEL[difficulty]}
                   </div>
                 </div>
@@ -253,14 +254,14 @@ export default function SpeakingPart2Client({
                   {hasDraft && (
                     <button
                       onClick={() => startTest(tNum, difficulty, draft)}
-                      style={{ padding: "5px 12px", borderRadius: 6, border: "1.5px solid var(--accent-primary)", background: "rgba(59,130,246,0.1)", color: "var(--accent-primary)", fontSize: "0.75rem", fontWeight: 600, cursor: "pointer" }}
+                      style={{ padding: "5px 12px", borderRadius: 6, border: "1.5px solid var(--accent-primary)", background: "rgba(59,130,246,0.1)", color: "var(--accent-primary)", fontSize: FS.xs, fontWeight: 600, cursor: "pointer" }}
                     >
                       Tiếp tục
                     </button>
                   )}
                   <button
                     onClick={() => startTest(tNum, difficulty)}
-                    style={{ padding: "5px 12px", borderRadius: 6, border: "1.5px solid var(--border)", background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: "0.75rem", fontWeight: 600, cursor: "pointer" }}
+                    style={{ padding: "5px 12px", borderRadius: 6, border: "1.5px solid var(--border)", background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: FS.xs, fontWeight: 600, cursor: "pointer" }}
                   >
                     {anyDone ? "Làm lại" : "Làm"}
                   </button>
@@ -281,17 +282,17 @@ export default function SpeakingPart2Client({
     const passed = score >= PASS_THRESHOLD;
     return (
       <div style={{ textAlign: "center", padding: "2rem 1rem" }}>
-        <div style={{ fontSize: "3rem", marginBottom: "0.5rem" }}>{passed ? "🎉" : "💪"}</div>
-        <div style={{ fontSize: "2.5rem", fontWeight: 800, color: passed ? "rgb(34,197,94)" : "var(--text-primary)", marginBottom: "0.25rem" }}>
+        <div style={{ fontSize: FS.xl, marginBottom: "0.5rem" }}>{passed ? "🎉" : "💪"}</div>
+        <div style={{ fontSize: FS.xl, fontWeight: 800, color: passed ? "rgb(34,197,94)" : "var(--text-primary)", marginBottom: "0.25rem" }}>
           {score}%
         </div>
-        <div style={{ fontSize: "0.9rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>
+        <div style={{ fontSize: FS.sm, color: "var(--text-muted)", marginBottom: "1.5rem" }}>
           {correctCount}/{total} câu đúng · Test {testNum} · {DIFF_LABEL[difficulty]}
         </div>
         <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
           <button
             onClick={() => { setPhase("intro"); setIdx(0); setCorrect(0); setSubmitted(false); }}
-            style={{ padding: "8px 20px", borderRadius: 8, border: "1.5px solid var(--border)", background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: "0.85rem", fontWeight: 600, cursor: "pointer" }}
+            style={{ padding: "8px 20px", borderRadius: 8, border: "1.5px solid var(--border)", background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: FS.sm, fontWeight: 600, cursor: "pointer" }}
           >
             ← Quay lại danh sách
           </button>
@@ -299,7 +300,7 @@ export default function SpeakingPart2Client({
             <button
               key={d}
               onClick={() => startTest(testNum, d)}
-              style={{ padding: "8px 20px", borderRadius: 8, border: "1.5px solid var(--accent-primary)", background: "rgba(59,130,246,0.1)", color: "var(--accent-primary)", fontSize: "0.85rem", fontWeight: 600, cursor: "pointer" }}
+              style={{ padding: "8px 20px", borderRadius: 8, border: "1.5px solid var(--accent-primary)", background: "rgba(59,130,246,0.1)", color: "var(--accent-primary)", fontSize: FS.sm, fontWeight: 600, cursor: "pointer" }}
             >
               Thử {DIFF_LABEL[d]}
             </button>
@@ -327,10 +328,10 @@ export default function SpeakingPart2Client({
       {/* Progress bar */}
       <div style={{ marginBottom: "1rem" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 4 }}>
-          <span style={{ fontSize: "0.72rem", color: "var(--text-muted)" }}>
+          <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>
             Test {testNum} · {DIFF_LABEL[difficulty]}
           </span>
-          <span style={{ fontSize: "0.72rem", color: "var(--text-muted)" }}>
+          <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>
             {idx + 1} / {total}
           </span>
         </div>
@@ -338,12 +339,12 @@ export default function SpeakingPart2Client({
           <div style={{ height: "100%", width: `${((idx + 1) / total) * 100}%`, background: "var(--accent-primary)", borderRadius: 999, transition: "width 0.3s" }} />
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", marginTop: 3 }}>
-          <span style={{ fontSize: "0.65rem", color: "var(--text-muted)" }}>
+          <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>
             {correctCount} đúng
           </span>
           <button
             onClick={() => setPhase("intro")}
-            style={{ fontSize: "0.65rem", color: "var(--text-muted)", background: "none", border: "none", cursor: "pointer", padding: 0 }}
+            style={{ fontSize: FS.xs, color: "var(--text-muted)", background: "none", border: "none", cursor: "pointer", padding: 0 }}
           >
             ← Thoát
           </button>
@@ -368,7 +369,7 @@ export default function SpeakingPart2Client({
 
         <div style={{ padding: "1.5rem 1.75rem" }}>
           {/* Instruction */}
-          <p style={{ margin: "0 0 1.1rem", fontSize: "1.05rem", fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.55 }}>
+          <p style={{ margin: "0 0 1.1rem", fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.55 }}>
             {currentEx.instruction}
           </p>
 
@@ -397,7 +398,7 @@ export default function SpeakingPart2Client({
                       padding: "0.85rem 1.1rem", borderRadius: 8,
                       border: `1.5px solid ${borderColor}`,
                       background: bg, color: textColor,
-                      fontSize: "0.97rem", textAlign: "left", cursor: submitted ? "default" : "pointer",
+                      fontSize: FS.md, textAlign: "left", cursor: submitted ? "default" : "pointer",
                       transition: "all 0.15s",
                     }}
                   >
@@ -413,7 +414,7 @@ export default function SpeakingPart2Client({
           {currentEx.type === "essay_typing" && (
             <div>
               {currentEx.content && (
-                <div style={{ marginBottom: "0.85rem", padding: "0.85rem 1.1rem", background: "var(--bg-elevated)", borderRadius: 8, border: "1px solid var(--border)", fontSize: "1rem", color: "var(--text-primary)", lineHeight: 1.65 }}>
+                <div style={{ marginBottom: "0.85rem", padding: "0.85rem 1.1rem", background: "var(--bg-elevated)", borderRadius: 8, border: "1px solid var(--border)", fontSize: FS.md, color: "var(--text-primary)", lineHeight: 1.65 }}>
                   {currentEx.content}
                 </div>
               )}
@@ -432,7 +433,7 @@ export default function SpeakingPart2Client({
                   background: submitted
                     ? (isCorrect ? "rgba(34,197,94,0.08)" : "rgba(239,68,68,0.06)")
                     : "var(--bg-primary)",
-                  color: "var(--text-primary)", fontSize: "1rem",
+                  color: "var(--text-primary)", fontSize: FS.md,
                   boxSizing: "border-box", outline: "none",
                 }}
               />
@@ -442,10 +443,10 @@ export default function SpeakingPart2Client({
           {/* Result feedback */}
           {submitted && (
             <div style={{ marginTop: "0.85rem", padding: "0.85rem 1.1rem", borderRadius: 8, background: isCorrect ? "rgba(34,197,94,0.08)" : "rgba(239,68,68,0.06)", border: `1px solid ${isCorrect ? "rgba(34,197,94,0.25)" : "rgba(239,68,68,0.2)"}` }}>
-              <div style={{ fontWeight: 700, color: isCorrect ? "rgb(34,197,94)" : "rgb(239,68,68)", marginBottom: 5, fontSize: "0.95rem" }}>
+              <div style={{ fontWeight: 700, color: isCorrect ? "rgb(34,197,94)" : "rgb(239,68,68)", marginBottom: 5, fontSize: FS.md }}>
                 {isCorrect ? "✓ Chính xác!" : `✗ Sai — Đáp án đúng: ${correctOptionText}`}
               </div>
-              <div style={{ fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
+              <div style={{ fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.6 }}>
                 {currentEx.explanation}
               </div>
             </div>
@@ -477,7 +478,7 @@ export default function SpeakingPart2Client({
               padding: "8px 22px", borderRadius: 8,
               border: "none", background: canCheck ? "var(--accent-primary)" : "var(--bg-elevated)",
               color: canCheck ? "#fff" : "var(--text-muted)",
-              fontSize: "0.88rem", fontWeight: 600, cursor: canCheck ? "pointer" : "default",
+              fontSize: FS.sm, fontWeight: 600, cursor: canCheck ? "pointer" : "default",
             }}
           >
             Kiểm tra
@@ -485,7 +486,7 @@ export default function SpeakingPart2Client({
         ) : (
           <button
             onClick={handleNext}
-            style={{ padding: "8px 22px", borderRadius: 8, border: "none", background: "var(--accent-primary)", color: "#fff", fontSize: "0.88rem", fontWeight: 600, cursor: "pointer" }}
+            style={{ padding: "8px 22px", borderRadius: 8, border: "none", background: "var(--accent-primary)", color: "#fff", fontSize: FS.sm, fontWeight: 600, cursor: "pointer" }}
           >
             {idx + 1 >= total ? "Hoàn thành →" : "Tiếp theo →"}
           </button>

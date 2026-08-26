@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import type { IpaExercise, IpaItem } from "@/lib/subskills/ipa/types";
 import { ipaItemCorrect } from "@/lib/subskills/ipa/grade";
 import { playWord } from "@/lib/subskills/ipa/audio";
+import { FS } from "@/lib/ui/scale";
 
 export type ExerciseProgress = { score: number; passed: boolean };
 export type ExerciseDraft = { itemIdx: number; correctCount: number };
@@ -75,18 +76,18 @@ export function IpaSectionClient({ section, difficulty, passThreshold, exercises
               background: b?.passed ? "rgba(34,197,94,0.15)" : b ? "rgba(59,130,246,0.12)" : "var(--bg-elevated)",
               border: `1.5px solid ${b?.passed ? "rgba(34,197,94,0.5)" : b ? "rgba(59,130,246,0.4)" : "var(--border)"}`,
               display: "flex", alignItems: "center", justifyContent: "center",
-              fontSize: "0.72rem", fontWeight: 700,
+              fontSize: FS.xs, fontWeight: 700,
               color: b?.passed ? "rgb(34,197,94)" : b ? "var(--accent-primary)" : "var(--text-muted)",
             }}>
               {b?.passed ? "✓" : i + 1}
             </div>
             <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ fontSize: "0.92rem", fontWeight: 700, color: "var(--text-primary)" }}>{ex.title}</div>
-              <div style={{ fontSize: "0.76rem", color: "var(--text-secondary)", marginTop: 2 }}>{ex.instruction}</div>
+              <div style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)" }}>{ex.title}</div>
+              <div style={{ fontSize: FS.xs, color: "var(--text-secondary)", marginTop: 2 }}>{ex.instruction}</div>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexShrink: 0 }}>
-              {draft && <span style={{ fontSize: "0.62rem", fontWeight: 600, color: "var(--accent-primary)", background: "rgba(59,130,246,0.1)", borderRadius: 4, padding: "2px 6px" }}>Tiếp tục</span>}
-              {b && <span style={{ fontSize: "0.72rem", color: b.passed ? "rgb(34,197,94)" : "var(--text-muted)" }}>{b.score}%</span>}
+              {draft && <span style={{ fontSize: FS.xs, fontWeight: 600, color: "var(--accent-primary)", background: "rgba(59,130,246,0.1)", borderRadius: 4, padding: "2px 6px" }}>Tiếp tục</span>}
+              {b && <span style={{ fontSize: FS.xs, color: b.passed ? "rgb(34,197,94)" : "var(--text-muted)" }}>{b.score}%</span>}
               <span style={{ color: "var(--accent-primary)" }}>→</span>
             </div>
           </button>
@@ -169,9 +170,9 @@ function ExerciseRunner({
     const passed = score >= passThreshold;
     return (
       <div style={{ textAlign: "center", padding: "2rem 1rem" }}>
-        <div style={{ fontSize: "2.5rem", marginBottom: "0.5rem" }}>{passed ? "🎉" : "💪"}</div>
-        <div style={{ fontSize: "2rem", fontWeight: 700, color: passed ? "rgb(34,197,94)" : "var(--text-primary)" }}>{score}%</div>
-        <p style={{ color: "var(--text-secondary)", fontSize: "0.85rem", margin: "0.5rem 0 1.5rem" }}>
+        <div style={{ fontSize: FS.xl, marginBottom: "0.5rem" }}>{passed ? "🎉" : "💪"}</div>
+        <div style={{ fontSize: FS.xl, fontWeight: 700, color: passed ? "rgb(34,197,94)" : "var(--text-primary)" }}>{score}%</div>
+        <p style={{ color: "var(--text-secondary)", fontSize: FS.sm, margin: "0.5rem 0 1.5rem" }}>
           {passed ? `Đạt! (≥ ${passThreshold}%)` : `Chưa đạt (cần ${passThreshold}%). Làm lại nhé!`}
         </p>
         <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
@@ -189,22 +190,22 @@ function ExerciseRunner({
     <div>
       {/* Progress + exit */}
       <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem" }}>
-        <button type="button" onClick={onExit} style={{ ...btnGhost, padding: "0.3rem 0.7rem", fontSize: "0.75rem" }}>← Thoát</button>
+        <button type="button" onClick={onExit} style={{ ...btnGhost, padding: "0.3rem 0.7rem", fontSize: FS.xs }}>← Thoát</button>
         <div style={{ flex: 1, height: 4, background: "var(--border)", borderRadius: 999 }}>
           <div style={{ height: "100%", width: `${(idx / items.length) * 100}%`, background: "var(--accent-primary)", borderRadius: 999, transition: "width 0.2s" }} />
         </div>
-        <span style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>{idx + 1}/{items.length}</span>
+        <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>{idx + 1}/{items.length}</span>
       </div>
 
-      <div style={{ fontSize: "0.8rem", color: "var(--text-secondary)", marginBottom: "0.75rem" }}>{item.prompt ?? exercise.instruction}</div>
+      <div style={{ fontSize: FS.sm, color: "var(--text-secondary)", marginBottom: "0.75rem" }}>{item.prompt ?? exercise.instruction}</div>
 
       {/* Stimulus */}
       {item.kind === "audiochoice" ? (
-        <button type="button" onClick={() => item.audio && void playWord(item.audio)} style={{ ...btnPrimary, fontSize: "1rem", padding: "0.9rem 1.5rem", margin: "0 auto 1.25rem", display: "block" }}>
+        <button type="button" onClick={() => item.audio && void playWord(item.audio)} style={{ ...btnPrimary, fontSize: FS.md, padding: "0.9rem 1.5rem", margin: "0 auto 1.25rem", display: "block" }}>
           🔊 Nghe lại
         </button>
       ) : item.display ? (
-        <div style={{ textAlign: "center", fontSize: "1.6rem", fontWeight: 700, color: "var(--text-primary)", margin: "0.5rem 0 1.25rem" }}>{item.display}</div>
+        <div style={{ textAlign: "center", fontSize: FS.lg, fontWeight: 700, color: "var(--text-primary)", margin: "0.5rem 0 1.25rem" }}>{item.display}</div>
       ) : null}
 
       {/* Options */}
@@ -225,7 +226,7 @@ function ExerciseRunner({
               style={{
                 padding: "0.85rem 1.1rem", borderRadius: "var(--radius-md, 8px)",
                 border: `1.5px solid ${border}`, background: bg,
-                color: "var(--text-primary)", fontSize: "1rem", fontWeight: 600,
+                color: "var(--text-primary)", fontSize: FS.md, fontWeight: 600,
                 cursor: locked ? "default" : "pointer", textAlign: "center",
               }}
             >
@@ -238,10 +239,10 @@ function ExerciseRunner({
       {/* Feedback */}
       {answered && (
         <div style={{ marginTop: "1rem", padding: "0.9rem 1.1rem", borderRadius: "var(--radius-md, 8px)", background: "var(--bg-secondary)", border: "1px solid var(--border)" }}>
-          <div style={{ fontWeight: 700, fontSize: "0.85rem", color: ipaItemCorrect(item, selected) ? "rgb(34,197,94)" : "rgb(239,68,68)", marginBottom: 4 }}>
+          <div style={{ fontWeight: 700, fontSize: FS.sm, color: ipaItemCorrect(item, selected) ? "rgb(34,197,94)" : "rgb(239,68,68)", marginBottom: 4 }}>
             {ipaItemCorrect(item, selected) ? "✓ Chính xác" : "✗ Chưa đúng"}
           </div>
-          <div style={{ fontSize: "0.82rem", color: "var(--text-secondary)", lineHeight: 1.5 }}>{item.explanation}</div>
+          <div style={{ fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.5 }}>{item.explanation}</div>
           <button type="button" onClick={next} style={{ ...btnPrimary, marginTop: "0.9rem" }}>
             {idx === items.length - 1 ? "Xem kết quả" : "Câu tiếp →"}
           </button>
@@ -253,9 +254,9 @@ function ExerciseRunner({
 
 const btnPrimary: React.CSSProperties = {
   padding: "0.6rem 1.2rem", borderRadius: "var(--radius-md, 8px)", border: "none",
-  background: "var(--accent-primary)", color: "#fff", fontSize: "0.85rem", fontWeight: 600, cursor: "pointer",
+  background: "var(--accent-primary)", color: "#fff", fontSize: FS.sm, fontWeight: 600, cursor: "pointer",
 };
 const btnGhost: React.CSSProperties = {
   padding: "0.6rem 1.2rem", borderRadius: "var(--radius-md, 8px)", border: "1px solid var(--border)",
-  background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: "0.85rem", fontWeight: 600, cursor: "pointer",
+  background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: FS.sm, fontWeight: 600, cursor: "pointer",
 };

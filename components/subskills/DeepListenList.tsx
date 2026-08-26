@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { loadDeepProgress, type DeepProgress } from "@/lib/subskills/part3/deep-progress";
+import { FS } from "@/lib/ui/scale";
 
 export type DeepListRow = {
   groupId: string;
@@ -31,7 +32,7 @@ export default function DeepListenList({ rows }: { rows: DeepListRow[] }) {
 
   return (
     <>
-      <p style={{ margin: "0 0 1rem", fontSize: "0.78rem", color: "var(--text-muted)" }}>
+      <p style={{ margin: "0 0 1rem", fontSize: FS.xs, color: "var(--text-muted)" }}>
         {rows.length} đoạn · đã xong {doneCount}
       </p>
 
@@ -75,7 +76,7 @@ export default function DeepListenList({ rows }: { rows: DeepListRow[] }) {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: "0.68rem",
+                  fontSize: FS.xs,
                   fontWeight: 700,
                   background: done ? "rgba(34,197,94,0.15)" : p ? "rgba(234,179,8,0.15)" : "var(--bg-elevated)",
                   border: `1.5px solid ${done ? "rgba(34,197,94,0.5)" : p ? "rgba(234,179,8,0.45)" : "var(--border)"}`,
@@ -86,13 +87,13 @@ export default function DeepListenList({ rows }: { rows: DeepListRow[] }) {
               </div>
 
               <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--text-primary)", marginBottom: "0.15rem" }}>
+                <div style={{ fontSize: FS.sm, fontWeight: 600, color: "var(--text-primary)", marginBottom: "0.15rem" }}>
                   {r.label}
                 </div>
                 <p
                   style={{
                     margin: 0,
-                    fontSize: "0.76rem",
+                    fontSize: FS.xs,
                     color: "var(--text-secondary)",
                     lineHeight: 1.5,
                     overflow: "hidden",
@@ -104,11 +105,11 @@ export default function DeepListenList({ rows }: { rows: DeepListRow[] }) {
                 </p>
               </div>
 
-              <span style={{ fontSize: "0.68rem", color: "var(--text-muted)", flexShrink: 0, alignSelf: "center", whiteSpace: "nowrap" }}>
+              <span style={{ fontSize: FS.xs, color: "var(--text-muted)", flexShrink: 0, alignSelf: "center", whiteSpace: "nowrap" }}>
                 {p ? `${p.plays} lượt nghe` : `${r.lineCount} lượt nói · ${r.keywordCount} từ`}
               </span>
 
-              <span className="r-arrow" style={{ fontSize: "0.78rem", color: "var(--accent-primary)", flexShrink: 0, alignSelf: "center" }}>→</span>
+              <span className="r-arrow" style={{ fontSize: FS.xs, color: "var(--accent-primary)", flexShrink: 0, alignSelf: "center" }}>→</span>
             </Link>
           );
         })}

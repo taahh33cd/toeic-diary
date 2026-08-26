@@ -3,6 +3,7 @@ import Link from "next/link";
 import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { PART2_SETS } from "@/lib/subskills";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 
 export const metadata: Metadata = { title: "Tiến độ Subskills — TOEIC Part 2" };
 
@@ -50,7 +51,7 @@ function DifficultySection({
         paddingBottom: "0.6rem",
         borderBottom: `2px solid ${accentColor}44`,
       }}>
-        <span style={{ fontSize: "1rem", fontWeight: 800, color: accentColor }}>{title}</span>
+        <span style={{ fontSize: FS.md, fontWeight: 800, color: accentColor }}>{title}</span>
         <div style={{ display: "flex", gap: "0.5rem", marginLeft: "auto", flexWrap: "wrap" }}>
           {[
             { v: `${passedSets}/${totalSets}`, l: "nhóm pass",  c: accentColor },
@@ -66,15 +67,15 @@ function DifficultySection({
               alignItems: "baseline",
               gap: "0.25rem",
             }}>
-              <span style={{ fontSize: "0.9rem", fontWeight: 700, color: c }}>{v}</span>
-              <span style={{ fontSize: "0.62rem", color: "var(--text-muted)" }}>{l}</span>
+              <span style={{ fontSize: FS.sm, fontWeight: 700, color: c }}>{v}</span>
+              <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>{l}</span>
             </div>
           ))}
         </div>
       </div>
 
       {!anyAttempted ? (
-        <p style={{ fontSize: "0.8rem", color: "var(--text-muted)", fontStyle: "italic", padding: "0.75rem 0" }}>
+        <p style={{ fontSize: FS.sm, color: "var(--text-muted)", fontStyle: "italic", padding: "0.75rem 0" }}>
           Chưa có bài nào được làm ở mức độ này.
         </p>
       ) : (
@@ -109,12 +110,12 @@ function DifficultySection({
                   }}
                 >
                   <div style={{ width: 10, height: 10, borderRadius: "50%", flexShrink: 0, background: "var(--border)" }} />
-                  <div style={{ flex: 1, fontSize: "0.88rem", fontWeight: 600, color: "var(--text-primary)" }}>
+                  <div style={{ flex: 1, fontSize: FS.sm, fontWeight: 600, color: "var(--text-primary)" }}>
                     {set.label}
-                    <span style={{ fontSize: "0.72rem", color: "var(--text-muted)", fontStyle: "italic", marginLeft: "0.35rem" }}>{set.labelVi}</span>
+                    <span style={{ fontSize: FS.xs, color: "var(--text-muted)", fontStyle: "italic", marginLeft: "0.35rem" }}>{set.labelVi}</span>
                   </div>
-                  <span style={{ fontSize: "0.72rem", color: "var(--text-muted)" }}>chưa làm</span>
-                  <span style={{ fontSize: "0.75rem", color: "var(--accent-primary)", flexShrink: 0 }}>→</span>
+                  <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>chưa làm</span>
+                  <span style={{ fontSize: FS.xs, color: "var(--accent-primary)", flexShrink: 0 }}>→</span>
                 </Link>
               );
             }
@@ -142,8 +143,8 @@ function DifficultySection({
 
                 {/* Label */}
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <span style={{ fontSize: "0.88rem", fontWeight: 600, color: "var(--text-primary)" }}>{set.label}</span>
-                  <span style={{ fontSize: "0.72rem", color: "var(--text-muted)", fontStyle: "italic", marginLeft: "0.35rem" }}>{set.labelVi}</span>
+                  <span style={{ fontSize: FS.sm, fontWeight: 600, color: "var(--text-primary)" }}>{set.label}</span>
+                  <span style={{ fontSize: FS.xs, color: "var(--text-muted)", fontStyle: "italic", marginLeft: "0.35rem" }}>{set.labelVi}</span>
                 </div>
 
                 {/* Exercise dots */}
@@ -154,7 +155,7 @@ function DifficultySection({
                       style={{
                         width: 22, height: 22, borderRadius: 5,
                         display: "inline-flex", alignItems: "center", justifyContent: "center",
-                        fontSize: "0.6rem", fontWeight: 700,
+                        fontSize: FS.xs, fontWeight: 700,
                         background: b?.passed ? "rgba(34,197,94,0.18)" : b ? "rgba(239,68,68,0.13)" : "var(--bg-elevated)",
                         color: b?.passed ? "rgb(34,197,94)" : b ? "rgb(239,68,68)" : "var(--text-muted)",
                         border: `1px solid ${b?.passed ? "rgba(34,197,94,0.35)" : b ? "rgba(239,68,68,0.25)" : "var(--border)"}`,
@@ -167,13 +168,13 @@ function DifficultySection({
 
                 {/* Avg score */}
                 <div style={{
-                  width: 44, textAlign: "right", fontSize: "0.82rem", fontWeight: 700, flexShrink: 0,
+                  width: 44, textAlign: "right", fontSize: FS.sm, fontWeight: 700, flexShrink: 0,
                   color: avg === null ? "var(--text-muted)" : passAll ? "rgb(34,197,94)" : "var(--text-primary)",
                 }}>
                   {avg === null ? "—" : `${avg}%`}
                 </div>
 
-                <span style={{ fontSize: "0.75rem", color: "var(--accent-primary)", flexShrink: 0 }}>→</span>
+                <span style={{ fontSize: FS.xs, color: "var(--accent-primary)", flexShrink: 0 }}>→</span>
               </Link>
             );
           })}
@@ -206,17 +207,17 @@ export default async function SubskillsProgressPage() {
   return (
     <div
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 900,
+        padding: `${PAD_Y} ${PAD_X}`,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         width: "100%",
         boxSizing: "border-box",
       }}
     >
       {/* Breadcrumb */}
-      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: "0.8rem", color: "var(--text-muted)", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: FS.sm, color: "var(--text-muted)", flexWrap: "wrap" }}>
         <Link href="/subskills" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Subskills</Link>
         <span>›</span>
         <Link href="/subskills/listening/part2" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Listening · Part 2</Link>
@@ -226,7 +227,7 @@ export default async function SubskillsProgressPage() {
 
       {/* Page title */}
       <div style={{ marginBottom: "1.75rem" }}>
-        <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: "0.4rem" }}>
+        <p style={{ fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: "0.4rem" }}>
           Subskills · TOEIC Part 2
         </p>
         <h1 style={{ fontSize: "clamp(1.4rem, 3vw, 1.9rem)", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
@@ -241,9 +242,9 @@ export default async function SubskillsProgressPage() {
           { value: `${overallPassed}/${totalEx * 3}`, label: "Bài đã pass",      color: "#22c55e" },
         ].map(({ value, label, color }) => (
           <div key={label} style={{ padding: "1rem 1.25rem", borderRadius: "var(--radius-lg, 12px)", border: "1px solid var(--border)", background: "var(--bg-elevated)" }}>
-            <div style={{ fontSize: "1.6rem", fontWeight: 700, color, lineHeight: 1 }}>{value}</div>
-            <div style={{ fontSize: "0.7rem", color: "var(--text-muted)", marginTop: "0.3rem" }}>{label}</div>
-            <div style={{ fontSize: "0.62rem", color: "var(--text-muted)", marginTop: "0.1rem" }}>Easy + Medium + Hard</div>
+            <div style={{ fontSize: FS.lg, fontWeight: 700, color, lineHeight: 1 }}>{value}</div>
+            <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginTop: "0.3rem" }}>{label}</div>
+            <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginTop: "0.1rem" }}>Easy + Medium + Hard</div>
           </div>
         ))}
       </div>
@@ -256,7 +257,7 @@ export default async function SubskillsProgressPage() {
       {/* Footer */}
       <div style={{ width: "100%", marginTop: "1rem" }}>
         <div style={{ height: 1, background: "var(--border)" }} />
-        <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.08em" }}>
+        <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.08em" }}>
           TOEIC DICTATION DIARY
         </p>
       </div>

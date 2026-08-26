@@ -3,6 +3,7 @@ import Link from "next/link";
 import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { PART2_SETS } from "@/lib/subskills";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 
 export const metadata: Metadata = { title: "Subskills — TOEIC" };
 
@@ -113,10 +114,10 @@ export default async function SubskillsPage() {
     <div
       className="page-enter"
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 1100,
+        padding: `${PAD_Y} ${PAD_X}`,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         width: "100%",
         boxSizing: "border-box",
@@ -140,7 +141,7 @@ export default async function SubskillsPage() {
       >
         <div>
           <p style={{
-            fontSize: "0.72rem",
+            fontSize: FS.xs,
             color: "rgba(255,255,255,0.65)",
             marginBottom: "0.5rem",
             letterSpacing: "0.05em",
@@ -159,7 +160,7 @@ export default async function SubskillsPage() {
           }}>
             Xin chào, {displayName}! 👋
           </h1>
-          <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>
+          <p style={{ fontSize: FS.sm, color: "rgba(255,255,255,0.75)", lineHeight: 1.6 }}>
             Luyện từng kỹ năng TOEIC theo từng loại câu hỏi — chọn kỹ năng để bắt đầu.
           </p>
         </div>
@@ -183,8 +184,8 @@ export default async function SubskillsPage() {
                 minWidth: 90,
               }}
             >
-              <span style={{ fontSize: "1.5rem", fontWeight: 700, color: "#fff", lineHeight: 1 }}>{value}</span>
-              <span style={{ fontSize: "0.65rem", color: "rgba(255,255,255,0.7)", marginTop: "0.3rem", textAlign: "center" }}>{label}</span>
+              <span style={{ fontSize: FS.lg, fontWeight: 700, color: "#fff", lineHeight: 1 }}>{value}</span>
+              <span style={{ fontSize: FS.xs, color: "rgba(255,255,255,0.7)", marginTop: "0.3rem", textAlign: "center" }}>{label}</span>
             </div>
           ))}
         </div>
@@ -193,7 +194,7 @@ export default async function SubskillsPage() {
       {/* Section divider */}
       <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>
         <div style={{ flex: 1, height: 1, background: "var(--border)" }} />
-        <span style={{ fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", whiteSpace: "nowrap" }}>
+        <span style={{ fontSize: FS.xs, letterSpacing: "0.15em", textTransform: "uppercase", whiteSpace: "nowrap" }}>
           Chọn kỹ năng luyện tập
         </span>
         <div style={{ flex: 1, height: 1, background: "var(--border)" }} />
@@ -223,12 +224,12 @@ export default async function SubskillsPage() {
                 }}
               >
                 <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.75rem" }}>
-                  <span style={{ fontSize: "1.4rem" }}>{skill.emoji}</span>
-                  <span style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)" }}>{skill.label}</span>
+                  <span style={{ fontSize: FS.lg }}>{skill.emoji}</span>
+                  <span style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)" }}>{skill.label}</span>
                 </div>
                 <span style={{
                   display: "inline-block",
-                  fontSize: "0.65rem",
+                  fontSize: FS.xs,
                   fontWeight: 600,
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",
@@ -268,16 +269,16 @@ export default async function SubskillsPage() {
             >
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.75rem" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
-                  <span style={{ fontSize: "1.4rem" }}>{skill.emoji}</span>
-                  <span style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)" }}>{skill.label}</span>
+                  <span style={{ fontSize: FS.lg }}>{skill.emoji}</span>
+                  <span style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)" }}>{skill.label}</span>
                 </div>
-                <span style={{ fontSize: "0.85rem", color: "var(--accent-primary)" }}>→</span>
+                <span style={{ fontSize: FS.sm, color: "var(--accent-primary)" }}>→</span>
               </div>
-              <div style={{ fontSize: "0.78rem", color: "var(--text-muted)", lineHeight: 1.5 }}>
+              <div style={{ fontSize: FS.xs, color: "var(--text-muted)", lineHeight: 1.5 }}>
                 {skill.description}
               </div>
               {statLine && (
-                <div style={{ marginTop: "0.5rem", fontSize: "0.7rem", color: "var(--text-secondary)", paddingTop: "0.5rem", borderTop: "1px solid var(--border)" }}>
+                <div style={{ marginTop: "0.5rem", fontSize: FS.xs, color: "var(--text-secondary)", paddingTop: "0.5rem", borderTop: "1px solid var(--border)" }}>
                   {statLine}
                 </div>
               )}
@@ -287,9 +288,9 @@ export default async function SubskillsPage() {
       </div>
 
       {/* Footer */}
-      <div style={{ width: "100%", marginTop: "3rem" }}>
+      <div style={{ width: "100%", marginTop: "auto", paddingTop: "3rem" }}>
         <div style={{ height: 1, background: "var(--border)" }} />
-        <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.08em" }}>
+        <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.08em" }}>
           TOEIC DICTATION DIARY
         </p>
       </div>

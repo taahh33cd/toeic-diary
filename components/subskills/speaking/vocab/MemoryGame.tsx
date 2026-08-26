@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { FS } from "@/lib/ui/scale";
 import {
   type VocabWord, UNSPLASH, seededShuffle, MEMORY_PAIRS,
 } from "@/lib/subskills/speaking-p2-vocab";
@@ -66,19 +67,19 @@ export default function MemoryGame({ words, label, onExit }: Props) {
     <div>
       <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", flexWrap: "wrap", marginBottom: "0.9rem" }}>
         <button onClick={onExit} style={btnGhostSm}>← Thoát</button>
-        <span style={{ fontSize: "0.82rem", color: "var(--text-muted)" }}>Lật thẻ ghi nhớ · {label}</span>
-        <span style={{ marginLeft: "auto", fontSize: "0.82rem", color: "var(--text-muted)" }}>
+        <span style={{ fontSize: FS.sm, color: "var(--text-muted)" }}>Lật thẻ ghi nhớ · {label}</span>
+        <span style={{ marginLeft: "auto", fontSize: FS.sm, color: "var(--text-muted)" }}>
           {matched.length}/{picked.length} cặp · {moves} lượt
         </span>
       </div>
 
       {won && (
         <div style={{ textAlign: "center", background: "rgba(34,197,94,0.09)", border: `1px solid rgba(34,197,94,0.35)`, borderRadius: "var(--radius-lg)", padding: "1.1rem", marginBottom: "1rem" }}>
-          <div style={{ fontSize: "2rem" }}>{moves <= picked.length + 2 ? "🏆" : "🎉"}</div>
-          <div style={{ fontSize: "1.05rem", fontWeight: 800, color: GREEN }}>
+          <div style={{ fontSize: FS.xl }}>{moves <= picked.length + 2 ? "🏆" : "🎉"}</div>
+          <div style={{ fontSize: FS.md, fontWeight: 800, color: GREEN }}>
             Ghép xong trong {moves} lượt!
           </div>
-          <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", margin: "0.3rem 0 0.9rem" }}>
+          <p style={{ fontSize: FS.sm, color: "var(--text-muted)", margin: "0.3rem 0 0.9rem" }}>
             {moves <= picked.length + 2 ? "Gần như không sai lượt nào." : `Ít nhất có thể làm trong ${picked.length} lượt — thử lại xem.`}
           </p>
           <button onClick={restart} style={btnPrimary}>Bộ thẻ khác →</button>
@@ -104,28 +105,28 @@ export default function MemoryGame({ words, label, onExit }: Props) {
               }}
             >
               {!isOpen ? (
-                <span style={{ fontSize: "1.8rem", opacity: 0.35 }}>❓</span>
+                <span style={{ fontSize: FS.xl, opacity: 0.35 }}>❓</span>
               ) : c.side === "prompt" ? (
                 <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column" }}>
                   {c.word.swatch ? (
                     <>
                       <div style={{ width: "100%", flex: 1, background: c.word.swatch, minHeight: 0 }} />
-                      <div style={{ padding: "0.35rem", fontSize: "0.76rem", color: "var(--text-muted)" }}>{c.word.vi}</div>
+                      <div style={{ padding: "0.35rem", fontSize: FS.xs, color: "var(--text-muted)" }}>{c.word.vi}</div>
                     </>
                   ) : c.word.photo ? (
                     <>
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={UNSPLASH(c.word.photo, 300)} alt="" style={{ width: "100%", flex: 1, objectFit: "contain", minHeight: 0 }} />
-                      <div style={{ padding: "0.35rem", fontSize: "0.76rem", color: "var(--text-muted)" }}>{c.word.vi}</div>
+                      <div style={{ padding: "0.35rem", fontSize: FS.xs, color: "var(--text-muted)" }}>{c.word.vi}</div>
                     </>
                   ) : (
-                    <div style={{ margin: "auto", padding: "0.5rem", fontSize: "0.95rem", fontWeight: 700, color: "var(--text-primary)" }}>
+                    <div style={{ margin: "auto", padding: "0.5rem", fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)" }}>
                       {c.word.vi}
                     </div>
                   )}
                 </div>
               ) : (
-                <div style={{ padding: "0.5rem", fontSize: "1rem", fontWeight: 800, color: "var(--accent-primary)" }}>
+                <div style={{ padding: "0.5rem", fontSize: FS.md, fontWeight: 800, color: "var(--accent-primary)" }}>
                   {c.word.en}
                 </div>
               )}
@@ -145,11 +146,11 @@ export default function MemoryGame({ words, label, onExit }: Props) {
 
 const btnPrimary: React.CSSProperties = {
   padding: "0.6rem 1.3rem", borderRadius: 8, border: "none", background: "var(--accent-primary)",
-  color: "#fff", fontSize: "0.92rem", fontWeight: 700, cursor: "pointer",
+  color: "#fff", fontSize: FS.md, fontWeight: 700, cursor: "pointer",
 };
 const btnGhost: React.CSSProperties = {
   padding: "0.55rem 1.1rem", borderRadius: 8, border: "1.5px solid var(--border)",
-  background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: "0.88rem",
+  background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: FS.sm,
   fontWeight: 600, cursor: "pointer",
 };
-const btnGhostSm: React.CSSProperties = { ...btnGhost, padding: "4px 10px", fontSize: "0.75rem", color: "var(--text-muted)" };
+const btnGhostSm: React.CSSProperties = { ...btnGhost, padding: "4px 10px", fontSize: FS.xs, color: "var(--text-muted)" };

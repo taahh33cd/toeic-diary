@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 import {
   WRITING_P3_SKILLS,
   P3_BANDS,
@@ -94,16 +95,16 @@ export default async function WritingPart3Page() {
   return (
     <div
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 1100,
+        padding: `${PAD_Y} ${PAD_X}`,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         width: "100%",
         boxSizing: "border-box",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: "0.8rem", color: "var(--text-muted)", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: FS.sm, color: "var(--text-muted)", flexWrap: "wrap" }}>
         <Link href="/subskills" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Subskills</Link>
         <span>›</span>
         <Link href="/subskills/writing" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Writing</Link>
@@ -112,17 +113,17 @@ export default async function WritingPart3Page() {
       </div>
 
       <div style={{ marginBottom: "1.5rem" }}>
-        <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: "0.3rem" }}>
+        <p style={{ fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: "0.3rem" }}>
           Writing · Part 3
         </p>
         <h1 style={{ fontSize: "clamp(1.3rem, 3vw, 1.7rem)", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.02em", lineHeight: 1.2, margin: 0 }}>
           Viết luận — 14 tầng kỹ năng
         </h1>
-        <p style={{ marginTop: "0.5rem", fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
+        <p style={{ marginTop: "0.5rem", fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.6 }}>
           Một câu duy nhất, 30 phút, tối thiểu 300 từ, chấm trên thang 0–5. Đi từ đọc đúng đề → chọn phe →
           chứng minh bằng ví dụ → dựng khung bài → làm sâu → tinh chỉnh → nộp bài thật.
         </p>
-        <p style={{ marginTop: "0.5rem", fontSize: "0.82rem", color: "var(--text-muted)", lineHeight: 1.6 }}>
+        <p style={{ marginTop: "0.5rem", fontSize: FS.sm, color: "var(--text-muted)", lineHeight: 1.6 }}>
           Mỗi tầng nhắm vào <strong style={{ color: "var(--text-secondary)" }}>đúng một trục trong thang chấm</strong> —
           luyện nhầm trục thì chăm đến mấy cũng đứng yên tại chỗ.
         </p>
@@ -141,12 +142,12 @@ export default async function WritingPart3Page() {
             background: "linear-gradient(135deg, rgba(59,130,246,0.09), rgba(59,130,246,0.02))",
           }}
         >
-          <span style={{ fontSize: "1.1rem", flexShrink: 0, lineHeight: 1.4 }}>🎯</span>
+          <span style={{ fontSize: FS.md, flexShrink: 0, lineHeight: 1.4 }}>🎯</span>
           <div style={{ flex: 1, minWidth: 0 }}>
-            <div style={{ fontSize: "0.88rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.15rem" }}>
+            <div style={{ fontSize: FS.sm, fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.15rem" }}>
               Gợi ý bắt đầu từ Band {suggestedBand} · {P3_BANDS.find((b) => b.id === suggestedBand)?.range}
             </div>
-            <p style={{ fontSize: "0.8rem", color: "var(--text-secondary)", lineHeight: 1.55, margin: 0 }}>
+            <p style={{ fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.55, margin: 0 }}>
               {suggestion.why} Bạn vẫn vào được mọi band khác nếu muốn.
             </p>
           </div>
@@ -155,7 +156,7 @@ export default async function WritingPart3Page() {
 
       <div style={{ height: 1, background: "var(--border)", marginBottom: "1.5rem" }} />
 
-      <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 700, marginBottom: "0.6rem" }}>
+      <p style={{ fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 700, marginBottom: "0.6rem" }}>
         Luyện tập theo band điểm
       </p>
 
@@ -167,19 +168,19 @@ export default async function WritingPart3Page() {
         return (
           <div key={band.id} style={{ marginBottom: "1.75rem" }}>
             <div style={{ display: "flex", alignItems: "baseline", gap: "0.55rem", flexWrap: "wrap", marginBottom: "0.5rem" }}>
-              <span style={{ fontSize: "0.68rem", fontWeight: 800, letterSpacing: "0.08em", color: "var(--accent-primary)", background: "rgba(59,130,246,0.12)", border: "1px solid rgba(59,130,246,0.3)", borderRadius: 5, padding: "2px 8px" }}>
+              <span style={{ fontSize: FS.xs, fontWeight: 800, letterSpacing: "0.08em", color: "var(--accent-primary)", background: "rgba(59,130,246,0.12)", border: "1px solid rgba(59,130,246,0.3)", borderRadius: 5, padding: "2px 8px" }}>
                 BAND {band.id} · {band.range}
               </span>
-              <span style={{ fontSize: "0.92rem", fontWeight: 700, color: "var(--text-primary)" }}>{band.title}</span>
-              <span style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>{band.blurb}</span>
+              <span style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)" }}>{band.title}</span>
+              <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>{band.blurb}</span>
               {isSuggested && (
-                <span style={{ fontSize: "0.62rem", fontWeight: 800, letterSpacing: "0.07em", textTransform: "uppercase", color: "#fff", background: "var(--accent-primary)", borderRadius: 4, padding: "2px 7px" }}>
+                <span style={{ fontSize: FS.xs, fontWeight: 800, letterSpacing: "0.07em", textTransform: "uppercase", color: "#fff", background: "var(--accent-primary)", borderRadius: 4, padding: "2px 7px" }}>
                   Gợi ý cho bạn
                 </span>
               )}
             </div>
 
-            <p style={{ fontSize: "0.76rem", color: "var(--text-muted)", margin: "0 0 0.6rem" }}>
+            <p style={{ fontSize: FS.xs, color: "var(--text-muted)", margin: "0 0 0.6rem" }}>
               Đích của band này: <strong style={{ color: "var(--text-secondary)" }}>{band.goal}</strong>
               {band.id === "A" && " — bài luận chưa phải đòn bẩy tốt nhất ở mức điểm này."}
             </p>
@@ -200,31 +201,31 @@ export default async function WritingPart3Page() {
 
                 const inner = (
                   <>
-                    <div style={{ width: 32, height: 32, borderRadius: "50%", flexShrink: 0, marginTop: 2, background: allPassed && anyDone ? "rgba(34,197,94,0.15)" : anyDone ? "rgba(234,179,8,0.15)" : "var(--bg-elevated)", border: `1.5px solid ${allPassed && anyDone ? "rgba(34,197,94,0.5)" : anyDone ? "rgba(234,179,8,0.5)" : "var(--border)"}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.85rem" }}>
+                    <div style={{ width: 32, height: 32, borderRadius: "50%", flexShrink: 0, marginTop: 2, background: allPassed && anyDone ? "rgba(34,197,94,0.15)" : anyDone ? "rgba(234,179,8,0.15)" : "var(--bg-elevated)", border: `1.5px solid ${allPassed && anyDone ? "rgba(34,197,94,0.5)" : anyDone ? "rgba(234,179,8,0.5)" : "var(--border)"}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: FS.sm }}>
                       {allPassed && anyDone ? "✓" : anyDone ? "…" : "○"}
                     </div>
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "0.15rem", flexWrap: "wrap" }}>
-                        <span style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--text-primary)" }}>{skill.labelVi}</span>
-                        <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", fontStyle: "italic" }}>{skill.label}</span>
-                        <span style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.05em", color: "var(--text-muted)", background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 4, padding: "2px 7px" }}>
+                        <span style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)" }}>{skill.labelVi}</span>
+                        <span style={{ fontSize: FS.xs, color: "var(--text-muted)", fontStyle: "italic" }}>{skill.label}</span>
+                        <span style={{ fontSize: FS.xs, fontWeight: 700, letterSpacing: "0.05em", color: "var(--text-muted)", background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 4, padding: "2px 7px" }}>
                           {skill.axis}
                         </span>
                         {!skill.active && (
-                          <span style={{ fontSize: "0.62rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--text-muted)", background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 4, padding: "2px 7px" }}>
+                          <span style={{ fontSize: FS.xs, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--text-muted)", background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 4, padding: "2px 7px" }}>
                             Sắp có
                           </span>
                         )}
                       </div>
-                      <p style={{ fontSize: "0.8rem", color: "var(--text-secondary)", lineHeight: 1.55, margin: 0 }}>{skill.description}</p>
+                      <p style={{ fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.55, margin: 0 }}>{skill.description}</p>
                       {anyDone && (
                         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap", marginTop: "0.55rem" }}>
                           <div style={{ flex: "1 1 100px", maxWidth: 120, height: 3, background: "var(--border)", borderRadius: 999 }}>
                             <div style={{ height: "100%", width: `${pct}%`, background: allPassed ? "rgb(34,197,94)" : "var(--accent-primary)", borderRadius: 999 }} />
                           </div>
-                          <span style={{ fontSize: "0.68rem", color: "var(--text-muted)" }}>{stats.doneTests}/{totalTests} test</span>
-                          <span style={{ fontSize: "0.68rem", color: "var(--text-muted)" }}>·</span>
-                          <span style={{ fontSize: "0.68rem", color: stats.passedTests > 0 ? "rgb(34,197,94)" : "var(--text-muted)" }}>
+                          <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>{stats.doneTests}/{totalTests} test</span>
+                          <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>·</span>
+                          <span style={{ fontSize: FS.xs, color: stats.passedTests > 0 ? "rgb(34,197,94)" : "var(--text-muted)" }}>
                             {stats.passedTests} pass (Easy ≥ 80%)
                           </span>
                         </div>
@@ -249,7 +250,7 @@ export default async function WritingPart3Page() {
                     style={{ display: "flex", alignItems: "flex-start", gap: "1.25rem", padding: "1.3rem 1.6rem", background: bg, textDecoration: "none", borderBottom }}
                   >
                     {inner}
-                    <span className="r-arrow" style={{ fontSize: "0.8rem", color: "var(--accent-primary)", flexShrink: 0, marginTop: 6 }}>→</span>
+                    <span className="r-arrow" style={{ fontSize: FS.sm, color: "var(--accent-primary)", flexShrink: 0, marginTop: 6 }}>→</span>
                   </Link>
                 );
               })}
@@ -258,9 +259,9 @@ export default async function WritingPart3Page() {
         );
       })}
 
-      <div style={{ width: "100%", marginTop: "3rem" }}>
+      <div style={{ width: "100%", marginTop: "auto", paddingTop: "3rem" }}>
         <div style={{ height: 1, background: "var(--border)" }} />
-        <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.08em" }}>TOEIC DICTATION DIARY</p>
+        <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.08em" }}>TOEIC DICTATION DIARY</p>
       </div>
     </div>
   );

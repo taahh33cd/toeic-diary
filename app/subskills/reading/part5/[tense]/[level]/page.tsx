@@ -6,6 +6,7 @@ import { getTenseConfig, isLevelUnlocked } from "@/lib/subskills/reading";
 import { tenseToPartKey, type LevelSlug, type BestScore } from "@/lib/subskills/reading/types";
 import { Part5LevelClient } from "@/components/subskills/reading/Part5LevelClient";
 import Link from "next/link";
+import { FILL_SCREEN, FS } from "@/lib/ui/scale";
 
 type Props = { params: Promise<{ tense: string; level: string }> };
 
@@ -67,12 +68,12 @@ export default async function LevelQuizPage({ params }: Props) {
   // No content yet
   if (!levelConfig || levelConfig.questions.length === 0) {
     return (
-      <div style={{ minHeight: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "3rem 1.5rem", gap: "1rem" }}>
-        <div style={{ fontSize: "2rem" }}>🔧</div>
-        <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", textAlign: "center" }}>
+      <div style={{ ...FILL_SCREEN, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "3rem 1.5rem", gap: "1rem" }}>
+        <div style={{ fontSize: FS.xl }}>🔧</div>
+        <p style={{ fontSize: FS.sm, color: "var(--text-muted)", textAlign: "center" }}>
           Nội dung cho level này đang được soạn thảo. Vui lòng quay lại sau.
         </p>
-        <Link href={`/subskills/reading/part5/${tense}`} style={{ fontSize: "0.82rem", color: "var(--accent-primary)", textDecoration: "none", fontWeight: 600 }}>
+        <Link href={`/subskills/reading/part5/${tense}`} style={{ fontSize: FS.sm, color: "var(--accent-primary)", textDecoration: "none", fontWeight: 600 }}>
           ← Quay lại {config.name}
         </Link>
       </div>
@@ -83,12 +84,12 @@ export default async function LevelQuizPage({ params }: Props) {
   if (!unlocked) {
     const req = levelSlug === "l3" || levelSlug === "l4" ? "L2" : "L4";
     return (
-      <div style={{ minHeight: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "3rem 1.5rem", gap: "1rem" }}>
-        <div style={{ fontSize: "2rem" }}>🔒</div>
-        <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", textAlign: "center" }}>
+      <div style={{ ...FILL_SCREEN, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "3rem 1.5rem", gap: "1rem" }}>
+        <div style={{ fontSize: FS.xl }}>🔒</div>
+        <p style={{ fontSize: FS.sm, color: "var(--text-muted)", textAlign: "center" }}>
           Cần pass {req} (≥ 80%) để mở khóa level này.
         </p>
-        <Link href={`/subskills/reading/part5/${tense}`} style={{ fontSize: "0.82rem", color: "var(--accent-primary)", textDecoration: "none", fontWeight: 600 }}>
+        <Link href={`/subskills/reading/part5/${tense}`} style={{ fontSize: FS.sm, color: "var(--accent-primary)", textDecoration: "none", fontWeight: 600 }}>
           ← Quay lại {config.name}
         </Link>
       </div>

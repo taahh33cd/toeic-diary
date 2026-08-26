@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useCallback } from "react";
+import { FS } from "@/lib/ui/scale";
 
 type PanelState = "idle" | "recording" | "processing" | "done" | "error";
 
@@ -167,14 +168,14 @@ export function RecordingPanel({
     }}>
       {/* Header */}
       <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-        <span style={{ fontSize: "0.68rem", fontWeight: 700, color: "rgba(168,85,247,0.85)", letterSpacing: "0.1em", textTransform: "uppercase" }}>
+        <span style={{ fontSize: FS.xs, fontWeight: 700, color: "rgba(168,85,247,0.85)", letterSpacing: "0.1em", textTransform: "uppercase" }}>
           🎙 Luyện đọc
         </span>
-        <span style={{ fontSize: "0.68rem", color: "var(--text-muted)" }}>· không bắt buộc</span>
+        <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>· không bắt buộc</span>
       </div>
 
       {/* Reference text */}
-      <div style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)", fontStyle: "italic" }}>
+      <div style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)", fontStyle: "italic" }}>
         "{referenceText}"
       </div>
 
@@ -188,7 +189,7 @@ export function RecordingPanel({
             background: "rgba(168,85,247,0.1)",
             border: "1.5px solid rgba(168,85,247,0.4)",
             color: "rgba(168,85,247,0.9)",
-            fontSize: "0.82rem", fontWeight: 600, cursor: "pointer",
+            fontSize: FS.sm, fontWeight: 600, cursor: "pointer",
           }}
         >
           🎙 Bắt đầu ghi âm
@@ -198,7 +199,7 @@ export function RecordingPanel({
       {/* Recording */}
       {state === "recording" && (
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <span style={{ fontSize: "0.85rem", color: "rgb(239,68,68)", fontWeight: 700, minWidth: 44 }}>
+          <span style={{ fontSize: FS.sm, color: "rgb(239,68,68)", fontWeight: 700, minWidth: 44 }}>
             ● {fmtTime(seconds)}
           </span>
           <div style={{ flex: 1, height: 3, background: "var(--border)", borderRadius: 999 }}>
@@ -211,7 +212,7 @@ export function RecordingPanel({
               background: "rgba(239,68,68,0.1)",
               border: "1.5px solid rgba(239,68,68,0.45)",
               color: "rgb(239,68,68)",
-              fontSize: "0.82rem", fontWeight: 600, cursor: "pointer",
+              fontSize: FS.sm, fontWeight: 600, cursor: "pointer",
             }}
           >
             ■ Dừng & nộp
@@ -221,7 +222,7 @@ export function RecordingPanel({
 
       {/* Processing */}
       {state === "processing" && (
-        <span style={{ fontSize: "0.82rem", color: "var(--text-muted)", fontStyle: "italic" }}>
+        <span style={{ fontSize: FS.sm, color: "var(--text-muted)", fontStyle: "italic" }}>
           ⏳ Đang phân tích phát âm...
         </span>
       )}
@@ -229,8 +230,8 @@ export function RecordingPanel({
       {/* Error */}
       {state === "error" && (
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <span style={{ fontSize: "0.8rem", color: "rgb(239,68,68)" }}>{errorMsg}</span>
-          <button onClick={reset} style={{ fontSize: "0.78rem", color: "var(--accent-primary)", background: "none", border: "none", cursor: "pointer", textDecoration: "underline" }}>
+          <span style={{ fontSize: FS.sm, color: "rgb(239,68,68)" }}>{errorMsg}</span>
+          <button onClick={reset} style={{ fontSize: FS.xs, color: "var(--accent-primary)", background: "none", border: "none", cursor: "pointer", textDecoration: "underline" }}>
             Thử lại
           </button>
         </div>
@@ -247,14 +248,14 @@ export function RecordingPanel({
               display: "flex", alignItems: "center", justifyContent: "center",
             }}>
               <div style={{ width: 44, height: 44, borderRadius: "50%", background: "var(--bg-elevated)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ fontSize: "1rem", fontWeight: 800, color: scoreColor(scores.overallScore), lineHeight: 1 }}>
+                <span style={{ fontSize: FS.md, fontWeight: 800, color: scoreColor(scores.overallScore), lineHeight: 1 }}>
                   {scores.overallScore}
                 </span>
               </div>
             </div>
             <div>
-              <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "var(--text-primary)" }}>Điểm phát âm tổng thể</div>
-              <div style={{ fontSize: "0.75rem", color: scoreColor(scores.overallScore), fontWeight: 600 }}>
+              <div style={{ fontSize: FS.sm, fontWeight: 700, color: "var(--text-primary)" }}>Điểm phát âm tổng thể</div>
+              <div style={{ fontSize: FS.xs, color: scoreColor(scores.overallScore), fontWeight: 600 }}>
                 {scoreLabel(scores.overallScore)}
               </div>
             </div>
@@ -270,7 +271,7 @@ export function RecordingPanel({
               <div key={label} style={{
                 padding: "4px 10px", borderRadius: 20,
                 background: "var(--bg-primary)", border: "1px solid var(--border)",
-                fontSize: "0.72rem", color: "var(--text-secondary)",
+                fontSize: FS.xs, color: "var(--text-secondary)",
               }}>
                 {label}: <strong style={{ color: scoreColor(value) }}>{value}%</strong>
               </div>
@@ -283,7 +284,7 @@ export function RecordingPanel({
               alignSelf: "flex-start",
               padding: "5px 14px", borderRadius: 16,
               background: "none", border: "1px solid var(--border)",
-              color: "var(--text-muted)", fontSize: "0.75rem", cursor: "pointer",
+              color: "var(--text-muted)", fontSize: FS.xs, cursor: "pointer",
             }}
           >
             Ghi âm lại

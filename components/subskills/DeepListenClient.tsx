@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { DEEP_STEPS, type Passage } from "@/lib/subskills/part3/passages";
 import { loadDeepProgress, saveDeepProgress } from "@/lib/subskills/part3/deep-progress";
+import { FS } from "@/lib/ui/scale";
 
 type Props = { passage: Passage };
 
@@ -94,7 +95,7 @@ export default function DeepListenClient({ passage }: Props) {
               style={{
                 padding: "0.4rem 0.75rem",
                 borderRadius: 999,
-                fontSize: "0.72rem",
+                fontSize: FS.xs,
                 fontWeight: active ? 700 : 500,
                 cursor: "pointer",
                 border: `1px solid ${active ? "var(--accent-primary)" : passedStep ? "rgba(34,197,94,0.4)" : "var(--border)"}`,
@@ -115,7 +116,7 @@ export default function DeepListenClient({ passage }: Props) {
           borderRadius: "var(--radius-md, 8px)",
           border: "1px solid var(--border)",
           background: "var(--bg-elevated)",
-          fontSize: "0.82rem",
+          fontSize: FS.sm,
           color: "var(--text-secondary)",
           lineHeight: 1.6,
         }}
@@ -142,7 +143,7 @@ export default function DeepListenClient({ passage }: Props) {
               border: "1px solid var(--accent-primary)",
               background: "var(--accent-primary)",
               color: "#fff",
-              fontSize: "0.83rem",
+              fontSize: FS.sm,
               fontWeight: 600,
               cursor: "pointer",
             }}
@@ -158,7 +159,7 @@ export default function DeepListenClient({ passage }: Props) {
                 style={{
                   padding: "0.35rem 0.6rem",
                   borderRadius: 6,
-                  fontSize: "0.7rem",
+                  fontSize: FS.xs,
                   fontWeight: rate === r ? 700 : 500,
                   cursor: "pointer",
                   border: `1px solid ${rate === r ? "var(--accent-primary)" : "var(--border)"}`,
@@ -171,7 +172,7 @@ export default function DeepListenClient({ passage }: Props) {
             ))}
           </div>
 
-          <span style={{ fontSize: "0.73rem", color: "var(--text-muted)" }}>
+          <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>
             Đã nghe {plays} lượt
           </span>
         </div>
@@ -179,7 +180,7 @@ export default function DeepListenClient({ passage }: Props) {
         {/* Tiến độ đọc theo — chỉ có nghĩa ở bước 3 */}
         {step === 2 && (
           <div style={{ marginTop: "0.7rem" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.7rem", color: "var(--text-muted)", marginBottom: "0.3rem" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", fontSize: FS.xs, color: "var(--text-muted)", marginBottom: "0.3rem" }}>
               <span>Mục tiêu {SHADOW_TARGET} lượt nghe kèm chữ</span>
               <span>{Math.min(plays, SHADOW_TARGET)}/{SHADOW_TARGET}</span>
             </div>
@@ -216,11 +217,11 @@ export default function DeepListenClient({ passage }: Props) {
           {passage.questions.map((q, qi) => (
             <div key={q.number} style={{ border: "1px solid var(--border)", borderRadius: "var(--radius-lg, 12px)", padding: "1rem 1.1rem", background: "var(--bg-primary)" }}>
               <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", flexWrap: "wrap", marginBottom: "0.6rem" }}>
-                <span style={{ fontSize: "0.9rem", fontWeight: 700, color: "var(--text-primary)" }}>
+                <span style={{ fontSize: FS.sm, fontWeight: 700, color: "var(--text-primary)" }}>
                   {q.number}. {q.prompt}
                 </span>
                 {quizLocked && (
-                  <span style={{ fontSize: "0.63rem", color: "var(--text-muted)", background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 4, padding: "1px 6px" }}>
+                  <span style={{ fontSize: FS.xs, color: "var(--text-muted)", background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 4, padding: "1px 6px" }}>
                     {q.labelVi}
                   </span>
                 )}
@@ -242,7 +243,7 @@ export default function DeepListenClient({ passage }: Props) {
                         textAlign: "left",
                         padding: "0.6rem 0.8rem",
                         borderRadius: 8,
-                        fontSize: "0.85rem",
+                        fontSize: FS.sm,
                         lineHeight: 1.5,
                         cursor: quizLocked ? "default" : "pointer",
                         color: "var(--text-primary)",
@@ -258,7 +259,7 @@ export default function DeepListenClient({ passage }: Props) {
               </div>
 
               {quizLocked && q.reasoning && (
-                <p style={{ margin: "0.7rem 0 0", fontSize: "0.8rem", color: "var(--text-secondary)", lineHeight: 1.65 }}>
+                <p style={{ margin: "0.7rem 0 0", fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.65 }}>
                   {q.reasoning}
                 </p>
               )}
@@ -273,7 +274,7 @@ export default function DeepListenClient({ passage }: Props) {
                 alignSelf: "flex-end",
                 padding: "0.6rem 1.5rem",
                 borderRadius: 8,
-                fontSize: "0.85rem",
+                fontSize: FS.sm,
                 fontWeight: 600,
                 cursor: choices.some((c) => c === null) ? "not-allowed" : "pointer",
                 border: "1px solid var(--accent-primary)",
@@ -285,12 +286,12 @@ export default function DeepListenClient({ passage }: Props) {
             </button>
           ) : (
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "0.75rem", flexWrap: "wrap" }}>
-              <span style={{ fontSize: "0.85rem", fontWeight: 600, color: quizScore === 3 ? GREEN : "var(--text-primary)" }}>
+              <span style={{ fontSize: FS.sm, fontWeight: 600, color: quizScore === 3 ? GREEN : "var(--text-primary)" }}>
                 Đúng {quizScore}/3
               </span>
               <button
                 onClick={() => setStep(1)}
-                style={{ padding: "0.6rem 1.4rem", borderRadius: 8, border: "1px solid var(--accent-primary)", background: "var(--accent-primary)", color: "#fff", fontSize: "0.85rem", fontWeight: 600, cursor: "pointer" }}
+                style={{ padding: "0.6rem 1.4rem", borderRadius: 8, border: "1px solid var(--accent-primary)", background: "var(--accent-primary)", color: "#fff", fontSize: FS.sm, fontWeight: 600, cursor: "pointer" }}
               >
                 Sang bước 2 →
               </button>
@@ -312,12 +313,12 @@ export default function DeepListenClient({ passage }: Props) {
                   padding: "0.7rem 0.95rem",
                   background: i % 2 === 0 ? "var(--bg-primary)" : "var(--bg-secondary)",
                   borderBottom: i < passage.lines.length - 1 ? "1px solid var(--border)" : "none",
-                  fontSize: "0.87rem",
+                  fontSize: FS.sm,
                   lineHeight: 1.65,
                   color: "var(--text-primary)",
                 }}
               >
-                <span style={{ flexShrink: 0, width: 22, fontWeight: 800, fontSize: "0.7rem", color: "var(--text-muted)", paddingTop: 2 }}>
+                <span style={{ flexShrink: 0, width: 22, fontWeight: 800, fontSize: FS.xs, color: "var(--text-muted)", paddingTop: 2 }}>
                   {line.speaker ?? i + 1}
                 </span>
                 <span>{line.text}</span>
@@ -327,7 +328,7 @@ export default function DeepListenClient({ passage }: Props) {
 
           {step === 1 && passage.keywords.length > 0 && (
             <div>
-              <h3 style={{ margin: "0 0 0.6rem", fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.05em", textTransform: "uppercase", color: "var(--text-muted)" }}>
+              <h3 style={{ margin: "0 0 0.6rem", fontSize: FS.sm, fontWeight: 700, letterSpacing: "0.05em", textTransform: "uppercase", color: "var(--text-muted)" }}>
                 Từ mới
               </h3>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
@@ -343,12 +344,12 @@ export default function DeepListenClient({ passage }: Props) {
                       borderRadius: 8,
                       border: "1px solid var(--border)",
                       background: "var(--bg-elevated)",
-                      fontSize: "0.83rem",
+                      fontSize: FS.sm,
                     }}
                   >
                     <strong style={{ color: "var(--text-primary)" }}>{k.term}</strong>
-                    <span style={{ color: "var(--text-muted)", fontSize: "0.76rem" }}>{k.ipa}</span>
-                    <span style={{ color: "var(--text-muted)", fontSize: "0.72rem", fontStyle: "italic" }}>{k.pos}</span>
+                    <span style={{ color: "var(--text-muted)", fontSize: FS.xs }}>{k.ipa}</span>
+                    <span style={{ color: "var(--text-muted)", fontSize: FS.xs, fontStyle: "italic" }}>{k.pos}</span>
                     <span style={{ color: "var(--text-secondary)" }}>{k.meaning}</span>
                   </div>
                 ))}
@@ -359,7 +360,7 @@ export default function DeepListenClient({ passage }: Props) {
           <div style={{ display: "flex", justifyContent: "flex-end", gap: "0.6rem" }}>
             <button
               onClick={() => setStep(step + 1)}
-              style={{ padding: "0.6rem 1.4rem", borderRadius: 8, border: "1px solid var(--accent-primary)", background: "var(--accent-primary)", color: "#fff", fontSize: "0.85rem", fontWeight: 600, cursor: "pointer" }}
+              style={{ padding: "0.6rem 1.4rem", borderRadius: 8, border: "1px solid var(--accent-primary)", background: "var(--accent-primary)", color: "#fff", fontSize: FS.sm, fontWeight: 600, cursor: "pointer" }}
             >
               Sang bước {step + 2} →
             </button>
@@ -370,19 +371,19 @@ export default function DeepListenClient({ passage }: Props) {
       {/* ── Bước 4: nghe chay ─────────────────────────────────────────── */}
       {step === 3 && (
         <div style={{ textAlign: "center", padding: "1.5rem 1rem", border: "1px dashed var(--border)", borderRadius: "var(--radius-lg, 12px)", background: "var(--bg-secondary)" }}>
-          <p style={{ margin: "0 0 1.1rem", fontSize: "0.87rem", color: "var(--text-secondary)", lineHeight: 1.7 }}>
+          <p style={{ margin: "0 0 1.1rem", fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.7 }}>
             Nghe lại không nhìn chữ. Hiểu trọn đoạn chưa?
           </p>
           <div style={{ display: "flex", gap: "0.6rem", justifyContent: "center", flexWrap: "wrap" }}>
             <button
               onClick={() => setStep(2)}
-              style={{ padding: "0.6rem 1.3rem", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: "0.85rem", fontWeight: 600, cursor: "pointer" }}
+              style={{ padding: "0.6rem 1.3rem", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: FS.sm, fontWeight: 600, cursor: "pointer" }}
             >
               Chưa — quay lại bước 3
             </button>
             <button
               onClick={markDone}
-              style={{ padding: "0.6rem 1.3rem", borderRadius: 8, border: `1px solid ${GREEN}`, background: GREEN, color: "#fff", fontSize: "0.85rem", fontWeight: 600, cursor: "pointer" }}
+              style={{ padding: "0.6rem 1.3rem", borderRadius: 8, border: `1px solid ${GREEN}`, background: GREEN, color: "#fff", fontSize: FS.sm, fontWeight: 600, cursor: "pointer" }}
             >
               Hiểu hết rồi →
             </button>
@@ -402,7 +403,7 @@ export default function DeepListenClient({ passage }: Props) {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: "1.5rem",
+              fontSize: FS.lg,
               background: "rgba(34,197,94,0.15)",
               border: `2px solid rgba(34,197,94,0.5)`,
               color: GREEN,
@@ -410,22 +411,22 @@ export default function DeepListenClient({ passage }: Props) {
           >
             ✓
           </div>
-          <h2 style={{ margin: "0 0 0.4rem", fontSize: "1.1rem", fontWeight: 700, color: "var(--text-primary)" }}>
+          <h2 style={{ margin: "0 0 0.4rem", fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)" }}>
             Xong đoạn này
           </h2>
-          <p style={{ margin: "0 0 1.4rem", fontSize: "0.83rem", color: "var(--text-secondary)" }}>
+          <p style={{ margin: "0 0 1.4rem", fontSize: FS.sm, color: "var(--text-secondary)" }}>
             Làm đúng {quizScore ?? "–"}/3 khi chưa xem transcript · đã nghe {plays} lượt
           </p>
           <div style={{ display: "flex", gap: "0.6rem", justifyContent: "center", flexWrap: "wrap" }}>
             <button
               onClick={reset}
-              style={{ padding: "0.6rem 1.3rem", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: "0.85rem", fontWeight: 600, cursor: "pointer" }}
+              style={{ padding: "0.6rem 1.3rem", borderRadius: 8, border: "1px solid var(--border)", background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: FS.sm, fontWeight: 600, cursor: "pointer" }}
             >
               Làm lại từ đầu
             </button>
             <Link
               href="/subskills/listening/part3/nghe-sau"
-              style={{ padding: "0.6rem 1.3rem", borderRadius: 8, border: "1px solid var(--accent-primary)", background: "var(--accent-primary)", color: "#fff", fontSize: "0.85rem", fontWeight: 600, textDecoration: "none" }}
+              style={{ padding: "0.6rem 1.3rem", borderRadius: 8, border: "1px solid var(--accent-primary)", background: "var(--accent-primary)", color: "#fff", fontSize: FS.sm, fontWeight: 600, textDecoration: "none" }}
             >
               Chọn đoạn khác
             </Link>

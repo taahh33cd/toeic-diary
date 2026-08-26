@@ -4,6 +4,7 @@ import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { STEPS_SKILL, getFreeItems } from "@/lib/subskills/speaking-p2-steps";
 import FreePracticeClient from "@/components/subskills/speaking/FreePracticeClient";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 
 export const metadata: Metadata = { title: "Luyện tự do — Mô tả tranh 3 bước" };
 
@@ -28,17 +29,17 @@ export default async function FreePracticePage() {
   return (
     <div
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 900,
+        padding: `${PAD_Y} ${PAD_X}`,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         width: "100%",
         boxSizing: "border-box",
       }}
     >
       {/* Breadcrumb */}
-      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: "0.8rem", color: "var(--text-muted)", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: FS.sm, color: "var(--text-muted)", flexWrap: "wrap" }}>
         <Link href="/subskills" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Subskills</Link>
         <span>›</span>
         <Link href="/subskills/speaking/part2" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Part 2</Link>
@@ -53,15 +54,15 @@ export default async function FreePracticePage() {
         <h1 style={{ fontSize: "clamp(1.4rem, 3vw, 1.8rem)", fontWeight: 800, color: "var(--text-primary)", margin: "0 0 4px" }}>
           Luyện tự do với kho ảnh
         </h1>
-        <p style={{ margin: 0, fontSize: "0.88rem", color: "var(--text-muted)", fontStyle: "italic" }}>
+        <p style={{ margin: 0, fontSize: FS.sm, color: "var(--text-muted)", fontStyle: "italic" }}>
           Chọn ảnh bất kỳ, tự nháp từ vựng và câu cho 3 bước. Không chấm điểm, không khoá cấp độ — ghi chú tự lưu theo tài khoản.
         </p>
       </div>
 
       <FreePracticeClient items={items} initialNotes={notes} userId={user?.id ?? null} />
 
-      <div style={{ marginTop: "3rem", height: 1, background: "var(--border)" }} />
-      <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.08em" }}>
+      <div style={{ marginTop: "auto", height: 1, background: "var(--border)" }} />
+      <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.08em" }}>
         TOEIC DICTATION DIARY
       </p>
     </div>

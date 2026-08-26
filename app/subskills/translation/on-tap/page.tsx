@@ -9,6 +9,7 @@ import { TOPIC_VOCAB } from "@/lib/subskills/translation/vocab";
 import { vocabKey, type VocabEntry, type VocabProgressMap } from "@/lib/subskills/translation/types";
 import { VocabScreen } from "@/components/subskills/translation/VocabScreen";
 import { CONTAINER, PAD_X } from "@/components/grammar/scale";
+import { CONTAINER_MAX, FILL_SCREEN, FS } from "@/lib/ui/scale";
 
 export const metadata: Metadata = { title: "Ôn từ chưa thuộc — Dịch Anh–Việt" };
 
@@ -60,7 +61,7 @@ export default async function TranslationVocabReviewPage() {
       <div
         style={{
           ...CONTAINER,
-          minHeight: "100%",
+          ...FILL_SCREEN,
           background: "var(--bg-primary)",
           padding: `clamp(1.5rem, 4vw, 2.5rem) ${PAD_X}`,
           boxSizing: "border-box",
@@ -72,7 +73,7 @@ export default async function TranslationVocabReviewPage() {
             display: "inline-flex",
             alignItems: "center",
             gap: "0.35rem",
-            fontSize: "0.8rem",
+            fontSize: FS.sm,
             color: "var(--text-muted)",
             textDecoration: "none",
             marginBottom: "1.25rem",
@@ -91,10 +92,10 @@ export default async function TranslationVocabReviewPage() {
           }}
         >
           <Sparkles size={26} style={{ color: "var(--accent-primary)" }} />
-          <h1 style={{ fontSize: "1.15rem", fontWeight: 700, color: "var(--text-primary)", margin: "0.6rem 0 0.4rem" }}>
+          <h1 style={{ fontSize: FS.lg, fontWeight: 700, color: "var(--text-primary)", margin: "0.6rem 0 0.4rem" }}>
             Chưa có từ nào cần ôn
           </h1>
-          <p style={{ fontSize: "0.87rem", color: "var(--text-muted)", lineHeight: 1.7, margin: 0 }}>
+          <p style={{ fontSize: FS.sm, color: "var(--text-muted)", lineHeight: 1.7, margin: 0 }}>
             Khu dịch có {totalVocab} mục từ. Vào một level bất kỳ, học ở màn từ vựng rồi đánh dấu
             từ chưa thuộc — chúng sẽ dồn về đây.
           </p>
@@ -108,14 +109,14 @@ export default async function TranslationVocabReviewPage() {
   return (
     <>
       <div style={{ ...CONTAINER, padding: `1.25rem ${PAD_X} 0` }}>
-        <div style={{ maxWidth: 720, margin: "0 auto" }}>
+        <div style={{ maxWidth: CONTAINER_MAX, margin: "0 auto" }}>
         <Link
           href="/subskills/translation"
           style={{
             display: "inline-flex",
             alignItems: "center",
             gap: "0.35rem",
-            fontSize: "0.8rem",
+            fontSize: FS.sm,
             color: "var(--text-muted)",
             textDecoration: "none",
           }}

@@ -4,6 +4,7 @@ import { useState, useCallback } from "react";
 import type { WTestData, WExercise, W1Exercise, W2Exercise, W3Exercise, W45Exercise, W5bExercise } from "@/lib/subskills/writing-part1";
 import { checkWordOrdering, checkVerbFill, checkBlankFill, checkMcq } from "@/lib/subskills/writing-part1";
 import { dbPartW1 } from "@/lib/subskills/writing-part1";
+import { FS } from "@/lib/ui/scale";
 
 // ─────────────────────────────────────
 // Types
@@ -31,7 +32,7 @@ type Phase = "tests" | "doing" | "done";
 
 function ResultBadge({ correct }: { correct: boolean }) {
   return (
-    <span style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: "0.78rem", fontWeight: 600, color: correct ? "rgb(34,197,94)" : "rgb(239,68,68)", background: correct ? "rgba(34,197,94,0.1)" : "rgba(239,68,68,0.1)", border: `1px solid ${correct ? "rgba(34,197,94,0.3)" : "rgba(239,68,68,0.3)"}`, borderRadius: 6, padding: "3px 10px" }}>
+    <span style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: FS.xs, fontWeight: 600, color: correct ? "rgb(34,197,94)" : "rgb(239,68,68)", background: correct ? "rgba(34,197,94,0.1)" : "rgba(239,68,68,0.1)", border: `1px solid ${correct ? "rgba(34,197,94,0.3)" : "rgba(239,68,68,0.3)"}`, borderRadius: 6, padding: "3px 10px" }}>
       {correct ? "✓ Đúng" : "✗ Sai"}
     </span>
   );
@@ -61,7 +62,7 @@ function WordOrderingCard({ ex, onResult }: { ex: W1Exercise; onResult: (correct
         {ex.tokens.map((t, i) => (
           <span
             key={i}
-            style={{ background: "var(--bg-elevated)", border: "1.5px solid var(--border)", borderRadius: 6, padding: "4px 10px", fontSize: "0.85rem", fontWeight: 500, color: "var(--text-secondary)" }}
+            style={{ background: "var(--bg-elevated)", border: "1.5px solid var(--border)", borderRadius: 6, padding: "4px 10px", fontSize: FS.sm, fontWeight: 500, color: "var(--text-secondary)" }}
           >
             {t}
           </span>
@@ -75,24 +76,24 @@ function WordOrderingCard({ ex, onResult }: { ex: W1Exercise; onResult: (correct
         onKeyDown={(e) => { if (e.key === "Enter" && !submitted) submit(); }}
         disabled={submitted}
         placeholder="Nhập câu hoàn chỉnh…"
-        style={{ width: "100%", boxSizing: "border-box", padding: "8px 12px", fontSize: "0.9rem", border: submitted ? `1.5px solid ${correct ? "rgba(34,197,94,0.5)" : "rgba(239,68,68,0.5)"}` : "1.5px solid var(--border)", borderRadius: 8, background: "var(--bg-secondary)", color: "var(--text-primary)", outline: "none", marginBottom: "0.5rem", fontFamily: "inherit" }}
+        style={{ width: "100%", boxSizing: "border-box", padding: "8px 12px", fontSize: FS.sm, border: submitted ? `1.5px solid ${correct ? "rgba(34,197,94,0.5)" : "rgba(239,68,68,0.5)"}` : "1.5px solid var(--border)", borderRadius: 8, background: "var(--bg-secondary)", color: "var(--text-primary)", outline: "none", marginBottom: "0.5rem", fontFamily: "inherit" }}
       />
 
       {!submitted ? (
         <button
           onClick={submit}
           disabled={!input.trim()}
-          style={{ background: !input.trim() ? "var(--bg-elevated)" : "var(--accent-primary)", color: !input.trim() ? "var(--text-muted)" : "#fff", border: "none", borderRadius: 8, padding: "8px 20px", fontSize: "0.85rem", fontWeight: 600, cursor: !input.trim() ? "not-allowed" : "pointer", fontFamily: "inherit" }}
+          style={{ background: !input.trim() ? "var(--bg-elevated)" : "var(--accent-primary)", color: !input.trim() ? "var(--text-muted)" : "#fff", border: "none", borderRadius: 8, padding: "8px 20px", fontSize: FS.sm, fontWeight: 600, cursor: !input.trim() ? "not-allowed" : "pointer", fontFamily: "inherit" }}
         >
           Kiểm tra
         </button>
       ) : (
         <div>
           <div style={{ marginBottom: "0.5rem" }}><ResultBadge correct={correct} /></div>
-          <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", margin: "0 0 4px" }}>
+          <p style={{ fontSize: FS.sm, color: "var(--text-secondary)", margin: "0 0 4px" }}>
             <strong>Đáp án:</strong> {ex.answer}
           </p>
-          <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", margin: 0, lineHeight: 1.5 }}>{ex.explanation}</p>
+          <p style={{ fontSize: FS.xs, color: "var(--text-muted)", margin: 0, lineHeight: 1.5 }}>{ex.explanation}</p>
         </div>
       )}
     </div>
@@ -141,7 +142,7 @@ function VerbFillCard({ ex, onResult }: { ex: W2Exercise; onResult: (correct: bo
           <img src={ex.imageUrl} alt="Exercise context" style={{ maxWidth: "100%", height: "auto", display: "block" }} />
         </div>
       )}
-      <p style={{ fontSize: "0.95rem", color: "var(--text-primary)", fontWeight: 500, marginBottom: "0.75rem" }}>{ex.question}</p>
+      <p style={{ fontSize: FS.md, color: "var(--text-primary)", fontWeight: 500, marginBottom: "0.75rem" }}>{ex.question}</p>
       <input
         type="text"
         value={input}
@@ -149,17 +150,17 @@ function VerbFillCard({ ex, onResult }: { ex: W2Exercise; onResult: (correct: bo
         onKeyDown={(e) => { if (e.key === "Enter" && !submitted) submit(); }}
         disabled={submitted}
         placeholder="Điền dạng động từ đúng…"
-        style={{ width: "100%", boxSizing: "border-box", padding: "8px 12px", fontSize: "0.9rem", border: submitted ? `1.5px solid ${correct ? "rgba(34,197,94,0.5)" : "rgba(239,68,68,0.5)"}` : "1.5px solid var(--border)", borderRadius: 8, background: "var(--bg-secondary)", color: "var(--text-primary)", outline: "none", marginBottom: "0.5rem", fontFamily: "inherit" }}
+        style={{ width: "100%", boxSizing: "border-box", padding: "8px 12px", fontSize: FS.sm, border: submitted ? `1.5px solid ${correct ? "rgba(34,197,94,0.5)" : "rgba(239,68,68,0.5)"}` : "1.5px solid var(--border)", borderRadius: 8, background: "var(--bg-secondary)", color: "var(--text-primary)", outline: "none", marginBottom: "0.5rem", fontFamily: "inherit" }}
       />
       {!submitted ? (
-        <button onClick={submit} disabled={!input.trim()} style={{ background: !input.trim() ? "var(--bg-elevated)" : "var(--accent-primary)", color: !input.trim() ? "var(--text-muted)" : "#fff", border: "none", borderRadius: 8, padding: "8px 20px", fontSize: "0.85rem", fontWeight: 600, cursor: !input.trim() ? "not-allowed" : "pointer", fontFamily: "inherit" }}>
+        <button onClick={submit} disabled={!input.trim()} style={{ background: !input.trim() ? "var(--bg-elevated)" : "var(--accent-primary)", color: !input.trim() ? "var(--text-muted)" : "#fff", border: "none", borderRadius: 8, padding: "8px 20px", fontSize: FS.sm, fontWeight: 600, cursor: !input.trim() ? "not-allowed" : "pointer", fontFamily: "inherit" }}>
           Kiểm tra
         </button>
       ) : (
         <div>
           <div style={{ marginBottom: "0.5rem" }}><ResultBadge correct={correct} /></div>
-          <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", margin: "0 0 4px" }}><strong>Đáp án:</strong> {ex.answer}</p>
-          <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", margin: 0, lineHeight: 1.5 }}>{ex.explanation}</p>
+          <p style={{ fontSize: FS.sm, color: "var(--text-secondary)", margin: "0 0 4px" }}><strong>Đáp án:</strong> {ex.answer}</p>
+          <p style={{ fontSize: FS.xs, color: "var(--text-muted)", margin: 0, lineHeight: 1.5 }}>{ex.explanation}</p>
         </div>
       )}
     </div>
@@ -191,7 +192,7 @@ function BlankFillCard({ ex, onResult }: { ex: W3Exercise; onResult: (correct: b
 
   return (
     <div>
-      <div style={{ fontSize: "0.95rem", color: "var(--text-primary)", fontWeight: 500, lineHeight: 2, marginBottom: "0.75rem", display: "flex", flexWrap: "wrap", alignItems: "center", gap: "2px" }}>
+      <div style={{ fontSize: FS.md, color: "var(--text-primary)", fontWeight: 500, lineHeight: 2, marginBottom: "0.75rem", display: "flex", flexWrap: "wrap", alignItems: "center", gap: "2px" }}>
         {parts.map((part, i) => (
           <span key={i} style={{ display: "inline-flex", alignItems: "center", gap: "2px" }}>
             <span>{part}</span>
@@ -202,7 +203,7 @@ function BlankFillCard({ ex, onResult }: { ex: W3Exercise; onResult: (correct: b
                 onChange={(e) => setInput(i, e.target.value)}
                 onKeyDown={(e) => { if (e.key === "Enter" && !submitted) submit(); }}
                 disabled={submitted}
-                style={{ width: 72, padding: "2px 6px", fontSize: "0.9rem", border: submitted ? `1.5px solid ${results[i] ? "rgba(34,197,94,0.5)" : "rgba(239,68,68,0.5)"}` : "1.5px solid var(--accent-primary)", borderRadius: 6, background: submitted ? (results[i] ? "rgba(34,197,94,0.08)" : "rgba(239,68,68,0.08)") : "var(--bg-secondary)", color: "var(--text-primary)", outline: "none", textAlign: "center", fontFamily: "inherit" }}
+                style={{ width: 72, padding: "2px 6px", fontSize: FS.sm, border: submitted ? `1.5px solid ${results[i] ? "rgba(34,197,94,0.5)" : "rgba(239,68,68,0.5)"}` : "1.5px solid var(--accent-primary)", borderRadius: 6, background: submitted ? (results[i] ? "rgba(34,197,94,0.08)" : "rgba(239,68,68,0.08)") : "var(--bg-secondary)", color: "var(--text-primary)", outline: "none", textAlign: "center", fontFamily: "inherit" }}
               />
             )}
           </span>
@@ -210,14 +211,14 @@ function BlankFillCard({ ex, onResult }: { ex: W3Exercise; onResult: (correct: b
       </div>
 
       {!submitted ? (
-        <button onClick={submit} disabled={inputs.some((v) => !v.trim())} style={{ background: inputs.some((v) => !v.trim()) ? "var(--bg-elevated)" : "var(--accent-primary)", color: inputs.some((v) => !v.trim()) ? "var(--text-muted)" : "#fff", border: "none", borderRadius: 8, padding: "8px 20px", fontSize: "0.85rem", fontWeight: 600, cursor: inputs.some((v) => !v.trim()) ? "not-allowed" : "pointer", fontFamily: "inherit" }}>
+        <button onClick={submit} disabled={inputs.some((v) => !v.trim())} style={{ background: inputs.some((v) => !v.trim()) ? "var(--bg-elevated)" : "var(--accent-primary)", color: inputs.some((v) => !v.trim()) ? "var(--text-muted)" : "#fff", border: "none", borderRadius: 8, padding: "8px 20px", fontSize: FS.sm, fontWeight: 600, cursor: inputs.some((v) => !v.trim()) ? "not-allowed" : "pointer", fontFamily: "inherit" }}>
           Kiểm tra
         </button>
       ) : (
         <div>
           <div style={{ marginBottom: "0.5rem" }}><ResultBadge correct={results.every(Boolean)} /></div>
-          <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", margin: "0 0 4px" }}><strong>Đáp án:</strong> {ex.answer}</p>
-          <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", margin: 0, lineHeight: 1.5 }}>{ex.explanation}</p>
+          <p style={{ fontSize: FS.sm, color: "var(--text-secondary)", margin: "0 0 4px" }}><strong>Đáp án:</strong> {ex.answer}</p>
+          <p style={{ fontSize: FS.xs, color: "var(--text-muted)", margin: 0, lineHeight: 1.5 }}>{ex.explanation}</p>
         </div>
       )}
     </div>
@@ -270,7 +271,7 @@ function MultipleChoiceCard({ ex, onResult }: { ex: W45Exercise; onResult: (corr
 
       {/* Question */}
       {ex.question && (
-        <p style={{ fontSize: "0.95rem", color: "var(--text-primary)", fontWeight: 500, marginBottom: "0.75rem" }}>{ex.question}</p>
+        <p style={{ fontSize: FS.md, color: "var(--text-primary)", fontWeight: 500, marginBottom: "0.75rem" }}>{ex.question}</p>
       )}
 
       {/* Options */}
@@ -294,8 +295,8 @@ function MultipleChoiceCard({ ex, onResult }: { ex: W45Exercise; onResult: (corr
               disabled={submitted}
               style={{ display: "flex", alignItems: "flex-start", gap: 10, padding: "10px 14px", background: bg, border, borderRadius: 8, cursor: submitted ? "default" : "pointer", textAlign: "left", color, fontFamily: "inherit", transition: "background 0.15s, border-color 0.15s" }}
             >
-              <span style={{ fontWeight: 700, fontSize: "0.85rem", minWidth: 18, flexShrink: 0 }}>{opt.id}.</span>
-              <span style={{ fontSize: "0.88rem", lineHeight: 1.45 }}>{opt.text}</span>
+              <span style={{ fontWeight: 700, fontSize: FS.sm, minWidth: 18, flexShrink: 0 }}>{opt.id}.</span>
+              <span style={{ fontSize: FS.sm, lineHeight: 1.45 }}>{opt.text}</span>
               {submitted && isCorrect && <span style={{ marginLeft: "auto", flexShrink: 0 }}>✓</span>}
               {submitted && isSelected && !isCorrect && <span style={{ marginLeft: "auto", flexShrink: 0 }}>✗</span>}
             </button>
@@ -306,7 +307,7 @@ function MultipleChoiceCard({ ex, onResult }: { ex: W45Exercise; onResult: (corr
       {submitted && (
         <div style={{ marginTop: "0.75rem" }}>
           <ResultBadge correct={correct} />
-          <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", margin: "0.4rem 0 0", lineHeight: 1.5 }}>{ex.explanation}</p>
+          <p style={{ fontSize: FS.xs, color: "var(--text-muted)", margin: "0.4rem 0 0", lineHeight: 1.5 }}>{ex.explanation}</p>
         </div>
       )}
     </div>
@@ -360,7 +361,7 @@ function PhotoAnalysisCard({ ex, onResult }: { ex: W5bExercise; onResult: (corre
           const bg = submitted ? (res ? "rgba(34,197,94,0.06)" : "rgba(239,68,68,0.06)") : "var(--bg-secondary)";
           return (
             <div key={i}>
-              <label style={{ display: "block", fontSize: "0.78rem", fontWeight: 700, color: "var(--text-secondary)", marginBottom: 4 }}>{step.label}</label>
+              <label style={{ display: "block", fontSize: FS.xs, fontWeight: 700, color: "var(--text-secondary)", marginBottom: 4 }}>{step.label}</label>
               {isLast ? (
                 <textarea
                   value={inputs[i]}
@@ -368,7 +369,7 @@ function PhotoAnalysisCard({ ex, onResult }: { ex: W5bExercise; onResult: (corre
                   disabled={submitted}
                   rows={2}
                   placeholder="Viết câu hoàn chỉnh…"
-                  style={{ width: "100%", boxSizing: "border-box", padding: "8px 12px", fontSize: "0.9rem", border: `1.5px solid ${borderColor}`, borderRadius: 8, background: bg, color: "var(--text-primary)", outline: "none", resize: "none", fontFamily: "inherit" }}
+                  style={{ width: "100%", boxSizing: "border-box", padding: "8px 12px", fontSize: FS.sm, border: `1.5px solid ${borderColor}`, borderRadius: 8, background: bg, color: "var(--text-primary)", outline: "none", resize: "none", fontFamily: "inherit" }}
                 />
               ) : (
                 <input
@@ -378,13 +379,13 @@ function PhotoAnalysisCard({ ex, onResult }: { ex: W5bExercise; onResult: (corre
                   onKeyDown={(e) => { if (e.key === "Enter" && !submitted) { e.preventDefault(); } }}
                   disabled={submitted}
                   placeholder={`Nhập ${step.label.toLowerCase()}…`}
-                  style={{ width: "100%", boxSizing: "border-box", padding: "8px 12px", fontSize: "0.9rem", border: `1.5px solid ${borderColor}`, borderRadius: 8, background: bg, color: "var(--text-primary)", outline: "none", fontFamily: "inherit" }}
+                  style={{ width: "100%", boxSizing: "border-box", padding: "8px 12px", fontSize: FS.sm, border: `1.5px solid ${borderColor}`, borderRadius: 8, background: bg, color: "var(--text-primary)", outline: "none", fontFamily: "inherit" }}
                 />
               )}
               {submitted && (
                 <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 3 }}>
-                  <span style={{ fontSize: "0.72rem", color: res ? "rgb(34,197,94)" : "rgb(239,68,68)", fontWeight: 600 }}>{res ? "✓" : "✗"}</span>
-                  {!res && <span style={{ fontSize: "0.72rem", color: "var(--text-muted)" }}>→ {step.answer}</span>}
+                  <span style={{ fontSize: FS.xs, color: res ? "rgb(34,197,94)" : "rgb(239,68,68)", fontWeight: 600 }}>{res ? "✓" : "✗"}</span>
+                  {!res && <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>→ {step.answer}</span>}
                 </div>
               )}
             </div>
@@ -393,12 +394,12 @@ function PhotoAnalysisCard({ ex, onResult }: { ex: W5bExercise; onResult: (corre
       </div>
 
       {!submitted ? (
-        <button onClick={submit} disabled={!allFilled} style={{ background: !allFilled ? "var(--bg-elevated)" : "var(--accent-primary)", color: !allFilled ? "var(--text-muted)" : "#fff", border: "none", borderRadius: 8, padding: "8px 20px", fontSize: "0.85rem", fontWeight: 600, cursor: !allFilled ? "not-allowed" : "pointer", fontFamily: "inherit" }}>
+        <button onClick={submit} disabled={!allFilled} style={{ background: !allFilled ? "var(--bg-elevated)" : "var(--accent-primary)", color: !allFilled ? "var(--text-muted)" : "#fff", border: "none", borderRadius: 8, padding: "8px 20px", fontSize: FS.sm, fontWeight: 600, cursor: !allFilled ? "not-allowed" : "pointer", fontFamily: "inherit" }}>
           Kiểm tra
         </button>
       ) : (
         <div style={{ marginTop: "0.5rem" }}>
-          <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", margin: 0, lineHeight: 1.5 }}>{ex.explanation}</p>
+          <p style={{ fontSize: FS.xs, color: "var(--text-muted)", margin: 0, lineHeight: 1.5 }}>{ex.explanation}</p>
         </div>
       )}
     </div>
@@ -423,7 +424,7 @@ function ExerciseCard({ ex, onResult }: { ex: WExercise; onResult: (correct: boo
 
 function ScoreBadge({ score, passed }: { score: number; passed: boolean }) {
   return (
-    <span style={{ display: "inline-block", fontSize: "1rem", fontWeight: 700, color: passed ? "rgb(34,197,94)" : score >= 60 ? "rgb(234,179,8)" : "rgb(239,68,68)", background: passed ? "rgba(34,197,94,0.12)" : score >= 60 ? "rgba(234,179,8,0.12)" : "rgba(239,68,68,0.12)", border: `1.5px solid ${passed ? "rgba(34,197,94,0.4)" : score >= 60 ? "rgba(234,179,8,0.4)" : "rgba(239,68,68,0.4)"}`, borderRadius: 8, padding: "4px 14px" }}>
+    <span style={{ display: "inline-block", fontSize: FS.md, fontWeight: 700, color: passed ? "rgb(34,197,94)" : score >= 60 ? "rgb(234,179,8)" : "rgb(239,68,68)", background: passed ? "rgba(34,197,94,0.12)" : score >= 60 ? "rgba(234,179,8,0.12)" : "rgba(239,68,68,0.12)", border: `1.5px solid ${passed ? "rgba(34,197,94,0.4)" : score >= 60 ? "rgba(234,179,8,0.4)" : "rgba(239,68,68,0.4)"}`, borderRadius: 8, padding: "4px 14px" }}>
       {score}%
     </span>
   );
@@ -511,15 +512,15 @@ export default function WritingPart1Client({ skillId, allTests, easyBest, medium
     const passed = score >= passThreshold;
     return (
       <div style={{ textAlign: "center", padding: "2rem 1rem" }}>
-        <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginBottom: "0.5rem" }}>Test {activeTest} · {diffLabel[difficulty]}</div>
+        <div style={{ fontSize: FS.sm, color: "var(--text-muted)", marginBottom: "0.5rem" }}>Test {activeTest} · {diffLabel[difficulty]}</div>
         <ScoreBadge score={score} passed={passed} />
-        <p style={{ marginTop: "0.75rem", fontSize: "0.88rem", color: "var(--text-secondary)" }}>
+        <p style={{ marginTop: "0.75rem", fontSize: FS.sm, color: "var(--text-secondary)" }}>
           {correctCount}/{total} câu đúng · {passed ? "Passed ✓" : `Cần ≥ ${passThreshold}% để pass`}
         </p>
-        {saving && <p style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>Đang lưu…</p>}
+        {saving && <p style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>Đang lưu…</p>}
         <div style={{ display: "flex", gap: 10, justifyContent: "center", marginTop: "1.5rem", flexWrap: "wrap" }}>
-          <button onClick={() => startExercise(activeTest, difficulty)} style={{ padding: "8px 20px", border: "1.5px solid var(--border)", background: "var(--bg-secondary)", color: "var(--text-primary)", borderRadius: 8, fontSize: "0.85rem", cursor: "pointer", fontFamily: "inherit" }}>Làm lại</button>
-          <button onClick={() => setPhase("tests")} style={{ padding: "8px 20px", border: "none", background: "var(--accent-primary)", color: "#fff", borderRadius: 8, fontSize: "0.85rem", cursor: "pointer", fontFamily: "inherit" }}>← Về danh sách test</button>
+          <button onClick={() => startExercise(activeTest, difficulty)} style={{ padding: "8px 20px", border: "1.5px solid var(--border)", background: "var(--bg-secondary)", color: "var(--text-primary)", borderRadius: 8, fontSize: FS.sm, cursor: "pointer", fontFamily: "inherit" }}>Làm lại</button>
+          <button onClick={() => setPhase("tests")} style={{ padding: "8px 20px", border: "none", background: "var(--accent-primary)", color: "#fff", borderRadius: 8, fontSize: FS.sm, cursor: "pointer", fontFamily: "inherit" }}>← Về danh sách test</button>
         </div>
       </div>
     );
@@ -532,8 +533,8 @@ export default function WritingPart1Client({ skillId, allTests, easyBest, medium
       <div>
         {/* Progress bar + header */}
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "0.5rem" }}>
-          <span style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>Test {activeTest} · {diffLabel[difficulty]} · {exerciseIdx + 1}/{total}</span>
-          <button onClick={() => setPhase("tests")} style={{ background: "none", border: "none", color: "var(--text-muted)", fontSize: "0.75rem", cursor: "pointer", padding: 0 }}>← Thoát</button>
+          <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>Test {activeTest} · {diffLabel[difficulty]} · {exerciseIdx + 1}/{total}</span>
+          <button onClick={() => setPhase("tests")} style={{ background: "none", border: "none", color: "var(--text-muted)", fontSize: FS.xs, cursor: "pointer", padding: 0 }}>← Thoát</button>
         </div>
         <div style={{ height: 4, background: "var(--border)", borderRadius: 999, marginBottom: "1.5rem" }}>
           <div style={{ height: "100%", width: `${progress}%`, background: "var(--accent-primary)", borderRadius: 999, transition: "width 0.2s" }} />
@@ -548,7 +549,7 @@ export default function WritingPart1Client({ skillId, allTests, easyBest, medium
           <div style={{ display: "flex", justifyContent: "flex-end" }}>
             <button
               onClick={() => { setAnswered(false); advanceOrFinish(); }}
-              style={{ padding: "8px 24px", border: "none", background: "var(--accent-primary)", color: "#fff", borderRadius: 8, fontSize: "0.85rem", fontWeight: 600, cursor: "pointer", fontFamily: "inherit" }}
+              style={{ padding: "8px 24px", border: "none", background: "var(--accent-primary)", color: "#fff", borderRadius: 8, fontSize: FS.sm, fontWeight: 600, cursor: "pointer", fontFamily: "inherit" }}
             >
               {exerciseIdx < total - 1 ? "Câu tiếp →" : "Kết thúc ✓"}
             </button>
@@ -569,8 +570,8 @@ export default function WritingPart1Client({ skillId, allTests, easyBest, medium
           <div key={testNum} style={{ marginBottom: "1rem", border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", overflow: "hidden", boxShadow: "var(--shadow-sm)" }}>
             {/* Test header */}
             <div style={{ padding: "0.75rem 1.2rem", background: "var(--bg-secondary)", borderBottom: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-              <span style={{ fontSize: "0.88rem", fontWeight: 700, color: "var(--text-primary)" }}>Test {testNum}</span>
-              <span style={{ fontSize: "0.7rem", color: "var(--text-muted)" }}>{test.levels[0]?.exercises.length ?? 0} câu/cấp</span>
+              <span style={{ fontSize: FS.sm, fontWeight: 700, color: "var(--text-primary)" }}>Test {testNum}</span>
+              <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>{test.levels[0]?.exercises.length ?? 0} câu/cấp</span>
             </div>
 
             {/* Difficulty rows */}
@@ -583,19 +584,19 @@ export default function WritingPart1Client({ skillId, allTests, easyBest, medium
                   key={diff}
                   style={{ display: "flex", alignItems: "center", padding: "0.7rem 1.2rem", borderBottom: diff !== "hard" ? "1px solid var(--border)" : "none", background: "var(--bg-primary)", gap: "1rem" }}
                 >
-                  <span style={{ fontSize: "0.8rem", fontWeight: 600, color: "var(--text-secondary)", minWidth: 60 }}>{diffLabel[diff]}</span>
+                  <span style={{ fontSize: FS.sm, fontWeight: 600, color: "var(--text-secondary)", minWidth: 60 }}>{diffLabel[diff]}</span>
 
                   {badge ? (
-                    <span style={{ fontSize: "0.78rem", color: scoreColor, fontWeight: 600 }}>
+                    <span style={{ fontSize: FS.xs, color: scoreColor, fontWeight: 600 }}>
                       {badge.score}%{badge.passed ? " ✓" : ""}
                     </span>
                   ) : (
-                    <span style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>Chưa làm</span>
+                    <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>Chưa làm</span>
                   )}
 
                   <button
                     onClick={() => startExercise(testNum, diff)}
-                    style={{ marginLeft: "auto", padding: "5px 16px", border: "1.5px solid var(--accent-primary)", background: "transparent", color: "var(--accent-primary)", borderRadius: 6, fontSize: "0.78rem", fontWeight: 600, cursor: "pointer", fontFamily: "inherit" }}
+                    style={{ marginLeft: "auto", padding: "5px 16px", border: "1.5px solid var(--accent-primary)", background: "transparent", color: "var(--accent-primary)", borderRadius: 6, fontSize: FS.xs, fontWeight: 600, cursor: "pointer", fontFamily: "inherit" }}
                   >
                     {badge ? "Làm lại" : "Bắt đầu"}
                   </button>

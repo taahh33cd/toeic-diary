@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import { SPEAKING_SKILLS } from "@/lib/subskills/speaking";
 import { SPEAKING_P2_SKILLS } from "@/lib/subskills/speaking-part2";
 import { SPEAKING_P4_SKILLS } from "@/lib/subskills/speaking-part4";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 
 export const metadata: Metadata = { title: "Speaking — Subskills TOEIC" };
 
@@ -150,17 +151,17 @@ export default async function SpeakingPage() {
   return (
     <div
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 860,
+        padding: `${PAD_Y} ${PAD_X}`,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         width: "100%",
         boxSizing: "border-box",
       }}
     >
       {/* Breadcrumb */}
-      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: "0.8rem", color: "var(--text-muted)", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: FS.sm, color: "var(--text-muted)", flexWrap: "wrap" }}>
         <Link href="/subskills" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Subskills</Link>
         <span>›</span>
         <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>Speaking</span>
@@ -168,13 +169,13 @@ export default async function SpeakingPage() {
 
       {/* Header */}
       <div style={{ marginBottom: "1.75rem" }}>
-        <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: "0.3rem" }}>
+        <p style={{ fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600, marginBottom: "0.3rem" }}>
           🗣 Speaking
         </p>
         <h1 style={{ fontSize: "clamp(1.3rem, 3vw, 1.7rem)", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "-0.02em", lineHeight: 1.2, margin: "0 0 0.5rem" }}>
           Luyện kỹ năng nói TOEIC
         </h1>
-        <p style={{ margin: 0, fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
+        <p style={{ margin: 0, fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.6 }}>
           Luyện từng kỹ năng phát âm, ngắt nhịp và nhấn giọng trước khi bước vào đề thi Speaking chính thức.
         </p>
       </div>
@@ -199,15 +200,15 @@ export default async function SpeakingPage() {
                   opacity: 0.55,
                 }}
               >
-                <div style={{ width: 32, height: 32, borderRadius: "50%", flexShrink: 0, marginTop: 2, background: "var(--bg-elevated)", border: "1.5px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.75rem", color: "var(--text-muted)", fontWeight: 700 }}>
+                <div style={{ width: 32, height: 32, borderRadius: "50%", flexShrink: 0, marginTop: 2, background: "var(--bg-elevated)", border: "1.5px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: FS.xs, color: "var(--text-muted)", fontWeight: 700 }}>
                   {p.part}
                 </div>
                 <div style={{ flex: 1 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.2rem" }}>
-                    <span style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)" }}>{p.label}</span>
-                    <span style={{ fontSize: "0.62rem", fontWeight: 600, letterSpacing: "0.07em", textTransform: "uppercase", color: "var(--text-muted)", background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 4, padding: "2px 7px" }}>Coming soon</span>
+                    <span style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)" }}>{p.label}</span>
+                    <span style={{ fontSize: FS.xs, fontWeight: 600, letterSpacing: "0.07em", textTransform: "uppercase", color: "var(--text-muted)", background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 4, padding: "2px 7px" }}>Coming soon</span>
                   </div>
-                  <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--text-secondary)", lineHeight: 1.5 }}>{p.description}</p>
+                  <p style={{ margin: 0, fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.5 }}>{p.description}</p>
                 </div>
               </div>
             );
@@ -233,7 +234,7 @@ export default async function SpeakingPage() {
                 width: 32, height: 32, borderRadius: "50%", flexShrink: 0, marginTop: 2,
                 background: hasDone ? "rgba(59,130,246,0.12)" : "var(--bg-elevated)",
                 border: `1.5px solid ${hasDone ? "rgba(59,130,246,0.4)" : "var(--border)"}`,
-                display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.75rem", fontWeight: 700,
+                display: "flex", alignItems: "center", justifyContent: "center", fontSize: FS.xs, fontWeight: 700,
                 color: hasDone ? "var(--accent-primary)" : "var(--text-muted)",
               }}>
                 {p.part}
@@ -241,37 +242,37 @@ export default async function SpeakingPage() {
 
               {/* Content */}
               <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.15rem" }}>{p.label}</div>
-                <p style={{ margin: "0 0 0.5rem", fontSize: "0.8rem", color: "var(--text-secondary)", lineHeight: 1.5 }}>{p.description}</p>
+                <div style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.15rem" }}>{p.label}</div>
+                <p style={{ margin: "0 0 0.5rem", fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.5 }}>{p.description}</p>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap" }}>
-                  <span style={{ fontSize: "0.68rem", color: "var(--text-muted)", background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 4, padding: "2px 8px" }}>
+                  <span style={{ fontSize: FS.xs, color: "var(--text-muted)", background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 4, padding: "2px 8px" }}>
                     {p.detail}
                   </span>
                   {hasDone && (
                     <>
-                      <span style={{ fontSize: "0.68rem", color: "var(--text-muted)" }}>{p.skillsDone}/{p.totalSkills} kỹ năng đã bắt đầu</span>
+                      <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>{p.skillsDone}/{p.totalSkills} kỹ năng đã bắt đầu</span>
                       {p.testsPassed > 0 && (
-                        <span style={{ fontSize: "0.68rem", color: "rgb(34,197,94)" }}>{p.testsPassed}/{p.totalTestsAll} test pass (Easy ≥ 80%)</span>
+                        <span style={{ fontSize: FS.xs, color: "rgb(34,197,94)" }}>{p.testsPassed}/{p.totalTestsAll} test pass (Easy ≥ 80%)</span>
                       )}
                     </>
                   )}
                   {p.part === 1 && recordingCount > 0 && (
-                    <span style={{ fontSize: "0.68rem", color: "rgba(168,85,247,0.85)" }}>
+                    <span style={{ fontSize: FS.xs, color: "rgba(168,85,247,0.85)" }}>
                       🎙 {recordingCount} lần ghi âm · phát âm tốt nhất: {bestRecordingScore}%
                     </span>
                   )}
                 </div>
               </div>
 
-              <span className="r-arrow" style={{ fontSize: "0.8rem", color: "var(--accent-primary)", flexShrink: 0, marginTop: 6 }}>→</span>
+              <span className="r-arrow" style={{ fontSize: FS.sm, color: "var(--accent-primary)", flexShrink: 0, marginTop: 6 }}>→</span>
             </Link>
           );
         })}
       </div>
 
-      <div style={{ width: "100%", marginTop: "3rem" }}>
+      <div style={{ width: "100%", marginTop: "auto", paddingTop: "3rem" }}>
         <div style={{ height: 1, background: "var(--border)" }} />
-        <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.08em" }}>TOEIC DICTATION DIARY</p>
+        <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.08em" }}>TOEIC DICTATION DIARY</p>
       </div>
     </div>
   );

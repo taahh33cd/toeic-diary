@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { FS } from "@/lib/ui/scale";
 import type {
   SubskillSet,
   WordbankItem as WBItem,
@@ -135,7 +136,7 @@ function ChipSlots({
       {!submitted && (
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8, padding: "10px", background: "var(--bg-secondary)", borderRadius: 8, border: "1px dashed var(--border)", minHeight: 50 }}>
           {bank.length === 0 ? (
-            <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", alignSelf: "center" }}>
+            <span style={{ fontSize: FS.xs, color: "var(--text-muted)", alignSelf: "center" }}>
               Tất cả đã được đặt vào ô
             </span>
           ) : bank.map((chip, i) => (
@@ -161,10 +162,10 @@ function ChipSlots({
 
       {/* Correct answer on wrong */}
       {submitted && slots.some((c, i) => c !== correctOrder[i]) && (
-        <div style={{ fontSize: "0.78rem", color: "var(--text-muted)", display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
+        <div style={{ fontSize: FS.xs, color: "var(--text-muted)", display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
           <span>Thứ tự đúng:</span>
           {correctOrder.map((c, i) => (
-            <span key={i} style={{ padding: "2px 8px", background: "rgba(34,197,94,0.10)", color: "rgb(34,197,94)", border: "1px solid rgba(34,197,94,0.3)", borderRadius: 4, fontSize: "0.78rem" }}>{c}</span>
+            <span key={i} style={{ padding: "2px 8px", background: "rgba(34,197,94,0.10)", color: "rgb(34,197,94)", border: "1px solid rgba(34,197,94,0.3)", borderRadius: 4, fontSize: FS.xs }}>{c}</span>
           ))}
         </div>
       )}
@@ -180,7 +181,7 @@ function ResultBadge({ correct }: { correct: boolean }) {
       gap: 6,
       padding: "6px 14px",
       borderRadius: 20,
-      fontSize: "0.82rem",
+      fontSize: FS.sm,
       fontWeight: 600,
       background: correct ? "rgba(34,197,94,0.12)" : "rgba(239,68,68,0.10)",
       color: correct ? "rgb(34,197,94)" : "rgb(239,68,68)",
@@ -196,13 +197,13 @@ function ResultBadge({ correct }: { correct: boolean }) {
 /** A single colored word chip used in freewrite hint rows */
 function FtWordChip({ word, color }: { word: string; color: "green" | "red" | "neutral" }) {
   if (color === "neutral") {
-    return <span style={{ fontSize: "0.82rem", color: "var(--text-secondary)" }}>{word}</span>;
+    return <span style={{ fontSize: FS.sm, color: "var(--text-secondary)" }}>{word}</span>;
   }
   return (
     <span style={{
       padding: "1px 6px",
       borderRadius: 3,
-      fontSize: "0.82rem",
+      fontSize: FS.sm,
       fontWeight: 600,
       background: color === "green" ? "rgba(34,197,94,0.13)" : "rgba(239,68,68,0.09)",
       color: color === "green" ? "rgb(34,197,94)" : "rgb(239,68,68)",
@@ -274,16 +275,16 @@ function FreetypeHintDisplay({
       gap: 8,
     }}>
       {/* Header */}
-      <div style={{ fontSize: "0.7rem", fontWeight: 700, color: "rgb(180,130,0)", letterSpacing: "0.04em" }}>
+      <div style={{ fontSize: FS.xs, fontWeight: 700, color: "rgb(180,130,0)", letterSpacing: "0.04em" }}>
         💡 {isLightHint ? "Gợi ý (lần thử 2)" : "Gợi ý đầy đủ (lần cuối)"}
       </div>
 
       {/* Question word badge */}
       {hint.questionWordOk !== null && (
         <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
-          <span style={{ fontSize: "0.72rem", color: "var(--text-muted)" }}>Từ để hỏi:</span>
+          <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>Từ để hỏi:</span>
           <span style={{
-            fontSize: "0.72rem", fontWeight: 600, padding: "1px 8px", borderRadius: 10,
+            fontSize: FS.xs, fontWeight: 600, padding: "1px 8px", borderRadius: 10,
             background: hint.questionWordOk ? "rgba(34,197,94,0.12)" : "rgba(239,68,68,0.09)",
             color:      hint.questionWordOk ? "rgb(34,197,94)"       : "rgb(239,68,68)",
             border: `1px solid ${hint.questionWordOk ? "rgba(34,197,94,0.35)" : "rgba(239,68,68,0.28)"}`,
@@ -297,10 +298,10 @@ function FreetypeHintDisplay({
       {isLightHint && (
         hint.missingKeywords.length > 0 ? (
           <div style={{ display: "flex", flexWrap: "wrap", gap: "4px 5px", alignItems: "center" }}>
-            <span style={{ fontSize: "0.72rem", color: "var(--text-muted)", flexShrink: 0 }}>Từ khoá còn thiếu:</span>
+            <span style={{ fontSize: FS.xs, color: "var(--text-muted)", flexShrink: 0 }}>Từ khoá còn thiếu:</span>
             {hint.missingKeywords.map(kw => (
               <span key={kw} style={{
-                padding: "1px 8px", borderRadius: 4, fontSize: "0.78rem", fontWeight: 500,
+                padding: "1px 8px", borderRadius: 4, fontSize: FS.xs, fontWeight: 500,
                 background: "rgba(239,68,68,0.09)", color: "rgb(239,68,68)",
                 border: "1px solid rgba(239,68,68,0.28)",
               }}>
@@ -309,7 +310,7 @@ function FreetypeHintDisplay({
             ))}
           </div>
         ) : (
-          <span style={{ fontSize: "0.72rem", color: "rgb(34,197,94)", fontStyle: "italic" }}>
+          <span style={{ fontSize: FS.xs, color: "rgb(34,197,94)", fontStyle: "italic" }}>
             ✓ Từ khoá đủ rồi — kiểm tra lại từ để hỏi hoặc cấu trúc câu.
           </span>
         )
@@ -321,7 +322,7 @@ function FreetypeHintDisplay({
           {/* User's last wrong input */}
           <div style={{ display: "flex", flexWrap: "wrap", gap: "3px 4px", alignItems: "center" }}>
             <span style={{
-              fontSize: "0.68rem", color: "var(--text-muted)", fontWeight: 700,
+              fontSize: FS.xs, color: "var(--text-muted)", fontWeight: 700,
               minWidth: 58, flexShrink: 0,
             }}>Bạn viết:</span>
             {lastInput.trim().split(/\s+/).map((w, i) => (
@@ -331,7 +332,7 @@ function FreetypeHintDisplay({
           {/* Correct answer */}
           <div style={{ display: "flex", flexWrap: "wrap", gap: "3px 4px", alignItems: "center" }}>
             <span style={{
-              fontSize: "0.68rem", color: "var(--text-muted)", fontWeight: 700,
+              fontSize: FS.xs, color: "var(--text-muted)", fontWeight: 700,
               minWidth: 58, flexShrink: 0,
             }}>Đáp án:</span>
             {item.answer.trim().split(/\s+/).map((w, i) => (
@@ -340,9 +341,9 @@ function FreetypeHintDisplay({
           </div>
           {/* Legend */}
           <div style={{ display: "flex", gap: 12, marginTop: 1, flexWrap: "wrap" }}>
-            <span style={{ fontSize: "0.63rem", color: "rgb(34,197,94)" }}>● xanh = đúng</span>
-            <span style={{ fontSize: "0.63rem", color: "rgb(239,68,68)" }}>● đỏ = sai / thiếu</span>
-            <span style={{ fontSize: "0.63rem", color: "var(--text-muted)" }}>● xám = từ phụ</span>
+            <span style={{ fontSize: FS.xs, color: "rgb(34,197,94)" }}>● xanh = đúng</span>
+            <span style={{ fontSize: FS.xs, color: "rgb(239,68,68)" }}>● đỏ = sai / thiếu</span>
+            <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>● xám = từ phụ</span>
           </div>
         </div>
       )}
@@ -370,7 +371,7 @@ function WordbankPanel({
   const correct = submitted && wordbankItemCorrect(item, slots.filter(Boolean) as string[]);
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-      <p style={{ margin: 0, fontSize: "1rem", fontWeight: 600, color: "var(--text-primary)", background: "var(--bg-secondary)", padding: "14px 18px", borderRadius: 10, borderLeft: "3px solid var(--accent-primary)" }}>
+      <p style={{ margin: 0, fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)", background: "var(--bg-secondary)", padding: "14px 18px", borderRadius: 10, borderLeft: "3px solid var(--accent-primary)" }}>
         {item.prompt}
       </p>
       <ChipSlots
@@ -448,13 +449,13 @@ function FillPanel({
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
       {item.hint && (
-        <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", fontStyle: "italic" }}>
+        <div style={{ fontSize: FS.sm, color: "var(--text-muted)", fontStyle: "italic" }}>
           💡 {item.hint}
         </div>
       )}
 
       {/* Sentence */}
-      <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "4px 6px", fontSize: "0.95rem", lineHeight: 2.2, padding: "14px 18px", background: "var(--bg-secondary)", borderRadius: 10 }}>
+      <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "4px 6px", fontSize: FS.md, lineHeight: 2.2, padding: "14px 18px", background: "var(--bg-secondary)", borderRadius: 10 }}>
         {parts.map((part, pi) => {
           const match = part.match(/^\{(\d+)\}$/);
           if (match) {
@@ -479,7 +480,7 @@ function FillPanel({
                     background: isActive ? "rgba(79,142,247,0.1)" : ok === true ? "rgba(34,197,94,0.08)" : ok === false ? "rgba(239,68,68,0.07)" : "var(--bg-primary)",
                     color: ok === true ? "rgb(34,197,94)" : ok === false ? "rgb(239,68,68)" : value ? "var(--text-primary)" : "var(--text-muted)",
                     cursor: submitted ? "default" : "pointer",
-                    fontSize: "0.88rem",
+                    fontSize: FS.sm,
                     fontStyle: value ? "normal" : "italic",
                     userSelect: "none",
                     verticalAlign: "middle",
@@ -509,7 +510,7 @@ function FillPanel({
                   border: `1.5px solid ${ok === true ? "rgba(34,197,94,0.6)" : ok === false ? "rgba(239,68,68,0.55)" : "var(--border)"}`,
                   background: ok === true ? "rgba(34,197,94,0.08)" : ok === false ? "rgba(239,68,68,0.07)" : "var(--bg-primary)",
                   color: ok === true ? "rgb(34,197,94)" : ok === false ? "rgb(239,68,68)" : "var(--text-primary)",
-                  fontSize: "0.9rem",
+                  fontSize: FS.sm,
                   outline: "none",
                   verticalAlign: "middle",
                 }}
@@ -533,7 +534,7 @@ function FillPanel({
                 border: "1.5px solid var(--border)",
                 background: "var(--bg-secondary)",
                 color: "var(--text-primary)",
-                fontSize: "0.85rem",
+                fontSize: FS.sm,
                 cursor: "pointer",
                 transition: "background 0.12s, border-color 0.12s",
               }}
@@ -542,7 +543,7 @@ function FillPanel({
             </button>
           ))}
           {availableChips.length === 0 && (
-            <span style={{ fontSize: "0.78rem", color: "var(--text-muted)", fontStyle: "italic" }}>
+            <span style={{ fontSize: FS.xs, color: "var(--text-muted)", fontStyle: "italic" }}>
               Tất cả từ đã được đặt vào ô. Nhấn vào ô để hoàn trả.
             </span>
           )}
@@ -553,7 +554,7 @@ function FillPanel({
         <>
           <ResultBadge correct={allCorrect} />
           {!allCorrect && (
-            <div style={{ fontSize: "0.78rem", color: "var(--text-muted)", display: "flex", flexDirection: "column", gap: 4 }}>
+            <div style={{ fontSize: FS.xs, color: "var(--text-muted)", display: "flex", flexDirection: "column", gap: 4 }}>
               {item.blanks.map((group, i) =>
                 blankResults && !blankResults[i] ? (
                   <span key={i}>Ô {i + 1}: đáp án nhận — <em>{group.join(" / ")}</em></span>
@@ -586,10 +587,10 @@ function KeywordPanel({
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-      <p style={{ margin: 0, fontSize: "1rem", fontWeight: 600, color: "var(--text-primary)", background: "var(--bg-secondary)", padding: "14px 18px", borderRadius: 10, borderLeft: "3px solid var(--accent-primary)" }}>
+      <p style={{ margin: 0, fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)", background: "var(--bg-secondary)", padding: "14px 18px", borderRadius: 10, borderLeft: "3px solid var(--accent-primary)" }}>
         {item.prompt}
       </p>
-      <div style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>
+      <div style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>
         Cần ít nhất <strong>{item.minRequired}</strong> từ khóa, cách nhau bằng dấu phẩy
       </div>
       <input
@@ -605,7 +606,7 @@ function KeywordPanel({
           border: "1.5px solid var(--border)",
           background: "var(--bg-primary)",
           color: "var(--text-primary)",
-          fontSize: "0.9rem",
+          fontSize: FS.sm,
           outline: "none",
           boxSizing: "border-box",
         }}
@@ -623,7 +624,7 @@ function KeywordPanel({
                   style={{
                     padding: "3px 10px",
                     borderRadius: 4,
-                    fontSize: "0.78rem",
+                    fontSize: FS.xs,
                     fontWeight: 500,
                     background: matched ? "rgba(34,197,94,0.12)" : "rgba(239,68,68,0.09)",
                     color: matched ? "rgb(34,197,94)" : "rgb(239,68,68)",
@@ -636,7 +637,7 @@ function KeywordPanel({
               );
             })}
           </div>
-          <div style={{ fontSize: "0.76rem", color: "var(--text-muted)" }}>
+          <div style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>
             {matchCount}/{item.keywords.length} nhóm từ khóa khớp
           </div>
         </div>
@@ -669,7 +670,7 @@ function FreetypePanel({
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
       {/* Vietnamese hint */}
-      <p style={{ margin: 0, fontSize: "1rem", fontWeight: 600, color: "var(--text-primary)", background: "var(--bg-secondary)", padding: "14px 18px", borderRadius: 10, borderLeft: "3px solid var(--accent-primary)" }}>
+      <p style={{ margin: 0, fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)", background: "var(--bg-secondary)", padding: "14px 18px", borderRadius: 10, borderLeft: "3px solid var(--accent-primary)" }}>
         {item.prompt}
       </p>
 
@@ -688,7 +689,7 @@ function FreetypePanel({
             border: `1.5px solid ${submitted ? (correct ? "rgba(34,197,94,0.5)" : "rgba(239,68,68,0.45)") : "var(--border)"}`,
             background: submitted ? (correct ? "rgba(34,197,94,0.06)" : "rgba(239,68,68,0.05)") : "var(--bg-secondary)",
             color: "var(--text-primary)",
-            fontSize: "0.92rem",
+            fontSize: FS.md,
             outline: "none",
             boxSizing: "border-box",
             cursor: submitted ? "default" : "text",
@@ -706,8 +707,8 @@ function FreetypePanel({
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           <ResultBadge correct={correct} />
           {!correct && (
-            <div style={{ padding: "10px 14px", background: "var(--bg-elevated)", borderRadius: 8, fontSize: "0.82rem", color: "var(--text-secondary)", borderLeft: "3px solid rgba(34,197,94,0.4)" }}>
-              <span style={{ color: "var(--text-muted)", fontSize: "0.75rem", display: "block", marginBottom: 4 }}>ĐÁP ÁN</span>
+            <div style={{ padding: "10px 14px", background: "var(--bg-elevated)", borderRadius: 8, fontSize: FS.sm, color: "var(--text-secondary)", borderLeft: "3px solid rgba(34,197,94,0.4)" }}>
+              <span style={{ color: "var(--text-muted)", fontSize: FS.xs, display: "block", marginBottom: 4 }}>ĐÁP ÁN</span>
               <strong style={{ color: "var(--text-primary)" }}>{item.answer}</strong>
             </div>
           )}
@@ -753,7 +754,7 @@ function McqPanel({
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-      <p style={{ margin: 0, fontSize: "1rem", fontWeight: 600, color: "var(--text-primary)", background: "var(--bg-secondary)", padding: "14px 18px", borderRadius: 10, borderLeft: "3px solid var(--accent-primary)" }}>
+      <p style={{ margin: 0, fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)", background: "var(--bg-secondary)", padding: "14px 18px", borderRadius: 10, borderLeft: "3px solid var(--accent-primary)" }}>
         {item.prompt}
       </p>
 
@@ -822,13 +823,13 @@ function McqPanel({
                 cursor,
                 textAlign: "left",
                 color: textColor,
-                fontSize: "0.9rem",
+                fontSize: FS.sm,
                 opacity,
                 textDecoration: textDeco,
                 transition: "opacity 0.15s",
               }}
             >
-              <span style={{ fontWeight: 700, color: "var(--text-muted)", fontSize: "0.78rem", minWidth: 16 }}>
+              <span style={{ fontWeight: 700, color: "var(--text-muted)", fontSize: FS.xs, minWidth: 16 }}>
                 {["A", "B", "C", "D"][i]}
               </span>
               {opt}
@@ -840,7 +841,7 @@ function McqPanel({
       {/* Translation word-bank — shown once MCQ is selected or locked */}
       {(choice !== null || mcqPartLocked) && (
         <div style={{ border: `1px solid ${mcqPartLocked && !submitted ? "rgba(34,197,94,0.3)" : "var(--border)"}`, borderRadius: 10, padding: "14px 16px", display: "flex", flexDirection: "column", gap: 10 }}>
-          <div style={{ fontSize: "0.75rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+          <div style={{ fontSize: FS.xs, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.08em" }}>
             Dịch nghĩa đáp án đúng sang tiếng Việt
           </div>
           <ChipSlots
@@ -862,7 +863,7 @@ function McqPanel({
             padding: "10px 14px",
             background: "var(--bg-elevated)",
             borderRadius: 8,
-            fontSize: "0.8rem",
+            fontSize: FS.sm,
             color: "var(--text-secondary)",
             borderLeft: "3px solid var(--border)",
           }}>
@@ -897,7 +898,7 @@ function MatchPanel({
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-      <p style={{ margin: 0, fontSize: "1rem", fontWeight: 600, color: "var(--text-primary)", background: "var(--bg-secondary)", padding: "14px 18px", borderRadius: 10, borderLeft: "3px solid var(--accent-primary)" }}>
+      <p style={{ margin: 0, fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)", background: "var(--bg-secondary)", padding: "14px 18px", borderRadius: 10, borderLeft: "3px solid var(--accent-primary)" }}>
         {item.question}
       </p>
 
@@ -954,13 +955,13 @@ function MatchPanel({
                 cursor,
                 textAlign: "left",
                 color: textColor,
-                fontSize: "0.9rem",
+                fontSize: FS.sm,
                 opacity,
                 textDecoration: textDeco,
                 transition: "opacity 0.15s",
               }}
             >
-              <span style={{ fontWeight: 700, color: "var(--text-muted)", fontSize: "0.78rem", minWidth: 16 }}>
+              <span style={{ fontWeight: 700, color: "var(--text-muted)", fontSize: FS.xs, minWidth: 16 }}>
                 {["A", "B", "C", "D", "E"][i]}
               </span>
               {opt}
@@ -976,7 +977,7 @@ function MatchPanel({
             padding: "10px 14px",
             background: "var(--bg-elevated)",
             borderRadius: 8,
-            fontSize: "0.8rem",
+            fontSize: FS.sm,
             color: "var(--text-secondary)",
             borderLeft: "3px solid var(--border)",
           }}>
@@ -1004,7 +1005,7 @@ function IntroPanel({
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
       {/* Intro */}
-      <div style={{ padding: "16px 20px", background: "rgba(30,95,142,0.08)", border: "1px solid rgba(30,95,142,0.2)", borderRadius: 10, fontSize: "0.87rem", color: "var(--text-secondary)", lineHeight: 1.7 }}>
+      <div style={{ padding: "16px 20px", background: "rgba(30,95,142,0.08)", border: "1px solid rgba(30,95,142,0.2)", borderRadius: 10, fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.7 }}>
         {set.intro}
       </div>
 
@@ -1039,7 +1040,7 @@ function IntroPanel({
               <div style={{
                 width: 30, height: 30, borderRadius: "50%", flexShrink: 0,
                 display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: "0.8rem", fontWeight: 700,
+                fontSize: FS.sm, fontWeight: 700,
                 background: passed ? "rgba(34,197,94,0.15)" : anyDone ? "rgba(234,179,8,0.13)" : "var(--bg-elevated)",
                 color: passed ? "rgb(34,197,94)" : anyDone ? "rgb(234,179,8)" : "var(--text-muted)",
                 border: `1.5px solid ${passed ? "rgba(34,197,94,0.4)" : anyDone ? "rgba(234,179,8,0.4)" : "var(--border)"}`,
@@ -1050,12 +1051,12 @@ function IntroPanel({
               {/* Title + score/draft info */}
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 2, flexWrap: "wrap" }}>
-                  <span style={{ fontSize: "0.88rem", fontWeight: 600, color: "var(--text-primary)" }}>
+                  <span style={{ fontSize: FS.sm, fontWeight: 600, color: "var(--text-primary)" }}>
                     {ex.title}
                   </span>
                   {hasDraft && (
                     <span style={{
-                      fontSize: "0.65rem",
+                      fontSize: FS.xs,
                       fontWeight: 600,
                       padding: "2px 7px",
                       borderRadius: 10,
@@ -1068,7 +1069,7 @@ function IntroPanel({
                     </span>
                   )}
                 </div>
-                <div style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>
+                <div style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>
                   {anyDone
                     ? `Điểm cao nhất: ${score}% ${passed ? "✓ Đạt" : `(cần ${set.passThreshold}%)`}`
                     : hasDraft ? "Đang làm dở" : "Chưa làm"}
@@ -1081,7 +1082,7 @@ function IntroPanel({
                 style={{
                   padding: "7px 18px",
                   borderRadius: 6,
-                  fontSize: "0.82rem",
+                  fontSize: FS.sm,
                   fontWeight: 600,
                   cursor: "pointer",
                   background: hasDraft
@@ -1136,16 +1137,16 @@ function ExResultPanel({
         boxShadow: "0 0 0 8px var(--bg-primary)",
       }}>
         <div style={{ width: 90, height: 90, borderRadius: "50%", background: "var(--bg-primary)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-          <span style={{ fontSize: "1.6rem", fontWeight: 800, color: arcColor, lineHeight: 1 }}>{pct}%</span>
-          <span style={{ fontSize: "0.65rem", color: "var(--text-muted)", letterSpacing: "0.05em" }}>ĐIỂM</span>
+          <span style={{ fontSize: FS.lg, fontWeight: 800, color: arcColor, lineHeight: 1 }}>{pct}%</span>
+          <span style={{ fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.05em" }}>ĐIỂM</span>
         </div>
       </div>
 
       <div>
-        <div style={{ fontSize: "1.2rem", fontWeight: 700, color: passed ? "rgb(34,197,94)" : "var(--text-primary)", marginBottom: 6 }}>
+        <div style={{ fontSize: FS.lg, fontWeight: 700, color: passed ? "rgb(34,197,94)" : "var(--text-primary)", marginBottom: 6 }}>
           {passed ? "Tuyệt vời! Đạt yêu cầu 🎉" : "Cần cố gắng thêm"}
         </div>
-        <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)" }}>
+        <div style={{ fontSize: FS.sm, color: "var(--text-secondary)" }}>
           {passed
             ? `Bài ${exIdx + 1} hoàn thành — điểm ${pct}% ≥ ${passThreshold}%`
             : `Điểm ${pct}% chưa đạt ngưỡng ${passThreshold}%. Hãy thử lại để cải thiện!`}
@@ -1155,13 +1156,13 @@ function ExResultPanel({
       <div style={{ display: "flex", gap: 12 }}>
         <button
           onClick={onBack}
-          style={{ padding: "10px 22px", borderRadius: 8, fontSize: "0.88rem", fontWeight: 500, cursor: "pointer", background: "transparent", color: "var(--text-secondary)", border: "1px solid var(--border)" }}
+          style={{ padding: "10px 22px", borderRadius: 8, fontSize: FS.sm, fontWeight: 500, cursor: "pointer", background: "transparent", color: "var(--text-secondary)", border: "1px solid var(--border)" }}
         >
           ← Về tổng quan
         </button>
         <button
           onClick={onContinue}
-          style={{ padding: "10px 22px", borderRadius: 8, fontSize: "0.88rem", fontWeight: 600, cursor: "pointer", background: "var(--accent-primary)", color: "#fff", border: "none" }}
+          style={{ padding: "10px 22px", borderRadius: 8, fontSize: FS.sm, fontWeight: 600, cursor: "pointer", background: "var(--accent-primary)", color: "#fff", border: "none" }}
         >
           {isLast ? "Xem kết quả cuối" : `Bài ${exIdx + 2} →`}
         </button>
@@ -1189,13 +1190,13 @@ function AllDonePanel({
 
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 24, padding: "32px 16px", textAlign: "center" }}>
-      <div style={{ fontSize: "2.5rem" }}>{passedAll ? "🏆" : "📝"}</div>
+      <div style={{ fontSize: FS.xl }}>{passedAll ? "🏆" : "📝"}</div>
       <div>
-        <div style={{ fontSize: "1.3rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: 6 }}>
+        <div style={{ fontSize: FS.lg, fontWeight: 700, color: "var(--text-primary)", marginBottom: 6 }}>
           {passedAll ? "Hoàn thành xuất sắc!" : "Đã hoàn thành tất cả bài"}
         </div>
         {avgScore !== null && (
-          <div style={{ fontSize: "0.88rem", color: "var(--text-secondary)" }}>
+          <div style={{ fontSize: FS.sm, color: "var(--text-secondary)" }}>
             Điểm trung bình: <strong>{avgScore}%</strong>
           </div>
         )}
@@ -1211,14 +1212,14 @@ function AllDonePanel({
               <span style={{
                 width: 24, height: 24, borderRadius: "50%", flexShrink: 0,
                 display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: "0.72rem", fontWeight: 700,
+                fontSize: FS.xs, fontWeight: 700,
                 background: p ? "rgba(34,197,94,0.12)" : "rgba(239,68,68,0.09)",
                 color: p ? "rgb(34,197,94)" : "rgb(239,68,68)",
               }}>
                 {p ? "✓" : "✗"}
               </span>
-              <span style={{ flex: 1, fontSize: "0.85rem", color: "var(--text-primary)", textAlign: "left" }}>{ex.title}</span>
-              <span style={{ fontSize: "0.88rem", fontWeight: 700, color: p ? "rgb(34,197,94)" : "rgb(239,68,68)" }}>
+              <span style={{ flex: 1, fontSize: FS.sm, color: "var(--text-primary)", textAlign: "left" }}>{ex.title}</span>
+              <span style={{ fontSize: FS.sm, fontWeight: 700, color: p ? "rgb(34,197,94)" : "rgb(239,68,68)" }}>
                 {s !== null ? `${s}%` : "—"}
               </span>
             </div>
@@ -1229,7 +1230,7 @@ function AllDonePanel({
       <div style={{ display: "flex", gap: 12 }}>
         <button
           onClick={onBack}
-          style={{ padding: "10px 26px", borderRadius: 8, fontSize: "0.9rem", fontWeight: 600, cursor: "pointer", background: "var(--accent-primary)", color: "#fff", border: "none" }}
+          style={{ padding: "10px 26px", borderRadius: 8, fontSize: FS.sm, fontWeight: 600, cursor: "pointer", background: "var(--accent-primary)", color: "#fff", border: "none" }}
         >
           ← Về tổng quan
         </button>
@@ -1587,12 +1588,12 @@ export default function ExerciseClient({
       <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
         <button
           onClick={() => setPhase("intro")}
-          style={{ background: "none", border: "none", color: "var(--text-muted)", cursor: "pointer", fontSize: "0.85rem", padding: 0, flexShrink: 0 }}
+          style={{ background: "none", border: "none", color: "var(--text-muted)", cursor: "pointer", fontSize: FS.sm, padding: 0, flexShrink: 0 }}
         >
           ← Quay lại
         </button>
         <div style={{ flex: 1 }}>
-          <div style={{ fontSize: "0.75rem", color: "var(--text-muted)", marginBottom: 5 }}>
+          <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginBottom: 5 }}>
             {ex.title} — Câu {itemIdx + 1}/{items.length}
           </div>
           <div style={{ height: 4, background: "var(--bg-elevated)", borderRadius: 999 }}>
@@ -1602,7 +1603,7 @@ export default function ExerciseClient({
       </div>
 
       {/* Instruction banner */}
-      <div style={{ padding: "12px 16px", background: "rgba(59,130,246,0.06)", border: "1px solid rgba(59,130,246,0.18)", borderLeft: "3px solid var(--accent-primary)", borderRadius: 8, fontSize: "0.95rem", fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.5 }}>
+      <div style={{ padding: "12px 16px", background: "rgba(59,130,246,0.06)", border: "1px solid rgba(59,130,246,0.18)", borderLeft: "3px solid var(--accent-primary)", borderRadius: 8, fontSize: FS.md, fontWeight: 600, color: "var(--text-primary)", lineHeight: 1.5 }}>
         {ex.instruction}
       </div>
 
@@ -1683,12 +1684,12 @@ export default function ExerciseClient({
             borderRadius: 8,
             background: "rgba(239,68,68,0.07)",
             border: "1px solid rgba(239,68,68,0.22)",
-            fontSize: "0.82rem",
+            fontSize: FS.sm,
           }}>
             <span style={{ color: "rgb(210,50,50)", fontWeight: 600 }}>
               ✗ Chưa đúng — thử lại lần {retryCount + 1}/3{retryCount === 2 ? " (lần cuối)" : ""}
             </span>
-            <span style={{ color: "var(--text-muted)", fontSize: "0.74rem" }}>
+            <span style={{ color: "var(--text-muted)", fontSize: FS.xs }}>
               {retryCount === 1 ? "đúng lần này: 50%" : "đúng lần này: 0%"}
             </span>
           </div>
@@ -1715,7 +1716,7 @@ export default function ExerciseClient({
               padding: "10px 28px",
               borderRadius: 8,
               fontWeight: 600,
-              fontSize: "0.9rem",
+              fontSize: FS.sm,
               cursor: canCheck ? "pointer" : "not-allowed",
               background: canCheck ? "var(--accent-primary)" : "var(--bg-elevated)",
               color: canCheck ? "#fff" : "var(--text-muted)",
@@ -1728,7 +1729,7 @@ export default function ExerciseClient({
         ) : (
           <button
             onClick={handleNextItem}
-            style={{ padding: "10px 28px", borderRadius: 8, fontWeight: 600, fontSize: "0.9rem", cursor: "pointer", background: "var(--accent-primary)", color: "#fff", border: "none" }}
+            style={{ padding: "10px 28px", borderRadius: 8, fontWeight: 600, fontSize: FS.sm, cursor: "pointer", background: "var(--accent-primary)", color: "#fff", border: "none" }}
           >
             {itemIdx < items.length - 1 ? "Câu tiếp →" : "Xem kết quả →"}
           </button>

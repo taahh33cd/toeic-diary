@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, BookOpen, Layers } from "lucide-react";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 
 export const metadata: Metadata = { title: "Reading Subskills — TOEIC" };
 
@@ -35,10 +36,10 @@ export default function ReadingSubskillsPage() {
   return (
     <div
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 1100,
+        padding: `${PAD_Y} ${PAD_X}`,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         boxSizing: "border-box",
       }}
@@ -50,7 +51,7 @@ export default function ReadingSubskillsPage() {
           display: "inline-flex",
           alignItems: "center",
           gap: "0.35rem",
-          fontSize: "0.78rem",
+          fontSize: FS.xs,
           color: "var(--text-muted)",
           textDecoration: "none",
           marginBottom: "1.5rem",
@@ -63,11 +64,11 @@ export default function ReadingSubskillsPage() {
       <div style={{ marginBottom: "2rem" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.4rem" }}>
           <BookOpen size={20} style={{ color: "var(--accent-primary)" }} />
-          <h1 style={{ fontSize: "1.5rem", fontWeight: 700, color: "var(--text-primary)" }}>
+          <h1 style={{ fontSize: FS.lg, fontWeight: 700, color: "var(--text-primary)" }}>
             Reading Subskills
           </h1>
         </div>
-        <p style={{ fontSize: "0.875rem", color: "var(--text-muted)" }}>
+        <p style={{ fontSize: FS.sm, color: "var(--text-muted)" }}>
           Luyện từng kỹ năng Reading theo từng Part — chọn Part để bắt đầu.
         </p>
       </div>
@@ -89,19 +90,19 @@ export default function ReadingSubskillsPage() {
               >
                 <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}>
                   <Layers size={16} style={{ color: "var(--text-muted)" }} />
-                  <span style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--text-muted)" }}>
+                  <span style={{ fontSize: FS.xs, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--text-muted)" }}>
                     {p.part}
                   </span>
                 </div>
-                <div style={{ fontWeight: 700, fontSize: "0.95rem", color: "var(--text-primary)", marginBottom: "0.4rem" }}>
+                <div style={{ fontWeight: 700, fontSize: FS.md, color: "var(--text-primary)", marginBottom: "0.4rem" }}>
                   {p.title}
                 </div>
-                <div style={{ fontSize: "0.78rem", color: "var(--text-muted)", marginBottom: "0.75rem", lineHeight: 1.5 }}>
+                <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginBottom: "0.75rem", lineHeight: 1.5 }}>
                   {p.description}
                 </div>
                 <span style={{
                   display: "inline-block",
-                  fontSize: "0.6rem",
+                  fontSize: FS.xs,
                   fontWeight: 700,
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",
@@ -135,21 +136,21 @@ export default function ReadingSubskillsPage() {
             >
               <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}>
                 <Layers size={16} style={{ color: "var(--accent-primary)" }} />
-                <span style={{ fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--accent-primary)" }}>
+                <span style={{ fontSize: FS.xs, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--accent-primary)" }}>
                   {p.part}
                 </span>
               </div>
-              <div style={{ fontWeight: 700, fontSize: "0.95rem", color: "var(--text-primary)", marginBottom: "0.4rem" }}>
+              <div style={{ fontWeight: 700, fontSize: FS.md, color: "var(--text-primary)", marginBottom: "0.4rem" }}>
                 {p.title}
               </div>
-              <div style={{ fontSize: "0.78rem", color: "var(--text-muted)", marginBottom: "0.75rem", lineHeight: 1.5, flex: 1 }}>
+              <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginBottom: "0.75rem", lineHeight: 1.5, flex: 1 }}>
                 {p.description}
               </div>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", paddingTop: "0.75rem", borderTop: "1px solid var(--border)" }}>
-                <span style={{ fontSize: "0.7rem", color: "var(--text-secondary)" }}>
+                <span style={{ fontSize: FS.xs, color: "var(--text-secondary)" }}>
                   {p.totalTenses} chủ điểm
                 </span>
-                <span style={{ fontSize: "0.85rem", color: "var(--accent-primary)", fontWeight: 600 }}>→</span>
+                <span style={{ fontSize: FS.sm, color: "var(--accent-primary)", fontWeight: 600 }}>→</span>
               </div>
             </Link>
           );

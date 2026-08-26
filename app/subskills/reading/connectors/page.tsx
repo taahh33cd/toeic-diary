@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { CONNECTOR_GROUPS } from "@/lib/subskills/connectors";
 import { groupToPartKey, CONN_KIND_LABEL, type ConnKind } from "@/lib/subskills/connectors/types";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 
 export const metadata: Metadata = { title: "Liên từ & Từ nối — Part 5 & 6" };
 
@@ -42,16 +43,16 @@ export default async function ConnectorsGroupListPage() {
   return (
     <div
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 1100,
+        padding: `${PAD_Y} ${PAD_X}`,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         boxSizing: "border-box",
       }}
     >
       {/* Breadcrumb */}
-      <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "1.5rem", fontSize: "0.78rem", color: "var(--text-muted)" }}>
+      <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", marginBottom: "1.5rem", fontSize: FS.xs, color: "var(--text-muted)" }}>
         <Link href="/subskills" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Subskills</Link>
         <span>/</span>
         <Link href="/subskills/reading" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Reading</Link>
@@ -61,10 +62,10 @@ export default async function ConnectorsGroupListPage() {
 
       {/* Header */}
       <div style={{ marginBottom: "1.25rem" }}>
-        <h1 style={{ fontSize: "1.4rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.35rem" }}>
+        <h1 style={{ fontSize: FS.lg, fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.35rem" }}>
           Liên từ & Từ nối — Part 5 & 6
         </h1>
-        <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.6 }}>
+        <p style={{ fontSize: FS.sm, color: "var(--text-muted)", lineHeight: 1.6 }}>
           Học theo 10 nhóm quan hệ logic. Mỗi nhóm có 6 levels: phân loại ngữ pháp → nghĩa & sắc thái → bẫy cấu trúc → bẫy ngữ nghĩa → Part 6 → đề thi thật.
         </p>
       </div>
@@ -78,10 +79,10 @@ export default async function ConnectorsGroupListPage() {
         padding: "0.9rem 1.1rem",
         marginBottom: "2rem",
       }}>
-        <div style={{ fontSize: "0.72rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--accent-primary)", marginBottom: "0.5rem" }}>
+        <div style={{ fontSize: FS.xs, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--accent-primary)", marginBottom: "0.5rem" }}>
           Nguyên tắc cốt lõi
         </div>
-        <p style={{ fontSize: "0.82rem", color: "var(--text-secondary)", lineHeight: 1.7, margin: 0 }}>
+        <p style={{ fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.7, margin: 0 }}>
           ETS thường ra 4 đáp án <strong>cùng nghĩa nhưng khác loại</strong>. Chỉ cần nhìn phần <strong>SAU chỗ trống</strong> là loại được 2–3 đáp án mà chưa cần hiểu nghĩa:
         </p>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginTop: "0.75rem" }}>
@@ -89,7 +90,7 @@ export default async function ConnectorsGroupListPage() {
             <span
               key={k}
               style={{
-                fontSize: "0.72rem",
+                fontSize: FS.xs,
                 fontWeight: 600,
                 padding: "3px 10px",
                 borderRadius: 99,
@@ -118,10 +119,10 @@ export default async function ConnectorsGroupListPage() {
             <>
               <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "0.5rem" }}>
                 <div>
-                  <div style={{ fontWeight: 700, fontSize: "0.95rem", color: "var(--text-primary)", lineHeight: 1.25 }}>
+                  <div style={{ fontWeight: 700, fontSize: FS.md, color: "var(--text-primary)", lineHeight: 1.25 }}>
                     {group.name}
                   </div>
-                  <div style={{ fontSize: "0.72rem", color: "var(--text-muted)", marginTop: "0.15rem" }}>
+                  <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginTop: "0.15rem" }}>
                     {group.nameEn} · {group.connectors.length} từ
                   </div>
                 </div>
@@ -143,7 +144,7 @@ export default async function ConnectorsGroupListPage() {
                   <span
                     key={c.word}
                     style={{
-                      fontSize: "0.68rem",
+                      fontSize: FS.xs,
                       fontWeight: 600,
                       padding: "2px 7px",
                       borderRadius: 4,
@@ -156,7 +157,7 @@ export default async function ConnectorsGroupListPage() {
                   </span>
                 ))}
                 {group.connectors.length > 4 && (
-                  <span style={{ fontSize: "0.68rem", color: "var(--text-muted)", alignSelf: "center" }}>
+                  <span style={{ fontSize: FS.xs, color: "var(--text-muted)", alignSelf: "center" }}>
                     +{group.connectors.length - 4}
                   </span>
                 )}
@@ -164,7 +165,7 @@ export default async function ConnectorsGroupListPage() {
 
               {hasContent ? (
                 <div>
-                  <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.68rem", color: "var(--text-muted)", marginBottom: "0.3rem" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", fontSize: FS.xs, color: "var(--text-muted)", marginBottom: "0.3rem" }}>
                     <span>{passedLevels}/{TOTAL_LEVELS} levels passed</span>
                     <span>{pct}%</span>
                   </div>
@@ -180,7 +181,7 @@ export default async function ConnectorsGroupListPage() {
                 </div>
               ) : (
                 <span style={{
-                  fontSize: "0.6rem",
+                  fontSize: FS.xs,
                   fontWeight: 700,
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",

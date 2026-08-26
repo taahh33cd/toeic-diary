@@ -5,6 +5,7 @@ import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { getIpaSet, isIpaSection, IPA_DIFFICULTIES } from "@/lib/subskills/ipa";
 import { IpaSectionClient, type ExerciseProgress, type ExerciseDraft } from "@/components/subskills/ipa/IpaSectionClient";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 
 type Props = { params: Promise<{ section: string }>; searchParams: Promise<{ d?: string }> };
 
@@ -83,9 +84,9 @@ export default async function IpaSectionPage({ params, searchParams }: Props) {
   }
 
   return (
-    <div style={{ minHeight: "100%", background: "var(--bg-primary)", padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)", maxWidth: 760, margin: "0 auto", width: "100%", boxSizing: "border-box" }}>
+    <div style={{ ...FILL_SCREEN, background: "var(--bg-primary)", padding: `${PAD_Y} ${PAD_X}`, maxWidth: CONTAINER_MAX, margin: "0 auto", width: "100%", boxSizing: "border-box" }}>
       {/* Breadcrumb */}
-      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: "0.8rem", color: "var(--text-muted)", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: FS.sm, color: "var(--text-muted)", flexWrap: "wrap" }}>
         <Link href="/subskills" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Subskills</Link>
         <span>›</span>
         <Link href="/subskills/ipa" style={{ color: "var(--text-muted)", textDecoration: "none" }}>IPA</Link>
@@ -105,7 +106,7 @@ export default async function IpaSectionPage({ params, searchParams }: Props) {
               key={diff}
               href={`/subskills/ipa/${section}?d=${diff}`}
               style={{
-                padding: "0.4rem 1rem", borderRadius: 999, fontSize: "0.8rem", fontWeight: 600,
+                padding: "0.4rem 1rem", borderRadius: 999, fontSize: FS.sm, fontWeight: 600,
                 textDecoration: "none", textTransform: "capitalize",
                 display: "inline-flex", alignItems: "center", gap: "0.3rem",
                 border: `1.5px solid ${active ? "var(--accent-primary)" : "var(--border)"}`,
@@ -122,22 +123,22 @@ export default async function IpaSectionPage({ params, searchParams }: Props) {
       </div>
 
       {!set ? (
-        <div style={{ padding: "2rem 1.5rem", textAlign: "center", border: "1px dashed var(--border)", borderRadius: "var(--radius-lg)", background: "var(--bg-secondary)", color: "var(--text-muted)", fontSize: "0.88rem" }}>
+        <div style={{ padding: "2rem 1.5rem", textAlign: "center", border: "1px dashed var(--border)", borderRadius: "var(--radius-lg)", background: "var(--bg-secondary)", color: "var(--text-muted)", fontSize: FS.sm }}>
           Nội dung mức <strong style={{ textTransform: "capitalize" }}>{difficulty}</strong> đang được biên soạn — sắp có.
         </div>
       ) : !activeUnlocked ? (
         <div style={{ padding: "2.5rem 1.5rem", textAlign: "center", border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", background: "var(--bg-secondary)" }}>
-          <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>🔒</div>
-          <div style={{ fontSize: "1rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.4rem", textTransform: "capitalize" }}>
+          <div style={{ fontSize: FS.xl, marginBottom: "0.5rem" }}>🔒</div>
+          <div style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.4rem", textTransform: "capitalize" }}>
             Mức {difficulty} đang khoá
           </div>
-          <p style={{ margin: "0 auto 1.25rem", maxWidth: 380, fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
+          <p style={{ margin: "0 auto 1.25rem", maxWidth: 380, fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.6 }}>
             Đạt <strong>≥ 80%</strong> ở ít nhất một bài mức{" "}
             <strong>{difficulty === "medium" ? "Easy" : "Medium"}</strong> để mở khoá mức này.
           </p>
           <Link
             href={`/subskills/ipa/${section}?d=${difficulty === "medium" ? "easy" : "medium"}`}
-            style={{ display: "inline-block", padding: "0.55rem 1.2rem", borderRadius: "var(--radius-md, 8px)", background: "var(--accent-primary)", color: "#fff", fontSize: "0.85rem", fontWeight: 600, textDecoration: "none" }}
+            style={{ display: "inline-block", padding: "0.55rem 1.2rem", borderRadius: "var(--radius-md, 8px)", background: "var(--accent-primary)", color: "#fff", fontSize: FS.sm, fontWeight: 600, textDecoration: "none" }}
           >
             ← Về mức {difficulty === "medium" ? "Easy" : "Medium"}
           </Link>

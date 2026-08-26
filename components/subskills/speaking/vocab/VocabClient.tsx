@@ -8,6 +8,7 @@ import {
 import FlashcardDeck from "./FlashcardDeck";
 import MemoryGame from "./MemoryGame";
 import ScanGame from "./ScanGame";
+import { FS } from "@/lib/ui/scale";
 
 type View =
   | { mode: "hub" }
@@ -57,10 +58,10 @@ export default function VocabClient({ userId }: { userId: string | null }) {
         {VOCAB_GROUPS.map((g) => (
           <div key={g.id} style={card}>
             <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 3 }}>
-              <span style={{ fontSize: "1.2rem" }}>{g.icon}</span>
-              <span style={{ fontSize: "0.92rem", fontWeight: 700, color: "var(--text-primary)" }}>{g.label}</span>
+              <span style={{ fontSize: FS.lg }}>{g.icon}</span>
+              <span style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)" }}>{g.label}</span>
             </div>
-            <div style={{ fontSize: "0.78rem", color: "var(--text-muted)", marginBottom: "0.7rem" }}>
+            <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginBottom: "0.7rem" }}>
               {getVocabGroup(g.id).length} từ · {g.hint}
             </div>
             <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
@@ -83,12 +84,12 @@ export default function VocabClient({ userId }: { userId: string | null }) {
           <button key={p.id} onClick={() => setView({ mode: "scan", pool: p.id })}
             style={{ ...card, cursor: "pointer", textAlign: "left", borderColor: "var(--accent-primary)" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 3 }}>
-              <span style={{ fontSize: "1.2rem" }}>{p.icon}</span>
-              <span style={{ fontSize: "0.92rem", fontWeight: 700, color: "var(--accent-primary)" }}>
+              <span style={{ fontSize: FS.lg }}>{p.icon}</span>
+              <span style={{ fontSize: FS.md, fontWeight: 700, color: "var(--accent-primary)" }}>
                 Quét ảnh · {p.label}
               </span>
             </div>
-            <div style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>{p.ask}</div>
+            <div style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>{p.ask}</div>
           </button>
         ))}
       </div>
@@ -97,15 +98,15 @@ export default function VocabClient({ userId }: { userId: string | null }) {
 }
 
 const sectionHead: React.CSSProperties = {
-  display: "flex", alignItems: "center", gap: 8, fontSize: "1rem", fontWeight: 800,
+  display: "flex", alignItems: "center", gap: 8, fontSize: FS.md, fontWeight: 800,
   color: "var(--text-primary)", marginBottom: "0.3rem",
 };
 const stepBadge: React.CSSProperties = {
   display: "inline-flex", alignItems: "center", justifyContent: "center", width: 22, height: 22,
-  borderRadius: 999, background: "var(--accent-primary)", color: "#fff", fontSize: "0.78rem", fontWeight: 800,
+  borderRadius: 999, background: "var(--accent-primary)", color: "#fff", fontSize: FS.xs, fontWeight: 800,
 };
 const sectionNote: React.CSSProperties = {
-  fontSize: "0.84rem", color: "var(--text-muted)", margin: "0 0 0.9rem", lineHeight: 1.6,
+  fontSize: FS.sm, color: "var(--text-muted)", margin: "0 0 0.9rem", lineHeight: 1.6,
 };
 const card: React.CSSProperties = {
   border: "1px solid var(--border)", borderRadius: "var(--radius-lg)",
@@ -113,10 +114,10 @@ const card: React.CSSProperties = {
 };
 const btnPrimarySm: React.CSSProperties = {
   padding: "0.4rem 1rem", borderRadius: 7, border: "none", background: "var(--accent-primary)",
-  color: "#fff", fontSize: "0.82rem", fontWeight: 700, cursor: "pointer",
+  color: "#fff", fontSize: FS.sm, fontWeight: 700, cursor: "pointer",
 };
 const btnGhostSm: React.CSSProperties = {
   padding: "0.4rem 0.9rem", borderRadius: 7, border: "1.5px solid var(--border)",
-  background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: "0.82rem",
+  background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: FS.sm,
   fontWeight: 600, cursor: "pointer",
 };

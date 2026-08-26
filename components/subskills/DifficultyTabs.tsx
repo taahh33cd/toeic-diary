@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter, usePathname } from "next/navigation";
+import { FS } from "@/lib/ui/scale";
 
 type Props = {
   questionWord: string;
@@ -39,7 +40,7 @@ export default function DifficultyTabs({
     padding: "6px 18px",
     borderRadius: 20,
     border: "1.5px solid transparent",
-    fontSize: "0.82rem",
+    fontSize: FS.sm,
     fontWeight: 600,
     cursor: "pointer",
     transition: "background 0.15s, color 0.15s, border-color 0.15s",
@@ -93,7 +94,7 @@ export default function DifficultyTabs({
             <button style={lockedTab} disabled title="Hoàn thành Easy ≥80% để mở khoá">
               🔒 Medium
             </button>
-            <span style={{ fontSize: "0.75rem", color: "var(--text-muted, #aaa)" }}>
+            <span style={{ fontSize: FS.xs, color: "var(--text-muted, #aaa)" }}>
               Cần Easy ≥ 80% (hiện: {easyTopScore}%)
             </span>
           </div>
@@ -113,7 +114,7 @@ export default function DifficultyTabs({
               🔒 Hard
             </button>
             {mediumUnlocked && (
-              <span style={{ fontSize: "0.75rem", color: "var(--text-muted, #aaa)" }}>
+              <span style={{ fontSize: FS.xs, color: "var(--text-muted, #aaa)" }}>
                 Cần Medium ≥ 80% (hiện: {mediumTopScore}%)
               </span>
             )}

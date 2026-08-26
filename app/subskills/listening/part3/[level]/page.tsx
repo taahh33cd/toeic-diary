@@ -4,6 +4,7 @@ import Link from "next/link";
 import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
 import { PART3_LEVELS, getPart3Level, TRANSCRIPT_POLICY_VI, part3AttemptKey } from "@/lib/subskills/part3";
+import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 
 type Props = { params: Promise<{ level: string }> };
 
@@ -62,16 +63,16 @@ export default async function Part3LevelPage({ params }: Props) {
   return (
     <div
       style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         background: "var(--bg-primary)",
-        padding: "clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem)",
-        maxWidth: 900,
+        padding: `${PAD_Y} ${PAD_X}`,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         width: "100%",
         boxSizing: "border-box",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: "0.8rem", color: "var(--text-muted)", flexWrap: "wrap" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "1.5rem", fontSize: FS.sm, color: "var(--text-muted)", flexWrap: "wrap" }}>
         <Link href="/subskills/listening" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Listening</Link>
         <span>›</span>
         <Link href="/subskills/listening/part3" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Part 3 &amp; 4</Link>
@@ -80,16 +81,16 @@ export default async function Part3LevelPage({ params }: Props) {
       </div>
 
       <div style={{ marginBottom: "1.5rem" }}>
-        <p style={{ fontSize: "0.72rem", color: "var(--accent-primary)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 700, marginBottom: "0.3rem" }}>
+        <p style={{ fontSize: FS.xs, color: "var(--accent-primary)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 700, marginBottom: "0.3rem" }}>
           {lv.level.toUpperCase()} · {lv.band}
         </p>
         <h1 style={{ fontSize: "clamp(1.25rem, 3vw, 1.6rem)", fontWeight: 700, color: "var(--text-primary)", lineHeight: 1.2, margin: "0 0 0.55rem" }}>
           {lv.title}
         </h1>
-        <p style={{ margin: 0, fontSize: "0.87rem", color: "var(--text-secondary)", lineHeight: 1.7 }}>{lv.goal}</p>
+        <p style={{ margin: 0, fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.7 }}>{lv.goal}</p>
       </div>
 
-      <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "1.75rem", fontSize: "0.7rem", color: "var(--text-muted)" }}>
+      <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "1.75rem", fontSize: FS.xs, color: "var(--text-muted)" }}>
         <span style={{ background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 4, padding: "3px 8px" }}>
           Tốc độ {lv.config.playbackRate}×
         </span>
@@ -137,7 +138,7 @@ export default async function Part3LevelPage({ params }: Props) {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: "0.72rem",
+                  fontSize: FS.xs,
                   fontWeight: 700,
                   color: m?.passed ? "rgb(34,197,94)" : m ? "rgb(239,68,68)" : "var(--text-muted)",
                 }}
@@ -147,20 +148,20 @@ export default async function Part3LevelPage({ params }: Props) {
 
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", flexWrap: "wrap", marginBottom: "0.2rem" }}>
-                  <span style={{ fontSize: "0.97rem", fontWeight: 700, color: "var(--text-primary)" }}>{d.title}</span>
-                  <span style={{ fontSize: "0.63rem", color: "var(--text-muted)", background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 4, padding: "1px 6px" }}>
+                  <span style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)" }}>{d.title}</span>
+                  <span style={{ fontSize: FS.xs, color: "var(--text-muted)", background: "var(--bg-elevated)", border: "1px solid var(--border)", borderRadius: 4, padding: "1px 6px" }}>
                     {KIND_VI[d.kind] ?? d.kind}
                   </span>
                 </div>
-                <p style={{ margin: "0 0 0.4rem", fontSize: "0.79rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>
+                <p style={{ margin: "0 0 0.4rem", fontSize: FS.xs, color: "var(--text-secondary)", lineHeight: 1.6 }}>
                   {d.instruction}
                 </p>
-                <span style={{ fontSize: "0.68rem", color: "var(--text-muted)" }}>
+                <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>
                   {d.items.length} câu{m ? ` · điểm cao nhất ${m.score}%` : ""}
                 </span>
               </div>
 
-              <span className="r-arrow" style={{ fontSize: "0.8rem", color: "var(--accent-primary)", flexShrink: 0, marginTop: 6 }}>→</span>
+              <span className="r-arrow" style={{ fontSize: FS.sm, color: "var(--accent-primary)", flexShrink: 0, marginTop: 6 }}>→</span>
             </Link>
           );
         })}
@@ -168,20 +169,20 @@ export default async function Part3LevelPage({ params }: Props) {
 
       <div style={{ display: "flex", justifyContent: "space-between", gap: "0.75rem", marginTop: "1.5rem", flexWrap: "wrap" }}>
         {prev ? (
-          <Link href={`/subskills/listening/part3/${prev.level}`} style={{ fontSize: "0.78rem", color: "var(--text-muted)", textDecoration: "none" }}>
+          <Link href={`/subskills/listening/part3/${prev.level}`} style={{ fontSize: FS.xs, color: "var(--text-muted)", textDecoration: "none" }}>
             ← {prev.title} ({prev.band})
           </Link>
         ) : <span />}
         {next && (
-          <Link href={`/subskills/listening/part3/${next.level}`} style={{ fontSize: "0.78rem", color: "var(--accent-primary)", textDecoration: "none" }}>
+          <Link href={`/subskills/listening/part3/${next.level}`} style={{ fontSize: FS.xs, color: "var(--accent-primary)", textDecoration: "none" }}>
             {next.title} ({next.band}) →
           </Link>
         )}
       </div>
 
-      <div style={{ width: "100%", marginTop: "3rem" }}>
+      <div style={{ width: "100%", marginTop: "auto", paddingTop: "3rem" }}>
         <div style={{ height: 1, background: "var(--border)" }} />
-        <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.08em" }}>
+        <p style={{ marginTop: "0.75rem", textAlign: "center", fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.08em" }}>
           TOEIC DICTATION DIARY
         </p>
       </div>

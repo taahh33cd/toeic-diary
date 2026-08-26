@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import Link from "next/link";
 import { CheckCircle2, XCircle, ChevronLeft, ChevronRight, ArrowLeft, RotateCcw } from "lucide-react";
+import { CONTAINER_MAX, FILL_SCREEN, FS } from "@/lib/ui/scale";
 import {
   isTypedAnswerCorrect,
   type VerbQuestion,
@@ -100,7 +101,7 @@ function AnswerInput({
         placeholder={placeholder}
         style={{
           flex: 1, minWidth: 0, padding: "10px 0",
-          fontSize: "1rem", fontWeight: 600, fontFamily: "var(--font-sans)",
+          fontSize: FS.md, fontWeight: 600, fontFamily: "var(--font-sans)",
           background: "transparent", border: "none", outline: "none",
           color: c.text,
         }}
@@ -120,10 +121,10 @@ function Explanation({ ok, children }: { ok: boolean; children: React.ReactNode 
       background: "var(--bg-secondary)",
       borderLeft: `3px solid ${ok ? "#16a34a" : "#ef4444"}`,
     }}>
-      <div style={{ fontSize: "0.7rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.35rem" }}>
+      <div style={{ fontSize: FS.xs, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.35rem" }}>
         Đáp án
       </div>
-      <div style={{ fontSize: "0.85rem", color: "var(--text-primary)", lineHeight: 1.7 }}>
+      <div style={{ fontSize: FS.sm, color: "var(--text-primary)", lineHeight: 1.7 }}>
         {children}
       </div>
     </div>
@@ -170,10 +171,10 @@ function TypingQuestion({ q, ans, answered, onChange, onSubmit }: {
         border: "1px solid var(--border)",
         marginBottom: "1.25rem",
       }}>
-        <span style={{ fontSize: "1.6rem", fontWeight: 800, color: "var(--accent-primary)", lineHeight: 1.2 }}>
+        <span style={{ fontSize: FS.lg, fontWeight: 800, color: "var(--accent-primary)", lineHeight: 1.2 }}>
           {q.v1}
         </span>
-        <span style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>
+        <span style={{ fontSize: FS.sm, color: "var(--text-muted)" }}>
           {q.vi}
         </span>
       </div>
@@ -186,7 +187,7 @@ function TypingQuestion({ q, ans, answered, onChange, onSubmit }: {
             <div key={f}>
               <label style={{
                 display: "block",
-                fontSize: "0.68rem",
+                fontSize: FS.xs,
                 fontWeight: 700,
                 textTransform: "uppercase",
                 letterSpacing: "0.06em",
@@ -211,11 +212,11 @@ function TypingQuestion({ q, ans, answered, onChange, onSubmit }: {
 
       {answered && (
         <Explanation ok={scoreTyping(q, { kind: "typing", ...ans })}>
-          <strong style={{ fontSize: "0.95rem" }}>
+          <strong style={{ fontSize: FS.md }}>
             {q.v1} – {q.display.v2} – {q.display.v3}
           </strong>
           {q.note && (
-            <div style={{ marginTop: "0.4rem", color: "var(--text-muted)", fontStyle: "italic", fontSize: "0.8rem" }}>
+            <div style={{ marginTop: "0.4rem", color: "var(--text-muted)", fontStyle: "italic", fontSize: FS.sm }}>
               {q.note}
             </div>
           )}
@@ -241,7 +242,7 @@ function MatchingBoard({ q, placed, answered, selected, onSelectItem, onDrop, on
 
   return (
     <div>
-      <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "0.9rem", fontWeight: 600 }}>
+      <p style={{ fontSize: FS.sm, color: "var(--text-secondary)", marginBottom: "0.9rem", fontWeight: 600 }}>
         {q.instruction}
       </p>
 
@@ -252,7 +253,7 @@ function MatchingBoard({ q, placed, answered, selected, onSelectItem, onDrop, on
         background: "var(--bg-secondary)", alignItems: "flex-start",
       }}>
         {pool.length === 0 ? (
-          <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", padding: "4px 2px" }}>
+          <span style={{ fontSize: FS.xs, color: "var(--text-muted)", padding: "4px 2px" }}>
             {answered ? "Bấm số câu bên dưới để sang câu tiếp theo." : "Đã xếp hết — bấm “Kiểm tra”."}
           </span>
         ) : (
@@ -262,7 +263,7 @@ function MatchingBoard({ q, placed, answered, selected, onSelectItem, onDrop, on
               onClick={() => !answered && onSelectItem(it.text)}
               disabled={answered}
               style={{
-                padding: "6px 12px", borderRadius: 7, fontSize: "0.88rem",
+                padding: "6px 12px", borderRadius: 7, fontSize: FS.sm,
                 fontWeight: selected === it.text ? 700 : 600,
                 fontFamily: "var(--font-sans)", cursor: answered ? "default" : "pointer",
                 background: selected === it.text ? "var(--accent-primary)" : "var(--bg-elevated)",
@@ -296,9 +297,9 @@ function MatchingBoard({ q, placed, answered, selected, onSelectItem, onDrop, on
               }}
             >
               <div>
-                <div style={{ fontSize: "0.78rem", fontWeight: 700, color: "var(--text-primary)" }}>{b.label}</div>
+                <div style={{ fontSize: FS.xs, fontWeight: 700, color: "var(--text-primary)" }}>{b.label}</div>
                 {b.hint && (
-                  <div style={{ fontSize: "0.68rem", color: "var(--text-muted)", marginTop: 2, fontFamily: "var(--font-mono, monospace)" }}>
+                  <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginTop: 2, fontFamily: "var(--font-mono, monospace)" }}>
                     {b.hint}
                   </div>
                 )}
@@ -316,7 +317,7 @@ function MatchingBoard({ q, placed, answered, selected, onSelectItem, onDrop, on
                       key={it.text}
                       onClick={(e) => { e.stopPropagation(); if (!answered) onUnplace(it.text); }}
                       style={{
-                        padding: "3px 9px", borderRadius: 6, fontSize: "0.8rem", fontWeight: 600,
+                        padding: "3px 9px", borderRadius: 6, fontSize: FS.sm, fontWeight: 600,
                         background: bg, color, border, cursor: answered ? "default" : "pointer",
                       }}
                     >
@@ -332,7 +333,7 @@ function MatchingBoard({ q, placed, answered, selected, onSelectItem, onDrop, on
 
       {answered && (
         <Explanation ok={scoreMatching(q, placed)}>
-          <span style={{ fontSize: "0.8rem" }}>{q.explanation}</span>
+          <span style={{ fontSize: FS.sm }}>{q.explanation}</span>
         </Explanation>
       )}
     </div>
@@ -356,7 +357,7 @@ function BlankQuestion({ q, value, answered, onChange, onSubmit }: {
 
   return (
     <div>
-      <p style={{ fontSize: "1rem", lineHeight: 1.9, color: "var(--text-primary)", marginBottom: "0.4rem", fontWeight: 500 }}>
+      <p style={{ fontSize: FS.md, lineHeight: 1.9, color: "var(--text-primary)", marginBottom: "0.4rem", fontWeight: 500 }}>
         {parts[0]}
         <span style={{
           display: "inline-block", minWidth: 90, textAlign: "center",
@@ -370,7 +371,7 @@ function BlankQuestion({ q, value, answered, onChange, onSubmit }: {
 
       {q.translation && (
         <p style={{
-          fontSize: "0.9rem", color: "var(--text-muted)", fontStyle: "italic",
+          fontSize: FS.sm, color: "var(--text-muted)", fontStyle: "italic",
           marginBottom: "1.25rem", paddingLeft: "0.75rem", borderLeft: "2px solid var(--border)",
         }}>
           {q.translation}
@@ -390,7 +391,7 @@ function BlankQuestion({ q, value, answered, onChange, onSubmit }: {
       {answered && (
         <Explanation ok={ok}>
           <strong>{q.display}</strong>
-          <div style={{ marginTop: "0.4rem", fontSize: "0.82rem", lineHeight: 1.6 }}>{q.explanation}</div>
+          <div style={{ marginTop: "0.4rem", fontSize: FS.sm, lineHeight: 1.6 }}>{q.explanation}</div>
         </Explanation>
       )}
     </div>
@@ -408,18 +409,18 @@ function MCQQuestion({ q, answer, answered, onSelect }: {
   const OPTIONS: MCQAnswer[] = ["A", "B", "C", "D"];
   return (
     <div>
-      <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "var(--text-primary)", marginBottom: "0.4rem", fontWeight: 500 }}>
+      <p style={{ fontSize: FS.md, lineHeight: 1.8, color: "var(--text-primary)", marginBottom: "0.4rem", fontWeight: 500 }}>
         {q.sentence}
       </p>
       {q.translation && (
         <p style={{
-          fontSize: "0.9rem", color: "var(--text-muted)", fontStyle: "italic",
+          fontSize: FS.sm, color: "var(--text-muted)", fontStyle: "italic",
           marginBottom: "1.25rem", paddingLeft: "0.75rem", borderLeft: "2px solid var(--border)",
         }}>
           {q.translation}
         </p>
       )}
-      <p style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--text-secondary)", marginBottom: "0.75rem" }}>
+      <p style={{ fontSize: FS.sm, fontWeight: 600, color: "var(--text-secondary)", marginBottom: "0.75rem" }}>
         {q.question}
       </p>
       <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
@@ -446,13 +447,13 @@ function MCQQuestion({ q, answer, answered, onSelect }: {
               <span style={{
                 width: 26, height: 26, borderRadius: "50%", display: "flex",
                 alignItems: "center", justifyContent: "center", fontWeight: 700,
-                fontSize: "0.78rem", flexShrink: 0,
+                fontSize: FS.xs, flexShrink: 0,
                 background: correct ? "#16a34a" : wrong ? "#ef4444" : selected ? "var(--accent-primary)" : "var(--bg-secondary)",
                 color: (correct || wrong || selected) ? "#fff" : "var(--text-muted)",
               }}>
                 {key}
               </span>
-              <span style={{ fontSize: "0.9rem", color, fontWeight: selected || correct ? 600 : 400 }}>
+              <span style={{ fontSize: FS.sm, color, fontWeight: selected || correct ? 600 : 400 }}>
                 {q.options[key]}
               </span>
             </button>
@@ -461,7 +462,7 @@ function MCQQuestion({ q, answer, answered, onSelect }: {
       </div>
       {answered && (
         <Explanation ok={answer === q.correct}>
-          <span style={{ fontSize: "0.82rem", lineHeight: 1.6 }}>{q.explanation}</span>
+          <span style={{ fontSize: FS.sm, lineHeight: 1.6 }}>{q.explanation}</span>
         </Explanation>
       )}
     </div>
@@ -592,7 +593,7 @@ export function VerbsLevelClient({
 
     return (
       <div style={{
-        minHeight: "100%", display: "flex", flexDirection: "column", alignItems: "center",
+        ...FILL_SCREEN, display: "flex", flexDirection: "column", alignItems: "center",
         justifyContent: "center", padding: "2rem 1.5rem", background: "var(--bg-primary)",
       }}>
         <div style={{
@@ -600,10 +601,10 @@ export function VerbsLevelClient({
           borderRadius: "var(--radius-xl, 16px)", padding: "2.5rem 2rem",
           maxWidth: 460, width: "100%", textAlign: "center", boxShadow: "var(--shadow-md)",
         }}>
-          <div style={{ fontSize: "3.5rem", fontWeight: 800, color: scoreColor, lineHeight: 1, marginBottom: "0.25rem" }}>
+          <div style={{ fontSize: FS.xl, fontWeight: 800, color: scoreColor, lineHeight: 1, marginBottom: "0.25rem" }}>
             {score}%
           </div>
-          <div style={{ fontSize: "0.82rem", color: "var(--text-muted)", marginBottom: "1.25rem" }}>
+          <div style={{ fontSize: FS.sm, color: "var(--text-muted)", marginBottom: "1.25rem" }}>
             {correctCount}/{total} câu đúng &nbsp;·&nbsp; {levelName}
           </div>
 
@@ -612,7 +613,7 @@ export function VerbsLevelClient({
             padding: "6px 16px", borderRadius: 99,
             background: passed ? "#dcfce7" : "#fee2e2",
             color: passed ? "#15803d" : "#b91c1c",
-            fontWeight: 700, fontSize: "0.82rem", marginBottom: "1.5rem",
+            fontWeight: 700, fontSize: FS.sm, marginBottom: "1.5rem",
           }}>
             {passed ? <CheckCircle2 size={15} /> : <XCircle size={15} />}
             {passed ? `Pass! (≥ ${passThreshold}%)` : `Chưa pass (< ${passThreshold}%)`}
@@ -629,12 +630,12 @@ export function VerbsLevelClient({
               padding: "0.75rem 0.9rem", marginBottom: "1.25rem",
               border: "1px solid var(--border)",
             }}>
-              <div style={{ fontSize: "0.68rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#b91c1c", marginBottom: "0.5rem" }}>
+              <div style={{ fontSize: FS.xs, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#b91c1c", marginBottom: "0.5rem" }}>
                 Cần ôn lại ({wrong.length})
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
                 {wrong.slice(0, 8).map(({ qq }) => (
-                  <div key={qq.id} style={{ fontSize: "0.8rem", color: "var(--text-primary)" }}>
+                  <div key={qq.id} style={{ fontSize: FS.sm, color: "var(--text-primary)" }}>
                     {qq.kind === "typing"
                       ? <span><strong>{qq.v1}</strong> – {qq.display.v2} – {qq.display.v3}</span>
                       : qq.kind === "blank"
@@ -643,14 +644,14 @@ export function VerbsLevelClient({
                   </div>
                 ))}
                 {wrong.length > 8 && (
-                  <div style={{ fontSize: "0.72rem", color: "var(--text-muted)" }}>… và {wrong.length - 8} từ nữa</div>
+                  <div style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>… và {wrong.length - 8} từ nữa</div>
                 )}
               </div>
             </div>
           )}
 
           {savedBest && savedBest.score > score && (
-            <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", marginBottom: "1rem" }}>
+            <p style={{ fontSize: FS.xs, color: "var(--text-muted)", marginBottom: "1rem" }}>
               Best trước: {savedBest.score}% · điểm lần này không cao hơn
             </p>
           )}
@@ -662,7 +663,7 @@ export function VerbsLevelClient({
                 display: "flex", alignItems: "center", justifyContent: "center", gap: "0.4rem",
                 padding: "10px 0", borderRadius: 8, border: "none",
                 background: "var(--accent-primary)", color: "#fff", fontWeight: 700,
-                fontSize: "0.88rem", cursor: "pointer", fontFamily: "var(--font-sans)",
+                fontSize: FS.sm, cursor: "pointer", fontFamily: "var(--font-sans)",
               }}
             >
               <RotateCcw size={14} /> Làm lại
@@ -673,7 +674,7 @@ export function VerbsLevelClient({
                 display: "flex", alignItems: "center", justifyContent: "center", gap: "0.4rem",
                 padding: "10px 0", borderRadius: 8, border: "1px solid var(--border)",
                 background: "transparent", color: "var(--text-secondary)",
-                fontWeight: 500, fontSize: "0.85rem", textDecoration: "none",
+                fontWeight: 500, fontSize: FS.sm, textDecoration: "none",
               }}
             >
               <ArrowLeft size={14} /> Quay lại {groupName}
@@ -696,7 +697,7 @@ export function VerbsLevelClient({
   const showCheck = canCheckTyping || canCheckMatching || canCheckBlank;
 
   return (
-    <div style={{ minHeight: "100%", background: "var(--bg-primary)", display: "flex", flexDirection: "column" }}>
+    <div style={{ ...FILL_SCREEN, background: "var(--bg-primary)", display: "flex", flexDirection: "column" }}>
       {/* Header */}
       <div style={{
         position: "sticky", top: 0, zIndex: 10, background: "var(--accent-primary)",
@@ -705,15 +706,15 @@ export function VerbsLevelClient({
       }}>
         <Link
           href={`/subskills/verbs/${groupSlug}`}
-          style={{ display: "flex", alignItems: "center", gap: "0.35rem", color: "rgba(255,255,255,0.75)", fontSize: "0.78rem", textDecoration: "none", whiteSpace: "nowrap" }}
+          style={{ display: "flex", alignItems: "center", gap: "0.35rem", color: "rgba(255,255,255,0.75)", fontSize: FS.xs, textDecoration: "none", whiteSpace: "nowrap" }}
         >
           <ArrowLeft size={13} /> {groupName}
         </Link>
-        <span style={{ fontSize: "0.78rem", fontWeight: 600, color: "#FFD66B", whiteSpace: "nowrap" }}>
+        <span style={{ fontSize: FS.xs, fontWeight: 600, color: "#FFD66B", whiteSpace: "nowrap" }}>
           {levelName}
         </span>
         <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-          <span style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.75)", whiteSpace: "nowrap" }}>
+          <span style={{ fontSize: FS.xs, color: "rgba(255,255,255,0.75)", whiteSpace: "nowrap" }}>
             {confirmedCount}/{total} đã trả lời
           </span>
           <button
@@ -724,7 +725,7 @@ export function VerbsLevelClient({
               border: "1.5px solid rgba(255,239,179,0.5)",
               background: allAnswered ? "rgba(255,255,255,0.15)" : "transparent",
               color: allAnswered ? "#FFD66B" : "rgba(255,239,179,0.35)",
-              fontSize: "0.75rem", fontWeight: 700,
+              fontSize: FS.xs, fontWeight: 700,
               cursor: allAnswered && !saving ? "pointer" : "not-allowed",
               whiteSpace: "nowrap", fontFamily: "var(--font-sans)",
             }}
@@ -737,7 +738,7 @@ export function VerbsLevelClient({
       {confirmedCount === 0 && (
         <div style={{
           background: "var(--bg-secondary)", borderBottom: "1px solid var(--border)",
-          padding: "0.6rem 1.5rem", fontSize: "0.72rem", color: "var(--text-muted)",
+          padding: "0.6rem 1.5rem", fontSize: FS.xs, color: "var(--text-muted)",
         }}>
           {levelInstruction}
         </div>
@@ -745,11 +746,11 @@ export function VerbsLevelClient({
 
       {/* Question */}
       <div style={{
-        flex: 1, maxWidth: 720, margin: "0 auto", width: "100%",
+        flex: 1, maxWidth: CONTAINER_MAX, margin: "0 auto", width: "100%",
         padding: "1.75rem 1.5rem 1rem", boxSizing: "border-box",
       }}>
         <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "1.25rem" }}>
-          <span style={{ fontSize: "1.5rem", fontWeight: 800, color: "var(--accent-primary)", lineHeight: 1 }}>
+          <span style={{ fontSize: FS.lg, fontWeight: 800, color: "var(--accent-primary)", lineHeight: 1 }}>
             {currentIdx + 1}.
           </span>
         </div>
@@ -786,7 +787,7 @@ export function VerbsLevelClient({
             style={{
               marginTop: "1rem", padding: "9px 22px", borderRadius: 7, border: "none",
               background: "var(--accent-primary)", color: "#fff", fontWeight: 700,
-              fontSize: "0.85rem", cursor: "pointer", fontFamily: "var(--font-sans)",
+              fontSize: FS.sm, cursor: "pointer", fontFamily: "var(--font-sans)",
             }}
           >
             Kiểm tra
@@ -806,7 +807,7 @@ export function VerbsLevelClient({
             display: "flex", alignItems: "center", gap: "0.25rem", padding: "6px 12px",
             borderRadius: 4, border: "1px solid var(--border)", background: "transparent",
             color: currentIdx === 0 ? "var(--text-muted)" : "var(--text-secondary)",
-            fontSize: "0.75rem", fontWeight: 600,
+            fontSize: FS.xs, fontWeight: 600,
             cursor: currentIdx === 0 ? "not-allowed" : "pointer",
             whiteSpace: "nowrap", flexShrink: 0, fontFamily: "var(--font-sans)",
           }}
@@ -825,7 +826,7 @@ export function VerbsLevelClient({
                 onClick={() => goTo(i)}
                 style={{
                   width: 26, height: 26, borderRadius: 3, border: "1px solid var(--border)",
-                  fontSize: "0.6rem", fontWeight: 700,
+                  fontSize: FS.xs, fontWeight: 700,
                   background: isActive ? "var(--accent-primary)" : isDone ? (wasRight ? "#3a8f55" : "#c2453b") : "var(--bg-elevated)",
                   color: isActive ? "#FFD66B" : isDone ? "#fff" : "var(--text-muted)",
                   cursor: "pointer", fontFamily: "var(--font-sans)",
@@ -844,7 +845,7 @@ export function VerbsLevelClient({
             display: "flex", alignItems: "center", gap: "0.25rem", padding: "6px 12px",
             borderRadius: 4, border: "1px solid var(--border)", background: "transparent",
             color: currentIdx === total - 1 ? "var(--text-muted)" : "var(--text-secondary)",
-            fontSize: "0.75rem", fontWeight: 600,
+            fontSize: FS.xs, fontWeight: 600,
             cursor: currentIdx === total - 1 ? "not-allowed" : "pointer",
             whiteSpace: "nowrap", flexShrink: 0, fontFamily: "var(--font-sans)",
           }}

@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect } from "react";
 import Link from "next/link";
 import { CheckCircle2, XCircle, ChevronLeft, ChevronRight, ArrowLeft, RotateCcw } from "lucide-react";
+import { CONTAINER_MAX, FILL_SCREEN, FS } from "@/lib/ui/scale";
 import type {
   ConnQuestion,
   ConnMCQ,
@@ -76,7 +77,7 @@ function PassageBox({ passage, activeBlank, showTranslation }: {
     }}>
       {passage.title && (
         <div style={{
-          fontSize: "0.68rem",
+          fontSize: FS.xs,
           fontWeight: 700,
           textTransform: "uppercase",
           letterSpacing: "0.06em",
@@ -89,7 +90,7 @@ function PassageBox({ passage, activeBlank, showTranslation }: {
         </div>
       )}
 
-      <p style={{ fontSize: "0.9rem", lineHeight: 1.9, color: "var(--text-primary)", margin: 0 }}>
+      <p style={{ fontSize: FS.sm, lineHeight: 1.9, color: "var(--text-primary)", margin: 0 }}>
         {parts.map((part, i) => {
           const m = part.match(/^\((\d+)\)\s*_{2,}$/);
           if (!m) return <span key={i}>{part}</span>;
@@ -106,7 +107,7 @@ function PassageBox({ passage, activeBlank, showTranslation }: {
                 margin: "0 2px",
                 borderRadius: 5,
                 fontWeight: 700,
-                fontSize: "0.82rem",
+                fontSize: FS.sm,
                 background: active ? "var(--accent-primary)" : "var(--bg-elevated)",
                 color: active ? "#FFD66B" : "var(--text-muted)",
                 border: active ? "1.5px solid var(--accent-primary)" : "1px dashed var(--border)",
@@ -120,7 +121,7 @@ function PassageBox({ passage, activeBlank, showTranslation }: {
 
       {showTranslation && passage.translation && (
         <p style={{
-          fontSize: "0.85rem",
+          fontSize: FS.sm,
           color: "var(--text-muted)",
           fontStyle: "italic",
           margin: "0.85rem 0 0",
@@ -150,7 +151,7 @@ function MCQQuestion({ q, answer, answered, showTranslation, onSelect }: {
     <div>
       {q.grammarHint && (
         <div style={{
-          fontSize: "0.72rem",
+          fontSize: FS.xs,
           background: "rgba(1,62,55,0.06)",
           border: "1px solid rgba(1,62,55,0.15)",
           borderRadius: 6,
@@ -165,7 +166,7 @@ function MCQQuestion({ q, answer, answered, showTranslation, onSelect }: {
 
       {q.sentence && (
         <p style={{
-          fontSize: "1rem",
+          fontSize: FS.md,
           lineHeight: 1.8,
           color: "var(--text-primary)",
           marginBottom: "0.4rem",
@@ -177,7 +178,7 @@ function MCQQuestion({ q, answer, answered, showTranslation, onSelect }: {
 
       {showTranslation && q.translation && (
         <p style={{
-          fontSize: "0.9rem",
+          fontSize: FS.sm,
           color: "var(--text-muted)",
           fontStyle: "italic",
           marginBottom: "1.25rem",
@@ -188,7 +189,7 @@ function MCQQuestion({ q, answer, answered, showTranslation, onSelect }: {
         </p>
       )}
 
-      <p style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--text-secondary)", marginBottom: "0.75rem" }}>
+      <p style={{ fontSize: FS.sm, fontWeight: 600, color: "var(--text-secondary)", marginBottom: "0.75rem" }}>
         {q.question}
       </p>
 
@@ -233,14 +234,14 @@ function MCQQuestion({ q, answer, answered, showTranslation, onSelect }: {
                 alignItems: "center",
                 justifyContent: "center",
                 fontWeight: 700,
-                fontSize: "0.78rem",
+                fontSize: FS.xs,
                 flexShrink: 0,
                 background: correct ? "#16a34a" : wrong ? "#ef4444" : selected ? "var(--accent-primary)" : "var(--bg-secondary)",
                 color: (correct || wrong || selected) ? "#fff" : "var(--text-muted)",
               }}>
                 {key}
               </span>
-              <span style={{ fontSize: "0.88rem", color, fontWeight: selected || correct ? 600 : 400 }}>
+              <span style={{ fontSize: FS.sm, color, fontWeight: selected || correct ? 600 : 400 }}>
                 {q.options[key]}
               </span>
               {correct && <CheckCircle2 size={15} style={{ color: "#16a34a", marginLeft: "auto", flexShrink: 0 }} />}
@@ -258,14 +259,14 @@ function MCQQuestion({ q, answer, answered, showTranslation, onSelect }: {
           background: "var(--bg-secondary)",
           borderLeft: `3px solid ${answer === q.correct ? "#16a34a" : "#ef4444"}`,
         }}>
-          <div style={{ fontSize: "0.7rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.35rem" }}>
+          <div style={{ fontSize: FS.xs, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.35rem" }}>
             Giải thích
           </div>
-          <p style={{ fontSize: "0.82rem", color: "var(--text-primary)", lineHeight: 1.6, margin: 0 }}>
+          <p style={{ fontSize: FS.sm, color: "var(--text-primary)", lineHeight: 1.6, margin: 0 }}>
             {q.explanation}
           </p>
           {q.explanationVi && (
-            <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", fontStyle: "italic", margin: "0.4rem 0 0" }}>
+            <p style={{ fontSize: FS.xs, color: "var(--text-muted)", fontStyle: "italic", margin: "0.4rem 0 0" }}>
               {q.explanationVi}
             </p>
           )}
@@ -291,7 +292,7 @@ function MatchingBoard({ q, placed, answered, selected, onSelectItem, onDropInBu
 
   return (
     <div>
-      <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "0.9rem", fontWeight: 600 }}>
+      <p style={{ fontSize: FS.sm, color: "var(--text-secondary)", marginBottom: "0.9rem", fontWeight: 600 }}>
         {q.instruction}
       </p>
 
@@ -309,7 +310,7 @@ function MatchingBoard({ q, placed, answered, selected, onSelectItem, onDropInBu
         alignItems: "flex-start",
       }}>
         {pool.length === 0 ? (
-          <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", padding: "4px 2px" }}>
+          <span style={{ fontSize: FS.xs, color: "var(--text-muted)", padding: "4px 2px" }}>
             {answered
               ? "Bấm số câu bên dưới để sang câu tiếp theo."
               : "Đã xếp hết — bấm “Kiểm tra”."}
@@ -323,7 +324,7 @@ function MatchingBoard({ q, placed, answered, selected, onSelectItem, onDropInBu
               style={{
                 padding: "6px 12px",
                 borderRadius: 7,
-                fontSize: "0.85rem",
+                fontSize: FS.sm,
                 fontWeight: selected === it.text ? 700 : 500,
                 fontFamily: "var(--font-sans)",
                 cursor: answered ? "default" : "pointer",
@@ -371,11 +372,11 @@ function MatchingBoard({ q, placed, answered, selected, onSelectItem, onDropInBu
               }}
             >
               <div>
-                <div style={{ fontSize: "0.78rem", fontWeight: 700, color: "var(--text-primary)" }}>
+                <div style={{ fontSize: FS.xs, fontWeight: 700, color: "var(--text-primary)" }}>
                   {b.label}
                 </div>
                 {b.hint && (
-                  <div style={{ fontSize: "0.66rem", color: "var(--text-muted)", marginTop: 2 }}>
+                  <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginTop: 2 }}>
                     {b.hint}
                   </div>
                 )}
@@ -401,7 +402,7 @@ function MatchingBoard({ q, placed, answered, selected, onSelectItem, onDropInBu
                       style={{
                         padding: "3px 9px",
                         borderRadius: 6,
-                        fontSize: "0.78rem",
+                        fontSize: FS.xs,
                         fontWeight: 600,
                         background: bg,
                         color,
@@ -428,10 +429,10 @@ function MatchingBoard({ q, placed, answered, selected, onSelectItem, onDropInBu
           background: "var(--bg-secondary)",
           borderLeft: `3px solid ${scoreMatching(q, placed) ? "#16a34a" : "#ef4444"}`,
         }}>
-          <div style={{ fontSize: "0.7rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.35rem" }}>
+          <div style={{ fontSize: FS.xs, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "0.35rem" }}>
             Giải thích
           </div>
-          <p style={{ fontSize: "0.82rem", color: "var(--text-primary)", lineHeight: 1.6, margin: 0 }}>
+          <p style={{ fontSize: FS.sm, color: "var(--text-primary)", lineHeight: 1.6, margin: 0 }}>
             {q.explanation}
           </p>
         </div>
@@ -548,7 +549,7 @@ export function ConnectorsLevelClient({
 
     return (
       <div style={{
-        minHeight: "100%",
+        ...FILL_SCREEN,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -566,10 +567,10 @@ export function ConnectorsLevelClient({
           textAlign: "center",
           boxShadow: "var(--shadow-md)",
         }}>
-          <div style={{ fontSize: "3.5rem", fontWeight: 800, color: scoreColor, lineHeight: 1, marginBottom: "0.25rem" }}>
+          <div style={{ fontSize: FS.xl, fontWeight: 800, color: scoreColor, lineHeight: 1, marginBottom: "0.25rem" }}>
             {score}%
           </div>
-          <div style={{ fontSize: "0.82rem", color: "var(--text-muted)", marginBottom: "1.25rem" }}>
+          <div style={{ fontSize: FS.sm, color: "var(--text-muted)", marginBottom: "1.25rem" }}>
             {correctCount}/{total} câu đúng &nbsp;·&nbsp; {levelName}
           </div>
 
@@ -582,7 +583,7 @@ export function ConnectorsLevelClient({
             background: passed ? "#dcfce7" : "#fee2e2",
             color: passed ? "#15803d" : "#b91c1c",
             fontWeight: 700,
-            fontSize: "0.82rem",
+            fontSize: FS.sm,
             marginBottom: "1.5rem",
           }}>
             {passed ? <CheckCircle2 size={15} /> : <XCircle size={15} />}
@@ -594,7 +595,7 @@ export function ConnectorsLevelClient({
           </div>
 
           {savedBest && savedBest.score > score && (
-            <p style={{ fontSize: "0.72rem", color: "var(--text-muted)", marginBottom: "1rem" }}>
+            <p style={{ fontSize: FS.xs, color: "var(--text-muted)", marginBottom: "1rem" }}>
               Best trước: {savedBest.score}% · điểm lần này không cao hơn
             </p>
           )}
@@ -613,7 +614,7 @@ export function ConnectorsLevelClient({
                 background: "var(--accent-primary)",
                 color: "#fff",
                 fontWeight: 700,
-                fontSize: "0.88rem",
+                fontSize: FS.sm,
                 cursor: "pointer",
                 fontFamily: "var(--font-sans)",
               }}
@@ -633,7 +634,7 @@ export function ConnectorsLevelClient({
                 background: "transparent",
                 color: "var(--text-secondary)",
                 fontWeight: 500,
-                fontSize: "0.85rem",
+                fontSize: FS.sm,
                 textDecoration: "none",
               }}
             >
@@ -662,7 +663,7 @@ export function ConnectorsLevelClient({
       : undefined;
 
   return (
-    <div style={{ minHeight: "100%", background: "var(--bg-primary)", display: "flex", flexDirection: "column" }}>
+    <div style={{ ...FILL_SCREEN, background: "var(--bg-primary)", display: "flex", flexDirection: "column" }}>
       {/* Header bar */}
       <div style={{
         position: "sticky",
@@ -678,17 +679,17 @@ export function ConnectorsLevelClient({
       }}>
         <Link
           href={`/subskills/reading/connectors/${groupSlug}`}
-          style={{ display: "flex", alignItems: "center", gap: "0.35rem", color: "rgba(255,255,255,0.75)", fontSize: "0.78rem", textDecoration: "none", whiteSpace: "nowrap" }}
+          style={{ display: "flex", alignItems: "center", gap: "0.35rem", color: "rgba(255,255,255,0.75)", fontSize: FS.xs, textDecoration: "none", whiteSpace: "nowrap" }}
         >
           <ArrowLeft size={13} /> {groupName}
         </Link>
 
-        <span style={{ fontSize: "0.78rem", fontWeight: 600, color: "#FFD66B", whiteSpace: "nowrap" }}>
+        <span style={{ fontSize: FS.xs, fontWeight: 600, color: "#FFD66B", whiteSpace: "nowrap" }}>
           {levelName}
         </span>
 
         <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-          <span style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.75)", whiteSpace: "nowrap" }}>
+          <span style={{ fontSize: FS.xs, color: "rgba(255,255,255,0.75)", whiteSpace: "nowrap" }}>
             {confirmedCount}/{total} đã trả lời
           </span>
           <button
@@ -700,7 +701,7 @@ export function ConnectorsLevelClient({
               border: "1.5px solid rgba(255,239,179,0.5)",
               background: allAnswered ? "rgba(255,255,255,0.15)" : "transparent",
               color: allAnswered ? "#FFD66B" : "rgba(255,239,179,0.35)",
-              fontSize: "0.75rem",
+              fontSize: FS.xs,
               fontWeight: 700,
               cursor: allAnswered && !saving ? "pointer" : "not-allowed",
               whiteSpace: "nowrap",
@@ -718,7 +719,7 @@ export function ConnectorsLevelClient({
           background: "var(--bg-secondary)",
           borderBottom: "1px solid var(--border)",
           padding: "0.6rem 1.5rem",
-          fontSize: "0.72rem",
+          fontSize: FS.xs,
           color: "var(--text-muted)",
         }}>
           {levelInstruction}
@@ -728,18 +729,18 @@ export function ConnectorsLevelClient({
       {/* Question area */}
       <div style={{
         flex: 1,
-        maxWidth: 760,
+        maxWidth: CONTAINER_MAX,
         margin: "0 auto",
         width: "100%",
         padding: "1.75rem 1.5rem 1rem",
         boxSizing: "border-box",
       }}>
         <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "1.25rem" }}>
-          <span style={{ fontSize: "1.5rem", fontWeight: 800, color: "var(--accent-primary)", lineHeight: 1 }}>
+          <span style={{ fontSize: FS.lg, fontWeight: 800, color: "var(--accent-primary)", lineHeight: 1 }}>
             {currentIdx + 1}.
           </span>
           {passage && (
-            <span style={{ fontSize: "0.7rem", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-muted)" }}>
+            <span style={{ fontSize: FS.xs, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-muted)" }}>
               Part 6 · chỗ trống ({q.kind === "mcq" ? q.blankNo : ""})
             </span>
           )}
@@ -781,7 +782,7 @@ export function ConnectorsLevelClient({
                   background: "var(--accent-primary)",
                   color: "#fff",
                   fontWeight: 700,
-                  fontSize: "0.82rem",
+                  fontSize: FS.sm,
                   cursor: "pointer",
                   fontFamily: "var(--font-sans)",
                 }}
@@ -814,7 +815,7 @@ export function ConnectorsLevelClient({
             border: "1px solid var(--border)",
             background: "transparent",
             color: currentIdx === 0 ? "var(--text-muted)" : "var(--text-secondary)",
-            fontSize: "0.75rem",
+            fontSize: FS.xs,
             fontWeight: 600,
             cursor: currentIdx === 0 ? "not-allowed" : "pointer",
             whiteSpace: "nowrap",
@@ -838,7 +839,7 @@ export function ConnectorsLevelClient({
                   height: 26,
                   borderRadius: 3,
                   border: "1px solid var(--border)",
-                  fontSize: "0.6rem",
+                  fontSize: FS.xs,
                   fontWeight: 700,
                   background: isActive ? "var(--accent-primary)" : isDone ? "#3a8f55" : "var(--bg-elevated)",
                   color: isActive ? "#FFD66B" : isDone ? "#fff" : "var(--text-muted)",
@@ -864,7 +865,7 @@ export function ConnectorsLevelClient({
             border: "1px solid var(--border)",
             background: "transparent",
             color: currentIdx === total - 1 ? "var(--text-muted)" : "var(--text-secondary)",
-            fontSize: "0.75rem",
+            fontSize: FS.xs,
             fontWeight: 600,
             cursor: currentIdx === total - 1 ? "not-allowed" : "pointer",
             whiteSpace: "nowrap",

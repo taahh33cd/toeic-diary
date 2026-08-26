@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import type { Drill, DrillItem, Part3Level } from "@/lib/subskills/part3";
 import { part3AttemptKey } from "@/lib/subskills/part3";
+import { FS } from "@/lib/ui/scale";
 
 type Props = {
   level: Part3Level;
@@ -141,7 +142,7 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            fontSize: "1.6rem",
+            fontSize: FS.lg,
             fontWeight: 800,
             background: passed ? "rgba(34,197,94,0.15)" : "rgba(239,68,68,0.12)",
             border: `2px solid ${passed ? "rgba(34,197,94,0.5)" : "rgba(239,68,68,0.4)"}`,
@@ -150,10 +151,10 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
         >
           {score}%
         </div>
-        <h2 style={{ margin: "0 0 0.4rem", fontSize: "1.15rem", fontWeight: 700, color: "var(--text-primary)" }}>
+        <h2 style={{ margin: "0 0 0.4rem", fontSize: FS.lg, fontWeight: 700, color: "var(--text-primary)" }}>
           {passed ? "Đạt" : "Chưa đạt"}
         </h2>
-        <p style={{ margin: "0 0 1.5rem", fontSize: "0.85rem", color: "var(--text-secondary)" }}>
+        <p style={{ margin: "0 0 1.5rem", fontSize: FS.sm, color: "var(--text-secondary)" }}>
           Đúng {correctCount}/{items.length} câu · cần {level.passThreshold}% để qua
         </p>
         <div style={{ display: "flex", gap: "0.6rem", justifyContent: "center", flexWrap: "wrap" }}>
@@ -165,7 +166,7 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
               border: "1px solid var(--border)",
               background: "var(--bg-elevated)",
               color: "var(--text-primary)",
-              fontSize: "0.85rem",
+              fontSize: FS.sm,
               fontWeight: 600,
               cursor: "pointer",
             }}
@@ -180,7 +181,7 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
               border: "1px solid var(--accent-primary)",
               background: "var(--accent-primary)",
               color: "#fff",
-              fontSize: "0.85rem",
+              fontSize: FS.sm,
               fontWeight: 600,
               textDecoration: "none",
             }}
@@ -189,7 +190,7 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
           </Link>
         </div>
         {!signedIn && (
-          <p style={{ marginTop: "1.25rem", fontSize: "0.72rem", color: "var(--text-muted)" }}>
+          <p style={{ marginTop: "1.25rem", fontSize: FS.xs, color: "var(--text-muted)" }}>
             Đăng nhập để lưu kết quả.
           </p>
         )}
@@ -198,7 +199,7 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
   }
 
   if (!item) {
-    return <p style={{ color: "var(--text-muted)", fontSize: "0.85rem" }}>Bài này chưa có câu hỏi.</p>;
+    return <p style={{ color: "var(--text-muted)", fontSize: FS.sm }}>Bài này chưa có câu hỏi.</p>;
   }
 
   const pct = Math.round((idx / items.length) * 100);
@@ -218,7 +219,7 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
             }}
           />
         </div>
-        <span style={{ fontSize: "0.72rem", color: "var(--text-muted)", whiteSpace: "nowrap" }}>
+        <span style={{ fontSize: FS.xs, color: "var(--text-muted)", whiteSpace: "nowrap" }}>
           {idx + 1}/{items.length}
         </span>
       </div>
@@ -244,14 +245,14 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
                 border: "1px solid var(--accent-primary)",
                 background: outOfPlays ? "var(--bg-secondary)" : "var(--accent-primary)",
                 color: outOfPlays ? "var(--text-muted)" : "#fff",
-                fontSize: "0.82rem",
+                fontSize: FS.sm,
                 fontWeight: 600,
                 cursor: outOfPlays ? "not-allowed" : "pointer",
               }}
             >
               {plays === 0 ? "▶ Nghe" : "▶ Nghe lại"}
             </button>
-            <span style={{ fontSize: "0.72rem", color: "var(--text-muted)" }}>
+            <span style={{ fontSize: FS.xs, color: "var(--text-muted)" }}>
               Tốc độ {playbackRate}×
               {replayLimit !== null && ` · còn ${Math.max(0, replayLimit - plays)}/${replayLimit} lượt`}
               {item.audioPreviewSeconds && ` · chỉ ${item.audioPreviewSeconds} giây đầu`}
@@ -286,7 +287,7 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
       <p
         style={{
           margin: "0 0 0.75rem",
-          fontSize: "0.95rem",
+          fontSize: FS.md,
           fontWeight: 600,
           color: "var(--text-primary)",
           lineHeight: 1.55,
@@ -304,7 +305,7 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
             borderRadius: "var(--radius-md, 8px)",
             border: "1px solid var(--border)",
             background: "var(--bg-secondary)",
-            fontSize: "0.9rem",
+            fontSize: FS.sm,
             color: "var(--text-primary)",
             lineHeight: 1.6,
             marginBottom: "1rem",
@@ -324,7 +325,7 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
             borderRadius: "var(--radius-md, 8px)",
             border: "1px dashed var(--border)",
             background: "var(--bg-secondary)",
-            fontSize: "0.82rem",
+            fontSize: FS.sm,
             color: "var(--text-muted)",
             marginBottom: "1.1rem",
           }}
@@ -362,7 +363,7 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
                       ? "var(--bg-elevated)"
                       : "var(--bg-primary)",
                 color: "var(--text-primary)",
-                fontSize: "0.87rem",
+                fontSize: FS.sm,
                 lineHeight: 1.55,
                 cursor: locked ? "default" : "pointer",
                 whiteSpace: "pre-line",
@@ -377,7 +378,7 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: "0.68rem",
+                  fontSize: FS.xs,
                   fontWeight: 800,
                   background: showRight ? "rgba(34,197,94,0.2)" : showWrong ? "rgba(239,68,68,0.15)" : "var(--bg-elevated)",
                   color: showRight ? GREEN : showWrong ? RED : "var(--text-muted)",
@@ -401,7 +402,7 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
             borderRadius: "var(--radius-md, 8px)",
             border: `1px solid ${choice === item.correct ? "rgba(34,197,94,0.35)" : "rgba(239,68,68,0.3)"}`,
             background: choice === item.correct ? "rgba(34,197,94,0.07)" : "rgba(239,68,68,0.05)",
-            fontSize: "0.83rem",
+            fontSize: FS.sm,
             color: "var(--text-secondary)",
             lineHeight: 1.65,
             marginBottom: "1rem",
@@ -428,7 +429,7 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
                   border: "1px solid var(--border)",
                   background: "var(--bg-elevated)",
                   color: "var(--text-secondary)",
-                  fontSize: "0.73rem",
+                  fontSize: FS.xs,
                   cursor: "pointer",
                 }}
               >
@@ -442,7 +443,7 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
                     borderRadius: "var(--radius-md, 8px)",
                     border: "1px solid var(--border)",
                     background: "var(--bg-secondary)",
-                    fontSize: "0.8rem",
+                    fontSize: FS.sm,
                     color: "var(--text-secondary)",
                     lineHeight: 1.7,
                     whiteSpace: "pre-wrap",
@@ -455,7 +456,7 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
               )}
             </>
           ) : (
-            <p style={{ margin: 0, fontSize: "0.72rem", color: "var(--text-muted)" }}>
+            <p style={{ margin: 0, fontSize: FS.xs, color: "var(--text-muted)" }}>
               {level.config.transcriptPolicy === "after-2"
                 ? `Transcript mở sau 2 lần nghe (đã nghe ${plays}).`
                 : level.config.transcriptPolicy === "after-submit"
@@ -478,7 +479,7 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
               border: "1px solid var(--accent-primary)",
               background: choice === null ? "var(--bg-secondary)" : "var(--accent-primary)",
               color: choice === null ? "var(--text-muted)" : "#fff",
-              fontSize: "0.85rem",
+              fontSize: FS.sm,
               fontWeight: 600,
               cursor: choice === null ? "not-allowed" : "pointer",
             }}
@@ -494,7 +495,7 @@ export default function Part3DrillClient({ level, drill, drillIndex, signedIn }:
               border: "1px solid var(--accent-primary)",
               background: "var(--accent-primary)",
               color: "#fff",
-              fontSize: "0.85rem",
+              fontSize: FS.sm,
               fontWeight: 600,
               cursor: "pointer",
             }}

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { IPA_CHART, type Phoneme, type PhonemeGroupKey } from "@/lib/subskills/ipa/chart";
 import { playPhoneme, speechAvailable } from "@/lib/subskills/ipa/audio";
+import { FS } from "@/lib/ui/scale";
 
 /** Render the example word with its sound-carrying letters bolded. */
 function HighlightedWord({ word, highlight }: { word: string; highlight: string }) {
@@ -34,7 +35,7 @@ export function PhonemicChart() {
     <div>
       {IPA_CHART.map((g) => (
         <div key={g.key} style={{ marginBottom: "1.25rem" }}>
-          <p style={{ fontSize: "0.72rem", fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--text-muted)", margin: "0 0 0.5rem" }}>
+          <p style={{ fontSize: FS.xs, fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--text-muted)", margin: "0 0 0.5rem" }}>
             {g.label}
           </p>
           <div
@@ -66,8 +67,8 @@ export function PhonemicChart() {
                     transition: "border-color 0.12s, background 0.12s",
                   }}
                 >
-                  <span style={{ fontSize: "1.15rem", fontWeight: 700, color: "var(--text-primary)", lineHeight: 1 }}>{p.symbol}</span>
-                  <span style={{ fontSize: "0.62rem", color: "var(--text-muted)", lineHeight: 1 }}>
+                  <span style={{ fontSize: FS.lg, fontWeight: 700, color: "var(--text-primary)", lineHeight: 1 }}>{p.symbol}</span>
+                  <span style={{ fontSize: FS.xs, color: "var(--text-muted)", lineHeight: 1 }}>
                     <HighlightedWord word={p.word} highlight={p.highlight} />
                   </span>
                 </button>
@@ -92,13 +93,13 @@ export function PhonemicChart() {
             flexWrap: "wrap",
           }}
         >
-          <span style={{ fontSize: "2rem", fontWeight: 700, color: "var(--text-primary)", lineHeight: 1 }}>{selected.symbol}</span>
+          <span style={{ fontSize: FS.xl, fontWeight: 700, color: "var(--text-primary)", lineHeight: 1 }}>{selected.symbol}</span>
           <div style={{ flex: 1, minWidth: 120 }}>
-            <div style={{ fontSize: "0.95rem", color: "var(--text-primary)", fontWeight: 600 }}>
+            <div style={{ fontSize: FS.md, color: "var(--text-primary)", fontWeight: 600 }}>
               <HighlightedWord word={selected.word} highlight={selected.highlight} />
             </div>
             {!canSpeak && (
-              <div style={{ fontSize: "0.7rem", color: "var(--text-muted)", marginTop: 2 }}>
+              <div style={{ fontSize: FS.xs, color: "var(--text-muted)", marginTop: 2 }}>
                 Trình duyệt không phát được âm — audio thật sẽ có sau.
               </div>
             )}
@@ -106,14 +107,14 @@ export function PhonemicChart() {
           <button
             type="button"
             onClick={() => void playPhoneme(selected.word)}
-            style={{ padding: "0.45rem 0.9rem", borderRadius: "var(--radius-md, 8px)", border: "1px solid var(--border)", background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: "0.8rem", cursor: "pointer" }}
+            style={{ padding: "0.45rem 0.9rem", borderRadius: "var(--radius-md, 8px)", border: "1px solid var(--border)", background: "var(--bg-elevated)", color: "var(--text-primary)", fontSize: FS.sm, cursor: "pointer" }}
           >
             🔊 Nghe lại
           </button>
           <button
             type="button"
             onClick={() => practice(selected.group)}
-            style={{ padding: "0.45rem 0.9rem", borderRadius: "var(--radius-md, 8px)", border: "none", background: "var(--accent-primary)", color: "#fff", fontSize: "0.8rem", fontWeight: 600, cursor: "pointer" }}
+            style={{ padding: "0.45rem 0.9rem", borderRadius: "var(--radius-md, 8px)", border: "none", background: "var(--accent-primary)", color: "#fff", fontSize: FS.sm, fontWeight: 600, cursor: "pointer" }}
           >
             Luyện âm này →
           </button>
