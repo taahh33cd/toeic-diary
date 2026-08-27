@@ -83,17 +83,35 @@ export interface SubmissionFeedback {
 }
 
 /**
+ * Unit của khu subskill (ví dụ "subskill-wp2-tang9") quy về unit gốc của
+ * /skills để dùng chung thang điểm. Quy ước tên: `subskill-<wp|sp><số part>-...`,
+ * số part đếm theo đề thi thật (Writing part 2 = Q6-7). Nhờ vậy thêm tầng
+ * mới chỉ cần giữ đúng tiền tố, không phải sửa hàm này nữa.
+ */
+const PART_UNITS: Record<string, string[]> = {
+  writing: ["q1-5", "q6-7", "q8"],
+  speaking: ["q1-2", "q3-4", "q5-7", "q8-10", "q11"],
+};
+
+export function baseUnit(skill: string, unit: string): string {
+  const m = /^subskill-[ws]p(\d+)(?:-|$)/.exec(unit);
+  if (!m) return unit;
+  return PART_UNITS[skill]?.[Number(m[1]) - 1] ?? unit;
+}
+
+/**
  * Thang điểm rubric thật của ETS, khác nhau theo từng part.
  * Writing Q1-5 chấm 0-3, Q6-7 chấm 0-4, Q8 chấm 0-5;
  * Speaking hầu hết 0-3, riêng Q11 (nêu ý kiến) 0-5.
  */
 export function scaleFor(skill: string, unit: string): number {
+  const u = baseUnit(skill, unit);
   if (skill === "writing") {
-    if (unit === "q1-5") return 3;
-    if (unit === "q6-7") return 4;
+    if (u === "q1-5") return 3;
+    if (u === "q6-7") return 4;
     return 5; // q8
   }
-  return unit === "q11" ? 5 : 3;
+  return u === "q11" ? 5 : 3;
 }
 
 /** Số item tối đa một bản nộp — Speaking Q5-7 nhiều câu nhất cũng chỉ 3. */
