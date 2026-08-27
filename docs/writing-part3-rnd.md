@@ -3,9 +3,10 @@
 Bản đầy đủ có phân tích: artifact `Bản đồ tầng Writing Part 3`
 https://claude.ai/code/artifact/38567fed-8807-4ed7-a579-68cb9cb44413
 
-Trạng thái: Phase 1–3 đã xong. Tầng 1–12 đang mở, 155 bài tập tự chấm qua 13 loại.
-Còn lại: Phase 4 = T13 (viết thật 30 phút, nộp giáo viên chấm) + 24 đề + 6 cặp bài mẫu mức-3/mức-5.
-Tầng 0 vẫn `active: false` — band ≤90 chỉ có on-ramp, chưa cấp thiết.
+Trạng thái: **Phase 1–4 đã xong.** Tầng 1–13 mở, 155 bài tập tự chấm qua 13 loại,
+24 đề viết thật, 6 cặp bài mẫu mức-3/mức-5.
+Chỉ còn Tầng 0 `active: false` — band ≤90 chỉ là on-ramp, chưa cấp thiết.
+Việc mở rộng còn lại: nhân mỗi tầng từ 1 bộ test lên 5 bộ.
 
 ## Quyết định đã chốt
 
@@ -104,7 +105,24 @@ Nộp bài dùng lại `SkillSubmission` + `/journal/submissions` + `/admin/grad
 | Bài mẫu | 12 | **6 cặp mức-3/mức-5**, mỗi dạng một cặp cùng chung một đề |
 | Đoạn văn nền (T5–T8, T12) | ~40 | bản nháp cài lỗi sẵn |
 
-Phase: (1) khung + T1–T4 · (2) T5–T9 · (3) T10–T12 · (4) T13 + bộ đề.
+Phase: (1) khung + T1–T4 · (2) T5–T9 · (3) T10–T12 · (4) T13 + bộ đề + bài mẫu. Tất cả đã xong.
+
+### Phase 4 — những gì đã dựng
+
+| Thứ | Chi tiết |
+|---|---|
+| `tang13.ts` | 24 đề, 6 dạng × 4, missions tách theo dạng, 30 phút / 300 từ |
+| `samples.ts` | 6 cặp mức-3/mức-5, mỗi dạng một cặp, kèm `gaps` tách theo 4 trục |
+| `WritingP3ComposeClient` | Đồng hồ 30 phút + đếm từ + khung đúng/bẫy của dạng + checklist + `SubmissionPanel` |
+| `WritingP3SamplesClient` | Xem song song hai bài, hoặc soi từng bài, kèm bảng khác nhau theo trục |
+| `/part3/tang13` · `/part3/bai-mau` | Hai route mới |
+
+**Unit nộp bài = `subskill-wp3-tang13`.** `scaleFor()` trả 5 cho unit này (rơi vào nhánh mặc định q8)
+— đúng, vì Q8 chấm rubric 0–5. Trang hub đã được mở rộng để nhận cả `"q8"` lẫn `"subskill-wp3-tang13"`
+làm tín hiệu ưu tiên 1 khi gợi ý band.
+
+**Bài mức 3 trong 6 cặp được viết cố ý gần như KHÔNG có lỗi ngữ pháp.** Đó là toàn bộ bài học của
+thư viện này: ETS mô tả mức 3 là "đúng nhưng hạn hẹp", nên sạch lỗi thôi chưa lên được mức 4.
 
 ### Đã dựng (Phase 1–3)
 

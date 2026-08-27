@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { prisma } from "@/lib/db/prisma";
 import { createClient } from "@/lib/supabase/server";
+import { SAMPLE_PAIRS } from "@/lib/subskills/writing-part3/samples";
 import { CONTAINER_MAX, FILL_SCREEN, FS, PAD_X, PAD_Y } from "@/lib/ui/scale";
 import {
   WRITING_P3_SKILLS,
@@ -59,7 +60,9 @@ export default async function WritingPart3Page() {
     : [];
 
   let signal: P3BandSignal = { source: "none" };
-  const latestQ8 = submissions.find((s) => s.unit === "q8");
+  // Bài luận Q8 đến từ hai nơi: khu /skills dùng unit "q8", Tầng 13 dùng
+  // "subskill-wp3-tang13". Cả hai đều chấm bằng rubric 0–5 của Q8.
+  const latestQ8 = submissions.find((s) => s.unit === "q8" || s.unit === "subskill-wp3-tang13");
   const q8Rubric = latestQ8 ? rubricFromFeedback(latestQ8.feedback) : null;
 
   if (q8Rubric !== null) {
@@ -155,6 +158,36 @@ export default async function WritingPart3Page() {
       )}
 
       <div style={{ height: 1, background: "var(--border)", marginBottom: "1.5rem" }} />
+
+      {/* Thư viện bài mẫu — cặp mức 3 / mức 5 */}
+      <Link
+        href="/subskills/writing/part3/bai-mau"
+        className="r-row"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "1.1rem",
+          padding: "1.2rem 1.5rem",
+          marginBottom: "1.5rem",
+          borderRadius: "var(--radius-lg)",
+          border: "1.5px solid var(--accent-primary)",
+          background: "linear-gradient(135deg, rgba(59,130,246,0.09), rgba(59,130,246,0.02))",
+          textDecoration: "none",
+          boxShadow: "var(--shadow-sm)",
+        }}
+      >
+        <span style={{ fontSize: "1.5rem", flexShrink: 0, lineHeight: 1 }}>📄</span>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{ fontSize: FS.md, fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.15rem" }}>
+            Thư viện bài mẫu
+          </div>
+          <p style={{ fontSize: FS.sm, color: "var(--text-secondary)", lineHeight: 1.55, margin: 0 }}>
+            {SAMPLE_PAIRS.length} cặp bài mức 3 / mức 5 đặt cạnh nhau, mỗi dạng đề một cặp. Bài mức 3 cố ý viết
+            gần như không có lỗi ngữ pháp nào — để thấy vì sao sạch lỗi thôi vẫn chưa lên được mức 4.
+          </p>
+        </div>
+        <span className="r-arrow" style={{ fontSize: FS.sm, color: "var(--accent-primary)", flexShrink: 0 }}>→</span>
+      </Link>
 
       <p style={{ fontSize: FS.xs, color: "var(--text-muted)", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 700, marginBottom: "0.6rem" }}>
         Luyện tập theo band điểm

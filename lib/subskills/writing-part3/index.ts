@@ -2,8 +2,7 @@
 // Writing Part 3 — Question 8, Write an Opinion Essay
 //
 // Thiết kế đầy đủ: docs/writing-part3-rnd.md
-// Phase 1–3 mở Tầng 1–12. Tầng 0 và 13 đã khai báo sẵn
-// metadata nhưng `active: false` cho tới khi có data.
+// Phase 1–4: Tầng 1–13 đã mở. Riêng Tầng 0 (band ≤90) vẫn `active: false`.
 //
 // Data JSON viết thẳng ở dạng chuẩn hoá (không cần normalizer như Part 1).
 // ─────────────────────────────────────
@@ -533,7 +532,7 @@ export const WRITING_P3_SKILLS: P3SkillMeta[] = [
     label: "The Real Thing",
     description: "Đề thật, đồng hồ 30 phút, tự soi checklist rồi gửi giáo viên chấm.",
     dbPartPrefix: "wp3-tang13",
-    active: false,
+    active: true,
     band: "D",
     axis: "Toàn bộ",
     href: "/subskills/writing/part3/tang13",
