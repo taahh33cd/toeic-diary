@@ -1,0 +1,317 @@
+{
+  "passages": {
+    "p1": {
+      "kind": "prompt",
+      "body": [
+        "Some people believe a city should keep its old buildings even when they are expensive to maintain. Do you agree or disagree with this view? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p2": {
+      "kind": "prompt",
+      "body": [
+        "Some people prefer to live within walking distance of their workplace, even if the housing is small. Others prefer a larger home further away. Which would you choose? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p3": {
+      "kind": "prompt",
+      "body": [
+        "Many cities have closed their central streets to cars and opened them only to pedestrians. What are the advantages and disadvantages of doing this? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p4": {
+      "kind": "prompt",
+      "body": [
+        "A neighbourhood has one empty plot of land. It could become a small park, a car park, or a covered market for local sellers. Which should the neighbourhood choose? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p5": {
+      "kind": "prompt",
+      "body": [
+        "In your opinion, what single change would most improve daily life in a large city? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p6": {
+      "kind": "prompt",
+      "body": [
+        "Some cities charge drivers a fee for entering the city centre during working hours. Do you think other cities should introduce this charge? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p7": {
+      "kind": "prompt",
+      "body": [
+        "A growing number of people order their weekly food shopping online and have it delivered. What are the advantages and disadvantages of shopping this way? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p8": {
+      "kind": "prompt",
+      "body": [
+        "Living in a place where you know your neighbours matters more than living in a place with good facilities. Do you agree or disagree with this statement? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p9": {
+      "kind": "prompt",
+      "body": [
+        "Some people take a long journey to a distant country for their holiday. Others spend the same time exploring places near home. Which kind of holiday do you find more rewarding? Give reasons or examples to support your opinion."
+      ]
+    }
+  },
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t1-4-e1",
+          "passageRef": "p1",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«Do you agree or disagree with this view?» — dạng đồng ý/phản đối. Vế «even when they are expensive to maintain» là phần khó của nhận định; bài chỉ khen kiến trúc cổ mà không đụng tới chi phí là né mất chỗ gai góc nhất của đề."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-e2",
+          "passageRef": "p2",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "«Which would you choose?» sau hai lựa chọn — chọn-1-trong-2. Đề đã cài sẵn cái giá phải trả cho mỗi bên (nhà nhỏ · đi xa), nên bài đúng khuôn phải thừa nhận cái giá của lựa chọn mình chứ không giả vờ nó hoàn hảo."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-e3",
+          "passageRef": "p3",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["D"],
+          "explanation": "«What are the advantages and disadvantages of doing this?» — hai chiều. Đề phố đi bộ rất dễ có ví dụ hai mặt: người đi bộ được lợi, còn chủ cửa hàng cần xe tải giao hàng thì chịu thiệt."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-e4",
+          "passageRef": "p4",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "Ba phương án cho mảnh đất trống: công viên, bãi đỗ xe, chợ có mái. Mẹo nhận dạng nhanh: đếm số danh từ nối bằng «or» ngay trước câu hỏi — ba thì là dạng này."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-e5",
+          "passageRef": "p5",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["E"],
+          "explanation": "«What single change…» — mở hoàn toàn, và chữ «single» còn siết thêm: chỉ được nêu MỘT thay đổi. Bài liệt kê bốn cải tiến rồi khen đều là không trả lời đúng chữ «single»."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-e6",
+          "passageRef": "p6",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["F"],
+          "explanation": "«Do you think other cities should introduce this charge?» — chính sách. Đề phí vào trung tâm có sẵn ba bên rất rõ: người lái xe, người đi phương tiện công cộng, và ngân sách thành phố."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "labeling",
+          "id": "t1-4-m1",
+          "intro": "Gắn đúng nhãn cho từng câu của đề.",
+          "labels": ["Bối cảnh", "Câu hỏi chính", "Yêu cầu chứng minh"],
+          "sentences": [
+            { "text": "Some people take a long journey to a distant country for their holiday. Others spend the same time exploring places near home.", "label": "Bối cảnh" },
+            { "text": "Which kind of holiday do you find more rewarding?", "label": "Câu hỏi chính" },
+            { "text": "Give reasons or examples to support your opinion.", "label": "Yêu cầu chứng minh" }
+          ],
+          "explanation": "Cụm «the same time» ở bối cảnh là chi tiết quan trọng: đề đã cố định biến thời gian, nên bạn không được lập luận rằng đi xa tốn nhiều ngày hơn. Đọc kỹ bối cảnh giúp tránh những lý do đã bị đề loại trừ sẵn."
+        },
+        {
+          "type": "labeling",
+          "id": "t1-4-m2",
+          "intro": "Đề này chỉ có hai câu — bối cảnh nằm chung với nhận định.",
+          "labels": ["Nhận định để bạn cân", "Câu hỏi chính", "Yêu cầu chứng minh"],
+          "sentences": [
+            { "text": "Living in a place where you know your neighbours matters more than living in a place with good facilities.", "label": "Nhận định để bạn cân" },
+            { "text": "Do you agree or disagree with this statement?", "label": "Câu hỏi chính" },
+            { "text": "Give reasons or examples to support your opinion.", "label": "Yêu cầu chứng minh" }
+          ],
+          "explanation": "Có đề không hề có bối cảnh, chỉ có một nhận định trần trụi rồi hỏi luôn. Khi đó nhận định ấy chính là thứ bạn phải cân, và nó thường chứa một phép so sánh («matters more than») mà bài của bạn buộc phải đụng tới cả hai vế."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-m3",
+          "passageRef": "p7",
+          "question": "Đề này giao cho bạn những việc nào? Chọn tất cả.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Nêu các mặt lợi của việc đặt thực phẩm trực tuyến" },
+            { "id": "B", "text": "Nêu các mặt hại của việc đó" },
+            { "id": "C", "text": "Chứng minh mỗi ý bằng lý do hoặc ví dụ" },
+            { "id": "D", "text": "So sánh giá cả giữa các siêu thị trực tuyến" },
+            { "id": "E", "text": "Khuyên người đọc nên hay không nên đặt hàng trực tuyến" }
+          ],
+          "correctAnswers": ["A", "B", "C"],
+          "explanation": "E là bẫy tinh vi: khuyên nhủ nghe rất giống một kết bài hợp lý, nhưng dạng ưu–nhược chỉ yêu cầu bạn NGẢ về một bên ở kết bài, không yêu cầu ra lời khuyên cho người đọc. Khác biệt nhỏ nhưng đủ để bài lệch giọng."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-m4",
+          "passageRef": "p5",
+          "question": "Đề này giao cho bạn những việc nào? Chọn tất cả.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Nêu ra ĐÚNG MỘT thay đổi" },
+            { "id": "B", "text": "Tự dựng ra vài phương án rồi chọn một" },
+            { "id": "C", "text": "Chứng minh bằng lý do hoặc ví dụ cụ thể" },
+            { "id": "D", "text": "Liệt kê mọi vấn đề mà thành phố lớn đang gặp" },
+            { "id": "E", "text": "Nói ai sẽ trả tiền cho thay đổi đó" }
+          ],
+          "correctAnswers": ["A", "B", "C"],
+          "explanation": "D là cách viết mà nhiều người chọn vì nó dễ kéo dài bài, nhưng liệt kê vấn đề không phải là chọn một thay đổi. E không bắt buộc — nó có thể làm bài mạnh hơn nếu bạn dùng nó để lập luận, nhưng đề không giao việc đó."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-4-m5",
+          "passageRef": "p3",
+          "question": "Bài nào trả lời ĐÚNG việc đề giao?",
+          "options": [
+            { "id": "A", "text": "Một bài mô tả một phố đi bộ nổi tiếng và không khí ở đó vào cuối tuần." },
+            { "id": "B", "text": "Một bài nêu hai lợi ích kèm ví dụ, hai bất lợi kèm ví dụ, rồi ngả về một bên ở kết bài." },
+            { "id": "C", "text": "Một bài lập luận rằng mọi thành phố nên cấm xe ở trung tâm." },
+            { "id": "D", "text": "Một bài giải thích lịch sử của việc quy hoạch đường phố." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "C là bài hay nhưng trả lời sai dạng — nó biến ưu–nhược thành chính sách. A và D đúng chủ đề mà không đụng tới ưu hay nhược. Ba bài sai này minh hoạ ba kiểu lệch việc khác nhau: lệch dạng, lệch sang mô tả, và lệch sang kể chuyện nền."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "mission_audit",
+          "id": "t1-4-h1",
+          "directions": "Some people prefer to live within walking distance of their workplace, even if the housing is small. Others prefer a larger home further away. Which would you choose? Give reasons or examples to support your opinion.",
+          "draft": [
+            "I would choose the smaller home close to work.",
+            "The hour I would otherwise spend commuting is an hour I get back every single day.",
+            "When I moved from a suburb to a flat ten minutes from the office, I started cooking dinner again for the first time in three years.",
+            "A larger home would of course be more comfortable, especially for someone with children.",
+            "But comfort in a home you only see after dark is worth less than an evening you can actually use."
+          ],
+          "missions": [
+            { "text": "Chọn dứt khoát một trong hai", "done": true },
+            { "text": "Đưa lý do kèm ví dụ cụ thể", "done": true },
+            { "text": "Nói vì sao lựa chọn kia kém hơn", "done": true },
+            { "text": "Kết bài khẳng định lại bằng chữ mới", "done": true }
+          ],
+          "explanation": "Bài đủ bốn việc và làm gọn trong năm câu. Đáng học nhất là câu nhượng bộ: nó thừa nhận nhà rộng thoải mái hơn VÀ nêu đích danh người nó hợp (gia đình có con), rồi mới vượt qua bằng một tiêu chí khác. Nhượng bộ càng cụ thể thì lập trường càng vững."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t1-4-h2",
+          "directions": "A neighbourhood has one empty plot of land. It could become a small park, a car park, or a covered market for local sellers. Which should the neighbourhood choose? Give reasons or examples to support your opinion.",
+          "draft": [
+            "The plot should become a small park.",
+            "Our neighbourhood has no green space at all within fifteen minutes' walk.",
+            "Last summer the only shade on our street was under the awning of a bank, and half a dozen elderly residents sat there every afternoon.",
+            "A car park would fill up within a week and serve only the people who already own cars.",
+            "In conclusion, a park is the right choice for our neighbourhood."
+          ],
+          "missions": [
+            { "text": "Chọn đúng một trong ba phương án", "done": true },
+            { "text": "Nói vì sao phương án «bãi đỗ xe» kém hơn", "done": true },
+            { "text": "Nói vì sao phương án «chợ có mái» kém hơn", "done": false },
+            { "text": "Chứng minh lựa chọn bằng lý do hoặc ví dụ", "done": true }
+          ],
+          "explanation": "Ví dụ về mái hiên ngân hàng rất tốt — nó cho thấy nhu cầu thật thay vì tuyên bố nhu cầu. Nhưng chợ có mái bị bỏ quên hoàn toàn, và đó chính là chỗ dạng chọn-1-trong-3 kiểm tra bạn có đọc hết đề không. Câu kết cũng chỉ lặp lại câu đầu."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t1-4-h3",
+          "directions": "Some cities charge drivers a fee for entering the city centre during working hours. Do you think other cities should introduce this charge? Give reasons or examples to support your opinion.",
+          "draft": [
+            "Other cities should introduce this charge, because the road space it frees is worth more than the fee it collects.",
+            "For people who travel by bus, every car removed is a few seconds saved at each junction.",
+            "After London introduced its charge, bus journeys through the centre became noticeably more reliable within the first year.",
+            "For drivers who genuinely need to enter — delivery vans, tradespeople carrying tools — a quieter road is worth paying for.",
+            "A plumber I know now reaches four jobs a day instead of three, and the fee costs him less than the extra job earns.",
+            "A charge is not a punishment for driving; it is a way of deciding who most needs the road."
+          ],
+          "missions": [
+            { "text": "Nêu rõ nên hay không nên", "done": true },
+            { "text": "Lập luận theo ít nhất hai bên chịu tác động", "done": true },
+            { "text": "Chứng minh mỗi bên bằng ví dụ cụ thể", "done": true },
+            { "text": "Kết bài không quay lại đứng giữa", "done": true }
+          ],
+          "explanation": "Bài mẫu mực của dạng chính sách. Đáng chú ý là nó lập luận cho cả bên tưởng như chịu thiệt (người lái xe) chứ không chỉ bên được lợi — người thợ nước làm được bốn việc thay vì ba. Câu kết định nghĩa lại vấn đề thay vì tóm tắt, đúng khuôn kết bài mức 5."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t1-4-h4",
+          "directions": "Some people believe a city should keep its old buildings even when they are expensive to maintain. Do you agree or disagree with this view? Give reasons or examples to support your opinion.",
+          "draft": [
+            "Old buildings are an important part of a city's identity and history.",
+            "They attract tourists, who spend money in local shops and restaurants.",
+            "They also give residents a sense of continuity with the past.",
+            "Many cities around the world are famous precisely because of their historic centres.",
+            "Therefore old buildings should be protected."
+          ],
+          "missions": [
+            { "text": "Nêu rõ đồng ý hay phản đối ngay ở mở bài", "done": false },
+            { "text": "Đụng tới vế «tốn kém để duy trì» của nhận định", "done": false },
+            { "text": "Chứng minh bằng ví dụ cụ thể", "done": false }
+          ],
+          "explanation": "Bài này trượt cả ba việc dù nghe rất xuôi tai. Không có câu nào nói «I agree» — lập trường chỉ hiện ra ở câu cuối bằng chữ «Therefore». Vế khó nhất của đề, tức chi phí duy trì, bị lờ hẳn. Và cả năm câu đều là nhận định chung: không một thành phố nào được gọi tên, không một con số nào."
+        }
+      ]
+    }
+  ]
+}

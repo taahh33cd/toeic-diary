@@ -1,0 +1,312 @@
+{
+  "passages": {
+    "p1": {
+      "kind": "prompt",
+      "body": [
+        "Some universities now require every student to take at least one course outside their main subject. Do you agree or disagree with this requirement? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p2": {
+      "kind": "prompt",
+      "body": [
+        "Some students prefer to study alone in a quiet room. Others prefer to study in a group with classmates. Which do you find more effective? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p3": {
+      "kind": "prompt",
+      "body": [
+        "Many schools now ask students to submit their homework online instead of on paper. What are the advantages and disadvantages of this change? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p4": {
+      "kind": "prompt",
+      "body": [
+        "A school has money for one new facility. It could build a science laboratory, a library reading room, or an outdoor sports court. Which should the school build? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p5": {
+      "kind": "prompt",
+      "body": [
+        "In your opinion, what is the most useful habit a student can form before entering university? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p6": {
+      "kind": "prompt",
+      "body": [
+        "Some schools have decided to stop giving numerical marks and to write comments on each student's work instead. Do you think other schools should do the same? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p7": {
+      "kind": "prompt",
+      "body": [
+        "Learning happens both inside and outside the classroom. Some people say the most valuable lessons of a person's education come from outside it. Do you agree or disagree? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p8": {
+      "kind": "prompt",
+      "body": [
+        "Many employers now offer to pay for courses their staff take in the evening. What are the advantages and disadvantages of this practice for the company? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p9": {
+      "kind": "prompt",
+      "body": [
+        "Class sizes vary a great deal between schools. Some classes have fewer than fifteen students, others more than forty. Which size do you think suits learning better? Give reasons or examples to support your opinion."
+      ]
+    }
+  },
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t1-2-e1",
+          "passageRef": "p1",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«Do you agree or disagree with this requirement?» là dấu hiệu không lẫn đi đâu được. Chú ý chữ «this requirement» — nó trỏ ngược về câu trước, nên bạn phải đọc cả hai câu mới biết mình đang đồng ý với cái gì."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-e2",
+          "passageRef": "p2",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "«Some… Others… Which do you find more effective?» là khuôn chọn-1-trong-2 kinh điển. Chữ «more effective» còn cho sẵn tiêu chí so sánh — hãy dùng đúng tiêu chí đó suốt bài thay vì chuyển sang bàn xem cách nào vui hơn."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-e3",
+          "passageRef": "p3",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["D"],
+          "explanation": "«What are the advantages and disadvantages of this change?» — hai chiều, không đòi chọn phe ở mở bài. Đây vẫn là dạng bị làm hỏng nhiều nhất, vì phản xạ «nêu ý kiến» kéo người viết tuyên bố lập trường ngay câu thứ hai."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-e4",
+          "passageRef": "p4",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "Ba lựa chọn liệt kê rõ ràng: phòng thí nghiệm, phòng đọc, sân thể thao. Việc bắt buộc kèm theo là loại bỏ hai cái còn lại — bỏ quên một cái là bỏ trắng một phần ba đề."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-e5",
+          "passageRef": "p5",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["E"],
+          "explanation": "«What is the most useful habit…» không cho sẵn thói quen nào để chọn. Cách gỡ vẫn thế: tự dựng 2–3 hạng mục trước (đọc mỗi ngày · tự quản thời gian · biết hỏi khi bí), rồi chọn một và chứng minh."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-e6",
+          "passageRef": "p6",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["F"],
+          "explanation": "«Do you think other schools should do the same?» hỏi về một chính sách. Phân biệt với dạng đồng ý/phản đối: ở đây không có câu khẳng định nào để bạn tán thành hay bác bỏ, mà có một việc làm để bạn nói nên hay không nên nhân rộng."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "labeling",
+          "id": "t1-2-m1",
+          "intro": "Gắn đúng nhãn cho từng câu của đề.",
+          "labels": ["Bối cảnh", "Câu hỏi chính", "Yêu cầu chứng minh"],
+          "sentences": [
+            { "text": "Learning happens both inside and outside the classroom. Some people say the most valuable lessons of a person's education come from outside it.", "label": "Bối cảnh" },
+            { "text": "Do you agree or disagree?", "label": "Câu hỏi chính" },
+            { "text": "Give reasons or examples to support your opinion.", "label": "Yêu cầu chứng minh" }
+          ],
+          "explanation": "Câu hỏi chính ở đề này ngắn tới mức dễ đọc lướt qua — chỉ bốn chữ. Bối cảnh thì dài và chứa sẵn một nhận định, nên nhiều người tưởng nhận định đó là câu hỏi và đi bàn xem lớp học có ích hay không, thay vì trả lời có đồng tình hay không."
+        },
+        {
+          "type": "labeling",
+          "id": "t1-2-m2",
+          "intro": "Cùng ba nhãn, đề khác. Chú ý câu bối cảnh có số liệu.",
+          "labels": ["Bối cảnh", "Câu hỏi chính", "Yêu cầu chứng minh"],
+          "sentences": [
+            { "text": "Class sizes vary a great deal between schools. Some classes have fewer than fifteen students, others more than forty.", "label": "Bối cảnh" },
+            { "text": "Which size do you think suits learning better?", "label": "Câu hỏi chính" },
+            { "text": "Give reasons or examples to support your opinion.", "label": "Yêu cầu chứng minh" }
+          ],
+          "explanation": "Con số «fifteen» và «forty» nằm ở bối cảnh, không phải yêu cầu. Bạn được tự do chọn một trong hai cỡ lớp đó, và dùng chính hai con số ấy làm chi tiết cụ thể trong bài — đó là cách rẻ nhất để có ví dụ có số."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-m3",
+          "passageRef": "p8",
+          "question": "Đề này giao cho bạn những việc nào? Chọn tất cả.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Nêu các mặt lợi của việc công ty trả tiền học buổi tối" },
+            { "id": "B", "text": "Nêu các mặt hại của việc đó" },
+            { "id": "C", "text": "Chống đỡ mỗi ý bằng lý do hoặc ví dụ" },
+            { "id": "D", "text": "Xét từ góc nhìn của CÔNG TY, không phải của nhân viên" },
+            { "id": "E", "text": "Đề xuất một chính sách đào tạo thay thế" }
+          ],
+          "correctAnswers": ["A", "B", "C", "D"],
+          "explanation": "D là chi tiết dễ trượt nhất: đề ghi rõ «for the company». Bài viết toàn về việc nhân viên học được gì thì đúng chủ đề mà lệch góc nhìn, và ETS xếp lệch việc vào mức 1–2. E là việc đề không giao."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-m4",
+          "passageRef": "p4",
+          "question": "Đề này giao cho bạn những việc nào? Chọn tất cả.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Chọn đúng một trong ba công trình" },
+            { "id": "B", "text": "Nói vì sao hai công trình còn lại kém cần thiết hơn" },
+            { "id": "C", "text": "Chống đỡ lựa chọn bằng lý do hoặc ví dụ" },
+            { "id": "D", "text": "Ước tính chi phí xây dựng của từng công trình" },
+            { "id": "E", "text": "Đề xuất công trình thứ tư mà đề chưa nhắc tới" }
+          ],
+          "correctAnswers": ["A", "B", "C"],
+          "explanation": "D và E đều là việc tự nghĩ ra. Thêm phương án thứ tư nghe có vẻ sáng tạo nhưng thực chất là không trả lời câu hỏi — đề hỏi chọn cái nào trong ba, không hỏi bạn nghĩ ra được gì."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-2-m5",
+          "passageRef": "p1",
+          "question": "Bài nào trả lời ĐÚNG việc đề giao?",
+          "options": [
+            { "id": "A", "text": "Một bài kể lại chương trình học của trường mình và những môn đã phải học." },
+            { "id": "B", "text": "Một bài lập luận rằng quy định này nên được giữ, với hai lý do kèm ví dụ." },
+            { "id": "C", "text": "Một bài so sánh chương trình đại học ở các nước khác nhau." },
+            { "id": "D", "text": "Một bài liệt kê các môn học ngoài chuyên ngành mà sinh viên thường chọn." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "A, C, D đều nói về chuyện học đại học nên đọc lên rất giống đúng đề. Nhưng chỉ B trả lời «đồng ý hay phản đối với quy định này». Đúng chủ đề mà không trả lời câu hỏi chính là lỗi kéo bài xuống mức 1."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "mission_audit",
+          "id": "t1-2-h1",
+          "directions": "Many schools now ask students to submit their homework online instead of on paper. What are the advantages and disadvantages of this change? Give reasons or examples to support your opinion.",
+          "draft": [
+            "Submitting homework online is a great improvement and every school should adopt it.",
+            "Students no longer lose their work: a file cannot be left on a bus the way a notebook can.",
+            "Teachers can also return comments the same evening instead of waiting until the next lesson.",
+            "For all these reasons, paper homework belongs to the past."
+          ],
+          "missions": [
+            { "text": "Nêu các mặt lợi", "done": true },
+            { "text": "Nêu các mặt hại", "done": false },
+            { "text": "Chứng minh ý bằng lý do hoặc ví dụ", "done": true }
+          ],
+          "explanation": "Bài viết trôi chảy và có ví dụ tốt («a file cannot be left on a bus»), nhưng câu đầu đã chọn phe nên cả bài chỉ đi một chiều. Với dạng ưu–nhược, viết hay mà bỏ trắng nửa đề thì vẫn mất điểm ở trục trả lời đúng việc."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t1-2-h2",
+          "directions": "A school has money for one new facility. It could build a science laboratory, a library reading room, or an outdoor sports court. Which should the school build? Give reasons or examples to support your opinion.",
+          "draft": [
+            "The school should build a science laboratory.",
+            "Science is difficult to learn from a textbook alone; students need to see a reaction before they believe it.",
+            "At my old school we shared one laboratory between four classes, and most of us performed an experiment twice a year.",
+            "A reading room would be pleasant, but the library we already have is half empty most afternoons.",
+            "In conclusion, a laboratory would change the most for the most students."
+          ],
+          "missions": [
+            { "text": "Chọn đúng một trong ba công trình", "done": true },
+            { "text": "Nói vì sao phòng đọc kém cần thiết hơn", "done": true },
+            { "text": "Nói vì sao sân thể thao kém cần thiết hơn", "done": false },
+            { "text": "Chứng minh lựa chọn bằng lý do hoặc ví dụ", "done": true }
+          ],
+          "explanation": "Bài này mạnh: có chọn, có ví dụ đếm được («một phòng cho bốn lớp», «hai lần một năm»), có loại bỏ một phương án bằng bằng chứng. Nhưng sân thể thao bị lờ hẳn. Thêm một câu là xong, không thêm thì mất điểm ở đúng chỗ dạng này được thiết kế để kiểm tra."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t1-2-h3",
+          "directions": "Some students prefer to study alone in a quiet room. Others prefer to study in a group with classmates. Which do you find more effective? Give reasons or examples to support your opinion.",
+          "draft": [
+            "Both ways of studying have their strengths and it really depends on the subject.",
+            "For mathematics, working alone lets you concentrate on one problem for a long time.",
+            "For languages, speaking with classmates is obviously more useful than reading alone.",
+            "So the best approach is to combine the two methods depending on what you are studying."
+          ],
+          "missions": [
+            { "text": "Chọn dứt khoát một trong hai cách học", "done": false },
+            { "text": "Đưa ra lý do", "done": true },
+            { "text": "Chứng minh lý do bằng ví dụ cụ thể", "done": false }
+          ],
+          "explanation": "«It depends on the subject» nghe rất hợp lý ngoài đời, nhưng ở dạng chọn-1-trong-2 thì đó là không chọn. Hai lý do bên trong cũng chưa có ví dụ nào — chúng vẫn là nhận định chung về môn toán và môn ngoại ngữ, chưa phải chuyện đã xảy ra với ai."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t1-2-h4",
+          "directions": "Some schools have decided to stop giving numerical marks and to write comments on each student's work instead. Do you think other schools should do the same? Give reasons or examples to support your opinion.",
+          "draft": [
+            "Other schools should not follow this example, because a comment without a mark leaves everyone guessing.",
+            "For students, a mark answers the one question a comment often avoids: am I on track or not?",
+            "My cousin received two pages of warm remarks all year and discovered only in June that she was failing.",
+            "For parents, the change removes the one signal they can read without knowing the subject.",
+            "A school that wants better feedback should write comments beside the mark, not instead of it."
+          ],
+          "missions": [
+            { "text": "Nêu rõ nên hay không nên", "done": true },
+            { "text": "Lập luận theo ít nhất hai bên chịu tác động", "done": true },
+            { "text": "Chứng minh bằng ví dụ cụ thể", "done": true }
+          ],
+          "explanation": "Bài này làm đủ ba việc và làm tốt: trả lời dứt khoát, xét cả học sinh lẫn phụ huynh, và có một chuyện thật với mốc thời gian («chỉ đến tháng Sáu mới biết»). Câu cuối còn không rơi vào bẫy đứng giữa — nó đề xuất một cách làm khác chứ không rút lại lập trường."
+        }
+      ]
+    }
+  ]
+}

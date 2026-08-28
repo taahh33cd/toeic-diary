@@ -296,15 +296,16 @@
             "In my opinion, the most effective way is to work beside an experienced colleague for the first few weeks.",
             "Reading the staff handbook is useful, and attending training sessions helps too, but neither shows a newcomer how decisions are really made.",
             "Sitting next to someone who has been there for years lets a new employee hear real phone calls and watch real problems being solved.",
-            "When I joined my current company, I learned more in one afternoon of listening to my manager negotiate with a supplier than in three days of orientation slides."
+            "When I joined my current company, I learned more in one afternoon of listening to my manager negotiate with a supplier than in three days of orientation slides.",
+            "Handbooks and training courses have their place, but neither can show a newcomer how a decision is actually reached."
           ],
           "missions": [
             { "text": "Nêu rõ một cách được cho là hiệu quả nhất", "done": true },
             { "text": "Tự đặt ra và cân nhắc vài phương án khác", "done": true },
             { "text": "Chứng minh bằng lý do hoặc ví dụ cụ thể", "done": true },
-            { "text": "Kết lại bằng một câu khẳng định lựa chọn", "done": false }
+            { "text": "Kết lại bằng một câu khẳng định lựa chọn", "done": true }
           ],
-          "explanation": "Ba việc đầu bài này làm rất tốt, và đáng chú ý ở chỗ nó tự dựng ra ba hạng mục (kèm người có kinh nghiệm · đọc sổ tay · dự buổi đào tạo) dù đề không cho sẵn lựa chọn nào — đó chính là cách gỡ dạng câu hỏi mở. Nhưng bài dừng ngay sau ví dụ, không có câu kết nào. Bài luận kết thúc bằng một mẩu chuyện khiến người chấm phải tự rút ra kết luận thay bạn, và ETS xếp «tổ chức bài» thành một tiêu chí riêng."
+          "explanation": "Bài này làm đủ cả bốn việc — đây là bài mẫu TỐT sau ba bài hỏng bên trên, nên đừng phản xạ đi tìm chỗ thiếu. Đáng chú ý nhất: nó tự dựng ra ba hạng mục (kèm người có kinh nghiệm · đọc sổ tay · dự buổi đào tạo) dù đề không cho sẵn lựa chọn nào, đó chính là cách gỡ dạng câu hỏi mở. Câu cuối vừa khẳng định lại lựa chọn vừa nhượng bộ hai hạng mục kia, thay vì chỉ chép lại câu mở bài."
         }
       ]
     }

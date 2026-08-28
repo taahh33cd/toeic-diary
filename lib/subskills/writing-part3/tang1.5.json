@@ -1,0 +1,318 @@
+{
+  "passages": {
+    "p1": {
+      "kind": "prompt",
+      "body": [
+        "A person's spending habits reveal more about them than the job they do. Do you agree or disagree with this statement? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p2": {
+      "kind": "prompt",
+      "body": [
+        "Some people save carefully for years before making a large purchase. Others prefer to buy it on credit and pay over time. Which approach do you think is wiser? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p3": {
+      "kind": "prompt",
+      "body": [
+        "Many companies now publish the salary range in every job advertisement. What are the advantages and disadvantages of this practice? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p4": {
+      "kind": "prompt",
+      "body": [
+        "A family has saved a sum of money. They could spend it on a holiday together, on repairs to their home, or on a course for one of the children. Which should they choose? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p5": {
+      "kind": "prompt",
+      "body": [
+        "In your opinion, what is the most important thing a young person should learn about money? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p6": {
+      "kind": "prompt",
+      "body": [
+        "Some countries require shops to charge customers for every plastic bag. Do you think all countries should do this? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p7": {
+      "kind": "prompt",
+      "body": [
+        "Some employees receive part of their pay as a bonus that depends on results. What are the advantages and disadvantages of paying people this way? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p8": {
+      "kind": "prompt",
+      "body": [
+        "Some people repair things that break. Others replace them because repair often costs almost as much. Which do you usually prefer to do? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p9": {
+      "kind": "prompt",
+      "body": [
+        "Advertising is sometimes described as useful information and sometimes as a form of pressure. Do you think advertising does more good than harm? Give reasons or examples to support your opinion."
+      ]
+    }
+  },
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t1-5-e1",
+          "passageRef": "p1",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "Một nhận định trần trụi rồi «Do you agree or disagree with this statement?». Nhận định này chứa phép so sánh «reveal more about them than» — bài đúng khuôn phải cân cả hai vế: thói quen chi tiêu VÀ nghề nghiệp, chứ không chỉ khen một vế."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-e2",
+          "passageRef": "p2",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "«Some… Others… Which approach do you think is wiser?» — chọn-1-trong-2. Chữ «wiser» đặt sẵn tiêu chí đánh giá là sự khôn ngoan, không phải sự dễ chịu; bài lập luận rằng mua trả góp sướng hơn là trả lời lệch tiêu chí."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-e3",
+          "passageRef": "p3",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["D"],
+          "explanation": "«What are the advantages and disadvantages of this practice?» — hai chiều. Đề này có một điểm hay: ưu và nhược rơi vào hai bên khác nhau (ứng viên được lợi, công ty chịu ràng buộc), nên rất dễ tìm ví dụ cho từng đoạn."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-e4",
+          "passageRef": "p4",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "Ba khoản chi được liệt kê: kỳ nghỉ, sửa nhà, khoá học cho con. Với dạng này, tiêu chí bạn nêu ở mở bài sẽ quyết định cả bài — ví dụ «khoản nào còn giá trị sau năm năm» tự nó loại được kỳ nghỉ mà không cần thêm lý do."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-e5",
+          "passageRef": "p5",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["E"],
+          "explanation": "«What is the most important thing…» — mở, không có lựa chọn nào. Tự dựng hạng mục: biết ghi chép chi tiêu · biết chờ · biết phân biệt giá và giá trị. Chọn một rồi chứng minh, đừng dạy cả ba."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-e6",
+          "passageRef": "p6",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["F"],
+          "explanation": "«Do you think all countries should do this?» — chính sách. Chữ «all» là chỗ gài: bạn có thể đồng ý rằng thu phí túi ni lông là tốt mà vẫn phản đối việc áp dụng cho MỌI quốc gia. Đọc kỹ lượng từ trong câu hỏi thường mở ra một lập trường tinh tế hơn."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "labeling",
+          "id": "t1-5-m1",
+          "intro": "Gắn đúng nhãn cho từng câu của đề.",
+          "labels": ["Bối cảnh", "Câu hỏi chính", "Yêu cầu chứng minh"],
+          "sentences": [
+            { "text": "Advertising is sometimes described as useful information and sometimes as a form of pressure.", "label": "Bối cảnh" },
+            { "text": "Do you think advertising does more good than harm?", "label": "Câu hỏi chính" },
+            { "text": "Give reasons or examples to support your opinion.", "label": "Yêu cầu chứng minh" }
+          ],
+          "explanation": "Bối cảnh đã đặt sẵn hai cách nhìn, nên rất dễ tưởng đây là dạng ưu–nhược. Nhưng câu hỏi chính có chữ «more… than», tức là đòi bạn CÂN và ngả về một bên ngay — đó là đồng ý/phản đối, và mở bài phải nêu lập trường."
+        },
+        {
+          "type": "labeling",
+          "id": "t1-5-m2",
+          "intro": "Đề này ngắn nhất trong bộ. Gắn nhãn cho từng câu.",
+          "labels": ["Bối cảnh", "Câu hỏi chính", "Yêu cầu chứng minh"],
+          "sentences": [
+            { "text": "Some people repair things that break. Others replace them because repair often costs almost as much.", "label": "Bối cảnh" },
+            { "text": "Which do you usually prefer to do?", "label": "Câu hỏi chính" },
+            { "text": "Give reasons or examples to support your opinion.", "label": "Yêu cầu chứng minh" }
+          ],
+          "explanation": "Chữ «usually» trong câu hỏi cho phép bạn nói về thói quen của mình, nên đây là đề dễ có ví dụ thật nhất. Nhưng đừng để nó biến thành bài kể chuyện: vẫn phải có luận điểm, và mỗi mẩu chuyện phải phục vụ một lý do."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-m3",
+          "passageRef": "p7",
+          "question": "Đề này giao cho bạn những việc nào? Chọn tất cả.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Nêu các mặt lợi của trả lương theo kết quả" },
+            { "id": "B", "text": "Nêu các mặt hại của cách trả lương đó" },
+            { "id": "C", "text": "Chứng minh mỗi ý bằng lý do hoặc ví dụ" },
+            { "id": "D", "text": "Đề xuất tỉ lệ thưởng hợp lý trên tổng lương" },
+            { "id": "E", "text": "Nêu ngay ở mở bài rằng lương cố định công bằng hơn" }
+          ],
+          "correctAnswers": ["A", "B", "C"],
+          "explanation": "D là việc tự nghĩ ra và nó còn kéo bài sang địa hạt bạn không có bằng chứng. E là bẫy quen thuộc của dạng ưu–nhược — chọn phe ở mở bài thì phần còn lại của đề bị bỏ."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-m4",
+          "passageRef": "p2",
+          "question": "Đề này giao cho bạn những việc nào? Chọn tất cả.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Chọn một trong hai cách và nói rõ" },
+            { "id": "B", "text": "Đánh giá theo tiêu chí «khôn ngoan hơn», không phải «dễ chịu hơn»" },
+            { "id": "C", "text": "Chứng minh bằng lý do hoặc ví dụ cụ thể" },
+            { "id": "D", "text": "Dành ít nhất một câu nói vì sao cách kia kém hơn" },
+            { "id": "E", "text": "Giải thích cơ chế tính lãi suất của khoản vay trả góp" }
+          ],
+          "correctAnswers": ["A", "B", "C", "D"],
+          "explanation": "B là việc ẩn trong một chữ duy nhất — «wiser». Nhiều bài trả lời đúng dạng nhưng sai tiêu chí, và người chấm đọc ra ngay. E thì không ai yêu cầu; giải thích lãi suất chỉ tốn chữ trừ khi bạn dùng nó làm bằng chứng."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-5-m5",
+          "passageRef": "p6",
+          "question": "Bài nào trả lời ĐÚNG việc đề giao?",
+          "options": [
+            { "id": "A", "text": "Một bài mô tả tác hại của rác thải nhựa đối với biển và động vật." },
+            { "id": "B", "text": "Một bài lập luận rằng mọi quốc gia nên thu phí, xét tác động lên người mua hàng và lên cửa hàng, kèm ví dụ." },
+            { "id": "C", "text": "Một bài so sánh túi giấy với túi vải về độ bền." },
+            { "id": "D", "text": "Một bài kể lại việc gia đình mình đã giảm dùng túi ni lông ra sao." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "A là bài mà rất nhiều người sẽ viết, và nó chỉ chứng minh rằng nhựa có hại — điều đề không hỏi. Đề hỏi có nên THU PHÍ ở mọi quốc gia không. D có thể là một ví dụ tốt bên trong bài B, nhưng tự nó không phải một bài luận trả lời đúng đề."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "mission_audit",
+          "id": "t1-5-h1",
+          "directions": "Many companies now publish the salary range in every job advertisement. What are the advantages and disadvantages of this practice? Give reasons or examples to support your opinion.",
+          "draft": [
+            "Publishing the range saves everyone the time that used to be wasted discovering it too late.",
+            "A friend of mine once reached a fourth interview before learning the salary was below what she already earned.",
+            "The practice also narrows the gap between two people hired for the same role in the same month.",
+            "On the other hand, a published range quietly becomes a ceiling: nobody negotiates above a number printed in the advertisement.",
+            "It can also unsettle current staff, who now see what the company is willing to pay a newcomer.",
+            "On balance the openness is worth the awkwardness, because the awkward conversations were always going to happen — just later and with less information."
+          ],
+          "missions": [
+            { "text": "Nêu các mặt lợi", "done": true },
+            { "text": "Nêu các mặt hại", "done": true },
+            { "text": "Chứng minh ý bằng lý do hoặc ví dụ", "done": true },
+            { "text": "Kết bài ngả về một bên", "done": true }
+          ],
+          "explanation": "Bài đủ bốn việc và cân đối: hai ý mỗi bên, đoạn nhược không hề mỏng hơn đoạn lợi — lỗi kinh điển của dạng này. Câu kết ngả rõ nhưng vẫn thừa nhận cái giá, đúng khuôn kết bài ưu–nhược."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t1-5-h2",
+          "directions": "A family has saved a sum of money. They could spend it on a holiday together, on repairs to their home, or on a course for one of the children. Which should they choose? Give reasons or examples to support your opinion.",
+          "draft": [
+            "The family should spend the money on repairs to their home.",
+            "A holiday is over in a fortnight, but a leaking roof gets more expensive every month it is ignored.",
+            "My uncle put off fixing his bathroom for two winters and ended up paying three times the original quote.",
+            "In conclusion, repairs are the most sensible use of the money."
+          ],
+          "missions": [
+            { "text": "Chọn đúng một trong ba phương án", "done": true },
+            { "text": "Nói vì sao phương án «kỳ nghỉ» kém hơn", "done": true },
+            { "text": "Nói vì sao phương án «khoá học cho con» kém hơn", "done": false },
+            { "text": "Chứng minh lựa chọn bằng lý do hoặc ví dụ", "done": true }
+          ],
+          "explanation": "Ví dụ về người chú rất mạnh vì có con số so sánh được («gấp ba lần báo giá ban đầu»). Nhưng khoá học cho con bị bỏ quên — mà đó lại là phương án khó bác nhất trong ba, nên bỏ qua nó khiến bài trông như né chỗ khó."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t1-5-h3",
+          "directions": "A person's spending habits reveal more about them than the job they do. Do you agree or disagree with this statement? Give reasons or examples to support your opinion.",
+          "draft": [
+            "I agree with this statement because spending is a choice while a job often is not.",
+            "Two people can hold the same title and live completely different lives depending on what they do with the salary.",
+            "In my office, two colleagues on identical pay took very different paths: one bought a car within a month, the other spent three years saving for a deposit.",
+            "A job title tells you what someone was hired to do; their spending tells you what they are actually working towards.",
+            "Of course a job shapes a person's days more than any purchase does, and I do not pretend otherwise.",
+            "But days are shaped for us, whereas spending is where we decide."
+          ],
+          "missions": [
+            { "text": "Nêu rõ đồng ý hay phản đối ngay ở mở bài", "done": true },
+            { "text": "Đụng tới CẢ HAI vế của phép so sánh", "done": true },
+            { "text": "Chứng minh bằng ví dụ cụ thể", "done": true },
+            { "text": "Kết bài nhượng bộ rồi khẳng định lại", "done": true }
+          ],
+          "explanation": "Bài này xử lý phép so sánh rất chuẩn: không chỉ khen vế chi tiêu mà còn thừa nhận vế nghề nghiệp có sức nặng riêng, rồi phân biệt hai vế bằng một tiêu chí mới (cái nào là do ta chọn). Ví dụ hai đồng nghiệp cùng lương khác lối sống là kiểu ví dụ tự loại trừ được cách giải thích khác."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t1-5-h4",
+          "directions": "In your opinion, what is the most important thing a young person should learn about money? Give reasons or examples to support your opinion.",
+          "draft": [
+            "Young people should learn many important things about money.",
+            "They should learn how to save, how to budget, and how to avoid debt.",
+            "Saving is important because it prepares you for emergencies.",
+            "Budgeting is important because it helps you control your spending.",
+            "Avoiding debt is important because interest makes everything more expensive.",
+            "All three lessons are essential for a young person today."
+          ],
+          "missions": [
+            { "text": "Nêu ra ĐÚNG MỘT điều quan trọng nhất", "done": false },
+            { "text": "Nói vì sao điều đó hơn các điều khác", "done": false },
+            { "text": "Chứng minh bằng ví dụ cụ thể", "done": false }
+          ],
+          "explanation": "Bài trượt cả ba việc bằng cùng một lỗi: nó dựng được ba hạng mục nhưng KHÔNG chọn, rồi khen đều cả ba. Đề hỏi «the most important thing» — số ít. Và vì không chọn nên cũng không có gì để chứng minh, thành ra ba câu giữa chỉ là ba định nghĩa."
+        }
+      ]
+    }
+  ]
+}

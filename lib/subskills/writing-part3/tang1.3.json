@@ -1,0 +1,315 @@
+{
+  "passages": {
+    "p1": {
+      "kind": "prompt",
+      "body": [
+        "Most people now carry a device that can reach them at any hour. Some companies expect staff to answer work messages in the evening. Do you agree that this expectation is reasonable? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p2": {
+      "kind": "prompt",
+      "body": [
+        "Some people prefer to get their news from a printed newspaper. Others prefer to read it on a phone. Which do you prefer? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p3": {
+      "kind": "prompt",
+      "body": [
+        "Many shops now let customers pay without speaking to anyone, using a machine at the exit. What are the advantages and disadvantages of self-service checkouts? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p4": {
+      "kind": "prompt",
+      "body": [
+        "A company can spend its training budget on one of three things: teaching staff to use new software, improving their writing skills, or improving how they speak in front of a group. Which should it choose? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p5": {
+      "kind": "prompt",
+      "body": [
+        "In your opinion, what is the best way for a person to keep up with changes in their profession? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p6": {
+      "kind": "prompt",
+      "body": [
+        "Some cities have banned advertising screens along their main roads. Do you think other cities should do the same? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p7": {
+      "kind": "prompt",
+      "body": [
+        "Video calls have replaced many meetings that once required travel. What are the advantages and disadvantages of holding meetings this way? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p8": {
+      "kind": "prompt",
+      "body": [
+        "Some people say that a person who cannot use a computer today is at the same disadvantage as a person who could not read a hundred years ago. Do you agree or disagree with this comparison? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p9": {
+      "kind": "prompt",
+      "body": [
+        "Photographs used to be taken rarely and kept carefully. Today many people take dozens every day. Do you think this change has improved how we remember our lives? Give reasons or examples to support your opinion."
+      ]
+    }
+  },
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t1-3-e1",
+          "passageRef": "p1",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "«Do you agree that this expectation is reasonable?» — có chữ «agree» nên là dạng đồng ý/phản đối. Chú ý đề hỏi kỳ vọng đó có HỢP LÝ không, chứ không hỏi bạn có thích nó không; trả lời «tôi ghét bị nhắn buổi tối» là lệch câu hỏi."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-e2",
+          "passageRef": "p2",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Khuôn «Some… Others… Which do you prefer?» là chọn-1-trong-2. Đề này dễ bị biến thành bài kể về thói quen đọc báo của bản thân — nhớ rằng thói quen chỉ là ví dụ, còn luận điểm vẫn phải là một lựa chọn."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-e3",
+          "passageRef": "p3",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["D"],
+          "explanation": "«What are the advantages and disadvantages of self-service checkouts?» — hai chiều. Dạng này có một thuận lợi ít ai để ý: bạn không cần nghĩ ra lập trường ngay, chỉ cần liệt kê được hai mặt rồi mới quyết ở kết bài."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-e4",
+          "passageRef": "p4",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "Ba khoản đào tạo được liệt kê rõ: phần mềm, kỹ năng viết, kỹ năng nói trước đám đông. Bài đúng khuôn phải đụng tới cả ba, dù hai cái bị loại chỉ cần một câu mỗi cái."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-e5",
+          "passageRef": "p5",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["E"],
+          "explanation": "«What is the best way…» mà không kèm lựa chọn nào. Tự dựng hạng mục trước khi viết: đọc tạp chí chuyên ngành · dự hội thảo · học từ đồng nghiệp trẻ hơn. Có ba hạng mục là có sẵn dàn ý."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-e6",
+          "passageRef": "p6",
+          "question": "Đề này thuộc dạng nào trong sáu dạng?",
+          "options": [
+            { "id": "A", "text": "Đồng ý / phản đối" },
+            { "id": "B", "text": "Chọn 1 trong 2" },
+            { "id": "C", "text": "Chọn 1 trong 3" },
+            { "id": "D", "text": "Ưu & nhược" },
+            { "id": "E", "text": "Câu hỏi mở" },
+            { "id": "F", "text": "Nên hay không nên" }
+          ],
+          "correctAnswers": ["F"],
+          "explanation": "«Do you think other cities should do the same?» — chính sách. Các bên chịu tác động ở đề này rất sẵn: người lái xe, chủ cửa hàng, chính quyền thành phố. Mỗi bên là một đoạn thân bài mà không cần nghĩ thêm lý do."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "labeling",
+          "id": "t1-3-m1",
+          "intro": "Gắn đúng nhãn cho từng câu của đề.",
+          "labels": ["Bối cảnh", "Câu hỏi chính", "Yêu cầu chứng minh"],
+          "sentences": [
+            { "text": "Photographs used to be taken rarely and kept carefully. Today many people take dozens every day.", "label": "Bối cảnh" },
+            { "text": "Do you think this change has improved how we remember our lives?", "label": "Câu hỏi chính" },
+            { "text": "Give reasons or examples to support your opinion.", "label": "Yêu cầu chứng minh" }
+          ],
+          "explanation": "Câu hỏi chính hẹp hơn bối cảnh rất nhiều: nó không hỏi chụp nhiều ảnh là tốt hay xấu nói chung, mà hỏi việc đó có làm ta NHỚ tốt hơn không. Bài đi bàn về dung lượng điện thoại hay chất lượng ảnh là lạc khỏi đúng chữ «remember»."
+        },
+        {
+          "type": "labeling",
+          "id": "t1-3-m2",
+          "intro": "Đề này có bối cảnh dài hai câu, trong đó câu sau đã chứa sẵn một nhận định.",
+          "labels": ["Bối cảnh", "Câu hỏi chính", "Yêu cầu chứng minh"],
+          "sentences": [
+            { "text": "Some people say that a person who cannot use a computer today is at the same disadvantage as a person who could not read a hundred years ago.", "label": "Bối cảnh" },
+            { "text": "Do you agree or disagree with this comparison?", "label": "Câu hỏi chính" },
+            { "text": "Give reasons or examples to support your opinion.", "label": "Yêu cầu chứng minh" }
+          ],
+          "explanation": "Chữ quan trọng nhất ở câu hỏi chính là «this comparison». Bạn không được hỏi máy tính có quan trọng không — điều đó ai cũng đồng ý. Bạn được hỏi PHÉP SO SÁNH với việc mù chữ có đứng vững không, và đó là một câu hỏi hẹp hơn nhiều."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-m3",
+          "passageRef": "p7",
+          "question": "Đề này giao cho bạn những việc nào? Chọn tất cả.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Nêu các mặt lợi của họp qua video" },
+            { "id": "B", "text": "Nêu các mặt hại của họp qua video" },
+            { "id": "C", "text": "Chứng minh mỗi ý bằng lý do hoặc ví dụ" },
+            { "id": "D", "text": "Khẳng định ngay ở mở bài rằng họp trực tiếp tốt hơn" },
+            { "id": "E", "text": "Liệt kê các phần mềm họp trực tuyến phổ biến" }
+          ],
+          "correctAnswers": ["A", "B", "C"],
+          "explanation": "D là bẫy cố hữu của dạng ưu–nhược. E là kiểu chi tiết nghe có vẻ hiểu biết nhưng không phục vụ câu hỏi nào — tên phần mềm không nói được gì về ưu hay nhược."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-m4",
+          "passageRef": "p6",
+          "question": "Đề này giao cho bạn những việc nào? Chọn tất cả.",
+          "multi": true,
+          "options": [
+            { "id": "A", "text": "Nêu rõ các thành phố khác NÊN hay KHÔNG NÊN làm theo" },
+            { "id": "B", "text": "Đưa lý do kèm ví dụ cụ thể" },
+            { "id": "C", "text": "Xét tác động lên các bên liên quan" },
+            { "id": "D", "text": "Mô tả các biển quảng cáo hiện có ở thành phố bạn" },
+            { "id": "E", "text": "Tính xem thành phố sẽ mất bao nhiêu tiền thuế quảng cáo" }
+          ],
+          "correctAnswers": ["A", "B", "C"],
+          "explanation": "D là chi tiết trang trí — mô tả biển quảng cáo không trả lời câu hỏi nên hay không nên. E nghe có vẻ là một lý do tốt, và nó CÓ THỂ trở thành một, nhưng chỉ khi bạn dùng nó để lập luận; đề không giao việc tính toán."
+        },
+        {
+          "type": "mcq",
+          "id": "t1-3-m5",
+          "passageRef": "p8",
+          "question": "Bài nào trả lời ĐÚNG việc đề giao?",
+          "options": [
+            { "id": "A", "text": "Một bài giải thích vì sao kỹ năng máy tính quan trọng trong công việc hiện nay." },
+            { "id": "B", "text": "Một bài lập luận rằng phép so sánh này quá mạnh, vì người không dùng máy tính vẫn sống và làm việc được, kèm ví dụ." },
+            { "id": "C", "text": "Một bài kể lại lịch sử xoá mù chữ ở thế kỷ trước." },
+            { "id": "D", "text": "Một bài hướng dẫn người lớn tuổi cách bắt đầu học máy tính." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "A là bài mà đa số sẽ viết, và nó SAI — nó chứng minh một điều đề không hỏi. Đề hỏi phép so sánh có đứng vững không, nên bài đúng phải cân hai vế của phép so sánh, như B làm. Đây là kiểu lệch việc tinh vi nhất trong sáu dạng."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "mission_audit",
+          "id": "t1-3-h1",
+          "directions": "Many shops now let customers pay without speaking to anyone, using a machine at the exit. What are the advantages and disadvantages of self-service checkouts? Give reasons or examples to support your opinion.",
+          "draft": [
+            "Self-service checkouts save time when you are buying only two or three things.",
+            "Last Tuesday I walked past a queue of six people and paid for my coffee in under a minute.",
+            "They also cause trouble for anyone who is not confident with machines.",
+            "My grandmother now waits for a staffed till even when the self-service lane is empty, because the voice prompts fluster her.",
+            "Both effects are real, and which one matters more depends on who is shopping."
+          ],
+          "missions": [
+            { "text": "Nêu các mặt lợi", "done": true },
+            { "text": "Nêu các mặt hại", "done": true },
+            { "text": "Chứng minh ý bằng lý do hoặc ví dụ", "done": true },
+            { "text": "Kết bài ngả về một bên", "done": false }
+          ],
+          "explanation": "Ba việc đầu làm rất gọn: mỗi mặt một ví dụ có người thật. Nhưng câu cuối «depends on who is shopping» là quay về đứng giữa. Ở dạng ưu–nhược, kết bài LÀ chỗ bắt buộc phải ngả — có thể ngả tinh tế bằng cách chia phạm vi, nhưng không được từ chối chọn."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t1-3-h2",
+          "directions": "In your opinion, what is the best way for a person to keep up with changes in their profession? Give reasons or examples to support your opinion.",
+          "draft": [
+            "The best way to keep up with your profession is to read about it every week.",
+            "Reading is cheap, it can be done at any time, and it does not require anyone else's schedule.",
+            "Many professionals read industry magazines and follow experts online.",
+            "This helps them stay informed about new developments in their field."
+          ],
+          "missions": [
+            { "text": "Tự đặt ra và cân nhắc vài phương án khác", "done": false },
+            { "text": "Nêu rõ một cách được cho là tốt nhất", "done": true },
+            { "text": "Chứng minh bằng ví dụ cụ thể", "done": false }
+          ],
+          "explanation": "Bài có chọn một cách, nhưng không hề dựng ra phương án nào để so — mà «best way» thì hàm ý phải hơn cái gì đó. Ba câu sau cũng chỉ nói lại câu đầu bằng chữ khác: «many professionals read» là nhận định chung, không phải một người cụ thể đã đọc gì và thu được gì."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t1-3-h3",
+          "directions": "A company can spend its training budget on one of three things: teaching staff to use new software, improving their writing skills, or improving how they speak in front of a group. Which should it choose? Give reasons or examples to support your opinion.",
+          "draft": [
+            "The company should spend the budget on writing skills.",
+            "Almost every decision in our office travels by e-mail, so a badly written message costs more time than a badly used spreadsheet.",
+            "Last quarter a colleague's ambiguous request sent two teams to prepare the same report twice.",
+            "Software training solves itself: people learn a new tool within a fortnight because they have to use it daily.",
+            "Presentation skills matter, but most of our staff speak in front of a group perhaps twice a year.",
+            "Writing is the skill everyone uses every day, and that is where a training budget goes furthest."
+          ],
+          "missions": [
+            { "text": "Chọn đúng một trong ba khoản", "done": true },
+            { "text": "Nói vì sao khoản «phần mềm» kém cần thiết hơn", "done": true },
+            { "text": "Nói vì sao khoản «nói trước đám đông» kém cần thiết hơn", "done": true },
+            { "text": "Chứng minh lựa chọn bằng lý do hoặc ví dụ", "done": true }
+          ],
+          "explanation": "Bài mẫu mực của dạng chọn-1-trong-3: chọn rõ, có ví dụ đếm được («hai đội làm trùng một báo cáo»), và loại bỏ CẢ HAI phương án còn lại bằng hai lý do khác nhau chứ không lặp một lý do. Câu cuối nêu tiêu chí chung («dùng hằng ngày») thay vì tóm tắt."
+        },
+        {
+          "type": "mission_audit",
+          "id": "t1-3-h4",
+          "directions": "Most people now carry a device that can reach them at any hour. Some companies expect staff to answer work messages in the evening. Do you agree that this expectation is reasonable? Give reasons or examples to support your opinion.",
+          "draft": [
+            "I strongly disagree with this expectation, and I think it damages the people it is meant to help.",
+            "Being reachable at nine in the evening does not mean being useful at nine in the evening.",
+            "A colleague of mine answered a client thread at eleven one night, misread a figure because he was half asleep, and spent the next morning undoing it.",
+            "Companies that expect evening replies also get worse work during the day.",
+            "The same colleague now leaves his phone in another room after seven, and his manager has never once complained."
+          ],
+          "missions": [
+            { "text": "Nêu rõ đồng ý hay phản đối", "done": true },
+            { "text": "Đưa 2–3 lý do", "done": false },
+            { "text": "Chứng minh mỗi lý do bằng ví dụ cụ thể", "done": true }
+          ],
+          "explanation": "Bài viết rất chắc về câu chữ và có ví dụ tốt, nhưng cả bốn câu sau đều xoay quanh MỘT lý do duy nhất: trả lời buổi tối thì làm việc kém. Dạng đồng ý/phản đối cần 2–3 lý do khác nhau; ở đây lẽ ra còn ít nhất một hướng nữa chưa được đụng tới, ví dụ ranh giới công việc và đời sống riêng."
+        }
+      ]
+    }
+  ]
+}

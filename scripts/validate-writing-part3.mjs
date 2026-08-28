@@ -53,7 +53,9 @@ for (const f of fs.readdirSync(dir).filter(f => f.endsWith(".json"))) {
         case "mission_audit": {
           if (!ex.missions?.length) err(id, "không có mission");
           if (!ex.draft?.length) err(id, "không có draft");
-          if (ex.missions.every(m => m.done)) err(id, "mọi mission đều done — bài không dạy được gì");
+          // Bài "toàn done" (bài mẫu TỐT) là hợp lệ và cần thiết — thiếu nó thì
+          // học viên rút ra luật "luôn có gì đó thiếu" và bấm bừa theo hướng ngược.
+          // Chống bấm bừa được xét ở cấp ĐỘ KHÓ bên dưới, vì điểm chấm theo cả cấp.
           break;
         }
         case "word_bank": {
@@ -105,6 +107,16 @@ for (const f of fs.readdirSync(dir).filter(f => f.endsWith(".json"))) {
         default: err(id, `type "${ex.type}" chưa có renderer`);
       }
       if (!ex.explanation || ex.explanation.length < 40) err(id, "explanation thiếu hoặc quá ngắn");
+    }
+
+    // Chống bấm bừa ở mission_audit: điểm chấm theo trung bình cả cấp độ, nên
+    // luật phải xét ở đây. Bấm "Đã làm" hết mọi mission phải ăn dưới ngưỡng pass.
+    const ma = lev.exercises.filter(e => e.type === "mission_audit");
+    if (ma.length) {
+      const allDone = ma.filter(e => e.missions.every(m => m.done)).length;
+      const blind = Math.round((allDone / ma.length) * 100);
+      if (blind >= 80) err(`${lev.difficulty}`, `bấm bừa "Đã làm" hết ăn ${blind}% — vượt ngưỡng pass 80`);
+      if (allDone === 0 && ma.length >= 3) err(`${lev.difficulty}`, "không có bài mẫu TỐT nào — học viên sẽ đoán bừa là luôn có mission thiếu");
     }
   }
   const counts = data.levels.map(l => `${l.difficulty}:${l.exercises.length}`).join(" · ");
