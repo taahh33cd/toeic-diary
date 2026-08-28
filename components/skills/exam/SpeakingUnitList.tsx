@@ -5,6 +5,9 @@ import Link from "next/link";
 import type { Skill, SkillUnit } from "@/lib/skills/structure";
 import type { SpeakingMode } from "./SpeakingRunner";
 
+/** Indigo của khu Luyện đề (trùng `bg` truyền cho Header ở app/skills/layout.tsx). */
+const SKILLS_ACCENT = "#4f46e5";
+
 export interface UnitListTest {
   slug: string;
   /** Nhãn ngắn ở góc thẻ, vd "Đề 3" */
@@ -164,18 +167,18 @@ export function ModePicker({ mode, onChange }: { mode: SpeakingMode; onChange: (
               textAlign: "left",
               padding: "0.75rem 0.9rem",
               borderRadius: 10,
-              border: `1.5px solid ${on ? "var(--accent-primary)" : "var(--border)"}`,
-              background: on ? "color-mix(in srgb, var(--accent-primary) 8%, transparent)" : "var(--bg-secondary)",
+              border: `1.5px solid ${on ? SKILLS_ACCENT : "var(--border)"}`,
+              background: on ? "rgba(79,70,229,0.08)" : "var(--bg-secondary)",
               cursor: "pointer",
               fontFamily: "inherit",
             }}
           >
-            <span style={{ display: "flex", alignItems: "center", gap: 7, fontSize: "0.92rem", fontWeight: 700, color: on ? "var(--accent-primary)" : "var(--text-primary)" }}>
+            <span style={{ display: "flex", alignItems: "center", gap: 7, fontSize: "0.92rem", fontWeight: 700, color: on ? SKILLS_ACCENT : "var(--text-primary)" }}>
               <span
                 style={{
                   width: 15, height: 15, borderRadius: "50%", flexShrink: 0,
-                  border: `1.5px solid ${on ? "var(--accent-primary)" : "var(--border)"}`,
-                  background: on ? "var(--accent-primary)" : "transparent",
+                  border: `1.5px solid ${on ? SKILLS_ACCENT : "var(--border)"}`,
+                  background: on ? SKILLS_ACCENT : "transparent",
                   boxShadow: on ? "inset 0 0 0 3px var(--bg-secondary)" : undefined,
                 }}
               />
