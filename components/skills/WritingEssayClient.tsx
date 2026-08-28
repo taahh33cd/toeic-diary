@@ -19,6 +19,7 @@ import { SubmissionPanel } from "@/components/skills/SubmissionPanel";
 import type { SubmissionItem } from "@/lib/submissions";
 import { ModePicker } from "@/components/skills/exam/SpeakingUnitList";
 import type { SpeakingMode } from "@/components/skills/exam/SpeakingRunner";
+import { Q8GlossaryPanel } from "@/components/skills/writing/Q8GlossaryPanel";
 
 type Phase = "list" | "doing" | "review";
 
@@ -42,7 +43,16 @@ const FORM_COLOR: Record<string, string> = {
 
 const DRAFT_PREFIX = "q8-draft:";
 
-type Draft = { v: 1; mode: SpeakingMode; answer: string; deadlineAt?: number; elapsed: number; savedAt: number };
+type Draft = {
+  v: 1;
+  mode: SpeakingMode;
+  answer: string;
+  /** Ghi chú dàn bài — chỉ có ở chế độ Luyện tập */
+  outline?: string;
+  deadlineAt?: number;
+  elapsed: number;
+  savedAt: number;
+};
 
 function readDraft(id: string): Draft | null {
   try {
@@ -74,6 +84,7 @@ export function WritingEssayClient({
   canSubmit,
   unlocked,
   bestByPrompt,
+  bestGlossaryByPrompt,
 }: {
   skill: Skill;
   unit: SkillUnit;
@@ -82,6 +93,7 @@ export function WritingEssayClient({
   canSubmit: boolean;
   unlocked: boolean;
   bestByPrompt: Record<string, { score: number; passed: boolean }>;
+  bestGlossaryByPrompt: Record<string, { score: number; passed: boolean }>;
 }) {
   const color = FAMILY[skill.family];
 
@@ -89,6 +101,7 @@ export function WritingEssayClient({
   const [mode, setMode] = useState<SpeakingMode>("practice");
   const [prompt, setPrompt] = useState<Q8Prompt | null>(null);
   const [answer, setAnswer] = useState("");
+  const [outline, setOutline] = useState("");
   const [left, setLeft] = useState(Q8_SECONDS);
   const [elapsed, setElapsed] = useState(0);
   const [deadlineAt, setDeadlineAt] = useState<number | null>(null);
@@ -167,7 +180,7 @@ export function WritingEssayClient({
   useEffect(() => {
     if (phase !== "doing" || !prompt) return;
     const id = prompt.id;
-    if (!answer.trim()) {
+    if (!answer.trim() && !outline.trim()) {
       clearDraft(id);
       setDrafts((prev) => { if (!prev[id]) return prev; const n = { ...prev }; delete n[id]; return n; });
       return;
@@ -177,6 +190,7 @@ export function WritingEssayClient({
         v: 1,
         mode,
         answer,
+        outline,
         deadlineAt: deadlineAt ?? undefined,
         elapsed: elapsedBaseRef.current + Math.floor((Date.now() - sessionStartRef.current) / 1000),
         savedAt: Date.now(),
@@ -185,13 +199,14 @@ export function WritingEssayClient({
       setDrafts((prev) => ({ ...prev, [id]: d }));
     }, 700);
     return () => clearTimeout(t);
-  }, [phase, prompt, answer, mode, deadlineAt]);
+  }, [phase, prompt, answer, outline, mode, deadlineAt]);
 
   function start(p: Q8Prompt, m: SpeakingMode, resume?: Draft) {
     const useMode = resume?.mode ?? m;
     setPrompt(p);
     setMode(useMode);
     setAnswer(resume?.answer ?? "");
+    setOutline(resume?.outline ?? "");
     setAssess(null);
     setGradeError(null);
     setSaved(false);
@@ -256,7 +271,15 @@ export function WritingEssayClient({
           <p style={{ margin: 0, fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>{unit.description}</p>
         </div>
 
-        <ModePicker mode={mode} onChange={setMode} />
+        <ModePicker
+          mode={mode}
+          onChange={setMode}
+          icons={{ practice: "🗒️", exam: "⏱" }}
+          descriptions={{
+            practice: "Không giới hạn thời gian · có ô lập dàn bài và từ vựng của đề",
+            exam: "Đúng 30 phút như thi thật · hết giờ tự nộp · không có dàn bài và từ vựng",
+          }}
+        />
 
         <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6, margin: "1.2rem 0 0.4rem" }}>
           {Q8_PROMPTS.length} đề luận, chia theo 6 dạng câu hỏi. Thi thật cho 30 phút và
@@ -290,6 +313,7 @@ export function WritingEssayClient({
                 {list.map((p) => {
                   const locked = !unlocked && !p.free;
                   const best = bestByPrompt[p.id];
+                  const bestGloss = bestGlossaryByPrompt[p.id];
                   const draft = drafts[p.id];
                   const box: React.CSSProperties = {
                     textAlign: "left",
@@ -319,6 +343,11 @@ export function WritingEssayClient({
                             ✓ đã làm — mức {Math.round((best.score / 100) * 5)}/5
                           </span>
                         )}
+                        {bestGloss && (
+                          <span style={{ color: bestGloss.passed ? "#16a34a" : "#ca8a04", fontWeight: 700 }}>
+                            📚 từ vựng {bestGloss.score}/100
+                          </span>
+                        )}
                         {draft && (
                           <span style={{ color: "#2563eb", fontWeight: 700 }}>
                             ✍️ còn bản nháp {wordCount(draft.answer)} từ
@@ -345,6 +374,7 @@ export function WritingEssayClient({
     const lowTime = mode === "exam" && left <= 120;
 
     return (
+      <>
       <div style={{ fontFamily: EXAM.sans, maxWidth: 1100, margin: "0 auto", padding: "clamp(0.8rem, 2vw, 1.4rem) clamp(0.6rem, 3vw, 1.5rem)" }}>
         <div style={{ border: `1px solid ${EXAM.border}`, borderRadius: 12, overflow: "hidden", background: EXAM.bg, color: EXAM.ink, boxShadow: "0 18px 40px -24px rgba(20,40,90,.4)" }}>
           {/* Thanh trên */}
@@ -440,6 +470,51 @@ export function WritingEssayClient({
           </div>
         </div>
       </div>
+
+      {/* Hai khu học chỉ có ở chế độ Luyện tập — màn Thi thử không được có gì để tra */}
+      {mode === "practice" && (
+        <>
+          <section style={{ maxWidth: 1100, margin: "0 auto", padding: "0 clamp(0.6rem, 3vw, 1.5rem) 1rem" }}>
+            <div style={{ border: "1px solid var(--border)", borderRadius: 12, background: "var(--bg-secondary)", overflow: "hidden" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "0.75rem 1rem", borderBottom: "1px solid var(--border)", flexWrap: "wrap" }}>
+                <span style={{ fontSize: "1.05rem" }} aria-hidden="true">🗒️</span>
+                <span style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-primary)" }}>Dàn bài</span>
+                <span style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>
+                  Gạch ý trước khi viết — phần này không nộp, chỉ để bạn bám ý.
+                </span>
+              </div>
+              <textarea
+                value={outline}
+                onChange={(e) => setOutline(e.target.value)}
+                placeholder={"Ví dụ:\n- Quan điểm: đồng ý\n- Lý do 1: ... → ví dụ: ...\n- Lý do 2: ... → ví dụ: ...\n- Kết: nhắc lại quan điểm"}
+                rows={7}
+                spellCheck={false}
+                style={{
+                  width: "100%",
+                  boxSizing: "border-box",
+                  border: "none",
+                  outline: "none",
+                  resize: "vertical",
+                  padding: "0.85rem 1rem",
+                  fontSize: "0.92rem",
+                  lineHeight: 1.75,
+                  fontFamily: "inherit",
+                  color: "var(--text-primary)",
+                  background: "transparent",
+                }}
+              />
+            </div>
+          </section>
+
+          <Q8GlossaryPanel
+            promptId={prompt.id}
+            userId={userId}
+            isTestUser={isTestUser}
+            best={bestGlossaryByPrompt[prompt.id]}
+          />
+        </>
+      )}
+      </>
     );
   }
 
@@ -521,6 +596,15 @@ export function WritingEssayClient({
               </div>
             )}
           </>
+        )}
+
+        {outline.trim() && (
+          <details style={{ marginBottom: "0.6rem" }}>
+            <summary style={{ fontSize: "0.82rem", fontWeight: 700, color: "var(--accent-primary)", cursor: "pointer" }}>Dàn bài bạn đã gạch</summary>
+            <div style={{ whiteSpace: "pre-wrap", fontSize: "0.85rem", lineHeight: 1.7, color: "var(--text-secondary)", border: "1px solid var(--border)", borderRadius: 9, padding: "10px 12px", marginTop: 6, background: "var(--bg-secondary)" }}>
+              {outline}
+            </div>
+          </details>
         )}
 
         <details style={{ marginBottom: "1rem" }}>

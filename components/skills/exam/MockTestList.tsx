@@ -52,7 +52,19 @@ export function MockTestList({
         <p style={{ margin: 0, fontSize: "0.88rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>{unit.description}</p>
       </div>
 
-      <ModePicker mode={mode} onChange={setMode} />
+      <ModePicker
+        mode={mode}
+        onChange={setMode}
+        icons={skill.slug === "writing" ? { practice: "🗒️", exam: "⏱" } : undefined}
+        descriptions={
+          skill.slug === "writing"
+            ? {
+                practice: "Không giới hạn thời gian · tự bấm chuyển câu",
+                exam: "Q1-5 8 phút · Q6 và Q7 mỗi câu 10 phút · Q8 30 phút · hết giờ tự sang phần sau",
+              }
+            : undefined
+        }
+      />
 
       <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6, margin: "1.2rem 0 1.2rem" }}>{intro}</p>
 

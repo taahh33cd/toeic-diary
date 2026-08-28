@@ -147,11 +147,33 @@ export function SpeakingUnitList({
   );
 }
 
-/** Nút chọn chế độ — dùng lại được cho các unit Writing sau này. */
-export function ModePicker({ mode, onChange }: { mode: SpeakingMode; onChange: (m: SpeakingMode) => void }) {
+/**
+ * Nút chọn chế độ, dùng chung cho Speaking và Writing.
+ * Mô tả mặc định viết cho Speaking — khu Writing phải truyền `descriptions`
+ * riêng, kẻo hiện chữ "nghe lại" và "thu âm" ở một bài viết.
+ */
+export function ModePicker({
+  mode,
+  onChange,
+  descriptions,
+  icons,
+}: {
+  mode: SpeakingMode;
+  onChange: (m: SpeakingMode) => void;
+  descriptions?: Record<SpeakingMode, string>;
+  icons?: Record<SpeakingMode, string>;
+}) {
+  const DEFAULT_DESC: Record<SpeakingMode, string> = {
+    practice: "Nghe lại tuỳ ý · có chữ và bản dịch · thu âm lại nhiều lần",
+    exam: "Đúng nhịp phòng thi · audio phát một lần · hết giờ tự chuyển câu",
+  };
+  const DEFAULT_ICON: Record<SpeakingMode, string> = { practice: "🎧", exam: "⏱" };
+  const desc = descriptions ?? DEFAULT_DESC;
+  const icon = icons ?? DEFAULT_ICON;
+
   const OPTIONS: { id: SpeakingMode; label: string; desc: string; icon: string }[] = [
-    { id: "practice", label: "Luyện tập", icon: "🎧", desc: "Nghe lại tuỳ ý · có chữ và bản dịch · thu âm lại nhiều lần" },
-    { id: "exam", label: "Thi thử", icon: "⏱", desc: "Đúng nhịp phòng thi · audio phát một lần · hết giờ tự chuyển câu" },
+    { id: "practice", label: "Luyện tập", icon: icon.practice, desc: desc.practice },
+    { id: "exam", label: "Thi thử", icon: icon.exam, desc: desc.exam },
   ];
 
   return (

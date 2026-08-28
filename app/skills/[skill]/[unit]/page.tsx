@@ -13,6 +13,7 @@ import { Q67_PART_KEY } from "@/lib/skills/writing-q6-7";
 import { WritingEmailClient } from "@/components/skills/WritingEmailClient";
 import { WritingEssayClient } from "@/components/skills/WritingEssayClient";
 import { Q8_PART_KEY } from "@/lib/skills/writing-q8";
+import { Q8_GLOSSARY_PART_KEY } from "@/lib/skills/writing-q8-glossary";
 import { READING_PART5 } from "@/lib/skills/sample";
 import { SpeakingQ34TestList } from "@/components/skills/exam/SpeakingQ34TestList";
 import { SpeakingQ810TestList } from "@/components/skills/exam/SpeakingQ810TestList";
@@ -264,15 +265,17 @@ export default async function SkillUnitPage({ params }: Props) {
     const attempts = user
       ? await prisma.subskillAttempt
           .findMany({
-            where: { userId: user.id, part: Q8_PART_KEY, itemIdx: null },
-            select: { questionWord: true, score: true, passed: true },
+            where: { userId: user.id, part: { in: [Q8_PART_KEY, Q8_GLOSSARY_PART_KEY] }, itemIdx: null },
+            select: { part: true, questionWord: true, score: true, passed: true },
           })
           .catch(() => [])
       : [];
     const bestByPrompt: Record<string, { score: number; passed: boolean }> = {};
+    const bestGlossaryByPrompt: Record<string, { score: number; passed: boolean }> = {};
     for (const a of attempts) {
-      const cur = bestByPrompt[a.questionWord];
-      if (!cur || a.score > cur.score) bestByPrompt[a.questionWord] = { score: a.score, passed: a.passed };
+      const bucket = a.part === Q8_GLOSSARY_PART_KEY ? bestGlossaryByPrompt : bestByPrompt;
+      const cur = bucket[a.questionWord];
+      if (!cur || a.score > cur.score) bucket[a.questionWord] = { score: a.score, passed: a.passed };
     }
 
     return (
@@ -284,6 +287,7 @@ export default async function SkillUnitPage({ params }: Props) {
         canSubmit={unlocked}
         unlocked={unlocked}
         bestByPrompt={bestByPrompt}
+        bestGlossaryByPrompt={bestGlossaryByPrompt}
       />
     );
   }
