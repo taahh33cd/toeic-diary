@@ -80,7 +80,13 @@ export function buildSpeakingMock(index: number): SpeakingMock | null {
   }
 
   // ── Questions 3–4: mô tả tranh ────────────────────────────────────
-  q34.items.slice(0, 2).forEach((it, k) => {
+  // Bộ Q3-4 cuối mỗi mức có thể chỉ còn 1 ảnh (chia đôi lẻ) — bù bằng bộ kế tiếp.
+  const pics = q34.items.slice(0, 2);
+  for (let k = 1; pics.length < 2 && k <= SPEAKING_Q34_TESTS.length; k++) {
+    const extra = pick(SPEAKING_Q34_TESTS, i + k).items.find((x) => x.imageUrl !== pics[0]?.imageUrl);
+    if (extra) pics.push(extra);
+  }
+  pics.forEach((it, k) => {
     items.push({
       n: items.length + 1,
       headline: "Questions 3-4: Describe a picture",
