@@ -1,0 +1,254 @@
+[
+  {
+    "slug": "choice-1",
+    "form": "choice_2",
+    "index": 1,
+    "topicVi": "Xe riêng hay giao thông công cộng",
+    "question": "Many people prefer driving their own cars, while others would rather use public transportation. Which do you prefer? Explain why.",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/choice-1.mp3",
+    "audioDuration": 8.68
+  },
+  {
+    "slug": "agree-1",
+    "form": "agree_disagree",
+    "index": 1,
+    "topicVi": "Người quản lý giỏi biết lắng nghe",
+    "question": "Do you agree or disagree with this statement: \"A good supervisor listens to all the employees on his or her team.\"? State your opinion and give specific reasons to support it.",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/agree-1.mp3",
+    "audioDuration": 11.52
+  },
+  {
+    "slug": "agree-2",
+    "form": "agree_disagree",
+    "index": 2,
+    "topicVi": "Trẻ em xem truyền hình quá nhiều",
+    "question": "Some people feel that children watch too much television these days and that this is having a negative impact. Do you agree or disagree with this opinion? Use specific reasons and examples to support your opinion.",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/agree-2.mp3",
+    "audioDuration": 13.08
+  },
+  {
+    "slug": "agree-3",
+    "form": "agree_disagree",
+    "index": 3,
+    "topicVi": "Công nghệ khiến con người hạnh phúc hơn",
+    "question": "Do you agree or disagree with this statement: \"Advances in technology have made people happier than they were before.\"? Include specific reasons and examples to support your opinion.",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/agree-3.mp3",
+    "audioDuration": 10.56
+  },
+  {
+    "slug": "choice-2",
+    "form": "choice_2",
+    "index": 2,
+    "topicVi": "Gọi điện hay gửi e-mail",
+    "question": "Some people choose to communicate over the phone. Others prefer to use email to communicate. Which communication method do you think is better and why?",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/choice-2.mp3",
+    "audioDuration": 9.52
+  },
+  {
+    "slug": "choice-3",
+    "form": "choice_2",
+    "index": 3,
+    "topicVi": "Học sinh có bắt buộc vận động thể chất",
+    "question": "Many people argue that students should have to participate in physical activities at school, while others feel this is unnecessary for students. Which point of view do you agree with and why?",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/choice-3.mp3",
+    "audioDuration": 10.8
+  },
+  {
+    "slug": "choice-4",
+    "form": "choice_2",
+    "index": 4,
+    "topicVi": "Công ty nhỏ hay công ty lớn",
+    "question": "Some people believe it is better to work at a small company compared to a large one. Which do you prefer and why? Use specific reasons and examples to support your opinion.",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/choice-4.mp3",
+    "audioDuration": 11.88
+  },
+  {
+    "slug": "agree-4",
+    "form": "agree_disagree",
+    "index": 4,
+    "topicVi": "Tự kinh doanh hay đi làm thuê",
+    "question": "Do you agree or disagree with the following statement? It is better to run your own business than work as an employee. Give reasons and examples to support your opinion.",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/agree-4.mp3",
+    "audioDuration": 10.04
+  },
+  {
+    "slug": "open-1",
+    "form": "open_q",
+    "index": 1,
+    "topicVi": "Làm việc khuya",
+    "question": "These days, people work very late at night. What's your opinion about this statement? Use specific reasons and examples to support your opinion:",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/open-1.mp3",
+    "audioDuration": 9.12
+  },
+  {
+    "slug": "choice-5",
+    "form": "choice_2",
+    "index": 5,
+    "topicVi": "Chăm chỉ hay làm điều mình thích",
+    "question": "Some people think working hard is a way to become successful even though they don't like their job whereas others believe they have to do what they like to achieve success. Which way of becoming successful do you believe in and why? Give specific examples and details to support your opinion.",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/choice-5.mp3",
+    "audioDuration": 17.4
+  },
+  {
+    "slug": "choice-6",
+    "form": "choice_2",
+    "index": 6,
+    "topicVi": "Việc lặp lại hay việc theo dự án",
+    "question": "Some people enjoy jobs in which they do the same work every day. Others enjoy jobs that involve changing from project to project. Which type of job would you prefer and why?",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/choice-6.mp3",
+    "audioDuration": 10.64
+  },
+  {
+    "slug": "agree-5",
+    "form": "agree_disagree",
+    "index": 5,
+    "topicVi": "Ăn uống quan trọng hơn tập luyện",
+    "question": "Do you agree or disagree with the following statement? \"It's more important to eat a good diet than to exercise a lot.\" Support your choice with reasons and details.",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/agree-5.mp3",
+    "audioDuration": 10.12
+  },
+  {
+    "slug": "choice-7",
+    "form": "choice_2",
+    "index": 7,
+    "topicVi": "Nhiều kỳ nghỉ ngắn hay một kỳ nghỉ dài",
+    "question": "Some people prefer taking several short vacations during the year. Others prefer taking one long vacation once a year. Which do you prefer and why?",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/choice-7.mp3",
+    "audioDuration": 9.48
+  },
+  {
+    "slug": "choice-8",
+    "form": "choice_2",
+    "index": 8,
+    "topicVi": "Thời gian rảnh: gia đình hay sở thích riêng",
+    "question": "Some people prefer spending most of their free time with their families. Others prefer spending that time doing personal hobbies or relaxing alone. Which do you prefer and why?",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/choice-8.mp3",
+    "audioDuration": 11.32
+  },
+  {
+    "slug": "choice-9",
+    "form": "choice_2",
+    "index": 9,
+    "topicVi": "Học từ sách hay từ trải nghiệm",
+    "question": "Some people say that learning from books is the best way to gain knowledge. Others believe that real-life experience teaches you more valuable lessons. Which method do you think is more effective and why?",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/choice-9.mp3",
+    "audioDuration": 11.84
+  },
+  {
+    "slug": "open-2",
+    "form": "open_q",
+    "index": 2,
+    "topicVi": "Lương thấp nhưng nhiều ngày nghỉ",
+    "question": "Some people prefer to take a job that does not pay well but does provide a lot of time off from work. What is your opinion about taking a job with a low salary that has a lot of vacation time? Give reasons for your opinion.",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/open-2.mp3",
+    "audioDuration": 14.12
+  },
+  {
+    "slug": "agree-6",
+    "form": "agree_disagree",
+    "index": 6,
+    "topicVi": "Tiền có bảo đảm hạnh phúc",
+    "question": "Do you agree with the following statement? Money guarantees happiness. Use specific reasons and details to support your answer",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/agree-6.mp3",
+    "audioDuration": 8.64
+  },
+  {
+    "slug": "agree-7",
+    "form": "agree_disagree",
+    "index": 7,
+    "topicVi": "Nhạc sĩ nổi tiếng nhất là tài năng nhất",
+    "question": "Do you agree or disagree with the following statement? The most famous musicians are the most talented. Give reasons or examples to support your opinion.",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/agree-7.mp3",
+    "audioDuration": 10.12
+  },
+  {
+    "slug": "open-3",
+    "form": "open_q",
+    "index": 3,
+    "topicVi": "Biến đổi khí hậu do con người",
+    "question": "Some people argue that environmental issues such as global warming and climate change are caused by human action. What is your opinion about environmental issues like climate change and global warming? Please provide reasons for your opinion.",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/open-3.mp3",
+    "audioDuration": 13.64
+  },
+  {
+    "slug": "policy-1",
+    "form": "policy",
+    "index": 1,
+    "topicVi": "Xây sân bay gần nơi bạn sống",
+    "question": "It has been proposed that a new domestic airport should be built quite close to where you live. Do you support or oppose the idea?",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/policy-1.mp3",
+    "audioDuration": 8.48
+  },
+  {
+    "slug": "open-4",
+    "form": "open_q",
+    "index": 4,
+    "topicVi": "Đi chợ trực tuyến giao tận nhà",
+    "question": "Some people have the opportunity to shop for groceries online and have the groceries delivered to their homes. Would you consider using this kind of service? Why or why not? Give reasons or examples to support your opinion.",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/open-4.mp3",
+    "audioDuration": 13
+  },
+  {
+    "slug": "agree-8",
+    "form": "agree_disagree",
+    "index": 8,
+    "topicVi": "Đọc sách là cách dùng thời gian rảnh tốt nhất",
+    "question": "Some people believe that reading is the best way to spend free time. Do you agree with this opinion? Why or why not? Give reasons or examples to support your opinion.",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/agree-8.mp3",
+    "audioDuration": 11.24
+  },
+  {
+    "slug": "choice-10",
+    "form": "choice_2",
+    "index": 10,
+    "topicVi": "Đọc báo hay xem tin tức trên truyền hình",
+    "question": "Some people prefer to learn about world events from reading a newspaper. Others prefer to learn about world events by watching the news on television. Which do you prefer and why? Use specific reasons or examples to support your opinion.",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/choice-10.mp3",
+    "audioDuration": 13.04
+  },
+  {
+    "slug": "agree-9",
+    "form": "agree_disagree",
+    "index": 9,
+    "topicVi": "Nói với cấp trên để giảm áp lực công việc",
+    "question": "Do you agree or disagree with the following statement? The best way to deal with work-related stress is by talking to a supervisor. Give reasons or examples to support your opinion.",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/agree-9.mp3",
+    "audioDuration": 12.36
+  },
+  {
+    "slug": "agree-10",
+    "form": "agree_disagree",
+    "index": 10,
+    "topicVi": "Tương lai thành phố ít không gian xanh",
+    "question": "Do you agree or disagree with the following statement? In the future, cities will have fewer green spaces, such as parks and gardens. Give reasons or examples to support your opinion.",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/agree-10.mp3",
+    "audioDuration": 12.68
+  },
+  {
+    "slug": "open-5",
+    "form": "open_q",
+    "index": 5,
+    "topicVi": "Mặt tiêu cực của e-mail với đồng nghiệp",
+    "question": "What are some negative aspects of using email to communicate with coworkers?",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/open-5.mp3",
+    "audioDuration": 4.88
+  },
+  {
+    "slug": "policy-2",
+    "form": "policy",
+    "index": 2,
+    "topicVi": "Có nên đổi nghề ít nhất một lần",
+    "question": "In your opinion, should people change their career at least once in their lifetime?",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/policy-2.mp3",
+    "audioDuration": 4.84
+  },
+  {
+    "slug": "choice-11",
+    "form": "choice_2",
+    "index": 11,
+    "topicVi": "Học sở thích mới: hỏi bạn hay tra mạng",
+    "question": "When you take up a new hobby, do you prefer to learn from a friend or search for information online?",
+    "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q11/choice-11.mp3",
+    "audioDuration": 6.48
+  }
+]

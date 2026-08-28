@@ -1,0 +1,1074 @@
+[
+  {
+    "id": "q67x-01",
+    "difficulty": "medium",
+    "email": {
+      "from": "Cameron Contos, Passageways Travel Company",
+      "to": "Customer list",
+      "subject": "A great vacation package",
+      "sent": "December 22, 9:23 A.M.",
+      "body": [
+        "Dear Passageways customers,",
+        "You are our valued clients and we want to share a great travel package with you. We are offering an unbelievable, once-in-a-lifetime opportunity for you to explore the Galapagos Islands. The first 200 customers who respond to this advertisement will receive a 10% discount on their hotel fares."
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are a Passageways Travel customer. In your e-mail, ask TWO questions and make ONE request regarding the travel package.",
+    "missions": [
+      "Ask TWO questions",
+      "Make ONE request regarding the travel package"
+    ],
+    "role": "a Passageways Travel customer",
+    "sourceTest": 2
+  },
+  {
+    "id": "q67x-02",
+    "difficulty": "medium",
+    "email": {
+      "from": "James Parker, Office Manager",
+      "to": "All employees",
+      "subject": "Moving offices",
+      "sent": "August 16, 2:35 P.M.",
+      "body": [
+        "We are going to be moving our current office to another section of this building from Monday to Wednesday next week. I would like all staff members to be involved in this process. Please tell me on which of these days you can participate.",
+        "Thank you,",
+        "James"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are an employee of James Parker. In your e-mail, suggest ONE time that you would like to participate and ask TWO questions about the move.",
+    "missions": [
+      "Suggest ONE time that you would like to participate",
+      "Ask TWO questions about the move"
+    ],
+    "role": "an employee of James Parker",
+    "sourceTest": 2
+  },
+  {
+    "id": "q67x-03",
+    "difficulty": "medium",
+    "email": {
+      "from": "A. Chae, General Company",
+      "to": "Fine Prints",
+      "subject": "Printing accident",
+      "sent": "May 2, 10:32 A.M.",
+      "body": [
+        "Dear Fine Prints,",
+        "Your company recently prepared letterheads for us. However, I've just noticed that you printed our old address by mistake. I have to send out hundreds of letters to our customers for a new promotion. Please e-mail me about this as soon as possible.",
+        "Thank you,",
+        "A. Chae"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are an employee at Fine Prints. In your e-mail, make TWO suggestions for how to handle the problem and provide ONE piece of information you think will be useful.",
+    "missions": [
+      "Make TWO suggestions for how to handle the problem",
+      "Provide ONE piece of information you think will be useful"
+    ],
+    "role": "an employee at Fine Prints",
+    "sourceTest": 3
+  },
+  {
+    "id": "q67x-04",
+    "difficulty": "medium",
+    "email": {
+      "from": "Bill Britten, Teachers' Association Chairman",
+      "to": "TA Members",
+      "subject": "Summer Concert Participant Recruitment",
+      "sent": "May 28, 3:45 P.M.",
+      "body": [
+        "We're going to hold our annual summer concert festival from July 7 to 11. If you have any students interested in playing in our orchestra, please give us their names and the instruments they play so they can join in this wonderful event. Please reply by e-mail no later than June 6.",
+        "Thanks in advance for your assistance."
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are a member of the Teachers' Association. In your e-mail, ask TWO questions and give ONE piece of information about the event.",
+    "missions": [
+      "Ask TWO questions",
+      "Give ONE piece of information about the event"
+    ],
+    "role": "a member of the Teachers' Association",
+    "sourceTest": 3
+  },
+  {
+    "id": "q67x-05",
+    "difficulty": "medium",
+    "email": {
+      "from": "Daniel Tucker",
+      "to": "Exacto Translation Services",
+      "subject": "Need more information",
+      "sent": "November 14, 11:37 A.M.",
+      "body": [
+        "I am currently working on a 5,000-word document for my Ph.D. course that I need translated into French. I checked your website but there is not much information about your services. Please let me know more about pricing, how long translations take, and so on.",
+        "Daniel Tucker"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are a translator at Exacto Translation Services. In your e-mail, explain TWO steps involved in the translation process and request ONE additional piece of information about the customer's document.",
+    "missions": [
+      "Explain TWO steps involved in the translation process",
+      "Request ONE additional piece of information about the customer's document"
+    ],
+    "role": "a translator at Exacto Translation Services",
+    "sourceTest": 4
+  },
+  {
+    "id": "q67x-06",
+    "difficulty": "medium",
+    "email": {
+      "from": "P. Spata",
+      "to": "A. Means",
+      "subject": "Welcome",
+      "sent": "November 9, 4:08 P.M.",
+      "body": [
+        "Welcome!",
+        "I'm happy to have you in our department. Please tell me if there is anything I can do to make your transition here more comfortable. And let me know if you have any questions about working in our office."
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are A. Means. In your e-mail, ask TWO questions about working in the new office and make ONE request.",
+    "missions": [
+      "Ask TWO questions about working in the new office",
+      "Make ONE request"
+    ],
+    "role": "A",
+    "sourceTest": 4
+  },
+  {
+    "id": "q67x-07",
+    "difficulty": "medium",
+    "email": {
+      "from": "Barry Cole, Accounting",
+      "to": "Jim Slate, Assistant Manager, Accounting",
+      "subject": "Computer problems",
+      "sent": "March 10, 3:58 P.M.",
+      "body": [
+        "Mr. Slate:",
+        "I have been having problems with my office computer recently. I requested assistance from the help desk several times but they have not fixed it yet. Could you please help me find a way to solve this problem?",
+        "Thank you,",
+        "Barry"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are Mr. Slate. In your e-mail, ask ONE question and make TWO suggestions about getting the computer fixed.",
+    "missions": [
+      "Ask ONE question",
+      "Make TWO suggestions about getting the computer fixed"
+    ],
+    "role": "Mr",
+    "sourceTest": 5
+  },
+  {
+    "id": "q67x-08",
+    "difficulty": "medium",
+    "email": {
+      "from": "Tradewinds Apartments",
+      "to": "All residents",
+      "subject": "Residents' meeting",
+      "sent": "September 3, 12:28 P.M.",
+      "body": [
+        "Dear Tradewinds residents,",
+        "This message is to remind you that we will be having our monthly meeting next week. To make the meeting more beneficial for all, please e-mail us with some suggestions for topics to discuss and let us know if you are going to attend the meeting or not.",
+        "Thank you."
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are a resident at Tradewinds Apartments. In your e-mail, suggest TWO topics and ask ONE question about the meeting.",
+    "missions": [
+      "Suggest TWO topics",
+      "Ask ONE question about the meeting"
+    ],
+    "role": "a resident at Tradewinds Apartments",
+    "sourceTest": 5
+  },
+  {
+    "id": "q67x-09",
+    "difficulty": "medium",
+    "email": {
+      "from": "J. Chavez",
+      "to": "Job fair event organizer",
+      "subject": "Directions to the conference center",
+      "sent": "January 5, 9:56 A.M.",
+      "body": [
+        "I am registered to attend the job fair at the conference center this weekend. Could you please let me know the best way to get to the center from the Mira Beau Hotel where I am staying? I do not have a car.",
+        "Thank you,",
+        "J. Chavez"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are the job fair event organizer. In your e-mail, ask J. Chavez ONE question about his participation and make TWO suggestions for transportation to the event.",
+    "missions": [
+      "Ask J. Chavez ONE question about his participation",
+      "Make TWO suggestions for transportation to the event"
+    ],
+    "role": "the job fair event organizer",
+    "sourceTest": 6
+  },
+  {
+    "id": "q67x-10",
+    "difficulty": "medium",
+    "email": {
+      "from": "Paradise Travel",
+      "to": "Marilyn McMillan",
+      "subject": "About your complaint",
+      "sent": "October 29, 3:05 P.M.",
+      "body": [
+        "Dear Ms. McMillan,",
+        "My manager tells me you experienced some problems with our service during your recent trip to Malaysia. We would like to know about your complaint in more detail. Please tell us what happened to you and how we can make you satisfied with our company.",
+        "Paradise Travel"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are Marilyn McMillan. In your e-mail, describe TWO problems which occurred during your trip and suggest ONE way the travel company can make you more satisfied.",
+    "missions": [
+      "Describe TWO problems which occurred during your trip",
+      "Suggest ONE way the travel company can make you more satisfied"
+    ],
+    "role": "Marilyn McMillan",
+    "sourceTest": 6
+  },
+  {
+    "id": "q67x-11",
+    "difficulty": "medium",
+    "email": {
+      "from": "Electronia Customer Service",
+      "to": "New customer",
+      "subject": "Thank you for your purchase",
+      "sent": "June 9, 10:21 A.M.",
+      "body": [
+        "Thank you for purchasing a Power Speed printer at Electronia. We hope that you are satisfied with both the printer you bought as well as the customer service you received. If you have any problems with the printer, please contact us via the Internet at our company's homepage. Thank you!"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are a customer. In your e-mail, describe TWO problems that you have had with the printer and make ONE request for information.",
+    "missions": [
+      "Describe TWO problems that you have had with the printer",
+      "Make ONE request for information"
+    ],
+    "role": "a customer",
+    "sourceTest": 7
+  },
+  {
+    "id": "q67x-12",
+    "difficulty": "hard",
+    "email": {
+      "from": "SMD Ltd.",
+      "to": "Tom Parker, payment officer, Techtonia Solution",
+      "subject": "Overdue payment",
+      "sent": "May 23rd, 4:32 P.M.",
+      "body": [
+        "Dear Mr. Parker,",
+        "I am writing you to let you know that we have not received the payment for the orders you made 2 months ago. We were in agreement that the payment would be received by March 20th, but it has not arrived. Please send it as soon as possible to avoid any delays when re-ordering items. I'm looking forward to receiving your early reply."
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are Tom Parker. In your e-mail, make AN apology and ask TWO questions about the overdue payment.",
+    "missions": [
+      "Make AN apology",
+      "Ask TWO questions about the overdue payment"
+    ],
+    "role": "Tom Parker",
+    "sourceTest": 7
+  },
+  {
+    "id": "q67x-13",
+    "difficulty": "medium",
+    "email": {
+      "from": "Golden Smith bookshop",
+      "to": "Regular customers SUBJECT: Joyful Reader",
+      "subject": "",
+      "sent": "Dec 1st, 13:10",
+      "body": [
+        "Dear Loyal Customer,",
+        "Thanks for your purchase at Golden Smith bookshop. We hope that all the books bought and any customized services received at our store were satisfactory. From the current year, when customers turn in their completed registration cards, the date of purchase and personal information will be automatically recorded and used to sign up for a membership in our Joyful Reader program. If you have further inquires about membership, please let us know by phone, fax, letter or e-mail. Thank you for shopping with us."
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are a customer of the Golden Smith bookshop. In your e-mail, describe ONE problem that you have experienced so far and make TWO requests for information about the Joyful Reader program.",
+    "missions": [
+      "Describe ONE problem that you have experienced so far",
+      "Make TWO requests for information about the Joyful Reader program"
+    ],
+    "role": "a customer of the Golden Smith bookshop",
+    "sourceTest": 8
+  },
+  {
+    "id": "q67x-14",
+    "difficulty": "hard",
+    "email": {
+      "from": "Pam Hadis",
+      "to": "James Carter, Human Resources Department",
+      "subject": "Job request",
+      "sent": "October 10, 9:53 A.M.",
+      "body": [
+        "Dear Mr. Carter,",
+        "My name is Pam Hadis, and I am very much interested in applying for a job at Golden Tree Enterprises. I understand that your company usually posts job openings at the end of the year, but I would really appreciate it if you would send me information about upcoming jobs before making it public. I am available for an interview at any time. An early reply would be greatly appreciated.",
+        "Sincerely,",
+        "Pam Hadis"
+      ]
+    },
+    "directions": "Respond as if you work for Golden Tree Enterprises where you are the director of the Human Resources Department. In your e-mail, tell her at least ONE reason why you refuse to comply with her request and give TWO pieces of information.",
+    "missions": [
+      "Tell her at least ONE reason why you refuse to comply with her request",
+      "Give TWO pieces of information"
+    ],
+    "role": "for Golden Tree Enterprises where you are the director of the Human Resources Department",
+    "sourceTest": 8
+  },
+  {
+    "id": "q67x-15",
+    "difficulty": "easy",
+    "email": {
+      "from": "Rowena Kim",
+      "to": "World-Wide Travel",
+      "subject": "Travel information",
+      "sent": "May 10th, 4:20 P.M",
+      "body": [
+        "To Whom It May Concern,",
+        "My name is Rowena Kim and l'm interested in receiving some information about a tour package for this summer holiday. I would like to visit a foreign country, but I don't have enough information about where I should go. Also, my budget is very limited. If it is possible, could you please send me information about the tour packages you would recommend? Thanks for all your help.",
+        "Regards,",
+        "Rowena Kim"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are an agent at World-Wide Travel agency. In your e-mail, give TWO pieces of information about tour packages and ONE suggestion.",
+    "missions": [
+      "Give TWO pieces of information about tour packages",
+      "Give ONE suggestion"
+    ],
+    "role": "an agent at World-Wide Travel agency",
+    "sourceTest": 9
+  },
+  {
+    "id": "q67x-16",
+    "difficulty": "medium",
+    "email": {
+      "from": "Susan Tucker",
+      "to": "Potential employee",
+      "subject": "Job posting",
+      "sent": "July 20th, 2:30 P.M.",
+      "body": [
+        "Marketing Specialist Americas – USA",
+        "We are searching for a Marketing Specialist to support a Global Marketing Manager to execute strategies for generating new business leads, while building brand recognition. The Marketing Specialist will be a member of the Global Marketing team with primarily responsibility for North America events, media planning, research and analysis of data. Thank you.",
+        "Yours truly,",
+        "Susan Tucker",
+        "Human Resources Manager"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are a job candidate. In your e-mail, describe TWO of your job qualifications and ask ONE question.",
+    "missions": [
+      "Describe TWO of your job qualifications",
+      "Ask ONE question"
+    ],
+    "role": "a job candidate",
+    "sourceTest": 9
+  },
+  {
+    "id": "q67x-17",
+    "difficulty": "medium",
+    "email": {
+      "from": "Kangaroo Travel Agency",
+      "to": "Potential traveler",
+      "subject": "It's time to travel!",
+      "sent": "November 3rd, 10:05 A.M.",
+      "body": [
+        "We do Australia because we know Australia. Now it's time to talk to the Australia specialist and book your Christmas and New Year's holidays. Also, we're offering special deals to Sydney, Melbourne, and many more tourist attractions in Australia. Call 24 hours a day, 7 days a week. Please visit our Web site www.kangaroo.co.au. We hope to hear from you soon!"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are a customer. In your e-mail, ask TWO questions about the travel packages and make ONE request.",
+    "missions": [
+      "Ask TWO questions about the travel packages",
+      "Make ONE request"
+    ],
+    "role": "a customer",
+    "sourceTest": 10
+  },
+  {
+    "id": "q67x-18",
+    "difficulty": "hard",
+    "email": {
+      "from": "Sandra Smith",
+      "to": "White Appliances",
+      "subject": "Unsatisfactory service",
+      "sent": "March 17th, 2: 10 P.M.",
+      "body": [
+        "White Appliances:",
+        "I'm writing to complain about the unsatisfactory service I received at your store. Two weeks ago, I purchased a newly launched model of washing machine. But; I found when I unpacked it that it had been damaged on the right side of the door. Also, when I was doing my laundry it automatically stopped and I couldn't get it to start again. So, I tried to call the repair center over 5 times, but I still haven't received any repair service. I think this is not a good way to treat customers. Please write back soon and let's discuss this matter."
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are a worker at White Appliances. In your e-mail, give at least ONE explanation and make TWO compensations.",
+    "missions": [
+      "Give at least ONE explanation",
+      "Make TWO compensations"
+    ],
+    "role": "a worker at White Appliances",
+    "sourceTest": 10
+  },
+  {
+    "id": "q67x-19",
+    "difficulty": "medium",
+    "email": {
+      "from": "Samantha Hawkins",
+      "to": "Hampton Human Resources",
+      "subject": "Positions at Hampton",
+      "sent": "August 10, 20-",
+      "body": [
+        "Dear Sir or Madam:",
+        "I am interested in applying for a position at Hampton Inc. I recently graduated from the university and am interested in any openings you may have in your Marketing Department. If you have any positions open, please let me know what they are and how I can apply.",
+        "Thank you.",
+        "Samantha Hawkins"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are a human resources officer at Hampton, Inc. In your e-mail, ask ONE question and give TWO pieces of information.",
+    "missions": [
+      "Ask ONE question",
+      "Give TWO pieces of information"
+    ],
+    "role": "a human resources officer at Hampton, Inc",
+    "sourceTest": 11
+  },
+  {
+    "id": "q67x-20",
+    "difficulty": "medium",
+    "email": {
+      "from": "Steven Appleby",
+      "to": "Martha Simon",
+      "subject": "Small Business Magazine",
+      "sent": "June 11, 20-",
+      "body": [
+        "Dear Ms. Simon:",
+        "I work for Small Business Magazine. I am writing an article about small-business owners in your city, and I would like to interview you for the article. Would you be available to meet with me sometime next week?",
+        "Thank you.",
+        "Steven Appleby"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are Martha Simon. Say ONE time you are available and ask TWO questions.",
+    "missions": [
+      "Say ONE time you are available",
+      "Ask TWO questions"
+    ],
+    "role": "Martha Simon",
+    "sourceTest": 11
+  },
+  {
+    "id": "q67x-21",
+    "difficulty": "medium",
+    "email": {
+      "from": "Mark Hayes",
+      "to": "Easton Office Supply Company",
+      "subject": "Order",
+      "sent": "November 30, 20-",
+      "body": [
+        "I put in a large order for office supplies from your company several weeks ago. I received the order yesterday; however, it was not complete. It did not contain the two boxes of manila envelopes that I ordered. Can you please resolve this problem for me?",
+        "Thank you.",
+        "Mark Hayes"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are an employee of the Easton Office Supply Company. In your e-mail, explain TWO problems and make ONE request.",
+    "missions": [
+      "Explain TWO problems",
+      "Make ONE request"
+    ],
+    "role": "an employee of the Easton Office Supply Company",
+    "sourceTest": 12
+  },
+  {
+    "id": "q67x-22",
+    "difficulty": "medium",
+    "email": {
+      "from": "Mary Wilson",
+      "to": "All staff",
+      "subject": "Tokyo visit",
+      "sent": "April 15, 20-",
+      "body": [
+        "Greetings to all,",
+        "As you know, next week we will receive guests from our Tokyo office. I need some ideas for interesting activities and places of interest they should visit. Also, I would like to know if any of you are available to take our visitors out for a meal or to visit some special place.",
+        "Thanks for your help.",
+        "Mary Wilson"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are a staff member. In your e-mail, make TWO suggestions and offer to help with ONE task.",
+    "missions": [
+      "Make TWO suggestions",
+      "Offer to help with ONE task"
+    ],
+    "role": "a staff member",
+    "sourceTest": 12
+  },
+  {
+    "id": "q67x-23",
+    "difficulty": "medium",
+    "email": {
+      "from": "John Jenkins",
+      "to": "Shirley Park",
+      "subject": "Budget report",
+      "sent": "February 23, 20-",
+      "body": [
+        "Shirley,",
+        "I am working on the annual budget report as you requested. You asked me to have it finished by next Friday; however, it's taking longer than I thought. Could I have one more week to complete the report? That way I would have time to do a thorough job.",
+        "Thank you.",
+        "John"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are Shirley Park. In your e-mail, ask ONE question and give TWO pieces of information.",
+    "missions": [
+      "Ask ONE question",
+      "Give TWO pieces of information"
+    ],
+    "role": "Shirley Park",
+    "sourceTest": 13
+  },
+  {
+    "id": "q67x-24",
+    "difficulty": "medium",
+    "email": {
+      "from": "Samuel George",
+      "to": "Janet Jones",
+      "subject": "Changing banks",
+      "sent": "February 23, 20",
+      "body": [
+        "Dear Ms. Jones,",
+        "We understand that you have moved your accounts to another bank. We are very sorry to lose your business. To help us provide better service in the future, would you mind telling us why you made the decision to change banks? Thank you very much.",
+        "Sincerely,",
+        "Samuel George",
+        "National City Bank Customer Service"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are Janet Jones. In your e-mail, explain ONE problem and make TWO suggestions.",
+    "missions": [
+      "Explain ONE problem",
+      "Make TWO suggestions"
+    ],
+    "role": "Janet Jones",
+    "sourceTest": 13
+  },
+  {
+    "id": "q67x-25",
+    "difficulty": "medium",
+    "email": {
+      "from": "Emily Carter",
+      "to": "Ryan Lee",
+      "subject": "Training Workshop",
+      "sent": "March 12, 20–",
+      "body": [
+        "Ryan,",
+        "I hope you are doing well. We are planning a training workshop for new employees next month. Since you attended the workshop last year, we’d appreciate any feedback you could give us. What did you think of the training? Your comments will help us improve it this year.",
+        "Thanks,",
+        "Emily"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are Ryan Lee. In your e-mail, explain ONE problem and make TWO suggestions.",
+    "missions": [
+      "Explain ONE problem",
+      "Make TWO suggestions"
+    ],
+    "role": "Ryan Lee",
+    "sourceTest": 14
+  },
+  {
+    "id": "q67x-26",
+    "difficulty": "medium",
+    "email": {
+      "from": "Olivia Tran",
+      "to": "Mark Davis",
+      "subject": "Presentation Help",
+      "sent": "April 5, 20–",
+      "body": [
+        "Hi Mark,",
+        "I heard that you gave a great presentation at last month’s sales meeting. I have to give a presentation next week, and I’m a little nervous. Would you be willing to give me some advice or maybe help me practice? I’d really appreciate it.",
+        "Thanks in advance,",
+        "Olivia"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are Mark Davis. In your e-mail, ask ONE question and give TWO pieces of information.",
+    "missions": [
+      "Ask ONE question",
+      "Give TWO pieces of information"
+    ],
+    "role": "Mark Davis",
+    "sourceTest": 14
+  },
+  {
+    "id": "q67x-27",
+    "difficulty": "easy",
+    "email": {
+      "from": "Chloe West",
+      "to": "Inquiries, City Concert Hall",
+      "subject": "Seattle Symphony Orchestra",
+      "sent": "October 10, 2:12 P.M.",
+      "body": [
+        "Hello,",
+        "I heard that the Seattle Symphony Orchestra is likely to perform at that city concert hall sometime soon. Could you please email me back with more information about this concert?",
+        "Thanks,",
+        "Chloe West."
+      ]
+    },
+    "directions": "Respond to this email as if you work for the City Concert Hall. In your email, provide THREE pieces of information about the upcoming concert.",
+    "missions": [
+      "Provide THREE pieces of information about the upcoming concert"
+    ],
+    "role": "for the City Concert Hall",
+    "sourceTest": 16
+  },
+  {
+    "id": "q67x-28",
+    "difficulty": "easy",
+    "email": {
+      "from": "Radha Patel",
+      "to": "Great Adventures Outdoor Gear",
+      "subject": "Hiking excursions",
+      "sent": "April 9, 12:41 P.M.",
+      "body": [
+        "Hi,",
+        "I was walking past your shop window on Third Street and I saw a sign saying you organize hiking excursions on a regular basis. Could you please give me more information about these trips and tell me how I can join?",
+        "Thank you,",
+        "Radha Patel"
+      ]
+    },
+    "directions": "Read the e-mail below and respond to the e-mail as if you work at Great Adventures Outdoor Gear. In your e-mail, give THREE pieces of information.",
+    "missions": [
+      "Give THREE pieces of information"
+    ],
+    "role": "at Great Adventures Outdoor Gear",
+    "sourceTest": 16
+  },
+  {
+    "id": "q67x-29",
+    "difficulty": "medium",
+    "email": {
+      "from": "Marina Valdez, Facilities Manager",
+      "to": "All employees",
+      "subject": "Feedback about office kitchen",
+      "sent": "November 6th, 2:17 P.M.",
+      "body": [
+        "Hello everyone,",
+        "We are working to improve the office kitchen, which many of our employees use for making lunch and storing food. Please reply with some general feedback about the office kitchen, and provide any suggestions you may have for improving it.",
+        "Marina Valdez, Facilities Manager"
+      ]
+    },
+    "directions": "Read the e-mail below and respond to the e-mail. In your e-mail, describe ONE piece of information and offer TWO suggestions.",
+    "missions": [
+      "Describe ONE piece of information",
+      "Offer TWO suggestions"
+    ],
+    "role": "",
+    "sourceTest": 17
+  },
+  {
+    "id": "q67x-30",
+    "difficulty": "medium",
+    "email": {
+      "from": "Mr. Lee",
+      "to": "JIM Online Services",
+      "subject": "A new website to suit your demands and interest.",
+      "body": [
+        "Dear Mr. Jim,",
+        "We feel proud to announce that we have launched a new website by the name of Holidayshopping.com. This website is an online shopping portal which comes to you with an offering of a range of products from footwear to clothing items. This website has been designed with the latest software developed by the country’s best software developers.",
+        "Just for you customer, we have come out with an inaugural discount of 10% on all products and an extra discount of 5% for those customers who have shopped from our previous website on previous occasions.",
+        "We are looking forward to providing you a great shopping experience."
+      ]
+    },
+    "directions": "Read the e-mail below. Respond to the e-mail as if you were Mr. Jim. In your e-mail, ask TWO questions about the new website and make ONE request.",
+    "missions": [
+      "Ask TWO questions about the new website",
+      "Make ONE request"
+    ],
+    "role": "Mr",
+    "sourceTest": 17
+  },
+  {
+    "id": "q67x-31",
+    "difficulty": "medium",
+    "email": {
+      "from": "Ms. Angel Coronado",
+      "to": "Ms. Stephanie Park",
+      "subject": "Product Introduction",
+      "body": [
+        "Dear Ms. Park,",
+        "Are you looking for a product that can immediately cure the dandruff in your skin? We at Skin Remedy have a great offer for you. Vanish Soon Solution is created to get rid of your dandruff in less than 10 days. And the majority of the users of this product is from the medical fraternity. We assure you of the effectiveness of the product.",
+        "If you are interested, please feel free to contact us. Thank you.",
+        "Sincerely,",
+        "Ms. Angel Coronado"
+      ]
+    },
+    "directions": "Read the e-mail below. Respond to the e-mail as if you were Ms. Park. In your e-mail, ask TWO questions about your new job and make ONE request.",
+    "missions": [
+      "Ask TWO questions about your new job",
+      "Make ONE request"
+    ],
+    "role": "Ms",
+    "sourceTest": 18
+  },
+  {
+    "id": "q67x-32",
+    "difficulty": "easy",
+    "email": {
+      "from": "Harry Wolfe",
+      "to": "Mr. Jonathan Blued",
+      "subject": "Delay of Supply",
+      "sent": "March 5, 2:30 P.M.",
+      "body": [
+        "Dear Mr. Blued,",
+        "I am writing to inform you that there will be a delay in the delivery of ABC goods to your company. We are on our way to deliver them, but unfortunately, the container carrying your goods met an accident.",
+        "I would like to apologize for the delay.",
+        "Kindly bear with us.",
+        "Sincerely,",
+        "Mr. Harry Wolfe"
+      ]
+    },
+    "directions": "Read the e-mail below. Respond to the e-mail as if you were Mr. Blued. In your e-mail, ask three questions regarding the delivery status.",
+    "missions": [
+      "Ask three questions regarding the delivery status"
+    ],
+    "role": "Mr",
+    "sourceTest": 18
+  },
+  {
+    "id": "q67x-33",
+    "difficulty": "easy",
+    "email": {
+      "from": "Dale City Welcome Committee",
+      "to": "New Dale City Residents",
+      "subject": "Welcome to your new home!",
+      "sent": "July 23, 4:32 P.M.",
+      "body": [
+        "Welcome! We would like to be the first to welcome you to Dale City. We know that there are many things to do when you move, from finding your way around town to setting up your utilities. Please contact us if you need any help at all."
+      ]
+    },
+    "directions": "Respond to the e-mail as if you have recently moved to a new city. In your e-mail, make THREE requests for information.",
+    "missions": [
+      "Make THREE requests for information"
+    ],
+    "role": "recently moved to a new city",
+    "sourceTest": 20
+  },
+  {
+    "id": "q67x-34",
+    "difficulty": "medium",
+    "email": {
+      "from": "J. Wolfe",
+      "to": "M. Lee",
+      "subject": "Congratulations",
+      "sent": "July 23",
+      "body": [
+        "Welcome to the staff! I’m sure we will be working together closely. If you have any questions about the job, just ask me. Also, please let me know if you need anything and I’ll get it for you."
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are M. Lee. In your e-mail, ask TWO questions about your new job and make ONE request.",
+    "missions": [
+      "Ask TWO questions about your new job",
+      "Make ONE request"
+    ],
+    "role": "M",
+    "sourceTest": 20
+  },
+  {
+    "id": "q67x-35",
+    "difficulty": "medium",
+    "email": {
+      "from": "Karen Smith, Community Center Director",
+      "to": "Volunteer Association Members",
+      "subject": "Children's Reading Program",
+      "sent": "April 12, 10:20 A.M.",
+      "body": [
+        "We are organizing a children's reading program during the summer vacation. We are looking for volunteers who can help students improve their reading skills. If you know any students who would like to participate, please send us their names and ages by April 25.",
+        "Thank you for your cooperation."
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are a member of the Volunteer Association. In your e-mail, ask TWO questions and give ONE piece of information about a student who may participate.",
+    "missions": [
+      "Ask TWO questions",
+      "Give ONE piece of information about a student who may participate"
+    ],
+    "role": "a member of the Volunteer Association",
+    "sourceTest": 21
+  },
+  {
+    "id": "q67x-36",
+    "difficulty": "medium",
+    "email": {
+      "from": "Sarah Johnson, Human Resources Manager",
+      "to": "All staff",
+      "subject": "Company Training Workshop",
+      "sent": "September 10, 9:15 A.M.",
+      "body": [
+        "Our company will hold a professional development workshop on September 25. We would like all employees to attend one of the training sessions. Please let me know which session (morning or afternoon) you prefer and whether you have any special requests.",
+        "Thank you,",
+        "Sarah"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are an employee of Sarah Johnson. In your e-mail, suggest ONE session that you would like to attend and ask TWO questions about the workshop.",
+    "missions": [
+      "Suggest ONE session that you would like to attend",
+      "Ask TWO questions about the workshop"
+    ],
+    "role": "an employee of Sarah Johnson",
+    "sourceTest": 21
+  },
+  {
+    "id": "q67x-37",
+    "difficulty": "medium",
+    "email": {
+      "from": "David Lee, Event Coordinator",
+      "to": "Employees",
+      "subject": "Annual Company Picnic",
+      "sent": "May 5, 11:20 A.M.",
+      "body": [
+        "We are planning our annual company picnic for next month. We would like employees to share their preferences regarding activities and transportation. Please tell us whether you would like to participate.",
+        "Best regards,",
+        "David"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are an employee of David Lee. In your e-mail, indicate whether you would like to participate, suggest ONE activity, and ask TWO questions about the picnic.",
+    "missions": [
+      "Indicate whether you would like to participate",
+      "Suggest ONE activity",
+      "Ask TWO questions about the picnic"
+    ],
+    "role": "an employee of David Lee",
+    "sourceTest": 22
+  },
+  {
+    "id": "q67x-38",
+    "difficulty": "medium",
+    "email": {
+      "from": "Greenfield Community Center",
+      "to": "All members",
+      "subject": "New activities for next month",
+      "sent": "October 10, 9:15 A.M.",
+      "body": [
+        "Dear members,",
+        "We are currently planning activities and events for next month at Greenfield Community Center. We would like to hear your ideas so that we can provide programs that are interesting and useful for everyone.",
+        "Please send us your suggestions for activities you would like us to organize. Also, let us know whether you are interested in volunteering to help with these events.",
+        "Thank you for your support.",
+        "Best regards,",
+        "Greenfield Community Center"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are a member of Greenfield Community Center. In your e-mail, suggest TWO activities and ask ONE question about the events.",
+    "missions": [
+      "Suggest TWO activities",
+      "Ask ONE question about the events"
+    ],
+    "role": "a member of Greenfield Community Center",
+    "sourceTest": 22
+  },
+  {
+    "id": "q67x-39",
+    "difficulty": "medium",
+    "email": {
+      "from": "City Library",
+      "to": "Library members",
+      "subject": "Improvements to library services",
+      "sent": "November 5, 2:40 P.M.",
+      "body": [
+        "Dear members,",
+        "We are looking for ways to improve our library services and facilities. Your feedback is very important to us.",
+        "Please e-mail us with some suggestions for improvements that would make the library more convenient and enjoyable for visitors. We would also appreciate hearing about any services you would like us to add in the future.",
+        "Thank you for helping us make our library better.",
+        "Sincerely,",
+        "City Library Administration"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are a member of City Library. In your e-mail, suggest TWO improvements and ask ONE question about the library's future plans.",
+    "missions": [
+      "Suggest TWO improvements",
+      "Ask ONE question about the library's future plans"
+    ],
+    "role": "a member of City Library",
+    "sourceTest": 23
+  },
+  {
+    "id": "q67x-40",
+    "difficulty": "medium",
+    "email": {
+      "from": "Emily Brown, Facilities Supervisor",
+      "to": "Office Employees",
+      "subject": "Parking Lot Maintenance",
+      "sent": "January 18, 3:40 P.M.",
+      "body": [
+        "The company parking lot will undergo maintenance next weekend. During this period, some parking spaces will not be available. Please let me know if this situation will affect your commute to work.",
+        "Thank you,",
+        "Emily"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are an employee of Emily Brown. In your e-mail, explain how the maintenance may affect you and ask TWO questions about the parking arrangements.",
+    "missions": [
+      "Explain how the maintenance may affect you",
+      "Ask TWO questions about the parking arrangements"
+    ],
+    "role": "an employee of Emily Brown",
+    "sourceTest": 23
+  },
+  {
+    "id": "q67x-41",
+    "difficulty": "medium",
+    "email": {
+      "from": "Michael Green, Sales Director",
+      "to": "Sales Team",
+      "subject": "New Product Presentation",
+      "sent": "November 3, 10:05 A.M.",
+      "body": [
+        "Next Friday, we will introduce our new product line during a presentation at headquarters. Team members are encouraged to attend. Please let me know if you can participate.",
+        "Regards,",
+        "Michael"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are a member of the sales team. In your e-mail, state whether you can attend, mention ONE reason, and ask TWO questions about the presentation.",
+    "missions": [
+      "State whether you can attend",
+      "Mention ONE reason",
+      "Ask TWO questions about the presentation"
+    ],
+    "role": "a member of the sales team",
+    "sourceTest": 24
+  },
+  {
+    "id": "q67x-42",
+    "difficulty": "medium",
+    "email": {
+      "from": "Sunrise Fitness Center",
+      "to": "All members",
+      "subject": "Member feedback survey",
+      "sent": "January 18, 4:05 P.M.",
+      "body": [
+        "Dear members,",
+        "We are currently reviewing our fitness programs and facilities to ensure that we continue to meet the needs of our members.",
+        "Please send us your suggestions for changes or additions that would improve your experience at our fitness center. We would also like to know which services or classes you use most often.",
+        "Thank you for your valuable feedback.",
+        "Best regards,",
+        "Sunrise Fitness Center Management"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are a member of Sunrise Fitness Center. In your e-mail, suggest TWO changes or additions and ask ONE question about the fitness center's future programs.",
+    "missions": [
+      "Suggest TWO changes or additions",
+      "Ask ONE question about the fitness center's future programs"
+    ],
+    "role": "a member of Sunrise Fitness Center",
+    "sourceTest": 24
+  },
+  {
+    "id": "q67x-43",
+    "difficulty": "medium",
+    "email": {
+      "from": "Lakeside Travel Club",
+      "to": "All club members",
+      "subject": "Planning our next group trip",
+      "sent": "March 12, 11:20 A.M.",
+      "body": [
+        "Dear members,",
+        "We are beginning to plan our next group trip and would like to hear your ideas. Our goal is to organize a trip that is enjoyable and suitable for as many members as possible.",
+        "Please e-mail us with your suggestions for destinations or activities. Also, let us know if you would be interested in participating in the trip.",
+        "Thank you for your cooperation.",
+        "Kind regards,",
+        "Lakeside Travel Club"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are a member of Lakeside Travel Club. In your e-mail, suggest TWO destinations or activities and ask ONE question about the trip.",
+    "missions": [
+      "Suggest TWO destinations or activities",
+      "Ask ONE question about the trip"
+    ],
+    "role": "a member of Lakeside Travel Club",
+    "sourceTest": 25
+  },
+  {
+    "id": "q67x-44",
+    "difficulty": "medium",
+    "email": {
+      "from": "Linda Martinez, Customer Service Manager",
+      "to": "Customer Service Representatives",
+      "subject": "Schedule Changes",
+      "sent": "July 22, 4:15 P.M.",
+      "body": [
+        "We are considering adjusting employee work schedules starting next month. Before making any changes, I would like to hear your preferences and concerns.",
+        "Thank you,",
+        "Linda"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are a customer service representative. In your e-mail, suggest ONE schedule preference and ask TWO questions about the proposed changes.",
+    "missions": [
+      "Suggest ONE schedule preference",
+      "Ask TWO questions about the proposed changes"
+    ],
+    "role": "a customer service representative",
+    "sourceTest": 25
+  },
+  {
+    "id": "q67x-45",
+    "difficulty": "easy",
+    "email": {
+      "from": "Daniel Rivera, Office Manager",
+      "to": "All Staff",
+      "subject": "Tips for a Healthy Diet",
+      "body": [
+        "Hi everyone,",
+        "We are preparing a short guide to encourage healthier eating habits in the office. I would like to include suggestions from our team, so if you have any useful advice or healthy habits that you follow, please share them with us.",
+        "Could you send me a few simple ideas that we can add to the guide?",
+        "Thanks,",
+        "Daniel"
+      ]
+    },
+    "directions": "Respond to the email as if you are one of the staff members. In your response, provide THREE tips or ideas related to maintaining a healthy diet.",
+    "missions": [
+      "Provide THREE tips or ideas related to maintaining a healthy diet"
+    ],
+    "role": "one of the staff members",
+    "sourceTest": 26
+  },
+  {
+    "id": "q67x-46",
+    "difficulty": "easy",
+    "email": {
+      "from": "Lucas Moore",
+      "to": "Sharon Smith",
+      "subject": "About Your Dishwasher",
+      "sent": "Nov 3, 12:49",
+      "body": [
+        "Hi,",
+        "I came across your ad and I'm interested in the dishwasher you're offering for sale. Could you please provide me with some more information about it? If you have any additional photos, I would really appreciate it.",
+        "Thanks, and I look forward to hearing from you!",
+        "Best,",
+        "Lucas Moore"
+      ]
+    },
+    "directions": "Respond to the email as if you were Sharon Smith. In your email, provide 3 pieces of information.",
+    "missions": [
+      "Provide 3 pieces of information"
+    ],
+    "role": "Sharon Smith",
+    "sourceTest": 26
+  },
+  {
+    "id": "q67x-47",
+    "difficulty": "easy",
+    "email": {
+      "from": "Emily Johnson, Employee",
+      "to": "Michael Brown, Manager",
+      "subject": "New Telecommuting Policy",
+      "body": [
+        "Dear Mr. Brown,",
+        "I am writing to ask about the new policy that allows employees to telecommute. I have a few questions about the new policy. Could you please provide me with more information about the policy?",
+        "Thank you for your help.",
+        "Best regards,",
+        "Emily Johnson"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are the manager of the company. In your e-mail, provide THREE pieces of information about the new telecommuting policy.",
+    "missions": [
+      "Provide THREE pieces of information about the new telecommuting policy"
+    ],
+    "role": "the manager of the company",
+    "sourceTest": 27
+  },
+  {
+    "id": "q67x-48",
+    "difficulty": "medium",
+    "email": {
+      "from": "Mary Smith",
+      "to": "Hiring Manager, Bright Solutions",
+      "subject": "Customer Service Position",
+      "body": [
+        "Dear Hiring Manager,",
+        "I am interested in the Customer Service position at your company. Could you please provide me with more information about the job requirements and application process?",
+        "Thank you for your time. I look forward to hearing from you.",
+        "Best regards,",
+        "Mary"
+      ]
+    },
+    "directions": "Respond to the e-mail as if you are the Hiring Manager of the company. In your e-mail, provide TWO pieces of information about the Customer Service position and give ONE instruction on how to apply for the job.",
+    "missions": [
+      "Provide TWO pieces of information about the Customer Service position",
+      "Give ONE instruction on how to apply for the job"
+    ],
+    "role": "the Hiring Manager of the company",
+    "sourceTest": 27
+  }
+]

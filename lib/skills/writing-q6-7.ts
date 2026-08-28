@@ -4,6 +4,8 @@
 // Không chấm bằng AI. Sau khi nộp, học viên đối chiếu với Model Answer và tự tick
 // checklist mission + checklist hình thức; điểm ETS 0-4 được suy ra từ checklist đó.
 
+import EXTRA_RAW from "./data/writing-q6-7-extra.json";
+
 export type Q67Difficulty = "easy" | "medium" | "hard";
 
 export interface Q67Email {
@@ -16,19 +18,21 @@ export interface Q67Email {
 
 export interface Q67Prompt {
   id: string;
-  /** số thứ tự trong bộ đề gốc của giáo viên */
-  no: number;
+  /** số thứ tự trong bộ đề gốc của giáo viên — chỉ có ở 36 đề soạn tay */
+  no?: number;
   difficulty: Q67Difficulty;
   email: Q67Email;
   directions: string;
   /** từng mission tách rời — dùng làm checklist tự chấm */
   missions: string[];
   /** chỉ số dòng trong modelAnswer ứng với từng mission (cùng thứ tự với `missions`) */
-  missionLines: number[];
-  /** bài mẫu, mỗi phần tử một dòng */
-  modelAnswer: string[];
+  missionLines?: number[];
+  /** bài mẫu, mỗi phần tử một dòng — đề nhập từ nguồn ngoài chưa có */
+  modelAnswer?: string[];
   /** lưu ý của giáo viên về cái bẫy riêng của đề này */
-  note: string;
+  note?: string;
+  /** vai học viên phải đóng, bóc từ Directions ("as if you are ...") */
+  role?: string;
 }
 
 export interface Q67Test {
@@ -111,7 +115,7 @@ export function computeQ67Score(
 // 15 đề
 // ─────────────────────────────────────
 
-export const Q67_PROMPTS: Q67Prompt[] = [
+const CORE_PROMPTS: Q67Prompt[] = [
   {
     id: "q67-01",
     no: 1,
@@ -1444,7 +1448,7 @@ export const Q67_PROMPTS: Q67Prompt[] = [
 // 18 bộ đề — mỗi mức 12 đề, chia thành 6 bộ × 2 câu như đề thi thật
 // ─────────────────────────────────────
 
-export const Q67_TESTS: Q67Test[] = [
+const CORE_TESTS: Q67Test[] = [
   { slug: "easy-1", label: "Bộ 1", difficulty: "easy", promptIds: ["q67-05", "q67-08"] },
   { slug: "easy-2", label: "Bộ 2", difficulty: "easy", promptIds: ["q67-13", "q67-09"] },
   { slug: "easy-3", label: "Bộ 3", difficulty: "easy", promptIds: ["q67-19", "q67-20"] },
@@ -1465,6 +1469,72 @@ export const Q67_TESTS: Q67Test[] = [
   { slug: "hard-6", label: "Bộ 6", difficulty: "hard", promptIds: ["q67-34", "q67-36"] },
 ];
 
+
+// ─────────────────────────────────────
+// 48 đề nhập từ bộ đề ngoài (scripts/import-writing-q6-7-extra.ts)
+//
+// Khác 36 đề trên: CHƯA có Model Answer và ghi chú bẫy. Mission được tách tự động
+// từ dòng Directions nên vẫn tự chấm bằng checklist được như thường.
+// ─────────────────────────────────────
+
+type ExtraRaw = {
+  id: string;
+  difficulty: Q67Difficulty;
+  email: Q67Email;
+  directions: string;
+  missions: string[];
+  role: string;
+};
+
+const EXTRA_PROMPTS: Q67Prompt[] = (EXTRA_RAW as ExtraRaw[]).map((p) => ({
+  id: p.id,
+  difficulty: p.difficulty,
+  email: p.email,
+  directions: p.directions,
+  missions: p.missions,
+  role: p.role || undefined,
+}));
+
+export const Q67_PROMPTS: Q67Prompt[] = [...CORE_PROMPTS, ...EXTRA_PROMPTS];
+
+/** Đề chưa có bài mẫu → màn kết quả ẩn cột Model Answer, chỉ tự chấm bằng checklist. */
+export function hasModelAnswer(p: Q67Prompt): boolean {
+  return Boolean(p.modelAnswer?.length);
+}
+
+/**
+ * Ghép 48 đề mới thành bộ 2 câu, nối tiếp số thứ tự của từng mức độ.
+ * Đề lẻ của mức này được ghép với đề lẻ của mức kia, bộ đó lấy mức khó hơn.
+ */
+function buildExtraTests(): Q67Test[] {
+  const ORDER: Q67Difficulty[] = ["easy", "medium", "hard"];
+  const nextIndex: Record<Q67Difficulty, number> = { easy: 0, medium: 0, hard: 0 };
+  for (const t of CORE_TESTS) nextIndex[t.difficulty]++;
+
+  const tests: Q67Test[] = [];
+  const leftovers: Q67Prompt[] = [];
+
+  for (const diff of ORDER) {
+    const pool = EXTRA_PROMPTS.filter((p) => p.difficulty === diff);
+    for (let i = 0; i + 1 < pool.length; i += 2) {
+      const n = ++nextIndex[diff];
+      tests.push({ slug: `${diff}-${n}`, label: `Bộ ${n}`, difficulty: diff, promptIds: [pool[i].id, pool[i + 1].id] });
+    }
+    if (pool.length % 2 === 1) leftovers.push(pool[pool.length - 1]);
+  }
+
+  for (let i = 0; i + 1 < leftovers.length; i += 2) {
+    const a = leftovers[i];
+    const b = leftovers[i + 1];
+    const diff = ORDER[Math.max(ORDER.indexOf(a.difficulty), ORDER.indexOf(b.difficulty))];
+    const n = ++nextIndex[diff];
+    tests.push({ slug: `${diff}-${n}`, label: `Bộ ${n}`, difficulty: diff, promptIds: [a.id, b.id] });
+  }
+
+  return tests;
+}
+
+export const Q67_TESTS: Q67Test[] = [...CORE_TESTS, ...buildExtraTests()];
 
 export const Q67_DIFF_META: Record<Q67Difficulty, { label: string; blurb: string }> = {
   easy: {

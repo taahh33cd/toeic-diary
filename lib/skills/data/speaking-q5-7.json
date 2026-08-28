@@ -1,0 +1,702 @@
+[
+  {
+    "slug": "life-1",
+    "category": "life",
+    "index": 1,
+    "topic": "Sports",
+    "topicVi": "Thể thao",
+    "situation": "Imagine that a research firm is doing a telephone survey of people in your city You have agreed to answer some questions about sports.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/life-1/q5.mp3",
+        "audioDuration": 10.73,
+        "transcript": "What sports do you enjoy playing?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/life-1/q6.mp3",
+        "audioDuration": 2.66,
+        "transcript": "How often do you usually play sports?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/life-1/q7.mp3",
+        "audioDuration": 5.14,
+        "transcript": "Do you think it is important for children to play sports? Why or why not?"
+      }
+    ]
+  },
+  {
+    "slug": "travel-1",
+    "category": "travel",
+    "index": 1,
+    "topic": "Vacation time",
+    "topicVi": "Kỳ nghỉ",
+    "situation": "Imagine that a British marketing firm is doing research in your country. You have agreed to participate in a telephone interview about how you use your vacation time.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/travel-1/q5.mp3",
+        "audioDuration": 13.8,
+        "transcript": "If you could take a vacation next week, where would you go?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/travel-1/q6.mp3",
+        "audioDuration": 3.79,
+        "transcript": "How long do you usually spend on vacation, and who do you go with?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/travel-1/q7.mp3",
+        "audioDuration": 7.85,
+        "transcript": "When you go on vacation, do you plan your time thoroughly or do you go without many plans? Describe your style of traveling."
+      }
+    ]
+  },
+  {
+    "slug": "media-1",
+    "category": "media",
+    "index": 1,
+    "topic": "Bookstores",
+    "topicVi": "Hiệu sách",
+    "situation": "Imagine that an American marketing firm is doing research in your country. You have agreed to participate in a telephone interview about bookstores.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/media-1/q5.mp3",
+        "audioDuration": 12.67,
+        "transcript": "How many books do you read a month, and where do you usually buy them?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/media-1/q6.mp3",
+        "audioDuration": 4.06,
+        "transcript": "How often do you visit bookstores, and what do you usually do there?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/media-1/q7.mp3",
+        "audioDuration": 3.38,
+        "transcript": "How do you think bookstores can improve their services?"
+      }
+    ]
+  },
+  {
+    "slug": "shopping-1",
+    "category": "shopping",
+    "index": 1,
+    "topic": "Local restaurants",
+    "topicVi": "Nhà hàng địa phương",
+    "situation": "Imagine that a Canadian marketing firm is doing research in your country. You have agreed to participate in a telephone interview about local restaurants.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/shopping-1/q5.mp3",
+        "audioDuration": 12.65,
+        "transcript": "What is your favorite local restaurant and how often do you eat there?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/shopping-1/q6.mp3",
+        "audioDuration": 3.53,
+        "transcript": "How much do you usually spend on a meal at a local restaurant?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/shopping-1/q7.mp3",
+        "audioDuration": 4.56,
+        "transcript": "How would your habits of eating out change if restaurants became more expensive?"
+      }
+    ]
+  },
+  {
+    "slug": "shopping-2",
+    "category": "shopping",
+    "index": 2,
+    "topic": "Shopping for clothing",
+    "topicVi": "Mua quần áo",
+    "situation": "Imagine that an American marketing firm is doing research in your country. You have agreed to participate in a telephone interview about shopping for clothing.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/shopping-2/q5.mp3",
+        "audioDuration": 12.94,
+        "transcript": "How often do you shop for new clothing and who do you usually go with?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/shopping-2/q6.mp3",
+        "audioDuration": 3.55,
+        "transcript": "What aspect of clothes shopping do you find most pleasant?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/shopping-2/q7.mp3",
+        "audioDuration": 4.39,
+        "transcript": "Do you prefer shopping for clothing at a store or online and why?"
+      }
+    ]
+  },
+  {
+    "slug": "tech-1",
+    "category": "tech",
+    "index": 1,
+    "topic": "Cell phones",
+    "topicVi": "Điện thoại di động",
+    "situation": "Imagine that a British marketing firm is doing research in your country. You have agreed to participate in a telephone interview about cell phones.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/tech-1/q5.mp3",
+        "audioDuration": 12.07,
+        "transcript": "How much did you pay for your cell phone, and how old is it?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/tech-1/q6.mp3",
+        "audioDuration": 4.8,
+        "transcript": "What's the most important feature you look at when you choose a new cell phone?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/tech-1/q7.mp3",
+        "audioDuration": 4.34,
+        "transcript": "What do you like or dislike about using your cell phone and why?"
+      }
+    ]
+  },
+  {
+    "slug": "media-2",
+    "category": "media",
+    "index": 2,
+    "topic": "Movies",
+    "topicVi": "Phim ảnh",
+    "situation": "Imagine that a Canadian company is doing research in your country. You have agreed to participate in a telephone interview about movies.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/media-2/q5.mp3",
+        "audioDuration": 6.17,
+        "transcript": "How often do you go to the movie theater?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/media-2/q6.mp3",
+        "audioDuration": 2.28,
+        "transcript": "What is your favorite movie genre?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/media-2/q7.mp3",
+        "audioDuration": 2.66,
+        "transcript": "What are the advantages of watching movies at home?"
+      }
+    ]
+  },
+  {
+    "slug": "media-3",
+    "category": "media",
+    "index": 3,
+    "topic": "Watching television",
+    "topicVi": "Xem truyền hình",
+    "situation": "Imagine that a US marketing firm is doing research in your country. You have agreed to participate in a telephone interview about watching television.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/media-3/q5.mp3",
+        "audioDuration": 12.41,
+        "transcript": "How often do you watch television and where do you watch television?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/media-3/q6.mp3",
+        "audioDuration": 2.78,
+        "transcript": "What are your favorite television programs?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/media-3/q7.mp3",
+        "audioDuration": 4.15,
+        "transcript": "Do you watch television less or more than you used to in the past?"
+      }
+    ]
+  },
+  {
+    "slug": "life-2",
+    "category": "life",
+    "index": 2,
+    "topic": "Pets",
+    "topicVi": "Thú cưng",
+    "situation": "Imagine that a Canadian marketing firm is doing research in your country. You have agreed to participate in a telephone interview about pets.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/life-2/q5.mp3",
+        "audioDuration": 11.57,
+        "transcript": "What kind of pet do you want to have if you don't have one now?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/life-2/q6.mp3",
+        "audioDuration": 2.66,
+        "transcript": "What is the main reason for having a pet?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/life-2/q7.mp3",
+        "audioDuration": 4.18,
+        "transcript": "What are the facts that people have to consider thinking about when having a pet?"
+      }
+    ]
+  },
+  {
+    "slug": "tech-2",
+    "category": "tech",
+    "index": 2,
+    "topic": "Telephones",
+    "topicVi": "Điện thoại",
+    "situation": "Imagine that a Canadian marketing company is doing research in your country. You have agreed to participate in a telephone interview about telephones.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/tech-2/q5.mp3",
+        "audioDuration": 16.39,
+        "transcript": "How often do you use a pay phone and when was the last time you used it?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/tech-2/q6.mp3",
+        "audioDuration": 4.66,
+        "transcript": "Do you have a cellular phone? Then, how much do you usually spend on your monthly bill?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/tech-2/q7.mp3",
+        "audioDuration": 4.82,
+        "transcript": "In what situations should people be careful when they talk on a phone?"
+      }
+    ]
+  },
+  {
+    "slug": "travel-2",
+    "category": "travel",
+    "index": 2,
+    "topic": "Amusement parks",
+    "topicVi": "Công viên giải trí",
+    "situation": "Imagine that a Canadian marketing firm is doing research in your area. You have agreed to participate in a telephone interview about amusement parks that have attractions like roller coasters.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/travel-2/q5.mp3",
+        "audioDuration": 11.9,
+        "transcript": "How often do you visit an amusement park, and who do you usually go there with?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/travel-2/q6.mp3",
+        "audioDuration": 4.2,
+        "transcript": "What time of the day is best for visiting an amusement park? Why?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/travel-2/q7.mp3",
+        "audioDuration": 7.94,
+        "transcript": "What could amusement parks in your city do to increase the number of visitors?"
+      }
+    ]
+  },
+  {
+    "slug": "life-3",
+    "category": "life",
+    "index": 3,
+    "topic": "Walking for exercise",
+    "topicVi": "Đi bộ rèn luyện",
+    "situation": "Imagine that a British fitness magazine is preparing an article on exercise habits. You have agreed to participate in a telephone interview about walking.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/life-3/q5.mp3",
+        "audioDuration": 11.45,
+        "transcript": "How often do you walk for exercise?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/life-3/q6.mp3",
+        "audioDuration": 4.1,
+        "transcript": "If you wanted to go for a walk, where would you go, and why?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/life-3/q7.mp3",
+        "audioDuration": 4.27,
+        "transcript": "People exercise in many different ways. What are some advantages of choosing walking instead of other forms of exercise?"
+      }
+    ]
+  },
+  {
+    "slug": "shopping-3",
+    "category": "shopping",
+    "index": 3,
+    "topic": "Shopping for clothes",
+    "topicVi": "Mua sắm quần áo",
+    "situation": "Imagine that your friend is planning to go shopping. You and your friend are having a telephone conversation about shopping for clothes.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/shopping-3/q5.mp3",
+        "audioDuration": 10.99,
+        "transcript": "Do you usually buy clothes before traveling? Why?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/shopping-3/q6.mp3",
+        "audioDuration": 3.89,
+        "transcript": "What kind of clothes do people in your town usually wear these days?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/shopping-3/q7.mp3",
+        "audioDuration": 4.32,
+        "transcript": "Please explain a good place to buy clothes in your city and why."
+      }
+    ]
+  },
+  {
+    "slug": "life-4",
+    "category": "life",
+    "index": 4,
+    "topic": "Conversation",
+    "topicVi": "Trò chuyện",
+    "situation": "Imagine that a local press is doing research in your country to collect information for an article. You have agreed to participate in a telephone interview about conversation.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/life-4/q5.mp3",
+        "audioDuration": 11.76,
+        "transcript": "When you meet your friends, what do you normally talk about?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/life-4/q6.mp3",
+        "audioDuration": 4.13,
+        "transcript": "Where do you usually go when you and your friends want to have a conversation?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/life-4/q7.mp3",
+        "audioDuration": 4.27,
+        "transcript": "Who is your favorite person to have a conversation with? Why?"
+      }
+    ]
+  },
+  {
+    "slug": "living-1",
+    "category": "living",
+    "index": 1,
+    "topic": "A town to live in",
+    "topicVi": "Nơi sinh sống",
+    "situation": "Imagine that an Australian marketing firm is doing research in your area. You have agreed to participate in a telephone interview about a town you want to live in.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/living-1/q5.mp3",
+        "audioDuration": 12.6,
+        "transcript": "Which town do you live in, and how long have you been living there?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/living-1/q6.mp3",
+        "audioDuration": 3.94,
+        "transcript": "Do you have a plan to move out in the near future? Why or why not?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/living-1/q7.mp3",
+        "audioDuration": 4.13,
+        "transcript": "What are the important things you would consider when moving to a new place?"
+      }
+    ]
+  },
+  {
+    "slug": "life-5",
+    "category": "life",
+    "index": 5,
+    "topic": "Eating",
+    "topicVi": "Ăn uống",
+    "situation": "Imagine that a British F&B brand is doing a research in your country. you have agreed to participate in a telephone interview about eating.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/life-5/q5.mp3",
+        "audioDuration": 10.34,
+        "transcript": "What is your favorite food?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/life-5/q6.mp3",
+        "audioDuration": 2.9,
+        "transcript": "How often do you eat in a day?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/life-5/q7.mp3",
+        "audioDuration": 3.12,
+        "transcript": "Describe the typical meal you would have for dinner."
+      }
+    ]
+  },
+  {
+    "slug": "life-6",
+    "category": "life",
+    "index": 6,
+    "topic": "Exercise",
+    "topicVi": "Tập thể dục",
+    "situation": "A fitness center is doing a research in your area. You have agreed to participate in an interview about exercise.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/life-6/q5.mp3",
+        "audioDuration": 11.35,
+        "transcript": "Do you work out regularly? Why do you exercise?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/life-6/q6.mp3",
+        "audioDuration": 3.02,
+        "transcript": "What else do you do other than exercise?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/life-6/q7.mp3",
+        "audioDuration": 2.62,
+        "transcript": "Can you describe your favorite exercise."
+      }
+    ]
+  },
+  {
+    "slug": "travel-3",
+    "category": "travel",
+    "index": 3,
+    "topic": "Places to go",
+    "topicVi": "Địa điểm tham quan",
+    "situation": "Imagine that a friend is in your town for a few days. You’re having a phone conversation about places to go to.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/travel-3/q5.mp3",
+        "audioDuration": 11.09,
+        "transcript": "What’s a good place to visit in your area, and how far is it from the bus station?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/travel-3/q6.mp3",
+        "audioDuration": 5.4,
+        "transcript": "It sounds like an interesting place. What are some things I can do there?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/travel-3/q7.mp3",
+        "audioDuration": 4.46,
+        "transcript": "If I want to buy some gifts and souvenirs, where would you suggest I go?"
+      }
+    ]
+  },
+  {
+    "slug": "shopping-4",
+    "category": "shopping",
+    "index": 4,
+    "topic": "Grocery stores",
+    "topicVi": "Cửa hàng tạp hoá",
+    "situation": "Imagine that a friend will be moving to your neighborhood. You are having a telephone conversation about where you live.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/shopping-4/q5.mp3",
+        "audioDuration": 11.45,
+        "transcript": "How many grocery stores are in your neighborhood, and can you walk to them?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/shopping-4/q6.mp3",
+        "audioDuration": 4.56,
+        "transcript": "What’s the best time of day to go to the grocery store, and why?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/shopping-4/q7.mp3",
+        "audioDuration": 5.23,
+        "transcript": "Do you usually buy all your groceries from the same store? Why or why not?"
+      }
+    ]
+  },
+  {
+    "slug": "tech-3",
+    "category": "tech",
+    "index": 3,
+    "topic": "Mobile applications",
+    "topicVi": "Ứng dụng di động",
+    "situation": "Imagine that an English-language technology magazine is doing research in your area. You have agreed to participate in a telephone interview about mobile applications, or apps. Apps are computer programs designed to be used on devices like tablets or mobile phones.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/tech-3/q5.mp3",
+        "audioDuration": 19.51,
+        "transcript": "Do you use mobile apps regularly? Why or why not?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/tech-3/q6.mp3",
+        "audioDuration": 7.54,
+        "transcript": "If you wanted to purchase an app, would you be more likely to buy an app for learning or for entertainment? Why?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/tech-3/q7.mp3",
+        "audioDuration": 6.5,
+        "transcript": "If you wanted to purchase an app, which of the following would most influence your decision? Why?"
+      }
+    ]
+  },
+  {
+    "slug": "travel-4",
+    "category": "travel",
+    "index": 4,
+    "topic": "Public transportation",
+    "topicVi": "Giao thông công cộng",
+    "situation": "Imagine that a Canadian marketing firm is doing research in your country. You have agreed to participate in a telephone interview about public transportation.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/travel-4/q5.mp3",
+        "audioDuration": 12.46,
+        "transcript": "How often do you use public transportation?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/travel-4/q6.mp3",
+        "audioDuration": 4.66,
+        "transcript": "Which do you prefer, taking a bus or a subway?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/travel-4/q7.mp3",
+        "audioDuration": 3.65,
+        "transcript": "What are the advantages of using public transportation?"
+      }
+    ]
+  },
+  {
+    "slug": "travel-5",
+    "category": "travel",
+    "index": 5,
+    "topic": "Vacations",
+    "topicVi": "Du lịch nghỉ dưỡng",
+    "situation": "Imagine that a Canadian marketing firm is doing research in your country. You have agreed to participate in a telephone interview about vacations.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/travel-5/q5.mp3",
+        "audioDuration": 12.19,
+        "transcript": "When was the last time you were on vacation?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/travel-5/q6.mp3",
+        "audioDuration": 3.53,
+        "transcript": "Do you usually travel alone or in a group?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/travel-5/q7.mp3",
+        "audioDuration": 3.74,
+        "transcript": "Describe the most amazing sight you’ve ever seen."
+      }
+    ]
+  },
+  {
+    "slug": "living-2",
+    "category": "living",
+    "index": 2,
+    "topic": "Job hunting",
+    "topicVi": "Tìm việc",
+    "situation": "Imagine that a Canadian marketing firm is doing research in your country. You have agreed to participate in a telephone interview about job hunting.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/living-2/q5.mp3",
+        "audioDuration": 9.84,
+        "transcript": "Where do you work?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/living-2/q6.mp3",
+        "audioDuration": 1.78,
+        "transcript": "How long have you been with your company?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/living-2/q7.mp3",
+        "audioDuration": 3.05,
+        "transcript": "What kinds of factors do you consider when you choose a job?"
+      }
+    ]
+  },
+  {
+    "slug": "living-3",
+    "category": "living",
+    "index": 3,
+    "topic": "Living arrangements",
+    "topicVi": "Chỗ ở",
+    "situation": "Imagine that a US marketing firm is doing research in your country. You have agreed to participate in a telephone interview about living arrangements.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/living-3/q5.mp3",
+        "audioDuration": 11.78,
+        "transcript": "Where do you live now and how long have you been living there?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/living-3/q6.mp3",
+        "audioDuration": 2.47,
+        "transcript": "What are the advantages of living in a city?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/living-3/q7.mp3",
+        "audioDuration": 3.5,
+        "transcript": "Explain what you consider the most when you choose a place to live?"
+      }
+    ]
+  },
+  {
+    "slug": "media-4",
+    "category": "media",
+    "index": 4,
+    "topic": "Movies",
+    "topicVi": "Phim ảnh",
+    "situation": "Imagine that a North American marketing firm is doing research in your country. You have agreed to participate in a telephone interview about movies.",
+    "questions": [
+      {
+        "n": 5,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/media-4/q5.mp3",
+        "audioDuration": 11.5,
+        "transcript": "When and where did you last watch a movie?"
+      },
+      {
+        "n": 6,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/media-4/q6.mp3",
+        "audioDuration": 2.47,
+        "transcript": "What are your favorite kinds of movies?"
+      },
+      {
+        "n": 7,
+        "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/speaking/q5-7/media-4/q7.mp3",
+        "audioDuration": 4.51,
+        "transcript": "How important is it to monitor the movies that children watch and why?"
+      }
+    ]
+  }
+]

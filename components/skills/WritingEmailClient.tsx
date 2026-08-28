@@ -82,7 +82,7 @@ function PromptPanel({ prompt, index }: { prompt: Q67Prompt; index: number }) {
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "0.9rem", flexWrap: "wrap" }}>
         <span style={{ fontSize: "0.95rem", fontWeight: 800, color: "var(--text-primary)" }}>Question {index + 1}:</span>
         <span style={{ fontSize: "0.7rem", color: "var(--text-muted)", border: "1px solid var(--border)", borderRadius: 4, padding: "1px 7px" }}>
-          Đề {prompt.no} · {Q67_SOURCE_LESSON[prompt.no] ?? ""}
+          {prompt.no ? `Đề ${prompt.no} · ${Q67_SOURCE_LESSON[prompt.no] ?? ""}` : "Đề bổ sung · nguồn ngoài"}
         </span>
       </div>
 
@@ -159,7 +159,8 @@ function ReviewCard({
   const color = score.ets >= 4 ? GREEN : score.ets >= 2 ? AMBER : RED;
 
   const lineMission = new Map<number, number>();
-  prompt.missionLines.forEach((ln, mi) => lineMission.set(ln, mi));
+  (prompt.missionLines ?? []).forEach((ln, mi) => lineMission.set(ln, mi));
+  const model = prompt.modelAnswer;
 
   return (
     <div>
@@ -186,8 +187,9 @@ function ReviewCard({
           </div>
         </Pane>
 
+        {model ? (
         <Pane title="MODEL ANSWER" accent={GREEN}>
-          {prompt.modelAnswer.map((l, i) => {
+          {model.map((l, i) => {
             const mi = lineMission.get(i);
             if (mi === undefined) {
               return (
@@ -203,11 +205,22 @@ function ReviewCard({
             );
           })}
         </Pane>
+        ) : (
+        <Pane title="MODEL ANSWER" accent={GREEN}>
+          <p style={{ margin: 0, fontSize: "0.82rem", lineHeight: 1.7, color: "var(--text-muted)", fontStyle: "italic" }}>
+            Đề này lấy từ bộ đề ngoài nên chưa có bài mẫu. Hãy tự soi bài bằng checklist mission bên dưới —
+            mỗi mission trong Directions phải tìm được đúng một câu trong bài của bạn.
+          </p>
+        </Pane>
+        )}
       </div>
 
       {/* Checklist mission */}
       <p style={{ fontSize: "0.82rem", color: "var(--text-primary)", fontWeight: 700, marginBottom: "0.45rem" }}>
-        Bài của bạn làm được mission nào? <span style={{ fontWeight: 500, color: "var(--text-muted)" }}>— đối chiếu với các dòng được đánh số bên Model Answer</span>
+        Bài của bạn làm được mission nào?{" "}
+        <span style={{ fontWeight: 500, color: "var(--text-muted)" }}>
+          {model ? "— đối chiếu với các dòng được đánh số bên Model Answer" : "— mỗi mission phải tìm được đúng một câu trong bài của bạn"}
+        </span>
       </p>
       <div style={{ display: "flex", flexDirection: "column", gap: 5, marginBottom: "0.85rem" }}>
         {prompt.missions.map((m, i) => {
@@ -248,12 +261,14 @@ function ReviewCard({
       </div>
 
       {/* Lưu ý riêng của đề */}
-      <details>
-        <summary style={{ fontSize: "0.76rem", color: "var(--accent-primary)", cursor: "pointer", fontWeight: 700 }}>
-          Bẫy riêng của đề này
-        </summary>
-        <p style={{ margin: "5px 0 0", fontSize: "0.79rem", color: "var(--text-muted)", lineHeight: 1.65 }}>{prompt.note}</p>
-      </details>
+      {prompt.note && (
+        <details>
+          <summary style={{ fontSize: "0.76rem", color: "var(--accent-primary)", cursor: "pointer", fontWeight: 700 }}>
+            Bẫy riêng của đề này
+          </summary>
+          <p style={{ margin: "5px 0 0", fontSize: "0.79rem", color: "var(--text-muted)", lineHeight: 1.65 }}>{prompt.note}</p>
+        </details>
+      )}
     </div>
   );
 }
@@ -790,7 +805,7 @@ export function WritingEmailClient({ skill, unit, userId, isTestUser, canSubmit,
                         {t.label} · {ps.length} câu
                       </div>
                       <div style={{ fontSize: "0.76rem", color: "var(--text-muted)", lineHeight: 1.5 }}>
-                        {ps.map((p) => `Đề ${p.no}: ${p.email.subject}`).join(" · ")}
+                        {ps.map((p) => (p.no ? `Đề ${p.no}: ${p.email.subject}` : p.email.subject)).join(" · ")}
                       </div>
                       {draft && (
                         <div style={{ marginTop: 5, fontSize: "0.74rem", color: AMBER, fontWeight: 600 }}>
