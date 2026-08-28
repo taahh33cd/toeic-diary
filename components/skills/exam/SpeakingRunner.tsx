@@ -654,12 +654,14 @@ function Review({
           )}
 
           <div style={{ display: "grid", gap: 6 }}>
-            {item.audioUrls?.[0] && (
-              <>
-                <label style={{ fontSize: "0.72rem", color: EXAM.muted, fontWeight: 700 }}>Câu hỏi</label>
-                <audio controls src={item.audioUrls[0]} style={{ width: "100%" }} />
-              </>
-            )}
+            {item.audioUrls?.map((u, k) => (
+              <div key={u} style={{ display: "grid", gap: 4 }}>
+                <label style={{ fontSize: "0.72rem", color: EXAM.muted, fontWeight: 700 }}>
+                  {item.audioUrls!.length > 1 && k === 0 ? "Lời dẫn tình huống" : "Câu hỏi"}
+                </label>
+                <audio controls src={u} style={{ width: "100%" }} />
+              </div>
+            ))}
             {recs[i] ? (
               <>
                 <label style={{ fontSize: "0.72rem", color: EXAM.muted, fontWeight: 700, marginTop: 4 }}>Bài nói của bạn</label>
