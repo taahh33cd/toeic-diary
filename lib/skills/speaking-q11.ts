@@ -7,6 +7,8 @@
 // Data do `scripts/import-speaking-q11.ts` sinh ra sau khi upload audio lên Supabase.
 
 import RAW from "./data/speaking-q11.json";
+// Bản dịch để riêng: script import sinh lại speaking-q11.json nên không nhét vào đó được.
+import VI from "./data/speaking-q11-vi.json";
 
 export const Q11_PREP_SECONDS = 45;
 export const Q11_RESPONSE_SECONDS = 60;
@@ -28,6 +30,7 @@ export interface Q11Test {
   index: number;
   topicVi: string;
   question: string;
+  questionVi?: string;
   audioUrl: string;
   audioDuration: number;
   free: boolean;
@@ -70,12 +73,15 @@ type RawTest = {
   audioDuration: number;
 };
 
+const VI_MAP = VI as Record<string, string>;
+
 export const Q11_TESTS: Q11Test[] = (RAW as RawTest[]).map((t) => ({
   slug: t.slug,
   form: t.form as Q11Form,
   index: t.index,
   topicVi: t.topicVi,
   question: t.question,
+  questionVi: VI_MAP[t.slug],
   audioUrl: t.audioUrl,
   audioDuration: t.audioDuration,
   free: t.index <= Q11_FREE_PER_FORM,

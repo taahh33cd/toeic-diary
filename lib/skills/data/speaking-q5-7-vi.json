@@ -1,0 +1,152 @@
+{
+  "life-1": {
+    "situation": "Hãy tưởng tượng một công ty nghiên cứu đang khảo sát qua điện thoại người dân trong thành phố của bạn. Bạn đã đồng ý trả lời một số câu hỏi về thể thao.",
+    "5": "Bạn thích chơi những môn thể thao nào?",
+    "6": "Bạn thường chơi thể thao bao lâu một lần?",
+    "7": "Bạn có nghĩ việc chơi thể thao là quan trọng với trẻ em không? Vì sao?"
+  },
+  "travel-1": {
+    "situation": "Hãy tưởng tượng một công ty marketing của Anh đang nghiên cứu thị trường ở nước bạn. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về cách bạn dùng thời gian nghỉ phép.",
+    "5": "Nếu tuần sau được đi nghỉ, bạn sẽ đi đâu?",
+    "6": "Bạn thường đi nghỉ bao lâu, và đi cùng ai?",
+    "7": "Khi đi nghỉ, bạn lên kế hoạch thật kỹ hay cứ đi mà không cần nhiều kế hoạch? Hãy mô tả phong cách đi du lịch của bạn."
+  },
+  "media-1": {
+    "situation": "Hãy tưởng tượng một công ty marketing của Mỹ đang nghiên cứu thị trường ở nước bạn. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về hiệu sách.",
+    "5": "Mỗi tháng bạn đọc bao nhiêu cuốn sách, và bạn thường mua sách ở đâu?",
+    "6": "Bạn ghé hiệu sách bao lâu một lần, và thường làm gì ở đó?",
+    "7": "Theo bạn, các hiệu sách có thể cải thiện dịch vụ bằng cách nào?"
+  },
+  "shopping-1": {
+    "situation": "Hãy tưởng tượng một công ty marketing của Canada đang nghiên cứu thị trường ở nước bạn. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về các nhà hàng địa phương.",
+    "5": "Nhà hàng địa phương yêu thích của bạn là nơi nào, và bạn ăn ở đó bao lâu một lần?",
+    "6": "Bạn thường tiêu bao nhiêu tiền cho một bữa ăn ở nhà hàng địa phương?",
+    "7": "Thói quen ăn ngoài của bạn sẽ thay đổi thế nào nếu các nhà hàng trở nên đắt đỏ hơn?"
+  },
+  "shopping-2": {
+    "situation": "Hãy tưởng tượng một công ty marketing của Mỹ đang nghiên cứu thị trường ở nước bạn. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về việc mua quần áo.",
+    "5": "Bạn đi mua quần áo mới bao lâu một lần, và thường đi cùng ai?",
+    "6": "Bạn thấy điều gì là thú vị nhất khi đi mua quần áo?",
+    "7": "Bạn thích mua quần áo ở cửa hàng hay mua trực tuyến, và vì sao?"
+  },
+  "tech-1": {
+    "situation": "Hãy tưởng tượng một công ty marketing của Anh đang nghiên cứu thị trường ở nước bạn. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về điện thoại di động.",
+    "5": "Bạn đã mua chiếc điện thoại của mình với giá bao nhiêu, và nó đã dùng được bao lâu rồi?",
+    "6": "Tính năng quan trọng nhất bạn cân nhắc khi chọn một chiếc điện thoại mới là gì?",
+    "7": "Bạn thích và không thích điều gì khi dùng điện thoại của mình? Vì sao?"
+  },
+  "media-2": {
+    "situation": "Hãy tưởng tượng một công ty Canada đang nghiên cứu thị trường ở nước bạn. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về phim ảnh.",
+    "5": "Bạn đi xem phim ở rạp bao lâu một lần?",
+    "6": "Thể loại phim yêu thích của bạn là gì?",
+    "7": "Xem phim ở nhà có những ưu điểm gì?"
+  },
+  "media-3": {
+    "situation": "Hãy tưởng tượng một công ty marketing của Mỹ đang nghiên cứu thị trường ở nước bạn. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về việc xem truyền hình.",
+    "5": "Bạn xem truyền hình bao lâu một lần, và xem ở đâu?",
+    "6": "Những chương trình truyền hình yêu thích của bạn là gì?",
+    "7": "Bạn xem truyền hình ít hơn hay nhiều hơn so với trước đây?"
+  },
+  "life-2": {
+    "situation": "Hãy tưởng tượng một công ty marketing của Canada đang nghiên cứu thị trường ở nước bạn. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về thú cưng.",
+    "5": "Nếu hiện chưa nuôi con vật nào, bạn muốn nuôi loại thú cưng nào?",
+    "6": "Lý do chính của việc nuôi thú cưng là gì?",
+    "7": "Người ta cần cân nhắc những điều gì khi định nuôi một con thú cưng?"
+  },
+  "tech-2": {
+    "situation": "Hãy tưởng tượng một công ty marketing của Canada đang nghiên cứu thị trường ở nước bạn. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về điện thoại.",
+    "5": "Bạn dùng điện thoại công cộng bao lâu một lần, và lần gần nhất bạn dùng là khi nào?",
+    "6": "Bạn có điện thoại di động không? Nếu có, mỗi tháng bạn trả bao nhiêu tiền cước?",
+    "7": "Trong những tình huống nào người ta nên cẩn thận khi nói chuyện điện thoại?"
+  },
+  "travel-2": {
+    "situation": "Hãy tưởng tượng một công ty marketing của Canada đang nghiên cứu tại khu vực bạn sống. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về công viên giải trí có các trò như tàu lượn siêu tốc.",
+    "5": "Bạn đến công viên giải trí bao lâu một lần, và thường đi cùng ai?",
+    "6": "Thời điểm nào trong ngày là tốt nhất để đi công viên giải trí? Vì sao?",
+    "7": "Các công viên giải trí ở thành phố bạn có thể làm gì để tăng lượng khách?"
+  },
+  "life-3": {
+    "situation": "Hãy tưởng tượng một tạp chí thể hình của Anh đang chuẩn bị một bài viết về thói quen tập luyện. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về việc đi bộ.",
+    "5": "Bạn đi bộ để rèn luyện sức khoẻ bao lâu một lần?",
+    "6": "Nếu muốn đi bộ, bạn sẽ đi ở đâu, và vì sao?",
+    "7": "Người ta tập luyện bằng nhiều cách khác nhau. Chọn đi bộ thay vì các hình thức khác có những ưu điểm gì?"
+  },
+  "shopping-3": {
+    "situation": "Hãy tưởng tượng bạn của bạn đang định đi mua sắm. Hai người đang nói chuyện điện thoại về việc mua quần áo.",
+    "5": "Bạn có thường mua quần áo trước khi đi du lịch không? Vì sao?",
+    "6": "Dạo này người dân ở thị trấn của bạn thường mặc kiểu quần áo nào?",
+    "7": "Hãy nói về một địa điểm mua quần áo tốt ở thành phố bạn và vì sao nên mua ở đó."
+  },
+  "life-4": {
+    "situation": "Hãy tưởng tượng một tờ báo địa phương đang thu thập thông tin cho một bài viết ở nước bạn. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về chuyện trò chuyện.",
+    "5": "Khi gặp bạn bè, bạn thường nói về chuyện gì?",
+    "6": "Bạn và bạn bè thường đi đâu khi muốn ngồi trò chuyện?",
+    "7": "Người bạn thích trò chuyện cùng nhất là ai? Vì sao?"
+  },
+  "living-1": {
+    "situation": "Hãy tưởng tượng một công ty marketing của Úc đang nghiên cứu tại khu vực bạn sống. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về nơi bạn muốn sinh sống.",
+    "5": "Bạn đang sống ở thị trấn nào, và đã sống ở đó bao lâu?",
+    "6": "Bạn có dự định chuyển đi trong thời gian tới không? Vì sao có hoặc vì sao không?",
+    "7": "Những điều quan trọng nào bạn sẽ cân nhắc khi chuyển tới một nơi ở mới?"
+  },
+  "life-5": {
+    "situation": "Hãy tưởng tượng một thương hiệu đồ ăn thức uống của Anh đang nghiên cứu ở nước bạn. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về chuyện ăn uống.",
+    "5": "Món ăn yêu thích của bạn là gì?",
+    "6": "Một ngày bạn ăn mấy bữa?",
+    "7": "Hãy mô tả bữa tối điển hình của bạn."
+  },
+  "life-6": {
+    "situation": "Một trung tâm thể hình đang nghiên cứu tại khu vực bạn sống. Bạn đã đồng ý tham gia phỏng vấn về việc tập thể dục.",
+    "5": "Bạn có tập thể dục đều đặn không? Vì sao bạn tập?",
+    "6": "Ngoài tập thể dục, bạn còn làm gì khác?",
+    "7": "Bạn hãy mô tả bài tập yêu thích của mình."
+  },
+  "travel-3": {
+    "situation": "Hãy tưởng tượng một người bạn đang ở thị trấn của bạn vài ngày. Hai người đang nói chuyện điện thoại về những nơi nên đi.",
+    "5": "Ở khu bạn có địa điểm nào đáng ghé thăm, và nó cách bến xe buýt bao xa?",
+    "6": "Nghe có vẻ thú vị đấy. Ở đó tôi có thể làm những gì?",
+    "7": "Nếu tôi muốn mua quà và đồ lưu niệm, bạn khuyên tôi nên đi đâu?"
+  },
+  "shopping-4": {
+    "situation": "Hãy tưởng tượng một người bạn sắp chuyển đến khu phố của bạn. Hai người đang nói chuyện điện thoại về nơi bạn sống.",
+    "5": "Khu phố của bạn có bao nhiêu cửa hàng tạp hoá, và bạn đi bộ tới đó được không?",
+    "6": "Thời điểm nào trong ngày là tốt nhất để đi chợ, và vì sao?",
+    "7": "Bạn có thường mua toàn bộ đồ ăn ở cùng một cửa hàng không? Vì sao có hoặc vì sao không?"
+  },
+  "tech-3": {
+    "situation": "Hãy tưởng tượng một tạp chí công nghệ tiếng Anh đang nghiên cứu tại khu vực bạn sống. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về ứng dụng di động — các chương trình chạy trên máy tính bảng hoặc điện thoại.",
+    "5": "Bạn có dùng ứng dụng di động thường xuyên không? Vì sao có hoặc vì sao không?",
+    "6": "Nếu mua một ứng dụng, bạn sẽ nghiêng về ứng dụng học tập hay ứng dụng giải trí? Vì sao?",
+    "7": "Nếu mua một ứng dụng, yếu tố nào sau đây ảnh hưởng nhiều nhất tới quyết định của bạn? Vì sao?"
+  },
+  "travel-4": {
+    "situation": "Hãy tưởng tượng một công ty marketing của Canada đang nghiên cứu thị trường ở nước bạn. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về giao thông công cộng.",
+    "5": "Bạn dùng phương tiện giao thông công cộng bao lâu một lần?",
+    "6": "Bạn thích đi xe buýt hay tàu điện ngầm hơn?",
+    "7": "Dùng giao thông công cộng có những ưu điểm gì?"
+  },
+  "travel-5": {
+    "situation": "Hãy tưởng tượng một công ty marketing của Canada đang nghiên cứu thị trường ở nước bạn. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về các kỳ nghỉ.",
+    "5": "Lần gần nhất bạn đi nghỉ là khi nào?",
+    "6": "Bạn thường đi một mình hay đi theo nhóm?",
+    "7": "Hãy mô tả cảnh đẹp ấn tượng nhất mà bạn từng thấy."
+  },
+  "living-2": {
+    "situation": "Hãy tưởng tượng một công ty marketing của Canada đang nghiên cứu thị trường ở nước bạn. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về việc tìm việc làm.",
+    "5": "Bạn làm việc ở đâu?",
+    "6": "Bạn đã gắn bó với công ty bao lâu rồi?",
+    "7": "Bạn cân nhắc những yếu tố nào khi chọn một công việc?"
+  },
+  "living-3": {
+    "situation": "Hãy tưởng tượng một công ty marketing của Mỹ đang nghiên cứu thị trường ở nước bạn. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về nơi ăn chốn ở.",
+    "5": "Hiện bạn sống ở đâu và đã sống ở đó bao lâu?",
+    "6": "Sống ở thành phố có những ưu điểm gì?",
+    "7": "Hãy nói xem bạn cân nhắc điều gì nhiều nhất khi chọn nơi ở?"
+  },
+  "media-4": {
+    "situation": "Hãy tưởng tượng một công ty marketing Bắc Mỹ đang nghiên cứu thị trường ở nước bạn. Bạn đã đồng ý tham gia phỏng vấn qua điện thoại về phim ảnh.",
+    "5": "Lần gần nhất bạn xem phim là khi nào và ở đâu?",
+    "6": "Những thể loại phim yêu thích của bạn là gì?",
+    "7": "Việc kiểm soát phim mà trẻ em xem quan trọng đến mức nào, và vì sao?"
+  }
+}

@@ -8,6 +8,8 @@
 // và 30 giây cho câu 7. KHÔNG có thời gian đọc trước như Q8-10.
 
 import RAW from "./data/speaking-q5-7.json";
+// Bản dịch để riêng: script import sinh lại speaking-q5-7.json nên không nhét vào đó được.
+import VI from "./data/speaking-q5-7-vi.json";
 
 export const Q57_PREP_SECONDS = 3;
 export const Q57_RESPONSE_SECONDS: Record<number, number> = { 5: 15, 6: 15, 7: 30 };
@@ -29,6 +31,7 @@ export interface Q57Question {
   audioDuration: number;
   /** Lời câu hỏi — thi thật chỉ được nghe, chế độ luyện tập mới hiện chữ. */
   transcript: string;
+  transcriptVi?: string;
   prepSeconds: number;
   responseSeconds: number;
 }
@@ -42,6 +45,7 @@ export interface Q57Test {
   topicVi: string;
   /** Lời dẫn tình huống — thi thật đọc lên kèm audio câu 5 */
   situation: string;
+  situationVi?: string;
   questions: Q57Question[];
   free: boolean;
 }
@@ -95,6 +99,9 @@ type RawTest = {
   questions: { n: number; audioUrl: string; audioDuration: number; transcript: string }[];
 };
 
+type ViEntry = { situation?: string; "5"?: string; "6"?: string; "7"?: string };
+const VI_MAP = VI as Record<string, ViEntry>;
+
 export const Q57_TESTS: Q57Test[] = (RAW as RawTest[]).map((t) => ({
   slug: t.slug,
   category: t.category as Q57Category,
@@ -102,12 +109,14 @@ export const Q57_TESTS: Q57Test[] = (RAW as RawTest[]).map((t) => ({
   topic: t.topic,
   topicVi: t.topicVi,
   situation: t.situation,
+  situationVi: VI_MAP[t.slug]?.situation,
   free: t.index <= Q57_FREE_PER_CATEGORY,
   questions: t.questions.map((q) => ({
     n: q.n as 5 | 6 | 7,
     audioUrl: q.audioUrl,
     audioDuration: q.audioDuration,
     transcript: q.transcript,
+    transcriptVi: VI_MAP[t.slug]?.[String(q.n) as "5" | "6" | "7"],
     prepSeconds: Q57_PREP_SECONDS,
     responseSeconds: Q57_RESPONSE_SECONDS[q.n] ?? 15,
   })),

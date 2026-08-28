@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Skill } from "@/lib/skills/structure";
+import { MOCK_UNITS, type Skill } from "@/lib/skills/structure";
 import { FAMILY } from "@/lib/skills/exam-theme";
 
 // Các unit mở được ngay → nhãn hiển thị
@@ -7,9 +7,14 @@ const READY: Record<string, string> = {
   "listening/part1": "9 đề",
   "listening/part2": "9 đề",
   "reading/part5": "Đề mẫu",
-  "speaking/q3-4": "Đề mẫu",
+  "speaking/q1-2": "2 đề",
+  "speaking/q3-4": "25 đề",
+  "speaking/q5-7": "25 đề",
   "speaking/q8-10": "50 đề",
+  "speaking/q11": "28 đề",
   "writing/q1-5": "Đề mẫu",
+  "writing/q6-7": "42 bộ",
+  "writing/q8": "24 đề",
 };
 
 export function SkillUnitList({ skill, savedCount = 0 }: { skill: Skill; savedCount?: number }) {
@@ -66,6 +71,32 @@ export function SkillUnitList({ skill, savedCount = 0 }: { skill: Skill; savedCo
             <span style={{ fontWeight: 500, color: "var(--text-muted)" }}> · {savedCount} bài</span>
           </span>
           <span style={{ fontSize: "0.8rem", color: "var(--accent-primary)", fontWeight: 600 }}>Xem lại →</span>
+        </Link>
+      )}
+
+      {/* Thi thử trọn bộ — chỉ có ở Speaking và Writing */}
+      {MOCK_UNITS[skill.slug] && (
+        <Link
+          href={`/skills/${skill.slug}/mock`}
+          style={{
+            display: "flex", alignItems: "center", gap: 12, marginBottom: "1.25rem",
+            padding: "0.95rem 1.1rem", borderRadius: "var(--radius-lg)",
+            border: `1.5px solid ${fam.primary}`,
+            background: `linear-gradient(135deg, ${fam.primary}12, transparent)`,
+            textDecoration: "none", color: "var(--text-primary)",
+          }}
+        >
+          <span style={{ fontSize: "1.3rem" }} aria-hidden="true">⏱</span>
+          <span style={{ flex: 1, minWidth: 0 }}>
+            <span style={{ display: "block", fontSize: "0.95rem", fontWeight: 700 }}>
+              {MOCK_UNITS[skill.slug].label}
+              <span style={{ fontWeight: 500, color: "var(--text-muted)" }}> · {MOCK_UNITS[skill.slug].labelVi}</span>
+            </span>
+            <span style={{ display: "block", fontSize: "0.79rem", color: "var(--text-secondary)", lineHeight: 1.5, marginTop: 2 }}>
+              {MOCK_UNITS[skill.slug].description}
+            </span>
+          </span>
+          <span style={{ fontSize: "0.8rem", color: fam.primary, fontWeight: 700, flexShrink: 0 }}>Vào thi →</span>
         </Link>
       )}
 

@@ -84,6 +84,34 @@ export const SKILLS: Skill[] = [
   },
 ];
 
+/**
+ * Unit ảo "mock" — bài thi thử trọn bộ. Không nằm trong `units` để lưới các
+ * phần thi ở trang kỹ năng giữ nguyên; trang hub hiện nó thành một thẻ riêng.
+ */
+export const MOCK_UNITS: Record<string, SkillUnit> = {
+  speaking: {
+    slug: "mock",
+    label: "Thi thử trọn bộ",
+    labelVi: "11 câu liền mạch",
+    labelEn: "Full Speaking test",
+    description: "Chạy đủ 11 câu theo đúng trình tự và nhịp giờ ETS, khoảng 20 phút.",
+  },
+  writing: {
+    slug: "mock",
+    label: "Thi thử trọn bộ",
+    labelVi: "8 câu liền mạch",
+    labelEn: "Full Writing test",
+    description: "Chạy đủ 8 câu: Q1-5 trong 8 phút · Q6-7 mỗi câu 10 phút · Q8 trong 30 phút.",
+  },
+};
+
+export function getMockUnit(skillSlug: string): { skill: Skill; unit: SkillUnit } | undefined {
+  const skill = getSkill(skillSlug);
+  const unit = MOCK_UNITS[skillSlug];
+  if (!skill || !unit) return undefined;
+  return { skill, unit };
+}
+
 export function getSkill(slug: string): Skill | undefined {
   return SKILLS.find((s) => s.slug === slug);
 }
