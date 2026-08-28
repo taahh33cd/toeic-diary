@@ -627,7 +627,7 @@ export function countWords(text: string): number {
 }
 
 // ─────────────────────────────────────
-// Static data — đang nhân dần mỗi tầng lên 5 bộ test. Tầng 1: đủ 5.
+// Static data — đang nhân dần mỗi tầng lên 5 bộ test. Tầng 1–2: đủ 5.
 // ─────────────────────────────────────
 
 import t1_1 from "./tang1.1.json";
@@ -636,6 +636,10 @@ import t1_3 from "./tang1.3.json";
 import t1_4 from "./tang1.4.json";
 import t1_5 from "./tang1.5.json";
 import t2_1 from "./tang2.1.json";
+import t2_2 from "./tang2.2.json";
+import t2_3 from "./tang2.3.json";
+import t2_4 from "./tang2.4.json";
+import t2_5 from "./tang2.5.json";
 import t3_1 from "./tang3.1.json";
 import t4_1 from "./tang4.1.json";
 import t5_1 from "./tang5.1.json";
@@ -667,7 +671,7 @@ function load(raw: unknown, skillId: string, testNum: number): P3TestData {
 
 const DATA: Record<string, P3TestData[]> = {
   tang1: [t1_1, t1_2, t1_3, t1_4, t1_5].map((r, i) => load(r, "tang1", i + 1)),
-  tang2: [t2_1].map((r, i) => load(r, "tang2", i + 1)),
+  tang2: [t2_1, t2_2, t2_3, t2_4, t2_5].map((r, i) => load(r, "tang2", i + 1)),
   tang3: [t3_1].map((r, i) => load(r, "tang3", i + 1)),
   tang4: [t4_1].map((r, i) => load(r, "tang4", i + 1)),
   tang5: [t5_1].map((r, i) => load(r, "tang5", i + 1)),

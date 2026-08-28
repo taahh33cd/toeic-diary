@@ -1,0 +1,231 @@
+{
+  "passages": {
+    "p1": {
+      "kind": "prompt",
+      "body": [
+        "Protecting the environment is the responsibility of governments, not individuals. Do you agree or disagree with this statement? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p2": {
+      "kind": "prompt",
+      "body": [
+        "Some people buy fewer things but of better quality. Others buy cheaply and replace often. Which approach do you follow? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p3": {
+      "kind": "prompt",
+      "body": [
+        "Many neighbourhoods now run a shared tool library where residents borrow equipment instead of buying it. What are the advantages and disadvantages of such schemes? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p4": {
+      "kind": "prompt",
+      "body": [
+        "A community group has funding for one project: planting trees along the main street, installing recycling points, or running weekend repair workshops. Which should it choose? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p5": {
+      "kind": "prompt",
+      "body": [
+        "Some countries require manufacturers to make products that can be repaired rather than replaced. Do you think all countries should introduce this requirement? Give reasons or examples to support your opinion."
+      ]
+    }
+  },
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t2-5-e1",
+          "passageRef": "p1",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "The environment is one of the greatest challenges facing the world today." },
+            { "id": "B", "text": "I disagree, because the decisions that add up to an environmental problem are made one household at a time." },
+            { "id": "C", "text": "Both governments and individuals have a role to play in protecting the environment." },
+            { "id": "D", "text": "Governments have more power than individuals to change things quickly." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "C là câu mà rất nhiều người viết, và nó chính là kiểu đứng giữa — nghe cân bằng nhưng không trả lời. A là câu mở bài sáo. D là một lý do ủng hộ nhận định, không phải luận điểm. B phản đối rõ và nêu ngay cơ chế."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-5-e2",
+          "passageRef": "p2",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "I buy fewer things of better quality, because the cheap version is bought twice." },
+            { "id": "B", "text": "Expensive products are not always better than cheap ones." },
+            { "id": "C", "text": "Everyone has a different budget and shops accordingly." },
+            { "id": "D", "text": "I try to buy good quality when I can afford it, and cheaply when I cannot." }
+          ],
+          "correctAnswers": ["A"],
+          "explanation": "D nghe thực tế nhưng là chọn cả hai. C né. B đúng nhưng lại phản bác chính lựa chọn nó chưa hề nêu. A chọn dứt khoát và gói lý do vào một mệnh đề rất gọn — «cái rẻ thì mua hai lần» tự nó đã là một lập luận."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-5-e3",
+          "passageRef": "p3",
+          "question": "Câu mở bài nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Tool libraries are a wonderful idea that every neighbourhood should copy." },
+            { "id": "B", "text": "A tool library is a place where people borrow tools instead of buying them." },
+            { "id": "C", "text": "Sharing a drill between forty households saves money and space, and it also means the drill is never there on the morning you need it." },
+            { "id": "D", "text": "These schemes rarely last more than a year in practice." }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "A và D chọn phe theo hai hướng ngược nhau. B định nghĩa lại thứ đề vừa giải thích. C nêu cả hai chiều bằng một hình ảnh rất cụ thể — cái khoan và buổi sáng cần dùng — nên vừa đúng dạng vừa đã có chi tiết ngay từ mở bài."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-5-e4",
+          "passageRef": "p4",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Planting trees would make the main street far more pleasant to walk down." },
+            { "id": "B", "text": "Of the three projects, the repair workshops would change the most habits, because they teach something that outlasts the funding." },
+            { "id": "C", "text": "The community group should discuss the options carefully before deciding." },
+            { "id": "D", "text": "All three projects would benefit the neighbourhood in different ways." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "B chọn rõ, nhắc ba phương án, và nêu tiêu chí «tồn tại lâu hơn khoản tài trợ» — tiêu chí này sắc vì nó tự loại được hai phương án kia mà chưa cần thêm câu nào. A chọn nhưng lờ hai phương án; C và D không chọn."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-5-e5",
+          "passageRef": "p5",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Modern products break far more easily than they used to." },
+            { "id": "B", "text": "All countries should introduce this requirement, because a product that cannot be opened was designed to be thrown away." },
+            { "id": "C", "text": "Repairing things is better for the environment than replacing them." },
+            { "id": "D", "text": "Manufacturers would find this requirement expensive to meet." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "A và C đúng nhưng không trả lời «có nên bắt buộc không». D là một phản biện. B trả lời dứt khoát và lý do của nó nói về Ý ĐỒ THIẾT KẾ chứ không phải hậu quả môi trường — góc nhìn hẹp hơn nên dễ chống đỡ bằng ví dụ hơn."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "type_blank",
+          "id": "t2-5-m1",
+          "prompt": "Khuôn luận điểm cho dạng ĐỒNG Ý / PHẢN ĐỐI",
+          "vi": "Tôi thấy khó mà đồng tình với nhận định này.",
+          "sentence": "I find it hard ___ ___ with this statement.",
+          "answers": ["to", "agree"],
+          "explanation": "«Find it hard to + V» là cách phản đối nhã nhặn mà vẫn dứt khoát — hợp khi nhận định trong đề nghe có vẻ hợp lý và bạn không muốn bác thẳng thừng. Chú ý «it» giả ở giữa: bỏ nó đi là câu sai ngữ pháp."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-5-m2",
+          "prompt": "Khuôn luận điểm cho dạng CHỌN 1 TRONG 2",
+          "vi": "Tôi thuộc nhóm mua ít nhưng mua đồ tốt.",
+          "sentence": "I ___ ___ those who buy less but buy well.",
+          "answers": ["belong", "among"],
+          "accepted": [["belong"], ["among", "with", "to"]],
+          "explanation": "«Belong among / with + nhóm người» là cách nêu lựa chọn bằng cách tự xếp mình vào một phe, tự nhiên hơn «I choose the first option». Nó cũng hứa rằng bạn sẽ kể trải nghiệm thật, nên thân bài phải có ví dụ."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-5-m3",
+          "prompt": "Khuôn mở bài cho dạng ƯU & NHƯỢC",
+          "vi": "Cách làm này giải quyết được một vấn đề, nhưng lại tạo ra một vấn đề khác.",
+          "sentence": "The scheme solves one problem ___ creating ___ .",
+          "answers": ["while", "another"],
+          "explanation": "«While + V-ing» nén cả hai chiều vào một câu và nghe gọn hơn hẳn «has advantages and disadvantages». «Another» đứng một mình làm đại từ, không cần danh từ theo sau — viết «another problem» cũng đúng nhưng lặp chữ."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-5-m4",
+          "prompt": "Khuôn luận điểm cho dạng CHỌN 1 TRONG 3",
+          "vi": "Trong ba dự án, xưởng sửa chữa cuối tuần là dự án tôi sẽ chọn.",
+          "sentence": "Of the three projects, the repair workshops are the ___ ___ would fund.",
+          "answers": ["one", "I"],
+          "explanation": "«The one I would fund» ngắn mà dứt khoát, lại tránh được lối «I think the best option is…» quá quen. Mệnh đề quan hệ ở đây lược bỏ «that» — hoàn toàn đúng khi đại từ quan hệ làm tân ngữ."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-5-m5",
+          "prompt": "Khuôn luận điểm cho dạng CHÍNH SÁCH",
+          "vi": "Đã đến lúc mọi quốc gia áp dụng quy định này.",
+          "sentence": "It is ___ ___ every country introduced this requirement.",
+          "answers": ["time", "every"],
+          "explanation": "«It is time + mệnh đề ở QUÁ KHỨ» — «it is time every country introduced», không phải «introduces». Đây là một trong ít khuôn dùng thì quá khứ để nói về hiện tại, và nó mang sắc thái thúc giục rất hợp với bài chính sách."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "error_spot",
+          "id": "t2-5-h1",
+          "intro": "Mở bài cho một đề ĐỒNG Ý / PHẢN ĐỐI. Bấm vào dòng hỏng.",
+          "directions": "Protecting the environment is the responsibility of governments, not individuals. Do you agree or disagree with this statement?",
+          "lines": [
+            "It is comfortable to believe that the problem belongs to someone with more power than us.",
+            "The statement offers exactly that comfort, which is part of why it is so popular.",
+            "Both governments and individuals clearly have important roles to play here.",
+            "A government can ban a material, but it cannot decide what forty million households put in the bin on Tuesday."
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Câu đứng giữa hai phe, đặt đúng chỗ đáng lẽ phải là luận điểm",
+          "fix": "I disagree, because the decisions that add up to the problem are made one household at a time.",
+          "explanation": "Dòng 1 và 2 dựng bối cảnh rất khéo, dòng 4 là một câu chống đỡ mạnh — nhưng giữa chúng là một câu «cả hai đều quan trọng» khiến bài không có lập trường. Câu này nghe chín chắn nên rất khó tự phát hiện; dấu hiệu nhận biết là nó không thể sai với bất kỳ ai."
+        },
+        {
+          "type": "error_spot",
+          "id": "t2-5-h2",
+          "intro": "Mở bài cho một đề CHỌN 1 TRONG 2. Bấm vào dòng hỏng.",
+          "directions": "Some people buy fewer things but of better quality. Others buy cheaply and replace often. Which approach do you follow?",
+          "lines": [
+            "The cheapest pair of shoes I ever bought cost me three pairs.",
+            "I belong among those who buy less and buy well.",
+            "A good coat outlasts four bad ones and looks better in its fifth winter than they did in their first.",
+            "Of course, buying cheaply is sometimes the only option, and buying well requires money you may not have this month."
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Nhượng bộ đặt nhầm chỗ — nó thuộc kết bài, không phải mở bài",
+          "fix": "Bỏ hẳn câu này khỏi mở bài và để dành cho kết bài.",
+          "explanation": "Câu nhượng bộ này rất tốt về nội dung, nhưng đặt ngay sau luận điểm thì nó làm mềm lập trường trước khi bài kịp chứng minh gì. Ba dòng đầu là một mở bài hoàn chỉnh và mạnh; giữ nhượng bộ lại cho kết bài thì nó còn có sức nặng."
+        },
+        {
+          "type": "error_spot",
+          "id": "t2-5-h3",
+          "intro": "Mở bài cho một đề ƯU & NHƯỢC. Bấm vào dòng hỏng.",
+          "directions": "Many neighbourhoods now run a shared tool library where residents borrow equipment instead of buying it. What are the advantages and disadvantages of such schemes?",
+          "lines": [
+            "Most power drills are used for about twelve minutes in their entire life.",
+            "A shared shelf of tools turns forty idle purchases into one busy one.",
+            "It also turns a thing you own into a thing you have to book.",
+            "Tool libraries are becoming increasingly popular in many countries around the world nowadays."
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Câu sáo rỗng đặt ở cuối mở bài, chỗ lẽ ra phải nối vào thân bài",
+          "fix": "Whether the trade is worth making depends on what you actually build.",
+          "explanation": "Ba dòng đầu là mở bài rất giỏi: một con số bất ngờ, một phép quy đổi, rồi một mặt trái gói trong nửa câu. Dòng 4 kéo tất cả xuống bằng một câu «ngày càng phổ biến trên khắp thế giới» mà bài nào cũng có thể dùng."
+        },
+        {
+          "type": "error_spot",
+          "id": "t2-5-h4",
+          "intro": "Mở bài cho một đề CHÍNH SÁCH. Bấm vào dòng hỏng.",
+          "directions": "Some countries require manufacturers to make products that can be repaired rather than replaced. Do you think all countries should introduce this requirement?",
+          "lines": [
+            "A washing machine sealed with glue is not badly made; it is made exactly as intended.",
+            "That intention is what a repairability rule is aimed at.",
+            "All countries should introduce the requirement, because a product that cannot be opened was designed to be thrown away.",
+            "Manufacturers, retailers and repair shops would all need time to adjust to such a rule."
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Câu trung tính không phục vụ lập trường vừa nêu",
+          "fix": "The cost of that adjustment falls once; the cost of throwing away a washing machine every four years does not.",
+          "explanation": "Dòng 4 đúng sự thật và nhắc tới ba bên liên quan, nhưng nó dừng ở chỗ nêu khó khăn mà không nói khó khăn đó có đáng không — nên đọc lên như thể người viết đang lung lay. Bản sửa giữ nguyên ba bên đó nhưng biến chúng thành lập luận."
+        }
+      ]
+    }
+  ]
+}

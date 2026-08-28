@@ -1,0 +1,234 @@
+{
+  "passages": {
+    "p1": {
+      "kind": "prompt",
+      "body": [
+        "Travelling to another country teaches a person more than any book can. Do you agree or disagree with this statement? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p2": {
+      "kind": "prompt",
+      "body": [
+        "Some people plan every detail of a holiday before they leave. Others prefer to decide when they arrive. Which do you prefer? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p3": {
+      "kind": "prompt",
+      "body": [
+        "Many popular places now limit the number of visitors allowed each day. What are the advantages and disadvantages of such limits? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p4": {
+      "kind": "prompt",
+      "body": [
+        "A town wants to attract more visitors. It could restore its old market square, open a museum about local history, or build a riverside walking path. Which should it choose? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p5": {
+      "kind": "prompt",
+      "body": [
+        "Some countries charge tourists a small daily fee on top of their hotel bill. Do you think more countries should do this? Give reasons or examples to support your opinion."
+      ]
+    }
+  },
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t2-3-e1",
+          "passageRef": "p1",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Travel is one of the great pleasures of modern life." },
+            { "id": "B", "text": "I agree, because a week in a place teaches you what a chapter about it cannot: how ordinary things are done there." },
+            { "id": "C", "text": "Travelling to another country teaches a person more than any book can." },
+            { "id": "D", "text": "Books and travel each teach different things and both are valuable." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "C chép nguyên câu đề. A khen du lịch nhưng không đụng tới phép so sánh với sách. D là kiểu «cả hai đều hay» — không chọn. B đồng ý VÀ nói rõ điều gì sách không dạy được, tức là đã đụng vào đúng vế so sánh mà đề đưa ra."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-3-e2",
+          "passageRef": "p2",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Planning ahead is safer, but improvising is more exciting." },
+            { "id": "B", "text": "I prefer to plan the first two days and leave the rest open." },
+            { "id": "C", "text": "I prefer to plan a holiday in advance, because the hours saved at the start are hours spent somewhere better later." },
+            { "id": "D", "text": "Some travellers enjoy surprises while others hate them." }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "B nghe khôn ngoan nhưng thực chất là chọn cả hai — với dạng chọn-1-trong-2 thì đó là né. A và D chỉ mô tả hai bên. C chọn rõ và kèm sẵn một lý do đo được bằng thời gian, nên thân bài có chỗ bám."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-3-e3",
+          "passageRef": "p3",
+          "question": "Câu mở bài nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Visitor limits are unfair to people who cannot book months ahead." },
+            { "id": "B", "text": "A visitor limit is a cap on how many people may enter a place in one day." },
+            { "id": "C", "text": "Limiting visitor numbers protects the places people travel to see, and it also changes who gets to see them." },
+            { "id": "D", "text": "Every famous place should introduce a daily limit as soon as possible." }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "A và D chọn phe ngay ở hai hướng ngược nhau — cả hai đều sai dạng. B định nghĩa lại khái niệm mà ai cũng hiểu. C báo trước hai chiều bằng đúng một câu, và vế sau «changes who gets to see them» đã hé sẵn phần nhược."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-3-e4",
+          "passageRef": "p4",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "A museum about local history would be interesting for both visitors and residents." },
+            { "id": "B", "text": "Of the three projects, the riverside path would bring the most visitors back a second time." },
+            { "id": "C", "text": "The town should spend its money wisely on the right project." },
+            { "id": "D", "text": "All three projects would make the town more attractive to visitors." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "B chọn rõ, nhắc được rằng có ba dự án, và nêu tiêu chí rất sắc: «quay lại lần thứ hai» chứ không phải «đông khách». Tiêu chí càng cụ thể thì hai đoạn thân bài càng dễ viết. A chọn nhưng như thể chỉ có một dự án; C và D không chọn."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-3-e5",
+          "passageRef": "p5",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Tourists already spend a lot of money when they visit a country." },
+            { "id": "B", "text": "More countries should charge this fee, because the costs of tourism fall on residents while the income does not." },
+            { "id": "C", "text": "A daily fee would be a small amount for most travellers." },
+            { "id": "D", "text": "Tourism is important for the economy of many countries." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "A, C, D đều là nhận định đúng về du lịch nhưng không trả lời «có nên thu phí không». B trả lời dứt khoát và nêu ngay nguyên tắc phân bổ chi phí — đó là kiểu lý do làm dày được một bài chính sách, vì nó tự chỉ ra các bên liên quan."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "type_blank",
+          "id": "t2-3-m1",
+          "prompt": "Khuôn luận điểm cho dạng ĐỒNG Ý / PHẢN ĐỐI",
+          "vi": "Tôi đồng tình rằng du lịch dạy được những điều mà sách vở không thể.",
+          "sentence": "I ___ that travel teaches things ___ books cannot.",
+          "answers": ["agree", "that"],
+          "accepted": [["agree"], ["that", "which"]],
+          "explanation": "Sau «agree» đi thẳng mệnh đề với «that» — không có giới từ. Chỗ trống thứ hai là đại từ quan hệ cho «things»; cả «that» lẫn «which» đều đúng, nhưng trong mệnh đề xác định thì «that» tự nhiên hơn."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-3-m2",
+          "prompt": "Khuôn luận điểm cho dạng CHỌN 1 TRONG 2",
+          "vi": "Trong hai cách, tôi thấy việc lên kế hoạch trước hữu ích hơn nhiều.",
+          "sentence": "Of the two approaches, I find planning ___ ___ far more useful.",
+          "answers": ["ahead", "is"],
+          "accepted": [["ahead", "in advance"], ["is"]],
+          "explanation": "«Find + mệnh đề» cần động từ «is» ở vế sau: «I find that planning ahead is useful». Bỏ quên động từ là lỗi hay gặp khi chủ ngữ là một cụm V-ing dài. Cụm «Of the two approaches» ở đầu cho thấy bạn đang chọn chứ không chỉ nêu nhận xét."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-3-m3",
+          "prompt": "Khuôn mở bài cho dạng ƯU & NHƯỢC",
+          "vi": "Giới hạn số khách bảo vệ được nơi chốn, nhưng đồng thời cũng thay đổi ai là người được tới đó.",
+          "sentence": "Visitor limits protect the place, ___ they also change ___ gets to see it.",
+          "answers": ["but", "who"],
+          "accepted": [["but", "yet"], ["who"]],
+          "explanation": "«Who» ở đây mở một mệnh đề danh từ làm tân ngữ cho «change», nên giữ trật tự khẳng định: «who gets to see it», không đảo thành «who does get». Cấu trúc này rất tiện cho mở bài ưu–nhược vì nó nêu được mặt trái mà chưa cần phán xét."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-3-m4",
+          "prompt": "Khuôn luận điểm cho dạng CHỌN 1 TRONG 3",
+          "vi": "Trong ba dự án, con đường ven sông là dự án duy nhất khiến người ta quay lại.",
+          "sentence": "Of the three projects, the riverside path is the ___ ___ that brings people back.",
+          "answers": ["only", "one"],
+          "explanation": "«The only one that…» là khuôn chọn mạnh hơn «the best», vì nó ngầm loại bỏ hai phương án kia ngay trong câu luận điểm. Dùng nó thì thân bài chỉ còn việc chứng minh, khỏi phải mở thêm đoạn loại trừ."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-3-m5",
+          "prompt": "Khuôn luận điểm cho dạng CHÍNH SÁCH",
+          "vi": "Theo tôi, nhiều quốc gia hơn nữa nên áp dụng khoản phí này.",
+          "sentence": "In my view, more countries ___ ___ this fee.",
+          "answers": ["should", "introduce"],
+          "accepted": [["should"], ["introduce", "adopt"]],
+          "explanation": "Dạng chính sách cần đúng chữ «should». Động từ đi sau nên là động từ hành động của chính sách — «introduce», «adopt», «impose» — chứ không phải «have» hay «make», vốn mơ hồ về việc ai làm gì."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "error_spot",
+          "id": "t2-3-h1",
+          "intro": "Mở bài cho một đề CHỌN 1 TRONG 2. Bấm vào dòng hỏng.",
+          "directions": "Some people plan every detail of a holiday before they leave. Others prefer to decide when they arrive. Which do you prefer?",
+          "lines": [
+            "A holiday is short, and how it is spent is decided long before the first morning of it.",
+            "Some people plan every detail of a holiday before they leave, while others prefer to decide when they arrive.",
+            "I plan, and I plan because the hours saved on arrival are hours spent somewhere better.",
+            "Improvising has its charm, but charm is expensive when you are standing outside a full hotel."
+          ],
+          "errorIndex": 1,
+          "errorLabel": "Chép lại gần như nguyên văn câu đề",
+          "fix": "The two habits produce very different holidays from the same number of days.",
+          "explanation": "Dòng 2 lặp lại đề với đúng một chữ đổi. Trong bài 300 từ, đó là hơn 5% số chữ không được tính là của bạn. Chú ý dòng 3 và 4 rất hay — vấn đề nằm ở chỗ dòng 2 chen vào giữa và không làm gì cả."
+        },
+        {
+          "type": "error_spot",
+          "id": "t2-3-h2",
+          "intro": "Mở bài cho một đề ĐỒNG Ý / PHẢN ĐỐI. Bấm vào dòng hỏng.",
+          "directions": "Travelling to another country teaches a person more than any book can. Do you agree or disagree with this statement?",
+          "lines": [
+            "Nowadays society is developing very fast and people travel more than ever before.",
+            "Whether a fortnight abroad really teaches more than a good book is a fair question.",
+            "I agree that it does, because travel teaches the things nobody bothers to write down.",
+            "A book can tell you what a country exports; only a market can tell you how people argue over a price."
+          ],
+          "errorIndex": 0,
+          "errorLabel": "Câu mở bài sáo rỗng, không nói gì về đề",
+          "fix": "A book about a country can be read in a week; a week in the country itself costs far more.",
+          "explanation": "Ba dòng sau rất mạnh, đặc biệt dòng cuối với phép đối lập sách và khu chợ. Chính vì thế dòng đầu càng đáng bỏ: nó là câu mà người chấm đã đọc hàng nghìn lần và nó chiếm chỗ của một câu mở đầu thật sự."
+        },
+        {
+          "type": "error_spot",
+          "id": "t2-3-h3",
+          "intro": "Mở bài cho một đề CHÍNH SÁCH. Bấm vào dòng hỏng.",
+          "directions": "Some countries charge tourists a small daily fee on top of their hotel bill. Do you think more countries should do this?",
+          "lines": [
+            "Every visitor uses a road, a pavement and a rubbish collection that somebody else has paid for.",
+            "A small nightly fee is one way of closing that gap.",
+            "In my opinion, tourists are already spending enough money in the country they visit.",
+            "More countries should adopt the charge, because the cost of tourism lands where the income does not."
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Luận điểm nói ngược với kết luận ở dòng 4",
+          "fix": "In my opinion, that gap is exactly why the fee is fair.",
+          "explanation": "Dòng 3 phản đối, dòng 4 ủng hộ. Cùng một lỗi với bài Tầng 2 bộ 2: người viết đổi ý trong lúc viết mà quên quay lại sửa. Người chấm đọc mở bài trước, nên họ vào bài với ấn tượng bạn phản đối, rồi thấy cả thân bài đi ngược lại."
+        },
+        {
+          "type": "error_spot",
+          "id": "t2-3-h4",
+          "intro": "Mở bài cho một đề CHỌN 1 TRONG 3. Bấm vào dòng hỏng.",
+          "directions": "A town wants to attract more visitors. It could restore its old market square, open a museum about local history, or build a riverside walking path. Which should it choose?",
+          "lines": [
+            "A town with one project to fund has to ask what will still be working in ten years.",
+            "A museum draws a crowd in its opening month and empties quietly after that.",
+            "I would choose the riverside path, which costs least to maintain and is used by residents every day.",
+            "The old market square is a beautiful part of the town's history and deserves to be preserved."
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Quay lại khen phương án vừa loại bỏ, làm loãng lập trường",
+          "fix": "Restoring the square would please visitors for an afternoon and cost the town every winter.",
+          "explanation": "Ba dòng đầu dựng tiêu chí rất chặt: cái gì còn dùng được sau mười năm. Dòng cuối lẽ ra phải loại bỏ chợ cũ theo đúng tiêu chí ấy, nhưng lại quay ra khen nó. Nhượng bộ thì để dành cho kết bài; ở mở bài, khen phương án mình vừa bỏ là tự làm yếu mình."
+        }
+      ]
+    }
+  ]
+}

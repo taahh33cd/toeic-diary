@@ -1,0 +1,232 @@
+{
+  "passages": {
+    "p1": {
+      "kind": "prompt",
+      "body": [
+        "Employers should pay for their staff to join a gym. Do you agree or disagree with this statement? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p2": {
+      "kind": "prompt",
+      "body": [
+        "Some people cook most of their meals at home. Others eat out or order food several times a week. Which suits you better? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p3": {
+      "kind": "prompt",
+      "body": [
+        "Some jobs require staff to work through the night. What are the advantages and disadvantages of night work? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p4": {
+      "kind": "prompt",
+      "body": [
+        "A company can offer its staff one health benefit: free medical check-ups, a subsidised canteen, or an extra hour off each week for exercise. Which should it offer? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p5": {
+      "kind": "prompt",
+      "body": [
+        "Some cities have banned smoking in outdoor restaurant seating areas. Do you think other cities should introduce the same ban? Give reasons or examples to support your opinion."
+      ]
+    }
+  },
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t2-2-e1",
+          "passageRef": "p1",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Employers should pay for their staff to join a gym." },
+            { "id": "B", "text": "Health is one of the most important issues in modern working life." },
+            { "id": "C", "text": "I disagree that employers should pay for gym membership, because the money reaches only the staff who were already active." },
+            { "id": "D", "text": "Gym membership can be helpful for some employees but useless for others." }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "A chép nguyên câu đề. B nói về sức khoẻ nói chung, không cho biết bạn nghĩ gì. D đứng giữa. C vừa nêu lập trường vừa hé sẵn lý do — và lý do đó đủ sắc để cả bài có hướng đi ngay từ mở bài."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-2-e2",
+          "passageRef": "p2",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Cooking at home and eating out both have their place in a busy life." },
+            { "id": "B", "text": "Restaurants in my city have become noticeably more expensive this year." },
+            { "id": "C", "text": "Cooking at home suits me better, mainly because of what it costs and what it teaches." },
+            { "id": "D", "text": "It really depends on how much free time a person has after work." }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "A và D là hai biến thể của cùng một lỗi: không chọn. B nêu một sự thật về giá nhà hàng nhưng không trả lời câu hỏi «cái nào hợp với bạn hơn». C chọn dứt khoát và hé hai lý do sẽ triển khai."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-2-e3",
+          "passageRef": "p3",
+          "question": "Câu mở bài nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Night work is clearly harmful and should be avoided wherever possible." },
+            { "id": "B", "text": "Night shifts keep hospitals and factories running, and they change the lives of the people who staff them in ways that are not all bad or all good." },
+            { "id": "C", "text": "I believe night work is worth doing if the pay is high enough." },
+            { "id": "D", "text": "Night work means working while most other people are asleep." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "Đây là dạng ưu–nhược nên A và C đều hỏng vì chọn phe ngay. D chỉ định nghĩa lại khái niệm — người chấm đã biết ca đêm là gì. B báo trước bài sẽ đi cả hai chiều mà vẫn có nội dung riêng."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-2-e4",
+          "passageRef": "p4",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "A subsidised canteen would make lunchtime much more pleasant for everyone." },
+            { "id": "B", "text": "All three benefits would improve the health of the staff in different ways." },
+            { "id": "C", "text": "Of the three benefits, the extra hour for exercise would reach the most people, because it costs staff nothing and fits any schedule." },
+            { "id": "D", "text": "Companies should think carefully about the health of their employees." }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "C là câu duy nhất vừa chọn, vừa cho thấy bạn biết đề có ba phương án, vừa nêu sẵn tiêu chí «reach the most people» để cả bài đo theo. A chọn nhưng nói như thể chỉ có một phương án. B không chọn. D né hẳn."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-2-e5",
+          "passageRef": "p5",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Smoking is bad for health and everyone knows this." },
+            { "id": "B", "text": "Yes, other cities should do it, because smoking is unpleasant." },
+            { "id": "C", "text": "Other cities should introduce the same ban, because outdoor seating is shared space and the cost of one person's habit lands on everyone at the next table." },
+            { "id": "D", "text": "Restaurants would lose customers if smoking were banned outdoors." }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "A đúng nhưng đề không hỏi thuốc lá có hại không. B có trả lời nhưng «unpleasant» quá mỏng để chống đỡ cả bài. D là một lý do phản đối, không phải một luận điểm. C trả lời dứt khoát và nêu sẵn nguyên tắc — không gian chung — đủ sức đỡ hai đoạn thân bài."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "type_blank",
+          "id": "t2-2-m1",
+          "prompt": "Khuôn luận điểm cho dạng ĐỒNG Ý / PHẢN ĐỐI",
+          "vi": "Tôi hoàn toàn không đồng tình với quan điểm rằng chủ lao động nên trả tiền tập gym cho nhân viên.",
+          "sentence": "I strongly ___ ___ the view that employers should pay for gym membership.",
+          "answers": ["disagree", "with"],
+          "explanation": "«Disagree with + quan điểm». Nhiều người viết «disagree the view» vì tiếng Việt không cần giới từ ở đây. Cũng đừng ghép «I strongly disagree that… with…» — chỉ dùng một trong hai khuôn."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-2-m2",
+          "prompt": "Khuôn luận điểm cho dạng CHỌN 1 TRONG 2",
+          "vi": "Nếu được chọn, tôi thà nấu ăn ở nhà còn hơn ăn ngoài.",
+          "sentence": "Given the choice, I would ___ ___ at home than eat out.",
+          "answers": ["rather", "cook"],
+          "explanation": "«Would rather + V nguyên thể + than + V nguyên thể» — không có «to» ở cả hai vế. So sánh với «would prefer to cook … rather than eat out», khuôn kia có «to». Trộn hai khuôn là lỗi rất hay gặp."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-2-m3",
+          "prompt": "Khuôn mở bài cho dạng ƯU & NHƯỢC",
+          "vi": "Làm ca đêm mang lại những lợi ích thật sự, nhưng cũng kèm theo những rủi ro thật sự.",
+          "sentence": "Night shifts bring real ___ , but they carry equally real ___.",
+          "answers": ["benefits", "risks"],
+          "accepted": [["advantages", "gains"], ["dangers", "hazards"]],
+          "explanation": "Cặp «benefits / risks» hợp với chủ đề sức khoẻ hơn cặp chung chung «advantages / disadvantages», vì ca đêm không chỉ bất tiện mà còn có hại thật. Chọn đúng sắc thái danh từ là chỗ ăn điểm ở trục từ vựng."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-2-m4",
+          "prompt": "Khuôn luận điểm cho dạng CHỌN 1 TRONG 3",
+          "vi": "Trong ba phương án, một giờ nghỉ để tập thể dục mang lại lợi ích lớn nhất.",
+          "sentence": "Of the three options, an extra hour for exercise offers ___ ___ return.",
+          "answers": ["the", "greatest"],
+          "accepted": [["the"], ["greatest", "biggest", "largest"]],
+          "explanation": "So sánh nhất luôn cần «the». Chú ý «return» ở đây nghĩa là lợi ích thu về, không phải sự trở lại — đây là một trong những danh từ mà nghĩa kinh tế thông dụng hơn nghĩa đen."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-2-m5",
+          "prompt": "Khuôn luận điểm cho dạng CHÍNH SÁCH",
+          "vi": "Có cơ sở vững chắc cho việc cấm hút thuốc ở khu vực ăn uống ngoài trời.",
+          "sentence": "There is a strong case ___ banning smoking in outdoor dining areas.",
+          "answers": ["for"],
+          "explanation": "«A case for + V-ing» nghĩa là có lý lẽ ủng hộ việc gì; «a case against» là ngược lại. Đây là khuôn nêu lập trường trang nhã hơn «I think we should», và nó cũng báo cho người chấm biết bạn sắp đưa ra lý lẽ chứ không phải cảm nghĩ."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "error_spot",
+          "id": "t2-2-h1",
+          "intro": "Mở bài cho một đề ĐỒNG Ý / PHẢN ĐỐI. Bấm vào dòng làm hỏng cả bài.",
+          "directions": "Employers should pay for their staff to join a gym. Do you agree or disagree with this statement?",
+          "lines": [
+            "Companies have taken a growing interest in the health of the people they employ.",
+            "Paid gym membership is the benefit that appears most often in job advertisements.",
+            "Whether it actually works is a question worth asking before the budget is signed off.",
+            "This essay will examine the arguments on both sides of the debate."
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Không nêu lập trường, lại còn tự thuật về bài viết",
+          "fix": "In my view the money is misdirected, because it reaches the staff who least need it.",
+          "explanation": "Ba dòng đầu dẫn dắt rất khéo rồi dòng cuối bỏ trắng chỗ quan trọng nhất. «Examine both sides» hợp với dạng ưu–nhược, không hợp với đồng ý/phản đối. Thêm nữa, câu tự thuật về bài viết tiêu một câu mà không mang ý nào."
+        },
+        {
+          "type": "error_spot",
+          "id": "t2-2-h2",
+          "intro": "Mở bài cho một đề ƯU & NHƯỢC. Bấm vào dòng hỏng.",
+          "directions": "Some jobs require staff to work through the night. What are the advantages and disadvantages of night work?",
+          "lines": [
+            "Hospitals, ports and power stations cannot close when the sun goes down.",
+            "The people who keep them running overnight gain things that day workers do not.",
+            "They also pay a price that does not appear on any payslip.",
+            "Nobody should have to work at night, and companies that require it are exploiting their staff."
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Chọn phe gay gắt ở dạng không đòi chọn phe",
+          "fix": "This essay looks at both before reaching a conclusion.",
+          "explanation": "Ba dòng đầu dựng khuôn hai chiều rất gọn, kể cả câu «a price that does not appear on any payslip» — vừa hình ảnh vừa báo trước phần nhược. Dòng cuối vừa chọn phe vừa chọn bằng giọng gay gắt, nên phần lợi phía sau sẽ không còn ai tin."
+        },
+        {
+          "type": "error_spot",
+          "id": "t2-2-h3",
+          "intro": "Mở bài cho một đề CHỌN 1 TRONG 3. Bấm vào dòng hỏng.",
+          "directions": "A company can offer one health benefit: free medical check-ups, a subsidised canteen, or an extra hour off each week for exercise. Which should it offer?",
+          "lines": [
+            "A company with one health benefit to give has to decide who that benefit should reach.",
+            "Free check-ups sound generous but are used mostly by people already worried about their health.",
+            "A subsidised canteen helps only those who eat at their desk.",
+            "Health is important for everyone and every company should care about it."
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Kết mở bài bằng một câu sáo, và chưa hề chọn phương án nào",
+          "fix": "Of the three, the extra hour for exercise is the only one that costs staff nothing and fits any schedule.",
+          "explanation": "Hai dòng giữa đã loại bỏ hai phương án rất sắc, nên mở bài chỉ còn thiếu đúng một việc: nói ra mình chọn cái nào. Thay vào đó dòng cuối là câu ai cũng đồng ý và không ai cần đọc."
+        },
+        {
+          "type": "error_spot",
+          "id": "t2-2-h4",
+          "intro": "Mở bài cho một đề CHÍNH SÁCH. Bấm vào dòng hỏng.",
+          "directions": "Some cities have banned smoking in outdoor restaurant seating areas. Do you think other cities should introduce the same ban?",
+          "lines": [
+            "A pavement table is a strange kind of space: private enough to eat at, public enough that the person beside you shares your air.",
+            "In my opinion, restaurants should be free to decide their own rules without interference.",
+            "Cities that have introduced the ban report fewer complaints and no fall in trade.",
+            "Other cities should follow, because shared air is not something a business can sell."
+          ],
+          "errorIndex": 1,
+          "errorLabel": "Luận điểm mâu thuẫn với chính kết luận ở dòng 4",
+          "fix": "In my opinion, that shared air is exactly why the decision cannot be left to each restaurant.",
+          "explanation": "Đây là lỗi khó thấy nhất trong bốn bài: dòng 2 và dòng 4 nói ngược nhau hoàn toàn. Người viết đổi ý giữa chừng mà quên sửa lại câu đầu. Bài có hai lập trường thì coi như không có lập trường nào — luôn đọc lại mở bài sau khi viết xong kết bài."
+        }
+      ]
+    }
+  ]
+}

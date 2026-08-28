@@ -1,0 +1,231 @@
+{
+  "passages": {
+    "p1": {
+      "kind": "prompt",
+      "body": [
+        "A good manager should explain the reason behind every instruction they give. Do you agree or disagree with this statement? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p2": {
+      "kind": "prompt",
+      "body": [
+        "Some teams hold a short meeting every morning. Others communicate only when something needs deciding. Which do you think works better? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p3": {
+      "kind": "prompt",
+      "body": [
+        "Some companies let staff choose the projects they work on. What are the advantages and disadvantages of this approach? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p4": {
+      "kind": "prompt",
+      "body": [
+        "A department can change one thing about how it works: shorter meetings, clearer written instructions, or fewer people copied into every e-mail. Which change should it make? Give reasons or examples to support your opinion."
+      ]
+    },
+    "p5": {
+      "kind": "prompt",
+      "body": [
+        "Some companies have stopped replying to work messages sent after six in the evening. Do you think other companies should adopt this rule? Give reasons or examples to support your opinion."
+      ]
+    }
+  },
+  "levels": [
+    {
+      "difficulty": "easy",
+      "exercises": [
+        {
+          "type": "mcq",
+          "id": "t2-4-e1",
+          "passageRef": "p1",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Communication is the most important skill for any manager." },
+            { "id": "B", "text": "I disagree, because a manager who explains everything slows the team down in exactly the moments when speed matters." },
+            { "id": "C", "text": "A good manager should explain the reason behind every instruction they give." },
+            { "id": "D", "text": "Sometimes explaining helps and sometimes it wastes time." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "C chép nguyên đề. A đúng nhưng nói về kỹ năng nói chung. D đứng giữa. B phản đối và chỉ ra ngay chỗ yếu của nhận định — chữ «every». Bắt lấy một lượng từ tuyệt đối trong đề rồi tấn công nó là cách dựng luận điểm sắc nhất ở dạng này."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-4-e2",
+          "passageRef": "p2",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Daily meetings can be useful, though they are not right for every team." },
+            { "id": "B", "text": "Meetings take up a great deal of time in most offices." },
+            { "id": "C", "text": "The daily meeting works better, because a problem spotted on Monday costs far less than the same problem found on Friday." },
+            { "id": "D", "text": "It depends on the size of the team and the kind of work it does." }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "A và D né chọn bằng hai cách khác nhau, nhưng cùng để lại một bài không có luận điểm. B là nhận xét chung. C chọn rõ và kèm một lý do có thể đo được bằng chi phí, nên hai đoạn thân bài đã có sẵn hướng."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-4-e3",
+          "passageRef": "p3",
+          "question": "Câu mở bài nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Letting staff choose their projects is the best management idea of the last decade." },
+            { "id": "B", "text": "When people pick their own work they bring more to it, and they also leave gaps that somebody has to fill." },
+            { "id": "C", "text": "Choosing a project means deciding which task you will work on." },
+            { "id": "D", "text": "I think this approach only works in very small companies." }
+          ],
+          "correctAnswers": ["B"],
+          "explanation": "A và D chọn phe ngay nên hỏng dạng. C định nghĩa lại điều hiển nhiên. B nêu cả hai chiều trong một câu, và vế sau «leave gaps that somebody has to fill» đã báo trước phần nhược một cách cụ thể chứ không chung chung."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-4-e4",
+          "passageRef": "p4",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Shorter meetings would give everyone more time to do their actual work." },
+            { "id": "B", "text": "All three changes would improve how the department works." },
+            { "id": "C", "text": "Of the three changes, clearer written instructions would save the most time, because a badly written request is repeated by everyone who reads it." },
+            { "id": "D", "text": "Every department should look carefully at how it communicates." }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "C chọn rõ, nhắc được ba phương án, và nêu cơ chế («ai đọc cũng phải hỏi lại») thay vì chỉ khẳng định. A chọn nhưng nói như thể không có hai phương án kia. B không chọn, D né."
+        },
+        {
+          "type": "mcq",
+          "id": "t2-4-e5",
+          "passageRef": "p5",
+          "question": "Câu luận điểm nào dùng được cho đề này?",
+          "options": [
+            { "id": "A", "text": "Work-life balance has become an important topic in recent years." },
+            { "id": "B", "text": "Nobody likes being messaged late in the evening." },
+            { "id": "C", "text": "Other companies should adopt the rule, because a message sent at nine is answered badly at nine and repaired badly at nine the next morning." },
+            { "id": "D", "text": "Some employees do not mind replying in the evening at all." }
+          ],
+          "correctAnswers": ["C"],
+          "explanation": "A là câu mở bài sáo. B nói về cảm giác, mà đề hỏi về chính sách. D là một phản biện, không phải luận điểm. C trả lời dứt khoát và lý do của nó nói về CHẤT LƯỢNG công việc chứ không phải sự khó chịu — lập luận về hiệu quả luôn dày hơn lập luận về cảm xúc."
+        }
+      ]
+    },
+    {
+      "difficulty": "medium",
+      "exercises": [
+        {
+          "type": "type_blank",
+          "id": "t2-4-m1",
+          "prompt": "Khuôn luận điểm cho dạng ĐỒNG Ý / PHẢN ĐỐI",
+          "vi": "Tôi chỉ đồng tình một phần với nhận định này.",
+          "sentence": "I ___ ___ part with this statement.",
+          "answers": ["agree", "in"],
+          "explanation": "«Agree in part» là cách nêu lập trường có mức độ mà VẪN là một lập trường — khác hẳn «it depends». Nhưng dùng khuôn này thì mở bài buộc phải nói rõ phần nào đồng ý và phần nào không, nếu không nó lại rơi về kiểu đứng giữa."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-4-m2",
+          "prompt": "Khuôn luận điểm cho dạng CHỌN 1 TRONG 2",
+          "vi": "Theo kinh nghiệm của tôi, cuộc họp hằng ngày hiệu quả hơn hẳn.",
+          "sentence": "___ ___ experience, the daily meeting works better.",
+          "answers": ["In", "my"],
+          "explanation": "«In my experience» đặt luận điểm dựa trên trải nghiệm, nên nó hứa với người chấm rằng sắp có ví dụ thật từ chính bạn. Đã dùng khuôn này thì thân bài bắt buộc phải có chuyện đã xảy ra, chứ không được quay về nhận định chung."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-4-m3",
+          "prompt": "Khuôn mở bài cho dạng ƯU & NHƯỢC",
+          "vi": "Cách làm này vừa đem lại điều gì đó, vừa lấy đi điều gì đó.",
+          "sentence": "The arrangement gives something ___ , and it takes something ___ .",
+            "answers": ["back", "away"],
+          "explanation": "Cặp «gives back / takes away» là cách nói hai chiều gọn hơn nhiều so với «has advantages and disadvantages», và nó tránh được lối mở bài quen thuộc mà người chấm đọc mãi. Cùng một ý, khác hẳn ấn tượng."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-4-m4",
+          "prompt": "Khuôn luận điểm cho dạng CHỌN 1 TRONG 3",
+          "vi": "Trong ba thay đổi, chỉ dẫn viết rõ ràng là thứ đáng làm trước tiên.",
+          "sentence": "Of the three changes, clearer written instructions are the ___ ___ tackling first.",
+          "answers": ["one", "worth"],
+          "explanation": "«The one worth + V-ing» vừa chọn vừa xếp thứ tự ưu tiên, hợp với đề chỉ cho làm một việc. Sau «worth» luôn là V-ing, không phải nguyên thể — «worth tackling», không phải «worth to tackle»."
+        },
+        {
+          "type": "type_blank",
+          "id": "t2-4-m5",
+          "prompt": "Khuôn luận điểm cho dạng CHÍNH SÁCH",
+          "vi": "Các công ty khác nên áp dụng quy định này, và nên áp dụng vì lý do công việc chứ không phải vì lòng tốt.",
+          "sentence": "Other companies should adopt this rule, and they should do so for reasons of ___ rather than ___ .",
+          "answers": ["efficiency", "kindness"],
+          "accepted": [["efficiency", "productivity"], ["kindness", "generosity"]],
+          "explanation": "Khuôn «for reasons of X rather than Y» rất mạnh ở dạng chính sách vì nó chặn trước một phản biện: người đọc sẽ không kết luận rằng bạn chỉ đang kêu gọi lòng tốt. Nêu sẵn tiêu chí đánh giá ngay ở mở bài là dấu hiệu của bài mức 4 trở lên."
+        }
+      ]
+    },
+    {
+      "difficulty": "hard",
+      "exercises": [
+        {
+          "type": "error_spot",
+          "id": "t2-4-h1",
+          "intro": "Mở bài cho một đề ĐỒNG Ý / PHẢN ĐỐI. Bấm vào dòng hỏng.",
+          "directions": "A good manager should explain the reason behind every instruction they give. Do you agree or disagree with this statement?",
+          "lines": [
+            "Most of us have carried out an instruction without knowing why, and most of us have resented it.",
+            "That memory makes the statement sound obviously right.",
+            "I disagree with it all the same, because the word doing the damage is «every».",
+            "Managers should communicate well and treat their teams with respect at all times."
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Câu ai cũng đồng ý, không phục vụ luận điểm nào",
+          "fix": "In an emergency, the explanation can wait until the building is empty.",
+          "explanation": "Ba dòng đầu dựng một mở bài rất khéo: thừa nhận sức hấp dẫn của nhận định rồi mới bác nó, và chỉ đúng chữ gây vấn đề. Dòng cuối là câu không ai phản đối, nên nó cũng không chứng minh gì — thay bằng một ví dụ là mở bài thành hoàn chỉnh."
+        },
+        {
+          "type": "error_spot",
+          "id": "t2-4-h2",
+          "intro": "Mở bài cho một đề ƯU & NHƯỢC. Bấm vào dòng hỏng.",
+          "directions": "Some companies let staff choose the projects they work on. What are the advantages and disadvantages of this approach?",
+          "lines": [
+            "Nobody works harder than a person who picked the work themselves.",
+            "That is the case for letting staff choose, and it is a strong one.",
+            "It is also incomplete, because somebody still has to do the work nobody picks.",
+            "For these reasons I believe every company should let its staff choose freely."
+          ],
+          "errorIndex": 3,
+          "errorLabel": "Chọn phe ở dạng không đòi chọn, lại còn mâu thuẫn với dòng ngay trên",
+          "fix": "This essay weighs both before reaching a conclusion.",
+          "explanation": "Dòng 3 vừa nêu mặt hại rất sắc thì dòng 4 lại kết luận ủng hộ hoàn toàn — hai câu liền nhau nói ngược nhau. Ngoài lỗi sai dạng, đây còn là lỗi logic mà người chấm thấy ngay vì hai câu nằm cạnh nhau."
+        },
+        {
+          "type": "error_spot",
+          "id": "t2-4-h3",
+          "intro": "Mở bài cho một đề CHỌN 1 TRONG 3. Bấm vào dòng hỏng.",
+          "directions": "A department can change one thing: shorter meetings, clearer written instructions, or fewer people copied into every e-mail. Which change should it make?",
+          "lines": [
+            "Every department wastes time, but not every department wastes it in the same place.",
+            "Ours loses it to instructions that have to be asked about twice.",
+            "In this essay I am going to explain which of the three changes I would choose and why.",
+            "Clearer writing is the change worth making, because it is the only one that saves time for the person who did not send the message."
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Tự thuật về bài viết, tiêu một câu mà không mang ý nào",
+          "fix": "Bỏ hẳn câu này — dòng 4 đã nói ra lựa chọn rồi.",
+          "explanation": "Dòng 4 làm đúng việc mà dòng 3 hứa sẽ làm, nên dòng 3 chỉ là một lời hứa thừa. Mở bài ba nhịp đã đủ; câu thứ tư kiểu «In this essay I am going to» gần như luôn là câu cần cắt đầu tiên."
+        },
+        {
+          "type": "error_spot",
+          "id": "t2-4-h4",
+          "intro": "Mở bài cho một đề CHÍNH SÁCH. Bấm vào dòng hỏng.",
+          "directions": "Some companies have stopped replying to work messages sent after six in the evening. Do you think other companies should adopt this rule?",
+          "lines": [
+            "A message sent at nine in the evening does not wait politely until morning; it sits in someone's pocket.",
+            "Companies that have stopped answering after six report no loss of output.",
+            "I find evening messages personally annoying and I never reply to them.",
+            "Other companies should adopt the rule, because tired replies cost more to repair than they save."
+          ],
+          "errorIndex": 2,
+          "errorLabel": "Luận điểm dựa trên sở thích cá nhân thay vì lập luận về chính sách",
+          "fix": "The question is not whether people mind, but whether the replies are any good.",
+          "explanation": "Dòng 3 không sai sự thật, nhưng «tôi thấy khó chịu» không phải lý do để một công ty đổi quy định — đây đúng là cái bẫy của dạng chính sách. Dòng 4 đã có lý lẽ về hiệu quả; dòng 3 kéo giọng bài xuống mức cảm nghĩ ngay trước đó."
+        }
+      ]
+    }
+  ]
+}
