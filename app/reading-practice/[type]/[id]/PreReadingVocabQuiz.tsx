@@ -12,9 +12,9 @@ type Props = {
 
 type Phase = "flashcard" | "quiz";
 
-/** Extract the quoted word/phrase from "Từ "X" có nghĩa là gì?" */
+/** Extract the quoted word/phrase from "Từ 'X' có nghĩa là gì?" — straight, single or curly quotes */
 function extractWord(question: string): string {
-  const m = question.match(/"([^"]+)"/);
+  const m = question.match(/["'\u2018\u2019\u201C\u201D]([^"'\u2018\u2019\u201C\u201D]+)["'\u2018\u2019\u201C\u201D]/);
   return m ? m[1] : question;
 }
 
