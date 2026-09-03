@@ -7,6 +7,7 @@ type Props = {
   items:        ExerciseItem[];
   passageTitle: string;
   onComplete:   () => void;
+  onSkip:       () => void;
 };
 
 type Phase = "flashcard" | "quiz";
@@ -47,7 +48,7 @@ async function playWord(word: string, audioUrl?: string) {
   }
 }
 
-export function PreReadingVocabQuiz({ items, passageTitle, onComplete }: Props) {
+export function PreReadingVocabQuiz({ items, passageTitle, onComplete, onSkip }: Props) {
   const [phase, setPhase]   = useState<Phase>("flashcard");
   const [idx, setIdx]       = useState(0);
   const [chosen, setChosen] = useState<number | null>(null);
@@ -267,6 +268,23 @@ export function PreReadingVocabQuiz({ items, passageTitle, onComplete }: Props) 
             )}
           </div>
         )}
+
+        {/* Skip: vocab activity is optional */}
+        <div style={{
+          borderTop: "1px solid #e5e7eb", padding: "10px 0",
+          textAlign: "center", background: "#fafafa",
+        }}>
+          <button
+            onClick={onSkip}
+            style={{
+              background: "none", border: "none", cursor: "pointer",
+              color: "#6b7280", fontSize: "0.8rem", fontWeight: 600,
+              textDecoration: "underline", padding: "4px 10px",
+            }}
+          >
+            Bỏ qua, vào bài đọc →
+          </button>
+        </div>
       </div>
     </div>
   );

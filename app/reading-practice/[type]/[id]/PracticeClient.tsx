@@ -38,7 +38,8 @@ export function PracticeClient({
   const [activeQ, setActiveQ]             = useState(0);
   const [saving, setSaving]               = useState(false);
   const [fontSize, setFontSize]           = useState(15);
-  const [vocabQuizDone, setVocabQuizDone]       = useState(false);
+  const [showVocab, setShowVocab]               = useState(true);
+  const [vocabRun, setVocabRun]                 = useState(0);
   const [showPostReading, setShowPostReading]   = useState(false);
   const [postReadingPassed, setPostReadingPassed] = useState(false);
   const [showNextHint, setShowNextHint]         = useState(false);
@@ -70,9 +71,14 @@ export function PracticeClient({
     );
   }, [passage.type, passage.orderIndex, richExplanations, passage.questions]);
 
-  const hasExercises   = Object.values(exercises).some(arr => arr.length > 0);
-  // Pre-reading is done when vocab quiz is done (or no vocab items exist)
-  const preReadingDone = vocabQuizDone || exercises.vocab.length === 0;
+  const hasExercises = Object.values(exercises).some(arr => arr.length > 0);
+  // Pre-reading vocab is optional: user can skip it or reopen it from the header
+  const hasVocab     = exercises.vocab.length > 0;
+
+  const openVocab = useCallback(() => {
+    setVocabRun(r => r + 1);
+    setShowVocab(true);
+  }, []);
 
   const handleSelect = useCallback(
     (qIdx: number, option: string) => {
@@ -137,12 +143,14 @@ export function PracticeClient({
         color: "#1a1a2e",
       }}
     >
-      {/* Pre-reading vocab quiz */}
-      {!preReadingDone && (
+      {/* Pre-reading vocab quiz (optional) */}
+      {hasVocab && showVocab && (
         <PreReadingVocabQuiz
+          key={vocabRun}
           items={exercises.vocab}
           passageTitle={passage.category ?? `Bài ${passage.orderIndex}`}
-          onComplete={() => setVocabQuizDone(true)}
+          onComplete={() => setShowVocab(false)}
+          onSkip={() => setShowVocab(false)}
         />
       )}
 
@@ -217,8 +225,17 @@ export function PracticeClient({
           </span>
         </div>
 
-        {/* Font size controls */}
+        {/* Font size controls + reopen vocab */}
         <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+          {hasVocab && !showVocab && (
+            <button
+              onClick={openVocab}
+              title="Xem lại từ vựng của bài"
+              style={{ ...fontBtnStyle, marginRight: 8 }}
+            >
+              📖 Từ vựng
+            </button>
+          )}
           <button
             onClick={() => setFontSize((s) => Math.max(11, s - 1))}
             title="Giảm cỡ chữ"
@@ -495,7 +512,7 @@ export function PracticeClient({
           </button>
           {submitted && (
             <button
-              onClick={() => { setAnswers({}); setSubmitted(false); setActiveQ(0); setVocabQuizDone(false); }}
+              onClick={() => { setAnswers({}); setSubmitted(false); setActiveQ(0); }}
               style={{ ...navBtnStyle, color: "#0D3361", borderColor: "#0D3361" }}
             >
               Làm lại
