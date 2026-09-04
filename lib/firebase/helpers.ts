@@ -320,6 +320,40 @@ export async function deleteSlot(id: string): Promise<void> {
   await remove(ref(firebaseDb, `slots/${id}`));
 }
 
+/**
+ * Tạo nhiều khung giờ trong MỘT lần ghi multi-path. Không lặp `createSlot` vì
+ * mỗi lần ghi là một round-trip RTDB riêng: tạo lịch cả tháng (~40 slot) sẽ chậm
+ * và có thể ghi dở dang nếu mất kết nối giữa chừng.
+ */
+export async function createSlotsBulk(
+  slots: Omit<Slot, "id">[]
+): Promise<string[]> {
+  if (slots.length === 0) return [];
+  const stamp = Date.now();
+  const updates: Record<string, Slot> = {};
+  const ids: string[] = [];
+
+  slots.forEach((slot, i) => {
+    const id = `s${stamp}_${i}`;
+    // Không spread `slot`: `note: undefined` sẽ làm RTDB reject cả lệnh ghi.
+    const entry: Slot = { id, date: slot.date, time: slot.time };
+    if (slot.note) entry.note = slot.note;
+    updates[id] = entry;
+    ids.push(id);
+  });
+
+  await update(ref(firebaseDb, "slots"), updates);
+  return ids;
+}
+
+/** Xóa nhiều khung giờ trong một lần ghi. */
+export async function deleteSlots(ids: string[]): Promise<void> {
+  if (ids.length === 0) return;
+  const updates: Record<string, null> = {};
+  for (const id of ids) updates[id] = null;
+  await update(ref(firebaseDb, "slots"), updates);
+}
+
 // ─── Goal ────────────────────────────────────────────────────────────────────
 
 /**
