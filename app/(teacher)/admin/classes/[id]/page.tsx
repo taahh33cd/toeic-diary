@@ -21,6 +21,8 @@ import {
 import { useClass, useClasses } from "@/hooks/firebase/useClasses";
 import { useAllStudents } from "@/hooks/firebase/useAllStudents";
 import { useClassAttendance } from "@/hooks/firebase/useClassAttendance";
+import { useAllSubmissions } from "@/hooks/firebase/useAllSubmissions";
+import { useAllDayLinks } from "@/hooks/firebase/useAllDayLinks";
 import {
   updateClass,
   deleteClass,
@@ -40,6 +42,8 @@ import type {
   HwItem,
   AttendanceStatus,
   Student,
+  SubmissionsMap,
+  DayLinksMap,
 } from "@/lib/firebase/types";
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -1044,17 +1048,194 @@ function ClassDupTargetModal({ hw, currentClassId, currentMembers, onConfirm, on
   );
 }
 
+// ─── Tiến độ BTVN của từng học viên ──────────────────────────────────────────
+
+/** Số mục đã tick / tổng số mục của một BTVN, theo submissions của một HV. */
+function calcHwDone(hw: Homework, subs: SubmissionsMap | undefined) {
+  let total = 0;
+  let done = 0;
+  for (const { key } of HW_CATS) {
+    const items = hw[key] ?? [];
+    total += items.length;
+    for (let i = 0; i < items.length; i++) {
+      if (subs?.[`${hw.id}_${key}_${i}`]?.ticked) done++;
+    }
+  }
+  return { done, total };
+}
+
+function fmtSubTime(iso: string | undefined) {
+  if (!iso) return null;
+  return new Date(iso).toLocaleString("vi-VN", {
+    day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit",
+  });
+}
+
+function HwStudentProgress({
+  hw,
+  members,
+  allSubmissions,
+  allDayLinks,
+}: {
+  hw: Homework;
+  members: (Student & { id: string })[];
+  allSubmissions: Record<string, SubmissionsMap>;
+  allDayLinks: Record<string, DayLinksMap>;
+}) {
+  const [openCode, setOpenCode] = useState<string | null>(null);
+
+  // Chưa xong lên trước — người cần nhắc phải đập vào mắt trước.
+  const rows = useMemo(() => {
+    return members
+      .map((student) => {
+        const subs = allSubmissions[student.id];
+        const { done, total } = calcHwDone(hw, subs);
+        return {
+          student,
+          done,
+          total,
+          complete: total > 0 && done === total,
+          fileLink: allDayLinks[student.id]?.[hw.id]?.link,
+        };
+      })
+      .sort((a, b) => {
+        if (a.complete !== b.complete) return a.complete ? 1 : -1;
+        const ra = a.total > 0 ? a.done / a.total : 0;
+        const rb = b.total > 0 ? b.done / b.total : 0;
+        return ra - rb;
+      });
+  }, [hw, members, allSubmissions, allDayLinks]);
+
+  if (members.length === 0) return null;
+
+  return (
+    <div className="rounded-xl overflow-hidden" style={{ border: "1px solid var(--border)" }}>
+      <div className="px-3 py-2" style={{ background: "var(--bg-primary)", borderBottom: "1px solid var(--border)" }}>
+        <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "var(--text-secondary)" }}>
+          Tiến độ học viên
+        </span>
+      </div>
+      <div className="divide-y" style={{ borderColor: "var(--border)" }}>
+        {rows.map(({ student, done, total, complete, fileLink }) => {
+          const isOpen = openCode === student.id;
+          const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+          return (
+            <div key={student.id} style={{ background: "var(--bg-primary)" }}>
+              <div
+                className="flex items-center gap-2 px-3 py-2 cursor-pointer"
+                onClick={() => setOpenCode(isOpen ? null : student.id)}
+              >
+                <span className="text-xs font-semibold flex-1 min-w-0 truncate" style={{ color: "var(--text-primary)" }}>
+                  {student.name ?? student.id}
+                </span>
+
+                {fileLink && (
+                  <span
+                    className="text-[10px] px-1.5 py-0.5 rounded-full font-semibold shrink-0"
+                    style={{ background: "rgba(5,150,105,.12)", color: "rgb(5,150,105)" }}
+                    title="Đã nộp bài — mở trang học viên để xem"
+                  >
+                    {/\.(mp4|mov|avi|webm|mkv)/i.test(fileLink.split("?")[0]) ? "🎬" : "📷"}✓
+                  </span>
+                )}
+
+                {total > 0 ? (
+                  <>
+                    <div className="w-16 h-1.5 rounded-full overflow-hidden shrink-0" style={{ background: "var(--border)" }}>
+                      <div
+                        className="h-full rounded-full"
+                        style={{ width: `${pct}%`, background: complete ? "rgb(5,150,105)" : "var(--accent-primary)" }}
+                      />
+                    </div>
+                    <span
+                      className="text-[10px] font-semibold shrink-0 tabular-nums"
+                      style={{ color: complete ? "rgb(5,150,105)" : "var(--text-muted)", minWidth: 62, textAlign: "right" }}
+                    >
+                      {done}/{total} đã tick
+                    </span>
+                  </>
+                ) : (
+                  <span className="text-[10px] shrink-0" style={{ color: "var(--text-muted)" }}>Không có mục</span>
+                )}
+
+                {isOpen ? (
+                  <ChevronUp size={14} style={{ color: "var(--text-muted)" }} />
+                ) : (
+                  <ChevronDown size={14} style={{ color: "var(--text-muted)" }} />
+                )}
+              </div>
+
+              {isOpen && (
+                <div className="px-3 pb-2.5 space-y-2" style={{ background: "var(--bg-elevated)" }}>
+                  {HW_CATS.map(({ key, label, color }) => {
+                    const items = hw[key];
+                    if (!items?.length) return null;
+                    return (
+                      <div key={key}>
+                        <p className="text-[10px] font-bold uppercase tracking-widest pt-2 pb-1" style={{ color }}>
+                          {label}
+                        </p>
+                        {items.map((item, i) => {
+                          const sub = allSubmissions[student.id]?.[`${hw.id}_${key}_${i}`];
+                          const time = fmtSubTime(sub?.updatedAt);
+                          return (
+                            <div key={i} className="flex items-start gap-2 py-1">
+                              <span className="mt-[6px] w-1.5 h-1.5 rounded-full shrink-0" style={{ background: color }} />
+                              <span
+                                className="text-xs leading-snug flex-1 min-w-0 break-words"
+                                style={{ color: "var(--text-secondary)" }}
+                                dangerouslySetInnerHTML={{ __html: item.text }}
+                              />
+                              {sub?.ticked ? (
+                                <span className="text-[10px] shrink-0 font-semibold" style={{ color: "rgb(5,150,105)" }}>
+                                  ✓ Đã nộp{time ? ` · ${time}` : ""}
+                                </span>
+                              ) : (
+                                <span className="text-[10px] shrink-0" style={{ color: "var(--text-muted)" }}>—</span>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    );
+                  })}
+                  <Link
+                    href={`/admin/students/${student.id}`}
+                    className="inline-block text-[11px] font-medium hover:underline pt-1"
+                    style={{ color: "var(--accent-primary)" }}
+                  >
+                    Mở trang học viên →
+                  </Link>
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 // ─── ClassHomeworkSection ─────────────────────────────────────────────────────
 
 function ClassHomeworkSection({
   classId,
   homework,
   memberCodes,
+  allStudents,
 }: {
   classId: string;
   homework: Homework[];
   memberCodes: string[];
+  allStudents: (Student & { id: string })[];
 }) {
+  const { allSubmissions } = useAllSubmissions();
+  const { allDayLinks } = useAllDayLinks();
+
+  const members = useMemo(
+    () => memberCodes.map((c) => allStudents.find((s) => s.id === c)).filter(Boolean) as (Student & { id: string })[],
+    [memberCodes, allStudents]
+  );
   const [modal, setModal] = useState<{ mode: "add" } | { mode: "edit"; hw: Homework } | null>(null);
   const [dupPick, setDupPick] = useState<Homework | null>(null);
   const [dupModal, setDupModal] = useState<{ initial: Homework; target: DupTarget } | null>(null);
@@ -1188,6 +1369,14 @@ function ClassHomeworkSection({
             {sorted.map((hw) => {
               const isOpen = expanded === hw.id;
               const count = hwTaskCount(hw);
+
+              // Tiến độ cả lớp cho BTVN này
+              const perStudent = members.map((m) => calcHwDone(hw, allSubmissions[m.id]));
+              const completedCount = perStudent.filter((p) => p.total > 0 && p.done === p.total).length;
+              const totalItems = perStudent.reduce((sum, p) => sum + p.total, 0);
+              const doneItems = perStudent.reduce((sum, p) => sum + p.done, 0);
+              const classPct = totalItems > 0 ? Math.round((doneItems / totalItems) * 100) : 0;
+
               return (
                 <div
                   key={hw.id}
@@ -1218,7 +1407,27 @@ function ClassHomeworkSection({
                             {label} ({hw[key]!.length})
                           </span>
                         ))}
+                        {members.length > 0 && count > 0 && (
+                          <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold px-1.5 py-0.5 rounded-full"
+                            style={{
+                              background: completedCount === members.length ? "rgba(16,185,129,0.12)" : "rgba(0,0,0,0.05)",
+                              color: completedCount === members.length ? "rgb(5,150,105)" : "var(--text-secondary)",
+                            }}>
+                            {completedCount}/{members.length} HV xong
+                          </span>
+                        )}
                       </div>
+                      {members.length > 0 && count > 0 && (
+                        <div className="flex items-center gap-2 mt-1.5" style={{ maxWidth: 220 }}>
+                          <div className="flex-1 h-1.5 rounded-full overflow-hidden" style={{ background: "var(--border)" }}>
+                            <div className="h-full rounded-full"
+                              style={{ width: `${classPct}%`, background: classPct === 100 ? "rgb(5,150,105)" : "var(--accent-primary)" }} />
+                          </div>
+                          <span className="text-[10px] font-semibold tabular-nums" style={{ color: "var(--text-muted)" }}>
+                            {classPct}%
+                          </span>
+                        </div>
+                      )}
                     </div>
                     <div className="flex items-center gap-2 ml-3 shrink-0">
                       <button
@@ -1267,6 +1476,12 @@ function ClassHomeworkSection({
                       className="px-4 py-4 space-y-3 border-t"
                       style={{ borderColor: "var(--border)", background: "var(--bg-elevated)" }}
                     >
+                      <HwStudentProgress
+                        hw={hw}
+                        members={members}
+                        allSubmissions={allSubmissions}
+                        allDayLinks={allDayLinks}
+                      />
                       {HW_CATS.map(({ key, label, color }) => renderItems(hw[key], label, color))}
                     </div>
                   )}
@@ -1802,7 +2017,12 @@ export default function ClassDetailPage() {
 
         {/* Right col */}
         <div className="lg:col-span-3 space-y-5">
-          <ClassHomeworkSection classId={classId} homework={homework} memberCodes={memberCodes} />
+          <ClassHomeworkSection
+            classId={classId}
+            homework={homework}
+            memberCodes={memberCodes}
+            allStudents={allStudents as (Student & { id: string })[]}
+          />
           <ProgressGridSection
             homework={homework}
             memberCodes={memberCodes}
