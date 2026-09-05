@@ -42,7 +42,8 @@ function BookingRow({ booking }: { booking: Booking }) {
 
   async function handle(status: BookingStatus) {
     setLoading(status);
-    await updateBookingStatus(booking.id, status);
+    // Truyền slotId để khung giờ được nhả ra khi từ chối, giữ lại khi duyệt.
+    await updateBookingStatus(booking.id, status, booking.slotId || undefined);
     setLoading(null);
   }
 

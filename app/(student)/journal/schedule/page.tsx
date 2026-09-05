@@ -241,25 +241,32 @@ function SlotCard({
   const [note, setNote] = useState("");
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
+  const [error, setError] = useState("");
 
   const date = new Date(slot.date).toLocaleDateString("vi-VN", {
     weekday: "long", day: "numeric", month: "long", year: "numeric",
   });
 
-  const isPast = slot.date < new Date().toISOString().slice(0, 10);
+  const isPast = slot.date < localToday();
   if (isPast) return null;
 
   async function handleBook() {
     setLoading(true);
+    setError("");
     try {
       await onBook(slot, note);
       setDone(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Đặt lịch không thành công.");
     } finally {
       setLoading(false);
     }
   }
 
   const isBooked = booked || done;
+  // `taken` do server đánh dấu khi có HV giữ chỗ. Nếu chính mình là người đặt
+  // thì `booked` đã true, nên chỉ khung của người khác mới hiện "Đã có người đặt".
+  const isTakenByOther = !!slot.taken && !isBooked;
 
   return (
     <div
@@ -268,6 +275,7 @@ function SlotCard({
         background: "var(--bg-elevated,#FBF7F2)",
         border: `1px solid ${isBooked ? "rgba(16,185,129,0.4)" : "var(--border,#DDD0BC)"}`,
         marginBottom: ".4rem",
+        opacity: isTakenByOther ? 0.55 : 1,
       }}
     >
       <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "1rem" }}>
@@ -282,6 +290,10 @@ function SlotCard({
         {isBooked ? (
           <span style={{ fontSize: ".65rem", fontWeight: 700, padding: ".2rem .6rem", borderRadius: 99, background: "rgba(16,185,129,0.15)", color: "rgb(5,150,105)", flexShrink: 0 }}>
             ✓ Đã đặt
+          </span>
+        ) : isTakenByOther ? (
+          <span style={{ fontSize: ".65rem", fontWeight: 700, padding: ".2rem .6rem", borderRadius: 99, background: "rgba(154,134,114,0.18)", color: "#7A6754", flexShrink: 0 }}>
+            Đã có người đặt
           </span>
         ) : (
           <div style={{ display: "flex", flexDirection: "column", gap: ".4rem", alignItems: "flex-end" }}>
@@ -318,6 +330,11 @@ function SlotCard({
             >
               {loading ? "Đang đặt…" : "Đặt lịch"}
             </button>
+            {error && (
+              <p style={{ fontSize: ".68rem", color: "#B4231C", margin: 0, maxWidth: 170, textAlign: "right" }}>
+                {error}
+              </p>
+            )}
           </div>
         )}
       </div>
@@ -530,23 +547,31 @@ export default function SchedulePage() {
   const history  = useMemo(() => allSessions.filter((s) => s.date < td).reverse(), [allSessions, td]);
 
   // Booking data
-  const bookedSlotIds = new Set(bookings.map((b) => b.slotId));
-  const upcomingSlots = slots.filter((s) => s.date >= new Date().toISOString().slice(0, 10));
+  // Booking bị từ chối thì slot được nhả ra, HV phải đặt lại được — nên không
+  // tính vào danh sách "đã đặt".
+  const bookedSlotIds = new Set(
+    bookings.filter((b) => b.status !== "declined").map((b) => b.slotId)
+  );
+  const upcomingSlots = slots.filter((s) => s.date >= td);
   const myBookings = [...bookings].sort((a, b) => b.date.localeCompare(a.date));
   const pendingCount = bookings.filter((b) => b.status === "pending").length;
 
+  /**
+   * Đặt lịch đi qua API route: server giữ chỗ bằng transaction rồi mới ghi
+   * booking, nên hai HV bấm cùng lúc chỉ một người thắng.
+   */
   async function handleBook(slot: Slot, note: string) {
     if (!profile) return;
-    await createBooking({
-      studentId: profile.id,
-      studentName: profile.displayName ?? "Học viên",
-      slotId: slot.id,
-      date: slot.date,
-      time: slot.time,
-      note: note || undefined,
-      status: "pending",
-      createdAt: new Date().toISOString(),
+    const res = await fetch("/api/bookings/slot", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      body: JSON.stringify({ slotId: slot.id, note }),
     });
+    if (!res.ok) {
+      const { error } = await res.json().catch(() => ({ error: res.statusText }));
+      throw new Error(error || "Đặt lịch không thành công.");
+    }
   }
 
   async function handleRequestBooking(date: string, time: string, topic: string) {

@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { useSlots } from "@/hooks/firebase/useSlots";
 import { useBookings } from "@/hooks/firebase/useBookings";
-import { createSlotsBulk, deleteSlot, deleteSlots } from "@/lib/firebase/helpers";
+import { createSlotsBulk, deleteSlot, deleteSlots, syncSlotTaken } from "@/lib/firebase/helpers";
 import { useToast } from "@/components/shared/Toast";
 import type { Slot } from "@/lib/firebase/types";
 
@@ -131,6 +131,7 @@ export default function SlotsPage() {
   // Danh sách
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [busy, setBusy] = useState(false);
+  const [syncing, setSyncing] = useState(false);
 
   const upcoming = useMemo(() => slots.filter((s) => s.date >= today), [slots, today]);
   const past = useMemo(() => slots.filter((s) => s.date < today), [slots, today]);
@@ -144,6 +145,39 @@ export default function SlotsPage() {
     }
     return map;
   }, [bookings]);
+
+  /**
+   * Cờ `slot.taken` là thứ DUY NHẤT học viên đọc được để biết khung giờ còn
+   * trống hay không (rules chặn HV đọc booking của người khác). Booking tạo
+   * trước khi có tính năng này — hoặc bị xoá thẳng trên Firebase Console — sẽ
+   * làm cờ lệch với thực tế, nên đối chiếu lại và cho admin sửa bằng một nút.
+   */
+  const drift = useMemo(() => {
+    const held = new Set(
+      bookings.filter((b) => b.slotId && b.status !== "declined").map((b) => b.slotId)
+    );
+    const fix: Record<string, boolean | null> = {};
+    for (const s of slots) {
+      const shouldBeTaken = held.has(s.id);
+      if (shouldBeTaken !== (s.taken === true)) fix[`${s.id}/taken`] = shouldBeTaken ? true : null;
+    }
+    return fix;
+  }, [slots, bookings]);
+
+  const driftCount = Object.keys(drift).length;
+
+  async function handleSync() {
+    if (driftCount === 0 || syncing) return;
+    setSyncing(true);
+    try {
+      await withTimeout(syncSlotTaken(drift));
+      toast(`Đã đồng bộ ${driftCount} khung giờ`, { variant: "success" });
+    } catch (err) {
+      toast(errText(err), { variant: "error", duration: 6000 });
+    } finally {
+      setSyncing(false);
+    }
+  }
 
   // Chip giờ = mặc định + giờ đã dùng trong dữ liệu + giờ admin tự thêm
   const timeChips = useMemo(() => {
@@ -379,6 +413,27 @@ export default function SlotsPage() {
       <h1 className="text-xl font-bold" style={{ color: "var(--text-primary)" }}>
         ⏰ Khung giờ
       </h1>
+
+      {/* ── Cảnh báo lệch cờ giữ chỗ ── */}
+      {driftCount > 0 && (
+        <div
+          className="flex flex-wrap items-center gap-3 rounded-xl px-4 py-3 border"
+          style={{ background: "rgba(234,179,8,0.08)", borderColor: "rgba(234,179,8,0.35)" }}
+        >
+          <span className="text-sm flex-1 min-w-[220px]" style={{ color: "var(--text-primary)" }}>
+            ⚠️ {driftCount} khung giờ đang hiển thị sai trạng thái còn trống với học viên.
+          </span>
+          <button
+            type="button"
+            onClick={handleSync}
+            disabled={syncing}
+            className="text-xs font-semibold px-3 py-2 rounded-lg"
+            style={{ background: "var(--accent-primary)", color: "#fff", opacity: syncing ? 0.5 : 1 }}
+          >
+            {syncing ? "Đang đồng bộ..." : "Đồng bộ ngay"}
+          </button>
+        </div>
+      )}
 
       {/* ── Bộ tạo khung giờ ── */}
       <section

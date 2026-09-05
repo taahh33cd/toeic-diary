@@ -9,7 +9,7 @@ import { useClassAttendance } from "@/hooks/firebase/useClassAttendance";
 import { useAllSubmissions } from "@/hooks/firebase/useAllSubmissions";
 import { useAllDayLinks } from "@/hooks/firebase/useAllDayLinks";
 import { setAttendance, createStudent } from "@/lib/firebase/helpers";
-import type { SchoolClass, AttendanceStatus, Student, Homework, HwItem, SubmissionsMap, DayLinksMap } from "@/lib/firebase/types";
+import type { SchoolClass, AttendanceStatus, Student, Homework, HwItem, SubmissionsMap, DayLinksMap, Booking } from "@/lib/firebase/types";
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -20,7 +20,8 @@ const DAYS_VI: Record<string, string> = {
 };
 
 function todayStr() {
-  return new Date().toISOString().slice(0, 10);
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
 
 const COURSE_BADGE: Record<string, { label: string; bg: string; color: string }> = {
@@ -311,6 +312,177 @@ function TodayClassPanel({
   );
 }
 
+// ─── Today Timeline ───────────────────────────────────────────────────────────
+
+/** Phút kể từ 00:00 của "19:00" hoặc "19:00–20:00"; giờ trống xếp cuối ngày. */
+function startMinutes(time: string | undefined): number {
+  const m = /(\d{1,2}):(\d{2})/.exec(time ?? "");
+  return m ? Number(m[1]) * 60 + Number(m[2]) : 24 * 60 + 1;
+}
+
+type TodayEntry =
+  | { key: string; time?: string; kind: "class"; cls: SchoolClass }
+  | { key: string; time?: string; kind: "booking"; booking: Booking }
+  | { key: string; time?: string; kind: "personal"; student: Student & { id: string }; title?: string };
+
+const KIND_BADGE: Record<TodayEntry["kind"], { label: string; bg: string; color: string }> = {
+  class:    { label: "LỚP",       bg: "rgba(68,65,196,0.10)",  color: "#4441c4" },
+  booking:  { label: "HẸN 1-1",   bg: "rgba(22,163,74,0.10)",  color: "#16a34a" },
+  personal: { label: "CỐ ĐỊNH",   bg: "rgba(86,94,113,0.10)",  color: "#565e71" },
+};
+
+function TodayTimeline({
+  classes,
+  bookings,
+  students,
+  date,
+  todayDayName,
+}: {
+  classes: SchoolClass[];
+  bookings: Booking[];
+  students: (Student & { id: string })[];
+  date: string;
+  todayDayName: string;
+}) {
+  const [expanded, setExpanded] = useState<string | null>(null);
+
+  const entries = useMemo<TodayEntry[]>(() => {
+    const out: TodayEntry[] = [];
+
+    // 1. Lớp học theo lịch tuần
+    for (const cls of classes) {
+      for (const ses of cls.weeklySchedule ?? []) {
+        if (ses.day !== todayDayName) continue;
+        out.push({ key: `cls_${cls.id}_${ses.time}`, time: ses.time, kind: "class", cls });
+      }
+    }
+
+    // 2. Lịch hẹn hôm nay — bỏ lượt đã từ chối
+    for (const b of bookings) {
+      if (b.date !== date || b.status === "declined") continue;
+      out.push({ key: `bk_${b.id}`, time: b.time, kind: "booking", booking: b });
+    }
+
+    // 3. Lịch 1-1 của từng HV. Giống trang HV: lịch cố định hàng tuần chỉ tính
+    //    khi học viên không thuộc lớp nào, tránh đếm trùng buổi của lớp.
+    for (const st of students) {
+      if (st.frozen) continue;
+      for (const item of st.schedule ?? []) {
+        if (item.date !== date) continue;
+        out.push({ key: `sch_${st.id}_${item.id ?? item.date}_${item.time ?? ""}`, time: item.time, kind: "personal", student: st, title: item.title });
+      }
+      const inClass = classes.some((c) => c.members?.includes(st.id));
+      if (inClass) continue;
+      for (const ses of st.weeklySchedule ?? []) {
+        if (ses.day !== todayDayName) continue;
+        out.push({ key: `wk_${st.id}_${ses.time}`, time: ses.time, kind: "personal", student: st });
+      }
+    }
+
+    return out.sort((a, b) => startMinutes(a.time) - startMinutes(b.time));
+  }, [classes, bookings, students, date, todayDayName]);
+
+  if (entries.length === 0) {
+    return (
+      <div className="silk-card rounded-2xl p-7 text-center">
+        <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+          Hôm nay không có lớp hay lịch hẹn nào.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-2">
+      {entries.map((e) => {
+        const badge = KIND_BADGE[e.kind];
+        const isOpen = expanded === e.key;
+
+        let title = "";
+        let sub: React.ReactNode = null;
+        let href: string | undefined;
+
+        if (e.kind === "class") {
+          title = e.cls.name;
+          sub = <span>{e.cls.members?.length ?? 0} học viên</span>;
+          href = `/admin/classes/${e.cls.id}`;
+        } else if (e.kind === "booking") {
+          title = e.booking.studentName;
+          sub = (
+            <span
+              className="px-2 py-0.5 rounded-full text-[10px] font-bold"
+              style={
+                e.booking.status === "pending"
+                  ? { background: "rgba(245,158,11,0.15)", color: "#b45309" }
+                  : { background: "rgba(22,163,74,0.12)", color: "#15803d" }
+              }
+            >
+              {e.booking.status === "pending" ? "CHỜ DUYỆT" : "ĐÃ DUYỆT"}
+              {e.booking.note ? ` · ${e.booking.note}` : ""}
+            </span>
+          );
+          href = "/admin/bookings";
+        } else {
+          title = e.student.name ?? e.student.id;
+          sub = <span>{e.title ?? "Buổi 1-1"}</span>;
+          href = `/admin/students/${e.student.id}`;
+        }
+
+        return (
+          <div key={e.key} className="silk-card rounded-xl overflow-hidden">
+            <div className="flex items-center gap-3 px-4 py-2.5">
+              <span
+                className="text-sm font-bold tabular-nums shrink-0"
+                style={{ color: "var(--text-primary)", minWidth: 92 }}
+              >
+                {e.time ?? "—"}
+              </span>
+              <span
+                className="text-[10px] font-bold px-2 py-1 rounded-md shrink-0"
+                style={{ background: badge.bg, color: badge.color, letterSpacing: ".04em" }}
+              >
+                {badge.label}
+              </span>
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-semibold truncate" style={{ color: "var(--text-primary)" }}>
+                  {title}
+                </p>
+                <p className="text-xs mt-0.5 truncate" style={{ color: "var(--text-muted)" }}>
+                  {sub}
+                </p>
+              </div>
+              {e.kind === "class" && (
+                <button
+                  type="button"
+                  onClick={() => setExpanded(isOpen ? null : e.key)}
+                  className="text-xs font-medium shrink-0 transition-colors hover:text-[#4441c4]"
+                  style={{ color: "var(--text-muted)" }}
+                >
+                  {isOpen ? "Đóng" : "Điểm danh"}
+                </button>
+              )}
+              {href && (
+                <Link
+                  href={href}
+                  className="text-xs font-medium shrink-0 transition-colors hover:text-[#4441c4]"
+                  style={{ color: "var(--text-muted)" }}
+                >
+                  Chi tiết →
+                </Link>
+              )}
+            </div>
+            {e.kind === "class" && isOpen && (
+              <div className="px-2 pb-2">
+                <TodayClassPanel cls={e.cls} allStudents={students} date={date} />
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 // ─── Student Mini Card ────────────────────────────────────────────────────────
 
 function StudentMiniCard({ student }: { student: Student & { id: string } }) {
@@ -574,11 +746,6 @@ export default function AdminDashboardClient() {
     return best;
   }, null);
 
-  const todayClasses = useMemo(
-    () => classes.filter((cls) => cls.weeklySchedule?.some((s) => s.day === todayDayName)),
-    [classes, todayDayName]
-  );
-
   const sortedActive = useMemo(() => {
     const q = search.trim().toLowerCase();
     const filtered = q
@@ -669,8 +836,8 @@ export default function AdminDashboardClient() {
         })}
       </div>
 
-      {/* ── Today's classes ── */}
-      {!loading && todayClasses.length > 0 && (
+      {/* ── Today's timeline: lớp học + lịch hẹn + buổi 1-1 cố định ── */}
+      {!loading && (
         <div className="space-y-3">
           <h2
             className="flex items-center gap-1.5 text-base font-semibold"
@@ -679,19 +846,16 @@ export default function AdminDashboardClient() {
             <span className="material-symbols-outlined text-[17px]" style={{ color: "var(--text-muted)", fontVariationSettings: "'wght' 300" }}>
               today
             </span>
-            Lớp học hôm nay
-            <span className="text-xs font-normal opacity-50">· {DAYS_VI[todayDayName]}</span>
+            Lịch hôm nay
+            <span className="text-xs font-normal opacity-50">· {DAYS_VI[todayDayName]} {date}</span>
           </h2>
-          <div className="space-y-2">
-            {todayClasses.map((cls) => (
-              <TodayClassPanel
-                key={cls.id}
-                cls={cls}
-                allStudents={students as (Student & { id: string })[]}
-                date={date}
-              />
-            ))}
-          </div>
+          <TodayTimeline
+            classes={classes}
+            bookings={bookings}
+            students={students as (Student & { id: string })[]}
+            date={date}
+            todayDayName={todayDayName}
+          />
         </div>
       )}
 

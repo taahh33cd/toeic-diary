@@ -294,11 +294,20 @@ export async function createBooking(
   return id;
 }
 
+/**
+ * Đổi trạng thái booking. Truyền `slotId` để cờ giữ chỗ trên khung giờ đi theo:
+ * từ chối thì nhả slot cho HV khác đặt, duyệt lại thì giữ chỗ trở lại. Chỉ
+ * teacher/admin ghi được `slots` nên hàm này chỉ dùng ở khu admin.
+ */
 export async function updateBookingStatus(
   id: string,
-  status: Booking["status"]
+  status: Booking["status"],
+  slotId?: string
 ): Promise<void> {
   await set(ref(firebaseDb, `bookings/${id}/status`), status);
+  if (slotId) {
+    await set(ref(firebaseDb, `slots/${slotId}/taken`), status === "declined" ? null : true);
+  }
 }
 
 export async function updateBookingNote(
@@ -344,6 +353,17 @@ export async function createSlotsBulk(
 
   await update(ref(firebaseDb, "slots"), updates);
   return ids;
+}
+
+/**
+ * Ghi lại cờ giữ chỗ cho nhiều khung giờ. Khoá của `updates` là đường dẫn tương
+ * đối dưới `slots`, ví dụ `s123/taken`; giá trị `null` nghĩa là nhả chỗ.
+ */
+export async function syncSlotTaken(
+  updates: Record<string, boolean | null>
+): Promise<void> {
+  if (Object.keys(updates).length === 0) return;
+  await update(ref(firebaseDb, "slots"), updates);
 }
 
 /** Xóa nhiều khung giờ trong một lần ghi. */

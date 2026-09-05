@@ -243,6 +243,12 @@ export interface Slot {
   date: string;       // YYYY-MM-DD
   time: string;
   note?: string;
+  /**
+   * Đã có học viên giữ chỗ (booking pending hoặc approved). Khung giờ là lịch
+   * 1-1 nên chỉ nhận một người. Cờ này nằm trên `slots` — node duy nhất mọi HV
+   * đọc được — vì rules chặn HV đọc booking của người khác.
+   */
+  taken?: boolean;
 }
 
 // ─── Class (path: classes/{id}) ──────────────────────────────────────────────
