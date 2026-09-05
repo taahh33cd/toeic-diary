@@ -295,18 +295,21 @@ export async function createBooking(
 }
 
 /**
- * Đổi trạng thái booking. Truyền `slotId` để cờ giữ chỗ trên khung giờ đi theo:
- * từ chối thì nhả slot cho HV khác đặt, duyệt lại thì giữ chỗ trở lại. Chỉ
- * teacher/admin ghi được `slots` nên hàm này chỉ dùng ở khu admin.
+ * Đổi trạng thái booking. Truyền `slot` để cờ giữ chỗ trên khung giờ đi theo:
+ * duyệt thì giữ chỗ, từ chối thì nhả ra — NHƯNG chỉ khi không còn lượt đặt nào
+ * khác đang giữ cùng khung giờ đó (`heldByOthers`). Bỏ qua điều kiện này là nhả
+ * nhầm chỗ của người đã được duyệt, khiến khung giờ hiện lại là còn trống.
+ * Chỉ teacher/admin ghi được `slots` nên hàm này chỉ dùng ở khu admin.
  */
 export async function updateBookingStatus(
   id: string,
   status: Booking["status"],
-  slotId?: string
+  slot?: { id: string; heldByOthers: boolean }
 ): Promise<void> {
   await set(ref(firebaseDb, `bookings/${id}/status`), status);
-  if (slotId) {
-    await set(ref(firebaseDb, `slots/${slotId}/taken`), status === "declined" ? null : true);
+  if (slot) {
+    const stillTaken = status !== "declined" || slot.heldByOthers;
+    await set(ref(firebaseDb, `slots/${slot.id}/taken`), stillTaken ? true : null);
   }
 }
 

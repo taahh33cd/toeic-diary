@@ -23,7 +23,7 @@ const FILTER_TABS: { key: BookingStatus | "all"; label: string }[] = [
   { key: "declined", label: "Từ chối" },
 ];
 
-function BookingRow({ booking }: { booking: Booking }) {
+function BookingRow({ booking, allBookings }: { booking: Booking; allBookings: Booking[] }) {
   const [loading, setLoading] = useState<BookingStatus | null>(null);
   const [suggesting, setSuggesting] = useState(false);
   const [suggestDate, setSuggestDate] = useState("");
@@ -42,8 +42,16 @@ function BookingRow({ booking }: { booking: Booking }) {
 
   async function handle(status: BookingStatus) {
     setLoading(status);
-    // Truyền slotId để khung giờ được nhả ra khi từ chối, giữ lại khi duyệt.
-    await updateBookingStatus(booking.id, status, booking.slotId || undefined);
+    // Chỉ nhả khung giờ khi không còn lượt đặt nào khác đang giữ nó — nếu không,
+    // từ chối HV thứ hai sẽ mở lại khung của HV đã được duyệt.
+    const heldByOthers = allBookings.some(
+      (b) => b.id !== booking.id && b.slotId === booking.slotId && b.status !== "declined"
+    );
+    await updateBookingStatus(
+      booking.id,
+      status,
+      booking.slotId ? { id: booking.slotId, heldByOthers } : undefined
+    );
     setLoading(null);
   }
 
@@ -300,7 +308,7 @@ export default function BookingsPage() {
       ) : (
         <div className="space-y-2">
           {filtered.map((b) => (
-            <BookingRow key={b.id} booking={b} />
+            <BookingRow key={b.id} booking={b} allBookings={bookings} />
           ))}
         </div>
       )}
