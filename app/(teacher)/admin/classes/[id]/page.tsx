@@ -70,15 +70,36 @@ function hwTaskCount(hw: Homework) {
 
 // ─── UI primitives ────────────────────────────────────────────────────────────
 
+/**
+ * `bare`: bỏ khung ngoài để thẻ nằm lọt trong một khung lớn hơn (cột trái gộp
+ * Thông tin lớp + Học viên thành một thẻ duy nhất). Header vẫn giữ nguyên nên
+ * các nút hành động của từng phần không mất.
+ */
 function SectionCard({
   title,
   action,
   children,
+  bare = false,
 }: {
   title: string;
   action?: React.ReactNode;
   children: React.ReactNode;
+  bare?: boolean;
 }) {
+  if (bare) {
+    return (
+      <div>
+        <div className="flex items-center justify-between px-4 py-2.5">
+          <h3 className="text-sm font-semibold" style={{ color: "var(--text-primary)" }}>
+            {title}
+          </h3>
+          {action}
+        </div>
+        <div className="px-4 pb-4">{children}</div>
+      </div>
+    );
+  }
+
   return (
     <div
       className="rounded-xl border"
@@ -533,9 +554,11 @@ const DAY_OPTIONS = [
 function ClassInfoSection({
   cls,
   classId,
+  bare = false,
 }: {
   cls: SchoolClass;
   classId: string;
+  bare?: boolean;
 }) {
   const [editing, setEditing] = useState(false);
   const [name, setName] = useState(cls.name ?? "");
@@ -560,6 +583,7 @@ function ClassInfoSection({
 
   return (
     <SectionCard
+      bare={bare}
       title="📋 Thông tin lớp"
       action={
         editing ? (
@@ -823,10 +847,12 @@ function StudentGridSection({
   cls,
   classId,
   allStudents,
+  bare = false,
 }: {
   cls: SchoolClass;
   classId: string;
   allStudents: (Student & { id: string })[];
+  bare?: boolean;
 }) {
   const memberCodes = cls.members ?? [];
   const [showAdd, setShowAdd] = useState(false);
@@ -847,6 +873,7 @@ function StudentGridSection({
   return (
     <>
       <SectionCard
+        bare={bare}
         title={`👥 Học viên (${members.length})`}
         action={
           <Btn onClick={() => setShowAdd(true)} variant="primary" size="xs">
@@ -1239,7 +1266,9 @@ function ClassHomeworkSection({
   const [modal, setModal] = useState<{ mode: "add" } | { mode: "edit"; hw: Homework } | null>(null);
   const [dupPick, setDupPick] = useState<Homework | null>(null);
   const [dupModal, setDupModal] = useState<{ initial: Homework; target: DupTarget } | null>(null);
-  const [expanded, setExpanded] = useState<string | null>(null);
+  // `undefined` = chưa thao tác → mở sẵn BTVN mới nhất để vào trang là thấy nội
+  // dung ngay; `null` = người dùng chủ động đóng hết.
+  const [expanded, setExpanded] = useState<string | null | undefined>(undefined);
   const [propagating, setPropagating] = useState(false);
   const autosavedHwIdRef = useRef<string | null>(null);
 
@@ -1247,6 +1276,8 @@ function ClassHomeworkSection({
     () => [...homework].sort((a, b) => b.date.localeCompare(a.date)),
     [homework]
   );
+
+  const openId = expanded === undefined ? sorted[0]?.id ?? null : expanded;
 
   async function handleAutosave(hw: Homework, isNew: boolean) {
     if (isNew) {
@@ -1367,7 +1398,7 @@ function ClassHomeworkSection({
         ) : (
           <div className="space-y-2">
             {sorted.map((hw) => {
-              const isOpen = expanded === hw.id;
+              const isOpen = openId === hw.id;
               const count = hwTaskCount(hw);
 
               // Tiến độ cả lớp cho BTVN này
@@ -1919,6 +1950,82 @@ function AttendanceSection({
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
+type ClassTabKey = "hw" | "week" | "attendance";
+
+const CLASS_TABS: { key: ClassTabKey; label: string }[] = [
+  { key: "hw",         label: "📊 Tiến độ BTVN" },
+  { key: "week",       label: "📈 Tiến độ tuần" },
+  { key: "attendance", label: "📅 Điểm danh" },
+];
+
+/**
+ * Ba khối thống kê dồn vào một tab thay vì xếp chồng: trang lớp lấy BTVN làm
+ * trọng tâm, ba bảng này đẩy BTVN đi quá xa nếu để cạnh nhau. Đặt full-width
+ * chứ không nhét vào cột trái vì chúng là bảng nhiều cột.
+ */
+function ClassStatsTabs({
+  classId,
+  cls,
+  homework,
+  memberCodes,
+  allStudents,
+  attendance,
+}: {
+  classId: string;
+  cls: SchoolClass;
+  homework: Homework[];
+  memberCodes: string[];
+  allStudents: (Student & { id: string })[];
+  attendance: Record<string, Record<string, AttendanceStatus>>;
+}) {
+  const [tab, setTab] = useState<ClassTabKey>("hw");
+
+  return (
+    <div className="space-y-3">
+      <div className="flex gap-2 flex-wrap">
+        {CLASS_TABS.map(({ key, label }) => {
+          const active = tab === key;
+          return (
+            <button
+              key={key}
+              type="button"
+              onClick={() => setTab(key)}
+              className="text-xs font-semibold px-3 py-2 rounded-xl border transition-colors"
+              style={{
+                borderColor: active ? "var(--accent-primary)" : "var(--border)",
+                background: active ? "var(--accent-primary)" : "var(--bg-elevated)",
+                color: active ? "#fff" : "var(--text-secondary)",
+              }}
+            >
+              {label}
+            </button>
+          );
+        })}
+      </div>
+
+      {tab === "hw" && (
+        <ProgressGridSection homework={homework} memberCodes={memberCodes} allStudents={allStudents} />
+      )}
+      {tab === "week" && (
+        <WeekProgressSection
+          homework={homework}
+          memberCodes={memberCodes}
+          allStudents={allStudents}
+          attendance={attendance}
+        />
+      )}
+      {tab === "attendance" && (
+        <AttendanceSection
+          classId={classId}
+          cls={cls}
+          allStudents={allStudents}
+          attendance={attendance}
+        />
+      )}
+    </div>
+  );
+}
+
 export default function ClassDetailPage() {
   const params = useParams();
   const classId = params.id as string;
@@ -2003,45 +2110,41 @@ export default function ClassDetailPage() {
         </button>
       </div>
 
-      {/* 2-column layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-5">
-        {/* Left col */}
-        <div className="lg:col-span-2 space-y-5">
-          <ClassInfoSection cls={schoolClass} classId={classId} />
+      {/* BTVN là trọng tâm: chiếm 3/4 bề ngang. Cột trái gộp thông tin lớp +
+          học viên vào một thẻ và dính theo khi cuộn, nên không bỏ trống dù
+          ngắn hơn hẳn danh sách BTVN. */}
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 items-start">
+        <div
+          className="lg:col-span-1 lg:sticky lg:top-4 rounded-xl border divide-y"
+          style={{ background: "var(--bg-elevated)", borderColor: "var(--border)" }}
+        >
+          <ClassInfoSection cls={schoolClass} classId={classId} bare />
           <StudentGridSection
             cls={schoolClass}
             classId={classId}
             allStudents={allStudents as (Student & { id: string })[]}
+            bare
           />
         </div>
 
-        {/* Right col */}
-        <div className="lg:col-span-3 space-y-5">
+        <div className="lg:col-span-3">
           <ClassHomeworkSection
             classId={classId}
             homework={homework}
             memberCodes={memberCodes}
             allStudents={allStudents as (Student & { id: string })[]}
           />
-          <ProgressGridSection
-            homework={homework}
-            memberCodes={memberCodes}
-            allStudents={allStudents as (Student & { id: string })[]}
-          />
-          <WeekProgressSection
-            homework={homework}
-            memberCodes={memberCodes}
-            allStudents={allStudents as (Student & { id: string })[]}
-            attendance={attendance as Record<string, Record<string, AttendanceStatus>>}
-          />
-          <AttendanceSection
-            classId={classId}
-            cls={schoolClass}
-            allStudents={allStudents as (Student & { id: string })[]}
-            attendance={attendance as Record<string, Record<string, AttendanceStatus>>}
-          />
         </div>
       </div>
+
+      <ClassStatsTabs
+        classId={classId}
+        cls={schoolClass}
+        homework={homework}
+        memberCodes={memberCodes}
+        allStudents={allStudents as (Student & { id: string })[]}
+        attendance={attendance as Record<string, Record<string, AttendanceStatus>>}
+      />
     </div>
   );
 }
