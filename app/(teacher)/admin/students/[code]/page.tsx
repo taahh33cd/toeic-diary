@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Copy, Check, Plus, Trash2, ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
+import { ArrowLeft, Copy, Check, Plus, Trash2, ChevronDown, ChevronUp, ExternalLink, ImageDown } from "lucide-react";
 import { useStudent } from "@/hooks/firebase/useStudent";
 import { useHomework } from "@/hooks/firebase/useHomework";
 import { useSubmissions } from "@/hooks/firebase/useSubmissions";
@@ -12,6 +12,7 @@ import { useHwViewed } from "@/hooks/firebase/useHwViewed";
 import { useHwFiles } from "@/hooks/firebase/useHwFiles";
 import { useAllStudents } from "@/hooks/firebase/useAllStudents";
 import { useClasses } from "@/hooks/firebase/useClasses";
+import { HwExportModal } from "@/components/admin/HwExportModal";
 import {
   updateStudent,
   deleteStudent,
@@ -1568,6 +1569,7 @@ function PersonalHWSection({
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
   const [modal, setModal] = useState<{ mode: "add" | "edit"; initial: HwFormState; editId?: string } | null>(null);
   const [dupPick, setDupPick] = useState<Homework | null>(null);
+  const [exporting, setExporting] = useState<Homework | null>(null);
   const [dupModal, setDupModal] = useState<{ initial: HwFormState; target: DupTarget } | null>(null);
   const [deleting, setDeleting] = useState<string | null>(null);
   const [fileModal, setFileModal] = useState<{ url: string; hwId: string } | null>(null);
@@ -1683,6 +1685,10 @@ function PersonalHWSection({
           onAutosave={(hw, isNew) => handleAutosaveHw(hw, isNew, modal.editId)}
           onClose={() => { setModal(null); autosavedHwIdRef.current = null; }}
         />
+      )}
+
+      {exporting && (
+        <HwExportModal hw={exporting} label={code} onClose={() => setExporting(null)} />
       )}
 
       {dupPick && (
@@ -1808,6 +1814,13 @@ function PersonalHWSection({
                     className="p-1 hover:opacity-70 shrink-0" style={{ color: "var(--text-muted)" }}
                   >
                     <ChevronDown size={12} style={{ display: "none" }} />✏️
+                  </button>
+                  <button
+                    onClick={(e) => { e.stopPropagation(); setExporting(hw); }}
+                    title="Xuất ảnh đề bài để gửi học viên"
+                    className="p-1 hover:opacity-70 shrink-0" style={{ color: "rgb(16,185,129)" }}
+                  >
+                    <ImageDown size={12} />
                   </button>
                   <button
                     onClick={(e) => { e.stopPropagation(); setDupPick(hw); }}
