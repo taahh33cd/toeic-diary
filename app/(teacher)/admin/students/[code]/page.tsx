@@ -1572,13 +1572,54 @@ function PersonalHWSection({
   const [exporting, setExporting] = useState<Homework | null>(null);
   const [dupModal, setDupModal] = useState<{ initial: HwFormState; target: DupTarget } | null>(null);
   const [deleting, setDeleting] = useState<string | null>(null);
-  const [fileModal, setFileModal] = useState<{ url: string; hwId: string } | null>(null);
+  const [fileModal, setFileModal] = useState<{ hwId: string; index: number } | null>(null);
   const [noteInput, setNoteInput] = useState("");
   const [savingNote, setSavingNote] = useState(false);
   const [noteSaved, setNoteSaved] = useState(false);
   const autosavedHwIdRef = useRef<string | null>(null);
+  const touchStartXRef = useRef<number | null>(null);
 
   const { hwViewed } = useHwViewed(code);
+
+  // Danh sách file của BTVN đang mở, để duyệt qua lại. Bài nộp kiểu cũ chỉ có
+  // một link Drive nên coi như danh sách một phần tử.
+  const modalFiles: string[] = (() => {
+    if (!fileModal) return [];
+    const urls = Object.values(hwFiles[fileModal.hwId] ?? {}).map((f) => f.url);
+    if (urls.length > 0) return urls;
+    const legacy = dayLinks[fileModal.hwId]?.link;
+    return legacy ? [legacy] : [];
+  })();
+
+  const modalUrl = fileModal ? modalFiles[fileModal.index] ?? "" : "";
+
+  const stepFile = useCallback((delta: number) => {
+    setFileModal((cur) => {
+      if (!cur) return cur;
+      const count = Object.values(hwFiles[cur.hwId] ?? {}).length || 1;
+      const next = cur.index + delta;
+      // Dừng ở hai đầu thay vì vòng lại: giáo viên biết ngay đã xem hết.
+      if (next < 0 || next >= count) return cur;
+      return { ...cur, index: next };
+    });
+  }, [hwFiles]);
+
+  useEffect(() => {
+    if (!fileModal) return;
+    function onKey(e: KeyboardEvent) {
+      // Đang gõ nhận xét thì ←/→ phải là di chuyển con trỏ, không phải đổi ảnh.
+      const el = e.target as HTMLElement | null;
+      if (el && (el.tagName === "INPUT" || el.tagName === "TEXTAREA" || el.isContentEditable)) {
+        if (e.key === "Escape") (el as HTMLInputElement).blur();
+        return;
+      }
+      if (e.key === "ArrowRight") { e.preventDefault(); stepFile(1); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); stepFile(-1); }
+      else if (e.key === "Escape") setFileModal(null);
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [fileModal, stepFile]);
 
   const todayStr = today();
 
@@ -1861,7 +1902,7 @@ function PersonalHWSection({
                             <span className="font-semibold text-[10px] shrink-0" style={{ color: "var(--text-secondary)" }}>📎 BÀI NỘP:</span>
                             {hwViewed[hw.id] && <span className="text-[10px] font-semibold" style={{ color: "rgb(5,150,105)" }}>✓ Đã xem</span>}
                             <button
-                              onClick={() => { setFileModal({ url: fileEntries[0]?.[1]?.url ?? dayLink ?? "", hwId: hw.id }); setNoteInput(hwViewed[hw.id]?.note ?? ""); }}
+                              onClick={() => { setFileModal({ hwId: hw.id, index: 0 }); setNoteInput(hwViewed[hw.id]?.note ?? ""); }}
                               className="text-[10px] px-1.5 py-0.5 rounded hover:opacity-75"
                               style={{ background: "rgba(26,62,128,.1)", color: "#2860A8" }}
                             >
@@ -1869,11 +1910,11 @@ function PersonalHWSection({
                             </button>
                           </div>
                           <div className="flex flex-wrap gap-1.5">
-                            {fileEntries.map(([fileId, file]) => {
+                            {fileEntries.map(([fileId, file], fileIdx) => {
                               const isVid = /\.(mp4|mov|avi|webm|mkv)/i.test(file.url.split("?")[0]);
                               return (
                                 <div key={fileId} style={{ position: "relative" }}>
-                                  <button onClick={() => { setFileModal({ url: file.url, hwId: hw.id }); setNoteInput(hwViewed[hw.id]?.note ?? ""); }} className="hover:opacity-80 transition-opacity">
+                                  <button onClick={() => { setFileModal({ hwId: hw.id, index: fileIdx }); setNoteInput(hwViewed[hw.id]?.note ?? ""); }} className="hover:opacity-80 transition-opacity">
                                     {isVid ? (
                                       <div style={{ width: 52, height: 52, background: "rgba(26,62,128,.08)", border: "1px solid rgba(26,62,128,.2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem" }}>🎬</div>
                                     ) : (
@@ -1981,13 +2022,102 @@ function PersonalHWSection({
             style={{ display: "flex", flexDirection: "column", gap: "1rem", width: "min(90vw,700px)", maxHeight: "90vh" }}
           >
             {/* File preview */}
-            <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
-              {/\.(mp4|mov|avi|webm|mkv)/i.test(fileModal.url.split("?")[0]) ? (
-                <video src={fileModal.url} controls autoPlay style={{ maxWidth: "100%", maxHeight: "65vh" }} />
+            <div
+              style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", position: "relative" }}
+              onTouchStart={(e) => { touchStartXRef.current = e.touches[0]?.clientX ?? null; }}
+              onTouchEnd={(e) => {
+                const start = touchStartXRef.current;
+                touchStartXRef.current = null;
+                if (start === null) return;
+                const dx = (e.changedTouches[0]?.clientX ?? start) - start;
+                if (Math.abs(dx) < 50) return;
+                stepFile(dx < 0 ? 1 : -1);
+              }}
+            >
+              {modalFiles.length > 1 && (
+                <button
+                  type="button"
+                  onClick={() => stepFile(-1)}
+                  disabled={fileModal.index === 0}
+                  aria-label="File trước"
+                  style={{
+                    position: "absolute", left: 0, zIndex: 2, width: 40, height: 40, borderRadius: "50%",
+                    background: "rgba(255,255,255,.15)", border: "none", color: "#fff", fontSize: "1.2rem",
+                    cursor: fileModal.index === 0 ? "default" : "pointer",
+                    opacity: fileModal.index === 0 ? 0.25 : 1,
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                  }}
+                >
+                  ‹
+                </button>
+              )}
+
+              {/\.(mp4|mov|avi|webm|mkv)/i.test(modalUrl.split("?")[0]) ? (
+                // key: đổi file phải nạp lại thẻ video, không thì trình duyệt giữ nguyên khung cũ.
+                // Bỏ autoPlay: lướt nhanh qua nhiều file mà video nào cũng tự phát thì rất khó chịu.
+                <video key={modalUrl} src={modalUrl} controls style={{ maxWidth: "100%", maxHeight: "65vh" }} />
               ) : (
-                <img src={fileModal.url} alt="Bài nộp" style={{ maxWidth: "100%", maxHeight: "65vh", objectFit: "contain" }} />
+                // eslint-disable-next-line @next/next/no-img-element
+                <img key={modalUrl} src={modalUrl} alt="Bài nộp" style={{ maxWidth: "100%", maxHeight: "65vh", objectFit: "contain" }} />
+              )}
+
+              {modalFiles.length > 1 && (
+                <button
+                  type="button"
+                  onClick={() => stepFile(1)}
+                  disabled={fileModal.index >= modalFiles.length - 1}
+                  aria-label="File kế tiếp"
+                  style={{
+                    position: "absolute", right: 0, zIndex: 2, width: 40, height: 40, borderRadius: "50%",
+                    background: "rgba(255,255,255,.15)", border: "none", color: "#fff", fontSize: "1.2rem",
+                    cursor: fileModal.index >= modalFiles.length - 1 ? "default" : "pointer",
+                    opacity: fileModal.index >= modalFiles.length - 1 ? 0.25 : 1,
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                  }}
+                >
+                  ›
+                </button>
               )}
             </div>
+
+            {/* Bộ đếm + dải thumbnail */}
+            {modalFiles.length > 1 && (
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: ".5rem" }}>
+                <span style={{ color: "rgba(255,255,255,.65)", fontSize: ".78rem", fontWeight: 600 }}>
+                  {fileModal.index + 1}/{modalFiles.length}
+                  <span style={{ marginLeft: ".6rem", color: "rgba(255,255,255,.35)", fontWeight: 400 }}>
+                    ← → để chuyển · Esc để đóng
+                  </span>
+                </span>
+                <div style={{ display: "flex", gap: ".35rem", flexWrap: "wrap", justifyContent: "center", maxHeight: 96, overflowY: "auto" }}>
+                  {modalFiles.map((url, i) => {
+                    const isVid = /\.(mp4|mov|avi|webm|mkv)/i.test(url.split("?")[0]);
+                    const active = i === fileModal.index;
+                    return (
+                      <button
+                        key={url}
+                        type="button"
+                        onClick={() => setFileModal((cur) => (cur ? { ...cur, index: i } : cur))}
+                        style={{
+                          width: 44, height: 44, padding: 0, cursor: "pointer",
+                          border: active ? "2px solid #fff" : "1px solid rgba(255,255,255,.25)",
+                          background: "rgba(255,255,255,.08)",
+                          opacity: active ? 1 : 0.55,
+                          display: "flex", alignItems: "center", justifyContent: "center",
+                        }}
+                      >
+                        {isVid ? (
+                          <span style={{ fontSize: "1rem" }}>🎬</span>
+                        ) : (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img src={url} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
 
             {/* Review panel */}
             <div style={{ background: "rgba(255,255,255,.08)", borderRadius: 8, padding: "1rem", display: "flex", flexDirection: "column", gap: ".65rem" }}>
