@@ -32,6 +32,36 @@ export function selectionRange(container: HTMLElement): { start: number; end: nu
   return { start, end };
 }
 
+/**
+ * Offset của con trỏ khi KHÔNG bôi đen — dùng cho thao tác chèn thêm chữ.
+ * Cùng cách đếm với `selectionRange`: bỏ qua chữ giáo viên đã chèn.
+ */
+export function caretOffset(container: HTMLElement): number | null {
+  const sel = typeof window !== "undefined" ? window.getSelection() : null;
+  if (!sel || sel.rangeCount === 0) return null;
+
+  const range = sel.getRangeAt(0);
+  if (!container.contains(range.startContainer)) return null;
+
+  const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
+  let acc = 0;
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    const inserted = (node.parentElement as HTMLElement | null)?.closest("[data-inserted]");
+    if (node === range.startContainer) return inserted ? acc : acc + range.startOffset;
+    if (!inserted) acc += node.textContent?.length ?? 0;
+  }
+  return null;
+}
+
+/** Điểm chèn có rơi vào GIỮA một annotation đã có không — chèn vào đó sẽ neo sai. */
+export function insideAny(
+  ranges: { start: number; end: number }[],
+  at: number
+): boolean {
+  return ranges.some((r) => at > r.start && at < r.end);
+}
+
 /** Vùng chọn có đè lên annotation đã có không — neo chồng lấn sẽ hiển thị sai. */
 export function overlaps(
   ranges: { start: number; end: number }[],

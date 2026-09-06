@@ -6,15 +6,18 @@ import { useParams, useRouter } from "next/navigation";
 import { uploadToCloudinary } from "@/lib/cloudinary/upload";
 import { AnnotatedText, tint, type ViewMode } from "@/components/submissions/AnnotatedText";
 import { DocumentSheet, type RailCard } from "@/components/submissions/DocumentSheet";
-import { overlaps, selectionRange } from "@/lib/submissions/selection";
+import { caretOffset, insideAny, overlaps, selectionRange } from "@/lib/submissions/selection";
 import {
   ANNOTATION_LABELS,
+  annotationKind,
   countByLabel,
   estimateBand,
   labelMeta,
   scaleFor,
   type Annotation,
+  type AnnotationKind,
   type AnnotationLabel,
+  type AnnotationReply,
   type FeedbackItem,
   type SubmissionFeedback,
   type SubmissionItem,
@@ -131,21 +134,77 @@ function AudioRecorder({ url, onChange }: { url?: string; onChange: (v: { url: s
   );
 }
 
+/** Nút trong menu nổi — giữ một kiểu dáng để menu trông liền mạch. */
+function PopButton({ onClick, title, children }: { onClick: () => void; title: string; children: React.ReactNode }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      title={title}
+      className="px-3 py-2 text-xs font-semibold"
+      style={{
+        background: "transparent",
+        color: "var(--text-primary)",
+        border: "none",
+        borderRight: "1px solid var(--border)",
+        cursor: "pointer",
+        whiteSpace: "nowrap",
+      }}
+    >
+      {children}
+    </button>
+  );
+}
+
+// ─── Mẫu nhận xét bấm nhanh ──────────────────────────────────────────────────
+
+/** Câu hay dùng nhất theo từng nhóm lỗi — bấm là điền, đỡ gõ lại mỗi bài. */
+const COMMENT_TEMPLATES: Record<AnnotationLabel, string[]> = {
+  grammar: ["Sai thì của động từ", "Thiếu mạo từ", "Sai dạng số ít/số nhiều", "Chủ ngữ và động từ không hợp"],
+  vocab: ["Dùng sai từ trong ngữ cảnh này", "Lặp từ, thử từ đồng nghĩa", "Từ này quá thân mật cho văn viết"],
+  cohesion: ["Thiếu từ nối giữa hai ý", "Ý này chưa liên kết với câu trước", "Nên tách thành hai câu"],
+  task: ["Chưa trả lời đúng yêu cầu đề", "Thiếu một trong các ý đề yêu cầu", "Lạc đề ở đoạn này"],
+  style: ["Câu quá dài, nên rút gọn", "Diễn đạt vòng vo", "Nên dùng thể chủ động"],
+};
+
+const KIND_META: Record<AnnotationKind, { label: string; color: string }> = {
+  replace: { label: "Sửa thành", color: "#15803d" },
+  insert: { label: "Chèn thêm", color: "#15803d" },
+  delete: { label: "Xoá đoạn", color: "#b91c1c" },
+};
+
 // ─── Thẻ comment sửa được ─────────────────────────────────────────────────────
 
 function EditableCard({
-  a, active, onFocus, onChange, onRemove,
+  a, active, onFocus, onHover, onChange, onRemove, onReply,
 }: {
   a: Annotation;
   active: boolean;
   onFocus: () => void;
+  onHover: (id: string | null) => void;
   onChange: (patch: Partial<Annotation>) => void;
   onRemove: () => void;
+  onReply: (text: string) => void;
 }) {
   const meta = labelMeta(a.label);
+  const kind = annotationKind(a);
+  const kindMeta = KIND_META[kind];
+  const [reply, setReply] = useState("");
+  const [showTemplates, setShowTemplates] = useState(false);
+  const replies = a.replies ?? [];
+
+  function sendReply() {
+    const t = reply.trim();
+    if (!t) return;
+    onReply(t);
+    setReply("");
+  }
+
   return (
     <div
       onClick={onFocus}
+      onMouseEnter={() => onHover(a.id)}
+      onMouseLeave={() => onHover(null)}
       className="rounded-lg px-3 py-2.5"
       style={{
         background: "var(--bg-elevated)",
@@ -153,7 +212,7 @@ function EditableCard({
         boxShadow: active ? `0 2px 10px ${tint(meta.color, 0.22)}` : "var(--shadow-sm)",
       }}
     >
-      <div className="flex items-center gap-2 mb-1.5">
+      <div className="flex items-center gap-1.5 mb-1.5 flex-wrap">
         <select
           value={a.label}
           onChange={(e) => onChange({ label: e.target.value as AnnotationLabel })}
@@ -162,25 +221,56 @@ function EditableCard({
         >
           {ANNOTATION_LABELS.map((l) => <option key={l.id} value={l.id}>{l.label}</option>)}
         </select>
+
+        {/* Đổi loại thao tác ngay trên thẻ — chèn thì cố định vì nó không phủ chữ nào */}
+        {kind === "insert" ? (
+          <span className="px-1.5 py-0.5 rounded text-[10px] font-bold"
+            style={{ background: tint(kindMeta.color, 0.12), color: kindMeta.color }}>
+            {kindMeta.label}
+          </span>
+        ) : (
+          <select
+            value={kind}
+            onChange={(e) => onChange({ kind: e.target.value as AnnotationKind })}
+            className="px-1.5 py-0.5 rounded text-[10px] font-bold border outline-none"
+            style={{ background: tint(kindMeta.color, 0.1), borderColor: kindMeta.color, color: kindMeta.color }}
+          >
+            <option value="replace">Sửa thành</option>
+            <option value="delete">Xoá đoạn</option>
+          </select>
+        )}
+
         <button
           type="button"
           onClick={(e) => { e.stopPropagation(); onRemove(); }}
           className="ml-auto text-[11px] px-1.5 py-0.5 rounded"
           style={{ color: "rgb(220,38,38)", background: "none", border: "none", cursor: "pointer" }}
         >
-          Xoá
+          Xoá thẻ
         </button>
       </div>
 
-      <p className="text-xs italic m-0 mb-1.5" style={{ color: "var(--text-muted)" }}>“{a.quote}”</p>
+      {kind === "insert" ? (
+        <p className="text-xs italic m-0 mb-1.5" style={{ color: "var(--text-muted)" }}>
+          Chèn vào giữa “…{a.quote}”
+        </p>
+      ) : (
+        <p className="text-xs italic m-0 mb-1.5"
+          style={{ color: "var(--text-muted)", textDecoration: kind === "delete" ? "line-through" : "none" }}>
+          “{a.quote}”
+        </p>
+      )}
 
-      <input
-        value={a.suggestion ?? ""}
-        onChange={(e) => onChange({ suggestion: e.target.value })}
-        placeholder="Sửa thành…"
-        className="w-full px-2 py-1 rounded text-[13px] border outline-none mb-1.5"
-        style={inputStyle}
-      />
+      {kind !== "delete" && (
+        <input
+          value={a.suggestion ?? ""}
+          onChange={(e) => onChange({ suggestion: e.target.value })}
+          placeholder={kind === "insert" ? "Chữ cần thêm…" : "Sửa thành…"}
+          className="w-full px-2 py-1 rounded text-[13px] border outline-none mb-1.5"
+          style={inputStyle}
+        />
+      )}
+
       <textarea
         value={a.comment ?? ""}
         onChange={(e) => onChange({ comment: e.target.value })}
@@ -189,6 +279,70 @@ function EditableCard({
         className="w-full px-2 py-1 rounded text-[13px] border outline-none"
         style={inputStyle}
       />
+
+      <button
+        type="button"
+        onClick={(e) => { e.stopPropagation(); setShowTemplates((v) => !v); }}
+        className="mt-1 text-[10px] font-semibold"
+        style={{ background: "none", border: "none", color: "var(--text-muted)", cursor: "pointer", padding: 0 }}
+      >
+        {showTemplates ? "Ẩn mẫu" : "＋ Mẫu nhận xét"}
+      </button>
+      {showTemplates && (
+        <div className="flex flex-wrap gap-1 mt-1">
+          {COMMENT_TEMPLATES[a.label].map((t) => (
+            <button
+              key={t}
+              type="button"
+              onClick={(e) => { e.stopPropagation(); onChange({ comment: t }); setShowTemplates(false); }}
+              className="text-[10px] px-1.5 py-0.5 rounded"
+              style={{ background: tint(meta.color, 0.1), color: meta.color, border: "none", cursor: "pointer" }}
+            >
+              {t}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Hội thoại quanh chỗ này */}
+      {replies.length > 0 && (
+        <div className="mt-2 pt-2 flex flex-col gap-1.5" style={{ borderTop: "1px solid var(--border)" }}>
+          {replies.map((r) => (
+            <div key={r.id} className="text-[11px]">
+              <span className="font-bold" style={{ color: r.role === "teacher" ? "var(--accent-primary)" : "var(--text-secondary)" }}>
+                {r.authorName || (r.role === "teacher" ? "Thầy Hiếu" : "Học viên")}
+              </span>
+              <span className="ml-1.5" style={{ color: "var(--text-muted)" }}>
+                {new Date(r.createdAt).toLocaleString("vi-VN", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" })}
+              </span>
+              <p className="m-0 mt-0.5" style={{ color: "var(--text-primary)" }}>{r.text}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div className="flex gap-1 mt-1.5">
+        <input
+          value={reply}
+          onChange={(e) => setReply(e.target.value)}
+          onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); sendReply(); } }}
+          placeholder="Trả lời…"
+          className="flex-1 px-2 py-1 rounded text-[12px] border outline-none"
+          style={inputStyle}
+        />
+        <button
+          type="button"
+          onClick={(e) => { e.stopPropagation(); sendReply(); }}
+          disabled={!reply.trim()}
+          className="px-2 py-1 rounded text-[11px] font-bold"
+          style={{
+            background: reply.trim() ? "var(--accent-primary)" : "var(--border)",
+            color: "#fff", border: "none", cursor: reply.trim() ? "pointer" : "default",
+          }}
+        >
+          Gửi
+        </button>
+      </div>
     </div>
   );
 }
@@ -209,8 +363,12 @@ export default function GradeSubmissionPage() {
   const [audio, setAudio] = useState<{ url: string; publicId: string } | null>(null);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  /** Nút "thêm nhận xét" nổi cạnh vùng vừa bôi đen */
-  const [pop, setPop] = useState<{ x: number; y: number } | null>(null);
+  const [hoverId, setHoverId] = useState<string | null>(null);
+  /**
+   * Menu nổi cạnh chỗ vừa thao tác. `range` = đang bôi đen (thay thế/xoá),
+   * `caret` = chỉ đặt con trỏ (chèn thêm) — hai trường hợp cho hai bộ nút khác nhau.
+   */
+  const [pop, setPop] = useState<{ x: number; y: number; mode: "range" | "caret" } | null>(null);
 
   useEffect(() => {
     let alive = true;
@@ -251,47 +409,145 @@ export default function GradeSubmissionPage() {
       ?.scrollIntoView({ block: "center", behavior: "smooth" });
   }
 
-  /** Bôi đen xong thì hiện nút nổi ngay cuối vùng chọn. */
+  /** Bôi đen (hoặc chỉ đặt con trỏ) trong bài thì hiện menu thao tác ngay đó. */
   function onMouseUp(e: React.MouseEvent) {
     const sel = window.getSelection();
-    if (!sel || sel.isCollapsed) { setPop(null); return; }
+    if (!sel || sel.rangeCount === 0) { setPop(null); return; }
     const node = sel.anchorNode;
     const host = (node?.nodeType === 1 ? (node as Element) : node?.parentElement)?.closest("[data-item-idx]");
     if (!host) { setPop(null); return; }
-    setPop({ x: e.clientX, y: e.clientY });
+    setPop({ x: e.clientX, y: e.clientY, mode: sel.isCollapsed ? "caret" : "range" });
   }
 
-  function addAnnotation() {
+  /** Phần tử bài viết chứa vùng chọn hiện tại, kèm câu tương ứng. */
+  function selectionHost(): { host: HTMLElement; itemIdx: number; text: string } | null {
     const sel = window.getSelection();
     const node = sel?.anchorNode;
     const host = (node?.nodeType === 1 ? (node as Element) : node?.parentElement)?.closest("[data-item-idx]") as HTMLElement | null;
-    if (!host || !sub) return;
-
+    if (!host || !sub) return null;
     const itemIdx = Number(host.dataset.itemIdx);
-    const item = sub.items.find((i) => i.idx === itemIdx);
-    const range = selectionRange(host);
-    if (!item?.text || !range) { setPop(null); return; }
+    const text = sub.items.find((i) => i.idx === itemIdx)?.text;
+    if (!text) return null;
+    return { host, itemIdx, text };
+  }
 
-    const mine = annotations.filter((a) => a.itemIdx === itemIdx);
-    if (overlaps(mine, range.start, range.end)) {
-      setError("Đoạn này đã có nhận xét — sửa nhận xét cũ thay vì tạo mới.");
-      setPop(null);
-      return;
-    }
-
-    const quote = item.text.slice(range.start, range.end);
-    if (!quote.trim()) { setPop(null); return; }
-
-    const a: Annotation = {
-      id: `a${itemIdx}-${range.start}-${range.end}`,
-      itemIdx, start: range.start, end: range.end, quote, label: "grammar",
-    };
+  function pushAnnotation(a: Annotation) {
     setAnnotations((prev) => [...prev, a]);
     setActiveId(a.id);
     setError(null);
     setPop(null);
     window.getSelection()?.removeAllRanges();
   }
+
+  /** Chèn thêm chữ tại vị trí con trỏ — neo zero-width, không phủ chữ gốc nào. */
+  function addInsertion() {
+    const ctx = selectionHost();
+    if (!ctx) { setPop(null); return; }
+    const at = caretOffset(ctx.host);
+    if (at === null) { setPop(null); return; }
+
+    const mine = annotations.filter((a) => a.itemIdx === ctx.itemIdx);
+    if (insideAny(mine, at)) {
+      setError("Chỗ này nằm giữa một nhận xét đã có — chèn ra ngoài đoạn đó.");
+      setPop(null);
+      return;
+    }
+
+    pushAnnotation({
+      id: `a${ctx.itemIdx}-ins-${at}-${Date.now().toString(36)}`,
+      itemIdx: ctx.itemIdx,
+      start: at,
+      end: at,
+      // Giữ ít chữ hai bên để còn nhận ra vị trí nếu offset lệch về sau.
+      quote: ctx.text.slice(Math.max(0, at - 12), at + 12),
+      label: "grammar",
+      kind: "insert",
+      suggestion: "",
+    });
+  }
+
+  /** Chỉ đánh dấu + ghi chú, không kèm đề xuất chữ mới. */
+  function addComment() {
+    const ctx = selectionHost();
+    if (!ctx) { setPop(null); return; }
+    const range = selectionRange(ctx.host);
+    if (!range) { setPop(null); return; }
+    const mine = annotations.filter((a) => a.itemIdx === ctx.itemIdx);
+    if (overlaps(mine, range.start, range.end)) {
+      setError("Đoạn này đã có nhận xét — sửa nhận xét cũ thay vì tạo mới.");
+      setPop(null);
+      return;
+    }
+    const quote = ctx.text.slice(range.start, range.end);
+    if (!quote.trim()) { setPop(null); return; }
+    pushAnnotation({
+      id: `a${ctx.itemIdx}-${range.start}-${range.end}`,
+      itemIdx: ctx.itemIdx,
+      start: range.start,
+      end: range.end,
+      quote,
+      label: "grammar",
+      kind: "replace",
+    });
+  }
+
+  function addReply(annotationId: string, text: string) {
+    const reply: AnnotationReply = {
+      id: `r${Date.now().toString(36)}`,
+      role: "teacher",
+      authorName: "Thầy Hiếu",
+      text,
+      createdAt: new Date().toISOString(),
+    };
+    setAnnotations((prev) =>
+      prev.map((x) => (x.id === annotationId ? { ...x, replies: [...(x.replies ?? []), reply] } : x))
+    );
+  }
+
+  function addAnnotation(kind: AnnotationKind = "replace") {
+    const ctx = selectionHost();
+    if (!ctx) { setPop(null); return; }
+    const range = selectionRange(ctx.host);
+    if (!range) { setPop(null); return; }
+
+    const mine = annotations.filter((a) => a.itemIdx === ctx.itemIdx);
+    if (overlaps(mine, range.start, range.end)) {
+      setError("Đoạn này đã có nhận xét — sửa nhận xét cũ thay vì tạo mới.");
+      setPop(null);
+      return;
+    }
+
+    const quote = ctx.text.slice(range.start, range.end);
+    if (!quote.trim()) { setPop(null); return; }
+
+    pushAnnotation({
+      id: `a${ctx.itemIdx}-${range.start}-${range.end}`,
+      itemIdx: ctx.itemIdx,
+      start: range.start,
+      end: range.end,
+      quote,
+      label: "grammar",
+      kind,
+      // "Sửa thành" mở sẵn ô gợi ý bằng chính chữ cũ để thầy chỉnh, nhanh hơn gõ lại.
+      suggestion: kind === "replace" ? quote : undefined,
+    });
+  }
+
+  // Ctrl+Alt+M: thêm đề xuất sửa cho đoạn đang bôi đen, giống Google Docs.
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (!(e.ctrlKey && e.altKey && e.key.toLowerCase() === "m")) return;
+      const el = e.target as HTMLElement | null;
+      if (el && (el.tagName === "INPUT" || el.tagName === "TEXTAREA" || el.isContentEditable)) return;
+      const sel = window.getSelection();
+      if (!sel || sel.rangeCount === 0) return;
+      e.preventDefault();
+      if (sel.isCollapsed) addInsertion();
+      else addAnnotation("replace");
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  });
 
   async function save() {
     setSaving(true);
@@ -325,8 +581,10 @@ export default function GradeSubmissionPage() {
           a={a}
           active={activeId === a.id}
           onFocus={() => focus(a.id)}
+          onHover={setHoverId}
           onChange={(patch) => setAnnotations((prev) => prev.map((x) => (x.id === a.id ? { ...x, ...patch } : x)))}
           onRemove={() => setAnnotations((prev) => prev.filter((x) => x.id !== a.id))}
+          onReply={(text) => addReply(a.id, text)}
         />
       ),
     }));
@@ -411,7 +669,15 @@ export default function GradeSubmissionPage() {
               {it.text ? (
                 <p data-item-idx={it.idx} className="text-[15px] whitespace-pre-wrap m-0"
                   style={{ color: "var(--text-primary)", lineHeight: 2 }}>
-                  <AnnotatedText text={it.text} annotations={anns} activeId={activeId} onSelectAnnotation={focus} mode={mode} />
+                  <AnnotatedText
+                    text={it.text}
+                    annotations={anns}
+                    activeId={activeId}
+                    hoverId={hoverId}
+                    onSelectAnnotation={focus}
+                    onHoverAnnotation={setHoverId}
+                    mode={mode}
+                  />
                 </p>
               ) : (
                 <p className="text-sm italic m-0" style={{ color: "var(--text-muted)" }}>Câu này không có bài viết.</p>
@@ -446,17 +712,23 @@ export default function GradeSubmissionPage() {
         </section>
       </DocumentSheet>
 
-      {/* Nút nổi cạnh vùng bôi đen */}
+      {/* Menu thao tác nổi cạnh chỗ vừa chọn — kiểu Google Docs */}
       {pop && (
-        <button
-          type="button"
+        <div
           onMouseDown={(e) => e.preventDefault()}
-          onClick={addAnnotation}
-          className="fixed z-50 px-3 py-1.5 rounded-lg text-xs font-bold text-white shadow-lg"
-          style={{ left: pop.x + 8, top: pop.y + 8, background: "var(--accent-primary)", border: "none", cursor: "pointer" }}
+          className="fixed z-50 flex rounded-lg overflow-hidden shadow-lg"
+          style={{ left: pop.x + 8, top: pop.y + 8, border: "1px solid var(--border)", background: "var(--bg-elevated)" }}
         >
-          💬 Nhận xét
-        </button>
+          {pop.mode === "range" ? (
+            <>
+              <PopButton onClick={() => addAnnotation("replace")} title="Đề xuất chữ thay thế (Ctrl+Alt+M)">✎ Sửa thành</PopButton>
+              <PopButton onClick={() => addAnnotation("delete")} title="Đề xuất bỏ đoạn này">⌫ Xoá đoạn</PopButton>
+              <PopButton onClick={() => addComment()} title="Chỉ ghi chú, không đề xuất sửa">💬 Nhận xét</PopButton>
+            </>
+          ) : (
+            <PopButton onClick={addInsertion} title="Thêm chữ vào vị trí con trỏ">＋ Chèn tại đây</PopButton>
+          )}
+        </div>
       )}
     </div>
   );

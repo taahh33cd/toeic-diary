@@ -4,9 +4,11 @@ import { useState } from "react";
 import { AnnotatedText, tint, type ViewMode } from "@/components/submissions/AnnotatedText";
 import { DocumentSheet, type RailCard } from "@/components/submissions/DocumentSheet";
 import {
+  annotationKind,
   countByLabel,
   labelMeta,
   type Annotation,
+  type AnnotationReply,
   type FeedbackItem,
   type SubmissionFeedback,
   type SubmissionItem,
@@ -18,14 +20,44 @@ const MODES: { id: ViewMode; label: string }[] = [
   { id: "original", label: "Bài gốc của tôi" },
 ];
 
+const KIND_TEXT: Record<string, string> = {
+  replace: "Sửa thành",
+  insert: "Chèn thêm",
+  delete: "Bỏ đoạn này",
+};
+
 function CommentCard({
-  a, active, onClick,
-}: { a: Annotation; active: boolean; onClick: () => void }) {
+  a, active, onClick, onHover, onReply,
+}: {
+  a: Annotation;
+  active: boolean;
+  onClick: () => void;
+  onHover: (id: string | null) => void;
+  onReply: (text: string) => Promise<void>;
+}) {
   const meta = labelMeta(a.label);
+  const kind = annotationKind(a);
+  const [reply, setReply] = useState("");
+  const [sending, setSending] = useState(false);
+  const replies = a.replies ?? [];
+
+  async function send() {
+    const t = reply.trim();
+    if (!t || sending) return;
+    setSending(true);
+    try {
+      await onReply(t);
+      setReply("");
+    } finally {
+      setSending(false);
+    }
+  }
+
   return (
-    <button
-      type="button"
+    <div
       onClick={onClick}
+      onMouseEnter={() => onHover(a.id)}
+      onMouseLeave={() => onHover(null)}
       className="w-full text-left rounded-lg px-3 py-2.5 transition-shadow"
       style={{
         background: "var(--bg-elevated)",
@@ -34,15 +66,66 @@ function CommentCard({
         cursor: "pointer",
       }}
     >
-      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded" style={{ background: tint(meta.color, 0.14), color: meta.color }}>
-        {meta.label}
+      <div className="flex items-center gap-1.5 flex-wrap">
+        <span className="text-[10px] font-bold px-1.5 py-0.5 rounded" style={{ background: tint(meta.color, 0.14), color: meta.color }}>
+          {meta.label}
+        </span>
+        <span className="text-[10px] font-bold px-1.5 py-0.5 rounded"
+          style={{
+            background: kind === "delete" ? "rgba(185,28,28,.1)" : "rgba(21,128,61,.1)",
+            color: kind === "delete" ? "#b91c1c" : "#15803d",
+          }}>
+          {KIND_TEXT[kind]}
+        </span>
+      </div>
+
+      <span className="block text-xs italic mt-1.5"
+        style={{ color: "var(--text-muted)", textDecoration: kind === "delete" ? "line-through" : "none" }}>
+        “{a.quote}”
       </span>
-      <span className="block text-xs italic mt-1.5" style={{ color: "var(--text-muted)" }}>“{a.quote}”</span>
-      {a.suggestion && <span className="block text-xs mt-1 font-semibold" style={{ color: "#15803d" }}>→ {a.suggestion}</span>}
+      {kind !== "delete" && a.suggestion && (
+        <span className="block text-xs mt-1 font-semibold" style={{ color: "#15803d" }}>→ {a.suggestion}</span>
+      )}
       {a.comment && (
         <span className="block text-[13px] mt-1.5" style={{ color: "var(--text-primary)", lineHeight: 1.6 }}>{a.comment}</span>
       )}
-    </button>
+
+      {replies.length > 0 && (
+        <div className="mt-2 pt-2 flex flex-col gap-1.5" style={{ borderTop: "1px solid var(--border)" }}>
+          {replies.map((r) => (
+            <div key={r.id} className="text-[11px]">
+              <span className="font-bold" style={{ color: r.role === "teacher" ? "var(--accent-primary)" : "var(--text-secondary)" }}>
+                {r.authorName || (r.role === "teacher" ? "Thầy Hiếu" : "Bạn")}
+              </span>
+              <p className="m-0 mt-0.5" style={{ color: "var(--text-primary)" }}>{r.text}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div className="flex gap-1 mt-1.5" onClick={(e) => e.stopPropagation()}>
+        <input
+          value={reply}
+          onChange={(e) => setReply(e.target.value)}
+          onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); send(); } }}
+          placeholder="Hỏi lại thầy…"
+          className="flex-1 px-2 py-1 rounded text-[12px] border outline-none"
+          style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }}
+        />
+        <button
+          type="button"
+          onClick={send}
+          disabled={!reply.trim() || sending}
+          className="px-2 py-1 rounded text-[11px] font-bold"
+          style={{
+            background: reply.trim() && !sending ? "var(--accent-primary)" : "var(--border)",
+            color: "#fff", border: "none", cursor: reply.trim() && !sending ? "pointer" : "default",
+          }}
+        >
+          {sending ? "…" : "Gửi"}
+        </button>
+      </div>
+    </div>
   );
 }
 
@@ -51,8 +134,10 @@ function CommentCard({
  * mỗi câu chỉ là một tiêu đề nhỏ, nhận xét nằm ngoài lề phải ngang tầm đoạn chữ.
  */
 export function GradedView({
-  items, feedback, max, title, meta,
+  id, items, feedback, max, title, meta,
 }: {
+  /** Id bài nộp — cần để gửi trả lời trong thẻ nhận xét. */
+  id: string;
   items: SubmissionItem[];
   feedback: SubmissionFeedback | null;
   max: number;
@@ -61,8 +146,25 @@ export function GradedView({
 }) {
   const [mode, setMode] = useState<ViewMode>("edited");
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [hoverId, setHoverId] = useState<string | null>(null);
+  /** Trả lời mới thêm tại chỗ, khỏi tải lại cả trang sau mỗi lượt. */
+  const [extraReplies, setExtraReplies] = useState<Record<string, AnnotationReply[]>>({});
 
-  const annotations: Annotation[] = feedback?.annotations ?? [];
+  const annotations: Annotation[] = (feedback?.annotations ?? []).map((a) =>
+    extraReplies[a.id] ? { ...a, replies: [...(a.replies ?? []), ...extraReplies[a.id]] } : a
+  );
+
+  async function sendReply(annotationId: string, text: string) {
+    const res = await fetch(`/api/submissions/${id}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ annotationId, text }),
+    });
+    if (!res.ok) return;
+    const data = (await res.json()) as { reply?: AnnotationReply };
+    if (!data.reply) return;
+    setExtraReplies((prev) => ({ ...prev, [annotationId]: [...(prev[annotationId] ?? []), data.reply!] }));
+  }
   const stats = countByLabel(annotations);
   const fbOf = (idx: number): FeedbackItem | undefined => feedback?.items?.find((f) => f.idx === idx);
 
@@ -77,7 +179,15 @@ export function GradedView({
     .sort((a, b) => (a.itemIdx - b.itemIdx) || (a.start - b.start))
     .map((a) => ({
       id: a.id,
-      node: <CommentCard a={a} active={activeId === a.id} onClick={() => focus(a.id)} />,
+      node: (
+        <CommentCard
+          a={a}
+          active={activeId === a.id}
+          onClick={() => focus(a.id)}
+          onHover={setHoverId}
+          onReply={(text) => sendReply(a.id, text)}
+        />
+      ),
     }));
 
   const toolbar = (
@@ -177,7 +287,9 @@ export function GradedView({
                   text={it.text}
                   annotations={anns}
                   activeId={activeId}
+                  hoverId={hoverId}
                   onSelectAnnotation={focus}
+                  onHoverAnnotation={setHoverId}
                   mode={mode}
                 />
               </p>

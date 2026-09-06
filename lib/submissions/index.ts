@@ -49,6 +49,22 @@ export function labelMeta(id: string) {
  * khi chấm), nên bản gốc phải bất biến — mọi sửa đổi nằm ở `suggestion`.
  * `quote` giữ lại đoạn chữ để còn đối chiếu nếu offset lệch.
  */
+/**
+ * Ba thao tác góp ý kiểu Google Docs. `replace` là mặc định cho dữ liệu cũ
+ * (annotation chưa có trường này) nên không cần migrate.
+ */
+export type AnnotationKind = "replace" | "insert" | "delete";
+
+/** Một lượt trao đổi trong thẻ nhận xét. */
+export interface AnnotationReply {
+  id: string;
+  /** "teacher" | "student" — chỉ để hiện tên và canh trái/phải, không phải cơ chế bảo mật. */
+  role: "teacher" | "student";
+  authorName?: string;
+  text: string;
+  createdAt: string;
+}
+
 export interface Annotation {
   id: string;
   itemIdx: number;
@@ -59,6 +75,27 @@ export interface Annotation {
   comment?: string;
   /** Có giá trị = đề xuất thay thế: bản cũ gạch ngang, bản mới hiện xanh. */
   suggestion?: string;
+  /**
+   * Vắng mặt = `replace`. `insert` có start === end (neo tại một điểm, không
+   * phủ chữ nào); `delete` bỏ hẳn đoạn được neo, `suggestion` bị bỏ qua.
+   */
+  kind?: AnnotationKind;
+  /** Hội thoại giữa giáo viên và học viên quanh chỗ này. */
+  replies?: AnnotationReply[];
+}
+
+/** Loại thao tác, suy ra cho cả dữ liệu cũ chưa có trường `kind`. */
+export function annotationKind(a: Annotation): AnnotationKind {
+  if (a.kind) return a.kind;
+  return a.end === a.start ? "insert" : "replace";
+}
+
+/** Chữ hiện ra ở bản đã sửa — rỗng nghĩa là đoạn đó bị bỏ. */
+export function appliedText(a: Annotation): string {
+  const kind = annotationKind(a);
+  if (kind === "delete") return "";
+  if (kind === "insert") return a.suggestion ?? "";
+  return a.suggestion ?? a.quote;
 }
 
 /** Nhận xét của giáo viên cho một câu. */
@@ -166,6 +203,26 @@ export const MAX_ANNOTATIONS = 200;
 
 const LABEL_IDS = new Set(ANNOTATION_LABELS.map((l) => l.id));
 
+const MAX_REPLIES = 50;
+
+function sanitizeReplies(raw: unknown): AnnotationReply[] | undefined {
+  if (!Array.isArray(raw)) return undefined;
+  const out: AnnotationReply[] = [];
+  for (const r of raw.slice(0, MAX_REPLIES)) {
+    const o = (r ?? {}) as Record<string, unknown>;
+    const text = str(o.text, MAX_COMMENT_LEN);
+    if (!text) continue;
+    out.push({
+      id: str(o.id, 60) ?? `r${out.length}`,
+      role: o.role === "student" ? "student" : "teacher",
+      authorName: str(o.authorName, 120),
+      text,
+      createdAt: str(o.createdAt, 40) ?? new Date().toISOString(),
+    });
+  }
+  return out.length > 0 ? out : undefined;
+}
+
 function sanitizeAnnotations(raw: unknown): Annotation[] {
   if (!Array.isArray(raw)) return [];
   const out: Annotation[] = [];
@@ -175,7 +232,8 @@ function sanitizeAnnotations(raw: unknown): Annotation[] {
     const end = Number(a.end);
     const itemIdx = Number(a.itemIdx);
     // Range không hợp lệ thì bỏ hẳn — neo sai chỗ còn tệ hơn không neo.
-    if (!Number.isInteger(start) || !Number.isInteger(end) || end <= start || start < 0) continue;
+    // `end === start` là hợp lệ: đó là điểm chèn, không phủ chữ nào.
+    if (!Number.isInteger(start) || !Number.isInteger(end) || end < start || start < 0) continue;
     if (!Number.isInteger(itemIdx) || itemIdx < 0) continue;
     const label = typeof a.label === "string" && LABEL_IDS.has(a.label as AnnotationLabel)
       ? (a.label as AnnotationLabel)
@@ -189,6 +247,8 @@ function sanitizeAnnotations(raw: unknown): Annotation[] {
       label,
       comment: str(a.comment, MAX_COMMENT_LEN),
       suggestion: typeof a.suggestion === "string" ? a.suggestion.slice(0, MAX_TEXT_LEN) : undefined,
+      kind: a.kind === "insert" || a.kind === "delete" || a.kind === "replace" ? a.kind : undefined,
+      replies: sanitizeReplies(a.replies),
     });
   }
   return out;
@@ -248,8 +308,10 @@ export function segmentText(
   for (const a of sorted) {
     const start = Math.min(a.start, text.length);
     const end = Math.min(a.end, text.length);
-    if (start < cursor || end <= start) continue; // chồng lấn hoặc rỗng
+    if (start < cursor || end < start) continue; // chồng lấn hoặc range hỏng
     if (start > cursor) out.push({ text: text.slice(cursor, start) });
+    // end === start là điểm chèn: đoạn rỗng nhưng vẫn phải phát ra để render
+    // được chữ thêm vào đúng vị trí đó.
     out.push({ text: text.slice(start, end), annotation: a });
     cursor = end;
   }

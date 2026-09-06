@@ -35,7 +35,7 @@ export default async function SubmissionDetailPage({ params }: Props) {
       <Link href="/journal/submissions" className="text-xs no-underline px-3 md:px-6 print:hidden" style={{ color: "var(--text-muted)" }}>
         ← Tất cả bài đã nộp
       </Link>
-      <GradedView items={items} feedback={feedback} max={scaleFor(submission.skill, submission.unit)} title={submission.title} meta={meta} />
+      <GradedView id={submission.id} items={items} feedback={feedback} max={scaleFor(submission.skill, submission.unit)} title={submission.title} meta={meta} />
     </div>
   );
 }
