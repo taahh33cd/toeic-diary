@@ -40,13 +40,6 @@ export async function POST(req: Request, { params }: Ctx) {
     return NextResponse.json({ error: "Thiếu nội dung trả lời" }, { status: 400 });
   }
 
-  const submission = await prisma.skillSubmission.findFirst({ where: { id, userId: user.id } });
-  if (!submission) return NextResponse.json({ error: "Not found" }, { status: 404 });
-
-  const feedback = sanitizeFeedback(submission.feedback);
-  const target = feedback.annotations?.find((a) => a.id === annotationId);
-  if (!target) return NextResponse.json({ error: "Không tìm thấy nhận xét" }, { status: 404 });
-
   const { data: profile } = await supabase
     .from("profiles")
     .select("display_name")
@@ -60,13 +53,33 @@ export async function POST(req: Request, { params }: Ctx) {
     text,
     createdAt: new Date().toISOString(),
   };
-  target.replies = [...(target.replies ?? []), reply];
 
-  await prisma.skillSubmission.update({
-    where: { id },
-    data: { feedback: JSON.parse(JSON.stringify(feedback)) },
+  /**
+   * Khoá hàng trong suốt đọc-sửa-ghi. Giáo viên bấm Lưu ở trang chấm cũng ghi
+   * đè cả khối feedback này; không khoá thì hai bên đè lên nhau và một lượt
+   * trả lời hoặc một sửa đổi khi chấm sẽ mất.
+   */
+  const result = await prisma.$transaction(async (tx) => {
+    const rows = await tx.$queryRaw<{ feedback: unknown }[]>`
+      SELECT feedback FROM skill_submissions
+        WHERE id = ${id} AND user_id = ${user.id} FOR UPDATE`;
+    if (rows.length === 0) return { error: "Not found", status: 404 } as const;
+
+    const feedback = sanitizeFeedback(rows[0].feedback);
+    const target = feedback.annotations?.find((a) => a.id === annotationId);
+    if (!target) return { error: "Không tìm thấy nhận xét", status: 404 } as const;
+
+    target.replies = [...(target.replies ?? []), reply];
+    await tx.skillSubmission.update({
+      where: { id },
+      data: { feedback: JSON.parse(JSON.stringify(feedback)) },
+    });
+    return { ok: true } as const;
   });
 
+  if ("error" in result) {
+    return NextResponse.json({ error: result.error }, { status: result.status });
+  }
   return NextResponse.json({ reply });
 }
 

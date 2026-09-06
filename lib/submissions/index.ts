@@ -254,6 +254,43 @@ function sanitizeAnnotations(raw: unknown): Annotation[] {
   return out;
 }
 
+/**
+ * Gộp hội thoại của bản đang có trong DB vào bản giáo viên gửi lên.
+ *
+ * Trang chấm giữ một bản feedback chụp lúc mở trang rồi ghi đè khi bấm Lưu.
+ * Học viên trả lời trong lúc đó thì lượt trả lời chỉ có ở DB — không gộp lại
+ * là mất trắng. Hội thoại là của cả hai bên, nên DB luôn thắng ở phần `replies`;
+ * mọi thứ còn lại (điểm, đề xuất sửa) vẫn theo ý giáo viên.
+ *
+ * Thẻ bị giáo viên xoá thì không còn trong `incoming` nên hội thoại của nó đi
+ * theo — đó là chủ ý, không phải sót.
+ */
+export function mergeAnnotationReplies(
+  incoming: SubmissionFeedback,
+  current: SubmissionFeedback
+): SubmissionFeedback {
+  const stored = new Map((current.annotations ?? []).map((a) => [a.id, a.replies ?? []]));
+  if (stored.size === 0) return incoming;
+
+  return {
+    ...incoming,
+    annotations: (incoming.annotations ?? []).map((a) => {
+      const fromDb = stored.get(a.id);
+      if (!fromDb?.length) return a;
+
+      const seen = new Set<string>();
+      const merged: AnnotationReply[] = [];
+      for (const r of [...fromDb, ...(a.replies ?? [])]) {
+        if (seen.has(r.id)) continue;
+        seen.add(r.id);
+        merged.push(r);
+      }
+      merged.sort((x, y) => x.createdAt.localeCompare(y.createdAt));
+      return { ...a, replies: merged };
+    }),
+  };
+}
+
 export function sanitizeFeedback(raw: unknown): SubmissionFeedback {
   const o = (raw ?? {}) as Record<string, unknown>;
   const items = Array.isArray(o.items) ? o.items : [];
