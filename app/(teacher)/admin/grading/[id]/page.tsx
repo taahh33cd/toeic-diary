@@ -31,6 +31,7 @@ type Submission = {
   status: string;
   items: SubmissionItem[];
   feedback: SubmissionFeedback | null;
+  draftFeedback: SubmissionFeedback | null;
   submittedAt: string | null;
   profile: { displayName: string | null; studentCode: string | null } | null;
 };
@@ -363,6 +364,10 @@ export default function GradeSubmissionPage() {
   const [audio, setAudio] = useState<{ url: string; publicId: string } | null>(null);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [autoState, setAutoState] = useState<"idle" | "saving" | "saved" | "error">("idle");
+  const [savedAt, setSavedAt] = useState<string | null>(null);
+  /** Bỏ qua lần đổi state ngay sau khi tải bài — đó là dữ liệu vừa đọc về, không phải thầy sửa. */
+  const loadedRef = useRef(false);
   const [hoverId, setHoverId] = useState<string | null>(null);
   /**
    * Menu nổi cạnh chỗ vừa thao tác. `range` = đang bôi đen (thay thế/xoá),
@@ -379,11 +384,13 @@ export default function GradeSubmissionPage() {
         const s = data.submission as Submission | undefined;
         if (!s) { setError(String(data?.error ?? "Không tìm thấy bài")); return; }
         setSub(s);
-        setOverall(s.feedback?.overall ?? "");
-        setAnnotations(s.feedback?.annotations ?? []);
-        setAudio(s.feedback?.audioUrl ? { url: s.feedback.audioUrl, publicId: s.feedback.audioPublicId ?? "" } : null);
+        // Nháp mới hơn bản đã công bố nên ưu tiên, để thầy chấm tiếp đúng chỗ bỏ dở.
+        const fb = s.draftFeedback ?? s.feedback;
+        setOverall(fb?.overall ?? "");
+        setAnnotations(fb?.annotations ?? []);
+        setAudio(fb?.audioUrl ? { url: fb.audioUrl, publicId: fb.audioPublicId ?? "" } : null);
         setItems(s.items.map((it) => {
-          const prev = s.feedback?.items?.find((f) => f.idx === it.idx);
+          const prev = fb?.items?.find((f) => f.idx === it.idx);
           return { idx: it.idx, score: prev?.score, comment: prev?.comment ?? "", corrected: prev?.corrected };
         }));
       } catch (e) {
@@ -533,6 +540,56 @@ export default function GradeSubmissionPage() {
     });
   }
 
+  /** Khối feedback hiện tại — dùng chung cho tự lưu và cho lúc gửi. */
+  const draftPayload = useMemo(
+    () => ({ items, annotations, overall, audioUrl: audio?.url, audioPublicId: audio?.publicId }),
+    [items, annotations, overall, audio]
+  );
+
+  /**
+   * Tự lưu nháp sau khi ngừng thao tác 2 giây. Ghi vào `draft_feedback` nên
+   * học viên chưa thấy gì; bấm "Gửi nhận xét" mới công bố.
+   */
+  useEffect(() => {
+    if (loading || !sub) return;
+    // Lần chạy đầu chỉ đánh dấu đã nạp xong, không lưu lại chính thứ vừa đọc về.
+    if (!loadedRef.current) { loadedRef.current = true; return; }
+
+    const timer = setTimeout(async () => {
+      setAutoState("saving");
+      try {
+        const res = await fetch(`/api/admin/submissions/${id}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ feedback: draftPayload, publish: false }),
+        });
+        if (!res.ok) throw new Error(String((await readJson(res))?.error ?? `Lỗi ${res.status}`));
+        setSavedAt(new Date().toLocaleTimeString("vi-VN", { hour: "2-digit", minute: "2-digit" }));
+        setAutoState("saved");
+      } catch {
+        setAutoState("error");
+      }
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [draftPayload, id, loading, sub]);
+
+  /**
+   * Rời trang khi chưa tới nhịp 2 giây thì phần vừa gõ sẽ mất — sendBeacon gửi
+   * được cả khi tab đang đóng, fetch thường thì không.
+   */
+  useEffect(() => {
+    function flush() {
+      if (document.visibilityState !== "hidden" || !loadedRef.current) return;
+      const blob = new Blob([JSON.stringify({ feedback: draftPayload, publish: false })], {
+        type: "application/json",
+      });
+      navigator.sendBeacon?.(`/api/admin/submissions/${id}`, blob);
+    }
+    document.addEventListener("visibilitychange", flush);
+    return () => document.removeEventListener("visibilitychange", flush);
+  }, [draftPayload, id]);
+
   // Ctrl+Alt+M: thêm đề xuất sửa cho đoạn đang bôi đen, giống Google Docs.
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -556,7 +613,7 @@ export default function GradeSubmissionPage() {
       const res = await fetch(`/api/admin/submissions/${id}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ feedback: { items, annotations, overall, audioUrl: audio?.url, audioPublicId: audio?.publicId } }),
+        body: JSON.stringify({ feedback: draftPayload, publish: true }),
       });
       const data = await readJson(res);
       if (!res.ok) throw new Error(String(data?.error ?? `Lỗi ${res.status}`));
@@ -617,13 +674,20 @@ export default function GradeSubmissionPage() {
       </div>
 
       <div className="ml-auto flex items-center gap-3">
+        {/* Trạng thái tự lưu — kín đáo, kiểu Google Docs */}
+        <span className="text-[11px]" style={{ color: autoState === "error" ? "rgb(220,38,38)" : "var(--text-muted)" }}>
+          {autoState === "saving" && "Đang lưu…"}
+          {autoState === "saved" && `Đã lưu nháp lúc ${savedAt}`}
+          {autoState === "error" && "Lưu nháp lỗi — sẽ thử lại khi bạn gõ tiếp"}
+        </span>
+
         <span className="text-sm font-bold" style={{ color: "var(--text-primary)" }}>
           {band === null ? "— /200" : `~${band}/200`}
         </span>
         <button type="button" onClick={save} disabled={saving}
           className="px-5 py-2 rounded-lg text-sm font-bold text-white"
           style={{ background: saving ? "var(--border)" : "var(--accent-primary)", border: "none", cursor: saving ? "default" : "pointer" }}>
-          {saving ? "Đang lưu…" : sub.status === "graded" ? "Lưu lại" : "Gửi nhận xét"}
+          {saving ? "Đang gửi…" : sub.status === "graded" ? "Cập nhật cho học viên" : "Gửi nhận xét"}
         </button>
       </div>
     </div>

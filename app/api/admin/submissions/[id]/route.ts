@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import type { Prisma } from "@prisma/client";
+import { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/db/prisma";
 import { sendPushToUser } from "@/lib/push";
 import { estimateBand, mergeAnnotationReplies, sanitizeFeedback, scaleFor } from "@/lib/submissions";
@@ -31,7 +31,16 @@ export async function GET(_req: Request, { params }: Ctx) {
   }
 }
 
-/** Lưu nhận xét. Gọi lại lần nữa để sửa nhận xét đã lưu. */
+/**
+ * Lưu bài chấm. Hai chế độ:
+ *
+ * - `publish: false` (tự lưu) — chỉ ghi vào `draft_feedback`. Không đổi trạng
+ *   thái, không tính điểm, không báo cho học viên. Cần cột riêng vì trang xem
+ *   lại của học viên render thẳng `feedback` bất kể trạng thái; ghi nháp vào đó
+ *   là học viên đọc được bài chấm dở.
+ * - `publish: true` (bấm gửi) — gộp hội thoại rồi chép sang `feedback`, đánh dấu
+ *   đã chấm, xoá nháp, báo cho học viên nếu đây là lần chấm đầu.
+ */
 export async function POST(req: Request, { params }: Ctx) {
   const gate = await requireGrader();
   if (gate.error || !gate.user) {
@@ -39,10 +48,28 @@ export async function POST(req: Request, { params }: Ctx) {
   }
 
   const { id } = await params;
-  const body = await req.json().catch(() => null) as { feedback?: unknown } | null;
+  const body = await req.json().catch(() => null) as { feedback?: unknown; publish?: boolean } | null;
   const incoming = sanitizeFeedback(body?.feedback);
+  // Mặc định là công bố để nơi gọi cũ không đổi hành vi.
+  const publish = body?.publish !== false;
 
   try {
+    if (!publish) {
+      const existing = await prisma.skillSubmission.findUnique({
+        where: { id },
+        select: { status: true },
+      });
+      if (!existing) return NextResponse.json({ error: "Not found" }, { status: 404 });
+      if (existing.status === "draft") {
+        return NextResponse.json({ error: "Học viên chưa gửi bài này" }, { status: 409 });
+      }
+      await prisma.skillSubmission.update({
+        where: { id },
+        data: { draftFeedback: incoming as unknown as Prisma.InputJsonValue },
+      });
+      return NextResponse.json({ savedAt: new Date().toISOString() });
+    }
+
     /**
      * Khoá hàng rồi mới đọc-gộp-ghi. Trang chấm gửi lên nguyên khối feedback
      * chụp từ lúc mở trang, nên nếu học viên vừa trả lời một thẻ thì lượt đó
@@ -70,6 +97,8 @@ export async function POST(req: Request, { params }: Ctx) {
           status: "graded",
           gradedBy: gate.user!.id,
           gradedAt: new Date(),
+          // Nháp đã thành bản chính thức, giữ lại chỉ tổ lần sau load nhầm bản cũ.
+          draftFeedback: Prisma.DbNull,
         },
       });
       return { submission, existing } as const;

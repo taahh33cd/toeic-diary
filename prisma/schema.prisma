@@ -577,6 +577,11 @@ model SkillSubmission {
   /// { items: [{ idx, score, comment, corrected }], overall?, audioUrl?, audioPublicId?, band? }
   feedback Json?
 
+  /// Bản nháp khi giáo viên đang chấm (tự lưu). Học viên KHÔNG đọc cột này —
+  /// trang xem lại render thẳng `feedback` bất kể trạng thái, nên nháp phải
+  /// nằm riêng thì "lưu nháp" mới thật sự kín. Bấm gửi mới chép sang `feedback`.
+  draftFeedback Json? @map("draft_feedback")
+
   submittedAt DateTime? @map("submitted_at")
   gradedBy    String?   @map("graded_by") // Profile.id của giáo viên chấm
   gradedAt    DateTime? @map("graded_at")
