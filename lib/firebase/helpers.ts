@@ -294,21 +294,43 @@ export async function createBooking(
   return id;
 }
 
+/** Lượt đặt còn giữ chỗ — chưa bị từ chối cũng chưa bị huỷ. */
+export function isBookingActive(status: Booking["status"]): boolean {
+  return status === "pending" || status === "approved";
+}
+
+/**
+ * Mã học viên để gửi thông báo. Booking cũ lưu thẳng mã vào `studentId`,
+ * booking mới lưu uid Supabase — với những booking cũ chưa có `studentCode` và
+ * `studentId` là uid thì không xác định được mã, trả null để bỏ qua thông báo
+ * thay vì ghi nhầm vào một nhánh không ai đọc.
+ */
+export function bookingNotifyCode(booking: Booking): string | null {
+  if (booking.studentCode) return booking.studentCode;
+  const looksLikeUuid = /^[0-9a-f]{8}-[0-9a-f]{4}-/i.test(booking.studentId);
+  return looksLikeUuid ? null : booking.studentId || null;
+}
+
 /**
  * Đổi trạng thái booking. Truyền `slot` để cờ giữ chỗ trên khung giờ đi theo:
- * duyệt thì giữ chỗ, từ chối thì nhả ra — NHƯNG chỉ khi không còn lượt đặt nào
- * khác đang giữ cùng khung giờ đó (`heldByOthers`). Bỏ qua điều kiện này là nhả
- * nhầm chỗ của người đã được duyệt, khiến khung giờ hiện lại là còn trống.
+ * duyệt thì giữ chỗ, từ chối/huỷ thì nhả ra — NHƯNG chỉ khi không còn lượt đặt
+ * nào khác đang giữ cùng khung giờ đó (`heldByOthers`). Bỏ qua điều kiện này là
+ * nhả nhầm chỗ của người đã được duyệt, khiến khung giờ hiện lại là còn trống.
  * Chỉ teacher/admin ghi được `slots` nên hàm này chỉ dùng ở khu admin.
  */
 export async function updateBookingStatus(
   id: string,
   status: Booking["status"],
-  slot?: { id: string; heldByOthers: boolean }
+  slot?: { id: string; heldByOthers: boolean },
+  cancelReason?: string
 ): Promise<void> {
-  await set(ref(firebaseDb, `bookings/${id}/status`), status);
+  const patch: Record<string, unknown> = { status };
+  // Ghi null để xoá lý do cũ khi một lượt bị huỷ rồi được duyệt lại.
+  patch.cancelReason = status === "cancelled" ? cancelReason?.trim() || null : null;
+  await update(ref(firebaseDb, `bookings/${id}`), patch);
+
   if (slot) {
-    const stillTaken = status !== "declined" || slot.heldByOthers;
+    const stillTaken = isBookingActive(status) || slot.heldByOthers;
     await set(ref(firebaseDb, `slots/${slot.id}/taken`), stillTaken ? true : null);
   }
 }

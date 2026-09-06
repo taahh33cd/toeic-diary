@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { useBookings } from "@/hooks/firebase/useBookings";
-import { updateBookingStatus, updateBookingNote } from "@/lib/firebase/helpers";
+import { updateBookingStatus, updateBookingNote, isBookingActive, bookingNotifyCode } from "@/lib/firebase/helpers";
+import { notify } from "@/lib/firebase/notifications";
 import type { Booking, BookingStatus } from "@/lib/firebase/types";
 
 const SUGGEST_HOURS = Array.from({ length: 14 }, (_, i) => `${String(i + 8).padStart(2, "0")}:00`);
@@ -14,6 +15,7 @@ const STATUS_CONFIG: Record<
   pending:  { label: "Chờ",       bg: "rgba(245,158,11,0.12)", color: "rgb(180,120,0)"  },
   approved: { label: "✓ Xác nhận", bg: "rgba(16,185,129,0.12)", color: "rgb(5,150,105)" },
   declined: { label: "✗ Từ chối", bg: "rgba(239,68,68,0.10)",  color: "rgb(220,38,38)"  },
+  cancelled:{ label: "⊘ Đã huỷ",  bg: "rgba(120,113,108,0.14)", color: "rgb(87,83,78)" },
 };
 
 const FILTER_TABS: { key: BookingStatus | "all"; label: string }[] = [
@@ -21,6 +23,7 @@ const FILTER_TABS: { key: BookingStatus | "all"; label: string }[] = [
   { key: "pending",  label: "Chờ xử lý"},
   { key: "approved", label: "Đã xác nhận"},
   { key: "declined", label: "Từ chối" },
+  { key: "cancelled", label: "Đã huỷ" },
 ];
 
 function BookingRow({ booking, allBookings }: { booking: Booking; allBookings: Booking[] }) {
@@ -40,18 +43,31 @@ function BookingRow({ booking, allBookings }: { booking: Booking; allBookings: B
     year: "numeric",
   });
 
-  async function handle(status: BookingStatus) {
+  async function handle(status: BookingStatus, cancelReason?: string) {
     setLoading(status);
     // Chỉ nhả khung giờ khi không còn lượt đặt nào khác đang giữ nó — nếu không,
     // từ chối HV thứ hai sẽ mở lại khung của HV đã được duyệt.
     const heldByOthers = allBookings.some(
-      (b) => b.id !== booking.id && b.slotId === booking.slotId && b.status !== "declined"
+      (b) => b.id !== booking.id && b.slotId === booking.slotId && isBookingActive(b.status)
     );
     await updateBookingStatus(
       booking.id,
       status,
-      booking.slotId ? { id: booking.slotId, heldByOthers } : undefined
+      booking.slotId ? { id: booking.slotId, heldByOthers } : undefined,
+      cancelReason
     );
+
+    // Báo cho học viên. Booking cũ không xác định được mã HV thì bỏ qua.
+    const code = bookingNotifyCode(booking);
+    if (code) {
+      try {
+        if (status === "approved") await notify.bookingApproved(code, booking.date, booking.time);
+        else if (status === "declined") await notify.bookingDeclined(code, booking.date);
+        else if (status === "cancelled") await notify.bookingCancelled(code, booking.date, booking.time, cancelReason);
+      } catch {
+        // Thông báo hỏng không được kéo theo cả thao tác đổi trạng thái.
+      }
+    }
     setLoading(null);
   }
 
@@ -103,6 +119,11 @@ function BookingRow({ booking, allBookings }: { booking: Booking; allBookings: B
               💬 {booking.note}
             </p>
           )}
+          {booking.status === "cancelled" && booking.cancelReason && (
+            <p className="text-xs mt-1" style={{ color: "rgb(87,83,78)" }}>
+              ⊘ Lý do huỷ: {booking.cancelReason}
+            </p>
+          )}
         </div>
 
         {booking.status === "pending" && (
@@ -147,6 +168,22 @@ function BookingRow({ booking, allBookings }: { booking: Booking; allBookings: B
               💡 Gợi ý lịch khác
             </button>
           </div>
+        )}
+
+        {booking.status === "approved" && (
+          <button
+            onClick={() => {
+              const reason = prompt(`Huỷ buổi ${booking.time} ngày ${booking.date} của ${booking.studentName}?
+Lý do (có thể bỏ trống):`);
+              if (reason === null) return;
+              handle("cancelled", reason);
+            }}
+            disabled={!!loading}
+            className="text-xs font-semibold px-3 py-1.5 min-h-[44px] rounded-lg border shrink-0"
+            style={{ background: "rgba(120,113,108,0.10)", color: "rgb(87,83,78)", borderColor: "rgba(120,113,108,0.3)", opacity: loading ? 0.5 : 1 }}
+          >
+            {loading === "cancelled" ? "..." : "⊘ Huỷ buổi"}
+          </button>
         )}
 
         {booking.status !== "pending" && (

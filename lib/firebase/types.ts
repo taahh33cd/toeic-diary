@@ -222,7 +222,12 @@ export interface Goal {
 
 // ─── Booking (path: bookings/{id}) ───────────────────────────────────────────
 
-export type BookingStatus = "pending" | "approved" | "declined";
+/**
+ * `declined` = giáo viên không nhận buổi đó; `cancelled` = buổi đã nhận nhưng
+ * bị huỷ sau (thường do học viên bận đột xuất). Tách hai cái vì học viên đọc
+ * "Đã từ chối" cho một buổi chính mình xin huỷ là sai bản chất.
+ */
+export type BookingStatus = "pending" | "approved" | "declined" | "cancelled";
 
 export interface Booking {
   id: string;
@@ -234,6 +239,13 @@ export interface Booking {
   note?: string;
   status: BookingStatus;
   createdAt: string;
+  /** Lý do huỷ, chỉ có khi status = "cancelled". */
+  cancelReason?: string;
+  /**
+   * Mã học viên. Booking cũ lưu thẳng mã vào `studentId`, booking mới lưu uid
+   * Supabase — cần trường riêng này để gửi thông báo (đánh theo mã học viên).
+   */
+  studentCode?: string;
 }
 
 // ─── Slot (path: slots/{id}) ─────────────────────────────────────────────────

@@ -7,7 +7,7 @@ import { useStudent } from "@/hooks/firebase/useStudent";
 import { useClasses } from "@/hooks/firebase/useClasses";
 import { useSlots } from "@/hooks/firebase/useSlots";
 import { useBookings } from "@/hooks/firebase/useBookings";
-import { createBooking } from "@/lib/firebase/helpers";
+import { createBooking, isBookingActive } from "@/lib/firebase/helpers";
 import { dayToNum } from "@/lib/schedule-day";
 import type { ScheduleItem, Slot, Booking } from "@/lib/firebase/types";
 
@@ -177,12 +177,14 @@ const STATUS_LABEL: Record<string, { label: string; color: string }> = {
   pending:  { label: "Chờ xác nhận", color: "rgba(245,158,11,0.15)" },
   approved: { label: "Đã xác nhận",  color: "rgba(16,185,129,0.15)" },
   declined: { label: "Đã từ chối",   color: "rgba(239,68,68,0.12)"  },
+  cancelled:{ label: "Đã huỷ",       color: "rgba(120,113,108,0.14)" },
 };
 
 const STATUS_TEXT: Record<string, string> = {
   pending:  "#9A8672",
   approved: "rgb(5,150,105)",
   declined: "rgb(220,38,38)",
+  cancelled: "rgb(87,83,78)",
 };
 
 function BookingItem({ booking }: { booking: Booking }) {
@@ -210,6 +212,11 @@ function BookingItem({ booking }: { booking: Booking }) {
         </p>
         {booking.note && (
           <p style={{ fontSize: ".72rem", color: "#9A8672", margin: ".15rem 0 0" }}>{booking.note}</p>
+        )}
+        {booking.status === "cancelled" && booking.cancelReason && (
+          <p style={{ fontSize: ".72rem", color: "#7A6754", margin: ".15rem 0 0" }}>
+            ⊘ {booking.cancelReason}
+          </p>
         )}
       </div>
       <span
@@ -550,7 +557,7 @@ export default function SchedulePage() {
   // Booking bị từ chối thì slot được nhả ra, HV phải đặt lại được — nên không
   // tính vào danh sách "đã đặt".
   const bookedSlotIds = new Set(
-    bookings.filter((b) => b.status !== "declined").map((b) => b.slotId)
+    bookings.filter((b) => isBookingActive(b.status)).map((b) => b.slotId)
   );
   const upcomingSlots = slots.filter((s) => s.date >= td);
   const myBookings = [...bookings].sort((a, b) => b.date.localeCompare(a.date));

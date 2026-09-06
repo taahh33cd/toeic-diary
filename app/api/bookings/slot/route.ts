@@ -64,9 +64,9 @@ export async function POST(req: NextRequest) {
     // 4. Ghi booking
     const { data: profile } = await supabase
       .from("profiles")
-      .select("display_name")
+      .select("display_name, student_code")
       .eq("id", user.id)
-      .single<{ display_name: string | null }>();
+      .single<{ display_name: string | null; student_code: string | null }>();
     const displayName = profile?.display_name ?? "Học viên";
 
     const id = `b${Date.now()}`;
@@ -80,6 +80,8 @@ export async function POST(req: NextRequest) {
       status: "pending",
       createdAt: new Date().toISOString(),
       ...(note ? { note } : {}),
+      // Thông báo đánh theo mã học viên, còn studentId là uid Supabase.
+      ...(profile?.student_code ? { studentCode: profile.student_code } : {}),
     };
 
     await db.ref(`bookings/${id}`).set(booking);

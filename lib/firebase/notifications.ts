@@ -6,6 +6,7 @@ export type NotifType =
   | "homework"
   | "booking_approved"
   | "booking_declined"
+  | "booking_cancelled"
   | "comment"
   | "achievement";
 
@@ -43,6 +44,14 @@ export const notify = {
 
   bookingDeclined: (code: string, date: string) =>
     pushNotification(code, "booking_declined", "Lịch học bị từ chối", `Buổi ${date} không khả dụng`),
+
+  bookingCancelled: (code: string, date: string, time: string, reason?: string) =>
+    pushNotification(
+      code,
+      "booking_cancelled",
+      "Lịch học đã huỷ",
+      `Buổi ${date} lúc ${time} đã được huỷ${reason ? ` · ${reason}` : ""}`
+    ),
 
   comment: (code: string, excerpt: string) =>
     pushNotification(code, "comment", "Thầy Hiếu đã nhận xét", excerpt),

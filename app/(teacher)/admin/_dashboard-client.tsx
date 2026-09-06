@@ -8,7 +8,7 @@ import { useClasses } from "@/hooks/firebase/useClasses";
 import { useClassAttendance } from "@/hooks/firebase/useClassAttendance";
 import { useAllSubmissions } from "@/hooks/firebase/useAllSubmissions";
 import { useAllDayLinks } from "@/hooks/firebase/useAllDayLinks";
-import { setAttendance, createStudent } from "@/lib/firebase/helpers";
+import { setAttendance, createStudent, isBookingActive } from "@/lib/firebase/helpers";
 import type { SchoolClass, AttendanceStatus, Student, Homework, HwItem, SubmissionsMap, DayLinksMap, Booking } from "@/lib/firebase/types";
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -359,7 +359,7 @@ function TodayTimeline({
 
     // 2. Lịch hẹn hôm nay — bỏ lượt đã từ chối
     for (const b of bookings) {
-      if (b.date !== date || b.status === "declined") continue;
+      if (b.date !== date || !isBookingActive(b.status)) continue;
       out.push({ key: `bk_${b.id}`, time: b.time, kind: "booking", booking: b });
     }
 

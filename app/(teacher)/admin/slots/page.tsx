@@ -3,8 +3,10 @@
 import { useMemo, useState } from "react";
 import { useSlots } from "@/hooks/firebase/useSlots";
 import { useBookings } from "@/hooks/firebase/useBookings";
-import { createSlotsBulk, deleteSlot, deleteSlots, syncSlotTaken } from "@/lib/firebase/helpers";
+import { createSlotsBulk, deleteSlot, deleteSlots, syncSlotTaken, updateBookingStatus, isBookingActive, bookingNotifyCode } from "@/lib/firebase/helpers";
 import { useToast } from "@/components/shared/Toast";
+import { notify } from "@/lib/firebase/notifications";
+import type { Booking } from "@/lib/firebase/types";
 import type { Slot } from "@/lib/firebase/types";
 
 // ─── Hằng số ─────────────────────────────────────────────────────────────────
@@ -136,12 +138,14 @@ export default function SlotsPage() {
   const upcoming = useMemo(() => slots.filter((s) => s.date >= today), [slots, today]);
   const past = useMemo(() => slots.filter((s) => s.date < today), [slots, today]);
 
-  /** slotId → số lượt đặt còn hiệu lực (không tính lượt đã từ chối). */
-  const bookedCount = useMemo(() => {
-    const map = new Map<string, number>();
+  /** slotId → các lượt đặt còn giữ chỗ, để hiện tên học viên và huỷ tại chỗ. */
+  const bookingsBySlot = useMemo(() => {
+    const map = new Map<string, Booking[]>();
     for (const b of bookings) {
-      if (!b.slotId || b.status === "declined") continue;
-      map.set(b.slotId, (map.get(b.slotId) ?? 0) + 1);
+      if (!b.slotId || !isBookingActive(b.status)) continue;
+      const list = map.get(b.slotId);
+      if (list) list.push(b);
+      else map.set(b.slotId, [b]);
     }
     return map;
   }, [bookings]);
@@ -154,7 +158,7 @@ export default function SlotsPage() {
    */
   const drift = useMemo(() => {
     const held = new Set(
-      bookings.filter((b) => b.slotId && b.status !== "declined").map((b) => b.slotId)
+      bookings.filter((b) => b.slotId && isBookingActive(b.status)).map((b) => b.slotId)
     );
     const fix: Record<string, boolean | null> = {};
     for (const s of slots) {
@@ -176,6 +180,42 @@ export default function SlotsPage() {
       toast(errText(err), { variant: "error", duration: 6000 });
     } finally {
       setSyncing(false);
+    }
+  }
+
+  async function handleCancelBooking(booking: Booking) {
+    if (busy) return;
+    const reason = prompt(
+      `Huỷ lượt đặt của ${booking.studentName} (${fmtShort(booking.date)} ${booking.time})?
+Lý do (có thể bỏ trống):`
+    );
+    if (reason === null) return;
+
+    setBusy(true);
+    try {
+      // Khung giờ chỉ được nhả khi không còn ai khác đang giữ nó.
+      const heldByOthers = (bookingsBySlot.get(booking.slotId) ?? []).some((b) => b.id !== booking.id);
+      await withTimeout(
+        updateBookingStatus(
+          booking.id,
+          "cancelled",
+          { id: booking.slotId, heldByOthers },
+          reason
+        )
+      );
+      const code = bookingNotifyCode(booking);
+      if (code) {
+        try {
+          await notify.bookingCancelled(code, booking.date, booking.time, reason || undefined);
+        } catch {
+          // Không để lỗi thông báo làm hỏng thao tác huỷ.
+        }
+      }
+      toast(`Đã huỷ lượt đặt của ${booking.studentName}`, { variant: "success" });
+    } catch (err) {
+      toast(errText(err), { variant: "error", duration: 6000 });
+    } finally {
+      setBusy(false);
     }
   }
 
@@ -258,7 +298,7 @@ export default function SlotsPage() {
   }
 
   async function handleDeleteOne(slot: Slot) {
-    const booked = bookedCount.get(slot.id) ?? 0;
+    const booked = bookingsBySlot.get(slot.id)?.length ?? 0;
     const warn = booked > 0 ? `\n⚠️ Khung giờ này đã có ${booked} lượt đặt.` : "";
     if (!confirm(`Xóa khung giờ ${fmtShort(slot.date)} ${slot.time}?${warn}`)) return;
     setBusy(true);
@@ -279,7 +319,7 @@ export default function SlotsPage() {
   async function handleDeleteSelected() {
     const ids = [...selected];
     if (ids.length === 0 || busy) return;
-    const bookedIds = ids.filter((id) => (bookedCount.get(id) ?? 0) > 0);
+    const bookedIds = ids.filter((id) => (bookingsBySlot.get(id)?.length ?? 0) > 0);
     const warn = bookedIds.length > 0 ? `\n⚠️ Trong đó ${bookedIds.length} khung đã có người đặt.` : "";
     if (!confirm(`Xóa ${ids.length} khung giờ đã chọn?${warn}`)) return;
     setBusy(true);
@@ -350,7 +390,7 @@ export default function SlotsPage() {
   };
 
   function SlotRow({ slot }: { slot: Slot }) {
-    const booked = bookedCount.get(slot.id) ?? 0;
+    const slotBookings = bookingsBySlot.get(slot.id) ?? [];
     const checked = selected.has(slot.id);
 
     return (
@@ -383,14 +423,27 @@ export default function SlotsPage() {
             )}
           </p>
         </div>
-        {booked > 0 && (
+        {slotBookings.map((b) => (
           <span
-            className="text-xs px-2 py-1 rounded-lg shrink-0"
-            style={{ background: "rgba(34,197,94,0.12)", color: "rgb(21,128,61)" }}
+            key={b.id}
+            className="flex items-center gap-1.5 text-xs px-2 py-1 rounded-lg shrink-0"
+            style={{
+              background: b.status === "approved" ? "rgba(34,197,94,0.12)" : "rgba(245,158,11,0.14)",
+              color: b.status === "approved" ? "rgb(21,128,61)" : "rgb(180,120,0)",
+            }}
+            title={b.status === "approved" ? "Đã duyệt" : "Chờ duyệt"}
           >
-            {booked} đặt
+            <span className="truncate" style={{ maxWidth: 140 }}>{b.studentName}</span>
+            <button
+              onClick={() => handleCancelBooking(b)}
+              disabled={busy}
+              title={`Huỷ lượt đặt của ${b.studentName}`}
+              style={{ fontWeight: 700, opacity: busy ? 0.5 : 1, lineHeight: 1 }}
+            >
+              ✕
+            </button>
           </span>
-        )}
+        ))}
         <button
           onClick={() => handleDeleteOne(slot)}
           disabled={busy}
