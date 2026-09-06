@@ -13,6 +13,7 @@ import { useHwFiles } from "@/hooks/firebase/useHwFiles";
 import { useAllStudents } from "@/hooks/firebase/useAllStudents";
 import { useClasses } from "@/hooks/firebase/useClasses";
 import { HwExportModal } from "@/components/admin/HwExportModal";
+import { ZoomableImage } from "@/components/admin/ZoomableImage";
 import {
   updateStudent,
   deleteStudent,
@@ -2057,8 +2058,8 @@ function PersonalHWSection({
                 // Bỏ autoPlay: lướt nhanh qua nhiều file mà video nào cũng tự phát thì rất khó chịu.
                 <video key={modalUrl} src={modalUrl} controls style={{ maxWidth: "100%", maxHeight: "65vh" }} />
               ) : (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img key={modalUrl} src={modalUrl} alt="Bài nộp" style={{ maxWidth: "100%", maxHeight: "65vh", objectFit: "contain" }} />
+                // key: đổi file thì component mount lại nên mức zoom tự về 100%.
+                <ZoomableImage key={modalUrl} src={modalUrl} alt="Bài nộp" />
               )}
 
               {modalFiles.length > 1 && (
