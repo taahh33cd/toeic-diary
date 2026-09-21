@@ -10,7 +10,8 @@ import { useDayLinks } from "@/hooks/firebase/useDayLinks";
 import { saveSubmission, removeSubmission, saveProgress, uploadHomeworkFile, addHwFile, deleteHwFile, deleteOldDayLink } from "@/lib/firebase/helpers";
 import { uploadToCloudinary } from "@/lib/cloudinary/upload";
 import { useHwFiles } from "@/hooks/firebase/useHwFiles";
-import type { HwFilesForHw } from "@/lib/firebase/types";
+import { useHwViewed } from "@/hooks/firebase/useHwViewed";
+import type { HwFilesForHw, HwViewed } from "@/lib/firebase/types";
 import { awardXp } from "@/lib/xp-client";
 import type { Homework } from "@/lib/firebase/types";
 import { EXAM_LABEL, goalDeadline, goalExamType, goalTotal } from "@/lib/exam-goal";
@@ -171,21 +172,28 @@ function CongratsPopup({ onClose }: { onClose: () => void }) {
 // ─── Homework card ────────────────────────────────────────────────────────────
 
 function HwCard({
-  hw, isCurrent, studentCode, submitted, submittedUrl, dayLinkUrl, onDone, allSubmissions, hwFilesForHw,
+  hw, isCurrent, studentCode, submitted, submittedUrl, dayLinkUrl, onDone, allSubmissions, hwFilesForHw, hwViewedForHw,
 }: {
   hw: Homework; isCurrent: boolean; studentCode: string;
   submitted: boolean; submittedUrl?: string; dayLinkUrl?: string;
   onDone?: () => void;
   allSubmissions: Record<string, { ticked?: boolean }>;
   hwFilesForHw: HwFilesForHw;
+  hwViewedForHw?: HwViewed;
 }) {
   const [open, setOpen] = useState(isCurrent);
   const [showDescMap, setShowDescMap] = useState<Record<string, boolean>>({});
   const [uploading, setUploading] = useState<number | null>(null);
   const [batch, setBatch] = useState<{ index: number; total: number } | null>(null);
   const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null);
-  const [lightboxUrl, setLightboxUrl] = useState<string | null>(null);
+  const [lightbox, setLightbox] = useState<{ id: string; url: string } | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // ── Nhận xét của giáo viên (hwViewed/{code}/{hwId}) ──
+  const fileNotes = hwViewedForHw?.fileNotes ?? {};
+  const generalNote = hwViewedForHw?.note?.trim() ?? "";
+  const noteCount = Object.values(fileNotes).filter(n => n?.text?.trim()).length + (generalNote ? 1 : 0);
+  const teacherViewed = !!hwViewedForHw?.viewedAt;
 
   // Per-item check state — initialized from Firebase, persisted on toggle
   const [checked, setChecked] = useState<Record<string, boolean>>(() => {
@@ -407,6 +415,21 @@ function HwCard({
                 HIỆN TẠI
               </span>
             )}
+            {noteCount > 0 ? (
+              <span style={{
+                fontSize: ".6rem", fontWeight: 700, padding: ".18rem .5rem",
+                background: "#C4622D", color: "#fff",
+              }}>
+                💬 GV nhận xét{noteCount > 1 ? ` (${noteCount})` : ""}
+              </span>
+            ) : teacherViewed && (
+              <span style={{
+                fontSize: ".6rem", fontWeight: 700, padding: ".18rem .5rem",
+                background: "rgba(74,124,89,.15)", color: "#4A7C59",
+              }}>
+                👁 GV đã xem
+              </span>
+            )}
             <span style={{ fontSize: ".7rem", color: isCurrent ? "rgba(255,255,255,.45)" : "#9A8672" }}>
               {totalItems} nhiệm vụ
             </span>
@@ -469,12 +492,15 @@ function HwCard({
                               </div>
                             </div>
                           ) : isVid ? (
-                            <button type="button" onClick={() => setLightboxUrl(file.url)} style={{ width: 72, height: 72, background: "rgba(26,62,128,.08)", border: "1px solid rgba(26,62,128,.25)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: ".15rem", cursor: "pointer" }}>
+                            <button type="button" onClick={() => setLightbox({ id: fileId, url: file.url })} style={{ width: 72, height: 72, background: "rgba(26,62,128,.08)", border: "1px solid rgba(26,62,128,.25)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: ".15rem", cursor: "pointer" }}>
                               <span style={{ fontSize: "1.3rem" }}>🎬</span>
                               <span style={{ fontSize: ".55rem", color: "#2860A8", fontWeight: 600 }}>Video</span>
                             </button>
                           ) : (
-                            <img src={file.url} alt="" onClick={() => setLightboxUrl(file.url)} style={{ width: 72, height: 72, objectFit: "cover", cursor: "pointer", border: "1px solid var(--border,#DDD0BC)", display: "block" }} />
+                            <img src={file.url} alt="" onClick={() => setLightbox({ id: fileId, url: file.url })} style={{ width: 72, height: 72, objectFit: "cover", cursor: "pointer", border: "1px solid var(--border,#DDD0BC)", display: "block" }} />
+                          )}
+                          {!!fileNotes[fileId]?.text?.trim() && (
+                            <span title="Giáo viên đã nhận xét ảnh/video này" style={{ position: "absolute", bottom: 3, left: 3, width: 18, height: 18, borderRadius: "50%", background: "#C4622D", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".6rem", pointerEvents: "none" }}>💬</span>
                           )}
                           {/* ✕ bên TRONG thumbnail để tránh bị clip bởi overflow:hidden */}
                           {!isConfirming && (
@@ -498,11 +524,14 @@ function HwCard({
                               </div>
                             </div>
                           ) : isVid ? (
-                            <button type="button" onClick={() => setLightboxUrl(oldStorageUrl!)} style={{ width: 72, height: 72, background: "rgba(26,62,128,.08)", border: "1px solid rgba(26,62,128,.25)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: ".15rem", cursor: "pointer" }}>
+                            <button type="button" onClick={() => setLightbox({ id: "__legacy__", url: oldStorageUrl! })} style={{ width: 72, height: 72, background: "rgba(26,62,128,.08)", border: "1px solid rgba(26,62,128,.25)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: ".15rem", cursor: "pointer" }}>
                               <span style={{ fontSize: "1.3rem" }}>🎬</span>
                             </button>
                           ) : (
-                            <img src={oldStorageUrl!} alt="" onClick={() => setLightboxUrl(oldStorageUrl!)} style={{ width: 72, height: 72, objectFit: "cover", cursor: "pointer", border: "1px solid var(--border,#DDD0BC)", display: "block" }} />
+                            <img src={oldStorageUrl!} alt="" onClick={() => setLightbox({ id: "__legacy__", url: oldStorageUrl! })} style={{ width: 72, height: 72, objectFit: "cover", cursor: "pointer", border: "1px solid var(--border,#DDD0BC)", display: "block" }} />
+                          )}
+                          {!!fileNotes["__legacy__"]?.text?.trim() && (
+                            <span title="Giáo viên đã nhận xét ảnh/video này" style={{ position: "absolute", bottom: 3, left: 3, width: 18, height: 18, borderRadius: "50%", background: "#C4622D", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".6rem", pointerEvents: "none" }}>💬</span>
                           )}
                           {!isConfirming && (
                             <button type="button" onClick={() => setDeleteConfirm("__legacy__")} style={{ position: "absolute", top: 3, right: 3, width: 18, height: 18, borderRadius: "50%", background: "rgba(0,0,0,.55)", border: "1.5px solid rgba(255,255,255,.7)", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".55rem", fontWeight: 700, padding: 0 }}>✕</button>
@@ -510,6 +539,76 @@ function HwCard({
                         </div>
                       );
                     })()}
+                  </div>
+                );
+              })()}
+
+              {/* ── Nhận xét của giáo viên (chỉ đọc) ── */}
+              {(teacherViewed || noteCount > 0) && (() => {
+                const legacyUrl = dayLinkUrl ?? submittedUrl;
+                const known = [
+                  ...Object.entries(hwFilesForHw).map(([id, f]) => ({ id, url: f.url })),
+                  ...(legacyUrl ? [{ id: "__legacy__", url: legacyUrl }] : []),
+                ];
+                const knownIds = new Set(known.map(k => k.id));
+                const items = [
+                  ...known.map(k => ({ ...k, note: fileNotes[k.id] })),
+                  // Nhận xét còn sót của file đã xoá: vẫn hiện để không mất lời thầy.
+                  ...Object.entries(fileNotes)
+                    .filter(([id]) => !knownIds.has(id))
+                    .map(([id, note]) => ({ id, url: undefined as string | undefined, note })),
+                ].filter(x => x.note?.text?.trim());
+
+                return (
+                  <div style={{ border: "1px solid rgba(196,98,45,.35)", background: "rgba(196,98,45,.06)" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: ".4rem", flexWrap: "wrap", padding: ".4rem .6rem", borderBottom: items.length || generalNote ? "1px solid rgba(196,98,45,.25)" : "none" }}>
+                      <span style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".08em", color: "#C4622D" }}>
+                        💬 NHẬN XÉT CỦA GIÁO VIÊN
+                      </span>
+                      {teacherViewed && (
+                        <span style={{ fontSize: ".62rem", color: "#4A7C59", fontWeight: 600 }}>
+                          ✓ Thầy đã xem · {new Date(hwViewedForHw!.viewedAt).toLocaleString("vi-VN", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" })}
+                        </span>
+                      )}
+                    </div>
+
+                    {generalNote && (
+                      <div style={{ padding: ".5rem .6rem", borderBottom: items.length ? "1px solid rgba(196,98,45,.18)" : "none" }}>
+                        <div style={{ fontSize: ".58rem", fontWeight: 700, letterSpacing: ".06em", color: "#9A8672", marginBottom: ".2rem" }}>CHUNG CẢ BUỔI</div>
+                        <div style={{ fontSize: ".82rem", color: "var(--text-primary,#2C1E0F)", whiteSpace: "pre-wrap", lineHeight: 1.5 }}>{generalNote}</div>
+                      </div>
+                    )}
+
+                    {items.map(({ id, url, note }, i) => {
+                      const isVid = !!url && /\.(mp4|mov|avi|webm|mkv)/i.test(url.split("?")[0]);
+                      return (
+                        <div key={id} style={{ display: "flex", gap: ".55rem", padding: ".5rem .6rem", borderTop: i === 0 && !generalNote ? "none" : "1px solid rgba(196,98,45,.18)" }}>
+                          {url ? (
+                            isVid ? (
+                              <button type="button" onClick={() => setLightbox({ id, url })} style={{ width: 44, height: 44, flexShrink: 0, background: "rgba(26,62,128,.08)", border: "1px solid rgba(26,62,128,.25)", cursor: "pointer", fontSize: "1.1rem" }}>🎬</button>
+                            ) : (
+                              <img src={url} alt="" onClick={() => setLightbox({ id, url })} style={{ width: 44, height: 44, objectFit: "cover", flexShrink: 0, cursor: "pointer", border: "1px solid var(--border,#DDD0BC)", display: "block" }} />
+                            )
+                          ) : (
+                            <div style={{ width: 44, height: 44, flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(0,0,0,.04)", border: "1px solid var(--border,#DDD0BC)", fontSize: "1rem" }}>📄</div>
+                          )}
+                          <div style={{ flex: 1, minWidth: 0 }}>
+                            <div style={{ fontSize: ".82rem", color: "var(--text-primary,#2C1E0F)", whiteSpace: "pre-wrap", lineHeight: 1.5 }}>{note!.text}</div>
+                            {note!.ts && (
+                              <div style={{ fontSize: ".6rem", color: "#9A8672", marginTop: ".15rem" }}>
+                                {new Date(note!.ts).toLocaleString("vi-VN", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" })}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      );
+                    })}
+
+                    {!generalNote && items.length === 0 && (
+                      <div style={{ padding: ".45rem .6rem", fontSize: ".75rem", color: "#9A8672", fontStyle: "italic" }}>
+                        Thầy đã xem bài nộp, chưa để lại nhận xét.
+                      </div>
+                    )}
                   </div>
                 );
               })()}
@@ -714,27 +813,38 @@ function HwCard({
       </AnimatePresence>
 
       {/* ── Media lightbox ── */}
-      {lightboxUrl && (
+      {lightbox && (() => {
+        const note = fileNotes[lightbox.id]?.text?.trim();
+        return (
         <div
-          onClick={() => setLightboxUrl(null)}
+          onClick={() => setLightbox(null)}
           style={{ position: "fixed", inset: 0, zIndex: 300, background: "rgba(0,0,0,.9)", display: "flex", alignItems: "center", justifyContent: "center", padding: "1rem" }}
         >
           <button
             type="button"
-            onClick={() => setLightboxUrl(null)}
+            onClick={() => setLightbox(null)}
             style={{ position: "absolute", top: "1rem", right: "1rem", background: "rgba(255,255,255,.15)", border: "none", color: "#fff", width: 36, height: 36, borderRadius: "50%", cursor: "pointer", fontSize: "1rem", display: "flex", alignItems: "center", justifyContent: "center" }}
           >
             ✕
           </button>
-          <div onClick={e => e.stopPropagation()} style={{ maxWidth: "min(90vw,800px)", maxHeight: "90vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            {/\.(mp4|mov|avi|webm|mkv)/i.test(lightboxUrl.split("?")[0]) ? (
-              <video src={lightboxUrl} controls autoPlay style={{ maxWidth: "100%", maxHeight: "85vh" }} />
+          <div onClick={e => e.stopPropagation()} style={{ maxWidth: "min(90vw,800px)", maxHeight: "90vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: ".75rem" }}>
+            {/\.(mp4|mov|avi|webm|mkv)/i.test(lightbox.url.split("?")[0]) ? (
+              <video src={lightbox.url} controls autoPlay style={{ maxWidth: "100%", maxHeight: note ? "65vh" : "85vh" }} />
             ) : (
-              <img src={lightboxUrl} alt="" style={{ maxWidth: "100%", maxHeight: "85vh", objectFit: "contain" }} />
+              <img src={lightbox.url} alt="" style={{ maxWidth: "100%", maxHeight: note ? "65vh" : "85vh", objectFit: "contain" }} />
+            )}
+            {note && (
+              <div style={{ width: "100%", maxHeight: "20vh", overflowY: "auto", background: "rgba(196,98,45,.15)", border: "1px solid rgba(196,98,45,.5)", borderRadius: 6, padding: ".6rem .75rem" }}>
+                <div style={{ fontSize: ".6rem", fontWeight: 700, letterSpacing: ".08em", color: "#E8A87C", marginBottom: ".25rem" }}>
+                  💬 NHẬN XÉT CỦA GIÁO VIÊN
+                </div>
+                <div style={{ fontSize: ".85rem", color: "#fff", whiteSpace: "pre-wrap", lineHeight: 1.5 }}>{note}</div>
+              </div>
             )}
           </div>
         </div>
-      )}
+        );
+      })()}
     </div>
   );
 }
@@ -748,6 +858,7 @@ export default function MissionsPage() {
   const { submissions, loading: subLoading } = useSubmissions(profile?.studentCode);
   const { dayLinks } = useDayLinks(profile?.studentCode);
   const { hwFiles } = useHwFiles(profile?.studentCode);
+  const { hwViewed } = useHwViewed(profile?.studentCode);
   const [showCongrats, setShowCongrats] = useState(false); // G11
 
   const loading = profileLoading || hwLoading || goalLoading || subLoading;
@@ -913,6 +1024,7 @@ export default function MissionsPage() {
                 onDone={() => setShowCongrats(true)}
                 allSubmissions={submissions}
                 hwFilesForHw={hwFiles[hw.id] ?? {}}
+                hwViewedForHw={hwViewed[hw.id]}
               />
             </motion.div>
           ))}

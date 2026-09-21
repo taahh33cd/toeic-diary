@@ -22,6 +22,7 @@ function formatRelativeTime(iso?: string, fallbackKey?: string): string {
 function urlForType(type: string): string {
   if (type === "homework") return "/journal/progress";
   if (type === "vocab") return "/journal/vocab";
+  if (type === "hw-note") return "/journal/missions";
   return "/journal";
 }
 

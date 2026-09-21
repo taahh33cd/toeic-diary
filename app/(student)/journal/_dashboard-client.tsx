@@ -5,6 +5,7 @@ import { useMemo, useState, useEffect } from "react";
 import { useProfile } from "@/hooks/useProfile";
 import { useStudent } from "@/hooks/firebase/useStudent";
 import { useHomework } from "@/hooks/firebase/useHomework";
+import { useHwViewed } from "@/hooks/firebase/useHwViewed";
 import { useGoal } from "@/hooks/firebase/useGoal";
 import { useSubmissions } from "@/hooks/firebase/useSubmissions";
 import { useVocab } from "@/hooks/firebase/useVocab";
@@ -422,12 +423,24 @@ function TasksTile({
 
 // ─── Feedback tile ────────────────────────────────────────────────────────────
 
-function FeedbackTile({ comments }: { comments?: Record<string, { text: string; ts: number }> }) {
+function FeedbackTile({
+  comments, hwNote,
+}: {
+  comments?: Record<string, { text: string; ts: number }>;
+  /** Nhận xét mới nhất của GV cho một ảnh/video bài nộp BTVN. */
+  hwNote?: { text: string; ts: number; hwLabel: string } | null;
+}) {
   const { t } = useLocale();
   const latest = useMemo(() => {
-    if (!comments || !Object.keys(comments).length) return null;
-    return Object.values(comments).sort((a, b) => b.ts - a.ts)[0];
-  }, [comments]);
+    const general = comments && Object.keys(comments).length
+      ? Object.values(comments).sort((a, b) => b.ts - a.ts)[0]
+      : null;
+    // Hiện cái mới nhất giữa nhận xét chung và nhận xét bài nộp.
+    if (hwNote && (!general || hwNote.ts > general.ts)) {
+      return { text: hwNote.text, ts: hwNote.ts, hwLabel: hwNote.hwLabel };
+    }
+    return general ? { ...general, hwLabel: undefined as string | undefined } : null;
+  }, [comments, hwNote]);
 
   return (
     <Tile className="col-span-12 md:col-span-6" accentLeft>
@@ -452,7 +465,17 @@ function FeedbackTile({ comments }: { comments?: Record<string, { text: string; 
           <p className="mt-3 text-xs font-bold" style={{ color: INK }}>
             {t("Giáo viên", "Teacher")} ·{" "}
             {new Date(latest.ts).toLocaleDateString("vi-VN", { day: "numeric", month: "long" })}
+            {latest.hwLabel && (
+              <span style={{ fontWeight: 400, color: "var(--text-muted)" }}>
+                {" "}· {t("bài nộp", "submission")} {latest.hwLabel}
+              </span>
+            )}
           </p>
+          {latest.hwLabel && (
+            <Link href="/journal/missions" className="mt-1 inline-block text-xs font-medium hover:opacity-70 transition-opacity" style={{ color: "var(--orange)" }}>
+              {t("Xem ở Nhiệm vụ →", "Open Missions →")}
+            </Link>
+          )}
         </>
       )}
     </Tile>
@@ -1166,6 +1189,7 @@ export default function DashboardClient({ xpStats, swWork }: { xpStats: XpStats 
   const { submissions } = useSubmissions(profile?.studentCode);
   const { words } = useVocab(profile?.studentCode);
   const { classes } = useClasses();
+  const { hwViewed } = useHwViewed(profile?.studentCode);
 
   const loading = profileLoading || studentLoading;
 
@@ -1218,6 +1242,20 @@ export default function DashboardClient({ xpStats, swWork }: { xpStats: XpStats 
   // B14: vocab SRS due
   const vocabDueCount = words.filter((w) => isVocabDue(w, td)).length;
 
+  // Nhận xét mới nhất của GV cho một ảnh/video bài nộp BTVN (plain, sau early return)
+  const latestHwNote = (() => {
+    let best: { text: string; ts: number; hwLabel: string } | null = null;
+    for (const [hwId, hv] of Object.entries(hwViewed)) {
+      for (const n of Object.values(hv?.fileNotes ?? {})) {
+        if (!n?.text?.trim() || (best && n.ts <= best.ts)) continue;
+        const hw = homework.find((h) => h.id === hwId);
+        const [y, m, d] = (hw?.date ?? "").split("-");
+        best = { text: n.text, ts: n.ts, hwLabel: y ? `${d}/${m}` : "" };
+      }
+    }
+    return best;
+  })();
+
   // B11: today's hw is submitted if there's a ticked submission for its date
   const todaySubmitted = todayHw ? (submissions[todayHw.date]?.ticked ?? false) : false;
 
@@ -1265,7 +1303,10 @@ export default function DashboardClient({ xpStats, swWork }: { xpStats: XpStats 
 
         {/* Row 3: Schedule | Feedback */}
         <ScheduleTile schedule={mergedSchedule} />
-        <FeedbackTile comments={student?.comments as Record<string, { text: string; ts: number }> | undefined} />
+        <FeedbackTile
+          comments={student?.comments as Record<string, { text: string; ts: number }> | undefined}
+          hwNote={latestHwNote}
+        />
 
         {/* Row 3b: Bài Speaking & Writing đã lưu/gửi chấm */}
         {swWork && <SwWorkTile stats={swWork} />}

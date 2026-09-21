@@ -33,6 +33,7 @@ import {
   deleteHomework,
   pushClassHomework,
   markHwViewed,
+  saveHwFileNote,
   deleteHwFile,
 } from "@/lib/firebase/helpers";
 import { calcEtsScore } from "@/lib/ets-scale";
@@ -45,6 +46,7 @@ import type {
   Homework,
   HwItem,
   HwFilesMap,
+  HwViewedMap,
 } from "@/lib/firebase/types";
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -1583,16 +1585,27 @@ function PersonalHWSection({
   const { hwViewed } = useHwViewed(code);
 
   // Danh sách file của BTVN đang mở, để duyệt qua lại. Bài nộp kiểu cũ chỉ có
-  // một link Drive nên coi như danh sách một phần tử.
-  const modalFiles: string[] = (() => {
+  // một link Drive nên coi như danh sách một phần tử (id "__legacy__").
+  const modalFiles: { id: string; url: string }[] = (() => {
     if (!fileModal) return [];
-    const urls = Object.values(hwFiles[fileModal.hwId] ?? {}).map((f) => f.url);
-    if (urls.length > 0) return urls;
+    const entries = Object.entries(hwFiles[fileModal.hwId] ?? {}).map(([id, f]) => ({ id, url: f.url }));
+    if (entries.length > 0) return entries;
     const legacy = dayLinks[fileModal.hwId]?.link;
-    return legacy ? [legacy] : [];
+    return legacy ? [{ id: "__legacy__", url: legacy }] : [];
   })();
 
-  const modalUrl = fileModal ? modalFiles[fileModal.index] ?? "" : "";
+  const modalUrl = fileModal ? modalFiles[fileModal.index]?.url ?? "" : "";
+  const modalFileId = fileModal ? modalFiles[fileModal.index]?.id ?? "" : "";
+  const modalHwId = fileModal?.hwId ?? null;
+
+  // Nhận xét bám theo từng file: đổi ảnh thì nạp lại đúng nhận xét của ảnh đó.
+  const hwViewedRef = useRef<HwViewedMap>(hwViewed);
+  hwViewedRef.current = hwViewed;
+  useEffect(() => {
+    if (!modalHwId) return;
+    setNoteInput(hwViewedRef.current[modalHwId]?.fileNotes?.[modalFileId]?.text ?? "");
+    setNoteSaved(false);
+  }, [modalHwId, modalFileId]);
 
   const stepFile = useCallback((delta: number) => {
     setFileModal((cur) => {
@@ -1903,7 +1916,7 @@ function PersonalHWSection({
                             <span className="font-semibold text-[10px] shrink-0" style={{ color: "var(--text-secondary)" }}>📎 BÀI NỘP:</span>
                             {hwViewed[hw.id] && <span className="text-[10px] font-semibold" style={{ color: "rgb(5,150,105)" }}>✓ Đã xem</span>}
                             <button
-                              onClick={() => { setFileModal({ hwId: hw.id, index: 0 }); setNoteInput(hwViewed[hw.id]?.note ?? ""); }}
+                              onClick={() => setFileModal({ hwId: hw.id, index: 0 })}
                               className="text-[10px] px-1.5 py-0.5 rounded hover:opacity-75"
                               style={{ background: "rgba(26,62,128,.1)", color: "#2860A8" }}
                             >
@@ -1915,13 +1928,19 @@ function PersonalHWSection({
                               const isVid = /\.(mp4|mov|avi|webm|mkv)/i.test(file.url.split("?")[0]);
                               return (
                                 <div key={fileId} style={{ position: "relative" }}>
-                                  <button onClick={() => { setFileModal({ hwId: hw.id, index: fileIdx }); setNoteInput(hwViewed[hw.id]?.note ?? ""); }} className="hover:opacity-80 transition-opacity">
+                                  <button onClick={() => setFileModal({ hwId: hw.id, index: fileIdx })} className="hover:opacity-80 transition-opacity">
                                     {isVid ? (
                                       <div style={{ width: 52, height: 52, background: "rgba(26,62,128,.08)", border: "1px solid rgba(26,62,128,.2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "1.2rem" }}>🎬</div>
                                     ) : (
                                       <img src={file.url} alt="" style={{ width: 52, height: 52, objectFit: "cover", border: "1px solid var(--border)", display: "block" }} />
                                     )}
                                   </button>
+                                  {!!hwViewed[hw.id]?.fileNotes?.[fileId]?.text && (
+                                    <span
+                                      title={hwViewed[hw.id].fileNotes![fileId].text}
+                                      style={{ position: "absolute", bottom: -4, left: -4, fontSize: ".55rem", lineHeight: 1, background: "#C4622D", borderRadius: "50%", width: 15, height: 15, display: "flex", alignItems: "center", justifyContent: "center" }}
+                                    >💬</span>
+                                  )}
                                   <button
                                     onClick={async () => { if (confirm("Xoá file này?")) await deleteHwFile(code, hw.id, fileId, file.url); }}
                                     style={{ position: "absolute", top: -5, right: -5, width: 15, height: 15, borderRadius: "50%", background: "rgba(239,68,68,.85)", border: "none", color: "#fff", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: ".5rem", fontWeight: 700, padding: 0 }}
@@ -2091,22 +2110,26 @@ function PersonalHWSection({
                   </span>
                 </span>
                 <div style={{ display: "flex", gap: ".35rem", flexWrap: "wrap", justifyContent: "center", maxHeight: 96, overflowY: "auto" }}>
-                  {modalFiles.map((url, i) => {
+                  {modalFiles.map(({ id, url }, i) => {
                     const isVid = /\.(mp4|mov|avi|webm|mkv)/i.test(url.split("?")[0]);
                     const active = i === fileModal.index;
+                    const hasNote = !!hwViewed[fileModal.hwId]?.fileNotes?.[id]?.text;
                     return (
                       <button
-                        key={url}
+                        key={id}
                         type="button"
                         onClick={() => setFileModal((cur) => (cur ? { ...cur, index: i } : cur))}
                         style={{
-                          width: 44, height: 44, padding: 0, cursor: "pointer",
+                          width: 44, height: 44, padding: 0, cursor: "pointer", position: "relative",
                           border: active ? "2px solid #fff" : "1px solid rgba(255,255,255,.25)",
                           background: "rgba(255,255,255,.08)",
                           opacity: active ? 1 : 0.55,
                           display: "flex", alignItems: "center", justifyContent: "center",
                         }}
                       >
+                        {hasNote && (
+                          <span style={{ position: "absolute", top: -4, right: -4, fontSize: ".6rem", lineHeight: 1, background: "#C4622D", borderRadius: "50%", width: 14, height: 14, display: "flex", alignItems: "center", justifyContent: "center" }}>💬</span>
+                        )}
                         {isVid ? (
                           <span style={{ fontSize: "1rem" }}>🎬</span>
                         ) : (
@@ -2138,10 +2161,25 @@ function PersonalHWSection({
                 </button>
               )}
 
+              {!!hwViewed[fileModal.hwId]?.note && (
+                <div style={{ padding: ".5rem .7rem", background: "rgba(255,255,255,.06)", border: "1px solid rgba(255,255,255,.15)", borderRadius: 6 }}>
+                  <div style={{ fontSize: ".62rem", fontWeight: 700, letterSpacing: ".06em", color: "rgba(255,255,255,.45)", marginBottom: ".25rem" }}>
+                    NHẬN XÉT CHUNG CẢ BUỔI (cũ)
+                  </div>
+                  <div style={{ fontSize: ".8rem", color: "rgba(255,255,255,.85)", whiteSpace: "pre-wrap" }}>
+                    {hwViewed[fileModal.hwId].note}
+                  </div>
+                </div>
+              )}
+
+              <div style={{ fontSize: ".68rem", color: "rgba(255,255,255,.5)" }}>
+                Nhận xét cho <strong style={{ color: "rgba(255,255,255,.8)" }}>file {fileModal.index + 1}/{modalFiles.length}</strong> — học viên xem được ngay tại ảnh/video này.
+              </div>
+
               <textarea
                 value={noteInput}
                 onChange={e => setNoteInput(e.target.value)}
-                placeholder="Nhận xét về bài nộp này..."
+                placeholder="Nhận xét cho ảnh/video đang xem..."
                 rows={2}
                 style={{ width: "100%", padding: ".5rem .7rem", background: "rgba(255,255,255,.1)", border: "1px solid rgba(255,255,255,.2)", color: "#fff", borderRadius: 6, fontSize: ".82rem", resize: "vertical", outline: "none", boxSizing: "border-box" }}
               />
@@ -2150,7 +2188,17 @@ function PersonalHWSection({
                   setSavingNote(true);
                   setNoteSaved(false);
                   try {
-                    await markHwViewed(code, fileModal.hwId, noteInput.trim() || undefined);
+                    const hw = homework.find((h) => h.id === fileModal.hwId);
+                    const hwLabel = hw ? fmtDate(hw.date) : undefined;
+                    const text = noteInput.trim();
+                    await saveHwFileNote(code, fileModal.hwId, modalFileId, text, hwLabel);
+                    if (text) {
+                      fetch("/api/push/hw-note", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ studentCode: code, note: text, hwLabel }),
+                      }).catch(() => {});
+                    }
                     setNoteSaved(true);
                     setTimeout(() => setNoteSaved(false), 2000);
                   } catch (err) {

@@ -192,9 +192,18 @@ export type HwFilesMap = Record<string, HwFilesForHw>;
 
 // ─── HwViewed (path: hwViewed/{studentCode}/{hwId}) ──────────────────────────
 
+/** Nhận xét của GV cho một file minh chứng. */
+export interface HwFileNote {
+  text: string;
+  ts: number;
+}
+
 export interface HwViewed {
   viewedAt: string;
+  /** Nhận xét chung cho cả buổi BTVN (dữ liệu cũ, trước khi tách theo từng file). */
   note?: string;
+  /** fileId (key trong hwFiles) → nhận xét riêng cho ảnh/video đó. */
+  fileNotes?: Record<string, HwFileNote>;
 }
 
 export type HwViewedMap = Record<string, HwViewed>;

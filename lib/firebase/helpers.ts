@@ -773,6 +773,11 @@ export async function deleteHwFile(
   publicId?: string
 ): Promise<void> {
   await remove(ref(firebaseDb, `hwFiles/${code}/${hwId}/${fileId}`));
+  // Nhận xét gắn với file đã xoá thì cũng bỏ, tránh hiện mồ côi bên học viên.
+  // Tách khỏi lệnh trên để nếu sau này siết quyền ghi hwViewed thì việc xoá file vẫn chạy.
+  try {
+    await remove(ref(firebaseDb, `hwViewed/${code}/${hwId}/fileNotes/${fileId}`));
+  } catch { /* không xoá được nhận xét thì cũng không chặn xoá file */ }
   if (publicId) {
     const resourceType = storageUrl?.includes("/video/") ? "video" : "image";
     try {
@@ -797,10 +802,43 @@ export async function markHwViewed(
   hwId: string,
   note?: string
 ): Promise<void> {
-  await set(ref(firebaseDb, `hwViewed/${code}/${hwId}`), {
+  await update(ref(firebaseDb, `hwViewed/${code}/${hwId}`), {
     viewedAt: new Date().toISOString(),
-    ...(note ? { note } : {}),
+    ...(note !== undefined ? { note: note || null } : {}),
   });
+}
+
+/**
+ * Nhận xét của GV cho MỘT file minh chứng (ảnh/video) của một buổi BTVN.
+ * `fileId` là key trong `hwFiles/{code}/{hwId}`, hoặc `"__legacy__"` cho bài nộp
+ * kiểu cũ (một link duy nhất). Text rỗng ⇒ xoá nhận xét.
+ * Lưu nhận xét đồng thời đánh dấu buổi đó là đã xem.
+ */
+export async function saveHwFileNote(
+  code: string,
+  hwId: string,
+  fileId: string,
+  text: string,
+  hwLabel?: string
+): Promise<void> {
+  const trimmed = text.trim();
+  const now = Date.now();
+  const iso = new Date(now).toISOString();
+  const payload: Record<string, unknown> = {
+    [`hwViewed/${code}/${hwId}/viewedAt`]: iso,
+    [`hwViewed/${code}/${hwId}/fileNotes/${fileId}`]: trimmed ? { text: trimmed, ts: now } : null,
+  };
+  if (trimmed) {
+    const notifKey = `${now}_${Math.random().toString(36).slice(2, 5)}`;
+    payload[`notifications/${code}/${notifKey}`] = {
+      type: "hw-note",
+      title: hwLabel ? `Thầy Hiếu đã nhận xét bài nộp ${hwLabel}` : "Thầy Hiếu đã nhận xét bài nộp",
+      body: trimmed.slice(0, 120),
+      read: false,
+      createdAt: iso,
+    };
+  }
+  await update(ref(firebaseDb), payload);
 }
 
 export function uploadHomeworkFile(
