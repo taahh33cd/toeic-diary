@@ -774,7 +774,7 @@ export async function deleteHwFile(
 ): Promise<void> {
   await remove(ref(firebaseDb, `hwFiles/${code}/${hwId}/${fileId}`));
   // Nhận xét gắn với file đã xoá thì cũng bỏ, tránh hiện mồ côi bên học viên.
-  // Tách khỏi lệnh trên để nếu sau này siết quyền ghi hwViewed thì việc xoá file vẫn chạy.
+  // Tách khỏi lệnh trên vì học viên không có quyền ghi hwViewed (rules): xoá file vẫn chạy.
   try {
     await remove(ref(firebaseDb, `hwViewed/${code}/${hwId}/fileNotes/${fileId}`));
   } catch { /* không xoá được nhận xét thì cũng không chặn xoá file */ }

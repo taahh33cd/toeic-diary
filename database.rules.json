@@ -42,7 +42,7 @@
     "hwViewed": {
       "$code": {
         ".read": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')",
-        ".write": "auth != null && (auth.token.studentCode === $code || auth.token.role === 'teacher' || auth.token.role === 'admin')"
+        ".write": "auth != null && (auth.token.role === 'teacher' || auth.token.role === 'admin')"
       }
     },
 
