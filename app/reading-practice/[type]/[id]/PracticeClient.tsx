@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { getStaticExercises, RichExplanation } from "./exercises";
 import { PostReadingModal } from "./PostReadingModal";
@@ -43,8 +43,25 @@ export function PracticeClient({
   const [showPostReading, setShowPostReading]   = useState(false);
   const [postReadingPassed, setPostReadingPassed] = useState(false);
   const [showNextHint, setShowNextHint]         = useState(false);
+  const [timerMode, setTimerMode]               = useState<TimerMode>("up");
+  const [paused, setPaused]                     = useState(false);
+  const [elapsed, setElapsed]                   = useState(0); // giây
+  const elapsedMsRef = useRef(0); // ms đã tích luỹ trước đoạn đang chạy
 
   const total = passage.questions.length;
+  const timeLimit = total * SECONDS_PER_QUESTION;
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(TIMER_MODE_KEY);
+      if (saved === "up" || saved === "down") setTimerMode(saved);
+    } catch { /* storage bị chặn */ }
+  }, []);
+
+  const changeTimerMode = (mode: TimerMode) => {
+    setTimerMode(mode);
+    try { localStorage.setItem(TIMER_MODE_KEY, mode); } catch { /* storage bị chặn */ }
+  };
 
   // Parse rich explanations from JSON (graceful fallback for old string format)
   const richExplanations = useMemo<RichExplanation[]>(() => {
@@ -74,6 +91,22 @@ export function PracticeClient({
   const hasExercises = Object.values(exercises).some(arr => arr.length > 0);
   // Pre-reading vocab is optional: user can skip it or reopen it from the header
   const hasVocab     = exercises.vocab.length > 0;
+  const vocabOpen    = hasVocab && showVocab;
+
+  // Chỉ tính giờ đọc + trả lời: không tính quiz từ vựng, lúc tạm dừng, hay sau khi nộp
+  const timerRunning = !vocabOpen && !submitted && !paused;
+  useEffect(() => {
+    if (!timerRunning) return;
+    const start = Date.now();
+    const id = setInterval(() => {
+      setElapsed(Math.floor((elapsedMsRef.current + Date.now() - start) / 1000));
+    }, 250);
+    return () => {
+      clearInterval(id);
+      elapsedMsRef.current += Date.now() - start;
+      setElapsed(Math.floor(elapsedMsRef.current / 1000));
+    };
+  }, [timerRunning]);
 
   const openVocab = useCallback(() => {
     setVocabRun(r => r + 1);
@@ -92,6 +125,7 @@ export function PracticeClient({
   const handleSubmit = useCallback(async () => {
     if (submitted) return;
     setSubmitted(true);
+    setPaused(false);
 
     const correctCount = passage.questions.filter(
       (q, i) => answers[i] === q.correct
@@ -107,14 +141,14 @@ export function PracticeClient({
       await fetch("/api/reading/attempt", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ passageId: passage.id, answers: answerMap, score }),
+        body: JSON.stringify({ passageId: passage.id, answers: answerMap, score, durationSeconds: elapsed }),
       });
     } catch (_) {
       // non-fatal
     } finally {
       setSaving(false);
     }
-  }, [submitted, answers, passage, total]);
+  }, [submitted, answers, passage, total, elapsed]);
 
   const correctCount = passage.questions.filter(
     (q, i) => answers[i] === q.correct
@@ -198,6 +232,8 @@ export function PracticeClient({
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+          flexWrap: "wrap",
+          gap: 8,
           boxShadow: "0 2px 8px rgba(0,0,0,0.25)",
           zIndex: 10,
           flexShrink: 0,
@@ -255,6 +291,17 @@ export function PracticeClient({
           </button>
         </div>
 
+        <ReadingTimer
+          mode={timerMode}
+          onModeChange={changeTimerMode}
+          elapsed={elapsed}
+          limit={timeLimit}
+          paused={paused}
+          onTogglePause={() => setPaused(p => !p)}
+          started={!vocabOpen || elapsed > 0}
+          submitted={submitted}
+        />
+
         {!submitted ? (
           <button
             onClick={handleSubmit}
@@ -299,8 +346,35 @@ export function PracticeClient({
           flex: 1,
           overflow: "hidden",
           flexDirection: "row",
+          position: "relative",
         }}
       >
+        {/* Tạm dừng thì che bài đọc để thời gian phản ánh đúng */}
+        {paused && !submitted && (
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              zIndex: 5,
+              background: "rgba(244,246,249,0.97)",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 14,
+            }}
+          >
+            <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0D3361" }}>
+              Đang tạm dừng · {formatClock(elapsed)}
+            </div>
+            <button
+              onClick={() => setPaused(false)}
+              style={{ ...navBtnStyle, background: "#0D3361", color: "#fff", borderColor: "#0D3361", padding: "9px 22px" }}
+            >
+              ▶ Làm tiếp
+            </button>
+          </div>
+        )}
         {/* Left: passages */}
         <div
           style={{
@@ -512,7 +586,10 @@ export function PracticeClient({
           </button>
           {submitted && (
             <button
-              onClick={() => { setAnswers({}); setSubmitted(false); setActiveQ(0); }}
+              onClick={() => {
+                setAnswers({}); setSubmitted(false); setActiveQ(0);
+                elapsedMsRef.current = 0; setElapsed(0); setPaused(false);
+              }}
               style={{ ...navBtnStyle, color: "#0D3361", borderColor: "#0D3361" }}
             >
               Làm lại
@@ -612,6 +689,122 @@ export function PracticeClient({
           </div>
         )}
       </footer>
+    </div>
+  );
+}
+
+// ─── Timer ───────────────────────────────────────────────────────────────────
+type TimerMode = "up" | "down";
+
+const TIMER_MODE_KEY = "reading-practice:timer-mode";
+// Nhịp thi thật Part 7: 54 câu / ~55 phút → 1 phút mỗi câu
+const SECONDS_PER_QUESTION = 60;
+
+function formatClock(totalSeconds: number): string {
+  const m = Math.floor(totalSeconds / 60);
+  const sec = totalSeconds % 60;
+  return `${m}:${String(sec).padStart(2, "0")}`;
+}
+
+function ReadingTimer({
+  mode,
+  onModeChange,
+  elapsed,
+  limit,
+  paused,
+  onTogglePause,
+  started,
+  submitted,
+}: {
+  mode: TimerMode;
+  onModeChange: (m: TimerMode) => void;
+  elapsed: number;
+  limit: number;
+  paused: boolean;
+  onTogglePause: () => void;
+  started: boolean;
+  submitted: boolean;
+}) {
+  const over = elapsed > limit;
+
+  // Sau khi nộp: báo tổng thời gian so với mức chuẩn
+  if (submitted) {
+    return (
+      <div
+        title={`Chuẩn thi thật: ${formatClock(limit)} (1 phút/câu)`}
+        style={{
+          color: over ? "#fca5a5" : "#86efac",
+          fontWeight: 700,
+          fontSize: "0.88rem",
+          whiteSpace: "nowrap",
+        }}
+      >
+        ⏱ {formatClock(elapsed)}
+        <span style={{ fontWeight: 400, color: "rgba(255,255,255,0.75)", marginLeft: 6 }}>
+          {over ? `chậm ${formatClock(elapsed - limit)}` : `/ ${formatClock(limit)}`}
+        </span>
+      </div>
+    );
+  }
+
+  const display =
+    mode === "up"
+      ? formatClock(elapsed)
+      : over
+      ? `+${formatClock(elapsed - limit)}`
+      : formatClock(limit - elapsed);
+
+  const modeBtn = (m: TimerMode, label: string, hint: string) => (
+    <button
+      onClick={() => onModeChange(m)}
+      title={hint}
+      style={{
+        ...fontBtnStyle,
+        background: mode === m ? "rgba(255,255,255,0.3)" : "transparent",
+        border: "none",
+        borderRadius: 0,
+        whiteSpace: "nowrap",
+      }}
+    >
+      {label}
+    </button>
+  );
+
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+      <div
+        style={{
+          display: "flex",
+          border: "1px solid rgba(255,255,255,0.3)",
+          borderRadius: 3,
+          overflow: "hidden",
+        }}
+      >
+        {modeBtn("up", "Bấm giờ", "Đếm thời gian đã làm")}
+        {modeBtn("down", "Đếm ngược", `Đếm ngược ${formatClock(limit)} (1 phút/câu)`)}
+      </div>
+      <span
+        title={started ? undefined : "Đồng hồ chạy sau khi xong phần từ vựng"}
+        style={{
+          fontVariantNumeric: "tabular-nums",
+          fontWeight: 700,
+          fontSize: "0.95rem",
+          minWidth: 52,
+          textAlign: "center",
+          color: mode === "down" && over ? "#fca5a5" : "#ffffff",
+          opacity: paused ? 0.6 : 1,
+        }}
+      >
+        {display}
+      </span>
+      <button
+        onClick={onTogglePause}
+        disabled={!started}
+        title={paused ? "Làm tiếp" : "Tạm dừng"}
+        style={{ ...fontBtnStyle, opacity: started ? 1 : 0.4, cursor: started ? "pointer" : "default" }}
+      >
+        {paused ? "▶" : "❚❚"}
+      </button>
     </div>
   );
 }

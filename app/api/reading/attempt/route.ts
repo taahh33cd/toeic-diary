@@ -11,6 +11,7 @@ export async function POST(req: Request) {
     passageId: string;
     answers: Record<string, string>; // { "0": "A", "1": "C", ... }
     score: number;
+    durationSeconds?: number;
   };
 
   if (!body.passageId || !body.answers || body.score == null) {
@@ -23,6 +24,10 @@ export async function POST(req: Request) {
       passageId: body.passageId,
       answers: body.answers,
       score: body.score,
+      durationSeconds:
+        typeof body.durationSeconds === "number" && body.durationSeconds >= 0
+          ? Math.round(body.durationSeconds)
+          : null,
     },
   });
 

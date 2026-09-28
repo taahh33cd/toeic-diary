@@ -25,6 +25,7 @@ export default async function ReadingProgressPage() {
         passageId: true,
         score: true,
         completedAt: true,
+        durationSeconds: true,
         passage: { select: { type: true, orderIndex: true, category: true } },
       },
       orderBy: { completedAt: "desc" },
@@ -266,6 +267,18 @@ export default async function ReadingProgressPage() {
                       {new Date(a.completedAt).toLocaleDateString("vi-VN")}
                     </span>
                     <span
+                      title="Thời gian làm bài"
+                      style={{
+                        color: "var(--text-muted)",
+                        fontSize: "0.75rem",
+                        fontVariantNumeric: "tabular-nums",
+                        minWidth: 44,
+                        textAlign: "right",
+                      }}
+                    >
+                      {a.durationSeconds != null ? `⏱ ${formatDuration(a.durationSeconds)}` : "—"}
+                    </span>
+                    <span
                       style={{ fontWeight: 700, color: scoreColor, minWidth: 38, textAlign: "right" }}
                     >
                       {a.score}%
@@ -295,4 +308,10 @@ export default async function ReadingProgressPage() {
       )}
     </div>
   );
+}
+
+function formatDuration(totalSeconds: number): string {
+  const m = Math.floor(totalSeconds / 60);
+  const sec = totalSeconds % 60;
+  return `${m}:${String(sec).padStart(2, "0")}`;
 }
