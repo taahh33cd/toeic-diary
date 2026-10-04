@@ -46,3 +46,6 @@ next-env.d.ts
 .env*.local
 
 __pycache__/
+
+# Claude Code temp worktrees
+.claude/worktrees/
