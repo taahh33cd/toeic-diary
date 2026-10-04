@@ -49,3 +49,6 @@ __pycache__/
 
 # Claude Code temp worktrees
 .claude/worktrees/
+
+# node_modules ở mọi cấp (không chỉ root)
+node_modules/
