@@ -25,6 +25,15 @@ const SKILLS = [
     comingSoon: false,
   },
   {
+    key: "chunking",
+    emoji: "✂️",
+    label: "Chunking",
+    href: "/subskills/chunking",
+    description:
+      "Cắt câu thành cụm nghĩa · nhánh Nói đo nhịp ngắt bản thu, nhánh Nghe bám cụm trong Part 3, 4",
+    comingSoon: false,
+  },
+  {
     key: "reading",
     emoji: "📖",
     label: "Reading",

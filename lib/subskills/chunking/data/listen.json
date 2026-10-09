@@ -1,0 +1,2227 @@
+{
+ "passages": [
+  {
+   "groupId": "est-2026-test-1-q32-34",
+   "part": 3,
+   "label": "Đề 1 · Part 3 · câu 32-34",
+   "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q32-34.mp3",
+   "duration": 75.389,
+   "lines": [
+    {
+     "speaker": "W",
+     "text": "Hey, Oliver. Did you see the focus group results for our new spicy cheddar cheese? Everyone really liked it.",
+     "chunks": [
+      {
+       "text": "Hey, Oliver.",
+       "start": 5.52,
+       "end": 6.58,
+       "pause": 0
+      },
+      {
+       "text": "Did you see the focus group results",
+       "start": 7.14,
+       "end": 9.12,
+       "pause": 0.56
+      },
+      {
+       "text": "for our new spicy cheddar cheese?",
+       "start": 9.12,
+       "end": 11.3,
+       "pause": 0
+      },
+      {
+       "text": "Everyone really liked it.",
+       "start": 11.96,
+       "end": 13.66,
+       "pause": 0.66
+      }
+     ]
+    },
+    {
+     "speaker": "M",
+     "text": "Yes. It should be a great addition to our company's line of cheeses.",
+     "chunks": [
+      {
+       "text": "Yes.",
+       "start": 14.08,
+       "end": 14.44,
+       "pause": 0
+      },
+      {
+       "text": "It should be a great addition",
+       "start": 14.92,
+       "end": 16.24,
+       "pause": 0.48
+      },
+      {
+       "text": "to our company's line of cheeses.",
+       "start": 16.24,
+       "end": 18,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": "W",
+     "text": "Several people mentioned that they'd like to use it in recipes-to add to sauces, for example.",
+     "chunks": [
+      {
+       "text": "Several people mentioned",
+       "start": 18.56,
+       "end": 19.9,
+       "pause": 0
+      },
+      {
+       "text": "that they'd like to use it",
+       "start": 19.9,
+       "end": 21.36,
+       "pause": 0
+      },
+      {
+       "text": "in recipes-to add",
+       "start": 21.36,
+       "end": 22.88,
+       "pause": 0
+      },
+      {
+       "text": "to sauces,",
+       "start": 22.88,
+       "end": 23.42,
+       "pause": 0
+      },
+      {
+       "text": "for example.",
+       "start": 23.64,
+       "end": 24.18,
+       "pause": 0.22
+      }
+     ]
+    },
+    {
+     "speaker": "M",
+     "text": "So maybe we should consider selling a shredded version that would melt easily when cooked.",
+     "chunks": [
+      {
+       "text": "So maybe we should consider",
+       "start": 24.78,
+       "end": 26.26,
+       "pause": 0
+      },
+      {
+       "text": "selling a shredded version",
+       "start": 26.26,
+       "end": 27.58,
+       "pause": 0
+      },
+      {
+       "text": "that would melt easily",
+       "start": 27.58,
+       "end": 28.74,
+       "pause": 0
+      },
+      {
+       "text": "when cooked.",
+       "start": 28.74,
+       "end": 29.4,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": "W",
+     "text": "I'm sure we could do that. I'll get in touch with the production manager with that request.",
+     "chunks": [
+      {
+       "text": "I'm sure we could do that.",
+       "start": 29.4,
+       "end": 31.48,
+       "pause": 0
+      },
+      {
+       "text": "I'll get",
+       "start": 32.02,
+       "end": 32.54,
+       "pause": 0.54
+      },
+      {
+       "text": "in touch",
+       "start": 32.54,
+       "end": 32.92,
+       "pause": 0
+      },
+      {
+       "text": "with the production manager",
+       "start": 32.92,
+       "end": 34.3,
+       "pause": 0
+      },
+      {
+       "text": "with that request.",
+       "start": 34.3,
+       "end": 35.2,
+       "pause": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupId": "est-2026-test-1-q35-37",
+   "part": 3,
+   "label": "Đề 1 · Part 3 · câu 35-37",
+   "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q35-37.mp3",
+   "duration": 75.05,
+   "lines": [
+    {
+     "speaker": "M",
+     "text": "Hi. I'm calling to book three tickets for this Thursday's tennis match. Are there any seats left?",
+     "chunks": [
+      {
+       "text": "Hi.",
+       "start": 5.66,
+       "end": 6.38,
+       "pause": 0
+      },
+      {
+       "text": "I'm calling",
+       "start": 6.76,
+       "end": 7.2,
+       "pause": 0.38
+      },
+      {
+       "text": "to book three tickets",
+       "start": 7.2,
+       "end": 8.32,
+       "pause": 0
+      },
+      {
+       "text": "for this Thursday's tennis match.",
+       "start": 8.32,
+       "end": 10.32,
+       "pause": 0
+      },
+      {
+       "text": "Are there any seats left?",
+       "start": 10.8,
+       "end": 12,
+       "pause": 0.48
+      }
+     ]
+    },
+    {
+     "speaker": "W",
+     "text": "Just a few! Tickets for Thursday's match have been selling quickly.",
+     "chunks": [
+      {
+       "text": "Just a few!",
+       "start": 12.62,
+       "end": 13.42,
+       "pause": 0
+      },
+      {
+       "text": "Tickets for Thursday's match",
+       "start": 13.98,
+       "end": 15.32,
+       "pause": 0.56
+      },
+      {
+       "text": "have been selling quickly.",
+       "start": 15.32,
+       "end": 16.44,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": "M",
+     "text": "I'm not surprised! After all, Ife Rotimi won the regional championship tournament last month. Everyone wants to see her play after her incredible performance.",
+     "chunks": [
+      {
+       "text": "I'm not surprised!",
+       "start": 17,
+       "end": 18,
+       "pause": 0
+      },
+      {
+       "text": "After all,",
+       "start": 18.54,
+       "end": 19.16,
+       "pause": 0.54
+      },
+      {
+       "text": "Ife Rotimi won",
+       "start": 19.68,
+       "end": 20.84,
+       "pause": 0.52
+      },
+      {
+       "text": "the regional championship tournament last month.",
+       "start": 20.84,
+       "end": 23.34,
+       "pause": 0
+      },
+      {
+       "text": "Everyone wants to see her play",
+       "start": 23.88,
+       "end": 25.7,
+       "pause": 0.54
+      },
+      {
+       "text": "after her incredible performance.",
+       "start": 25.7,
+       "end": 27.7,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": "W",
+     "text": "Well, there's only one group of three seats together. Advance payment is required to hold them.",
+     "chunks": [
+      {
+       "text": "Well, there's only one group of",
+       "start": 30.18,
+       "end": 31.74,
+       "pause": 0
+      },
+      {
+       "text": "three seats together.",
+       "start": 31.74,
+       "end": 32.68,
+       "pause": 0
+      },
+      {
+       "text": "Advance payment is required",
+       "start": 33.34,
+       "end": 34.84,
+       "pause": 0.66
+      },
+      {
+       "text": "to hold them.",
+       "start": 34.84,
+       "end": 35.58,
+       "pause": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupId": "est-2026-test-1-q38-40",
+   "part": 3,
+   "label": "Đề 1 · Part 3 · câu 38-40",
+   "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q38-40.mp3",
+   "duration": 67.213,
+   "lines": [
+    {
+     "speaker": "W",
+     "text": "Thanks for agreeing to help me organize the library's annual fund-raising dinner, Klaus. We hope the event brings in enough money to expand our children's book section.",
+     "chunks": [
+      {
+       "text": "Thanks for agreeing",
+       "start": 5.22,
+       "end": 6.34,
+       "pause": 0
+      },
+      {
+       "text": "to help me organize",
+       "start": 6.34,
+       "end": 7.3,
+       "pause": 0
+      },
+      {
+       "text": "the library's annual fund-raising dinner, Klaus.",
+       "start": 7.3,
+       "end": 9.48,
+       "pause": 0
+      },
+      {
+       "text": "We hope the event brings",
+       "start": 9.9,
+       "end": 11.18,
+       "pause": 0.42
+      },
+      {
+       "text": "in enough money",
+       "start": 11.18,
+       "end": 11.9,
+       "pause": 0
+      },
+      {
+       "text": "to expand our children's book section.",
+       "start": 11.9,
+       "end": 13.62,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": "M",
+     "text": "What task would you like me to start with?",
+     "chunks": [
+      {
+       "text": "What task would you like me",
+       "start": 14.12,
+       "end": 15.38,
+       "pause": 0
+      },
+      {
+       "text": "to start with?",
+       "start": 15.38,
+       "end": 16.04,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": "W",
+     "text": "Well, I could use some help sending out the invitations.",
+     "chunks": [
+      {
+       "text": "Well,",
+       "start": 16.48,
+       "end": 16.8,
+       "pause": 0
+      },
+      {
+       "text": "I could use some help",
+       "start": 17.26,
+       "end": 18.22,
+       "pause": 0.46
+      },
+      {
+       "text": "sending out the invitations.",
+       "start": 18.22,
+       "end": 19.52,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": "M",
+     "text": "OK, I can take care of that. Is there a list of attendees available?",
+     "chunks": [
+      {
+       "text": "OK,",
+       "start": 19.52,
+       "end": 20.18,
+       "pause": 0
+      },
+      {
+       "text": "I can take care of that.",
+       "start": 20.84,
+       "end": 21.8,
+       "pause": 0.66
+      },
+      {
+       "text": "Is there a list of attendees available?",
+       "start": 22.22,
+       "end": 24.1,
+       "pause": 0.42
+      }
+     ]
+    },
+    {
+     "speaker": "W",
+     "text": "It's in my computer files. I'll e-mail it to you.",
+     "chunks": [
+      {
+       "text": "It's in my computer files.",
+       "start": 24.6,
+       "end": 26.08,
+       "pause": 0
+      },
+      {
+       "text": "I'll e-mail it",
+       "start": 26.74,
+       "end": 27.62,
+       "pause": 0.66
+      },
+      {
+       "text": "to you.",
+       "start": 27.62,
+       "end": 28.04,
+       "pause": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupId": "est-2026-test-1-q44-46",
+   "part": 3,
+   "label": "Đề 1 · Part 3 · câu 44-46",
+   "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q44-46.mp3",
+   "duration": 82.129,
+   "lines": [
+    {
+     "speaker": "W",
+     "text": "Jamestown Recycling Facility. How can I help you?",
+     "chunks": [
+      {
+       "text": "Jamestown Recycling Facility.",
+       "start": 6.08,
+       "end": 7.88,
+       "pause": 0
+      },
+      {
+       "text": "How can I help you?",
+       "start": 8.38,
+       "end": 9.44,
+       "pause": 0.5
+      }
+     ]
+    },
+    {
+     "speaker": "M",
+     "text": "Hi. I'm preparing to move soon, and I have some electronics, such as televisions and computers, that I'd like to get rid of before I put my house on the market.",
+     "chunks": [
+      {
+       "text": "Hi.",
+       "start": 10,
+       "end": 10.28,
+       "pause": 0
+      },
+      {
+       "text": "I'm preparing",
+       "start": 10.62,
+       "end": 11.16,
+       "pause": 0.34
+      },
+      {
+       "text": "to move soon,",
+       "start": 11.16,
+       "end": 12.08,
+       "pause": 0
+      },
+      {
+       "text": "and I have some electronics,",
+       "start": 12.08,
+       "end": 13.62,
+       "pause": 0
+      },
+      {
+       "text": "such as televisions",
+       "start": 13.62,
+       "end": 15.22,
+       "pause": 0
+      },
+      {
+       "text": "and computers,",
+       "start": 15.22,
+       "end": 15.96,
+       "pause": 0
+      },
+      {
+       "text": "that I'd like to get rid of",
+       "start": 15.96,
+       "end": 17.76,
+       "pause": 0
+      },
+      {
+       "text": "before I put my house",
+       "start": 17.76,
+       "end": 18.98,
+       "pause": 0
+      },
+      {
+       "text": "on the market.",
+       "start": 18.98,
+       "end": 19.64,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": "W",
+     "text": "Yes, that's right. We'll take all electronics.",
+     "chunks": [
+      {
+       "text": "Yes, that's right.",
+       "start": 22.72,
+       "end": 23.82,
+       "pause": 0
+      },
+      {
+       "text": "We'll take all electronics.",
+       "start": 24.4,
+       "end": 25.66,
+       "pause": 0.58
+      }
+     ]
+    },
+    {
+     "speaker": "M",
+     "text": "Great. I just have one question. Do you provide a pickup service?",
+     "chunks": [
+      {
+       "text": "Great.",
+       "start": 25.66,
+       "end": 26.62,
+       "pause": 0
+      },
+      {
+       "text": "I just have one question.",
+       "start": 27.3,
+       "end": 28.74,
+       "pause": 0.68
+      },
+      {
+       "text": "Do you provide a pickup service?",
+       "start": 29.46,
+       "end": 31.06,
+       "pause": 0.72
+      }
+     ]
+    },
+    {
+     "speaker": "W",
+     "text": "No, unfortunately you'll have to bring everything here yourself. However, on our Website we list a number of companies that can remove and dispose of the items for you.",
+     "chunks": [
+      {
+       "text": "No,",
+       "start": 31.66,
+       "end": 32.22,
+       "pause": 0
+      },
+      {
+       "text": "unfortunately",
+       "start": 32.78,
+       "end": 33.34,
+       "pause": 0.56
+      },
+      {
+       "text": "you'll have to bring",
+       "start": 33.8,
+       "end": 34.5,
+       "pause": 0.46
+      },
+      {
+       "text": "everything here yourself.",
+       "start": 34.5,
+       "end": 35.66,
+       "pause": 0
+      },
+      {
+       "text": "However,",
+       "start": 36.48,
+       "end": 36.86,
+       "pause": 0.82
+      },
+      {
+       "text": "on our Website",
+       "start": 37.34,
+       "end": 38.12,
+       "pause": 0.48
+      },
+      {
+       "text": "we list",
+       "start": 38.56,
+       "end": 39.02,
+       "pause": 0.44
+      },
+      {
+       "text": "a number of companies",
+       "start": 39.02,
+       "end": 40.06,
+       "pause": 0
+      },
+      {
+       "text": "that can remove",
+       "start": 40.06,
+       "end": 41.04,
+       "pause": 0
+      },
+      {
+       "text": "and dispose of the items",
+       "start": 41.04,
+       "end": 42.28,
+       "pause": 0
+      },
+      {
+       "text": "for you.",
+       "start": 42.28,
+       "end": 42.82,
+       "pause": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupId": "est-2026-test-1-q47-49",
+   "part": 3,
+   "label": "Đề 1 · Part 3 · câu 47-49",
+   "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q47-49.mp3",
+   "duration": 81.659,
+   "lines": [
+    {
+     "speaker": "M",
+     "text": "Zaina! What a surprise! I haven't seen you since we took that class for business owners together last year.",
+     "chunks": [
+      {
+       "text": "Zaina!",
+       "start": 0,
+       "end": 3.48,
+       "pause": 0
+      },
+      {
+       "text": "What a surprise!",
+       "start": 6.96,
+       "end": 7.68,
+       "pause": 3.48
+      },
+      {
+       "text": "I haven't seen you",
+       "start": 8.42,
+       "end": 9.38,
+       "pause": 0.74
+      },
+      {
+       "text": "since we took",
+       "start": 9.38,
+       "end": 10,
+       "pause": 0
+      },
+      {
+       "text": "that class",
+       "start": 10,
+       "end": 10.5,
+       "pause": 0
+      },
+      {
+       "text": "for business owners together last year.",
+       "start": 10.5,
+       "end": 12.62,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": "W",
+     "text": "Great, thanks. I was just in the neighborhood and thought I'd stop in for a cookie or a piece of cake. You have so many delicious baked goods here.",
+     "chunks": [
+      {
+       "text": "Great, thanks.",
+       "start": 14.04,
+       "end": 14.88,
+       "pause": 0
+      },
+      {
+       "text": "I was just in the neighborhood",
+       "start": 15.48,
+       "end": 16.82,
+       "pause": 0.6
+      },
+      {
+       "text": "and thought I'd stop in for a cookie",
+       "start": 16.82,
+       "end": 18.68,
+       "pause": 0
+      },
+      {
+       "text": "or a piece of cake.",
+       "start": 18.68,
+       "end": 19.76,
+       "pause": 0
+      },
+      {
+       "text": "You have so many delicious baked goods here.",
+       "start": 20.46,
+       "end": 22.86,
+       "pause": 0.7
+      }
+     ]
+    },
+    {
+     "speaker": "M",
+     "text": "Thank you! It's been a good year for business. I'm even considering opening a second location.",
+     "chunks": [
+      {
+       "text": "Thank you!",
+       "start": 23.32,
+       "end": 23.92,
+       "pause": 0
+      },
+      {
+       "text": "It's been a good year",
+       "start": 24.36,
+       "end": 25.32,
+       "pause": 0.44
+      },
+      {
+       "text": "for business.",
+       "start": 25.32,
+       "end": 25.88,
+       "pause": 0
+      },
+      {
+       "text": "I'm even considering",
+       "start": 26.42,
+       "end": 27.36,
+       "pause": 0.54
+      },
+      {
+       "text": "opening a second location.",
+       "start": 27.36,
+       "end": 28.76,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": "W",
+     "text": "Really? Well, I noticed that Sunnyvale Restaurant went out of business, and the building's up for lease. It's very close to the local university.",
+     "chunks": [
+      {
+       "text": "Really?",
+       "start": 28.76,
+       "end": 29.68,
+       "pause": 0
+      },
+      {
+       "text": "Well, I noticed",
+       "start": 30.3,
+       "end": 31,
+       "pause": 0.62
+      },
+      {
+       "text": "that Sunnyvale Restaurant went out of business,",
+       "start": 31,
+       "end": 33.28,
+       "pause": 0
+      },
+      {
+       "text": "and the building's up",
+       "start": 33.28,
+       "end": 34.5,
+       "pause": 0
+      },
+      {
+       "text": "for lease.",
+       "start": 34.5,
+       "end": 35.02,
+       "pause": 0
+      },
+      {
+       "text": "It's very close",
+       "start": 35.4,
+       "end": 36.24,
+       "pause": 0.38
+      },
+      {
+       "text": "to the local university.",
+       "start": 36.24,
+       "end": 37.62,
+       "pause": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupId": "est-2026-test-1-q53-55",
+   "part": 3,
+   "label": "Đề 1 · Part 3 · câu 53-55",
+   "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q53-55.mp3",
+   "duration": 80.588,
+   "lines": [
+    {
+     "speaker": "M",
+     "text": "You've reached the maintenance office at Hillview Apartment Complex.",
+     "chunks": [
+      {
+       "text": "You've reached the maintenance office",
+       "start": 5.6,
+       "end": 7.66,
+       "pause": 0
+      },
+      {
+       "text": "at Hillview Apartment Complex.",
+       "start": 7.66,
+       "end": 9.7,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": "W",
+     "text": "Hi. This is Palavi Sen from unit 35B. I'm calling because the new thermostat in my apartment isn't working. It keeps shutting off and turning on randomly, so my apartment is getting cold.",
+     "chunks": [
+      {
+       "text": "Hi.",
+       "start": 10.46,
+       "end": 10.8,
+       "pause": 0
+      },
+      {
+       "text": "This is Palavi Sen",
+       "start": 11.1,
+       "end": 12.28,
+       "pause": 0.3
+      },
+      {
+       "text": "from unit 35B.",
+       "start": 12.28,
+       "end": 13.88,
+       "pause": 0
+      },
+      {
+       "text": "I'm calling",
+       "start": 14.54,
+       "end": 15.24,
+       "pause": 0.66
+      },
+      {
+       "text": "because the new thermostat",
+       "start": 15.24,
+       "end": 16.72,
+       "pause": 0
+      },
+      {
+       "text": "in my apartment isn't working.",
+       "start": 16.72,
+       "end": 18.38,
+       "pause": 0
+      },
+      {
+       "text": "It keeps shutting off",
+       "start": 19,
+       "end": 20.1,
+       "pause": 0.62
+      },
+      {
+       "text": "and turning on randomly,",
+       "start": 20.1,
+       "end": 21.34,
+       "pause": 0
+      },
+      {
+       "text": "so my apartment is getting cold.",
+       "start": 21.86,
+       "end": 23.7,
+       "pause": 0.52
+      }
+     ]
+    },
+    {
+     "speaker": "M",
+     "text": "When did this issue start?",
+     "chunks": [
+      {
+       "text": "When did this issue start?",
+       "start": 24.2,
+       "end": 25.76,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": "W",
+     "text": "A few hours ago. The thermostat was just installed yesterday.",
+     "chunks": [
+      {
+       "text": "A few hours ago.",
+       "start": 25.76,
+       "end": 27.34,
+       "pause": 0
+      },
+      {
+       "text": "The thermostat was just installed yesterday.",
+       "start": 27.94,
+       "end": 30.16,
+       "pause": 0.6
+      }
+     ]
+    },
+    {
+     "speaker": "M",
+     "text": "OK. I can come and take a look at it tomorrow morning.",
+     "chunks": [
+      {
+       "text": "OK.",
+       "start": 30.16,
+       "end": 30.95,
+       "pause": 0
+      },
+      {
+       "text": "I can come",
+       "start": 31.74,
+       "end": 32.62,
+       "pause": 0.79
+      },
+      {
+       "text": "and take a look",
+       "start": 32.62,
+       "end": 33.3,
+       "pause": 0
+      },
+      {
+       "text": "at it tomorrow morning.",
+       "start": 33.3,
+       "end": 34.38,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": "W",
+     "text": "But it's supposed to be below freezing tonight!",
+     "chunks": [
+      {
+       "text": "But it's supposed",
+       "start": 34.94,
+       "end": 36.34,
+       "pause": 0
+      },
+      {
+       "text": "to be below freezing tonight!",
+       "start": 36.34,
+       "end": 38.26,
+       "pause": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupId": "est-2026-test-1-q62-64",
+   "part": 3,
+   "label": "Đề 1 · Part 3 · câu 62-64",
+   "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q62-64.mp3",
+   "duration": 79.804,
+   "lines": [
+    {
+     "speaker": "W",
+     "text": "Hi, Suresh, I'm at the airport waiting for my flight. I want to meet with a potential investor while I'm in Chicago. Her name's Marta Gomez.",
+     "chunks": [
+      {
+       "text": "Hi, Suresh,",
+       "start": 6.54,
+       "end": 7.56,
+       "pause": 0
+      },
+      {
+       "text": "I'm at the airport",
+       "start": 8.08,
+       "end": 9.02,
+       "pause": 0.52
+      },
+      {
+       "text": "waiting for my flight.",
+       "start": 9.02,
+       "end": 10.08,
+       "pause": 0
+      },
+      {
+       "text": "I want to meet",
+       "start": 10.84,
+       "end": 11.72,
+       "pause": 0.76
+      },
+      {
+       "text": "with a potential investor",
+       "start": 11.72,
+       "end": 13.1,
+       "pause": 0
+      },
+      {
+       "text": "while I'm in Chicago.",
+       "start": 13.1,
+       "end": 14.04,
+       "pause": 0
+      },
+      {
+       "text": "Her name's Marta Gomez.",
+       "start": 15,
+       "end": 16.26,
+       "pause": 0.96
+      }
+     ]
+    },
+    {
+     "speaker": "M",
+     "text": "OK. Which day would you prefer to meet with her?",
+     "chunks": [
+      {
+       "text": "OK.",
+       "start": 16.26,
+       "end": 18.45,
+       "pause": 0
+      },
+      {
+       "text": "Which day would you prefer",
+       "start": 20.64,
+       "end": 21.84,
+       "pause": 2.19
+      },
+      {
+       "text": "to meet",
+       "start": 21.84,
+       "end": 22.26,
+       "pause": 0
+      },
+      {
+       "text": "with her?",
+       "start": 22.26,
+       "end": 22.68,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": "W",
+     "text": "How about right after my meeting with the Chicago staff?",
+     "chunks": [
+      {
+       "text": "How about right",
+       "start": 23.16,
+       "end": 24.22,
+       "pause": 0
+      },
+      {
+       "text": "after my meeting",
+       "start": 24.22,
+       "end": 25.08,
+       "pause": 0
+      },
+      {
+       "text": "with the Chicago staff?",
+       "start": 25.08,
+       "end": 26.38,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": "M",
+     "text": "OK. By the way, did you see that our company won an award for our contributions to the community? It was just announced this morning.",
+     "chunks": [
+      {
+       "text": "OK.",
+       "start": 26.38,
+       "end": 27.21,
+       "pause": 0
+      },
+      {
+       "text": "By the way,",
+       "start": 28.04,
+       "end": 28.68,
+       "pause": 0.83
+      },
+      {
+       "text": "did you see",
+       "start": 28.8,
+       "end": 29.38,
+       "pause": 0.12
+      },
+      {
+       "text": "that our company won an award",
+       "start": 29.38,
+       "end": 30.84,
+       "pause": 0
+      },
+      {
+       "text": "for our contributions",
+       "start": 30.84,
+       "end": 31.88,
+       "pause": 0
+      },
+      {
+       "text": "to the community?",
+       "start": 31.88,
+       "end": 32.94,
+       "pause": 0
+      },
+      {
+       "text": "It was just announced this morning.",
+       "start": 33.26,
+       "end": 34.88,
+       "pause": 0.32
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupId": "est-2026-test-1-q71-73",
+   "part": 4,
+   "label": "Đề 1 · Part 4 · câu 71-73",
+   "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q71-73.mp3",
+   "duration": 80.405,
+   "lines": [
+    {
+     "speaker": null,
+     "text": "You've reached Select Repair Service.",
+     "chunks": [
+      {
+       "text": "You've reached Select Repair Service.",
+       "start": 6.14,
+       "end": 8.52,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "We specialize in all makes and models of automobiles.",
+     "chunks": [
+      {
+       "text": "We specialize",
+       "start": 9.28,
+       "end": 9.84,
+       "pause": 0
+      },
+      {
+       "text": "in all makes",
+       "start": 9.84,
+       "end": 10.84,
+       "pause": 0
+      },
+      {
+       "text": "and models of automobiles.",
+       "start": 10.84,
+       "end": 12.24,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "Our factory-trained specialists will keep your vehicle running in top condition.",
+     "chunks": [
+      {
+       "text": "Our factory-trained specialists will keep your vehicle",
+       "start": 12.94,
+       "end": 15.76,
+       "pause": 0
+      },
+      {
+       "text": "running in top condition.",
+       "start": 15.76,
+       "end": 17.08,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "As an added benefit, we offer extended warranties on all vehicles we service.",
+     "chunks": [
+      {
+       "text": "As an added benefit,",
+       "start": 17.82,
+       "end": 18.92,
+       "pause": 0
+      },
+      {
+       "text": "we offer extended warranties",
+       "start": 19.42,
+       "end": 21,
+       "pause": 0.5
+      },
+      {
+       "text": "on all vehicles we service.",
+       "start": 21,
+       "end": 22.6,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "Please note that Select Repair Service will be closing on Friday, June 30, so we can complete our quarterly inventory of supplies.",
+     "chunks": [
+      {
+       "text": "Please note",
+       "start": 26.48,
+       "end": 27.8,
+       "pause": 0
+      },
+      {
+       "text": "that Select Repair Service will be closing",
+       "start": 27.8,
+       "end": 30.1,
+       "pause": 0
+      },
+      {
+       "text": "on Friday,",
+       "start": 30.1,
+       "end": 30.72,
+       "pause": 0
+      },
+      {
+       "text": "June 30,",
+       "start": 30.72,
+       "end": 31.59,
+       "pause": 0
+      },
+      {
+       "text": "so we can complete",
+       "start": 32.02,
+       "end": 33.02,
+       "pause": 0.43
+      },
+      {
+       "text": "our quarterly inventory of supplies.",
+       "start": 33.02,
+       "end": 34.72,
+       "pause": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupId": "est-2026-test-1-q74-76",
+   "part": 4,
+   "label": "Đề 1 · Part 4 · câu 74-76",
+   "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q74-76.mp3",
+   "duration": 87.353,
+   "lines": [
+    {
+     "speaker": null,
+     "text": "Welcome, new employees!",
+     "chunks": [
+      {
+       "text": "Welcome, new employees!",
+       "start": 5.56,
+       "end": 7.18,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "My name is Diego, and I facilitate all orientation sessions.",
+     "chunks": [
+      {
+       "text": "My name is Diego,",
+       "start": 7.82,
+       "end": 8.9,
+       "pause": 0
+      },
+      {
+       "text": "and I facilitate all orientation sessions.",
+       "start": 8.9,
+       "end": 12.14,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "Before we start today, you will need to set up your employee account.",
+     "chunks": [
+      {
+       "text": "Before we start today,",
+       "start": 13.02,
+       "end": 14.36,
+       "pause": 0
+      },
+      {
+       "text": "you will need to set up",
+       "start": 14.82,
+       "end": 15.96,
+       "pause": 0.46
+      },
+      {
+       "text": "your employee account.",
+       "start": 15.96,
+       "end": 17.3,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "If you look at the first page of your training binder, you'll see your username and a temporary password.",
+     "chunks": [
+      {
+       "text": "If you look",
+       "start": 18.18,
+       "end": 18.7,
+       "pause": 0
+      },
+      {
+       "text": "at the first page of",
+       "start": 18.7,
+       "end": 19.92,
+       "pause": 0
+      },
+      {
+       "text": "your training binder,",
+       "start": 19.92,
+       "end": 20.86,
+       "pause": 0
+      },
+      {
+       "text": "you'll see your username",
+       "start": 21.34,
+       "end": 22.7,
+       "pause": 0.48
+      },
+      {
+       "text": "and a temporary",
+       "start": 22.7,
+       "end": 23.88,
+       "pause": 0
+      },
+      {
+       "text": "password.",
+       "start": 34.32,
+       "end": 34.78,
+       "pause": 10.44
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "Once that's complete, you'll have access to all your department's files.",
+     "chunks": [
+      {
+       "text": "Once that's complete,",
+       "start": 35.7,
+       "end": 37.08,
+       "pause": 0
+      },
+      {
+       "text": "you'll have access",
+       "start": 37.74,
+       "end": 38.5,
+       "pause": 0.66
+      },
+      {
+       "text": "to all your department's files.",
+       "start": 38.5,
+       "end": 40.56,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "Please note that you can only access them from your company computer.",
+     "chunks": [
+      {
+       "text": "Please note",
+       "start": 41.22,
+       "end": 41.9,
+       "pause": 0
+      },
+      {
+       "text": "that you can only access them",
+       "start": 41.9,
+       "end": 43.6,
+       "pause": 0
+      },
+      {
+       "text": "from your company computer.",
+       "start": 43.6,
+       "end": 45.24,
+       "pause": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupId": "est-2026-test-1-q77-79",
+   "part": 4,
+   "label": "Đề 1 · Part 4 · câu 77-79",
+   "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q77-79.mp3",
+   "duration": 73.77,
+   "lines": [
+    {
+     "speaker": null,
+     "text": "Hello.",
+     "chunks": [
+      {
+       "text": "Hello.",
+       "start": 5.92,
+       "end": 6.6,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "This is Heather Ross calling from Denville Amusement Park.",
+     "chunks": [
+      {
+       "text": "This is Heather Ross",
+       "start": 7.24,
+       "end": 8.24,
+       "pause": 0
+      },
+      {
+       "text": "calling from Denville Amusement Park.",
+       "start": 8.24,
+       "end": 10.22,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "About a month ago, I ordered one of your new video-game machines, Space Defenders.",
+     "chunks": [
+      {
+       "text": "About a month ago,",
+       "start": 10.96,
+       "end": 12,
+       "pause": 0
+      },
+      {
+       "text": "I ordered one of",
+       "start": 12,
+       "end": 13.02,
+       "pause": 0
+      },
+      {
+       "text": "your new video-game machines,",
+       "start": 13.02,
+       "end": 14.32,
+       "pause": 0
+      },
+      {
+       "text": "Space Defenders.",
+       "start": 14.9,
+       "end": 15.52,
+       "pause": 0.58
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "I'm really happy with my purchase, since the game has been incredibly popular with our park guests!",
+     "chunks": [
+      {
+       "text": "I'm really happy",
+       "start": 16.28,
+       "end": 17.26,
+       "pause": 0
+      },
+      {
+       "text": "with my purchase,",
+       "start": 17.26,
+       "end": 18.02,
+       "pause": 0
+      },
+      {
+       "text": "since the game has been incredibly popular",
+       "start": 18.46,
+       "end": 20.42,
+       "pause": 0.44
+      },
+      {
+       "text": "with our park guests!",
+       "start": 20.42,
+       "end": 21.38,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "I heard you may be releasing a new game soon.",
+     "chunks": [
+      {
+       "text": "I heard you may be releasing",
+       "start": 26.18,
+       "end": 27.96,
+       "pause": 0
+      },
+      {
+       "text": "a new game soon.",
+       "start": 27.96,
+       "end": 28.88,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "Could you call me back and let me know if that's true?",
+     "chunks": [
+      {
+       "text": "Could you call me back",
+       "start": 28.88,
+       "end": 30.48,
+       "pause": 0
+      },
+      {
+       "text": "and let me know",
+       "start": 30.48,
+       "end": 31.18,
+       "pause": 0
+      },
+      {
+       "text": "if that's true?",
+       "start": 31.18,
+       "end": 31.78,
+       "pause": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupId": "est-2026-test-1-q80-82",
+   "part": 4,
+   "label": "Đề 1 · Part 4 · câu 80-82",
+   "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q80-82.mp3",
+   "duration": 83.383,
+   "lines": [
+    {
+     "speaker": null,
+     "text": "The first agenda item for our board meeting is the annual sales report.",
+     "chunks": [
+      {
+       "text": "The first agenda item",
+       "start": 5.76,
+       "end": 7.28,
+       "pause": 0
+      },
+      {
+       "text": "for our board",
+       "start": 7.28,
+       "end": 8.04,
+       "pause": 0
+      },
+      {
+       "text": "meeting is the annual sales report.",
+       "start": 8.04,
+       "end": 10.12,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "We're all disappointed by the drop in our clothing sales.",
+     "chunks": [
+      {
+       "text": "We're all disappointed",
+       "start": 10.88,
+       "end": 11.94,
+       "pause": 0
+      },
+      {
+       "text": "by the drop",
+       "start": 11.94,
+       "end": 12.94,
+       "pause": 0
+      },
+      {
+       "text": "in our clothing sales.",
+       "start": 12.94,
+       "end": 14.14,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "So I'm recommending that we start manufacturing some clothing locally.",
+     "chunks": [
+      {
+       "text": "So I'm recommending",
+       "start": 24.4,
+       "end": 26.4,
+       "pause": 0
+      },
+      {
+       "text": "that we start manufacturing some clothing locally.",
+       "start": 26.4,
+       "end": 29.4,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "I hired a consultant to put together a list of locations we could use.",
+     "chunks": [
+      {
+       "text": "I hired a consultant",
+       "start": 34.54,
+       "end": 35.9,
+       "pause": 0
+      },
+      {
+       "text": "to put together",
+       "start": 35.9,
+       "end": 36.9,
+       "pause": 0
+      },
+      {
+       "text": "a list of locations we could use.",
+       "start": 36.9,
+       "end": 38.9,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "He'll be at our next board meeting to explain the pros and cons of each.",
+     "chunks": [
+      {
+       "text": "He'll be at our next board",
+       "start": 39.58,
+       "end": 41.02,
+       "pause": 0
+      },
+      {
+       "text": "meeting to explain the pros",
+       "start": 41.02,
+       "end": 42.7,
+       "pause": 0
+      },
+      {
+       "text": "and cons of each.",
+       "start": 42.7,
+       "end": 44.06,
+       "pause": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupId": "est-2026-test-1-q83-85",
+   "part": 4,
+   "label": "Đề 1 · Part 4 · câu 83-85",
+   "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q83-85.mp3",
+   "duration": 81.686,
+   "lines": [
+    {
+     "speaker": null,
+     "text": "Attention, passengers.",
+     "chunks": [
+      {
+       "text": "Attention, passengers.",
+       "start": 5.6,
+       "end": 6.88,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "All trains to Midway Station are delayed for track repairs.",
+     "chunks": [
+      {
+       "text": "All trains",
+       "start": 7.62,
+       "end": 8.14,
+       "pause": 0
+      },
+      {
+       "text": "to Midway Station are delayed",
+       "start": 8.14,
+       "end": 9.96,
+       "pause": 0
+      },
+      {
+       "text": "for track repairs.",
+       "start": 9.96,
+       "end": 11.02,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "They expect to complete the repair within the hour.",
+     "chunks": [
+      {
+       "text": "They expect",
+       "start": 16.62,
+       "end": 17.2,
+       "pause": 0
+      },
+      {
+       "text": "to complete the repair",
+       "start": 17.2,
+       "end": 18.32,
+       "pause": 0
+      },
+      {
+       "text": "within the hour.",
+       "start": 18.32,
+       "end": 19.24,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "A bus will be departing for that destination in fifteen minutes.",
+     "chunks": [
+      {
+       "text": "A bus will be departing",
+       "start": 25.86,
+       "end": 27.92,
+       "pause": 0
+      },
+      {
+       "text": "for that destination",
+       "start": 27.92,
+       "end": 28.9,
+       "pause": 0
+      },
+      {
+       "text": "in fifteen minutes.",
+       "start": 28.9,
+       "end": 30.14,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "Also, a reminder that the station café opens at eight A.M., and there are food kiosks on platform one.",
+     "chunks": [
+      {
+       "text": "Also,",
+       "start": 30.8,
+       "end": 31.3,
+       "pause": 0
+      },
+      {
+       "text": "a reminder",
+       "start": 31.64,
+       "end": 32.14,
+       "pause": 0.34
+      },
+      {
+       "text": "that the station café opens",
+       "start": 32.14,
+       "end": 33.98,
+       "pause": 0
+      },
+      {
+       "text": "at eight A.M.,",
+       "start": 33.98,
+       "end": 34.927,
+       "pause": 0
+      },
+      {
+       "text": "and there are food kiosks",
+       "start": 35.28,
+       "end": 36.9,
+       "pause": 0.353
+      },
+      {
+       "text": "on platform one.",
+       "start": 36.9,
+       "end": 37.75,
+       "pause": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupId": "est-2026-test-1-q86-88",
+   "part": 4,
+   "label": "Đề 1 · Part 4 · câu 86-88",
+   "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q86-88.mp3",
+   "duration": 77.61,
+   "lines": [
+    {
+     "speaker": null,
+     "text": "I'm calling about the work my design team's doing to update your company logo.",
+     "chunks": [
+      {
+       "text": "I'm calling",
+       "start": 5.62,
+       "end": 6.52,
+       "pause": 0
+      },
+      {
+       "text": "about the work my design team's doing",
+       "start": 6.52,
+       "end": 8.48,
+       "pause": 0
+      },
+      {
+       "text": "to update your company logo.",
+       "start": 8.48,
+       "end": 10.08,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "I've just e-mailed two versions for you to review.",
+     "chunks": [
+      {
+       "text": "I've just e-mailed two versions",
+       "start": 10.86,
+       "end": 12.52,
+       "pause": 0
+      },
+      {
+       "text": "for you",
+       "start": 12.52,
+       "end": 12.92,
+       "pause": 0
+      },
+      {
+       "text": "to review.",
+       "start": 12.92,
+       "end": 13.32,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "Take your time to think about which one you'd like to choose.",
+     "chunks": [
+      {
+       "text": "Take your time",
+       "start": 26.94,
+       "end": 28.3,
+       "pause": 0
+      },
+      {
+       "text": "to think",
+       "start": 28.3,
+       "end": 28.64,
+       "pause": 0
+      },
+      {
+       "text": "about which one you'd like to choose.",
+       "start": 28.64,
+       "end": 30.5,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "I'll be on vacation all next week, but if you call the office, my assistant will set up a meeting for when I get back.",
+     "chunks": [
+      {
+       "text": "I'll be on vacation all next week,",
+       "start": 31.14,
+       "end": 33.2,
+       "pause": 0
+      },
+      {
+       "text": "but if you call the office,",
+       "start": 33.54,
+       "end": 34.7,
+       "pause": 0.34
+      },
+      {
+       "text": "my assistant will set up a meeting",
+       "start": 35.04,
+       "end": 36.44,
+       "pause": 0.34
+      },
+      {
+       "text": "for when I get back.",
+       "start": 36.44,
+       "end": 37.52,
+       "pause": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupId": "est-2026-test-1-q89-91",
+   "part": 4,
+   "label": "Đề 1 · Part 4 · câu 89-91",
+   "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q89-91.mp3",
+   "duration": 94.798,
+   "lines": [
+    {
+     "speaker": null,
+     "text": "I've scheduled this press conference to officially respond to your inquiries regarding fuel-efficient engines.",
+     "chunks": [
+      {
+       "text": "I've scheduled this press conference",
+       "start": 17.9,
+       "end": 19.72,
+       "pause": 0
+      },
+      {
+       "text": "to officially respond",
+       "start": 19.72,
+       "end": 21.1,
+       "pause": 0
+      },
+      {
+       "text": "to your inquiries",
+       "start": 21.1,
+       "end": 22.18,
+       "pause": 0
+      },
+      {
+       "text": "regarding fuel-efficient engines.",
+       "start": 22.18,
+       "end": 23.905,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "We hired a firm to determine if this upgrade would be feasible for our trains.",
+     "chunks": [
+      {
+       "text": "We hired a firm",
+       "start": 24.48,
+       "end": 25.54,
+       "pause": 0
+      },
+      {
+       "text": "to determine",
+       "start": 25.54,
+       "end": 26.18,
+       "pause": 0
+      },
+      {
+       "text": "if this upgrade would be feasible",
+       "start": 26.18,
+       "end": 27.9,
+       "pause": 0
+      },
+      {
+       "text": "for our trains.",
+       "start": 27.9,
+       "end": 29,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "It reported that the upgrade would be economical only for trains less than five years old.",
+     "chunks": [
+      {
+       "text": "It reported",
+       "start": 29,
+       "end": 30.66,
+       "pause": 0
+      },
+      {
+       "text": "that the upgrade",
+       "start": 30.66,
+       "end": 31.56,
+       "pause": 0
+      },
+      {
+       "text": "would be economical only for",
+       "start": 31.56,
+       "end": 33.34,
+       "pause": 0
+      },
+      {
+       "text": "trains",
+       "start": 34.38,
+       "end": 34.84,
+       "pause": 1.04
+      },
+      {
+       "text": "less than five years old.",
+       "start": 36.3,
+       "end": 37.98,
+       "pause": 1.46
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "All of ours are at least ten years old.",
+     "chunks": [
+      {
+       "text": "All of ours",
+       "start": 38.56,
+       "end": 39.32,
+       "pause": 0
+      },
+      {
+       "text": "are at least ten years old.",
+       "start": 39.32,
+       "end": 41.02,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "If you're interested in more details, e-mail our media relations department to receive a summary of the findings.",
+     "chunks": [
+      {
+       "text": "If you're interested",
+       "start": 44.48,
+       "end": 45.34,
+       "pause": 0
+      },
+      {
+       "text": "in more details,",
+       "start": 45.34,
+       "end": 46.24,
+       "pause": 0
+      },
+      {
+       "text": "e-mail",
+       "start": 46.24,
+       "end": 46.76,
+       "pause": 0
+      },
+      {
+       "text": "our media relations department",
+       "start": 47.28,
+       "end": 49.06,
+       "pause": 0.52
+      },
+      {
+       "text": "to receive a summary of the findings.",
+       "start": 49.06,
+       "end": 50.92,
+       "pause": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "groupId": "est-2026-test-1-q92-94",
+   "part": 4,
+   "label": "Đề 1 · Part 4 · câu 92-94",
+   "audioUrl": "https://tcpolxjxtgptbzpbtwvq.supabase.co/storage/v1/object/public/audio/tests/ets-2026-test-1/q92-94.mp3",
+   "duration": 78.341,
+   "lines": [
+    {
+     "speaker": null,
+     "text": "I want to explore the use of a more modernized payment system in our cosmetics stores.",
+     "chunks": [
+      {
+       "text": "I want to explore the use of",
+       "start": 8.16,
+       "end": 9.66,
+       "pause": 0
+      },
+      {
+       "text": "a more modernized payment system",
+       "start": 9.66,
+       "end": 11.4,
+       "pause": 0
+      },
+      {
+       "text": "in our cosmetics stores.",
+       "start": 11.4,
+       "end": 12.72,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "This system would allow any sales associate to take customer payments from a tablet anywhere in the store.",
+     "chunks": [
+      {
+       "text": "This system would allow any sales associate",
+       "start": 13.38,
+       "end": 15.72,
+       "pause": 0
+      },
+      {
+       "text": "to take customer payments",
+       "start": 15.72,
+       "end": 17.02,
+       "pause": 0
+      },
+      {
+       "text": "from a tablet anywhere",
+       "start": 17.02,
+       "end": 18.32,
+       "pause": 0
+      },
+      {
+       "text": "in the store.",
+       "start": 18.32,
+       "end": 19.14,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "The main complaint about shopping at our stores is waiting in long lines to pay.",
+     "chunks": [
+      {
+       "text": "The main complaint",
+       "start": 21.4,
+       "end": 22.58,
+       "pause": 0
+      },
+      {
+       "text": "about shopping",
+       "start": 22.58,
+       "end": 23.32,
+       "pause": 0
+      },
+      {
+       "text": "at our stores is waiting",
+       "start": 23.32,
+       "end": 24.74,
+       "pause": 0
+      },
+      {
+       "text": "in long lines",
+       "start": 24.74,
+       "end": 25.56,
+       "pause": 0
+      },
+      {
+       "text": "to pay.",
+       "start": 25.56,
+       "end": 26.1,
+       "pause": 0
+      }
+     ]
+    },
+    {
+     "speaker": null,
+     "text": "I've decided to conduct a trial run at our store in the Center City Mall.",
+     "chunks": [
+      {
+       "text": "I've decided",
+       "start": 29.6,
+       "end": 30.18,
+       "pause": 0
+      },
+      {
+       "text": "to conduct a trial run",
+       "start": 30.18,
+       "end": 31.58,
+       "pause": 0
+      },
+      {
+       "text": "at our store",
+       "start": 31.58,
+       "end": 32.24,
+       "pause": 0
+      },
+      {
+       "text": "in the Center City Mall.",
+       "start": 32.24,
+       "end": 33.48,
+       "pause": 0
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
