@@ -71548,8 +71548,8 @@ export const grammarQuestions = [
     "id": "q2101",
     "question": "The monthly sales report ______ by the regional manager every Friday afternoon.",
     "options": {
-      "A": "review",
-      "B": "reviews",
+      "A": "reviews",
+      "B": "review",
       "C": "reviewing",
       "D": "is reviewed"
     },
@@ -71576,8 +71576,8 @@ export const grammarQuestions = [
     "question": "The new security cameras ______ in the lobby last week.",
     "options": {
       "A": "were installed",
-      "B": "are installing",
-      "C": "installed",
+      "B": "installed",
+      "C": "are installing",
       "D": "have installing"
     },
     "correct_answer": "A",
@@ -71602,12 +71602,12 @@ export const grammarQuestions = [
     "id": "q2103",
     "question": "Visitors ______ to wear identification badges at all times inside the plant.",
     "options": {
-      "A": "are required",
+      "A": "require",
       "B": "requiring",
-      "C": "requirement",
-      "D": "require"
+      "C": "are required",
+      "D": "requirement"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Khách tham quan là người bị quy định yêu cầu, chứ không phải người đặt ra yêu cầu, nên cần bị động 'are required'. Đây cũng là cấu trúc quen thuộc 'be required to + V' (bị buộc phải làm gì).",
     "explanation_grammar": "Bị động hiện tại đơn + to V: S + am/is/are + required + to V.",
@@ -71629,10 +71629,10 @@ export const grammarQuestions = [
     "id": "q2104",
     "question": "The conference room ______ for the quarterly budget meeting tomorrow morning.",
     "options": {
-      "A": "uses",
-      "B": "using",
+      "A": "using",
+      "B": "will use",
       "C": "will be used",
-      "D": "will use"
+      "D": "uses"
     },
     "correct_answer": "C",
     "grammar_type": "Câu bị động",
@@ -71654,18 +71654,18 @@ export const grammarQuestions = [
   },
   {
     "id": "q2105",
-    "question": "The software update ______ automatically to every workstation each Sunday night.",
+    "question": "The software update ______ to every workstation by our IT server each Sunday night.",
     "options": {
-      "A": "is downloaded",
-      "B": "is downloading",
-      "C": "download",
-      "D": "downloads"
+      "A": "download",
+      "B": "is downloaded",
+      "C": "downloads",
+      "D": "is downloading"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Bản cập nhật là đối tượng được tải về chứ không phải chủ thể tải, và 'each Sunday night' chỉ hành động lặp lại theo thói quen nên chọn bị động hiện tại đơn 'is downloaded'.",
-    "explanation_grammar": "Bị động hiện tại đơn: S + am/is/are + V3/V-ed.",
-    "translation": "Bản cập nhật phần mềm được tải về tự động đến từng máy trạm vào mỗi tối Chủ nhật.",
+    "explanation_reason": "Cụm 'by our IT server' chỉ rõ tác nhân thực hiện, nên bản cập nhật là đối tượng được tải về. Trạng ngữ 'each Sunday night' chỉ việc lặp lại theo định kỳ nên dùng bị động hiện tại đơn.",
+    "explanation_grammar": "Bị động hiện tại đơn: S + am/is/are + V3/V-ed (+ by O).",
+    "translation": "Bản cập nhật phần mềm được máy chủ IT của chúng tôi tải về từng máy trạm vào mỗi tối Chủ nhật.",
     "core_vocabulary": [
       {
         "word": "workstation",
@@ -71684,11 +71684,11 @@ export const grammarQuestions = [
     "question": "The revised budget proposal ______ by the finance committee, so we can start hiring.",
     "options": {
       "A": "have been approve",
-      "B": "has approved",
-      "C": "has been approved",
+      "B": "has been approved",
+      "C": "has approved",
       "D": "is approving"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Đề xuất ngân sách là thứ được phê duyệt, và kết quả của việc phê duyệt còn ảnh hưởng tới hiện tại ('so we can start hiring') nên dùng bị động hiện tại hoàn thành. Chủ ngữ số ít nên dùng 'has been'.",
     "explanation_grammar": "Bị động hiện tại hoàn thành: S + has/have been + V3/V-ed.",
@@ -71710,12 +71710,12 @@ export const grammarQuestions = [
     "id": "q2107",
     "question": "The parking lot ______ at the moment, so please use the east entrance.",
     "options": {
-      "A": "is repaving",
+      "A": "is being repaved",
       "B": "has repaved",
-      "C": "repaves",
-      "D": "is being repaved"
+      "C": "is repaving",
+      "D": "repaves"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Bãi đỗ xe là nơi được trải lại nhựa, và 'at the moment' cho biết việc đó đang diễn ra ngay lúc nói, nên dùng bị động hiện tại tiếp diễn.",
     "explanation_grammar": "Bị động hiện tại tiếp diễn: S + am/is/are + being + V3/V-ed.",
@@ -71737,12 +71737,12 @@ export const grammarQuestions = [
     "id": "q2108",
     "question": "When the inspector arrived, the machines ______ by two technicians from headquarters.",
     "options": {
-      "A": "are serviced",
-      "B": "were servicing",
-      "C": "were being serviced",
-      "D": "have been serviced"
+      "A": "have been serviced",
+      "B": "were being serviced",
+      "C": "were servicing",
+      "D": "are serviced"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Máy móc là đối tượng được bảo dưỡng. Hành động đang diễn ra thì một việc khác ('the inspector arrived') xen vào, nên dùng bị động quá khứ tiếp diễn.",
     "explanation_grammar": "Bị động quá khứ tiếp diễn: S + was/were + being + V3/V-ed.",
@@ -71764,12 +71764,12 @@ export const grammarQuestions = [
     "id": "q2109",
     "question": "Our office supplies ______ from a local vendor since 2019.",
     "options": {
-      "A": "have ordered",
-      "B": "are ordering",
-      "C": "have been ordered",
+      "A": "have been ordered",
+      "B": "have ordered",
+      "C": "are ordering",
       "D": "ordered"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Văn phòng phẩm là thứ được đặt mua. Cụm 'since 2019' chỉ hành động bắt đầu trong quá khứ và kéo dài tới nay nên dùng hiện tại hoàn thành, kết hợp bị động thành 'have been ordered'.",
     "explanation_grammar": "Bị động hiện tại hoàn thành: S + has/have been + V3/V-ed; dấu hiệu 'since + mốc thời gian'.",
@@ -71791,9 +71791,9 @@ export const grammarQuestions = [
     "id": "q2110",
     "question": "The training session ______ to next Monday because of the public holiday.",
     "options": {
-      "A": "is postponing",
-      "B": "has postponing",
-      "C": "postponed",
+      "A": "postponed",
+      "B": "is postponing",
+      "C": "has postponing",
       "D": "was postponed"
     },
     "correct_answer": "D",
@@ -71819,11 +71819,11 @@ export const grammarQuestions = [
     "question": "Refunds ______ within five business days of a written request.",
     "options": {
       "A": "are issuing",
-      "B": "are issued",
-      "C": "issue",
-      "D": "issuing"
+      "B": "issue",
+      "C": "issuing",
+      "D": "are issued"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Tiền hoàn lại là đối tượng được cấp phát, không phải chủ thể cấp phát. Câu nêu một quy định chung nên dùng bị động hiện tại đơn.",
     "explanation_grammar": "Bị động hiện tại đơn: S + am/is/are + V3/V-ed.",
@@ -71845,12 +71845,12 @@ export const grammarQuestions = [
     "id": "q2112",
     "question": "A second branch ______ by the company in Da Nang next quarter.",
     "options": {
-      "A": "is opening",
-      "B": "will be opened",
-      "C": "opens",
+      "A": "opens",
+      "B": "is opening",
+      "C": "will be opened",
       "D": "will open"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Cụm 'by the company' cho biết công ty là người thực hiện, còn chi nhánh là đối tượng được mở, nên câu phải ở dạng bị động. 'Next quarter' chỉ tương lai nên dùng 'will be + V3'.",
     "explanation_grammar": "Bị động tương lai đơn: S + will be + V3/V-ed (+ by O).",
@@ -71872,12 +71872,12 @@ export const grammarQuestions = [
     "id": "q2113",
     "question": "The missing personnel files ______ in the storage room early this morning.",
     "options": {
-      "A": "have finding",
-      "B": "are finding",
+      "A": "were found",
+      "B": "have finding",
       "C": "found",
-      "D": "were found"
+      "D": "are finding"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Hồ sơ là thứ được tìm thấy, không phải thứ đi tìm. 'Early this morning' là mốc quá khứ đã kết thúc nên dùng bị động quá khứ đơn; chủ ngữ số nhiều 'files' đi với 'were'.",
     "explanation_grammar": "Bị động quá khứ đơn: S + was/were + V3/V-ed.",
@@ -71900,13 +71900,13 @@ export const grammarQuestions = [
     "question": "Full payment ______ before the goods leave our warehouse.",
     "options": {
       "A": "requiring",
-      "B": "require",
+      "B": "is required",
       "C": "requires",
-      "D": "is required"
+      "D": "require"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Khoản thanh toán là thứ bị đòi hỏi, nên cần bị động 'is required'. Câu nêu điều kiện chung của công ty nên dùng hiện tại đơn; 'payment' ở đây là danh từ không đếm nên đi với 'is'.",
+    "explanation_reason": "Khoản thanh toán là thứ bị đòi hỏi, nên cần bị động 'is required'. Câu nêu điều kiện chung của công ty nên dùng hiện tại đơn; 'full payment' ở đây là cụm danh từ không đếm nên chia động từ số ít.",
     "explanation_grammar": "Bị động hiện tại đơn: S + am/is/are + V3/V-ed.",
     "translation": "Việc thanh toán toàn bộ được yêu cầu trước khi hàng hoá rời khỏi kho của chúng tôi.",
     "core_vocabulary": [
@@ -71928,8 +71928,8 @@ export const grammarQuestions = [
     "options": {
       "A": "was mailed",
       "B": "has mailed",
-      "C": "was mailing",
-      "D": "mailed"
+      "C": "mailed",
+      "D": "was mailing"
     },
     "correct_answer": "A",
     "grammar_type": "Câu bị động",
@@ -71953,16 +71953,16 @@ export const grammarQuestions = [
     "id": "q2116",
     "question": "Safety goggles ______ in the chemistry laboratory at all times.",
     "options": {
-      "A": "are worn",
-      "B": "wear",
-      "C": "wearing",
+      "A": "wear",
+      "B": "wearing",
+      "C": "are worn",
       "D": "are wearing"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Kính bảo hộ là vật được đeo chứ không tự đeo, nên dùng bị động. Câu nêu nội quy có hiệu lực thường xuyên nên dùng hiện tại đơn.",
     "explanation_grammar": "Bị động hiện tại đơn: S + am/is/are + V3/V-ed (wear - wore - worn).",
-    "translation": "Kính bảo hộ phải được đeo trong phòng thí nghiệm hoá học mọi lúc.",
+    "translation": "Kính bảo hộ được đeo trong phòng thí nghiệm hoá học mọi lúc.",
     "core_vocabulary": [
       {
         "word": "safety goggles",
@@ -71980,9 +71980,9 @@ export const grammarQuestions = [
     "id": "q2117",
     "question": "The partnership agreement ______ by both parties yesterday afternoon.",
     "options": {
-      "A": "signed",
+      "A": "has signing",
       "B": "is signing",
-      "C": "has signing",
+      "C": "signed",
       "D": "was signed"
     },
     "correct_answer": "D",
@@ -72007,12 +72007,12 @@ export const grammarQuestions = [
     "id": "q2118",
     "question": "Our company website ______ by a team of three in-house developers.",
     "options": {
-      "A": "maintains",
-      "B": "maintaining",
-      "C": "maintain",
-      "D": "is maintained"
+      "A": "maintain",
+      "B": "is maintained",
+      "C": "maintaining",
+      "D": "maintains"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Trang web là đối tượng được bảo trì, người thực hiện nằm sau 'by', nên cần bị động. Câu nói về tình trạng thường xuyên nên dùng hiện tại đơn.",
     "explanation_grammar": "Bị động hiện tại đơn: S + am/is/are + V3/V-ed (+ by O).",
@@ -72036,8 +72036,8 @@ export const grammarQuestions = [
     "options": {
       "A": "have been screened",
       "B": "are screening",
-      "C": "screened",
-      "D": "have screened"
+      "C": "have screened",
+      "D": "screened"
     },
     "correct_answer": "A",
     "grammar_type": "Câu bị động",
@@ -72059,18 +72059,18 @@ export const grammarQuestions = [
   },
   {
     "id": "q2120",
-    "question": "The delivery truck ______ for nearly an hour while it was crossing the bridge.",
+    "question": "The delivery truck ______ for nearly an hour while it was waiting to cross the bridge.",
     "options": {
-      "A": "delayed",
-      "B": "is delaying",
+      "A": "is delaying",
+      "B": "delayed",
       "C": "was delayed",
       "D": "delays"
     },
     "correct_answer": "C",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Xe tải bị hoàn cảnh bên ngoài làm cho chậm trễ, nên dùng bị động. Mệnh đề 'while it was crossing the bridge' ở quá khứ nên chọn 'was delayed'.",
+    "explanation_reason": "Xe tải bị hoàn cảnh bên ngoài làm cho chậm trễ, nên dùng bị động. Mệnh đề 'while it was waiting to cross the bridge' ở quá khứ nên chọn 'was delayed'.",
     "explanation_grammar": "Bị động quá khứ đơn: S + was/were + V3/V-ed.",
-    "translation": "Xe tải giao hàng đã bị chậm gần một tiếng trong lúc đang qua cầu.",
+    "translation": "Xe tải giao hàng đã bị chậm gần một tiếng trong lúc chờ qua cầu.",
     "core_vocabulary": [
       {
         "word": "delay",
@@ -72088,12 +72088,12 @@ export const grammarQuestions = [
     "id": "q2121",
     "question": "Complimentary breakfast ______ to hotel guests from six to ten every morning.",
     "options": {
-      "A": "serves",
-      "B": "serving",
-      "C": "is served",
-      "D": "is serving"
+      "A": "is serving",
+      "B": "serves",
+      "C": "serving",
+      "D": "is served"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Bữa sáng là thứ được phục vụ, không phải người phục vụ. Khung giờ cố định mỗi ngày cho thấy đây là việc lặp lại, nên dùng bị động hiện tại đơn.",
     "explanation_grammar": "Bị động hiện tại đơn: S + am/is/are + V3/V-ed.",
@@ -72115,12 +72115,12 @@ export const grammarQuestions = [
     "id": "q2122",
     "question": "The outdated printers ______ next month with more energy-efficient models.",
     "options": {
-      "A": "replace",
-      "B": "will replace",
-      "C": "will be replaced",
+      "A": "will replace",
+      "B": "will be replaced",
+      "C": "replace",
       "D": "replacing"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Máy in cũ là đối tượng bị thay thế bởi 'more energy-efficient models', nên câu phải bị động. 'Next month' chỉ tương lai nên dùng 'will be + V3'.",
     "explanation_grammar": "Bị động tương lai đơn: S + will be + V3/V-ed.",
@@ -72142,12 +72142,12 @@ export const grammarQuestions = [
     "id": "q2123",
     "question": "The company newsletter ______ by email on the first day of each month.",
     "options": {
-      "A": "distributing",
+      "A": "is distributed",
       "B": "distribute",
       "C": "distributes",
-      "D": "is distributed"
+      "D": "distributing"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Bản tin là thứ được phát đi, không tự phát. Cụm 'on the first day of each month' chỉ việc lặp lại định kỳ nên dùng bị động hiện tại đơn.",
     "explanation_grammar": "Bị động hiện tại đơn: S + am/is/are + V3/V-ed.",
@@ -72224,11 +72224,11 @@ export const grammarQuestions = [
     "question": "By the time the auditors arrived, all the receipts ______ into separate folders.",
     "options": {
       "A": "had sorted",
-      "B": "had been sorted",
-      "C": "have sorted",
+      "B": "have sorted",
+      "C": "had been sorted",
       "D": "were sorting"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Hoá đơn là thứ được sắp xếp. Cụm 'by the time + quá khứ đơn' cho biết việc sắp xếp hoàn tất trước một mốc quá khứ khác, nên dùng bị động quá khứ hoàn thành.",
     "explanation_grammar": "Bị động quá khứ hoàn thành: S + had been + V3/V-ed.",
@@ -72250,12 +72250,12 @@ export const grammarQuestions = [
     "id": "q2127",
     "question": "The order ______ before we received your cancellation request.",
     "options": {
-      "A": "had already been shipped",
-      "B": "has already shipping",
+      "A": "had already shipped",
+      "B": "had already been shipped",
       "C": "was already shipping",
-      "D": "had already shipped"
+      "D": "has already shipping"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Đơn hàng là thứ được gửi đi, và việc gửi xảy ra trước một hành động quá khứ khác ('we received your cancellation request'), nên dùng bị động quá khứ hoàn thành. Trạng từ 'already' đứng giữa 'had' và 'been'.",
     "explanation_grammar": "Bị động quá khứ hoàn thành: S + had (+ trạng từ) + been + V3/V-ed.",
@@ -72277,12 +72277,12 @@ export const grammarQuestions = [
     "id": "q2128",
     "question": "All membership applications ______ by the end of this week.",
     "options": {
-      "A": "will have been processed",
-      "B": "will be processing",
-      "C": "will have processed",
+      "A": "will have processed",
+      "B": "will have been processed",
+      "C": "will be processing",
       "D": "have been processing"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Đơn xin là thứ được xử lý. Cụm 'by the end of this week' chỉ việc hoàn tất trước một mốc tương lai, nên dùng bị động tương lai hoàn thành.",
     "explanation_grammar": "Bị động tương lai hoàn thành: S + will have been + V3/V-ed; dấu hiệu 'by + mốc tương lai'.",
@@ -72304,10 +72304,10 @@ export const grammarQuestions = [
     "id": "q2129",
     "question": "Visitors must ______ by a staff member while they are inside the factory.",
     "options": {
-      "A": "being accompanied",
+      "A": "accompany",
       "B": "be accompanied",
       "C": "accompanied",
-      "D": "accompany"
+      "D": "being accompanied"
     },
     "correct_answer": "B",
     "grammar_type": "Câu bị động",
@@ -72331,12 +72331,12 @@ export const grammarQuestions = [
     "id": "q2130",
     "question": "The expense report should ______ to the director no later than Friday.",
     "options": {
-      "A": "been submitted",
-      "B": "be submitted",
-      "C": "submit",
+      "A": "submit",
+      "B": "been submitted",
+      "C": "be submitted",
       "D": "submitting"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Bản báo cáo là thứ được nộp, không tự nộp. Sau 'should' phải dùng động từ nguyên mẫu không 'to', nên dạng bị động là 'be submitted' (không bao giờ là 'been submitted' sau modal).",
     "explanation_grammar": "Bị động với modal: S + should + be + V3/V-ed.",
@@ -72358,12 +72358,12 @@ export const grammarQuestions = [
     "id": "q2131",
     "question": "Tickets for the trade fair can ______ online or at the box office.",
     "options": {
-      "A": "be purchased",
-      "B": "purchase",
-      "C": "been purchased",
+      "A": "purchase",
+      "B": "been purchased",
+      "C": "be purchased",
       "D": "purchasing"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Vé là thứ được mua, nên cần bị động. Sau 'can' dùng 'be + V3'; 'purchase' ở thể chủ động sẽ khiến câu thiếu tân ngữ.",
     "explanation_grammar": "Bị động với modal: S + can + be + V3/V-ed.",
@@ -72387,8 +72387,8 @@ export const grammarQuestions = [
     "options": {
       "A": "have been caused",
       "B": "have caused",
-      "C": "be causing",
-      "D": "caused"
+      "C": "caused",
+      "D": "be causing"
     },
     "correct_answer": "A",
     "grammar_type": "Câu bị động",
@@ -72412,12 +72412,12 @@ export const grammarQuestions = [
     "id": "q2133",
     "question": "The equipment should ______ last month, but the technician was unavailable.",
     "options": {
-      "A": "have been inspected",
-      "B": "inspected",
-      "C": "have inspected",
-      "D": "be inspecting"
+      "A": "inspected",
+      "B": "have inspected",
+      "C": "be inspecting",
+      "D": "have been inspected"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Thiết bị là đối tượng được kiểm tra. Câu diễn tả việc đáng lẽ phải làm trong quá khứ nhưng đã không làm, nên dùng 'should have been + V3'.",
     "explanation_grammar": "Bị động modal hoàn thành: S + should have been + V3/V-ed (việc đáng lẽ phải xảy ra mà không xảy ra).",
@@ -72439,12 +72439,12 @@ export const grammarQuestions = [
     "id": "q2134",
     "question": "Confidential documents must not ______ outside the building under any circumstances.",
     "options": {
-      "A": "be taken",
+      "A": "take",
       "B": "been taken",
-      "C": "take",
-      "D": "taking"
+      "C": "taking",
+      "D": "be taken"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Tài liệu là thứ bị mang đi, nên cần bị động. Sau 'must not' dùng 'be + V3' (take - took - taken).",
     "explanation_grammar": "Bị động với modal phủ định: S + must not + be + V3/V-ed.",
@@ -72466,8 +72466,8 @@ export const grammarQuestions = [
     "id": "q2135",
     "question": "The lobby renovation ______ by the time the new tenants move in.",
     "options": {
-      "A": "will have completed",
-      "B": "has completing",
+      "A": "has completing",
+      "B": "will have completed",
       "C": "is completing",
       "D": "will have been completed"
     },
@@ -72491,18 +72491,18 @@ export const grammarQuestions = [
   },
   {
     "id": "q2136",
-    "question": "The missing laptop ______ to the IT desk before anyone noticed it was gone.",
+    "question": "The borrowed laptop ______ to the IT desk before anyone noticed it was gone.",
     "options": {
-      "A": "had been returned",
+      "A": "has returning",
       "B": "had returned",
-      "C": "has returning",
+      "C": "had been returned",
       "D": "was returning"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Máy tính là thứ được trả lại. Việc trả xảy ra trước hành động quá khứ 'anyone noticed', nên dùng bị động quá khứ hoàn thành.",
     "explanation_grammar": "Bị động quá khứ hoàn thành: S + had been + V3/V-ed.",
-    "translation": "Chiếc laptop bị thất lạc đã được trả về bộ phận IT trước khi có ai kịp nhận ra nó biến mất.",
+    "translation": "Chiếc laptop được cho mượn đã được trả về bộ phận IT trước khi có ai kịp nhận ra nó biến mất.",
     "core_vocabulary": [
       {
         "word": "notice",
@@ -72518,18 +72518,18 @@ export const grammarQuestions = [
   },
   {
     "id": "q2137",
-    "question": "Under the revised policy, overtime hours ______ at one and a half times the normal rate.",
+    "question": "Under the revised policy, overtime hours ______ by the payroll department at one and a half times the normal rate.",
     "options": {
       "A": "are paying",
       "B": "will pay",
-      "C": "pay",
-      "D": "will be paid"
+      "C": "will be paid",
+      "D": "pay"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Giờ làm thêm là đối tượng được chi trả, không phải chủ thể chi trả. Chính sách mới sẽ áp dụng về sau nên dùng bị động tương lai đơn.",
-    "explanation_grammar": "Bị động tương lai đơn: S + will be + V3/V-ed.",
-    "translation": "Theo chính sách đã sửa đổi, giờ làm thêm sẽ được trả bằng một rưỡi mức lương thường.",
+    "explanation_reason": "Cụm 'by the payroll department' chỉ bên thực hiện việc chi trả, nên giờ làm thêm là đối tượng được trả. Chính sách mới áp dụng về sau nên dùng bị động tương lai đơn.",
+    "explanation_grammar": "Bị động tương lai đơn: S + will be + V3/V-ed (+ by O).",
+    "translation": "Theo chính sách đã sửa đổi, giờ làm thêm sẽ được bộ phận tiền lương trả bằng một rưỡi mức lương thường.",
     "core_vocabulary": [
       {
         "word": "overtime",
@@ -72547,12 +72547,12 @@ export const grammarQuestions = [
     "id": "q2138",
     "question": "This type of machine ought to ______ at least once every six months.",
     "options": {
-      "A": "service",
-      "B": "serviced",
-      "C": "be serviced",
-      "D": "being serviced"
+      "A": "being serviced",
+      "B": "service",
+      "C": "serviced",
+      "D": "be serviced"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Máy là đối tượng được bảo dưỡng. 'Ought to' là modal nên theo sau là động từ nguyên mẫu, dạng bị động là 'be serviced'.",
     "explanation_grammar": "Bị động với modal: S + ought to + be + V3/V-ed.",
@@ -72560,7 +72560,7 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "ought to",
-        "type": "modal",
+        "type": "phrase",
         "meaning": "nên, phải"
       },
       {
@@ -72574,12 +72574,12 @@ export const grammarQuestions = [
     "id": "q2139",
     "question": "The terms of the contract cannot ______ without the approval of the legal team.",
     "options": {
-      "A": "amending",
-      "B": "amend",
-      "C": "be amended",
-      "D": "been amended"
+      "A": "amend",
+      "B": "been amended",
+      "C": "amending",
+      "D": "be amended"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Các điều khoản là thứ bị sửa đổi, nên cần bị động. Sau 'cannot' dùng 'be + V3'.",
     "explanation_grammar": "Bị động với modal: S + cannot + be + V3/V-ed.",
@@ -72601,10 +72601,10 @@ export const grammarQuestions = [
     "id": "q2140",
     "question": "By 2027, more than five hundred units ______ at the new assembly plant.",
     "options": {
-      "A": "are assembling",
+      "A": "have assembling",
       "B": "will have been assembled",
       "C": "will have assembled",
-      "D": "have assembling"
+      "D": "are assembling"
     },
     "correct_answer": "B",
     "grammar_type": "Câu bị động",
@@ -72628,12 +72628,12 @@ export const grammarQuestions = [
     "id": "q2141",
     "question": "The glass samples might ______ during transport, so please check them carefully.",
     "options": {
-      "A": "have damaged",
-      "B": "be damaging",
-      "C": "have been damaged",
-      "D": "damaged"
+      "A": "have been damaged",
+      "B": "damaged",
+      "C": "be damaging",
+      "D": "have damaged"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Mẫu thuỷ tinh là đối tượng bị hư hại. Suy đoán về khả năng đã xảy ra trong quá khứ nên dùng 'might have been + V3'.",
     "explanation_grammar": "Bị động modal hoàn thành: S + might have been + V3/V-ed.",
@@ -72655,8 +72655,8 @@ export const grammarQuestions = [
     "id": "q2142",
     "question": "All staff members ______ on the new software before the system upgrade began.",
     "options": {
-      "A": "are trained",
-      "B": "had trained",
+      "A": "had trained",
+      "B": "are trained",
       "C": "were training",
       "D": "had been trained"
     },
@@ -72682,12 +72682,12 @@ export const grammarQuestions = [
     "id": "q2143",
     "question": "Every purchase proposal must ______ by at least two department managers.",
     "options": {
-      "A": "been reviewed",
-      "B": "reviewing",
-      "C": "be reviewed",
-      "D": "review"
+      "A": "be reviewed",
+      "B": "review",
+      "C": "been reviewed",
+      "D": "reviewing"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Cụm 'by at least two department managers' chỉ người thực hiện, nên đề xuất là đối tượng được xem xét. Sau 'must' dùng 'be + V3'.",
     "explanation_grammar": "Bị động với modal: S + must + be + V3/V-ed (+ by O).",
@@ -72709,12 +72709,12 @@ export const grammarQuestions = [
     "id": "q2144",
     "question": "The announcement should ______ to all branch offices immediately.",
     "options": {
-      "A": "forwarding",
-      "B": "been forwarded",
-      "C": "forward",
-      "D": "be forwarded"
+      "A": "be forwarded",
+      "B": "forwarding",
+      "C": "been forwarded",
+      "D": "forward"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Thông báo là thứ được chuyển tiếp. Sau 'should' phải dùng 'be + V3'; 'been forwarded' chỉ đi sau 'have', không đi sau modal.",
     "explanation_grammar": "Bị động với modal: S + should + be + V3/V-ed.",
@@ -72736,12 +72736,12 @@ export const grammarQuestions = [
     "id": "q2145",
     "question": "The warehouse ______ twice before the current owner bought the property.",
     "options": {
-      "A": "has expanding",
-      "B": "had expanded",
-      "C": "had been expanded",
-      "D": "was expanding"
+      "A": "was expanding",
+      "B": "had been expanded",
+      "C": "has expanding",
+      "D": "had expanded"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Nhà kho là đối tượng được mở rộng. Việc mở rộng diễn ra trước mốc quá khứ 'the current owner bought', nên dùng bị động quá khứ hoàn thành.",
     "explanation_grammar": "Bị động quá khứ hoàn thành: S + had been + V3/V-ed.",
@@ -72763,12 +72763,12 @@ export const grammarQuestions = [
     "id": "q2146",
     "question": "Your luggage will ______ to your room within the next ten minutes.",
     "options": {
-      "A": "be delivered",
-      "B": "been delivered",
-      "C": "delivering",
-      "D": "deliver"
+      "A": "delivering",
+      "B": "be delivered",
+      "C": "deliver",
+      "D": "been delivered"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Hành lý là thứ được mang tới, nên cần bị động. Sau 'will' dùng 'be + V3'.",
     "explanation_grammar": "Bị động tương lai đơn: S + will be + V3/V-ed.",
@@ -72790,16 +72790,16 @@ export const grammarQuestions = [
     "id": "q2147",
     "question": "The error in the figures could ______ if the data had been checked twice.",
     "options": {
-      "A": "be avoiding",
+      "A": "have been avoided",
       "B": "avoided",
-      "C": "have been avoided",
+      "C": "be avoiding",
       "D": "have avoided"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Lỗi là thứ bị (có thể đã) tránh được, không phải chủ thể tránh. Câu nói về khả năng không thành hiện thực trong quá khứ nên dùng 'could have been + V3'.",
     "explanation_grammar": "Bị động modal hoàn thành: S + could have been + V3/V-ed.",
-    "translation": "Lỗi trong các con số lẽ ra đã có thể được ngăn chặn nếu dữ liệu được kiểm tra hai lần.",
+    "translation": "Lỗi trong các con số lẽ ra đã có thể được ngăn chặn nếu dữ liệu đã được kiểm tra hai lần.",
     "core_vocabulary": [
       {
         "word": "avoid",
@@ -72817,14 +72817,14 @@ export const grammarQuestions = [
     "id": "q2148",
     "question": "Nothing ______ about the merger until the board made its final decision.",
     "options": {
-      "A": "was announcing",
-      "B": "has announcing",
+      "A": "had announced",
+      "B": "was announcing",
       "C": "had been announced",
-      "D": "had announced"
+      "D": "has announcing"
     },
     "correct_answer": "C",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "'Nothing' là thứ được công bố chứ không tự công bố. Khoảng thời gian trước mốc quá khứ 'the board made its final decision' đòi hỏi bị động quá khứ hoàn thành.",
+    "explanation_reason": "'Nothing' là thứ được công bố chứ không tự công bố. Quá khứ hoàn thành nhấn mạnh việc 'chưa có gì xảy ra' tính đến mốc quá khứ 'the board made its final decision'; trong bốn phương án chỉ 'had been announced' đúng dạng bị động.",
     "explanation_grammar": "Bị động quá khứ hoàn thành: S + had been + V3/V-ed.",
     "translation": "Không có gì được công bố về vụ sáp nhập cho đến khi hội đồng quản trị đưa ra quyết định cuối cùng.",
     "core_vocabulary": [
@@ -72873,8 +72873,8 @@ export const grammarQuestions = [
     "options": {
       "A": "should have been delivered",
       "B": "should deliver",
-      "C": "should have delivered",
-      "D": "should be delivering"
+      "C": "should be delivering",
+      "D": "should have delivered"
     },
     "correct_answer": "A",
     "grammar_type": "Câu bị động",
@@ -72898,12 +72898,12 @@ export const grammarQuestions = [
     "id": "q2151",
     "question": "All participants expect ______ a certificate at the end of the course.",
     "options": {
-      "A": "to give",
-      "B": "be given",
-      "C": "to be given",
-      "D": "giving"
+      "A": "be given",
+      "B": "to give",
+      "C": "giving",
+      "D": "to be given"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Người tham dự là người nhận chứng chỉ, không phải người trao, nên phần sau 'expect' phải ở dạng bị động. Sau 'expect' dùng 'to V', nên bị động là 'to be given'.",
     "explanation_grammar": "Bị động của động từ nguyên mẫu: to be + V3/V-ed (sau expect, hope, want, need...).",
@@ -72925,12 +72925,12 @@ export const grammarQuestions = [
     "id": "q2152",
     "question": "The windows on the top floor need ______ before the annual inspection.",
     "options": {
-      "A": "cleans",
-      "B": "to be cleaned",
-      "C": "be cleaning",
-      "D": "to clean"
+      "A": "be cleaning",
+      "B": "to clean",
+      "C": "cleans",
+      "D": "to be cleaned"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Cửa sổ là đối tượng được lau, không tự lau, nên sau 'need' phải dùng dạng bị động 'to be cleaned'. Nếu chọn 'to clean' thì cửa sổ lại thành chủ thể đi lau.",
     "explanation_grammar": "Bị động sau 'need': S + need + to be + V3/V-ed.",
@@ -72952,12 +72952,12 @@ export const grammarQuestions = [
     "id": "q2153",
     "question": "Mr. Pham avoided ______ about the delay by leaving the office early.",
     "options": {
-      "A": "asking",
-      "B": "to be asked",
-      "C": "being asked",
-      "D": "be asked"
+      "A": "to be asked",
+      "B": "being asked",
+      "C": "be asked",
+      "D": "asking"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Ông Phạm là người bị hỏi, nên cần dạng bị động. Sau 'avoid' luôn là V-ing, nên bị động là 'being + V3'.",
     "explanation_grammar": "Bị động của danh động từ: being + V3/V-ed (sau avoid, mind, dislike, risk...).",
@@ -72979,12 +72979,12 @@ export const grammarQuestions = [
     "id": "q2154",
     "question": "The conveyor belt requires ______ every three months to prevent breakdowns.",
     "options": {
-      "A": "to be oiled",
-      "B": "be oiled",
-      "C": "to oil",
-      "D": "oils"
+      "A": "to oil",
+      "B": "to be oiled",
+      "C": "oils",
+      "D": "be oiled"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Băng chuyền là đối tượng được tra dầu, nên sau 'require' dùng bị động 'to be oiled'.",
     "explanation_grammar": "Bị động sau 'require': S + require + to be + V3/V-ed.",
@@ -73006,12 +73006,12 @@ export const grammarQuestions = [
     "id": "q2155",
     "question": "Candidates hope ______ within two weeks of the final interview.",
     "options": {
-      "A": "to be contacted",
-      "B": "contacting",
-      "C": "be contacted",
-      "D": "to contact"
+      "A": "be contacted",
+      "B": "to contact",
+      "C": "contacting",
+      "D": "to be contacted"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Ứng viên là người được liên hệ (công ty mới là người gọi), nên cần bị động. Sau 'hope' dùng 'to V', thành 'to be contacted'.",
     "explanation_grammar": "Bị động của động từ nguyên mẫu: to be + V3/V-ed.",
@@ -73034,11 +73034,11 @@ export const grammarQuestions = [
     "question": "After ______ with the award, Ms. Tran thanked her entire design team.",
     "options": {
       "A": "be presented",
-      "B": "present",
-      "C": "presenting",
-      "D": "being presented"
+      "B": "presenting",
+      "C": "being presented",
+      "D": "present"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Bà Trân là người được trao giải, nên cần bị động. Sau giới từ 'after' phải dùng V-ing, nên dạng bị động là 'being presented'.",
     "explanation_grammar": "Bị động sau giới từ: giới từ + being + V3/V-ed.",
@@ -73060,12 +73060,12 @@ export const grammarQuestions = [
     "id": "q2157",
     "question": "The drawings must be approved before ______ to the construction team.",
     "options": {
-      "A": "to send",
-      "B": "sent",
-      "C": "being sent",
+      "A": "being sent",
+      "B": "to send",
+      "C": "sent",
       "D": "sending"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Bản vẽ là thứ được gửi đi, nên cần bị động. 'Before' ở đây là giới từ nên theo sau là V-ing, kết hợp bị động thành 'being sent'.",
     "explanation_grammar": "Bị động sau giới từ: before/after/without + being + V3/V-ed.",
@@ -73087,12 +73087,12 @@ export const grammarQuestions = [
     "id": "q2158",
     "question": "Nobody likes ______ in the middle of a presentation.",
     "options": {
-      "A": "interrupting",
-      "B": "to interrupt",
-      "C": "be interrupted",
-      "D": "being interrupted"
+      "A": "be interrupted",
+      "B": "being interrupted",
+      "C": "interrupting",
+      "D": "to interrupt"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Nobody' là người bị cắt ngang lời, nên cần bị động. Sau 'like' có thể dùng V-ing, nên dạng bị động là 'being interrupted'.",
     "explanation_grammar": "Bị động của danh động từ: being + V3/V-ed.",
@@ -73115,11 +73115,11 @@ export const grammarQuestions = [
     "question": "The new interns ______ a tour of the production facility on their first day.",
     "options": {
       "A": "were giving",
-      "B": "have giving",
+      "B": "were given",
       "C": "gave",
-      "D": "were given"
+      "D": "have giving"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Động từ 'give' có hai tân ngữ; khi chuyển bị động, tân ngữ chỉ người ('the new interns') lên làm chủ ngữ và tân ngữ chỉ vật ('a tour') vẫn giữ nguyên sau động từ.",
     "explanation_grammar": "Bị động hai tân ngữ: S (người) + be + V3 + O (vật).",
@@ -73141,12 +73141,12 @@ export const grammarQuestions = [
     "id": "q2160",
     "question": "Each participant ______ a name tag at the registration desk this morning.",
     "options": {
-      "A": "handed",
-      "B": "was handed",
-      "C": "has handing",
-      "D": "was handing"
+      "A": "was handed",
+      "B": "handed",
+      "C": "was handing",
+      "D": "has handing"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Người tham dự là người được đưa thẻ tên. Với động từ hai tân ngữ như 'hand', tân ngữ chỉ người lên làm chủ ngữ, tân ngữ chỉ vật ('a name tag') ở lại sau động từ.",
     "explanation_grammar": "Bị động hai tân ngữ: S (người) + was/were + V3 + O (vật).",
@@ -73169,11 +73169,11 @@ export const grammarQuestions = [
     "question": "Ms. Lopez ______ the position of regional director late last month.",
     "options": {
       "A": "offered",
-      "B": "has offering",
-      "C": "was offered",
-      "D": "was offering"
+      "B": "was offered",
+      "C": "was offering",
+      "D": "has offering"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Bà Lopez là người được đề nghị nhận chức, không phải người đi đề nghị. Tân ngữ chỉ vật ('the position') vẫn đứng sau động từ bị động.",
     "explanation_grammar": "Bị động hai tân ngữ: S (người) + was/were + offered + O (vật).",
@@ -73195,9 +73195,9 @@ export const grammarQuestions = [
     "id": "q2162",
     "question": "The winning team ______ a cash prize of two thousand dollars.",
     "options": {
-      "A": "have awarding",
-      "B": "was awarding",
-      "C": "awarded",
+      "A": "awarded",
+      "B": "have awarding",
+      "C": "was awarding",
       "D": "was awarded"
     },
     "correct_answer": "D",
@@ -73222,12 +73222,12 @@ export const grammarQuestions = [
     "id": "q2163",
     "question": "All subscribers ______ a discount code by email last Tuesday.",
     "options": {
-      "A": "are sending",
-      "B": "were sent",
+      "A": "were sent",
+      "B": "are sending",
       "C": "were sending",
       "D": "sent"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Người đăng ký là bên nhận mã giảm giá. Với 'send', tân ngữ chỉ người lên làm chủ ngữ bị động, còn 'a discount code' giữ nguyên vị trí.",
     "explanation_grammar": "Bị động hai tân ngữ: S (người) + was/were + sent + O (vật).",
@@ -73250,11 +73250,11 @@ export const grammarQuestions = [
     "question": "The air-conditioning system is expected ______ by the end of the week.",
     "options": {
       "A": "to install",
-      "B": "installing",
-      "C": "be installed",
-      "D": "to be installed"
+      "B": "be installed",
+      "C": "to be installed",
+      "D": "installing"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Hệ thống điều hoà là đối tượng được lắp đặt, nên phần sau 'is expected' cũng phải bị động: 'to be installed'.",
     "explanation_grammar": "Bị động kép: S + be expected + to be + V3/V-ed.",
@@ -73276,10 +73276,10 @@ export const grammarQuestions = [
     "id": "q2165",
     "question": "Ms. Ortiz insisted on ______ about every change to the floor plan.",
     "options": {
-      "A": "consulting",
+      "A": "be consulted",
       "B": "consult",
       "C": "being consulted",
-      "D": "be consulted"
+      "D": "consulting"
     },
     "correct_answer": "C",
     "grammar_type": "Câu bị động",
@@ -73304,11 +73304,11 @@ export const grammarQuestions = [
     "question": "The parcel seems ______ to the wrong address by mistake.",
     "options": {
       "A": "sending",
-      "B": "to have been sent",
-      "C": "to be sending",
-      "D": "to have sent"
+      "B": "to have sent",
+      "C": "to have been sent",
+      "D": "to be sending"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Bưu kiện là thứ được gửi, và việc gửi đã xảy ra trước thời điểm nói, nên dùng dạng bị động hoàn thành của động từ nguyên mẫu.",
     "explanation_grammar": "Bị động hoàn thành của nguyên mẫu: to have been + V3/V-ed.",
@@ -73330,12 +73330,12 @@ export const grammarQuestions = [
     "id": "q2167",
     "question": "Most employees dislike ______ to work overtime without advance notice.",
     "options": {
-      "A": "to ask",
-      "B": "asking",
-      "C": "being asked",
-      "D": "be asked"
+      "A": "being asked",
+      "B": "be asked",
+      "C": "to ask",
+      "D": "asking"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Nhân viên là người bị yêu cầu làm thêm giờ. Sau 'dislike' dùng V-ing, nên bị động là 'being asked'.",
     "explanation_grammar": "Bị động của danh động từ: being + V3/V-ed.",
@@ -73358,11 +73358,11 @@ export const grammarQuestions = [
     "question": "The old factory building is scheduled ______ early next spring.",
     "options": {
       "A": "demolishing",
-      "B": "to be demolished",
-      "C": "to demolish",
+      "B": "to demolish",
+      "C": "to be demolished",
       "D": "be demolished"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Toà nhà là đối tượng bị phá dỡ, nên sau 'is scheduled' phải dùng bị động 'to be demolished'.",
     "explanation_grammar": "Bị động kép: S + be scheduled + to be + V3/V-ed.",
@@ -73384,12 +73384,12 @@ export const grammarQuestions = [
     "id": "q2169",
     "question": "The committee members ______ copies of the agenda before the meeting started.",
     "options": {
-      "A": "were handed",
-      "B": "have handing",
-      "C": "handed",
-      "D": "were handing"
+      "A": "have handing",
+      "B": "handed",
+      "C": "were handing",
+      "D": "were handed"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Các thành viên là bên được đưa tài liệu. Tân ngữ chỉ vật ('copies of the agenda') vẫn đứng sau động từ bị động 'were handed'.",
     "explanation_grammar": "Bị động hai tân ngữ: S (người) + was/were + handed + O (vật).",
@@ -73411,9 +73411,9 @@ export const grammarQuestions = [
     "id": "q2170",
     "question": "The revised budget needs ______ before the project can officially begin.",
     "options": {
-      "A": "to approve",
+      "A": "approves",
       "B": "to be approved",
-      "C": "approves",
+      "C": "to approve",
       "D": "be approved"
     },
     "correct_answer": "B",
@@ -73438,12 +73438,12 @@ export const grammarQuestions = [
     "id": "q2171",
     "question": "The clients ______ a full refund if they were not satisfied with the service.",
     "options": {
-      "A": "were promised",
-      "B": "have promising",
-      "C": "were promising",
-      "D": "promised"
+      "A": "have promising",
+      "B": "promised",
+      "C": "were promised",
+      "D": "were promising"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Khách hàng là bên được hứa, công ty là bên hứa. Với 'promise', tân ngữ chỉ người lên làm chủ ngữ, còn 'a full refund' giữ nguyên sau động từ.",
     "explanation_grammar": "Bị động hai tân ngữ: S (người) + was/were + promised + O (vật).",
@@ -73465,12 +73465,12 @@ export const grammarQuestions = [
     "id": "q2172",
     "question": "Several residents recalled ______ a similar notice about the water supply last year.",
     "options": {
-      "A": "sending",
-      "B": "being sent",
-      "C": "be sent",
-      "D": "to send"
+      "A": "being sent",
+      "B": "be sent",
+      "C": "to send",
+      "D": "sending"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Người dân là bên được gửi thông báo, nên cần bị động. Sau 'recall' dùng V-ing, nên dạng bị động là 'being sent'.",
     "explanation_grammar": "Bị động của danh động từ: being + V3/V-ed (sau recall, remember, deny...).",
@@ -73493,11 +73493,11 @@ export const grammarQuestions = [
     "question": "The applicant appears ______ for a position in a different department.",
     "options": {
       "A": "to have interviewed",
-      "B": "to have been interviewed",
-      "C": "interviewing",
+      "B": "interviewing",
+      "C": "to have been interviewed",
       "D": "to be interviewing"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Ứng viên là người được phỏng vấn, và buổi phỏng vấn đã diễn ra trước thời điểm nói, nên dùng bị động hoàn thành của nguyên mẫu.",
     "explanation_grammar": "Bị động hoàn thành của nguyên mẫu: to have been + V3/V-ed.",
@@ -73546,9 +73546,9 @@ export const grammarQuestions = [
     "id": "q2175",
     "question": "Ms. Ito ______ a certificate of appreciation for her ten years of service.",
     "options": {
-      "A": "presented",
-      "B": "has presenting",
-      "C": "was presenting",
+      "A": "has presented with",
+      "B": "presented with",
+      "C": "was presenting with",
       "D": "was presented with"
     },
     "correct_answer": "D",
@@ -73573,12 +73573,12 @@ export const grammarQuestions = [
     "id": "q2176",
     "question": "The company ______ to be considering a merger with its largest rival.",
     "options": {
-      "A": "says",
-      "B": "is said",
-      "C": "said",
-      "D": "is saying"
+      "A": "is said",
+      "B": "is saying",
+      "C": "says",
+      "D": "said"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Công ty là đối tượng được người ta nói về, không phải người phát ngôn. Cấu trúc tường thuật bị động 'be said to + V' dùng để nêu tin chưa được xác nhận.",
     "explanation_grammar": "Bị động của động từ tường thuật: S + is/are said + to + V.",
@@ -73600,10 +73600,10 @@ export const grammarQuestions = [
     "id": "q2177",
     "question": "The new booking system ______ to have cut waiting times by half.",
     "options": {
-      "A": "believes",
-      "B": "believed",
+      "A": "is believing",
+      "B": "believes",
       "C": "is believed",
-      "D": "is believing"
+      "D": "believed"
     },
     "correct_answer": "C",
     "grammar_type": "Câu bị động",
@@ -73628,11 +73628,11 @@ export const grammarQuestions = [
     "question": "We had the air conditioner ______ by a certified technician last week.",
     "options": {
       "A": "to repair",
-      "B": "repaired",
-      "C": "repair",
-      "D": "repairing"
+      "B": "repair",
+      "C": "repairing",
+      "D": "repaired"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Cấu trúc nhờ vả 'have something done': khi tân ngữ là vật ('the air conditioner'), động từ theo sau phải ở dạng V3 vì vật được tác động chứ không tự làm.",
     "explanation_grammar": "Nhờ vả bị động: S + have + O (vật) + V3/V-ed (+ by người).",
@@ -73654,12 +73654,12 @@ export const grammarQuestions = [
     "id": "q2179",
     "question": "Ms. Kim is going to get her office ______ before the end of the month.",
     "options": {
-      "A": "painting",
+      "A": "painted",
       "B": "to paint",
-      "C": "painted",
+      "C": "painting",
       "D": "paint"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Get something done' cũng là cấu trúc nhờ người khác làm. Văn phòng là vật được sơn, nên động từ phải ở dạng V3.",
     "explanation_grammar": "Nhờ vả bị động: S + get + O (vật) + V3/V-ed.",
@@ -73681,12 +73681,12 @@ export const grammarQuestions = [
     "id": "q2180",
     "question": "Mr. Reyes ______ to branch manager after only two years with the firm.",
     "options": {
-      "A": "got promoted",
+      "A": "got promote",
       "B": "promoting",
-      "C": "got promote",
-      "D": "was promoting"
+      "C": "was promoting",
+      "D": "got promoted"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Ông Reyes là người được thăng chức. Trong văn nói, 'get + V3' thay cho 'be + V3' để nhấn mạnh sự thay đổi xảy đến với chủ ngữ.",
     "explanation_grammar": "Bị động với 'get': S + get/got + V3/V-ed (thay cho be + V3, mang sắc thái thân mật).",
@@ -73708,12 +73708,12 @@ export const grammarQuestions = [
     "id": "q2181",
     "question": "The assembly plant ______ in an industrial zone just outside the city.",
     "options": {
-      "A": "is located",
+      "A": "located",
       "B": "locates",
       "C": "is locating",
-      "D": "located"
+      "D": "is located"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Be located' là cụm bị động cố định để nói về vị trí; tiếng Việt dịch là 'nằm ở' nên học viên hay quên 'be' và chọn dạng chủ động.",
     "explanation_grammar": "Tính từ quá khứ phân từ cố định: be located in/on/at + nơi chốn.",
@@ -73735,12 +73735,12 @@ export const grammarQuestions = [
     "id": "q2182",
     "question": "Our firm ______ in several international development projects this year.",
     "options": {
-      "A": "is involved",
-      "B": "involve",
-      "C": "involves",
+      "A": "involve",
+      "B": "involves",
+      "C": "is involved",
       "D": "involving"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Be involved in' là cụm bị động cố định nghĩa 'tham gia vào'. Nếu dùng 'involves' thì nghĩa đổi thành 'bao hàm, kéo theo' và câu không còn hợp với 'in'.",
     "explanation_grammar": "Tính từ quá khứ phân từ + giới từ: be involved in + N/V-ing.",
@@ -73763,9 +73763,9 @@ export const grammarQuestions = [
     "question": "The accident ______ shortly after midnight on the service road.",
     "options": {
       "A": "occurred",
-      "B": "was occurred",
-      "C": "has been occurred",
-      "D": "is occurred"
+      "B": "has been occurred",
+      "C": "is occurred",
+      "D": "was occurred"
     },
     "correct_answer": "A",
     "grammar_type": "Câu bị động",
@@ -73789,14 +73789,14 @@ export const grammarQuestions = [
     "id": "q2184",
     "question": "Sales of winter clothing ______ sharply during the holiday season.",
     "options": {
-      "A": "rose",
-      "B": "have been risen",
-      "C": "are risen",
-      "D": "were risen"
+      "A": "have been risen",
+      "B": "rose",
+      "C": "raised",
+      "D": "were raised"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "'Rise' là nội động từ nên không có dạng bị động; chỉ 'raise' (làm tăng) mới là ngoại động từ và có bị động 'be raised'.",
+    "explanation_reason": "'Rise' là nội động từ (tự tăng) nên không có dạng bị động; 'raise' là ngoại động từ (làm cho tăng) nên luôn cần tân ngữ. Doanh số tự tăng, không ai 'làm tăng' doanh số, nên chỉ 'rose' đúng.",
     "explanation_grammar": "Phân biệt: rise - rose - risen (nội động từ, không bị động) vs raise - raised - raised (ngoại động từ, có bị động).",
     "translation": "Doanh số quần áo mùa đông đã tăng mạnh trong dịp lễ.",
     "core_vocabulary": [
@@ -73816,12 +73816,12 @@ export const grammarQuestions = [
     "id": "q2185",
     "question": "The mayor ______ to have signed the agreement in a private meeting.",
     "options": {
-      "A": "is reported",
-      "B": "reported",
+      "A": "reports",
+      "B": "is reported",
       "C": "is reporting",
-      "D": "reports"
+      "D": "reported"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Thị trưởng là người được báo chí đưa tin về, nên dùng bị động 'is reported'. Hành động ký đã xảy ra trước nên theo sau là 'to have signed'.",
     "explanation_grammar": "Bị động tường thuật: S + is/are reported + to have + V3/V-ed.",
@@ -73843,12 +73843,12 @@ export const grammarQuestions = [
     "id": "q2186",
     "question": "I need to have these contracts ______ before I leave for the airport.",
     "options": {
-      "A": "to notarize",
-      "B": "notarized",
+      "A": "notarized",
+      "B": "to notarize",
       "C": "notarizing",
       "D": "notarize"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Hợp đồng là vật được công chứng, nên trong cấu trúc 'have something done' phải dùng V3.",
     "explanation_grammar": "Nhờ vả bị động: have + O (vật) + V3/V-ed.",
@@ -73870,12 +73870,12 @@ export const grammarQuestions = [
     "id": "q2187",
     "question": "The whole team ______ to finishing the project ahead of schedule.",
     "options": {
-      "A": "committing",
-      "B": "commit",
-      "C": "is committed",
-      "D": "commits"
+      "A": "commits",
+      "B": "is committed",
+      "C": "committing",
+      "D": "commit"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Be committed to' là cụm bị động cố định nghĩa 'cam kết, dốc sức vào'. Sau 'to' trong cụm này là danh từ hoặc V-ing, không phải động từ nguyên mẫu.",
     "explanation_grammar": "Tính từ quá khứ phân từ + giới từ: be committed to + N/V-ing.",
@@ -73897,12 +73897,12 @@ export const grammarQuestions = [
     "id": "q2188",
     "question": "The missing shipment ______ up two days later at the wrong warehouse.",
     "options": {
-      "A": "turned",
-      "B": "was turned",
-      "C": "has been turned",
-      "D": "is turned"
+      "A": "is turned",
+      "B": "turned",
+      "C": "was turned",
+      "D": "has been turned"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Turn up' (xuất hiện, tìm thấy lại) là cụm động từ nội động nên không có bị động, dù nghĩa tiếng Việt nghe như bị động.",
     "explanation_grammar": "Cụm động từ nội động (turn up, come about, fall through...) không có dạng bị động.",
@@ -73924,12 +73924,12 @@ export const grammarQuestions = [
     "id": "q2189",
     "question": "Ms. Alvarez had her assistant ______ the clients about the venue change.",
     "options": {
-      "A": "inform",
+      "A": "informing",
       "B": "to inform",
-      "C": "informed",
-      "D": "informing"
+      "C": "inform",
+      "D": "informed"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Khác với 'have something done', khi tân ngữ là người thực hiện hành động ('her assistant') thì dùng động từ nguyên mẫu không 'to'. Chọn 'informed' sẽ biến trợ lý thành người bị thông báo.",
     "explanation_grammar": "Phân biệt: have + O (người) + V (nguyên mẫu) vs have + O (vật) + V3/V-ed.",
@@ -73951,12 +73951,12 @@ export const grammarQuestions = [
     "id": "q2190",
     "question": "The new safety regulations ______ to take effect on the first of January.",
     "options": {
-      "A": "are expecting",
-      "B": "expect",
-      "C": "are expected",
-      "D": "expected"
+      "A": "are expected",
+      "B": "are expecting",
+      "C": "expected",
+      "D": "expect"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Quy định là thứ được người ta trông đợi, không phải chủ thể trông đợi, nên dùng bị động 'are expected to + V'.",
     "explanation_grammar": "Bị động tường thuật: S + be expected + to + V.",
@@ -73979,9 +73979,9 @@ export const grammarQuestions = [
     "question": "After the storm, the roof ______ fixed by a local contractor within a day.",
     "options": {
       "A": "got",
-      "B": "is got",
-      "C": "has got",
-      "D": "was got"
+      "B": "is getting",
+      "C": "was got",
+      "D": "is got"
     },
     "correct_answer": "A",
     "grammar_type": "Câu bị động",
@@ -74006,11 +74006,11 @@ export const grammarQuestions = [
     "question": "The former director ______ to have left the country before the audit began.",
     "options": {
       "A": "thinks",
-      "B": "is thought",
-      "C": "thought",
-      "D": "is thinking"
+      "B": "thought",
+      "C": "is thinking",
+      "D": "is thought"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Vị giám đốc là người được người khác suy đoán về, nên dùng bị động 'is thought'. Hành động rời đi xảy ra trước nên theo sau là 'to have left'.",
     "explanation_grammar": "Bị động tường thuật: S + is thought + to have + V3/V-ed.",
@@ -74032,12 +74032,12 @@ export const grammarQuestions = [
     "id": "q2193",
     "question": "We should get the draft contract ______ by the legal department first.",
     "options": {
-      "A": "checked",
-      "B": "to check",
-      "C": "checking",
-      "D": "check"
+      "A": "check",
+      "B": "checking",
+      "C": "to check",
+      "D": "checked"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Bản hợp đồng là vật được kiểm tra, nên trong 'get something done' phải dùng V3; người thực hiện nằm sau 'by'.",
     "explanation_grammar": "Nhờ vả bị động: get + O (vật) + V3/V-ed (+ by người).",
@@ -74045,8 +74045,8 @@ export const grammarQuestions = [
     "core_vocabulary": [
       {
         "word": "draft",
-        "type": "adj.",
-        "meaning": "nháp, bản thảo"
+        "type": "n.",
+        "meaning": "bản nháp, bản thảo"
       },
       {
         "word": "legal department",
@@ -74059,12 +74059,12 @@ export const grammarQuestions = [
     "id": "q2194",
     "question": "The price of imported raw materials ______ steadily over the past year.",
     "options": {
-      "A": "is being risen",
-      "B": "has been rose",
-      "C": "has risen",
-      "D": "has been risen"
+      "A": "has been risen",
+      "B": "is being risen",
+      "C": "has been rose",
+      "D": "has risen"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Rise' là nội động từ nên chỉ có dạng chủ động; 'over the past year' là dấu hiệu hiện tại hoàn thành, nên đáp án là 'has risen'.",
     "explanation_grammar": "Nội động từ không bị động: has/have + risen (không có 'has been risen').",
@@ -74086,12 +74086,12 @@ export const grammarQuestions = [
     "id": "q2195",
     "question": "The order ______ to arrive yesterday, but it is still in transit.",
     "options": {
-      "A": "was supposed",
-      "B": "was supposing",
-      "C": "supposed",
-      "D": "is supposing"
+      "A": "was supposing",
+      "B": "is supposing",
+      "C": "was supposed",
+      "D": "supposed"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Be supposed to' là cụm bị động cố định nghĩa 'đáng lẽ phải'; đơn hàng là thứ được dự tính nên không dùng dạng chủ động.",
     "explanation_grammar": "Cụm bị động cố định: be supposed to + V (đáng lẽ phải làm gì).",
@@ -74113,12 +74113,12 @@ export const grammarQuestions = [
     "id": "q2196",
     "question": "The chief executive ______ to be stepping down at the end of the fiscal year.",
     "options": {
-      "A": "is rumored",
+      "A": "rumors",
       "B": "is rumoring",
-      "C": "rumors",
-      "D": "rumored"
+      "C": "rumored",
+      "D": "is rumored"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Vị giám đốc là người bị tin đồn nhắc đến, nên dùng bị động 'is rumored to + V' — cùng họ với 'be said/reported/believed to'.",
     "explanation_grammar": "Bị động tường thuật: S + is rumored + to + V.",
@@ -74140,12 +74140,12 @@ export const grammarQuestions = [
     "id": "q2197",
     "question": "Please have the laboratory samples ______ to the main office by courier.",
     "options": {
-      "A": "to send",
-      "B": "sending",
-      "C": "send",
-      "D": "sent"
+      "A": "sending",
+      "B": "send",
+      "C": "sent",
+      "D": "to send"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Mẫu vật là vật được gửi đi, nên trong cấu trúc 'have something done' dùng V3 'sent'.",
     "explanation_grammar": "Nhờ vả bị động: have + O (vật) + V3/V-ed.",
@@ -74167,14 +74167,14 @@ export const grammarQuestions = [
     "id": "q2198",
     "question": "Fortunately, nothing ______ wrong during the overnight trial run.",
     "options": {
-      "A": "has been gone",
-      "B": "was gone",
-      "C": "was went",
-      "D": "went"
+      "A": "has gone",
+      "B": "went",
+      "C": "had been gone",
+      "D": "was gone"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "'Go wrong' là cụm nội động từ nên không có bị động. Đây là bẫy hay gặp khi học viên thấy chủ ngữ là vật thì tự động chọn dạng bị động.",
+    "explanation_reason": "'Go wrong' là cụm nội động từ nên không có dạng bị động. Mốc thời gian 'during the overnight trial run' đã kết thúc nên cũng không dùng 'has gone'.",
     "explanation_grammar": "Nội động từ không bị động: go wrong, break down, come about...",
     "translation": "May thay, không có gì sai sót trong lần chạy thử qua đêm.",
     "core_vocabulary": [
@@ -74194,12 +74194,12 @@ export const grammarQuestions = [
     "id": "q2199",
     "question": "The recycling initiative ______ to be the first of its kind in the region.",
     "options": {
-      "A": "consider",
-      "B": "is considering",
-      "C": "is considered",
-      "D": "considers"
+      "A": "considers",
+      "B": "is considered",
+      "C": "consider",
+      "D": "is considering"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Sáng kiến là thứ được người ta đánh giá, nên dùng bị động 'is considered to be'.",
     "explanation_grammar": "Bị động tường thuật: S + is considered + to be + N/adj.",
@@ -74221,12 +74221,12 @@ export const grammarQuestions = [
     "id": "q2200",
     "question": "I would like to get my name ______ from the company mailing list.",
     "options": {
-      "A": "to remove",
-      "B": "remove",
-      "C": "removing",
-      "D": "removed"
+      "A": "remove",
+      "B": "removing",
+      "C": "removed",
+      "D": "to remove"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Tên là thứ bị xoá đi, nên trong 'get something done' phải dùng V3 'removed'.",
     "explanation_grammar": "Nhờ vả bị động: get + O (vật) + V3/V-ed.",
@@ -74249,9 +74249,9 @@ export const grammarQuestions = [
     "question": "The report ______ to this email contains last quarter's sales figures.",
     "options": {
       "A": "attached",
-      "B": "attaches",
-      "C": "is attached",
-      "D": "attaching"
+      "B": "is attached",
+      "C": "attaching",
+      "D": "attaches"
     },
     "correct_answer": "A",
     "grammar_type": "Câu bị động",
@@ -74275,12 +74275,12 @@ export const grammarQuestions = [
     "id": "q2202",
     "question": "Once ______, the new leave policy will apply to all branches nationwide.",
     "options": {
-      "A": "it approves",
-      "B": "approved",
-      "C": "approves",
-      "D": "approving"
+      "A": "approving",
+      "B": "approves",
+      "C": "it approves",
+      "D": "approved"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Mệnh đề trạng ngữ bị động rút gọn: 'once it is approved' lược bỏ chủ ngữ và 'be', chỉ còn V3. Chính sách là thứ được phê duyệt nên phải dùng V3, không dùng V-ing.",
     "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: once/when/if/unless + V3/V-ed.",
@@ -74302,12 +74302,12 @@ export const grammarQuestions = [
     "id": "q2203",
     "question": "All items ______ in the spring catalog are currently in stock.",
     "options": {
-      "A": "list",
-      "B": "listed",
-      "C": "are listed",
-      "D": "listing"
+      "A": "listed",
+      "B": "are listed",
+      "C": "listing",
+      "D": "list"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Items which are listed' rút gọn thành 'items listed'. Động từ chính của câu là 'are', nên chỗ trống chỉ có thể là phân từ bổ nghĩa cho 'items'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
@@ -74330,9 +74330,9 @@ export const grammarQuestions = [
     "question": "As ______ in your letter, the shipment will arrive no later than Monday.",
     "options": {
       "A": "requesting",
-      "B": "request",
+      "B": "it requested",
       "C": "requested",
-      "D": "it requested"
+      "D": "request"
     },
     "correct_answer": "C",
     "grammar_type": "Câu bị động",
@@ -74357,11 +74357,11 @@ export const grammarQuestions = [
     "question": "Please find ______ a copy of the signed partnership agreement.",
     "options": {
       "A": "encloses",
-      "B": "enclosed",
-      "C": "enclose",
-      "D": "enclosing"
+      "B": "enclose",
+      "C": "enclosing",
+      "D": "enclosed"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Please find enclosed...' là công thức thư tín: bản sao là thứ được gửi kèm nên dùng V3 'enclosed' làm bổ ngữ cho tân ngữ.",
     "explanation_grammar": "Cụm cố định trong thư tín: Please find enclosed/attached + N.",
@@ -74383,12 +74383,12 @@ export const grammarQuestions = [
     "id": "q2206",
     "question": "The candidates ______ for a second interview will be contacted later today.",
     "options": {
-      "A": "are selected",
-      "B": "selected",
-      "C": "selecting",
+      "A": "selecting",
+      "B": "are selected",
+      "C": "selected",
       "D": "select"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Ứng viên là người được chọn, nên 'who are selected' rút gọn thành 'selected'. Động từ chính đã là 'will be contacted'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
@@ -74410,12 +74410,12 @@ export const grammarQuestions = [
     "id": "q2207",
     "question": "When ______ properly, this machine can run for twelve hours without stopping.",
     "options": {
-      "A": "maintained",
-      "B": "maintains",
-      "C": "maintaining",
-      "D": "it maintains"
+      "A": "maintains",
+      "B": "it maintains",
+      "C": "maintained",
+      "D": "maintaining"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'When it is maintained properly' rút gọn còn 'when maintained properly'. Máy là đối tượng được bảo dưỡng nên dùng V3; chọn V-ing sẽ khiến máy thành chủ thể đi bảo dưỡng.",
     "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: when/while + V3/V-ed.",
@@ -74437,12 +74437,12 @@ export const grammarQuestions = [
     "id": "q2208",
     "question": "Any complaint ______ in writing will receive a response within five working days.",
     "options": {
-      "A": "submitted",
-      "B": "submits",
+      "A": "submits",
+      "B": "is submitted",
       "C": "submitting",
-      "D": "is submitted"
+      "D": "submitted"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Khiếu nại là thứ được gửi tới, nên 'which is submitted' rút gọn thành 'submitted'. Động từ chính của câu là 'will receive'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
@@ -74464,12 +74464,12 @@ export const grammarQuestions = [
     "id": "q2209",
     "question": "The laboratory equipment ______ last year is already considered out of date.",
     "options": {
-      "A": "purchases",
-      "B": "purchased",
-      "C": "purchasing",
-      "D": "was purchased"
+      "A": "purchased",
+      "B": "purchasing",
+      "C": "was purchased",
+      "D": "purchases"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Thiết bị là thứ được mua, nên 'which was purchased last year' rút gọn thành 'purchased last year'. Nếu chọn 'was purchased' thì câu có hai động từ chia mà không có liên từ.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed (+ trạng ngữ thời gian).",
@@ -74491,12 +74491,12 @@ export const grammarQuestions = [
     "id": "q2210",
     "question": "Unless ______ otherwise, all new employees must attend the orientation session.",
     "options": {
-      "A": "they instruct",
-      "B": "instructed",
-      "C": "instructing",
-      "D": "instructs"
+      "A": "instructing",
+      "B": "they instruct",
+      "C": "instructs",
+      "D": "instructed"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Unless they are instructed otherwise' rút gọn còn 'unless instructed otherwise'. Nhân viên là người được chỉ dẫn nên dùng V3.",
     "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: unless + V3/V-ed.",
@@ -74519,11 +74519,11 @@ export const grammarQuestions = [
     "question": "The funds ______ for the lobby renovation have not been released yet.",
     "options": {
       "A": "are allocated",
-      "B": "allocated",
-      "C": "allocate",
-      "D": "allocating"
+      "B": "allocate",
+      "C": "allocating",
+      "D": "allocated"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Khoản tiền là thứ được phân bổ, nên 'which were allocated' rút gọn thành 'allocated'. Động từ chính là 'have not been released'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
@@ -74545,12 +74545,12 @@ export const grammarQuestions = [
     "id": "q2212",
     "question": "If ______ before Friday, your order can still be cancelled free of charge.",
     "options": {
-      "A": "notify",
-      "B": "notifying",
-      "C": "notified",
-      "D": "notifies"
+      "A": "notifies",
+      "B": "notified",
+      "C": "notify",
+      "D": "notifying"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'If we are notified before Friday' rút gọn còn 'if notified before Friday'. Dạng V3 cho thấy chủ thể của mệnh đề là bên nhận thông báo.",
     "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: if + V3/V-ed.",
@@ -74572,12 +74572,12 @@ export const grammarQuestions = [
     "id": "q2213",
     "question": "Employees ______ in the pilot program reported higher job satisfaction.",
     "options": {
-      "A": "include",
-      "B": "are included",
-      "C": "including",
-      "D": "included"
+      "A": "are included",
+      "B": "including",
+      "C": "included",
+      "D": "include"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Nhân viên là người được đưa vào chương trình, nên 'who were included' rút gọn thành 'included'. Lưu ý 'including' là giới từ nghĩa 'bao gồm cả', không phù hợp ở đây.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed (phân biệt với giới từ 'including').",
@@ -74599,12 +74599,12 @@ export const grammarQuestions = [
     "id": "q2214",
     "question": "______ in 1998, the city museum has since welcomed over a million visitors.",
     "options": {
-      "A": "Found",
-      "B": "It founded",
+      "A": "It founded",
+      "B": "Founded",
       "C": "Founding",
-      "D": "Founded"
+      "D": "Found"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Bảo tàng là thứ được thành lập, nên phân từ bị động 'Founded' mở đầu câu (rút gọn của 'Since it was founded in 1998'). Lưu ý 'found - founded - founded' (thành lập) khác 'find - found - found' (tìm thấy).",
     "explanation_grammar": "Phân từ bị động mở đầu câu: V3/V-ed + , + S + V.",
@@ -74626,12 +74626,12 @@ export const grammarQuestions = [
     "id": "q2215",
     "question": "The procedures ______ in the safety manual must be followed exactly.",
     "options": {
-      "A": "described",
-      "B": "describe",
-      "C": "describing",
-      "D": "are described"
+      "A": "describe",
+      "B": "described",
+      "C": "are described",
+      "D": "describing"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Quy trình là thứ được mô tả trong sổ tay, nên 'which are described' rút gọn thành 'described'. Động từ chính của câu là 'must be followed'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
@@ -74653,12 +74653,12 @@ export const grammarQuestions = [
     "id": "q2216",
     "question": "Though ______ twice by the board, the proposal was eventually approved.",
     "options": {
-      "A": "rejected",
-      "B": "rejects",
+      "A": "rejects",
+      "B": "rejected",
       "C": "it rejects",
       "D": "rejecting"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Though it had been rejected twice' rút gọn còn 'though rejected twice'. Đề xuất là thứ bị từ chối nên dùng V3.",
     "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: though/although + V3/V-ed.",
@@ -74681,8 +74681,8 @@ export const grammarQuestions = [
     "question": "The invoice ______ with the shipment lists the wrong quantity.",
     "options": {
       "A": "included",
-      "B": "including",
-      "C": "includes",
+      "B": "includes",
+      "C": "including",
       "D": "is included"
     },
     "correct_answer": "A",
@@ -74707,12 +74707,12 @@ export const grammarQuestions = [
     "id": "q2218",
     "question": "Once ______, the software licence cannot be transferred to another device.",
     "options": {
-      "A": "activated",
-      "B": "activating",
-      "C": "activates",
-      "D": "it activates"
+      "A": "activates",
+      "B": "it activates",
+      "C": "activated",
+      "D": "activating"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Once it has been activated' rút gọn còn 'once activated'. Giấy phép là thứ được kích hoạt nên dùng V3.",
     "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: once + V3/V-ed.",
@@ -74734,12 +74734,12 @@ export const grammarQuestions = [
     "id": "q2219",
     "question": "Most of the suggestions ______ at yesterday's meeting were surprisingly practical.",
     "options": {
-      "A": "made",
-      "B": "make",
-      "C": "were made",
-      "D": "making"
+      "A": "make",
+      "B": "making",
+      "C": "made",
+      "D": "were made"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Đề xuất là thứ được nêu ra, nên 'which were made' rút gọn thành 'made'. Động từ chính của câu là 'were'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
@@ -74761,12 +74761,12 @@ export const grammarQuestions = [
     "id": "q2220",
     "question": "______ by heavy rain, the outdoor ceremony was moved into the main hall.",
     "options": {
-      "A": "Disrupted",
-      "B": "Disrupting",
-      "C": "Disrupt",
-      "D": "It disrupted"
+      "A": "Disrupt",
+      "B": "Disrupted",
+      "C": "It disrupted",
+      "D": "Disrupting"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Buổi lễ là thứ bị mưa làm gián đoạn, nên mở đầu câu bằng phân từ bị động 'Disrupted' (rút gọn của 'Because it was disrupted by heavy rain').",
     "explanation_grammar": "Phân từ bị động mở đầu câu: V3/V-ed + by + tác nhân, + S + V.",
@@ -74788,12 +74788,12 @@ export const grammarQuestions = [
     "id": "q2221",
     "question": "The training materials ______ to new hires are revised at the start of each year.",
     "options": {
-      "A": "distribute",
-      "B": "distributed",
-      "C": "are distributed",
+      "A": "distributed",
+      "B": "are distributed",
+      "C": "distribute",
       "D": "distributing"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Tài liệu là thứ được phát ra, nên 'which are distributed' rút gọn thành 'distributed'. Động từ chính của câu là 'are revised'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
@@ -74815,12 +74815,12 @@ export const grammarQuestions = [
     "id": "q2222",
     "question": "Items ______ more than thirty days after purchase cannot be refunded.",
     "options": {
-      "A": "returned",
-      "B": "are returned",
-      "C": "return",
-      "D": "returning"
+      "A": "returning",
+      "B": "return",
+      "C": "are returned",
+      "D": "returned"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Hàng hoá là thứ được trả lại, nên 'which are returned' rút gọn thành 'returned'. Động từ chính là 'cannot be refunded'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
@@ -74844,8 +74844,8 @@ export const grammarQuestions = [
     "options": {
       "A": "compared",
       "B": "comparing",
-      "C": "compares",
-      "D": "it compares"
+      "C": "it compares",
+      "D": "compares"
     },
     "correct_answer": "A",
     "grammar_type": "Câu bị động",
@@ -74869,12 +74869,12 @@ export const grammarQuestions = [
     "id": "q2224",
     "question": "The branch ______ in Hue at the moment is scheduled to open in October.",
     "options": {
-      "A": "is built",
-      "B": "building",
-      "C": "being built",
-      "D": "builds"
+      "A": "being built",
+      "B": "builds",
+      "C": "building",
+      "D": "is built"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'The branch which is being built' rút gọn thành 'the branch being built' — dùng 'being + V3' vì việc xây đang diễn ra ('at the moment'). Chỉ 'being built' mới diễn tả được nghĩa 'đang được xây'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động tiếp diễn: N + being + V3/V-ed.",
@@ -74896,12 +74896,12 @@ export const grammarQuestions = [
     "id": "q2225",
     "question": "Although ______ about the risk, the client decided to proceed with the order.",
     "options": {
-      "A": "warned",
-      "B": "he warning",
+      "A": "warning",
+      "B": "warned",
       "C": "warns",
-      "D": "warning"
+      "D": "he warning"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Although he had been warned about the risk' rút gọn còn 'although warned about the risk'. Khách hàng là người được cảnh báo nên dùng V3.",
     "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: although/though + V3/V-ed.",
@@ -74923,12 +74923,12 @@ export const grammarQuestions = [
     "id": "q2226",
     "question": "Your complaint will ______ as soon as the duty manager returns this afternoon.",
     "options": {
-      "A": "deal with",
-      "B": "be dealt",
-      "C": "be dealing with",
-      "D": "be dealt with"
+      "A": "be dealt with",
+      "B": "be dealing with",
+      "C": "deal with",
+      "D": "be dealt"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Khiếu nại là thứ được xử lý. Khi chuyển 'deal with something' sang bị động, giới từ 'with' phải được giữ lại sau V3, nên 'be dealt' thiếu giới từ là sai.",
     "explanation_grammar": "Bị động của cụm động từ + giới từ: be + V3 + giới từ (be dealt with).",
@@ -74950,12 +74950,12 @@ export const grammarQuestions = [
     "id": "q2227",
     "question": "The cause of the production delay is still ______ by our engineers.",
     "options": {
-      "A": "being looked into",
-      "B": "looking into",
-      "C": "being looked",
-      "D": "look into"
+      "A": "look into",
+      "B": "being looked",
+      "C": "being looked into",
+      "D": "looking into"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Nguyên nhân là thứ được điều tra, và 'still' cho biết việc đó đang diễn ra nên dùng 'being + V3'. Giới từ 'into' của cụm 'look into' phải được giữ lại.",
     "explanation_grammar": "Bị động tiếp diễn của cụm động từ: be + being + V3 + giới từ.",
@@ -74975,14 +74975,14 @@ export const grammarQuestions = [
   },
   {
     "id": "q2228",
-    "question": "All travel arrangements will ______ by our corporate agency.",
+    "question": "All travel arrangements will ______ by our corporate travel agency.",
     "options": {
-      "A": "be taken care",
+      "A": "take care of",
       "B": "be taking care",
-      "C": "take care of",
-      "D": "be taken care of"
+      "C": "be taken care of",
+      "D": "be taken care"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Việc thu xếp chuyến đi là đối tượng được lo, nên cần bị động. Cụm 'take care of' khi chuyển bị động vẫn giữ nguyên cả 'care of' sau V3.",
     "explanation_grammar": "Bị động của cụm ba từ: be + taken care of.",
@@ -75004,12 +75004,12 @@ export const grammarQuestions = [
     "id": "q2229",
     "question": "The dispute was ______ to an outside law firm for a second opinion.",
     "options": {
-      "A": "referred",
-      "B": "referring",
+      "A": "refer",
+      "B": "referred",
       "C": "referral",
-      "D": "refer"
+      "D": "referring"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Tranh chấp là thứ được chuyển sang cho bên khác xem xét, nên sau 'was' phải là V3 'referred'. Lưu ý 'referral' là danh từ nên không điền được sau 'was' trong ngữ cảnh này.",
     "explanation_grammar": "Bị động quá khứ đơn: S + was/were + V3 + to + N.",
@@ -75031,12 +75031,12 @@ export const grammarQuestions = [
     "id": "q2230",
     "question": "These unusual figures cannot ______ for without a full review of the ledger.",
     "options": {
-      "A": "be accounting",
+      "A": "account",
       "B": "accounted",
-      "C": "be accounted",
-      "D": "account"
+      "C": "be accounting",
+      "D": "be accounted"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Các con số là thứ cần được giải thích. Cụm 'account for' chuyển sang bị động thành 'be accounted for' — giới từ 'for' đã có sẵn sau chỗ trống nên chỉ cần 'be accounted'.",
     "explanation_grammar": "Bị động của cụm động từ + giới từ: modal + be + V3 (+ giới từ đã có trong câu).",
@@ -75058,12 +75058,12 @@ export const grammarQuestions = [
     "id": "q2231",
     "question": "Ms. Chen can ______ on to finish the quarterly report on time.",
     "options": {
-      "A": "relied",
-      "B": "be relied",
-      "C": "rely",
-      "D": "be relying"
+      "A": "be relying",
+      "B": "relied",
+      "C": "be relied",
+      "D": "rely"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Bà Chen là người được người khác tin cậy, nên dùng bị động. 'Rely on somebody' chuyển thành 'somebody can be relied on' — giới từ 'on' đứng ngay sau V3.",
     "explanation_grammar": "Bị động của cụm động từ + giới từ: modal + be + relied on.",
@@ -75086,11 +75086,11 @@ export const grammarQuestions = [
     "question": "It ______ that the new airport terminal will open early next spring.",
     "options": {
       "A": "expects",
-      "B": "is expecting",
-      "C": "is expected",
+      "B": "is expected",
+      "C": "is expecting",
       "D": "expect"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Cấu trúc 'It is + V3 + that...' dùng chủ ngữ giả 'it' để nêu thông tin chung mà không cần nói ai là người trông đợi.",
     "explanation_grammar": "Bị động với chủ ngữ giả: It + is/was + V3 + that + mệnh đề.",
@@ -75113,11 +75113,11 @@ export const grammarQuestions = [
     "question": "It ______ that over half of our staff work remotely at least once a week.",
     "options": {
       "A": "estimate",
-      "B": "is estimated",
-      "C": "is estimating",
-      "D": "estimates"
+      "B": "is estimating",
+      "C": "estimates",
+      "D": "is estimated"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Chủ ngữ giả 'it' đi với bị động 'is estimated' để nêu con số ước tính mà không chỉ rõ ai ước tính.",
     "explanation_grammar": "Bị động với chủ ngữ giả: It + is estimated + that + mệnh đề.",
@@ -75140,8 +75140,8 @@ export const grammarQuestions = [
     "question": "The broken photocopier was finally ______ of at the end of last month.",
     "options": {
       "A": "disposed",
-      "B": "disposing",
-      "C": "disposal",
+      "B": "disposal",
+      "C": "disposing",
       "D": "dispose"
     },
     "correct_answer": "A",
@@ -75166,12 +75166,12 @@ export const grammarQuestions = [
     "id": "q2235",
     "question": "It ______ that the warehouse had been operating without a valid permit.",
     "options": {
-      "A": "discover",
-      "B": "was discovered",
+      "A": "was discovered",
+      "B": "discovered",
       "C": "was discovering",
-      "D": "discovered"
+      "D": "discover"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Chủ ngữ giả 'it' kết hợp bị động quá khứ 'was discovered' để thuật lại một phát hiện mà không nêu ai phát hiện.",
     "explanation_grammar": "Bị động với chủ ngữ giả: It + was + V3 + that + mệnh đề.",
@@ -75193,10 +75193,10 @@ export const grammarQuestions = [
     "id": "q2236",
     "question": "Complaints about workplace noise ______ seriously by the management team.",
     "options": {
-      "A": "are taking",
+      "A": "taken",
       "B": "are taken",
       "C": "take",
-      "D": "taken"
+      "D": "are taking"
     },
     "correct_answer": "B",
     "grammar_type": "Câu bị động",
@@ -75220,12 +75220,12 @@ export const grammarQuestions = [
     "id": "q2237",
     "question": "The partnership contract was ______ up by an outside law firm last week.",
     "options": {
-      "A": "draw",
-      "B": "drawing",
-      "C": "drawn",
-      "D": "drew"
+      "A": "drawing",
+      "B": "draw",
+      "C": "drew",
+      "D": "drawn"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Hợp đồng là thứ được soạn, nên sau 'was' dùng V3. Cụm 'draw up' (soạn thảo văn bản) có dạng V3 là 'drawn', không phải 'drew'.",
     "explanation_grammar": "Bị động của cụm động từ: be + drawn up (draw - drew - drawn).",
@@ -75249,10 +75249,10 @@ export const grammarQuestions = [
     "options": {
       "A": "rumors",
       "B": "rumor",
-      "C": "is rumored",
-      "D": "is rumoring"
+      "C": "is rumoring",
+      "D": "is rumored"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Chủ ngữ giả 'it' đi với bị động 'is rumored' để nêu tin đồn chưa xác nhận.",
     "explanation_grammar": "Bị động với chủ ngữ giả: It + is rumored + that + mệnh đề.",
@@ -75274,10 +75274,10 @@ export const grammarQuestions = [
     "id": "q2239",
     "question": "The missing invoice has at last been ______ for by the accounting team.",
     "options": {
-      "A": "accounting",
-      "B": "accounts",
+      "A": "accounts",
+      "B": "account",
       "C": "accounted",
-      "D": "account"
+      "D": "accounting"
     },
     "correct_answer": "C",
     "grammar_type": "Câu bị động",
@@ -75302,11 +75302,11 @@ export const grammarQuestions = [
     "question": "New safety measures are ______ out across all three plants at the moment.",
     "options": {
       "A": "carrying",
-      "B": "carry",
-      "C": "being carried",
+      "B": "being carried",
+      "C": "carry",
       "D": "being carry"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Các biện pháp là thứ được triển khai, và 'at the moment' cho biết việc đó đang diễn ra, nên dùng bị động tiếp diễn 'are being carried out'.",
     "explanation_grammar": "Bị động tiếp diễn của cụm động từ: be + being + carried out.",
@@ -75326,17 +75326,17 @@ export const grammarQuestions = [
   },
   {
     "id": "q2241",
-    "question": "It ______ widely that flexible hours improve employee retention.",
+    "question": "It is widely ______ that flexible working hours improve employee retention.",
     "options": {
-      "A": "is believing",
-      "B": "believe",
-      "C": "believes",
-      "D": "is believed"
+      "A": "believed",
+      "B": "believes",
+      "C": "believing",
+      "D": "believe"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Chủ ngữ giả 'it' đi với 'is believed' để nêu quan điểm phổ biến; trạng từ 'widely' bổ nghĩa cho động từ bị động.",
-    "explanation_grammar": "Bị động với chủ ngữ giả: It + is widely believed + that + mệnh đề.",
+    "explanation_reason": "Chủ ngữ giả 'it' đi với bị động 'is believed' để nêu quan điểm phổ biến mà không cần chỉ rõ ai tin. Trạng từ 'widely' đứng giữa 'is' và V3 — đây là vị trí chuẩn của trạng từ trong câu bị động.",
+    "explanation_grammar": "Bị động với chủ ngữ giả: It + is + trạng từ + V3 + that + mệnh đề.",
     "translation": "Người ta tin rộng rãi rằng giờ làm linh hoạt giúp giữ chân nhân viên tốt hơn.",
     "core_vocabulary": [
       {
@@ -75357,8 +75357,8 @@ export const grammarQuestions = [
     "options": {
       "A": "turn",
       "B": "turned",
-      "C": "turns",
-      "D": "turning"
+      "C": "turning",
+      "D": "turns"
     },
     "correct_answer": "B",
     "grammar_type": "Câu bị động",
@@ -75382,12 +75382,12 @@ export const grammarQuestions = [
     "id": "q2243",
     "question": "Your application is ______ right now; we will write to you by Friday.",
     "options": {
-      "A": "being process",
-      "B": "processing",
-      "C": "process",
-      "D": "being processed"
+      "A": "being processed",
+      "B": "process",
+      "C": "processing",
+      "D": "being process"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Đơn là thứ được xử lý, và 'right now' chỉ việc đang diễn ra, nên dùng bị động hiện tại tiếp diễn.",
     "explanation_grammar": "Bị động hiện tại tiếp diễn: S + am/is/are + being + V3/V-ed.",
@@ -75409,12 +75409,12 @@ export const grammarQuestions = [
     "id": "q2244",
     "question": "It ______ that the storm caused more than a million dollars in damage.",
     "options": {
-      "A": "report",
+      "A": "is reporting",
       "B": "reports",
-      "C": "is reporting",
-      "D": "is reported"
+      "C": "is reported",
+      "D": "report"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Chủ ngữ giả 'it' đi với bị động 'is reported' để thuật lại tin tức mà không nêu nguồn cụ thể.",
     "explanation_grammar": "Bị động với chủ ngữ giả: It + is reported + that + mệnh đề.",
@@ -75436,9 +75436,9 @@ export const grammarQuestions = [
     "id": "q2245",
     "question": "The revised regulation was ______ into effect at the beginning of March.",
     "options": {
-      "A": "puts",
+      "A": "be put",
       "B": "putting",
-      "C": "be put",
+      "C": "puts",
       "D": "put"
     },
     "correct_answer": "D",
@@ -75491,11 +75491,11 @@ export const grammarQuestions = [
     "question": "Overdue accounts are ______ up by the finance team every Monday morning.",
     "options": {
       "A": "be followed",
-      "B": "following",
-      "C": "follow",
-      "D": "followed"
+      "B": "followed",
+      "C": "following",
+      "D": "follow"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Các khoản nợ quá hạn là đối tượng được theo sát, nên sau 'are' dùng V3 'followed'; 'follow up' nghĩa là theo dõi tiếp, đôn đốc.",
     "explanation_grammar": "Bị động của cụm động từ: be + followed up.",
@@ -75517,12 +75517,12 @@ export const grammarQuestions = [
     "id": "q2248",
     "question": "The discrepancy in the figures was quickly ______ up by a junior accountant.",
     "options": {
-      "A": "picked",
-      "B": "picking",
-      "C": "pick",
-      "D": "be picked"
+      "A": "be picked",
+      "B": "pick",
+      "C": "picking",
+      "D": "picked"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Sai lệch là thứ bị phát hiện, nên sau 'was' dùng V3 'picked'; 'pick up' ở đây nghĩa là nhận ra, phát hiện.",
     "explanation_grammar": "Bị động của cụm động từ: be + picked up.",
@@ -75544,10 +75544,10 @@ export const grammarQuestions = [
     "id": "q2249",
     "question": "It ______ at the last meeting that the policy would be reviewed every two years.",
     "options": {
-      "A": "was agreeing",
-      "B": "agree",
+      "A": "agree",
+      "B": "agreed",
       "C": "was agreed",
-      "D": "agreed"
+      "D": "was agreeing"
     },
     "correct_answer": "C",
     "grammar_type": "Câu bị động",
@@ -75571,12 +75571,12 @@ export const grammarQuestions = [
     "id": "q2250",
     "question": "The cost-cutting idea was first ______ up at last month's board meeting.",
     "options": {
-      "A": "be brought",
-      "B": "brought",
-      "C": "bringing",
-      "D": "bring"
+      "A": "brought",
+      "B": "bring",
+      "C": "be brought",
+      "D": "bringing"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Ý tưởng là thứ được nêu ra, nên sau 'was' dùng V3 'brought' (bring - brought - brought); 'bring up' nghĩa là nêu, đề cập.",
     "explanation_grammar": "Bị động của cụm động từ: be + brought up.",
@@ -75598,12 +75598,12 @@ export const grammarQuestions = [
     "id": "q2251",
     "question": "The safety guidelines ______ three times since the new law took effect.",
     "options": {
-      "A": "has been revised",
-      "B": "have been revised",
-      "C": "are revising",
-      "D": "have revised"
+      "A": "have revised",
+      "B": "are revising",
+      "C": "have been revised",
+      "D": "has been revised"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Bộ hướng dẫn là thứ được chỉnh sửa, và 'since + mốc quá khứ' đòi hỏi hiện tại hoàn thành. Chủ ngữ 'guidelines' số nhiều nên dùng 'have been', không phải 'has been'.",
     "explanation_grammar": "Bị động hiện tại hoàn thành + hoà hợp S-V: S (số nhiều) + have been + V3.",
@@ -75625,12 +75625,12 @@ export const grammarQuestions = [
     "id": "q2252",
     "question": "Neither of the two proposals ______ accepted by the review committee.",
     "options": {
-      "A": "was",
+      "A": "being",
       "B": "were",
-      "C": "have",
-      "D": "being"
+      "C": "was",
+      "D": "have"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Neither of + danh từ số nhiều' được coi là chủ ngữ số ít, nên động từ bị động là 'was accepted' chứ không phải 'were accepted'.",
     "explanation_grammar": "Hoà hợp S-V trong bị động: neither of / either of / each of + N số nhiều + động từ số ít.",
@@ -75654,8 +75654,8 @@ export const grammarQuestions = [
     "options": {
       "A": "have received",
       "B": "have been received",
-      "C": "is receiving",
-      "D": "has been received"
+      "C": "has been received",
+      "D": "is receiving"
     },
     "correct_answer": "B",
     "grammar_type": "Câu bị động",
@@ -75679,12 +75679,12 @@ export const grammarQuestions = [
     "id": "q2254",
     "question": "Each of the water samples ______ twice before it leaves the laboratory.",
     "options": {
-      "A": "are tested",
-      "B": "is tested",
-      "C": "test",
+      "A": "test",
+      "B": "are tested",
+      "C": "is tested",
       "D": "are testing"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Each of + N số nhiều' là chủ ngữ số ít, nên bị động dùng 'is tested'. Đại từ 'it' ở mệnh đề sau cũng xác nhận chủ ngữ số ít.",
     "explanation_grammar": "Hoà hợp S-V trong bị động: each of + N số nhiều + is/was + V3.",
@@ -75706,14 +75706,14 @@ export const grammarQuestions = [
     "id": "q2255",
     "question": "The data ______ by our analysts last week, and the results surprised everyone.",
     "options": {
-      "A": "were examined",
+      "A": "examined",
       "B": "examine",
-      "C": "examined",
+      "C": "were examined",
       "D": "was examining"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Dữ liệu là đối tượng được phân tích; 'by our analysts' chỉ người thực hiện. Trong văn viết học thuật và thi cử, 'data' được coi là số nhiều nên đi với 'were'.",
+    "explanation_reason": "Dữ liệu là đối tượng được phân tích; 'by our analysts' chỉ người thực hiện. Theo quy tắc chuẩn mực, 'data' được coi là danh từ số nhiều nên đi với 'were'; trong bốn phương án cũng chỉ 'were examined' đúng dạng bị động.",
     "explanation_grammar": "Bị động quá khứ đơn + hoà hợp S-V: data/criteria/phenomena là danh từ số nhiều.",
     "translation": "Dữ liệu đã được các chuyên viên phân tích của chúng tôi xem xét tuần trước, và kết quả làm mọi người bất ngờ.",
     "core_vocabulary": [
@@ -75733,12 +75733,12 @@ export const grammarQuestions = [
     "id": "q2256",
     "question": "Most of the furniture in the reception area ______ by a local workshop.",
     "options": {
-      "A": "made",
-      "B": "was made",
-      "C": "making",
-      "D": "were made"
+      "A": "were made",
+      "B": "made",
+      "C": "was made",
+      "D": "making"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Furniture' là danh từ không đếm được nên luôn chia động từ số ít, dù trước đó có 'most of'. Đồ nội thất là thứ được làm ra nên dùng bị động 'was made'.",
     "explanation_grammar": "Hoà hợp S-V trong bị động: most of + N không đếm được + was/is + V3.",
@@ -75760,12 +75760,12 @@ export const grammarQuestions = [
     "id": "q2257",
     "question": "Everyone who registers online ______ a confirmation email automatically.",
     "options": {
-      "A": "sending",
-      "B": "is sent",
-      "C": "are sent",
+      "A": "is sent",
+      "B": "are sent",
+      "C": "sending",
       "D": "send"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Everyone' là đại từ bất định số ít nên dùng 'is sent'. Người đăng ký là bên nhận email, nên đây là bị động hai tân ngữ với 'a confirmation email' ở lại sau động từ.",
     "explanation_grammar": "Hoà hợp S-V: everyone/everybody + động từ số ít; bị động hai tân ngữ: S (người) + is sent + O (vật).",
@@ -75787,12 +75787,12 @@ export const grammarQuestions = [
     "id": "q2258",
     "question": "The hiring committee ______ to review all applications before the end of the week.",
     "options": {
-      "A": "is agreed",
-      "B": "has been agreed",
-      "C": "has agreed",
-      "D": "agreeing"
+      "A": "agreeing",
+      "B": "has agreed",
+      "C": "is agreed",
+      "D": "has been agreed"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Đây là bẫy chủ động - bị động: hội đồng là bên chủ động đưa ra cam kết, nên phải dùng 'has agreed'. Chỉ nội dung thoả thuận mới làm chủ ngữ bị động được (It was agreed that...).",
     "explanation_grammar": "Phân biệt: S (người) + agree to V (chủ động) vs It + was agreed + that... (bị động).",
@@ -75814,10 +75814,10 @@ export const grammarQuestions = [
     "id": "q2259",
     "question": "A final decision ______ only after a long discussion with the investors.",
     "options": {
-      "A": "was reaching",
+      "A": "reached",
       "B": "was reached",
       "C": "reach",
-      "D": "reached"
+      "D": "was reaching"
     },
     "correct_answer": "B",
     "grammar_type": "Câu bị động",
@@ -75841,12 +75841,12 @@ export const grammarQuestions = [
     "id": "q2260",
     "question": "Several formatting errors ______ in the final draft before it went to print.",
     "options": {
-      "A": "spotted",
+      "A": "were spotted",
       "B": "was spotted",
-      "C": "were spotted",
-      "D": "spotting"
+      "C": "spotting",
+      "D": "spotted"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Lỗi là thứ bị phát hiện, và 'several errors' là chủ ngữ số nhiều nên dùng 'were spotted'.",
     "explanation_grammar": "Bị động quá khứ đơn + hoà hợp S-V: several + N số nhiều + were + V3.",
@@ -75868,12 +75868,12 @@ export const grammarQuestions = [
     "id": "q2261",
     "question": "The testing equipment, along with the spare parts, ______ in a locked room.",
     "options": {
-      "A": "storing",
-      "B": "is stored",
-      "C": "are stored",
-      "D": "store"
+      "A": "are stored",
+      "B": "storing",
+      "C": "store",
+      "D": "is stored"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Cụm 'along with the spare parts' chỉ là thành phần chen giữa, không làm thay đổi số của chủ ngữ chính 'the testing equipment' (số ít), nên dùng 'is stored'.",
     "explanation_grammar": "Hoà hợp S-V trong bị động: along with / together with / as well as không đổi số của chủ ngữ.",
@@ -75895,16 +75895,16 @@ export const grammarQuestions = [
     "id": "q2262",
     "question": "None of the outstanding invoices ______ yet, according to the finance report.",
     "options": {
-      "A": "have been paid",
+      "A": "has paying",
       "B": "have paid",
       "C": "is paying",
-      "D": "has paying"
+      "D": "have been paid"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Hoá đơn là thứ được thanh toán, và 'yet' là dấu hiệu hiện tại hoàn thành. Với 'none of + N số nhiều', động từ số nhiều 'have been paid' là lựa chọn chuẩn trong đề thi.",
     "explanation_grammar": "Bị động hiện tại hoàn thành: none of + N số nhiều + have been + V3.",
-    "translation": "Theo báo cáo tài chính, chưa hoá đơn tồn nào được thanh toán.",
+    "translation": "Theo báo cáo tài chính, chưa có hoá đơn tồn nào được thanh toán.",
     "core_vocabulary": [
       {
         "word": "outstanding",
@@ -75922,12 +75922,12 @@ export const grammarQuestions = [
     "id": "q2263",
     "question": "Both of the delivery vehicles ______ before the annual inspection took place.",
     "options": {
-      "A": "had been serviced",
+      "A": "was serviced",
       "B": "has been serviced",
-      "C": "had serviced",
-      "D": "was serviced"
+      "C": "had been serviced",
+      "D": "had serviced"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Both of' đi với động từ số nhiều, và việc bảo dưỡng xảy ra trước mốc quá khứ 'the inspection took place', nên dùng bị động quá khứ hoàn thành 'had been serviced'.",
     "explanation_grammar": "Bị động quá khứ hoàn thành: both of + N + had been + V3.",
@@ -75949,12 +75949,12 @@ export const grammarQuestions = [
     "id": "q2264",
     "question": "The department head, not the assistants, ______ to attend the regional summit.",
     "options": {
-      "A": "were invited",
-      "B": "inviting",
-      "C": "was invited",
-      "D": "invite"
+      "A": "invite",
+      "B": "were invited",
+      "C": "inviting",
+      "D": "was invited"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Khi có cụm 'not the assistants' chen vào, động từ vẫn chia theo chủ ngữ chính 'the department head' (số ít), nên dùng 'was invited'.",
     "explanation_grammar": "Hoà hợp S-V trong bị động: chủ ngữ chính quyết định số, phần 'not...' chỉ là thành phần phụ.",
@@ -75976,12 +75976,12 @@ export const grammarQuestions = [
     "id": "q2265",
     "question": "A series of workshops ______ for newly promoted managers at the moment.",
     "options": {
-      "A": "organize",
-      "B": "have organizing",
-      "C": "are being organized",
-      "D": "is being organized"
+      "A": "are being organized",
+      "B": "is being organized",
+      "C": "have organizing",
+      "D": "organize"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'A series of' là chủ ngữ số ít (dù sau nó là danh từ số nhiều), nên dùng 'is being organized'. 'At the moment' cho biết việc đang diễn ra nên cần bị động tiếp diễn.",
     "explanation_grammar": "Hoà hợp S-V: a series of / a set of + N số nhiều + động từ số ít.",
@@ -76003,14 +76003,14 @@ export const grammarQuestions = [
     "id": "q2266",
     "question": "The documents you requested ______ to you earlier this morning.",
     "options": {
-      "A": "emailing",
-      "B": "were emailed",
-      "C": "was emailed",
-      "D": "email"
+      "A": "email",
+      "B": "was emailed",
+      "C": "were emailed",
+      "D": "emailing"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Chủ ngữ là 'the documents' (số nhiều); mệnh đề quan hệ rút gọn 'you requested' chen vào không làm đổi số. Tài liệu là thứ được gửi nên dùng 'were emailed'.",
+    "explanation_reason": "Chủ ngữ là 'the documents' (số nhiều); mệnh đề quan hệ lược đại từ quan hệ 'you requested' chen vào không làm đổi số của chủ ngữ. Tài liệu là thứ được gửi nên dùng 'were emailed'.",
     "explanation_grammar": "Hoà hợp S-V trong bị động: bỏ qua mệnh đề chen giữa khi xác định số của chủ ngữ.",
     "translation": "Những tài liệu quý vị yêu cầu đã được gửi qua email cho quý vị vào sáng nay.",
     "core_vocabulary": [
@@ -76030,12 +76030,12 @@ export const grammarQuestions = [
     "id": "q2267",
     "question": "Our design proposal ______ by the client, so the team has to start again.",
     "options": {
-      "A": "was rejected",
-      "B": "rejected",
-      "C": "reject",
-      "D": "was rejecting"
+      "A": "rejected",
+      "B": "was rejected",
+      "C": "was rejecting",
+      "D": "reject"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Cụm 'by the client' chỉ người thực hiện, còn bản đề xuất là đối tượng bị từ chối, nên dùng bị động 'was rejected'.",
     "explanation_grammar": "Bị động quá khứ đơn: S + was/were + V3 + by O.",
@@ -76057,12 +76057,12 @@ export const grammarQuestions = [
     "id": "q2268",
     "question": "Few of the original suggestions ______ into the final version of the plan.",
     "options": {
-      "A": "incorporating",
-      "B": "incorporate",
-      "C": "was incorporated",
-      "D": "were incorporated"
+      "A": "were incorporated",
+      "B": "was incorporated",
+      "C": "incorporate",
+      "D": "incorporating"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Few of + N số nhiều' đi với động từ số nhiều, và đề xuất là thứ được đưa vào bản kế hoạch, nên dùng 'were incorporated'.",
     "explanation_grammar": "Hoà hợp S-V trong bị động: few of / many of + N số nhiều + were + V3.",
@@ -76084,12 +76084,12 @@ export const grammarQuestions = [
     "id": "q2269",
     "question": "The corporation ______ its regional headquarters to Singapore late last year.",
     "options": {
-      "A": "is moved",
-      "B": "has been moved",
-      "C": "moved",
-      "D": "was moved"
+      "A": "has been moved",
+      "B": "is moved",
+      "C": "was moved",
+      "D": "moved"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Bẫy chủ động - bị động: ngay sau chỗ trống đã có tân ngữ 'its regional headquarters', nên động từ phải ở thể chủ động. Câu bị động không thể đi kèm tân ngữ trực tiếp như vậy.",
     "explanation_grammar": "Dấu hiệu nhận biết: có tân ngữ trực tiếp ngay sau động từ thì dùng chủ động, không dùng bị động.",
@@ -76112,8 +76112,8 @@ export const grammarQuestions = [
     "question": "All the extra chairs ______ to the main hall before the ceremony started.",
     "options": {
       "A": "had been moved",
-      "B": "has been moved",
-      "C": "was moving",
+      "B": "was moving",
+      "C": "has been moved",
       "D": "had moved"
     },
     "correct_answer": "A",
@@ -76138,12 +76138,12 @@ export const grammarQuestions = [
     "id": "q2271",
     "question": "Each applicant ______ for an interview within two weeks of applying.",
     "options": {
-      "A": "is contacted",
-      "B": "are contacted",
-      "C": "contacting",
-      "D": "contact"
+      "A": "are contacted",
+      "B": "contacting",
+      "C": "contact",
+      "D": "is contacted"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Each + N số ít' là chủ ngữ số ít, nên dùng 'is contacted'. Ứng viên là người được liên hệ nên cần bị động.",
     "explanation_grammar": "Hoà hợp S-V trong bị động: each / every + N số ít + is/was + V3.",
@@ -76165,12 +76165,12 @@ export const grammarQuestions = [
     "id": "q2272",
     "question": "All the staff members ______ about the merger only after the public announcement.",
     "options": {
-      "A": "informed",
-      "B": "was informed",
-      "C": "were informed",
+      "A": "were informed",
+      "B": "informed",
+      "C": "was informed",
       "D": "informing"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Nhân viên là người được thông báo, và 'all the staff members' là chủ ngữ số nhiều, nên dùng 'were informed'. Chọn 'informed' sẽ khiến câu thiếu tân ngữ cho thể chủ động.",
     "explanation_grammar": "Bị động quá khứ đơn: S (số nhiều) + were + V3 + about + N.",
@@ -76192,12 +76192,12 @@ export const grammarQuestions = [
     "id": "q2273",
     "question": "Neither the manager nor her assistants ______ aware of the schedule change.",
     "options": {
-      "A": "were made",
-      "B": "was made",
-      "C": "make",
-      "D": "making"
+      "A": "was made",
+      "B": "make",
+      "C": "making",
+      "D": "were made"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Với 'neither A nor B', động từ chia theo danh từ gần nó nhất — ở đây là 'her assistants' (số nhiều) — nên dùng 'were made aware'.",
     "explanation_grammar": "Quy tắc gần nhất: neither A nor B + động từ chia theo B; cụm bị động 'be made aware of'.",
@@ -76219,9 +76219,9 @@ export const grammarQuestions = [
     "id": "q2274",
     "question": "The findings of the three-year study ______ at next week's industry conference.",
     "options": {
-      "A": "presenting",
+      "A": "will present",
       "B": "will be presented",
-      "C": "will present",
+      "C": "presenting",
       "D": "presents"
     },
     "correct_answer": "B",
@@ -76246,12 +76246,12 @@ export const grammarQuestions = [
     "id": "q2275",
     "question": "A great deal of money ______ on digital advertising during the last campaign.",
     "options": {
-      "A": "were spent",
-      "B": "was spent",
-      "C": "spending",
+      "A": "was spent",
+      "B": "spending",
+      "C": "were spent",
       "D": "spent"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'A great deal of' đi với danh từ không đếm được ('money') nên chủ ngữ là số ít, dùng 'was spent'. Tiền là thứ được chi ra nên cần bị động.",
     "explanation_grammar": "Hoà hợp S-V trong bị động: a great deal of / a large amount of + N không đếm được + was/is + V3.",
@@ -76271,18 +76271,18 @@ export const grammarQuestions = [
   },
   {
     "id": "q2276",
-    "question": "The renovation ______ by now if the building permit had arrived on time.",
+    "question": "The lobby ______ by now if the building permit had arrived on time.",
     "options": {
-      "A": "will be finished",
-      "B": "would finish",
-      "C": "would have been finished",
-      "D": "would have finished"
+      "A": "will be repainted",
+      "B": "would repaint",
+      "C": "would have repainted",
+      "D": "would have been repainted"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Mệnh đề 'if' dùng quá khứ hoàn thành nên đây là điều kiện loại 3 (trái với quá khứ). Việc cải tạo là đối tượng được hoàn thành, nên kết hợp thành 'would have been + V3'.",
-    "explanation_grammar": "Bị động trong điều kiện loại 3: S + would have been + V3.",
-    "translation": "Việc cải tạo lẽ ra đã xong tới giờ nếu giấy phép xây dựng về đúng hạn.",
+    "explanation_reason": "Mệnh đề 'if' dùng quá khứ hoàn thành nên đây là điều kiện loại 3 (trái với quá khứ). Tiền sảnh là đối tượng được sơn lại — 'repaint' luôn cần tân ngữ nên các phương án chủ động đều khiến câu thiếu tân ngữ.",
+    "explanation_grammar": "Bị động trong điều kiện loại 3: S + would have been + V3/V-ed.",
+    "translation": "Khu tiền sảnh lẽ ra đã được sơn lại xong tới giờ nếu giấy phép xây dựng về đúng hạn.",
     "core_vocabulary": [
       {
         "word": "building permit",
@@ -76290,9 +76290,9 @@ export const grammarQuestions = [
         "meaning": "giấy phép xây dựng"
       },
       {
-        "word": "renovation",
-        "type": "n.",
-        "meaning": "việc cải tạo"
+        "word": "repaint",
+        "type": "v.",
+        "meaning": "sơn lại"
       }
     ]
   },
@@ -76300,12 +76300,12 @@ export const grammarQuestions = [
     "id": "q2277",
     "question": "Had the samples ______ a week earlier, the test results would be ready today.",
     "options": {
-      "A": "been sent",
-      "B": "sent",
-      "C": "being sent",
-      "D": "be sent"
+      "A": "being sent",
+      "B": "be sent",
+      "C": "been sent",
+      "D": "sent"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Đây là câu điều kiện loại 3 đảo ngữ: 'If the samples had been sent' đảo thành 'Had the samples been sent'. Sau 'had' phải là 'been + V3' vì mẫu vật là thứ được gửi.",
     "explanation_grammar": "Bị động trong điều kiện đảo ngữ: Had + S + been + V3, S + would + V.",
@@ -76327,12 +76327,12 @@ export const grammarQuestions = [
     "id": "q2278",
     "question": "The air compressor needs ______ before it can be put back into service.",
     "options": {
-      "A": "to service",
-      "B": "serviced",
-      "C": "be serviced",
-      "D": "servicing"
+      "A": "be serviced",
+      "B": "servicing",
+      "C": "to service",
+      "D": "serviced"
     },
-    "correct_answer": "D",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Với chủ ngữ là vật, 'need + V-ing' mang nghĩa bị động, tương đương 'need to be serviced'. Cả hai cách đều đúng, nhưng chỉ 'servicing' có trong các phương án.",
     "explanation_grammar": "Nghĩa bị động của danh động từ: S (vật) + need + V-ing = need to be + V3.",
@@ -76356,8 +76356,8 @@ export const grammarQuestions = [
     "options": {
       "A": "registering",
       "B": "be registered",
-      "C": "are registering",
-      "D": "to be registered"
+      "C": "to be registered",
+      "D": "are registering"
     },
     "correct_answer": "B",
     "grammar_type": "Câu bị động",
@@ -76381,12 +76381,12 @@ export const grammarQuestions = [
     "id": "q2280",
     "question": "Applicants are required ______ two references along with the completed form.",
     "options": {
-      "A": "submitting",
-      "B": "to be submitted",
-      "C": "to submit",
-      "D": "be submitted"
+      "A": "to be submitted",
+      "B": "submitting",
+      "C": "be submitted",
+      "D": "to submit"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Bẫy bị động kép: 'are required' đã ở thể bị động, nhưng chính ứng viên là người nộp giấy tờ, nên phần sau phải là nguyên mẫu chủ động 'to submit'. Chọn 'to be submitted' sẽ biến ứng viên thành thứ bị nộp.",
     "explanation_grammar": "Phân biệt: S (người) + be required + to V (chủ động) vs S (vật) + be required + to be + V3.",
@@ -76408,12 +76408,12 @@ export const grammarQuestions = [
     "id": "q2281",
     "question": "Not until the audit was completed ______ the accounting error discovered.",
     "options": {
-      "A": "did",
-      "B": "was",
-      "C": "has",
-      "D": "being"
+      "A": "was",
+      "B": "did",
+      "C": "being",
+      "D": "has"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Cụm phủ định 'Not until...' ở đầu câu buộc phải đảo ngữ. Vì mệnh đề chính ở dạng bị động ('the error was discovered'), ta đảo trợ động từ 'was' lên trước chủ ngữ.",
     "explanation_grammar": "Đảo ngữ với câu bị động: Not until..., was/were + S + V3.",
@@ -76437,8 +76437,8 @@ export const grammarQuestions = [
     "options": {
       "A": "is to be completed",
       "B": "is completing",
-      "C": "is to complete",
-      "D": "to be completed"
+      "C": "to be completed",
+      "D": "is to complete"
     },
     "correct_answer": "A",
     "grammar_type": "Câu bị động",
@@ -76462,12 +76462,12 @@ export const grammarQuestions = [
     "id": "q2283",
     "question": "Rarely ______ such a large order cancelled at the very last minute.",
     "options": {
-      "A": "was being",
-      "B": "is",
-      "C": "does",
-      "D": "has"
+      "A": "has",
+      "B": "was being",
+      "C": "is",
+      "D": "does"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Trạng từ phủ định 'Rarely' đầu câu buộc đảo ngữ. Câu gốc là bị động hiện tại đơn 'such a large order is cancelled', nên đảo 'is' lên trước chủ ngữ.",
     "explanation_grammar": "Đảo ngữ với bị động: Rarely/Seldom + is/are + S + V3.",
@@ -76489,12 +76489,12 @@ export const grammarQuestions = [
     "id": "q2284",
     "question": "The market report, ______ only last week, has already become outdated.",
     "options": {
-      "A": "publishing",
-      "B": "published",
-      "C": "was published",
-      "D": "it published"
+      "A": "published",
+      "B": "was published",
+      "C": "it published",
+      "D": "publishing"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Phần nằm giữa hai dấu phẩy là mệnh đề quan hệ bị động rút gọn ('which was published only last week'). Câu đã có động từ chính 'has become' nên không điền động từ chia.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N, + V3/V-ed, + động từ chính.",
@@ -76517,11 +76517,11 @@ export const grammarQuestions = [
     "question": "The client insisted that the defective units ______ at the supplier's expense.",
     "options": {
       "A": "are replaced",
-      "B": "to be replaced",
-      "C": "be replaced",
-      "D": "replacing"
+      "B": "be replaced",
+      "C": "replacing",
+      "D": "to be replaced"
     },
-    "correct_answer": "C",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Sau các động từ yêu cầu như 'insist, demand, request, recommend' + that, động từ ở thức giả định (nguyên mẫu không chia). Hàng lỗi là thứ được thay nên dùng 'be replaced'.",
     "explanation_grammar": "Bị động trong thức giả định: insist/demand/request that + S + be + V3.",
@@ -76541,7 +76541,7 @@ export const grammarQuestions = [
   },
   {
     "id": "q2286",
-    "question": "The cost estimate deserves ______ far more carefully than it was last time.",
+    "question": "The cost estimate deserves ______ far more carefully this time.",
     "options": {
       "A": "to check",
       "B": "checked",
@@ -76550,9 +76550,9 @@ export const grammarQuestions = [
     },
     "correct_answer": "C",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Sau 'deserve', 'need' và 'require', danh động từ V-ing mang nghĩa bị động khi chủ ngữ là vật: 'deserves checking' = 'deserves to be checked'.",
+    "explanation_reason": "Sau 'deserve', 'need' và 'require', danh động từ V-ing mang nghĩa bị động khi chủ ngữ là vật: 'deserves checking' tương đương 'deserves to be checked'.",
     "explanation_grammar": "Nghĩa bị động của danh động từ: deserve/need/require + V-ing.",
-    "translation": "Bản dự toán chi phí đáng được soát kỹ hơn nhiều so với lần trước.",
+    "translation": "Bản dự toán chi phí đáng được soát kỹ hơn nhiều lần này.",
     "core_vocabulary": [
       {
         "word": "cost estimate",
@@ -76570,9 +76570,9 @@ export const grammarQuestions = [
     "id": "q2287",
     "question": "Only after the contract ______ did the construction work actually begin.",
     "options": {
-      "A": "was signing",
-      "B": "has signed",
-      "C": "had signed",
+      "A": "has signed",
+      "B": "had signed",
+      "C": "was signing",
       "D": "had been signed"
     },
     "correct_answer": "D",
@@ -76597,12 +76597,12 @@ export const grammarQuestions = [
     "id": "q2288",
     "question": "The concert hall is said ______ designed by a little-known local architect.",
     "options": {
-      "A": "to have been",
+      "A": "to be having",
       "B": "being",
-      "C": "to be having",
-      "D": "to have"
+      "C": "to have",
+      "D": "to have been"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Nhà hát là thứ được thiết kế, và việc thiết kế đã xảy ra từ lâu trước thời điểm nói, nên sau 'is said' dùng bị động hoàn thành 'to have been designed'.",
     "explanation_grammar": "Bị động tường thuật hoàn thành: S + is said + to have been + V3.",
@@ -76625,8 +76625,8 @@ export const grammarQuestions = [
     "question": "There ______ to be at least three factual errors in the translated manual.",
     "options": {
       "A": "are believed",
-      "B": "is believed",
-      "C": "believe",
+      "B": "believe",
+      "C": "is believed",
       "D": "believing"
     },
     "correct_answer": "A",
@@ -76733,11 +76733,11 @@ export const grammarQuestions = [
     "question": "The amended regulations are not to ______ until the first of April.",
     "options": {
       "A": "been enforced",
-      "B": "be enforced",
+      "B": "enforce",
       "C": "enforcing",
-      "D": "enforce"
+      "D": "be enforced"
     },
-    "correct_answer": "B",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Quy định là thứ được thi hành, nên sau 'are not to' dùng 'be + V3'. Dạng 'been enforced' chỉ đi sau 'have', không đi sau 'to'.",
     "explanation_grammar": "Bị động với 'be to': S + be (not) to be + V3.",
@@ -76759,12 +76759,12 @@ export const grammarQuestions = [
     "id": "q2294",
     "question": "Little ______ known about the company's next generation of products.",
     "options": {
-      "A": "being",
+      "A": "is",
       "B": "has",
       "C": "does",
-      "D": "is"
+      "D": "being"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Little' mang nghĩa phủ định khi đứng đầu câu nên buộc đảo ngữ. Câu gốc bị động là 'Little is known about...', nên đảo trợ động từ 'is' lên trước.",
     "explanation_grammar": "Đảo ngữ với bị động: Little/Seldom + is/are + known/said about + N.",
@@ -76787,9 +76787,9 @@ export const grammarQuestions = [
     "question": "The shortlisted designers were made ______ their portfolios a week in advance.",
     "options": {
       "A": "submitted",
-      "B": "submit",
+      "B": "submitting",
       "C": "to submit",
-      "D": "submitting"
+      "D": "submit"
     },
     "correct_answer": "C",
     "grammar_type": "Câu bị động",
@@ -76813,9 +76813,9 @@ export const grammarQuestions = [
     "id": "q2296",
     "question": "Visitors are not permitted ______ the restricted area without an escort.",
     "options": {
-      "A": "entering",
+      "A": "be entered",
       "B": "to enter",
-      "C": "be entered",
+      "C": "entering",
       "D": "enter"
     },
     "correct_answer": "B",
@@ -76840,16 +76840,16 @@ export const grammarQuestions = [
     "id": "q2297",
     "question": "Two technicians were seen ______ the server room shortly before the alarm sounded.",
     "options": {
-      "A": "be left",
-      "B": "leave",
-      "C": "left",
-      "D": "to leave"
+      "A": "left",
+      "B": "be left",
+      "C": "to leave",
+      "D": "leave"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Giống 'make', các động từ tri giác như 'see, hear, watch' dùng nguyên mẫu không 'to' ở chủ động nhưng phải thêm 'to' khi chuyển sang bị động: 'were seen to leave'.",
+    "explanation_reason": "Giống 'make', các động từ tri giác như 'see, hear, watch' dùng nguyên mẫu không 'to' ở chủ động nhưng phải thêm 'to' khi chuyển sang bị động: 'were seen to leave'. (Dạng 'were seen leaving' cũng đúng khi muốn nhấn vào hành động đang diễn ra, nhưng không có trong các phương án.)",
     "explanation_grammar": "Bị động của động từ tri giác: be seen/heard + to V (chủ động: see sb + V nguyên mẫu).",
-    "translation": "Hai kỹ thuật viên bị thấy đi ra khỏi phòng máy chủ ngay trước khi báo động reo.",
+    "translation": "Hai kỹ thuật viên đã bị nhìn thấy rời khỏi phòng máy chủ ngay trước khi báo động reo.",
     "core_vocabulary": [
       {
         "word": "server room",
@@ -76868,9 +76868,9 @@ export const grammarQuestions = [
     "question": "Had the manufacturing error ______ sooner, the costly recall could have been avoided.",
     "options": {
       "A": "been detected",
-      "B": "detected",
+      "B": "being detected",
       "C": "be detected",
-      "D": "being detected"
+      "D": "detected"
     },
     "correct_answer": "A",
     "grammar_type": "Câu bị động",
@@ -76895,8 +76895,8 @@ export const grammarQuestions = [
     "question": "The supplier is reported ______ its prices twice since the beginning of the year.",
     "options": {
       "A": "to raise",
-      "B": "raising",
-      "C": "to have been raised",
+      "B": "to have been raised",
+      "C": "raising",
       "D": "to have raised"
     },
     "correct_answer": "D",
@@ -76921,10 +76921,10 @@ export const grammarQuestions = [
     "id": "q2300",
     "question": "Not only ______ the deadline extended, but the project budget was also increased.",
     "options": {
-      "A": "being",
+      "A": "has",
       "B": "did",
       "C": "was",
-      "D": "has"
+      "D": "being"
     },
     "correct_answer": "C",
     "grammar_type": "Câu bị động",
