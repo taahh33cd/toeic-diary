@@ -21,7 +21,7 @@ export const TOPICS: TopicConfig[] = [
     id: "Câu bị động",
     slug: "cau-bi-dong",
     name: "Câu bị động",
-    testSizes: [25, 25, 25, 25],
+    testSizes: [25, 25, 25, 25, 25, 25, 25, 25],
     emoji: "🔁",
     color: "#0891b2",
   },

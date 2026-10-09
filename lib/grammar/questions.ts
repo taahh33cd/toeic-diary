@@ -74243,5 +74243,2705 @@ export const grammarQuestions = [
         "meaning": "danh sách nhận email"
       }
     ]
+  },
+  {
+    "id": "q2201",
+    "question": "The report ______ to this email contains last quarter's sales figures.",
+    "options": {
+      "A": "attached",
+      "B": "attaches",
+      "C": "is attached",
+      "D": "attaching"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Đây là mệnh đề quan hệ bị động rút gọn: 'the report which is attached to this email' lược bỏ 'which is' và giữ lại V3 'attached'. Câu đã có động từ chính 'contains' nên chỗ trống không thể là một động từ chia.",
+    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed (bỏ 'which/that + be').",
+    "translation": "Bản báo cáo được gửi kèm email này có số liệu doanh thu của quý vừa rồi.",
+    "core_vocabulary": [
+      {
+        "word": "attach",
+        "type": "v.",
+        "meaning": "gửi kèm, đính kèm"
+      },
+      {
+        "word": "figures",
+        "type": "n.",
+        "meaning": "số liệu"
+      }
+    ]
+  },
+  {
+    "id": "q2202",
+    "question": "Once ______, the new leave policy will apply to all branches nationwide.",
+    "options": {
+      "A": "it approves",
+      "B": "approved",
+      "C": "approves",
+      "D": "approving"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Mệnh đề trạng ngữ bị động rút gọn: 'once it is approved' lược bỏ chủ ngữ và 'be', chỉ còn V3. Chính sách là thứ được phê duyệt nên phải dùng V3, không dùng V-ing.",
+    "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: once/when/if/unless + V3/V-ed.",
+    "translation": "Sau khi được phê duyệt, chính sách nghỉ phép mới sẽ áp dụng cho toàn bộ chi nhánh trên cả nước.",
+    "core_vocabulary": [
+      {
+        "word": "leave policy",
+        "type": "n.",
+        "meaning": "chính sách nghỉ phép"
+      },
+      {
+        "word": "nationwide",
+        "type": "adv.",
+        "meaning": "trên toàn quốc"
+      }
+    ]
+  },
+  {
+    "id": "q2203",
+    "question": "All items ______ in the spring catalog are currently in stock.",
+    "options": {
+      "A": "list",
+      "B": "listed",
+      "C": "are listed",
+      "D": "listing"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'Items which are listed' rút gọn thành 'items listed'. Động từ chính của câu là 'are', nên chỗ trống chỉ có thể là phân từ bổ nghĩa cho 'items'.",
+    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
+    "translation": "Toàn bộ mặt hàng được liệt kê trong catalog mùa xuân hiện đều còn hàng.",
+    "core_vocabulary": [
+      {
+        "word": "catalog",
+        "type": "n.",
+        "meaning": "catalog, danh mục hàng"
+      },
+      {
+        "word": "in stock",
+        "type": "phrase",
+        "meaning": "còn hàng"
+      }
+    ]
+  },
+  {
+    "id": "q2204",
+    "question": "As ______ in your letter, the shipment will arrive no later than Monday.",
+    "options": {
+      "A": "requesting",
+      "B": "request",
+      "C": "requested",
+      "D": "it requested"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'As requested' là dạng rút gọn của 'as it was requested' — yêu cầu là thứ được đưa ra, nên dùng V3. Đây là cụm cố định rất hay gặp trong thư thương mại.",
+    "explanation_grammar": "Cụm rút gọn bị động: as requested / as agreed / as scheduled / as mentioned.",
+    "translation": "Như quý khách đã yêu cầu trong thư, lô hàng sẽ đến không muộn hơn thứ Hai.",
+    "core_vocabulary": [
+      {
+        "word": "request",
+        "type": "v.",
+        "meaning": "yêu cầu"
+      },
+      {
+        "word": "no later than",
+        "type": "phrase",
+        "meaning": "không muộn hơn"
+      }
+    ]
+  },
+  {
+    "id": "q2205",
+    "question": "Please find ______ a copy of the signed partnership agreement.",
+    "options": {
+      "A": "encloses",
+      "B": "enclosed",
+      "C": "enclose",
+      "D": "enclosing"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'Please find enclosed...' là công thức thư tín: bản sao là thứ được gửi kèm nên dùng V3 'enclosed' làm bổ ngữ cho tân ngữ.",
+    "explanation_grammar": "Cụm cố định trong thư tín: Please find enclosed/attached + N.",
+    "translation": "Vui lòng xem bản sao hợp đồng hợp tác đã ký được gửi kèm theo đây.",
+    "core_vocabulary": [
+      {
+        "word": "enclose",
+        "type": "v.",
+        "meaning": "gửi kèm (trong thư)"
+      },
+      {
+        "word": "signed",
+        "type": "adj.",
+        "meaning": "đã ký"
+      }
+    ]
+  },
+  {
+    "id": "q2206",
+    "question": "The candidates ______ for a second interview will be contacted later today.",
+    "options": {
+      "A": "are selected",
+      "B": "selected",
+      "C": "selecting",
+      "D": "select"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Ứng viên là người được chọn, nên 'who are selected' rút gọn thành 'selected'. Động từ chính đã là 'will be contacted'.",
+    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
+    "translation": "Những ứng viên được chọn vào vòng phỏng vấn thứ hai sẽ được liên hệ trong hôm nay.",
+    "core_vocabulary": [
+      {
+        "word": "select",
+        "type": "v.",
+        "meaning": "chọn, tuyển"
+      },
+      {
+        "word": "contact",
+        "type": "v.",
+        "meaning": "liên hệ"
+      }
+    ]
+  },
+  {
+    "id": "q2207",
+    "question": "When ______ properly, this machine can run for twelve hours without stopping.",
+    "options": {
+      "A": "maintained",
+      "B": "maintains",
+      "C": "maintaining",
+      "D": "it maintains"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'When it is maintained properly' rút gọn còn 'when maintained properly'. Máy là đối tượng được bảo dưỡng nên dùng V3; chọn V-ing sẽ khiến máy thành chủ thể đi bảo dưỡng.",
+    "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: when/while + V3/V-ed.",
+    "translation": "Khi được bảo dưỡng đúng cách, chiếc máy này có thể chạy liên tục mười hai tiếng.",
+    "core_vocabulary": [
+      {
+        "word": "maintain",
+        "type": "v.",
+        "meaning": "bảo dưỡng"
+      },
+      {
+        "word": "properly",
+        "type": "adv.",
+        "meaning": "đúng cách"
+      }
+    ]
+  },
+  {
+    "id": "q2208",
+    "question": "Any complaint ______ in writing will receive a response within five working days.",
+    "options": {
+      "A": "submitted",
+      "B": "submits",
+      "C": "submitting",
+      "D": "is submitted"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Khiếu nại là thứ được gửi tới, nên 'which is submitted' rút gọn thành 'submitted'. Động từ chính của câu là 'will receive'.",
+    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
+    "translation": "Mọi khiếu nại được gửi bằng văn bản sẽ nhận được phản hồi trong vòng năm ngày làm việc.",
+    "core_vocabulary": [
+      {
+        "word": "complaint",
+        "type": "n.",
+        "meaning": "khiếu nại"
+      },
+      {
+        "word": "in writing",
+        "type": "phrase",
+        "meaning": "bằng văn bản"
+      }
+    ]
+  },
+  {
+    "id": "q2209",
+    "question": "The laboratory equipment ______ last year is already considered out of date.",
+    "options": {
+      "A": "purchases",
+      "B": "purchased",
+      "C": "purchasing",
+      "D": "was purchased"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Thiết bị là thứ được mua, nên 'which was purchased last year' rút gọn thành 'purchased last year'. Nếu chọn 'was purchased' thì câu có hai động từ chia mà không có liên từ.",
+    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed (+ trạng ngữ thời gian).",
+    "translation": "Thiết bị phòng thí nghiệm mua từ năm ngoái giờ đã bị coi là lỗi thời.",
+    "core_vocabulary": [
+      {
+        "word": "purchase",
+        "type": "v.",
+        "meaning": "mua"
+      },
+      {
+        "word": "out of date",
+        "type": "phrase",
+        "meaning": "lỗi thời"
+      }
+    ]
+  },
+  {
+    "id": "q2210",
+    "question": "Unless ______ otherwise, all new employees must attend the orientation session.",
+    "options": {
+      "A": "they instruct",
+      "B": "instructed",
+      "C": "instructing",
+      "D": "instructs"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'Unless they are instructed otherwise' rút gọn còn 'unless instructed otherwise'. Nhân viên là người được chỉ dẫn nên dùng V3.",
+    "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: unless + V3/V-ed.",
+    "translation": "Trừ khi được hướng dẫn khác đi, toàn bộ nhân viên mới đều phải tham dự buổi định hướng.",
+    "core_vocabulary": [
+      {
+        "word": "instruct",
+        "type": "v.",
+        "meaning": "chỉ dẫn, hướng dẫn"
+      },
+      {
+        "word": "orientation",
+        "type": "n.",
+        "meaning": "buổi định hướng"
+      }
+    ]
+  },
+  {
+    "id": "q2211",
+    "question": "The funds ______ for the lobby renovation have not been released yet.",
+    "options": {
+      "A": "are allocated",
+      "B": "allocated",
+      "C": "allocate",
+      "D": "allocating"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Khoản tiền là thứ được phân bổ, nên 'which were allocated' rút gọn thành 'allocated'. Động từ chính là 'have not been released'.",
+    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
+    "translation": "Khoản tiền được phân bổ cho việc cải tạo tiền sảnh vẫn chưa được giải ngân.",
+    "core_vocabulary": [
+      {
+        "word": "allocate",
+        "type": "v.",
+        "meaning": "phân bổ"
+      },
+      {
+        "word": "release",
+        "type": "v.",
+        "meaning": "giải ngân, giải phóng"
+      }
+    ]
+  },
+  {
+    "id": "q2212",
+    "question": "If ______ before Friday, your order can still be cancelled free of charge.",
+    "options": {
+      "A": "notify",
+      "B": "notifying",
+      "C": "notified",
+      "D": "notifies"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'If we are notified before Friday' rút gọn còn 'if notified before Friday'. Dạng V3 cho thấy chủ thể của mệnh đề là bên nhận thông báo.",
+    "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: if + V3/V-ed.",
+    "translation": "Nếu được thông báo trước thứ Sáu, đơn hàng của quý khách vẫn có thể huỷ miễn phí.",
+    "core_vocabulary": [
+      {
+        "word": "notify",
+        "type": "v.",
+        "meaning": "thông báo"
+      },
+      {
+        "word": "free of charge",
+        "type": "phrase",
+        "meaning": "miễn phí"
+      }
+    ]
+  },
+  {
+    "id": "q2213",
+    "question": "Employees ______ in the pilot program reported higher job satisfaction.",
+    "options": {
+      "A": "include",
+      "B": "are included",
+      "C": "including",
+      "D": "included"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Nhân viên là người được đưa vào chương trình, nên 'who were included' rút gọn thành 'included'. Lưu ý 'including' là giới từ nghĩa 'bao gồm cả', không phù hợp ở đây.",
+    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed (phân biệt với giới từ 'including').",
+    "translation": "Những nhân viên được đưa vào chương trình thử nghiệm cho biết họ hài lòng với công việc hơn.",
+    "core_vocabulary": [
+      {
+        "word": "pilot program",
+        "type": "n.",
+        "meaning": "chương trình thử nghiệm"
+      },
+      {
+        "word": "job satisfaction",
+        "type": "n.",
+        "meaning": "sự hài lòng với công việc"
+      }
+    ]
+  },
+  {
+    "id": "q2214",
+    "question": "______ in 1998, the city museum has since welcomed over a million visitors.",
+    "options": {
+      "A": "Found",
+      "B": "It founded",
+      "C": "Founding",
+      "D": "Founded"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Bảo tàng là thứ được thành lập, nên phân từ bị động 'Founded' mở đầu câu (rút gọn của 'Since it was founded in 1998'). Lưu ý 'found - founded - founded' (thành lập) khác 'find - found - found' (tìm thấy).",
+    "explanation_grammar": "Phân từ bị động mở đầu câu: V3/V-ed + , + S + V.",
+    "translation": "Được thành lập vào năm 1998, bảo tàng thành phố từ đó đến nay đã đón hơn một triệu khách.",
+    "core_vocabulary": [
+      {
+        "word": "found",
+        "type": "v.",
+        "meaning": "thành lập"
+      },
+      {
+        "word": "welcome",
+        "type": "v.",
+        "meaning": "đón tiếp"
+      }
+    ]
+  },
+  {
+    "id": "q2215",
+    "question": "The procedures ______ in the safety manual must be followed exactly.",
+    "options": {
+      "A": "described",
+      "B": "describe",
+      "C": "describing",
+      "D": "are described"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Quy trình là thứ được mô tả trong sổ tay, nên 'which are described' rút gọn thành 'described'. Động từ chính của câu là 'must be followed'.",
+    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
+    "translation": "Các quy trình được mô tả trong sổ tay an toàn phải được tuân thủ chính xác.",
+    "core_vocabulary": [
+      {
+        "word": "procedure",
+        "type": "n.",
+        "meaning": "quy trình"
+      },
+      {
+        "word": "manual",
+        "type": "n.",
+        "meaning": "sổ tay hướng dẫn"
+      }
+    ]
+  },
+  {
+    "id": "q2216",
+    "question": "Though ______ twice by the board, the proposal was eventually approved.",
+    "options": {
+      "A": "rejected",
+      "B": "rejects",
+      "C": "it rejects",
+      "D": "rejecting"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'Though it had been rejected twice' rút gọn còn 'though rejected twice'. Đề xuất là thứ bị từ chối nên dùng V3.",
+    "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: though/although + V3/V-ed.",
+    "translation": "Dù đã bị hội đồng từ chối hai lần, bản đề xuất cuối cùng vẫn được thông qua.",
+    "core_vocabulary": [
+      {
+        "word": "reject",
+        "type": "v.",
+        "meaning": "từ chối, bác bỏ"
+      },
+      {
+        "word": "eventually",
+        "type": "adv.",
+        "meaning": "cuối cùng thì"
+      }
+    ]
+  },
+  {
+    "id": "q2217",
+    "question": "The invoice ______ with the shipment lists the wrong quantity.",
+    "options": {
+      "A": "included",
+      "B": "including",
+      "C": "includes",
+      "D": "is included"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Hoá đơn là thứ được kèm theo lô hàng, nên 'which was included' rút gọn thành 'included'. Động từ chính là 'lists'.",
+    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
+    "translation": "Hoá đơn gửi kèm lô hàng ghi sai số lượng.",
+    "core_vocabulary": [
+      {
+        "word": "invoice",
+        "type": "n.",
+        "meaning": "hoá đơn"
+      },
+      {
+        "word": "quantity",
+        "type": "n.",
+        "meaning": "số lượng"
+      }
+    ]
+  },
+  {
+    "id": "q2218",
+    "question": "Once ______, the software licence cannot be transferred to another device.",
+    "options": {
+      "A": "activated",
+      "B": "activating",
+      "C": "activates",
+      "D": "it activates"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'Once it has been activated' rút gọn còn 'once activated'. Giấy phép là thứ được kích hoạt nên dùng V3.",
+    "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: once + V3/V-ed.",
+    "translation": "Sau khi được kích hoạt, giấy phép phần mềm không thể chuyển sang thiết bị khác.",
+    "core_vocabulary": [
+      {
+        "word": "activate",
+        "type": "v.",
+        "meaning": "kích hoạt"
+      },
+      {
+        "word": "licence",
+        "type": "n.",
+        "meaning": "giấy phép (sử dụng)"
+      }
+    ]
+  },
+  {
+    "id": "q2219",
+    "question": "Most of the suggestions ______ at yesterday's meeting were surprisingly practical.",
+    "options": {
+      "A": "made",
+      "B": "make",
+      "C": "were made",
+      "D": "making"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Đề xuất là thứ được nêu ra, nên 'which were made' rút gọn thành 'made'. Động từ chính của câu là 'were'.",
+    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
+    "translation": "Phần lớn các đề xuất được nêu tại buổi họp hôm qua đều thiết thực đến bất ngờ.",
+    "core_vocabulary": [
+      {
+        "word": "suggestion",
+        "type": "n.",
+        "meaning": "đề xuất, gợi ý"
+      },
+      {
+        "word": "practical",
+        "type": "adj.",
+        "meaning": "thiết thực, khả thi"
+      }
+    ]
+  },
+  {
+    "id": "q2220",
+    "question": "______ by heavy rain, the outdoor ceremony was moved into the main hall.",
+    "options": {
+      "A": "Disrupted",
+      "B": "Disrupting",
+      "C": "Disrupt",
+      "D": "It disrupted"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Buổi lễ là thứ bị mưa làm gián đoạn, nên mở đầu câu bằng phân từ bị động 'Disrupted' (rút gọn của 'Because it was disrupted by heavy rain').",
+    "explanation_grammar": "Phân từ bị động mở đầu câu: V3/V-ed + by + tác nhân, + S + V.",
+    "translation": "Vì bị mưa lớn làm gián đoạn, buổi lễ ngoài trời đã được chuyển vào hội trường chính.",
+    "core_vocabulary": [
+      {
+        "word": "disrupt",
+        "type": "v.",
+        "meaning": "làm gián đoạn"
+      },
+      {
+        "word": "ceremony",
+        "type": "n.",
+        "meaning": "buổi lễ"
+      }
+    ]
+  },
+  {
+    "id": "q2221",
+    "question": "The training materials ______ to new hires are revised at the start of each year.",
+    "options": {
+      "A": "distribute",
+      "B": "distributed",
+      "C": "are distributed",
+      "D": "distributing"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Tài liệu là thứ được phát ra, nên 'which are distributed' rút gọn thành 'distributed'. Động từ chính của câu là 'are revised'.",
+    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
+    "translation": "Bộ tài liệu đào tạo phát cho nhân viên mới được chỉnh sửa vào đầu mỗi năm.",
+    "core_vocabulary": [
+      {
+        "word": "new hire",
+        "type": "n.",
+        "meaning": "nhân viên mới"
+      },
+      {
+        "word": "revise",
+        "type": "v.",
+        "meaning": "chỉnh sửa"
+      }
+    ]
+  },
+  {
+    "id": "q2222",
+    "question": "Items ______ more than thirty days after purchase cannot be refunded.",
+    "options": {
+      "A": "returned",
+      "B": "are returned",
+      "C": "return",
+      "D": "returning"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Hàng hoá là thứ được trả lại, nên 'which are returned' rút gọn thành 'returned'. Động từ chính là 'cannot be refunded'.",
+    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
+    "translation": "Những mặt hàng được trả lại sau hơn ba mươi ngày kể từ khi mua sẽ không được hoàn tiền.",
+    "core_vocabulary": [
+      {
+        "word": "refund",
+        "type": "v.",
+        "meaning": "hoàn tiền"
+      },
+      {
+        "word": "purchase",
+        "type": "n.",
+        "meaning": "việc mua hàng"
+      }
+    ]
+  },
+  {
+    "id": "q2223",
+    "question": "When ______ with a competitor's quotation, our price is still the lower one.",
+    "options": {
+      "A": "compared",
+      "B": "comparing",
+      "C": "compares",
+      "D": "it compares"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'When it is compared with...' rút gọn còn 'when compared with...'. Giá của ta là đối tượng được đem so sánh nên dùng V3.",
+    "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: when compared with/to + N.",
+    "translation": "Khi đem so với báo giá của đối thủ, giá của chúng tôi vẫn là mức thấp hơn.",
+    "core_vocabulary": [
+      {
+        "word": "quotation",
+        "type": "n.",
+        "meaning": "báo giá"
+      },
+      {
+        "word": "competitor",
+        "type": "n.",
+        "meaning": "đối thủ cạnh tranh"
+      }
+    ]
+  },
+  {
+    "id": "q2224",
+    "question": "The branch ______ in Hue at the moment is scheduled to open in October.",
+    "options": {
+      "A": "is built",
+      "B": "building",
+      "C": "being built",
+      "D": "builds"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'The branch which is being built' rút gọn thành 'the branch being built' — dùng 'being + V3' vì việc xây đang diễn ra ('at the moment'). Chỉ 'being built' mới diễn tả được nghĩa 'đang được xây'.",
+    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động tiếp diễn: N + being + V3/V-ed.",
+    "translation": "Chi nhánh đang được xây ở Huế dự kiến khai trương vào tháng Mười.",
+    "core_vocabulary": [
+      {
+        "word": "branch",
+        "type": "n.",
+        "meaning": "chi nhánh"
+      },
+      {
+        "word": "be scheduled to",
+        "type": "phrase",
+        "meaning": "dự kiến, được lên lịch"
+      }
+    ]
+  },
+  {
+    "id": "q2225",
+    "question": "Although ______ about the risk, the client decided to proceed with the order.",
+    "options": {
+      "A": "warned",
+      "B": "he warning",
+      "C": "warns",
+      "D": "warning"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'Although he had been warned about the risk' rút gọn còn 'although warned about the risk'. Khách hàng là người được cảnh báo nên dùng V3.",
+    "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: although/though + V3/V-ed.",
+    "translation": "Dù đã được cảnh báo về rủi ro, khách hàng vẫn quyết định tiến hành đơn đặt.",
+    "core_vocabulary": [
+      {
+        "word": "warn",
+        "type": "v.",
+        "meaning": "cảnh báo"
+      },
+      {
+        "word": "proceed with",
+        "type": "v.",
+        "meaning": "tiến hành, xúc tiến"
+      }
+    ]
+  },
+  {
+    "id": "q2226",
+    "question": "Your complaint will ______ as soon as the duty manager returns this afternoon.",
+    "options": {
+      "A": "deal with",
+      "B": "be dealt",
+      "C": "be dealing with",
+      "D": "be dealt with"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Khiếu nại là thứ được xử lý. Khi chuyển 'deal with something' sang bị động, giới từ 'with' phải được giữ lại sau V3, nên 'be dealt' thiếu giới từ là sai.",
+    "explanation_grammar": "Bị động của cụm động từ + giới từ: be + V3 + giới từ (be dealt with).",
+    "translation": "Khiếu nại của quý khách sẽ được xử lý ngay khi quản lý trực ca trở lại vào chiều nay.",
+    "core_vocabulary": [
+      {
+        "word": "deal with",
+        "type": "v.",
+        "meaning": "xử lý, giải quyết"
+      },
+      {
+        "word": "duty manager",
+        "type": "n.",
+        "meaning": "quản lý trực ca"
+      }
+    ]
+  },
+  {
+    "id": "q2227",
+    "question": "The cause of the production delay is still ______ by our engineers.",
+    "options": {
+      "A": "being looked into",
+      "B": "looking into",
+      "C": "being looked",
+      "D": "look into"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Nguyên nhân là thứ được điều tra, và 'still' cho biết việc đó đang diễn ra nên dùng 'being + V3'. Giới từ 'into' của cụm 'look into' phải được giữ lại.",
+    "explanation_grammar": "Bị động tiếp diễn của cụm động từ: be + being + V3 + giới từ.",
+    "translation": "Nguyên nhân gây chậm trễ sản xuất vẫn đang được các kỹ sư của chúng tôi điều tra.",
+    "core_vocabulary": [
+      {
+        "word": "look into",
+        "type": "v.",
+        "meaning": "điều tra, xem xét"
+      },
+      {
+        "word": "cause",
+        "type": "n.",
+        "meaning": "nguyên nhân"
+      }
+    ]
+  },
+  {
+    "id": "q2228",
+    "question": "All travel arrangements will ______ by our corporate agency.",
+    "options": {
+      "A": "be taken care",
+      "B": "be taking care",
+      "C": "take care of",
+      "D": "be taken care of"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Việc thu xếp chuyến đi là đối tượng được lo, nên cần bị động. Cụm 'take care of' khi chuyển bị động vẫn giữ nguyên cả 'care of' sau V3.",
+    "explanation_grammar": "Bị động của cụm ba từ: be + taken care of.",
+    "translation": "Toàn bộ việc thu xếp chuyến đi sẽ do công ty du lịch đối tác của chúng tôi lo.",
+    "core_vocabulary": [
+      {
+        "word": "take care of",
+        "type": "v.",
+        "meaning": "lo, đảm nhận"
+      },
+      {
+        "word": "arrangement",
+        "type": "n.",
+        "meaning": "việc thu xếp, sắp đặt"
+      }
+    ]
+  },
+  {
+    "id": "q2229",
+    "question": "The dispute was ______ to an outside law firm for a second opinion.",
+    "options": {
+      "A": "referred",
+      "B": "referring",
+      "C": "referral",
+      "D": "refer"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Tranh chấp là thứ được chuyển sang cho bên khác xem xét, nên sau 'was' phải là V3 'referred'. Lưu ý 'referral' là danh từ nên không điền được sau 'was' trong ngữ cảnh này.",
+    "explanation_grammar": "Bị động quá khứ đơn: S + was/were + V3 + to + N.",
+    "translation": "Vụ tranh chấp đã được chuyển sang một hãng luật bên ngoài để lấy ý kiến thứ hai.",
+    "core_vocabulary": [
+      {
+        "word": "refer to",
+        "type": "v.",
+        "meaning": "chuyển tới, giao cho"
+      },
+      {
+        "word": "dispute",
+        "type": "n.",
+        "meaning": "vụ tranh chấp"
+      }
+    ]
+  },
+  {
+    "id": "q2230",
+    "question": "These unusual figures cannot ______ for without a full review of the ledger.",
+    "options": {
+      "A": "be accounting",
+      "B": "accounted",
+      "C": "be accounted",
+      "D": "account"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Các con số là thứ cần được giải thích. Cụm 'account for' chuyển sang bị động thành 'be accounted for' — giới từ 'for' đã có sẵn sau chỗ trống nên chỉ cần 'be accounted'.",
+    "explanation_grammar": "Bị động của cụm động từ + giới từ: modal + be + V3 (+ giới từ đã có trong câu).",
+    "translation": "Những con số bất thường này không thể giải thích được mà không soát lại toàn bộ sổ sách.",
+    "core_vocabulary": [
+      {
+        "word": "account for",
+        "type": "v.",
+        "meaning": "giải thích, lý giải"
+      },
+      {
+        "word": "ledger",
+        "type": "n.",
+        "meaning": "sổ sách kế toán"
+      }
+    ]
+  },
+  {
+    "id": "q2231",
+    "question": "Ms. Chen can ______ on to finish the quarterly report on time.",
+    "options": {
+      "A": "relied",
+      "B": "be relied",
+      "C": "rely",
+      "D": "be relying"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Bà Chen là người được người khác tin cậy, nên dùng bị động. 'Rely on somebody' chuyển thành 'somebody can be relied on' — giới từ 'on' đứng ngay sau V3.",
+    "explanation_grammar": "Bị động của cụm động từ + giới từ: modal + be + relied on.",
+    "translation": "Có thể tin cậy bà Chen trong việc hoàn thành báo cáo quý đúng hạn.",
+    "core_vocabulary": [
+      {
+        "word": "rely on",
+        "type": "v.",
+        "meaning": "tin cậy, dựa vào"
+      },
+      {
+        "word": "on time",
+        "type": "phrase",
+        "meaning": "đúng hạn"
+      }
+    ]
+  },
+  {
+    "id": "q2232",
+    "question": "It ______ that the new airport terminal will open early next spring.",
+    "options": {
+      "A": "expects",
+      "B": "is expecting",
+      "C": "is expected",
+      "D": "expect"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Cấu trúc 'It is + V3 + that...' dùng chủ ngữ giả 'it' để nêu thông tin chung mà không cần nói ai là người trông đợi.",
+    "explanation_grammar": "Bị động với chủ ngữ giả: It + is/was + V3 + that + mệnh đề.",
+    "translation": "Người ta dự kiến nhà ga sân bay mới sẽ mở cửa vào đầu mùa xuân tới.",
+    "core_vocabulary": [
+      {
+        "word": "terminal",
+        "type": "n.",
+        "meaning": "nhà ga (sân bay)"
+      },
+      {
+        "word": "expect",
+        "type": "v.",
+        "meaning": "trông đợi, dự kiến"
+      }
+    ]
+  },
+  {
+    "id": "q2233",
+    "question": "It ______ that over half of our staff work remotely at least once a week.",
+    "options": {
+      "A": "estimate",
+      "B": "is estimated",
+      "C": "is estimating",
+      "D": "estimates"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Chủ ngữ giả 'it' đi với bị động 'is estimated' để nêu con số ước tính mà không chỉ rõ ai ước tính.",
+    "explanation_grammar": "Bị động với chủ ngữ giả: It + is estimated + that + mệnh đề.",
+    "translation": "Người ta ước tính hơn nửa số nhân viên của chúng tôi làm việc từ xa ít nhất một lần mỗi tuần.",
+    "core_vocabulary": [
+      {
+        "word": "estimate",
+        "type": "v.",
+        "meaning": "ước tính"
+      },
+      {
+        "word": "remotely",
+        "type": "adv.",
+        "meaning": "từ xa"
+      }
+    ]
+  },
+  {
+    "id": "q2234",
+    "question": "The broken photocopier was finally ______ of at the end of last month.",
+    "options": {
+      "A": "disposed",
+      "B": "disposing",
+      "C": "disposal",
+      "D": "dispose"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Máy photocopy là thứ bị thanh lý. Cụm 'dispose of something' chuyển bị động thành 'be disposed of', nên sau 'was' là V3 'disposed'.",
+    "explanation_grammar": "Bị động của cụm động từ + giới từ: be + disposed of.",
+    "translation": "Chiếc máy photocopy hỏng cuối cùng đã được thanh lý vào cuối tháng trước.",
+    "core_vocabulary": [
+      {
+        "word": "dispose of",
+        "type": "v.",
+        "meaning": "thanh lý, bỏ đi"
+      },
+      {
+        "word": "photocopier",
+        "type": "n.",
+        "meaning": "máy photocopy"
+      }
+    ]
+  },
+  {
+    "id": "q2235",
+    "question": "It ______ that the warehouse had been operating without a valid permit.",
+    "options": {
+      "A": "discover",
+      "B": "was discovered",
+      "C": "was discovering",
+      "D": "discovered"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Chủ ngữ giả 'it' kết hợp bị động quá khứ 'was discovered' để thuật lại một phát hiện mà không nêu ai phát hiện.",
+    "explanation_grammar": "Bị động với chủ ngữ giả: It + was + V3 + that + mệnh đề.",
+    "translation": "Người ta phát hiện ra rằng nhà kho đã hoạt động mà không có giấy phép hợp lệ.",
+    "core_vocabulary": [
+      {
+        "word": "valid",
+        "type": "adj.",
+        "meaning": "hợp lệ, còn hiệu lực"
+      },
+      {
+        "word": "permit",
+        "type": "n.",
+        "meaning": "giấy phép"
+      }
+    ]
+  },
+  {
+    "id": "q2236",
+    "question": "Complaints about workplace noise ______ seriously by the management team.",
+    "options": {
+      "A": "are taking",
+      "B": "are taken",
+      "C": "take",
+      "D": "taken"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Khiếu nại là thứ được ban quản lý xem xét, nên dùng bị động 'are taken seriously'. Nếu chọn 'taken' thì câu thiếu động từ 'be'.",
+    "explanation_grammar": "Cụm bị động cố định: be taken seriously / be taken into account.",
+    "translation": "Những khiếu nại về tiếng ồn tại nơi làm việc được ban quản lý xem xét một cách nghiêm túc.",
+    "core_vocabulary": [
+      {
+        "word": "take seriously",
+        "type": "v.",
+        "meaning": "xem xét nghiêm túc"
+      },
+      {
+        "word": "workplace",
+        "type": "n.",
+        "meaning": "nơi làm việc"
+      }
+    ]
+  },
+  {
+    "id": "q2237",
+    "question": "The partnership contract was ______ up by an outside law firm last week.",
+    "options": {
+      "A": "draw",
+      "B": "drawing",
+      "C": "drawn",
+      "D": "drew"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Hợp đồng là thứ được soạn, nên sau 'was' dùng V3. Cụm 'draw up' (soạn thảo văn bản) có dạng V3 là 'drawn', không phải 'drew'.",
+    "explanation_grammar": "Bị động của cụm động từ: be + drawn up (draw - drew - drawn).",
+    "translation": "Bản hợp đồng hợp tác đã được một hãng luật bên ngoài soạn thảo vào tuần trước.",
+    "core_vocabulary": [
+      {
+        "word": "draw up",
+        "type": "v.",
+        "meaning": "soạn thảo (văn bản)"
+      },
+      {
+        "word": "law firm",
+        "type": "n.",
+        "meaning": "hãng luật"
+      }
+    ]
+  },
+  {
+    "id": "q2238",
+    "question": "It ______ that the two logistics companies are in merger talks.",
+    "options": {
+      "A": "rumors",
+      "B": "rumor",
+      "C": "is rumored",
+      "D": "is rumoring"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Chủ ngữ giả 'it' đi với bị động 'is rumored' để nêu tin đồn chưa xác nhận.",
+    "explanation_grammar": "Bị động với chủ ngữ giả: It + is rumored + that + mệnh đề.",
+    "translation": "Có tin đồn rằng hai công ty logistics đang đàm phán sáp nhập.",
+    "core_vocabulary": [
+      {
+        "word": "merger talks",
+        "type": "n.",
+        "meaning": "đàm phán sáp nhập"
+      },
+      {
+        "word": "logistics",
+        "type": "n.",
+        "meaning": "hậu cần, logistics"
+      }
+    ]
+  },
+  {
+    "id": "q2239",
+    "question": "The missing invoice has at last been ______ for by the accounting team.",
+    "options": {
+      "A": "accounting",
+      "B": "accounts",
+      "C": "accounted",
+      "D": "account"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Hoá đơn là thứ được lý giải. Sau 'has been' phải là V3, và giới từ 'for' của cụm 'account for' được giữ lại ngay sau đó.",
+    "explanation_grammar": "Bị động hiện tại hoàn thành của cụm động từ: has/have been + V3 + giới từ.",
+    "translation": "Hoá đơn bị thất lạc cuối cùng đã được bộ phận kế toán lý giải xong.",
+    "core_vocabulary": [
+      {
+        "word": "at last",
+        "type": "phrase",
+        "meaning": "cuối cùng thì"
+      },
+      {
+        "word": "accounting",
+        "type": "n.",
+        "meaning": "kế toán"
+      }
+    ]
+  },
+  {
+    "id": "q2240",
+    "question": "New safety measures are ______ out across all three plants at the moment.",
+    "options": {
+      "A": "carrying",
+      "B": "carry",
+      "C": "being carried",
+      "D": "being carry"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Các biện pháp là thứ được triển khai, và 'at the moment' cho biết việc đó đang diễn ra, nên dùng bị động tiếp diễn 'are being carried out'.",
+    "explanation_grammar": "Bị động tiếp diễn của cụm động từ: be + being + carried out.",
+    "translation": "Các biện pháp an toàn mới đang được triển khai ở cả ba nhà máy vào lúc này.",
+    "core_vocabulary": [
+      {
+        "word": "carry out",
+        "type": "v.",
+        "meaning": "triển khai, thực hiện"
+      },
+      {
+        "word": "measure",
+        "type": "n.",
+        "meaning": "biện pháp"
+      }
+    ]
+  },
+  {
+    "id": "q2241",
+    "question": "It ______ widely that flexible hours improve employee retention.",
+    "options": {
+      "A": "is believing",
+      "B": "believe",
+      "C": "believes",
+      "D": "is believed"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Chủ ngữ giả 'it' đi với 'is believed' để nêu quan điểm phổ biến; trạng từ 'widely' bổ nghĩa cho động từ bị động.",
+    "explanation_grammar": "Bị động với chủ ngữ giả: It + is widely believed + that + mệnh đề.",
+    "translation": "Người ta tin rộng rãi rằng giờ làm linh hoạt giúp giữ chân nhân viên tốt hơn.",
+    "core_vocabulary": [
+      {
+        "word": "retention",
+        "type": "n.",
+        "meaning": "việc giữ chân (nhân sự)"
+      },
+      {
+        "word": "flexible hours",
+        "type": "n.",
+        "meaning": "giờ làm linh hoạt"
+      }
+    ]
+  },
+  {
+    "id": "q2242",
+    "question": "The relocation proposal was ______ down by the board without much discussion.",
+    "options": {
+      "A": "turn",
+      "B": "turned",
+      "C": "turns",
+      "D": "turning"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Đề xuất là thứ bị bác bỏ, nên sau 'was' dùng V3. Cụm 'turn down' nghĩa là từ chối, bác bỏ.",
+    "explanation_grammar": "Bị động của cụm động từ: be + turned down.",
+    "translation": "Bản đề xuất chuyển địa điểm đã bị hội đồng bác bỏ mà không thảo luận nhiều.",
+    "core_vocabulary": [
+      {
+        "word": "turn down",
+        "type": "v.",
+        "meaning": "từ chối, bác bỏ"
+      },
+      {
+        "word": "relocation",
+        "type": "n.",
+        "meaning": "việc chuyển địa điểm"
+      }
+    ]
+  },
+  {
+    "id": "q2243",
+    "question": "Your application is ______ right now; we will write to you by Friday.",
+    "options": {
+      "A": "being process",
+      "B": "processing",
+      "C": "process",
+      "D": "being processed"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Đơn là thứ được xử lý, và 'right now' chỉ việc đang diễn ra, nên dùng bị động hiện tại tiếp diễn.",
+    "explanation_grammar": "Bị động hiện tại tiếp diễn: S + am/is/are + being + V3/V-ed.",
+    "translation": "Đơn của quý vị đang được xử lý ngay lúc này; chúng tôi sẽ viết thư cho quý vị trước thứ Sáu.",
+    "core_vocabulary": [
+      {
+        "word": "process",
+        "type": "v.",
+        "meaning": "xử lý (hồ sơ)"
+      },
+      {
+        "word": "application",
+        "type": "n.",
+        "meaning": "đơn, hồ sơ"
+      }
+    ]
+  },
+  {
+    "id": "q2244",
+    "question": "It ______ that the storm caused more than a million dollars in damage.",
+    "options": {
+      "A": "report",
+      "B": "reports",
+      "C": "is reporting",
+      "D": "is reported"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Chủ ngữ giả 'it' đi với bị động 'is reported' để thuật lại tin tức mà không nêu nguồn cụ thể.",
+    "explanation_grammar": "Bị động với chủ ngữ giả: It + is reported + that + mệnh đề.",
+    "translation": "Theo tin đưa ra, cơn bão đã gây thiệt hại hơn một triệu đô la.",
+    "core_vocabulary": [
+      {
+        "word": "damage",
+        "type": "n.",
+        "meaning": "thiệt hại"
+      },
+      {
+        "word": "report",
+        "type": "v.",
+        "meaning": "đưa tin, báo cáo"
+      }
+    ]
+  },
+  {
+    "id": "q2245",
+    "question": "The revised regulation was ______ into effect at the beginning of March.",
+    "options": {
+      "A": "puts",
+      "B": "putting",
+      "C": "be put",
+      "D": "put"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Quy định là thứ được đưa vào áp dụng. Động từ 'put' có dạng V3 cũng là 'put', nên sau 'was' giữ nguyên 'put'.",
+    "explanation_grammar": "Bị động với động từ bất quy tắc không đổi: be + put (put - put - put).",
+    "translation": "Quy định đã chỉnh sửa được đưa vào hiệu lực từ đầu tháng Ba.",
+    "core_vocabulary": [
+      {
+        "word": "put into effect",
+        "type": "phrase",
+        "meaning": "đưa vào hiệu lực"
+      },
+      {
+        "word": "regulation",
+        "type": "n.",
+        "meaning": "quy định"
+      }
+    ]
+  },
+  {
+    "id": "q2246",
+    "question": "It ______ that the merger will create about two hundred new jobs.",
+    "options": {
+      "A": "thinks",
+      "B": "is thought",
+      "C": "is thinking",
+      "D": "think"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Chủ ngữ giả 'it' đi với bị động 'is thought' để nêu nhận định chung của nhiều người.",
+    "explanation_grammar": "Bị động với chủ ngữ giả: It + is thought + that + mệnh đề.",
+    "translation": "Người ta cho rằng vụ sáp nhập sẽ tạo ra khoảng hai trăm việc làm mới.",
+    "core_vocabulary": [
+      {
+        "word": "create",
+        "type": "v.",
+        "meaning": "tạo ra"
+      },
+      {
+        "word": "merger",
+        "type": "n.",
+        "meaning": "vụ sáp nhập"
+      }
+    ]
+  },
+  {
+    "id": "q2247",
+    "question": "Overdue accounts are ______ up by the finance team every Monday morning.",
+    "options": {
+      "A": "be followed",
+      "B": "following",
+      "C": "follow",
+      "D": "followed"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Các khoản nợ quá hạn là đối tượng được theo sát, nên sau 'are' dùng V3 'followed'; 'follow up' nghĩa là theo dõi tiếp, đôn đốc.",
+    "explanation_grammar": "Bị động của cụm động từ: be + followed up.",
+    "translation": "Các khoản nợ quá hạn được bộ phận tài chính đôn đốc vào mỗi sáng thứ Hai.",
+    "core_vocabulary": [
+      {
+        "word": "follow up",
+        "type": "v.",
+        "meaning": "theo dõi tiếp, đôn đốc"
+      },
+      {
+        "word": "overdue",
+        "type": "adj.",
+        "meaning": "quá hạn"
+      }
+    ]
+  },
+  {
+    "id": "q2248",
+    "question": "The discrepancy in the figures was quickly ______ up by a junior accountant.",
+    "options": {
+      "A": "picked",
+      "B": "picking",
+      "C": "pick",
+      "D": "be picked"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Sai lệch là thứ bị phát hiện, nên sau 'was' dùng V3 'picked'; 'pick up' ở đây nghĩa là nhận ra, phát hiện.",
+    "explanation_grammar": "Bị động của cụm động từ: be + picked up.",
+    "translation": "Sai lệch trong các con số đã nhanh chóng được một kế toán viên mới phát hiện.",
+    "core_vocabulary": [
+      {
+        "word": "discrepancy",
+        "type": "n.",
+        "meaning": "sự sai lệch, chênh lệch"
+      },
+      {
+        "word": "pick up",
+        "type": "v.",
+        "meaning": "nhận ra, phát hiện"
+      }
+    ]
+  },
+  {
+    "id": "q2249",
+    "question": "It ______ at the last meeting that the policy would be reviewed every two years.",
+    "options": {
+      "A": "was agreeing",
+      "B": "agree",
+      "C": "was agreed",
+      "D": "agreed"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Chủ ngữ giả 'it' đi với bị động quá khứ 'was agreed' để nêu một thoả thuận tập thể mà không cần kể tên từng người.",
+    "explanation_grammar": "Bị động với chủ ngữ giả: It + was agreed + that + mệnh đề.",
+    "translation": "Tại buổi họp lần trước, các bên đã nhất trí rằng chính sách sẽ được rà soát mỗi hai năm.",
+    "core_vocabulary": [
+      {
+        "word": "agree",
+        "type": "v.",
+        "meaning": "nhất trí, đồng thuận"
+      },
+      {
+        "word": "review",
+        "type": "v.",
+        "meaning": "rà soát"
+      }
+    ]
+  },
+  {
+    "id": "q2250",
+    "question": "The cost-cutting idea was first ______ up at last month's board meeting.",
+    "options": {
+      "A": "be brought",
+      "B": "brought",
+      "C": "bringing",
+      "D": "bring"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Ý tưởng là thứ được nêu ra, nên sau 'was' dùng V3 'brought' (bring - brought - brought); 'bring up' nghĩa là nêu, đề cập.",
+    "explanation_grammar": "Bị động của cụm động từ: be + brought up.",
+    "translation": "Ý tưởng cắt giảm chi phí được nêu ra lần đầu tại buổi họp hội đồng tháng trước.",
+    "core_vocabulary": [
+      {
+        "word": "bring up",
+        "type": "v.",
+        "meaning": "nêu ra, đề cập"
+      },
+      {
+        "word": "cost-cutting",
+        "type": "adj.",
+        "meaning": "cắt giảm chi phí"
+      }
+    ]
+  },
+  {
+    "id": "q2251",
+    "question": "The safety guidelines ______ three times since the new law took effect.",
+    "options": {
+      "A": "has been revised",
+      "B": "have been revised",
+      "C": "are revising",
+      "D": "have revised"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Bộ hướng dẫn là thứ được chỉnh sửa, và 'since + mốc quá khứ' đòi hỏi hiện tại hoàn thành. Chủ ngữ 'guidelines' số nhiều nên dùng 'have been', không phải 'has been'.",
+    "explanation_grammar": "Bị động hiện tại hoàn thành + hoà hợp S-V: S (số nhiều) + have been + V3.",
+    "translation": "Bộ hướng dẫn an toàn đã được chỉnh sửa ba lần kể từ khi luật mới có hiệu lực.",
+    "core_vocabulary": [
+      {
+        "word": "guidelines",
+        "type": "n.",
+        "meaning": "bộ hướng dẫn"
+      },
+      {
+        "word": "take effect",
+        "type": "phrase",
+        "meaning": "có hiệu lực"
+      }
+    ]
+  },
+  {
+    "id": "q2252",
+    "question": "Neither of the two proposals ______ accepted by the review committee.",
+    "options": {
+      "A": "was",
+      "B": "were",
+      "C": "have",
+      "D": "being"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'Neither of + danh từ số nhiều' được coi là chủ ngữ số ít, nên động từ bị động là 'was accepted' chứ không phải 'were accepted'.",
+    "explanation_grammar": "Hoà hợp S-V trong bị động: neither of / either of / each of + N số nhiều + động từ số ít.",
+    "translation": "Không đề xuất nào trong hai bản được hội đồng thẩm định chấp thuận.",
+    "core_vocabulary": [
+      {
+        "word": "neither of",
+        "type": "phrase",
+        "meaning": "không cái nào trong hai"
+      },
+      {
+        "word": "accept",
+        "type": "v.",
+        "meaning": "chấp thuận"
+      }
+    ]
+  },
+  {
+    "id": "q2253",
+    "question": "A number of complaints ______ about the new online billing system.",
+    "options": {
+      "A": "have received",
+      "B": "have been received",
+      "C": "is receiving",
+      "D": "has been received"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'A number of + N số nhiều' mang nghĩa 'một số' nên chia động từ theo số nhiều. Khiếu nại là thứ được tiếp nhận, nên dùng bị động 'have been received'.",
+    "explanation_grammar": "Hoà hợp S-V: a number of + N số nhiều + have (khác 'the number of' + has).",
+    "translation": "Đã có một số khiếu nại được tiếp nhận về hệ thống thanh toán trực tuyến mới.",
+    "core_vocabulary": [
+      {
+        "word": "a number of",
+        "type": "phrase",
+        "meaning": "một số"
+      },
+      {
+        "word": "billing",
+        "type": "n.",
+        "meaning": "việc lập hoá đơn, thanh toán"
+      }
+    ]
+  },
+  {
+    "id": "q2254",
+    "question": "Each of the water samples ______ twice before it leaves the laboratory.",
+    "options": {
+      "A": "are tested",
+      "B": "is tested",
+      "C": "test",
+      "D": "are testing"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'Each of + N số nhiều' là chủ ngữ số ít, nên bị động dùng 'is tested'. Đại từ 'it' ở mệnh đề sau cũng xác nhận chủ ngữ số ít.",
+    "explanation_grammar": "Hoà hợp S-V trong bị động: each of + N số nhiều + is/was + V3.",
+    "translation": "Mỗi mẫu nước đều được kiểm nghiệm hai lần trước khi ra khỏi phòng thí nghiệm.",
+    "core_vocabulary": [
+      {
+        "word": "each of",
+        "type": "phrase",
+        "meaning": "mỗi (cái) trong số"
+      },
+      {
+        "word": "sample",
+        "type": "n.",
+        "meaning": "mẫu"
+      }
+    ]
+  },
+  {
+    "id": "q2255",
+    "question": "The data ______ by our analysts last week, and the results surprised everyone.",
+    "options": {
+      "A": "were examined",
+      "B": "examine",
+      "C": "examined",
+      "D": "was examining"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Dữ liệu là đối tượng được phân tích; 'by our analysts' chỉ người thực hiện. Trong văn viết học thuật và thi cử, 'data' được coi là số nhiều nên đi với 'were'.",
+    "explanation_grammar": "Bị động quá khứ đơn + hoà hợp S-V: data/criteria/phenomena là danh từ số nhiều.",
+    "translation": "Dữ liệu đã được các chuyên viên phân tích của chúng tôi xem xét tuần trước, và kết quả làm mọi người bất ngờ.",
+    "core_vocabulary": [
+      {
+        "word": "analyst",
+        "type": "n.",
+        "meaning": "chuyên viên phân tích"
+      },
+      {
+        "word": "examine",
+        "type": "v.",
+        "meaning": "xem xét, khảo sát"
+      }
+    ]
+  },
+  {
+    "id": "q2256",
+    "question": "Most of the furniture in the reception area ______ by a local workshop.",
+    "options": {
+      "A": "made",
+      "B": "was made",
+      "C": "making",
+      "D": "were made"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'Furniture' là danh từ không đếm được nên luôn chia động từ số ít, dù trước đó có 'most of'. Đồ nội thất là thứ được làm ra nên dùng bị động 'was made'.",
+    "explanation_grammar": "Hoà hợp S-V trong bị động: most of + N không đếm được + was/is + V3.",
+    "translation": "Phần lớn đồ nội thất ở khu tiếp khách được một xưởng thủ công địa phương làm ra.",
+    "core_vocabulary": [
+      {
+        "word": "furniture",
+        "type": "n.",
+        "meaning": "đồ nội thất"
+      },
+      {
+        "word": "reception area",
+        "type": "n.",
+        "meaning": "khu tiếp khách"
+      }
+    ]
+  },
+  {
+    "id": "q2257",
+    "question": "Everyone who registers online ______ a confirmation email automatically.",
+    "options": {
+      "A": "sending",
+      "B": "is sent",
+      "C": "are sent",
+      "D": "send"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'Everyone' là đại từ bất định số ít nên dùng 'is sent'. Người đăng ký là bên nhận email, nên đây là bị động hai tân ngữ với 'a confirmation email' ở lại sau động từ.",
+    "explanation_grammar": "Hoà hợp S-V: everyone/everybody + động từ số ít; bị động hai tân ngữ: S (người) + is sent + O (vật).",
+    "translation": "Mọi người đăng ký trực tuyến đều được gửi email xác nhận một cách tự động.",
+    "core_vocabulary": [
+      {
+        "word": "register",
+        "type": "v.",
+        "meaning": "đăng ký"
+      },
+      {
+        "word": "confirmation",
+        "type": "n.",
+        "meaning": "sự xác nhận"
+      }
+    ]
+  },
+  {
+    "id": "q2258",
+    "question": "The hiring committee ______ to review all applications before the end of the week.",
+    "options": {
+      "A": "is agreed",
+      "B": "has been agreed",
+      "C": "has agreed",
+      "D": "agreeing"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Đây là bẫy chủ động - bị động: hội đồng là bên chủ động đưa ra cam kết, nên phải dùng 'has agreed'. Chỉ nội dung thoả thuận mới làm chủ ngữ bị động được (It was agreed that...).",
+    "explanation_grammar": "Phân biệt: S (người) + agree to V (chủ động) vs It + was agreed + that... (bị động).",
+    "translation": "Hội đồng tuyển dụng đã nhất trí sẽ xem xét toàn bộ đơn ứng tuyển trước cuối tuần này.",
+    "core_vocabulary": [
+      {
+        "word": "hiring committee",
+        "type": "n.",
+        "meaning": "hội đồng tuyển dụng"
+      },
+      {
+        "word": "agree to",
+        "type": "v.",
+        "meaning": "nhất trí làm gì"
+      }
+    ]
+  },
+  {
+    "id": "q2259",
+    "question": "A final decision ______ only after a long discussion with the investors.",
+    "options": {
+      "A": "was reaching",
+      "B": "was reached",
+      "C": "reach",
+      "D": "reached"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Quyết định là thứ được đưa ra, nên dùng bị động 'was reached'. Cụm 'reach a decision' khi đảo sang bị động thì 'decision' lên làm chủ ngữ.",
+    "explanation_grammar": "Bị động quá khứ đơn: S + was/were + V3 (reach - reached - reached).",
+    "translation": "Quyết định cuối cùng chỉ được đưa ra sau một cuộc thảo luận dài với các nhà đầu tư.",
+    "core_vocabulary": [
+      {
+        "word": "reach a decision",
+        "type": "phrase",
+        "meaning": "đưa ra quyết định"
+      },
+      {
+        "word": "investor",
+        "type": "n.",
+        "meaning": "nhà đầu tư"
+      }
+    ]
+  },
+  {
+    "id": "q2260",
+    "question": "Several formatting errors ______ in the final draft before it went to print.",
+    "options": {
+      "A": "spotted",
+      "B": "was spotted",
+      "C": "were spotted",
+      "D": "spotting"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Lỗi là thứ bị phát hiện, và 'several errors' là chủ ngữ số nhiều nên dùng 'were spotted'.",
+    "explanation_grammar": "Bị động quá khứ đơn + hoà hợp S-V: several + N số nhiều + were + V3.",
+    "translation": "Vài lỗi trình bày đã bị phát hiện trong bản thảo cuối trước khi đưa đi in.",
+    "core_vocabulary": [
+      {
+        "word": "spot",
+        "type": "v.",
+        "meaning": "phát hiện, nhận ra"
+      },
+      {
+        "word": "draft",
+        "type": "n.",
+        "meaning": "bản thảo"
+      }
+    ]
+  },
+  {
+    "id": "q2261",
+    "question": "The testing equipment, along with the spare parts, ______ in a locked room.",
+    "options": {
+      "A": "storing",
+      "B": "is stored",
+      "C": "are stored",
+      "D": "store"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Cụm 'along with the spare parts' chỉ là thành phần chen giữa, không làm thay đổi số của chủ ngữ chính 'the testing equipment' (số ít), nên dùng 'is stored'.",
+    "explanation_grammar": "Hoà hợp S-V trong bị động: along with / together with / as well as không đổi số của chủ ngữ.",
+    "translation": "Thiết bị kiểm nghiệm, cùng với các phụ tùng thay thế, được lưu trong một phòng có khoá.",
+    "core_vocabulary": [
+      {
+        "word": "spare parts",
+        "type": "n.",
+        "meaning": "phụ tùng thay thế"
+      },
+      {
+        "word": "store",
+        "type": "v.",
+        "meaning": "lưu trữ, để"
+      }
+    ]
+  },
+  {
+    "id": "q2262",
+    "question": "None of the outstanding invoices ______ yet, according to the finance report.",
+    "options": {
+      "A": "have been paid",
+      "B": "have paid",
+      "C": "is paying",
+      "D": "has paying"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Hoá đơn là thứ được thanh toán, và 'yet' là dấu hiệu hiện tại hoàn thành. Với 'none of + N số nhiều', động từ số nhiều 'have been paid' là lựa chọn chuẩn trong đề thi.",
+    "explanation_grammar": "Bị động hiện tại hoàn thành: none of + N số nhiều + have been + V3.",
+    "translation": "Theo báo cáo tài chính, chưa hoá đơn tồn nào được thanh toán.",
+    "core_vocabulary": [
+      {
+        "word": "outstanding",
+        "type": "adj.",
+        "meaning": "còn tồn, chưa trả"
+      },
+      {
+        "word": "invoice",
+        "type": "n.",
+        "meaning": "hoá đơn"
+      }
+    ]
+  },
+  {
+    "id": "q2263",
+    "question": "Both of the delivery vehicles ______ before the annual inspection took place.",
+    "options": {
+      "A": "had been serviced",
+      "B": "has been serviced",
+      "C": "had serviced",
+      "D": "was serviced"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'Both of' đi với động từ số nhiều, và việc bảo dưỡng xảy ra trước mốc quá khứ 'the inspection took place', nên dùng bị động quá khứ hoàn thành 'had been serviced'.",
+    "explanation_grammar": "Bị động quá khứ hoàn thành: both of + N + had been + V3.",
+    "translation": "Cả hai xe giao hàng đều đã được bảo dưỡng trước khi kỳ kiểm tra thường niên diễn ra.",
+    "core_vocabulary": [
+      {
+        "word": "both of",
+        "type": "phrase",
+        "meaning": "cả hai"
+      },
+      {
+        "word": "vehicle",
+        "type": "n.",
+        "meaning": "xe, phương tiện"
+      }
+    ]
+  },
+  {
+    "id": "q2264",
+    "question": "The department head, not the assistants, ______ to attend the regional summit.",
+    "options": {
+      "A": "were invited",
+      "B": "inviting",
+      "C": "was invited",
+      "D": "invite"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Khi có cụm 'not the assistants' chen vào, động từ vẫn chia theo chủ ngữ chính 'the department head' (số ít), nên dùng 'was invited'.",
+    "explanation_grammar": "Hoà hợp S-V trong bị động: chủ ngữ chính quyết định số, phần 'not...' chỉ là thành phần phụ.",
+    "translation": "Trưởng bộ phận, chứ không phải các trợ lý, mới là người được mời dự hội nghị khu vực.",
+    "core_vocabulary": [
+      {
+        "word": "department head",
+        "type": "n.",
+        "meaning": "trưởng bộ phận"
+      },
+      {
+        "word": "summit",
+        "type": "n.",
+        "meaning": "hội nghị cấp cao"
+      }
+    ]
+  },
+  {
+    "id": "q2265",
+    "question": "A series of workshops ______ for newly promoted managers at the moment.",
+    "options": {
+      "A": "organize",
+      "B": "have organizing",
+      "C": "are being organized",
+      "D": "is being organized"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'A series of' là chủ ngữ số ít (dù sau nó là danh từ số nhiều), nên dùng 'is being organized'. 'At the moment' cho biết việc đang diễn ra nên cần bị động tiếp diễn.",
+    "explanation_grammar": "Hoà hợp S-V: a series of / a set of + N số nhiều + động từ số ít.",
+    "translation": "Một loạt buổi tập huấn đang được tổ chức cho các quản lý vừa được đề bạt.",
+    "core_vocabulary": [
+      {
+        "word": "a series of",
+        "type": "phrase",
+        "meaning": "một loạt"
+      },
+      {
+        "word": "newly promoted",
+        "type": "adj.",
+        "meaning": "vừa được đề bạt"
+      }
+    ]
+  },
+  {
+    "id": "q2266",
+    "question": "The documents you requested ______ to you earlier this morning.",
+    "options": {
+      "A": "emailing",
+      "B": "were emailed",
+      "C": "was emailed",
+      "D": "email"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Chủ ngữ là 'the documents' (số nhiều); mệnh đề quan hệ rút gọn 'you requested' chen vào không làm đổi số. Tài liệu là thứ được gửi nên dùng 'were emailed'.",
+    "explanation_grammar": "Hoà hợp S-V trong bị động: bỏ qua mệnh đề chen giữa khi xác định số của chủ ngữ.",
+    "translation": "Những tài liệu quý vị yêu cầu đã được gửi qua email cho quý vị vào sáng nay.",
+    "core_vocabulary": [
+      {
+        "word": "request",
+        "type": "v.",
+        "meaning": "yêu cầu"
+      },
+      {
+        "word": "email",
+        "type": "v.",
+        "meaning": "gửi qua email"
+      }
+    ]
+  },
+  {
+    "id": "q2267",
+    "question": "Our design proposal ______ by the client, so the team has to start again.",
+    "options": {
+      "A": "was rejected",
+      "B": "rejected",
+      "C": "reject",
+      "D": "was rejecting"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Cụm 'by the client' chỉ người thực hiện, còn bản đề xuất là đối tượng bị từ chối, nên dùng bị động 'was rejected'.",
+    "explanation_grammar": "Bị động quá khứ đơn: S + was/were + V3 + by O.",
+    "translation": "Bản đề xuất thiết kế của chúng tôi đã bị khách hàng từ chối, nên cả nhóm phải làm lại từ đầu.",
+    "core_vocabulary": [
+      {
+        "word": "reject",
+        "type": "v.",
+        "meaning": "từ chối, bác bỏ"
+      },
+      {
+        "word": "client",
+        "type": "n.",
+        "meaning": "khách hàng"
+      }
+    ]
+  },
+  {
+    "id": "q2268",
+    "question": "Few of the original suggestions ______ into the final version of the plan.",
+    "options": {
+      "A": "incorporating",
+      "B": "incorporate",
+      "C": "was incorporated",
+      "D": "were incorporated"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'Few of + N số nhiều' đi với động từ số nhiều, và đề xuất là thứ được đưa vào bản kế hoạch, nên dùng 'were incorporated'.",
+    "explanation_grammar": "Hoà hợp S-V trong bị động: few of / many of + N số nhiều + were + V3.",
+    "translation": "Rất ít đề xuất ban đầu được đưa vào bản kế hoạch cuối cùng.",
+    "core_vocabulary": [
+      {
+        "word": "incorporate",
+        "type": "v.",
+        "meaning": "đưa vào, tích hợp"
+      },
+      {
+        "word": "original",
+        "type": "adj.",
+        "meaning": "ban đầu, gốc"
+      }
+    ]
+  },
+  {
+    "id": "q2269",
+    "question": "The corporation ______ its regional headquarters to Singapore late last year.",
+    "options": {
+      "A": "is moved",
+      "B": "has been moved",
+      "C": "moved",
+      "D": "was moved"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Bẫy chủ động - bị động: ngay sau chỗ trống đã có tân ngữ 'its regional headquarters', nên động từ phải ở thể chủ động. Câu bị động không thể đi kèm tân ngữ trực tiếp như vậy.",
+    "explanation_grammar": "Dấu hiệu nhận biết: có tân ngữ trực tiếp ngay sau động từ thì dùng chủ động, không dùng bị động.",
+    "translation": "Tập đoàn đã chuyển trụ sở khu vực của mình sang Singapore vào cuối năm ngoái.",
+    "core_vocabulary": [
+      {
+        "word": "corporation",
+        "type": "n.",
+        "meaning": "tập đoàn"
+      },
+      {
+        "word": "headquarters",
+        "type": "n.",
+        "meaning": "trụ sở"
+      }
+    ]
+  },
+  {
+    "id": "q2270",
+    "question": "All the extra chairs ______ to the main hall before the ceremony started.",
+    "options": {
+      "A": "had been moved",
+      "B": "has been moved",
+      "C": "was moving",
+      "D": "had moved"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Ghế là vật được di chuyển, và việc này xảy ra trước mốc quá khứ 'the ceremony started', nên dùng bị động quá khứ hoàn thành với chủ ngữ số nhiều.",
+    "explanation_grammar": "Bị động quá khứ hoàn thành: S (số nhiều) + had been + V3.",
+    "translation": "Toàn bộ ghế dự phòng đã được chuyển vào hội trường chính trước khi buổi lễ bắt đầu.",
+    "core_vocabulary": [
+      {
+        "word": "ceremony",
+        "type": "n.",
+        "meaning": "buổi lễ"
+      },
+      {
+        "word": "main hall",
+        "type": "n.",
+        "meaning": "hội trường chính"
+      }
+    ]
+  },
+  {
+    "id": "q2271",
+    "question": "Each applicant ______ for an interview within two weeks of applying.",
+    "options": {
+      "A": "is contacted",
+      "B": "are contacted",
+      "C": "contacting",
+      "D": "contact"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'Each + N số ít' là chủ ngữ số ít, nên dùng 'is contacted'. Ứng viên là người được liên hệ nên cần bị động.",
+    "explanation_grammar": "Hoà hợp S-V trong bị động: each / every + N số ít + is/was + V3.",
+    "translation": "Mỗi ứng viên đều được liên hệ mời phỏng vấn trong vòng hai tuần kể từ khi gửi đơn.",
+    "core_vocabulary": [
+      {
+        "word": "applicant",
+        "type": "n.",
+        "meaning": "ứng viên"
+      },
+      {
+        "word": "apply",
+        "type": "v.",
+        "meaning": "gửi đơn, ứng tuyển"
+      }
+    ]
+  },
+  {
+    "id": "q2272",
+    "question": "All the staff members ______ about the merger only after the public announcement.",
+    "options": {
+      "A": "informed",
+      "B": "was informed",
+      "C": "were informed",
+      "D": "informing"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Nhân viên là người được thông báo, và 'all the staff members' là chủ ngữ số nhiều, nên dùng 'were informed'. Chọn 'informed' sẽ khiến câu thiếu tân ngữ cho thể chủ động.",
+    "explanation_grammar": "Bị động quá khứ đơn: S (số nhiều) + were + V3 + about + N.",
+    "translation": "Toàn bộ nhân viên chỉ được thông báo về vụ sáp nhập sau khi có công bố chính thức.",
+    "core_vocabulary": [
+      {
+        "word": "inform",
+        "type": "v.",
+        "meaning": "thông báo"
+      },
+      {
+        "word": "announcement",
+        "type": "n.",
+        "meaning": "sự công bố"
+      }
+    ]
+  },
+  {
+    "id": "q2273",
+    "question": "Neither the manager nor her assistants ______ aware of the schedule change.",
+    "options": {
+      "A": "were made",
+      "B": "was made",
+      "C": "make",
+      "D": "making"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Với 'neither A nor B', động từ chia theo danh từ gần nó nhất — ở đây là 'her assistants' (số nhiều) — nên dùng 'were made aware'.",
+    "explanation_grammar": "Quy tắc gần nhất: neither A nor B + động từ chia theo B; cụm bị động 'be made aware of'.",
+    "translation": "Cả trưởng bộ phận lẫn các trợ lý của bà đều không được cho biết về việc đổi lịch.",
+    "core_vocabulary": [
+      {
+        "word": "be made aware of",
+        "type": "phrase",
+        "meaning": "được cho biết về"
+      },
+      {
+        "word": "assistant",
+        "type": "n.",
+        "meaning": "trợ lý"
+      }
+    ]
+  },
+  {
+    "id": "q2274",
+    "question": "The findings of the three-year study ______ at next week's industry conference.",
+    "options": {
+      "A": "presenting",
+      "B": "will be presented",
+      "C": "will present",
+      "D": "presents"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Kết quả nghiên cứu là thứ được trình bày, không tự trình bày, nên dùng bị động tương lai 'will be presented'.",
+    "explanation_grammar": "Bị động tương lai đơn: S + will be + V3.",
+    "translation": "Kết quả của nghiên cứu ba năm sẽ được trình bày tại hội thảo ngành vào tuần tới.",
+    "core_vocabulary": [
+      {
+        "word": "findings",
+        "type": "n.",
+        "meaning": "kết quả nghiên cứu"
+      },
+      {
+        "word": "conference",
+        "type": "n.",
+        "meaning": "hội thảo"
+      }
+    ]
+  },
+  {
+    "id": "q2275",
+    "question": "A great deal of money ______ on digital advertising during the last campaign.",
+    "options": {
+      "A": "were spent",
+      "B": "was spent",
+      "C": "spending",
+      "D": "spent"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'A great deal of' đi với danh từ không đếm được ('money') nên chủ ngữ là số ít, dùng 'was spent'. Tiền là thứ được chi ra nên cần bị động.",
+    "explanation_grammar": "Hoà hợp S-V trong bị động: a great deal of / a large amount of + N không đếm được + was/is + V3.",
+    "translation": "Một khoản tiền lớn đã được chi cho quảng cáo số trong chiến dịch vừa rồi.",
+    "core_vocabulary": [
+      {
+        "word": "a great deal of",
+        "type": "phrase",
+        "meaning": "một lượng lớn"
+      },
+      {
+        "word": "campaign",
+        "type": "n.",
+        "meaning": "chiến dịch"
+      }
+    ]
+  },
+  {
+    "id": "q2276",
+    "question": "The renovation ______ by now if the building permit had arrived on time.",
+    "options": {
+      "A": "will be finished",
+      "B": "would finish",
+      "C": "would have been finished",
+      "D": "would have finished"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Mệnh đề 'if' dùng quá khứ hoàn thành nên đây là điều kiện loại 3 (trái với quá khứ). Việc cải tạo là đối tượng được hoàn thành, nên kết hợp thành 'would have been + V3'.",
+    "explanation_grammar": "Bị động trong điều kiện loại 3: S + would have been + V3.",
+    "translation": "Việc cải tạo lẽ ra đã xong tới giờ nếu giấy phép xây dựng về đúng hạn.",
+    "core_vocabulary": [
+      {
+        "word": "building permit",
+        "type": "n.",
+        "meaning": "giấy phép xây dựng"
+      },
+      {
+        "word": "renovation",
+        "type": "n.",
+        "meaning": "việc cải tạo"
+      }
+    ]
+  },
+  {
+    "id": "q2277",
+    "question": "Had the samples ______ a week earlier, the test results would be ready today.",
+    "options": {
+      "A": "been sent",
+      "B": "sent",
+      "C": "being sent",
+      "D": "be sent"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Đây là câu điều kiện loại 3 đảo ngữ: 'If the samples had been sent' đảo thành 'Had the samples been sent'. Sau 'had' phải là 'been + V3' vì mẫu vật là thứ được gửi.",
+    "explanation_grammar": "Bị động trong điều kiện đảo ngữ: Had + S + been + V3, S + would + V.",
+    "translation": "Nếu các mẫu được gửi sớm hơn một tuần thì hôm nay đã có kết quả kiểm nghiệm.",
+    "core_vocabulary": [
+      {
+        "word": "sample",
+        "type": "n.",
+        "meaning": "mẫu vật"
+      },
+      {
+        "word": "test results",
+        "type": "n.",
+        "meaning": "kết quả kiểm nghiệm"
+      }
+    ]
+  },
+  {
+    "id": "q2278",
+    "question": "The air compressor needs ______ before it can be put back into service.",
+    "options": {
+      "A": "to service",
+      "B": "serviced",
+      "C": "be serviced",
+      "D": "servicing"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Với chủ ngữ là vật, 'need + V-ing' mang nghĩa bị động, tương đương 'need to be serviced'. Cả hai cách đều đúng, nhưng chỉ 'servicing' có trong các phương án.",
+    "explanation_grammar": "Nghĩa bị động của danh động từ: S (vật) + need + V-ing = need to be + V3.",
+    "translation": "Máy nén khí cần được bảo dưỡng trước khi có thể đưa trở lại sử dụng.",
+    "core_vocabulary": [
+      {
+        "word": "compressor",
+        "type": "n.",
+        "meaning": "máy nén"
+      },
+      {
+        "word": "put into service",
+        "type": "phrase",
+        "meaning": "đưa vào sử dụng"
+      }
+    ]
+  },
+  {
+    "id": "q2279",
+    "question": "It is essential that all visitors ______ at the security desk upon arrival.",
+    "options": {
+      "A": "registering",
+      "B": "be registered",
+      "C": "are registering",
+      "D": "to be registered"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Sau 'It is essential/important/necessary that' là thức giả định: động từ giữ nguyên mẫu không chia. Khách là người được đăng ký nên dạng bị động giả định là 'be registered'.",
+    "explanation_grammar": "Bị động trong thức giả định: It is essential that + S + be + V3.",
+    "translation": "Điều bắt buộc là toàn bộ khách phải được đăng ký tại bàn an ninh ngay khi đến.",
+    "core_vocabulary": [
+      {
+        "word": "essential",
+        "type": "adj.",
+        "meaning": "bắt buộc, thiết yếu"
+      },
+      {
+        "word": "upon arrival",
+        "type": "phrase",
+        "meaning": "ngay khi đến"
+      }
+    ]
+  },
+  {
+    "id": "q2280",
+    "question": "Applicants are required ______ two references along with the completed form.",
+    "options": {
+      "A": "submitting",
+      "B": "to be submitted",
+      "C": "to submit",
+      "D": "be submitted"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Bẫy bị động kép: 'are required' đã ở thể bị động, nhưng chính ứng viên là người nộp giấy tờ, nên phần sau phải là nguyên mẫu chủ động 'to submit'. Chọn 'to be submitted' sẽ biến ứng viên thành thứ bị nộp.",
+    "explanation_grammar": "Phân biệt: S (người) + be required + to V (chủ động) vs S (vật) + be required + to be + V3.",
+    "translation": "Ứng viên được yêu cầu nộp hai thư giới thiệu kèm theo mẫu đơn đã điền đầy đủ.",
+    "core_vocabulary": [
+      {
+        "word": "reference",
+        "type": "n.",
+        "meaning": "thư giới thiệu"
+      },
+      {
+        "word": "completed form",
+        "type": "n.",
+        "meaning": "mẫu đơn đã điền"
+      }
+    ]
+  },
+  {
+    "id": "q2281",
+    "question": "Not until the audit was completed ______ the accounting error discovered.",
+    "options": {
+      "A": "did",
+      "B": "was",
+      "C": "has",
+      "D": "being"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Cụm phủ định 'Not until...' ở đầu câu buộc phải đảo ngữ. Vì mệnh đề chính ở dạng bị động ('the error was discovered'), ta đảo trợ động từ 'was' lên trước chủ ngữ.",
+    "explanation_grammar": "Đảo ngữ với câu bị động: Not until..., was/were + S + V3.",
+    "translation": "Phải đến khi hoàn tất cuộc kiểm toán thì lỗi kế toán mới bị phát hiện.",
+    "core_vocabulary": [
+      {
+        "word": "audit",
+        "type": "n.",
+        "meaning": "cuộc kiểm toán"
+      },
+      {
+        "word": "not until",
+        "type": "phrase",
+        "meaning": "phải đến khi... thì mới"
+      }
+    ]
+  },
+  {
+    "id": "q2282",
+    "question": "The new wing of the hospital ______ in time for the anniversary celebration.",
+    "options": {
+      "A": "is to be completed",
+      "B": "is completing",
+      "C": "is to complete",
+      "D": "to be completed"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Cấu trúc 'be to + V' diễn tả kế hoạch đã định; vì toà nhà là thứ được hoàn thiện nên phần sau phải bị động, thành 'is to be completed'.",
+    "explanation_grammar": "Bị động với 'be to': S + am/is/are to be + V3 (kế hoạch, dự định).",
+    "translation": "Khu mới của bệnh viện dự kiến được hoàn thiện kịp dịp lễ kỷ niệm.",
+    "core_vocabulary": [
+      {
+        "word": "wing",
+        "type": "n.",
+        "meaning": "khu, cánh (toà nhà)"
+      },
+      {
+        "word": "anniversary",
+        "type": "n.",
+        "meaning": "lễ kỷ niệm"
+      }
+    ]
+  },
+  {
+    "id": "q2283",
+    "question": "Rarely ______ such a large order cancelled at the very last minute.",
+    "options": {
+      "A": "was being",
+      "B": "is",
+      "C": "does",
+      "D": "has"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Trạng từ phủ định 'Rarely' đầu câu buộc đảo ngữ. Câu gốc là bị động hiện tại đơn 'such a large order is cancelled', nên đảo 'is' lên trước chủ ngữ.",
+    "explanation_grammar": "Đảo ngữ với bị động: Rarely/Seldom + is/are + S + V3.",
+    "translation": "Rất ít khi một đơn hàng lớn như vậy bị huỷ vào phút cuối.",
+    "core_vocabulary": [
+      {
+        "word": "rarely",
+        "type": "adv.",
+        "meaning": "rất ít khi"
+      },
+      {
+        "word": "cancel",
+        "type": "v.",
+        "meaning": "huỷ"
+      }
+    ]
+  },
+  {
+    "id": "q2284",
+    "question": "The market report, ______ only last week, has already become outdated.",
+    "options": {
+      "A": "publishing",
+      "B": "published",
+      "C": "was published",
+      "D": "it published"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Phần nằm giữa hai dấu phẩy là mệnh đề quan hệ bị động rút gọn ('which was published only last week'). Câu đã có động từ chính 'has become' nên không điền động từ chia.",
+    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N, + V3/V-ed, + động từ chính.",
+    "translation": "Bản báo cáo thị trường, vốn chỉ mới công bố tuần trước, giờ đã lỗi thời.",
+    "core_vocabulary": [
+      {
+        "word": "publish",
+        "type": "v.",
+        "meaning": "công bố, xuất bản"
+      },
+      {
+        "word": "outdated",
+        "type": "adj.",
+        "meaning": "lỗi thời"
+      }
+    ]
+  },
+  {
+    "id": "q2285",
+    "question": "The client insisted that the defective units ______ at the supplier's expense.",
+    "options": {
+      "A": "are replaced",
+      "B": "to be replaced",
+      "C": "be replaced",
+      "D": "replacing"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Sau các động từ yêu cầu như 'insist, demand, request, recommend' + that, động từ ở thức giả định (nguyên mẫu không chia). Hàng lỗi là thứ được thay nên dùng 'be replaced'.",
+    "explanation_grammar": "Bị động trong thức giả định: insist/demand/request that + S + be + V3.",
+    "translation": "Khách hàng yêu cầu rằng số hàng lỗi phải được thay bằng chi phí của nhà cung cấp.",
+    "core_vocabulary": [
+      {
+        "word": "defective",
+        "type": "adj.",
+        "meaning": "bị lỗi, khiếm khuyết"
+      },
+      {
+        "word": "at one's expense",
+        "type": "phrase",
+        "meaning": "bằng chi phí của ai"
+      }
+    ]
+  },
+  {
+    "id": "q2286",
+    "question": "The cost estimate deserves ______ far more carefully than it was last time.",
+    "options": {
+      "A": "to check",
+      "B": "checked",
+      "C": "checking",
+      "D": "be checked"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Sau 'deserve', 'need' và 'require', danh động từ V-ing mang nghĩa bị động khi chủ ngữ là vật: 'deserves checking' = 'deserves to be checked'.",
+    "explanation_grammar": "Nghĩa bị động của danh động từ: deserve/need/require + V-ing.",
+    "translation": "Bản dự toán chi phí đáng được soát kỹ hơn nhiều so với lần trước.",
+    "core_vocabulary": [
+      {
+        "word": "cost estimate",
+        "type": "n.",
+        "meaning": "bản dự toán chi phí"
+      },
+      {
+        "word": "deserve",
+        "type": "v.",
+        "meaning": "đáng được"
+      }
+    ]
+  },
+  {
+    "id": "q2287",
+    "question": "Only after the contract ______ did the construction work actually begin.",
+    "options": {
+      "A": "was signing",
+      "B": "has signed",
+      "C": "had signed",
+      "D": "had been signed"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Hợp đồng là thứ được ký, và việc ký xảy ra trước khi thi công bắt đầu, nên dùng bị động quá khứ hoàn thành 'had been signed' trong mệnh đề sau 'only after'.",
+    "explanation_grammar": "Bị động quá khứ hoàn thành trong câu đảo ngữ: Only after + S + had been + V3 + did + S + V.",
+    "translation": "Chỉ sau khi hợp đồng được ký thì việc thi công mới thực sự bắt đầu.",
+    "core_vocabulary": [
+      {
+        "word": "construction work",
+        "type": "n.",
+        "meaning": "việc thi công"
+      },
+      {
+        "word": "sign",
+        "type": "v.",
+        "meaning": "ký"
+      }
+    ]
+  },
+  {
+    "id": "q2288",
+    "question": "The concert hall is said ______ designed by a little-known local architect.",
+    "options": {
+      "A": "to have been",
+      "B": "being",
+      "C": "to be having",
+      "D": "to have"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Nhà hát là thứ được thiết kế, và việc thiết kế đã xảy ra từ lâu trước thời điểm nói, nên sau 'is said' dùng bị động hoàn thành 'to have been designed'.",
+    "explanation_grammar": "Bị động tường thuật hoàn thành: S + is said + to have been + V3.",
+    "translation": "Nhà hát này được cho là do một kiến trúc sư địa phương ít tên tuổi thiết kế.",
+    "core_vocabulary": [
+      {
+        "word": "architect",
+        "type": "n.",
+        "meaning": "kiến trúc sư"
+      },
+      {
+        "word": "little-known",
+        "type": "adj.",
+        "meaning": "ít tên tuổi"
+      }
+    ]
+  },
+  {
+    "id": "q2289",
+    "question": "There ______ to be at least three factual errors in the translated manual.",
+    "options": {
+      "A": "are believed",
+      "B": "is believed",
+      "C": "believe",
+      "D": "believing"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Cấu trúc 'There + be + V3 + to be' dùng để nêu nhận định; động từ chia theo danh từ theo sau ('three factual errors' số nhiều) nên dùng 'are believed'.",
+    "explanation_grammar": "Bị động tường thuật với 'there': There + are/is + believed/thought/said + to be + N.",
+    "translation": "Người ta cho rằng có ít nhất ba lỗi nội dung trong bản sổ tay đã dịch.",
+    "core_vocabulary": [
+      {
+        "word": "factual error",
+        "type": "n.",
+        "meaning": "lỗi nội dung, lỗi sự thật"
+      },
+      {
+        "word": "translated",
+        "type": "adj.",
+        "meaning": "đã được dịch"
+      }
+    ]
+  },
+  {
+    "id": "q2290",
+    "question": "Had it not been for the backup server, all the customer data ______.",
+    "options": {
+      "A": "will be lost",
+      "B": "would have been lost",
+      "C": "would lose",
+      "D": "would have lost"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'Had it not been for' là dạng đảo ngữ của điều kiện loại 3. Dữ liệu là thứ bị mất, nên mệnh đề chính dùng bị động 'would have been lost'.",
+    "explanation_grammar": "Bị động trong điều kiện loại 3 đảo ngữ: Had it not been for + N, S + would have been + V3.",
+    "translation": "Nếu không có máy chủ dự phòng thì toàn bộ dữ liệu khách hàng đã bị mất.",
+    "core_vocabulary": [
+      {
+        "word": "backup server",
+        "type": "n.",
+        "meaning": "máy chủ dự phòng"
+      },
+      {
+        "word": "customer data",
+        "type": "n.",
+        "meaning": "dữ liệu khách hàng"
+      }
+    ]
+  },
+  {
+    "id": "q2291",
+    "question": "The former employee is alleged ______ confidential files to a competitor.",
+    "options": {
+      "A": "to have been sold",
+      "B": "to have sold",
+      "C": "to be sold",
+      "D": "having sold"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Bẫy khó: 'is alleged' ở thể bị động, nhưng chính người nhân viên mới là người bán tài liệu, nên phần sau dùng nguyên mẫu chủ động hoàn thành 'to have sold'. Chọn 'to have been sold' sẽ biến nhân viên thành thứ bị bán.",
+    "explanation_grammar": "Bị động tường thuật + nguyên mẫu chủ động: S + is alleged/said + to have + V3 (khi S là người thực hiện).",
+    "translation": "Nhân viên cũ bị cho là đã bán tài liệu mật cho một đối thủ.",
+    "core_vocabulary": [
+      {
+        "word": "allege",
+        "type": "v.",
+        "meaning": "cho rằng, cáo buộc"
+      },
+      {
+        "word": "confidential",
+        "type": "adj.",
+        "meaning": "mật"
+      }
+    ]
+  },
+  {
+    "id": "q2292",
+    "question": "It is now thought that the warehouse fire ______ by faulty wiring.",
+    "options": {
+      "A": "was causing",
+      "B": "caused",
+      "C": "cause",
+      "D": "was caused"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Cụm 'by faulty wiring' chỉ nguyên nhân, nên vụ cháy là hậu quả — phải dùng bị động 'was caused'. Chọn 'caused' sẽ khiến vụ cháy thành nguyên nhân gây ra hệ thống điện lỗi.",
+    "explanation_grammar": "Bị động quá khứ đơn trong mệnh đề 'that': It is thought that + S + was + V3 + by O.",
+    "translation": "Hiện người ta cho rằng vụ cháy nhà kho do hệ thống dây điện bị lỗi gây ra.",
+    "core_vocabulary": [
+      {
+        "word": "wiring",
+        "type": "n.",
+        "meaning": "hệ thống dây điện"
+      },
+      {
+        "word": "faulty",
+        "type": "adj.",
+        "meaning": "bị lỗi"
+      }
+    ]
+  },
+  {
+    "id": "q2293",
+    "question": "The amended regulations are not to ______ until the first of April.",
+    "options": {
+      "A": "been enforced",
+      "B": "be enforced",
+      "C": "enforcing",
+      "D": "enforce"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Quy định là thứ được thi hành, nên sau 'are not to' dùng 'be + V3'. Dạng 'been enforced' chỉ đi sau 'have', không đi sau 'to'.",
+    "explanation_grammar": "Bị động với 'be to': S + be (not) to be + V3.",
+    "translation": "Các quy định đã sửa đổi sẽ chưa được thi hành cho đến ngày mùng một tháng Tư.",
+    "core_vocabulary": [
+      {
+        "word": "enforce",
+        "type": "v.",
+        "meaning": "thi hành, cưỡng chế"
+      },
+      {
+        "word": "amended",
+        "type": "adj.",
+        "meaning": "đã sửa đổi"
+      }
+    ]
+  },
+  {
+    "id": "q2294",
+    "question": "Little ______ known about the company's next generation of products.",
+    "options": {
+      "A": "being",
+      "B": "has",
+      "C": "does",
+      "D": "is"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'Little' mang nghĩa phủ định khi đứng đầu câu nên buộc đảo ngữ. Câu gốc bị động là 'Little is known about...', nên đảo trợ động từ 'is' lên trước.",
+    "explanation_grammar": "Đảo ngữ với bị động: Little/Seldom + is/are + known/said about + N.",
+    "translation": "Người ta biết rất ít về thế hệ sản phẩm tiếp theo của công ty.",
+    "core_vocabulary": [
+      {
+        "word": "little",
+        "type": "det.",
+        "meaning": "rất ít (mang nghĩa phủ định)"
+      },
+      {
+        "word": "generation",
+        "type": "n.",
+        "meaning": "thế hệ"
+      }
+    ]
+  },
+  {
+    "id": "q2295",
+    "question": "The shortlisted designers were made ______ their portfolios a week in advance.",
+    "options": {
+      "A": "submitted",
+      "B": "submit",
+      "C": "to submit",
+      "D": "submitting"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Ở thể chủ động, 'make somebody do something' dùng nguyên mẫu không 'to'; nhưng khi chuyển sang bị động, bắt buộc thêm 'to': 'be made to do'.",
+    "explanation_grammar": "Bị động của 'make': be made + to V (chủ động: make sb + V nguyên mẫu).",
+    "translation": "Các nhà thiết kế vào danh sách ngắn bị buộc phải nộp hồ sơ tác phẩm trước một tuần.",
+    "core_vocabulary": [
+      {
+        "word": "shortlisted",
+        "type": "adj.",
+        "meaning": "vào danh sách ngắn"
+      },
+      {
+        "word": "portfolio",
+        "type": "n.",
+        "meaning": "hồ sơ tác phẩm"
+      }
+    ]
+  },
+  {
+    "id": "q2296",
+    "question": "Visitors are not permitted ______ the restricted area without an escort.",
+    "options": {
+      "A": "entering",
+      "B": "to enter",
+      "C": "be entered",
+      "D": "enter"
+    },
+    "correct_answer": "B",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'Are not permitted' đã bị động, nhưng khách mới là người đi vào, nên phần sau là nguyên mẫu chủ động 'to enter'. Đây là cùng khuôn với 'be allowed/required to V'.",
+    "explanation_grammar": "Bị động + nguyên mẫu chủ động: S (người) + be permitted/allowed + to V.",
+    "translation": "Khách không được phép vào khu vực hạn chế mà không có người đi kèm.",
+    "core_vocabulary": [
+      {
+        "word": "restricted area",
+        "type": "n.",
+        "meaning": "khu vực hạn chế"
+      },
+      {
+        "word": "escort",
+        "type": "n.",
+        "meaning": "người đi kèm, hộ tống"
+      }
+    ]
+  },
+  {
+    "id": "q2297",
+    "question": "Two technicians were seen ______ the server room shortly before the alarm sounded.",
+    "options": {
+      "A": "be left",
+      "B": "leave",
+      "C": "left",
+      "D": "to leave"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Giống 'make', các động từ tri giác như 'see, hear, watch' dùng nguyên mẫu không 'to' ở chủ động nhưng phải thêm 'to' khi chuyển sang bị động: 'were seen to leave'.",
+    "explanation_grammar": "Bị động của động từ tri giác: be seen/heard + to V (chủ động: see sb + V nguyên mẫu).",
+    "translation": "Hai kỹ thuật viên bị thấy đi ra khỏi phòng máy chủ ngay trước khi báo động reo.",
+    "core_vocabulary": [
+      {
+        "word": "server room",
+        "type": "n.",
+        "meaning": "phòng máy chủ"
+      },
+      {
+        "word": "sound",
+        "type": "v.",
+        "meaning": "reo, phát ra âm thanh"
+      }
+    ]
+  },
+  {
+    "id": "q2298",
+    "question": "Had the manufacturing error ______ sooner, the costly recall could have been avoided.",
+    "options": {
+      "A": "been detected",
+      "B": "detected",
+      "C": "be detected",
+      "D": "being detected"
+    },
+    "correct_answer": "A",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Đây là điều kiện loại 3 đảo ngữ, nên sau 'Had + S' phải là 'been + V3'. Lỗi là thứ bị phát hiện nên dùng bị động.",
+    "explanation_grammar": "Bị động trong điều kiện đảo ngữ: Had + S + been + V3, S + could have been + V3.",
+    "translation": "Nếu lỗi sản xuất được phát hiện sớm hơn thì đã tránh được đợt thu hồi tốn kém.",
+    "core_vocabulary": [
+      {
+        "word": "detect",
+        "type": "v.",
+        "meaning": "phát hiện"
+      },
+      {
+        "word": "recall",
+        "type": "n.",
+        "meaning": "đợt thu hồi sản phẩm"
+      }
+    ]
+  },
+  {
+    "id": "q2299",
+    "question": "The supplier is reported ______ its prices twice since the beginning of the year.",
+    "options": {
+      "A": "to raise",
+      "B": "raising",
+      "C": "to have been raised",
+      "D": "to have raised"
+    },
+    "correct_answer": "D",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "Nhà cung cấp là bên chủ động tăng giá (có tân ngữ 'its prices'), nên dù 'is reported' ở thể bị động, phần sau vẫn là nguyên mẫu chủ động hoàn thành 'to have raised'.",
+    "explanation_grammar": "Bị động tường thuật + nguyên mẫu chủ động: S + is reported + to have + V3 + O.",
+    "translation": "Nhà cung cấp bị cho là đã tăng giá hai lần kể từ đầu năm.",
+    "core_vocabulary": [
+      {
+        "word": "raise",
+        "type": "v.",
+        "meaning": "tăng, nâng lên"
+      },
+      {
+        "word": "supplier",
+        "type": "n.",
+        "meaning": "nhà cung cấp"
+      }
+    ]
+  },
+  {
+    "id": "q2300",
+    "question": "Not only ______ the deadline extended, but the project budget was also increased.",
+    "options": {
+      "A": "being",
+      "B": "did",
+      "C": "was",
+      "D": "has"
+    },
+    "correct_answer": "C",
+    "grammar_type": "Câu bị động",
+    "explanation_reason": "'Not only' đầu câu buộc đảo ngữ. Mệnh đề gốc là bị động 'the deadline was extended', nên đảo trợ động từ 'was' lên trước chủ ngữ — đối xứng với 'was also increased' ở mệnh đề sau.",
+    "explanation_grammar": "Đảo ngữ với bị động: Not only + was/were + S + V3, but + S + also + be + V3.",
+    "translation": "Không chỉ hạn chót được gia hạn mà ngân sách dự án cũng được tăng thêm.",
+    "core_vocabulary": [
+      {
+        "word": "extend",
+        "type": "v.",
+        "meaning": "gia hạn, kéo dài"
+      },
+      {
+        "word": "deadline",
+        "type": "n.",
+        "meaning": "hạn chót"
+      }
+    ]
   }
 ] as any[] as GrammarQuestion[];
