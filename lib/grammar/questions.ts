@@ -74248,14 +74248,14 @@ export const grammarQuestions = [
     "id": "q2201",
     "question": "The report ______ to this email contains last quarter's sales figures.",
     "options": {
-      "A": "attached",
-      "B": "is attached",
-      "C": "attaching",
-      "D": "attaches"
+      "A": "attaching",
+      "B": "attach",
+      "C": "is attached",
+      "D": "attached"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Đây là mệnh đề quan hệ bị động rút gọn: 'the report which is attached to this email' lược bỏ 'which is' và giữ lại V3 'attached'. Câu đã có động từ chính 'contains' nên chỗ trống không thể là một động từ chia.",
+    "explanation_reason": "Đây là mệnh đề quan hệ bị động rút gọn: 'the report which is attached to this email' lược bỏ 'which is' và giữ lại V3 'attached'. Câu đã có động từ chính 'contains' nên chỗ trống không nhận động từ chia; dạng nguyên mẫu 'attach' cũng sai vì không có chủ ngữ riêng.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed (bỏ 'which/that + be').",
     "translation": "Bản báo cáo được gửi kèm email này có số liệu doanh thu của quý vừa rồi.",
     "core_vocabulary": [
@@ -74275,14 +74275,14 @@ export const grammarQuestions = [
     "id": "q2202",
     "question": "Once ______, the new leave policy will apply to all branches nationwide.",
     "options": {
-      "A": "approving",
+      "A": "approved",
       "B": "approves",
-      "C": "it approves",
-      "D": "approved"
+      "C": "approving",
+      "D": "approve"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Mệnh đề trạng ngữ bị động rút gọn: 'once it is approved' lược bỏ chủ ngữ và 'be', chỉ còn V3. Chính sách là thứ được phê duyệt nên phải dùng V3, không dùng V-ing.",
+    "explanation_reason": "Mệnh đề trạng ngữ bị động rút gọn: 'once it is approved' lược bỏ chủ ngữ và 'be', chỉ còn V3 'approved'. Chính sách là thứ được phê duyệt nên không dùng V-ing; dạng nguyên mẫu 'approve' cũng sai vì mệnh đề rút gọn không có chủ ngữ để chia động từ.",
     "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: once/when/if/unless + V3/V-ed.",
     "translation": "Sau khi được phê duyệt, chính sách nghỉ phép mới sẽ áp dụng cho toàn bộ chi nhánh trên cả nước.",
     "core_vocabulary": [
@@ -74300,28 +74300,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q2203",
-    "question": "All items ______ in the spring catalog are currently in stock.",
+    "question": "The audience found the opening keynote speech extremely ______.",
     "options": {
-      "A": "listed",
-      "B": "are listed",
-      "C": "listing",
-      "D": "list"
+      "A": "inspired",
+      "B": "inspiring",
+      "C": "inspires",
+      "D": "inspire"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "'Items which are listed' rút gọn thành 'items listed'. Động từ chính của câu là 'are', nên chỗ trống chỉ có thể là phân từ bổ nghĩa cho 'items'.",
-    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
-    "translation": "Toàn bộ mặt hàng được liệt kê trong catalog mùa xuân hiện đều còn hàng.",
+    "explanation_reason": "Phân từ '-ing' mô tả thứ GÂY RA cảm xúc, còn '-ed' mô tả người CẢM NHẬN cảm xúc. Bài phát biểu là thứ truyền cảm hứng cho khán giả, nên dùng 'inspiring'. Nếu dùng 'inspired' thì bài phát biểu lại thành bên được truyền cảm hứng.",
+    "explanation_grammar": "Phân từ tính từ: V-ing (gây ra cảm xúc, dùng cho vật/sự việc) vs V-ed (cảm nhận cảm xúc, dùng cho người).",
+    "translation": "Khán giả thấy bài phát biểu khai mạc truyền cảm hứng đến lạ thường.",
     "core_vocabulary": [
       {
-        "word": "catalog",
+        "word": "keynote speech",
         "type": "n.",
-        "meaning": "catalog, danh mục hàng"
+        "meaning": "bài phát biểu chính"
       },
       {
-        "word": "in stock",
-        "type": "phrase",
-        "meaning": "còn hàng"
+        "word": "inspiring",
+        "type": "adj.",
+        "meaning": "truyền cảm hứng"
       }
     ]
   },
@@ -74330,11 +74330,11 @@ export const grammarQuestions = [
     "question": "As ______ in your letter, the shipment will arrive no later than Monday.",
     "options": {
       "A": "requesting",
-      "B": "it requested",
-      "C": "requested",
-      "D": "request"
+      "B": "request",
+      "C": "it requested",
+      "D": "requested"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'As requested' là dạng rút gọn của 'as it was requested' — yêu cầu là thứ được đưa ra, nên dùng V3. Đây là cụm cố định rất hay gặp trong thư thương mại.",
     "explanation_grammar": "Cụm rút gọn bị động: as requested / as agreed / as scheduled / as mentioned.",
@@ -74356,12 +74356,12 @@ export const grammarQuestions = [
     "id": "q2205",
     "question": "Please find ______ a copy of the signed partnership agreement.",
     "options": {
-      "A": "encloses",
-      "B": "enclose",
-      "C": "enclosing",
-      "D": "enclosed"
+      "A": "enclose",
+      "B": "enclosing",
+      "C": "enclosed",
+      "D": "encloses"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Please find enclosed...' là công thức thư tín: bản sao là thứ được gửi kèm nên dùng V3 'enclosed' làm bổ ngữ cho tân ngữ.",
     "explanation_grammar": "Cụm cố định trong thư tín: Please find enclosed/attached + N.",
@@ -74381,28 +74381,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q2206",
-    "question": "The candidates ______ for a second interview will be contacted later today.",
+    "question": "Most of the participants were highly ______ with the quality of the workshop.",
     "options": {
-      "A": "selecting",
-      "B": "are selected",
-      "C": "selected",
-      "D": "select"
+      "A": "satisfying",
+      "B": "satisfy",
+      "C": "satisfies",
+      "D": "satisfied"
     },
-    "correct_answer": "C",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Ứng viên là người được chọn, nên 'who are selected' rút gọn thành 'selected'. Động từ chính đã là 'will be contacted'.",
-    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
-    "translation": "Những ứng viên được chọn vào vòng phỏng vấn thứ hai sẽ được liên hệ trong hôm nay.",
+    "explanation_reason": "Người tham dự là bên cảm nhận sự hài lòng, nên dùng phân từ '-ed'. Dạng 'satisfying' chỉ dùng cho thứ gây ra sự hài lòng (a satisfying result). Nhớ cụm cố định 'be satisfied with'.",
+    "explanation_grammar": "Phân từ tính từ + giới từ: be satisfied with (người) vs be satisfying (vật).",
+    "translation": "Phần lớn người tham dự đều rất hài lòng với chất lượng buổi tập huấn.",
     "core_vocabulary": [
       {
-        "word": "select",
-        "type": "v.",
-        "meaning": "chọn, tuyển"
+        "word": "be satisfied with",
+        "type": "phrase",
+        "meaning": "hài lòng với"
       },
       {
-        "word": "contact",
-        "type": "v.",
-        "meaning": "liên hệ"
+        "word": "participant",
+        "type": "n.",
+        "meaning": "người tham dự"
       }
     ]
   },
@@ -74410,14 +74410,14 @@ export const grammarQuestions = [
     "id": "q2207",
     "question": "When ______ properly, this machine can run for twelve hours without stopping.",
     "options": {
-      "A": "maintains",
-      "B": "it maintains",
-      "C": "maintained",
-      "D": "maintaining"
+      "A": "maintained",
+      "B": "maintaining",
+      "C": "maintain",
+      "D": "maintains"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "'When it is maintained properly' rút gọn còn 'when maintained properly'. Máy là đối tượng được bảo dưỡng nên dùng V3; chọn V-ing sẽ khiến máy thành chủ thể đi bảo dưỡng.",
+    "explanation_reason": "'When it is maintained properly' rút gọn còn 'when maintained properly'. Máy là đối tượng được bảo dưỡng nên dùng V3; chọn V-ing sẽ khiến máy thành chủ thể đi bảo dưỡng, còn 'maintain' là dạng nguyên mẫu không dùng được trong mệnh đề rút gọn.",
     "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: when/while + V3/V-ed.",
     "translation": "Khi được bảo dưỡng đúng cách, chiếc máy này có thể chạy liên tục mười hai tiếng.",
     "core_vocabulary": [
@@ -74435,55 +74435,55 @@ export const grammarQuestions = [
   },
   {
     "id": "q2208",
-    "question": "Any complaint ______ in writing will receive a response within five working days.",
+    "question": "The instructions on the claim form were so ______ that many applicants filled it in wrongly.",
     "options": {
-      "A": "submits",
-      "B": "is submitted",
-      "C": "submitting",
-      "D": "submitted"
+      "A": "confusing",
+      "B": "confuse",
+      "C": "confused",
+      "D": "confuses"
     },
-    "correct_answer": "D",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Khiếu nại là thứ được gửi tới, nên 'which is submitted' rút gọn thành 'submitted'. Động từ chính của câu là 'will receive'.",
-    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
-    "translation": "Mọi khiếu nại được gửi bằng văn bản sẽ nhận được phản hồi trong vòng năm ngày làm việc.",
+    "explanation_reason": "Bản hướng dẫn là thứ GÂY RA sự bối rối cho người đọc, nên dùng 'confusing'. Chỉ người mới 'confused' (bị bối rối) — ở đây chủ ngữ là 'the instructions' nên không thể dùng dạng '-ed'.",
+    "explanation_grammar": "Phân từ tính từ: vật + be + V-ing; người + be + V-ed.",
+    "translation": "Phần hướng dẫn trên mẫu đơn yêu cầu bồi thường rối đến mức nhiều người khai sai.",
     "core_vocabulary": [
       {
-        "word": "complaint",
+        "word": "claim form",
         "type": "n.",
-        "meaning": "khiếu nại"
+        "meaning": "mẫu đơn yêu cầu bồi thường"
       },
       {
-        "word": "in writing",
-        "type": "phrase",
-        "meaning": "bằng văn bản"
+        "word": "confusing",
+        "type": "adj.",
+        "meaning": "gây rối, khó hiểu"
       }
     ]
   },
   {
     "id": "q2209",
-    "question": "The laboratory equipment ______ last year is already considered out of date.",
+    "question": "Any staff member ______ in joining the mentoring program should contact Ms. Diaz.",
     "options": {
-      "A": "purchased",
-      "B": "purchasing",
-      "C": "was purchased",
-      "D": "purchases"
+      "A": "interesting",
+      "B": "interested",
+      "C": "interest",
+      "D": "interests"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Thiết bị là thứ được mua, nên 'which was purchased last year' rút gọn thành 'purchased last year'. Nếu chọn 'was purchased' thì câu có hai động từ chia mà không có liên từ.",
-    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed (+ trạng ngữ thời gian).",
-    "translation": "Thiết bị phòng thí nghiệm mua từ năm ngoái giờ đã bị coi là lỗi thời.",
+    "explanation_reason": "Nhân viên là người CẢM THẤY quan tâm, nên dùng 'interested'. Dạng 'interesting' nghĩa là 'thú vị, gây hứng thú' — nói về nhân viên thì sai nghĩa. Nhớ cụm 'be interested in + V-ing'.",
+    "explanation_grammar": "Phân từ tính từ + giới từ: be interested in + N/V-ing (người) vs be interesting (vật).",
+    "translation": "Nhân viên nào quan tâm tới việc tham gia chương trình kèm cặp thì hãy liên hệ bà Diaz.",
     "core_vocabulary": [
       {
-        "word": "purchase",
-        "type": "v.",
-        "meaning": "mua"
+        "word": "be interested in",
+        "type": "phrase",
+        "meaning": "quan tâm tới"
       },
       {
-        "word": "out of date",
-        "type": "phrase",
-        "meaning": "lỗi thời"
+        "word": "mentoring program",
+        "type": "n.",
+        "meaning": "chương trình kèm cặp"
       }
     ]
   },
@@ -74491,12 +74491,12 @@ export const grammarQuestions = [
     "id": "q2210",
     "question": "Unless ______ otherwise, all new employees must attend the orientation session.",
     "options": {
-      "A": "instructing",
-      "B": "they instruct",
-      "C": "instructs",
-      "D": "instructed"
+      "A": "they instruct",
+      "B": "instructs",
+      "C": "instructed",
+      "D": "instructing"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'Unless they are instructed otherwise' rút gọn còn 'unless instructed otherwise'. Nhân viên là người được chỉ dẫn nên dùng V3.",
     "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: unless + V3/V-ed.",
@@ -74516,55 +74516,55 @@ export const grammarQuestions = [
   },
   {
     "id": "q2211",
-    "question": "The funds ______ for the lobby renovation have not been released yet.",
+    "question": "Sales figures for the third quarter were ______, falling short of every forecast.",
     "options": {
-      "A": "are allocated",
-      "B": "allocate",
-      "C": "allocating",
-      "D": "allocated"
+      "A": "disappoint",
+      "B": "disappointed",
+      "C": "disappoints",
+      "D": "disappointing"
     },
     "correct_answer": "D",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Khoản tiền là thứ được phân bổ, nên 'which were allocated' rút gọn thành 'allocated'. Động từ chính là 'have not been released'.",
-    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
-    "translation": "Khoản tiền được phân bổ cho việc cải tạo tiền sảnh vẫn chưa được giải ngân.",
+    "explanation_reason": "Các con số doanh thu là thứ GÂY RA sự thất vọng, nên dùng 'disappointing'. Chỉ người mới 'disappointed' (cảm thấy thất vọng).",
+    "explanation_grammar": "Phân từ tính từ: vật/số liệu + be + V-ing (gây ra cảm xúc).",
+    "translation": "Số liệu doanh thu quý ba thật đáng thất vọng, thấp hơn mọi dự báo.",
     "core_vocabulary": [
       {
-        "word": "allocate",
+        "word": "fall short of",
         "type": "v.",
-        "meaning": "phân bổ"
+        "meaning": "không đạt, thấp hơn"
       },
       {
-        "word": "release",
-        "type": "v.",
-        "meaning": "giải ngân, giải phóng"
+        "word": "forecast",
+        "type": "n.",
+        "meaning": "dự báo"
       }
     ]
   },
   {
     "id": "q2212",
-    "question": "If ______ before Friday, your order can still be cancelled free of charge.",
+    "question": "Several passengers were visibly ______ about the sudden change of departure gate.",
     "options": {
-      "A": "notifies",
-      "B": "notified",
-      "C": "notify",
-      "D": "notifying"
+      "A": "annoy",
+      "B": "annoys",
+      "C": "annoyed",
+      "D": "annoying"
     },
-    "correct_answer": "B",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "'If we are notified before Friday' rút gọn còn 'if notified before Friday'. Dạng V3 cho thấy chủ thể của mệnh đề là bên nhận thông báo.",
-    "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: if + V3/V-ed.",
-    "translation": "Nếu được thông báo trước thứ Sáu, đơn hàng của quý khách vẫn có thể huỷ miễn phí.",
+    "explanation_reason": "Hành khách là người CẢM THẤY khó chịu, nên dùng 'annoyed'. Dạng 'annoying' nghĩa là 'gây khó chịu' — nếu dùng sẽ thành chính hành khách làm người khác khó chịu.",
+    "explanation_grammar": "Phân từ tính từ: người + be + V-ed (cảm nhận cảm xúc).",
+    "translation": "Vài hành khách tỏ rõ vẻ khó chịu về việc đổi cửa khởi hành đột ngột.",
     "core_vocabulary": [
       {
-        "word": "notify",
-        "type": "v.",
-        "meaning": "thông báo"
+        "word": "annoyed",
+        "type": "adj.",
+        "meaning": "khó chịu, bực"
       },
       {
-        "word": "free of charge",
-        "type": "phrase",
-        "meaning": "miễn phí"
+        "word": "departure gate",
+        "type": "n.",
+        "meaning": "cửa khởi hành"
       }
     ]
   },
@@ -74572,12 +74572,12 @@ export const grammarQuestions = [
     "id": "q2213",
     "question": "Employees ______ in the pilot program reported higher job satisfaction.",
     "options": {
-      "A": "are included",
-      "B": "including",
-      "C": "included",
-      "D": "include"
+      "A": "included",
+      "B": "include",
+      "C": "including",
+      "D": "are included"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Nhân viên là người được đưa vào chương trình, nên 'who were included' rút gọn thành 'included'. Lưu ý 'including' là giới từ nghĩa 'bao gồm cả', không phù hợp ở đây.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed (phân biệt với giới từ 'including').",
@@ -74599,12 +74599,12 @@ export const grammarQuestions = [
     "id": "q2214",
     "question": "______ in 1998, the city museum has since welcomed over a million visitors.",
     "options": {
-      "A": "It founded",
-      "B": "Founded",
-      "C": "Founding",
+      "A": "Founded",
+      "B": "Founding",
+      "C": "It founded",
       "D": "Found"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
     "explanation_reason": "Bảo tàng là thứ được thành lập, nên phân từ bị động 'Founded' mở đầu câu (rút gọn của 'Since it was founded in 1998'). Lưu ý 'found - founded - founded' (thành lập) khác 'find - found - found' (tìm thấy).",
     "explanation_grammar": "Phân từ bị động mở đầu câu: V3/V-ed + , + S + V.",
@@ -74624,45 +74624,45 @@ export const grammarQuestions = [
   },
   {
     "id": "q2215",
-    "question": "The procedures ______ in the safety manual must be followed exactly.",
+    "question": "The results of the first trial were ______ enough to justify a second phase.",
     "options": {
-      "A": "describe",
-      "B": "described",
-      "C": "are described",
-      "D": "describing"
+      "A": "encourage",
+      "B": "encouraging",
+      "C": "encouraged",
+      "D": "encourages"
     },
     "correct_answer": "B",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Quy trình là thứ được mô tả trong sổ tay, nên 'which are described' rút gọn thành 'described'. Động từ chính của câu là 'must be followed'.",
-    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
-    "translation": "Các quy trình được mô tả trong sổ tay an toàn phải được tuân thủ chính xác.",
+    "explanation_reason": "Kết quả là thứ GÂY RA sự phấn khởi, nên dùng 'encouraging'. Chủ ngữ là vật ('the results') nên không thể dùng 'encouraged' — dạng đó dành cho người được động viên.",
+    "explanation_grammar": "Phân từ tính từ: vật + be + V-ing; người + be + V-ed.",
+    "translation": "Kết quả của đợt thử nghiệm đầu đủ khả quan để biện minh cho giai đoạn hai.",
     "core_vocabulary": [
       {
-        "word": "procedure",
-        "type": "n.",
-        "meaning": "quy trình"
+        "word": "encouraging",
+        "type": "adj.",
+        "meaning": "khả quan, đáng phấn khởi"
       },
       {
-        "word": "manual",
-        "type": "n.",
-        "meaning": "sổ tay hướng dẫn"
+        "word": "justify",
+        "type": "v.",
+        "meaning": "biện minh, cho thấy là xứng đáng"
       }
     ]
   },
   {
     "id": "q2216",
-    "question": "Though ______ twice by the board, the proposal was eventually approved.",
+    "question": "______ twice by the board, the proposal was eventually approved on its third reading.",
     "options": {
-      "A": "rejects",
-      "B": "rejected",
-      "C": "it rejects",
-      "D": "rejecting"
+      "A": "Rejecting",
+      "B": "Having been rejected",
+      "C": "Having been rejecting",
+      "D": "Having rejected"
     },
     "correct_answer": "B",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "'Though it had been rejected twice' rút gọn còn 'though rejected twice'. Đề xuất là thứ bị từ chối nên dùng V3.",
-    "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: though/although + V3/V-ed.",
-    "translation": "Dù đã bị hội đồng từ chối hai lần, bản đề xuất cuối cùng vẫn được thông qua.",
+    "explanation_reason": "Việc bị từ chối xảy ra TRƯỚC việc được thông qua, nên dùng phân từ hoàn thành bị động 'Having been + V3'. Dạng 'Having rejected' mang nghĩa chủ động (chính bản đề xuất đi từ chối ai đó), còn 'Rejecting' vừa chủ động vừa không diễn tả được quan hệ trước-sau.",
+    "explanation_grammar": "Phân từ hoàn thành bị động mở đầu câu: Having been + V3/V-ed + , + S + V.",
+    "translation": "Sau khi bị hội đồng từ chối hai lần, bản đề xuất cuối cùng được thông qua ở lần trình thứ ba.",
     "core_vocabulary": [
       {
         "word": "reject",
@@ -74670,63 +74670,63 @@ export const grammarQuestions = [
         "meaning": "từ chối, bác bỏ"
       },
       {
-        "word": "eventually",
-        "type": "adv.",
-        "meaning": "cuối cùng thì"
+        "word": "reading",
+        "type": "n.",
+        "meaning": "lần trình (dự thảo, đề xuất)"
       }
     ]
   },
   {
     "id": "q2217",
-    "question": "The invoice ______ with the shipment lists the wrong quantity.",
+    "question": "Our pricing model ______ on the volume a client orders each month.",
     "options": {
-      "A": "included",
-      "B": "includes",
-      "C": "including",
-      "D": "is included"
+      "A": "bases",
+      "B": "is basing",
+      "C": "base",
+      "D": "is based"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Hoá đơn là thứ được kèm theo lô hàng, nên 'which was included' rút gọn thành 'included'. Động từ chính là 'lists'.",
-    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
-    "translation": "Hoá đơn gửi kèm lô hàng ghi sai số lượng.",
+    "explanation_reason": "'Be based on' là cụm bị động cố định nghĩa 'dựa trên'. Tiếng Việt dịch là 'dựa trên' nên học viên hay quên 'be' và chọn dạng chủ động 'bases'.",
+    "explanation_grammar": "Cụm bị động cố định: be based on + N.",
+    "translation": "Mô hình giá của chúng tôi dựa trên khối lượng mà khách hàng đặt mỗi tháng.",
     "core_vocabulary": [
       {
-        "word": "invoice",
-        "type": "n.",
-        "meaning": "hoá đơn"
+        "word": "be based on",
+        "type": "phrase",
+        "meaning": "dựa trên"
       },
       {
-        "word": "quantity",
+        "word": "volume",
         "type": "n.",
-        "meaning": "số lượng"
+        "meaning": "khối lượng, lượng hàng"
       }
     ]
   },
   {
     "id": "q2218",
-    "question": "Once ______, the software licence cannot be transferred to another device.",
+    "question": "The chain ______ for its quick response to customer complaints.",
     "options": {
-      "A": "activates",
-      "B": "it activates",
-      "C": "activated",
-      "D": "activating"
+      "A": "is known",
+      "B": "know",
+      "C": "is knowing",
+      "D": "knows"
     },
-    "correct_answer": "C",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "'Once it has been activated' rút gọn còn 'once activated'. Giấy phép là thứ được kích hoạt nên dùng V3.",
-    "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: once + V3/V-ed.",
-    "translation": "Sau khi được kích hoạt, giấy phép phần mềm không thể chuyển sang thiết bị khác.",
+    "explanation_reason": "'Be known for' là cụm bị động cố định nghĩa 'được biết đến vì'. Chuỗi cửa hàng là đối tượng được người ta biết tới, nên không dùng 'knows'.",
+    "explanation_grammar": "Cụm bị động cố định: be known for + N (được biết đến vì) / be known as + N (được gọi là).",
+    "translation": "Chuỗi cửa hàng này được biết đến vì phản hồi nhanh với khiếu nại của khách.",
     "core_vocabulary": [
       {
-        "word": "activate",
-        "type": "v.",
-        "meaning": "kích hoạt"
+        "word": "be known for",
+        "type": "phrase",
+        "meaning": "được biết đến vì"
       },
       {
-        "word": "licence",
+        "word": "chain",
         "type": "n.",
-        "meaning": "giấy phép (sử dụng)"
+        "meaning": "chuỗi cửa hàng"
       }
     ]
   },
@@ -74761,10 +74761,10 @@ export const grammarQuestions = [
     "id": "q2220",
     "question": "______ by heavy rain, the outdoor ceremony was moved into the main hall.",
     "options": {
-      "A": "Disrupt",
+      "A": "Disrupting",
       "B": "Disrupted",
-      "C": "It disrupted",
-      "D": "Disrupting"
+      "C": "Disrupt",
+      "D": "It disrupted"
     },
     "correct_answer": "B",
     "grammar_type": "Câu bị động",
@@ -74786,55 +74786,55 @@ export const grammarQuestions = [
   },
   {
     "id": "q2221",
-    "question": "The training materials ______ to new hires are revised at the start of each year.",
+    "question": "Workers in the grinding section ______ to high levels of dust every day.",
     "options": {
-      "A": "distributed",
-      "B": "are distributed",
-      "C": "distribute",
-      "D": "distributing"
+      "A": "exposes",
+      "B": "are exposing",
+      "C": "expose",
+      "D": "are exposed"
     },
-    "correct_answer": "A",
+    "correct_answer": "D",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Tài liệu là thứ được phát ra, nên 'which are distributed' rút gọn thành 'distributed'. Động từ chính của câu là 'are revised'.",
-    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
-    "translation": "Bộ tài liệu đào tạo phát cho nhân viên mới được chỉnh sửa vào đầu mỗi năm.",
+    "explanation_reason": "'Be exposed to' là cụm bị động cố định nghĩa 'bị phơi nhiễm với'. Công nhân là bên bị tác động, nên dạng chủ động 'expose' sẽ đảo ngược nghĩa thành chính họ phơi nhiễm thứ khác.",
+    "explanation_grammar": "Cụm bị động cố định: be exposed to + N.",
+    "translation": "Công nhân ở khu mài bị phơi nhiễm với lượng bụi cao mỗi ngày.",
     "core_vocabulary": [
       {
-        "word": "new hire",
-        "type": "n.",
-        "meaning": "nhân viên mới"
+        "word": "be exposed to",
+        "type": "phrase",
+        "meaning": "bị phơi nhiễm với"
       },
       {
-        "word": "revise",
-        "type": "v.",
-        "meaning": "chỉnh sửa"
+        "word": "dust",
+        "type": "n.",
+        "meaning": "bụi"
       }
     ]
   },
   {
     "id": "q2222",
-    "question": "Items ______ more than thirty days after purchase cannot be refunded.",
+    "question": "Full-time employees ______ to fifteen days of paid leave each calendar year.",
     "options": {
-      "A": "returning",
-      "B": "return",
-      "C": "are returned",
-      "D": "returned"
+      "A": "entitle",
+      "B": "entitles",
+      "C": "are entitled",
+      "D": "are entitling"
     },
-    "correct_answer": "D",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "Hàng hoá là thứ được trả lại, nên 'which are returned' rút gọn thành 'returned'. Động từ chính là 'cannot be refunded'.",
-    "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động: N + V3/V-ed.",
-    "translation": "Những mặt hàng được trả lại sau hơn ba mươi ngày kể từ khi mua sẽ không được hoàn tiền.",
+    "explanation_reason": "'Be entitled to' là cụm bị động cố định nghĩa 'có quyền được hưởng'. Nhân viên là bên được trao quyền, nên phải có 'be' trước V3.",
+    "explanation_grammar": "Cụm bị động cố định: be entitled to + N (có quyền được hưởng).",
+    "translation": "Nhân viên toàn thời gian có quyền được hưởng mười lăm ngày phép có lương mỗi năm.",
     "core_vocabulary": [
       {
-        "word": "refund",
-        "type": "v.",
-        "meaning": "hoàn tiền"
+        "word": "be entitled to",
+        "type": "phrase",
+        "meaning": "có quyền được hưởng"
       },
       {
-        "word": "purchase",
+        "word": "paid leave",
         "type": "n.",
-        "meaning": "việc mua hàng"
+        "meaning": "phép có lương"
       }
     ]
   },
@@ -74842,14 +74842,14 @@ export const grammarQuestions = [
     "id": "q2223",
     "question": "When ______ with a competitor's quotation, our price is still the lower one.",
     "options": {
-      "A": "compared",
+      "A": "compares",
       "B": "comparing",
-      "C": "it compares",
-      "D": "compares"
+      "C": "compared",
+      "D": "compare"
     },
-    "correct_answer": "A",
+    "correct_answer": "C",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "'When it is compared with...' rút gọn còn 'when compared with...'. Giá của ta là đối tượng được đem so sánh nên dùng V3.",
+    "explanation_reason": "'When it is compared with...' rút gọn còn 'when compared with...'. Giá của ta là đối tượng được đem so sánh nên dùng V3; 'compare' nguyên mẫu và 'compares' chia theo chủ ngữ đều không dùng được trong mệnh đề đã rút gọn.",
     "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: when compared with/to + N.",
     "translation": "Khi đem so với báo giá của đối thủ, giá của chúng tôi vẫn là mức thấp hơn.",
     "core_vocabulary": [
@@ -74869,12 +74869,12 @@ export const grammarQuestions = [
     "id": "q2224",
     "question": "The branch ______ in Hue at the moment is scheduled to open in October.",
     "options": {
-      "A": "being built",
-      "B": "builds",
+      "A": "builds",
+      "B": "being built",
       "C": "building",
       "D": "is built"
     },
-    "correct_answer": "A",
+    "correct_answer": "B",
     "grammar_type": "Câu bị động",
     "explanation_reason": "'The branch which is being built' rút gọn thành 'the branch being built' — dùng 'being + V3' vì việc xây đang diễn ra ('at the moment'). Chỉ 'being built' mới diễn tả được nghĩa 'đang được xây'.",
     "explanation_grammar": "Rút gọn mệnh đề quan hệ bị động tiếp diễn: N + being + V3/V-ed.",
@@ -74894,28 +74894,28 @@ export const grammarQuestions = [
   },
   {
     "id": "q2225",
-    "question": "Although ______ about the risk, the client decided to proceed with the order.",
+    "question": "The outer casing of this device ______ entirely of recycled aluminium.",
     "options": {
-      "A": "warning",
-      "B": "warned",
-      "C": "warns",
-      "D": "he warning"
+      "A": "is made",
+      "B": "is making",
+      "C": "makes",
+      "D": "make"
     },
-    "correct_answer": "B",
+    "correct_answer": "A",
     "grammar_type": "Câu bị động",
-    "explanation_reason": "'Although he had been warned about the risk' rút gọn còn 'although warned about the risk'. Khách hàng là người được cảnh báo nên dùng V3.",
-    "explanation_grammar": "Rút gọn mệnh đề trạng ngữ bị động: although/though + V3/V-ed.",
-    "translation": "Dù đã được cảnh báo về rủi ro, khách hàng vẫn quyết định tiến hành đơn đặt.",
+    "explanation_reason": "'Be made of' là cụm bị động cố định nói về chất liệu còn nhìn thấy được. Vỏ máy là thứ được làm ra nên không dùng 'makes'. Phân biệt: 'be made of' (chất liệu còn nhận ra) vs 'be made from' (nguyên liệu đã biến đổi).",
+    "explanation_grammar": "Cụm bị động cố định: be made of/from + chất liệu; be made in + nơi sản xuất.",
+    "translation": "Lớp vỏ ngoài của thiết bị này được làm hoàn toàn bằng nhôm tái chế.",
     "core_vocabulary": [
       {
-        "word": "warn",
-        "type": "v.",
-        "meaning": "cảnh báo"
+        "word": "be made of",
+        "type": "phrase",
+        "meaning": "được làm bằng"
       },
       {
-        "word": "proceed with",
-        "type": "v.",
-        "meaning": "tiến hành, xúc tiến"
+        "word": "recycled",
+        "type": "adj.",
+        "meaning": "tái chế"
       }
     ]
   },
