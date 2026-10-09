@@ -18,6 +18,14 @@ export const TOPICS: TopicConfig[] = [
     color: "#3b82f6",
   },
   {
+    id: "Câu bị động",
+    slug: "cau-bi-dong",
+    name: "Câu bị động",
+    testSizes: [25, 25, 25, 25],
+    emoji: "🔁",
+    color: "#0891b2",
+  },
+  {
     id: "Hoà hợp S-V",
     slug: "hoa-hop-sv",
     name: "Hoà hợp S-V",
