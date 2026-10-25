@@ -12,6 +12,8 @@ import { useVocab } from "@/hooks/firebase/useVocab";
 import { useClasses } from "@/hooks/firebase/useClasses";
 import { useLocale } from "@/hooks/useLocale";
 import { LiveIndicator } from "@/components/shared/LiveIndicator";
+import { Sheet } from "@/components/journal/paper/Sheet";
+import { Stamp } from "@/components/journal/paper/Stamp";
 import { dayToNum } from "@/lib/schedule-day";
 import type { XpStats, SwWorkStats } from "./page";
 import type { ScheduleItem, Goal, VocabWord, ToeicScore, SwScore } from "@/lib/firebase/types";
@@ -116,12 +118,11 @@ function Tile({
 }) {
   return (
     <div
-      className={`rounded-xl p-6 transition-colors ${className}`}
+      className={`paper-sheet p-5 md:p-6 ${className}`}
       style={{
-        background: dark ? INK : "var(--bg-elevated)",
-        border: "1px solid var(--border)",
+        background: dark ? INK : undefined,
         borderLeft: accentLeft ? "4px solid var(--orange)" : undefined,
-        color: dark ? "white" : "var(--text-primary)",
+        color: dark ? "white" : undefined,
         ...style,
       }}
     >
@@ -130,55 +131,155 @@ function Tile({
   );
 }
 
-// ─── Header ───────────────────────────────────────────────────────────────────
+// ─── Trang hôm nay ────────────────────────────────────────────────────────────
 
-function HeaderTile({ name, xpStats, currentWeek }: { name: string; xpStats: XpStats | null; currentWeek?: number }) {
+const SEC_LABELS: Record<string, string> = {
+  vocab: "Từ vựng", listening: "Nghe", reading: "Đọc", practice: "Đề luyện", other: "Khác",
+};
+
+/** Một việc cần làm hôm nay. */
+type TodayItem = {
+  key: string;
+  href: string;
+  label: string;
+  meta?: string;
+  /** urgent = quá hạn, done = đã xong, normal = còn lại. */
+  tone: "urgent" | "normal" | "done";
+};
+
+function TodayRow({ item }: { item: TodayItem }) {
+  const done = item.tone === "done";
+  const urgent = item.tone === "urgent";
+  return (
+    <Link href={item.href} className="today-row">
+      <span
+        className={`paper-check ${done ? "paper-check--done" : ""} ${urgent ? "paper-check--urgent" : ""}`}
+        aria-hidden="true"
+      >
+        {done ? "\u2713" : ""}
+      </span>
+      <span className="flex-1 min-w-0">
+        <span
+          className="block text-sm font-semibold truncate"
+          style={{
+            color: urgent ? "var(--accent-red, #B94040)" : "var(--text-primary)",
+            textDecoration: done ? "line-through" : undefined,
+            opacity: done ? 0.55 : 1,
+          }}
+        >
+          {item.label}
+        </span>
+        {item.meta && (
+          <span className="block text-xs mt-0.5 truncate" style={{ color: "var(--text-muted)" }}>
+            {item.meta}
+          </span>
+        )}
+      </span>
+      <span
+        className="text-sm shrink-0"
+        style={{ color: done ? "var(--text-muted)" : "var(--accent-primary)" }}
+        aria-hidden="true"
+      >
+        &rarr;
+      </span>
+    </Link>
+  );
+}
+
+function TodaySheet({
+  name,
+  xpStats,
+  currentWeek,
+  items,
+}: {
+  name: string;
+  xpStats: XpStats | null;
+  currentWeek?: number;
+  items: TodayItem[];
+}) {
   const { t } = useLocale();
-  const now = new Date();
-  const dateStr = now.toLocaleDateString("vi-VN", {
+  const dateStr = new Date().toLocaleDateString("vi-VN", {
     weekday: "long", day: "numeric", month: "long", year: "numeric",
   });
 
+  const remaining = items.filter((i) => i.tone !== "done").length;
+
   return (
-    <div
-      className="col-span-12 rounded-xl p-6 relative overflow-hidden flex flex-col md:flex-row justify-between items-start md:items-center"
-      style={{ background: INK }}
-    >
-      <div className="z-10">
-        <div className="flex items-center gap-2 mb-3 flex-wrap">
-          <LiveIndicator />
-          <span className="text-xs" style={{ color: "rgba(255,255,255,0.55)" }}>{dateStr}</span>
-          {/* B2: Pill tuần hiện tại */}
-          {currentWeek != null && (
-            <span
-              className="text-xs font-bold px-2.5 py-0.5 rounded-full"
-              style={{ background: "rgba(196,98,45,0.35)", color: "var(--orange)" }}
-            >
-              Tuần {currentWeek}
-            </span>
-          )}
+    <Sheet stack className="col-span-12 p-5 md:p-7">
+      {/* Lời chào + con dấu tiến độ */}
+      <div className="flex items-start justify-between gap-4 flex-wrap">
+        <div className="min-w-0">
+          <div className="flex items-center gap-2 mb-1.5 flex-wrap">
+            <LiveIndicator />
+            <span className="text-xs" style={{ color: "var(--text-muted)" }}>{dateStr}</span>
+            {currentWeek != null && (
+              <span
+                className="text-xs font-bold px-2 py-0.5"
+                style={{
+                  background: "var(--accent-faint)",
+                  color: "var(--accent-primary)",
+                  border: "1px solid var(--border)",
+                }}
+              >
+                {t(`Tuần ${currentWeek}`, `Week ${currentWeek}`)}
+              </span>
+            )}
+          </div>
+          <h1
+            className="hand leading-none"
+            style={{ fontSize: "clamp(1.9rem, 1.3rem + 2vw, 2.6rem)", color: "var(--text-primary)" }}
+          >
+            {t(`Chào ${name},`, `Hi ${name},`)}
+          </h1>
+          <p className="text-sm mt-1.5" style={{ color: "var(--text-secondary)" }}>
+            {remaining > 0
+              ? t(`hôm nay còn ${remaining} việc trong sổ.`, `${remaining} things left in your journal today.`)
+              : t("hôm nay sổ sạch việc — giỏi lắm!", "your journal is clear today — nice work!")}
+          </p>
         </div>
-        <h1
-          className="text-4xl font-bold text-white mb-2 leading-tight"
-          style={{ fontFamily: "'Lora', Georgia, serif" }}
-        >
-          {t(`Chào, ${name} 👋`, `Hello, ${name} 👋`)}
-        </h1>
-        <p className="text-sm" style={{ color: "rgba(255,255,255,0.6)" }}>
-          {xpStats
-            ? t(
-                `Level ${xpStats.level} · ${xpStats.totalXp} XP · Streak ${xpStats.currentStreak} ngày 🔥`,
-                `Level ${xpStats.level} · ${xpStats.totalXp} XP · ${xpStats.currentStreak}-day streak 🔥`
-              )
-            : t("Sẵn sàng luyện tập hôm nay chứ?", "Ready to practice today?")}
-        </p>
+
+        {xpStats && (
+          <div className="flex items-center gap-3 shrink-0">
+            <Stamp
+              value={`${xpStats.currentStreak}`}
+              label={t("ngày liền", "day streak")}
+              tone={xpStats.currentStreak > 0 ? "accent" : "muted"}
+              rotate={-7}
+              title={t("Số ngày học liên tiếp", "Consecutive study days")}
+            />
+            <Stamp
+              value={`Lv.${xpStats.level}`}
+              label={`${xpStats.totalXp} XP`}
+              tone="green"
+              rotate={5}
+              title={t("Cấp độ và điểm kinh nghiệm", "Level and XP")}
+            />
+          </div>
+        )}
       </div>
-      {/* Decorative glow */}
-      <div
-        className="absolute right-0 top-0 w-72 h-full pointer-events-none"
-        style={{ background: "radial-gradient(circle at 80% 50%, rgba(255,122,61,0.15) 0%, transparent 70%)" }}
-      />
-    </div>
+
+      {/* Việc hôm nay */}
+      <div className="mt-5 pt-4" style={{ borderTop: "1px dashed var(--border)" }}>
+        <p className="hand text-lg mb-1" style={{ color: "var(--text-primary)" }}>
+          {t("Hôm nay cần làm", "To do today")}
+        </p>
+
+        {items.length === 0 ? (
+          <p className="text-sm py-3" style={{ color: "var(--text-muted)" }}>
+            {t(
+              "Không có việc nào được giao. Tranh thủ ôn lại từ vựng cũ nhé.",
+              "Nothing assigned. A good time to review old vocabulary."
+            )}
+          </p>
+        ) : (
+          <div>
+            {items.map((item) => (
+              <TodayRow key={item.key} item={item} />
+            ))}
+          </div>
+        )}
+      </div>
+    </Sheet>
   );
 }
 
@@ -213,7 +314,7 @@ function ScoreTile({ scores, swScores, goal }: {
     <Tile className="col-span-12 md:col-span-6">
       <div className="flex justify-between items-start mb-3">
         <div>
-          <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif" }}>
+          <p className="hand text-lg" style={{ fontFamily: "var(--font-hand)" }}>
             {isSw ? t("Điểm TOEIC S&W", "TOEIC S&W Score") : t("Điểm TOEIC", "TOEIC Score")}
           </p>
           {/* B6: xếp loại */}
@@ -306,121 +407,6 @@ function ScoreTile({ scores, swScores, goal }: {
   );
 }
 
-// ─── Tasks tile ───────────────────────────────────────────────────────────────
-
-const SEC_LABELS: Record<string, string> = {
-  vocab: "Từ vựng", listening: "Nghe", reading: "Đọc", practice: "Đề luyện", other: "Khác",
-};
-
-function TasksTile({
-  homework,
-  submittedDate,
-}: {
-  homework: Record<string, unknown[]> | null;
-  submittedDate: boolean;
-}) {
-  const { t } = useLocale();
-  type HwItem = { title?: string };
-
-  const allItems: { section: string; title: string }[] = homework
-    ? HW_SECTIONS.flatMap((s) =>
-        ((homework[s] as HwItem[]) ?? []).map((item, i) => ({
-          section: s,
-          title: item?.title ?? `${SEC_LABELS[s] ?? s} ${i + 1}`,
-        }))
-      )
-    : [];
-
-  const isDone = submittedDate;
-
-  return (
-    <Tile
-      className="col-span-12 md:col-span-6"
-      style={{
-        background: "rgba(196,98,45,0.07)",
-        borderTop: "3px solid var(--orange)",
-      }}
-    >
-      <div className="flex justify-between items-start mb-3">
-        <div>
-          <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif" }}>
-            {t("Nhiệm vụ hôm nay", "Today's Tasks")}
-          </p>
-          <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
-            {t("Deadline: 23:59", "Due: 23:59")}
-          </p>
-        </div>
-        <span className="text-2xl">📋</span>
-      </div>
-
-      {allItems.length === 0 ? (
-        <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-          {t("Không có bài tập hôm nay", "No assignments today")}
-        </p>
-      ) : isDone ? (
-        <div>
-          <p className="text-sm font-semibold mb-3" style={{ color: "#16a34a" }}>
-            ✓ {t("Đã hoàn thành hết nhiệm vụ", "All tasks completed")}
-          </p>
-          <div className="space-y-1">
-            {allItems.map(({ section, title }, i) => (
-              <div key={i} className="flex items-center gap-2 py-0.5 opacity-50">
-                <span
-                  className="text-[10px] px-1.5 py-0.5 rounded shrink-0"
-                  style={{ background: "rgba(22,163,74,0.1)", color: "#16a34a" }}
-                >
-                  {SEC_LABELS[section]}
-                </span>
-                <span className="text-xs truncate" style={{ color: "var(--text-secondary)" }}>
-                  {title}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      ) : (
-        <div className="space-y-1">
-          {allItems.map(({ section, title }, i) => (
-            <div key={i} className="flex items-center gap-2 py-0.5">
-              <span
-                className="text-[10px] px-1.5 py-0.5 rounded shrink-0"
-                style={{ background: "rgba(196,98,45,0.1)", color: "var(--orange)" }}
-              >
-                {SEC_LABELS[section]}
-              </span>
-              <span className="text-xs truncate" style={{ color: "var(--text-secondary)" }}>
-                {title}
-              </span>
-            </div>
-          ))}
-          <div
-            className="pt-1.5 mt-0.5 flex items-center gap-1 text-xs"
-            style={{ color: "var(--orange)", borderTop: "1px solid var(--border)" }}
-          >
-            <span>⚠</span>
-            <span>{t(`${allItems.length} nhiệm vụ chờ`, `${allItems.length} tasks pending`)}</span>
-          </div>
-        </div>
-      )}
-
-      {allItems.length > 0 && (
-        <Link
-          href="/journal/missions"
-          className="w-full mt-4 flex items-center justify-center gap-2 py-2.5 rounded-lg font-semibold text-sm transition-all hover:brightness-110 active:scale-[0.98]"
-          style={{
-            background: isDone ? "var(--bg-primary)" : "var(--orange)",
-            border: isDone ? "1px solid var(--border)" : "none",
-            color: isDone ? "var(--text-muted)" : "white",
-            textDecoration: "none",
-          }}
-        >
-          {isDone ? t("Xem lại →", "Review →") : t("Làm ngay →", "Start now →")}
-        </Link>
-      )}
-    </Tile>
-  );
-}
-
 // ─── Feedback tile ────────────────────────────────────────────────────────────
 
 function FeedbackTile({
@@ -446,7 +432,7 @@ function FeedbackTile({
     <Tile className="col-span-12 md:col-span-6" accentLeft>
       <div className="flex items-center gap-2 mb-4">
         <span className="text-lg" style={{ color: "var(--orange)" }}>💬</span>
-        <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif" }}>
+        <p className="hand text-lg" style={{ fontFamily: "var(--font-hand)" }}>
           {t("Nhận xét của Giáo viên", "Teacher's Feedback")}
         </p>
       </div>
@@ -491,7 +477,7 @@ function SwWorkTile({ stats }: { stats: SwWorkStats }) {
   return (
     <Tile className="col-span-12 md:col-span-6">
       <div className="flex items-center justify-between mb-4">
-        <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)" }}>
+        <p className="hand text-lg" style={{ fontFamily: "var(--font-hand)", color: "var(--text-primary)" }}>
           {t("Bài Speaking & Writing", "Speaking & Writing")}
         </p>
         <Link href="/journal/submissions" className="text-xs font-medium hover:opacity-70 transition-opacity" style={{ color: "var(--orange)" }}>
@@ -550,7 +536,7 @@ function ScheduleTile({ schedule }: { schedule: ScheduleItem[] }) {
   return (
     <Tile className="col-span-12 md:col-span-6">
       <div className="flex items-center justify-between mb-4">
-        <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif", color: "var(--text-primary)" }}>
+        <p className="hand text-lg" style={{ fontFamily: "var(--font-hand)", color: "var(--text-primary)" }}>
           {t("Lịch trình sắp tới", "Upcoming Schedule")}
         </p>
         <Link
@@ -674,7 +660,7 @@ function DictationProgressTile({
       <div className="flex justify-between items-center mb-6">
         <div className="flex items-center gap-2">
           <span className="text-lg" style={{ color: "var(--orange)" }}>🔥</span>
-          <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif" }}>
+          <p className="hand text-lg" style={{ fontFamily: "var(--font-hand)" }}>
             {t("Dictation Progress", "Dictation Progress")}
           </p>
         </div>
@@ -834,7 +820,7 @@ function SkillProgressTile({ scores }: { scores: ToeicScore[] }) {
     <Tile className="col-span-12">
       {/* Header + tab buttons */}
       <div className="flex items-center justify-between mb-5 flex-wrap gap-3">
-        <p className="font-semibold text-base" style={{ fontFamily: "'Lora', Georgia, serif" }}>
+        <p className="hand text-lg" style={{ fontFamily: "var(--font-hand)" }}>
           {t("Tiến độ Kỹ năng", "Skill Progress")}
         </p>
         <div
@@ -1000,181 +986,16 @@ function SkillProgressTile({ scores }: { scores: ToeicScore[] }) {
   );
 }
 
-// ─── Overdue Banner (B13) ─────────────────────────────────────────────────────
-
-function OverdueBanner({ count }: { count: number }) {
-  const [dismissed, setDismissed] = useState(false);
-  if (count === 0 || dismissed) return null;
-  return (
-    <div
-      className="col-span-12 flex items-center justify-between gap-3 px-4 py-3 rounded-xl"
-      style={{
-        background: "rgba(176,58,42,0.07)",
-        border: "1px solid rgba(176,58,42,0.3)",
-        borderLeft: "4px solid rgba(176,58,42,0.7)",
-      }}
-    >
-      <div className="flex items-center gap-2 min-w-0">
-        <span className="text-lg shrink-0">⏰</span>
-        <p className="text-sm font-semibold" style={{ color: "rgba(176,58,42,0.9)" }}>
-          {count} bài quá hạn chưa nộp
-        </p>
-      </div>
-      <div className="flex items-center gap-3 shrink-0">
-        <Link
-          href="/journal/missions"
-          className="text-xs font-bold px-3 py-1.5 rounded-lg text-white"
-          style={{ background: "rgba(176,58,42,0.85)" }}
-        >
-          Xem ngay →
-        </Link>
-        <button
-          onClick={() => setDismissed(true)}
-          className="text-sm"
-          style={{ color: "var(--text-muted)", background: "none", border: "none", cursor: "pointer" }}
-          aria-label="Đóng"
-        >
-          ✕
-        </button>
-      </div>
-    </div>
-  );
-}
-
-// ─── Daily Digest Popup (B14) ─────────────────────────────────────────────────
-
-function DailyDigestPopup({
-  overdueCount,
-  vocabDueCount,
-  name,
-}: {
-  overdueCount: number;
-  vocabDueCount: number;
-  name: string;
-}) {
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    if (overdueCount + vocabDueCount > 0) setOpen(true);
-  }, [overdueCount, vocabDueCount]);
-
-  function close() { setOpen(false); }
-
-  if (!open) return null;
-
-  const items = [
-    overdueCount > 0 && {
-      icon: "📌",
-      label: `${overdueCount} nhiệm vụ quá hạn`,
-      sub: `Từ ${overdueCount} buổi chưa hoàn thành`,
-      href: "/journal/missions",
-      btn: "Xem →",
-    },
-    vocabDueCount > 0 && {
-      icon: "📖",
-      label: `${vocabDueCount} từ vựng đến hạn ôn`,
-      sub: "Ôn ngay để nhớ lâu hơn",
-      href: "/journal/vocab",
-      btn: "Ôn →",
-    },
-  ].filter(Boolean) as { icon: string; label: string; sub: string; href: string; btn: string }[];
-
-  return (
-    <div
-      style={{
-        position: "fixed", inset: 0, zIndex: 200,
-        background: "rgba(0,0,0,0.55)",
-        display: "flex", alignItems: "center", justifyContent: "center", padding: "1rem",
-      }}
-      onClick={close}
-    >
-      <div
-        style={{
-          width: "100%", maxWidth: 380,
-          background: "var(--journal-ink)",
-          boxShadow: "0 20px 60px rgba(0,0,0,.6)",
-        }}
-        onClick={(e) => e.stopPropagation()}
-      >
-        {/* Header */}
-        <div style={{ padding: "1.5rem 1.5rem 1rem", textAlign: "center" }}>
-          <div style={{ fontSize: "2rem", marginBottom: ".5rem" }}>☀️</div>
-          <p style={{
-            fontFamily: "'Lora', Georgia, serif",
-            fontSize: "1.05rem", fontWeight: 700,
-            color: "var(--orange2)", lineHeight: 1.4, margin: 0,
-          }}>
-            Chào {name}~ Cùng ôn tập một chút nhé! 💪
-          </p>
-        </div>
-
-        {/* Items */}
-        <div style={{ padding: "0 1rem 1rem", display: "flex", flexDirection: "column", gap: ".6rem" }}>
-          {items.map(({ icon, label, sub, href, btn }) => (
-            <div
-              key={href}
-              style={{
-                background: "rgba(255,255,255,.06)",
-                border: "1px solid rgba(255,255,255,.1)",
-                display: "flex", alignItems: "center", gap: ".9rem",
-                padding: ".75rem 1rem",
-              }}
-            >
-              <span style={{ fontSize: "1.2rem", flexShrink: 0 }}>{icon}</span>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <p style={{ fontSize: ".85rem", fontWeight: 700, color: "#fff", margin: 0 }}>{label}</p>
-                <p style={{ fontSize: ".72rem", color: "rgba(255,255,255,.5)", margin: 0 }}>{sub}</p>
-              </div>
-              <Link
-                href={href}
-                onClick={close}
-                style={{
-                  flexShrink: 0,
-                  padding: ".35rem .9rem",
-                  background: "var(--accent-primary)", color: "#fff",
-                  fontSize: ".78rem", fontWeight: 700,
-                  textDecoration: "none",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                {btn}
-              </Link>
-            </div>
-          ))}
-        </div>
-
-        {/* Footer */}
-        <div style={{ padding: "0 1rem 1.25rem" }}>
-          <button
-            onClick={close}
-            style={{
-              width: "100%", padding: ".65rem",
-              background: "rgba(255,255,255,.08)",
-              border: "1px solid rgba(255,255,255,.12)",
-              color: "rgba(255,255,255,.6)",
-              fontSize: ".85rem", fontWeight: 600,
-              cursor: "pointer",
-            }}
-          >
-            Để sau
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 // ─── Loading skeleton ─────────────────────────────────────────────────────────
 
 function LoadingSkeleton() {
   return (
     <div className="grid grid-cols-12 gap-5 animate-pulse">
-      <div className="col-span-12 h-32 rounded-xl" style={{ background: INK, opacity: 0.35 }} />
-      <div className="col-span-6 h-40 rounded-xl" style={{ background: "var(--bg-elevated)" }} />
-      <div className="col-span-6 h-40 rounded-xl" style={{ background: "var(--bg-elevated)" }} />
-      <div className="col-span-6 h-40 rounded-xl" style={{ background: "var(--bg-elevated)" }} />
-      <div className="col-span-6 h-40 rounded-xl" style={{ background: "var(--bg-elevated)" }} />
-      <div className="col-span-12 h-52 rounded-xl" style={{ background: "var(--bg-elevated)" }} />
+      <div className="col-span-12 h-56 paper-sheet" style={{ background: "var(--bg-elevated)" }} />
+      <div className="col-span-12 md:col-span-6 h-40 paper-sheet" style={{ background: "var(--bg-elevated)" }} />
+      <div className="col-span-12 md:col-span-6 h-40 paper-sheet" style={{ background: "var(--bg-elevated)" }} />
+      <div className="col-span-12 h-52 paper-sheet" style={{ background: "var(--bg-elevated)" }} />
+      <div className="col-span-12 h-52 paper-sheet" style={{ background: "var(--bg-elevated)" }} />
     </div>
   );
 }
@@ -1259,64 +1080,117 @@ export default function DashboardClient({ xpStats, swWork }: { xpStats: XpStats 
   // B11: today's hw is submitted if there's a ticked submission for its date
   const todaySubmitted = todayHw ? (submissions[todayHw.date]?.ticked ?? false) : false;
 
+  // ── Danh sách việc hôm nay, xếp theo mức gấp ──────────────────────────────
+  const todayItems: TodayItem[] = [];
+
+  if (overdueCount > 0) {
+    todayItems.push({
+      key: "overdue",
+      href: "/journal/missions",
+      label: `${overdueCount} bài quá hạn chưa nộp`,
+      meta: "Nộp bù càng sớm càng đỡ dồn",
+      tone: "urgent",
+    });
+  }
+
+  // Bài tập về nhà hôm nay — kèm tên vài đầu việc để khỏi phải mở trang khác
+  const hwItemTitles: string[] = hwSections
+    ? HW_SECTIONS.flatMap((sec) =>
+        ((hwSections[sec] as { title?: string }[]) ?? []).map(
+          (item, i) => item?.title ?? `${SEC_LABELS[sec] ?? sec} ${i + 1}`
+        )
+      )
+    : [];
+
+  if (hwItemTitles.length > 0) {
+    const preview = hwItemTitles.slice(0, 3).join(" · ");
+    todayItems.push({
+      key: "homework",
+      href: "/journal/missions",
+      label: `Bài tập về nhà — ${hwItemTitles.length} việc`,
+      meta: hwItemTitles.length > 3 ? `${preview} · +${hwItemTitles.length - 3} nữa` : preview,
+      tone: todaySubmitted ? "done" : "normal",
+    });
+  }
+
+  if (vocabDueCount > 0) {
+    todayItems.push({
+      key: "vocab",
+      href: "/journal/vocab",
+      label: `${vocabDueCount} từ vựng đến hạn ôn`,
+      meta: "Ôn đúng hạn thì nhớ lâu hơn nhiều",
+      tone: "normal",
+    });
+  }
+
+  for (const sc of mergedSchedule.filter((item) => item.date === td)) {
+    todayItems.push({
+      key: `class_${sc.id}`,
+      href: "/journal/schedule",
+      label: sc.title,
+      meta: sc.time ? `Hôm nay lúc ${sc.time}` : "Hôm nay",
+      tone: "normal",
+    });
+  }
+
+  if (swWork && swWork.pending > 0) {
+    todayItems.push({
+      key: "sw-pending",
+      href: "/journal/submissions",
+      label: `${swWork.pending} bài Speaking/Writing đang chờ thầy chấm`,
+      meta: "Không cần làm gì thêm — chỉ để bạn theo dõi",
+      tone: "done",
+    });
+  }
+
   return (
-    <>
-      {/* B14: Daily Digest popup */}
-      <DailyDigestPopup
-        overdueCount={overdueCount}
-        vocabDueCount={vocabDueCount}
+    <div className="grid grid-cols-12 gap-5">
+      {/* Tài khoản tạm dừng */}
+      {student?.frozen && (
+        <div
+          className="col-span-12 px-4 py-3 flex items-center gap-3"
+          style={{
+            background: "rgba(245,158,11,.08)",
+            border: "1px solid rgba(245,158,11,.3)",
+            borderLeft: "4px solid rgba(245,158,11,.7)",
+          }}
+        >
+          <span className="text-xl">&#10052;&#65039;</span>
+          <div>
+            <p className="font-semibold text-sm" style={{ color: "rgba(245,158,11,.9)" }}>
+              Tài khoản đang tạm dừng
+            </p>
+            <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
+              Liên hệ giáo viên để tiếp tục học.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Trang hôm nay: lời chào + con dấu tiến độ + việc cần làm */}
+      <TodaySheet
         name={name}
+        xpStats={xpStats}
+        currentWeek={student?.currentWeek}
+        items={todayItems}
       />
 
-      <div className="grid grid-cols-12 gap-5">
-        {/* Frozen alert */}
-        {student?.frozen && (
-          <div
-            className="col-span-12 px-4 py-3 rounded-xl flex items-center gap-3"
-            style={{
-              background: "rgba(245,158,11,.08)",
-              border: "1px solid rgba(245,158,11,.3)",
-              borderLeft: "4px solid rgba(245,158,11,.7)",
-            }}
-          >
-            <span className="text-xl">❄️</span>
-            <div>
-              <p className="font-semibold text-sm" style={{ color: "rgba(245,158,11,.9)" }}>
-                Tài khoản đang tạm dừng
-              </p>
-              <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
-                Liên hệ giáo viên để tiếp tục học.
-              </p>
-            </div>
-          </div>
-        )}
+      {/* Điểm số | Lịch sắp tới */}
+      <ScoreTile scores={scores} swScores={swScores} goal={goal} />
+      <ScheduleTile schedule={mergedSchedule} />
 
-        {/* B13: Overdue banner */}
-        <OverdueBanner count={overdueCount} />
+      {/* Tiến độ kỹ năng */}
+      <SkillProgressTile scores={scores} />
 
-        {/* Row 1: Header (B1, B2) */}
-        <HeaderTile name={name} xpStats={xpStats} currentWeek={student?.currentWeek} />
+      {/* Tiến độ dictation */}
+      <DictationProgressTile errorLog={errorLog} xpStats={xpStats} />
 
-        {/* Row 2: Score | Tasks */}
-        <ScoreTile scores={scores} swScores={swScores} goal={goal} />
-        <TasksTile homework={hwSections} submittedDate={todaySubmitted} />
-
-        {/* Row 3: Schedule | Feedback */}
-        <ScheduleTile schedule={mergedSchedule} />
-        <FeedbackTile
-          comments={student?.comments as Record<string, { text: string; ts: number }> | undefined}
-          hwNote={latestHwNote}
-        />
-
-        {/* Row 3b: Bài Speaking & Writing đã lưu/gửi chấm */}
-        {swWork && <SwWorkTile stats={swWork} />}
-
-        {/* Row 4: Skill Progress */}
-        <SkillProgressTile scores={scores} />
-
-        {/* Row 5: Dictation Progress (full width) */}
-        <DictationProgressTile errorLog={errorLog} xpStats={xpStats} />
-      </div>
-    </>
+      {/* Nhận xét của thầy | Bài Speaking & Writing */}
+      <FeedbackTile
+        comments={student?.comments as Record<string, { text: string; ts: number }> | undefined}
+        hwNote={latestHwNote}
+      />
+      {swWork && <SwWorkTile stats={swWork} />}
+    </div>
   );
 }
