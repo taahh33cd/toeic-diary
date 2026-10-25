@@ -1838,3 +1838,10 @@ a[aria-disabled="true"] {
 @media (prefers-reduced-motion: reduce) {
   .today-row { transition: none; }
 }
+
+/* ── Theme tối: xanh/đỏ gốc quá sẫm trên nền giấy than ──
+   Chỉ theme "dark" có nền tối trong 18 theme, nên chỉnh riêng ở đây. */
+.theme-journal[data-journal-theme="dark"] {
+  --accent-green: #7FB98C;
+  --accent-red:   #E08A80;
+}

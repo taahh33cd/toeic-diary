@@ -170,7 +170,7 @@ function TodayRow({ item }: { item: TodayItem }) {
           {item.label}
         </span>
         {item.meta && (
-          <span className="block text-xs mt-0.5 truncate" style={{ color: "var(--text-muted)" }}>
+          <span className="block text-xs mt-0.5 truncate" style={{ color: "var(--text-secondary)" }}>
             {item.meta}
           </span>
         )}

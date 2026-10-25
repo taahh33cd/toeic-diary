@@ -513,8 +513,12 @@ export function JournalThemeWrapper({
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div
         className={className}
+        // data-journal-theme để CSS chỉnh riêng được cho theme tối
+        data-journal-theme={theme}
         style={{
-          background: vars["--bg-primary"],
+          // backgroundColor, KHÔNG phải background: shorthand inline sẽ xoá
+          // background-image của .journal-paper (dòng kẻ + vân giấy)
+          backgroundColor: vars["--bg-primary"],
           color: vars["--text-primary"],
           ...(vars as React.CSSProperties),
         }}
