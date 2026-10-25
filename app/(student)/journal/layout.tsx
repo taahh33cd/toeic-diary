@@ -5,7 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { Brand } from "@/components/shared/Brand";
 import { NavSwitcher } from "@/components/shared/NavSwitcher";
-import { JournalTabBar } from "@/components/journal/TabBar";
+import { ChapterTabs } from "@/components/journal/paper/ChapterTabs";
 import { JournalMobileNav } from "@/components/journal/MobileNav";
 import { JournalNotificationBell } from "@/components/journal/JournalNotificationBell";
 import { MobileBottomNav } from "@/components/journal/MobileBottomNav";
@@ -44,7 +44,7 @@ export default async function JournalLayout({
   return (
     <LocaleProvider>
     <JournalThemeWrapper
-      className="theme-journal min-h-screen flex flex-col"
+      className="theme-journal journal-paper min-h-screen flex flex-col"
       initialTheme={profile.journalTheme ?? undefined}
     >
       {/* ── Skip to main content ── */}
@@ -57,7 +57,7 @@ export default async function JournalLayout({
 
       {/* ── Top header ── */}
       <header
-        className="sticky top-0 z-40 border-b"
+        className="journal-cover sticky top-0 z-40 border-b"
         style={{
           background: "var(--journal-header-bg, #3D2B1F)",
           borderColor: "var(--journal-header-border, #2A1F15)",
@@ -94,8 +94,8 @@ export default async function JournalLayout({
         </div>
       </header>
 
-      {/* ── Desktop journal tab bar ── */}
-      <JournalTabBar studentCode={profile.studentCode} />
+      {/* ── Tab chỉ mục 5 chương (desktop) + dải trang con (mọi cỡ) ── */}
+      <ChapterTabs studentCode={profile.studentCode} />
 
       {/* ── Push notification prompt ── */}
       <PushPromptBanner
@@ -104,7 +104,7 @@ export default async function JournalLayout({
       />
 
       {/* ── Page content ── */}
-      <main id="main-content" className="flex-1 max-w-[1400px] mx-auto w-full px-4 md:px-6 py-4 md:py-6">
+      <main id="main-content" className="journal-canvas flex-1 max-w-[1400px] mx-auto w-full px-4 md:px-6 py-4 md:py-6">
         <ViewTransition enter="journal-page" exit="journal-page">
           {children}
         </ViewTransition>

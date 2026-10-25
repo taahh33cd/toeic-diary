@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, JetBrains_Mono, Syne, Lora, Be_Vietnam_Pro, Noto_Serif, Plus_Jakarta_Sans } from "next/font/google";
+import { DM_Sans, JetBrains_Mono, Syne, Lora, Be_Vietnam_Pro, Noto_Serif, Plus_Jakarta_Sans, Playpen_Sans } from "next/font/google";
 import "./globals.css";
 import { FirebaseBridgeProvider } from "@/components/shared/FirebaseBridgeProvider";
 import { ToastProvider } from "@/components/shared/Toast";
@@ -45,6 +45,16 @@ const beVietnamPro = Be_Vietnam_Pro({
   display: "swap",
   weight: ["300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
+});
+
+// Chữ viết tay cho tiêu đề mục / nhãn tab / ghi chú bên lề trong sổ.
+// Playpen Sans có subset "vietnamese" nên dấu tiếng Việt render đúng
+// (Caveat, Architects Daughter, Kalam đều thiếu subset này).
+const playpenSans = Playpen_Sans({
+  subsets: ["latin", "vietnamese"],
+  variable: "--font-hand-face",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 // ── Admin "Silk & Alexandria" fonts ─────────────────────
@@ -117,7 +127,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${dmSans.variable} ${jetbrainsMono.variable} ${syne.variable} ${lora.variable} ${beVietnamPro.variable} ${notoSerif.variable} ${plusJakarta.variable}`}
+        className={`${dmSans.variable} ${jetbrainsMono.variable} ${syne.variable} ${lora.variable} ${beVietnamPro.variable} ${notoSerif.variable} ${plusJakarta.variable} ${playpenSans.variable}`}
         suppressHydrationWarning
       >
         <FirebaseBridgeProvider />

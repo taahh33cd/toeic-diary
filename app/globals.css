@@ -1579,3 +1579,193 @@ a[aria-disabled="true"] {
   }
   a[href]::after { content: none !important; }
 }
+
+/* ─────────────────────────────────────────────────────────
+   JOURNAL — LỚP CHẤT LIỆU GIẤY (Phase 1)
+   Mọi token dưới đây suy ra từ biến màu của theme đang chọn
+   bằng color-mix(), nên cả 18 theme tự có giấy đúng tông —
+   không phải khai báo tay 18 bảng giá trị.
+───────────────────────────────────────────────────────── */
+.theme-journal {
+  /* Màu chữ nền của cả vùng sổ.
+     Thiếu dòng này, chữ không khai báo màu sẽ kế thừa màu sáng của
+     dark mode toàn site và chìm trên nền giấy. */
+  color: var(--text-primary);
+
+  /* Khoảng cách dòng kẻ của nền trang */
+  --paper-line-h: 30px;
+  /* Dòng kẻ: mực nhạt trên giấy sáng, sáng nhạt trên giấy tối */
+  --paper-rule:   color-mix(in srgb, var(--text-primary) 9%, transparent);
+  /* Lề đỏ dọc */
+  --paper-margin: color-mix(in srgb, var(--accent-red, #B94040) 40%, transparent);
+  /* Mép giấy xếp lớp */
+  --paper-edge:   color-mix(in srgb, var(--text-primary) 13%, transparent);
+  /* Mặt tờ giấy */
+  --paper-sheet:  var(--bg-elevated);
+  /* Chữ viết tay — Playpen Sans có subset vietnamese nên dấu hiện đúng */
+  --font-hand: var(--font-hand-face), "Playpen Sans", "Segoe Print", cursive;
+}
+
+/* ── Nền trang: giấy kẻ dòng + vân giấy ──
+   Vân là 1 tile SVG 140px, nhẹ và không gây moiré. */
+.journal-paper {
+  background-color: var(--bg-primary);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E"),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent calc(var(--paper-line-h) - 1px),
+      var(--paper-rule) calc(var(--paper-line-h) - 1px),
+      var(--paper-rule) var(--paper-line-h)
+    );
+  background-size: 140px 140px, auto;
+}
+
+/* ── Lề đỏ dọc — chỉ hiện khi đủ rộng để không ăn vào nội dung ── */
+.journal-canvas { position: relative; }
+@media (min-width: 1280px) {
+  .journal-canvas { padding-left: 3.25rem; }
+  .journal-canvas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1.75rem;
+    width: 1px;
+    background: var(--paper-margin);
+    pointer-events: none;
+  }
+}
+
+/* ── Tờ giấy ── */
+.paper-sheet {
+  position: relative;
+  background: var(--paper-sheet);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--text-primary) 7%, transparent);
+}
+
+/* Biến thể xếp lớp: 2 tờ nhô ra sau, gợi cảm giác tập giấy dày */
+.paper-sheet--stack {
+  box-shadow:
+    3px 3px 0 -1px var(--paper-sheet),
+    3px 3px 0 0 var(--paper-edge),
+    6px 6px 0 -1px var(--paper-sheet),
+    6px 6px 0 0 var(--paper-edge),
+    0 8px 18px -10px color-mix(in srgb, var(--text-primary) 25%, transparent);
+}
+
+/* Góc gấp dưới-phải */
+.paper-sheet--fold::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(
+    135deg,
+    transparent 50%,
+    var(--paper-edge) 50%,
+    var(--bg-primary) 52%
+  );
+  pointer-events: none;
+}
+
+/* Nhấc nhẹ khi hover — tắt theo prefers-reduced-motion ở cuối file */
+.paper-sheet--lift {
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.paper-sheet--lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -8px color-mix(in srgb, var(--text-primary) 35%, transparent);
+}
+
+/* ── Tab chỉ mục chương ──
+   Hình thang như tab giấy; tab đang mở liền mạch với tờ giấy bên dưới. */
+.paper-tabs {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  position: relative;
+  z-index: 1;
+  /* Đường nối chân tab với tờ giấy */
+  box-shadow: inset 0 -1px 0 var(--border);
+}
+.paper-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .45rem .95rem .5rem;
+  font-family: var(--font-hand);
+  font-size: 1.08rem;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: .01em;
+  color: var(--text-secondary);
+  text-decoration: none;
+  white-space: nowrap;
+  background: color-mix(in srgb, var(--bg-secondary) 70%, transparent);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 100%, 0 100%);
+  transition: background .15s ease, color .15s ease, padding .15s ease;
+}
+.paper-tab:hover {
+  background: color-mix(in srgb, var(--bg-elevated) 85%, transparent);
+  color: var(--text-primary);
+}
+.paper-tab[aria-current="page"] {
+  background: var(--paper-sheet);
+  color: var(--accent-primary);
+  padding-top: .6rem;
+  padding-bottom: .55rem;
+  font-weight: 700;
+  /* Che đường nối để tab liền với tờ giấy */
+  box-shadow: 0 1px 0 0 var(--paper-sheet);
+}
+
+/* ── Chữ viết tay ── */
+.hand {
+  font-family: var(--font-hand);
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+
+/* ── Tôn trọng prefers-reduced-motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .paper-sheet--lift,
+  .paper-tab {
+    transition: none;
+  }
+  .paper-sheet--lift:hover {
+    transform: none;
+  }
+}
+
+/* Dải trang con cuộn ngang trên mobile — ẩn thanh cuộn cho gọn */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* ── Header journal = bìa sổ: vân da mảnh + đường chỉ may ── */
+.journal-cover {
+  position: relative;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23g)' opacity='.06'/%3E%3C/svg%3E");
+  background-size: 120px 120px;
+}
+.journal-cover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  height: 1px;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2) 0 7px,
+    transparent 7px 14px
+  );
+  pointer-events: none;
+}
