@@ -46,7 +46,20 @@ export type W45Exercise = {
   imageUrl?: string;
 };
 
-export type WExercise = W1Exercise | W2Exercise | W3Exercise | W45Exercise;
+export type W5Step = { label: string; answer: string };
+
+export type W5bExercise = {
+  type: "photo_analysis";
+  id: string;
+  difficulty: "easy" | "medium" | "hard";
+  imageContext: string;
+  steps: W5Step[]; // [Who, WhatAction, Where, FullSentence]
+  explanation: string;
+  imagePath?: string;
+  imageUrl?: string;
+};
+
+export type WExercise = W1Exercise | W2Exercise | W3Exercise | W45Exercise | W5bExercise;
 
 export type WLevel = {
   difficulty: "easy" | "medium" | "hard";
@@ -182,7 +195,7 @@ type Tang1Raw = { questions: { id: number; difficulty: string; prompt: string; a
 type Tang2Raw = { levels: { level: string; exercises: { id: string; question: string; correct_answer: string; explanation: string; image_path?: string; image_url?: string; image_context?: string; instruction?: string }[] }[] };
 type Tang3Raw = { exercises: { id: number; difficulty: string; question: string; answer: string; explanation: string }[] };
 type Tang4Raw = { levels: { level: string; exercises: { id: string; content: string; image_context?: string; context?: string; options: { id: string; text: string }[]; correct_answers: string[]; explanation: string; image_path?: string; image_url?: string }[] }[] };
-type Tang5Raw = { levels: { level: string; exercises: { id: string; instruction?: string; image_context: string; options: { id: string; text: string }[]; correct_answers: string[]; explanation: string; image_path?: string; image_url?: string }[] }[] };
+type Tang5Raw = { levels: { level: string; exercises: { id: string; type?: string; instruction?: string; image_context: string; content?: string; options?: { id: string; text: string }[]; correct_answers: string[]; explanation: string; image_path?: string; image_url?: string }[] }[] };
 
 const DIFF_MAP: Record<string, "easy" | "medium" | "hard"> = { Easy: "easy", Medium: "medium", Hard: "hard", Dễ: "easy", "Trung bình": "medium", Khó: "hard" };
 
@@ -249,23 +262,47 @@ function normTang4(raw: Tang4Raw, skillId: string, testNum: number): WTestData {
   };
 }
 
+const ESSAY_STEP_LABELS = ["1 - AI?", "2 - LÀM GÌ?", "3 - Ở ĐÂU?", "Câu hoàn chỉnh"];
+const ESSAY_STEP_PREFIXES = ["1:", "2:", "3:", "Full:"];
+
+function parseEssaySteps(correctAnswers: string[]): W5Step[] {
+  return ESSAY_STEP_PREFIXES.map((prefix, i) => {
+    const raw = correctAnswers.find((a) => a.startsWith(prefix)) ?? "";
+    return { label: ESSAY_STEP_LABELS[i], answer: raw.slice(prefix.length).trim() };
+  });
+}
+
 function normTang5(raw: Tang5Raw, skillId: string, testNum: number): WTestData {
   return {
     skillId, testNum,
     levels: raw.levels.map((lev) => ({
       difficulty: normDiff(lev.level),
-      exercises: lev.exercises.map((ex) => ({
-        type: "multiple_choice" as const,
-        id: ex.id,
-        difficulty: normDiff(lev.level),
-        question: ex.instruction ?? "Chọn câu mô tả đúng nhất về bức ảnh.",
-        imageContext: ex.image_context,
-        options: ex.options,
-        correctAnswers: ex.correct_answers,
-        explanation: ex.explanation,
-        imagePath: ex.image_path ? `/${ex.image_path}` : undefined,
-        imageUrl: ex.image_url,
-      })),
+      exercises: lev.exercises.map((ex): WExercise => {
+        if (ex.type === "essay_typing") {
+          return {
+            type: "photo_analysis",
+            id: ex.id,
+            difficulty: normDiff(lev.level),
+            imageContext: ex.image_context,
+            steps: parseEssaySteps(ex.correct_answers),
+            explanation: ex.explanation,
+            imagePath: ex.image_path ? `/${ex.image_path}` : undefined,
+            imageUrl: ex.image_url,
+          };
+        }
+        return {
+          type: "multiple_choice",
+          id: ex.id,
+          difficulty: normDiff(lev.level),
+          question: ex.instruction ?? "Chọn câu mô tả đúng nhất về bức ảnh.",
+          imageContext: ex.image_context,
+          options: ex.options ?? [],
+          correctAnswers: ex.correct_answers,
+          explanation: ex.explanation,
+          imagePath: ex.image_path ? `/${ex.image_path}` : undefined,
+          imageUrl: ex.image_url,
+        };
+      }),
     })),
   };
 }
