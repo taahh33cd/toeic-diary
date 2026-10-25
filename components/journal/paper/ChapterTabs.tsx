@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { LanguageToggle } from "@/components/journal/LanguageToggle";
 import { useLocale } from "@/hooks/useLocale";
 import { useNavBadges } from "@/hooks/firebase/useNavBadges";
@@ -61,6 +61,8 @@ function Badge({ count, dot }: { count: number | null; dot: boolean }) {
 
 export function ChapterTabs({ studentCode }: { studentCode?: string | null }) {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const tabParam = searchParams.get("tab");
   const { locale } = useLocale();
   const badges = useNavBadges(studentCode);
 
@@ -129,7 +131,7 @@ export function ChapterTabs({ studentCode }: { studentCode?: string | null }) {
           <div className="max-w-[1400px] mx-auto px-4 md:px-6">
             <div className="flex items-center gap-1 overflow-x-auto py-1.5 no-scrollbar">
               {subPages.map((p) => {
-                const active = pageMatches(p, pathname);
+                const active = pageMatches(p, pathname, tabParam);
                 const count = pageBadge(p.href, badges);
                 const dot = pageDot(p.href, badges);
                 return (

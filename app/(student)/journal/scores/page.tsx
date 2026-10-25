@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import { useProfile } from "@/hooks/useProfile";
 import { useStudent } from "@/hooks/firebase/useStudent";
 import { useGoal } from "@/hooks/firebase/useGoal";
+import { useSearchParams } from "next/navigation";
 import { useLocale } from "@/hooks/useLocale";
 import { PageHeading } from "@/components/journal/paper/PageHeading";
 import {
@@ -1688,7 +1689,11 @@ export default function ScoresPage() {
   const { student, loading: studentLoading } = useStudent(studentCode);
   const { goal, loading: goalLoading } = useGoal(studentCode);
 
-  const [mainTab, setMainTab] = useState<"scores" | "errorlog" | "paraphrase">("scores");
+  // Mục đang xem do ?tab= quyết định — dải mục của chương là nơi điều khiển,
+  // nên trang không giữ thêm một thanh tab riêng nữa.
+  const tabParam = useSearchParams().get("tab");
+  const mainTab: "scores" | "errorlog" | "paraphrase" =
+    tabParam === "errorlog" || tabParam === "paraphrase" ? tabParam : "scores";
   const [errorlogTab, setErrorlogTab] = useState<"log" | "dashboard">("log");
   const [editingGoal, setEditingGoal] = useState(false);
   const [deleteKey, setDeleteKey] = useState<number | null>(null);
@@ -1809,22 +1814,6 @@ export default function ScoresPage() {
 
   return (
     <div className="space-y-4">
-      {/* ── Main 3-tab bar ── */}
-      <div className="paper-tabs">
-        <TabBtn label={t("Điểm số", "Scores")} active={mainTab === "scores"} onClick={() => setMainTab("scores")} />
-        <TabBtn
-          label={`${t("Nhật ký lỗi", "Error Log")}${sessionEntries.length > 0 ? ` (${sessionEntries.length})` : ""}`}
-          active={mainTab === "errorlog"}
-          onClick={() => setMainTab("errorlog")}
-        />
-        <TabBtn
-          label={`Paraphrase${paraphraseEntries.length > 0 ? ` (${paraphraseEntries.length})` : ""}`}
-          active={mainTab === "paraphrase"}
-          onClick={() => setMainTab("paraphrase")}
-          badge={dueParaCount}
-        />
-      </div>
-
       {/* ── Tab: Điểm số ── */}
       {mainTab === "scores" && (
         <div className="space-y-4">
@@ -1991,14 +1980,10 @@ export default function ScoresPage() {
       {/* ── Tab: Nhật ký lỗi ── */}
       {mainTab === "errorlog" && (
         <div className="space-y-4">
-          <div className="flex items-baseline justify-between">
-            <h1 className="text-2xl font-bold" style={{ fontFamily: "'Lora', serif", color: "var(--text-primary)" }}>
-              Nhật ký lỗi
-            </h1>
-            {sessionEntries.length > 0 && (
-              <span className="text-sm" style={{ color: "var(--text-muted)" }}>{sessionEntries.length} sessions</span>
-            )}
-          </div>
+          <PageHeading
+            title="Nhật ký lỗi"
+            note={sessionEntries.length > 0 ? `${sessionEntries.length} buổi đã ghi` : undefined}
+          />
 
           {/* Sub-tab bar */}
           <div className="flex" style={{ borderBottom: "1px solid var(--border)" }}>
@@ -2018,9 +2003,14 @@ export default function ScoresPage() {
       {/* ── Tab: Paraphrase ── */}
       {mainTab === "paraphrase" && (
         <div className="space-y-4">
-          <h1 className="text-2xl font-bold" style={{ fontFamily: "'Lora', serif", color: "var(--text-primary)" }}>
-            Paraphrase
-          </h1>
+          <PageHeading
+            title="Paraphrase"
+            note={
+              paraphraseEntries.length > 0
+                ? `${paraphraseEntries.length} câu${dueParaCount > 0 ? ` · ${dueParaCount} câu đến hạn ôn` : ""}`
+                : undefined
+            }
+          />
           <ParaphraseTab studentCode={studentCode} entries={paraphraseEntries} />
         </div>
       )}
