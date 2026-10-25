@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PageHeading } from "@/components/journal/paper/PageHeading";
 import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { ThemePickerModal } from "@/components/journal/ThemePickerModal";
@@ -15,14 +16,7 @@ export default async function SettingsPage() {
 
   return (
     <div className="space-y-8 max-w-xl">
-      <div>
-        <h1 className="text-2xl font-bold" style={{ color: "var(--text-primary)" }}>
-          Cài đặt
-        </h1>
-        <p className="mt-1 text-sm" style={{ color: "var(--text-secondary)" }}>
-          Tuỳ chỉnh trải nghiệm học tập của bạn.
-        </p>
-      </div>
+      <PageHeading title="Cài đặt" note="Tuỳ chỉnh trải nghiệm học tập của bạn." />
 
       <ThemePickerModal />
 

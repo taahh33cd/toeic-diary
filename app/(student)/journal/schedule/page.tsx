@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import { PageHeading } from "@/components/journal/paper/PageHeading";
 import { useProfile } from "@/hooks/useProfile";
 import { useStudent } from "@/hooks/firebase/useStudent";
 import { useClasses } from "@/hooks/firebase/useClasses";
@@ -597,15 +598,7 @@ export default function SchedulePage() {
 
   return (
     <div style={{ maxWidth: 620, margin: "0 auto" }}>
-      {/* Page title */}
-      <div style={{ marginBottom: "1.1rem" }}>
-        <h1 style={{ fontSize: "1.2rem", fontWeight: 700, color: "var(--text-primary,#2C1E0F)", margin: 0 }}>
-          🗓 Lịch học
-        </h1>
-        <p style={{ fontSize: ".78rem", color: "#9A8672", margin: ".2rem 0 0" }}>
-          Lịch cá nhân + lịch lớp tổng hợp
-        </p>
-      </div>
+      <PageHeading title="Lịch học" note="Lịch cá nhân và lịch lớp gộp chung" />
 
       {/* Tab switcher */}
       <div style={{ display: "flex", gap: ".4rem", marginBottom: "1.2rem" }}>

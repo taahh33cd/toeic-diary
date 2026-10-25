@@ -126,30 +126,3 @@ export function IconTrophy({ size = defaults.size, className = defaults.classNam
     </svg>
   );
 }
-
-export function IconErrorLog({ size = defaults.size, className = defaults.className }: IconProps) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24"
-      fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"
-      className={className} aria-hidden="true">
-      <path d="M4 4a2 2 0 0 1 2-2h12v20H6a2 2 0 0 1-2-2z"/>
-      <path d="M8 7h7"/>
-      <path d="m9 12 5 5"/>
-      <path d="m14 12-5 5"/>
-    </svg>
-  );
-}
-
-export function IconBooking({ size = defaults.size, className = defaults.className }: IconProps) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24"
-      fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"
-      className={className} aria-hidden="true">
-      <rect x="3" y="5" width="18" height="16" rx="2"/>
-      <path d="M8 2v4"/>
-      <path d="M16 2v4"/>
-      <path d="M3 10h18"/>
-      <path d="m9 15 2 2 4-4"/>
-    </svg>
-  );
-}

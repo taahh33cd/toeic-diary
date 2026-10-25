@@ -1,15 +1,19 @@
 /**
  * 5 "chương" của cuốn sổ /journal.
  *
- * 13 trang journal được gom thành 5 chương để điều hướng bớt rối — URL giữ
+ * Các trang journal được gom thành 5 chương để điều hướng bớt rối — URL giữ
  * nguyên nên link/bookmark cũ không vỡ. Dùng chung cho tab chương (desktop)
  * và bottom nav (mobile) để hai nơi không bao giờ lệch nhau.
+ *
+ * /journal/error-log và /journal/booking không có mặt ở đây vì chúng chỉ là
+ * redirect sang /journal/scores và /journal/schedule — đưa vào chỉ mục thì
+ * bấm xong tab sẽ sáng sai chỗ. Link cũ vẫn chạy như trước.
  */
 
 import {
   IconHome, IconScore, IconJournal, IconVocab,
   IconTasks, IconSchedule, IconFee, IconSettings,
-  IconProgress, IconTrophy, IconErrorLog, IconBooking,
+  IconProgress, IconTrophy,
 } from "@/components/journal/Icons";
 
 type IconFn = (props: { size?: number; className?: string }) => React.ReactElement;
@@ -59,7 +63,6 @@ export const CHAPTERS: Chapter[] = [
     Icon: IconVocab,
     pages: [
       { href: "/journal/vocab", labelVi: "Từ vựng", labelEn: "Vocabulary", Icon: IconVocab },
-      { href: "/journal/error-log", labelVi: "Sổ lỗi", labelEn: "Error log", Icon: IconErrorLog },
       { href: "/journal/submissions", labelVi: "Bài nộp", labelEn: "Submissions", Icon: IconJournal },
     ],
   },
@@ -71,7 +74,6 @@ export const CHAPTERS: Chapter[] = [
     pages: [
       { href: "/journal/missions", labelVi: "Nhiệm vụ", labelEn: "Tasks", Icon: IconTasks },
       { href: "/journal/schedule", labelVi: "Lịch học", labelEn: "Schedule", Icon: IconSchedule },
-      { href: "/journal/booking", labelVi: "Đặt lịch", labelEn: "Booking", Icon: IconBooking },
     ],
   },
   {

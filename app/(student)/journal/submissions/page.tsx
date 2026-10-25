@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { prisma } from "@/lib/db/prisma";
 import { STATUS_LABEL, type SubmissionStatus } from "@/lib/submissions";
+import { PageHeading } from "@/components/journal/paper/PageHeading";
 
 export const metadata = { title: "Bài đã nộp" };
 
@@ -33,12 +34,10 @@ export default async function SubmissionsPage() {
 
   return (
     <div className="max-w-4xl mx-auto w-full">
-      <header className="mb-5">
-        <h1 className="text-xl font-bold" style={{ color: "var(--text-primary)" }}>Bài Speaking &amp; Writing</h1>
-        <p className="text-sm mt-1" style={{ color: "var(--text-muted)" }}>
-          Bài bạn đã lưu từ khu Luyện đề. Bài gửi giáo viên chấm sẽ có nhận xét ngay tại đây.
-        </p>
-      </header>
+      <PageHeading
+        title="Bài Speaking & Writing"
+        note="Bài bạn đã lưu từ khu Luyện đề. Bài gửi thầy chấm sẽ có nhận xét ngay tại đây."
+      />
 
       {submissions.length === 0 ? (
         <div className="py-12 text-center">

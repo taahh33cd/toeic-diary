@@ -6,6 +6,7 @@ import { useVocab } from "@/hooks/firebase/useVocab";
 import { updateVocabWord, deleteVocabWord, saveForgottenWords, loadForgottenWords } from "@/lib/firebase/helpers";
 import { awardXp } from "@/lib/xp-client";
 import { useLocale } from "@/hooks/useLocale";
+import { PageHeading } from "@/components/journal/paper/PageHeading";
 import type { VocabWord } from "@/lib/firebase/types";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
@@ -1836,6 +1837,18 @@ export default function VocabPage() {
     <div className="flex flex-col md:flex-row gap-6 items-start">
       {/* ── Main content ── */}
       <div className="flex-1 min-w-0 space-y-5">
+
+        <PageHeading
+          title={t("Sổ từ vựng", "Vocabulary book")}
+          note={
+            words.length === 0
+              ? t("Chưa có từ nào — thêm từ đầu tiên bên dưới.", "No words yet — add your first one below.")
+              : t(
+                  `${words.length} từ đã ghi${dueWords.length > 0 ? ` · ${dueWords.length} từ đến hạn ôn` : ""}`,
+                  `${words.length} words${dueWords.length > 0 ? ` · ${dueWords.length} due for review` : ""}`
+                )
+          }
+        />
 
         {/* Quick Add Bar */}
         <QuickAddBar studentCode={profile.studentCode} />

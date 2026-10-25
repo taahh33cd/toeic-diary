@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useProfile } from "@/hooks/useProfile";
+import { PageHeading } from "@/components/journal/paper/PageHeading";
 import { useHomework } from "@/hooks/firebase/useHomework";
 import { useGoal } from "@/hooks/firebase/useGoal";
 import { useSubmissions } from "@/hooks/firebase/useSubmissions";
@@ -890,16 +891,10 @@ export default function MissionsPage() {
 
   return (
     <div>
-      {/* Page header */}
-      <div style={{ marginBottom: "1.25rem" }}>
-        <h1 style={{
-          fontFamily: "'Lora', Georgia, serif",
-          fontSize: "1.25rem", fontWeight: 700,
-          color: "var(--text-primary,#2C1E0F)",
-        }}>
-          Nhiệm vụ & Bài tập
-        </h1>
-      </div>
+      <PageHeading
+        title="Nhiệm vụ & Bài tập"
+        note="Bài tập thầy giao theo từng buổi, kèm chỗ nộp bằng chứng"
+      />
 
       {/* Notice: nhắc học viên lưu bằng chứng làm bài */}
       <div style={{

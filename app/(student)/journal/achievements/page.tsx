@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import { PageHeading } from "@/components/journal/paper/PageHeading";
 import { createClient } from "@/lib/supabase/server";
 import { ACHIEVEMENTS } from "@/lib/achievements";
 import { computeUnlocked } from "@/lib/achievement-check";
@@ -15,12 +16,10 @@ export default async function AchievementsPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold tracking-tight">🏆 Thành tựu</h1>
-        <p className="mt-1 text-sm" style={{ color: "var(--text-secondary)" }}>
-          Đã mở khoá <b>{unlockedCount}</b> / {ACHIEVEMENTS.length} huy hiệu
-        </p>
-      </div>
+      <PageHeading
+        title="Thành tựu"
+        note={`Đã mở khoá ${unlockedCount} / ${ACHIEVEMENTS.length} huy hiệu`}
+      />
 
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
         {ACHIEVEMENTS.map((a) => {

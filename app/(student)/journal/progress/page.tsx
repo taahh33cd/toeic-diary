@@ -1,6 +1,7 @@
 "use client";
 
 import { useProfile } from "@/hooks/useProfile";
+import { PageHeading } from "@/components/journal/paper/PageHeading";
 import { useHomework } from "@/hooks/firebase/useHomework";
 import { useSubmissions } from "@/hooks/firebase/useSubmissions";
 import { useDayLinks } from "@/hooks/firebase/useDayLinks";
@@ -395,18 +396,7 @@ export default function ProgressPage() {
 
   return (
     <div style={{ maxWidth: 680, margin: "0 auto" }}>
-      {/* Page title */}
-      <div style={{ marginBottom: "1.1rem" }}>
-        <h1 style={{
-          fontSize: "1.2rem", fontWeight: 700,
-          color: "var(--text-primary,#2C1E0F)", margin: 0,
-        }}>
-          📈 Tiến độ học
-        </h1>
-        <p style={{ fontSize: ".78rem", color: "#9A8672", margin: ".2rem 0 0" }}>
-          Danh sách bài tập và trạng thái nộp bài
-        </p>
-      </div>
+      <PageHeading title="Tiến độ học" note="Danh sách bài tập và trạng thái nộp bài" />
 
       {loading && (
         <div style={{ padding: "3rem", textAlign: "center", color: "#9A8672", fontSize: ".85rem" }}>

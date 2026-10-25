@@ -5,6 +5,7 @@ import { useProfile } from "@/hooks/useProfile";
 import { useStudent } from "@/hooks/firebase/useStudent";
 import { useGoal } from "@/hooks/firebase/useGoal";
 import { useLocale } from "@/hooks/useLocale";
+import { PageHeading } from "@/components/journal/paper/PageHeading";
 import {
   pushStudentScore, deleteStudentScore, updateStudentScore, setGoal,
   pushStudentSwScore, deleteStudentSwScore, updateStudentSwScore,
@@ -117,20 +118,9 @@ function TabBtn({
   return (
     <button
       onClick={onClick}
-      className="px-4 py-2 text-sm font-medium"
-      style={{
-        background: "none",
-        border: "none",
-        cursor: "pointer",
-        borderBottom: active ? "2px solid var(--accent-primary)" : "2px solid transparent",
-        color: active ? "var(--accent-primary)" : "var(--text-muted)",
-        marginBottom: -1,
-        transition: "color 0.15s, border-color 0.15s",
-        whiteSpace: "nowrap",
-        display: "flex",
-        alignItems: "center",
-        gap: ".35rem",
-      }}
+      className="paper-tab"
+      aria-current={active ? "page" : undefined}
+      style={{ cursor: "pointer" }}
     >
       {label}
       {(badge ?? 0) > 0 && (
@@ -1806,9 +1796,7 @@ export default function ScoresPage() {
   if (!studentCode) {
     return (
       <div className="space-y-3">
-        <h1 className="text-2xl font-bold" style={{ fontFamily: "'Lora', serif" }}>
-          {t("Điểm số TOEIC", "TOEIC Score")}
-        </h1>
+        <PageHeading title={t("Điểm số TOEIC", "TOEIC Score")} />
         <p className="text-sm" style={{ color: "var(--text-muted)" }}>
           {t("Chưa có mã học viên. Liên hệ giáo viên để được thêm vào hệ thống.", "No student code. Contact your teacher to be added to the system.")}
         </p>
@@ -1822,7 +1810,7 @@ export default function ScoresPage() {
   return (
     <div className="space-y-4">
       {/* ── Main 3-tab bar ── */}
-      <div className="flex" style={{ borderBottom: "1px solid var(--border)" }}>
+      <div className="paper-tabs">
         <TabBtn label={t("Điểm số", "Scores")} active={mainTab === "scores"} onClick={() => setMainTab("scores")} />
         <TabBtn
           label={`${t("Nhật ký lỗi", "Error Log")}${sessionEntries.length > 0 ? ` (${sessionEntries.length})` : ""}`}
@@ -1840,16 +1828,16 @@ export default function ScoresPage() {
       {/* ── Tab: Điểm số ── */}
       {mainTab === "scores" && (
         <div className="space-y-4">
-          <div className="flex items-baseline justify-between">
-            <h1 className="text-2xl font-bold" style={{ fontFamily: "'Lora', serif", color: "var(--text-primary)" }}>
-              {t("Điểm số TOEIC", "TOEIC Score")}
-            </h1>
-            {hasScores && (
-              <span className="text-sm" style={{ color: "var(--text-muted)" }}>
-                {examType === "sw" ? sortedSwScores.length : sortedScores.length} {t("lần thi", "tests")}
-              </span>
-            )}
-          </div>
+          <PageHeading
+            title={t("Điểm số TOEIC", "TOEIC Score")}
+            actions={
+              hasScores ? (
+                <span className="text-sm" style={{ color: "var(--text-muted)" }}>
+                  {examType === "sw" ? sortedSwScores.length : sortedScores.length} {t("lần thi", "tests")}
+                </span>
+              ) : undefined
+            }
+          />
 
           {/* ── Toggle kỳ thi: L&R / S&W ── */}
           <div className="flex gap-1 p-1 rounded-lg self-start w-fit"

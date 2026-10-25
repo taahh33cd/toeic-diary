@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { PageHeading } from "@/components/journal/paper/PageHeading";
 import { useProfile } from "@/hooks/useProfile";
 import { useStudent } from "@/hooks/firebase/useStudent";
 import { useClasses } from "@/hooks/firebase/useClasses";
@@ -588,6 +589,8 @@ export default function FeePage() {
 
   return (
     <div style={{ maxWidth: 640, margin: "0 auto" }}>
+      <PageHeading title="Học phí" note="Buổi đã học, đã đóng và còn lại" />
+
       {loading && (
         <div style={{ padding: "3rem", textAlign: "center", color: "#9A8672", fontSize: ".85rem" }}>Đang tải…</div>
       )}
