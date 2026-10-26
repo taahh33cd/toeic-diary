@@ -6,6 +6,7 @@ import { useProfile } from "@/hooks/useProfile";
 import { useStudent } from "@/hooks/firebase/useStudent";
 import { useHomework } from "@/hooks/firebase/useHomework";
 import { useHwViewed } from "@/hooks/firebase/useHwViewed";
+import { useDayLinks } from "@/hooks/firebase/useDayLinks";
 import { useGoal } from "@/hooks/firebase/useGoal";
 import { useSubmissions } from "@/hooks/firebase/useSubmissions";
 import { useClasses } from "@/hooks/firebase/useClasses";
@@ -13,6 +14,8 @@ import { useLocale } from "@/hooks/useLocale";
 import { LiveIndicator } from "@/components/shared/LiveIndicator";
 import { Sheet } from "@/components/journal/paper/Sheet";
 import { Stamp } from "@/components/journal/paper/Stamp";
+import { saveSubmission, removeSubmission } from "@/lib/firebase/helpers";
+import { hwTasks, hwIsDone, overdueHomework, type HwTask } from "@/lib/journal/homework";
 import { dayToNum } from "@/lib/schedule-day";
 import { useVocabDue } from "@/hooks/useVocabDue";
 import type { XpStats, SwWorkStats } from "./page";
@@ -135,44 +138,195 @@ type TodayItem = {
   meta?: string;
   /** urgent = quá hạn, done = đã xong, normal = còn lại. */
   tone: "urgent" | "normal" | "done";
+  /** Đầu việc tick được ngay tại đây (bài tập về nhà). */
+  tasks?: HwTask[];
 };
 
-function TodayRow({ item }: { item: TodayItem }) {
+function TodayRow({
+  item,
+  studentCode,
+}: {
+  item: TodayItem;
+  studentCode: string;
+}) {
+  const [open, setOpen] = useState(false);
+  const [busy, setBusy] = useState<string | null>(null);
   const done = item.tone === "done";
   const urgent = item.tone === "urgent";
-  return (
-    <Link href={item.href} className="today-row">
+  const hasTasks = (item.tasks?.length ?? 0) > 0;
+
+  async function toggle(task: HwTask) {
+    if (busy) return;
+    setBusy(task.fbKey);
+    try {
+      if (task.done) {
+        await removeSubmission(studentCode, task.fbKey);
+      } else {
+        await saveSubmission(studentCode, task.fbKey, {
+          ticked: true,
+          updatedAt: new Date().toISOString(),
+        });
+      }
+    } finally {
+      setBusy(null);
+    }
+  }
+
+  const label = (
+    <>
       <span
-        className={`paper-check ${done ? "paper-check--done" : ""} ${urgent ? "paper-check--urgent" : ""}`}
-        aria-hidden="true"
+        className="block text-sm font-semibold truncate"
+        style={{
+          color: urgent ? "var(--accent-red, #B94040)" : "var(--text-primary)",
+          textDecoration: done ? "line-through" : undefined,
+          opacity: done ? 0.55 : 1,
+        }}
       >
-        {done ? "\u2713" : ""}
+        {item.label}
       </span>
-      <span className="flex-1 min-w-0">
-        <span
-          className="block text-sm font-semibold truncate"
-          style={{
-            color: urgent ? "var(--accent-red, #B94040)" : "var(--text-primary)",
-            textDecoration: done ? "line-through" : undefined,
-            opacity: done ? 0.55 : 1,
-          }}
-        >
-          {item.label}
+      {item.meta && (
+        <span className="block text-xs mt-0.5 truncate" style={{ color: "var(--text-secondary)" }}>
+          {item.meta}
         </span>
-        {item.meta && (
-          <span className="block text-xs mt-0.5 truncate" style={{ color: "var(--text-secondary)" }}>
-            {item.meta}
+      )}
+    </>
+  );
+
+  return (
+    <div>
+      {hasTasks ? (
+        // Có đầu việc: bấm để mở ra tick tại chỗ, khỏi phải sang trang khác
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          className="today-row w-full text-left"
+          style={{ background: "none", border: "none", cursor: "pointer", font: "inherit" }}
+        >
+          <span
+            className={`paper-check ${done ? "paper-check--done" : ""} ${urgent ? "paper-check--urgent" : ""}`}
+            aria-hidden="true"
+          >
+            {done ? "\u2713" : ""}
           </span>
-        )}
+          <span className="flex-1 min-w-0">{label}</span>
+          <span
+            className="text-xs shrink-0"
+            style={{ color: "var(--text-muted)", transform: open ? "rotate(180deg)" : undefined }}
+            aria-hidden="true"
+          >
+            &#9662;
+          </span>
+        </button>
+      ) : (
+        <Link href={item.href} className="today-row">
+          <span
+            className={`paper-check ${done ? "paper-check--done" : ""} ${urgent ? "paper-check--urgent" : ""}`}
+            aria-hidden="true"
+          >
+            {done ? "\u2713" : ""}
+          </span>
+          <span className="flex-1 min-w-0">{label}</span>
+          <span
+            className="text-sm shrink-0"
+            style={{ color: done ? "var(--text-muted)" : "var(--accent-primary)" }}
+            aria-hidden="true"
+          >
+            &rarr;
+          </span>
+        </Link>
+      )}
+
+      {hasTasks && open && (
+        <div className="pl-8 pb-2" style={{ borderBottom: "1px dashed var(--border)" }}>
+          {item.tasks!.map((task) => (
+            <button
+              key={task.fbKey}
+              type="button"
+              onClick={() => toggle(task)}
+              disabled={busy === task.fbKey}
+              className="flex items-start gap-2.5 w-full text-left py-1.5"
+              style={{ background: "none", border: "none", cursor: "pointer", opacity: busy === task.fbKey ? 0.5 : 1 }}
+            >
+              <span
+                className={`paper-check ${task.done ? "paper-check--done" : ""}`}
+                style={{ marginTop: 1 }}
+                aria-hidden="true"
+              >
+                {task.done ? "\u2713" : ""}
+              </span>
+              <span
+                className="text-sm flex-1"
+                style={{
+                  color: task.done ? "var(--text-muted)" : "var(--text-primary)",
+                  textDecoration: task.done ? "line-through" : undefined,
+                }}
+              >
+                {task.label}
+              </span>
+            </button>
+          ))}
+          <Link
+            href={item.href}
+            className="inline-block text-xs mt-1.5"
+            style={{ color: "var(--accent-primary)" }}
+          >
+            Mở trang Nhiệm vụ để nộp bằng chứng &rarr;
+          </Link>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/** Dải 7 ngày gần nhất — ngày nào có hoạt động thì tô đậm. */
+function WeekStrip({ activeDays }: { activeDays: Set<string> }) {
+  const days: { key: string; label: string; active: boolean; isToday: boolean }[] = [];
+  const td = localToday();
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+    days.push({
+      key,
+      label: WEEK_LABELS[(d.getDay() + 6) % 7],
+      active: activeDays.has(key),
+      isToday: key === td,
+    });
+  }
+  const count = days.filter((d) => d.active).length;
+
+  return (
+    <div className="flex items-center gap-3 flex-wrap">
+      <div className="flex items-center gap-1.5">
+        {days.map((d) => (
+          <div key={d.key} className="flex flex-col items-center gap-1" title={d.key}>
+            <span
+              style={{
+                width: 22,
+                height: 22,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: 11,
+                fontWeight: 700,
+                background: d.active ? "var(--accent-primary)" : "transparent",
+                color: d.active ? "#fff" : "var(--text-muted)",
+                border: `1px solid ${d.active ? "var(--accent-primary)" : "var(--border)"}`,
+                outline: d.isToday ? "2px solid var(--accent-primary)" : undefined,
+                outlineOffset: 1,
+              }}
+            >
+              {d.active ? "\u2713" : ""}
+            </span>
+            <span className="text-[10px]" style={{ color: "var(--text-muted)" }}>{d.label}</span>
+          </div>
+        ))}
+      </div>
+      <span className="text-xs" style={{ color: "var(--text-secondary)" }}>
+        {count > 0 ? `${count}/7 ngày có học trong tuần` : "Tuần này chưa ghi nhận buổi học nào"}
       </span>
-      <span
-        className="text-sm shrink-0"
-        style={{ color: done ? "var(--text-muted)" : "var(--accent-primary)" }}
-        aria-hidden="true"
-      >
-        &rarr;
-      </span>
-    </Link>
+    </div>
   );
 }
 
@@ -181,11 +335,15 @@ function TodaySheet({
   xpStats,
   currentWeek,
   items,
+  studentCode,
+  activeDays,
 }: {
   name: string;
   xpStats: XpStats | null;
   currentWeek?: number;
   items: TodayItem[];
+  studentCode: string;
+  activeDays: Set<string>;
 }) {
   const { t } = useLocale();
   const dateStr = new Date().toLocaleDateString("vi-VN", {
@@ -248,8 +406,13 @@ function TodaySheet({
         )}
       </div>
 
-      {/* Việc hôm nay */}
+      {/* Nhịp học 7 ngày gần nhất */}
       <div className="mt-5 pt-4" style={{ borderTop: "1px dashed var(--border)" }}>
+        <WeekStrip activeDays={activeDays} />
+      </div>
+
+      {/* Việc hôm nay */}
+      <div className="mt-4 pt-4" style={{ borderTop: "1px dashed var(--border)" }}>
         <p className="hand text-lg mb-1" style={{ color: "var(--text-primary)" }}>
           {t("Hôm nay cần làm", "To do today")}
         </p>
@@ -264,7 +427,7 @@ function TodaySheet({
         ) : (
           <div>
             {items.map((item) => (
-              <TodayRow key={item.key} item={item} />
+              <TodayRow key={item.key} item={item} studentCode={studentCode} />
             ))}
           </div>
         )}
@@ -1001,6 +1164,7 @@ export default function DashboardClient({ xpStats, swWork }: { xpStats: XpStats 
   const { stats: vocab } = useVocabDue(!!profile?.studentCode);
   const { classes } = useClasses();
   const { hwViewed } = useHwViewed(profile?.studentCode);
+  const { dayLinks } = useDayLinks(profile?.studentCode);
 
   const loading = profileLoading || studentLoading;
 
@@ -1043,12 +1207,8 @@ export default function DashboardClient({ xpStats, swWork }: { xpStats: XpStats 
   const errorLog = ((student as unknown as Record<string, unknown>)?.errorLog ?? {}) as Record<string, { date: string }>;
   const name = student?.name ?? profile.displayName ?? "bạn";
 
-  // B13: overdue count — hw deadline passed AND not submitted (no ticked submission for that date)
-  const overdueCount = homework.filter((hw) => {
-    const deadline = hw.endDate ?? hw.date;
-    if (deadline >= td) return false;
-    return !submissions[hw.date]?.ticked;
-  }).length;
+  // Bài quá hạn — tính theo đúng khoá từng đầu việc như trang Nhiệm vụ
+  const overdueCount = overdueHomework(homework, submissions, dayLinks, td).length;
 
   // B14: vocab SRS due
   const vocabDueCount = vocab.dueCount;
@@ -1067,8 +1227,18 @@ export default function DashboardClient({ xpStats, swWork }: { xpStats: XpStats 
     return best;
   })();
 
-  // B11: today's hw is submitted if there's a ticked submission for its date
-  const todaySubmitted = todayHw ? (submissions[todayHw.date]?.ticked ?? false) : false;
+  const todayTasks = todayHw ? hwTasks(todayHw, submissions) : [];
+  const todaySubmitted = todayHw ? hwIsDone(todayHw, submissions, dayLinks) : false;
+  const todayDoneCount = todayTasks.filter((t) => t.done).length;
+
+  // Ngày có hoạt động trong 7 ngày gần nhất: tick bài tập + buổi luyện đề
+  const activeDays = new Set<string>();
+  for (const sub of Object.values(submissions)) {
+    if (sub?.updatedAt) activeDays.add(sub.updatedAt.slice(0, 10));
+  }
+  for (const entry of Object.values(errorLog)) {
+    if (entry?.date) activeDays.add(entry.date);
+  }
 
   // ── Danh sách việc hôm nay, xếp theo mức gấp ──────────────────────────────
   const todayItems: TodayItem[] = [];
@@ -1083,23 +1253,16 @@ export default function DashboardClient({ xpStats, swWork }: { xpStats: XpStats 
     });
   }
 
-  // Bài tập về nhà hôm nay — kèm tên vài đầu việc để khỏi phải mở trang khác
-  const hwItemTitles: string[] = hwSections
-    ? HW_SECTIONS.flatMap((sec) =>
-        ((hwSections[sec] as { title?: string }[]) ?? []).map(
-          (item, i) => item?.title ?? `${SEC_LABELS[sec] ?? sec} ${i + 1}`
-        )
-      )
-    : [];
-
-  if (hwItemTitles.length > 0) {
-    const preview = hwItemTitles.slice(0, 3).join(" · ");
+  if (todayTasks.length > 0) {
     todayItems.push({
       key: "homework",
       href: "/journal/missions",
-      label: `Bài tập về nhà — ${hwItemTitles.length} việc`,
-      meta: hwItemTitles.length > 3 ? `${preview} · +${hwItemTitles.length - 3} nữa` : preview,
+      label: `Bài tập về nhà — ${todayDoneCount}/${todayTasks.length} việc`,
+      meta: todaySubmitted
+        ? "Đã xong cả buổi — bấm để xem lại"
+        : "Bấm để mở ra và tick từng việc",
       tone: todaySubmitted ? "done" : "normal",
+      tasks: todayTasks,
     });
   }
 
@@ -1163,6 +1326,8 @@ export default function DashboardClient({ xpStats, swWork }: { xpStats: XpStats 
         xpStats={xpStats}
         currentWeek={student?.currentWeek}
         items={todayItems}
+        studentCode={profile.studentCode}
+        activeDays={activeDays}
       />
 
       {/* Điểm số | Lịch sắp tới */}

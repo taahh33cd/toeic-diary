@@ -6,32 +6,10 @@ import { useSubmissions } from "./useSubmissions";
 import { useDayLinks } from "./useDayLinks";
 import { useStudent } from "./useStudent";
 import { useVocabDue } from "@/hooks/useVocabDue";
-import type { Homework } from "@/lib/firebase/types";
+import { hwIsDone } from "@/lib/journal/homework";
 
 function todayStr() {
   return new Date().toISOString().slice(0, 10);
-}
-
-function calcHwIsDone(
-  hw: Homework,
-  submissions: Record<string, { ticked?: boolean; url?: string }>,
-  dayLinks: Record<string, { link?: string }>
-): boolean {
-  let total = 0;
-  for (const sec of (["vocab", "listening", "reading", "practice", "other"] as const)) {
-    total += hw[sec]?.length ?? 0;
-  }
-  if (total === 0) return false;
-  if (dayLinks[hw.id]?.link) return true;
-  let done = 0;
-  for (const sec of (["vocab", "listening", "reading", "practice", "other"] as const)) {
-    const items = hw[sec] ?? [];
-    for (let i = 0; i < items.length; i++) {
-      const sub = submissions[`${hw.id}_${sec}_${i}`];
-      if (sub?.ticked || sub?.url) done++;
-    }
-  }
-  return done === total;
 }
 
 export interface NavBadges {
@@ -56,7 +34,7 @@ export function useNavBadges(code: string | null | undefined): NavBadges {
     return homework.filter((hw) => {
       if (hw.date > t) return false;
       if (hw.date < cutoffStr) return false;
-      return !calcHwIsDone(hw, submissions, dayLinks);
+      return !hwIsDone(hw, submissions, dayLinks);
     }).length;
   }, [homework, submissions, dayLinks]);
 
