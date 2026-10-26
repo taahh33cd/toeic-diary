@@ -1860,3 +1860,48 @@ a[aria-disabled="true"] {
 @media (prefers-reduced-motion: reduce) {
   .journal-cover-shell { transition: none; }
 }
+
+/* ── Nút dùng chung trong sổ ──
+   Thay cho hàng chục biến thể inline rải rác khắp 10 trang. */
+.paper-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  padding: .5rem .9rem;
+  font-size: .8rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  transition: background .14s ease, border-color .14s ease, transform .1s ease;
+}
+.paper-btn:hover { border-color: var(--accent-primary); }
+.paper-btn:active { transform: translateY(1px); }
+.paper-btn:disabled { opacity: .45; cursor: not-allowed; transform: none; }
+
+.paper-btn--primary {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: #fff;
+}
+.paper-btn--primary:hover {
+  background: var(--accent-primary-hover, var(--accent-primary));
+  border-color: var(--accent-primary-hover, var(--accent-primary));
+}
+
+.paper-btn--ghost {
+  background: var(--accent-faint);
+  color: var(--accent-primary);
+}
+
+.paper-btn--sm { padding: .35rem .65rem; font-size: .72rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .paper-btn { transition: none; }
+  .paper-btn:active { transform: none; }
+}

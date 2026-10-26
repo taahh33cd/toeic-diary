@@ -14,6 +14,7 @@ import { useLocale } from "@/hooks/useLocale";
 import { LiveIndicator } from "@/components/shared/LiveIndicator";
 import { Sheet } from "@/components/journal/paper/Sheet";
 import { Stamp } from "@/components/journal/paper/Stamp";
+import { EmptyNote } from "@/components/journal/paper/EmptyNote";
 import { saveSubmission, removeSubmission } from "@/lib/firebase/helpers";
 import { hwTasks, hwIsDone, overdueHomework, type HwTask } from "@/lib/journal/homework";
 import { dayToNum } from "@/lib/schedule-day";
@@ -590,9 +591,16 @@ function FeedbackTile({
         </p>
       </div>
       {!latest ? (
-        <p className="text-sm italic py-2" style={{ color: "var(--text-muted)" }}>
-          {t("Chưa có nhận xét.", "No feedback yet.")}
-        </p>
+        <EmptyNote
+          icon="✍️"
+          title={t("Chưa có nhận xét nào", "No feedback yet")}
+          hint={t(
+            "Nộp ảnh hoặc video bài làm ở mục Nhiệm vụ, thầy xem xong sẽ ghi nhận xét vào đây.",
+            "Upload your work in Tasks — your teacher's notes will show up here."
+          )}
+          actionLabel={t("Tới mục Nhiệm vụ", "Go to Tasks")}
+          actionHref="/journal/missions"
+        />
       ) : (
         <>
           <div
@@ -702,12 +710,16 @@ function ScheduleTile({ schedule }: { schedule: ScheduleItem[] }) {
       </div>
 
       {upcoming.length === 0 ? (
-        <div className="flex flex-col items-center justify-center h-20 text-center">
-          <span className="text-3xl mb-2 opacity-20">📆</span>
-          <p className="text-xs" style={{ color: "var(--text-muted)" }}>
-            {t("Chưa có lịch học nào", "No upcoming classes")}
-          </p>
-        </div>
+        <EmptyNote
+          icon="📆"
+          title={t("Chưa có buổi học nào sắp tới", "No upcoming classes")}
+          hint={t(
+            "Thầy xếp lịch lớp sẽ hiện ở đây. Cần học bù hoặc học thêm thì tự đặt lịch.",
+            "Classes your teacher schedules appear here. You can also book a slot yourself."
+          )}
+          actionLabel={t("Đặt lịch học", "Book a class")}
+          actionHref="/journal/schedule?tab=booking"
+        />
       ) : (
         <div className="relative pl-5">
           {/* vertical line */}
@@ -769,17 +781,15 @@ function ScheduleTile({ schedule }: { schedule: ScheduleItem[] }) {
         </div>
       )}
 
-      <Link
-        href="/journal/schedule?tab=booking"
-        className="w-full mt-4 text-center text-xs font-bold flex items-center justify-center gap-1 py-2 rounded-lg hover:opacity-80 transition-opacity"
-        style={{
-          background: "rgba(196,98,45,0.08)",
-          color: "var(--orange)",
-          border: "1px solid rgba(196,98,45,0.2)",
-        }}
-      >
-        {t("+ Đặt lịch mới", "+ Book a class")}
-      </Link>
+      {/* Ô trống đã có nút đặt lịch rồi — không lặp lại ở đây */}
+      {upcoming.length > 0 && (
+        <Link
+          href="/journal/schedule?tab=booking"
+          className="paper-btn paper-btn--ghost w-full mt-4"
+        >
+          {t("+ Đặt lịch mới", "+ Book a class")}
+        </Link>
+      )}
     </Tile>
   );
 }
@@ -999,12 +1009,19 @@ function SkillProgressTile({ scores }: { scores: ToeicScore[] }) {
       </div>
 
       {count === 0 ? (
-        <p className="text-sm text-center py-8" style={{ color: "var(--text-muted)" }}>
-          {t(
-            `Chưa có dữ liệu ${tab === "lis" ? "Listening" : "Reading"}. Nhập điểm tại trang Điểm số.`,
-            `No ${tab === "lis" ? "Listening" : "Reading"} data yet. Add scores on the Scores page.`
+        <EmptyNote
+          icon="📊"
+          title={t(
+            `Chưa có dữ liệu ${tab === "lis" ? "Listening" : "Reading"}`,
+            `No ${tab === "lis" ? "Listening" : "Reading"} data yet`
           )}
-        </p>
+          hint={t(
+            "Mỗi lần thi thử, nhập điểm từng phần vào sổ — biểu đồ này sẽ cho thấy phần nào đang tiến, phần nào đang đứng.",
+            "Log each mock test's section scores and this chart will show which skill is moving."
+          )}
+          actionLabel={t("Nhập điểm test", "Add a score")}
+          actionHref="/journal/scores"
+        />
       ) : (
         <>
           {/* Metric cards */}
