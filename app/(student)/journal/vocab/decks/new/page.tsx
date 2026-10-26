@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { PageHeading } from "@/components/journal/paper/PageHeading";
 import { Sheet } from "@/components/journal/paper/Sheet";
-import { createDeck, type CardDraft } from "@/lib/vocab/client";
+import { createDeck, enrichWords, type CardDraft } from "@/lib/vocab/client";
 
 const RED = "var(--accent-red, #B94040)";
 
@@ -43,6 +43,11 @@ export default function NewDeckPage() {
   const [dangLuu, setDangLuu] = useState(false);
   const [loi, setLoi] = useState<string | null>(null);
 
+  // Thẻ đã được AI điền; null = chưa chạy AI, dùng thẳng danh sách dán vào.
+  const [daDien, setDaDien] = useState<CardDraft[] | null>(null);
+  const [dangDien, setDangDien] = useState(false);
+  const [conLuot, setConLuot] = useState<number | null>(null);
+
   const cards = useMemo<CardDraft[]>(() => {
     const seen = new Set<string>();
     const out: CardDraft[] = [];
@@ -57,10 +62,43 @@ export default function NewDeckPage() {
     return out;
   }, [danDach]);
 
+  const thieuNghia = useMemo(() => cards.filter((c) => !c.meaningVi).length, [cards]);
+
   const soTrung = useMemo(() => {
     const tong = danDach.split("\n").filter((d) => tachDong(d)).length;
     return tong - cards.length;
   }, [danDach, cards.length]);
+
+  async function dien() {
+    if (cards.length === 0 || dangDien) return;
+    setDangDien(true);
+    setLoi(null);
+    try {
+      const { words, remaining } = await enrichWords(cards.map((c) => c.word));
+      const theoTu = new Map(words.map((w) => [w.word.toLowerCase().replace(/\s+/g, " "), w]));
+      // Nghĩa học viên TỰ gõ được giữ nguyên — AI chỉ bù phần còn trống.
+      setDaDien(
+        cards.map((c) => {
+          const e = theoTu.get(c.word.toLowerCase().replace(/\s+/g, " "));
+          if (!e) return c;
+          return {
+            ...c,
+            ipa: c.ipa ?? e.ipa,
+            pos: c.pos ?? e.pos,
+            meaningVi: c.meaningVi ?? e.meaningVi,
+            definition: c.definition ?? e.definition,
+            example: c.example ?? e.example,
+            audioUrl: c.audioUrl ?? e.audioUrl,
+          };
+        })
+      );
+      setConLuot(remaining);
+    } catch (e) {
+      setLoi(e instanceof Error ? e.message : "Không điền được");
+    } finally {
+      setDangDien(false);
+    }
+  }
 
   async function luu() {
     if (!title.trim()) {
@@ -78,7 +116,8 @@ export default function NewDeckPage() {
         title: title.trim(),
         description: description.trim() || undefined,
         part: part === "" ? undefined : part,
-        cards,
+        cards: daDien ?? cards,
+        source: daDien ? "ai_bulk" : "manual",
       });
       window.dispatchEvent(new Event("decks:changed"));
       router.push(`/journal/vocab/decks/${deck.id}`);
@@ -170,22 +209,76 @@ export default function NewDeckPage() {
 
         {cards.length > 0 && (
           <div className="rounded-lg p-3" style={{ background: "var(--bg-secondary)" }}>
-            <p className="text-xs font-bold mb-2" style={{ color: "var(--text-primary)" }}>
-              Đọc được {cards.length} từ
-              {soTrung > 0 && (
-                <span className="font-normal" style={{ color: "var(--text-muted)" }}>
-                  {" "}· bỏ {soTrung} dòng trùng
-                </span>
-              )}
-            </p>
-            <ul className="text-xs space-y-0.5" style={{ color: "var(--text-muted)" }}>
-              {cards.slice(0, 6).map((c, i) => (
+            <div className="flex items-start justify-between gap-3 mb-2">
+              <p className="text-xs font-bold" style={{ color: "var(--text-primary)" }}>
+                Đọc được {cards.length} từ
+                {soTrung > 0 && (
+                  <span className="font-normal" style={{ color: "var(--text-muted)" }}>
+                    {" "}· bỏ {soTrung} dòng trùng
+                  </span>
+                )}
+                {thieuNghia > 0 && !daDien && (
+                  <span className="font-normal" style={{ color: "var(--text-muted)" }}>
+                    {" "}· {thieuNghia} từ chưa có nghĩa
+                  </span>
+                )}
+              </p>
+              <button
+                onClick={dien}
+                disabled={dangDien}
+                className="shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold"
+                style={{
+                  background: daDien ? "var(--bg-elevated)" : "var(--accent-primary)",
+                  color: daDien ? "var(--text-primary)" : "#fff",
+                  opacity: dangDien ? 0.6 : 1,
+                }}
+              >
+                {dangDien ? "Đang tra…" : daDien ? "✨ Điền lại" : "✨ AI điền nốt"}
+              </button>
+            </div>
+
+            {daDien && (
+              <p className="text-xs mb-2" style={{ color: "var(--accent-green, #4A7C59)" }}>
+                Đã điền {daDien.filter((c) => c.meaningVi).length}/{daDien.length} nghĩa,
+                {" "}{daDien.filter((c) => c.ipa).length} phiên âm,
+                {" "}{daDien.filter((c) => c.example).length} câu ví dụ.
+                {conLuot !== null && conLuot >= 0 && ` Còn ${conLuot} lượt hôm nay.`}
+                {" "}Kiểm lại rồi sửa trước khi lưu nhé — AI có lúc đoán sai.
+              </p>
+            )}
+
+            <ul className="text-xs space-y-1.5" style={{ color: "var(--text-muted)" }}>
+              {(daDien ?? cards).map((c, i) => (
                 <li key={i}>
-                  <span style={{ color: "var(--text-primary)" }}>{c.word}</span>
-                  {c.meaningVi ? ` — ${c.meaningVi}` : " — (chưa có nghĩa)"}
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>{c.word}</span>
+                    {c.ipa && <span className="font-mono">{c.ipa}</span>}
+                    {daDien ? (
+                      // Sửa được ngay tại đây: AI đoán sai nghĩa là chuyện
+                      // thường (vd "quarterly" → "tạp chí quý" thay vì "hàng
+                      // quý"), cảnh báo mà không cho sửa thì vô nghĩa.
+                      <input
+                        value={c.meaningVi ?? ""}
+                        onChange={(e) =>
+                          setDaDien((ds) =>
+                            ds!.map((x, j) => (j === i ? { ...x, meaningVi: e.target.value } : x))
+                          )
+                        }
+                        placeholder="nghĩa tiếng Việt"
+                        className="flex-1 min-w-[140px] px-2 py-1 rounded text-xs outline-none"
+                        style={{
+                          background: "var(--bg-primary)",
+                          border: "1px solid var(--border)",
+                          color: "var(--text-primary)",
+                        }}
+                      />
+                    ) : (
+                      <span>{c.meaningVi ? `— ${c.meaningVi}` : "— (chưa có nghĩa)"}</span>
+                    )}
+                  </div>
+                  {c.example && <span className="block italic opacity-75 pl-3">“{c.example}”</span>}
                 </li>
               ))}
-              {cards.length > 6 && <li>… còn {cards.length - 6} từ nữa</li>}
             </ul>
           </div>
         )}

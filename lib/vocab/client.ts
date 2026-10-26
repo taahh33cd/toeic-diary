@@ -192,3 +192,23 @@ export function wordIsDue(w: Pick<WordRow, "mastered" | "dueAt">): boolean {
   if (w.mastered) return false;
   return w.dueAt === null || new Date(w.dueAt) <= new Date();
 }
+
+// ── AI điền nghĩa ───────────────────────────────────────────────────────────
+
+export interface EnrichedWord {
+  word: string;
+  ipa?: string;
+  pos?: string;
+  definition?: string;
+  meaningVi?: string;
+  example?: string;
+  audioUrl?: string;
+  viSource?: "cache" | "gemini" | "mymemory" | "none";
+}
+
+export function enrichWords(words: string[]) {
+  return call<{ words: EnrichedWord[]; remaining: number }>("/api/flashcards/ai/enrich", {
+    method: "POST",
+    body: JSON.stringify({ words }),
+  });
+}
