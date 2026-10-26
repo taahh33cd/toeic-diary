@@ -55,50 +55,81 @@ export function DocumentSheet({
   const cardRefs = useRef<Map<string, HTMLDivElement>>(new Map());
   /** Lần canh đầu tiên phải nhảy thẳng vào chỗ, đừng để thẻ "bay" từ đỉnh xuống. */
   const settled = useRef(false);
+  const rafRef = useRef(0);
   // Server render mặc định bố cục rộng; client tự chỉnh lại ngay lần hydrate.
   const narrow = useSyncExternalStore(subscribeLayout, readLayout, () => false);
 
   /**
+   * `cards` là mảng mới ở mỗi lần cha render (mỗi phím gõ), nên không đưa nó vào
+   * deps: measure chỉ cần biết có những thẻ nào. Giữ danh sách id dạng chuỗi để
+   * identity của measure chỉ đổi khi thẻ thêm/bớt — trước đây nó đổi mỗi ký tự,
+   * kéo theo đo lại toàn bộ và dựng lại ResizeObserver, gõ nhiều nhận xét là lag.
+   */
+  const ids = cards.map((c) => c.id).join("|");
+
+  /**
    * Ghi vị trí thẳng vào DOM thay vì qua state: canh comment là việc của layout,
    * không cần render lại React — tránh vòng lặp đo → setState → đo.
+   * Đọc hết rồi mới ghi để không xen kẽ đọc/ghi layout trong vòng lặp.
    */
   const measure = useCallback(() => {
     const sheet = sheetRef.current;
     if (!sheet || narrow) return;
     const base = sheet.getBoundingClientRect().top;
 
-    const wanted = cards.map((c) => {
-      const anchor = sheet.querySelector(`[data-annotation-id="${CSS.escape(c.id)}"]`);
+    const wanted = ids.split("|").filter(Boolean).map((id) => {
+      const anchor = sheet.querySelector(`[data-annotation-id="${CSS.escape(id)}"]`);
       const top = anchor ? anchor.getBoundingClientRect().top - base : Number.MAX_SAFE_INTEGER;
-      return { id: c.id, top };
+      return { id, top, el: cardRefs.current.get(id) };
     });
 
     // Xếp từ trên xuống, comment sau không được đè lên comment trước.
     wanted.sort((a, b) => a.top - b.top);
-    let cursor = 0;
-    for (const w of wanted) {
-      const el = cardRefs.current.get(w.id);
-      if (!el) continue;
-      const y = Math.max(w.top === Number.MAX_SAFE_INTEGER ? cursor : w.top, cursor);
-      el.style.transition = settled.current ? "transform 160ms ease" : "none";
-      el.style.transform = `translateY(${y}px)`;
-      el.style.zIndex = activeId === w.id ? "2" : "1";
-      cursor = y + el.offsetHeight + CARD_GAP;
-    }
-    settled.current = true;
-  }, [cards, narrow, activeId]);
+    const heights = wanted.map((w) => w.el?.offsetHeight ?? 0);
 
+    const transition = settled.current ? "transform 160ms ease" : "none";
+    let cursor = 0;
+    wanted.forEach((w, i) => {
+      if (!w.el) return;
+      const y = Math.max(w.top === Number.MAX_SAFE_INTEGER ? cursor : w.top, cursor);
+      w.el.style.transition = transition;
+      w.el.style.transform = `translateY(${y}px)`;
+      w.el.style.zIndex = activeId === w.id ? "2" : "1";
+      cursor = y + heights[i] + CARD_GAP;
+    });
+    settled.current = true;
+  }, [ids, narrow, activeId]);
+
+  const schedule = useCallback(() => {
+    cancelAnimationFrame(rafRef.current);
+    rafRef.current = requestAnimationFrame(measure);
+  }, [measure]);
+
+  // Thẻ thêm/bớt hoặc đổi thẻ đang chọn: canh ngay, trước khi trình duyệt vẽ.
   useLayoutEffect(() => { measure(); }, [measure]);
 
-  // Bài dài ra, ảnh tải xong, đổi cỡ cửa sổ… đều làm mốc neo xê dịch → canh lại.
+  /**
+   * Mốc neo xê dịch khi bài dài ra, ảnh tải xong, đổi cỡ cửa sổ, đổi chế độ xem
+   * hoặc thầy gõ chữ đề xuất (MutationObserver); thẻ cao lên khi có trả lời
+   * mới (ResizeObserver từng thẻ). Gõ vào ô nhận xét không đụng cái nào trong
+   * đó nên không còn đo lại.
+   */
   useEffect(() => {
     const wrap = wrapRef.current;
-    if (!wrap) return;
-    const ro = new ResizeObserver(() => measure());
+    const sheet = sheetRef.current;
+    if (!wrap || !sheet || narrow) return;
+    const ro = new ResizeObserver(schedule);
     ro.observe(wrap);
-    if (sheetRef.current) ro.observe(sheetRef.current);
-    return () => ro.disconnect();
-  }, [measure]);
+    ro.observe(sheet);
+    cardRefs.current.forEach((el) => ro.observe(el));
+    const mo = new MutationObserver(schedule);
+    mo.observe(sheet, { childList: true, subtree: true, characterData: true });
+    return () => {
+      ro.disconnect();
+      mo.disconnect();
+      cancelAnimationFrame(rafRef.current);
+    };
+  }, [schedule, narrow, ids]);
 
   return (
     <div ref={wrapRef} className="w-full">

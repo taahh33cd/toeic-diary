@@ -13,11 +13,12 @@ import {
   countByLabel,
   estimateBand,
   labelMeta,
+  mergeAnnotationReplies,
   scaleFor,
+  scoredCount,
   type Annotation,
   type AnnotationKind,
   type AnnotationLabel,
-  type AnnotationReply,
   type FeedbackItem,
   type SubmissionFeedback,
   type SubmissionItem,
@@ -177,7 +178,7 @@ const KIND_META: Record<AnnotationKind, { label: string; color: string }> = {
 // ─── Thẻ comment sửa được ─────────────────────────────────────────────────────
 
 function EditableCard({
-  a, active, onFocus, onHover, onChange, onRemove, onReply,
+  a, active, onFocus, onHover, onChange, onRemove,
 }: {
   a: Annotation;
   active: boolean;
@@ -185,21 +186,12 @@ function EditableCard({
   onHover: (id: string | null) => void;
   onChange: (patch: Partial<Annotation>) => void;
   onRemove: () => void;
-  onReply: (text: string) => void;
 }) {
   const meta = labelMeta(a.label);
   const kind = annotationKind(a);
   const kindMeta = KIND_META[kind];
-  const [reply, setReply] = useState("");
   const [showTemplates, setShowTemplates] = useState(false);
   const replies = a.replies ?? [];
-
-  function sendReply() {
-    const t = reply.trim();
-    if (!t) return;
-    onReply(t);
-    setReply("");
-  }
 
   return (
     <div
@@ -295,7 +287,13 @@ function EditableCard({
             <button
               key={t}
               type="button"
-              onClick={(e) => { e.stopPropagation(); onChange({ comment: t }); setShowTemplates(false); }}
+              onClick={(e) => {
+                e.stopPropagation();
+                // Nối vào cuối thay vì ghi đè: thầy đã gõ dở thì không được mất chữ.
+                const prev = (a.comment ?? "").trim();
+                onChange({ comment: prev ? `${prev.replace(/[.\s]+$/, "")}. ${t}` : t });
+                setShowTemplates(false);
+              }}
               className="text-[10px] px-1.5 py-0.5 rounded"
               style={{ background: tint(meta.color, 0.1), color: meta.color, border: "none", cursor: "pointer" }}
             >
@@ -305,7 +303,7 @@ function EditableCard({
         </div>
       )}
 
-      {/* Hội thoại quanh chỗ này */}
+      {/* Học viên trả lời ở trang xem lại; thầy chỉ đọc ở đây. Muốn đáp thì sửa phần giải thích phía trên. */}
       {replies.length > 0 && (
         <div className="mt-2 pt-2 flex flex-col gap-1.5" style={{ borderTop: "1px solid var(--border)" }}>
           {replies.map((r) => (
@@ -322,28 +320,6 @@ function EditableCard({
         </div>
       )}
 
-      <div className="flex gap-1 mt-1.5">
-        <input
-          value={reply}
-          onChange={(e) => setReply(e.target.value)}
-          onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); sendReply(); } }}
-          placeholder="Trả lời…"
-          className="flex-1 px-2 py-1 rounded text-[12px] border outline-none"
-          style={inputStyle}
-        />
-        <button
-          type="button"
-          onClick={(e) => { e.stopPropagation(); sendReply(); }}
-          disabled={!reply.trim()}
-          className="px-2 py-1 rounded text-[11px] font-bold"
-          style={{
-            background: reply.trim() ? "var(--accent-primary)" : "var(--border)",
-            color: "#fff", border: "none", cursor: reply.trim() ? "pointer" : "default",
-          }}
-        >
-          Gửi
-        </button>
-      </div>
     </div>
   );
 }
@@ -368,6 +344,8 @@ export default function GradeSubmissionPage() {
   const [savedAt, setSavedAt] = useState<string | null>(null);
   /** Bỏ qua lần đổi state ngay sau khi tải bài — đó là dữ liệu vừa đọc về, không phải thầy sửa. */
   const loadedRef = useRef(false);
+  /** Bản JSON của feedback lần cuối đã nạp hoặc đã lưu — so để biết có gì mới cần lưu không. */
+  const lastSavedRef = useRef("");
   const [hoverId, setHoverId] = useState<string | null>(null);
   /**
    * Menu nổi cạnh chỗ vừa thao tác. `range` = đang bôi đen (thay thế/xoá),
@@ -385,14 +363,27 @@ export default function GradeSubmissionPage() {
         if (!s) { setError(String(data?.error ?? "Không tìm thấy bài")); return; }
         setSub(s);
         // Nháp mới hơn bản đã công bố nên ưu tiên, để thầy chấm tiếp đúng chỗ bỏ dở.
-        const fb = s.draftFeedback ?? s.feedback;
+        // Riêng hội thoại thì DB thắng: học viên trả lời sau khi nháp được lưu thì
+        // lượt đó chỉ nằm ở bản đã công bố, không gộp lại là thầy không thấy.
+        const fb = s.draftFeedback && s.feedback
+          ? mergeAnnotationReplies(s.draftFeedback, s.feedback)
+          : (s.draftFeedback ?? s.feedback);
         setOverall(fb?.overall ?? "");
         setAnnotations(fb?.annotations ?? []);
         setAudio(fb?.audioUrl ? { url: fb.audioUrl, publicId: fb.audioPublicId ?? "" } : null);
-        setItems(s.items.map((it) => {
+        const loadedItems = s.items.map((it) => {
           const prev = fb?.items?.find((f) => f.idx === it.idx);
           return { idx: it.idx, score: prev?.score, comment: prev?.comment ?? "", corrected: prev?.corrected };
-        }));
+        });
+        setItems(loadedItems);
+        // Mốc "chưa có gì đổi": chỉ tự lưu khi nội dung khác mốc này.
+        lastSavedRef.current = JSON.stringify({
+          items: loadedItems,
+          annotations: fb?.annotations ?? [],
+          overall: fb?.overall ?? "",
+          audioUrl: fb?.audioUrl,
+          audioPublicId: fb?.audioUrl ? (fb.audioPublicId ?? "") : undefined,
+        });
       } catch (e) {
         if (alive) setError(e instanceof Error ? e.message : "Không tải được bài");
       } finally {
@@ -404,16 +395,20 @@ export default function GradeSubmissionPage() {
 
   const max = sub ? scaleFor(sub.skill, sub.unit) : 5;
   const band = useMemo(() => estimateBand({ items, annotations }, max), [items, annotations, max]);
+  const progress = useMemo(() => scoredCount({ items, annotations }), [items, annotations]);
   const stats = useMemo(() => countByLabel(annotations), [annotations]);
 
   function patchItem(idx: number, p: Partial<FeedbackItem>) {
     setItems((prev) => prev.map((f) => (f.idx === idx ? { ...f, ...p } : f)));
   }
 
+  /**
+   * Chỉ tô sáng, KHÔNG cuộn. Thẻ ở lề bị đẩy xuống khi nhiều nhận xét nên thường
+   * nằm xa chỗ nó neo; cuộn theo neo mỗi lần bấm (kể cả bấm vào ô gõ trong thẻ)
+   * là kéo trang nhảy về đầu bài giữa lúc thầy đang gõ.
+   */
   function focus(aid: string) {
     setActiveId(aid);
-    document.querySelector(`[data-annotation-id="${CSS.escape(aid)}"]`)
-      ?.scrollIntoView({ block: "center", behavior: "smooth" });
   }
 
   /** Bôi đen (hoặc chỉ đặt con trỏ) trong bài thì hiện menu thao tác ngay đó. */
@@ -423,8 +418,24 @@ export default function GradeSubmissionPage() {
     const node = sel.anchorNode;
     const host = (node?.nodeType === 1 ? (node as Element) : node?.parentElement)?.closest("[data-item-idx]");
     if (!host) { setPop(null); return; }
+    // Bấm vào chữ đã có nhận xét chỉ là chọn thẻ, không phải muốn chèn thêm chỗ đó.
+    if (sel.isCollapsed && (e.target as Element).closest?.("[data-annotation-id]")) { setPop(null); return; }
     setPop({ x: e.clientX, y: e.clientY, mode: sel.isCollapsed ? "caret" : "range" });
   }
+
+  // Menu nổi neo theo toạ độ màn hình nên phải tắt khi trang cuộn (nó sẽ trôi khỏi
+  // chữ vừa chọn) hoặc khi nhấn Esc. `capture` vì thứ cuộn là <main>, không phải window.
+  useEffect(() => {
+    if (!pop) return;
+    const hide = () => setPop(null);
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") hide(); };
+    window.addEventListener("scroll", hide, true);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("scroll", hide, true);
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [pop]);
 
   /** Phần tử bài viết chứa vùng chọn hiện tại, kèm câu tương ứng. */
   function selectionHost(): { host: HTMLElement; itemIdx: number; text: string } | null {
@@ -498,19 +509,6 @@ export default function GradeSubmissionPage() {
     });
   }
 
-  function addReply(annotationId: string, text: string) {
-    const reply: AnnotationReply = {
-      id: `r${Date.now().toString(36)}`,
-      role: "teacher",
-      authorName: "Thầy Hiếu",
-      text,
-      createdAt: new Date().toISOString(),
-    };
-    setAnnotations((prev) =>
-      prev.map((x) => (x.id === annotationId ? { ...x, replies: [...(x.replies ?? []), reply] } : x))
-    );
-  }
-
   function addAnnotation(kind: AnnotationKind = "replace") {
     const ctx = selectionHost();
     if (!ctx) { setPop(null); return; }
@@ -555,6 +553,11 @@ export default function GradeSubmissionPage() {
     // Lần chạy đầu chỉ đánh dấu đã nạp xong, không lưu lại chính thứ vừa đọc về.
     if (!loadedRef.current) { loadedRef.current = true; return; }
 
+    const snapshot = JSON.stringify(draftPayload);
+    // Không có gì khác bản đã nạp/đã lưu thì khỏi ghi: mở một bài đã chấm rồi để
+    // đó mà ghi nháp sẽ tạo draftFeedback cũ, lần mở sau nó đè lên phản hồi mới.
+    if (snapshot === lastSavedRef.current) return;
+
     const timer = setTimeout(async () => {
       setAutoState("saving");
       try {
@@ -564,6 +567,7 @@ export default function GradeSubmissionPage() {
           body: JSON.stringify({ feedback: draftPayload, publish: false }),
         });
         if (!res.ok) throw new Error(String((await readJson(res))?.error ?? `Lỗi ${res.status}`));
+        lastSavedRef.current = snapshot;
         setSavedAt(new Date().toLocaleTimeString("vi-VN", { hour: "2-digit", minute: "2-digit" }));
         setAutoState("saved");
       } catch {
@@ -581,10 +585,12 @@ export default function GradeSubmissionPage() {
   useEffect(() => {
     function flush() {
       if (document.visibilityState !== "hidden" || !loadedRef.current) return;
+      const snapshot = JSON.stringify(draftPayload);
+      if (snapshot === lastSavedRef.current) return;
       const blob = new Blob([JSON.stringify({ feedback: draftPayload, publish: false })], {
         type: "application/json",
       });
-      navigator.sendBeacon?.(`/api/admin/submissions/${id}`, blob);
+      if (navigator.sendBeacon?.(`/api/admin/submissions/${id}`, blob)) lastSavedRef.current = snapshot;
     }
     document.addEventListener("visibilitychange", flush);
     return () => document.removeEventListener("visibilitychange", flush);
@@ -641,7 +647,6 @@ export default function GradeSubmissionPage() {
           onHover={setHoverId}
           onChange={(patch) => setAnnotations((prev) => prev.map((x) => (x.id === a.id ? { ...x, ...patch } : x)))}
           onRemove={() => setAnnotations((prev) => prev.filter((x) => x.id !== a.id))}
-          onReply={(text) => addReply(a.id, text)}
         />
       ),
     }));
@@ -681,8 +686,13 @@ export default function GradeSubmissionPage() {
           {autoState === "error" && "Lưu nháp lỗi — sẽ thử lại khi bạn gõ tiếp"}
         </span>
 
-        <span className="text-sm font-bold" style={{ color: "var(--text-primary)" }}>
-          {band === null ? "— /200" : `~${band}/200`}
+        {/* Chưa chấm đủ các câu thì chưa có band: hiện tiến độ thay vì một con số đoán từ vài câu. */}
+        <span
+          className="text-sm font-bold"
+          style={{ color: "var(--text-primary)" }}
+          title={band === null ? "Chấm điểm đủ mọi câu để có band ước lượng" : undefined}
+        >
+          {band === null ? `Đã chấm ${progress.scored}/${progress.total} câu` : `~${band}/200`}
         </span>
         <button type="button" onClick={save} disabled={saving}
           className="px-5 py-2 rounded-lg text-sm font-bold text-white"
@@ -781,7 +791,13 @@ export default function GradeSubmissionPage() {
         <div
           onMouseDown={(e) => e.preventDefault()}
           className="fixed z-50 flex rounded-lg overflow-hidden shadow-lg"
-          style={{ left: pop.x + 8, top: pop.y + 8, border: "1px solid var(--border)", background: "var(--bg-elevated)" }}
+          style={{
+            // Kẹp trong khung nhìn: bôi chữ sát mép phải/dưới thì menu không tràn ra ngoài.
+            left: Math.max(8, Math.min(pop.x + 8, window.innerWidth - (pop.mode === "range" ? 290 : 150))),
+            top: Math.max(8, Math.min(pop.y + 8, window.innerHeight - 48)),
+            border: "1px solid var(--border)",
+            background: "var(--bg-elevated)",
+          }}
         >
           {pop.mode === "range" ? (
             <>

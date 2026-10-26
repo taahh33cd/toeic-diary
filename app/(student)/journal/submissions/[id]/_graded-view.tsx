@@ -168,10 +168,9 @@ export function GradedView({
   const stats = countByLabel(annotations);
   const fbOf = (idx: number): FeedbackItem | undefined => feedback?.items?.find((f) => f.idx === idx);
 
+  // Chỉ tô sáng, không cuộn — xem lý do ở trang chấm của giáo viên.
   function focus(id: string) {
     setActiveId(id);
-    document.querySelector(`[data-annotation-id="${CSS.escape(id)}"]`)
-      ?.scrollIntoView({ block: "center", behavior: "smooth" });
   }
 
   const cards: RailCard[] = annotations

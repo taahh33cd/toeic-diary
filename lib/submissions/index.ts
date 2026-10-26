@@ -321,14 +321,27 @@ export function hasContent(items: SubmissionItem[]): boolean {
 /**
  * Quy đổi rubric ETS sang dải điểm TOEIC 0-200 (làm tròn tới bội số 10).
  * Chỉ là ước lượng để học viên hình dung, không phải thang chấm chính thức.
+ *
+ * Chưa chấm đủ mọi câu thì trả `null` chứ không lấy trung bình phần đã chấm:
+ * chấm 1/3 câu được điểm tối đa mà hiện ~200/200 là con số đánh lừa cả thầy
+ * lẫn học viên, và nó được ghi thẳng vào `SkillSubmission.band` lúc công bố.
  */
 export function estimateBand(feedback: SubmissionFeedback, max: number): number | null {
   const scores = feedback.items
     .map((f) => f.score)
     .filter((s): s is number => typeof s === "number");
   if (scores.length === 0 || max <= 0) return null;
+  if (scores.length < feedback.items.length) return null;
   const avg = scores.reduce((a, b) => a + b, 0) / scores.length;
   return Math.round((avg / max) * 200 / 10) * 10;
+}
+
+/** Đã chấm bao nhiêu trên tổng số câu — để hiện tiến độ thay vì band đoán mò. */
+export function scoredCount(feedback: SubmissionFeedback): { scored: number; total: number } {
+  return {
+    scored: feedback.items.filter((f) => typeof f.score === "number").length,
+    total: feedback.items.length,
+  };
 }
 
 /**
@@ -339,7 +352,12 @@ export function segmentText(
   text: string,
   annotations: Annotation[]
 ): { text: string; annotation?: Annotation }[] {
-  const sorted = [...annotations].sort((a, b) => a.start - b.start);
+  // Cùng điểm bắt đầu thì neo chèn (dài 0) phải đứng trước đoạn phủ chữ, nếu
+  // không vòng lặp dưới tưởng nó chồng lấn và bỏ hẳn — thẻ nhận xét còn ở lề
+  // nhưng mất chỗ neo trong bài, thành thẻ không trỏ vào đâu.
+  const sorted = [...annotations].sort(
+    (a, b) => a.start - b.start || (a.end - a.start) - (b.end - b.start)
+  );
   const out: { text: string; annotation?: Annotation }[] = [];
   let cursor = 0;
   for (const a of sorted) {
