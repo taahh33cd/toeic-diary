@@ -2,7 +2,22 @@
 
 > Nguồn: dự án **FlashCards Pro** (Vite + React 19, 13 file, `C:\Users\Admin\Documents\FULL_CODEBASE.txt` + bản build `dist/`)
 > Đích: `toeic-dictation-master` (Next.js 16.2.3 + Prisma 7/Postgres + Firebase RTDB + Gemini)
-> Lập: 2026-10-25 · Chưa viết code, đây là bản thiết kế để bác soát trước khi làm.
+> Lập: 2026-10-25 · Cập nhật: 2026-10-26
+
+## Tiến độ
+
+| Phase | Trạng thái | Commit |
+|---|---|---|
+| 0 — Gom SRS về một nguồn | ✅ xong, đo trên dữ liệu thật | `bc841a3` |
+| 1A — Schema + migrate kho từ | ✅ xong, 39 bộ / 583 thẻ / 579 tiến độ | `d22bce7` |
+| 1B.1 — API bộ thẻ (CRUD) | ✅ xong, 15/15 kiểm đạt | `43a807a` |
+| 1B.2-4 — Trang bộ thẻ + port 5 chế độ luyện | ⏳ đang tới | |
+| 1C — AI tạo bộ | ⬜ | |
+| 1D — Link chia sẻ + GV giao bài | ⬜ | |
+| 2 — Quiz 10 dạng + ảnh + thống kê | ⬜ | |
+
+Việc **chưa** làm dù plan có ghi: thu hồi Pexels key cũ (phải làm ở dashboard
+Pexels, em không làm thay được) — xem §2.2 #1.
 
 ---
 
