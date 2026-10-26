@@ -3,12 +3,13 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useProfile } from "@/hooks/useProfile";
-import { useVocab } from "@/hooks/firebase/useVocab";
-import { deleteVocabWord, saveForgottenWords, loadForgottenWords } from "@/lib/firebase/helpers";
+import { useVocabWords } from "@/hooks/useVocabWords";
+import { saveForgottenWords, loadForgottenWords } from "@/lib/firebase/helpers";
+import { quickAddWord, deleteWord, wordIsDue, type WordRow } from "@/lib/vocab/client";
 import { recordVocabReview } from "@/lib/vocab/review-client";
 import { useLocale } from "@/hooks/useLocale";
 import { PageHeading } from "@/components/journal/paper/PageHeading";
-import { isDue, todayIct, MASTERY_THRESHOLD } from "@/lib/vocab/srs";
+import { MASTERY_THRESHOLD } from "@/lib/vocab/srs";
 import type { VocabWord } from "@/lib/firebase/types";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
@@ -20,9 +21,41 @@ const POS_COLOR: Record<string, string> = {
   adv: "#8B5CF6",
 };
 
-// SRS dùng chung với badge nav, dashboard và 2 cron — xem lib/vocab/srs.ts.
-// isWordDue đã tự bỏ từ đã thuộc, nên không cần kèm `&& repCount < MASTERY_THRESHOLD`.
-const isWordDue = isDue;
+/**
+ * Từ hiển thị trên trang = VocabWord (các component cũ nhận kiểu này) cộng
+ * thêm phần tiến độ mà Postgres tính sẵn.
+ */
+type W = VocabWord & {
+  dueAt: string | null;
+  mastered: boolean;
+  intervalDays: number;
+  wrongCount: number;
+};
+
+function toW(r: WordRow): W {
+  return {
+    id: r.wordKey, // khoá theo TỪ, không còn khoá RTDB
+    word: r.word,
+    part: r.part ?? 0,
+    addedDate: r.addedDate,
+    repCount: r.repCount,
+    ipa: r.ipa ?? undefined,
+    pos: r.pos ?? undefined,
+    def: r.definition ?? undefined,
+    vi: r.meaningVi ?? undefined,
+    example: r.example ?? undefined,
+    audioUrl: r.audioUrl ?? undefined,
+    lastReview: r.lastReview ? r.lastReview.slice(0, 10) : undefined,
+    dueAt: r.dueAt,
+    mastered: r.mastered,
+    intervalDays: r.intervalDays,
+    wrongCount: r.wrongCount,
+  };
+}
+
+// Đến hạn hay chưa đọc thẳng dueAt mà server đã tính bằng SM-2 — KHÔNG suy
+// lại từ repCount như trước, vì bảng giãn cách cố định cũ không còn đúng.
+const isWordDue = wordIsDue;
 
 // ─── TTS / Audio helper ───────────────────────────────────────────────────────
 
@@ -70,9 +103,8 @@ type AddPhase = "search" | "loading" | "preview" | "saving" | "saved";
 
 const POS_LABELS: Record<string, string> = { n: "noun", v: "verb", adj: "adj", adv: "adv" };
 
-function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: (word: string) => void }) {
+function QuickAddBar({ onSaved }: { onSaved?: (word: string) => void }) {
   const { t } = useLocale();
-  const today = todayIct();
   const inputRef = useRef<HTMLInputElement>(null);
 
   const [phase, setPhase] = useState<AddPhase>("search");
@@ -153,22 +185,16 @@ function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: 
     if (!word.trim() || phase === "saving") return;
     setPhase("saving");
     try {
-      const res = await fetch("/api/vocab/save", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          word: word.trim(),
-          vi: vi.trim() || undefined,
-          ipa: ipa.trim() || undefined,
-          pos: pos || undefined,
-          def: def.trim() || undefined,
-          example: example.trim() || undefined,
-          part,
-          addedDate: today,
-          repCount: 0,
-        }),
+      await quickAddWord({
+        word: word.trim(),
+        vi: vi.trim() || undefined,
+        ipa: ipa.trim() || undefined,
+        pos: pos || undefined,
+        def: def.trim() || undefined,
+        example: example.trim() || undefined,
+        audioUrl: audioUrl || undefined,
+        part,
       });
-      if (!res.ok) throw new Error(await res.text());
       const savedWord = word.trim();
       setPhase("saved");
       onSaved?.(savedWord);
@@ -522,19 +548,17 @@ function InlineFlashcard({
   setIdx,
   flipped,
   setFlipped,
-  todayStr,
 }: {
-  words: VocabWord[];
+  words: W[];
   idx: number;
   setIdx: (i: number) => void;
   flipped: boolean;
   setFlipped: (f: boolean) => void;
-  todayStr: string;
 }) {
   const { t } = useLocale();
   const word = words[Math.min(idx, words.length - 1)];
   if (!word) return null;
-  const due = isWordDue(word, todayStr);
+  const due = isWordDue(word);
 
   function prev(e: React.MouseEvent) { e.stopPropagation(); setIdx((idx - 1 + words.length) % words.length); setFlipped(false); }
   function next(e: React.MouseEvent) { e.stopPropagation(); setIdx((idx + 1) % words.length); setFlipped(false); }
@@ -604,13 +628,13 @@ function InlineFlashcard({
 
 // ─── Word List Row ────────────────────────────────────────────────────────────
 
-function WordListRow({ word, studentCode, todayStr }: { word: VocabWord; studentCode: string; todayStr: string }) {
+function WordListRow({ word }: { word: W }) {
   const { t } = useLocale();
   const [reviewing, setReviewing] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [expanded, setExpanded] = useState(false);
 
-  const due = isWordDue(word, todayStr);
+  const due = isWordDue(word);
   const isMastered = (word.repCount ?? 0) >= MASTERY_THRESHOLD;
 
   async function handleReview(e: React.MouseEvent) {
@@ -618,8 +642,6 @@ function WordListRow({ word, studentCode, todayStr }: { word: VocabWord; student
     if (reviewing) return;
     setReviewing(true);
     await recordVocabReview({
-      studentCode,
-      wordId: word.id,
       outcome: { kind: "flip", word: word.word, known: true },
     });
     setReviewing(false);
@@ -629,7 +651,7 @@ function WordListRow({ word, studentCode, todayStr }: { word: VocabWord; student
     e.stopPropagation();
     if (!window.confirm(`Xoá từ "${word.word}"?`)) return;
     setDeleting(true);
-    await deleteVocabWord(studentCode, word.id);
+    await deleteWord(word.word);
   }
 
   if (deleting) return null;
@@ -730,11 +752,11 @@ function FlashcardLauncher({
   onLaunchWrite,
   onClose,
 }: {
-  words: VocabWord[];
-  dueWords: VocabWord[];
+  words: W[];
+  dueWords: W[];
   studentCode: string;
-  onLaunchFlashcard: (mode: FlashcardMode, words: VocabWord[]) => void;
-  onLaunchWrite: (words: VocabWord[]) => void;
+  onLaunchFlashcard: (mode: FlashcardMode, words: W[]) => void;
+  onLaunchWrite: (words: W[]) => void;
   onClose: () => void;
 }) {
   const { t } = useLocale();
@@ -757,7 +779,7 @@ function FlashcardLauncher({
     setLoadingForgotten(false);
   }
 
-  function shuffle(arr: VocabWord[]) {
+  function shuffle(arr: W[]) {
     const a = [...arr];
     for (let i = a.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -861,11 +883,9 @@ function FlashcardLauncher({
 
 function WriteModal({
   words,
-  studentCode,
   onClose,
 }: {
-  words: VocabWord[];
-  studentCode: string;
+  words: W[];
   onClose: () => void;
 }) {
   const { t } = useLocale();
@@ -897,8 +917,6 @@ function WriteModal({
       setResult("correct");
       setCorrectCount(c => c + 1);
       await recordVocabReview({
-        studentCode,
-        wordId: card.id,
         outcome: { kind: "quiz", word: card.word, correct: true, quizType: "meaning-to-typing" },
       });
       setTimeout(() => advance(), 900);
@@ -1020,7 +1038,7 @@ function FlashcardModal({
   onClose,
   mode = "word_to_meaning",
 }: {
-  words: VocabWord[];
+  words: W[];
   studentCode: string;
   onClose: () => void;
   mode?: FlashcardMode;
@@ -1062,8 +1080,6 @@ function FlashcardModal({
     if (saving || !flipped) return;
     setSaving(true);
     await recordVocabReview({
-      studentCode,
-      wordId: card.id,
       outcome: { kind: "flip", word: card.word, known: true },
     });
     unmarkForgotten(card.id);
@@ -1075,8 +1091,6 @@ function FlashcardModal({
     if (saving || !flipped) return;
     setSaving(true);
     await recordVocabReview({
-      studentCode,
-      wordId: card.id,
       outcome: { kind: "flip", word: card.word, known: false },
     });
     markForgotten(card.id);
@@ -1234,11 +1248,9 @@ function FlashcardModal({
 
 function ListenWriteModal({
   words,
-  studentCode,
   onClose,
 }: {
-  words: VocabWord[];
-  studentCode: string;
+  words: W[];
   onClose: () => void;
 }) {
   const { t } = useLocale();
@@ -1281,8 +1293,6 @@ function ListenWriteModal({
     if (isCorrect) {
       setCorrectCount((c) => c + 1);
       await recordVocabReview({
-        studentCode,
-        wordId: card.id,
         outcome: { kind: "quiz", word: card.word, correct: true, quizType: "listen-to-typing" },
       });
     }
@@ -1384,12 +1394,8 @@ function ListenWriteModal({
 
 function WordCard({
   word,
-  studentCode,
-  todayStr,
 }: {
-  word: VocabWord;
-  studentCode: string;
-  todayStr: string;
+  word: W;
 }) {
   const { t } = useLocale();
   const [expanded, setExpanded] = useState(false);
@@ -1398,8 +1404,9 @@ function WordCard({
   const [reviewing, setReviewing] = useState(false);
   const [deleting, setDeleting] = useState(false);
 
-  const isMastered = repCount >= MASTERY_THRESHOLD;
-  const due = isWordDue({ ...word, repCount, lastReview }, todayStr);
+  const isMastered = repCount >= MASTERY_THRESHOLD || word.mastered;
+  // dueAt do server tính; state cục bộ chỉ để hiện số lần ôn ngay sau khi bấm.
+  const due = isWordDue(word);
 
   async function handleReview(e: React.MouseEvent) {
     e.stopPropagation();
@@ -1407,8 +1414,6 @@ function WordCard({
     setReviewing(true);
     try {
       const p = await recordVocabReview({
-        studentCode,
-        wordId: word.id,
         outcome: { kind: "flip", word: word.word, known: true },
       });
       // Chỉ cập nhật UI theo số server trả về — không tự cộng 1 rồi đoán, vì
@@ -1426,7 +1431,7 @@ function WordCard({
     e.stopPropagation();
     if (!window.confirm(`Xoá từ "${word.word}"?`)) return;
     setDeleting(true);
-    await deleteVocabWord(studentCode, word.id);
+    await deleteWord(word.word);
   }
 
   if (deleting) return null;
@@ -1591,7 +1596,7 @@ function PartBentoCard({
   todayStr,
 }: {
   label: string;
-  words: VocabWord[];
+  words: W[];
   studentCode: string;
   todayStr: string;
 }) {
@@ -1614,7 +1619,7 @@ function PartBentoCard({
       </h3>
       <div className="grid grid-cols-2 gap-3">
         {words.map((w) => (
-          <WordCard key={w.id} word={w} studentCode={studentCode} todayStr={todayStr} />
+          <WordCard key={w.id} word={w} />
         ))}
       </div>
     </div>
@@ -1623,7 +1628,7 @@ function PartBentoCard({
 
 // ─── Sidebar: Top Difficult Words ────────────────────────────────────────────
 
-function DifficultWordsSidebar({ words }: { words: VocabWord[] }) {
+function DifficultWordsSidebar({ words }: { words: W[] }) {
   const { t } = useLocale();
 
   // Sort by repCount ascending (least reviewed = most difficult), exclude mastered
@@ -1700,7 +1705,7 @@ function DifficultWordsSidebar({ words }: { words: VocabWord[] }) {
               { label: t("Tổng", "Total"), value: words.length, color: "var(--text-primary)" },
               {
                 label: t("Đến hạn", "Due"),
-                value: words.filter((w) => isWordDue(w, todayIct())).length,
+                value: words.filter((w) => isWordDue(w)).length,
                 color: "var(--orange)",
               },
               {
@@ -1733,23 +1738,23 @@ function DifficultWordsSidebar({ words }: { words: VocabWord[] }) {
 export default function VocabPage() {
   const { t } = useLocale();
   const { profile, loading: profileLoading } = useProfile();
-  const { words, loading: vocabLoading } = useVocab(profile?.studentCode);
+  const { words: rows, loading: vocabLoading } = useVocabWords(!!profile?.studentCode);
+  const words = useMemo(() => rows.map(toW), [rows]);
   const [search, setSearch] = useState("");
   const [selectedPart, setSelectedPart] = useState<number | null>(null);
   const [filterDue, setFilterDue] = useState(false);
-  const [flashcardMode, setFlashcardMode] = useState<{ mode: FlashcardMode; words: VocabWord[] } | null>(null);
-  const [listenWriteWords, setListenWriteWords] = useState<VocabWord[] | null>(null);
+  const [flashcardMode, setFlashcardMode] = useState<{ mode: FlashcardMode; words: W[] } | null>(null);
+  const [listenWriteWords, setListenWriteWords] = useState<W[] | null>(null);
   const [showLauncher, setShowLauncher] = useState(false);
-  const [writeWords, setWriteWords] = useState<VocabWord[] | null>(null);
+  const [writeWords, setWriteWords] = useState<W[] | null>(null);
   const [inlineIdx, setInlineIdx] = useState(0);
   const [inlineFlipped, setInlineFlipped] = useState(false);
 
-  const todayStr = todayIct();
   const loading = profileLoading || vocabLoading;
 
   const dueWords = useMemo(
-    () => words.filter((w) => isWordDue(w, todayStr)),
-    [words, todayStr]
+    () => words.filter((w) => isWordDue(w)),
+    [words]
   );
 
   const filtered = useMemo(
@@ -1760,32 +1765,32 @@ export default function VocabPage() {
           w.word.toLowerCase().includes(search.toLowerCase()) ||
           (w.vi ?? "").toLowerCase().includes(search.toLowerCase());
         const matchPart = selectedPart === null || w.part === selectedPart;
-        const matchDue = !filterDue || isWordDue(w, todayStr);
+        const matchDue = !filterDue || isWordDue(w);
         return matchSearch && matchPart && matchDue;
       }),
-    [words, search, selectedPart, filterDue, todayStr]
+    [words, search, selectedPart, filterDue]
   );
 
   // Words for inline flashcard: current part, due words first
   const inlineWords = useMemo(() => {
     const base = selectedPart === null ? words : words.filter((w) => w.part === selectedPart);
-    const due = base.filter((w) => isWordDue(w, todayStr));
-    const rest = base.filter((w) => !isWordDue(w, todayStr) || (w.repCount ?? 0) >= MASTERY_THRESHOLD);
+    const due = base.filter((w) => isWordDue(w));
+    const rest = base.filter((w) => !isWordDue(w) || (w.repCount ?? 0) >= MASTERY_THRESHOLD);
     return [...due, ...rest];
-  }, [words, selectedPart, todayStr]);
+  }, [words, selectedPart]);
 
   // Word list: due first, then grouped by part (when all) or flat (when specific part)
   const filteredDue = useMemo(
-    () => filtered.filter((w) => isWordDue(w, todayStr)),
-    [filtered, todayStr]
+    () => filtered.filter((w) => isWordDue(w)),
+    [filtered]
   );
   const filteredNotDue = useMemo(
-    () => filtered.filter((w) => !isWordDue(w, todayStr) || (w.repCount ?? 0) >= MASTERY_THRESHOLD),
-    [filtered, todayStr]
+    () => filtered.filter((w) => !isWordDue(w) || (w.repCount ?? 0) >= MASTERY_THRESHOLD),
+    [filtered]
   );
   const groupedNotDue = useMemo(() => {
     if (selectedPart !== null) return [];
-    const groups: Record<string, VocabWord[]> = {};
+    const groups: Record<string, W[]> = {};
     for (const w of filteredNotDue) {
       const key = w.part ? `Part ${w.part}` : "Khác";
       if (!groups[key]) groups[key] = [];
@@ -1853,7 +1858,7 @@ export default function VocabPage() {
         />
 
         {/* Quick Add Bar */}
-        <QuickAddBar studentCode={profile.studentCode} />
+        <QuickAddBar />
 
         {/* F11: SRS Status Banner */}
         {dueWords.length > 0 && (
@@ -1941,7 +1946,6 @@ export default function VocabPage() {
                 setIdx={setInlineIdx}
                 flipped={inlineFlipped}
                 setFlipped={setInlineFlipped}
-                todayStr={todayStr}
               />
             )}
 
@@ -1981,14 +1985,14 @@ export default function VocabPage() {
                       <span style={{ fontSize: ".62rem", fontWeight: 800, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--orange)" }}>⏰ {t("Đến hạn ôn", "Due for review")} · {filteredDue.length}</span>
                     </div>
                     {filteredDue.map((w) => (
-                      <WordListRow key={w.id} word={w} studentCode={profile.studentCode!} todayStr={todayStr} />
+                      <WordListRow key={w.id} word={w} />
                     ))}
                   </>
                 )}
                 {/* Remaining: flat list (specific part) or grouped (all parts) */}
                 {selectedPart !== null ? (
                   filteredNotDue.map((w) => (
-                    <WordListRow key={w.id} word={w} studentCode={profile.studentCode!} todayStr={todayStr} />
+                    <WordListRow key={w.id} word={w} />
                   ))
                 ) : (
                   groupedNotDue.map(({ label, words: gWords }) => (
@@ -1997,7 +2001,7 @@ export default function VocabPage() {
                         <span style={{ fontSize: ".62rem", fontWeight: 800, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--text-muted)" }}>{label} · {gWords.length}</span>
                       </div>
                       {gWords.map((w) => (
-                        <WordListRow key={w.id} word={w} studentCode={profile.studentCode!} todayStr={todayStr} />
+                        <WordListRow key={w.id} word={w} />
                       ))}
                     </div>
                   ))
@@ -2052,7 +2056,6 @@ export default function VocabPage() {
       {writeWords && (
         <WriteModal
           words={writeWords}
-          studentCode={profile.studentCode}
           onClose={() => setWriteWords(null)}
         />
       )}
@@ -2061,7 +2064,6 @@ export default function VocabPage() {
       {listenWriteWords && (
         <ListenWriteModal
           words={listenWriteWords}
-          studentCode={profile.studentCode}
           onClose={() => setListenWriteWords(null)}
         />
       )}

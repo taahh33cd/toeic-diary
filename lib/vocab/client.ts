@@ -125,3 +125,70 @@ export async function postReview(body: ReviewBody) {
   window.dispatchEvent(new Event("vocab:reviewed"));
   return r;
 }
+
+// ── Kho từ phẳng ────────────────────────────────────────────────────────────
+
+/** Một TỪ trong kho: nội dung lấy từ thẻ đầu tiên tìm được, tiến độ chỉ có một. */
+export interface WordRow {
+  wordKey: string;
+  word: string;
+  ipa: string | null;
+  pos: string | null;
+  meaningVi: string | null;
+  definition: string | null;
+  example: string | null;
+  imageUrl: string | null;
+  audioUrl: string | null;
+  part: number | null;
+  /** YYYY-MM-DD — ngày thẻ được tạo */
+  addedDate: string;
+  deckIds: string[];
+  repCount: number;
+  intervalDays: number;
+  mastered: boolean;
+  wrongCount: number;
+  seenCount: number;
+  /** ISO string */
+  lastReview: string | null;
+  /** ISO string; null = chưa ôn lần nào → đến hạn ngay */
+  dueAt: string | null;
+}
+
+export function listWords() {
+  return call<{ words: WordRow[] }>("/api/flashcards/words");
+}
+
+export async function quickAddWord(body: {
+  word: string;
+  vi?: string;
+  ipa?: string;
+  pos?: string;
+  def?: string;
+  example?: string;
+  audioUrl?: string;
+  part?: number;
+}) {
+  const r = await call<{ ok: true; deckId: string; deckTitle: string }>("/api/flashcards/words", {
+    method: "POST",
+    body: JSON.stringify(body),
+  });
+  window.dispatchEvent(new Event("vocab:changed"));
+  window.dispatchEvent(new Event("decks:changed"));
+  return r;
+}
+
+export async function deleteWord(word: string) {
+  const r = await call<{ ok: true; removed: number }>(
+    `/api/flashcards/words?word=${encodeURIComponent(word)}`,
+    { method: "DELETE" }
+  );
+  window.dispatchEvent(new Event("vocab:changed"));
+  window.dispatchEvent(new Event("decks:changed"));
+  return r;
+}
+
+/** Từ này có cần ôn hôm nay không — dùng dueAt của Postgres, không tự tính lại. */
+export function wordIsDue(w: Pick<WordRow, "mastered" | "dueAt">): boolean {
+  if (w.mastered) return false;
+  return w.dueAt === null || new Date(w.dueAt) <= new Date();
+}
