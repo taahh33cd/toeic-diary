@@ -11,10 +11,18 @@
 | 0 — Gom SRS về một nguồn | ✅ xong, đo trên dữ liệu thật | `bc841a3` |
 | 1A — Schema + migrate kho từ | ✅ xong, 39 bộ / 583 thẻ / 579 tiến độ | `d22bce7` |
 | 1B.1 — API bộ thẻ (CRUD) | ✅ xong, 15/15 kiểm đạt | `43a807a` |
-| 1B.2-4 — Trang bộ thẻ + port 5 chế độ luyện | ⏳ đang tới | |
+| 1B.2 — Đường ghi SRS + chuyển badge/cron sang Postgres | ✅ xong, 37+14 kiểm đạt | `16d24be` |
+| 1B.3 — Trang vocab ghi vào Postgres | ✅ xong, đo trên phiên thật | `fb1d5ce` |
+| 1B.4 — 3 trang bộ thẻ (lưới, chi tiết, tạo bộ) | ✅ xong | `931c771` |
+| 1B.5 — Thân trang vocab đọc Postgres + port 3 modal luyện | ⏳ đang tới | |
 | 1C — AI tạo bộ | ⬜ | |
 | 1D — Link chia sẻ + GV giao bài | ⬜ | |
 | 2 — Quiz 10 dạng + ảnh + thống kê | ⬜ | |
+
+**Lỗi công thức đã sửa (§5):** "nửa trọng số" ban đầu hiểu thành `ease × 0.5`,
+cho hệ số 0.65–1.4 nên `round(1 × 1.25) = 1` — lật thẻ không bao giờ thoát mốc
+1 ngày. Sửa thành nội suy `1 + (ease−1)/2`, cộng chốt "mỗi lượt đúng tiến ít
+nhất 1 ngày". Test `scripts/test-srs-apply.ts` bắt được.
 
 Việc **chưa** làm dù plan có ghi: thu hồi Pexels key cũ (phải làm ở dashboard
 Pexels, em không làm thay được) — xem §2.2 #1.
