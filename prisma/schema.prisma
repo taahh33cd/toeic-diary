@@ -170,6 +170,8 @@ model Profile {
   coursePurchases      CoursePurchase[]
   pictureNotes         PictureNote[]
   skillSubmissions     SkillSubmission[] @relation("SubmissionAuthor")
+  ownedDecks           VocabDeck[]       @relation("DeckOwner")
+  vocabProgress        VocabProgress[]
 
   @@map("profiles")
 }
@@ -596,4 +598,197 @@ model SkillSubmission {
   @@index([userId, status])
   @@index([status, submittedAt])
   @@map("skill_submissions")
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Flashcard / Bộ từ vựng  (xem plan-flashcards.md)
+//
+// Nguyên tắc: NỘI DUNG thẻ thuộc bộ, TIẾN ĐỘ ôn thuộc TỪ.
+// VocabCard giữ nội dung riêng cho từng bộ (thầy sửa bộ mình không ảnh hưởng ai),
+// còn VocabProgress khoá theo (userId, wordKey) nên học một từ ở bộ nào cũng đẩy
+// chung một tiến độ — badge "đến hạn" không đếm trùng một từ nhiều lần.
+// ─────────────────────────────────────────────────────────────────────────────
+
+/// Một bộ thẻ. Học viên tự tạo, hoặc migrate từ kho từ RTDB, hoặc AI sinh.
+model VocabDeck {
+  id          String  @id @default(cuid())
+  ownerId     String  @map("owner_id")
+  owner       Profile @relation("DeckOwner", fields: [ownerId], references: [id], onDelete: Cascade)
+
+  title       String
+  description String? @db.Text
+
+  /// 10 ký tự base58, dùng cho link chia sẻ /flashcards/d/{slug}
+  slug        String  @unique
+
+  /// "private" = chỉ mình | "link" = ai có link cũng học được | "library" = thư viện bộ mẫu (chưa dùng)
+  visibility  String  @default("private")
+
+  /// "manual" | "ai_bulk" | "ai_content" | "migrated"
+  source      String  @default("manual")
+  /// Truy nguồn khi source = ai_content: lessonId / passageId / "error-log" / "wrong-answers"
+  sourceRef   String? @map("source_ref")
+
+  /// Part TOEIC 1-7, tuỳ chọn
+  part        Int?
+
+  /// Đếm sẵn số thẻ để list không phải JOIN
+  cardCount   Int     @default(0) @map("card_count")
+
+  /// VocabDeck.id gốc nếu bộ này được nhân bản từ bộ khác
+  clonedFrom  String? @map("cloned_from")
+
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  cards       VocabCard[]
+  assignments VocabDeckAssignment[]
+  sessions    VocabQuizSession[]
+
+  @@index([ownerId, updatedAt])
+  @@index([visibility])
+  @@map("vocab_decks")
+}
+
+/// Nội dung một thẻ trong một bộ. Cùng một từ ở 2 bộ = 2 dòng, nội dung độc lập.
+model VocabCard {
+  id            String    @id @default(cuid())
+  deckId        String    @map("deck_id")
+  deck          VocabDeck @relation(fields: [deckId], references: [id], onDelete: Cascade)
+
+  word          String
+  /// normalizeWord(word) — khoá nối sang VocabProgress
+  wordKey       String    @map("word_key")
+
+  ipa           String?
+  /// "n" | "v" | "adj" | "adv" | "phrase" | "idiom"
+  pos           String?
+  meaningVi     String?   @map("meaning_vi")
+  definition    String?   @db.Text
+  example       String?   @db.Text
+
+  imageUrl      String?   @map("image_url")
+  /// public_id của Cloudinary — cần để xoá được ảnh đã upload
+  imagePublicId String?   @map("image_public_id")
+  audioUrl      String?   @map("audio_url")
+
+  order         Int       @default(0)
+  createdAt     DateTime  @default(now()) @map("created_at")
+
+  @@unique([deckId, wordKey])
+  @@index([deckId, order])
+  @@map("vocab_cards")
+}
+
+/// Tiến độ ôn một TỪ của một học viên — dùng chung cho mọi bộ có từ đó.
+/// Thay thế repCount/lastReview từng nằm trong RTDB vocab/{studentCode}.
+model VocabProgress {
+  id           String    @id @default(cuid())
+  userId       String    @map("user_id")
+  profile      Profile   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  wordKey      String    @map("word_key")
+  /// Dạng hiển thị gần nhất của từ (giữ hoa/thường như học viên gõ)
+  word         String
+
+  repCount     Int       @default(0) @map("rep_count")
+  /// Số ngày giãn cách hiện tại — SM-2 rút gọn, xem lib/vocab/srs.ts
+  intervalDays Int       @default(0) @map("interval_days")
+  ease         Float     @default(2.5)
+  /// Số lần từ đã thuộc rồi lại sai
+  lapses       Int       @default(0)
+
+  seenCount    Int       @default(0) @map("seen_count")
+  wrongCount   Int       @default(0) @map("wrong_count")
+  mastered     Boolean   @default(false)
+
+  lastReview   DateTime? @map("last_review")
+  /// Tính sẵn để badge "đến hạn" chỉ cần một câu COUNT
+  dueAt        DateTime? @map("due_at")
+
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime  @updatedAt @map("updated_at")
+
+  @@unique([userId, wordKey])
+  @@index([userId, dueAt])
+  @@index([userId, mastered])
+  @@map("vocab_progress")
+}
+
+/// Một lượt làm quiz trọn một bộ. userId null = khách mở link chia sẻ.
+model VocabQuizSession {
+  id           String    @id @default(cuid())
+  userId       String?   @map("user_id")
+  /// Id ẩn danh sinh ở localStorage của khách — chỉ để đếm, không nhận dạng ai
+  guestKey     String?   @map("guest_key")
+
+  deckId       String    @map("deck_id")
+  deck         VocabDeck @relation(fields: [deckId], references: [id], onDelete: Cascade)
+  assignmentId String?   @map("assignment_id")
+
+  /// Các dạng quiz học viên đã chọn, vd ["word-to-image","listen-to-typing"]
+  modes        String[]
+  /// "practice" = hiện đáp án ngay | "exam" = ẩn đến cuối (chưa dùng)
+  runMode      String    @default("practice") @map("run_mode")
+
+  total        Int       @default(0)
+  correct      Int       @default(0)
+  durationMs   Int?      @map("duration_ms")
+
+  startedAt    DateTime  @default(now()) @map("started_at")
+  finishedAt   DateTime? @map("finished_at")
+
+  items        VocabQuizItem[]
+
+  @@index([userId, finishedAt])
+  @@index([deckId, finishedAt])
+  @@map("vocab_quiz_sessions")
+}
+
+/// Một câu trong một lượt quiz. Nguồn dữ liệu cho "top từ hay sai" và để
+/// hiệu chỉnh ngưỡng nhanh/chậm của SRS bằng answerMs thật.
+model VocabQuizItem {
+  id        String           @id @default(cuid())
+  sessionId String           @map("session_id")
+  session   VocabQuizSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  wordKey   String           @map("word_key")
+  quizType  String           @map("quiz_type")
+  correct   Boolean
+  answerMs  Int?             @map("answer_ms")
+  /// Học viên gõ gì (chỉ các dạng *-to-typing)
+  given     String?
+
+  @@index([sessionId])
+  @@index([wordKey, correct])
+  @@map("vocab_quiz_items")
+}
+
+/// Giáo viên giao một bộ thẻ cho một học viên. Khớp với hệ homework ở RTDB
+/// qua homeworkId để ô bài tập tự tick khi học viên làm xong.
+model VocabDeckAssignment {
+  id          String    @id @default(cuid())
+  deckId      String    @map("deck_id")
+  deck        VocabDeck @relation(fields: [deckId], references: [id], onDelete: Cascade)
+
+  /// Profile.id của giáo viên giao bài
+  assignedBy  String    @map("assigned_by")
+  /// Mã học viên, khớp hệ RTDB hiện có
+  studentCode String    @map("student_code")
+  classId     String?   @map("class_id")
+
+  /// "study" = chỉ lật thẻ | "quiz"
+  activity    String    @default("quiz")
+  modes       String[]
+  /// % đúng tối thiểu để tính là xong
+  minScore    Int?      @map("min_score")
+  dueDate     DateTime? @map("due_date")
+  /// Homework.id ở RTDB để đối chiếu
+  homeworkId  String?   @map("homework_id")
+
+  createdAt   DateTime  @default(now()) @map("created_at")
+
+  @@unique([deckId, studentCode])
+  @@index([studentCode, dueDate])
+  @@map("vocab_deck_assignments")
 }
