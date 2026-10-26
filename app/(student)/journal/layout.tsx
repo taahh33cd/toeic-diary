@@ -6,6 +6,7 @@ import { prisma } from "@/lib/db/prisma";
 import { Brand } from "@/components/shared/Brand";
 import { NavSwitcher } from "@/components/shared/NavSwitcher";
 import { ChapterTabs } from "@/components/journal/paper/ChapterTabs";
+import { StickyHeader } from "@/components/journal/paper/StickyHeader";
 import { JournalMobileNav } from "@/components/journal/MobileNav";
 import { JournalNotificationBell } from "@/components/journal/JournalNotificationBell";
 import { MobileBottomNav } from "@/components/journal/MobileBottomNav";
@@ -55,9 +56,11 @@ export default async function JournalLayout({
         Chuyển đến nội dung chính
       </a>
 
-      {/* ── Top header ── */}
+      {/* ── Bìa sổ + tab chương: dính trên đầu, bìa thu lại khi cuộn ── */}
+      <StickyHeader
+        cover={
       <header
-        className="journal-cover sticky top-0 z-40 border-b"
+        className="journal-cover border-b"
         style={{
           background: "var(--journal-header-bg, #3D2B1F)",
           borderColor: "var(--journal-header-border, #2A1F15)",
@@ -93,9 +96,9 @@ export default async function JournalLayout({
           </div>
         </div>
       </header>
-
-      {/* ── Tab chỉ mục 5 chương (desktop) + dải trang con (mọi cỡ) ── */}
-      <ChapterTabs studentCode={profile.studentCode} />
+        }
+        tabs={<ChapterTabs studentCode={profile.studentCode} />}
+      />
 
       {/* ── Push notification prompt ── */}
       <PushPromptBanner

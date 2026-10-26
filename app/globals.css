@@ -1845,3 +1845,18 @@ a[aria-disabled="true"] {
   --accent-green: #7FB98C;
   --accent-red:   #E08A80;
 }
+
+/* ── Bìa sổ thu lại khi cuộn xuống ── */
+.journal-cover-shell {
+  overflow: hidden;
+  max-height: 72px;
+  transition: max-height .22s ease, opacity .18s ease;
+}
+.journal-cover-shell[data-hidden="true"] {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .journal-cover-shell { transition: none; }
+}
