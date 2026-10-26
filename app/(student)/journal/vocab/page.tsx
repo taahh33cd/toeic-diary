@@ -3,8 +3,8 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import { useProfile } from "@/hooks/useProfile";
 import { useVocab } from "@/hooks/firebase/useVocab";
-import { updateVocabWord, deleteVocabWord, saveForgottenWords, loadForgottenWords } from "@/lib/firebase/helpers";
-import { awardXp } from "@/lib/xp-client";
+import { deleteVocabWord, saveForgottenWords, loadForgottenWords } from "@/lib/firebase/helpers";
+import { recordVocabReview } from "@/lib/vocab/review-client";
 import { useLocale } from "@/hooks/useLocale";
 import { PageHeading } from "@/components/journal/paper/PageHeading";
 import { isDue, todayIct, MASTERY_THRESHOLD } from "@/lib/vocab/srs";
@@ -616,12 +616,11 @@ function WordListRow({ word, studentCode, todayStr }: { word: VocabWord; student
     e.stopPropagation();
     if (reviewing) return;
     setReviewing(true);
-    const newCount = (word.repCount ?? 0) + 1;
-    await updateVocabWord(studentCode, word.id, { repCount: newCount, lastReview: todayStr });
-    await awardXp("vocab_review", { wordId: word.id });
-    if (newCount >= MASTERY_THRESHOLD && (word.repCount ?? 0) < MASTERY_THRESHOLD) {
-      await awardXp("vocab_master", { wordId: word.id });
-    }
+    await recordVocabReview({
+      studentCode,
+      wordId: word.id,
+      outcome: { kind: "flip", word: word.word, known: true },
+    });
     setReviewing(false);
   }
 
@@ -869,7 +868,6 @@ function WriteModal({
   onClose: () => void;
 }) {
   const { t } = useLocale();
-  const todayStr = todayIct();
   const [idx, setIdx] = useState(0);
   const [input, setInput] = useState("");
   const [attempts, setAttempts] = useState(0);
@@ -897,9 +895,11 @@ function WriteModal({
     if (correct) {
       setResult("correct");
       setCorrectCount(c => c + 1);
-      const newCount = (card.repCount ?? 0) + 1;
-      await updateVocabWord(studentCode, card.id, { repCount: newCount, lastReview: todayStr });
-      await awardXp("vocab_review", { wordId: card.id });
+      await recordVocabReview({
+        studentCode,
+        wordId: card.id,
+        outcome: { kind: "quiz", word: card.word, correct: true, quizType: "meaning-to-typing" },
+      });
       setTimeout(() => advance(), 900);
     } else {
       const next = attempts + 1;
@@ -1060,13 +1060,11 @@ function FlashcardModal({
   async function handleKnow() {
     if (saving || !flipped) return;
     setSaving(true);
-    const newCount = (card.repCount ?? 0) + 1;
-    const today = todayIct();
-    await updateVocabWord(studentCode, card.id, { repCount: newCount, lastReview: today });
-    await awardXp("vocab_review", { wordId: card.id });
-    if (newCount >= MASTERY_THRESHOLD && (card.repCount ?? 0) < MASTERY_THRESHOLD) {
-      await awardXp("vocab_master", { wordId: card.id });
-    }
+    await recordVocabReview({
+      studentCode,
+      wordId: card.id,
+      outcome: { kind: "flip", word: card.word, known: true },
+    });
     unmarkForgotten(card.id);
     setSaving(false);
     advance(idx + 1);
@@ -1075,7 +1073,11 @@ function FlashcardModal({
   async function handleForgot() {
     if (saving || !flipped) return;
     setSaving(true);
-    await updateVocabWord(studentCode, card.id, { repCount: 0 });
+    await recordVocabReview({
+      studentCode,
+      wordId: card.id,
+      outcome: { kind: "flip", word: card.word, known: false },
+    });
     markForgotten(card.id);
     setSaving(false);
     advance(idx + 1);
@@ -1277,10 +1279,11 @@ function ListenWriteModal({
     setResult(isCorrect ? "correct" : "wrong");
     if (isCorrect) {
       setCorrectCount((c) => c + 1);
-      const newCount = (card.repCount ?? 0) + 1;
-      const today = todayIct();
-      await updateVocabWord(studentCode, card.id, { repCount: newCount, lastReview: today });
-      await awardXp("vocab_review", { wordId: card.id });
+      await recordVocabReview({
+        studentCode,
+        wordId: card.id,
+        outcome: { kind: "quiz", word: card.word, correct: true, quizType: "listen-to-typing" },
+      });
     }
   }
 
@@ -1401,15 +1404,17 @@ function WordCard({
     e.stopPropagation();
     if (reviewing) return;
     setReviewing(true);
-    const newCount = repCount + 1;
-    const today = todayIct();
     try {
-      await updateVocabWord(studentCode, word.id, { repCount: newCount, lastReview: today });
-      setRepCount(newCount);
-      setLastReview(today);
-      await awardXp("vocab_review", { wordId: word.id });
-      if (newCount >= MASTERY_THRESHOLD && repCount < MASTERY_THRESHOLD) {
-        await awardXp("vocab_master", { wordId: word.id });
+      const p = await recordVocabReview({
+        studentCode,
+        wordId: word.id,
+        outcome: { kind: "flip", word: word.word, known: true },
+      });
+      // Chỉ cập nhật UI theo số server trả về — không tự cộng 1 rồi đoán, vì
+      // lịch ôn do SM-2 quyết định chứ không phải phép cộng.
+      if (p) {
+        setRepCount(p.repCount);
+        setLastReview(p.lastReview?.slice(0, 10));
       }
     } finally {
       setReviewing(false);
