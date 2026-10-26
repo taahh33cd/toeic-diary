@@ -8,14 +8,13 @@ import { useHomework } from "@/hooks/firebase/useHomework";
 import { useHwViewed } from "@/hooks/firebase/useHwViewed";
 import { useGoal } from "@/hooks/firebase/useGoal";
 import { useSubmissions } from "@/hooks/firebase/useSubmissions";
-import { useVocab } from "@/hooks/firebase/useVocab";
 import { useClasses } from "@/hooks/firebase/useClasses";
 import { useLocale } from "@/hooks/useLocale";
 import { LiveIndicator } from "@/components/shared/LiveIndicator";
 import { Sheet } from "@/components/journal/paper/Sheet";
 import { Stamp } from "@/components/journal/paper/Stamp";
 import { dayToNum } from "@/lib/schedule-day";
-import { countDue } from "@/lib/vocab/srs";
+import { useVocabDue } from "@/hooks/useVocabDue";
 import type { XpStats, SwWorkStats } from "./page";
 import type { ScheduleItem, Goal, ToeicScore, SwScore } from "@/lib/firebase/types";
 import { EXAM_MAX, examScores, goalExamType, goalTotal } from "@/lib/exam-goal";
@@ -999,7 +998,7 @@ export default function DashboardClient({ xpStats, swWork }: { xpStats: XpStats 
   const { homework } = useHomework(profile?.studentCode);
   const { goal } = useGoal(profile?.studentCode);
   const { submissions } = useSubmissions(profile?.studentCode);
-  const { words } = useVocab(profile?.studentCode);
+  const { stats: vocab } = useVocabDue(!!profile?.studentCode);
   const { classes } = useClasses();
   const { hwViewed } = useHwViewed(profile?.studentCode);
 
@@ -1052,7 +1051,7 @@ export default function DashboardClient({ xpStats, swWork }: { xpStats: XpStats 
   }).length;
 
   // B14: vocab SRS due
-  const vocabDueCount = countDue(words);
+  const vocabDueCount = vocab.dueCount;
 
   // Nhận xét mới nhất của GV cho một ảnh/video bài nộp BTVN (plain, sau early return)
   const latestHwNote = (() => {

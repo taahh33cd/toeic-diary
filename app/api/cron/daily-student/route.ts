@@ -2,8 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db/prisma";
 import { getAdminDb } from "@/lib/firebase/admin";
 import { sendPushToUser } from "@/lib/push";
-import { isDue } from "@/lib/vocab/srs";
-import type { Homework, VocabWord } from "@/lib/firebase/types";
+import type { Homework } from "@/lib/firebase/types";
 
 export const runtime = "nodejs";
 
@@ -39,6 +38,19 @@ export async function GET(request: NextRequest) {
 
   if (students.length === 0) return NextResponse.json({ ok: true, notified: 0 });
 
+  // Số từ đến hạn của mọi học viên trong một câu groupBy trên Postgres — trước
+  // đây mỗi học viên một lượt đọc RTDB rồi tự đếm.
+  const dueRows = await prisma.vocabProgress.groupBy({
+    by: ["userId"],
+    where: {
+      userId: { in: students.map((s) => s.id) },
+      mastered: false,
+      OR: [{ dueAt: null }, { dueAt: { lte: nowUtc } }],
+    },
+    _count: { _all: true },
+  });
+  const dueByUser = new Map(dueRows.map((r) => [r.userId, r._count._all]));
+
   const db = getAdminDb();
   let notified = 0;
 
@@ -64,12 +76,7 @@ export async function GET(request: NextRequest) {
       const hasHomework = current.length > 0 || overdue.length > 0;
 
       // ── Vocab SRS check ──
-      const vocabSnap = await db.ref(`vocab/${student.studentCode}`).get();
-      let dueVocab = 0;
-      if (vocabSnap.exists()) {
-        const raw = vocabSnap.val() as Record<string, Omit<VocabWord, "id">>;
-        dueVocab = Object.values(raw).filter((w) => isDue(w, today)).length;
-      }
+      const dueVocab = dueByUser.get(student.id) ?? 0;
 
       if (!streakAtRisk && !hasHomework && dueVocab === 0) return;
 

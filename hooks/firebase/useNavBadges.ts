@@ -4,9 +4,8 @@ import { useMemo } from "react";
 import { useHomework } from "./useHomework";
 import { useSubmissions } from "./useSubmissions";
 import { useDayLinks } from "./useDayLinks";
-import { useVocab } from "./useVocab";
 import { useStudent } from "./useStudent";
-import { countDue } from "@/lib/vocab/srs";
+import { useVocabDue } from "@/hooks/useVocabDue";
 import type { Homework } from "@/lib/firebase/types";
 
 function todayStr() {
@@ -46,8 +45,8 @@ export function useNavBadges(code: string | null | undefined): NavBadges {
   const { homework } = useHomework(code);
   const { submissions } = useSubmissions(code);
   const { dayLinks } = useDayLinks(code);
-  const { words } = useVocab(code);
   const { student } = useStudent(code);
+  const { stats: vocab } = useVocabDue(!!code);
 
   const taskCount = useMemo(() => {
     const t = todayStr();
@@ -61,22 +60,10 @@ export function useNavBadges(code: string | null | undefined): NavBadges {
     }).length;
   }, [homework, submissions, dayLinks]);
 
-  const vocabDueCount = useMemo(() => countDue(words), [words]);
+  const vocabDueCount = vocab.dueCount;
 
-  const vocabRemind = useMemo(() => {
-    if (vocabDueCount > 0) return false;
-    if (words.length === 0) return false;
-    const cutoff = new Date();
-    cutoff.setDate(cutoff.getDate() - 3);
-    const cutoffStr = cutoff.toISOString().slice(0, 10);
-    const maxReview =
-      words
-        .map((w) => w.lastReview ?? "")
-        .filter(Boolean)
-        .sort()
-        .pop() ?? "";
-    return !maxReview || maxReview < cutoffStr;
-  }, [words, vocabDueCount]);
+  // Dấu nhắc nhẹ do server tính (hết từ đến hạn nhưng 3 ngày không ôn).
+  const vocabRemind = vocab.remind;
 
   const feeDue = useMemo(() => {
     if (!student) return false;

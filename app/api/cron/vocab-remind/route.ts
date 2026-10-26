@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db/prisma";
 import { getAdminDb } from "@/lib/firebase/admin";
 import { sendPushToUser } from "@/lib/push";
-import { isDue } from "@/lib/vocab/srs";
-import type { VocabWord } from "@/lib/firebase/types";
 
 export const runtime = "nodejs";
 
@@ -15,11 +13,6 @@ export async function GET(request: NextRequest) {
     (!!process.env.INTERNAL_PUSH_SECRET && internal === process.env.INTERNAL_PUSH_SECRET);
   if (!ok) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
-  // Today in ICT (UTC+7)
-  const nowUtc = new Date();
-  const todayIct = new Date(nowUtc.getTime() + 7 * 60 * 60 * 1000);
-  const today = todayIct.toISOString().slice(0, 10);
-
   const students = await prisma.profile.findMany({
     where: { studentCode: { not: null } },
     select: { id: true, studentCode: true },
@@ -27,16 +20,27 @@ export async function GET(request: NextRequest) {
 
   if (students.length === 0) return NextResponse.json({ ok: true, notified: 0 });
 
+  // Số từ đến hạn của MỌI học viên trong một câu groupBy, thay vì tải cả kho từ
+  // của từng người về từ RTDB rồi tự đếm. Đếm theo từ nên từ nằm ở nhiều bộ
+  // không bị đếm hai lần — chỗ mà badge cũ thổi phồng số.
+  const now = new Date();
+  const dueRows = await prisma.vocabProgress.groupBy({
+    by: ["userId"],
+    where: {
+      userId: { in: students.map((s) => s.id) },
+      mastered: false,
+      OR: [{ dueAt: null }, { dueAt: { lte: now } }],
+    },
+    _count: { _all: true },
+  });
+  const dueByUser = new Map(dueRows.map((r) => [r.userId, r._count._all]));
+
   const db = getAdminDb();
   let notified = 0;
 
   await Promise.allSettled(
     students.map(async (student) => {
-      const snap = await db.ref(`vocab/${student.studentCode}`).get();
-      if (!snap.exists()) return;
-
-      const raw = snap.val() as Record<string, Omit<VocabWord, "id">>;
-      const dueCount = Object.values(raw).filter((w) => isDue(w, today)).length;
+      const dueCount = dueByUser.get(student.id) ?? 0;
 
       // Deduped bell entry (fixed key): refresh while due, remove when clear.
       const bellRef = db.ref(`notifications/${student.studentCode}/reminder_vocab_due`);
