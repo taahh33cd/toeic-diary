@@ -7,6 +7,7 @@ import { updateVocabWord, deleteVocabWord, saveForgottenWords, loadForgottenWord
 import { awardXp } from "@/lib/xp-client";
 import { useLocale } from "@/hooks/useLocale";
 import { PageHeading } from "@/components/journal/paper/PageHeading";
+import { isDue, todayIct, MASTERY_THRESHOLD } from "@/lib/vocab/srs";
 import type { VocabWord } from "@/lib/firebase/types";
 
 // ─── Constants ────────────────────────────────────────────────────────────────
@@ -18,23 +19,9 @@ const POS_COLOR: Record<string, string> = {
   adv: "#8B5CF6",
 };
 
-const MASTERY_THRESHOLD = 10;
-
-const SRS_INTERVALS = [0, 1, 3, 7, 14, 30, 60];
-
-function getNextDue(lastReview: string | undefined, repCount: number): Date {
-  if (!lastReview) return new Date(0);
-  const last = new Date(lastReview + "T00:00:00");
-  const interval = SRS_INTERVALS[Math.min(repCount, SRS_INTERVALS.length - 1)];
-  const due = new Date(last);
-  due.setDate(due.getDate() + interval);
-  return due;
-}
-
-function isWordDue(word: VocabWord, todayStr: string): boolean {
-  const today = new Date(todayStr + "T00:00:00");
-  return getNextDue(word.lastReview, word.repCount ?? 0) <= today;
-}
+// SRS dùng chung với badge nav, dashboard và 2 cron — xem lib/vocab/srs.ts.
+// isWordDue đã tự bỏ từ đã thuộc, nên không cần kèm `&& repCount < MASTERY_THRESHOLD`.
+const isWordDue = isDue;
 
 // ─── TTS / Audio helper ───────────────────────────────────────────────────────
 
@@ -84,7 +71,7 @@ const POS_LABELS: Record<string, string> = { n: "noun", v: "verb", adj: "adj", a
 
 function QuickAddBar({ studentCode, onSaved }: { studentCode: string; onSaved?: (word: string) => void }) {
   const { t } = useLocale();
-  const today = new Date().toISOString().slice(0, 10);
+  const today = todayIct();
   const inputRef = useRef<HTMLInputElement>(null);
 
   const [phase, setPhase] = useState<AddPhase>("search");
@@ -546,7 +533,7 @@ function InlineFlashcard({
   const { t } = useLocale();
   const word = words[Math.min(idx, words.length - 1)];
   if (!word) return null;
-  const isDue = isWordDue(word, todayStr) && (word.repCount ?? 0) < MASTERY_THRESHOLD;
+  const due = isWordDue(word, todayStr);
 
   function prev(e: React.MouseEvent) { e.stopPropagation(); setIdx((idx - 1 + words.length) % words.length); setFlipped(false); }
   function next(e: React.MouseEvent) { e.stopPropagation(); setIdx((idx + 1) % words.length); setFlipped(false); }
@@ -568,7 +555,7 @@ function InlineFlashcard({
             borderRadius: 14, display: "flex", flexDirection: "column",
             alignItems: "center", justifyContent: "center", padding: "24px 32px", gap: 8,
           }}>
-            {isDue && (
+            {due && (
               <span style={{ position: "absolute", top: 12, right: 14, fontSize: ".6rem", fontWeight: 800, letterSpacing: ".08em", textTransform: "uppercase", background: "rgba(196,98,45,0.9)", color: "#fff", padding: "2px 8px", borderRadius: 99 }}>
                 ĐẾN HẠN
               </span>
@@ -622,7 +609,7 @@ function WordListRow({ word, studentCode, todayStr }: { word: VocabWord; student
   const [deleting, setDeleting] = useState(false);
   const [expanded, setExpanded] = useState(false);
 
-  const due = isWordDue(word, todayStr) && (word.repCount ?? 0) < MASTERY_THRESHOLD;
+  const due = isWordDue(word, todayStr);
   const isMastered = (word.repCount ?? 0) >= MASTERY_THRESHOLD;
 
   async function handleReview(e: React.MouseEvent) {
@@ -882,7 +869,7 @@ function WriteModal({
   onClose: () => void;
 }) {
   const { t } = useLocale();
-  const todayStr = new Date().toISOString().slice(0, 10);
+  const todayStr = todayIct();
   const [idx, setIdx] = useState(0);
   const [input, setInput] = useState("");
   const [attempts, setAttempts] = useState(0);
@@ -1074,7 +1061,7 @@ function FlashcardModal({
     if (saving || !flipped) return;
     setSaving(true);
     const newCount = (card.repCount ?? 0) + 1;
-    const today = new Date().toISOString().slice(0, 10);
+    const today = todayIct();
     await updateVocabWord(studentCode, card.id, { repCount: newCount, lastReview: today });
     await awardXp("vocab_review", { wordId: card.id });
     if (newCount >= MASTERY_THRESHOLD && (card.repCount ?? 0) < MASTERY_THRESHOLD) {
@@ -1291,7 +1278,7 @@ function ListenWriteModal({
     if (isCorrect) {
       setCorrectCount((c) => c + 1);
       const newCount = (card.repCount ?? 0) + 1;
-      const today = new Date().toISOString().slice(0, 10);
+      const today = todayIct();
       await updateVocabWord(studentCode, card.id, { repCount: newCount, lastReview: today });
       await awardXp("vocab_review", { wordId: card.id });
     }
@@ -1415,7 +1402,7 @@ function WordCard({
     if (reviewing) return;
     setReviewing(true);
     const newCount = repCount + 1;
-    const today = new Date().toISOString().slice(0, 10);
+    const today = todayIct();
     try {
       await updateVocabWord(studentCode, word.id, { repCount: newCount, lastReview: today });
       setRepCount(newCount);
@@ -1707,7 +1694,7 @@ function DifficultWordsSidebar({ words }: { words: VocabWord[] }) {
               { label: t("Tổng", "Total"), value: words.length, color: "var(--text-primary)" },
               {
                 label: t("Đến hạn", "Due"),
-                value: words.filter((w) => isWordDue(w, new Date().toISOString().slice(0, 10)) && (w.repCount ?? 0) < MASTERY_THRESHOLD).length,
+                value: words.filter((w) => isWordDue(w, todayIct())).length,
                 color: "var(--orange)",
               },
               {
@@ -1751,11 +1738,11 @@ export default function VocabPage() {
   const [inlineIdx, setInlineIdx] = useState(0);
   const [inlineFlipped, setInlineFlipped] = useState(false);
 
-  const todayStr = new Date().toISOString().slice(0, 10);
+  const todayStr = todayIct();
   const loading = profileLoading || vocabLoading;
 
   const dueWords = useMemo(
-    () => words.filter((w) => isWordDue(w, todayStr) && (w.repCount ?? 0) < MASTERY_THRESHOLD),
+    () => words.filter((w) => isWordDue(w, todayStr)),
     [words, todayStr]
   );
 
@@ -1776,14 +1763,14 @@ export default function VocabPage() {
   // Words for inline flashcard: current part, due words first
   const inlineWords = useMemo(() => {
     const base = selectedPart === null ? words : words.filter((w) => w.part === selectedPart);
-    const due = base.filter((w) => isWordDue(w, todayStr) && (w.repCount ?? 0) < MASTERY_THRESHOLD);
+    const due = base.filter((w) => isWordDue(w, todayStr));
     const rest = base.filter((w) => !isWordDue(w, todayStr) || (w.repCount ?? 0) >= MASTERY_THRESHOLD);
     return [...due, ...rest];
   }, [words, selectedPart, todayStr]);
 
   // Word list: due first, then grouped by part (when all) or flat (when specific part)
   const filteredDue = useMemo(
-    () => filtered.filter((w) => isWordDue(w, todayStr) && (w.repCount ?? 0) < MASTERY_THRESHOLD),
+    () => filtered.filter((w) => isWordDue(w, todayStr)),
     [filtered, todayStr]
   );
   const filteredNotDue = useMemo(

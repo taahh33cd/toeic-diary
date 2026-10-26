@@ -15,8 +15,9 @@ import { LiveIndicator } from "@/components/shared/LiveIndicator";
 import { Sheet } from "@/components/journal/paper/Sheet";
 import { Stamp } from "@/components/journal/paper/Stamp";
 import { dayToNum } from "@/lib/schedule-day";
+import { countDue } from "@/lib/vocab/srs";
 import type { XpStats, SwWorkStats } from "./page";
-import type { ScheduleItem, Goal, VocabWord, ToeicScore, SwScore } from "@/lib/firebase/types";
+import type { ScheduleItem, Goal, ToeicScore, SwScore } from "@/lib/firebase/types";
 import { EXAM_MAX, examScores, goalExamType, goalTotal } from "@/lib/exam-goal";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -38,16 +39,6 @@ function todayStr() {
 function localToday() {
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-}
-
-const VOCAB_SRS = [0, 1, 3, 7, 14, 30, 60];
-
-function isVocabDue(w: VocabWord, today: string) {
-  if (!w.lastReview) return true;
-  const interval = VOCAB_SRS[Math.min(w.repCount ?? 0, VOCAB_SRS.length - 1)];
-  const due = new Date(w.lastReview + "T00:00:00");
-  due.setDate(due.getDate() + interval);
-  return due <= new Date(today + "T00:00:00");
 }
 
 function scoreGrade(s: number): string {
@@ -1061,7 +1052,7 @@ export default function DashboardClient({ xpStats, swWork }: { xpStats: XpStats 
   }).length;
 
   // B14: vocab SRS due
-  const vocabDueCount = words.filter((w) => isVocabDue(w, td)).length;
+  const vocabDueCount = countDue(words);
 
   // Nhận xét mới nhất của GV cho một ảnh/video bài nộp BTVN (plain, sau early return)
   const latestHwNote = (() => {

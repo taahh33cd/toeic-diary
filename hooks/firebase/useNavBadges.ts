@@ -6,24 +6,11 @@ import { useSubmissions } from "./useSubmissions";
 import { useDayLinks } from "./useDayLinks";
 import { useVocab } from "./useVocab";
 import { useStudent } from "./useStudent";
-import type { VocabWord, Homework } from "@/lib/firebase/types";
-
-const SRS_INTERVALS = [1, 3, 7, 14, 30, 90, 180];
+import { countDue } from "@/lib/vocab/srs";
+import type { Homework } from "@/lib/firebase/types";
 
 function todayStr() {
   return new Date().toISOString().slice(0, 10);
-}
-
-function addDays(dateStr: string, days: number): string {
-  const d = new Date(dateStr);
-  d.setDate(d.getDate() + days);
-  return d.toISOString().slice(0, 10);
-}
-
-function isVocabDue(word: VocabWord, today: string): boolean {
-  if (!word.lastReview) return true;
-  const interval = SRS_INTERVALS[Math.min(word.repCount, SRS_INTERVALS.length - 1)];
-  return addDays(word.lastReview, interval) <= today;
 }
 
 function calcHwIsDone(
@@ -74,10 +61,7 @@ export function useNavBadges(code: string | null | undefined): NavBadges {
     }).length;
   }, [homework, submissions, dayLinks]);
 
-  const vocabDueCount = useMemo(() => {
-    const t = todayStr();
-    return words.filter((w) => isVocabDue(w, t)).length;
-  }, [words]);
+  const vocabDueCount = useMemo(() => countDue(words), [words]);
 
   const vocabRemind = useMemo(() => {
     if (vocabDueCount > 0) return false;

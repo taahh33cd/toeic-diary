@@ -2,23 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db/prisma";
 import { getAdminDb } from "@/lib/firebase/admin";
 import { sendPushToUser } from "@/lib/push";
+import { isDue } from "@/lib/vocab/srs";
 import type { VocabWord } from "@/lib/firebase/types";
 
 export const runtime = "nodejs";
-
-// Must mirror constants in app/(student)/journal/vocab/page.tsx
-const SRS_INTERVALS = [0, 1, 3, 7, 14, 30, 60];
-const MASTERY_THRESHOLD = 10;
-
-function isDue(word: Omit<VocabWord, "id">, todayStr: string): boolean {
-  if ((word.repCount ?? 0) >= MASTERY_THRESHOLD) return false;
-  if (!word.lastReview) return true; // never reviewed → immediately due
-  const last = new Date(word.lastReview + "T00:00:00");
-  const interval = SRS_INTERVALS[Math.min(word.repCount ?? 0, SRS_INTERVALS.length - 1)];
-  const due = new Date(last);
-  due.setDate(due.getDate() + interval);
-  return due <= new Date(todayStr + "T00:00:00");
-}
 
 export async function GET(request: NextRequest) {
   const authHeader = request.headers.get("authorization");
