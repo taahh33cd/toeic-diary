@@ -39,15 +39,20 @@ function CommentCard({
   const kind = annotationKind(a);
   const [reply, setReply] = useState("");
   const [sending, setSending] = useState(false);
+  const [failed, setFailed] = useState(false);
   const replies = a.replies ?? [];
 
   async function send() {
     const t = reply.trim();
     if (!t || sending) return;
     setSending(true);
+    setFailed(false);
     try {
       await onReply(t);
       setReply("");
+    } catch {
+      // Giữ nguyên chữ đã gõ — xoá đi khi gửi hỏng là mất công học viên gõ lại.
+      setFailed(true);
     } finally {
       setSending(false);
     }
@@ -107,7 +112,8 @@ function CommentCard({
         <input
           value={reply}
           onChange={(e) => setReply(e.target.value)}
-          onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); send(); } }}
+          // isComposing: Enter đang dùng để chốt chữ của bộ gõ (tiếng Việt, IME) chứ không phải để gửi.
+          onKeyDown={(e) => { if (e.key === "Enter" && !e.nativeEvent.isComposing) { e.preventDefault(); send(); } }}
           placeholder="Hỏi lại thầy…"
           className="flex-1 px-2 py-1 rounded text-[12px] border outline-none"
           style={{ background: "var(--bg-primary)", borderColor: "var(--border)", color: "var(--text-primary)" }}
@@ -125,6 +131,11 @@ function CommentCard({
           {sending ? "…" : "Gửi"}
         </button>
       </div>
+      {failed && (
+        <p role="alert" className="text-[11px] m-0 mt-1" style={{ color: "rgb(220,38,38)" }}>
+          Chưa gửi được — kiểm tra mạng rồi bấm Gửi lại. Nội dung của bạn vẫn còn đó.
+        </p>
+      )}
     </div>
   );
 }
@@ -160,9 +171,11 @@ export function GradedView({
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ annotationId, text }),
     });
-    if (!res.ok) return;
+    // Ném lỗi để thẻ giữ chữ đã gõ và báo cho học viên; trước đây `return` im lặng
+    // nên nó coi như đã gửi xong và xoá sạch ô nhập.
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = (await res.json()) as { reply?: AnnotationReply };
-    if (!data.reply) return;
+    if (!data.reply) throw new Error("Phản hồi rỗng");
     setExtraReplies((prev) => ({ ...prev, [annotationId]: [...(prev[annotationId] ?? []), data.reply!] }));
   }
   const stats = countByLabel(annotations);

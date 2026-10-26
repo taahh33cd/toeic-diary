@@ -340,6 +340,8 @@ export default function GradeSubmissionPage() {
   const [audio, setAudio] = useState<{ url: string; publicId: string } | null>(null);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  /** Gợi ý thao tác ngắn hạn (không phải lỗi): tự tắt, khác với lỗi tải/lưu cần giữ lại. */
+  const [notice, setNotice] = useState<string | null>(null);
   const [autoState, setAutoState] = useState<"idle" | "saving" | "saved" | "error">("idle");
   const [savedAt, setSavedAt] = useState<string | null>(null);
   /** Bỏ qua lần đổi state ngay sau khi tải bài — đó là dữ liệu vừa đọc về, không phải thầy sửa. */
@@ -417,11 +419,18 @@ export default function GradeSubmissionPage() {
     if (!sel || sel.rangeCount === 0) { setPop(null); return; }
     const node = sel.anchorNode;
     const host = (node?.nodeType === 1 ? (node as Element) : node?.parentElement)?.closest("[data-item-idx]");
-    if (!host) { setPop(null); return; }
+    if (!host || mode === "edited") { setPop(null); return; }
     // Bấm vào chữ đã có nhận xét chỉ là chọn thẻ, không phải muốn chèn thêm chỗ đó.
     if (sel.isCollapsed && (e.target as Element).closest?.("[data-annotation-id]")) { setPop(null); return; }
     setPop({ x: e.clientX, y: e.clientY, mode: sel.isCollapsed ? "caret" : "range" });
   }
+
+  // Gợi ý nằm trên thanh công cụ dính, để mãi sẽ chiếm chỗ cả lúc đã xử lý xong.
+  useEffect(() => {
+    if (!notice) return;
+    const timer = setTimeout(() => setNotice(null), 7000);
+    return () => clearTimeout(timer);
+  }, [notice]);
 
   // Menu nổi neo theo toạ độ màn hình nên phải tắt khi trang cuộn (nó sẽ trôi khỏi
   // chữ vừa chọn) hoặc khi nhấn Esc. `capture` vì thứ cuộn là <main>, không phải window.
@@ -443,6 +452,12 @@ export default function GradeSubmissionPage() {
     const node = sel?.anchorNode;
     const host = (node?.nodeType === 1 ? (node as Element) : node?.parentElement)?.closest("[data-item-idx]") as HTMLElement | null;
     if (!host || !sub) return null;
+    // Ở "Bản đã sửa" đoạn thay thế dài ngắn khác bản gốc và đoạn xoá biến mất, nên
+    // vị trí chữ đo từ màn hình lệch so với bài gốc — nhận xét sẽ dính nhầm chữ.
+    if (mode === "edited") {
+      setNotice("Đang xem “Bản đã sửa” — chuyển sang “Đối chiếu” hoặc “Bài gốc” để thêm nhận xét.");
+      return null;
+    }
     const itemIdx = Number(host.dataset.itemIdx);
     const text = sub.items.find((i) => i.idx === itemIdx)?.text;
     if (!text) return null;
@@ -453,6 +468,7 @@ export default function GradeSubmissionPage() {
     setAnnotations((prev) => [...prev, a]);
     setActiveId(a.id);
     setError(null);
+    setNotice(null);
     setPop(null);
     window.getSelection()?.removeAllRanges();
   }
@@ -466,7 +482,7 @@ export default function GradeSubmissionPage() {
 
     const mine = annotations.filter((a) => a.itemIdx === ctx.itemIdx);
     if (insideAny(mine, at)) {
-      setError("Chỗ này nằm giữa một nhận xét đã có — chèn ra ngoài đoạn đó.");
+      setNotice("Chỗ này nằm giữa một nhận xét đã có — chèn ra ngoài đoạn đó.");
       setPop(null);
       return;
     }
@@ -492,7 +508,7 @@ export default function GradeSubmissionPage() {
     if (!range) { setPop(null); return; }
     const mine = annotations.filter((a) => a.itemIdx === ctx.itemIdx);
     if (overlaps(mine, range.start, range.end)) {
-      setError("Đoạn này đã có nhận xét — sửa nhận xét cũ thay vì tạo mới.");
+      setNotice("Đoạn này đã có nhận xét — sửa nhận xét cũ thay vì tạo mới.");
       setPop(null);
       return;
     }
@@ -517,7 +533,7 @@ export default function GradeSubmissionPage() {
 
     const mine = annotations.filter((a) => a.itemIdx === ctx.itemIdx);
     if (overlaps(mine, range.start, range.end)) {
-      setError("Đoạn này đã có nhận xét — sửa nhận xét cũ thay vì tạo mới.");
+      setNotice("Đoạn này đã có nhận xét — sửa nhận xét cũ thay vì tạo mới.");
       setPop(null);
       return;
     }
@@ -646,7 +662,12 @@ export default function GradeSubmissionPage() {
           onFocus={() => focus(a.id)}
           onHover={setHoverId}
           onChange={(patch) => setAnnotations((prev) => prev.map((x) => (x.id === a.id ? { ...x, ...patch } : x)))}
-          onRemove={() => setAnnotations((prev) => prev.filter((x) => x.id !== a.id))}
+          onRemove={() => {
+            // Xoá thẻ là xoá luôn hội thoại của nó; học viên đã trả lời thì đừng để mất chỉ vì lỡ tay.
+            const n = a.replies?.length ?? 0;
+            if (n > 0 && !window.confirm(`Thẻ này có ${n} lượt trả lời của học viên. Xoá thẻ sẽ mất cả hội thoại — vẫn xoá?`)) return;
+            setAnnotations((prev) => prev.filter((x) => x.id !== a.id));
+          }}
         />
       ),
     }));
@@ -668,6 +689,12 @@ export default function GradeSubmissionPage() {
           </button>
         ))}
       </div>
+
+      {mode === "edited" && (
+        <span className="text-[11px]" style={{ color: "var(--text-muted)" }}>
+          Chỉ để xem — chuyển sang “Đối chiếu” để thêm nhận xét
+        </span>
+      )}
 
       <div className="flex items-center gap-1.5 flex-wrap">
         {stats.map((s) => (
@@ -700,6 +727,13 @@ export default function GradeSubmissionPage() {
           {saving ? "Đang gửi…" : sub.status === "graded" ? "Cập nhật cho học viên" : "Gửi nhận xét"}
         </button>
       </div>
+
+      {/* Lỗi nằm ở thanh dính trên cùng: đặt ở cuối trang thì thầy bôi đoạn trùng nhận xét cũ mà chẳng thấy lời nào. */}
+      {(error || notice) && (
+        <p role="alert" className="w-full m-0 text-xs font-medium" style={{ color: "rgb(220,38,38)" }}>
+          {error ?? notice}
+        </p>
+      )}
     </div>
   );
 
@@ -782,7 +816,6 @@ export default function GradeSubmissionPage() {
             style={inputStyle}
           />
           <AudioRecorder url={audio?.url} onChange={setAudio} />
-          {error && <p className="text-sm mt-3 mb-0" style={{ color: "rgb(220,38,38)" }}>{error}</p>}
         </section>
       </DocumentSheet>
 
